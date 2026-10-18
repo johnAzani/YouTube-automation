@@ -55,6 +55,7 @@ def _cover_filter() -> str:
 def render_scene_clip(asset_path: Path, duration: float, out_path: Path, is_image: bool, ken: bool = True) -> None:
     out_path.parent.mkdir(parents=True, exist_ok=True)
     duration = max(duration, 0.8)
+    ken = ken and CONFIG.ken_burns
     if is_image:
         if ken:
             # Gentle push-in. zoompan operates at OUTPUT resolution (cheap + stable).
@@ -70,7 +71,7 @@ def render_scene_clip(asset_path: Path, duration: float, out_path: Path, is_imag
             cmd = [
                 ffmpeg_bin(), "-y", "-loop", "1", "-t", f"{duration:.2f}",
                 "-i", str(asset_path), "-vf", vf,
-                "-r", str(CONFIG.fps), "-c:v", "libx264", "-preset", "veryfast",
+                "-r", str(CONFIG.fps), "-c:v", "libx264", "-preset", "ultrafast",
                 "-pix_fmt", "yuv420p", str(out_path),
             ]
             try:
@@ -81,14 +82,14 @@ def render_scene_clip(asset_path: Path, duration: float, out_path: Path, is_imag
         cmd = [
             ffmpeg_bin(), "-y", "-loop", "1", "-t", f"{duration:.2f}",
             "-i", str(asset_path), "-vf", _cover_filter(),
-            "-r", str(CONFIG.fps), "-c:v", "libx264", "-preset", "veryfast",
+            "-r", str(CONFIG.fps), "-c:v", "libx264", "-preset", "ultrafast",
             "-pix_fmt", "yuv420p", str(out_path),
         ]
     else:
         cmd = [
             ffmpeg_bin(), "-y", "-i", str(asset_path), "-t", f"{duration:.2f}",
             "-vf", _cover_filter() + f",fps={CONFIG.fps}",
-            "-an", "-c:v", "libx264", "-preset", "veryfast",
+            "-an", "-c:v", "libx264", "-preset", "ultrafast",
             "-pix_fmt", "yuv420p", "-r", str(CONFIG.fps), str(out_path),
         ]
     _run(cmd)

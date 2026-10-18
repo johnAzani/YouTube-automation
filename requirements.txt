@@ -1,6 +1,7 @@
 # Core pipeline (all free / open source)
 PyYAML>=6.0
 requests>=2.31
+Pillow>=10.0
 
 # Neural narration — free, no API key (Microsoft Edge voices)
 edge-tts>=6.1

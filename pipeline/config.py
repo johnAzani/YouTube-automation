@@ -33,6 +33,7 @@ class Config:
     fps: int = int(os.environ.get("VIDEO_FPS", "30"))
     # Draft renders can stay 720p; bump to 1080p for final publishes.
     burn_captions: bool = _env_bool("BURN_CAPTIONS", True)
+    ken_burns: bool = _env_bool("KEN_BURNS", True)  # disable on very slow CPUs
 
     # --- narration -------------------------------------------------------
     voice: str = os.environ.get("TTS_VOICE", "en-US-ChristopherNeural")

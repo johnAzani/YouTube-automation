@@ -14,8 +14,6 @@ from __future__ import annotations
 import hashlib
 import json
 import re
-import subprocess
-import urllib.parse
 from dataclasses import dataclass, asdict
 from pathlib import Path
 
@@ -183,50 +181,23 @@ def _nasa(query: str) -> Asset | None:
 
 def _title_card(query: str, scene_no: int, out_dir: Path, title: str = "") -> Asset:
     """Offline fallback: a branded solid card with the scene text. Always works."""
-    from .assemble import ffmpeg_bin
+    from .textplates import render_text_plate
 
     out_dir.mkdir(parents=True, exist_ok=True)
     dest = out_dir / f"card_{scene_no:02d}_{_slugify(query)[:24]}.png"
-    text = (title or query)[:80].replace(":", r"\:").replace("'", r"'\\")
 
-    palette = ["0x16213e", "0x0f3460", "0x533483", "0x1b4332", "0x3d2b1f"]
+    palette = [(22, 33, 62), (15, 52, 96), (83, 52, 131), (27, 67, 50), (61, 43, 31)]
     color = palette[scene_no % len(palette)]
-    fontfile = _find_font()
-
-    cmd = [
-        ffmpeg_bin(), "-y",
-        "-f", "lavfi", "-i", f"color=c={color}:s={CONFIG.width}x{CONFIG.height}:d=1",
-        "-vf",
-        (
-            f"drawtext=text='{text}':fontcolor=white:fontsize=46:"
-            f"x=(w-text_w)/2:y=(h-text_h)/2:line_spacing=12"
-            + (f":fontfile={fontfile}" if fontfile else "")
-        ),
-        "-frames:v", "1", str(dest),
-    ]
     try:
-        subprocess.run(cmd, check=True, capture_output=True)
-    except subprocess.CalledProcessError:
-        # drawtext unavailable — plain plate still renders the video fine
-        subprocess.run([
-            ffmpeg_bin(), "-y", "-f", "lavfi",
-            "-i", f"color=c={color}:s={CONFIG.width}x{CONFIG.height}:d=1",
-            "-frames:v", "1", str(dest),
-        ], check=True, capture_output=True)
+        render_text_plate(
+            dest, title=(title or query), subtitle=f"Scene {scene_no // 10}",
+            bg_color=color, title_size=42,
+        )
+    except Exception:
+        from PIL import Image
+
+        Image.new("RGB", (CONFIG.width, CONFIG.height), color).save(dest)
     return Asset(dest, "generated", "n/a (generated placeholder)", "generated", "image", query)
-
-
-def _find_font() -> str | None:
-    candidates = [
-        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
-        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
-        "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
-        "/System/Library/Fonts/Helvetica.ttc",
-    ]
-    for c in candidates:
-        if Path(c).exists():
-            return c
-    return None
 
 
 # --------------------------------------------------------------------------
