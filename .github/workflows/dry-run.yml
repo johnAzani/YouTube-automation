@@ -1,0 +1,53 @@
+name: Dry-run pipeline (CI proof)
+
+# Proves the pipeline renders end-to-end with ZERO secrets and ZERO cost.
+# Uses offline placeholder narration + generated title cards when the
+# network/keys are absent, so every push is a full rehearsal.
+
+on:
+  push:
+    branches: [main, "arena/**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dry-run-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  dry-run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      DRY_RUN: "1"
+      ENABLE_KEYLESS_SOURCES: "0"   # stay fully offline/hermetic in CI
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: System deps (ffmpeg)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg fonts-dejavu-core
+
+      - name: Python deps
+        run: pip install -r requirements.txt
+
+      - name: Render sample job (no secrets required)
+        run: |
+          JOB=$(ls content/queue/*.md | head -n1)
+          python -m pipeline.run --dry-run --job "$JOB"
+
+      - name: Upload render
+        uses: actions/upload-artifact@v4
+        with:
+          name: dry-run-render-${{ github.run_id }}
+          path: output/
+          retention-days: 1

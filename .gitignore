@@ -1,0 +1,15 @@
+# Never commit media or secrets — PLAN.md §3.3
+output/
+assets/music/*.mp3
+assets/music/*.m4a
+assets/music/*.wav
+.env
+*.mp4
+*.mp3
+*.wav
+*.m4a
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store

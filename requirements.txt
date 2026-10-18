@@ -1,0 +1,14 @@
+# Core pipeline (all free / open source)
+PyYAML>=6.0
+requests>=2.31
+
+# Neural narration — free, no API key (Microsoft Edge voices)
+edge-tts>=6.1
+
+# YouTube upload (Data API v3 — free, 100 uploads/day bucket)
+google-api-python-client>=2.100
+google-auth-oauthlib>=1.1
+google-auth-httplib2>=0.1
+
+# Optional: static ffmpeg binary for laptops without ffmpeg installed
+imageio-ffmpeg>=0.4.9

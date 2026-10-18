@@ -1,0 +1,40 @@
+name: Weekly metrics snapshot
+
+on:
+  schedule:
+    - cron: "41 18 * * 5"   # Fridays 18:41 UTC — end of the week, US afternoon
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+      YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Python deps
+        run: pip install -r requirements.txt
+
+      - name: Snapshot channel metrics
+        run: python scripts/metrics_snapshot.py
+
+      - name: Commit metrics history
+        run: |
+          git config user.name "youtube-automation-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add content/metrics.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(metrics): weekly snapshot [skip ci]"
+            git push
+          fi
