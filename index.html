@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Johnstown Flood — pipeline showcase</title>
+<style>
+  body { margin: 0; font-family: system-ui, sans-serif; background: #16213e; color: #eee; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { color: #ffd23c; margin-bottom: 4px; }
+  p.sub { color: #9ab; margin-top: 0; }
+  .row { display: flex; gap: 16px; flex-wrap: wrap; }
+  .card { background: #0f3460; border-radius: 12px; padding: 12px; flex: 1 1 260px; }
+  .card.wide { flex: 1 1 100%; }
+  video { width: 100%; border-radius: 8px; background: #000; }
+  .label { font-size: 14px; color: #ffd23c; margin: 8px 0 0; font-weight: 600; }
+  .meta { font-size: 12px; color: #9ab; }
+  a { color: #7ec8ff; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>YouTube automation — first renders</h1>
+  <p class="sub">Everything below was produced end-to-end by the pipeline on this branch (Pillow text plates + bundled ffmpeg + placeholder TTS). The same code ships to GitHub Actions for real voice &amp; b-roll.</p>
+
+  <div class="row">
+    <div class="card">
+      <video controls playsinline preload="metadata" src="docs/media/short1.mp4"></video>
+      <p class="label">Short 1 — «The hook»</p>
+      <p class="meta">35s · 9:16 · 1080×1920 · captions + hook band</p>
+    </div>
+    <div class="card">
+      <video controls playsinline preload="metadata" src="docs/media/short2.mp4"></video>
+      <p class="label">Short 2 — «A dam with a secret history»</p>
+      <p class="meta">35s · 9:16 · 1080×1920 · captions + hook band</p>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:16px">
+    <div class="card wide">
+      <video controls playsinline preload="metadata" src="docs/media/documentary.mp4"></video>
+      <p class="label">Long-form documentary — «The Canal That Broke a City»</p>
+      <p class="meta">4:29 · 16:9 · 1280×720 · title plates, placeholder voice, green tone</p>
+    </div>
+  </div>
+
+  <p class="meta" style="margin-top:24px">Docs: <a href="docs/PLAN.md">PLAN.md</a> · <a href="docs/GROWTH.md">GROWTH.md</a> · <a href="docs/DEEP_DIVE.md">DEEP_DIVE.md</a> · <a href="docs/SETUP.md">SETUP.md</a></p>
+</div>
+</body>
+</html>
