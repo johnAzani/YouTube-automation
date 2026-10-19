@@ -1,0 +1,35 @@
+name: Deploy showcase to GitHub Pages
+
+on:
+  push:
+    branches: [arena/79365da2-youtube-automation]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Enable GitHub Pages (first run)
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - name: Upload site (player page + demo renders)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
