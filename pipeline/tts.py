@@ -144,17 +144,41 @@ def synthesize(text: str, out_dir: Path, voice: str = "", srt_name: str = "capti
 
 
 def _probe_duration(path: Path) -> float | None:
+    import os
+    import re
+    import shutil
     import subprocess
 
     from .assemble import ffmpeg_bin
 
-    ffprobe = ffmpeg_bin().replace("ffmpeg", "ffprobe")
+    candidates: list[str] = []
+    if os.environ.get("FFPROBE_BINARY"):
+        candidates.append(os.environ["FFPROBE_BINARY"])
+    found = shutil.which("ffprobe")
+    if found:
+        candidates.append(found)
+    guess = ffmpeg_bin().replace("ffmpeg", "ffprobe")  # works for system installs
+    candidates.append(guess)
+
+    for ffprobe in candidates:
+        try:
+            out = subprocess.run(
+                [ffprobe, "-v", "error", "-show_entries", "format=duration",
+                 "-of", "default=noprint_wrappers=1:nokey=1", str(path)],
+                check=True, capture_output=True, text=True,
+            )
+            return float(out.stdout.strip())
+        except Exception:  # noqa: BLE001
+            continue
+
+    # Last resort: parse `ffmpeg -i` banner (always available)
     try:
-        out = subprocess.run(
-            [ffprobe, "-v", "error", "-show_entries", "format=duration",
-             "-of", "default=noprint_wrappers=1:nokey=1", str(path)],
-            check=True, capture_output=True, text=True,
-        )
-        return float(out.stdout.strip())
+        proc = subprocess.run([ffmpeg_bin(), "-i", str(path)],
+                              capture_output=True, text=True)
+        m = re.search(r"Duration:\s*(\d+):(\d+):(\d+\.?\d*)", proc.stderr)
+        if m:
+            h, mnt, s = m.groups()
+            return int(h) * 3600 + int(mnt) * 60 + float(s)
     except Exception:  # noqa: BLE001
-        return None
+        pass
+    return None
