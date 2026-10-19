@@ -77,6 +77,7 @@ def upload(
     thumbnail_path: Path | None = None,
     privacy: str | None = None,
     publish_at: str | None = None,
+    description: str | None = None,
 ) -> UploadResult:
     from googleapiclient.discovery import build
     from googleapiclient.http import MediaFileUpload
@@ -91,9 +92,9 @@ def upload(
     body = {
         "snippet": {
             "title": doc.title[:95],
-            "description": build_description(doc),
+            "description": (description or build_description(doc))[:4900],
             "tags": (doc.tags + CONFIG.tags_extra)[:20],
-            "categoryId": "27" if doc.meta.get("category", "") == "education" else "27",
+            "categoryId": "27",
         },
         "status": {
             "privacyStatus": privacy,

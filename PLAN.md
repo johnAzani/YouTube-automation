@@ -99,6 +99,8 @@ editorial voice (the inauthentic-content shield).
 1. **Affiliate links** in descriptions (books, tools — Amazon Associates is free; finance/B2B
    programs pay $50–200/sale).
 2. **Digital product** once audience exists (PDF deep-dives, research packs — Gumroad free tier).
+2b. **Auto-dubbed languages** from month 2 — YouTube auto-dubbing (27 languages) opened to all
+   creators 4 Feb 2026 and is free; it expands non-US reach at ₦0 (GROWTH.md §8).
 3. **Second channel** once channel #1 is systematized and proven.
 4. Ad revenue stays the floor, not the ceiling.
 
@@ -329,10 +331,14 @@ Access, Zenith, UBA, First Bank all supported via SWIFT) — also costs nothing 
 
 ## 8. Sources & further reading (research log, Oct 2026)
 
-**Fine print companion: [docs/DEEP_DIVE.md](docs/DEEP_DIVE.md)** — OAuth 7-day token trap,
+**Fine print companions: [docs/DEEP_DIVE.md](docs/DEEP_DIVE.md)** — OAuth 7-day token trap,
 GitHub's 60-day schedule auto-disable, audience-geography economics (a US view is worth
 10–20× a Nigerian view), CTR/retention benchmarks, the 12-week countdown to the
-1 Feb 2027 threshold change, and the Nigeria AdSense payout mechanics.
+1 Feb 2027 threshold change, and the Nigeria AdSense payout mechanics — and
+**[docs/GROWTH.md](docs/GROWTH.md)** — the 2026 ranking model (satisfaction surveys +
+session contribution), the 48-hour ritual, packaging science with the Test & Compare SOP,
+the exact metadata limits, the idea-validation rubric, and the free auto-dubbing lever
+(opened to all creators 4 Feb 2026).
 
 1. YouTube channel monetization policies (official) — inauthentic content:
    https://support.google.com/youtube/answer/1311392

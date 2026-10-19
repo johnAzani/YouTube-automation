@@ -97,12 +97,21 @@ def process(path: Path, dry_run: bool) -> dict:
     final = assemble(doc, scene_assets, narration.audio_path, narration.srt_path, out_dir, durations)
     _log(f"rendered {final} ({final.stat().st_size / 1e6:.1f} MB)")
 
-    # ---- 5. thumbnail -------------------------------------------------
-    from .thumbnail import generate_thumbnail
+    # ---- 5. thumbnail (+ A/B variants for Studio Test & Compare) -------
+    from .thumbnail import generate_thumbnail_variants
 
     bg = scene_assets[0][0] if scene_assets and scene_assets[0] else None
-    thumb = generate_thumbnail(doc, bg, out_dir)
-    _log(f"thumbnail {thumb}")
+    thumbs = generate_thumbnail_variants(doc, bg, out_dir)
+    thumb = thumbs[0]
+    _log(f"thumbnail {thumb.name} + {len(thumbs) - 1} A/B variants")
+
+    # ---- 5b. SEO metadata pack (chapters, description, tags) ----------
+    from .metadata import write_metadata_pack
+
+    pack = write_metadata_pack(doc, durations, out_dir)
+    _log(f"metadata pack: {len(pack['chapters'])} chapters, "
+         f"title {pack['title_report']['length']} chars "
+         f"({'ok' if pack['title_report']['visible_mobile'] else 'LONG for mobile'})")
 
     result = {
         "id": doc.id,
@@ -110,11 +119,22 @@ def process(path: Path, dry_run: bool) -> dict:
         "title": doc.title,
         "video": str(final),
         "thumbnail": str(thumb),
+        "thumbnail_variants": [str(t) for t in thumbs],
         "srt": str(narration.srt_path),
         "duration_seconds": narration.duration_seconds,
         "tts_engine": narration.engine,
+        "metadata": pack,
         "dry_run": dry_run,
     }
+
+    # ---- 5c. auto-Shorts (opt-in via MAKE_SHORTS=1) -------------------
+    if os.environ.get("MAKE_SHORTS", "").lower() in {"1", "true", "yes"}:
+        from .shorts import cut_shorts
+
+        shorts = cut_shorts(doc, final, narration.srt_path, durations,
+                            out_dir / "shorts", count=int(os.environ.get("SHORTS_COUNT", "2")))
+        result["shorts"] = [str(s) for s in shorts]
+        _log(f"cut {len(shorts)} Short(s)")
 
     # ---- 6. upload ----------------------------------------------------
     if not dry_run:
@@ -124,7 +144,7 @@ def process(path: Path, dry_run: bool) -> dict:
         else:
             from .upload import upload
 
-            up = upload(doc, final, thumb)
+            up = upload(doc, final, thumb, description=pack.get("description"))
             result.update({
                 "uploaded": True,
                 "video_id": up.video_id,

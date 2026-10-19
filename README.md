@@ -1,8 +1,8 @@
 # YouTube Automation Lab 🎬
 
 A **₦0 / $0** YouTube production studio that runs entirely on **GitHub Actions**.
-Research plan: **[PLAN.md](PLAN.md)** · Setup guide: **[docs/SETUP.md](docs/SETUP.md)** ·
-Fine print: **[docs/DEEP_DIVE.md](docs/DEEP_DIVE.md)**
+Research plan: **[PLAN.md](PLAN.md)** · Setup: **[docs/SETUP.md](docs/SETUP.md)** ·
+Fine print: **[docs/DEEP_DIVE.md](docs/DEEP_DIVE.md)** · Growth science: **[docs/GROWTH.md](docs/GROWTH.md)**
 
 > **The honest pitch** (details & math in PLAN.md): this repo automates the *grunt work* —
 > narration, b-roll, assembly, captions, upload — while a human owns the creative
@@ -68,9 +68,17 @@ Outputs land in `output/<slug>/` — video, thumbnail, SRT captions, credits.jso
 ```
 PLAN.md                    ← the full research + business plan (start here)
 docs/SETUP.md              ← secrets, API keys, YouTube OAuth & audit walkthrough
-pipeline/                  ← the studio: tts, assets, assemble, upload, originality gate
+docs/DEEP_DIVE.md          ← the traps + money fine print (OAuth 7-day, cron 60-day, RPM geography)
+docs/GROWTH.md             ← algorithm 2026, packaging science, SEO spec, Test & Compare SOP
+pipeline/                  ← the studio: tts, assets, assemble, upload, metadata, shorts, originality gate
+scripts/doctor.py          ← pre-flight setup check
+scripts/youtube_oauth.py   ← one-time refresh-token mint (run locally)
 content/queue/             ← script queue (the human creative layer)
 content/published/         ← done, stamped
-.github/workflows/         ← produce.yml (cron) + dry-run.yml (CI proof)
-scripts/youtube_oauth.py   ← one-time refresh-token mint (run locally)
+.github/workflows/         ← produce (cron) · dry-run (CI proof) · keepalive · metrics
 ```
+
+Every render produces: final MP4 + **SRT captions** + **A/B/C thumbnail drafts** (for Studio
+Test & Compare) + **metadata pack** (chapters, SEO description, tags) + optional **auto-Shorts**
+(vertical 9:16 cuts, `MAKE_SHORTS=1`). Run `python scripts/doctor.py` before the first
+production run.
