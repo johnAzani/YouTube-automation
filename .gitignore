@@ -13,3 +13,6 @@ __pycache__/
 .venv/
 venv/
 .DS_Store
+
+# demo renders for the docs/ showcase page (the user watches these via GitHub Pages)
+!docs/media/*.mp4
