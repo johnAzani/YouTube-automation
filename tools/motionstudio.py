@@ -164,6 +164,89 @@ REEL2 = dict(
         ]),
     ])
 
+# ── channel reels: "The Canal That Broke a City" (Johnstown Flood, 1889) ──
+REEL3 = dict(
+    name='THE FLOOD', out='reel-3-flood.mp4',
+    purpose='Hook history audience with the scale of the Johnstown Flood',
+    audience='history & disaster-documentary fans, phone-first, sound-off',
+    platform='YouTube Shorts / Instagram Reels', tone='grave, cinematic, factual',
+    peak='the 2,209 count-up landing, yellow-underlined, then perfect stillness',
+    hierarchy='fact odometers > verdict lines > support lines > kickers',
+    scenes=[
+        dict(id='A', role='hook', dur=3.2, punch=0.050, trans='flash', beats=[
+            Beat('odometer', 'hook', '2,209', target=2209, prefix='', size=250, y=580,
+                 color=WHITE, count_dur=0.95, whose='ours'),
+            Beat('support', 'support', 'one city. one night.', size=52, y=900, color=MUTED),
+            Beat('kicker', 'kicker', 'JOHNSTOWN \u00B7 MAY 31, 1889', size=32, y=1010, color=YELLOW),
+        ]),
+        dict(id='B', role='contrast', dur=2.9, punch=0.045, trans='flash', beats=[
+            Beat('badge', 'emphasis', shape='cross', color=RED, cy=540, r=52),
+            Beat('cascade', 'emphasis', 'IT HELD FOR YEARS.', size=120, y=660, color=WHITE),
+            Beat('kicker', 'kicker', 'A LAKE SAT ABOVE THE VALLEY', size=30, y=900, color=FAINT),
+        ]),
+        dict(id='C', role='reveal', dur=2.9, punch=0.020, trans='whip', beats=[
+            Beat('cascade', 'emphasis', 'THEN IT DIDN\u2019T.', size=120, y=660, color=WHITE),
+            Beat('kicker', 'kicker', 'THE WALL GAVE WAY', size=30, y=900, color=YELLOW),
+        ]),
+        dict(id='D', role='price', dur=2.9, punch=0.050, trans='flash', beats=[
+            Beat('odometer', 'hook', '20,000,000', target=20000000, prefix='', size=175, y=575,
+                 color=WHITE, count_dur=0.85, whose='ours'),
+            Beat('kicker', 'kicker', 'TONS OF WATER \u00B7 ONE RELEASED LAKE', size=32, y=975,
+                 color=YELLOW),
+        ]),
+        dict(id='E', role='conclusion', dur=3.6, punch=0.0, trans='dissolve', beats=[
+            Beat('wordpop', 'conclusion', 'REMEMBER.', size=180, y=540, color=WHITE,
+                 underline=YELLOW, rings=True),
+            Beat('button', 'cta', 'FULL STORY \u00B7 SUBSCRIBE', y=850),
+            Beat('support', 'support', 'the courts held nobody responsible.', size=46, y=1035,
+                 color=MUTED),
+            Beat('kicker', 'kicker', 'THE CANAL THAT BROKE A CITY', size=24, y=1150,
+                 color=FAINT, t0=1.72),
+            Beat('kicker', 'kicker', 'FOLLOW FOR MORE HISTORY', size=24, y=1198, color=BLUE, t0=1.92),
+        ]),
+    ])
+
+REEL4 = dict(
+    name='THE SECRET', out='reel-4-secret.mp4',
+    purpose='The dam\u2019s backstory — how a $2,000 lake was set up to fail',
+    audience='history & disaster-documentary fans, phone-first, sound-off',
+    platform='YouTube Shorts / Instagram Reels', tone='wry, ominous, factual',
+    peak='the check badge landing on \u201cTHE FISH HAD TO STAY.\u201d — the irony that doomed a valley',
+    hierarchy='fact odometers > verdict lines > support lines > kickers',
+    scenes=[
+        dict(id='A', role='hook', dur=3.0, punch=0.050, trans='flash', beats=[
+            Beat('odometer', 'hook', '$2,000', target=2000, prefix='$', size=240, y=580,
+                 color=WHITE, count_dur=0.70, whose='ours'),
+            Beat('support', 'support', 'a lake sat above the valley.', size=50, y=900, color=MUTED),
+            Beat('kicker', 'kicker', 'THE PRICE OF A DAM', size=32, y=1010, color=YELLOW),
+        ]),
+        dict(id='B', role='contrast', dur=2.9, punch=0.045, trans='flash', beats=[
+            Beat('badge', 'emphasis', shape='cross', color=RED, cy=540, r=52),
+            Beat('cascade', 'emphasis', 'THE CANAL DIED.', size=120, y=660, color=WHITE),
+            Beat('kicker', 'kicker', 'RAILROADS TOOK THE ROUTE', size=30, y=900, color=FAINT),
+        ]),
+        dict(id='C', role='reveal', dur=2.9, punch=0.020, trans='whip', beats=[
+            Beat('badge', 'emphasis', shape='check', color=GREEN, cy=540, r=56, t0=0.02),
+            Beat('cascade', 'emphasis', 'THE FISH HAD TO STAY.', size=120, y=660, color=WHITE),
+            Beat('kicker', 'kicker', 'SO THEY SCREENED THE DRAIN', size=30, y=900, color=YELLOW),
+        ]),
+        dict(id='D', role='price', dur=2.9, punch=0.050, trans='flash', beats=[
+            Beat('odometer', 'hook', '36', target=36, prefix='', size=262, y=575,
+                 color=WHITE, count_dur=0.45, whose='ours'),
+            Beat('kicker', 'kicker', 'FEET HIGH WHEN IT STRUCK', size=32, y=975, color=YELLOW),
+        ]),
+        dict(id='E', role='conclusion', dur=3.6, punch=0.0, trans='dissolve', beats=[
+            Beat('wordpop', 'conclusion', 'GONE.', size=190, y=540, color=WHITE,
+                 underline=YELLOW, rings=True),
+            Beat('button', 'cta', 'FULL STORY \u00B7 SUBSCRIBE', y=850),
+            Beat('support', 'support', 'the lake emptied in forty minutes.', size=46, y=1035,
+                 color=MUTED),
+            Beat('kicker', 'kicker', 'THE CANAL THAT BROKE A CITY', size=24, y=1150,
+                 color=FAINT, t0=1.72),
+            Beat('kicker', 'kicker', 'FOLLOW FOR MORE HISTORY', size=24, y=1198, color=BLUE, t0=1.92),
+        ]),
+    ])
+
 DOCS = ['Tenancy Agreement', 'Rent Receipt', 'Notice to Quit', 'Invoice',
         'Employment Contract', 'Caution Fee', 'Demand Letter', 'Payslip', 'Warning Letter']
 ICONS = ['icon-agreement', 'icon-receipt', 'icon-seal', 'icon-house',
@@ -935,12 +1018,13 @@ def build(reel, tag):
 
 if __name__ == '__main__':
     args = sys.argv[1:]
-    sel = [a for a in args if a in ('reel1', 'reel2', 'all')] or ['all']
+    all_reels = {'reel1': (REEL1, 'r1'), 'reel2': (REEL2, 'r2'),
+                 'reel3': (REEL3, 'r3'), 'reel4': (REEL4, 'r4')}
+    sel = [a for a in args if a in all_reels or a == 'all'] or ['all']
     if 'all' in sel:
-        sel = ['reel1', 'reel2']
+        sel = list(all_reels)
     ok = True
-    if 'reel1' in sel:
-        ok &= build(REEL1, 'r1')
-    if 'reel2' in sel:
-        ok &= build(REEL2, 'r2')
+    for name in sel:
+        reel, tag = all_reels[name]
+        ok &= build(reel, tag)
     sys.exit(0 if ok else 1)
