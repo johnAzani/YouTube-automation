@@ -1,8 +1,10 @@
 name: Deploy showcase to GitHub Pages
 
+# Manual-only: when Pages source is "Deploy from a branch", GitHub rebuilds
+# the site on every push to that branch automatically. Keep this workflow as
+# a manual fallback (Actions → Run workflow) if the "GitHub Actions" source
+# is ever selected instead.
 on:
-  push:
-    branches: [arena/79365da2-youtube-automation]
   workflow_dispatch:
 
 permissions:
