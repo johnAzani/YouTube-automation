@@ -21,33 +21,33 @@
 <body>
 <div class="wrap">
   <h1>YouTube automation — first renders</h1>
-  <p class="sub">Everything below was produced end-to-end by the pipeline on this branch (Pillow text plates + bundled ffmpeg + placeholder TTS). The same code ships to GitHub Actions for real voice &amp; b-roll.</p>
+  <p class="sub">Documentary renders from this branch: real narration, Pillow motion graphics, ffmpeg, music-only score, and aspect-safe archived stills. The new clip-first sourcing path runs on free providers in GitHub Actions.</p>
 
   <div class="row" style="margin-top:16px">
     <div class="card wide">
       <video controls playsinline preload="metadata" src="media/deep-dive.mp4"></video>
       <p class="label">★ DEEP DIVE — The Canal That Broke a City</p>
-      <p class="meta">1:42 · 16:9 · real archival footage (dam, Stone Bridge, survivors, Red Cross) + full narration</p>
+      <p class="meta">1:41 · 16:9 · archival imagery + full narration · <a href="media/deep-dive-johnstown-sources.json">scene source ledger</a></p>
     </div>
     <div class="card wide">
       <video controls playsinline preload="metadata" src="media/deep-dive-enron.mp4"></video>
       <p class="label">★ DEEP DIVE — How Enron Died</p>
-      <p class="meta">1:57 · 16:9 · MONEY DOCUMENTARY · archival footage (HQ, trading floor, verdict day) + full narration</p>
+      <p class="meta">1:55 · 16:9 · MONEY DOCUMENTARY · archival imagery + full narration · <a href="media/deep-dive-enron-sources.json">scene source ledger</a></p>
     </div>
   </div>
 
   <h2 style="color:#ffd23c; margin:32px 0 4px">★ NEW — YouTube Shorts (9:16, same documentary engine)</h2>
-  <p class="sub">Vertical twins of the deep dives: text motion graphics locked to every spoken word, smooth sub-pixel camera moves, a new image the moment the voiceover changes topic, tease cards + progress bar to hold viewers to the end. Voice + background music only — zero sound effects.</p>
+  <p class="sub">The render engines now search free stock video first, then licensed photos; sources are contain-fit in native ratio with no stretch or crop. This sandbox cannot reach external stock APIs; the per-scene ledgers identify what each render actually used. Run the <a href="https://github.com/johnAzani/YouTube-automation/actions/workflows/remaster.yml">Remaster workflow</a> on this branch to search providers and refresh the source/license ledgers. Speech-locked graphics, camera moves, retention teases + score; voice and music only, no SFX. <a href="ASSET_SOURCING.md">Sourcing and format rules</a>.</p>
   <div class="row">
     <div class="card">
       <video controls playsinline preload="metadata" src="media/shorts-johnstown.mp4"></video>
       <p class="label">SHORT — The Canal That Broke a City</p>
-      <p class="meta">0:49 · 9:16 · 720×1280 · word-synced motion graphics + score (no SFX)</p>
+      <p class="meta">0:49 · 9:16 · 720×1280 · full-frame stills + speech-locked graphics · <a href="media/shorts-johnstown-sources.json">scene source ledger</a></p>
     </div>
     <div class="card">
       <video controls playsinline preload="metadata" src="media/shorts-enron.mp4"></video>
       <p class="label">SHORT — How Enron Died</p>
-      <p class="meta">0:52 · 9:16 · 720×1280 · word-synced motion graphics + score (no SFX)</p>
+      <p class="meta">0:52 · 9:16 · 720×1280 · full-frame stills + speech-locked graphics · <a href="media/shorts-enron-sources.json">scene source ledger</a></p>
     </div>
   </div>
 
@@ -102,7 +102,7 @@
     </div>
   </div>
 
-  <p class="meta" style="margin-top:24px">Docs: <a href="PLAN.md">PLAN.md</a> · <a href="GROWTH.md">GROWTH.md</a> · <a href="DEEP_DIVE.md">DEEP_DIVE.md</a> · <a href="FINANCE.md">FINANCE.md</a> · <a href="SETUP.md">SETUP.md</a></p>
+  <p class="meta" style="margin-top:24px">Docs: <a href="PLAN.md">PLAN.md</a> · <a href="GROWTH.md">GROWTH.md</a> · <a href="DEEP_DIVE.md">DEEP_DIVE.md</a> · <a href="FINANCE.md">FINANCE.md</a> · <a href="SETUP.md">SETUP.md</a> · <a href="ASSET_SOURCING.md">ASSET_SOURCING.md</a></p>
 </div>
 </body>
 </html>

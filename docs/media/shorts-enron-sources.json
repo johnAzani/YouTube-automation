@@ -1,0 +1,112 @@
+[
+  {
+    "scene": 1,
+    "query": "Houston energy company corporate headquarters skyline 2001",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "enron-corporation-headquarters-houston-c-4.jpg"
+  },
+  {
+    "scene": 2,
+    "query": "stock market trading floor rising share prices ticker",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "enron-bankruptcy-newspaper-headline-2001-3.jpg"
+  },
+  {
+    "scene": 3,
+    "query": "corporate innovation technology office skyscraper",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "enron-corporation-headquarters-houston-c-4.jpg"
+  },
+  {
+    "scene": 4,
+    "query": "financial journalist newspaper investigation corporate accounting",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "enron-corporation-headquarters-houston-c-3.jpg"
+  },
+  {
+    "scene": 5,
+    "query": "corporate fraud CFO executive courtroom trial",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "andrew-fastow-enron-cfo-trial-photo-2.jpg"
+  },
+  {
+    "scene": 6,
+    "query": "energy trading control room accounting ledger",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "enron-corporation-headquarters-houston-c-5.jpg"
+  },
+  {
+    "scene": 7,
+    "query": "shell company financial paperwork accounting records",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "enron-bankruptcy-newspaper-headline-2001-1.jpg"
+  },
+  {
+    "scene": 8,
+    "query": "corporate bankruptcy newspaper headline stock market crash",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "enron-corporation-headquarters-houston-c-2.jpg"
+  },
+  {
+    "scene": 9,
+    "query": "office employees corporate layoffs retirement pension",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "enron-corporation-headquarters-houston-c-1.jpg"
+  },
+  {
+    "scene": 10,
+    "query": "corporate executives fraud trial courtroom justice",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "jeff-skilling-ken-lay-enron-trial-courtr-2.jpg"
+  }
+]

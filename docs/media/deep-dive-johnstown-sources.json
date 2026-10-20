@@ -1,0 +1,145 @@
+[
+  {
+    "scene": 1,
+    "query": "south fork dam lake conemaugh johnstown documentary archival",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "south-fork-dam-lake-conemaugh-johnstown--3.jpg"
+  },
+  {
+    "scene": 2,
+    "query": "south fork dam lake conemaugh johnstown documentary archival",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "south-fork-dam-lake-conemaugh-johnstown--3.jpg"
+  },
+  {
+    "scene": 3,
+    "query": "south fork fishing and hunting club club documentary archival",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "south-fork-fishing-and-hunting-club-club-3.jpg"
+  },
+  {
+    "scene": 4,
+    "query": "pennsylvania main line canal 1850s histo documentary archival",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "pennsylvania-main-line-canal-1850s-histo-2.jpg"
+  },
+  {
+    "scene": 5,
+    "query": "south fork fishing and hunting club club documentary archival",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "south-fork-fishing-and-hunting-club-club-1.jpg"
+  },
+  {
+    "scene": 6,
+    "query": "south fork dam lake conemaugh johnstown documentary archival",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "south-fork-dam-lake-conemaugh-johnstown--3.jpg"
+  },
+  {
+    "scene": 7,
+    "query": "south fork dam lake conemaugh johnstown documentary archival",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "south-fork-dam-lake-conemaugh-johnstown--3.jpg"
+  },
+  {
+    "scene": 8,
+    "query": "south fork dam lake conemaugh johnstown documentary archival",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "south-fork-dam-lake-conemaugh-johnstown--4.jpg"
+  },
+  {
+    "scene": 9,
+    "query": "johnstown train clean documentary archival",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "johnstown-train-clean.jpg"
+  },
+  {
+    "scene": 10,
+    "query": "johnstown flood 1889 ruins destruction h documentary archival",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "johnstown-flood-1889-ruins-destruction-h-1.jpg"
+  },
+  {
+    "scene": 11,
+    "query": "south fork dam lake conemaugh johnstown documentary archival",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "south-fork-dam-lake-conemaugh-johnstown--1.jpg"
+  },
+  {
+    "scene": 12,
+    "query": "south fork dam lake conemaugh johnstown documentary archival",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "south-fork-dam-lake-conemaugh-johnstown--2.jpg"
+  },
+  {
+    "scene": 13,
+    "query": "johnstown flood 1889 ruins destruction h documentary archival",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "dimensions": null,
+    "fallback": true,
+    "file": "johnstown-flood-1889-ruins-destruction-h-3.jpg"
+  }
+]

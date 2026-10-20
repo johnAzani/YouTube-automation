@@ -48,10 +48,19 @@ Everything here is ₦0. Follow in order; items marked ⏱ have lead time, so st
 | `PEXELS_API_KEY` | https://www.pexels.com/api/ | stock video/photos |
 | `PIXABAY_API_KEY` | https://pixabay.com/api/docs/ | stock fallback |
 
-Both are free forever, commercial use allowed. Without any keys the pipeline still works
-via Wikimedia/NASA + generated cards (lower visual quality).
+Both are free API tiers; Pexels/Pixabay can return both video and photos. Without keys, the renderer tries Openverse, Wikimedia Commons, Internet Archive, and NASA using explicit commercial-use/attribution filters. It requests clips first, then photos; if an automated job still finds no legal visual, it fails that scene rather than publishing a generic card. Existing authored documentaries keep their story-specific photo fallback.
 
-## 3. Mint the YouTube refresh token (local, once)
+## 3. Remaster the existing deep dives and Shorts (free GitHub Actions)
+
+Open **Actions → Remaster documentary assets → Run workflow**, select branch
+`arena/79365da2-youtube-automation` as the ref, choose `all` (or deep dives/Shorts) and leave
+**Search free video first** enabled. The workflow uses optional Pexels/Pixabay secrets,
+then keyless free providers, preserves the whole source frame, writes per-scene license
+ledgers, and publishes updated demos to GitHub Pages. If a source API is unreachable,
+the existing scene-specific photo remains; the local sandbox itself may not reach those
+external domains.
+
+## 4. Mint the YouTube refresh token (local, once)
 
 ```bash
 pip install -r requirements.txt
@@ -60,7 +69,7 @@ python scripts/youtube_oauth.py --client-secret client_secret.json
 
 Copy the printed `YOUTUBE_CLIENT_SECRET` and `YOUTUBE_REFRESH_TOKEN` values.
 
-## 4. GitHub secrets
+## 5. GitHub secrets
 
 Repo → **Settings → Secrets and variables → Actions** → New repository secret:
 
@@ -73,7 +82,7 @@ Repo → **Settings → Secrets and variables → Actions** → New repository s
 | `YOUTUBE_PLAYLIST_ID` | optional |
 | `AUTO_PUBLISH` | `false` until the API audit passes; then `true` |
 
-## 5. First production run
+## 6. First production run
 
 1. Write/approve a script in `content/queue/` (copy `0001-…md` as the template).
    Checklist: PLAN.md §4.4 — every `originality:` flag must be honestly true.
@@ -83,7 +92,7 @@ Repo → **Settings → Secrets and variables → Actions** → New repository s
    if needed → **Publish** (or schedule).
 5. The workflow commits `content/queue/*.md` → `content/published/` automatically.
 
-## 6. Day-to-day operations (the human part — 45–60 min/day)
+## 7. Day-to-day operations (the human part — 45–60 min/day)
 
 - **Scripts** (the moat): 3 long-form/week + 5 Shorts/week. LLMs help research; you own
   the thesis, structure and line edits. If you didn't rewrite it, don't publish it.
@@ -92,7 +101,7 @@ Repo → **Settings → Secrets and variables → Actions** → New repository s
 - **Weekly metrics review** (Studio): CTR ≥ 4%, avg view duration ≥ 40%. Kill formats
   that miss; double down on what works.
 
-## 7. Monetization checklist (PLAN.md §5, §7)
+## 8. Monetization checklist (PLAN.md §5, §7)
 
 - [ ] 500 subs + 3 uploads/90d + 3,000 hrs → apply for fan-funding tier (earliest money)
 - [ ] 1,000 subs + 4,000 watch hrs → apply for full YPP **before 1 Feb 2027**

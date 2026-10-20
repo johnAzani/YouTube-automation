@@ -236,8 +236,8 @@ is why library-building + Shorts amplification from week 1 matters more than per
 | Need | Primary (shipped) | Free alternatives | Paid upgrade path (later) |
 |---|---|---|---|
 | TTS | `edge-tts` (Edge neural, no key) | Piper (fully local, offline), gTTS | ElevenLabs (~$5–22/mo) |
-| Stock video | Pexels (free key) | Pixabay, Coverr, Openverse | Storyblocks |
-| Stock images | Pexels/Pixabay | Wikimedia Commons, NASA, Internet Archive | — |
+| Stock video | Pexels (free key) | Pixabay, Openverse, Wikimedia Commons, Internet Archive, NASA | Storyblocks |
+| Stock images | Pexels/Pixabay | Openverse, Wikimedia Commons, NASA, Internet Archive | — |
 | Music | none (default) | YouTube Audio Library, Pixabay Music (CC0), local CC0 files via `MUSIC_DIR` | Artlist/Epidemic |
 | Assembly | ffmpeg (runners) | — | Descript/Runway (not needed) |
 | Script research | Human + free LLM tiers (Gemini, etc.) | Wikipedia/primary sources (better anyway) | — |
@@ -256,8 +256,10 @@ critical path needs money.
 |---|---|---|---|---|
 | Pexels photos/videos | Pexels License | ✅ | Not required | No "identifiable people in bad light" etc. — review clips |
 | Pixabay media | Pixabay Content License | ✅ | Not required | No standalone redistribution |
-| Wikimedia Commons | CC-BY / CC-BY-SA / PD (per file) | ✅ | **Required for CC-BY** | `credits.json` logs the licence; add to description when CC-BY |
-| NASA media | Public domain | ✅ | Requested (not required) | "NASA" logo use restricted — fine in narration context |
+| Openverse | CC0 / PD / CC-BY (filtered per file) | ✅ | **Required for CC-BY** | `credits.json` records the creator, license, and landing page |
+| Wikimedia Commons | CC0 / PD / CC-BY (selected); NC/ND/SA excluded | ✅ | **Required for CC-BY** | `credits.json` logs the licence; add to description when CC-BY |
+| Internet Archive | Explicit CC-BY / CC0 / PD only | ✅ | As required by item license | Other or missing rights metadata are rejected |
+| NASA media | Public domain (verify per item) | ✅ | Requested (not required) | Check third-party material; NASA logo use restricted |
 | edge-tts audio | Unofficial MS endpoint | ⚠️ gray | — | Fine for starting; swap to Piper/ElevenLabs if commercial risk matters to you |
 | YouTube Audio Library | YouTube license | ✅ | Not required | Only usable in YouTube videos — fine here |
 | AI disclosure | YouTube policy | — | — | Required only for *realistic synthetic media* (e.g. photoreal fake footage); synthetic narration over real archives typically doesn't trigger it — set `ai_disclosure` truthfully per video |

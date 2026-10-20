@@ -86,7 +86,12 @@ def process(path: Path, dry_run: bool) -> dict:
     scene_assets: list[list[Path]] = []
     for scene in doc.scenes:
         query = scene.asset_query or scene.heading
-        assets = fetch_scene_assets(query, scene.index, out_dir / "assets")
+        assets = fetch_scene_assets(query, scene.index, out_dir / "assets", allow_generated=False)
+        if not assets:
+            raise RuntimeError(
+                f"Scene {scene.index} has no licensed, downloadable video or photo for {query!r}; "
+                "refusing to substitute a generic title card. Add a usable free image/video or revise the query."
+            )
         scene_assets.append([a.path for a in assets])
         _log(f"  scene {scene.index:02d} «{scene.heading[:40]}» -> {len(assets)} asset(s)")
 

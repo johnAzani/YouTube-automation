@@ -45,10 +45,16 @@ def _run(cmd: list[str]) -> None:
         )
 
 
-def _cover_filter() -> str:
+def _contain_filter() -> str:
+    """Preserve every source pixel: proportional inner fit + cinematic matte.
+
+    The 82% safety area permits a gentle zoom without ever cropping the input.
+    Letter/pillar bars are intentional; no source is stretched to fill the canvas.
+    """
+    iw, ih = max(2, int(CONFIG.width * 0.82)), max(2, int(CONFIG.height * 0.82))
     return (
-        f"scale={CONFIG.width}:{CONFIG.height}:force_original_aspect_ratio=increase,"
-        f"crop={CONFIG.width}:{CONFIG.height},setsar=1,format=yuv420p"
+        f"scale={iw}:{ih}:force_original_aspect_ratio=decrease,setsar=1,"
+        f"pad={CONFIG.width}:{CONFIG.height}:(ow-iw)/2:(oh-ih)/2:color=0x061a33"
     )
 
 
@@ -60,16 +66,15 @@ def render_scene_clip(asset_path: Path, duration: float, out_path: Path, is_imag
         if ken:
             # Gentle push-in. zoompan operates at OUTPUT resolution (cheap + stable).
             vf = (
-                f"scale={CONFIG.width}:{CONFIG.height}:force_original_aspect_ratio=increase,"
-                f"crop={CONFIG.width}:{CONFIG.height},"
-                f"zoompan=z='min(1.0+0.0012*on,1.18)':"
-                f"d={int(duration * CONFIG.fps)}:"
+                f"{_contain_filter()},"
+                f"zoompan=z='min(1.0+0.00035*on,1.06)':"
+                "d=1:"
                 f"x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':"
                 f"s={CONFIG.width}x{CONFIG.height}:fps={CONFIG.fps},"
                 f"format=yuv420p"
             )
             cmd = [
-                ffmpeg_bin(), "-y", "-loop", "1", "-t", f"{duration:.2f}",
+                ffmpeg_bin(), "-y", "-loop", "1", "-framerate", str(CONFIG.fps), "-t", f"{duration:.2f}",
                 "-i", str(asset_path), "-vf", vf,
                 "-r", str(CONFIG.fps), "-c:v", "libx264", "-preset", "ultrafast",
                 "-pix_fmt", "yuv420p", str(out_path),
@@ -80,15 +85,15 @@ def render_scene_clip(asset_path: Path, duration: float, out_path: Path, is_imag
             except RuntimeError:
                 pass  # fall through to the static render
         cmd = [
-            ffmpeg_bin(), "-y", "-loop", "1", "-t", f"{duration:.2f}",
-            "-i", str(asset_path), "-vf", _cover_filter(),
+            ffmpeg_bin(), "-y", "-loop", "1", "-framerate", str(CONFIG.fps), "-t", f"{duration:.2f}",
+            "-i", str(asset_path), "-vf", _contain_filter() + ",format=yuv420p",
             "-r", str(CONFIG.fps), "-c:v", "libx264", "-preset", "ultrafast",
             "-pix_fmt", "yuv420p", str(out_path),
         ]
     else:
         cmd = [
             ffmpeg_bin(), "-y", "-i", str(asset_path), "-t", f"{duration:.2f}",
-            "-vf", _cover_filter() + f",fps={CONFIG.fps}",
+            "-vf", _contain_filter() + f",zoompan=z='min(1.0+0.00022*on,1.045)':d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s={CONFIG.width}x{CONFIG.height}:fps={CONFIG.fps},format=yuv420p",
             "-an", "-c:v", "libx264", "-preset", "ultrafast",
             "-pix_fmt", "yuv420p", "-r", str(CONFIG.fps), str(out_path),
         ]

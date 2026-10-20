@@ -1,256 +1,246 @@
-"""B-roll acquisition, free-tier only.
+"""License-aware, clip-first B-roll acquisition. All providers have free access.
 
-Chain (first hit wins per clip slot):
-  1. Pexels videos/photos  — free API key, commercial use, no attribution
-  2. Pixabay videos/photos — free API key, commercial use
-  3. Wikimedia Commons     — keyless, CC/PD (attribution recorded in credits)
-  4. NASA Image Library    — keyless, public domain
-  5. Generated title card  — offline ffmpeg fallback so the build never fails
-
-Every asset's provenance is logged to credits.json so licences stay auditable.
+Tries video across enabled platforms before falling back to photography. The
+renderer must contain-fit assets (never stretch or crop); provenance is logged.
+Sources: Pexels/Pixabay (free API keys), Openverse, Wikimedia Commons,
+Internet Archive, and NASA. Only usable/licensed matches are returned by default;
+generic title cards require an explicit opt-in.
 """
 from __future__ import annotations
-
-import hashlib
-import json
-import re
+import hashlib, json, mimetypes, re
 from dataclasses import dataclass, asdict
 from pathlib import Path
-
+from urllib.parse import urlparse, quote
 from .config import CONFIG
-
 try:
     import requests  # type: ignore
-except ImportError:  # pragma: no cover
+except ImportError:
     requests = None
-
 
 @dataclass
 class Asset:
     path: Path
-    source: str          # pexels | pixabay | wikimedia | nasa | generated
+    source: str
     origin_url: str
     license_note: str
-    kind: str            # video | image
+    kind: str
     query: str = ""
+    width: int = 0
+    height: int = 0
 
-
-def _slugify(text: str) -> str:
+def _slugify(text):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:48] or "asset"
 
-
-def _cache_path(source: str, ident: str, ext: str) -> Path:
+def _cache_path(source, ident, ext):
     key = hashlib.sha1(f"{source}:{ident}".encode()).hexdigest()[:16]
-    path = CONFIG.ASSET_CACHE_DIR / f"{source}_{key}.{ext}"
+    path = CONFIG.ASSET_CACHE_DIR / f"{source}_{key}.{ext.lstrip('.')}"
     path.parent.mkdir(parents=True, exist_ok=True)
     return path
 
-
-def _http_get(url: str, **kwargs) -> "requests.Response | None":
-    if requests is None:
-        return None
+def _http_get(url, **kwargs):
+    if requests is None: return None
+    kwargs.setdefault("timeout", (6, 16))
     try:
-        resp = requests.get(url, timeout=25, **kwargs)
-        resp.raise_for_status()
-        return resp
-    except Exception as exc:  # noqa: BLE001 - degradation is the point
-        print(f"[assets] GET {url} failed: {exc!r}")
-        return None
+        resp = requests.get(url, **kwargs); resp.raise_for_status(); return resp
+    except Exception as exc:
+        print(f"[assets] GET {url} failed: {exc!r}"); return None
 
-
-def _download(url: str, dest: Path) -> bool:
-    if dest.exists() and dest.stat().st_size > 0:
-        return True
-    if requests is None:
-        return False
+def _download(url, dest, max_bytes=120*1024*1024):
+    if dest.exists() and dest.stat().st_size > 1024: return True
+    if requests is None or not url: return False
     try:
-        with requests.get(url, stream=True, timeout=60) as r:
+        dest.parent.mkdir(parents=True, exist_ok=True); total=0
+        with requests.get(url, stream=True, timeout=(8,30), headers={"User-Agent":"YouTubeAutomation/2.0 (free stock media)"}) as r:
             r.raise_for_status()
-            with open(dest, "wb") as f:
-                for chunk in r.iter_content(chunk_size=1 << 16):
+            with open(dest,"wb") as f:
+                for chunk in r.iter_content(1<<16):
+                    if not chunk: continue
+                    total += len(chunk)
+                    if total > max_bytes: raise ValueError("asset exceeds 120 MB safety limit")
                     f.write(chunk)
-        return dest.stat().st_size > 0
-    except Exception as exc:  # noqa: BLE001
-        print(f"[assets] download failed {url}: {exc!r}")
-        return False
+        return dest.stat().st_size > 1024
+    except Exception as exc:
+        try: dest.unlink(missing_ok=True)
+        except OSError: pass
+        print(f"[assets] download failed {url}: {exc!r}"); return False
 
+def _orientation(w,h):
+    r=w/max(1,h)
+    return "landscape" if r>1.15 else ("portrait" if r<0.87 else "square")
 
-# --------------------------------------------------------------------------
-# Source adapters
-# --------------------------------------------------------------------------
+def _aspect_rank(item,w,h):
+    iw,ih=int(item.get("width") or 0),int(item.get("height") or 0)
+    if not iw or not ih: return (9.0,0)
+    return (abs(iw/ih-w/max(1,h)), -min(iw*ih,w*h*4))
 
-def _pexels(query: str, want_video: bool) -> Asset | None:
-    if not CONFIG.pexels_api_key:
-        return None
-    headers = {"Authorization": CONFIG.pexels_api_key}
-    if want_video:
-        r = _http_get("https://api.pexels.com/videos/search",
-                      params={"query": query, "per_page": 5, "orientation": "landscape"}, headers=headers)
-        if r:
-            for v in r.json().get("videos", []):
-                files = sorted(v.get("video_files", []),
-                               key=lambda f: abs((f.get("width") or 0) - CONFIG.width))
-                if not files:
-                    continue
-                url = files[0]["link"]
-                dest = _cache_path("pexels", str(v["id"]), "mp4")
-                if _download(url, dest):
-                    return Asset(dest, "pexels", v.get("url", ""), "Pexels License (free commercial use)", "video", query)
+def _pexels(q,video,w,h):
+    if not CONFIG.pexels_api_key: return None
+    orient=_orientation(w,h); headers={"Authorization":CONFIG.pexels_api_key}
+    if video:
+        r=_http_get("https://api.pexels.com/videos/search",params={"query":q,"per_page":8,"orientation":orient},headers=headers)
+        if not r:return None
+        for v in r.json().get("videos",[]):
+            files=sorted((f for f in v.get("video_files",[]) if f.get("link")),key=lambda f:_aspect_rank(f,w,h))
+            for f in files[:2]:
+                dest=_cache_path("pexels",str(v["id"]),"mp4")
+                if _download(f["link"],dest):return Asset(dest,"pexels",v.get("url",""),"Pexels License — free, including commercial use","video",q,int(f.get("width") or 0),int(f.get("height") or 0))
     else:
-        r = _http_get("https://api.pexels.com/v1/search",
-                      params={"query": query, "per_page": 5, "orientation": "landscape"}, headers=headers)
-        if r:
-            for p in r.json().get("photos", []):
-                url = p["src"].get("large2x") or p["src"].get("large") or p["src"].get("original")
-                dest = _cache_path("pexels", str(p["id"]), "jpg")
-                if url and _download(url, dest):
-                    return Asset(dest, "pexels", p.get("url", ""), "Pexels License (free commercial use)", "image", query)
+        r=_http_get("https://api.pexels.com/v1/search",params={"query":q,"per_page":8,"orientation":orient},headers=headers)
+        if not r:return None
+        for p in r.json().get("photos",[]):
+            src=p.get("src") or {}; url=src.get("large2x") or src.get("large") or src.get("original")
+            dest=_cache_path("pexels",str(p["id"]),"jpg")
+            if url and _download(url,dest):return Asset(dest,"pexels",p.get("url",""),"Pexels License — free, including commercial use","image",q,int(p.get("width") or 0),int(p.get("height") or 0))
     return None
 
+def _pixabay(q,video,w,h):
+    if not CONFIG.pixabay_api_key:return None
+    orient="horizontal" if w>h else "vertical"; base="https://pixabay.com/api/videos/" if video else "https://pixabay.com/api/"
+    params={"key":CONFIG.pixabay_api_key,"q":q,"per_page":8,"safesearch":"true","orientation":orient}
+    if not video:params["image_type"]="photo"
+    r=_http_get(base,params=params)
+    if not r:return None
+    for hit in r.json().get("hits",[]):
+        if video:
+            choices=sorted((hit.get("videos") or {}).values(),key=lambda f:_aspect_rank(f,w,h)); selected=next((x for x in choices if x.get("url")),{})
+            url=selected.get("url"); ext="mp4"; sw,sh=selected.get("width",0),selected.get("height",0)
+        else:url=hit.get("largeImageURL") or hit.get("webformatURL"); ext="jpg"; sw,sh=hit.get("imageWidth",0),hit.get("imageHeight",0)
+        if not url:continue
+        dest=_cache_path("pixabay",str(hit["id"]),ext)
+        if _download(url,dest):return Asset(dest,"pixabay",hit.get("pageURL",""),"Pixabay Content License — free; check depicted people/trademarks","video" if video else "image",q,int(sw or 0),int(sh or 0))
+    return None
 
-def _pixabay(query: str, want_video: bool) -> Asset | None:
-    if not CONFIG.pixabay_api_key:
-        return None
-    base = "https://pixabay.com/api/videos/" if want_video else "https://pixabay.com/api/"
-    params = {"key": CONFIG.pixabay_api_key, "q": query, "per_page": 5, "safesearch": "true"}
-    if not want_video:
-        params.update({"image_type": "photo", "orientation": "horizontal"})
-    r = _http_get(base, params=params)
-    if not r:
-        return None
-    hits = r.json().get("hits", [])
-    for h in hits:
-        if want_video:
-            versions = h.get("videos", {})
-            url = (versions.get("medium") or versions.get("small") or {}).get("url")
-            ext = "mp4"
+def _openverse(q,video,w,h):
+    endpoint='videos' if video else 'images'
+    r=_http_get(f"https://api.openverse.org/v1/{endpoint}/",params={'q':q,'page_size':12,'license_type':'commercial'})
+    if not r:return None
+    results=sorted(r.json().get('results',[]),key=lambda x:_aspect_rank(x,w,h))
+    for item in results:
+        url=item.get('url'); mime=item.get('mimetype') or ''; lic=str(item.get('license') or '').lower().replace('_','-')
+        if not url or lic not in {'cc0','pdm','by','cc-zero','public-domain'}:continue
+        if video and item.get('duration') is not None and float(item.get('duration') or 0)<3:continue
+        if video: ext='mp4' if ('mp4' in mime or url.lower().split('?')[0].endswith('.mp4')) else Path(urlparse(url).path).suffix.lstrip('.')
+        else: ext=Path(urlparse(url).path).suffix.lstrip('.') or mimetypes.guess_extension(mime or 'image/jpeg').lstrip('.')
+        if ext.lower() not in ({'mp4','webm','ogv','mov'} if video else {'jpg','jpeg','png','webp'}):continue
+        dest=_cache_path('openverse',item.get('id') or url,ext)
+        if _download(url,dest):
+            creator=item.get('creator') or 'creator not listed'
+            note=f"Openverse — CC {item.get('license')} {item.get('license_version') or ''}; creator: {creator}; {item.get('attribution') or ''}; verify landing page"
+            return Asset(dest,'openverse',item.get('foreign_landing_url') or url,note,'video' if video else 'image',q,int(item.get('width') or 0),int(item.get('height') or 0))
+    return None
+
+def _wikimedia(q,video,w,h):
+    typ='video' if video else 'bitmap'
+    params={'action':'query','format':'json','generator':'search','gsrsearch':f'filetype:{typ} {q}','gsrnamespace':6,'gsrlimit':10,'prop':'imageinfo','iiprop':'url|mime|size|extmetadata','iiurlwidth':1920}
+    r=_http_get('https://commons.wikimedia.org/w/api.php',params=params,headers={'User-Agent':'YouTubeAutomationPipeline/2.0 (educational project)'})
+    if not r:return None
+    pages=list(((r.json().get('query') or {}).get('pages') or {}).values())
+    pages.sort(key=lambda p:_aspect_rank((p.get('imageinfo') or [{}])[0],w,h))
+    for page in pages:
+        info=(page.get('imageinfo') or [{}])[0]; mime=info.get('mime') or ''
+        if (video and not mime.startswith('video/')) or (not video and not mime.startswith('image/')):continue
+        url=info.get('url'); ext=Path(urlparse(url or '').path).suffix.lstrip('.') or ('webm' if video else 'jpg')
+        if not url or ext.lower() not in ({'mp4','webm','ogv','ogg','mov'} if video else {'jpg','jpeg','png','webp','tif','tiff'}):continue
+        meta=info.get('extmetadata') or {}; lic=(meta.get('LicenseShortName') or {}).get('value','see Commons page'); lic_norm=str(lic).lower()
+        if any(term in lic_norm for term in ('noncommercial','non-commercial','share alike','share-alike','no derivatives','no-derivatives')):continue
+        if not any(term in lic_norm for term in ('cc0','public domain','cc by','cc-by')):continue
+        dest=_cache_path('wikimedia',page.get('title',url),ext)
+        if _download(url,dest):
+            creator=(meta.get('Artist') or {}).get('value','creator not listed')
+            note=f'Wikimedia Commons — {lic}; creator: {creator}; attribution required, verify file page'
+            return Asset(dest,'wikimedia',info.get('descriptionurl',''),note,'video' if video else 'image',q,int(info.get('width') or 0),int(info.get('height') or 0))
+    return None
+
+def _internet_archive(q,video,w,h):
+    """Internet Archive: use only items with explicit CC or public-domain rights."""
+    media='movies' if video else 'image'
+    r=_http_get('https://archive.org/advancedsearch.php',params={
+        'q':f'mediatype:{media} AND ({q})','fl[]':['identifier','title','licenseurl'],
+        'rows':8,'page':1,'output':'json'})
+    if not r:return None
+    docs=(r.json().get('response') or {}).get('docs',[])
+    for doc in docs:
+        ident=doc.get('identifier')
+        if not ident:continue
+        m=_http_get('https://archive.org/metadata/'+quote(str(ident),safe=''))
+        if not m:continue
+        metadata=m.json().get('metadata') or {}; lic=doc.get('licenseurl') or metadata.get('licenseurl') or ''
+        lic=str(lic).lower()
+        if any(x in lic for x in ('-nc','/by-sa/','-nd','noncommercial')):continue
+        if not any(x in lic for x in ('creativecommons.org/licenses/by/','creativecommons.org/publicdomain/','creativecommons.org/zero/')):
+            continue  # never assume that an Archive item is reusable
+        files=m.json().get('files') or []
+        if video:
+            choices=[f for f in files if 'mpeg4' in str(f.get('format','')).lower() and str(f.get('name','')).lower().endswith('.mp4')]
         else:
-            url = h.get("largeImageURL") or h.get("webformatURL")
-            ext = "jpg"
-        if not url:
-            continue
-        dest = _cache_path("pixabay", str(h["id"]), ext)
-        if _download(url, dest):
-            kind = "video" if want_video else "image"
-            return Asset(dest, "pixabay", h.get("pageURL", ""), "Pixabay Content License (free commercial use)", kind, query)
+            choices=[f for f in files if 'jpeg' in str(f.get('format','')).lower() and str(f.get('name','')).lower().endswith(('.jpg','.jpeg'))]
+        choices=[f for f in choices if int(f.get('size') or 0)<=120*1024*1024]
+        if not choices:continue
+        choices.sort(key=lambda f:(abs(int(f.get('width') or 0)/max(1,int(f.get('height') or 1))-w/max(1,h)), -int(f.get('size') or 0)))
+        file=choices[0]; name=str(file.get('name','')); ident_url=quote(str(ident),safe=''); name_url=quote(name,safe='/')
+        url=f'https://archive.org/download/{ident_url}/{name_url}'
+        ext=Path(name).suffix.lstrip('.').lower() or ('mp4' if video else 'jpg'); dest=_cache_path('internetarchive',f'{ident}:{name}',ext)
+        if _download(url,dest):
+            kind='video' if video else 'image'; creator=metadata.get('creator','creator not listed')
+            return Asset(dest,'internetarchive',f'https://archive.org/details/{ident}',f'Internet Archive — explicit license {lic}; creator: {creator}; verify item metadata',kind,q,int(file.get('width') or 0),int(file.get('height') or 0))
     return None
 
-
-def _wikimedia(query: str) -> Asset | None:
-    r = _http_get(
-        "https://commons.wikimedia.org/w/api.php",
-        params={
-            "action": "query", "format": "json", "generator": "search",
-            "gsrsearch": f"filetype:bitmap {query}", "gsrnamespace": 6, "gsrlimit": 5,
-            "prop": "imageinfo", "iiprop": "url|extmetadata", "iiurlwidth": 1920,
-        },
-        headers={"User-Agent": "YouTubeAutomationPipeline/1.0 (educational project)"},
-    )
-    if not r:
-        return None
-    pages = (r.json().get("query") or {}).get("pages") or {}
-    for page in pages.values():
-        infos = page.get("imageinfo") or []
-        if not infos:
-            continue
-        info = infos[0]
-        url = info.get("thumburl") or info.get("url")
-        dest = _cache_path("wikimedia", page.get("title", url or ""), "jpg")
-        if url and _download(url, dest):
-            lic = (info.get("extmetadata") or {}).get("LicenseShortName", {}).get("value", "see Commons")
-            return Asset(dest, "wikimedia", info.get("descriptionurl", ""), f"Wikimedia Commons — {lic} (attribution required)", "image", query)
+def _nasa(q,video,w,h):
+    media="video" if video else "image"; r=_http_get("https://images-api.nasa.gov/search",params={"q":q,"media_type":media})
+    if not r:return None
+    for item in ((r.json().get("collection") or {}).get("items") or [])[:8]:
+        data=(item.get("data") or [{}])[0]
+        if video:
+            m=_http_get(item.get("href",""))
+            if not m:continue
+            urls=m.json() if "json" in m.headers.get("content-type","") else []
+            url=next((u for u in urls if str(u).lower().endswith(".mp4")),None)
+        else:
+            url=next((x.get("href") for x in (item.get("links") or []) if x.get("render")=="image"),None)
+        if not url:continue
+        ext="mp4" if video else (Path(urlparse(url).path).suffix.lstrip(".") or "jpg"); dest=_cache_path("nasa",data.get("nasa_id",url),ext)
+        if _download(url,dest):return Asset(dest,"nasa",item.get("href",""),"NASA media — public domain; credit NASA and check for third-party material","video" if video else "image",q,int(data.get("width") or 0),int(data.get("height") or 0))
     return None
 
-
-def _nasa(query: str) -> Asset | None:
-    r = _http_get("https://images-api.nasa.gov/search", params={"q": query, "media_type": "image"})
-    if not r:
-        return None
-    items = (r.json().get("collection") or {}).get("items") or []
-    for item in items[:5]:
-        data = (item.get("data") or [{}])[0]
-        links = item.get("links") or []
-        url = next((l.get("href") for l in links if l.get("render") == "image"), None)
-        if not url:
-            continue
-        dest = _cache_path("nasa", data.get("nasa_id", url), "jpg")
-        if _download(url, dest):
-            return Asset(dest, "nasa", item.get("href", ""), "NASA media — public domain", "image", query)
-    return None
-
-
-def _title_card(query: str, scene_no: int, out_dir: Path, title: str = "") -> Asset:
-    """Offline fallback: a branded solid card with the scene text. Always works."""
+def _title_card(query,scene_no,out_dir,title=""):
     from .textplates import render_text_plate
-
-    out_dir.mkdir(parents=True, exist_ok=True)
-    dest = out_dir / f"card_{scene_no:02d}_{_slugify(query)[:24]}.png"
-
-    palette = [(22, 33, 62), (15, 52, 96), (83, 52, 131), (27, 67, 50), (61, 43, 31)]
-    color = palette[scene_no % len(palette)]
-    try:
-        render_text_plate(
-            dest, title=(title or query), subtitle=f"Scene {scene_no // 10}",
-            bg_color=color, title_size=42,
-        )
+    out_dir.mkdir(parents=True,exist_ok=True); dest=out_dir/f"card_{scene_no:02d}_{_slugify(query)[:24]}.png"
+    palette=[(22,33,62),(15,52,96),(83,52,131),(27,67,50),(61,43,31)]; color=palette[scene_no%len(palette)]
+    try:render_text_plate(dest,title=title or query,subtitle=f"Scene {scene_no//10}",bg_color=color,title_size=42)
     except Exception:
         from PIL import Image
+        Image.new("RGB",(CONFIG.width,CONFIG.height),color).save(dest)
+    return Asset(dest,"generated","n/a (generated placeholder)","generated","image",query,CONFIG.width,CONFIG.height)
 
-        Image.new("RGB", (CONFIG.width, CONFIG.height), color).save(dest)
-    return Asset(dest, "generated", "n/a (generated placeholder)", "generated", "image", query)
-
-
-# --------------------------------------------------------------------------
-# Public API
-# --------------------------------------------------------------------------
-
-def fetch_scene_assets(query: str, scene_no: int, out_dir: Path, count: int | None = None) -> list[Asset]:
-    count = count or CONFIG.clips_per_scene
-    assets: list[Asset] = []
-    out_dir.mkdir(parents=True, exist_ok=True)
-    q = query.strip() or "cinematic landscape"
-
-    sources = [
-        ("pexels", lambda: _pexels(q, want_video=True)),
-        ("pexels", lambda: _pexels(q, want_video=False)),
-        ("pixabay", lambda: _pixabay(q, want_video=True)),
-        ("pixabay", lambda: _pixabay(q, want_video=False)),
-    ]
+def fetch_scene_assets(query,scene_no,out_dir,count=None,target_width=None,target_height=None,allow_generated=False):
+    """Free platform search, globally video-first then photo; never fabricates a source."""
+    count=count or CONFIG.clips_per_scene; w=target_width or CONFIG.width; h=target_height or CONFIG.height
+    out_dir=Path(out_dir); out_dir.mkdir(parents=True,exist_ok=True); q=query.strip() or "cinematic documentary"
+    videos=[("Pexels video",lambda:_pexels(q,True,w,h)),("Pixabay video",lambda:_pixabay(q,True,w,h))]
+    photos=[("Pexels photo",lambda:_pexels(q,False,w,h)),("Pixabay photo",lambda:_pixabay(q,False,w,h))]
     if CONFIG.enable_keyless_sources:
-        sources += [
-            ("wikimedia", lambda: _wikimedia(q)),
-            ("nasa", lambda: _nasa(q)),
-        ]
-
+        videos += [("Openverse video",lambda:_openverse(q,True,w,h)),("Wikimedia video",lambda:_wikimedia(q,True,w,h)),("Internet Archive video",lambda:_internet_archive(q,True,w,h)),("NASA video",lambda:_nasa(q,True,w,h))]
+        photos += [("Openverse photo",lambda:_openverse(q,False,w,h)),("Wikimedia photo",lambda:_wikimedia(q,False,w,h)),("Internet Archive photo",lambda:_internet_archive(q,False,w,h)),("NASA photo",lambda:_nasa(q,False,w,h))]
+    assets=[]
     for i in range(count):
-        got: Asset | None = None
-        for name, fn in sources:
-            try:
-                got = fn()
-            except Exception as exc:  # noqa: BLE001
-                print(f"[assets] source {name} errored: {exc!r}")
-                got = None
-            if got is not None:
-                got.query = q
-                assets.append(got)
-                break
-        if got is None:
-            assets.append(_title_card(q, scene_no * 10 + i, out_dir, title=q))
-
-    _write_credits(out_dir, assets)
+        got=None
+        for name,fn in videos+photos:
+            try:got=fn()
+            except Exception as exc:print(f"[assets] source {name} errored: {exc!r}"); got=None
+            if got:
+                got.query=q; assets.append(got); print(f"[assets] scene {scene_no}: {got.kind} from {got.source} ({got.width}x{got.height})"); break
+        if not got:
+            if allow_generated:assets.append(_title_card(q,scene_no*10+i,out_dir,title=q))
+            else:break
+    if assets:_write_credits(out_dir,assets)
     return assets
 
-
-def _write_credits(out_dir: Path, assets: list[Asset]) -> None:
-    credits_path = out_dir / "credits.json"
-    existing: list[dict] = []
-    if credits_path.exists():
-        try:
-            existing = json.loads(credits_path.read_text(encoding="utf-8"))
-        except Exception:  # noqa: BLE001
-            existing = []
+def _write_credits(out_dir,assets):
+    path=Path(out_dir)/"credits.json"
+    try:existing=json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
+    except Exception:existing=[]
+    known={(x.get("source"),x.get("origin_url"),x.get("query")) for x in existing}
     for a in assets:
-        d = asdict(a)
-        d["path"] = str(a.path)
-        existing.append(d)
-    credits_path.write_text(json.dumps(existing, indent=2), encoding="utf-8")
+        d=asdict(a); d["path"]=str(a.path); key=(d["source"],d["origin_url"],d["query"])
+        if key not in known:existing.append(d); known.add(key)
+    path.write_text(json.dumps(existing,indent=2,ensure_ascii=False),encoding="utf-8")

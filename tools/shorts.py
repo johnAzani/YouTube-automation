@@ -4,7 +4,8 @@
 Same documentary motion engine, reformatted for YouTube Shorts:
 
 - 720x1280 @24fps (9:16 vertical), 1080x1920 super-sampled plates, sub-pixel camera
-- Speech-locked scene cuts (every 4-6s), vertical cover-fit plates (no stretch)
+- Speech-locked scene cuts (every 4-6s), contain-fit media (full source frame, no crop/stretch)
+- Clip-first free stock search (Pexels, Pixabay, Openverse, Commons, Internet Archive, NASA); story-photo fail-safe
 - Word-sync motion graphics over image, non-overlapping hero beats (center-screen)
 - Contextual viz diagrams, caption ribbon (near bottom, safe-area), tease cards,
   cold open + HUD + progress bar + end CTA — all re-laid for vertical
@@ -18,6 +19,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from score import generate_score
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0,ROOT)  # shared pipeline source adapters
 W, H, FPS = 720, 1280, 24
 CW, CH = 1080, 1920  # 1.5x super-sampled plate canvas for sub-pixel camera (9:16)
 
@@ -89,39 +91,85 @@ def vignette():
 VIG=vignette()
 VIG_DARK=Image.new('RGB',(W,H),(2,7,20))
 def prep_plate(path, focus_side=0.0, tint_warm=0.0):
-    """9:16 vertical cover-fit plate (1080x1920), sharpened + blue-graded."""
+    """Build a portrait cinematic plate with the complete source frame intact.
+
+    Contain-fit the original into an inset 84% safe window: no crop, no stretch.
+    The remaining canvas is a designed dark matte, not a zoomed/cropped duplicate.
+    Camera moves can travel over the matte without cutting off the source image.
+    """
     raw=Image.open(path).convert('RGB')
-    aspect=raw.width/max(1.0,float(raw.height))
-    target_aspect=CW/float(CH)
-    if aspect>target_aspect:
-        nh=CH; nw=int(round(CH*aspect))
-    else:
-        nw=CW; nh=int(round(CW/aspect))
-    scaled=raw.resize((nw,nh),Image.LANCZOS)
-    x0=(nw-CW)//2
-    y0=int((nh-CH)*0.32)  # favor upper-middle for vertical
-    y0=max(0,min(nh-CH,y0)); x0=max(0,min(nw-CW,x0))
-    canvas=scaled.crop((x0,y0,x0+CW,y0+CH))
-    canvas=canvas.filter(ImageFilter.UnsharpMask(radius=1.4,percent=115,threshold=2))
+    fit=min((CW*.90)/max(1,raw.width),(CH*.90)/max(1,raw.height))
+    raw=raw.resize((max(1,int(round(raw.width*fit))),max(1,int(round(raw.height*fit)))),Image.Resampling.LANCZOS)
+    # Scene-adaptive radial matte uses sampled colour only, never a stretched or
+    # cropped duplicate of the photograph. The complete source frame stays sharp.
+    avg=Image.new('RGB',(1,1)); avg.paste(raw.resize((1,1),Image.Resampling.BILINEAR))
+    ar,ag,ab=avg.getpixel((0,0)); glow_col=(min(30,int(ar*.12)),min(52,int(ag*.18)),min(92,int(ab*.24)))
+    canvas=Image.new('RGB',(CW,CH),(4,12,29))
+    glow=Image.new('RGB',(CW,CH),(0,0,0)); gd=ImageDraw.Draw(glow)
+    gd.ellipse((CW*.04,CH*.10,CW*.96,CH*.90),fill=glow_col)
+    glow=glow.filter(ImageFilter.GaussianBlur(145))
+    canvas=Image.blend(canvas,glow,0.82)
+    x=(CW-raw.width)//2; y=(CH-raw.height)//2
+    # Low-opacity edge light, then the untouched full-frame media plate.
+    shadow=Image.new('RGBA',(CW,CH),(0,0,0,0)); sd=ImageDraw.Draw(shadow)
+    sd.rounded_rectangle((x-5,y-5,x+raw.width+5,y+raw.height+5),radius=14,fill=(0,0,0,170),outline=(120,180,240,110),width=2)
+    shadow=shadow.filter(ImageFilter.GaussianBlur(8)); canvas=Image.alpha_composite(canvas.convert('RGBA'),shadow).convert('RGB')
+    canvas.paste(raw,(x,y))
+    canvas=canvas.filter(ImageFilter.UnsharpMask(radius=1.1,percent=95,threshold=3))
     return grade_blue(canvas,tint_warm=tint_warm)
+
+
+def video_plate_reader(path):
+    """Return an ffmpeg reader that streams contain-fitted 9:16 RGB frames."""
+    # Source is scaled proportionally into a conservative 84% safe window. The
+    # full input frame remains visible, regardless of its aspect ratio.
+    sw,sh=int(CW*.90),int(CH*.90)
+    vf=(f'scale={sw}:{sh}:force_original_aspect_ratio=decrease,setsar=1,'
+        f'pad={CW}:{CH}:(ow-iw)/2:(oh-ih)/2:color=0x061a33,fps={FPS},format=rgb24')
+    cmd=[FFMPEG,'-loglevel','error','-stream_loop','-1','-i',str(path),'-an','-vf',vf,'-f','rawvideo','-pix_fmt','rgb24','pipe:1']
+    return subprocess.Popen(cmd,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,bufsize=10**7)
+
+
+def read_video_plate(proc):
+    if not proc or proc.stdout is None: return None
+    size=CW*CH*3; data=bytearray()
+    while len(data)<size:
+        chunk=proc.stdout.read(size-len(data))
+        if not chunk: return None
+        data.extend(chunk)
+    return grade_blue(Image.frombytes('RGB',(CW,CH),bytes(data)))
+
+
+def stop_video_plate(proc):
+    if not proc:return
+    if proc.poll() is None:
+        proc.terminate()
+        try: proc.wait(timeout=2)
+        except subprocess.TimeoutExpired:
+            proc.kill(); proc.wait(timeout=2)
+    if proc.stdout:
+        try: proc.stdout.close()
+        except OSError: pass
 
 # --------------------------------------- sub-pixel smooth camera movement ----
 def camera_frame(plate, p, mode='push_in', focus=(0.5,0.42), extra_zoom=1.0):
     p=clamp01(p); s=0.65*ease_in_out_sine(p)+0.35*p; fx,fy=focus
+    # Camera travel is deliberately bounded inside the 90% source-safe matte:
+    # movement remains perceptible, while the original frame never gets clipped.
     if mode=='push_in':
-        z=1.04+0.14*s; dx=(fx-0.5)*0.12*s; dy=(fy-0.5)*0.10*s
+        z=1.0+0.045*s; dx=(fx-0.5)*0.035*s; dy=(fy-0.5)*0.025*s
     elif mode=='pull_out':
-        z=1.18-0.14*s; dx=(fx-0.5)*0.10*(1.0-s); dy=(fy-0.5)*0.08*(1.0-s)
+        z=1.045-0.045*s; dx=(fx-0.5)*0.03*(1.0-s); dy=(fy-0.5)*0.02*(1.0-s)
     elif mode=='pan_right':
-        z=1.12+0.05*s; dx=-0.055+0.11*s; dy=(fy-0.5)*0.06*s
+        z=1.025+0.015*s; dx=-0.0125+0.025*s; dy=(fy-0.5)*0.02*s
     elif mode=='pan_left':
-        z=1.12+0.05*s; dx=0.055-0.11*s; dy=(fy-0.5)*0.06*s
+        z=1.025+0.015*s; dx=0.0125-0.025*s; dy=(fy-0.5)*0.02*s
     elif mode=='tilt_up':
-        z=1.12+0.06*s; dx=(fx-0.5)*0.06*s; dy=0.045-0.09*s
+        z=1.025+0.015*s; dx=(fx-0.5)*0.02*s; dy=0.01-0.02*s
     else:
-        z=1.06+0.11*s; dx=0.03*math.sin(p*math.pi); dy=-0.02*s
+        z=1.005+0.035*s; dx=0.006*math.sin(p*math.pi); dy=-0.012*s
     z*=extra_zoom
-    dx+=0.0016*math.sin(p*6.1+1.3); dy+=0.0012*math.sin(p*4.3+2.7); z*=1.0+0.003*math.sin(p*2.4+0.6)
+    dx+=0.00035*math.sin(p*6.1+1.3); dy+=0.0003*math.sin(p*4.3+2.7); z*=1.0+0.001*math.sin(p*2.4+0.6)
     vw=CW/z; vh=CH/z; cx=CW*(0.5+dx); cy=CH*(0.5+dy)
     x0=max(0.0,min(CW-vw,cx-vw*0.5)); y0=max(0.0,min(CH-vh,cy-vh*0.5))
     im=plate.transform((W,H),Image.EXTENT,(x0,y0,x0+vw,y0+vh),Image.BICUBIC)
@@ -644,6 +692,17 @@ SCRIPTS={
         end=('FOLLOW','Full documentaries + Shorts weekly'),
         out='short-johnstown.mp4',
         narration='short-johnstown.mp3',
+        stock_queries=[
+            'South Fork Dam Lake Conemaugh Pennsylvania reservoir archival',
+            'historic Pennsylvania fishing hunting club lake 1880s',
+            'dam spillway screens fish reservoir water',
+            'heavy rain reservoir flood dam overflow',
+            'historic dam failure flood valley Pennsylvania',
+            'flood water train wreckage river debris',
+            'historic flood rubble stone bridge fire aftermath',
+            'Red Cross disaster relief volunteers historic Pennsylvania',
+            'historic courtroom negligence civil liability trial',
+        ],
         scenes=[
             dict(a='', img='south-fork-dam-lake-conemaugh-johnstown--3.jpg', kicker='MAY 31, 1889', sub='14 MILES ABOVE JOHNSTOWN', cam='push_in', focus=(0.5,0.42)),
             dict(a='wealthy pittsburgh', img='south-fork-fishing-and-hunting-club-club-3.jpg', kicker='A FISHING CLUB PLAYGROUND', sub='SOUTH FORK CLUB', cam='push_in', focus=(0.5,0.40)),
@@ -702,6 +761,18 @@ SCRIPTS={
         end=('FOLLOW','Money, Explained — new every week'),
         out='short-enron.mp4',
         narration='short-enron.mp3',
+        stock_queries=[
+            'Houston energy company corporate headquarters skyline 2001',
+            'stock market trading floor rising share prices ticker',
+            'corporate innovation technology office skyscraper',
+            'financial journalist newspaper investigation corporate accounting',
+            'corporate fraud CFO executive courtroom trial',
+            'energy trading control room accounting ledger',
+            'shell company financial paperwork accounting records',
+            'corporate bankruptcy newspaper headline stock market crash',
+            'office employees corporate layoffs retirement pension',
+            'corporate executives fraud trial courtroom justice',
+        ],
         scenes=[
             dict(a='', img='enron-corporation-headquarters-houston-c-4.jpg', kicker='WINTER 2001 · HOUSTON', sub='MOST INNOVATIVE COMPANY UNRAVELS', cam='tilt_up', focus=(0.5,0.40)),
             dict(a='ninety dollars', img='enron-bankruptcy-newspaper-headline-2001-3.jpg', kicker='PEAK: $90.75 / SHARE', sub='NYSE: ENE · AUG 2000', cam='push_in', focus=(0.5,0.42), viz='stock_boom'),
@@ -776,25 +847,53 @@ def main(key):
     adur=duration(nar); total=adur+1.6; n=int(total*FPS)
     words=load_words(key); beats=resolve_beats(key,words); scenes=resolve_scenes(key,words,total)
     cap_stream=build_caption_stream(key,words)
+    # Free stock acquisition is clip-first across Pexels, Pixabay, Openverse,
+    # Wikimedia Commons and NASA; existing story photos remain the guaranteed
+    # offline fallback. API keys are optional free-tier GitHub secrets.
+    if os.environ.get('ENABLE_STOCK_BROLL','1').strip().lower() not in ('0','false','no','off'):
+        try:
+            from pipeline.assets import fetch_scene_assets
+            stock_dir=os.path.join(ROOT,'output','short-stock',key)
+            for si,sc in enumerate(scenes):
+                queries=cfg.get('stock_queries',[])
+                query=queries[si] if si<len(queries) else sc.get('kicker','documentary b-roll')
+                sc['stock_query']=query
+                found=fetch_scene_assets(query,si,stock_dir,count=1,target_width=W,target_height=H,allow_generated=False)
+                if found:
+                    asset=found[0]; sc['media_path']=str(asset.path); sc['media_kind']=asset.kind
+                    sc['source']=asset.source; sc['source_url']=asset.origin_url; sc['license_note']=asset.license_note
+                    sc['source_size']=(asset.width,asset.height)
+        except Exception as exc:
+            print(f'  stock sourcing unavailable; using authored story stills: {exc!r}')
     print(f'[{key}] narration={adur:.1f}s total={total:.1f}s ({n}f) scenes={len(scenes)} beats={len(beats)}')
     cuts=[sc['t0'] for sc in scenes]
     hushes,swells=build_music_plan(key,words,beats)
     generate_score(key,total,cuts,[],[],hushes,swell_hits=swells)
     plate_cache={}
     for sc in scenes:
-        pkey=(sc['img'],sc.get('warm',0.0))
-        if pkey not in plate_cache:
-            p_path=os.path.join(IMG,sc['img'])
-            if not os.path.exists(p_path): raise SystemExit(f'missing image {p_path}')
-            plate_cache[pkey]=prep_plate(p_path,sc.get('warm',0.0))
-        sc['plate']=plate_cache[pkey]
-        print(f"  scene {sc['t0']:5.1f}-{sc['t1']:5.1f}s | {sc['kicker']:32s} | {sc['img']}")
+        source_path=sc.get('media_path') or os.path.join(IMG,sc['img'])
+        pkey=(source_path,sc.get('warm',0.0))
+        if sc.get('media_kind')=='video':
+            # Video frames are decoded live; keep a real story photograph as a
+            # failure-safe. Even a broken URL/codec cannot blank a scene.
+            fallback=os.path.join(IMG,sc['img'])
+            if not os.path.exists(fallback): raise SystemExit(f'missing fallback image {fallback}')
+            if fallback not in plate_cache: plate_cache[fallback]=prep_plate(fallback,sc.get('warm',0.0))
+            sc['fallback_plate']=plate_cache[fallback]; sc['plate']=None
+            print(f"  scene {sc['t0']:5.1f}-{sc['t1']:5.1f}s | VIDEO {sc.get('source')} {sc.get('source_size')} | {os.path.basename(source_path)}")
+        else:
+            if not os.path.exists(source_path): raise SystemExit(f'missing image {source_path}')
+            if pkey not in plate_cache: plate_cache[pkey]=prep_plate(source_path,sc.get('warm',0.0))
+            sc['plate']=plate_cache[pkey]
+            label=(f"{sc.get('source')} {sc.get('source_size')}" if sc.get('media_path') else sc['img'])
+            print(f"  scene {sc['t0']:5.1f}-{sc['t1']:5.1f}s | PHOTO {label}")
     music=os.path.join(AUDIO,f'music-{key}.wav')
     proc=subprocess.Popen([FFMPEG,'-y','-f','rawvideo','-pix_fmt','rgb24','-s',f'{W}x{H}','-r',str(FPS),'-i','-','-i',nar,'-i',music,
         '-filter_complex','[2:a]volume=0.60[m];[1:a]aformat=channel_layouts=stereo,volume=1.0[v];[m][v]amix=inputs=2:duration=longest:normalize=0,alimiter=limit=0.95[a]',
         '-map','0:v','-map','[a]','-c:v','libx264','-preset','fast','-crf','22','-maxrate','1600k','-bufsize','3200k','-pix_fmt','yuv420p','-c:a','aac','-b:a','160k','-movflags','+faststart',out],
         stdin=subprocess.PIPE,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
     FADE=0.42; nscenes=len(scenes); expire_t=adur-0.5
+    active_video_scene=-1; video_proc=None
     for i in range(n):
         t=i/FPS
         k=0
@@ -802,11 +901,26 @@ def main(key):
             if t>=sc['t0']: k=idx
             else: break
         sc=scenes[k]; sc_dur=max(0.5,sc['t1']-sc['t0']); pos=t-sc['t0']; p=clamp01(pos/sc_dur)
-        extra_z=1.0+0.055*(1.0-ease_out_cubic(clamp01(pos/FADE))) if (k>0 and pos<FADE) else 1.0
-        frame=camera_frame(sc['plate'],p,sc.get('cam','push_in'),sc.get('focus',(0.5,0.42)),extra_zoom=extra_z)
+        if sc.get('media_kind')=='video':
+            if active_video_scene!=k:
+                stop_video_plate(video_proc)
+                try: video_proc=video_plate_reader(sc['media_path']); active_video_scene=k
+                except Exception as exc: video_proc=None; active_video_scene=-1; print(f'  video decode fallback: {exc!r}')
+            source=read_video_plate(video_proc) if video_proc else None
+            if source is None:
+                source=sc['fallback_plate']; sc['media_kind']='image'; sc['used_fallback']=True
+                stop_video_plate(video_proc)
+                video_proc=None; active_video_scene=-1
+        else:
+            stop_video_plate(video_proc)
+            video_proc=None; active_video_scene=-1; source=sc['plate']
+        sc['last_source']=source
+        extra_z=1.0+0.012*(1.0-ease_out_cubic(clamp01(pos/FADE))) if (k>0 and pos<FADE) else 1.0
+        frame=camera_frame(source,p,sc.get('cam','push_in'),sc.get('focus',(0.5,0.42)),extra_zoom=extra_z)
         if k>0 and pos<FADE:
-            prev=scenes[k-1]; u=pos/FADE; prev_z=1.0+0.045*ease_in_out_sine(u)
-            f_prev=camera_frame(prev['plate'],1.0,prev.get('cam','push_in'),prev.get('focus',(0.5,0.42)),extra_zoom=prev_z)
+            prev=scenes[k-1]; u=pos/FADE; prev_z=1.0+0.008*ease_in_out_sine(u)
+            prev_plate=prev.get('last_source',prev.get('plate'))
+            f_prev=camera_frame(prev_plate,1.0,prev.get('cam','push_in'),prev.get('focus',(0.5,0.42)),extra_zoom=prev_z)
             frame=optical_flare_transition(f_prev,frame,u)
         ov=Image.new('RGBA',(W,H),(0,0,0,0))
         ov.alpha_composite(ambient_layer(t))
@@ -820,8 +934,19 @@ def main(key):
         if t>=adur-0.4: frame=end_card_overlay(frame,cfg['end'],t-(adur-0.4),total-(adur-0.4))
         proc.stdin.write(frame.tobytes())
         if i%360==0: print(f'  frame {i}/{n}',flush=True)
+    stop_video_plate(video_proc)
     proc.stdin.close()
     if proc.wait()!=0: raise SystemExit('encode failed')
+    report=[]
+    for si,sc in enumerate(scenes):
+        report.append(dict(scene=si+1,query=(cfg.get('stock_queries') or ['']*len(scenes))[si],
+            media=('authored photo fallback' if not sc.get('media_path') or sc.get('used_fallback') else sc.get('media_kind')),
+            provider=sc.get('source','existing story archive'),source_url=sc.get('source_url',''),
+            license=sc.get('license_note','pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse'),
+            dimensions=sc.get('source_size',None),fallback=(not bool(sc.get('media_path')) or bool(sc.get('used_fallback',False))),file=sc.get('media_path',sc.get('img',''))))
+    report_dir=os.path.join(ROOT,'output','short-stock',key); os.makedirs(report_dir,exist_ok=True)
+    with open(os.path.join(report_dir,'scene-sources.json'),'w',encoding='utf-8') as f: json.dump(report,f,indent=2,ensure_ascii=False)
+    print('source log',os.path.join(report_dir,'scene-sources.json'))
     print('done',out,os.path.getsize(out)//1024,'KB')
 
 if __name__=='__main__':
