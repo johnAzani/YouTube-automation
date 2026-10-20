@@ -319,20 +319,23 @@ HIT_KINDS = {
     'rumble': _rumble, 'whoosh_down': _whoosh_down,
 }
 
-def generate_score(key, total, cuts, events, beds=None, hushes=None, out_dir=OUT):
-    """Build music-{key}.wav + sfx-{key}.wav.
+def generate_score(key, total, cuts, events, beds=None, hushes=None, swell_hits=None,
+                   out_dir=OUT):
+    """Build music-{key}.wav (+ sfx-{key}.wav only when effects are requested).
 
-    events: [{kind, t, amp, pan?}]        discrete hits
-    beds:   [{kind, t0, t1, amp}]         ambience windows (rain/fire/city/...)
+    events: [{kind, t, amp, pan?}]        discrete hits (unused in music-only mode)
+    beds:   [{kind, t0, t1, amp}]         ambience windows (unused in music-only mode)
     hushes: [{t, dur, depth, lead?}]      score-ducking moments (already offset)
+    swell_hits: [t, ...]                  extra score swell crests (count landings)
     """
     beds = beds or []
     hushes = hushes or []
+    events = events or []
     n = int(total * SR)
     print(f'score[{key}]: {total:.1f}s  hits={len(events)}  beds={len(beds)}  hushes={len(hushes)}')
 
-    # ---- music with hush + sidechain ducking ----
-    big = [e['t'] for e in events if e['kind'] in ('boom', 'crash', 'subdrop')]
+    # ---- music with hush + swell automation ----
+    big = list(swell_hits or []) + [e['t'] for e in events if e['kind'] in ('boom', 'crash', 'subdrop')]
     m_L, m_R = _music_bed(total, cuts, big)
     duck = np.ones(n)
     for h in hushes:
@@ -350,7 +353,13 @@ def generate_score(key, total, cuts, events, beds=None, hushes=None, out_dir=OUT
     peak = max(np.abs(m_L).max(), np.abs(m_R).max(), 1e-9)
     m_L, m_R = m_L / peak * 0.30, m_R / peak * 0.30
 
-    # ---- sfx: hits + ambience beds ----
+    _write_wav(os.path.join(out_dir, f'music-{key}.wav'), m_L, m_R)
+
+    if not events and not beds:
+        print(f'score[{key}]: music-only (no sound effects by design)')
+        return
+
+    # ---- optional sfx stem (only when effects are explicitly requested) ----
     s_L, s_R = np.zeros(n), np.zeros(n)
     for ev in events:
         kind = ev['kind']

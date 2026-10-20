@@ -200,6 +200,10 @@ def camera_frame(plate, p, mode='push_in', focus=(0.5, 0.48), extra_zoom=1.0):
         dy = -0.02 * s
 
     z *= extra_zoom
+    # organic micro-drift: handheld life, sub-pixel — camera never feels frozen
+    dx += 0.0016 * math.sin(p * 6.1 + 1.3)
+    dy += 0.0012 * math.sin(p * 4.3 + 2.7)
+    z *= 1.0 + 0.003 * math.sin(p * 2.4 + 0.6)
     vw = CW / z
     vh = CH / z
     cx = CW * (0.5 + dx)
@@ -737,49 +741,31 @@ def resolve_scenes(key, words, total_dur):
     return resolved
 
 # --------------------------------------------------- speech-synced beats ----
-def build_sfx_plan(key, words, beats):
-    """Resolve the semantic sfx cue sheet (SCRIPTS[key]['sfx_cues']) to timings.
+def build_music_plan(key, words, beats):
+    """Music automation only — score swells + emotional hushes.
 
-    Every effect is placed by spoken-word anchor — sound follows the story.
-    Returns (events, beds, hushes) for score.generate_score()."""
-    events, beds, hushes = [], [], []
-    pan_flip = 1
-    # subtle panned whooshes on hero-beat entrances only
+    Per the creative brief there are NO sound effects in the mix: the audio bed
+    is narration + score. Hushes (from the cue sheet) duck the score before the
+    heaviest spoken lines; swells lift it at count-up landings and quotes.
+    Returns (hushes, swell_hits)."""
+    hushes, swells = [], []
     for b in beats:
-        p = 0.32 * pan_flip
-        pan_flip *= -1
-        events.append(dict(kind='whoosh', t=max(0.0, b['t0'] - 0.22),
-                           amp=0.15 if b.get('kind') == 'phrase' else 0.21, pan=p))
         if b.get('kind') == 'count':
             big = b.get('num', 0) >= 1000 or 'txt' in b
             if big:
-                events.append(dict(kind='riser', t=max(0.0, b['t0'] - 1.15), amp=0.30, pan=0.0))
-            events.append(dict(kind='boom', t=b['t0'] + b.get('dur', 1.35),
-                               amp=0.32 if big else 0.15, pan=0.0))
+                swells.append(b['t0'] + b.get('dur', 1.35))
+        elif b.get('kind') in ('quote', 'date'):
+            swells.append(b['t0'] + (0.3 if b['kind'] == 'date' else 0.0))
     for cue in SCRIPTS[key].get('sfx_cues', []):
-        if 'hush' in cue:
-            h = dict(cue['hush'])
-            hit = find_phrase(words, h['a'], h.get('occ', 0))
-            if not hit:
-                raise SystemExit(f"hush anchor not found: {h['a']!r}")
-            hushes.append(dict(t=hit[0][0], dur=h.get('dur', 1.2),
-                               depth=h.get('depth', 0.85), lead=h.get('lead', 0.5)))
+        if 'hush' not in cue:
             continue
-        hit = find_phrase(words, cue['a'], cue.get('occ', 0)) if cue.get('a') else None
-        if cue.get('a') and not hit:
-            raise SystemExit(f"sfx cue anchor not found: {cue['a']!r}")
-        t0 = (hit[0][0] if hit else 0.0) + cue.get('delay', 0.0)
-        if 'until' in cue:
-            h2 = find_phrase(words, cue['until'], cue.get('uocc', 0))
-            if not h2:
-                raise SystemExit(f"sfx until-anchor not found: {cue['until']!r}")
-            beds.append(dict(kind=cue['sfx'], t0=t0, t1=h2[-1][1] + cue.get('until_pad', 1.0),
-                             amp=cue.get('amp', 0.1)))
-        else:
-            events.append(dict(kind=cue['sfx'], t=t0, amp=cue.get('amp', 0.5),
-                               pan=cue.get('pan', 0.0)))
-    events.sort(key=lambda e: e['t'])
-    return events, beds, hushes
+        h = dict(cue['hush'])
+        hit = find_phrase(words, h['a'], h.get('occ', 0))
+        if not hit:
+            raise SystemExit(f"hush anchor not found: {h['a']!r}")
+        hushes.append(dict(t=hit[0][0], dur=h.get('dur', 1.2),
+                           depth=h.get('depth', 0.85), lead=h.get('lead', 0.5)))
+    return hushes, swells
 
 SLOT_MAP = {
     'R': (895, 295),
@@ -1015,6 +1001,33 @@ def beat_tease(layer, b, t, cx, cy):
 BEAT_KINDS = {'count': beat_count, 'phrase': beat_phrase, 'quote': beat_quote,
               'date': beat_date, 'tease': beat_tease}
 
+def tease_layer(teases, t):
+    """Retention open-loops: 'AHEAD — …' pill above the caption ribbon."""
+    layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    for tr in teases:
+        t0 = tr['t']
+        if t < t0 or t > t0 + 2.9:
+            continue
+        ea = ease_out_expo(clamp01((t - t0) / 0.5))
+        out_a = 1.0 - clamp01((t - (t0 + 2.25)) / 0.5)
+        dy = (1 - ea) * -36
+        ftag = fnt('Black', 16)
+        ftxt = fnt('Bold', 21)
+        d = ImageDraw.Draw(layer)
+        wtag = tracked_width(d, 'AHEAD', ftag, 3.0)
+        wtxt = tracked_width(d, tr['text'], ftxt, 1.8)
+        pw = int(wtag + wtxt + 88)
+        ph = 48
+        px = W // 2 - pw // 2
+        py = int(556 + dy)
+        layer.alpha_composite(card_alpha(glass_card(pw, ph, radius=12), ea * out_a), (px, py))
+        a = int(255 * out_a)
+        d.rounded_rectangle([px + 14, py + 11, px + 30 + wtag, py + 37], radius=6,
+                            fill=YELLOW + (int(235 * ea * out_a),))
+        d.text((px + 22, py + 14), 'AHEAD', font=ftag, fill=NAVY + (a,))
+        d.text((px + 48 + wtag, py + 12), tr['text'], font=ftxt, fill=WHITE + (a,))
+    return layer
+
 def beats_layer(beats, t, expire_t):
     layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     for i, b in enumerate(beats):
@@ -1099,6 +1112,11 @@ SCRIPTS = {
                  kicker='THE VERDICT: \u201cAN ACT OF GOD\u201d',
                  sub='ZERO LIABILITY FOR THE SOUTH FORK CLUB MEMBERS',
                  cam='push_in', focus=(0.50, 0.45), focus_side=-0.5),
+        ],
+        teases=[
+            dict(t=32.5, text='THE DAM BREAKS AT 3:10 PM'),
+            dict(t=59.5, text='A 36-FOOT WALL OF WATER'),
+            dict(t=79.0, text='THE VERDICT THAT NEVER CAME'),
         ],
         sfx_cues=[
             dict(sfx='water', a=None, until='six to eight inches', amp=0.10),
@@ -1247,6 +1265,11 @@ SCRIPTS = {
                  sub='FASTOW & SKILLING IMPRISONED \u00B7 LAY CONVICTED',
                  cam='push_in', focus=(0.48, 0.42)),
         ],
+        teases=[
+            dict(t=50.8, text='ONE QUESTION CHANGES EVERYTHING'),
+            dict(t=60.5, text='AUGUST 2001 \u00B7 THE CEO QUITS'),
+            dict(t=71.5, text='DECEMBER 2 \u00B7 CHAPTER 11'),
+        ],
         sfx_cues=[
             dict(sfx='city', a=None, until='mom to market accounting', amp=0.08),
             dict(sfx='ticker', a='mom to market accounting', until='ninety dollars', amp=0.07),
@@ -1381,10 +1404,10 @@ def main(key):
     cap_stream = build_caption_stream(key, words)
     print(f'[{key}] narration={adur:.1f}s total={total:.1f}s ({n}f) scenes={len(scenes)} beats={len(beats)}')
 
-    # ---- sound design: semantic cue sheet keyed to spoken words ----
+    # ---- music automation: score swells + emotional hushes (no sound effects) ----
     cuts = [sc['t0'] for sc in scenes]
-    events, beds, hushes = build_sfx_plan(key, words, beats)
-    generate_score(key, total, cuts, events, beds, hushes)
+    hushes, swells = build_music_plan(key, words, beats)
+    generate_score(key, total, cuts, [], [], hushes, swell_hits=swells)
 
     # Pre-prep unique plates once
     plate_cache = {}
@@ -1399,14 +1422,12 @@ def main(key):
         print(f"  scene {sc['t0']:5.1f}-{sc['t1']:5.1f}s | {sc['kicker']:34s} | {sc['img']}")
 
     music = os.path.join(AUDIO, f'music-{key}.wav')
-    sfx = os.path.join(AUDIO, f'sfx-{key}.wav')
     proc = subprocess.Popen(
         [FFMPEG, '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}',
-         '-r', str(FPS), '-i', '-', '-i', nar, '-i', music, '-i', sfx,
+         '-r', str(FPS), '-i', '-', '-i', nar, '-i', music,
          '-filter_complex',
-         '[2:a]volume=0.55[m];[1:a]aformat=channel_layouts=stereo,volume=1.0[v];'
-         '[3:a]volume=0.95[s];[m][v][s]amix=inputs=3:duration=longest:normalize=0,'
-         'alimiter=limit=0.95[a]',
+         '[2:a]volume=0.62[m];[1:a]aformat=channel_layouts=stereo,volume=1.0[v];'
+         '[m][v]amix=inputs=2:duration=longest:normalize=0,alimiter=limit=0.95[a]',
          '-map', '0:v', '-map', '[a]',
          '-c:v', 'libx264', '-preset', 'fast', '-crf', '22',
          '-maxrate', '1800k', '-bufsize', '3600k', '-pix_fmt', 'yuv420p',
@@ -1447,6 +1468,7 @@ def main(key):
         ov.alpha_composite(ambient_layer(t))
         ov.alpha_composite(viz_layer(sc.get('viz'), pos, sc_dur))
         ov.alpha_composite(beats_layer(beats, t, expire_t))
+        ov.alpha_composite(tease_layer(cfg.get('teases', []), t))
         if t < 4.3:
             cold_open_overlay(ov, cfg['title'], t, dur=4.3)
         ov.alpha_composite(hud_chapter_layer(sc['kicker'], sc.get('sub', ''),
