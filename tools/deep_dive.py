@@ -18,6 +18,8 @@ Run: .venv/bin/python tools/deep_dive.py [johnstown|enron]
 """
 import os, sys, json, math, subprocess
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from score import generate_score
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 W, H, FPS = 1280, 720, 24
@@ -944,7 +946,30 @@ def beat_date(layer, b, t, cx, cy):
             draw_tracked(d, b['sub'], fs, cx - ws / 2, py + 84,
                          ICE + (int(240 * la),), 3.0)
 
-BEAT_KINDS = {'count': beat_count, 'phrase': beat_phrase, 'quote': beat_quote, 'date': beat_date}
+def beat_tease(layer, b, t, cx, cy):
+    """Retention device: 'AHEAD — …' chip, top-center, slides in and out."""
+    t0 = b['t0']
+    if t < t0 or t > t0 + 3.0:
+        return
+    ea = ease_out_expo(clamp01((t - t0) / 0.5))
+    out_a = 1.0 - clamp01((t - (t0 + 2.3)) / 0.5)
+    dy = (1 - ea) * -46
+    ftag = fnt('Bold', 19)
+    ftxt = fnt('SemiBold', 30)
+    d = ImageDraw.Draw(layer)
+    wtag = tracked_width(d, 'AHEAD', ftag, 4.0)
+    wtxt = tracked_width(d, b['text'], ftxt, 2.5)
+    pw = int(wtag + wtxt + 86)
+    ph = 64
+    px = int(W / 2 - pw / 2)
+    py = int(52 + dy)
+    layer.alpha_composite(card_alpha(glass_card(pw, ph, radius=14), ea * out_a), (px, py))
+    a = int(255 * out_a)
+    d.text((px + 28, py + 21), 'AHEAD', font=ftag, fill=YELLOW + (a,))
+    d.text((px + 28 + wtag + 26, py + 15), b['text'], font=ftxt, fill=WHITE + (a,))
+
+BEAT_KINDS = {'count': beat_count, 'phrase': beat_phrase, 'quote': beat_quote,
+              'date': beat_date, 'tease': beat_tease}
 
 def beats_layer(beats, t, expire_t):
     layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
@@ -1270,6 +1295,29 @@ def main(key):
     cap_stream = build_caption_stream(key, words)
     print(f'[{key}] narration={adur:.1f}s total={total:.1f}s ({n}f) scenes={len(scenes)} beats={len(beats)}')
 
+    # ---- sound design: events keyed to spoken beats + speech-locked cuts ----
+    events = []
+    cuts = [sc['t0'] for sc in scenes]
+    for sc in scenes[1:]:
+        events.append(dict(kind='swish', t=max(0.0, sc['t0'] - 0.06), amp=0.5))
+    for b in beats:
+        kind = b.get('kind')
+        amp = {'count': 0.55, 'quote': 0.5, 'date': 0.45}.get(kind, 0.32)
+        events.append(dict(kind='whoosh', t=max(0.0, b['t0'] - 0.22), amp=amp))
+        if kind == 'count':
+            big = b.get('num', 0) >= 1000 or 'txt' in b
+            if big:
+                events.append(dict(kind='riser', t=max(0.0, b['t0'] - 1.15), amp=0.5))
+            events.append(dict(kind='boom', t=b['t0'] + b.get('dur', 1.35),
+                               amp=0.62 if big else 0.34))
+        elif kind == 'date':
+            events.append(dict(kind='boom', t=b['t0'] + 0.42, amp=0.4))
+        if any(s in b['a'] for s in ('twenty million pounds of water', 'six to eight inches',
+                                     'thirty six feet high')):
+            events.append(dict(kind='rumble', t=max(0.0, b['t0'] - 0.35), amp=0.55))
+    events.sort(key=lambda e: e['t'])
+    generate_score(key, total, cuts, events)
+
     # Pre-prep unique plates once
     plate_cache = {}
     for sc in scenes:
@@ -1282,10 +1330,15 @@ def main(key):
         sc['plate'] = plate_cache[pkey]
         print(f"  scene {sc['t0']:5.1f}-{sc['t1']:5.1f}s | {sc['kicker']:34s} | {sc['img']}")
 
+    music = os.path.join(AUDIO, f'music-{key}.wav')
+    sfx = os.path.join(AUDIO, f'sfx-{key}.wav')
     proc = subprocess.Popen(
         [FFMPEG, '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}',
-         '-r', str(FPS), '-i', '-', '-i', nar,
-         '-map', '0:v', '-map', '1:a',
+         '-r', str(FPS), '-i', '-', '-i', nar, '-i', music, '-i', sfx,
+         '-filter_complex',
+         '[1:a]volume=1.0[v];[2:a]volume=0.34[m];[3:a]volume=0.85[s];'
+         '[v][m][s]amix=inputs=3:duration=longest:normalize=0,alimiter=limit=0.95[a]',
+         '-map', '0:v', '-map', '[a]',
          '-c:v', 'libx264', '-preset', 'fast', '-crf', '22',
          '-maxrate', '1800k', '-bufsize', '3600k', '-pix_fmt', 'yuv420p',
          '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', out],
