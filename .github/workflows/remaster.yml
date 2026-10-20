@@ -63,16 +63,24 @@ jobs:
           fi
       - name: Publish updated samples and source ledgers to GitHub Pages
         run: |
-          if [[ "$GITHUB_REF_NAME" != "arena/79365da2-youtube-automation" ]]; then
-            echo "Run this workflow from arena/79365da2-youtube-automation; refusing to push to another branch."
+          set -euo pipefail
+          # Push back to the branch this run was dispatched from. This used to be
+          # hard-coded to the Arena session branch `arena/79365da2-youtube-automation`,
+          # which made the workflow refuse to run anywhere else once the project moved
+          # to a maintained branch. `[skip ci]` keeps the push from re-triggering CI.
+          if [[ -z "${GITHUB_REF_NAME:-}" || "$GITHUB_REF_TYPE" != "branch" ]]; then
+            echo "::error::refusing to publish from ref '${GITHUB_REF_NAME:-<none>}' (type '${GITHUB_REF_TYPE:-<none>}') — dispatch this workflow from a branch."
             exit 1
           fi
+          echo "Publishing to $GITHUB_REF_NAME"
           git config user.name "youtube-automation-bot"
           git config user.email "actions@users.noreply.github.com"
           git add docs/media/*.mp4 docs/media/*-sources.json
           if ! git diff --cached --quiet; then
             git commit -m "chore(remaster): publish clip-first aspect-safe editions [skip ci]"
-            git push origin arena/79365da2-youtube-automation
+            git push origin "HEAD:$GITHUB_REF_NAME"
+          else
+            echo "No changes to publish — existing editions already up to date."
           fi
       - name: Retain licensing audit and render logs
         if: always()
