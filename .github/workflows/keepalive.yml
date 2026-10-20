@@ -1,0 +1,58 @@
+name: Keepalive
+
+# Protects the studio from two silent killers (docs/DEEP_DIVE.md §1):
+#  1. GitHub auto-disables scheduled workflows in PUBLIC repos after 60 days
+#     without repository activity. Only pushes reliably reset the timer.
+#  2. A workflow disabled for any reason never fires again until re-enabled.
+#
+# This workflow: (a) re-enables every scheduled workflow weekly (self-heal),
+# (b) commits a timestamp file when the last commit is aging (resets the clock).
+# Never delete this workflow.
+
+on:
+  schedule:
+    - cron: "23 3 * * 1"   # weekly self-heal (Mondays 03:23 UTC)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: keepalive
+  cancel-in-progress: false
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Re-enable all scheduled workflows (self-heal)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for wf in produce.yml dry-run.yml keepalive.yml; do
+            echo "ensuring $wf is enabled..."
+            gh api -X PUT "repos/${GITHUB_REPOSITORY}/actions/workflows/${wf}/enable" && echo "  ok" || echo "  (not found or already enabled)"
+          done
+
+      - name: Commit timestamp if repo activity is aging (resets 60-day clock)
+        run: |
+          git config user.name "youtube-automation-bot"
+          git config user.email "actions@users.noreply.github.com"
+          # Days since last commit on this branch
+          LAST=$(git log -1 --format=%ct)
+          NOW=$(date +%s)
+          AGE_DAYS=$(( (NOW - LAST) / 86400 ))
+          echo "last commit age: ${AGE_DAYS} days"
+          if [ "$AGE_DAYS" -ge 21 ]; then
+            date -u +"%Y-%m-%dT%H:%M:%SZ keepalive" > .keepalive
+            git add .keepalive
+            git commit -m "chore: keepalive heartbeat [skip ci]"
+            git push
+            echo "heartbeat committed"
+          else
+            echo "recent activity — no commit needed"
+          fi

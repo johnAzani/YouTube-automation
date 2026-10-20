@@ -1,0 +1,21 @@
+# Never commit media or secrets — PLAN.md §3.3
+output/
+assets/music/*.mp3
+assets/music/*.m4a
+assets/music/*.wav
+.env
+*.mp4
+*.mp3
+*.wav
+*.m4a
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+
+# demo renders for the docs/ showcase page (the user watches these via GitHub Pages)
+!docs/media/*.mp4
+
+# narration inputs for the deep-dive assembler (voice-00 clips)
+!assets/deepdive/*.mp3

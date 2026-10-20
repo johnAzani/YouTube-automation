@@ -1,0 +1,92 @@
+name: Remaster documentary assets
+
+on:
+  workflow_dispatch:
+    inputs:
+      edition:
+        description: Which finished episodes to remaster and publish to Pages
+        type: choice
+        options: [all, deepdives, shorts]
+        default: all
+        required: true
+      use_free_stock:
+        description: Search free video first, then licensed photos (disable for offline archive-photo only)
+        type: boolean
+        default: true
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: remaster-${{ inputs.edition }}
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      FFMPEG_BINARY: ffmpeg
+      ENABLE_STOCK_BROLL: ${{ inputs.use_free_stock && '1' || '0' }}
+      PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+      PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install free render dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg fonts-dejavu-core
+          pip install -r requirements.txt
+      - name: Restore free-stock cache
+        uses: actions/cache@v4
+        with:
+          path: output/asset_cache
+          key: remaster-assets-v1-${{ hashFiles('pipeline/assets.py', 'tools/deep_dive.py', 'tools/shorts.py') }}
+          restore-keys: remaster-assets-v1-
+      - name: Render requested edition with clip-first free sourcing
+        run: |
+          set -euo pipefail
+          if [[ "${{ inputs.edition }}" == "all" || "${{ inputs.edition }}" == "deepdives" ]]; then
+            python tools/deep_dive.py enron
+            cp social/deep-dive-enron.mp4 docs/media/deep-dive-enron.mp4
+            cp output/deep-stock/enron/scene-sources.json docs/media/deep-dive-enron-sources.json
+          fi
+          if [[ "${{ inputs.edition }}" == "all" || "${{ inputs.edition }}" == "shorts" ]]; then
+            python tools/shorts.py short-enron
+            cp social/short-enron.mp4 docs/media/shorts-enron.mp4
+            cp output/short-stock/short-enron/scene-sources.json docs/media/shorts-enron-sources.json
+          fi
+      - name: Publish updated samples and source ledgers to GitHub Pages
+        run: |
+          set -euo pipefail
+          # Push back to the branch this run was dispatched from. This used to be
+          # hard-coded to the Arena session branch `arena/79365da2-youtube-automation`,
+          # which made the workflow refuse to run anywhere else once the project moved
+          # to a maintained branch. `[skip ci]` keeps the push from re-triggering CI.
+          if [[ -z "${GITHUB_REF_NAME:-}" || "$GITHUB_REF_TYPE" != "branch" ]]; then
+            echo "::error::refusing to publish from ref '${GITHUB_REF_NAME:-<none>}' (type '${GITHUB_REF_TYPE:-<none>}') — dispatch this workflow from a branch."
+            exit 1
+          fi
+          echo "Publishing to $GITHUB_REF_NAME"
+          git config user.name "youtube-automation-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/media/*.mp4 docs/media/*-sources.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(remaster): publish clip-first aspect-safe editions [skip ci]"
+            git push origin "HEAD:$GITHUB_REF_NAME"
+          else
+            echo "No changes to publish — existing editions already up to date."
+          fi
+      - name: Retain licensing audit and render logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: remaster-sources-${{ github.run_id }}
+          path: output/*-stock/
+          if-no-files-found: warn
+          retention-days: 30

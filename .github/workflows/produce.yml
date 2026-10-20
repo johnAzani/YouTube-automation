@@ -1,0 +1,87 @@
+name: Produce video
+
+on:
+  schedule:
+    # Twice daily. GitHub cron is best-effort (can delay 15-30+ min under load) — fine for content.
+    - cron: "14 6 * * *"    # 06:14 UTC — morning slot
+    - cron: "14 14 * * *"   # 14:14 UTC — afternoon slot
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "Specific script file in content/queue/ (blank = next approved)"
+        required: false
+        default: ""
+      dry_run:
+        description: "Render only, skip upload"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write        # move queue file -> published/
+  issues: write          # release tickets
+
+concurrency:
+  group: produce
+  cancel-in-progress: false
+
+jobs:
+  produce:
+    runs-on: ubuntu-latest     # public repo: 4-core/16GB, free & unlimited
+    timeout-minutes: 120
+    env:
+      DRY_RUN: ${{ (inputs.dry_run || false) && '1' || '0' }}
+      PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+      PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+      YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+      YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+      YOUTUBE_PLAYLIST_ID: ${{ secrets.YOUTUBE_PLAYLIST_ID }}
+      AUTO_PUBLISH: ${{ secrets.AUTO_PUBLISH }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: System deps (ffmpeg)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg fonts-dejavu-core
+
+      - name: Python deps
+        run: pip install -r requirements.txt
+
+      - name: Restore stock-asset cache
+        uses: actions/cache@v4
+        with:
+          path: output/asset_cache
+          key: assets-${{ hashFiles('content/queue/*.md') }}
+          restore-keys: |
+            assets-
+
+      - name: Render next approved job
+        run: |
+          if [ -n "${{ inputs.job }}" ]; then
+            python -m pipeline.run --job "content/queue/${{ inputs.job }}"
+          else
+            python -m pipeline.run --next
+          fi
+
+      - name: Commit queue state (job moved to published/)
+        run: |
+          git config user.name "youtube-automation-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A content/
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(content): publish job [skip ci]"
+            git push
+          fi
+
+      - name: Upload render for QC (expires in 1 day — videos never live in git)
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: render-${{ github.run_id }}
+          path: output/
+          retention-days: 1
