@@ -46,7 +46,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: output/asset_cache
-          key: remaster-assets-v1-${{ hashFiles('tools/deep_dive.py', 'tools/shorts.py') }}
+          key: remaster-assets-v1-${{ hashFiles('pipeline/assets.py', 'tools/deep_dive.py', 'tools/shorts.py') }}
           restore-keys: remaster-assets-v1-
       - name: Render requested edition with clip-first free sourcing
         run: |
