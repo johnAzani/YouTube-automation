@@ -211,14 +211,41 @@ jobs:
             echo "selected: $JOB"
           fi
 
+      # Self-diagnosing on purpose: this job is advisory, so a silent failure would just
+      # rot. Emit the tail of the log as an annotation + step summary, because the raw
+      # runner log is only reachable from a browser session.
       - name: Render it (no upload)
         if: steps.pick.outputs.job != ''
-        run: python -m pipeline.run --dry-run --job "${{ steps.pick.outputs.job }}"
+        run: |
+          JOB="${{ steps.pick.outputs.job }}"
+          set +e
+          python -m pipeline.run --dry-run --job "$JOB" 2>&1 | tee render.log
+          rc=${PIPESTATUS[0]}
+          set -e
+          if [ "$rc" -ne 0 ]; then
+            {
+              echo "### pipeline-dry-run failed (exit $rc)"
+              echo
+              echo "Job: \`$JOB\`. This job is advisory, so CI stays green — but the"
+              echo "general queue path did not complete. The usual cause is that no free"
+              echo "stock provider returned a licensed match for some scene query, which"
+              echo "the pipeline refuses to paper over with a title card."
+              echo
+              echo '```'
+              tail -n 20 render.log
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+            echo "::error::pipeline dry-run failed (exit $rc) for $JOB — last line: $(tail -n 1 render.log)"
+            exit "$rc"
+          fi
 
-      - name: Upload render
-        if: steps.pick.outputs.job != ''
+      - name: Upload render + log
+        if: always() && steps.pick.outputs.job != ''
         uses: actions/upload-artifact@v4
         with:
           name: pipeline-dry-run-${{ github.run_id }}
-          path: output/
+          path: |
+            output/
+            render.log
           retention-days: 1
+          if-no-files-found: warn

@@ -75,9 +75,20 @@ rendered files land in `social/`, which `.gitignore` covers.
 
 `pipeline-dry-run` is advisory on purpose: it depends on Openverse / Wikimedia /
 Internet Archive / NASA / Pexels / Pixabay, and a third-party 5xx should not turn the
-repo red. It is the only job that touches the internet, and it is the one job **not**
-verified in this sandbox (no egress to those hosts) — it must be confirmed green on a
-GitHub runner. Adding `PEXELS_API_KEY` / `PIXABAY_API_KEY` secrets makes it reliable.
+repo red. It is the only job that touches the internet.
+
+**Status of that job (2026-10-20, run 39500043643):** `checks` and `offline-render`
+passed on the runner; `pipeline-dry-run` **failed** at the render step (exit 1) and was
+correctly absorbed by `continue-on-error`, so the run is green. The exact cause is
+**not verified** — the runner's raw log lives on
+`results-receiver.actions.githubusercontent.com` / `*.blob.core.windows.net`, which are
+outside this environment's network allowlist. The most likely cause is that no keyless
+provider returned a licensed match for one of the eight `asset_queries` in
+`0003-how-lehman-brothers-died.md`, which the pipeline refuses to paper over with a
+generated title card. The job now writes its own diagnosis: an `::error::` annotation
+with the last log line, a run-page step summary, and `render.log` uploaded as an artifact
+— all readable without the raw log. Re-run it and read the annotation before changing
+anything.
 
 ---
 
