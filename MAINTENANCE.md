@@ -77,18 +77,31 @@ rendered files land in `social/`, which `.gitignore` covers.
 Internet Archive / NASA / Pexels / Pixabay, and a third-party 5xx should not turn the
 repo red. It is the only job that touches the internet.
 
-**Status of that job (2026-10-20, run 39500043643):** `checks` and `offline-render`
-passed on the runner; `pipeline-dry-run` **failed** at the render step (exit 1) and was
-correctly absorbed by `continue-on-error`, so the run is green. The exact cause is
-**not verified** — the runner's raw log lives on
-`results-receiver.actions.githubusercontent.com` / `*.blob.core.windows.net`, which are
-outside this environment's network allowlist. The most likely cause is that no keyless
-provider returned a licensed match for one of the eight `asset_queries` in
-`0003-how-lehman-brothers-died.md`, which the pipeline refuses to paper over with a
-generated title card. The job now writes its own diagnosis: an `::error::` annotation
-with the last log line, a run-page step summary, and `render.log` uploaded as an artifact
-— all readable without the raw log. Re-run it and read the annotation before changing
-anything.
+**Status of that job — diagnosed, run 39501289506 (2026-10-20).** `checks` and
+`offline-render` both passed on a real runner, including the video/audio-stream and
+source-ledger assertions. `pipeline-dry-run` **failed** and was correctly absorbed by
+`continue-on-error`, so the run is green. Its self-emitted annotation gives the exact
+cause:
+
+```
+pipeline dry-run failed (exit 1) for content/queue/0003-how-lehman-brothers-died.md —
+last line: [run] FAILED ...: Scene 1 has no licensed, downloadable video or photo for
+'new york stock exchange trading floor'; refusing to substitute a generic title card.
+```
+
+So even **on a GitHub runner with `ENABLE_KEYLESS_SOURCES=1`**, no keyless provider
+returned a licensed match for that query. That is the pipeline working as designed — it
+refuses to paper over a missing source with a generated card — but it means:
+
+> **The general `pipeline/` path is not usable without real API keys.**
+> Add `PEXELS_API_KEY` and `PIXABAY_API_KEY` (both free, no card) as repository secrets
+> before relying on `content/queue/` → upload. Until then, the authored engines in
+> `tools/` are the only production-ready render path.
+
+Note the raw runner log was **never** readable here: it lives on
+`results-receiver.actions.githubusercontent.com` and `*.blob.core.windows.net`, outside
+this environment's allowlist. The diagnosis came from the annotation, which is exactly why
+that job now writes one.
 
 ---
 
