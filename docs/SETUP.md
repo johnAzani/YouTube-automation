@@ -52,7 +52,8 @@ Both are free API tiers; Pexels/Pixabay can return both video and photos. Withou
 
 ## 3. Remaster the existing deep dives and Shorts (free GitHub Actions)
 
-Open **Actions → Remaster documentary assets → Run workflow**, select branch
+After this workflow is present on the repository's default branch, open
+**Actions → Remaster documentary assets → Run workflow**, select branch
 `arena/79365da2-youtube-automation` as the ref, choose `all` (or deep dives/Shorts) and leave
 **Search free video first** enabled. The workflow uses optional Pexels/Pixabay secrets,
 then keyless free providers, preserves the whole source frame, writes per-scene license
