@@ -22,7 +22,7 @@ Pexels/Pixabay keys are optional. They are free to obtain from their respective 
 
 ## Reproducible controls
 
-The manual GitHub Actions workflow is `Remaster documentary assets` (`.github/workflows/remaster.yml`). Run it from `arena/79365da2-youtube-automation`, choose `all`/`deepdives`/`shorts`, and leave `use_free_stock` on to search providers. If GitHub does not list the workflow yet, the file must first be merged to the repository's default branch; select the Arena branch as the workflow ref so its push guard cannot write to another branch.
+The manual GitHub Actions workflow is `Remaster documentary assets` (`.github/workflows/remaster.yml`). Run it from the branch you want the refreshed demos published to, choose `all`/`deepdives`/`shorts`, and leave `use_free_stock` on to search providers. If GitHub does not list the workflow yet, the file must first be merged to the repository's default branch. The workflow publishes back to the branch it was dispatched from; it refuses to run from a non-branch ref such as a tag or pull-request ref.
 
 - `ENABLE_STOCK_BROLL=0` skips online search in the authored Shorts/deep-dive remaster engines and uses their scene-specific story stills.
 - `ENABLE_KEYLESS_SOURCES=0` disables Openverse, Wikimedia, Internet Archive, and NASA while keeping configured Pexels/Pixabay.
