@@ -81,10 +81,14 @@ effort, evergreen search demand, producible from open-licence footage.
 | Motivation / book summaries | $3–8 | Low | Good | ⚠️ Saturated, low retention ceiling |
 | Scary stories TTS / sleep music / kids | $0.40–2.50 | High (slop + COPPA) | — | ❌ RPM trap — avoid |
 
-**Pick one channel theme and one format family.** Recommended: *history/tech documentary
-explainers* ("Why Rome Fell", "The Forgotten Canal That Broke a City") — strong evergreen search,
-legally clean archives, long watch sessions, no sensitive-topic advice, and room for an original
-editorial voice (the inauthentic-content shield).
+**Pick one channel theme and one format family.** Full research: **docs/FINANCE.md** (finance-niche
+deep dive, Oct 2026 — RPM data, policy minefield, affiliate/sponsor math). Recommended lane:
+**money & business documentaries** — this same documentary craft aimed at finance/business subjects
+("Why Enron Died", "The $6B Wirecard Fraud", "The Canal That Broke a City") — finance-grade RPM
+($8–25 US audience; affiliates $50–500/referral; sponsor CPM $40–200) with documentary safety:
+**no AI personas, no advice**, evergreen archives, human-approved scripts. History/tech explainers
+remain the format family and the safe floor. Hard dates: **YPP application by Jan 15, 2027**
+(new-applicant thresholds double Feb 1, 2027); file AdSense **W-8BEN** before first payment.
 
 ### 2.2 Format mix (feeds both growth and watch hours)
 
