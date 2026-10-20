@@ -737,6 +737,50 @@ def resolve_scenes(key, words, total_dur):
     return resolved
 
 # --------------------------------------------------- speech-synced beats ----
+def build_sfx_plan(key, words, beats):
+    """Resolve the semantic sfx cue sheet (SCRIPTS[key]['sfx_cues']) to timings.
+
+    Every effect is placed by spoken-word anchor — sound follows the story.
+    Returns (events, beds, hushes) for score.generate_score()."""
+    events, beds, hushes = [], [], []
+    pan_flip = 1
+    # subtle panned whooshes on hero-beat entrances only
+    for b in beats:
+        p = 0.32 * pan_flip
+        pan_flip *= -1
+        events.append(dict(kind='whoosh', t=max(0.0, b['t0'] - 0.22),
+                           amp=0.15 if b.get('kind') == 'phrase' else 0.21, pan=p))
+        if b.get('kind') == 'count':
+            big = b.get('num', 0) >= 1000 or 'txt' in b
+            if big:
+                events.append(dict(kind='riser', t=max(0.0, b['t0'] - 1.15), amp=0.30, pan=0.0))
+            events.append(dict(kind='boom', t=b['t0'] + b.get('dur', 1.35),
+                               amp=0.32 if big else 0.15, pan=0.0))
+    for cue in SCRIPTS[key].get('sfx_cues', []):
+        if 'hush' in cue:
+            h = dict(cue['hush'])
+            hit = find_phrase(words, h['a'], h.get('occ', 0))
+            if not hit:
+                raise SystemExit(f"hush anchor not found: {h['a']!r}")
+            hushes.append(dict(t=hit[0][0], dur=h.get('dur', 1.2),
+                               depth=h.get('depth', 0.85), lead=h.get('lead', 0.5)))
+            continue
+        hit = find_phrase(words, cue['a'], cue.get('occ', 0)) if cue.get('a') else None
+        if cue.get('a') and not hit:
+            raise SystemExit(f"sfx cue anchor not found: {cue['a']!r}")
+        t0 = (hit[0][0] if hit else 0.0) + cue.get('delay', 0.0)
+        if 'until' in cue:
+            h2 = find_phrase(words, cue['until'], cue.get('uocc', 0))
+            if not h2:
+                raise SystemExit(f"sfx until-anchor not found: {cue['until']!r}")
+            beds.append(dict(kind=cue['sfx'], t0=t0, t1=h2[-1][1] + cue.get('until_pad', 1.0),
+                             amp=cue.get('amp', 0.1)))
+        else:
+            events.append(dict(kind=cue['sfx'], t=t0, amp=cue.get('amp', 0.5),
+                               pan=cue.get('pan', 0.0)))
+    events.sort(key=lambda e: e['t'])
+    return events, beds, hushes
+
 SLOT_MAP = {
     'R': (895, 295),
     'TR': (895, 215),
@@ -1056,6 +1100,24 @@ SCRIPTS = {
                  sub='ZERO LIABILITY FOR THE SOUTH FORK CLUB MEMBERS',
                  cam='push_in', focus=(0.50, 0.45), focus_side=-0.5),
         ],
+        sfx_cues=[
+            dict(sfx='water', a=None, until='six to eight inches', amp=0.10),
+            dict(sfx='rumble', a='six to eight inches', delay=1.3, amp=0.30),
+            dict(sfx='rain', a='six to eight inches', until='twenty million pounds of water',
+                 amp=0.13, until_pad=0.4),
+            dict(hush=dict(a='twenty million pounds of water', lead=0.55, dur=1.15, depth=0.85)),
+            dict(sfx='crash', a='twenty million pounds of water', delay=0.05, amp=0.72),
+            dict(sfx='subdrop', a='twenty million pounds of water', delay=0.05, amp=0.68),
+            dict(sfx='water_rush', a='twenty million pounds of water', until='fires burned across',
+                 amp=0.16),
+            dict(sfx='crash', a='thirty six feet high', delay=0.12, amp=0.42),
+            dict(sfx='thud', a='ten million pounds of debris', delay=0.18, amp=0.42),
+            dict(sfx='fire', a='fires burned across', until='claro boston', amp=0.13),
+            dict(hush=dict(a='two thousand two hundred', lead=0.45, dur=1.35, depth=0.90)),
+            dict(sfx='thud', a='two thousand two hundred', delay=0.42, amp=0.5),
+            dict(sfx='shimmer', a='five months', delay=0.10, amp=0.22, pan=0.25),
+            dict(sfx='boom', a='act of god', delay=0.05, amp=0.46),
+        ],
         beats=[
             dict(a='twenty million pounds of force', kind='count', num=20, suf='M',
                  label='TONS OF FORCE BEHIND THE DAM', dur=1.4, slot='R'),
@@ -1185,6 +1247,30 @@ SCRIPTS = {
                  sub='FASTOW & SKILLING IMPRISONED \u00B7 LAY CONVICTED',
                  cam='push_in', focus=(0.48, 0.42)),
         ],
+        sfx_cues=[
+            dict(sfx='city', a=None, until='mom to market accounting', amp=0.08),
+            dict(sfx='ticker', a='mom to market accounting', until='ninety dollars', amp=0.07),
+            dict(sfx='shimmer', a='ninety dollars', delay=1.15, amp=0.20, pan=-0.25),
+            dict(sfx='shimmer', a='seventy billion dollars', delay=1.70, amp=0.28, pan=0.25),
+            dict(sfx='unease', a='profits were fiction', until='enron overpriced', amp=0.12),
+            dict(sfx='paper', a='fast the bills', until='hide billions in debt', amp=0.09),
+            dict(hush=dict(a='enron overpriced', lead=0.50, dur=1.20, depth=0.88)),
+            dict(sfx='thud', a='enron overpriced', delay=0.22, amp=0.38),
+            dict(sfx='shredder', a='shredding documents', until='august two thousand', amp=0.13),
+            dict(sfx='whoosh_down', a='skilling resigned', delay=0.05, amp=0.42, pan=-0.30),
+            dict(hush=dict(a='december second two thousand', lead=0.55, dur=1.50, depth=0.90)),
+            dict(sfx='boom', a='december second two thousand', delay=0.30, amp=0.72),
+            dict(sfx='subdrop', a='december second two thousand', delay=0.30, amp=0.68),
+            dict(sfx='crash', a='sixty three billion dollars', delay=2.05, amp=0.46),
+            dict(sfx='thud', a='twenty thousand employees', delay=1.85, amp=0.42),
+            dict(sfx='thud', a='eighty five thousand people', delay=1.85, amp=0.42),
+            dict(sfx='thud', a='skilling went to prison', delay=0.15, amp=0.38),
+            dict(sfx='thud', a='died before sentencing', delay=0.15, amp=0.34),
+            dict(hush=dict(a='a company cannot explain how it makes money it is not making money',
+                           lead=0.50, dur=1.40, depth=0.85)),
+            dict(sfx='shimmer', a='a company cannot explain how it makes money it is not making money',
+                 delay=2.30, amp=0.24, pan=0.20),
+        ],
         beats=[
             dict(a='smartest guys in the room', kind='quote',
                  words=['SMARTEST', 'GUYS', 'IN', 'THE', 'ROOM'],
@@ -1295,28 +1381,10 @@ def main(key):
     cap_stream = build_caption_stream(key, words)
     print(f'[{key}] narration={adur:.1f}s total={total:.1f}s ({n}f) scenes={len(scenes)} beats={len(beats)}')
 
-    # ---- sound design: events keyed to spoken beats + speech-locked cuts ----
-    events = []
+    # ---- sound design: semantic cue sheet keyed to spoken words ----
     cuts = [sc['t0'] for sc in scenes]
-    for sc in scenes[1:]:
-        events.append(dict(kind='swish', t=max(0.0, sc['t0'] - 0.06), amp=0.5))
-    for b in beats:
-        kind = b.get('kind')
-        amp = {'count': 0.55, 'quote': 0.5, 'date': 0.45}.get(kind, 0.32)
-        events.append(dict(kind='whoosh', t=max(0.0, b['t0'] - 0.22), amp=amp))
-        if kind == 'count':
-            big = b.get('num', 0) >= 1000 or 'txt' in b
-            if big:
-                events.append(dict(kind='riser', t=max(0.0, b['t0'] - 1.15), amp=0.5))
-            events.append(dict(kind='boom', t=b['t0'] + b.get('dur', 1.35),
-                               amp=0.62 if big else 0.34))
-        elif kind == 'date':
-            events.append(dict(kind='boom', t=b['t0'] + 0.42, amp=0.4))
-        if any(s in b['a'] for s in ('twenty million pounds of water', 'six to eight inches',
-                                     'thirty six feet high')):
-            events.append(dict(kind='rumble', t=max(0.0, b['t0'] - 0.35), amp=0.55))
-    events.sort(key=lambda e: e['t'])
-    generate_score(key, total, cuts, events)
+    events, beds, hushes = build_sfx_plan(key, words, beats)
+    generate_score(key, total, cuts, events, beds, hushes)
 
     # Pre-prep unique plates once
     plate_cache = {}
@@ -1336,8 +1404,9 @@ def main(key):
         [FFMPEG, '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}',
          '-r', str(FPS), '-i', '-', '-i', nar, '-i', music, '-i', sfx,
          '-filter_complex',
-         '[1:a]volume=1.0[v];[2:a]volume=0.34[m];[3:a]volume=0.85[s];'
-         '[v][m][s]amix=inputs=3:duration=longest:normalize=0,alimiter=limit=0.95[a]',
+         '[2:a]volume=0.55[m];[1:a]aformat=channel_layouts=stereo,volume=1.0[v];'
+         '[3:a]volume=0.95[s];[m][v][s]amix=inputs=3:duration=longest:normalize=0,'
+         'alimiter=limit=0.95[a]',
          '-map', '0:v', '-map', '[a]',
          '-c:v', 'libx264', '-preset', 'fast', '-crf', '22',
          '-maxrate', '1800k', '-bufsize', '3600k', '-pix_fmt', 'yuv420p',

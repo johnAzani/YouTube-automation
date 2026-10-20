@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
-"""Procedural score + sound design for deep-dive clips. Pure numpy -> WAV.
+"""Procedural score + cinematic sound design for deep-dive clips. numpy -> WAV.
 
-Music: cinematic minor-key pad (FFT-softened harmonics), sub drone, heartbeat
-pulse, wind bed, with swells at scene cuts and a finale lift. SFX: whooshes on
-motion-graphics entrances, risers before stats, booms on count-up landings,
-scene swishes, low rumbles for disaster beats.
+Sound design philosophy: every effect is placed by SEMANTIC CUE (word-anchored),
+not mechanically. Rain arrives with the storm; the breach gets a sub-drop crash
+and a rushing-water bed; fire crackle takes over the wreckage act; the shredder
+runs under the document-destruction line; money moments shimmer, collapses boom.
+Emotional HUSH windows duck the score before the heaviest spoken lines so the
+words land in near-silence. Stereo placement (panned whooshes, wide ambience),
+FFT reverb tails on impacts, and sidechain-style ducking of the music bed.
 
-Run standalone or via tools/deep_dive.py which calls generate_score().
-
-Usage: .venv/bin/python tools/score.py <key> <total_seconds>
+Usage (via tools/deep_dive.py):
+    generate_score(key, total, cuts, events, beds, hushes)
 """
 import os, sys, wave, math
 import numpy as np
@@ -19,11 +21,17 @@ OUT = os.path.join(ROOT, 'assets', 'deepdive')
 
 # ------------------------------------------------------------- dsp helpers ----
 def _fft_shape(x, cutoff, order=2.0):
-    """Gentle spectral rolloff above cutoff (order=2 => 12 dB/oct feel)."""
     n = len(x)
     X = np.fft.rfft(x)
     f = np.fft.rfftfreq(n, 1.0 / SR)
     X *= 1.0 / (1.0 + (f / max(1.0, cutoff)) ** order)
+    return np.fft.irfft(X, n)
+
+def _fft_hp(x, cutoff, order=2.0):
+    n = len(x)
+    X = np.fft.rfft(x)
+    f = np.fft.rfftfreq(n, 1.0 / SR)
+    X *= 1.0 - 1.0 / (1.0 + (f / max(1.0, cutoff)) ** order)
     return np.fft.irfft(X, n)
 
 def _env_adsr(n, a, r):
@@ -46,6 +54,22 @@ def _tone(freq, n, detune=1.0, seed=0):
         x += a * np.sin(2 * np.pi * freq * h * detune * t + rng.uniform(0, 6.28))
     return x
 
+def _reverb(x, decay=1.05, mix=0.32, seed=17):
+    """FFT convolution with a synthetic exponential-noise impulse."""
+    if mix <= 0:
+        return x
+    ln = int(decay * SR)
+    rng = np.random.default_rng(seed)
+    ir = rng.normal(0, 1, ln) * np.exp(-np.arange(ln) / SR * (5.0 / decay))
+    ir = _fft_shape(ir, 4200, 1.2)
+    ir /= np.abs(ir).max() + 1e-9
+    n = 1
+    while n < len(x) + ln:
+        n *= 2
+    wet = np.fft.irfft(np.fft.rfft(x, n) * np.fft.rfft(ir, n), n)[:len(x)]
+    wet /= np.abs(wet).max() + 1e-9
+    return (1 - mix) * x + mix * wet * (np.abs(x).max() + 1e-9)
+
 def _write_wav(path, left, right):
     stereo = np.stack([left, right], axis=1)
     stereo = np.clip(stereo, -1.0, 1.0)
@@ -55,10 +79,14 @@ def _write_wav(path, left, right):
         w.setsampwidth(2)
         w.setframerate(SR)
         w.writeframes(data)
-    print('wrote', path, f'{len(left)/SR:.1f}s')
+    print('wrote', os.path.basename(path), f'{len(left)/SR:.1f}s')
+
+def _pan(x, pan):
+    """pan -1..1 -> (left, right) gains via equal power."""
+    p = np.clip(pan, -1, 1)
+    return x * math.sqrt((1 - p) / 2) * 1.414, x * math.sqrt((1 + p) / 2) * 1.414
 
 # ------------------------------------------------------------------- music ----
-# minor-key progression: Am  F  C  G  Am  Dm  F  E  (8 segments over the clip)
 PROG = [
     (220.00, 261.63, 329.63),   # Am
     (174.61, 220.00, 261.63),   # F
@@ -87,15 +115,13 @@ def _pad_bed(total, detune, seed):
         out[s0:s0 + ln] += v
     return _fft_shape(out, 1300, 1.8)
 
-def _music_bed(total, cuts, big_beats):
+def _music_bed(total, cuts, big_hits):
     n = int(total * SR)
     t = np.arange(n) / SR
     padL = _pad_bed(total, 0.9992, 11)
     padR = _pad_bed(total, 1.0008, 23)
-    # sub drone with slow LFO
     sub = (np.sin(2 * np.pi * 55.0 * t) * (0.75 + 0.25 * np.sin(2 * np.pi * 0.11 * t))
            + 0.45 * np.sin(2 * np.pi * 82.41 * t))
-    # heartbeat pulse
     heart = np.zeros(n)
     thump_n = int(0.32 * SR)
     tt = np.arange(thump_n) / SR
@@ -104,112 +130,276 @@ def _music_bed(total, cuts, big_beats):
     for k in np.arange(0.9, total - 0.4, 1.18):
         s = int(k * SR)
         heart[s:s + thump_n] += thump[:n - s]
-    # wind bed
     rng = np.random.default_rng(5)
     wind = _fft_shape(rng.normal(0, 1, n), 320, 1.4)
     wind *= 0.45 + 0.30 * np.sin(2 * np.pi * 0.07 * t + 1.2)
 
-    swell = np.full(n, 0.30)
-    for c in list(cuts[1:-1]) + list(big_beats):
-        # lift before, crest at the moment, ease out after
-        a0, a1 = int(max(0, (c - 1.6)) * SR), int(min(total, c + 2.6) * SR)
+    swell = np.full(n, 0.32)
+    for c in list(cuts[1:-1]) + list(big_hits):
+        a0, a1 = int(max(0.0, c - 1.6) * SR), int(min(total, c + 2.6) * SR)
         if a1 <= a0:
             continue
         w = np.linspace(0, 1, a1 - a0)
         shape = np.where(w < 0.38, w / 0.38, 1.0 - (w - 0.38) / 0.62) ** 1.2
-        swell[a0:a1] = np.maximum(swell[a0:a1], 0.30 + 0.52 * shape)
-    fin = int(max(0, total - 10.0) * SR)
-    swell[fin:] = np.maximum(swell[fin:], np.linspace(0.32, 0.92, n - fin))
+        swell[a0:a1] = np.maximum(swell[a0:a1], 0.32 + 0.50 * shape)
+    fin = int(max(0.0, total - 10.0) * SR)
+    swell[fin:] = np.maximum(swell[fin:], np.linspace(0.34, 0.92, n - fin))
 
     center = 0.42 * sub + 0.20 * heart + 0.16 * wind
     left = (0.40 * padL + center) * swell
     right = (0.40 * padR + center) * swell
-    peak = max(np.abs(left).max(), np.abs(right).max(), 1e-9)
-    return left / peak * 0.30, right / peak * 0.30
+    return left, right
 
-# --------------------------------------------------------------------- sfx ----
-def _whoosh(amp):
+# --------------------------------------------------------------------- hits ----
+def _whoosh(amp, pan=0.0, pan_sweep=0.55):
     n = int(0.55 * SR)
     rng = np.random.default_rng(3)
     x = rng.normal(0, 1, n)
     tt = np.arange(n) / SR
     hi = _fft_shape(x, 3800, 1.2) * np.exp(-tt * 9)
     lo = _fft_shape(x, 700, 1.4) * np.exp(-tt * 4.5)
-    return (hi * 0.7 + lo * 0.9) * amp
+    mono = (hi * 0.7 + lo * 0.9) * amp
+    # pan sweeps across the stereo field for movement
+    L = np.zeros(n); R = np.zeros(n)
+    steps = 10
+    for i in range(steps):
+        s0, s1 = int(i * n / steps), int((i + 1) * n / steps)
+        p = pan - pan_sweep + 2 * pan_sweep * (i / max(1, steps - 1))
+        l, r = _pan(mono[s0:s1], p)
+        L[s0:s1], R[s0:s1] = l, r
+    return L, R
 
-def _swish(amp):
+def _swish(amp, pan=0.0):
     n = int(0.34 * SR)
     rng = np.random.default_rng(4)
     x = rng.normal(0, 1, n)
     tt = np.arange(n) / SR
-    return _fft_shape(x * np.exp(-tt * 11), 2600, 1.1) * amp * 1.4
+    mono = _fft_shape(x * np.exp(-tt * 11), 2600, 1.1) * amp * 1.4
+    return _pan(mono, pan)
 
-def _boom(amp):
-    n = int(1.0 * SR)
+def _whoosh_down(amp, pan=0.0):
+    n = int(0.8 * SR)
+    tt = np.arange(n) / SR
+    f = 900 * np.exp(-tt * 2.8) + 90
+    tone = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-tt * 3.2) * 0.5
+    rng = np.random.default_rng(21)
+    noise = _fft_shape(rng.normal(0, 1, n), 1800, 1.3) * np.exp(-tt * 4.0)
+    return _pan((tone + noise * 0.8) * amp, pan)
+
+def _boom(amp, pan=0.0):
+    n = int(1.15 * SR)
     tt = np.arange(n) / SR
     f = 58 * np.exp(-tt * 3.2) + 27
-    phase = 2 * np.pi * np.cumsum(f) / SR
-    body = np.sin(phase) * np.exp(-tt * 4.2)
+    body = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-tt * 4.2)
     click = np.zeros(n)
     nc = int(0.012 * SR)
     rng = np.random.default_rng(6)
     click[:nc] = rng.normal(0, 1, nc) * np.exp(-np.arange(nc) / SR * 300)
-    return (body + 0.22 * _fft_shape(click, 2200, 1.3)) * amp
+    mono = _reverb(body + 0.18 * _fft_shape(click, 2200, 1.3), decay=1.2, mix=0.28) * amp
+    return _pan(mono, pan)
 
-def _riser(amp, dur=1.15):
+def _subdrop(amp, pan=0.0):
+    n = int(1.6 * SR)
+    tt = np.arange(n) / SR
+    f = 48 * np.exp(-tt * 1.6) + 22
+    mono = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-tt * 1.9) * amp
+    return _pan(mono, pan)
+
+def _crash(amp, pan=0.0):
+    """Impact + debris grains + reverb tail — the breach / the collapse."""
+    n = int(2.2 * SR)
+    rng = np.random.default_rng(7)
+    tt = np.arange(n) / SR
+    impact = _fft_shape(rng.normal(0, 1, n), 2600, 1.1) * np.exp(-tt * 9) * 0.9
+    sub = np.sin(2 * np.pi * np.cumsum(42 * np.exp(-tt * 2.2) + 24) / SR) * np.exp(-tt * 3.2)
+    debris = np.zeros(n)
+    for _ in range(14):
+        g = int(rng.uniform(0.03, 1.1) * SR)
+        gl = int(rng.uniform(0.02, 0.09) * SR)
+        if g + gl < n:
+            debris[g:g + gl] += rng.normal(0, 1, gl) * np.exp(-np.arange(gl) / SR * 40) * rng.uniform(0.2, 0.6)
+    mono = _reverb(impact + 0.8 * sub + 0.55 * _fft_shape(debris, 3200, 1.2),
+                   decay=1.5, mix=0.36) * amp
+    return _pan(mono, pan)
+
+def _thud(amp, pan=0.0):
+    """Soft distant drum — somber beats (jobs lost, prison, verdicts)."""
+    n = int(0.9 * SR)
+    tt = np.arange(n) / SR
+    f = 70 * np.exp(-tt * 5.0) + 42
+    mono = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-tt * 5.5)
+    mono = _reverb(mono, decay=1.1, mix=0.35) * amp
+    return _pan(mono, pan)
+
+def _shimmer(amp, pan=0.0):
+    """Bright bell stack — money rising, human warmth."""
+    n = int(1.4 * SR)
+    tt = np.arange(n) / SR
+    x = np.zeros(n)
+    for f, a, d in ((1318.5, 1.0, 3.2), (1975.5, 0.55, 4.0), (2637.0, 0.3, 5.0), (880.0, 0.4, 2.6)):
+        x += a * np.sin(2 * np.pi * f * tt) * np.exp(-tt * d)
+    mono = _reverb(x * 0.22, decay=1.3, mix=0.4) * amp
+    return _pan(mono, pan)
+
+def _riser(amp, pan=0.0, dur=1.15):
     n = int(dur * SR)
     tt = np.arange(n) / SR
     rng = np.random.default_rng(8)
     noise = _fft_shape(rng.normal(0, 1, n), 1400, 1.2) * (tt / dur) ** 2
     f = 190 * (700 / 190) ** (tt / dur)
     tone = np.sin(2 * np.pi * np.cumsum(f) / SR) * (tt / dur) ** 2.4
-    return (0.8 * noise + 0.5 * tone) * amp
+    mono = (0.8 * noise + 0.5 * tone) * amp * (0.98 ** 0)  # ends crisply at the hit
+    return _pan(mono, pan)
 
-def _rumble(amp, dur=2.8):
+def _rumble(amp, pan=0.0, dur=2.8):
     n = int(dur * SR)
     tt = np.arange(n) / SR
     rng = np.random.default_rng(9)
     x = _fft_shape(rng.normal(0, 1, n), 90, 1.8)
     env = np.sin(np.pi * np.clip(tt / dur, 0, 1)) ** 1.3
-    return x * env * amp * 2.2
+    return _pan(x * env * amp * 2.2, pan)
 
-def _sfx_bed(total, events):
+# ------------------------------------------------------------- ambience beds ----
+def _bed(kind, n, amp, seed):
+    rng = np.random.default_rng(seed)
+    t = np.arange(n) / SR
+    if kind == 'rain':
+        x = _fft_hp(rng.normal(0, 1, n), 1800, 1.1)
+        x *= 0.75 + 0.25 * np.sin(2 * np.pi * 0.9 * t + 1)  # gusts
+    elif kind == 'fire':
+        brown = np.cumsum(rng.normal(0, 1, n))
+        brown = _fft_shape(brown / (np.abs(brown).max() + 1e-9), 700, 1.4)
+        crackle = np.zeros(n)
+        for _ in range(int(n / SR * 22)):
+            g = int(rng.uniform(0, n - 2000))
+            gl = int(rng.uniform(60, 420))
+            crackle[g:g + gl] += rng.normal(0, 1, gl) * np.exp(-np.arange(gl) / SR * 55) * rng.uniform(0.3, 1.0)
+        x = brown * 0.8 + _fft_hp(crackle, 900, 1.1) * 0.7
+    elif kind == 'water':
+        x = _fft_shape(rng.normal(0, 1, n), 900, 1.3)
+        x *= 0.6 + 0.4 * np.abs(np.sin(2 * np.pi * 0.13 * t))
+    elif kind == 'water_rush':
+        x = _fft_shape(rng.normal(0, 1, n), 1500, 1.1)
+        x *= 0.8 + 0.2 * np.sin(2 * np.pi * 0.35 * t + 2)
+    elif kind == 'city':
+        x = _fft_shape(rng.normal(0, 1, n), 240, 1.5)
+        x += 0.25 * np.sin(2 * np.pi * 58 * t) * (0.7 + 0.3 * np.sin(2 * np.pi * 0.11 * t))
+    elif kind == 'ticker':
+        x = np.zeros(n)
+        step = int(0.135 * SR)
+        for g in range(0, n - 300, step):
+            if rng.uniform() < 0.72:
+                gl = int(rng.uniform(30, 90))
+                x[g:g + gl] += rng.normal(0, 1, gl) * np.exp(-np.arange(gl) / SR * 120) * rng.uniform(0.25, 0.8)
+        x = _fft_hp(x, 900, 1.2)
+    elif kind == 'paper':
+        x = np.zeros(n)
+        for _ in range(int(n / SR * 7)):
+            g = int(rng.uniform(0, n - 9000))
+            gl = int(rng.uniform(2000, 8000))
+            x[g:g + gl] += rng.normal(0, 1, gl) * np.sin(np.pi * np.arange(gl) / gl) ** 2 * rng.uniform(0.2, 0.55)
+        x = _fft_shape(x, 2600, 1.2)
+    elif kind == 'shredder':
+        chop = 0.5 + 0.5 * np.sign(np.sin(2 * np.pi * 16 * t))
+        x = _fft_hp(rng.normal(0, 1, n), 700, 1.0) * chop * (0.85 + 0.15 * np.sin(2 * np.pi * 0.7 * t))
+    elif kind == 'unease':
+        x = (np.sin(2 * np.pi * 110 * t) + np.sin(2 * np.pi * 111.3 * t) * 0.9
+             + np.sin(2 * np.pi * 116.5 * t) * 0.5)
+        x = _fft_shape(x * 0.33, 500, 1.4)
+    else:
+        return np.zeros(n), np.zeros(n)
+    x = x / (np.abs(x).max() + 1e-9) * amp
+    # wide stereo: light decorrelation
+    return x, np.roll(x, int(0.012 * SR))
+
+# ----------------------------------------------------------------- assembly ----
+HIT_KINDS = {
+    'whoosh': _whoosh, 'swish': _swish, 'boom': _boom, 'subdrop': _subdrop,
+    'crash': _crash, 'thud': _thud, 'shimmer': _shimmer, 'riser': _riser,
+    'rumble': _rumble, 'whoosh_down': _whoosh_down,
+}
+
+def generate_score(key, total, cuts, events, beds=None, hushes=None, out_dir=OUT):
+    """Build music-{key}.wav + sfx-{key}.wav.
+
+    events: [{kind, t, amp, pan?}]        discrete hits
+    beds:   [{kind, t0, t1, amp}]         ambience windows (rain/fire/city/...)
+    hushes: [{t, dur, depth, lead?}]      score-ducking moments (already offset)
+    """
+    beds = beds or []
+    hushes = hushes or []
     n = int(total * SR)
-    bed = np.zeros(n)
-    for ev in events:
-        kind, t, amp = ev['kind'], ev['t'], ev.get('amp', 0.5)
-        if kind == 'whoosh':
-            buf = _whoosh(amp)
-        elif kind == 'swish':
-            buf = _swish(amp)
-        elif kind == 'boom':
-            buf = _boom(amp)
-        elif kind == 'riser':
-            buf = _riser(amp)
-        elif kind == 'rumble':
-            buf = _rumble(amp)
-        else:
-            continue
-        s = int(max(0.0, t) * SR)
-        ln = min(len(buf), n - s)
-        if ln > 0:
-            bed[s:s + ln] += buf[:ln]
-    peak = np.abs(bed).max() or 1.0
-    return bed / peak * 0.42
+    print(f'score[{key}]: {total:.1f}s  hits={len(events)}  beds={len(beds)}  hushes={len(hushes)}')
 
-# ----------------------------------------------------------------- public ----
-def generate_score(key, total, cuts, events, out_dir=OUT):
-    print(f'score: {key} {total:.1f}s, {len(events)} sfx events')
-    big = [e['t'] for e in events if e['kind'] in ('boom', 'rumble')]
-    left, right = _music_bed(total, cuts, big)
-    _write_wav(os.path.join(out_dir, f'music-{key}.wav'), left, right)
-    sfx = _sfx_bed(total, events)
-    _write_wav(os.path.join(out_dir, f'sfx-{key}.wav'), sfx, sfx)
+    # ---- music with hush + sidechain ducking ----
+    big = [e['t'] for e in events if e['kind'] in ('boom', 'crash', 'subdrop')]
+    m_L, m_R = _music_bed(total, cuts, big)
+    duck = np.ones(n)
+    for h in hushes:
+        lead = h.get('lead', 0.5)
+        t0, t1 = max(0.0, h['t'] - lead), min(total, h['t'] + h['dur'])
+        t2 = min(total, t1 + 0.85)
+        i0, i1, i2 = int(t0 * SR), int(t1 * SR), int(t2 * SR)
+        if i1 <= i0:
+            continue
+        duck[i0:i1] = np.minimum(duck[i0:i1], np.linspace(1.0, 1.0 - h['depth'], i1 - i0))
+        if i2 > i1:
+            duck[i1:i2] = np.minimum(duck[i1:i2], np.linspace(1.0 - h['depth'], 1.0, i2 - i1))
+    m_L *= duck
+    m_R *= duck
+    peak = max(np.abs(m_L).max(), np.abs(m_R).max(), 1e-9)
+    m_L, m_R = m_L / peak * 0.30, m_R / peak * 0.30
+
+    # ---- sfx: hits + ambience beds ----
+    s_L, s_R = np.zeros(n), np.zeros(n)
+    for ev in events:
+        kind = ev['kind']
+        fn = HIT_KINDS.get(kind)
+        if not fn:
+            continue
+        amp = ev.get('amp', 0.5)
+        pan = ev.get('pan', 0.0)
+        if kind in ('whoosh', 'swish', 'whoosh_down', 'boom', 'subdrop', 'crash',
+                    'thud', 'shimmer', 'riser', 'rumble'):
+            out = fn(amp, pan)
+        L, R = out
+        s0 = int(max(0.0, ev['t']) * SR)
+        ln = min(len(L), n - s0)
+        if ln > 0:
+            s_L[s0:s0 + ln] += L[:ln]
+            s_R[s0:s0 + ln] += R[:ln]
+    for b in beds:
+        i0, i1 = int(max(0.0, b['t0']) * SR), int(min(total, b['t1']) * SR)
+        if i1 <= i0:
+            continue
+        L, R = _bed(b['kind'], i1 - i0, b.get('amp', 0.1), seed=hash(b['kind']) % 9999)
+        fade = min(int(1.1 * SR), (i1 - i0) // 2)
+        env = np.ones(i1 - i0)
+        env[:fade] = np.linspace(0, 1, fade) ** 1.4
+        env[-fade:] = np.linspace(1, 0, fade) ** 1.4
+        s_L[i0:i1] += L * env
+        s_R[i0:i1] += R * env
+
+    # sidechain: big impacts duck the music a touch more
+    imp = np.abs(s_L + s_R)
+    imp = _fft_shape(imp, 2.2, 1.0)
+    imp /= imp.max() + 1e-9
+    m_L *= 1.0 - 0.30 * imp
+    m_R *= 1.0 - 0.30 * imp
+
+    peak = max(np.abs(s_L).max(), np.abs(s_R).max(), 1e-9)
+    s_L, s_R = s_L / peak * 0.46, s_R / peak * 0.46
+
+    _write_wav(os.path.join(out_dir, f'music-{key}.wav'), m_L, m_R)
+    _write_wav(os.path.join(out_dir, f'sfx-{key}.wav'), s_L, s_R)
 
 if __name__ == '__main__':
-    key = sys.argv[1] if len(sys.argv) > 1 else 'johnstown'
-    total = float(sys.argv[2]) if len(sys.argv) > 2 else 100.0
-    generate_score(key, total, [5, total * 0.3, total * 0.6, total], [
-        dict(kind='whoosh', t=3.0, amp=0.5), dict(kind='boom', t=8.0, amp=0.6),
-        dict(kind='riser', t=14.0, amp=0.5), dict(kind='swish', t=20.0, amp=0.5),
-        dict(kind='rumble', t=26.0, amp=0.5)])
+    generate_score('smoke', 14.0, [2.0, 7.0, 12.0],
+                   [dict(kind='whoosh', t=1.2, amp=0.4, pan=-0.4),
+                    dict(kind='crash', t=5.0, amp=0.75),
+                    dict(kind='subdrop', t=5.0, amp=0.7),
+                    dict(kind='thud', t=9.5, amp=0.5),
+                    dict(kind='shimmer', t=11.0, amp=0.25, pan=0.3)],
+                   beds=[dict(kind='rain', t0=1.0, t1=6.0, amp=0.12),
+                         dict(kind='fire', t0=7.0, t1=13.5, amp=0.12)],
+                   hushes=[dict(t=5.0, dur=1.2, depth=0.85, lead=0.5)])
