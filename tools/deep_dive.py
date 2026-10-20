@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
-"""Deep-dive assembler v2: archival photos + narration -> 16:9 documentary clip.
+"""Deep-dive assembler v3: archival photos + narration -> 16:9 documentary clip.
 
-Cinematic blue-duotone grade on every plate ("blue card" filter), glass card
-overlays, kinetic type: per-letter stagger with motion smear, ease-out-expo
-wipes, overshoot bars, moving light sweeps, chapter kickers, title/end cards,
-Ken Burns moves, narration muxed via ffmpeg.
+Cinematic blue-duotone grade ("blue card" filter), glass card overlays, kinetic
+type, AND speech-synced motion graphics: count-up stats, word-by-word phrase
+reveals, quote cards and date chips that land exactly on the spoken words
+(pocketsphinx word timings in assets/deepdive/words-*.json). Ambient layer:
+parallax background words, dust motes, light-leak sweeps.
 
 Config-driven: add a SCRIPTS entry + narration clips + image-search plates.
 
 Run: .venv/bin/python tools/deep_dive.py [johnstown|enron]
 """
-import os, sys, math, subprocess
+import os, sys, json, math, subprocess
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -328,17 +329,14 @@ def kicker_layer(text, idx, nscenes, t_in, t_out):
     layer.alpha_composite(card, (int(cx), int(cy)))
 
     d = ImageDraw.Draw(layer)
-    # yellow accent bar grows out of the chip
     bar_h = 30 * e
     d.rectangle([cx + 16, cy + (bh - bar_h) / 2, cx + 21, cy + (bh + bar_h) / 2],
                 fill=YELLOW + (a,))
-    # text wipe reveal (left -> right)
     reveal = max(1, int(tw * ease_out_expo(clamp01(t_in / 0.7))))
     txa = txt.copy()
     txa.putalpha(txa.getchannel('A').point(lambda v: int(v * a / 255)))
     layer.alpha_composite(txa.crop((0, 0, reveal, txa.height)),
                           (int(cx + pad + 16), int(cy + (bh - txt.height) / 2 - 4)))
-    # chapter counter, fades in slightly later
     fc = fnt('Medium', 18)
     ca = int(255 * clamp01((t_in - 0.25) / 0.4) * (a / 255))
     if ca > 0:
@@ -353,6 +351,309 @@ def progress_bar(layer, frac, a=210):
     if x > 0:
         d.rectangle([0, H - 5, x, H], fill=ICE + (a,))
 
+# ---------------------------------------------------------- word sync ----
+def load_words(key):
+    path = os.path.join(AUDIO, f'words-{key}.json')
+    return json.load(open(path))
+
+def find_phrase(words, phrase, occ=0):
+    ws = phrase.split()
+    hits = []
+    for i in range(len(words) - len(ws) + 1):
+        if [words[i + j][2] for j in range(len(ws))] == ws:
+            hits.append(words[i:i + len(ws)])
+    return hits[occ] if len(hits) > occ else None
+
+def resolve_beats(key):
+    """Map each beat's anchor phrase to its spoken word times."""
+    words = load_words(key)
+    beats = []
+    for b in SCRIPTS[key]['beats']:
+        hit = find_phrase(words, b['a'], b.get('occ', 0))
+        if not hit:
+            raise SystemExit(f'beat anchor not found in words-{key}.json: {b["a"]!r}')
+        b2 = dict(b)
+        b2['t0'] = hit[0][0]
+        b2['t1'] = hit[-1][1]
+        b2['wtimes'] = [w[0] for w in hit]
+        beats.append(b2)
+    beats.sort(key=lambda b: b['t0'])
+    return beats
+
+# --------------------------------------------------- speech-synced beats ----
+SLOTS = [(938, 165), (330, 175), (640, 255), (925, 445), (345, 445)]
+
+def _word_times(b, n):
+    """n display words over the anchor's word times (equal count -> 1:1)."""
+    if n == len(b['wtimes']):
+        return list(b['wtimes'])
+    if n <= 1:
+        return [b['t0']] * n
+    span = b['t1'] - b['t0']
+    return [b['t0'] + span * i / (n - 1) for i in range(n)]
+
+def _flash_ring(layer, t, t0, cx, cy):
+    dt = t - t0
+    if dt < 0 or dt > 0.5:
+        return
+    e = clamp01(dt / 0.5)
+    r = 46 + 105 * ease_out_expo(e)
+    a = int(150 * (1 - e))
+    if a <= 2:
+        return
+    ring = Image.new('L', (int(r * 2) + 8, int(r * 2) + 8), 0)
+    ImageDraw.Draw(ring).ellipse([0, 0, ring.width - 1, ring.height - 1], fill=a)
+    ImageDraw.Draw(ring).ellipse([10, 10, ring.width - 11, ring.height - 11], fill=0)
+    ring = ring.filter(ImageFilter.GaussianBlur(2))
+    col = Image.new('RGBA', ring.size, ICE + (255,))
+    col.putalpha(ring)
+    layer.alpha_composite(col, (int(cx - ring.width / 2), int(cy - ring.height / 2)))
+
+def beat_count(layer, b, t, cx, cy):
+    dur = b.get('dur', 1.35)
+    t0, t1 = b['t0'], b['t1']
+    ext = b.get('hold', 3.0)
+    if t < t0 - 0.25 or t > t1 + ext + 0.6:
+        return
+    out_a = 1.0
+    if t > t1 + ext:
+        out_a = 1.0 - clamp01((t - t1 - ext) / 0.55)
+    ea = ease_out_expo(clamp01((t - (t0 - 0.25)) / 0.4))
+    # count-up value
+    local = clamp01((t - t0) / dur)
+    if 'txt' in b:
+        shown = b['txt'] if local > 0.25 else ''
+        pop = ease_out_back(clamp01((t - t0) / 0.4))
+    else:
+        val = b.get('num', 0) * ease_out_expo(local)
+        shown = f"{b.get('pre', '')}{val:,.{b.get('dec', 0)}f}{b.get('suf', '')}"
+        pop = 0.9 + 0.1 * ease_out_back(clamp01((t - t0) / 0.35))
+    fnum = fnt('Black', 104 if b.get('big', True) else 76)
+    fnote = fnt('SemiBold', 24)
+    d = ImageDraw.Draw(layer)
+    wnum = d.textlength(shown, font=fnum) if shown else 0
+    wlab = tracked_width(d, b.get('label', ''), fnote, 3.5) if b.get('label') else 0
+    panel_w = int(max(wnum, wlab) + 96)
+    panel_h = 196 if b.get('label') else 150
+    px = int(cx - panel_w / 2)
+    py = int(cy - panel_h / 2)
+    pw = int(panel_w * ease_out_expo(clamp01((t - (t0 - 0.25)) / 0.45)))
+    if pw > 16:
+        x0 = (panel_w - pw) // 2
+        layer.alpha_composite(card_alpha(glass_card(panel_w, panel_h, radius=22), ea * out_a),
+                              (px + x0, py))
+    if shown:
+        if abs(pop - 1.0) > 0.01:
+            im = Image.new('RGBA', (int(wnum) + 24, 130), (0, 0, 0, 0))
+            ImageDraw.Draw(im).text((12, 6), shown, font=fnum, fill=WHITE + (255,))
+            nw = max(2, int(im.width * pop))
+            nh = max(2, int(im.height * pop))
+            im = im.resize((nw, nh), Image.LANCZOS)
+            im.putalpha(im.getchannel('A').point(lambda v: int(v * out_a)))
+            layer.alpha_composite(im, (int(cx - nw / 2), int(cy - nh / 2 - 14)))
+        else:
+            im = Image.new('RGBA', (int(wnum) + 24, 130), (0, 0, 0, 0))
+            ImageDraw.Draw(im).text((12, 6), shown, font=fnum, fill=WHITE + (255,))
+            im.putalpha(im.getchannel('A').point(lambda v: int(v * out_a)))
+            layer.alpha_composite(im, (int(cx - im.width / 2), int(cy - im.height / 2 - 14)))
+    if b.get('label'):
+        la = clamp01((t - (t0 + 0.45)) / 0.5)
+        if la > 0:
+            lw = int(wlab * ease_out_expo(la))
+            im = Image.new('RGBA', (int(wlab) + 8, 40), (0, 0, 0, 0))
+            ImageDraw.Draw(im).text((4, 4), b['label'], font=fnote, fill=ICE + (int(255 * out_a),))
+            layer.alpha_composite(im.crop((0, 0, max(1, lw), im.height)),
+                                  (int(cx - wlab / 2), int(cy + 38)))
+    _flash_ring(layer, t, t0 + dur, cx, cy)
+
+def beat_phrase(layer, b, t, cx, cy):
+    t0, t1 = b['t0'], b['t1']
+    ext = b.get('hold', 2.3)
+    if t < t0 - 0.3 or t > t1 + ext + 0.6:
+        return
+    out_a = 1.0
+    if t > t1 + ext:
+        out_a = 1.0 - clamp01((t - t1 - ext) / 0.55)
+    disp = b['words']
+    ts = _word_times(b, len(disp))
+    f = fnt('Black', 46 if b.get('size', 46) >= 46 else 38)
+    tr = 7.0
+    d = ImageDraw.Draw(layer)
+    widths = [d.textlength(w, font=f) + tr for w in disp]
+    total = sum(widths) - tr
+    x0 = cx - total / 2
+    x = x0
+    top_y = cy - 30
+    hi = b.get('hi', -1)
+    for i, (w, wt) in enumerate(zip(disp, ts)):
+        local = clamp01((t - (wt - 0.22)) / 0.45)
+        if local > 0:
+            e = ease_out_expo(local)
+            a = int(255 * min(1.0, local * 1.9) * out_a)
+            col = YELLOW if i == hi else WHITE
+            yy = top_y + (1 - e) * 30
+            if local < 0.99:
+                d.text((x, yy + (1 - e) * 16), w, font=f, fill=col + (a // 3,))
+            d.text((x, yy), w, font=f, fill=col + (a,))
+        x += widths[i]
+    # underline rule draws across the phrase as the words land
+    prog = clamp01((t - (t0 - 0.1)) / max(0.4, t1 - t0 + 0.35))
+    if prog > 0:
+        uw = total * ease_out_expo(prog)
+        d.rectangle([x0, cy + 34, x0 + uw, cy + 39], fill=YELLOW + (int(210 * out_a),))
+
+def beat_quote(layer, b, t, cx, cy):
+    t0, t1 = b['t0'], b['t1']
+    ext = b.get('hold', 2.8)
+    if t < t0 - 0.4 or t > t1 + ext + 0.6:
+        return
+    out_a = 1.0
+    if t > t1 + ext:
+        out_a = 1.0 - clamp01((t - t1 - ext) / 0.55)
+    disp = b['words']
+    ts = _word_times(b, len(disp))
+    fq = fnt('Light', 46)
+    fmark = fnt('Black', 130)
+    fat = fnt('Medium', 22)
+    d = ImageDraw.Draw(layer)
+    ea = ease_out_expo(clamp01((t - (t0 - 0.4)) / 0.5))
+    # split into two balanced lines and measure
+    mid = (len(disp) + 1) // 2
+    lines = [disp[:mid], disp[mid:]]
+    lts = [ts[:mid], ts[mid:]]
+    line_w = [sum(d.textlength(w, font=fq) + 8 for w in lw) - 8 for lw in lines]
+    pw = int(max(line_w) + 190)
+    ph = 210 if len(lines) > 1 and lines[1] else 150
+    px, py = int(cx - pw / 2), int(cy - ph / 2 - 10)
+    layer.alpha_composite(card_alpha(glass_card(pw, ph, radius=22), ea * out_a), (px, py))
+    # bold yellow quote mark
+    ma = int(235 * ea * out_a)
+    d.text((px + 26, py + 18), '\u201c', font=fmark, fill=YELLOW + (ma,))
+    for li, (lw, lt) in enumerate(zip(lines, lts)):
+        widths = [d.textlength(w, font=fq) + 8 for w in lw]
+        total = sum(widths) - 8
+        x = cx - total / 2 + 22
+        y = py + 46 + li * 56
+        for i, (w, wt) in enumerate(zip(lw, lt)):
+            local = clamp01((t - (wt - 0.22)) / 0.5)
+            if local > 0:
+                e = ease_out_expo(local)
+                a = int(255 * min(1.0, local * 1.8) * out_a)
+                yy = y + (1 - e) * 22
+                if local < 0.99:
+                    d.text((x, yy + (1 - e) * 12), w, font=fq, fill=WHITE + (a // 3,))
+                d.text((x, yy), w, font=fq, fill=WHITE + (a,))
+            x += widths[i]
+    # accent bar grows under the panel
+    bar_e = ease_out_back(clamp01((t - (t0 - 0.1)) / 0.6))
+    bw = 130 * bar_e
+    d.rectangle([cx - bw / 2, py + ph + 14, cx + bw / 2, py + ph + 19],
+                fill=YELLOW + (int(220 * out_a),))
+    if b.get('attrib'):
+        la = clamp01((t - (t1 - 0.15)) / 0.6)
+        if la > 0:
+            aw = tracked_width(d, b['attrib'], fat, 2.5)
+            aa = int(235 * ease_out_expo(la) * out_a)
+            x = cx - aw / 2 + (1 - ease_out_expo(la)) * 30
+            for ch in b['attrib']:
+                d.text((x, py + ph + 32), ch, font=fat, fill=ICE + (aa,))
+                x += d.textlength(ch, font=fat) + 2.5
+
+def beat_date(layer, b, t, cx, cy):
+    t0, t1 = b['t0'], b['t1']
+    ext = b.get('hold', 2.6)
+    if t < t0 - 0.3 or t > t1 + ext + 0.6:
+        return
+    out_a = 1.0
+    if t > t1 + ext:
+        out_a = 1.0 - clamp01((t - t1 - ext) / 0.55)
+    fm = fnt('Black', 52)
+    fs = fnt('SemiBold', 21)
+    d = ImageDraw.Draw(layer)
+    wm = tracked_width(d, b['main'], fm, 3.0)
+    ws = tracked_width(d, b.get('sub', ''), fs, 3.5) if b.get('sub') else 0
+    pw, ph = int(max(wm, ws) + 90), 132
+    px, py = int(cx - pw / 2), int(cy - ph / 2)
+    ea = ease_out_expo(clamp01((t - (t0 - 0.3)) / 0.4))
+    layer.alpha_composite(card_alpha(glass_card(pw, ph, radius=18), ea * out_a), (px, py))
+    # corner brackets grow out of the chip corners
+    bl = int(26 * ea)
+    ba = int(220 * out_a)
+    for bx, by, dx, dy in ((px + 8, py + 8, 1, 1), (px + pw - 9, py + 8, -1, 1),
+                           (px + 8, py + ph - 9, 1, -1), (px + pw - 9, py + ph - 9, -1, -1)):
+        d.rectangle([bx, by, bx + bl * dx if dx > 0 else bx + 3, by + 3 if dy > 0 else by + 3],
+                    fill=YELLOW + (ba,))
+        d.rectangle([bx, by, bx + 3 if dx > 0 else bx + 3, by + bl * dy if dy > 0 else by + 3],
+                    fill=YELLOW + (ba,))
+    kinetic_line(layer, b['main'], fm, cx, cy - 46, t, t0 - 0.22, WHITE, 3.0,
+                 stagger=0.035, dur=0.5, slide=26)
+    if b.get('sub'):
+        la = clamp01((t - (t0 + 0.28)) / 0.5)
+        if la > 0:
+            sw = ws * ease_out_expo(la)
+            im = Image.new('RGBA', (int(ws) + 8, 36), (0, 0, 0, 0))
+            ImageDraw.Draw(im).text((4, 2), b['sub'], font=fs, fill=ICE + (int(255 * out_a),))
+            layer.alpha_composite(im.crop((0, 0, max(1, int(sw)), im.height)),
+                                  (int(cx - ws / 2), int(cy + 6)))
+
+BEAT_KINDS = {'count': beat_count, 'phrase': beat_phrase, 'quote': beat_quote, 'date': beat_date}
+
+def beats_layer(beats, t, expire_t):
+    layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    for i, b in enumerate(beats):
+        if b['t0'] > expire_t:
+            continue
+        cx, cy = SLOTS[i % len(SLOTS)]
+        BEAT_KINDS[b['kind']](layer, b, t, cx, cy)
+    return layer
+
+# --------------------------------------------------------- ambient layer ----
+DUST = [( (i * 149.3) % W, (i * 83.7) % H, 0.16 + (i % 5) * 0.05, 4 + (i % 4) * 2, i * 1.7 )
+        for i in range(26)]
+DUST_SPR = _glow_sprite(28, 120)
+BGWORD_CACHE = {}
+
+def _bg_word(word):
+    if word not in BGWORD_CACHE:
+        f = fnt('Black', 170)
+        tmp = Image.new('RGBA', (2200, 260), (0, 0, 0, 0))
+        ImageDraw.Draw(tmp).text((20, 10), word, font=f, fill=ICE + (255,))
+        tmp = tmp.crop(tmp.getbbox())
+        BGWORD_CACHE[word] = tmp.filter(ImageFilter.GaussianBlur(7))
+    return BGWORD_CACHE[word]
+
+def ambient_layer(scene_idx, t, bgwords):
+    layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    # parallax background words, drifting slowly against the Ken Burns move
+    for i in range(2):
+        w = bgwords[(scene_idx * 2 + i) % len(bgwords)]
+        spr = _bg_word(w)
+        x = int(W / 2 - spr.width / 2 + math.sin(t * 0.05 + scene_idx * 1.3 + i * 2.2) * 130)
+        y = int(70 + i * 330 + math.cos(t * 0.04 + i * 1.9) * 40)
+        s2 = spr.copy()
+        s2.putalpha(s2.getchannel('A').point(lambda v: int(v * 0.13)))
+        layer.alpha_composite(s2, (x, y))
+    # dust motes drifting up
+    for x0, y0, sp, sz, ph in DUST:
+        x = int((x0 + t * sp * 22) % (W + 60)) - 30
+        y = int((y0 - t * sp * 34) % (H + 60)) - 30
+        dim = 0.10 + 0.05 * (sz % 3)
+        spr = DUST_SPR if sz <= 5 else GLOW.resize((sz * 6, sz * 6), Image.BILINEAR)
+        if spr.mode == 'L':
+            s2 = Image.new('RGBA', spr.size, ICE + (255,))
+            s2.putalpha(spr.point(lambda v: int(v * dim)))
+        else:
+            s2 = spr.copy()
+            s2.putalpha(s2.getchannel('A').point(lambda v: int(v * dim)))
+        layer.alpha_composite(s2, (x, y))
+    # soft light-leak sweep across the frame
+    off = int((t * 14) % (W * 2))
+    st = STREAKS.crop((off, 0, off + W, H))
+    st = st.point(lambda v: v // 5)
+    leak = Image.new('RGBA', (W, H), (140, 190, 250, 0))
+    leak.putalpha(st)
+    return Image.alpha_composite(layer, leak)
+
 # ------------------------------------------------------------------ scripts ----
 SCRIPTS = {
     'johnstown': dict(
@@ -360,6 +661,36 @@ SCRIPTS = {
         end=('SUBSCRIBE', 'the full story of the canal that broke a city'),
         voices=('voice1.mp3', 'voice2.mp3', 'voice3.mp3'),
         out='deep-dive-johnstown.mp4',
+        bgwords=['CONEMAUGH', '1889', 'JOHNSTOWN', 'DEBRIS', 'VERDICT', 'FLOOD'],
+        beats=[
+            dict(a='twenty million pounds of force', kind='count', num=20, suf='M',
+                 label='TONS OF FORCE HELD BACK', dur=1.6),
+            dict(a='into a weapon', kind='phrase', words=['INTO', 'A', 'WEAPON'], hi=2),
+            dict(a='eighteen fifty two', kind='date', main='1852', sub='THE SOUTH FORK DAM IS BUILT'),
+            dict(a='two thousand dollars', kind='count', num=2000, pre='$',
+                 label='THE CLUB PAID FOR THE LAKE', dur=1.4),
+            dict(a='game fish', kind='phrase', words=['GAME', 'FISH'], hi=1),
+            dict(a='crest was lowered', kind='phrase', words=['THE', 'CREST', 'WAS', 'LOWERED'], hi=1),
+            dict(a='six to eight inches', kind='count', txt='6\u20138 IN',
+                 label='OF RAIN IN 24 HOURS', dur=1.1),
+            dict(a='twenty million pounds of water', kind='count', num=20, suf='M',
+                 label='TONS OF WATER RELEASED', dur=1.7),
+            dict(a='thirty six feet high', kind='count', txt='36 FT',
+                 label='THE WALL OF WATER', dur=1.1),
+            dict(a='ten million pounds of debris', kind='count', num=10, suf='M',
+                 label='POUNDS OF DEBRIS', dur=1.4),
+            dict(a='sixty two acres', kind='count', num=62,
+                 label='ACRES BURNED', dur=1.0),
+            dict(a='three days', kind='phrase', words=['THREE', 'DAYS'], hi=0),
+            dict(a='two thousand two hundred', kind='count', num=2209,
+                 label='DEAD', dur=1.7, big=True),
+            dict(a='five months', kind='count', txt='5 MONTHS',
+                 label='CLARA BARTON\u2019S RED CROSS STAYED', dur=1.0),
+            dict(a='act of god', kind='quote', words=['AN', 'ACT', 'OF', 'GOD'],
+                 attrib='\u2014 THE VERDICT THAT NEVER CAME'),
+            dict(a='fail by decisions', kind='phrase',
+                 words=['THEY', 'FAIL', 'BY', 'DECISIONS'], hi=3),
+        ],
         scenes=[
             ('south-fork-dam-lake-conemaugh-johnstown--3.jpg', 'THE LAKE ABOVE THE VALLEY'),
             ('south-fork-dam-lake-conemaugh-johnstown--5.png', 'BUILT FOR A CANAL THAT DIED'),
@@ -375,6 +706,69 @@ SCRIPTS = {
         end=('SUBSCRIBE', 'money, explained \u2014 the fall of the smartest guys in the room'),
         voices=('enron1.mp3', 'enron2.mp3', 'enron3.mp3'),
         out='deep-dive-enron.mp4',
+        bgwords=['ENRON', '2001', 'HOUSTON', 'BANKRUPTCY', 'FRAUD', 'TRIAL'],
+        beats=[
+            dict(a='smartest guys in the room', kind='quote',
+                 words=['SMARTEST', 'GUYS', 'IN', 'THE', 'ROOM'],
+                 attrib='\u2014 ENRON\u2019S OWN SLOGAN'),
+            dict(a='humble gas pipeline', kind='phrase',
+                 words=['HUMBLE', 'GAS', 'PIPELINE'], hi=2),
+            dict(a='jeff skilling arrived', kind='date', main='JEFF SKILLING',
+                 sub='ARRIVES WITH AN IDEA'),
+            dict(a='mom to market accounting', kind='phrase',
+                 words=['MARK-TO-MARKET', 'ACCOUNTING'], hi=0, size=38),
+            dict(a='ninety dollars', kind='count', num=90, pre='$',
+                 label='A SHARE AT ITS PEAK', dur=1.1),
+            dict(a='seventy billion dollars', kind='count', num=70, pre='$', suf='B',
+                 label='MARKET VALUE', dur=1.6),
+            dict(a='six years in a row', kind='phrase',
+                 words=['SIX', 'YEARS', 'IN', 'A', 'ROW'], hi=0),
+            dict(a='profits were fiction', kind='phrase',
+                 words=['THE', 'PROFITS', 'WERE', 'FICTION'], hi=3),
+            dict(a='off the books', kind='phrase', words=['OFF', 'THE', 'BOOKS'], hi=0),
+            dict(a='fast the bills', kind='date', main='ANDREW FASTOW',
+                 sub='THE CFO HIDING THE DEBT'),
+            dict(a='j m wrapped up', kind='phrase',
+                 words=['LJM', '\u00B7', 'RAPTOR', '\u00B7', 'CHEWCO'], hi=0),
+            dict(a='hide billions in debt', kind='phrase',
+                 words=['HIDING', 'BILLIONS', 'IN', 'DEBT'], hi=1),
+            dict(a='enron overpriced', kind='quote',
+                 words=['IS', 'ENRON', 'OVERPRICED?'],
+                 attrib='\u2014 BETHANY McLEAN, FORTUNE, MAR 2001'),
+            dict(a='house of cards', kind='phrase',
+                 words=['HOUSE', 'OF', 'CARDS'], hi=1),
+            dict(a='shredding documents', kind='phrase',
+                 words=['SHREDDING', 'DOCUMENTS'], hi=0),
+            dict(a='august two thousand', kind='date', main='AUGUST 2001',
+                 sub='THE CEO QUITS'),
+            dict(a='skilling resigned', kind='phrase',
+                 words=['SKILLING', 'RESIGNS'], hi=1),
+            dict(a='fake all alone', kind='phrase',
+                 words=['FAKE', 'ALL', 'ALONG'], hi=0),
+            dict(a='december second two thousand', kind='date', main='DEC 2, 2001',
+                 sub='CHAPTER 11 \u00B7 ENRON COLLAPSES'),
+            dict(a='sixty three billion dollars', kind='count', num=63.4, pre='$',
+                 suf='B', dec=1, label='IN ASSETS \u2014 LARGEST U.S. BANKRUPTCY', dur=1.8),
+            dict(a='filing in american history', kind='phrase',
+                 words=['FILING', 'IN', 'AMERICAN', 'HISTORY'], hi=3),
+            dict(a='twenty thousand employees', kind='count', num=20000,
+                 label='JOBS GONE', dur=1.7),
+            dict(a='their pensions', kind='phrase',
+                 words=['THEIR', 'PENSIONS'], hi=1),
+            dict(a='eighty five thousand people', kind='count', num=85000,
+                 label='ANDERSEN STAFF \u2014 DISSOLVED', dur=1.8),
+            dict(a='skilling went to prison', kind='phrase',
+                 words=['SKILLING', 'WENT', 'TO', 'PRISON'], hi=3),
+            dict(a='died before sentencing', kind='phrase',
+                 words=['DIED', 'BEFORE', 'SENTENCING'], hi=0),
+            dict(a='smartest guys in the room', occ=1, kind='phrase',
+                 words=['THE', 'SMARTEST', 'GUYS', 'IN', 'THE', 'ROOM'], hi=1, size=38),
+            dict(a='a company cannot explain how it makes money it is not making money',
+                 kind='quote',
+                 words=['A', 'COMPANY', 'CANNOT', 'EXPLAIN', 'HOW', 'IT', 'MAKES',
+                        'MONEY', 'IT\u2019S', 'NOT', 'MAKING', 'MONEY'],
+                 attrib='\u2014 THE LESSON THAT OUTLIVED ENRON'),
+        ],
         scenes=[
             ('enron-corporation-headquarters-houston-c-3.jpg', 'THE EMPIRE IN HOUSTON'),
             ('enron-corporation-headquarters-houston-c-5.jpg', 'THE TRADING MACHINE'),
@@ -405,6 +799,9 @@ def main(key):
     adur = duration(nar)
     print(f'narration {adur:.1f}s')
 
+    beats = resolve_beats(key)
+    print(f'{len(beats)} speech-synced beats, first at {beats[0]["t0"]:.2f}s')
+
     TITLE, END = 5.0, 3.2
     ph0, ph1 = TITLE, adur + 0.6
     scenes = cfg['scenes']
@@ -427,12 +824,13 @@ def main(key):
         [FFMPEG, '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}',
          '-r', str(FPS), '-i', '-', '-i', nar,
          '-map', '0:v', '-map', '1:a',
-         '-c:v', 'libx264', '-preset', 'medium', '-crf', '23', '-pix_fmt', 'yuv420p',
+         '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', '-pix_fmt', 'yuv420p',
          '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', out],
         stdin=subprocess.PIPE, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     FADE = 0.45
     nscenes = len(scenes)
+    expire_t = ph1 - 0.2
     for i in range(n):
         t = i / FPS
         if t < TITLE:
@@ -443,6 +841,8 @@ def main(key):
             frame = ken_burns(plates[k], p, zoom_in=(k % 2 == 0))
             pos = t - ph0 - k * per
             ov = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+            ov.alpha_composite(ambient_layer(k, t, cfg['bgwords']))
+            ov.alpha_composite(beats_layer(beats, t, expire_t))
             ov.alpha_composite(kicker_layer(scenes[k][1], k + 1, nscenes,
                                             pos - 0.12, per - pos - 0.30))
             progress_bar(ov, t / total)
