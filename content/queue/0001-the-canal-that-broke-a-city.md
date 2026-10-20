@@ -2,7 +2,7 @@
 id: "0001"
 title: "The Canal That Broke a City: The Johnstown Flood Explained"
 slug: the-canal-that-broke-a-city
-status: approved          # draft | approved | published  (only 'approved' is picked up)
+status: draft             # Archived from active queue: channel focus is finance/business.
 format: longform          # longform | short
 niche: history
 category: education

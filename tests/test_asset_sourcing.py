@@ -7,6 +7,8 @@ from unittest.mock import patch
 from pipeline import assets
 from pipeline.assemble import _contain_filter
 from pipeline.config import CONFIG
+from pipeline.run import _validate_finance_niche
+from pipeline.script_doc import ScriptDoc
 from tools.deep_dive import SCRIPTS as DEEP_SCRIPTS
 from tools.shorts import SCRIPTS as SHORT_SCRIPTS
 
@@ -18,6 +20,13 @@ class AssetSourcingTests(unittest.TestCase):
         self.openverse_key = CONFIG.enable_keyless_sources
         self.addCleanup(setattr, CONFIG, "enable_keyless_sources", self.openverse_key)
         CONFIG.enable_keyless_sources = True
+
+    def test_automation_rejects_nonfinance_niche(self):
+        history = ScriptDoc(path=Path("draft.md"), meta={"id": "history-1", "niche": "history"})
+        finance = ScriptDoc(path=Path("finance.md"), meta={"id": "finance-1", "niche": "finance and business"})
+        with self.assertRaisesRegex(RuntimeError, "finance, business, markets, or economics only"):
+            _validate_finance_niche(history)
+        _validate_finance_niche(finance)
 
     def test_moving_media_is_checked_before_any_photo_provider(self):
         calls = []

@@ -3,106 +3,46 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Johnstown Flood — pipeline showcase</title>
+<title>Money, Explained — Enron</title>
 <style>
-  body { margin: 0; font-family: system-ui, sans-serif; background: #16213e; color: #eee; }
-  .wrap { max-width: 980px; margin: 0 auto; padding: 24px 16px 64px; }
-  h1 { color: #ffd23c; margin-bottom: 4px; }
-  p.sub { color: #9ab; margin-top: 0; }
-  .row { display: flex; gap: 16px; flex-wrap: wrap; }
-  .card { background: #0f3460; border-radius: 12px; padding: 12px; flex: 1 1 260px; }
-  .card.wide { flex: 1 1 100%; }
-  video { width: 100%; border-radius: 8px; background: #000; }
-  .label { font-size: 14px; color: #ffd23c; margin: 8px 0 0; font-weight: 600; }
-  .meta { font-size: 12px; color: #9ab; }
-  a { color: #7ec8ff; }
+  :root { color-scheme: dark; }
+  body { margin: 0; font-family: system-ui, sans-serif; background: #07111f; color: #eef4ff; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 28px 16px 64px; }
+  h1, h2 { color: #ffd23c; }
+  h1 { margin-bottom: 4px; }
+  .sub { color: #a9bbd0; line-height: 1.55; }
+  .row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 18px; }
+  .card { background: #102843; border: 1px solid #274968; border-radius: 14px; padding: 14px; flex: 1 1 300px; }
+  .card.wide { flex-basis: 100%; }
+  video { width: 100%; border-radius: 9px; background: #000; }
+  .label { color: #ffd23c; font-size: 15px; font-weight: 700; margin: 10px 0 4px; }
+  .meta { color: #a9bbd0; font-size: 13px; line-height: 1.5; }
+  a { color: #80cbff; }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>YouTube automation — first renders</h1>
-  <p class="sub">Documentary renders from this branch: real narration, Pillow motion graphics, ffmpeg, music-only score, and aspect-safe archived stills. The new clip-first sourcing path runs on free providers in GitHub Actions.</p>
+  <h1>Money, Explained</h1>
+  <p class="sub">Finance and business documentaries: accounting, corporate collapses, markets, and the decisions behind them. Video sources are listed per scene; source frames keep their original proportions without stretching or cropping.</p>
 
-  <div class="row" style="margin-top:16px">
-    <div class="card wide">
-      <video controls playsinline preload="metadata" src="media/deep-dive.mp4"></video>
-      <p class="label">★ DEEP DIVE — The Canal That Broke a City</p>
-      <p class="meta">1:41 · 16:9 · archival imagery + full narration · <a href="media/deep-dive-johnstown-sources.json">scene source ledger</a></p>
-    </div>
-    <div class="card wide">
-      <video controls playsinline preload="metadata" src="media/deep-dive-enron.mp4"></video>
-      <p class="label">★ DEEP DIVE — How Enron Died</p>
-      <p class="meta">1:55 · 16:9 · MONEY DOCUMENTARY · archival imagery + full narration · <a href="media/deep-dive-enron-sources.json">scene source ledger</a></p>
-    </div>
-  </div>
-
-  <h2 style="color:#ffd23c; margin:32px 0 4px">★ NEW — YouTube Shorts (9:16, same documentary engine)</h2>
-  <p class="sub">The render engines now search free stock video first, then licensed photos; sources are contain-fit in native ratio with no stretch or crop. This sandbox cannot reach external stock APIs; the per-scene ledgers identify what each render actually used. The <a href="https://github.com/johnAzani/YouTube-automation/actions">Remaster workflow</a> searches providers and refreshes the source/license ledgers once the workflow is available from GitHub Actions. Speech-locked graphics, camera moves, retention teases + score; voice and music only, no SFX. <a href="ASSET_SOURCING.md">Sourcing and format rules</a>.</p>
   <div class="row">
-    <div class="card">
-      <video controls playsinline preload="metadata" src="media/shorts-johnstown.mp4"></video>
-      <p class="label">SHORT — The Canal That Broke a City</p>
-      <p class="meta">0:49 · 9:16 · 720×1280 · full-frame stills + speech-locked graphics · <a href="media/shorts-johnstown-sources.json">scene source ledger</a></p>
-    </div>
-    <div class="card">
+    <section class="card wide">
+      <video controls playsinline preload="metadata" src="media/deep-dive-enron.mp4"></video>
+      <p class="label">DEEP DIVE — How Enron Died</p>
+      <p class="meta">1:55 · 16:9 · corporate accounting, mark-to-market, off-book partnerships, and the bankruptcy.
+        <a href="media/deep-dive-enron-sources.json">Scene source and license ledger</a></p>
+    </section>
+    <section class="card">
       <video controls playsinline preload="metadata" src="media/shorts-enron.mp4"></video>
       <p class="label">SHORT — How Enron Died</p>
-      <p class="meta">0:52 · 9:16 · 720×1280 · full-frame stills + speech-locked graphics · <a href="media/shorts-enron-sources.json">scene source ledger</a></p>
-    </div>
+      <p class="meta">0:52 · 9:16 · speech-locked graphics, full-frame stills, voice + score only.
+        <a href="media/shorts-enron-sources.json">Scene source and license ledger</a></p>
+    </section>
   </div>
 
-  <div class="row" style="margin-top:16px">
-    <div class="card">
-      <video controls playsinline preload="metadata" src="media/short1.mp4"></video>
-      <p class="label">Short 1 — «The hook»</p>
-      <p class="meta">35s · 9:16 · 1080×1920 · captions + hook band</p>
-    </div>
-    <div class="card">
-      <video controls playsinline preload="metadata" src="media/short2.mp4"></video>
-      <p class="label">Short 2 — «A dam with a secret history»</p>
-      <p class="meta">35s · 9:16 · 1080×1920 · captions + hook band</p>
-    </div>
-  </div>
-
-  <div class="row" style="margin-top:16px">
-    <div class="card wide">
-      <video controls playsinline preload="metadata" src="media/documentary.mp4"></video>
-      <p class="label">Long-form documentary — «The Canal That Broke a City»</p>
-      <p class="meta">4:29 · 16:9 · 1280×720 · title plates, placeholder voice, green tone</p>
-    </div>
-  </div>
-
-  <h2 style="color:#ffd23c; margin:32px 0 4px">Channel reels — “The Canal That Broke a City”</h2>
-  <p class="sub">Built with the MOTIONSTUDIO typography system for this channel's niche: mechanical fact counters, spring cascades, verdict badges. Both passed the 5-category QA engine on render pass 1.</p>
-  <div class="row">
-    <div class="card">
-      <video controls playsinline preload="metadata" src="media/reel-3-flood.mp4"></video>
-      <p class="label">THE FLOOD</p>
-      <p class="meta">15.9s · 9:16 · 2,209 lives · 20,000,000 tons · the 36-foot wall</p>
-    </div>
-    <div class="card">
-      <video controls playsinline preload="metadata" src="media/reel-4-secret.mp4"></video>
-      <p class="label">THE SECRET</p>
-      <p class="meta">15.8s · 9:16 · the $2,000 dam, the fish screens, forty minutes</p>
-    </div>
-  </div>
-
-  <h2 style="color:#ffd23c; margin:32px 0 4px">MotionStudio demo — DocOga brand reels</h2>
-  <p class="sub">After-Effects-grade typography motion: odometer prices, spring cascades, slam strikes, icon-grid cadence. Both reels passed the 5-category video QA engine on render pass 1.</p>
-  <div class="row">
-    <div class="card">
-      <video controls playsinline preload="metadata" src="media/reel-1-price.mp4"></video>
-      <p class="label">Reel 1 — THE PRICE</p>
-      <p class="meta">15.6s · 9:16 · 1080×1920 · odometer + red strike + recoil</p>
-    </div>
-    <div class="card">
-      <video controls playsinline preload="metadata" src="media/reel-2-documents.mp4"></video>
-      <p class="label">Reel 2 — EVERY DOCUMENT.</p>
-      <p class="meta">14.8s · 9:16 · 1080×1920 · icon grid + document-name cycler</p>
-    </div>
-  </div>
-
-  <p class="meta" style="margin-top:24px">Docs: <a href="PLAN.md">PLAN.md</a> · <a href="GROWTH.md">GROWTH.md</a> · <a href="DEEP_DIVE.md">DEEP_DIVE.md</a> · <a href="FINANCE.md">FINANCE.md</a> · <a href="SETUP.md">SETUP.md</a> · <a href="ASSET_SOURCING.md">ASSET_SOURCING.md</a></p>
+  <h2>Clip-first visual sourcing</h2>
+  <p class="sub">The remaster engine searches free stock video first, then licensed photos. It uses contain-fit with a designed matte, never stretching or cropping the source. See <a href="ASSET_SOURCING.md">the sourcing and licensing policy</a>.</p>
+  <p class="meta">More finance/business episodes will be added here. This channel is not a general history, disaster, or product-demo channel.</p>
 </div>
 </body>
 </html>

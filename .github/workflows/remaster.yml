@@ -52,19 +52,13 @@ jobs:
         run: |
           set -euo pipefail
           if [[ "${{ inputs.edition }}" == "all" || "${{ inputs.edition }}" == "deepdives" ]]; then
-            python tools/deep_dive.py johnstown
             python tools/deep_dive.py enron
-            cp social/deep-dive-johnstown.mp4 docs/media/deep-dive.mp4
             cp social/deep-dive-enron.mp4 docs/media/deep-dive-enron.mp4
-            cp output/deep-stock/johnstown/scene-sources.json docs/media/deep-dive-johnstown-sources.json
             cp output/deep-stock/enron/scene-sources.json docs/media/deep-dive-enron-sources.json
           fi
           if [[ "${{ inputs.edition }}" == "all" || "${{ inputs.edition }}" == "shorts" ]]; then
-            python tools/shorts.py short-johnstown
             python tools/shorts.py short-enron
-            cp social/short-johnstown.mp4 docs/media/shorts-johnstown.mp4
             cp social/short-enron.mp4 docs/media/shorts-enron.mp4
-            cp output/short-stock/short-johnstown/scene-sources.json docs/media/shorts-johnstown-sources.json
             cp output/short-stock/short-enron/scene-sources.json docs/media/shorts-enron-sources.json
           fi
       - name: Publish updated samples and source ledgers to GitHub Pages

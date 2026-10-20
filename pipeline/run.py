@@ -27,6 +27,17 @@ def _log(msg: str) -> None:
     print(f"[run] {msg}", flush=True)
 
 
+def _validate_finance_niche(doc: ScriptDoc) -> None:
+    """Keep every automated channel upload inside the finance/business lane."""
+    niche = str(doc.meta.get("niche", "")).strip().lower()
+    allowed = ("finance", "financial", "business", "markets", "economics")
+    if not any(term in niche for term in allowed):
+        raise RuntimeError(
+            f"Refusing out-of-niche job {doc.id}: niche={niche or '(missing)'!r}. "
+            "This channel publishes finance, business, markets, or economics only."
+        )
+
+
 def select_jobs(all_flag: bool, job_path: str | None, next_flag: bool) -> list[Path]:
     if job_path:
         return [Path(job_path)]
@@ -49,6 +60,7 @@ def select_jobs(all_flag: bool, job_path: str | None, next_flag: bool) -> list[P
 
 def process(path: Path, dry_run: bool) -> dict:
     doc = parse_script(path)
+    _validate_finance_niche(doc)
     _log(f"job {doc.id} «{doc.title}» format={doc.format} words={doc.word_count}")
 
     # ---- 1. originality gate ------------------------------------------
