@@ -77,11 +77,29 @@ rendered files land in `social/`, which `.gitignore` covers.
 Internet Archive / NASA / Pexels / Pixabay, and a third-party 5xx should not turn the
 repo red. It is the only job that touches the internet.
 
-**Status of that job — diagnosed, run 39501289506 (2026-10-20).** `checks` and
-`offline-render` both passed on a real runner, including the video/audio-stream and
-source-ledger assertions. `pipeline-dry-run` **failed** and was correctly absorbed by
-`continue-on-error`, so the run is green. Its self-emitted annotation gives the exact
-cause:
+**Status of that job — GREEN, run 39649621652 (2026-10-21).** `checks`,
+`offline-render` and `pipeline-dry-run` all passed on a real runner: the general queue
+path rendered job 0003 **end-to-end in 6m0s with zero API keys** (TTS → 8 scenes of
+keyless sourcing → ffmpeg → thumbnail → metadata pack). It had never passed before.
+The full chain of causes and fixes — one layer per CI round — is in §3 (2026-10-21).
+`PEXELS_API_KEY` / `PIXABAY_API_KEY` are no longer *required* for the queue path to
+complete; they still widen coverage and absorb Openverse timeouts (§7).
+
+Note the raw runner log is **never** readable here: it lives on
+`results-receiver.actions.githubusercontent.com` and `*.blob.core.windows.net`, outside
+this environment's allowlist — and artifacts sit on `*.blob.core.windows.net`. The
+self-emitted annotation is the only readable failure output, which is exactly why that
+job writes one and why every scene leaves a per-provider attempt digest
+(`sourcing-attempts.json`) in the error message.
+
+---
+
+## 3. Incident log
+
+### 2026-10-21 — the general pipeline had never once completed a render
+
+**Symptom.** `pipeline-dry-run` (advisory by design) failed on every run since it
+existed, always with a message that blamed the scene query:
 
 ```
 pipeline dry-run failed (exit 1) for content/queue/0003-how-lehman-brothers-died.md —
@@ -89,23 +107,43 @@ last line: [run] FAILED ...: Scene 1 has no licensed, downloadable video or phot
 'new york stock exchange trading floor'; refusing to substitute a generic title card.
 ```
 
-So even **on a GitHub runner with `ENABLE_KEYLESS_SOURCES=1`**, no keyless provider
-returned a licensed match for that query. That is the pipeline working as designed — it
-refuses to paper over a missing source with a generated card — but it means:
+Nothing said which provider missed or why; logs and artifacts are unreachable from the
+maintainers' network (§2). The fix added a per-provider attempt report — every scene
+now writes `sourcing-attempts.json` next to `credits.json`, prints one line per
+attempt, and the hard-fail message carries a compact digest (that is what made each
+round below diagnosable from the annotation alone).
 
-> **The general `pipeline/` path is not usable without real API keys.**
-> Add `PEXELS_API_KEY` and `PIXABAY_API_KEY` (both free, no card) as repository secrets
-> before relying on `content/queue/` → upload. Until then, the authored engines in
-> `tools/` are the only production-ready render path.
+**What the attempts revealed — one layer per CI round:**
 
-Note the raw runner log was **never** readable here: it lives on
-`results-receiver.actions.githubusercontent.com` and `*.blob.core.windows.net`, outside
-this environment's allowlist. The diagnosis came from the annotation, which is exactly why
-that job now writes one.
+1. **`_cache_path` read `CONFIG.ASSET_CACHE_DIR`, an attribute `Config` never had**
+   (it is only a module-level constant in `config.py`). Every provider that *found* a
+   licensed candidate crashed with `AttributeError`; `fetch_scene_assets` swallowed it
+   as "source errored" and the hard-fail pointed at the query instead. The general
+   pipeline had never completed a single provider download. → Use the module
+   constant; `tests/test_config_references.py` statically scans every pipeline module
+   for `CONFIG.<name>` references that do not resolve, so the whole typo class fails
+   the hermetic `checks` job instead of hiding behind a swallowed exception.
+2. With that fixed, Wikimedia downloads died on **HTTP 429 from
+   `upload.wikimedia.org`** — the code fetched the *original* file (often a 100 MB+
+   TIFF) even though it already requests `iiurlwidth=1920`. → Photos download the
+   rendered 1920px `thumburl`; all Wikimedia requests carry a descriptive UA with the
+   repo URL as contact; search and download retry 429/5xx honouring `Retry-After`
+   (bounded ≤8 s); probe details quote the underlying exception.
+3. **Openverse `/v1/videos/` 404s on every call** (the endpoint does not exist —
+   verified), and **Commons answers HTTP 200 with an error body**
+   (`cirrussearch-too-busy-error`) that used to read as "0 results". → The dead
+   provider link was dropped from the video list; API errors are named
+   (`api error: …`) in the probe and retried once.
+4. Job 0003's queries were partly wrong, not just unlucky: **scenes 5 and 7 were
+   swapped** (courtroom ↔ bank run), scene 4 had a single junk hit, scene 3's
+   returned one off-topic plaque. → All eight queries re-verified against the Commons
+   search API for multiple CC0/PD/CC-BY matches;
+   `test_asset_queries_cover_every_scene_when_provided` stops a partial list from
+   silently falling back to heading-as-query.
 
----
-
-## 3. Incident log
+**Verification.** Run 39649621652 (2026-10-21): all three jobs green —
+`pipeline-dry-run` 6m0s with no API keys configured. The queue path is usable on
+keyless providers alone; keys remain optional coverage insurance (§7).
 
 ### 2026-10-20 — CI was red on every run for the whole life of the branch
 
@@ -173,7 +211,6 @@ dead branch by name. Those instructions are updated too.
 |---|---|---|
 | **`image-search/` stills have no licence ledger** | **blocks monetized reuse** | ~10 MB, 47 files. `docs/ASSET_SOURCING.md` already flags this: *"no complete per-file license ledger in this checkout"*. The render writes `license: "…source/license metadata unavailable…verify before monetized reuse"` and `fallback: true` for all 16 Enron scenes. Verify or replace before any monetized upload. Cannot simply delete — `tools/deep_dive.py` / `tools/shorts.py` read these paths. |
 | **44.9 MB of media in git** | contradicts README rule 2 | README says *"Never commit media. Git = text only"*, yet `docs/media/*.mp4` (28 MB) and `assets/deepdive/*.mp3` are deliberately un-ignored: Pages serves the first and the authored engines read the second. The rule is really "never commit *generated* media". Repo is well under any GitHub limit; the wording is what's wrong. |
-| **`pipeline-dry-run` unverified on a runner** | medium | See §2. Confirm green once on GitHub before trusting it. |
 | **No licence for the repo** | low | `gh repo view` reports `licenseInfo: null`. Fonts carry their own OFL (`assets/fonts/Inter-LICENSE-OFL.txt`). |
 
 ---
@@ -215,7 +252,7 @@ Cron is best-effort on GitHub (can lag 15–30 min). That is fine for content.
 
 | Secret | Required for | Notes |
 |---|---|---|
-| `PEXELS_API_KEY`, `PIXABAY_API_KEY` | general pipeline b-roll | Free tier, no card. Optional but they make `pipeline-dry-run` reliable. |
+| `PEXELS_API_KEY`, `PIXABAY_API_KEY` | general pipeline b-roll | Free tier, no card. Optional: `pipeline-dry-run` is verified green without them (2026-10-21); keys widen provider coverage and absorb Openverse timeouts. |
 | `YOUTUBE_CLIENT_ID`, `YOUTUBE_CLIENT_SECRET`, `YOUTUBE_REFRESH_TOKEN` | upload + metrics | Store as three separate GitHub secrets. Client ID and raw client secret come from the Web client; mint the refresh token with OAuth Playground. The `youtube_oauth.py` local-server helper requires a computer. |
 
 ⚠️ External OAuth apps in **Testing** have a 7-day refresh-token limit for non-basic scopes.
