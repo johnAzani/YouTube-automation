@@ -47,17 +47,35 @@ def _cache_path(source, ident, ext):
     path.parent.mkdir(parents=True, exist_ok=True)
     return path
 
+# Last failure reasons, one line each, so attempt probes can quote them
+# ("search request failed: HTTPError('404 …')" beats a bare "request failed"
+# when the only readable output is a one-line CI annotation).
+_HTTP_ERR = ""
+_DL_ERR = ""
+
 def _http_get(url, **kwargs):
-    if requests is None: return None
+    global _HTTP_ERR
+    if requests is None:
+        _HTTP_ERR = "requests module not installed"; return None
     kwargs.setdefault("timeout", (6, 16))
     try:
-        resp = requests.get(url, **kwargs); resp.raise_for_status(); return resp
+        resp = requests.get(url, **kwargs); resp.raise_for_status(); _HTTP_ERR = ""; return resp
     except Exception as exc:
+        _HTTP_ERR = " ".join(repr(exc).split())[:300]
         print(f"[assets] GET {url} failed: {exc!r}"); return None
 
+def _dl_note(failures):
+    return f", last error: {_DL_ERR}" if failures and _DL_ERR else ""
+
+def _req_fail():
+    return "search request failed" + (f": {_HTTP_ERR}" if _HTTP_ERR else "")
+
 def _download(url, dest, max_bytes=120*1024*1024):
+    global _DL_ERR
     if dest.exists() and dest.stat().st_size > 1024: return True
-    if requests is None or not url: return False
+    if requests is None or not url:
+        _DL_ERR = "requests module not installed" if requests is None else "no url"; return False
+    _DL_ERR = ""
     try:
         dest.parent.mkdir(parents=True, exist_ok=True); total=0
         with requests.get(url, stream=True, timeout=(8,30), headers={"User-Agent":"YouTubeAutomation/2.0 (free stock media)"}) as r:
@@ -68,8 +86,10 @@ def _download(url, dest, max_bytes=120*1024*1024):
                     total += len(chunk)
                     if total > max_bytes: raise ValueError("asset exceeds 120 MB safety limit")
                     f.write(chunk)
-        return dest.stat().st_size > 1024
+        if dest.stat().st_size > 1024: return True
+        _DL_ERR = "downloaded file under 1 KB"; return False
     except Exception as exc:
+        _DL_ERR = " ".join(repr(exc).split())[:300]
         try: dest.unlink(missing_ok=True)
         except OSError: pass
         print(f"[assets] download failed {url}: {exc!r}"); return False
@@ -90,7 +110,7 @@ def _pexels(q,video,w,h):
     orient=_orientation(w,h); headers={"Authorization":CONFIG.pexels_api_key}
     if video:
         r=_http_get("https://api.pexels.com/videos/search",params={"query":q,"per_page":8,"orientation":orient},headers=headers)
-        if not r: _probe(label,"search request failed"); return None
+        if not r: _probe(label,_req_fail()); return None
         vids=r.json().get("videos",[])
         if not vids: _probe(label,"0 results")
         for v in vids:
@@ -102,7 +122,7 @@ def _pexels(q,video,w,h):
         if vids: _probe(label,f"{len(vids)} results, none downloadable")
     else:
         r=_http_get("https://api.pexels.com/v1/search",params={"query":q,"per_page":8,"orientation":orient},headers=headers)
-        if not r: _probe(label,"search request failed"); return None
+        if not r: _probe(label,_req_fail()); return None
         photos=r.json().get("photos",[])
         if not photos: _probe(label,"0 results")
         for p in photos:
@@ -121,7 +141,7 @@ def _pixabay(q,video,w,h):
     params={"key":CONFIG.pixabay_api_key,"q":q,"per_page":8,"safesearch":"true","orientation":orient}
     if not video:params["image_type"]="photo"
     r=_http_get(base,params=params)
-    if not r: _probe(label,"search request failed"); return None
+    if not r: _probe(label,_req_fail()); return None
     hits=r.json().get("hits",[])
     if not hits: _probe(label,"0 results")
     for hit in hits:
@@ -140,7 +160,7 @@ def _openverse(q,video,w,h):
     label=f"Openverse {'video' if video else 'photo'}"
     endpoint='videos' if video else 'images'
     r=_http_get(f"https://api.openverse.org/v1/{endpoint}/",params={'q':q,'page_size':12,'license_type':'commercial'})
-    if not r: _probe(label,"search request failed"); return None
+    if not r: _probe(label,_req_fail()); return None
     results=sorted(r.json().get('results',[]),key=lambda x:_aspect_rank(x,w,h))
     if not results: _probe(label,"0 results")
     bad_lic=bad_ext=bad_dl=0
@@ -160,7 +180,7 @@ def _openverse(q,video,w,h):
             _probe(label,"ok")
             return Asset(dest,'openverse',item.get('foreign_landing_url') or url,note,'video' if video else 'image',q,int(item.get('width') or 0),int(item.get('height') or 0))
         bad_dl+=1
-    if results: _probe(label,f"{len(results)} results, 0 usable (licence={bad_lic}, format={bad_ext}, download={bad_dl})")
+    if results: _probe(label,f"{len(results)} results, 0 usable (licence={bad_lic}, format={bad_ext}, download={bad_dl}{_dl_note(bad_dl)})")
     return None
 
 def _wikimedia(q,video,w,h):
@@ -168,7 +188,7 @@ def _wikimedia(q,video,w,h):
     typ='video' if video else 'bitmap'
     params={'action':'query','format':'json','generator':'search','gsrsearch':f'filetype:{typ} {q}','gsrnamespace':6,'gsrlimit':10,'prop':'imageinfo','iiprop':'url|mime|size|extmetadata','iiurlwidth':1920}
     r=_http_get('https://commons.wikimedia.org/w/api.php',params=params,headers={'User-Agent':'YouTubeAutomationPipeline/2.0 (educational project)'})
-    if not r: _probe(label,"search request failed"); return None
+    if not r: _probe(label,_req_fail()); return None
     pages=list(((r.json().get('query') or {}).get('pages') or {}).values())
     if not pages: _probe(label,"0 results")
     pages.sort(key=lambda p:_aspect_rank((p.get('imageinfo') or [{}])[0],w,h))
@@ -177,21 +197,27 @@ def _wikimedia(q,video,w,h):
         info=(page.get('imageinfo') or [{}])[0]; mime=info.get('mime') or ''
         if (video and not mime.startswith('video/')) or (not video and not mime.startswith('image/')):
             bad_media+=1; continue
-        url=info.get('url'); ext=Path(urlparse(url or '').path).suffix.lstrip('.') or ('webm' if video else 'jpg')
-        if not url or ext.lower() not in ({'mp4','webm','ogv','ogg','mov'} if video else {'jpg','jpeg','png','webp','tif','tiff'}):
-            bad_ext+=1; continue
         meta=info.get('extmetadata') or {}; lic=(meta.get('LicenseShortName') or {}).get('value','see Commons page'); lic_norm=str(lic).lower()
         if any(term in lic_norm for term in ('noncommercial','non-commercial','share alike','share-alike','no derivatives','no-derivatives')) \
            or not any(term in lic_norm for term in ('cc0','public domain','cc by','cc-by')):
             bad_lic+=1; continue
-        dest=_cache_path('wikimedia',page.get('title',url),ext)
-        if _download(url,dest):
+        # Photos: Commons has already rendered a 1920px JPEG for the file
+        # (iiurlwidth above) — download THAT. Originals are frequently 100+ MB
+        # TIFFs that bust the size cap or the 30s timeout; the only candidate
+        # for one scene died exactly there. Videos have no usable thumbnail —
+        # their thumburl is a still frame — so they keep the source file.
+        src=info.get('url') if video else (info.get('thumburl') or info.get('url'))
+        ext=Path(urlparse(src or '').path).suffix.lstrip('.') or ('webm' if video else 'jpg')
+        if not src or ext.lower() not in ({'mp4','webm','ogv','ogg','mov'} if video else {'jpg','jpeg','png','webp','tif','tiff'}):
+            bad_ext+=1; continue
+        dest=_cache_path('wikimedia',page.get('title',src),ext)
+        if _download(src,dest):
             creator=(meta.get('Artist') or {}).get('value','creator not listed')
             note=f'Wikimedia Commons — {lic}; creator: {creator}; attribution required, verify file page'
             _probe(label,"ok")
             return Asset(dest,'wikimedia',info.get('descriptionurl',''),note,'video' if video else 'image',q,int(info.get('width') or 0),int(info.get('height') or 0))
         bad_dl+=1
-    if pages: _probe(label,f"{len(pages)} results, 0 usable (media={bad_media}, format={bad_ext}, licence={bad_lic}, download={bad_dl})")
+    if pages: _probe(label,f"{len(pages)} results, 0 usable (media={bad_media}, format={bad_ext}, licence={bad_lic}, download={bad_dl}{_dl_note(bad_dl)})")
     return None
 
 def _internet_archive(q,video,w,h):
@@ -201,7 +227,7 @@ def _internet_archive(q,video,w,h):
     r=_http_get('https://archive.org/advancedsearch.php',params={
         'q':f'mediatype:{media} AND ({q})','fl[]':['identifier','title','licenseurl'],
         'rows':8,'page':1,'output':'json'})
-    if not r: _probe(label,"search request failed"); return None
+    if not r: _probe(label,_req_fail()); return None
     docs=(r.json().get('response') or {}).get('docs',[])
     if not docs: _probe(label,"0 results")
     bad_lic=bad_files=bad_dl=0
@@ -232,13 +258,13 @@ def _internet_archive(q,video,w,h):
             _probe(label,"ok")
             return Asset(dest,'internetarchive',f'https://archive.org/details/{ident}',f'Internet Archive — explicit license {lic}; creator: {creator}; verify item metadata',kind,q,int(file.get('width') or 0),int(file.get('height') or 0))
         bad_dl+=1
-    if docs: _probe(label,f"{len(docs)} results, 0 usable (licence={bad_lic}, no-file={bad_files}, download={bad_dl})")
+    if docs: _probe(label,f"{len(docs)} results, 0 usable (licence={bad_lic}, no-file={bad_files}, download={bad_dl}{_dl_note(bad_dl)})")
     return None
 
 def _nasa(q,video,w,h):
     label=f"NASA {'video' if video else 'photo'}"
     media="video" if video else "image"; r=_http_get("https://images-api.nasa.gov/search",params={"q":q,"media_type":media})
-    if not r: _probe(label,"search request failed"); return None
+    if not r: _probe(label,_req_fail()); return None
     items=((r.json().get("collection") or {}).get("items") or [])[:8]
     if not items: _probe(label,"0 results")
     bad_url=bad_dl=0
@@ -258,7 +284,7 @@ def _nasa(q,video,w,h):
             _probe(label,"ok")
             return Asset(dest,"nasa",item.get("href",""),"NASA media — public domain; credit NASA and check for third-party material","video" if video else "image",q,int(data.get("width") or 0),int(data.get("height") or 0))
         bad_dl+=1
-    if items: _probe(label,f"{len(items)} results, 0 usable (no-media={bad_url}, download={bad_dl})")
+    if items: _probe(label,f"{len(items)} results, 0 usable (no-media={bad_url}, download={bad_dl}{_dl_note(bad_dl)})")
     return None
 
 def _title_card(query,scene_no,out_dir,title=""):
@@ -278,7 +304,10 @@ def fetch_scene_assets(query,scene_no,out_dir,count=None,target_width=None,targe
     videos=[("Pexels video",lambda:_pexels(q,True,w,h)),("Pixabay video",lambda:_pixabay(q,True,w,h))]
     photos=[("Pexels photo",lambda:_pexels(q,False,w,h)),("Pixabay photo",lambda:_pixabay(q,False,w,h))]
     if CONFIG.enable_keyless_sources:
-        videos += [("Openverse video",lambda:_openverse(q,True,w,h)),("Wikimedia video",lambda:_wikimedia(q,True,w,h)),("Internet Archive video",lambda:_internet_archive(q,True,w,h)),("NASA video",lambda:_nasa(q,True,w,h))]
+        # Openverse is photos-only here: its /v1/videos/ endpoint does not
+        # exist (permanently 404, verified 2026-10-21), so keyless video is
+        # Wikimedia / Internet Archive / NASA only.
+        videos += [("Wikimedia video",lambda:_wikimedia(q,True,w,h)),("Internet Archive video",lambda:_internet_archive(q,True,w,h)),("NASA video",lambda:_nasa(q,True,w,h))]
         photos += [("Openverse photo",lambda:_openverse(q,False,w,h)),("Wikimedia photo",lambda:_wikimedia(q,False,w,h)),("Internet Archive photo",lambda:_internet_archive(q,False,w,h)),("NASA photo",lambda:_nasa(q,False,w,h))]
     assets=[]; attempts=[]
     for i in range(count):
