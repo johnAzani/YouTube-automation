@@ -13,6 +13,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import shutil
 import sys
 from datetime import datetime, timezone
@@ -25,6 +26,78 @@ from .script_doc import ScriptDoc, parse_script
 
 def _log(msg: str) -> None:
     print(f"[run] {msg}", flush=True)
+
+
+def _require_production_prerequisites(
+    doc: ScriptDoc, dry_run: bool, refresh_token: str, client_secret: str
+) -> None:
+    """Fail closed before rendering when a production upload cannot be completed."""
+    if dry_run:
+        return
+    if doc.status != "approved":
+        raise RuntimeError(
+            f"Refusing production run for job {doc.id}: status={doc.status!r}; "
+            "set status to 'approved' only after human review."
+        )
+    missing = []
+    if not refresh_token:
+        missing.append("YOUTUBE_REFRESH_TOKEN")
+    if not client_secret:
+        missing.append("YOUTUBE_CLIENT_SECRET")
+    if missing:
+        raise RuntimeError(
+            "Refusing production run because required YouTube credential(s) are missing: "
+            + ", ".join(missing)
+            + ". Use --dry-run to render without uploading; the queue job will remain unchanged."
+        )
+
+
+def _require_real_narration(engine: str, dry_run: bool) -> None:
+    """Placeholder audio is useful for offline renders, but never publishable."""
+    if not dry_run and engine != "edge-tts":
+        raise RuntimeError(
+            f"Refusing production upload: narration engine is {engine!r}, not 'edge-tts'. "
+            "Fix the TTS failure and rerun; placeholder audio must not be published."
+        )
+
+
+def _mark_job_uploaded(path: Path, doc: ScriptDoc, video_id: str) -> Path:
+    """Move and stamp a queue job only after YouTube confirms an uploaded video ID."""
+    if not video_id:
+        raise RuntimeError("YouTube returned no video ID; leaving the queue job untouched.")
+    dest = PUBLISHED_DIR / path.name
+    if dest.exists():
+        raise RuntimeError(f"Published record already exists at {dest}; leaving the queue job untouched.")
+
+    stamp = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    text = path.read_text(encoding="utf-8")
+    frontmatter = re.match(r"\A---\s*\n(.*?)\n---(?P<tail>\s*\n.*|\Z)", text, re.S)
+    if not frontmatter:
+        raise RuntimeError(f"Cannot stamp {path}: missing YAML frontmatter; leaving the queue job untouched.")
+    metadata = frontmatter.group(1)
+    metadata, replacements = re.subn(r"(?m)^status\s*:.*$", "status: published", metadata, count=1)
+    if not replacements:
+        raise RuntimeError(f"Cannot stamp {path}: missing top-level status; leaving the queue job untouched.")
+    for key, value in (("published_on", stamp), ("youtube_video_id", video_id)):
+        line = f"{key}: {json.dumps(value)}"
+        pattern = rf"(?m)^{re.escape(key)}\s*:.*$"
+        if re.search(pattern, metadata):
+            metadata = re.sub(pattern, line, metadata, count=1)
+        else:
+            metadata += f"\n{line}"
+
+    updated = f"---\n{metadata}\n---{frontmatter.group('tail')}"
+    temp_path = path.with_name(path.name + ".tmp")
+    temp_path.write_text(updated, encoding="utf-8")
+    temp_path.replace(path)
+
+    doc.meta["status"] = "published"
+    doc.meta["published_on"] = stamp
+    doc.meta["youtube_video_id"] = video_id
+    PUBLISHED_DIR.mkdir(parents=True, exist_ok=True)
+    shutil.move(str(path), dest)
+    _log(f"job file moved to {dest}")
+    return dest
 
 
 def _validate_finance_niche(doc: ScriptDoc) -> None:
@@ -72,6 +145,13 @@ def process(path: Path, dry_run: bool) -> dict:
         else:
             raise
 
+    _require_production_prerequisites(
+        doc,
+        dry_run,
+        CONFIG.youtube_refresh_token,
+        CONFIG.youtube_client_secret,
+    )
+
     out_dir = OUTPUT_DIR / doc.slug
     if out_dir.exists():
         shutil.rmtree(out_dir)
@@ -91,6 +171,7 @@ def process(path: Path, dry_run: bool) -> dict:
     voice = doc.voice or CONFIG.voice
     narration = synthesize(doc.full_narration, out_dir, voice=voice)
     _log(f"tts engine={narration.engine} duration={narration.duration_seconds:.1f}s")
+    _require_real_narration(narration.engine, dry_run)
 
     # ---- 3. assets ----------------------------------------------------
     from .assets import fetch_scene_assets
@@ -155,30 +236,22 @@ def process(path: Path, dry_run: bool) -> dict:
 
     # ---- 6. upload ----------------------------------------------------
     if not dry_run:
-        if not CONFIG.youtube_refresh_token or not CONFIG.youtube_client_secret:
-            _log("no YouTube credentials in env — skipping upload (render kept in output/)")
-            result["uploaded"] = False
-        else:
-            from .upload import upload
+        from .upload import upload
 
-            up = upload(doc, final, thumb, description=pack.get("description"))
-            result.update({
-                "uploaded": True,
-                "video_id": up.video_id,
-                "watch_url": up.watch_url,
-                "privacy_status": up.privacy_status,
-            })
-            _log(f"uploaded {up.watch_url} (privacy={up.privacy_status})")
-            _open_release_ticket(doc, up.watch_url, up.privacy_status)
+        up = upload(doc, final, thumb, description=pack.get("description"))
+        if not up.video_id:
+            raise RuntimeError("YouTube upload returned no video ID; leaving the queue job untouched.")
+        result.update({
+            "uploaded": True,
+            "video_id": up.video_id,
+            "watch_url": up.watch_url,
+            "privacy_status": up.privacy_status,
+        })
+        _log(f"uploaded {up.watch_url} (privacy={up.privacy_status})")
+        _open_release_ticket(doc, up.watch_url, up.privacy_status)
 
-        # move job file to published/ and stamp it
-        stamp = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-        doc.meta["status"] = "published"
-        doc.meta["published_on"] = stamp
-        dest = PUBLISHED_DIR / path.name
-        PUBLISHED_DIR.mkdir(parents=True, exist_ok=True)
-        shutil.move(str(path), dest)
-        _log(f"job file moved to {dest}")
+        # A queue transition is allowed only after a confirmed upload.
+        _mark_job_uploaded(path, doc, up.video_id)
 
     (out_dir / "job_result.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
 
