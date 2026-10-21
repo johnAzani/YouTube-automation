@@ -29,7 +29,11 @@ def _log(msg: str) -> None:
 
 
 def _require_production_prerequisites(
-    doc: ScriptDoc, dry_run: bool, refresh_token: str, client_secret: str
+    doc: ScriptDoc,
+    dry_run: bool,
+    refresh_token: str,
+    client_id: str,
+    client_secret: str,
 ) -> None:
     """Fail closed before rendering when a production upload cannot be completed."""
     if dry_run:
@@ -42,6 +46,8 @@ def _require_production_prerequisites(
     missing = []
     if not refresh_token:
         missing.append("YOUTUBE_REFRESH_TOKEN")
+    if not client_id:
+        missing.append("YOUTUBE_CLIENT_ID")
     if not client_secret:
         missing.append("YOUTUBE_CLIENT_SECRET")
     if missing:
@@ -149,6 +155,7 @@ def process(path: Path, dry_run: bool) -> dict:
         doc,
         dry_run,
         CONFIG.youtube_refresh_token,
+        CONFIG.youtube_client_id,
         CONFIG.youtube_client_secret,
     )
 

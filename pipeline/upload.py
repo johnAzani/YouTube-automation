@@ -8,12 +8,12 @@ Visibility policy (PLAN.md §3.4):
     AUTO_PUBLISH=true to go straight to `public` (or schedule with publishAt).
 
 Credentials come from secrets (never from git):
-  YOUTUBE_CLIENT_SECRET   — OAuth client secret JSON (string)
-  YOUTUBE_REFRESH_TOKEN   — minted once via scripts/youtube_oauth.py
+  YOUTUBE_CLIENT_ID       — the Web OAuth client ID
+  YOUTUBE_CLIENT_SECRET   — the raw Web OAuth client secret (not JSON)
+  YOUTUBE_REFRESH_TOKEN   — minted once via OAuth Playground or scripts/youtube_oauth.py
 """
 from __future__ import annotations
 
-import json
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -34,17 +34,30 @@ class UploadResult:
     auto_published: bool
 
 
+def _client_credentials(client_id: str, client_secret: str) -> tuple[str, str]:
+    """Validate the separate raw Web client ID and secret values."""
+    client_id = client_id.strip()
+    client_secret = client_secret.strip()
+    if not client_id or not client_secret:
+        raise RuntimeError("Set YOUTUBE_CLIENT_ID and YOUTUBE_CLIENT_SECRET as separate secrets.")
+    if client_secret.startswith("{"):
+        raise RuntimeError(
+            "YOUTUBE_CLIENT_SECRET must be the raw OAuth client secret, not JSON. "
+            "Store the client ID separately as YOUTUBE_CLIENT_ID."
+        )
+    return client_id, client_secret
+
+
 def _credentials():
     from google.auth.transport.requests import Request
     from google.oauth2.credentials import Credentials
     from google.oauth2.service_account import Credentials as SACredentials  # noqa: F401
     from google_auth_oauthlib.flow import InstalledAppFlow  # noqa: F401
 
-    info = json.loads(CONFIG.youtube_client_secret)
-    if "installed" not in info and "web" not in info:
-        raise RuntimeError("YOUTUBE_CLIENT_SECRET must be an OAuth client secret JSON")
-    client_id = info["installed"]["client_id"] if "installed" in info else info["web"]["client_id"]
-    client_secret = info["installed"]["client_secret"] if "installed" in info else info["web"]["client_secret"]
+    client_id, client_secret = _client_credentials(
+        CONFIG.youtube_client_id,
+        CONFIG.youtube_client_secret,
+    )
 
     creds = Credentials(
         token=None,

@@ -16,17 +16,20 @@ class ProductionSafetyTests(unittest.TestCase):
     def setUp(self):
         self.approved_doc = SimpleNamespace(id="test-job", status="approved", meta={})
 
-    def test_production_requires_both_youtube_credentials(self):
-        with self.assertRaisesRegex(RuntimeError, "YOUTUBE_REFRESH_TOKEN, YOUTUBE_CLIENT_SECRET"):
-            _require_production_prerequisites(self.approved_doc, False, "", "")
+    def test_production_requires_all_youtube_credentials(self):
+        with self.assertRaisesRegex(
+            RuntimeError,
+            "YOUTUBE_REFRESH_TOKEN, YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET",
+        ):
+            _require_production_prerequisites(self.approved_doc, False, "", "", "")
 
     def test_production_rejects_unapproved_job_even_with_credentials(self):
         draft = SimpleNamespace(id="test-job", status="draft", meta={})
         with self.assertRaisesRegex(RuntimeError, "status='draft'"):
-            _require_production_prerequisites(draft, False, "refresh", "client-secret")
+            _require_production_prerequisites(draft, False, "refresh", "client-id", "client-secret")
 
     def test_dry_run_can_run_without_credentials(self):
-        _require_production_prerequisites(self.approved_doc, True, "", "")
+        _require_production_prerequisites(self.approved_doc, True, "", "", "")
 
     def test_production_rejects_placeholder_narration(self):
         with self.assertRaisesRegex(RuntimeError, "placeholder"):

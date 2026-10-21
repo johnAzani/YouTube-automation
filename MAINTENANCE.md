@@ -216,10 +216,12 @@ Cron is best-effort on GitHub (can lag 15–30 min). That is fine for content.
 | Secret | Required for | Notes |
 |---|---|---|
 | `PEXELS_API_KEY`, `PIXABAY_API_KEY` | general pipeline b-roll | Free tier, no card. Optional but they make `pipeline-dry-run` reliable. |
-| `YOUTUBE_CLIENT_SECRET`, `YOUTUBE_REFRESH_TOKEN` | upload + metrics | Mint with Google OAuth Playground using the Web client; the `youtube_oauth.py` local-server helper requires a computer. |
+| `YOUTUBE_CLIENT_ID`, `YOUTUBE_CLIENT_SECRET`, `YOUTUBE_REFRESH_TOKEN` | upload + metrics | Store as three separate GitHub secrets. Client ID and raw client secret come from the Web client; mint the refresh token with OAuth Playground. The `youtube_oauth.py` local-server helper requires a computer. |
 
-⚠️ An unverified Google OAuth client expires its refresh token after **7 days** — the app
-must pass Google's audit for a long-lived token (`docs/DEEP_DIVE.md`). `AUTO_PUBLISH` stays
-off until that audit passes; videos upload as private drafts for a human to publish.
+⚠️ External OAuth apps in **Testing** have a 7-day refresh-token limit for non-basic scopes.
+Production/unverified personal-use apps avoid that Testing-specific limit but still show an
+unverified-app warning and are subject to Google's token revocation/expiration rules. Public
+use of sensitive scopes requires verification. `AUTO_PUBLISH` stays off; uploads remain
+private drafts for human review.
 
 **Never commit a key.** `.env` is gitignored; CI reads secrets from GitHub only.

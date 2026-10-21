@@ -53,7 +53,8 @@ class Config:
     music_volume: str = os.environ.get("MUSIC_VOLUME", "0.07")
 
     # --- YouTube upload --------------------------------------------------
-    youtube_client_secret: str = os.environ.get("YOUTUBE_CLIENT_SECRET", "")  # JSON string
+    youtube_client_id: str = os.environ.get("YOUTUBE_CLIENT_ID", "")
+    youtube_client_secret: str = os.environ.get("YOUTUBE_CLIENT_SECRET", "")  # raw client secret
     youtube_refresh_token: str = os.environ.get("YOUTUBE_REFRESH_TOKEN", "")
     auto_publish: bool = _env_bool("AUTO_PUBLISH", False)  # needs audited API project
     default_privacy: str = os.environ.get("DEFAULT_PRIVACY", "private")
