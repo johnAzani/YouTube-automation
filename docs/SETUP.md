@@ -41,9 +41,10 @@ Everything here is ₦0. Follow in order; items marked ⏱ have lead time, so st
    `https://www.googleapis.com/auth/youtube.upload` and
    `https://www.googleapis.com/auth/youtube.readonly`. Exchange the code and keep the
    refresh token private.
-6. In GitHub repository Settings → Secrets and variables → Actions, set
-   `YOUTUBE_CLIENT_SECRET` to the full OAuth client JSON and `YOUTUBE_REFRESH_TOKEN` to
-   the refresh token. Never commit or paste either into issues, workflow inputs, or chat.
+6. In GitHub repository Settings → Secrets and variables → Actions, create three
+   separate secrets: `YOUTUBE_CLIENT_ID` (the Web client ID), `YOUTUBE_CLIENT_SECRET`
+   (the raw Web client secret—not JSON), and `YOUTUBE_REFRESH_TOKEN` (the refresh token).
+   Never commit or paste these values into issues, workflow inputs, or chat.
 7. The workflow defaults to private uploads. Keep `AUTO_PUBLISH` unset/false until you
    deliberately choose a different visibility policy. The default YouTube API quota is
    enough for this repo's one-video-per-run schedule; a quota audit is not an OAuth
@@ -85,7 +86,8 @@ Repo → **Settings → Secrets and variables → Actions** → New repository s
 |---|---|
 | `PEXELS_API_KEY` | from §2 |
 | `PIXABAY_API_KEY` | from §2 |
-| `YOUTUBE_CLIENT_SECRET` | from §3 (single-line JSON) |
+| `YOUTUBE_CLIENT_ID` | Web OAuth client ID from Google Cloud |
+| `YOUTUBE_CLIENT_SECRET` | raw Web OAuth client secret from Google Cloud (not JSON) |
 | `YOUTUBE_REFRESH_TOKEN` | from §3 |
 | `YOUTUBE_PLAYLIST_ID` | optional |
 | `AUTO_PUBLISH` | `false` until the API audit passes; then `true` |

@@ -55,8 +55,8 @@ def main() -> int:
     check("font for text plates", find_font() is not None, "apt install fonts-dejavu-core")
 
     # Secrets (names only — never print values)
-    for secret in ("PEXELS_API_KEY", "PIXABAY_API_KEY", "YOUTUBE_CLIENT_SECRET",
-                   "YOUTUBE_REFRESH_TOKEN"):
+    for secret in ("PEXELS_API_KEY", "PIXABAY_API_KEY", "YOUTUBE_CLIENT_ID",
+                   "YOUTUBE_CLIENT_SECRET", "YOUTUBE_REFRESH_TOKEN"):
         present = bool(os.environ.get(secret)) or (REPO / ".env").exists()
         check(f"secret/env: {secret}", present, "docs/SETUP.md §2–4 (or .env locally)")
 

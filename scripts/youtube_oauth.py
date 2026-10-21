@@ -5,8 +5,9 @@ Run LOCALLY (not in CI) with your Google account:
 
     python scripts/youtube_oauth.py --client-secret client_secret.json
 
-It prints the values to put in GitHub secrets:
-    YOUTUBE_CLIENT_SECRET   (the whole JSON, single line)
+It prints the values to put in GitHub secrets separately:
+    YOUTUBE_CLIENT_ID       (the OAuth client ID)
+    YOUTUBE_CLIENT_SECRET   (the raw OAuth client secret)
     YOUTUBE_REFRESH_TOKEN   (the refresh token)
 
 Scopes requested: youtube.upload only (least privilege).
@@ -39,10 +40,17 @@ def main() -> int:
     # Local server flow — opens the browser, listens on localhost.
     creds = flow.run_local_server(port=8765, prompt="consent", access_type="offline")
 
-    raw_json = Path(args.client_secret).read_text(encoding="utf-8")
-    print("\n=== Paste into GitHub secrets ===\n")
-    print("Secret name: YOUTUBE_CLIENT_SECRET")
-    print(json.dumps(json.loads(raw_json), separators=(",", ":")))
+    client_config = json.loads(Path(args.client_secret).read_text(encoding="utf-8"))
+    client = client_config.get("web") or client_config.get("installed")
+    if not client or not client.get("client_id") or not client.get("client_secret"):
+        print("OAuth client JSON must contain a web or installed client_id/client_secret", file=sys.stderr)
+        return 1
+
+    print("\n=== Paste each value into its own GitHub secret ===\n")
+    print("Secret name: YOUTUBE_CLIENT_ID")
+    print(client["client_id"])
+    print("\nSecret name: YOUTUBE_CLIENT_SECRET")
+    print(client["client_secret"])
     print("\nSecret name: YOUTUBE_REFRESH_TOKEN")
     print(creds.refresh_token)
     print("\nThen, in the repo: Settings → Secrets and variables → Actions → New repository secret")

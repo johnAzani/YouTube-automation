@@ -66,9 +66,9 @@ def _within_retention(rows: list[dict], today: dt.date) -> list[dict]:
 def main() -> int:
     from googleapiclient.discovery import build
 
-    if not CONFIG.youtube_refresh_token or not CONFIG.youtube_client_secret:
-        print("no YouTube credentials in env — nothing to snapshot")
-        return 0
+    if not all((CONFIG.youtube_refresh_token, CONFIG.youtube_client_id, CONFIG.youtube_client_secret)):
+        print("missing YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET, or YOUTUBE_REFRESH_TOKEN")
+        return 1
 
     creds = _credentials()
     youtube = build("youtube", "v3", credentials=creds, cache_discovery=False)
