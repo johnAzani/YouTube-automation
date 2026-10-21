@@ -181,7 +181,7 @@ def process(path: Path, dry_run: bool) -> dict:
     _require_real_narration(narration.engine, dry_run)
 
     # ---- 3. assets ----------------------------------------------------
-    from .assets import fetch_scene_assets
+    from .assets import fetch_scene_assets, attempts_summary
 
     scene_assets: list[list[Path]] = []
     for scene in doc.scenes:
@@ -191,6 +191,7 @@ def process(path: Path, dry_run: bool) -> dict:
             raise RuntimeError(
                 f"Scene {scene.index} has no licensed, downloadable video or photo for {query!r}; "
                 "refusing to substitute a generic title card. Add a usable free image/video or revise the query."
+                + attempts_summary(scene.index, out_dir / "assets")
             )
         scene_assets.append([a.path for a in assets])
         _log(f"  scene {scene.index:02d} «{scene.heading[:40]}» -> {len(assets)} asset(s)")
