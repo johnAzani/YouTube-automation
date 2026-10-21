@@ -18,28 +18,36 @@ Everything here is ₦0. Follow in order; items marked ⏱ have lead time, so st
    clarity beats decoration.
 3. In YouTube Studio: enable 2-step verification + custom thumbnails (Settings → Channel).
 
-### 1b. ⏱ Google Cloud project + OAuth production + YouTube API audit (lead time: days–weeks)
-1. https://console.cloud.google.com → new project (e.g. `yt-automation-lab`).
-2. Enable **YouTube Data API v3**.
-3. OAuth consent screen: **External**. ⚠️ **The default "Testing" status expires refresh
-   tokens every 7 days** — this is the #1 killer of unattended uploaders
-   (DEEP_DIVE.md §1, Trap 1). Before minting any token you must move it to
-   **In production**:
-   - Fill branding: app name, support email, **homepage URL**, **privacy policy URL**
-     (GitHub Pages/Notion is fine), and an **authorized domain** verified in Search
-     Console.
-   - Click **Publish app** (Testing → In production). Publishing ≠ verification — for a
-     personal single-channel tool you click *"Advanced → Go to app (unsafe)"* once on
-     your own consent screen. Long-lived tokens result.
-4. Credentials → OAuth client ID → Desktop app → download JSON → save as
-   `client_secret.json` locally (NEVER commit it).
-5. Submit the **YouTube API Services Audit & Quota Extension form**
-   (https://support.google.com/youtube/contact/yt_api_form). Required to lift the
-   forced-private restriction on API uploads from unverified projects. Approval takes
-   weeks — submit on day one.
-6. Until it passes, the pipeline uploads **private** drafts and opens a "release ticket"
-   GitHub Issue; you publish in YouTube Studio in ~2 clicks. This is fine — treat it as
-   your mandatory human QC step.
+### 1b. Google Cloud + YouTube OAuth (phone-friendly; no local computer required)
+1. In Google Cloud, create a project and enable **YouTube Data API v3**.
+2. Configure Google Auth Platform for an **External** audience. For an unattended token,
+   the app must be **In production**: Google says refresh tokens for non-basic scopes in
+   **Testing** expire after 7 days. Keep the app unverified if it is only for your own
+   account; expect Google's unverified-app warning and follow the consent screen. Do not
+   authorize an app you do not recognize.
+3. This repository's Pages site has a dedicated app overview and privacy policy:
+   `https://johnazani.github.io/YouTube-automation/app.html` and
+   `https://johnazani.github.io/YouTube-automation/privacy.html`. Put those links into
+   Branding and add `johnazani.github.io` as an authorized domain. **Caveat:** Google
+   requires verified domain ownership for app verification and may reject shared
+   `github.io` hosting. If Google blocks the domain or publishing, a domain you control
+   will be needed for a verified production app; do not claim to own GitHub's domain.
+4. Create a **Web application** OAuth client and add this exact authorized redirect URI:
+   `https://developers.google.com/oauthplayground`. Leave JavaScript origins blank. The
+   local `scripts/youtube_oauth.py` flow is for a computer running a callback server; it
+   is not the phone/GitHub path.
+5. On <https://developers.google.com/oauthplayground/>, use your own client ID and secret,
+   choose **Server-side**, **Offline**, and consent prompting, then authorize the scopes
+   `https://www.googleapis.com/auth/youtube.upload` and
+   `https://www.googleapis.com/auth/youtube.readonly`. Exchange the code and keep the
+   refresh token private.
+6. In GitHub repository Settings → Secrets and variables → Actions, set
+   `YOUTUBE_CLIENT_SECRET` to the full OAuth client JSON and `YOUTUBE_REFRESH_TOKEN` to
+   the refresh token. Never commit or paste either into issues, workflow inputs, or chat.
+7. The workflow defaults to private uploads. Keep `AUTO_PUBLISH` unset/false until you
+   deliberately choose a different visibility policy. The default YouTube API quota is
+   enough for this repo's one-video-per-run schedule; a quota audit is not an OAuth
+   setup prerequisite.
 
 ## 2. Free API keys (10 minutes)
 
@@ -63,14 +71,11 @@ ledgers, and publishes updated demos to GitHub Pages. If a source API is unreach
 the existing scene-specific photo remains; the local sandbox itself may not reach those
 external domains.
 
-## 4. Mint the YouTube refresh token (local, once)
+## 4. Mint the YouTube refresh token (OAuth Playground)
 
-```bash
-pip install -r requirements.txt
-python scripts/youtube_oauth.py --client-secret client_secret.json
-```
-
-Copy the printed `YOUTUBE_CLIENT_SECRET` and `YOUTUBE_REFRESH_TOKEN` values.
+Use the phone-friendly Google OAuth Playground procedure in §1b. This repository's
+`youtube_oauth.py` utility uses a local callback server and therefore requires a computer;
+it is not needed when minting through OAuth Playground.
 
 ## 5. GitHub secrets
 

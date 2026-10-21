@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   snapshot:
@@ -29,12 +29,13 @@ jobs:
       - name: Snapshot channel metrics
         run: python scripts/metrics_snapshot.py
 
-      - name: Commit metrics history
-        run: |
-          git config user.name "youtube-automation-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add content/metrics.csv
-          if ! git diff --cached --quiet; then
-            git commit -m "chore(metrics): weekly snapshot [skip ci]"
-            git push
-          fi
+      # This repository is public. Keep the public-video snapshot out of git history
+      # and retain it only as a short-lived artifact; never commit API metrics to source.
+      - name: Upload 30-day metrics snapshot
+        uses: actions/upload-artifact@v4
+        if: success() && hashFiles('content/metrics.csv') != ''
+        with:
+          name: public-video-metrics-${{ github.run_id }}
+          path: content/metrics.csv
+          retention-days: 30
+          if-no-files-found: ignore

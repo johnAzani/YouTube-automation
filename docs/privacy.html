@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for Azani Video Studio.">
+  <title>Privacy Policy — Azani Video Studio</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; }
+    body { margin: 0; background: #f4f7fb; color: #1c2733; line-height: 1.65; }
+    main { max-width: 820px; margin: 5vh auto; padding: 30px; background: #fff; border: 1px solid #dce4ee; border-radius: 16px; }
+    h1, h2 { color: #10324f; }
+    a { color: #075da8; }
+    li { margin: .35em 0; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy</h1>
+  <p><strong>Azani Video Studio</strong> is a personal video-production workflow maintained by John Azani. It is not offered as a service to the public. This policy explains how the workflow handles information when its owner connects a YouTube account.</p>
+  <p><strong>Effective date:</strong> 21 October 2026</p>
+
+  <h2>Google and YouTube data accessed</h2>
+  <p>With the account owner's authorization, the workflow requests the Google OAuth scopes <code>youtube.upload</code> and <code>youtube.readonly</code>. It uses them only to:</p>
+  <ul>
+    <li>upload the owner's video drafts and their metadata to the owner's YouTube channel;</li>
+    <li>optionally set a thumbnail or add a video to a playlist when configured; and</li>
+    <li>run a weekly performance snapshot for videos whose YouTube privacy status is <strong>public</strong>.</li>
+  </ul>
+  <p>The metrics workflow excludes private and unlisted videos and does not export channel-level subscriber totals. It stores a snapshot of public-video titles, IDs, publication dates, views, likes, and comments as a GitHub Actions artifact for up to 30 days. It does not commit that metrics file to the repository.</p>
+
+  <h2>Where information is processed and stored</h2>
+  <ul>
+    <li>OAuth client credentials and the refresh token are stored as GitHub Actions secrets and are supplied to the relevant workflow at run time. They should not be committed to source control or printed in logs.</li>
+    <li>Rendering and API calls run on GitHub-hosted Actions runners. GitHub processes workflow logs and artifacts under its own policies and the repository's configured retention settings.</li>
+    <li>This source repository and its GitHub Pages site are public. Workflow logs are publicly visible, and workflow artifacts are available to people who can read the repository. Production render artifacts are configured for one-day retention; the public-video metrics artifact is configured for 30-day retention. Do not place passwords, OAuth tokens, or other secrets in scripts, workflow inputs, video metadata, or committed files.</li>
+    <li>Published videos and their public metadata are hosted by YouTube under the channel owner's YouTube settings.</li>
+  </ul>
+
+  <h2>Other providers</h2>
+  <p>When a render needs visual assets, the workflow may send scene-search phrases to stock or open-media providers such as Pexels, Pixabay, Openverse, Wikimedia Commons, the Internet Archive, or NASA. Those queries are for finding media; the workflow does not send the owner's Google OAuth token to those providers. When Microsoft Edge text-to-speech is available, narration text is sent to Microsoft's speech service to generate audio. The workflow does not operate an advertising tracker or analytics cookie on this website.</p>
+
+  <h2>Sharing</h2>
+  <p>Google/YouTube data is used for the functions listed above and is not sold. It is processed by Google/YouTube and GitHub to provide those functions. Public-video metrics are placed in the public repository's short-lived workflow artifact as described above. Rendered video artifacts may also be accessible to repository readers while they are retained.</p>
+
+  <h2>Retention and revocation</h2>
+  <p>The owner can delete or replace GitHub Actions secrets at any time. Metrics artifacts expire after 30 days; production render artifacts expire after one day. GitHub retains workflow logs according to the repository's settings. The owner can revoke the app's YouTube authorization from the Google Account security page. Revocation stops future API access but does not automatically delete artifacts or files already stored in GitHub.</p>
+
+  <h2>Security and contact</h2>
+  <p>Access is limited by Google OAuth authorization and GitHub repository/workflow permissions. No system can guarantee absolute security; the repository owner should use a unique account password, two-step verification, least-privilege access, and GitHub secrets rather than committed credentials. For privacy questions, contact the developer support email shown on the Google OAuth consent screen.</p>
+
+  <p><a href="app.html">Back to Azani Video Studio</a></p>
+</main>
+</body>
+</html>
