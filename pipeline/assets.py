@@ -11,7 +11,7 @@ import hashlib, json, mimetypes, re
 from dataclasses import dataclass, asdict
 from pathlib import Path
 from urllib.parse import urlparse, quote
-from .config import CONFIG
+from .config import CONFIG, ASSET_CACHE_DIR
 try:
     import requests  # type: ignore
 except ImportError:
@@ -43,7 +43,7 @@ def _probe(name: str, detail: str) -> None:
 
 def _cache_path(source, ident, ext):
     key = hashlib.sha1(f"{source}:{ident}".encode()).hexdigest()[:16]
-    path = CONFIG.ASSET_CACHE_DIR / f"{source}_{key}.{ext.lstrip('.')}"
+    path = ASSET_CACHE_DIR / f"{source}_{key}.{ext.lstrip('.')}"
     path.parent.mkdir(parents=True, exist_ok=True)
     return path
 

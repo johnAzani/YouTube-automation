@@ -83,6 +83,16 @@ class AssetSourcingTests(unittest.TestCase):
         # keyed-but-no-key must not be confused with a provider that searched and missed
         self.assertNotEqual(by_provider["Wikimedia photo"]["status"], "skipped")
 
+    def test_cache_path_resolves_into_the_asset_cache_dir(self):
+        # Regression: this used to read CONFIG.ASSET_CACHE_DIR, which never
+        # existed on Config — every provider that reached caching crashed and
+        # the failure masqueraded as "no licensed match" (MAINTENANCE.md §3).
+        with patch.object(assets, "ASSET_CACHE_DIR", Path(self.tmp.name)):
+            path = assets._cache_path("testsource", "ident", "jpg")
+        self.assertEqual(path.parent, Path(self.tmp.name))
+        self.assertTrue(path.name.startswith("testsource_"))
+        self.assertTrue(path.parent.is_dir())
+
     def test_render_filter_contains_without_crop_or_stretch(self):
         vf = _contain_filter()
         self.assertIn("force_original_aspect_ratio=decrease", vf)
