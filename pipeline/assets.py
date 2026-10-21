@@ -7,7 +7,7 @@ Internet Archive, and NASA. Only usable/licensed matches are returned by default
 generic title cards require an explicit opt-in.
 """
 from __future__ import annotations
-import hashlib, json, mimetypes, re
+import hashlib, json, mimetypes, re, time
 from dataclasses import dataclass, asdict
 from pathlib import Path
 from urllib.parse import urlparse, quote
@@ -16,6 +16,11 @@ try:
     import requests  # type: ignore
 except ImportError:
     requests = None
+
+# Wikimedia asks for a descriptive User-Agent with contact info; a generic one
+# lands in a harsher rate-limit bucket (we were seeing upload.wikimedia.org 429s).
+_UA_API = "YouTubeAutomationPipeline/2.0 (https://github.com/johnAzani/YouTube-automation; educational b-roll search)"
+_UA_DL = "YouTubeAutomation/2.0 (https://github.com/johnAzani/YouTube-automation; free stock media download)"
 
 @dataclass
 class Asset:
@@ -54,15 +59,29 @@ _HTTP_ERR = ""
 _DL_ERR = ""
 
 def _http_get(url, **kwargs):
+    """GET with one retry on transient upstream trouble (429 / 5xx, honouring
+    Retry-After). Timeouts and 4xx fail immediately — retrying those just
+    burns the CI budget."""
     global _HTTP_ERR
     if requests is None:
         _HTTP_ERR = "requests module not installed"; return None
     kwargs.setdefault("timeout", (6, 16))
-    try:
-        resp = requests.get(url, **kwargs); resp.raise_for_status(); _HTTP_ERR = ""; return resp
-    except Exception as exc:
-        _HTTP_ERR = " ".join(repr(exc).split())[:300]
-        print(f"[assets] GET {url} failed: {exc!r}"); return None
+    for attempt in (1, 2):
+        try:
+            resp = requests.get(url, **kwargs)
+            resp.raise_for_status()
+            _HTTP_ERR = ""; return resp
+        except Exception as exc:
+            _HTTP_ERR = " ".join(repr(exc).split())[:300]
+            resp_obj = getattr(exc, "response", None)
+            status = getattr(resp_obj, "status_code", None)
+            if attempt == 1 and status and (status == 429 or status >= 500):
+                wait = min(float(resp_obj.headers.get("Retry-After") or 0) or 2.0, 8.0)
+                print(f"[assets] GET {url} -> HTTP {status}, retrying in {wait:g}s", flush=True)
+                time.sleep(wait)
+                continue
+            print(f"[assets] GET {url} failed: {exc!r}"); return None
+    return None
 
 def _dl_note(failures):
     return f", last error: {_DL_ERR}" if failures and _DL_ERR else ""
@@ -71,28 +90,44 @@ def _req_fail():
     return "search request failed" + (f": {_HTTP_ERR}" if _HTTP_ERR else "")
 
 def _download(url, dest, max_bytes=120*1024*1024):
+    """Stream an asset to disk. Retries transient failures (429/5xx with
+    Retry-After, connection drops) up to twice; the 120 MB safety cap and
+    timeouts are final — re-pulling a giant file would just burn the clock."""
     global _DL_ERR
     if dest.exists() and dest.stat().st_size > 1024: return True
     if requests is None or not url:
         _DL_ERR = "requests module not installed" if requests is None else "no url"; return False
     _DL_ERR = ""
-    try:
-        dest.parent.mkdir(parents=True, exist_ok=True); total=0
-        with requests.get(url, stream=True, timeout=(8,30), headers={"User-Agent":"YouTubeAutomation/2.0 (free stock media)"}) as r:
-            r.raise_for_status()
-            with open(dest,"wb") as f:
-                for chunk in r.iter_content(1<<16):
-                    if not chunk: continue
-                    total += len(chunk)
-                    if total > max_bytes: raise ValueError("asset exceeds 120 MB safety limit")
-                    f.write(chunk)
-        if dest.stat().st_size > 1024: return True
-        _DL_ERR = "downloaded file under 1 KB"; return False
-    except Exception as exc:
-        _DL_ERR = " ".join(repr(exc).split())[:300]
-        try: dest.unlink(missing_ok=True)
-        except OSError: pass
-        print(f"[assets] download failed {url}: {exc!r}"); return False
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    for attempt in (1, 2, 3):
+        try:
+            total=0
+            with requests.get(url, stream=True, timeout=(8,30), headers={"User-Agent":_UA_DL}) as r:
+                r.raise_for_status()
+                with open(dest,"wb") as f:
+                    for chunk in r.iter_content(1<<16):
+                        if not chunk: continue
+                        total += len(chunk)
+                        if total > max_bytes: raise ValueError("asset exceeds 120 MB safety limit")
+                        f.write(chunk)
+            if dest.stat().st_size > 1024: return True
+            _DL_ERR = "downloaded file under 1 KB"; return False
+        except Exception as exc:
+            _DL_ERR = " ".join(repr(exc).split())[:300]
+            try: dest.unlink(missing_ok=True)
+            except OSError: pass
+            resp_obj = getattr(exc, "response", None)
+            status = getattr(resp_obj, "status_code", None)
+            retryable = (status and (status == 429 or status >= 500)) or isinstance(
+                exc, (requests.exceptions.ConnectionError, requests.exceptions.ChunkedEncodingError))
+            if attempt < 3 and retryable:
+                wait = min(float((resp_obj.headers.get("Retry-After") if resp_obj is not None else "") or 0) or 1.5 * attempt, 8.0)
+                print(f"[assets] download {url} -> {'HTTP ' + str(status) if status else type(exc).__name__}, "
+                      f"retrying in {wait:g}s", flush=True)
+                time.sleep(wait)
+                continue
+            print(f"[assets] download failed {url}: {exc!r}"); return False
+    return False
 
 def _orientation(w,h):
     r=w/max(1,h)
@@ -187,9 +222,23 @@ def _wikimedia(q,video,w,h):
     label=f"Wikimedia {'video' if video else 'photo'}"
     typ='video' if video else 'bitmap'
     params={'action':'query','format':'json','generator':'search','gsrsearch':f'filetype:{typ} {q}','gsrnamespace':6,'gsrlimit':10,'prop':'imageinfo','iiprop':'url|mime|size|extmetadata','iiurlwidth':1920}
-    r=_http_get('https://commons.wikimedia.org/w/api.php',params=params,headers={'User-Agent':'YouTubeAutomationPipeline/2.0 (educational project)'})
-    if not r: _probe(label,_req_fail()); return None
-    pages=list(((r.json().get('query') or {}).get('pages') or {}).values())
+    # Commons can answer HTTP 200 with an error body (e.g.
+    # cirrussearch-too-busy-error) — that is NOT "0 results". One retry for
+    # transient ones, then name the error in the probe.
+    payload = None
+    for attempt in (1, 2):
+        r=_http_get('https://commons.wikimedia.org/w/api.php',params=params,headers={'User-Agent':_UA_API})
+        if not r: _probe(label,_req_fail()); return None
+        try: payload = r.json() or {}
+        except Exception as exc:
+            _probe(label,f"api error: non-JSON response ({' '.join(str(exc).split())[:120]})"); return None
+        err = payload.get('error')
+        if not err: break
+        code = str(err.get('code') or 'unknown')
+        if attempt == 1 and ('too-busy' in code or 'ratelimit' in code or 'timeout' in code):
+            time.sleep(2.0); continue
+        _probe(label,f"api error: {code}"); return None
+    pages=list(((payload.get('query') or {}).get('pages') or {}).values())
     if not pages: _probe(label,"0 results")
     pages.sort(key=lambda p:_aspect_rank((p.get('imageinfo') or [{}])[0],w,h))
     bad_media=bad_ext=bad_lic=bad_dl=0
