@@ -2,9 +2,10 @@
 """Weekly metrics snapshot — the measurement loop from docs/DEEP_DIVE.md §5.
 
 Reads the channel's recent videos (Data API `videos.list`, 1 unit/call) and
-appends a row per video to content/metrics.csv so growth is reviewed against
-benchmarks (CTR/AVD live in YouTube Studio; this captures the API-visible floor:
-views, likes, comments, subs-relevant signals) and writes a GitHub job summary.
+writes a rolling 30-day snapshot of public-video data to content/metrics.csv
+so growth can be reviewed. Private and unlisted video metadata is excluded; the
+repository is public, so this boundary is deliberate. This does not collect
+channel-level subscriber totals.
 
 Needs the same credentials as upload.py, with the `youtube.readonly` scope
 added to the OAuth consent screen + refresh token (scripts/youtube_oauth.py).
@@ -15,7 +16,6 @@ from __future__ import annotations
 
 import csv
 import datetime as dt
-import json
 import os
 import sys
 from pathlib import Path
@@ -28,6 +28,39 @@ from pipeline.upload import _credentials  # noqa: E402
 
 CSV_PATH = REPO / "content" / "metrics.csv"
 FIELDS = ["snapshot_date", "video_id", "title", "published_at", "views", "likes", "comments"]
+RETENTION_DAYS = 30
+
+
+def _public_video_rows(items: list[dict], today: str) -> list[dict]:
+    """Keep only data for public videos; never export private/unlisted metadata."""
+    rows = []
+    for v in items:
+        if v.get("status", {}).get("privacyStatus") != "public":
+            continue
+        s = v.get("statistics", {})
+        rows.append({
+            "snapshot_date": today,
+            "video_id": v["id"],
+            "title": v["snippet"]["title"][:80],
+            "published_at": v["snippet"]["publishedAt"][:10],
+            "views": s.get("viewCount", 0),
+            "likes": s.get("likeCount", 0),
+            "comments": s.get("commentCount", 0),
+        })
+    return rows
+
+
+def _within_retention(rows: list[dict], today: dt.date) -> list[dict]:
+    cutoff = today - dt.timedelta(days=RETENTION_DAYS)
+    kept = []
+    for row in rows:
+        try:
+            snapshot_date = dt.date.fromisoformat(row["snapshot_date"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        if cutoff <= snapshot_date <= today:
+            kept.append(row)
+    return kept
 
 
 def main() -> int:
@@ -40,14 +73,13 @@ def main() -> int:
     creds = _credentials()
     youtube = build("youtube", "v3", credentials=creds, cache_discovery=False)
 
-    ch = youtube.channels().list(part="contentDetails,statistics", mine=True).execute()
+    ch = youtube.channels().list(part="contentDetails", mine=True).execute()
     items = ch.get("items") or []
     if not items:
         print("no channel for these credentials")
         return 1
-    stats = items[0]["statistics"]
     uploads = items[0]["contentDetails"]["relatedPlaylists"]["uploads"]
-    print(f"channel: subs={stats.get('subscriberCount')} views={stats.get('viewCount')} videos={stats.get('videoCount')}")
+    print("authenticated channel found; collecting public-video metrics only")
 
     video_ids: list[str] = []
     page = None
@@ -60,39 +92,34 @@ def main() -> int:
         if not page or len(video_ids) >= 50:
             break
 
+    today = dt.date.today()
+    today_text = today.isoformat()
     rows = []
     if video_ids:
-        vresp = youtube.videos().list(part="snippet,statistics", id=",".join(video_ids)).execute()
-        today = dt.date.today().isoformat()
-        for v in vresp.get("items", []):
-            s = v.get("statistics", {})
-            rows.append({
-                "snapshot_date": today,
-                "video_id": v["id"],
-                "title": v["snippet"]["title"][:80],
-                "published_at": v["snippet"]["publishedAt"][:10],
-                "views": s.get("viewCount", 0),
-                "likes": s.get("likeCount", 0),
-                "comments": s.get("commentCount", 0),
-            })
+        vresp = youtube.videos().list(
+            part="snippet,statistics,status", id=",".join(video_ids)
+        ).execute()
+        rows = _public_video_rows(vresp.get("items", []), today_text)
 
-    new_file = not CSV_PATH.exists()
-    with open(CSV_PATH, "a", newline="", encoding="utf-8") as f:
+    # The repository and its workflow pages are public. Keep only public-video
+    # metrics, and retain a rolling 30-day window rather than accumulating API data.
+    existing = []
+    if CSV_PATH.exists():
+        with open(CSV_PATH, newline="", encoding="utf-8") as f:
+            existing = list(csv.DictReader(f))
+    combined = _within_retention(existing + rows, today)
+    with open(CSV_PATH, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=FIELDS)
-        if new_file:
-            w.writeheader()
-        w.writerows(rows)
-    print(f"appended {len(rows)} rows to {CSV_PATH.relative_to(REPO)}")
+        w.writeheader()
+        w.writerows(combined)
+    print(f"stored {len(rows)} public-video rows; retained {len(combined)} rows (30-day window)")
 
     if os.environ.get("GITHUB_STEP_SUMMARY"):
         with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as f:
-            f.write(f"## 📈 Metrics snapshot {dt.date.today()}\n\n")
-            f.write(f"Subs: **{stats.get('subscriberCount')}** · lifetime views: {stats.get('viewCount')}\n\n")
-            f.write("| Published | Views | Likes | Title |\n|---|---|---|---|\n")
-            for r in rows[:15]:
-                f.write(f"| {r['published_at']} | {r['views']} | {r['likes']} | {r['title']} |\n")
-            f.write("\nBenchmarks (DEEP_DIVE §3.1): CTR 4–6% healthy · AVD 50% (6–10 min) · "
-                    "Shorts APV 65%+ (<30 s). Check Studio → Reach/Engagement weekly.\n")
+            f.write(f"## Public-video metrics snapshot {today_text}\n\n")
+            f.write(f"Snapshot prepared for {len(rows)} public videos. "
+                    "Private and unlisted metadata is excluded. Download the run artifact; "
+                    "it expires after 30 days.\n")
     return 0
 
 

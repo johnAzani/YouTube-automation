@@ -185,7 +185,7 @@ dead branch by name. Those instructions are updated too.
 | **Before 31 Jan 2027** | Apply to YPP | Thresholds **double** on 1 Feb 2027: 4,000 → **8,000** watch hours (or 20M Shorts views). This is the hardest date in the project. `PLAN.md` §7 is built backwards from it. |
 | Weekly, Mon 03:23 UTC | `keepalive.yml` | GitHub auto-disables scheduled workflows in public repos after **60 days** of inactivity. Never delete this workflow. |
 | Twice daily, 06:14 / 14:14 UTC | `produce.yml` | Renders + uploads approved jobs as private drafts. |
-| Fri 18:41 UTC | `metrics.yml` | Weekly performance snapshot. |
+| Fri 18:41 UTC | `metrics.yml` | Weekly public-video snapshot, artifact-only (30-day retention); excludes private/unlisted videos and does not commit metrics to git. |
 
 Cron is best-effort on GitHub (can lag 15–30 min). That is fine for content.
 
@@ -216,7 +216,7 @@ Cron is best-effort on GitHub (can lag 15–30 min). That is fine for content.
 | Secret | Required for | Notes |
 |---|---|---|
 | `PEXELS_API_KEY`, `PIXABAY_API_KEY` | general pipeline b-roll | Free tier, no card. Optional but they make `pipeline-dry-run` reliable. |
-| `YOUTUBE_CLIENT_SECRET`, `YOUTUBE_REFRESH_TOKEN` | upload + metrics | Mint locally with `scripts/youtube_oauth.py`. |
+| `YOUTUBE_CLIENT_SECRET`, `YOUTUBE_REFRESH_TOKEN` | upload + metrics | Mint with Google OAuth Playground using the Web client; the `youtube_oauth.py` local-server helper requires a computer. |
 
 ⚠️ An unverified Google OAuth client expires its refresh token after **7 days** — the app
 must pass Google's audit for a long-lived token (`docs/DEEP_DIVE.md`). `AUTO_PUBLISH` stays
