@@ -17,7 +17,51 @@ Pexels/Pixabay keys are optional. They are free to obtain from their respective 
 - **The complete downloaded source frame is preserved:** renderers scale proportionally into a safe inset and use a designed navy matte for the unused canvas. No `force_original_aspect_ratio=increase`, source crop, or anisotropic stretch is used.
 - The small camera move stays inside the matte safety margin, rather than zooming through the source edges.
 - In vertical Shorts, a landscape source therefore appears fully visible within the 9:16 frame (with designed top/bottom space); this is preferable to cutting off the scene. A native 9:16 source fills more of the frame naturally.
-- Each run writes `credits.json` and a Shorts/deep-dive `scene-sources.json` with query, provider, URL, licence, dimensions, and whether the authored photo fallback was used. The general pipeline additionally writes a per-scene `sourcing-attempts.json` recording why each provider hit or missed (no API key / request failed / no licensed results / download error) — the diagnostic trail behind MAINTENANCE.md §3. The older `image-search/` stills have no complete per-file license ledger in this checkout; the report marks that gap. Verify their original source/license or replace them with a newly acquired, logged free asset before monetized reuse.
+- Each run writes `credits.json` and a Shorts/deep-dive `scene-sources.json` with query, provider, URL, licence, dimensions, and whether the authored photo fallback was used. The general pipeline additionally writes a per-scene `sourcing-attempts.json` recording why each provider hit or missed (no API key / request failed / no licensed results / download error) — the diagnostic trail behind MAINTENANCE.md §3. The authored `image-search/` stills now have a real per-file ledger — see below.
+
+## The authored-still licence ledger (`image-search/LICENSES.yml`)
+
+`tools/deep_dive.py` and `tools/shorts.py` fall back to the 49 authored stills in `image-search/`
+whenever a stock provider returns nothing. Until 2026-10-22 nothing recorded where those files
+came from, and both tools wrote the same blanket string into `scene-sources.json` for every one
+of them — which said the same thing about a public-domain 1889 photograph and a rights-managed
+Getty frame.
+
+`scripts/licence_ledger.py` derives each file's status from **its own** metadata: EXIF
+`Copyright` / `Artist` / `ImageDescription`, embedded XMP packets, and raw byte markers
+(`gettyimages`, `xmpRights:WebStatement`, `plus:Licensor`, `All Rights Reserved`). Every entry
+is keyed by SHA-256, so a swapped file cannot inherit its predecessor's clearance.
+
+| status | meaning | monetized use |
+|---|---|---|
+| `rights-encumbered` | an embedded rights claim was found | **never** — replace the file |
+| `corrupt` | will not decode | never |
+| `unverified` | no claim found; absence of a claim is not a licence | not until cleared |
+| `cleared` | a human verified the licence and recorded `license` + `source_url` | yes |
+
+Current state, scanned 2026-10-22: **13 rights-encumbered, 1 corrupt, 35 unverified, 0 cleared.**
+The encumbered set is 10 stills carrying embedded Getty Images rights metadata (all Enron) and
+3 carrying an "All Rights Reserved" photographer copyright (Johnstown Flood National Memorial).
+Nine of those 13 are referenced by scene tables (8 Enron, 1 Johnstown), so the Enron deep
+dive and Shorts are **not** safe to monetize until the files are replaced. Only 23 of the 49
+stills are referenced at all — the other 26 are unused inventory. The renderers now say so at
+runtime and write the real status into `scene-sources.json` instead of the blanket string.
+
+```bash
+python scripts/licence_ledger.py check   # what CI runs — drift = non-zero exit
+python scripts/licence_ledger.py scan    # show the evidence per file, write nothing
+python scripts/licence_ledger.py write   # regenerate; preserves human edits for unchanged bytes
+```
+
+`write` preserves `status`, `license`, `source_url`, `attribution`, `verified_on`,
+`verified_by` and `notes` for any file whose SHA-256 is unchanged, so clearing a file is a
+one-line edit that survives regeneration. `scripts/doctor.py` re-derives every status from
+the bytes and fails if the ledger disagrees.
+
+**To clear a still:** find its source page, confirm the licence permits commercial use with
+attribution, set `status: cleared`, and fill in `license`, `source_url` and `attribution`.
+To retire one: replace the file with a newly acquired, logged asset and re-run `write` — the
+new bytes get a fresh `unverified` entry, which is the correct starting point.
 - Downloaded assets are cached under ignored `output/`; they are not committed to Git. The cache is free storage, not a third-party API cost.
 
 ## Every scene query must be verified before it ships

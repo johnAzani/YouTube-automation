@@ -5,6 +5,63 @@ there was no changelog before this file.
 
 ---
 
+## 2026-10-22 — the `image-search/` licence ledger: 13 stills are not ours to publish
+
+`docs/ASSET_SOURCING.md` had carried *"no complete per-file license ledger in this checkout"*
+as known debt. This closes it, and the answer was worse than "unknown".
+
+### Added
+
+- **`image-search/LICENSES.yml`** — a per-file ledger for all 49 authored stills, derived by
+  `scripts/licence_ledger.py` from each file's **own** metadata (EXIF `Copyright`/`Artist`/
+  `ImageDescription`, embedded XMP, raw byte markers for `gettyimages`,
+  `xmpRights:WebStatement`, `plus:Licensor`, `All Rights Reserved`). Every entry is keyed by
+  SHA-256, so a swapped file cannot inherit its predecessor's clearance. Commands: `check`
+  (CI), `scan` (evidence, writes nothing), `write` (regenerate, preserving human edits for
+  unchanged bytes).
+- **`pipeline/licences.py`** — `licence_note()`, `status_of()`, `is_safe_for_monetized_use()`,
+  and two tiers: `unsafe_stills()` (rights-encumbered / corrupt / unrecorded — must not
+  render) and `uncleared_stills()` (everything not `cleared`).
+- **CI**: `dry-run.yml`'s hermetic `checks` job now runs `licence_ledger.py check`.
+- **Doctor**: two new checks — the ledger covers every still and agrees with the bytes
+  (re-derived from the files, not re-reading its own output), plus an explicit
+  ❌ *"authored stills free of embedded rights claims"* while the 13 remain.
+- 11 tests in `tests/test_licence_ledger.py`, including the two that assert `check` can
+  actually fail (missing entry; changed bytes).
+
+### Changed
+
+- **`tools/deep_dive.py` and `tools/shorts.py` now report the real licence status.** Both
+  wrote one blanket string into `scene-sources.json` for every authored still —
+  *"source/license metadata unavailable in current ledger"* — which said the same thing about
+  a public-domain 1889 Library of Congress plate and a rights-managed Getty frame. Each still
+  now gets its own status line, and both renderers print a `!!` block naming any
+  must-not-monetize file while the operator is still watching. Import is guarded, so a
+  bookkeeping module can never break a render.
+
+### What the scan found
+
+**13 rights-encumbered, 1 corrupt, 35 unverified, 0 cleared.**
+
+- 10 stills carry embedded **Getty Images** rights metadata — e.g. EXIF `Copyright: "2002
+  Getty Images"` on `andrew-fastow-enron-cfo-trial-photo-2.jpg`, with a full `plus:Licensor`
+  and `xmpRights:WebStatement` packet.
+- 3 carry `"All Rights Reserved"` photographer copyrights: `Copyright 2014/2021 Steven L.
+  Markos`, Johnstown Flood National Memorial.
+- **Nine of the 13 are referenced by scene tables** (8 Enron, 1 Johnstown). The Enron deep
+  dive and Shorts are therefore **not safe to monetize** until those files are replaced.
+- `johnstown-flood-1889-ruins-destruction-h-5.png` is 68 bytes and will not decode; recorded
+  as `corrupt`, referenced by no scene.
+- `enron-corporation-headquarters-houston-c-3.jpg` and
+  `enron-scandal-2001-newspaper-headlines-f-4.jpg` are byte-identical.
+- Only 23 of the 49 stills are referenced at all; the other 26 are unused inventory.
+
+MAINTENANCE.md §4 now carries these as three separate debt rows (encumbered / unverified /
+dead weight) instead of one "no ledger" row, and the "47 files" figure there was wrong —
+the directory holds 49 files, 8,988,827 bytes.
+
+---
+
 ## 2026-10-22 — queue depth 0004–0006, and a licence hole in the keyless provider
 
 ### Fixed

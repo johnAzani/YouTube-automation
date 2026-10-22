@@ -61,6 +61,12 @@ jobs:
       - name: Unit tests
         run: python -m unittest discover -s tests -v
 
+      # Hermetic: compares image-search/LICENSES.yml against the files on disk. Fails if a
+      # still was added without a ledger entry, or if a file's bytes changed under a
+      # recorded clearance. See docs/ASSET_SOURCING.md and MAINTENANCE.md §4.
+      - name: Authored-still licence ledger
+        run: python scripts/licence_ledger.py check
+
       # The 4 secret checks are expected to fail here; the job passes on the structural ones.
       # `set +e` so a missing API key does not fail CI, then report the score.
       - name: Setup doctor (structural checks)

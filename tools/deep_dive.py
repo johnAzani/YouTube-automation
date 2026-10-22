@@ -23,6 +23,16 @@ from score import generate_score
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0,ROOT)  # shared free-stock acquisition adapters
+# Authored-still licence ledger. Falls back to the old blanket string if the pipeline
+# package is unavailable, so a bookkeeping module can never break a render.
+try:
+    from pipeline.licences import (licence_note as LICENCE_NOTE, unsafe_stills as _UNSAFE_STILLS,
+                            uncleared_stills as _UNCLEARED_STILLS)
+except Exception:  # pragma: no cover - import guard only
+    LICENCE_NOTE = lambda name: ('pre-existing image-search still; source/license metadata '
+                                 'unavailable in current ledger — verify before monetized reuse')
+    _UNSAFE_STILLS = lambda names: []
+    _UNCLEARED_STILLS = lambda names: []
 W, H, FPS = 1280, 720, 24
 CW, CH = 1920, 1080  # 1.5x super-sampled plate canvas for sub-pixel camera
 
@@ -1435,6 +1445,19 @@ def main(key):
             label=f"PHOTO {sc.get('source')} {sc.get('source_size')}" if sc.get('media_path') else sc['img']
         print(f"  scene {sc['t0']:5.1f}-{sc['t1']:5.1f}s | {sc['kicker']:34s} | {label}")
 
+    # Surface licence problems while the operator is still watching, not only in the JSON.
+    used_stills = sorted({sc['img'] for sc in scenes if not sc.get('media_path')})
+    _unsafe = _UNSAFE_STILLS(used_stills)
+    if _unsafe:
+        print(f'  !! {_len(_unsafe)} authored still(s) in this render MUST NOT be monetized '
+              f'(image-search/LICENSES.yml):')
+        for _name, _status in _unsafe:
+            print(f'     - {_name} [{_status}]')
+    _uncleared = [n for n, s in _UNCLEARED_STILLS(used_stills) if s == 'unverified']
+    if _uncleared:
+        print(f'  !  {_len(_uncleared)} further still(s) have unverified provenance — usable '
+              f'for a private draft, not for a monetized upload')
+
     music = os.path.join(AUDIO, f'music-{key}.wav')
     proc = subprocess.Popen(
         [FFMPEG, '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}',
@@ -1518,7 +1541,11 @@ def main(key):
     report=[]
     for si,sc in enumerate(scenes):
         report.append(dict(scene=si+1,query=sc.get('stock_query',''),media=('authored photo fallback' if not sc.get('media_path') or sc.get('used_fallback') else sc.get('media_kind')),
-            provider=sc.get('source','existing story archive'),source_url=sc.get('source_url',''),license=sc.get('license_note','pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse'),
+            provider=sc.get('source','existing story archive'),source_url=sc.get('source_url',''),
+            # Authored stills now report their real ledger status instead of one blanket
+            # "metadata unavailable" string: 10 of the 49 carry embedded Getty rights
+            # metadata and 3 more an "All Rights Reserved" photographer copyright.
+            license=(sc.get('license_note') if sc.get('media_path') else LICENCE_NOTE(sc.get('img',''))),
             dimensions=sc.get('source_size',None),fallback=(not bool(sc.get('media_path')) or bool(sc.get('used_fallback',False))),file=sc.get('media_path',sc.get('img',''))))
     report_dir=os.path.join(ROOT,'output','deep-stock',key); os.makedirs(report_dir,exist_ok=True)
     with open(os.path.join(report_dir,'scene-sources.json'),'w',encoding='utf-8') as f:json.dump(report,f,indent=2,ensure_ascii=False)
