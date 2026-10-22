@@ -67,6 +67,25 @@ class QueueIntegrityTests(unittest.TestCase):
                 self.assertGreaterEqual(doc.word_count, 60, f"{path.name} is too thin to render")
                 self.assertTrue(doc.meta.get("originality"), f"{path.name} lacks the originality checklist")
 
+    def test_asset_queries_cover_every_scene_when_provided(self):
+        """A partial asset_queries list silently drops later scenes onto
+        heading-as-query ("The hook"), which sources nothing usable."""
+        for path in _script_files(QUEUE_DIR):
+            doc = parse_script(path)
+            queries = doc.meta.get("asset_queries") or []
+            with self.subTest(job=path.name):
+                if queries:
+                    self.assertGreaterEqual(
+                        len(queries),
+                        len(doc.scenes),
+                        f"{path.name}: {len(queries)} asset_queries for {len(doc.scenes)} scenes",
+                    )
+                    for sc in doc.scenes:
+                        self.assertTrue(
+                            str(sc.asset_query or "").strip(),
+                            f"{path.name}: scene {sc.index} has no asset query",
+                        )
+
     def test_unverified_drafts_stay_blocked_by_the_originality_gate(self):
         """`status: approved` + `human_rewrite: false` is the dangerous combination — forbid it."""
         for path in _script_files(QUEUE_DIR):

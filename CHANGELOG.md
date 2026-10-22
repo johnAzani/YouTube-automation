@@ -5,6 +5,45 @@ there was no changelog before this file.
 
 ---
 
+## 2026-10-21 — the general pipeline completed its first ever render
+
+`pipeline-dry-run` had never passed. It now does — run 39649621652: all three jobs
+green, general queue path rendered end-to-end in 6m0s **with zero API keys**. Full
+post-mortem in MAINTENANCE.md §3 (2026-10-21).
+
+### Fixed
+
+- **`_cache_path` read `CONFIG.ASSET_CACHE_DIR`, which never existed on `Config`** —
+  only a module-level constant in `config.py`. Every provider that found a licensed
+  candidate crashed with `AttributeError`, `fetch_scene_assets` swallowed it as
+  "source errored", and the hard-fail blamed the scene query. The general pipeline had
+  never completed a single provider download.
+- **Wikimedia downloads fetched originals (100 MB+ TIFFs) instead of the 1920px
+  thumburl it already requested** — and died on `upload.wikimedia.org` 429s. Photos
+  now use `thumburl`; Wikimedia traffic carries a descriptive UA with the repo URL;
+  search and download retry 429/5xx honouring `Retry-After` (bounded ≤8 s).
+- **Dead Openverse video link**: `/v1/videos/` 404s on every call (verified) —
+  dropped from the video provider list.
+- **Commons HTTP-200 error bodies (`cirrussearch-too-busy`) read as "0 results."**
+  API errors are now named in the attempt probe and retried once.
+- **Job 0003's asset queries**: scenes 5 and 7 were swapped (courtroom ↔ bank run),
+  scene 4's had a single junk hit, scene 3's one off-topic plaque. All eight
+  re-verified against the Commons search API for multiple CC0/PD/CC-BY matches.
+
+### Added
+
+- **Per-provider attempt report** — `sourcing-attempts.json` per scene, one stdout
+  line per attempt, and a compact digest inside the hard-fail message so the CI
+  annotation (the only readable runner output) explains itself.
+- `tests/test_config_references.py` — static scan that fails any `CONFIG.<name>`
+  reference which does not resolve, in the hermetic `checks` job.
+- `test_asset_queries_cover_every_scene_when_provided` — a partial `asset_queries`
+  list must not silently drop later scenes onto heading-as-query.
+- `test_cache_path_resolves_into_the_asset_cache_dir` — regression test for the bug
+  above.
+
+---
+
 ## Unreleased — maintenance handover (2026-10-20)
 
 The project moved off the abandoned session branch `arena/79365da2-youtube-automation`

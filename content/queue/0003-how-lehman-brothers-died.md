@@ -29,15 +29,19 @@ description: |
   - Federal Reserve Bank of New York (2008). Statement on AIG credit facility, Sept 16 2008.
     https://www.newyorkfed.org/
   - Sorkin, A. R. (2009). Too Big to Fail. Viking. (narrative of the Sept 12–14 weekend)
+# One query per scene, in scene order (tests assert the coverage). Revised
+# 2026-10-21: every query below was verified against the Wikimedia Commons
+# search API to return multiple CC0 / public-domain / CC-BY matches — the
+# keyless providers must be able to source each scene (MAINTENANCE.md §3).
 asset_queries:
-  - "new york stock exchange trading floor"
-  - "financial district skyscraper manhattan"
-  - "accounting ledger documents close up"
-  - "abandoned empty office building lobby"
-  - "money market fund bank queue"
-  - "federal reserve building washington"
-  - "courtroom federal judge bench"
-  - "wall street street sign new york"
+  - "new york stock exchange trading floor"   # S1 hook — PD floor photos
+  - "financial district skyscraper manhattan" # S2 Lehman's world
+  - "ledger accounting book"                  # S3 balance sheet — CC0/PD ledgers
+  - "stock certificate"                       # S4 Repo 105 — securities paper
+  - "courtroom judge bench"                   # S5 examiner's report
+  - "Federal Reserve Bank of New York"        # S6 the weekend at the NY Fed
+  - "bank run"                                # S7 contagion — run on the funds
+  - "wall street sign"                        # S8 verdict
 originality:
   original_thesis: true      # argues the killer was reported-leverage optics, not one bad weekend
   unique_structure: true     # balance-sheet-first structure: the trick, then the run, then the verdict
