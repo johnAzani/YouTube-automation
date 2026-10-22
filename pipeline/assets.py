@@ -36,6 +36,47 @@ class Asset:
 def _slugify(text):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:48] or "asset"
 
+
+# --- licence safety -------------------------------------------------------
+# Commons reports licences in `imageinfo.extmetadata.LicenseShortName` in
+# ABBREVIATED form: "CC BY-SA 4.0", "CC BY-NC 2.0", "CC BY-ND 4.0".
+#
+# The filter this replaces spelled the disqualifiers out longhand
+# ("share alike", "non-commercial", "no derivatives"). None of those strings
+# appear in the abbreviated forms, and the accept term "cc by" matches every
+# one of them — so the old predicate returned True for share-alike,
+# non-commercial AND no-derivatives images. Wikimedia is the provider that
+# runs with no API key, i.e. the one CI and every keyless run actually uses,
+# so the hole was in the hot path: NC/ND material could be downloaded,
+# rendered into a video and uploaded to a channel being built for
+# monetization. `_internet_archive` and `_openverse` were already correct.
+#
+# Tokenise instead of substring-matching so "-nc", "-sa" and "-nd" are caught
+# without false positives on words that merely contain those letters.
+_LIC_REJECT_TOKENS = {"nc", "sa", "nd"}
+_LIC_REJECT_PHRASES = ("noncommercial", "non-commercial", "sharealike",
+                       "share alike", "share-alike", "noderivatives",
+                       "no derivatives", "no-derivatives")
+_LIC_ACCEPT = ("cc0", "public domain", "cc by", "cc-by")
+
+
+def licence_ok_for_monetized_use(short_name) -> bool:
+    """True only if a Commons `LicenseShortName` is safe to publish commercially.
+
+    Anything unrecognised is refused: an absent or unparseable licence is not a
+    usable licence. Conservative on purpose — a rejected hit costs a retry, a
+    wrongly-accepted one costs a copyright claim on a monetized video.
+    """
+    lic = str(short_name or "").strip().lower()
+    if not lic or lic == "see commons page":
+        return False
+    if any(phrase in lic for phrase in _LIC_REJECT_PHRASES):
+        return False
+    tokens = {t for t in re.split(r"[^a-z0-9]+", lic) if t}
+    if tokens & _LIC_REJECT_TOKENS:
+        return False
+    return any(term in lic for term in _LIC_ACCEPT)
+
 # Per-provider attempt detail for the most recent call. Providers set this on
 # every early exit ("no API key", "0 results", "10 results, 0 licensed-usable",
 # "search request failed: …") so fetch_scene_assets can log *why* a source
@@ -246,9 +287,8 @@ def _wikimedia(q,video,w,h):
         info=(page.get('imageinfo') or [{}])[0]; mime=info.get('mime') or ''
         if (video and not mime.startswith('video/')) or (not video and not mime.startswith('image/')):
             bad_media+=1; continue
-        meta=info.get('extmetadata') or {}; lic=(meta.get('LicenseShortName') or {}).get('value','see Commons page'); lic_norm=str(lic).lower()
-        if any(term in lic_norm for term in ('noncommercial','non-commercial','share alike','share-alike','no derivatives','no-derivatives')) \
-           or not any(term in lic_norm for term in ('cc0','public domain','cc by','cc-by')):
+        meta=info.get('extmetadata') or {}; lic=(meta.get('LicenseShortName') or {}).get('value','see Commons page')
+        if not licence_ok_for_monetized_use(lic):
             bad_lic+=1; continue
         # Photos: Commons has already rendered a 1920px JPEG for the file
         # (iiurlwidth above) — download THAT. Originals are frequently 100+ MB

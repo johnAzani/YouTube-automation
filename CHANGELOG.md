@@ -5,6 +5,53 @@ there was no changelog before this file.
 
 ---
 
+## 2026-10-22 — queue depth 0004–0006, and a licence hole in the keyless provider
+
+### Fixed
+
+- **`_wikimedia()` was accepting share-alike, non-commercial and no-derivatives images.**
+  `docs/ASSET_SOURCING.md` has always promised *"only CC0, public-domain, or CC BY entries
+  are accepted; NC, ND, and ShareAlike entries are skipped"* — the code did not enforce it.
+  The old predicate spelled the disqualifiers out longhand (`share alike`,
+  `non-commercial`, `no derivatives`), but Commons reports `LicenseShortName` in
+  **abbreviated** form: `CC BY-SA 4.0`, `CC BY-NC 2.0`, `CC BY-ND 4.0`. None of the
+  longhand strings appear in those, and the accept term `cc by` matches all of them, so
+  every SA/NC/ND hit passed the filter and was downloaded and rendered. Wikimedia is the
+  provider that runs with **no API key** — i.e. the one a keyless CI run and any
+  no-secrets setup actually use — so the hole was in the hot path for a channel being
+  built for monetization. `_internet_archive` (rejects `-nc`/`/by-sa/`/`-nd`) and
+  `_openverse` (allowlist) were already correct.
+  - New `pipeline/assets.py::licence_ok_for_monetized_use()` tokenises the licence string
+    and refuses any `nc`/`sa`/`nd` token or spelled-out equivalent. Unknown licences are
+    refused. Verified against the real Commons strings: `CC BY-SA 4.0`, `CC BY-NC 2.0`
+    and `CC BY-ND 4.0` all went from *downloaded* to *refused*; `CC0`, `Public domain`
+    and `CC BY 2.0` still pass.
+  - **Consequence to watch:** a scene that was previously sourced from a CC BY-SA hit now
+    correctly returns nothing. Jobs 0004–0006 were written against the tightened rule;
+    job 0003's queries were chosen for CC0/PD/CC-BY coverage and its `pipeline-dry-run`
+    result on this branch is the check.
+
+### Added
+
+- **Three long-form scripts (PLAN.md Phase 0 queue depth):** `0004-the-fund-that-broke-the-fed`
+  (LTCM, 1998), `0005-the-queue-that-broke-a-british-bank` (Northern Rock, 2007),
+  `0006-how-one-trader-deleted-a-bank` (Barings, 1995). ~1,050–1,100 words each, 8 scenes,
+  all `status: draft` with `human_rewrite: false` — the originality gate blocks every one
+  of them until a human fact-checks, rewrites and approves. Each carries its sources in
+  `description` and a maintainer note naming the figures that most need checking.
+- **Per-query sourcing evidence, now enforced.** Each job records
+  `asset_query_verification` in frontmatter: for every `asset_queries` entry, either a
+  Commons probe count (`usable: N ≥ 1`) or a `ci_verified` dry-run id, plus the evidence
+  note. `tests/test_asset_query_verification.py` fails the build if a query is unverified,
+  recorded with zero usable hits, or carries a stale entry. Job 0003 records CI evidence
+  (run `39734567120`, main @ `af63d2c`, job *"General pipeline dry-run (needs network)"*
+  = `success`); 0004–0006 record Commons probes taken 2026-10-22.
+- Rejected-query notes in each job's frontmatter, so nobody re-adds a query that was
+  already proven dead — e.g. `bank of england threadneedle street` returns 4/4 CC BY-SA
+  (zero usable), which is why job 0005 uses the shorter `bank of england london`.
+
+---
+
 ## 2026-10-22 — first-upload path: release tickets actually work now
 
 PR #5 (the green pipeline) merged; attention turned to what blocks the **first upload**

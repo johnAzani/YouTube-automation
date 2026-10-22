@@ -96,6 +96,50 @@ job writes one and why every scene leaves a per-provider attempt digest
 
 ## 3. Incident log
 
+### 2026-10-22 — the keyless provider was downloading non-commercial and share-alike images
+
+**Symptom.** None visible. Nothing failed, which is exactly why it survived.
+
+**Cause.** `_wikimedia()` filtered licences with a substring test:
+
+```python
+if any(term in lic_norm for term in ('noncommercial','non-commercial','share alike',
+                                     'share-alike','no derivatives','no-derivatives')) \
+   or not any(term in lic_norm for term in ('cc0','public domain','cc by','cc-by')):
+```
+
+Commons reports `LicenseShortName` **abbreviated** — `CC BY-SA 4.0`, `CC BY-NC 2.0`,
+`CC BY-ND 4.0`. None of the spelled-out reject strings occur in those, and `cc by` is a
+substring of all three. Every share-alike, non-commercial and no-derivatives hit therefore
+passed and was downloaded, rendered and (in production) uploaded. `docs/ASSET_SOURCING.md`
+had documented the correct behaviour the whole time; the code simply never implemented it.
+
+**Why it mattered more than it looks.** Wikimedia is the provider that needs no API key,
+so it is the one CI uses and the one any setup without `PEXELS_API_KEY`/`PIXABAY_API_KEY`
+falls through to. The two providers with correct filters (Internet Archive, Openverse) are
+not the ones that get exercised. And NC/ND material in a monetized video is a copyright
+claim, not a warning — PLAN.md §6 lists *"Stock footage licence complaints"* as a medium
+risk on the assumption the licence filter works.
+
+**Fix.** `licence_ok_for_monetized_use()` in `pipeline/assets.py` tokenises the licence
+string and refuses any `nc` / `sa` / `nd` token plus the spelled-out equivalents; unknown
+licences are refused. Three tests: two drive the real `_wikimedia()` with a fake Commons
+payload (all-NC/SA/ND result set → no asset, nothing downloaded, probe says `licence=3`;
+plain `CC BY 2.0` → still accepted), one pins the predicate against the full set of real
+Commons licence strings.
+
+**How it was found.** Not by a test that existed — by a test written for a different
+purpose. `tests/test_asset_query_verification.py` needed to state the licence rule that
+the queued jobs' `usable` counts were scored against, and asserting the obvious
+(`assertFalse(_lic_usable("CC BY-SA 4.0"))`) failed on the first run. Worth remembering:
+the check that catches a bug is often the one you write to document an assumption.
+
+**Cost of the fix.** A scene previously served by a CC BY-SA hit now correctly finds
+nothing, so keyless runs may need a query change or a Pexels/Pixabay key. Jobs 0004–0006
+were written against the tightened rule (their frontmatter records the probe counts and
+lists the queries that were rejected during verification). Job 0003's coverage is the
+`pipeline-dry-run` job on this branch.
+
 ### 2026-10-21 — the general pipeline had never once completed a render
 
 **Symptom.** `pipeline-dry-run` (advisory by design) failed on every run since it
@@ -209,7 +253,7 @@ dead branch by name. Those instructions are updated too.
 
 | Debt | Severity | Note |
 |---|---|---|
-| **`image-search/` stills have no licence ledger** | **blocks monetized reuse** | ~10 MB, 47 files. `docs/ASSET_SOURCING.md` already flags this: *"no complete per-file license ledger in this checkout"*. The render writes `license: "…source/license metadata unavailable…verify before monetized reuse"` and `fallback: true` for all 16 Enron scenes. Verify or replace before any monetized upload. Cannot simply delete — `tools/deep_dive.py` / `tools/shorts.py` read these paths. |
+| **`image-search/` stills have no licence ledger** | **blocks monetized reuse** | 8,988,827 bytes (~9.0 MB), **49 files** (48 unique — `enron-corporation-headquarters-houston-c-3.jpg` and `enron-scandal-2001-newspaper-headlines-f-4.jpg` are byte-identical; `johnstown-flood-1889-ruins-destruction-h-5.png` is 68 B and unopenable, so it is dead weight). Counted 2026-10-22; the earlier "47 files" figure here was wrong. `docs/ASSET_SOURCING.md` already flags this: *"no complete per-file license ledger in this checkout"*. The render writes `license: "…source/license metadata unavailable…verify before monetized reuse"` and `fallback: true` for all 16 Enron scenes. Verify or replace before any monetized upload. Cannot simply delete — `tools/deep_dive.py` / `tools/shorts.py` read these paths. |
 | **44.9 MB of media in git** | contradicts README rule 2 | README says *"Never commit media. Git = text only"*, yet `docs/media/*.mp4` (28 MB) and `assets/deepdive/*.mp3` are deliberately un-ignored: Pages serves the first and the authored engines read the second. The rule is really "never commit *generated* media". Repo is well under any GitHub limit; the wording is what's wrong. |
 | **No licence for the repo** | low | `gh repo view` reports `licenseInfo: null`. Fonts carry their own OFL (`assets/fonts/Inter-LICENSE-OFL.txt`). |
 

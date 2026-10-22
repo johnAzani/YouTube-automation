@@ -5,7 +5,7 @@ The video pipeline attempts scene-matched moving footage first, then a scene-mat
 1. **Pexels** — free video and photo API; optional `PEXELS_API_KEY` GitHub Actions secret.
 2. **Pixabay** — free video and photo API; optional `PIXABAY_API_KEY` secret.
 3. **Openverse** — anonymous search; the adapter only accepts CC0, public-domain, and CC BY results for commercial adaptation, and records attribution.
-4. **Wikimedia Commons** — keyless API; only CC0, public-domain, or CC BY entries are accepted; NC, ND, and ShareAlike entries are skipped.
+4. **Wikimedia Commons** — keyless API; only CC0, public-domain, or CC BY entries are accepted; NC, ND, and ShareAlike entries are skipped. The test lives in `pipeline/assets.py::licence_ok_for_monetized_use()`, which tokenises `LicenseShortName` — Commons sends these abbreviated (`CC BY-SA 4.0`, `CC BY-NC 2.0`), and a substring match on "share alike" silently waved them through until 2026-10-22 (MAINTENANCE.md §3).
 5. **Internet Archive** — keyless metadata/search; only items with explicit CC BY/CC0/public-domain rights and downloadable media are considered.
 6. **NASA Image and Video Library** — keyless search; public-domain default, but the item must be checked for third-party material.
 
@@ -19,6 +19,34 @@ Pexels/Pixabay keys are optional. They are free to obtain from their respective 
 - In vertical Shorts, a landscape source therefore appears fully visible within the 9:16 frame (with designed top/bottom space); this is preferable to cutting off the scene. A native 9:16 source fills more of the frame naturally.
 - Each run writes `credits.json` and a Shorts/deep-dive `scene-sources.json` with query, provider, URL, licence, dimensions, and whether the authored photo fallback was used. The general pipeline additionally writes a per-scene `sourcing-attempts.json` recording why each provider hit or missed (no API key / request failed / no licensed results / download error) — the diagnostic trail behind MAINTENANCE.md §3. The older `image-search/` stills have no complete per-file license ledger in this checkout; the report marks that gap. Verify their original source/license or replace them with a newly acquired, logged free asset before monetized reuse.
 - Downloaded assets are cached under ignored `output/`; they are not committed to Git. The cache is free storage, not a third-party API cost.
+
+## Every scene query must be verified before it ships
+
+`content/queue/*.md` jobs carry one `asset_queries` entry per scene. Those queries are the
+only thing that decides whether a scene has a picture in it, and on a runner with no
+`PEXELS_API_KEY`/`PIXABAY_API_KEY` **only the keyless providers run** — so a query that
+looks fine to a human can still source nothing.
+
+Every queued job therefore records an `asset_query_verification` block in frontmatter. For
+each query, either:
+
+- `usable: N` with `N ≥ 1` — a Wikimedia Commons probe (`generator=search`,
+  `filetype:bitmap`, top 4), scored with the licence rule above; or
+- `ci_verified: <run id>` — the `pipeline-dry-run` job actually rendered that scene
+  end to end on a keyless runner.
+
+…plus an `evidence` note naming what was found, and `verified_on` / `method` for the block.
+`tests/test_asset_query_verification.py` fails the build on an unverified query, a query
+recorded with zero usable hits, or a stale entry for a query that no longer exists. Record
+rejected queries too (in the YAML comments above `asset_queries`) so nobody re-adds a
+proven-dead one — e.g. `bank of england threadneedle street` returns 4/4 CC BY-SA and is
+therefore worth **zero** usable hits, while the shorter `bank of england london` returns a
+public-domain 1885–1895 view that passes.
+
+Practical consequence: Commons is dominated by CC BY-SA photography of streets and
+buildings, so real-world queries often have far fewer *usable* hits than hits. A query with
+one usable hit still works, but it means the scene's visual is chosen for you — add a
+Pexels or Pixabay key if a scene keeps rendering the wrong picture.
 
 ## Reproducible controls
 

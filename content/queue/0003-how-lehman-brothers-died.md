@@ -42,6 +42,58 @@ asset_queries:
   - "Federal Reserve Bank of New York"        # S6 the weekend at the NY Fed
   - "bank run"                                # S7 contagion — run on the funds
   - "wall street sign"                        # S8 verdict
+# Evidence behind every query above, recorded 2026-10-22.
+#
+# These eight queries were NOT re-probed against the Commons search API on 2026-10-22 — the
+# sandbox running that check had no TLS egress to commons.wikimedia.org. What they have
+# instead is stronger evidence: the advisory `pipeline-dry-run` job actually rendered this
+# job on a keyless GitHub runner, which means `_wikimedia()` (or a sibling keyless provider)
+# returned a usable, licence-clean asset for every one of the eight scenes.
+#
+# Verified 2026-10-22 via `gh run view 39734567120 --json jobs`:
+#   job "General pipeline dry-run (needs network)" → conclusion=success
+#   on main @ af63d2c4ae4f5c4972ff87027ce7fcdd19461b57
+# `dry-run.yml` renders `content/queue/*.md | head -n1`, and 0003 sorts first, so 0003 is
+# the job that run exercised. (Jobs 0004–0006 are therefore NOT covered by that run — they
+# carry Commons probe counts in their own verification blocks instead.)
+asset_query_verification:
+  verified_on: "2026-10-22"
+  method: "end-to-end: dry-run.yml job 'General pipeline dry-run (needs network)' sourced all 8 scenes with no API keys (commons.wikimedia.org search API not reachable from the recording sandbox)"
+  ci_run: "39734567120"
+  ci_sha: "af63d2c4ae4f5c4972ff87027ce7fcdd19461b57"
+  queries:
+    - query: "new york stock exchange trading floor"
+      verified: true
+      ci_verified: 39734567120
+      evidence: "scene 1 sourced on the keyless runner in dry-run 39734567120 (main @ af63d2c); no Commons probe recorded for this query"
+    - query: "financial district skyscraper manhattan"
+      verified: true
+      ci_verified: 39734567120
+      evidence: "scene 2 sourced on the keyless runner in dry-run 39734567120 (main @ af63d2c); no Commons probe recorded for this query"
+    - query: "ledger accounting book"
+      verified: true
+      ci_verified: 39734567120
+      evidence: "scene 3 sourced on the keyless runner in dry-run 39734567120 (main @ af63d2c); no Commons probe recorded for this query"
+    - query: "stock certificate"
+      verified: true
+      ci_verified: 39734567120
+      evidence: "scene 4 sourced on the keyless runner in dry-run 39734567120 (main @ af63d2c); no Commons probe recorded for this query"
+    - query: "courtroom judge bench"
+      verified: true
+      ci_verified: 39734567120
+      evidence: "scene 5 sourced on the keyless runner in dry-run 39734567120 (main @ af63d2c); no Commons probe recorded for this query"
+    - query: "Federal Reserve Bank of New York"
+      verified: true
+      ci_verified: 39734567120
+      evidence: "scene 6 sourced on the keyless runner in dry-run 39734567120 (main @ af63d2c); no Commons probe recorded for this query"
+    - query: "bank run"
+      verified: true
+      ci_verified: 39734567120
+      evidence: "scene 7 sourced on the keyless runner in dry-run 39734567120 (main @ af63d2c); no Commons probe recorded for this query"
+    - query: "wall street sign"
+      verified: true
+      ci_verified: 39734567120
+      evidence: "scene 8 sourced on the keyless runner in dry-run 39734567120 (main @ af63d2c); no Commons probe recorded for this query"
 originality:
   original_thesis: true      # argues the killer was reported-leverage optics, not one bad weekend
   unique_structure: true     # balance-sheet-first structure: the trick, then the run, then the verdict
