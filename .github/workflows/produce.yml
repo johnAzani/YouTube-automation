@@ -37,6 +37,10 @@ jobs:
       YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
       YOUTUBE_PLAYLIST_ID: ${{ secrets.YOUTUBE_PLAYLIST_ID }}
       AUTO_PUBLISH: ${{ secrets.AUTO_PUBLISH }}
+      # pipeline.run shells out to `gh issue create` for the release ticket
+      # (SETUP.md §6.4). gh needs a token: without GH_TOKEN the call fails
+      # unauthenticated and the QC issue would silently never appear.
+      GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
 

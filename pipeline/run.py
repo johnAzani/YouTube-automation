@@ -256,7 +256,7 @@ def process(path: Path, dry_run: bool) -> dict:
             "privacy_status": up.privacy_status,
         })
         _log(f"uploaded {up.watch_url} (privacy={up.privacy_status})")
-        _open_release_ticket(doc, up.watch_url, up.privacy_status)
+        _open_release_ticket(doc, up.watch_url, up.privacy_status, up.video_id)
 
         # A queue transition is allowed only after a confirmed upload.
         _mark_job_uploaded(path, doc, up.video_id)
@@ -277,7 +277,7 @@ def process(path: Path, dry_run: bool) -> dict:
     return result
 
 
-def _open_release_ticket(doc: ScriptDoc, url: str, privacy: str) -> None:
+def _open_release_ticket(doc: ScriptDoc, url: str, privacy: str, video_id: str = "") -> None:
     """Best-effort GitHub release ticket so a human publishes in 2 clicks."""
     import os
     import subprocess
@@ -285,9 +285,12 @@ def _open_release_ticket(doc: ScriptDoc, url: str, privacy: str) -> None:
     if not os.environ.get("GITHUB_ACTIONS"):
         return
     title = f"Release ticket: {doc.title}"
+    studio = f"https://studio.youtube.com/video/{video_id}/edit" if video_id else ""
     body = (
         f"Video rendered and uploaded.\n\n"
-        f"- Watch/Studio link: {url}\n- Current privacy: `{privacy}`\n\n"
+        f"- Watch link: {url}\n"
+        + (f"- Studio editor: {studio}\n" if studio else "")
+        + f"- Current privacy: `{privacy}`\n\n"
         f"### Human publish checklist\n"
         f"- [ ] Thumbnail reviewed/replaced (CTR lever #1)\n"
         f"- [ ] Title tuned for search + curiosity\n"
@@ -296,13 +299,24 @@ def _open_release_ticket(doc: ScriptDoc, url: str, privacy: str) -> None:
         f"- [ ] Description sources present\n"
         f"- [ ] **Publish / schedule in YouTube Studio**\n"
     )
+    env = {**os.environ}
+    if not env.get("GH_TOKEN") and env.get("GITHUB_TOKEN"):
+        env["GH_TOKEN"] = env["GITHUB_TOKEN"]
     try:
-        subprocess.run(
+        proc = subprocess.run(
             ["gh", "issue", "create", "--title", title, "--body", body],
-            check=False, capture_output=True, text=True,
+            check=False, capture_output=True, text=True, env=env,
         )
     except Exception as exc:  # noqa: BLE001
         _log(f"release ticket creation skipped: {exc!r}")
+        return
+    if proc.returncode != 0:
+        # Never fail the upload over a ticket, but never hide it either —
+        # before this, a missing GH_TOKEN made gh fail completely silently.
+        _log(f"release ticket creation failed (exit {proc.returncode}): "
+             f"{(proc.stderr or proc.stdout or '').strip()[:300]}")
+    else:
+        _log(f"release ticket created: {(proc.stdout or '').strip()[:200]}")
 
 
 def main(argv: list[str] | None = None) -> int:
