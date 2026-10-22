@@ -5,6 +5,32 @@ there was no changelog before this file.
 
 ---
 
+## 2026-10-22 — first-upload path: release tickets actually work now
+
+PR #5 (the green pipeline) merged; attention turned to what blocks the **first upload**
+(SETUP.md §6).
+
+### Fixed
+
+- **The release-ticket Issue would never have appeared.** `_open_release_ticket` shells
+  out to `gh issue create`, but `produce.yml` exported no token — unauthenticated `gh`
+  fails, and the failure was swallowed (`check=False`, output discarded). The workflow
+  now exports `GH_TOKEN: ${{ github.token }}` (job already has `issues: write`), the
+  helper logs success/failure with the reason, and it falls back to `GITHUB_TOKEN`.
+- **Ticket body now links straight to the Studio editor**
+  (`https://studio.youtube.com/video/<id>/edit`), not just the watch URL — the
+  "publish in 2 clicks" promise in SETUP.md §6.4 is literal.
+- **SETUP.md**: §6 pointed at archived `0001-…md` as the template (queue now holds
+  `0003-…`, archive holds 0001/0002) and §5's `YOUTUBE_REFRESH_TOKEN` row cited §3
+  (remasters) instead of §4 (token minting).
+
+### Added
+
+- Three regression tests: ticket opens in Actions with token + Studio link; failure is
+  logged, never raised (upload must not die over a ticket); no ticket outside Actions.
+
+---
+
 ## 2026-10-21 — the general pipeline completed its first ever render
 
 `pipeline-dry-run` had never passed. It now does — run 39649621652: all three jobs

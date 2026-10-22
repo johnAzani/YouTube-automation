@@ -88,14 +88,17 @@ Repo → **Settings → Secrets and variables → Actions** → New repository s
 | `PIXABAY_API_KEY` | from §2 |
 | `YOUTUBE_CLIENT_ID` | Web OAuth client ID from Google Cloud |
 | `YOUTUBE_CLIENT_SECRET` | raw Web OAuth client secret from Google Cloud (not JSON) |
-| `YOUTUBE_REFRESH_TOKEN` | from §3 |
+| `YOUTUBE_REFRESH_TOKEN` | from §4 |
 | `YOUTUBE_PLAYLIST_ID` | optional |
 | `AUTO_PUBLISH` | `false` until the API audit passes; then `true` |
 
 ## 6. First production run
 
-1. Write/approve a script in `content/queue/` (copy `0001-…md` as the template).
-   Checklist: PLAN.md §4.4 — every `originality:` flag must be honestly true.
+1. Write/approve a script in `content/queue/` (copy `content/queue/0003-how-lehman-brothers-died.md`
+   — the required frontmatter shape is documented in `pipeline/script_doc.py`'s docstring).
+   Checklist: PLAN.md §4.4 — every `originality:` flag must be honestly true
+   (`human_rewrite` stays `false` until *you* have verified the facts and rewritten the
+   narration; the originality gate blocks the run until then).
 2. Actions → **Produce video** → Run workflow (or wait for the 06:14/14:14 UTC cron).
 3. Check the run summary + the `render-*` artifact (QC it: hook, pacing, captions).
 4. A **release ticket** Issue appears → open the Studio link → replace thumbnail/title
