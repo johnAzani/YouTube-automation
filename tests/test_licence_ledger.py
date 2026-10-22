@@ -124,6 +124,26 @@ class LicenceLedgerTests(unittest.TestCase):
         self.assertEqual(licences.unsafe_stills(["no-such-file.jpg"], self.ledger),
                          [("no-such-file.jpg", "unrecorded")])
 
+    def test_licence_report_names_hard_blockers_and_summarises_the_rest(self):
+        """This block used to be inline in both renderers, where a `_len`-for-`len` typo
+        shipped once: the unit suite never calls a renderer's `main()`, so only CI's
+        offline render caught it. It now lives in the tested module."""
+        lines = licences.licence_report(
+            ["andrew-fastow-enron-cfo-trial-photo-2.jpg",       # encumbered
+             "johnstown-flood-1889-ruins-destruction-h-5.png",  # corrupt
+             "johnstown-flood-1889-ruins-destruction-h-1.jpg",  # unverified
+             "johnstown-flood-1889-ruins-destruction-h-2.jpg"], # unverified
+            self.ledger,
+        )
+        joined = "\n".join(lines)
+        self.assertIn("2 authored still(s)", joined, "hard blockers listed by name")
+        self.assertIn("andrew-fastow-enron-cfo-trial-photo-2.jpg [rights-encumbered]", joined)
+        self.assertIn("johnstown-flood-1889-ruins-destruction-h-5.png [corrupt]", joined)
+        self.assertIn("2 further still(s) have unverified provenance", joined,
+                      "the larger unverified tier is one summary line, not a wall")
+        # A fully cleared list says nothing at all.
+        self.assertEqual(licences.licence_report([], self.ledger), [])
+
     def test_both_renderers_read_the_ledger_instead_of_the_blanket_string(self):
         """Exercises the actual import path in the tools, not a reimplementation."""
         for mod_name in ("tools.deep_dive", "tools.shorts"):
@@ -131,6 +151,8 @@ class LicenceLedgerTests(unittest.TestCase):
                 mod = __import__(mod_name, fromlist=["LICENCE_NOTE"])
                 self.assertIs(mod.LICENCE_NOTE, licences.licence_note,
                               f"{mod_name} is not wired to pipeline.licences")
+                self.assertIs(mod.LICENCE_REPORT, licences.licence_report,
+                              f"{mod_name} is not wired to licences.licence_report")
                 note = mod.LICENCE_NOTE("andrew-fastow-enron-cfo-trial-photo-2.jpg")
                 self.assertIn("RIGHTS ENCUMBERED", note)
                 source = Path(mod.__file__).read_text(encoding="utf-8")
@@ -139,6 +161,9 @@ class LicenceLedgerTests(unittest.TestCase):
                     source.split("LICENCE_NOTE = lambda")[0],
                     f"{mod_name} still hard-codes the blanket licence string",
                 )
+                # The warning must be produced by the tested helper, not re-implemented.
+                self.assertNotIn("_UNSAFE_STILLS", source,
+                                 f"{mod_name} re-implements the warning inline again")
 
     def test_check_command_passes_on_a_clean_tree(self):
         proc = subprocess.run(

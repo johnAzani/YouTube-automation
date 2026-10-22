@@ -26,13 +26,11 @@ sys.path.insert(0,ROOT)  # shared free-stock acquisition adapters
 # Authored-still licence ledger. Falls back to the old blanket string if the pipeline
 # package is unavailable, so a bookkeeping module can never break a render.
 try:
-    from pipeline.licences import (licence_note as LICENCE_NOTE, unsafe_stills as _UNSAFE_STILLS,
-                            uncleared_stills as _UNCLEARED_STILLS)
+    from pipeline.licences import licence_note as LICENCE_NOTE, licence_report as LICENCE_REPORT
 except Exception:  # pragma: no cover - import guard only
     LICENCE_NOTE = lambda name: ('pre-existing image-search still; source/license metadata '
                                  'unavailable in current ledger — verify before monetized reuse')
-    _UNSAFE_STILLS = lambda names: []
-    _UNCLEARED_STILLS = lambda names: []
+    LICENCE_REPORT = lambda names: []
 W, H, FPS = 1280, 720, 24
 CW, CH = 1920, 1080  # 1.5x super-sampled plate canvas for sub-pixel camera
 
@@ -1446,17 +1444,8 @@ def main(key):
         print(f"  scene {sc['t0']:5.1f}-{sc['t1']:5.1f}s | {sc['kicker']:34s} | {label}")
 
     # Surface licence problems while the operator is still watching, not only in the JSON.
-    used_stills = sorted({sc['img'] for sc in scenes if not sc.get('media_path')})
-    _unsafe = _UNSAFE_STILLS(used_stills)
-    if _unsafe:
-        print(f'  !! {_len(_unsafe)} authored still(s) in this render MUST NOT be monetized '
-              f'(image-search/LICENSES.yml):')
-        for _name, _status in _unsafe:
-            print(f'     - {_name} [{_status}]')
-    _uncleared = [n for n, s in _UNCLEARED_STILLS(used_stills) if s == 'unverified']
-    if _uncleared:
-        print(f'  !  {_len(_uncleared)} further still(s) have unverified provenance — usable '
-              f'for a private draft, not for a monetized upload')
+    for _line in LICENCE_REPORT(sorted({sc['img'] for sc in scenes if not sc.get('media_path')})):
+        print(_line)
 
     music = os.path.join(AUDIO, f'music-{key}.wav')
     proc = subprocess.Popen(

@@ -97,6 +97,30 @@ def licence_note(filename: str, ledger: dict[str, dict] | None = None) -> str:
     return note
 
 
+def licence_report(filenames, ledger: dict[str, dict] | None = None) -> list[str]:
+    """Console lines naming stills that are not cleared for monetized use.
+
+    Lives here rather than inline in the two renderers because inline versions of this
+    block were exactly where a `NameError` (`_len` for `len`) shipped once already — the
+    unit suite never calls a renderer's `main()`, so only CI's offline render caught it.
+    Two tiers, so the warning stays readable: hard blockers are listed by name, and the
+    much larger `unverified` set is summarised in one line.
+    """
+    ledger = load_ledger() if ledger is None else ledger
+    names = [str(n) for n in filenames]
+    hard = unsafe_stills(names, ledger)
+    unverified = [n for n, s in uncleared_stills(names, ledger) if s == "unverified"]
+    lines: list[str] = []
+    if hard:
+        lines.append(f"  !! {len(hard)} authored still(s) in this render MUST NOT be monetized "
+                     f"(image-search/LICENSES.yml):")
+        lines.extend(f"     - {name} [{status}]" for name, status in hard)
+    if unverified:
+        lines.append(f"  !  {len(unverified)} further still(s) have unverified provenance — "
+                     f"usable for a private draft, not for a monetized upload")
+    return lines
+
+
 def unsafe_stills(filenames, ledger: dict[str, dict] | None = None) -> list[tuple[str, str]]:
     """Hard blockers: [(filename, status)] for files that must not be rendered at all.
 
