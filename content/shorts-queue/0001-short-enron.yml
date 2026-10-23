@@ -1,8 +1,6 @@
-id: "short-0001"
+short: "short-enron"
 edition: "short-enron"
-slug: "short-0001-how-enron-died"
-title: "How Enron Faked $70 Billion (In Under 60 Seconds)"
-format: "short"
+status: "approved"
 approved: true
 replace: true
 legacy_video_ids:

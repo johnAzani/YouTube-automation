@@ -199,9 +199,13 @@ def select_next_queued_short(queue_dir: Path | None = None) -> tuple[Path, str] 
         return None
     for path in sorted(qdir.glob("*.yml")):
         data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
-        if str(data.get("status", "")).strip().lower() != "approved":
+        is_approved = (
+            str(data.get("status", "")).strip().lower() == "approved"
+            or bool(data.get("approved"))
+        )
+        if not is_approved:
             continue
-        key = str(data.get("short", "")).strip()
+        key = str(data.get("short") or data.get("edition") or "").strip()
         if not key:
             continue
         return path, key
