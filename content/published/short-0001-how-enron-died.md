@@ -7,10 +7,10 @@ format: short
 niche: finance and business
 category: education
 published_on: "2026-10-23"
-youtube_video_id: "4Z29-h0j2r4"
-youtube_shorts_url: "https://www.youtube.com/shorts/4Z29-h0j2r4"
-youtube_watch_url: "https://youtu.be/4Z29-h0j2r4"
-youtube_studio_url: "https://studio.youtube.com/video/4Z29-h0j2r4/edit"
+youtube_video_id: "DLEWL6dm5lo"
+youtube_shorts_url: "https://www.youtube.com/shorts/DLEWL6dm5lo"
+youtube_watch_url: "https://youtu.be/DLEWL6dm5lo"
+youtube_studio_url: "https://studio.youtube.com/video/DLEWL6dm5lo/edit"
 privacy_status: "private"
 width: 720
 height: 1280
@@ -34,9 +34,9 @@ Primary & archival sources:
 
 ## Custom Thumbnail Apply Results
 
+- `DLEWL6dm5lo`: `ok`
 - `4Z29-h0j2r4`: `ok`
 - `M7n0Xou92r0`: `ok`
-- `yLUOiczlP7Q`: `HttpError: <HttpError 404 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=yLUOiczlP7Q&alt=json&uploadType=media returned "The video that you are trying to insert a thumbnail image `
 
 
 ## Channel Video Status Audit
@@ -44,14 +44,25 @@ Primary & archival sources:
 ```json
 [
   {
-    "id": "4Z29-h0j2r4",
+    "id": "DLEWL6dm5lo",
     "title": "How Enron Faked $70 Billion in Plain Sight #Shorts",
-    "publishedAt": "2026-10-23T13:51:12Z",
+    "publishedAt": "2026-10-23T16:34:42Z",
     "uploadStatus": "uploaded",
     "privacyStatus": "private",
     "rejectionReason": "",
     "failureReason": "",
     "duration": "P0D",
+    "thumbMaxres": true
+  },
+  {
+    "id": "4Z29-h0j2r4",
+    "title": "How Enron Faked $70 Billion in Plain Sight #Shorts",
+    "publishedAt": "2026-10-23T13:51:12Z",
+    "uploadStatus": "processed",
+    "privacyStatus": "private",
+    "rejectionReason": "",
+    "failureReason": "",
+    "duration": "PT53S",
     "thumbMaxres": true
   },
   {
