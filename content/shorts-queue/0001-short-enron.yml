@@ -1,0 +1,9 @@
+short: "short-enron"
+edition: "short-enron"
+status: "approved"
+approved: true
+replace: true
+legacy_video_ids:
+  - "4Z29-h0j2r4"
+  - "M7n0Xou92r0"
+notes: "Restore signature sapphire-blue grade across all full-bleed B-roll scenes, frosted blue cards, and custom + embedded scroll-stopping thumbnails"

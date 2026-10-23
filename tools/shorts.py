@@ -90,48 +90,85 @@ def duration(path):
             return int(hh)*3600 + int(mm)*60 + float(rest)
     raise SystemExit(f'no duration for {path}')
 
-# ------------------------ natural documentary color + full-bleed 9:16 plates ----
-_GAMMA_LUT = [min(255, max(0, int(round(255.0 * ((i / 255.0) ** 0.88))))) for i in range(256)]
+# ------------------------ signature sapphire-blue grade + full-bleed 9:16 plates ----
+_GAMMA_LUT = [min(255, max(0, int(round(255.0 * ((i / 255.0) ** 0.84))))) for i in range(256)]
 
-def grade_cinema(im, tint_warm=0.0):
-    """Preserve real-world colors and shadow detail while adding crisp cinema polish."""
-    rgb = im.convert('RGB')
-    # Gentle midtone/shadow lift so dark interiors & night skylines stay vivid on phone OLEDs
-    lifted = rgb.point(_GAMMA_LUT * 3)
-    vivid = ImageEnhance.Color(lifted).enhance(1.10)
-    crisp = ImageEnhance.Contrast(vivid).enhance(1.06)
+
+def _duotone_luts():
+    shadow, mid, high = (10, 28, 70), (20, 70, 150), (190, 225, 255)
+    lr, lg, lb = [], [], []
+    for i in range(256):
+        t = i / 255.0
+        if t < 0.54:
+            u = t / 0.54
+            c = [shadow[k] + (mid[k] - shadow[k]) * u for k in range(3)]
+        else:
+            u = (t - 0.54) / 0.46
+            c = [mid[k] + (high[k] - mid[k]) * (u ** 1.08) for k in range(3)]
+        lr.append(int(c[0]))
+        lg.append(int(c[1]))
+        lb.append(int(c[2]))
+    return lr, lg, lb
+
+
+LUT_R, LUT_G, LUT_B = _duotone_luts()
+
+
+def grade_blue(im, tint_warm=0.0, keep_crimson=False):
+    """Signature sapphire-blue documentary grade over bright full-bleed real video/photos."""
+    rgb = im.convert('RGB').point(_GAMMA_LUT * 3)
+    lum = rgb.convert('L')
+    duo = Image.merge('RGB', (lum.point(LUT_R), lum.point(LUT_G), lum.point(LUT_B)))
+    out = Image.blend(rgb, duo, 0.80)
     if tint_warm > 0:
-        lum = crisp.convert('L')
         warm = Image.merge('RGB', (
-            lum.point(lambda v: min(255, int(v * 1.20))),
-            lum.point(lambda v: int(v * 0.80)),
-            lum.point(lambda v: int(v * 0.45)),
+            lum.point(lambda v: min(255, int(v * 1.24))),
+            lum.point(lambda v: int(v * 0.70)),
+            lum.point(lambda v: int(v * 0.30)),
         ))
-        crisp = Image.blend(crisp, warm, min(0.28, tint_warm))
-    return crisp
+        out = Image.blend(out, warm, min(0.32, tint_warm))
+    out = out.point(lambda v: max(0, min(255, int(128 + (v - 128) * 1.12))))
+    if keep_crimson:
+        # Preserve glowing red market-crash candlesticks over the deep sapphire-blue grade
+        r_ch, g_ch, _b_ch = rgb.split()
+        red_mask = Image.eval(
+            Image.composite(r_ch, Image.new('L', rgb.size, 0), r_ch),
+            lambda v: v,
+        )
+        from PIL import ImageChops
+        diff = ImageChops.subtract(r_ch, g_ch)
+        mask = diff.point(lambda d: 0 if d < 62 else min(235, int((d - 62) * 3.2)))
+        out = Image.composite(rgb, out, mask.filter(ImageFilter.GaussianBlur(1.5)))
+    return out
+
+
+grade_cinema = grade_blue
+
 
 def _build_edge_scrim():
-    """Subtle top/bottom gradient only for HUD & YouTube chrome readability; 0% center dim."""
+    """Subtle deep-blue top/bottom gradient for HUD & YouTube chrome readability."""
     scrim = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     px = scrim.load()
     for y in range(H):
         if y < 185:
             u = 1.0 - (y / 185.0)
-            a = int(84 * (u ** 1.4))
+            a = int(88 * (u ** 1.4))
         elif y > 1000:
             u = (y - 1000) / float(H - 1000)
-            a = int(132 * (u ** 1.35))
+            a = int(136 * (u ** 1.35))
         else:
             a = 0
         if a > 0:
             for x in range(W):
-                px[x, y] = (3, 9, 22, a)
+                px[x, y] = (3, 10, 28, a)
     return scrim
+
 
 EDGE_SCRIM = _build_edge_scrim()
 
+
 def prep_plate(path, tint_warm=0.0):
-    """Full-bleed 9:16 cover plate (1080x1920) — zero black bars, full natural color."""
+    """Full-bleed 9:16 cover plate (1080x1920) graded in signature sapphire-blue."""
     raw = Image.open(path).convert('RGB')
     scale = max(CW / max(1, raw.width), CH / max(1, raw.height))
     sw = max(CW, int(round(raw.width * scale)))
@@ -140,8 +177,9 @@ def prep_plate(path, tint_warm=0.0):
     x0 = max(0, (sw - CW) // 2)
     y0 = max(0, (sh - CH) // 2)
     cropped = resized.crop((x0, y0, x0 + CW, y0 + CH))
-    sharpened = cropped.filter(ImageFilter.UnsharpMask(radius=1.0, percent=85, threshold=3))
-    return grade_cinema(sharpened, tint_warm=tint_warm)
+    sharpened = cropped.filter(ImageFilter.UnsharpMask(radius=1.0, percent=88, threshold=3))
+    keep_red = 'crash-poster' in os.path.basename(str(path))
+    return grade_blue(sharpened, tint_warm=tint_warm, keep_crimson=keep_red)
 
 def video_plate_reader(path, skip_intro=1.5):
     """Stream full-bleed 9:16 RGB video frames in natural documentary color,
@@ -203,7 +241,7 @@ def read_video_plate(proc):
         if not chunk:
             return None
         data.extend(chunk)
-    return Image.frombytes('RGB', (CW, CH), bytes(data))
+    return grade_blue(Image.frombytes('RGB', (CW, CH), bytes(data)))
 
 def stop_video_plate(proc):
     if not proc:

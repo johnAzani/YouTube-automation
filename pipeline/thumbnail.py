@@ -87,16 +87,40 @@ def generate_short_scroll_stopper_thumbnail(
 
     tw, th = 1280, 720
     if bg_path is not None and bg_path.is_file():
+        from PIL import ImageChops
+
         raw = Image.open(bg_path).convert("RGB")
         scale = max(tw / max(1, raw.width), th / max(1, raw.height))
         sw, sh = max(tw, int(round(raw.width * scale))), max(th, int(round(raw.height * scale)))
         base = raw.resize((sw, sh), Image.Resampling.LANCZOS)
         x0, y0 = (sw - tw) // 2, (sh - th) // 2
         base = base.crop((x0, y0, x0 + tw, y0 + th))
-        base = ImageEnhance.Color(base).enhance(1.18)
-        base = ImageEnhance.Contrast(base).enhance(1.12)
+        gamma = [min(255, max(0, int(round(255.0 * ((i / 255.0) ** 0.84))))) for i in range(256)]
+        lifted = base.point(gamma * 3)
+        shadow, mid, high = (4, 14, 40), (16, 62, 136), (186, 222, 255)
+        lr, lg, lb = [], [], []
+        for i in range(256):
+            t = i / 255.0
+            if t < 0.54:
+                u = t / 0.54
+                c = [shadow[k] + (mid[k] - shadow[k]) * u for k in range(3)]
+            else:
+                u = (t - 0.54) / 0.46
+                c = [mid[k] + (high[k] - mid[k]) * (u ** 1.08) for k in range(3)]
+            lr.append(int(c[0]))
+            lg.append(int(c[1]))
+            lb.append(int(c[2]))
+        lum = lifted.convert("L")
+        duo = Image.merge("RGB", (lum.point(lr), lum.point(lg), lum.point(lb)))
+        blue_graded = Image.blend(lifted, duo, 0.82)
+        blue_graded = ImageEnhance.Contrast(blue_graded).enhance(1.12)
+        # Preserve glowing red crash candlesticks cutting across the deep sapphire-blue grade
+        r_ch, g_ch, _b_ch = lifted.split()
+        diff = ImageChops.subtract(r_ch, g_ch)
+        red_mask = diff.point(lambda d: 0 if d < 62 else min(235, int((d - 62) * 3.2)))
+        base = Image.composite(lifted, blue_graded, red_mask.filter(ImageFilter.GaussianBlur(1.5)))
     else:
-        base = Image.new("RGB", (tw, th), (12, 24, 52))
+        base = Image.new("RGB", (tw, th), (12, 32, 74))
 
     # Focused center contrast glow so giant type pops at 16:1 contrast while keeping background vivid
     scrim = Image.new("RGBA", (tw, th), (0, 0, 0, 0))
