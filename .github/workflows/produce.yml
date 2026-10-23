@@ -11,13 +11,17 @@ on:
         description: "Specific script file in content/queue/ (blank = next approved)"
         required: false
         default: ""
+      short:
+        description: "Authored 9:16 Short key to render & upload (e.g. short-enron)"
+        required: false
+        default: ""
       dry_run:
         description: "Render only, skip upload"
         type: boolean
         default: false
 
 permissions:
-  contents: write        # move queue file -> published/
+  contents: write        # move queue file / record published receipt in content/published/
   issues: write          # release tickets
 
 concurrency:
@@ -57,13 +61,15 @@ jobs:
         uses: actions/cache@v4
         with:
           path: output/asset_cache
-          key: assets-${{ hashFiles('content/queue/*.md') }}
+          key: assets-${{ hashFiles('content/queue/*.md', 'tools/shorts.py') }}
           restore-keys: |
             assets-
 
-      - name: Render next approved job
+      - name: Render and upload target edition
         run: |
-          if [ -n "${{ inputs.job }}" ]; then
+          if [ -n "${{ inputs.short }}" ]; then
+            python -m pipeline.short_release --short "${{ inputs.short }}"
+          elif [ -n "${{ inputs.job }}" ]; then
             python -m pipeline.run --job "content/queue/${{ inputs.job }}"
           else
             python -m pipeline.run --next

@@ -5,6 +5,12 @@ there was no changelog before this file.
 
 ---
 
+## 2026-10-23 — branch consolidation onto `main`, 100% Enron rights clearance, and first YouTube Short release pipeline
+
+- Consolidate all unmerged research, drafts, and strategy work (PR #11) onto `main`, close superseded partial draft PR #10, and delete all stale `arena/*` remote branches.
+- Expand `tools/make_plates.py` with five deterministic procedural editorial illustrations (`enron-market-board-plate-1.png`, `enron-ledger-grid-plate-1.png`, `enron-pipeline-corridor-plate-1.png`, `enron-spe-network-plate-1.png`, `enron-courtroom-columns-plate-1.png`) registered as `status: cleared` in `image-search/LICENSES.yml`, eliminating all remaining Getty/unverified stills across both `short-enron` (10 unique cleared plates) and `deep-dive-enron` (16 scenes), fix foreshadow tease timestamps in `short-enron`, and refresh `docs/media/*`.
+- Fix vertical (`9:16`) subtitle `PlayResX`/`PlayResY` scaling in `pipeline/assemble.py`, add native `#Shorts` metadata formatting in `pipeline/metadata.py`, update thumbnail branding to `Money, Explained`, and add `pipeline/short_release.py` + `produce.yml` (`inputs.short`) with fail-closed stream/aspect/duration/licence gates, YouTube upload, release ticket creation, and published receipt tracking under `content/published/`.
+
 ## 2026-10-23 — upload checklist for 0007, and a factual error caught in the draft
 
 - `docs/UPLOAD_0007_CHECKLIST.md` — the twelve load-bearing claims with exact values and the

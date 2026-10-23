@@ -30,14 +30,14 @@ def _safe_plate(doc: ScriptDoc, background: Path | None, out: Path,
         render_text_plate(
             out,
             title=doc.thumb_text,
-            subtitle="YouTube Automation Lab",
+            subtitle="Money, Explained",
             background=bg,
             bg_color=bg_color,
             title_size=title_size,
         )
     except Exception:
         try:
-            render_text_plate(out, title=doc.thumb_text, subtitle="YouTube Automation Lab", bg_color=bg_color)
+            render_text_plate(out, title=doc.thumb_text, subtitle="Money, Explained", bg_color=bg_color)
         except Exception:
             from PIL import Image
 

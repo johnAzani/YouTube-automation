@@ -38,6 +38,13 @@ def format_chapters(chapters: list[tuple[str, str]]) -> str:
     return "\n".join(f"{stamp} {name}" for stamp, name in chapters)
 
 
+def _hashtags_for_doc(doc: ScriptDoc) -> list[str]:
+    base = [f"#{t.replace(' ', '')}" for t in doc.tags if t.strip() and t.strip().lower() != "shorts"]
+    if doc.format == "short":
+        return ["#Shorts", *base[:3]]
+    return base[:3] or ["#documentary"]
+
+
 def build_description(doc: ScriptDoc, scene_durations: list[float] | None = None,
                       extra_links: str = "") -> str:
     """Full SEO description. First 150–157 chars are the search snippet — the
@@ -50,13 +57,13 @@ def build_description(doc: ScriptDoc, scene_durations: list[float] | None = None
         "",
         body.strip()[:1200] if body else "",
     ]
-    if scene_durations:
+    if scene_durations and doc.format != "short":
         chapters = format_chapters(chapters_from_scenes(doc, scene_durations))
         parts += ["", "CHAPTERS", chapters]
     if extra_links:
         parts += ["", extra_links]
-    tags = " ".join(f"#{t.replace(' ', '')}" for t in doc.tags[:3])
-    parts += ["", tags or "#documentary"]
+    tags = " ".join(_hashtags_for_doc(doc))
+    parts += ["", tags]
     return "\n".join(p for p in parts if p is not None)[:4900]
 
 
@@ -97,7 +104,7 @@ def write_metadata_pack(doc: ScriptDoc, scene_durations: list[float], out_dir: P
         "description": build_description(doc, scene_durations),
         "tags": build_tags(doc),
         "chapters": [{"time": s, "name": n} for s, n in chapters],
-        "hashtags": [f"#{t.replace(' ', '')}" for t in doc.tags[:3]] or ["#documentary"],
+        "hashtags": _hashtags_for_doc(doc),
         "publish_hint": "Schedule 2–4h before your audience peak (Analytics → Audience). "
                         "Pinned comment + community post + end screen within the first hour. "
                         "Do not change title/thumbnail in the first 24h.",

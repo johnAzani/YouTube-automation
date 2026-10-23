@@ -14,7 +14,7 @@
 #
 # Only `cleared` files may appear in monetized output. See docs/ASSET_SOURCING.md.
 generated_by: scripts/licence_ledger.py
-counts: {rights-encumbered: 13, corrupt: 1, unverified: 35, cleared: 5, total: 54}
+counts: {rights-encumbered: 13, corrupt: 1, unverified: 35, cleared: 10, total: 59}
 files:
   - file: "andrew-fastow-enron-cfo-trial-photo-1.jpg"
     sha256: "65e2e05397988b8e602059c0e552e820ea2dfe5abe7de85841bd55c9d04a0e19"
@@ -95,6 +95,54 @@ files:
     dimensions: "612x398"
     status: "rights-encumbered"
     evidence: "Getty Images rights metadata embedded in the file"
+  - file: "enron-courtroom-columns-plate-1.png"
+    sha256: "955298b3e98e5fed8361a681bb1052d1a6c88291fbf000dad5166e679df48174"
+    bytes: 42098
+    dimensions: "1280x720"
+    status: "cleared"
+    license: "Original procedural artwork — generated in this project; no third-party inputs"
+    source_url: "https://github.com/johnAzani/YouTube-automation/blob/main/tools/make_plates.py"
+    attribution: "Original procedural editorial illustration; tools/make_plates.py"
+    verified_on: "2026-10-23"
+    verified_by: "Code provenance and repeat-generation byte comparison"
+    evidence: "no embedded rights claim and no provenance metadata"
+    notes: "Abstract neoclassical colonnade illustration, not a photograph of a courthouse or courtroom. No downloaded imagery, fonts, or AI-generated assets."
+  - file: "enron-ledger-grid-plate-1.png"
+    sha256: "4d6d7ca12aca60386013c11c644cb57c7c940094fb0dad5998ca2d18df267572"
+    bytes: 7076
+    dimensions: "1280x720"
+    status: "cleared"
+    license: "Original procedural artwork — generated in this project; no third-party inputs"
+    source_url: "https://github.com/johnAzani/YouTube-automation/blob/main/tools/make_plates.py"
+    attribution: "Original procedural editorial illustration; tools/make_plates.py"
+    verified_on: "2026-10-23"
+    verified_by: "Code provenance and repeat-generation byte comparison"
+    evidence: "no embedded rights claim and no provenance metadata"
+    notes: "Abstract dual-folio accounting ledger illustration, not a photograph of corporate records. No downloaded imagery, fonts, or AI-generated assets."
+  - file: "enron-market-board-plate-1.png"
+    sha256: "3b361c8b57b936cd29c30786d1796d3ec1baeabe29b5cb98f81fcad04595fd4c"
+    bytes: 12796
+    dimensions: "1280x720"
+    status: "cleared"
+    license: "Original procedural artwork — generated in this project; no third-party inputs"
+    source_url: "https://github.com/johnAzani/YouTube-automation/blob/main/tools/make_plates.py"
+    attribution: "Original procedural editorial illustration; tools/make_plates.py"
+    verified_on: "2026-10-23"
+    verified_by: "Code provenance and repeat-generation byte comparison"
+    evidence: "no embedded rights claim and no provenance metadata"
+    notes: "Abstract market candlestick and volume board illustration, not a photograph of any trading floor. No downloaded imagery, fonts, or AI-generated assets."
+  - file: "enron-pipeline-corridor-plate-1.png"
+    sha256: "84ff39f8d9008d54f2ddc7d0ae73be24cb8c62e1d9b5b7ee56ac76f63d118162"
+    bytes: 17850
+    dimensions: "1280x720"
+    status: "cleared"
+    license: "Original procedural artwork — generated in this project; no third-party inputs"
+    source_url: "https://github.com/johnAzani/YouTube-automation/blob/main/tools/make_plates.py"
+    attribution: "Original procedural editorial illustration; tools/make_plates.py"
+    verified_on: "2026-10-23"
+    verified_by: "Code provenance and repeat-generation byte comparison"
+    evidence: "no embedded rights claim and no provenance metadata"
+    notes: "Abstract dusk industrial pipeline corridor illustration, not a photograph of Texas infrastructure. No downloaded imagery, fonts, or AI-generated assets."
   - file: "enron-scandal-2001-newspaper-headlines-f-1.jpg"
     sha256: "9d13b5c3fca81c25f2fe896ca5117cadf2dd84cb48a5e1369ba73b0748d06aa5"
     bytes: 30670
@@ -126,6 +174,18 @@ files:
     dimensions: "612x408"
     status: "rights-encumbered"
     evidence: "Getty Images rights metadata embedded in the file"
+  - file: "enron-spe-network-plate-1.png"
+    sha256: "0e5f5c52cb5d167b1fcd28de04c7276b061d63fcedfe49cba313a9a10d71a6a4"
+    bytes: 10708
+    dimensions: "1280x720"
+    status: "cleared"
+    license: "Original procedural artwork — generated in this project; no third-party inputs"
+    source_url: "https://github.com/johnAzani/YouTube-automation/blob/main/tools/make_plates.py"
+    attribution: "Original procedural editorial illustration; tools/make_plates.py"
+    verified_on: "2026-10-23"
+    verified_by: "Code provenance and repeat-generation byte comparison"
+    evidence: "no embedded rights claim and no provenance metadata"
+    notes: "Abstract off-balance-sheet entity network diagram illustration, not a photograph of documents. No downloaded imagery, fonts, or AI-generated assets."
   - file: "houston-skyline-plate-1.png"
     sha256: "c7d6699f858f0167fd9c40f07b43dbbe2a208fdf097edfd98a430cdc60d46f1a"
     bytes: 13786
