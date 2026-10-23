@@ -157,3 +157,35 @@ def upload(
         watch_url=f"https://youtu.be/{video_id}",
         auto_published=stored_privacy == "public",
     )
+
+
+def delete_video(video_id: str) -> bool:
+    """Best-effort delete of a superseded private YouTube upload if scope allows."""
+    vid = (video_id or "").strip()
+    if not vid:
+        return False
+    try:
+        from googleapiclient.discovery import build
+        from google.auth.transport.requests import Request
+        from google.oauth2.credentials import Credentials
+
+        client_id, client_secret = _client_credentials(
+            CONFIG.youtube_client_id,
+            CONFIG.youtube_client_secret,
+        )
+        creds = Credentials(
+            token=None,
+            refresh_token=CONFIG.youtube_refresh_token,
+            token_uri="https://oauth2.googleapis.com/token",
+            client_id=client_id,
+            client_secret=client_secret,
+        )
+        creds.refresh(Request())
+        youtube = build("youtube", "v3", credentials=creds, cache_discovery=False)
+        youtube.videos().delete(id=vid).execute()
+        print(f"[upload] deleted superseded video {vid}")
+        return True
+    except Exception as exc:  # noqa: BLE001
+        print(f"[upload] keeping prior video {vid} (delete skipped/not permitted): {exc!r}")
+        return False
+

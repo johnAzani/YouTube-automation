@@ -1,91 +1,91 @@
 [
   {
     "scene": 1,
-    "query": "lower manhattan skyline night",
+    "query": "financial district night city",
     "media": "authored photo fallback",
     "provider": "existing story archive",
     "source_url": "",
-    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml; credit: Original abstract skyline illustration; tools/make_plates.py",
+    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml",
     "dimensions": null,
     "fallback": true,
-    "file": "houston-skyline-plate-4.png"
+    "file": "short-enron-broll-01.jpg"
   },
   {
     "scene": 2,
-    "query": "stock market chart",
-    "media": "authored photo fallback",
-    "provider": "existing story archive",
-    "source_url": "",
-    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml; credit: Original procedural editorial illustration; tools/make_plates.py",
-    "dimensions": null,
-    "fallback": true,
-    "file": "enron-market-board-plate-1.png"
-  },
-  {
-    "scene": 3,
     "query": "new york stock exchange trading floor",
     "media": "authored photo fallback",
     "provider": "existing story archive",
     "source_url": "",
-    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml; credit: Original abstract skyline illustration; tools/make_plates.py",
+    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml",
     "dimensions": null,
     "fallback": true,
-    "file": "houston-skyline-plate-5.png"
+    "file": "short-enron-broll-02.jpg"
   },
   {
-    "scene": 4,
-    "query": "financial newspaper page",
+    "scene": 3,
+    "query": "financial district skyscraper manhattan",
     "media": "authored photo fallback",
     "provider": "existing story archive",
     "source_url": "",
-    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml; credit: Original abstract skyline illustration; tools/make_plates.py",
+    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml",
     "dimensions": null,
     "fallback": true,
-    "file": "houston-skyline-plate-3.png"
+    "file": "short-enron-broll-03.jpg"
+  },
+  {
+    "scene": 4,
+    "query": "newspaper headlines",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml",
+    "dimensions": null,
+    "fallback": true,
+    "file": "short-enron-broll-04.jpg"
   },
   {
     "scene": 5,
+    "query": "ledger accounting book",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml",
+    "dimensions": null,
+    "fallback": true,
+    "file": "short-enron-broll-05.jpg"
+  },
+  {
+    "scene": 6,
+    "query": "steel mill factory",
+    "media": "authored photo fallback",
+    "provider": "existing story archive",
+    "source_url": "",
+    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml",
+    "dimensions": null,
+    "fallback": true,
+    "file": "short-enron-broll-06.jpg"
+  },
+  {
+    "scene": 7,
     "query": "bond certificate",
     "media": "authored photo fallback",
     "provider": "existing story archive",
     "source_url": "",
-    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml; credit: Original procedural editorial illustration; tools/make_plates.py",
+    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml",
     "dimensions": null,
     "fallback": true,
-    "file": "enron-ledger-grid-plate-1.png"
-  },
-  {
-    "scene": 6,
-    "query": "power plant control room",
-    "media": "authored photo fallback",
-    "provider": "existing story archive",
-    "source_url": "",
-    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml; credit: Original procedural editorial illustration; tools/make_plates.py",
-    "dimensions": null,
-    "fallback": true,
-    "file": "enron-pipeline-corridor-plate-1.png"
-  },
-  {
-    "scene": 7,
-    "query": "accounting ledger book",
-    "media": "authored photo fallback",
-    "provider": "existing story archive",
-    "source_url": "",
-    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml; credit: Original procedural editorial illustration; tools/make_plates.py",
-    "dimensions": null,
-    "fallback": true,
-    "file": "enron-spe-network-plate-1.png"
+    "file": "short-enron-broll-07.jpg"
   },
   {
     "scene": 8,
-    "query": "stock market crash chart",
+    "query": "bank run",
     "media": "authored photo fallback",
     "provider": "existing story archive",
     "source_url": "",
-    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml; credit: Original abstract skyline illustration; tools/make_plates.py",
+    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml",
     "dimensions": null,
     "fallback": true,
-    "file": "houston-skyline-plate-2.png"
+    "file": "short-enron-broll-08.jpg"
   },
   {
     "scene": 9,
@@ -93,20 +93,20 @@
     "media": "authored photo fallback",
     "provider": "existing story archive",
     "source_url": "",
-    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml; credit: Original abstract skyline illustration; tools/make_plates.py",
+    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml",
     "dimensions": null,
     "fallback": true,
-    "file": "houston-skyline-plate-1.png"
+    "file": "short-enron-broll-09.jpg"
   },
   {
     "scene": 10,
-    "query": "united states courthouse columns",
+    "query": "courtroom judge bench",
     "media": "authored photo fallback",
     "provider": "existing story archive",
     "source_url": "",
-    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml; credit: Original procedural editorial illustration; tools/make_plates.py",
+    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml",
     "dimensions": null,
     "fallback": true,
-    "file": "enron-courtroom-columns-plate-1.png"
+    "file": "short-enron-broll-10.jpg"
   }
 ]
