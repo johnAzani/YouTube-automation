@@ -7,10 +7,10 @@ format: short
 niche: finance and business
 category: education
 published_on: "2026-10-23"
-youtube_video_id: "yLUOiczlP7Q"
-youtube_shorts_url: "https://www.youtube.com/shorts/yLUOiczlP7Q"
-youtube_watch_url: "https://youtu.be/yLUOiczlP7Q"
-youtube_studio_url: "https://studio.youtube.com/video/yLUOiczlP7Q/edit"
+youtube_video_id: "4Z29-h0j2r4"
+youtube_shorts_url: "https://www.youtube.com/shorts/4Z29-h0j2r4"
+youtube_watch_url: "https://youtu.be/4Z29-h0j2r4"
+youtube_studio_url: "https://studio.youtube.com/video/4Z29-h0j2r4/edit"
 privacy_status: "private"
 width: 720
 height: 1280
@@ -31,3 +31,62 @@ Primary & archival sources:
 - Enron Corp. Form 10-K & Form 8-K filings, U.S. Securities and Exchange Commission.
 
 #Shorts #Enron #FinancialHistory #Accounting #Documentary
+
+## Custom Thumbnail Apply Results
+
+- `4Z29-h0j2r4`: `ok`
+- `M7n0Xou92r0`: `ok`
+- `yLUOiczlP7Q`: `HttpError: <HttpError 404 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=yLUOiczlP7Q&alt=json&uploadType=media returned "The video that you are trying to insert a thumbnail image `
+
+
+## Channel Video Status Audit
+
+```json
+[
+  {
+    "id": "4Z29-h0j2r4",
+    "title": "How Enron Faked $70 Billion in Plain Sight #Shorts",
+    "publishedAt": "2026-10-23T13:51:12Z",
+    "uploadStatus": "uploaded",
+    "privacyStatus": "private",
+    "rejectionReason": "",
+    "failureReason": "",
+    "duration": "P0D",
+    "thumbMaxres": true
+  },
+  {
+    "id": "M7n0Xou92r0",
+    "title": "How Enron Faked $70 Billion in Plain Sight #Shorts",
+    "publishedAt": "2026-10-23T11:28:36Z",
+    "uploadStatus": "processed",
+    "privacyStatus": "private",
+    "rejectionReason": "",
+    "failureReason": "",
+    "duration": "PT53S",
+    "thumbMaxres": true
+  },
+  {
+    "id": "ZgJdfb6T9hk",
+    "title": "John Azani \u2b50 is live!",
+    "publishedAt": "2026-10-23T09:44:20Z",
+    "uploadStatus": "uploaded",
+    "privacyStatus": "unlisted",
+    "rejectionReason": "",
+    "failureReason": "",
+    "duration": "P0D",
+    "thumbMaxres": true
+  },
+  {
+    "id": "4tpZB7EMjHQ",
+    "title": "REEM Live Stream",
+    "publishedAt": "2024-06-27T16:25:55Z",
+    "uploadStatus": "uploaded",
+    "privacyStatus": "public",
+    "rejectionReason": "",
+    "failureReason": "",
+    "duration": "P0D",
+    "thumbMaxres": true
+  }
+]
+```
+
