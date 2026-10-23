@@ -4,6 +4,17 @@
 **Decision status:** recommendation for a bounded pilot, not proof of product–market fit  
 **User goal:** a finance niche that is economical to automate and can build a monetizable business, while minimizing the chance of wasted money and regret.
 
+> **Revision — 23 October 2026 (topic-level demand evidence):** The deeper
+> [demand and monetization study](FINANCE_DEMAND_AND_MONETIZATION_2026-10-23.md)
+> changes the **topic recommendation**, not the production model. Keep the original
+> calculations, charts and human QA, but **do not launch with dry borrowing-costs/fees
+> definitions**. Top "loan amortization" and "credit card interest" videos have only
+> roughly 100K–340K lifetime views after 6–11 years; the exact "minimum payment trap"
+> query has almost no views. Demand is much stronger for stakes-driven questions such
+> as car costs, rent and how banks profit. The first three videos should follow the
+> newer note's demand gate. The policy, originality and no-guarantee conclusions below
+> still stand.
+
 ## 1. My recommendation
 
 Pilot **everyday money mechanics explained with original worked examples and visual calculators**.

@@ -5,6 +5,25 @@ there was no changelog before this file.
 
 ---
 
+## 2026-10-23 — finance demand evidence and revised topic strategy
+
+- Add a source-checked demand/monetization study with 13 channel benchmarks,
+  YouTube search snapshots, disclosed creator earnings, watch-time arithmetic and
+  a plain account of why third-party earnings estimates disagree.
+- Find that finance demand is large at category level but weak for dry definitions:
+  top amortization/credit-interest videos have roughly 100K–340K lifetime views
+  after 6–11 years, while stakes-driven rent/car/bank videos reach 400K–10M.
+- Revise the first three topics to car cost, rent and bank economics; keep the
+  original-calculation production model and human QA.
+- Add a 12-point demand gate (9 to proceed) and revise the pilot to three videos,
+  six weeks, 18 human-hours, no new spending, with explicit continue/stop rules.
+- Record that watch time is private, that 4,000 hours is about 40K views at a
+  6-minute average view duration, and that verified large earnings belong to
+  personality/team businesses rather than passive faceless automation.
+- No rebrand, purchase, publishing, approval or private analytics disclosure.
+
+---
+
 ## 2026-10-23 — finance niche decision and low-regret pilot
 
 - Research current YouTube originality, AI-finance-persona and YPP rules using
