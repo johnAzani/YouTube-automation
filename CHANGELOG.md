@@ -5,6 +5,23 @@ there was no changelog before this file.
 
 ---
 
+## 2026-10-23 — deep Lehman evidence audit and research revision
+
+- Add a 22-entry source register, detailed research dossier, original-claim audit
+  and revised-scene evidence map under `content/research/`, outside scheduler globs.
+- Correct the Linklaters opinion, Repo 105/108 scope, cash-flow mechanics,
+  gross/net leverage comparisons, AIG chronology and entity-specific recoveries.
+- Record the Reserve Primary Fund's later NAV correction and distinguish the
+  Fed participant account from the FCIC's analysis of the failed rescue.
+- Rewrite all eight scenes with direct source links and explicit research limits;
+  no claim that the full examiner report or every litigation docket was read.
+- Regenerate 67 unticked worksheet boxes. All 19 focused factcheck/queue tests
+  pass with PyYAML; the revised narration is 1,294 words (audio timing unmeasured).
+- Keep `status: draft`, `human_rewrite: false` and all human certifications blank.
+  Research is not human creative approval; no upload or publishing change.
+
+---
+
 ## 2026-10-23 — explicit Analytics coverage and a private reporting path
 
 - Add a separate, read-only Analytics collector with daily/video performance,
