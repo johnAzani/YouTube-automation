@@ -64,6 +64,10 @@ MONTHS = {"january", "february", "march", "april", "may", "june", "july", "augus
 UNIT_WORDS = {"dollar", "dollars", "percent", "cent", "cents", "pound", "pounds",
               "year", "years", "month", "months", "day", "days", "week", "weeks"}
 
+# A sentence this long with no figure/date/name is still surfaced as a reading prompt.
+# Short connective sentences ("The cash came back.") are not worth a line of their own.
+MIN_UNFLAGGED_WORDS = 10
+
 _SENTENCE_RE = re.compile(r"(?<=[.!?])\s+")
 _WORD_RE = re.compile(r"[A-Za-z][A-Za-z'\-]*")
 
@@ -145,14 +149,21 @@ def _sha(path: Path) -> str:
 def build(doc, path: Path) -> str:
     claims = []
     for scene in doc.scenes:
-        picked = []
+        picked, also_read = [], []
         for sentence in _sentences(scene.narration):
             ok, reasons = classify(sentence)
             if ok:
                 picked.append((sentence, reasons))
-        claims.append((scene, picked))
+            elif len(sentence.split()) >= MIN_UNFLAGGED_WORDS:
+                # A sentence with no figure, date or proper noun can still be a load-bearing
+                # claim ("a repo is in substance a secured loan"). Listing only the flagged
+                # ones would let a human tick every box and miss those, so the rest are
+                # surfaced as a reading prompt rather than dropped.
+                also_read.append(sentence)
+        claims.append((scene, picked, also_read))
 
-    total = sum(len(p) for _, p in claims)
+    total = sum(len(p) for _, p, _ in claims)
+    extra = sum(len(a) for _, _, a in claims)
     sources = _sources(doc)
     L: list[str] = []
     A = L.append
@@ -197,18 +208,24 @@ def build(doc, path: Path) -> str:
         A("fact-checking — `originality.source_notes` is set to true, so the gate expects")
         A("source links in the description.")
     A("")
-    A(f"## Candidate claims ({total} across {len(doc.scenes)} scenes)")
+    A(f"## Candidate claims ({total} flagged + {extra} also-read across {len(doc.scenes)} scenes)")
     A("")
-    for scene, picked in claims:
+    for scene, picked, also_read in claims:
         A(f"### Scene {scene.index} — {scene.heading}")
         A("")
-        if not picked:
-            A("_No number, date or named entity in this scene. Still read it._")
+        if not picked and not also_read:
+            A("_No candidate claim detected in this scene. Still read it._")
             A("")
             continue
         for sentence, reasons in picked:
             A(f"- [ ] {sentence}")
             A(f"      _why flagged: {'; '.join(reasons)}_ → source: ____________")
+        if also_read:
+            A("")
+            A(f"_Also read — no figure, date or name detected, so these were not auto-flagged._")
+            A(f"_Some of them are still claims; tick one if you want to check it._")
+            for sentence in also_read:
+                A(f"- {sentence}")
         A("")
     A("## Sign-off")
     A("")

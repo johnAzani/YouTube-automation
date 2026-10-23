@@ -35,7 +35,7 @@ account repeating a number is not a source for that number.
 - [ ] Singapore Exchange / SIMEX and the Monetary Authority of Singapore statements on the
 - [ ] Leeson, N. (1996). Rogue Trader. (first-person account — useful for sequence, NOT a
 
-## Candidate claims (27 across 8 scenes)
+## Candidate claims (27 flagged + 22 also-read across 8 scenes)
 
 ### Scene 1 — The hook
 
@@ -48,6 +48,11 @@ account repeating a number is not a source for that number.
 - [ ] It was brought down by one junior trader in Singapore, using an error account numbered eight-eight-eight-eight-eight, and by the fact that nobody in the building had checked his paperwork for years.
       _why flagged: figure; named: Singapore_ → source: ____________
 
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- It was not brought down by a war or a recession.
+- The question worth asking is not how one man did it.
+
 ### Scene 2 — The merchant bank
 
 - [ ] Barings was founded in London in the seventeen-sixties by Francis Baring, and it became the archetype of the British merchant bank.
@@ -59,6 +64,12 @@ account repeating a number is not a source for that number.
 - [ ] So Barings had already survived one existential crisis, and the memory of it shaped the culture: a firm built on the idea that its own name was worth more than any single position.
       _why flagged: named: So Barings_ → source: ____________
 
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- A merchant bank in that tradition did not take your savings and lend them out.
+- It dealt in acceptance and credit — it put its name behind other people's trade, financed governments, and traded on reputation.
+- That idea is what made what happened next so strange.
+
 ### Scene 3 — The back office
 
 - [ ] Every trading operation has two halves.
@@ -67,6 +78,13 @@ account repeating a number is not a source for that number.
       _why flagged: figure_ → source: ____________
 - [ ] In Singapore, Barings put one man in charge of both.
       _why flagged: named: In Singapore Barings_ → source: ____________
+
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- The back office settles them — it confirms what was actually traded, reconciles the cash and the positions, and tells management what the firm really owns and owes.
+- If the person who makes the trade is also the person who records whether it made money, then there is no such thing as a check.
+- He ran the futures trading operation on the floor, and he was also responsible for settlement.
+- That single organisational decision is the actual subject of this story — everything that follows is just what it made possible.
 
 ### Scene 4 — Singapore
 
@@ -79,12 +97,24 @@ account repeating a number is not a source for that number.
 - [ ] From London's point of view this was a star operation, and Leeson was reporting profits that made him look like the best trader the firm had.
       _why flagged: named: From London, Leeson_ → source: ____________
 
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- Nobody could see the other half of the ledger, because the other half of the ledger was being written by the same man.
+
 ### Scene 5 — Account 88888
 
 - [ ] The losses were reported away from London by faking documents and by exploiting the fact that the person reconciling the accounts was also the person creating them.
       _why flagged: named: London_ → source: ____________
 - [ ] To the head office, the Singapore operation looked profitable right up until the day it did not exist.
       _why flagged: quantity; named: Singapore_ → source: ____________
+
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- Trading desks use error accounts to park mistakes — a trade booked wrongly sits there briefly until it is corrected.
+- That is normal and it is supposed to be small and short-lived.
+- Leeson used an error account numbered eight-eight-eight-eight-eight to park losses instead, and then did not correct them.
+- As losses accumulated, he covered them by taking larger positions, on the reasoning that a big enough winning trade would erase the hole and nobody would ever have to look.
+- This is the pattern that destroys trading desks, and it is almost never sophisticated.
 
 ### Scene 6 — Kobe
 
@@ -99,6 +129,10 @@ account repeating a number is not a source for that number.
 - [ ] A hole that could have been confessed to at one size was being defended at a much larger one, and the cost of confessing grew every single day the position was held.
       _why flagged: figure_ → source: ____________
 
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- This is the moment where the story stops being about accounting and becomes about something more familiar and more human.
+
 ### Scene 7 — The bank dies
 
 - [ ] By late February nineteen ninety-five the losses exceeded the entire capital of Barings plc.
@@ -108,12 +142,24 @@ account repeating a number is not a source for that number.
 - [ ] Two hundred and thirty-three years of continuous history ended in a weekend.
       _why flagged: figure_ → source: ____________
 
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- The bank could not meet its obligations on the exchange and was declared insolvent.
+- The official inquiry that followed was unambiguous about the cause.
+- It described a failure of management, of internal control, and of supervision — a firm whose board did not understand the exposures it was carrying, and a regulator that had not required it to.
+
 ### Scene 8 — The lesson
 
 - [ ] Leeson left Singapore before the collapse, was arrested months later, and served a prison sentence.
       _why flagged: quantity; named: Singapore_ → source: ____________
 - [ ] Every control rule in modern finance about separating those two jobs exists because of cases like this one.
       _why flagged: figure_ → source: ____________
+
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- He has since written and spoken about the episode, and it is worth being careful about whose account you believe: the man who created the hole has obvious reasons to describe the controls as worse than they were, and the official inquiry does not accept everything he says.
+- Barings failed because one person could both place a trade and record whether it had worked.
+- It is a small, boring, procedural idea, and it is worth more than every warning about rogue traders ever filmed: if nobody independent is checking the record, the record is not a record.
 
 ## Sign-off
 

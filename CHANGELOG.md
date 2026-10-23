@@ -34,6 +34,13 @@ actual judgement starts.
   and eight"), so digit-matching would find nothing, and a clever extractor that decided what
   matters would hide claims behind a model's judgement. A missed claim is a checkbox the human
   adds.
+- **Because dumb extraction misses things, nothing is dropped silently.** In job 0003, 10
+  substantive sentences carry no figure, date or proper noun — including *"That is a
+  repurchase agreement — a repo — and in substance it is a secured loan"*, which is
+  load-bearing. Those are listed under each scene as "Also read", and
+  `test_no_substantive_sentence_is_silently_dropped` asserts every sentence of ten words or
+  more appears somewhere in the worksheet. Without it a human could tick all 31 flagged boxes
+  and never see them.
 - `docs/SETUP.md` §6 now points at it as the shortcut for the fact-check step.
 
 ---

@@ -35,7 +35,7 @@ account repeating a number is not a source for that number.
 - [ ] GAO (1999). Long-Term Capital Management: Testimony on the hedge fund and federal
 - [ ] Lowenstein / PWG report for the specific capital, loss and bailout figures — the numbers
 
-## Candidate claims (29 across 8 scenes)
+## Candidate claims (29 flagged + 22 also-read across 8 scenes)
 
 ### Scene 1 — The hook
 
@@ -48,6 +48,11 @@ account repeating a number is not a source for that number.
 - [ ] Two of its founders had won the Nobel Prize in economics the year before.
       _why flagged: figure; named: Nobel Prize_ → source: ____________
 
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- The reason was not that the fund mattered in itself.
+- It was that the fund had borrowed so much, from so many counterparties, in so many markets at once, that nobody could say what would happen if it simply stopped paying.
+
 ### Scene 2 — The convergence trade
 
 - [ ] Long-Term Capital Management opened in nineteen ninety-four.
@@ -59,6 +64,10 @@ account repeating a number is not a source for that number.
 - [ ] The idea is simple: find two securities that are economically almost the same thing but priced slightly differently, buy the cheap one, sell the expensive one, and wait for the gap to close.
       _why flagged: figure_ → source: ____________
 
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- So to make the business worth running, you do an enormous number of them, and you borrow the money to do it.
+
 ### Scene 3 — The machine
 
 - [ ] By nineteen ninety-eight the fund had roughly four point seven billion dollars of capital, which for a hedge fund is a lot of money.
@@ -67,6 +76,13 @@ account repeating a number is not a source for that number.
       _why flagged: quantity_ → source: ____________
 - [ ] The total exposure, including derivatives that never appear as balance-sheet borrowing, was far larger — official reports describe it in the trillions of dollars of notional.
       _why flagged: quantity_ → source: ____________
+
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- Reported leverage on the balance sheet was somewhere around twenty-five to one.
+- The fund also had a financing advantage that made the structure possible: it was so respected that banks lent to it on unusually thin collateral.
+- In some trades it paid almost no margin at all.
+- The machine worked beautifully, right up until the moment when every trade moved the same way.
 
 ### Scene 4 — One Greenwich
 
@@ -77,6 +93,13 @@ account repeating a number is not a source for that number.
 - [ ] Diversification across a hundred trades is worth nothing if all a hundred are the same bet wearing different clothes.
       _why flagged: figure_ → source: ____________
 
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- It ran itself like a research institute rather than a trading floor: shared bonuses, a single capital pool, academics and traders arguing in the same rooms.
+- But the structure had a property that no one on the inside liked to state out loud.
+- Every one of these convergence trades had the same failure mode.
+- If markets stopped behaving normally at the same time, every position lost at once.
+
 ### Scene 5 — Russia defaults
 
 - [ ] On the seventeenth of August, nineteen ninety-eight, Russia devalued the ruble and defaulted on its own domestic debt.
@@ -86,6 +109,12 @@ account repeating a number is not a source for that number.
 - [ ] The spreads Long-Term Capital was betting would narrow blew out instead, violently, in almost every position simultaneously, within days.
       _why flagged: quantity; named: Capital_ → source: ____________
 
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- The conventional view at the time was that a sovereign state would always pay debts in its own currency, because it could print the money.
+- Investors around the world stopped lending against anything complicated, and fled into the simplest, safest assets they could find.
+- That is exactly the wrong event for a convergence fund.
+
 ### Scene 6 — The month it broke
 
 - [ ] The fund lost roughly half its capital in August.
@@ -94,6 +123,11 @@ account repeating a number is not a source for that number.
       _why flagged: figure; date_ → source: ____________
 - [ ] And the Federal Reserve Bank of New York started to worry about a different problem entirely: an uncontrolled liquidation, in which every one of the fund's counterparties tried to close its own exposure at the same moment, in markets that were already not functioning.
       _why flagged: named: Federal Reserve Bank, New York_ → source: ____________
+
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- It kept the positions, on the reasoning that the spreads would eventually close and that selling into the panic would lock in the loss.
+- Its lenders began to demand more collateral, and the fund did not have enough left to give.
 
 ### Scene 7 — The room on Liberty Street
 
@@ -110,6 +144,11 @@ account repeating a number is not a source for that number.
 - [ ] Two of the largest banks ended up providing the money that saved a competitor, because the alternative was worse for everyone.
       _why flagged: figure_ → source: ____________
 
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- What it did supply was the room, the deadline, and the pressure.
+- The partners were effectively diluted to a fraction of what they had owned.
+
 ### Scene 8 — The lesson
 
 - [ ] Long-Term Capital was wound up over the following two years.
@@ -118,6 +157,13 @@ account repeating a number is not a source for that number.
       _why flagged: named: President's Working Group_ → source: ____________
 - [ ] Scholes and Merton understood risk better than almost anyone alive.
       _why flagged: named: Merton_ → source: ____________
+
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- The banks that took it over ultimately recovered most of what they put in, because the positions were given time to settle.
+- The narrowest and most durable lesson is not about intelligence.
+- A portfolio can be right about value and still be destroyed by the terms on which it borrowed.
+- Being right eventually is worthless if you cannot survive until then.
 
 ## Sign-off
 

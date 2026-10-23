@@ -35,7 +35,7 @@ account repeating a number is not a source for that number.
 - [ ] Federal Reserve Bank of New York (2008). Statement on AIG credit facility, Sept 16 2008.
 - [ ] Sorkin, A. R. (2009). Too Big to Fail. Viking. (narrative of the Sept 12–14 weekend)
 
-## Candidate claims (31 across 8 scenes)
+## Candidate claims (31 flagged + 11 also-read across 8 scenes)
 
 ### Scene 1 — The hook
 
@@ -47,6 +47,10 @@ account repeating a number is not a source for that number.
       _why flagged: figure; named: Lehman Brothers, Civil War, Great Depression_ → source: ____________
 - [ ] It was that, for years, it had been telling the market it had borrowed less than it had.
       _why flagged: quantity_ → source: ____________
+
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- And the reason it failed was not only that it had borrowed too much.
 
 ### Scene 2 — A firm that survived everything
 
@@ -66,6 +70,12 @@ account repeating a number is not a source for that number.
 - [ ] By the end of two thousand and seven Lehman was running roughly thirty-one dollars of assets for every dollar of shareholder equity.
       _why flagged: figure; named: Lehman_ → source: ____________
 
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- That ratio is not unusual for an investment bank of the era.
+- What made it dangerous was what sat underneath it: a huge position in commercial and residential real estate, funded with short-term borrowing that had to be rolled over constantly.
+- Lehman was long assets it could not sell quickly, financed with money it had to repay almost immediately.
+
 ### Scene 4 — Repo 105
 
 - [ ] At the end of each quarter, Lehman executed a specific kind of transaction.
@@ -77,6 +87,11 @@ account repeating a number is not a source for that number.
 - [ ] Lehman used the mechanism to move roughly fifty billion dollars off its books temporarily, at quarter-ends, and reported the lower leverage that resulted.
       _why flagged: figure_ → source: ____________
 
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- That is a repurchase agreement — a repo — and in substance it is a secured loan.
+- Recording a repo as a sale removes the asset and the matching liability from the balance sheet at the same moment.
+
 ### Scene 5 — What the examiner found
 
 - [ ] In March two thousand and ten, Anton Valukas — the examiner appointed by the bankruptcy court — filed a report of more than two thousand pages.
@@ -87,6 +102,10 @@ account repeating a number is not a source for that number.
       _why flagged: named: London, British_ → source: ____________
 - [ ] It is important to be precise here: Valukas documented the practice in detail, and no criminal charges were ever brought.
       _why flagged: named: Valukas_ → source: ____________
+
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- It was a disclosure decision that made a fragile firm look steadier than it was.
 
 ### Scene 6 — The weekend
 
@@ -100,6 +119,10 @@ account repeating a number is not a source for that number.
       _why flagged: named: Lehman, London, American_ → source: ____________
 - [ ] On Monday morning, Lehman filed.
       _why flagged: named: On Monday, Lehman_ → source: ____________
+
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- Lehman's share price had collapsed, its short-term funding was drying up, and it needed either capital or a buyer.
 
 ### Scene 7 — The contagion
 
@@ -122,6 +145,12 @@ account repeating a number is not a source for that number.
       _why flagged: named: North American_ → source: ____________
 - [ ] Nomura took Europe and Asia.
       _why flagged: named: Europe, Asia_ → source: ____________
+
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- The lesson is narrower than the legend: a firm does not die because it is in trouble.
+- It dies because the people lending to it overnight discover the trouble at the same moment they discover they were told it was smaller than it was.
+- If this changed how you read a balance sheet, subscribe — next we are looking at the accounting trick that took down WorldCom.
 
 ## Sign-off
 

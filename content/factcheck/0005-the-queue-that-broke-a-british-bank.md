@@ -36,7 +36,7 @@ account repeating a number is not a source for that number.
 - [ ] Banking (Special Provisions) Act 2008 (the instrument used to nationalise).
 - [ ] Note for the reviewer: the "first run in 150 years" framing refers to the 1866 failure of
 
-## Candidate claims (24 across 8 scenes)
+## Candidate claims (24 flagged + 28 also-read across 8 scenes)
 
 ### Scene 1 — The hook
 
@@ -47,6 +47,12 @@ account repeating a number is not a source for that number.
 - [ ] It was the country's fifth largest mortgage lender, regulated, audited, and profitable right up until the week it nearly died.
       _why flagged: quantity_ → source: ____________
 
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- Britain had not seen a retail run on a bank in roughly a century and a half.
+- When it finally happened, the bank was not a gambling operation.
+- It was caused by how the bank funded itself — and by the fact that everybody found out at the same time.
+
 ### Scene 2 — A building society from Newcastle
 
 - [ ] Northern Rock's roots were in the north-east of England, in the building society tradition.
@@ -55,6 +61,13 @@ account repeating a number is not a source for that number.
       _why flagged: figure; named: Northern Rock_ → source: ____________
 - [ ] What followed was one of the fastest growth stories in British retail banking.
       _why flagged: named: British_ → source: ____________
+
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- A building society is a mutual: it is owned by its savers and borrowers rather than by shareholders, and it funds mortgages almost entirely from the deposits of its members.
+- That model is slow, boring, and extremely hard to break, because the money it lends is money that belongs to the people standing at the counter.
+- The bank went from a regional lender to a national one, and by the mid-two-thousands it was writing roughly a fifth of all new mortgages in the country.
+- Growth that fast requires money, and deposits were not arriving fast enough.
 
 ### Scene 3 — The funding model
 
@@ -65,9 +78,24 @@ account repeating a number is not a source for that number.
 - [ ] Northern Rock's loans were fine.
       _why flagged: named: Northern Rock_ → source: ____________
 
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- Instead of waiting for savers, the bank went to wholesale markets — the market where banks, funds and institutions lend to each other — and issued bonds and other securities to fund its mortgage book.
+- In normal conditions this is cheap, fast, and entirely ordinary.
+- They lend short, they reassess constantly, and they can simply stop.
+- A bank funded that way has a structural exposure that has nothing to do with the quality of its loans: if confidence in the funding market fails, the bank loses its money supply overnight, even while every mortgage on its books is performing perfectly.
+
 ### Scene 4 — The machine
 
-_No number, date or named entity in this scene. Still read it._
+
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- Mortgages were bundled into securities and sold to investors — a process called securitisation — which turned illiquid twenty-five-year home loans into tradeable paper and brought in fresh cash to lend again.
+- That cash funded more mortgages, which were bundled and sold again.
+- The engine worked because the market for the paper kept buying.
+- British house prices kept rising, defaults stayed low, and the securities were rated well enough that institutional investors were happy to hold them.
+- On paper this was a beautifully efficient machine: a regional lender had found a way to manufacture its own funding supply.
+- What the machine could not do was survive a moment when investors stopped buying the paper.
 
 ### Scene 5 — August 2007
 
@@ -80,6 +108,11 @@ _No number, date or named entity in this scene. Still read it._
 - [ ] The money that Northern Rock ran on simply was not there to be borrowed.
       _why flagged: named: Northern Rock_ → source: ____________
 
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- Interbank lending — banks lending to each other — seized up almost immediately, because nobody knew which institution was holding the losses.
+- For a bank whose entire funding model depended on short-term wholesale markets and on selling mortgage paper, it was existential.
+
 ### Scene 6 — The letter
 
 - [ ] In early September, Northern Rock approached the Bank of England for emergency liquidity assistance — the lender of last resort function that central banks exist to provide.
@@ -88,6 +121,13 @@ _No number, date or named entity in this scene. Still read it._
       _why flagged: date; named: Thursday, BBC_ → source: ____________
 - [ ] The following morning, the Bank of England publicly confirmed the facility.
       _why flagged: named: Bank, England_ → source: ____________
+
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- The reasoning at the time was that hiding it would be worse: a bank quietly drawing emergency funding while telling depositors nothing is a bank that will eventually be found out.
+- But confirmation converted a private funding problem into a public confidence problem in a single night.
+- People who had never thought about how their bank was funded now had a reason to think about it.
+- And there was one crucial detail that made the answer worse.
 
 ### Scene 7 — The run
 
@@ -100,6 +140,12 @@ _No number, date or named entity in this scene. Still read it._
 - [ ] On the Monday, the Chancellor appeared on television and announced that the government would guarantee all deposits at Northern Rock — a guarantee extended beyond what the existing protection scheme required.
       _why flagged: named: Monday, Chancellor, Northern Rock_ → source: ____________
 
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- A saver with more than that in the bank had a rational reason to withdraw.
+- The run was not caused by insolvency, and it was not caused by panic in the irrational sense.
+- It was caused by a funding structure that only worked while nobody asked, disclosed at the worst possible moment, under a compensation regime that gave large savers a reason to move first.
+
 ### Scene 8 — The aftermath
 
 - [ ] The bank could not be sold quickly enough, and in February two thousand and eight the government took it into temporary public ownership under emergency legislation passed for the purpose.
@@ -110,6 +156,11 @@ _No number, date or named entity in this scene. Still read it._
       _why flagged: quantity_ → source: ____________
 - [ ] The Treasury Committee's inquiry was blunt about where the failure lay: not primarily with the supervisors, but with a funding model that no one had stress-tested against the closing of wholesale markets.
       _why flagged: named: The Treasury Committee_ → source: ____________
+
+_Also read — no figure, date or name detected, so these were not auto-flagged._
+_Some of them are still claims; tick one if you want to check it._
+- The durable point is uncomfortable for anyone running a bank or judging one: the institutions that fail in a crisis are often not the ones that made the worst loans.
+- They are the ones that assumed the money would always be there.
 
 ## Sign-off
 

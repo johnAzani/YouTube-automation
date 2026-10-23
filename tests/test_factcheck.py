@@ -116,6 +116,23 @@ class WorksheetTests(unittest.TestCase):
             self.assertIn(source, text, f"declared source missing from worksheet: {source}")
         self.assertIn("Valukas", text, "the Lehman examiner report should be listed first")
 
+    def test_no_substantive_sentence_is_silently_dropped(self):
+        """The extractor is deliberately dumb, so it misses claims with no figure, date or
+        proper noun — "a repo is in substance a secured loan" is load-bearing and has none.
+        Those must still appear, as a reading prompt, or a human could tick every box and
+        never see them."""
+        for path in self.jobs:
+            doc = parse_script(path)
+            text = (OUT_DIR / f"{doc.id}-{doc.slug}.md").read_text(encoding="utf-8")
+            flat = " ".join(text.split())
+            for scene in doc.scenes:
+                for sentence in factcheck._sentences(scene.narration):
+                    if len(sentence.split()) < factcheck.MIN_UNFLAGGED_WORDS:
+                        continue  # short connective sentences are not worth a line
+                    with self.subTest(job=path.name, scene=scene.index):
+                        self.assertIn(" ".join(sentence.split()), flat,
+                                      "a substantive sentence appears nowhere in the worksheet")
+
     def test_worksheets_do_not_live_anywhere_the_scheduler_globs(self):
         """Regression guard: a worksheet in content/queue/ would be parsed as a job."""
         self.assertNotEqual(OUT_DIR, QUEUE_DIR)
