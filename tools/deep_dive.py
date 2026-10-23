@@ -57,6 +57,9 @@ except Exception:  # pragma: no cover - pipeline package unavailable
 FFMPEG = _resolve_ffmpeg()
 FDIR = os.path.join(ROOT, 'assets', 'fonts')
 IMG = os.path.join(ROOT, 'image-search')
+# Original abstract illustration, not documentary Houston/Enron photography.
+from tools.make_plates import ensure_plates
+ensure_plates()
 AUDIO = os.path.join(ROOT, 'assets', 'deepdive')
 
 FONT_CACHE = {}
@@ -1206,23 +1209,23 @@ SCRIPTS = {
         voices=('enron1.mp3', 'enron2.mp3', 'enron3.mp3'),
         out='deep-dive-enron.mp4',
         scenes=[
-            dict(a='', img='enron-corporation-headquarters-houston-c-4.jpg',
+            dict(a='', img='houston-skyline-plate-4.png',
                  kicker='WINTER 2001 \u00B7 HOUSTON, TEXAS',
                  sub='AMERICA\u2019S MOST INNOVATIVE COMPANY UNRAVELS',
                  cam='tilt_up', focus=(0.50, 0.45)),
-            dict(a='enron and energy trading', img='enron-corporation-headquarters-houston-c-3.jpg',
+            dict(a='enron and energy trading', img='houston-skyline-plate-3.png',
                  kicker='AN EMPIRE BUILT ON PAPER',
-                 sub='1400 SMITH STREET \u00B7 ENRON CORP HEADQUARTERS',
+                 sub='ABSTRACT SKYLINE \u00B7 ORIGINAL ILLUSTRATION',
                  cam='push_in', focus=(0.50, 0.45), focus_side=-0.45),
             dict(a='humble gas pipeline', img='natural-gas-pipeline-construction-texas--1.jpg',
                  kicker='1985 \u00B7 THE PIPELINE ORIGINS',
                  sub='STARTED AS A HUMBLE TEXAS GAS TRANSMISSION FIRM',
                  cam='pan_right', focus=(0.52, 0.52)),
-            dict(a='jeff skilling arrived', img='enron-corporation-headquarters-houston-c-5.jpg',
+            dict(a='jeff skilling arrived', img='houston-skyline-plate-5.png',
                  kicker='JEFF SKILLING\u2019S IDEA',
                  sub='\u201cSTOP OWNING THINGS \u2014 START TRADING THEM\u201d',
                  cam='push_in', focus=(0.52, 0.48)),
-            dict(a='mom to market accounting', img='enron-corporation-headquarters-houston-c-5.jpg',
+            dict(a='mom to market accounting', img='houston-skyline-plate-5.png',
                  kicker='MARK-TO-MARKET ACCOUNTING',
                  sub='10 YEARS OF FUTURE PROFIT BOOKED ON DAY ONE',
                  cam='pan_left', focus=(0.45, 0.50), viz='mtm_ledger'),
@@ -1230,7 +1233,7 @@ SCRIPTS = {
                  kicker='PEAK VALUATION: $70 BILLION',
                  sub='NYSE: ENE SOARS PAST $90 A SHARE IN AUGUST 2000',
                  cam='push_in', focus=(0.52, 0.46), viz='stock_boom'),
-            dict(a='fortune magazine named', img='enron-corporation-headquarters-houston-c-4.jpg',
+            dict(a='fortune magazine named', img='houston-skyline-plate-4.png',
                  kicker='FORTUNE\u2019S DARLING \u00B7 6 YEARS RUNNING',
                  sub='NAMED \u201cMOST INNOVATIVE COMPANY\u201d 1996\u20132001',
                  cam='pull_out', focus=(0.50, 0.45)),
@@ -1242,7 +1245,7 @@ SCRIPTS = {
                  kicker='LJM \u00B7 RAPTOR \u00B7 CHEWCO',
                  sub='A MAZE OF SHELL ENTITIES HIDING $30B+ IN DEBT',
                  cam='push_in', focus=(0.50, 0.48), focus_side=0.48, viz='shell_maze'),
-            dict(a='fortune report about', img='enron-corporation-headquarters-houston-c-3.jpg',
+            dict(a='fortune report about', img='houston-skyline-plate-3.png',
                  kicker='MARCH 2001 \u00B7 BETHANY McLEAN',
                  sub='FORTUNE ASKS ONE QUESTION: \u201cIS ENRON OVERPRICED?\u201d',
                  cam='pan_right', focus=(0.50, 0.45), focus_side=-0.45),
@@ -1258,11 +1261,11 @@ SCRIPTS = {
                  kicker='THE INSIDER BETRAYAL',
                  sub='KEN LAY URGES STAFF TO BUY WHILE EXECUTIVES SELL',
                  cam='push_in', focus=(0.48, 0.42), focus_side=0.48, viz='insider_split'),
-            dict(a='december second two thousand', img='enron-corporation-headquarters-houston-c-2.jpg',
+            dict(a='december second two thousand', img='houston-skyline-plate-2.png',
                  kicker='DECEMBER 2, 2001 \u00B7 CHAPTER 11',
                  sub='$63.4 BILLION IN ASSETS \u2014 LARGEST U.S. BANKRUPTCY',
                  cam='pull_out', focus=(0.48, 0.50), viz='stock_crash'),
-            dict(a='twenty thousand employees', img='enron-corporation-headquarters-houston-c-1.jpg',
+            dict(a='twenty thousand employees', img='houston-skyline-plate-1.png',
                  kicker='20,000 JOBS & PENSIONS WIPED OUT',
                  sub='ARTHUR ANDERSEN (85,000 STAFF) COLLAPSES TOO',
                  cam='pan_right', focus=(0.52, 0.48)),

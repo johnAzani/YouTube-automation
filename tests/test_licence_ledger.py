@@ -28,6 +28,8 @@ def _stills_on_disk() -> list[Path]:
 class LicenceLedgerTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        from tools.make_plates import ensure_plates
+        ensure_plates()
         cls.ledger = licences.load_ledger(use_cache=False)
         cls.stills = _stills_on_disk()
 

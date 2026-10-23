@@ -33,6 +33,10 @@ runs:
       shell: bash
       run: pip install -r requirements.txt
 
+    - name: Rebuild original skyline illustrations
+      shell: bash
+      run: python tools/make_plates.py
+
     - name: System deps (ffmpeg, fonts) — bounded, best-effort
       shell: bash
       run: |

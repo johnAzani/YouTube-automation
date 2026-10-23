@@ -54,6 +54,9 @@ except Exception:  # pragma: no cover - pipeline package unavailable
 FFMPEG = _resolve_ffmpeg()
 FDIR = os.path.join(ROOT, 'assets', 'fonts')
 IMG = os.path.join(ROOT, 'image-search')
+# Original abstract illustration, not documentary Houston/Enron photography.
+from tools.make_plates import ensure_plates
+ensure_plates()
 AUDIO = os.path.join(ROOT, 'assets', 'deepdive')
 
 FONT_CACHE = {}
@@ -794,15 +797,15 @@ SCRIPTS={
             'corporate executives fraud trial courtroom justice',
         ],
         scenes=[
-            dict(a='', img='enron-corporation-headquarters-houston-c-4.jpg', kicker='WINTER 2001 · HOUSTON', sub='MOST INNOVATIVE COMPANY UNRAVELS', cam='tilt_up', focus=(0.5,0.40)),
+            dict(a='', img='houston-skyline-plate-4.png', kicker='WINTER 2001 · HOUSTON', sub='MOST INNOVATIVE COMPANY UNRAVELS', cam='tilt_up', focus=(0.5,0.40)),
             dict(a='ninety dollars', img='enron-bankruptcy-newspaper-headline-2001-3.jpg', kicker='PEAK: $90.75 / SHARE', sub='NYSE: ENE · AUG 2000', cam='push_in', focus=(0.5,0.42), viz='stock_boom'),
-            dict(a='fortune my busy nostra', img='enron-corporation-headquarters-houston-c-4.jpg', kicker='FORTUNE · 6 YEARS RUNNING', sub='"MOST INNOVATIVE COMPANY"', cam='pull_out', focus=(0.5,0.42)),
-            dict(a='is enron overpriced', img='enron-corporation-headquarters-houston-c-3.jpg', kicker='MAR 2001 · BETHANY McLEAN', sub='"IS ENRON OVERPRICED?"', cam='pan_right', focus=(0.5,0.42)),
+            dict(a='fortune my busy nostra', img='houston-skyline-plate-4.png', kicker='FORTUNE · 6 YEARS RUNNING', sub='"MOST INNOVATIVE COMPANY"', cam='pull_out', focus=(0.5,0.42)),
+            dict(a='is enron overpriced', img='houston-skyline-plate-3.png', kicker='MAR 2001 · BETHANY McLEAN', sub='"IS ENRON OVERPRICED?"', cam='pan_right', focus=(0.5,0.42)),
             dict(a='the profits were fiction', img='andrew-fastow-enron-cfo-trial-photo-2.jpg', kicker='CFO ANDREW FASTOW', sub='ARCHITECT OF THE ILLUSION', cam='push_in', focus=(0.48,0.40)),
-            dict(a='mom to market accounting', img='enron-corporation-headquarters-houston-c-5.jpg', kicker='MARK-TO-MARKET', sub='10 YRS PROFIT BOOKED DAY ONE', cam='pan_left', focus=(0.48,0.42), viz='mtm_ledger'),
+            dict(a='mom to market accounting', img='houston-skyline-plate-5.png', kicker='MARK-TO-MARKET', sub='10 YRS PROFIT BOOKED DAY ONE', cam='pan_left', focus=(0.48,0.42), viz='mtm_ledger'),
             dict(a='off the books', img='enron-bankruptcy-newspaper-headline-2001-1.jpg', kicker='LJM · RAPTOR · CHEWCO', sub='$30B+ DEBT IN SHELL ENTITIES', cam='push_in', focus=(0.5,0.42), viz='shell_maze'),
-            dict(a='december second', img='enron-corporation-headquarters-houston-c-2.jpg', kicker='DEC 2, 2001 · CHAPTER 11', sub='$63.4B — LARGEST US BANKRUPTCY', cam='pull_out', focus=(0.5,0.42), viz='stock_crash'),
-            dict(a='twenty thousand employees', img='enron-corporation-headquarters-houston-c-1.jpg', kicker='20,000 JOBS & PENSIONS GONE', sub='85,000 AT ANDERSEN DISSOLVED', cam='pan_right', focus=(0.52,0.42)),
+            dict(a='december second', img='houston-skyline-plate-2.png', kicker='DEC 2, 2001 · CHAPTER 11', sub='$63.4B — LARGEST US BANKRUPTCY', cam='pull_out', focus=(0.5,0.42), viz='stock_crash'),
+            dict(a='twenty thousand employees', img='houston-skyline-plate-1.png', kicker='20,000 JOBS & PENSIONS GONE', sub='85,000 AT ANDERSEN DISSOLVED', cam='pan_right', focus=(0.52,0.42)),
             dict(a='they called themselves', img='jeff-skilling-ken-lay-enron-trial-courtr-2.jpg', kicker='THE RECKONING', sub='FASTOW & SKILLING IMPRISONED', cam='push_in', focus=(0.48,0.40)),
         ],
         teases=[

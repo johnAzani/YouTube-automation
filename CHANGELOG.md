@@ -5,6 +5,24 @@ there was no changelog before this file.
 
 ---
 
+## 2026-10-23 — replace Getty headquarters shots with original illustrations
+
+- Both Enron renderer scene tables now use five original, abstract skyline plates
+  instead of the five rights-encumbered headquarters photographs. These are
+  illustrations, **not photographs of Houston or Enron Center**.
+- `tools/make_plates.py` builds them from fixed seeds with Pillow, no downloaded
+  images or fonts. Generated PNGs are ignored by Git and rebuilt by render setup,
+  the renderer CLIs and the ledger CLI. Existing files are not silently overwritten
+  by the latter two paths, so ledger drift remains visible.
+- Ledger records the five originals with code provenance and pixel hashes; tests
+  reproduce all five hashes and prevent the Getty HQ filenames returning.
+- This is a partial clearance fix, not permission to monetize the demo videos.
+  Other encumbered references and unverified downloaded images remain. No assets
+  were deleted, no downloaded image was declared cleared, and no human script
+  approvals or publishing settings changed.
+
+---
+
 ## 2026-10-23 — apt hung, and the required CI check died before running a single test
 
 PR #7 went red with `Unit tests + doctor: cancelled` — not `failure`, `cancelled`, which reads

@@ -102,3 +102,32 @@ The manual GitHub Actions workflow is `Remaster documentary assets` (`.github/wo
 - Provider errors, absent credentials, no matching item, or a broken codec degrade to a still/fallback; they do not fail the whole render.
 
 External stock endpoints are not reachable from every sandbox/network. A failed local search is recorded in the render log and does not mean those free providers are unavailable to the GitHub-hosted runner. Never describe an unverified fallback as stock footage: the per-scene source ledger distinguishes video, stock photo, and authored archive-photo fallback.
+
+
+### Original skyline illustrations (2026-10-23)
+
+The five Getty-backed Houston headquarters images are no longer referenced by the
+Enron scene tables. They are replaced by **abstract skyline illustrations**, not
+photos of Houston or Enron Center. The original photographs remain in the ledger
+with their existing rights-encumbered status; they have not been relicensed.
+
+`tools/make_plates.py` generates five PNGs from fixed seeds without any source
+images, fonts or downloads. They are ignored by Git. CI render setup rebuilds
+these assets; renderer and ledger CLIs build missing ones automatically. For an
+explicit rebuild, run:
+
+```bash
+.venv/bin/python tools/make_plates.py
+.venv/bin/python scripts/licence_ledger.py check
+```
+
+The five originals are recorded as `cleared` based on code provenance and
+repeat-generation byte comparison, **not a human licence review of a downloaded
+photo**. `tests/test_original_plates.py` reproduces each recorded hash. A Pillow
+upgrade may change PNG encoding; inspect such drift before regenerating the ledger.
+
+Current pool: **54 assets: 13 rights-encumbered, 1 corrupt, 35 unverified,
+5 original illustrations cleared**. The older count above describes the initial
+scan. Remaining scene-table references include the Fastow/news images in Enron
+and one Johnstown club image. These demo videos are still **not cleared for a
+monetized upload**. Never substitute an unverified photo and call it licensed.
