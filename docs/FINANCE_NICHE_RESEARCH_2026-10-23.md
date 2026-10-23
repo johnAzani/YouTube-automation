@@ -1,3 +1,9 @@
+> **SUPERSEDED — 23 October 2026.** The niche is decided in
+> [`NICHE_DECISION_2026-10-23.md`](NICHE_DECISION_2026-10-23.md). One niche only:
+> education-categorised money-collapse documentaries, 18–22 minutes, Tier-1 English.
+> Every alternative discussed below is deleted. Keep this file for its evidence, not
+> for its recommendations.
+
 # Finance niche decision: automate the demonstration, not the expert
 
 **Research date:** 23 October 2026  

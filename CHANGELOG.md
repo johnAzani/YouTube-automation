@@ -5,6 +5,26 @@ there was no changelog before this file.
 
 ---
 
+## 2026-10-23 — niche decided: education-categorised money-collapse documentaries
+
+- Record the verdict on a 2-3 week monetisation request: 4,000 hours is 240,000
+  minutes; YouTube review alone typically takes about a month (often a week at
+  AIR). Fastest verified case 30 days; median 14-16 months.
+- Record the real deadline: an application by 31 Jan 2027 is reviewed against
+  4,000 hours even if the decision lands after the 1 Feb threshold change.
+- Choose one niche and delete the rest: education-categorised money-collapse
+  documentaries, 18-22 minutes, Tier-1 English, primary documents on screen.
+- Evidence: Education & Science median RPM $10.22 vs Business & Finance $2.01
+  (three channels, directional); 77% of Education views show an ad, the best
+  fill rate measured. The queue already carries `category: education`.
+- Set the six-video test: 20 min at 8 min AVD, 5,000 average views each = 4,000
+  hours exactly; 30,000 views at 5% = ~1,500 subscribers. 1-in-5 odds, labelled
+  as judgement.
+- Mark the four earlier finance memos as superseded. No publishing, spending,
+  approval or approval-flag change.
+
+---
+
 ## 2026-10-23 — documentary strategy: style audit, AI-slop flood, length lever
 
 - Audit the existing channel style: 9-minute financial-disaster documentaries
