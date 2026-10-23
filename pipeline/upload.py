@@ -159,6 +159,88 @@ def upload(
     )
 
 
+def set_video_thumbnail(video_id: str, thumbnail_path: Path) -> str:
+    """Apply a custom thumbnail to an existing YouTube video ID and return 'ok' or error string."""
+    vid = (video_id or "").strip()
+    if not vid or not thumbnail_path.is_file():
+        return "skipped"
+    try:
+        from googleapiclient.discovery import build
+        from googleapiclient.http import MediaFileUpload
+
+        creds = _credentials()
+        youtube = build("youtube", "v3", credentials=creds, cache_discovery=False)
+        youtube.thumbnails().set(
+            videoId=vid,
+            media_body=MediaFileUpload(str(thumbnail_path), mimetype="image/jpeg"),
+        ).execute()
+        print(f"[upload] set custom thumbnail on {vid}")
+        return "ok"
+    except Exception as exc:  # noqa: BLE001
+        msg = f"{type(exc).__name__}: {exc}"
+        print(f"[upload] set_video_thumbnail({vid}) failed: {msg}")
+        return msg[:220]
+
+
+def audit_channel_videos(extra_video_ids: list[str] | None = None) -> list[dict]:
+    """Return status/thumbnail metadata for recent channel uploads plus any explicit video IDs."""
+    try:
+        from googleapiclient.discovery import build
+
+        creds = _credentials()
+        youtube = build("youtube", "v3", credentials=creds, cache_discovery=False)
+        ids: list[str] = [v.strip() for v in (extra_video_ids or []) if v and v.strip()]
+
+        ch_resp = youtube.channels().list(part="snippet,contentDetails", mine=True).execute()
+        for ch in ch_resp.get("items", []):
+            uploads_pl = ch.get("contentDetails", {}).get("relatedPlaylists", {}).get("uploads", "")
+            if uploads_pl:
+                pl_resp = (
+                    youtube.playlistItems()
+                    .list(part="contentDetails", playlistId=uploads_pl, maxResults=15)
+                    .execute()
+                )
+                for item in pl_resp.get("items", []):
+                    vid = item.get("contentDetails", {}).get("videoId", "")
+                    if vid and vid not in ids:
+                        ids.append(vid)
+
+        seen: list[str] = []
+        for vid in ids:
+            if vid and vid not in seen:
+                seen.append(vid)
+        if not seen:
+            return []
+
+        v_resp = (
+            youtube.videos()
+            .list(part="snippet,status,contentDetails", id=",".join(seen[:25]))
+            .execute()
+        )
+        rows: list[dict] = []
+        for item in v_resp.get("items", []):
+            st = item.get("status", {})
+            sn = item.get("snippet", {})
+            cd = item.get("contentDetails", {})
+            thumbs = sn.get("thumbnails", {})
+            rows.append(
+                {
+                    "id": item.get("id", ""),
+                    "title": sn.get("title", ""),
+                    "publishedAt": sn.get("publishedAt", ""),
+                    "uploadStatus": st.get("uploadStatus", ""),
+                    "privacyStatus": st.get("privacyStatus", ""),
+                    "rejectionReason": st.get("rejectionReason", ""),
+                    "failureReason": st.get("failureReason", ""),
+                    "duration": cd.get("duration", ""),
+                    "thumbMaxres": bool(thumbs.get("maxres") or thumbs.get("standard")),
+                }
+            )
+        return rows
+    except Exception as exc:  # noqa: BLE001
+        return [{"error": f"{type(exc).__name__}: {exc}"[:240]}]
+
+
 def delete_video(video_id: str) -> bool:
     """Best-effort delete of a superseded private YouTube upload if scope allows."""
     vid = (video_id or "").strip()
