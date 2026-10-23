@@ -99,6 +99,13 @@ Repo → **Settings → Secrets and variables → Actions** → New repository s
    Checklist: PLAN.md §4.4 — every `originality:` flag must be honestly true
    (`human_rewrite` stays `false` until *you* have verified the facts and rewritten the
    narration; the originality gate blocks the run until then).
+
+   **Shortcut for the fact-check:** `python scripts/factcheck.py 0003` writes
+   `content/factcheck/0003-….md` — every claim in the script pulled out as a checkbox, next
+   to the job's own declared sources, with a blank for the source you confirmed it against.
+   It verifies nothing and pre-ticks nothing; it just saves you the hour of extraction. Tick
+   the boxes, rewrite as you go, then flip the two flags **in the script file**. Re-running
+   without `--force` will not clobber a worksheet you have already filled in.
 2. Actions → **Produce video** → Run workflow (or wait for the 06:14/14:14 UTC cron).
 3. Check the run summary + the `render-*` artifact (QC it: hook, pacing, captions).
 4. A **release ticket** Issue appears → open the Studio link → replace thumbnail/title

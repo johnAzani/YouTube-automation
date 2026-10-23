@@ -5,6 +5,39 @@ there was no changelog before this file.
 
 ---
 
+## 2026-10-22 — fact-check worksheets: the mechanical half of the human gate
+
+The human gate is the one step no machine in this repo may skip: `pipeline/originality.py`
+blocks any job whose `human_rewrite` is `false`, and flipping it is the human's signature.
+But the gate was slow for a boring reason — pulling every checkable claim out of a 900-word
+script and finding which of six sources settles each one is an hour of extraction before the
+actual judgement starts.
+
+### Added
+
+- **`scripts/factcheck.py`** → `content/factcheck/<id>-<slug>.md`. Extracts candidate claims
+  (a sentence containing a number word, a month, or a multi-word proper noun) and prints them
+  as checkboxes next to the job's own declared sources, each with a blank for the source the
+  human confirmed it against, plus a sign-off block. **It verifies nothing and pre-ticks
+  nothing** — an unticked box is the only correct starting state, and a test asserts that.
+  Re-running without `--force` refuses to overwrite a worksheet a human has filled in.
+- Worksheets generated for all four queued jobs: **41 / 39 / 35 / 37 checkboxes**
+  (0003–0006). Each embeds the source script's sha256 so staleness is visible.
+- 13 tests in `tests/test_factcheck.py`, including the two invariants that matter most: the
+  generator never asserts a verdict, and its output never lands in `content/queue/` — that
+  directory is globbed by `pipeline/run.py::select_jobs`, `scripts/doctor.py`, the
+  queue-integrity tests and `dry-run.yml`, so a worksheet there would be parsed as a job.
+
+### Notes
+
+- Extraction is deliberately dumb: the narration spells numbers out for TTS ("two thousand
+  and eight"), so digit-matching would find nothing, and a clever extractor that decided what
+  matters would hide claims behind a model's judgement. A missed claim is a checkbox the human
+  adds.
+- `docs/SETUP.md` §6 now points at it as the shortcut for the fact-check step.
+
+---
+
 ## 2026-10-22 — the `image-search/` licence ledger: 13 stills are not ours to publish
 
 `docs/ASSET_SOURCING.md` had carried *"no complete per-file license ledger in this checkout"*
