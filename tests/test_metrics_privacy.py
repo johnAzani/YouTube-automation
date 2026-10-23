@@ -47,6 +47,24 @@ class MetricsPrivacyTests(unittest.TestCase):
 
         self.assertEqual([row["video_id"] for row in kept], ["cutoff"])
 
+class ChannelSubscriberTests(unittest.TestCase):
+    def test_public_count_is_reported_without_exporting_other_channel_fields(self):
+        from scripts.metrics_snapshot import _subscriber_snapshot, _subscriber_summary
+        snapshot = _subscriber_snapshot({
+            'id': 'channel-id', 'contentDetails': {'private': 'not exported'},
+            'statistics': {'subscriberCount': '12300', 'hiddenSubscriberCount': False},
+        }, '2026-10-23')
+        self.assertEqual(snapshot['subscriber_count'], 12300)
+        self.assertNotIn('private', repr(snapshot))
+        self.assertIn('12,300', _subscriber_summary(snapshot))
+        self.assertIn('rounds', _subscriber_summary(snapshot))
+
+    def test_hidden_and_missing_counts_are_not_reported_as_zero(self):
+        from scripts.metrics_snapshot import _subscriber_snapshot
+        for stats in ({}, {'subscriberCount': '12', 'hiddenSubscriberCount': True}):
+            self.assertIsNone(_subscriber_snapshot({'statistics': stats}, '2026-10-23')['subscriber_count'])
+        self.assertEqual(_subscriber_snapshot({'statistics': {'subscriberCount': '0'}}, '2026-10-23')['subscriber_count'], 0)
+
 
 if __name__ == "__main__":
     unittest.main()

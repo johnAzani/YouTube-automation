@@ -5,6 +5,19 @@ there was no changelog before this file.
 
 ---
 
+## 2026-10-23 — include subscribers in the metrics snapshot
+
+- Request channel `statistics` alongside the existing `contentDetails` using the
+  existing YouTube Data API readonly permission; no new OAuth consent required.
+- Report YouTube's subscriber count in logs, the Actions summary, and a
+  short-lived `channel-metrics.json` artifact. Only channel ID, subscriber count,
+  date and reporting caveats are exported; private video metadata stays excluded.
+- Hidden/missing counts are unavailable, not zero. YouTube rounds subscriber
+  counts to three significant figures; do not present them as exact live totals.
+- Four focused metrics tests pass, including hidden, missing and zero counts.
+
+---
+
 ## 2026-10-23 — replace Getty headquarters shots with original illustrations
 
 - Both Enron renderer scene tables now use five original, abstract skyline plates
