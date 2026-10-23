@@ -4,8 +4,7 @@
 Reads the channel's recent videos (Data API `videos.list`, 1 unit/call) and
 writes a rolling 30-day snapshot of public-video data to content/metrics.csv
 so growth can be reviewed. Private and unlisted video metadata is excluded; the
-repository is public, so this boundary is deliberate. This does not collect
-channel-level subscriber totals.
+repository is public, so this boundary is deliberate. Also collects the channel's public subscriber count (rounded by YouTube) when it is not hidden.
 
 Needs the same credentials as upload.py, with the `youtube.readonly` scope
 added to the OAuth consent screen + refresh token (scripts/youtube_oauth.py).
@@ -15,6 +14,7 @@ added to the OAuth consent screen + refresh token (scripts/youtube_oauth.py).
 from __future__ import annotations
 
 import csv
+import json
 import datetime as dt
 import os
 import sys
@@ -63,6 +63,27 @@ def _within_retention(rows: list[dict], today: dt.date) -> list[dict]:
     return kept
 
 
+def _subscriber_snapshot(channel: dict, today: str) -> dict:
+    """Export only public subscriber data; missing/hidden is not zero."""
+    stats = channel.get("statistics") or {}
+    hidden = stats.get("hiddenSubscriberCount") is True
+    count = None if hidden else stats.get("subscriberCount")
+    return {
+        "snapshot_date": today,
+        "channel_id": channel.get("id"),
+        "subscriber_count": int(count) if count is not None else None,
+        "subscriber_count_hidden": hidden,
+        "note": "YouTube rounds subscriberCount to three significant figures; not an exact live count.",
+    }
+
+
+def _subscriber_summary(snapshot: dict) -> str:
+    count = snapshot["subscriber_count"]
+    if count is None:
+        return "Subscribers: unavailable (hidden or omitted by YouTube)."
+    return f"Subscribers (YouTube-reported): {count:,}. YouTube rounds this count to three significant figures."
+
+
 def main() -> int:
     from googleapiclient.discovery import build
 
@@ -73,7 +94,7 @@ def main() -> int:
     creds = _credentials()
     youtube = build("youtube", "v3", credentials=creds, cache_discovery=False)
 
-    ch = youtube.channels().list(part="contentDetails", mine=True).execute()
+    ch = youtube.channels().list(part="contentDetails,statistics", mine=True).execute()
     items = ch.get("items") or []
     if not items:
         print("no channel for these credentials")
@@ -94,6 +115,12 @@ def main() -> int:
 
     today = dt.date.today()
     today_text = today.isoformat()
+    channel_snapshot = _subscriber_snapshot(items[0], today_text)
+    CSV_PATH.parent.mkdir(parents=True, exist_ok=True)
+    CSV_PATH.with_name("channel-metrics.json").write_text(
+        json.dumps(channel_snapshot, indent=2) + "\n", encoding="utf-8"
+    )
+    print(_subscriber_summary(channel_snapshot))
     rows = []
     if video_ids:
         vresp = youtube.videos().list(
@@ -117,6 +144,7 @@ def main() -> int:
     if os.environ.get("GITHUB_STEP_SUMMARY"):
         with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as f:
             f.write(f"## Public-video metrics snapshot {today_text}\n\n")
+            f.write(_subscriber_summary(channel_snapshot) + "\n\n")
             f.write(f"Snapshot prepared for {len(rows)} public videos. "
                     "Private and unlisted metadata is excluded. Download the run artifact; "
                     "it expires after 30 days.\n")

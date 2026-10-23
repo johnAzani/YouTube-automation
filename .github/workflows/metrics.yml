@@ -37,6 +37,8 @@ jobs:
         if: success() && hashFiles('content/metrics.csv') != ''
         with:
           name: public-video-metrics-${{ github.run_id }}
-          path: content/metrics.csv
+          path: |
+            content/metrics.csv
+            content/channel-metrics.json
           retention-days: 30
           if-no-files-found: ignore

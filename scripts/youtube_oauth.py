@@ -10,7 +10,9 @@ It prints the values to put in GitHub secrets separately:
     YOUTUBE_CLIENT_SECRET   (the raw OAuth client secret)
     YOUTUBE_REFRESH_TOKEN   (the refresh token)
 
-Scopes requested: youtube.upload only (least privilege).
+Default scopes: youtube.upload + youtube.readonly.
+Use --purpose analytics for a separate read-only Analytics token, or
+--purpose analytics-revenue to include monetary reports. Never paste tokens in chat.
 """
 from __future__ import annotations
 
@@ -20,9 +22,20 @@ import sys
 from pathlib import Path
 
 
+def scopes_for(purpose: str) -> list[str]:
+    base = "https://www.googleapis.com/auth/"
+    if purpose == "upload":
+        return [base + "youtube.upload", base + "youtube.readonly"]
+    scopes = [base + "youtube.readonly", base + "yt-analytics.readonly"]
+    if purpose == "analytics-revenue":
+        scopes.append(base + "yt-analytics-monetary.readonly")
+    return scopes
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--client-secret", required=True, help="path to OAuth client secret JSON")
+    ap.add_argument("--purpose", choices=("upload", "analytics", "analytics-revenue"), default="upload")
     args = ap.parse_args()
 
     try:
@@ -31,10 +44,7 @@ def main() -> int:
         print("pip install -r requirements.txt first", file=sys.stderr)
         return 1
 
-    scopes = [
-        "https://www.googleapis.com/auth/youtube.upload",
-        "https://www.googleapis.com/auth/youtube.readonly",
-    ]
+    scopes = scopes_for(args.purpose)
     flow = InstalledAppFlow.from_client_secrets_file(args.client_secret, scopes)
 
     # Local server flow — opens the browser, listens on localhost.
@@ -46,14 +56,18 @@ def main() -> int:
         print("OAuth client JSON must contain a web or installed client_id/client_secret", file=sys.stderr)
         return 1
 
-    print("\n=== Paste each value into its own GitHub secret ===\n")
-    print("Secret name: YOUTUBE_CLIENT_ID")
+    prefix = "YOUTUBE" if args.purpose == "upload" else "ANALYTICS"
+    print("\n=== Sensitive values: store securely; never share in chat or public logs ===\n")
+    print(f"Secret name: {prefix}_CLIENT_ID")
     print(client["client_id"])
-    print("\nSecret name: YOUTUBE_CLIENT_SECRET")
+    print(f"\nSecret name: {prefix}_CLIENT_SECRET")
     print(client["client_secret"])
-    print("\nSecret name: YOUTUBE_REFRESH_TOKEN")
+    print(f"\nSecret name: {prefix}_REFRESH_TOKEN")
     print(creds.refresh_token)
-    print("\nThen, in the repo: Settings → Secrets and variables → Actions → New repository secret")
+    if args.purpose == "upload":
+        print("\nStore in repository Actions secrets, not source files.")
+    else:
+        print("\nUse ANALYTICS_* in a private local environment. Do not run private reports in public Actions.")
     return 0
 
 
