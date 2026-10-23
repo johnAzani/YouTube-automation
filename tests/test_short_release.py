@@ -222,6 +222,15 @@ class ShortReleaseTests(unittest.TestCase):
             self.assertFalse(manifest.exists())
             self.assertIsNone(select_next_queued_short(qdir))
 
+    def test_short_plates_fill_vertical_frame_edge_to_edge(self):
+        img_name = shorts_tool.SCRIPTS["short-enron"]["scenes"][4]["img"]
+        plate = shorts_tool.prep_plate(Path(shorts_tool.IMG) / img_name)
+        self.assertEqual(plate.size, (1080, 1920))
+        top_band = [plate.getpixel((x, 40)) for x in range(100, 980, 80)]
+        bot_band = [plate.getpixel((x, 1880)) for x in range(100, 980, 80)]
+        self.assertGreater(max(sum(px) for px in top_band), 90)
+        self.assertGreater(max(sum(px) for px in bot_band), 90)
+
 
 if __name__ == "__main__":
     unittest.main()

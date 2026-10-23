@@ -286,6 +286,44 @@ def _scrub(text: str) -> str:
     return cleaned
 
 
+def _read_previous_video_id(record_path: Path) -> str:
+    if not record_path.is_file():
+        return ""
+    m = re.search(r'^youtube_video_id:\s*"([^"]+)"', record_path.read_text(encoding="utf-8"), re.MULTILINE)
+    return m.group(1).strip() if m else ""
+
+
+def _close_superseded_tickets(title: str, new_shorts_url: str) -> None:
+    if not os.environ.get("GH_TOKEN") and not os.environ.get("GITHUB_TOKEN"):
+        return
+    try:
+        proc = subprocess.run(
+            ["gh", "issue", "list", "--state", "open", "--limit", "10", "--json", "number,title"],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        if proc.returncode != 0:
+            return
+        for row in json.loads(proc.stdout or "[]"):
+            if row.get("title") == f"Release ticket: {title}":
+                subprocess.run(
+                    [
+                        "gh",
+                        "issue",
+                        "close",
+                        str(row["number"]),
+                        "--comment",
+                        f"Superseded by full-bleed B-roll replacement Short upload: {new_shorts_url}",
+                    ],
+                    check=False,
+                    capture_output=True,
+                    text=True,
+                )
+    except Exception:  # noqa: BLE001
+        pass
+
+
 def run_short_release(
     short_key: str,
     dry_run: bool = False,
@@ -299,6 +337,13 @@ def run_short_release(
     edition = EDITIONS[short_key]
     doc = _build_script_doc(edition)
     published_record = PUBLISHED_DIR / f"{edition.slug}.md"
+
+    if manifest_path and manifest_path.is_file():
+        mdata = yaml.safe_load(manifest_path.read_text(encoding="utf-8")) or {}
+        if bool(mdata.get("replace")) or bool(mdata.get("force")):
+            force = True
+
+    previous_video_id = _read_previous_video_id(published_record)
 
     if published_record.is_file() and not dry_run and not force:
         if manifest_path and manifest_path.is_file():
@@ -321,9 +366,12 @@ def run_short_release(
 
     if not skip_render:
         render_env = dict(os.environ)
-        if render_env.get("SHORT_ENABLE_STOCK_BROLL", "").strip().lower() not in {"1", "true", "yes", "on"}:
+        if render_env.get("SHORT_DISABLE_STOCK_BROLL", "").strip().lower() in {"1", "true", "yes", "on"}:
             render_env["ENABLE_STOCK_BROLL"] = "0"
             render_env["ENABLE_KEYLESS_SOURCES"] = "0"
+        else:
+            render_env["ENABLE_STOCK_BROLL"] = "1"
+            render_env["ENABLE_KEYLESS_SOURCES"] = "1"
         cmd = [sys.executable, str(REPO_ROOT / "tools" / "shorts.py"), short_key]
         proc = subprocess.run(cmd, cwd=str(REPO_ROOT), env=render_env, check=False)
         if proc.returncode != 0:
@@ -355,12 +403,15 @@ def run_short_release(
     }
 
     if not dry_run:
-        from .upload import upload
+        from .upload import delete_video, upload
 
         up = upload(doc, staged_video, thumbnail_path=None, description=edition.description)
         if not up.video_id:
             raise RuntimeError("YouTube upload returned no video ID; leaving published ledger untouched.")
         shorts_url = f"https://www.youtube.com/shorts/{up.video_id}"
+        if previous_video_id and previous_video_id != up.video_id:
+            delete_video(previous_video_id)
+            _close_superseded_tickets(edition.title, shorts_url)
         result.update(
             {
                 "uploaded": True,
