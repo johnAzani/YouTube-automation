@@ -5,6 +5,19 @@ there was no changelog before this file.
 
 ---
 
+## 2026-10-23 — upload checklist for 0007, and a factual error caught in the draft
+
+- `docs/UPLOAD_0007_CHECKLIST.md` — the twelve load-bearing claims with exact values and the
+  document each one has to be checked against, the three conflated cancellation figures, the
+  three figures the script refuses to state as fact, and the two passages (opening, verdict)
+  that a human has to own before `human_rewrite: true` is true.
+- **Correction:** the opening claimed Monday's $48,078 close was "already a record". It was not —
+  nickel's prior all-time high was $51,800/t in May 2007. What set a record on 7 March 2022 was the
+  intraday print of $55,000. Rewritten to say what happened.
+- **Deletion:** "the largest cancellation of executed trades in the history of a modern exchange"
+  is unsupported as a ranking. Removed rather than softened.
+- Worksheet regenerated (the script hash changed); 96 checkboxes still.
+
 ## 2026-10-23 — first video drafted: the 2022 nickel squeeze (job 0007)
 
 - `content/queue/0007-the-day-the-exchange-pressed-undo.md` — fourteen scenes,

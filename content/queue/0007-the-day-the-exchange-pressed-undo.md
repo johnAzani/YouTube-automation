@@ -141,13 +141,13 @@ originality:
 
 On the morning of the eighth of March, two thousand and twenty-two, a price appeared on a screen in London that should not have been possible.
 
-Nickel, an industrial metal used in stainless steel and electric-car batteries, had closed the previous evening at forty-eight thousand and seventy-eight dollars a tonne. That was already a record. By the early hours of Tuesday it had passed one hundred thousand. At its peak the screen showed one hundred and one thousand, three hundred and sixty-five dollars.
+Nickel, an industrial metal used in stainless steel and electric-car batteries, had closed the previous evening at forty-eight thousand and seventy-eight dollars a tonne, up from under thirty thousand that same morning. It had traded as high as fifty-five thousand during the session, clearing the previous all-time high of fifty-one thousand eight hundred, set in two thousand and seven. By the early hours of Tuesday it had passed one hundred thousand. At its peak the screen showed one hundred and one thousand, three hundred and sixty-five dollars.
 
 Then, at eight fifteen, the London Metal Exchange stopped. Not the price. The market. Every venue, every contract, every screen, switched off.
 
 Later that day the exchange went further and cancelled every nickel trade executed since midnight. Not unwound. Not settled at a reference price. Cancelled, as though they had never been agreed.
 
-The notional value of those trades was thirteen point three seven three billion dollars. It is, as far as anyone can establish, the largest cancellation of executed trades in the history of a modern exchange.
+The notional value of those trades was thirteen point three seven three billion dollars.
 
 This is how that became the least bad option — and what it revealed about the promises a market makes to the people who use it.
 
