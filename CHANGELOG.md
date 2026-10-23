@@ -5,6 +5,23 @@ there was no changelog before this file.
 
 ---
 
+## 2026-10-23 — finance strategy correction: RPM reality and product-first plan
+
+- Add a decision memo correcting the earlier planning RPM. Real Studio data from
+  300 channels (AIR Media-Tech, May 2025–May 2026) shows a $2.30 median RPM,
+  $2.01 for business/finance (three channels, directional) and $10.22 for
+  education; 53% of views carried an ad and subscriber size barely moved RPM.
+- Record base rates: median ~16 months and 40–150 videos to 1,000 subscribers;
+  89% of channels at 1,000 subscribers get under 5,000 monthly views.
+- Compare three coherent strategies (media company, authority + product,
+  Nigeria-first) and recommend the second: a math-forward money explainer for a
+  Tier-1 audience with a paid calculation model as the product.
+- Move the product ahead of the video in the 90-day plan; keep the 18-hour cap,
+  no-new-spend rule, stop rules and human publishing gate.
+- No rebrand, purchase, publishing, approval or private analytics disclosure.
+
+---
+
 ## 2026-10-23 — finance demand evidence and revised topic strategy
 
 - Add a source-checked demand/monetization study with 13 channel benchmarks,
