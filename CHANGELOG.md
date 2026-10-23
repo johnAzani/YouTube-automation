@@ -5,6 +5,21 @@ there was no changelog before this file.
 
 ---
 
+## 2026-10-23 — first corrective review of the Lehman upload draft
+
+- Correct Repo 105 narration to explain the use of proceeds to repay other
+  liabilities and subsequent borrowing, rather than implying disclosure alone.
+- Correct the reversed English-law legal-opinion claim and September 16 AIG
+  authorization chronology; remove an unverified sweeping criminal-law conclusion.
+- Replace broad source homepages with specific documents/case studies and add
+  review notes identifying evidence consulted and unresolved claims.
+- Refresh the fact-check worksheet against the revised script. No boxes ticked;
+  `status: draft` and `human_rewrite: false` remain unchanged.
+- 19 fact-check/queue-integrity tests pass with PyYAML installed. This is a partial
+  machine-assisted review, not a completed human approval or full source audit.
+
+---
+
 ## 2026-10-23 — explicit Analytics coverage and a private reporting path
 
 - Add a separate, read-only Analytics collector with daily/video performance,

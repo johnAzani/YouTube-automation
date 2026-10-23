@@ -18,17 +18,22 @@ description: |
 
   A money story, not money advice. No picks, no predictions — just the record.
 
-  Sources (verify every claim against these before setting status: approved):
-  - Valukas, A. R. (2010). Report of Anton R. Valukas, Examiner, In re Lehman Brothers
-    Holdings Inc., et al., Case No. 08-13555 (JMP), U.S. Bankruptcy Court, S.D.N.Y.
-    https://www.uscourts.gov/ (Lehman examiner report, ~2,200 pages; §"Repo 105")
-  - U.S. House Committee on Oversight and Government Reform (2010). "Wall Street and the
-    Financial Crisis: The Role of Investment Banks." https://oversight.house.gov/
-  - Lehman Brothers Holdings Inc. (2007). Form 10-K for fiscal year 2007 (leverage data).
-    https://www.sec.gov/edgar
-  - Federal Reserve Bank of New York (2008). Statement on AIG credit facility, Sept 16 2008.
-    https://www.newyorkfed.org/
-  - Sorkin, A. R. (2009). Too Big to Fail. Viking. (narrative of the Sept 12–14 weekend)
+  Sources (claim-by-claim human review still required before approval):
+  - Wiggins, R. Z. and Metrick, A. The Lehman Brothers Bankruptcy C: Managing the
+    Balance Sheet Through the Use of Repo 105. Journal of Financial Crises (2019).
+    https://elischolar.library.yale.edu/journal-of-financial-crises/vol1/iss1/4/
+    Explains leverage, transaction mechanics and English-law opinion; cites examiner pages.
+  - Valukas, A. R. Report of the Examiner, Volume 3, Section III.A.4: Repo 105 (2010).
+    https://elischolar.library.yale.edu/cgi/viewcontent.cgi?article=1725&context=ypfs-documents
+    Primary report location identified; not fully read in this review pass.
+  - Wiggins, R. Z., Piontek, T. and Metrick, A. The Lehman Brothers Bankruptcy A:
+    Overview. Journal of Financial Crises (2019).
+    https://elischolar.library.yale.edu/journal-of-financial-crises/vol1/iss1/2/
+  - Federal Reserve Board. AIG credit facility announcement, September 16, 2008.
+    https://www.federalreserve.gov/newsevents/pressreleases/other20080916a.htm
+  - Federal Reserve Board. October 2008 monetary policy alternatives (Bluebook).
+    https://www.federalreserve.gov/monetarypolicy/files/FOMC20081029bluebook20081023.pdf
+    Records the Reserve Primary Fund breaking the buck on September 16.
 # One query per scene, in scene order (tests assert the coverage). Revised
 # 2026-10-21: every query below was verified against the Wikimedia Commons
 # search API to return multiple CC0 / public-domain / CC-BY matches — the
@@ -150,21 +155,24 @@ At the end of each quarter, Lehman executed a specific kind of transaction. It h
 to a counterparty in exchange for cash, and agreed to buy them back days later. That is a
 repurchase agreement — a repo — and in substance it is a secured loan. But Lehman structured
 these particular deals, internally called Repo one-oh-five, so that its accountants could record
-them as sales rather than as borrowing. Recording a repo as a sale removes the asset and the
-matching liability from the balance sheet at the same moment. Lehman used the mechanism to move
-roughly fifty billion dollars off its books temporarily, at quarter-ends, and reported the lower
-leverage that resulted. The cash came back and the securities came back. Only the disclosure
-changed.
+them as sales rather than as borrowing. Instead of recording the cash as borrowing, Lehman treated it as sale proceeds. It then used
+that cash to pay down other short-term liabilities. That second step matters: it helped make
+both the reported balance sheet and the leverage ratio look smaller. The examiner later found
+that Lehman had temporarily removed about fifty billion dollars of assets at the ends of the
+first and second quarters of two thousand and eight. After the reporting date, Lehman borrowed
+again to repurchase the securities. The apparent improvement did not represent a lasting
+reduction in the risks of those positions.
 
 ## Scene 5 — What the examiner found
 In March two thousand and ten, Anton Valukas — the examiner appointed by the bankruptcy court —
-filed a report of more than two thousand pages. His conclusion on Repo one-oh-five was blunt: the
-transactions had no substance, and describing them as sales was, in his words, an accounting
-gimmick. The report also found that the firm's own outside counsel in London had declined to give
-the legal opinion needed to treat the deals as true sales under British law, which is part of why
-the bookings were routed through a London entity. It is important to be precise here: Valukas
-documented the practice in detail, and no criminal charges were ever brought. This was not
-proven fraud. It was a disclosure decision that made a fragile firm look steadier than it was.
+filed a report of more than two thousand pages. The examiner concluded that Lehman's use of Repo one-oh-five was aimed at managing its
+reported balance sheet and leverage, rather than serving an independent business purpose.
+The legal detail matters. Lehman could not obtain the true-sale opinion it needed under
+United States law. Linklaters supplied an opinion under English law, and Lehman routed the
+transactions through its European entity. A legal opinion about the structure of a
+transaction is not the same thing as a finding that its financial disclosure was adequate.
+Nor should an examiner's report be narrated as a criminal conviction. The issue here is what
+investors could see, and what the reported numbers left out.
 
 ## Scene 6 — The weekend
 The end came in September two thousand and eight. Lehman's share price had collapsed, its
@@ -180,9 +188,9 @@ The bankruptcy was not contained. The next day, the Reserve Primary Fund — one
 money-market funds in the country — announced that its net asset value had fallen below one
 dollar, because it held Lehman debt. Investors had treated money-market funds as cash. They were
 not cash, and the difference suddenly mattered. A run on money-market funds began within hours,
-and the Treasury had to step in with a guarantee for the funds. The day before, the government
-had extended an eighty-five-billion-dollar credit facility to the insurer AIG. Two emergencies in
-two days, both downstream of the same weekend.
+and the Treasury had to step in with a guarantee for the funds. Also on September sixteenth, the Federal Reserve authorized a credit facility of up to
+eighty-five billion dollars for the insurer AIG, with Treasury support. The same crisis was
+putting pressure on institutions with very different business models.
 
 ## Scene 8 — The verdict
 Lehman's estate spent years unwinding the wreckage and emerged from bankruptcy protection in two
