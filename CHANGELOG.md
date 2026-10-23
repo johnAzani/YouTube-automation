@@ -5,6 +5,150 @@ there was no changelog before this file.
 
 ---
 
+## 2026-10-23 — upload checklist for 0007, and a factual error caught in the draft
+
+- `docs/UPLOAD_0007_CHECKLIST.md` — the twelve load-bearing claims with exact values and the
+  document each one has to be checked against, the three conflated cancellation figures, the
+  three figures the script refuses to state as fact, and the two passages (opening, verdict)
+  that a human has to own before `human_rewrite: true` is true.
+- **Correction:** the opening claimed Monday's $48,078 close was "already a record". It was not —
+  nickel's prior all-time high was $51,800/t in May 2007. What set a record on 7 March 2022 was the
+  intraday print of $55,000. Rewritten to say what happened.
+- **Deletion:** "the largest cancellation of executed trades in the history of a modern exchange"
+  is unsupported as a ranking. Removed rather than softened.
+- Worksheet regenerated (the script hash changed); 96 checkboxes still.
+
+## 2026-10-23 — first video drafted: the 2022 nickel squeeze (job 0007)
+
+- `content/queue/0007-the-day-the-exchange-pressed-undo.md` — fourteen scenes,
+  3,156 narration words, ~21 minutes at the pipeline's 2.5 words/second estimate.
+  Draft only: `human_rewrite: false`, `status: draft`, so `select_jobs()` will not
+  pick it up and `originality.enforce()` will refuse it until a human signs.
+- Argues a mechanism, not a villain: the deliverable was narrower than the production
+  (nickel pig iron is not LME nickel), the volatility control was switched off for
+  3h26m, and finality is a clause in a private rulebook, not a property of a trade.
+- Sources resolved to primary where they exist: LME Notices 22/052, 22/053 and
+  22/070; FCA Final Notice 207387 (the £9,245,900 penalty and the $13.373bn
+  notional); [2024] EWCA Civ 1168; OFR working paper 24-09. The three published
+  figures for cancelled-trade value ($3.9bn / $12bn / $13.373bn) are named as
+  reporting variants of different scope rather than averaged.
+- `content/research/0007-nickel-squeeze-dossier.md` — timeline, cast, source
+  register and an explicit "what the script must NOT claim" list (position sizes,
+  the ~$1bn loss and the $19.75bn avoided margin call are reported, not disclosed).
+- All fourteen `asset_queries` probed against the Commons search API and scored with
+  `pipeline/assets.py::licence_ok_for_monetized_use`. Eight of the first-draft
+  queries were replaced after returning zero usable hits — notably "nickel metal"
+  (six Ni-MH battery photos, all CC BY-SA) and "canary wharf london" (six CC BY-SA).
+- `content/factcheck/0007-…md` worksheet written: 96 checkboxes. A worksheet is not
+  a verification; it is the list of things a human still has to check.
+
+## 2026-10-23 — niche decided: education-categorised money-collapse documentaries
+
+- Record the verdict on a 2-3 week monetisation request: 4,000 hours is 240,000
+  minutes; YouTube review alone typically takes about a month (often a week at
+  AIR). Fastest verified case 30 days; median 14-16 months.
+- Record the real deadline: an application by 31 Jan 2027 is reviewed against
+  4,000 hours even if the decision lands after the 1 Feb threshold change.
+- Choose one niche and delete the rest: education-categorised money-collapse
+  documentaries, 18-22 minutes, Tier-1 English, primary documents on screen.
+- Evidence: Education & Science median RPM $10.22 vs Business & Finance $2.01
+  (three channels, directional); 77% of Education views show an ad, the best
+  fill rate measured. The queue already carries `category: education`.
+- Set the six-video test: 20 min at 8 min AVD, 5,000 average views each = 4,000
+  hours exactly; 30,000 views at 5% = ~1,500 subscribers. 1-in-5 odds, labelled
+  as judgement.
+- Mark the four earlier finance memos as superseded. No publishing, spending,
+  approval or approval-flag change.
+
+---
+
+## 2026-10-23 — documentary strategy: style audit, AI-slop flood, length lever
+
+- Audit the existing channel style: 9-minute financial-disaster documentaries
+  (Lehman, LTCM, Northern Rock, Barings) with primary-source research dossiers.
+  Record that the earlier paid-calculator recommendation does not fit it.
+- Record live competition: the same lane is being flooded by 7-11 minute
+  AI-assisted channels created in the last 58-73 days, and the current slate
+  competes with 1-4M-view versions of the same stories (ColdFusion Barings 4.2M,
+  FRONTLINE 1.8M, Moconomy Lehman 1.1M).
+- Add the watch-hour arithmetic by runtime: 9 min needs ~106,667 views for 8,000
+  hours, 20 min needs ~60,000; twelve 5,000-view videos fail at 9 minutes and pass
+  at 20.
+- Recommend mechanism-first case files at 18-22 minutes with the dossier as the
+  paid product; re-sequence the launch slate to nickel squeeze, LDI gilts,
+  Greensill; note the per-video budget must rise from 6 to ~9 hours.
+- Add Revision 2 banner to the strategy decision memo. No publishing, spending,
+  approval or approval-flag change.
+
+---
+
+## 2026-10-23 — finance strategy correction: RPM reality and product-first plan
+
+- Add a decision memo correcting the earlier planning RPM. Real Studio data from
+  300 channels (AIR Media-Tech, May 2025–May 2026) shows a $2.30 median RPM,
+  $2.01 for business/finance (three channels, directional) and $10.22 for
+  education; 53% of views carried an ad and subscriber size barely moved RPM.
+- Record base rates: median ~16 months and 40–150 videos to 1,000 subscribers;
+  89% of channels at 1,000 subscribers get under 5,000 monthly views.
+- Compare three coherent strategies (media company, authority + product,
+  Nigeria-first) and recommend the second: a math-forward money explainer for a
+  Tier-1 audience with a paid calculation model as the product.
+- Move the product ahead of the video in the 90-day plan; keep the 18-hour cap,
+  no-new-spend rule, stop rules and human publishing gate.
+- No rebrand, purchase, publishing, approval or private analytics disclosure.
+
+---
+
+## 2026-10-23 — finance demand evidence and revised topic strategy
+
+- Add a source-checked demand/monetization study with 13 channel benchmarks,
+  YouTube search snapshots, disclosed creator earnings, watch-time arithmetic and
+  a plain account of why third-party earnings estimates disagree.
+- Find that finance demand is large at category level but weak for dry definitions:
+  top amortization/credit-interest videos have roughly 100K–340K lifetime views
+  after 6–11 years, while stakes-driven rent/car/bank videos reach 400K–10M.
+- Revise the first three topics to car cost, rent and bank economics; keep the
+  original-calculation production model and human QA.
+- Add a 12-point demand gate (9 to proceed) and revise the pilot to three videos,
+  six weeks, 18 human-hours, no new spending, with explicit continue/stop rules.
+- Record that watch time is private, that 4,000 hours is about 40K views at a
+  6-minute average view duration, and that verified large earnings belong to
+  personality/team businesses rather than passive faceless automation.
+- No rebrand, purchase, publishing, approval or private analytics disclosure.
+
+---
+
+## 2026-10-23 — finance niche decision and low-regret pilot
+
+- Research current YouTube originality, AI-finance-persona and YPP rules using
+  official sources; distinguish policy evidence from unverified market demand.
+- Recommend testing original money-mechanics explanations with worked examples,
+  not an AI adviser or a high-volume scraped-news/stock-video channel.
+- Add a qualitative nine-niche comparison, checked loan-cost example, 12-topic
+  backlog, hypothetical revenue sensitivity and capped validation/stop rules.
+- Flag overconfident income, liability, geography and payment assumptions in the
+  older finance note/master plan. No RPM or monetization timeline is promised.
+- No rebrand, purchases, publishing, queue approval or private analytics disclosure.
+
+---
+
+## 2026-10-23 — deep Lehman evidence audit and research revision
+
+- Add a 22-entry source register, detailed research dossier, original-claim audit
+  and revised-scene evidence map under `content/research/`, outside scheduler globs.
+- Correct the Linklaters opinion, Repo 105/108 scope, cash-flow mechanics,
+  gross/net leverage comparisons, AIG chronology and entity-specific recoveries.
+- Record the Reserve Primary Fund's later NAV correction and distinguish the
+  Fed participant account from the FCIC's analysis of the failed rescue.
+- Rewrite all eight scenes with direct source links and explicit research limits;
+  no claim that the full examiner report or every litigation docket was read.
+- Regenerate 67 unticked worksheet boxes. All 19 focused factcheck/queue tests
+  pass with PyYAML; the revised narration is 1,294 words (audio timing unmeasured).
+- Keep `status: draft`, `human_rewrite: false` and all human certifications blank.
+  Research is not human creative approval; no upload or publishing change.
+
+---
+
 ## 2026-10-23 — explicit Analytics coverage and a private reporting path
 
 - Add a separate, read-only Analytics collector with daily/video performance,

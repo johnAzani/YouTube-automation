@@ -1,5 +1,12 @@
 # YouTube Automation Master Plan — ₦0 Budget, GitHub Actions Powered
 
+> **Planning update — 2026-10-23:** The newer
+> [finance niche research](docs/FINANCE_NICHE_RESEARCH_2026-10-23.md) supersedes
+> income expectations as decision assumptions: this plan's earnings/milestone dates,
+> per-niche rates and exact deadline/application interpretations are not guarantees
+> or verified channel forecasts. Measure actual channel data, time and costs first.
+> Start with a capped pilot; do not spend or rush uploads to meet an income promise.
+
 **Status:** living document · **Started:** 2026-10-18 · **Branch:** `main`
 *(moved off the session branch `arena/79365da2-youtube-automation` on 2026-10-20 — see MAINTENANCE.md)*
 

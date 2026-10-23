@@ -1,34 +1,54 @@
 ---
 id: "0003"
-title: "How Lehman Brothers Died: The $50 Billion Accounting Trick Behind 2008"
+title: "How Lehman Brothers Failed: Repo 105, Leverage and the Funding Run"
 slug: how-lehman-brothers-died
-status: draft             # DRAFT — awaiting human fact-check before approval (see originality note)
-format: longform          # longform | short
+status: draft             # Research revision, NOT human approval.
+format: longform
 niche: finance and business
 category: education
 voice: en-US-ChristopherNeural
 target_minutes: 9
 tags: [lehman brothers, 2008 financial crisis, repo 105, wall street, business documentary, bankruptcy]
-thumb_text: "THE $50B TRICK"
+thumb_text: "LOOKING SAFER"
 description: |
-  On September 15, 2008, Lehman Brothers — a 158-year-old firm that had survived the Civil
-  War and the Great Depression — filed the largest bankruptcy in American history. This is
-  the story of the balance sheet that killed it, and of Repo 105, the accounting manoeuvre
-  a court-appointed examiner later called an accounting gimmick.
+  Lehman Brothers Holdings Inc. filed for Chapter 11 on September 15, 2008.
+  This documentary examines its risky assets, dependence on market funding,
+  failed rescue negotiations, and the temporary quarter-end transactions
+  reconstructed by the bankruptcy examiner in 2010. Repo 105 is part of the
+  story, not a demonstrated single cause of Lehman's failure or the crisis.
 
   A money story, not money advice. No picks, no predictions — just the record.
 
-  Sources (verify every claim against these before setting status: approved):
-  - Valukas, A. R. (2010). Report of Anton R. Valukas, Examiner, In re Lehman Brothers
-    Holdings Inc., et al., Case No. 08-13555 (JMP), U.S. Bankruptcy Court, S.D.N.Y.
-    https://www.uscourts.gov/ (Lehman examiner report, ~2,200 pages; §"Repo 105")
-  - U.S. House Committee on Oversight and Government Reform (2010). "Wall Street and the
-    Financial Crisis: The Role of Investment Banks." https://oversight.house.gov/
-  - Lehman Brothers Holdings Inc. (2007). Form 10-K for fiscal year 2007 (leverage data).
-    https://www.sec.gov/edgar
-  - Federal Reserve Bank of New York (2008). Statement on AIG credit facility, Sept 16 2008.
-    https://www.newyorkfed.org/
-  - Sorkin, A. R. (2009). Too Big to Fail. Viking. (narrative of the Sept 12–14 weekend)
+  Sources (human verification still required before approval):
+  - Valukas, Anton R. (2010). Examiner's Report, Volume 3, Repo 105 executive summary.
+    https://web.stanford.edu/~jbulow/lehmandocs/VOLUME%203.pdf
+  - Financial Crisis Inquiry Commission (2011). Final Report, Chapter 18.
+    https://fcic-static.law.stanford.edu/cdn_media/fcic-reports/fcic_final_report_chapter18.pdf
+  - Lehman Brothers Holdings Inc. (2007). Fiscal 2007 Form 10-K.
+    https://www.sec.gov/Archives/edgar/data/806085/000110465908005476/a08-3530_110k.htm
+  - Wiggins and Metrick (2019). Yale case C: Managing the Balance Sheet Through Repo 105.
+    https://elischolar.library.yale.edu/cgi/viewcontent.cgi?article=1002&context=journal-of-financial-crises
+  - Harvard Baker Library. Lehman Brothers archival timeline.
+    https://www.library.hbs.edu/special-collections-and-archives/exhibits/lehman/timeline
+  - Baxter, Thomas (2010). Testimony to the Financial Crisis Inquiry Commission.
+    https://www.newyorkfed.org/newsevents/speeches/2010/bax100901
+  - Reserve Primary Fund (2008). September 16 notice and November 26 NAV correction.
+    https://www.sec.gov/spotlight/reserve_primary_fund_investors/osnato_declaration_exhibit_14.pdf
+    https://www.sec.gov/spotlight/reserve_primary_fund_investors/osnato_declaration_exhibit_13.pdf
+  - Federal Reserve (2008). AIG authorization, September 16, 9 p.m. EDT.
+    https://www.federalreserve.gov/newsevents/pressreleases/other20080916a.htm
+  - Treasury (2008). Money-fund guarantee opening, September 29; announced September 19.
+    https://home.treasury.gov/news/press-releases/hp1161
+  - Lehman Brothers Holdings Inc. (2008). Asset-sale Form 8-K, September 22/23 events.
+    https://www.sec.gov/Archives/edgar/data/806085/000110465908060737/a08-22764_88k.htm
+  - Lehman Brothers Holdings Inc. (2012). Plan-effective-date Form 8-K.
+    https://www.sec.gov/Archives/edgar/data/806085/000090951812000100/mm03-1212_8k.htm
+  - SIPC (2022). Conclusion of the separate Lehman Brothers Inc. liquidation.
+    https://www.sipc.org/news-and-media/news-releases/20220928
+  - LBIE administrators (2025). Final administration report, October 14.
+    https://www.pwc.co.uk/business-recovery/administrations/lehman/lbie/LBIE_Final_Report_October_2025.pdf
+research_notes: content/research/0003-lehman-dossier.md
+claim_audit: content/research/0003-lehman-claim-audit.md
 # One query per scene, in scene order (tests assert the coverage). Revised
 # 2026-10-21: every query below was verified against the Wikimedia Commons
 # search API to return multiple CC0 / public-domain / CC-BY matches — the
@@ -95,103 +115,151 @@ asset_query_verification:
       ci_verified: 39734567120
       evidence: "scene 8 sourced on the keyless runner in dry-run 39734567120 (main @ af63d2c); no Commons probe recorded for this query"
 originality:
-  original_thesis: true      # argues the killer was reported-leverage optics, not one bad weekend
-  unique_structure: true     # balance-sheet-first structure: the trick, then the run, then the verdict
-  human_rewrite: false       # *** FALSE ON PURPOSE *** facts not yet human-verified — gate must block
-  no_ai_persona: true        # documentary narration; no advisor persona, no recommendations
-  source_notes: true         # sources listed in description
-  ai_disclosure: false       # narration is synthetic voice; no photorealistic synthetic media
+  original_thesis: true      # Reported leverage was not a substitute for durable funding.
+  unique_structure: true     # Balance sheet, accounting, rescue, then entity-specific outcomes.
+  human_rewrite: false       # Machine-assisted research is NOT a human rewrite or sign-off.
+  no_ai_persona: true
+  source_notes: true
+  ai_disclosure: false       # Existing production setting; re-evaluate against the final visuals.
 ---
 
 <!--
-  MAINTAINER NOTE — read before approving.
-
-  `human_rewrite` is deliberately `false`. `pipeline/originality.py` treats that as a hard
-  block, so this job can be dry-rendered but can never be approved-and-uploaded until a
-  human has:
-
-    1. verified every figure against the sources listed in `description` (start with the
-       Valukas examiner report — it is the primary document for Repo 105);
-    2. rewritten the narration in their own words;
-    3. flipped `human_rewrite` to `true` and `status` to `approved`.
-
-  That is the human-creative / machine-labour split the whole repo is built on
-  (PLAN.md §4.4). Do not flip the flag as a convenience.
+MAINTAINER NOTE — this is a machine-assisted research revision, not approval.
+Read content/research/0003-lehman-dossier.md and the companion claim audit.
+The worksheet is mechanical and verifies nothing. A human must check the evidence,
+rewrite the narration in their own words, review the actual visuals/disclosure needs,
+and sign off before changing human_rewrite or status. Never bypass that gate.
+Historical asset-query evidence above applies to the earlier render, not to a new cut.
 -->
 
 ## Scene 1 — The hook
-On the morning of September fifteenth, two thousand and eight, a hundred and fifty-eight-year-old
-investment bank walked into a Manhattan courthouse and filed the largest bankruptcy petition in
-American history. Roughly six hundred and thirty-nine billion dollars of assets. Lehman Brothers
-had survived the Civil War, the Great Depression, and two world wars. It did not survive a single
-weekend. And the reason it failed was not only that it had borrowed too much. It was that, for
-years, it had been telling the market it had borrowed less than it had.
+Early on September fifteenth, two thousand and eight, Lehman Brothers Holdings filed for
+Chapter Eleven bankruptcy. But the failure was not born in a single weekend. It followed
+months of losses, difficult assets, and growing doubts about the firm's ability to fund itself.
 
-## Scene 2 — A firm that survived everything
-Lehman began in eighteen fifty as a general store in Montgomery, Alabama, run by three brothers
-who started trading cotton. It moved to New York, financed railroads, and built itself into one of
-the most respected names on Wall Street. It went public in nineteen ninety-four under Richard
-Fuld, who would run it for the next fourteen years. By the mid-two-thousands Lehman was a top-five
-global investment bank, with businesses in real estate, private equity, and fixed income. The
-firm's entire identity was endurance. Which is why its collapse was so difficult for the market
-to price in advance — nobody believed the version of Lehman that could actually fail.
+There was also something the public reporting did not reveal. Lehman was using temporary
+transactions to make its quarter-end balance sheet look smaller. A court-appointed examiner
+would reconstruct that practice in two thousand and ten. To understand it, we need to separate
+three things: what Lehman owned, how it borrowed, and what its published numbers showed.
 
-## Scene 3 — The balance sheet
-The problem was leverage. By the end of two thousand and seven Lehman was running roughly
-thirty-one dollars of assets for every dollar of shareholder equity. That ratio is not unusual
-for an investment bank of the era. What made it dangerous was what sat underneath it: a huge
-position in commercial and residential real estate, funded with short-term borrowing that had to
-be rolled over constantly. Lehman was long assets it could not sell quickly, financed with money
-it had to repay almost immediately. As long as lenders kept lending, the structure held. The
-moment they hesitated, it did not.
+## Scene 2 — A name built over generations
+Its roots reached back to a dry-goods store opened by Henry Lehman in Alabama in eighteen
+forty-four. His brothers later joined him, and the enterprise became Lehman Brothers.
+The business grew far beyond that store. By nineteen ninety-four, when it was spun off from
+American Express, Richard Fuld was leading a major Wall Street firm.
 
-## Scene 4 — Repo 105
-At the end of each quarter, Lehman executed a specific kind of transaction. It handed securities
-to a counterparty in exchange for cash, and agreed to buy them back days later. That is a
-repurchase agreement — a repo — and in substance it is a secured loan. But Lehman structured
-these particular deals, internally called Repo one-oh-five, so that its accountants could record
-them as sales rather than as borrowing. Recording a repo as a sale removes the asset and the
-matching liability from the balance sheet at the same moment. Lehman used the mechanism to move
-roughly fifty billion dollars off its books temporarily, at quarter-ends, and reported the lower
-leverage that resulted. The cash came back and the securities came back. Only the disclosure
-changed.
+By two thousand and eight, that history could not answer the question confronting lenders:
+how much were Lehman's assets worth, and could the firm meet its obligations? Concern was
+already visible after Bear Stearns nearly failed in March. Lehman's reputation was real.
+So were the warnings. Its eventual bankruptcy was a shock, not a possibility nobody had imagined.
 
-## Scene 5 — What the examiner found
-In March two thousand and ten, Anton Valukas — the examiner appointed by the bankruptcy court —
-filed a report of more than two thousand pages. His conclusion on Repo one-oh-five was blunt: the
-transactions had no substance, and describing them as sales was, in his words, an accounting
-gimmick. The report also found that the firm's own outside counsel in London had declined to give
-the legal opinion needed to treat the deals as true sales under British law, which is part of why
-the bookings were routed through a London entity. It is important to be precise here: Valukas
-documented the practice in detail, and no criminal charges were ever brought. This was not
-proven fraud. It was a disclosure decision that made a fragile firm look steadier than it was.
+## Scene 3 — The balance sheet and the clock
+At its fiscal year-end in November two thousand and seven, Lehman reported roughly six hundred
+and ninety-one billion dollars of assets and twenty-two and a half billion dollars of
+stockholders' equity. That was about thirty-one dollars of assets for each dollar of equity.
+It was the firm's gross leverage ratio, not the different net leverage measure we will come to.
 
-## Scene 6 — The weekend
-The end came in September two thousand and eight. Lehman's share price had collapsed, its
-short-term funding was drying up, and it needed either capital or a buyer. Over the weekend of
-September twelfth to fourteenth, the leadership of Wall Street was summoned to the Federal
-Reserve Bank of New York to find one. Bank of America chose to buy Merrill Lynch instead.
-Barclays wanted Lehman's business, but its regulators in London would not approve the deal
-without a government guarantee, and the American government had decided it would not provide
-one. There was no third bidder. On Monday morning, Lehman filed.
+Lehman held substantial commercial and residential real-estate exposures. Some assets were
+hard to sell without accepting losses. Meanwhile, continued access to secured borrowing was
+essential. If lenders demanded more collateral or stopped renewing funding, assets that might
+eventually pay could still fail to produce cash when Lehman needed it.
 
-## Scene 7 — The contagion
-The bankruptcy was not contained. The next day, the Reserve Primary Fund — one of the largest
-money-market funds in the country — announced that its net asset value had fallen below one
-dollar, because it held Lehman debt. Investors had treated money-market funds as cash. They were
-not cash, and the difference suddenly mattered. A run on money-market funds began within hours,
-and the Treasury had to step in with a guarantee for the funds. The day before, the government
-had extended an eighty-five-billion-dollar credit facility to the insurer AIG. Two emergencies in
-two days, both downstream of the same weekend.
+That is the dangerous interaction between asset risk and funding risk. A quarter-end ratio
+can describe a balance sheet. It cannot promise that tomorrow's lenders will renew their loans.
 
-## Scene 8 — The verdict
-Lehman's estate spent years unwinding the wreckage and emerged from bankruptcy protection in two
-thousand and twelve. Creditors ultimately recovered on the order of forty cents on the dollar —
-far better than the near-total loss many feared on day one, and far worse than anyone holding
-the paper expected. Barclays took the North American investment banking business. Nomura took
-Europe and Asia. The name disappeared. The lesson is narrower than the legend: a firm does not
-die because it is in trouble. It dies because the people lending to it overnight discover the
-trouble at the same moment they discover they were told it was smaller than it was.
+## Scene 4 — What Repo 105 changed
+A repurchase agreement, or repo, exchanges securities for cash with an agreement to buy the
+securities back. An ordinary repo is accounted for as secured borrowing. The securities remain
+on the borrower's books, alongside the obligation to repay the cash.
 
-If this changed how you read a balance sheet, subscribe — next we are looking at the accounting
-trick that took down WorldCom.
+Lehman's Repo one-oh-five program used a different accounting treatment. It supplied at least
+one hundred and five dollars of fixed-income securities for every hundred dollars of cash.
+Related equity transactions were called Repo one-oh-eight. The examiner generally grouped
+both under the Repo one-oh-five name.
+
+Lehman recorded these transactions as sales. It removed the securities and did not record an
+ordinary repo borrowing. Then came the crucial second step: it used the cash to pay down other
+liabilities. That made reported assets and liabilities smaller at the reporting date.
+Shortly afterward, Lehman borrowed again, paid to repurchase the securities, and brought them back.
+
+At the end of its second fiscal quarter in two thousand and eight, the combined program
+amounted to about fifty billion dollars. That was not fifty billion dollars stolen or lost.
+Yale researchers, drawing on the examiner, report that net leverage would have been thirteen
+point nine times without the program, rather than the reported twelve point one.
+This was a temporary improvement in a reported measure, not a permanent solution to the
+firm's difficult assets. The securities transferred were not necessarily those troubled assets.
+
+## Scene 5 — What the examiner actually concluded
+In March two thousand and ten, bankruptcy examiner Anton Valukas described the program and
+Lehman's failure to disclose it. His report found evidence supporting claims that the financial
+reporting was materially misleading. That is not the same thing as a criminal conviction.
+
+The legal-opinion detail matters. According to the examiner, Lehman could not obtain the needed
+opinion under United States law. Linklaters did provide an opinion under English law for its
+European broker-dealer. Lehman routed the transactions through that London entity.
+An opinion about legal sale treatment did not settle whether investors received fair disclosure.
+
+The report distinguished those questions. Its disclosure conclusion did not depend on resolving
+whether the transactions technically complied with the relevant accounting standard.
+And its detailed public account came after the collapse. We should not pretend that lenders
+spent the final weekend reacting to a report that would not appear until two thousand and ten.
+
+## Scene 6 — The rescue that did not close
+By September, Lehman's share price and funding were under intense pressure. After markets
+closed on Friday, September twelfth, officials brought financial-sector leaders to the
+Federal Reserve Bank of New York to work on a solution. Bank of America pursued Merrill Lynch
+instead. Barclays remained a potential buyer.
+
+But buying Lehman required more than agreeing a price. Someone had to deal with difficult
+assets and guarantee trading obligations between signing and completion. Barclays faced a
+shareholder-approval obstacle. British authorities did not provide the waiver needed to get
+that arrangement done on the crisis timetable.
+
+Why did American officials not bridge the gap? Their later explanations emphasized legal powers,
+collateral and the absence of an executable buyer arrangement. The Financial Crisis Inquiry
+Commission also emphasized policy choices and errors. The feasibility of a rescue remains
+contested; a simple story that one government could not, or merely would not, save Lehman
+leaves out that disagreement.
+
+The rescue failed. Early Monday, the parent company filed. That did not put every Lehman
+subsidiary into the same proceeding, and the Federal Reserve subsequently financed the United
+States broker-dealer during its wind-down. Supporting that entity was not the same as rescuing
+the parent as a going concern.
+
+## Scene 7 — The contagion and the response
+On September sixteenth, the Reserve Primary Fund announced a share value of ninety-seven cents
+after marking its Lehman debt to zero. A later correction said its value had already been
+ninety-nine cents for part of that day. For investors accustomed to a stable dollar share price,
+the message was alarming: a money-market fund could lose value.
+
+The episode intensified an already developing scramble for liquidity. That evening, the
+Federal Reserve authorized lending of up to eighty-five billion dollars to AIG. The insurer
+had problems of its own; its crisis was not created solely by Lehman's bankruptcy.
+
+On September nineteenth, Treasury announced a temporary guarantee program for participating
+money-market funds. The program opened ten days later, with eligibility rules and a cutoff
+for the holdings it covered. It was not an unlimited promise to repay every investor in every fund.
+The financial system was already under strain, and Lehman's failure made that emergency worse.
+
+## Scene 8 — Several different endings
+Parts of the operating business survived under new owners. Barclays completed its purchase of
+specified North American businesses and assets on September twenty-second. Nomura announced
+purchases of selected Asian and European businesses, not every Lehman trading asset and liability.
+
+For the parent, a Chapter Eleven plan became effective in March two thousand and twelve.
+That was a step in a long wind-down, not the return of the old investment bank.
+There is no single recovery percentage for everyone called a Lehman creditor.
+
+When the separate United States broker-dealer liquidation closed in September two thousand and
+twenty-two, SIPC reported full satisfaction of customer claims, while general unsecured creditors
+had received about forty-one cents on the dollar. Further trust distributions remained possible.
+In a different proceeding, the European broker-dealer's administrators reported full repayment
+of creditors plus statutory interest before a solvent winding-down process began in October
+two thousand and twenty-five. Neither outcome describes all of Lehman.
+
+The lesson is not that one accounting transaction caused the entire crisis. It is that a
+cleaner-looking balance sheet cannot substitute for assets people trust and funding that remains
+available. Ask what a ratio measures, whether the improvement will last, and what happens when
+the next loan comes due.
+
+For more source-led stories about the businesses behind the headlines, subscribe.

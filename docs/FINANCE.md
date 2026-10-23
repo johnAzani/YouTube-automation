@@ -1,5 +1,13 @@
 # FINANCE NICHE — the deep dive (research, money math, and the trap that kills channels)
 
+> **2026-10-23 correction / planning warning:** Read the newer
+> [finance-niche decision and bounded pilot](FINANCE_NICHE_RESEARCH_2026-10-23.md)
+> before relying on this older note. Its blanket claims that finance pays the most,
+> fixed RPM/geography multipliers, revenue-mix percentages, "only documentary" route,
+> and "zero advice liability" are **not validated planning assumptions**. Its tax,
+> payout-provider and timing claims also need direct, account-specific verification.
+> The newer recommendation is an evidence-gathering pilot, not guaranteed income.
+
 > Research date: 2026-10-20 · Companion to PLAN.md §2.1 · User question: *"What about the finance
 > niche? I want serious money."* Short answer: **yes, it pays the most — but the obvious version
 > of it (AI finance-guru persona) is the ONE format YouTube named as a demonetization target in
