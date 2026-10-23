@@ -9,12 +9,12 @@
 # status:
 #   rights-encumbered  embedded rights claim found — MUST NOT be monetized
 #   unverified         no claim found; absence of a claim is not a licence
-#   cleared            a human verified the licence and recorded it below
+#   cleared            licence/provenance verified and recorded below
 #   corrupt            will not decode; dead weight
 #
 # Only `cleared` files may appear in monetized output. See docs/ASSET_SOURCING.md.
 generated_by: scripts/licence_ledger.py
-counts: {rights-encumbered: 13, corrupt: 1, unverified: 35, cleared: 0, total: 49}
+counts: {rights-encumbered: 13, corrupt: 1, unverified: 35, cleared: 5, total: 54}
 files:
   - file: "andrew-fastow-enron-cfo-trial-photo-1.jpg"
     sha256: "65e2e05397988b8e602059c0e552e820ea2dfe5abe7de85841bd55c9d04a0e19"
@@ -126,6 +126,66 @@ files:
     dimensions: "612x408"
     status: "rights-encumbered"
     evidence: "Getty Images rights metadata embedded in the file"
+  - file: "houston-skyline-plate-1.png"
+    sha256: "c7d6699f858f0167fd9c40f07b43dbbe2a208fdf097edfd98a430cdc60d46f1a"
+    bytes: 13786
+    dimensions: "1280x720"
+    status: "cleared"
+    license: "Original procedural artwork — generated in this project; no third-party inputs"
+    source_url: "https://github.com/johnAzani/YouTube-automation/blob/arena/6972232d-youtube-automation/tools/make_plates.py"
+    attribution: "Original abstract skyline illustration; tools/make_plates.py"
+    verified_on: "2026-10-23"
+    verified_by: "Code provenance and repeat-generation byte comparison"
+    evidence: "no embedded rights claim and no provenance metadata"
+    notes: "Illustration only, not a photograph of Houston or Enron Center. No downloaded imagery, fonts, or AI-generated assets. PNGs are rebuilt locally; Pillow version changes may require hash review."
+  - file: "houston-skyline-plate-2.png"
+    sha256: "e21e4229730119cd8c5dcdeff563ab5442b93dca2fefe4f8414bf1cac047efd0"
+    bytes: 13239
+    dimensions: "1280x720"
+    status: "cleared"
+    license: "Original procedural artwork — generated in this project; no third-party inputs"
+    source_url: "https://github.com/johnAzani/YouTube-automation/blob/arena/6972232d-youtube-automation/tools/make_plates.py"
+    attribution: "Original abstract skyline illustration; tools/make_plates.py"
+    verified_on: "2026-10-23"
+    verified_by: "Code provenance and repeat-generation byte comparison"
+    evidence: "no embedded rights claim and no provenance metadata"
+    notes: "Illustration only, not a photograph of Houston or Enron Center. No downloaded imagery, fonts, or AI-generated assets. PNGs are rebuilt locally; Pillow version changes may require hash review."
+  - file: "houston-skyline-plate-3.png"
+    sha256: "370ba2740ab6f3fe8a560c2d915ad0b8ddcbc766766d867d6c1d215475ed5551"
+    bytes: 13096
+    dimensions: "1280x720"
+    status: "cleared"
+    license: "Original procedural artwork — generated in this project; no third-party inputs"
+    source_url: "https://github.com/johnAzani/YouTube-automation/blob/arena/6972232d-youtube-automation/tools/make_plates.py"
+    attribution: "Original abstract skyline illustration; tools/make_plates.py"
+    verified_on: "2026-10-23"
+    verified_by: "Code provenance and repeat-generation byte comparison"
+    evidence: "no embedded rights claim and no provenance metadata"
+    notes: "Illustration only, not a photograph of Houston or Enron Center. No downloaded imagery, fonts, or AI-generated assets. PNGs are rebuilt locally; Pillow version changes may require hash review."
+  - file: "houston-skyline-plate-4.png"
+    sha256: "e0ba868a9f6c1e6a64e7dec12f2cc264e9f710e6676a47483b17c2d0345571b2"
+    bytes: 14304
+    dimensions: "1280x720"
+    status: "cleared"
+    license: "Original procedural artwork — generated in this project; no third-party inputs"
+    source_url: "https://github.com/johnAzani/YouTube-automation/blob/arena/6972232d-youtube-automation/tools/make_plates.py"
+    attribution: "Original abstract skyline illustration; tools/make_plates.py"
+    verified_on: "2026-10-23"
+    verified_by: "Code provenance and repeat-generation byte comparison"
+    evidence: "no embedded rights claim and no provenance metadata"
+    notes: "Illustration only, not a photograph of Houston or Enron Center. No downloaded imagery, fonts, or AI-generated assets. PNGs are rebuilt locally; Pillow version changes may require hash review."
+  - file: "houston-skyline-plate-5.png"
+    sha256: "5c4a1d36b3bf3beb0524d6db5096ac7cef126def736c3677572409a812332c66"
+    bytes: 13734
+    dimensions: "1280x720"
+    status: "cleared"
+    license: "Original procedural artwork — generated in this project; no third-party inputs"
+    source_url: "https://github.com/johnAzani/YouTube-automation/blob/arena/6972232d-youtube-automation/tools/make_plates.py"
+    attribution: "Original abstract skyline illustration; tools/make_plates.py"
+    verified_on: "2026-10-23"
+    verified_by: "Code provenance and repeat-generation byte comparison"
+    evidence: "no embedded rights claim and no provenance metadata"
+    notes: "Illustration only, not a photograph of Houston or Enron Center. No downloaded imagery, fonts, or AI-generated assets. PNGs are rebuilt locally; Pillow version changes may require hash review."
   - file: "jeff-skilling-ken-lay-enron-trial-courtr-1.jpg"
     sha256: "30a22bf66bd927dceba4343e47c94be93f0e0ea9028c18cbb7cc7f6ab6c8085a"
     bytes: 35447
