@@ -19,21 +19,30 @@ Installs 33 packages on Python 3.11.2, no build failures. `requirements.txt` pin
 lower bounds only — if a fresh install ever breaks, suspect an unpinned upstream
 (`numpy 2.4.6`, `pillow 13.0.0`, `edge-tts 7.3.1` were the versions that worked).
 
-### ffmpeg resolution — three different rules, know which one applies
+### ffmpeg resolution — one rule everywhere (since 2026-10-23)
 
-| Code path | How it finds ffmpeg |
-|---|---|
-| `pipeline/assemble.py::ffmpeg_bin()` | `$FFMPEG_BINARY` → `PATH` → **`imageio_ffmpeg` fallback** |
-| `tools/deep_dive.py`, `tools/shorts.py`, `tools/motionstudio.py` | `$FFMPEG_BINARY` → literal `"ffmpeg"` (**no fallback**) |
+Every code path resolves through `pipeline/assemble.py::ffmpeg_bin()`:
 
-So the authored engines **require** ffmpeg on `PATH` or `FFMPEG_BINARY` set. On a machine
-without system ffmpeg:
-
-```bash
-export FFMPEG_BINARY=$(.venv/bin/python -c "import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())")
+```
+$FFMPEG_BINARY (only if it resolves) → PATH → imageio_ffmpeg static build
 ```
 
-GitHub runners install real ffmpeg via apt, so CI never needs this.
+`tools/deep_dive.py`, `tools/shorts.py` and `tools/motionstudio.py` used to default to the
+literal `"ffmpeg"` with **no fallback**, so they needed system ffmpeg on `PATH` or a
+hand-exported `FFMPEG_BINARY`. That was the wrong way round: `imageio-ffmpeg` is already in
+`requirements.txt`, so a static build is always present after `pip install -r requirements.txt`.
+Nothing needs exporting any more — `.venv/bin/python tools/shorts.py short-enron` works on a
+machine with no ffmpeg installed (verified 2026-10-23, 1252 frames, exit 0).
+
+CI installs ffmpeg through `.github/actions/setup-render-deps`, which runs pip **first**, then
+tries apt inside `timeout`, then exports `FFMPEG_BINARY` from the static build if apt did not
+deliver. Do not inline `apt-get install ffmpeg` back into a workflow —
+`tests/test_ffmpeg_resolution.py` fails the build if you do. See §3 (2026-10-23).
+
+`ffprobe` is the exception: it ships with apt only, never with imageio-ffmpeg. Any step that
+inspects media must fall back to parsing `ffmpeg -hide_banner -i` (see the
+`probe_streams()` helper in `dry-run.yml`, which `tests/test_ffmpeg_resolution.py` executes
+verbatim against real media).
 
 ---
 
@@ -95,6 +104,68 @@ job writes one and why every scene leaves a per-provider attempt digest
 ---
 
 ## 3. Incident log
+
+### 2026-10-23 — apt hung and the required CI job died before running a single test
+
+**Symptom.** PR #7 went red with `Unit tests + doctor: cancelled`. Not `failure` — `cancelled`,
+which reads like somebody clicked stop. Three runs in a row: `39898588505`, `39899531755`,
+`39899527120`.
+
+**Diagnosis.** The per-step statuses told the story:
+
+```
+Set up job=success, checkout=success, setup-python=success,
+System deps (ffmpeg)=cancelled, Python deps=skipped, Unit tests=skipped
+```
+
+It never reached the tests. The job sat inside `sudo apt-get install -y ffmpeg` for its entire
+`timeout-minutes: 10` budget and was killed. Two jobs in the same run ran the identical apt
+step and succeeded, so the mirror is intermittently slow, not broken. GitHub surfaces a job
+timeout as `cancelled`, so it did not look like a failure at all.
+
+**Why it could cost the whole budget.** Every workflow ran apt **before** `pip install
+-r requirements.txt`, with no timeout on either apt call. That ordering is backwards:
+`requirements.txt` already pins `imageio-ffmpeg`, whose static build
+`pipeline.assemble.ffmpeg_bin()` knows how to find. Installing pip first means the fallback
+exists before apt is even attempted.
+
+**Second defect, found while fixing the first.** `tools/deep_dive.py`, `tools/shorts.py` and
+`tools/motionstudio.py` did `os.environ.get('FFMPEG_BINARY', 'ffmpeg')` — no fallback to the
+static build that was sitting right there in the venv. §1 documented this as intentional
+("GitHub runners install real ffmpeg via apt, so CI never needs this"); the incident disproved
+the premise. `remaster.yml` made it worse by hard-pinning `FFMPEG_BINARY: ffmpeg` at job level,
+a bare name that `Path('ffmpeg').exists()` rejects, which defeated the one resolver that did
+have a fallback.
+
+**Third defect, found while testing the fix.** The media check in `offline-render` called bare
+`ffprobe`. imageio-ffmpeg ships ffmpeg only — no ffprobe — so the fallback path had no probe at
+all. The first ffmpeg-banner replacement grep'd for `Stream #0:0: Video`; the real banner is
+`Stream #0:0[0x1](und): Video:`. It matched nothing, so a healthy render would have been
+reported as having no video stream. Caught by running the YAML's shell verbatim, not by reading
+it.
+
+**Fixes.**
+1. `.github/actions/setup-render-deps` — pip first, then apt inside `timeout 120`/`timeout 300`
+   and non-fatal, then export `FFMPEG_BINARY` from imageio-ffmpeg if `ffmpeg` is not on `PATH`.
+   Used by all three `dry-run.yml` jobs plus `produce.yml` and `remaster.yml`.
+2. All three renderer CLIs resolve through `pipeline.assemble.ffmpeg_bin()`.
+3. `probe_streams()` in `dry-run.yml` uses ffprobe when present, else the ffmpeg banner.
+4. `tests/test_ffmpeg_resolution.py` (11 tests) pins the precedence, forbids inline
+   `apt-get install` in workflows, and executes the YAML's probe against real media.
+
+**Verify locally** (no system ffmpeg here, so the fallback is the only path):
+
+```bash
+env -u FFMPEG_BINARY .venv/bin/python -c \
+  "import sys; sys.path.insert(0,'tools'); import shorts; print(shorts.FFMPEG)"
+# → .../imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2
+env -u FFMPEG_BINARY ENABLE_STOCK_BROLL=0 .venv/bin/python tools/shorts.py short-enron
+# → 1252 frames, social/short-enron.mp4 8181 KB, exit 0
+```
+
+**Lesson.** A required check that installs its own toolchain can die before it checks anything,
+and report that as a cancellation. Bound every network/install step, and put the dependency
+that already ships in `requirements.txt` ahead of the one that needs a mirror.
 
 ### 2026-10-22 — the keyless provider was downloading non-commercial and share-alike images
 

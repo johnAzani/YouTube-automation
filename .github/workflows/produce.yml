@@ -49,13 +49,9 @@ jobs:
           python-version: "3.12"
           cache: pip
 
-      - name: System deps (ffmpeg)
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends ffmpeg fonts-dejavu-core
-
-      - name: Python deps
-        run: pip install -r requirements.txt
+      # Python deps first, then a bounded best-effort apt ffmpeg + fonts. See the
+      # action's header for the 2026-10-23 job-timeout this replaces.
+      - uses: ./.github/actions/setup-render-deps
 
       - name: Restore stock-asset cache
         uses: actions/cache@v4

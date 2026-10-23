@@ -35,6 +35,13 @@ from PIL import Image, ImageDraw, ImageFont, ImageChops
 import numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, ROOT)  # shared ffmpeg resolution — see pipeline.assemble.ffmpeg_bin
+try:
+    from pipeline.assemble import ffmpeg_bin as _resolve_ffmpeg
+except Exception:  # pragma: no cover - pipeline package unavailable
+    def _resolve_ffmpeg():
+        return os.environ.get('FFMPEG_BINARY') or 'ffmpeg'
+FFMPEG = _resolve_ffmpeg()
 OUT = os.path.join(ROOT, 'social')
 W, H, FPS = 1080, 1920, 30
 CX = W // 2
@@ -802,7 +809,7 @@ def render_reel(reel, tag):
     return fd, n
 
 def encode(fd, out, dur):
-    cmd = [os.environ.get('FFMPEG_BINARY', 'ffmpeg'), '-y', '-framerate', str(FPS), '-i', fd + '/f_%04d.png',
+    cmd = [FFMPEG, '-y', '-framerate', str(FPS), '-i', fd + '/f_%04d.png',
            '-f', 'lavfi', '-t', f'{dur:.2f}', '-i', 'anullsrc=r=44100:cl=stereo',
            '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '20',
            '-vf', 'noise=alls=4:allf=t', '-x264-params', 'rc-lookahead=25',

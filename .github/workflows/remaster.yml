@@ -27,7 +27,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 180
     env:
-      FFMPEG_BINARY: ffmpeg
       ENABLE_STOCK_BROLL: ${{ inputs.use_free_stock && '1' || '0' }}
       PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
       PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
@@ -37,11 +36,9 @@ jobs:
         with:
           python-version: '3.12'
           cache: pip
-      - name: Install free render dependencies
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends ffmpeg fonts-dejavu-core
-          pip install -r requirements.txt
+      # Was: apt ffmpeg (unbounded) + a hard-pinned `FFMPEG_BINARY: ffmpeg` job env,
+      # which defeated the imageio-ffmpeg fallback in pipeline.assemble.ffmpeg_bin().
+      - uses: ./.github/actions/setup-render-deps
       - name: Restore free-stock cache
         uses: actions/cache@v4
         with:

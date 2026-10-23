@@ -39,7 +39,19 @@ WHITE = (255, 255, 255)
 FAINT = (122, 156, 202)
 ICE = (170, 210, 248)
 
-FFMPEG = os.environ.get('FFMPEG_BINARY', 'ffmpeg')
+# ffmpeg resolution: same precedence as pipeline.assemble.ffmpeg_bin() —
+# FFMPEG_BINARY (when it actually resolves) > PATH > the imageio-ffmpeg static
+# build pinned in requirements.txt. This line used to be
+# `os.environ.get('FFMPEG_BINARY', 'ffmpeg')`, which hard-failed on any machine
+# with no system ffmpeg even though a static build was already installed, and
+# which honoured a bare `FFMPEG_BINARY=ffmpeg` (remaster.yml) that resolves to
+# nothing at all.
+try:
+    from pipeline.assemble import ffmpeg_bin as _resolve_ffmpeg
+except Exception:  # pragma: no cover - pipeline package unavailable
+    def _resolve_ffmpeg():
+        return os.environ.get('FFMPEG_BINARY') or 'ffmpeg'
+FFMPEG = _resolve_ffmpeg()
 FDIR = os.path.join(ROOT, 'assets', 'fonts')
 IMG = os.path.join(ROOT, 'image-search')
 AUDIO = os.path.join(ROOT, 'assets', 'deepdive')

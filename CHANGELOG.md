@@ -5,6 +5,54 @@ there was no changelog before this file.
 
 ---
 
+## 2026-10-23 — apt hung, and the required CI check died before running a single test
+
+PR #7 went red with `Unit tests + doctor: cancelled` — not `failure`, `cancelled`, which reads
+like somebody clicked stop. Three runs in a row. The per-step statuses showed why:
+
+```
+System deps (ffmpeg)=cancelled, Python deps=skipped, Unit tests=skipped
+```
+
+It never reached the tests. The job sat inside `sudo apt-get install -y ffmpeg` for its whole
+10-minute budget and was killed; two sibling jobs ran the identical apt step and passed, so the
+mirror is intermittently slow, not broken. GitHub reports a job timeout as `cancelled`, so it
+did not even look like a failure. Full write-up in MAINTENANCE.md §3 (2026-10-23).
+
+### Fixed
+
+- **Install order.** Every workflow ran apt *before* `pip install -r requirements.txt`, with no
+  timeout on either apt call. Backwards: `requirements.txt` already pins `imageio-ffmpeg`, whose
+  static build `pipeline.assemble.ffmpeg_bin()` can find. New composite action
+  **`.github/actions/setup-render-deps`** runs pip first, then apt inside `timeout 120`/`timeout
+  300` and non-fatal, then exports `FFMPEG_BINARY` from the static build if apt did not deliver.
+  Used by all three `dry-run.yml` jobs, `produce.yml` and `remaster.yml`.
+- **The three renderer CLIs had no fallback at all.** `tools/deep_dive.py`, `tools/shorts.py`
+  and `tools/motionstudio.py` did `os.environ.get('FFMPEG_BINARY', 'ffmpeg')`, so they broke on
+  any machine without system ffmpeg even though a static build was installed. All three now
+  resolve through `ffmpeg_bin()`. Verified with no ffmpeg on `PATH` and `FFMPEG_BINARY` unset:
+  `tools/shorts.py short-enron` rendered 1252 frames and exited 0.
+- **`remaster.yml` hard-pinned `FFMPEG_BINARY: ffmpeg`** at job level — a bare name that
+  `Path('ffmpeg').exists()` rejects, defeating the one resolver that did have a fallback. Removed.
+- **The media check assumed `ffprobe`,** which imageio-ffmpeg does not ship. `probe_streams()`
+  now falls back to the ffmpeg banner. Its first version grep'd for `Stream #0:0: Video`; the
+  real banner is `Stream #0:0[0x1](und): Video:`, so it matched nothing and would have reported
+  every healthy render as having no video stream.
+
+### Added
+
+- **11 tests in `tests/test_ffmpeg_resolution.py`.** Precedence (env → PATH → static build), a
+  bare `FFMPEG_BINARY=ffmpeg` being ignored, an instructive error when nothing is found, no
+  workflow re-inlining `apt-get install`, apt staying timeboxed — and one test that **executes
+  the YAML's own `probe_streams()` against a real generated MP4 with no ffprobe on `PATH`**.
+  That last test is what caught the broken grep: asserting the string `ffprobe` appears in the
+  workflow would not have. As a negative control, restoring the broken pattern fails it with
+  `'video' not found in []`.
+- MAINTENANCE.md §1 ffmpeg section rewritten — its old claim "GitHub runners install real ffmpeg
+  via apt, so CI never needs this" was the assumption this incident disproved.
+
+---
+
 ## 2026-10-22 — fact-check worksheets: the mechanical half of the human gate
 
 The human gate is the one step no machine in this repo may skip: `pipeline/originality.py`
@@ -23,7 +71,7 @@ actual judgement starts.
   Re-running without `--force` refuses to overwrite a worksheet a human has filled in.
 - Worksheets generated for all four queued jobs: **41 / 39 / 35 / 37 checkboxes**
   (0003–0006). Each embeds the source script's sha256 so staleness is visible.
-- 13 tests in `tests/test_factcheck.py`, including the two invariants that matter most: the
+- 14 tests in `tests/test_factcheck.py`, including the two invariants that matter most: the
   generator never asserts a verdict, and its output never lands in `content/queue/` — that
   directory is globbed by `pipeline/run.py::select_jobs`, `scripts/doctor.py`, the
   queue-integrity tests and `dry-run.yml`, so a worksheet there would be parsed as a job.
