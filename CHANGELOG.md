@@ -5,6 +5,20 @@ there was no changelog before this file.
 
 ---
 
+## 2026-10-23 — finance niche decision and low-regret pilot
+
+- Research current YouTube originality, AI-finance-persona and YPP rules using
+  official sources; distinguish policy evidence from unverified market demand.
+- Recommend testing original money-mechanics explanations with worked examples,
+  not an AI adviser or a high-volume scraped-news/stock-video channel.
+- Add a qualitative nine-niche comparison, checked loan-cost example, 12-topic
+  backlog, hypothetical revenue sensitivity and capped validation/stop rules.
+- Flag overconfident income, liability, geography and payment assumptions in the
+  older finance note/master plan. No RPM or monetization timeline is promised.
+- No rebrand, purchases, publishing, queue approval or private analytics disclosure.
+
+---
+
 ## 2026-10-23 — deep Lehman evidence audit and research revision
 
 - Add a 22-entry source register, detailed research dossier, original-claim audit
