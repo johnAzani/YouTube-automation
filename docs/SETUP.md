@@ -139,3 +139,10 @@ Repo → **Settings → Secrets and variables → Actions** → New repository s
 | ffmpeg caption burn fails | Runner lacks libass — captions ship as a separate `.srt`; upload it as a YouTube caption track |
 | Cron didn't fire on time | GitHub cron is best-effort (delays under load) — run manually via workflow_dispatch |
 | 403 `quotaExceeded` on upload | Uploads are a separate 100/day bucket; `thumbnails.set` costs 50 units of the shared 10k pool — rare at our volume |
+
+
+## Private channel Analytics
+
+See [ANALYTICS.md](ANALYTICS.md) for report coverage, separate read-only consent,
+private storage rules and explicit access gaps. Public-video snapshot success is
+not proof of private Analytics or revenue access.

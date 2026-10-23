@@ -5,6 +5,23 @@ there was no changelog before this file.
 
 ---
 
+## 2026-10-23 — explicit Analytics coverage and a private reporting path
+
+- Add a separate, read-only Analytics collector with daily/video performance,
+  traffic sources, country/device/demographic and subscription-status reports.
+  Retention is opt-in per video; estimated revenue is separately opt-in.
+- OAuth helper supports separate analytics and monetary-readonly consent without
+  adding upload rights to Analytics tokens or changing existing upload defaults.
+- No private reports in public Actions. Local output is restricted to gitignored
+  `output/private-analytics/` with mode 0600. Raw error messages are withheld.
+- Every report records its status, including missing permissions, empty data and
+  pagination truncation. `docs/ANALYTICS.md` lists unimplemented/Studio-dependent
+  fields and distinguishes implementation from verified live access.
+- 12 focused metrics/Analytics tests pass. Live Analytics permission and private
+  scheduled report delivery are still unverified/unconfigured.
+
+---
+
 ## 2026-10-23 — include subscribers in the metrics snapshot
 
 - Request channel `statistics` alongside the existing `contentDetails` using the
