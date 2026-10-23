@@ -5,6 +5,30 @@ there was no changelog before this file.
 
 ---
 
+## 2026-10-23 — first video drafted: the 2022 nickel squeeze (job 0007)
+
+- `content/queue/0007-the-day-the-exchange-pressed-undo.md` — fourteen scenes,
+  3,156 narration words, ~21 minutes at the pipeline's 2.5 words/second estimate.
+  Draft only: `human_rewrite: false`, `status: draft`, so `select_jobs()` will not
+  pick it up and `originality.enforce()` will refuse it until a human signs.
+- Argues a mechanism, not a villain: the deliverable was narrower than the production
+  (nickel pig iron is not LME nickel), the volatility control was switched off for
+  3h26m, and finality is a clause in a private rulebook, not a property of a trade.
+- Sources resolved to primary where they exist: LME Notices 22/052, 22/053 and
+  22/070; FCA Final Notice 207387 (the £9,245,900 penalty and the $13.373bn
+  notional); [2024] EWCA Civ 1168; OFR working paper 24-09. The three published
+  figures for cancelled-trade value ($3.9bn / $12bn / $13.373bn) are named as
+  reporting variants of different scope rather than averaged.
+- `content/research/0007-nickel-squeeze-dossier.md` — timeline, cast, source
+  register and an explicit "what the script must NOT claim" list (position sizes,
+  the ~$1bn loss and the $19.75bn avoided margin call are reported, not disclosed).
+- All fourteen `asset_queries` probed against the Commons search API and scored with
+  `pipeline/assets.py::licence_ok_for_monetized_use`. Eight of the first-draft
+  queries were replaced after returning zero usable hits — notably "nickel metal"
+  (six Ni-MH battery photos, all CC BY-SA) and "canary wharf london" (six CC BY-SA).
+- `content/factcheck/0007-…md` worksheet written: 96 checkboxes. A worksheet is not
+  a verification; it is the list of things a human still has to check.
+
 ## 2026-10-23 — niche decided: education-categorised money-collapse documentaries
 
 - Record the verdict on a 2-3 week monetisation request: 4,000 hours is 240,000
