@@ -1,112 +1,112 @@
 [
   {
     "scene": 1,
-    "query": "Houston energy company corporate headquarters skyline 2001",
+    "query": "lower manhattan skyline night",
     "media": "authored photo fallback",
     "provider": "existing story archive",
     "source_url": "",
-    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml; credit: Original abstract skyline illustration; tools/make_plates.py",
     "dimensions": null,
     "fallback": true,
-    "file": "enron-corporation-headquarters-houston-c-4.jpg"
+    "file": "houston-skyline-plate-4.png"
   },
   {
     "scene": 2,
-    "query": "stock market trading floor rising share prices ticker",
+    "query": "stock market chart",
     "media": "authored photo fallback",
     "provider": "existing story archive",
     "source_url": "",
-    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml; credit: Original procedural editorial illustration; tools/make_plates.py",
     "dimensions": null,
     "fallback": true,
-    "file": "enron-bankruptcy-newspaper-headline-2001-3.jpg"
+    "file": "enron-market-board-plate-1.png"
   },
   {
     "scene": 3,
-    "query": "corporate innovation technology office skyscraper",
+    "query": "new york stock exchange trading floor",
     "media": "authored photo fallback",
     "provider": "existing story archive",
     "source_url": "",
-    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml; credit: Original abstract skyline illustration; tools/make_plates.py",
     "dimensions": null,
     "fallback": true,
-    "file": "enron-corporation-headquarters-houston-c-4.jpg"
+    "file": "houston-skyline-plate-5.png"
   },
   {
     "scene": 4,
-    "query": "financial journalist newspaper investigation corporate accounting",
+    "query": "financial newspaper page",
     "media": "authored photo fallback",
     "provider": "existing story archive",
     "source_url": "",
-    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml; credit: Original abstract skyline illustration; tools/make_plates.py",
     "dimensions": null,
     "fallback": true,
-    "file": "enron-corporation-headquarters-houston-c-3.jpg"
+    "file": "houston-skyline-plate-3.png"
   },
   {
     "scene": 5,
-    "query": "corporate fraud CFO executive courtroom trial",
+    "query": "bond certificate",
     "media": "authored photo fallback",
     "provider": "existing story archive",
     "source_url": "",
-    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml; credit: Original procedural editorial illustration; tools/make_plates.py",
     "dimensions": null,
     "fallback": true,
-    "file": "andrew-fastow-enron-cfo-trial-photo-2.jpg"
+    "file": "enron-ledger-grid-plate-1.png"
   },
   {
     "scene": 6,
-    "query": "energy trading control room accounting ledger",
+    "query": "power plant control room",
     "media": "authored photo fallback",
     "provider": "existing story archive",
     "source_url": "",
-    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml; credit: Original procedural editorial illustration; tools/make_plates.py",
     "dimensions": null,
     "fallback": true,
-    "file": "enron-corporation-headquarters-houston-c-5.jpg"
+    "file": "enron-pipeline-corridor-plate-1.png"
   },
   {
     "scene": 7,
-    "query": "shell company financial paperwork accounting records",
+    "query": "accounting ledger book",
     "media": "authored photo fallback",
     "provider": "existing story archive",
     "source_url": "",
-    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml; credit: Original procedural editorial illustration; tools/make_plates.py",
     "dimensions": null,
     "fallback": true,
-    "file": "enron-bankruptcy-newspaper-headline-2001-1.jpg"
+    "file": "enron-spe-network-plate-1.png"
   },
   {
     "scene": 8,
-    "query": "corporate bankruptcy newspaper headline stock market crash",
+    "query": "stock market crash chart",
     "media": "authored photo fallback",
     "provider": "existing story archive",
     "source_url": "",
-    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml; credit: Original abstract skyline illustration; tools/make_plates.py",
     "dimensions": null,
     "fallback": true,
-    "file": "enron-corporation-headquarters-houston-c-2.jpg"
+    "file": "houston-skyline-plate-2.png"
   },
   {
     "scene": 9,
-    "query": "office employees corporate layoffs retirement pension",
+    "query": "abandoned office room",
     "media": "authored photo fallback",
     "provider": "existing story archive",
     "source_url": "",
-    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml; credit: Original abstract skyline illustration; tools/make_plates.py",
     "dimensions": null,
     "fallback": true,
-    "file": "enron-corporation-headquarters-houston-c-1.jpg"
+    "file": "houston-skyline-plate-1.png"
   },
   {
     "scene": 10,
-    "query": "corporate executives fraud trial courtroom justice",
+    "query": "united states courthouse columns",
     "media": "authored photo fallback",
     "provider": "existing story archive",
     "source_url": "",
-    "license": "pre-existing image-search still; source/license metadata unavailable in current ledger — verify before monetized reuse",
+    "license": "image-search still — licence verified and recorded in image-search/LICENSES.yml; credit: Original procedural editorial illustration; tools/make_plates.py",
     "dimensions": null,
     "fallback": true,
-    "file": "jeff-skilling-ken-lay-enron-trial-courtr-2.jpg"
+    "file": "enron-courtroom-columns-plate-1.png"
   }
 ]

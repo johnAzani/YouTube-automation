@@ -178,9 +178,19 @@ def assemble(
     final = out_dir / f"{doc.slug}.mp4"
     if CONFIG.burn_captions and srt_path.exists():
         srt_escaped = str(srt_path.resolve()).replace(":", r"\:").replace("'", r"'\''")
+        if CONFIG.height > CONFIG.width:
+            style = (
+                f"PlayResX={CONFIG.width},PlayResY={CONFIG.height},"
+                "FontSize=46,Outline=3,Shadow=0,MarginV=260,MarginL=72,MarginR=72,Alignment=2"
+            )
+        else:
+            style = (
+                f"PlayResX={CONFIG.width},PlayResY={CONFIG.height},"
+                "FontSize=34,Outline=2,Shadow=0,MarginV=48"
+            )
         cmd = [
             ffmpeg_bin(), "-y", "-i", str(final_no_subs),
-            "-vf", f"subtitles='{srt_escaped}':force_style='FontSize=20,Outline=2,Shadow=0,MarginV=28'",
+            "-vf", f"subtitles='{srt_escaped}':force_style='{style}'",
             "-c:v", "libx264", "-preset", "veryfast", "-pix_fmt", "yuv420p",
             "-c:a", "copy", str(final),
         ]

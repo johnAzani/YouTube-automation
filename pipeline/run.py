@@ -246,7 +246,8 @@ def process(path: Path, dry_run: bool) -> dict:
     if not dry_run:
         from .upload import upload
 
-        up = upload(doc, final, thumb, description=pack.get("description"))
+        upload_thumb = None if doc.format == "short" else thumb
+        up = upload(doc, final, upload_thumb, description=pack.get("description"))
         if not up.video_id:
             raise RuntimeError("YouTube upload returned no video ID; leaving the queue job untouched.")
         result.update({
@@ -286,9 +287,15 @@ def _open_release_ticket(doc: ScriptDoc, url: str, privacy: str, video_id: str =
         return
     title = f"Release ticket: {doc.title}"
     studio = f"https://studio.youtube.com/video/{video_id}/edit" if video_id else ""
+    shorts_url = (
+        f"https://www.youtube.com/shorts/{video_id}"
+        if video_id and getattr(doc, "format", "") == "short"
+        else ""
+    )
     body = (
         f"Video rendered and uploaded.\n\n"
         f"- Watch link: {url}\n"
+        + (f"- Shorts link: {shorts_url}\n" if shorts_url else "")
         + (f"- Studio editor: {studio}\n" if studio else "")
         + f"- Current privacy: `{privacy}`\n\n"
         f"### Human publish checklist\n"

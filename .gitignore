@@ -22,6 +22,7 @@ venv/
 
 # Reproducible original illustrations; rebuild via tools/make_plates.py
 image-search/houston-skyline-plate-*.png
+image-search/enron-*-plate-*.png
 
 # API reports belong in short-lived Actions artifacts, not source history.
 content/channel-metrics.json
