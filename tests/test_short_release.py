@@ -16,6 +16,7 @@ from pipeline.script_doc import Scene, ScriptDoc
 from pipeline.short_release import (
     EDITIONS,
     run_short_release,
+    select_next_queued_short,
     verify_short_render,
 )
 import tools.deep_dive as deep_dive
@@ -176,6 +177,50 @@ class ShortReleaseTests(unittest.TestCase):
             text = receipt.read_text(encoding="utf-8")
             self.assertIn('youtube_video_id: "ytShort123"', text)
             self.assertIn('youtube_shorts_url: "https://www.youtube.com/shorts/ytShort123"', text)
+
+    def test_select_next_queued_short_reads_approved_and_unlinks_after_upload(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tdir = Path(tmp)
+            qdir = tdir / "shorts-queue"
+            qdir.mkdir(parents=True)
+            manifest = qdir / "0001-short-enron.yml"
+            manifest.write_text('short: "short-enron"\nstatus: approved\n', encoding="utf-8")
+            selected = select_next_queued_short(qdir)
+            self.assertEqual(selected, (manifest, "short-enron"))
+
+            social_dir = tdir / "social"
+            social_dir.mkdir(parents=True)
+            _make_sample_mp4(social_dir / "short-enron.mp4", 720, 1280, seconds=20.0, audio=True)
+            stock_dir = tdir / "output" / "short-stock" / "short-enron"
+            stock_dir.mkdir(parents=True)
+            (stock_dir / "scene-sources.json").write_text(
+                json.dumps([{"scene": 1, "fallback": True, "file": "houston-skyline-plate-1.png"}]),
+                encoding="utf-8",
+            )
+            fake_upload = SimpleNamespace(
+                video_id="ytShort999",
+                privacy_status="private",
+                watch_url="https://youtu.be/ytShort999",
+                auto_published=False,
+            )
+            with (
+                patch("pipeline.short_release.REPO_ROOT", tdir),
+                patch("pipeline.short_release.PUBLISHED_DIR", tdir / "published"),
+                patch("pipeline.short_release.OUTPUT_DIR", tdir / "output"),
+                patch("pipeline.short_release.CONFIG.youtube_refresh_token", "rtok"),
+                patch("pipeline.short_release.CONFIG.youtube_client_id", "cid"),
+                patch("pipeline.short_release.CONFIG.youtube_client_secret", "csec"),
+                patch("pipeline.upload.upload", return_value=fake_upload),
+                patch("pipeline.short_release._open_release_ticket"),
+            ):
+                run_short_release(
+                    "short-enron",
+                    dry_run=False,
+                    skip_render=True,
+                    manifest_path=manifest,
+                )
+            self.assertFalse(manifest.exists())
+            self.assertIsNone(select_next_queued_short(qdir))
 
 
 if __name__ == "__main__":

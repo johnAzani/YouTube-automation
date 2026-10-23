@@ -1,0 +1,6 @@
+# First production YouTube Short release manifest (GitOps trigger on `main`)
+id: "SHORT-0001"
+short: "short-enron"
+status: approved
+approved_on: "2026-10-23"
+notes: "9:16 vertical Short (720x1280, 52.2s); all 10 scenes cleared in image-search/LICENSES.yml."

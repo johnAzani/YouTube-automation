@@ -23,13 +23,15 @@ import sys
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
+import yaml
 
 from .assemble import ffmpeg_bin
-from .config import CONFIG, OUTPUT_DIR, PUBLISHED_DIR, REPO_ROOT
+from .config import CONFIG, CONTENT_DIR, OUTPUT_DIR, PUBLISHED_DIR, REPO_ROOT
 from .licences import load_ledger, uncleared_stills, unsafe_stills
 from .run import _open_release_ticket, _require_production_prerequisites
 from .script_doc import Scene, ScriptDoc
 
+SHORTS_QUEUE_DIR = CONTENT_DIR / "shorts-queue"
 MAX_SHORT_SECONDS = 60.0
 MIN_SHORT_SECONDS = 15.0
 
@@ -190,6 +192,22 @@ def verify_short_render(
     return probe
 
 
+def select_next_queued_short(queue_dir: Path | None = None) -> tuple[Path, str] | None:
+    """Return `(manifest_path, short_key)` for the first approved Short in queue."""
+    qdir = SHORTS_QUEUE_DIR if queue_dir is None else queue_dir
+    if not qdir.is_dir():
+        return None
+    for path in sorted(qdir.glob("*.yml")):
+        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        if str(data.get("status", "")).strip().lower() != "approved":
+            continue
+        key = str(data.get("short", "")).strip()
+        if not key:
+            continue
+        return path, key
+    return None
+
+
 def _build_script_doc(edition: ShortEdition) -> ScriptDoc:
     return ScriptDoc(
         path=PUBLISHED_DIR / f"{edition.slug}.md",
@@ -273,6 +291,7 @@ def run_short_release(
     dry_run: bool = False,
     skip_render: bool = False,
     force: bool = False,
+    manifest_path: Path | None = None,
 ) -> dict:
     if short_key not in EDITIONS:
         raise RuntimeError(f"Unknown Short edition {short_key!r}; expected one of {sorted(EDITIONS)}")
@@ -282,6 +301,8 @@ def run_short_release(
     published_record = PUBLISHED_DIR / f"{edition.slug}.md"
 
     if published_record.is_file() and not dry_run and not force:
+        if manifest_path and manifest_path.is_file():
+            manifest_path.unlink()
         raise RuntimeError(
             f"{edition.slug} is already recorded in {published_record.relative_to(REPO_ROOT)}; "
             "pass --force only if you intentionally want a duplicate upload."
@@ -360,6 +381,8 @@ def run_short_release(
             probe,
             len(scenes),
         )
+        if manifest_path and manifest_path.is_file():
+            manifest_path.unlink()
 
     (stage_dir / "job_result.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
 
@@ -378,7 +401,8 @@ def run_short_release(
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Render, verify, and upload an authored YouTube Short")
-    parser.add_argument("--short", default="short-enron", choices=sorted(EDITIONS))
+    parser.add_argument("--short", default="", help="Short edition key (e.g. short-enron)")
+    parser.add_argument("--next", action="store_true", help="Process next approved Short in content/shorts-queue/")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--skip-render", action="store_true")
     parser.add_argument("--force", action="store_true")
@@ -391,11 +415,23 @@ def main(argv: list[str] | None = None) -> int:
     )
     CONFIG.ensure_dirs()
     try:
+        manifest_path: Path | None = None
+        short_key = args.short.strip()
+        if args.next and not short_key:
+            queued = select_next_queued_short()
+            if queued is None:
+                print("[short-release] nothing to do — no approved Shorts in content/shorts-queue/")
+                return 0
+            manifest_path, short_key = queued
+        elif not short_key:
+            short_key = "short-enron"
+
         run_short_release(
-            short_key=args.short,
+            short_key=short_key,
             dry_run=dry,
             skip_render=args.skip_render,
             force=args.force,
+            manifest_path=manifest_path,
         )
     except Exception as exc:  # noqa: BLE001
         safe_msg = _scrub(f"{type(exc).__name__}: {exc}")
