@@ -143,19 +143,55 @@ def prep_plate(path, tint_warm=0.0):
     sharpened = cropped.filter(ImageFilter.UnsharpMask(radius=1.0, percent=85, threshold=3))
     return grade_cinema(sharpened, tint_warm=tint_warm)
 
-def video_plate_reader(path):
-    """Stream full-bleed 9:16 RGB video frames in natural documentary color."""
+def video_plate_reader(path, skip_intro=1.5):
+    """Stream full-bleed 9:16 RGB video frames in natural documentary color,
+    skipping potential black film-leader frames at the very start of archival clips."""
     vf = (
         f'scale={CW}:{CH}:force_original_aspect_ratio=increase,'
         f'crop={CW}:{CH},setsar=1,'
-        f'eq=contrast=1.06:brightness=0.03:saturation=1.10,'
+        f'eq=contrast=1.08:brightness=0.04:saturation=1.12,'
         f'fps={FPS},format=rgb24'
     )
-    cmd = [
-        FFMPEG, '-loglevel', 'error', '-stream_loop', '-1', '-i', str(path),
-        '-an', '-vf', vf, '-f', 'rawvideo', '-pix_fmt', 'rgb24', 'pipe:1',
-    ]
+    ss_args = ['-ss', f'{skip_intro:.2f}'] if skip_intro > 0 else []
+    cmd = (
+        [FFMPEG, '-loglevel', 'error', '-stream_loop', '-1']
+        + ss_args
+        + ['-i', str(path), '-an', '-vf', vf, '-f', 'rawvideo', '-pix_fmt', 'rgb24', 'pipe:1']
+    )
     return subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, bufsize=10**7)
+
+
+def _is_vivid_video_clip(path):
+    """Reject dark film leaders, murky low-res clips, blank slides, or blown-out frames."""
+    try:
+        dur = duration(str(path))
+    except BaseException:
+        return False
+    if dur < 2.2:
+        return False
+    sample_times = [min(dur * 0.25, 1.6), min(dur * 0.50, 3.2), min(dur * 0.75, 4.8)]
+    for ts in sample_times:
+        proc = subprocess.run(
+            [
+                FFMPEG, '-loglevel', 'error', '-ss', f'{ts:.2f}', '-i', str(path),
+                '-frames:v', '1', '-vf', 'scale=96:170:force_original_aspect_ratio=increase,crop=96:170',
+                '-f', 'rawvideo', '-pix_fmt', 'rgb24', 'pipe:1',
+            ],
+            check=False,
+            capture_output=True,
+        )
+        raw = proc.stdout
+        if len(raw) < 96 * 170 * 3:
+            return False
+        lum = [0.299 * raw[i] + 0.587 * raw[i + 1] + 0.114 * raw[i + 2] for i in range(0, len(raw), 3)]
+        mean_l = sum(lum) / len(lum)
+        var_l = sum((v - mean_l) ** 2 for v in lum) / len(lum)
+        std_l = math.sqrt(var_l)
+        dark_frac = sum(1 for v in lum if v < 24.0) / len(lum)
+        if mean_l < 58.0 or mean_l > 215.0 or std_l < 26.0 or dark_frac > 0.45:
+            print(f'[shorts] rejecting dark/flat video {os.path.basename(str(path))} at t={ts:.1f}s (mean={mean_l:.1f}, std={std_l:.1f}, dark={dark_frac:.0%})', flush=True)
+            return False
+    return True
 
 def read_video_plate(proc):
     if not proc or proc.stdout is None:
@@ -331,14 +367,80 @@ def fit_font(weight, sz, text, maxw, tracking=2.2):
         f = fnt(weight, sz)
     return f
 
-# ------------------------------------------------ cold-open & end overlays (vertical) ----
-def cold_open_overlay(layer, bg_rgb, title_pair, t, dur=3.6):
+# ------------------------------------------------ cold-open, poster & end overlays ----
+def poster_lockup_overlay(layer, kicker, big1, big2, sub_pill, alpha=1.0):
+    """High-CTR scroll-stopping poster typography sized across ~87% of the 720px width
+    so that even on a 358x636 mobile YouTube Shorts channel grid tile every word pops."""
+    a = clamp01(alpha)
+    if a <= 0.02:
+        return
+    cx = W // 2
+    fk = fit_font('ExtraBold', 33, kicker, W - 110)
+    fl1 = fit_font('Black', 214, big1, W - 76)
+    fl2 = fit_font('Black', 156, big2, W - 84)
+    ft = fit_font('Black', 32, sub_pill, W - 120)
+
+    # Focused center contrast glow behind lockup while full-bleed skyscraper & red chart stay bright
+    halo = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    hd = ImageDraw.Draw(halo)
+    hd.ellipse([-20, 210, W + 20, 960], fill=(4, 10, 26, int(162 * a)))
+    hd.ellipse([50, 310, W - 50, 860], fill=(235, 38, 52, int(48 * a)))
+    halo = halo.filter(ImageFilter.GaussianBlur(46))
+    layer.alpha_composite(halo)
+
+    d = ImageDraw.Draw(layer)
+    # 1. Crimson kicker ribbon
+    kw = d.textlength(kicker, font=fk)
+    bpw, bph = int(kw + 58), 64
+    bx0, by0 = cx - bpw // 2, 290
+    d.rounded_rectangle(
+        [bx0, by0, bx0 + bpw, by0 + bph],
+        radius=15,
+        fill=(228, 34, 46, int(250 * a)),
+        outline=(255, 226, 226, int(220 * a)),
+        width=3,
+    )
+    d.text((cx - kw / 2, by0 + 11), kicker, font=fk, fill=WHITE + (int(255 * a),))
+
+    # 2. Giant "$70B" + "FRAUD" display headlines spanning ~87% of frame width
+    w1 = d.textlength(big1, font=fl1)
+    w2 = d.textlength(big2, font=fl2)
+    y1, y2 = 368, 594
+    sh = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    sd = ImageDraw.Draw(sh)
+    sd.text((cx - w1 / 2, y1 + 12), big1, font=fl1, fill=(0, 0, 0, int(240 * a)), stroke_width=14, stroke_fill=(0, 0, 0, int(240 * a)))
+    sd.text((cx - w2 / 2, y2 + 10), big2, font=fl2, fill=(0, 0, 0, int(240 * a)), stroke_width=12, stroke_fill=(0, 0, 0, int(240 * a)))
+    sh = sh.filter(ImageFilter.GaussianBlur(11))
+    layer.alpha_composite(sh)
+
+    d = ImageDraw.Draw(layer)
+    d.text((cx - w1 / 2, y1), big1, font=fl1, fill=WHITE + (int(255 * a),), stroke_width=9, stroke_fill=(8, 16, 34, int(255 * a)))
+    d.text((cx - w2 / 2, y2), big2, font=fl2, fill=YELLOW + (int(255 * a),), stroke_width=8, stroke_fill=(10, 18, 36, int(255 * a)))
+
+    # 3. Bottom gold-rimmed punchline pill
+    tw_sub = d.textlength(sub_pill, font=ft)
+    tpw, tph = int(tw_sub + 60), 62
+    tx0, ty0 = cx - tpw // 2, 790
+    d.rounded_rectangle(
+        [tx0, ty0, tx0 + tpw, ty0 + tph],
+        radius=15,
+        fill=(8, 20, 44, int(240 * a)),
+        outline=YELLOW + (int(240 * a),),
+        width=3,
+    )
+    d.text((cx - tw_sub / 2, ty0 + 11), sub_pill, font=ft, fill=WHITE + (int(255 * a),))
+
+
+def cold_open_overlay(layer, bg_rgb, title_pair, t, dur=2.8, poster_spec=None):
     if t < 0 or t > dur:
         return
-    in_e = ease_out_expo(clamp01(t / 0.50))
-    out_a = 1.0 if t < dur - 0.50 else 1.0 - ease_in_out_sine((t - (dur - 0.50)) / 0.50)
+    in_e = ease_out_expo(clamp01((t + 0.08) / 0.24))
+    out_a = 1.0 if t < dur - 0.45 else 1.0 - ease_in_out_sine((t - (dur - 0.45)) / 0.45)
     a = in_e * out_a
     if a <= 0.01:
+        return
+    if poster_spec:
+        poster_lockup_overlay(layer, poster_spec[0], poster_spec[1], poster_spec[2], poster_spec[3], alpha=a)
         return
     t1, t2 = title_pair
     max_card_w = SAFE_R - SAFE_L - 16
@@ -1095,6 +1197,8 @@ SCRIPTS = {
     ),
     'short-enron': dict(
         title=('HOW ENRON DIED', 'HOUSTON, TEXAS · DEC 2, 2001'),
+        poster=("WALL STREET'S LIE", '$70B', 'FRAUD', 'GONE IN 24 DAYS'),
+        midpoint_poster_window=(23.6, 27.6),
         end=('FOLLOW', 'Money, Explained — new every week'),
         out='short-enron.mp4',
         narration='short-enron.mp3',
@@ -1106,20 +1210,20 @@ SCRIPTS = {
             'newspaper headlines',
             'ledger accounting book',
             'steel mill factory',
-            'bond certificate',
+            'financial district skyscraper manhattan',
             'bank run',
             'abandoned office room',
             'courtroom judge bench',
         ],
         scenes=[
-            dict(a='', img='short-enron-broll-01.jpg', kicker='WINTER 2001 · HOUSTON', sub='MOST INNOVATIVE COMPANY UNRAVELS', cam='tilt_up', focus=(0.5, 0.45)),
+            dict(a='', img='short-enron-broll-01.jpg', lock_plate=True, kicker='WINTER 2001 · HOUSTON', sub='MOST INNOVATIVE COMPANY UNRAVELS', cam='tilt_up', focus=(0.5, 0.45)),
             dict(a='ninety dollars', img='short-enron-broll-02.jpg', kicker='PEAK: $90.75 / SHARE', sub='NYSE: ENE · AUG 2000', cam='push_in', focus=(0.5, 0.45), viz='stock_boom'),
             dict(a='fortune my busy nostra', img='short-enron-broll-03.jpg', kicker='FORTUNE · 6 YEARS RUNNING', sub='"MOST INNOVATIVE COMPANY"', cam='pull_out', focus=(0.5, 0.45)),
             dict(a='is enron overpriced', img='short-enron-broll-04.jpg', kicker='MAR 2001 · BETHANY McLEAN', sub='"IS ENRON OVERPRICED?"', cam='pan_right', focus=(0.5, 0.48)),
             dict(a='the profits were fiction', img='short-enron-broll-05.jpg', kicker='CFO ANDREW FASTOW', sub='ARCHITECT OF THE ILLUSION', cam='push_in', focus=(0.48, 0.48)),
             dict(a='mom to market accounting', img='short-enron-broll-06.jpg', kicker='MARK-TO-MARKET', sub='10 YRS PROFIT BOOKED DAY ONE', cam='pan_left', focus=(0.5, 0.45), viz='mtm_ledger'),
-            dict(a='off the books', img='short-enron-broll-07.jpg', kicker='LJM · RAPTOR · CHEWCO', sub='$30B+ DEBT IN SHELL ENTITIES', cam='push_in', focus=(0.5, 0.45), viz='shell_maze'),
-            dict(a='december second', img='short-enron-broll-08.jpg', kicker='DEC 2, 2001 · CHAPTER 11', sub='$63.4B RECORD CH. 11 AT FILING', cam='pull_out', focus=(0.5, 0.45), viz='stock_crash'),
+            dict(a='off the books', img='short-enron-crash-poster.jpg', lock_plate=True, kicker='LJM · RAPTOR · CHEWCO', sub='$30B+ DEBT IN SHELL ENTITIES', cam='push_in', focus=(0.5, 0.45), viz='shell_maze'),
+            dict(a='december second', img='short-enron-broll-08.jpg', lock_plate=True, kicker='DEC 2, 2001 · CHAPTER 11', sub='$63.4B RECORD CH. 11 AT FILING', cam='pull_out', focus=(0.5, 0.45), viz='stock_crash'),
             dict(a='twenty thousand employees', img='short-enron-broll-09.jpg', kicker='20,000 JOBS & PENSIONS GONE', sub='85,000 AT ANDERSEN DISSOLVED', cam='pan_right', focus=(0.52, 0.48)),
             dict(a='they called themselves', img='short-enron-broll-10.jpg', kicker='THE RECKONING', sub='FASTOW & SKILLING IMPRISONED', cam='push_in', focus=(0.48, 0.45)),
         ],
@@ -1210,6 +1314,11 @@ def _acquire_short_asset(query, scene_no, stock_dir):
             print(f'[shorts] {name} errored on scene {scene_no}: {exc!r}', flush=True)
             got = None
         if got:
+            if got.width and got.height and min(got.width, got.height) < 540:
+                print(f'[shorts] skipping low-res video {got.width}x{got.height} on scene {scene_no}', flush=True)
+                continue
+            if not _is_vivid_video_clip(got.path):
+                continue
             got.query = q
             print(f'[shorts] scene {scene_no}: VIDEO from {got.source} ({got.width}x{got.height})', flush=True)
             return got
@@ -1259,6 +1368,8 @@ def main(key):
             stock_dir = os.path.join(ROOT, 'output', 'short-stock', key)
             os.makedirs(stock_dir, exist_ok=True)
             for si, sc in enumerate(scenes):
+                if sc.get('lock_plate'):
+                    continue
                 queries = cfg.get('stock_queries', [])
                 query = queries[si] if si < len(queries) else sc.get('kicker', 'documentary b-roll')
                 sc['stock_query'] = query
@@ -1376,13 +1487,24 @@ def main(key):
 
         ov = Image.new('RGBA', (W, H), (0, 0, 0, 0))
         ov.alpha_composite(ambient_layer(t))
-        ov.alpha_composite(viz_layer(frame, sc.get('viz'), pos, sc_dur))
-        ov.alpha_composite(beats_layer(frame, beats, t, expire_t))
-        ov.alpha_composite(tease_layer(frame, cfg.get('teases', []), t))
-        if t < 3.6:
-            cold_open_overlay(ov, frame, cfg['title'], t, dur=3.6)
-        ov.alpha_composite(hud_chapter_layer(frame, sc['kicker'], sc.get('sub', ''), k + 1, nscenes, pos, sc_dur, t / total))
-        ov.alpha_composite(caption_ribbon_layer(frame, cap_stream, t))
+        mp_win = cfg.get('midpoint_poster_window')
+        poster_spec = cfg.get('poster')
+        in_mid_poster = bool(mp_win and poster_spec and (mp_win[0] <= t <= mp_win[1]))
+        in_open_poster = bool(poster_spec and t < 2.8)
+        if not in_open_poster and not in_mid_poster:
+            ov.alpha_composite(viz_layer(frame, sc.get('viz'), pos, sc_dur))
+            ov.alpha_composite(beats_layer(frame, beats, t, expire_t))
+            ov.alpha_composite(tease_layer(frame, cfg.get('teases', []), t))
+        if t < 2.8:
+            cold_open_overlay(ov, frame, cfg['title'], t, dur=2.8, poster_spec=poster_spec)
+        elif in_mid_poster:
+            mw0, mw1 = mp_win
+            ma_in = ease_out_expo(clamp01((t - mw0) / 0.28))
+            ma_out = 1.0 if t < mw1 - 0.32 else 1.0 - ease_in_out_sine((t - (mw1 - 0.32)) / 0.32)
+            poster_lockup_overlay(ov, poster_spec[0], poster_spec[1], poster_spec[2], poster_spec[3], alpha=ma_in * ma_out)
+        if not in_open_poster and not in_mid_poster:
+            ov.alpha_composite(hud_chapter_layer(frame, sc['kicker'], sc.get('sub', ''), k + 1, nscenes, pos, sc_dur, t / total))
+            ov.alpha_composite(caption_ribbon_layer(frame, cap_stream, t))
         frame = Image.alpha_composite(frame.convert('RGBA'), ov).convert('RGB')
         if t >= adur - 0.4:
             frame = end_card_overlay(frame, cfg['end'], t - (adur - 0.4), total - (adur - 0.4))

@@ -241,11 +241,20 @@ def _write_published_record(
     privacy_status: str,
     probe: MediaProbe,
     scene_count: int,
+    thumbnail_results: dict[str, str] | None = None,
+    channel_audit: list[dict] | None = None,
 ) -> Path:
     PUBLISHED_DIR.mkdir(parents=True, exist_ok=True)
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     shorts_url = f"https://www.youtube.com/shorts/{video_id}"
     studio_url = f"https://studio.youtube.com/video/{video_id}/edit"
+    thumb_block = ""
+    if thumbnail_results:
+        lines = "\n".join(f"- `{vid}`: `{status}`" for vid, status in thumbnail_results.items())
+        thumb_block = f"\n\n## Custom Thumbnail Apply Results\n\n{lines}\n"
+    audit_block = ""
+    if channel_audit:
+        audit_block = f"\n\n## Channel Video Status Audit\n\n```json\n{json.dumps(channel_audit, indent=2)}\n```\n"
     content = (
         "---\n"
         f'id: "{edition.job_id}"\n'
@@ -266,7 +275,9 @@ def _write_published_record(
         f"duration_seconds: {round(probe.duration_seconds, 2)}\n"
         f"scenes_verified: {scene_count}\n"
         "---\n\n"
-        f"{edition.description}\n"
+        f"{edition.description}"
+        f"{thumb_block}"
+        f"{audit_block}\n"
     )
     dest.write_text(content, encoding="utf-8")
     return dest
@@ -338,12 +349,18 @@ def run_short_release(
     doc = _build_script_doc(edition)
     published_record = PUBLISHED_DIR / f"{edition.slug}.md"
 
+    legacy_video_ids: list[str] = []
     if manifest_path and manifest_path.is_file():
         mdata = yaml.safe_load(manifest_path.read_text(encoding="utf-8")) or {}
         if bool(mdata.get("replace")) or bool(mdata.get("force")):
             force = True
+        for vid in mdata.get("legacy_video_ids") or []:
+            if isinstance(vid, str) and vid.strip():
+                legacy_video_ids.append(vid.strip())
 
     previous_video_id = _read_previous_video_id(published_record)
+    if previous_video_id and previous_video_id not in legacy_video_ids:
+        legacy_video_ids.append(previous_video_id)
 
     if published_record.is_file() and not dry_run and not force:
         if manifest_path and manifest_path.is_file():
@@ -388,6 +405,16 @@ def run_short_release(
     shutil.copy2(video_path, staged_video)
     shutil.copy2(sources_path, stage_dir / "scene-sources.json")
 
+    from .thumbnail import generate_short_scroll_stopper_thumbnail
+
+    hero_bg = REPO_ROOT / "image-search" / "short-enron-thumb-hero.jpg"
+    if not hero_bg.is_file():
+        hero_bg = REPO_ROOT / "image-search" / "short-enron-crash-poster.jpg"
+    staged_thumb = generate_short_scroll_stopper_thumbnail(
+        bg_path=hero_bg,
+        out_path=stage_dir / "thumbnail.jpg",
+    )
+
     result: dict = {
         "id": edition.job_id,
         "key": edition.key,
@@ -399,38 +426,64 @@ def run_short_release(
         "duration_seconds": round(probe.duration_seconds, 2),
         "scenes_verified": len(scenes),
         "video": str(staged_video),
+        "thumbnail": str(staged_thumb),
         "dry_run": dry_run,
     }
 
     if not dry_run:
-        from .upload import delete_video, upload
+        from .upload import audit_channel_videos, delete_video, set_video_thumbnail, upload
 
-        up = upload(doc, staged_video, thumbnail_path=None, description=edition.description)
+        up = upload(doc, staged_video, thumbnail_path=staged_thumb, description=edition.description)
         if not up.video_id:
             raise RuntimeError("YouTube upload returned no video ID; leaving published ledger untouched.")
-        shorts_url = f"https://www.youtube.com/shorts/{up.video_id}"
-        if previous_video_id and previous_video_id != up.video_id:
-            delete_video(previous_video_id)
-            _close_superseded_tickets(edition.title, shorts_url)
+
+        thumb_results: dict[str, str] = {}
+        thumb_results[up.video_id] = set_video_thumbnail(up.video_id, staged_thumb)
+
+        # Ensure every unlocked Enron Short on the channel immediately displays the scroll-stopping thumbnail
+        for old_vid in legacy_video_ids:
+            if old_vid and old_vid != up.video_id:
+                thumb_results[old_vid] = set_video_thumbnail(old_vid, staged_thumb)
+                delete_video(old_vid)
+
+        channel_audit = audit_channel_videos([up.video_id, *legacy_video_ids])
+        active_video_id = up.video_id
+        by_id = {row.get("id"): row for row in channel_audit if isinstance(row, dict) and row.get("id")}
+        new_row = by_id.get(up.video_id, {})
+        if new_row.get("uploadStatus") == "rejected":
+            for cand_id in legacy_video_ids:
+                cand_row = by_id.get(cand_id, {})
+                if cand_row.get("uploadStatus") in {"processed", "uploaded"}:
+                    active_video_id = cand_id
+                    break
+
+        active_watch_url = f"https://youtu.be/{active_video_id}"
+        shorts_url = f"https://www.youtube.com/shorts/{active_video_id}"
+        _close_superseded_tickets(edition.title, shorts_url)
         result.update(
             {
                 "uploaded": True,
-                "video_id": up.video_id,
-                "watch_url": up.watch_url,
+                "video_id": active_video_id,
+                "uploaded_video_id": up.video_id,
+                "watch_url": active_watch_url,
                 "shorts_url": shorts_url,
                 "privacy_status": up.privacy_status,
+                "thumbnail_results": thumb_results,
+                "channel_audit": channel_audit,
             }
         )
-        print(f"[short-release] uploaded {shorts_url} (privacy={up.privacy_status})")
-        _open_release_ticket(doc, up.watch_url, up.privacy_status, up.video_id)
+        print(f"[short-release] active short {shorts_url} (uploaded={up.video_id}, privacy={up.privacy_status})")
+        _open_release_ticket(doc, active_watch_url, up.privacy_status, active_video_id)
         _write_published_record(
             published_record,
             edition,
-            up.video_id,
-            up.watch_url,
+            active_video_id,
+            active_watch_url,
             up.privacy_status,
             probe,
             len(scenes),
+            thumbnail_results=thumb_results,
+            channel_audit=channel_audit,
         )
         if manifest_path and manifest_path.is_file():
             manifest_path.unlink()
