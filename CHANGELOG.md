@@ -5,6 +5,198 @@ there was no changelog before this file.
 
 ---
 
+## 2026-10-23 — apt hung, and the required CI check died before running a single test
+
+PR #7 went red with `Unit tests + doctor: cancelled` — not `failure`, `cancelled`, which reads
+like somebody clicked stop. Three runs in a row. The per-step statuses showed why:
+
+```
+System deps (ffmpeg)=cancelled, Python deps=skipped, Unit tests=skipped
+```
+
+It never reached the tests. The job sat inside `sudo apt-get install -y ffmpeg` for its whole
+10-minute budget and was killed; two sibling jobs ran the identical apt step and passed, so the
+mirror is intermittently slow, not broken. GitHub reports a job timeout as `cancelled`, so it
+did not even look like a failure. Full write-up in MAINTENANCE.md §3 (2026-10-23).
+
+### Fixed
+
+- **Install order.** Every workflow ran apt *before* `pip install -r requirements.txt`, with no
+  timeout on either apt call. Backwards: `requirements.txt` already pins `imageio-ffmpeg`, whose
+  static build `pipeline.assemble.ffmpeg_bin()` can find. New composite action
+  **`.github/actions/setup-render-deps`** runs pip first, then apt inside `timeout 120`/`timeout
+  300` and non-fatal, then exports `FFMPEG_BINARY` from the static build if apt did not deliver.
+  Used by all three `dry-run.yml` jobs, `produce.yml` and `remaster.yml`.
+- **The three renderer CLIs had no fallback at all.** `tools/deep_dive.py`, `tools/shorts.py`
+  and `tools/motionstudio.py` did `os.environ.get('FFMPEG_BINARY', 'ffmpeg')`, so they broke on
+  any machine without system ffmpeg even though a static build was installed. All three now
+  resolve through `ffmpeg_bin()`. Verified with no ffmpeg on `PATH` and `FFMPEG_BINARY` unset:
+  `tools/shorts.py short-enron` rendered 1252 frames and exited 0.
+- **`remaster.yml` hard-pinned `FFMPEG_BINARY: ffmpeg`** at job level — a bare name that
+  `Path('ffmpeg').exists()` rejects, defeating the one resolver that did have a fallback. Removed.
+- **The media check assumed `ffprobe`,** which imageio-ffmpeg does not ship. `probe_streams()`
+  now falls back to the ffmpeg banner. Its first version grep'd for `Stream #0:0: Video`; the
+  real banner is `Stream #0:0[0x1](und): Video:`, so it matched nothing and would have reported
+  every healthy render as having no video stream.
+
+### Added
+
+- **11 tests in `tests/test_ffmpeg_resolution.py`.** Precedence (env → PATH → static build), a
+  bare `FFMPEG_BINARY=ffmpeg` being ignored, an instructive error when nothing is found, no
+  workflow re-inlining `apt-get install`, apt staying timeboxed — and one test that **executes
+  the YAML's own `probe_streams()` against a real generated MP4 with no ffprobe on `PATH`**.
+  That last test is what caught the broken grep: asserting the string `ffprobe` appears in the
+  workflow would not have. As a negative control, restoring the broken pattern fails it with
+  `'video' not found in []`.
+- MAINTENANCE.md §1 ffmpeg section rewritten — its old claim "GitHub runners install real ffmpeg
+  via apt, so CI never needs this" was the assumption this incident disproved.
+
+---
+
+## 2026-10-22 — fact-check worksheets: the mechanical half of the human gate
+
+The human gate is the one step no machine in this repo may skip: `pipeline/originality.py`
+blocks any job whose `human_rewrite` is `false`, and flipping it is the human's signature.
+But the gate was slow for a boring reason — pulling every checkable claim out of a 900-word
+script and finding which of six sources settles each one is an hour of extraction before the
+actual judgement starts.
+
+### Added
+
+- **`scripts/factcheck.py`** → `content/factcheck/<id>-<slug>.md`. Extracts candidate claims
+  (a sentence containing a number word, a month, or a multi-word proper noun) and prints them
+  as checkboxes next to the job's own declared sources, each with a blank for the source the
+  human confirmed it against, plus a sign-off block. **It verifies nothing and pre-ticks
+  nothing** — an unticked box is the only correct starting state, and a test asserts that.
+  Re-running without `--force` refuses to overwrite a worksheet a human has filled in.
+- Worksheets generated for all four queued jobs: **41 / 39 / 35 / 37 checkboxes**
+  (0003–0006). Each embeds the source script's sha256 so staleness is visible.
+- 14 tests in `tests/test_factcheck.py`, including the two invariants that matter most: the
+  generator never asserts a verdict, and its output never lands in `content/queue/` — that
+  directory is globbed by `pipeline/run.py::select_jobs`, `scripts/doctor.py`, the
+  queue-integrity tests and `dry-run.yml`, so a worksheet there would be parsed as a job.
+
+### Notes
+
+- Extraction is deliberately dumb: the narration spells numbers out for TTS ("two thousand
+  and eight"), so digit-matching would find nothing, and a clever extractor that decided what
+  matters would hide claims behind a model's judgement. A missed claim is a checkbox the human
+  adds.
+- **Because dumb extraction misses things, nothing is dropped silently.** In job 0003, 10
+  substantive sentences carry no figure, date or proper noun — including *"That is a
+  repurchase agreement — a repo — and in substance it is a secured loan"*, which is
+  load-bearing. Those are listed under each scene as "Also read", and
+  `test_no_substantive_sentence_is_silently_dropped` asserts every sentence of ten words or
+  more appears somewhere in the worksheet. Without it a human could tick all 31 flagged boxes
+  and never see them.
+- `docs/SETUP.md` §6 now points at it as the shortcut for the fact-check step.
+
+---
+
+## 2026-10-22 — the `image-search/` licence ledger: 13 stills are not ours to publish
+
+`docs/ASSET_SOURCING.md` had carried *"no complete per-file license ledger in this checkout"*
+as known debt. This closes it, and the answer was worse than "unknown".
+
+### Added
+
+- **`image-search/LICENSES.yml`** — a per-file ledger for all 49 authored stills, derived by
+  `scripts/licence_ledger.py` from each file's **own** metadata (EXIF `Copyright`/`Artist`/
+  `ImageDescription`, embedded XMP, raw byte markers for `gettyimages`,
+  `xmpRights:WebStatement`, `plus:Licensor`, `All Rights Reserved`). Every entry is keyed by
+  SHA-256, so a swapped file cannot inherit its predecessor's clearance. Commands: `check`
+  (CI), `scan` (evidence, writes nothing), `write` (regenerate, preserving human edits for
+  unchanged bytes).
+- **`pipeline/licences.py`** — `licence_note()`, `status_of()`, `is_safe_for_monetized_use()`,
+  and two tiers: `unsafe_stills()` (rights-encumbered / corrupt / unrecorded — must not
+  render) and `uncleared_stills()` (everything not `cleared`).
+- **CI**: `dry-run.yml`'s hermetic `checks` job now runs `licence_ledger.py check`.
+- **Doctor**: two new checks — the ledger covers every still and agrees with the bytes
+  (re-derived from the files, not re-reading its own output), plus an explicit
+  ❌ *"authored stills free of embedded rights claims"* while the 13 remain.
+- 11 tests in `tests/test_licence_ledger.py`, including the two that assert `check` can
+  actually fail (missing entry; changed bytes).
+
+### Changed
+
+- **`tools/deep_dive.py` and `tools/shorts.py` now report the real licence status.** Both
+  wrote one blanket string into `scene-sources.json` for every authored still —
+  *"source/license metadata unavailable in current ledger"* — which said the same thing about
+  a public-domain 1889 Library of Congress plate and a rights-managed Getty frame. Each still
+  now gets its own status line, and both renderers print a `!!` block naming any
+  must-not-monetize file while the operator is still watching. Import is guarded, so a
+  bookkeeping module can never break a render.
+
+### What the scan found
+
+**13 rights-encumbered, 1 corrupt, 35 unverified, 0 cleared.**
+
+- 10 stills carry embedded **Getty Images** rights metadata — e.g. EXIF `Copyright: "2002
+  Getty Images"` on `andrew-fastow-enron-cfo-trial-photo-2.jpg`, with a full `plus:Licensor`
+  and `xmpRights:WebStatement` packet.
+- 3 carry `"All Rights Reserved"` photographer copyrights: `Copyright 2014/2021 Steven L.
+  Markos`, Johnstown Flood National Memorial.
+- **Nine of the 13 are referenced by scene tables** (8 Enron, 1 Johnstown). The Enron deep
+  dive and Shorts are therefore **not safe to monetize** until those files are replaced.
+- `johnstown-flood-1889-ruins-destruction-h-5.png` is 68 bytes and will not decode; recorded
+  as `corrupt`, referenced by no scene.
+- `enron-corporation-headquarters-houston-c-3.jpg` and
+  `enron-scandal-2001-newspaper-headlines-f-4.jpg` are byte-identical.
+- Only 23 of the 49 stills are referenced at all; the other 26 are unused inventory.
+
+MAINTENANCE.md §4 now carries these as three separate debt rows (encumbered / unverified /
+dead weight) instead of one "no ledger" row, and the "47 files" figure there was wrong —
+the directory holds 49 files, 8,988,827 bytes.
+
+---
+
+## 2026-10-22 — queue depth 0004–0006, and a licence hole in the keyless provider
+
+### Fixed
+
+- **`_wikimedia()` was accepting share-alike, non-commercial and no-derivatives images.**
+  `docs/ASSET_SOURCING.md` has always promised *"only CC0, public-domain, or CC BY entries
+  are accepted; NC, ND, and ShareAlike entries are skipped"* — the code did not enforce it.
+  The old predicate spelled the disqualifiers out longhand (`share alike`,
+  `non-commercial`, `no derivatives`), but Commons reports `LicenseShortName` in
+  **abbreviated** form: `CC BY-SA 4.0`, `CC BY-NC 2.0`, `CC BY-ND 4.0`. None of the
+  longhand strings appear in those, and the accept term `cc by` matches all of them, so
+  every SA/NC/ND hit passed the filter and was downloaded and rendered. Wikimedia is the
+  provider that runs with **no API key** — i.e. the one a keyless CI run and any
+  no-secrets setup actually use — so the hole was in the hot path for a channel being
+  built for monetization. `_internet_archive` (rejects `-nc`/`/by-sa/`/`-nd`) and
+  `_openverse` (allowlist) were already correct.
+  - New `pipeline/assets.py::licence_ok_for_monetized_use()` tokenises the licence string
+    and refuses any `nc`/`sa`/`nd` token or spelled-out equivalent. Unknown licences are
+    refused. Verified against the real Commons strings: `CC BY-SA 4.0`, `CC BY-NC 2.0`
+    and `CC BY-ND 4.0` all went from *downloaded* to *refused*; `CC0`, `Public domain`
+    and `CC BY 2.0` still pass.
+  - **Consequence to watch:** a scene that was previously sourced from a CC BY-SA hit now
+    correctly returns nothing. Jobs 0004–0006 were written against the tightened rule;
+    job 0003's queries were chosen for CC0/PD/CC-BY coverage and its `pipeline-dry-run`
+    result on this branch is the check.
+
+### Added
+
+- **Three long-form scripts (PLAN.md Phase 0 queue depth):** `0004-the-fund-that-broke-the-fed`
+  (LTCM, 1998), `0005-the-queue-that-broke-a-british-bank` (Northern Rock, 2007),
+  `0006-how-one-trader-deleted-a-bank` (Barings, 1995). ~1,050–1,100 words each, 8 scenes,
+  all `status: draft` with `human_rewrite: false` — the originality gate blocks every one
+  of them until a human fact-checks, rewrites and approves. Each carries its sources in
+  `description` and a maintainer note naming the figures that most need checking.
+- **Per-query sourcing evidence, now enforced.** Each job records
+  `asset_query_verification` in frontmatter: for every `asset_queries` entry, either a
+  Commons probe count (`usable: N ≥ 1`) or a `ci_verified` dry-run id, plus the evidence
+  note. `tests/test_asset_query_verification.py` fails the build if a query is unverified,
+  recorded with zero usable hits, or carries a stale entry. Job 0003 records CI evidence
+  (run `39734567120`, main @ `af63d2c`, job *"General pipeline dry-run (needs network)"*
+  = `success`); 0004–0006 record Commons probes taken 2026-10-22.
+- Rejected-query notes in each job's frontmatter, so nobody re-adds a query that was
+  already proven dead — e.g. `bank of england threadneedle street` returns 4/4 CC BY-SA
+  (zero usable), which is why job 0005 uses the shorter `bank of england london`.
+
+---
+
 ## 2026-10-22 — first-upload path: release tickets actually work now
 
 PR #5 (the green pipeline) merged; attention turned to what blocks the **first upload**

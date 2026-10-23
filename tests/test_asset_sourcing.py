@@ -68,6 +68,59 @@ class AssetSourcingTests(unittest.TestCase):
         self.assertEqual(downloaded, ["https://upload.wikimedia.org/wikipedia/commons/thumb/l/ledger-huge.tif/1920px-ledger-huge.tif.jpg"])
         self.assertTrue(got.license_note.startswith("Wikimedia Commons — Public domain"))
 
+    def test_wikimedia_refuses_share_alike_and_noncommercial_hits(self):
+        """Regression: `_wikimedia` used to spell its rejects out longhand ("share
+        alike", "non-commercial") while Commons sends "CC BY-SA 4.0" / "CC BY-NC 2.0",
+        and the accept term "cc by" matched both — so NC and ND images were
+        downloaded and rendered into monetized video. Wikimedia is the provider that
+        runs with no API key, i.e. the only one a keyless CI run uses.
+        """
+        def page(title, lic, slug):
+            return {"title": title,
+                    "imageinfo": [{"url": f"https://upload.wikimedia.org/w/{slug}.jpg",
+                                   "thumburl": f"https://upload.wikimedia.org/thumb/{slug}.jpg",
+                                   "mime": "image/jpeg", "width": 1600, "height": 900,
+                                   "descriptionurl": f"https://commons.wikimedia.org/wiki/{title}",
+                                   "extmetadata": {"LicenseShortName": {"value": lic},
+                                                   "Artist": {"value": "someone"}}}]}
+
+        class FakeResp:
+            def json(self):
+                return {"query": {"pages": {
+                    "1": page("File:SA.jpg", "CC BY-SA 4.0", "sa"),
+                    "2": page("File:NC.jpg", "CC BY-NC 2.0", "nc"),
+                    "3": page("File:ND.jpg", "CC BY-ND 4.0", "nd"),
+                }}}
+
+        downloaded = []
+        with patch.object(assets, "_http_get", return_value=FakeResp()), \
+             patch.object(assets, "_download", side_effect=lambda url, dest: downloaded.append(url) or True):
+            got = assets._wikimedia("newcastle upon tyne street", False, 1280, 720)
+        self.assertIsNone(got, "an all-NC/SA/ND result set must yield no asset")
+        self.assertEqual(downloaded, [], "no disqualifying file may be downloaded")
+        self.assertIn("licence=3", assets._PROBE.get("Wikimedia photo", ""),
+                      f"probe should name the licence rejections, got {assets._PROBE!r}")
+
+    def test_wikimedia_still_accepts_plain_attribution(self):
+        """The tightened filter must not start refusing CC BY / CC0 / PD."""
+        page = {"title": "File:OK.jpg",
+                "imageinfo": [{"url": "https://upload.wikimedia.org/w/ok.jpg",
+                               "thumburl": "https://upload.wikimedia.org/thumb/ok.jpg",
+                               "mime": "image/jpeg", "width": 1600, "height": 900,
+                               "descriptionurl": "https://commons.wikimedia.org/wiki/File:OK.jpg",
+                               "extmetadata": {"LicenseShortName": {"value": "CC BY 2.0"},
+                                               "Artist": {"value": "someone"}}}]}
+
+        class FakeResp:
+            def json(self):
+                return {"query": {"pages": {"1": page}}}
+
+        with patch.object(assets, "_http_get", return_value=FakeResp()), \
+             patch.object(assets, "_download", return_value=True):
+            got = assets._wikimedia("tyne theatre newcastle", False, 1280, 720)
+        self.assertIsNotNone(got, "CC BY 2.0 must still be usable")
+        self.assertIn("CC BY 2.0", got.license_note)
+
     def test_no_match_is_not_silently_replaced_with_a_title_card(self):
         with patch.object(assets, "_pexels", return_value=None), \
              patch.object(assets, "_pixabay", return_value=None), \

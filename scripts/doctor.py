@@ -79,6 +79,43 @@ def main() -> int:
     for wf in ("produce.yml", "dry-run.yml", "keepalive.yml", "metrics.yml"):
         check(f"workflow: {wf}", (REPO / ".github" / "workflows" / wf).exists())
 
+    # Authored stills in image-search/ are the fallback visual for every deep-dive and
+    # Shorts scene. 10 of the 49 carry embedded Getty rights metadata and 3 more an
+    # "All Rights Reserved" photographer copyright, so the ledger is a monetization gate,
+    # not bookkeeping. See docs/ASSET_SOURCING.md.
+    try:
+        from pipeline.licences import load_ledger, LEDGER_PATH
+        ledger = load_ledger(use_cache=False)
+        stills = [p.name for p in (REPO / "image-search").iterdir()
+                  if p.is_file() and p.name != "LICENSES.yml" and not p.name.startswith(".")]
+        recorded = set(ledger)
+        missing = sorted(set(stills) - recorded)
+        encumbered = sorted(n for n, e in ledger.items() if e.get("status") == "rights-encumbered")
+        check("image-search licence ledger covers every still", not missing and bool(ledger),
+              f"unrecorded: {', '.join(missing[:3])}… — python scripts/licence_ledger.py write"
+              if missing else "python scripts/licence_ledger.py write")
+        # Re-derive each status from the file's own metadata and compare. A human may
+        # promote an entry to `cleared`, but must never demote an encumbered file, and a
+        # swapped file must not inherit its predecessor's clearance.
+        from scripts.licence_ledger import scan_file, classify, sha256
+        drifted = []
+        for p in (REPO / "image-search").iterdir():
+            if not p.is_file() or p.name == "LICENSES.yml" or p.name.startswith("."):
+                continue
+            entry = ledger.get(p.name) or {}
+            derived, _ = classify(scan_file(p))
+            if str(entry.get("sha256")) != sha256(p):
+                drifted.append(f"{p.name} (bytes changed)")
+            elif derived == "rights-encumbered" and entry.get("status") == "cleared":
+                drifted.append(f"{p.name} (cleared but rights-encumbered)")
+        check("licence ledger agrees with the files", not drifted,
+              "; ".join(drifted[:3]) + (" …" if len(drifted) > 3 else ""))
+        check("authored stills free of embedded rights claims", not encumbered,
+              f"{len(encumbered)} of {len(stills)} stills carry a Getty / \"All Rights Reserved\" "
+              "claim — replace before any monetized upload; image-search/LICENSES.yml names each")
+    except Exception as exc:  # noqa: BLE001 - a bookkeeping gap must not crash the doctor
+        check("image-search licence ledger readable", False, f"{exc!r}")
+
     # Report
     width = max(len(n) for n, _, _ in results)
     print("\n🩺 YouTube Automation — setup doctor\n")

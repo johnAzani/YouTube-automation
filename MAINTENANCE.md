@@ -19,21 +19,30 @@ Installs 33 packages on Python 3.11.2, no build failures. `requirements.txt` pin
 lower bounds only — if a fresh install ever breaks, suspect an unpinned upstream
 (`numpy 2.4.6`, `pillow 13.0.0`, `edge-tts 7.3.1` were the versions that worked).
 
-### ffmpeg resolution — three different rules, know which one applies
+### ffmpeg resolution — one rule everywhere (since 2026-10-23)
 
-| Code path | How it finds ffmpeg |
-|---|---|
-| `pipeline/assemble.py::ffmpeg_bin()` | `$FFMPEG_BINARY` → `PATH` → **`imageio_ffmpeg` fallback** |
-| `tools/deep_dive.py`, `tools/shorts.py`, `tools/motionstudio.py` | `$FFMPEG_BINARY` → literal `"ffmpeg"` (**no fallback**) |
+Every code path resolves through `pipeline/assemble.py::ffmpeg_bin()`:
 
-So the authored engines **require** ffmpeg on `PATH` or `FFMPEG_BINARY` set. On a machine
-without system ffmpeg:
-
-```bash
-export FFMPEG_BINARY=$(.venv/bin/python -c "import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())")
+```
+$FFMPEG_BINARY (only if it resolves) → PATH → imageio_ffmpeg static build
 ```
 
-GitHub runners install real ffmpeg via apt, so CI never needs this.
+`tools/deep_dive.py`, `tools/shorts.py` and `tools/motionstudio.py` used to default to the
+literal `"ffmpeg"` with **no fallback**, so they needed system ffmpeg on `PATH` or a
+hand-exported `FFMPEG_BINARY`. That was the wrong way round: `imageio-ffmpeg` is already in
+`requirements.txt`, so a static build is always present after `pip install -r requirements.txt`.
+Nothing needs exporting any more — `.venv/bin/python tools/shorts.py short-enron` works on a
+machine with no ffmpeg installed (verified 2026-10-23, 1252 frames, exit 0).
+
+CI installs ffmpeg through `.github/actions/setup-render-deps`, which runs pip **first**, then
+tries apt inside `timeout`, then exports `FFMPEG_BINARY` from the static build if apt did not
+deliver. Do not inline `apt-get install ffmpeg` back into a workflow —
+`tests/test_ffmpeg_resolution.py` fails the build if you do. See §3 (2026-10-23).
+
+`ffprobe` is the exception: it ships with apt only, never with imageio-ffmpeg. Any step that
+inspects media must fall back to parsing `ffmpeg -hide_banner -i` (see the
+`probe_streams()` helper in `dry-run.yml`, which `tests/test_ffmpeg_resolution.py` executes
+verbatim against real media).
 
 ---
 
@@ -95,6 +104,112 @@ job writes one and why every scene leaves a per-provider attempt digest
 ---
 
 ## 3. Incident log
+
+### 2026-10-23 — apt hung and the required CI job died before running a single test
+
+**Symptom.** PR #7 went red with `Unit tests + doctor: cancelled`. Not `failure` — `cancelled`,
+which reads like somebody clicked stop. Three runs in a row: `39898588505`, `39899531755`,
+`39899527120`.
+
+**Diagnosis.** The per-step statuses told the story:
+
+```
+Set up job=success, checkout=success, setup-python=success,
+System deps (ffmpeg)=cancelled, Python deps=skipped, Unit tests=skipped
+```
+
+It never reached the tests. The job sat inside `sudo apt-get install -y ffmpeg` for its entire
+`timeout-minutes: 10` budget and was killed. Two jobs in the same run ran the identical apt
+step and succeeded, so the mirror is intermittently slow, not broken. GitHub surfaces a job
+timeout as `cancelled`, so it did not look like a failure at all.
+
+**Why it could cost the whole budget.** Every workflow ran apt **before** `pip install
+-r requirements.txt`, with no timeout on either apt call. That ordering is backwards:
+`requirements.txt` already pins `imageio-ffmpeg`, whose static build
+`pipeline.assemble.ffmpeg_bin()` knows how to find. Installing pip first means the fallback
+exists before apt is even attempted.
+
+**Second defect, found while fixing the first.** `tools/deep_dive.py`, `tools/shorts.py` and
+`tools/motionstudio.py` did `os.environ.get('FFMPEG_BINARY', 'ffmpeg')` — no fallback to the
+static build that was sitting right there in the venv. §1 documented this as intentional
+("GitHub runners install real ffmpeg via apt, so CI never needs this"); the incident disproved
+the premise. `remaster.yml` made it worse by hard-pinning `FFMPEG_BINARY: ffmpeg` at job level,
+a bare name that `Path('ffmpeg').exists()` rejects, which defeated the one resolver that did
+have a fallback.
+
+**Third defect, found while testing the fix.** The media check in `offline-render` called bare
+`ffprobe`. imageio-ffmpeg ships ffmpeg only — no ffprobe — so the fallback path had no probe at
+all. The first ffmpeg-banner replacement grep'd for `Stream #0:0: Video`; the real banner is
+`Stream #0:0[0x1](und): Video:`. It matched nothing, so a healthy render would have been
+reported as having no video stream. Caught by running the YAML's shell verbatim, not by reading
+it.
+
+**Fixes.**
+1. `.github/actions/setup-render-deps` — pip first, then apt inside `timeout 120`/`timeout 300`
+   and non-fatal, then export `FFMPEG_BINARY` from imageio-ffmpeg if `ffmpeg` is not on `PATH`.
+   Used by all three `dry-run.yml` jobs plus `produce.yml` and `remaster.yml`.
+2. All three renderer CLIs resolve through `pipeline.assemble.ffmpeg_bin()`.
+3. `probe_streams()` in `dry-run.yml` uses ffprobe when present, else the ffmpeg banner.
+4. `tests/test_ffmpeg_resolution.py` (11 tests) pins the precedence, forbids inline
+   `apt-get install` in workflows, and executes the YAML's probe against real media.
+
+**Verify locally** (no system ffmpeg here, so the fallback is the only path):
+
+```bash
+env -u FFMPEG_BINARY .venv/bin/python -c \
+  "import sys; sys.path.insert(0,'tools'); import shorts; print(shorts.FFMPEG)"
+# → .../imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2
+env -u FFMPEG_BINARY ENABLE_STOCK_BROLL=0 .venv/bin/python tools/shorts.py short-enron
+# → 1252 frames, social/short-enron.mp4 8181 KB, exit 0
+```
+
+**Lesson.** A required check that installs its own toolchain can die before it checks anything,
+and report that as a cancellation. Bound every network/install step, and put the dependency
+that already ships in `requirements.txt` ahead of the one that needs a mirror.
+
+### 2026-10-22 — the keyless provider was downloading non-commercial and share-alike images
+
+**Symptom.** None visible. Nothing failed, which is exactly why it survived.
+
+**Cause.** `_wikimedia()` filtered licences with a substring test:
+
+```python
+if any(term in lic_norm for term in ('noncommercial','non-commercial','share alike',
+                                     'share-alike','no derivatives','no-derivatives')) \
+   or not any(term in lic_norm for term in ('cc0','public domain','cc by','cc-by')):
+```
+
+Commons reports `LicenseShortName` **abbreviated** — `CC BY-SA 4.0`, `CC BY-NC 2.0`,
+`CC BY-ND 4.0`. None of the spelled-out reject strings occur in those, and `cc by` is a
+substring of all three. Every share-alike, non-commercial and no-derivatives hit therefore
+passed and was downloaded, rendered and (in production) uploaded. `docs/ASSET_SOURCING.md`
+had documented the correct behaviour the whole time; the code simply never implemented it.
+
+**Why it mattered more than it looks.** Wikimedia is the provider that needs no API key,
+so it is the one CI uses and the one any setup without `PEXELS_API_KEY`/`PIXABAY_API_KEY`
+falls through to. The two providers with correct filters (Internet Archive, Openverse) are
+not the ones that get exercised. And NC/ND material in a monetized video is a copyright
+claim, not a warning — PLAN.md §6 lists *"Stock footage licence complaints"* as a medium
+risk on the assumption the licence filter works.
+
+**Fix.** `licence_ok_for_monetized_use()` in `pipeline/assets.py` tokenises the licence
+string and refuses any `nc` / `sa` / `nd` token plus the spelled-out equivalents; unknown
+licences are refused. Three tests: two drive the real `_wikimedia()` with a fake Commons
+payload (all-NC/SA/ND result set → no asset, nothing downloaded, probe says `licence=3`;
+plain `CC BY 2.0` → still accepted), one pins the predicate against the full set of real
+Commons licence strings.
+
+**How it was found.** Not by a test that existed — by a test written for a different
+purpose. `tests/test_asset_query_verification.py` needed to state the licence rule that
+the queued jobs' `usable` counts were scored against, and asserting the obvious
+(`assertFalse(_lic_usable("CC BY-SA 4.0"))`) failed on the first run. Worth remembering:
+the check that catches a bug is often the one you write to document an assumption.
+
+**Cost of the fix.** A scene previously served by a CC BY-SA hit now correctly finds
+nothing, so keyless runs may need a query change or a Pexels/Pixabay key. Jobs 0004–0006
+were written against the tightened rule (their frontmatter records the probe counts and
+lists the queries that were rejected during verification). Job 0003's coverage is the
+`pipeline-dry-run` job on this branch.
 
 ### 2026-10-21 — the general pipeline had never once completed a render
 
@@ -209,7 +324,9 @@ dead branch by name. Those instructions are updated too.
 
 | Debt | Severity | Note |
 |---|---|---|
-| **`image-search/` stills have no licence ledger** | **blocks monetized reuse** | ~10 MB, 47 files. `docs/ASSET_SOURCING.md` already flags this: *"no complete per-file license ledger in this checkout"*. The render writes `license: "…source/license metadata unavailable…verify before monetized reuse"` and `fallback: true` for all 16 Enron scenes. Verify or replace before any monetized upload. Cannot simply delete — `tools/deep_dive.py` / `tools/shorts.py` read these paths. |
+| **13 `image-search/` stills are rights-encumbered** | **blocks monetized reuse of the Enron renders** | Ledger now exists (`image-search/LICENSES.yml`, scanned 2026-10-22): **13 rights-encumbered, 1 corrupt, 35 unverified, 0 cleared**. 10 stills carry embedded Getty Images rights metadata (EXIF/XMP — e.g. `"2002 Getty Images"` on `andrew-fastow-enron-cfo-trial-photo-2.jpg`) and 3 carry `"All Rights Reserved"` photographer copyrights (`Copyright 2014/2021 Steven L. Markos`, Johnstown Flood National Memorial). **Nine of the 13 are referenced by scene tables** — 8 in the Enron deep dive/Shorts (`enron-corporation-headquarters-houston-c-1..5`, `…-f-1`, `…-f-5`, `andrew-fastow-enron-cfo-trial-photo-2`) and 1 in Johnstown (`south-fork-fishing-and-hunting-club-club-1`) — so the Enron renders in particular must not be monetized until the files are replaced. Only 23 of the 49 stills are referenced at all; the other 26 are unused inventory. `scripts/doctor.py` reports this as a failed check; `scripts/licence_ledger.py check` runs in CI. |
+| **35 `image-search/` stills have unverified provenance** | medium | No embedded rights claim, but absence of a claim is not a licence. Includes one file whose comment names a source (`johnstown-train-clean.jpg` → `File source: http://www.explar.com/File:17546u_Wreck_of_Pullman_cars_and_engines_at_Conemaugh,_Johnstown_Flood,_May_31st,_1889.tif`) and one with `Artist: Library of Congress` (`johnstown-flood-1889-ruins-destruction-h-4.jpg`). Either locate the source page and set `status: cleared`, or replace the file. Fine for private drafts. |
+| **`johnstown-flood-1889-ruins-destruction-h-5.png` is dead weight** | trivial | 68 bytes, will not decode. Referenced by no scene in `tools/deep_dive.py` or `tools/shorts.py`. Recorded in the ledger as `corrupt` rather than silently deleted, so the 49-file inventory stays complete. Also note `enron-corporation-headquarters-houston-c-3.jpg` and `enron-scandal-2001-newspaper-headlines-f-4.jpg` are byte-identical (one sha256, two filenames). |
 | **44.9 MB of media in git** | contradicts README rule 2 | README says *"Never commit media. Git = text only"*, yet `docs/media/*.mp4` (28 MB) and `assets/deepdive/*.mp3` are deliberately un-ignored: Pages serves the first and the authored engines read the second. The rule is really "never commit *generated* media". Repo is well under any GitHub limit; the wording is what's wrong. |
 | **No licence for the repo** | low | `gh repo view` reports `licenseInfo: null`. Fonts carry their own OFL (`assets/fonts/Inter-LICENSE-OFL.txt`). |
 

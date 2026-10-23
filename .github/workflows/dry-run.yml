@@ -48,18 +48,20 @@ jobs:
           python-version: "3.12"
           cache: pip
 
-      - name: System deps (ffmpeg)
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends ffmpeg fonts-dejavu-core
-
-      - name: Python deps
-        run: pip install -r requirements.txt
+      # Python deps first, then a bounded best-effort apt ffmpeg + fonts. See the
+      # action's header for the 2026-10-23 job-timeout this replaces.
+      - uses: ./.github/actions/setup-render-deps
 
       # tests/ was never wired into CI before — this is the job that runs it.
       # test_queue_integrity is the guard that catches an out-of-niche job in content/queue/.
       - name: Unit tests
         run: python -m unittest discover -s tests -v
+
+      # Hermetic: compares image-search/LICENSES.yml against the files on disk. Fails if a
+      # still was added without a ledger entry, or if a file's bytes changed under a
+      # recorded clearance. See docs/ASSET_SOURCING.md and MAINTENANCE.md §4.
+      - name: Authored-still licence ledger
+        run: python scripts/licence_ledger.py check
 
       # The 4 secret checks are expected to fail here; the job passes on the structural ones.
       # `set +e` so a missing API key does not fail CI, then report the score.
@@ -95,13 +97,9 @@ jobs:
           python-version: "3.12"
           cache: pip
 
-      - name: System deps (ffmpeg)
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends ffmpeg fonts-dejavu-core
-
-      - name: Python deps
-        run: pip install -r requirements.txt
+      # Python deps first, then a bounded best-effort apt ffmpeg + fonts. See the
+      # action's header for the 2026-10-23 job-timeout this replaces.
+      - uses: ./.github/actions/setup-render-deps
 
       - name: Render long-form deep dive (Enron, ~115s @ 720p)
         run: python tools/deep_dive.py enron
@@ -112,13 +110,25 @@ jobs:
       # Assert the renders are real media, not zero-byte stubs.
       - name: Verify output is valid video with an audio track
         run: |
+          # ffprobe comes from apt only (imageio-ffmpeg ships ffmpeg alone), so probe
+          # with ffprobe when present and fall back to the ffmpeg -i banner otherwise.
+          probe_streams() {
+            if command -v ffprobe >/dev/null 2>&1; then
+              ffprobe -v error -show_entries stream=codec_type -of csv=p=0 "$1"
+            else
+              # Banner line looks like `Stream #0:0[0x1](und): Video: h264 ...`, so match
+              # the codec token rather than assuming it follows the stream number directly.
+              "${FFMPEG_BINARY:-ffmpeg}" -hide_banner -i "$1" 2>&1 \
+                | grep -oE 'Stream #[^ ]* (Video|Audio)' \
+                | sed 's/.* //' | tr 'A-Z' 'a-z'
+            fi
+          }
           for f in social/deep-dive-enron.mp4 social/short-enron.mp4; do
             test -s "$f" || { echo "::error::$f missing or empty"; exit 1; }
-            ffprobe -v error -show_entries stream=codec_type -of csv=p=0 "$f" \
-              | grep -q video || { echo "::error::$f has no video stream"; exit 1; }
-            ffprobe -v error -show_entries stream=codec_type -of csv=p=0 "$f" \
-              | grep -q audio || { echo "::error::$f has no audio stream"; exit 1; }
-            echo "ok $f $(du -h "$f" | cut -f1)"
+            streams="$(probe_streams "$f")"
+            echo "$streams" | grep -q video || { echo "::error::$f has no video stream"; exit 1; }
+            echo "$streams" | grep -q audio || { echo "::error::$f has no audio stream"; exit 1; }
+            echo "ok $f $(du -h "$f" | cut -f1) streams: $(echo $streams)"
           done
 
       # The source ledger is the monetization audit trail (docs/ASSET_SOURCING.md).
@@ -173,13 +183,9 @@ jobs:
           python-version: "3.12"
           cache: pip
 
-      - name: System deps (ffmpeg)
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends ffmpeg fonts-dejavu-core
-
-      - name: Python deps
-        run: pip install -r requirements.txt
+      # Python deps first, then a bounded best-effort apt ffmpeg + fonts. See the
+      # action's header for the 2026-10-23 job-timeout this replaces.
+      - uses: ./.github/actions/setup-render-deps
 
       # Pick an IN-NICHE job explicitly rather than `head -n1`. The unit-test guard
       # already guarantees every queued job is in-niche; this makes the selection

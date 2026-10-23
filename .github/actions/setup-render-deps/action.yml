@@ -1,0 +1,66 @@
+name: "Render dependencies"
+description: >
+  Python deps, then ffmpeg + DejaVu fonts. apt is attempted but is never fatal
+  and never unbounded: requirements.txt already pins imageio-ffmpeg, so if apt
+  does not deliver, this action points FFMPEG_BINARY at that static build.
+
+# Why this exists (do not inline it back into the workflows):
+#
+#   Every job used to run `sudo apt-get update && sudo apt-get install ffmpeg`
+#   BEFORE `pip install -r requirements.txt`, with no timeout. On 2026-10-23 the
+#   `Unit tests + doctor` job hung inside that step for its whole 10-minute
+#   budget and was cancelled — three runs in a row — without executing a single
+#   test. GitHub reports a job timeout as `cancelled`, not `failure`, so it did
+#   not even look like a failure.
+#
+#   The apt ffmpeg was also redundant: `pipeline.assemble.ffmpeg_bin()` already
+#   falls back to the imageio-ffmpeg static build pinned in requirements.txt,
+#   but CI installed apt first, so the fallback was never in place when apt
+#   hung. Now pip runs first and apt is a bounded best-effort on top.
+#
+#   apt is still attempted because it is the only source of `fonts-dejavu-core`,
+#   which `pipeline/textplates.py::find_font()` looks for at hard-coded absolute
+#   paths. A missing font degrades a title card; a hung runner kills the job.
+#
+#   `ffprobe` is NOT covered by imageio-ffmpeg (it ships ffmpeg only), so any
+#   step that inspects media must use the ffmpeg `-i` fallback — see the
+#   "Verify output is valid video" step in workflows/dry-run.yml.
+
+runs:
+  using: composite
+  steps:
+    - name: Python deps
+      shell: bash
+      run: pip install -r requirements.txt
+
+    - name: System deps (ffmpeg, fonts) — bounded, best-effort
+      shell: bash
+      run: |
+        set +e
+        timeout 120 sudo apt-get update -qq
+        update_rc=$?
+        timeout 300 sudo apt-get install -y --no-install-recommends ffmpeg fonts-dejavu-core
+        install_rc=$?
+        set -e
+        echo "apt-get update rc=$update_rc, install rc=$install_rc (non-fatal by design)"
+        if [ "$install_rc" -ne 0 ]; then
+          echo "::warning::apt ffmpeg/fonts unavailable (rc=$install_rc) — falling back to the pinned static build"
+        fi
+
+    - name: Resolve ffmpeg (static fallback)
+      shell: bash
+      run: |
+        if command -v ffmpeg >/dev/null 2>&1; then
+          echo "ffmpeg: $(command -v ffmpeg)"
+          ffmpeg -version | head -n1
+        else
+          FFMPEG_BINARY="$(python -c 'import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())')"
+          echo "FFMPEG_BINARY=$FFMPEG_BINARY" >> "$GITHUB_ENV"
+          echo "ffmpeg (static): $FFMPEG_BINARY"
+          "$FFMPEG_BINARY" -version | head -n1
+        fi
+        if command -v ffprobe >/dev/null 2>&1; then
+          echo "ffprobe: $(command -v ffprobe)"
+        else
+          echo "::notice::no ffprobe — media checks must use the ffmpeg -i banner"
+        fi
