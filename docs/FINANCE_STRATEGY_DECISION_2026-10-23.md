@@ -5,6 +5,13 @@
 
 **Companion documents:** [`FINANCE_DEMAND_AND_MONETIZATION_2026-10-23.md`](FINANCE_DEMAND_AND_MONETIZATION_2026-10-23.md) (demand and channel evidence), [`FINANCE_NICHE_RESEARCH_2026-10-23.md`](FINANCE_NICHE_RESEARCH_2026-10-23.md) (production model and policy), [`FINANCE.md`](FINANCE.md) (older, superseded planning assumptions).
 
+> **Revision 2 — 23 October 2026.** After auditing the channel's existing style and
+> competition, the product recommendation in §5 (a paid car-cost calculator) does not fit
+> the channel: the existing format is a financial-disaster documentary, not a personal-finance
+> explainer. Read [`CHANNEL_STRATEGY_DOCUMENTARY_2026-10-23.md`](CHANNEL_STRATEGY_DOCUMENTARY_2026-10-23.md)
+> before acting on this memo. The RPM correction in §1, the base rates in §2, the revenue
+> arithmetic in §3 and the strategy comparison in §4 still stand and are reused there.
+
 ---
 
 ## 1. The correction I have to make first

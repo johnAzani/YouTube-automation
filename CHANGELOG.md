@@ -5,6 +5,26 @@ there was no changelog before this file.
 
 ---
 
+## 2026-10-23 — documentary strategy: style audit, AI-slop flood, length lever
+
+- Audit the existing channel style: 9-minute financial-disaster documentaries
+  (Lehman, LTCM, Northern Rock, Barings) with primary-source research dossiers.
+  Record that the earlier paid-calculator recommendation does not fit it.
+- Record live competition: the same lane is being flooded by 7-11 minute
+  AI-assisted channels created in the last 58-73 days, and the current slate
+  competes with 1-4M-view versions of the same stories (ColdFusion Barings 4.2M,
+  FRONTLINE 1.8M, Moconomy Lehman 1.1M).
+- Add the watch-hour arithmetic by runtime: 9 min needs ~106,667 views for 8,000
+  hours, 20 min needs ~60,000; twelve 5,000-view videos fail at 9 minutes and pass
+  at 20.
+- Recommend mechanism-first case files at 18-22 minutes with the dossier as the
+  paid product; re-sequence the launch slate to nickel squeeze, LDI gilts,
+  Greensill; note the per-video budget must rise from 6 to ~9 hours.
+- Add Revision 2 banner to the strategy decision memo. No publishing, spending,
+  approval or approval-flag change.
+
+---
+
 ## 2026-10-23 — finance strategy correction: RPM reality and product-first plan
 
 - Add a decision memo correcting the earlier planning RPM. Real Studio data from
