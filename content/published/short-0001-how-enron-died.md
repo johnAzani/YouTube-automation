@@ -7,10 +7,10 @@ format: short
 niche: finance and business
 category: education
 published_on: "2026-10-23"
-youtube_video_id: "M7n0Xou92r0"
-youtube_shorts_url: "https://www.youtube.com/shorts/M7n0Xou92r0"
-youtube_watch_url: "https://youtu.be/M7n0Xou92r0"
-youtube_studio_url: "https://studio.youtube.com/video/M7n0Xou92r0/edit"
+youtube_video_id: "yLUOiczlP7Q"
+youtube_shorts_url: "https://www.youtube.com/shorts/yLUOiczlP7Q"
+youtube_watch_url: "https://youtu.be/yLUOiczlP7Q"
+youtube_studio_url: "https://studio.youtube.com/video/yLUOiczlP7Q/edit"
 privacy_status: "private"
 width: 720
 height: 1280
