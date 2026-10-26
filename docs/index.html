@@ -375,7 +375,7 @@ async function forceDownload(url, filename) {
   <div class="review-container">
     <div class="halt-alert">
       <strong>⏸️ UPLOADS HALTED FOR EDITORIAL REVIEW:</strong>
-      All YouTube automated uploads remain stopped. Below is the newly rendered, frame-synchronized edition of <em>Psalm 91: Night Prayer of Protection</em>. Acoustic waveform re-alignment completed with microsecond precision across all 17 spoken bursts and 108 words. Scene cuts now lead speech transients by 120ms–160ms, kinetic phrases are paced comfortably to speech cadence (no lagging or truncated cards), and the closing call to action displays seamlessly before the final ambient outro.
+      All YouTube automated uploads remain stopped. Below is the newly rendered, <strong>segment-level frame-synchronized edition</strong> of <em>Psalm 91: Night Prayer of Protection</em>. Synchronized strictly at the segment/clause level (8 devotional scene segments), matching the natural spoken thoughts and breathing pauses of the narration. Kinetic typography display cards remain rock-solid for each entire segment with real-time active-word halo bloom, completely eliminating rapid-fire phrase chopping and end-of-video lag.
     </div>
 
     <div class="review-grid">
@@ -421,12 +421,12 @@ async function forceDownload(url, filename) {
           </div>
 
           <div class="hud-badge">
-            <div><strong>Active Scene:</strong> <span id="hud-scene-title">Scene 1 (PSALM 91:1)</span></div>
-            <div style="margin-top: 4px;"><strong>Active Spoken Text:</strong> <span id="hud-phrase-text">BEFORE YOU CLOSE YOUR EYES TONIGHT</span></div>
+            <div><strong>Active Segment:</strong> <span id="hud-scene-title">01/08. PSALM 91:1 · NIGHT PROTECTION PRAYER</span></div>
+            <div style="margin-top: 4px;"><strong>Active Typography:</strong> <span id="hud-phrase-text">BEFORE YOU CLOSE YOUR EYES TONIGHT / PLACE YOUR HOME UNDER PSALM 91</span></div>
           </div>
 
           <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 8px;">
-            <button class="btn-gold" style="width: 100%; padding: 10px 14px; font-size: 13.5px;" onclick="forceDownload('media/shorts-psalm91.mp4', 'shorts-psalm91.mp4')">⬇️ Download Video MP4 (10.8 MB)</button>
+            <button class="btn-gold" style="width: 100%; padding: 10px 14px; font-size: 13.5px;" onclick="forceDownload('media/shorts-psalm91.mp4', 'shorts-psalm91.mp4')">⬇️ Download Video MP4 (10.9 MB)</button>
             <div class="video-links-bar">
               <a class="btn-alt-link" href="media/shorts-psalm91.mp4" target="_blank" rel="noopener">↗ Open Raw Video in New Tab</a>
             </div>
@@ -437,208 +437,232 @@ async function forceDownload(url, filename) {
       <!-- Right Column: Interactive Synchronization Ledger -->
       <div>
         <div class="tabs-nav">
-          <button class="tab-btn active" id="tab-btn-scenes" onclick="switchTab('scenes')">🎬 Scene Segments (6)</button>
-          <button class="tab-btn" id="tab-btn-phrases" onclick="switchTab('phrases')">✨ Kinetic Typography (26)</button>
+          <button class="tab-btn active" id="tab-btn-segments" onclick="switchTab('segments')">🎬 Synchronized Segments (8)</button>
+          <button class="tab-btn" id="tab-btn-script" onclick="switchTab('script')">📜 Script Clauses & Alignment</button>
         </div>
 
-        <!-- Scene Ledger Tab -->
-        <div id="tab-scenes" class="ledger-scroll">
+        <!-- Segment Ledger Tab -->
+        <div id="tab-segments" class="ledger-scroll">
           <div class="cue-item active" onclick="seekTo(0.0)" data-start="0.0" data-end="6.51">
-            <div>
-              <div class="cue-scene-kicker">01. PSALM 91:1</div>
-              <div class="cue-scene-sub">NIGHT PROTECTION PRAYER</div>
+            <div style="flex: 1;">
+              <div class="cue-scene-kicker">01/08. PSALM 91:1 · NIGHT PROTECTION PRAYER</div>
+              <div class="cue-text" style="margin-top: 4px; font-weight: 700; color: #ffd640;">
+                BEFORE YOU CLOSE YOUR <span class="acc">EYES</span> <span class="acc">TONIGHT</span><br>
+                PLACE YOUR <span class="acc">HOME</span> UNDER <span class="acc">PSALM 91</span>
+              </div>
+              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px; font-style: italic;">
+                "Before you close your eyes tonight, take a deep breath, and place your home and family under Psalm 91."
+              </div>
             </div>
-            <div style="text-align: right;">
+            <div style="text-align: right; min-width: 90px;">
               <span class="cue-time">0.00s – 6.51s</span>
               <span class="cue-badge">6.51s</span>
             </div>
           </div>
+
           <div class="cue-item" onclick="seekTo(6.51)" data-start="6.51" data-end="13.45">
-            <div>
-              <div class="cue-scene-kicker">02. HE WHO DWELLS</div>
-              <div class="cue-scene-sub">IN THE SECRET PLACE</div>
+            <div style="flex: 1;">
+              <div class="cue-scene-kicker">02/08. HE WHO DWELLS · IN THE SECRET PLACE</div>
+              <div class="cue-text" style="margin-top: 4px; font-weight: 700; color: #ffd640;">
+                HE WHO <span class="acc">DWELLS</span> IN THE <span class="acc">SECRET</span> <span class="acc">PLACE</span><br>
+                SHALL <span class="acc">ABIDE</span> UNDER HIS <span class="acc">SHADOW</span>
+              </div>
+              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px; font-style: italic;">
+                "He who dwells in the secret place of the Most High shall abide under the shadow of the Almighty."
+              </div>
             </div>
-            <div style="text-align: right;">
+            <div style="text-align: right; min-width: 90px;">
               <span class="cue-time">6.51s – 13.45s</span>
               <span class="cue-badge">6.94s</span>
             </div>
           </div>
+
           <div class="cue-item" onclick="seekTo(13.45)" data-start="13.45" data-end="20.87">
-            <div>
-              <div class="cue-scene-kicker">03. PSALM 91:10</div>
-              <div class="cue-scene-sub">NO EVIL SHALL BEFALL YOU</div>
+            <div style="flex: 1;">
+              <div class="cue-scene-kicker">03/08. PSALM 91:10 · NO EVIL SHALL BEFALL YOU</div>
+              <div class="cue-text" style="margin-top: 4px; font-weight: 700; color: #ffd640;">
+                <span class="acc">NO</span> <span class="acc">EVIL</span> SHALL <span class="acc">BEFALL</span> YOU<br>
+                NOR ANY <span class="acc">PLAGUE</span> NEAR YOUR <span class="acc">DWELLING</span>
+              </div>
+              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px; font-style: italic;">
+                "No evil shall befall you, nor shall any plague come near your dwelling."
+              </div>
             </div>
-            <div style="text-align: right;">
+            <div style="text-align: right; min-width: 90px;">
               <span class="cue-time">13.45s – 20.87s</span>
               <span class="cue-badge">7.42s</span>
             </div>
           </div>
+
           <div class="cue-item" onclick="seekTo(20.87)" data-start="20.87" data-end="25.05">
-            <div>
-              <div class="cue-scene-kicker">04. PRAYER FOR PEACE</div>
-              <div class="cue-scene-sub">QUIET EVERY ANXIOUS THOUGHT</div>
+            <div style="flex: 1;">
+              <div class="cue-scene-kicker">04/08. PRAYER FOR PEACE · QUIET EVERY ANXIOUS THOUGHT</div>
+              <div class="cue-text" style="margin-top: 4px; font-weight: 700; color: #ffd640;">
+                <span class="acc">HEAVENLY</span> <span class="acc">FATHER</span><br>
+                <span class="acc">QUIET</span> EVERY <span class="acc">ANXIOUS</span> THOUGHT
+              </div>
+              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px; font-style: italic;">
+                "Heavenly Father, quiet every anxious thought tonight."
+              </div>
             </div>
-            <div style="text-align: right;">
+            <div style="text-align: right; min-width: 90px;">
               <span class="cue-time">20.87s – 25.05s</span>
               <span class="cue-badge">4.18s</span>
             </div>
           </div>
-          <div class="cue-item" onclick="seekTo(25.05)" data-start="25.05" data-end="33.21">
-            <div>
-              <div class="cue-scene-kicker">05. ANGELIC PROTECTION</div>
-              <div class="cue-scene-sub">DIVINE PEACE OVER THIS HOME</div>
+
+          <div class="cue-item" onclick="seekTo(25.05)" data-start="25.05" data-end="29.43">
+            <div style="flex: 1;">
+              <div class="cue-scene-kicker">05/08. ANGELIC PROTECTION · GUARD THIS HOME</div>
+              <div class="cue-text" style="margin-top: 4px; font-weight: 700; color: #ffd640;">
+                SEND YOUR <span class="acc">ANGELS</span> TO <span class="acc">GUARD</span> THIS <span class="acc">HOME</span><br>
+                AND <span class="acc">WASH</span> AWAY EVERY <span class="acc">FEAR</span>
+              </div>
+              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px; font-style: italic;">
+                "Send your angels to guard this home, wash away every fear,"
+              </div>
             </div>
-            <div style="text-align: right;">
-              <span class="cue-time">25.05s – 33.21s</span>
-              <span class="cue-badge">8.16s</span>
+            <div style="text-align: right; min-width: 90px;">
+              <span class="cue-time">25.05s – 29.43s</span>
+              <span class="cue-badge">4.38s</span>
             </div>
           </div>
-          <div class="cue-item" onclick="seekTo(33.21)" data-start="33.21" data-end="40.2">
-            <div>
-              <div class="cue-scene-kicker">06. REST IN GOD</div>
-              <div class="cue-scene-sub">HE FIGHTS YOUR BATTLES</div>
+
+          <div class="cue-item" onclick="seekTo(29.43)" data-start="29.43" data-end="33.21">
+            <div style="flex: 1;">
+              <div class="cue-scene-kicker">06/08. DIVINE PEACE · FILL THIS ROOM WALL TO WALL</div>
+              <div class="cue-text" style="margin-top: 4px; font-weight: 700; color: #ffd640;">
+                LET YOUR <span class="acc">DIVINE</span> <span class="acc">PEACE</span><br>
+                <span class="acc">FILL</span> THIS <span class="acc">ROOM</span> FROM <span class="acc">WALL</span> TO <span class="acc">WALL</span>
+              </div>
+              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px; font-style: italic;">
+                "and let your divine peace fill this room from wall to wall."
+              </div>
             </div>
-            <div style="text-align: right;">
-              <span class="cue-time">33.21s – 40.20s</span>
-              <span class="cue-badge">6.99s</span>
+            <div style="text-align: right; min-width: 90px;">
+              <span class="cue-time">29.43s – 33.21s</span>
+              <span class="cue-badge">3.78s</span>
+            </div>
+          </div>
+
+          <div class="cue-item" onclick="seekTo(33.21)" data-start="33.21" data-end="36.31">
+            <div style="flex: 1;">
+              <div class="cue-scene-kicker">07/08. REST IN GOD · HE FIGHTS YOUR BATTLES</div>
+              <div class="cue-text" style="margin-top: 4px; font-weight: 700; color: #ffd640;">
+                <span class="acc">SLEEP</span> IN <span class="acc">PEACE</span> TONIGHT<br>
+                <span class="acc">GOD</span> IS <span class="acc">FIGHTING</span> YOUR <span class="acc">BATTLES</span>
+              </div>
+              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px; font-style: italic;">
+                "Sleep in peace tonight, knowing that God is fighting your battles."
+              </div>
+            </div>
+            <div style="text-align: right; min-width: 90px;">
+              <span class="cue-time">33.21s – 36.31s</span>
+              <span class="cue-badge">3.10s</span>
+            </div>
+          </div>
+
+          <div class="cue-item" onclick="seekTo(36.31)" data-start="36.31" data-end="38.55">
+            <div style="flex: 1;">
+              <div class="cue-scene-kicker">08/08. DIVINE SHIELD · TYPE AMEN & SUBSCRIBE</div>
+              <div class="cue-text" style="margin-top: 4px; font-weight: 700; color: #ffd640;">
+                <span class="acc">TYPE</span> <span class="acc">AMEN</span> TO <span class="acc">RECEIVE</span> THIS<br>
+                <span class="acc">SUBSCRIBE</span> TO <span class="acc">PRAY</span> EVERY DAY
+              </div>
+              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px; font-style: italic;">
+                "If you receive this protection, type Amen, and subscribe to pray with us every day."
+              </div>
+            </div>
+            <div style="text-align: right; min-width: 90px;">
+              <span class="cue-time">36.31s – 38.55s</span>
+              <span class="cue-badge">2.24s</span>
+            </div>
+          </div>
+
+          <div class="cue-item" onclick="seekTo(38.55)" data-start="38.55" data-end="40.26">
+            <div style="flex: 1;">
+              <div class="cue-scene-kicker">OUTRO · CALL TO ACTION & BRAND CARD</div>
+              <div class="cue-text" style="margin-top: 4px; font-weight: 700; color: #ffd640;">
+                <span class="acc">SUBSCRIBE</span><br>
+                THE SECRET PLACE — PRAYERS EVERY DAY
+              </div>
+              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px; font-style: italic;">
+                Ambient peaceful meditation outro card with glowing border and channel identity.
+              </div>
+            </div>
+            <div style="text-align: right; min-width: 90px;">
+              <span class="cue-time">38.55s – 40.26s</span>
+              <span class="cue-badge">1.71s</span>
             </div>
           </div>
         </div>
 
-                <!-- Kinetic Typography Ledger Tab -->
-        <div id="tab-phrases" class="ledger-scroll" style="display: none;">
-          <div class="cue-item" onclick="seekTo(0.00)" data-start="0.00" data-end="1.93">
-            <span class="cue-time">0.00s - 1.93s</span>
-            <span class="cue-text">BEFORE YOU CLOSE YOUR <span class="acc">EYES</span> <span class="acc">TONIGHT</span></span>
-            <span class="cue-badge">P01</span>
+        <!-- Script Clauses & Timing Tab -->
+        <div id="tab-script" class="ledger-scroll" style="display: none;">
+          <div style="padding: 12px; font-size: 12.5px; line-height: 1.6; color: #cbd5e1;">
+            <p style="margin-bottom: 12px;"><strong style="color: #ffd640;">Segment-Level Synchronization Matrix:</strong><br>
+            Every scene cut, HUD chapter header, and big After Effects kinetic typography card is synchronized 1:1 with each natural spoken prayer segment:</p>
+            <table style="width: 100%; border-collapse: collapse; font-size: 11.5px; text-align: left;">
+              <thead>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.15); color: #ffd640;">
+                  <th style="padding: 6px 4px;">Seg</th>
+                  <th style="padding: 6px 4px;">Words</th>
+                  <th style="padding: 6px 4px;">Window</th>
+                  <th style="padding: 6px 4px;">Visual Scene</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                  <td style="padding: 6px 4px; font-weight: 700;">01</td>
+                  <td style="padding: 6px 4px;">0 – 19 (20w)</td>
+                  <td style="padding: 6px 4px;">0.00s – 6.51s</td>
+                  <td style="padding: 6px 4px;">Sunset Lake Reflection</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                  <td style="padding: 6px 4px; font-weight: 700;">02</td>
+                  <td style="padding: 6px 4px;">20 – 38 (19w)</td>
+                  <td style="padding: 6px 4px;">6.51s – 13.45s</td>
+                  <td style="padding: 6px 4px;">Sun Rays Mountains</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                  <td style="padding: 6px 4px; font-weight: 700;">03</td>
+                  <td style="padding: 6px 4px;">39 – 51 (13w)</td>
+                  <td style="padding: 6px 4px;">13.45s – 20.87s</td>
+                  <td style="padding: 6px 4px;">Starry Castle Fortress Shield</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                  <td style="padding: 6px 4px; font-weight: 700;">04</td>
+                  <td style="padding: 6px 4px;">52 – 58 (7w)</td>
+                  <td style="padding: 6px 4px;">20.87s – 25.05s</td>
+                  <td style="padding: 6px 4px;">Altar Candle Prayer</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                  <td style="padding: 6px 4px; font-weight: 700;">05</td>
+                  <td style="padding: 6px 4px;">59 – 69 (11w)</td>
+                  <td style="padding: 6px 4px;">25.05s – 29.43s</td>
+                  <td style="padding: 6px 4px;">Guardian Angels Over Bedroom</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                  <td style="padding: 6px 4px; font-weight: 700;">06</td>
+                  <td style="padding: 6px 4px;">70 – 81 (12w)</td>
+                  <td style="padding: 6px 4px;">29.43s – 33.21s</td>
+                  <td style="padding: 6px 4px;">Divine Peace Sanctuary</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                  <td style="padding: 6px 4px; font-weight: 700;">07</td>
+                  <td style="padding: 6px 4px;">82 – 92 (11w)</td>
+                  <td style="padding: 6px 4px;">33.21s – 36.31s</td>
+                  <td style="padding: 6px 4px;">Rest in God (Sunrise Mist)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                  <td style="padding: 6px 4px; font-weight: 700;">08</td>
+                  <td style="padding: 6px 4px;">93 – 107 (15w)</td>
+                  <td style="padding: 6px 4px;">36.31s – 40.26s</td>
+                  <td style="padding: 6px 4px;">Type Amen & Subscribe CTA</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <div class="cue-item" onclick="seekTo(1.93)" data-start="1.93" data-end="3.18">
-            <span class="cue-time">1.93s - 3.18s</span>
-            <span class="cue-text">TAKE A <span class="acc">DEEP</span> <span class="acc">BREATH</span></span>
-            <span class="cue-badge">P02</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(3.18)" data-start="3.18" data-end="4.88">
-            <span class="cue-time">3.18s - 4.88s</span>
-            <span class="cue-text">PLACE YOUR <span class="acc">HOME</span> AND <span class="acc">FAMILY</span></span>
-            <span class="cue-badge">P03</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(4.88)" data-start="4.88" data-end="6.56">
-            <span class="cue-time">4.88s - 6.56s</span>
-            <span class="cue-text">UNDER <span class="acc">PSALM</span> <span class="acc">91</span></span>
-            <span class="cue-badge">P04</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(6.56)" data-start="6.56" data-end="7.72">
-            <span class="cue-time">6.56s - 7.72s</span>
-            <span class="cue-text">HE WHO <span class="acc">DWELLS</span></span>
-            <span class="cue-badge">P05</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(7.72)" data-start="7.72" data-end="9.39">
-            <span class="cue-time">7.72s - 9.39s</span>
-            <span class="cue-text">IN THE <span class="acc">SECRET</span> <span class="acc">PLACE</span></span>
-            <span class="cue-badge">P06</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(9.39)" data-start="9.39" data-end="10.65">
-            <span class="cue-time">9.39s - 10.65s</span>
-            <span class="cue-text">OF THE <span class="acc">MOST</span> <span class="acc">HIGH</span></span>
-            <span class="cue-badge">P07</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(10.65)" data-start="10.65" data-end="11.80">
-            <span class="cue-time">10.65s - 11.80s</span>
-            <span class="cue-text">SHALL <span class="acc">ABIDE</span></span>
-            <span class="cue-badge">P08</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(11.80)" data-start="11.80" data-end="12.65">
-            <span class="cue-time">11.80s - 12.65s</span>
-            <span class="cue-text">UNDER THE <span class="acc">SHADOW</span></span>
-            <span class="cue-badge">P09</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(12.65)" data-start="12.65" data-end="13.50">
-            <span class="cue-time">12.65s - 13.50s</span>
-            <span class="cue-text">OF THE <span class="acc">ALMIGHTY</span></span>
-            <span class="cue-badge">P10</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(13.50)" data-start="13.50" data-end="17.06">
-            <span class="cue-time">13.50s - 17.06s</span>
-            <span class="cue-text"><span class="acc">NO</span> <span class="acc">EVIL</span> SHALL BEFALL YOU</span>
-            <span class="cue-badge">P11</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(17.06)" data-start="17.06" data-end="18.31">
-            <span class="cue-time">17.06s - 18.31s</span>
-            <span class="cue-text">NOR SHALL ANY <span class="acc">PLAGUE</span></span>
-            <span class="cue-badge">P12</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(18.31)" data-start="18.31" data-end="20.92">
-            <span class="cue-time">18.31s - 20.92s</span>
-            <span class="cue-text">COME NEAR YOUR <span class="acc">DWELLING</span></span>
-            <span class="cue-badge">P13</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(20.92)" data-start="20.92" data-end="21.95">
-            <span class="cue-time">20.92s - 21.95s</span>
-            <span class="cue-text"><span class="acc">HEAVENLY</span> <span class="acc">FATHER</span></span>
-            <span class="cue-badge">P14</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(21.95)" data-start="21.95" data-end="25.10">
-            <span class="cue-time">21.95s - 25.10s</span>
-            <span class="cue-text"><span class="acc">QUIET</span> EVERY <span class="acc">ANXIOUS</span> THOUGHT</span>
-            <span class="cue-badge">P15</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(25.10)" data-start="25.10" data-end="26.33">
-            <span class="cue-time">25.10s - 26.33s</span>
-            <span class="cue-text">SEND YOUR <span class="acc">ANGELS</span></span>
-            <span class="cue-badge">P16</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(26.33)" data-start="26.33" data-end="27.57">
-            <span class="cue-time">26.33s - 27.57s</span>
-            <span class="cue-text">TO <span class="acc">GUARD</span> THIS <span class="acc">HOME</span></span>
-            <span class="cue-badge">P17</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(27.57)" data-start="27.57" data-end="29.31">
-            <span class="cue-time">27.57s - 29.31s</span>
-            <span class="cue-text"><span class="acc">WASH</span> AWAY EVERY <span class="acc">FEAR</span></span>
-            <span class="cue-badge">P18</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(29.31)" data-start="29.31" data-end="30.78">
-            <span class="cue-time">29.31s - 30.78s</span>
-            <span class="cue-text">LET YOUR <span class="acc">DIVINE</span> <span class="acc">PEACE</span></span>
-            <span class="cue-badge">P19</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(30.78)" data-start="30.78" data-end="31.84">
-            <span class="cue-time">30.78s - 31.84s</span>
-            <span class="cue-text"><span class="acc">FILL</span> THIS <span class="acc">ROOM</span></span>
-            <span class="cue-badge">P20</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(31.84)" data-start="31.84" data-end="33.26">
-            <span class="cue-time">31.84s - 33.26s</span>
-            <span class="cue-text">FROM <span class="acc">WALL</span> TO <span class="acc">WALL</span></span>
-            <span class="cue-badge">P21</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(33.26)" data-start="33.26" data-end="34.99">
-            <span class="cue-time">33.26s - 34.99s</span>
-            <span class="cue-text">SLEEP IN <span class="acc">PEACE</span> <span class="acc">TONIGHT</span></span>
-            <span class="cue-badge">P22</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(34.99)" data-start="34.99" data-end="36.15">
-            <span class="cue-time">34.99s - 36.15s</span>
-            <span class="cue-text">GOD IS <span class="acc">FIGHTING</span> YOUR <span class="acc">BATTLES</span></span>
-            <span class="cue-badge">P23</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(36.15)" data-start="36.15" data-end="37.01">
-            <span class="cue-time">36.15s - 37.01s</span>
-            <span class="cue-text"><span class="acc">RECEIVE</span> THIS <span class="acc">PROTECTION</span></span>
-            <span class="cue-badge">P24</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(37.01)" data-start="37.01" data-end="37.42">
-            <span class="cue-time">37.01s - 37.42s</span>
-            <span class="cue-text"><span class="acc">TYPE</span> <span class="acc">AMEN</span></span>
-            <span class="cue-badge">P25</span>
-          </div>
-          <div class="cue-item" onclick="seekTo(37.42)" data-start="37.42" data-end="38.55">
-            <span class="cue-time">37.42s - 38.55s</span>
-            <span class="cue-text"><span class="acc">SUBSCRIBE</span> TO <span class="acc">PRAY</span> WITH US EVERY DAY</span>
-            <span class="cue-badge">P26</span>
-          </div>
-        </div>
-        </div>
         </div>
       </div>
     </div>
@@ -899,34 +923,26 @@ function setSpeed(speed, btn) {
 }
 
 function switchTab(tab) {
-  document.getElementById('tab-scenes').style.display = tab === 'scenes' ? 'block' : 'none';
-  document.getElementById('tab-phrases').style.display = tab === 'phrases' ? 'block' : 'none';
-  document.getElementById('tab-btn-scenes').classList.toggle('active', tab === 'scenes');
-  document.getElementById('tab-btn-phrases').classList.toggle('active', tab === 'phrases');
+  document.getElementById('tab-segments').style.display = tab === 'segments' ? 'block' : 'none';
+  document.getElementById('tab-script').style.display = tab === 'script' ? 'block' : 'none';
+  document.getElementById('tab-btn-segments').classList.toggle('active', tab === 'segments');
+  document.getElementById('tab-btn-script').classList.toggle('active', tab === 'script');
 }
 
 function updateActiveCues(t) {
-  // Update scenes
-  const sceneItems = document.querySelectorAll('#tab-scenes .cue-item');
-  sceneItems.forEach(item => {
+  // Update synchronized segments
+  const segmentItems = document.querySelectorAll('#tab-segments .cue-item');
+  segmentItems.forEach(item => {
     const s = parseFloat(item.getAttribute('data-start'));
     const e = parseFloat(item.getAttribute('data-end'));
     const isActive = t >= s && t < e;
     item.classList.toggle('active', isActive);
     if (isActive) {
       hudScene.textContent = item.querySelector('.cue-scene-kicker').textContent;
-    }
-  });
-
-  // Update phrases
-  const phraseItems = document.querySelectorAll('#tab-phrases .cue-item');
-  phraseItems.forEach(item => {
-    const s = parseFloat(item.getAttribute('data-start'));
-    const e = parseFloat(item.getAttribute('data-end'));
-    const isActive = t >= s && t < e;
-    item.classList.toggle('active', isActive);
-    if (isActive) {
-      hudPhrase.textContent = item.querySelector('.cue-text').textContent.replace(/\s+/g, ' ').trim();
+      const textEl = item.querySelector('.cue-text');
+      if (textEl) {
+        hudPhrase.textContent = textEl.innerText.replace(/\n/g, ' / ');
+      }
     }
   });
 }

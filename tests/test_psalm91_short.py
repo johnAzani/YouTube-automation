@@ -42,7 +42,7 @@ def test_psalm91_kinetic_typography_phrases_and_stream():
     from PIL import Image
     cfg = SCRIPTS["short-psalm91"]
     assert "kinetic_phrases" in cfg
-    assert len(cfg["kinetic_phrases"]) >= 20
+    assert len(cfg["kinetic_phrases"]) == 8
     words = load_words("short-psalm91")
     stream = build_kinetic_stream("short-psalm91", words)
     assert len(stream) == len(cfg["kinetic_phrases"])
@@ -60,17 +60,38 @@ def test_psalm91_segment_and_typography_sync():
     from tools.shorts import SCRIPTS, build_kinetic_stream, load_words, resolve_scenes
     words = load_words("short-psalm91")
     stream = build_kinetic_stream("short-psalm91", words)
-    scenes = resolve_scenes("short-psalm91", words, 40.2)
+    scenes = resolve_scenes("short-psalm91", words, 40.26)
 
-    # Invariant 1: Scene 2 cuts directly before vocal transient of 'he who dwells' (t=6.66s -> cut=6.51s)
+    # Invariant 1: Exactly 8 scene segments and 8 kinetic typography segments in 1:1 harmony
+    assert len(scenes) == 8, f"Expected 8 scenes, got {len(scenes)}"
+    assert len(stream) == 8, f"Expected 8 kinetic stream items, got {len(stream)}"
+
+    # Invariant 2: Scene 2 cuts directly before vocal transient of 'he who dwells' (t=6.66s -> cut=6.51s)
     s2 = scenes[1]
     assert abs(s2["t0"] - 6.51) < 0.1, f"Scene 2 start mismatch: {s2['t0']}"
     assert "HE WHO DWELLS" in s2["kicker"]
 
-    # Invariant 2: No kinetic typography display window overlaps with its successor
+    # Invariant 3: Scene 7 covers 'REST IN GOD' and transitions cleanly to Scene 8 at 'receive this protection'
+    s7 = scenes[6]
+    s8 = scenes[7]
+    assert "REST IN GOD" in s7["kicker"]
+    assert "DIVINE SHIELD" in s8["kicker"]
+    assert abs(s7["t1"] - s8["t0"]) < 0.01
+    assert abs(s8["t0"] - 36.31) < 0.15, f"Scene 8 start mismatch: {s8['t0']}"
+
+    # Invariant 4: No kinetic typography display window overlaps with its successor
     for i in range(len(stream) - 1):
         cur_end = stream[i]["disp_t1"]
         next_start = stream[i + 1]["disp_t0"]
         assert cur_end <= next_start, f"Phrase {i} overlaps with {i+1}: {cur_end} > {next_start}"
+
+    # Invariant 5: Phrase 7 ends exactly as voice finishes battles (36.15s) and Phrase 8 covers Amen CTA
+    p7 = stream[6]
+    p8 = stream[7]
+    assert abs(p7["disp_t1"] - 36.15) < 0.05
+    assert abs(p8["disp_t0"] - 36.15) < 0.05
+    assert abs(p8["disp_t1"] - 38.55) < 0.05
+    assert "TYPE AMEN" in p8["line1"]
+    assert "SUBSCRIBE" in p8["line2"]
 
 
