@@ -657,16 +657,20 @@ def build_kinetic_stream(key, raw_words):
     # Calculate exact non-overlapping display windows aligned to vocal transients
     for i, item in enumerate(stream):
         t_start = item['t0']
-        disp_t0 = max(0.0, t_start - 0.04) if i > 0 else 0.0
+        if i == 0:
+            disp_t0 = 0.0
+        else:
+            prev_end = stream[i - 1]['t1']
+            disp_t0 = max(prev_end, t_start - 0.10)
         item['disp_t0'] = disp_t0
 
     for i in range(len(stream)):
         t_end = stream[i]['t1']
         if i + 1 < len(stream):
             next_disp_t0 = stream[i + 1]['disp_t0']
-            stream[i]['disp_t1'] = min(t_end + 0.28, next_disp_t0)
+            stream[i]['disp_t1'] = next_disp_t0
         else:
-            stream[i]['disp_t1'] = min(38.50, t_end + 0.20)
+            stream[i]['disp_t1'] = min(38.55, t_end + 0.20)
     return stream
 
 def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
@@ -733,15 +737,24 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
             is_word_active = bool(active_spoken and (active_spoken in w or w in active_spoken))
 
             if is_accent:
-                col = (255, 238, 120) if is_word_active else GOLD
+                col = (255, 240, 110) if is_word_active else (235, 185, 45)
             else:
-                col = (255, 255, 255) if is_word_active else (240, 244, 250)
+                col = (255, 255, 255) if is_word_active else (185, 205, 230)
 
             # Directional contact drop shadow
             for sx, sy, sa in [(0, 3, int(220 * alpha)), (0, 6, int(170 * alpha)), (0, 10, int(110 * alpha))]:
                 cur_x = x
                 for ch in w:
                     td.text((cur_x + sx, y + sy), ch, font=f, fill=(0, 0, 0, sa))
+                    cur_x += td.textlength(ch, font=f) + tr
+
+            # Active spoken word halo bloom
+            if is_word_active:
+                halo_col = (255, 225, 90, int(85 * alpha)) if is_accent else (210, 235, 255, int(75 * alpha))
+                cur_x = x
+                for ch in w:
+                    for gx, gy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                        td.text((cur_x + gx, y + gy), ch, font=f, fill=halo_col)
                     cur_x += td.textlength(ch, font=f) + tr
 
             # Main typography
@@ -1573,7 +1586,7 @@ SCRIPTS = {
         title=('THE SECRET PLACE', 'PSALM 91 · NIGHT PRAYER'),
         poster=("PRAYER BEFORE SLEEP", 'PSALM 91', 'PROTECTION', 'DIVINE SHIELD TONIGHT'),
         midpoint_poster_window=None,
-        end=('TYPE AMEN', 'The Secret Place — prayers every day'),
+        end=('SUBSCRIBE', 'The Secret Place — prayers every day'),
         out='short-psalm91.mp4',
         narration='short-prayer-psalm91.mp3',
         stock_queries=[
@@ -1608,14 +1621,14 @@ SCRIPTS = {
             dict(a='type amen', kind='phrase', words=['TYPE', 'AMEN', 'TO', 'RECEIVE'], hi=1, slot='C'),
         ],
         captions=[
-            (0, 18, 'Before you close your eyes tonight, take a deep breath, and place your home and family under Psalm 91.'),
-            (19, 36, 'He who dwells in the secret place of the Most High shall abide under the shadow of the Almighty.'),
-            (37, 49, 'No evil shall befall you, nor shall any plague come near your dwelling.'),
-            (50, 56, 'Heavenly Father, quiet every anxious thought tonight.'),
-            (57, 67, 'Send your angels to guard this home, wash away every fear,'),
-            (68, 79, 'and let your divine peace fill this room from wall to wall.'),
-            (80, 90, 'Sleep in peace tonight, knowing that God is fighting your battles.'),
-            (91, 107, 'If you receive this protection, type Amen, and subscribe to pray with us every day.'),
+            (0, 19, 'Before you close your eyes tonight, take a deep breath, and place your home and family under Psalm 91.'),
+            (20, 38, 'He who dwells in the secret place of the Most High shall abide under the shadow of the Almighty.'),
+            (39, 51, 'No evil shall befall you, nor shall any plague come near your dwelling.'),
+            (52, 58, 'Heavenly Father, quiet every anxious thought tonight.'),
+            (59, 69, 'Send your angels to guard this home, wash away every fear,'),
+            (70, 81, 'and let your divine peace fill this room from wall to wall.'),
+            (82, 92, 'Sleep in peace tonight, knowing that God is fighting your battles.'),
+            (93, 107, 'If you receive this protection, type Amen, and subscribe to pray with us every day.'),
         ],
         kinetic_phrases=[
             (0, 5, 'BEFORE YOU CLOSE', 'YOUR EYES TONIGHT', ['EYES', 'TONIGHT']),
@@ -1641,8 +1654,9 @@ SCRIPTS = {
             (78, 81, 'FROM WALL', 'TO WALL', ['WALL']),
             (82, 85, 'SLEEP IN', 'PEACE TONIGHT', ['PEACE', 'TONIGHT']),
             (86, 92, 'GOD IS FIGHTING', 'YOUR BATTLES', ['FIGHTING', 'BATTLES']),
-            (93, 99, 'RECEIVE THIS PROTECTION', 'TYPE AMEN', ['PROTECTION', 'AMEN']),
-            (100, 107, 'SUBSCRIBE TO PRAY', 'WITH US DAILY', ['SUBSCRIBE', 'PRAY']),
+            (93, 97, 'RECEIVE THIS', 'PROTECTION', ['RECEIVE', 'PROTECTION']),
+            (98, 99, 'TYPE AMEN', '', ['TYPE', 'AMEN']),
+            (100, 107, 'SUBSCRIBE TO PRAY', 'WITH US EVERY DAY', ['SUBSCRIBE', 'PRAY']),
         ],
     ),
 }
@@ -1879,12 +1893,12 @@ def main(key):
         if not in_open_poster and not in_mid_poster:
             ov.alpha_composite(hud_chapter_layer(frame, sc['kicker'], sc.get('sub', ''), k + 1, nscenes, pos, sc_dur, t / total, is_prayer=is_prayer))
             if is_prayer and kinetic_stream:
-                if t < 38.50:
+                if t < 38.55:
                     ov.alpha_composite(kinetic_typography_layer(frame, kinetic_stream, t, is_prayer=is_prayer))
             else:
                 ov.alpha_composite(caption_ribbon_layer(frame, cap_stream, t, is_prayer=is_prayer))
         frame = Image.alpha_composite(frame.convert('RGBA'), ov).convert('RGB')
-        end_start = (38.50 if is_prayer else adur - 0.4)
+        end_start = (38.55 if is_prayer else adur - 0.4)
         if t >= end_start:
             frame = end_card_overlay(frame, cfg['end'], t - end_start, total - end_start, is_prayer=is_prayer)
         proc.stdin.write(frame.tobytes())
