@@ -1,0 +1,330 @@
+{
+  "scenes": [
+    {
+      "index": 1,
+      "t0": 0.0,
+      "t1": 6.05,
+      "kicker": "PSALM 91:1",
+      "sub": "NIGHT PROTECTION PRAYER",
+      "img": "short-prayer-scene-01.jpg"
+    },
+    {
+      "index": 2,
+      "t0": 6.05,
+      "t1": 14.35,
+      "kicker": "HE WHO DWELLS",
+      "sub": "IN THE SECRET PLACE",
+      "img": "short-prayer-scene-02.jpg"
+    },
+    {
+      "index": 3,
+      "t0": 14.35,
+      "t1": 20.35,
+      "kicker": "PSALM 91:10",
+      "sub": "NO EVIL SHALL BEFALL YOU",
+      "img": "short-prayer-scene-05.jpg"
+    },
+    {
+      "index": 4,
+      "t0": 20.35,
+      "t1": 24.7,
+      "kicker": "PRAYER FOR PEACE",
+      "sub": "QUIET EVERY ANXIOUS THOUGHT",
+      "img": "short-prayer-scene-03.jpg"
+    },
+    {
+      "index": 5,
+      "t0": 24.7,
+      "t1": 32.8,
+      "kicker": "ANGELIC PROTECTION",
+      "sub": "DIVINE PEACE OVER THIS HOME",
+      "img": "short-prayer-scene-06.jpg"
+    },
+    {
+      "index": 6,
+      "t0": 32.8,
+      "t1": 40.2,
+      "kicker": "REST IN GOD",
+      "sub": "HE FIGHTS YOUR BATTLES",
+      "img": "short-prayer-scene-04.jpg"
+    }
+  ],
+  "phrases": [
+    {
+      "index": 1,
+      "t0": 0.0,
+      "t1": 1.95,
+      "line1": "BEFORE YOU CLOSE",
+      "line2": "YOUR EYES TONIGHT",
+      "accent": [
+        "EYES",
+        "TONIGHT"
+      ]
+    },
+    {
+      "index": 2,
+      "t0": 1.95,
+      "t1": 3.06,
+      "line1": "TAKE A",
+      "line2": "DEEP BREATH",
+      "accent": [
+        "DEEP",
+        "BREATH"
+      ]
+    },
+    {
+      "index": 3,
+      "t0": 3.06,
+      "t1": 4.85,
+      "line1": "PLACE YOUR HOME",
+      "line2": "AND FAMILY",
+      "accent": [
+        "HOME",
+        "FAMILY"
+      ]
+    },
+    {
+      "index": 4,
+      "t0": 4.85,
+      "t1": 6.16,
+      "line1": "UNDER",
+      "line2": "PSALM 91",
+      "accent": [
+        "PSALM",
+        "91"
+      ]
+    },
+    {
+      "index": 5,
+      "t0": 6.16,
+      "t1": 7.39,
+      "line1": "HE WHO DWELLS",
+      "line2": "",
+      "accent": [
+        "DWELLS"
+      ]
+    },
+    {
+      "index": 6,
+      "t0": 7.39,
+      "t1": 9.12,
+      "line1": "IN THE",
+      "line2": "SECRET PLACE",
+      "accent": [
+        "SECRET",
+        "PLACE"
+      ]
+    },
+    {
+      "index": 7,
+      "t0": 9.12,
+      "t1": 10.63,
+      "line1": "OF THE",
+      "line2": "MOST HIGH",
+      "accent": [
+        "MOST",
+        "HIGH"
+      ]
+    },
+    {
+      "index": 8,
+      "t0": 10.63,
+      "t1": 11.65,
+      "line1": "SHALL ABIDE",
+      "line2": "",
+      "accent": [
+        "ABIDE"
+      ]
+    },
+    {
+      "index": 9,
+      "t0": 11.65,
+      "t1": 13.09,
+      "line1": "UNDER THE",
+      "line2": "SHADOW",
+      "accent": [
+        "SHADOW"
+      ]
+    },
+    {
+      "index": 10,
+      "t0": 13.09,
+      "t1": 14.46,
+      "line1": "OF THE",
+      "line2": "ALMIGHTY",
+      "accent": [
+        "ALMIGHTY"
+      ]
+    },
+    {
+      "index": 11,
+      "t0": 14.46,
+      "t1": 16.63,
+      "line1": "NO EVIL",
+      "line2": "SHALL BEFALL YOU",
+      "accent": [
+        "NO",
+        "EVIL"
+      ]
+    },
+    {
+      "index": 12,
+      "t0": 16.63,
+      "t1": 18.44,
+      "line1": "NOR SHALL ANY",
+      "line2": "PLAGUE",
+      "accent": [
+        "PLAGUE"
+      ]
+    },
+    {
+      "index": 13,
+      "t0": 18.44,
+      "t1": 20.46,
+      "line1": "COME NEAR",
+      "line2": "YOUR DWELLING",
+      "accent": [
+        "DWELLING"
+      ]
+    },
+    {
+      "index": 14,
+      "t0": 20.46,
+      "t1": 21.79,
+      "line1": "HEAVENLY FATHER",
+      "line2": "",
+      "accent": [
+        "HEAVENLY",
+        "FATHER"
+      ]
+    },
+    {
+      "index": 15,
+      "t0": 21.79,
+      "t1": 24.81,
+      "line1": "QUIET EVERY",
+      "line2": "ANXIOUS THOUGHT",
+      "accent": [
+        "QUIET",
+        "ANXIOUS"
+      ]
+    },
+    {
+      "index": 16,
+      "t0": 24.81,
+      "t1": 26.03,
+      "line1": "SEND YOUR",
+      "line2": "ANGELS",
+      "accent": [
+        "ANGELS"
+      ]
+    },
+    {
+      "index": 17,
+      "t0": 26.03,
+      "t1": 27.43,
+      "line1": "TO GUARD",
+      "line2": "THIS HOME",
+      "accent": [
+        "GUARD",
+        "HOME"
+      ]
+    },
+    {
+      "index": 18,
+      "t0": 27.43,
+      "t1": 28.96,
+      "line1": "WASH AWAY",
+      "line2": "EVERY FEAR",
+      "accent": [
+        "WASH",
+        "FEAR"
+      ]
+    },
+    {
+      "index": 19,
+      "t0": 28.96,
+      "t1": 30.68,
+      "line1": "LET YOUR",
+      "line2": "DIVINE PEACE",
+      "accent": [
+        "DIVINE",
+        "PEACE"
+      ]
+    },
+    {
+      "index": 20,
+      "t0": 30.68,
+      "t1": 31.69,
+      "line1": "FILL THIS ROOM",
+      "line2": "",
+      "accent": [
+        "FILL",
+        "ROOM"
+      ]
+    },
+    {
+      "index": 21,
+      "t0": 31.69,
+      "t1": 32.91,
+      "line1": "FROM WALL",
+      "line2": "TO WALL",
+      "accent": [
+        "WALL"
+      ]
+    },
+    {
+      "index": 22,
+      "t0": 32.91,
+      "t1": 33.98,
+      "line1": "SLEEP IN",
+      "line2": "PEACE TONIGHT",
+      "accent": [
+        "PEACE",
+        "TONIGHT"
+      ]
+    },
+    {
+      "index": 23,
+      "t0": 33.98,
+      "t1": 35.91,
+      "line1": "GOD IS FIGHTING",
+      "line2": "YOUR BATTLES",
+      "accent": [
+        "FIGHTING",
+        "BATTLES"
+      ]
+    },
+    {
+      "index": 24,
+      "t0": 35.91,
+      "t1": 36.93,
+      "line1": "RECEIVE THIS",
+      "line2": "PROTECTION",
+      "accent": [
+        "PROTECTION"
+      ]
+    },
+    {
+      "index": 25,
+      "t0": 36.93,
+      "t1": 37.26,
+      "line1": "TYPE AMEN",
+      "line2": "TO RECEIVE",
+      "accent": [
+        "AMEN"
+      ]
+    },
+    {
+      "index": 26,
+      "t0": 37.26,
+      "t1": 39.06,
+      "line1": "SUBSCRIBE TO PRAY",
+      "line2": "WITH US DAILY",
+      "accent": [
+        "SUBSCRIBE",
+        "PRAY"
+      ]
+    }
+  ]
+}

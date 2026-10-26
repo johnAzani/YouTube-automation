@@ -55,3 +55,22 @@ def test_psalm91_kinetic_typography_phrases_and_stream():
     assert layer.size == (720, 1280)
     assert layer.mode == "RGBA"
 
+
+def test_psalm91_segment_and_typography_sync():
+    from tools.shorts import SCRIPTS, build_kinetic_stream, load_words, resolve_scenes
+    words = load_words("short-psalm91")
+    stream = build_kinetic_stream("short-psalm91", words)
+    scenes = resolve_scenes("short-psalm91", words, 40.2)
+
+    # Invariant 1: Scene 2 cuts directly before vocal transient of 'he who dwells' (t=6.20s -> cut=6.05s)
+    s2 = scenes[1]
+    assert abs(s2["t0"] - 6.05) < 0.1, f"Scene 2 start mismatch: {s2['t0']}"
+    assert "HE WHO DWELLS" in s2["kicker"]
+
+    # Invariant 2: No kinetic typography display window overlaps with its successor
+    for i in range(len(stream) - 1):
+        cur_end = stream[i]["disp_t1"]
+        next_start = stream[i + 1]["disp_t0"]
+        assert cur_end <= next_start, f"Phrase {i} overlaps with {i+1}: {cur_end} > {next_start}"
+
+

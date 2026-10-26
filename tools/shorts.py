@@ -653,6 +653,20 @@ def build_kinetic_stream(key, raw_words):
             accent_words=acc,
             words=seg,
         ))
+
+    # Calculate exact non-overlapping display windows aligned to vocal transients
+    for i, item in enumerate(stream):
+        t_start = item['t0']
+        disp_t0 = max(0.0, t_start - 0.04) if i > 0 else 0.0
+        item['disp_t0'] = disp_t0
+
+    for i in range(len(stream)):
+        t_end = stream[i]['t1']
+        if i + 1 < len(stream):
+            next_disp_t0 = stream[i + 1]['disp_t0']
+            stream[i]['disp_t1'] = min(t_end + 0.28, next_disp_t0)
+        else:
+            stream[i]['disp_t1'] = t_end + 0.40
     return stream
 
 def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
@@ -663,25 +677,25 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
 
     active = None
     for item in stream:
-        if item['t0'] - 0.05 <= t <= item['t1'] + 0.12:
+        if item['disp_t0'] <= t < item['disp_t1']:
             active = item
             break
     if not active:
         return layer
 
-    t0 = active['t0']
-    t1 = active['t1'] + 0.10
+    t0 = active['disp_t0']
+    t1 = active['disp_t1']
 
-    in_a = clamp01((t - (t0 - 0.05)) / 0.10)
-    out_a = clamp01((t1 - t) / 0.12)
-    alpha = in_a * out_a
+    in_a = clamp01((t - t0) / 0.07)
+    out_a = clamp01((t1 - t) / 0.07)
+    alpha = min(in_a, out_a)
     if alpha <= 0.01:
         return layer
 
-    u = clamp01((t - t0) / 0.22)
+    u = clamp01((t - t0) / 0.18)
     # After Effects spring/bounce scale
-    scale = 1.0 + 0.14 * (1.0 - u) * math.cos(u * math.pi * 2.5) if u < 1.0 else 1.0
-    slide_y = (1.0 - ease_out_expo(u)) * 12.0
+    scale = 1.0 + 0.12 * (1.0 - u) * math.cos(u * math.pi * 2.5) if u < 1.0 else 1.0
+    slide_y = (1.0 - ease_out_expo(u)) * 10.0
 
     cy = 780 + slide_y
     lines = [l for l in [active['line1'], active['line2']] if l]
@@ -702,7 +716,7 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
 
     active_spoken = ''
     for ws, we, w in active.get('words', []):
-        if ws - 0.05 <= t <= we + 0.08:
+        if ws - 0.04 <= t < we + 0.04:
             active_spoken = w.upper()
             break
 
@@ -1572,7 +1586,7 @@ SCRIPTS = {
         ],
         scenes=[
             dict(a='', img='short-prayer-scene-01.jpg', kicker='PSALM 91:1', sub='NIGHT PROTECTION PRAYER', cam='tilt_up', focus=(0.5, 0.45)),
-            dict(a='secret place', img='short-prayer-scene-02.jpg', kicker='HE WHO DWELLS', sub='IN THE SECRET PLACE', cam='push_in', focus=(0.5, 0.45)),
+            dict(a='he who dwells', img='short-prayer-scene-02.jpg', kicker='HE WHO DWELLS', sub='IN THE SECRET PLACE', cam='push_in', focus=(0.5, 0.45)),
             dict(a='no evil shall', img='short-prayer-scene-05.jpg', kicker='PSALM 91:10', sub='NO EVIL SHALL BEFALL YOU', cam='push_in', focus=(0.5, 0.42)),
             dict(a='heavenly father', img='short-prayer-scene-03.jpg', kicker='PRAYER FOR PEACE', sub='QUIET EVERY ANXIOUS THOUGHT', cam='pan_right', focus=(0.5, 0.48)),
             dict(a='send your angels', img='short-prayer-scene-06.jpg', kicker='ANGELIC PROTECTION', sub='DIVINE PEACE OVER THIS HOME', cam='pull_out', focus=(0.48, 0.48)),
@@ -1580,7 +1594,7 @@ SCRIPTS = {
         ],
         teases=[],
         sfx_cues=[
-            dict(hush=dict(a='secret place', lead=0.35, dur=1.0, depth=0.85)),
+            dict(hush=dict(a='he who dwells', lead=0.35, dur=1.0, depth=0.85)),
             dict(hush=dict(a='heavenly father', lead=0.35, dur=1.0, depth=0.85)),
             dict(hush=dict(a='sleep in peace', lead=0.35, dur=1.0, depth=0.85)),
         ],
