@@ -114,6 +114,25 @@ def _duotone_luts():
 LUT_R, LUT_G, LUT_B = _duotone_luts()
 
 
+def grade_sanctuary(im):
+    """Luminous cinematic devotional grade for The Secret Place:
+    - Deepens velvet midnight blues in deep shadows
+    - Preserves vibrant warm gold, sunset amber, and celestial starlight
+    - Adds subtle radiance/bloom to sacred highlights
+    """
+    rgb = im.convert('RGB')
+    lum = rgb.convert('L')
+    contrast = ImageEnhance.Contrast(rgb).enhance(1.08)
+    color = ImageEnhance.Color(contrast).enhance(1.14)
+    # Deep midnight sapphire in shadows (< 65 luminance)
+    shadow_tint = Image.new('RGB', color.size, (8, 20, 46))
+    shadow_mask = lum.point(lambda v: min(255, max(0, int((65 - v) * 2.4))) if v < 65 else 0)
+    graded = Image.composite(shadow_tint, color, shadow_mask.filter(ImageFilter.GaussianBlur(3.0)))
+    # Subtle 16% duotone blend for unified atmospheric mood while keeping 84% rich natural colors
+    duo = Image.merge('RGB', (lum.point(LUT_R), lum.point(LUT_G), lum.point(LUT_B)))
+    return Image.blend(graded, duo, 0.16)
+
+
 def grade_blue(im, tint_warm=0.0, keep_crimson=False):
     """Signature sapphire-blue documentary grade over bright full-bleed real video/photos."""
     rgb = im.convert('RGB').point(_GAMMA_LUT * 3)
@@ -168,7 +187,7 @@ EDGE_SCRIM = _build_edge_scrim()
 
 
 def prep_plate(path, tint_warm=0.0):
-    """Full-bleed 9:16 cover plate (1080x1920) graded in signature sapphire-blue."""
+    """Full-bleed 9:16 cover plate (1080x1920) graded in tailored color space."""
     raw = Image.open(path).convert('RGB')
     scale = max(CW / max(1, raw.width), CH / max(1, raw.height))
     sw = max(CW, int(round(raw.width * scale)))
@@ -178,7 +197,10 @@ def prep_plate(path, tint_warm=0.0):
     y0 = max(0, (sh - CH) // 2)
     cropped = resized.crop((x0, y0, x0 + CW, y0 + CH))
     sharpened = cropped.filter(ImageFilter.UnsharpMask(radius=1.0, percent=88, threshold=3))
-    keep_red = 'crash-poster' in os.path.basename(str(path))
+    fn = os.path.basename(str(path)).lower()
+    if 'prayer' in fn or 'psalm' in fn:
+        return grade_sanctuary(sharpened)
+    keep_red = 'crash-poster' in fn
     return grade_blue(sharpened, tint_warm=tint_warm, keep_crimson=keep_red)
 
 def video_plate_reader(path, skip_intro=1.5):
@@ -406,7 +428,7 @@ def fit_font(weight, sz, text, maxw, tracking=2.2):
     return f
 
 # ------------------------------------------------ cold-open, poster & end overlays ----
-def poster_lockup_overlay(layer, kicker, big1, big2, sub_pill, alpha=1.0):
+def poster_lockup_overlay(layer, kicker, big1, big2, sub_pill, alpha=1.0, is_prayer=False):
     """High-CTR scroll-stopping poster typography sized across ~87% of the 720px width
     so that even on a 358x636 mobile YouTube Shorts channel grid tile every word pops."""
     a = clamp01(alpha)
@@ -418,29 +440,32 @@ def poster_lockup_overlay(layer, kicker, big1, big2, sub_pill, alpha=1.0):
     fl2 = fit_font('Black', 156, big2, W - 84)
     ft = fit_font('Black', 32, sub_pill, W - 120)
 
-    # Focused center contrast glow behind lockup while full-bleed skyscraper & red chart stay bright
+    # Focused center contrast glow behind lockup while full-bleed photography stays bright
     halo = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     hd = ImageDraw.Draw(halo)
-    hd.ellipse([-20, 210, W + 20, 960], fill=(4, 10, 26, int(162 * a)))
-    hd.ellipse([50, 310, W - 50, 860], fill=(235, 38, 52, int(48 * a)))
+    hd.ellipse([-20, 210, W + 20, 960], fill=(4, 12, 32, int(162 * a)))
+    glow_col = (255, 198, 48) if is_prayer else (235, 38, 52)
+    hd.ellipse([50, 310, W - 50, 860], fill=glow_col + (int(48 * a),))
     halo = halo.filter(ImageFilter.GaussianBlur(46))
     layer.alpha_composite(halo)
 
     d = ImageDraw.Draw(layer)
-    # 1. Crimson kicker ribbon
+    # 1. Kicker ribbon (warm gold for prayer, crimson for doc)
     kw = d.textlength(kicker, font=fk)
     bpw, bph = int(kw + 58), 64
     bx0, by0 = cx - bpw // 2, 290
+    kicker_bg = (218, 165, 32, int(250 * a)) if is_prayer else (228, 34, 46, int(250 * a))
+    kicker_outline = (255, 240, 200, int(220 * a)) if is_prayer else (255, 226, 226, int(220 * a))
     d.rounded_rectangle(
         [bx0, by0, bx0 + bpw, by0 + bph],
         radius=15,
-        fill=(228, 34, 46, int(250 * a)),
-        outline=(255, 226, 226, int(220 * a)),
+        fill=kicker_bg,
+        outline=kicker_outline,
         width=3,
     )
     d.text((cx - kw / 2, by0 + 11), kicker, font=fk, fill=WHITE + (int(255 * a),))
 
-    # 2. Giant "$70B" + "FRAUD" display headlines spanning ~87% of frame width
+    # 2. Giant display headlines spanning ~87% of frame width
     w1 = d.textlength(big1, font=fl1)
     w2 = d.textlength(big2, font=fl2)
     y1, y2 = 368, 594
@@ -453,23 +478,25 @@ def poster_lockup_overlay(layer, kicker, big1, big2, sub_pill, alpha=1.0):
 
     d = ImageDraw.Draw(layer)
     d.text((cx - w1 / 2, y1), big1, font=fl1, fill=WHITE + (int(255 * a),), stroke_width=9, stroke_fill=(8, 16, 34, int(255 * a)))
-    d.text((cx - w2 / 2, y2), big2, font=fl2, fill=YELLOW + (int(255 * a),), stroke_width=8, stroke_fill=(10, 18, 36, int(255 * a)))
+    accent2 = (255, 215, 64) if is_prayer else YELLOW
+    d.text((cx - w2 / 2, y2), big2, font=fl2, fill=accent2 + (int(255 * a),), stroke_width=8, stroke_fill=(10, 18, 36, int(255 * a)))
 
-    # 3. Bottom gold-rimmed punchline pill
+    # 3. Bottom punchline pill
     tw_sub = d.textlength(sub_pill, font=ft)
     tpw, tph = int(tw_sub + 60), 62
     tx0, ty0 = cx - tpw // 2, 790
+    pill_border = (255, 215, 64, int(240 * a)) if is_prayer else YELLOW + (int(240 * a),)
     d.rounded_rectangle(
         [tx0, ty0, tx0 + tpw, ty0 + tph],
         radius=15,
         fill=(8, 20, 44, int(240 * a)),
-        outline=YELLOW + (int(240 * a),),
+        outline=pill_border,
         width=3,
     )
     d.text((cx - tw_sub / 2, ty0 + 11), sub_pill, font=ft, fill=WHITE + (int(255 * a),))
 
 
-def cold_open_overlay(layer, bg_rgb, title_pair, t, dur=2.8, poster_spec=None):
+def cold_open_overlay(layer, bg_rgb, title_pair, t, dur=2.8, poster_spec=None, is_prayer=False):
     if t < 0 or t > dur:
         return
     in_e = ease_out_expo(clamp01((t + 0.08) / 0.24))
@@ -477,7 +504,7 @@ def cold_open_overlay(layer, bg_rgb, title_pair, t, dur=2.8, poster_spec=None):
     a = in_e * out_a
     if a <= 0.01:
         return
-    if poster_spec:
+    if poster_spec and not is_prayer:
         poster_lockup_overlay(layer, poster_spec[0], poster_spec[1], poster_spec[2], poster_spec[3], alpha=a)
         return
     t1, t2 = title_pair
@@ -490,38 +517,44 @@ def cold_open_overlay(layer, bg_rgb, title_pair, t, dur=2.8, poster_spec=None):
     ph = 118
     px = W // 2 - pw // 2
     py = int(218 - (1.0 - in_e) * 20)
-    paste_frosted(layer, bg_rgb, glass_card(pw, ph, radius=18, a_top=172, a_bot=144), px, py, a, radius=18)
+    card_border = (235, 198, 92, 190) if is_prayer else (148, 198, 255, 165)
+    paste_frosted(layer, bg_rgb, glass_card(pw, ph, radius=18, a_top=172, a_bot=144, border_col=card_border), px, py, a, radius=18)
     bw = int(104 * ease_out_back(clamp01((t - 0.10) / 0.5)))
-    d.rectangle([W // 2 - bw // 2, py + 16, W // 2 + bw // 2, py + 20], fill=YELLOW + (int(240 * a),))
+    accent_bar = (255, 215, 64) if is_prayer else YELLOW
+    d.rectangle([W // 2 - bw // 2, py + 16, W // 2 + bw // 2, py + 20], fill=accent_bar + (int(240 * a),))
     kinetic_line(layer, t1, f1, W / 2, py + 28, t, 0.06, WHITE, 2.4, stagger=0.026, dur=0.42, slide=18, out_a=a)
     w2 = tracked_width(d, t2, f2, 2.8)
     sa = int(238 * clamp01((t - 0.32) / 0.42) * a)
+    sub_col = (255, 235, 180) if is_prayer else ICE
     if sa > 0:
-        draw_tracked(d, t2, f2, W / 2 - w2 / 2, py + 84, ICE + (sa,), 2.8)
+        draw_tracked(d, t2, f2, W / 2 - w2 / 2, py + 84, sub_col + (sa,), 2.8)
 
-def end_card_overlay(base_img, end_pair, t_local, T):
+def end_card_overlay(base_img, end_pair, t_local, T, is_prayer=False):
     layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     e = ease_out_expo(clamp01(t_local / 0.45))
-    dim = Image.new('RGBA', (W, H), (4, 14, 32, int(115 * e)))
+    dim = Image.new('RGBA', (W, H), (4, 12, 30, int(115 * e)))
     layer = Image.alpha_composite(layer, dim)
     t1, t2 = end_pair
     pw, ph = 520, 178
     px, py = (W - pw) // 2, 430
-    paste_frosted(layer, base_img, glass_card(pw, ph, radius=20, a_top=192, a_bot=165, border_col=YELLOW + (195,)), px, py, e, radius=20)
+    border_col = (255, 215, 64, 210) if is_prayer else YELLOW + (195,)
+    paste_frosted(layer, base_img, glass_card(pw, ph, radius=20, a_top=192, a_bot=165, border_col=border_col), px, py, e, radius=20)
     d = ImageDraw.Draw(layer)
     f1 = fnt('Black', 40)
     f2 = fit_font('SemiBold', 15, t2.upper(), pw - 56, 2.6)
-    kinetic_line(layer, t1, f1, W / 2, py + 24, t_local, 0.05, YELLOW, 3.0, stagger=0.04, dur=0.42, slide=20, bounce=True, out_a=e)
+    accent_t1 = (255, 215, 64) if is_prayer else YELLOW
+    kinetic_line(layer, t1, f1, W / 2, py + 24, t_local, 0.05, accent_t1, 3.0, stagger=0.04, dur=0.42, slide=20, bounce=True, out_a=e)
     bw = int(144 * ease_out_back(clamp01((t_local - 0.22) / 0.45)))
     d.rectangle([W // 2 - bw // 2, py + 88, W // 2 + bw // 2, py + 92], fill=WHITE + (int(225 * e),))
     w2 = tracked_width(d, t2.upper(), f2, 2.6)
     sa = int(242 * clamp01((t_local - 0.28) / 0.42))
+    sub_col = (255, 235, 180) if is_prayer else ICE
     if sa > 0:
-        draw_tracked(d, t2.upper(), f2, W / 2 - w2 / 2, py + 112, ICE + (sa,), 2.6)
+        draw_tracked(d, t2.upper(), f2, W / 2 - w2 / 2, py + 112, sub_col + (sa,), 2.6)
     return Image.alpha_composite(base_img.convert('RGBA'), layer).convert('RGB')
 
 # ------------------------------ HUD + chapter badge + word ribbon (20:9 safe) ----
-def hud_chapter_layer(bg_rgb, kicker, sub, idx, nscenes, t_scene, scene_dur, total_frac):
+def hud_chapter_layer(bg_rgb, kicker, sub, idx, nscenes, t_scene, scene_dur, total_frac, is_prayer=False):
     layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     in_e = ease_out_expo(clamp01(t_scene / 0.42))
     out_e = 1.0 if (scene_dur - t_scene) > 0.35 else clamp01((scene_dur - t_scene) / 0.35)
@@ -529,20 +562,24 @@ def hud_chapter_layer(bg_rgb, kicker, sub, idx, nscenes, t_scene, scene_dur, tot
     d = ImageDraw.Draw(layer)
 
     # Compact right-side progress pill strictly inside SAFE_R=644 (never clipped on 20:9 phones)
-    pw_prog, ph_prog = 104, 28
+    pw_prog, ph_prog = (116 if is_prayer else 104), 28
     px_prog, py_prog = SAFE_R - pw_prog, SAFE_HUD_Y + 6
-    paste_frosted(layer, bg_rgb, glass_card(pw_prog, ph_prog, radius=14, a_top=168, a_bot=142), px_prog, py_prog, 0.94, radius=14)
+    border_col = (235, 198, 92, 175) if is_prayer else (148, 198, 255, 165)
+    paste_frosted(layer, bg_rgb, glass_card(pw_prog, ph_prog, radius=14, a_top=168, a_bot=142, border_col=border_col), px_prog, py_prog, 0.94, radius=14)
     fp = fnt('Bold', 10)
     pct = f'{int(clamp01(total_frac) * 100):d}%'
-    d.text((px_prog + 10, py_prog + 8), 'DOC', font=fp, fill=ICE + (225,))
-    d.rectangle([px_prog + 38, py_prog + 12, px_prog + 68, py_prog + 16], fill=(255, 255, 255, 55))
-    fill_w = int(30 * clamp01(total_frac))
+    pill_label = 'PRAYER' if is_prayer else 'DOC'
+    d.text((px_prog + 8, py_prog + 8), pill_label, font=fp, fill=(255, 235, 180) if is_prayer else ICE + (225,))
+    bar_x0 = px_prog + (52 if is_prayer else 38)
+    bar_w = 24 if is_prayer else 30
+    d.rectangle([bar_x0, py_prog + 12, bar_x0 + bar_w, py_prog + 16], fill=(255, 255, 255, 55))
+    fill_w = int(bar_w * clamp01(total_frac))
     if fill_w > 0:
-        d.rectangle([px_prog + 38, py_prog + 12, px_prog + 38 + fill_w, py_prog + 16], fill=YELLOW + (245,))
-    d.text((px_prog + 72, py_prog + 8), pct, font=fp, fill=WHITE + (240,))
+        d.rectangle([bar_x0, py_prog + 12, bar_x0 + fill_w, py_prog + 16], fill=YELLOW + (245,))
+    d.text((bar_x0 + bar_w + 4, py_prog + 8), pct, font=fp, fill=WHITE + (240,))
 
     if a > 0.02:
-        max_hud_w = px_prog - SAFE_L - 12  # 452px cleanly left of DOC pill
+        max_hud_w = px_prog - SAFE_L - 12  # cleanly left of progress pill
         fk = fit_font('Bold', 12, kicker, max_hud_w - 86, 1.2)
         fs = fit_font('Medium', 10, sub, max_hud_w - 86, 1.2) if sub else fnt('Medium', 10)
         fc = fnt('Black', 10)
@@ -553,13 +590,13 @@ def hud_chapter_layer(bg_rgb, kicker, sub, idx, nscenes, t_scene, scene_dur, tot
         ch = 46 if sub else 34
         cx = int(SAFE_L - (1.0 - in_e) * 14)
         cy = SAFE_HUD_Y
-        paste_frosted(layer, bg_rgb, glass_card(cw, ch, radius=12, a_top=172, a_bot=144), cx, cy, a, radius=12)
+        paste_frosted(layer, bg_rgb, glass_card(cw, ch, radius=12, a_top=172, a_bot=144, border_col=border_col), cx, cy, a, radius=12)
         d.rounded_rectangle([cx + 8, cy + 8, cx + 56, cy + 26], radius=6, fill=YELLOW + (int(242 * a),))
         wt = d.textlength(tag, font=fc)
         d.text((cx + 32 - wt / 2, cy + 10), tag, font=fc, fill=NAVY + (int(255 * a),))
         draw_tracked(d, kicker, fk, cx + 66, cy + 8, WHITE + (int(252 * a),), 1.2)
         if sub:
-            draw_tracked(d, sub, fs, cx + 66, cy + 26, ICE + (int(228 * a),), 1.2)
+            draw_tracked(d, sub, fs, cx + 66, cy + 26, (220, 238, 255) if is_prayer else ICE + (228,), 1.2)
 
     # Bottom progress bar inside safe width so full progress is visible
     d.rectangle([SAFE_L, H - 6, SAFE_R, H], fill=(255, 255, 255, 38))
@@ -590,7 +627,7 @@ def build_caption_stream(key, raw_words):
         stream.append(dict(t0=t_start, t1=t_end, words=w_entries))
     return stream
 
-def caption_ribbon_layer(bg_rgb, stream, t):
+def caption_ribbon_layer(bg_rgb, stream, t, is_prayer=False):
     """Animated karaoke captions above @channel overlay & left of right-rail icons."""
     layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     active = None
@@ -654,7 +691,8 @@ def caption_ribbon_layer(bg_rgb, stream, t):
     ph = 16 + line_h * len(lines)
     px = int(cap_cx - pw / 2.0)
     py = SAFE_CAPTION_Y - (len(lines) - 1) * 14
-    paste_frosted(layer, bg_rgb, glass_card(pw, ph, radius=12, top=(6, 20, 46), bot=(3, 10, 26), a_top=192, a_bot=172), px, py, a, radius=12)
+    card_border = (235, 198, 92, 180) if is_prayer else (148, 198, 255, 165)
+    paste_frosted(layer, bg_rgb, glass_card(pw, ph, radius=14, top=(6, 20, 46), bot=(3, 10, 26), a_top=192, a_bot=172, border_col=card_border), px, py, a, radius=14)
 
     cur_idx = 0
     for j, (ws, we, _) in enumerate(words):
@@ -668,17 +706,20 @@ def caption_ribbon_layer(bg_rgb, stream, t):
         for idx_w, ws, we, w, ww in ln:
             txt = w.upper()
             if idx_w == cur_idx:
-                pad_x = 6
+                pad_x = 7
                 d.rounded_rectangle(
-                    [x - pad_x, yy - 2, x + ww + pad_x, yy + line_h - 3],
-                    radius=6,
-                    fill=(255, 201, 60, int(238 * a)),
+                    [x - pad_x, yy - 3, x + ww + pad_x, yy + line_h - 2],
+                    radius=7,
+                    fill=(255, 212, 64, int(248 * a)),
+                    outline=(255, 242, 185, int(220 * a)),
+                    width=2,
                 )
-                d.text((x, yy), txt, font=f, fill=NAVY + (int(255 * a),))
+                d.text((x, yy), txt, font=f, fill=(6, 18, 42, int(255 * a)))
             elif idx_w < cur_idx:
-                d.text((x, yy), txt, font=f, fill=WHITE + (int(248 * a),))
+                d.text((x + 1, yy + 1), txt, font=f, fill=(0, 0, 0, int(150 * a)))
+                d.text((x, yy), txt, font=f, fill=WHITE + (int(252 * a),))
             else:
-                d.text((x, yy), txt, font=f, fill=ICE + (int(180 * a),))
+                d.text((x, yy), txt, font=f, fill=(200, 226, 252, int(185 * a)))
             x += ww + gap
     return layer
 
@@ -1006,7 +1047,7 @@ def beat_count(layer, bg_rgb, b, t, cx, cy):
             draw_tracked(d, label, fnote, cx - wlab / 2, py + panel_h - 24, ICE + (int(245 * la),), 1.8)
     _flash_ring(layer, t, t0 + dur * 0.85, cx, cy)
 
-def beat_phrase(layer, bg_rgb, b, t, cx, cy):
+def beat_phrase(layer, bg_rgb, b, t, cx, cy, is_prayer=False):
     ea, out_a = _beat_envelope(b, t, pre=0.24)
     if ea * out_a <= 0.01:
         return
@@ -1026,25 +1067,27 @@ def beat_phrase(layer, bg_rgb, b, t, cx, cy):
     ph = 72
     px = int(cx - pw / 2)
     py = int(cy - ph / 2 - (1.0 - out_a) * 16)
-    paste_frosted(layer, bg_rgb, glass_card(pw, ph, radius=14), px, py, ea * out_a, radius=14)
+    card_border = (235, 198, 92, 185) if is_prayer else (148, 198, 255, 165)
+    paste_frosted(layer, bg_rgb, glass_card(pw, ph, radius=14, border_col=card_border), px, py, ea * out_a, radius=14)
     x0 = cx - total / 2.0
     x = x0
     hi = b.get('hi', -1)
+    accent_col = (255, 215, 64) if is_prayer else YELLOW
     for i, (w, wt) in enumerate(zip(disp, ts)):
         local = clamp01((t - (wt - 0.18)) / 0.38)
         if local > 0:
             e = ease_out_expo(local)
             a = int(255 * min(1.0, local * 1.9) * out_a)
-            col = YELLOW if i == hi else WHITE
+            col = accent_col if i == hi else WHITE
             yy = py + 18 + (1.0 - e) * 16
             d.text((x, yy), w, font=f, fill=col + (a,))
         x += widths[i]
     prog = clamp01((t - (b['t0'] - 0.08)) / max(0.35, b['t1'] - b['t0'] + 0.25))
     if prog > 0:
         uw = total * ease_out_expo(prog)
-        d.rectangle([x0, py + ph - 14, x0 + uw, py + ph - 10], fill=YELLOW + (int(235 * ea * out_a),))
+        d.rectangle([x0, py + ph - 14, x0 + uw, py + ph - 10], fill=accent_col + (int(235 * ea * out_a),))
 
-def beat_quote(layer, bg_rgb, b, t, cx, cy):
+def beat_quote(layer, bg_rgb, b, t, cx, cy, is_prayer=False):
     ea, out_a = _beat_envelope(b, t, pre=0.30)
     if ea * out_a <= 0.01:
         return
@@ -1063,9 +1106,11 @@ def beat_quote(layer, bg_rgb, b, t, cx, cy):
     ph = 130 if len(lines) > 1 and lines[1] else 94
     px = int(cx - pw / 2)
     py = int(cy - ph / 2 - (1.0 - out_a) * 16)
-    paste_frosted(layer, bg_rgb, glass_card(pw, ph, radius=18), px, py, ea * out_a, radius=18)
-    ma = int(235 * ea * out_a)
-    d.text((px + 12, py + 8), '\u201c', font=fnt('Black', 42), fill=YELLOW + (ma,))
+    card_border = (235, 198, 92, 195) if is_prayer else (148, 198, 255, 165)
+    paste_frosted(layer, bg_rgb, glass_card(pw, ph, radius=18, border_col=card_border), px, py, ea * out_a, radius=18)
+    ma = int(245 * ea * out_a)
+    accent_col = (255, 215, 64) if is_prayer else YELLOW
+    d.text((px + 12, py + 8), '\u201c', font=fnt('Black', 42), fill=accent_col + (ma,))
     for li, (lw, lt) in enumerate(zip(lines, lts)):
         widths = [d.textlength(w, font=fq) + 6 for w in lw]
         total = sum(widths) - 6
@@ -1083,7 +1128,10 @@ def beat_quote(layer, bg_rgb, b, t, cx, cy):
         la = clamp01((t - (b['t0'] + 0.25)) / 0.48) * ea * out_a
         if la > 0.02:
             aw = tracked_width(d, b['attrib'], fat, 1.6)
-            draw_tracked(d, b['attrib'], fat, cx - aw / 2, py + ph - 21, YELLOW + (int(240 * la),), 1.6)
+            if is_prayer:
+                div_w = int(min(pw - 36, aw + 48))
+                d.line([(cx - div_w // 2, py + ph - 26), (cx + div_w // 2, py + ph - 26)], fill=(235, 198, 92, int(115 * la)), width=1)
+            draw_tracked(d, b['attrib'], fat, cx - aw / 2, py + ph - 21, accent_col + (int(240 * la),), 1.6)
 
 def beat_date(layer, bg_rgb, b, t, cx, cy):
     ea, out_a = _beat_envelope(b, t, pre=0.24)
@@ -1141,25 +1189,60 @@ def tease_layer(bg_rgb, teases, t):
         draw_tracked(d, tr['text'], ftxt, px + 26 + wtag, py + 9, WHITE + (a,), 1.2)
     return layer
 
-def beats_layer(bg_rgb, beats, t, expire_t):
+def beats_layer(bg_rgb, beats, t, expire_t, is_prayer=False):
     layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     for i, b in enumerate(beats):
         if b['t0'] > expire_t:
             continue
         slot_key = b.get('slot', SLOT_CYCLE[i % len(SLOT_CYCLE)])
         cx, cy = SLOT_MAP[slot_key]
-        BEAT_KINDS[b['kind']](layer, bg_rgb, b, t, cx, cy)
+        kind = b['kind']
+        if kind in ('phrase', 'quote'):
+            BEAT_KINDS[kind](layer, bg_rgb, b, t, cx, cy, is_prayer=is_prayer)
+        else:
+            BEAT_KINDS[kind](layer, bg_rgb, b, t, cx, cy)
     return layer
 
 # --------------------------------------------------------- ambient layer ----
 DUST = [((i * 149.3) % W, (i * 83.7) % H, 0.15 + (i % 5) * 0.04, 3 + (i % 3) * 2) for i in range(12)]
-def ambient_layer(t):
+CELESTIAL_MOTES = [
+    (
+        int((i * 187.3 + 47) % (W - 30) + 15),
+        int((i * 131.9 + 63) % (H - 40) + 20),
+        0.14 + (i % 6) * 0.035,
+        2 + (i % 4),
+        (i * 1.05) % (math.pi * 2),
+        (
+            (255, 238, 185) if i % 3 == 0 else
+            (255, 252, 242) if i % 3 == 1 else
+            (205, 235, 255)
+        )
+    )
+    for i in range(32)
+]
+
+def ambient_layer(t, is_prayer=False):
     layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(layer)
-    for x0, y0, sp, sz in DUST:
-        x = int((x0 + t * sp * 22) % W)
-        y = int((y0 - t * sp * 30) % H)
-        d.ellipse([x, y, x + sz, y + sz], fill=(205, 230, 255, 22))
+    if is_prayer:
+        # Gentle floating celestial star motes with soft horizontal sinusoidal breathing
+        for x0, y0, sp, sz, ph, col in CELESTIAL_MOTES:
+            sway = math.sin(t * 0.75 + ph) * 16.0
+            x = int((x0 + sway) % W)
+            y = int((y0 - t * sp * 28.0) % H)
+            alpha = int((42.0 + 32.0 * math.sin(t * 1.6 + ph)) * clamp01(y / float(H * 0.88)))
+            if alpha > 4:
+                d.ellipse([x, y, x + sz, y + sz], fill=col + (alpha,))
+                if sz >= 4:
+                    d.ellipse([x - 2, y - 2, x + sz + 2, y + sz + 2], fill=col + (alpha // 3,))
+        # Soft ethereal celestial top sheen
+        sheen_a = int(18 + 8 * math.sin(t * 0.6))
+        d.ellipse([-80, -60, W + 80, 160], fill=(255, 230, 160, sheen_a))
+    else:
+        for x0, y0, sp, sz in DUST:
+            x = int((x0 + t * sp * 22) % W)
+            y = int((y0 - t * sp * 30) % H)
+            d.ellipse([x, y, x + sz, y + sz], fill=(205, 230, 255, 22))
     return layer
 
 # ------------------------------------------------------------------ scripts ----
@@ -1314,26 +1397,26 @@ SCRIPTS = {
     ),
     'short-psalm91': dict(
         title=('THE SECRET PLACE', 'PSALM 91 · NIGHT PRAYER'),
-        poster=("PLAY BEFORE SLEEP", 'PSALM 91', 'PROTECTION', 'PEACE OVER YOUR HOME'),
-        midpoint_poster_window=(18.0, 22.0),
-        end=('SUBSCRIBE', 'The Secret Place — prayers every day'),
+        poster=("PRAYER BEFORE SLEEP", 'PSALM 91', 'PROTECTION', 'DIVINE SHIELD TONIGHT'),
+        midpoint_poster_window=None,
+        end=('TYPE AMEN', 'The Secret Place — prayers every day'),
         out='short-psalm91.mp4',
         narration='short-prayer-psalm91.mp3',
         stock_queries=[
             'calm mountain lake dusk',
             'divine sunbeams clouds',
+            'sacred mountain sanctuary starry night',
             'starry night sky mountains',
+            'cozy candlelit bedroom starry night',
             'golden sunrise lake mist',
-            'peaceful valley sunset',
-            'mountain light dawn',
         ],
         scenes=[
             dict(a='', img='short-prayer-scene-01.jpg', lock_plate=True, kicker='PSALM 91:1', sub='NIGHT PROTECTION PRAYER', cam='tilt_up', focus=(0.5, 0.45)),
-            dict(a='secret place', img='short-prayer-scene-02.jpg', kicker='HE WHO DWELLS', sub='IN THE SECRET PLACE', cam='push_in', focus=(0.5, 0.45)),
-            dict(a='no evil shall', img='short-prayer-cover-poster.jpg', lock_plate=True, kicker='PSALM 91:10', sub='NO EVIL SHALL BEFALL YOU', cam='pull_out', focus=(0.5, 0.45)),
-            dict(a='heavenly father', img='short-prayer-scene-03.jpg', kicker='PRAYER FOR PEACE', sub='QUIET EVERY ANXIOUS THOUGHT', cam='pan_right', focus=(0.5, 0.48)),
-            dict(a='send your angels', img='short-prayer-scene-04.jpg', kicker='ANGELIC PROTECTION', sub='DIVINE PEACE OVER THIS HOME', cam='push_in', focus=(0.48, 0.48)),
-            dict(a='sleep in peace', img='short-prayer-scene-02.jpg', kicker='REST IN GOD', sub='HE FIGHTS YOUR BATTLES', cam='pan_left', focus=(0.5, 0.45)),
+            dict(a='secret place', img='short-prayer-scene-02.jpg', lock_plate=True, kicker='HE WHO DWELLS', sub='IN THE SECRET PLACE', cam='push_in', focus=(0.5, 0.45)),
+            dict(a='no evil shall', img='short-prayer-scene-05.jpg', lock_plate=True, kicker='PSALM 91:10', sub='NO EVIL SHALL BEFALL YOU', cam='push_in', focus=(0.5, 0.42)),
+            dict(a='heavenly father', img='short-prayer-scene-03.jpg', lock_plate=True, kicker='PRAYER FOR PEACE', sub='QUIET EVERY ANXIOUS THOUGHT', cam='pan_right', focus=(0.5, 0.48)),
+            dict(a='send your angels', img='short-prayer-scene-06.jpg', lock_plate=True, kicker='ANGELIC PROTECTION', sub='DIVINE PEACE OVER THIS HOME', cam='pull_out', focus=(0.48, 0.48)),
+            dict(a='sleep in peace', img='short-prayer-scene-04.jpg', lock_plate=True, kicker='REST IN GOD', sub='HE FIGHTS YOUR BATTLES', cam='pan_left', focus=(0.5, 0.45)),
         ],
         teases=[
             dict(t=5.5, text='PSALM 91:1-2'),
@@ -1576,29 +1659,30 @@ def main(key):
             f_prev = camera_frame(prev_plate, 1.0, prev.get('cam', 'push_in'), prev.get('focus', (0.5, 0.45)), extra_zoom=prev_z)
             frame = optical_flare_transition(f_prev, frame, u)
 
+        is_prayer = (key == 'short-psalm91' or 'prayer' in key)
         ov = Image.new('RGBA', (W, H), (0, 0, 0, 0))
-        ov.alpha_composite(ambient_layer(t))
+        ov.alpha_composite(ambient_layer(t, is_prayer=is_prayer))
         mp_win = cfg.get('midpoint_poster_window')
         poster_spec = cfg.get('poster')
         in_mid_poster = bool(mp_win and poster_spec and (mp_win[0] <= t <= mp_win[1]))
-        in_open_poster = bool(poster_spec and t < 2.8)
+        in_open_poster = bool(poster_spec and t < 2.8 and not is_prayer)
         if not in_open_poster and not in_mid_poster:
             ov.alpha_composite(viz_layer(frame, sc.get('viz'), pos, sc_dur))
-            ov.alpha_composite(beats_layer(frame, beats, t, expire_t))
+            ov.alpha_composite(beats_layer(frame, beats, t, expire_t, is_prayer=is_prayer))
             ov.alpha_composite(tease_layer(frame, cfg.get('teases', []), t))
         if t < 2.8:
-            cold_open_overlay(ov, frame, cfg['title'], t, dur=2.8, poster_spec=poster_spec)
+            cold_open_overlay(ov, frame, cfg['title'], t, dur=2.8, poster_spec=poster_spec, is_prayer=is_prayer)
         elif in_mid_poster:
             mw0, mw1 = mp_win
             ma_in = ease_out_expo(clamp01((t - mw0) / 0.28))
             ma_out = 1.0 if t < mw1 - 0.32 else 1.0 - ease_in_out_sine((t - (mw1 - 0.32)) / 0.32)
-            poster_lockup_overlay(ov, poster_spec[0], poster_spec[1], poster_spec[2], poster_spec[3], alpha=ma_in * ma_out)
+            poster_lockup_overlay(ov, poster_spec[0], poster_spec[1], poster_spec[2], poster_spec[3], alpha=ma_in * ma_out, is_prayer=is_prayer)
         if not in_open_poster and not in_mid_poster:
-            ov.alpha_composite(hud_chapter_layer(frame, sc['kicker'], sc.get('sub', ''), k + 1, nscenes, pos, sc_dur, t / total))
-            ov.alpha_composite(caption_ribbon_layer(frame, cap_stream, t))
+            ov.alpha_composite(hud_chapter_layer(frame, sc['kicker'], sc.get('sub', ''), k + 1, nscenes, pos, sc_dur, t / total, is_prayer=is_prayer))
+            ov.alpha_composite(caption_ribbon_layer(frame, cap_stream, t, is_prayer=is_prayer))
         frame = Image.alpha_composite(frame.convert('RGBA'), ov).convert('RGB')
         if t >= adur - 0.4:
-            frame = end_card_overlay(frame, cfg['end'], t - (adur - 0.4), total - (adur - 0.4))
+            frame = end_card_overlay(frame, cfg['end'], t - (adur - 0.4), total - (adur - 0.4), is_prayer=is_prayer)
         proc.stdin.write(frame.tobytes())
         if i % 360 == 0:
             print(f'  frame {i}/{n}', flush=True)
