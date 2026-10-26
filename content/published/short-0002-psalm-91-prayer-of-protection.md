@@ -7,11 +7,11 @@ format: short
 niche: faith and prayer
 category: education
 published_on: "2026-10-26"
-youtube_video_id: "ZbRKWsfOohc"
-youtube_shorts_url: "https://www.youtube.com/shorts/ZbRKWsfOohc"
-youtube_watch_url: "https://youtu.be/ZbRKWsfOohc"
-youtube_studio_url: "https://studio.youtube.com/video/ZbRKWsfOohc/edit"
-privacy_status: "private"
+youtube_video_id: "Uhd7uMYo9Mo"
+youtube_shorts_url: "https://www.youtube.com/shorts/Uhd7uMYo9Mo"
+youtube_watch_url: "https://youtu.be/Uhd7uMYo9Mo"
+youtube_studio_url: "https://studio.youtube.com/video/Uhd7uMYo9Mo/edit"
+privacy_status: "public"
 width: 720
 height: 1280
 duration_seconds: 40.21
@@ -29,7 +29,8 @@ Produced by The Secret Place | Daily Prayer & Scripture.
 
 ## Custom Thumbnail Apply Results
 
-- `ZbRKWsfOohc`: `ok`
+- `Uhd7uMYo9Mo`: `ok`
+- `ZbRKWsfOohc`: `HttpError: <HttpError 404 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=ZbRKWsfOohc&alt=json&uploadType=media returned "The video that you are trying to insert a thumbnail image `
 
 
 ## Channel Video Status Audit
@@ -37,47 +38,14 @@ Produced by The Secret Place | Daily Prayer & Scripture.
 ```json
 [
   {
-    "id": "ZbRKWsfOohc",
+    "id": "Uhd7uMYo9Mo",
     "title": "Say This Psalm 91 Prayer Before You Sleep | Divine Protection #Shorts",
-    "publishedAt": "2026-10-26T08:58:17Z",
+    "publishedAt": "2026-10-26T09:52:42Z",
     "uploadStatus": "uploaded",
-    "privacyStatus": "private",
+    "privacyStatus": "public",
     "rejectionReason": "",
     "failureReason": "",
     "duration": "P0D",
-    "thumbMaxres": true
-  },
-  {
-    "id": "DLEWL6dm5lo",
-    "title": "How Enron Faked $70 Billion in Plain Sight #Shorts",
-    "publishedAt": "2026-10-23T16:34:42Z",
-    "uploadStatus": "processed",
-    "privacyStatus": "private",
-    "rejectionReason": "",
-    "failureReason": "",
-    "duration": "PT53S",
-    "thumbMaxres": true
-  },
-  {
-    "id": "4Z29-h0j2r4",
-    "title": "How Enron Faked $70 Billion in Plain Sight #Shorts",
-    "publishedAt": "2026-10-23T13:51:12Z",
-    "uploadStatus": "processed",
-    "privacyStatus": "private",
-    "rejectionReason": "",
-    "failureReason": "",
-    "duration": "PT53S",
-    "thumbMaxres": true
-  },
-  {
-    "id": "M7n0Xou92r0",
-    "title": "How Enron Faked $70 Billion in Plain Sight #Shorts",
-    "publishedAt": "2026-10-23T11:28:36Z",
-    "uploadStatus": "processed",
-    "privacyStatus": "private",
-    "rejectionReason": "",
-    "failureReason": "",
-    "duration": "PT53S",
     "thumbMaxres": true
   },
   {
