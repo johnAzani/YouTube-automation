@@ -7,10 +7,10 @@ format: short
 niche: faith and prayer
 category: education
 published_on: "2026-10-26"
-youtube_video_id: "Uhd7uMYo9Mo"
-youtube_shorts_url: "https://www.youtube.com/shorts/Uhd7uMYo9Mo"
-youtube_watch_url: "https://youtu.be/Uhd7uMYo9Mo"
-youtube_studio_url: "https://studio.youtube.com/video/Uhd7uMYo9Mo/edit"
+youtube_video_id: "q1LXu0_qB3A"
+youtube_shorts_url: "https://www.youtube.com/shorts/q1LXu0_qB3A"
+youtube_watch_url: "https://youtu.be/q1LXu0_qB3A"
+youtube_studio_url: "https://studio.youtube.com/video/q1LXu0_qB3A/edit"
 privacy_status: "public"
 width: 720
 height: 1280
@@ -29,8 +29,8 @@ Produced by The Secret Place | Daily Prayer & Scripture.
 
 ## Custom Thumbnail Apply Results
 
+- `q1LXu0_qB3A`: `ok`
 - `Uhd7uMYo9Mo`: `ok`
-- `ZbRKWsfOohc`: `HttpError: <HttpError 404 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=ZbRKWsfOohc&alt=json&uploadType=media returned "The video that you are trying to insert a thumbnail image `
 
 
 ## Channel Video Status Audit
@@ -38,14 +38,25 @@ Produced by The Secret Place | Daily Prayer & Scripture.
 ```json
 [
   {
-    "id": "Uhd7uMYo9Mo",
+    "id": "q1LXu0_qB3A",
     "title": "Say This Psalm 91 Prayer Before You Sleep | Divine Protection #Shorts",
-    "publishedAt": "2026-10-26T09:52:42Z",
+    "publishedAt": "2026-10-26T11:09:22Z",
     "uploadStatus": "uploaded",
     "privacyStatus": "public",
     "rejectionReason": "",
     "failureReason": "",
     "duration": "P0D",
+    "thumbMaxres": true
+  },
+  {
+    "id": "Uhd7uMYo9Mo",
+    "title": "Say This Psalm 91 Prayer Before You Sleep | Divine Protection #Shorts",
+    "publishedAt": "2026-10-26T09:53:00Z",
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "rejectionReason": "",
+    "failureReason": "",
+    "duration": "PT41S",
     "thumbMaxres": true
   },
   {
