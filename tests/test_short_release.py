@@ -226,6 +226,58 @@ class ShortReleaseTests(unittest.TestCase):
             self.assertFalse(manifest.exists())
             self.assertIsNone(select_next_queued_short(qdir))
 
+    def test_run_short_release_honors_privacy_and_replace_from_manifest(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tdir = Path(tmp)
+            social_dir = tdir / "social"
+            social_dir.mkdir(parents=True)
+            _make_sample_mp4(social_dir / "short-psalm91.mp4", 720, 1280, seconds=20.0, audio=True)
+            stock_dir = tdir / "output" / "short-stock" / "short-psalm91"
+            stock_dir.mkdir(parents=True)
+            (stock_dir / "scene-sources.json").write_text(
+                json.dumps([{"scene": 1, "fallback": True, "file": "short-prayer-scene-01.jpg"}]),
+                encoding="utf-8",
+            )
+            qdir = tdir / "shorts-queue"
+            qdir.mkdir(parents=True)
+            manifest = qdir / "short-0002.yml"
+            manifest.write_text(
+                'short: "short-psalm91"\nstatus: approved\nreplace: true\nprivacy: "public"\n',
+                encoding="utf-8",
+            )
+
+            fake_upload = SimpleNamespace(
+                video_id="ytPsalm123",
+                privacy_status="public",
+                watch_url="https://youtu.be/ytPsalm123",
+                auto_published=True,
+            )
+            with (
+                patch("pipeline.short_release.REPO_ROOT", tdir),
+                patch("pipeline.short_release.PUBLISHED_DIR", tdir / "published"),
+                patch("pipeline.short_release.OUTPUT_DIR", tdir / "output"),
+                patch("pipeline.short_release.CONFIG.youtube_refresh_token", "rtok"),
+                patch("pipeline.short_release.CONFIG.youtube_client_id", "cid"),
+                patch("pipeline.short_release.CONFIG.youtube_client_secret", "csec"),
+                patch("pipeline.upload.upload", return_value=fake_upload) as upload_mock,
+                patch("pipeline.upload.set_video_thumbnail", return_value="ok"),
+                patch("pipeline.upload.audit_channel_videos", return_value=[{"id": "ytPsalm123", "uploadStatus": "processed"}]),
+                patch("pipeline.short_release._open_release_ticket"),
+            ):
+                res = run_short_release(
+                    "short-psalm91",
+                    dry_run=False,
+                    skip_render=True,
+                    manifest_path=manifest,
+                )
+
+            self.assertEqual(res["video_id"], "ytPsalm123")
+            self.assertEqual(res["privacy_status"], "public")
+            # Verify privacy='public' was forwarded to upload()
+            _, kwargs = upload_mock.call_args
+            self.assertEqual(kwargs.get("privacy"), "public")
+
+
     def test_short_plates_fill_vertical_frame_edge_to_edge(self):
         img_name = shorts_tool.SCRIPTS["short-enron"]["scenes"][4]["img"]
         plate = shorts_tool.prep_plate(Path(shorts_tool.IMG) / img_name)
