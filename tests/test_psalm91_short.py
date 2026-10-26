@@ -22,6 +22,8 @@ def test_psalm91_assets_cleared_in_ledger():
         Path("image-search/short-prayer-scene-02.jpg"),
         Path("image-search/short-prayer-scene-03.jpg"),
         Path("image-search/short-prayer-scene-04.jpg"),
+        Path("image-search/short-prayer-scene-05.jpg"),
+        Path("image-search/short-prayer-scene-06.jpg"),
         Path("image-search/short-prayer-cover-poster.jpg"),
     ]
     # Verify all files exist
