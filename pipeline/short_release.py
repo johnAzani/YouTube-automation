@@ -80,6 +80,31 @@ EDITIONS: dict[str, ShortEdition] = {
             "#Shorts #Enron #FinancialHistory #Accounting #Documentary"
         ),
     ),
+    "short-psalm91": ShortEdition(
+        key="short-psalm91",
+        job_id="SHORT-0002",
+        slug="short-0002-psalm-91-prayer-of-protection",
+        title="Say This Psalm 91 Prayer Before You Sleep | Divine Protection #Shorts",
+        niche="faith and prayer",
+        tags=[
+            "shorts",
+            "psalm 91",
+            "night prayer",
+            "prayer of protection",
+            "bedtime prayer",
+            "daily scripture",
+            "christian encouragement",
+            "peaceful sleep",
+        ],
+        description=(
+            "He who dwells in the secret place of the Most High shall abide under the shadow of the Almighty.\n\n"
+            "Rest tonight under God's divine shield. When fear whispers in the dark, remember that His faithfulness "
+            "is your shield and buckler. No evil shall befall you, nor shall any plague come near your dwelling.\n\n"
+            "Scripture reference: Psalm 91 (NKJV / Public Domain biblical text).\n"
+            "Produced by The Secret Place | Daily Prayer & Scripture.\n\n"
+            "#Shorts #Psalm91 #NightPrayer #PrayerOfProtection #BedtimePrayer #DailyScripture #TheSecretPlace"
+        ),
+    ),
 }
 
 
@@ -193,14 +218,36 @@ def verify_short_render(
 
 
 def select_next_queued_short(queue_dir: Path | None = None) -> tuple[Path, str] | None:
-    """Return `(manifest_path, short_key)` for the first approved Short in queue."""
+    """Return `(manifest_path, short_key)` for the first approved or quota-resumed Short in queue."""
     qdir = SHORTS_QUEUE_DIR if queue_dir is None else queue_dir
     if not qdir.is_dir():
         return None
     for path in sorted(qdir.glob("*.yml")):
         data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        raw_status = str(data.get("status", "")).strip().lower()
+
+        # Check if job was paused due to daily quota exhaustion
+        if raw_status == "quota_paused":
+            reset_at_str = data.get("quota_reset_utc")
+            if reset_at_str:
+                from datetime import datetime, timezone
+                try:
+                    reset_at = datetime.fromisoformat(reset_at_str)
+                    now_utc = datetime.now(timezone.utc)
+                    if now_utc >= reset_at:
+                        print(f"[queue] Quota reset time passed ({reset_at_str}). Auto-unpausing {path.name}...")
+                        data["status"] = "approved"
+                        raw_status = "approved"
+                        path.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+                    else:
+                        print(f"[queue] {path.name} is paused until daily quota resets at {reset_at_str} UTC.")
+                        continue
+                except Exception as parse_err:
+                    print(f"[queue] Warning: could not parse quota_reset_utc: {parse_err}")
+                    continue
+
         is_approved = (
-            str(data.get("status", "")).strip().lower() == "approved"
+            raw_status == "approved"
             or bool(data.get("approved"))
         )
         if not is_approved:
@@ -411,13 +458,24 @@ def run_short_release(
 
     from .thumbnail import generate_short_scroll_stopper_thumbnail
 
-    hero_bg = REPO_ROOT / "image-search" / "short-enron-thumb-hero.jpg"
-    if not hero_bg.is_file():
-        hero_bg = REPO_ROOT / "image-search" / "short-enron-crash-poster.jpg"
-    staged_thumb = generate_short_scroll_stopper_thumbnail(
-        bg_path=hero_bg,
-        out_path=stage_dir / "thumbnail.jpg",
-    )
+    if edition.key == "short-psalm91":
+        hero_bg = REPO_ROOT / "image-search" / "short-prayer-cover-poster.jpg"
+        staged_thumb = generate_short_scroll_stopper_thumbnail(
+            bg_path=hero_bg,
+            out_path=stage_dir / "thumbnail.jpg",
+            kicker="PRAYER BEFORE SLEEP",
+            line1="PSALM",
+            line2="91",
+            tag="DIVINE PROTECTION",
+        )
+    else:
+        hero_bg = REPO_ROOT / "image-search" / "short-enron-thumb-hero.jpg"
+        if not hero_bg.is_file():
+            hero_bg = REPO_ROOT / "image-search" / "short-enron-crash-poster.jpg"
+        staged_thumb = generate_short_scroll_stopper_thumbnail(
+            bg_path=hero_bg,
+            out_path=stage_dir / "thumbnail.jpg",
+        )
 
     result: dict = {
         "id": edition.job_id,
@@ -435,9 +493,42 @@ def run_short_release(
     }
 
     if not dry_run:
-        from .upload import audit_channel_videos, delete_video, set_video_thumbnail, upload
+        from .upload import (
+            QuotaExceededError,
+            audit_channel_videos,
+            calculate_next_quota_reset_utc,
+            delete_video,
+            set_video_thumbnail,
+            upload,
+        )
 
-        up = upload(doc, staged_video, thumbnail_path=staged_thumb, description=edition.description)
+        try:
+            up = upload(doc, staged_video, thumbnail_path=staged_thumb, description=edition.description)
+        except QuotaExceededError as exc:
+            reset_utc = exc.reset_utc or calculate_next_quota_reset_utc()
+            reset_iso = reset_utc.isoformat()
+            print(f"[short-release] Daily YouTube API limit reached: {exc.message}. Pausing job until {reset_iso}...")
+            if manifest_path and manifest_path.is_file():
+                try:
+                    qdata = yaml.safe_load(manifest_path.read_text(encoding="utf-8")) or {}
+                    qdata["status"] = "quota_paused"
+                    qdata["quota_reset_utc"] = reset_iso
+                    qdata["pause_reason"] = "youtube_api_daily_quota_exceeded"
+                    manifest_path.write_text(yaml.safe_dump(qdata, sort_keys=False), encoding="utf-8")
+                    print(f"[short-release] Manifest {manifest_path.name} marked as quota_paused.")
+                except Exception as save_err:
+                    print(f"[short-release] Failed to update queue manifest: {save_err}")
+            result.update(
+                {
+                    "uploaded": False,
+                    "paused": True,
+                    "pause_reason": "quota_exceeded",
+                    "quota_reset_utc": reset_iso,
+                }
+            )
+            (stage_dir / "job_result.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
+            return result
+
         if not up.video_id:
             raise RuntimeError("YouTube upload returned no video ID; leaving published ledger untouched.")
 

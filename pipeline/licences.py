@@ -67,7 +67,8 @@ def clear_cache() -> None:
 def status_of(filename: str, ledger: dict[str, dict] | None = None) -> str:
     """`cleared` / `unverified` / `rights-encumbered` / `corrupt` / `unrecorded`."""
     ledger = load_ledger() if ledger is None else ledger
-    entry = ledger.get(str(filename))
+    fname = Path(filename).name if filename else ""
+    entry = ledger.get(fname) or ledger.get(str(filename))
     if not entry:
         return "unrecorded"
     return str(entry.get("status") or "unverified")

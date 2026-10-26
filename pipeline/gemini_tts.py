@@ -25,10 +25,16 @@ GEMINI_VOICES = {
     "fenrir": "Fenrir",
     "kore": "Kore",
     "aoede": "Aoede",
+    "Charon": "Charon",
+    "Puck": "Puck",
+    "Fenrir": "Fenrir",
+    "Kore": "Kore",
+    "Aoede": "Aoede",
 }
 
 DEFAULT_MODEL = "gemini-2.0-flash"
 DEFAULT_VOICE = "Charon"
+FALLBACK_EDGE_VOICE = "en-US-DavisNeural"
 
 
 def get_gemini_api_key() -> Optional[str]:
@@ -78,20 +84,39 @@ def synthesize_gemini_audio(
         "Only speak the exact provided words naturally with reverent pacing and appropriate pauses."
     )
 
-    response = client.models.generate_content(
-        model=model,
-        contents=f"{system_instruction}\n\nText to read:\n{text}",
-        config=types.GenerateContentConfig(
-            response_modalities=["AUDIO"],
-            speech_config=types.SpeechConfig(
-                voice_config=types.VoiceConfig(
-                    prebuilt_voice_config=types.PrebuiltVoiceConfig(
-                        voice_name=voice_name
-                    )
-                )
-            ),
-        ),
-    )
+    import time
+
+    max_retries = 3
+    response = None
+    for attempt in range(max_retries):
+        try:
+            response = client.models.generate_content(
+                model=model,
+                contents=f"{system_instruction}\n\nText to read:\n{text}",
+                config=types.GenerateContentConfig(
+                    response_modalities=["AUDIO"],
+                    speech_config=types.SpeechConfig(
+                        voice_config=types.VoiceConfig(
+                            prebuilt_voice_config=types.PrebuiltVoiceConfig(
+                                voice_name=voice_name
+                            )
+                        )
+                    ),
+                ),
+            )
+            break
+        except Exception as exc:
+            err_msg = str(exc).lower()
+            if "429" in err_msg or "resource_exhausted" in err_msg or "quota" in err_msg:
+                if attempt < max_retries - 1:
+                    backoff = (attempt + 1) * 12
+                    print(f"[gemini-tts] Rate limit reached (429/ResourceExhausted). Pausing {backoff}s for burst limit to reset...")
+                    time.sleep(backoff)
+                    continue
+                else:
+                    print(f"[gemini-tts] Daily request limit reached on free Gemini tier ({exc!r}).")
+                    raise
+            raise
 
     audio_bytes: bytes | None = None
     mime_type: str = "audio/wav"
