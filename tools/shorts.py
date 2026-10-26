@@ -311,7 +311,7 @@ def camera_frame(plate, p, mode='push_in', focus=(0.5, 0.45), extra_zoom=1.0):
     im = plate.transform((W, H), Image.EXTENT, (x0, y0, x0 + vw, y0 + vh), Image.BICUBIC)
     return Image.alpha_composite(im.convert('RGBA'), EDGE_SCRIM).convert('RGB')
 
-def optical_flare_transition(f_prev, f_curr, u):
+def optical_flare_transition(f_prev, f_curr, u, is_prayer=False):
     e = ease_in_out_sine(u)
     base = Image.blend(f_prev, f_curr, e)
     inten = math.sin(clamp01(u) * math.pi) ** 1.6
@@ -321,8 +321,10 @@ def optical_flare_transition(f_prev, f_curr, u):
     d = ImageDraw.Draw(flare)
     cy = int(H * 0.46)
     band_h = int(85 * inten + 10)
-    d.ellipse([-120, cy - band_h, W + 120, cy + band_h], fill=(185, 225, 255, int(64 * inten)))
-    d.rectangle([0, cy - 2, W, cy + 2], fill=(255, 225, 130, int(82 * inten)))
+    flare_glow = (255, 235, 170, int(68 * inten)) if is_prayer else (185, 225, 255, int(64 * inten))
+    flare_core = (255, 248, 220, int(95 * inten)) if is_prayer else (255, 225, 130, int(82 * inten))
+    d.ellipse([-120, cy - band_h, W + 120, cy + band_h], fill=flare_glow)
+    d.rectangle([0, cy - 2, W, cy + 2], fill=flare_core)
     flare = flare.filter(ImageFilter.GaussianBlur(18))
     return Image.alpha_composite(base.convert('RGBA'), flare).convert('RGB')
 
@@ -339,7 +341,7 @@ def _rounded_mask(w, h, radius):
         MASK_CACHE[key] = m
     return MASK_CACHE[key]
 
-def glass_card(w, h, radius=16, top=(10, 30, 66), bot=(5, 16, 38), a_top=164, a_bot=138, border_col=(148, 198, 255, 165)):
+def glass_card(w, h, radius=16, top=(8, 22, 50), bot=(4, 12, 30), a_top=145, a_bot=118, border_col=(148, 198, 255, 165)):
     w, h = max(16, int(w)), max(16, int(h))
     key = (w, h, radius, top, bot, a_top, a_bot, border_col)
     if key in GLASS_CACHE:
@@ -359,7 +361,7 @@ def glass_card(w, h, radius=16, top=(10, 30, 66), bot=(5, 16, 38), a_top=164, a_
     bd.rounded_rectangle([1, 1, w * S - 2, h * S - 2], radius=radius * S, outline=border_col, width=3)
     card = card.resize((w, h), Image.LANCZOS)
     d = ImageDraw.Draw(card)
-    d.line([(radius, 1), (w - radius, 1)], fill=(225, 240, 255, 115), width=1)
+    d.line([(radius, 1), (w - radius, 1)], fill=(255, 245, 215, 135), width=1)
     GLASS_CACHE[key] = card
     return card
 
@@ -692,7 +694,11 @@ def caption_ribbon_layer(bg_rgb, stream, t, is_prayer=False):
     px = int(cap_cx - pw / 2.0)
     py = SAFE_CAPTION_Y - (len(lines) - 1) * 14
     card_border = (235, 198, 92, 180) if is_prayer else (148, 198, 255, 165)
-    paste_frosted(layer, bg_rgb, glass_card(pw, ph, radius=14, top=(6, 20, 46), bot=(3, 10, 26), a_top=192, a_bot=172, border_col=card_border), px, py, a, radius=14)
+    c_top = (8, 16, 36) if is_prayer else (6, 20, 46)
+    c_bot = (4, 10, 24) if is_prayer else (3, 10, 26)
+    a_top = 152 if is_prayer else 192
+    a_bot = 126 if is_prayer else 172
+    paste_frosted(layer, bg_rgb, glass_card(pw, ph, radius=14, top=c_top, bot=c_bot, a_top=a_top, a_bot=a_bot, border_col=card_border), px, py, a, radius=14)
 
     cur_idx = 0
     for j, (ws, we, _) in enumerate(words):
@@ -1225,6 +1231,13 @@ def ambient_layer(t, is_prayer=False):
     layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(layer)
     if is_prayer:
+        # Volumetric divine light ray sweeping softly across the heavens
+        ray_cx = int(W * 0.72 + math.sin(t * 0.45) * 60)
+        d.polygon([
+            (ray_cx - 140, -40), (ray_cx + 140, -40),
+            (ray_cx - 40, int(H * 0.72)), (ray_cx - 240, int(H * 0.72))
+        ], fill=(255, 235, 175, int(15 + 6 * math.sin(t * 0.8))))
+
         # Gentle floating celestial star motes with soft horizontal sinusoidal breathing
         for x0, y0, sp, sz, ph, col in CELESTIAL_MOTES:
             sway = math.sin(t * 0.75 + ph) * 16.0
@@ -1403,26 +1416,22 @@ SCRIPTS = {
         out='short-psalm91.mp4',
         narration='short-prayer-psalm91.mp3',
         stock_queries=[
-            'calm mountain lake dusk',
-            'divine sunbeams clouds',
-            'sacred mountain sanctuary starry night',
-            'starry night sky mountains',
-            'cozy candlelit bedroom starry night',
-            'golden sunrise lake mist',
+            'calm mountain lake sunset water reflection',
+            'sun rays breaking clouds mountains',
+            'ancient castle mountain starry night',
+            'milky way galaxy starry night sky',
+            'candle burning dark room night prayer',
+            'golden sunrise lake mist morning',
         ],
         scenes=[
-            dict(a='', img='short-prayer-scene-01.jpg', lock_plate=True, kicker='PSALM 91:1', sub='NIGHT PROTECTION PRAYER', cam='tilt_up', focus=(0.5, 0.45)),
-            dict(a='secret place', img='short-prayer-scene-02.jpg', lock_plate=True, kicker='HE WHO DWELLS', sub='IN THE SECRET PLACE', cam='push_in', focus=(0.5, 0.45)),
-            dict(a='no evil shall', img='short-prayer-scene-05.jpg', lock_plate=True, kicker='PSALM 91:10', sub='NO EVIL SHALL BEFALL YOU', cam='push_in', focus=(0.5, 0.42)),
-            dict(a='heavenly father', img='short-prayer-scene-03.jpg', lock_plate=True, kicker='PRAYER FOR PEACE', sub='QUIET EVERY ANXIOUS THOUGHT', cam='pan_right', focus=(0.5, 0.48)),
-            dict(a='send your angels', img='short-prayer-scene-06.jpg', lock_plate=True, kicker='ANGELIC PROTECTION', sub='DIVINE PEACE OVER THIS HOME', cam='pull_out', focus=(0.48, 0.48)),
-            dict(a='sleep in peace', img='short-prayer-scene-04.jpg', lock_plate=True, kicker='REST IN GOD', sub='HE FIGHTS YOUR BATTLES', cam='pan_left', focus=(0.5, 0.45)),
+            dict(a='', img='short-prayer-scene-01.jpg', kicker='PSALM 91:1', sub='NIGHT PROTECTION PRAYER', cam='tilt_up', focus=(0.5, 0.45)),
+            dict(a='secret place', img='short-prayer-scene-02.jpg', kicker='HE WHO DWELLS', sub='IN THE SECRET PLACE', cam='push_in', focus=(0.5, 0.45)),
+            dict(a='no evil shall', img='short-prayer-scene-05.jpg', kicker='PSALM 91:10', sub='NO EVIL SHALL BEFALL YOU', cam='push_in', focus=(0.5, 0.42)),
+            dict(a='heavenly father', img='short-prayer-scene-03.jpg', kicker='PRAYER FOR PEACE', sub='QUIET EVERY ANXIOUS THOUGHT', cam='pan_right', focus=(0.5, 0.48)),
+            dict(a='send your angels', img='short-prayer-scene-06.jpg', kicker='ANGELIC PROTECTION', sub='DIVINE PEACE OVER THIS HOME', cam='pull_out', focus=(0.48, 0.48)),
+            dict(a='sleep in peace', img='short-prayer-scene-04.jpg', kicker='REST IN GOD', sub='HE FIGHTS YOUR BATTLES', cam='pan_left', focus=(0.5, 0.45)),
         ],
-        teases=[
-            dict(t=5.5, text='PSALM 91:1-2'),
-            dict(t=14.0, text='ANGELS GUARD THIS HOME'),
-            dict(t=24.5, text='PEACE OVER YOUR FAMILY'),
-        ],
+        teases=[],
         sfx_cues=[
             dict(hush=dict(a='secret place', lead=0.35, dur=1.0, depth=0.85)),
             dict(hush=dict(a='heavenly father', lead=0.35, dur=1.0, depth=0.85)),
@@ -1651,15 +1660,15 @@ def main(key):
         sc['last_source'] = source
         extra_z = 1.0 + 0.015 * (1.0 - ease_out_cubic(clamp01(pos / FADE))) if (k > 0 and pos < FADE) else 1.0
         frame = camera_frame(source, p, sc.get('cam', 'push_in'), sc.get('focus', (0.5, 0.45)), extra_zoom=extra_z)
+        is_prayer = (key == 'short-psalm91' or 'prayer' in key)
         if k > 0 and pos < FADE:
             prev = scenes[k - 1]
             u = pos / FADE
             prev_z = 1.0 + 0.010 * ease_in_out_sine(u)
             prev_plate = prev.get('last_source', prev.get('plate'))
             f_prev = camera_frame(prev_plate, 1.0, prev.get('cam', 'push_in'), prev.get('focus', (0.5, 0.45)), extra_zoom=prev_z)
-            frame = optical_flare_transition(f_prev, frame, u)
+            frame = optical_flare_transition(f_prev, frame, u, is_prayer=is_prayer)
 
-        is_prayer = (key == 'short-psalm91' or 'prayer' in key)
         ov = Image.new('RGBA', (W, H), (0, 0, 0, 0))
         ov.alpha_composite(ambient_layer(t, is_prayer=is_prayer))
         mp_win = cfg.get('midpoint_poster_window')
