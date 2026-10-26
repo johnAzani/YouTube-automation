@@ -1,0 +1,10 @@
+# Ensure binary media files are never corrupted by line ending transformations
+*.mp4 binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.zip binary
+*.mp3 binary
+*.wav binary
+*.m4a binary
+*.ttf binary

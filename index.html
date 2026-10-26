@@ -92,6 +92,84 @@
     width: 100%;
     max-width: 340px;
   }
+    .video-play-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(3, 10, 24, 0.40);
+    cursor: pointer;
+    transition: opacity 0.25s, visibility 0.25s;
+    z-index: 10;
+  }
+  .video-play-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .play-circle {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: #ffc93c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65), 0 0 24px rgba(255, 201, 60, 0.6);
+    transition: transform 0.15s, background 0.15s;
+  }
+  .play-circle:hover {
+    transform: scale(1.08);
+    background: #ffd86b;
+  }
+  .play-triangle {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 24px solid #030a18;
+    margin-left: 5px;
+  }
+  .muted-banner {
+    display: none;
+    background: #2a1b04;
+    border: 1px solid #ffc93c;
+    color: #ffd75a;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-top: 8px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    max-width: 340px;
+    box-sizing: border-box;
+  }
+  .video-links-bar {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+    width: 100%;
+  }
+  .btn-alt-link {
+    flex: 1;
+    background: #0d274c;
+    border: 1px solid #1f4b82;
+    color: #dbe8fa;
+    font-size: 12px;
+    padding: 7px 10px;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .btn-alt-link:hover {
+    background: #173d72;
+    border-color: #ffc93c;
+    color: #fff;
+  }
   .video-wrapper video {
     width: 100%;
     height: 100%;
@@ -304,11 +382,21 @@ async function forceDownload(url, filename) {
       <!-- Left Column: Video Player & Transport Controls -->
       <div class="video-column">
         <div class="video-wrapper">
-          <video id="review-player" playsinline controls preload="metadata" poster="media/shorts-psalm91-poster.jpg">
+          <video id="review-player" src="media/shorts-psalm91.mp4" playsinline webkit-playsinline controls preload="auto" poster="media/shorts-psalm91-poster.jpg">
             <source src="media/shorts-psalm91.mp4" type="video/mp4">
+            <source src="./media/shorts-psalm91.mp4" type="video/mp4">
             <source src="docs/media/shorts-psalm91.mp4" type="video/mp4">
             Your browser does not support HTML5 video playback.
           </video>
+          <div id="video-play-overlay" class="video-play-overlay" onclick="togglePlay()" title="Click to Play / Pause">
+            <div class="play-circle">
+              <div class="play-triangle"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="muted-notice" class="muted-banner" onclick="unmutePlayer()">
+          🔇 Video playing muted (device policy). <strong>Click here to unmute sound 🔊</strong>
         </div>
 
         <div class="player-hud">
@@ -337,8 +425,11 @@ async function forceDownload(url, filename) {
             <div style="margin-top: 4px;"><strong>Active Spoken Text:</strong> <span id="hud-phrase-text">BEFORE YOU CLOSE YOUR EYES TONIGHT</span></div>
           </div>
 
-          <div style="margin-top: 12px; text-align: center;">
-            <button class="btn-gold" style="width: 100%; padding: 10px 14px; font-size: 13.5px;" onclick="forceDownload('media/shorts-psalm91.mp4', 'shorts-psalm91.mp4')">⬇️ Download Video MP4 (10.4 MB)</button>
+          <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 8px;">
+            <button class="btn-gold" style="width: 100%; padding: 10px 14px; font-size: 13.5px;" onclick="forceDownload('media/shorts-psalm91.mp4', 'shorts-psalm91.mp4')">⬇️ Download Video MP4 (10.8 MB)</button>
+            <div class="video-links-bar">
+              <a class="btn-alt-link" href="media/shorts-psalm91.mp4" target="_blank" rel="noopener">↗ Open Raw Video in New Tab</a>
+            </div>
           </div>
         </div>
       </div>
@@ -658,6 +749,8 @@ Here, you will find powerful daily Christian prayers, deep scripture meditations
 <script>
 // Video Player Controller & Synchronizer
 const player = document.getElementById('review-player');
+const playOverlay = document.getElementById('video-play-overlay');
+const mutedNotice = document.getElementById('muted-notice');
 const curTimeEl = document.getElementById('timecode-current');
 const totalTimeEl = document.getElementById('timecode-total');
 const btnPlayPause = document.getElementById('btn-play-pause');
@@ -669,24 +762,64 @@ function formatTime(sec) {
   const m = Math.floor(sec / 60);
   const s = Math.floor(sec % 60);
   const cs = Math.floor((sec % 1) * 100);
-  return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}.${String(cs).padStart(2, '0')}`;
+  return String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0') + '.' + String(cs).padStart(2, '0');
+}
+
+function updatePlayUI(isPlaying) {
+  if (isPlaying) {
+    btnPlayPause.textContent = player && player.muted ? '⏸ Pause (Muted)' : '⏸ Pause';
+    if (playOverlay) playOverlay.classList.add('hidden');
+  } else {
+    btnPlayPause.textContent = '▶ Play';
+    if (playOverlay) playOverlay.classList.remove('hidden');
+  }
+}
+
+function showMutedNotice() {
+  if (mutedNotice && player && player.muted) {
+    mutedNotice.style.display = 'block';
+  }
+}
+
+function unmutePlayer() {
+  if (!player) return;
+  player.muted = false;
+  if (mutedNotice) mutedNotice.style.display = 'none';
+  btnPlayPause.textContent = '⏸ Pause';
 }
 
 function togglePlay() {
   if (!player) return;
   if (player.paused) {
-    player.play();
+    const playPromise = player.play();
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        updatePlayUI(true);
+      }).catch(err => {
+        console.warn('Direct unmuted play blocked, attempting muted play:', err);
+        player.muted = true;
+        player.play().then(() => {
+          updatePlayUI(true);
+          showMutedNotice();
+        }).catch(finalErr => {
+          console.error('All play attempts failed:', finalErr);
+          alert('Playback prevented by browser security. Please tap the video directly or use "Open Raw Video in New Tab".');
+        });
+      });
+    }
   } else {
     player.pause();
+    updatePlayUI(false);
   }
 }
 
 if (player) {
-  player.addEventListener('play', () => {
-    btnPlayPause.textContent = '⏸ Pause';
-  });
-  player.addEventListener('pause', () => {
-    btnPlayPause.textContent = '▶ Play';
+  player.addEventListener('play', () => updatePlayUI(true));
+  player.addEventListener('pause', () => updatePlayUI(false));
+  player.addEventListener('volumechange', () => {
+    if (!player.muted && mutedNotice) {
+      mutedNotice.style.display = 'none';
+    }
   });
   player.addEventListener('loadedmetadata', () => {
     totalTimeEl.textContent = formatTime(player.duration);
@@ -696,24 +829,66 @@ if (player) {
     curTimeEl.textContent = formatTime(t);
     updateActiveCues(t);
   });
+
+  // Source fallback handling
+  const candidateSources = [
+    'media/shorts-psalm91.mp4',
+    './media/shorts-psalm91.mp4',
+    'docs/media/shorts-psalm91.mp4',
+    '/YouTube-automation/media/shorts-psalm91.mp4'
+  ];
+  let candidateIndex = 0;
+  player.addEventListener('error', (e) => {
+    candidateIndex++;
+    if (candidateIndex < candidateSources.length) {
+      console.warn('Player source failed, trying candidate:', candidateSources[candidateIndex]);
+      player.src = candidateSources[candidateIndex];
+      player.load();
+    }
+  });
 }
 
 function seekRelative(delta) {
   if (!player) return;
-  player.currentTime = Math.max(0, Math.min(player.duration || 40.2, player.currentTime + delta));
+  const dur = player.duration || 40.2;
+  player.currentTime = Math.max(0, Math.min(dur, player.currentTime + delta));
 }
 
 function stepFrame(frames) {
   if (!player) return;
   player.pause();
   const fps = 24.0;
-  player.currentTime = Math.max(0, Math.min(player.duration || 40.2, player.currentTime + (frames / fps)));
+  const dur = player.duration || 40.2;
+  player.currentTime = Math.max(0, Math.min(dur, player.currentTime + (frames / fps)));
 }
 
 function seekTo(t) {
   if (!player) return;
-  player.currentTime = t;
-  player.play();
+  const targetTime = Math.max(0, Math.min(player.duration || 40.2, t));
+  if (player.readyState < 1) {
+    const onMeta = () => {
+      player.removeEventListener('loadedmetadata', onMeta);
+      player.currentTime = targetTime;
+      const p = player.play();
+      if (p !== undefined) p.catch(() => {});
+    };
+    player.addEventListener('loadedmetadata', onMeta);
+    player.load();
+    return;
+  }
+  try {
+    player.currentTime = targetTime;
+  } catch (err) {
+    console.warn('Seek error:', err);
+  }
+  const p = player.play();
+  if (p !== undefined) {
+    p.catch(e => {
+      console.warn('Play after seek was prevented:', e);
+      player.muted = true;
+      player.play().catch(() => {});
+    });
+  }
 }
 
 function setSpeed(speed, btn) {
