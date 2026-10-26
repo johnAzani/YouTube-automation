@@ -429,6 +429,35 @@ def fit_font(weight, sz, text, maxw, tracking=2.2):
         f = fnt(weight, sz)
     return f
 
+PHRASE_FONT_CACHE = {}
+def fit_phrase_font(lines, base_sz=46, max_safe=520, tracking=3.5):
+    sz = base_sz
+    f = fnt('Black', sz)
+    d = ImageDraw.Draw(Image.new('RGB', (8, 8)))
+    while sz > 26:
+        overflow = False
+        for line in lines:
+            if not line:
+                continue
+            words_l = line.split()
+            w_words = [sum(d.textlength(ch, font=f) + tracking for ch in w) - tracking for w in words_l]
+            space_w = d.textlength(' ', font=f) + tracking
+            line_w = sum(w_words) + space_w * (len(words_l) - 1)
+            if line_w > max_safe:
+                overflow = True
+                break
+        if not overflow:
+            break
+        sz -= 2
+        f = fnt('Black', sz)
+    return sz, f
+
+def get_phrase_font(lines, base_sz=46, max_safe=520, tracking=3.5):
+    key = (tuple(lines), base_sz, max_safe, tracking)
+    if key not in PHRASE_FONT_CACHE:
+        PHRASE_FONT_CACHE[key] = fit_phrase_font(lines, base_sz, max_safe, tracking)
+    return PHRASE_FONT_CACHE[key]
+
 # ------------------------------------------------ cold-open, poster & end overlays ----
 def poster_lockup_overlay(layer, kicker, big1, big2, sub_pill, alpha=1.0, is_prayer=False):
     """High-CTR scroll-stopping poster typography sized across ~87% of the 720px width
@@ -605,6 +634,124 @@ def hud_chapter_layer(bg_rgb, kicker, sub, idx, nscenes, t_scene, scene_dur, tot
     bx = SAFE_L + int((SAFE_R - SAFE_L) * clamp01(total_frac))
     if bx > SAFE_L:
         d.rectangle([SAFE_L, H - 6, bx, H], fill=YELLOW + (235,))
+    return layer
+
+def build_kinetic_stream(key, raw_words):
+    phrases_def = SCRIPTS[key].get('kinetic_phrases')
+    if not phrases_def:
+        return []
+    stream = []
+    for w0, w1, l1, l2, acc in phrases_def:
+        seg = raw_words[w0:w1 + 1]
+        t_start = seg[0][0]
+        t_end = seg[-1][1]
+        stream.append(dict(
+            t0=t_start,
+            t1=t_end,
+            line1=l1,
+            line2=l2,
+            accent_words=acc,
+            words=seg,
+        ))
+    return stream
+
+def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
+    """After Effects-style big kinetic typography motion text design with multi-pass drop shadow."""
+    layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    if not stream:
+        return layer
+
+    active = None
+    for item in stream:
+        if item['t0'] - 0.05 <= t <= item['t1'] + 0.12:
+            active = item
+            break
+    if not active:
+        return layer
+
+    t0 = active['t0']
+    t1 = active['t1'] + 0.10
+
+    in_a = clamp01((t - (t0 - 0.05)) / 0.10)
+    out_a = clamp01((t1 - t) / 0.12)
+    alpha = in_a * out_a
+    if alpha <= 0.01:
+        return layer
+
+    u = clamp01((t - t0) / 0.22)
+    # After Effects spring/bounce scale
+    scale = 1.0 + 0.14 * (1.0 - u) * math.cos(u * math.pi * 2.5) if u < 1.0 else 1.0
+    slide_y = (1.0 - ease_out_expo(u)) * 12.0
+
+    cy = 780 + slide_y
+    lines = [l for l in [active['line1'], active['line2']] if l]
+    base_sz = 46 if len(lines) > 1 else 52
+    max_safe = SAFE_R - SAFE_L - 32
+    f_size, f = get_phrase_font(lines, base_sz=base_sz, max_safe=max_safe, tracking=3.5)
+    tr = 3.5
+
+    line_h = int(f_size * 1.25)
+    total_h = len(lines) * line_h
+    y_start = cy - total_h / 2.0
+
+    GOLD = (255, 218, 64)
+    WHITE = (255, 255, 255)
+
+    text_canvas = Image.new('RGBA', (W, total_h + 80), (0, 0, 0, 0))
+    td = ImageDraw.Draw(text_canvas)
+
+    active_spoken = ''
+    for ws, we, w in active.get('words', []):
+        if ws - 0.05 <= t <= we + 0.08:
+            active_spoken = w.upper()
+            break
+
+    for li, line in enumerate(lines):
+        words = line.split()
+        w_words = [sum(td.textlength(ch, font=f) + tr for ch in w) - tr for w in words]
+        space_w = td.textlength(' ', font=f) + tr
+        line_w = sum(w_words) + space_w * (len(words) - 1)
+        x = (W - line_w) / 2.0
+        y = li * line_h + 20
+
+        for w, ww in zip(words, w_words):
+            is_accent = any(aw in w for aw in active['accent_words'])
+            is_word_active = bool(active_spoken and (active_spoken in w or w in active_spoken))
+
+            if is_accent:
+                col = (255, 238, 120) if is_word_active else GOLD
+            else:
+                col = (255, 255, 255) if is_word_active else (240, 244, 250)
+
+            # Directional contact drop shadow
+            for sx, sy, sa in [(0, 3, int(220 * alpha)), (0, 6, int(170 * alpha)), (0, 10, int(110 * alpha))]:
+                cur_x = x
+                for ch in w:
+                    td.text((cur_x + sx, y + sy), ch, font=f, fill=(0, 0, 0, sa))
+                    cur_x += td.textlength(ch, font=f) + tr
+
+            # Main typography
+            cur_x = x
+            for ch in w:
+                td.text((cur_x, y), ch, font=f, fill=col + (int(255 * alpha),))
+                cur_x += td.textlength(ch, font=f) + tr
+            x += ww + space_w
+
+    # Ambient deep shadow bloom
+    ambient = text_canvas.split()[3].filter(ImageFilter.GaussianBlur(14))
+    ambient_layer_img = Image.new('RGBA', text_canvas.size, (0, 0, 0, 0))
+    ambient_layer_img.paste((0, 0, 0, int(195 * alpha)), (0, 0), mask=ambient)
+
+    combined = Image.alpha_composite(ambient_layer_img, text_canvas)
+
+    if abs(scale - 1.0) > 0.01:
+        nw = max(2, int(W * scale))
+        nh = max(2, int(combined.height * scale))
+        combined = combined.resize((nw, nh), Image.BICUBIC)
+        layer.alpha_composite(combined, (int((W - nw) / 2), int(y_start - 20 - (nh - combined.height) / 2)))
+    else:
+        layer.alpha_composite(combined, (0, int(y_start - 20)))
+
     return layer
 
 def build_caption_stream(key, raw_words):
@@ -1456,6 +1603,34 @@ SCRIPTS = {
             (80, 90, 'Sleep in peace tonight, knowing that God is fighting your battles.'),
             (91, 107, 'If you receive this protection, type Amen, and subscribe to pray with us every day.'),
         ],
+        kinetic_phrases=[
+            (0, 5, 'BEFORE YOU CLOSE', 'YOUR EYES TONIGHT', ['EYES', 'TONIGHT']),
+            (6, 9, 'TAKE A', 'DEEP BREATH', ['DEEP', 'BREATH']),
+            (10, 15, 'PLACE YOUR HOME', 'AND FAMILY', ['HOME', 'FAMILY']),
+            (16, 19, 'UNDER', 'PSALM 91', ['PSALM', '91']),
+            (20, 22, 'HE WHO DWELLS', '', ['DWELLS']),
+            (23, 26, 'IN THE', 'SECRET PLACE', ['SECRET', 'PLACE']),
+            (27, 30, 'OF THE', 'MOST HIGH', ['MOST', 'HIGH']),
+            (31, 32, 'SHALL ABIDE', '', ['ABIDE']),
+            (33, 35, 'UNDER THE', 'SHADOW', ['SHADOW']),
+            (36, 38, 'OF THE', 'ALMIGHTY', ['ALMIGHTY']),
+            (39, 43, 'NO EVIL', 'SHALL BEFALL YOU', ['NO', 'EVIL']),
+            (44, 47, 'NOR SHALL ANY', 'PLAGUE', ['PLAGUE']),
+            (48, 51, 'COME NEAR', 'YOUR DWELLING', ['DWELLING']),
+            (52, 53, 'HEAVENLY FATHER', '', ['HEAVENLY', 'FATHER']),
+            (54, 58, 'QUIET EVERY', 'ANXIOUS THOUGHT', ['QUIET', 'ANXIOUS']),
+            (59, 61, 'SEND YOUR', 'ANGELS', ['ANGELS']),
+            (62, 65, 'TO GUARD', 'THIS HOME', ['GUARD', 'HOME']),
+            (66, 69, 'WASH AWAY', 'EVERY FEAR', ['WASH', 'FEAR']),
+            (70, 74, 'LET YOUR', 'DIVINE PEACE', ['DIVINE', 'PEACE']),
+            (75, 77, 'FILL THIS ROOM', '', ['FILL', 'ROOM']),
+            (78, 81, 'FROM WALL', 'TO WALL', ['WALL']),
+            (82, 85, 'SLEEP IN', 'PEACE TONIGHT', ['PEACE', 'TONIGHT']),
+            (86, 92, 'GOD IS FIGHTING', 'YOUR BATTLES', ['FIGHTING', 'BATTLES']),
+            (93, 97, 'RECEIVE THIS', 'PROTECTION', ['PROTECTION']),
+            (98, 99, 'TYPE AMEN', 'TO RECEIVE', ['AMEN']),
+            (100, 107, 'SUBSCRIBE TO PRAY', 'WITH US DAILY', ['SUBSCRIBE', 'PRAY']),
+        ],
     ),
 }
 
@@ -1545,6 +1720,7 @@ def main(key):
     beats = resolve_beats(key, words)
     scenes = resolve_scenes(key, words, total)
     cap_stream = build_caption_stream(key, words)
+    kinetic_stream = build_kinetic_stream(key, words)
 
     if os.environ.get('ENABLE_STOCK_BROLL', '1').strip().lower() not in ('0', 'false', 'no', 'off'):
         try:
@@ -1677,9 +1853,10 @@ def main(key):
         in_open_poster = bool(poster_spec and t < 2.8 and not is_prayer)
         if not in_open_poster and not in_mid_poster:
             ov.alpha_composite(viz_layer(frame, sc.get('viz'), pos, sc_dur))
-            ov.alpha_composite(beats_layer(frame, beats, t, expire_t, is_prayer=is_prayer))
-            ov.alpha_composite(tease_layer(frame, cfg.get('teases', []), t))
-        if t < 2.8:
+            if not is_prayer:
+                ov.alpha_composite(beats_layer(frame, beats, t, expire_t, is_prayer=is_prayer))
+                ov.alpha_composite(tease_layer(frame, cfg.get('teases', []), t))
+        if t < 2.8 and not is_prayer:
             cold_open_overlay(ov, frame, cfg['title'], t, dur=2.8, poster_spec=poster_spec, is_prayer=is_prayer)
         elif in_mid_poster:
             mw0, mw1 = mp_win
@@ -1688,7 +1865,10 @@ def main(key):
             poster_lockup_overlay(ov, poster_spec[0], poster_spec[1], poster_spec[2], poster_spec[3], alpha=ma_in * ma_out, is_prayer=is_prayer)
         if not in_open_poster and not in_mid_poster:
             ov.alpha_composite(hud_chapter_layer(frame, sc['kicker'], sc.get('sub', ''), k + 1, nscenes, pos, sc_dur, t / total, is_prayer=is_prayer))
-            ov.alpha_composite(caption_ribbon_layer(frame, cap_stream, t, is_prayer=is_prayer))
+            if is_prayer and kinetic_stream:
+                ov.alpha_composite(kinetic_typography_layer(frame, kinetic_stream, t, is_prayer=is_prayer))
+            else:
+                ov.alpha_composite(caption_ribbon_layer(frame, cap_stream, t, is_prayer=is_prayer))
         frame = Image.alpha_composite(frame.convert('RGBA'), ov).convert('RGB')
         if t >= adur - 0.4:
             frame = end_card_overlay(frame, cfg['end'], t - (adur - 0.4), total - (adur - 0.4), is_prayer=is_prayer)
