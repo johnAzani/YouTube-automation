@@ -401,10 +401,13 @@ def run_short_release(
     published_record = PUBLISHED_DIR / f"{edition.slug}.md"
 
     legacy_video_ids: list[str] = []
+    desired_privacy: str | None = None
     if manifest_path and manifest_path.is_file():
         mdata = yaml.safe_load(manifest_path.read_text(encoding="utf-8")) or {}
         if bool(mdata.get("replace")) or bool(mdata.get("force")):
             force = True
+        if mdata.get("privacy"):
+            desired_privacy = str(mdata.get("privacy")).strip().lower()
         for vid in mdata.get("legacy_video_ids") or []:
             if isinstance(vid, str) and vid.strip():
                 legacy_video_ids.append(vid.strip())
@@ -503,7 +506,7 @@ def run_short_release(
         )
 
         try:
-            up = upload(doc, staged_video, thumbnail_path=staged_thumb, description=edition.description)
+            up = upload(doc, staged_video, thumbnail_path=staged_thumb, description=edition.description, privacy=desired_privacy)
         except QuotaExceededError as exc:
             reset_utc = exc.reset_utc or calculate_next_quota_reset_utc()
             reset_iso = reset_utc.isoformat()
