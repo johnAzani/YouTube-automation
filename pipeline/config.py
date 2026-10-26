@@ -36,9 +36,12 @@ class Config:
     ken_burns: bool = _env_bool("KEN_BURNS", True)  # disable on very slow CPUs
 
     # --- narration -------------------------------------------------------
-    voice: str = os.environ.get("TTS_VOICE", "en-US-ChristopherNeural")
+    voice: str = os.environ.get("TTS_VOICE", "Charon")
+    gemini_voice: str = os.environ.get("GEMINI_VOICE", "Charon")
+    gemini_api_key: str = os.environ.get("GEMINI_API_KEY", "")
     tts_rate: str = os.environ.get("TTS_RATE", "+0%")
     words_per_second: float = float(os.environ.get("WORDS_PER_SECOND", "2.5"))
+    zero_dollar_mode: bool = _env_bool("ZERO_DOLLAR_MODE", True)
 
     # --- assets ----------------------------------------------------------
     pexels_api_key: str = os.environ.get("PEXELS_API_KEY", "")

@@ -15,6 +15,7 @@ Credentials come from secrets (never from git):
 from __future__ import annotations
 
 from dataclasses import dataclass
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from .config import CONFIG
@@ -32,6 +33,25 @@ class UploadResult:
     privacy_status: str
     watch_url: str
     auto_published: bool
+
+
+class QuotaExceededError(RuntimeError):
+    """Raised when YouTube Data API v3 daily upload quota (10,000 units) is exceeded."""
+
+    def __init__(self, message: str, reset_utc: datetime | None = None, reset_time_utc: datetime | None = None):
+        super().__init__(message)
+        self.message = message
+        self.reset_utc = reset_utc or reset_time_utc or calculate_next_quota_reset_utc()
+        self.reset_time_utc = self.reset_utc
+
+
+def calculate_next_quota_reset_utc() -> datetime:
+    """YouTube API quota resets daily at midnight Pacific Time (08:00 UTC)."""
+    now_utc = datetime.now(timezone.utc)
+    reset_today = now_utc.replace(hour=8, minute=0, second=0, microsecond=0)
+    if now_utc >= reset_today:
+        return reset_today + timedelta(days=1)
+    return reset_today
 
 
 def _client_credentials(client_id: str, client_secret: str) -> tuple[str, str]:
@@ -121,10 +141,21 @@ def upload(
     request = youtube.videos().insert(part="snippet,status", body=body, media_body=media)
 
     response = None
-    while response is None:
-        status, response = request.next_chunk()
-        if status:
-            print(f"[upload] {int(status.progress() * 100)}%")
+    try:
+        while response is None:
+            status, response = request.next_chunk()
+            if status:
+                print(f"[upload] {int(status.progress() * 100)}%")
+    except Exception as exc:
+        err_msg = str(exc)
+        if "quotaExceeded" in err_msg or "uploadLimitExceeded" in err_msg:
+            reset_dt = calculate_next_quota_reset_utc()
+            iso_reset = reset_dt.isoformat().replace("+00:00", "Z")
+            raise QuotaExceededError(
+                f"YouTube daily API upload quota exceeded (10,000 units limit). Pausing until midnight PT reset ({iso_reset}).",
+                reset_time_utc=reset_dt,
+            ) from exc
+        raise
 
     video_id = response["id"]
     stored_privacy = response.get("status", {}).get("privacyStatus", privacy)
