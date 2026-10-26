@@ -7,6 +7,9 @@ numpy>=1.26
 # Neural narration — free, no API key (Microsoft Edge voices)
 edge-tts>=6.1
 
+# Google Gemini voiceover / AI audio synthesis
+google-genai>=2.0.0
+
 # YouTube upload (Data API v3 — free, 100 uploads/day bucket)
 google-api-python-client>=2.100
 google-auth-oauthlib>=1.1

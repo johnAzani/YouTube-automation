@@ -117,16 +117,32 @@ def synthesize(text: str, out_dir: Path, voice: str = "", srt_name: str = "capti
 
     word_times: list[tuple[str, float, float]] = []
     engine = "edge-tts"
-    try:
-        word_times = asyncio.run(_edge_tts(text, voice, CONFIG.tts_rate, audio_path))
-        if not audio_path.exists() or audio_path.stat().st_size < 512:
-            raise RuntimeError("edge-tts produced no audio")
-        if not word_times:  # some edge-tts versions don't emit boundaries
+
+    # 1. Prefer Google Gemini API when GEMINI_API_KEY is present
+    from .gemini_tts import get_gemini_api_key, synthesize_gemini_audio
+
+    gemini_key = get_gemini_api_key()
+    if gemini_key:
+        try:
+            synthesize_gemini_audio(text, audio_path, voice=voice)
             word_times = _estimate_word_times(text, CONFIG.words_per_second)
-    except Exception as exc:  # noqa: BLE001 - fallback is the point
-        print(f"[tts] edge-tts unavailable ({exc!r}); using offline placeholder narration")
-        word_times = _placeholder_audio(text, audio_path)
-        engine = "placeholder"
+            engine = "gemini-api"
+            print(f"[tts] successfully synthesized voiceover with Google Gemini API ({voice})")
+        except Exception as exc:  # noqa: BLE001
+            print(f"[tts] gemini-api unavailable ({exc!r}); falling back to edge-tts")
+
+    # 2. Fall back to edge-tts if Gemini was not used or failed
+    if engine != "gemini-api":
+        try:
+            word_times = asyncio.run(_edge_tts(text, voice, CONFIG.tts_rate, audio_path))
+            if not audio_path.exists() or audio_path.stat().st_size < 512:
+                raise RuntimeError("edge-tts produced no audio")
+            if not word_times:  # some edge-tts versions don't emit boundaries
+                word_times = _estimate_word_times(text, CONFIG.words_per_second)
+        except Exception as exc:  # noqa: BLE001 - fallback is the point
+            print(f"[tts] edge-tts unavailable ({exc!r}); using offline placeholder narration")
+            word_times = _placeholder_audio(text, audio_path)
+            engine = "placeholder"
 
     duration = word_times[-1][2] + 0.3 if word_times else 0.0
     # Prefer real audio duration when ffprobe is available
