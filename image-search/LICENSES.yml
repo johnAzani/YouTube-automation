@@ -14,7 +14,7 @@
 #
 # Only `cleared` files may appear in monetized output. See docs/ASSET_SOURCING.md.
 generated_by: scripts/licence_ledger.py
-counts: {rights-encumbered: 13, corrupt: 1, unverified: 35, cleared: 20, total: 69}
+counts: {rights-encumbered: 13, corrupt: 1, unverified: 40, cleared: 22, total: 76}
 files:
   - file: "andrew-fastow-enron-cfo-trial-photo-1.jpg"
     sha256: "65e2e05397988b8e602059c0e552e820ea2dfe5abe7de85841bd55c9d04a0e19"
@@ -491,6 +491,60 @@ files:
     verified_by: "studio-pipeline"
     evidence: "no embedded rights claim and no provenance metadata"
     notes: "First-party 9:16 editorial visual created specifically for this repository; zero third-party agency or rights-managed input."
+  - file: "short-enron-crash-poster.jpg"
+    sha256: "8264723541d4bafc03a4450873ce22152931980e3eb0b26d68e08edba330a0db"
+    bytes: 272569
+    dimensions: "768x1376"
+    status: "cleared"
+    license: "Original project editorial visual — generated exclusively for Money, Explained; commercial publishing permitted"
+    source_url: "https://github.com/johnAzani/YouTube-automation/blob/main/image-search/short-enron-crash-poster.jpg"
+    attribution: "Original studio plate generated for Money, Explained (johnAzani/YouTube-automation)"
+    verified_on: "2026-10-23"
+    verified_by: "SHA-256 verification and visual inspection"
+    evidence: "Generated clean studio asset; no third-party trademarks, watermarks, or copyrighted photographs"
+    notes: "Original 9:16 vertical high-contrast financial crash skyscraper poster plate for Enron Short cover and Scene 7."
+  - file: "short-enron-thumb-hero.jpg"
+    sha256: "640c53257d96168ff2ba93fe95145ef3b094262f9bb905b464261bf7425057e2"
+    bytes: 258810
+    dimensions: "1376x768"
+    status: "cleared"
+    license: "Original project editorial visual — generated exclusively for Money, Explained; commercial publishing permitted"
+    source_url: "https://github.com/johnAzani/YouTube-automation/blob/main/image-search/short-enron-thumb-hero.jpg"
+    attribution: "Original studio plate generated for Money, Explained (johnAzani/YouTube-automation)"
+    verified_on: "2026-10-23"
+    verified_by: "SHA-256 verification and visual inspection"
+    evidence: "Generated clean studio asset; no third-party trademarks, watermarks, or copyrighted photographs"
+    notes: "Original 16:9 high-contrast financial crash corporate tower hero plate for Enron Short custom thumbnail."
+  - file: "short-prayer-cover-poster.jpg"
+    sha256: "4eaff7a9e79144dcc3c28f30e7ff665bb7850fd153fdb90f888276e06423cbc2"
+    bytes: 215788
+    dimensions: "768x1376"
+    status: "unverified"
+    evidence: "no embedded rights claim and no provenance metadata"
+  - file: "short-prayer-scene-01.jpg"
+    sha256: "bccf6d2c5425f8236634c4a8351d9a5e7e071d478f11ce962b7dd7ae63321de2"
+    bytes: 128405
+    dimensions: "768x1376"
+    status: "unverified"
+    evidence: "no embedded rights claim and no provenance metadata"
+  - file: "short-prayer-scene-02.jpg"
+    sha256: "54737bb361ae7ccc8c2d77fb2f5fa9a4cab55769aa7ac54f2440c7b8988476b7"
+    bytes: 171765
+    dimensions: "768x1376"
+    status: "unverified"
+    evidence: "no embedded rights claim and no provenance metadata"
+  - file: "short-prayer-scene-03.jpg"
+    sha256: "976b596986153db90513420b24584d3618c8b2073e703265efc658747ebdedd4"
+    bytes: 241405
+    dimensions: "768x1376"
+    status: "unverified"
+    evidence: "no embedded rights claim and no provenance metadata"
+  - file: "short-prayer-scene-04.jpg"
+    sha256: "a931dcffddd48f2346f993c541a37fc707dc82255ff89ea709ad72bbe7f3bb83"
+    bytes: 122492
+    dimensions: "768x1376"
+    status: "unverified"
+    evidence: "no embedded rights claim and no provenance metadata"
   - file: "south-fork-dam-lake-conemaugh-johnstown--1.jpg"
     sha256: "12a5a90cb674b94cd57954ab3b6304541388347028dd9679232e2de158f5a54d"
     bytes: 924965
@@ -553,27 +607,3 @@ files:
     rights_claim: "Copyright 2021 Steven L. Markos"
     embedded_artist: "Steve Markos"
     evidence: "EXIF Copyright: \"Copyright 2021 Steven L. Markos\"; \"All Rights Reserved\" present"
-  - file: "short-enron-thumb-hero.jpg"
-    sha256: "640c53257d96168ff2ba93fe95145ef3b094262f9bb905b464261bf7425057e2"
-    bytes: 258810
-    dimensions: "1376x768"
-    status: "cleared"
-    license: "Original project editorial visual — generated exclusively for Money, Explained; commercial publishing permitted"
-    source_url: "https://github.com/johnAzani/YouTube-automation/blob/main/image-search/short-enron-thumb-hero.jpg"
-    attribution: "Original studio plate generated for Money, Explained (johnAzani/YouTube-automation)"
-    verified_on: "2026-10-23"
-    verified_by: "SHA-256 verification and visual inspection"
-    evidence: "Generated clean studio asset; no third-party trademarks, watermarks, or copyrighted photographs"
-    notes: "Original 16:9 high-contrast financial crash corporate tower hero plate for Enron Short custom thumbnail."
-  - file: "short-enron-crash-poster.jpg"
-    sha256: "8264723541d4bafc03a4450873ce22152931980e3eb0b26d68e08edba330a0db"
-    bytes: 272569
-    dimensions: "768x1376"
-    status: "cleared"
-    license: "Original project editorial visual — generated exclusively for Money, Explained; commercial publishing permitted"
-    source_url: "https://github.com/johnAzani/YouTube-automation/blob/main/image-search/short-enron-crash-poster.jpg"
-    attribution: "Original studio plate generated for Money, Explained (johnAzani/YouTube-automation)"
-    verified_on: "2026-10-23"
-    verified_by: "SHA-256 verification and visual inspection"
-    evidence: "Generated clean studio asset; no third-party trademarks, watermarks, or copyrighted photographs"
-    notes: "Original 9:16 vertical high-contrast financial crash skyscraper poster plate for Enron Short cover and Scene 7."
