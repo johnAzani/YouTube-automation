@@ -3,46 +3,46 @@
     {
       "index": 1,
       "t0": 0.0,
-      "t1": 6.05,
+      "t1": 6.51,
       "kicker": "PSALM 91:1",
       "sub": "NIGHT PROTECTION PRAYER",
       "img": "short-prayer-scene-01.jpg"
     },
     {
       "index": 2,
-      "t0": 6.05,
-      "t1": 14.35,
+      "t0": 6.51,
+      "t1": 13.45,
       "kicker": "HE WHO DWELLS",
       "sub": "IN THE SECRET PLACE",
       "img": "short-prayer-scene-02.jpg"
     },
     {
       "index": 3,
-      "t0": 14.35,
-      "t1": 20.35,
+      "t0": 13.45,
+      "t1": 20.87,
       "kicker": "PSALM 91:10",
       "sub": "NO EVIL SHALL BEFALL YOU",
       "img": "short-prayer-scene-05.jpg"
     },
     {
       "index": 4,
-      "t0": 20.35,
-      "t1": 24.7,
+      "t0": 20.87,
+      "t1": 25.05,
       "kicker": "PRAYER FOR PEACE",
       "sub": "QUIET EVERY ANXIOUS THOUGHT",
       "img": "short-prayer-scene-03.jpg"
     },
     {
       "index": 5,
-      "t0": 24.7,
-      "t1": 32.8,
+      "t0": 25.05,
+      "t1": 33.21,
       "kicker": "ANGELIC PROTECTION",
       "sub": "DIVINE PEACE OVER THIS HOME",
       "img": "short-prayer-scene-06.jpg"
     },
     {
       "index": 6,
-      "t0": 32.8,
+      "t0": 33.21,
       "t1": 40.2,
       "kicker": "REST IN GOD",
       "sub": "HE FIGHTS YOUR BATTLES",
@@ -53,7 +53,7 @@
     {
       "index": 1,
       "t0": 0.0,
-      "t1": 1.95,
+      "t1": 1.99,
       "line1": "BEFORE YOU CLOSE",
       "line2": "YOUR EYES TONIGHT",
       "accent": [
@@ -63,8 +63,8 @@
     },
     {
       "index": 2,
-      "t0": 1.95,
-      "t1": 3.06,
+      "t0": 1.99,
+      "t1": 3.09,
       "line1": "TAKE A",
       "line2": "DEEP BREATH",
       "accent": [
@@ -74,8 +74,8 @@
     },
     {
       "index": 3,
-      "t0": 3.06,
-      "t1": 4.85,
+      "t0": 3.24,
+      "t1": 4.84,
       "line1": "PLACE YOUR HOME",
       "line2": "AND FAMILY",
       "accent": [
@@ -85,8 +85,8 @@
     },
     {
       "index": 4,
-      "t0": 4.85,
-      "t1": 6.16,
+      "t0": 4.84,
+      "t1": 6.34,
       "line1": "UNDER",
       "line2": "PSALM 91",
       "accent": [
@@ -96,8 +96,8 @@
     },
     {
       "index": 5,
-      "t0": 6.16,
-      "t1": 7.39,
+      "t0": 6.62,
+      "t1": 7.68,
       "line1": "HE WHO DWELLS",
       "line2": "",
       "accent": [
@@ -106,8 +106,8 @@
     },
     {
       "index": 6,
-      "t0": 7.39,
-      "t1": 9.12,
+      "t0": 7.68,
+      "t1": 9.45,
       "line1": "IN THE",
       "line2": "SECRET PLACE",
       "accent": [
@@ -117,8 +117,8 @@
     },
     {
       "index": 7,
-      "t0": 9.12,
-      "t1": 10.63,
+      "t0": 9.45,
+      "t1": 10.61,
       "line1": "OF THE",
       "line2": "MOST HIGH",
       "accent": [
@@ -128,8 +128,8 @@
     },
     {
       "index": 8,
-      "t0": 10.63,
-      "t1": 11.65,
+      "t0": 10.61,
+      "t1": 11.84,
       "line1": "SHALL ABIDE",
       "line2": "",
       "accent": [
@@ -138,8 +138,8 @@
     },
     {
       "index": 9,
-      "t0": 11.65,
-      "t1": 13.09,
+      "t0": 11.86,
+      "t1": 12.61,
       "line1": "UNDER THE",
       "line2": "SHADOW",
       "accent": [
@@ -148,8 +148,8 @@
     },
     {
       "index": 10,
-      "t0": 13.09,
-      "t1": 14.46,
+      "t0": 12.61,
+      "t1": 13.56,
       "line1": "OF THE",
       "line2": "ALMIGHTY",
       "accent": [
@@ -158,8 +158,8 @@
     },
     {
       "index": 11,
-      "t0": 14.46,
-      "t1": 16.63,
+      "t0": 13.56,
+      "t1": 16.28,
       "line1": "NO EVIL",
       "line2": "SHALL BEFALL YOU",
       "accent": [
@@ -169,8 +169,8 @@
     },
     {
       "index": 12,
-      "t0": 16.63,
-      "t1": 18.44,
+      "t0": 17.12,
+      "t1": 18.3,
       "line1": "NOR SHALL ANY",
       "line2": "PLAGUE",
       "accent": [
@@ -179,8 +179,8 @@
     },
     {
       "index": 13,
-      "t0": 18.44,
-      "t1": 20.46,
+      "t0": 18.37,
+      "t1": 20.79,
       "line1": "COME NEAR",
       "line2": "YOUR DWELLING",
       "accent": [
@@ -189,8 +189,8 @@
     },
     {
       "index": 14,
-      "t0": 20.46,
-      "t1": 21.79,
+      "t0": 20.98,
+      "t1": 22.01,
       "line1": "HEAVENLY FATHER",
       "line2": "",
       "accent": [
@@ -200,8 +200,8 @@
     },
     {
       "index": 15,
-      "t0": 21.79,
-      "t1": 24.81,
+      "t0": 22.01,
+      "t1": 25.05,
       "line1": "QUIET EVERY",
       "line2": "ANXIOUS THOUGHT",
       "accent": [
@@ -211,8 +211,8 @@
     },
     {
       "index": 16,
-      "t0": 24.81,
-      "t1": 26.03,
+      "t0": 25.16,
+      "t1": 26.29,
       "line1": "SEND YOUR",
       "line2": "ANGELS",
       "accent": [
@@ -221,8 +221,8 @@
     },
     {
       "index": 17,
-      "t0": 26.03,
-      "t1": 27.43,
+      "t0": 26.29,
+      "t1": 27.53,
       "line1": "TO GUARD",
       "line2": "THIS HOME",
       "accent": [
@@ -232,8 +232,8 @@
     },
     {
       "index": 18,
-      "t0": 27.43,
-      "t1": 28.96,
+      "t0": 27.53,
+      "t1": 29.31,
       "line1": "WASH AWAY",
       "line2": "EVERY FEAR",
       "accent": [
@@ -243,8 +243,8 @@
     },
     {
       "index": 19,
-      "t0": 28.96,
-      "t1": 30.68,
+      "t0": 29.37,
+      "t1": 30.84,
       "line1": "LET YOUR",
       "line2": "DIVINE PEACE",
       "accent": [
@@ -254,8 +254,8 @@
     },
     {
       "index": 20,
-      "t0": 30.68,
-      "t1": 31.69,
+      "t0": 30.84,
+      "t1": 31.8,
       "line1": "FILL THIS ROOM",
       "line2": "",
       "accent": [
@@ -265,8 +265,8 @@
     },
     {
       "index": 21,
-      "t0": 31.69,
-      "t1": 32.91,
+      "t0": 31.8,
+      "t1": 33.24,
       "line1": "FROM WALL",
       "line2": "TO WALL",
       "accent": [
@@ -275,8 +275,8 @@
     },
     {
       "index": 22,
-      "t0": 32.91,
-      "t1": 33.98,
+      "t0": 33.32,
+      "t1": 35.05,
       "line1": "SLEEP IN",
       "line2": "PEACE TONIGHT",
       "accent": [
@@ -286,8 +286,8 @@
     },
     {
       "index": 23,
-      "t0": 33.98,
-      "t1": 35.91,
+      "t0": 35.05,
+      "t1": 36.21,
       "line1": "GOD IS FIGHTING",
       "line2": "YOUR BATTLES",
       "accent": [
@@ -297,28 +297,19 @@
     },
     {
       "index": 24,
-      "t0": 35.91,
-      "t1": 36.93,
-      "line1": "RECEIVE THIS",
-      "line2": "PROTECTION",
+      "t0": 36.21,
+      "t1": 37.24,
+      "line1": "RECEIVE THIS PROTECTION",
+      "line2": "TYPE AMEN",
       "accent": [
-        "PROTECTION"
-      ]
-    },
-    {
-      "index": 25,
-      "t0": 36.93,
-      "t1": 37.26,
-      "line1": "TYPE AMEN",
-      "line2": "TO RECEIVE",
-      "accent": [
+        "PROTECTION",
         "AMEN"
       ]
     },
     {
-      "index": 26,
-      "t0": 37.26,
-      "t1": 39.06,
+      "index": 25,
+      "t0": 37.24,
+      "t1": 38.5,
       "line1": "SUBSCRIBE TO PRAY",
       "line2": "WITH US DAILY",
       "accent": [

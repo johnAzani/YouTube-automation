@@ -62,9 +62,9 @@ def test_psalm91_segment_and_typography_sync():
     stream = build_kinetic_stream("short-psalm91", words)
     scenes = resolve_scenes("short-psalm91", words, 40.2)
 
-    # Invariant 1: Scene 2 cuts directly before vocal transient of 'he who dwells' (t=6.20s -> cut=6.05s)
+    # Invariant 1: Scene 2 cuts directly before vocal transient of 'he who dwells' (t=6.66s -> cut=6.51s)
     s2 = scenes[1]
-    assert abs(s2["t0"] - 6.05) < 0.1, f"Scene 2 start mismatch: {s2['t0']}"
+    assert abs(s2["t0"] - 6.51) < 0.1, f"Scene 2 start mismatch: {s2['t0']}"
     assert "HE WHO DWELLS" in s2["kicker"]
 
     # Invariant 2: No kinetic typography display window overlaps with its successor
