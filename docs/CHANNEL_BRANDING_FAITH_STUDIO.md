@@ -1,18 +1,23 @@
-# John Azani — Faith, Prayer & Scripture Studio
-## Complete Channel Branding & Identity Kit
+# The Secret Place | Daily Prayer & Scripture Studio
+## Complete Faceless Channel Branding & Identity Kit
 
-**Channel Handle:** `@JohnAzani`  
-**Core Purpose:** Inspiring believers and spiritual seekers to start and end their day in God's presence through biblically grounded prayers, peaceful scripture meditation, and faith-building stories.  
+**Primary Brand Name:** **The Secret Place | Daily Prayer & Scripture**  
+*(Alternative Brand: **Sanctuary of Prayer | Daily Christian Devotional**)*  
+**Core Scripture Foundation:** *Psalm 91:1 — "He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty."*  
+**Channel Format:** 100% Faceless Christian Prayer & Scripture Meditation Studio.  
 **Editorial Standard:** An **Editorial Production Studio** adhering strictly to YouTube's 2026 Partner Program policies (no low-effort AI slop, no repetitious templates, no manipulative spiritual extortion).
 
 ---
 
-## 1. Channel Identity & Names
+## 1. Channel Identity & Naming Options
 
-### Recommended Primary Channel Name:
-> **John Azani | Daily Prayer & Faith**
+### Option A (Recommended — Highest Search Resonance):
+> **The Secret Place | Daily Prayer & Scripture**  
+> **Handle Suggestion:** `@TheSecretPlacePrayer` (or `@SecretPlaceDevotional`)
 
-*(Alternative options for YouTube Studio: `John Azani — Prayer & Scripture` or `John Azani | Christian Meditation & Prayers`)*
+### Option B (Peace & Sanctuary Focus):
+> **Sanctuary of Prayer | Daily Christian Meditation**  
+> **Handle Suggestion:** `@SanctuaryOfPrayer` (or `@DailyPrayerSanctuary`)
 
 ### One-Line Channel Tagline:
 > *"Start and end your day in God's presence."*
@@ -30,7 +35,7 @@
 *Copy and paste this directly into **YouTube Studio → Customization → Basic info → Description**:*
 
 ```text
-Welcome to John Azani — a sacred space dedicated to helping you start and end every day in the peace and presence of God.
+Welcome to The Secret Place — a sacred sanctuary dedicated to helping you start and end every day in the peace and presence of God.
 
 Here, you will find powerful daily Christian prayers, deep scripture meditations, peaceful bedtime Bible readings, and inspiring stories of faith. Whether you are facing anxiety, walking through a difficult season, or simply seeking spiritual renewal, our mission is to anchor your heart in God's living Word.
 
@@ -40,13 +45,13 @@ Here, you will find powerful daily Christian prayers, deep scripture meditations
 • Peaceful Christian Sleep Meditations & Scripture streams to quiet your mind before bed
 • Deep Dives into Biblical Wisdom and the life-changing promises of Jesus Christ
 
-📖 "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus." — Philippians 4:6-7
+📖 "He who dwells in the secret place of the Most High shall abide under the shadow of the Almighty. I will say of the Lord, 'He is my refuge and my fortress; my God, in Him I will trust.'" — Psalm 91:1-2
 
-🔔 Subscribe and join our growing daily prayer family. Turn on notifications so you never miss a morning or evening prayer.
+🔔 Subscribe and join our daily prayer community. Turn on notifications so you never miss a morning or evening prayer.
 
-🙏 PRAYER REQUESTS & CONTACT:
-Have a personal prayer request? Leave a comment on our latest video, or email our prayer community at:
-prayer@johnazani.com (or your personal business email)
+🙏 PRAYER REQUESTS & COMMUNITY:
+Have a personal prayer request? Leave a comment on our latest video, or email our prayer team at:
+contact@thesecretplacesanctuary.com
 
 God bless you, and may His peace surround you today.
 ```
@@ -58,18 +63,19 @@ God bless you, and may His peace surround you today.
 *Copy and paste these comma-separated keywords into **YouTube Studio → Settings → Channel → Basic info → Keywords**:*
 
 ```text
-John Azani, Christian Prayer, Daily Prayer, Morning Prayer, Bedtime Prayer, Psalm 91 Prayer, Scripture Meditation, Christian Meditation, Bible Verses for Sleep, Powerful Prayer, Prayer for Healing, Prayer for Protection, Deliverance Prayer, Christian Motivation, Faith in God, Jesus Christ, Holy Spirit, Peaceful Sleep Bible Verses, Biblical Wisdom, Christian Encouragement
+The Secret Place, Christian Prayer, Daily Prayer, Morning Prayer, Bedtime Prayer, Psalm 91 Prayer, Scripture Meditation, Christian Meditation, Bible Verses for Sleep, Powerful Prayer, Prayer for Healing, Prayer for Protection, Deliverance Prayer, Christian Motivation, Faith in God, Jesus Christ, Holy Spirit, Peaceful Sleep Bible Verses, Biblical Wisdom, Christian Encouragement, Sanctuary of Prayer
 ```
 
 ---
 
 ## 4. Visual Identity & Brand Assets
 
-| Asset | Specifications | File Location in Workspace | YouTube Studio Location |
+| Asset | Dimensions | Workspace File Location | Where to Upload in YouTube Studio |
 |---|---|---|---|
-| **Channel Banner** | `2560 × 1440 px` (PNG)<br>Central safe area: `1546 × 423 px` | `docs/media/john-azani-prayer-channel-banner.png` | **Customization → Branding → Banner image** |
-| **Profile Picture / Avatar** | `800 × 800 px` (PNG)<br>Circular-crop verified | `docs/media/john-azani-prayer-channel-avatar.png` | **Customization → Branding → Picture** |
-| **Video Watermark** | `150 × 150 px` (PNG)<br>Transparent background badge | `docs/media/john-azani-prayer-channel-watermark.png` | **Customization → Branding → Video watermark** (Display time: *Entire video*) |
+| **Primary Banner (The Secret Place)** | `2560 × 1440 px` (PNG)<br>Central safe area: `1546 × 423 px` | `docs/media/channel-prayer-banner.png` | **Customization → Branding → Banner image** |
+| **Alternative Banner (Sanctuary of Prayer)** | `2560 × 1440 px` (PNG)<br>Central safe area: `1546 × 423 px` | `docs/media/channel-prayer-banner-sanctuary.png` | **Customization → Branding → Banner image** |
+| **Profile Picture / Avatar** | `800 × 800 px` (PNG)<br>Faceless golden cross & Bible seal | `docs/media/channel-prayer-avatar.png` | **Customization → Branding → Picture** |
+| **Video Watermark** | `150 × 150 px` (PNG)<br>Transparent background badge | `docs/media/channel-prayer-watermark.png` | **Customization → Branding → Video watermark** (Display time: *Entire video*) |
 
 ### Color Palette:
 - **Celestial Sapphire:** `#030a18` (Primary background, evokes midnight calm and peace)
@@ -92,7 +98,7 @@ John Azani, Christian Prayer, Daily Prayer, Morning Prayer, Bedtime Prayer, Psal
 * **0:36 – 0:52 (The Pastoral Prayer):**  
   A warm, personal prayer inviting God's peace, protection, and breakthrough.
 * **0:53 – 0:60 (The Engagement CTA):**  
-  *"If you receive this blessing, type AMEN in the comments and share this with someone who needs God's peace today. Subscribe to pray with us tomorrow."*
+  *"If you receive this blessing, type AMEN in the comments and share this with someone who needs God's peace today. Subscribe to join our daily prayer family."*
 
 ### B. The 10–15 Minute Morning Devotional & Prayer (AdSense & Daily Habit Engine)
 * **Part 1 (The Exposition — 2 to 3 mins):**  
