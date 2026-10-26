@@ -661,7 +661,7 @@ def build_kinetic_stream(key, raw_words):
             disp_t0 = 0.0
         else:
             prev_end = stream[i - 1]['t1']
-            disp_t0 = max(prev_end, t_start - 0.10)
+            disp_t0 = max(prev_end, t_start - 0.08)
         item['disp_t0'] = disp_t0
 
     for i in range(len(stream)):
@@ -674,7 +674,8 @@ def build_kinetic_stream(key, raw_words):
     return stream
 
 def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
-    """After Effects-style big kinetic typography motion text design with multi-pass drop shadow."""
+    """Rock-solid After Effects-style kinetic typography motion text design:
+    zero scale-pulse wobble, microsecond-aligned to what is being spoken."""
     layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     if not stream:
         return layer
@@ -690,18 +691,17 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
     t0 = active['disp_t0']
     t1 = active['disp_t1']
 
-    in_a = clamp01((t - t0) / 0.07)
-    out_a = clamp01((t1 - t) / 0.07)
+    in_a = clamp01((t - t0) / 0.06)
+    out_a = clamp01((t1 - t) / 0.06)
     alpha = min(in_a, out_a)
     if alpha <= 0.01:
         return layer
 
-    u = clamp01((t - t0) / 0.18)
-    # After Effects spring/bounce scale
-    scale = 1.0 + 0.12 * (1.0 - u) * math.cos(u * math.pi * 2.5) if u < 1.0 else 1.0
-    slide_y = (1.0 - ease_out_expo(u)) * 10.0
+    # 100% Rock-solid vertical lock: NO scale pulsing, NO bicubic wobbling
+    scale = 1.0
+    slide_y = 0.0
 
-    cy = 780 + slide_y
+    cy = 780
     lines = [l for l in [active['line1'], active['line2']] if l]
     base_sz = 46 if len(lines) > 1 else 52
     max_safe = SAFE_R - SAFE_L - 32
@@ -1635,14 +1635,21 @@ SCRIPTS = {
             (93, 107, 'If you receive this protection, type Amen, and subscribe to pray with us every day.'),
         ],
         kinetic_phrases=[
-            (0, 19, 'BEFORE YOU CLOSE YOUR EYES TONIGHT', 'PLACE YOUR HOME UNDER PSALM 91', ['CLOSE', 'EYES', 'HOME', 'PSALM', '91']),
-            (20, 38, 'HE WHO DWELLS IN THE SECRET PLACE', 'SHALL ABIDE UNDER HIS SHADOW', ['DWELLS', 'SECRET', 'PLACE', 'SHADOW', 'ALMIGHTY']),
-            (39, 51, 'NO EVIL SHALL BEFALL YOU', 'NOR ANY PLAGUE NEAR YOUR DWELLING', ['NO', 'EVIL', 'BEFALL', 'PLAGUE', 'DWELLING']),
+            (0, 5, 'BEFORE YOU CLOSE', 'YOUR EYES TONIGHT', ['CLOSE', 'EYES', 'TONIGHT']),
+            (6, 9, 'TAKE A', 'DEEP BREATH', ['DEEP', 'BREATH']),
+            (10, 19, 'PLACE YOUR HOME & FAMILY', 'UNDER PSALM 91', ['HOME', 'FAMILY', 'PSALM', '91']),
+            (20, 26, 'HE WHO DWELLS', 'IN THE SECRET PLACE', ['DWELLS', 'SECRET', 'PLACE']),
+            (27, 38, 'OF THE MOST HIGH', 'SHALL ABIDE IN HIS SHADOW', ['MOST', 'HIGH', 'ABIDE', 'SHADOW']),
+            (39, 43, 'NO EVIL SHALL', 'BEFALL YOU', ['NO', 'EVIL', 'BEFALL']),
+            (44, 51, 'NOR SHALL ANY PLAGUE', 'COME NEAR YOUR DWELLING', ['PLAGUE', 'DWELLING']),
             (52, 58, 'HEAVENLY FATHER', 'QUIET EVERY ANXIOUS THOUGHT', ['HEAVENLY', 'FATHER', 'QUIET', 'ANXIOUS']),
-            (59, 69, 'SEND YOUR ANGELS TO GUARD THIS HOME', 'AND WASH AWAY EVERY FEAR', ['ANGELS', 'GUARD', 'HOME', 'WASH', 'FEAR']),
-            (70, 81, 'LET YOUR DIVINE PEACE', 'FILL THIS ROOM FROM WALL TO WALL', ['DIVINE', 'PEACE', 'ROOM', 'WALL']),
-            (82, 92, 'SLEEP IN PEACE TONIGHT', 'GOD IS FIGHTING YOUR BATTLES', ['SLEEP', 'PEACE', 'GOD', 'FIGHTING', 'BATTLES']),
-            (93, 107, 'TYPE AMEN TO RECEIVE THIS', 'SUBSCRIBE TO PRAY EVERY DAY', ['TYPE', 'AMEN', 'RECEIVE', 'SUBSCRIBE', 'PRAY']),
+            (59, 65, 'SEND YOUR ANGELS', 'TO GUARD THIS HOME', ['ANGELS', 'GUARD', 'HOME']),
+            (66, 69, 'WASH AWAY', 'EVERY FEAR', ['WASH', 'FEAR']),
+            (70, 81, 'LET YOUR DIVINE PEACE', 'FILL THIS ROOM WALL TO WALL', ['DIVINE', 'PEACE', 'WALL']),
+            (82, 85, 'SLEEP IN', 'PEACE TONIGHT', ['PEACE', 'TONIGHT']),
+            (86, 92, 'GOD IS FIGHTING', 'YOUR BATTLES', ['FIGHTING', 'BATTLES']),
+            (93, 99, 'RECEIVE THIS PROTECTION', 'TYPE AMEN', ['RECEIVE', 'PROTECTION', 'TYPE', 'AMEN']),
+            (100, 107, 'SUBSCRIBE TO PRAY', 'WITH US EVERY DAY', ['SUBSCRIBE', 'PRAY']),
         ],
     ),
 }

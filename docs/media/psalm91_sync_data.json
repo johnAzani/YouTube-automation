@@ -2,73 +2,104 @@
   "title": "Psalm 91: Night Prayer of Protection",
   "channel": "The Secret Place",
   "duration": 40.26,
+  "phrases_count": 15,
   "scenes_count": 8,
-  "segments": [
+  "phrases": [
     {
       "index": 1,
-      "kicker": "PSALM 91:1",
-      "sub": "NIGHT PROTECTION PRAYER",
-      "scene_t0": 0.0,
-      "scene_t1": 6.51,
       "disp_t0": 0.0,
-      "disp_t1": 6.56,
-      "line1": "BEFORE YOU CLOSE YOUR EYES TONIGHT",
-      "line2": "PLACE YOUR HOME UNDER PSALM 91",
+      "disp_t1": 1.95,
+      "line1": "BEFORE YOU CLOSE",
+      "line2": "YOUR EYES TONIGHT",
       "accents": [
         "CLOSE",
         "EYES",
-        "HOME",
-        "PSALM",
-        "91"
+        "TONIGHT"
       ],
-      "speech": "before you close your eyes tonight take a deep breath and place your home and family under psalm ninety one"
+      "speech": "before you close your eyes tonight"
     },
     {
       "index": 2,
-      "kicker": "HE WHO DWELLS",
-      "sub": "IN THE SECRET PLACE",
-      "scene_t0": 6.51,
-      "scene_t1": 13.45,
-      "disp_t0": 6.56,
-      "disp_t1": 13.5,
-      "line1": "HE WHO DWELLS IN THE SECRET PLACE",
-      "line2": "SHALL ABIDE UNDER HIS SHADOW",
+      "disp_t0": 1.95,
+      "disp_t1": 3.2,
+      "line1": "TAKE A",
+      "line2": "DEEP BREATH",
       "accents": [
-        "DWELLS",
-        "SECRET",
-        "PLACE",
-        "SHADOW",
-        "ALMIGHTY"
+        "DEEP",
+        "BREATH"
       ],
-      "speech": "he who dwells in the secret place of the most high shall abide under the shadow of the almighty"
+      "speech": "take a deep breath"
     },
     {
       "index": 3,
-      "kicker": "PSALM 91:10",
-      "sub": "NO EVIL SHALL BEFALL YOU",
-      "scene_t0": 13.45,
-      "scene_t1": 20.87,
-      "disp_t0": 13.5,
-      "disp_t1": 20.92,
-      "line1": "NO EVIL SHALL BEFALL YOU",
-      "line2": "NOR ANY PLAGUE NEAR YOUR DWELLING",
+      "disp_t0": 3.2,
+      "disp_t1": 6.58,
+      "line1": "PLACE YOUR HOME & FAMILY",
+      "line2": "UNDER PSALM 91",
       "accents": [
-        "NO",
-        "EVIL",
-        "BEFALL",
-        "PLAGUE",
-        "DWELLING"
+        "HOME",
+        "FAMILY",
+        "PSALM",
+        "91"
       ],
-      "speech": "no evil shall befall you nor shall any plague come near your dwelling"
+      "speech": "and place your home and family under psalm ninety one"
     },
     {
       "index": 4,
-      "kicker": "PRAYER FOR PEACE",
-      "sub": "QUIET EVERY ANXIOUS THOUGHT",
-      "scene_t0": 20.87,
-      "scene_t1": 25.05,
-      "disp_t0": 20.92,
-      "disp_t1": 25.1,
+      "disp_t0": 6.58,
+      "disp_t1": 9.41,
+      "line1": "HE WHO DWELLS",
+      "line2": "IN THE SECRET PLACE",
+      "accents": [
+        "DWELLS",
+        "SECRET",
+        "PLACE"
+      ],
+      "speech": "he who dwells in the secret place"
+    },
+    {
+      "index": 5,
+      "disp_t0": 9.41,
+      "disp_t1": 13.52,
+      "line1": "OF THE MOST HIGH",
+      "line2": "SHALL ABIDE IN HIS SHADOW",
+      "accents": [
+        "MOST",
+        "HIGH",
+        "ABIDE",
+        "SHADOW"
+      ],
+      "speech": "of the most high shall abide under the shadow of the almighty"
+    },
+    {
+      "index": 6,
+      "disp_t0": 13.52,
+      "disp_t1": 17.08,
+      "line1": "NO EVIL SHALL",
+      "line2": "BEFALL YOU",
+      "accents": [
+        "NO",
+        "EVIL",
+        "BEFALL"
+      ],
+      "speech": "no evil shall befall you"
+    },
+    {
+      "index": 7,
+      "disp_t0": 17.08,
+      "disp_t1": 20.94,
+      "line1": "NOR SHALL ANY PLAGUE",
+      "line2": "COME NEAR YOUR DWELLING",
+      "accents": [
+        "PLAGUE",
+        "DWELLING"
+      ],
+      "speech": "nor shall any plague come near your dwelling"
+    },
+    {
+      "index": 8,
+      "disp_t0": 20.94,
+      "disp_t1": 25.12,
       "line1": "HEAVENLY FATHER",
       "line2": "QUIET EVERY ANXIOUS THOUGHT",
       "accents": [
@@ -80,79 +111,92 @@
       "speech": "heavenly father quiet every anxious thought tonight"
     },
     {
-      "index": 5,
-      "kicker": "ANGELIC PROTECTION",
-      "sub": "GUARD THIS HOME",
-      "scene_t0": 25.05,
-      "scene_t1": 29.43,
-      "disp_t0": 25.1,
-      "disp_t1": 29.31,
-      "line1": "SEND YOUR ANGELS TO GUARD THIS HOME",
-      "line2": "AND WASH AWAY EVERY FEAR",
+      "index": 9,
+      "disp_t0": 25.12,
+      "disp_t1": 27.57,
+      "line1": "SEND YOUR ANGELS",
+      "line2": "TO GUARD THIS HOME",
       "accents": [
         "ANGELS",
         "GUARD",
-        "HOME",
+        "HOME"
+      ],
+      "speech": "send your angels to guard this home"
+    },
+    {
+      "index": 10,
+      "disp_t0": 27.57,
+      "disp_t1": 29.33,
+      "line1": "WASH AWAY",
+      "line2": "EVERY FEAR",
+      "accents": [
         "WASH",
         "FEAR"
       ],
-      "speech": "send your angels to guard this home wash away every fear"
+      "speech": "wash away every fear"
     },
     {
-      "index": 6,
-      "kicker": "DIVINE PEACE",
-      "sub": "FILL THIS ROOM WALL TO WALL",
-      "scene_t0": 29.43,
-      "scene_t1": 33.21,
-      "disp_t0": 29.31,
-      "disp_t1": 33.26,
+      "index": 11,
+      "disp_t0": 29.33,
+      "disp_t1": 33.28,
       "line1": "LET YOUR DIVINE PEACE",
-      "line2": "FILL THIS ROOM FROM WALL TO WALL",
+      "line2": "FILL THIS ROOM WALL TO WALL",
       "accents": [
         "DIVINE",
         "PEACE",
-        "ROOM",
         "WALL"
       ],
       "speech": "and let your divine peace fill this room from wall to wall"
     },
     {
-      "index": 7,
-      "kicker": "REST IN GOD",
-      "sub": "HE FIGHTS YOUR BATTLES",
-      "scene_t0": 33.21,
-      "scene_t1": 36.31,
-      "disp_t0": 33.26,
-      "disp_t1": 36.15,
-      "line1": "SLEEP IN PEACE TONIGHT",
-      "line2": "GOD IS FIGHTING YOUR BATTLES",
+      "index": 12,
+      "disp_t0": 33.28,
+      "disp_t1": 35.01,
+      "line1": "SLEEP IN",
+      "line2": "PEACE TONIGHT",
       "accents": [
-        "SLEEP",
         "PEACE",
-        "GOD",
+        "TONIGHT"
+      ],
+      "speech": "sleep in peace tonight"
+    },
+    {
+      "index": 13,
+      "disp_t0": 35.01,
+      "disp_t1": 36.17,
+      "line1": "GOD IS FIGHTING",
+      "line2": "YOUR BATTLES",
+      "accents": [
         "FIGHTING",
         "BATTLES"
       ],
-      "speech": "sleep in peace tonight knowing that god is fighting your battles"
+      "speech": "knowing that god is fighting your battles"
     },
     {
-      "index": 8,
-      "kicker": "DIVINE SHIELD",
-      "sub": "TYPE AMEN & SUBSCRIBE",
-      "scene_t0": 36.31,
-      "scene_t1": 40.26,
-      "disp_t0": 36.15,
-      "disp_t1": 38.55,
-      "line1": "TYPE AMEN TO RECEIVE THIS",
-      "line2": "SUBSCRIBE TO PRAY EVERY DAY",
+      "index": 14,
+      "disp_t0": 36.17,
+      "disp_t1": 37.42,
+      "line1": "RECEIVE THIS PROTECTION",
+      "line2": "TYPE AMEN",
       "accents": [
-        "TYPE",
-        "AMEN",
         "RECEIVE",
+        "PROTECTION",
+        "TYPE",
+        "AMEN"
+      ],
+      "speech": "if you receive this protection type amen"
+    },
+    {
+      "index": 15,
+      "disp_t0": 37.42,
+      "disp_t1": 38.55,
+      "line1": "SUBSCRIBE TO PRAY",
+      "line2": "WITH US EVERY DAY",
+      "accents": [
         "SUBSCRIBE",
         "PRAY"
       ],
-      "speech": "if you receive this protection type amen and subscribe to pray with us every day"
+      "speech": "and subscribe to pray with us every day"
     }
   ]
 }
