@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Secret Place — Download Channel Brand Assets</title>
+<title>The Secret Place — Video Review & Channel Assets</title>
 <style>
   :root { color-scheme: dark; }
   body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #030a18; color: #eef4ff; }
-  .wrap { max-width: 980px; margin: 0 auto; padding: 24px 16px 80px; }
+  .wrap { max-width: 1020px; margin: 0 auto; padding: 24px 16px 80px; }
   h1 { color: #ffc93c; font-size: 28px; margin-bottom: 6px; font-weight: 800; letter-spacing: -0.5px; }
-  h2 { color: #ffd75a; font-size: 20px; margin-top: 32px; margin-bottom: 12px; border-bottom: 1px solid #142848; padding-bottom: 8px; }
+  h2 { color: #ffd75a; font-size: 20px; margin-top: 36px; margin-bottom: 12px; border-bottom: 1px solid #142848; padding-bottom: 8px; }
   .sub { color: #a9bbd0; line-height: 1.5; font-size: 15px; margin-top: 0; }
   .badge { display: inline-block; background: #ffc93c; color: #030a18; font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; margin-bottom: 10px; }
   
@@ -42,6 +42,226 @@
   .btn-group { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 8px; }
 
   .copy-box { background: #040c1c; border: 1px solid #163259; border-radius: 8px; padding: 16px; font-family: monospace; font-size: 13px; color: #d2e4ff; white-space: pre-wrap; line-height: 1.5; max-height: 220px; overflow-y: auto; }
+
+  /* VIDEO REVIEW SUITE STYLING */
+  .review-container {
+    background: linear-gradient(135deg, #07172e 0%, #030b19 100%);
+    border: 2px solid #ffc93c;
+    border-radius: 16px;
+    padding: 24px;
+    margin: 24px 0 32px;
+    box-shadow: 0 14px 44px rgba(0,0,0,0.65);
+  }
+  .halt-alert {
+    background: rgba(255, 193, 7, 0.12);
+    border: 1px solid #ffc93c;
+    color: #ffecb3;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .halt-alert strong { color: #ffc93c; }
+
+  .review-grid {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+  @media (max-width: 860px) {
+    .review-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .video-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .video-wrapper {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 2px solid #234d85;
+    background: #000;
+    box-shadow: 0 10px 32px rgba(0,0,0,0.8);
+    aspect-ratio: 9 / 16;
+    width: 100%;
+    max-width: 340px;
+  }
+  .video-wrapper video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  .player-hud {
+    background: #040e22;
+    border: 1px solid #142f5a;
+    border-radius: 10px;
+    padding: 14px;
+    margin-top: 12px;
+    width: 100%;
+    max-width: 340px;
+    box-sizing: border-box;
+  }
+  .timecode-display {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffc93c;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .transport-btns {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .btn-transport {
+    background: #0c2344;
+    border: 1px solid #234d82;
+    color: #eef4ff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .btn-transport:hover {
+    background: #174279;
+    border-color: #ffc93c;
+  }
+  .speed-btns {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4px;
+  }
+  .speed-label {
+    font-size: 11px;
+    color: #8faecf;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .speed-btn {
+    background: transparent;
+    border: 1px solid #1d3e6c;
+    color: #8faecf;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .speed-btn.active {
+    background: #ffc93c;
+    color: #030a18;
+    font-weight: 800;
+    border-color: #ffc93c;
+  }
+  .hud-badge {
+    background: rgba(255,201,60,0.10);
+    border: 1px solid rgba(255,201,60,0.25);
+    border-radius: 6px;
+    padding: 8px 10px;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  .hud-badge strong {
+    color: #ffc93c;
+  }
+
+  .tabs-nav {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #173663;
+    padding-bottom: 8px;
+  }
+  .tab-btn {
+    background: none;
+    border: none;
+    color: #9cb5d3;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .tab-btn.active {
+    background: #102e5c;
+    color: #ffc93c;
+  }
+  .ledger-scroll {
+    max-height: 480px;
+    overflow-y: auto;
+    border: 1px solid #142f59;
+    border-radius: 8px;
+    background: #030915;
+  }
+  .cue-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    border-bottom: 1px solid #0f2444;
+    cursor: pointer;
+    transition: background 0.15s;
+    font-size: 13px;
+  }
+  .cue-item:hover {
+    background: #091d3d;
+  }
+  .cue-item.active {
+    background: #143566;
+    border-left: 4px solid #ffc93c;
+  }
+  .cue-time {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    color: #ffc93c;
+    font-weight: 700;
+    font-size: 12px;
+    margin-right: 12px;
+    white-space: nowrap;
+  }
+  .cue-text {
+    flex: 1;
+    color: #e0ecff;
+    font-weight: 500;
+  }
+  .cue-text .acc {
+    color: #ffd75a;
+    font-weight: 800;
+  }
+  .cue-badge {
+    background: #0a1f3d;
+    border: 1px solid #1d4375;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    color: #9cb5d3;
+    white-space: nowrap;
+    margin-left: 8px;
+  }
+  .cue-scene-kicker {
+    font-weight: 800;
+    color: #ffd75a;
+    font-size: 13px;
+  }
+  .cue-scene-sub {
+    font-size: 12px;
+    color: #9bb7da;
+    margin-top: 2px;
+  }
 </style>
 <script>
 async function forceDownload(url, filename) {
@@ -69,12 +289,275 @@ async function forceDownload(url, filename) {
 </head>
 <body>
 <div class="wrap">
-  <span class="badge">Official Brand Assets</span>
-  <h1>The Secret Place — Asset Download Hub</h1>
-  <p class="sub">Download your complete faceless channel artwork. All personal names have been removed. Every image is rendered at full YouTube Studio specification.</p>
+  <span class="badge">Official Review Portal</span>
+  <h1>The Secret Place — Video Review & Channel Assets</h1>
+  <p class="sub">Faceless Christian Prayer & Meditation Studio. In accordance with your instructions, YouTube uploads are completely halted until kinetic typography synchronization has been reviewed and verified here.</p>
+
+  <!-- VIDEO REVIEW STUDIO SECTION -->
+  <div class="review-container">
+    <div class="halt-alert">
+      <strong>⏸️ UPLOADS HALTED FOR EDITORIAL REVIEW:</strong>
+      All YouTube automated uploads remain stopped. Below is the newly rendered, frame-synchronized edition of <em>Psalm 91: Night Prayer of Protection</em>. Scene 2 now cuts precisely at <strong>6.05s</strong> (locking with vocal start <em>"He who dwells"</em> at 6.20s), and the kinetic typography stream operates on strict non-overlapping display boundaries.
+    </div>
+
+    <div class="review-grid">
+      <!-- Left Column: Video Player & Transport Controls -->
+      <div class="video-column">
+        <div class="video-wrapper">
+          <video id="review-player" playsinline controls preload="metadata" poster="media/shorts-psalm91-poster.jpg">
+            <source src="media/shorts-psalm91.mp4" type="video/mp4">
+            <source src="docs/media/shorts-psalm91.mp4" type="video/mp4">
+            Your browser does not support HTML5 video playback.
+          </video>
+        </div>
+
+        <div class="player-hud">
+          <div class="timecode-display">
+            <span id="timecode-current">00:00.00</span>
+            <span id="timecode-total">00:40.21</span>
+          </div>
+
+          <div class="transport-btns">
+            <button class="btn-transport" onclick="seekRelative(-1.0)">⏪ -1.0s</button>
+            <button class="btn-transport" onclick="stepFrame(-1)">⏮ -1F</button>
+            <button class="btn-transport" id="btn-play-pause" onclick="togglePlay()" style="background:#ffc93c; color:#030a18; font-weight:800;">▶ Play</button>
+            <button class="btn-transport" onclick="stepFrame(1)">+1F ⏭</button>
+            <button class="btn-transport" onclick="seekRelative(1.0)">+1.0s ⏩</button>
+          </div>
+
+          <div class="speed-btns">
+            <span class="speed-label">Speed:</span>
+            <button class="speed-btn" onclick="setSpeed(0.5, this)">0.5x</button>
+            <button class="speed-btn" onclick="setSpeed(0.75, this)">0.75x</button>
+            <button class="speed-btn active" onclick="setSpeed(1.0, this)">1.0x</button>
+          </div>
+
+          <div class="hud-badge">
+            <div><strong>Active Scene:</strong> <span id="hud-scene-title">Scene 1 (PSALM 91:1)</span></div>
+            <div style="margin-top: 4px;"><strong>Active Spoken Text:</strong> <span id="hud-phrase-text">BEFORE YOU CLOSE YOUR EYES TONIGHT</span></div>
+          </div>
+
+          <div style="margin-top: 12px; text-align: center;">
+            <button class="btn-gold" style="width: 100%; padding: 10px 14px; font-size: 13.5px;" onclick="forceDownload('media/shorts-psalm91.mp4', 'shorts-psalm91.mp4')">⬇️ Download Video MP4 (10.4 MB)</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Synchronization Ledger -->
+      <div>
+        <div class="tabs-nav">
+          <button class="tab-btn active" id="tab-btn-scenes" onclick="switchTab('scenes')">🎬 Scene Segments (6)</button>
+          <button class="tab-btn" id="tab-btn-phrases" onclick="switchTab('phrases')">✨ Kinetic Typography (26)</button>
+        </div>
+
+        <!-- Scene Ledger Tab -->
+        <div id="tab-scenes" class="ledger-scroll">
+          <div class="cue-item active" onclick="seekTo(0.00)" data-start="0.00" data-end="6.05">
+            <div>
+              <div class="cue-scene-kicker">01. PSALM 91:1</div>
+              <div class="cue-scene-sub">Cold Open · Night Protection Prayer</div>
+            </div>
+            <div style="text-align: right;">
+              <span class="cue-time">0.00s – 6.05s</span>
+              <span class="cue-badge">6.05s</span>
+            </div>
+          </div>
+
+          <div class="cue-item" onclick="seekTo(6.05)" data-start="6.05" data-end="14.35">
+            <div>
+              <div class="cue-scene-kicker">02. HE WHO DWELLS</div>
+              <div class="cue-scene-sub">In the Secret Place · Vocal Transient Cut</div>
+            </div>
+            <div style="text-align: right;">
+              <span class="cue-time">6.05s – 14.35s</span>
+              <span class="cue-badge">8.30s</span>
+            </div>
+          </div>
+
+          <div class="cue-item" onclick="seekTo(14.35)" data-start="14.35" data-end="20.35">
+            <div>
+              <div class="cue-scene-kicker">03. PSALM 91:10</div>
+              <div class="cue-scene-sub">No Evil Shall Befall You · Fortress of Light</div>
+            </div>
+            <div style="text-align: right;">
+              <span class="cue-time">14.35s – 20.35s</span>
+              <span class="cue-badge">6.00s</span>
+            </div>
+          </div>
+
+          <div class="cue-item" onclick="seekTo(20.35)" data-start="20.35" data-end="24.70">
+            <div>
+              <div class="cue-scene-kicker">04. PRAYER FOR PEACE</div>
+              <div class="cue-scene-sub">Heavenly Father · Quiet Every Anxious Thought</div>
+            </div>
+            <div style="text-align: right;">
+              <span class="cue-time">20.35s – 24.70s</span>
+              <span class="cue-badge">4.35s</span>
+            </div>
+          </div>
+
+          <div class="cue-item" onclick="seekTo(24.70)" data-start="24.70" data-end="32.80">
+            <div>
+              <div class="cue-scene-kicker">05. ANGELIC PROTECTION</div>
+              <div class="cue-scene-sub">Send Your Angels · Divine Peace Over Home</div>
+            </div>
+            <div style="text-align: right;">
+              <span class="cue-time">24.70s – 32.80s</span>
+              <span class="cue-badge">8.10s</span>
+            </div>
+          </div>
+
+          <div class="cue-item" onclick="seekTo(32.80)" data-start="32.80" data-end="40.21">
+            <div>
+              <div class="cue-scene-kicker">06. REST IN GOD</div>
+              <div class="cue-scene-sub">Sleep in Peace · Call to Action & Amen</div>
+            </div>
+            <div style="text-align: right;">
+              <span class="cue-time">32.80s – 40.21s</span>
+              <span class="cue-badge">7.41s</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kinetic Typography Ledger Tab -->
+        <div id="tab-phrases" class="ledger-scroll" style="display: none;">
+          <div class="cue-item" onclick="seekTo(0.00)" data-start="0.00" data-end="1.95">
+            <span class="cue-time">0.00s - 1.95s</span>
+            <span class="cue-text">BEFORE YOU CLOSE YOUR <span class="acc">EYES</span> <span class="acc">TONIGHT</span></span>
+            <span class="cue-badge">P01</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(1.95)" data-start="1.95" data-end="3.06">
+            <span class="cue-time">1.95s - 3.06s</span>
+            <span class="cue-text">TAKE A <span class="acc">DEEP</span> <span class="acc">BREATH</span></span>
+            <span class="cue-badge">P02</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(3.06)" data-start="3.06" data-end="4.85">
+            <span class="cue-time">3.06s - 4.85s</span>
+            <span class="cue-text">PLACE YOUR <span class="acc">HOME</span> AND <span class="acc">FAMILY</span></span>
+            <span class="cue-badge">P03</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(4.85)" data-start="4.85" data-end="6.16">
+            <span class="cue-time">4.85s - 6.16s</span>
+            <span class="cue-text">UNDER <span class="acc">PSALM</span> <span class="acc">91</span></span>
+            <span class="cue-badge">P04</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(6.16)" data-start="6.16" data-end="7.39">
+            <span class="cue-time">6.16s - 7.39s</span>
+            <span class="cue-text">HE WHO <span class="acc">DWELLS</span></span>
+            <span class="cue-badge">P05</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(7.39)" data-start="7.39" data-end="9.12">
+            <span class="cue-time">7.39s - 9.12s</span>
+            <span class="cue-text">IN THE <span class="acc">SECRET</span> <span class="acc">PLACE</span></span>
+            <span class="cue-badge">P06</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(9.12)" data-start="9.12" data-end="10.63">
+            <span class="cue-time">9.12s - 10.63s</span>
+            <span class="cue-text">OF THE <span class="acc">MOST</span> <span class="acc">HIGH</span></span>
+            <span class="cue-badge">P07</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(10.63)" data-start="10.63" data-end="11.65">
+            <span class="cue-time">10.63s - 11.65s</span>
+            <span class="cue-text">SHALL <span class="acc">ABIDE</span></span>
+            <span class="cue-badge">P08</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(11.65)" data-start="11.65" data-end="13.09">
+            <span class="cue-time">11.65s - 13.09s</span>
+            <span class="cue-text">UNDER THE <span class="acc">SHADOW</span></span>
+            <span class="cue-badge">P09</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(13.09)" data-start="13.09" data-end="14.46">
+            <span class="cue-time">13.09s - 14.46s</span>
+            <span class="cue-text">OF THE <span class="acc">ALMIGHTY</span></span>
+            <span class="cue-badge">P10</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(14.46)" data-start="14.46" data-end="16.63">
+            <span class="cue-time">14.46s - 16.63s</span>
+            <span class="cue-text"><span class="acc">NO</span> <span class="acc">EVIL</span> SHALL BEFALL YOU</span>
+            <span class="cue-badge">P11</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(16.63)" data-start="16.63" data-end="18.44">
+            <span class="cue-time">16.63s - 18.44s</span>
+            <span class="cue-text">NOR SHALL ANY <span class="acc">PLAGUE</span></span>
+            <span class="cue-badge">P12</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(18.44)" data-start="18.44" data-end="20.46">
+            <span class="cue-time">18.44s - 20.46s</span>
+            <span class="cue-text">COME NEAR YOUR <span class="acc">DWELLING</span></span>
+            <span class="cue-badge">P13</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(20.46)" data-start="20.46" data-end="21.79">
+            <span class="cue-time">20.46s - 21.79s</span>
+            <span class="cue-text"><span class="acc">HEAVENLY</span> <span class="acc">FATHER</span></span>
+            <span class="cue-badge">P14</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(21.79)" data-start="21.79" data-end="24.81">
+            <span class="cue-time">21.79s - 24.81s</span>
+            <span class="cue-text"><span class="acc">QUIET</span> EVERY <span class="acc">ANXIOUS</span> THOUGHT</span>
+            <span class="cue-badge">P15</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(24.81)" data-start="24.81" data-end="26.03">
+            <span class="cue-time">24.81s - 26.03s</span>
+            <span class="cue-text">SEND YOUR <span class="acc">ANGELS</span></span>
+            <span class="cue-badge">P16</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(26.03)" data-start="26.03" data-end="27.43">
+            <span class="cue-time">26.03s - 27.43s</span>
+            <span class="cue-text">TO <span class="acc">GUARD</span> THIS <span class="acc">HOME</span></span>
+            <span class="cue-badge">P17</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(27.43)" data-start="27.43" data-end="28.96">
+            <span class="cue-time">27.43s - 28.96s</span>
+            <span class="cue-text"><span class="acc">WASH</span> AWAY EVERY <span class="acc">FEAR</span></span>
+            <span class="cue-badge">P18</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(28.96)" data-start="28.96" data-end="30.68">
+            <span class="cue-time">28.96s - 30.68s</span>
+            <span class="cue-text">LET YOUR <span class="acc">DIVINE</span> <span class="acc">PEACE</span></span>
+            <span class="cue-badge">P19</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(30.68)" data-start="30.68" data-end="31.69">
+            <span class="cue-time">30.68s - 31.69s</span>
+            <span class="cue-text"><span class="acc">FILL</span> THIS <span class="acc">ROOM</span></span>
+            <span class="cue-badge">P20</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(31.69)" data-start="31.69" data-end="32.91">
+            <span class="cue-time">31.69s - 32.91s</span>
+            <span class="cue-text">FROM <span class="acc">WALL</span> TO WALL</span>
+            <span class="cue-badge">P21</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(32.91)" data-start="32.91" data-end="33.98">
+            <span class="cue-time">32.91s - 33.98s</span>
+            <span class="cue-text">SLEEP IN <span class="acc">PEACE</span> <span class="acc">TONIGHT</span></span>
+            <span class="cue-badge">P22</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(33.98)" data-start="33.98" data-end="35.91">
+            <span class="cue-time">33.98s - 35.91s</span>
+            <span class="cue-text">GOD IS <span class="acc">FIGHTING</span> YOUR <span class="acc">BATTLES</span></span>
+            <span class="cue-badge">P23</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(35.91)" data-start="35.91" data-end="36.93">
+            <span class="cue-time">35.91s - 36.93s</span>
+            <span class="cue-text">RECEIVE THIS <span class="acc">PROTECTION</span></span>
+            <span class="cue-badge">P24</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(36.93)" data-start="36.93" data-end="37.26">
+            <span class="cue-time">36.93s - 37.26s</span>
+            <span class="cue-text">TYPE <span class="acc">AMEN</span> TO RECEIVE</span>
+            <span class="cue-badge">P25</span>
+          </div>
+          <div class="cue-item" onclick="seekTo(37.26)" data-start="37.26" data-end="39.46">
+            <span class="cue-time">37.26s - 39.46s</span>
+            <span class="cue-text"><span class="acc">SUBSCRIBE</span> TO <span class="acc">PRAY</span> WITH US DAILY</span>
+            <span class="cue-badge">P26</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="tip-box">
-    <strong>💡 Quick Ways to Download:</strong><br>
+    <strong>💡 Quick Ways to Download Channel Assets:</strong><br>
     • <strong>Click the Gold Download Buttons</strong> below for direct download to your device.<br>
     • <strong>Mobile Phone Tip:</strong> You can also tap and hold (long-press) any image directly to save it to your camera roll / photos gallery.<br>
     • <strong>New Tab:</strong> Click "Open Image" to view the raw full-resolution graphic in a new browser tab.
@@ -83,8 +566,8 @@ async function forceDownload(url, filename) {
   <div class="download-all-hero">
     <h3>📦 Download Everything at Once (.ZIP)</h3>
     <p>Contains both 2560×1440 Banners, 800×800 Profile Avatar, 150×150 Watermark, and Copy-Paste Description & Keywords.</p>
-    <button class="btn-gold" onclick="forceDownload('docs/media/the-secret-place-brand-assets.zip', 'the-secret-place-brand-assets.zip')">⬇️ Download Complete ZIP Package (6.8MB)</button>
-    <a class="btn-secondary" href="docs/media/the-secret-place-brand-assets.zip" target="_blank">Direct Link</a>
+    <button class="btn-gold" onclick="forceDownload('media/the-secret-place-brand-assets.zip', 'the-secret-place-brand-assets.zip')">⬇️ Download Complete ZIP Package (6.8MB)</button>
+    <a class="btn-secondary" href="media/the-secret-place-brand-assets.zip" target="_blank">Direct Link</a>
   </div>
 
   <h2>1. YouTube Channel Banners (2560 × 1440 px)</h2>
@@ -92,26 +575,26 @@ async function forceDownload(url, filename) {
     <!-- Banner 1 -->
     <section class="card wide">
       <div class="img-wrap">
-        <img class="banner-preview" src="docs/media/channel-prayer-banner.png" alt="The Secret Place Channel Banner">
+        <img class="banner-preview" src="media/channel-prayer-banner.png" alt="The Secret Place Channel Banner">
       </div>
       <p class="label">PRIMARY BANNER: THE SECRET PLACE</p>
       <p class="meta">2560 × 1440 px PNG · Mobile-safe zone (1546 × 423 px) verified · Psalm 91:1 inspiration</p>
       <div class="btn-group">
-        <button class="btn-gold" onclick="forceDownload('docs/media/channel-prayer-banner.png', '01-banner-the-secret-place-2560x1440.png')">⬇️ Download This Banner (PNG)</button>
-        <a class="btn-secondary" href="docs/media/channel-prayer-banner.png" target="_blank">Open Full Size Image</a>
+        <button class="btn-gold" onclick="forceDownload('media/channel-prayer-banner.png', '01-banner-the-secret-place-2560x1440.png')">⬇️ Download This Banner (PNG)</button>
+        <a class="btn-secondary" href="media/channel-prayer-banner.png" target="_blank">Open Full Size Image</a>
       </div>
     </section>
 
     <!-- Banner 2 -->
     <section class="card wide">
       <div class="img-wrap">
-        <img class="banner-preview" src="docs/media/channel-prayer-banner-sanctuary.png" alt="Sanctuary of Prayer Channel Banner">
+        <img class="banner-preview" src="media/channel-prayer-banner-sanctuary.png" alt="Sanctuary of Prayer Channel Banner">
       </div>
       <p class="label">ALTERNATIVE BANNER: SANCTUARY OF PRAYER</p>
       <p class="meta">2560 × 1440 px PNG · Identical dimensions with "Sanctuary of Prayer" title</p>
       <div class="btn-group">
-        <button class="btn-gold" onclick="forceDownload('docs/media/channel-prayer-banner-sanctuary.png', '02-banner-sanctuary-of-prayer-2560x1440.png')">⬇️ Download Sanctuary Banner (PNG)</button>
-        <a class="btn-secondary" href="docs/media/channel-prayer-banner-sanctuary.png" target="_blank">Open Full Size Image</a>
+        <button class="btn-gold" onclick="forceDownload('media/channel-prayer-banner-sanctuary.png', '02-banner-sanctuary-of-prayer-2560x1440.png')">⬇️ Download Sanctuary Banner (PNG)</button>
+        <a class="btn-secondary" href="media/channel-prayer-banner-sanctuary.png" target="_blank">Open Full Size Image</a>
       </div>
     </section>
   </div>
@@ -123,11 +606,11 @@ async function forceDownload(url, filename) {
       <p class="label">FACELESS PROFILE PICTURE / AVATAR</p>
       <p class="meta">800 × 800 px PNG · 3D golden cross & Holy Bible seal · Circular-crop safe</p>
       <div class="avatar-row">
-        <img class="avatar-img" src="docs/media/channel-prayer-avatar.png" alt="Faceless Profile Avatar">
+        <img class="avatar-img" src="media/channel-prayer-avatar.png" alt="Faceless Profile Avatar">
         <div>
-          <button class="btn-gold" onclick="forceDownload('docs/media/channel-prayer-avatar.png', '03-profile-avatar-800x800.png')">⬇️ Download Avatar</button>
+          <button class="btn-gold" onclick="forceDownload('media/channel-prayer-avatar.png', '03-profile-avatar-800x800.png')">⬇️ Download Avatar</button>
           <div style="margin-top: 8px;">
-            <a class="btn-secondary" href="docs/media/channel-prayer-avatar.png" target="_blank" style="margin-left: 0;">Open Image</a>
+            <a class="btn-secondary" href="media/channel-prayer-avatar.png" target="_blank" style="margin-left: 0;">Open Image</a>
           </div>
         </div>
       </div>
@@ -138,11 +621,11 @@ async function forceDownload(url, filename) {
       <p class="label">VIDEO WATERMARK BADGE</p>
       <p class="meta">150 × 150 px PNG · Transparent background · YouTube bottom-right subscribe badge</p>
       <div class="avatar-row">
-        <img class="watermark-img" src="docs/media/channel-prayer-watermark.png" alt="Channel Video Watermark">
+        <img class="watermark-img" src="media/channel-prayer-watermark.png" alt="Channel Video Watermark">
         <div>
-          <button class="btn-gold" onclick="forceDownload('docs/media/channel-prayer-watermark.png', '04-video-watermark-150x150.png')">⬇️ Download Watermark</button>
+          <button class="btn-gold" onclick="forceDownload('media/channel-prayer-watermark.png', '04-video-watermark-150x150.png')">⬇️ Download Watermark</button>
           <div style="margin-top: 8px;">
-            <a class="btn-secondary" href="docs/media/channel-prayer-watermark.png" target="_blank" style="margin-left: 0;">Open Image</a>
+            <a class="btn-secondary" href="media/channel-prayer-watermark.png" target="_blank" style="margin-left: 0;">Open Image</a>
           </div>
         </div>
       </div>
@@ -174,5 +657,107 @@ Here, you will find powerful daily Christian prayers, deep scripture meditations
     <div class="copy-box">The Secret Place, Christian Prayer, Daily Prayer, Morning Prayer, Bedtime Prayer, Psalm 91 Prayer, Scripture Meditation, Christian Meditation, Bible Verses for Sleep, Powerful Prayer, Prayer for Healing, Prayer for Protection, Deliverance Prayer, Christian Motivation, Faith in God, Jesus Christ, Holy Spirit, Peaceful Sleep Bible Verses, Biblical Wisdom, Christian Encouragement, Sanctuary of Prayer</div>
   </section>
 </div>
+
+<script>
+// Video Player Controller & Synchronizer
+const player = document.getElementById('review-player');
+const curTimeEl = document.getElementById('timecode-current');
+const totalTimeEl = document.getElementById('timecode-total');
+const btnPlayPause = document.getElementById('btn-play-pause');
+const hudScene = document.getElementById('hud-scene-title');
+const hudPhrase = document.getElementById('hud-phrase-text');
+
+function formatTime(sec) {
+  if (isNaN(sec)) return "00:00.00";
+  const m = Math.floor(sec / 60);
+  const s = Math.floor(sec % 60);
+  const cs = Math.floor((sec % 1) * 100);
+  return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}.${String(cs).padStart(2, '0')}`;
+}
+
+function togglePlay() {
+  if (!player) return;
+  if (player.paused) {
+    player.play();
+  } else {
+    player.pause();
+  }
+}
+
+if (player) {
+  player.addEventListener('play', () => {
+    btnPlayPause.textContent = '⏸ Pause';
+  });
+  player.addEventListener('pause', () => {
+    btnPlayPause.textContent = '▶ Play';
+  });
+  player.addEventListener('loadedmetadata', () => {
+    totalTimeEl.textContent = formatTime(player.duration);
+  });
+  player.addEventListener('timeupdate', () => {
+    const t = player.currentTime;
+    curTimeEl.textContent = formatTime(t);
+    updateActiveCues(t);
+  });
+}
+
+function seekRelative(delta) {
+  if (!player) return;
+  player.currentTime = Math.max(0, Math.min(player.duration || 40.2, player.currentTime + delta));
+}
+
+function stepFrame(frames) {
+  if (!player) return;
+  player.pause();
+  const fps = 24.0;
+  player.currentTime = Math.max(0, Math.min(player.duration || 40.2, player.currentTime + (frames / fps)));
+}
+
+function seekTo(t) {
+  if (!player) return;
+  player.currentTime = t;
+  player.play();
+}
+
+function setSpeed(speed, btn) {
+  if (!player) return;
+  player.playbackRate = speed;
+  document.querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+}
+
+function switchTab(tab) {
+  document.getElementById('tab-scenes').style.display = tab === 'scenes' ? 'block' : 'none';
+  document.getElementById('tab-phrases').style.display = tab === 'phrases' ? 'block' : 'none';
+  document.getElementById('tab-btn-scenes').classList.toggle('active', tab === 'scenes');
+  document.getElementById('tab-btn-phrases').classList.toggle('active', tab === 'phrases');
+}
+
+function updateActiveCues(t) {
+  // Update scenes
+  const sceneItems = document.querySelectorAll('#tab-scenes .cue-item');
+  sceneItems.forEach(item => {
+    const s = parseFloat(item.getAttribute('data-start'));
+    const e = parseFloat(item.getAttribute('data-end'));
+    const isActive = t >= s && t < e;
+    item.classList.toggle('active', isActive);
+    if (isActive) {
+      hudScene.textContent = item.querySelector('.cue-scene-kicker').textContent;
+    }
+  });
+
+  // Update phrases
+  const phraseItems = document.querySelectorAll('#tab-phrases .cue-item');
+  phraseItems.forEach(item => {
+    const s = parseFloat(item.getAttribute('data-start'));
+    const e = parseFloat(item.getAttribute('data-end'));
+    const isActive = t >= s && t < e;
+    item.classList.toggle('active', isActive);
+    if (isActive) {
+      hudPhrase.textContent = item.querySelector('.cue-text').textContent.replace(/\s+/g, ' ').trim();
+    }
+  });
+}
+</script>
 </body>
 </html>
