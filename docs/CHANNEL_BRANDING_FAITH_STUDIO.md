@@ -30,30 +30,26 @@
 
 ---
 
-## 2. High-Converting Channel "About" Description (SEO-Optimized)
+## 2. High-Converting Channel "About" Description (SEO-Optimized, Under 1,000 Chars)
 
-*Copy and paste this directly into **YouTube Studio → Customization → Basic info → Description**:*
+*Copy and paste this directly into **YouTube Studio → Customization → Basic info → Description** (894 characters — fits under the 1,000 character limit):*
 
 ```text
-Welcome to The Secret Place — a sacred sanctuary dedicated to helping you start and end every day in the peace and presence of God.
+Welcome to The Secret Place — a sacred sanctuary to help you start and end every day in the peace and presence of God.
 
-Here, you will find powerful daily Christian prayers, deep scripture meditations, peaceful bedtime Bible readings, and inspiring stories of faith. Whether you are facing anxiety, walking through a difficult season, or simply seeking spiritual renewal, our mission is to anchor your heart in God's living Word.
+Here, you will find powerful daily Christian prayers, deep scripture meditations, peaceful bedtime Bible readings, and faith-building stories.
 
-🕊️ WHAT WE SHARE ON THIS CHANNEL:
-• Morning Prayers & Daily Declarations to start your day with divine guidance and strength
-• Psalm 91 & Warfare Protection Prayers for your family, home, and peace of mind
-• Peaceful Christian Sleep Meditations & Scripture streams to quiet your mind before bed
-• Deep Dives into Biblical Wisdom and the life-changing promises of Jesus Christ
+🕊️ WHAT WE SHARE:
+• Morning Prayers & Daily Declarations for divine strength
+• Psalm 91 Protection Prayers for your family & peace of mind
+• Peaceful Christian Sleep Meditations to quiet your mind
+• Biblical Wisdom and the life-changing promises of Jesus Christ
 
 📖 "He who dwells in the secret place of the Most High shall abide under the shadow of the Almighty. I will say of the Lord, 'He is my refuge and my fortress; my God, in Him I will trust.'" — Psalm 91:1-2
 
-🔔 Subscribe and join our daily prayer community. Turn on notifications so you never miss a morning or evening prayer.
+🔔 Subscribe to join our daily prayer family. Turn on notifications so you never miss a prayer.
 
-🙏 PRAYER REQUESTS & COMMUNITY:
-Have a personal prayer request? Leave a comment on our latest video, or email our prayer team at:
-contact@thesecretplacesanctuary.com
-
-God bless you, and may His peace surround you today.
+🙏 Need prayer? Leave a comment on our latest video. God bless you!
 ```
 
 ---
