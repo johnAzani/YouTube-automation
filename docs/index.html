@@ -7,84 +7,151 @@
 <style>
   :root { color-scheme: dark; }
   body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #030a18; color: #eef4ff; }
-  .wrap { max-width: 980px; margin: 0 auto; padding: 32px 20px 80px; }
-  h1 { color: #ffc93c; font-size: 32px; margin-bottom: 6px; font-weight: 800; letter-spacing: -0.5px; }
-  h2 { color: #ffd75a; font-size: 22px; margin-top: 36px; margin-bottom: 12px; border-bottom: 1px solid #142848; padding-bottom: 8px; }
-  .sub { color: #a9bbd0; line-height: 1.6; font-size: 16px; margin-top: 0; }
-  .badge { display: inline-block; background: #ffc93c; color: #030a18; font-size: 12px; font-weight: 800; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; margin-bottom: 12px; }
-  .download-all-hero { background: linear-gradient(135deg, #0e2a54 0%, #06152b 100%); border: 2px solid #ffc93c; border-radius: 14px; padding: 24px; margin: 20px 0 30px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-  .download-all-hero h3 { margin: 0 0 8px; font-size: 22px; color: #fff; }
-  .download-all-hero p { margin: 0 0 16px; color: #b4cced; font-size: 15px; }
-  .btn-gold-large { display: inline-block; padding: 14px 28px; border-radius: 10px; background: #ffc93c; color: #030a18; font-weight: 800; font-size: 16px; text-decoration: none; box-shadow: 0 4px 16px rgba(255,201,60,0.4); transition: transform 0.15s, background 0.15s; }
-  .btn-gold-large:hover { background: #ffe07a; transform: translateY(-2px); }
-  .row { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 24px 16px 80px; }
+  h1 { color: #ffc93c; font-size: 28px; margin-bottom: 6px; font-weight: 800; letter-spacing: -0.5px; }
+  h2 { color: #ffd75a; font-size: 20px; margin-top: 32px; margin-bottom: 12px; border-bottom: 1px solid #142848; padding-bottom: 8px; }
+  .sub { color: #a9bbd0; line-height: 1.5; font-size: 15px; margin-top: 0; }
+  .badge { display: inline-block; background: #ffc93c; color: #030a18; font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; margin-bottom: 10px; }
+  
+  .tip-box { background: rgba(255, 201, 60, 0.1); border: 1px solid #ffc93c; border-radius: 10px; padding: 14px 18px; margin: 16px 0; color: #ffecb3; font-size: 14px; line-height: 1.5; }
+  .tip-box strong { color: #ffc93c; }
+
+  .download-all-hero { background: linear-gradient(135deg, #0e2a54 0%, #06152b 100%); border: 2px solid #ffc93c; border-radius: 14px; padding: 22px; margin: 20px 0 24px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+  .download-all-hero h3 { margin: 0 0 6px; font-size: 20px; color: #fff; }
+  .download-all-hero p { margin: 0 0 14px; color: #b4cced; font-size: 14px; }
+  
+  .btn-gold { cursor: pointer; border: none; outline: none; display: inline-block; padding: 12px 24px; border-radius: 8px; background: #ffc93c; color: #030a18; font-weight: 800; font-size: 15px; text-decoration: none; box-shadow: 0 4px 14px rgba(255,201,60,0.35); transition: background 0.15s, transform 0.15s; }
+  .btn-gold:hover { background: #ffe07a; transform: translateY(-1px); }
+  .btn-gold:active { transform: translateY(1px); }
+
+  .btn-secondary { cursor: pointer; border: 1px solid #3b6b9e; background: #0c2344; color: #d0e4ff; display: inline-block; padding: 10px 18px; border-radius: 8px; font-weight: 600; font-size: 13px; text-decoration: none; margin-left: 8px; }
+  .btn-secondary:hover { background: #163a6b; }
+
+  .row { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 16px; }
   .card { background: #07152b; border: 1px solid #163259; border-radius: 14px; padding: 18px; flex: 1 1 300px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
   .card.wide { flex-basis: 100%; }
-  .banner-preview { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid #234875; }
-  .avatar-row { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; margin-top: 10px; }
-  .avatar-img { width: 150px; height: 150px; border-radius: 50%; border: 3px solid #ffc93c; box-shadow: 0 4px 20px rgba(255,201,60,0.3); }
-  .watermark-img { width: 100px; height: 100px; border-radius: 50%; border: 2px solid #ffc93c; background: #061226; }
-  .label { color: #ffc93c; font-size: 16px; font-weight: 700; margin: 14px 0 4px; }
-  .meta { color: #a9bbd0; font-size: 14px; line-height: 1.5; margin: 0 0 12px; }
-  a.download-btn { display: inline-block; padding: 10px 18px; border-radius: 8px; background: #ffc93c; color: #030a18; font-weight: 700; text-decoration: none; font-size: 14px; transition: background 0.2s; }
-  a.download-btn:hover { background: #ffe27a; }
-  .copy-box { background: #040c1c; border: 1px solid #163259; border-radius: 8px; padding: 16px; font-family: monospace; font-size: 13px; color: #d2e4ff; white-space: pre-wrap; line-height: 1.5; max-height: 240px; overflow-y: auto; }
+  
+  .img-wrap { background: #020712; border-radius: 8px; overflow: hidden; border: 1px solid #1b3a63; margin-bottom: 12px; }
+  .banner-preview { display: block; width: 100%; height: auto; }
+  .avatar-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .avatar-img { width: 140px; height: 140px; border-radius: 50%; border: 3px solid #ffc93c; box-shadow: 0 4px 16px rgba(255,201,60,0.3); }
+  .watermark-img { width: 90px; height: 90px; border-radius: 50%; border: 2px solid #ffc93c; background: #061226; }
+  
+  .label { color: #ffc93c; font-size: 16px; font-weight: 700; margin: 4px 0 4px; }
+  .meta { color: #a9bbd0; font-size: 13px; line-height: 1.5; margin: 0 0 12px; }
+  .btn-group { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 8px; }
+
+  .copy-box { background: #040c1c; border: 1px solid #163259; border-radius: 8px; padding: 16px; font-family: monospace; font-size: 13px; color: #d2e4ff; white-space: pre-wrap; line-height: 1.5; max-height: 220px; overflow-y: auto; }
 </style>
+<script>
+async function forceDownload(url, filename) {
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error("HTTP error " + res.status);
+    const blob = await res.blob();
+    const blobUrl = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.style.display = 'none';
+    a.href = blobUrl;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => {
+      document.body.removeChild(a);
+      window.URL.revokeObjectURL(blobUrl);
+    }, 1000);
+  } catch (err) {
+    console.warn("Direct blob download failed, falling back to window.open", err);
+    window.open(url, '_blank');
+  }
+}
+</script>
 </head>
 <body>
 <div class="wrap">
-  <span class="badge">Faceless Brand Kit Ready</span>
-  <h1>The Secret Place — Channel Brand Downloads</h1>
-  <p class="sub">Download your complete channel branding package below. All personal names have been completely removed. Ready to upload straight into YouTube Studio.</p>
+  <span class="badge">Official Brand Assets</span>
+  <h1>The Secret Place — Asset Download Hub</h1>
+  <p class="sub">Download your complete faceless channel artwork. All personal names have been removed. Every image is rendered at full YouTube Studio specification.</p>
 
-  <div class="download-all-hero">
-    <h3>📦 Complete Brand Package (.ZIP)</h3>
-    <p>Includes both 2560×1440 Banners, 800×800 Profile Avatar, 150×150 Watermark, and Copy-Paste Metadata text files.</p>
-    <a class="btn-gold-large" href="docs/media/the-secret-place-brand-assets.zip" download="the-secret-place-brand-assets.zip">⬇️ Download Complete Package (.ZIP - 6.8MB)</a>
+  <div class="tip-box">
+    <strong>💡 Quick Ways to Download:</strong><br>
+    • <strong>Click the Gold Download Buttons</strong> below for direct download to your device.<br>
+    • <strong>Mobile Phone Tip:</strong> You can also tap and hold (long-press) any image directly to save it to your camera roll / photos gallery.<br>
+    • <strong>New Tab:</strong> Click "Open Image" to view the raw full-resolution graphic in a new browser tab.
   </div>
 
-  <h2>1. Individual Channel Graphics</h2>
+  <div class="download-all-hero">
+    <h3>📦 Download Everything at Once (.ZIP)</h3>
+    <p>Contains both 2560×1440 Banners, 800×800 Profile Avatar, 150×150 Watermark, and Copy-Paste Description & Keywords.</p>
+    <button class="btn-gold" onclick="forceDownload('docs/media/the-secret-place-brand-assets.zip', 'the-secret-place-brand-assets.zip')">⬇️ Download Complete ZIP Package (6.8MB)</button>
+    <a class="btn-secondary" href="docs/media/the-secret-place-brand-assets.zip" target="_blank">Direct Link</a>
+  </div>
+
+  <h2>1. YouTube Channel Banners (2560 × 1440 px)</h2>
   <div class="row">
+    <!-- Banner 1 -->
     <section class="card wide">
-      <img class="banner-preview" src="docs/media/channel-prayer-banner.png" alt="The Secret Place Channel Banner">
-      <p class="label">PRIMARY BANNER: THE SECRET PLACE (2560 × 1440 px)</p>
-      <p class="meta">Safe-zone verified for all phones and desktop monitors. Zero personal names.</p>
-      <a class="download-btn" href="docs/media/channel-prayer-banner.png" download="the-secret-place-channel-banner.png">⬇️ Download Banner (PNG)</a>
+      <div class="img-wrap">
+        <img class="banner-preview" src="docs/media/channel-prayer-banner.png" alt="The Secret Place Channel Banner">
+      </div>
+      <p class="label">PRIMARY BANNER: THE SECRET PLACE</p>
+      <p class="meta">2560 × 1440 px PNG · Mobile-safe zone (1546 × 423 px) verified · Psalm 91:1 inspiration</p>
+      <div class="btn-group">
+        <button class="btn-gold" onclick="forceDownload('docs/media/channel-prayer-banner.png', '01-banner-the-secret-place-2560x1440.png')">⬇️ Download This Banner (PNG)</button>
+        <a class="btn-secondary" href="docs/media/channel-prayer-banner.png" target="_blank">Open Full Size Image</a>
+      </div>
     </section>
 
+    <!-- Banner 2 -->
     <section class="card wide">
-      <img class="banner-preview" src="docs/media/channel-prayer-banner-sanctuary.png" alt="Sanctuary of Prayer Channel Banner">
-      <p class="label">ALTERNATIVE BANNER: SANCTUARY OF PRAYER (2560 × 1440 px)</p>
-      <p class="meta">Alternative branding with the same high-resolution celestial sunrise.</p>
-      <a class="download-btn" href="docs/media/channel-prayer-banner-sanctuary.png" download="sanctuary-of-prayer-channel-banner.png">⬇️ Download Sanctuary Banner (PNG)</a>
+      <div class="img-wrap">
+        <img class="banner-preview" src="docs/media/channel-prayer-banner-sanctuary.png" alt="Sanctuary of Prayer Channel Banner">
+      </div>
+      <p class="label">ALTERNATIVE BANNER: SANCTUARY OF PRAYER</p>
+      <p class="meta">2560 × 1440 px PNG · Identical dimensions with "Sanctuary of Prayer" title</p>
+      <div class="btn-group">
+        <button class="btn-gold" onclick="forceDownload('docs/media/channel-prayer-banner-sanctuary.png', '02-banner-sanctuary-of-prayer-2560x1440.png')">⬇️ Download Sanctuary Banner (PNG)</button>
+        <a class="btn-secondary" href="docs/media/channel-prayer-banner-sanctuary.png" target="_blank">Open Full Size Image</a>
+      </div>
     </section>
+  </div>
 
+  <h2>2. Profile Picture & Video Watermark</h2>
+  <div class="row">
+    <!-- Avatar -->
     <section class="card">
-      <p class="label">PROFILE AVATAR (800 × 800 px)</p>
-      <p class="meta">3D golden cross and Holy Bible seal on deep sapphire blue. Circular-crop verified.</p>
+      <p class="label">FACELESS PROFILE PICTURE / AVATAR</p>
+      <p class="meta">800 × 800 px PNG · 3D golden cross & Holy Bible seal · Circular-crop safe</p>
       <div class="avatar-row">
-        <img class="avatar-img" src="docs/media/channel-prayer-avatar.png" alt="Faceless Profile Picture">
+        <img class="avatar-img" src="docs/media/channel-prayer-avatar.png" alt="Faceless Profile Avatar">
         <div>
-          <a class="download-btn" href="docs/media/channel-prayer-avatar.png" download="prayer-channel-avatar.png">⬇️ Download Avatar</a>
+          <button class="btn-gold" onclick="forceDownload('docs/media/channel-prayer-avatar.png', '03-profile-avatar-800x800.png')">⬇️ Download Avatar</button>
+          <div style="margin-top: 8px;">
+            <a class="btn-secondary" href="docs/media/channel-prayer-avatar.png" target="_blank" style="margin-left: 0;">Open Image</a>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Watermark -->
     <section class="card">
-      <p class="label">VIDEO WATERMARK (150 × 150 px)</p>
-      <p class="meta">Transparent background subscribe badge for the bottom-right corner of all videos.</p>
+      <p class="label">VIDEO WATERMARK BADGE</p>
+      <p class="meta">150 × 150 px PNG · Transparent background · YouTube bottom-right subscribe badge</p>
       <div class="avatar-row">
         <img class="watermark-img" src="docs/media/channel-prayer-watermark.png" alt="Channel Video Watermark">
         <div>
-          <a class="download-btn" href="docs/media/channel-prayer-watermark.png" download="prayer-channel-watermark.png">⬇️ Download Watermark</a>
+          <button class="btn-gold" onclick="forceDownload('docs/media/channel-prayer-watermark.png', '04-video-watermark-150x150.png')">⬇️ Download Watermark</button>
+          <div style="margin-top: 8px;">
+            <a class="btn-secondary" href="docs/media/channel-prayer-watermark.png" target="_blank" style="margin-left: 0;">Open Image</a>
+          </div>
         </div>
       </div>
     </section>
   </div>
 
-  <h2>2. YouTube Studio SEO Description ("About" Page)</h2>
+  <h2>3. YouTube Studio SEO Description ("About" Page)</h2>
   <section class="card wide">
-    <p class="meta">Copy and paste this into <strong>YouTube Studio &rarr; Customization &rarr; Basic info &rarr; Description</strong>:</p>
+    <p class="meta">Copy and paste into <strong>YouTube Studio &rarr; Customization &rarr; Basic info &rarr; Description</strong>:</p>
     <div class="copy-box">Welcome to The Secret Place — a sacred sanctuary dedicated to helping you start and end every day in the peace and presence of God.
 
 Here, you will find powerful daily Christian prayers, deep scripture meditations, peaceful bedtime Bible readings, and inspiring stories of faith. Whether you are facing anxiety, walking through a difficult season, or simply seeking spiritual renewal, our mission is to anchor your heart in God's living Word.
@@ -106,7 +173,7 @@ contact@thesecretplacesanctuary.com
 God bless you, and may His peace surround you today.</div>
   </section>
 
-  <h2>3. Channel Keywords (Settings &rarr; Channel &rarr; Basic Info)</h2>
+  <h2>4. Channel Keywords (Settings &rarr; Channel &rarr; Basic Info)</h2>
   <section class="card wide">
     <div class="copy-box">The Secret Place, Christian Prayer, Daily Prayer, Morning Prayer, Bedtime Prayer, Psalm 91 Prayer, Scripture Meditation, Christian Meditation, Bible Verses for Sleep, Powerful Prayer, Prayer for Healing, Prayer for Protection, Deliverance Prayer, Christian Motivation, Faith in God, Jesus Christ, Holy Spirit, Peaceful Sleep Bible Verses, Biblical Wisdom, Christian Encouragement, Sanctuary of Prayer</div>
   </section>
