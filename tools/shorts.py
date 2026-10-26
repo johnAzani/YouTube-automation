@@ -666,7 +666,7 @@ def build_kinetic_stream(key, raw_words):
             next_disp_t0 = stream[i + 1]['disp_t0']
             stream[i]['disp_t1'] = min(t_end + 0.28, next_disp_t0)
         else:
-            stream[i]['disp_t1'] = t_end + 0.40
+            stream[i]['disp_t1'] = min(38.50, t_end + 0.20)
     return stream
 
 def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
@@ -1641,8 +1641,7 @@ SCRIPTS = {
             (78, 81, 'FROM WALL', 'TO WALL', ['WALL']),
             (82, 85, 'SLEEP IN', 'PEACE TONIGHT', ['PEACE', 'TONIGHT']),
             (86, 92, 'GOD IS FIGHTING', 'YOUR BATTLES', ['FIGHTING', 'BATTLES']),
-            (93, 97, 'RECEIVE THIS', 'PROTECTION', ['PROTECTION']),
-            (98, 99, 'TYPE AMEN', 'TO RECEIVE', ['AMEN']),
+            (93, 99, 'RECEIVE THIS PROTECTION', 'TYPE AMEN', ['PROTECTION', 'AMEN']),
             (100, 107, 'SUBSCRIBE TO PRAY', 'WITH US DAILY', ['SUBSCRIBE', 'PRAY']),
         ],
     ),
@@ -1880,12 +1879,14 @@ def main(key):
         if not in_open_poster and not in_mid_poster:
             ov.alpha_composite(hud_chapter_layer(frame, sc['kicker'], sc.get('sub', ''), k + 1, nscenes, pos, sc_dur, t / total, is_prayer=is_prayer))
             if is_prayer and kinetic_stream:
-                ov.alpha_composite(kinetic_typography_layer(frame, kinetic_stream, t, is_prayer=is_prayer))
+                if t < 38.50:
+                    ov.alpha_composite(kinetic_typography_layer(frame, kinetic_stream, t, is_prayer=is_prayer))
             else:
                 ov.alpha_composite(caption_ribbon_layer(frame, cap_stream, t, is_prayer=is_prayer))
         frame = Image.alpha_composite(frame.convert('RGBA'), ov).convert('RGB')
-        if t >= adur - 0.4:
-            frame = end_card_overlay(frame, cfg['end'], t - (adur - 0.4), total - (adur - 0.4), is_prayer=is_prayer)
+        end_start = (38.50 if is_prayer else adur - 0.4)
+        if t >= end_start:
+            frame = end_card_overlay(frame, cfg['end'], t - end_start, total - end_start, is_prayer=is_prayer)
         proc.stdin.write(frame.tobytes())
         if i % 360 == 0:
             print(f'  frame {i}/{n}', flush=True)
