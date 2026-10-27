@@ -1,14 +1,16 @@
 {
   "title": "Psalm 91: Night Prayer of Protection",
   "channel": "The Secret Place",
-  "duration": 40.26,
+  "duration": 39.55,
   "phrases_count": 15,
   "scenes_count": 8,
   "phrases": [
     {
       "index": 1,
       "disp_t0": 0.0,
-      "disp_t1": 1.95,
+      "disp_t1": 1.94,
+      "audio_t0": 0.0,
+      "audio_t1": 1.8,
       "line1": "BEFORE YOU CLOSE",
       "line2": "YOUR EYES TONIGHT",
       "accents": [
@@ -20,8 +22,10 @@
     },
     {
       "index": 2,
-      "disp_t0": 1.95,
-      "disp_t1": 3.2,
+      "disp_t0": 1.94,
+      "disp_t1": 3.07,
+      "audio_t0": 2.02,
+      "audio_t1": 2.89,
       "line1": "TAKE A",
       "line2": "DEEP BREATH",
       "accents": [
@@ -32,8 +36,10 @@
     },
     {
       "index": 3,
-      "disp_t0": 3.2,
-      "disp_t1": 6.58,
+      "disp_t0": 3.07,
+      "disp_t1": 6.27,
+      "audio_t0": 3.15,
+      "audio_t1": 6.05,
       "line1": "PLACE YOUR HOME & FAMILY",
       "line2": "UNDER PSALM 91",
       "accents": [
@@ -46,8 +52,10 @@
     },
     {
       "index": 4,
-      "disp_t0": 6.58,
-      "disp_t1": 9.41,
+      "disp_t0": 6.27,
+      "disp_t1": 9.25,
+      "audio_t0": 6.35,
+      "audio_t1": 9.13,
       "line1": "HE WHO DWELLS",
       "line2": "IN THE SECRET PLACE",
       "accents": [
@@ -59,8 +67,10 @@
     },
     {
       "index": 5,
-      "disp_t0": 9.41,
-      "disp_t1": 13.52,
+      "disp_t0": 9.25,
+      "disp_t1": 13.45,
+      "audio_t0": 9.33,
+      "audio_t1": 13.27,
       "line1": "OF THE MOST HIGH",
       "line2": "SHALL ABIDE IN HIS SHADOW",
       "accents": [
@@ -73,8 +83,10 @@
     },
     {
       "index": 6,
-      "disp_t0": 13.52,
-      "disp_t1": 17.08,
+      "disp_t0": 13.45,
+      "disp_t1": 16.3,
+      "audio_t0": 13.53,
+      "audio_t1": 16.03,
       "line1": "NO EVIL SHALL",
       "line2": "BEFALL YOU",
       "accents": [
@@ -86,8 +98,10 @@
     },
     {
       "index": 7,
-      "disp_t0": 17.08,
-      "disp_t1": 20.94,
+      "disp_t0": 16.3,
+      "disp_t1": 20.07,
+      "audio_t0": 16.38,
+      "audio_t1": 19.83,
       "line1": "NOR SHALL ANY PLAGUE",
       "line2": "COME NEAR YOUR DWELLING",
       "accents": [
@@ -98,8 +112,10 @@
     },
     {
       "index": 8,
-      "disp_t0": 20.94,
-      "disp_t1": 25.12,
+      "disp_t0": 20.07,
+      "disp_t1": 24.21,
+      "audio_t0": 20.15,
+      "audio_t1": 23.99,
       "line1": "HEAVENLY FATHER",
       "line2": "QUIET EVERY ANXIOUS THOUGHT",
       "accents": [
@@ -112,8 +128,10 @@
     },
     {
       "index": 9,
-      "disp_t0": 25.12,
-      "disp_t1": 27.57,
+      "disp_t0": 24.21,
+      "disp_t1": 26.82,
+      "audio_t0": 24.29,
+      "audio_t1": 26.72,
       "line1": "SEND YOUR ANGELS",
       "line2": "TO GUARD THIS HOME",
       "accents": [
@@ -125,8 +143,10 @@
     },
     {
       "index": 10,
-      "disp_t0": 27.57,
-      "disp_t1": 29.33,
+      "disp_t0": 26.82,
+      "disp_t1": 28.53,
+      "audio_t0": 26.9,
+      "audio_t1": 28.36,
       "line1": "WASH AWAY",
       "line2": "EVERY FEAR",
       "accents": [
@@ -137,8 +157,10 @@
     },
     {
       "index": 11,
-      "disp_t0": 29.33,
-      "disp_t1": 33.28,
+      "disp_t0": 28.53,
+      "disp_t1": 32.46,
+      "audio_t0": 28.61,
+      "audio_t1": 32.26,
       "line1": "LET YOUR DIVINE PEACE",
       "line2": "FILL THIS ROOM WALL TO WALL",
       "accents": [
@@ -150,8 +172,10 @@
     },
     {
       "index": 12,
-      "disp_t0": 33.28,
-      "disp_t1": 35.01,
+      "disp_t0": 32.46,
+      "disp_t1": 34.28,
+      "audio_t0": 32.54,
+      "audio_t1": 34.14,
       "line1": "SLEEP IN",
       "line2": "PEACE TONIGHT",
       "accents": [
@@ -162,8 +186,10 @@
     },
     {
       "index": 13,
-      "disp_t0": 35.01,
-      "disp_t1": 36.17,
+      "disp_t0": 34.28,
+      "disp_t1": 35.53,
+      "audio_t0": 34.36,
+      "audio_t1": 35.36,
       "line1": "GOD IS FIGHTING",
       "line2": "YOUR BATTLES",
       "accents": [
@@ -174,8 +200,10 @@
     },
     {
       "index": 14,
-      "disp_t0": 36.17,
-      "disp_t1": 37.42,
+      "disp_t0": 35.53,
+      "disp_t1": 36.95,
+      "audio_t0": 35.61,
+      "audio_t1": 36.85,
       "line1": "RECEIVE THIS PROTECTION",
       "line2": "TYPE AMEN",
       "accents": [
@@ -188,8 +216,10 @@
     },
     {
       "index": 15,
-      "disp_t0": 37.42,
-      "disp_t1": 38.55,
+      "disp_t0": 36.95,
+      "disp_t1": 38.15,
+      "audio_t0": 37.03,
+      "audio_t1": 37.95,
       "line1": "SUBSCRIBE TO PRAY",
       "line2": "WITH US EVERY DAY",
       "accents": [
@@ -197,6 +227,80 @@
         "PRAY"
       ],
       "speech": "and subscribe to pray with us every day"
+    }
+  ],
+  "scenes": [
+    {
+      "index": 1,
+      "t0": 0.0,
+      "t1": 6.2,
+      "kicker": "PSALM 91:1",
+      "sub": "NIGHT PROTECTION PRAYER",
+      "camera": "tilt_up",
+      "plate": "short-prayer-scene-01.jpg"
+    },
+    {
+      "index": 2,
+      "t0": 6.2,
+      "t1": 13.38,
+      "kicker": "HE WHO DWELLS",
+      "sub": "IN THE SECRET PLACE",
+      "camera": "push_in",
+      "plate": "short-prayer-scene-02.jpg"
+    },
+    {
+      "index": 3,
+      "t0": 13.38,
+      "t1": 20.0,
+      "kicker": "PSALM 91:10",
+      "sub": "NO EVIL SHALL BEFALL YOU",
+      "camera": "push_in",
+      "plate": "short-prayer-scene-05.jpg"
+    },
+    {
+      "index": 4,
+      "t0": 20.0,
+      "t1": 24.14,
+      "kicker": "PRAYER FOR PEACE",
+      "sub": "QUIET EVERY ANXIOUS THOUGHT",
+      "camera": "pan_right",
+      "plate": "short-prayer-scene-03.jpg"
+    },
+    {
+      "index": 5,
+      "t0": 24.14,
+      "t1": 28.63,
+      "kicker": "ANGELIC PROTECTION",
+      "sub": "GUARD THIS HOME",
+      "camera": "pull_out",
+      "plate": "short-prayer-scene-06.jpg"
+    },
+    {
+      "index": 6,
+      "t0": 28.63,
+      "t1": 32.39,
+      "kicker": "DIVINE PEACE",
+      "sub": "FILL THIS ROOM WALL TO WALL",
+      "camera": "tilt_up",
+      "plate": "short-prayer-scene-03.jpg"
+    },
+    {
+      "index": 7,
+      "t0": 32.39,
+      "t1": 35.68,
+      "kicker": "REST IN GOD",
+      "sub": "HE FIGHTS YOUR BATTLES",
+      "camera": "pan_left",
+      "plate": "short-prayer-scene-04.jpg"
+    },
+    {
+      "index": 8,
+      "t0": 35.68,
+      "t1": 39.55,
+      "kicker": "DIVINE SHIELD",
+      "sub": "TYPE AMEN & SUBSCRIBE",
+      "camera": "push_in",
+      "plate": "short-prayer-scene-01.jpg"
     }
   ]
 }

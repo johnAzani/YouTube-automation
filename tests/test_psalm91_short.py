@@ -48,7 +48,7 @@ def test_psalm91_kinetic_typography_phrases_and_stream():
     assert len(stream) == len(cfg["kinetic_phrases"])
     # Verify stream covers beginning, middle, and end
     assert stream[0]["t0"] == 0.0
-    assert stream[-1]["t1"] > 38.0
+    assert stream[-1]["t1"] >= 37.9
     # Test rendering a frame
     bg = Image.new("RGB", (720, 1280), (10, 20, 40))
     layer = kinetic_typography_layer(bg, stream, 2.5, is_prayer=True)
@@ -60,15 +60,15 @@ def test_psalm91_segment_and_typography_sync():
     from tools.shorts import SCRIPTS, build_kinetic_stream, load_words, resolve_scenes
     words = load_words("short-psalm91")
     stream = build_kinetic_stream("short-psalm91", words)
-    scenes = resolve_scenes("short-psalm91", words, 40.26)
+    scenes = resolve_scenes("short-psalm91", words, 39.55)
 
     # Invariant 1: Exactly 8 scene segments and 15 kinetic typography phrases
     assert len(scenes) == 8, f"Expected 8 scenes, got {len(scenes)}"
     assert len(stream) == 15, f"Expected 15 kinetic stream items, got {len(stream)}"
 
-    # Invariant 2: Scene 2 cuts directly before vocal transient of 'he who dwells' (t=6.66s -> cut=6.51s)
+    # Invariant 2: Scene 2 cuts directly before vocal transient of 'he who dwells' (t=6.35s -> cut=6.20s)
     s2 = scenes[1]
-    assert abs(s2["t0"] - 6.51) < 0.1, f"Scene 2 start mismatch: {s2['t0']}"
+    assert abs(s2["t0"] - 6.20) < 0.1, f"Scene 2 start mismatch: {s2['t0']}"
     assert "HE WHO DWELLS" in s2["kicker"]
 
     # Invariant 3: Scene 7 covers 'REST IN GOD' and transitions cleanly to Scene 8 at 'receive this protection'
@@ -77,7 +77,7 @@ def test_psalm91_segment_and_typography_sync():
     assert "REST IN GOD" in s7["kicker"]
     assert "DIVINE SHIELD" in s8["kicker"]
     assert abs(s7["t1"] - s8["t0"]) < 0.01
-    assert abs(s8["t0"] - 36.31) < 0.15, f"Scene 8 start mismatch: {s8['t0']}"
+    assert abs(s8["t0"] - 35.68) < 0.15, f"Scene 8 start mismatch: {s8['t0']}"
 
     # Invariant 4: No kinetic typography display window overlaps with its successor
     for i in range(len(stream) - 1):
@@ -90,9 +90,9 @@ def test_psalm91_segment_and_typography_sync():
     p14 = stream[13]
     p15 = stream[14]
     assert "BATTLES" in p13["line2"]
-    assert abs(p13["disp_t1"] - 36.17) < 0.05
+    assert abs(p13["disp_t1"] - 35.53) < 0.05
     assert "TYPE AMEN" in p14["line2"]
     assert "SUBSCRIBE" in p15["line1"]
-    assert abs(p15["disp_t1"] - 38.55) < 0.05
+    assert abs(p15["disp_t1"] - 38.15) < 0.05
 
 
