@@ -11,7 +11,7 @@
 Run: .venv/bin/python tools/shorts.py [short-johnstown|short-enron]
 """
 import os, sys, json, math, subprocess, shutil
-from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageEnhance
+from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageEnhance, ImageChops
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from score import generate_score
 
@@ -89,6 +89,40 @@ def duration(path):
             hh, mm, rest = ln.split('Duration: ')[1].split(',')[0].strip().split(':')
             return int(hh)*3600 + int(mm)*60 + float(rest)
     raise SystemExit(f'no duration for {path}')
+
+# ----------------- DOCOGA REELS v2 kinetic camera physics & impact shake ----
+WHITE_IMG = Image.new('RGB', (W, H), (255, 255, 255))
+
+def apply_shake(img, t, impacts):
+    """DOCOGA REELS v2: Damped high-frequency camera micro-shake on impacts."""
+    for ti in impacts:
+        dt = t - ti
+        if 0.0 <= dt < 0.22:
+            a = 1.0 - dt / 0.22
+            dx = int(4.5 * a * math.sin(46.0 * dt))
+            dy = int(3.0 * a * math.cos(39.0 * dt))
+            return ImageChops.offset(img, dx, dy)
+    return img
+
+PRAYER_IMPACTS = [3.03, 6.23, 13.41, 20.03, 24.17, 34.24, 35.49]
+
+SACRED_KICKERS = [
+    'PRAYER BEFORE SLEEP',
+    'SURRENDER TO GOD',
+    'COVENANT OF PROTECTION',
+    'PSALM 91 : 1',
+    'DIVINE SHELTER',
+    'PSALM 91 : 10',
+    'DIVINE PRESERVATION',
+    'PRAYER OF SURRENDER',
+    'ANGELIC HOSTS',
+    'PEACE OVER ANXIETY',
+    'HOLY SANCTUARY',
+    'REST IN HIS PROMISE',
+    'EXODUS 14 : 14',
+    'DECLARATION OF FAITH',
+    'DAILY PRAYER ALTAR',
+]
 
 # ------------------------ signature sapphire-blue grade + full-bleed 9:16 plates ----
 _GAMMA_LUT = [min(255, max(0, int(round(255.0 * ((i / 255.0) ** 0.84))))) for i in range(256)]
@@ -582,6 +616,13 @@ def end_card_overlay(base_img, end_pair, t_local, T, is_prayer=False):
     sub_col = (255, 235, 180) if is_prayer else ICE
     if sa > 0:
         draw_tracked(d, t2.upper(), f2, W / 2 - w2 / 2, py + 112, sub_col + (sa,), 2.6)
+
+    # DOCOGA REELS v2: Pulsing golden glow outline on call-to-action card
+    if is_prayer:
+        b_pulse = 0.5 + 0.5 * math.sin(2 * math.pi * t_local / 1.1)
+        pulse_col = (255, 218, 64, int((130 + 85 * b_pulse) * e))
+        d.rounded_rectangle([px - 4, py - 4, px + pw + 4, py + ph + 4], radius=24, outline=pulse_col, width=3)
+
     return Image.alpha_composite(base_img.convert('RGBA'), layer).convert('RGB')
 
 # ------------------------------ HUD + chapter badge + word ribbon (20:9 safe) ----
@@ -641,7 +682,12 @@ def build_kinetic_stream(key, raw_words):
     if not phrases_def:
         return []
     stream = []
-    for w0, w1, l1, l2, acc in phrases_def:
+    for idx, entry in enumerate(phrases_def):
+        if len(entry) == 6:
+            w0, w1, l1, l2, acc, kck = entry
+        else:
+            w0, w1, l1, l2, acc = entry
+            kck = SACRED_KICKERS[idx] if idx < len(SACRED_KICKERS) else 'COVENANT OF PEACE'
         seg = raw_words[w0:w1 + 1]
         t_start = seg[0][0]
         t_end = seg[-1][1]
@@ -651,6 +697,7 @@ def build_kinetic_stream(key, raw_words):
             line1=l1,
             line2=l2,
             accent_words=acc,
+            kicker=kck,
             words=seg,
         ))
 
@@ -675,36 +722,33 @@ def build_kinetic_stream(key, raw_words):
 
 def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
     """Rock-solid After Effects-style kinetic typography motion text design:
-    zero scale-pulse wobble, microsecond-aligned to what is being spoken."""
+    zero scale-pulse wobble, microsecond-aligned to what is being spoken,
+    infused with DOCOGA REELS v2 tracked kickers, gold underline sweeps, and expanding sacred rings."""
     layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     if not stream:
         return layer
 
     active = None
-    for item in stream:
+    item_idx = 0
+    for idx, item in enumerate(stream):
         if item['disp_t0'] <= t < item['disp_t1']:
             active = item
+            item_idx = idx
             break
     if not active:
         return layer
 
     t0 = active['disp_t0']
     t1 = active['disp_t1']
+    dt = t - t0
 
-    # Professional After Effects kinetic motion text:
-    # Smooth initial fade-in for opening phrase (t < 0.15s);
-    # Instantaneous rock-solid cut between phrases (NO transparency dip, NO pulse!)
-    if t0 == 0.0:
-        alpha = clamp01(t / 0.15)
-    else:
-        alpha = 1.0
+    # DOCOGA REELS v2 EMBEDDED-COVER LAW:
+    # Frame 0 is rendered with full opacity (alpha=1.0) so thumbnail extraction
+    # captures the complete title card with sacred kicker natively.
+    alpha = 1.0
 
     if alpha <= 0.01:
         return layer
-
-    # 100% Rock-solid vertical lock: NO scale pulsing, NO bicubic wobbling
-    scale = 1.0
-    slide_y = 0.0
 
     cy = 780
     lines = [l for l in [active['line1'], active['line2']] if l]
@@ -717,19 +761,62 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
     total_h = len(lines) * line_h
     y_start = cy - total_h / 2.0
 
+    # DOCOGA REELS v2: Expanding sacred halo ring on key spiritual declarations
+    if is_prayer and item_idx in (2, 5, 10, 12, 13):
+        if dt < 0.60:
+            p_ring = clamp01(dt / 0.60)
+            rr = int(75 + 185 * ease_out_cubic(p_ring))
+            wdt = max(2, int(6 * (1.0 - p_ring)))
+            ring_a = int(140 * (1.0 - p_ring) * alpha)
+            if ring_a > 0:
+                rd = ImageDraw.Draw(layer)
+                rd.ellipse([W // 2 - rr, cy - rr, W // 2 + rr, cy + rr], outline=(255, 218, 64, ring_a), width=wdt)
+
     GOLD = (255, 218, 64)
     WHITE = (255, 255, 255)
 
-    text_canvas = Image.new('RGBA', (W, total_h + 80), (0, 0, 0, 0))
+    y_pad_top = 44
+    text_canvas = Image.new('RGBA', (W, total_h + 120), (0, 0, 0, 0))
     td = ImageDraw.Draw(text_canvas)
 
+    # DOCOGA REELS v2: Tracked-in kicker header above the main typography lines
+    kicker_txt = active.get('kicker', '')
+    if kicker_txt and is_prayer:
+        if t == 0.0:
+            kp = 1.0
+            ktr = 4
+            ka = 1.0
+        else:
+            kp = clamp01(dt / 0.32)
+            ktr = int(14 - 10 * ease_out_cubic(kp))  # collapses 14 -> 4px
+            ka = ease_out_cubic(clamp01(dt / 0.24)) * alpha
+        fk = fnt('SemiBold', 14)
+        kw = sum(td.textlength(ch, font=fk) + ktr for ch in kicker_txt) - ktr
+        kx = (W - kw) / 2.0
+        ky = 16
+
+        # Directional contact shadow for kicker
+        cur_x = kx
+        for ch in kicker_txt:
+            td.text((cur_x, ky + 2), ch, font=fk, fill=(0, 0, 0, int(185 * ka)))
+            cur_x += td.textlength(ch, font=fk) + ktr
+
+        # Celestial amber/gold tracked kicker
+        kicker_col = (255, 228, 130)
+        cur_x = kx
+        for ch in kicker_txt:
+            td.text((cur_x, ky), ch, font=fk, fill=kicker_col + (int(245 * ka),))
+            cur_x += td.textlength(ch, font=fk) + ktr
+
+    line_ws = []
     for li, line in enumerate(lines):
         words = line.split()
         w_words = [sum(td.textlength(ch, font=f) + tr for ch in w) - tr for w in words]
         space_w = td.textlength(' ', font=f) + tr
         line_w = sum(w_words) + space_w * (len(words) - 1)
+        line_ws.append(line_w)
         x = (W - line_w) / 2.0
-        y = li * line_h + 20
+        y = y_pad_top + li * line_h
 
         for w, ww in zip(words, w_words):
             is_accent = any(aw in w for aw in active['accent_words'])
@@ -757,20 +844,26 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
                 cur_x += td.textlength(ch, font=f) + tr
             x += ww + space_w
 
+    # DOCOGA REELS v2: Kinetic Gold Underline Sweep beneath bottom line
+    if (dt > 0.08 or t == 0.0) and is_prayer and line_ws:
+        g = 1.0 if t == 0.0 else ease_out_cubic(clamp01((dt - 0.08) / 0.28))
+        target_w = min(line_ws[-1] * 0.92, 500)
+        ul_w = target_w * g
+        ul_x0 = (W - target_w) / 2.0
+        ul_y = y_pad_top + total_h + 8
+
+        # Amber glow backing
+        td.rounded_rectangle([ul_x0 - 2, ul_y - 2, ul_x0 + ul_w + 2, ul_y + 5], radius=3, fill=(255, 200, 40, int(85 * alpha)))
+        # Pure gold bar
+        td.rounded_rectangle([ul_x0, ul_y, ul_x0 + ul_w, ul_y + 3], radius=2, fill=(255, 222, 70, int(245 * alpha)))
+
     # Ambient deep shadow bloom
     ambient = text_canvas.split()[3].filter(ImageFilter.GaussianBlur(14))
     ambient_layer_img = Image.new('RGBA', text_canvas.size, (0, 0, 0, 0))
     ambient_layer_img.paste((0, 0, 0, int(195 * alpha)), (0, 0), mask=ambient)
 
     combined = Image.alpha_composite(ambient_layer_img, text_canvas)
-
-    if abs(scale - 1.0) > 0.01:
-        nw = max(2, int(W * scale))
-        nh = max(2, int(combined.height * scale))
-        combined = combined.resize((nw, nh), Image.BICUBIC)
-        layer.alpha_composite(combined, (int((W - nw) / 2), int(y_start - 20 - (nh - combined.height) / 2)))
-    else:
-        layer.alpha_composite(combined, (0, int(y_start - 20)))
+    layer.alpha_composite(combined, (0, int(y_start - y_pad_top)))
 
     return layer
 
@@ -1847,9 +1940,12 @@ def main(key):
             source = sc['plate']
 
         sc['last_source'] = source
-        extra_z = 1.0 + 0.015 * (1.0 - ease_out_cubic(clamp01(pos / FADE))) if (k > 0 and pos < FADE) else 1.0
-        frame = camera_frame(source, p, sc.get('cam', 'push_in'), sc.get('focus', (0.5, 0.45)), extra_zoom=extra_z)
         is_prayer = (key == 'short-psalm91' or 'prayer' in key)
+        # DOCOGA REELS v2: camera punch-in on scene start (4% zoom-in easing) and accelerate-out
+        punch_z = (1.0 + 0.035 * (1.0 - ease_out_cubic(clamp01(pos / 0.45)))) if is_prayer else 1.0
+        accel_z = (1.0 + 0.020 * ease_out_cubic(clamp01((pos - (sc_dur - 0.20)) / 0.20))) if (is_prayer and pos > sc_dur - 0.20) else 1.0
+        extra_z = 1.0 + 0.015 * (1.0 - ease_out_cubic(clamp01(pos / FADE))) if (k > 0 and pos < FADE) else 1.0
+        frame = camera_frame(source, p, sc.get('cam', 'push_in'), sc.get('focus', (0.5, 0.45)), extra_zoom=extra_z * punch_z * accel_z)
         if k > 0 and pos < FADE:
             prev = scenes[k - 1]
             u = pos / FADE
@@ -1857,6 +1953,14 @@ def main(key):
             prev_plate = prev.get('last_source', prev.get('plate'))
             f_prev = camera_frame(prev_plate, 1.0, prev.get('cam', 'push_in'), prev.get('focus', (0.5, 0.45)), extra_zoom=prev_z)
             frame = optical_flare_transition(f_prev, frame, u, is_prayer=is_prayer)
+
+        # DOCOGA REELS v2: 70ms soft optical flash cut on scene cut
+        if is_prayer and k > 0 and pos < 0.07:
+            frame = Image.blend(frame, WHITE_IMG, 0.16 * (1.0 - pos / 0.07))
+
+        # DOCOGA REELS v2: Cinematic camera micro-shake on spiritual declarations
+        if is_prayer:
+            frame = apply_shake(frame, t, PRAYER_IMPACTS)
 
         ov = Image.new('RGBA', (W, H), (0, 0, 0, 0))
         ov.alpha_composite(ambient_layer(t, is_prayer=is_prayer))
