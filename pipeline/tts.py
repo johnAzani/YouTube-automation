@@ -69,20 +69,68 @@ def _write_srt(word_times: list[tuple[str, float, float]], srt_path: Path, chunk
     srt_path.write_text("\n".join(lines), encoding="utf-8")
 
 
+async def _edge_tts_single(text: str, voice: str, rate: str, out_path: Path) -> list[tuple[str, float, float]]:
+    import edge_tts
+
+    last_exc = None
+    for attempt in range(3):
+        try:
+            communicate = edge_tts.Communicate(text, voice=voice, rate=rate)
+            word_times: list[tuple[str, float, float]] = []
+            with open(out_path, "wb") as f:
+                async for chunk in communicate.stream():
+                    if chunk["type"] == "audio":
+                        f.write(chunk["data"])
+                    elif chunk["type"] == "WordBoundary":
+                        start = chunk["offset"] / 1e7
+                        dur = chunk["duration"] / 1e7
+                        word_times.append((chunk["text"], start, start + dur))
+            if out_path.exists() and out_path.stat().st_size > 512:
+                return word_times
+        except Exception as exc:
+            last_exc = exc
+            await asyncio.sleep(1.2 * (attempt + 1))
+    if last_exc:
+        raise last_exc
+    return []
+
+
 async def _edge_tts(text: str, voice: str, rate: str, out_path: Path) -> list[tuple[str, float, float]]:
     import edge_tts  # imported lazily so dry-run works without the package
 
-    communicate = edge_tts.Communicate(text, voice=voice, rate=rate)
-    word_times: list[tuple[str, float, float]] = []
-    with open(out_path, "wb") as f:
-        async for chunk in communicate.stream():
-            if chunk["type"] == "audio":
-                f.write(chunk["data"])
-            elif chunk["type"] == "WordBoundary":
-                start = chunk["offset"] / 1e7
-                dur = chunk["duration"] / 1e7
-                word_times.append((chunk["text"], start, start + dur))
-    return word_times
+    paragraphs = [p.strip() for p in text.split("\n\n") if p.strip()]
+    if len(paragraphs) <= 1:
+        return await _edge_tts_single(text, voice, rate, out_path)
+
+    import shutil
+    import subprocess
+    from .assemble import ffmpeg_bin
+
+    temp_dir = out_path.parent / f"_edge_chunks_{out_path.stem}"
+    temp_dir.mkdir(parents=True, exist_ok=True)
+    chunk_paths = []
+    all_word_times: list[tuple[str, float, float]] = []
+    time_offset = 0.0
+
+    try:
+        for idx, p in enumerate(paragraphs):
+            cp = temp_dir / f"chunk_{idx:03d}.mp3"
+            wt = await _edge_tts_single(p, voice, rate, cp)
+            chunk_paths.append(cp)
+            for w, s, e in wt:
+                all_word_times.append((w, s + time_offset, e + time_offset))
+            dur = _probe_duration(cp) or (wt[-1][2] if wt else 0.0)
+            time_offset += dur + 0.25
+
+        concat_txt = temp_dir / "concat.txt"
+        concat_txt.write_text("\n".join(f"file '{p.resolve()}'" for p in chunk_paths), encoding="utf-8")
+        subprocess.run([
+            ffmpeg_bin(), "-y", "-f", "concat", "-safe", "0",
+            "-i", str(concat_txt), "-c", "copy", str(out_path)
+        ], check=True, capture_output=True)
+        return all_word_times
+    finally:
+        shutil.rmtree(temp_dir, ignore_errors=True)
 
 
 def _placeholder_audio(text: str, out_path: Path) -> list[tuple[str, float, float]]:
