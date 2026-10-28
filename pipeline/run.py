@@ -60,9 +60,9 @@ def _require_production_prerequisites(
 
 def _require_real_narration(engine: str, dry_run: bool) -> None:
     """Placeholder audio is useful for offline renders, but never publishable."""
-    if not dry_run and engine != "edge-tts":
+    if not dry_run and engine not in ("edge-tts", "gemini-api"):
         raise RuntimeError(
-            f"Refusing production upload: narration engine is {engine!r}, not 'edge-tts'. "
+            f"Refusing production upload: narration engine is {engine!r} (placeholder audio). "
             "Fix the TTS failure and rerun; placeholder audio must not be published."
         )
 
@@ -107,9 +107,9 @@ def _mark_job_uploaded(path: Path, doc: ScriptDoc, video_id: str) -> Path:
 
 
 def _validate_finance_niche(doc: ScriptDoc) -> None:
-    """Keep every automated channel upload inside the finance/business lane."""
+    """Keep every automated channel upload inside approved channel niches."""
     niche = str(doc.meta.get("niche", "")).strip().lower()
-    allowed = ("finance", "financial", "business", "markets", "economics")
+    allowed = ("finance", "financial", "business", "markets", "economics", "faith", "prayer", "scripture", "devotional")
     if not any(term in niche for term in allowed):
         raise RuntimeError(
             f"Refusing out-of-niche job {doc.id}: niche={niche or '(missing)'!r}. "
