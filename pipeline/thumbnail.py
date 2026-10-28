@@ -26,18 +26,20 @@ _VARIANTS = [
 def _safe_plate(doc: ScriptDoc, background: Path | None, out: Path,
                 title_size: int, bg_color: tuple[int, int, int], use_bg: bool) -> None:
     bg = background if (use_bg and background is not None) else None
+    niche = getattr(doc, "niche", "") or str(doc.meta.get("niche", ""))
+    sub = "The Secret Place" if any(k in niche.lower() for k in ("faith", "prayer", "scripture", "devotional")) else "Money, Explained"
     try:
         render_text_plate(
             out,
             title=doc.thumb_text,
-            subtitle="Money, Explained",
+            subtitle=sub,
             background=bg,
             bg_color=bg_color,
             title_size=title_size,
         )
     except Exception:
         try:
-            render_text_plate(out, title=doc.thumb_text, subtitle="Money, Explained", bg_color=bg_color)
+            render_text_plate(out, title=doc.thumb_text, subtitle=sub, bg_color=bg_color)
         except Exception:
             from PIL import Image
 

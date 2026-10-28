@@ -133,8 +133,9 @@ def synthesize(text: str, out_dir: Path, voice: str = "", srt_name: str = "capti
 
     # 2. Fall back to edge-tts if Gemini was not used or failed
     if engine != "gemini-api":
+        edge_voice = voice if (voice and voice.startswith("en-")) else "en-US-DavisNeural"
         try:
-            word_times = asyncio.run(_edge_tts(text, voice, CONFIG.tts_rate, audio_path))
+            word_times = asyncio.run(_edge_tts(text, edge_voice, CONFIG.tts_rate, audio_path))
             if not audio_path.exists() or audio_path.stat().st_size < 512:
                 raise RuntimeError("edge-tts produced no audio")
             if not word_times:  # some edge-tts versions don't emit boundaries
