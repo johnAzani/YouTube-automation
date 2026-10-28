@@ -87,19 +87,45 @@ def _synthesize_single_chunk(
     model: str,
     temp_raw: Path,
 ) -> str:
-    """Call Gemini generate_content for a single text chunk and write raw audio bytes."""
+    """Call Gemini generate_content or interactions for a single text chunk and write raw audio bytes."""
     import time
     from google.genai import types
 
+    # 1. Try modern Interactions API if available (Gemini TTS standard)
+    if hasattr(client, "interactions"):
+        for tts_model in ("gemini-2.5-flash-tts", "gemini-2.5-flash-preview-tts", "gemini-3.8-flash-tts"):
+            try:
+                interaction = client.interactions.create(
+                    model=tts_model,
+                    input=[{
+                        "type": "user_input",
+                        "content": [{"type": "text", "text": text}],
+                    }],
+                    response_format={"type": "audio"},
+                    generation_config={"speech_config": [{"voice": voice_name}]},
+                )
+                output_audio = getattr(interaction, "output_audio", None)
+                if output_audio and getattr(output_audio, "data", None):
+                    data_val = output_audio.data
+                    if isinstance(data_val, str):
+                        import base64
+                        temp_raw.write_bytes(base64.b64decode(data_val))
+                    else:
+                        temp_raw.write_bytes(data_val)
+                    return "audio/wav"
+            except Exception as exc:
+                print(f"[gemini-tts] interactions.create({tts_model}) skipped: {exc!r}")
+
+    # 2. Try models.generate_content with AUDIO modality across candidate audio models
     candidate_models = [model]
-    for alt in ("gemini-2.5-flash", "gemini-2.5-pro", "gemini-2.0-flash-exp"):
+    for alt in ("gemini-2.5-flash-tts", "gemini-2.5-flash-preview-tts", "gemini-2.0-flash-exp", "gemini-2.0-flash"):
         if alt not in candidate_models:
             candidate_models.append(alt)
 
     response = None
     last_exc = None
     for cur_model in candidate_models:
-        max_retries = 3
+        max_retries = 2
         for attempt in range(max_retries):
             try:
                 response = client.models.generate_content(
@@ -120,14 +146,13 @@ def _synthesize_single_chunk(
             except Exception as exc:
                 last_exc = exc
                 err_msg = str(exc).lower()
-                if "404" in err_msg or "not_found" in err_msg:
-                    # Model not available; switch to next candidate model immediately
-                    print(f"[gemini-tts] Model {cur_model} not available ({exc!r}), trying alternate model...")
+                if "404" in err_msg or "not_found" in err_msg or "only supports text" in err_msg or "invalid_argument" in err_msg:
+                    print(f"[gemini-tts] Model {cur_model} does not support audio modality ({exc!r}), trying alternate model...")
                     break
                 if "429" in err_msg or "resource_exhausted" in err_msg or "quota" in err_msg:
                     if attempt < max_retries - 1:
-                        backoff = (attempt + 1) * 12
-                        print(f"[gemini-tts] Rate limit reached (429/ResourceExhausted). Pausing {backoff}s for burst limit to reset...")
+                        backoff = (attempt + 1) * 8
+                        print(f"[gemini-tts] Rate limit reached. Pausing {backoff}s for burst limit to reset...")
                         time.sleep(backoff)
                         continue
                     else:
