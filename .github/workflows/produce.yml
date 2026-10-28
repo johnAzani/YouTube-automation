@@ -73,13 +73,28 @@ jobs:
 
       - name: Render and upload target edition
         run: |
+          set +e
           if [ -n "${{ inputs.short }}" ]; then
-            python -m pipeline.short_release --short "${{ inputs.short }}"
+            python -m pipeline.short_release --short "${{ inputs.short }}" 2>&1 | tee run.log
+            rc=${PIPESTATUS[0]}
           elif [ -n "${{ inputs.job }}" ]; then
-            python -m pipeline.run --job "content/queue/${{ inputs.job }}"
+            python -m pipeline.run --job "content/queue/${{ inputs.job }}" 2>&1 | tee run.log
+            rc=${PIPESTATUS[0]}
           else
-            python -m pipeline.short_release --next
-            python -m pipeline.run --next
+            python -m pipeline.short_release --next 2>&1 | tee run.log
+            python -m pipeline.run --next 2>&1 | tee -a run.log
+            rc=${PIPESTATUS[0]}
+          fi
+          set -e
+          echo "### Pipeline Log (exit $rc)" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          cat run.log >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          if [ "$rc" -ne 0 ]; then
+            tail -n 15 run.log | while IFS= read -r line; do
+              echo "::error::$line"
+            done
+            exit "$rc"
           fi
 
       - name: Commit queue state (job moved to published/)
