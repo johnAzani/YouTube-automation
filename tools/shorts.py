@@ -691,9 +691,14 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
     t0 = active['disp_t0']
     t1 = active['disp_t1']
 
-    in_a = clamp01((t - t0) / 0.06)
-    out_a = clamp01((t1 - t) / 0.06)
-    alpha = min(in_a, out_a)
+    # Professional After Effects kinetic motion text:
+    # Smooth initial fade-in for opening phrase (t < 0.15s);
+    # Instantaneous rock-solid cut between phrases (NO transparency dip, NO pulse!)
+    if t0 == 0.0:
+        alpha = clamp01(t / 0.15)
+    else:
+        alpha = 1.0
+
     if alpha <= 0.01:
         return layer
 
@@ -718,12 +723,6 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
     text_canvas = Image.new('RGBA', (W, total_h + 80), (0, 0, 0, 0))
     td = ImageDraw.Draw(text_canvas)
 
-    active_spoken = ''
-    for ws, we, w in active.get('words', []):
-        if ws - 0.04 <= t < we + 0.04:
-            active_spoken = w.upper()
-            break
-
     for li, line in enumerate(lines):
         words = line.split()
         w_words = [sum(td.textlength(ch, font=f) + tr for ch in w) - tr for w in words]
@@ -734,30 +733,24 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
 
         for w, ww in zip(words, w_words):
             is_accent = any(aw in w for aw in active['accent_words'])
-            is_word_active = bool(active_spoken and (active_spoken in w or w in active_spoken))
+            col = GOLD if is_accent else WHITE
 
-            if is_accent:
-                col = (255, 240, 110) if is_word_active else (235, 185, 45)
-            else:
-                col = (255, 255, 255) if is_word_active else (185, 205, 230)
-
-            # Directional contact drop shadow
-            for sx, sy, sa in [(0, 3, int(220 * alpha)), (0, 6, int(170 * alpha)), (0, 10, int(110 * alpha))]:
+            # Directional contact drop shadow (3 passes for 3D depth)
+            for sx, sy, sa in [(0, 3, int(230 * alpha)), (0, 6, int(180 * alpha)), (0, 11, int(120 * alpha))]:
                 cur_x = x
                 for ch in w:
                     td.text((cur_x + sx, y + sy), ch, font=f, fill=(0, 0, 0, sa))
                     cur_x += td.textlength(ch, font=f) + tr
 
-            # Active spoken word halo bloom
-            if is_word_active:
-                halo_col = (255, 225, 90, int(85 * alpha)) if is_accent else (210, 235, 255, int(75 * alpha))
-                cur_x = x
-                for ch in w:
-                    for gx, gy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
-                        td.text((cur_x + gx, y + gy), ch, font=f, fill=halo_col)
-                    cur_x += td.textlength(ch, font=f) + tr
+            # Subtle ambient luminous glow around display characters
+            glow_col = (255, 215, 60, int(60 * alpha)) if is_accent else (220, 240, 255, int(45 * alpha))
+            cur_x = x
+            for ch in w:
+                for gx, gy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                    td.text((cur_x + gx, y + gy), ch, font=f, fill=glow_col)
+                cur_x += td.textlength(ch, font=f) + tr
 
-            # Main typography
+            # Main crisp typography
             cur_x = x
             for ch in w:
                 td.text((cur_x, y), ch, font=f, fill=col + (int(255 * alpha),))
