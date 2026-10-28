@@ -33,7 +33,7 @@ GEMINI_VOICES = {
     "Aoede": "Aoede",
 }
 
-DEFAULT_MODEL = "gemini-2.5-flash"
+DEFAULT_MODEL = "gemini-3.8-flash-tts"
 DEFAULT_VOICE = "Charon"
 FALLBACK_EDGE_VOICE = "en-US-DavisNeural"
 
@@ -79,6 +79,47 @@ def _chunk_text(text: str, max_chars: int = 500) -> list[str]:
     return chunks or [text]
 
 
+def _convert_raw_audio(temp_raw: Path, out_path: Path, mime_type: str = "") -> None:
+    """Robustly convert raw audio bytes from Gemini to target container (mp3/wav)."""
+    from .assemble import ffmpeg_bin
+
+    # 1. First try raw PCM 24kHz s16le (Gemini's native audio stream format)
+    try:
+        cmd = [
+            ffmpeg_bin(), "-y",
+            "-f", "s16le", "-ar", "24000", "-ac", "1",
+            "-i", str(temp_raw),
+            "-ar", "44100", "-b:a", "192k", str(out_path)
+        ]
+        proc = subprocess.run(cmd, capture_output=True, text=True)
+        if proc.returncode == 0 and out_path.exists() and out_path.stat().st_size > 512:
+            return
+    except Exception:
+        pass
+
+    # 2. Try container auto-detect (if Gemini returned a formatted WAV/MP3 header)
+    try:
+        cmd = [
+            ffmpeg_bin(), "-y",
+            "-i", str(temp_raw),
+            "-ar", "44100", "-b:a", "192k", str(out_path)
+        ]
+        proc = subprocess.run(cmd, capture_output=True, text=True)
+        if proc.returncode == 0 and out_path.exists() and out_path.stat().st_size > 512:
+            return
+    except Exception:
+        pass
+
+    # 3. Fallback to 16kHz s16le
+    cmd = [
+        ffmpeg_bin(), "-y",
+        "-f", "s16le", "-ar", "16000", "-ac", "1",
+        "-i", str(temp_raw),
+        "-ar", "44100", "-b:a", "192k", str(out_path)
+    ]
+    subprocess.run(cmd, check=True, capture_output=True)
+
+
 def _synthesize_single_chunk(
     client,
     text: str,
@@ -93,7 +134,7 @@ def _synthesize_single_chunk(
 
     # 1. Try modern Interactions API if available (Gemini TTS standard)
     if hasattr(client, "interactions"):
-        for tts_model in ("gemini-2.5-flash-tts", "gemini-2.5-flash-preview-tts", "gemini-3.8-flash-tts"):
+        for tts_model in ("gemini-3.8-flash-tts", "gemini-2.5-flash-preview-tts", "gemini-2.5-flash-tts"):
             try:
                 interaction = client.interactions.create(
                     model=tts_model,
@@ -112,13 +153,14 @@ def _synthesize_single_chunk(
                         temp_raw.write_bytes(base64.b64decode(data_val))
                     else:
                         temp_raw.write_bytes(data_val)
-                    return "audio/wav"
+                    mime_type = getattr(output_audio, "mime_type", "audio/pcm;rate=24000") or "audio/pcm"
+                    return mime_type
             except Exception as exc:
                 print(f"[gemini-tts] interactions.create({tts_model}) skipped: {exc!r}")
 
     # 2. Try models.generate_content with AUDIO modality across candidate audio models
     candidate_models = [model]
-    for alt in ("gemini-2.5-flash-tts", "gemini-2.5-flash-preview-tts", "gemini-2.0-flash-exp", "gemini-2.0-flash"):
+    for alt in ("gemini-3.8-flash-tts", "gemini-2.5-flash-preview-tts", "gemini-2.0-flash-exp"):
         if alt not in candidate_models:
             candidate_models.append(alt)
 
@@ -222,20 +264,7 @@ def synthesize_gemini_audio(
         temp_raw = out_path.with_suffix(".raw_audio")
         try:
             mime_type = _synthesize_single_chunk(client, chunks[0], voice_name, system_instruction, model, temp_raw)
-            if "pcm" in mime_type.lower() or "raw" in mime_type.lower():
-                cmd = [
-                    ffmpeg_bin(), "-y",
-                    "-f", "s16le", "-ar", "24000", "-ac", "1",
-                    "-i", str(temp_raw),
-                    "-b:a", "192k", str(out_path)
-                ]
-            else:
-                cmd = [
-                    ffmpeg_bin(), "-y",
-                    "-i", str(temp_raw),
-                    "-b:a", "192k", str(out_path)
-                ]
-            subprocess.run(cmd, check=True, capture_output=True)
+            _convert_raw_audio(temp_raw, out_path, mime_type)
         finally:
             if temp_raw.is_file():
                 temp_raw.unlink()
@@ -250,20 +279,7 @@ def synthesize_gemini_audio(
             chunk_raw = temp_dir / f"chunk_{idx:03d}.raw"
             chunk_wav = temp_dir / f"chunk_{idx:03d}.wav"
             mime_type = _synthesize_single_chunk(client, chunk, voice_name, system_instruction, model, chunk_raw)
-            if "pcm" in mime_type.lower() or "raw" in mime_type.lower():
-                cmd = [
-                    ffmpeg_bin(), "-y",
-                    "-f", "s16le", "-ar", "24000", "-ac", "1",
-                    "-i", str(chunk_raw),
-                    "-ar", "44100", "-ac", "2", str(chunk_wav)
-                ]
-            else:
-                cmd = [
-                    ffmpeg_bin(), "-y",
-                    "-i", str(chunk_raw),
-                    "-ar", "44100", "-ac", "2", str(chunk_wav)
-                ]
-            subprocess.run(cmd, check=True, capture_output=True)
+            _convert_raw_audio(chunk_raw, chunk_wav, mime_type)
             chunk_wavs.append(chunk_wav)
 
         # Concat chunks into final audio file with ffmpeg concat demuxer
