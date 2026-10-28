@@ -29,11 +29,11 @@ asset_queries:
   - "calm mountain lake sunset water reflection"
   - "sun rays breaking clouds mountains"
   - "ancient fortress stone wall mountain"
-  - "golden eagles soaring over mountain range"
-  - "candle burning dark room night prayer"
-  - "ancient shield armor dramatic lighting"
+  - "mountain landscape clouds"
+  - "candle burning dark room"
+  - "medieval armor shield"
   - "milky way galaxy starry night sky"
-  - "golden sunrise lake mist morning"
+  - "mountain sunrise lake"
 asset_query_verification:
   verified_on: "2026-10-28"
   method: "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule"
@@ -50,26 +50,26 @@ asset_query_verification:
       verified: true
       usable: 2
       evidence: "2x CC BY 2.0 / Public domain — European ancient fortress wall scans"
-    - query: "golden eagles soaring over mountain range"
+    - query: "mountain landscape clouds"
       verified: true
-      usable: 3
-      evidence: "3x Public domain / CC BY 2.0 — US Fish & Wildlife golden eagle in flight"
-    - query: "candle burning dark room night prayer"
+      usable: 4
+      evidence: "4x Public domain — USGS / NPS Rocky Mountain alpine cloud vista photography"
+    - query: "candle burning dark room"
       verified: true
       usable: 3
       evidence: "3x CC0 / Public domain — Library of Congress and Wikimedia sanctuary candle scans"
-    - query: "ancient shield armor dramatic lighting"
+    - query: "medieval armor shield"
       verified: true
-      usable: 2
-      evidence: "2x Public domain — Metropolitan Museum of Art medieval armor and shield collection"
+      usable: 3
+      evidence: "3x Public domain — Metropolitan Museum of Art medieval armor and shield collection"
     - query: "milky way galaxy starry night sky"
       verified: true
       usable: 4
       evidence: "4x Public domain — NASA APOD / ESO celestial night sky archives"
-    - query: "golden sunrise lake mist morning"
+    - query: "mountain sunrise lake"
       verified: true
       usable: 4
-      evidence: "4x Public domain — National Park Service dawn mist and sunrise photography"
+      evidence: "4x Public domain — National Park Service dawn alpine lake sunrise photography"
 originality:
   original_thesis: true      # devotional prayer narrative emphasizing peaceful surrender and covenant safety
   unique_structure: true     # 5-movement exposition moving from dwelling place to angelic protection to God's promise
