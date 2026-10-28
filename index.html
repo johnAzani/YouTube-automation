@@ -402,7 +402,7 @@ async function forceDownload(url, filename) {
         <div class="player-hud">
           <div class="timecode-display">
             <span id="timecode-current">00:00.00</span>
-            <span id="timecode-total">00:40.21</span>
+            <span id="timecode-total">00:39.55</span>
           </div>
 
           <div class="transport-btns">
@@ -995,7 +995,7 @@ if (player) {
 
 function seekRelative(delta) {
   if (!player) return;
-  const dur = player.duration || 40.2;
+  const dur = player.duration || 39.55;
   player.currentTime = Math.max(0, Math.min(dur, player.currentTime + delta));
 }
 
@@ -1003,13 +1003,13 @@ function stepFrame(frames) {
   if (!player) return;
   player.pause();
   const fps = 24.0;
-  const dur = player.duration || 40.2;
+  const dur = player.duration || 39.55;
   player.currentTime = Math.max(0, Math.min(dur, player.currentTime + (frames / fps)));
 }
 
 function seekTo(t) {
   if (!player) return;
-  const targetTime = Math.max(0, Math.min(player.duration || 40.2, t));
+  const targetTime = Math.max(0, Math.min(player.duration || 39.55, t));
   if (player.readyState < 1) {
     const onMeta = () => {
       player.removeEventListener('loadedmetadata', onMeta);
