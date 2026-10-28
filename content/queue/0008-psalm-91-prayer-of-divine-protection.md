@@ -73,7 +73,7 @@ asset_query_verification:
 originality:
   original_thesis: true      # devotional prayer narrative emphasizing peaceful surrender and covenant safety
   unique_structure: true     # 5-movement exposition moving from dwelling place to angelic protection to God's promise
-  human_rewrite: true        # carefully curated theological wording with breathing pauses
+  human_rewrite: true        # carefully curated theological wording with natural breathing pauses
   no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
   source_notes: true         # scriptures and classical commentaries documented
   ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
