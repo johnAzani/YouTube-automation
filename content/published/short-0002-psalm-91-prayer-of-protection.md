@@ -6,16 +6,16 @@ status: published
 format: short
 niche: faith and prayer
 category: education
-published_on: "2026-10-26"
-youtube_video_id: "q1LXu0_qB3A"
-youtube_shorts_url: "https://www.youtube.com/shorts/q1LXu0_qB3A"
-youtube_watch_url: "https://youtu.be/q1LXu0_qB3A"
-youtube_studio_url: "https://studio.youtube.com/video/q1LXu0_qB3A/edit"
+published_on: "2026-10-28"
+youtube_video_id: "SG69BbNlfRw"
+youtube_shorts_url: "https://www.youtube.com/shorts/SG69BbNlfRw"
+youtube_watch_url: "https://youtu.be/SG69BbNlfRw"
+youtube_studio_url: "https://studio.youtube.com/video/SG69BbNlfRw/edit"
 privacy_status: "public"
 width: 720
 height: 1280
-duration_seconds: 40.21
-scenes_verified: 6
+duration_seconds: 39.55
+scenes_verified: 8
 ---
 
 He who dwells in the secret place of the Most High shall abide under the shadow of the Almighty.
@@ -29,6 +29,7 @@ Produced by The Secret Place | Daily Prayer & Scripture.
 
 ## Custom Thumbnail Apply Results
 
+- `SG69BbNlfRw`: `ok`
 - `q1LXu0_qB3A`: `ok`
 - `Uhd7uMYo9Mo`: `ok`
 
@@ -38,14 +39,25 @@ Produced by The Secret Place | Daily Prayer & Scripture.
 ```json
 [
   {
-    "id": "q1LXu0_qB3A",
+    "id": "SG69BbNlfRw",
     "title": "Say This Psalm 91 Prayer Before You Sleep | Divine Protection #Shorts",
-    "publishedAt": "2026-10-26T11:09:22Z",
+    "publishedAt": "2026-10-28T12:48:43Z",
     "uploadStatus": "uploaded",
     "privacyStatus": "public",
     "rejectionReason": "",
     "failureReason": "",
-    "duration": "P0D",
+    "duration": "PT40S",
+    "thumbMaxres": true
+  },
+  {
+    "id": "q1LXu0_qB3A",
+    "title": "Say This Psalm 91 Prayer Before You Sleep | Divine Protection #Shorts",
+    "publishedAt": "2026-10-26T11:09:56Z",
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "rejectionReason": "",
+    "failureReason": "",
+    "duration": "PT41S",
     "thumbMaxres": true
   },
   {
