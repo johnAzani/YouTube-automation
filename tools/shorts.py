@@ -654,14 +654,14 @@ def build_kinetic_stream(key, raw_words):
             words=seg,
         ))
 
-    # Calculate exact non-overlapping display windows aligned to vocal transients
+    # Calculate exact non-overlapping display windows aligned to vocal transients (120ms lead-in for instant perception)
     for i, item in enumerate(stream):
         t_start = item['t0']
         if i == 0:
             disp_t0 = 0.0
         else:
             prev_end = stream[i - 1]['t1']
-            disp_t0 = max(prev_end, t_start - 0.08)
+            disp_t0 = max(prev_end + 0.04, t_start - 0.12)
         item['disp_t0'] = disp_t0
 
     for i in range(len(stream)):
