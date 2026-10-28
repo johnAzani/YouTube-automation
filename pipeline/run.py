@@ -349,6 +349,14 @@ def main(argv: list[str] | None = None) -> int:
             results.append(process(path, dry))
         except Exception as exc:  # noqa: BLE001
             _log(f"FAILED {path}: {exc}")
+            import traceback
+            tb = traceback.format_exc()
+            clean_exc = str(exc).replace("\n", " ")
+            print(f"::error file={path}::{clean_exc}", flush=True)
+            summary_path = Path(os.environ["GITHUB_STEP_SUMMARY"]) if os.environ.get("GITHUB_STEP_SUMMARY") else None
+            if summary_path:
+                with open(summary_path, "a", encoding="utf-8") as f:
+                    f.write(f"### ❌ FAILED `{path.name}`\n\n```\n{exc}\n\n{tb}\n```\n")
             return 1
 
     _log(f"done: {len(results)} job(s)")

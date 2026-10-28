@@ -15,6 +15,7 @@ Requires GEMINI_API_KEY (or GOOGLE_API_KEY) in environment / GitHub Secrets.
 from __future__ import annotations
 
 import os
+import shutil
 import subprocess
 from pathlib import Path
 from typing import Optional
@@ -57,34 +58,38 @@ def get_gemini_api_key() -> Optional[str]:
     return None
 
 
-def synthesize_gemini_audio(
+def _chunk_text(text: str, max_chars: int = 500) -> list[str]:
+    """Split long narrative text at paragraph boundaries into <= max_chars chunks."""
+    paragraphs = [p.strip() for p in text.split("\n\n") if p.strip()]
+    if not paragraphs:
+        paragraphs = [text.strip()]
+    chunks: list[str] = []
+    curr: list[str] = []
+    curr_len = 0
+    for p in paragraphs:
+        if curr_len + len(p) > max_chars and curr:
+            chunks.append("\n\n".join(curr))
+            curr = [p]
+            curr_len = len(p)
+        else:
+            curr.append(p)
+            curr_len += len(p)
+    if curr:
+        chunks.append("\n\n".join(curr))
+    return chunks or [text]
+
+
+def _synthesize_single_chunk(
+    client,
     text: str,
-    out_path: Path,
-    voice: str = DEFAULT_VOICE,
-    prompt_style: str = "calm, reverent, peaceful devotional tone",
-    model: str = DEFAULT_MODEL,
-) -> Path:
-    """Synthesize speech using Google Gemini API and write to out_path (.mp3 or .wav)."""
-    api_key = get_gemini_api_key()
-    if not api_key:
-        raise RuntimeError(
-            "GEMINI_API_KEY is not set. Please add GEMINI_API_KEY to your environment, "
-            ".env file, or GitHub Repository Secrets."
-        )
-
-    from google import genai
-    from google.genai import types
-
-    client = genai.Client(api_key=api_key)
-    voice_name = GEMINI_VOICES.get(voice.lower(), voice)
-
-    system_instruction = (
-        f"You are a professional voiceover narrator. Read the provided text aloud in a {prompt_style}. "
-        "Do not add any conversational commentary, introductory remarks, or concluding remarks. "
-        "Only speak the exact provided words naturally with reverent pacing and appropriate pauses."
-    )
-
+    voice_name: str,
+    system_instruction: str,
+    model: str,
+    temp_raw: Path,
+) -> str:
+    """Call Gemini generate_content for a single text chunk and write raw audio bytes."""
     import time
+    from google.genai import types
 
     max_retries = 3
     response = None
@@ -121,43 +126,116 @@ def synthesize_gemini_audio(
     audio_bytes: bytes | None = None
     mime_type: str = "audio/wav"
 
-    if response.candidates and response.candidates[0].content:
+    if response and response.candidates and response.candidates[0].content:
         for part in response.candidates[0].content.parts:
             if getattr(part, "inline_data", None) and part.inline_data.data:
-                audio_bytes = part.inline_data.data
+                data_val = part.inline_data.data
+                if isinstance(data_val, str):
+                    import base64
+                    audio_bytes = base64.b64decode(data_val)
+                else:
+                    audio_bytes = data_val
                 mime_type = part.inline_data.mime_type or "audio/wav"
                 break
 
     if not audio_bytes:
         raise RuntimeError("Gemini API returned no audio content in response.")
 
+    temp_raw.write_bytes(audio_bytes)
+    return mime_type
+
+
+def synthesize_gemini_audio(
+    text: str,
+    out_path: Path,
+    voice: str = DEFAULT_VOICE,
+    prompt_style: str = "calm, reverent, peaceful devotional tone",
+    model: str = DEFAULT_MODEL,
+) -> Path:
+    """Synthesize speech using Google Gemini API and write to out_path (.mp3 or .wav)."""
+    api_key = get_gemini_api_key()
+    if not api_key:
+        raise RuntimeError(
+            "GEMINI_API_KEY is not set. Please add GEMINI_API_KEY to your environment, "
+            ".env file, or GitHub Repository Secrets."
+        )
+
+    from google import genai
+    from .assemble import ffmpeg_bin
+
+    client = genai.Client(api_key=api_key)
+    voice_name = GEMINI_VOICES.get(voice.lower(), voice)
+
+    system_instruction = (
+        f"You are a professional voiceover narrator. Read the provided text aloud in a {prompt_style}. "
+        "Do not add any conversational commentary, introductory remarks, or concluding remarks. "
+        "Only speak the exact provided words naturally with reverent pacing and appropriate pauses."
+    )
+
     out_path = Path(out_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
-    # If raw PCM or WAV, convert via ffmpeg to ensure compatibility with out_path extension
-    from .assemble import ffmpeg_bin
-    temp_raw = out_path.with_suffix(".raw_audio")
-    temp_raw.write_bytes(audio_bytes)
+    chunks = _chunk_text(text, max_chars=450)
+    if len(chunks) == 1:
+        temp_raw = out_path.with_suffix(".raw_audio")
+        try:
+            mime_type = _synthesize_single_chunk(client, chunks[0], voice_name, system_instruction, model, temp_raw)
+            if "pcm" in mime_type.lower() or "raw" in mime_type.lower():
+                cmd = [
+                    ffmpeg_bin(), "-y",
+                    "-f", "s16le", "-ar", "24000", "-ac", "1",
+                    "-i", str(temp_raw),
+                    "-b:a", "192k", str(out_path)
+                ]
+            else:
+                cmd = [
+                    ffmpeg_bin(), "-y",
+                    "-i", str(temp_raw),
+                    "-b:a", "192k", str(out_path)
+                ]
+            subprocess.run(cmd, check=True, capture_output=True)
+        finally:
+            if temp_raw.is_file():
+                temp_raw.unlink()
+        return out_path
 
+    # Multi-chunk synthesis for longform content
+    chunk_wavs: list[Path] = []
+    temp_dir = out_path.parent / f"_gemini_chunks_{out_path.stem}"
+    temp_dir.mkdir(parents=True, exist_ok=True)
     try:
-        # Check if raw PCM or standard audio container
-        if "pcm" in mime_type.lower() or "raw" in mime_type.lower():
-            # Standard Gemini raw audio is 24kHz 16-bit mono little-endian PCM
-            cmd = [
-                ffmpeg_bin(), "-y",
-                "-f", "s16le", "-ar", "24000", "-ac", "1",
-                "-i", str(temp_raw),
-                "-b:a", "192k", str(out_path)
-            ]
-        else:
-            cmd = [
-                ffmpeg_bin(), "-y",
-                "-i", str(temp_raw),
-                "-b:a", "192k", str(out_path)
-            ]
-        subprocess.run(cmd, check=True, capture_output=True)
+        for idx, chunk in enumerate(chunks):
+            chunk_raw = temp_dir / f"chunk_{idx:03d}.raw"
+            chunk_wav = temp_dir / f"chunk_{idx:03d}.wav"
+            mime_type = _synthesize_single_chunk(client, chunk, voice_name, system_instruction, model, chunk_raw)
+            if "pcm" in mime_type.lower() or "raw" in mime_type.lower():
+                cmd = [
+                    ffmpeg_bin(), "-y",
+                    "-f", "s16le", "-ar", "24000", "-ac", "1",
+                    "-i", str(chunk_raw),
+                    "-ar", "44100", "-ac", "2", str(chunk_wav)
+                ]
+            else:
+                cmd = [
+                    ffmpeg_bin(), "-y",
+                    "-i", str(chunk_raw),
+                    "-ar", "44100", "-ac", "2", str(chunk_wav)
+                ]
+            subprocess.run(cmd, check=True, capture_output=True)
+            chunk_wavs.append(chunk_wav)
+
+        # Concat chunks into final audio file with ffmpeg concat demuxer
+        concat_txt = temp_dir / "concat.txt"
+        concat_txt.write_text("\n".join(f"file '{p.resolve()}'" for p in chunk_wavs), encoding="utf-8")
+        concat_cmd = [
+            ffmpeg_bin(), "-y",
+            "-f", "concat", "-safe", "0",
+            "-i", str(concat_txt),
+            "-c:a", "libmp3lame" if out_path.suffix.lower() == ".mp3" else "aac",
+            "-b:a", "192k", str(out_path)
+        ]
+        subprocess.run(concat_cmd, check=True, capture_output=True)
     finally:
-        if temp_raw.is_file():
-            temp_raw.unlink()
+        shutil.rmtree(temp_dir, ignore_errors=True)
 
     return out_path
