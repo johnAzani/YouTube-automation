@@ -33,7 +33,7 @@ GEMINI_VOICES = {
     "Aoede": "Aoede",
 }
 
-DEFAULT_MODEL = "gemini-2.0-flash"
+DEFAULT_MODEL = "gemini-2.5-flash"
 DEFAULT_VOICE = "Charon"
 FALLBACK_EDGE_VOICE = "en-US-DavisNeural"
 
@@ -91,37 +91,54 @@ def _synthesize_single_chunk(
     import time
     from google.genai import types
 
-    max_retries = 3
+    candidate_models = [model]
+    for alt in ("gemini-2.5-flash", "gemini-2.5-pro", "gemini-2.0-flash-exp"):
+        if alt not in candidate_models:
+            candidate_models.append(alt)
+
     response = None
-    for attempt in range(max_retries):
-        try:
-            response = client.models.generate_content(
-                model=model,
-                contents=f"{system_instruction}\n\nText to read:\n{text}",
-                config=types.GenerateContentConfig(
-                    response_modalities=["AUDIO"],
-                    speech_config=types.SpeechConfig(
-                        voice_config=types.VoiceConfig(
-                            prebuilt_voice_config=types.PrebuiltVoiceConfig(
-                                voice_name=voice_name
+    last_exc = None
+    for cur_model in candidate_models:
+        max_retries = 3
+        for attempt in range(max_retries):
+            try:
+                response = client.models.generate_content(
+                    model=cur_model,
+                    contents=f"{system_instruction}\n\nText to read:\n{text}",
+                    config=types.GenerateContentConfig(
+                        response_modalities=["AUDIO"],
+                        speech_config=types.SpeechConfig(
+                            voice_config=types.VoiceConfig(
+                                prebuilt_voice_config=types.PrebuiltVoiceConfig(
+                                    voice_name=voice_name
+                                )
                             )
-                        )
+                        ),
                     ),
-                ),
-            )
+                )
+                break
+            except Exception as exc:
+                last_exc = exc
+                err_msg = str(exc).lower()
+                if "404" in err_msg or "not_found" in err_msg:
+                    # Model not available; switch to next candidate model immediately
+                    print(f"[gemini-tts] Model {cur_model} not available ({exc!r}), trying alternate model...")
+                    break
+                if "429" in err_msg or "resource_exhausted" in err_msg or "quota" in err_msg:
+                    if attempt < max_retries - 1:
+                        backoff = (attempt + 1) * 12
+                        print(f"[gemini-tts] Rate limit reached (429/ResourceExhausted). Pausing {backoff}s for burst limit to reset...")
+                        time.sleep(backoff)
+                        continue
+                    else:
+                        print(f"[gemini-tts] Daily request limit reached on free Gemini tier ({exc!r}).")
+                        raise
+                raise
+        if response:
             break
-        except Exception as exc:
-            err_msg = str(exc).lower()
-            if "429" in err_msg or "resource_exhausted" in err_msg or "quota" in err_msg:
-                if attempt < max_retries - 1:
-                    backoff = (attempt + 1) * 12
-                    print(f"[gemini-tts] Rate limit reached (429/ResourceExhausted). Pausing {backoff}s for burst limit to reset...")
-                    time.sleep(backoff)
-                    continue
-                else:
-                    print(f"[gemini-tts] Daily request limit reached on free Gemini tier ({exc!r}).")
-                    raise
-            raise
+
+    if not response and last_exc:
+        raise last_exc
 
     audio_bytes: bytes | None = None
     mime_type: str = "audio/wav"
