@@ -1,0 +1,61 @@
+name: Gemini Brain Autonomous Queue Replenishment
+
+on:
+  schedule:
+    # Runs daily at 03:14 UTC (3 hours ahead of morning produce.yml cron)
+    - cron: "14 3 * * *"
+  workflow_dispatch:
+    inputs:
+      force_generate:
+        description: "Force generation of next scripture devotional regardless of runway"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: gemini-brain
+  cancel-in-progress: false
+
+jobs:
+  brain-replenish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - uses: ./.github/actions/setup-render-deps
+
+      - name: Run Google Gemini Autonomous Brain
+        run: |
+          set -e
+          if [ "${{ inputs.force_generate }}" = "true" ]; then
+            python scripts/gemini_brain.py --generate-next 2>&1 | tee brain.log
+          else
+            python scripts/gemini_brain.py --auto-replenish 2>&1 | tee brain.log
+          fi
+
+      - name: Commit newly authored queue items
+        run: |
+          git config user.name "gemini-brain-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add content/queue/ content/shorts-queue/ content/factcheck/
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(brain): autonomous scripture queue replenishment [skip ci]"
+            git push
+            echo "### 🧠 Gemini Brain Staged New Devotional" >> "$GITHUB_STEP_SUMMARY"
+            echo "New scripture devotional and companion Short authored and armed for production." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "### 🧠 Gemini Brain Queue Audit" >> "$GITHUB_STEP_SUMMARY"
+            echo "Queue runway is healthy. No replenishment needed." >> "$GITHUB_STEP_SUMMARY"
+          fi

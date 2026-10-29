@@ -66,7 +66,7 @@ SCRIPTURE_ROADMAP = [
         "target_duration": "5:00 – 5:30",
         "primary_intent": "Overcoming insomnia, night watch, travel and family safety",
         "search_volume_tier": "Tier 1 (Sustained Sleep Search)",
-        "status": "recommended_next",
+        "status": "staged_in_queue",
         "video_id": None,
     },
     {
@@ -78,7 +78,7 @@ SCRIPTURE_ROADMAP = [
         "target_duration": "6:00 – 7:00",
         "primary_intent": "Spiritual warfare, panic attacks, darkness and depression relief",
         "search_volume_tier": "Tier 2 (High Intent Courage Meditation)",
-        "status": "planned",
+        "status": "staged_in_queue",
         "video_id": None,
     },
     {
@@ -90,7 +90,7 @@ SCRIPTURE_ROADMAP = [
         "target_duration": "5:30 – 6:00",
         "primary_intent": "Exhaustion, burnout recovery, morning restoration",
         "search_volume_tier": "Tier 2 (High Shareability & Repeat Plays)",
-        "status": "planned",
+        "status": "recommended_next",
         "video_id": None,
     },
     {
