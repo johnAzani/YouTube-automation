@@ -183,9 +183,13 @@ The channel is engineered to operate 100% autonomously without human presence, c
 
 ### 3.1 GitHub Actions Execution Matrix & Timing Strategy
 - **Runner Environment:** Standard `ubuntu-latest` (4-core vCPU, 16 GB RAM, free & unlimited on public GitHub repositories).
-- **Execution Windows:**
+- **Execution Windows & Chronobiological Rationale (`docs/BEST_TIME_TO_POST.md`):**
   - **Slot 1: `06:14 UTC` (07:14 Lagos / 02:14 EST / 23:14 PST):** Captures early morning prayer traffic across West Africa and Europe, while simultaneously serving late-night insomnia viewers on the US West Coast.
-  - **Slot 2: `14:14 UTC` (15:14 Lagos / 10:14 EST / 07:14 PST):** The primary production and scheduling slot. Uploading at 14:14 UTC allows YouTube's ingestion servers 4 to 6 hours to complete 1080p VP9/AV01 transcodes and indexing before the peak US Eastern bedtime prayer window begins (19:30–22:30 EST).
+  - **Slot 2: `14:14 UTC` (15:14 Lagos / 10:14 EST / 07:14 PST):** The primary production and scheduling slot. Uploading at 14:14 UTC allows YouTube's ingestion servers 4 to 6 hours to complete 1080p VP9/AV01 transcodes, closed-caption semantic alignment, and audio loudness normalization before the peak US Eastern bedtime prayer window begins (19:30–22:30 EST).
+- **YouTube Studio Audience Heatmap & 48-Hour Velocity Integration:**
+  - YouTube Analytics API v2 strictly excludes the hourly dimension; the purple "When your viewers are on YouTube" heatmap is available exclusively in the YouTube Studio Audience tab (`studio.youtube.com/channel/analytics/tab-audience`).
+  - Scheduling rule: Always upload 2 to 4 hours prior to the darkest purple band or 48-hour velocity crest to seed subscriber CTR and AVD ahead of the peak surge.
+  - Day-of-week ranking: Sunday (#1), Friday (#2), and Thursday (#3) command the highest contemplative devotional watch time.
 
 ### 3.2 Headless Queue Progression & Storage Discipline
 - **Long-Form Queue (`content/queue/*.md`):** Script files contain YAML frontmatter declaring `id`, `status: approved`, `privacy: public` (or `publish_at`), and scene bodies.
