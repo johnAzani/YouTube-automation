@@ -131,6 +131,60 @@ EDITIONS: dict[str, ShortEdition] = {
             "#Shorts #Psalm23 #TheLordIsMyShepherd #NightPrayer #BedtimePrayer #DailyScripture #TheSecretPlace"
         ),
     ),
+    "short-psalm121": ShortEdition(
+        key="short-psalm121",
+        job_id="SHORT-0004",
+        slug="short-0004-psalm-121-he-who-keeps-you",
+        title="Say This Psalm 121 Prayer Before You Sleep | He Who Keeps You #Shorts",
+        niche="faith and prayer",
+        tags=[
+            "shorts",
+            "psalm 121",
+            "he who keeps you",
+            "night prayer",
+            "prayer of protection",
+            "bedtime prayer",
+            "daily scripture",
+            "christian encouragement",
+            "peaceful sleep",
+        ],
+        description=(
+            "I will lift up mine eyes unto the hills, from whence cometh my help. "
+            "My help cometh from the Lord, which made heaven and earth.\n\n"
+            "Rest peacefully tonight knowing that He who keeps you will neither slumber nor sleep. "
+            "The Lord is your keeper and your shade upon your right hand.\n\n"
+            "Scripture reference: Psalm 121 (KJV / NKJV Public Domain biblical text).\n"
+            "Produced by The Secret Place | Daily Prayer & Scripture.\n\n"
+            "#Shorts #Psalm121 #HeWhoKeepsYou #NightPrayer #BedtimePrayer #DailyScripture #TheSecretPlace"
+        ),
+    ),
+    "short-psalm27": ShortEdition(
+        key="short-psalm27",
+        job_id="SHORT-0005",
+        slug="short-0005-psalm-27-the-lord-is-my-light",
+        title="Say This Psalm 27 Prayer Before You Sleep | Fear No Evil #Shorts",
+        niche="faith and prayer",
+        tags=[
+            "shorts",
+            "psalm 27",
+            "the lord is my light",
+            "night prayer",
+            "fear no evil",
+            "bedtime prayer",
+            "daily scripture",
+            "christian encouragement",
+            "peaceful sleep",
+        ],
+        description=(
+            "The Lord is my light and my salvation; whom shall I fear? "
+            "The Lord is the strength of my life; of whom shall I be afraid?\n\n"
+            "Surrender all nighttime anxiety into His presence. In the time of trouble "
+            "He will hide you in His pavilion and set your feet upon a rock.\n\n"
+            "Scripture reference: Psalm 27 (KJV / NKJV Public Domain biblical text).\n"
+            "Produced by The Secret Place | Daily Prayer & Scripture.\n\n"
+            "#Shorts #Psalm27 #TheLordIsMyLight #FearNoEvil #NightPrayer #BedtimePrayer #TheSecretPlace"
+        ),
+    ),
 }
 
 
