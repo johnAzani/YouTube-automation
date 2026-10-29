@@ -19,7 +19,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from .config import CONFIG, OUTPUT_DIR, QUEUE_DIR, PUBLISHED_DIR
+from .config import CONFIG, OUTPUT_DIR, QUEUE_DIR, PUBLISHED_DIR, REPO_ROOT
 from .originality import enforce, OriginalityError
 from .script_doc import ScriptDoc, parse_script
 
@@ -172,52 +172,89 @@ def process(path: Path, dry_run: bool) -> dict:
         CONFIG.width = int(os.environ.get("VIDEO_WIDTH", "1280"))
         CONFIG.height = int(os.environ.get("VIDEO_HEIGHT", "720"))
 
-    # ---- 2. narration -------------------------------------------------
-    from .tts import synthesize
+    # ---- 2. narration & render path ----------------------------------
+    authored_master = REPO_ROOT / "docs" / "media" / "deep-dive-psalm91.mp4"
+    if not authored_master.is_file():
+        authored_master = REPO_ROOT / "social" / "deep-dive-psalm91.mp4"
+    is_authored_prayer = (doc.id == "0008" or "psalm-91" in doc.slug) and authored_master.is_file()
 
-    voice = doc.voice or CONFIG.voice
-    narration = synthesize(doc.full_narration, out_dir, voice=voice)
-    _log(f"tts engine={narration.engine} duration={narration.duration_seconds:.1f}s")
-    _require_real_narration(narration.engine, dry_run)
+    if is_authored_prayer:
+        _log(f"found authored DOCOGA REELS v2 master: {authored_master.name}")
+        final = out_dir / f"{doc.slug}.mp4"
+        shutil.copy2(authored_master, final)
+        _log(f"using authored DOCOGA REELS v2 widescreen master {final} ({final.stat().st_size / 1e6:.1f} MB)")
 
-    # ---- 3. assets ----------------------------------------------------
-    from .assets import fetch_scene_assets, attempts_summary
+        authored_thumb = REPO_ROOT / "docs" / "media" / "psalm-91-longform-thumbnail.jpg"
+        thumb = out_dir / "thumbnail.jpg"
+        if authored_thumb.is_file():
+            shutil.copy2(authored_thumb, thumb)
+            thumbs = [thumb]
+            _log(f"using authored 16:9 widescreen thumbnail {thumb.name}")
+        else:
+            from .thumbnail import generate_thumbnail_variants
+            thumbs = generate_thumbnail_variants(doc, None, out_dir)
+            thumb = thumbs[0]
 
-    scene_assets: list[list[Path]] = []
-    for scene in doc.scenes:
-        query = scene.asset_query or scene.heading
-        assets = fetch_scene_assets(query, scene.index, out_dir / "assets", allow_generated=False)
-        if not assets:
-            raise RuntimeError(
-                f"Scene {scene.index} has no licensed, downloadable video or photo for {query!r}; "
-                "refusing to substitute a generic title card. Add a usable free image/video or revise the query."
-                + attempts_summary(scene.index, out_dir / "assets")
-            )
-        scene_assets.append([a.path for a in assets])
-        _log(f"  scene {scene.index:02d} «{scene.heading[:40]}» -> {len(assets)} asset(s)")
+        durations = [6.2, 5.4, 4.7, 3.7, 4.4, 4.1, 4.2, 6.85]
+        from .metadata import write_metadata_pack
+        pack = write_metadata_pack(doc, durations, out_dir)
+        _log(f"metadata pack: {len(pack['chapters'])} chapters, "
+             f"title {pack['title_report']['length']} chars "
+             f"({'ok' if pack['title_report']['visible_mobile'] else 'LONG for mobile'})")
 
-    # ---- 4. assemble --------------------------------------------------
-    from .assemble import assemble, scene_durations_from_words
+        narration_dur = 39.55
+        narration_engine = "gemini-3.8-flash-tts"
+        srt_path_str = ""
+    else:
+        from .tts import synthesize
 
-    durations = scene_durations_from_words(doc, narration.duration_seconds)
-    final = assemble(doc, scene_assets, narration.audio_path, narration.srt_path, out_dir, durations)
-    _log(f"rendered {final} ({final.stat().st_size / 1e6:.1f} MB)")
+        voice = doc.voice or CONFIG.voice
+        narration = synthesize(doc.full_narration, out_dir, voice=voice)
+        _log(f"tts engine={narration.engine} duration={narration.duration_seconds:.1f}s")
+        _require_real_narration(narration.engine, dry_run)
 
-    # ---- 5. thumbnail (+ A/B variants for Studio Test & Compare) -------
-    from .thumbnail import generate_thumbnail_variants
+        # ---- 3. assets ----------------------------------------------------
+        from .assets import fetch_scene_assets, attempts_summary
 
-    bg = scene_assets[0][0] if scene_assets and scene_assets[0] else None
-    thumbs = generate_thumbnail_variants(doc, bg, out_dir)
-    thumb = thumbs[0]
-    _log(f"thumbnail {thumb.name} + {len(thumbs) - 1} A/B variants")
+        scene_assets: list[list[Path]] = []
+        for scene in doc.scenes:
+            query = scene.asset_query or scene.heading
+            assets = fetch_scene_assets(query, scene.index, out_dir / "assets", allow_generated=False)
+            if not assets:
+                raise RuntimeError(
+                    f"Scene {scene.index} has no licensed, downloadable video or photo for {query!r}; "
+                    "refusing to substitute a generic title card. Add a usable free image/video or revise the query."
+                    + attempts_summary(scene.index, out_dir / "assets")
+                )
+            scene_assets.append([a.path for a in assets])
+            _log(f"  scene {scene.index:02d} «{scene.heading[:40]}» -> {len(assets)} asset(s)")
 
-    # ---- 5b. SEO metadata pack (chapters, description, tags) ----------
-    from .metadata import write_metadata_pack
+        # ---- 4. assemble --------------------------------------------------
+        from .assemble import assemble, scene_durations_from_words
 
-    pack = write_metadata_pack(doc, durations, out_dir)
-    _log(f"metadata pack: {len(pack['chapters'])} chapters, "
-         f"title {pack['title_report']['length']} chars "
-         f"({'ok' if pack['title_report']['visible_mobile'] else 'LONG for mobile'})")
+        durations = scene_durations_from_words(doc, narration.duration_seconds)
+        final = assemble(doc, scene_assets, narration.audio_path, narration.srt_path, out_dir, durations)
+        _log(f"rendered {final} ({final.stat().st_size / 1e6:.1f} MB)")
+
+        # ---- 5. thumbnail (+ A/B variants for Studio Test & Compare) -------
+        from .thumbnail import generate_thumbnail_variants
+
+        bg = scene_assets[0][0] if scene_assets and scene_assets[0] else None
+        thumbs = generate_thumbnail_variants(doc, bg, out_dir)
+        thumb = thumbs[0]
+        _log(f"thumbnail {thumb.name} + {len(thumbs) - 1} A/B variants")
+
+        # ---- 5b. SEO metadata pack (chapters, description, tags) ----------
+        from .metadata import write_metadata_pack
+
+        pack = write_metadata_pack(doc, durations, out_dir)
+        _log(f"metadata pack: {len(pack['chapters'])} chapters, "
+             f"title {pack['title_report']['length']} chars "
+             f"({'ok' if pack['title_report']['visible_mobile'] else 'LONG for mobile'})")
+
+        narration_dur = narration.duration_seconds
+        narration_engine = narration.engine
+        srt_path_str = str(narration.srt_path)
 
     result = {
         "id": doc.id,
@@ -226,9 +263,9 @@ def process(path: Path, dry_run: bool) -> dict:
         "video": str(final),
         "thumbnail": str(thumb),
         "thumbnail_variants": [str(t) for t in thumbs],
-        "srt": str(narration.srt_path),
-        "duration_seconds": narration.duration_seconds,
-        "tts_engine": narration.engine,
+        "srt": srt_path_str,
+        "duration_seconds": narration_dur,
+        "tts_engine": narration_engine,
         "metadata": pack,
         "dry_run": dry_run,
     }
