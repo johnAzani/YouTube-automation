@@ -20,7 +20,7 @@
 ### 0.1 The Core Channel Mission
 *The Secret Place* is an editorial digital prayer and scripture meditation studio producing reverent, high-retention biblical audio-visual experiences designed for bedtime listening, anxiety relief, and spiritual contemplation. The channel operates as a faceless institutional studio (strictly avoiding personal creator naming, e.g. John Azani), maintaining an atmosphere of sacred reverence, visual tranquility, and cinematic elegance.
 
-### 0.2 The Six Inviolable System Invariants
+### 0.2 The Seven Inviolable System Invariants
 1. **Permanent $0.00 / Month Hard Cost Lock:**
    Under no circumstances may any component require, incur, or transition to a paid subscription, credit card charge, or billable cloud tier (`docs/ZERO_DOLLAR_LOCK.md`). Rendering runs entirely on free GitHub Actions standard runners (4-core Linux, 16 GB RAM); voiceover runs on Google Gemini's 15 RPM / 1,500 RPD free tier; ambient audio is procedurally synthesized via DSP (`tools/score.py`); visual assets originate from verified public-domain ledgers (Wikimedia, USGS, NPS, NASA) and free commercial APIs (Pexels, Pixabay). If external limits are encountered, the system **fails closed** (`status: quota_paused`) until quotas reset.
 2. **Locked-in Google Gemini Voice (`Charon`):**
@@ -33,6 +33,8 @@
    The production pipeline executes on automated GitHub Actions cron schedules (`06:14 UTC` and `14:14 UTC` daily). It autonomously processes queue manifests, renders videos, burns synchronized typography, synthesizes procedural audio beds, uploads to YouTube with native `publishAt` scheduling or immediate `public` visibility, commits state back to git with `[skip ci]`, and creates GitHub Issue release tickets without requiring the creator to be online or initiate chat pings.
 6. **Continuous Research & Self-Updating Architecture:**
    The strategy is not a static document. Weekly automated metrics workflows (`.github/workflows/metrics.yml`) ingest YouTube telemetry. `scripts/continuous_research.py` and `scripts/auto_scheduler.py` analyze view velocity, retention drop-offs, and scripture search demand shifts to continuously prioritize upcoming queue jobs.
+7. **Duplicate & Unintentional Upload Prevention Shield (`docs/DUPLICATE_UPLOAD_PREVENTION.md`):**
+   Under no circumstances may duplicate or unintentional videos/Shorts be uploaded to YouTube. All uploads are safeguarded by pre-upload remote YouTube title queries (`check_existing_channel_duplicate`), published ledger quarantine in queue selection, and the elimination of git-push triggers from production workflows. Releases occur strictly on schedule or explicit manual dispatch.
 
 ---
 

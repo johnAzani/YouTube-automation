@@ -35,7 +35,7 @@ class TestAutoScheduler(unittest.TestCase):
     def test_audit_shorts_queue_finds_approved_manifest(self):
         items, approved = audit_shorts_queue()
         self.assertGreater(len(items), 0)
-        self.assertTrue(any(it.identifier == "short-psalm91" and it.status == "approved" for it in items))
+        self.assertTrue(any(it.identifier == "short-psalm23" and it.status == "approved" for it in items))
 
     def test_build_schedule_audit_structure(self):
         audit = build_schedule_audit()
@@ -44,5 +44,5 @@ class TestAutoScheduler(unittest.TestCase):
         self.assertGreaterEqual(audit.longform_approved_count, 1)
         self.assertGreaterEqual(audit.shorts_approved_count, 1)
         self.assertIn("Psalm 23", audit.next_longform or "")
-        self.assertIn("short-psalm91", audit.next_short or "")
+        self.assertIn("short-psalm23", audit.next_short or "")
         self.assertGreater(audit.runway_days, 0)

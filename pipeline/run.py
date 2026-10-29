@@ -142,6 +142,16 @@ def select_jobs(all_flag: bool, job_path: str | None, next_flag: bool) -> list[P
             continue
 
         if raw_status == "approved":
+            # --- DUPLICATE SAFETY SHIELD: verify not already in content/published/ ---
+            published_candidate = PUBLISHED_DIR / j.name
+            if published_candidate.is_file():
+                try:
+                    pub_doc = parse_script(published_candidate)
+                    if pub_doc.status == "published" and pub_doc.meta.get("youtube_video_id"):
+                        _log(f"🛑 DUPLICATE BLOCKED: {j.name} is already published as {pub_doc.meta.get('youtube_video_id')}. Skipping queue.")
+                        continue
+                except Exception:
+                    pass
             approved.append(j)
         elif all_flag:
             _log(f"skip {j.name}: status={doc.status} (only 'approved' jobs are built)")
@@ -325,6 +335,18 @@ def process(path: Path, dry_run: bool) -> dict:
                 "quota_reset_utc": reset_iso,
                 "error": str(q_exc),
             }
+        if up.privacy_status == "duplicate_prevented":
+            _log(f"YouTube upload skipped: video already live on channel ({up.video_id}).")
+            result.update({
+                "uploaded": False,
+                "duplicate_prevented": True,
+                "video_id": up.video_id,
+                "watch_url": f"https://youtu.be/{up.video_id}",
+                "privacy_status": up.privacy_status,
+            })
+            _mark_job_uploaded(path, doc, up.video_id)
+            (out_dir / "job_result.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
+            return result
         if not up.video_id:
             raise RuntimeError("YouTube upload returned no video ID; leaving the queue job untouched.")
         result.update({

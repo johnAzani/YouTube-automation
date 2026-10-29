@@ -66,6 +66,7 @@ class Config:
     # --- safety rails ----------------------------------------------------
     max_longform_per_day: int = int(os.environ.get("MAX_LONGFORM_PER_DAY", "1"))
     dry_run: bool = _env_bool("DRY_RUN", False)
+    allow_duplicate_uploads: bool = _env_bool("ALLOW_DUPLICATE_UPLOADS", False)
 
     tags_extra: list[str] = field(default_factory=lambda: [
         "documentary", "explainer", "faceless",
