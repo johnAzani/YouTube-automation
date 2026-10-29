@@ -185,6 +185,56 @@ EDITIONS: dict[str, ShortEdition] = {
             "#Shorts #Psalm27 #TheLordIsMyLight #FearNoEvil #NightPrayer #BedtimePrayer #TheSecretPlace"
         ),
     ),
+    "short-psalm46": ShortEdition(
+        key="short-psalm46",
+        job_id="SHORT-0006",
+        slug="short-0006-psalm-46-god-is-our-refuge",
+        title="Say This Psalm 46 Prayer Before You Sleep | Be Still & Know #Shorts",
+        niche="faith and prayer",
+        tags=[
+            "shorts",
+            "psalm 46",
+            "be still and know",
+            "god is our refuge",
+            "night prayer",
+            "peaceful sleep",
+            "daily scripture",
+            "the secret place",
+        ],
+        description=(
+            "God is our refuge and strength, a very present help in trouble. "
+            "Therefore we will not fear, though the earth be removed.\n\n"
+            "Be still, and know that He is God. Rest tonight under His divine fortress.\n\n"
+            "Scripture reference: Psalm 46 (KJV / NKJV Public Domain biblical text).\n"
+            "Produced by The Secret Place | Daily Prayer & Scripture.\n\n"
+            "#Shorts #Psalm46 #BeStillAndKnow #NightPrayer #BedtimePrayer #TheSecretPlace"
+        ),
+    ),
+    "short-psalm34": ShortEdition(
+        key="short-psalm34",
+        job_id="SHORT-0007",
+        slug="short-0007-psalm-34-angel-of-the-lord",
+        title="Say This Psalm 34 Prayer Before You Sleep | Angels Stand Watch #Shorts",
+        niche="faith and prayer",
+        tags=[
+            "shorts",
+            "psalm 34",
+            "angel of the lord",
+            "night prayer",
+            "prayer of protection",
+            "bedtime prayer",
+            "daily scripture",
+            "the secret place",
+        ],
+        description=(
+            "The angel of the Lord encamps all around those who fear Him, and delivers them. "
+            "Oh, taste and see that the Lord is good; blessed is the man who trusts in Him!\n\n"
+            "Rest tonight under the guard of heavenly messengers.\n\n"
+            "Scripture reference: Psalm 34 (KJV / NKJV Public Domain biblical text).\n"
+            "Produced by The Secret Place | Daily Prayer & Scripture.\n\n"
+            "#Shorts #Psalm34 #AngelOfTheLord #NightPrayer #BedtimePrayer #TheSecretPlace"
+        ),
+    ),
 }
 
 
