@@ -476,11 +476,11 @@ def caption_ribbon_layer(stream, t):
         total_w = sum(widths) + gap * max(0, len(words) - 1)
 
     pw = int(total_w + 56)
-    ph = 54
+    ph = 56
     px = W // 2 - pw // 2
-    py = H - 76
-    layer.alpha_composite(card_alpha(glass_card(pw, ph, radius=16, top=(6, 22, 52), bot=(3, 12, 30),
-                                                a_top=232, a_bot=215), a), (px, py))
+    py = H - 78
+    gc = glass_card(pw, ph, radius=16, top=(6, 22, 52), bot=(3, 12, 30), a_top=232, a_bot=215, border_col=(235, 198, 92, 185))
+    layer.alpha_composite(card_alpha(gc, a), (px, py))
 
     # Find currently spoken word index
     cur_idx = 0
@@ -491,17 +491,27 @@ def caption_ribbon_layer(stream, t):
     x = W / 2.0 - total_w / 2.0
     for j, ((ws, we, w), ww) in enumerate(zip(words, widths)):
         txt = w.upper()
-        if j == cur_idx:
-            # Active word highlight pill + yellow text
-            pad_x = 7
-            d.rounded_rectangle([x - pad_x, py + 8, x + ww + pad_x, py + ph - 8],
-                                radius=8, fill=(255, 201, 60, int(48 * a)),
-                                outline=(255, 201, 60, int(145 * a)), width=1)
-            d.text((x, py + 11), txt, font=f, fill=YELLOW + (int(255 * a),))
-        elif j < cur_idx:
-            d.text((x, py + 12), txt, font=f, fill=WHITE + (int(240 * a),))
+        is_active = (j == cur_idx)
+        is_spoken = (j < cur_idx)
+
+        # Directional contact drop shadow
+        shadow_a = int(220 * a) if (is_active or is_spoken) else int(100 * a)
+        d.text((x, py + 14), txt, font=f, fill=(0, 0, 0, shadow_a))
+
+        if is_active:
+            # Active word golden glow aura + highlight pill
+            pad_x = 8
+            d.rounded_rectangle([x - pad_x, py + 7, x + ww + pad_x, py + ph - 7],
+                                radius=8, fill=(255, 201, 60, int(52 * a)),
+                                outline=(255, 218, 64, int(185 * a)), width=2)
+            # Ambient luminous bloom
+            for gx, gy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                d.text((x + gx, py + 11 + gy), txt, font=f, fill=(255, 215, 40, int(140 * a)))
+            d.text((x, py + 11), txt, font=f, fill=(255, 222, 60, int(255 * a)))
+        elif is_spoken:
+            d.text((x, py + 12), txt, font=f, fill=WHITE + (int(250 * a),))
         else:
-            d.text((x, py + 12), txt, font=f, fill=ICE + (int(155 * a),))
+            d.text((x, py + 12), txt, font=f, fill=(215, 235, 255, int(130 * a)))
         x += ww + gap
     return layer
 

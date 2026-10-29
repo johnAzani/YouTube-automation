@@ -12,6 +12,9 @@ from pathlib import Path
 from .config import CONFIG
 
 FONT_CANDIDATES = [
+    str(Path(__file__).resolve().parent.parent / "assets" / "fonts" / "Inter-Black.ttf"),
+    str(Path(__file__).resolve().parent.parent / "assets" / "fonts" / "Inter-ExtraBold.ttf"),
+    str(Path(__file__).resolve().parent.parent / "assets" / "fonts" / "Inter-Bold.ttf"),
     "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
     "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
     "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
