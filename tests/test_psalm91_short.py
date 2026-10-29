@@ -89,7 +89,7 @@ def test_psalm91_segment_and_typography_sync():
     p7 = stream[6]
     p8 = stream[7]
     assert any("BATTLES" in l for l in p7["lines"])
-    assert abs(p7["disp_t1"] - 35.49) < 0.05
+    assert abs(p7["disp_t1"] - 35.36) < 0.05
     assert any("AMEN" in l for l in p8["lines"])
     assert any("SUBSCRIBE" in l for l in p8["lines"])
     assert abs(p8["disp_t1"] - 39.55) < 0.05

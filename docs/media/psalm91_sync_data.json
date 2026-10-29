@@ -8,13 +8,14 @@
     {
       "index": 1,
       "disp_t0": 0.0,
-      "disp_t1": 6.23,
+      "disp_t1": 6.05,
       "audio_t0": 0.0,
       "audio_t1": 6.05,
       "lines": [
         "BEFORE YOU CLOSE",
         "YOUR EYES TONIGHT",
         "TAKE A DEEP BREATH",
+        "AND PLACE YOUR HOME & FAMILY",
         "UNDER PSALM 91"
       ],
       "line1": "BEFORE YOU CLOSE",
@@ -28,19 +29,117 @@
         "91"
       ],
       "kicker": "DIVINE PROTECTION COVENANT",
-      "speech": "Before you close your eyes tonight, take a deep breath, and place your home and family under Psalm 91."
+      "speech": "Before you close your eyes tonight, take a deep breath, and place your home and family under Psalm 91.",
+      "word_timings": [
+        {
+          "word": "BEFORE",
+          "t0": 0.0,
+          "t1": 0.49
+        },
+        {
+          "word": "YOU",
+          "t0": 0.49,
+          "t1": 0.7
+        },
+        {
+          "word": "CLOSE",
+          "t0": 0.7,
+          "t1": 0.98
+        },
+        {
+          "word": "YOUR",
+          "t0": 0.98,
+          "t1": 1.22
+        },
+        {
+          "word": "EYES",
+          "t0": 1.22,
+          "t1": 1.47
+        },
+        {
+          "word": "TONIGHT",
+          "t0": 1.47,
+          "t1": 1.8
+        },
+        {
+          "word": "TAKE",
+          "t0": 2.02,
+          "t1": 2.24
+        },
+        {
+          "word": "A",
+          "t0": 2.24,
+          "t1": 2.37
+        },
+        {
+          "word": "DEEP",
+          "t0": 2.37,
+          "t1": 2.59
+        },
+        {
+          "word": "BREATH",
+          "t0": 2.59,
+          "t1": 2.89
+        },
+        {
+          "word": "AND",
+          "t0": 3.15,
+          "t1": 3.34
+        },
+        {
+          "word": "PLACE",
+          "t0": 3.34,
+          "t1": 3.66
+        },
+        {
+          "word": "YOUR",
+          "t0": 3.66,
+          "t1": 3.96
+        },
+        {
+          "word": "HOME",
+          "t0": 3.96,
+          "t1": 4.23
+        },
+        {
+          "word": "&",
+          "t0": 4.23,
+          "t1": 4.42
+        },
+        {
+          "word": "FAMILY",
+          "t0": 4.42,
+          "t1": 4.82
+        },
+        {
+          "word": "UNDER",
+          "t0": 4.82,
+          "t1": 5.14
+        },
+        {
+          "word": "PSALM",
+          "t0": 5.14,
+          "t1": 5.43
+        },
+        {
+          "word": "91",
+          "t0": 5.43,
+          "t1": 6.05
+        }
+      ]
     },
     {
       "index": 2,
-      "disp_t0": 6.23,
-      "disp_t1": 13.41,
+      "disp_t0": 6.05,
+      "disp_t1": 13.27,
       "audio_t0": 6.35,
       "audio_t1": 13.27,
       "lines": [
         "HE WHO DWELLS",
         "IN THE SECRET PLACE",
         "OF THE MOST HIGH",
-        "ABIDES IN HIS SHADOW"
+        "SHALL ABIDE UNDER THE SHADOW",
+        "OF THE ALMIGHTY"
       ],
       "line1": "HE WHO DWELLS",
       "line2": "IN THE SECRET PLACE",
@@ -50,15 +149,113 @@
         "PLACE",
         "MOST",
         "HIGH",
-        "SHADOW"
+        "SHADOW",
+        "ALMIGHTY"
       ],
       "kicker": "PSALM 91 : 1",
-      "speech": "He who dwells in the secret place of the Most High shall abide under the shadow of the Almighty."
+      "speech": "He who dwells in the secret place of the Most High shall abide under the shadow of the Almighty.",
+      "word_timings": [
+        {
+          "word": "HE",
+          "t0": 6.35,
+          "t1": 6.61
+        },
+        {
+          "word": "WHO",
+          "t0": 6.61,
+          "t1": 6.91
+        },
+        {
+          "word": "DWELLS",
+          "t0": 6.91,
+          "t1": 7.45
+        },
+        {
+          "word": "IN",
+          "t0": 7.45,
+          "t1": 7.7
+        },
+        {
+          "word": "THE",
+          "t0": 7.7,
+          "t1": 8.01
+        },
+        {
+          "word": "SECRET",
+          "t0": 8.01,
+          "t1": 8.6
+        },
+        {
+          "word": "PLACE",
+          "t0": 8.6,
+          "t1": 9.13
+        },
+        {
+          "word": "OF",
+          "t0": 9.33,
+          "t1": 9.56
+        },
+        {
+          "word": "THE",
+          "t0": 9.56,
+          "t1": 9.83
+        },
+        {
+          "word": "MOST",
+          "t0": 9.83,
+          "t1": 10.17
+        },
+        {
+          "word": "HIGH",
+          "t0": 10.17,
+          "t1": 10.52
+        },
+        {
+          "word": "SHALL",
+          "t0": 10.52,
+          "t1": 10.93
+        },
+        {
+          "word": "ABIDE",
+          "t0": 10.93,
+          "t1": 11.45
+        },
+        {
+          "word": "UNDER",
+          "t0": 11.8,
+          "t1": 12.08
+        },
+        {
+          "word": "THE",
+          "t0": 12.08,
+          "t1": 12.25
+        },
+        {
+          "word": "SHADOW",
+          "t0": 12.25,
+          "t1": 12.56
+        },
+        {
+          "word": "OF",
+          "t0": 12.56,
+          "t1": 12.72
+        },
+        {
+          "word": "THE",
+          "t0": 12.72,
+          "t1": 12.88
+        },
+        {
+          "word": "ALMIGHTY",
+          "t0": 12.88,
+          "t1": 13.27
+        }
+      ]
     },
     {
       "index": 3,
-      "disp_t0": 13.41,
-      "disp_t1": 20.03,
+      "disp_t0": 13.27,
+      "disp_t1": 19.83,
       "audio_t0": 13.53,
       "audio_t1": 19.83,
       "lines": [
@@ -76,34 +273,139 @@
         "DWELLING"
       ],
       "kicker": "PSALM 91 : 10",
-      "speech": "No evil shall befall you, nor shall any plague come near your dwelling."
+      "speech": "No evil shall befall you, nor shall any plague come near your dwelling.",
+      "word_timings": [
+        {
+          "word": "NO",
+          "t0": 13.53,
+          "t1": 13.81
+        },
+        {
+          "word": "EVIL",
+          "t0": 13.81,
+          "t1": 14.32
+        },
+        {
+          "word": "SHALL",
+          "t0": 14.32,
+          "t1": 14.85
+        },
+        {
+          "word": "BEFALL",
+          "t0": 14.85,
+          "t1": 15.53
+        },
+        {
+          "word": "YOU",
+          "t0": 15.53,
+          "t1": 16.03
+        },
+        {
+          "word": "NOR",
+          "t0": 16.38,
+          "t1": 16.53
+        },
+        {
+          "word": "SHALL",
+          "t0": 16.53,
+          "t1": 16.77
+        },
+        {
+          "word": "ANY",
+          "t0": 16.77,
+          "t1": 16.96
+        },
+        {
+          "word": "PLAGUE",
+          "t0": 16.96,
+          "t1": 17.27
+        },
+        {
+          "word": "COME",
+          "t0": 17.67,
+          "t1": 18.12
+        },
+        {
+          "word": "NEAR",
+          "t0": 18.12,
+          "t1": 18.58
+        },
+        {
+          "word": "YOUR",
+          "t0": 18.58,
+          "t1": 19.11
+        },
+        {
+          "word": "DWELLING",
+          "t0": 19.11,
+          "t1": 19.83
+        }
+      ]
     },
     {
       "index": 4,
-      "disp_t0": 20.03,
-      "disp_t1": 24.17,
+      "disp_t0": 19.83,
+      "disp_t1": 23.99,
       "audio_t0": 20.15,
       "audio_t1": 23.99,
       "lines": [
         "HEAVENLY FATHER",
-        "QUIET EVERY",
-        "ANXIOUS THOUGHT"
+        "QUIET EVERY ANXIOUS",
+        "THOUGHT TONIGHT"
       ],
       "line1": "HEAVENLY FATHER",
-      "line2": "QUIET EVERY",
+      "line2": "QUIET EVERY ANXIOUS",
       "accents": [
         "HEAVENLY",
         "FATHER",
         "QUIET",
-        "ANXIOUS"
+        "ANXIOUS",
+        "TONIGHT"
       ],
       "kicker": "PRAYER FOR STILLNESS",
-      "speech": "Heavenly Father, quiet every anxious thought tonight."
+      "speech": "Heavenly Father, quiet every anxious thought tonight.",
+      "word_timings": [
+        {
+          "word": "HEAVENLY",
+          "t0": 20.15,
+          "t1": 20.67
+        },
+        {
+          "word": "FATHER",
+          "t0": 20.67,
+          "t1": 21.06
+        },
+        {
+          "word": "QUIET",
+          "t0": 21.2,
+          "t1": 21.71
+        },
+        {
+          "word": "EVERY",
+          "t0": 21.71,
+          "t1": 22.22
+        },
+        {
+          "word": "ANXIOUS",
+          "t0": 22.22,
+          "t1": 22.87
+        },
+        {
+          "word": "THOUGHT",
+          "t0": 22.87,
+          "t1": 23.44
+        },
+        {
+          "word": "TONIGHT",
+          "t0": 23.44,
+          "t1": 23.99
+        }
+      ]
     },
     {
       "index": 5,
-      "disp_t0": 24.17,
-      "disp_t1": 28.49,
+      "disp_t0": 23.99,
+      "disp_t1": 28.36,
       "audio_t0": 24.29,
       "audio_t1": 28.36,
       "lines": [
@@ -121,42 +423,162 @@
         "FEAR"
       ],
       "kicker": "ANGELIC PROTECTION",
-      "speech": "Send your angels to guard this home, wash away every fear,"
+      "speech": "Send your angels to guard this home, wash away every fear,",
+      "word_timings": [
+        {
+          "word": "SEND",
+          "t0": 24.29,
+          "t1": 24.59
+        },
+        {
+          "word": "YOUR",
+          "t0": 24.59,
+          "t1": 24.99
+        },
+        {
+          "word": "ANGELS",
+          "t0": 24.99,
+          "t1": 25.45
+        },
+        {
+          "word": "TO",
+          "t0": 25.45,
+          "t1": 25.65
+        },
+        {
+          "word": "GUARD",
+          "t0": 25.65,
+          "t1": 26.06
+        },
+        {
+          "word": "THIS",
+          "t0": 26.06,
+          "t1": 26.37
+        },
+        {
+          "word": "HOME",
+          "t0": 26.37,
+          "t1": 26.72
+        },
+        {
+          "word": "WASH",
+          "t0": 26.9,
+          "t1": 27.19
+        },
+        {
+          "word": "AWAY",
+          "t0": 27.19,
+          "t1": 27.57
+        },
+        {
+          "word": "EVERY",
+          "t0": 27.57,
+          "t1": 28.02
+        },
+        {
+          "word": "FEAR",
+          "t0": 28.02,
+          "t1": 28.36
+        }
+      ]
     },
     {
       "index": 6,
-      "disp_t0": 28.49,
-      "disp_t1": 32.42,
+      "disp_t0": 28.36,
+      "disp_t1": 32.26,
       "audio_t0": 28.61,
       "audio_t1": 32.26,
       "lines": [
-        "LET YOUR DIVINE PEACE",
+        "AND LET YOUR DIVINE PEACE",
         "FILL THIS ROOM",
-        "WALL TO WALL"
+        "FROM WALL TO WALL"
       ],
-      "line1": "LET YOUR DIVINE PEACE",
+      "line1": "AND LET YOUR DIVINE PEACE",
       "line2": "FILL THIS ROOM",
       "accents": [
         "DIVINE",
         "PEACE",
+        "ROOM",
         "WALL"
       ],
       "kicker": "DIVINE PEACE",
-      "speech": "and let your divine peace fill this room from wall to wall."
+      "speech": "and let your divine peace fill this room from wall to wall.",
+      "word_timings": [
+        {
+          "word": "AND",
+          "t0": 28.61,
+          "t1": 28.78
+        },
+        {
+          "word": "LET",
+          "t0": 28.78,
+          "t1": 28.96
+        },
+        {
+          "word": "YOUR",
+          "t0": 28.96,
+          "t1": 29.22
+        },
+        {
+          "word": "DIVINE",
+          "t0": 29.22,
+          "t1": 29.58
+        },
+        {
+          "word": "PEACE",
+          "t0": 29.58,
+          "t1": 29.88
+        },
+        {
+          "word": "FILL",
+          "t0": 30.12,
+          "t1": 30.43
+        },
+        {
+          "word": "THIS",
+          "t0": 30.43,
+          "t1": 30.75
+        },
+        {
+          "word": "ROOM",
+          "t0": 30.75,
+          "t1": 31.11
+        },
+        {
+          "word": "FROM",
+          "t0": 31.11,
+          "t1": 31.43
+        },
+        {
+          "word": "WALL",
+          "t0": 31.43,
+          "t1": 31.74
+        },
+        {
+          "word": "TO",
+          "t0": 31.74,
+          "t1": 31.95
+        },
+        {
+          "word": "WALL",
+          "t0": 31.95,
+          "t1": 32.26
+        }
+      ]
     },
     {
       "index": 7,
-      "disp_t0": 32.42,
-      "disp_t1": 35.49,
+      "disp_t0": 32.26,
+      "disp_t1": 35.36,
       "audio_t0": 32.54,
       "audio_t1": 35.36,
       "lines": [
         "SLEEP IN PEACE TONIGHT",
-        "GOD IS FIGHTING",
-        "YOUR BATTLES"
+        "KNOWING THAT GOD",
+        "IS FIGHTING YOUR BATTLES"
       ],
       "line1": "SLEEP IN PEACE TONIGHT",
-      "line2": "GOD IS FIGHTING",
+      "line2": "KNOWING THAT GOD",
       "accents": [
         "PEACE",
         "GOD",
@@ -164,21 +586,78 @@
         "BATTLES"
       ],
       "kicker": "EXODUS 14 : 14",
-      "speech": "Sleep in peace tonight, knowing that God is fighting your battles."
+      "speech": "Sleep in peace tonight, knowing that God is fighting your battles.",
+      "word_timings": [
+        {
+          "word": "SLEEP",
+          "t0": 32.54,
+          "t1": 32.95
+        },
+        {
+          "word": "IN",
+          "t0": 32.95,
+          "t1": 33.17
+        },
+        {
+          "word": "PEACE",
+          "t0": 33.17,
+          "t1": 33.63
+        },
+        {
+          "word": "TONIGHT",
+          "t0": 33.63,
+          "t1": 34.14
+        },
+        {
+          "word": "KNOWING",
+          "t0": 34.36,
+          "t1": 34.54
+        },
+        {
+          "word": "THAT",
+          "t0": 34.54,
+          "t1": 34.67
+        },
+        {
+          "word": "GOD",
+          "t0": 34.67,
+          "t1": 34.77
+        },
+        {
+          "word": "IS",
+          "t0": 34.77,
+          "t1": 34.87
+        },
+        {
+          "word": "FIGHTING",
+          "t0": 34.87,
+          "t1": 35.05
+        },
+        {
+          "word": "YOUR",
+          "t0": 35.05,
+          "t1": 35.18
+        },
+        {
+          "word": "BATTLES",
+          "t0": 35.18,
+          "t1": 35.36
+        }
+      ]
     },
     {
       "index": 8,
-      "disp_t0": 35.49,
+      "disp_t0": 35.36,
       "disp_t1": 39.55,
       "audio_t0": 35.61,
       "audio_t1": 37.95,
       "lines": [
-        "RECEIVE THIS PROTECTION",
-        "TYPE AMEN",
-        "SUBSCRIBE TO PRAY DAILY"
+        "IF YOU RECEIVE THIS PROTECTION",
+        "TYPE AMEN AND SUBSCRIBE",
+        "TO PRAY WITH US EVERY DAY"
       ],
-      "line1": "RECEIVE THIS PROTECTION",
-      "line2": "TYPE AMEN",
+      "line1": "IF YOU RECEIVE THIS PROTECTION",
+      "line2": "TYPE AMEN AND SUBSCRIBE",
       "accents": [
         "PROTECTION",
         "TYPE",
@@ -187,7 +666,84 @@
         "PRAY"
       ],
       "kicker": "THE SECRET PLACE",
-      "speech": "If you receive this protection, type Amen, and subscribe to pray with us every day."
+      "speech": "If you receive this protection, type Amen, and subscribe to pray with us every day.",
+      "word_timings": [
+        {
+          "word": "IF",
+          "t0": 35.61,
+          "t1": 35.72
+        },
+        {
+          "word": "YOU",
+          "t0": 35.72,
+          "t1": 35.83
+        },
+        {
+          "word": "RECEIVE",
+          "t0": 35.83,
+          "t1": 36.06
+        },
+        {
+          "word": "THIS",
+          "t0": 36.06,
+          "t1": 36.18
+        },
+        {
+          "word": "PROTECTION",
+          "t0": 36.18,
+          "t1": 36.42
+        },
+        {
+          "word": "TYPE",
+          "t0": 36.44,
+          "t1": 36.57
+        },
+        {
+          "word": "AMEN",
+          "t0": 36.57,
+          "t1": 36.85
+        },
+        {
+          "word": "AND",
+          "t0": 37.03,
+          "t1": 37.13
+        },
+        {
+          "word": "SUBSCRIBE",
+          "t0": 37.13,
+          "t1": 37.45
+        },
+        {
+          "word": "TO",
+          "t0": 37.45,
+          "t1": 37.51
+        },
+        {
+          "word": "PRAY",
+          "t0": 37.51,
+          "t1": 37.63
+        },
+        {
+          "word": "WITH",
+          "t0": 37.63,
+          "t1": 37.72
+        },
+        {
+          "word": "US",
+          "t0": 37.72,
+          "t1": 37.79
+        },
+        {
+          "word": "EVERY",
+          "t0": 37.79,
+          "t1": 37.87
+        },
+        {
+          "word": "DAY",
+          "t0": 37.87,
+          "t1": 37.95
+        }
+      ]
     }
   ]
 }
