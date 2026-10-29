@@ -1,0 +1,82 @@
+name: Autonomous Comment Replies
+
+on:
+  schedule:
+    # Run once daily at 18:14 UTC to engage with afternoon and evening viewers
+    - cron: '14 18 * * *'
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Maximum comments to reply to (max 25)'
+        required: false
+        default: '15'
+      video_id:
+        description: 'Target specific YouTube video ID (leave blank for all channel videos)'
+        required: false
+        default: ''
+      dry_run:
+        description: 'Simulate without posting to YouTube'
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: comments-reply
+  cancel-in-progress: false
+
+jobs:
+  reply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Comment Reply Engine
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          LIMIT: ${{ github.event.inputs.limit || '15' }}
+          VIDEO_ID: ${{ github.event.inputs.video_id || '' }}
+          DRY_RUN: ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }}
+        run: |
+          ARGS="--limit $LIMIT"
+          if [ -n "$VIDEO_ID" ]; then
+            ARGS="$ARGS --video-id $VIDEO_ID"
+          fi
+          if [ -n "$DRY_RUN" ]; then
+            ARGS="$ARGS $DRY_RUN"
+          else
+            ARGS="$ARGS --apply"
+          fi
+          echo "Executing: python scripts/reply_comments.py $ARGS"
+          python scripts/reply_comments.py $ARGS
+
+      - name: Commit replied comments ledger
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -f "content/comments/replied.json" ]; then
+            git add content/comments/replied.json
+            git diff --staged --quiet || git commit -m "chore(comments): record replied comment IDs [skip ci]"
+            git push
+          fi

@@ -206,6 +206,13 @@ The channel is engineered to operate 100% autonomously without human presence, c
 - **Fail-Closed Protection:** If YouTube API returns `quotaExceeded` (HTTP 403), `pipeline/quota_handler.py` catches the exception, calculates `quota_reset_utc` (midnight Pacific Time = 07:00 / 08:00 UTC), marks the manifest as `status: quota_paused`, and exits gracefully with exit code 0.
 - **Autonomous Resumption:** When the next scheduled cron runs, `pipeline/short_release.py` and `pipeline/run.py` inspect `quota_reset_utc`. If `now_utc >= quota_reset_utc`, the job is automatically flipped back to `approved` and uploaded without requiring user intervention.
 
+### 3.4 Autonomous Comment Reply Engine & Community Flywheel (`docs/COMMENT_REPLY_SYSTEM.md`)
+- **Second-Session Co-Visitation Engine:** Replying to viewer comments triggers instant device push notifications, driving viewers back into the video for a second session and boosting the video's candidate ranking in Suggested and Browse feeds.
+- **Intent Classification & Pastoral Synthesis:** `pipeline/comment_replies.py` categorizes incoming comments into Prayer Requests, Amen Affirmations, Rest/Sleep Testimonies, Scripture Inquiries, Scam Defense, and Crisis Care. Google Gemini Brain composes unique, context-tailored pastoral replies at $0.00 cost.
+- **Anti-Spam & Shadowban Immunity:** Generates 100% unique wording per reply (strictly avoiding repetitive templates flagged by YouTube's spam filters) and applies randomized human jitter pacing (4–8s delay).
+- **Quota Allocation:** 15 replies/run consumes 750 YouTube units (7.5% of free daily budget) and <1.5% of Gemini daily free tier.
+- **CLI & Automation:** `scripts/reply_comments.py` supports `--dry-run` and `--apply`, backed by `.github/workflows/comments.yml` and deduplication tracking in `content/comments/replied.json`.
+
 ---
 
 ## 4. Technical Video, Audio & Motion Specifications (To the Thinnest Detail)
