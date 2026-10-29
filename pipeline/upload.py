@@ -197,12 +197,14 @@ def upload(
     elif CONFIG.auto_publish and privacy == "private":
         privacy = "public"
 
+    full_desc = (description or build_description(doc))[:4900]
     body = {
         "snippet": {
             "title": doc.title[:95],
-            "description": (description or build_description(doc))[:4900],
+            "description": full_desc,
             "tags": (doc.tags + CONFIG.tags_extra)[:20],
             "categoryId": "27",
+            "defaultLanguage": "en",
         },
         "status": {
             "privacyStatus": privacy,
@@ -212,8 +214,19 @@ def upload(
     if publish_at and privacy == "private":
         body["status"]["publishAt"] = publish_at
 
+    # --- MULTI-LANGUAGE LOCALIZATION (SPANISH & PORTUGUESE $0.00 LOCK) ---
+    insert_parts = "snippet,status"
+    try:
+        from .localize_metadata import build_metadata_localizations
+        locs = build_metadata_localizations(doc.title, full_desc, getattr(doc, "niche", "faith and prayer"))
+        if locs:
+            body["localizations"] = locs
+            insert_parts = "snippet,status,localizations"
+    except Exception as exc:
+        print(f"[upload] Notice: localization build skipped: {exc}")
+
     media = MediaFileUpload(str(video_path), mimetype="video/mp4", resumable=True, chunksize=8 * 1024 * 1024)
-    request = youtube.videos().insert(part="snippet,status", body=body, media_body=media)
+    request = youtube.videos().insert(part=insert_parts, body=body, media_body=media)
 
     response = None
     try:
@@ -256,6 +269,14 @@ def upload(
             ).execute()
         except Exception as exc:  # noqa: BLE001
             print(f"[upload] playlist insert failed: {exc!r}")
+
+    # --- FIRST-HOUR PASTORAL PINNED COMMENT ---
+    try:
+        from .pinned_comments import generate_pastoral_pinned_comment, post_pastoral_pinned_comment
+        pinned_text = generate_pastoral_pinned_comment(doc)
+        post_pastoral_pinned_comment(youtube, video_id, pinned_text, dry_run=False)
+    except Exception as exc:
+        print(f"[upload] Notice: pastoral pinned comment skipped: {exc}")
 
     return UploadResult(
         video_id=video_id,
