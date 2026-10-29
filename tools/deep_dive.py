@@ -16,7 +16,7 @@ Upgrades over v3:
 
 Run: .venv/bin/python tools/deep_dive.py [johnstown|enron]
 """
-import os, sys, json, math, subprocess
+import os, sys, json, math, subprocess, shutil
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from score import generate_score
@@ -140,9 +140,20 @@ def vignette():
 VIG = vignette()
 VIG_DARK = Image.new('RGB', (W, H), (2, 7, 20))
 
-def prep_plate(path, focus_side=0.0, tint_warm=0.0):
-    """Aspect-safe 16:9 plate: preserve the full source, never crop/stretch it."""
-    raw=Image.open(path).convert('RGB')
+def prep_plate(path, focus_side=0.0, tint_warm=0.0, mode='matte'):
+    """Aspect-safe 16:9 plate: preserve the full source, never crop/stretch it.
+    When mode='fill' (used for full-bleed widescreen prayer plates), scales to cover (CW, CH)."""
+    raw = Image.open(path).convert('RGB')
+    if mode == 'fill':
+        scale = max(CW / max(1, raw.width), CH / max(1, raw.height))
+        rw, rh = int(round(raw.width * scale)), int(round(raw.height * scale))
+        raw = raw.resize((rw, rh), Image.Resampling.LANCZOS)
+        x = (CW - rw) // 2
+        y = (CH - rh) // 2
+        canvas = Image.new('RGB', (CW, CH), (4, 12, 29))
+        canvas.paste(raw, (x, y))
+        fg = grade_blue(canvas.filter(ImageFilter.UnsharpMask(radius=1.25, percent=100, threshold=3)), tint_warm=tint_warm)
+        return fg
     fit=min((CW*.86)/max(1,raw.width),(CH*.86)/max(1,raw.height))
     raw=raw.resize((max(1,int(round(raw.width*fit))),max(1,int(round(raw.height*fit)))),Image.Resampling.LANCZOS)
     avg=raw.resize((1,1),Image.Resampling.BILINEAR).getpixel((0,0))
@@ -222,7 +233,7 @@ def camera_frame(plate, p, mode='push_in', focus=(0.5, 0.48), extra_zoom=1.0):
     im = plate.transform((W, H), Image.EXTENT, (x0, y0, x0 + vw, y0 + vh), Image.BICUBIC)
     return Image.composite(im, VIG_DARK, VIG)
 
-def optical_flare_transition(f_prev, f_curr, u):
+def optical_flare_transition(f_prev, f_curr, u, is_prayer=False):
     """Smooth whip-zoom cross-dissolve with anamorphic horizontal lens flare."""
     e = ease_in_out_sine(u)
     base = Image.blend(f_prev, f_curr, e)
@@ -234,9 +245,10 @@ def optical_flare_transition(f_prev, f_curr, u):
     d = ImageDraw.Draw(flare)
     cy = int(H * 0.5)
     band_h = int(95 * inten + 12)
-    a_core = int(72 * inten)
-    d.ellipse([-120, cy - band_h, W + 120, cy + band_h], fill=(165, 215, 255, a_core))
-    d.rectangle([0, cy - 3, W, cy + 3], fill=(255, 225, 130, int(90 * inten)))
+    flare_glow = (255, 235, 170, int(68 * inten)) if is_prayer else (165, 215, 255, int(72 * inten))
+    flare_core = (255, 248, 220, int(95 * inten)) if is_prayer else (255, 225, 130, int(90 * inten))
+    d.ellipse([-120, cy - band_h, W + 120, cy + band_h], fill=flare_glow)
+    d.rectangle([0, cy - 3, W, cy + 3], fill=flare_core)
     flare = flare.filter(ImageFilter.GaussianBlur(18))
     return Image.alpha_composite(base.convert('RGBA'), flare).convert('RGB')
 
@@ -375,7 +387,7 @@ def end_card_overlay(base_img, end_pair, t_local, T):
     return Image.alpha_composite(base_img.convert('RGBA'), layer).convert('RGB')
 
 # -------------------------------------- HUD + chapter badge + word ribbon ----
-def hud_chapter_layer(kicker, sub, idx, nscenes, t_scene, scene_dur, total_frac):
+def hud_chapter_layer(kicker, sub, idx, nscenes, t_scene, scene_dur, total_frac, is_prayer=False):
     """Top-left chapter badge + top-right retention progress indicator."""
     layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     in_e = ease_out_expo(clamp01(t_scene / 0.45))
@@ -392,35 +404,41 @@ def hud_chapter_layer(kicker, sub, idx, nscenes, t_scene, scene_dur, total_frac)
         cw = int(max(wk + 120, ws + 120))
         ch = 64 if sub else 46
         cx, cy = int(36 - (1.0 - in_e) * 32), 28
-        layer.alpha_composite(card_alpha(glass_card(cw, ch, radius=14, a_top=210, a_bot=175), a), (cx, cy))
-        # Yellow chapter pill
-        d.rounded_rectangle([cx + 12, cy + 12, cx + 92, cy + 34], radius=6,
-                            fill=YELLOW + (int(240 * a),))
+        border_col = (235, 198, 92, 175) if is_prayer else (126, 184, 255, 165)
+        layer.alpha_composite(card_alpha(glass_card(cw, ch, radius=14, a_top=210, a_bot=175, border_col=border_col), a), (cx, cy))
+        pill_fill = (218, 165, 32, int(240 * a)) if is_prayer else YELLOW + (int(240 * a),)
+        pill_txt_fill = (10, 24, 48, int(255 * a)) if is_prayer else NAVY + (int(255 * a),)
+        d.rounded_rectangle([cx + 12, cy + 12, cx + 92, cy + 34], radius=6, fill=pill_fill)
         wt = d.textlength(tag, font=fc)
-        d.text((cx + 52 - wt / 2, cy + 15), tag, font=fc, fill=NAVY + (int(255 * a),))
+        d.text((cx + 52 - wt / 2, cy + 15), tag, font=fc, fill=pill_txt_fill)
         draw_tracked(d, kicker, fk, cx + 104, cy + 11, WHITE + (int(250 * a),), 1.8)
         if sub:
-            draw_tracked(d, sub, fs, cx + 104, cy + 39, ICE + (int(215 * a),), 2.0)
+            draw_tracked(d, sub, fs, cx + 104, cy + 39, (220, 238, 255) if is_prayer else ICE + (215,), 2.0)
 
-    # Top-right documentary progress pill + bottom edge bar
+    # Top-right progress pill + bottom edge bar
     d = ImageDraw.Draw(layer)
     pw, ph = 158, 36
     px, py = W - pw - 36, 28
-    layer.alpha_composite(card_alpha(glass_card(pw, ph, radius=18, a_top=195, a_bot=160), 0.92), (px, py))
+    border_col_r = (235, 198, 92, 175) if is_prayer else (126, 184, 255, 165)
+    layer.alpha_composite(card_alpha(glass_card(pw, ph, radius=18, a_top=195, a_bot=160, border_col=border_col_r), 0.92), (px, py))
     fp = fnt('Bold', 14)
     pct = f'{int(clamp01(total_frac) * 100):3d}%'
-    d.text((px + 16, py + 9), 'DOC', font=fp, fill=ICE + (210,))
-    d.rectangle([px + 56, py + 15, px + 112, py + 21], fill=(255, 255, 255, 45))
-    fill_w = int(56 * clamp01(total_frac))
+    pill_label = 'PRAYER' if is_prayer else 'DOC'
+    d.text((px + 16, py + 9), pill_label, font=fp, fill=(255, 235, 180) if is_prayer else ICE + (210,))
+    bar_x0 = px + 74 if is_prayer else px + 56
+    bar_w = 38 if is_prayer else 56
+    d.rectangle([bar_x0, py + 15, bar_x0 + bar_w, py + 21], fill=(255, 255, 255, 45))
+    fill_w = int(bar_w * clamp01(total_frac))
     if fill_w > 0:
-        d.rectangle([px + 56, py + 15, px + 56 + fill_w, py + 21], fill=YELLOW + (240,))
+        d.rectangle([bar_x0, py + 15, bar_x0 + fill_w, py + 21], fill=(255, 218, 64) if is_prayer else YELLOW + (240,))
     d.text((px + 118, py + 9), pct, font=fp, fill=WHITE + (235,))
 
     # Full-width thin bottom progress bar
     d.rectangle([0, H - 5, W, H], fill=(255, 255, 255, 32))
     bx = int(W * clamp01(total_frac))
     if bx > 0:
-        d.rectangle([0, H - 5, bx, H], fill=YELLOW + (235,))
+        d.rectangle([0, H - 5, bx, H], fill=(255, 218, 64) if is_prayer else YELLOW + (235,))
+    return layer
     return layer
 
 def build_caption_stream(key, raw_words):
@@ -513,6 +531,264 @@ def caption_ribbon_layer(stream, t):
         else:
             d.text((x, py + 12), txt, font=f, fill=(215, 235, 255, int(130 * a)))
         x += ww + gap
+    return layer
+
+SACRED_KICKERS = [
+    'DIVINE PROTECTION COVENANT',
+    'PSALM 91 : 1',
+    'PSALM 91 : 10',
+    'PRAYER FOR STILLNESS',
+    'ANGELIC PROTECTION',
+    'DIVINE PEACE',
+    'EXODUS 14 : 14',
+    'THE SECRET PLACE',
+]
+
+def align_card_words_to_speech(card_words, seg_words, default_t0, default_t1):
+    """Word-to-word chronological alignment within the sentence segment."""
+    import re
+    def _clean(w):
+        w = w.lower().replace('&', 'and')
+        return re.sub(r'[^a-z0-9]', '', w)
+
+    aligned = []
+    seg_idx = 0
+    for cw in card_words:
+        cw_clean = _clean(cw)
+        found = False
+        for si in range(seg_idx, len(seg_words)):
+            sw = _clean(seg_words[si][2])
+            if cw_clean == sw or (cw_clean == '91' and 'ninety' in sw) or (cw_clean in sw and len(cw_clean) >= 3):
+                t0 = seg_words[si][0]
+                t1 = seg_words[si][1]
+                if cw_clean == '91' and si + 1 < len(seg_words) and 'one' in _clean(seg_words[si+1][2]):
+                    t1 = seg_words[si+1][1]
+                    seg_idx = si + 2
+                else:
+                    seg_idx = si + 1
+                aligned.append((t0, t1))
+                found = True
+                break
+        if not found:
+            prev_t = aligned[-1][1] if aligned else default_t0
+            aligned.append((prev_t, prev_t + 0.35))
+    return aligned
+
+def build_kinetic_stream(key, raw_words):
+    phrases_def = SCRIPTS[key].get('kinetic_phrases')
+    if not phrases_def:
+        return []
+    stream = []
+    for idx, entry in enumerate(phrases_def):
+        if len(entry) == 5 and isinstance(entry[2], (list, tuple)):
+            w0, w1, lines_list, acc, kck = entry
+            lines = list(lines_list)
+            l1 = lines[0] if len(lines) > 0 else ''
+            l2 = lines[1] if len(lines) > 1 else ''
+        elif len(entry) == 4 and isinstance(entry[2], (list, tuple)):
+            w0, w1, lines_list, acc = entry
+            lines = list(lines_list)
+            l1 = lines[0] if len(lines) > 0 else ''
+            l2 = lines[1] if len(lines) > 1 else ''
+            kck = SACRED_KICKERS[idx] if idx < len(SACRED_KICKERS) else 'COVENANT OF PEACE'
+        elif len(entry) == 6:
+            w0, w1, l1, l2, acc, kck = entry
+            lines = [l for l in (l1, l2) if l]
+        else:
+            w0, w1, l1, l2, acc = entry
+            lines = [l for l in (l1, l2) if l]
+            kck = SACRED_KICKERS[idx] if idx < len(SACRED_KICKERS) else 'COVENANT OF PEACE'
+        seg = raw_words[w0:w1 + 1]
+        t_start = seg[0][0]
+        t_end = seg[-1][1]
+        all_cwords = [w for l in lines for w in l.split()]
+        word_timings = align_card_words_to_speech(all_cwords, seg, t_start, t_end)
+        stream.append(dict(
+            t0=t_start,
+            t1=t_end,
+            lines=lines,
+            line1=l1,
+            line2=l2,
+            accent_words=acc,
+            kicker=kck,
+            words=seg,
+            card_words=all_cwords,
+            word_timings=word_timings,
+        ))
+
+    # Sentence-level display windows: advance immediately to next sentence when speech finishes;
+    # zero delay, zero lingering on old text that the voice has already passed
+    for i in range(len(stream)):
+        if i == 0:
+            stream[i]['disp_t0'] = 0.0
+        else:
+            stream[i]['disp_t0'] = stream[i - 1]['t1']
+
+    for i in range(len(stream)):
+        if i + 1 < len(stream):
+            stream[i]['disp_t1'] = stream[i]['t1']
+        else:
+            stream[i]['disp_t1'] = 39.55
+    return stream
+
+def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
+    """Cinematic 16:9 widescreen After Effects-style kinetic display typography:
+    zero scale-pulse wobble, microsecond-aligned to spoken voice,
+    featuring tracked sacred chapter kickers, radiant gold word illumination,
+    and kinetic gold underline sweep."""
+    layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    if not stream:
+        return layer
+
+    active = None
+    item_idx = -1
+    for idx, item in enumerate(stream):
+        if item['disp_t0'] <= t < item['disp_t1']:
+            active = item
+            item_idx = idx
+            break
+    if not active:
+        return layer
+
+    dt = t - active['disp_t0']
+    rem = active['disp_t1'] - t
+    # Instant clean entry/exit with micro-easing (60ms) to ensure zero lingering
+    in_e = clamp01(dt / 0.08)
+    out_e = clamp01(rem / 0.08)
+    alpha = ease_out_cubic(in_e) * ease_out_cubic(out_e)
+    if alpha <= 0.02:
+        return layer
+
+    card_lines = active.get('lines') or [l for l in (active.get('line1'), active.get('line2')) if l]
+    if not card_lines:
+        return layer
+
+    # 16:9 widescreen typography metrics
+    # Max width available for text: 1640px (140px margins on left/right)
+    d_measure = ImageDraw.Draw(layer)
+    font_sz = 46
+    f = fnt('Black', font_sz)
+    tr = 1.8
+    line_h = 66
+
+    # Dynamic measure to ensure widescreen lines fit comfortably within safe width
+    max_line_w = max(sum(d_measure.textlength(ch, font=f) + tr for w in l.split() for ch in w) + 16 * max(0, len(l.split()) - 1) for l in card_lines)
+    if max_line_w > 1640:
+        font_sz = 40
+        f = fnt('Black', font_sz)
+        tr = 1.4
+        line_h = 58
+    elif max_line_w < 1200 and len(card_lines) <= 2:
+        font_sz = 50
+        f = fnt('Black', font_sz)
+        tr = 2.0
+        line_h = 72
+
+    total_h = len(card_lines) * line_h
+    # Position typography in lower third (y ≈ 620 to 760) preserving upper scenery
+    y_start = int(H * 0.62 - total_h / 2.0)
+
+    # Tracked Chapter / Verse Kicker Pill (e.g. PSALM 91 : 10)
+    kicker_txt = active.get('kicker', '')
+    if kicker_txt:
+        fk = fnt('Bold', 18)
+        kw = tracked_width(d_measure, kicker_txt, fk, 3.8)
+        kx = (W - kw) / 2.0
+        ky = y_start - 38
+        # Shadow
+        draw_tracked(d_measure, kicker_txt, fk, kx, ky + 2, (0, 0, 0, int(180 * alpha)), 3.8)
+        # Gold kicker
+        draw_tracked(d_measure, kicker_txt, fk, kx, ky, (255, 218, 64, int(235 * alpha)), 3.8)
+
+    y_pad_top = 40
+    y_pad_bot = 48
+    canvas_h = total_h + y_pad_top + y_pad_bot
+    text_canvas = Image.new('RGBA', (W, canvas_h), (0, 0, 0, 0))
+    td = ImageDraw.Draw(text_canvas)
+
+    word_timings = active.get('word_timings', [])
+    w_idx = 0
+    line_ws = []
+    space_w = int(font_sz * 0.34)
+
+    for li, line in enumerate(card_lines):
+        words = line.split()
+        w_words = [sum(td.textlength(ch, font=f) + tr for ch in w) for w in words]
+        line_w = sum(w_words) + space_w * max(0, len(words) - 1)
+        line_ws.append(line_w)
+        x = (W - line_w) / 2.0
+        y = y_pad_top + li * line_h
+
+        for w, ww in zip(words, w_words):
+            w_t0, w_t1 = word_timings[w_idx] if w_idx < len(word_timings) else (0.0, 999.0)
+            w_idx += 1
+
+            is_spoken = (t >= w_t1)
+            is_active = (w_t0 <= t < w_t1)
+            is_upcoming = (t < w_t0)
+
+            is_accent = any(aw in w for aw in active.get('accent_words', []))
+
+            if is_active:
+                col = (255, 222, 60, int(255 * alpha))          # Blazing active gold
+                glow_col = (255, 215, 40, int(195 * alpha))     # Intense luminous aura
+                shadow_a = int(245 * alpha)
+                y_off = -3                                       # Dynamic physical lift pop
+            elif is_spoken:
+                col = (255, 218, 64, int(255 * alpha)) if is_accent else (255, 255, 255, int(255 * alpha))
+                glow_col = (255, 215, 60, int(50 * alpha)) if is_accent else (220, 240, 255, int(40 * alpha))
+                shadow_a = int(210 * alpha)
+                y_off = 0
+            else:  # is_upcoming
+                col = (215, 235, 255, int(120 * alpha))         # Soft translucent white
+                glow_col = None
+                shadow_a = int(90 * alpha)
+                y_off = 0
+
+            # Directional contact drop shadow (3 passes for 3D depth)
+            for sx, sy, sa in [(0, 3, shadow_a), (0, 6, int(shadow_a * 0.75)), (0, 11, int(shadow_a * 0.50))]:
+                cur_x = x
+                for ch in w:
+                    td.text((cur_x + sx, y + y_off + sy), ch, font=f, fill=(0, 0, 0, sa))
+                    cur_x += td.textlength(ch, font=f) + tr
+
+            # Active/accent ambient luminous glow around display characters
+            if glow_col:
+                cur_x = x
+                passes = [(-2, 0), (2, 0), (0, -2), (0, 2)] if is_active else [(-1, 0), (1, 0), (0, -1), (0, 1)]
+                for ch in w:
+                    for gx, gy in passes:
+                        td.text((cur_x + gx, y + y_off + gy), ch, font=f, fill=glow_col)
+                    cur_x += td.textlength(ch, font=f) + tr
+
+            # Main word typography
+            cur_x = x
+            for ch in w:
+                td.text((cur_x, y + y_off), ch, font=f, fill=col)
+                cur_x += td.textlength(ch, font=f) + tr
+            x += ww + space_w
+
+    # Kinetic Gold Underline Sweep beneath bottom line
+    if (dt > 0.08 or t == 0.0) and line_ws:
+        g = 1.0 if t == 0.0 else ease_out_cubic(clamp01((dt - 0.08) / 0.28))
+        target_w = min(line_ws[-1] * 0.92, 700)
+        ul_w = target_w * g
+        ul_x0 = (W - target_w) / 2.0
+        ul_y = y_pad_top + total_h + 10
+
+        # Amber glow backing
+        td.rounded_rectangle([ul_x0 - 2, ul_y - 2, ul_x0 + ul_w + 2, ul_y + 6], radius=3, fill=(255, 200, 40, int(85 * alpha)))
+        # Pure gold bar
+        td.rounded_rectangle([ul_x0, ul_y, ul_x0 + ul_w, ul_y + 4], radius=2, fill=(255, 222, 70, int(245 * alpha)))
+
+    # Ambient deep shadow bloom
+    ambient = text_canvas.split()[3].filter(ImageFilter.GaussianBlur(16))
+    ambient_layer_img = Image.new('RGBA', text_canvas.size, (0, 0, 0, 0))
+    ambient_layer_img.paste((0, 0, 0, int(200 * alpha)), (0, 0), mask=ambient)
+
+    combined = Image.alpha_composite(ambient_layer_img, text_canvas)
+    layer.alpha_composite(combined, (0, int(y_start - y_pad_top)))
+
     return layer
 
 # ------------------------- contextual visual diagrams (viz_layer) -----------
@@ -706,8 +982,15 @@ def viz_layer(viz_kind, t_scene, scene_dur):
 
 # ---------------------------------------------------------- word sync ----
 def load_words(key):
-    path = os.path.join(AUDIO, f'words-{key}.json')
-    return json.load(open(path))
+    words_key = SCRIPTS.get(key, {}).get('words', key)
+    path = os.path.join(AUDIO, f'words-{words_key}.json')
+    if not os.path.exists(path):
+        alt = os.path.join(AUDIO, f'words-short-{words_key}.json')
+        if os.path.exists(alt):
+            path = alt
+        else:
+            raise SystemExit(f'missing {path}')
+    return json.load(open(path, 'r', encoding='utf-8'))
 
 def find_phrase(words, phrase, occ=0):
     ws = phrase.split()
@@ -1402,25 +1685,129 @@ SCRIPTS = {
             (303, 312, 'it is not making money. Subscribe \u2014 this is Money, Explained.'),
         ],
     ),
+    'psalm91': dict(
+        title=('THE SECRET PLACE', 'PSALM 91 \u00B7 PRAYER OF DIVINE PROTECTION'),
+        end=('SUBSCRIBE', 'The Secret Place \u2014 daily prayer and scripture'),
+        narration='short-prayer-psalm91.mp3',
+        words='psalm91',
+        out='deep-dive-psalm91.mp4',
+        stock_queries=[
+            'calm mountain lake sunset water reflection',
+            'sun rays breaking clouds mountains',
+            'ancient castle mountain starry night',
+            'candle burning dark room night prayer',
+            'milky way galaxy starry night sky',
+            'candle burning dark room night prayer',
+            'golden sunrise lake mist morning',
+            'calm mountain lake sunset water reflection',
+        ],
+        scenes=[
+            dict(a='', img='short-prayer-scene-01.jpg', kicker='PSALM 91:1', sub='NIGHT PROTECTION PRAYER', cam='tilt_up', focus=(0.5, 0.45)),
+            dict(a='he who dwells', img='short-prayer-scene-02.jpg', kicker='HE WHO DWELLS', sub='IN THE SECRET PLACE', cam='push_in', focus=(0.5, 0.45)),
+            dict(a='no evil shall', img='short-prayer-scene-05.jpg', kicker='PSALM 91:10', sub='NO EVIL SHALL BEFALL YOU', cam='push_in', focus=(0.5, 0.42)),
+            dict(a='heavenly father', img='short-prayer-scene-03.jpg', kicker='PRAYER FOR PEACE', sub='QUIET EVERY ANXIOUS THOUGHT', cam='pan_right', focus=(0.5, 0.48)),
+            dict(a='send your angels', img='short-prayer-scene-06.jpg', kicker='ANGELIC PROTECTION', sub='GUARD THIS HOME', cam='pull_out', focus=(0.48, 0.48)),
+            dict(a='let your divine peace', img='short-prayer-scene-03.jpg', kicker='DIVINE PEACE', sub='FILL THIS ROOM WALL TO WALL', cam='tilt_up', focus=(0.5, 0.50)),
+            dict(a='sleep in peace', img='short-prayer-scene-04.jpg', kicker='REST IN GOD', sub='HE FIGHTS YOUR BATTLES', cam='pan_left', focus=(0.5, 0.45)),
+            dict(a='receive this protection', img='short-prayer-scene-01.jpg', kicker='DIVINE SHIELD', sub='TYPE AMEN & SUBSCRIBE', cam='push_in', focus=(0.5, 0.45)),
+        ],
+        teases=[],
+        sfx_cues=[
+            dict(hush=dict(a='he who dwells', lead=0.35, dur=1.0, depth=0.85)),
+            dict(hush=dict(a='heavenly father', lead=0.35, dur=1.0, depth=0.85)),
+            dict(hush=dict(a='sleep in peace', lead=0.35, dur=1.0, depth=0.85)),
+        ],
+        beats=[
+            dict(a='secret place', kind='quote', words=['SECRET', 'PLACE', 'OF', 'THE', 'MOST', 'HIGH'], attrib='\u2014 PSALM 91:1', slot='C'),
+            dict(a='under the shadow', kind='phrase', words=['UNDER', 'HIS', 'SHADOW'], hi=0, slot='C'),
+            dict(a='no evil shall', kind='quote', words=['NO', 'EVIL', 'SHALL', 'BEFALL', 'YOU'], attrib='\u2014 PSALM 91:10', slot='C'),
+            dict(a='guard this home', kind='phrase', words=['ANGELS', 'GUARD', 'YOUR', 'HOME'], hi=0, slot='C'),
+            dict(a='divine peace', kind='phrase', words=['DIVINE', 'PEACE', 'IN', 'THIS', 'ROOM'], hi=0, slot='C'),
+            dict(a='god is fighting', kind='phrase', words=['GOD', 'FIGHTS', 'YOUR', 'BATTLES'], hi=0, slot='C'),
+            dict(a='type amen', kind='phrase', words=['TYPE', 'AMEN', 'FOR', 'PROTECTION'], hi=1, slot='C'),
+        ],
+        captions=[
+            (0, 19, 'Before you close your eyes tonight, take a deep breath, and place your home and family under Psalm 91.'),
+            (20, 38, 'He who dwells in the secret place of the Most High shall abide under the shadow of the Almighty.'),
+            (39, 51, 'No evil shall befall you, nor shall any plague come near your dwelling.'),
+            (52, 58, 'Heavenly Father, quiet every anxious thought tonight.'),
+            (59, 69, 'Send your angels to guard this home, wash away every fear,'),
+            (70, 81, 'and let your divine peace fill this room from wall to wall.'),
+            (82, 92, 'Sleep in peace tonight, knowing that God is fighting your battles.'),
+            (93, 107, 'If you receive this protection, type Amen, and subscribe to pray with us every day.'),
+        ],
+        kinetic_phrases=[
+            (0, 19, [
+                'BEFORE YOU CLOSE YOUR EYES TONIGHT',
+                'TAKE A DEEP BREATH',
+                'AND PLACE YOUR HOME & FAMILY UNDER PSALM 91',
+            ], ['CLOSE', 'EYES', 'TONIGHT', 'BREATH', 'PSALM', '91'], 'DIVINE PROTECTION COVENANT'),
+            (20, 38, [
+                'HE WHO DWELLS IN THE SECRET PLACE',
+                'OF THE MOST HIGH',
+                'SHALL ABIDE UNDER THE SHADOW OF THE ALMIGHTY',
+            ], ['DWELLS', 'SECRET', 'PLACE', 'MOST', 'HIGH', 'SHADOW', 'ALMIGHTY'], 'PSALM 91 : 1'),
+            (39, 51, [
+                'NO EVIL SHALL BEFALL YOU',
+                'NOR SHALL ANY PLAGUE',
+                'COME NEAR YOUR DWELLING',
+            ], ['NO', 'EVIL', 'BEFALL', 'PLAGUE', 'DWELLING'], 'PSALM 91 : 10'),
+            (52, 58, [
+                'HEAVENLY FATHER',
+                'QUIET EVERY ANXIOUS THOUGHT TONIGHT',
+            ], ['HEAVENLY', 'FATHER', 'QUIET', 'ANXIOUS', 'TONIGHT'], 'PRAYER FOR STILLNESS'),
+            (59, 69, [
+                'SEND YOUR ANGELS TO GUARD THIS HOME',
+                'WASH AWAY EVERY FEAR',
+            ], ['ANGELS', 'GUARD', 'HOME', 'WASH', 'FEAR'], 'ANGELIC PROTECTION'),
+            (70, 81, [
+                'AND LET YOUR DIVINE PEACE',
+                'FILL THIS ROOM FROM WALL TO WALL',
+            ], ['DIVINE', 'PEACE', 'ROOM', 'WALL'], 'DIVINE PEACE'),
+            (82, 92, [
+                'SLEEP IN PEACE TONIGHT',
+                'KNOWING THAT GOD IS FIGHTING YOUR BATTLES',
+            ], ['PEACE', 'GOD', 'FIGHTING', 'BATTLES'], 'EXODUS 14 : 14'),
+            (93, 107, [
+                'IF YOU RECEIVE THIS PROTECTION',
+                'TYPE AMEN AND SUBSCRIBE',
+                'TO PRAY WITH US EVERY DAY',
+            ], ['PROTECTION', 'TYPE', 'AMEN', 'SUBSCRIBE', 'PRAY'], 'THE SECRET PLACE'),
+        ],
+    ),
 }
 
 # -------------------------------------------------------------------- main ----
 def main(key):
     cfg = SCRIPTS[key]
     out = os.path.join(ROOT, 'social', cfg['out'])
-    v = [os.path.join(AUDIO, n) for n in cfg['voices']]
-    nar = os.path.join(AUDIO, f'narration-{key}.m4a')
-    cmd = [FFMPEG, '-y', '-i', v[0], '-i', v[1], '-i', v[2],
-           '-filter_complex', 'concat=n=3:v=0:a=1', '-c:a', 'aac', '-b:a', '160k', nar]
-    subprocess.run(cmd, check=True, capture_output=True)
+    is_prayer = (key in ('psalm91', 'short-psalm91') or 'prayer' in key)
+    if 'narration' in cfg:
+        nar_src = os.path.join(AUDIO, cfg['narration'])
+        nar = os.path.join(AUDIO, f'narration-{key}.m4a')
+        shutil.copy(nar_src, '/tmp/_deep_in.mp3')
+        cmd = [FFMPEG, '-y', '-i', '/tmp/_deep_in.mp3', '-c:a', 'aac', '-b:a', '160k', nar]
+        subprocess.run(cmd, check=True, capture_output=True)
+    else:
+        v = [os.path.join(AUDIO, n) for n in cfg['voices']]
+        nar = os.path.join(AUDIO, f'narration-{key}.m4a')
+        if len(v) == 1:
+            cmd = [FFMPEG, '-y', '-i', v[0], '-c:a', 'aac', '-b:a', '160k', nar]
+        else:
+            cmd = [FFMPEG, '-y']
+            for vf in v:
+                cmd += ['-i', vf]
+            cmd += ['-filter_complex', f'concat=n={len(v)}:v=0:a=1', '-c:a', 'aac', '-b:a', '160k', nar]
+        subprocess.run(cmd, check=True, capture_output=True)
     adur = duration(nar)
-    total = adur + 2.2
+    total = adur + (1.6 if is_prayer else 2.2)
     n = int(total * FPS)
 
     words = load_words(key)
     beats = resolve_beats(key, words)
     scenes = resolve_scenes(key, words, total)
     cap_stream = build_caption_stream(key, words)
+    kinetic_stream = build_kinetic_stream(key, words)
     for sc in scenes:
         stem=os.path.splitext(os.path.basename(sc['img']))[0]
         stem=__import__('re').sub(r'-{1,2}\d+$','',stem).replace('-',' ')
@@ -1449,21 +1836,22 @@ def main(key):
 
     # Every scene keeps a real story-specific archive photo as decode/API fallback.
     plate_cache = {}
+    plate_mode = 'fill' if is_prayer else 'matte'
     for sc in scenes:
         archive_path=os.path.join(IMG,sc['img'])
         if sc.get('media_kind')=='video':
-            pkey=(archive_path,sc.get('focus_side',0.0),sc.get('warm',0.0))
+            pkey=(archive_path,sc.get('focus_side',0.0),sc.get('warm',0.0),plate_mode)
             if pkey not in plate_cache:
                 if not os.path.exists(archive_path):raise SystemExit(f'missing image {archive_path}')
-                plate_cache[pkey]=prep_plate(archive_path,sc.get('focus_side',0.0),sc.get('warm',0.0))
+                plate_cache[pkey]=prep_plate(archive_path,sc.get('focus_side',0.0),sc.get('warm',0.0),mode=plate_mode)
             sc['fallback_plate']=plate_cache[pkey]; sc['plate']=None
             label=f"VIDEO {sc.get('source')} {sc.get('source_size')}"
         else:
             p_path=sc.get('media_path') or archive_path
-            pkey=(p_path,sc.get('focus_side',0.0),sc.get('warm',0.0))
+            pkey=(p_path,sc.get('focus_side',0.0),sc.get('warm',0.0),plate_mode)
             if pkey not in plate_cache:
                 if not os.path.exists(p_path):raise SystemExit(f'missing image {p_path}')
-                plate_cache[pkey]=prep_plate(p_path,sc.get('focus_side',0.0),sc.get('warm',0.0))
+                plate_cache[pkey]=prep_plate(p_path,sc.get('focus_side',0.0),sc.get('warm',0.0),mode=plate_mode)
             sc['plate']=plate_cache[pkey]
             label=f"PHOTO {sc.get('source')} {sc.get('source_size')}" if sc.get('media_path') else sc['img']
         print(f"  scene {sc['t0']:5.1f}-{sc['t1']:5.1f}s | {sc['kicker']:34s} | {label}")
@@ -1515,10 +1903,12 @@ def main(key):
         else:
             stop_video_plate(video_proc); video_proc=None; active_video_scene=-1; source=sc['plate']
         sc['last_source']=source
-        # Restrained settle: camera motion stays inside the padded source-safe matte.
+        # Camera easing
+        punch_z = (1.0 + 0.035 * (1.0 - ease_out_cubic(clamp01(pos / 0.45)))) if is_prayer else 1.0
+        accel_z = (1.0 + 0.020 * ease_out_cubic(clamp01((pos - (sc_dur - 0.20)) / 0.20))) if (is_prayer and pos > sc_dur - 0.20) else 1.0
         extra_z = 1.0 + 0.012 * (1.0 - ease_out_cubic(clamp01(pos / FADE))) if (k > 0 and pos < FADE) else 1.0
         frame = camera_frame(source, p, sc.get('cam', 'push_in'),
-                             sc.get('focus', (0.5, 0.48)), extra_zoom=extra_z)
+                             sc.get('focus', (0.5, 0.48)), extra_zoom=extra_z * punch_z * accel_z)
 
         if k > 0 and pos < FADE:
             prev = scenes[k - 1]
@@ -1527,22 +1917,30 @@ def main(key):
             prev_source=prev.get('last_source',prev.get('plate'))
             f_prev = camera_frame(prev_source, 1.0, prev.get('cam', 'push_in'),
                                   prev.get('focus', (0.5, 0.48)), extra_zoom=prev_z)
-            frame = optical_flare_transition(f_prev, frame, u)
+            frame = optical_flare_transition(f_prev, frame, u, is_prayer=is_prayer)
+
+        if is_prayer and k > 0 and pos < 0.07:
+            frame = Image.blend(frame, Image.new('RGB', (W, H), (255, 255, 255)), 0.16 * (1.0 - pos / 0.07))
 
         ov = Image.new('RGBA', (W, H), (0, 0, 0, 0))
         ov.alpha_composite(ambient_layer(t))
         ov.alpha_composite(viz_layer(sc.get('viz'), pos, sc_dur))
-        ov.alpha_composite(beats_layer(beats, t, expire_t))
-        ov.alpha_composite(tease_layer(cfg.get('teases', []), t))
-        if t < 4.3:
+        if not is_prayer:
+            ov.alpha_composite(beats_layer(beats, t, expire_t))
+            ov.alpha_composite(tease_layer(cfg.get('teases', []), t))
+        if t < 4.3 and not is_prayer:
             cold_open_overlay(ov, cfg['title'], t, dur=4.3)
         ov.alpha_composite(hud_chapter_layer(sc['kicker'], sc.get('sub', ''),
-                                             k + 1, nscenes, pos, sc_dur, t / total))
-        ov.alpha_composite(caption_ribbon_layer(cap_stream, t))
+                                             k + 1, nscenes, pos, sc_dur, t / total, is_prayer=is_prayer))
+        if is_prayer and kinetic_stream:
+            ov.alpha_composite(kinetic_typography_layer(frame, kinetic_stream, t, is_prayer=is_prayer))
+        else:
+            ov.alpha_composite(caption_ribbon_layer(cap_stream, t))
 
         frame = Image.alpha_composite(frame.convert('RGBA'), ov).convert('RGB')
-        if t >= adur - 0.4:
-            frame = end_card_overlay(frame, cfg['end'], t - (adur - 0.4), total - (adur - 0.4))
+        end_start = (kinetic_stream[-1]['disp_t1'] if (is_prayer and kinetic_stream) else adur - 0.4)
+        if t >= end_start:
+            frame = end_card_overlay(frame, cfg['end'], t - end_start, total - end_start)
 
         proc.stdin.write(frame.tobytes())
         if i % 360 == 0:

@@ -381,6 +381,12 @@ async function forceDownload(url, filename) {
     <div class="review-grid">
       <!-- Left Column: Video Player & Transport Controls -->
       <div class="video-column">
+        <!-- Dual Format Review Selector: 9:16 Shorts vs 16:9 Widescreen Long-Form -->
+        <div style="display: flex; gap: 8px; width: 100%; margin-bottom: 12px;">
+          <button id="btn-fmt-short" class="btn-gold" style="flex: 1; padding: 10px 8px; font-size: 13px; font-weight: 800; cursor: pointer; border-radius: 8px; border: none;" onclick="switchVideoFormat('short')">📱 9:16 Shorts Vertical</button>
+          <button id="btn-fmt-long" class="btn-secondary" style="flex: 1; padding: 10px 8px; font-size: 13px; font-weight: 800; cursor: pointer; border-radius: 8px;" onclick="switchVideoFormat('long')">🖥️ 16:9 Long-Form Widescreen</button>
+        </div>
+
         <div class="video-wrapper">
           <video id="review-player" src="media/shorts-psalm91.mp4" playsinline webkit-playsinline controls preload="auto" poster="media/shorts-psalm91-poster.jpg">
             <source src="media/shorts-psalm91.mp4" type="video/mp4">
@@ -426,10 +432,11 @@ async function forceDownload(url, filename) {
           </div>
 
           <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 8px;">
-            <a class="btn-gold" style="width: 100%; padding: 10px 14px; font-size: 13.5px; text-align: center; text-decoration: none; display: block; box-sizing: border-box;" href="https://www.youtube.com/shorts/SG69BbNlfRw" target="_blank" rel="noopener">🔴 Watch Live on YouTube Shorts</a>
+            <a id="btn-live-yt" class="btn-gold" style="width: 100%; padding: 10px 14px; font-size: 13.5px; text-align: center; text-decoration: none; display: block; box-sizing: border-box;" href="https://www.youtube.com/shorts/SG69BbNlfRw" target="_blank" rel="noopener">🔴 Watch Live on YouTube Shorts</a>
             <div class="video-links-bar">
-              <button class="btn-alt-link" style="border: none; cursor: pointer;" onclick="forceDownload('media/shorts-psalm91.mp4', 'shorts-psalm91.mp4')">⬇️ Download Video MP4 (10.9 MB)</button>
-              <a class="btn-alt-link" href="media/shorts-psalm91.mp4" target="_blank" rel="noopener">↗ Open Raw Video in New Tab</a>
+              <button id="btn-dl-video" class="btn-alt-link" style="border: none; cursor: pointer;" onclick="forceDownload('media/shorts-psalm91.mp4', 'shorts-psalm91.mp4')">⬇️ Download 9:16 Shorts MP4 (10.9 MB)</button>
+              <button id="btn-dl-long" class="btn-alt-link" style="border: none; cursor: pointer;" onclick="forceDownload('media/deep-dive-psalm91.mp4', 'deep-dive-psalm91.mp4')">⬇️ Download 16:9 Widescreen MP4 (6.3 MB)</button>
+              <a id="link-raw-video" class="btn-alt-link" href="media/shorts-psalm91.mp4" target="_blank" rel="noopener">↗ Open Raw 9:16 Video in New Tab</a>
             </div>
           </div>
         </div>
@@ -980,6 +987,40 @@ function setSpeed(speed, btn) {
   player.playbackRate = speed;
   document.querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
   if (btn) btn.classList.add('active');
+}
+
+function switchVideoFormat(fmt) {
+  if (!player) return;
+  const wasPlaying = !player.paused;
+  const curTime = player.currentTime;
+  const isLong = (fmt === 'long');
+  
+  const btnShort = document.getElementById('btn-fmt-short');
+  const btnLong = document.getElementById('btn-fmt-long');
+  if (btnShort) btnShort.className = isLong ? 'btn-secondary' : 'btn-gold';
+  if (btnLong) btnLong.className = isLong ? 'btn-gold' : 'btn-secondary';
+  
+  const videoWrapper = document.querySelector('.video-wrapper');
+  if (videoWrapper) {
+    videoWrapper.style.maxWidth = isLong ? '100%' : '340px';
+    videoWrapper.style.aspectRatio = isLong ? '16 / 9' : '9 / 16';
+  }
+  
+  const src = isLong ? 'media/deep-dive-psalm91.mp4' : 'media/shorts-psalm91.mp4';
+  const poster = isLong ? 'media/psalm-91-longform-thumbnail.jpg' : 'media/shorts-psalm91-poster.jpg';
+  player.poster = poster;
+  player.src = src;
+  player.load();
+  player.currentTime = curTime;
+  if (wasPlaying) {
+    player.play().catch(() => {});
+  }
+  
+  const rawLink = document.getElementById('link-raw-video');
+  if (rawLink) {
+    rawLink.href = src;
+    rawLink.textContent = isLong ? '↗ Open Raw 16:9 Video in New Tab' : '↗ Open Raw 9:16 Video in New Tab';
+  }
 }
 
 function switchTab(tab) {
