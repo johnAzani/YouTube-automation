@@ -674,7 +674,8 @@ def align_card_words_to_speech(card_words, seg_words, default_t0, default_t1):
     """Word-to-word chronological alignment within the sentence segment."""
     import re
     def _clean(w):
-        return re.sub(r'[^a-z0-9]', '', w.lower())
+        w = w.lower().replace('&', 'and')
+        return re.sub(r'[^a-z0-9]', '', w)
 
     aligned = []
     seg_idx = 0
@@ -741,21 +742,17 @@ def build_kinetic_stream(key, raw_words):
             word_timings=word_timings,
         ))
 
-    # Calculate exact non-overlapping display windows aligned to vocal transients (120ms lead-in for instant perception)
-    for i, item in enumerate(stream):
-        t_start = item['t0']
+    # Sentence-level display windows: advance immediately to next sentence when speech finishes;
+    # zero delay, zero lingering on old text that the voice has already passed
+    for i in range(len(stream)):
         if i == 0:
-            disp_t0 = 0.0
+            stream[i]['disp_t0'] = 0.0
         else:
-            prev_end = stream[i - 1]['t1']
-            disp_t0 = max(prev_end + 0.04, t_start - 0.12)
-        item['disp_t0'] = round(disp_t0, 2)
+            stream[i]['disp_t0'] = stream[i - 1]['t1']
 
     for i in range(len(stream)):
-        t_end = stream[i]['t1']
         if i + 1 < len(stream):
-            next_disp_t0 = stream[i + 1]['disp_t0']
-            stream[i]['disp_t1'] = next_disp_t0
+            stream[i]['disp_t1'] = stream[i]['t1']
         else:
             stream[i]['disp_t1'] = 39.55
     return stream
@@ -792,10 +789,10 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
 
     cy = 780
     lines = active.get('lines') or [l for l in [active.get('line1'), active.get('line2')] if l]
-    base_sz = 44 if len(lines) >= 3 else (48 if len(lines) == 2 else 52)
+    base_sz = 34 if len(lines) >= 4 else (38 if len(lines) == 3 else 44)
     max_safe = SAFE_R - SAFE_L - 32
-    f_size, f = get_phrase_font(lines, base_sz=base_sz, max_safe=max_safe, tracking=3.5)
-    tr = 3.5
+    tr = 1.5
+    f_size, f = get_phrase_font(lines, base_sz=base_sz, max_safe=max_safe, tracking=tr)
 
     line_h = int(f_size * 1.25)
     total_h = len(lines) * line_h
@@ -864,10 +861,13 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
             w_t0, w_t1 = word_timings[w_idx] if w_idx < len(word_timings) else (0.0, 999.0)
             w_idx += 1
 
-            # Word-level sync states within sentence segment
-            is_spoken = (t >= w_t1 + 0.08)
-            is_active = (w_t0 - 0.04 <= t < w_t1 + 0.08)
-            is_upcoming = (t < w_t0 - 0.04)
+            # Word-level sync states within sentence segment:
+            # Word illuminates in radiant gold the exact instant spoken (w_t0 <= t < w_t1).
+            # Settles into crisp solid white the exact instant finished (t >= w_t1).
+            # Zero delay, zero lagging behind what the voice has already passed.
+            is_spoken = (t >= w_t1)
+            is_active = (w_t0 <= t < w_t1)
+            is_upcoming = (t < w_t0)
 
             is_accent = any(aw in w for aw in active['accent_words'])
 
@@ -1787,14 +1787,50 @@ SCRIPTS = {
             (93, 107, 'If you receive this protection, type Amen, and subscribe to pray with us every day.'),
         ],
         kinetic_phrases=[
-            (0, 19, ['BEFORE YOU CLOSE', 'YOUR EYES TONIGHT', 'TAKE A DEEP BREATH', 'UNDER PSALM 91'], ['CLOSE', 'EYES', 'TONIGHT', 'BREATH', 'PSALM', '91'], 'DIVINE PROTECTION COVENANT'),
-            (20, 38, ['HE WHO DWELLS', 'IN THE SECRET PLACE', 'OF THE MOST HIGH', 'ABIDES IN HIS SHADOW'], ['DWELLS', 'SECRET', 'PLACE', 'MOST', 'HIGH', 'SHADOW'], 'PSALM 91 : 1'),
-            (39, 51, ['NO EVIL SHALL BEFALL YOU', 'NOR SHALL ANY PLAGUE', 'COME NEAR YOUR DWELLING'], ['NO', 'EVIL', 'BEFALL', 'PLAGUE', 'DWELLING'], 'PSALM 91 : 10'),
-            (52, 58, ['HEAVENLY FATHER', 'QUIET EVERY', 'ANXIOUS THOUGHT'], ['HEAVENLY', 'FATHER', 'QUIET', 'ANXIOUS'], 'PRAYER FOR STILLNESS'),
-            (59, 69, ['SEND YOUR ANGELS', 'TO GUARD THIS HOME', 'WASH AWAY EVERY FEAR'], ['ANGELS', 'GUARD', 'HOME', 'WASH', 'FEAR'], 'ANGELIC PROTECTION'),
-            (70, 81, ['LET YOUR DIVINE PEACE', 'FILL THIS ROOM', 'WALL TO WALL'], ['DIVINE', 'PEACE', 'WALL'], 'DIVINE PEACE'),
-            (82, 92, ['SLEEP IN PEACE TONIGHT', 'GOD IS FIGHTING', 'YOUR BATTLES'], ['PEACE', 'GOD', 'FIGHTING', 'BATTLES'], 'EXODUS 14 : 14'),
-            (93, 107, ['RECEIVE THIS PROTECTION', 'TYPE AMEN', 'SUBSCRIBE TO PRAY DAILY'], ['PROTECTION', 'TYPE', 'AMEN', 'SUBSCRIBE', 'PRAY'], 'THE SECRET PLACE'),
+            (0, 19, [
+                'BEFORE YOU CLOSE',
+                'YOUR EYES TONIGHT',
+                'TAKE A DEEP BREATH',
+                'AND PLACE YOUR HOME & FAMILY',
+                'UNDER PSALM 91',
+            ], ['CLOSE', 'EYES', 'TONIGHT', 'BREATH', 'PSALM', '91'], 'DIVINE PROTECTION COVENANT'),
+            (20, 38, [
+                'HE WHO DWELLS',
+                'IN THE SECRET PLACE',
+                'OF THE MOST HIGH',
+                'SHALL ABIDE UNDER THE SHADOW',
+                'OF THE ALMIGHTY',
+            ], ['DWELLS', 'SECRET', 'PLACE', 'MOST', 'HIGH', 'SHADOW', 'ALMIGHTY'], 'PSALM 91 : 1'),
+            (39, 51, [
+                'NO EVIL SHALL BEFALL YOU',
+                'NOR SHALL ANY PLAGUE',
+                'COME NEAR YOUR DWELLING',
+            ], ['NO', 'EVIL', 'BEFALL', 'PLAGUE', 'DWELLING'], 'PSALM 91 : 10'),
+            (52, 58, [
+                'HEAVENLY FATHER',
+                'QUIET EVERY ANXIOUS',
+                'THOUGHT TONIGHT',
+            ], ['HEAVENLY', 'FATHER', 'QUIET', 'ANXIOUS', 'TONIGHT'], 'PRAYER FOR STILLNESS'),
+            (59, 69, [
+                'SEND YOUR ANGELS',
+                'TO GUARD THIS HOME',
+                'WASH AWAY EVERY FEAR',
+            ], ['ANGELS', 'GUARD', 'HOME', 'WASH', 'FEAR'], 'ANGELIC PROTECTION'),
+            (70, 81, [
+                'AND LET YOUR DIVINE PEACE',
+                'FILL THIS ROOM',
+                'FROM WALL TO WALL',
+            ], ['DIVINE', 'PEACE', 'ROOM', 'WALL'], 'DIVINE PEACE'),
+            (82, 92, [
+                'SLEEP IN PEACE TONIGHT',
+                'KNOWING THAT GOD',
+                'IS FIGHTING YOUR BATTLES',
+            ], ['PEACE', 'GOD', 'FIGHTING', 'BATTLES'], 'EXODUS 14 : 14'),
+            (93, 107, [
+                'IF YOU RECEIVE THIS PROTECTION',
+                'TYPE AMEN AND SUBSCRIBE',
+                'TO PRAY WITH US EVERY DAY',
+            ], ['PROTECTION', 'TYPE', 'AMEN', 'SUBSCRIBE', 'PRAY'], 'THE SECRET PLACE'),
         ],
     ),
 }
