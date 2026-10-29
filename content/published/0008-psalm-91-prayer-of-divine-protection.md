@@ -2,7 +2,7 @@
 id: "0008"
 title: "Psalm 91: The Complete Prayer of Divine Protection Before You Sleep | The Secret Place"
 slug: psalm-91-prayer-of-divine-protection
-status: approved
+status: published
 format: longform
 niche: faith and prayer
 category: education
@@ -77,6 +77,8 @@ originality:
   no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
   source_notes: true         # scriptures and classical commentaries documented
   ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
+published_on: "2026-10-29"
+youtube_video_id: "7RDX0fbIOtQ"
 ---
 
 ## Scene 1 — The Habitation of the Most High (Verses 1–2)
