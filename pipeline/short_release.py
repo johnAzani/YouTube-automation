@@ -429,6 +429,14 @@ def select_next_queued_short(
 
 
 def _build_script_doc(edition: ShortEdition) -> ScriptDoc:
+    desc = edition.description
+    if edition.niche == "faith and prayer":
+        try:
+            from .shorts_bridge import enrich_short_description_with_bridge
+            desc = enrich_short_description_with_bridge(desc, edition.key)
+        except Exception:
+            pass
+
     return ScriptDoc(
         path=PUBLISHED_DIR / f"{edition.slug}.md",
         meta={
@@ -440,7 +448,7 @@ def _build_script_doc(edition: ShortEdition) -> ScriptDoc:
             "niche": edition.niche,
             "category": "education",
             "tags": list(edition.tags),
-            "description": edition.description,
+            "description": desc,
             "originality": {
                 "original_thesis": True,
                 "unique_structure": True,
@@ -449,7 +457,7 @@ def _build_script_doc(edition: ShortEdition) -> ScriptDoc:
                 "source_notes": True,
             },
         },
-        scenes=[Scene(index=1, heading="How Enron Died", narration=edition.description)],
+        scenes=[Scene(index=1, heading=edition.title, narration=desc)],
     )
 
 
