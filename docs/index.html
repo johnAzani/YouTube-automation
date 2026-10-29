@@ -820,6 +820,57 @@ Here, you will find powerful daily Christian prayers, deep scripture meditations
   <section class="card wide">
     <div class="copy-box">The Secret Place, Christian Prayer, Daily Prayer, Morning Prayer, Bedtime Prayer, Psalm 91 Prayer, Scripture Meditation, Christian Meditation, Bible Verses for Sleep, Powerful Prayer, Prayer for Healing, Prayer for Protection, Deliverance Prayer, Christian Motivation, Faith in God, Jesus Christ, Holy Spirit, Peaceful Sleep Bible Verses, Biblical Wisdom, Christian Encouragement, Sanctuary of Prayer</div>
   </section>
+
+  <h2>📊 Channel & Video Analytics Control Center</h2>
+  <div class="tip-box">
+    <strong>📈 Accessing All Channel & Video Analytics:</strong><br>
+    YouTube provides two tiers of performance reporting: <strong>YouTube Studio Web / Mobile</strong> (for real-time velocity, thumbnail impressions, and CTR) and <strong>Programmatic Automated Collectors</strong> (for offline CSV archiving and daily JSON reports).
+  </div>
+
+  <div class="row">
+    <!-- Studio Live Console -->
+    <section class="card">
+      <p class="label">🔴 1. LIVE YOUTUBE STUDIO CONSOLE (INSTANT ACCESS)</p>
+      <p class="meta">View real-time 48-hr and 60-min view counts, total watch hours towards 4,000 YPP, thumbnail impressions, and exact audience retention curves directly in Google's official creator dashboard.</p>
+      <div class="btn-group" style="flex-direction: column; align-items: stretch;">
+        <a class="btn-gold" href="https://studio.youtube.com/video/7RDX0fbIOtQ/analytics" target="_blank" rel="noopener" style="text-align: center;">📊 Open Video 7RDX0fbIOtQ Analytics</a>
+        <a class="btn-secondary" href="https://studio.youtube.com/video/7RDX0fbIOtQ/analytics/tab-reach" target="_blank" rel="noopener" style="text-align: center; margin-left: 0;">🎯 Impressions & CTR (Reach Tab)</a>
+        <a class="btn-secondary" href="https://studio.youtube.com/video/7RDX0fbIOtQ/analytics/tab-engagement" target="_blank" rel="noopener" style="text-align: center; margin-left: 0;">⏳ Retention Curve & AVD (Engagement)</a>
+        <a class="btn-secondary" href="https://studio.youtube.com/channel/analytics" target="_blank" rel="noopener" style="text-align: center; margin-left: 0;">📈 Channel-Wide Analytics Overview</a>
+      </div>
+    </section>
+
+    <!-- Automated GitHub Actions Snapshot -->
+    <section class="card">
+      <p class="label">⚙️ 2. AUTOMATED GITHUB ACTIONS SNAPSHOT (ZERO SETUP)</p>
+      <p class="meta">Runs automatically every Friday (or on-demand via workflow_dispatch) to snapshot public views, likes, comments, and subscriber counts using YouTube Data API v3.</p>
+      <div class="copy-box" style="max-height: 120px;"># Trigger on-demand in GitHub Actions:
+GitHub Repo &rarr; Actions &rarr; "Weekly metrics snapshot" &rarr; Run workflow
+
+# Or run locally in terminal:
+python scripts/metrics_snapshot.py
+python scripts/view_analytics.py --public</div>
+      <p class="meta" style="margin-top: 10px;">Results stored in <code>content/metrics.csv</code> and downloadable via Actions run artifacts.</p>
+    </section>
+
+    <!-- Private YouTube Analytics API v2 Collector -->
+    <section class="card wide">
+      <p class="label">🔐 3. PRIVATE YOUTUBE ANALYTICS API v2 (DEEP REPORTING ENGINE)</p>
+      <p class="meta">Extract deep daily performance, traffic sources, audience countries, devices, and retention curves into private gitignored JSON reports (mode 0600).</p>
+      <div class="copy-box"># Step 1: Enable YouTube Analytics API in Google Cloud Console
+# Step 2: Mint read-only Analytics OAuth token:
+python scripts/youtube_oauth.py --client-secret client_secret.json --purpose analytics
+
+# Step 3: Run the private collector:
+python scripts/channel_analytics.py --start 2026-10-01 --end 2026-10-28 --retention-video 7RDX0fbIOtQ
+
+# Step 4: Display formatted report in terminal:
+python scripts/view_analytics.py</div>
+      <div class="btn-group" style="margin-top: 12px;">
+        <a class="btn-secondary" href="https://github.com/johnAzani/YouTube-automation/blob/main/docs/ANALYTICS.md" target="_blank" rel="noopener" style="margin-left: 0;">📖 View Master Analytics Documentation (docs/ANALYTICS.md)</a>
+      </div>
+    </section>
+  </div>
 </div>
 
 <script>
