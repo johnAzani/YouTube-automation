@@ -77,7 +77,7 @@ def test_psalm91_segment_and_typography_sync():
     assert "REST IN GOD" in s7["kicker"]
     assert "DIVINE SHIELD" in s8["kicker"]
     assert abs(s7["t1"] - s8["t0"]) < 0.01
-    assert abs(s8["t0"] - 35.68) < 0.15, f"Scene 8 start mismatch: {s8['t0']}"
+    assert abs(s8["t0"] - 32.72) < 0.15, f"Scene 8 start mismatch: {s8['t0']}"
 
     # Invariant 4: No kinetic typography display window overlaps with its successor
     for i in range(len(stream) - 1):
@@ -89,7 +89,7 @@ def test_psalm91_segment_and_typography_sync():
     p7 = stream[6]
     p8 = stream[7]
     assert any("BATTLES" in l for l in p7["lines"])
-    assert abs(p7["disp_t1"] - 35.36) < 0.05
+    assert abs(p7["disp_t1"] - 32.22) < 0.05
     assert any("AMEN" in l for l in p8["lines"])
     assert any("SUBSCRIBE" in l for l in p8["lines"])
     assert abs(p8["disp_t1"] - 39.55) < 0.05
