@@ -26,3 +26,4 @@ image-search/enron-*-plate-*.png
 
 # API reports belong in short-lived Actions artifacts, not source history.
 content/channel-metrics.json
+env/
