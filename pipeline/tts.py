@@ -168,6 +168,7 @@ def synthesize(text: str, out_dir: Path, voice: str = "", srt_name: str = "capti
 
     # 1. Prefer Google Gemini API when GEMINI_API_KEY is present
     from .gemini_tts import get_gemini_api_key, synthesize_gemini_audio
+    from .quota_handler import GeminiQuotaExceededError
 
     gemini_key = get_gemini_api_key()
     if gemini_key:
@@ -176,6 +177,9 @@ def synthesize(text: str, out_dir: Path, voice: str = "", srt_name: str = "capti
             word_times = _estimate_word_times(text, CONFIG.words_per_second)
             engine = "gemini-api"
             print(f"[tts] successfully synthesized voiceover with Google Gemini API ({voice})")
+        except GeminiQuotaExceededError as q_exc:
+            print(f"[tts] Gemini daily free tier quota reached ($0.00 lock). Fail-closed: re-raising to pause job.")
+            raise
         except Exception as exc:  # noqa: BLE001
             print(f"[tts] gemini-api unavailable ({exc!r}); falling back to edge-tts")
 

@@ -48,6 +48,12 @@ The Gemini Brain handles the cognitive and editorial functions previously perfor
 └─────────────────────────────────┴────────────────────────────────────────────────────────┘
 ```
 
+### 2.1 Quota Exhaustion & Midnight Pacific Reset Lock ($0.00 Invariant)
+Google Gemini API operates exclusively on Google AI Studio's **Free Tier** (15 Requests/Min, 1,500 Requests/Day).
+- **Strict $0.00 Protection**: Under no circumstances will any component transition to paid Vertex AI, request billable overages, or require a credit card.
+- **Fail-Closed Quota Pausing**: If the daily quota finishes (HTTP 429 `RESOURCE_EXHAUSTED`), `pipeline/quota_handler.py` catches `GeminiQuotaExceededError`. The job is marked as `status: quota_paused` with `quota_reset_utc` calculated to the exact next **midnight Pacific Time (08:00 UTC)** reset.
+- **Autonomous Resumption**: On subsequent scheduled cron runs (`06:14 UTC` and `14:14 UTC`), `select_jobs` and `select_next_queued_short` check if the reset timestamp has passed. As soon as the daily quota resets, the job is automatically restored to `status: approved` and continues rendering, narrating with `Charon`, and uploading without human intervention.
+
 ---
 
 ## 3. The Continuous Equipment System (`pipeline/brain_equipment/`)
