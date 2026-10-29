@@ -670,6 +670,35 @@ def hud_chapter_layer(bg_rgb, kicker, sub, idx, nscenes, t_scene, scene_dur, tot
         d.rectangle([SAFE_L, H - 6, bx, H], fill=YELLOW + (235,))
     return layer
 
+def align_card_words_to_speech(card_words, seg_words, default_t0, default_t1):
+    """Word-to-word chronological alignment within the sentence segment."""
+    import re
+    def _clean(w):
+        return re.sub(r'[^a-z0-9]', '', w.lower())
+
+    aligned = []
+    seg_idx = 0
+    for cw in card_words:
+        cw_clean = _clean(cw)
+        found = False
+        for si in range(seg_idx, len(seg_words)):
+            sw = _clean(seg_words[si][2])
+            if cw_clean == sw or (cw_clean == '91' and 'ninety' in sw) or (cw_clean in sw and len(cw_clean) >= 3):
+                t0 = seg_words[si][0]
+                t1 = seg_words[si][1]
+                if cw_clean == '91' and si + 1 < len(seg_words) and 'one' in _clean(seg_words[si+1][2]):
+                    t1 = seg_words[si+1][1]
+                    seg_idx = si + 2
+                else:
+                    seg_idx = si + 1
+                aligned.append((t0, t1))
+                found = True
+                break
+        if not found:
+            prev_t = aligned[-1][1] if aligned else default_t0
+            aligned.append((prev_t, prev_t + 0.35))
+    return aligned
+
 def build_kinetic_stream(key, raw_words):
     phrases_def = SCRIPTS[key].get('kinetic_phrases')
     if not phrases_def:
@@ -697,6 +726,8 @@ def build_kinetic_stream(key, raw_words):
         seg = raw_words[w0:w1 + 1]
         t_start = seg[0][0]
         t_end = seg[-1][1]
+        all_cwords = [w for l in lines for w in l.split()]
+        word_timings = align_card_words_to_speech(all_cwords, seg, t_start, t_end)
         stream.append(dict(
             t0=t_start,
             t1=t_end,
@@ -706,6 +737,8 @@ def build_kinetic_stream(key, raw_words):
             accent_words=acc,
             kicker=kck,
             words=seg,
+            card_words=all_cwords,
+            word_timings=word_timings,
         ))
 
     # Calculate exact non-overlapping display windows aligned to vocal transients (120ms lead-in for instant perception)
@@ -816,6 +849,8 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
             cur_x += td.textlength(ch, font=fk) + ktr
 
     line_ws = []
+    w_idx = 0
+    word_timings = active.get('word_timings', [])
     for li, line in enumerate(lines):
         words = line.split()
         w_words = [sum(td.textlength(ch, font=f) + tr for ch in w) - tr for w in words]
@@ -826,28 +861,52 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
         y = y_pad_top + li * line_h
 
         for w, ww in zip(words, w_words):
+            w_t0, w_t1 = word_timings[w_idx] if w_idx < len(word_timings) else (0.0, 999.0)
+            w_idx += 1
+
+            # Word-level sync states within sentence segment
+            is_spoken = (t >= w_t1 + 0.08)
+            is_active = (w_t0 - 0.04 <= t < w_t1 + 0.08)
+            is_upcoming = (t < w_t0 - 0.04)
+
             is_accent = any(aw in w for aw in active['accent_words'])
-            col = GOLD if is_accent else WHITE
+
+            if is_active:
+                col = (255, 222, 60, int(255 * alpha))          # Blazing active gold
+                glow_col = (255, 215, 40, int(195 * alpha))     # Intense luminous aura
+                shadow_a = int(245 * alpha)
+                y_off = -2                                       # Dynamic physical lift pop
+            elif is_spoken:
+                col = (255, 218, 64, int(255 * alpha)) if is_accent else (255, 255, 255, int(255 * alpha))
+                glow_col = (255, 215, 60, int(50 * alpha)) if is_accent else (220, 240, 255, int(40 * alpha))
+                shadow_a = int(210 * alpha)
+                y_off = 0
+            else:  # is_upcoming
+                col = (215, 235, 255, int(120 * alpha))         # Soft translucent white
+                glow_col = None
+                shadow_a = int(90 * alpha)
+                y_off = 0
 
             # Directional contact drop shadow (3 passes for 3D depth)
-            for sx, sy, sa in [(0, 3, int(230 * alpha)), (0, 6, int(180 * alpha)), (0, 11, int(120 * alpha))]:
+            for sx, sy, sa in [(0, 3, shadow_a), (0, 6, int(shadow_a * 0.75)), (0, 11, int(shadow_a * 0.50))]:
                 cur_x = x
                 for ch in w:
-                    td.text((cur_x + sx, y + sy), ch, font=f, fill=(0, 0, 0, sa))
+                    td.text((cur_x + sx, y + y_off + sy), ch, font=f, fill=(0, 0, 0, sa))
                     cur_x += td.textlength(ch, font=f) + tr
 
-            # Subtle ambient luminous glow around display characters
-            glow_col = (255, 215, 60, int(60 * alpha)) if is_accent else (220, 240, 255, int(45 * alpha))
-            cur_x = x
-            for ch in w:
-                for gx, gy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
-                    td.text((cur_x + gx, y + gy), ch, font=f, fill=glow_col)
-                cur_x += td.textlength(ch, font=f) + tr
+            # Active/accent ambient luminous glow around display characters
+            if glow_col:
+                cur_x = x
+                passes = [(-2, 0), (2, 0), (0, -2), (0, 2)] if is_active else [(-1, 0), (1, 0), (0, -1), (0, 1)]
+                for ch in w:
+                    for gx, gy in passes:
+                        td.text((cur_x + gx, y + y_off + gy), ch, font=f, fill=glow_col)
+                    cur_x += td.textlength(ch, font=f) + tr
 
-            # Main crisp typography
+            # Main word typography
             cur_x = x
             for ch in w:
-                td.text((cur_x, y), ch, font=f, fill=col + (int(255 * alpha),))
+                td.text((cur_x, y + y_off), ch, font=f, fill=col)
                 cur_x += td.textlength(ch, font=f) + tr
             x += ww + space_w
 
