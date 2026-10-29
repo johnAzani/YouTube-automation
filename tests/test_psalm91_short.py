@@ -42,7 +42,7 @@ def test_psalm91_kinetic_typography_phrases_and_stream():
     from PIL import Image
     cfg = SCRIPTS["short-psalm91"]
     assert "kinetic_phrases" in cfg
-    assert len(cfg["kinetic_phrases"]) == 15
+    assert len(cfg["kinetic_phrases"]) == 8
     words = load_words("short-psalm91")
     stream = build_kinetic_stream("short-psalm91", words)
     assert len(stream) == len(cfg["kinetic_phrases"])
@@ -62,9 +62,9 @@ def test_psalm91_segment_and_typography_sync():
     stream = build_kinetic_stream("short-psalm91", words)
     scenes = resolve_scenes("short-psalm91", words, 39.55)
 
-    # Invariant 1: Exactly 8 scene segments and 15 kinetic typography phrases
+    # Invariant 1: Exactly 8 scene segments and 8 sentence-level kinetic typography segments
     assert len(scenes) == 8, f"Expected 8 scenes, got {len(scenes)}"
-    assert len(stream) == 15, f"Expected 15 kinetic stream items, got {len(stream)}"
+    assert len(stream) == 8, f"Expected 8 kinetic stream items, got {len(stream)}"
 
     # Invariant 2: Scene 2 cuts directly before vocal transient of 'he who dwells' (t=6.35s -> cut=6.20s)
     s2 = scenes[1]
@@ -83,16 +83,15 @@ def test_psalm91_segment_and_typography_sync():
     for i in range(len(stream) - 1):
         cur_end = stream[i]["disp_t1"]
         next_start = stream[i + 1]["disp_t0"]
-        assert cur_end <= next_start, f"Phrase {i} overlaps with {i+1}: {cur_end} > {next_start}"
+        assert cur_end <= next_start, f"Sentence {i} overlaps with {i+1}: {cur_end} > {next_start}"
 
-    # Invariant 5: Closing phrases cover God fighting battles and Amen/Subscribe CTA before outro
-    p13 = stream[12]
-    p14 = stream[13]
-    p15 = stream[14]
-    assert "BATTLES" in p13["line2"]
-    assert abs(p13["disp_t1"] - 35.49) < 0.05
-    assert "TYPE AMEN" in p14["line2"]
-    assert "SUBSCRIBE" in p15["line1"]
-    assert abs(p15["disp_t1"] - 38.15) < 0.05
+    # Invariant 5: Closing sentence segments cover God fighting battles and Amen/Subscribe CTA before outro
+    p7 = stream[6]
+    p8 = stream[7]
+    assert any("BATTLES" in l for l in p7["lines"])
+    assert abs(p7["disp_t1"] - 35.49) < 0.05
+    assert any("AMEN" in l for l in p8["lines"])
+    assert any("SUBSCRIBE" in l for l in p8["lines"])
+    assert abs(p8["disp_t1"] - 39.55) < 0.05
 
 

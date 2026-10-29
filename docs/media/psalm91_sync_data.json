@@ -2,305 +2,192 @@
   "title": "Psalm 91: Night Prayer of Protection",
   "channel": "The Secret Place",
   "duration": 39.55,
-  "phrases_count": 15,
+  "phrases_count": 8,
   "scenes_count": 8,
   "phrases": [
     {
       "index": 1,
       "disp_t0": 0.0,
-      "disp_t1": 1.9,
+      "disp_t1": 6.23,
       "audio_t0": 0.0,
-      "audio_t1": 1.8,
+      "audio_t1": 6.05,
+      "lines": [
+        "BEFORE YOU CLOSE",
+        "YOUR EYES TONIGHT",
+        "TAKE A DEEP BREATH",
+        "UNDER PSALM 91"
+      ],
       "line1": "BEFORE YOU CLOSE",
       "line2": "YOUR EYES TONIGHT",
       "accents": [
         "CLOSE",
         "EYES",
-        "TONIGHT"
-      ],
-      "speech": "before you close your eyes tonight"
-    },
-    {
-      "index": 2,
-      "disp_t0": 1.9,
-      "disp_t1": 3.03,
-      "audio_t0": 2.02,
-      "audio_t1": 2.89,
-      "line1": "TAKE A",
-      "line2": "DEEP BREATH",
-      "accents": [
-        "DEEP",
-        "BREATH"
-      ],
-      "speech": "take a deep breath"
-    },
-    {
-      "index": 3,
-      "disp_t0": 3.03,
-      "disp_t1": 6.23,
-      "audio_t0": 3.15,
-      "audio_t1": 6.05,
-      "line1": "PLACE YOUR HOME & FAMILY",
-      "line2": "UNDER PSALM 91",
-      "accents": [
-        "HOME",
-        "FAMILY",
+        "TONIGHT",
+        "BREATH",
         "PSALM",
         "91"
       ],
-      "speech": "and place your home and family under psalm ninety one"
+      "kicker": "DIVINE PROTECTION COVENANT",
+      "speech": "Before you close your eyes tonight, take a deep breath, and place your home and family under Psalm 91."
     },
     {
-      "index": 4,
+      "index": 2,
       "disp_t0": 6.23,
-      "disp_t1": 9.21,
+      "disp_t1": 13.41,
       "audio_t0": 6.35,
-      "audio_t1": 9.13,
+      "audio_t1": 13.27,
+      "lines": [
+        "HE WHO DWELLS",
+        "IN THE SECRET PLACE",
+        "OF THE MOST HIGH",
+        "ABIDES IN HIS SHADOW"
+      ],
       "line1": "HE WHO DWELLS",
       "line2": "IN THE SECRET PLACE",
       "accents": [
         "DWELLS",
         "SECRET",
-        "PLACE"
-      ],
-      "speech": "he who dwells in the secret place"
-    },
-    {
-      "index": 5,
-      "disp_t0": 9.21,
-      "disp_t1": 13.41,
-      "audio_t0": 9.33,
-      "audio_t1": 13.27,
-      "line1": "OF THE MOST HIGH",
-      "line2": "SHALL ABIDE IN HIS SHADOW",
-      "accents": [
+        "PLACE",
         "MOST",
         "HIGH",
-        "ABIDE",
         "SHADOW"
       ],
-      "speech": "of the most high shall abide under the shadow of the almighty"
+      "kicker": "PSALM 91 : 1",
+      "speech": "He who dwells in the secret place of the Most High shall abide under the shadow of the Almighty."
     },
     {
-      "index": 6,
+      "index": 3,
       "disp_t0": 13.41,
-      "disp_t1": 16.26,
+      "disp_t1": 20.03,
       "audio_t0": 13.53,
-      "audio_t1": 16.03,
-      "line1": "NO EVIL SHALL",
-      "line2": "BEFALL YOU",
+      "audio_t1": 19.83,
+      "lines": [
+        "NO EVIL SHALL BEFALL YOU",
+        "NOR SHALL ANY PLAGUE",
+        "COME NEAR YOUR DWELLING"
+      ],
+      "line1": "NO EVIL SHALL BEFALL YOU",
+      "line2": "NOR SHALL ANY PLAGUE",
       "accents": [
         "NO",
         "EVIL",
-        "BEFALL"
-      ],
-      "speech": "no evil shall befall you"
-    },
-    {
-      "index": 7,
-      "disp_t0": 16.26,
-      "disp_t1": 20.03,
-      "audio_t0": 16.38,
-      "audio_t1": 19.83,
-      "line1": "NOR SHALL ANY PLAGUE",
-      "line2": "COME NEAR YOUR DWELLING",
-      "accents": [
+        "BEFALL",
         "PLAGUE",
         "DWELLING"
       ],
-      "speech": "nor shall any plague come near your dwelling"
+      "kicker": "PSALM 91 : 10",
+      "speech": "No evil shall befall you, nor shall any plague come near your dwelling."
     },
     {
-      "index": 8,
+      "index": 4,
       "disp_t0": 20.03,
       "disp_t1": 24.17,
       "audio_t0": 20.15,
       "audio_t1": 23.99,
+      "lines": [
+        "HEAVENLY FATHER",
+        "QUIET EVERY",
+        "ANXIOUS THOUGHT"
+      ],
       "line1": "HEAVENLY FATHER",
-      "line2": "QUIET EVERY ANXIOUS THOUGHT",
+      "line2": "QUIET EVERY",
       "accents": [
         "HEAVENLY",
         "FATHER",
         "QUIET",
         "ANXIOUS"
       ],
-      "speech": "heavenly father quiet every anxious thought tonight"
+      "kicker": "PRAYER FOR STILLNESS",
+      "speech": "Heavenly Father, quiet every anxious thought tonight."
     },
     {
-      "index": 9,
+      "index": 5,
       "disp_t0": 24.17,
-      "disp_t1": 26.78,
+      "disp_t1": 28.49,
       "audio_t0": 24.29,
-      "audio_t1": 26.72,
+      "audio_t1": 28.36,
+      "lines": [
+        "SEND YOUR ANGELS",
+        "TO GUARD THIS HOME",
+        "WASH AWAY EVERY FEAR"
+      ],
       "line1": "SEND YOUR ANGELS",
       "line2": "TO GUARD THIS HOME",
       "accents": [
         "ANGELS",
         "GUARD",
-        "HOME"
-      ],
-      "speech": "send your angels to guard this home"
-    },
-    {
-      "index": 10,
-      "disp_t0": 26.78,
-      "disp_t1": 28.49,
-      "audio_t0": 26.9,
-      "audio_t1": 28.36,
-      "line1": "WASH AWAY",
-      "line2": "EVERY FEAR",
-      "accents": [
+        "HOME",
         "WASH",
         "FEAR"
       ],
-      "speech": "wash away every fear"
+      "kicker": "ANGELIC PROTECTION",
+      "speech": "Send your angels to guard this home, wash away every fear,"
     },
     {
-      "index": 11,
+      "index": 6,
       "disp_t0": 28.49,
       "disp_t1": 32.42,
       "audio_t0": 28.61,
       "audio_t1": 32.26,
+      "lines": [
+        "LET YOUR DIVINE PEACE",
+        "FILL THIS ROOM",
+        "WALL TO WALL"
+      ],
       "line1": "LET YOUR DIVINE PEACE",
-      "line2": "FILL THIS ROOM WALL TO WALL",
+      "line2": "FILL THIS ROOM",
       "accents": [
         "DIVINE",
         "PEACE",
         "WALL"
       ],
-      "speech": "and let your divine peace fill this room from wall to wall"
-    },
-    {
-      "index": 12,
-      "disp_t0": 32.42,
-      "disp_t1": 34.24,
-      "audio_t0": 32.54,
-      "audio_t1": 34.14,
-      "line1": "SLEEP IN",
-      "line2": "PEACE TONIGHT",
-      "accents": [
-        "PEACE",
-        "TONIGHT"
-      ],
-      "speech": "sleep in peace tonight"
-    },
-    {
-      "index": 13,
-      "disp_t0": 34.24,
-      "disp_t1": 35.49,
-      "audio_t0": 34.36,
-      "audio_t1": 35.36,
-      "line1": "GOD IS FIGHTING",
-      "line2": "YOUR BATTLES",
-      "accents": [
-        "FIGHTING",
-        "BATTLES"
-      ],
-      "speech": "knowing that god is fighting your battles"
-    },
-    {
-      "index": 14,
-      "disp_t0": 35.49,
-      "disp_t1": 36.91,
-      "audio_t0": 35.61,
-      "audio_t1": 36.85,
-      "line1": "RECEIVE THIS PROTECTION",
-      "line2": "TYPE AMEN",
-      "accents": [
-        "RECEIVE",
-        "PROTECTION",
-        "TYPE",
-        "AMEN"
-      ],
-      "speech": "if you receive this protection type amen"
-    },
-    {
-      "index": 15,
-      "disp_t0": 36.91,
-      "disp_t1": 38.15,
-      "audio_t0": 37.03,
-      "audio_t1": 37.95,
-      "line1": "SUBSCRIBE TO PRAY",
-      "line2": "WITH US EVERY DAY",
-      "accents": [
-        "SUBSCRIBE",
-        "PRAY"
-      ],
-      "speech": "and subscribe to pray with us every day"
-    }
-  ],
-  "scenes": [
-    {
-      "index": 1,
-      "t0": 0.0,
-      "t1": 6.2,
-      "kicker": "PSALM 91:1",
-      "sub": "NIGHT PROTECTION PRAYER",
-      "camera": "tilt_up",
-      "plate": "short-prayer-scene-01.jpg"
-    },
-    {
-      "index": 2,
-      "t0": 6.2,
-      "t1": 13.38,
-      "kicker": "HE WHO DWELLS",
-      "sub": "IN THE SECRET PLACE",
-      "camera": "push_in",
-      "plate": "short-prayer-scene-02.jpg"
-    },
-    {
-      "index": 3,
-      "t0": 13.38,
-      "t1": 20.0,
-      "kicker": "PSALM 91:10",
-      "sub": "NO EVIL SHALL BEFALL YOU",
-      "camera": "push_in",
-      "plate": "short-prayer-scene-05.jpg"
-    },
-    {
-      "index": 4,
-      "t0": 20.0,
-      "t1": 24.14,
-      "kicker": "PRAYER FOR PEACE",
-      "sub": "QUIET EVERY ANXIOUS THOUGHT",
-      "camera": "pan_right",
-      "plate": "short-prayer-scene-03.jpg"
-    },
-    {
-      "index": 5,
-      "t0": 24.14,
-      "t1": 28.63,
-      "kicker": "ANGELIC PROTECTION",
-      "sub": "GUARD THIS HOME",
-      "camera": "pull_out",
-      "plate": "short-prayer-scene-06.jpg"
-    },
-    {
-      "index": 6,
-      "t0": 28.63,
-      "t1": 32.39,
       "kicker": "DIVINE PEACE",
-      "sub": "FILL THIS ROOM WALL TO WALL",
-      "camera": "tilt_up",
-      "plate": "short-prayer-scene-03.jpg"
+      "speech": "and let your divine peace fill this room from wall to wall."
     },
     {
       "index": 7,
-      "t0": 32.39,
-      "t1": 35.68,
-      "kicker": "REST IN GOD",
-      "sub": "HE FIGHTS YOUR BATTLES",
-      "camera": "pan_left",
-      "plate": "short-prayer-scene-04.jpg"
+      "disp_t0": 32.42,
+      "disp_t1": 35.49,
+      "audio_t0": 32.54,
+      "audio_t1": 35.36,
+      "lines": [
+        "SLEEP IN PEACE TONIGHT",
+        "GOD IS FIGHTING",
+        "YOUR BATTLES"
+      ],
+      "line1": "SLEEP IN PEACE TONIGHT",
+      "line2": "GOD IS FIGHTING",
+      "accents": [
+        "PEACE",
+        "GOD",
+        "FIGHTING",
+        "BATTLES"
+      ],
+      "kicker": "EXODUS 14 : 14",
+      "speech": "Sleep in peace tonight, knowing that God is fighting your battles."
     },
     {
       "index": 8,
-      "t0": 35.68,
-      "t1": 39.55,
-      "kicker": "DIVINE SHIELD",
-      "sub": "TYPE AMEN & SUBSCRIBE",
-      "camera": "push_in",
-      "plate": "short-prayer-scene-01.jpg"
+      "disp_t0": 35.49,
+      "disp_t1": 39.55,
+      "audio_t0": 35.61,
+      "audio_t1": 37.95,
+      "lines": [
+        "RECEIVE THIS PROTECTION",
+        "TYPE AMEN",
+        "SUBSCRIBE TO PRAY DAILY"
+      ],
+      "line1": "RECEIVE THIS PROTECTION",
+      "line2": "TYPE AMEN",
+      "accents": [
+        "PROTECTION",
+        "TYPE",
+        "AMEN",
+        "SUBSCRIBE",
+        "PRAY"
+      ],
+      "kicker": "THE SECRET PLACE",
+      "speech": "If you receive this protection, type Amen, and subscribe to pray with us every day."
     }
   ]
 }

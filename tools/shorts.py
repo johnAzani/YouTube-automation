@@ -104,24 +104,17 @@ def apply_shake(img, t, impacts):
             return ImageChops.offset(img, dx, dy)
     return img
 
-PRAYER_IMPACTS = [3.03, 6.23, 13.41, 20.03, 24.17, 34.24, 35.49]
+PRAYER_IMPACTS = [0.0, 6.23, 13.41, 20.03, 24.17, 28.49, 32.42, 35.49]
 
 SACRED_KICKERS = [
-    'PRAYER BEFORE SLEEP',
-    'SURRENDER TO GOD',
-    'COVENANT OF PROTECTION',
+    'DIVINE PROTECTION COVENANT',
     'PSALM 91 : 1',
-    'DIVINE SHELTER',
     'PSALM 91 : 10',
-    'DIVINE PRESERVATION',
-    'PRAYER OF SURRENDER',
-    'ANGELIC HOSTS',
-    'PEACE OVER ANXIETY',
-    'HOLY SANCTUARY',
-    'REST IN HIS PROMISE',
+    'PRAYER FOR STILLNESS',
+    'ANGELIC PROTECTION',
+    'DIVINE PEACE',
     'EXODUS 14 : 14',
-    'DECLARATION OF FAITH',
-    'DAILY PRAYER ALTAR',
+    'THE SECRET PLACE',
 ]
 
 # ------------------------ signature sapphire-blue grade + full-bleed 9:16 plates ----
@@ -683,10 +676,23 @@ def build_kinetic_stream(key, raw_words):
         return []
     stream = []
     for idx, entry in enumerate(phrases_def):
-        if len(entry) == 6:
+        if len(entry) == 5 and isinstance(entry[2], (list, tuple)):
+            w0, w1, lines_list, acc, kck = entry
+            lines = list(lines_list)
+            l1 = lines[0] if len(lines) > 0 else ''
+            l2 = lines[1] if len(lines) > 1 else ''
+        elif len(entry) == 4 and isinstance(entry[2], (list, tuple)):
+            w0, w1, lines_list, acc = entry
+            lines = list(lines_list)
+            l1 = lines[0] if len(lines) > 0 else ''
+            l2 = lines[1] if len(lines) > 1 else ''
+            kck = SACRED_KICKERS[idx] if idx < len(SACRED_KICKERS) else 'COVENANT OF PEACE'
+        elif len(entry) == 6:
             w0, w1, l1, l2, acc, kck = entry
+            lines = [l for l in (l1, l2) if l]
         else:
             w0, w1, l1, l2, acc = entry
+            lines = [l for l in (l1, l2) if l]
             kck = SACRED_KICKERS[idx] if idx < len(SACRED_KICKERS) else 'COVENANT OF PEACE'
         seg = raw_words[w0:w1 + 1]
         t_start = seg[0][0]
@@ -694,6 +700,7 @@ def build_kinetic_stream(key, raw_words):
         stream.append(dict(
             t0=t_start,
             t1=t_end,
+            lines=lines,
             line1=l1,
             line2=l2,
             accent_words=acc,
@@ -709,7 +716,7 @@ def build_kinetic_stream(key, raw_words):
         else:
             prev_end = stream[i - 1]['t1']
             disp_t0 = max(prev_end + 0.04, t_start - 0.12)
-        item['disp_t0'] = disp_t0
+        item['disp_t0'] = round(disp_t0, 2)
 
     for i in range(len(stream)):
         t_end = stream[i]['t1']
@@ -717,7 +724,7 @@ def build_kinetic_stream(key, raw_words):
             next_disp_t0 = stream[i + 1]['disp_t0']
             stream[i]['disp_t1'] = next_disp_t0
         else:
-            stream[i]['disp_t1'] = t_end + 0.20
+            stream[i]['disp_t1'] = 39.55
     return stream
 
 def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
@@ -751,8 +758,8 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
         return layer
 
     cy = 780
-    lines = [l for l in [active['line1'], active['line2']] if l]
-    base_sz = 46 if len(lines) > 1 else 52
+    lines = active.get('lines') or [l for l in [active.get('line1'), active.get('line2')] if l]
+    base_sz = 44 if len(lines) >= 3 else (48 if len(lines) == 2 else 52)
     max_safe = SAFE_R - SAFE_L - 32
     f_size, f = get_phrase_font(lines, base_sz=base_sz, max_safe=max_safe, tracking=3.5)
     tr = 3.5
@@ -762,7 +769,7 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
     y_start = cy - total_h / 2.0
 
     # DOCOGA REELS v2: Expanding sacred halo ring on key spiritual declarations
-    if is_prayer and item_idx in (2, 5, 10, 12, 13):
+    if is_prayer and item_idx in (1, 2, 4, 6, 7):
         if dt < 0.60:
             p_ring = clamp01(dt / 0.60)
             rr = int(75 + 185 * ease_out_cubic(p_ring))
@@ -776,7 +783,7 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
     WHITE = (255, 255, 255)
 
     y_pad_top = 44
-    text_canvas = Image.new('RGBA', (W, total_h + 120), (0, 0, 0, 0))
+    text_canvas = Image.new('RGBA', (W, total_h + 160), (0, 0, 0, 0))
     td = ImageDraw.Draw(text_canvas)
 
     # DOCOGA REELS v2: Tracked-in kicker header above the main typography lines
@@ -1721,21 +1728,14 @@ SCRIPTS = {
             (93, 107, 'If you receive this protection, type Amen, and subscribe to pray with us every day.'),
         ],
         kinetic_phrases=[
-            (0, 5, 'BEFORE YOU CLOSE', 'YOUR EYES TONIGHT', ['CLOSE', 'EYES', 'TONIGHT']),
-            (6, 9, 'TAKE A', 'DEEP BREATH', ['DEEP', 'BREATH']),
-            (10, 19, 'PLACE YOUR HOME & FAMILY', 'UNDER PSALM 91', ['HOME', 'FAMILY', 'PSALM', '91']),
-            (20, 26, 'HE WHO DWELLS', 'IN THE SECRET PLACE', ['DWELLS', 'SECRET', 'PLACE']),
-            (27, 38, 'OF THE MOST HIGH', 'SHALL ABIDE IN HIS SHADOW', ['MOST', 'HIGH', 'ABIDE', 'SHADOW']),
-            (39, 43, 'NO EVIL SHALL', 'BEFALL YOU', ['NO', 'EVIL', 'BEFALL']),
-            (44, 51, 'NOR SHALL ANY PLAGUE', 'COME NEAR YOUR DWELLING', ['PLAGUE', 'DWELLING']),
-            (52, 58, 'HEAVENLY FATHER', 'QUIET EVERY ANXIOUS THOUGHT', ['HEAVENLY', 'FATHER', 'QUIET', 'ANXIOUS']),
-            (59, 65, 'SEND YOUR ANGELS', 'TO GUARD THIS HOME', ['ANGELS', 'GUARD', 'HOME']),
-            (66, 69, 'WASH AWAY', 'EVERY FEAR', ['WASH', 'FEAR']),
-            (70, 81, 'LET YOUR DIVINE PEACE', 'FILL THIS ROOM WALL TO WALL', ['DIVINE', 'PEACE', 'WALL']),
-            (82, 85, 'SLEEP IN', 'PEACE TONIGHT', ['PEACE', 'TONIGHT']),
-            (86, 92, 'GOD IS FIGHTING', 'YOUR BATTLES', ['FIGHTING', 'BATTLES']),
-            (93, 99, 'RECEIVE THIS PROTECTION', 'TYPE AMEN', ['RECEIVE', 'PROTECTION', 'TYPE', 'AMEN']),
-            (100, 107, 'SUBSCRIBE TO PRAY', 'WITH US EVERY DAY', ['SUBSCRIBE', 'PRAY']),
+            (0, 19, ['BEFORE YOU CLOSE', 'YOUR EYES TONIGHT', 'TAKE A DEEP BREATH', 'UNDER PSALM 91'], ['CLOSE', 'EYES', 'TONIGHT', 'BREATH', 'PSALM', '91'], 'DIVINE PROTECTION COVENANT'),
+            (20, 38, ['HE WHO DWELLS', 'IN THE SECRET PLACE', 'OF THE MOST HIGH', 'ABIDES IN HIS SHADOW'], ['DWELLS', 'SECRET', 'PLACE', 'MOST', 'HIGH', 'SHADOW'], 'PSALM 91 : 1'),
+            (39, 51, ['NO EVIL SHALL BEFALL YOU', 'NOR SHALL ANY PLAGUE', 'COME NEAR YOUR DWELLING'], ['NO', 'EVIL', 'BEFALL', 'PLAGUE', 'DWELLING'], 'PSALM 91 : 10'),
+            (52, 58, ['HEAVENLY FATHER', 'QUIET EVERY', 'ANXIOUS THOUGHT'], ['HEAVENLY', 'FATHER', 'QUIET', 'ANXIOUS'], 'PRAYER FOR STILLNESS'),
+            (59, 69, ['SEND YOUR ANGELS', 'TO GUARD THIS HOME', 'WASH AWAY EVERY FEAR'], ['ANGELS', 'GUARD', 'HOME', 'WASH', 'FEAR'], 'ANGELIC PROTECTION'),
+            (70, 81, ['LET YOUR DIVINE PEACE', 'FILL THIS ROOM', 'WALL TO WALL'], ['DIVINE', 'PEACE', 'WALL'], 'DIVINE PEACE'),
+            (82, 92, ['SLEEP IN PEACE TONIGHT', 'GOD IS FIGHTING', 'YOUR BATTLES'], ['PEACE', 'GOD', 'FIGHTING', 'BATTLES'], 'EXODUS 14 : 14'),
+            (93, 107, ['RECEIVE THIS PROTECTION', 'TYPE AMEN', 'SUBSCRIBE TO PRAY DAILY'], ['PROTECTION', 'TYPE', 'AMEN', 'SUBSCRIBE', 'PRAY'], 'THE SECRET PLACE'),
         ],
     ),
 }
