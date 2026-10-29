@@ -25,7 +25,7 @@ from pathlib import Path
 def scopes_for(purpose: str) -> list[str]:
     base = "https://www.googleapis.com/auth/"
     if purpose == "upload":
-        return [base + "youtube.upload", base + "youtube.readonly"]
+        return [base + "youtube.upload", base + "youtube.readonly", base + "youtube.force-ssl"]
     scopes = [base + "youtube.readonly", base + "yt-analytics.readonly"]
     if purpose == "analytics-revenue":
         scopes.append(base + "yt-analytics-monetary.readonly")

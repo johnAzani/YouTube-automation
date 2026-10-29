@@ -1,9 +1,8 @@
-short: short-psalm91
-companion_longform_id: '0011'
-scripture: Psalm 27
-status: approved
-privacy: public
-replace: true
-target_window_utc: '14:14'
-notes: "Companion Short for Psalm 27: The Lord Is My Light & My Salvation \u2014 Fear\
-  \ No Evil \u2014 Night Prayer for Sleep, Peace & Divine Guard | The Secret Place"
+short: "short-psalm27"
+companion_longform_id: "0011"
+scripture: "Psalm 27"
+status: "draft"
+privacy: "public"
+replace: false
+target_window_utc: "14:14"
+notes: "Companion Short for Psalm 27: The Lord Is My Light & My Salvation (Draft - awaiting edition authoring)"

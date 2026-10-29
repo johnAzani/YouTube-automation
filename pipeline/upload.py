@@ -24,6 +24,7 @@ from .script_doc import ScriptDoc
 SCOPES = [
     "https://www.googleapis.com/auth/youtube.upload",
     "https://www.googleapis.com/auth/youtube.readonly",
+    "https://www.googleapis.com/auth/youtube.force-ssl",
 ]
 
 
@@ -100,6 +101,60 @@ def build_description(doc: ScriptDoc) -> str:
     return "\n".join(parts)[:4900]
 
 
+def _normalize_title(title: str) -> str:
+    """Normalize video title for duplicate detection by stripping hashtags, punctuation, and extra whitespace."""
+    import re
+    # Remove hashtag suffixes (e.g. #Shorts, #shorts, #Psalm91)
+    cleaned = re.sub(r"#\w+", "", title)
+    # Remove punctuation characters
+    cleaned = re.sub(r"[^\w\s]", " ", cleaned)
+    # Lowercase and collapse consecutive whitespace
+    return " ".join(cleaned.lower().split())
+
+
+def check_existing_channel_duplicate(youtube, title: str, slug: str | None = None) -> dict | None:
+    """Check if a video with an identical or near-identical title already exists on the channel.
+
+    Returns existing video metadata if found, or None.
+    Uses only 2 YouTube Data API quota units (channels.list + playlistItems.list).
+    """
+    try:
+        ch_resp = youtube.channels().list(part="contentDetails", mine=True).execute()
+        items = ch_resp.get("items", [])
+        if not items:
+            return None
+        uploads_pl = items[0]["contentDetails"]["relatedPlaylists"]["uploads"]
+
+        # Check recent 50 channel uploads
+        pl_resp = youtube.playlistItems().list(
+            part="snippet",
+            playlistId=uploads_pl,
+            maxResults=50,
+        ).execute()
+
+        target_norm = _normalize_title(title)
+
+        for p_item in pl_resp.get("items", []):
+            snip = p_item.get("snippet", {})
+            remote_title = snip.get("title", "")
+            remote_id = snip.get("resourceId", {}).get("videoId", "")
+            if not remote_id:
+                continue
+
+            # Exact title match
+            if remote_title.strip() == title.strip():
+                return {"id": remote_id, "title": remote_title, "match": "exact"}
+
+            # Normalized title match (ignoring case, punctuation, and hashtag variations)
+            if target_norm and _normalize_title(remote_title) == target_norm:
+                return {"id": remote_id, "title": remote_title, "match": "normalized"}
+
+        return None
+    except Exception as exc:
+        print(f"[upload] Notice: duplicate check query skipped: {exc}")
+        return None
+
+
 def upload(
     doc: ScriptDoc,
     video_path: Path,
@@ -113,6 +168,26 @@ def upload(
 
     creds = _credentials()
     youtube = build("youtube", "v3", credentials=creds, cache_discovery=False)
+
+    # --- DUPLICATE UPLOAD SAFETY SHIELD ----------------------------------
+    if not CONFIG.allow_duplicate_uploads:
+        existing = check_existing_channel_duplicate(youtube, doc.title, getattr(doc, "slug", None))
+        if existing:
+            print("\n" + "=" * 70)
+            print("🛑 [upload] DUPLICATE SHIELD: PREVENTED UNINTENTIONAL / ACCIDENTAL UPLOAD")
+            print(f"   A video with matching title already exists on your YouTube channel!")
+            print(f"   Existing Video ID: {existing['id']}")
+            print(f"   Existing Title:    \"{existing['title']}\"")
+            print(f"   Match Type:        {existing['match']}")
+            print(f"   Action:            Aborting upload to prevent duplicate reels on channel.")
+            print(f"   To override (not recommended), set ALLOW_DUPLICATE_UPLOADS=true.")
+            print("=" * 70 + "\n")
+            return UploadResult(
+                video_id=existing["id"],
+                privacy_status="duplicate_prevented",
+                watch_url=f"https://youtu.be/{existing['id']}",
+                auto_published=False,
+            )
 
     privacy = privacy or doc.meta.get("privacy") or (CONFIG.default_privacy)
     publish_at = publish_at or doc.meta.get("publish_at")

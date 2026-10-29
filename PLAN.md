@@ -20,7 +20,7 @@
 ### 0.1 The Core Channel Mission
 *The Secret Place* is an editorial digital prayer and scripture meditation studio producing reverent, high-retention biblical audio-visual experiences designed for bedtime listening, anxiety relief, and spiritual contemplation. The channel operates as a faceless institutional studio (strictly avoiding personal creator naming, e.g. John Azani), maintaining an atmosphere of sacred reverence, visual tranquility, and cinematic elegance.
 
-### 0.2 The Six Inviolable System Invariants
+### 0.2 The Seven Inviolable System Invariants
 1. **Permanent $0.00 / Month Hard Cost Lock:**
    Under no circumstances may any component require, incur, or transition to a paid subscription, credit card charge, or billable cloud tier (`docs/ZERO_DOLLAR_LOCK.md`). Rendering runs entirely on free GitHub Actions standard runners (4-core Linux, 16 GB RAM); voiceover runs on Google Gemini's 15 RPM / 1,500 RPD free tier; ambient audio is procedurally synthesized via DSP (`tools/score.py`); visual assets originate from verified public-domain ledgers (Wikimedia, USGS, NPS, NASA) and free commercial APIs (Pexels, Pixabay). If external limits are encountered, the system **fails closed** (`status: quota_paused`) until quotas reset.
 2. **Locked-in Google Gemini Voice (`Charon`):**
@@ -33,6 +33,8 @@
    The production pipeline executes on automated GitHub Actions cron schedules (`06:14 UTC` and `14:14 UTC` daily). It autonomously processes queue manifests, renders videos, burns synchronized typography, synthesizes procedural audio beds, uploads to YouTube with native `publishAt` scheduling or immediate `public` visibility, commits state back to git with `[skip ci]`, and creates GitHub Issue release tickets without requiring the creator to be online or initiate chat pings.
 6. **Continuous Research & Self-Updating Architecture:**
    The strategy is not a static document. Weekly automated metrics workflows (`.github/workflows/metrics.yml`) ingest YouTube telemetry. `scripts/continuous_research.py` and `scripts/auto_scheduler.py` analyze view velocity, retention drop-offs, and scripture search demand shifts to continuously prioritize upcoming queue jobs.
+7. **Duplicate & Unintentional Upload Prevention Shield (`docs/DUPLICATE_UPLOAD_PREVENTION.md`):**
+   Under no circumstances may duplicate or unintentional videos/Shorts be uploaded to YouTube. All uploads are safeguarded by pre-upload remote YouTube title queries (`check_existing_channel_duplicate`), published ledger quarantine in queue selection, and the elimination of git-push triggers from production workflows. Releases occur strictly on schedule or explicit manual dispatch.
 
 ---
 
@@ -183,9 +185,13 @@ The channel is engineered to operate 100% autonomously without human presence, c
 
 ### 3.1 GitHub Actions Execution Matrix & Timing Strategy
 - **Runner Environment:** Standard `ubuntu-latest` (4-core vCPU, 16 GB RAM, free & unlimited on public GitHub repositories).
-- **Execution Windows:**
+- **Execution Windows & Chronobiological Rationale (`docs/BEST_TIME_TO_POST.md`):**
   - **Slot 1: `06:14 UTC` (07:14 Lagos / 02:14 EST / 23:14 PST):** Captures early morning prayer traffic across West Africa and Europe, while simultaneously serving late-night insomnia viewers on the US West Coast.
-  - **Slot 2: `14:14 UTC` (15:14 Lagos / 10:14 EST / 07:14 PST):** The primary production and scheduling slot. Uploading at 14:14 UTC allows YouTube's ingestion servers 4 to 6 hours to complete 1080p VP9/AV01 transcodes and indexing before the peak US Eastern bedtime prayer window begins (19:30–22:30 EST).
+  - **Slot 2: `14:14 UTC` (15:14 Lagos / 10:14 EST / 07:14 PST):** The primary production and scheduling slot. Uploading at 14:14 UTC allows YouTube's ingestion servers 4 to 6 hours to complete 1080p VP9/AV01 transcodes, closed-caption semantic alignment, and audio loudness normalization before the peak US Eastern bedtime prayer window begins (19:30–22:30 EST).
+- **YouTube Studio Audience Heatmap & 48-Hour Velocity Integration:**
+  - YouTube Analytics API v2 strictly excludes the hourly dimension; the purple "When your viewers are on YouTube" heatmap is available exclusively in the YouTube Studio Audience tab (`studio.youtube.com/channel/analytics/tab-audience`).
+  - Scheduling rule: Always upload 2 to 4 hours prior to the darkest purple band or 48-hour velocity crest to seed subscriber CTR and AVD ahead of the peak surge.
+  - Day-of-week ranking: Sunday (#1), Friday (#2), and Thursday (#3) command the highest contemplative devotional watch time.
 
 ### 3.2 Headless Queue Progression & Storage Discipline
 - **Long-Form Queue (`content/queue/*.md`):** Script files contain YAML frontmatter declaring `id`, `status: approved`, `privacy: public` (or `publish_at`), and scene bodies.
@@ -201,6 +207,13 @@ The channel is engineered to operate 100% autonomously without human presence, c
   - Daily Budget: 1 long-form + 1 Short consumes ~1,755 units out of 10,000 (17.5% utilization), leaving massive safety margins.
 - **Fail-Closed Protection:** If YouTube API returns `quotaExceeded` (HTTP 403), `pipeline/quota_handler.py` catches the exception, calculates `quota_reset_utc` (midnight Pacific Time = 07:00 / 08:00 UTC), marks the manifest as `status: quota_paused`, and exits gracefully with exit code 0.
 - **Autonomous Resumption:** When the next scheduled cron runs, `pipeline/short_release.py` and `pipeline/run.py` inspect `quota_reset_utc`. If `now_utc >= quota_reset_utc`, the job is automatically flipped back to `approved` and uploaded without requiring user intervention.
+
+### 3.4 Autonomous Comment Reply Engine & Community Flywheel (`docs/COMMENT_REPLY_SYSTEM.md`)
+- **Second-Session Co-Visitation Engine:** Replying to viewer comments triggers instant device push notifications, driving viewers back into the video for a second session and boosting the video's candidate ranking in Suggested and Browse feeds.
+- **Intent Classification & Pastoral Synthesis:** `pipeline/comment_replies.py` categorizes incoming comments into Prayer Requests, Amen Affirmations, Rest/Sleep Testimonies, Scripture Inquiries, Scam Defense, and Crisis Care. Google Gemini Brain composes unique, context-tailored pastoral replies at $0.00 cost.
+- **Anti-Spam & Shadowban Immunity:** Generates 100% unique wording per reply (strictly avoiding repetitive templates flagged by YouTube's spam filters) and applies randomized human jitter pacing (4–8s delay).
+- **Quota Allocation:** 15 replies/run consumes 750 YouTube units (7.5% of free daily budget) and <1.5% of Gemini daily free tier.
+- **CLI & Automation:** `scripts/reply_comments.py` supports `--dry-run` and `--apply`, backed by `.github/workflows/comments.yml` and deduplication tracking in `content/comments/replied.json`.
 
 ---
 

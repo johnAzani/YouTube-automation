@@ -105,6 +105,32 @@ EDITIONS: dict[str, ShortEdition] = {
             "#Shorts #Psalm91 #NightPrayer #PrayerOfProtection #BedtimePrayer #DailyScripture #TheSecretPlace"
         ),
     ),
+    "short-psalm23": ShortEdition(
+        key="short-psalm23",
+        job_id="SHORT-0003",
+        slug="short-0003-psalm-23-the-lord-is-my-shepherd",
+        title="Say This Psalm 23 Prayer Before You Sleep | Divine Peace #Shorts",
+        niche="faith and prayer",
+        tags=[
+            "shorts",
+            "psalm 23",
+            "the lord is my shepherd",
+            "night prayer",
+            "prayer of peace",
+            "bedtime prayer",
+            "daily scripture",
+            "christian encouragement",
+            "peaceful sleep",
+        ],
+        description=(
+            "The Lord is my shepherd; I shall not want. He makes me to lie down in green pastures.\n\n"
+            "Rest tonight under God's gentle shepherding. When worry troubles your mind, remember that He restores "
+            "your soul and leads you beside still waters. Even in the valley of shadows, you shall fear no evil.\n\n"
+            "Scripture reference: Psalm 23 (NKJV / Public Domain biblical text).\n"
+            "Produced by The Secret Place | Daily Prayer & Scripture.\n\n"
+            "#Shorts #Psalm23 #TheLordIsMyShepherd #NightPrayer #BedtimePrayer #DailyScripture #TheSecretPlace"
+        ),
+    ),
 }
 
 
@@ -217,11 +243,24 @@ def verify_short_render(
     return probe
 
 
-def select_next_queued_short(queue_dir: Path | None = None) -> tuple[Path, str] | None:
+def select_next_queued_short(
+    queue_dir: Path | None = None,
+    published_dir: Path | None = None,
+) -> tuple[Path, str] | None:
     """Return `(manifest_path, short_key)` for the first approved or quota-resumed Short in queue."""
     qdir = SHORTS_QUEUE_DIR if queue_dir is None else queue_dir
     if not qdir.is_dir():
         return None
+
+    # Determine published directory for duplicate validation
+    pdir: Path | None = None
+    if published_dir is not None:
+        pdir = published_dir
+    elif queue_dir is None:
+        pdir = PUBLISHED_DIR
+    elif (queue_dir.parent / "published").is_dir():
+        pdir = queue_dir.parent / "published"
+
     for path in sorted(qdir.glob("*.yml")):
         data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
         raw_status = str(data.get("status", "")).strip().lower()
@@ -255,6 +294,32 @@ def select_next_queued_short(queue_dir: Path | None = None) -> tuple[Path, str] 
         key = str(data.get("short") or data.get("edition") or "").strip()
         if not key:
             continue
+
+        # --- DUPLICATE SHORT SHIELD: Verify not already in published directory ---
+        if pdir is not None and pdir.is_dir():
+            published_candidates = [
+                pdir / f"{key}.md",
+                pdir / f"{path.stem}.md",
+            ]
+            if key in EDITIONS:
+                published_candidates.append(pdir / f"{EDITIONS[key].slug}.md")
+
+            is_already_published = False
+            for p_cand in published_candidates:
+                if p_cand.is_file():
+                    p_text = p_cand.read_text(encoding="utf-8")
+                    if "youtube_video_id:" in p_text or "status: published" in p_text:
+                        is_already_published = True
+                        print(
+                            f"[queue] 🛑 DUPLICATE BLOCKED: Short '{key}' ({path.name}) is already published in "
+                            f"{p_cand.name}. Unlinking duplicate queue manifest to prevent accidental upload."
+                        )
+                        path.unlink()
+                        break
+
+            if is_already_published:
+                continue
+
         return path, key
     return None
 
@@ -405,7 +470,8 @@ def run_short_release(
     desired_publish_at: str | None = None
     if manifest_path and manifest_path.is_file():
         mdata = yaml.safe_load(manifest_path.read_text(encoding="utf-8")) or {}
-        if bool(mdata.get("replace")) or bool(mdata.get("force")):
+        # Only explicit force/force_reupload flag overrides duplicate protection
+        if bool(mdata.get("force")) or bool(mdata.get("force_reupload")):
             force = True
         if mdata.get("privacy"):
             desired_privacy = str(mdata.get("privacy")).strip().lower()
@@ -422,10 +488,13 @@ def run_short_release(
     if published_record.is_file() and not dry_run and not force:
         if manifest_path and manifest_path.is_file():
             manifest_path.unlink()
-        raise RuntimeError(
-            f"{edition.slug} is already recorded in {published_record.relative_to(REPO_ROOT)}; "
-            "pass --force only if you intentionally want a duplicate upload."
-        )
+        print(f"[short-release] 🛑 DUPLICATE PREVENTED: {edition.slug} is already recorded in {published_record.relative_to(REPO_ROOT)}. Skipping upload.")
+        return {
+            "uploaded": False,
+            "duplicate_prevented": True,
+            "video_id": previous_video_id,
+            "message": f"Already published as {previous_video_id}",
+        }
 
     _require_production_prerequisites(
         doc,
@@ -534,6 +603,22 @@ def run_short_release(
                     "paused": True,
                     "pause_reason": "quota_exceeded",
                     "quota_reset_utc": reset_iso,
+                }
+            )
+            (stage_dir / "job_result.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
+            return result
+
+        if up.privacy_status == "duplicate_prevented":
+            print(f"[short-release] YouTube upload skipped: duplicate video already live ({up.video_id}).")
+            if manifest_path and manifest_path.is_file():
+                manifest_path.unlink()
+            result.update(
+                {
+                    "uploaded": False,
+                    "duplicate_prevented": True,
+                    "video_id": up.video_id,
+                    "watch_url": f"https://youtu.be/{up.video_id}",
+                    "shorts_url": f"https://www.youtube.com/shorts/{up.video_id}",
                 }
             )
             (stage_dir / "job_result.json").write_text(json.dumps(result, indent=2), encoding="utf-8")

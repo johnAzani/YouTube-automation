@@ -64,10 +64,18 @@ The fastest and most complete way to view 100% of all real-time metrics, impress
 │                   │ RETENTION CURVE: Graph from 00:00 to video end     │
 ├───────────────────┼────────────────────────────────────────────────────┤
 │ 4. AUDIENCE       │ RETURNING VS NEW: Core loyalty indicator           │
+│                   │ "WHEN YOUR VIEWERS ARE ON YOUTUBE": Purple heatmap │
 │                   │ SUBSCRIBER WATCH TIME: % subscribed vs unsubscribed│
 │                   │ GEOGRAPHY: Tier-1 US/UK/CA viewer concentrations   │
 └───────────────────┴────────────────────────────────────────────────────┘
 ```
+
+### 2.3 Identifying Optimal Publishing Times in the Audience Tab
+Under the **Audience** tab (`studio.youtube.com/channel/analytics/tab-audience`), locate the 7-day $\times$ 24-hour purple chart **"When your viewers are on YouTube"**.
+- The darkest purple cells indicate peak viewer activity (typically 20:00–23:00 local viewer time in the faith/prayer niche).
+- **Algorithmic Rule:** Schedule automated long-form uploads **3 to 4 hours before** the darkest purple block begins (14:14 UTC / 10:14 AM EST) to allow full 1080p VP9 transcoding and caption indexing before peak traffic arrives.
+- For complete chronobiological and timezone analysis, see [docs/BEST_TIME_TO_POST.md](BEST_TIME_TO_POST.md).
+
 
 ---
 
@@ -86,6 +94,7 @@ To avoid false assumptions about what code can collect, this matrix documents ex
 | **Device Types** | Mobile, TV, Desktop, Tablet, Console | ✅ Yes | `scripts/channel_analytics.py` (`devices`) | High accuracy across mobile and smart TV apps. |
 | **Audience Demographics** | Age groups, Gender breakdown | ✅ Yes | `scripts/channel_analytics.py` (`demographics`) | Minimum view threshold required before Google populates. |
 | **Audience Retention** | Second-by-second watch ratio curve | ✅ Yes | `scripts/channel_analytics.py` (`--retention-video`) | Per-video query (`elapsedVideoTimeRatio`). |
+| **Best Time to Post** | **"When your viewers are on YouTube" Hourly Heatmap** | ✅ **YES** | ❌ **API BLOCKED** | **Studio Exclusive:** API v2 only supports daily dimension (`day`), not hourly. See `docs/BEST_TIME_TO_POST.md` for our empirical lead-time schedule. |
 | **Estimated Revenue** | Estimated ad revenue, playback RPM | ✅ Yes | `scripts/channel_analytics.py` (`--revenue`) | Requires `yt-analytics-monetary.readonly`; estimated, not AdSense payout. |
 | **Impressions & CTR** | **Thumbnail Impressions & Click-Through Rate** | ✅ **YES** | ❌ **API BLOCKED** | **Studio Exclusive:** YouTube API v2 does not expose CTR. Export via Studio CSV if needed. |
 | **New vs Returning** | Unique & returning viewer counts | ✅ **YES** | ❌ **API BLOCKED** | Studio Exclusive: Audience cohort graph in Studio. |

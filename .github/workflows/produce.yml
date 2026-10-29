@@ -1,13 +1,11 @@
 name: Produce video
 
+# LIVE PRODUCTION WORKFLOW — Executes scheduled publishing to YouTube.
+# NOTE: To prevent accidental, unintentional, or duplicate uploads from git commits,
+# production uploads only run on the official release cron schedule or manual dispatch.
 on:
-  push:
-    branches: [main]
-    paths:
-      - "content/queue/**"
-      - "content/shorts-queue/**"
   schedule:
-    # Twice daily. GitHub cron is best-effort (can delay 15-30+ min under load) — fine for content.
+    # Twice daily release slots (06:14 UTC morning devotional / 14:14 UTC US bedtime priming)
     - cron: "14 6 * * *"    # 06:14 UTC — morning slot
     - cron: "14 14 * * *"   # 14:14 UTC — afternoon slot
   workflow_dispatch:
