@@ -45,7 +45,8 @@ jobs:
       YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
       YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
       YOUTUBE_PLAYLIST_ID: ${{ secrets.YOUTUBE_PLAYLIST_ID }}
-      AUTO_PUBLISH: ${{ secrets.AUTO_PUBLISH }}
+      AUTO_PUBLISH: ${{ secrets.AUTO_PUBLISH || 'true' }}
+      DEFAULT_PRIVACY: "public"
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       # pipeline.run shells out to `gh issue create` for the release ticket
       # (SETUP.md §6.4). gh needs a token: without GH_TOKEN the call fails
