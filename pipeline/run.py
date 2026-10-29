@@ -284,7 +284,9 @@ def process(path: Path, dry_run: bool) -> dict:
         from .upload import upload
 
         upload_thumb = None if doc.format == "short" else thumb
-        up = upload(doc, final, upload_thumb, description=pack.get("description"))
+        privacy_val = doc.meta.get("privacy")
+        publish_at_val = doc.meta.get("publish_at")
+        up = upload(doc, final, upload_thumb, privacy=privacy_val, publish_at=publish_at_val, description=pack.get("description"))
         if not up.video_id:
             raise RuntimeError("YouTube upload returned no video ID; leaving the queue job untouched.")
         result.update({

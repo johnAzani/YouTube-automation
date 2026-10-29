@@ -3,6 +3,7 @@ id: "0009"
 title: "Psalm 23: The Lord Is My Shepherd — Night Prayer for Rest, Healing & Peace | The Secret Place"
 slug: psalm-23-the-lord-is-my-shepherd
 status: approved
+privacy: public
 format: longform
 niche: faith and prayer
 category: education

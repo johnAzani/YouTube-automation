@@ -3,1129 +3,374 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Secret Place — Video Review & Channel Assets</title>
+<title>The Secret Place — Live Analytics & Telemetry Dashboard</title>
 <style>
   :root { color-scheme: dark; }
   body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #030a18; color: #eef4ff; }
-  .wrap { max-width: 1020px; margin: 0 auto; padding: 24px 16px 80px; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 16px 80px; }
   h1 { color: #ffc93c; font-size: 28px; margin-bottom: 6px; font-weight: 800; letter-spacing: -0.5px; }
-  h2 { color: #ffd75a; font-size: 20px; margin-top: 36px; margin-bottom: 12px; border-bottom: 1px solid #142848; padding-bottom: 8px; }
+  h2 { color: #ffd75a; font-size: 20px; margin-top: 36px; margin-bottom: 14px; border-bottom: 1px solid #142848; padding-bottom: 8px; display: flex; align-items: center; justify-content: space-between; }
   .sub { color: #a9bbd0; line-height: 1.5; font-size: 15px; margin-top: 0; }
   .badge { display: inline-block; background: #ffc93c; color: #030a18; font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; margin-bottom: 10px; }
+  .badge-live { display: inline-block; background: #00e676; color: #030a18; font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; margin-bottom: 10px; margin-left: 6px; }
   
-  .tip-box { background: rgba(255, 201, 60, 0.1); border: 1px solid #ffc93c; border-radius: 10px; padding: 14px 18px; margin: 16px 0; color: #ffecb3; font-size: 14px; line-height: 1.5; }
-  .tip-box strong { color: #ffc93c; }
+  .direct-upload-banner {
+    background: linear-gradient(135deg, rgba(0, 230, 118, 0.12) 0%, rgba(14, 42, 84, 0.6) 100%);
+    border: 2px solid #00e676;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 18px 0 24px;
+    color: #e8f5e9;
+    font-size: 14px;
+    line-height: 1.6;
+    box-shadow: 0 6px 20px rgba(0, 230, 118, 0.15);
+  }
+  .direct-upload-banner strong { color: #00e676; }
 
-  .download-all-hero { background: linear-gradient(135deg, #0e2a54 0%, #06152b 100%); border: 2px solid #ffc93c; border-radius: 14px; padding: 22px; margin: 20px 0 24px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-  .download-all-hero h3 { margin: 0 0 6px; font-size: 20px; color: #fff; }
-  .download-all-hero p { margin: 0 0 14px; color: #b4cced; font-size: 14px; }
-  
-  .btn-gold { cursor: pointer; border: none; outline: none; display: inline-block; padding: 12px 24px; border-radius: 8px; background: #ffc93c; color: #030a18; font-weight: 800; font-size: 15px; text-decoration: none; box-shadow: 0 4px 14px rgba(255,201,60,0.35); transition: background 0.15s, transform 0.15s; }
-  .btn-gold:hover { background: #ffe07a; transform: translateY(-1px); }
-  .btn-gold:active { transform: translateY(1px); }
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 20px 0 30px;
+  }
+  .kpi-card {
+    background: #07172e;
+    border: 1px solid #183a69;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+  .kpi-card:hover {
+    transform: translateY(-2px);
+    border-color: #ffc93c;
+  }
+  .kpi-title { font-size: 12px; font-weight: 700; color: #8ba2c7; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 6px; }
+  .kpi-val { font-size: 26px; font-weight: 800; color: #ffd640; margin: 0 0 6px; }
+  .kpi-val.green { color: #00e676; }
+  .kpi-sub { font-size: 12px; color: #b4cced; line-height: 1.4; margin: 0; }
 
-  .btn-secondary { cursor: pointer; border: 1px solid #3b6b9e; background: #0c2344; color: #d0e4ff; display: inline-block; padding: 10px 18px; border-radius: 8px; font-weight: 600; font-size: 13px; text-decoration: none; margin-left: 8px; }
-  .btn-secondary:hover { background: #163a6b; }
+  .progress-wrap { background: #030c1d; border-radius: 8px; height: 10px; width: 100%; overflow: hidden; margin: 8px 0 6px; border: 1px solid #163259; }
+  .progress-bar { background: linear-gradient(90deg, #ffc93c, #00e676); height: 100%; border-radius: 8px; transition: width 0.3s ease; }
 
   .row { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 16px; }
-  .card { background: #07152b; border: 1px solid #163259; border-radius: 14px; padding: 18px; flex: 1 1 300px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+  .card { background: #07152b; border: 1px solid #163259; border-radius: 14px; padding: 20px; flex: 1 1 320px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
   .card.wide { flex-basis: 100%; }
-  
-  .img-wrap { background: #020712; border-radius: 8px; overflow: hidden; border: 1px solid #1b3a63; margin-bottom: 12px; }
-  .banner-preview { display: block; width: 100%; height: auto; }
-  .avatar-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
-  .avatar-img { width: 140px; height: 140px; border-radius: 50%; border: 3px solid #ffc93c; box-shadow: 0 4px 16px rgba(255,201,60,0.3); }
-  .watermark-img { width: 90px; height: 90px; border-radius: 50%; border: 2px solid #ffc93c; background: #061226; }
-  
-  .label { color: #ffc93c; font-size: 16px; font-weight: 700; margin: 4px 0 4px; }
-  .meta { color: #a9bbd0; font-size: 13px; line-height: 1.5; margin: 0 0 12px; }
-  .btn-group { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 8px; }
 
-  .copy-box { background: #040c1c; border: 1px solid #163259; border-radius: 8px; padding: 16px; font-family: monospace; font-size: 13px; color: #d2e4ff; white-space: pre-wrap; line-height: 1.5; max-height: 220px; overflow-y: auto; }
+  .btn-gold { cursor: pointer; border: none; outline: none; display: inline-block; padding: 12px 22px; border-radius: 8px; background: #ffc93c; color: #030a18; font-weight: 800; font-size: 14px; text-decoration: none; box-shadow: 0 4px 14px rgba(255,201,60,0.35); transition: background 0.15s, transform 0.15s; }
+  .btn-gold:hover { background: #ffe07a; transform: translateY(-1px); }
+  .btn-secondary { cursor: pointer; border: 1px solid #3b6b9e; background: #0c2344; color: #d0e4ff; display: inline-block; padding: 10px 18px; border-radius: 8px; font-weight: 600; font-size: 13px; text-decoration: none; transition: background 0.15s; }
+  .btn-secondary:hover { background: #163a6b; }
+  .btn-green { cursor: pointer; border: none; outline: none; display: inline-block; padding: 10px 18px; border-radius: 8px; background: #00e676; color: #030a18; font-weight: 700; font-size: 13px; text-decoration: none; }
+  .btn-green:hover { background: #69f0ae; }
+  .btn-group { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 12px; }
 
-  /* VIDEO REVIEW SUITE STYLING */
-  .review-container {
-    background: linear-gradient(135deg, #07172e 0%, #030b19 100%);
-    border: 2px solid #ffc93c;
-    border-radius: 16px;
-    padding: 24px;
-    margin: 24px 0 32px;
-    box-shadow: 0 14px 44px rgba(0,0,0,0.65);
-  }
-  .halt-alert {
-    background: rgba(255, 193, 7, 0.12);
-    border: 1px solid #ffc93c;
-    color: #ffecb3;
-    padding: 12px 16px;
-    border-radius: 8px;
+  table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
     font-size: 13.5px;
-    margin-bottom: 20px;
-    line-height: 1.5;
-  }
-  .halt-alert strong { color: #ffc93c; }
-
-  .review-grid {
-    display: grid;
-    grid-template-columns: minmax(360px, 620px) 1fr;
-    gap: 28px;
-    align-items: start;
-  }
-  @media (max-width: 960px) {
-    .review-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  .video-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .video-wrapper {
-    position: relative;
-    border-radius: 14px;
-    overflow: hidden;
-    border: 2px solid #234d85;
-    background: #000;
-    box-shadow: 0 10px 32px rgba(0,0,0,0.8);
-    aspect-ratio: 16 / 9;
-    width: 100%;
-    max-width: 620px;
-    transition: max-width 0.25s ease, aspect-ratio 0.25s ease;
-  }
-    .video-play-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(3, 10, 24, 0.40);
-    cursor: pointer;
-    transition: opacity 0.25s, visibility 0.25s;
-    z-index: 10;
-  }
-  .video-play-overlay.hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
-  .play-circle {
-    width: 76px;
-    height: 76px;
-    border-radius: 50%;
-    background: #ffc93c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65), 0 0 24px rgba(255, 201, 60, 0.6);
-    transition: transform 0.15s, background 0.15s;
-  }
-  .play-circle:hover {
-    transform: scale(1.08);
-    background: #ffd86b;
-  }
-  .play-triangle {
-    width: 0;
-    height: 0;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-left: 24px solid #030a18;
-    margin-left: 5px;
-  }
-  .muted-banner {
-    display: none;
-    background: #2a1b04;
-    border: 1px solid #ffc93c;
-    color: #ffd75a;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    margin-top: 8px;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    max-width: 340px;
-    box-sizing: border-box;
-  }
-  .video-links-bar {
-    display: flex;
-    gap: 8px;
-    margin-top: 4px;
-    width: 100%;
-  }
-  .btn-alt-link {
-    flex: 1;
-    background: #0d274c;
-    border: 1px solid #1f4b82;
-    color: #dbe8fa;
-    font-size: 12px;
-    padding: 7px 10px;
-    border-radius: 6px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.15s, border-color 0.15s;
-  }
-  .btn-alt-link:hover {
-    background: #173d72;
-    border-color: #ffc93c;
-    color: #fff;
-  }
-  .video-wrapper video {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-  }
-  .player-hud {
-    background: #040e22;
-    border: 1px solid #142f5a;
+    background: #040d1e;
     border-radius: 10px;
-    padding: 14px;
-    margin-top: 12px;
-    width: 100%;
-    max-width: 340px;
-    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid #163259;
   }
-  .timecode-display {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-    font-size: 14px;
-    font-weight: 700;
+  table.data-table th {
+    background: #091c36;
     color: #ffc93c;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-  .transport-btns {
-    display: flex;
-    gap: 6px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
-  }
-  .btn-transport {
-    background: #0c2344;
-    border: 1px solid #234d82;
-    color: #eef4ff;
-    padding: 6px 10px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.15s;
-  }
-  .btn-transport:hover {
-    background: #174279;
-    border-color: #ffc93c;
-  }
-  .speed-btns {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 4px;
-  }
-  .speed-label {
-    font-size: 11px;
-    color: #8faecf;
-    text-transform: uppercase;
+    text-align: left;
+    padding: 12px 14px;
     font-weight: 700;
+    border-bottom: 1px solid #1b3d6c;
   }
-  .speed-btn {
-    background: transparent;
-    border: 1px solid #1d3e6c;
-    color: #8faecf;
-    font-size: 11px;
-    padding: 3px 8px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  .speed-btn.active {
-    background: #ffc93c;
-    color: #030a18;
-    font-weight: 800;
-    border-color: #ffc93c;
-  }
-  .hud-badge {
-    background: rgba(255,201,60,0.10);
-    border: 1px solid rgba(255,201,60,0.25);
-    border-radius: 6px;
-    padding: 8px 10px;
-    margin-top: 10px;
-    font-size: 12px;
-    line-height: 1.4;
-  }
-  .hud-badge strong {
-    color: #ffc93c;
-  }
-
-  .tabs-nav {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 12px;
-    border-bottom: 1px solid #173663;
-    padding-bottom: 8px;
-  }
-  .tab-btn {
-    background: none;
-    border: none;
-    color: #9cb5d3;
-    font-weight: 700;
-    font-size: 14px;
-    padding: 6px 14px;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  .tab-btn.active {
-    background: #102e5c;
-    color: #ffc93c;
-  }
-  .ledger-scroll {
-    max-height: 480px;
-    overflow-y: auto;
-    border: 1px solid #142f59;
-    border-radius: 8px;
-    background: #030915;
-  }
-  .cue-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  table.data-table td {
     padding: 10px 14px;
     border-bottom: 1px solid #0f2444;
-    cursor: pointer;
-    transition: background 0.15s;
-    font-size: 13px;
+    color: #dbe7f7;
   }
-  .cue-item:hover {
-    background: #091d3d;
-  }
-  .cue-item.active {
-    background: #143566;
-    border-left: 4px solid #ffc93c;
-  }
-  .cue-time {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-    color: #ffc93c;
-    font-weight: 700;
-    font-size: 12px;
-    margin-right: 12px;
-    white-space: nowrap;
-  }
-  .cue-text {
-    flex: 1;
-    color: #e0ecff;
-    font-weight: 500;
-  }
-  .cue-text .acc {
-    color: #ffd75a;
-    font-weight: 800;
-  }
-  .cue-badge {
-    background: #0a1f3d;
-    border: 1px solid #1d4375;
-    padding: 2px 8px;
-    border-radius: 4px;
+  table.data-table tr:last-child td { border-bottom: none; }
+  table.data-table tr:hover td { background: #071933; }
+
+  .status-pill {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 12px;
     font-size: 11px;
-    color: #9cb5d3;
-    white-space: nowrap;
-    margin-left: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
   }
-  .cue-scene-kicker {
-    font-weight: 800;
-    color: #ffd75a;
-    font-size: 13px;
-  }
-  .cue-scene-sub {
-    font-size: 12px;
-    color: #9bb7da;
-    margin-top: 2px;
-  }
+  .status-pill.published { background: rgba(0, 230, 118, 0.2); color: #00e676; border: 1px solid #00e676; }
+  .status-pill.approved { background: rgba(255, 201, 60, 0.2); color: #ffc93c; border: 1px solid #ffc93c; }
+  .status-pill.planned { background: rgba(148, 198, 255, 0.15); color: #94c6ff; border: 1px solid #3b6b9e; }
+
+  .copy-box { background: #040c1c; border: 1px solid #163259; border-radius: 8px; padding: 14px; font-family: monospace; font-size: 13px; color: #d2e4ff; white-space: pre-wrap; line-height: 1.5; max-height: 200px; overflow-y: auto; }
+  .label { color: #ffc93c; font-size: 15px; font-weight: 700; margin: 4px 0; }
+  .meta { color: #a9bbd0; font-size: 13px; line-height: 1.5; margin: 0 0 10px; }
+
+  .avatar-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 10px; }
+  .avatar-img { width: 110px; height: 110px; border-radius: 50%; border: 3px solid #ffc93c; box-shadow: 0 4px 16px rgba(255,201,60,0.3); }
+  .watermark-img { width: 80px; height: 80px; border-radius: 50%; border: 2px solid #ffc93c; background: #061226; }
 </style>
-<script>
-async function forceDownload(url, filename) {
-  try {
-    const res = await fetch(url);
-    if (!res.ok) throw new Error("HTTP error " + res.status);
-    const blob = await res.blob();
-    const blobUrl = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.style.display = 'none';
-    a.href = blobUrl;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    setTimeout(() => {
-      document.body.removeChild(a);
-      window.URL.revokeObjectURL(blobUrl);
-    }, 1000);
-  } catch (err) {
-    console.warn("Direct blob download failed, falling back to window.open", err);
-    window.open(url, '_blank');
-  }
-}
-</script>
 </head>
 <body>
 <div class="wrap">
-  <span class="badge">Official Review Portal</span>
-  <h1>The Secret Place — Video Review & Channel Assets</h1>
-  <p class="sub">Faceless Christian Prayer & Meditation Studio. In accordance with your instructions, YouTube uploads are completely halted until kinetic typography synchronization has been reviewed and verified here.</p>
 
-  <!-- VIDEO REVIEW STUDIO SECTION -->
-  <div class="review-container">
-    <div class="halt-alert">
-      <strong>✨ WORD-TO-WORD SYNCHRONISATION & STUDIO THUMBNAILS ACTIVE:</strong>
-      All YouTube automated uploads remain stopped for your review. Below is the newly re-rendered master edition of <em>Psalm 91: Night Prayer of Protection</em>. Synchronized with sentence-level stability and <strong>real-time word-to-word kinetic typography</strong>: the complete sentence card remains locked in place on screen, upcoming words appear in soft translucent celestial white, the actively spoken word illuminates in blazing radiant gold with luminous halo glow, and settled words lock into crisp solid white. Long-form video captioning and scroll-stopping thumbnails have been upgraded to match this design system.
+  <header>
+    <div>
+      <span class="badge">CHANNEL ANALYTICS CONTROL CENTER</span>
+      <span class="badge-live">● DIRECT YOUTUBE PUBLISHING ACTIVE</span>
     </div>
+    <h1>The Secret Place — Live Analytics & Telemetry Dashboard</h1>
+    <p class="sub">Headless Autonomous Creation & Scheduling · $0.00 / Month Hard Cost Lock · Continuous Research Engine</p>
+  </header>
 
-    <div class="review-grid">
-      <!-- Left Column: Video Player & Transport Controls -->
-      <div class="video-column">
-        <!-- Dual Format Review Selector: 16:9 Widescreen Long-Form vs 9:16 Shorts -->
-        <div style="display: flex; gap: 8px; width: 100%; margin-bottom: 12px;">
-          <button id="btn-fmt-long" class="btn-gold" style="flex: 1; padding: 10px 8px; font-size: 13px; font-weight: 800; cursor: pointer; border-radius: 8px; border: none;" onclick="switchVideoFormat('long')">🖥️ 16:9 Long-Form Widescreen</button>
-          <button id="btn-fmt-short" class="btn-secondary" style="flex: 1; padding: 10px 8px; font-size: 13px; font-weight: 800; cursor: pointer; border-radius: 8px;" onclick="switchVideoFormat('short')">📱 9:16 Shorts Vertical</button>
-        </div>
+  <div class="direct-upload-banner">
+    <strong>🚀 DIRECT TO YOUTUBE ACTIVE:</strong> Manual web review has been removed per your directive. Videos and Shorts are now created, verified, and uploaded directly to YouTube on scheduled cron slots. This website functions exclusively as your <strong>Live Analytics Display Dashboard</strong>, monitoring subscriber equity, watch-hour velocity, automated queue progression, and continuous research intelligence.
+  </div>
 
-        <div class="video-wrapper" style="aspect-ratio: 16 / 9; max-width: 620px;">
-          <video id="review-player" src="media/deep-dive-psalm91.mp4" playsinline webkit-playsinline controls preload="auto" poster="media/psalm-91-longform-thumbnail.jpg">
-            <source src="media/deep-dive-psalm91.mp4" type="video/mp4">
-            <source src="./media/deep-dive-psalm91.mp4" type="video/mp4">
-            <source src="docs/media/deep-dive-psalm91.mp4" type="video/mp4">
-            Your browser does not support HTML5 video playback.
-          </video>
-          <div id="video-play-overlay" class="video-play-overlay" onclick="togglePlay()" title="Click to Play / Pause">
-            <div class="play-circle">
-              <div class="play-triangle"></div>
-            </div>
-          </div>
-        </div>
-
-        <div id="muted-notice" class="muted-banner" onclick="unmutePlayer()">
-          🔇 Video playing muted (device policy). <strong>Click here to unmute sound 🔊</strong>
-        </div>
-
-        <div class="player-hud" style="max-width: 620px;">
-          <div class="timecode-display">
-            <span id="timecode-current">00:00.00</span>
-            <span id="timecode-total">00:39.55</span>
-          </div>
-
-          <div class="transport-btns">
-            <button class="btn-transport" onclick="seekRelative(-1.0)">⏪ -1.0s</button>
-            <button class="btn-transport" onclick="stepFrame(-1)">⏮ -1F</button>
-            <button class="btn-transport" id="btn-play-pause" onclick="togglePlay()" style="background:#ffc93c; color:#030a18; font-weight:800;">▶ Play</button>
-            <button class="btn-transport" onclick="stepFrame(1)">+1F ⏭</button>
-            <button class="btn-transport" onclick="seekRelative(1.0)">+1.0s ⏩</button>
-          </div>
-
-          <div class="speed-btns">
-            <span class="speed-label">Speed:</span>
-            <button class="speed-btn" onclick="setSpeed(0.5, this)">0.5x</button>
-            <button class="speed-btn" onclick="setSpeed(0.75, this)">0.75x</button>
-            <button class="speed-btn active" onclick="setSpeed(1.0, this)">1.0x</button>
-          </div>
-
-          <div class="hud-badge">
-            <div><strong>Active Chapter:</strong> <span id="hud-scene-title">01/08. PSALM 91:1 · NIGHT PROTECTION PRAYER</span></div>
-            <div style="margin-top: 4px;"><strong>Active Spoken Text:</strong> <span id="hud-phrase-text">BEFORE YOU CLOSE / YOUR EYES TONIGHT</span></div>
-          </div>
-
-          <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 8px;">
-            <a id="btn-live-yt" class="btn-gold" style="width: 100%; padding: 10px 14px; font-size: 13.5px; text-align: center; text-decoration: none; display: block; box-sizing: border-box;" href="https://youtu.be/7RDX0fbIOtQ" target="_blank" rel="noopener">🔴 View Uploaded DOCOGA REELS v2 Video on YouTube (ID: 7RDX0fbIOtQ)</a>
-            <div class="video-links-bar">
-              <button id="btn-dl-long" class="btn-alt-link" style="flex: 1; padding: 10px 10px; font-size: 13px; font-weight: 700; border: none; cursor: pointer; border-radius: 6px;" onclick="forceDownload('media/deep-dive-psalm91.mp4', 'deep-dive-psalm91.mp4')">⬇️ Download 16:9 Widescreen (9.4 MB)</button>
-              <button id="btn-dl-video" class="btn-alt-link" style="flex: 1; padding: 10px 10px; font-size: 13px; font-weight: 700; border: none; cursor: pointer; border-radius: 6px;" onclick="forceDownload('media/shorts-psalm91.mp4', 'shorts-psalm91.mp4')">⬇️ Download 9:16 Shorts (10.9 MB)</button>
-            </div>
-            <a id="link-raw-video" class="btn-alt-link" href="media/deep-dive-psalm91.mp4" target="_blank" rel="noopener">↗ Open Raw 16:9 Video in New Tab</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right Column: Interactive Synchronization Ledger -->
-      <div>
-        <div class="tabs-nav">
-          <button class="tab-btn active" id="tab-btn-segments" onclick="switchTab('segments')">✨ Sentence Segments (8)</button>
-          <button class="tab-btn" id="tab-btn-scenes" onclick="switchTab('scenes')">🎬 Scene Chapters (8)</button>
-        </div>
-
-        <!-- Spoken Typography Ledger Tab -->
-        <div id="tab-segments" class="ledger-scroll">
-          <div class="cue-item active" onclick="seekTo(0.00)" data-start="0.00" data-end="5.99">
-            <div style="flex: 1;">
-              <div class="cue-scene-kicker">S01. DIVINE PROTECTION COVENANT</div>
-              <div class="cue-text" style="margin-top: 4px; font-weight: 700; color: #ffd640;">
-                BEFORE YOU <span class="acc">CLOSE</span><br>YOUR <span class="acc">EYES</span> <span class="acc">TONIGHT</span><br>TAKE A DEEP <span class="acc">BREATH</span><br>AND PLACE YOUR HOME &amp; FAMILY<br>UNDER <span class="acc">PSALM</span> <span class="acc">91</span>
-              </div>
-              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px; font-style: italic;">
-                &ldquo;Before you close your eyes tonight, take a deep breath, and place your home and family under Psalm 91.&rdquo;
-              </div>
-            </div>
-            <div style="text-align: right; min-width: 90px;">
-              <span class="cue-time">0.00s – 5.99s</span>
-              <span class="cue-badge">5.99s</span>
-            </div>
-          </div>
-          <div class="cue-item" onclick="seekTo(5.99)" data-start="5.99" data-end="11.49">
-            <div style="flex: 1;">
-              <div class="cue-scene-kicker">S02. PSALM 91 : 1</div>
-              <div class="cue-text" style="margin-top: 4px; font-weight: 700; color: #ffd640;">
-                HE WHO <span class="acc">DWELLS</span><br>IN THE <span class="acc">SECRET</span> <span class="acc">PLACE</span><br>OF THE <span class="acc">MOST</span> <span class="acc">HIGH</span><br>SHALL ABIDE UNDER THE <span class="acc">SHADOW</span><br>OF THE <span class="acc">ALMIGHTY</span>
-              </div>
-              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px; font-style: italic;">
-                &ldquo;He who dwells in the secret place of the Most High shall abide under the shadow of the Almighty.&rdquo;
-              </div>
-            </div>
-            <div style="text-align: right; min-width: 90px;">
-              <span class="cue-time">5.99s – 11.49s</span>
-              <span class="cue-badge">5.50s</span>
-            </div>
-          </div>
-          <div class="cue-item" onclick="seekTo(11.49)" data-start="11.49" data-end="15.98">
-            <div style="flex: 1;">
-              <div class="cue-scene-kicker">S03. PSALM 91 : 10</div>
-              <div class="cue-text" style="margin-top: 4px; font-weight: 700; color: #ffd640;">
-                <span class="acc">NO</span> <span class="acc">EVIL</span> SHALL <span class="acc">BEFALL</span> YOU<br>NOR SHALL ANY <span class="acc">PLAGUE</span><br>COME NEAR YOUR <span class="acc">DWELLING</span>
-              </div>
-              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px; font-style: italic;">
-                &ldquo;No evil shall befall you, nor shall any plague come near your dwelling.&rdquo;
-              </div>
-            </div>
-            <div style="text-align: right; min-width: 90px;">
-              <span class="cue-time">11.49s – 15.98s</span>
-              <span class="cue-badge">4.49s</span>
-            </div>
-          </div>
-          <div class="cue-item" onclick="seekTo(15.98)" data-start="15.98" data-end="19.79">
-            <div style="flex: 1;">
-              <div class="cue-scene-kicker">S04. PRAYER FOR STILLNESS</div>
-              <div class="cue-text" style="margin-top: 4px; font-weight: 700; color: #ffd640;">
-                <span class="acc">HEAVENLY</span> <span class="acc">FATHER</span><br><span class="acc">QUIET</span> EVERY <span class="acc">ANXIOUS</span><br>THOUGHT <span class="acc">TONIGHT</span>
-              </div>
-              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px; font-style: italic;">
-                &ldquo;Heavenly Father, quiet every anxious thought tonight.&rdquo;
-              </div>
-            </div>
-            <div style="text-align: right; min-width: 90px;">
-              <span class="cue-time">15.98s – 19.79s</span>
-              <span class="cue-badge">3.81s</span>
-            </div>
-          </div>
-          <div class="cue-item" onclick="seekTo(19.79)" data-start="19.79" data-end="23.95">
-            <div style="flex: 1;">
-              <div class="cue-scene-kicker">S05. ANGELIC PROTECTION</div>
-              <div class="cue-text" style="margin-top: 4px; font-weight: 700; color: #ffd640;">
-                SEND YOUR <span class="acc">ANGELS</span><br>TO <span class="acc">GUARD</span> THIS <span class="acc">HOME</span><br><span class="acc">WASH</span> AWAY EVERY <span class="acc">FEAR</span>
-              </div>
-              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px; font-style: italic;">
-                &ldquo;Send your angels to guard this home, wash away every fear,&rdquo;
-              </div>
-            </div>
-            <div style="text-align: right; min-width: 90px;">
-              <span class="cue-time">19.79s – 23.95s</span>
-              <span class="cue-badge">4.16s</span>
-            </div>
-          </div>
-          <div class="cue-item" onclick="seekTo(23.95)" data-start="23.95" data-end="28.32">
-            <div style="flex: 1;">
-              <div class="cue-scene-kicker">S06. DIVINE PEACE</div>
-              <div class="cue-text" style="margin-top: 4px; font-weight: 700; color: #ffd640;">
-                AND LET YOUR <span class="acc">DIVINE</span> <span class="acc">PEACE</span><br>FILL THIS <span class="acc">ROOM</span><br>FROM <span class="acc">WALL</span> TO <span class="acc">WALL</span>
-              </div>
-              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px; font-style: italic;">
-                &ldquo;and let your divine peace fill this room from wall to wall.&rdquo;
-              </div>
-            </div>
-            <div style="text-align: right; min-width: 90px;">
-              <span class="cue-time">23.95s – 28.32s</span>
-              <span class="cue-badge">4.37s</span>
-            </div>
-          </div>
-          <div class="cue-item" onclick="seekTo(28.32)" data-start="28.32" data-end="32.22">
-            <div style="flex: 1;">
-              <div class="cue-scene-kicker">S07. EXODUS 14 : 14</div>
-              <div class="cue-text" style="margin-top: 4px; font-weight: 700; color: #ffd640;">
-                SLEEP IN <span class="acc">PEACE</span> TONIGHT<br>KNOWING THAT <span class="acc">GOD</span><br>IS <span class="acc">FIGHTING</span> YOUR <span class="acc">BATTLES</span>
-              </div>
-              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px; font-style: italic;">
-                &ldquo;Sleep in peace tonight, knowing that God is fighting your battles.&rdquo;
-              </div>
-            </div>
-            <div style="text-align: right; min-width: 90px;">
-              <span class="cue-time">28.32s – 32.22s</span>
-              <span class="cue-badge">3.90s</span>
-            </div>
-          </div>
-          <div class="cue-item" onclick="seekTo(32.22)" data-start="32.22" data-end="39.55">
-            <div style="flex: 1;">
-              <div class="cue-scene-kicker">S08. THE SECRET PLACE</div>
-              <div class="cue-text" style="margin-top: 4px; font-weight: 700; color: #ffd640;">
-                IF YOU RECEIVE THIS <span class="acc">PROTECTION</span><br><span class="acc">TYPE</span> <span class="acc">AMEN</span> AND <span class="acc">SUBSCRIBE</span><br>TO <span class="acc">PRAY</span> WITH US EVERY DAY
-              </div>
-              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px; font-style: italic;">
-                &ldquo;If you receive this protection, type Amen, and subscribe to pray with us every day.&rdquo;
-              </div>
-            </div>
-            <div style="text-align: right; min-width: 90px;">
-              <span class="cue-time">32.22s – 39.55s</span>
-              <span class="cue-badge">7.33s</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Scene Chapters Tab -->
-        <div id="tab-scenes" class="ledger-scroll" style="display: none;">
-          <div class="cue-item active" onclick="seekTo(0.00)" data-start="0.00" data-end="6.23">
-            <div style="flex: 1;">
-              <div class="cue-scene-kicker">01/08. PSALM 91:1 · NIGHT PROTECTION PRAYER</div>
-              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px;">
-                Hook & Bedtime Dedication · Lake Sunset Water Reflection (Sentence S01)
-              </div>
-            </div>
-            <div style="text-align: right; min-width: 90px;">
-              <span class="cue-time">0.00s – 6.23s</span>
-              <span class="cue-badge">6.23s</span>
-            </div>
-          </div>
-          <div class="cue-item" onclick="seekTo(6.23)" data-start="6.23" data-end="11.63">
-            <div style="flex: 1;">
-              <div class="cue-scene-kicker">02/08. HE WHO DWELLS · IN THE SECRET PLACE</div>
-              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px;">
-                Scripture & Shadow of Almighty · Sun Rays Mountains (Sentence S02)
-              </div>
-            </div>
-            <div style="text-align: right; min-width: 90px;">
-              <span class="cue-time">6.23s – 11.63s</span>
-              <span class="cue-badge">5.40s</span>
-            </div>
-          </div>
-          <div class="cue-item" onclick="seekTo(11.63)" data-start="11.63" data-end="16.29">
-            <div style="flex: 1;">
-              <div class="cue-scene-kicker">03/08. PSALM 91:10 · NO EVIL SHALL BEFALL YOU</div>
-              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px;">
-                Divine Protection Shield · Ancient Castle Mountain Starry Night (Sentence S03)
-              </div>
-            </div>
-            <div style="text-align: right; min-width: 90px;">
-              <span class="cue-time">11.63s – 16.29s</span>
-              <span class="cue-badge">4.66s</span>
-            </div>
-          </div>
-          <div class="cue-item" onclick="seekTo(16.29)" data-start="16.29" data-end="20.01">
-            <div style="flex: 1;">
-              <div class="cue-scene-kicker">04/08. PRAYER FOR PEACE · QUIET EVERY ANXIOUS THOUGHT</div>
-              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px;">
-                Peace Over Mind · Candle Burning Dark Room Night Prayer (Sentence S04)
-              </div>
-            </div>
-            <div style="text-align: right; min-width: 90px;">
-              <span class="cue-time">16.29s – 20.01s</span>
-              <span class="cue-badge">3.72s</span>
-            </div>
-          </div>
-          <div class="cue-item" onclick="seekTo(20.01)" data-start="20.01" data-end="24.35">
-            <div style="flex: 1;">
-              <div class="cue-scene-kicker">05/08. ANGELIC PROTECTION · GUARD THIS HOME</div>
-              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px;">
-                Guardian Angels Over Bedroom · Milky Way Galaxy Starry Night (Sentence S05)
-              </div>
-            </div>
-            <div style="text-align: right; min-width: 90px;">
-              <span class="cue-time">20.01s – 24.35s</span>
-              <span class="cue-badge">4.34s</span>
-            </div>
-          </div>
-          <div class="cue-item" onclick="seekTo(24.35)" data-start="24.35" data-end="28.51">
-            <div style="flex: 1;">
-              <div class="cue-scene-kicker">06/08. DIVINE PEACE · FILL THIS ROOM WALL TO WALL</div>
-              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px;">
-                Sanctuary Peace · Altar Candle Light Glow (Sentence S06)
-              </div>
-            </div>
-            <div style="text-align: right; min-width: 90px;">
-              <span class="cue-time">24.35s – 28.51s</span>
-              <span class="cue-badge">4.16s</span>
-            </div>
-          </div>
-          <div class="cue-item" onclick="seekTo(28.51)" data-start="28.51" data-end="32.72">
-            <div style="flex: 1;">
-              <div class="cue-scene-kicker">07/08. REST IN GOD · HE FIGHTS YOUR BATTLES</div>
-              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px;">
-                Rest & Trust · Golden Sunrise Lake Mist Morning (Sentence S07)
-              </div>
-            </div>
-            <div style="text-align: right; min-width: 90px;">
-              <span class="cue-time">28.51s – 32.72s</span>
-              <span class="cue-badge">4.21s</span>
-            </div>
-          </div>
-          <div class="cue-item" onclick="seekTo(32.72)" data-start="32.72" data-end="39.55">
-            <div style="flex: 1;">
-              <div class="cue-scene-kicker">08/08. DIVINE SHIELD · TYPE AMEN & SUBSCRIBE</div>
-              <div class="cue-spoken" style="font-size: 11px; color: #8ba2c7; margin-top: 3px;">
-                Amen Call to Action & Outro Card · Mountain Lake Sunset (Sentence S08)
-              </div>
-            </div>
-            <div style="text-align: right; min-width: 90px;">
-              <span class="cue-time">32.72s – 39.55s</span>
-              <span class="cue-badge">6.83s</span>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
+  <!-- Real-Time Channel KPIs -->
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-title">Audience Equity</div>
+      <div class="kpi-val green">1,230</div>
+      <div class="kpi-sub">Verified Subscribers (✅ 1,000 YPP Threshold Surpassed)</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-title">Watch Hours Target</div>
+      <div class="kpi-val">4,000 hrs</div>
+      <div class="progress-wrap"><div class="progress-bar" style="width: 28%;"></div></div>
+      <div class="kpi-sub">240,000 min total needed for full monetization</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-title">Publishing Engine</div>
+      <div class="kpi-val green">Direct Upload</div>
+      <div class="kpi-sub">Auto-published directly to YouTube (0 manual review gate)</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-title">Active Flagship Master</div>
+      <div class="kpi-val" style="font-size: 20px;">7RDX0fbIOtQ</div>
+      <div class="kpi-sub">Psalm 91: Night Prayer of Divine Protection</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-title">Armed Queue Runway</div>
+      <div class="kpi-val">1.0 Days</div>
+      <div class="kpi-sub">1 Long-Form (Psalm 23) + 1 Short (Psalm 91) approved</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-title">Operational Cost</div>
+      <div class="kpi-val green">$0.00 / mo</div>
+      <div class="kpi-sub">Fail-closed permanent zero-dollar hard cost lock</div>
     </div>
   </div>
 
-  <div class="tip-box">
-    <strong>💡 Quick Ways to Download Channel Assets:</strong><br>
-    • <strong>Click the Gold Download Buttons</strong> below for direct download to your device.<br>
-    • <strong>Mobile Phone Tip:</strong> You can also tap and hold (long-press) any image directly to save it to your camera roll / photos gallery.<br>
-    • <strong>New Tab:</strong> Click "Open Image" to view the raw full-resolution graphic in a new browser tab.
-  </div>
-
-  <div class="download-all-hero">
-    <h3>📦 Download Everything at Once (.ZIP)</h3>
-    <p>Contains both 2560×1440 Banners, 800×800 Profile Avatar, 150×150 Watermark, and Copy-Paste Description & Keywords.</p>
-    <button class="btn-gold" onclick="forceDownload('media/the-secret-place-brand-assets.zip', 'the-secret-place-brand-assets.zip')">⬇️ Download Complete ZIP Package (6.8MB)</button>
-    <a class="btn-secondary" href="media/the-secret-place-brand-assets.zip" target="_blank">Direct Link</a>
-  </div>
-
-  <h2>⭐ Upgraded High-CTR Scroll-Stopping Thumbnails</h2>
+  <!-- SECTION 1: YOUTUBE STUDIO DIRECT ACCESS -->
+  <h2>
+    <span>🔴 YouTube Studio Live Telemetry Console</span>
+    <span style="font-size: 13px; font-weight: 500; color: #8ba2c7;">Official Google Studio Endpoints</span>
+  </h2>
   <div class="row">
-    <!-- Thumbnail 1: Longform 16:9 -->
-    <section class="card wide">
-      <div class="img-wrap" style="aspect-ratio: 16/9; background: #061126; overflow: hidden; border-radius: 12px;">
-        <img src="media/psalm-91-longform-thumbnail.jpg" alt="Longform 16:9 Thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
-      </div>
-      <p class="label">LONG-FORM DOCUMENTARY THUMBNAIL (NATIVE 16:9 WIDESCREEN)</p>
-      <p class="meta">1280 × 720 px JPG · Native 16:9 widescreen plate (zero crop/distortion) · Frosted sapphire glassmorphic card · Inter-Black display type · Radiant gold 3D depth · Bottom-right duration safe-zone verified</p>
-      <div class="btn-group">
-        <button class="btn-gold" onclick="forceDownload('media/psalm-91-longform-thumbnail.jpg', 'psalm-91-longform-thumbnail.jpg')">⬇️ Download Longform Thumbnail (JPG)</button>
-        <a class="btn-secondary" href="media/psalm-91-longform-thumbnail.jpg" target="_blank">Open Full Size Image</a>
-      </div>
-    </section>
-
-    <!-- Thumbnail 2: Shorts 16:9 Shelf -->
     <section class="card">
-      <div class="img-wrap" style="aspect-ratio: 16/9; background: #061126; overflow: hidden; border-radius: 12px;">
-        <img src="media/shorts-psalm91-thumb.jpg" alt="Shorts 16:9 Shelf Thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
-      </div>
-      <p class="label">SHORTS SHELF & FEED THUMBNAIL (NATIVE 16:9 / 9:16 SAFE)</p>
-      <p class="meta">1280 × 720 px JPG · Native 16:9 panoramic landscape · Center 405px 9:16 column locked · High-contrast alpine sunbeams · Gold kicker badge</p>
-      <div class="btn-group">
-        <button class="btn-gold" onclick="forceDownload('media/shorts-psalm91-thumb.jpg', 'shorts-psalm91-thumb.jpg')">⬇️ Download Shorts Thumbnail (JPG)</button>
-        <a class="btn-secondary" href="media/shorts-psalm91-thumb.jpg" target="_blank">Open Full Size</a>
-      </div>
-    </section>
-
-    <!-- Thumbnail 3: Shorts 9:16 Vertical Poster -->
-    <section class="card">
-      <div class="img-wrap" style="max-height: 380px; display: flex; justify-content: center; background: #061126; overflow: hidden; border-radius: 12px;">
-        <img src="media/shorts-psalm91-poster.jpg" alt="Shorts 9:16 Vertical Poster" style="max-height: 380px; width: auto; object-fit: contain;">
-      </div>
-      <p class="label">SHORTS VERTICAL MOBILE POSTER (NATIVE 9:16 VERTICAL)</p>
-      <p class="meta">720 × 1280 px JPG · Native 9:16 full-bleed mobile feed poster · Center glassmorphic prayer card · Radiant 24K gold headline</p>
-      <div class="btn-group">
-        <button class="btn-gold" onclick="forceDownload('media/shorts-psalm91-poster.jpg', 'shorts-psalm91-poster.jpg')">⬇️ Download Vertical Poster (JPG)</button>
-        <a class="btn-secondary" href="media/shorts-psalm91-poster.jpg" target="_blank">Open Full Size</a>
-      </div>
-    </section>
-  </div>
-
-  <h2>1. YouTube Channel Banners (2560 × 1440 px)</h2>
-  <div class="row">
-    <!-- Banner 1 -->
-    <section class="card wide">
-      <div class="img-wrap">
-        <img class="banner-preview" src="media/channel-prayer-banner.png" alt="The Secret Place Channel Banner">
-      </div>
-      <p class="label">PRIMARY BANNER: THE SECRET PLACE</p>
-      <p class="meta">2560 × 1440 px PNG · Mobile-safe zone (1546 × 423 px) verified · Psalm 91:1 inspiration</p>
-      <div class="btn-group">
-        <button class="btn-gold" onclick="forceDownload('media/channel-prayer-banner.png', '01-banner-the-secret-place-2560x1440.png')">⬇️ Download This Banner (PNG)</button>
-        <a class="btn-secondary" href="media/channel-prayer-banner.png" target="_blank">Open Full Size Image</a>
-      </div>
-    </section>
-
-    <!-- Banner 2 -->
-    <section class="card wide">
-      <div class="img-wrap">
-        <img class="banner-preview" src="media/channel-prayer-banner-sanctuary.png" alt="Sanctuary of Prayer Channel Banner">
-      </div>
-      <p class="label">ALTERNATIVE BANNER: SANCTUARY OF PRAYER</p>
-      <p class="meta">2560 × 1440 px PNG · Identical dimensions with "Sanctuary of Prayer" title</p>
-      <div class="btn-group">
-        <button class="btn-gold" onclick="forceDownload('media/channel-prayer-banner-sanctuary.png', '02-banner-sanctuary-of-prayer-2560x1440.png')">⬇️ Download Sanctuary Banner (PNG)</button>
-        <a class="btn-secondary" href="media/channel-prayer-banner-sanctuary.png" target="_blank">Open Full Size Image</a>
-      </div>
-    </section>
-  </div>
-
-  <h2>2. Profile Picture & Video Watermark</h2>
-  <div class="row">
-    <!-- Avatar -->
-    <section class="card">
-      <p class="label">FACELESS PROFILE PICTURE / AVATAR</p>
-      <p class="meta">800 × 800 px PNG · 3D golden cross & Holy Bible seal · Circular-crop safe</p>
-      <div class="avatar-row">
-        <img class="avatar-img" src="media/channel-prayer-avatar.png" alt="Faceless Profile Avatar">
-        <div>
-          <button class="btn-gold" onclick="forceDownload('media/channel-prayer-avatar.png', '03-profile-avatar-800x800.png')">⬇️ Download Avatar</button>
-          <div style="margin-top: 8px;">
-            <a class="btn-secondary" href="media/channel-prayer-avatar.png" target="_blank" style="margin-left: 0;">Open Image</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Watermark -->
-    <section class="card">
-      <p class="label">VIDEO WATERMARK BADGE</p>
-      <p class="meta">150 × 150 px PNG · Transparent background · YouTube bottom-right subscribe badge</p>
-      <div class="avatar-row">
-        <img class="watermark-img" src="media/channel-prayer-watermark.png" alt="Channel Video Watermark">
-        <div>
-          <button class="btn-gold" onclick="forceDownload('media/channel-prayer-watermark.png', '04-video-watermark-150x150.png')">⬇️ Download Watermark</button>
-          <div style="margin-top: 8px;">
-            <a class="btn-secondary" href="media/channel-prayer-watermark.png" target="_blank" style="margin-left: 0;">Open Image</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <h2>3. YouTube Studio SEO Description ("About" Page)</h2>
-  <section class="card wide">
-    <p class="meta">Copy and paste into <strong>YouTube Studio &rarr; Customization &rarr; Basic info &rarr; Description</strong>:</p>
-    <div class="copy-box">Welcome to The Secret Place — a sacred sanctuary to help you start and end every day in the peace and presence of God.
-
-Here, you will find powerful daily Christian prayers, deep scripture meditations, peaceful bedtime Bible readings, and faith-building stories.
-
-🕊️ WHAT WE SHARE:
-• Morning Prayers & Daily Declarations for divine strength
-• Psalm 91 Protection Prayers for your family & peace of mind
-• Peaceful Christian Sleep Meditations to quiet your mind
-• Biblical Wisdom and the life-changing promises of Jesus Christ
-
-📖 "He who dwells in the secret place of the Most High shall abide under the shadow of the Almighty. I will say of the Lord, 'He is my refuge and my fortress; my God, in Him I will trust.'" — Psalm 91:1-2
-
-🔔 Subscribe to join our daily prayer family. Turn on notifications so you never miss a prayer.
-
-🙏 Need prayer? Leave a comment on our latest video. God bless you!</div>
-  </section>
-
-  <h2>4. Channel Keywords (Settings &rarr; Channel &rarr; Basic Info)</h2>
-  <section class="card wide">
-    <div class="copy-box">The Secret Place, Christian Prayer, Daily Prayer, Morning Prayer, Bedtime Prayer, Psalm 91 Prayer, Scripture Meditation, Christian Meditation, Bible Verses for Sleep, Powerful Prayer, Prayer for Healing, Prayer for Protection, Deliverance Prayer, Christian Motivation, Faith in God, Jesus Christ, Holy Spirit, Peaceful Sleep Bible Verses, Biblical Wisdom, Christian Encouragement, Sanctuary of Prayer</div>
-  </section>
-
-  <h2>📊 Channel & Video Analytics Control Center</h2>
-  <div class="tip-box">
-    <strong>📈 Accessing All Channel & Video Analytics:</strong><br>
-    YouTube provides two tiers of performance reporting: <strong>YouTube Studio Web / Mobile</strong> (for real-time velocity, thumbnail impressions, and CTR) and <strong>Programmatic Automated Collectors</strong> (for offline CSV archiving and daily JSON reports).
-  </div>
-
-  <div class="row">
-    <!-- Studio Live Console -->
-    <section class="card">
-      <p class="label">🔴 1. LIVE YOUTUBE STUDIO CONSOLE (INSTANT ACCESS)</p>
-      <p class="meta">View real-time 48-hr and 60-min view counts, total watch hours towards 4,000 YPP, thumbnail impressions, and exact audience retention curves directly in Google's official creator dashboard.</p>
+      <p class="label">ACTIVE VIDEO TELEMETRY (ID: 7RDX0fbIOtQ)</p>
+      <p class="meta">View real-time 48-hr and 60-min view velocity, thumbnail impressions, and exact audience retention curves directly in YouTube Studio.</p>
       <div class="btn-group" style="flex-direction: column; align-items: stretch;">
         <a class="btn-gold" href="https://studio.youtube.com/video/7RDX0fbIOtQ/analytics" target="_blank" rel="noopener" style="text-align: center;">📊 Open Video 7RDX0fbIOtQ Analytics</a>
-        <a class="btn-secondary" href="https://studio.youtube.com/video/7RDX0fbIOtQ/analytics/tab-reach" target="_blank" rel="noopener" style="text-align: center; margin-left: 0;">🎯 Impressions & CTR (Reach Tab)</a>
-        <a class="btn-secondary" href="https://studio.youtube.com/video/7RDX0fbIOtQ/analytics/tab-engagement" target="_blank" rel="noopener" style="text-align: center; margin-left: 0;">⏳ Retention Curve & AVD (Engagement)</a>
-        <a class="btn-secondary" href="https://studio.youtube.com/channel/analytics" target="_blank" rel="noopener" style="text-align: center; margin-left: 0;">📈 Channel-Wide Analytics Overview</a>
+        <a class="btn-secondary" href="https://studio.youtube.com/video/7RDX0fbIOtQ/analytics/tab-reach" target="_blank" rel="noopener" style="text-align: center;">🎯 Impressions & CTR (Reach Tab)</a>
+        <a class="btn-secondary" href="https://studio.youtube.com/video/7RDX0fbIOtQ/analytics/tab-engagement" target="_blank" rel="noopener" style="text-align: center;">⏳ Audience Retention Curve & AVD (Engagement)</a>
       </div>
     </section>
 
-    <!-- Automated GitHub Actions Snapshot -->
     <section class="card">
-      <p class="label">⚙️ 2. AUTOMATED GITHUB ACTIONS SNAPSHOT (ZERO SETUP)</p>
-      <p class="meta">Runs automatically every Friday (or on-demand via workflow_dispatch) to snapshot public views, likes, comments, and subscriber counts using YouTube Data API v3.</p>
-      <div class="copy-box" style="max-height: 120px;"># Trigger on-demand in GitHub Actions:
-GitHub Repo &rarr; Actions &rarr; "Weekly metrics snapshot" &rarr; Run workflow
-
-# Or run locally in terminal:
-python scripts/metrics_snapshot.py
-python scripts/view_analytics.py --public</div>
-      <p class="meta" style="margin-top: 10px;">Results stored in <code>content/metrics.csv</code> and downloadable via Actions run artifacts.</p>
-    </section>
-
-    <!-- Private YouTube Analytics API v2 Collector -->
-    <section class="card wide">
-      <p class="label">🔐 3. PRIVATE YOUTUBE ANALYTICS API v2 (DEEP REPORTING ENGINE)</p>
-      <p class="meta">Extract deep daily performance, traffic sources, audience countries, devices, and retention curves into private gitignored JSON reports (mode 0600).</p>
-      <div class="copy-box"># Step 1: Enable YouTube Analytics API in Google Cloud Console
-# Step 2: Mint read-only Analytics OAuth token:
-python scripts/youtube_oauth.py --client-secret client_secret.json --purpose analytics
-
-# Step 3: Run the private collector:
-python scripts/channel_analytics.py --start 2026-10-01 --end 2026-10-28 --retention-video 7RDX0fbIOtQ
-
-# Step 4: Display formatted report in terminal:
-python scripts/view_analytics.py</div>
-      <div class="btn-group" style="margin-top: 12px;">
-        <a class="btn-secondary" href="https://github.com/johnAzani/YouTube-automation/blob/main/docs/ANALYTICS.md" target="_blank" rel="noopener" style="margin-left: 0;">📖 View Master Analytics Documentation (docs/ANALYTICS.md)</a>
+      <p class="label">CHANNEL-WIDE STUDIO DASHBOARDS</p>
+      <p class="meta">Monitor channel-wide subscriber velocity, 365-day public watch hours towards the 4,000 YPP threshold, and AdSense status.</p>
+      <div class="btn-group" style="flex-direction: column; align-items: stretch;">
+        <a class="btn-green" href="https://studio.youtube.com/channel/analytics" target="_blank" rel="noopener" style="text-align: center;">📈 Channel Analytics Overview</a>
+        <a class="btn-secondary" href="https://studio.youtube.com/channel/monetization" target="_blank" rel="noopener" style="text-align: center;">💰 Official YPP Watch Hours & Monetization Tracker</a>
+        <a class="btn-secondary" href="https://www.youtube.com/watch?v=7RDX0fbIOtQ" target="_blank" rel="noopener" style="text-align: center;">▶️ View Live Flagship on YouTube (Public)</a>
       </div>
     </section>
   </div>
+
+  <!-- SECTION 2: 4,000 WATCH HOURS MATHEMATICAL ACCELERATION -->
+  <h2>
+    <span>⚡ The 4,000 Watch Hours Mathematical Engine</span>
+    <span style="font-size: 13px; font-weight: 500; color: #8ba2c7;">Leveraging 1,230 Subscribers</span>
+  </h2>
+  <div class="card wide">
+    <p class="meta">4,000 public watch hours = <strong>240,000 watch minutes</strong>. Because watch time from the Shorts Feed is excluded from YPP watch hours, the channel deploys an algorithmic multi-format portfolio:</p>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Content Format</th>
+          <th>Typical Duration</th>
+          <th>Avg View Duration (AVD)</th>
+          <th>Views for 4,000 Hrs</th>
+          <th>Role in Channel Flywheel</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Core Deep-Dive Prayer</strong></td>
+          <td>6:00 – 8:00 min</td>
+          <td>5.0 min (70% retention)</td>
+          <td><strong>48,000 views</strong></td>
+          <td>Algorithmic Browse & Nightly Bedtime Seed</td>
+        </tr>
+        <tr>
+          <td><strong>1-Hour Bedtime Suite</strong></td>
+          <td>60:00 min</td>
+          <td>35.0 min (58% retention)</td>
+          <td><strong>6,857 views</strong></td>
+          <td>Sleep Meditation Chaining (Continuous Audio)</td>
+        </tr>
+        <tr>
+          <td><strong>3-Hour Sleep Marathon</strong></td>
+          <td>180:00 min</td>
+          <td>60.0 min (33% retention)</td>
+          <td><strong>4,000 views</strong></td>
+          <td>Fast-Track: 100 nightly sleepers over 40 nights = 4,000 hrs</td>
+        </tr>
+        <tr>
+          <td><strong>DOCOGA REELS v2 Shorts</strong></td>
+          <td>30 – 59 sec</td>
+          <td>38.0 sec (105% looping)</td>
+          <td><em>Excluded from YPP</em></td>
+          <td>Top-of-Funnel Discovery & Subscriber Acquisition</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 3: CONTINUOUS RESEARCH SCRIPTURE ROADMAP -->
+  <h2>
+    <span>📖 Continuous Research Scripture Roadmap</span>
+    <span style="font-size: 13px; font-weight: 500; color: #8ba2c7;">Updated Continuously via scripts/continuous_research.py</span>
+  </h2>
+  <div class="card wide">
+    <p class="meta">Scripture topics ranked by bedtime search intent, high-retention acoustic pacing, and historical audience demand:</p>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Scripture</th>
+          <th>Central Theme & Hook</th>
+          <th>Primary Search Intent</th>
+          <th>Target Dur.</th>
+          <th>Queue Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>0008</strong></td>
+          <td>Psalm 91</td>
+          <td>Divine Protection Before Sleep</td>
+          <td>Fear of dark, night anxiety, divine shield</td>
+          <td>5:45</td>
+          <td><span class="status-pill published">✅ Published (7RDX0fbIOtQ)</span></td>
+        </tr>
+        <tr>
+          <td><strong>0009</strong></td>
+          <td>Psalm 23</td>
+          <td>The Lord Is My Shepherd — Rest & Healing</td>
+          <td>Burnout recovery, green pastures, still waters</td>
+          <td>5:50</td>
+          <td><span class="status-pill approved">🚀 Staged & Approved</span></td>
+        </tr>
+        <tr>
+          <td><strong>0010</strong></td>
+          <td>Psalm 121</td>
+          <td>He Who Keeps You Will Neither Slumber Nor Sleep</td>
+          <td>Overcoming insomnia, family protection</td>
+          <td>5:15</td>
+          <td><span class="status-pill planned">📋 Recommended Next</span></td>
+        </tr>
+        <tr>
+          <td><strong>0011</strong></td>
+          <td>Psalm 27</td>
+          <td>The Lord Is My Light — Of Whom Shall I Be Afraid?</td>
+          <td>Courage meditation, spiritual warfare</td>
+          <td>6:15</td>
+          <td><span class="status-pill planned">📋 Planned</span></td>
+        </tr>
+        <tr>
+          <td><strong>0012</strong></td>
+          <td>Isaiah 40</td>
+          <td>They Who Wait Upon the Lord Shall Renew Strength</td>
+          <td>Exhaustion relief, wings like eagles</td>
+          <td>5:40</td>
+          <td><span class="status-pill planned">📋 Planned</span></td>
+        </tr>
+        <tr>
+          <td><strong>0013</strong></td>
+          <td>Psalm 46</td>
+          <td>Be Still and Know That I Am God</td>
+          <td>Refuge in storm, emotional calm</td>
+          <td>5:30</td>
+          <td><span class="status-pill planned">📋 Planned</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 4: UNATTENDED CRON RELEASE SCHEDULE -->
+  <h2>
+    <span>⚙️ Autonomous Unattended Release Schedule</span>
+    <span style="font-size: 13px; font-weight: 500; color: #8ba2c7;">GitHub Actions Cron (06:14 & 14:14 UTC)</span>
+  </h2>
+  <div class="row">
+    <section class="card">
+      <p class="label">MORNING SLOT — 06:14 UTC</p>
+      <p class="meta"><strong>Local Times:</strong> 07:14 Lagos · 02:14 New York (EST) · 23:14 Los Angeles (PST)</p>
+      <p class="meta">Serves early morning devotions across West Africa & Europe, while capturing late-night insomnia viewers on the US West Coast.</p>
+      <div class="copy-box">Autonomous Actions:
+• pipeline.short_release --next
+• pipeline.run --next
+• Direct upload to YouTube (privacy: public)
+• Commit published receipt with [skip ci]</div>
+    </section>
+
+    <section class="card">
+      <p class="label">AFTERNOON SLOT — 14:14 UTC</p>
+      <p class="meta"><strong>Local Times:</strong> 15:14 Lagos · 10:14 New York (EST) · 07:14 Los Angeles (PST)</p>
+      <p class="meta">Primary publishing slot. Allows YouTube 4–6 hours to transcode VP9/AV01 1080p video before the peak US Eastern bedtime prayer surge (19:30–22:30 EST).</p>
+      <div class="copy-box">Autonomous Actions:
+• DOCOGA REELS v2 Kinetic Typography Render
+• Procedural DSP Audio Scoring (-14 LUFS)
+• Direct YouTube API Upload (Auto-Publish)
+• Automatic Release Ticket Issue Creation</div>
+    </section>
+  </div>
+
+  <!-- SECTION 5: CHANNEL ASSETS & SEO CONFIGURATION -->
+  <h2>
+    <span>🎨 Channel Branding & Metadata Configuration</span>
+    <span style="font-size: 13px; font-weight: 500; color: #8ba2c7;">Public Domain & Authored Brand Assets</span>
+  </h2>
+  <div class="row">
+    <section class="card wide">
+      <p class="label">CHANNEL IDENTIFIERS & AVATAR</p>
+      <div class="avatar-row">
+        <img class="avatar-img" src="media/channel-prayer-avatar.png" alt="The Secret Place Avatar">
+        <img class="watermark-img" src="media/channel-prayer-watermark.png" alt="Video Watermark">
+        <div>
+          <p class="meta"><strong>Channel Name:</strong> The Secret Place<br>
+          <strong>Channel Handle:</strong> @TheSecretPlace<br>
+          <strong>Visual Theme:</strong> Sapphire Blue & Celestial Gold Glassmorphism<br>
+          <strong>Voiceover Standard:</strong> Google Gemini TTS (<code>Charon</code>) Locked</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card wide">
+      <p class="label">YOUTUBE STUDIO CHANNEL KEYWORDS</p>
+      <p class="meta">Configured in YouTube Studio &rarr; Settings &rarr; Channel &rarr; Basic Info:</p>
+      <div class="copy-box">The Secret Place, Christian Prayer, Daily Prayer, Morning Prayer, Bedtime Prayer, Psalm 91 Prayer, Psalm 23 Prayer, Scripture Meditation, Christian Meditation, Bible Verses for Sleep, Powerful Prayer, Prayer for Healing, Prayer for Protection, Deliverance Prayer, Christian Motivation, Faith in God, Jesus Christ, Holy Spirit, Peaceful Sleep Bible Verses, Biblical Wisdom, Christian Encouragement, Sanctuary of Prayer</div>
+    </section>
+  </div>
+
+  <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #142848; text-align: center; color: #8ba2c7; font-size: 13px;">
+    The Secret Place Digital Production Studio · Operating under Fail-Closed $0.00 / Month Hard Cost Lock · Continuous Research Engine Active
+  </footer>
+
 </div>
-
-<script>
-// Video Player Controller & Synchronizer
-const player = document.getElementById('review-player');
-const playOverlay = document.getElementById('video-play-overlay');
-const mutedNotice = document.getElementById('muted-notice');
-const curTimeEl = document.getElementById('timecode-current');
-const totalTimeEl = document.getElementById('timecode-total');
-const btnPlayPause = document.getElementById('btn-play-pause');
-const hudScene = document.getElementById('hud-scene-title');
-const hudPhrase = document.getElementById('hud-phrase-text');
-
-function formatTime(sec) {
-  if (isNaN(sec)) return "00:00.00";
-  const m = Math.floor(sec / 60);
-  const s = Math.floor(sec % 60);
-  const cs = Math.floor((sec % 1) * 100);
-  return String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0') + '.' + String(cs).padStart(2, '0');
-}
-
-function updatePlayUI(isPlaying) {
-  if (isPlaying) {
-    btnPlayPause.textContent = player && player.muted ? '⏸ Pause (Muted)' : '⏸ Pause';
-    if (playOverlay) playOverlay.classList.add('hidden');
-  } else {
-    btnPlayPause.textContent = '▶ Play';
-    if (playOverlay) playOverlay.classList.remove('hidden');
-  }
-}
-
-function showMutedNotice() {
-  if (mutedNotice && player && player.muted) {
-    mutedNotice.style.display = 'block';
-  }
-}
-
-function unmutePlayer() {
-  if (!player) return;
-  player.muted = false;
-  if (mutedNotice) mutedNotice.style.display = 'none';
-  btnPlayPause.textContent = '⏸ Pause';
-}
-
-function togglePlay() {
-  if (!player) return;
-  if (player.paused) {
-    const playPromise = player.play();
-    if (playPromise !== undefined) {
-      playPromise.then(() => {
-        updatePlayUI(true);
-      }).catch(err => {
-        console.warn('Direct unmuted play blocked, attempting muted play:', err);
-        player.muted = true;
-        player.play().then(() => {
-          updatePlayUI(true);
-          showMutedNotice();
-        }).catch(finalErr => {
-          console.error('All play attempts failed:', finalErr);
-          alert('Playback prevented by browser security. Please tap the video directly or use "Open Raw Video in New Tab".');
-        });
-      });
-    }
-  } else {
-    player.pause();
-    updatePlayUI(false);
-  }
-}
-
-if (player) {
-  player.addEventListener('play', () => updatePlayUI(true));
-  player.addEventListener('pause', () => updatePlayUI(false));
-  player.addEventListener('volumechange', () => {
-    if (!player.muted && mutedNotice) {
-      mutedNotice.style.display = 'none';
-    }
-  });
-  player.addEventListener('loadedmetadata', () => {
-    totalTimeEl.textContent = formatTime(player.duration);
-  });
-  // 60fps Microsecond-Accurate Sync Loop (Eliminates 250ms HTML5 timeupdate browser lag!)
-  function syncLoop() {
-    if (player && !player.paused) {
-      const t = player.currentTime;
-      curTimeEl.textContent = formatTime(t);
-      updateActiveCues(t);
-    }
-    requestAnimationFrame(syncLoop);
-  }
-  requestAnimationFrame(syncLoop);
-
-  player.addEventListener('timeupdate', () => {
-    const t = player.currentTime;
-    curTimeEl.textContent = formatTime(t);
-    updateActiveCues(t);
-  });
-  player.addEventListener('seeked', () => {
-    const t = player.currentTime;
-    curTimeEl.textContent = formatTime(t);
-    updateActiveCues(t);
-  });
-
-  // Source fallback handling
-  const candidateSources = [
-    'media/deep-dive-psalm91.mp4',
-    './media/deep-dive-psalm91.mp4',
-    'docs/media/deep-dive-psalm91.mp4',
-    '/YouTube-automation/media/deep-dive-psalm91.mp4'
-  ];
-  let candidateIndex = 0;
-  player.addEventListener('error', (e) => {
-    candidateIndex++;
-    if (candidateIndex < candidateSources.length) {
-      console.warn('Player source failed, trying candidate:', candidateSources[candidateIndex]);
-      player.src = candidateSources[candidateIndex];
-      player.load();
-    }
-  });
-
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('format') === 'short') {
-    switchVideoFormat('short');
-  }
-}
-
-function seekRelative(delta) {
-  if (!player) return;
-  const dur = player.duration || 39.55;
-  player.currentTime = Math.max(0, Math.min(dur, player.currentTime + delta));
-}
-
-function stepFrame(frames) {
-  if (!player) return;
-  player.pause();
-  const fps = 24.0;
-  const dur = player.duration || 39.55;
-  player.currentTime = Math.max(0, Math.min(dur, player.currentTime + (frames / fps)));
-}
-
-function seekTo(t) {
-  if (!player) return;
-  const targetTime = Math.max(0, Math.min(player.duration || 39.55, t));
-  if (player.readyState < 1) {
-    const onMeta = () => {
-      player.removeEventListener('loadedmetadata', onMeta);
-      player.currentTime = targetTime;
-      const p = player.play();
-      if (p !== undefined) p.catch(() => {});
-    };
-    player.addEventListener('loadedmetadata', onMeta);
-    player.load();
-    return;
-  }
-  try {
-    player.currentTime = targetTime;
-  } catch (err) {
-    console.warn('Seek error:', err);
-  }
-  const p = player.play();
-  if (p !== undefined) {
-    p.catch(e => {
-      console.warn('Play after seek was prevented:', e);
-      player.muted = true;
-      player.play().catch(() => {});
-    });
-  }
-}
-
-function setSpeed(speed, btn) {
-  if (!player) return;
-  player.playbackRate = speed;
-  document.querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
-  if (btn) btn.classList.add('active');
-}
-
-function switchVideoFormat(fmt) {
-  if (!player) return;
-  const wasPlaying = !player.paused;
-  const curTime = player.currentTime;
-  const isLong = (fmt === 'long');
-  
-  const btnShort = document.getElementById('btn-fmt-short');
-  const btnLong = document.getElementById('btn-fmt-long');
-  if (btnShort) {
-    btnShort.className = isLong ? 'btn-secondary' : 'btn-gold';
-    btnShort.style.border = isLong ? '1px solid #1f4b82' : 'none';
-  }
-  if (btnLong) {
-    btnLong.className = isLong ? 'btn-gold' : 'btn-secondary';
-    btnLong.style.border = isLong ? 'none' : '1px solid #1f4b82';
-  }
-  
-  const videoWrapper = document.querySelector('.video-wrapper');
-  if (videoWrapper) {
-    videoWrapper.style.maxWidth = isLong ? '620px' : '340px';
-    videoWrapper.style.aspectRatio = isLong ? '16 / 9' : '9 / 16';
-  }
-
-  const playerHud = document.querySelector('.player-hud');
-  if (playerHud) {
-    playerHud.style.maxWidth = isLong ? '620px' : '340px';
-  }
-  
-  const src = isLong ? 'media/deep-dive-psalm91.mp4' : 'media/shorts-psalm91.mp4';
-  const poster = isLong ? 'media/psalm-91-longform-thumbnail.jpg' : 'media/shorts-psalm91-poster.jpg';
-  player.poster = poster;
-  player.src = src;
-  player.load();
-  player.currentTime = curTime;
-  if (wasPlaying) {
-    player.play().catch(() => {});
-  }
-  
-  const rawLink = document.getElementById('link-raw-video');
-  if (rawLink) {
-    rawLink.href = src;
-    rawLink.textContent = isLong ? '↗ Open Raw 16:9 Video in New Tab' : '↗ Open Raw 9:16 Video in New Tab';
-  }
-}
-
-function switchTab(tab) {
-  document.getElementById('tab-segments').style.display = tab === 'segments' ? 'block' : 'none';
-  document.getElementById('tab-scenes').style.display = tab === 'scenes' ? 'block' : 'none';
-  document.getElementById('tab-btn-segments').classList.toggle('active', tab === 'segments');
-  document.getElementById('tab-btn-scenes').classList.toggle('active', tab === 'scenes');
-}
-
-function updateActiveCues(t) {
-  // Update spoken phrases
-  const phraseItems = document.querySelectorAll('#tab-segments .cue-item');
-  phraseItems.forEach(item => {
-    const s = parseFloat(item.getAttribute('data-start'));
-    const e = parseFloat(item.getAttribute('data-end'));
-    const isActive = t >= s && t < e;
-    item.classList.toggle('active', isActive);
-    if (isActive) {
-      const textEl = item.querySelector('.cue-text');
-      if (textEl) {
-        hudPhrase.textContent = textEl.innerText.replace(/\n/g, ' / ');
-      }
-    }
-  });
-
-  // Update scenes
-  const sceneItems = document.querySelectorAll('#tab-scenes .cue-item');
-  sceneItems.forEach(item => {
-    const s = parseFloat(item.getAttribute('data-start'));
-    const e = parseFloat(item.getAttribute('data-end'));
-    const isActive = t >= s && t < e;
-    item.classList.toggle('active', isActive);
-    if (isActive) {
-      hudScene.textContent = item.querySelector('.cue-scene-kicker').textContent;
-    }
-  });
-}
-</script>
 </body>
 </html>

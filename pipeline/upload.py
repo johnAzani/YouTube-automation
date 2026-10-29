@@ -126,8 +126,12 @@ def upload(
     creds = _credentials()
     youtube = build("youtube", "v3", credentials=creds, cache_discovery=False)
 
-    privacy = privacy or (CONFIG.default_privacy)
-    if CONFIG.auto_publish and privacy == "private":
+    privacy = privacy or doc.meta.get("privacy") or (CONFIG.default_privacy)
+    publish_at = publish_at or doc.meta.get("publish_at")
+
+    if publish_at:
+        privacy = "private"
+    elif CONFIG.auto_publish and privacy == "private":
         privacy = "public"
 
     body = {
