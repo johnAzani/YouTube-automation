@@ -306,8 +306,8 @@ def process(path: Path, dry_run: bool) -> dict:
     if summary_path:
         with open(summary_path, "a", encoding="utf-8") as f:
             f.write(f"### 🎬 {doc.title}\n\n")
-            f.write(f"- slug: `{doc.slug}`\n- duration: {narration.duration_seconds:.0f}s\n")
-            f.write(f"- tts: {narration.engine}\n- video: `{final.name}`\n")
+            f.write(f"- slug: `{doc.slug}`\n- duration: {narration_dur:.0f}s\n")
+            f.write(f"- tts: {narration_engine}\n- video: `{final.name}`\n")
             if result.get("watch_url"):
                 f.write(f"- watch: {result['watch_url']}\n")
             f.write("\n> ⚠️ Human QC required before publish: thumbnail, title, intro hook (first 30s), "
