@@ -99,6 +99,32 @@ def duration(path):
             return int(hh) * 3600 + int(mm) * 60 + float(rest)
     raise SystemExit(f'no duration for {path}')
 
+def apply_shake(img, t, impacts):
+    """DOCOGA REELS v2: Damped high-frequency camera micro-shake on impacts."""
+    for ti in impacts:
+        dt = t - ti
+        if 0.0 <= dt < 0.22:
+            a = 1.0 - dt / 0.22
+            dx = int(4.5 * a * math.sin(46.0 * dt))
+            dy = int(3.0 * a * math.cos(39.0 * dt))
+            return ImageChops.offset(img, dx, dy)
+    return img
+
+PRAYER_IMPACTS = [0.0, 6.23, 13.41, 20.03, 24.17, 28.49, 32.42, 35.49]
+
+SACRED_KICKERS = [
+    'DIVINE PROTECTION COVENANT',
+    'PSALM 91 : 1',
+    'PSALM 91 : 10',
+    'PRAYER FOR STILLNESS',
+    'ANGELIC PROTECTION',
+    'DIVINE PEACE',
+    'EXODUS 14 : 14',
+    'THE SECRET PLACE',
+]
+
+WHITE_IMG = Image.new('RGB', (W, H), (255, 255, 255))
+
 # -------------------------------------- blue grade + aspect-correct plate ----
 def _duotone_luts():
     shadow, mid, high = (3, 11, 32), (14, 52, 114), (176, 214, 250)
@@ -329,6 +355,35 @@ def fit_font(weight, sz, text, maxw, tracking=2.5):
         f = fnt(weight, sz)
     return f
 
+PHRASE_FONT_CACHE = {}
+def fit_phrase_font(lines, base_sz=44, max_safe=960, tracking=1.8):
+    sz = base_sz
+    f = fnt('Black', sz)
+    d = ImageDraw.Draw(Image.new('RGB', (8, 8)))
+    while sz > 22:
+        overflow = False
+        for line in lines:
+            if not line:
+                continue
+            words_l = line.split()
+            w_words = [sum(d.textlength(ch, font=f) + tracking for ch in w) - tracking for w in words_l]
+            space_w = d.textlength(' ', font=f) + tracking
+            line_w = sum(w_words) + space_w * (len(words_l) - 1)
+            if line_w > max_safe:
+                overflow = True
+                break
+        if not overflow:
+            break
+        sz -= 2
+        f = fnt('Black', sz)
+    return sz, f
+
+def get_phrase_font(lines, base_sz=44, max_safe=960, tracking=1.8):
+    key = (tuple(lines), base_sz, max_safe, tracking)
+    if key not in PHRASE_FONT_CACHE:
+        PHRASE_FONT_CACHE[key] = fit_phrase_font(lines, base_sz, max_safe, tracking)
+    return PHRASE_FONT_CACHE[key]
+
 # ------------------------------------------------ cold-open & end overlays ----
 def cold_open_overlay(layer, title_pair, t, dur=4.3):
     """Sleek translucent cold-open documentary banner over the opening shot."""
@@ -438,7 +493,6 @@ def hud_chapter_layer(kicker, sub, idx, nscenes, t_scene, scene_dur, total_frac,
     bx = int(W * clamp01(total_frac))
     if bx > 0:
         d.rectangle([0, H - 5, bx, H], fill=(255, 218, 64) if is_prayer else YELLOW + (235,))
-    return layer
     return layer
 
 def build_caption_stream(key, raw_words):
@@ -632,16 +686,16 @@ def build_kinetic_stream(key, raw_words):
     return stream
 
 def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
-    """Cinematic 16:9 widescreen After Effects-style kinetic display typography:
-    zero scale-pulse wobble, microsecond-aligned to spoken voice,
-    featuring tracked sacred chapter kickers, radiant gold word illumination,
-    and kinetic gold underline sweep."""
+    """Rock-solid After Effects-style kinetic typography motion text design:
+    zero scale-pulse wobble, microsecond-aligned to what is being spoken,
+    infused with DOCOGA REELS v2 tracked kickers, gold underline sweeps, and expanding sacred rings,
+    adapted for 16:9 widescreen format."""
     layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     if not stream:
         return layer
 
     active = None
-    item_idx = -1
+    item_idx = 0
     for idx, item in enumerate(stream):
         if item['disp_t0'] <= t < item['disp_t1']:
             active = item
@@ -650,71 +704,77 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
     if not active:
         return layer
 
-    dt = t - active['disp_t0']
-    rem = active['disp_t1'] - t
-    # Instant clean entry/exit with micro-easing (60ms) to ensure zero lingering
-    in_e = clamp01(dt / 0.08)
-    out_e = clamp01(rem / 0.08)
-    alpha = ease_out_cubic(in_e) * ease_out_cubic(out_e)
-    if alpha <= 0.02:
-        return layer
+    t0 = active['disp_t0']
+    t1 = active['disp_t1']
+    dt = t - t0
+    alpha = 1.0
 
-    card_lines = active.get('lines') or [l for l in (active.get('line1'), active.get('line2')) if l]
-    if not card_lines:
-        return layer
-
-    # 16:9 widescreen typography metrics
-    # Max width available for text: 1640px (140px margins on left/right)
-    d_measure = ImageDraw.Draw(layer)
-    font_sz = 46
-    f = fnt('Black', font_sz)
+    cy = 380  # Vertically centered in 1280x720 widescreen frame
+    lines = active.get('lines') or [l for l in [active.get('line1'), active.get('line2')] if l]
+    base_sz = 38 if len(lines) >= 5 else (42 if len(lines) == 4 else (48 if len(lines) == 3 else 54))
+    max_safe = 960  # Widescreen safe width leaving 160px on each side
     tr = 1.8
-    line_h = 66
+    f_size, f = get_phrase_font(lines, base_sz=base_sz, max_safe=max_safe, tracking=tr)
 
-    # Dynamic measure to ensure widescreen lines fit comfortably within safe width
-    max_line_w = max(sum(d_measure.textlength(ch, font=f) + tr for w in l.split() for ch in w) + 16 * max(0, len(l.split()) - 1) for l in card_lines)
-    if max_line_w > 1640:
-        font_sz = 40
-        f = fnt('Black', font_sz)
-        tr = 1.4
-        line_h = 58
-    elif max_line_w < 1200 and len(card_lines) <= 2:
-        font_sz = 50
-        f = fnt('Black', font_sz)
-        tr = 2.0
-        line_h = 72
+    line_h = int(f_size * 1.25)
+    total_h = len(lines) * line_h
+    y_start = cy - total_h / 2.0
 
-    total_h = len(card_lines) * line_h
-    # Position typography in lower third (y ≈ 620 to 760) preserving upper scenery
-    y_start = int(H * 0.62 - total_h / 2.0)
+    # DOCOGA REELS v2: Expanding sacred halo ring on key spiritual declarations
+    if is_prayer and item_idx in (1, 2, 4, 6, 7):
+        if dt < 0.60:
+            p_ring = clamp01(dt / 0.60)
+            rr = int(80 + 200 * ease_out_cubic(p_ring))
+            wdt = max(2, int(6 * (1.0 - p_ring)))
+            ring_a = int(140 * (1.0 - p_ring) * alpha)
+            if ring_a > 0:
+                rd = ImageDraw.Draw(layer)
+                rd.ellipse([W // 2 - rr, cy - rr, W // 2 + rr, cy + rr], outline=(255, 218, 64, ring_a), width=wdt)
 
-    # Tracked Chapter / Verse Kicker Pill (e.g. PSALM 91 : 10)
-    kicker_txt = active.get('kicker', '')
-    if kicker_txt:
-        fk = fnt('Bold', 18)
-        kw = tracked_width(d_measure, kicker_txt, fk, 3.8)
-        kx = (W - kw) / 2.0
-        ky = y_start - 38
-        # Shadow
-        draw_tracked(d_measure, kicker_txt, fk, kx, ky + 2, (0, 0, 0, int(180 * alpha)), 3.8)
-        # Gold kicker
-        draw_tracked(d_measure, kicker_txt, fk, kx, ky, (255, 218, 64, int(235 * alpha)), 3.8)
+    GOLD = (255, 218, 64)
+    WHITE = (255, 255, 255)
 
-    y_pad_top = 40
-    y_pad_bot = 48
-    canvas_h = total_h + y_pad_top + y_pad_bot
-    text_canvas = Image.new('RGBA', (W, canvas_h), (0, 0, 0, 0))
+    y_pad_top = 44
+    text_canvas = Image.new('RGBA', (W, total_h + 160), (0, 0, 0, 0))
     td = ImageDraw.Draw(text_canvas)
 
-    word_timings = active.get('word_timings', [])
-    w_idx = 0
-    line_ws = []
-    space_w = int(font_sz * 0.34)
+    # DOCOGA REELS v2: Tracked-in kicker header above the main typography lines
+    kicker_txt = active.get('kicker', '')
+    if kicker_txt and is_prayer:
+        if t == 0.0:
+            kp = 1.0
+            ktr = 4
+            ka = 1.0
+        else:
+            kp = clamp01(dt / 0.32)
+            ktr = int(14 - 10 * ease_out_cubic(kp))  # collapses 14 -> 4px
+            ka = ease_out_cubic(clamp01(dt / 0.24)) * alpha
+        fk = fnt('SemiBold', 15)
+        kw = sum(td.textlength(ch, font=fk) + ktr for ch in kicker_txt) - ktr
+        kx = (W - kw) / 2.0
+        ky = 14
 
-    for li, line in enumerate(card_lines):
+        # Directional contact shadow for kicker
+        cur_x = kx
+        for ch in kicker_txt:
+            td.text((cur_x, ky + 2), ch, font=fk, fill=(0, 0, 0, int(185 * ka)))
+            cur_x += td.textlength(ch, font=fk) + ktr
+
+        # Celestial amber/gold tracked kicker
+        kicker_col = (255, 228, 130)
+        cur_x = kx
+        for ch in kicker_txt:
+            td.text((cur_x, ky), ch, font=fk, fill=kicker_col + (int(245 * ka),))
+            cur_x += td.textlength(ch, font=fk) + ktr
+
+    line_ws = []
+    w_idx = 0
+    word_timings = active.get('word_timings', [])
+    for li, line in enumerate(lines):
         words = line.split()
-        w_words = [sum(td.textlength(ch, font=f) + tr for ch in w) for w in words]
-        line_w = sum(w_words) + space_w * max(0, len(words) - 1)
+        w_words = [sum(td.textlength(ch, font=f) + tr for ch in w) - tr for w in words]
+        space_w = td.textlength(' ', font=f) + tr
+        line_w = sum(w_words) + space_w * (len(words) - 1)
         line_ws.append(line_w)
         x = (W - line_w) / 2.0
         y = y_pad_top + li * line_h
@@ -723,6 +783,10 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
             w_t0, w_t1 = word_timings[w_idx] if w_idx < len(word_timings) else (0.0, 999.0)
             w_idx += 1
 
+            # Word-level sync states within sentence segment:
+            # Word illuminates in radiant gold the exact instant spoken (w_t0 <= t < w_t1).
+            # Settles into crisp solid white the exact instant finished (t >= w_t1).
+            # Zero delay, zero lagging behind what the voice has already passed.
             is_spoken = (t >= w_t1)
             is_active = (w_t0 <= t < w_t1)
             is_upcoming = (t < w_t0)
@@ -733,7 +797,7 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
                 col = (255, 222, 60, int(255 * alpha))          # Blazing active gold
                 glow_col = (255, 215, 40, int(195 * alpha))     # Intense luminous aura
                 shadow_a = int(245 * alpha)
-                y_off = -3                                       # Dynamic physical lift pop
+                y_off = -2                                       # Dynamic physical lift pop
             elif is_spoken:
                 col = (255, 218, 64, int(255 * alpha)) if is_accent else (255, 255, 255, int(255 * alpha))
                 glow_col = (255, 215, 60, int(50 * alpha)) if is_accent else (220, 240, 255, int(40 * alpha))
@@ -768,23 +832,23 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
                 cur_x += td.textlength(ch, font=f) + tr
             x += ww + space_w
 
-    # Kinetic Gold Underline Sweep beneath bottom line
-    if (dt > 0.08 or t == 0.0) and line_ws:
+    # DOCOGA REELS v2: Kinetic Gold Underline Sweep beneath bottom line
+    if (dt > 0.08 or t == 0.0) and is_prayer and line_ws:
         g = 1.0 if t == 0.0 else ease_out_cubic(clamp01((dt - 0.08) / 0.28))
-        target_w = min(line_ws[-1] * 0.92, 700)
+        target_w = min(line_ws[-1] * 0.92, 540)
         ul_w = target_w * g
         ul_x0 = (W - target_w) / 2.0
-        ul_y = y_pad_top + total_h + 10
+        ul_y = y_pad_top + total_h + 8
 
         # Amber glow backing
-        td.rounded_rectangle([ul_x0 - 2, ul_y - 2, ul_x0 + ul_w + 2, ul_y + 6], radius=3, fill=(255, 200, 40, int(85 * alpha)))
+        td.rounded_rectangle([ul_x0 - 2, ul_y - 2, ul_x0 + ul_w + 2, ul_y + 5], radius=3, fill=(255, 200, 40, int(85 * alpha)))
         # Pure gold bar
-        td.rounded_rectangle([ul_x0, ul_y, ul_x0 + ul_w, ul_y + 4], radius=2, fill=(255, 222, 70, int(245 * alpha)))
+        td.rounded_rectangle([ul_x0, ul_y, ul_x0 + ul_w, ul_y + 3], radius=2, fill=(255, 222, 70, int(245 * alpha)))
 
     # Ambient deep shadow bloom
-    ambient = text_canvas.split()[3].filter(ImageFilter.GaussianBlur(16))
+    ambient = text_canvas.split()[3].filter(ImageFilter.GaussianBlur(14))
     ambient_layer_img = Image.new('RGBA', text_canvas.size, (0, 0, 0, 0))
-    ambient_layer_img.paste((0, 0, 0, int(200 * alpha)), (0, 0), mask=ambient)
+    ambient_layer_img.paste((0, 0, 0, int(195 * alpha)), (0, 0), mask=ambient)
 
     combined = Image.alpha_composite(ambient_layer_img, text_canvas)
     layer.alpha_composite(combined, (0, int(y_start - y_pad_top)))
@@ -1738,14 +1802,18 @@ SCRIPTS = {
         ],
         kinetic_phrases=[
             (0, 19, [
-                'BEFORE YOU CLOSE YOUR EYES TONIGHT',
+                'BEFORE YOU CLOSE',
+                'YOUR EYES TONIGHT',
                 'TAKE A DEEP BREATH',
-                'AND PLACE YOUR HOME & FAMILY UNDER PSALM 91',
+                'AND PLACE YOUR HOME & FAMILY',
+                'UNDER PSALM 91',
             ], ['CLOSE', 'EYES', 'TONIGHT', 'BREATH', 'PSALM', '91'], 'DIVINE PROTECTION COVENANT'),
             (20, 38, [
-                'HE WHO DWELLS IN THE SECRET PLACE',
+                'HE WHO DWELLS',
+                'IN THE SECRET PLACE',
                 'OF THE MOST HIGH',
-                'SHALL ABIDE UNDER THE SHADOW OF THE ALMIGHTY',
+                'SHALL ABIDE UNDER THE SHADOW',
+                'OF THE ALMIGHTY',
             ], ['DWELLS', 'SECRET', 'PLACE', 'MOST', 'HIGH', 'SHADOW', 'ALMIGHTY'], 'PSALM 91 : 1'),
             (39, 51, [
                 'NO EVIL SHALL BEFALL YOU',
@@ -1754,19 +1822,23 @@ SCRIPTS = {
             ], ['NO', 'EVIL', 'BEFALL', 'PLAGUE', 'DWELLING'], 'PSALM 91 : 10'),
             (52, 58, [
                 'HEAVENLY FATHER',
-                'QUIET EVERY ANXIOUS THOUGHT TONIGHT',
+                'QUIET EVERY ANXIOUS',
+                'THOUGHT TONIGHT',
             ], ['HEAVENLY', 'FATHER', 'QUIET', 'ANXIOUS', 'TONIGHT'], 'PRAYER FOR STILLNESS'),
             (59, 69, [
-                'SEND YOUR ANGELS TO GUARD THIS HOME',
+                'SEND YOUR ANGELS',
+                'TO GUARD THIS HOME',
                 'WASH AWAY EVERY FEAR',
             ], ['ANGELS', 'GUARD', 'HOME', 'WASH', 'FEAR'], 'ANGELIC PROTECTION'),
             (70, 81, [
                 'AND LET YOUR DIVINE PEACE',
-                'FILL THIS ROOM FROM WALL TO WALL',
+                'FILL THIS ROOM',
+                'FROM WALL TO WALL',
             ], ['DIVINE', 'PEACE', 'ROOM', 'WALL'], 'DIVINE PEACE'),
             (82, 92, [
                 'SLEEP IN PEACE TONIGHT',
-                'KNOWING THAT GOD IS FIGHTING YOUR BATTLES',
+                'KNOWING THAT GOD',
+                'IS FIGHTING YOUR BATTLES',
             ], ['PEACE', 'GOD', 'FIGHTING', 'BATTLES'], 'EXODUS 14 : 14'),
             (93, 107, [
                 'IF YOU RECEIVE THIS PROTECTION',
@@ -1920,7 +1992,10 @@ def main(key):
             frame = optical_flare_transition(f_prev, frame, u, is_prayer=is_prayer)
 
         if is_prayer and k > 0 and pos < 0.07:
-            frame = Image.blend(frame, Image.new('RGB', (W, H), (255, 255, 255)), 0.16 * (1.0 - pos / 0.07))
+            frame = Image.blend(frame, WHITE_IMG, 0.16 * (1.0 - pos / 0.07))
+
+        if is_prayer:
+            frame = apply_shake(frame, t, PRAYER_IMPACTS)
 
         ov = Image.new('RGBA', (W, H), (0, 0, 0, 0))
         ov.alpha_composite(ambient_layer(t))
