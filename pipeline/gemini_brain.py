@@ -133,6 +133,12 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                         if "id:" in text and "## Scene" in text:
                             return text
                     except Exception as model_err:
+                        err_str = str(model_err).lower()
+                        if "429" in err_str or "resource_exhausted" in err_str or "quota" in err_str:
+                            from pipeline.quota_handler import calculate_next_quota_reset_utc
+                            reset_dt = calculate_next_quota_reset_utc()
+                            print(f"[gemini-brain] Google Gemini daily free tier quota reached ($0.00 lock active). Reset at {reset_dt.isoformat()} UTC.")
+                            break
                         print(f"[gemini-brain] Model {candidate_model} call failed: {model_err}")
             except Exception as api_err:
                 print(f"[gemini-brain] Gemini API generation failed ({api_err}), falling back to equipped template.")

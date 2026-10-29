@@ -361,14 +361,14 @@ The secret to compounding YouTube growth is continuous algorithmic calibration. 
 │ 0009 │ Psalm 23      │ The Lord Is My Shepherd — Peace   │ 5:30 – 6:00 │ 🚀 Staged Queue │
 │      │               │ (He Restores My Soul)             │             │ (Approved)      │
 ├──────┼───────────────┼───────────────────────────────────┼─────────────┼─────────────────┤
-│ 0010 │ Psalm 121     │ He Who Keeps You Will Not Slumber │ 5:00 – 5:30 │ 📋 Recommended  │
-│      │               │ (The Lord Is Your Keeper)         │             │ (Next in Queue) │
+│ 0010 │ Psalm 121     │ He Who Keeps You Will Not Slumber │ 5:00 – 5:30 │ 🚀 Staged Queue │
+│      │               │ (The Lord Is Your Keeper)         │             │ (Approved)      │
 ├──────┼───────────────┼───────────────────────────────────┼─────────────┼─────────────────┤
-│ 0011 │ Psalm 27      │ The Lord Is My Light & Salvation  │ 6:00 – 7:00 │ 📋 Planned      │
-│      │               │ (Of Whom Shall I Be Afraid?)      │             │                 │
+│ 0011 │ Psalm 27      │ The Lord Is My Light & Salvation  │ 6:00 – 7:00 │ 🚀 Staged Queue │
+│      │               │ (Of Whom Shall I Be Afraid?)      │             │ (Approved)      │
 ├──────┼───────────────┼───────────────────────────────────┼─────────────┼─────────────────┤
-│ 0012 │ Isaiah 40:28  │ Renewed Strength for the Weary    │ 5:30 – 6:00 │ 📋 Planned      │
-│      │               │ (Mount Up With Wings Like Eagles) │             │                 │
+│ 0012 │ Isaiah 40:28  │ Renewed Strength for the Weary    │ 5:30 – 6:00 │ 📋 Recommended  │
+│      │               │ (Mount Up With Wings Like Eagles) │             │ (Next in Queue) │
 ├──────┼───────────────┼───────────────────────────────────┼─────────────┼─────────────────┤
 │ 0013 │ Psalm 46      │ Be Still and Know That I Am God   │ 5:30 – 6:00 │ 📋 Planned      │
 │      │               │ (Refuge in Times of Trouble)      │             │                 │

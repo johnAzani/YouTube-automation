@@ -35,23 +35,11 @@ class UploadResult:
     auto_published: bool
 
 
-class QuotaExceededError(RuntimeError):
-    """Raised when YouTube Data API v3 daily upload quota (10,000 units) is exceeded."""
-
-    def __init__(self, message: str, reset_utc: datetime | None = None, reset_time_utc: datetime | None = None):
-        super().__init__(message)
-        self.message = message
-        self.reset_utc = reset_utc or reset_time_utc or calculate_next_quota_reset_utc()
-        self.reset_time_utc = self.reset_utc
-
-
-def calculate_next_quota_reset_utc() -> datetime:
-    """YouTube API quota resets daily at midnight Pacific Time (08:00 UTC)."""
-    now_utc = datetime.now(timezone.utc)
-    reset_today = now_utc.replace(hour=8, minute=0, second=0, microsecond=0)
-    if now_utc >= reset_today:
-        return reset_today + timedelta(days=1)
-    return reset_today
+from pipeline.quota_handler import (
+    QuotaExceededError,
+    GeminiQuotaExceededError,
+    calculate_next_quota_reset_utc,
+)
 
 
 def _client_credentials(client_id: str, client_secret: str) -> tuple[str, str]:

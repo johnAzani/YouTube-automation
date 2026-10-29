@@ -128,7 +128,20 @@ def select_jobs(all_flag: bool, job_path: str | None, next_flag: bool) -> list[P
         except Exception as exc:  # noqa: BLE001
             _log(f"skip {j.name}: parse error {exc}")
             continue
-        if doc.status == "approved":
+
+        raw_status = str(doc.status).strip().lower()
+        if raw_status == "quota_paused":
+            from pipeline.quota_handler import is_quota_pause_expired, unpause_longform_job
+            reset_at_str = doc.meta.get("quota_reset_utc", "")
+            if is_quota_pause_expired(reset_at_str):
+                _log(f"Quota reset time passed ({reset_at_str}). Auto-unpausing {j.name}...")
+                unpause_longform_job(j)
+                approved.append(j)
+            else:
+                _log(f"{j.name} is paused until daily quota resets at {reset_at_str} UTC.")
+            continue
+
+        if raw_status == "approved":
             approved.append(j)
         elif all_flag:
             _log(f"skip {j.name}: status={doc.status} (only 'approved' jobs are built)")
@@ -207,9 +220,22 @@ def process(path: Path, dry_run: bool) -> dict:
         srt_path_str = ""
     else:
         from .tts import synthesize
+        from .quota_handler import GeminiQuotaExceededError, QuotaExceededError, pause_longform_job_on_quota
 
         voice = doc.voice or CONFIG.voice
-        narration = synthesize(doc.full_narration, out_dir, voice=voice)
+        try:
+            narration = synthesize(doc.full_narration, out_dir, voice=voice)
+        except (GeminiQuotaExceededError, QuotaExceededError) as q_exc:
+            reset_dt = getattr(q_exc, "reset_utc", None)
+            reset_iso = reset_dt.isoformat() if reset_dt else "08:00:00Z"
+            _log(f"Daily quota reached: {q_exc}. Pausing job {path.name} until {reset_iso} UTC ($0.00 lock active)...")
+            pause_longform_job_on_quota(path, str(q_exc), reset_dt)
+            return {
+                "job": doc.id,
+                "status": "quota_paused",
+                "quota_reset_utc": reset_iso,
+                "error": str(q_exc),
+            }
         _log(f"tts engine={narration.engine} duration={narration.duration_seconds:.1f}s")
         _require_real_narration(narration.engine, dry_run)
 
@@ -286,7 +312,19 @@ def process(path: Path, dry_run: bool) -> dict:
         upload_thumb = None if doc.format == "short" else thumb
         privacy_val = doc.meta.get("privacy")
         publish_at_val = doc.meta.get("publish_at")
-        up = upload(doc, final, upload_thumb, privacy=privacy_val, publish_at=publish_at_val, description=pack.get("description"))
+        try:
+            up = upload(doc, final, upload_thumb, privacy=privacy_val, publish_at=publish_at_val, description=pack.get("description"))
+        except (QuotaExceededError, GeminiQuotaExceededError) as q_exc:
+            reset_dt = getattr(q_exc, "reset_utc", None) or calculate_next_quota_reset_utc()
+            reset_iso = reset_dt.isoformat()
+            _log(f"Daily quota reached: {q_exc}. Pausing job {path.name} until {reset_iso} UTC ($0.00 lock active)...")
+            pause_longform_job_on_quota(path, str(q_exc), reset_dt)
+            return {
+                "job": doc.id,
+                "status": "quota_paused",
+                "quota_reset_utc": reset_iso,
+                "error": str(q_exc),
+            }
         if not up.video_id:
             raise RuntimeError("YouTube upload returned no video ID; leaving the queue job untouched.")
         result.update({

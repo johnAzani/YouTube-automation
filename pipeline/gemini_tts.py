@@ -198,8 +198,13 @@ def _synthesize_single_chunk(
                         time.sleep(backoff)
                         continue
                     else:
-                        print(f"[gemini-tts] Daily request limit reached on free Gemini tier ({exc!r}).")
-                        raise
+                        from pipeline.quota_handler import GeminiQuotaExceededError, calculate_next_quota_reset_utc
+                        reset_dt = calculate_next_quota_reset_utc()
+                        print(f"[gemini-tts] Google Gemini free tier daily quota exhausted ($0.00 lock active). Pausing until reset at {reset_dt.isoformat()} UTC.")
+                        raise GeminiQuotaExceededError(
+                            f"Google Gemini daily free tier limit reached: {exc!r}",
+                            reset_utc=reset_dt,
+                        ) from exc
                 raise
         if response:
             break

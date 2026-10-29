@@ -499,10 +499,13 @@ def run_short_release(
     }
 
     if not dry_run:
-        from .upload import (
+        from .quota_handler import (
             QuotaExceededError,
-            audit_channel_videos,
+            GeminiQuotaExceededError,
             calculate_next_quota_reset_utc,
+        )
+        from .upload import (
+            audit_channel_videos,
             delete_video,
             set_video_thumbnail,
             upload,
@@ -510,16 +513,17 @@ def run_short_release(
 
         try:
             up = upload(doc, staged_video, thumbnail_path=staged_thumb, description=edition.description, privacy=desired_privacy, publish_at=desired_publish_at)
-        except QuotaExceededError as exc:
-            reset_utc = exc.reset_utc or calculate_next_quota_reset_utc()
+        except (QuotaExceededError, GeminiQuotaExceededError) as exc:
+            reset_utc = getattr(exc, "reset_utc", None) or calculate_next_quota_reset_utc()
             reset_iso = reset_utc.isoformat()
-            print(f"[short-release] Daily YouTube API limit reached: {exc.message}. Pausing job until {reset_iso}...")
+            pause_label = "Gemini API" if isinstance(exc, GeminiQuotaExceededError) else "YouTube API"
+            print(f"[short-release] Daily {pause_label} limit reached ($0.00 lock): {exc}. Pausing job until {reset_iso}...")
             if manifest_path and manifest_path.is_file():
                 try:
                     qdata = yaml.safe_load(manifest_path.read_text(encoding="utf-8")) or {}
                     qdata["status"] = "quota_paused"
                     qdata["quota_reset_utc"] = reset_iso
-                    qdata["pause_reason"] = "youtube_api_daily_quota_exceeded"
+                    qdata["pause_reason"] = "gemini_api_daily_quota_exceeded" if isinstance(exc, GeminiQuotaExceededError) else "youtube_api_daily_quota_exceeded"
                     manifest_path.write_text(yaml.safe_dump(qdata, sort_keys=False), encoding="utf-8")
                     print(f"[short-release] Manifest {manifest_path.name} marked as quota_paused.")
                 except Exception as save_err:

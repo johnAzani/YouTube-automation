@@ -34,14 +34,18 @@ If any external API quota limit is reached, the system **fails closed**: jobs pa
 
 ## 3. Subsystem Breakdown
 
-### A. Voiceover & Audio Narration ($0.00)
-1. **Google Gemini API (`gemini-3.8-flash-tts` / `gemini-2.5-flash-tts`)**:
-   * Operates strictly within Google AI Studio's **Free Tier**.
+### A. Google Gemini Brain & Voiceover Synthesis ($0.00 Hard Lock)
+1. **Google Gemini Free Tier Invariant**:
+   * Operates strictly within Google AI Studio's **Free Tier** ($0.00 / month forever).
    * Free limits: **15 Requests Per Minute (RPM)**, **1,500 Requests Per Day (RPD)**, **1,000,000 Tokens Per Minute (TPM)**.
-   * **Lock Enforcement**: The code in `pipeline/gemini_tts.py` catches HTTP 429 (`RESOURCE_EXHAUSTED`) and applies exponential backoff or pauses the queue job with `quota_paused`. It never calls paid GCP Vertex AI endpoints.
-2. **Microsoft Edge-TTS (`edge-tts`)**:
-   * Uses Microsoft Edge's public read-aloud neural voice service (`en-US-DavisNeural`, `en-US-ChristopherNeural`).
-   * 100% free with no account or credit card required.
+   * Under no circumstances will any call transition to Vertex AI billable tiers, pay-as-you-go billing accounts, or credit card charges.
+2. **Locked-in Daily Quota Reset & Auto-Continuation**:
+   * Google's daily free tier quota resets daily at **midnight Pacific Time** (08:00 UTC PST / 07:00 UTC PDT).
+   * If the daily quota finishes (HTTP 429 / `RESOURCE_EXHAUSTED`), `pipeline/quota_handler.py` catches `GeminiQuotaExceededError`, calculates the exact next reset timestamp (`calculate_next_quota_reset_utc()`), and safely marks the queue job as `status: quota_paused` with `quota_reset_utc: <ISO 8601>`.
+   * **Seamless Auto-Resume**: The production cron runs twice daily (`06:14 UTC` and `14:14 UTC`). When `now_utc >= quota_reset_utc`, `select_jobs` in `pipeline/run.py` and `select_next_queued_short` in `pipeline/short_release.py` automatically detect that the quota has refreshed, unpause the job to `status: approved`, and seamlessly continue rendering and uploading with the permanent `Charon` voice at **$0.00**.
+   * **Voice Integrity Invariant**: The pipeline never falls back to an unapproved voice when Gemini quota finishes. It fails closed, pauses, and resumes with the official Google voice (`Charon`) at the next reset.
+3. **Microsoft Edge-TTS (`edge-tts`)**:
+   * Secondary zero-cost fallback for dev rendering; 100% free with no credit card required.
 
 ### B. Procedural Ambient Soundscapes ($0.00)
 * Soundscapes, score beds, and harmonic prayer drones are synthesized in mathematical code via `tools/score.py` using **SciPy** and **NumPy** DSP sine/harmonic wave generators.
