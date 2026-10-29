@@ -92,11 +92,19 @@ def _credentials():
 
 
 def build_description(doc: ScriptDoc) -> str:
+    niche = getattr(doc, "niche", "") or str(doc.meta.get("niche", ""))
+    slug = getattr(doc, "slug", "")
+    is_prayer = any(k in niche.lower() or k in slug.lower() for k in ("faith", "prayer", "scripture", "devotional", "psalm"))
     parts = [doc.description or doc.title]
     parts.append("")
     parts.append("—")
-    parts.append("Research notes & sources are listed above. Produced with an open,")
-    parts.append("human-edited documentary pipeline (scripts reviewed by a human editor).")
+    if is_prayer:
+        parts.append("Scripture & Devotional Commentary: Original editorial production by The Secret Place.")
+        parts.append("Production Disclosure: Audio narration and visual motion design were created or enhanced")
+        parts.append("using Google Gemini AI and studio DSP synthesizers under human editorial direction.")
+    else:
+        parts.append("Research notes & sources are listed above. Produced with an open,")
+        parts.append("human-edited documentary pipeline (scripts reviewed by a human editor).")
     tags = " ".join(f"#{t.replace(' ', '')}" for t in doc.tags[:8])
     if tags:
         parts.append("")
