@@ -11,7 +11,7 @@
 > • **Autonomous Unattended Execution:** Fully headless creation, rendering, and scheduled publishing running on GitHub Actions cron (`06:14 UTC` & `14:14 UTC`) without requiring chat pings or user presence.
 > • **Continuous Research Engine:** Self-updating intelligence loop driven by `scripts/continuous_research.py`, `scripts/auto_scheduler.py`, and `docs/CONTINUOUS_RESEARCH_SYSTEM.md`.
 
-**Status:** Living Document (Continuously Researched & Self-Updating) · **Branch:** `arena/b5d64264-youtube-automation`
+**Status:** Living Document (Continuously Researched & Self-Updating) · **Branch:** `arena/c2e2ed52-youtube-automation`
 
 ---
 
@@ -153,6 +153,17 @@ To compress the timeline into weeks, the channel deploys **Extended Sleep Suites
 3. **Master Studio Autopilot (`scripts/studio_autopilot.py`):**
    - One-command studio director that audits zero-dollar quota locks, executes duplicate upload prevention scans, verifies production queue runway (06:14 and 14:14 UTC cron slots), audits pastoral comment replies, and syncs playlist autoplay series.
    - Supports `--simulate` and `--json` machine-readable output.
+4. **Google Search Key Moments SEO Enhancer (`pipeline/video_seo_enhancer.py`):**
+   - Formats descriptions and chapter markers to trigger interactive Key Moments carousels on Google Search Engine Results Pages (SERPs).
+   - Generates Schema.org `VideoObject` JSON-LD structured metadata with `@type: Clip` entities.
+5. **Autonomous End-Screen Slate Generator (`pipeline/end_screens.py`):**
+   - 15-second widescreen (1920x1080) outro slates with safe-zone card anchors for Next-in-Series video and Bedtime Sleep Playlist autoplays.
+   - Incorporates procedural 432 Hz Solfeggio acoustic fade-out bed.
+6. **$0-Cost Audio Podcast RSS Feed Engine (`tools/build_podcast_feed.py` & `docs/podcast.xml`):**
+   - Certified Apple Podcasts and Spotify RSS 2.0 XML feed hosted 100% free via GitHub Pages.
+   - Channels external audio listeners into loyal YouTube subscribers and viewers without third-party hosting fees ($0.00 lock).
+7. **Extended 14-Day Queue Runway (Psalms 46 & 34 Added):**
+   - Expanded approved longform queue to 5 jobs and Shorts queue to 3 editions, raising unattended production runway to **4.0 days** ahead.
 
 ---
 

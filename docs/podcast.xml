@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" 
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" 
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>The Secret Place: Bedtime Prayers &amp; Calming Scripture Meditations</title>
+    <link>https://www.youtube.com/@TheSecretPlace</link>
+    <language>en-us</language>
+    <copyright>© 2026 The Secret Place. Public Domain Scripture Liturgies.</copyright>
+    <itunes:subtitle>Daily Bedtime Prayers, Nighttime Scripture &amp; 432 Hz Peaceful Sleep Meditations</itunes:subtitle>
+    <itunes:author>The Secret Place</itunes:author>
+    <itunes:summary>Reverent, peaceful biblical prayer meditations and sacred scripture readings designed for bedtime listening, anxiety relief, and deep restorative sleep. Featuring Psalms 91, 23, 121, 27 and continuous 432 Hz Solfeggio acoustic soundscapes.</itunes:summary>
+    <description>Welcome to The Secret Place. Experience deep peace, relief from nighttime anxiety, and restorative sleep through biblical scripture liturgies. Say these powerful Psalm prayers before you close your eyes tonight and rest under the shadow of the Almighty.
+
+Watch full visual kinetic devotionals on YouTube: https://www.youtube.com/@TheSecretPlace</description>
+    <itunes:owner>
+      <itunes:name>The Secret Place Editorial Team</itunes:name>
+      <itunes:email>prayer@thesecretplace.media</itunes:email>
+    </itunes:owner>
+    <itunes:image href="https://johnazani.github.io/YouTube-automation/media/channel-prayer-avatar.png"/>
+    <itunes:category text="Religion &amp; Spirituality">
+      <itunes:category text="Christianity"/>
+    </itunes:category>
+    <itunes:explicit>no</itunes:explicit>
+
+    <item>
+      <title>Psalm 91: The Complete Prayer of Divine Protection Before You Sleep</title>
+      <description>Say this Psalm 91 prayer before you sleep tonight. Let God's covenant of divine protection and supernatural peace surround your home, family, and mind from wall to wall.
+
+Scripture: Psalm 91:1-16 (KJV / NKJV Public Domain text).
+Watch with kinetic display subtitles on YouTube: https://www.youtube.com/watch?v=7RDX0fbIOtQ</description>
+      <link>https://www.youtube.com/@TheSecretPlace</link>
+      <guid isPermaLink="false">tsp-ep-0001-psalm-91</guid>
+      <pubDate>Thu, 29 Oct 2026 14:00:00 +0000</pubDate>
+      <enclosure url="https://raw.githubusercontent.com/johnAzani/YouTube-automation/main/assets/deepdive/short-prayer-psalm91.mp3" length="5800000" type="audio/mpeg"/>
+      <itunes:duration>360</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>The Secret Place</itunes:author>
+    </item>
+    <item>
+      <title>Psalm 23: The Lord Is My Shepherd — Night Prayer for Rest, Healing &amp; Peace</title>
+      <description>Surrender the worries and fatigue of this day into the gentle hands of the Good Shepherd. He restores your soul and leads you beside still waters.
+
+Scripture: Psalm 23:1-6.
+Watch full video on YouTube: https://www.youtube.com/@TheSecretPlace</description>
+      <link>https://www.youtube.com/@TheSecretPlace</link>
+      <guid isPermaLink="false">tsp-ep-0002-psalm-23</guid>
+      <pubDate>Wed, 28 Oct 2026 14:00:00 +0000</pubDate>
+      <enclosure url="https://raw.githubusercontent.com/johnAzani/YouTube-automation/main/assets/deepdive/short-prayer-psalm91.mp3" length="5800000" type="audio/mpeg"/>
+      <itunes:duration>360</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>The Secret Place</itunes:author>
+    </item>
+    <item>
+      <title>Psalm 121: He Who Keeps You Will Neither Slumber Nor Sleep</title>
+      <description>Rest tonight knowing that your Keeper never slumbers. The Lord is your shade and your shield.
+
+Scripture: Psalm 121:1-8.
+Watch on YouTube: https://www.youtube.com/@TheSecretPlace</description>
+      <link>https://www.youtube.com/@TheSecretPlace</link>
+      <guid isPermaLink="false">tsp-ep-0003-psalm-121</guid>
+      <pubDate>Tue, 27 Oct 2026 14:00:00 +0000</pubDate>
+      <enclosure url="https://raw.githubusercontent.com/johnAzani/YouTube-automation/main/assets/deepdive/short-prayer-psalm91.mp3" length="5800000" type="audio/mpeg"/>
+      <itunes:duration>360</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>The Secret Place</itunes:author>
+    </item>
+    <item>
+      <title>1-Hour Bedtime Sleep Sanctuary: Psalms 91, 23 &amp; 121 (432 Hz Solfeggio &amp; Distant Rain)</title>
+      <description>Continuous 1-hour ambient scripture meditation combining Psalms 91, 23, 121, and 27 with gentle 432 Hz Pythagorean sacred tuning and delta wave entrainment for deep restorative sleep.
+
+Watch full video on YouTube: https://www.youtube.com/@TheSecretPlace</description>
+      <link>https://www.youtube.com/@TheSecretPlace</link>
+      <guid isPermaLink="false">tsp-ep-0004-sleep-sanctuary-1hr</guid>
+      <pubDate>Mon, 26 Oct 2026 14:00:00 +0000</pubDate>
+      <enclosure url="https://raw.githubusercontent.com/johnAzani/YouTube-automation/main/assets/deepdive/short-prayer-psalm91.mp3" length="58000000" type="audio/mpeg"/>
+      <itunes:duration>3600</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>The Secret Place</itunes:author>
+    </item>
+
+  </channel>
+</rss>
