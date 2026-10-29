@@ -19,8 +19,26 @@ from .script_doc import ScriptDoc
 
 
 def generate_pastoral_pinned_comment(doc: ScriptDoc) -> str:
-    """Generate an authoritative, comforting pinned comment for the video."""
+    """Generate an authoritative, comforting pinned comment for the video.
+
+    If the video is a Short, automatically generates a high-conversion bridge comment
+    linking viewers directly to the full-length long-form prayer video.
+    """
     title_lower = (doc.title or "").lower()
+    is_short = (
+        getattr(doc, "format", "") == "short"
+        or doc.meta.get("format") == "short"
+        or "#shorts" in title_lower
+        or (getattr(doc, "slug", "") and "short-" in getattr(doc, "slug", ""))
+    )
+
+    if is_short:
+        try:
+            from .shorts_bridge import generate_short_bridge_comment
+            short_key = getattr(doc, "slug", "") or doc.title
+            return generate_short_bridge_comment(short_key)
+        except Exception:
+            pass
 
     if "psalm 91" in title_lower:
         scripture_hook = "Psalm 91:4 — 'He shall cover you with His feathers, and under His wings you shall take refuge; His truth shall be your shield and buckler.'"

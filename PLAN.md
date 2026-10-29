@@ -475,3 +475,26 @@ By strictly adhering to the **$0.00 cost lock**, maintaining the **DOCOGA REELS 
    - Crisis hotline integrations: 988 (US/Canada), 111 (UK), and FindAHelpline.
    - Persona integrity sanitization guaranteeing zero mentions of personal creator names.
 
+---
+
+## 11. Multi-Hour Bedtime Sleep Compilations, Shorts Bridges & Audio Smoothing
+
+1. **Multi-Hour Bedtime Sleep Compilations (`pipeline/sleep_compilations.py` & `scripts/build_sleep_compilation.py`):**
+   - Engineered specifically to fast-track 4,000 Valid Public Watch Hours.
+   - Pre-configured compilations: 1-Hour Evening Peace, 3-Hour Deep Sleep Watch, and 8-Hour All Night Protection Sanctuary.
+   - Continuous multi-cycle scripture meditations with procedural 432 Hz Solfeggio rain/stream audio and Delta wave 1.5 Hz binaural entrainment.
+   - High-efficiency FFmpeg stream concatenation with zero cloud rendering costs ($0.00 lock).
+2. **Shorts-to-Longform Conversion Bridge (`pipeline/shorts_bridge.py`):**
+   - Bidirectional mapping between Short editions (`short-psalm91`, `short-psalm23`, etc.) and corresponding Longform Deep-Dives.
+   - Dynamic resolution of live YouTube video IDs (`7RDX0fbIOtQ`, etc.) from `content/published/`.
+   - Automated pinned comments and top-of-description conversion links funnelling viral swipe views into full watch hours.
+3. **Bedtime Audio Smoothing & Dynamic Range Normalizer (`pipeline/audio_smoother.py`):**
+   - Two-pass EBU R128 loudness mastering: target -16.0 LUFS, -1.5 dBTP maximum peak, <= 7.0 LU dynamic range.
+   - Gentle 6.5 kHz high-frequency low-pass filter eliminates sharp sibilance and harsh room noise.
+   - 40 Hz high-pass filter eliminates subsonic rumble and microphone handling noise.
+   - Dual-engine implementation: FFmpeg `loudnorm` + pure NumPy DSP fallback.
+4. **Liturgical Sleep Timer & Google SERP Key Moments (`pipeline/sleep_timer.py`):**
+   - Structured sleep timer chapters (15m Drift Off, 30m Peace, 45m Delta Induction, 60m REM Sanctuary, 8h All Night).
+   - Generates Schema.org `VideoObject` with `hasPart` Clip markup for Google Search Key Moments.
+
+
