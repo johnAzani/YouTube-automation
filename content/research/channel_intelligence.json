@@ -1,0 +1,62 @@
+{
+  "audited_at": "2026-10-29T11:21:04.909124+00:00",
+  "subscriber_count": 1230,
+  "ypp_subscriber_milestone": true,
+  "ypp_watch_hours_target": 4000,
+  "published_videos_count": 3,
+  "queue_runway_count": 6,
+  "public_videos": [
+    {
+      "video_id": "7RDX0fbIOtQ",
+      "title": "Psalm 91: Night Prayer of Protection",
+      "published_at": "2026-10-29",
+      "views": 1,
+      "likes": 0,
+      "comments": 0
+    },
+    {
+      "video_id": "SG69BbNlfRw",
+      "title": "Say This Psalm 91 Prayer Before You Sleep",
+      "published_at": "2026-10-28",
+      "views": 169,
+      "likes": 8,
+      "comments": 2
+    },
+    {
+      "video_id": "pbpPdG7_DQk",
+      "title": "Say This Psalm 91 Prayer Before You Sleep",
+      "published_at": "2026-10-28",
+      "views": 53,
+      "likes": 3,
+      "comments": 0
+    }
+  ],
+  "active_release": {
+    "video_id": "7RDX0fbIOtQ",
+    "title": "Psalm 91: The Complete Prayer of Divine Protection Before You Sleep",
+    "published_on": "2026-10-29",
+    "status": "public",
+    "watch_url": "https://youtu.be/7RDX0fbIOtQ",
+    "studio_url": "https://studio.youtube.com/video/7RDX0fbIOtQ/analytics"
+  },
+  "next_recommended_job": {
+    "id": "0009",
+    "scripture": "Psalm 23",
+    "theme": "The Lord Is My Shepherd \u2014 Rest & Healing",
+    "hook": "HE RESTORES MY SOUL",
+    "verses": "Verses 1\u20136 (Complete)",
+    "target_duration": "5:30 \u2013 6:00",
+    "primary_intent": "Deep peaceful sleep, emotional burnout, quiet still waters",
+    "search_volume_tier": "Tier 1 (Evergreen Daily & Nightly Volume)",
+    "status": "staged_in_queue",
+    "video_id": null
+  },
+  "retention_benchmarks": {
+    "target_ctr_browse": "7.0% \u2013 12.0%",
+    "target_apv_retention": "55.0% \u2013 70.0%",
+    "target_30s_cliff_retention": ">72.0%",
+    "effective_niche_rpm": "$5.00 \u2013 $14.00 (with mid-rolls on >=8min videos)",
+    "repeat_listener_affinity": "High (Nightly sleep loop playback)"
+  },
+  "cost_lock_status": "LOCKED: $0.00 / month permanent zero-spend invariant"
+}
