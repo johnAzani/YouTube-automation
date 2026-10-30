@@ -54,5 +54,5 @@ def test_export_selar_product_manifests(tmp_path: Path):
 def test_social_pack_includes_selar_store():
     """Verify standardized description footer includes Selar store link."""
     footer = build_standardized_description_footer(include_store_links=True)
-    assert "selar.co" in footer
+    assert "selar.com/showlove/thesecretplace" in footer
     assert "OFFLINE BEDTIME PRAYER SANCTUARY" in footer

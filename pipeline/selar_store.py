@@ -22,7 +22,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 from .config import CONFIG, REPO_ROOT
 
-DEFAULT_SELAR_STORE_URL = os.environ.get("SELAR_STORE_URL", "https://selar.co/m/TheSecretPlace")
+DEFAULT_SELAR_STORE_URL = os.environ.get("SELAR_STORE_URL", "https://selar.com/showlove/thesecretplace")
 PRODUCTS_DIR = REPO_ROOT / "content" / "products"
 
 # Visual Theme Constants (DOCOGA REELS v2 Standard)
