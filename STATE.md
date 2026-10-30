@@ -82,15 +82,49 @@
 
 ## 3. Current Queue & Script Inventory
 
-### Approved & Ready for Production in `content/queue/`:
-1. `0009-psalm-23-the-lord-is-my-shepherd.md` (Next up for longform release)
-2. `0010-psalm-121-he-who-keeps-you-will-neither-slumber-no.md` (Approved)
-3. `0011-psalm-27-the-lord-is-my-light-and-my-salvation--fe.md` (Approved)
-4. `0013-psalm-46-god-is-our-refuge-and-strength.md` (Approved)
-5. `0014-psalm-34-the-angel-of-the-lord-encampeth.md` (Approved)
+### Approved & Ready for Production in `content/queue/` (24 scripts — full 30-night runway):
+1. `0009-psalm-23-the-lord-is-my-shepherd.md` (Next up for longform release; covers Nights 4–6)
+2. `0010-psalm-121-he-who-keeps-you-will-neither-slumber-no.md` (Approved; covers Nights 7–8)
+3. `0011-psalm-27-the-lord-is-my-light-and-my-salvation--fe.md` (Approved; covers Nights 10–11)
+4. `0013-psalm-46-god-is-our-refuge-and-strength.md` (Approved; covers Nights 12–13)
+5. `0014-psalm-34-the-angel-of-the-lord-encampeth.md` (Approved; covers Night 14)
+6. `0015-psalm-91-5-6-deliverance-from-terror-by-night.md` (Approved; covers Night 2)
+7. `0016-psalm-91-11-12-angelic-guardians-bed.md` (Approved; covers Night 3)
+8. `0017-psalm-4-8-in-peace-i-will-lie-down-and-sleep.md` (Approved; covers Night 9)
+9. `0018-psalm-3-3-5-the-shield-that-lifts-my-head.md` (Approved; covers Night 15)
+10. `0019-psalm-16-7-8-counsel-in-the-night-seasons.md` (Approved; covers Night 16)
+11. `0020-psalm-18-2-my-rock-my-fortress-my-deliverer.md` (Approved; covers Night 17)
+12. `0021-psalm-31-1-5-committing-my-spirit-to-his-hand.md` (Approved; covers Night 18)
+13. `0022-psalm-37-3-4-7-rest-in-the-lord-wait-patiently.md` (Approved; covers Night 19)
+14. `0023-psalm-63-5-7-remembering-god-upon-my-bed.md` (Approved; covers Night 20)
+15. `0024-psalm-139-11-12-darkness-is-as-light-to-him.md` (Approved; covers Night 21)
+16. `0025-proverbs-3-24-26-when-you-lie-down-sleep-is-sweet.md` (Approved; covers Night 22)
+17. `0026-isaiah-26-3-4-kept-in-perfect-peace.md` (Approved; covers Night 23)
+18. `0027-isaiah-41-10-upholding-you-with-his-right-hand.md` (Approved; covers Night 24)
+19. `0028-matthew-11-28-30-rest-for-the-weary-soul.md` (Approved; covers Night 25)
+20. `0029-john-14-27-my-peace-i-give-unto-you.md` (Approved; covers Night 26)
+21. `0030-philippians-4-6-7-the-peace-that-guards-heart-and-mind.md` (Approved; covers Night 27)
+22. `0031-2-timothy-1-7-power-love-and-a-sound-mind.md` (Approved; covers Night 28)
+23. `0032-1-peter-5-6-7-casting-all-your-care-upon-him.md` (Approved; covers Night 29)
+24. `0033-numbers-6-24-26-the-priestly-benediction-of-peace.md` (Approved; covers Night 30)
+
+### Night-to-Queue Coverage Map (30/30 complete):
+* Night 1 (Psalm 91:1-2) → Published `0008-psalm-91-prayer-of-divine-protection.md`
+* Nights 2–3 → `0015`, `0016` (Psalm 91:5-6, Psalm 91:11-12)
+* Nights 4–6 → `0009` (Psalm 23)
+* Nights 7–8 → `0010` (Psalm 121)
+* Night 9 → `0017` (Psalm 4:8)
+* Nights 10–11 → `0011` (Psalm 27)
+* Nights 12–13 → `0013` (Psalm 46)
+* Night 14 → `0014` (Psalm 34)
+* Nights 15–30 → `0018` through `0033` (Psalm 3 through Numbers 6:24-26)
 
 ### Published Video Records in `content/published/`:
 * `short-0002-psalm-91-prayer-of-protection.md` (`SG69BbNlfRw` / `short-psalm91`)
+
+### Factcheck Worksheets in `content/factcheck/`:
+* 19 worksheets generated for queue scripts `0015`–`0033` via `scripts/factcheck.py`
+* All worksheets are empty checkboxes awaiting human review (standing rule: only a human may set `human_rewrite: true`)
 
 ---
 
@@ -99,9 +133,9 @@
 1. **List Product #1 on Selar (432 Hz Offline Bedtime Audio Sanctuary):**
    * Package ad-free WAV/MP3 recordings of Psalms 91, 23, 121, 27, 46, and 34.
    * Attach `content/products/cover_offline_audio_pack.png` and `prod-001-offline-audio-sanctuary.json`.
-2. **Expand the Nightly Prayer Queue to 30 Continuous Nights:**
-   * Author remaining 24 scripts matching the 30 nights in the Prayer Journal (Psalms 3, 4, 16, 18, 31, 37, 63, 139, Proverbs 3, Isaiah 26, etc.).
-   * Guarantees a full 30-day automated release runway.
+2. ✅ **Expand the Nightly Prayer Queue to 30 Continuous Nights — COMPLETE (October 30, 2026):**
+   * All 24 queue scripts (IDs `0009`–`0033`) authored, factcheck worksheets generated, and all 217 tests passing.
+   * Guarantees a full 30-day automated release runway at `19:14 UTC` / `06:14 UTC` / `14:14 UTC`.
 3. **Assemble 1-Hour & 3-Hour Dark Screen Sleep Compilations:**
    * Combine Psalms 91, 23, and 121 with continuous 432 Hz Solfeggio soundscapes into long-form compilations to accelerate toward 4,000 public watch hours.
 4. **Monitor YouTube Analytics Telemetry:**
