@@ -18,12 +18,12 @@ class TestAutoScheduler(unittest.TestCase):
         self.assertEqual(len(slots), 4)
         # First slot after 12:00 UTC should be 14:14 UTC today
         self.assertEqual(slots[0], datetime(2026, 10, 29, 14, 14, tzinfo=timezone.utc))
-        # Second slot should be 06:14 UTC tomorrow
-        self.assertEqual(slots[1], datetime(2026, 10, 30, 6, 14, tzinfo=timezone.utc))
-        # Third slot should be 14:14 UTC tomorrow
-        self.assertEqual(slots[2], datetime(2026, 10, 30, 14, 14, tzinfo=timezone.utc))
-        # Fourth slot should be 06:14 UTC day after tomorrow
-        self.assertEqual(slots[3], datetime(2026, 10, 31, 6, 14, tzinfo=timezone.utc))
+        # Second slot should be 19:14 UTC today (8:14pm local bedtime release)
+        self.assertEqual(slots[1], datetime(2026, 10, 29, 19, 14, tzinfo=timezone.utc))
+        # Third slot should be 06:14 UTC tomorrow (morning devotional)
+        self.assertEqual(slots[2], datetime(2026, 10, 30, 6, 14, tzinfo=timezone.utc))
+        # Fourth slot should be 14:14 UTC tomorrow
+        self.assertEqual(slots[3], datetime(2026, 10, 30, 14, 14, tzinfo=timezone.utc))
 
     def test_audit_longform_queue_finds_approved_job(self):
         items, approved = audit_longform_queue()

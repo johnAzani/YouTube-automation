@@ -29,7 +29,7 @@ from pipeline.config import CONFIG, QUEUE_DIR, PUBLISHED_DIR
 from pipeline.script_doc import parse_script
 from pipeline.short_release import SHORTS_QUEUE_DIR, EDITIONS, select_next_queued_short
 
-CRON_HOURS_UTC = [6, 14]
+CRON_HOURS_UTC = [6, 14, 19]
 CRON_MINUTE_UTC = 14
 
 

@@ -4,6 +4,7 @@ requests>=2.31
 Pillow>=10.0
 numpy>=1.26
 reportlab>=5.0
+pypdfium2>=4.0
 
 # Neural narration — free, no API key (Microsoft Edge voices)
 edge-tts>=6.1

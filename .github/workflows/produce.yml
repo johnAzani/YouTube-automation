@@ -5,9 +5,13 @@ name: Produce video
 # production uploads only run on the official release cron schedule or manual dispatch.
 on:
   schedule:
-    # Twice daily release slots (06:14 UTC morning devotional / 14:14 UTC US bedtime priming)
-    - cron: "14 6 * * *"    # 06:14 UTC — morning slot
-    - cron: "14 14 * * *"   # 14:14 UTC — afternoon slot
+    # Daily release slots:
+    # 1. 06:14 UTC — Morning scripture devotional (07:14 WAT)
+    # 2. 14:14 UTC — US afternoon / transatlantic priming (15:14 WAT / 10:14 EST)
+    # 3. 19:14 UTC — Peak evening bedtime prayer sanctuary (20:14 WAT / 8:14pm local)
+    - cron: "14 6 * * *"
+    - cron: "14 14 * * *"
+    - cron: "14 19 * * *"
   workflow_dispatch:
     inputs:
       job:
