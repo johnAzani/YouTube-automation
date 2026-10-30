@@ -24,6 +24,7 @@ from pipeline.selar_store import (
     PRODUCTS_DIR,
     export_selar_product_manifests,
 )
+from pipeline.journal_builder import build_prayer_journal_pdf
 
 
 def main():
@@ -41,6 +42,11 @@ def main():
     print("==========================================================================")
 
     files = export_selar_product_manifests(out_dir)
+
+    print("[*] Compiling 34-page printable 30-Night Scripture Protection Prayer Journal PDF...")
+    pdf_path = build_prayer_journal_pdf(out_dir / "30_night_prayer_journal.pdf")
+    files.append(pdf_path)
+
     print(f"[*] Generated {len(files)} product assets in {out_dir.relative_to(REPO_ROOT)}:")
     for f in files:
         size_kb = f.stat().st_size / 1024
