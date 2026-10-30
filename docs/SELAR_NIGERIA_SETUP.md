@@ -18,8 +18,9 @@ This guide walks you through setting up your **$0.00-cost Selar creator store** 
 ### Step 1: Create Your Free Creator Account
 1. Visit **[selar.com](https://selar.com)** or **[selar.co](https://selar.co)**.
 2. Click **"Start Selling"** (free tier).
-3. Set your store username to: `TheSecretPlace` (or your preferred handle).
-   * Your store URL will be: `https://selar.co/m/TheSecretPlace`
+3. Set your store username to: `thesecretplace`
+   * Your Show Love link is: `https://selar.com/showlove/thesecretplace`
+   * Your store URL is: `https://selar.co/m/thesecretplace`
 
 ### Step 2: Configure Your Payout Account (First Bank Domiciliary)
 1. In your Selar Dashboard, navigate to **Settings $\rightarrow$ Bank Details / Payout Settings**.

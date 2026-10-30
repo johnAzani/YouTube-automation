@@ -12,7 +12,7 @@ import re
 CHANNEL_HANDLE = "@TheSecretPlace"
 SUBSCRIBE_URL = "https://www.youtube.com/@TheSecretPlace?sub_confirmation=1"
 PODCAST_URL = "https://johnazani.github.io/YouTube-automation/podcast.xml"
-SELAR_STORE_URL = os.environ.get("SELAR_STORE_URL", "https://selar.co/m/TheSecretPlace")
+SELAR_STORE_URL = os.environ.get("SELAR_STORE_URL", "https://selar.com/showlove/thesecretplace")
 
 # Official Playlists
 PLAYLIST_LINKS = {
