@@ -85,8 +85,12 @@ jobs:
             rc=${PIPESTATUS[0]}
           else
             python -m pipeline.short_release --next 2>&1 | tee run.log
+            short_rc=${PIPESTATUS[0]}
             python -m pipeline.run --next 2>&1 | tee -a run.log
-            rc=${PIPESTATUS[0]}
+            run_rc=${PIPESTATUS[0]}
+            # Fail if EITHER stage fails — never let a short_release success mask
+            # a longform upload failure (or vice versa).
+            rc=$(( short_rc > run_rc ? short_rc : run_rc ))
           fi
           set -e
           echo "### Pipeline Log (exit $rc)" >> "$GITHUB_STEP_SUMMARY"
