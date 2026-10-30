@@ -126,6 +126,29 @@
 * 19 worksheets generated for queue scripts `0015`–`0033` via `scripts/factcheck.py`
 * All worksheets are empty checkboxes awaiting human review (standing rule: only a human may set `human_rewrite: true`)
 
+### Automation Status & Investigation Log (October 30, 2026):
+
+**Friday 30 October 2026 — Automation Did NOT Publish Today:**
+* **06:14 UTC slot (7:14 AM WAT):** Passed — no video published. `0009` (Psalm 23) still in `content/queue/` with `status: approved`.
+* **14:14 UTC slot (3:14 PM WAT):** Passed — no video published. `0009` still in queue.
+* **19:14 UTC slot (8:14 PM WAT):** Upcoming — next scheduled release.
+
+**Root Cause Found & Fixed — `.github/workflows/produce.yml`:**
+* **Bug:** In the scheduled run path (`else` branch with no `--short` or `--job` input), `rc=${PIPESTATUS[0]}` captured only `short_release`'s exit code. Since `content/shorts-queue/` does not exist, `short_release --next` always exits 0 (nothing to do). This meant `pipeline.run --next`'s exit code was **completely ignored** — even if the longform upload failed, the workflow reported success, committed nothing, and pushed nothing.
+* **Fix:** Now captures both `short_rc` and `run_rc`, sets `rc` to the worst of the two, so a failed longform upload fails the workflow. Committed as `7ea0dac`, pushed to `arena/867dbd92-youtube-automation`.
+
+**Published Video Records (All Time):**
+* `0008-psalm-91-prayer-of-divine-protection.md` → YouTube ID `7RDX0fbIOtQ`, published Thursday 29 October 2026.
+* `short-0002-psalm-91-prayer-of-protection.md` → YouTube ID `SG69BbNlfRw`, published Wednesday 28 October 2026, privacy: **public** ✓.
+* `short-0001-how-enron-died.md` → YouTube ID `DLEWL6dm5lo`, published Friday 23 October 2026, privacy: **PRIVATE** ❌ — uploaded but never made public. Needs manual privacy change to `public` in YouTube Studio.
+
+**Channel Content Audit (from `short-0001` and `short-0002` published records):**
+* Pre-existing unlisted video `ZgJdfb6T9hk` titled "John Azani 🌟 is live!" (published 23 Oct 2026) — violates the zero-mentions-of-John-Azani constraint. Pre-dates this automation; recommend deleting or privatizing via YouTube Studio.
+* Pre-existing `john-azani-*` branded assets in `docs/media/` — also violate the persona constraint; recommend removing.
+
+**Next Approved Job:**
+* `0009-psalm-23-the-lord-is-my-shepherd.md` — `status: approved`, `privacy: public`, `format: longform`, `voice: Charon`. No authored master exists (`deep-dive-psalm23.mp4` absent), so it will render via TTS + assets + assemble path on the next successful produce.yml run.
+
 ---
 
 ## 4. Active Roadmap (What to Do Next)
