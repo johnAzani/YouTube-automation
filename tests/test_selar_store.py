@@ -55,4 +55,5 @@ def test_social_pack_includes_selar_store():
     """Verify standardized description footer includes Selar store link."""
     footer = build_standardized_description_footer(include_store_links=True)
     assert "selar.com/showlove/thesecretplace" in footer
+    assert "selar.com/i000qy7g39" in footer
     assert "OFFLINE BEDTIME PRAYER SANCTUARY" in footer

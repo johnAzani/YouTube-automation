@@ -13,6 +13,7 @@ CHANNEL_HANDLE = "@TheSecretPlace"
 SUBSCRIBE_URL = "https://www.youtube.com/@TheSecretPlace?sub_confirmation=1"
 PODCAST_URL = "https://johnazani.github.io/YouTube-automation/podcast.xml"
 SELAR_STORE_URL = os.environ.get("SELAR_STORE_URL", "https://selar.com/showlove/thesecretplace")
+SELAR_JOURNAL_URL = os.environ.get("SELAR_JOURNAL_URL", "https://selar.com/i000qy7g39")
 
 # Official Playlists
 PLAYLIST_LINKS = {
@@ -29,10 +30,11 @@ def build_standardized_description_footer(
     """Build the official social funnel footer appended to all YouTube descriptions."""
     store_block = ""
     if include_store_links and SELAR_STORE_URL:
+        journal_line = f"• 30-Night Scripture Protection Prayer Journal: {SELAR_JOURNAL_URL}\n" if SELAR_JOURNAL_URL else ""
         store_block = (
             f"\n📥 OFFLINE BEDTIME PRAYER SANCTUARY (AD-FREE AUDIO & PRINTABLES):\n"
-            f"• Download 432 Hz Offline Sleep Audio & Prayer Journal: {SELAR_STORE_URL}\n"
-            f"• Support Our Global Prayer Ministry: {SELAR_STORE_URL}\n"
+            f"{journal_line}"
+            f"• Partner in Prayer & Voluntary Ministry Support: {SELAR_STORE_URL}\n"
         )
 
     footer = (

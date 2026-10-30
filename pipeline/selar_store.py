@@ -23,6 +23,9 @@ from PIL import Image, ImageDraw, ImageFont
 from .config import CONFIG, REPO_ROOT
 
 DEFAULT_SELAR_STORE_URL = os.environ.get("SELAR_STORE_URL", "https://selar.com/showlove/thesecretplace")
+VERIFIED_PRODUCT_URLS = {
+    "prod-002-prayer-journal-pdf": os.environ.get("SELAR_JOURNAL_URL", "https://selar.com/i000qy7g39"),
+}
 PRODUCTS_DIR = REPO_ROOT / "content" / "products"
 
 # Visual Theme Constants (DOCOGA REELS v2 Standard)
@@ -277,7 +280,7 @@ def export_selar_product_manifests(out_dir: Path = PRODUCTS_DIR) -> list[Path]:
             "features": prod.features,
             "description": prod.description,
             "selar_payout_target": "First Bank of Nigeria USD Domiciliary Account (FBNINGLA)",
-            "store_url_placeholder": f"{DEFAULT_SELAR_STORE_URL}/{prod.product_id}",
+            "store_url": VERIFIED_PRODUCT_URLS.get(prod.product_id, f"{DEFAULT_SELAR_STORE_URL}/{prod.product_id}"),
         }
         spec_path.write_text(json.dumps(manifest_data, indent=2), encoding="utf-8")
         generated.append(spec_path)
