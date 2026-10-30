@@ -424,6 +424,11 @@ def select_next_queued_short(
             if is_already_published:
                 continue
 
+        # Skip manifests referencing short keys that aren't valid EDITIONS keys
+        if key not in EDITIONS:
+            print(f"[queue] Skipping manifest {path.name}: unknown short key {key!r} not in EDITIONS")
+            continue
+
         return path, key
     return None
 
