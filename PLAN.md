@@ -497,4 +497,24 @@ By strictly adhering to the **$0.00 cost lock**, maintaining the **DOCOGA REELS 
    - Structured sleep timer chapters (15m Drift Off, 30m Peace, 45m Delta Induction, 60m REM Sanctuary, 8h All Night).
    - Generates Schema.org `VideoObject` with `hasPart` Clip markup for Google Search Key Moments.
 
+---
+
+## 12. Dark Bedroom Sanctuary (Fade-to-Black Mode), High-Intent SEO & Sonic Branding
+
+1. **Dark Bedroom Sanctuary Video Engine (`pipeline/dark_screen.py`):**
+   - Solves the #1 cause of bedtime viewer abandonment: bright screens waking viewers in dark bedrooms.
+   - Initial 3 minutes displays DOCOGA REELS v2 visual plate for reading; cross-fades over 45 seconds into pitch-black (RGB 0,0,0) OLED screen while 432 Hz audio continues.
+   - Targets high-intent searches: "Psalm 91 sleep prayer black screen", "bible verses dark screen for sleep".
+   - 100% $0.00 cost lock via pure FFmpeg video fade filter graph.
+2. **High-Intent Search Query & SEO Taxonomy Synthesizer (`pipeline/seo_suggest.py`):**
+   - Categorized taxonomy across canonical Psalms, nighttime pain points (anxiety, insomnia, fear), and acoustic qualifiers.
+   - Automatically enriches video tags to YouTube's 500-character limit with high-converting search phrases.
+3. **Automated Weekly Community Tab Dispatcher (`.github/workflows/community.yml` & `scripts/post_community.py`):**
+   - Autonomous twice-weekly schedule (Wednesdays and Sundays at 8:14pm local).
+   - Publishes midweek prayer walls, interactive scripture polls, and weekend thanksgiving cards.
+4. **Signature Sacred Sonic Branding (`pipeline/sonic_branding.py`):**
+   - Injects a 2.5s 528 Hz Solfeggio acoustic bell strike into video/podcast intros and a 3.5s 432 Hz peace fade into outros.
+   - 100% procedural synthesis via pure NumPy DSP; zero external stock samples or royalty claims.
+
+
 

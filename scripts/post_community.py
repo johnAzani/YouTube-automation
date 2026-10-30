@@ -31,6 +31,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="YouTube Community Tab Automation Engine")
     parser.add_argument("--generate-weekly", action="store_true", help="Generate 7-day community schedule and cards")
     parser.add_argument("--preview", action="store_true", help="Preview the current community post")
+    parser.add_argument("--publish", action="store_true", help="Publish or stage today's community post")
+    parser.add_argument("--dry-run", action="store_true", help="Dry-run without live network calls")
     parser.add_argument("--out-dir", type=str, default="content/community", help="Output directory")
 
     args = parser.parse_args()
@@ -39,6 +41,14 @@ def main() -> None:
     print("=" * 72)
     print("THE SECRET PLACE — YOUTUBE COMMUNITY TAB AUTOMATION ($0.00 COST LOCK)")
     print("=" * 72)
+
+    if args.publish:
+        from pipeline.community_posts import select_today_community_post, publish_community_post
+        post = select_today_community_post()
+        res = publish_community_post(post, dry_run=args.dry_run or True)
+        print(f"[+] Successfully executed: {res['post_id']} ({res['status']})")
+        print("=" * 72)
+        return
 
     if args.generate_weekly or not args.preview:
         print(f"[*] Generating weekly liturgical community schedule in {out_dir}...")

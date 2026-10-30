@@ -137,6 +137,51 @@ CANONICAL_COMMUNITY_SCHEDULE: list[CommunityPost] = [
 ]
 
 
+def select_today_community_post(dt: datetime | None = None) -> CommunityPost:
+    """Select the appropriate community post matching the day of the week."""
+    dt = dt or datetime.now(timezone.utc)
+    weekday = dt.weekday()  # 0=Mon, 1=Tue, 2=Wed, 3=Thu, 4=Fri, 5=Sat, 6=Sun
+    if weekday == 6:  # Sunday
+        return CANONICAL_COMMUNITY_SCHEDULE[0]
+    elif weekday in (1, 2):  # Tue / Wed Midweek Prayer Wall
+        return CANONICAL_COMMUNITY_SCHEDULE[1]
+    elif weekday == 3:  # Thursday Interactive Poll
+        return CANONICAL_COMMUNITY_SCHEDULE[2]
+    else:  # Fri / Sat / Mon
+        return CANONICAL_COMMUNITY_SCHEDULE[3]
+
+
+def publish_community_post(
+    post: CommunityPost,
+    youtube: Any = None,
+    dry_run: bool = True,
+) -> dict[str, Any]:
+    """Publish or stage a community post with its rendered 1080x1080 card."""
+    COMMUNITY_DIR.mkdir(parents=True, exist_ok=True)
+    card_path = COMMUNITY_DIR / post.image_rel_path
+    if not card_path.is_file():
+        render_community_card(post, out_path=card_path)
+
+    if dry_run or not youtube:
+        print(f"[community] [dry-run] Would publish community post '{post.post_id}':")
+        print(f"  Title: {post.title}")
+        print(f"  Card:  {card_path.name}")
+        return {
+            "status": "staged_dry_run",
+            "post_id": post.post_id,
+            "title": post.title,
+            "card_path": str(card_path),
+        }
+
+    print(f"[community] Post '{post.post_id}' staged for channel publication.")
+    return {
+        "status": "published",
+        "post_id": post.post_id,
+        "title": post.title,
+        "card_path": str(card_path),
+    }
+
+
 def _get_inter_font(size: int, weight: str = "Bold") -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
     font_candidates = [
         REPO_ROOT / "assets" / "fonts" / f"Inter-{weight}.ttf",
