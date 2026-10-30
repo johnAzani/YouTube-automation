@@ -1,5 +1,7 @@
 # Maintenance runbook
 
+> 📌 **LIVING MASTER STATE:** See **[STATE.md](STATE.md)** for current channel state, live Selar links, active credentials, and roadmap milestones before modifying the pipeline.
+
 How to keep this studio working. Everything below was **executed and verified on
 2026-10-20** on the commit that moved the project onto the maintained branch — outputs
 quoted are real, not aspirational. Where something could *not* be verified here it says so.

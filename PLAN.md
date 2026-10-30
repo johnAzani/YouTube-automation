@@ -1,6 +1,8 @@
 # Master Architecture & Operational Plan — The Secret Place
 ## Complete In-Depth Autonomous Production, 2026 Recommendation Engine, 4,000 Watch Hours Mathematical Engine & Continuous Research System ($0.00 / Month Hard Cost Lock)
 
+> 📌 **LIVING SYSTEM STATE & MASTER LEDGER:** See **[STATE.md](STATE.md)** for current component status, live Selar links, active credentials, and next immediate tasks before executing changes.
+
 > **Channel Strategic Status — October 29, 2026:**
 > • **Channel Identity:** *The Secret Place* (`@TheSecretPlace`) — Sacred Scripture, Bedtime Prayer & Faith Contemplation Studio.
 > • **Audience Equity:** **1,230 Verified Subscribers** (✅ Surpassed the 1,000 YPP threshold; primary milestone: 4,000 Valid Public Watch Hours).

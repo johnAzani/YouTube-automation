@@ -1,16 +1,21 @@
-# YouTube Automation Lab 🎬
+# The Secret Place — YouTube Automation Sanctuary 🕊️🎬
 
-A **₦0 / $0** YouTube production studio that runs entirely on **GitHub Actions**.
-Research plan: **[PLAN.md](PLAN.md)** · Setup: **[docs/SETUP.md](docs/SETUP.md)** ·
-Fine print: **[docs/DEEP_DIVE.md](docs/DEEP_DIVE.md)** · Growth science: **[docs/GROWTH.md](docs/GROWTH.md)** ·
-**Maintaining it: [MAINTENANCE.md](MAINTENANCE.md)**
+> 📌 **LIVING SYSTEM STATE & MASTER RECORD:** See **[STATE.md](STATE.md)** for the complete single-source-of-truth status of all active components, live Selar links, credentials, and next steps before starting any session.
 
-> **The honest pitch** (details & math in PLAN.md): this repo automates the *grunt work* —
-> narration, b-roll, assembly, captions, upload — while a human owns the creative
-> (ideas, scripts, approval, thumbnails). That split is not a compromise; it is exactly
-> what YouTube's 2026 "inauthentic content" policy demands of monetized channels.
-> Target: first AdSense revenue in ~4–8 months, **YPP application before 1 Feb 2027**
-> (thresholds double after that), $1K–$10K/mo in 12–24 months. Not "millions next week."
+A **₦0 / $0** autonomous scripture, prayer, and bedtime contemplation production studio running on **GitHub Actions**.
+Living Master State: **[STATE.md](STATE.md)** · Channel Plan: **[PLAN.md](PLAN.md)** · Setup: **[docs/SETUP.md](docs/SETUP.md)** ·
+Selar Nigeria Banking: **[docs/SELAR_NIGERIA_SETUP.md](docs/SELAR_NIGERIA_SETUP.md)** · Maintenance: **[MAINTENANCE.md](MAINTENANCE.md)**
+
+---
+
+## Channel Overview
+* **Identity:** *The Secret Place* (`@TheSecretPlace`)
+* **Persona Invariant:** Exclusively editorial sanctuary team; strictly zero mentions of personal creator names.
+* **Voiceover Invariant:** Google Gemini TTS (`Charon`) permanently locked at free tier.
+* **Cost Invariant:** Permanent $0.00 / month hard cost lock.
+* **Live Voluntary Offering Hub:** [selar.com/showlove/thesecretplace](https://selar.com/showlove/thesecretplace)
+* **Live Product #2 (Prayer Journal PDF):** [selar.com/i000qy7g39](https://selar.com/i000qy7g39)
+* **Automated Daily Release Slots:** `19:14 UTC` (8:14pm local bedtime peak), `06:14 UTC`, and `14:14 UTC`.
 
 ## Why it costs ₦0
 
