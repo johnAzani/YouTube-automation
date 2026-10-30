@@ -1,7 +1,7 @@
 {
   "product_id": "prod-001-offline-audio-sanctuary",
   "title": "432 Hz Offline Bedtime Sleep Sanctuary Audio Pack",
-  "subtitle": "Ad-Free Night Prayers \u00b7 Full HD WAV & MP3 \u00b7 Airplane Mode Ready",
+  "subtitle": "Ad-Free Night Prayers · Full HD MP3 · Airplane Mode Ready",
   "category": "Digital Audio Download",
   "price_usd": 0.0,
   "is_pay_what_you_want": true,
@@ -12,9 +12,50 @@
     "Listen in Airplane Mode with Screen Turned Off",
     "Mastered in 432 Hz Sacred Solfeggio Tuning",
     "EBU R128 Loudness Optimized (-16 LUFS Sleep Standard)",
-    "Lifetime Download Access & Instant Delivery"
+    "Lifetime Download Access & Instant Delivery",
+    "1-Hour Continuous Bedtime Peace Session",
+    "3-Hour Continuous Night Watch Meditation",
+    "Complete Bedtime Scripture Printable Companion Guide"
   ],
-  "description": "Rest tonight without Wi-Fi, battery drain, screen glare, or mid-roll advertisements. This official offline audio pack features all canonical night prayers from The Secret Place (Psalms 91, 23, 121, 27, 46, and 34) mastered at 432 Hz Solfeggio frequency with 1.5 Hz Delta brainwave entrainment for uninterrupted, restorative sleep.\n\nIncluded Files:\n\u2022 High-Definition 320kbps MP3s + Studio Master WAVs\n\u2022 1-Hour Continuous Bedtime Peace Session\n\u2022 3-Hour Continuous Night Watch Meditation\n\u2022 Complete Bedtime Scripture Printable Companion Guide",
+  "description": "Rest tonight without Wi-Fi, battery drain, screen glare, or mid-roll advertisements. This official offline audio pack features all canonical night prayers from The Secret Place (Psalms 91, 23, 121, 27, 46, and 34) mastered at 432 Hz Solfeggio frequency with 1.5 Hz Delta brainwave entrainment for uninterrupted, restorative sleep.\n\nIncluded Files:\n• High-Definition 320kbps MP3s\n• 1-Hour Continuous Bedtime Peace Session\n• 3-Hour Continuous Night Watch Meditation\n• Complete Bedtime Scripture Printable Companion Guide\n\nSelar Note: ZIP file is 497 MB (under Selar's 750 MB per-file limit). WAV masters available on request.",
   "selar_payout_target": "First Bank of Nigeria USD Domiciliary Account (FBNINGLA)",
-  "store_url": "https://selar.com/showlove/thesecretplace/prod-001-offline-audio-sanctuary"
+  "store_url": "https://selar.com/showlove/thesecretplace/prod-001-offline-audio-sanctuary",
+  "selar_listing_status": "READY — ZIP packaged at 497 MB (under Selar's 750 MB limit). Copy-paste listing instructions in STATE.md §5.",
+  "files": {
+    "download_zip": "432hz-offline-bedtime-sanctuary-pack.zip",
+    "zip_size_bytes": 520969564,
+    "zip_size_mb": 497,
+    "selar_max_file_size_mb": 750,
+    "contents": [
+      {
+        "filename": "432hz-bedtime-peace-1hour.mp3",
+        "format": "MP3 320kbps 44.1kHz stereo",
+        "duration_minutes": 60,
+        "size_bytes": 144002655
+      },
+      {
+        "filename": "432hz-night-watch-3hour.mp3",
+        "format": "MP3 320kbps 44.1kHz stereo",
+        "duration_minutes": 180,
+        "size_bytes": 432002655
+      },
+      {
+        "filename": "companion-guide-bedtime-scripture.pdf",
+        "format": "PDF printable",
+        "pages": 1,
+        "size_bytes": 5102
+      }
+    ]
+  },
+  "audio_specs": {
+    "solfeggio_frequency_hz": 432.0,
+    "delta_entrainment_hz": 1.5,
+    "sample_rate_hz": 44100,
+    "bit_depth": 16,
+    "channels": 2,
+    "loudness_target_lufs": -16.0,
+    "synthesis_method": "100% procedural numpy DSP, zero external samples, zero royalty claims",
+    "cost_lock": "$0.00 — no paid APIs, no cloud rendering, no subscriptions"
+  },
+  "scriptures_included": ["Psalm 91", "Psalm 23", "Psalm 121", "Psalm 27", "Psalm 46", "Psalm 34"]
 }

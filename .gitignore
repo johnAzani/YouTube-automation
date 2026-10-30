@@ -27,3 +27,6 @@ image-search/enron-*-plate-*.png
 # API reports belong in short-lived Actions artifacts, not source history.
 content/channel-metrics.json
 env/
+
+# Built product packs for Selar — regenerate via scripts/generate_night_queue.py + tools/build_sleep_suite.py
+*.zip
