@@ -6,11 +6,13 @@ and crisis support info under the strict $0.00 cost lock.
 """
 from __future__ import annotations
 
+import os
 import re
 
 CHANNEL_HANDLE = "@TheSecretPlace"
 SUBSCRIBE_URL = "https://www.youtube.com/@TheSecretPlace?sub_confirmation=1"
 PODCAST_URL = "https://johnazani.github.io/YouTube-automation/podcast.xml"
+SELAR_STORE_URL = os.environ.get("SELAR_STORE_URL", "https://selar.co/m/TheSecretPlace")
 
 # Official Playlists
 PLAYLIST_LINKS = {
@@ -22,8 +24,17 @@ PLAYLIST_LINKS = {
 
 def build_standardized_description_footer(
     scripture_source: str = "The Holy Bible (King James Version / English Standard Version, Public Domain)",
+    include_store_links: bool = True,
 ) -> str:
     """Build the official social funnel footer appended to all YouTube descriptions."""
+    store_block = ""
+    if include_store_links and SELAR_STORE_URL:
+        store_block = (
+            f"\n📥 OFFLINE BEDTIME PRAYER SANCTUARY (AD-FREE AUDIO & PRINTABLES):\n"
+            f"• Download 432 Hz Offline Sleep Audio & Prayer Journal: {SELAR_STORE_URL}\n"
+            f"• Support Our Global Prayer Ministry: {SELAR_STORE_URL}\n"
+        )
+
     footer = (
         f"\n\n"
         f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
@@ -34,7 +45,8 @@ def build_standardized_description_footer(
         f"• Bedtime Sleep Meditations (432 Hz): {PLAYLIST_LINKS['Bedtime Scripture Meditations (432 Hz)']}\n"
         f"• Complete Psalms Expositions: {PLAYLIST_LINKS['Complete Psalms Devotional Series']}\n\n"
         f"🎙️ AUDIO PODCAST (APPLE / SPOTIFY):\n"
-        f"Listen free to our nighttime audio stream: {PODCAST_URL}\n\n"
+        f"Listen free to our nighttime audio stream: {PODCAST_URL}\n"
+        f"{store_block}\n"
         f"📖 SCRIPTURE & ATTRIBUTION:\n"
         f"{scripture_source}\n"
         f"Produced by The Secret Place | Daily Scripture & Evening Prayer Sanctuary.\n\n"
