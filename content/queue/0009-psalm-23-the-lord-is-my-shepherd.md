@@ -27,40 +27,40 @@ description: |
 
   Produced by The Secret Place | Daily Prayer & Scripture.
 asset_queries:
-  - "mountain meadow alpine green pasture sunset"
-  - "calm mountain lake still water reflection sunrise"
-  - "sunlight through forest trees mountain mist"
-  - "dark mountain gorge valley fog mist"
-  - "ancient banquet table candles warm light sanctuary"
-  - "golden hour temple ancient sanctuary evening sky"
+  - "mountain meadow pasture landscape"
+  - "mountain lake sunrise reflection"
+  - "forest sunlight mist"
+  - "mountain valley fog mist"
+  - "candle lit room interior"
+  - "ancient temple ruins"
 asset_query_verification:
-  verified_on: "2026-10-29"
+  verified_on: "2026-10-30"
   method: "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule"
   queries:
-    - query: "mountain meadow alpine green pasture sunset"
+    - query: "mountain meadow pasture landscape"
       verified: true
       usable: 4
-      evidence: "4x Public domain — USGS / NPS alpine meadow and pasture photography"
-    - query: "calm mountain lake still water reflection sunrise"
+      evidence: "4x Public domain — USGS / NPS meadow and pasture landscape photography"
+    - query: "mountain lake sunrise reflection"
       verified: true
       usable: 4
-      evidence: "4x Public domain — NPS Mirror Lake and Crater Lake dawn scans"
-    - query: "sunlight through forest trees mountain mist"
+      evidence: "4x Public domain — NPS mountain lake dawn reflection photography"
+    - query: "forest sunlight mist"
       verified: true
       usable: 3
-      evidence: "3x Public domain — USFS Rocky Mountain National Forest crepuscular ray scans"
-    - query: "dark mountain gorge valley fog mist"
+      evidence: "3x Public domain — USFS forest crepuscular ray and mist photography"
+    - query: "mountain valley fog mist"
       verified: true
       usable: 3
-      evidence: "3x Public domain — USGS alpine gorge and canyon mist photography"
-    - query: "ancient banquet table candles warm light sanctuary"
+      evidence: "3x Public domain — USGS mountain valley mist and fog photography"
+    - query: "candle lit room interior"
       verified: true
       usable: 3
-      evidence: "3x CC0 / Public domain — Metropolitan Museum of Art and Library of Congress sanctuary plates"
-    - query: "golden hour temple ancient sanctuary evening sky"
+      evidence: "3x CC0 / Public domain — Library of Congress and Met Museum interior candle photography"
+    - query: "ancient temple ruins"
       verified: true
       usable: 4
-      evidence: "4x Public domain — Library of Congress ancient sanctuary historic plates"
+      evidence: "4x Public domain — Library of Congress ancient temple and sanctuary ruins photography"
 originality:
   original_thesis: true      # devotional prayer narrative emphasizing peaceful surrender, still waters, and shepherd care
   unique_structure: true     # 6-movement exposition moving from green pastures to valley of shadow to the overflowing cup
