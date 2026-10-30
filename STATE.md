@@ -131,15 +131,15 @@
 ## 4. Active Roadmap (What to Do Next)
 
 1. **List Product #1 on Selar (432 Hz Offline Bedtime Audio Sanctuary) — READY FOR LISTING (October 30, 2026):**
-   * Audio files generated and packaged (all $0.00 procedural DSP, MP3 only — WAVs dropped to fit Selar's 750 MB per-file limit):
-     * `content/products/audio/432hz-bedtime-peace-1hour.mp3` (144 MB, 320kbps, 60 min)
-     * `content/products/audio/432hz-night-watch-3hour.mp3` (432 MB, 320kbps, 180 min)
+   * Audio files generated and packaged (all $0.00 procedural DSP):
+     * `content/products/audio/432hz-bedtime-peace-1hour.mp3` (144 MB, 320kbps, 60 min) — under Selar's 750 MB per-file limit ✓
+     * `content/products/audio/432hz-night-watch-3hour.mp3` (432 MB, 320kbps, 180 min) — under Selar's 750 MB per-file limit ✓
      * `content/products/audio/companion-guide-bedtime-scripture.pdf` (5 KB printable)
-     * Packaged ZIP: `content/432hz-offline-bedtime-sanctuary-pack.zip` (~497 MB — under Selar's 750 MB limit ✓)
+   * Upload individual MP3 files to Selar one at a time (each under 750 MB limit)
    * Manifest: `content/products/prod-001-offline-audio-sanctuary.json` (updated with real file specs)
    * Cover: `content/products/cover_offline_audio_pack.png` (1080x1080, DOCOGA REELS v2)
-   * **Next step:** Manual listing on Selar.co — see copy-paste instructions below in §5.
-   * **⚠️ Selar Constraint:** Max file size per downloadable file is 750 MB. ZIP is 497 MB — fits with room to spare.
+   * **Next step:** Upload MP3 files individually to Selar.co — see copy-paste instructions below in §5.
+   * **⚠️ Selar Constraint:** Max file size per downloadable file is 750 MB. All MP3s are individually under this limit. ZIP was 497 MB but could not be pushed to GitHub (100 MB file limit).
 2. **Expand the Nightly Prayer Queue to 30 Continuous Nights — COMPLETE (October 30, 2026):**
    * All 24 queue scripts (IDs `0009`–`0033`) authored, factcheck worksheets generated, and all 217 tests passing.
    * Guarantees a full 30-day automated release runway at `19:14 UTC` / `06:14 UTC` / `14:14 UTC`.
