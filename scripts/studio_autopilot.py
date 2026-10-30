@@ -192,10 +192,25 @@ def main() -> None:
         print(json.dumps(full_report, indent=2))
         return
 
+    def _fmt_friendly(iso_or_dt):
+        try:
+            if isinstance(iso_or_dt, str):
+                dt = datetime.fromisoformat(iso_or_dt.replace("Z", "+00:00"))
+            else:
+                dt = iso_or_dt
+            hour_str = dt.strftime("%I").lstrip("0") or "12"
+            return f"{dt.strftime('%A')} {hour_str}:{dt.strftime('%M')}{dt.strftime('%p').lower()} {dt.strftime('%d %B %Y')}"
+        except Exception:
+            return str(iso_or_dt)
+
+    friendly_date = _fmt_friendly(full_report['timestamp_utc'])
+    friendly_reset = _fmt_friendly(cost_lock['quota_reset_utc'])
+    friendly_next_cron = _fmt_friendly(schedule.next_cron_run_utc)
+
     print("\n" + "=" * 74)
     print("THE SECRET PLACE — AUTONOMOUS STUDIO AUTOPILOT BRIEFING")
     print("=" * 74)
-    print(f"Timestamp:       {full_report['timestamp_utc']}")
+    print(f"Date & Time:     {friendly_date}")
     print(f"Channel:         {full_report['channel']}")
     print(f"Subscribers:     {full_report['subscribers']} / 1,000 (✅ YPP Threshold Surpassed)")
     print(f"Primary Goal:    4,000 Valid Public Watch Hours (Fast-Tracked)")
@@ -204,7 +219,7 @@ def main() -> None:
     print(f"  • Monthly Spend:     ${cost_lock['monthly_cost_usd']:.2f} / month (LOCKED)")
     print(f"  • TTS Engine:        {cost_lock['tts_engine']} — {cost_lock['tts_cost']}")
     print(f"  • Audio Synthesis:   {cost_lock['music_bed_cost']}")
-    print(f"  • Daily Quota Reset: {cost_lock['quota_reset_utc']}")
+    print(f"  • Daily Quota Reset: {friendly_reset}")
     print("-" * 74)
     print("DUPLICATE PREVENTION SHIELD:")
     print(f"  • Shield Status:     {'ACTIVE' if dup_shield['shield_active'] else 'INACTIVE'}")
@@ -213,7 +228,7 @@ def main() -> None:
     print("-" * 74)
     print("QUEUE RUNWAY & CRON SCHEDULING (HEADLESS PRODUCTION):")
     print(f"  • Production Runway: {schedule.runway_days:.1f} days")
-    print(f"  • Next Cron Release: {schedule.next_cron_run_utc}")
+    print(f"  • Next Cron Release: {friendly_next_cron}")
     print(f"  • Next Long-Form:    {schedule.next_longform or 'None'}")
     print(f"  • Next Short:        {schedule.next_short or 'None'}")
     print(f"  • Approved Longform: {schedule.longform_approved_count} scripts queued")
