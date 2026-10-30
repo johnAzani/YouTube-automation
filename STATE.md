@@ -128,26 +128,41 @@
 
 ### Automation Status & Investigation Log (October 30, 2026):
 
-**Friday 30 October 2026 — Automation Did NOT Publish Today:**
-* **06:14 UTC slot (7:14 AM WAT):** Passed — no video published. `0009` (Psalm 23) still in `content/queue/` with `status: approved`.
-* **14:14 UTC slot (3:14 PM WAT):** Passed — no video published. `0009` still in queue.
+**Friday 30 October 2026 — Real workflow run on `main` (NOT dry run):**
+
+* **06:14 UTC slot (7:14 AM WAT):** Passed — no video published.
+* **14:14 UTC slot (3:14 PM WAT):** Passed — no video published.
 * **19:14 UTC slot (8:14 PM WAT):** Upcoming — next scheduled release.
+* **Manual workflow_dispatch run (#42/43) on `main`:** Rendered `0009` (Psalm 23) successfully but workflow reported failure due to `short_release --next` crash.
 
-**Root Cause Found & Fixed — `.github/workflows/produce.yml`:**
-* **Bug:** In the scheduled run path (`else` branch with no `--short` or `--job` input), `rc=${PIPESTATUS[0]}` captured only `short_release`'s exit code. Since `content/shorts-queue/` does not exist, `short_release --next` always exits 0 (nothing to do). This meant `pipeline.run --next`'s exit code was **completely ignored** — even if the longform upload failed, the workflow reported success, committed nothing, and pushed nothing.
-* **Fix:** Now captures both `short_rc` and `run_rc`, sets `rc` to the worst of the two, so a failed longform upload fails the workflow. Committed as `7ea0dac`, pushed to `arena/867dbd92-youtube-automation`.
+**Real Run #42/43 Details:**
+* ✅ **Gemini TTS (Charon voice)** — 182.9s narration synthesized successfully
+* ✅ **Pixabay API key** — working, downloaded assets (3840x2160, 1920x1080)
+* ✅ **Video rendered** — `psalm-23-the-lord-is-my-shepherd.mp4` (240 MB)
+* ✅ **Metadata pack** — 6 chapters, 93-char title
+* ❌ **short_release --next crashed** — `unknown script 'short-psalm23'` — a shorts-queue manifest referenced a short key not in EDITIONS
+* ❓ **YouTube upload** — unconfirmed; workflow failed at short_release before reaching upload confirmation
 
-**Published Video Records (All Time):**
-* `0008-psalm-91-prayer-of-divine-protection.md` → YouTube ID `7RDX0fbIOtQ`, published Thursday 29 October 2026.
-* `short-0002-psalm-91-prayer-of-protection.md` → YouTube ID `SG69BbNlfRw`, published Wednesday 28 October 2026, privacy: **public** ✓.
-* `short-0001-how-enron-died.md` → YouTube ID `DLEWL6dm5lo`, published Friday 23 October 2026, privacy: **PRIVATE** ❌ — uploaded but never made public. Needs manual privacy change to `public` in YouTube Studio.
+**Fixes Applied:**
+* **PR #104 merged to main** — exit-code capture fix (pipeline.run failures no longer masked by short_release) + broadened asset queries for `0009`.
+* **PR #105 merged to main** — `short_release --next` now skips manifests with unknown short keys instead of crashing. If no valid short manifest exists, exits 0 and lets `pipeline.run --next` proceed.
+* **`PIXABAY_API_KEY` added** to GitHub repository secrets — stock asset source now available.
+* **`PEXELS_API_KEY` still missing** — Pexels API key issuance is paused (pexels.com/api/ shows "New API key issuance is currently paused"). Recommended to add when available.
+* **Asset queries broadened** in `content/queue/0009-psalm-23-the-lord-is-my-shepherd.md` to terms more likely to return Wikimedia Commons / US government public domain results.
+* **`originality` checklist block added** to `0009` frontmatter (required by originality gate).
 
-**Channel Content Audit (from `short-0001` and `short-0002` published records):**
-* Pre-existing unlisted video `ZgJdfb6T9hk` titled "John Azani 🌟 is live!" (published 23 Oct 2026) — violates the zero-mentions-of-John-Azani constraint. Pre-dates this automation; recommend deleting or privatizing via YouTube Studio.
-* Pre-existing `john-azani-*` branded assets in `docs/media/` — also violate the persona constraint; recommend removing.
+**Repository Secrets (as of Oct 30, 2026):**
+| Secret | Last Updated | Status |
+|--------|-------------|--------|
+| `GEMINI_API_KEY` | 4 days ago | ✓ Present |
+| `PIXABAY_API_KEY` | 10 minutes ago | ✓ Present |
+| `YOUTUBE_CLIENT_ID` | last week | ✓ Present |
+| `YOUTUBE_CLIENT_SECRET` | last week | ✓ Present |
+| `YOUTUBE_REFRESH_TOKEN` | last week | ✓ Present |
+| `PEXELS_API_KEY` | — | ✗ Missing (issuance paused at Pexels) |
 
 **Next Approved Job:**
-* `0009-psalm-23-the-lord-is-my-shepherd.md` — `status: approved`, `privacy: public`, `format: longform`, `voice: Charon`. No authored master exists (`deep-dive-psalm23.mp4` absent), so it will render via TTS + assets + assemble path on the next successful produce.yml run.
+* `0009-psalm-23-the-lord-is-my-shepherd.md` — `status: approved`, `privacy: public`, `format: longform`, `voice: Charon`. Will render via TTS + assets + assemble path on the next successful produce.yml run.
 
 ---
 
