@@ -245,6 +245,7 @@ def main() -> None:
     print(f"  • Localizations:     Spanish (es) & Portuguese (pt) Active ($0.00 extra cost)")
     print("-" * 74)
     print("COMMENT ENGAGEMENT & PASTORAL CARE:")
+    print(f"  • Cadence:           3-Pulse Cadence (8:14am, 4:14pm, 8:14pm)")
     print(f"  • Replied Ledger:    {comments['historical_replies_recorded']} comments recorded")
     print(f"  • Engine Readiness:  {'ONLINE' if comments['engine_ready'] else 'OFFLINE'}")
     print("=" * 74)

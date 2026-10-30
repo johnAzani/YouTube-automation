@@ -176,6 +176,10 @@ python scripts/reply_comments.py --apply --limit 15
 
 ### 6.3 Automated GitHub Actions Execution
 The repository includes an autonomous workflow: [`.github/workflows/comments.yml`](../.github/workflows/comments.yml).
-* **Schedule:** Executes daily at `18:14 UTC` (engages evening commenters ahead of bedtime peak).
+* **Cadence:** Executes on a 3-Pulse Daily Cadence:
+  - **Pulse 1 (07:14 UTC / 8:14am local):** Morning release +1hr First-Hour Velocity pulse.
+  - **Pulse 2 (15:14 UTC / 4:14pm local):** Afternoon release +1hr global priming pulse.
+  - **Pulse 3 (19:14 UTC / 8:14pm local):** Bedtime sanctuary & evening prayer sweep.
+* **Batch Sizing:** Default 8 comments per pulse (up to 24/day), consuming ~1,200 quota units/day (<12% of YouTube Data API daily free allowance).
 * **Manual Dispatch:** Can be triggered on-demand via GitHub Actions UI with custom `limit` and `video_id` parameters.
 * **Ledger Auto-Commit:** Commits `content/comments/replied.json` back to the repository with `[skip ci]`.

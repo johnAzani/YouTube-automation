@@ -2,14 +2,19 @@ name: Autonomous Comment Replies
 
 on:
   schedule:
-    # Run once daily at 18:14 UTC to engage with afternoon and evening viewers
-    - cron: '14 18 * * *'
+    # 3-Pulse Comment Engagement Cadence ($0.00 Cost Lock):
+    # 1. 07:14 UTC (8:14am local)  — Morning release +1hr First-Hour Velocity pulse
+    # 2. 15:14 UTC (4:14pm local)  — Afternoon release +1hr global priming pulse
+    # 3. 19:14 UTC (8:14pm local)  — Bedtime sanctuary & evening prayer sweep
+    - cron: '14 7 * * *'
+    - cron: '14 15 * * *'
+    - cron: '14 19 * * *'
   workflow_dispatch:
     inputs:
       limit:
-        description: 'Maximum comments to reply to (max 25)'
+        description: 'Maximum comments to reply to per pulse (default 8, max 25)'
         required: false
-        default: '15'
+        default: '8'
       video_id:
         description: 'Target specific YouTube video ID (leave blank for all channel videos)'
         required: false
