@@ -36,8 +36,8 @@ We have already authored the complete product specifications and rendered high-r
 | Product ID | Title | File to Upload | Suggested Pricing |
 | :--- | :--- | :--- | :--- |
 | `prod-001` | **432 Hz Offline Bedtime Sleep Sanctuary Audio Pack** | MP3/WAV Audio from `output/sleep_sanctuary/` | Pay-What-You-Want ($0 min, $5 suggested) |
-| `prod-002` | **30-Night Scripture Protection Prayer Journal** | `content/products/30_night_prayer_journal.pdf` (34 pages) | Pay-What-You-Want ($0 min, $3 suggested) |
-| `prod-003` | **The Secret Place Ministry Partner Offering** | Monthly Subscription / Membership | $5.00 / month |
+| `prod-002` | **30-Night Scripture Protection Prayer Journal** | `content/products/30_night_prayer_journal.pdf` (34 pages) | **Live:** [selar.com/i000qy7g39](https://selar.com/i000qy7g39) (₦3,000 / $3) |
+| `prod-003` | **The Secret Place Ministry Partner Offering** | Monthly Subscription / Membership | **Live:** [selar.com/showlove/thesecretplace](https://selar.com/showlove/thesecretplace) ($5.00) |
 
 #### How to Add Each Product in Selar:
 1. Click **Add Product $\rightarrow$ Digital Product**.
