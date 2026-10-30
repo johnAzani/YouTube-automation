@@ -47,7 +47,22 @@ def main():
     pdf_path = build_prayer_journal_pdf(out_dir / "30_night_prayer_journal.pdf")
     files.append(pdf_path)
 
-    print(f"[*] Generated {len(files)} product assets in {out_dir.relative_to(REPO_ROOT)}:")
+    # Sync to docs/products/ for direct 1-tap browser downloads from the admin dashboard
+    docs_products_dir = REPO_ROOT / "docs" / "products"
+    docs_products_dir.mkdir(parents=True, exist_ok=True)
+    import shutil
+    import zipfile
+    for f in files:
+        shutil.copy2(f, docs_products_dir / f.name)
+
+    zip_path = docs_products_dir / "the-secret-place-selar-products-pack.zip"
+    with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as zf:
+        for f in out_dir.iterdir():
+            if f.is_file() and not f.name.endswith(".zip"):
+                zf.write(f, arcname=f.name)
+    files.append(zip_path)
+
+    print(f"[*] Generated {len(files)} product assets in {out_dir.relative_to(REPO_ROOT)} & docs/products/:")
     for f in files:
         size_kb = f.stat().st_size / 1024
         print(f"    • {f.name} ({size_kb:.1f} KB)")
