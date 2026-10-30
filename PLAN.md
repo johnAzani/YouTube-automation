@@ -516,5 +516,22 @@ By strictly adhering to the **$0.00 cost lock**, maintaining the **DOCOGA REELS 
    - Injects a 2.5s 528 Hz Solfeggio acoustic bell strike into video/podcast intros and a 3.5s 432 Hz peace fade into outros.
    - 100% procedural synthesis via pure NumPy DSP; zero external stock samples or royalty claims.
 
+---
+
+## 13. Selar Digital Products Store & Pre-Monetization Revenue Channels
+
+1. **Immediate Pre-Monetization Revenue via Selar.co (`pipeline/selar_store.py` & `scripts/build_selar_products.py`):**
+   - Enables direct income generation prior to achieving 4,000 YouTube watch hours under the strict $0.00 cost lock.
+   - Global checkout accepting USD, GBP, EUR, and NGN via Visa, Mastercard, Apple Pay, and Google Pay from US, UK, and European viewers.
+   - Payouts route directly into the user's First Bank of Nigeria USD Domiciliary Account (`FBNINGLA`) with zero PayPal/Stripe friction.
+2. **Canonical Digital Deliverables:**
+   - Product 1: 432 Hz Offline Bedtime Sleep Sanctuary Audio Pack (MP3/WAV) — Pay-What-You-Want ($5 suggested).
+   - Product 2: 30-Night Scripture Protection Prayer Journal & Bedtime Declarations (Printable PDF) — Pay-What-You-Want ($3 suggested).
+   - Product 3: Monthly Ministry Partner / Covenant Offering ($5/month).
+3. **Automated Description Integration (`pipeline/social_pack.py`):**
+   - Seamlessly appends respectful, non-intrusive offline audio download and ministry partner links to all YouTube descriptions.
+   - Full setup walkthrough documented in `docs/SELAR_NIGERIA_SETUP.md`.
+
+
 
 

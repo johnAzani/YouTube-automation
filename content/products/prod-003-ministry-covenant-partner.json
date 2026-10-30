@@ -1,0 +1,19 @@
+{
+  "product_id": "prod-003-ministry-covenant-partner",
+  "title": "The Secret Place Ministry Partner / Covenant Offering",
+  "subtitle": "Support Our Global Mission to Keep Scripture Prayers Free Forever",
+  "category": "Community Membership / Offering",
+  "price_usd": 5.0,
+  "is_pay_what_you_want": true,
+  "suggested_price_usd": 10.0,
+  "cover_image": "cover_ministry_partner.png",
+  "features": [
+    "Partner in Ministry Outreach Across 120+ Nations",
+    "Monthly Digital Prayer Letter & Scripture Wallpaper Pack",
+    "Special Community Prayer Wall Commemoration",
+    "Cancel or Adjust Giving at Any Time"
+  ],
+  "description": "Support the daily production and global broadcast of peaceful scripture meditations. Your monthly covenant offering helps us keep nighttime prayers free, ad-free, and accessible to millions of believers, hospital patients, and seekers worldwide who suffer from insomnia, fear, and nighttime anxiety.",
+  "selar_payout_target": "First Bank of Nigeria USD Domiciliary Account (FBNINGLA)",
+  "store_url_placeholder": "https://selar.co/m/TheSecretPlace/prod-003-ministry-covenant-partner"
+}
