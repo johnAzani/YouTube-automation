@@ -55,6 +55,10 @@ jobs:
           results.append('- No speech generation or upload was attempted.')
           text = '\n'.join(results) + '\n'
           print(text)
+          # Publish only fixed, sanitized outcome strings as check annotations;
+          # this makes the result readable via GitHub's API without raw logs.
+          for result in results[1:]:
+              print('::notice::' + result.removeprefix('- '))
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as summary:
               summary.write(text)
           PY
