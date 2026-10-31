@@ -249,3 +249,8 @@
 3. **Visual Theme Standard:** Signature DOCOGA REELS v2 sapphire glassmorphic visual system with directional drop shadows, Inter typography, radiant gold active-word illumination, and full-bleed 16:9 widescreen long-form and 9:16 vertical Shorts plates.
 4. **Persona & Attributions:** Strictly *The Secret Place* editorial team. Zero mentions of personal creator names in scripts, descriptions, metadata, or audio.
 5. **Website Function:** The website (`docs/index.html` / GitHub Pages) is exclusively an **analytics display and asset download dashboard**. There is NO manual review gate on the website; releases are published directly to YouTube.
+
+
+### 31 October 2026 — OAuth and publication recovery
+
+The user reauthorized YouTube using their own OAuth client and updated the three GitHub Actions YouTube credentials. Manual production run #47 uploaded Psalm 23 as public video `JZv67RNPCEI` and posted its pastoral comment, confirming the upload credentials worked. The overall run failed because the Shorts renderer has no `short-psalm23` script; its publication-record commit step was skipped, so the uploaded long-form job remained in the queue on main. This branch reconciles that receipt and adjusts the workflow to commit content changes even when the render step fails, and skips queued Shorts unsupported by the renderer. These changes require merging before they protect production. The video duration reported by the workflow was 190 seconds, below the requested 5–8+ minute long-form target. Do not rerun until the record is reconciled.

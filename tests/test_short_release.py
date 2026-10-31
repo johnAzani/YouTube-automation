@@ -304,3 +304,14 @@ class ShortReleaseTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+def test_queue_skips_known_edition_missing_from_renderer(tmp_path):
+    queue = tmp_path / 'queue'
+    queue.mkdir()
+    (queue / '01.yml').write_text('status: approved\nshort: short-psalm23\n')
+    (queue / '02.yml').write_text('status: approved\nshort: short-psalm91\n')
+    selected = select_next_queued_short(queue)
+    assert selected is not None
+    assert selected[1] == 'short-psalm91'
+    assert (queue / '01.yml').exists()

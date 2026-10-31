@@ -14,6 +14,7 @@ Enforces fail-closed pre-flight and post-render gates before calling
 from __future__ import annotations
 
 import argparse
+import ast
 import json
 import os
 import re
@@ -347,6 +348,16 @@ def verify_short_render(
     return probe
 
 
+def _renderer_script_keys() -> set[str]:
+    """Read renderer keys without importing its heavy rendering dependencies."""
+    tree = ast.parse((REPO_ROOT / "tools" / "shorts.py").read_text(encoding="utf-8"))
+    for node in tree.body:
+        if isinstance(node, ast.Assign) and any(isinstance(t, ast.Name) and t.id == "SCRIPTS" for t in node.targets):
+            if isinstance(node.value, ast.Dict):
+                return {key.value for key in node.value.keys if isinstance(key, ast.Constant) and isinstance(key.value, str)}
+    raise RuntimeError("Cannot determine supported Shorts renderer scripts")
+
+
 def select_next_queued_short(
     queue_dir: Path | None = None,
     published_dir: Path | None = None,
@@ -427,6 +438,10 @@ def select_next_queued_short(
         # Skip manifests referencing short keys that aren't valid EDITIONS keys
         if key not in EDITIONS:
             print(f"[queue] Skipping manifest {path.name}: unknown short key {key!r} not in EDITIONS")
+            continue
+
+        if key not in _renderer_script_keys():
+            print(f"[queue] Skipping manifest {path.name}: renderer has no script for {key!r}")
             continue
 
         return path, key
