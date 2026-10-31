@@ -263,3 +263,30 @@ The user rejected the montage/subtitle style used in public Psalm 23 video `JZv6
 ### Approved widescreen style — 31 October 2026
 
 The owner watched the GitHub Pages preview and explicitly confirmed: “Exactly that is it lock it in.” The permanent visual reference is `docs/media/approved-style-preview.mp4` (SHA-256 `69c55e855ed3a9a8ec1ffa79663489d7370eaaf636158c1ae853fe2c11d9f156`), based on `tools/shorts.py` `short-psalm91`. Requirements and limitations are documented in `docs/APPROVED_VISUAL_STYLE.md`, and a regression test protects the preview from silent replacement. PR #109's legacy-renderer production block and PR #110's preview are already on main; prior notes saying those fixes still need merging are historical. The nine-second preview is not a completed long-form renderer. Long-form production stays paused until the approved style, measured speech sync, and at least five minutes of real Gemini Charon narration are implemented and verified. Whether the owner deleted YouTube video `JZv67RNPCEI` has not been confirmed.
+
+### Branch cleanup and PR #112 readiness review — 31 October 2026
+
+All 61 stale remote `arena/*` branches were deleted from `origin`; `main` is
+untouched at `1813451`. PR #112's branch was kept because it is the only
+unmerged work, and its tip is additionally preserved as the tag
+`archive-pr112-approved-prayer-visual-pipeline` (`e7c6c42`).
+
+PR #112 was reviewed offline and **not merged**. Verified: 236 tests pass on its
+tip; the widescreen renderer runs for real (1280×720 H.264/AAC, sapphire grade,
+frosted HUD, Inter display type, gold active-word illumination) at 202 ms/frame
+on a 2-core sandbox (4.85× realtime, i.e. ~12–15 min for a 6-minute master on a
+4-core runner); `full_narration` matches the concatenated scene narrations for
+all 28 queue scripts. Unverified: live Gemini `gemini-3.8-flash-tts`/Charon
+synthesis under the new no-fallback policy, the `faster-whisper` alignment model
+and tolerance check, licensed asset fetch, and a full-length render plus upload.
+A dry run could not be started from this session — `gh workflow run` returns
+`HTTP 403` because the GitHub integration has no `actions:write`.
+
+**Blocking finding:** the queue is not a 30-night long-form runway.
+`python scripts/audit_runway.py` reports 22 of 28 scripts below the 650-word
+(≈4.2 min) floor enforced by `pipeline/prayer_pipeline.py`; the short ones are
+227–408 words (1.5–2.7 min). Of the 6 that clear the floor, 0003–0007 are
+`draft`, so **only 0010 is publishable: 1 job, 5.7 minutes**. Merging #112 today
+would publish 0010 on the next cron and then fail closed on the length gate
+three times a day. Full review, recommendations and the exact dry-run to run:
+`docs/WIDESCREEN_PIPELINE_READINESS.md`.
