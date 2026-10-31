@@ -1,0 +1,60 @@
+name: Read-only Gemini key diagnostic
+
+# This diagnostic requests model metadata only: it does not generate content,
+# inspect other secrets, or verify billing. It never prints the API key or API
+# response, and runs only from this trusted branch.
+on:
+  push:
+    branches:
+      - arena/564c86c7-youtube-automation
+    paths:
+      - .github/workflows/gemini-key-diagnostic.yml
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  check:
+    if: github.ref == 'refs/heads/arena/564c86c7-youtube-automation'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check key presence and model metadata
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import urllib.error
+          import urllib.request
+
+          key = os.environ.get('GEMINI_API_KEY', '').strip()
+          results = ['# Read-only Gemini key diagnostic']
+          if not key:
+              results.append('- GEMINI_API_KEY: unavailable to this workflow.')
+          else:
+              results.append('- GEMINI_API_KEY: present (value not disclosed).')
+              request = urllib.request.Request(
+                  'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash-tts',
+                  headers={'x-goog-api-key': key},
+              )
+              try:
+                  with urllib.request.urlopen(request, timeout=20) as response:
+                      model = json.loads(response.read(1048576))
+                  if model.get('name') == 'models/gemini-3.8-flash-tts':
+                      results.append('- Requested model metadata: accessible.')
+                  else:
+                      results.append('- Requested model metadata: unexpected response.')
+              except urllib.error.HTTPError as exc:
+                  results.append(f'- Requested model metadata: HTTP {exc.code}.')
+              except Exception:
+                  results.append('- Requested model metadata: request failed; no response details logged.')
+          results.append('- Billing tier and project ownership: NOT verified by this test.')
+          results.append('- No speech generation or upload was attempted.')
+          text = '\n'.join(results) + '\n'
+          print(text)
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as summary:
+              summary.write(text)
+          PY
