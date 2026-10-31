@@ -66,6 +66,18 @@ jobs:
       # action's header for the 2026-10-23 job-timeout this replaces.
       - uses: ./.github/actions/setup-render-deps
 
+      # Local CPU word alignment, no paid transcription service. The model is
+      # downloaded only to runner storage and never committed to the repository.
+      - name: Install and verify speech alignment
+        if: ${{ inputs.short == '' }}
+        run: |
+          python -m pip install 'faster-whisper==1.2.1' 'av<19' 'huggingface-hub<1'
+          python - <<'PYMODEL'
+          from huggingface_hub import snapshot_download
+          snapshot_download(repo_id='Systran/faster-whisper-small.en', local_dir='output/alignment-model')
+          PYMODEL
+          python scripts/check_prayer_alignment.py --model output/alignment-model
+
       - name: Restore stock-asset cache
         uses: actions/cache@v4
         with:

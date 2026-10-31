@@ -3,6 +3,9 @@ from pathlib import Path
 import unittest
 from unittest.mock import patch
 
+from pipeline.script_doc import parse_script
+from pipeline.short_release import select_next_queued_short
+
 from scripts.auto_scheduler import (
     audit_longform_queue,
     audit_shorts_queue,
@@ -28,9 +31,8 @@ class TestAutoScheduler(unittest.TestCase):
     def test_audit_longform_queue_finds_approved_job(self):
         items, approved = audit_longform_queue()
         self.assertGreater(len(items), 0)
-        # Job 0009 should be approved
-        approved_ids = [p.name for p in approved]
-        self.assertTrue(any("0009" in name for name in approved_ids))
+        self.assertTrue(approved)
+        self.assertTrue(all(parse_script(p).status == "approved" for p in approved))
 
     def test_audit_shorts_queue_finds_approved_manifest(self):
         items, approved = audit_shorts_queue()
@@ -43,6 +45,11 @@ class TestAutoScheduler(unittest.TestCase):
         self.assertEqual(audit.watch_hours_target, 4000)
         self.assertGreaterEqual(audit.longform_approved_count, 1)
         self.assertGreaterEqual(audit.shorts_approved_count, 1)
-        self.assertIn("Psalm 23", audit.next_longform or "")
-        self.assertIn("short-psalm23", audit.next_short or "")
+        _, approved = audit_longform_queue()
+        self.assertIn(parse_script(approved[0]).title, audit.next_longform or "")
+        selected = select_next_queued_short()
+        if selected:
+            self.assertIn(selected[1], audit.next_short or "")
+        else:
+            self.assertIsNone(audit.next_short)
         self.assertGreater(audit.runway_days, 0)
