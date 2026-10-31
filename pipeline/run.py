@@ -161,6 +161,17 @@ def select_jobs(all_flag: bool, job_path: str | None, next_flag: bool) -> list[P
 
 
 def process(path: Path, dry_run: bool) -> dict:
+    """Fail closed until the approved Shorts style supports full-length jobs."""
+    parse_script(path)
+    raise RuntimeError(
+        "Production paused: the legacy montage renderer is forbidden. "
+        "A full-length renderer matching tools/shorts.py short-psalm91 is required "
+        "before queue jobs can render or upload."
+    )
+
+
+def _disabled_legacy_process(path: Path, dry_run: bool) -> dict:
+    """Retained for migration only; never call from production."""
     doc = parse_script(path)
     _validate_finance_niche(doc)
     _log(f"job {doc.id} «{doc.title}» format={doc.format} words={doc.word_count}")
@@ -269,7 +280,7 @@ def process(path: Path, dry_run: bool) -> dict:
         from .assemble import assemble, scene_durations_from_words
 
         durations = scene_durations_from_words(doc, narration.duration_seconds)
-        final = assemble(doc, scene_assets, narration.audio_path, narration.srt_path, out_dir, durations)
+        raise RuntimeError("Legacy montage renderer is prohibited by the visual style lock")
         _log(f"rendered {final} ({final.stat().st_size / 1e6:.1f} MB)")
 
         # ---- 5. thumbnail (+ A/B variants for Studio Test & Compare) -------
