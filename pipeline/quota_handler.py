@@ -1,9 +1,8 @@
 """Centralized Quota Management & Fail-Closed Auto-Resume Handler.
 
-Enforces the strict $0.00 / month cost lock across all Google APIs (Google Gemini API
-and YouTube Data API v3). When free tier quotas (1,500 RPD / 15 RPM for Gemini,
-10,000 units/day for YouTube) are reached, the system fails closed by pausing jobs
-until midnight Pacific Time (08:00 UTC) and auto-resumes on the next scheduled run.
+Pause jobs after a quota error until the next Pacific daily reset and resume on a
+later scheduled run. Quotas vary by project, model, and API. Handling a quota
+error does not verify billing tier or enforce a $0 spending limit.
 """
 from __future__ import annotations
 
@@ -11,6 +10,7 @@ import re
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Optional
+from zoneinfo import ZoneInfo
 import yaml
 
 from pipeline.script_doc import parse_script
@@ -27,7 +27,7 @@ class QuotaExceededError(RuntimeError):
 
 
 class GeminiQuotaExceededError(RuntimeError):
-    """Raised when Google Gemini API free tier daily quota (1,500 RPD or 15 RPM) is exhausted."""
+    """Raised when a Gemini API quota or rate limit is exceeded."""
 
     def __init__(self, message: str, reset_utc: datetime | None = None):
         super().__init__(message)
@@ -36,13 +36,18 @@ class GeminiQuotaExceededError(RuntimeError):
         self.reset_time_utc = self.reset_utc
 
 
-def calculate_next_quota_reset_utc() -> datetime:
-    """Google Gemini API and YouTube API quotas reset daily at midnight Pacific Time (08:00 UTC)."""
-    now_utc = datetime.now(timezone.utc)
-    reset_today = now_utc.replace(hour=8, minute=0, second=0, microsecond=0)
-    if now_utc >= reset_today:
-        return reset_today + timedelta(days=1)
-    return reset_today
+def calculate_next_quota_reset_utc(now: datetime | None = None) -> datetime:
+    """Return the next midnight in Pacific time, accounting for DST.
+
+    Daily quotas reset at Pacific midnight. Other rate limits can reset sooner;
+    this conservative fallback does not identify which limit was exceeded.
+    """
+    now = now or datetime.now(timezone.utc)
+    if now.tzinfo is None or now.utcoffset() is None:
+        raise ValueError("now must be timezone-aware")
+    pacific = ZoneInfo("America/Los_Angeles")
+    tomorrow = now.astimezone(pacific).date() + timedelta(days=1)
+    return datetime(tomorrow.year, tomorrow.month, tomorrow.day, tzinfo=pacific).astimezone(timezone.utc)
 
 
 def is_quota_pause_expired(quota_reset_utc_str: str) -> bool:
