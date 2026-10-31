@@ -105,6 +105,7 @@ jobs:
           fi
 
       - name: Commit queue state (job moved to published/)
+        if: ${{ always() && !cancelled() }}
         run: |
           git config user.name "youtube-automation-bot"
           git config user.email "actions@users.noreply.github.com"
