@@ -309,7 +309,7 @@ def stop_video_plate(proc):
             pass
 
 # --------------------------------------- sub-pixel smooth cinema camera ----
-def camera_frame(plate, p, mode='push_in', focus=(0.5, 0.45), extra_zoom=1.0):
+def camera_frame(plate, p, mode='push_in', focus=(0.5, 0.45), extra_zoom=1.0, canvas_size=None):
     p = clamp01(p)
     s = 0.65 * ease_in_out_sine(p) + 0.35 * p
     fx, fy = focus
@@ -329,14 +329,15 @@ def camera_frame(plate, p, mode='push_in', focus=(0.5, 0.45), extra_zoom=1.0):
     dx += 0.0012 * math.sin(p * 6.1 + 1.3)
     dy += 0.0010 * math.sin(p * 4.3 + 2.7)
     z *= 1.0 + 0.002 * math.sin(p * 2.4 + 0.6)
-    vw = CW / z
-    vh = CH / z
-    cx = CW * (0.5 + dx)
-    cy = CH * (0.5 + dy)
-    x0 = max(0.0, min(CW - vw, cx - vw * 0.5))
-    y0 = max(0.0, min(CH - vh, cy - vh * 0.5))
-    im = plate.transform((W, H), Image.EXTENT, (x0, y0, x0 + vw, y0 + vh), Image.BICUBIC)
-    return Image.alpha_composite(im.convert('RGBA'), EDGE_SCRIM).convert('RGB')
+    sw, sh = plate.size if canvas_size else (CW, CH)
+    size = canvas_size or (W, H)
+    vw, vh = sw / z, sh / z
+    cx, cy = sw * (0.5 + dx), sh * (0.5 + dy)
+    x0 = max(0.0, min(sw - vw, cx - vw * 0.5))
+    y0 = max(0.0, min(sh - vh, cy - vh * 0.5))
+    im = plate.transform(size, Image.EXTENT, (x0, y0, x0 + vw, y0 + vh), Image.BICUBIC)
+    scrim = EDGE_SCRIM.resize(size, Image.Resampling.LANCZOS) if canvas_size and size != (W, H) else EDGE_SCRIM
+    return Image.alpha_composite(im.convert('RGBA'), scrim).convert('RGB')
 
 def optical_flare_transition(f_prev, f_curr, u, is_prayer=False):
     e = ease_in_out_sine(u)
@@ -619,8 +620,13 @@ def end_card_overlay(base_img, end_pair, t_local, T, is_prayer=False):
     return Image.alpha_composite(base_img.convert('RGBA'), layer).convert('RGB')
 
 # ------------------------------ HUD + chapter badge + word ribbon (20:9 safe) ----
-def hud_chapter_layer(bg_rgb, kicker, sub, idx, nscenes, t_scene, scene_dur, total_frac, is_prayer=False):
-    layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+def hud_chapter_layer(bg_rgb, kicker, sub, idx, nscenes, t_scene, scene_dur, total_frac, is_prayer=False, canvas_size=None):
+    width, height = canvas_size or (W, H)
+    widescreen = canvas_size is not None and width > height
+    safe_l = int(width * 0.06) if widescreen else SAFE_L
+    safe_r = int(width * 0.94) if widescreen else SAFE_R
+    hud_y = int(height * 0.06) if widescreen else SAFE_HUD_Y
+    layer = Image.new('RGBA', (width, height), (0, 0, 0, 0))
     in_e = ease_out_expo(clamp01(t_scene / 0.42))
     out_e = 1.0 if (scene_dur - t_scene) > 0.35 else clamp01((scene_dur - t_scene) / 0.35)
     a = in_e * out_e
@@ -628,7 +634,7 @@ def hud_chapter_layer(bg_rgb, kicker, sub, idx, nscenes, t_scene, scene_dur, tot
 
     # Compact right-side progress pill strictly inside SAFE_R=644 (never clipped on 20:9 phones)
     pw_prog, ph_prog = (116 if is_prayer else 104), 28
-    px_prog, py_prog = SAFE_R - pw_prog, SAFE_HUD_Y + 6
+    px_prog, py_prog = safe_r - pw_prog, hud_y + 6
     border_col = (235, 198, 92, 175) if is_prayer else (148, 198, 255, 165)
     paste_frosted(layer, bg_rgb, glass_card(pw_prog, ph_prog, radius=14, a_top=168, a_bot=142, border_col=border_col), px_prog, py_prog, 0.94, radius=14)
     fp = fnt('Bold', 10)
@@ -644,7 +650,7 @@ def hud_chapter_layer(bg_rgb, kicker, sub, idx, nscenes, t_scene, scene_dur, tot
     d.text((bar_x0 + bar_w + 4, py_prog + 8), pct, font=fp, fill=WHITE + (240,))
 
     if a > 0.02:
-        max_hud_w = px_prog - SAFE_L - 12  # cleanly left of progress pill
+        max_hud_w = px_prog - safe_l - 12  # cleanly left of progress pill
         fk = fit_font('Bold', 12, kicker, max_hud_w - 86, 1.2)
         fs = fit_font('Medium', 10, sub, max_hud_w - 86, 1.2) if sub else fnt('Medium', 10)
         fc = fnt('Black', 10)
@@ -653,8 +659,8 @@ def hud_chapter_layer(bg_rgb, kicker, sub, idx, nscenes, t_scene, scene_dur, tot
         ws = tracked_width(d, sub, fs, 1.2) if sub else 0
         cw = int(min(max_hud_w, max(wk + 86, ws + 86, 220)))
         ch = 46 if sub else 34
-        cx = int(SAFE_L - (1.0 - in_e) * 14)
-        cy = SAFE_HUD_Y
+        cx = int(safe_l - (1.0 - in_e) * 14)
+        cy = hud_y
         paste_frosted(layer, bg_rgb, glass_card(cw, ch, radius=12, a_top=172, a_bot=144, border_col=border_col), cx, cy, a, radius=12)
         d.rounded_rectangle([cx + 8, cy + 8, cx + 56, cy + 26], radius=6, fill=YELLOW + (int(242 * a),))
         wt = d.textlength(tag, font=fc)
@@ -664,10 +670,10 @@ def hud_chapter_layer(bg_rgb, kicker, sub, idx, nscenes, t_scene, scene_dur, tot
             draw_tracked(d, sub, fs, cx + 66, cy + 26, (220, 238, 255) if is_prayer else ICE + (228,), 1.2)
 
     # Bottom progress bar inside safe width so full progress is visible
-    d.rectangle([SAFE_L, H - 6, SAFE_R, H], fill=(255, 255, 255, 38))
-    bx = SAFE_L + int((SAFE_R - SAFE_L) * clamp01(total_frac))
-    if bx > SAFE_L:
-        d.rectangle([SAFE_L, H - 6, bx, H], fill=YELLOW + (235,))
+    d.rectangle([safe_l, height - 6, safe_r, height], fill=(255, 255, 255, 38))
+    bx = safe_l + int((safe_r - safe_l) * clamp01(total_frac))
+    if bx > safe_l:
+        d.rectangle([safe_l, height - 6, bx, height], fill=YELLOW + (235,))
     return layer
 
 def align_card_words_to_speech(card_words, seg_words, default_t0, default_t1):
@@ -757,11 +763,13 @@ def build_kinetic_stream(key, raw_words):
             stream[i]['disp_t1'] = 39.55
     return stream
 
-def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
+def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False, canvas_size=None):
     """Rock-solid After Effects-style kinetic typography motion text design:
     zero scale-pulse wobble, microsecond-aligned to what is being spoken,
     infused with DOCOGA REELS v2 tracked kickers, gold underline sweeps, and expanding sacred rings."""
-    layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    width, height = canvas_size or (W, H)
+    widescreen = canvas_size is not None and width > height
+    layer = Image.new('RGBA', (width, height), (0, 0, 0, 0))
     if not stream:
         return layer
 
@@ -787,10 +795,12 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
     if alpha <= 0.01:
         return layer
 
-    cy = 780
+    cy = height // 2 if widescreen else 780
     lines = active.get('lines') or [l for l in [active.get('line1'), active.get('line2')] if l]
     base_sz = 34 if len(lines) >= 4 else (38 if len(lines) == 3 else 44)
-    max_safe = SAFE_R - SAFE_L - 32
+    if widescreen:
+        base_sz = int(base_sz * 1.55)
+    max_safe = int(width * 0.84) if widescreen else SAFE_R - SAFE_L - 32
     tr = 1.5
     f_size, f = get_phrase_font(lines, base_sz=base_sz, max_safe=max_safe, tracking=tr)
 
@@ -807,13 +817,13 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
             ring_a = int(140 * (1.0 - p_ring) * alpha)
             if ring_a > 0:
                 rd = ImageDraw.Draw(layer)
-                rd.ellipse([W // 2 - rr, cy - rr, W // 2 + rr, cy + rr], outline=(255, 218, 64, ring_a), width=wdt)
+                rd.ellipse([width // 2 - rr, cy - rr, width // 2 + rr, cy + rr], outline=(255, 218, 64, ring_a), width=wdt)
 
     GOLD = (255, 218, 64)
     WHITE = (255, 255, 255)
 
     y_pad_top = 44
-    text_canvas = Image.new('RGBA', (W, total_h + 160), (0, 0, 0, 0))
+    text_canvas = Image.new('RGBA', (width, total_h + 160), (0, 0, 0, 0))
     td = ImageDraw.Draw(text_canvas)
 
     # DOCOGA REELS v2: Tracked-in kicker header above the main typography lines
@@ -829,7 +839,7 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
             ka = ease_out_cubic(clamp01(dt / 0.24)) * alpha
         fk = fnt('SemiBold', 14)
         kw = sum(td.textlength(ch, font=fk) + ktr for ch in kicker_txt) - ktr
-        kx = (W - kw) / 2.0
+        kx = (width - kw) / 2.0
         ky = 16
 
         # Directional contact shadow for kicker
@@ -854,7 +864,7 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
         space_w = td.textlength(' ', font=f) + tr
         line_w = sum(w_words) + space_w * (len(words) - 1)
         line_ws.append(line_w)
-        x = (W - line_w) / 2.0
+        x = (width - line_w) / 2.0
         y = y_pad_top + li * line_h
 
         for w, ww in zip(words, w_words):
@@ -915,7 +925,7 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False):
         g = 1.0 if t == 0.0 else ease_out_cubic(clamp01((dt - 0.08) / 0.28))
         target_w = min(line_ws[-1] * 0.92, 500)
         ul_w = target_w * g
-        ul_x0 = (W - target_w) / 2.0
+        ul_x0 = (width - target_w) / 2.0
         ul_y = y_pad_top + total_h + 8
 
         # Amber glow backing
