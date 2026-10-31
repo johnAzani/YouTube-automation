@@ -30,7 +30,7 @@ def main():
     segment3 = words[38:51]
     worst3 = max(max(abs(start - ref[0]), abs(end - ref[1])) for (_, start, end), ref in zip(segment3, reference[38:51]))
     print(f'::notice::Aligned {len(words)} words; maximum reference difference {worst:.3f}s; segment 3 {worst3:.3f}s')
-    if worst > args.max_error:
+    if worst > args.max_error + 1e-9:
         raise ValueError(f'Alignment exceeds timing tolerance: maximum {worst:.3f}s, segment 3 {worst3:.3f}s; publishing remains blocked')
     return 0
 

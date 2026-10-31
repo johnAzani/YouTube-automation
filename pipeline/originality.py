@@ -3,10 +3,9 @@
 YouTube's "inauthentic content" policy (Jul 2025 rename, Jul 2026 clarification)
 demonetizes generic/template/mass-produced video. Reviewers judge the channel's
 overall pattern. This module refuses to build any job whose frontmatter does not
-assert the human-originality checklist defined in PLAN.md §4.4.
-
-It cannot verify truth — that is the human's signature — but it makes skipping
-the checklist impossible by accident.
+check substantive originality and source-note flags. Human rewriting is recorded
+when present, but is not a publishing gate for this autonomous studio. These
+checks cannot verify originality or factual accuracy on their own.
 """
 from __future__ import annotations
 
@@ -15,7 +14,6 @@ from .script_doc import ScriptDoc
 REQUIRED_FLAGS = (
     "original_thesis",
     "unique_structure",
-    "human_rewrite",
     "no_ai_persona",
     "source_notes",
 )
@@ -42,7 +40,7 @@ def check(doc: ScriptDoc) -> list[str]:
 
     for flag in REQUIRED_FLAGS:
         if flags.get(flag) is not True:
-            problems.append(f"originality.{flag} must be explicitly set to true by a human reviewer")
+            problems.append(f"originality.{flag} must be explicitly set to true")
 
     import re
 

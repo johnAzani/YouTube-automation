@@ -43,3 +43,22 @@ class PrayerPipelineTests(unittest.TestCase):
                 with self.assertRaisesRegex(RuntimeError, 'expand it'):
                     produce(root/'job.md', False, model)
                 tts.assert_not_called()
+
+    def test_missing_alignment_never_calls_tts(self):
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            doc = ScriptDoc(root/'job.md', {'status':'approved','format':'longform','niche':'prayer','voice':'Charon'}, [Scene(1,'One','hello ' * 700)])
+            with patch('pipeline.prayer_pipeline.parse_script', return_value=doc), patch('pipeline.prayer_pipeline.enforce'), \
+                 patch('pipeline.run._require_production_prerequisites'), patch('pipeline.prayer_pipeline.get_gemini_api_key', return_value='fake'), \
+                 patch('pipeline.prayer_pipeline.synthesize_gemini_audio') as tts:
+                with self.assertRaisesRegex(RuntimeError, 'alignment model'):
+                    produce(root/'job.md', False, root/'missing-model')
+                tts.assert_not_called()
+
+    def test_wrong_voice_is_rejected_before_tts(self):
+        doc = ScriptDoc(Path('job.md'), {'status':'approved','format':'longform','niche':'prayer','voice':'Other'}, [Scene(1,'One','hello')])
+        with patch('pipeline.prayer_pipeline.parse_script', return_value=doc), \
+             patch('pipeline.prayer_pipeline.synthesize_gemini_audio') as tts:
+            with self.assertRaisesRegex(RuntimeError, 'Charon'):
+                produce(Path('job.md'), False, Path('model'))
+            tts.assert_not_called()
