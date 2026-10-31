@@ -25,7 +25,7 @@ def main():
     # Treat that number as one aligned unit rather than inventing word timings.
     reference = reference[:18] + [[reference[18][0], reference[19][1], '91']] + reference[20:]
     audio = ROOT/'assets/deepdive/short-prayer-psalm91.mp3'
-    words = align(audio, ' '.join(row[2] for row in reference), args.model, min_confidence=0.0)
+    words = align(audio, ' '.join(row[2] for row in reference), args.model)
     worst = max(max(abs(start - ref[0]), abs(end - ref[1])) for (_, start, end), ref in zip(words, reference))
     segment3 = words[38:51]
     worst3 = max(max(abs(start - ref[0]), abs(end - ref[1])) for (_, start, end), ref in zip(segment3, reference[38:51]))

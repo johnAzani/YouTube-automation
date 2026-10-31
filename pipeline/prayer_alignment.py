@@ -9,7 +9,7 @@ def _canonical(word):
     return ''.join(re.findall(r"[\w]+(?:['’][\w]+)*", word.casefold())).replace('’', "'")
 
 
-def align(audio: Path, transcript: str, model_dir: Path, min_confidence=0.6):
+def align(audio: Path, transcript: str, model_dir: Path, min_confidence=0.2):
     audio, model_dir = Path(audio), Path(model_dir)
     if not audio.is_file() or not (model_dir / 'model.bin').is_file():
         raise ValueError('Narration and a preinstalled local speech model are required')
