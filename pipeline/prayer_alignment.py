@@ -27,7 +27,11 @@ def align(audio: Path, transcript: str, model_dir: Path, min_confidence=0.6):
         word_timestamps=True, vad_filter=False, condition_on_previous_text=True)
     spoken = [word for segment in segments for word in (segment.words or [])]
     if len(spoken) != len(expected):
-        raise ValueError(f'Speech alignment word count differs: {len(spoken)} vs {len(expected)}')
+        from difflib import SequenceMatcher
+        exp = [_canonical(w) for w in expected]
+        got = [_canonical(w.word) for w in spoken]
+        differences = [(exp[a:b], got[c:d]) for kind, a, b, c, d in SequenceMatcher(a=exp, b=got, autojunk=False).get_opcodes() if kind != 'equal']
+        raise ValueError(f'Speech alignment word count differs: {len(spoken)} vs {len(expected)}; mismatches={differences[:4]}')
     result, last_end = [], 0.0
     for i, (original, actual) in enumerate(zip(expected, spoken), 1):
         if _canonical(original) != _canonical(actual.word):
