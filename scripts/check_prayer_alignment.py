@@ -32,4 +32,9 @@ def main():
     return 0
 
 if __name__ == '__main__':
-    raise SystemExit(main())
+    try:
+        raise SystemExit(main())
+    except Exception as exc:
+        # Visible in the GitHub Actions annotations without exposing audio or secrets.
+        print(f'::error::Speech alignment check failed: {type(exc).__name__}: {exc}', flush=True)
+        raise
