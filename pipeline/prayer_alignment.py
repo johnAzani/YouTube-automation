@@ -38,7 +38,7 @@ def align(audio: Path, transcript: str, model_dir: Path, min_confidence=0.6):
             raise ValueError(f'Speech alignment transcript mismatch at word {i}')
         start, end, prob = float(actual.start), float(actual.end), float(actual.probability)
         if not all(map(math.isfinite, (start, end, prob))) or start < last_end or end <= start or not min_confidence <= prob <= 1:
-            raise ValueError(f'Invalid or uncertain speech alignment at word {i}')
+            raise ValueError(f'Invalid or uncertain alignment at word {i}: previous_end={last_end:.3f}, start={start:.3f}, end={end:.3f}, confidence={prob:.3f}')
         result.append((original, start, end))
         last_end = end
     return result
