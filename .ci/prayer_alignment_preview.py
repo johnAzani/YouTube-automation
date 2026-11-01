@@ -72,39 +72,42 @@ def match(expected, spoken, min_confidence=0.2):
                                             autojunk=False).get_opcodes():
         indices = [usable[k][0] for k in range(c, d)]
         if kind == 'equal':
+            # The recognised text equals the script word, so the transcript is
+            # certain by construction: a low recogniser probability here says
+            # nothing about whether the timing is usable.
             for offset, i in enumerate(indices):
-                result.append((expected[a + offset], spoken[i]))
+                result.append((expected[a + offset], spoken[i], True))
         elif kind == 'replace':
             n_script, mapped = b - a, indices
             if not mapped:
                 for token in expected[a:b]:
-                    result.append((token, None))
+                    result.append((token, None, False))
                 continue
             if n_script == 1:
                 # script has one token, recogniser split it: give the union span
                 first, last = spoken[mapped[0]], spoken[mapped[-1]]
                 result.append((expected[a], _Span(first.word, first.start, last.end,
-                                                  min(spoken[i].probability for i in mapped))))
+                                                  min(spoken[i].probability for i in mapped)), False))
             elif len(mapped) == 1:
                 # recogniser merged several script words into one ("for evermore"
                 # -> "forevermore"): tile the recognised span across the script
                 # words by length so the timeline stays ordered.
                 item = spoken[mapped[0]]
                 for token, span in _tile(expected[a:b], item.start, item.end, item.probability):
-                    result.append((token, span))
+                    result.append((token, span, False))
             else:
                 # proportional share of the recognised span, weighted by word length
                 prob = min(spoken[i].probability for i in mapped)
                 for token, span in _tile(expected[a:b], spoken[mapped[0]].start,
                                          spoken[mapped[-1]].end, prob):
-                    result.append((token, span))
+                    result.append((token, span, False))
         elif kind == 'delete':
             # script words the recogniser did not hear at all
             for token in expected[a:b]:
-                result.append((token, None))
+                result.append((token, None, False))
 
     words, previous_end = [], 0.0
-    for index, (original, heard) in enumerate(result, 1):
+    for index, (original, heard, exact) in enumerate(result, 1):
         if heard is None:
             start = end = previous_end
             prob = 1.0
@@ -117,7 +120,7 @@ def match(expected, spoken, min_confidence=0.2):
                              f'previous_end={previous_end:.3f}, start={start:.3f}')
         if end < start:
             raise ValueError(f'Negative span at word {index}: {start:.3f}-{end:.3f}')
-        if not min_confidence <= prob <= 1:
+        if not exact and not min_confidence <= prob <= 1:
             raise ValueError(f'Uncertain alignment at word {index}: confidence={prob:.3f}')
         words.append((original, round(start, 3), round(end, 3)))
         previous_end = max(previous_end, end)

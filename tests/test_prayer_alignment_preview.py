@@ -73,9 +73,16 @@ class TestTolerantMatch(unittest.TestCase):
         for _, start, end in words:
             self.assertLessEqual(start, end)
 
-    def test_low_confidence_is_refused(self):
+    def test_low_confidence_is_refused_when_the_text_differs(self):
+        # Uncertain recognition of something that is not the script word.
         with self.assertRaises(ValueError):
-            preview.match(['mercy'], heard(('mercy', 0.0, 0.4, 0.05)))
+            preview.match(['evermore'], heard(('whatever', 0.0, 0.4, 0.05)))
+
+    def test_low_confidence_exact_match_is_accepted(self):
+        # Observed on job 0010: word 314 transcribed correctly with p=0.117.
+        # The text matched the script, so the timing is usable.
+        words = preview.match(['mercy'], heard(('mercy', 0.0, 0.4, 0.117)))
+        self.assertEqual(words, [('mercy', 0.0, 0.4)])
 
     def test_negative_span_is_refused(self):
         with self.assertRaises(ValueError):
