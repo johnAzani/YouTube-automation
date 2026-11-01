@@ -290,3 +290,26 @@ A dry run could not be started from this session — `gh workflow run` returns
 would publish 0010 on the next cron and then fail closed on the length gate
 three times a day. Full review, recommendations and the exact dry-run to run:
 `docs/WIDESCREEN_PIPELINE_READINESS.md`.
+
+### CI dependency fix + long-form upload runbook — 1 November 2026
+
+The required `Unit tests + doctor` job was failing on every branch, including
+`main`, before running a single assertion: seven modules under `tests/` import
+`pytest` at module scope while the workflow installs only `requirements.txt` and
+runs `python -m unittest discover -s tests`. Adding `pytest>=8.0` to
+`requirements.txt` fixes collection without touching the workflow files (PR #112
+edits the same step, so this avoids a conflict). `tests/test_auto_scheduler.py`
+also stopped hardcoding job `0009`/"Psalm 23" — it failed forever once 0009 was
+published — and now derives both expectations from `content/queue/`.
+
+`docs/LONG_FORM_UPLOAD_RUNBOOK.md` documents the only currently working path to
+publish a long-form video in the approved style: dispatch `Produce video` on the
+PR #112 branch (dry run first, then the real upload), then merge #112 so the
+published receipt and renderer land on `main` together. Nothing in style can be
+uploaded from `main` until #112 merges, because `main`'s renderer still fails
+closed by design.
+
+Also note for whoever merges #112: after `0010` publishes, the next approved job
+is `0011` at 408 words, which the renderer refuses, so the cron goes red one run
+later. Approving `0003`–`0007` (already 1,055–3,175 words, sitting at
+`status: draft`) restores roughly six full-length uploads.
