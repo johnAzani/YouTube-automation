@@ -14,6 +14,11 @@
 # Defaults are safe: dry_run is true, so the first run only reports what it would do.
 
 on:
+  schedule:
+    # 02:14 UTC — ahead of the 03:14 brain run and the 06:14 release, so any
+    # approved-but-short script is lengthened before the publisher looks for work.
+    # A scheduled run always writes; only manual dispatches default to a dry run.
+    - cron: "14 2 * * *"
   workflow_dispatch:
     inputs:
       ids:
@@ -60,15 +65,22 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           IDS: ${{ inputs.ids }}
           TARGET: ${{ inputs.target }}
-          DRY: ${{ inputs.dry_run }}
+          DRY_INPUT: ${{ inputs.dry_run }}
+          EVENT: ${{ github.event_name }}
         run: |
           set -o pipefail
-          FLAGS="--target $TARGET"
+          if [ "$EVENT" = "schedule" ]; then
+            DRY="false"                       # the unattended loop writes
+          else
+            DRY="${DRY_INPUT:-true}"
+          fi
+          FLAGS="--target ${TARGET:-900}"
           if [ -n "$IDS" ]; then FLAGS="$FLAGS --ids $IDS"; fi
           if [ "$DRY" = "true" ]; then
             python -m tools.expand_scripts $FLAGS
           else
             python -m tools.expand_scripts $FLAGS --write
+            echo "EXPANDED=true" >> "$GITHUB_ENV"
           fi
 
       - name: Report per-script result
@@ -91,7 +103,7 @@ jobs:
           PY
 
       - name: Commit expanded scripts
-        if: ${{ !inputs.dry_run }}
+        if: ${{ env.EXPANDED == 'true' }}
         run: |
           git config user.name "Secret Place Automation"
           git config user.email "automation@users.noreply.github.com"
