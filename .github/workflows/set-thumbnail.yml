@@ -21,12 +21,12 @@ on:
         required: true
         default: "6M6oV8MxD9s"
       variant:
-        description: "main | b | c  (Test & Compare alternatives are all rendered)"
+        description: "hook | quiet | poster = CTR pack; main | b | c = studio pack. All are always rendered."
         type: choice
-        options: [main, b, c]
-        default: main
+        options: [hook, quiet, poster, main, b, c]
+        default: hook
       hero:
-        description: "Override the hero text (blank = the job's thumb_text)"
+        description: "Override the hero text on the text variants (blank = each concept keeps its own copy)"
         required: false
         default: ""
       dry_run:
@@ -61,31 +61,41 @@ jobs:
       - name: Python deps
         run: python -m pip install -r requirements.txt
 
-      - name: Render the validated pack
+      - name: Render the validated packs
         run: |
           python - <<'PYRENDER'
           import json, os, sys
           from pathlib import Path
           sys.path.insert(0, '.')
           from pipeline.script_doc import parse_script
+          from pipeline.thumbnail_ctr import generate_ctr_pack
           from pipeline.thumbnail_studio import choose_hero, generate_style_pack, mobile_preview
 
           job = Path('content/published') / os.environ['JOB']
           doc = parse_script(job)
-          hero = os.environ.get('HERO') or choose_hero(doc)
+          hero = os.environ.get('HERO') or ''
           out = Path('output/thumbnails')
-          reports = generate_style_pack(hero, out)
-          for r in reports:
+
+          # CTR pack first: three concepts that never restate the title, sized and
+          # graded to survive a dark-mode phone feed.
+          ctr = generate_ctr_pack(out, hero_override=hero or None)
+          # The studio pack is kept as a control and for the older variants.
+          studio = generate_style_pack(hero or choose_hero(doc), out)
+          for r in ctr + studio:
               mobile_preview(r.path, r.path.with_name(r.path.stem + '_mobile.png'))
-          (out / 'report.json').write_text(
-              json.dumps({'hero': hero, 'job': doc.id,
-                          'variants': [r.as_dict() for r in reports]}, indent=2),
-              encoding='utf-8')
-          print(json.dumps({'hero': hero, 'job': doc.id}, indent=2))
-          for r in reports:
-              print(f"{r.variant}: {r.hero_px}px, {r.words} words, contrast {r.contrast:.1f}, "
-                    f"{r.file_kb} KiB, safe={r.safe_zone_ok}, badge={r.badge_zone_ok}")
-              print(f"::notice title=Thumbnail {r.variant}::{r.path.name} | hero {r.hero_px}px | "
+
+          (out / 'report.json').write_text(json.dumps({
+              'job': doc.id, 'hero_override': hero or None,
+              'ctr': [r.as_dict() for r in ctr],
+              'studio': [r.as_dict() for r in studio],
+          }, indent=2, ensure_ascii=False), encoding='utf-8')
+
+          for r in ctr:
+              print(f"::notice title=CTR {r.variant} ({r.concept})::{r.path.name} | hero {r.hero_px}px "
+                    f"{r.lines} lines | contrast {r.contrast:.1f}:1 | mean luma {r.mean_luma:.0f} | "
+                    f"edge {r.edge_luma:.0f} vs UI 15 | bright {r.bright_share:.0%} | {r.file_kb} KiB")
+          for r in studio:
+              print(f"::notice title=Studio {r.variant}::{r.path.name} | hero {r.hero_px}px | "
                     f"contrast {r.contrast:.1f}:1 | {r.file_kb} KiB")
           PYRENDER
         env:
@@ -111,7 +121,8 @@ jobs:
           from pipeline.upload import _credentials
 
           variant = os.environ['VARIANT']
-          name = 'thumbnail.jpg' if variant == 'main' else f'thumbnail_{variant}.jpg'
+          names = {'main': 'thumbnail.jpg'}
+          name = names.get(variant, f'thumbnail_{variant}.jpg')
           path = Path('output/thumbnails') / name
           if not path.is_file():
               raise SystemExit(f'missing {path}')

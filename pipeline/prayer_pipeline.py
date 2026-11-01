@@ -22,7 +22,8 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
     from .run import _mark_job_uploaded, _open_release_ticket, _require_production_prerequisites
     from .assets import fetch_scene_assets
     from .metadata import write_metadata_pack
-    from .thumbnail_studio import choose_hero, generate_style_pack, mobile_preview
+    from .thumbnail_studio import mobile_preview
+    from .thumbnail_ctr import generate_ctr_pack
     from .quota_handler import GeminiQuotaExceededError, QuotaExceededError, pause_longform_job_on_quota
 
     doc = parse_script(path)
@@ -72,10 +73,11 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
             assets.append(matches[0].path)
         final = render(audio, list(zip(assets, durations)), words, duration,
                        out / f'{doc.slug}.mp4', timing_source='measured')
-        # Thumbnails come from the validated studio, never from the card generator:
-        # it enforces the mobile-legibility, contrast and safe-zone limits and writes
-        # a report so the run page shows the numbers. See docs/THUMBNAIL_RESEARCH.md.
-        thumb_reports = generate_style_pack(choose_hero(doc), out / "thumbnails")
+        # Thumbnails come from the CTR pack, never from the card generator: it enforces
+        # mobile legibility, contrast, safe zones and visibility against YouTube's
+        # dark-mode page, and writes a report so the run page shows the numbers.
+        # See docs/THUMBNAIL_RESEARCH.md.
+        thumb_reports = generate_ctr_pack(out / "thumbnails")
         for report in thumb_reports:
             mobile_preview(report.path, report.path.with_name(report.path.stem + "_mobile.png"))
         (out / "thumbnails" / "report.json").write_text(
