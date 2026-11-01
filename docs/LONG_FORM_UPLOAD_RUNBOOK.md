@@ -3,32 +3,34 @@
 How to publish a long-form prayer video in the locked visual style, entirely from
 GitHub, and how to tell whether the result is actually correct.
 
-**Current facts (1 November 2026)**
+**Current facts (1 November 2026, after the verified dry render)**
 
 | Item | Status |
 | --- | --- |
 | `main` renderer | Fails closed on purpose. Every `Produce video` run on `main` ends at *"the legacy montage renderer is forbidden"*. |
-| Working renderer | Only on PR #112, `arena/564c86c7-youtube-automation` (tip `e7c6c42`). |
+| Working renderer | Verified end to end on run `41280103404` (dry, nothing uploaded). It now lives on PR #113 together with the alignment fixes that run exposed. |
 | PR #112 CI | Green: unit tests, and the offline render job. |
 | Jobs long enough to render | **1** — `0010-psalm-121-…` (884 words ≈ 5.7 min). The other 22 approved scripts are 227–408 words and fail the 650-word gate. |
 | Upload credentials | Present in repo secrets (`YOUTUBE_*`, `GEMINI_API_KEY`, `PIXABAY_API_KEY`). |
 
-Because only PR #112 can produce the approved style, **nothing can be uploaded
-in style from `main` until #112 is merged**. The safe way to get one video
-uploaded now is to run the workflow *on the PR branch*, which needs no merge and
-leaves `main` untouched.
+**Merge PR #113 first.** It contains PR #112's renderer plus the three alignment
+fixes a real run exposed, so after merging, `produce.yml` can be dispatched from
+`main` — the branch the mobile app always offers. Until then, the push-triggered
+`Dry render — approved style (no upload)` workflow renders on demand without any
+branch selection.
 
 ---
 
-## Recommended path: verify on the branch, then upload
+## Recommended path: merge #113, then upload from `main`
 
-### Step 1 — dry run (no upload, ~15 min, $0)
+### Step 1 — dry run (no upload, ~35 min, $0)
 
-GitHub → **Actions** → **Produce video** → **Run workflow**
+Already done once: run `41280103404` rendered 0010 completely. To repeat it,
+either re-run that workflow, or use **Actions → Produce video → Run workflow**:
 
 | Field | Value |
 | --- | --- |
-| Use workflow from | `arena/564c86c7-youtube-automation` |
+| Use workflow from | `main` (after #113 merges) |
 | job | `0010-psalm-121-he-who-keeps-you-will-neither-slumber-no.md` |
 | short | *(leave empty)* |
 | dry_run | ✔ **ticked** |
@@ -51,21 +53,27 @@ Same screen, same branch, `dry_run` **unticked**. On success:
   the PR branch**, not to `main`,
 - `job_result.json` and the render are in the run artifact.
 
-### Step 3 — merge PR #112
+### Step 3 — check the receipt
 
-Merge **after** the upload succeeds, squashed if you prefer a single commit. The
-published receipt, the queue move and the renderer all land on `main` together,
-so the next scheduled cron continues from the correct state instead of
-re-uploading 0010.
+The upload moves `content/queue/0010-…md` to `content/published/`, posts the
+pastoral comment and writes `job_result.json`. Confirm all three before the next
+cron at 06:14 / 14:14 / 19:14 UTC.
 
 ---
 
-## Alternative: merge first, then run from `main`
+## What a real run costs
 
-Only do this if you accept that the three daily crons (06:14, 14:14, 19:14 UTC)
-become live the moment #112 merges: the first one that finds an approved
-full-length job will render and publish it publicly without a human look. If you
-merge first, immediately dispatch a dry run from `main` and watch the artifact.
+Measured: narration ~5 minutes, alignment model download ~1 minute, render
+~20 minutes for a 5-minute master on a 4-core runner, total ≈ 35 minutes and 0
+currency. The run timeout is 120 minutes, so there is headroom for 1080p later.
+
+## What was wrong before
+
+Three separate guards aborted full-length renders on legitimate recogniser
+output: a zero-length word, a "for evermore" → "forevermore" tokenisation, and a
+correctly transcribed word with probability 0.117. `pipeline/prayer_alignment.py`
+now maps script words onto recognised tokens and only gates confidence where the
+text did not match; it still refuses narration that differs from the script.
 
 ---
 
