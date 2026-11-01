@@ -80,7 +80,7 @@ CANONICAL_COMMUNITY_SCHEDULE: list[CommunityPost] = [
             body_text="Vote and declare your faith in the comments below.",
             tags=["#Psalm91", "#NightPrayer", "#TheSecretPlace", "#DivineProtection"],
         ),
-        image_rel_path="card_comm_001.png",
+        image_rel_path="comm-001-sunday-peace.png",
         target_utc="14:00",
     ),
     CommunityPost(
@@ -94,7 +94,7 @@ CANONICAL_COMMUNITY_SCHEDULE: list[CommunityPost] = [
             "Write 'AMEN' to claim His peace."
         ),
         tags=["#PrayerWall", "#Psalm23", "#TheLordIsMyShepherd", "#Faith"],
-        image_rel_path="card_comm_002.png",
+        image_rel_path="comm-002-monday-shepherd.png",
         target_utc="18:00",
     ),
     CommunityPost(
@@ -118,7 +118,7 @@ CANONICAL_COMMUNITY_SCHEDULE: list[CommunityPost] = [
             body_text="Share your evening prayer routine with our community.",
             tags=["#Psalm121", "#SleepPrayer", "#BedtimeDevotion", "#Peace"],
         ),
-        image_rel_path="card_comm_003.png",
+        image_rel_path="comm-003-wednesday-unsleeping.png",
         target_utc="14:00",
     ),
     CommunityPost(
@@ -131,7 +131,7 @@ CANONICAL_COMMUNITY_SCHEDULE: list[CommunityPost] = [
             "Type 'THE LORD IS MY LIGHT' if you receive His courage tonight! 🕯️🛡️"
         ),
         tags=["#Psalm27", "#TheLordIsMyLight", "#ChristianEncouragement", "#Victory"],
-        image_rel_path="card_comm_004.png",
+        image_rel_path="comm-004-friday-courage.png",
         target_utc="16:00",
     ),
 ]
@@ -156,29 +156,55 @@ def publish_community_post(
     youtube: Any = None,
     dry_run: bool = True,
 ) -> dict[str, Any]:
-    """Publish or stage a community post with its rendered 1080x1080 card."""
+    """Stage today's post for publication inside YouTube.
+
+    There is no API to call. The YouTube Data API v3 has no endpoint for creating
+    Community posts, so no amount of wiring can publish one unattended — the only
+    routes are YouTube Studio's own composer, its native scheduler, or exposing
+    session cookies to a reverse-engineered endpoint, which is not acceptable.
+
+    So this function prepares everything a human needs and says so plainly. It used
+    to return status "published" without touching the network, which is how a
+    workflow that posted nothing looked healthy for weeks.
+    """
     COMMUNITY_DIR.mkdir(parents=True, exist_ok=True)
-    card_path = COMMUNITY_DIR / post.image_rel_path
-    if not card_path.is_file():
+    card_path = COMMUNITY_DIR / post.image_rel_path if post.image_rel_path else None
+    if card_path is not None and not card_path.is_file():
         render_community_card(post, out_path=card_path)
 
-    if dry_run or not youtube:
-        print(f"[community] [dry-run] Would publish community post '{post.post_id}':")
-        print(f"  Title: {post.title}")
-        print(f"  Card:  {card_path.name}")
-        return {
-            "status": "staged_dry_run",
-            "post_id": post.post_id,
-            "title": post.title,
-            "card_path": str(card_path),
-        }
+    pack = COMMUNITY_DIR / f"{post.post_id}-READY.md"
+    lines = [
+        f"# Ready to post — {post.post_id}",
+        "",
+        "YouTube's API cannot create Community posts. Paste this into YouTube Studio",
+        "→ Create → Post, attach the card, and schedule it if you like.",
+        "",
+        f"**Target:** {post.target_utc} UTC · **Type:** {post.post_type}",
+        "",
+        "## Body",
+        "",
+        post.body_text.strip(),
+        "",
+    ]
+    if post.poll:
+        lines += ["## Poll", "", f"**{post.poll.question}**", ""]
+        lines += [f"- {option}" for option in post.poll.options]
+        lines.append("")
+    if card_path is not None:
+        try:
+            shown = card_path.relative_to(REPO_ROOT)
+        except ValueError:
+            shown = card_path
+        lines += ["## Card", "", f"`{shown}`", ""]
+    pack.write_text("\n".join(lines), encoding="utf-8")
 
-    print(f"[community] Post '{post.post_id}' staged for channel publication.")
     return {
-        "status": "published",
+        "status": "ready_for_manual_post",
         "post_id": post.post_id,
         "title": post.title,
-        "card_path": str(card_path),
+        "card_path": str(card_path) if card_path else None,
+        "ready_pack": str(pack),
+        "composer": "https://studio.youtube.com → Create → Post",
     }
 
 

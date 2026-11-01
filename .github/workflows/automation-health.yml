@@ -1,0 +1,33 @@
+# Daily check that the scheduled workflows actually run.
+#
+# Why: the Community Tab workflow had zero runs in its entire life. It showed as
+# "active", its YAML was valid, and nothing reported a problem — because a
+# workflow that never starts never fails. Its publish step also never called an
+# API, so even a successful run would have posted nothing while reporting success.
+# Both were invisible from the Actions dashboard. This job makes silence visible.
+
+on:
+  schedule:
+    - cron: "14 20 * * *"   # after the 19:14 release slot, before the 02:14 expansion
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Are the crons firing?
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python -m scripts.automation_health

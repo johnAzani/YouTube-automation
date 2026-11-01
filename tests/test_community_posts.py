@@ -2,9 +2,13 @@
 from __future__ import annotations
 
 import json
+import tempfile
+import unittest
 from pathlib import Path
+from unittest import mock
 from PIL import Image
 
+import pipeline.community_posts as cp
 from pipeline.community_posts import (
     CANONICAL_COMMUNITY_SCHEDULE,
     CommunityPost,
@@ -54,3 +58,41 @@ def test_export_weekly_community_manifest(tmp_path: Path):
     assert "post_id" in data
     assert "title" in data
     assert "body_text" in data
+
+
+class TestPublishIsHonest(unittest.TestCase):
+    """The old code returned status "published" without touching the network, which is
+    how a workflow that posted nothing looked healthy for weeks."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.patcher = mock.patch.object(cp, "COMMUNITY_DIR", Path(self.tmp.name))
+        self.patcher.start()
+        self.addCleanup(self.patcher.stop)
+
+    def test_never_claims_success(self):
+        result = cp.publish_community_post(cp.select_today_community_post(), dry_run=True)
+        self.assertNotEqual(result["status"], "published")
+        self.assertEqual(result["status"], "ready_for_manual_post")
+        self.assertIn("studio.youtube.com", result["composer"])
+
+    def test_writes_a_ready_pack_with_the_body(self):
+        post = cp.select_today_community_post()
+        result = cp.publish_community_post(post, dry_run=True)
+        pack = Path(result["ready_pack"])
+        self.assertTrue(pack.is_file())
+        text = pack.read_text(encoding="utf-8")
+        self.assertIn("cannot create community posts", text.lower())
+        self.assertIn(post.body_text.strip()[:40], text)
+
+    def test_card_path_matches_what_the_manifest_writes(self):
+        """card_comm_00N.png was never written by the manifest, so publish re-rendered a
+        duplicate card instead of reusing the committed one."""
+        cp.export_weekly_community_manifest(Path(self.tmp.name))
+        for post in cp.CANONICAL_COMMUNITY_SCHEDULE:
+            self.assertTrue((Path(self.tmp.name) / post.image_rel_path).is_file(), post.image_rel_path)
+
+
+if __name__ == "__main__":
+    unittest.main()
