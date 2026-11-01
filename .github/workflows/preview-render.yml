@@ -154,8 +154,10 @@ jobs:
         run: |
           shopt -s nullglob
           for f in output/*/*.mp4; do
-            echo "== $f ($(du -h "$f" | cut -f1))"
-            ffmpeg -hide_banner -i "$f" 2>&1 | grep -E 'Duration|Stream #' || true
+            size=$(du -h "$f" | cut -f1)
+            specs=$(ffmpeg -hide_banner -i "$f" 2>&1 | grep -E 'Duration|Stream #' | tr -s ' ' | tr '\n' '/')
+            echo "== $f ($size) $specs"
+            echo "::notice title=Master::$f | $size | $specs"
           done
 
       - name: Upload the master for review (7 days)
