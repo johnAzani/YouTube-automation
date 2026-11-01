@@ -431,3 +431,37 @@ look can be checked in seconds instead of downloading the full QC artifact.
 Next approved job is `0011` at 408 words: the 650-word gate will fail closed on the
 next cron, so no further upload happens until `0003`–`0007` (1,055–3,175 words,
 `status: draft`) are approved or the short scripts are expanded.
+
+### Thumbnail system rebuilt to measured CTR constraints — 1 November 2026
+
+The owner asked for the thumbnail to be reworked in depth after approving the
+video itself. Research is recorded in `docs/THUMBNAIL_RESEARCH.md` with sources;
+the short version is that a thumbnail is read at 120–168 px on a phone, so it
+survives on one focal subject, ≤5 very large words and ≥7:1 contrast — and the
+previous generator had none of those guarantees.
+
+Published Psalm 121 thumbnail, measured: five text elements (kicker, hero,
+rule, subtitle, tag), no focal art, ~40% of the frame empty, hero at 82 px,
+hard-coded strings reading "PSALM 91" and "16 VERSES" on a Psalm 121 video, and
+no validation at all. Legible ink (bright type + art that survives downscale):
+**5.6% of the frame**.
+
+New `pipeline/thumbnail_studio.py` paints its own focal art (moon over still
+water / starfield / dawn), sets the hero at a computed 96–260 px with ≤5 words
+and ≤3 lines, measures text-vs-background contrast and adds a feathered local
+scrim if it is under 7:1, keeps all content inside a 1280×720 safe box clear of
+the bottom-right duration badge, applies filmic grade + grain + unsharp, and
+returns a report (hero px, words, lines, contrast, safe-zone and badge checks,
+file size). Three genuinely different concepts ship for Test & Compare, which
+picks by watch-time share across up to three thumbnails.
+
+Result for `THE LORD IS YOUR KEEPER`: hero 134 px, contrast 11.5:1, 121 KiB,
+safe zones clear, legible ink **14.4%** (2.6× the old frame). Committed frames
+and 168 px mobile previews: `docs/media/thumbnails/`.
+
+Wiring: `prayer_pipeline.produce` now renders the studio pack into
+`output/thumbnails/` with `report.json` and mobile previews; the workflow
+`.github/workflows/set-thumbnail.yml` renders the pack for any published job and,
+with `dry_run` unticked, applies it to a live video via `thumbnails.set` (50
+units) — which is how the already-published `6M6oV8MxD9s` gets its new
+thumbnail. 13 tests pin the constraints (`tests/test_thumbnail_studio.py`).
