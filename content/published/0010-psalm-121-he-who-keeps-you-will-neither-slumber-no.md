@@ -2,7 +2,7 @@
 id: "0010"
 title: "Psalm 121: He Who Keeps You Will Neither Slumber Nor Sleep — Night Prayer for Sleep, Peace & Divine Guard | The Secret Place"
 slug: psalm-121-he-who-keeps-you-will-neither-slumber-no
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -69,6 +69,8 @@ originality:
   no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
   source_notes: true         # scriptures and classical commentaries documented
   ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
+published_on: "2026-11-01"
+youtube_video_id: "6M6oV8MxD9s"
 ---
 
 ## Scene 1 — Lifting Eyes to the Hills (Verses 1–2)
