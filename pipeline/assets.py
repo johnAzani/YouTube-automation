@@ -170,6 +170,21 @@ def _download(url, dest, max_bytes=120*1024*1024):
             print(f"[assets] download failed {url}: {exc!r}"); return False
     return False
 
+# How far an asset's aspect ratio may stray from the render target before it is
+# refused. A 9:16 clip centre-cropped into 16:9 throws away ~70% of the frame —
+# on 2026-11-01 job 0010 accepted a 2160x3840 Pixabay clip for a 1280x720
+# master and produced a narrow crop band instead of the approved full-bleed
+# plate. 0.55 tolerates 3:2 and 21:9 sources while refusing portrait.
+ASPECT_TOLERANCE = 0.55
+
+
+def aspect_mismatch(width, height, target_width, target_height):
+    """Relative deviation of an asset's aspect ratio from the render target."""
+    if not width or not height or not target_width or not target_height:
+        return 0.0
+    return abs((width / height) / (target_width / target_height) - 1.0)
+
+
 def _orientation(w,h):
     r=w/max(1,h)
     return "landscape" if r>1.15 else ("portrait" if r<0.87 else "square")
@@ -398,7 +413,7 @@ def fetch_scene_assets(query,scene_no,out_dir,count=None,target_width=None,targe
         # Wikimedia / Internet Archive / NASA only.
         videos += [("Wikimedia video",lambda:_wikimedia(q,True,w,h)),("Internet Archive video",lambda:_internet_archive(q,True,w,h)),("NASA video",lambda:_nasa(q,True,w,h))]
         photos += [("Openverse photo",lambda:_openverse(q,False,w,h)),("Wikimedia photo",lambda:_wikimedia(q,False,w,h)),("Internet Archive photo",lambda:_internet_archive(q,False,w,h)),("NASA photo",lambda:_nasa(q,False,w,h))]
-    assets=[]; attempts=[]
+    assets=[]; attempts=[]; rejected=None
     for i in range(count):
         got=None
         for name,fn in videos+photos:
@@ -416,7 +431,21 @@ def fetch_scene_assets(query,scene_no,out_dir,count=None,target_width=None,targe
                 attempts.append({"provider":name,"status":status,"detail":detail})
             print(f"[assets] scene {scene_no}: {name} → {status}" + (f" ({detail})" if status!="ok" else ""), flush=True)
             if got:
+                mismatch=aspect_mismatch(got.width,got.height,w,h)
+                if mismatch > ASPECT_TOLERANCE:
+                    # Keep looking for a frame that fills the master; remember the
+                    # best rejected candidate so a scene never fails over this.
+                    print(f"[assets] scene {scene_no}: rejecting {got.source} {got.width}x{got.height} "
+                          f"({mismatch:.0%} off the {w}x{h} target)", flush=True)
+                    if rejected is None or mismatch < rejected[0]:rejected=(mismatch,got,name)
+                    got=None; continue
                 got.query=q; assets.append(got); print(f"[assets] scene {scene_no}: {got.kind} from {got.source} ({got.width}x{got.height})"); break
+        if not got and rejected is not None:
+            _,fallback,_=rejected; rejected=None
+            fallback.query=q; assets.append(fallback)
+            print(f"[assets] scene {scene_no}: no aspect-compatible source; using "
+                  f"{fallback.source} {fallback.width}x{fallback.height}", flush=True)
+            continue
         if not got:
             if allow_generated:assets.append(_title_card(q,scene_no*10+i,out_dir,title=q))
             else:break
