@@ -46,6 +46,10 @@ class BrainGenerationResult:
     used_gemini_api: bool
 
 
+class BrainAuthoringError(RuntimeError):
+    """Raised when the brain cannot faithfully author the requested scripture."""
+
+
 class GeminiBrain:
     """Master Autonomous Creative & Editorial Director powered by Google Gemini."""
 
@@ -143,7 +147,16 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
             except Exception as api_err:
                 print(f"[gemini-brain] Gemini API generation failed ({api_err}), falling back to equipped template.")
 
-        # Offline / deterministic equipped generator (guarantees 100% test passing & safety)
+        # The equipped template is a fixed Psalm 121 exposition. Emitting it for any
+        # other scripture is exactly how job 0011 acquired Psalm 121 verses under a
+        # Psalm 27 title, so the fallback is now scoped to the psalm it was written
+        # from and refuses everything else rather than mislabel scripture.
+        if "121" not in scripture:
+            raise BrainAuthoringError(
+                f"no faithful offline template for {scripture!r}: the equipped generator is "
+                "Psalm 121 only, and GEMINI_API_KEY is unavailable. Refusing to emit "
+                "mislabeled scripture."
+            )
         return self._generate_equipped_template(job_id, scripture, theme, hook)
 
     def _generate_equipped_template(self, job_id: str, scripture: str, theme: str, hook: str) -> str:
@@ -155,8 +168,10 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
 id: "{job_id}"
 title: "{scripture}: {theme} — Night Prayer for Sleep, Peace & Divine Guard | The Secret Place"
 slug: {slug}
-status: approved
+status: draft
 privacy: public
+authored_by: equipped-template
+scripture_verified: false
 format: longform
 niche: faith and prayer
 category: education
@@ -324,7 +339,11 @@ Type Amen to agree with this prayer, and subscribe to The Secret Place to pray w
         next_candidate = self.select_next_scripture()
         print(f"[gemini-brain] Runway low ({audit.runway_days} days < {min_runway_days} days). Authoring next devotional: {next_candidate['scripture']}...")
 
-        script_text = self.author_longform_script(next_candidate)
+        try:
+            script_text = self.author_longform_script(next_candidate)
+        except BrainAuthoringError as exc:
+            print(f"[gemini-brain] Refusing to author: {exc}")
+            return None
         slug_match = re.search(r"^slug:\s*([a-zA-Z0-9\-]+)", script_text, re.MULTILINE)
         slug = slug_match.group(1).strip() if slug_match else f"devotional-{next_candidate['id']}"
         script_filename = f"{next_candidate['id']}-{slug}.md"
