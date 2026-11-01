@@ -1,0 +1,114 @@
+name: Dry render — approved style (no upload)
+
+# Why this exists:
+#   The only renderer that produces the owner-approved widescreen style lives on
+#   PR #112's branch (arena/564c86c7-youtube-automation). `main` still fails closed
+#   on purpose. Dispatching `produce.yml` by hand requires picking that branch in
+#   the Actions UI, and the "Use workflow from" dropdown kept falling back to
+#   `main`, so every manual run died on the legacy-renderer guard.
+#
+#   This workflow removes the branch choice entirely: it is triggered by a push to
+#   THIS branch and checks out the PR #112 ref itself. DRY_RUN is hard-coded and
+#   `--dry-run` is always passed, so it can render but never publish.
+#
+#   Trigger it by changing the marker file .ci/preview-render. Ordinary pushes to
+#   this branch do not start it.
+
+on:
+  push:
+    branches: [arena/eb029c66-youtube-automation]
+    paths:
+      - '.ci/preview-render'
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "Queue file to render (defaults to 0010)"
+        required: false
+        default: "0010-psalm-121-he-who-keeps-you-will-neither-slumber-no.md"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: preview-render
+  cancel-in-progress: false
+
+env:
+  JOB: ${{ github.event.inputs.job || '0010-psalm-121-he-who-keeps-you-will-neither-slumber-no.md' }}
+  DRY_RUN: "1"
+  GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+  PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+  PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+  ENABLE_KEYLESS_SOURCES: "0"
+
+jobs:
+  dry-render:
+    name: Dry render in approved style
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Check out the PR #112 renderer
+        uses: actions/checkout@v4
+        with:
+          ref: arena/564c86c7-youtube-automation
+          fetch-depth: 0
+
+      - name: Show what will be rendered
+        run: |
+          echo "ref: $(git rev-parse --short HEAD) $(git log -1 --format=%s)"
+          echo "job: $JOB"
+          ls -l "content/queue/$JOB"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - uses: ./.github/actions/setup-render-deps
+
+      # Local CPU alignment, same pin as produce.yml on that branch.
+      - name: Install and verify speech alignment
+        run: |
+          python -m pip install 'faster-whisper==1.2.1' 'av<19' 'huggingface-hub<1'
+          python - <<'PYMODEL'
+          from huggingface_hub import snapshot_download
+          snapshot_download(repo_id='Systran/faster-whisper-small.en',
+                            local_dir='output/alignment-model')
+          PYMODEL
+          python scripts/check_prayer_alignment.py --model output/alignment-model
+
+      - name: Render (no upload)
+        run: |
+          set +e
+          python -m pipeline.run --dry-run --job "content/queue/$JOB" 2>&1 | tee render.log
+          rc=${PIPESTATUS[0]}
+          set -e
+          {
+            echo "### Dry render (exit $rc) — nothing was uploaded"
+            echo '```'
+            tail -n 60 render.log
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [ "$rc" -ne 0 ]; then
+            tail -n 20 render.log | while IFS= read -r line; do echo "::error::$line"; done
+          fi
+          exit "$rc"
+
+      - name: Report the master
+        if: always()
+        run: |
+          shopt -s nullglob
+          for f in output/*/*.mp4; do
+            echo "== $f ($(du -h "$f" | cut -f1))"
+            ffmpeg -hide_banner -i "$f" 2>&1 | grep -E 'Duration|Stream #' || true
+          done
+
+      - name: Upload the master for review (7 days)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dry-render-${{ github.run_id }}
+          path: |
+            output/
+            render.log
+          retention-days: 7
