@@ -189,3 +189,91 @@ satisfies the contrast, safe-zone and legibility floors.
 
 This is a legibility and typography comparison, not a CTR result. Only YouTube's
 Test & Compare settles which wins, and it decides on watch-time share.
+
+---
+
+## 11. The CTR pack (1 November 2026) — three defects the legibility rules could not see
+
+Section 10 compared copy lengths on the same art. Measuring those frames against
+the *surfaces they appear on* turned up three problems that contrast, safe-zone
+and word-count rules do not catch.
+
+### Defect 1 — the frame dissolves into the app
+
+YouTube's dark-mode page is `#0F0F0F` (luma 15). The studio frame's vignette
+crushes its corners to about `#02050E` (luma 2–5): **darker than the page behind
+it**. A thumbnail whose border is darker than the surface it sits on has no
+perceptible edge — it reads as a hole in the feed rather than an object in it.
+Measured on the live frame: mean border luma **24**, with **13%** of border
+pixels at or below the page colour.
+
+The CTR pack applies a print floor after grading so no pixel lands under luma 22.
+Result: border luma **33**, **0.4%** of border pixels at or below the page colour
+(residual JPEG undershoot in the extreme corners).
+
+> Rule added: `EDGE_LUMA_MIN = 26`, and `border_dark_share < 5%`. Both are tested.
+
+### Defect 2 — the focal mass was too small
+
+The moon is this channel's only "face". In vidIQ's 500-breakout study a tight
+chin-to-brow crop (≥40% of frame height) peaks at **7.6% CTR** against **4.3%**
+for a small or full-body subject — the single largest effect in the dataset after
+contrast. The studio moon was **29%** of frame height. The CTR pack runs
+**37–44%**, with a halo that bleeds toward the frame edge.
+
+### Defect 3 — the copy competed with the title
+
+Every packaging source agrees the thumbnail and title are read as one unit and
+must not repeat each other (growthos, 1of10, alanspicer, red11media, pikzels,
+instantviews). The published title is:
+
+> *Psalm 121: He Who Keeps You Will Neither Slumber Nor Sleep — Night Prayer for
+> Sleep, Peace & Divine Guard*
+
+So "THE LORD IS YOUR KEEPER" and "HE NEVER SLEEPS" — the two hooks recommended in
+section 10 — are **restatements of the title**. That was a real error in the
+earlier recommendation, caught only by writing the title down next to the
+thumbnail. The pack now carries copy the title does not:
+
+| Concept | Copy | Why it is not redundant |
+| --- | --- | --- |
+| `hook` | PRAY THIS TONIGHT | an imperative + a time; the title never asks for anything |
+| `quiet` | WHILE YOU SLEEP | inverts the subject: the title says *He* does not sleep, this says *you* do |
+| `poster` | none | 28% of breakout thumbnails carry no text at all (vidIQ) |
+
+### The anchor: one lit window
+
+A face lifts CTR ~33%, but this channel never shows faces and never names a
+creator. A single small house on the ridge with **two lit windows** does the same
+job: it implies someone asleep inside, it puts a second bright mass in the lower
+third that was previously dead space, and it survives 168 px as a warm point of
+light. It is also a *story* rather than a texture, which is the difference
+between a scene and stock wallpaper.
+
+### Measured result
+
+| Concept | Hero | Lines | Contrast | Border luma | Dark border | Bright mass | Size |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| live (`studio main`) | 134 px | 3 | 11.5:1 | 24 | 13% | 14% | 121 KiB |
+| `hook` | 130 px | 3 | 9.1:1 | 33 | 0.4% | 14% | 112 KiB |
+| `quiet` | 135 px | 3 | 11.8:1 | 32 | 0.4% | 13% | 105 KiB |
+| `poster` | — | — | — | 42 | 0.0% | 11% | 90 KiB |
+
+Decision sheet: `docs/media/thumbnails/ctr-decision.png`.
+
+### Recommendation
+
+Ship **`hook` — "PRAY THIS TONIGHT"** as the live thumbnail. It is the only one of
+the three that both adds information the title lacks *and* reads as a command at
+168 px, which is what a browse-feed impression needs. Put all three into Test &
+Compare; it decides on watch-time share, not CTR, so the winner may not be the
+one that looks best in a sheet.
+
+### Sources for this section
+
+- vidIQ, *YouTube Thumbnail Study: What 500 Breakout Thumbnails Reveal* (June 2026)
+- CTRpilot, *Which Thumbnail Colours Get the Most YouTube Clicks?* (June 2026) — 3,200 thumbnails, contrast and hue tables
+- TubeAnalytics, *Thumbnail CTR Patterns Study 2026*; notelm.ai 1,247-video study
+- growthos, 1of10, Alan Spicer, red11media, pikzels, instantviews — title/thumbnail complementarity, curiosity gap
+- mer.vin, *YouTube Thumbnail CTR for Song Videos* (Sept 2026) — contemplative/prayer palette, mobile-first sizing
+- YouTube Help — Test & Compare rules (3 variants, watch-time share, 1280×720 minimum)

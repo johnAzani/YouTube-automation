@@ -465,3 +465,34 @@ Wiring: `prayer_pipeline.produce` now renders the studio pack into
 with `dry_run` unticked, applies it to a live video via `thumbnails.set` (50
 units) — which is how the already-published `6M6oV8MxD9s` gets its new
 thumbnail. 13 tests pin the constraints (`tests/test_thumbnail_studio.py`).
+
+### CTR pack — the thumbnail that has to win a dark-mode feed — 1 November 2026
+
+Measuring the studio frames against the surfaces they appear on found three
+defects that legibility rules cannot see:
+
+1. **The frame dissolved into the app.** YouTube's dark-mode page is #0F0F0F
+   (luma 15); the studio vignette crushed its corners to about #02050E. A
+   thumbnail darker than the page has no visible edge. The live frame measured
+   border luma 24 with **13% of border pixels at or below the page colour**.
+2. **The focal mass was too small.** The moon is this channel's only "face". The
+   breakout data puts a tight chin-to-brow crop (≥40% of frame height) at 7.6%
+   CTR against 4.3% for a small subject; the studio moon was 29% of height.
+3. **The copy restated the title.** The published title already reads "…Will
+   Neither Slumber Nor Sleep — Night Prayer for Sleep…", so "THE LORD IS YOUR
+   KEEPER" and "HE NEVER SLEEPS" were redundant. That was an error in the earlier
+   recommendation.
+
+`pipeline/thumbnail_ctr.py` now paints three concepts with a print floor so no
+pixel sits at the page grey (`EDGE_LUMA_MIN = 26`), a moon at 37–44% of frame
+height with a bleeding halo, and a **lone house with two lit windows** as the
+human anchor a face would otherwise provide. Copy is chosen to add what the title
+cannot: an imperative ("PRAY THIS TONIGHT"), an inverted subject ("WHILE YOU
+SLEEP"), or no words at all (28% of breakout thumbnails carry none).
+
+Measured: border luma 24 → 33, dark-border share 13% → 0.4%, hero 130–135 px,
+contrast 9.1–11.8:1, 90–112 KiB. Decision sheet:
+`docs/media/thumbnails/ctr-decision.png`. 21 tests in `tests/test_thumbnail_ctr.py`
+pin the dark-feed, focal-mass, word-budget and no-title-repetition rules; full
+suite 198 passing. The workflow now offers `hook | quiet | poster` alongside the
+studio variants.
