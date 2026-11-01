@@ -27,6 +27,24 @@ def test_calculate_next_quota_reset_utc():
     assert reset_dt.tzinfo == timezone.utc
 
 
+@pytest.mark.parametrize(
+    ("now", "expected"),
+    [
+        (datetime(2026, 7, 1, 12, tzinfo=timezone.utc), datetime(2026, 7, 2, 7, tzinfo=timezone.utc)),
+        (datetime(2026, 11, 1, 6, tzinfo=timezone.utc), datetime(2026, 11, 1, 7, tzinfo=timezone.utc)),
+        (datetime(2026, 11, 1, 7, tzinfo=timezone.utc), datetime(2026, 11, 2, 8, tzinfo=timezone.utc)),
+        (datetime(2026, 3, 8, 8, tzinfo=timezone.utc), datetime(2026, 3, 9, 7, tzinfo=timezone.utc)),
+    ],
+)
+def test_reset_uses_pacific_midnight_with_daylight_saving(now, expected):
+    assert calculate_next_quota_reset_utc(now) == expected
+
+
+def test_reset_rejects_naive_datetime():
+    with pytest.raises(ValueError):
+        calculate_next_quota_reset_utc(datetime(2026, 1, 1))
+
+
 def test_quota_exceeded_error_attributes():
     reset_time = datetime(2026, 10, 27, 8, 0, 0, tzinfo=timezone.utc)
     err = QuotaExceededError("YouTube upload quota exceeded", reset_utc=reset_time)

@@ -161,13 +161,10 @@ def select_jobs(all_flag: bool, job_path: str | None, next_flag: bool) -> list[P
 
 
 def process(path: Path, dry_run: bool) -> dict:
-    """Fail closed until the approved Shorts style supports full-length jobs."""
-    parse_script(path)
-    raise RuntimeError(
-        "Production paused: the legacy montage renderer is forbidden. "
-        "A full-length renderer matching tools/shorts.py short-psalm91 is required "
-        "before queue jobs can render or upload."
-    )
+    """Use only the approved prayer renderer; never fall back to the old style."""
+    from .prayer_pipeline import produce
+    model = Path(os.environ.get("PRAYER_ALIGNMENT_MODEL", OUTPUT_DIR / "alignment-model"))
+    return produce(path, dry_run, model)
 
 
 def _disabled_legacy_process(path: Path, dry_run: bool) -> dict:

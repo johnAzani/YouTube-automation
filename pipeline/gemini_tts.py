@@ -134,7 +134,7 @@ def _synthesize_single_chunk(
 
     # 1. Try modern Interactions API if available (Gemini TTS standard)
     if hasattr(client, "interactions"):
-        for tts_model in ("gemini-3.8-flash-tts", "gemini-2.5-flash-preview-tts", "gemini-2.5-flash-tts"):
+        for tts_model in (model,):
             try:
                 interaction = client.interactions.create(
                     model=tts_model,
@@ -156,13 +156,14 @@ def _synthesize_single_chunk(
                     mime_type = getattr(output_audio, "mime_type", "audio/pcm;rate=24000") or "audio/pcm"
                     return mime_type
             except Exception as exc:
-                print(f"[gemini-tts] interactions.create({tts_model}) skipped: {exc!r}")
+                error = str(exc).lower()
+                if any(x in error for x in ("429", "resource_exhausted", "quota")):
+                    from pipeline.quota_handler import GeminiQuotaExceededError, calculate_next_quota_reset_utc
+                    raise GeminiQuotaExceededError(str(exc), reset_utc=calculate_next_quota_reset_utc()) from exc
+                print(f"[gemini-tts] interactions.create({tts_model}) unavailable: {exc!r}")
 
     # 2. Try models.generate_content with AUDIO modality across candidate audio models
     candidate_models = [model]
-    for alt in ("gemini-3.8-flash-tts", "gemini-2.5-flash-preview-tts", "gemini-2.0-flash-exp"):
-        if alt not in candidate_models:
-            candidate_models.append(alt)
 
     response = None
     last_exc = None
@@ -189,7 +190,7 @@ def _synthesize_single_chunk(
                 last_exc = exc
                 err_msg = str(exc).lower()
                 if "404" in err_msg or "not_found" in err_msg or "only supports text" in err_msg or "invalid_argument" in err_msg:
-                    print(f"[gemini-tts] Model {cur_model} does not support audio modality ({exc!r}), trying alternate model...")
+                    print(f"[gemini-tts] Model {cur_model} unavailable; no alternate model is permitted: {exc!r}")
                     break
                 if "429" in err_msg or "resource_exhausted" in err_msg or "quota" in err_msg:
                     if attempt < max_retries - 1:

@@ -263,3 +263,140 @@ The user rejected the montage/subtitle style used in public Psalm 23 video `JZv6
 ### Approved widescreen style — 31 October 2026
 
 The owner watched the GitHub Pages preview and explicitly confirmed: “Exactly that is it lock it in.” The permanent visual reference is `docs/media/approved-style-preview.mp4` (SHA-256 `69c55e855ed3a9a8ec1ffa79663489d7370eaaf636158c1ae853fe2c11d9f156`), based on `tools/shorts.py` `short-psalm91`. Requirements and limitations are documented in `docs/APPROVED_VISUAL_STYLE.md`, and a regression test protects the preview from silent replacement. PR #109's legacy-renderer production block and PR #110's preview are already on main; prior notes saying those fixes still need merging are historical. The nine-second preview is not a completed long-form renderer. Long-form production stays paused until the approved style, measured speech sync, and at least five minutes of real Gemini Charon narration are implemented and verified. Whether the owner deleted YouTube video `JZv67RNPCEI` has not been confirmed.
+
+### Approved renderer work — current branch (not live)
+
+Rebuilt the previously uncommitted widescreen work on this active branch: `pipeline/prayer_visuals.py` renders full-bleed scenes with the approved Shorts typography, glass HUD, color grade and camera motion; `pipeline/prayer_alignment.py` aligns narration with a preinstalled offline faster-whisper model, rejecting mismatches and uncertain timing; `pipeline/prayer_draft.py` builds an offline draft from existing Charon narration and scene assets. The encoder and scene timing have local tests, including a five-minute synthetic silent render; that does not verify real Charon speech or synchronization. Portrait style defaults are regression-tested. The user-approved reference remains unchanged. The queue's live style lock remains active, and none of this new work is wired to the upload pipeline or deployed. The necessary offline model and real full-length Gemini narration are not available in this workspace; GitHub secrets cannot be retrieved here. The next queued Psalm 121 script is roughly 408 words and may not meet the five-minute minimum. No new video has been published. An initial full suite passed 227 tests and 1,089 subtests after fixing two stale scheduler expectations; an additional five-minute synthetic render test subsequently passed.
+
+### Production integration work — pending real alignment verification
+
+This branch now includes `pipeline/prayer_pipeline.py`, a new end-to-end approved-style production path with Gemini Charon narration, a local measured-word alignment prerequisite, full-bleed scene rendering, duration enforcement, upload and publication receipt handling. This new path is not yet connected to `pipeline.run.process` on main; the legacy-style lock remains active. The first queued Psalm 121 script has 408 words, below the new full-length preflight threshold of 650, and needs substantive expansion without falsely claiming human revision. The Gemini TTS implementation on this branch no longer falls back to alternate models and handles quota errors from the interactions API. Tests use mocks for upload/Gemini and synthetic sound for encoder tests; they are not proof of a real full-length Charon video.
+
+A new secret-free GitHub Actions diagnostic (`prayer-alignment-check.yml`) runs the local speech model on the existing Psalm 91 recording, comparing its timestamps against the stored reference including segment 3. The model download occurs in temporary GitHub runner storage. At the time of writing the diagnostic has not yet run; its result and actual timing accuracy remain unverified. This diagnostic does not upload or unlock publishing. GitHub Actions credentials and a real Gemini request are unavailable in the sandbox, and an unverified assumption that an API key cannot incur billing is not a $0.00 guarantee.
+
+### 31 October 2026 — Wiring approved style into automation (branch, not yet deployed)
+
+The approved prayer renderer is now connected to `pipeline.run.process` on this branch, with no legacy-renderer fallback. The production workflow provisions a local CPU alignment model and checks the existing Psalm 91 recording before proceeding. The next script, Psalm 121 (`0010`), was expanded to 884 words; its actual Charon duration is not yet measured, and its fact-check worksheet was regenerated but not independently checked. The new text is recorded truthfully as `human_rewrite: false`. Because the owner requires autonomous publication without a manual approval gate, the originality checker no longer treats that flag as mandatory; its substantive/source checks remain. These flags are assertions, not proof of factual accuracy or originality.
+
+The branch's separate GitHub alignment diagnostic downloaded the local model and aligned the real existing Psalm 91 recording. A permissive confidence diagnostic measured a worst difference of approximately 0.400 seconds across the reference and 0.200 seconds in segment 3. A later diagnostic using the actual confidence floor reported the same numbers but failed at the floating-point 0.400-second boundary; an epsilon correction has been made and needs a new run. This comparison is not proof of exact word-level sync for other voices or scripts. Local tests passed 231 tests and 1,110 subtests; upload/TTS tests use mocks. No live full-length render or upload has been verified. Gemini API keys are unavailable locally; the API's free tier is not an enforceable zero-dollar cap if the project has paid billing enabled, which has not been independently verified. Keep the branch unmerged until real synchronization and the zero-cost constraint can be assured. The actual production on main remains blocked and no new YouTube upload has occurred.
+
+The real-recording alignment diagnostic subsequently passed at a 0.400-second maximum tolerance (worst discrepancy 0.400 seconds; segment 3 discrepancy 0.200 seconds). This demonstrates a bounded match to the existing reference, not exact word-to-word synchronization or accuracy on the new narration. The branch's GitHub CI also exposed that its test runner installed no pytest despite importing pytest-based tests; the workflow now explicitly installs and runs pytest. The branch is still not merged: an actual full-length Gemini render, verified free-only billing, and YouTube publication remain outstanding.
+
+### Upload request — current blocker
+
+The owner explicitly requested that the real approved-style video be uploaded. PR #112 remains a draft and is not on `main`; the new full-length Charon path has not been exercised end to end with real credentials and no new video has been uploaded. The branch's public-recording alignment diagnostic passed against the existing reference at a 0.4-second tolerance (segment 3: 0.2 seconds); this does not guarantee exact synchronization for the new narration. The CI unit-test job passed, but the network-dependent general pipeline dry-run failed, and the offline renderer job was still running at the last check. GitHub Actions secrets cannot be read using this integration (403). In particular, no evidence is available here that the Google project associated with `GEMINI_API_KEY` has billing disabled; a Gemini API key and a quota response do not enforce the owner's $0 hard limit if paid billing is active. No paid API call or automatic publication should be attempted on an unverified billing project. The owner can verify the project billing state in Google Cloud Console without sharing credentials.
+
+On checking directly in the sandbox, no Gemini API key, Google application credentials, or Google project identifier was present; the installed GitHub integration also returned HTTP 403 for the repository secrets list. Google AI Studio has no supported connector in this session. Consequently the Gemini project's billing state cannot be independently verified from here. The public GitHub Actions unit-test job succeeded, but the real long-form video has not been uploaded and PR #112 remains a draft.
+
+### In-depth cost and release research — 31 October 2026
+
+- Google's Gemini pricing page lists Standard `gemini-3.8-flash-tts` input and output as free on the free tier, with separately priced paid-tier usage. A free-capable model is not proof that the deployed API key's project is free. Official pricing: https://ai.google.dev/gemini-api/docs/pricing .
+- Google says API keys inherit their parent project's billing status; the Projects page displays billing tier, and disabling billing on a project returns it to the free tier. A paid-project balance reaching zero does not automatically downgrade to free. Official billing documentation: https://ai.google.dev/gemini-api/docs/billing . Actual Gemini project ID, billing status, and real paid/free tier remain UNKNOWN here; no Google project auth or API key is available in the sandbox.
+- A 429 can reflect minute, daily, token or paid-tier spend limits; it is not proof of free billing. Free daily RPD resets at midnight Pacific local time, not permanently 08:00 UTC: https://ai.google.dev/gemini-api/docs/rate-limits . `pipeline/quota_handler.py` currently hard-codes 08:00 UTC and inaccurately states 1,500 RPD / 15 RPM as universal. This is a research finding; it has not yet been fixed. On 1 November 2026 Pacific midnight is 08:00 in Lagos; from 2 November it is 09:00 in Lagos because daylight saving changes.
+- Google Cloud's billing status API `projects.getBillingInfo` returns `billingEnabled` and requires an authenticated principal with `resourcemanager.projects.get`; matching a secret API key to its owning project can require `apikeys.keys.lookup`. Neither the secret key nor access to a Google Cloud identity is available here. References: https://docs.cloud.google.com/billing/docs/access-control ; https://docs.cloud.google.com/api-keys/docs/reference/rest/v2/keys/lookupKey . A successful `models.list` does not prove billing tier or inference eligibility: https://ai.google.dev/gemini-api/docs/troubleshooting .
+- Alert-only budgets do not enforce a hard stop; spend caps may exist for supported services but availability, zero-threshold behavior, reporting delay and scope need separate verification. Unlinking billing may stop other project services and doesn't erase already accrued costs: https://docs.cloud.google.com/billing/docs/how-to/budgets ; https://docs.cloud.google.com/billing/docs/how-to/modify-project . Do not change billing without owner approval.
+- The repository is public, so standard GitHub-hosted runners are free for compute, but artifact/cache storage policies have separate allowances. GitHub API returned 40 unexpired artifacts totalling 8,022,777,290 bytes at investigation time (including repeated ~599 MB GitHub Pages artifacts). Account-wide plan, accrued storage and actual charges were not accessible; this is a risk to investigate, not evidence of a charge. Example: scheduled blocked production still generated `render-41229855644` (~534 MB), because its artifact step captures `output/` including cached assets. Avoid purging artifacts without authorization. Reference: https://docs.github.com/en/billing/concepts/product-billing/github-actions .
+- The latest scheduled production run started Saturday 31 October at 7:31pm Lagos time and failed; GitHub annotations show the legacy-style block stopped long-form `0010`, and the unsupported Short manifests were skipped. No video upload is shown in that run: https://github.com/johnAzani/YouTube-automation/actions/runs/41229855644 . Main still blocks long-form; draft PR #112 is not merged. The approved video preview is `docs/media/approved-style-preview.mp4`; actual full-length Charon output and upload are unverified.
+- The research also found outdated quota assertions in the repo: current Google documentation describes `videos.insert` as a separate upload quota bucket, not the historic 1,600-unit statement. https://developers.google.com/youtube/v3/docs/videos/insert . This does not establish this project's actual quota.
+
+### Read-only GitHub secret diagnostic
+
+The user confirmed the Gemini key is stored in GitHub Secrets and authorized finding information through it. Added `.github/workflows/gemini-key-diagnostic.yml`, which runs only on the session branch, passes the secret to a no-checkout step, and requests only metadata for the required TTS model. It prints neither the key nor the response and attempts no speech generation or upload. Its result can confirm secret presence and model-metadata accessibility only; neither result establishes the key's project or billing tier. Actual result is pending the workflow run.
+
+Diagnostic result: GitHub Actions run https://github.com/johnAzani/YouTube-automation/actions/runs/41246316711 reported `GEMINI_API_KEY` present and requested `gemini-3.8-flash-tts` model metadata accessible. The response body and key were not exposed. No speech generation or upload occurred. This does not establish free-tier eligibility, identify the parent project, or verify billing. The separate Google Cloud authenticated permissions described above are still required for the proposed billing preflight. Result recorded from sanitized GitHub check annotations; the raw Actions log endpoint was inaccessible from this sandbox.
+
+### User-confirmed free tier and quota reset correction
+
+The user confirmed that the Gemini project is on the free tier. Treat this as the user's current account information, not as an independently verified billing API result or a permanent guard against later billing changes. The GitHub secret/model metadata diagnostic above remains valid; no inference or upload has been performed.
+
+Updated `calculate_next_quota_reset_utc` to calculate midnight in `America/Los_Angeles` with daylight-saving transitions rather than assuming 08:00 UTC. Added summer, autumn/spring DST transition, exact-midnight and naive-time tests. Removed inaccurate claims that quota handling alone enforces the $0 lock and that one fixed Gemini quota applies universally. Targeted quota tests: 13 passed. Full local suite: 236 passed, 1,110 subtests. Remaining: autonomous billing/project check, actual live Charon synthesis and alignment verification, compliant final render and upload. This correction is on the session branch, not main; no live production was triggered.
+
+### Branch cleanup and PR #112 readiness review — 31 October 2026
+
+All 61 stale remote `arena/*` branches were deleted from `origin`; `main` is
+untouched at `1813451`. PR #112's branch was kept because it is the only
+unmerged work, and its tip is additionally preserved as the tag
+`archive-pr112-approved-prayer-visual-pipeline` (`e7c6c42`).
+
+PR #112 was reviewed offline and **not merged**. Verified: 236 tests pass on its
+tip; the widescreen renderer runs for real (1280×720 H.264/AAC, sapphire grade,
+frosted HUD, Inter display type, gold active-word illumination) at 202 ms/frame
+on a 2-core sandbox (4.85× realtime, i.e. ~12–15 min for a 6-minute master on a
+4-core runner); `full_narration` matches the concatenated scene narrations for
+all 28 queue scripts. Unverified: live Gemini `gemini-3.8-flash-tts`/Charon
+synthesis under the new no-fallback policy, the `faster-whisper` alignment model
+and tolerance check, licensed asset fetch, and a full-length render plus upload.
+A dry run could not be started from this session — `gh workflow run` returns
+`HTTP 403` because the GitHub integration has no `actions:write`.
+
+**Blocking finding:** the queue is not a 30-night long-form runway.
+`python scripts/audit_runway.py` reports 22 of 28 scripts below the 650-word
+(≈4.2 min) floor enforced by `pipeline/prayer_pipeline.py`; the short ones are
+227–408 words (1.5–2.7 min). Of the 6 that clear the floor, 0003–0007 are
+`draft`, so **only 0010 is publishable: 1 job, 5.7 minutes**. Merging #112 today
+would publish 0010 on the next cron and then fail closed on the length gate
+three times a day. Full review, recommendations and the exact dry-run to run:
+`docs/WIDESCREEN_PIPELINE_READINESS.md`.
+
+### CI dependency fix + long-form upload runbook — 1 November 2026
+
+The required `Unit tests + doctor` job was failing on every branch, including
+`main`, before running a single assertion: seven modules under `tests/` import
+`pytest` at module scope while the workflow installs only `requirements.txt` and
+runs `python -m unittest discover -s tests`. Adding `pytest>=8.0` to
+`requirements.txt` fixes collection without touching the workflow files (PR #112
+edits the same step, so this avoids a conflict). `tests/test_auto_scheduler.py`
+also stopped hardcoding job `0009`/"Psalm 23" — it failed forever once 0009 was
+published — and now derives both expectations from `content/queue/`.
+
+`docs/LONG_FORM_UPLOAD_RUNBOOK.md` documents the only currently working path to
+publish a long-form video in the approved style: dispatch `Produce video` on the
+PR #112 branch (dry run first, then the real upload), then merge #112 so the
+published receipt and renderer land on `main` together. Nothing in style can be
+uploaded from `main` until #112 merges, because `main`'s renderer still fails
+closed by design.
+
+Also note for whoever merges #112: after `0010` publishes, the next approved job
+is `0011` at 408 words, which the renderer refuses, so the cron goes red one run
+later. Approving `0003`–`0007` (already 1,055–3,175 words, sitting at
+`status: draft`) restores roughly six full-length uploads.
+
+### Verified end-to-end dry render, and the alignment fixes it exposed — 1 November 2026
+
+The owner could not select the PR #112 branch in the Actions "Use workflow from"
+dropdown (runs #43–#51 all executed on `main` and died on the legacy-renderer
+guard), so a push-triggered workflow (`.github/workflows/preview-render.yml`) was
+added. It checks out #112's ref itself and renders with `DRY_RUN=1` — it can
+never publish.
+
+**Run https://github.com/johnAzani/YouTube-automation/actions/runs/41280103404 is
+the first successful end-to-end long-form run.** It produced real Gemini
+`gemini-3.8-flash-tts` Charon narration for job 0010 (5:04 of audio), passed the
+local `faster-whisper` alignment and the Psalm 91 tolerance check (max difference
+0.400 s, segment 3 0.200 s), and rendered the full master plus metadata. Nothing
+was uploaded.
+
+Reaching that point required three fixes to #112's own code, each found by a real
+run rather than by reading it:
+
+1. `pipeline/prayer_alignment.py` demanded exactly one recogniser token per
+   script word. Run 1 aborted on a zero-length word (`start == end` at word 183),
+   run 2 on `word count differs: 883 vs 884; mismatches=[(['for', 'evermore'],
+   ['forevermore'])]`, run 3 on a correctly transcribed word with probability
+   0.117. The module now tolerates zero-length words, maps script words onto the
+   recognised tokens, and only applies the confidence floor where the text did
+   not match. It still fails closed if the narration says something else
+   (`Peace.` narrated as `Rest.`), on non-monotonic, negative or non-finite
+   timings, and on unknown models/audio.
+2. `pipeline/prayer_visuals.py` rejected zero-length spans (`end <= start`) even
+   though the typography only compares timestamps.
+3. `tests/test_auto_scheduler.py` hardcoded published jobs; #112's own rewrite
+   replaced it during the merge.
+
+`tests/test_prayer_alignment.py` pins every case above (159 tests pass). The
+renderer from #112 is now merged onto this branch together with these fixes and
+`scripts/audit_runway.py`, so merging this branch puts a working approved-style
+renderer on `main` — after which `produce.yml` can be dispatched from `main`
+itself, which is the only branch the mobile app offers.
+
+Still true after this: the queue's renderable runway is one job (0010).

@@ -19,3 +19,9 @@ google-auth-httplib2>=0.1
 
 # Optional: static ffmpeg binary for laptops without ffmpeg installed
 imageio-ffmpeg>=0.4.9
+
+# Test runner. Seven tests/ modules import pytest at module scope, and CI installs
+# only this file before running `python -m unittest discover -s tests`, so without
+# it the hermetic "Unit tests + doctor" job fails on collection — not on a real
+# assertion. Keeping it here fixes CI without touching the workflows.
+pytest>=8.0
