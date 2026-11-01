@@ -1,0 +1,104 @@
+# Expands approved-but-too-short prayer scripts to full length.
+#
+# Why: prayer_pipeline refuses any script under 650 words rather than ship a
+# four-minute promise, so short scripts publish nothing. Every approved job in the
+# queue is 265-408 words, which is why the daily produce crons have had nothing to
+# build. This is the missing supply-side step.
+#
+# The tool is additive and fail-closed: every original line must survive verbatim,
+# scene headings must keep their order, repeated padding sentences are rejected,
+# creator names are rejected, and a job whose body quotes the wrong psalm is
+# refused rather than rewritten. Anything that changes the reviewed words is not
+# committed.
+#
+# Defaults are safe: dry_run is true, so the first run only reports what it would do.
+
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: "Comma-separated job ids (blank = every approved job under 650 words)"
+        required: false
+        default: ""
+      target:
+        description: "Target word count per script"
+        required: false
+        default: "900"
+      dry_run:
+        description: "Report only, do not change any script"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: expand-scripts
+  cancel-in-progress: false
+
+jobs:
+  expand:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Python deps
+        run: python -m pip install -r requirements.txt
+
+      - name: Scripture labels (report first, never silently)
+        run: |
+          python -m tools.expand_scripts --check || true
+
+      - name: Expand the queue
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          IDS: ${{ inputs.ids }}
+          TARGET: ${{ inputs.target }}
+          DRY: ${{ inputs.dry_run }}
+        run: |
+          set -o pipefail
+          FLAGS="--target $TARGET"
+          if [ -n "$IDS" ]; then FLAGS="$FLAGS --ids $IDS"; fi
+          if [ "$DRY" = "true" ]; then
+            python -m tools.expand_scripts $FLAGS
+          else
+            python -m tools.expand_scripts $FLAGS --write
+          fi
+
+      - name: Report per-script result
+        if: always()
+        run: |
+          python - <<'PY'
+          import glob, subprocess, sys
+          from pathlib import Path
+          sys.path.insert(0, '.')
+          from tools.expand_scripts import load_job, MIN_WORDS
+          rows = []
+          for p in sorted(Path('content/queue').glob('*.md')):
+              j = load_job(p)
+              if j.status == 'approved':
+                  rows.append((j.job_id, j.words, 'ready' if j.words >= MIN_WORDS else 'under gate'))
+          ready = sum(1 for r in rows if r[2] == 'ready')
+          print(f"::notice title=Queue readiness::{ready} of {len(rows)} approved scripts can publish")
+          for job_id, words, state in rows:
+              print(f"  {job_id}  {words:>4}w  {state}")
+          PY
+
+      - name: Commit expanded scripts
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "Secret Place Automation"
+          git config user.email "automation@users.noreply.github.com"
+          if git diff --quiet -- content/queue; then
+            echo "::notice title=Nothing to commit::no script passed validation"
+            exit 0
+          fi
+          git add content/queue
+          git commit -m "chore(scripts): expand approved prayer scripts to full length [skip ci]"
+          git push

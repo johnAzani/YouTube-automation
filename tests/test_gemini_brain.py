@@ -39,7 +39,9 @@ class TestGeminiBrain(unittest.TestCase):
 
         self.assertIn('id: "0010"', text)
         self.assertIn("Psalm 121", text)
-        self.assertIn("status: approved", text)
+        # template output is a draft: nothing reaches the publishing cron until a
+        # human flips the status, per pipeline/run.py
+        self.assertIn("status: draft", text)
         self.assertIn("privacy: public", text)
         self.assertIn("voice: Charon", text)
         self.assertIn("## Scene 1", text)
@@ -87,3 +89,22 @@ I lift my eyes unto the hills.
         result_text = brain.author_longform_script(cand)
         self.assertIn('id: "0010"', result_text)
         self.assertIn("Psalm 121", result_text)
+
+
+class TestOfflineFallbackIsScoped(unittest.TestCase):
+    """The equipped template is Psalm 121 text. Emitting it for another psalm is the
+    0011 incident: Psalm 121 verses published under a Psalm 27 title."""
+
+    def test_refuses_to_emit_psalm_121_under_another_psalm(self):
+        from pipeline.gemini_brain import BrainAuthoringError, GeminiBrain
+        brain = GeminiBrain(api_key="")
+        with self.assertRaises(BrainAuthoringError):
+            brain.author_longform_script({"id": "0099", "scripture": "Psalm 27",
+                                          "theme": "The Lord Is My Light", "hook": "LIGHT"})
+
+    def test_psalm_121_still_uses_the_template(self):
+        from pipeline.gemini_brain import GeminiBrain
+        text = GeminiBrain(api_key="").author_longform_script(
+            {"id": "0098", "scripture": "Psalm 121", "theme": "Keeper", "hook": "KEEPER"})
+        self.assertIn("Psalm 121", text)
+        self.assertIn("scripture_verified: false", text)

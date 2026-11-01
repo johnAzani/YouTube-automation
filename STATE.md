@@ -496,3 +496,31 @@ contrast 9.1–11.8:1, 90–112 KiB. Decision sheet:
 pin the dark-feed, focal-mass, word-budget and no-title-repetition rules; full
 suite 198 passing. The workflow now offers `hook | quiet | poster` alongside the
 studio variants.
+
+### Supply side: script expansion + the 0011 root cause — 1 November 2026
+
+The daily crons were publishing nothing, and it was not a plumbing fault. Every
+approved job in the queue was 265–408 words against a hard 650-word gate, so
+`produce` failed closed three times a day. 0010 shipped only because it was
+written at 951 words.
+
+`tools/expand_scripts.py` is the missing supply-side step. It expands approved
+scripts to ~900 words **additively**: every original line must reappear verbatim
+and in order, scene headings must keep their positions, and the run is refused
+if the result is still under the gate, over 1200 words, carries a repeated
+12-word sentence (padding), leaks a creator name, or quotes a psalm that
+contradicts the title. The template provider cannot be used with `--write` —
+padding is not writing, and the tool exists to stop padding reaching production.
+`.github/workflows/expand-scripts.yml` runs it with Gemini, `dry_run` defaulting
+to true.
+
+**Root cause of job 0011** (Psalm 121 verses under a Psalm 27 title): the offline
+fallback in `pipeline/gemini_brain.py` is a fixed Psalm 121 exposition, emitted
+for *whatever* scripture was requested whenever the API was unavailable — and it
+stamped `status: approved`, so it went straight into the publishing cron. Now the
+fallback refuses anything that is not Psalm 121 (`BrainAuthoringError`, handled
+as "refusing to author" rather than a crash) and template output is
+`status: draft` with `scripture_verified: false`.
+
+19 new tests in `tests/test_expand_scripts.py`, 2 in `tests/test_gemini_brain.py`;
+full suite **219 passing**.
