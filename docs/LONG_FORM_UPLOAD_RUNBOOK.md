@@ -91,6 +91,19 @@ licensed photographs and real Charon narration.
 
 ---
 
+## About the red "General pipeline dry-run (needs network)" check
+
+That job is advisory (`continue-on-error: true`) and is expected to be red:
+
+- on `main` it hits the legacy-renderer guard, by design;
+- on PR #112 it would reach the new renderer but the job does not pass
+  `GEMINI_API_KEY` into its environment, so it stops at
+  "Gemini API key missing; refusing voice substitution" — which is the correct
+  fail-closed behaviour, not a regression.
+
+A merge is not blocked by it. The two required checks — *Unit tests + doctor*
+and *Offline end-to-end render* — are green.
+
 ## Known failure modes and what each one means
 
 | Log line | Meaning | Action |
