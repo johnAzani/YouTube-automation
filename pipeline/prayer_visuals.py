@@ -22,7 +22,7 @@ def sentence_stream(words, *, timing_source):
     previous = 0.0
     for word, start, end in words:
         if (not word.strip() or not math.isfinite(start) or not math.isfinite(end)
-                or start < previous or end <= start):
+                or start < previous or end < start):
             raise ValueError('Invalid or overlapping word boundaries')
         buf.append((word, start, end))
         previous = end

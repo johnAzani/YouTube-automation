@@ -35,7 +35,6 @@ concurrency:
 
 env:
   # Branch that carries the preview overlays and the workflow itself.
-  OVERLAY_REF: arena/eb029c66-youtube-automation
   JOB: ${{ github.event.inputs.job || '0010-psalm-121-he-who-keeps-you-will-neither-slumber-no.md' }}
   DRY_RUN: "1"
   GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -108,48 +107,6 @@ jobs:
             echo '```'
             tail -n 20 alignment.log
             echo '```'
-          } >> "$GITHUB_STEP_SUMMARY"
-
-      # PREVIEW-ONLY OVERLAYS — not merged anywhere. Both exist because the PR's
-      # guards reject tokenisations that speech recognisers legitimately produce:
-      #
-      #  1. faster-whisper returns some words with zero length (start == end), and
-      #     prayer_visuals.sentence_stream rejects that with `end <= start`. The
-      #     consumer only compares timestamps, so a zero-length word is harmless.
-      #  2. prayer_alignment.py demands exactly one recognised token per script
-      #     word and aborted job 0010 with "word count differs: 883 vs 884;
-      #     mismatches=[(['for', 'evermore'], ['forevermore'])]". .ci ships a
-      #     tolerant matcher (unit-tested in tests/test_prayer_alignment_preview.py)
-      #     that maps script words onto what was heard and still refuses
-      #     non-monotonic, non-finite, negative or low-confidence timings.
-      #
-      # Neither may be used for a real upload until it is merged into PR #112.
-      - name: Apply preview alignment overlays (preview only)
-        run: |
-          set -euxo pipefail
-          # The job checked out PR #112's tree, so the overlay file is not here:
-          # fetch it from this branch, which is where it is reviewed and tested.
-          curl -sSfL --retry 3 --retry-delay 2 \
-            "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${OVERLAY_REF}/.ci/prayer_alignment_preview.py" \
-            -o pipeline/prayer_alignment.py
-          head -1 pipeline/prayer_alignment.py
-          python - <<'PYPATCH'
-          from pathlib import Path
-          path = Path('pipeline/prayer_visuals.py')
-          text = path.read_text()
-          if 'end <= start' not in text:
-              raise SystemExit('prayer_visuals.py: expected guard not found')
-          path.write_text(text.replace('end <= start', 'end < start'))
-          print('patched pipeline/prayer_visuals.py')
-          PYPATCH
-          python -c "import sys; sys.path.insert(0, '.'); import pipeline.prayer_alignment as m; print('matcher loaded from', m.__file__)"
-          git --no-pager diff --stat
-          {
-            echo '### Preview overlays applied (not merged)'
-            echo '```diff'
-            git --no-pager diff -U1 -- pipeline/prayer_visuals.py
-            echo '```'
-            echo 'pipeline/prayer_alignment.py replaced by .ci/prayer_alignment_preview.py'
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Render (no upload)

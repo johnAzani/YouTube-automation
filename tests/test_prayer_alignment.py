@@ -1,20 +1,19 @@
-"""Tests for the tolerant alignment overlay used by the preview dry render.
+"""Local speech alignment must accept the tokenisation a recogniser really emits.
 
-`.ci/prayer_alignment_preview.py` is not imported by production code; it is copied
-over `pipeline/prayer_alignment.py` inside the preview workflow so the owner can
-see a full-length master. These tests pin the behaviour that matters: the module
-must accept the tokenisations faster-whisper actually produces while still
-refusing genuinely wrong or unsafe alignments.
+Every case below is a real failure from a run of job 0010 on GitHub Actions: a
+zero-length word, "for evermore" recognised as "forevermore", and a correctly
+transcribed word with a low recogniser probability. The alignment must survive
+all three while still refusing timings that are non-monotonic, negative,
+non-finite or inferred from text that does not match the script.
 """
-import importlib.util
+import sys
 import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-_spec = importlib.util.spec_from_file_location(
-    'prayer_alignment_preview', ROOT / '.ci' / 'prayer_alignment_preview.py')
-preview = importlib.util.module_from_spec(_spec)
-_spec.loader.exec_module(preview)
+sys.path.insert(0, str(ROOT))
+
+from pipeline import prayer_alignment as preview  # noqa: E402
 
 
 def heard(*triples):
@@ -65,9 +64,9 @@ class TestTolerantMatch(unittest.TestCase):
         self.assertAlmostEqual(is_word[1], is_word[2], places=3)
 
     def test_timings_never_go_backwards(self):
-        words = preview.match(['a', 'b', 'c', 'd'],
-                              heard(('a', 0.0, 0.3, 0.9), ('bee', 0.3, 0.6, 0.9),
-                                    ('see', 0.6, 0.9, 0.9), ('dee', 0.9, 1.2, 0.9)))
+        words = preview.match(['peace', 'be', 'with', 'you'],
+                              heard(('peace', 0.0, 0.3, 0.9), ('be', 0.3, 0.6, 0.9),
+                                    ('with', 0.6, 0.9, 0.9), ('you', 0.9, 1.2, 0.9)))
         starts = [w[1] for w in words]
         self.assertEqual(starts, sorted(starts))
         for _, start, end in words:
@@ -92,14 +91,23 @@ class TestTolerantMatch(unittest.TestCase):
         with self.assertRaises(ValueError):
             preview.match(['mercy'], [])
 
-    def test_completely_different_transcript_does_not_crash(self):
-        # Every script word is unmatched; the result is a coherent, monotonic
-        # timeline rather than a crash, because the caller still needs durations.
-        words = preview.match(['alpha', 'beta', 'gamma'],
-                              heard(('one', 0.0, 0.4, 0.9), ('two', 0.4, 0.8, 0.9),
-                                    ('three', 0.8, 1.2, 0.9)))
-        self.assertEqual(len(words), 3)
-        self.assertTrue(all(start <= end for _, start, end in words))
+    def test_narration_that_says_something_else_is_refused(self):
+        # The whole point of alignment: audio that is not the script must fail
+        # closed, not silently produce a video with the wrong words.
+        with self.assertRaises(ValueError):
+            preview.match(['Peace.'], heard(('Rest.', 0.1, 0.4, 0.9)))
+        with self.assertRaises(ValueError):
+            preview.match(['alpha', 'beta', 'gamma'],
+                          heard(('one', 0.0, 0.4, 0.9), ('two', 0.4, 0.8, 0.9),
+                                ('three', 0.8, 1.2, 0.9)))
+
+    def test_numerals_may_be_spelled_differently(self):
+        # Scripts write "121"; narrators say "one twenty one".
+        words = preview.match(['Psalm', '121'],
+                              heard(('Psalm', 0.0, 0.4, 0.9), ('one', 0.4, 0.6, 0.9),
+                                    ('twenty', 0.6, 0.9, 0.9), ('one', 0.9, 1.2, 0.9)))
+        self.assertEqual(len(words), 2)
+        self.assertAlmostEqual(words[1][2], 1.2, places=3)
 
 
 if __name__ == '__main__':

@@ -360,3 +360,43 @@ Also note for whoever merges #112: after `0010` publishes, the next approved job
 is `0011` at 408 words, which the renderer refuses, so the cron goes red one run
 later. Approving `0003`–`0007` (already 1,055–3,175 words, sitting at
 `status: draft`) restores roughly six full-length uploads.
+
+### Verified end-to-end dry render, and the alignment fixes it exposed — 1 November 2026
+
+The owner could not select the PR #112 branch in the Actions "Use workflow from"
+dropdown (runs #43–#51 all executed on `main` and died on the legacy-renderer
+guard), so a push-triggered workflow (`.github/workflows/preview-render.yml`) was
+added. It checks out #112's ref itself and renders with `DRY_RUN=1` — it can
+never publish.
+
+**Run https://github.com/johnAzani/YouTube-automation/actions/runs/41280103404 is
+the first successful end-to-end long-form run.** It produced real Gemini
+`gemini-3.8-flash-tts` Charon narration for job 0010 (5:04 of audio), passed the
+local `faster-whisper` alignment and the Psalm 91 tolerance check (max difference
+0.400 s, segment 3 0.200 s), and rendered the full master plus metadata. Nothing
+was uploaded.
+
+Reaching that point required three fixes to #112's own code, each found by a real
+run rather than by reading it:
+
+1. `pipeline/prayer_alignment.py` demanded exactly one recogniser token per
+   script word. Run 1 aborted on a zero-length word (`start == end` at word 183),
+   run 2 on `word count differs: 883 vs 884; mismatches=[(['for', 'evermore'],
+   ['forevermore'])]`, run 3 on a correctly transcribed word with probability
+   0.117. The module now tolerates zero-length words, maps script words onto the
+   recognised tokens, and only applies the confidence floor where the text did
+   not match. It still fails closed if the narration says something else
+   (`Peace.` narrated as `Rest.`), on non-monotonic, negative or non-finite
+   timings, and on unknown models/audio.
+2. `pipeline/prayer_visuals.py` rejected zero-length spans (`end <= start`) even
+   though the typography only compares timestamps.
+3. `tests/test_auto_scheduler.py` hardcoded published jobs; #112's own rewrite
+   replaced it during the merge.
+
+`tests/test_prayer_alignment.py` pins every case above (159 tests pass). The
+renderer from #112 is now merged onto this branch together with these fixes and
+`scripts/audit_runway.py`, so merging this branch puts a working approved-style
+renderer on `main` — after which `produce.yml` can be dispatched from `main`
+itself, which is the only branch the mobile app offers.
+
+Still true after this: the queue's renderable runway is one job (0010).
