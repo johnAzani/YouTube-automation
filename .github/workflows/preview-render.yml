@@ -108,6 +108,40 @@ jobs:
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
 
+      # PREVIEW-ONLY OVERLAY — not merged anywhere.
+      # faster-whisper occasionally returns a zero-length word (start == end), e.g.
+      # "Invalid or uncertain alignment at word 183: start=57.780, end=57.780".
+      # pipeline/prayer_alignment.py and prayer_visuals.sentence_stream reject that
+      # with `end <= start`, which kills the whole render. The consumer
+      # (tools/shorts.py kinetic_typography_layer) only compares timestamps
+      # (`w_t0 <= t < w_t1`), so a zero-length word is harmless — it is simply
+      # illuminated for no time. Strictly relaxing `end <= start` to `end < start`
+      # in those two guards is the whole fix. It must land on PR #112 before a real
+      # upload; this step exists only so the owner can see the master now.
+      - name: Apply preview alignment patch (preview only)
+        run: |
+          python - <<'PYPATCH'
+          from pathlib import Path
+          targets = {
+              'pipeline/prayer_alignment.py': 'end <= start',
+              'pipeline/prayer_visuals.py': 'end <= start',
+          }
+          for name, needle in targets.items():
+              path = Path(name)
+              text = path.read_text()
+              if needle not in text:
+                  raise SystemExit(f'{name}: expected guard not found')
+              path.write_text(text.replace(needle, 'end < start'))
+              print(f'patched {name}')
+          PYPATCH
+          git --no-pager diff --stat
+          {
+            echo '### Preview alignment patch applied (not merged)'
+            echo '```diff'
+            git --no-pager diff -U1 -- pipeline/prayer_alignment.py pipeline/prayer_visuals.py
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
       - name: Render (no upload)
         run: |
           set +e
