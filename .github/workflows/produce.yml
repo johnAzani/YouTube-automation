@@ -127,6 +127,34 @@ jobs:
             git push
           fi
 
+      # Style proof without a 1 GB download: three frames from the master,
+      # small enough to open from the run page. Shows HUD, typography,
+      # gold illumination and how the plate fills a 16:9 frame.
+      - name: Extract style frames from the master
+        if: always()
+        run: |
+          set +e
+          mkdir -p output/style-frames
+          for f in output/*/*.mp4; do
+            [ -f "$f" ] || continue
+            specs=$(ffmpeg -hide_banner -i "$f" 2>&1 | grep -E 'Duration|Stream #' | tr -s ' ' | tr '\n' '/')
+            echo "::notice title=Master::$(basename "$f") | $specs"
+            for pct in 10 50 90; do
+              ffmpeg -y -loglevel error -ss "$pct%" -i "$f" -frames:v 1 \
+                -vf "scale=960:-2" "output/style-frames/$(basename "$f" .mp4)-${pct}pct.png"
+            done
+          done
+          ls -la output/style-frames || true
+
+      - name: Upload style frames (review artifact, 14 days)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: style-frames-${{ github.run_id }}
+          path: output/style-frames/
+          retention-days: 14
+          if-no-files-found: ignore
+
       - name: Upload render for QC (expires in 1 day — videos never live in git)
         uses: actions/upload-artifact@v4
         if: always()

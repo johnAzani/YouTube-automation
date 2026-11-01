@@ -186,3 +186,52 @@ class AssetSourcingTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class AspectSafetyTests(unittest.TestCase):
+    """A portrait clip must never be centre-cropped into the 16:9 master.
+
+    On 2026-11-01 job 0010 accepted a 2160x3840 Pixabay clip for a 1280x720
+    render, so the published video used a narrow crop band instead of a
+    full-bleed plate. These tests pin the guard that prevents that.
+    """
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.keyless = CONFIG.enable_keyless_sources
+        self.addCleanup(setattr, CONFIG, "enable_keyless_sources", self.keyless)
+        CONFIG.enable_keyless_sources = False
+
+    def _asset(self, name, w, h, kind="video"):
+        return assets.Asset(Path(self.tmp.name) / name, "pixabay", "https://example.invalid/x",
+                            "Pixabay Content License", kind, "query", w, h)
+
+    def test_mismatch_maths(self):
+        self.assertAlmostEqual(assets.aspect_mismatch(1920, 1080, 1280, 720), 0.0)
+        self.assertAlmostEqual(assets.aspect_mismatch(2160, 3840, 1280, 720), 0.68, places=2)
+        self.assertLess(assets.aspect_mismatch(1620, 1080, 1280, 720), assets.ASPECT_TOLERANCE)
+
+    def test_portrait_clip_is_rejected_for_a_landscape_target(self):
+        portrait = self._asset("portrait.mp4", 2160, 3840)
+        landscape = self._asset("landscape.mp4", 1920, 1080)
+        with patch.object(assets, "_pexels", return_value=None), \
+             patch.object(assets, "_pixabay", side_effect=[portrait, landscape]):
+            got = assets.fetch_scene_assets("mountain meadow", 1, Path(self.tmp.name), 1, 1280, 720, False)
+        self.assertEqual([a.path.name for a in got], ["landscape.mp4"])
+
+    def test_portrait_target_accepts_portrait_clip(self):
+        # Shorts render 9:16, so the same clip must still be usable there.
+        portrait = self._asset("portrait.mp4", 2160, 3840)
+        with patch.object(assets, "_pexels", return_value=None), \
+             patch.object(assets, "_pixabay", return_value=portrait):
+            got = assets.fetch_scene_assets("prayer", 1, Path(self.tmp.name), 1, 1080, 1920, False)
+        self.assertEqual([a.path.name for a in got], ["portrait.mp4"])
+
+    def test_scene_never_fails_when_only_a_bad_aspect_exists(self):
+        portrait = self._asset("portrait.mp4", 2160, 3840)
+        with patch.object(assets, "_pexels", return_value=None), \
+             patch.object(assets, "_pixabay", side_effect=lambda q, video, w, h: portrait if video else None):
+            got = assets.fetch_scene_assets("prayer", 1, Path(self.tmp.name), 1, 1280, 720, False)
+        self.assertEqual([a.path.name for a in got], ["portrait.mp4"],
+                         "a scene must still render rather than abort")

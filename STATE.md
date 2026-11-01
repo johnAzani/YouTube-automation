@@ -400,3 +400,34 @@ renderer on `main` — after which `produce.yml` can be dispatched from `main`
 itself, which is the only branch the mobile app offers.
 
 Still true after this: the queue's renderable runway is one job (0010).
+
+### Job 0010 published — first long-form upload in the approved renderer, 1 November 2026
+
+`Produce video` #52 (run 41287229366, `main` @ `c75a8ec`, manually dispatched,
+22m48s, exit 0) published **Psalm 121 → https://www.youtube.com/watch?v=6M6oV8MxD9s**:
+
+- public, 05:22, category Education, chapters in the description, full transcript present;
+- real Gemini `gemini-3.8-flash-tts` Charon narration + `faster-whisper` alignment
+  (the run passed the Psalm 91 tolerance check, max 0.400 s);
+- pastoral comment posted (`[pinned-comment] … 6M6oV8MxD9s`);
+- `content/published/0010-…md` carries `youtube_video_id: 6M6oV8MxD9s`,
+  `published_on: 2026-11-01`; the queue file was moved and committed; release ticket created;
+- QC artifact `render-41287229366` (1.11 GB, retained 1 day).
+
+**Style defect found in that run's log:** every scene used a Pixabay stock *clip*,
+including `2160x3840` portrait ones, because `fetch_scene_assets` accepted the first
+result from any provider regardless of aspect. A 9:16 clip centre-cropped into a
+16:9 master keeps only a narrow band, so the published plate is not the full-bleed
+frame the approved style calls for. Fixed: `ASPECT_TOLERANCE` (0.55) now refuses a
+source that is too far from the render aspect and keeps searching; 3:2 and 21:9
+sources still pass, 9:16 into 16:9 does not, 9:16 into 9:16 still does, and a scene
+falls back to the best rejected candidate rather than aborting. Four tests in
+`tests/test_asset_sourcing.py` pin it.
+
+`produce.yml` now also extracts three frames from every master into
+`output/style-frames/` and uploads them as `style-frames-<run-id>` (14 days), so the
+look can be checked in seconds instead of downloading the full QC artifact.
+
+Next approved job is `0011` at 408 words: the 650-word gate will fail closed on the
+next cron, so no further upload happens until `0003`–`0007` (1,055–3,175 words,
+`status: draft`) are approved or the short scripts are expanded.
