@@ -153,3 +153,39 @@ mobile preview is committed alongside the frame so the trade-off is visible.
   mechanics: 3 variants, watch-time-share winner, inconclusive behaviour
 - Google for Developers, YouTube Data API revision history (Sept 2026):
   `thumbnails.set` maximum raised to 50 MB; quota cost 50 units
+
+---
+
+## 10. Hero word-budget study (1 November 2026)
+
+`docs/media/thumbnails/hero-word-budget-study.png` compares six hero options at
+both sizes: the 1280×720 frame and the same file rendered at 168 px — the phone
+feed. All six were produced by `pipeline/thumbnail_studio.py`, so every column
+satisfies the contrast, safe-zone and legibility floors.
+
+| Option | Hero | Variant | Hero px | Lines | Contrast | KiB |
+| --- | --- | --- | --- | --- | --- | --- |
+| A | YOUR KEEPER | main | 176 | 2 | 10.7:1 | 112 |
+| B | HE NEVER SLEEPS | main | 140 | 2 | 10.1:1 | 108 |
+| C | THE LORD IS YOUR KEEPER | main | 134 | 3 | 11.5:1 | 121 |
+| D | YOUR KEEPER | b | 182 | 2 | 11.9:1 | 108 |
+| E | HE NEVER SLEEPS | b | 140 | 2 | 11.8:1 | 103 |
+| F | THE LORD IS YOUR KEEPER | b | 134 | 3 | 11.8:1 | 115 |
+
+**Reading of the study**
+
+- Dropping from five words to two buys **+42 px of hero type** (134 → 176/182)
+  and removes a line. At 168 px that is the difference between a phrase that has
+  to be read and one that is recognised instantly.
+- `HE NEVER SLEEPS` is the strongest *hook*: it quotes the video's own verse 4,
+  creates curiosity, and is not the title repeated. `YOUR KEEPER` is the most
+  legible but is a label rather than a hook.
+- The `b` starfield variant consistently beats `main` on measured contrast
+  (11.8–11.9:1 vs 10.1–11.5:1) and is slightly smaller in file size; `main` has
+  the stronger scene (moon over water).
+- Recommendation: **B or E for the live video** — three words, verse-accurate,
+  instant at feed size. Keep C/F only if brand recall of the full phrase matters
+  more than feed legibility.
+
+This is a legibility and typography comparison, not a CTR result. Only YouTube's
+Test & Compare settles which wins, and it decides on watch-time share.
