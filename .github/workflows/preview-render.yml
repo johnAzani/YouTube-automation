@@ -48,10 +48,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
-      - name: Check out the PR #112 renderer
+      - name: Check out the renderer
         uses: actions/checkout@v4
         with:
-          ref: arena/564c86c7-youtube-automation
+          # Render the code of the branch that triggered this run: that is where
+          # the verified renderer and its alignment fixes live.
+          ref: ${{ github.ref_name }}
           fetch-depth: 0
 
       - name: Show what will be rendered

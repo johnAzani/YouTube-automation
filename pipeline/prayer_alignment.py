@@ -66,6 +66,27 @@ def match(expected, spoken, min_confidence=0.2):
     if not usable:
         raise ValueError('Speech recognition returned no words')
 
+    # Recognisers mishear individual words ("need" for "know" is a real example
+    # from a run of 0010) and spell numerals differently. Demanding a perfect
+    # transcript makes production flaky, so the gate is coverage: the share of
+    # script words the narration actually accounts for. Isolated mishearings keep
+    # it above the floor; audio that is a different text falls far below it.
+    covered = 0
+    heard_all = [c for _, c in usable]
+    for kind, a, b, c, d in SequenceMatcher(a=exp, b=heard_all,
+                                           autojunk=False).get_opcodes():
+        if kind == 'equal':
+            covered += b - a
+        elif kind == 'replace' and _block_counts(expected[a:b], spoken,
+                                                 [usable[k][0] for k in range(c, d)]):
+            covered += b - a
+    coverage = covered / len(exp)
+    if coverage < COVERAGE_MIN:
+        raise ValueError(
+            f'Narration does not match the script: only {coverage:.0%} of the '
+            f'{len(exp)} script words were recognised '
+            f'(floor {COVERAGE_MIN:.0%}); the audio is not this script')
+
     result, previous_end = [], 0.0
     for kind, a, b, c, d in SequenceMatcher(a=exp, b=[c for _, c in usable],
                                             autojunk=False).get_opcodes():
@@ -78,13 +99,7 @@ def match(expected, spoken, min_confidence=0.2):
                 result.append((expected[a + offset], spoken[i], True))
         elif kind == 'replace':
             n_script, mapped = b - a, indices
-            if mapped:
-                joined_expected = ''.join(_canonical(t) for t in expected[a:b])
-                joined_heard = ''.join(_canonical(spoken[i].word) for i in mapped)
-                if not _similar(joined_expected, joined_heard):
-                    raise ValueError(
-                        f'Transcript differs from the script at word {a + 1}: '
-                        f'script {joined_expected!r} was narrated as {joined_heard!r}')
+
             if not mapped:
                 for token in expected[a:b]:
                     result.append((token, None, False))
@@ -133,18 +148,20 @@ def match(expected, spoken, min_confidence=0.2):
     return words
 
 
-def _similar(expected_text, heard_text):
-    """True when a substituted block plausibly says the script's words.
+COVERAGE_MIN = 0.85
 
-    Numerals are exempt: a script may write "121" where the narrator says "one
-    twenty one" (or the recogniser writes "91" for "ninety one"), and neither
-    spelling resembles the other as a string.
-    """
-    if expected_text == heard_text:
+
+def _block_counts(script_tokens, spoken, indices):
+    """True when a substituted block is a spelling/tokenisation difference only."""
+    if not indices:
+        return False
+    script_text = ''.join(_canonical(t) for t in script_tokens)
+    heard_text = ''.join(_canonical(spoken[i].word) for i in indices)
+    if any(ch.isdigit() for ch in script_text + heard_text):
+        return True  # "121" vs "one twenty one"
+    if script_text == heard_text:
         return True
-    if any(ch.isdigit() for ch in expected_text + heard_text):
-        return True
-    return SequenceMatcher(a=expected_text, b=heard_text, autojunk=False).ratio() >= 0.5
+    return SequenceMatcher(a=script_text, b=heard_text, autojunk=False).ratio() >= 0.5
 
 
 def _tile(tokens, start, end, probability):

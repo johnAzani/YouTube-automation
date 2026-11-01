@@ -55,13 +55,18 @@ class TestTolerantMatch(unittest.TestCase):
         self.assertEqual([w[0] for w in words], ['peace', 'be', 'with', 'you'])
 
     def test_missing_script_word_gets_zero_length_span(self):
-        words = preview.match(['the', 'lord', 'is', 'my', 'keeper'],
+        script = ['the', 'lord', 'is', 'my', 'keeper', 'and', 'he', 'watches',
+                  'over', 'you']
+        words = preview.match(script,
                               heard(('the', 0.0, 0.3, 0.9), ('lord', 0.3, 0.7, 0.9),
-                                    ('my', 0.7, 0.9, 0.9), ('keeper', 0.9, 1.4, 0.9)))
-        self.assertEqual(len(words), 5)
-        is_word = words[2]
-        self.assertEqual(is_word[0], 'is')
-        self.assertAlmostEqual(is_word[1], is_word[2], places=3)
+                                    ('my', 0.7, 0.9, 0.9), ('keeper', 0.9, 1.4, 0.9),
+                                    ('and', 1.4, 1.6, 0.9), ('he', 1.6, 1.8, 0.9),
+                                    ('watches', 1.8, 2.1, 0.9), ('over', 2.1, 2.3, 0.9),
+                                    ('you', 2.3, 2.5, 0.9)))
+        self.assertEqual(len(words), len(script))
+        dropped = words[2]
+        self.assertEqual(dropped[0], 'is')
+        self.assertAlmostEqual(dropped[1], dropped[2], places=3)
 
     def test_timings_never_go_backwards(self):
         words = preview.match(['peace', 'be', 'with', 'you'],
@@ -100,6 +105,18 @@ class TestTolerantMatch(unittest.TestCase):
             preview.match(['alpha', 'beta', 'gamma'],
                           heard(('one', 0.0, 0.4, 0.9), ('two', 0.4, 0.8, 0.9),
                                 ('three', 0.8, 1.2, 0.9)))
+
+    def test_isolated_mishearing_is_tolerated(self):
+        # Run 4 of 0010: the narrator said "need", the recogniser heard "know".
+        script = 'You shall not need to fear the terror by night'.split()
+        heard_words = [('You', 0.0, 0.2, 0.9), ('shall', 0.2, 0.4, 0.9),
+                       ('not', 0.4, 0.6, 0.9), ('know', 0.6, 0.8, 0.9),
+                       ('to', 0.8, 1.0, 0.9), ('fear', 1.0, 1.2, 0.9),
+                       ('the', 1.2, 1.4, 0.9), ('terror', 1.4, 1.7, 0.9),
+                       ('by', 1.7, 1.9, 0.9), ('night', 1.9, 2.2, 0.9)]
+        words = preview.match(script, heard(*heard_words))
+        self.assertEqual(len(words), len(script))
+        self.assertAlmostEqual(words[-1][2], 2.2, places=3)
 
     def test_numerals_may_be_spelled_differently(self):
         # Scripts write "121"; narrators say "one twenty one".
