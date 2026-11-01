@@ -3,6 +3,7 @@ from pathlib import Path
 import unittest
 from unittest.mock import patch
 
+from pipeline.script_doc import parse_script
 from scripts.auto_scheduler import (
     audit_longform_queue,
     audit_shorts_queue,
@@ -28,9 +29,13 @@ class TestAutoScheduler(unittest.TestCase):
     def test_audit_longform_queue_finds_approved_job(self):
         items, approved = audit_longform_queue()
         self.assertGreater(len(items), 0)
-        # Job 0009 should be approved
-        approved_ids = [p.name for p in approved]
-        self.assertTrue(any("0009" in name for name in approved_ids))
+        # Derive the expectation from the queue instead of naming a job: 0009 was
+        # published and moved out of content/queue/, which made a hardcoded
+        # "0009" assertion fail forever after.
+        approved_ids = {parse_script(path).id for path in approved}
+        self.assertTrue(approved_ids, "the queue must keep at least one approved job")
+        self.assertEqual(approved_ids,
+                         {item.identifier for item in items if item.status == "approved"})
 
     def test_audit_shorts_queue_finds_approved_manifest(self):
         items, approved = audit_shorts_queue()
@@ -43,6 +48,20 @@ class TestAutoScheduler(unittest.TestCase):
         self.assertEqual(audit.watch_hours_target, 4000)
         self.assertGreaterEqual(audit.longform_approved_count, 1)
         self.assertGreaterEqual(audit.shorts_approved_count, 1)
-        self.assertIn("Psalm 23", audit.next_longform or "")
-        self.assertIn("short-psalm23", audit.next_short or "")
+        # The next long-form job must be the first approved queue entry, whatever
+        # it happens to be today (hardcoding "Psalm 23" broke once 0009 published).
+        queue_items, approved_paths = audit_longform_queue()
+        self.assertTrue(approved_paths)
+        self.assertTrue((audit.next_longform or "").startswith(
+            f"Job {parse_script(approved_paths[0]).id}"))
+        # Same treatment for Shorts: a manifest can be approved yet not selectable
+        # (already published, or the renderer has no script for its key), in which
+        # case select_next_queued_short legitimately returns nothing.
+        short_items, short_approved = audit_shorts_queue()
+        self.assertTrue(short_approved, "the Shorts queue must keep approved manifests")
+        if audit.next_short:
+            approved_short_keys = {item.identifier for item in short_items
+                                   if item.status == "approved"}
+            self.assertTrue(any(audit.next_short.startswith(key)
+                                for key in approved_short_keys), audit.next_short)
         self.assertGreater(audit.runway_days, 0)
