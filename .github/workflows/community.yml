@@ -42,14 +42,38 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Stage & Publish Community Post
+      # YouTube's Data API has no endpoint for creating Community posts, so this
+      # cannot post by itself. It prepares the exact card and copy for the human to
+      # paste into Studio, and says so on the run page instead of reporting success.
+      - name: Prepare today's post for manual publishing
         env:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
         run: |
-          echo "Executing Community Tab Autopilot..."
           python scripts/post_community.py --publish
+          python - <<'PY'
+          import glob, pathlib
+          packs = sorted(glob.glob('content/community/*-READY.md'))
+          if not packs:
+              raise SystemExit('no READY pack was written')
+          pack = pathlib.Path(packs[0])
+          body = pack.read_text(encoding='utf-8')
+          print(f'::notice title=Community post ready ({pack.name})::'
+                'YouTube has no API for Community posts. Open Studio -> Create -> Post, '
+                'attach the card, paste the copy. The full text is in the artifact and '
+                'in content/community/')
+          print(body)
+          PY
+
+      - name: Upload the ready-to-post pack
+        uses: actions/upload-artifact@v4
+        with:
+          name: community-post-${{ github.run_id }}
+          path: |
+            content/community/*-READY.md
+            content/community/*.png
+          retention-days: 21
 
       - name: Commit Generated Community Cards
         run: |

@@ -45,8 +45,12 @@ def main() -> None:
     if args.publish:
         from pipeline.community_posts import select_today_community_post, publish_community_post
         post = select_today_community_post()
-        res = publish_community_post(post, dry_run=args.dry_run or True)
-        print(f"[+] Successfully executed: {res['post_id']} ({res['status']})")
+        res = publish_community_post(post, dry_run=args.dry_run)
+        print(f"[+] Prepared: {res['post_id']} ({res['status']})")
+        print(f"    Copy pack: {res['ready_pack']}")
+        if res.get("card_path"):
+            print(f"    Card:      {res['card_path']}")
+        print(f"    Post at:   {res['composer']}")
         print("=" * 72)
         return
 

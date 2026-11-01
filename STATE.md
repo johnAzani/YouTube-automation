@@ -524,3 +524,43 @@ as "refusing to author" rather than a crash) and template output is
 
 19 new tests in `tests/test_expand_scripts.py`, 2 in `tests/test_gemini_brain.py`;
 full suite **219 passing**.
+
+### Community posts: honest, and visible — 1 November 2026
+
+Asked whether the Community Tab workflow works unattended, the answer was no on
+two independent counts, and the check added here also caught a third.
+
+1. **It had never run.** `Autonomous Community Tab Automation` was created on
+   main on 30 October and by 21:34 UTC on Sunday 1 November — two and a half hours
+   after its own Sun/Wed 19:14 window, with the 19:14 comment cron having fired at
+   19:42 — it had **zero runs**. A workflow that never starts never fails, which
+   is why this was invisible.
+2. **It could not have posted anyway.** `pipeline/community_posts.py` never
+   called an API; `publish_community_post` returned `status: "published"` after
+   rendering a PNG. And `scripts/post_community.py` passed
+   `dry_run=args.dry_run or True`, which is always `True`, so `--publish` was a
+   no-op even before that.
+3. **It cannot be fixed by wiring.** The YouTube Data API v3 has no endpoint for
+   creating Community posts. Publishing happens only inside YouTube Studio, or via
+   its native scheduler.
+
+So the workflow is now honest: it writes `content/community/<id>-READY.md` with the
+exact body, poll options and card path, uploads it as an artifact, and the run page
+says *"YouTube has no API for Community posts — open Studio → Create → Post"*.
+Status is `ready_for_manual_post`, never `published`. The card paths now match what
+the manifest actually writes (`comm-00N-*.png`, not the never-created
+`card_comm_00N.png`).
+
+`scripts/automation_health.py` + `.github/workflows/automation-health.yml` (daily
+20:14 UTC) audit every scheduled workflow against its own cron cadence and flag
+`NEVER RAN` / `OVERDUE`. On its first run it reported:
+
+```
+comments.yml        daily     ok          2026-11-01 19:42 UTC
+community.yml       every 7d  NEVER RAN   no run recorded
+expand-scripts.yml  daily     NEVER RAN   no run recorded
+```
+
+18 new tests (15 health, 3 community honesty), written with `unittest` after the
+pytest-style first draft was found to be collected by *nothing* in CI. Full suite
+**237 passing**.
