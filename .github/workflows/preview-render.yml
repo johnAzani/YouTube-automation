@@ -125,6 +125,29 @@ jobs:
           fi
           exit "$rc"
 
+      # When a gate rejects the render, the artifacts still hold whatever was
+      # produced. Probe them and emit ANNOTATIONS (readable from the API) so the
+      # failure is self-explaining instead of "shorter than five minutes".
+      - name: Report what was actually produced
+        if: always()
+        run: |
+          shopt -s nullglob
+          shopt -s globstar
+          found=0
+          for f in output/**/*.mp3; do
+            found=1
+            bytes=$(stat -c%s "$f")
+            line=$(ffmpeg -hide_banner -i "$f" 2>&1 | grep -E '^\s+Duration' | head -1 | tr -s ' ')
+            echo "::warning title=Produced audio::$(basename "$f") $bytes bytes | ${line:-no duration}"
+            {
+              echo "- \`$f\` — $bytes bytes — ${line:-no duration}"
+            } >> "$GITHUB_STEP_SUMMARY"
+          done
+          [ "$found" = 1 ] || echo "::warning title=Produced audio::no mp3 was written"
+          for f in output/**/*.json; do
+            echo "::notice title=Job result::$(basename "$f") $(head -c 400 "$f")"
+          done
+
       - name: Report the master
         if: always()
         run: |
