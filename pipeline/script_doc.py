@@ -32,6 +32,11 @@ Narration text...
 """
 from __future__ import annotations
 
+# A five-minute Charon prayer needs roughly this many words. Below it the
+# pipeline fails closed rather than ship a four-minute promise, and the nightly
+# expansion pass lengthens the script before the publisher sees it.
+MIN_LONGFORM_WORDS = 650
+
 import re
 from dataclasses import dataclass, field
 from pathlib import Path

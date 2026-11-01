@@ -89,9 +89,12 @@ def good_provider(job: ex.Job, target: int) -> str:
 
 class TestGate(unittest.TestCase):
     def test_gate_matches_production(self):
-        """If prayer_pipeline's floor moves, this tool must move with it."""
+        """The floor is shared, not copied: one constant, three consumers."""
+        from pipeline.script_doc import MIN_LONGFORM_WORDS
         source = (Path(__file__).resolve().parents[1] / "pipeline" / "prayer_pipeline.py").read_text()
-        self.assertIn(f"if doc.word_count < {ex.MIN_WORDS}", source)
+        self.assertEqual(ex.MIN_WORDS, MIN_LONGFORM_WORDS)
+        self.assertIn("MIN_LONGFORM_WORDS", source)
+        self.assertNotIn("doc.word_count < 650", source)
 
     def test_under_gate_ignores_drafts_and_long_scripts(self):
         with tempfile.TemporaryDirectory() as tmp:
