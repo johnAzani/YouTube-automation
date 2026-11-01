@@ -1,0 +1,34 @@
+name: Validate prayer speech alignment
+
+# Tests the existing approved recording only. Never accesses credentials or uploads.
+on:
+  workflow_dispatch:
+  push:
+    branches: ["arena/**"]
+    paths:
+      - 'pipeline/prayer_alignment.py'
+      - 'scripts/check_prayer_alignment.py'
+      - '.github/workflows/prayer-alignment-check.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  alignment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install local alignment engine
+        run: pip install 'faster-whisper==1.2.1' 'av<19' 'huggingface-hub<1'
+      - name: Download public speech model into temporary runner storage
+        run: |
+          python - <<'PY'
+          from huggingface_hub import snapshot_download
+          snapshot_download(repo_id='Systran/faster-whisper-small.en', local_dir='output/alignment-model')
+          PY
+      - name: Verify speech timing against the approved reference
+        run: python scripts/check_prayer_alignment.py --model output/alignment-model

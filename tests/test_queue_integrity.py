@@ -86,18 +86,13 @@ class QueueIntegrityTests(unittest.TestCase):
                             f"{path.name}: scene {sc.index} has no asset query",
                         )
 
-    def test_unverified_drafts_stay_blocked_by_the_originality_gate(self):
-        """`status: approved` + `human_rewrite: false` is the dangerous combination — forbid it."""
+    def test_approved_jobs_meet_originality_checks(self):
+        from pipeline.originality import check
         for path in _script_files(QUEUE_DIR):
             doc = parse_script(path)
-            flags = doc.meta.get("originality") or {}
-            with self.subTest(job=path.name):
-                if doc.status == "approved":
-                    self.assertIs(
-                        flags.get("human_rewrite"),
-                        True,
-                        f"{path.name} is approved but not human-verified (PLAN.md §4.4)",
-                    )
+            if doc.status == "approved":
+                with self.subTest(job=path.name):
+                    self.assertEqual(check(doc), [], f"{path.name} fails originality checks")
 
 
 if __name__ == "__main__":

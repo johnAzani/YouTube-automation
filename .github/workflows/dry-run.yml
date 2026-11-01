@@ -55,7 +55,9 @@ jobs:
       # tests/ was never wired into CI before — this is the job that runs it.
       # test_queue_integrity is the guard that catches an out-of-niche job in content/queue/.
       - name: Unit tests
-        run: python -m unittest discover -s tests -v
+        run: |
+          python -m pip install pytest
+          python -m pytest -q
 
       # Hermetic: compares image-search/LICENSES.yml against the files on disk. Fails if a
       # still was added without a ledger entry, or if a file's bytes changed under a
