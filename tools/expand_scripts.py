@@ -50,7 +50,9 @@ from typing import Callable
 ROOT = Path(__file__).resolve().parent.parent
 QUEUE_DIR = ROOT / "content" / "queue"
 
-MIN_WORDS = 650          # the production gate; must match prayer_pipeline
+from pipeline.script_doc import MIN_LONGFORM_WORDS
+
+MIN_WORDS = MIN_LONGFORM_WORDS   # the production gate; shared, not copied
 TARGET_WORDS = 900       # a comfortable 5:30-6:00 at Charon's pace
 MAX_WORDS = 1200
 MIN_NEW_SENTENCE_WORDS = 12   # duplicate-detection window

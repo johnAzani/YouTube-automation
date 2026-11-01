@@ -2,8 +2,9 @@
 id: "0011"
 title: "Psalm 27: The Lord Is My Light & My Salvation — Fear No Evil — Night Prayer for Sleep, Peace & Divine Guard | The Secret Place"
 slug: psalm-27-the-lord-is-my-light-and-my-salvation--fe
-status: approved
+status: draft
 privacy: public
+reauthor_required: "Body quotes Psalm 121 verses under a Psalm 27 title — re-author with Psalm 27 text before approving"
 format: longform
 niche: faith and prayer
 category: education

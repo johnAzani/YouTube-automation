@@ -21,7 +21,7 @@ from pathlib import Path
 
 from .config import CONFIG, OUTPUT_DIR, QUEUE_DIR, PUBLISHED_DIR, REPO_ROOT
 from .originality import enforce, OriginalityError
-from .script_doc import ScriptDoc, parse_script
+from .script_doc import MIN_LONGFORM_WORDS, ScriptDoc, parse_script
 
 
 def _log(msg: str) -> None:
@@ -152,6 +152,14 @@ def select_jobs(all_flag: bool, job_path: str | None, next_flag: bool) -> list[P
                         continue
                 except Exception:
                     pass
+            # A long-form prayer under the word floor cannot build, and picking it
+            # would fail every cron forever — one bad row must never block the rest.
+            # The nightly expansion pass lengthens it, then it becomes eligible.
+            fmt = str(getattr(doc, "format", "") or doc.meta.get("format", "")).lower()
+            if fmt == "longform" and doc.word_count < MIN_LONGFORM_WORDS:
+                _log(f"⏳ {j.name} is {doc.word_count} words, under the {MIN_LONGFORM_WORDS} floor; "
+                     f"waiting for the expansion pass.")
+                continue
             approved.append(j)
         elif all_flag:
             _log(f"skip {j.name}: status={doc.status} (only 'approved' jobs are built)")
@@ -447,7 +455,13 @@ def main(argv: list[str] | None = None) -> int:
 
     paths = select_jobs(args.all, args.job, args.next)
     if not paths:
-        _log("nothing to do — no approved jobs in content/queue/")
+        # Not an error: approved scripts under the word floor are waiting on the
+        # nightly expansion pass. A red cron every three hours would train everyone
+        # to ignore the dashboard.
+        _log("nothing eligible — approved scripts are under the floor and waiting for "
+             "the expansion pass (tools/expand_scripts.py)")
+        print("::notice title=No eligible job::approved scripts are under the word floor; "
+              "the 02:14 UTC expansion pass lengthens them", flush=True)
         return 0
 
     results = []

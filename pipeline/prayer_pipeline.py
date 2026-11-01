@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 from .config import CONFIG, OUTPUT_DIR
-from .script_doc import parse_script
+from .script_doc import MIN_LONGFORM_WORDS, parse_script
 from .originality import enforce
 from .gemini_tts import DEFAULT_MODEL, get_gemini_api_key, synthesize_gemini_audio
 from .prayer_alignment import align
@@ -41,7 +41,7 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
     if not doc.scenes:
         raise RuntimeError('No prayer scenes in script')
     # Avoid consuming quota for scripts too short to plausibly reach five minutes.
-    if doc.word_count < 650:
+    if doc.word_count < MIN_LONGFORM_WORDS:
         raise RuntimeError(f'Prayer script has only {doc.word_count} words; expand it before full-length production')
     out = OUTPUT_DIR / doc.slug
     out.mkdir(parents=True, exist_ok=True)
