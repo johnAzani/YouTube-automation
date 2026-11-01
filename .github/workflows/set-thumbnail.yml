@@ -1,0 +1,134 @@
+name: Set video thumbnail (validated studio)
+
+# Renders the validated thumbnail pack for a published job and, when dry_run is
+# unticked, sets the chosen variant on the live video via thumbnails.set (50 units).
+#
+# Why a workflow: the owner asked for the thumbnail to be reworked on the published
+# Psalm 121 video (6M6oV8MxD9s). Rendering and setting it must run where the YouTube
+# secrets are, which is here, not in a review sandbox.
+#
+# Defaults are safe: dry_run is true, so the first run only produces images.
+
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "Published job file (content/published/…md)"
+        required: true
+        default: "0010-psalm-121-he-who-keeps-you-will-neither-slumber-no.md"
+      video_id:
+        description: "YouTube video ID to update"
+        required: true
+        default: "6M6oV8MxD9s"
+      variant:
+        description: "main | b | c  (Test & Compare alternatives are all rendered)"
+        type: choice
+        options: [main, b, c]
+        default: main
+      hero:
+        description: "Override the hero text (blank = the job's thumb_text)"
+        required: false
+        default: ""
+      dry_run:
+        description: "Render only, do not change the live thumbnail"
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: set-thumbnail
+  cancel-in-progress: false
+
+env:
+  YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+  YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+  YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+
+jobs:
+  thumbnail:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Python deps
+        run: python -m pip install -r requirements.txt
+
+      - name: Render the validated pack
+        run: |
+          python - <<'PYRENDER'
+          import json, os, sys
+          from pathlib import Path
+          sys.path.insert(0, '.')
+          from pipeline.script_doc import parse_script
+          from pipeline.thumbnail_studio import choose_hero, generate_style_pack, mobile_preview
+
+          job = Path('content/published') / os.environ['JOB']
+          doc = parse_script(job)
+          hero = os.environ.get('HERO') or choose_hero(doc)
+          out = Path('output/thumbnails')
+          reports = generate_style_pack(hero, out)
+          for r in reports:
+              mobile_preview(r.path, r.path.with_name(r.path.stem + '_mobile.png'))
+          (out / 'report.json').write_text(
+              json.dumps({'hero': hero, 'job': doc.id,
+                          'variants': [r.as_dict() for r in reports]}, indent=2),
+              encoding='utf-8')
+          print(json.dumps({'hero': hero, 'job': doc.id}, indent=2))
+          for r in reports:
+              print(f"{r.variant}: {r.hero_px}px, {r.words} words, contrast {r.contrast:.1f}, "
+                    f"{r.file_kb} KiB, safe={r.safe_zone_ok}, badge={r.badge_zone_ok}")
+              print(f"::notice title=Thumbnail {r.variant}::{r.path.name} | hero {r.hero_px}px | "
+                    f"contrast {r.contrast:.1f}:1 | {r.file_kb} KiB")
+          PYRENDER
+        env:
+          JOB: ${{ inputs.job }}
+          HERO: ${{ inputs.hero }}
+
+      - name: Upload pack (review artifact)
+        uses: actions/upload-artifact@v4
+        with:
+          name: thumbnails-${{ github.run_id }}
+          path: output/thumbnails/
+          retention-days: 14
+
+      - name: Set the live thumbnail
+        if: ${{ !inputs.dry_run }}
+        run: |
+          python - <<'PYSET'
+          import os, sys
+          from pathlib import Path
+          sys.path.insert(0, '.')
+          from googleapiclient.discovery import build
+          from googleapiclient.http import MediaFileUpload
+          from pipeline.upload import _credentials
+
+          variant = os.environ['VARIANT']
+          name = 'thumbnail.jpg' if variant == 'main' else f'thumbnail_{variant}.jpg'
+          path = Path('output/thumbnails') / name
+          if not path.is_file():
+              raise SystemExit(f'missing {path}')
+          youtube = build('youtube', 'v3', credentials=_credentials(), cache_discovery=False)
+          # Keep the current one so it can be restored by re-running with it.
+          before = youtube.videos().list(part='snippet', id=os.environ['VIDEO_ID']).execute()
+          item = (before.get('items') or [{}])[0].get('snippet', {})
+          print('before:', (item.get('thumbnails') or {}).get('maxres', {}).get('url'))
+          youtube.thumbnails().set(
+              videoId=os.environ['VIDEO_ID'],
+              media_body=MediaFileUpload(str(path), mimetype='image/jpeg'),
+          ).execute()
+          after = youtube.videos().list(part='snippet', id=os.environ['VIDEO_ID']).execute()
+          url = (((after.get('items') or [{}])[0].get('snippet') or {}).get('thumbnails') or {}).get('maxres', {}).get('url')
+          print('after:', url)
+          print(f'::notice title=Thumbnail set::{os.environ["VIDEO_ID"]} -> {url}')
+          PYSET
+        env:
+          VIDEO_ID: ${{ inputs.video_id }}
+          VARIANT: ${{ inputs.variant }}

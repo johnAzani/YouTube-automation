@@ -1,0 +1,44 @@
+[
+  {
+    "file": "thumbnail.jpg",
+    "variant": "main",
+    "hero": "THE LORD IS YOUR KEEPER",
+    "hero_px": 134,
+    "lines": 3,
+    "words": 5,
+    "contrast": 11.47,
+    "safe_zone_ok": true,
+    "badge_zone_ok": true,
+    "mobile_legible": true,
+    "file_kb": 121,
+    "notes": []
+  },
+  {
+    "file": "thumbnail_b.jpg",
+    "variant": "b",
+    "hero": "THE LORD IS YOUR KEEPER",
+    "hero_px": 134,
+    "lines": 3,
+    "words": 5,
+    "contrast": 11.75,
+    "safe_zone_ok": true,
+    "badge_zone_ok": true,
+    "mobile_legible": true,
+    "file_kb": 115,
+    "notes": []
+  },
+  {
+    "file": "thumbnail_c.jpg",
+    "variant": "c",
+    "hero": "THE LORD IS YOUR KEEPER",
+    "hero_px": 110,
+    "lines": 2,
+    "words": 5,
+    "contrast": 9.59,
+    "safe_zone_ok": true,
+    "badge_zone_ok": true,
+    "mobile_legible": true,
+    "file_kb": 119,
+    "notes": []
+  }
+]

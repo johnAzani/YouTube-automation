@@ -22,7 +22,7 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
     from .run import _mark_job_uploaded, _open_release_ticket, _require_production_prerequisites
     from .assets import fetch_scene_assets
     from .metadata import write_metadata_pack
-    from .thumbnail import generate_thumbnail_variants
+    from .thumbnail_studio import choose_hero, generate_style_pack, mobile_preview
     from .quota_handler import GeminiQuotaExceededError, QuotaExceededError, pause_longform_job_on_quota
 
     doc = parse_script(path)
@@ -72,7 +72,15 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
             assets.append(matches[0].path)
         final = render(audio, list(zip(assets, durations)), words, duration,
                        out / f'{doc.slug}.mp4', timing_source='measured')
-        thumbs = generate_thumbnail_variants(doc, assets[0], out)
+        # Thumbnails come from the validated studio, never from the card generator:
+        # it enforces the mobile-legibility, contrast and safe-zone limits and writes
+        # a report so the run page shows the numbers. See docs/THUMBNAIL_RESEARCH.md.
+        thumb_reports = generate_style_pack(choose_hero(doc), out / "thumbnails")
+        for report in thumb_reports:
+            mobile_preview(report.path, report.path.with_name(report.path.stem + "_mobile.png"))
+        (out / "thumbnails" / "report.json").write_text(
+            json.dumps([r.as_dict() for r in thumb_reports], indent=2), encoding="utf-8")
+        thumbs = [r.path for r in thumb_reports]
         pack = write_metadata_pack(doc, durations, out)
         result = {'id': doc.id, 'slug': doc.slug, 'video': str(final), 'thumbnail': str(thumbs[0]),
                   'duration_seconds': duration, 'tts_engine': 'gemini-api', 'dry_run': dry_run}
