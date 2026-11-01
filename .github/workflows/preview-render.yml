@@ -108,38 +108,40 @@ jobs:
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
 
-      # PREVIEW-ONLY OVERLAY — not merged anywhere.
-      # faster-whisper occasionally returns a zero-length word (start == end), e.g.
-      # "Invalid or uncertain alignment at word 183: start=57.780, end=57.780".
-      # pipeline/prayer_alignment.py and prayer_visuals.sentence_stream reject that
-      # with `end <= start`, which kills the whole render. The consumer
-      # (tools/shorts.py kinetic_typography_layer) only compares timestamps
-      # (`w_t0 <= t < w_t1`), so a zero-length word is harmless — it is simply
-      # illuminated for no time. Strictly relaxing `end <= start` to `end < start`
-      # in those two guards is the whole fix. It must land on PR #112 before a real
-      # upload; this step exists only so the owner can see the master now.
-      - name: Apply preview alignment patch (preview only)
+      # PREVIEW-ONLY OVERLAYS — not merged anywhere. Both exist because the PR's
+      # guards reject tokenisations that speech recognisers legitimately produce:
+      #
+      #  1. faster-whisper returns some words with zero length (start == end), and
+      #     prayer_visuals.sentence_stream rejects that with `end <= start`. The
+      #     consumer only compares timestamps, so a zero-length word is harmless.
+      #  2. prayer_alignment.py demands exactly one recognised token per script
+      #     word and aborted job 0010 with "word count differs: 883 vs 884;
+      #     mismatches=[(['for', 'evermore'], ['forevermore'])]". .ci ships a
+      #     tolerant matcher (unit-tested in tests/test_prayer_alignment_preview.py)
+      #     that maps script words onto what was heard and still refuses
+      #     non-monotonic, non-finite, negative or low-confidence timings.
+      #
+      # Neither may be used for a real upload until it is merged into PR #112.
+      - name: Apply preview alignment overlays (preview only)
         run: |
+          cp .ci/prayer_alignment_preview.py pipeline/prayer_alignment.py
           python - <<'PYPATCH'
           from pathlib import Path
-          targets = {
-              'pipeline/prayer_alignment.py': 'end <= start',
-              'pipeline/prayer_visuals.py': 'end <= start',
-          }
-          for name, needle in targets.items():
-              path = Path(name)
-              text = path.read_text()
-              if needle not in text:
-                  raise SystemExit(f'{name}: expected guard not found')
-              path.write_text(text.replace(needle, 'end < start'))
-              print(f'patched {name}')
+          path = Path('pipeline/prayer_visuals.py')
+          text = path.read_text()
+          if 'end <= start' not in text:
+              raise SystemExit('prayer_visuals.py: expected guard not found')
+          path.write_text(text.replace('end <= start', 'end < start'))
+          print('patched pipeline/prayer_visuals.py')
           PYPATCH
+          python -c "import sys; sys.path.insert(0, '.'); import pipeline.prayer_alignment as m; print('matcher loaded from', m.__file__)"
           git --no-pager diff --stat
           {
-            echo '### Preview alignment patch applied (not merged)'
+            echo '### Preview overlays applied (not merged)'
             echo '```diff'
-            git --no-pager diff -U1 -- pipeline/prayer_alignment.py pipeline/prayer_visuals.py
+            git --no-pager diff -U1 -- pipeline/prayer_visuals.py
             echo '```'
+            echo 'pipeline/prayer_alignment.py replaced by .ci/prayer_alignment_preview.py'
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Render (no upload)
