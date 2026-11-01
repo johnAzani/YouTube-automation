@@ -34,6 +34,8 @@ concurrency:
   cancel-in-progress: false
 
 env:
+  # Branch that carries the preview overlays and the workflow itself.
+  OVERLAY_REF: arena/eb029c66-youtube-automation
   JOB: ${{ github.event.inputs.job || '0010-psalm-121-he-who-keeps-you-will-neither-slumber-no.md' }}
   DRY_RUN: "1"
   GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -124,7 +126,13 @@ jobs:
       # Neither may be used for a real upload until it is merged into PR #112.
       - name: Apply preview alignment overlays (preview only)
         run: |
-          cp .ci/prayer_alignment_preview.py pipeline/prayer_alignment.py
+          set -euxo pipefail
+          # The job checked out PR #112's tree, so the overlay file is not here:
+          # fetch it from this branch, which is where it is reviewed and tested.
+          curl -sSfL --retry 3 --retry-delay 2 \
+            "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${OVERLAY_REF}/.ci/prayer_alignment_preview.py" \
+            -o pipeline/prayer_alignment.py
+          head -1 pipeline/prayer_alignment.py
           python - <<'PYPATCH'
           from pathlib import Path
           path = Path('pipeline/prayer_visuals.py')
