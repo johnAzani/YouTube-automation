@@ -10,9 +10,18 @@
 # of a scheduler that ran this morning's slots hours late and skipped others. The
 # nightly audit also runs after each production run, which is when a regression
 # would appear.
+# 2 November: this file had a schedule and a workflow_run trigger and *still*
+# recorded zero runs in its whole life. The schedule had not come round yet and the
+# workflow_run only fires when a production run finishes — so between merges it was
+# simply absent, which is the exact blind spot it exists to catch. It now also runs
+# on every push to main, and that run only audits; filing an issue is left to the
+# scheduled and post-production runs so a merge cannot raise a false alarm while the
+# queue is mid-commit.
 on:
   schedule:
     - cron: "14 20 * * *"   # after the 8:14pm release slot, before the 3:14am expansion
+  push:
+    branches: [main]
   workflow_run:
     workflows: ["Produce video"]
     types: [completed]
@@ -41,6 +50,7 @@ jobs:
           python -m scripts.automation_health || true
 
       - name: File or close the stall issue
+        if: github.event_name != 'push'
         # The owner is not watching the Actions tab. An issue is an email, so the
         # pipeline reports itself here instead of waiting to be asked.
         # EXPECT_BRAIN_API is what makes an unreachable Gemini fatal here; without

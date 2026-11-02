@@ -13,6 +13,32 @@ from .prayer_visuals import render
 from .tts import _probe_duration
 
 
+def _refresh_live_thumbnail(doc, video_id: str, out_dir: Path) -> str | None:
+    """Put this script's own thumbnail on a video that is already live.
+
+    A video published by a run that died before recording itself went out wearing
+    whatever frame the pack rendered then — and because the pack ignored the
+    script's `thumb_text`, that frame was the same fixed one on every release.
+    Re-rendering here repairs the picture on the channel at the same time as the
+    receipt. Failure is logged and swallowed: the receipt matters more.
+    """
+    try:
+        from .thumbnail_ctr import generate_ctr_pack
+        from .upload import set_video_thumbnail
+
+        reports = generate_ctr_pack(out_dir / "thumbnails",
+                                    hero_override=doc.meta.get("thumb_text"),
+                                    doc_key=doc.id or doc.slug)
+        if not reports:
+            return None
+        status = set_video_thumbnail(video_id, reports[0].path)
+        print(f"[prayer] refreshed the thumbnail on {video_id}: {status}")
+        return status
+    except Exception as exc:  # noqa: BLE001 - a picture is never worth a failed run
+        print(f"[prayer] could not refresh the thumbnail on {video_id}: {exc!r}")
+        return None
+
+
 def already_published(doc) -> str | None:
     """The existing video id if this exact title is already on the channel.
 
@@ -64,13 +90,14 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
             print(f"[prayer] {doc.id} is already live as {existing}; recording it instead "
                   f"of re-rendering")
             _mark_job_uploaded(path, doc, existing)
+            job_dir = OUTPUT_DIR / doc.slug
+            job_dir.mkdir(parents=True, exist_ok=True)
+            _refresh_live_thumbnail(doc, existing, job_dir)
             result = {'id': doc.id, 'slug': doc.slug, 'video': None, 'thumbnail': None,
                       'duration_seconds': None, 'tts_engine': 'none', 'dry_run': False,
                       'video_id': existing, 'watch_url': f'https://youtu.be/{existing}',
                       'privacy_status': 'already_published', 'uploaded': False}
-            OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-            (OUTPUT_DIR / doc.slug).mkdir(parents=True, exist_ok=True)
-            (OUTPUT_DIR / doc.slug / 'job_result.json').write_text(
+            (job_dir / 'job_result.json').write_text(
                 json.dumps(result, indent=2), encoding='utf-8')
             return result
 
@@ -121,7 +148,9 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
         # mobile legibility, contrast, safe zones and visibility against YouTube's
         # dark-mode page, and writes a report so the run page shows the numbers.
         # See docs/THUMBNAIL_RESEARCH.md.
-        thumb_reports = generate_ctr_pack(out / "thumbnails")
+        thumb_reports = generate_ctr_pack(out / "thumbnails",
+                                          hero_override=doc.meta.get("thumb_text"),
+                                          doc_key=doc.id or doc.slug)
         for report in thumb_reports:
             mobile_preview(report.path, report.path.with_name(report.path.stem + "_mobile.png"))
         (out / "thumbnails" / "report.json").write_text(

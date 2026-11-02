@@ -375,6 +375,66 @@ class TestRecordingADuplicateDoesNotConsumeTheSlot(unittest.TestCase):
         self.assertEqual(len(seen), 1, "one release per slot, not a queue drain")
 
 
+class TestTheVideoWearsItsOwnThumbnail(unittest.TestCase):
+    """Psalm 46 premiered with Psalm 121's thumbnail.
+
+    The pack was rendered with no knowledge of the job: fixed copy, fixed seed. Every
+    script in the queue already carries a distinct ``thumb_text``; nothing passed it
+    to the renderer.
+    """
+
+    def _source(self):
+        return (Path(__file__).resolve().parents[1]
+                / "pipeline" / "prayer_pipeline.py").read_text(encoding="utf-8")
+
+    def test_the_render_is_handed_the_scripts_own_line(self):
+        self.assertIn('hero_override=doc.meta.get("thumb_text")', self._source())
+
+    def test_the_render_is_reseeded_per_job(self):
+        self.assertIn('doc_key=doc.id or doc.slug', self._source())
+
+    def test_a_duplicate_receipt_also_repairs_the_live_picture(self):
+        self.assertIn("_refresh_live_thumbnail(doc, existing, job_dir)", self._source())
+
+    def test_every_queued_script_has_a_distinct_line(self):
+        seen = {}
+        for path in sorted((Path(__file__).resolve().parents[1] / "content" / "queue").glob("*.md")):
+            text = path.read_text(encoding="utf-8")
+            line = ""
+            for row in text.splitlines():
+                if row.startswith("thumb_text:"):
+                    line = row.split(":", 1)[1].strip().strip('"').upper()
+                    break
+            self.assertTrue(line, f"{path.name} has no thumb_text")
+            self.assertNotIn(line, seen, f"{path.name} repeats {seen.get(line)}'s thumbnail line")
+            seen[line] = path.name
+
+
+class TestTheHealthAuditCannotGoSilent(unittest.TestCase):
+    """A workflow that never starts never fails.
+
+    automation-health.yml is the job that reports silent crons, and on 2 November it
+    had zero runs: its nightly cron had not come round and its workflow_run only
+    fires when a production run finishes. The auditor was the thing going silent.
+    """
+
+    def _wf(self):
+        import yaml
+        path = Path(__file__).resolve().parents[1] / ".github" / "workflows" / "automation-health.yml"
+        return yaml.safe_load(path.read_text(encoding="utf-8"))
+
+    def test_it_runs_on_a_push_not_only_on_a_schedule(self):
+        on = self._wf()[True]
+        self.assertIn("push", on, "the audit must not wait for a cron that may not fire")
+        self.assertEqual(on["push"]["branches"], ["main"])
+
+    def test_a_push_audits_but_does_not_file_an_issue(self):
+        steps = self._wf()["jobs"]["health"]["steps"]
+        filing = [s for s in steps if "pipeline_watchdog" in str(s.get("run", ""))]
+        self.assertEqual(len(filing), 1)
+        self.assertIn("github.event_name != 'push'", str(filing[0].get("if", "")))
+
+
 class TestTheWorkflowCannotLoseState(unittest.TestCase):
     def workflow(self, name):
         return (Path(__file__).resolve().parents[1] / ".github" / "workflows" / name).read_text()
