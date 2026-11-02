@@ -1,8 +1,10 @@
 """Unit and integration tests for autonomous comment reply engine."""
 import json
+import os
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 from unittest.mock import MagicMock, patch
 
 from pipeline.comment_replies import (
@@ -297,3 +299,92 @@ class TestReplyInvariantsOnRealOutput(unittest.TestCase):
         self.assertTrue(_reply_is_safe(
             "We are standing with you in prayer tonight, and asking the Lord to "
             "give you deep rest under His wings."))
+
+
+class CrisisEscalationIsFiledOnce(unittest.TestCase):
+    """One viewer produced three issues (#206, #207, #209).
+
+    The comment job runs on a schedule. Every pass re-held the same disclosure and
+    filed a brand-new issue for it, so a real escalation looked like noise and the
+    owner had to open three identical tickets to find one person.
+    """
+
+    HELD = [
+        {"comment_id": "c-1", "author": "viewer-one", "video_id": "v1",
+         "text": "I don't want to be here anymore", "draft": "draft one"},
+        {"comment_id": "c-2", "author": "viewer-two", "video_id": "v2",
+         "text": "nobody would miss me", "draft": "draft two"},
+    ]
+
+    def _module(self):
+        import scripts.reply_comments as rc
+        return rc
+
+    def test_a_disclosure_already_in_the_issue_is_not_reported_again(self):
+        rc = self._module()
+        known = "- comment: `c-1` on video `v1`\n- comment: `c-2` on video `v2`"
+        self.assertEqual(rc.unreported(known, self.HELD), [])
+
+    def test_only_the_new_disclosure_is_added(self):
+        rc = self._module()
+        known = "- comment: `c-1` on video `v1`"
+        fresh = rc.unreported(known, self.HELD)
+        self.assertEqual([row["comment_id"] for row in fresh], ["c-2"])
+
+    def test_an_empty_known_text_reports_everything(self):
+        rc = self._module()
+        self.assertEqual(len(rc.unreported("", self.HELD)), 2)
+
+    def test_no_token_means_no_issue_and_no_crash(self):
+        rc = self._module()
+        with mock.patch.dict(os.environ, {"GH_TOKEN": "", "GITHUB_TOKEN": ""}):
+            self.assertIn("no token", rc._escalate_crisis(self.HELD))
+
+    def test_it_comments_on_the_open_issue_instead_of_opening_another(self):
+        rc = self._module()
+        calls = []
+
+        class Result:
+            def __init__(self, stdout="", returncode=0):
+                self.stdout, self.returncode, self.stderr = stdout, returncode, ""
+
+        def fake_gh(*args):
+            calls.append(args)
+            if args[:2] == ("issue", "list"):
+                return Result('[{"number": 42}]')
+            if args[:2] == ("issue", "view"):
+                return Result("body mentions c-1")
+            return Result("")
+
+        with mock.patch.dict(os.environ, {"GH_TOKEN": "t"}), \
+             mock.patch.object(rc, "_gh", fake_gh):
+            where = rc._escalate_crisis(self.HELD)
+        self.assertIn("#42", where)
+        self.assertNotIn("issue", [c[0] for c in calls if c[:2] == ("issue", "create")])
+        comment = [c for c in calls if c[:2] == ("issue", "comment")]
+        self.assertEqual(len(comment), 1)
+        self.assertIn("c-2", comment[0][-1])
+        self.assertNotIn("c-1", comment[0][-1].split("### viewer-two")[0])
+
+    def test_it_says_so_and_does_nothing_when_everything_is_known(self):
+        rc = self._module()
+        calls = []
+
+        class Result:
+            def __init__(self, stdout="", returncode=0):
+                self.stdout, self.returncode, self.stderr = stdout, returncode, ""
+
+        def fake_gh(*args):
+            calls.append(args)
+            if args[:2] == ("issue", "list"):
+                return Result('[{"number": 42}]')
+            if args[:2] == ("issue", "view"):
+                return Result("c-1 and c-2 are both named here")
+            return Result("")
+
+        with mock.patch.dict(os.environ, {"GH_TOKEN": "t"}), \
+             mock.patch.object(rc, "_gh", fake_gh):
+            where = rc._escalate_crisis(self.HELD)
+        self.assertIn("already reported", where)
+        self.assertEqual([c for c in calls if c[:2] in (("issue", "comment"),
+                                                        ("issue", "create"))], [])
