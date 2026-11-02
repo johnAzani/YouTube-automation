@@ -605,3 +605,48 @@ queue: shorts    ready=0  5 manifest(s) waiting on a scene script in tools/short
 
 16 new tests in `tests/test_short_release_queue.py` plus queue-health and scheduler
 guards; full suite **253 passing**.
+
+### The brain now authors Shorts — a Short is data, not code
+
+The previous entry's first bullet was an excuse, not a fact: it said a Short needs a
+hand-authored scene script and "there is no generator for those". The renderer was
+always data-driven — `stock_queries`, `scenes`, `captions`, `kinetic_phrases`,
+`beats` — so the only thing making a Short a code change was that the data lived
+inside a Python literal. Data can be generated, so the brain generates it.
+
+`pipeline/short_script.py` is the authoring contract. The brain returns JSON, and
+`validate_spec` rejects it unless it is safe to render:
+
+* 6–10 scenes, exactly one stock query per scene, camera move in the whitelist,
+  focus fractions in 0–1, kicker ≤ 22 and sub ≤ 34 characters (9:16 safe area);
+* captions non-overlapping, 90–165 narration words, 30–180 seconds;
+* one kinetic phrase per caption with matching start/end seconds;
+* every `beats[].a` anchor present verbatim in the narration;
+* no creator names or "narrated by";
+* **no cross-psalm quotation** — the spec may quote only its own psalm, checked
+  against per-psalm fingerprints (23/27/34/46/91/121). This is the job-0011 bug
+  class, refused by machine instead of by review.
+
+A valid spec is written to `content/shorts-scripts/<key>.json`, which
+`tools/shorts.py` merges into `SCRIPTS` at import and which `_renderer_script_keys()`
+unions with the literal keys. From there the path is fully automatic: the release
+stage TTS-synthesises the narration from the captions with the standing `Charon`
+voice (`_ensure_narration`), renders, verifies, uploads. No human authoring step
+exists anywhere in it.
+
+Two entry points, both unattended:
+
+1. `pipeline.short_release --next` — before printing "nothing to do" it asks the
+   brain to author the specs the queue is blocked on, then re-selects.
+2. `scripts/gemini_brain.py --author-shorts` — a step in `gemini_brain.yml` that
+   backfills every `needs_renderer` manifest and commits `content/shorts-scripts/`.
+
+Failure is loud and non-fabricating: if the model returns something invalid twice,
+or the API key is absent, the manifest stays `draft` with `authoring failed: …` in
+its notes and the queue keeps reporting itself stalled. A Short that renders with
+mislabelled scripture is worse than an empty queue.
+
+Current state of the five blocked manifests (0009/0010/0011/0013/0014) is `draft`,
+`renderer_ready: false`, `authored_by_brain: false` — locally the API key is absent,
+so authoring refuses. In Actions, where `GEMINI_API_KEY` is a secret, the next
+brain or production run authors all five. 28 new tests; full suite **281 passing**.

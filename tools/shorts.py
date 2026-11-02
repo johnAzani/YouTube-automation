@@ -1845,6 +1845,16 @@ SCRIPTS = {
     ),
 }
 
+# Brain-authored Shorts live as validated JSON specs (content/shorts-scripts/*.json),
+# so a new Short no longer needs a code change. Invalid specs are skipped with a
+# printed reason rather than breaking every render.
+try:
+    from pipeline.short_script import load_authored as _load_authored_shorts
+    SCRIPTS.update(_load_authored_shorts())
+except Exception as _authored_exc:  # pragma: no cover - defensive
+    print(f'[shorts] authored specs unavailable: {_authored_exc!r}')
+
+
 def _acquire_short_asset(query, scene_no, stock_dir):
     """Clip-first acquisition tailored for full-bleed 9:16 Shorts.
 

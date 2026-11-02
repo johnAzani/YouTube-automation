@@ -349,13 +349,23 @@ def verify_short_render(
 
 
 def _renderer_script_keys() -> set[str]:
-    """Read renderer keys without importing its heavy rendering dependencies."""
+    """Hand-written SCRIPTS keys plus every validated authored spec.
+
+    Read by AST so the heavy rendering dependencies are never imported here, then
+    unioned with `content/shorts-scripts/*.json` — which is how the brain's Shorts
+    become renderable without a code change.
+    """
     tree = ast.parse((REPO_ROOT / "tools" / "shorts.py").read_text(encoding="utf-8"))
+    keys: set[str] | None = None
     for node in tree.body:
         if isinstance(node, ast.Assign) and any(isinstance(t, ast.Name) and t.id == "SCRIPTS" for t in node.targets):
             if isinstance(node.value, ast.Dict):
-                return {key.value for key in node.value.keys if isinstance(key, ast.Constant) and isinstance(key.value, str)}
-    raise RuntimeError("Cannot determine supported Shorts renderer scripts")
+                keys = {k.value for k in node.value.keys
+                        if isinstance(k, ast.Constant) and isinstance(k.value, str)}
+    if keys is None:
+        raise RuntimeError("Cannot determine supported Shorts renderer scripts")
+    from .short_script import authored_keys
+    return keys | authored_keys()
 
 
 def queue_report(queue_dir: Path | None = None) -> list[dict]:
@@ -377,7 +387,10 @@ def queue_report(queue_dir: Path | None = None) -> list[dict]:
         if key not in EDITIONS:
             verdict, reason = "unusable", f"unknown short key {key!r} not in EDITIONS"
         elif key not in renderable:
-            verdict, reason = "needs_renderer", f"no scene script {key!r} in tools/shorts.py"
+            verdict, reason = (
+                "needs_renderer",
+                f"no scene script {key!r} in content/shorts-scripts/ or tools/shorts.py",
+            )
         elif status != "approved":
             verdict, reason = "not_approved", f"status is {status or 'missing'}"
         else:
@@ -612,6 +625,34 @@ def _close_superseded_tickets(title: str, new_shorts_url: str) -> None:
         pass
 
 
+def _ensure_narration(short_key: str) -> None:
+    """Make sure an authored Short has audio before the renderer looks for it.
+
+    A brain-authored Short ships as a spec: captions only, no MP3. The same Charon
+    voice that narrates the long-form reads the captions here, so a Short can go
+    from spec to video with no human step and no cost.
+    """
+    try:
+        from .short_script import load_spec, spec_path
+
+        path = spec_path(short_key)
+        if not path.is_file():
+            return  # hand-written SCRIPTS entry: its audio is committed
+        spec = load_spec(path)
+        audio = REPO_ROOT / "assets" / "deepdive" / f"{short_key}.mp3"
+        if audio.is_file():
+            return
+        from .gemini_tts import synthesize_gemini_audio
+
+        audio.parent.mkdir(parents=True, exist_ok=True)
+        print(f"[short-release] synthesising narration for {short_key} ({spec.words} words)")
+        synthesize_gemini_audio(spec.narration_text, audio, voice="Charon")
+    except Exception as exc:  # noqa: BLE001
+        raise RuntimeError(
+            f"cannot prepare narration for {short_key} ({exc}); refusing to render a silent Short"
+        ) from exc
+
+
 def run_short_release(
     short_key: str,
     dry_run: bool = False,
@@ -669,6 +710,7 @@ def run_short_release(
     sources_path = REPO_ROOT / "output" / "short-stock" / short_key / "scene-sources.json"
 
     if not skip_render:
+        _ensure_narration(short_key)
         render_env = dict(os.environ)
         if render_env.get("SHORT_DISABLE_STOCK_BROLL", "").strip().lower() in {"1", "true", "yes", "on"}:
             render_env["ENABLE_STOCK_BROLL"] = "0"
@@ -856,6 +898,32 @@ def run_short_release(
     return result
 
 
+def _author_missing_short_specs() -> list[dict]:
+    """Let the brain write the scene specs the queue is waiting on.
+
+    A Short is data, so this is not a human step: the brain authors the spec,
+    validation rejects anything implausible, and the manifest flips to approved
+    only once a renderer exists. If the brain cannot author, nothing is fabricated
+    and the queue keeps reporting itself as stalled.
+    """
+    try:
+        rows = queue_report()
+    except Exception as exc:  # noqa: BLE001
+        print(f"[short-release] cannot inspect queue for authoring: {exc}")
+        return []
+    if not any(r["verdict"] == "needs_renderer" for r in rows):
+        return []
+    try:
+        from .gemini_brain import GeminiBrain
+        authored = GeminiBrain().author_missing_shorts()
+    except Exception as exc:  # noqa: BLE001
+        print(f"[short-release] brain could not author missing Shorts: {exc}")
+        return []
+    for row in authored:
+        print(f"[short-release] authoring {row['file']}: {row['verdict']} — {row['reason']}")
+    return authored
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Render, verify, and upload an authored YouTube Short")
     parser.add_argument("--short", default="", help="Short edition key (e.g. short-enron)")
@@ -877,6 +945,11 @@ def main(argv: list[str] | None = None) -> int:
         if args.next and not short_key:
             queued = select_next_queued_short()
             if queued is None:
+                # Before declaring nothing to do, have the brain author the specs
+                # the queue is blocked on.
+                if _author_missing_short_specs():
+                    queued = select_next_queued_short()
+            if queued is None:
                 rows = queue_report()
                 ready = [r for r in rows if r["verdict"] == "ready"]
                 blocked = [r for r in rows if r["verdict"] in {"needs_renderer", "unusable", "not_approved"}]
@@ -885,7 +958,8 @@ def main(argv: list[str] | None = None) -> int:
                     print(f"[short-release]   {row['file']}: {row['verdict']} — {row['reason']}")
                 if blocked and os.environ.get("GITHUB_ACTIONS"):
                     print(f"::warning title=Shorts stalled::{len(blocked)} manifest(s) waiting, "
-                          f"0 ready. A Short needs a hand-authored scene script in tools/shorts.py.")
+                          f"0 ready. A Short needs a scene script: authored by the brain into "
+                          f"content/shorts-scripts/, or hand-written in tools/shorts.py.")
                 if ready:
                     print(f"::error title=Shorts selection bug::{len(ready)} ready manifest(s) were not selected")
                     return 1

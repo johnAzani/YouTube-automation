@@ -36,6 +36,12 @@ jobs:
 
       - uses: ./.github/actions/setup-render-deps
 
+      - name: Author specs for Shorts that cannot render yet
+        # A blocked spec must not stop the long-form replenishment in the same run;
+        # the step summary and automation_health both report what stayed blocked.
+        continue-on-error: true
+        run: python scripts/gemini_brain.py --author-shorts 2>&1 | tee shorts.log
+
       - name: Run Google Gemini Autonomous Brain
         run: |
           set -e
@@ -45,11 +51,21 @@ jobs:
             python scripts/gemini_brain.py --auto-replenish 2>&1 | tee brain.log
           fi
 
+      - name: Summarise Short authoring
+        if: always()
+        run: |
+          if [ -s shorts.log ]; then
+            echo "### 🎞 Short Scene Specs" >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            cat shorts.log >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          fi
+
       - name: Commit newly authored queue items
         run: |
           git config user.name "gemini-brain-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add content/queue/ content/shorts-queue/ content/factcheck/
+          git add content/queue/ content/shorts-queue/ content/shorts-scripts/ content/factcheck/
           if ! git diff --cached --quiet; then
             git commit -m "chore(brain): autonomous scripture queue replenishment [skip ci]"
             git push

@@ -116,7 +116,8 @@ class TestQueueHealth(unittest.TestCase):
              mock.patch("pipeline.run.select_jobs", return_value=[]):
             rows = {r["queue"]: r for r in ah.queue_health()}
         self.assertEqual(rows["shorts"]["ready"], 0)
-        self.assertIn("tools/shorts.py", rows["shorts"]["note"])
+        self.assertIn("content/shorts-scripts/", rows["shorts"]["note"])
+        self.assertIn("brain authors", rows["shorts"]["note"])
         self.assertEqual(rows["longform"]["ready"], 0)
 
     def test_a_broken_queue_is_a_finding_not_a_crash(self):
