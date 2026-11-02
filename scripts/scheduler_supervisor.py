@@ -44,6 +44,11 @@ DISPATCH_AFTER = timedelta(minutes=90)
 # publishing late is worse than waiting for the next one.
 DISPATCH_WINDOW = timedelta(hours=6)
 MAX_DISPATCHES = 3
+# A dispatch is not a success. On 2 November the 07:14 produce slot was
+# dispatched at 08:59 and the run then failed; treating the slot as settled would
+# have left the channel with no video until the next day. Each slot gets this many
+# attempts, counted per slot, so a permanently failing workflow still stops.
+MAX_ATTEMPTS_PER_SLOT = 2
 
 NEVER_DISPATCH = {"monitor.yml", "automation-health.yml", "scheduler-supervisor.yml",
                   "dry-run.yml", "preview-render.yml", "prayer-alignment-check.yml"}
@@ -107,6 +112,65 @@ def due_but_missing(now: datetime | None = None,
     return out
 
 
+def _safe_runs() -> list[dict]:
+    try:
+        from scripts.automation_monitor import fetch_runs
+
+        return fetch_runs()
+    except Exception:  # noqa: BLE001
+        return []
+
+
+FAILED_CONCLUSIONS = {"failure", "cancelled", "timed_out", "startup_failure"}
+
+
+def _failed_dispatches(state: dict, latest: dict[str, tuple[datetime, str | None]],
+                       now: datetime) -> list[tuple[str, str]]:
+    """Ledger entries whose dispatched run has finished badly and can be retried."""
+    out: list[tuple[str, str]] = []
+    for key, entry in state.items():
+        if "@" not in key:
+            continue
+        workflow, slot = key.rsplit("@", 1)
+        if workflow in NEVER_DISPATCH:
+            continue
+        try:
+            slot_at = datetime.fromisoformat(slot)
+            dispatched_at = datetime.fromisoformat(entry.get("at", ""))
+        except (TypeError, ValueError):
+            continue
+        if now < slot_at + DISPATCH_AFTER or now > slot_at + DISPATCH_WINDOW:
+            continue
+        if int(entry.get("attempts", 1)) >= MAX_ATTEMPTS_PER_SLOT:
+            continue
+        finished = latest.get(workflow)
+        if finished is None:
+            continue
+        when, conclusion = finished
+        if when < dispatched_at:
+            continue                      # the dispatched run has not appeared yet
+        if conclusion in FAILED_CONCLUSIONS:
+            out.append((workflow, slot))
+    return out
+
+
+def _latest_runs(runs: list[dict]) -> dict[str, tuple[datetime, str | None]]:
+    """{workflow_file: (created_at, conclusion)} for the newest run of each."""
+    out: dict[str, tuple[datetime, str | None]] = {}
+    for run in runs:
+        path = (run.get("path") or "").split("/")[-1]
+        stamp = run.get("created_at")
+        if not path or not stamp:
+            continue
+        try:
+            when = datetime.fromisoformat(stamp.replace("Z", "+00:00"))
+        except ValueError:
+            continue
+        if path not in out or when > out[path][0]:
+            out[path] = (when, run.get("conclusion"))
+    return out
+
+
 def dispatch(workflow: str) -> tuple[bool, str]:
     proc = subprocess.run(["gh", "workflow", "run", workflow], capture_output=True,
                           text=True, cwd=ROOT, timeout=120)
@@ -127,12 +191,58 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
         result["failed"].append({"workflow": "-", "reason": f"cannot read schedule: {exc}"})
         return result
 
-    for workflow, slot in missing:
-        key = f"{workflow}@{slot}"
-        if key in state:
-            result["skipped"].append({"workflow": workflow, "slot": slot,
-                                      "reason": "already dispatched for this slot"})
+    latest = _latest_runs(runs if runs is not None else _safe_runs())
+
+    # Two kinds of work: slots that produced no run at all, and slots whose
+    # *dispatched* run has since failed. The second kind looks healthy to
+    # `due_but_missing` (a run exists after the slot) which is exactly how today's
+    # produce failure would have been left for tomorrow.
+    candidates = list(missing)
+    for workflow, slot in _failed_dispatches(state, latest, now):
+        if (workflow, slot) not in candidates:
+            candidates.append((workflow, slot))
+
+    # Say out loud what the ledger decided, so a slot that is deliberately not
+    # retried is visible in the log instead of merely absent.
+    for key, entry in state.items():
+        if "@" not in key:
             continue
+        workflow, slot = key.rsplit("@", 1)
+        if (workflow, slot) in candidates:
+            continue
+        try:
+            slot_at = datetime.fromisoformat(slot)
+        except ValueError:
+            continue
+        if now < slot_at + DISPATCH_AFTER or now > slot_at + DISPATCH_WINDOW:
+            continue
+        attempts = int(entry.get("attempts", 1))
+        finished = latest.get(workflow)
+        if finished is not None and finished[1] == "success" \
+                and finished[0].isoformat() >= entry.get("at", ""):
+            reason = "its dispatched run succeeded"
+        elif attempts >= MAX_ATTEMPTS_PER_SLOT:
+            reason = f"already dispatched {attempts}x for this slot; not trying again"
+        else:
+            reason = "waiting for its dispatched run to appear"
+        result["skipped"].append({"workflow": workflow, "slot": slot, "reason": reason})
+
+    for workflow, slot in candidates:
+        key = f"{workflow}@{slot}"
+        previous = state.get(key)
+        attempts = int(previous.get("attempts", 1)) if previous else 0
+        if previous:
+            finished = latest.get(workflow)
+            if finished is not None and finished[1] == "success" \
+                    and finished[0].isoformat() >= previous.get("at", ""):
+                result["skipped"].append({"workflow": workflow, "slot": slot,
+                                          "reason": "its dispatched run succeeded"})
+                continue
+            if attempts >= MAX_ATTEMPTS_PER_SLOT:
+                result["skipped"].append({"workflow": workflow, "slot": slot,
+                                          "reason": f"already dispatched {attempts}x for this "
+                                                    f"slot; not trying again"})
+                continue
         if len(result["dispatched"]) >= MAX_DISPATCHES:
             result["skipped"].append({"workflow": workflow, "slot": slot,
                                       "reason": "per-pass dispatch limit reached"})
@@ -142,7 +252,7 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
                                          "result": "would dispatch"})
             continue
         ok, message = dispatch(workflow)
-        state[key] = {"at": now.isoformat(), "result": message}
+        state[key] = {"at": now.isoformat(), "result": message, "attempts": attempts + 1}
         (result["dispatched"] if ok else result["failed"]).append(
             {"workflow": workflow, "slot": slot, "result": message})
 
