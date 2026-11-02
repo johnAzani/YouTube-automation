@@ -263,6 +263,21 @@ class TestAWedgedRunIsNotAllowedToHoldTheLock(unittest.TestCase):
             data = yaml.safe_load((root / name).read_text(encoding="utf-8"))
             self.assertNotEqual(data["concurrency"]["group"], "content-state", name)
 
+    def test_an_external_tick_always_wakes_the_supervisor(self):
+        """Every other trigger can be suppressed by the failure it watches for.
+
+        Today's crons stopped firing at 18:05 UTC, and a wedged produce run never
+        emits the `workflow_run` completion this supervisor reacts to — so it went
+        silent exactly when a run was wedged.
+        """
+        from pathlib import Path
+        import yaml
+
+        root = Path(__file__).resolve().parents[1] / ".github" / "workflows"
+        data = yaml.safe_load((root / "scheduler-supervisor.yml").read_text(encoding="utf-8"))
+        self.assertIn("repository_dispatch", data[True])
+        self.assertEqual(data[True]["repository_dispatch"]["types"], ["watchdog-tick"])
+
     def test_production_still_holds_one_lock_for_itself(self):
         from pathlib import Path
         import yaml
