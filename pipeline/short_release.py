@@ -358,6 +358,35 @@ def _renderer_script_keys() -> set[str]:
     raise RuntimeError("Cannot determine supported Shorts renderer scripts")
 
 
+def queue_report(queue_dir: Path | None = None) -> list[dict]:
+    """Every manifest in the Shorts queue with its verdict and the reason.
+
+    The stage used to print "nothing to do" and exit 0, which is indistinguishable
+    from success on the run page. Three approved manifests sat here for days while
+    the renderer had no script for their keys.
+    """
+    qdir = SHORTS_QUEUE_DIR if queue_dir is None else queue_dir
+    if not qdir.is_dir():
+        return []
+    renderable = _renderer_script_keys()
+    rows: list[dict] = []
+    for path in sorted(qdir.glob("*.yml")):
+        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        key = str(data.get("short") or data.get("edition") or "").strip()
+        status = str(data.get("status", "")).strip().lower()
+        if key not in EDITIONS:
+            verdict, reason = "unusable", f"unknown short key {key!r} not in EDITIONS"
+        elif key not in renderable:
+            verdict, reason = "needs_renderer", f"no scene script {key!r} in tools/shorts.py"
+        elif status != "approved":
+            verdict, reason = "not_approved", f"status is {status or 'missing'}"
+        else:
+            verdict, reason = "ready", "will render on the next run"
+        rows.append({"file": path.name, "short": key, "status": status,
+                     "verdict": verdict, "reason": reason})
+    return rows
+
+
 def select_next_queued_short(
     queue_dir: Path | None = None,
     published_dir: Path | None = None,
@@ -759,13 +788,15 @@ def run_short_release(
         if not up.video_id:
             raise RuntimeError("YouTube upload returned no video ID; leaving published ledger untouched.")
 
-        thumb_results: dict[str, str] = {}
-        thumb_results[up.video_id] = set_video_thumbnail(up.video_id, staged_thumb)
+        # Shorts cannot take custom thumbnails: thumbnails.set fails for them, and
+        # the call still costs quota. Record it instead of paying for a known failure.
+        thumb_results: dict[str, str] = {up.video_id: "not_supported_for_shorts"}
+        print("[short-release] skipping thumbnails.set: YouTube rejects custom thumbnails on Shorts")
 
-        # Ensure every unlocked Enron Short on the channel immediately displays the scroll-stopping thumbnail
+        # Ensure every unlocked legacy Short on the channel stops carrying the old frame
         for old_vid in legacy_video_ids:
             if old_vid and old_vid != up.video_id:
-                thumb_results[old_vid] = set_video_thumbnail(old_vid, staged_thumb)
+                thumb_results[old_vid] = "not_supported_for_shorts"
                 delete_video(old_vid)
 
         channel_audit = audit_channel_videos([up.video_id, *legacy_video_ids])
@@ -846,7 +877,18 @@ def main(argv: list[str] | None = None) -> int:
         if args.next and not short_key:
             queued = select_next_queued_short()
             if queued is None:
-                print("[short-release] nothing to do — no approved Shorts in content/shorts-queue/")
+                rows = queue_report()
+                ready = [r for r in rows if r["verdict"] == "ready"]
+                blocked = [r for r in rows if r["verdict"] in {"needs_renderer", "unusable", "not_approved"}]
+                print("[short-release] nothing to do — no Short in the queue can render right now.")
+                for row in rows:
+                    print(f"[short-release]   {row['file']}: {row['verdict']} — {row['reason']}")
+                if blocked and os.environ.get("GITHUB_ACTIONS"):
+                    print(f"::warning title=Shorts stalled::{len(blocked)} manifest(s) waiting, "
+                          f"0 ready. A Short needs a hand-authored scene script in tools/shorts.py.")
+                if ready:
+                    print(f"::error title=Shorts selection bug::{len(ready)} ready manifest(s) were not selected")
+                    return 1
                 return 0
             manifest_path, short_key = queued
         elif not short_key:

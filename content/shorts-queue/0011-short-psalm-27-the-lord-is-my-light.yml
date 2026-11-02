@@ -1,8 +1,11 @@
-short: "short-psalm27"
-companion_longform_id: "0011"
-scripture: "Psalm 27"
-status: "draft"
-privacy: "public"
+short: short-psalm27
+companion_longform_id: '0011'
+scripture: Psalm 27
+status: draft
+privacy: public
 replace: false
-target_window_utc: "14:14"
-notes: "Companion Short for Psalm 27: The Lord Is My Light & My Salvation (Draft - awaiting edition authoring)"
+target_window_utc: '14:14'
+notes: "Companion Short for Psalm 27: The Lord Is My Light & My Salvation (Draft -\
+  \ awaiting edition authoring) \u2014 needs a scene script 'short-psalm27' in tools/shorts.py\
+  \ before it can render"
+renderer_ready: false

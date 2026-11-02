@@ -1,8 +1,12 @@
-short: "short-psalm34"
-companion_longform_id: "0014"
-scripture: "Psalm 34"
-status: "approved"
-privacy: "public"
+short: short-psalm34
+companion_longform_id: '0014'
+scripture: Psalm 34
+status: draft
+privacy: public
 replace: false
-target_window_utc: "14:14"
-notes: "Companion Short for Psalm 34: The Angel of the Lord Encamps"
+target_window_utc: '14:14'
+notes: "Companion Short for Psalm 34: The Angel of the Lord Encamps \u2014 needs a\
+  \ scene script 'short-psalm34' in tools/shorts.py before it can render"
+renderer_ready: false
+approved_note: approved scripture, but no scene script exists; status downgraded to
+  draft so the queue stops claiming it will publish

@@ -140,6 +140,34 @@ def audit(now: datetime | None = None) -> list[Row]:
     return rows
 
 
+def queue_health() -> list[dict]:
+    """Which queues have work that can actually run?
+
+    The long-form and Shorts queues both grew approved-looking rows that could not
+    build (short scripts, mislabelled scripture). Counting *renderable* rows rather
+    than approved rows is what makes a stall visible before it lasts a week.
+    """
+    from pipeline.run import select_jobs
+    from pipeline.short_release import queue_report
+
+    rows: list[dict] = []
+    try:
+        longform = select_jobs(all_flag=False, job_path=None, next_flag=False)
+        rows.append({"queue": "longform", "ready": len(longform), "note": "approved and above the word floor"})
+    except Exception as exc:  # a broken queue is a finding, not a crash
+        rows.append({"queue": "longform", "ready": 0, "note": f"selection failed: {exc}"})
+    try:
+        shorts = queue_report()
+        ready = sum(1 for r in shorts if r["verdict"] == "ready")
+        blocked = sum(1 for r in shorts if r["verdict"] != "ready")
+        rows.append({"queue": "shorts", "ready": ready,
+                     "note": f"{blocked} manifest(s) waiting on a scene script in tools/shorts.py"
+                             if ready == 0 else "renderable now"})
+    except Exception as exc:
+        rows.append({"queue": "shorts", "ready": 0, "note": f"queue_report failed: {exc}"})
+    return rows
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description="Check that scheduled workflows are actually running.")
     parser.add_argument("--json", action="store_true")
@@ -160,6 +188,17 @@ def main(argv=None) -> int:
     if not gh_available():
         print("no gh/GITHUB_TOKEN available — cannot verify run history; reporting nothing as healthy")
         return 0
+
+    queues = queue_health()
+    if args.json:
+        print(json.dumps(queues, indent=2))
+    else:
+        print()
+        for row in queues:
+            print(f"queue: {row['queue']}  ready={row['ready']}  {row['note']}")
+    for row in queues:
+        if row["ready"] == 0:
+            print(f"::warning title={row['queue']} queue has nothing runnable::{row['note']}")
 
     problems = [r for r in rows if r.status == "OVERDUE" or (args.strict and r.status == "NEVER RAN")]
     for row in problems:

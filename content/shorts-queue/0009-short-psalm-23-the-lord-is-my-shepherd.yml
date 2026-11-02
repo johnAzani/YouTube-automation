@@ -1,7 +1,12 @@
-short: "short-psalm23"
-companion_longform_id: "0009"
-scripture: "Psalm 23"
-status: "approved"
-privacy: "public"
-target_window_utc: "14:14"
-notes: "Companion Short for Psalm 23: The Lord Is My Shepherd — Night Prayer Before Sleep"
+short: short-psalm23
+companion_longform_id: 0009
+scripture: Psalm 23
+status: draft
+privacy: public
+target_window_utc: '14:14'
+notes: "Companion Short for Psalm 23: The Lord Is My Shepherd \u2014 Night Prayer\
+  \ Before Sleep \u2014 needs a scene script 'short-psalm23' in tools/shorts.py before\
+  \ it can render"
+renderer_ready: false
+approved_note: approved scripture, but no scene script exists; status downgraded to
+  draft so the queue stops claiming it will publish

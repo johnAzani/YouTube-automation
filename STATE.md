@@ -564,3 +564,44 @@ expand-scripts.yml  daily     NEVER RAN   no run recorded
 18 new tests (15 health, 3 community honesty), written with `unittest` after the
 pytest-style first draft was found to be collected by *nothing* in CI. Full suite
 **237 passing**.
+
+### Shorts are half automated — and the queue no longer pretends otherwise
+
+Asked whether Shorts run unattended, the answer is no, and three separate things
+were hiding it:
+
+1. **A Short needs a hand-authored scene script.** `tools/shorts.py` holds a
+   `SCRIPTS` dict with per-Short scene definitions (1668 lines: plates, camera
+   moves, on-screen kickers, narration timing). There is no generator for those.
+   The renderer knows three keys — `short-enron`, `short-johnstown`,
+   `short-psalm91` — while `EDITIONS` defines seven. Every approved manifest in the
+   queue pointed at a key with no script, so `select_next_queued_short()` returned
+   `None`, the stage printed "nothing to do", and exited 0. Green run, no video.
+2. **The brain hardcoded the key.** `generate_companion_short` wrote
+   `short: short-psalm91` and `status: approved` for *every* long-form job — a
+   second Psalm 91 Short queued against any new psalm, and the same
+   mislabelled-scripture class of bug as job 0011.
+3. **It spent quota on a guaranteed failure.** The Shorts path called
+   `set_video_thumbnail` on every upload. YouTube rejects custom thumbnails on
+   Shorts, so that was 50 units burned per Short for nothing.
+
+Fixed: the brain derives the key from the psalm, writes `renderer_ready`, and only
+marks `approved` when a scene script exists — otherwise `draft` with the reason.
+`queue_report()` explains every manifest's verdict and the stage emits a
+`Shorts stalled` warning naming the missing script. `set_video_thumbnail` is no
+longer called on the Shorts path. The three approved-but-unrenderable manifests
+(0009/0013/0014) were downgraded to `draft` with `approved_note` and
+`renderer_ready: false`, so the queue stops claiming they will publish.
+
+`auto_scheduler.audit_shorts_queue` now reports those rows as `blocked` and counts
+only renderable ones as approved, so the runway can no longer be inflated by
+unbuildable work; `audit_longform_queue` likewise requires the word floor. Running
+`automation_health` now prints, daily:
+
+```
+queue: longform  ready=0  approved and above the word floor
+queue: shorts    ready=0  5 manifest(s) waiting on a scene script in tools/shorts.py
+```
+
+16 new tests in `tests/test_short_release_queue.py` plus queue-health and scheduler
+guards; full suite **253 passing**.

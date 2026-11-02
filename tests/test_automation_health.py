@@ -73,9 +73,12 @@ class TestMain(unittest.TestCase):
     def test_json_output_is_machine_readable(self):
         rows = [ah.Row("x.yml", "daily", NOW, "ok", "fine")]
         with mock.patch.object(ah, "audit", return_value=rows), \
+             mock.patch.object(ah, "queue_health", return_value=[]), \
+             mock.patch.object(ah, "gh_available", return_value=True), \
              mock.patch("builtins.print") as printed:
             self.assertEqual(ah.main(["--json"]), 0)
-        self.assertIn('"workflow": "x.yml"', printed.call_args[0][0])
+        docs = [c.args[0] for c in printed.call_args_list if c.args]
+        self.assertTrue(any('"workflow": "x.yml"' in str(d) for d in docs))
 
     def test_overdue_exits_non_zero(self):
         rows = [ah.Row("x.yml", "daily", NOW, "OVERDUE", "late")]
@@ -97,6 +100,29 @@ class TestMain(unittest.TestCase):
             self.assertEqual(ah.main([]), 0)
         texts = " ".join(str(c.args[0]) for c in printed.call_args_list)
         self.assertIn("cannot verify", texts)
+
+
+class TestQueueHealth(unittest.TestCase):
+    """Counting renderable rows, not approved rows, is what makes a stall visible."""
+
+    def test_reports_both_queues(self):
+        rows = {r["queue"]: r for r in ah.queue_health()}
+        self.assertIn("longform", rows)
+        self.assertIn("shorts", rows)
+
+    def test_a_queue_is_measured_by_what_can_actually_run(self):
+        with mock.patch("pipeline.short_release.queue_report",
+                        return_value=[{"verdict": "needs_renderer"}]), \
+             mock.patch("pipeline.run.select_jobs", return_value=[]):
+            rows = {r["queue"]: r for r in ah.queue_health()}
+        self.assertEqual(rows["shorts"]["ready"], 0)
+        self.assertIn("tools/shorts.py", rows["shorts"]["note"])
+        self.assertEqual(rows["longform"]["ready"], 0)
+
+    def test_a_broken_queue_is_a_finding_not_a_crash(self):
+        with mock.patch("pipeline.short_release.queue_report", side_effect=RuntimeError("boom")):
+            rows = {r["queue"]: r for r in ah.queue_health()}
+        self.assertIn("boom", rows["shorts"]["note"])
 
 
 class TestWiring(unittest.TestCase):

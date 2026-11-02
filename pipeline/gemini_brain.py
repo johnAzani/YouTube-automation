@@ -283,25 +283,48 @@ Type Amen to agree with this prayer, and subscribe to The Secret Place to pray w
 """
 
     def generate_companion_short(self, longform_doc: ScriptDoc) -> tuple[Path, str]:
-        """Generate a companion 9:16 Short manifest in content/shorts-queue/."""
+        """Queue a companion 9:16 Short for this long-form video — if one can render.
+
+        Two defects this replaces:
+
+        * the key was hardcoded to ``short-psalm91`` for every job, so any new
+          long-form video queued another Psalm 91 Short, one psalm's scripture
+          attached to another psalm's title. Same failure as job 0011.
+        * the manifest was written ``status: approved`` even when no renderer
+          script existed for the key, so production skipped it silently forever
+          (three such manifests are sitting in the queue right now).
+        """
+        from .short_release import _renderer_script_keys
+
         SHORTS_QUEUE_DIR.mkdir(parents=True, exist_ok=True)
-        short_key = f"short-{longform_doc.slug[:30].strip('-')}"
-        manifest_filename = f"{longform_doc.id}-{short_key}.yml"
+        psalm = re.search(r"Psalm\s+(\d+)", longform_doc.title)
+        key = f"short-psalm{psalm.group(1)}" if psalm else f"short-{longform_doc.slug[:30].strip('-')}"
+        renderable = key in _renderer_script_keys()
+        manifest_filename = f"{longform_doc.id}-{key}.yml"
         manifest_path = SHORTS_QUEUE_DIR / manifest_filename
 
         manifest_data = {
-            "short": "short-psalm91",  # maps to validated ShortEdition
+            "short": key,
             "companion_longform_id": longform_doc.id,
             "scripture": longform_doc.title.split(":")[0].strip(),
-            "status": "approved",
+            # Only claim approved when the renderer can actually build it. A Short
+            # needs a hand-authored scene script in tools/shorts.py; there is no
+            # generator for those, and pretending otherwise stalls the queue.
+            "status": "approved" if renderable else "draft",
+            "renderer_ready": renderable,
             "privacy": "public",
-            "replace": True,
+            "replace": False,
             "target_window_utc": "14:14",
-            "notes": f"Companion Short for {longform_doc.title}",
+            "notes": (
+                f"Companion Short for {longform_doc.title}"
+                if renderable
+                else f"Companion Short for {longform_doc.title} — needs a scene script "
+                     f"'{key}' in tools/shorts.py before it can render"
+            ),
         }
 
         manifest_path.write_text(yaml.safe_dump(manifest_data, sort_keys=False), encoding="utf-8")
-        return manifest_path, short_key
+        return manifest_path, key
 
     def verify_and_stage(self, script_path: Path) -> BrainGenerationResult:
         """Run factchecking claim extraction, verify queue integrity, and stage for production."""
