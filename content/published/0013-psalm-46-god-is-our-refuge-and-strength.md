@@ -2,7 +2,7 @@
 id: "0013"
 title: "Psalm 46: God Is Our Refuge & Strength — Be Still & Know | The Secret Place"
 slug: psalm-46-god-is-our-refuge-and-strength
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -67,6 +67,8 @@ originality:
   no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
   source_notes: true         # scriptures and classical commentaries documented
   ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
+published_on: "2026-11-02"
+youtube_video_id: "1g8TXHD0Xks"
 ---
 
 ## Scene 1 — The Unshakable Refuge in Trouble (Verses 1-3)

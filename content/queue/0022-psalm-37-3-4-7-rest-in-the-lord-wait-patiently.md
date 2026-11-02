@@ -72,6 +72,7 @@ originality:
   source_notes: true         # scriptures and classical commentaries documented
   ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
 ---
+
 ## Scene 1 — Trust in the LORD, and Do Good (Verse 3a)
 
 The antidote to fretting is trust combined with action.
@@ -82,6 +83,7 @@ You do not have to fix everything tonight. You only have to trust and do the nex
 
 Sleep knowing that your goodness is seen and your trust is not misplaced.
 
+Heavenly Father, as this day closes, I bring my anxieties to You. Help me to lay down the burden of things undone and worries unresolved. Grant me the grace to simply trust in Your unfailing character, and the wisdom to discern and carry out only the good deeds You've prepared for me. May my sleep be a testament to my faith, knowing You are active even as I rest.
 
 ## Scene 2 — So Shalt Thou Dwell in the Land, and Verily Thou Shalt Be Fed (Verse 3b)
 
@@ -93,6 +95,7 @@ Your needs will be met. Your home will be secure. Your table will be provided.
 
 Rest in the promise that you will not lack.
 
+Oh Lord, I thank You for Your practical and tangible provision in my life. As I prepare for sleep, quiet my fears about tomorrow's needs. Reassure my heart that I truly dwell securely in the land You've given me, and that Your promise to feed me is absolute. Let me rest in the certainty that my physical and spiritual sustenance comes directly from Your generous hand, and I shall truly be fed.
 
 ## Scene 3 — Delight Thyself Also in the LORD (Verse 4a)
 
@@ -104,6 +107,7 @@ When you find your pleasure in Him, your desires begin to align with His will.
 
 Let your heart delight in the One who loves you most.
 
+Gracious God, I pray for a deeper delight in You tonight, a joy that transcends fleeting happiness. Draw me closer to Your presence, that my spirit might find its ultimate pleasure and contentment in You alone. As I drift to sleep, let my heart continually seek and savor Your goodness, allowing Your divine will to become the true source of all my aspirations. May I truly delight in Your love.
 
 ## Scene 4 — And He Shall Give Thee the Desires of Thine Heart (Verse 4b)
 
@@ -115,6 +119,7 @@ Not every whim, but every true longing of your renewed heart.
 
 Sleep knowing that God is shaping your desires to match His good plans.
 
+Almighty Father, I trust that as my delight deepens in You, You are at work within me, shaping and purifying the very desires of my heart. I ask that You would fulfill those longings that reflect Your glory and Your perfect will for my life. Let me surrender any lesser aspirations, knowing that You promise to grant the true, godly desires You Yourself have instilled within my renewed spirit.
 
 ## Scene 5 — Rest in the LORD, and Wait Patiently for Him (Verse 7a)
 
@@ -126,6 +131,7 @@ Patience is not passive resignation; it is active trust in God's timing.
 
 Tonight, stop striving. Start waiting. Start resting.
 
+Lord, I confess my tendency to strive and to rush ahead of Your perfect timing. Tonight, I consciously choose to lay down my efforts and fully rest in Your sovereign care. Grant me the patience to wait for You, knowing that true rest comes from confident expectation, not frantic activity. Help me to truly cease my striving, entrusting every outcome to Your wise and loving hands as I find peace.
 
 ## Scene 6 — Fret Not Thyself (Verse 7b)
 
@@ -137,6 +143,7 @@ Other people's success does not diminish your provision. Other people's wickedne
 
 Release comparison. Release anxiety. Rest in God.
 
+Heavenly Protector, I bring before You any thoughts of fretting or comparison that linger in my mind tonight. Help me to release the tendency to measure my path against the fleeting success of others. Remind me that their prosperity does not determine my blessing, nor does their way escape Your divine judgment. Let me find profound rest, free from anxiety, knowing You are just and watchful over all.
 
 ## Scene 7 — Rest and Wait (Verses 3–7 Synthesis)
 
@@ -146,5 +153,6 @@ Tonight, dwell in the land of trust. Feed on God's faithfulness. Delight in Him.
 
 You are fed. You are provided. You are at peace.
 
-Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.
+Oh God, as I come to the close of this prayer, I embrace the journey You have laid out in Psalm 37. May I fully dwell in the secure land of Your unwavering trust, continually feeding on Your boundless faithfulness. Let my heart truly delight in Your presence, waiting patiently for Your perfect timing in all things, free from the snare of fretting. Grant me a peaceful night, confident in Your love and provision.
 
+Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.
