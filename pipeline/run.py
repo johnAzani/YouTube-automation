@@ -154,11 +154,12 @@ def select_jobs(all_flag: bool, job_path: str | None, next_flag: bool) -> list[P
                     pass
             # A long-form prayer under the word floor cannot build, and picking it
             # would fail every cron forever — one bad row must never block the rest.
-            # The nightly expansion pass lengthens it, then it becomes eligible.
+            # The brain's supply loop lengthens it (every production run and the
+            # 4:14am brain pass), then it becomes eligible.
             fmt = str(getattr(doc, "format", "") or doc.meta.get("format", "")).lower()
             if fmt == "longform" and doc.word_count < MIN_LONGFORM_WORDS:
                 _log(f"⏳ {j.name} is {doc.word_count} words, under the {MIN_LONGFORM_WORDS} floor; "
-                     f"waiting for the expansion pass.")
+                     f"waiting for the brain to lengthen it.")
                 continue
             approved.append(j)
         elif all_flag:
@@ -456,12 +457,12 @@ def main(argv: list[str] | None = None) -> int:
     paths = select_jobs(args.all, args.job, args.next)
     if not paths:
         # Not an error: approved scripts under the word floor are waiting on the
-        # nightly expansion pass. A red cron every three hours would train everyone
+        # brain's supply loop. A red cron every three hours would train everyone
         # to ignore the dashboard.
         _log("nothing eligible — approved scripts are under the floor and waiting for "
-             "the expansion pass (tools/expand_scripts.py)")
+             "the brain's supply loop (gemini_brain.py --ensure-supply)")
         print("::notice title=No eligible job::approved scripts are under the word floor; "
-              "the 02:14 UTC expansion pass lengthens them", flush=True)
+              "the brain lengthens them on the next run", flush=True)
         return 0
 
     results = []

@@ -14,6 +14,7 @@ on:
 permissions:
   contents: read
   actions: read
+  issues: write          # the watchdog opens/closes one tracking issue
 
 jobs:
   health:
@@ -30,4 +31,12 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python -m scripts.automation_health
+          python -m scripts.automation_health || true
+
+      - name: File or close the stall issue
+        # The owner is not watching the Actions tab. An issue is an email, so the
+        # pipeline reports itself here instead of waiting to be asked.
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python -m scripts.pipeline_watchdog

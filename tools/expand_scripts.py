@@ -268,7 +268,7 @@ Return only the expanded markdown body, with no commentary and no code fences.""
 
 def gemini_provider(job: Job, target: int) -> str:
     """Live provider: same client and model the authoring brain already uses."""
-    from pipeline.config import get_gemini_api_key  # local import: offline tests
+    from pipeline.gemini_tts import get_gemini_api_key  # local import: offline tests
 
     key = get_gemini_api_key()
     if not key:
