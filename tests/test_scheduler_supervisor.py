@@ -191,6 +191,12 @@ class TestWorkflowFile(unittest.TestCase):
         for name in ("Produce video", "Keepalive", "Automation monitor"):
             self.assertIn(name, text)
 
+    def test_it_also_rides_ci_because_ci_always_fires(self):
+        """On 2 Nov CI started within seconds at 10:01 while this workflow's own
+        push trigger and its 10:00/10:15 schedule slots produced nothing."""
+        text = (sup.ROOT / ".github/workflows/scheduler-supervisor.yml").read_text()
+        self.assertIn("Dry-run pipeline (CI proof)", text)
+
     def test_supervisor_can_actually_dispatch(self):
         text = (sup.ROOT / ".github/workflows/scheduler-supervisor.yml").read_text()
         self.assertIn("actions: write", text)

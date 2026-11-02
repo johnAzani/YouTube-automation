@@ -30,6 +30,12 @@ on:
       - "Gemini Brain Autonomous Queue Replenishment"
       - "Keepalive"
       - "Automation monitor"
+      # CI is the one workflow that demonstrably starts within seconds of every
+      # push and every pull request — it ran at 10:01 today while this supervisor's
+      # own push trigger and its 10:00/10:15 schedule slots produced nothing. Riding
+      # CI gives the supervisor a chance every time CI does, on any branch.
+      - "Dry-run pipeline (CI proof)"
+      - "pages build and deployment"
     types: [completed]
   workflow_dispatch:
 
