@@ -6,7 +6,8 @@ privacy: public
 target_window_utc: '14:14'
 notes: "Companion Short for Psalm 23: The Lord Is My Shepherd \u2014 Night Prayer\
   \ for Rest, Healing & Peace | The Secret Place \u2014 authoring failed: cannot author\
-  \ Psalm 23 Short: GEMINI_API_KEY unavailable. Refusing to fabricate a scene list."
+  \ Psalm 23 Short: GEMINI_API_KEY is not present in this environment (no GEMINI_API_KEY,\
+  \ no GOOGLE_API_KEY, no .env). Refusing to fabricate a scene list."
 renderer_ready: false
 approved_note: approved scripture, but no scene script exists; status downgraded to
   draft so the queue stops claiming it will publish

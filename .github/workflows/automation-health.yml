@@ -36,7 +36,12 @@ jobs:
       - name: File or close the stall issue
         # The owner is not watching the Actions tab. An issue is an email, so the
         # pipeline reports itself here instead of waiting to be asked.
+        # EXPECT_BRAIN_API is what makes an unreachable Gemini fatal here; without
+        # the key forwarded, the watchdog could only guess, and guessing filed a
+        # false alarm every night.
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          EXPECT_BRAIN_API: "1"
         run: |
           python -m scripts.pipeline_watchdog

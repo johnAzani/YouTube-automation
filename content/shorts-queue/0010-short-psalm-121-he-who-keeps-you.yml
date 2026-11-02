@@ -7,7 +7,8 @@ replace: false
 target_window_utc: '14:14'
 notes: "Companion Short for Psalm 121: He Who Keeps You Will Neither Slumber Nor Sleep\
   \ \u2014 Night Prayer for Sleep, Peace & Divine Guard | The Secret Place \u2014\
-  \ authoring failed: cannot author Psalm 121 Short: GEMINI_API_KEY unavailable. Refusing\
+  \ authoring failed: cannot author Psalm 121 Short: GEMINI_API_KEY is not present\
+  \ in this environment (no GEMINI_API_KEY, no GOOGLE_API_KEY, no .env). Refusing\
   \ to fabricate a scene list."
 renderer_ready: false
 authored_by_brain: false

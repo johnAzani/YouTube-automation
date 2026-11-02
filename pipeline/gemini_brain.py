@@ -58,15 +58,38 @@ class GeminiBrain:
         self.model = model
         self.system_prompt = compile_full_brain_prompt()
         self._client = None
+        # Why the client is missing matters: "the key is not set" and "the key is
+        # set but the SDK could not start" need different fixes, and conflating
+        # them sent this project chasing a secret that had been configured for
+        # weeks — the same key narrates every video.
+        self._client_error: Optional[str] = None
         if self.api_key:
             try:
                 from google import genai
                 self._client = genai.Client(api_key=self.api_key)
-            except Exception as exc:
+            except Exception as exc:  # noqa: BLE001
+                self._client_error = f"{type(exc).__name__}: {exc}"
                 print(f"[gemini-brain] Could not initialize genai.Client: {exc}")
 
     def is_api_available(self) -> bool:
         return self._client is not None
+
+    def api_status(self) -> dict[str, Any]:
+        """Exactly why the API is or is not usable here."""
+        key_present = bool(self.api_key)
+        if not key_present:
+            reason = ("GEMINI_API_KEY is not present in this environment "
+                      "(no GEMINI_API_KEY, no GOOGLE_API_KEY, no .env)")
+        elif self._client is None:
+            reason = f"key is present but the genai client failed to start: {self._client_error}"
+        else:
+            reason = "connected"
+        return {
+            "key_present": key_present,
+            "client_ready": self._client is not None,
+            "model": self.model,
+            "reason": reason,
+        }
 
     def audit_status(self) -> ScheduleAudit:
         return build_schedule_audit()
@@ -307,7 +330,7 @@ Type Amen to agree with this prayer, and subscribe to The Secret Place to pray w
         scripture = f"Psalm {psalm_match.group(1)}" if psalm_match else longform_doc.title.split(":")[0]
         if not self.is_api_available():
             raise BrainAuthoringError(
-                f"cannot author {scripture} Short: GEMINI_API_KEY unavailable. "
+                f"cannot author {scripture} Short: {self.api_status()['reason']}. "
                 "Refusing to fabricate a scene list."
             )
         key = key or (f"short-psalm{psalm_match.group(1)}" if psalm_match else

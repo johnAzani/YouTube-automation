@@ -739,3 +739,36 @@ warning : workflows      — expand-scripts.yml / automation-health.yml: never r
 
 The gate was **not** lowered to make this green. 23 new tests in
 `tests/test_supply.py`; full suite **304 passing**.
+
+### Correction: the key was never missing
+
+The last two entries kept printing "GEMINI_API_KEY unavailable" from this sandbox and
+let it read as a pipeline fault. It never was one. The key has been configured since
+week one; it narrates every video, and `google-genai` is in `requirements.txt`, so
+Actions has both the secret and the SDK. **Voiceover working is proof the key works.**
+
+Why the brain still authored nothing for days, with a working key:
+
+`replenish_pipeline` asked `audit_status().runway_days`, and runway counted every
+`status: approved` script regardless of length. Twenty-one approved scripts at
+227–397 words read as ~10 days of runway, so the brain answered "healthy, no
+replenishment needed" and exited 0 — every single day. It was never blocked on
+credentials; it was told by its own queue that there was nothing to do. (The
+word-floor requirement in runway accounting landed yesterday; runway is now `0.0`.)
+
+What changed so this cannot be misdiagnosed again:
+
+- `GeminiBrain.api_status()` distinguishes **no key present** from **key present but
+  the client failed to start**, and carries the underlying exception.
+- Authoring errors quote that reason instead of the blanket "key unavailable".
+- `scripts/gemini_brain.py --preflight` proves the runner can make one live model
+  call, and runs as the first step of `gemini_brain.yml`. A key that is present but
+  broken now fails loudly with the real error instead of degrading into "offline".
+- `pipeline_watchdog.py` reports `brain api: <reason>` on every check, and treats an
+  unreachable brain as fatal **in CI** (non-fatal on a laptop with no key).
+
+Note on the watchdog: a missing key is only fatal where the workflow *declares* it
+holds one (`EXPECT_BRAIN_API: "1"`, set in `automation-health.yml` and `produce.yml`,
+both of which now forward the secret). The unit-test job and any runner without it
+report the fact as context instead. Inferring fatality from `GITHUB_ACTIONS` alone
+filed a false alarm from every CI job — caught by CI, fixed, and pinned by a test.

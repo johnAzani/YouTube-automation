@@ -371,3 +371,95 @@ class TestIssueSync(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestBrainApiReporting(unittest.TestCase):
+    """'No key' and 'key present but broken' are different faults.
+
+    The key has been configured since week one and narrates every video. Authoring
+    still reported "GEMINI_API_KEY unavailable" whenever the client failed to
+    start, which sent the whole project chasing a secret that was never missing.
+    """
+
+    def test_no_key_says_the_key_is_missing(self):
+        from pipeline.gemini_brain import GeminiBrain
+
+        brain = GeminiBrain(api_key="")
+        status = brain.api_status()
+        self.assertFalse(status["key_present"])
+        self.assertFalse(status["client_ready"])
+        self.assertIn("not present", status["reason"])
+
+    def test_a_key_that_cannot_start_is_not_reported_as_missing(self):
+        from pipeline.gemini_brain import GeminiBrain
+
+        with mock.patch("google.genai.Client", side_effect=RuntimeError("transport broke")):
+            brain = GeminiBrain(api_key="configured-key")
+        status = brain.api_status()
+        self.assertTrue(status["key_present"])
+        self.assertFalse(status["client_ready"])
+        self.assertIn("transport broke", status["reason"])
+        self.assertNotIn("not present", status["reason"])
+
+    def test_short_authoring_blames_the_real_cause(self):
+        from pipeline.gemini_brain import BrainAuthoringError, GeminiBrain
+        from pipeline.script_doc import parse_script
+
+        root = Path(__file__).resolve().parents[1]
+        doc = parse_script(root / "content" / "published" /
+                          "0010-psalm-121-he-who-keeps-you-will-neither-slumber-no.md")
+        with mock.patch("google.genai.Client", side_effect=RuntimeError("transport broke")):
+            brain = GeminiBrain(api_key="configured-key")
+        with self.assertRaises(BrainAuthoringError) as caught:
+            brain.author_short_spec(doc)
+        self.assertIn("transport broke", str(caught.exception))
+        self.assertNotIn("GEMINI_API_KEY unavailable", str(caught.exception))
+
+    def test_preflight_fails_when_the_client_is_not_ready(self):
+        from scripts import gemini_brain as cli
+        from pipeline.gemini_brain import GeminiBrain
+
+        brain = GeminiBrain(api_key="")
+        self.assertEqual(cli.cmd_preflight(brain), 1)
+
+    def test_watchdog_calls_a_broken_brain_fatal_in_ci(self):
+        from scripts import pipeline_watchdog as wd
+
+        broken = {"key_present": True, "client_ready": False,
+                  "model": "gemini-2.5-flash", "reason": "key present but client failed: boom"}
+        with mock.patch("pipeline.gemini_brain.GeminiBrain") as brain_cls:
+            brain_cls.return_value.api_status.return_value = broken
+            report = wd.Report()
+            with mock.patch.dict("os.environ", {"EXPECT_BRAIN_API": "1"}):
+                wd.check_brain_api(report)
+            self.assertTrue(any(f.area == "brain api" and f.fatal for f in report.findings))
+
+            local = wd.Report()
+            with mock.patch.dict("os.environ", {}, clear=True):
+                wd.check_brain_api(local)
+            self.assertFalse(any(f.fatal for f in local.findings))
+
+    def test_github_actions_alone_does_not_make_it_fatal(self):
+        """The unit-test job and the health job run in Actions without the secret."""
+        from scripts import pipeline_watchdog as wd
+
+        broken = {"key_present": False, "client_ready": False,
+                  "model": "gemini-2.5-flash", "reason": "no key"}
+        with mock.patch("pipeline.gemini_brain.GeminiBrain") as brain_cls:
+            brain_cls.return_value.api_status.return_value = broken
+            report = wd.Report()
+            with mock.patch.dict("os.environ", {"GITHUB_ACTIONS": "true"}, clear=True):
+                wd.check_brain_api(report)
+        self.assertFalse(any(f.fatal for f in report.findings))
+
+    def test_watchdog_is_quiet_when_the_brain_is_connected(self):
+        from scripts import pipeline_watchdog as wd
+
+        ok = {"key_present": True, "client_ready": True,
+              "model": "gemini-2.5-flash", "reason": "connected"}
+        with mock.patch("pipeline.gemini_brain.GeminiBrain") as brain_cls:
+            brain_cls.return_value.api_status.return_value = ok
+            report = wd.Report()
+            wd.check_brain_api(report)
+        self.assertEqual(report.findings, [])
+        self.assertTrue(any("connected" in c for c in report.checked))

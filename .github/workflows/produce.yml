@@ -140,6 +140,7 @@ jobs:
         if: ${{ always() && !cancelled() }}
         env:
           GH_TOKEN: ${{ github.token }}
+          EXPECT_BRAIN_API: "1"
         run: python -m scripts.pipeline_watchdog || true
 
       - name: Commit queue state (job moved to published/)
