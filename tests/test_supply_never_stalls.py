@@ -259,6 +259,63 @@ class TestAnEmptySlotIsAFailure(unittest.TestCase):
             self.assertEqual(pr.main(["--next"]), 2)
 
 
+class TestTheDuplicateIsCaughtBeforeTheRender(unittest.TestCase):
+    """A publish whose commit failed leaves the script in the queue looking new.
+
+    On 2 November that happened: Psalm 46 was live, main still listed 0013 as
+    approved. Without a pre-render check the next release slot re-renders the whole
+    video and only then discovers the duplicate at upload time.
+    """
+
+    def test_a_title_already_on_the_channel_is_recorded_not_re_rendered(self):
+        import tempfile
+        from unittest import mock
+
+        from pipeline import prayer_pipeline as pp
+        from pipeline.script_doc import parse_script
+
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "0013-x.md"
+            path.write_text("---\nid: '0013'\nslug: psalm-46\nstatus: approved\n"
+                            "format: longform\nniche: faith and prayer\nvoice: Charon\n"
+                            "title: Psalm 46\n---\n\n## Scene 1 — One\n" + "word " * 900,
+                            encoding="utf-8")
+            doc = parse_script(path)
+            with mock.patch.object(pp, "already_published", return_value="live123"), \
+                 mock.patch.object(pp, "enforce", lambda doc: doc), \
+                 mock.patch("pipeline.run._require_production_prerequisites",
+                            lambda *a, **k: None), \
+                 mock.patch("pipeline.run._mark_job_uploaded") as marked, \
+                 mock.patch.object(pp, "OUTPUT_DIR", Path(tmp) / "out"):
+                result = pp.produce(path, dry_run=False, model_dir=Path(tmp))
+        self.assertEqual(result["video_id"], "live123")
+        self.assertEqual(result["privacy_status"], "already_published")
+        self.assertFalse(result["uploaded"])
+        marked.assert_called_once()
+
+    def test_the_pre_check_never_blocks_a_release(self):
+        from unittest import mock
+
+        from pipeline import prayer_pipeline as pp
+
+        class Doc:
+            title, slug = "x", "y"
+
+        with mock.patch("pipeline.upload._credentials", side_effect=RuntimeError("no creds")):
+            self.assertIsNone(pp.already_published(Doc()))
+
+    def test_it_is_skipped_when_duplicates_are_allowed(self):
+        from unittest import mock
+
+        from pipeline import prayer_pipeline as pp
+
+        class Doc:
+            title, slug = "x", "y"
+
+        with mock.patch.object(pp.CONFIG, "allow_duplicate_uploads", True, create=True):
+            self.assertIsNone(pp.already_published(Doc()))
+
+
 class TestTheWorkflowCannotLoseState(unittest.TestCase):
     def workflow(self, name):
         return (Path(__file__).resolve().parents[1] / ".github" / "workflows" / name).read_text()

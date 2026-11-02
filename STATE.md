@@ -1086,3 +1086,11 @@ failing forever. And the Short failure itself: `tools/shorts.py` still had one
 `SystemExit` for a scene whose stock asset is a **video** while the scene names a
 photo that does not exist. That path now falls back to the same sapphire plate, so
 a missing image cannot take down a render again.
+
+**The duplicate is now caught before the render, not after it.** With 0013 live but
+still in the queue, the 3:14pm slot would have spent 25 minutes re-rendering a
+finished video and only then had the upload shield say "already there".
+`prayer_pipeline.already_published()` asks the channel first — two API units, before
+any Gemini or alignment work — and if the title is live it records the receipt and
+moves the job to `published/` with the real video id instead of rendering. It fails
+soft: any error in the pre-check and the release proceeds as normal.
