@@ -12,6 +12,19 @@ on:
     - cron: "14 6 * * *"    # 7:14am Nigeria time
     - cron: "14 14 * * *"  # 3:14pm Nigeria time
     - cron: "14 19 * * *"  # 8:14pm Nigeria time (the 19:14 release slot)
+  # The owner's "run it now" button, and the only trigger reachable without
+  # Actions-write on the API: `workflow_dispatch` needs a token this account's
+  # integration does not hold, while `repository_dispatch` needs only contents
+  # write. One call starts a release:
+  #
+  #   gh api --method POST repos/johnAzani/YouTube-automation/dispatches \
+  #          -f event_type=publish-now
+  #
+  # Safe to fire repeatedly: the release checks the channel before it renders
+  # anything, so a second dispatch records the first one's video instead of
+  # re-uploading it.
+  repository_dispatch:
+    types: [publish-now]
   workflow_dispatch:
     inputs:
       job:
