@@ -143,7 +143,16 @@ def main() -> int:
     from googleapiclient.discovery import build
 
     if not all((CONFIG.youtube_refresh_token, CONFIG.youtube_client_id, CONFIG.youtube_client_secret)):
-        print("missing YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET, or YOUTUBE_REFRESH_TOKEN")
+        missing = [name for name, value in (
+            ("YOUTUBE_CLIENT_ID", CONFIG.youtube_client_id),
+            ("YOUTUBE_CLIENT_SECRET", CONFIG.youtube_client_secret),
+            ("YOUTUBE_REFRESH_TOKEN", CONFIG.youtube_refresh_token),
+        ) if not value]
+        # This exited 1 on 30 October with nothing in the log but "exit code 1", and
+        # the run log was unreachable, so the fault sat undiagnosed for three days.
+        # Name the missing secret in an annotation the run page shows.
+        print(f"::error title=Metrics snapshot cannot run::missing {', '.join(missing)}")
+        print("missing " + ", ".join(missing))
         return 1
 
     try:
@@ -223,9 +232,19 @@ def main() -> int:
                     "Private and unlisted metadata is excluded. Download the run artifact; "
                     "it expires after 30 days.\n")
 
-    _post_github_issue(channel_snapshot, rows, today_text)
+    if os.environ.get("METRICS_POST_ISSUE", "1") != "0":
+        _post_github_issue(channel_snapshot, rows, today_text)
     return 0
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    import traceback
+
+    try:
+        sys.exit(main())
+    except Exception:  # noqa: BLE001 - a bare "exit code 1" is not a diagnosis
+        traceback.print_exc()
+        line = traceback.extract_tb(sys.exc_info()[2])[-1].lineno
+        print(f"::error file=scripts/metrics_snapshot.py,line={line}::"
+              "metrics snapshot raised (see traceback above)")
+        sys.exit(1)

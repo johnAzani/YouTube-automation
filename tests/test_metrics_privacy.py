@@ -66,5 +66,38 @@ class ChannelSubscriberTests(unittest.TestCase):
         self.assertEqual(_subscriber_snapshot({'statistics': {'subscriberCount': '0'}}, '2026-10-23')['subscriber_count'], 0)
 
 
+class MetricsRunsOftenEnoughToNotice(unittest.TestCase):
+    """A weekly cron hid a broken snapshot for three days.
+
+    On 30 October the run failed with "Process completed with exit code 1" and an
+    unreachable log. Nothing else ever exercised the script, so the fault could have
+    sat there until the following Friday.
+    """
+
+    def _wf(self):
+        import yaml
+        from pathlib import Path
+        path = Path(__file__).resolve().parents[1] / ".github" / "workflows" / "metrics.yml"
+        return yaml.safe_load(path.read_text(encoding="utf-8"))
+
+    def test_it_also_runs_after_a_production_run(self):
+        on = self._wf()[True]
+        self.assertIn("workflow_run", on)
+        self.assertEqual(on["workflow_run"]["workflows"], ["Produce video"])
+
+    def test_a_post_publish_run_does_not_file_an_issue(self):
+        steps = self._wf()["jobs"]["snapshot"]["steps"]
+        snapshot = [s for s in steps if "metrics_snapshot.py" in str(s.get("run", ""))]
+        self.assertEqual(len(snapshot), 1)
+        self.assertIn("METRICS_POST_ISSUE", snapshot[0]["env"])
+        self.assertIn("workflow_run", snapshot[0]["env"]["METRICS_POST_ISSUE"])
+
+    def test_a_failure_names_its_cause(self):
+        from pathlib import Path
+        source = (Path(__file__).resolve().parents[1] / "scripts" / "metrics_snapshot.py").read_text()
+        self.assertIn("::error title=Metrics snapshot cannot run::", source)
+        self.assertIn("traceback.print_exc()", source)
+
+
 if __name__ == "__main__":
     unittest.main()
