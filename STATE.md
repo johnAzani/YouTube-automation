@@ -772,3 +772,44 @@ holds one (`EXPECT_BRAIN_API: "1"`, set in `automation-health.yml` and `produce.
 both of which now forward the secret). The unit-test job and any runner without it
 report the fact as context instead. Inferring fatality from `GITHUB_ACTIONS` alone
 filed a false alarm from every CI job — caught by CI, fixed, and pinned by a test.
+
+### Reply automation: it was never fetching anything
+
+Asked to make comment replies work end to end. They didn't, and the reason was one
+wrong parameter name.
+
+`fetch_candidate_comments` built its channel-wide listing with
+`allForChannelId`. That is not a parameter of `commentThreads.list` — the real one
+is `allThreadsRelatedToChannelId` — so googleapiclient raised
+`TypeError: Got an unexpected keyword argument allForChannelId` before any request
+was made. The broad `except Exception` caught it, printed a line, and returned an
+empty list. The CLI then printed "No unresponded candidate comments found" and
+**exited 0**.
+
+The workflow passes no `--video-id`, so all three daily pulses took that path:
+three runs a day, zero comments listed, zero replies, green every time. Verified
+locally against the real discovery client: the old name raises `TypeError`, the new
+one builds a valid URI.
+
+Also fixed:
+
+- **A broken fetch is now an error.** `CommentFetchError` propagates to exit 1 with
+  an `::error` annotation, so "the API rejected the call" can never again read like
+  "nobody commented today".
+- **403 no longer means quota.** A disabled comment section, a missing
+  `youtube.force-ssl` scope, and an exhausted daily quota are three different
+  things; only the last one pauses.
+- **Crisis comments are held, not answered in public.** A hotline reply posted under
+  someone's self-harm disclosure labels them in front of every other viewer. The
+  comment is recorded (`CRISIS_ESCALATED`) with a draft reply and filed as a
+  `viewer-crisis` issue for a personal answer. `--reply-to-crisis` opts back in.
+- **The prompt's rules are now enforced on the model's output**: no links, handles,
+  phone numbers, money solicitation, or creator names, whatever the model returns.
+- **The ledger is committed** (`content/comments/replied.json`, seeded `{}`) with a
+  rebase before push, and committed even when the batch fails partway — otherwise
+  the next pulse answers the same person twice.
+
+18 new end-to-end tests drive the real CLI against a fake Data API: fetch → classify
+→ draft → insert → ledger, dedupe on the second run, skip already-answered threads,
+refuse scams, hold crises, and exit non-zero when every insert fails. Full suite
+**343 tests, 436 with pytest**.

@@ -15,6 +15,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import sys
 from pathlib import Path
@@ -23,6 +24,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
 from pipeline.comment_replies import (
+    CommentFetchError,
     CommentReplyEngine,
     classify_comment_intent,
     generate_reply_with_gemini,
@@ -32,6 +34,54 @@ from pipeline.quota_handler import GeminiQuotaExceededError, QuotaExceededError
 from pipeline.upload import _credentials
 
 
+def _summary(rows: dict) -> None:
+    """Print a machine-readable line and write the GitHub step summary."""
+    print("[comments] result: " + json.dumps(rows))
+    path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if not path:
+        return
+    try:
+        with open(path, "a", encoding="utf-8") as fh:
+            fh.write("### 💬 Comment replies\n\n")
+            for key, value in rows.items():
+                fh.write(f"- {key}: `{value}`\n")
+            fh.write("\n")
+    except Exception:  # noqa: BLE001 — a summary is never worth failing a run
+        pass
+
+
+def _escalate_crisis(held: list[dict]) -> None:
+    """Make sure a self-harm comment reaches a person, not just a log line."""
+    body = [
+        "A viewer disclosed distress in a comment. The reply automation held it "
+        "instead of posting publicly — a hotline reply under someone's self-harm "
+        "disclosure labels them in front of every other viewer.",
+        "",
+        "Please reply personally when you can.",
+        "",
+    ]
+    for row in held:
+        body += [
+            f"### {row['author']}",
+            f"- comment: `{row['comment_id']}` on video `{row['video_id']}`",
+            f"- they wrote: \"{row['text'][:400]}\"",
+            f"- suggested reply (unposted): {row['draft']}",
+            "",
+        ]
+    text = "\n".join(body)
+    print(text)
+    if not (os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")):
+        return
+    import subprocess
+    subprocess.run(["gh", "label", "create", "viewer-crisis", "--color", "b60205",
+                    "--description", "A viewer disclosed distress; needs a personal reply"],
+                   capture_output=True, text=True, check=False)
+    subprocess.run(["gh", "issue", "create", "--title",
+                    f"Viewer in distress — {len(held)} comment(s) need a personal reply",
+                    "--label", "viewer-crisis", "--body", text],
+                   capture_output=True, text=True, check=False)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Autonomous / Assisted YouTube Comment Reply System")
     parser.add_argument("--video-id", help="Target specific YouTube video ID (e.g. 7RDX0fbIOtQ)")
@@ -39,6 +89,9 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true", help="Draft replies with Gemini without posting to YouTube")
     parser.add_argument("--apply", action="store_true", help="Post drafted replies to YouTube")
     parser.add_argument("--simulate", action="store_true", help="Run simulated cohort of typical viewer comments to verify response logic")
+    parser.add_argument("--reply-to-crisis", action="store_true",
+                        help="Also post the public lifeline reply on crisis comments "
+                             "(default: hold them for a human reply)")
     args = parser.parse_args()
 
     # Default to dry-run unless --apply is explicitly passed
@@ -107,18 +160,33 @@ def main() -> int:
                 max_results=min(args.limit, 25),
             )
         except QuotaExceededError as qe:
-            print(f"[comments] YouTube Quota Exceeded: {qe}")
+            # Not an error: the free tier resets. Say when, and exit green so the
+            # dashboard does not cry wolf every night at the quota boundary.
+            print(f"[comments] YouTube quota reached — resuming after {qe}")
+            _summary({"mode": "quota_paused", "reason": str(qe)})
             return 0
+        except CommentFetchError as fe:
+            # This is the fault that used to hide: the old code printed the error
+            # and returned an empty list, so "the API call was invalid" read exactly
+            # like "nobody commented today".
+            print(f"[comments] FAILED — {fe}", file=sys.stderr)
+            print(f"::error title=Comment fetch failed::{fe}")
+            _summary({"mode": "fetch_failed", "reason": str(fe)})
+            return 1
 
     if not candidates:
         print("[comments] No unresponded candidate comments found.")
         print(f"[comments] Total comments logged in deduplication ledger: {len(engine.replied_log)}")
+        _summary({"mode": "idle", "candidates": 0, "posted": 0,
+                  "ledger": len(engine.replied_log)})
         return 0
 
     print(f"[comments] Found {len(candidates)} comments requiring pastoral response:\n")
 
     # 2. Process & Reply
     replied_count = 0
+    failures: list[str] = []
+    held: list[dict] = []
     for idx, c in enumerate(candidates, 1):
         print(f"[{idx}/{len(candidates)}] Comment from '{c.author_name}' ({c.category}):")
         print(f"  Text: \"{c.text}\"")
@@ -126,17 +194,36 @@ def main() -> int:
         reply_text = generate_reply_with_gemini(c, api_key=engine.gemini_api_key)
         print(f"  Drafted Reply: \"{reply_text}\"")
 
+        if c.category == "CRISIS_DISTRESS":
+            held.append({"comment_id": c.comment_id, "author": c.author_name,
+                         "video_id": c.video_id, "text": c.text, "draft": reply_text})
+
         try:
-            success = engine.post_reply(c, reply_text, dry_run=is_dry_run)
+            success = engine.post_reply(c, reply_text, dry_run=is_dry_run,
+                                        allow_crisis=args.reply_to_crisis)
             if success:
                 replied_count += 1
+            elif c.category != "CRISIS_DISTRESS":
+                failures.append(c.comment_id)
         except QuotaExceededError as qe:
-            print(f"[comments] YouTube Quota limit reached during reply batch: {qe}")
+            print(f"[comments] YouTube quota reached during the batch: {qe}")
             break
 
         print("-" * 70)
 
-    print(f"\n[comments] Completed batch. Successfully processed {replied_count} replies.")
+    attempted = len(candidates) - len(held)
+    print(f"\n[comments] Completed batch: {replied_count} posted, "
+          f"{len(failures)} failed, {len(held)} held for a human, out of {len(candidates)}.")
+    _summary({"mode": "dry_run" if is_dry_run else "live",
+              "candidates": len(candidates), "posted": replied_count,
+              "failed": len(failures), "held_for_human": len(held),
+              "ledger": len(engine.replied_log),
+              "target": args.video_id or "all channel videos"})
+    if held:
+        _escalate_crisis(held)
+    if attempted and not replied_count and failures:
+        print("::error title=No reply was posted::every insert failed — see the log above")
+        return 1
     return 0
 
 

@@ -60,10 +60,17 @@ jobs:
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          LIMIT: ${{ github.event.inputs.limit || '15' }}
+          # The engine files one issue when a viewer discloses distress instead of
+          # answering them in public. Without a token that escalation is a log line.
+          GH_TOKEN: ${{ github.token }}
+          LIMIT: ${{ github.event.inputs.limit || '10' }}
           VIDEO_ID: ${{ github.event.inputs.video_id || '' }}
           DRY_RUN: ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }}
         run: |
+          # pipefail matters here: the script writes a summary and exits non-zero
+          # when it could not list comments. Without this, `| tee` would swallow
+          # that and the run would go green having replied to nothing.
+          set -o pipefail
           ARGS="--limit $LIMIT"
           if [ -n "$VIDEO_ID" ]; then
             ARGS="$ARGS --video-id $VIDEO_ID"
@@ -74,14 +81,23 @@ jobs:
             ARGS="$ARGS --apply"
           fi
           echo "Executing: python scripts/reply_comments.py $ARGS"
-          python scripts/reply_comments.py $ARGS
+          python scripts/reply_comments.py $ARGS 2>&1 | tee reply.log
 
       - name: Commit replied comments ledger
+        # Always: a reply that was posted must be recorded even if a later comment
+        # failed, or the next pulse replies to the same person again.
+        if: ${{ always() && !cancelled() }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           if [ -f "content/comments/replied.json" ]; then
             git add content/comments/replied.json
-            git diff --staged --quiet || git commit -m "chore(comments): record replied comment IDs [skip ci]"
-            git push
+            if git diff --staged --quiet; then
+              echo "ledger unchanged"
+            else
+              git commit -m "chore(comments): record replied comment IDs [skip ci]"
+              # Another workflow may have pushed while this one was replying.
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME:-main}"
+              git push
+            fi
           fi
