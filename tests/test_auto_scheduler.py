@@ -49,7 +49,9 @@ class TestAutoScheduler(unittest.TestCase):
                 "short: short-psalm23\nstatus: approved\n", encoding="utf-8")
             (Path(tmp) / "b.yml").write_text(
                 "short: short-psalm91\nstatus: approved\n", encoding="utf-8")
-            with mock.patch("scripts.auto_scheduler.SHORTS_QUEUE_DIR", Path(tmp)):
+            with mock.patch("scripts.auto_scheduler.SHORTS_QUEUE_DIR", Path(tmp)), \
+                 mock.patch("pipeline.short_release._renderer_script_keys",
+                            return_value={"short-psalm91"}):
                 items, approved = audit_shorts_queue()
         by_id = {i.identifier: i.status for i in items}
         self.assertEqual(by_id["short-psalm23"], "blocked")

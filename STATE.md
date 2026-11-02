@@ -1018,3 +1018,18 @@ Same run, second lesson: `produce.yml` merged the Short and long-form exit codes
 with `max`, so a Short that could not render reported the *release* as failed. The
 long-form upload is the release now — it decides the exit code, and a Short fault
 is a `::warning` naming the code.
+
+**The expansion invalidated every worksheet it touched.** Worksheets are bound to
+the script by sha256 and `tests/test_queue_integrity` refuses an approved job whose
+worksheet does not match — correctly. The first five lengthened scripts therefore
+turned 118 subtests red, which is the suite doing its job. `expand_job` now
+regenerates the worksheet on every write (`refresh_worksheet`), so a lengthened
+script and its worksheet always move together.
+
+**The brain's Shorts named photos that do not exist.** The authored spec for
+`short-psalm23` claims `image-search/short-psalm23-scene-01.jpg`; nothing creates
+that file, so `tools/shorts.py` exited 1 with `missing image` while the manifest
+said the Short was ready — the same shape of lie one layer down. A missing photo is
+a missing asset, not a reason to publish nothing: `synthetic_plate()` draws the
+channel's sapphire plate with the scene kicker, the source log records
+`authored photo fallback`, and the render continues.

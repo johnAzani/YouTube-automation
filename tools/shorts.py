@@ -213,6 +213,39 @@ def _build_edge_scrim():
 EDGE_SCRIM = _build_edge_scrim()
 
 
+def synthetic_plate(scene, key=''):
+    """A cleared 9:16 plate for a scene whose photo was never produced.
+
+    The brain authors Short specs as JSON, and it names an `img` file for each
+    scene — a file that, by definition, does not exist yet. The renderer used to
+    `SystemExit('missing image ...')` on that, so every brain-authored Short failed
+    to render while the manifest said it was ready. A missing photo is a missing
+    asset, not a reason to publish nothing: draw the channel's own sapphire plate
+    with the scene's kicker on it and carry on, and let the source log say
+    "authored photo fallback".
+    """
+    from PIL import ImageDraw, ImageFilter
+    CW, CH = 1080, 1920
+    plate = Image.new('RGB', (CW, CH), (6, 12, 30))
+    draw = ImageDraw.Draw(plate)
+    for y in range(CH):                      # sapphire night gradient
+        t = y / CH
+        draw.line([(0, y), (CW, y)],
+                  fill=(int(6 + 16 * t), int(12 + 30 * t), int(30 + 46 * t)))
+    glow = Image.new('L', (CW, CH), 0)
+    ImageDraw.Draw(glow).ellipse([-260, 380, CW + 260, 1340], fill=110)
+    glow = glow.filter(ImageFilter.GaussianBlur(180))
+    plate = Image.composite(Image.new('RGB', (CW, CH), (28, 58, 112)), plate, glow)
+    draw = ImageDraw.Draw(plate)
+    draw.rectangle([120, 1560, CW - 120, 1564], fill=(212, 175, 55))   # gold hairline
+    kicker = (scene.get('kicker') or '').strip().upper()
+    if kicker:
+        font = fnt('Bold', 64)
+        tw = draw.textlength(kicker, font=font)
+        draw.text(((CW - tw) / 2, 1400), kicker, font=font, fill=(232, 238, 250))
+    return plate
+
+
 def prep_plate(path, tint_warm=0.0):
     """Full-bleed 9:16 cover plate (1080x1920) graded in tailored color space."""
     raw = Image.open(path).convert('RGB')
@@ -1984,7 +2017,14 @@ def main(key):
             print(f"  scene {sc['t0']:5.1f}-{sc['t1']:5.1f}s | VIDEO {sc.get('source')} {sc.get('source_size')} | {os.path.basename(source_path)}")
         else:
             if not os.path.exists(source_path):
-                raise SystemExit(f'missing image {source_path}')
+                if 'synthetic' not in plate_cache:
+                    plate_cache['synthetic'] = synthetic_plate(sc, key)
+                sc['plate'] = plate_cache['synthetic']
+                sc['used_fallback'] = True
+                sc['img'] = sc.get('img') or ''
+                print(f"  scene {sc['t0']:5.1f}-{sc['t1']:5.1f}s | PLATE "
+                      f"(no photo for {os.path.basename(str(source_path))})")
+                continue
             if pkey not in plate_cache:
                 plate_cache[pkey] = prep_plate(source_path, sc.get('warm', 0.0))
             sc['plate'] = plate_cache[pkey]

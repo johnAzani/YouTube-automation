@@ -311,7 +311,9 @@ def test_queue_skips_known_edition_missing_from_renderer(tmp_path):
     queue.mkdir()
     (queue / '01.yml').write_text('status: approved\nshort: short-psalm23\n')
     (queue / '02.yml').write_text('status: approved\nshort: short-psalm91\n')
-    selected = select_next_queued_short(queue)
+    with patch("pipeline.short_release._renderer_script_keys",
+               return_value={"short-psalm91"}):
+        selected = select_next_queued_short(queue)
     assert selected is not None
     assert selected[1] == 'short-psalm91'
     assert (queue / '01.yml').exists()

@@ -177,11 +177,27 @@ class AssetSourcingTests(unittest.TestCase):
         self.assertIn("pad=1280:720", vf)
         self.assertNotIn("crop=", vf)
 
-    def test_every_authored_scene_has_a_real_photo_fail_safe(self):
+    def test_every_hand_written_scene_has_a_real_photo(self):
+        """Hand-written scripts ship their plates; there is no excuse for a hole."""
+        from pipeline.short_script import authored_keys
+
+        authored = authored_keys()
         for scripts in (DEEP_SCRIPTS, SHORT_SCRIPTS):
-            for cfg in scripts.values():
+            for key, cfg in scripts.items():
+                if key in authored:
+                    continue          # brain-authored: renders on the fallback plate
                 for scene in cfg["scenes"]:
                     self.assertTrue((Path("image-search") / scene["img"]).is_file(), scene["img"])
+
+    def test_a_brain_authored_scene_without_a_photo_still_renders(self):
+        """The model names image files that do not exist; that must not be fatal."""
+        from PIL import Image
+        from tools.shorts import synthetic_plate
+
+        plate = synthetic_plate({"kicker": "BREATHE DEEPLY"}, "short-psalm23")
+        self.assertEqual(plate.size, (1080, 1920))
+        self.assertEqual(plate.mode, "RGB")
+        self.assertGreater(len(set(plate.convert("L").getdata())), 8)
 
 
 if __name__ == "__main__":
