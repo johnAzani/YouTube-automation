@@ -37,6 +37,16 @@ on:
       - "Dry-run pipeline (CI proof)"
       - "pages build and deployment"
     types: [completed]
+  # An external tick, because every other trigger can be suppressed by the very
+  # failure this watches for. Today's crons have not fired since 18:05 UTC, and a
+  # wedged produce run never emits the `workflow_run` completion this relies on —
+  # so the supervisor can be silent exactly when it is needed. One POST always
+  # wakes it:
+  #
+  #   gh api --method POST repos/johnAzani/YouTube-automation/dispatches \
+  #          -f event_type=watchdog-tick
+  repository_dispatch:
+    types: [watchdog-tick]
   workflow_dispatch:
 
 permissions:
