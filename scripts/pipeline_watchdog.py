@@ -148,7 +148,17 @@ def check_queues(report: Report, max_publish_age: timedelta = MAX_PUBLISH_AGE,
     return report
 
 
-def check_brain_api(report: Report) -> Report:
+def expects_brain() -> bool:
+    """Does this runner declare that it is supposed to hold the API key?
+
+    Presence of GITHUB_ACTIONS is the wrong test: the unit-test job and the health
+    job run in Actions without the secret, and marking them fatal would file a
+    false alarm every night. The workflow says so explicitly instead.
+    """
+    return os.environ.get("EXPECT_BRAIN_API", "").strip().lower() in {"1", "true", "yes"}
+
+
+def check_brain_api(report: Report, expect: bool | None = None) -> Report:
     """Can the authoring brain reach Gemini from here, and if not, why exactly?
 
     Reported verbatim: "the key is not set" and "the key is set but the client
@@ -164,12 +174,11 @@ def check_brain_api(report: Report) -> Report:
         return report
     report.checked.append(f"brain api: {status['reason']} (model {status['model']})")
     if not status["client_ready"]:
-        # Fatal only in CI: on a laptop with no key the pipeline can still publish
-        # what is already queued, but nothing new can be written.
-        in_ci = bool(os.environ.get("GITHUB_ACTIONS"))
+        # Fatal only where the workflow promised the runner holds the key. Elsewhere
+        # it is context: nothing new can be authored here, but queued work still can.
         report.add("brain api",
                    f"the brain cannot author or lengthen anything: {status['reason']}",
-                   fatal=in_ci)
+                   fatal=expects_brain() if expect is None else expect)
     return report
 
 
@@ -190,10 +199,10 @@ def check_workflows(report: Report, rows=None) -> Report:
 
 
 def build_report(now: datetime | None = None, published_dir: Path | None = None,
-                 workflow_rows=None) -> Report:
+                 workflow_rows=None, expect_brain: bool | None = None) -> Report:
     report = Report()
     check_queues(report, published_dir=published_dir, now=now)
-    check_brain_api(report)
+    check_brain_api(report, expect=expect_brain)
     check_workflows(report, rows=workflow_rows)
     return report
 

@@ -430,7 +430,7 @@ class TestBrainApiReporting(unittest.TestCase):
         with mock.patch("pipeline.gemini_brain.GeminiBrain") as brain_cls:
             brain_cls.return_value.api_status.return_value = broken
             report = wd.Report()
-            with mock.patch.dict("os.environ", {"GITHUB_ACTIONS": "true"}):
+            with mock.patch.dict("os.environ", {"EXPECT_BRAIN_API": "1"}):
                 wd.check_brain_api(report)
             self.assertTrue(any(f.area == "brain api" and f.fatal for f in report.findings))
 
@@ -438,6 +438,19 @@ class TestBrainApiReporting(unittest.TestCase):
             with mock.patch.dict("os.environ", {}, clear=True):
                 wd.check_brain_api(local)
             self.assertFalse(any(f.fatal for f in local.findings))
+
+    def test_github_actions_alone_does_not_make_it_fatal(self):
+        """The unit-test job and the health job run in Actions without the secret."""
+        from scripts import pipeline_watchdog as wd
+
+        broken = {"key_present": False, "client_ready": False,
+                  "model": "gemini-2.5-flash", "reason": "no key"}
+        with mock.patch("pipeline.gemini_brain.GeminiBrain") as brain_cls:
+            brain_cls.return_value.api_status.return_value = broken
+            report = wd.Report()
+            with mock.patch.dict("os.environ", {"GITHUB_ACTIONS": "true"}, clear=True):
+                wd.check_brain_api(report)
+        self.assertFalse(any(f.fatal for f in report.findings))
 
     def test_watchdog_is_quiet_when_the_brain_is_connected(self):
         from scripts import pipeline_watchdog as wd

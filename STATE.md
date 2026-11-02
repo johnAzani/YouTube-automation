@@ -766,3 +766,9 @@ What changed so this cannot be misdiagnosed again:
   broken now fails loudly with the real error instead of degrading into "offline".
 - `pipeline_watchdog.py` reports `brain api: <reason>` on every check, and treats an
   unreachable brain as fatal **in CI** (non-fatal on a laptop with no key).
+
+Note on the watchdog: a missing key is only fatal where the workflow *declares* it
+holds one (`EXPECT_BRAIN_API: "1"`, set in `automation-health.yml` and `produce.yml`,
+both of which now forward the secret). The unit-test job and any runner without it
+report the fact as context instead. Inferring fatality from `GITHUB_ACTIONS` alone
+filed a false alarm from every CI job — caught by CI, fixed, and pinned by a test.
