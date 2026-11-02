@@ -375,6 +375,31 @@ class TestRecordingADuplicateDoesNotConsumeTheSlot(unittest.TestCase):
         self.assertEqual(len(seen), 1, "one release per slot, not a queue drain")
 
 
+class TestTheHealthAuditCannotGoSilent(unittest.TestCase):
+    """A workflow that never starts never fails.
+
+    automation-health.yml is the job that reports silent crons, and on 2 November it
+    had zero runs: its nightly cron had not come round and its workflow_run only
+    fires when a production run finishes. The auditor was the thing going silent.
+    """
+
+    def _wf(self):
+        import yaml
+        path = Path(__file__).resolve().parents[1] / ".github" / "workflows" / "automation-health.yml"
+        return yaml.safe_load(path.read_text(encoding="utf-8"))
+
+    def test_it_runs_on_a_push_not_only_on_a_schedule(self):
+        on = self._wf()[True]
+        self.assertIn("push", on, "the audit must not wait for a cron that may not fire")
+        self.assertEqual(on["push"]["branches"], ["main"])
+
+    def test_a_push_audits_but_does_not_file_an_issue(self):
+        steps = self._wf()["jobs"]["health"]["steps"]
+        filing = [s for s in steps if "pipeline_watchdog" in str(s.get("run", ""))]
+        self.assertEqual(len(filing), 1)
+        self.assertIn("github.event_name != 'push'", str(filing[0].get("if", "")))
+
+
 class TestTheWorkflowCannotLoseState(unittest.TestCase):
     def workflow(self, name):
         return (Path(__file__).resolve().parents[1] / ".github" / "workflows" / name).read_text()
