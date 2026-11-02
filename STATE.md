@@ -2,7 +2,7 @@
 **Document Status:** Permanent Single Source of Truth (`STATE.md`)  
 **Channel Identity:** *The Secret Place* (`@TheSecretPlace`)  
 **Production Studio:** Autonomous ₦0 / $0 Faith & Scripture Production Lab on GitHub Actions  
-**Last Synchronized:** 2026-10-30 (Local Time: Africa/Lagos WAT / UTC+1)  
+**Last Synchronized:** 2026-11-02 (Nigeria time, WAT / UTC+1 — all human-facing times in this document are Nigeria time, see §7)  
 **Primary Banking Rail:** First Bank of Nigeria (FBN) USD Domiciliary Account (`FBNINGLA`)
 
 ---
@@ -15,6 +15,7 @@
 > - **DO NOT** re-ask how to monetize or set up Selar (both the Show Love hub and Product #2 are ALREADY live).
 > - **DO NOT** use or mention personal creator names (`John Azani` or `Azani John`); the channel is exclusively *The Secret Place*.
 > - **DO NOT** add manual review gates to the website dashboard; uploads happen directly to YouTube on schedule.
+> - **DO NOT** tell the owner a time in UTC. He thinks in Nigeria time (WAT, UTC+1, Africa/Lagos — Abuja). Give him the Nigerian wall clock with a plain day: "tonight at 8:14pm", "tomorrow morning at 4:14am", "Friday 7:41pm". Never "03:14 UTC", never a bare cron string. The cron expressions in `.github/workflows/` stay in UTC — they must, GitHub has no other clock — but every time a human has to read one, it gets translated first. The full translation table is in §7.
 
 ---
 
@@ -650,3 +651,33 @@ Current state of the five blocked manifests (0009/0010/0011/0013/0014) is `draft
 `renderer_ready: false`, `authored_by_brain: false` — locally the API key is absent,
 so authoring refuses. In Actions, where `GEMINI_API_KEY` is a secret, the next
 brain or production run authors all five. 28 new tests; full suite **281 passing**.
+
+---
+
+## 7. The schedule, in Nigeria time
+
+GitHub Actions cron is UTC and always will be. Nigeria is UTC+1 all year — no
+daylight saving — so Nigerian time is the cron hour **plus one**, with the same
+minutes. Every time below is Abuja/Lagos wall clock.
+
+| When it runs (Nigeria) | What happens | cron (UTC) |
+|---|---|---|
+| **3:14am, daily** | Expansion pass lengthens short queued scripts to the word floor | `14 2 * * *` |
+| **4:14am, daily** | **The brain**: authors Short specs for anything blocked, then replenishes long-form if runway is low | `14 3 * * *` |
+| **4:23am, Monday** | Keepalive self-heal | `23 3 * * 1` |
+| **7:14am, daily** | Production run #1 | `14 6 * * *` |
+| **8:14am, daily** | Comment replies | `14 7 * * *` |
+| **3:14pm, daily** | Production run #2 | `14 14 * * *` |
+| **4:14pm, daily** | Comment replies | `14 15 * * *` |
+| **7:41pm, Friday** | Weekly metrics pull | `41 18 * * 5` |
+| **8:14pm, daily** | Production run #3 — the 19:14 release slot | `14 19 * * *` |
+| **8:14pm, daily** | Comment replies | `14 19 * * *` |
+| **8:14pm, Sunday and Wednesday** | Community post is prepared (manual post — the API has no endpoint) | `14 19 * * 0,3` |
+| **9:14pm, daily** | Automation health check, after the last release slot | `14 20 * * *` |
+
+So the next brain run is **tomorrow morning at 4:14am**. If the model returns a
+valid spec twice, all five blocked Short manifests flip to approved before you
+wake up; if it cannot, they stay drafts that name the rule they kept breaking.
+
+Run anything early by hand from the Actions tab ("Run workflow"); nothing here
+needs you to wait for a slot.

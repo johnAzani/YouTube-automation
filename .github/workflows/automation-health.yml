@@ -8,7 +8,7 @@
 
 on:
   schedule:
-    - cron: "14 20 * * *"   # after the 19:14 release slot, before the 02:14 expansion
+    - cron: "14 20 * * *"   # after the 8:14pm release slot, before the 3:14am expansion
   workflow_dispatch:
 
 permissions:

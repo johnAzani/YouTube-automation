@@ -6,9 +6,9 @@ on:
     # 1. 07:14 UTC (8:14am local)  — Morning release +1hr First-Hour Velocity pulse
     # 2. 15:14 UTC (4:14pm local)  — Afternoon release +1hr global priming pulse
     # 3. 19:14 UTC (8:14pm local)  — Bedtime sanctuary & evening prayer sweep
-    - cron: '14 7 * * *'
-    - cron: '14 15 * * *'
-    - cron: '14 19 * * *'
+    - cron: '14 7 * * *'    # 8:14am Nigeria time
+    - cron: '14 15 * * *'   # 4:14pm Nigeria time
+    - cron: '14 19 * * *'   # 8:14pm Nigeria time
   workflow_dispatch:
     inputs:
       limit:
