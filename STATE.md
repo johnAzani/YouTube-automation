@@ -1050,3 +1050,12 @@ scheduler is queueing runs unpredictably rather than dropping them cleanly.
 `monitor.yml` and `automation-health.yml` now also trigger on push to main and on
 `workflow_run` completion of production/CI/supervisor, and the monitor shares the
 `content-state` concurrency group because it commits into `content/` as well.
+
+**A slow render and a wedged render looked identical.** Step 8 was one opaque
+"Render and upload target edition" holding both the Short and the release: no log
+line, no summary, no timeout of its own until the job's 120-minute cap. On 2
+November a run that was simply working cost the owner half an hour of watching it.
+The stages are now two steps — *Render the Short (9:16)* (30 min, `continue-on-error`)
+and *Render and upload the long-form edition* (90 min, the release) — each writing
+its own section of the run summary, so a stall fails at a named step and a working
+render shows which stage it is in.

@@ -274,5 +274,50 @@ class TestTheWorkflowCannotLoseState(unittest.TestCase):
         self.assertNotIn('git commit -m "chore(content): publish job [skip ci]"\n            git push\n', text)
 
 
+class TestTheReleaseIsObservable(unittest.TestCase):
+    """A 30-minute render and a wedged one used to look identical.
+
+    Both were one step called "Render and upload target edition": nothing in the
+    log, nothing in the summary, no bound of its own until the job's 120-minute
+    cap. On 2 November that cost the owner half an hour of watching a run that was
+    simply working. The stages are separate now, each with its own timeout, and the
+    Short can no longer hide the release.
+    """
+
+    def setUp(self):
+        import yaml
+
+        self.data = yaml.safe_load((Path(__file__).resolve().parents[1] / ".github"
+                                    / "workflows" / "produce.yml").read_text())
+        self.steps = {s.get("name"): s for s in self.data["jobs"]["produce"]["steps"]}
+
+    def test_short_and_release_are_separate_steps(self):
+        self.assertIn("Render the Short (9:16)", self.steps)
+        self.assertIn("Render and upload the long-form edition", self.steps)
+        self.assertNotIn("Render and upload target edition", self.steps)
+
+    def test_each_stage_has_its_own_timeout(self):
+        short = self.steps["Render the Short (9:16)"]["timeout-minutes"]
+        release = self.steps["Render and upload the long-form edition"]["timeout-minutes"]
+        self.assertLess(short, release)
+        job_cap = self.data["jobs"]["produce"]["timeout-minutes"]
+        self.assertLessEqual(release, job_cap)
+
+    def test_a_short_failure_cannot_fail_the_release(self):
+        self.assertTrue(self.steps["Render the Short (9:16)"].get("continue-on-error"))
+        self.assertFalse(self.steps["Render and upload the long-form edition"]
+                         .get("continue-on-error", False))
+
+    def test_the_release_step_is_the_one_that_uploads(self):
+        release = self.steps["Render and upload the long-form edition"]["run"]
+        self.assertIn("pipeline.run", release)
+        short = self.steps["Render the Short (9:16)"]["run"]
+        self.assertIn("short_release", short)
+
+    def test_both_stages_report_into_the_run_summary(self):
+        for name in ("Render the Short (9:16)", "Render and upload the long-form edition"):
+            self.assertIn("GITHUB_STEP_SUMMARY", self.steps[name]["run"])
+
+
 if __name__ == "__main__":
     unittest.main()
