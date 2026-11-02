@@ -153,5 +153,70 @@ class TheAssetLoopIsBounded(unittest.TestCase):
         self.assertIn("asset_budget = Deadline(", text)
 
 
+class AFailureCanBeReadAfterwards(unittest.TestCase):
+    """`gh run view --log-failed` returns EOF for these runs; the trail does not."""
+
+    TRAIL = """20:09:10Z ▶ speech synthesis — 912 words, Charon
+20:11:40Z ✓ speech synthesis — 912 words, Charon in 150.2s
+20:11:41Z ▶ speech alignment — 372s of audio
+20:13:55Z ✓ speech alignment — 372s of audio in 134.0s
+20:13:56Z ▶ encode — 6.2 min, 8 scenes
+20:18:05Z encode: 480/8928 frames (5%), 122s elapsed, ~36 min left
+"""
+
+    def test_it_names_the_stage_that_never_closed(self):
+        from scripts import release_report
+
+        summary = release_report.summarise(release_report.parse_trail(self.TRAIL))
+        title, body = release_report.render(summary, run_id="41516057869")
+        self.assertEqual(title, "Release died inside encode (run 41516057869)")
+        self.assertIn("Never closed", body)
+        self.assertIn("`encode`", body)
+
+    def test_it_adds_up_the_minutes_that_were_accounted_for(self):
+        from scripts import release_report
+
+        summary = release_report.summarise(release_report.parse_trail(self.TRAIL))
+        self.assertEqual([row["stage"] for row in summary["finished"]],
+                         ["speech synthesis", "speech alignment"])
+        _, body = release_report.render(summary)
+        self.assertIn("4.7 min", body)  # 284.2s
+
+    def test_an_explicit_failure_outranks_an_open_stage(self):
+        from scripts import release_report
+
+        trail = ("20:09:10Z ▶ encode — 6.2 min\n"
+                 "20:31:00Z ✗ encode — 6.2 min failed after 1309.0s: RuntimeError: encoder died\n")
+        title, body = release_report.render(release_report.summarise(
+            release_report.parse_trail(trail)))
+        self.assertEqual(title, "Release failed in encode")
+        self.assertIn("encoder died", body)
+        self.assertNotIn("Never closed", body)
+
+    def test_an_empty_trail_says_so_instead_of_pretending(self):
+        from scripts import release_report
+
+        title, body = release_report.render(release_report.summarise([]))
+        self.assertEqual(title, "Release failed")
+        self.assertIn("before the first stage opened", body)
+
+    def test_the_workflow_reports_and_keeps_a_trail(self):
+        text = (REPO / ".github" / "workflows" / "produce.yml").read_text(encoding="utf-8")
+        self.assertIn("PROGRESS_TRAIL:", text)
+        self.assertIn("python -m scripts.release_report", text)
+        self.assertIn("if: ${{ failure() }}", text)
+
+    def test_the_trail_is_written_as_the_release_runs(self):
+        from pipeline import progress
+
+        with mock.patch.dict(os.environ, {"PROGRESS_TRAIL": "/tmp/trail-test.log"}):
+            path = Path("/tmp/trail-test.log")
+            path.unlink(missing_ok=True)
+            progress.emit("▶ demo")
+            contents = path.read_text(encoding="utf-8")
+        self.assertIn("demo", contents)
+        self.assertRegex(contents, r"^\d\d:\d\d:\d\dZ")
+
+
 if __name__ == "__main__":  # pragma: no cover
     unittest.main()

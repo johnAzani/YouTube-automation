@@ -31,6 +31,18 @@ def _summary_path() -> Path | None:
     return Path(raw) if raw else None
 
 
+def _trail_path() -> Path | None:
+    """Optional append-only trail file (``PROGRESS_TRAIL``).
+
+    The step summary is only readable by someone signed in to GitHub. This file
+    is what lets the reporter below quote the run back as an issue, which the
+    automation *can* read — so a failure this sandbox cannot fetch a log for is
+    still diagnosable.
+    """
+    raw = os.environ.get("PROGRESS_TRAIL")
+    return Path(raw) if raw else None
+
+
 def emit(message: str) -> None:
     """Timestamped line to stdout and, in CI, to the step summary. Never raises."""
     stamp = time.strftime("%H:%M:%S", time.gmtime())
@@ -44,6 +56,15 @@ def emit(message: str) -> None:
         if path is not None:
             with open(path, "a", encoding="utf-8") as fh:
                 fh.write(f"- `{stamp}Z` {message}\n")
+                fh.flush()
+    except Exception:  # noqa: BLE001
+        pass
+    try:
+        trail = _trail_path()
+        if trail is not None:
+            trail.parent.mkdir(parents=True, exist_ok=True)
+            with open(trail, "a", encoding="utf-8") as fh:
+                fh.write(f"{stamp}Z {message}\n")
                 fh.flush()
     except Exception:  # noqa: BLE001
         pass
