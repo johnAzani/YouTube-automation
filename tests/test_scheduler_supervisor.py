@@ -152,6 +152,14 @@ class TestWorkflowFile(unittest.TestCase):
         self.assertIn('cron: "*/15 * * * *"', text)
         self.assertGreater(cron_gap(["*/15 * * * *"]), timedelta(0))
 
+    def test_supervisor_does_not_depend_only_on_a_schedule(self):
+        """The scheduler is the thing that fails; the fallback must not be it."""
+        text = (sup.ROOT / ".github/workflows/scheduler-supervisor.yml").read_text()
+        self.assertIn("push:", text)
+        self.assertIn("workflow_run:", text)
+        for name in ("Produce video", "Keepalive", "Automation monitor"):
+            self.assertIn(name, text)
+
     def test_supervisor_can_actually_dispatch(self):
         text = (sup.ROOT / ".github/workflows/scheduler-supervisor.yml").read_text()
         self.assertIn("actions: write", text)
