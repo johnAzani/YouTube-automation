@@ -316,6 +316,65 @@ class TestTheDuplicateIsCaughtBeforeTheRender(unittest.TestCase):
             self.assertIsNone(pp.already_published(Doc()))
 
 
+class TestRecordingADuplicateDoesNotConsumeTheSlot(unittest.TestCase):
+    """Bookkeeping is not a release.
+
+    With 0013 live but unrecorded, the 3:14pm slot would have found it, filed it,
+    and exited — publishing nothing new for the day.
+    """
+
+    def test_run_next_moves_on_to_the_next_job_after_an_already_live_one(self):
+        from unittest import mock
+
+        from pipeline import run as pr
+
+        a, b = Path("content/queue/0013-a.md"), Path("content/queue/0017-b.md")
+        seen = []
+
+        def fake_process(path, dry):
+            seen.append(path)
+            if path == a:
+                return {"privacy_status": "already_published", "video_id": "live1"}
+            return {"privacy_status": "public", "video_id": "new1"}
+
+        # first call is the --next selection, second the re-selection after recording
+        selections = [[a], [b]]
+
+        def fake_select(all_flag, job_path, next_flag):
+            return selections.pop(0) if selections else []
+
+        with mock.patch.object(pr, "select_jobs", side_effect=fake_select), \
+             mock.patch.object(pr, "process", fake_process), \
+             mock.patch.object(pr, "CONFIG") as cfg, \
+             mock.patch.dict("os.environ", {"DRY_RUN": "0"}):
+            cfg.dry_run = False
+            cfg.ensure_dirs = lambda: None
+            code = pr.main(["--next"])
+        self.assertEqual(code, 0)
+        self.assertEqual(seen, [a, b], "should record the duplicate, then publish the next job")
+
+    def test_it_stops_once_something_is_actually_published(self):
+        from unittest import mock
+
+        from pipeline import run as pr
+
+        a, b = Path("content/queue/0017-a.md"), Path("content/queue/0018-b.md")
+        seen = []
+
+        def fake_process(path, dry):
+            seen.append(path)
+            return {"privacy_status": "public", "video_id": "new1"}
+
+        with mock.patch.object(pr, "select_jobs", return_value=[a, b]), \
+             mock.patch.object(pr, "process", fake_process), \
+             mock.patch.object(pr, "CONFIG") as cfg, \
+             mock.patch.dict("os.environ", {"DRY_RUN": "0"}):
+            cfg.dry_run = False
+            cfg.ensure_dirs = lambda: None
+            pr.main(["--next"])
+        self.assertEqual(len(seen), 1, "one release per slot, not a queue drain")
+
+
 class TestTheWorkflowCannotLoseState(unittest.TestCase):
     def workflow(self, name):
         return (Path(__file__).resolve().parents[1] / ".github" / "workflows" / name).read_text()

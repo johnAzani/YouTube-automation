@@ -497,9 +497,14 @@ def main(argv: list[str] | None = None) -> int:
         return 2
 
     results = []
-    for path in paths:
+    tried: set[Path] = set()
+    remaining = list(paths)
+    while remaining:
+        path = remaining.pop(0)
+        tried.add(path)
         try:
-            results.append(process(path, dry))
+            result = process(path, dry)
+            results.append(result)
         except Exception as exc:  # noqa: BLE001
             _log(f"FAILED {path}: {exc}")
             import traceback
@@ -511,6 +516,16 @@ def main(argv: list[str] | None = None) -> int:
                 with open(summary_path, "a", encoding="utf-8") as f:
                     f.write(f"### ❌ FAILED `{path.name}`\n\n```\n{exc}\n\n{tb}\n```\n")
             return 1
+
+        # A job whose video is already on the channel is bookkeeping, not a release:
+        # recording it must not consume the whole slot. Keep going until something is
+        # actually published (or the eligible jobs run out).
+        if not (args.next and result.get("privacy_status") == "already_published"):
+            break
+        _log(f"{path.name} was already live; moving on to the next eligible job")
+        if not remaining:
+            remaining = [p for p in (select_jobs(False, None, False) or [])
+                         if p not in tried]
 
     _log(f"done: {len(results)} job(s)")
     return 0
