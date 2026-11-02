@@ -12,12 +12,12 @@ class PrayerPipelineTests(unittest.TestCase):
     def test_full_path_uses_approved_renderer_and_marks_confirmed_upload(self):
         with TemporaryDirectory() as tmp:
             root = Path(tmp); model = root / 'model'; model.mkdir(); (model/'model.bin').write_bytes(b'local')
-            doc = ScriptDoc(root/'job.md', {'id': 'test', 'slug': 'test', 'title': 'Test', 'status': 'approved', 'format': 'longform', 'niche': 'prayer', 'voice': 'Charon'}, [Scene(1, 'One', 'hello ' * 700)])
+            doc = ScriptDoc(root/'job.md', {'id': 'test', 'slug': 'test', 'title': 'Test', 'status': 'approved', 'format': 'longform', 'niche': 'prayer', 'voice': 'Charon'}, [Scene(1, 'One', 'hello ' * 900)])
             asset = root/'image.jpg'; asset.write_bytes(b'a')
             output = root/'out.mp4'; output.write_bytes(b'b')
             thumbnail = root/'thumb.jpg'; thumbnail.write_bytes(b'c')
             upload = SimpleNamespace(video_id='abc', watch_url='https://youtu.be/abc', privacy_status='public')
-            words = [('hello', i * .4, i * .4 + .3) for i in range(700)]
+            words = [('hello', i * .4, i * .4 + .3) for i in range(900)]
             with patch('pipeline.prayer_pipeline.parse_script', return_value=doc), patch('pipeline.prayer_pipeline.enforce'), \
                  patch('pipeline.run._require_production_prerequisites'), patch('pipeline.prayer_pipeline.get_gemini_api_key', return_value='fake'), \
                  patch('pipeline.prayer_pipeline.importlib.util.find_spec', return_value=True), patch('pipeline.prayer_pipeline.OUTPUT_DIR', root), \
@@ -47,7 +47,7 @@ class PrayerPipelineTests(unittest.TestCase):
     def test_missing_alignment_never_calls_tts(self):
         with TemporaryDirectory() as tmp:
             root = Path(tmp)
-            doc = ScriptDoc(root/'job.md', {'status':'approved','format':'longform','niche':'prayer','voice':'Charon'}, [Scene(1,'One','hello ' * 700)])
+            doc = ScriptDoc(root/'job.md', {'status':'approved','format':'longform','niche':'prayer','voice':'Charon'}, [Scene(1,'One','hello ' * 900)])
             with patch('pipeline.prayer_pipeline.parse_script', return_value=doc), patch('pipeline.prayer_pipeline.enforce'), \
                  patch('pipeline.run._require_production_prerequisites'), patch('pipeline.prayer_pipeline.get_gemini_api_key', return_value='fake'), \
                  patch('pipeline.prayer_pipeline.synthesize_gemini_audio') as tts:

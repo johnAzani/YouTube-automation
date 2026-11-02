@@ -9,7 +9,7 @@ ordering dependency nobody enforced:
   cheerful notice and exited 0, so nothing looked broken.
 * The brain counted runway as "approved scripts", including the 100–350 word ones
   it could not publish. So it kept *adding* more of them: twenty-one approved
-  scripts in `content/queue/` and not one over the 650-word floor.
+  scripts in `content/queue/` and not one over the word floor.
 * Every new script was authored short, and nothing ever lengthened it.
 
 This module is the missing loop, in one place and in the right order:
@@ -40,6 +40,11 @@ ROOT = Path(__file__).resolve().parent.parent
 # is shared with authoring, and a run that spends its whole budget on old scripts
 # cannot author the new one the queue actually needs.
 MAX_EXPANSIONS_PER_RUN = 3
+# When nothing is publishable there is no reason to be frugal: every release slot
+# that runs against an empty queue is a wasted slot, and each job converges over
+# up to `MAX_ATTEMPTS` model calls, so an empty queue spends more calls per job.
+MAX_EXPANSIONS_WHEN_EMPTY = 5
+MAX_MODEL_CALLS_PER_RUN = 10
 MAX_AUTHORS_PER_RUN = 2
 EXPANSION_TARGET_WORDS = 900
 
@@ -122,8 +127,12 @@ def expand_backlog(limit: int = MAX_EXPANSIONS_PER_RUN, target: int = EXPANSION_
     from tools.expand_scripts import expand_job
 
     rows: list[dict[str, Any]] = []
+    calls = 0
     for job in under_gate_jobs(queue_dir)[:limit]:
+        if calls >= MAX_MODEL_CALLS_PER_RUN:
+            break
         result = expand_job(job, provider="gemini", target=target, write=write)
+        calls += getattr(result, "attempts", 1)
         row = result.as_dict()
         row["file"] = Path(row.get("file", job.path.name)).name
         rows.append(row)
@@ -131,8 +140,24 @@ def expand_backlog(limit: int = MAX_EXPANSIONS_PER_RUN, target: int = EXPANSION_
 
 
 def set_status(path: Path, status: str, approved_by: str = "") -> None:
-    """Rewrite only the frontmatter `status:` line, leaving every word intact."""
+    """Rewrite only the frontmatter `status:` line, leaving every word intact.
+
+    This is the single choke point for approval in the whole codebase, so the rule
+    that approval means publishable lives here: a long-form script under the word
+    floor cannot be marked approved by any caller, brain or human or test. The 21
+    short scripts that sat approved for weeks are why this guard exists.
+    """
     import re
+
+    from .script_doc import MIN_LONGFORM_WORDS, parse_script
+
+    if status == "approved":
+        doc = parse_script(Path(path))
+        if doc.format == "longform" and doc.word_count < MIN_LONGFORM_WORDS:
+            raise ValueError(
+                f"{Path(path).name}: {doc.word_count} words cannot be approved — the "
+                f"long-form floor is {MIN_LONGFORM_WORDS}. Approved must mean publishable."
+            )
 
     text = Path(path).read_text(encoding="utf-8")
     match = re.match(r"^---\n(.*?)\n---\n", text, re.S)
@@ -238,6 +263,8 @@ def ensure_supply(brain, limit: int = MAX_EXPANSIONS_PER_RUN,
     report.wanted = min_publishable
     report.publishable_before = len(publishable_longform(queue_dir))
 
+    if report.publishable_before == 0:
+        limit = max(limit, MAX_EXPANSIONS_WHEN_EMPTY)
     report.expanded = expand_backlog(limit=limit, target=target, queue_dir=queue_dir, write=write)
     for row in report.expanded:
         if row.get("problems"):

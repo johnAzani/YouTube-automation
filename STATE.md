@@ -916,3 +916,75 @@ scheduler, and for `produce.yml` a duplicate run means a duplicate upload.
 (`all times WAT` in the table, no bare UTC anywhere), because the owner reads WAT.
 
 Full suite: **481 with pytest**.
+
+---
+
+## The morning it all said green and published nothing — 2 November 2026
+
+The owner's message was three words and a screenshot: *"I have not seen it on
+YouTube"*, with the channel showing Psalm 121 from the day before and nothing
+newer. Every workflow had a green tick. This is the full chain, because each link
+looked healthy on its own.
+
+**1. The scheduler dropped the slots.** Brain 04:14, keepalive 04:23 and produce
+07:14 WAT produced no runs at all. `scheduler_supervisor.py` dispatched all three
+at 08:59 WAT (see the section above). Keepalive succeeded. The other two did not —
+which is how the next four faults surfaced.
+
+**2. The two length gates disagreed.** Production refused scripts under
+`MIN_LONGFORM_WORDS = 650`; the renderer separately refused narration under 300
+seconds. Charon narrates ~165 words a minute (job 0010: 884 words → 5:22), so 650
+words is **3.9 minutes** — the word gate admitted scripts that could never render,
+and each attempt paid for a full TTS call before failing with *"Actual Charon
+narration is shorter than five minutes"*. The floor is now **derived**:
+`required_words(300) + 25 = 850`, with `CHARON_WORDS_PER_MINUTE` and
+`MIN_NARRATION_SECONDS` shared by the gate, the renderer and the brain prompt so
+they cannot drift apart again.
+
+**3. The expansion instruction contradicted itself.** The prompt said "add 2-4
+sentences per existing scene" *and* "aim for 900 words". For a 280-word script
+with five scenes, maximum compliance is ~400 words. A rule-following model
+returned output that was valid, additive, in the right psalm — and permanently
+under the gate, so `validate` refused it and nothing was written. Night after
+night. The prompt now states the shortfall in words (`need`, `per_scene`,
+`min_words`, `max_words`) so the arithmetic is possible.
+
+**4. Progress was thrown away every time.** Because a short-but-safe expansion was
+discarded, each run restarted from the same 280-word file. `expand_job` now
+converges: an attempt that violates *only* the floor is written back — it is
+additive, unrepeated and un-leaked, so keeping it is honest progress — and the
+next attempt starts from the longer body. Rule violations are still never written
+(`validate(..., require_floor=False)` is the discriminator), and an overshoot asks
+again with a smaller target instead of abandoning the script.
+
+**5. "Nothing to publish" was not an error.** `pipeline/run.py` printed a friendly
+notice and `return 0`, on the stated theory that a red cron would train everyone to
+ignore the dashboard. That is exactly why three slots a day could pass with no
+upload. It now exits **2** with `empty_reason()`, which names the worst script and
+how many words it is short: *"21 approved script(s) are under the 850-word floor —
+0029 needs 623 more words — and the expansion pass did not bring any of them over
+it"*.
+
+**6. Approval did not mean publishable.** `supply.set_status` is the single choke
+point for approval, so the rule lives there: a long-form script under the floor
+cannot be marked `approved` by any caller. The 21 stragglers predate the guard;
+the monitor now reports them as a blocking outcome (`publishable runway 0 of 21`)
+instead of a note.
+
+**7. The queue state could be lost, and losing it is dangerous.** The supervisor's
+ledger commit landed between production's checkout and its `git push`, so the
+`published/` move was rejected and discarded. That is not cosmetic: the move is
+what stops the next run uploading the same video again. Production and the
+supervisor now share one `content-state` concurrency group, and the commit step
+rebases and retries five times, failing loudly if it still cannot land.
+
+**8. The monitor measured the wrong thing twice.** "Last upload" used file mtime,
+which a fresh CI checkout stamps with the checkout time — it reported "0.1h ago"
+on a channel that had published the day before. It now reads `published_on` from
+the published frontmatter. And it never looked at uploads at all, so a successful
+production run that published nothing read as `OK`; there are now two blocking
+outcomes for that: `publishable runway` and `produce published nothing`.
+
+19 new tests in `tests/test_supply_never_stalls.py` pin each link, including the
+one that matters most: a provider that under-delivers on every single call still
+reaches the floor and stops there. Full suite: **508 with pytest**.

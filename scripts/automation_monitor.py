@@ -27,6 +27,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -443,27 +444,69 @@ def check_outcomes(report: MonitorReport, now: datetime | None = None,
                    log_path: Path | None = None) -> MonitorReport:
     now = now or datetime.now(timezone.utc)
     published = Path(published_dir or ROOT / "content" / "published")
-    newest = None
+    # File mtime is useless here: a fresh CI checkout stamps every file with the
+    # checkout time, which is why this used to report "last upload 0.1h ago" on a
+    # channel that had not published in a day. `published_on` is written by the
+    # publisher and travels with the file.
+    newest_date = None
     for path in sorted(published.glob("*.md")):
         text = path.read_text(encoding="utf-8")
         if "youtube_video_id:" not in text:
             continue
-        stamp = path.stat().st_mtime
-        newest = max(newest or stamp, stamp)
+        match = re.search(r'^published_on:\s*"?([0-9]{4}-[0-9]{2}-[0-9]{2})', text, re.M)
+        if not match:
+            continue
+        try:
+            stamp = datetime.fromisoformat(match.group(1)).replace(tzinfo=timezone.utc)
+        except ValueError:
+            continue
+        newest_date = max(newest_date or stamp, stamp)
 
-    if newest:
-        age = now - datetime.fromtimestamp(newest, tz=timezone.utc)
+    if newest_date:
+        age = now - newest_date
         report.outcomes.append({
-            "outcome": "last upload", "detail": f"{age.total_seconds() / 3600:.1f}h ago",
-            "severity": "warning" if age > timedelta(hours=36) else "ok"})
+            "outcome": "last upload",
+            "detail": f"{newest_date.date().isoformat()} ({age.total_seconds() / 3600:.0f}h ago)",
+            "severity": "blocking" if age > timedelta(hours=48)
+                        else ("warning" if age > timedelta(hours=26) else "ok")})
     else:
         report.outcomes.append({"outcome": "last upload", "detail": "none recorded",
                                 "severity": "blocking"})
 
+    # A production run that finishes successfully and uploads nothing is the exact
+    # failure the owner kept reporting: green tick, no video.
+    produce = next((a for a in report.automations if a.workflow == "produce.yml"), None)
+    if produce is not None and newest_date is not None and produce.last_success is not None:
+        if produce.last_success.date() > newest_date.date():
+            report.outcomes.append({
+                "outcome": "produce published nothing",
+                "detail": (f"last successful production run "
+                           f"{produce.last_success.astimezone(WAT).strftime('%d %b %H:%M')} WAT "
+                           f"added no upload; newest video is {newest_date.date().isoformat()}"),
+                "severity": "blocking"})
+
     queue = list((ROOT / "content" / "queue").glob("*.md"))
-    report.outcomes.append({"outcome": "long-form queue",
-                            "detail": f"{len(queue)} script(s) in content/queue/",
-                            "severity": "ok" if queue else "warning"})
+    from pipeline.script_doc import MIN_LONGFORM_WORDS, parse_script
+
+    publishable = 0
+    approved = 0
+    for path in queue:
+        try:
+            doc = parse_script(path)
+        except Exception:  # noqa: BLE001
+            continue
+        if doc.status != "approved":
+            continue
+        approved += 1
+        if doc.word_count >= MIN_LONGFORM_WORDS:
+            publishable += 1
+    report.outcomes.append({
+        "outcome": "publishable runway",
+        "detail": (f"{publishable} of {approved} approved script(s) over the "
+                   f"{MIN_LONGFORM_WORDS}-word floor ({len(queue)} in queue)"),
+        # Zero publishable scripts means the next production slot cannot upload,
+        # whatever its exit code says. That is a blocking fault, not a note.
+        "severity": "ok" if publishable else "blocking"})
 
     specs = list((ROOT / "content" / "shorts-scripts").glob("*.json"))
     report.outcomes.append({"outcome": "authored Short specs",

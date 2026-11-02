@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Report the real long-form runway of content/queue/ in minutes of narration.
 
-`pipeline/prayer_pipeline.py` refuses to render any prayer script under 650
-words because that is roughly the five-minute minimum for a long-form upload.
+`pipeline/prayer_pipeline.py` refuses to render any prayer script under
+MIN_LONGFORM_WORDS (850), which is the first length that fills five minutes at
+Charon's measured pace — the old 650-word figure was four minutes and could never
+have rendered.
 A queue full of 250-word scripts therefore looks like a thirty-night runway
 while actually failing closed at render time. This audit makes that visible
 without changing queue state.

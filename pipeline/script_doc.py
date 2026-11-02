@@ -32,10 +32,26 @@ Narration text...
 """
 from __future__ import annotations
 
-# A five-minute Charon prayer needs roughly this many words. Below it the
-# pipeline fails closed rather than ship a four-minute promise, and the nightly
-# expansion pass lengthens the script before the publisher sees it.
-MIN_LONGFORM_WORDS = 650
+# The renderer refuses any narration that measures under five minutes, and Charon
+# narrates ~165 words a minute in this channel's own measured output (job 0010:
+# 884 words -> 5:22). So a script needs 5 x 165 = 825 words before it has any
+# chance of passing — and the word gate must never be *looser* than the duration
+# gate, or it admits a script, pays for a full TTS render, and then dies on
+# "narration is shorter than five minutes". That is exactly what the old 650-word
+# floor did to the 2 November production run.
+CHARON_WORDS_PER_MINUTE = 165
+MIN_NARRATION_SECONDS = 300
+
+
+def required_words(seconds: int) -> int:
+    """Words Charon must speak to fill `seconds`, rounded up."""
+    import math
+
+    return math.ceil(CHARON_WORDS_PER_MINUTE * seconds / 60)
+
+
+# 825 words is the hard minimum; 25 words of headroom for a slower read.
+MIN_LONGFORM_WORDS = required_words(MIN_NARRATION_SECONDS) + 25   # 850
 
 import re
 from dataclasses import dataclass, field

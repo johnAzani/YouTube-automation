@@ -9,6 +9,7 @@ The rules these tests pin are the ones that were violated in production:
 * "ran successfully" without an outcome is still worth reporting.
 """
 import json
+import os
 import tempfile
 import unittest
 from datetime import datetime, timedelta, timezone
@@ -211,8 +212,8 @@ class TestOutcomes(unittest.TestCase):
         self.addCleanup(self.tmp.cleanup)
         self.pub = Path(self.tmp.name) / "published"
         self.pub.mkdir()
-        self.queue = Path(self.tmp.name) / "queue"
-        self.queue.mkdir()
+        self.queue = Path(self.tmp.name) / "content" / "queue"
+        self.queue.mkdir(parents=True)
 
     def outcomes(self, log=None):
         report = am.MonitorReport()
@@ -227,10 +228,56 @@ class TestOutcomes(unittest.TestCase):
 
     def test_a_recent_upload_is_ok(self):
         receipt = self.pub / "0010-x.md"
-        receipt.write_text("---\nyoutube_video_id: abc\n---\n", encoding="utf-8")
+        stamp = (NOW - timedelta(hours=3)).date().isoformat()
+        receipt.write_text(f'---\nyoutube_video_id: abc\npublished_on: "{stamp}"\n---\n',
+                           encoding="utf-8")
         report = self.outcomes()
         upload = [o for o in report.outcomes if o["outcome"] == "last upload"][0]
         self.assertEqual(upload["severity"], "ok")
+
+    def test_file_mtime_never_counts_as_an_upload(self):
+        """A fresh CI checkout stamps every file with today, which used to read as
+        "uploaded minutes ago" on a channel that had published nothing for a day."""
+        receipt = self.pub / "0010-x.md"
+        receipt.write_text("---\nyoutube_video_id: abc\n---\n", encoding="utf-8")
+        os.utime(receipt, (NOW.timestamp(), NOW.timestamp()))
+        report = self.outcomes()
+        upload = [o for o in report.outcomes if o["outcome"] == "last upload"][0]
+        self.assertEqual(upload["detail"], "none recorded")
+        self.assertEqual(upload["severity"], "blocking")
+
+    def test_a_stale_upload_is_blocking_after_two_days(self):
+        receipt = self.pub / "0010-x.md"
+        stamp = (NOW - timedelta(days=3)).date().isoformat()
+        receipt.write_text(f'---\nyoutube_video_id: abc\npublished_on: "{stamp}"\n---\n',
+                           encoding="utf-8")
+        report = self.outcomes()
+        upload = [o for o in report.outcomes if o["outcome"] == "last upload"][0]
+        self.assertEqual(upload["severity"], "blocking")
+
+    def test_zero_publishable_scripts_block_the_next_slot(self):
+        (self.queue / "0001-a.md").write_text(
+            "---\nid: '0001'\nstatus: approved\nformat: longform\n---\n\n"
+            "## Scene 1 — One\n" + "word " * 300, encoding="utf-8")
+        (self.queue / "0002-b.md").write_text(
+            "---\nid: '0002'\nstatus: approved\nformat: longform\n---\n\n"
+            "## Scene 1 — One\n" + "word " * 900, encoding="utf-8")
+        with mock.patch.object(am, "ROOT", Path(self.tmp.name)):
+            report = am.check_outcomes(am.MonitorReport(), now=NOW, published_dir=self.pub,
+                                       log_path=Path(self.tmp.name) / "none.json")
+        runway = [o for o in report.outcomes if o["outcome"] == "publishable runway"][0]
+        self.assertEqual(runway["severity"], "ok")
+        self.assertIn("1 of 2 approved", runway["detail"])
+
+    def test_an_empty_publishable_runway_is_blocking(self):
+        (self.queue / "0001-a.md").write_text(
+            "---\nid: '0001'\nstatus: approved\nformat: longform\n---\n\n"
+            "## Scene 1 — One\n" + "word " * 300, encoding="utf-8")
+        with mock.patch.object(am, "ROOT", Path(self.tmp.name)):
+            report = am.check_outcomes(am.MonitorReport(), now=NOW, published_dir=self.pub,
+                                       log_path=Path(self.tmp.name) / "none.json")
+        runway = [o for o in report.outcomes if o["outcome"] == "publishable runway"][0]
+        self.assertEqual(runway["severity"], "blocking")
 
     def test_replies_are_counted_from_the_ledger(self):
         log = Path(self.tmp.name) / "replied.json"
