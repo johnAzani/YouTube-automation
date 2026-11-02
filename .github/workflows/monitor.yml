@@ -12,11 +12,28 @@
 # first fully healthy check, so a stall reaches the owner without him asking.
 name: Automation monitor
 
+# Triggers, not just logic. On 2 November this workflow's 06:23, 09:23 and 12:23
+# UTC slots produced *no runs at all* — the monitor had never executed since it was
+# merged, so the one thing built to notice a stall was itself stalled. The brain's
+# 03:14 slot did eventually start at 11:02, nearly eight hours late, which says the
+# scheduler is not dropping runs so much as queueing them unpredictably.
+#
+# A monitor that only runs on a schedule inherits the schedule's unreliability, so
+# it also runs on every push to main and every time CI or a production run finishes
+# — the moments when there is something new to judge.
 on:
   schedule:
     # Every three hours. :23 past, so it lands between release slots and after the
     # 4:14am brain pass rather than competing with it.
     - cron: "23 */3 * * *"
+  push:
+    branches: [main]
+  workflow_run:
+    workflows:
+      - "Produce video"
+      - "Dry-run pipeline (CI proof)"
+      - "Scheduler supervisor"
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -24,8 +41,9 @@ permissions:
   issues: write
   actions: read        # run history is the evidence; reading it is the whole job
 
+# Shared with production and the supervisor: all three commit into content/.
 concurrency:
-  group: automation-monitor
+  group: content-state
   cancel-in-progress: false
 
 jobs:

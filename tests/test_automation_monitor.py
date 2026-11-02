@@ -333,6 +333,12 @@ class TestMonitorWorkflow(unittest.TestCase):
         self.assertIn("scripts.automation_monitor", self.text)
         self.assertIn("scripts.pipeline_watchdog", self.text)
 
+    def test_the_monitor_does_not_only_run_on_a_schedule(self):
+        """It had never run: its 06:23/09:23/12:23 UTC slots produced no runs at all."""
+        self.assertIn("push:", self.text)
+        self.assertIn("workflow_run:", self.text)
+        self.assertIn("group: content-state", self.text)
+
     def test_the_watchdog_is_allowed_to_fail_the_job(self):
         # A red monitor run is a signal; swallowing it would recreate the bug.
         self.assertNotIn("|| true", self.text.split("File or close the stall issue")[1]
