@@ -120,6 +120,15 @@ def _convert_raw_audio(temp_raw: Path, out_path: Path, mime_type: str = "") -> N
     subprocess.run(cmd, check=True, capture_output=True)
 
 
+def _emit(message: str) -> None:
+    """Progress line, best effort: narration must never fail on logging."""
+    try:
+        from .progress import emit
+        emit(message)
+    except Exception:  # noqa: BLE001
+        print(f"[gemini-tts] {message}", flush=True)
+
+
 def _synthesize_single_chunk(
     client,
     text: str,
@@ -250,10 +259,15 @@ def synthesize_gemini_audio(
             ".env file, or GitHub Repository Secrets."
         )
 
-    from google import genai
     from .assemble import ffmpeg_bin
+    from .gemini_client import Deadline, make_client, stage_budget_seconds
 
-    client = genai.Client(api_key=api_key)
+    # Bounded per request AND bounded as a stage. Without the first, one stalled
+    # socket can consume the whole release step and print nothing (0017, run
+    # 41495990952, killed at its 90-minute cap); without the second, twelve slow
+    # calls add up to the same thing.
+    client = make_client(api_key)
+    budget = Deadline(stage_budget_seconds(900), "speech synthesis")
     voice_name = GEMINI_VOICES.get(voice.lower(), voice)
 
     system_instruction = (
@@ -267,6 +281,7 @@ def synthesize_gemini_audio(
 
     chunks = _chunk_text(text, max_chars=450)
     if len(chunks) == 1:
+        budget.check("single chunk")
         temp_raw = out_path.with_suffix(".raw_audio")
         try:
             mime_type = _synthesize_single_chunk(client, chunks[0], voice_name, system_instruction, model, temp_raw)
@@ -282,6 +297,9 @@ def synthesize_gemini_audio(
     temp_dir.mkdir(parents=True, exist_ok=True)
     try:
         for idx, chunk in enumerate(chunks):
+            budget.check(f"chunk {idx + 1}/{len(chunks)}")
+            _emit(f"TTS chunk {idx + 1}/{len(chunks)} "
+                  f"({budget.elapsed():.0f}s elapsed)")
             chunk_raw = temp_dir / f"chunk_{idx:03d}.raw"
             chunk_wav = temp_dir / f"chunk_{idx:03d}.wav"
             mime_type = _synthesize_single_chunk(client, chunk, voice_name, system_instruction, model, chunk_raw)

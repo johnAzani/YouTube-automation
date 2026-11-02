@@ -69,7 +69,10 @@ class GeminiBrain:
         if self.api_key:
             try:
                 from google import genai
-                self._client = genai.Client(api_key=self.api_key)
+                from .gemini_client import make_client
+                # Bounded per request: an unbounded client is how a stalled
+                # socket becomes a 90-minute step timeout with no error.
+                self._client = make_client(self.api_key)
             except Exception as exc:  # noqa: BLE001
                 self._client_error = f"{type(exc).__name__}: {exc}"
                 print(f"[gemini-brain] Could not initialize genai.Client: {exc}")

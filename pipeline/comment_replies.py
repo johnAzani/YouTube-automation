@@ -276,7 +276,8 @@ def generate_reply_with_gemini(
     if client is None and key:
         try:
             from google import genai
-            client = genai.Client(api_key=key)
+            from .gemini_client import make_client
+            client = make_client(key)
         except Exception as exc:
             print(f"[comments] Could not init genai Client: {exc}")
 

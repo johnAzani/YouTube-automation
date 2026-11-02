@@ -7,6 +7,8 @@ from pathlib import Path
 from .config import CONFIG, OUTPUT_DIR
 from .script_doc import MIN_LONGFORM_WORDS, MIN_NARRATION_SECONDS, parse_script
 from .originality import enforce
+from .progress import Heartbeat, emit, stage
+from .gemini_client import Deadline, stage_budget_seconds
 from .gemini_tts import DEFAULT_MODEL, get_gemini_api_key, synthesize_gemini_audio
 from .prayer_alignment import align
 from .prayer_visuals import render
@@ -104,6 +106,31 @@ def record_if_live(path: Path, doc=None) -> dict | None:
     return result
 
 
+def _fingerprint(*parts) -> str:
+    import hashlib
+
+    digest = hashlib.sha256()
+    for part in parts:
+        digest.update(str(part).encode("utf-8"))
+        digest.update(b"\x00")
+    return digest.hexdigest()[:32]
+
+
+def _cached_json(path: Path, key: str):
+    """Return the cached payload when its fingerprint matches, else None."""
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    return payload if payload.get("key") == key else None
+
+
+def _write_json(path: Path, payload: dict) -> None:
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(payload), encoding="utf-8")
+    tmp.replace(path)
+
+
 def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
     """Run the approved rendering pipeline with hard safety checks.
 
@@ -143,7 +170,17 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
     out.mkdir(parents=True, exist_ok=True)
     audio = out / 'narration.mp3'
     try:
-        synthesize_gemini_audio(doc.full_narration, audio, voice='Charon', model=DEFAULT_MODEL)
+        # Speech is the expensive, deterministic step: on a retry the same script
+        # text must not be paid for again in minutes and free-tier quota. The
+        # sidecar records which text produced this file, so an edited script still
+        # re-synthesises and an unchanged one is reused.
+        speech_key = _fingerprint("tts-v1", DEFAULT_MODEL, "Charon", doc.full_narration)
+        cached = _cached_json(out / 'narration.json', speech_key)
+        if cached and audio.is_file():
+            emit(f"reusing narration from the previous attempt ({cached.get('duration', 0):.0f}s)")
+        else:
+            with stage("speech synthesis", f"{doc.word_count} words, Charon"):
+                synthesize_gemini_audio(doc.full_narration, audio, voice='Charon', model=DEFAULT_MODEL)
         duration = _probe_duration(audio)
         if duration is None or duration < MIN_NARRATION_SECONDS:
             raise RuntimeError(
@@ -151,7 +188,17 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
                 f'{MIN_NARRATION_SECONDS}s ({MIN_NARRATION_SECONDS // 60} minutes). '
                 f'{doc.word_count} words is too short at Charon\'s pace — lengthen the script, '
                 f'the floor is {MIN_LONGFORM_WORDS} words.')
-        words = align(audio, doc.full_narration, Path(model_dir))
+        _write_json(out / 'narration.json', {'key': speech_key, 'duration': duration})
+
+        align_key = _fingerprint("align-v1", speech_key, duration)
+        cached_words = _cached_json(out / 'words.json', align_key)
+        if cached_words and cached_words.get('words'):
+            words = [tuple(w) for w in cached_words['words']]
+            emit(f"reusing the previous word alignment ({len(words)} words)")
+        else:
+            with stage("speech alignment", f"{duration:.0f}s of audio"):
+                words = align(audio, doc.full_narration, Path(model_dir))
+            _write_json(out / 'words.json', {'key': align_key, 'words': [list(w) for w in words]})
         boundaries = [0.0]
         count = 0
         for scene in doc.scenes[:-1]:
@@ -164,25 +211,41 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
         if any(d <= 0 for d in durations):
             raise RuntimeError('Invalid scene duration')
         assets = []
+        # A budget for the whole asset stage, not just per provider call. Eight
+        # scenes x (search + download + licence scan) is normally a few minutes;
+        # if a provider is throttling us it can be an hour of quiet retries, which
+        # is one of the two places the 90-minute release step went on 2 November.
+        # Fail at a named scene instead of at the step's cap.
+        asset_budget = Deadline(stage_budget_seconds(1200), "asset fetch")
         for scene in doc.scenes:
-            matches = fetch_scene_assets(scene.asset_query or scene.heading, scene.index,
-                                         out / 'assets', target_width=1280, target_height=720,
-                                         allow_generated=False)
+            asset_budget.check(f"scene {scene.index}/{len(doc.scenes)}")
+            with stage("asset fetch", f"scene {scene.index}/{len(doc.scenes)}"):
+                # count=1 on purpose: this path renders exactly matches[0], so asking
+                # for CONFIG.clips_per_scene (2) doubled both the provider searches
+                # and the downloads for a second clip that was thrown away.
+                matches = fetch_scene_assets(scene.asset_query or scene.heading, scene.index,
+                                             out / 'assets', count=1,
+                                             target_width=1280, target_height=720,
+                                             allow_generated=False)
             if not matches:
                 raise RuntimeError(f'No licensed asset for scene {scene.index}')
             assets.append(matches[0].path)
-        final = render(audio, list(zip(assets, durations)), words, duration,
-                       out / f'{doc.slug}.mp4', timing_source='measured')
+        with stage("encode", f"{duration / 60:.1f} min, {len(doc.scenes)} scenes"):
+            heartbeat = Heartbeat("encode", int(duration * 24))
+            final = render(audio, list(zip(assets, durations)), words, duration,
+                           out / f'{doc.slug}.mp4', timing_source='measured',
+                           progress=heartbeat.tick)
         # Thumbnails come from the CTR pack, never from the card generator: it enforces
         # mobile legibility, contrast, safe zones and visibility against YouTube's
         # dark-mode page, and writes a report so the run page shows the numbers.
         # See docs/THUMBNAIL_RESEARCH.md.
         from .thumbnail_ctr import pick_backdrop
 
-        thumb_reports = generate_ctr_pack(out / "thumbnails",
-                                          hero_override=doc.meta.get("thumb_text"),
-                                          doc_key=doc.id or doc.slug,
-                                          backdrop=pick_backdrop(assets))
+        with stage("thumbnail pack", "3 concepts"):
+            thumb_reports = generate_ctr_pack(out / "thumbnails",
+                                              hero_override=doc.meta.get("thumb_text"),
+                                              doc_key=doc.id or doc.slug,
+                                              backdrop=pick_backdrop(assets))
         for report in thumb_reports:
             mobile_preview(report.path, report.path.with_name(report.path.stem + "_mobile.png"))
         (out / "thumbnails" / "report.json").write_text(
@@ -193,8 +256,9 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
                   'duration_seconds': duration, 'tts_engine': 'gemini-api', 'dry_run': dry_run}
         if not dry_run:
             from .upload import upload
-            up = upload(doc, final, thumbs[0], privacy=doc.meta.get('privacy'),
-                        publish_at=doc.meta.get('publish_at'), description=pack.get('description'))
+            with stage("upload", "YouTube"):
+                up = upload(doc, final, thumbs[0], privacy=doc.meta.get('privacy'),
+                            publish_at=doc.meta.get('publish_at'), description=pack.get('description'))
             if not up.video_id:
                 raise RuntimeError('YouTube returned no video ID; queue unchanged')
             # Persist the receipt before any nonessential notification.

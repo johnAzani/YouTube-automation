@@ -14,11 +14,11 @@ name: Dry render — approved style (no upload)
 #   Trigger it by changing the marker file .ci/preview-render. Ordinary pushes to
 #   this branch do not start it.
 
+# It used to be pinned to a session branch that no longer exists, so the only
+# trigger left was a manual dispatch — and that dispatch still ran the code of
+# whatever branch it was launched from. A preview is only meaningful for the code
+# that is actually shipping, so it now runs on demand against main.
 on:
-  push:
-    branches: [arena/eb029c66-youtube-automation]
-    paths:
-      - '.ci/preview-render'
   workflow_dispatch:
     inputs:
       job:
@@ -51,9 +51,9 @@ jobs:
       - name: Check out the renderer
         uses: actions/checkout@v4
         with:
-          # Render the code of the branch that triggered this run: that is where
-          # the verified renderer and its alignment fixes live.
-          ref: ${{ github.ref_name }}
+          # The code that is actually shipping, not whichever branch the person
+          # dispatching happened to have selected in the dropdown.
+          ref: main
           fetch-depth: 0
 
       - name: Show what will be rendered

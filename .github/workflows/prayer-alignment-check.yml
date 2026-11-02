@@ -4,7 +4,9 @@ name: Validate prayer speech alignment
 on:
   workflow_dispatch:
   push:
-    branches: ["arena/**"]
+    # This guarded the alignment code but only on throwaway session branches, so a
+    # change merged to main was never validated by it. main is where it matters.
+    branches: [main]
     paths:
       - 'pipeline/prayer_alignment.py'
       - 'scripts/check_prayer_alignment.py'

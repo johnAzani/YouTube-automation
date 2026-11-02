@@ -308,7 +308,8 @@ def gemini_provider(job: Job, target: int) -> str:
         raise ExpandError("GEMINI_API_KEY is not set; refusing to write")
     from google import genai
 
-    client = genai.Client(api_key=key)
+    from pipeline.gemini_client import make_client
+    client = make_client(key)
     need, per_scene = budget_for(job, target)
     prompt = PROMPT.format(
         psalm_label=f"Psalm {job.psalm}" if job.psalm else "the psalm named in the title",

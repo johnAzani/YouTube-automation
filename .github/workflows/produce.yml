@@ -56,7 +56,12 @@ concurrency:
 jobs:
   produce:
     runs-on: ubuntu-latest     # public repo: 4-core/16GB, free & unlimited
-    timeout-minutes: 120
+    # Must exceed the sum of the step caps below, or the job kills itself before
+    # any step reaches its own limit. It was 120 while the steps summed to 140:
+    # the 0017 release died at the job boundary with the render still inside its
+    # budget. 240 leaves room for checkout, deps, alignment model and the report
+    # steps on top of 30 + 20 + 170.
+    timeout-minutes: 240
     env:
       DRY_RUN: ${{ (inputs.dry_run || false) && '1' || '0' }}
       PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
@@ -172,7 +177,13 @@ jobs:
         # "in progress" with nothing in the log until it ended. Its own timeout
         # means a wedged render fails the run at a named step, well inside the
         # job's 120-minute cap.
-        timeout-minutes: 90
+        # A 5:22 edition measures ~170 ms per frame on a runner (7,700 frames ≈
+        # 22 min) plus speech, alignment, asset fetch and upload; the slowest
+        # observed release was still inside 90 minutes only because earlier
+        # editions were shorter. 170 covers the measured worst case with room for
+        # a slow runner, and the per-stage progress lines now say where the time
+        # went if it ever comes close.
+        timeout-minutes: 170
         if: ${{ inputs.short == '' }}
         run: |
           set -o pipefail

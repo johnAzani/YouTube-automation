@@ -3,10 +3,11 @@ name: Read-only Gemini key diagnostic
 # This diagnostic requests model metadata only: it does not generate content,
 # inspect other secrets, or verify billing. It never prints the API key or API
 # response, and runs only from this trusted branch.
+# This was pinned to the branch of an Arena session that no longer exists, and its
+# job carried the same `if`, so it could not run on any branch that still does. A
+# diagnostic that cannot run is worse than none: it looks like coverage.
 on:
   push:
-    branches:
-      - arena/564c86c7-youtube-automation
     paths:
       - .github/workflows/gemini-key-diagnostic.yml
   workflow_dispatch:
@@ -15,7 +16,6 @@ permissions: {}
 
 jobs:
   check:
-    if: github.ref == 'refs/heads/arena/564c86c7-youtube-automation'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
