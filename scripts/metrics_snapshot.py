@@ -132,6 +132,13 @@ def _post_github_issue(channel_snapshot: dict, rows: list[dict], today_text: str
         print(f"analytics issue creation skipped: {exc!r}")
 
 
+def scopes_for_refresh() -> list[str]:
+    """The scopes `_credentials()` asks for when it refreshes the token."""
+    from pipeline.upload import SCOPES
+
+    return list(SCOPES)
+
+
 def main() -> int:
     from googleapiclient.discovery import build
 
@@ -139,7 +146,26 @@ def main() -> int:
         print("missing YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET, or YOUTUBE_REFRESH_TOKEN")
         return 1
 
-    creds = _credentials()
+    try:
+        creds = _credentials()
+    except Exception as exc:  # noqa: BLE001
+        # A RefreshError here is almost always `invalid_scope`: the stored refresh
+        # token was minted with a different scope set than the code asks for. That
+        # arrived as a bare stack trace for a week, which reads as "the analytics
+        # code is broken" when the fix is to mint the token again.
+        text = str(exc).lower()
+        if "invalid_scope" in text or "refresh" in text:
+            print("::error title=YouTube token rejected::the stored refresh token cannot "
+                  "be exchanged for the scopes this script needs")
+            print("requested scopes:")
+            for scope in scopes_for_refresh():
+                print(f"  - {scope}")
+            print("fix: re-mint YOUTUBE_REFRESH_TOKEN with "
+                  "`python scripts/youtube_oauth.py --client-secret <file>` (purpose upload) "
+                  "and update the repository secret. The upload path needs the same scopes.")
+            return 2
+        raise
+
     youtube = build("youtube", "v3", credentials=creds, cache_discovery=False)
 
     ch = youtube.channels().list(part="contentDetails,statistics", mine=True).execute()

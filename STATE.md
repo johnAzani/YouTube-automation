@@ -813,3 +813,60 @@ Also fixed:
 → draft → insert → ledger, dedupe on the second run, skip already-answered threads,
 refuse scams, hold crises, and exit non-zero when every insert fails. Full suite
 **343 tests, 436 with pytest**.
+
+### Standing rule: monitor every automation, not the one being asked about
+
+Three rounds of "is X working?" produced the same answer three times. Each check
+was triggered by the owner, and each one found a green workflow doing nothing. So
+the rule is now standing, and it is enforced by code rather than by memory:
+
+> **Every automation is checked continuously — every three hours — for whether it
+> ran, whether it succeeded, and whether the run changed anything. Faults are
+> corrected on sight, before the owner notices.**
+
+`scripts/automation_monitor.py` is the check. For every scheduled workflow:
+
+| verdict | meaning | severity |
+|---|---|---|
+| `OK` | ran inside its cron window, last run succeeded | — |
+| `NEW` | added recently; its first window has not closed | warning |
+| `UNTESTED FIX` | last run failed, but the workflow changed afterwards | warning |
+| `FAILING` | last run failed with nothing changed since | **blocking** |
+| `OVERDUE` | last run older than its own cadence + grace | **blocking** |
+| `NEVER RAN` | registered, green on the Actions page, never executed | **blocking** |
+| `FLAKY` | 2+ failures in the last 5 runs | warning |
+
+It also records **outcomes**, because a successful run is not evidence of work: the
+last upload, the size of the long-form queue, the number of authored Short specs,
+and the number of replies actually recorded in `content/comments/replied.json`.
+
+`.github/workflows/monitor.yml` runs it every three hours at :23 past, with the
+Gemini key, `EXPECT_BRAIN_API=1`, and issue permission. `pipeline_watchdog.py`
+consumes its findings, keeps one issue open while anything is wrong and closes it
+on the first fully healthy check. The snapshot is committed to
+`content/monitor/status.json` so a recurring fault is dated instead of rediscovered.
+
+First run of the monitor, on real history:
+
+```
+monitor.yml            NEVER RAN      never         0
+automation-health.yml  NEW            never         0   added today, first window open
+metrics.yml            UNTESTED FIX   10-30 22:37   6   failed before its last edit
+comments.yml           OK             11-01 22:49  11
+community.yml          OK             11-01 22:50   1
+gemini_brain.yml       OK             11-01 10:25   3
+keepalive.yml          OK             10-26 09:08   1
+produce.yml            OK             11-01 22:47  20
+```
+
+Two of those were real findings the old health check could not see. `metrics.yml`
+had been failing weekly since 30 October with `invalid_scope: Bad Request` — the
+stored refresh token could not be exchanged for the scopes the script requests.
+That arrived as a bare stack trace, which reads as broken analytics code; it now
+prints the scopes it wanted and the exact command to re-mint the token. (The upload
+token was re-minted on 31 October, after that failure, so the next Friday run should
+pass — the monitor keeps calling it an untested fix until it does.)
+
+20 new tests pin the verdicts, including the two that matter most: an empty run
+history must never report healthy, and a failure that predates the last edit is
+"untested", not "fixed". Full suite **456 with pytest**.

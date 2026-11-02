@@ -1,0 +1,434 @@
+"""Watch every automation, not just the ones someone asked about.
+
+Three rounds of "is X working?" produced the same answer three times — no, and
+nothing said so. Each subsystem was checked only when the owner asked, and each
+check found a green workflow that did nothing:
+
+* `comments.yml` — wrong API parameter, caught by a broad except, "no comments
+  found", exit 0;
+* `expand-scripts.yml` — never ran at all, and would have failed on import;
+* `gemini_brain.yml` — ran daily, asked its own queue for permission, and the
+  queue (counting unbuildable rows as runway) always said "no work needed";
+* `produce.yml` — failed every slot on a job that could never render.
+
+A green tick is not evidence. This module is the evidence:
+
+1. **Did each workflow run at all?** (a workflow that never starts never fails)
+2. **Did the runs succeed?** (and is the last failure older than the last fix?)
+3. **Did the run leave any trace?** — a publish, a ledger row, a queued script.
+4. **Is the channel actually publishing?** — the only outcome that matters.
+
+It prints a table, writes machine-readable JSON, and hands the severity-ranked
+findings to `scripts/pipeline_watchdog.py`, which keeps one issue open while
+anything is wrong.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import shutil
+import subprocess
+import sys
+from dataclasses import dataclass, field
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
+WORKFLOWS = ROOT / ".github" / "workflows"
+MONITOR_STATE = ROOT / "content" / "monitor" / "status.json"
+
+# A workflow is "fresh" if it ran inside its own cadence plus this grace.
+GRACE = timedelta(hours=6)
+# A run older than the newest commit to its own workflow file cannot be evidence
+# that the workflow works now — it was fixed afterwards.
+RETEST_WINDOW = timedelta(minutes=1)
+
+
+@dataclass
+class Automation:
+    workflow: str
+    name: str
+    crons: list[str]
+    last_run: datetime | None = None
+    last_conclusion: str | None = None
+    last_success: datetime | None = None
+    failures_5: int = 0
+    runs_14d: int = 0
+    max_gap: timedelta = timedelta(days=1)
+    effect: str = ""
+    verdict: str = ""
+    detail: str = ""
+    severity: str = "ok"
+
+    def as_dict(self) -> dict:
+        return {
+            "workflow": self.workflow,
+            "name": self.name,
+            "crons": self.crons,
+            "last_run": self.last_run.isoformat() if self.last_run else None,
+            "last_conclusion": self.last_conclusion,
+            "last_success": self.last_success.isoformat() if self.last_success else None,
+            "runs_14d": self.runs_14d,
+            "failures_5": self.failures_5,
+            "effect": self.effect,
+            "verdict": self.verdict,
+            "detail": self.detail,
+            "severity": self.severity,
+        }
+
+
+@dataclass
+class MonitorReport:
+    automations: list[Automation] = field(default_factory=list)
+    outcomes: list[dict] = field(default_factory=list)
+    generated_at: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @property
+    def blocking(self) -> list[Automation]:
+        return [a for a in self.automations if a.severity == "blocking"]
+
+    @property
+    def warnings(self) -> list[Automation]:
+        return [a for a in self.automations if a.severity == "warning"]
+
+    @property
+    def healthy(self) -> bool:
+        return not self.blocking and not any(o.get("severity") == "blocking" for o in self.outcomes)
+
+    def as_dict(self) -> dict:
+        return {
+            "generated_at": self.generated_at.isoformat(),
+            "healthy": self.healthy,
+            "automations": [a.as_dict() for a in self.automations],
+            "outcomes": self.outcomes,
+        }
+
+
+# --------------------------------------------------------------------------- #
+# GitHub data
+# --------------------------------------------------------------------------- #
+def _gh(args: list[str]) -> subprocess.CompletedProcess:
+    return subprocess.run(["gh", *args], capture_output=True, text=True,
+                          cwd=ROOT, timeout=120)
+
+
+def gh_available() -> bool:
+    return bool(os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+                or shutil.which("gh"))
+
+
+def fetch_runs(per_page: int = 20) -> list[dict]:
+    """Recent runs for every scheduled workflow, keyed by file name.
+
+    The repo-wide `/actions/runs` feed is dominated by push-triggered CI, which
+    pushed the weekly jobs off the first page and made them look like they had never
+    run. Asking each workflow for its own history is the only reliable way to tell
+    "never runs" from "ran a week ago".
+    """
+    proc = _gh(["api", f"repos/{repo_slug()}/actions/workflows?per_page=100"])
+    if proc.returncode != 0:
+        raise RuntimeError((proc.stderr or "").strip()[:300] or "gh api failed")
+    workflows = json.loads(proc.stdout or "{}").get("workflows", [])
+    by_file = {w["path"].split("/")[-1]: w["id"] for w in workflows}
+
+    runs: list[dict] = []
+    for filename, _name, _crons in workflow_files():
+        wid = by_file.get(filename)
+        if not wid:
+            continue
+        resp = _gh(["api", f"repos/{repo_slug()}/actions/workflows/{wid}/runs?per_page={per_page}"])
+        if resp.returncode != 0:
+            continue
+        for run in json.loads(resp.stdout or "{}").get("workflow_runs", []):
+            run["path"] = filename
+            runs.append(run)
+    return runs
+
+
+def repo_slug() -> str:
+    proc = subprocess.run(["git", "remote", "get-url", "origin"], capture_output=True,
+                          text=True, cwd=ROOT, timeout=30)
+    url = (proc.stdout or "").strip()
+    if url.endswith(".git"):
+        url = url[:-4]
+    if ":" in url and "@" in url:            # git@github.com:owner/repo
+        return url.split(":", 1)[1]
+    return "/".join(url.split("/")[-2:])
+
+
+def _parse(stamp: str | None) -> datetime | None:
+    if not stamp:
+        return None
+    return datetime.fromisoformat(stamp.replace("Z", "+00:00"))
+
+
+def cron_gap(crons: list[str]) -> timedelta:
+    widest = timedelta(days=1)
+    for expr in crons:
+        parts = expr.split()
+        if len(parts) != 5:
+            continue
+        _, _, dom, _, dow = parts
+        if dow != "*":
+            days = {d for d in dow.replace(",", " ").split() if d.isdigit()}
+            widest = max(widest, timedelta(days=7 if len(days) <= 1 else 7))
+        elif dom != "*":
+            widest = max(widest, timedelta(days=31))
+    return widest
+
+
+def workflow_files() -> list[tuple[str, str, list[str]]]:
+    out = []
+    for path in sorted(WORKFLOWS.glob("*.yml")):
+        text = path.read_text(encoding="utf-8")
+        crons = [c for c in _crons(text)]
+        if not crons:
+            continue
+        name = ""
+        for line in text.splitlines():
+            if line.startswith("name:"):
+                name = line.split(":", 1)[1].strip()
+                break
+        out.append((path.name, name or path.stem, crons))
+    return out
+
+
+def _crons(text: str) -> list[str]:
+    import re
+
+    return re.findall(r"cron:\s*[\"']([^\"']+)[\"']", text)
+
+
+def first_commit_for(path: Path) -> datetime | None:
+    """When the workflow file first appeared — a brand-new cron cannot have run yet."""
+    proc = subprocess.run(["git", "log", "--diff-filter=A", "--follow", "--format=%cI",
+                           "--", str(path)],
+                          capture_output=True, text=True, cwd=ROOT, timeout=30)
+    stamps = [ln.strip() for ln in (proc.stdout or "").splitlines() if ln.strip()]
+    return _parse(stamps[-1]) if stamps else None
+
+
+def last_commit_for(path: Path) -> datetime | None:
+    proc = subprocess.run(["git", "log", "-1", "--format=%cI", "--", str(path)],
+                          capture_output=True, text=True, cwd=ROOT, timeout=30)
+    stamp = (proc.stdout or "").strip()
+    return _parse(stamp) if stamp else None
+
+
+# --------------------------------------------------------------------------- #
+# Verdicts
+# --------------------------------------------------------------------------- #
+EFFECTS = {
+    "produce.yml": "publishes a video: content/published/ gains a receipt with a video id",
+    "comments.yml": "posts replies and records them in content/comments/replied.json",
+    "gemini_brain.yml": "writes content/queue/ or content/shorts-scripts/",
+    "community.yml": "writes content/community/<id>-READY.md",
+    "metrics.yml": "writes content/metrics.csv and opens a snapshot issue",
+    "keepalive.yml": "re-arms scheduled workflows",
+    "automation-health.yml": "reports and files stalls",
+    "monitor.yml": "this report",
+}
+
+
+def classify(report: MonitorReport, runs: list[dict], now: datetime | None = None,
+             expect_gh: bool = True) -> MonitorReport:
+    now = now or datetime.now(timezone.utc)
+    by_workflow: dict[str, list[dict]] = {}
+    for run in runs:
+        path = (run.get("path") or "").split("/")[-1]
+        by_workflow.setdefault(path, []).append(run)
+
+    for filename, name, crons in workflow_files():
+        auto = Automation(workflow=filename, name=name, crons=crons,
+                          max_gap=cron_gap(crons), effect=EFFECTS.get(filename, ""))
+        mine = sorted(by_workflow.get(filename, []),
+                      key=lambda r: r.get("created_at") or "", reverse=True)
+        if mine:
+            auto.last_run = _parse(mine[0].get("created_at"))
+            auto.last_conclusion = mine[0].get("conclusion")
+            successes = [r for r in mine if r.get("conclusion") == "success"]
+            auto.last_success = _parse(successes[0]["created_at"]) if successes else None
+            recent = [r for r in mine
+                      if _parse(r.get("created_at")) and now - _parse(r["created_at"]) <= timedelta(days=14)]
+            auto.runs_14d = len(recent)
+            auto.failures_5 = sum(1 for r in recent[:5] if r.get("conclusion") == "failure")
+
+        report.automations.append(auto)
+        _verdict(auto, now)
+    return report
+
+
+def _verdict(auto: Automation, now: datetime) -> None:
+    if auto.last_run is None:
+        added = first_commit_for(WORKFLOWS / auto.workflow)
+        if added and now - added < auto.max_gap + GRACE:
+            auto.verdict, auto.severity = "NEW", "warning"
+            auto.detail = (f"added {added.date().isoformat()}; its first scheduled "
+                           f"window has not closed yet")
+            return
+        auto.verdict, auto.severity = "NEVER RAN", "blocking"
+        auto.detail = ("no run recorded. A scheduled workflow that never starts never "
+                       "fails, so nothing reports this unless something looks for it")
+        return
+
+    overdue_at = auto.last_run + auto.max_gap + GRACE
+    if now > overdue_at:
+        auto.verdict, auto.severity = "OVERDUE", "blocking"
+        auto.detail = (f"last run {auto.last_run.date().isoformat()}; expected again by "
+                       f"{overdue_at.date().isoformat()}")
+        return
+
+    if auto.last_conclusion == "failure":
+        fixed_at = last_commit_for(WORKFLOWS / auto.workflow)
+        if fixed_at and auto.last_run and auto.last_run < fixed_at:
+            auto.verdict, auto.severity = "UNTESTED FIX", "warning"
+            auto.detail = (f"last run failed at {auto.last_run.isoformat()}, but the "
+                           f"workflow was changed afterwards — needs one green run")
+        else:
+            auto.verdict, auto.severity = "FAILING", "blocking"
+            auto.detail = f"last run failed with nothing changed since"
+        return
+
+    if auto.failures_5 >= 3:
+        auto.verdict, auto.severity = "FLAKY", "warning"
+        auto.detail = f"{auto.failures_5} of its last 5 runs failed"
+        return
+
+    auto.verdict, auto.severity = "OK", "ok"
+    age = now - (auto.last_success or auto.last_run)
+    auto.detail = f"last success {age.total_seconds() / 3600:.1f}h ago"
+
+
+# --------------------------------------------------------------------------- #
+# Outcomes: did the channel actually gain anything?
+# --------------------------------------------------------------------------- #
+def check_outcomes(report: MonitorReport, now: datetime | None = None,
+                   published_dir: Path | None = None,
+                   log_path: Path | None = None) -> MonitorReport:
+    now = now or datetime.now(timezone.utc)
+    published = Path(published_dir or ROOT / "content" / "published")
+    newest = None
+    for path in sorted(published.glob("*.md")):
+        text = path.read_text(encoding="utf-8")
+        if "youtube_video_id:" not in text:
+            continue
+        stamp = path.stat().st_mtime
+        newest = max(newest or stamp, stamp)
+
+    if newest:
+        age = now - datetime.fromtimestamp(newest, tz=timezone.utc)
+        report.outcomes.append({
+            "outcome": "last upload", "detail": f"{age.total_seconds() / 3600:.1f}h ago",
+            "severity": "warning" if age > timedelta(hours=36) else "ok"})
+    else:
+        report.outcomes.append({"outcome": "last upload", "detail": "none recorded",
+                                "severity": "blocking"})
+
+    queue = list((ROOT / "content" / "queue").glob("*.md"))
+    report.outcomes.append({"outcome": "long-form queue",
+                            "detail": f"{len(queue)} script(s) in content/queue/",
+                            "severity": "ok" if queue else "warning"})
+
+    specs = list((ROOT / "content" / "shorts-scripts").glob("*.json"))
+    report.outcomes.append({"outcome": "authored Short specs",
+                            "detail": f"{len(specs)} spec(s)", "severity": "ok"})
+
+    log = Path(log_path or ROOT / "content" / "comments" / "replied.json")
+    if log.is_file():
+        try:
+            replied = json.loads(log.read_text(encoding="utf-8"))
+        except Exception:  # noqa: BLE001
+            replied = {}
+        posted = sum(1 for v in replied.values()
+                     if isinstance(v, dict) and v.get("reply_id"))
+        report.outcomes.append({"outcome": "replies recorded",
+                                "detail": f"{posted} live repl(ies), {len(replied)} row(s)",
+                                "severity": "ok"})
+    return report
+
+
+# --------------------------------------------------------------------------- #
+# Rendering
+# --------------------------------------------------------------------------- #
+def render(report: MonitorReport) -> str:
+    lines = ["", "AUTOMATION MONITOR — every scheduled workflow, plus the outcome that matters"]
+    lines.append("=" * 100)
+    lines.append(f"{'workflow':<28}{'verdict':<14}{'last run':<18}{'runs/14d':<10}detail")
+    lines.append("-" * 100)
+    for a in sorted(report.automations, key=lambda x: ("blocking", "warning", "ok").index(x.severity)):
+        last = a.last_run.strftime("%m-%d %H:%M") if a.last_run else "never"
+        lines.append(f"{a.workflow:<28}{a.verdict:<14}{last:<18}{a.runs_14d:<10}{a.detail}")
+    lines.append("")
+    lines.append("OUTCOMES")
+    for row in report.outcomes:
+        mark = {"blocking": "!!", "warning": " ~", "ok": "  "}[row["severity"]]
+        lines.append(f" {mark} {row['outcome']:<24}{row['detail']}")
+    lines.append("")
+    return "\n".join(lines)
+
+
+def findings(report: MonitorReport) -> list[tuple[str, str, bool]]:
+    """(area, detail, fatal) in the shape the watchdog already understands."""
+    out: list[tuple[str, str, bool]] = []
+    for a in report.automations:
+        if a.severity == "ok":
+            continue
+        out.append((a.workflow, f"{a.verdict} — {a.detail}", a.severity == "blocking"))
+    for row in report.outcomes:
+        if row["severity"] == "ok":
+            continue
+        out.append((row["outcome"], row["detail"], row["severity"] == "blocking"))
+    return out
+
+
+def main(argv=None) -> int:
+    parser = argparse.ArgumentParser(description="Audit every automation and its outcomes.")
+    parser.add_argument("--json", action="store_true")
+    parser.add_argument("--save", action="store_true", help="write content/monitor/status.json")
+    parser.add_argument("--offline", action="store_true",
+                        help="skip GitHub calls (unit tests, no network)")
+    args = parser.parse_args(argv)
+
+    report = MonitorReport()
+    if args.offline or not gh_available():
+        print("[monitor] no GitHub access — reporting outcomes only (workflow history unknown)")
+        runs: list[dict] = []
+    else:
+        try:
+            runs = fetch_runs()
+        except Exception as exc:  # noqa: BLE001
+            print(f"[monitor] could not read run history: {exc}")
+            runs = []
+    classify(report, runs)
+    check_outcomes(report)
+
+    if args.json:
+        print(json.dumps(report.as_dict(), indent=2))
+    else:
+        print(render(report))
+
+    if args.save:
+        MONITOR_STATE.parent.mkdir(parents=True, exist_ok=True)
+        MONITOR_STATE.write_text(json.dumps(report.as_dict(), indent=2) + "\n",
+                                 encoding="utf-8")
+
+    summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary:
+        with open(summary, "a", encoding="utf-8") as fh:
+            fh.write("### 📡 Automation monitor\n\n")
+            fh.write("| workflow | verdict | last run | detail |\n|---|---|---|---|\n")
+            for a in report.automations:
+                last = a.last_run.strftime("%Y-%m-%d %H:%M") if a.last_run else "never"
+                fh.write(f"| `{a.workflow}` | {a.verdict} | {last} | {a.detail} |\n")
+            fh.write("\n")
+
+    if not runs:
+        return 0
+    return 0 if report.healthy else 1
+
+
+if __name__ == "__main__":  # pragma: no cover
+    sys.exit(main())

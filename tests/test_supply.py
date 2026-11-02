@@ -290,11 +290,13 @@ class TestWatchdog(unittest.TestCase):
         self.assertTrue(report.healthy)
         self.assertTrue(any(f.area == "shorts queue" for f in report.findings))
 
-    def test_a_workflow_that_never_ran_is_reported(self):
+    def test_the_fallback_audit_still_reports_a_workflow_that_never_ran(self):
+        from scripts import pipeline_watchdog as wd
         from scripts.automation_health import Row
 
-        report = self.report(workflow_rows=[Row("expand-scripts.yml", "daily", None,
-                                                "NEVER RAN", "no run recorded")])
+        report = wd.Report()
+        wd.check_workflows(report, rows=[Row("expand-scripts.yml", "daily", None,
+                                             "NEVER RAN", "no run recorded")])
         self.assertTrue(any("NEVER RAN" in f.detail for f in report.findings))
 
     def test_a_stale_publish_is_reported(self):
