@@ -1094,3 +1094,10 @@ finished video and only then had the upload shield say "already there".
 any Gemini or alignment work — and if the title is live it records the receipt and
 moves the job to `published/` with the real video id instead of rendering. It fails
 soft: any error in the pre-check and the release proceeds as normal.
+
+**Recording a duplicate must not cost the slot.** With the pre-check in place, the
+3:14pm run would have found 0013 live, filed it, and exited — a day with no new
+video and a green tick, which is the failure this whole afternoon was about. When
+`--next` records an already-live job it now selects again and renders the next
+eligible script, stopping at the first real publish. Two tests: it moves on after a
+duplicate, and it stops after one real release rather than draining the queue.
