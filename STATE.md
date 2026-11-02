@@ -1059,3 +1059,13 @@ The stages are now two steps — *Render the Short (9:16)* (30 min, `continue-on
 and *Render and upload the long-form edition* (90 min, the release) — each writing
 its own section of the run summary, so a stall fails at a named step and a working
 render shows which stage it is in.
+
+**The watchdog could not report a stale publish either.** `last_publish` looked for
+`published_at` / `uploaded_at` / `date` / `publish_at`; the publisher writes
+`published_on`. Every receipt therefore fell through to the file's mtime, and a CI
+checkout stamps every file with the checkout time — so the watchdog read "last
+publish 0d ago" on a channel that had not published since the previous day. It is
+the third instance of the same defect (the monitor read mtime too) and the most
+damaging, because this is the job that decides whether to file the issue. It now
+dates from `published_on`, reports an undated receipt as *undated* rather than as
+fresh, and says "recency unknown" instead of "no receipt exists".
