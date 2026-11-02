@@ -101,7 +101,9 @@ def audit_longform_queue() -> tuple[list[QueueItemStatus], list[Path]]:
                 quota_reset_utc=quota_reset,
             )
             items.append(item)
-            if raw_status == "approved":
+            # Below the word floor it cannot build, so it is queued but not runnable.
+            from pipeline.script_doc import MIN_LONGFORM_WORDS
+            if raw_status == "approved" and doc.word_count >= MIN_LONGFORM_WORDS:
                 approved_paths.append(path)
         except Exception:
             continue
@@ -126,17 +128,29 @@ def audit_shorts_queue() -> tuple[list[QueueItemStatus], list[Path]]:
             target_window = data.get("target_window_utc") or data.get("publish_at")
             quota_reset = data.get("quota_reset_utc")
 
+            # An "approved" Short with no scene script in tools/shorts.py cannot
+            # publish. Counting it as approved inflated the runway and hid a stalled
+            # queue, so it is reported as blocked instead.
+            try:
+                from pipeline.short_release import _renderer_script_keys
+                renderable = _renderer_script_keys()
+            except Exception:
+                renderable = {key}
+            effective_status = raw_status
+            if raw_status == "approved" and key not in renderable:
+                effective_status = "blocked"
+
             item = QueueItemStatus(
                 queue_type="short",
                 identifier=key,
                 title=title,
-                status=raw_status,
+                status=effective_status,
                 privacy=privacy,
                 scheduled_window_utc=target_window,
                 quota_reset_utc=quota_reset,
             )
             items.append(item)
-            if raw_status == "approved":
+            if effective_status == "approved":
                 approved_paths.append(path)
         except Exception:
             continue
