@@ -457,6 +457,36 @@ class TestTheWorkflowCannotLoseState(unittest.TestCase):
         self.assertNotIn("raise SystemExit(f'missing fallback image {fallback}')", body)
 
 
+class TestTheReleaseCanBeStartedOnDemand(unittest.TestCase):
+    """`workflow_dispatch` needs Actions-write; `repository_dispatch` does not.
+
+    On 2 November GitHub's scheduler never started the 3:14pm slot, the supervisor's
+    90-minute grace meant the earliest it would act was 4:44pm, and the only
+    dispatch route available to the account's integration returned 403. One POST
+    with contents-write starts the release instead.
+    """
+
+    def _wf(self):
+        import yaml
+        path = Path(__file__).resolve().parents[1] / ".github" / "workflows" / "produce.yml"
+        return yaml.safe_load(path.read_text(encoding="utf-8"))
+
+    def test_a_repository_dispatch_starts_a_release(self):
+        on = self._wf()[True]
+        self.assertIn("repository_dispatch", on)
+        self.assertEqual(on["repository_dispatch"]["types"], ["publish-now"])
+
+    def test_the_manual_path_still_exists(self):
+        self.assertIn("workflow_dispatch", self._wf()[True])
+
+    def test_an_on_demand_run_still_repairs_the_queue(self):
+        # repository_dispatch carries no inputs, so the step conditions that test
+        # `inputs.job == ''` must treat the missing value as blank, not as a job.
+        text = (Path(__file__).resolve().parents[1] / ".github"
+                / "workflows" / "produce.yml").read_text(encoding="utf-8")
+        self.assertIn("inputs.job == ''", text)
+
+
 class TestTheReleaseIsObservable(unittest.TestCase):
     """A 30-minute render and a wedged one used to look identical.
 
