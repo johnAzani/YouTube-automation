@@ -246,5 +246,95 @@ class TestEveryReleaseLooksLikeItself(unittest.TestCase):
                 self.assertGreaterEqual(report.contrast, MIN_CONTRAST - 0.5)
 
 
+class TestTheFrameIsTheVideosOwnFootage(unittest.TestCase):
+    """Re-seeding the drawing was not enough.
+
+    After the copy became per-video, every thumbnail was still the same moon-over-
+    ridge illustration — "only the text changed", as the owner put it. A backdrop is
+    now the job's own scene asset, treated so it obeys the same measured rules.
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        from PIL import Image, ImageDraw, ImageFilter
+        import random
+
+        cls.tmp = TMP / "backdrops"
+        cls.tmp.mkdir(parents=True, exist_ok=True)
+        cls.photos = []
+        for i, hue in enumerate(((120, 140, 200), (200, 150, 110))):
+            rng = random.Random(i)
+            im = Image.new("RGB", (1280, 720))
+            d = ImageDraw.Draw(im)
+            for y in range(720):
+                t = y / 720
+                d.line([(0, y), (1280, y)],
+                       fill=(int(hue[0] * t), int(hue[1] * t), int(hue[2] * t)))
+            for _ in range(14):
+                cx, cy = rng.randint(0, 1280), rng.randint(150, 650)
+                rx, ry = rng.randint(150, 500), rng.randint(60, 200)
+                d.ellipse([cx - rx, cy - ry, cx + rx, cy + ry],
+                          fill=(rng.randint(60, 170), rng.randint(60, 180), rng.randint(80, 210)))
+            im = im.filter(ImageFilter.GaussianBlur(18))
+            path = cls.tmp / f"photo-{i}.jpg"
+            im.save(path, quality=92)
+            cls.photos.append(path)
+
+    def test_the_backdrop_is_the_jobs_own_picture(self):
+        reports = ctr.generate_ctr_pack(TMP / "own-footage",
+                                        hero_override="Lay Down in Peace",
+                                        doc_key="0017", backdrop=self.photos[0])
+        for r in reports:
+            self.assertEqual(r.backdrop, f"photo:{self.photos[0].name}")
+
+    def test_a_photo_backdrop_still_obeys_the_measured_rules(self):
+        reports = ctr.generate_ctr_pack(TMP / "footage-rules",
+                                        hero_override="Be Still and Know",
+                                        doc_key="0013", backdrop=self.photos[1])
+        for r in reports:
+            self.assertLess(r.path.stat().st_size, 2 * 1024 * 1024)
+            self.assertTrue(r.safe_zone_ok, r.variant)
+            self.assertTrue(r.badge_zone_ok, r.variant)
+            self.assertGreaterEqual(r.edge_luma, ctr.EDGE_LUMA_MIN, r.variant)
+            if r.hero:
+                self.assertGreaterEqual(r.contrast, MIN_CONTRAST - 0.5, r.variant)
+
+    def test_two_videos_on_different_footage_cannot_look_alike(self):
+        a = ctr.generate_ctr_pack(TMP / "footage-a", hero_override="Lay Down in Peace",
+                                  doc_key="0017", backdrop=self.photos[0])
+        b = ctr.generate_ctr_pack(TMP / "footage-b", hero_override="Be Still and Know",
+                                  doc_key="0013", backdrop=self.photos[1])
+        for ra, rb in zip(a, b):
+            self.assertNotEqual(ra.path.read_bytes(), rb.path.read_bytes(), ra.variant)
+
+    def test_the_darkest_photo_does_not_dissolve_into_the_page(self):
+        from PIL import Image
+        flat = self.tmp / "flat.jpg"
+        Image.new("RGB", (1280, 720), (2, 3, 6)).save(flat, quality=90)
+        reports = ctr.generate_ctr_pack(TMP / "footage-flat", hero_override="No Terror by Night",
+                                        doc_key="0015", backdrop=flat)
+        for r in reports:
+            self.assertGreaterEqual(r.edge_luma, ctr.EDGE_LUMA_MIN, r.variant)
+
+    def test_the_most_detailed_asset_is_chosen(self):
+        flat = self.tmp / "choose-flat.jpg"
+        from PIL import Image
+        Image.new("RGB", (640, 360), (40, 40, 40)).save(flat, quality=90)
+        picked = ctr.pick_backdrop([flat, self.photos[0]])
+        self.assertEqual(picked, self.photos[0])
+
+    def test_an_unreadable_asset_is_skipped_not_fatal(self):
+        missing = self.tmp / "nope.jpg"
+        self.assertEqual(ctr.pick_backdrop([missing]), None)
+        self.assertEqual(ctr.pick_backdrop([]), None)
+
+    def test_the_pipeline_feeds_the_jobs_assets_to_the_pack(self):
+        from pathlib import Path
+        source = (Path(__file__).resolve().parents[1]
+                  / "pipeline" / "prayer_pipeline.py").read_text(encoding="utf-8")
+        self.assertIn("backdrop=pick_backdrop(assets)", source)
+        self.assertIn("fetch_scene_assets", source)
+
+
 if __name__ == "__main__":
     unittest.main()

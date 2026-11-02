@@ -301,3 +301,25 @@ one that looks best in a sheet.
 - growthos, 1of10, Alan Spicer, red11media, pikzels, instantviews — title/thumbnail complementarity, curiosity gap
 - mer.vin, *YouTube Thumbnail CTR for Song Videos* (Sept 2026) — contemplative/prayer palette, mobile-first sizing
 - YouTube Help — Test & Compare rules (3 variants, watch-time share, 1280×720 minimum)
+
+### Correction, 2 November (second pass): per-video copy is not per-video art
+
+With the copy fixed, the owner's next report was exact: *"it is only the text that
+changed."* He was right. `variations_for()` moved the moon by three percent on the
+same drawing — moon, ridge, lit house — so every frame on the channel was still one
+illustration with different words on it.
+
+The backdrop is now the footage **the video is actually made of**:
+
+* `pick_backdrop()` chooses the job's own scene asset with the highest RMS contrast —
+  a flat sky gives type nothing to sit against, a detailed ridge survives 168 px;
+* `_night_grade()` cools the picture to the channel's night and lifts the black
+  point to `40 + 215·v^1.08`, because a photo darkened the obvious way collapses
+  into YouTube's #0F0F0F page and the frame loses its edge in the dark feed;
+* `_text_scrim()` darkens only the side the type occupies, fading across the frame,
+  so the picture is not uniformly dimmed to make room for words;
+* the poster variant keeps a clean photograph with no scrim and no copy.
+
+Measured on a real 1024×1536 night photograph: contact 11.0:1, border luma 36.0
+(minimum 26), 167 KiB, safe zone and badge clearance intact. A pure-black asset
+still lands at 26.2 — the grade is what guarantees the edge, not the picture.
