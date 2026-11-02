@@ -148,6 +148,24 @@ jobs:
             exit "$rc"
           fi
 
+      - name: Record videos that are live but not yet in the repo
+        # A publish whose commit failed leaves the script in the queue looking new.
+        # Recovering it is fast when the video exists and costs nothing when it does
+        # not — but on 2 November it ran inside the release step, so a thumbnail
+        # repair and a 45-minute render shared one 90-minute budget. Both runs that
+        # afternoon timed out at exactly 90:00 with a video live and unrecorded, and
+        # the next slot inherited the same problem. Its own step, its own timeout.
+        id: record
+        timeout-minutes: 20
+        continue-on-error: true
+        if: ${{ inputs.short == '' && inputs.job == '' }}
+        run: |
+          set -o pipefail
+          python -m pipeline.run --record-published 2>&1 | tee record.log
+          rc=$?
+          { echo "### Receipts for already-live videos (exit $rc)"; echo '```';
+            grep -v '^\[run\] ⏳' record.log | tail -20; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
       - name: Render and upload the long-form edition
         # This is the release. Before it was merged with the Short into one step,
         # a 30-minute render and a wedged render looked identical: one opaque

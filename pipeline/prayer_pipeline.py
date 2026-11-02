@@ -73,6 +73,37 @@ def already_published(doc) -> str | None:
         return None
 
 
+def record_if_live(path: Path, doc=None) -> dict | None:
+    """If this title is already on the channel, record it here and return the result.
+
+    The receipt — the move to `content/published/` with the real video id — is the
+    only thing that stops the next slot re-uploading the same video, so recovering a
+    lost one is a *release-critical* job, not bookkeeping. It is also fast when the
+    video is live and expensive when it is not: on 2 November this check decided to
+    render, so a repair and a 45-minute render shared one 90-minute step and the
+    step timed out twice. Callers that only want the repair pass `render=False`.
+    """
+    from .run import _mark_job_uploaded
+
+    doc = doc or parse_script(path)
+    existing = already_published(doc)
+    if not existing:
+        return None
+    print(f"[prayer] {doc.id} is already live as {existing}; recording it instead "
+          f"of re-rendering")
+    _mark_job_uploaded(path, doc, existing)
+    job_dir = OUTPUT_DIR / doc.slug
+    job_dir.mkdir(parents=True, exist_ok=True)
+    _refresh_live_thumbnail(doc, existing, job_dir)
+    result = {'id': doc.id, 'slug': doc.slug, 'video': None, 'thumbnail': None,
+              'duration_seconds': None, 'tts_engine': 'none', 'dry_run': False,
+              'video_id': existing, 'watch_url': f'https://youtu.be/{existing}',
+              'privacy_status': 'already_published', 'uploaded': False}
+    (job_dir / 'job_result.json').write_text(
+        json.dumps(result, indent=2), encoding='utf-8')
+    return result
+
+
 def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
     """Run the approved rendering pipeline with hard safety checks.
 
@@ -95,21 +126,9 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
     _require_production_prerequisites(doc, dry_run, CONFIG.youtube_refresh_token,
                                       CONFIG.youtube_client_id, CONFIG.youtube_client_secret)
     if not dry_run:
-        existing = already_published(doc)
-        if existing:
-            print(f"[prayer] {doc.id} is already live as {existing}; recording it instead "
-                  f"of re-rendering")
-            _mark_job_uploaded(path, doc, existing)
-            job_dir = OUTPUT_DIR / doc.slug
-            job_dir.mkdir(parents=True, exist_ok=True)
-            _refresh_live_thumbnail(doc, existing, job_dir)
-            result = {'id': doc.id, 'slug': doc.slug, 'video': None, 'thumbnail': None,
-                      'duration_seconds': None, 'tts_engine': 'none', 'dry_run': False,
-                      'video_id': existing, 'watch_url': f'https://youtu.be/{existing}',
-                      'privacy_status': 'already_published', 'uploaded': False}
-            (job_dir / 'job_result.json').write_text(
-                json.dumps(result, indent=2), encoding='utf-8')
-            return result
+        recorded = record_if_live(path, doc)
+        if recorded:
+            return recorded
 
     if not get_gemini_api_key():
         raise RuntimeError('Gemini API key missing; refusing voice substitution')
