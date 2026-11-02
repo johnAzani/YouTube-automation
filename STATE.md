@@ -1033,3 +1033,11 @@ said the Short was ready — the same shape of lie one layer down. A missing pho
 a missing asset, not a reason to publish nothing: `synthetic_plate()` draws the
 channel's sapphire plate with the scene kicker, the source log records
 `authored photo fallback`, and the render continues.
+
+**Riding CI, because CI is the only trigger that always fires.** At 10:01 on 2
+November the dry-run CI started within seconds of the push while the supervisor's
+own `push` trigger, its 10:00 slot and its 10:15 slot all produced nothing. The
+supervisor now also runs on `workflow_run` completion of *"Dry-run pipeline (CI
+proof)"* and *"pages build and deployment"* — the two workflows that start on every
+push and every pull request — so every CI run is another chance to notice a slot
+that never fired.
