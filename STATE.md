@@ -1069,3 +1069,20 @@ the third instance of the same defect (the monitor read mtime too) and the most
 damaging, because this is the job that decides whether to file the issue. It now
 dates from `published_on`, reports an undated receipt as *undated* rather than as
 fresh, and says "recency unknown" instead of "no receipt exists".
+
+**The 10:48 run published a video and then lost the record.** Its annotations say
+the long-form stage exited 0 — *"long-form published, the Short stage exited 1"* —
+so Psalm 46 went up on the channel. Then the commit step failed **five times in a
+row**: it retried `git pull --rebase --autostash origin main`, hit the same content
+conflict on every attempt, and gave up. The repo therefore still lists 0013 as
+`approved` in `content/queue/`, and the only thing standing between that and a
+duplicate upload is `upload.check_existing_channel_duplicate`, which queries the
+channel's last 50 uploads by title.
+
+Two fixes: the commit step no longer rebases. It re-points HEAD at the current
+main, stages the `content/` working tree on top, and commits — nothing to conflict
+on, so a retry can only be about main having moved, not about the same merge
+failing forever. And the Short failure itself: `tools/shorts.py` still had one
+`SystemExit` for a scene whose stock asset is a **video** while the scene names a
+photo that does not exist. That path now falls back to the same sapphire plate, so
+a missing image cannot take down a render again.

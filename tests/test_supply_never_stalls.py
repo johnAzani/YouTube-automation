@@ -267,11 +267,18 @@ class TestTheWorkflowCannotLoseState(unittest.TestCase):
         self.assertIn("group: content-state", self.workflow("produce.yml"))
         self.assertIn("group: content-state", self.workflow("scheduler-supervisor.yml"))
 
-    def test_the_publish_commit_retries_around_a_moving_main(self):
+    def test_the_publish_commit_cannot_loop_on_the_same_conflict(self):
+        """On 2 Nov it retried `pull --rebase` five times and hit the same conflict
+        every time, so a video that was live on the channel left no record."""
         text = self.workflow("produce.yml")
-        self.assertIn("git pull --rebase --autostash origin main", text)
+        self.assertNotIn("git pull --rebase --autostash origin main", text)
+        self.assertIn("git reset --mixed origin/main", text)
+        self.assertIn("git push --quiet origin HEAD:main", text)
         self.assertIn("Queue state lost", text)
-        self.assertNotIn('git commit -m "chore(content): publish job [skip ci]"\n            git push\n', text)
+
+    def test_a_stock_video_scene_without_a_photo_does_not_kill_the_render(self):
+        body = (Path(__file__).resolve().parents[1] / "tools" / "shorts.py").read_text()
+        self.assertNotIn("raise SystemExit(f'missing fallback image {fallback}')", body)
 
 
 class TestTheReleaseIsObservable(unittest.TestCase):

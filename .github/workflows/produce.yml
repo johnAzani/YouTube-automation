@@ -175,29 +175,36 @@ jobs:
 
       - name: Commit queue state (job moved to published/)
         # Losing this commit is not cosmetic: the published/ move is what stops the
-        # next run from uploading the same video again. Retry around a moving main
-        # instead of dying on the first rejected push.
+        # next run from uploading the same video again. On 2 November it failed five
+        # times in a row — `git pull --rebase` hit the same conflict on every retry,
+        # so the retry loop could never win, and a video that was live on the channel
+        # left no record in the repo.
+        #
+        # The fix is to stop rebasing. Re-point HEAD at the current main, stage our
+        # content/ working tree on top of it, and commit: there is no merge, so there
+        # is no conflict to loop on. Repeat only if main moves underneath us.
         if: ${{ always() && !cancelled() }}
         run: |
           set -e
           git config user.name "youtube-automation-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -A content/
-          if git diff --cached --quiet; then
-            echo "queue state unchanged"
-            exit 0
-          fi
-          git commit -m "chore(content): publish job [skip ci]"
-          for attempt in 1 2 3 4 5; do
-            if git push; then
-              echo "queue state committed on attempt $attempt"
+          for attempt in 1 2 3 4 5 6; do
+            git fetch --quiet origin main
+            git reset --mixed origin/main
+            git add -A content/
+            if git diff --cached --quiet; then
+              echo "queue state unchanged (nothing to record)"
               exit 0
             fi
-            echo "::warning::push rejected (attempt $attempt); rebasing onto main and retrying"
-            git pull --rebase --autostash origin main || true
-            sleep $((attempt * 5))
+            git commit --quiet -m "chore(content): publish job [skip ci]"
+            if git push --quiet origin HEAD:main; then
+              echo "queue state recorded on attempt $attempt"
+              exit 0
+            fi
+            echo "::warning::main moved during attempt $attempt; re-staging on the new tip"
+            sleep $((attempt * 3))
           done
-          echo "::error title=Queue state lost::could not commit the published/ move; the next run may re-upload the same video"
+          echo "::error title=Queue state lost::could not record the published/ move; the next run may re-upload the same video"
           exit 1
 
       # Style proof without a 1 GB download: three frames from the master,

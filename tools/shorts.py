@@ -2009,7 +2009,17 @@ def main(key):
         if sc.get('media_kind') == 'video':
             fallback = os.path.join(IMG, sc['img'])
             if not os.path.exists(fallback):
-                raise SystemExit(f'missing fallback image {fallback}')
+                # A stock video was found but the scene names a photo that does not
+                # exist. This raised SystemExit and killed the whole render, which is
+                # how a brain-authored Short failed at 10:48 on 2 November even
+                # though the long-form release beside it had succeeded.
+                if 'synthetic' not in plate_cache:
+                    plate_cache['synthetic'] = synthetic_plate(sc, key)
+                sc['fallback_plate'] = plate_cache['synthetic']
+                sc['plate'] = None
+                print(f"  scene {sc['t0']:5.1f}-{sc['t1']:5.1f}s | PLATE "
+                      f"(video scene, no photo for {sc['img']})")
+                continue
             if fallback not in plate_cache:
                 plate_cache[fallback] = prep_plate(fallback, sc.get('warm', 0.0))
             sc['fallback_plate'] = plate_cache[fallback]
