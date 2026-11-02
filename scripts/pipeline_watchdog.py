@@ -76,12 +76,23 @@ class Report:
 # --------------------------------------------------------------------------- #
 # Checks
 # --------------------------------------------------------------------------- #
+# Receipts with a video id but no date. Module-level because `last_publish` is
+# called from a few places and each caller reports them alongside.
+_undated: list[str] = []
+
+
+def undated_receipts() -> list[str]:
+    """Published receipts with a video id but no date. Reported, never inferred."""
+    return list(_undated)
+
+
 def last_publish(published_dir: Path | None = None) -> tuple[Path, datetime] | None:
     """Newest published receipt that carries a real YouTube video id."""
     from pipeline.config import PUBLISHED_DIR
 
     directory = published_dir or PUBLISHED_DIR
     newest: tuple[Path, datetime] | None = None
+    _undated.clear()
     for path in sorted(Path(directory).glob("*.md")):
         try:
             text = path.read_text(encoding="utf-8")
@@ -93,8 +104,13 @@ def last_publish(published_dir: Path | None = None) -> tuple[Path, datetime] | N
         video_id = str(meta.get("youtube_video_id") or "").strip()
         if not video_id:
             continue
+        # `published_on` is what the publisher actually writes. Without it this
+        # fell through to the file's mtime — and a CI checkout stamps every file
+        # with the checkout time, so the watchdog read "uploaded 0d ago" on a
+        # channel that had not published in a day. It could never report a stale
+        # publish, which is the one thing it exists to do.
         stamp = (meta.get("published_at") or meta.get("uploaded_at")
-                 or meta.get("date") or meta.get("publish_at"))
+                 or meta.get("published_on") or meta.get("date") or meta.get("publish_at"))
         when = None
         if stamp:
             try:
@@ -104,7 +120,10 @@ def last_publish(published_dir: Path | None = None) -> tuple[Path, datetime] | N
             except ValueError:
                 when = None
         if when is None:
-            when = datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc)
+            # No date on the receipt: do not guess from mtime. An undated receipt
+            # is evidence of *a* publish, not of a recent one.
+            _undated.append(path.name)
+            continue
         if newest is None or when > newest[1]:
             newest = (path, when)
     return newest
@@ -124,10 +143,12 @@ def check_queues(report: Report, max_publish_age: timedelta = MAX_PUBLISH_AGE,
     for row in rows:
         report.checked.append(f"{row['queue']} queue: {row['ready']} ready ({row['note']})")
         if row["queue"] == "longform" and row["ready"] == 0:
+            from pipeline.script_doc import MIN_LONGFORM_WORDS
+
             report.add("long-form queue",
-                       "nothing in content/queue/ is approved and over the 650-word floor. "
-                       "The brain should have lengthened or authored one; check "
-                       "`python scripts/gemini_brain.py --ensure-supply`.")
+                       f"nothing in content/queue/ is approved and over the "
+                       f"{MIN_LONGFORM_WORDS}-word floor. The brain should have lengthened "
+                       f"or authored one; check `python scripts/gemini_brain.py --ensure-supply`.")
         if row["queue"] == "shorts" and row["ready"] == 0:
             report.add("shorts queue",
                        f"no Short can render ({row['note']}). Check "
@@ -135,12 +156,27 @@ def check_queues(report: Report, max_publish_age: timedelta = MAX_PUBLISH_AGE,
 
     newest = last_publish(published_dir)
     if newest is None:
-        report.add("publishing", "no published receipt with a YouTube video id exists yet",
-                   fatal=False)
+        undated = undated_receipts()
+        if undated:
+            # A receipt exists but carries no date; it proves a publish happened,
+            # not that one happened recently. Say that rather than "none yet".
+            report.checked.append(
+                f"undated receipt (not counted as recent): {', '.join(undated[:3])}")
+            report.add("publishing",
+                       f"{len(undated)} published receipt(s) carry no date, so recency is "
+                       f"unknown — newest is {undated[-1]}. Add `published_on` when publishing.",
+                       fatal=False)
+        else:
+            report.add("publishing", "no published receipt with a YouTube video id exists yet",
+                       fatal=False)
     else:
         path, when = newest
         age = now - when
-        report.checked.append(f"last publish: {path.name} at {when.isoformat()} ({age.days}d ago)")
+        report.checked.append(
+            f"last publish: {path.name} on {when.date().isoformat()} "
+            f"({age.total_seconds() / 3600:.0f}h ago)")
+        for name in undated_receipts():
+            report.checked.append(f"undated receipt (not counted as recent): {name}")
         if age > max_publish_age:
             report.add("publishing",
                        f"last upload was {age.days} days ago ({when.date().isoformat()}). "

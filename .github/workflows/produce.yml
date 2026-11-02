@@ -109,35 +109,54 @@ jobs:
           python scripts/gemini_brain.py --ensure-supply 2>&1 | tee supply.log
           { echo "### 📜 Queue repair"; echo '```'; grep -v '^\[run\]' supply.log | tail -30; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Render and upload target edition
+      - name: Render the Short (9:16)
+        # The Short is the ride-along, never the release. Two things follow: its
+        # failure is a warning rather than a red run, and it gets its own bounded
+        # timeout instead of living inside one opaque 30-minute step.
+        continue-on-error: true
+        timeout-minutes: 30
+        if: ${{ inputs.job == '' }}
         run: |
-          set +e
+          set -o pipefail
           if [ -n "${{ inputs.short }}" ]; then
-            python -m pipeline.short_release --short "${{ inputs.short }}" 2>&1 | tee run.log
-            rc=${PIPESTATUS[0]}
-          elif [ -n "${{ inputs.job }}" ]; then
-            python -m pipeline.run --job "content/queue/${{ inputs.job }}" 2>&1 | tee run.log
-            rc=${PIPESTATUS[0]}
+            python -m pipeline.short_release --short "${{ inputs.short }}" 2>&1 | tee short.log
           else
-            python -m pipeline.short_release --next 2>&1 | tee run.log
-            short_rc=${PIPESTATUS[0]}
-            python -m pipeline.run --next 2>&1 | tee -a run.log
-            run_rc=${PIPESTATUS[0]}
-            # The long-form upload is the release; the Short is the extra. A Short
-            # that cannot render must never mask a successful long-form publish as a
-            # failed run, and a failed long-form publish must never be hidden by a
-            # Short that worked. So: longform decides, a Short fault is a warning.
-            if [ "$run_rc" -eq 0 ] && [ "$short_rc" -ne 0 ]; then
-              echo "::warning title=Short did not render::long-form published, the Short stage exited $short_rc"
-              short_rc=0
-            fi
-            rc=$(( short_rc > run_rc ? short_rc : run_rc ))
+            python -m pipeline.short_release --next 2>&1 | tee short.log
           fi
-          set -e
-          echo "### Pipeline Log (exit $rc)" >> "$GITHUB_STEP_SUMMARY"
-          echo '```' >> "$GITHUB_STEP_SUMMARY"
-          cat run.log >> "$GITHUB_STEP_SUMMARY"
-          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          rc=$?
+          {
+            echo "### Short (exit $rc)"
+            echo '```'
+            tail -n 25 short.log
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [ "$rc" -ne 0 ]; then
+            echo "::warning title=Short did not render::pipeline.short_release exited $rc (a Short never blocks the release)"
+            exit "$rc"
+          fi
+
+      - name: Render and upload the long-form edition
+        # This is the release. Before it was merged with the Short into one step,
+        # a 30-minute render and a wedged render looked identical: one opaque
+        # "in progress" with nothing in the log until it ended. Its own timeout
+        # means a wedged render fails the run at a named step, well inside the
+        # job's 120-minute cap.
+        timeout-minutes: 90
+        if: ${{ inputs.short == '' }}
+        run: |
+          set -o pipefail
+          if [ -n "${{ inputs.job }}" ]; then
+            python -m pipeline.run --job "content/queue/${{ inputs.job }}" 2>&1 | tee run.log
+          else
+            python -m pipeline.run --next 2>&1 | tee run.log
+          fi
+          rc=$?
+          {
+            echo "### Long-form release (exit $rc)"
+            echo '```'
+            tail -n 60 run.log
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
           if [ "$rc" -ne 0 ]; then
             tail -n 15 run.log | while IFS= read -r line; do
               echo "::error::$line"
@@ -156,29 +175,36 @@ jobs:
 
       - name: Commit queue state (job moved to published/)
         # Losing this commit is not cosmetic: the published/ move is what stops the
-        # next run from uploading the same video again. Retry around a moving main
-        # instead of dying on the first rejected push.
+        # next run from uploading the same video again. On 2 November it failed five
+        # times in a row — `git pull --rebase` hit the same conflict on every retry,
+        # so the retry loop could never win, and a video that was live on the channel
+        # left no record in the repo.
+        #
+        # The fix is to stop rebasing. Re-point HEAD at the current main, stage our
+        # content/ working tree on top of it, and commit: there is no merge, so there
+        # is no conflict to loop on. Repeat only if main moves underneath us.
         if: ${{ always() && !cancelled() }}
         run: |
           set -e
           git config user.name "youtube-automation-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -A content/
-          if git diff --cached --quiet; then
-            echo "queue state unchanged"
-            exit 0
-          fi
-          git commit -m "chore(content): publish job [skip ci]"
-          for attempt in 1 2 3 4 5; do
-            if git push; then
-              echo "queue state committed on attempt $attempt"
+          for attempt in 1 2 3 4 5 6; do
+            git fetch --quiet origin main
+            git reset --mixed origin/main
+            git add -A content/
+            if git diff --cached --quiet; then
+              echo "queue state unchanged (nothing to record)"
               exit 0
             fi
-            echo "::warning::push rejected (attempt $attempt); rebasing onto main and retrying"
-            git pull --rebase --autostash origin main || true
-            sleep $((attempt * 5))
+            git commit --quiet -m "chore(content): publish job [skip ci]"
+            if git push --quiet origin HEAD:main; then
+              echo "queue state recorded on attempt $attempt"
+              exit 0
+            fi
+            echo "::warning::main moved during attempt $attempt; re-staging on the new tip"
+            sleep $((attempt * 3))
           done
-          echo "::error title=Queue state lost::could not commit the published/ move; the next run may re-upload the same video"
+          echo "::error title=Queue state lost::could not record the published/ move; the next run may re-upload the same video"
           exit 1
 
       # Style proof without a 1 GB download: three frames from the master,

@@ -10,6 +10,7 @@ exiting 0 while the channel publishes nothing. So each test pins one of:
   psalm,
 * and the watchdog says so out loud instead of waiting to be asked.
 """
+import os
 import tempfile
 import unittest
 from datetime import datetime, timedelta, timezone
@@ -287,10 +288,11 @@ class TestWatchdog(unittest.TestCase):
                         encoding="utf-8")
         return path
 
-    def report(self, rows=None, workflow_rows=()):
+    def report(self, rows=None, workflow_rows=(), fresh=True):
         from scripts import pipeline_watchdog as wd
 
-        self.receipt()
+        if fresh:
+            self.receipt()
         with mock.patch("scripts.automation_health.queue_health",
                         return_value=rows or self.healthy_rows()):
             return wd.build_report(published_dir=self.dir, workflow_rows=list(workflow_rows))
@@ -312,6 +314,29 @@ class TestWatchdog(unittest.TestCase):
         report = self.report(rows=rows)
         self.assertTrue(report.healthy)
         self.assertTrue(any(f.area == "shorts queue" for f in report.findings))
+
+    def test_a_published_on_receipt_is_dated_from_the_file_not_the_checkout(self):
+        """A CI checkout stamps every file with the checkout time.
+
+        The watchdog used to fall through to mtime, so it read "uploaded 0d ago"
+        on a channel that had published the day before — the one thing it exists
+        to notice was the one thing it could not.
+        """
+        old = (datetime.now(timezone.utc) - timedelta(days=5)).date().isoformat()
+        receipt = self.dir / "0009-old.md"
+        receipt.write_text(f'---\nid: "0009"\nyoutube_video_id: abc\n'
+                           f'published_on: "{old}"\n---\n\nbody\n', encoding="utf-8")
+        report = self.report(fresh=False)
+        self.assertFalse(report.healthy)
+        self.assertTrue(any(f.area == "publishing" for f in report.findings))
+
+    def test_a_receipt_with_no_date_is_never_counted_as_recent(self):
+        receipt = self.dir / "0008-undated.md"
+        receipt.write_text("---\nyoutube_video_id: abc\n---\n\nbody\n", encoding="utf-8")
+        os.utime(receipt, None)          # mtime = now, exactly like a fresh checkout
+        report = self.report(fresh=False)
+        self.assertTrue(any("undated receipt" in c for c in report.checked))
+        self.assertTrue(any(f.area == "publishing" for f in report.findings))
 
     def test_the_fallback_audit_still_reports_a_workflow_that_never_ran(self):
         from scripts import pipeline_watchdog as wd

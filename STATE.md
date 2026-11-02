@@ -1050,3 +1050,39 @@ scheduler is queueing runs unpredictably rather than dropping them cleanly.
 `monitor.yml` and `automation-health.yml` now also trigger on push to main and on
 `workflow_run` completion of production/CI/supervisor, and the monitor shares the
 `content-state` concurrency group because it commits into `content/` as well.
+
+**A slow render and a wedged render looked identical.** Step 8 was one opaque
+"Render and upload target edition" holding both the Short and the release: no log
+line, no summary, no timeout of its own until the job's 120-minute cap. On 2
+November a run that was simply working cost the owner half an hour of watching it.
+The stages are now two steps — *Render the Short (9:16)* (30 min, `continue-on-error`)
+and *Render and upload the long-form edition* (90 min, the release) — each writing
+its own section of the run summary, so a stall fails at a named step and a working
+render shows which stage it is in.
+
+**The watchdog could not report a stale publish either.** `last_publish` looked for
+`published_at` / `uploaded_at` / `date` / `publish_at`; the publisher writes
+`published_on`. Every receipt therefore fell through to the file's mtime, and a CI
+checkout stamps every file with the checkout time — so the watchdog read "last
+publish 0d ago" on a channel that had not published since the previous day. It is
+the third instance of the same defect (the monitor read mtime too) and the most
+damaging, because this is the job that decides whether to file the issue. It now
+dates from `published_on`, reports an undated receipt as *undated* rather than as
+fresh, and says "recency unknown" instead of "no receipt exists".
+
+**The 10:48 run published a video and then lost the record.** Its annotations say
+the long-form stage exited 0 — *"long-form published, the Short stage exited 1"* —
+so Psalm 46 went up on the channel. Then the commit step failed **five times in a
+row**: it retried `git pull --rebase --autostash origin main`, hit the same content
+conflict on every attempt, and gave up. The repo therefore still lists 0013 as
+`approved` in `content/queue/`, and the only thing standing between that and a
+duplicate upload is `upload.check_existing_channel_duplicate`, which queries the
+channel's last 50 uploads by title.
+
+Two fixes: the commit step no longer rebases. It re-points HEAD at the current
+main, stages the `content/` working tree on top, and commits — nothing to conflict
+on, so a retry can only be about main having moved, not about the same merge
+failing forever. And the Short failure itself: `tools/shorts.py` still had one
+`SystemExit` for a scene whose stock asset is a **video** while the scene names a
+photo that does not exist. That path now falls back to the same sapphire plate, so
+a missing image cannot take down a render again.
