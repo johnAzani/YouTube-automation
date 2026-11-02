@@ -32,6 +32,29 @@ from pipeline.quota_handler import GeminiQuotaExceededError, QuotaExceededError,
 
 DEFAULT_REPLIED_LOG = REPO_ROOT / "content" / "comments" / "replied.json"
 
+# 403 is not one thing. A disabled comment section and an exhausted daily quota
+# both arrive as 403, and treating every one of them as "quota" is how a broken
+# run looked like a healthy one: the stage caught its own exception and exited 0.
+QUOTA_MARKERS = ("quotaexceeded", "ratelimitexceeded", "dailylimitexceeded",
+                 "quota exceeded", "userratelimitexceeded")
+DISABLED_MARKERS = ("commentsdisabled", "comments are disabled")
+
+
+class CommentFetchError(RuntimeError):
+    """Raised when comments could not be listed for a reason that is not emptiness."""
+
+
+def error_kind(exc: Exception) -> str:
+    """"quota" | "comments_disabled" | "forbidden" | "other" for a Google API error."""
+    msg = str(exc).lower()
+    if any(marker in msg for marker in QUOTA_MARKERS):
+        return "quota"
+    if any(marker in msg for marker in DISABLED_MARKERS):
+        return "comments_disabled"
+    if "403" in msg or "forbidden" in msg or "insufficient" in msg:
+        return "forbidden"
+    return "other"
+
 # Regex patterns for detecting scam bots, WhatsApp imposters, and crypto fraud
 SCAM_PATTERNS = [
     re.compile(r"whatsapp", re.IGNORECASE),
@@ -217,6 +240,23 @@ def generate_fallback_reply(author: str, text: str, category: str) -> str:
     return f"Thank you for praying with us at The Secret Place, {first_name}. May the peace of God fill your home tonight and guard your mind in Christ Jesus."
 
 
+URL_OR_HANDLE = re.compile(r"(https?://|www\.|@[A-Za-z0-9_]{3,}|\+\d{7,})")
+MONEY_SOLICIT = re.compile(r"\b(donate|donation|tithe|giving|payment|bank transfer|"
+                           r"send money|cash ?app|paypal)\b", re.IGNORECASE)
+
+
+def _reply_is_safe(text: str) -> bool:
+    """The invariants the prompt promises, enforced on the model's actual output."""
+    lowered = text.lower()
+    if "azani" in lowered or "narrated by" in lowered:
+        return False
+    if URL_OR_HANDLE.search(text):
+        return False
+    if MONEY_SOLICIT.search(text):
+        return False
+    return 1 <= len(text.split()) <= 120
+
+
 def generate_reply_with_gemini(
     comment: CommentItem,
     api_key: Optional[str] = None,
@@ -265,7 +305,7 @@ Do not include quotation marks or meta-commentary; output only the exact comment
             # Clean unwanted artifacts
             cleaned = raw.strip('"').strip("'").strip()
             # Invariant validation
-            if cleaned and "John Azani" not in cleaned and "Azani John" not in cleaned:
+            if cleaned and _reply_is_safe(cleaned):
                 return cleaned
         except Exception as exc:
             msg = str(exc).lower()
@@ -326,16 +366,23 @@ class CommentReplyEngine:
                 "part": "snippet,replies",
                 "maxResults": min(max_results * 2, 100),
                 "textFormat": "plainText",
-                "order": "time",
             }
             if video_id:
                 params["videoId"] = video_id
+                params["order"] = "time"
             else:
-                params["allForChannelId"] = own_id if own_id else None
-
-            # Fallback if allForChannelId is None
-            if not params.get("videoId") and not params.get("allForChannelId"):
-                return []
+                # The channel-wide listing parameter is allThreadsRelatedToChannelId.
+                # This code used to pass `allForChannelId`, which is not a parameter
+                # of commentThreads.list at all: googleapiclient rejected the call
+                # with `TypeError: Got an unexpected keyword argument`, the broad
+                # except below swallowed it, and every scheduled pulse reported
+                # "no unresponded candidate comments" and exited 0. Three pulses a
+                # day, zero replies, green every time.
+                if not own_id:
+                    raise CommentFetchError(
+                        "cannot list channel comments: the channel id could not be resolved"
+                    )
+                params["allThreadsRelatedToChannelId"] = own_id
 
             resp = self.youtube.commentThreads().list(**params).execute()
             items = resp.get("items", [])
@@ -407,14 +454,20 @@ class CommentReplyEngine:
                     break
 
             save_replied_log(self.replied_log, self.log_path)
+        except CommentFetchError:
+            raise
         except Exception as exc:
-            msg = str(exc).lower()
-            if "quotaexceeded" in msg or "403" in msg:
+            kind = error_kind(exc)
+            if kind == "quota":
                 reset_utc = calculate_next_quota_reset_utc()
                 raise QuotaExceededError(
                     f"YouTube Data API commentThreads quota exceeded. Pausing until {reset_utc.isoformat()}"
                 ) from exc
-            print(f"[comments] Error fetching comments: {exc}")
+            if kind == "comments_disabled":
+                print("[comments] Comment section is disabled for this video; nothing to do.")
+                return []
+            # Anything else is a real fault and must not masquerade as "no comments".
+            raise CommentFetchError(f"could not list comments: {type(exc).__name__}: {exc}") from exc
 
         return candidates
 
@@ -423,9 +476,31 @@ class CommentReplyEngine:
         comment: CommentItem,
         reply_text: str,
         dry_run: bool = False,
+        allow_crisis: bool = False,
     ) -> bool:
-        """Insert reply to YouTube comment thread with anti-spam jitter."""
+        """Insert reply to YouTube comment thread with anti-spam jitter.
+
+        Crisis comments are held, not answered in public by default: posting a
+        hotline reply under a person's self-harm disclosure labels them in front of
+        every other viewer. They are recorded for the owner instead, who can reply
+        personally. `allow_crisis=True` opts back into the public resource reply.
+        """
         if not reply_text:
+            return False
+
+        if comment.category == "CRISIS_DISTRESS" and not allow_crisis:
+            self.replied_log[comment.comment_id] = {
+                "comment_id": comment.comment_id,
+                "video_id": comment.video_id,
+                "author": comment.author_name,
+                "comment_text": comment.text,
+                "draft_reply": reply_text,
+                "category": "CRISIS_ESCALATED",
+                "replied_at": datetime.now(timezone.utc).isoformat(),
+            }
+            save_replied_log(self.replied_log, self.log_path)
+            print(f"[comments] CRISIS comment from {comment.author_name} held for a human reply "
+                  f"({comment.comment_id})")
             return False
 
         if dry_run or not self.youtube:
@@ -465,11 +540,12 @@ class CommentReplyEngine:
             return True
 
         except Exception as exc:
-            msg = str(exc).lower()
-            if "quotaexceeded" in msg or "403" in msg:
+            kind = error_kind(exc)
+            if kind == "quota":
                 reset_utc = calculate_next_quota_reset_utc()
                 raise QuotaExceededError(
                     f"YouTube Data API comments.insert quota exceeded. Pausing until {reset_utc.isoformat()}"
                 ) from exc
-            print(f"[comments] Failed to post reply to {comment.comment_id}: {exc}")
+            print(f"[comments] Failed to post reply to {comment.comment_id} "
+                  f"({kind}): {exc}")
             return False

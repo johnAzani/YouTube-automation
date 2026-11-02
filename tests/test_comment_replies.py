@@ -1,13 +1,17 @@
 """Unit and integration tests for autonomous comment reply engine."""
 import json
+import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 
 from pipeline.comment_replies import (
+    CommentFetchError,
     CommentItem,
     CommentReplyEngine,
+    _reply_is_safe,
     classify_comment_intent,
+    error_kind,
     generate_fallback_reply,
     generate_reply_with_gemini,
     is_crisis,
@@ -176,3 +180,120 @@ class TestDeduplicationAndEngine(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestChannelWideFetchActuallyWorks(unittest.TestCase):
+    """The bug that made reply automation look alive while doing nothing.
+
+    `fetch_candidate_comments` passed `allForChannelId`, which is not a parameter of
+    commentThreads.list. googleapiclient rejects the call outright, the broad except
+    swallowed it, and every scheduled pulse printed "no unresponded candidate
+    comments" and exited 0 — three times a day, forever, in green.
+    """
+
+    def test_the_request_the_real_client_builds_is_valid(self):
+        from googleapiclient.discovery import build
+
+        youtube = build("youtube", "v3", developerKey="test", cache_discovery=False)
+        request = youtube.commentThreads().list(
+            part="snippet,replies", allThreadsRelatedToChannelId="UC_OWN",
+            maxResults=16, textFormat="plainText")
+        self.assertIn("allThreadsRelatedToChannelId=UC_OWN", request.uri)
+
+    def test_the_old_parameter_name_is_rejected_by_the_client(self):
+        from googleapiclient.discovery import build
+
+        youtube = build("youtube", "v3", developerKey="test", cache_discovery=False)
+        with self.assertRaises(TypeError):
+            youtube.commentThreads().list(part="snippet", allForChannelId="UC_OWN")
+
+    def test_the_engine_asks_for_the_channel_wide_listing(self):
+        seen = {}
+        youtube = MagicMock()
+        youtube.channels().list().execute.return_value = {"items": [{"id": "UC_OWN"}]}
+
+        def listing(**kwargs):
+            seen.update(kwargs)
+            return MagicMock(execute=MagicMock(return_value={"items": []}))
+
+        youtube.commentThreads().list.side_effect = listing
+        engine = CommentReplyEngine(youtube_service=youtube,
+                                    replied_log_path=Path("/tmp/nonexistent-log.json"))
+        engine.fetch_candidate_comments(video_id=None, max_results=5)
+        self.assertEqual(seen.get("allThreadsRelatedToChannelId"), "UC_OWN")
+        self.assertNotIn("allForChannelId", seen)
+
+    def test_a_broken_listing_is_an_error_not_an_empty_inbox(self):
+        youtube = MagicMock()
+        youtube.channels().list().execute.return_value = {"items": [{"id": "UC_OWN"}]}
+        youtube.commentThreads().list.side_effect = RuntimeError("boom")
+        engine = CommentReplyEngine(youtube_service=youtube,
+                                    replied_log_path=Path("/tmp/nonexistent-log.json"))
+        with self.assertRaises(CommentFetchError):
+            engine.fetch_candidate_comments(video_id=None, max_results=5)
+
+
+class TestErrorClassification(unittest.TestCase):
+    def test_daily_quota_is_quota(self):
+        self.assertEqual(error_kind(Exception("HttpError 403 ... quotaExceeded")), "quota")
+
+    def test_disabled_comments_are_not_quota(self):
+        self.assertEqual(
+            error_kind(Exception("HttpError 403 ... commentsDisabled")), "comments_disabled")
+
+    def test_missing_scope_is_forbidden(self):
+        self.assertEqual(
+            error_kind(Exception('HttpError 403 ... "reason": "insufficientPermissions"')),
+            "forbidden")
+
+
+class TestCrisisIsHeldNotPosted(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.log = Path(self.tmp.name) / "replied.json"
+
+    def comment(self):
+        return CommentItem(comment_id="c_crisis", video_id="v1", author_name="Ann",
+                           author_channel_id="UC_A", text="I want to end my life",
+                           published_at="", category="CRISIS_DISTRESS")
+
+    def test_nothing_is_posted_but_it_is_recorded_for_a_human(self):
+        youtube = MagicMock()
+        engine = CommentReplyEngine(youtube_service=youtube, replied_log_path=self.log)
+        posted = engine.post_reply(self.comment(), "Dear Ann, call 988...")
+        self.assertFalse(posted)
+        youtube.comments().insert.assert_not_called()
+        saved = load_replied_log(self.log)
+        self.assertEqual(saved["c_crisis"]["category"], "CRISIS_ESCALATED")
+        self.assertIn("988", saved["c_crisis"]["draft_reply"])
+
+    def test_opting_in_still_posts_when_asked_explicitly(self):
+        youtube = MagicMock()
+        youtube.comments().insert().execute.return_value = {"id": "reply_1"}
+        engine = CommentReplyEngine(youtube_service=youtube, replied_log_path=self.log)
+        with patch("time.sleep", return_value=None):
+            self.assertTrue(engine.post_reply(self.comment(), "Dear Ann, call 988...",
+                                              allow_crisis=True))
+
+
+class TestReplyInvariantsOnRealOutput(unittest.TestCase):
+    """The prompt promises no links and no solicitation; the code must enforce it."""
+
+    def test_a_reply_with_a_link_is_refused(self):
+        self.assertFalse(_reply_is_safe("Pray with us at https://example.com tonight"))
+
+    def test_a_reply_with_a_phone_or_handle_is_refused(self):
+        self.assertFalse(_reply_is_safe("Message me on @pastorjoe for prayers"))
+        self.assertFalse(_reply_is_safe("Call +2348012345678 for a miracle"))
+
+    def test_a_reply_asking_for_money_is_refused(self):
+        self.assertFalse(_reply_is_safe("Please send your tithe to support this ministry"))
+
+    def test_the_creator_name_is_refused(self):
+        self.assertFalse(_reply_is_safe("John Azani is praying for you"))
+
+    def test_an_ordinary_pastoral_reply_passes(self):
+        self.assertTrue(_reply_is_safe(
+            "We are standing with you in prayer tonight, and asking the Lord to "
+            "give you deep rest under His wings."))
