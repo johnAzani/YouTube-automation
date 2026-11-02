@@ -996,3 +996,25 @@ next day. The ledger records attempts, `_failed_dispatches` finds entries whose 
 finished badly after the dispatch, and a successful dispatch is never repeated.
 Live check at 09:10 WAT: brain and produce retried, keepalive skipped because
 *"its dispatched run succeeded"*.
+
+## The renderer refused the scripts the expansion wrote
+
+The re-dispatched production run at 10:19 WAT got further than any run since
+Friday: the repair step **succeeded** (the queue finally had something over the
+floor), the script rendered, and then `prayer_visuals.sentence_stream` raised
+*"Sentence is too long for the widescreen layout"* and the whole upload died.
+
+That limit was fine while every script was 250 words of short sentences. The
+moment a script was correctly expanded, the model wrote real prayer sentences —
+*"Father, when the day has left us feeling small, remind us that the hills are not
+higher than Your compassion…"* — which need eight or nine 30-character lines, and
+the layout drew at most six. A long sentence was never an error; it is two cards.
+The stream now wraps and paginates, splitting each sentence's word timings across
+the cards it occupies, so narration and subtitles stay in lockstep. Two tests pin
+it: a 40-word prayer sentence must paginate rather than raise, and every card must
+fit six lines of thirty characters.
+
+Same run, second lesson: `produce.yml` merged the Short and long-form exit codes
+with `max`, so a Short that could not render reported the *release* as failed. The
+long-form upload is the release now — it decides the exit code, and a Short fault
+is a `::warning` naming the code.
