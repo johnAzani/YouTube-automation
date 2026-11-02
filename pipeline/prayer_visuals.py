@@ -15,6 +15,9 @@ from PIL import Image
 from .assemble import ffmpeg_bin
 
 
+MAX_LINES_PER_CARD = 6   # what the widescreen layout can draw at once
+
+
 def sentence_stream(words, *, timing_source):
     if timing_source != 'measured' or not words:
         raise ValueError('Measured speech alignment is required')
@@ -33,24 +36,36 @@ def sentence_stream(words, *, timing_source):
         sentences.append(buf)
     cards = []
     for sentence in sentences:
-        tokens = [w.upper() for w, _, _ in sentence]
-        lines, line = [], ''
-        for word in tokens:
-            candidate = f'{line} {word}'.strip()
-            if line and len(candidate) > 30:
-                lines.append(line)
-                line = word
+        # Wrap into display lines, then paginate those lines onto cards.
+        #
+        # This used to raise 'Sentence is too long for the widescreen layout' once a
+        # sentence needed more than six lines. That was survivable while scripts were
+        # 250 words of short sentences. The moment the script reached full length the
+        # expansion started writing real prayer sentences — "Father, when the day has
+        # left us feeling small, remind us that the hills are not higher than Your
+        # compassion..." — and the renderer refused to draw the video at all. A long
+        # sentence is not an error; it is two cards.
+        lines: list[tuple[str, list[tuple[float, float]]]] = []
+        line_text, line_timings = "", []
+        for word, start, end in sentence:
+            token = word.upper()
+            candidate = f'{line_text} {token}'.strip()
+            if line_text and len(candidate) > 30:
+                lines.append((line_text, line_timings))
+                line_text, line_timings = token, [(start, end)]
             else:
-                line = candidate
-        if line:
-            lines.append(line)
-        if len(lines) > 6:
-            raise ValueError('Sentence is too long for the widescreen layout')
-        start, end = sentence[0][1], sentence[-1][2]
-        cards.append(dict(t0=start, t1=end,
-                          disp_t0=cards[-1]['t1'] if cards else 0.0,
-                          disp_t1=end, lines=lines, accent_words=[], kicker='',
-                          word_timings=[(a, b) for _, a, b in sentence]))
+                line_text, line_timings = candidate, line_timings + [(start, end)]
+        if line_text:
+            lines.append((line_text, line_timings))
+
+        for offset in range(0, len(lines), MAX_LINES_PER_CARD):
+            chunk = lines[offset:offset + MAX_LINES_PER_CARD]
+            timings = [timing for _, these in chunk for timing in these]
+            start, end = timings[0][0], timings[-1][1]
+            cards.append(dict(t0=start, t1=end,
+                              disp_t0=cards[-1]['t1'] if cards else 0.0,
+                              disp_t1=end, lines=[text for text, _ in chunk],
+                              accent_words=[], kicker='', word_timings=timings))
     return cards
 
 

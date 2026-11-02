@@ -123,8 +123,14 @@ jobs:
             short_rc=${PIPESTATUS[0]}
             python -m pipeline.run --next 2>&1 | tee -a run.log
             run_rc=${PIPESTATUS[0]}
-            # Fail if EITHER stage fails — never let a short_release success mask
-            # a longform upload failure (or vice versa).
+            # The long-form upload is the release; the Short is the extra. A Short
+            # that cannot render must never mask a successful long-form publish as a
+            # failed run, and a failed long-form publish must never be hidden by a
+            # Short that worked. So: longform decides, a Short fault is a warning.
+            if [ "$run_rc" -eq 0 ] && [ "$short_rc" -ne 0 ]; then
+              echo "::warning title=Short did not render::long-form published, the Short stage exited $short_rc"
+              short_rc=0
+            fi
             rc=$(( short_rc > run_rc ? short_rc : run_rc ))
           fi
           set -e

@@ -46,9 +46,13 @@ DISPATCH_WINDOW = timedelta(hours=6)
 MAX_DISPATCHES = 3
 # A dispatch is not a success. On 2 November the 07:14 produce slot was
 # dispatched at 08:59 and the run then failed; treating the slot as settled would
-# have left the channel with no video until the next day. Each slot gets this many
-# attempts, counted per slot, so a permanently failing workflow still stops.
-MAX_ATTEMPTS_PER_SLOT = 2
+# have left the channel with no video until the next day.
+#
+# Three attempts, because a failed run is often a bug that has since been fixed:
+# attempt one finds it, attempt two proves the fix, and the third covers a retry
+# that failed for an unrelated reason. The cap still stops a permanently broken
+# workflow from hammering the queue every fifteen minutes.
+MAX_ATTEMPTS_PER_SLOT = 3
 
 NEVER_DISPATCH = {"monitor.yml", "automation-health.yml", "scheduler-supervisor.yml",
                   "dry-run.yml", "preview-render.yml", "prayer-alignment-check.yml"}

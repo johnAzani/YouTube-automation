@@ -35,7 +35,11 @@ class TestQueueReport(unittest.TestCase):
         self.dir = Path(self.tmp.name)
 
     def report(self):
-        return {r["file"]: r for r in sr.queue_report(self.dir)}
+        # pin the renderable set: authored specs appear and disappear as the brain
+        # writes them, and a test that reads live disk is a test that fails on a
+        # Tuesday for no reason.
+        with mock.patch.object(sr, "_renderer_script_keys", return_value={"short-psalm91"}):
+            return {r["file"]: r for r in sr.queue_report(self.dir)}
 
     def test_approved_with_renderer_is_ready(self):
         write_manifest(self.dir, "a.yml", short="short-psalm91", status="approved")
@@ -105,7 +109,10 @@ class TestCompanionShortMapping(unittest.TestCase):
     def test_without_a_renderer_the_manifest_is_a_draft(self):
         """No API key and no hand-written script: refuse, and say why in the manifest."""
         doc = self.doc("0010-psalm-121-he-who-keeps-you-will-neither-slumber-no.md")
-        path, _ = self.brain.generate_companion_short(doc)
+        with mock.patch("pipeline.short_release._renderer_script_keys", return_value=set()), \
+             mock.patch("pipeline.gemini_brain.GeminiBrain.author_short_spec",
+                        side_effect=RuntimeError("GEMINI_API_KEY is not set")):
+            path, _ = self.brain.generate_companion_short(doc)
         data = yaml.safe_load(path.read_text(encoding="utf-8"))
         self.assertEqual(data["status"], "draft")
         self.assertFalse(data["renderer_ready"])

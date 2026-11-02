@@ -135,6 +135,7 @@ class TestDispatchRails(unittest.TestCase):
         out = sup.supervise(now, history, dry_run=True, state=state)
         self.assertNotIn("produce.yml", [r["workflow"] for r in out["dispatched"]])
         self.assertTrue(any("not trying again" in r["reason"] for r in out["skipped"]))
+        self.assertEqual(sup.MAX_ATTEMPTS_PER_SLOT, 3)
 
     def test_one_slot_is_dispatched_only_once(self):
         state = {}

@@ -16,6 +16,37 @@ class PrayerVisualTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             sentence_stream(words, timing_source='estimated')
 
+    def test_a_long_prayer_sentence_becomes_several_cards(self):
+        """The expansion writes real prayer sentences; the renderer must draw them.
+
+        A 40-word sentence needs about eight 30-character lines, which used to raise
+        'Sentence is too long for the widescreen layout' and kill the upload.
+        """
+        sentence = ("Father when the day has left us feeling small remind us that "
+                    "the hills are not higher than Your compassion and that we do "
+                    "not have to find strength in ourselves before we come to You.")
+        tokens = sentence.split()
+        words = [(t, 0.4 * i, 0.4 * i + 0.35) for i, t in enumerate(tokens)]
+        words[-1] = (tokens[-1] + '.', words[-1][1], words[-1][2])
+        cards = sentence_stream(words, timing_source='measured')
+        self.assertGreater(len(cards), 1, "a long sentence must paginate, not raise")
+        self.assertTrue(all(len(card['lines']) <= 6 for card in cards))
+        # every word is spoken exactly once across the cards, in order
+        timings = [t for card in cards for t in card['word_timings']]
+        self.assertEqual(timings, [(a, b) for _, a, b in words])
+        self.assertEqual(cards[0]['disp_t0'], 0.0)
+        for before, after in zip(cards, cards[1:]):
+            # spoken time never overlaps and never goes backwards
+            self.assertGreaterEqual(after['t0'], before['t1'])
+            self.assertEqual(before['disp_t1'], before['t1'])
+
+    def test_every_card_still_fits_the_layout(self):
+        words = [(f"word{i}", 0.2 * i, 0.2 * i + 0.15) for i in range(60)]
+        words[-1] = ("end.", words[-1][1], words[-1][2])
+        for card in sentence_stream(words, timing_source='measured'):
+            self.assertLessEqual(len(card['lines']), 6)
+            self.assertTrue(all(len(line) <= 30 for line in card['lines']))
+
     def test_widescreen_uses_shorts_layer_without_changing_portrait(self):
         from tools.shorts import kinetic_typography_layer
         words = [('Rest', .1, .5), ('tonight.', .6, 1.0)]

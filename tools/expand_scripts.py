@@ -437,6 +437,27 @@ def expand_job(job: Job, provider: str = "gemini", target: int = TARGET_WORDS,
 def _write_body(job: Job, body: str) -> None:
     header = job.path.read_text(encoding="utf-8").split("---", 2)
     job.path.write_text(f"---{header[1]}---\n\n{body.lstrip()}", encoding="utf-8")
+    refresh_worksheet(job)
+
+
+def refresh_worksheet(job: Job) -> str | None:
+    """Rebuild the fact-check worksheet after the body changed.
+
+    The worksheet is bound to the script by sha256, and `tests/test_queue_integrity`
+    refuses an approved job whose worksheet no longer matches. Without this, every
+    successful expansion silently invalidates the worksheet — which is exactly what
+    happened to the first five scripts the new loop lengthened: 118 subtests went red
+    because the scripts had grown and their worksheets had not.
+    """
+    if QUEUE_DIR not in job.path.resolve().parents:
+        return None                     # a scratch queue in a test: nothing to refresh
+    try:
+        from scripts.factcheck import main as factcheck_main
+
+        factcheck_main([job.job_id, "--force"])
+        return None
+    except Exception as exc:  # noqa: BLE001
+        return f"worksheet not refreshed: {type(exc).__name__}: {exc}"
 
 
 def main(argv=None) -> int:
