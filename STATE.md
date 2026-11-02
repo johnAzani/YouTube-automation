@@ -870,3 +870,49 @@ pass — the monitor keeps calling it an untested fix until it does.)
 20 new tests pin the verdicts, including the two that matter most: an empty run
 history must never report healthy, and a failure that predates the last edit is
 "untested", not "fixed". Full suite **456 with pytest**.
+
+---
+
+## Knowing when a workflow was edited, and when it last ran
+
+The owner's next question was blunt and correct: *"you should know the last time it
+was edited and the last time it ran — this gives you a better understanding of what
+is happening."* The first monitor reported edit and run times, and both were wrong
+in ways that mattered.
+
+**"Last edited" was lying.** This clone is a single squashed commit — `git rev-list
+--count HEAD` returns 1 — so `git log -1 -- <path>` returned the tip commit for
+*every* workflow. Everything looked edited minutes ago, which quietly downgraded
+real failures from FAILING to "untested fix". The monitor now reads the edit date
+from `gh api repos/<slug>/commits?path=.github/workflows/<file>&per_page=1` and
+returns `None` rather than guessing when the local history is too shallow to date a
+file. The real dates: `produce`/`gemini_brain`/`automation-health` 2 Nov 06:56 WAT,
+`comments` 07:23 WAT, `community`/`metrics`/`keepalive` 05:58 WAT.
+
+**Missed slots were invisible.** A workflow whose schedule simply did not fire has
+no failed run to find, so run history alone says it is fine. `prev_occurrence()`
+now expands the cron and a new blocking verdict, `MISSED SLOT`, fires when the most
+recent slot is more than three hours old (`SLOT_GRACE`) and no run followed it. The
+grace is measured *after* the slot — the first version compared against
+`slot - grace` and raised a false alarm on a scheduler that was 31 minutes late.
+
+That change found the thing the old audit could not: on the morning of 2 November
+the brain's 04:14 WAT slot, keepalive's 04:23 slot and produce's 07:14 slot all
+came and went with no run at all. Nothing uploaded, and every workflow was green.
+
+## The supervisor, because a dropped schedule cannot report itself
+
+The monitor can *say* a slot was dropped; it cannot make the work happen, and it
+cannot run if it was the dropped workflow. `scripts/scheduler_supervisor.py` runs
+every fifteen minutes, compares each workflow's most recent scheduled slot against
+its last run, and dispatches whatever was missed with `workflow_dispatch`. Rails:
+a slot is dispatched only once (the slot key is kept in
+`content/monitor/dispatched.json`), at most three per pass, never for the
+supervising workflows themselves, only between 90 minutes and six hours after the
+slot. The 90-minute floor matters — at 45 minutes it would race a merely late
+scheduler, and for `produce.yml` a duplicate run means a duplicate upload.
+
+14 new tests cover the supervisor, and the monitor's stamps are now WAT throughout
+(`all times WAT` in the table, no bare UTC anywhere), because the owner reads WAT.
+
+Full suite: **481 with pytest**.

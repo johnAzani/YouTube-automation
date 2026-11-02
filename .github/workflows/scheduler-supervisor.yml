@@ -1,0 +1,62 @@
+# Dispatches whatever the scheduler dropped.
+#
+# The monitor compares each workflow's last *edit* with its last *run*, and on
+# 2 November that comparison showed the crons themselves were not firing: the
+# brain's 03:14 slot and keepalive's 03:23 slot both came and went with no run.
+# A dropped schedule cannot report itself, so something else has to look.
+#
+# Every fifteen minutes this checks each workflow's most recent scheduled slot and
+# dispatches the ones that produced no run — once per slot, at most three per pass.
+name: Scheduler supervisor
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # frequent on purpose: one dropped slot is not a lost day
+  workflow_dispatch:
+
+permissions:
+  contents: write    # records the dispatched-slot ledger
+  actions: write     # the whole point: dispatch another workflow
+  issues: read
+
+concurrency:
+  group: scheduler-supervisor
+  cancel-in-progress: false
+
+jobs:
+  supervise:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Python deps
+        run: pip install -r requirements.txt
+
+      - name: Dispatch missed slots
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m scripts.scheduler_supervisor
+
+      - name: Record the dispatch ledger
+        if: ${{ always() && !cancelled() }}
+        run: |
+          git config user.name "scheduler-supervisor"
+          git config user.email "actions@users.noreply.github.com"
+          if [ -f content/monitor/dispatched.json ]; then
+            git add content/monitor/dispatched.json
+            if git diff --staged --quiet; then
+              echo "no dispatches this pass"
+            else
+              git commit -m "chore(monitor): record dispatched slots [skip ci]"
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME:-main}" || true
+              git push || echo "::warning::could not push the dispatch ledger"
+            fi
+          fi
