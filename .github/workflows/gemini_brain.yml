@@ -36,6 +36,12 @@ jobs:
 
       - uses: ./.github/actions/setup-render-deps
 
+      - name: Can this runner reach Gemini?
+        # A wrong answer here is expensive. GEMINI_API_KEY has been configured since
+        # week one and narrates every video; authoring reported "key unavailable"
+        # whenever the client failed for an unrelated reason. Prove the call first.
+        run: python scripts/gemini_brain.py --preflight
+
       - name: Keep the long-form queue publishable
         # Lengthens approved-but-short scripts, then authors only if the queue still
         # lacks runway. Exits non-zero when nothing can publish, which is the point:

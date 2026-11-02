@@ -11,11 +11,13 @@ Usage:
     python scripts/gemini_brain.py --auto-replenish   # Replenish queue if runway < 2.0 days
     python scripts/gemini_brain.py --author-shorts    # Author specs for Shorts with no renderer
     python scripts/gemini_brain.py --ensure-supply    # Make the long-form queue publishable
+    python scripts/gemini_brain.py --preflight        # Can this runner reach Gemini at all?
 """
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from dataclasses import asdict
 from pathlib import Path
@@ -30,7 +32,13 @@ from pipeline.gemini_brain import BrainAuthoringError, GeminiBrain
 def cmd_audit(brain: GeminiBrain) -> int:
     audit = brain.audit_status()
     equipped = list_equipped_modules()
-    api_status = "ONLINE (google.genai connected)" if brain.is_api_available() else "STANDBY / OFFLINE (equipped templates active)"
+    status = brain.api_status()
+    if status["client_ready"]:
+        api_status = "ONLINE (google.genai connected)"
+    elif status["key_present"]:
+        api_status = f"KEY PRESENT, CLIENT FAILED — {status['reason']}"
+    else:
+        api_status = f"NO KEY HERE — {status['reason']}"
 
     print("=" * 76)
     print("THE SECRET PLACE — GOOGLE GEMINI AUTONOMOUS BRAIN AUDIT")
@@ -113,6 +121,34 @@ def cmd_author_shorts(brain: GeminiBrain) -> int:
     return 0
 
 
+def cmd_preflight(brain: GeminiBrain) -> int:
+    """Prove the runner can reach Gemini before anything depends on it.
+
+    A wrong answer here is expensive: the key has been configured since week one
+    and narrates every video, while the authoring path reported "GEMINI_API_KEY
+    unavailable" because the client had failed to start for an unrelated reason.
+    """
+    status = brain.api_status()
+    print(f"[preflight] key present:  {status['key_present']}")
+    print(f"[preflight] client ready: {status['client_ready']}")
+    print(f"[preflight] model:        {status['model']}")
+    print(f"[preflight] reason:       {status['reason']}")
+    in_ci = bool(os.environ.get("GITHUB_ACTIONS"))
+    if not status["client_ready"]:
+        print(f"::error title=Gemini unreachable::{status['reason']}")
+        return 1
+    try:
+        resp = brain._client.models.generate_content(
+            model=brain.model, contents="Reply with the single word: ready")
+        text = (getattr(resp, "text", "") or "").strip()
+        print(f"[preflight] live call:    {text[:60] or '(empty response)'}")
+        return 0
+    except Exception as exc:  # noqa: BLE001
+        where = "GitHub Actions" if in_ci else "this machine"
+        print(f"::error title=Gemini call failed ({where})::{type(exc).__name__}: {exc}")
+        return 1
+
+
 def cmd_ensure_supply(brain: GeminiBrain, max_expansions: int, target: int,
                       min_publishable: int = 1) -> int:
     """Lengthen the backlog, author if still empty, verify — one unattended loop."""
@@ -144,6 +180,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--equip", action="store_true", help="List equipped brain knowledge modules")
     parser.add_argument("--generate-next", action="store_true", help="Generate and stage the next scripture release")
     parser.add_argument("--auto-replenish", action="store_true", help="Replenish queue if runway < threshold")
+    parser.add_argument("--preflight", action="store_true",
+                        help="Check the key and make one live model call, then exit")
     parser.add_argument("--ensure-supply", action="store_true",
                         help="Lengthen the backlog and author a script if the queue is empty")
     parser.add_argument("--min-publishable", type=int, default=1,
@@ -162,6 +200,8 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_equip()
     if args.generate_next:
         return cmd_generate_next(brain)
+    if args.preflight:
+        return cmd_preflight(brain)
     if args.ensure_supply:
         return cmd_ensure_supply(brain, args.max_expansions, args.target,
                                  args.min_publishable)

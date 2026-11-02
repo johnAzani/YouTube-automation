@@ -148,6 +148,31 @@ def check_queues(report: Report, max_publish_age: timedelta = MAX_PUBLISH_AGE,
     return report
 
 
+def check_brain_api(report: Report) -> Report:
+    """Can the authoring brain reach Gemini from here, and if not, why exactly?
+
+    Reported verbatim: "the key is not set" and "the key is set but the client
+    could not start" are different faults, and conflating them wasted weeks —
+    the same key narrates every video.
+    """
+    try:
+        from pipeline.gemini_brain import GeminiBrain
+
+        status = GeminiBrain().api_status()
+    except Exception as exc:  # noqa: BLE001
+        report.add("brain api", f"could not even inspect the brain: {exc}")
+        return report
+    report.checked.append(f"brain api: {status['reason']} (model {status['model']})")
+    if not status["client_ready"]:
+        # Fatal only in CI: on a laptop with no key the pipeline can still publish
+        # what is already queued, but nothing new can be written.
+        in_ci = bool(os.environ.get("GITHUB_ACTIONS"))
+        report.add("brain api",
+                   f"the brain cannot author or lengthen anything: {status['reason']}",
+                   fatal=in_ci)
+    return report
+
+
 def check_workflows(report: Report, rows=None) -> Report:
     """Every scheduled workflow must have run inside its own cron window."""
     if rows is None:
@@ -168,6 +193,7 @@ def build_report(now: datetime | None = None, published_dir: Path | None = None,
                  workflow_rows=None) -> Report:
     report = Report()
     check_queues(report, published_dir=published_dir, now=now)
+    check_brain_api(report)
     check_workflows(report, rows=workflow_rows)
     return report
 
