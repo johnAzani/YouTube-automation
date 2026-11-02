@@ -38,6 +38,8 @@ the text box, text contrast, safe-zone and badge clearance, file size.
 """
 from __future__ import annotations
 
+import dataclasses
+import hashlib
 import json
 import math
 import random
@@ -118,6 +120,39 @@ CTR_VARIANTS = (
         rays=True, seed=303, text_box=(0, 0, 0, 0), house=(0.205, 0.170),
     ),
 )
+
+
+# --------------------------------------------------------------------------- #
+# Per-release variation
+# --------------------------------------------------------------------------- #
+def variations_for(doc_key: str, variants=CTR_VARIANTS) -> tuple["CtrVariant", ...]:
+    """Re-seed the pack for one job, inside the bounds the CTR study validated.
+
+    Two consecutive videos with the same seed and the same copy produce frames that
+    are identical to the byte — which is what the channel looked like on 2 November:
+    Psalm 46's thumbnail was Psalm 121's thumbnail. The composition stays in the
+    measured sweet spot (moon at 66-82% width, 19-22% of frame height, ridge within
+    a few percent); only the seed, the moon's placement and the ridge height move,
+    deterministically from the job id, so a re-run of the same job reproduces the
+    same frame.
+    """
+    digest = hashlib.sha1((doc_key or "default").encode("utf-8")).hexdigest()
+    base = int(digest[:8], 16)
+    out = []
+    for index, variant in enumerate(variants):
+        rng = random.Random(base + index * 17)
+        moon = (min(0.820, max(0.660, variant.moon[0] + rng.uniform(-0.060, 0.060))),
+                min(0.500, max(0.330, variant.moon[1] + rng.uniform(-0.055, 0.055))))
+        scale = min(0.222, max(0.190, variant.moon_scale + rng.uniform(-0.012, 0.012)))
+        horizon = min(0.800, max(0.680, variant.horizon + rng.uniform(-0.030, 0.030)))
+        house = None
+        if variant.house:
+            house = (min(0.400, max(0.200, variant.house[0] + rng.uniform(-0.045, 0.045))),
+                     variant.house[1])
+        out.append(dataclasses.replace(
+            variant, seed=variant.seed + base % 7919, moon=moon, moon_scale=scale,
+            horizon=horizon, house=house))
+    return tuple(out)
 
 
 # --------------------------------------------------------------------------- #
@@ -402,32 +437,73 @@ def _tracked_width(draw, text, font, tracking: float) -> float:
     return sum(draw.textlength(ch, font=font) for ch in text) + tracking * (len(text) - 1)
 
 
+def _balanced_wrap(draw, words, font, tracking: float, max_w: float,
+                   max_lines: int = 3) -> list[str] | None:
+    """Break a short hero into lines that are *even*, not merely greedy.
+
+    Greedy wrapping left "BE STILL / AND / KNOW" — a one-word line in the middle of
+    a four-word hero, which reads as a stutter and wastes a quarter of the text box.
+    For at most five words an exhaustive search is free, so pick the break that
+    minimises the squared slack between lines: the block ends up rectangular, which
+    is also what lets the type grow.
+    """
+    n = len(words)
+    if n == 0:
+        return None
+    if n > 7:  # nothing here should ever be this long; greedy is fine
+        return None
+    from itertools import combinations
+
+    best = None
+    for count in range(1, min(max_lines, n) + 1):
+        for breaks in combinations(range(1, n), count - 1):
+            edges = (0, *breaks, n)
+            lines = [" ".join(words[a:b]) for a, b in zip(edges, edges[1:])]
+            widths = [_tracked_width(draw, line, font, tracking) for line in lines]
+            if any(w > max_w for w in widths):
+                continue
+            widest = max(widths)
+            slack = sum((widest - w) ** 2 for w in widths)
+            score = (len(lines), slack)
+            if best is None or score < best[0]:
+                best = (score, lines)
+    return best[1] if best else None
+
+
 def _layout(draw, hero: str, box, tracking_ratio: float = -0.022):
-    """Largest size that fits, with the trailing-tracking correction applied."""
+    """Largest size that fits — preferring a block with no one-word line.
+
+    Largest-first alone gives "BE STILL / AND / KNOW": the type is as big as it can
+    be, but a lone conjunction in the middle reads as a stutter at 168 px. So the
+    search keeps going a little smaller and takes the biggest size at which every
+    line carries at least two words, provided that costs no more than ~15% of the
+    type size. A hero that legitimately has one word per line ("PRAY THIS TONIGHT"
+    at full width) still falls back to the largest fit.
+    """
     x0, y0, x1, y1 = box
     max_w, max_h = x1 - x0, y1 - y0
     words = hero.split()
-    size = 300
-    while size >= 96:
+    best_fit = None
+    clean = None
+    for size in range(300, 95, -5):
         font = _font(size)
         tracking = tracking_ratio * size
-        lines, current = [], ""
-        for word in words:
-            cand = f"{current} {word}".strip()
-            if current and _tracked_width(draw, cand, font, tracking) > max_w:
-                lines.append(current)
-                current = word
-            else:
-                current = cand
-        if current:
-            lines.append(current)
-        if len(lines) <= 3:
-            leading = int(size * 0.94)
-            total = leading * len(lines)
-            widest = max(_tracked_width(draw, line, font, tracking) for line in lines)
-            if total <= max_h and widest <= max_w:
-                return font, lines, tracking, leading, size
-        size -= 5
+        lines = _balanced_wrap(draw, words, font, tracking, max_w, max_lines=3)
+        if not lines or len(lines) > 3:
+            continue
+        leading = int(size * 0.94)
+        if leading * len(lines) > max_h:
+            continue
+        if max(_tracked_width(draw, line, font, tracking) for line in lines) > max_w:
+            continue
+        if best_fit is None:
+            best_fit = (font, lines, tracking, leading, size)
+        if clean is None and min(len(line.split()) for line in lines) >= 2:
+            clean = (font, lines, tracking, leading, size)
+    if clean and best_fit and clean[4] >= best_fit[4] * 0.75:
+        return clean
+    if best_fit:
+        return best_fit
     font = _font(96)
     tracking = tracking_ratio * 96
     lines = hero.split()[:3]
@@ -602,12 +678,18 @@ def render_ctr(variant: CtrVariant, out_path: Path, size=CANVAS) -> CtrReport:
 
 
 def generate_ctr_pack(out_dir: Path, variants=CTR_VARIANTS,
-                      hero_override: str | None = None) -> list[CtrReport]:
-    """Render the pack. `hero_override` replaces the copy on the text variants.
+                      hero_override: str | None = None,
+                      doc_key: str | None = None) -> list[CtrReport]:
+    """Render the pack for one job.
 
-    The textless poster keeps no copy — that is the point of it.
+    `hero_override` replaces the copy on the text variants with the script's own
+    ``thumb_text`` — the per-psalm line the brain authored, which the pipeline used
+    to discard in favour of the fixed "PRAY THIS TONIGHT" on every video. The
+    textless poster keeps no copy; that is the point of it. `doc_key` re-seeds the
+    art so two releases never render the same frame.
     """
-    import dataclasses
+    if doc_key:
+        variants = variations_for(doc_key, variants)
 
     out_dir.mkdir(parents=True, exist_ok=True)
     reports = []

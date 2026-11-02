@@ -237,8 +237,8 @@ thumbnail. The pack now carries copy the title does not:
 
 | Concept | Copy | Why it is not redundant |
 | --- | --- | --- |
-| `hook` | PRAY THIS TONIGHT | an imperative + a time; the title never asks for anything |
-| `quiet` | WHILE YOU SLEEP | inverts the subject: the title says *He* does not sleep, this says *you* do |
+| `hook` | the job's `thumb_text` (was fixed: PRAY THIS TONIGHT) | an imperative the title never issues; now per-psalm |
+| `quiet` | same `thumb_text`, cooler light | inverts the subject through the frame, not the words |
 | `poster` | none | 28% of breakout thumbnails carry no text at all (vidIQ) |
 
 ### The anchor: one lit window
@@ -261,9 +261,33 @@ between a scene and stock wallpaper.
 
 Decision sheet: `docs/media/thumbnails/ctr-decision.png`.
 
-### Recommendation
+### Correction, 2 November: the copy must be per-video
 
-Ship **`hook` — "PRAY THIS TONIGHT"** as the live thumbnail. It is the only one of
+Psalm 46 premiered wearing Psalm 121's thumbnail, pixel for pixel. The study above
+fixed *what kind* of copy wins and then the pipeline hard-coded that winning line
+onto every release: `generate_ctr_pack(out_dir)` had no knowledge of the job, so
+the hero was always "PRAY THIS TONIGHT" and the seed was always 101.
+
+Every script in the queue already carries its own `thumb_text` — "BE STILL AND
+KNOW", "LAY DOWN IN PEACE", "ANGELS WATCH OVER YOU", "NO TERROR BY NIGHT" — and the
+renderer never received it. It does now:
+
+* `hero_override=doc.meta["thumb_text"]` — the psalm's own line, still drawn in the
+  measured style (warm white, gold final line, ≤3 lines, contrast ≥7:1);
+* `doc_key=doc.id` re-seeds the moon's placement, its scale, the ridge and the
+  house inside the bounds this study measured, so two releases never render the
+  same frame, and a retried run still renders the *same* frame as its first attempt;
+* line breaking is balanced rather than greedy ("BE STILL / AND KNOW", not
+  "BE STILL / AND / KNOW"), giving up at most 25% of type size for a block with no
+  one-word line.
+
+The concept rule from section 10 still holds — the copy must say something the
+title does not — and each `thumb_text` is authored against its own title, so the
+per-video line satisfies it better than one global line ever could.
+
+### Recommendation (as of the 2 November study)
+
+Ship **`hook`** as the live thumbnail — same treatment, the job's own line. It is the only one of
 the three that both adds information the title lacks *and* reads as a command at
 168 px, which is what a browse-feed impression needs. Put all three into Test &
 Compare; it decides on watch-time share, not CTR, so the winner may not be the

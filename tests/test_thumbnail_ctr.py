@@ -167,5 +167,84 @@ class TestSurfaces(unittest.TestCase):
         self.assertLessEqual(y1 / CANVAS[1], 0.84)
 
 
+class TestEveryReleaseLooksLikeItself(unittest.TestCase):
+    """On 2 November Psalm 46 premiered wearing Psalm 121's thumbnail.
+
+    The pack was rendered with no knowledge of the job, so the hero copy was the
+    fixed "PRAY THIS TONIGHT" and the seed was fixed too: two videos, one picture.
+    Every script already carried its own ``thumb_text``; the pipeline never passed
+    it in.
+    """
+
+    def test_the_scripts_own_line_is_the_hero(self):
+        out = TMP / "own-line"
+        reports = ctr.generate_ctr_pack(out, hero_override="Be Still and Know",
+                                        doc_key="0013")
+        text = [r for r in reports if r.hero]
+        poster = [r for r in reports if not r.hero]
+        self.assertEqual([r.hero for r in text], ["BE STILL AND KNOW"] * len(text))
+        self.assertEqual(len(poster), 1, "the textless poster must stay textless")
+
+    def test_the_copy_still_fits_the_measured_sweet_spot(self):
+        out = TMP / "own-line2"
+        reports = ctr.generate_ctr_pack(out, hero_override="Angels Watch Over You",
+                                        doc_key="0016")
+        for r in reports:
+            if not r.hero:
+                continue
+            self.assertLessEqual(r.lines, 3)
+            self.assertGreaterEqual(r.contrast, MIN_CONTRAST - 0.5, r.variant)
+            self.assertTrue(r.safe_zone_ok, r.variant)
+            self.assertLess(r.path.stat().st_size, 2 * 1024 * 1024)
+
+    def test_two_releases_do_not_render_the_same_frame(self):
+        a = ctr.generate_ctr_pack(TMP / "a", hero_override="Be Still and Know",
+                                  doc_key="0013")
+        b = ctr.generate_ctr_pack(TMP / "b", hero_override="Lay Down in Peace",
+                                  doc_key="0017")
+        for ra, rb in zip(a, b):
+            self.assertNotEqual(ra.path.read_bytes(), rb.path.read_bytes(), ra.variant)
+
+    def test_the_same_job_renders_the_same_frame(self):
+        # determinism: a retried run must not silently change the picture
+        a = ctr.variations_for("0013")
+        b = ctr.variations_for("0013")
+        self.assertEqual([(v.seed, v.moon, v.moon_scale) for v in a],
+                         [(v.seed, v.moon, v.moon_scale) for v in b])
+
+    def test_variation_stays_inside_the_validated_bounds(self):
+        for key in ("0003", "0010", "0013", "0017", "9999"):
+            for v in ctr.variations_for(key):
+                self.assertGreaterEqual(v.moon[0], 0.66)
+                self.assertLessEqual(v.moon[0], 0.82)
+                self.assertGreaterEqual(v.moon_scale, 0.19)
+                self.assertLessEqual(v.moon_scale, 0.222)
+
+    def test_a_four_word_hero_does_not_break_into_a_lone_conjunction(self):
+        # greedy wrapping gave "BE STILL / AND / KNOW"; the balanced search finds
+        # "BE STILL / AND KNOW" for the price of a slightly smaller size
+        from PIL import ImageDraw
+
+        draw = ImageDraw.Draw(Image.new("RGB", (10, 10)))
+        box = ctr.CTR_VARIANTS[0].text_box
+        for hero, expected in (("BE STILL AND KNOW", ["BE STILL", "AND KNOW"]),
+                               ("LAY DOWN IN PEACE", ["LAY DOWN", "IN PEACE"]),
+                               ("NO TERROR BY NIGHT", ["NO TERROR", "BY NIGHT"])):
+            _font_, lines, _t, _l, _s = ctr._layout(draw, hero, box)
+            self.assertEqual(lines, expected)
+
+    def test_a_hero_that_must_stack_still_fits_the_box(self):
+        from PIL import ImageDraw
+
+        draw = ImageDraw.Draw(Image.new("RGB", (10, 10)))
+        box = ctr.CTR_VARIANTS[0].text_box
+        for report in ctr.generate_ctr_pack(TMP / "long-hero",
+                                            hero_override="The Lord Bless and Keep You",
+                                            doc_key="0033"):
+            if report.hero:
+                self.assertLessEqual(report.lines, 3)
+                self.assertGreaterEqual(report.contrast, MIN_CONTRAST - 0.5)
+
+
 if __name__ == "__main__":
     unittest.main()
