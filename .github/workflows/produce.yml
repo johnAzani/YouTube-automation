@@ -185,6 +185,12 @@ jobs:
         # went if it ever comes close.
         timeout-minutes: 170
         if: ${{ inputs.short == '' }}
+        env:
+          # An append-only trail of what this step was doing, written as it runs.
+          # The step summary needs a GitHub sign-in to read and the log archive is
+          # unreachable from automation, so this file is what lets the reporter
+          # below quote the run back as an issue we can actually read.
+          PROGRESS_TRAIL: output/progress-trail.log
         run: |
           set -o pipefail
           if [ -n "${{ inputs.job }}" ]; then
@@ -205,6 +211,20 @@ jobs:
             done
             exit "$rc"
           fi
+
+      - name: Say where the release died
+        # `gh run view --log-failed` returns "failed to get run log … EOF" for
+        # these runs and the run page is behind a sign-in, so three consecutive
+        # 90-minute timeouts were undiagnosable. The trail written during the run
+        # is turned into an issue, which both the owner and the automation can read.
+        if: ${{ failure() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+        run: |
+          set +e
+          python -m scripts.release_report --trail output/progress-trail.log \
+            --log run.log --issue || true
 
       - name: Report a stall if the queues are empty
         # Runs even when the render failed: that is precisely when the owner needs
