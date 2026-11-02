@@ -5,7 +5,9 @@ status: draft
 privacy: public
 replace: false
 target_window_utc: '14:14'
-notes: "Companion Short for Psalm 27: The Lord Is My Light & My Salvation (Draft -\
-  \ awaiting edition authoring) \u2014 needs a scene script 'short-psalm27' in tools/shorts.py\
-  \ before it can render"
+notes: "Companion Short for Psalm 27: The Lord Is My Light & My Salvation \u2014 Fear\
+  \ No Evil \u2014 Night Prayer for Sleep, Peace & Divine Guard | The Secret Place\
+  \ \u2014 authoring failed: cannot author Psalm 27 Short: GEMINI_API_KEY unavailable.\
+  \ Refusing to fabricate a scene list."
 renderer_ready: false
+authored_by_brain: false

@@ -9,6 +9,7 @@ Usage:
     python scripts/gemini_brain.py --equip            # Display equipped modules and rubrics
     python scripts/gemini_brain.py --generate-next    # Author and stage the next scripture release
     python scripts/gemini_brain.py --auto-replenish   # Replenish queue if runway < 2.0 days
+    python scripts/gemini_brain.py --author-shorts    # Author specs for Shorts with no renderer
 """
 from __future__ import annotations
 
@@ -87,12 +88,31 @@ def cmd_auto_replenish(brain: GeminiBrain, min_days: float) -> int:
     return 0
 
 
+def cmd_author_shorts(brain: GeminiBrain) -> int:
+    """Author the scene spec for every queued Short that cannot render yet."""
+    rows = brain.author_missing_shorts()
+    if not rows:
+        print("[gemini-brain] Shorts queue is empty. Nothing to author.")
+        return 0
+    for row in rows:
+        print(f"[gemini-brain]   {row['file']}: {row['verdict']} — {row['reason']}")
+    authored = [r for r in rows if r["verdict"] == "authored"]
+    failed = [r for r in rows if r["verdict"] in {"failed", "no_source", "unreadable", "no_key"}]
+    print(f"[gemini-brain] Authored {len(authored)} Short spec(s); {len(failed)} still blocked.")
+    if failed and not authored and any(r["verdict"] == "failed" for r in failed):
+        # A brain that cannot author is a real fault; a missing source is not.
+        return 1
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Google Gemini Brain Automation CLI")
     parser.add_argument("--audit", action="store_true", help="Audit brain equipment and queue runway")
     parser.add_argument("--equip", action="store_true", help="List equipped brain knowledge modules")
     parser.add_argument("--generate-next", action="store_true", help="Generate and stage the next scripture release")
     parser.add_argument("--auto-replenish", action="store_true", help="Replenish queue if runway < threshold")
+    parser.add_argument("--author-shorts", action="store_true",
+                        help="Author scene specs for queued Shorts that have no renderer")
     parser.add_argument("--min-runway", type=float, default=2.0, help="Minimum runway days threshold (default: 2.0)")
 
     args = parser.parse_args(argv)
@@ -102,6 +122,8 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_equip()
     if args.generate_next:
         return cmd_generate_next(brain)
+    if args.author_shorts:
+        return cmd_author_shorts(brain)
     if args.auto_replenish:
         return cmd_auto_replenish(brain, args.min_runway)
 

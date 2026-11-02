@@ -161,7 +161,9 @@ def queue_health() -> list[dict]:
         ready = sum(1 for r in shorts if r["verdict"] == "ready")
         blocked = sum(1 for r in shorts if r["verdict"] != "ready")
         rows.append({"queue": "shorts", "ready": ready,
-                     "note": f"{blocked} manifest(s) waiting on a scene script in tools/shorts.py"
+                     "note": (f"{blocked} manifest(s) with no scene spec yet — the brain authors "
+                             f"these into content/shorts-scripts/ on the next brain or "
+                             f"release run")
                              if ready == 0 else "renderable now"})
     except Exception as exc:
         rows.append({"queue": "shorts", "ready": 0, "note": f"queue_report failed: {exc}"})

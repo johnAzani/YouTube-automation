@@ -282,8 +282,52 @@ Sleep deeply, sleep peacefully, and rest in the sanctuary of His presence.
 Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.
 """
 
+    def author_short_spec(self, longform_doc: ScriptDoc, key: str | None = None) -> "ShortSpec":
+        """Ask the model to write a complete 9:16 Short spec, then validate it.
+
+        This is the step that was missing: `tools/shorts.py` could only render Shorts
+        whose scene data was hand-written into a Python literal, so the brain could
+        queue a Short but never produce one. A spec is data — scenes, queries,
+        captions, kinetic phrases, beats — so the model can write it and the
+        renderer can build it.
+
+        Raises BrainAuthoringError rather than returning something partial: a Short
+        that renders with mislabelled scripture is worse than a stalled queue.
+        """
+        from .short_script import (ShortSpecError, build_prompt, parse_model_json,
+                                   require_valid, validate_spec)
+
+        psalm_match = re.search(r"Psalm\s+(\d+)", longform_doc.title)
+        scripture = f"Psalm {psalm_match.group(1)}" if psalm_match else longform_doc.title.split(":")[0]
+        if not self.is_api_available():
+            raise BrainAuthoringError(
+                f"cannot author {scripture} Short: GEMINI_API_KEY unavailable. "
+                "Refusing to fabricate a scene list."
+            )
+        key = key or (f"short-psalm{psalm_match.group(1)}" if psalm_match else
+                      f"short-{longform_doc.slug[:30].strip('-')}")
+        prompt = build_prompt(scripture, key=key)
+        last_error = ""
+        for attempt in (1, 2):
+            try:
+                resp = self._client.models.generate_content(
+                    model=self.model,
+                    contents=prompt if attempt == 1 else f"{prompt}\n\nPrevious output was rejected: {last_error}\nFix exactly that and return only JSON.",
+                )
+                data = parse_model_json(getattr(resp, "text", "") or "")
+                spec = validate_spec(data)
+                if spec.problems:
+                    last_error = "; ".join(spec.problems[:4])
+                    continue
+                return require_valid(spec)
+            except ShortSpecError as exc:
+                last_error = str(exc)
+            except Exception as exc:  # noqa: BLE001
+                last_error = f"{type(exc).__name__}: {exc}"
+        raise BrainAuthoringError(f"{scripture} Short spec rejected twice: {last_error}")
+
     def generate_companion_short(self, longform_doc: ScriptDoc) -> tuple[Path, str]:
-        """Queue a companion 9:16 Short for this long-form video — if one can render.
+        """Queue a companion 9:16 Short for this long-form video.
 
         Two defects this replaces:
 
@@ -291,40 +335,126 @@ Type Amen to agree with this prayer, and subscribe to The Secret Place to pray w
           long-form video queued another Psalm 91 Short, one psalm's scripture
           attached to another psalm's title. Same failure as job 0011.
         * the manifest was written ``status: approved`` even when no renderer
-          script existed for the key, so production skipped it silently forever
-          (three such manifests are sitting in the queue right now).
+          script existed for the key, so production skipped it silently forever.
+
+        Now the brain *authors* the Short as a validated spec, which the renderer
+        picks up from ``content/shorts-scripts/``. If authoring fails the manifest
+        stays a draft that says why.
         """
         from .short_release import _renderer_script_keys
+        from .short_script import save_spec
 
         SHORTS_QUEUE_DIR.mkdir(parents=True, exist_ok=True)
         psalm = re.search(r"Psalm\s+(\d+)", longform_doc.title)
         key = f"short-psalm{psalm.group(1)}" if psalm else f"short-{longform_doc.slug[:30].strip('-')}"
-        renderable = key in _renderer_script_keys()
         manifest_filename = f"{longform_doc.id}-{key}.yml"
         manifest_path = SHORTS_QUEUE_DIR / manifest_filename
 
+        authored, authoring_note = False, ""
+        if key not in _renderer_script_keys():
+            try:
+                spec = self.author_short_spec(longform_doc, key=key)
+                save_spec(spec)
+                authored = True
+                authoring_note = f"spec authored by the brain ({spec.words} narration words)"
+            except Exception as exc:  # noqa: BLE001
+                authoring_note = f"authoring failed: {exc}"
+
+        renderable = key in _renderer_script_keys()
         manifest_data = {
             "short": key,
             "companion_longform_id": longform_doc.id,
             "scripture": longform_doc.title.split(":")[0].strip(),
-            # Only claim approved when the renderer can actually build it. A Short
-            # needs a hand-authored scene script in tools/shorts.py; there is no
-            # generator for those, and pretending otherwise stalls the queue.
+            # Approved only when something can actually build it.
             "status": "approved" if renderable else "draft",
             "renderer_ready": renderable,
+            "authored_by_brain": authored,
             "privacy": "public",
             "replace": False,
             "target_window_utc": "14:14",
             "notes": (
-                f"Companion Short for {longform_doc.title}"
-                if renderable
-                else f"Companion Short for {longform_doc.title} — needs a scene script "
-                     f"'{key}' in tools/shorts.py before it can render"
+                f"Companion Short for {longform_doc.title} — {authoring_note}"
+                if authoring_note
+                else f"Companion Short for {longform_doc.title}"
             ),
         }
 
         manifest_path.write_text(yaml.safe_dump(manifest_data, sort_keys=False), encoding="utf-8")
         return manifest_path, key
+
+    def _companion_doc(self, longform_id: str) -> Optional[ScriptDoc]:
+        """Find the long-form script a queued Short is a companion to."""
+        if not longform_id:
+            return None
+        for directory in (QUEUE_DIR, PUBLISHED_DIR):
+            for path in sorted(Path(directory).glob(f"{longform_id}-*.md")):
+                try:
+                    return parse_script(path)
+                except Exception:  # noqa: BLE001 — an unreadable sibling is not fatal
+                    continue
+        return None
+
+    def author_missing_shorts(self) -> list[dict[str, Any]]:
+        """Author a spec for every queued Short that has no renderer yet.
+
+        `generate_companion_short` only writes specs for Shorts it creates. Manifests
+        created earlier — or whose first authoring attempt failed — would otherwise
+        wait forever, which is exactly the state that made the Shorts stage print
+        "nothing to do". This walks the queue and fills the gap, so the queue drains
+        itself instead of needing a person to hand-write scene data.
+        """
+        from .short_release import _renderer_script_keys
+        from .short_script import save_spec
+
+        rows: list[dict[str, Any]] = []
+        renderable = _renderer_script_keys()
+        for path in sorted(Path(SHORTS_QUEUE_DIR).glob("*.yml")):
+            try:
+                data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+            except Exception as exc:  # noqa: BLE001
+                rows.append({"file": path.name, "key": "", "verdict": "unreadable", "reason": str(exc)})
+                continue
+            key = str(data.get("short", "")).strip()
+            if not key:
+                rows.append({"file": path.name, "key": "", "verdict": "no_key", "reason": "manifest has no `short`"})
+                continue
+            if key in renderable:
+                rows.append({"file": path.name, "key": key, "verdict": "renderable", "reason": "already has a spec"})
+                continue
+
+            doc = self._companion_doc(str(data.get("companion_longform_id", "")).strip())
+            if doc is None:
+                reason = (f"no long-form script for companion id "
+                          f"{data.get('companion_longform_id')!r}; cannot author {key}")
+                data.update(status="draft", renderer_ready=False, authored_by_brain=False,
+                            notes=f"authoring blocked: {reason}")
+                path.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+                rows.append({"file": path.name, "key": key, "verdict": "no_source", "reason": reason})
+                continue
+
+            try:
+                spec = self.author_short_spec(doc, key=key)
+                save_spec(spec)
+            except Exception as exc:  # noqa: BLE001
+                reason = f"authoring failed: {exc}"
+                data.update(status="draft", renderer_ready=False, authored_by_brain=False,
+                            notes=f"Companion Short for {doc.title} — {reason}")
+                path.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+                rows.append({"file": path.name, "key": key, "verdict": "failed", "reason": reason})
+                continue
+
+            renderable.add(key)
+            data.update(
+                status="approved",
+                renderer_ready=True,
+                authored_by_brain=True,
+                notes=(f"Companion Short for {doc.title} — spec authored by the brain "
+                       f"({spec.words} narration words)"),
+            )
+            path.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+            rows.append({"file": path.name, "key": key, "verdict": "authored",
+                         "reason": f"{spec.words} narration words"})
+        return rows
 
     def verify_and_stage(self, script_path: Path) -> BrainGenerationResult:
         """Run factchecking claim extraction, verify queue integrity, and stage for production."""

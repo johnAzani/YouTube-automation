@@ -1,9 +1,11 @@
-"""Shorts are only half automated — these tests pin what that means.
+"""Shorts: the brain authors them, and approval follows renderability.
 
-A Short needs a hand-authored scene script in `tools/shorts.py`. There is no
-generator for those, so a manifest can exist, be approved, and still be unrenderable.
-Three such manifests sat in the queue while the stage printed "nothing to do" and
-exited 0 — indistinguishable from success on the run page.
+A Short is data — a validated spec the brain writes into `content/shorts-scripts/`,
+unioned with the hand-written scene scripts in `tools/shorts.py`. Manifests may
+exist without either, and previously such a manifest was written `approved`, so
+three of them sat in the queue while the stage printed "nothing to do" and exited
+0 — indistinguishable from success on the run page. These tests pin that a
+manifest is only approved when a renderer can actually build it.
 """
 import ast
 import tempfile
@@ -101,12 +103,44 @@ class TestCompanionShortMapping(unittest.TestCase):
         self.assertNotIn("psalm91", path.name)
 
     def test_without_a_renderer_the_manifest_is_a_draft(self):
+        """No API key and no hand-written script: refuse, and say why in the manifest."""
         doc = self.doc("0010-psalm-121-he-who-keeps-you-will-neither-slumber-no.md")
         path, _ = self.brain.generate_companion_short(doc)
         data = yaml.safe_load(path.read_text(encoding="utf-8"))
         self.assertEqual(data["status"], "draft")
         self.assertFalse(data["renderer_ready"])
-        self.assertIn("tools/shorts.py", data["notes"])
+        self.assertFalse(data["authored_by_brain"])
+        self.assertIn("authoring failed", data["notes"])
+        self.assertIn("GEMINI_API_KEY", data["notes"])
+
+    def test_a_spec_authored_by_the_brain_makes_the_manifest_renderable(self):
+        """The brain writes the spec; nothing hand-authored is required.
+
+        `_renderer_script_keys()` reads the authored specs off disk, so saving the
+        spec is itself what makes the key renderable. Simulated here with a set
+        that `save_spec` grows.
+        """
+        from pipeline import short_script as ss
+
+        doc = self.doc("0010-psalm-121-he-who-keeps-you-will-neither-slumber-no.md")
+        renderable_keys: set[str] = set()
+        authored = mock.Mock(key="short-psalm121", words=120)
+
+        def fake_save(spec):
+            renderable_keys.add(spec.key)
+            return Path("/dev/null")
+
+        with mock.patch.object(gb.GeminiBrain, "author_short_spec", return_value=authored), \
+             mock.patch.object(ss, "save_spec", side_effect=fake_save), \
+             mock.patch.object(sr, "_renderer_script_keys", side_effect=lambda: set(renderable_keys)):
+            path, key = self.brain.generate_companion_short(doc)
+
+        data = yaml.safe_load(path.read_text(encoding="utf-8"))
+        self.assertEqual(key, "short-psalm121")
+        self.assertTrue(data["authored_by_brain"])
+        self.assertTrue(data["renderer_ready"])
+        self.assertEqual(data["status"], "approved")
+        self.assertIn("spec authored by the brain", data["notes"])
 
     def test_with_a_renderer_it_may_be_approved(self):
         doc = self.doc("0010-psalm-121-he-who-keeps-you-will-neither-slumber-no.md")
