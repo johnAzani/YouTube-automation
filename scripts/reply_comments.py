@@ -50,8 +50,7 @@ def _summary(rows: dict) -> None:
         pass
 
 
-def _escalate_crisis(held: list[dict]) -> None:
-    """Make sure a self-harm comment reaches a person, not just a log line."""
+def _crisis_body(held: list[dict]) -> str:
     body = [
         "A viewer disclosed distress in a comment. The reply automation held it "
         "instead of posting publicly — a hotline reply under someone's self-harm "
@@ -68,18 +67,60 @@ def _escalate_crisis(held: list[dict]) -> None:
             f"- suggested reply (unposted): {row['draft']}",
             "",
         ]
-    text = "\n".join(body)
+    return "\n".join(body)
+
+
+def unreported(known_text: str, held: list[dict]) -> list[dict]:
+    """The held comments nobody has been told about yet.
+
+    The comment job runs on a schedule, so an unresolved disclosure was filed as a
+    brand-new issue every time it ran: #206, #207 and #209 were the same viewer.
+    Three issues for one person is how a real escalation gets lost in noise. A
+    comment already named in an open issue is already reported; anything new is
+    appended to that same issue rather than opening another.
+    """
+    return [row for row in held if str(row["comment_id"]) not in known_text]
+
+
+def _gh(*args: str):
+    import subprocess
+    return subprocess.run(["gh", *args], capture_output=True, text=True, check=False)
+
+
+def _escalate_crisis(held: list[dict]) -> str:
+    """Record held disclosures once, and say where. Returns what happened."""
+    text = _crisis_body(held)
     print(text)
     if not (os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")):
-        return
-    import subprocess
-    subprocess.run(["gh", "label", "create", "viewer-crisis", "--color", "b60205",
-                    "--description", "A viewer disclosed distress; needs a personal reply"],
-                   capture_output=True, text=True, check=False)
-    subprocess.run(["gh", "issue", "create", "--title",
-                    f"Viewer in distress — {len(held)} comment(s) need a personal reply",
-                    "--label", "viewer-crisis", "--body", text],
-                   capture_output=True, text=True, check=False)
+        return "not filed (no token)"
+    _gh("label", "create", "viewer-crisis", "--color", "b60205",
+        "--description", "A viewer disclosed distress; needs a personal reply")
+
+    import json as _json
+    listing = _gh("issue", "list", "--label", "viewer-crisis", "--state", "open",
+                  "--json", "number", "--limit", "5")
+    numbers = []
+    if listing.returncode == 0 and listing.stdout.strip():
+        try:
+            numbers = [row["number"] for row in _json.loads(listing.stdout)]
+        except (ValueError, KeyError, TypeError):
+            numbers = []
+
+    if numbers:
+        number = str(numbers[0])
+        detail = _gh("issue", "view", number, "--json", "body,comments")
+        known = detail.stdout if detail.returncode == 0 else ""
+        fresh = unreported(known, held)
+        if not fresh:
+            print(f"[replies] the held disclosure is already reported in issue #{number}")
+            return f"already reported in #{number}"
+        _gh("issue", "comment", number, "--body", _crisis_body(fresh))
+        return f"added {len(fresh)} new comment(s) to #{number}"
+
+    created = _gh("issue", "create", "--title",
+                  f"Viewer in distress — {len(held)} comment(s) need a personal reply",
+                  "--label", "viewer-crisis", "--body", text)
+    return created.stdout.strip() if created.returncode == 0 else "could not file an issue"
 
 
 def main() -> int:
