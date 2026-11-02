@@ -31,8 +31,13 @@ permissions:
   contents: write        # move queue file / record published receipt in content/published/
   issues: write          # release tickets
 
+# Production, the brain and the supervisor all commit into content/. Two of them
+# pushing at once is how the queue state was lost on 2 November: the supervisor
+# committed its dispatch ledger, production's `git push` was rejected, the move to
+# content/published/ never landed, and the next run could have re-uploaded the
+# same video. One content-state lock for all of them.
 concurrency:
-  group: produce
+  group: content-state
   cancel-in-progress: false
 
 jobs:
@@ -144,15 +149,31 @@ jobs:
         run: python -m scripts.pipeline_watchdog || true
 
       - name: Commit queue state (job moved to published/)
+        # Losing this commit is not cosmetic: the published/ move is what stops the
+        # next run from uploading the same video again. Retry around a moving main
+        # instead of dying on the first rejected push.
         if: ${{ always() && !cancelled() }}
         run: |
+          set -e
           git config user.name "youtube-automation-bot"
           git config user.email "actions@users.noreply.github.com"
           git add -A content/
-          if ! git diff --cached --quiet; then
-            git commit -m "chore(content): publish job [skip ci]"
-            git push
+          if git diff --cached --quiet; then
+            echo "queue state unchanged"
+            exit 0
           fi
+          git commit -m "chore(content): publish job [skip ci]"
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "queue state committed on attempt $attempt"
+              exit 0
+            fi
+            echo "::warning::push rejected (attempt $attempt); rebasing onto main and retrying"
+            git pull --rebase --autostash origin main || true
+            sleep $((attempt * 5))
+          done
+          echo "::error title=Queue state lost::could not commit the published/ move; the next run may re-upload the same video"
+          exit 1
 
       # Style proof without a 1 GB download: three frames from the master,
       # small enough to open from the run page. Shows HUD, typography,

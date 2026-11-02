@@ -1,7 +1,8 @@
 # Expands approved-but-too-short prayer scripts to full length.
 #
-# Why: prayer_pipeline refuses any script under 650 words rather than ship a
-# four-minute promise, so short scripts publish nothing. Every approved job in the
+# Why: prayer_pipeline refuses any script under the shared long-form floor
+# (MIN_LONGFORM_WORDS = 850, derived from 5 minutes at Charon's measured pace)
+# rather than ship a four-minute promise, so short scripts publish nothing. Every approved job in the
 # queue is 265-408 words, which is why the daily produce crons have had nothing to
 # build. This is the missing supply-side step.
 #
@@ -24,7 +25,7 @@ on:
   workflow_dispatch:
     inputs:
       ids:
-        description: "Comma-separated job ids (blank = every approved job under 650 words)"
+        description: "Comma-separated job ids (blank = every approved job under the word floor)"
         required: false
         default: ""
       target:

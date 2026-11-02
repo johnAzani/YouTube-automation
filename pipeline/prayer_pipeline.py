@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 from .config import CONFIG, OUTPUT_DIR
-from .script_doc import MIN_LONGFORM_WORDS, parse_script
+from .script_doc import MIN_LONGFORM_WORDS, MIN_NARRATION_SECONDS, parse_script
 from .originality import enforce
 from .gemini_tts import DEFAULT_MODEL, get_gemini_api_key, synthesize_gemini_audio
 from .prayer_alignment import align
@@ -49,8 +49,12 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
     try:
         synthesize_gemini_audio(doc.full_narration, audio, voice='Charon', model=DEFAULT_MODEL)
         duration = _probe_duration(audio)
-        if duration is None or duration < 300:
-            raise RuntimeError('Actual Charon narration is shorter than five minutes')
+        if duration is None or duration < MIN_NARRATION_SECONDS:
+            raise RuntimeError(
+                f'Actual Charon narration is {duration or 0:.0f}s; the channel needs '
+                f'{MIN_NARRATION_SECONDS}s ({MIN_NARRATION_SECONDS // 60} minutes). '
+                f'{doc.word_count} words is too short at Charon\'s pace — lengthen the script, '
+                f'the floor is {MIN_LONGFORM_WORDS} words.')
         words = align(audio, doc.full_narration, Path(model_dir))
         boundaries = [0.0]
         count = 0

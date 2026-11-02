@@ -14,6 +14,9 @@ import sys
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from pathlib import Path
+
+from .script_doc import (CHARON_WORDS_PER_MINUTE, MIN_LONGFORM_WORDS,
+                         MIN_NARRATION_SECONDS)
 from typing import Any, Optional
 
 import yaml
@@ -128,6 +131,7 @@ class GeminiBrain:
         theme = scripture_data.get("theme", "Divine Keeper Before Sleep")
         hook = scripture_data.get("hook", "THE LORD IS YOUR KEEPER")
 
+        author_words = max(950, MIN_LONGFORM_WORDS + 100)
         user_prompt = f"""
 Please author the official, complete long-form devotional script for:
 - Job ID: {job_id}
@@ -137,9 +141,12 @@ Please author the official, complete long-form devotional script for:
 
 Follow all channel invariants, DOCOGA REELS v2 guidelines, and theological rubrics.
 
-LENGTH IS A HARD REQUIREMENT: at least 900 words of narration across the scenes.
-The production gate is 650 and it is never lowered — a shorter script publishes
-nothing at all, it does not publish a short video. Do not pad with repeated
+LENGTH IS A HARD REQUIREMENT: at least {author_words} words of narration across the scenes.
+The production gate is {MIN_LONGFORM_WORDS} words and it is never lowered — a shorter script
+publishes nothing at all, it does not publish a short video. The gate is not
+arbitrary: Charon narrates about {CHARON_WORDS_PER_MINUTE} words a minute and the renderer
+refuses anything under {MIN_NARRATION_SECONDS} seconds, so {MIN_LONGFORM_WORDS} words is the first
+length that can actually be published. Do not pad with repeated
 sentences; write more prayer, more scripture exposition, more stillness.
 
 Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not include markdown code block backticks.

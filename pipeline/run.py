@@ -442,6 +442,35 @@ def _open_release_ticket(doc: ScriptDoc, url: str, privacy: str, video_id: str =
         _log(f"release ticket created: {(proc.stdout or '').strip()[:200]}")
 
 
+def empty_reason() -> str:
+    """Why nothing could be published, in one sentence with the numbers in it."""
+    from .script_doc import MIN_LONGFORM_WORDS, parse_script
+
+    queue = sorted(QUEUE_DIR.glob("*.md"))
+    approved, short, missing = 0, [], 0
+    for path in queue:
+        try:
+            doc = parse_script(path)
+        except Exception:  # noqa: BLE001
+            continue
+        if doc.status != "approved":
+            missing += 1
+            continue
+        approved += 1
+        if doc.word_count < MIN_LONGFORM_WORDS:
+            short.append((path.name, doc.word_count))
+    if approved and short:
+        worst = min(short, key=lambda row: row[1])
+        need = MIN_LONGFORM_WORDS - worst[1]
+        return (f"{len(short)} approved script(s) are under the {MIN_LONGFORM_WORDS}-word "
+                f"floor — {worst[0]} needs {need} more words — and the expansion pass "
+                f"did not bring any of them over it")
+    if not approved:
+        return (f"no approved long-form script in content/queue ({missing} draft(s)); "
+                f"the brain has not supplied one")
+    return "the queue has scripts but none is eligible"
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description="YouTube automation pipeline")
     p.add_argument("--job", help="path to a specific script markdown file")
@@ -456,14 +485,16 @@ def main(argv: list[str] | None = None) -> int:
 
     paths = select_jobs(args.all, args.job, args.next)
     if not paths:
-        # Not an error: approved scripts under the word floor are waiting on the
-        # brain's supply loop. A red cron every three hours would train everyone
-        # to ignore the dashboard.
-        _log("nothing eligible — approved scripts are under the floor and waiting for "
-             "the brain's supply loop (gemini_brain.py --ensure-supply)")
-        print("::notice title=No eligible job::approved scripts are under the word floor; "
-              "the brain lengthens them on the next run", flush=True)
-        return 0
+        # This used to `return 0` with a friendly notice, on the theory that a red
+        # cron every three hours would train everyone to ignore the dashboard. In
+        # practice it meant three production runs a day exited green while the
+        # channel published nothing for days on end, and the only person who
+        # noticed was the owner. An empty release slot is the fault, so it is
+        # reported as one, with the arithmetic that explains it.
+        why = empty_reason()
+        _log(f"nothing publishable: {why}")
+        print(f"::error title=Nothing publishable::{why}", flush=True)
+        return 2
 
     results = []
     for path in paths:

@@ -74,7 +74,9 @@ def good_provider(job, target=900):
         parts.extend(paragraphs)
         parts.append(openers[index % len(openers)])
     body = "\n\n".join(parts) + "\n"
-    filler = [f"{a}, {b}" for a in OPENINGS for b in CLOSINGS]
+    # Enough distinct sentences to reach any sane target: the loop must be able to
+    # satisfy the prompt's own arithmetic, which is the bug this suite exists for.
+    filler = [f"{a}, {b} ({n})" for a in OPENINGS for b in CLOSINGS for n in range(12)]
     for sentence in filler:
         if len(body.split()) >= target:
             break
@@ -138,7 +140,23 @@ class TestExpansion(unittest.TestCase):
         self.assertFalse(report.ok)
         self.assertEqual(sp.publishable_longform(self.dir), [])
 
-    def test_expansion_budget_is_respected(self):
+    def test_an_empty_queue_spends_the_wider_budget_and_no_more(self):
+        for i in range(9):
+            write_job(self.dir, name=f"900{i}-test.md")
+        calls = []
+
+        def counting(job, target=900):
+            calls.append(job.job_id)
+            return good_provider(job, target)
+
+        with mock.patch.dict("tools.expand_scripts.PROVIDERS", {"gemini": counting}):
+            sp.ensure_supply(None, limit=2, queue_dir=self.dir)
+        self.assertEqual(len(calls), sp.MAX_EXPANSIONS_WHEN_EMPTY)
+
+    def test_a_queue_that_can_already_publish_spends_only_its_allowance(self):
+        long_body = BODY + ("\n\nQuiet words that carry the prayer onward at a "
+                            "sleeping pace, again and again through the night.\n" * 120)
+        write_job(self.dir, status="approved", body=long_body, name="9050-good.md")
         for i in range(6):
             write_job(self.dir, name=f"900{i}-test.md")
         calls = []
@@ -203,7 +221,8 @@ class TestAuthoring(unittest.TestCase):
         self.assertFalse(report.ok)
         text = Path(report.authored["longform_path"]).read_text(encoding="utf-8")
         self.assertIn("status: draft", text)
-        self.assertIn("under the 650-word floor", report.blocked[-1])
+        from pipeline.script_doc import MIN_LONGFORM_WORDS
+        self.assertIn(f"under the {MIN_LONGFORM_WORDS}-word floor", report.blocked[-1])
 
     def test_a_script_quoting_the_wrong_psalm_is_never_approved(self):
         wrong = BODY.replace("The Lord is thy keeper", "The Lord is my light and my salvation")
@@ -228,9 +247,13 @@ class TestAuthoring(unittest.TestCase):
 
 class TestStatusRewrite(unittest.TestCase):
     def setUp(self):
+        from pipeline.script_doc import MIN_LONGFORM_WORDS
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
-        self.path = write_job(Path(self.tmp.name), status="draft")
+        # long enough to be approvable: approval below the floor is now refused
+        body = BODY + ("\n\nStillness that carries the prayer onward into the "
+                       "quiet of the night.\n" * (MIN_LONGFORM_WORDS // 10))
+        self.path = write_job(Path(self.tmp.name), status="draft", body=body)
 
     def test_only_the_status_line_changes(self):
         before = self.path.read_text(encoding="utf-8").split("---", 2)[2]
@@ -281,7 +304,7 @@ class TestWatchdog(unittest.TestCase):
                 {"queue": "shorts", "ready": 1, "note": "ok"}]
         report = self.report(rows=rows)
         self.assertFalse(report.healthy)
-        self.assertTrue(any("650-word floor" in f.detail for f in report.findings))
+        self.assertTrue(any("word floor" in f.detail for f in report.findings))
 
     def test_an_empty_shorts_queue_is_a_warning_not_a_block(self):
         rows = [{"queue": "longform", "ready": 2, "note": "ok"},

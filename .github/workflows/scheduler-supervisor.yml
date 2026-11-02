@@ -38,8 +38,9 @@ permissions:
   actions: write     # the whole point: dispatch another workflow
   issues: read
 
+# Same content-state lock production uses: both commit into content/.
 concurrency:
-  group: scheduler-supervisor
+  group: content-state
   cancel-in-progress: false
 
 jobs:

@@ -109,7 +109,7 @@ class TestGate(unittest.TestCase):
 
             short = write("9002-short.md", "9002")
             draft = write("9003-draft.md", "9003", status="draft")
-            long = write("9004-long.md", "9004", extra="word " * 700)
+            long = write("9004-long.md", "9004", extra="word " * ex.MIN_WORDS)
             found = {j.job_id for j in ex.under_gate([short, draft, long])}
             self.assertEqual(found, {"9002"})
 
@@ -118,7 +118,7 @@ class TestAdditiveGuarantee(unittest.TestCase):
     def test_expansion_keeps_every_original_line(self):
         with tempfile.TemporaryDirectory() as tmp:
             job = make_job(Path(tmp))
-            expanded = good_provider(job, 700)
+            expanded = good_provider(job, ex.MIN_WORDS + 40)
             self.assertEqual(ex.validate(job, expanded), [])
             for line in BODY.strip().splitlines():
                 if line.strip():
@@ -154,7 +154,7 @@ class TestPaddingRefusals(unittest.TestCase):
     def test_duplicate_sentence_is_refused(self):
         with tempfile.TemporaryDirectory() as tmp:
             job = make_job(Path(tmp))
-            expanded = good_provider(job, 700)
+            expanded = good_provider(job, ex.MIN_WORDS + 40)
             first = expanded.strip().split("\n\n")[2]      # an inserted filler sentence
             self.assertTrue(any("repeated verbatim" in p
                                 for p in ex.validate(job, expanded + "\n\n" + first + "\n")))
@@ -162,7 +162,7 @@ class TestPaddingRefusals(unittest.TestCase):
     def test_too_short_is_refused(self):
         with tempfile.TemporaryDirectory() as tmp:
             job = make_job(Path(tmp))
-            self.assertTrue(any("under the 650 gate" in p
+            self.assertTrue(any(f"under the {ex.MIN_WORDS} gate" in p
                                 for p in ex.validate(job, job.body + "\nTwo more words.")))
 
     def test_runaway_length_is_refused(self):
@@ -174,7 +174,7 @@ class TestPaddingRefusals(unittest.TestCase):
     def test_creator_name_is_refused(self):
         with tempfile.TemporaryDirectory() as tmp:
             job = make_job(Path(tmp))
-            expanded = good_provider(job, 700) + "\nNarrated by John Azani.\n"
+            expanded = good_provider(job, ex.MIN_WORDS + 40) + "\nNarrated by John Azani.\n"
             problems = ex.validate(job, expanded)
             self.assertTrue(any("creator name" in p for p in problems))
 
@@ -226,14 +226,15 @@ class TestWriteSafety(unittest.TestCase):
             job = make_job(Path(tmp))
             ex.PROVIDERS["_good"] = good_provider
             try:
-                result = ex.expand_job(job, provider="_good", target=700, write=True)
+                result = ex.expand_job(job, provider="_good", target=ex.MIN_WORDS + 40,
+                                       write=True)
             finally:
                 del ex.PROVIDERS["_good"]
             self.assertTrue(result.written)
             text = job.path.read_text(encoding="utf-8")
             self.assertIn('id: "9001"', text)
             self.assertIn("status: approved", text)
-            self.assertGreaterEqual(len(ex.split_frontmatter(text)[1].split()), 650)
+            self.assertGreaterEqual(len(ex.split_frontmatter(text)[1].split()), ex.MIN_WORDS)
 
     def test_provider_failure_leaves_the_file_alone(self):
         with tempfile.TemporaryDirectory() as tmp:

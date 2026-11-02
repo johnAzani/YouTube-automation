@@ -180,11 +180,18 @@ def duplicate_long_sentences(body: str, window: int = MIN_NEW_SENTENCE_WORDS) ->
     return [s for s, n in seen.items() if n > 1]
 
 
-def validate(original: Job, expanded: str, target: int = TARGET_WORDS) -> list[str]:
-    """Return a list of failures. Empty list means the expansion may be written."""
+def validate(original: Job, expanded: str, target: int = TARGET_WORDS,
+             require_floor: bool = True) -> list[str]:
+    """Return a list of failures. Empty list means the expansion may be written.
+
+    `require_floor=False` judges every rule *except* the word floor. A script that
+    passes that stricter subset is safe to write back even when it is still short:
+    it is additive, unrepeated, un-leaked and in the right psalm, so keeping it is
+    honest progress and the next pass starts from there instead of from zero.
+    """
     problems: list[str] = []
     words = len(expanded.split())
-    if words < MIN_WORDS:
+    if require_floor and words < MIN_WORDS:
         problems.append(f"still {words} words, under the {MIN_WORDS} gate")
     if words > MAX_WORDS:
         problems.append(f"{words} words exceeds the {MAX_WORDS} ceiling")
@@ -245,18 +252,29 @@ PROMPT = """You are extending a bedtime prayer script for a faceless scripture c
 RULES THAT WILL BE ENFORCED BY CODE — a violation discards your output:
 1. Every existing line must survive verbatim, in the same order. Do not rewrite,
    shorten, correct or "improve" any existing sentence.
-2. Keep the existing scene headings exactly. You may add at most two new scenes,
-   using the same "## Scene N — Title (Verses x–y)" pattern.
-3. Add 2-4 sentences of new narration per existing scene, in the same voice:
-   second person, calm, present tense, spoken aloud at bedtime.
+2. Keep the existing scene headings exactly. You may add new scenes using the same
+   "## Scene N — Title (Verses x–y)" pattern, numbered after the last one.
+3. LENGTH IS THE POINT. This script is {words} words and MUST end up at least
+   {min_words} words. You therefore have to write at least {need} new words. Do the
+   arithmetic before you answer: {words} + your new words must be >= {min_words}.
+   Spread them as roughly {per_scene} new words per existing scene — in practice one
+   long, specific second-person prayer paragraph per scene (about {per_scene} words
+   each), addressed to God, in the voice of the script. If that still leaves you
+   short, add one or two more scenes of the same kind.
 4. Only quote scripture from {psalm_label}. Never quote another psalm.
 5. No personal names. No "narrated by". One subscribe call to action only, and it
    must remain the final line of the script.
-6. Do not pad. No sentence may repeat. Aim for about {target} words total.
+6. Do not pad or repeat: no sentence may appear twice, and no filler paragraphs
+   that only restate the heading. Every new word must say something specific about
+   this psalm and this person's night.
+7. The finished script must be between {min_words} and {max_words} words.
 
 TITLE: {title}
 CURRENT WORD COUNT: {words}
+MINIMUM AFTER EXPANSION: {min_words}
 TARGET WORD COUNT: {target}
+WORDS YOU MUST ADD: {need}
+PER EXISTING SCENE: about {per_scene}
 
 CURRENT SCRIPT
 --------------
@@ -264,6 +282,21 @@ CURRENT SCRIPT
 --------------
 
 Return only the expanded markdown body, with no commentary and no code fences."""
+
+
+def budget_for(job: Job, target: int = TARGET_WORDS) -> tuple[int, int]:
+    """(words still needed to reach the floor, suggested words per existing scene).
+
+    The old prompt told the model to add "2-4 sentences per scene" and also to
+    "aim for 900 words". For a 250-word script with five scenes those instructions
+    contradict each other: 2-4 sentences is about 120 words, which lands near 370
+    and fails the floor — so a rule-following model produced output that was
+    perfectly valid and permanently too short. Nothing was ever written, and the
+    repair loop reported success every night.
+    """
+    need = max(MIN_WORDS - job.words, 0)
+    scenes = max(1, len(job.sections()))
+    return need, max(60, -(-need // scenes))
 
 
 def gemini_provider(job: Job, target: int) -> str:
@@ -276,9 +309,11 @@ def gemini_provider(job: Job, target: int) -> str:
     from google import genai
 
     client = genai.Client(api_key=key)
+    need, per_scene = budget_for(job, target)
     prompt = PROMPT.format(
         psalm_label=f"Psalm {job.psalm}" if job.psalm else "the psalm named in the title",
         title=job.title, words=job.words, target=target, body=job.body,
+        need=need, per_scene=per_scene, min_words=MIN_WORDS, max_words=MAX_WORDS,
     )
     response = client.models.generate_content(model="gemini-2.5-flash", contents=prompt)
     text = (getattr(response, "text", "") or "").strip()
@@ -330,32 +365,78 @@ class Result:
     after: int = 0
     written: bool = False
     problems: list[str] = field(default_factory=list)
+    attempts: int = 1
 
     def as_dict(self) -> dict:
         return {"job_id": self.job_id, "file": self.path.name, "before": self.before,
-                "after": self.after, "written": self.written, "problems": self.problems}
+                "after": self.after, "written": self.written, "problems": self.problems,
+                "attempts": self.attempts}
+
+
+MAX_ATTEMPTS = 3
 
 
 def expand_job(job: Job, provider: str = "gemini", target: int = TARGET_WORDS,
-               write: bool = False) -> Result:
+               write: bool = False, attempts: int = MAX_ATTEMPTS) -> Result:
+    """Lengthen a script, converging instead of demanding one perfect answer.
+
+    A model that obeys the additive rules but under-delivers on length produces
+    output that is *safe* — every reviewed line intact, no padding, no wrong
+    psalm — just not long enough yet. Discarding that output is what kept 21
+    scripts stuck at 227-443 words for weeks while every run reported success.
+    So each attempt that is safe is written back, and the next attempt starts
+    from the longer body. A violation of any other rule is never written.
+    """
     result = Result(job_id=job.job_id, path=job.path, before=job.words)
     fn = PROVIDERS.get(provider)
     if fn is None:
         result.problems.append(f"unknown provider {provider!r}")
         return result
-    try:
-        expanded = fn(job, target)
-    except Exception as exc:  # provider faults must never corrupt a job file
-        result.problems.append(f"provider error: {exc}")
-        return result
-    result.after = len(expanded.split())
-    result.problems = validate(job, expanded, target)
-    if result.problems or not write:
-        return result
-    header = job.path.read_text(encoding="utf-8").split("---", 2)
-    job.path.write_text(f"---{header[1]}---\n\n{expanded.lstrip()}", encoding="utf-8")
-    result.written = True
+
+    current = job
+    result.attempts = max(1, attempts)
+    for attempt in range(1, max(1, attempts) + 1):
+        try:
+            expanded = fn(current, target)
+        except Exception as exc:  # provider faults must never corrupt a job file
+            result.problems.append(f"provider error: {exc}")
+            return result
+        words = len(expanded.split())
+        result.after = words
+        result.attempts = attempt
+        problems = validate(current, expanded, target)
+        if not problems:
+            result.problems = []
+            if write:
+                _write_body(current, expanded)
+                result.written = True
+            return result
+        if validate(current, expanded, target, require_floor=False):
+            overshot = [pr for pr in problems if "ceiling" in pr]
+            if overshot and write and attempt < max(1, attempts):
+                # Overshooting is a targeting error, not a writing error: ask again
+                # with a smaller budget instead of abandoning a script that is one
+                # paragraph away from being publishable.
+                target = max(MIN_WORDS + 25, target - (words - MAX_WORDS) - 50)
+                continue
+            result.problems = problems
+            return result
+        # Only the floor is missing: safe progress, keep it and go again.
+        result.problems = problems
+        if not write:
+            return result
+        _write_body(current, expanded)
+        result.written = True
+        current = load_job(job.path)
+        if current.words >= MIN_WORDS:
+            result.problems = []
+            return result
     return result
+
+
+def _write_body(job: Job, body: str) -> None:
+    header = job.path.read_text(encoding="utf-8").split("---", 2)
+    job.path.write_text(f"---{header[1]}---\n\n{body.lstrip()}", encoding="utf-8")
 
 
 def main(argv=None) -> int:
