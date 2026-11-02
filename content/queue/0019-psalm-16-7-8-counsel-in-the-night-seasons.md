@@ -67,6 +67,7 @@ originality:
   source_notes: true         # scriptures and classical commentaries documented
   ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
 ---
+
 ## Scene 1 — I Will Bless the LORD, Who Hath Given Me Counsel (Verse 7a)
 
 Before sleep comes, bless the LORD for the counsel He has already given you.
@@ -77,6 +78,7 @@ Wisdom is not something you generate; it is something you receive.
 
 Every right decision, every avoided mistake, every moment of clarity — these are gifts from the Counselor.
 
+Heavenly Father, as I prepare for sleep, my heart overflows with gratitude for the counsel You have so freely given me throughout this day. I bless Your name for the quiet insights, the moments of conviction, and the clear paths You illuminated amidst confusion. Thank You for averting mistakes I could not foresee and for guiding my steps in ways I now recognize as Your wisdom at work. May my spirit remain ever-receptive to Your divine guidance, trusting that even before I ask, You are already speaking into my life, leading me towards Your perfect will and bringing peace to my soul this night. Amen.
 
 ## Scene 2 — My Reins Also Instruct Me in the Night Seasons (Verse 7b)
 
@@ -88,6 +90,7 @@ Dreams, impressions, quiet promptings — these are the whispers of divine guida
 
 You do not have to figure everything out while you are awake. God counsels you while you sleep.
 
+Merciful God, I submit my inner being, my very reins, to Your instruction even as the world around me grows silent. I pray that in the quietude of this night, You would continue to speak to me, impressing Your truths upon my heart and mind. Grant me the grace to discern Your gentle whispers, whether through dreams that clarify, subtle promptings that guide, or a deep knowing that settles within my spirit. Let my sleep be a time not just of physical restoration, but of profound spiritual reception, where Your divine counsel continues to shape my understanding and direct my path without the distractions of the waking hours. Amen.
 
 ## Scene 3 — I Have Set the LORD Always Before Me (Verse 8a)
 
@@ -99,6 +102,7 @@ When anxiety rises, set Him before you. When fear whispers, set Him before you. 
 
 His presence becomes the lens through which you see every circumstance.
 
+Almighty LORD, I declare my intent to set You always before me, not just in my active hours but especially now, as darkness descends and my thoughts might wander. When the anxieties of tomorrow attempt to intrude, or past worries resurface, help me to consciously place Your sovereign presence directly in my sight. May Your steadfastness be the unwavering focal point that dissolves all fear and banishes every doubt. Anchor my restless mind in the certainty of Your unwavering gaze, so that Your holy presence becomes the ultimate filter through which I view all circumstances, allowing true peace to settle within me. Amen.
 
 ## Scene 4 — Because He Is at My Right Hand, I Shall Not Be Moved (Verse 8b)
 
@@ -110,6 +114,7 @@ With God at your right hand, no storm can shake you, no crisis can topple you, n
 
 You are immovable because your foundation is immovable.
 
+Oh, God of strength, I rest secure in the knowledge that You are at my right hand, my unwavering support and defender. Tonight, I claim the promise that because of Your formidable presence, I shall not be moved by any fear, any unsettling thought, or any perceived vulnerability that the night might bring. May Your steadfast protection envelop me, making my spirit resilient and my heart courageous. Let Your unshakeable nearness be my shield against all disturbances, granting me an undisturbed and profound peace, knowing that I am utterly safe and eternally anchored in Your mighty and steadfast grasp. Amen.
 
 ## Scene 5 — Rest in Divine Counsel (Verses 7–8 Synthesis)
 
@@ -119,5 +124,16 @@ Tonight, receive God's counsel. Let Him instruct you in the night seasons. Set H
 
 You are guided. You are anchored. You are at peace.
 
-Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.
+Gracious God, as I close my eyes, I surrender to the deep rest that flows from Your divine counsel, instruction, and constant presence. May every promise of Psalm 16 be woven into the fabric of my sleep: blessing You, receiving Your night-season instruction, setting You always before me, and remaining utterly unmoved by any earthly concern. Fill my spirit with Your tranquil peace, and let my entire being find profound restoration in the assurance that I am guided, I am anchored, and I am cherished by You through this blessed night. Amen.
 
+## Scene 6 — In Thy Presence Is Fulness of Joy (Verse 11a)
+
+Even in the stillness of the night, the profound joy of God's presence is a source of peace.
+
+In thy presence is fulness of joy.
+
+This joy is not a fleeting emotion but an abiding state, a wellspring of contentment that flows from dwelling with Him. Let this divine joy fill your heart, silencing all discord as you rest.
+
+Almighty God, as I surrender to sleep, I pray to experience the fullness of joy that resides perpetually in Your presence. May this divine contentment permeate my spirit, dispelling any lingering shadows of anxiety or sadness, and replacing them with an overwhelming sense of peace. Let Your joy be my strength and my comfort, a deep wellspring within my soul that sustains me even through the deepest sleep. I trust that this sacred joy, found only in You, will protect my heart and mind, ensuring a night of blessed tranquility and profound rest. Amen.
+
+Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.
