@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import unittest
 import unittest.mock
+from unittest import mock
 from datetime import datetime, timedelta, timezone
 
 from scripts import scheduler_supervisor as sup
@@ -200,6 +201,75 @@ class TestWorkflowFile(unittest.TestCase):
     def test_supervisor_can_actually_dispatch(self):
         text = (sup.ROOT / ".github/workflows/scheduler-supervisor.yml").read_text()
         self.assertIn("actions: write", text)
+
+
+class TestAWedgedRunIsNotAllowedToHoldTheLock(unittest.TestCase):
+    """On 2 November a produce run sat in_progress 2h25m past its 120-minute cap.
+
+    A dead runner does not enforce its own timeouts, so the run held the
+    `content-state` lock forever: no other content writer could start, and the two
+    watchers built to notice exactly that were themselves queued behind it.
+    """
+
+    def now(self):
+        return datetime(2026, 11, 2, 18, 45, tzinfo=UTC)
+
+    def test_a_run_past_its_cap_is_reported_stuck(self):
+        rows = [{"id": 99, "name": "Produce video", "status": "in_progress",
+                 "run_started_at": "2026-11-02T16:15:34Z"}]
+        stuck = sup.stuck_runs(self.now(), rows)
+        self.assertEqual([r["id"] for r in stuck], [99])
+        self.assertEqual(stuck[0]["minutes"], 149)
+
+    def test_a_run_still_inside_its_cap_is_left_alone(self):
+        rows = [{"id": 7, "name": "Produce video", "status": "in_progress",
+                 "run_started_at": "2026-11-02T18:00:00Z"}]
+        self.assertEqual(sup.stuck_runs(self.now(), rows), [])
+
+    def test_a_finished_run_is_never_cancelled(self):
+        rows = [{"id": 8, "name": "Produce video", "status": "completed",
+                 "run_started_at": "2026-11-02T10:00:00Z"}]
+        self.assertEqual(sup.stuck_runs(self.now(), rows), [])
+
+    def test_the_supervisor_cancels_and_says_so(self):
+        rows = [{"id": 99, "name": "Produce video", "status": "in_progress",
+                 "run_started_at": "2026-11-02T16:15:34Z"}]
+        calls = []
+        with mock.patch.object(sup, "stuck_runs", return_value=[
+                {"id": 99, "workflow": "Produce video",
+                 "started": "2026-11-02T16:15:34+00:00", "minutes": 149}]), \
+             mock.patch.object(sup, "cancel_run", side_effect=lambda i: (calls.append(i), (True, "cancelled"))[1]), \
+             mock.patch.object(sup, "dispatch", return_value=(True, "dispatched")), \
+             mock.patch.object(sup, "save_state"):
+            result = sup.supervise(self.now(), runs=rows, state={})
+        self.assertEqual(calls, [99])
+        self.assertEqual(result["cancelled"][0]["result"], "cancelled")
+
+    def test_a_dry_run_would_cancel_without_cancelling(self):
+        with mock.patch.object(sup, "stuck_runs", return_value=[
+                {"id": 99, "workflow": "Produce video", "started": "x", "minutes": 149}]), \
+             mock.patch.object(sup, "cancel_run") as cancel, \
+             mock.patch.object(sup, "dispatch", return_value=(True, "dispatched")):
+            result = sup.supervise(self.now(), runs=[], state={}, dry_run=True)
+        cancel.assert_not_called()
+        self.assertEqual(result["cancelled"][0]["result"], "would cancel")
+
+    def test_the_watchers_do_not_share_the_publish_lock(self):
+        from pathlib import Path
+        import yaml
+
+        root = Path(__file__).resolve().parents[1] / ".github" / "workflows"
+        for name in ("monitor.yml", "scheduler-supervisor.yml"):
+            data = yaml.safe_load((root / name).read_text(encoding="utf-8"))
+            self.assertNotEqual(data["concurrency"]["group"], "content-state", name)
+
+    def test_production_still_holds_one_lock_for_itself(self):
+        from pathlib import Path
+        import yaml
+
+        root = Path(__file__).resolve().parents[1] / ".github" / "workflows"
+        data = yaml.safe_load((root / "produce.yml").read_text(encoding="utf-8"))
+        self.assertEqual(data["concurrency"]["group"], "content-state")
 
 
 if __name__ == "__main__":

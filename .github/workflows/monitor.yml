@@ -42,8 +42,12 @@ permissions:
   actions: read        # run history is the evidence; reading it is the whole job
 
 # Shared with production and the supervisor: all three commit into content/.
+# Never share the publish lock. On 2 November a wedged produce run held
+# `content-state` for hours, so this watcher queued behind the exact run it was
+# supposed to notice — the failure it exists to catch, from the inside. A watcher
+# that can be blocked by what it watches is not a watcher.
 concurrency:
-  group: content-state
+  group: monitor
   cancel-in-progress: false
 
 jobs:
