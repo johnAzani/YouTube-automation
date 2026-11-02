@@ -156,6 +156,79 @@ def variations_for(doc_key: str, variants=CTR_VARIANTS) -> tuple["CtrVariant", .
 
 
 # --------------------------------------------------------------------------- #
+# Photographic backdrops — the video's own imagery
+# --------------------------------------------------------------------------- #
+# On 2 November the copy changed per video but every frame was still the same
+# drawing: moon, ridge, house. Re-seeding moved that drawing three percent and it
+# read as the same image. A channel whose videos each show *their own* psalm should
+# not have one illustrated template; the backdrop is now the footage the video is
+# actually made of, graded to the same measured rules.
+def pick_backdrop(paths) -> "Path | None":
+    """The most visually interesting of the job's own assets.
+
+    RMS contrast decides: a flat sky gives the type nothing to sit against, while a
+    detailed mountain or storm cloud survives being darkened and still reads at
+    168 px. Deterministic, so a retried run picks the same picture.
+    """
+    from pathlib import Path as _Path
+
+    best = None
+    for path in paths or ():
+        path = _Path(path)
+        if not path.is_file():
+            continue
+        try:
+            with Image.open(path) as im:
+                grey = im.convert("L")
+                grey.thumbnail((320, 320))
+                score = ImageStat.Stat(grey).stddev[0]
+        except Exception:  # noqa: BLE001 - an unreadable asset is not a backdrop
+            continue
+        if best is None or score > best[0]:
+            best = (score, path)
+    return best[1] if best else None
+
+
+def _night_grade(img: Image.Image, palette: Palette) -> Image.Image:
+    """Cool the picture to the channel's night, then lift the black point.
+
+    The lift is the whole point: a photo darkened the obvious way collapses into the
+    #0F0F0F page behind it and the frame loses its edge in the dark feed.
+    """
+    tint = Image.new("RGB", img.size, palette.sky_top)
+    img = Image.blend(img, tint, 0.42)
+    return img.point(lambda v: int(40 + (v / 255.0) ** 1.08 * 215))
+
+
+def _text_scrim(img: Image.Image, box, strength: float = 0.52) -> Image.Image:
+    """Darken the side the type sits on, fading out across the frame."""
+    w, h = img.size
+    x0, y0, x1, y1 = box
+    ramp_end = min(w, x1 + int(w * 0.22))
+    grad = Image.new("L", (w, 1), 0)
+    px = grad.load()
+    for x in range(w):
+        t = 1.0 if x <= x1 else max(0.0, 1.0 - (x - x1) / max(1, ramp_end - x1))
+        px[x, 0] = int(255 * strength * t)
+    mask = grad.resize((w, h))
+    return Image.composite(Image.new("RGB", img.size, (3, 7, 18)), img, mask)
+
+
+def _photo_backdrop(path, size, variant: "CtrVariant", palette: Palette) -> Image.Image:
+    from PIL import ImageOps
+
+    with Image.open(path) as src:
+        img = ImageOps.fit(src.convert("RGB"), size, method=Image.LANCZOS,
+                           centering=(variant.moon[0], variant.moon[1]))
+    img = _night_grade(img, palette)
+    if variant.hero and variant.text_box[2] > variant.text_box[0]:
+        img = _text_scrim(img, variant.text_box)
+    elif variant.hero:
+        img = _text_scrim(img, (0, 0, size[0] // 2, size[1]))
+    return img
+
+
+# --------------------------------------------------------------------------- #
 # Art
 # --------------------------------------------------------------------------- #
 def _radial_glow(size, centre, radius: float, colour, strength: float) -> Image.Image:
@@ -382,9 +455,12 @@ def _reflection(img: Image.Image, variant: "CtrVariant") -> Image.Image:
     return _screen(img, layer)
 
 
-def paint_ctr_scene(variant: "CtrVariant", size=CANVAS, avoid=None) -> Image.Image:
+def paint_ctr_scene(variant: "CtrVariant", size=CANVAS, avoid=None,
+                    backdrop=None) -> Image.Image:
     w, h = size
     pal = variant.palette
+    if backdrop:
+        return _photo_backdrop(backdrop, size, variant, pal)
     img = _vertical_gradient(size, pal.sky_top, pal.sky_bottom)
     centre = (int(w * variant.moon[0]), int(h * variant.moon[1]))
     radius = variant.moon_scale * min(w, h)
@@ -603,6 +679,7 @@ class CtrReport:
     safe_zone_ok: bool
     badge_zone_ok: bool
     edge_visible: bool
+    backdrop: str = "procedural"     # "procedural" or "photo:<file>"
     notes: list[str] = field(default_factory=list)
 
     def as_dict(self) -> dict:
@@ -646,12 +723,13 @@ def bright_share(img: Image.Image, threshold: int = INK_THRESHOLD) -> float:
     return sum(hist[threshold:]) / sum(hist)
 
 
-def render_ctr(variant: CtrVariant, out_path: Path, size=CANVAS) -> CtrReport:
+def render_ctr(variant: CtrVariant, out_path: Path, size=CANVAS,
+               backdrop=None) -> CtrReport:
     avoid = None
     if variant.hero:
         x0, y0, x1, y1 = variant.text_box
         avoid = (x0 - 40, y0 - 40, x1 + 40, y1 + 40)
-    img = paint_ctr_scene(variant, size, avoid=avoid)
+    img = paint_ctr_scene(variant, size, avoid=avoid, backdrop=backdrop)
     notes: list[str] = []
     hero_px, lines, contrast = 0, 0, 99.0
     if variant.hero:
@@ -673,13 +751,15 @@ def render_ctr(variant: CtrVariant, out_path: Path, size=CANVAS) -> CtrReport:
         file_kb=out_path.stat().st_size // 1024,
         safe_zone_ok=box_within_safe(variant.text_box) if variant.hero else True,
         badge_zone_ok=badge_zone_clear(img), edge_visible=el >= EDGE_LUMA_MIN,
+        backdrop=f"photo:{Path(backdrop).name}" if backdrop else "procedural",
         notes=notes,
     )
 
 
 def generate_ctr_pack(out_dir: Path, variants=CTR_VARIANTS,
                       hero_override: str | None = None,
-                      doc_key: str | None = None) -> list[CtrReport]:
+                      doc_key: str | None = None,
+                      backdrop=None) -> list[CtrReport]:
     """Render the pack for one job.
 
     `hero_override` replaces the copy on the text variants with the script's own
@@ -697,7 +777,8 @@ def generate_ctr_pack(out_dir: Path, variants=CTR_VARIANTS,
         render = variant
         if hero_override and variant.hero:
             render = dataclasses.replace(variant, hero=hero_override.upper().strip())
-        reports.append(render_ctr(render, out_dir / f"thumbnail_{variant.label}.jpg"))
+        reports.append(render_ctr(render, out_dir / f"thumbnail_{variant.label}.jpg",
+                                  backdrop=backdrop))
     return reports
 
 

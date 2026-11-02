@@ -23,12 +23,22 @@ def _refresh_live_thumbnail(doc, video_id: str, out_dir: Path) -> str | None:
     receipt. Failure is logged and swallowed: the receipt matters more.
     """
     try:
-        from .thumbnail_ctr import generate_ctr_pack
+        from .assets import fetch_scene_assets
+        from .thumbnail_ctr import generate_ctr_pack, pick_backdrop
         from .upload import set_video_thumbnail
 
+        backdrop = None
+        if doc.scenes:
+            scene = doc.scenes[0]
+            matches = fetch_scene_assets(scene.asset_query or scene.heading, scene.index,
+                                         out_dir / "assets", count=1,
+                                         target_width=1280, target_height=720,
+                                         allow_generated=False)
+            backdrop = pick_backdrop([m.path for m in matches])
         reports = generate_ctr_pack(out_dir / "thumbnails",
                                     hero_override=doc.meta.get("thumb_text"),
-                                    doc_key=doc.id or doc.slug)
+                                    doc_key=doc.id or doc.slug,
+                                    backdrop=backdrop)
         if not reports:
             return None
         status = set_video_thumbnail(video_id, reports[0].path)
@@ -148,9 +158,12 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
         # mobile legibility, contrast, safe zones and visibility against YouTube's
         # dark-mode page, and writes a report so the run page shows the numbers.
         # See docs/THUMBNAIL_RESEARCH.md.
+        from .thumbnail_ctr import pick_backdrop
+
         thumb_reports = generate_ctr_pack(out / "thumbnails",
                                           hero_override=doc.meta.get("thumb_text"),
-                                          doc_key=doc.id or doc.slug)
+                                          doc_key=doc.id or doc.slug,
+                                          backdrop=pick_backdrop(assets))
         for report in thumb_reports:
             mobile_preview(report.path, report.path.with_name(report.path.stem + "_mobile.png"))
         (out / "thumbnails" / "report.json").write_text(
