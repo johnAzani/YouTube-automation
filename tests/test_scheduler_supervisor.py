@@ -107,13 +107,43 @@ class TestDispatchRails(unittest.TestCase):
             ("comments.yml", now - timedelta(hours=9)),
         )
 
+    def test_a_failed_dispatch_is_retried_once(self):
+        """2 Nov: produce's 07:14 slot was dispatched at 08:59 and the run failed."""
+        now = self.now()
+        history = self.runs() + [run("produce.yml", now - timedelta(minutes=20),
+                                     conclusion="failure")]
+        state = {"produce.yml@2026-11-02T06:14:00+00:00": {"at": "2026-11-02T07:00:00+00:00",
+                                                          "attempts": 1}}
+        out = sup.supervise(now, history, dry_run=True, state=state)
+        self.assertIn("produce.yml", [r["workflow"] for r in out["dispatched"]])
+
+    def test_a_successful_dispatch_is_never_repeated(self):
+        now = self.now()
+        history = self.runs() + [run("produce.yml", now - timedelta(minutes=20))]
+        state = {"produce.yml@2026-11-02T06:14:00+00:00": {"at": "2026-11-02T07:00:00+00:00",
+                                                          "attempts": 1}}
+        out = sup.supervise(now, history, dry_run=True, state=state)
+        self.assertNotIn("produce.yml", [r["workflow"] for r in out["dispatched"]])
+        self.assertTrue(any("succeeded" in r["reason"] for r in out["skipped"]))
+
+    def test_a_permanently_failing_slot_stops_being_retried(self):
+        now = self.now()
+        history = self.runs() + [run("produce.yml", now - timedelta(minutes=20),
+                                     conclusion="failure")]
+        state = {"produce.yml@2026-11-02T06:14:00+00:00": {"at": "2026-11-02T07:00:00+00:00",
+                                                          "attempts": sup.MAX_ATTEMPTS_PER_SLOT}}
+        out = sup.supervise(now, history, dry_run=True, state=state)
+        self.assertNotIn("produce.yml", [r["workflow"] for r in out["dispatched"]])
+        self.assertTrue(any("not trying again" in r["reason"] for r in out["skipped"]))
+
     def test_one_slot_is_dispatched_only_once(self):
         state = {}
         first = sup.supervise(self.now(), self.runs(), dry_run=True, state=state)
         self.assertEqual(len(first["dispatched"]), 3)
         # a real pass writes the ledger; simulate that then re-run the same slot
         for row in first["dispatched"]:
-            state[f"{row['workflow']}@{row['slot']}"] = {"at": "x"}
+            state[f"{row['workflow']}@{row['slot']}"] = {"at": "2099-01-01T00:00:00+00:00",
+                                                        "attempts": sup.MAX_ATTEMPTS_PER_SLOT}
         second = sup.supervise(self.now(), self.runs(), dry_run=True, state=state)
         self.assertEqual(second["dispatched"], [])
         self.assertTrue(all(r["reason"].startswith("already dispatched")

@@ -988,3 +988,11 @@ outcomes for that: `publishable runway` and `produce published nothing`.
 19 new tests in `tests/test_supply_never_stalls.py` pin each link, including the
 one that matters most: a provider that under-delivers on every single call still
 reaches the floor and stops there. Full suite: **508 with pytest**.
+
+**And a dispatched slot that fails is retried.** `MAX_ATTEMPTS_PER_SLOT = 2`. On 2
+November the 07:14 produce slot was dispatched at 08:59 and the run then failed;
+treating the slot as settled would have left the channel with no video until the
+next day. The ledger records attempts, `_failed_dispatches` finds entries whose run
+finished badly after the dispatch, and a successful dispatch is never repeated.
+Live check at 09:10 WAT: brain and produce retried, keepalive skipped because
+*"its dispatched run succeeded"*.
