@@ -1041,3 +1041,12 @@ supervisor now also runs on `workflow_run` completion of *"Dry-run pipeline (CI
 proof)"* and *"pages build and deployment"* — the two workflows that start on every
 push and every pull request — so every CI run is another chance to notice a slot
 that never fired.
+
+**The monitor itself had never run.** On 2 November `monitor.yml`'s 06:23, 09:23 and
+12:23 UTC slots produced *no runs at all* — the one job built to notice a stall was
+stalled, which is the most embarrassing possible version of the same bug. The brain
+did eventually run at 11:02, nearly eight hours after its 03:14 slot, so the
+scheduler is queueing runs unpredictably rather than dropping them cleanly.
+`monitor.yml` and `automation-health.yml` now also trigger on push to main and on
+`workflow_run` completion of production/CI/supervisor, and the monitor shares the
+`content-state` concurrency group because it commits into `content/` as well.

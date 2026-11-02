@@ -6,9 +6,16 @@
 # API, so even a successful run would have posted nothing while reporting success.
 # Both were invisible from the Actions dashboard. This job makes silence visible.
 
+# Same lesson as monitor.yml: a job that only exists on a schedule is at the mercy
+# of a scheduler that ran this morning's slots hours late and skipped others. The
+# nightly audit also runs after each production run, which is when a regression
+# would appear.
 on:
   schedule:
     - cron: "14 20 * * *"   # after the 8:14pm release slot, before the 3:14am expansion
+  workflow_run:
+    workflows: ["Produce video"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
