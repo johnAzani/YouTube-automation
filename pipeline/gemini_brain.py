@@ -113,6 +113,12 @@ Please author the official, complete long-form devotional script for:
 - Visual Hook Text: "{hook}"
 
 Follow all channel invariants, DOCOGA REELS v2 guidelines, and theological rubrics.
+
+LENGTH IS A HARD REQUIREMENT: at least 900 words of narration across the scenes.
+The production gate is 650 and it is never lowered — a shorter script publishes
+nothing at all, it does not publish a short video. Do not pad with repeated
+sentences; write more prayer, more scripture exposition, more stillness.
+
 Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not include markdown code block backticks.
 """
         if self.is_api_available():
@@ -492,11 +498,10 @@ Type Amen to agree with this prayer, and subscribe to The Secret Place to pray w
         next_candidate = self.select_next_scripture()
         print(f"[gemini-brain] Runway low ({audit.runway_days} days < {min_runway_days} days). Authoring next devotional: {next_candidate['scripture']}...")
 
-        try:
-            script_text = self.author_longform_script(next_candidate)
-        except BrainAuthoringError as exc:
-            print(f"[gemini-brain] Refusing to author: {exc}")
-            return None
+        # Reraised, not swallowed: "returned None" is indistinguishable from
+        # "runway healthy" for every caller, which is how a stalled queue looked
+        # like a satisfied one.
+        script_text = self.author_longform_script(next_candidate)
         slug_match = re.search(r"^slug:\s*([a-zA-Z0-9\-]+)", script_text, re.MULTILINE)
         slug = slug_match.group(1).strip() if slug_match else f"devotional-{next_candidate['id']}"
         script_filename = f"{next_candidate['id']}-{slug}.md"

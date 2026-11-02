@@ -36,24 +36,35 @@ jobs:
 
       - uses: ./.github/actions/setup-render-deps
 
+      - name: Keep the long-form queue publishable
+        # Lengthens approved-but-short scripts, then authors only if the queue still
+        # lacks runway. Exits non-zero when nothing can publish, which is the point:
+        # a stalled queue must not look like a satisfied one.
+        run: |
+          set -o pipefail
+          python scripts/gemini_brain.py --auto-replenish --min-runway 2 2>&1 | tee supply.log
+
       - name: Author specs for Shorts that cannot render yet
         # A blocked spec must not stop the long-form replenishment in the same run;
         # the step summary and automation_health both report what stayed blocked.
         continue-on-error: true
         run: python scripts/gemini_brain.py --author-shorts 2>&1 | tee shorts.log
 
-      - name: Run Google Gemini Autonomous Brain
+      - name: Force one more authored edition (manual dispatch only)
+        if: ${{ inputs.force_generate == true }}
         run: |
-          set -e
-          if [ "${{ inputs.force_generate }}" = "true" ]; then
-            python scripts/gemini_brain.py --generate-next 2>&1 | tee brain.log
-          else
-            python scripts/gemini_brain.py --auto-replenish 2>&1 | tee brain.log
-          fi
+          set -o pipefail
+          python scripts/gemini_brain.py --generate-next 2>&1 | tee brain.log
 
-      - name: Summarise Short authoring
+      - name: Summarise supply and Short authoring
         if: always()
         run: |
+          if [ -s supply.log ]; then
+            echo "### 📜 Long-form Supply" >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            grep -v '^\[run\]' supply.log | tail -40 >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          fi
           if [ -s shorts.log ]; then
             echo "### 🎞 Short Scene Specs" >> "$GITHUB_STEP_SUMMARY"
             echo '```' >> "$GITHUB_STEP_SUMMARY"

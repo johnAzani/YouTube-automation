@@ -662,22 +662,80 @@ minutes. Every time below is Abuja/Lagos wall clock.
 
 | When it runs (Nigeria) | What happens | cron (UTC) |
 |---|---|---|
-| **3:14am, daily** | Expansion pass lengthens short queued scripts to the word floor | `14 2 * * *` |
-| **4:14am, daily** | **The brain**: authors Short specs for anything blocked, then replenishes long-form if runway is low | `14 3 * * *` |
+| **4:14am, daily** | **The brain**: lengthens short scripts, authors a new long-form if the queue lacks runway, authors Short specs for anything blocked | `14 3 * * *` |
 | **4:23am, Monday** | Keepalive self-heal | `23 3 * * 1` |
-| **7:14am, daily** | Production run #1 | `14 6 * * *` |
+| **7:14am, daily** | Production run #1 — repairs the queue first, then publishes | `14 6 * * *` |
 | **8:14am, daily** | Comment replies | `14 7 * * *` |
-| **3:14pm, daily** | Production run #2 | `14 14 * * *` |
+| **3:14pm, daily** | Production run #2 — repairs the queue first, then publishes | `14 14 * * *` |
 | **4:14pm, daily** | Comment replies | `14 15 * * *` |
 | **7:41pm, Friday** | Weekly metrics pull | `41 18 * * 5` |
-| **8:14pm, daily** | Production run #3 — the 19:14 release slot | `14 19 * * *` |
+| **8:14pm, daily** | Production run #3 — the release slot; repairs the queue first, then publishes | `14 19 * * *` |
 | **8:14pm, daily** | Comment replies | `14 19 * * *` |
 | **8:14pm, Sunday and Wednesday** | Community post is prepared (manual post — the API has no endpoint) | `14 19 * * 0,3` |
-| **9:14pm, daily** | Automation health check, after the last release slot | `14 20 * * *` |
+| **9:14pm, daily** | Health check, then the watchdog files or closes its stall issue | `14 20 * * *` |
 
-So the next brain run is **tomorrow morning at 4:14am**. If the model returns a
-valid spec twice, all five blocked Short manifests flip to approved before you
-wake up; if it cannot, they stay drafts that name the rule they kept breaking.
+The expansion pass no longer has a cron of its own: it runs inside the brain at
+4:14am **and** at the top of every production run, so a missed or late cron is
+repaired by the next release instead of becoming an empty evening.
+
+So the next chance for everything to move is **tomorrow morning at 4:14am**, and
+the first production run after that is **7:14am**.
 
 Run anything early by hand from the Actions tab ("Run workflow"); nothing here
 needs you to wait for a slot.
+
+### The brain owns long-form too, and the pipeline reports itself
+
+The owner's requirement: *"even when I don't ping you everything is working — the
+brain is working like you 100 percent."* That was not true, and the reasons were
+all of the same kind: stages that succeed while doing nothing.
+
+**What the audit found (2 November):**
+
+- `expand-scripts.yml` — the pass that lengthens short scripts — had **never run**.
+  Its cron was registered, its YAML was valid, the Actions page was green, and it
+  had zero executions.
+- It would not have worked if it had run. `gemini_provider` imported
+  `get_gemini_api_key` from `pipeline.config`, where that function does not exist.
+  Every script would have died on `ImportError` and been reported "skipped".
+- So 21 approved scripts sat in `content/queue/` at 227–397 words against a
+  650-word floor. Production ran three times a day, found nothing publishable,
+  printed a friendly notice and **exited 0**. Green all day, no video.
+- The brain made it worse: runway counted "approved" scripts regardless of length,
+  so it kept authoring *more* 250-word scripts, and its authoring prompt never
+  asked for length at all.
+- `replenish_pipeline` swallowed authoring failures and returned `None`, which is
+  indistinguishable from "runway healthy" at every call site.
+
+**What now exists — `pipeline/supply.py`**, one loop, in the right order:
+
+1. lengthen every approved script under the floor (validated: additive, no padding,
+   no creator names, no wrong-psalm text, never lowers the gate),
+2. if fewer than `min_publishable` remain, author a new long-form — the prompt now
+   requires 900 words, and the script is expanded in the same run if it lands short,
+3. approve it only after it clears the floor, passes the scripture-label check, and
+   has its factcheck worksheet,
+4. report exactly what happened, or fail loudly naming the reason.
+
+`ensure_supply` is called by `gemini_brain.py --ensure-supply`, by
+`--auto-replenish` (one code path now), and at the **top of every production run**,
+so a delayed or skipped brain cron is repaired by the next release slot. The
+`expand-scripts.yml` cron is gone — expansion is part of the loop, not a separate
+job with an ordering dependency.
+
+**And it reports itself.** `scripts/pipeline_watchdog.py` keeps exactly one issue
+open while the pipeline is unhealthy — empty long-form queue, nothing renderable in
+Shorts, no upload in three days, a scheduled workflow that never ran — and closes
+it on the first fully healthy check. It runs at the end of every production run and
+in the nightly health check. An issue is an email; the owner no longer has to ask.
+
+Current honest state, which the watchdog reproduces exactly:
+
+```
+BLOCKING: long-form queue — nothing in content/queue/ is approved and over the 650-word floor.
+warning : shorts queue    — 5 manifests with no scene spec yet
+warning : workflows      — expand-scripts.yml / automation-health.yml: never ran
+```
+
+The gate was **not** lowered to make this green. 23 new tests in
+`tests/test_supply.py`; full suite **304 passing**.

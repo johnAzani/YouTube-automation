@@ -10,6 +10,7 @@ Usage:
     python scripts/gemini_brain.py --generate-next    # Author and stage the next scripture release
     python scripts/gemini_brain.py --auto-replenish   # Replenish queue if runway < 2.0 days
     python scripts/gemini_brain.py --author-shorts    # Author specs for Shorts with no renderer
+    python scripts/gemini_brain.py --ensure-supply    # Make the long-form queue publishable
 """
 from __future__ import annotations
 
@@ -23,7 +24,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from pipeline.brain_equipment.equipment_registry import list_equipped_modules
-from pipeline.gemini_brain import GeminiBrain
+from pipeline.gemini_brain import BrainAuthoringError, GeminiBrain
 
 
 def cmd_audit(brain: GeminiBrain) -> int:
@@ -68,7 +69,12 @@ def cmd_equip() -> int:
 def cmd_generate_next(brain: GeminiBrain) -> int:
     cand = brain.select_next_scripture()
     print(f"[gemini-brain] Authoring next scripture: {cand['scripture']} (Job {cand['id']})...")
-    res = brain.replenish_pipeline(min_runway_days=999.0)  # force generation
+    try:
+        res = brain.replenish_pipeline(min_runway_days=999.0)  # force generation
+    except BrainAuthoringError as exc:
+        print(f"[gemini-brain] Refusing to author: {exc}")
+        print("::error title=Brain cannot author::see the reason above")
+        return 1
     if res:
         print(f"[gemini-brain] Successfully authored & staged Job {res.job_id}:")
         print(f"  - Longform:   {res.longform_path}")
@@ -80,12 +86,14 @@ def cmd_generate_next(brain: GeminiBrain) -> int:
 
 
 def cmd_auto_replenish(brain: GeminiBrain, min_days: float) -> int:
-    res = brain.replenish_pipeline(min_runway_days=min_days)
-    if res:
-        print(f"[gemini-brain] Queue replenished with Job {res.job_id} ({res.scripture}).")
-        return 0
-    print("[gemini-brain] Queue is already well-stocked. No replenishment performed.")
-    return 0
+    """The scheduled brain pass: keep `min_days` of runway publishable.
+
+    Goes through the same supply loop as `--ensure-supply` rather than calling
+    `replenish_pipeline` directly, because authoring alone was how a queue grew to
+    twenty-one approved scripts that no run could publish.
+    """
+    wanted = max(1, int(round(min_days / 2.0)))  # two release slots per day
+    return cmd_ensure_supply(brain, max_expansions=3, target=900, min_publishable=wanted)
 
 
 def cmd_author_shorts(brain: GeminiBrain) -> int:
@@ -105,12 +113,44 @@ def cmd_author_shorts(brain: GeminiBrain) -> int:
     return 0
 
 
+def cmd_ensure_supply(brain: GeminiBrain, max_expansions: int, target: int,
+                      min_publishable: int = 1) -> int:
+    """Lengthen the backlog, author if still empty, verify — one unattended loop."""
+    from pipeline.supply import ensure_supply
+
+    report = ensure_supply(brain, limit=max_expansions, target=target,
+                           min_publishable=min_publishable)
+    for row in report.expanded:
+        state = "WROTE" if row.get("written") else "skipped"
+        print(f"[brain] expand {row['job_id']}: {row['before']} -> {row['after']} words {state}")
+        for problem in row.get("problems", []):
+            print(f"[brain]   ! {problem}")
+    for row in report.authored_all:
+        print(f"[brain] author: {row.get('job_id', '?')} -> {row.get('words', '?')} words "
+              f"({row.get('reason', row.get('status', 'ok'))})")
+    print(f"[brain] supply: {report.summary()}")
+    for reason in report.blocked:
+        print(f"[brain] blocked: {reason}")
+
+    if report.ok:
+        return 0
+    print("::error title=Long-form supply empty::nothing in content/queue can publish")
+    return 1
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Google Gemini Brain Automation CLI")
     parser.add_argument("--audit", action="store_true", help="Audit brain equipment and queue runway")
     parser.add_argument("--equip", action="store_true", help="List equipped brain knowledge modules")
     parser.add_argument("--generate-next", action="store_true", help="Generate and stage the next scripture release")
     parser.add_argument("--auto-replenish", action="store_true", help="Replenish queue if runway < threshold")
+    parser.add_argument("--ensure-supply", action="store_true",
+                        help="Lengthen the backlog and author a script if the queue is empty")
+    parser.add_argument("--min-publishable", type=int, default=1,
+                        help="Leave at least this many publishable scripts behind")
+    parser.add_argument("--max-expansions", type=int, default=3,
+                        help="Model calls this run may spend lengthening old scripts")
+    parser.add_argument("--target", type=int, default=900, help="Target word count when expanding")
     parser.add_argument("--author-shorts", action="store_true",
                         help="Author scene specs for queued Shorts that have no renderer")
     parser.add_argument("--min-runway", type=float, default=2.0, help="Minimum runway days threshold (default: 2.0)")
@@ -122,6 +162,9 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_equip()
     if args.generate_next:
         return cmd_generate_next(brain)
+    if args.ensure_supply:
+        return cmd_ensure_supply(brain, args.max_expansions, args.target,
+                                 args.min_publishable)
     if args.author_shorts:
         return cmd_author_shorts(brain)
     if args.auto_replenish:

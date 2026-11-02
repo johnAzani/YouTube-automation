@@ -86,6 +86,24 @@ jobs:
           restore-keys: |
             assets-
 
+      # Second safety net. If the brain's cron was delayed, skipped, or its API call
+      # failed, this run repairs the queue itself instead of printing "nothing to
+      # do" and exiting green. When the queue is already publishable it costs
+      # nothing: it only lengthens backlog scripts, up to a small daily budget.
+      - name: Repair the queue before publishing
+        id: supply
+        # Non-blocking on purpose: a Short can still upload when the long-form queue
+        # is empty, and killing the run first would lose that upload. The alarm for
+        # "nothing is publishable" is the watchdog at the end of this job.
+        continue-on-error: true
+        if: ${{ inputs.short == '' && inputs.job == '' }}
+        env:
+          GITHUB_ACTIONS: "true"
+        run: |
+          set -o pipefail
+          python scripts/gemini_brain.py --ensure-supply 2>&1 | tee supply.log
+          { echo "### 📜 Queue repair"; echo '```'; grep -v '^\[run\]' supply.log | tail -30; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
       - name: Render and upload target edition
         run: |
           set +e
@@ -115,6 +133,14 @@ jobs:
             done
             exit "$rc"
           fi
+
+      - name: Report a stall if the queues are empty
+        # Runs even when the render failed: that is precisely when the owner needs
+        # to hear about it, and an issue is an email.
+        if: ${{ always() && !cancelled() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python -m scripts.pipeline_watchdog || true
 
       - name: Commit queue state (job moved to published/)
         if: ${{ always() && !cancelled() }}

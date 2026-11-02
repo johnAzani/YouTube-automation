@@ -12,13 +12,15 @@
 # committed.
 #
 # Defaults are safe: dry_run is true, so the first run only reports what it would do.
+#
+# NO CRON. Expansion is now part of the supply loop the brain runs
+# (`python scripts/gemini_brain.py --ensure-supply`, and the same call at the top
+# of every production run). Three separate crons with an ordering dependency is
+# what let the queue stall: this one had never executed at all, so nothing was
+# ever lengthened, and every other stage reported success while publishing nothing.
+# Kept as a manual tool for inspecting or repairing one script at a time.
 
 on:
-  schedule:
-    # 02:14 UTC — ahead of the 03:14 brain run and the 06:14 release, so any
-    # approved-but-short script is lengthened before the publisher looks for work.
-    # A scheduled run always writes; only manual dispatches default to a dry run.
-    - cron: "14 2 * * *"   # 3:14am Nigeria time
   workflow_dispatch:
     inputs:
       ids:
