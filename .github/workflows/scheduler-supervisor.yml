@@ -9,9 +9,28 @@
 # dispatches the ones that produced no run — once per slot, at most three per pass.
 name: Scheduler supervisor
 
+# Triggers matter more than the logic here. On the morning of 2 November the
+# scheduled triggers stopped firing repo-wide — monitor.yml, merged two hours before
+# its 06:23 UTC slot, produced no run at all — while push-triggered CI started within
+# seconds. So this supervisor must not depend on the scheduler it is meant to
+# supervise: it also runs on every push to main and whenever any publishing workflow
+# finishes, which is exactly when a catch-up pass is worth having.
 on:
   schedule:
     - cron: "*/15 * * * *"   # frequent on purpose: one dropped slot is not a lost day
+  push:
+    branches: [main]
+  workflow_run:
+    # No schedule needed to reach these: each one completing is a chance to notice
+    # that something else did not.
+    workflows:
+      - "Produce video"
+      - "Autonomous Comment Replies"
+      - "Autonomous Community Tab Automation"
+      - "Gemini Brain Autonomous Queue Replenishment"
+      - "Keepalive"
+      - "Automation monitor"
+    types: [completed]
   workflow_dispatch:
 
 permissions:
