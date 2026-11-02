@@ -182,6 +182,43 @@ def check_brain_api(report: Report, expect: bool | None = None) -> Report:
     return report
 
 
+def check_automations(report: Report) -> bool:
+    """Every scheduled workflow, via the monitor's evidence-based verdicts.
+
+    `automation_health.audit()` only asks "is it overdue?". This asks the harder
+    question — did the run achieve anything — and marks a failure as blocking only
+    when the workflow has not been changed since it failed.
+    """
+    try:
+        from scripts.automation_monitor import MonitorReport, check_outcomes, classify, fetch_runs
+
+        monitored = MonitorReport()
+        try:
+            classify(monitored, fetch_runs())
+        except Exception as exc:  # noqa: BLE001
+            report.add("automations", f"could not read run history: {exc}", fatal=False)
+            return False
+        check_outcomes(monitored)
+    except Exception as exc:  # noqa: BLE001
+        report.add("automations", f"monitor unavailable: {exc}", fatal=False)
+        return False
+
+    for automation in monitored.automations:
+        state = f"{automation.workflow}: {automation.verdict} — {automation.detail}"
+        if automation.severity == "ok":
+            report.checked.append(state)
+            continue
+        report.add("automations", state, fatal=automation.severity == "blocking")
+
+    for row in monitored.outcomes:
+        state = f"{row['outcome']}: {row['detail']}"
+        if row["severity"] == "ok":
+            report.checked.append(state)
+        else:
+            report.add("outcome", state, fatal=row["severity"] == "blocking")
+    return bool(monitored.automations)
+
+
 def check_workflows(report: Report, rows=None) -> Report:
     """Every scheduled workflow must have run inside its own cron window."""
     if rows is None:

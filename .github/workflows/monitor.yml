@@ -1,0 +1,78 @@
+# Every automation, watched continuously — not when the owner asks.
+#
+# Three separate rounds of "is X working?" all ended the same way: no, and nothing
+# said so. A green tick is not evidence. This job checks, every three hours:
+#
+#   * every scheduled workflow actually ran, inside its own cron window;
+#   * its last run succeeded (or was changed since it failed — then it is untested);
+#   * the run left a trace (a publish, a reply, a queued script, a ready post);
+#   * the channel is still uploading.
+#
+# It then updates ONE issue (scripts/pipeline_watchdog.py) and closes it on the
+# first fully healthy check, so a stall reaches the owner without him asking.
+name: Automation monitor
+
+on:
+  schedule:
+    # Every three hours. :23 past, so it lands between release slots and after the
+    # 4:14am brain pass rather than competing with it.
+    - cron: "23 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  actions: read        # run history is the evidence; reading it is the whole job
+
+concurrency:
+  group: automation-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0    # the monitor dates workflow edits against their runs
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Python deps
+        run: pip install -r requirements.txt
+
+      - name: Audit every automation and its outcome
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          EXPECT_BRAIN_API: "1"
+        run: python -m scripts.automation_monitor --save
+
+      - name: File or close the stall issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          EXPECT_BRAIN_API: "1"
+        run: python -m scripts.pipeline_watchdog
+
+      - name: Commit the monitor snapshot
+        # A dated record of what was wrong and when, so a recurring fault is visible
+        # instead of being rediscovered every few days.
+        if: ${{ always() && !cancelled() }}
+        run: |
+          git config user.name "automation-monitor"
+          git config user.email "actions@users.noreply.github.com"
+          if [ -f content/monitor/status.json ]; then
+            git add content/monitor/status.json
+            if git diff --staged --quiet; then
+              echo "snapshot unchanged"
+            else
+              git commit -m "chore(monitor): automation status snapshot [skip ci]"
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME:-main}" || true
+              git push || echo "::warning::could not push the snapshot; the issue is the record of truth"
+            fi
+          fi
