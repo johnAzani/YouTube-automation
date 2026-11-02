@@ -172,7 +172,12 @@ jobs:
     name: General pipeline dry-run (needs network)
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    continue-on-error: true
+    # No job-level `continue-on-error`. It keeps the workflow green but GitHub still
+    # renders the *check* as a red X, so every PR and every push for weeks carried a
+    # permanent failure that nobody could act on — and a red that is normal is a red
+    # that hides the next real one. The failure is now a warning annotation on the
+    # step that failed (visible on the run page and readable by the monitor), and
+    # the job itself concludes successfully because it is advisory by definition.
     env:
       ENABLE_KEYLESS_SOURCES: "1" # the key-free providers — required when there are no API keys
       PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
@@ -223,6 +228,8 @@ jobs:
       # rot. Emit the tail of the log as an annotation + step summary, because the raw
       # runner log is only reachable from a browser session.
       - name: Render it (no upload)
+        id: render
+        continue-on-error: true
         if: steps.pick.outputs.job != ''
         run: |
           JOB="${{ steps.pick.outputs.job }}"
@@ -243,7 +250,7 @@ jobs:
               tail -n 20 render.log
               echo '```'
             } >> "$GITHUB_STEP_SUMMARY"
-            echo "::error::pipeline dry-run failed (exit $rc) for $JOB — last line: $(tail -n 1 render.log)"
+            echo "::warning title=Advisory dry-run failed::pipeline dry-run failed (exit $rc) for $JOB — last line: $(tail -n 1 render.log)"
             exit "$rc"
           fi
 

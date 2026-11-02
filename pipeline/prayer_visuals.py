@@ -70,10 +70,16 @@ def sentence_stream(words, *, timing_source):
 
 
 def render(narration: Path, scenes, words, duration: float, output: Path, *,
-           timing_source: str, width=1280, height=720, fps=24):
+           timing_source: str, width=1280, height=720, fps=24, progress=None):
     """Render local scene paths and measured audio. Caller validates licences.
 
     This draft renderer does not generate narration, upload, or modify queue state.
+
+    `progress`, when given, is called with the number of frames written so far.
+    A render is the longest stage in a release and used to report nothing at all
+    until it finished, which is how three renders were mistaken for hangs. It is
+    called once per frame and the caller does the throttling, so it must stay
+    cheap; passing None keeps the behaviour byte-for-byte as before.
     """
     from tools.shorts import grade_sanctuary, hud_chapter_layer, kinetic_typography_layer, camera_frame
     if width <= 0 or height <= 0 or width % 2 or height % 2 or width * 9 != height * 16:
@@ -138,6 +144,8 @@ def render(narration: Path, scenes, words, duration: float, output: Path, *,
                                                                     canvas_size=(width, height)))
                     encoder.stdin.write(Image.alpha_composite(frame.convert('RGBA'), overlay).convert('RGB').tobytes())
                     index += 1
+                    if progress is not None:
+                        progress(index)
                 decoder.stdout.close()
                 if decoder.wait():
                     raise RuntimeError(f'Decoder failed for {path}')

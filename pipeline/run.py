@@ -75,7 +75,13 @@ def _mark_job_uploaded(path: Path, doc: ScriptDoc, video_id: str) -> Path:
     if dest.exists():
         raise RuntimeError(f"Published record already exists at {dest}; leaving the queue job untouched.")
 
-    stamp = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    now = datetime.now(timezone.utc)
+    stamp = now.strftime("%Y-%m-%d")
+    # The full instant as well as the date. `published_on` alone is a date, so every
+    # reader has to assume midnight and a video uploaded three hours ago reads as
+    # "20h ago" — which is how a healthy channel looks stale and an alarm stops
+    # meaning anything.
+    stamp_precise = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     text = path.read_text(encoding="utf-8")
     frontmatter = re.match(r"\A---\s*\n(.*?)\n---(?P<tail>\s*\n.*|\Z)", text, re.S)
     if not frontmatter:
@@ -84,7 +90,8 @@ def _mark_job_uploaded(path: Path, doc: ScriptDoc, video_id: str) -> Path:
     metadata, replacements = re.subn(r"(?m)^status\s*:.*$", "status: published", metadata, count=1)
     if not replacements:
         raise RuntimeError(f"Cannot stamp {path}: missing top-level status; leaving the queue job untouched.")
-    for key, value in (("published_on", stamp), ("youtube_video_id", video_id)):
+    for key, value in (("published_on", stamp), ("published_at", stamp_precise),
+                       ("youtube_video_id", video_id)):
         line = f"{key}: {json.dumps(value)}"
         pattern = rf"(?m)^{re.escape(key)}\s*:.*$"
         if re.search(pattern, metadata):
@@ -99,6 +106,7 @@ def _mark_job_uploaded(path: Path, doc: ScriptDoc, video_id: str) -> Path:
 
     doc.meta["status"] = "published"
     doc.meta["published_on"] = stamp
+    doc.meta["published_at"] = stamp_precise
     doc.meta["youtube_video_id"] = video_id
     PUBLISHED_DIR.mkdir(parents=True, exist_ok=True)
     shutil.move(str(path), dest)

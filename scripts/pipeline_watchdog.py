@@ -86,6 +86,14 @@ def undated_receipts() -> list[str]:
     return list(_undated)
 
 
+# Receipts whose date was written without a time: their age is a lower bound.
+_approximate: set[str] = set()
+
+
+def approximate_receipts() -> list[str]:
+    return sorted(_approximate)
+
+
 def last_publish(published_dir: Path | None = None) -> tuple[Path, datetime] | None:
     """Newest published receipt that carries a real YouTube video id."""
     from pipeline.config import PUBLISHED_DIR
@@ -93,6 +101,7 @@ def last_publish(published_dir: Path | None = None) -> tuple[Path, datetime] | N
     directory = published_dir or PUBLISHED_DIR
     newest: tuple[Path, datetime] | None = None
     _undated.clear()
+    _approximate.clear()
     for path in sorted(Path(directory).glob("*.md")):
         try:
             text = path.read_text(encoding="utf-8")
@@ -112,13 +121,24 @@ def last_publish(published_dir: Path | None = None) -> tuple[Path, datetime] | N
         stamp = (meta.get("published_at") or meta.get("uploaded_at")
                  or meta.get("published_on") or meta.get("date") or meta.get("publish_at"))
         when = None
+        approximate = False
         if stamp:
+            raw = str(stamp).strip()
             try:
-                when = datetime.fromisoformat(str(stamp).replace("Z", "+00:00"))
+                when = datetime.fromisoformat(raw.replace("Z", "+00:00"))
                 if when.tzinfo is None:
                     when = when.replace(tzinfo=timezone.utc)
             except ValueError:
                 when = None
+            if when is not None and len(raw) == 10:
+                # A bare date proves a publish happened *that day*, not at 00:00.
+                # Measuring from midnight invented up to 24 hours of staleness: a
+                # video uploaded at 5pm today read as "20h ago" at 8pm, and the
+                # owner's own question — when did it last publish — got a wrong
+                # answer. Measure from the end of that day instead, so the reported
+                # age is a lower bound and only an actually-stale channel alarms.
+                approximate = True
+                when = when.replace(hour=23, minute=59, second=59)
         if when is None:
             # No date on the receipt: do not guess from mtime. An undated receipt
             # is evidence of *a* publish, not of a recent one.
@@ -126,6 +146,8 @@ def last_publish(published_dir: Path | None = None) -> tuple[Path, datetime] | N
             continue
         if newest is None or when > newest[1]:
             newest = (path, when)
+        if approximate:
+            _approximate.add(path.name)
     return newest
 
 
@@ -172,9 +194,19 @@ def check_queues(report: Report, max_publish_age: timedelta = MAX_PUBLISH_AGE,
     else:
         path, when = newest
         age = now - when
-        report.checked.append(
-            f"last publish: {path.name} on {when.date().isoformat()} "
-            f"({age.total_seconds() / 3600:.0f}h ago)")
+        if path.name in _approximate:
+            # A date-only receipt is measured from the *end* of its day, so this is
+            # a lower bound on the real age. Clamp it at zero: "published today"
+            # must not print as "-4h ago".
+            age = max(age, timedelta(0))
+            report.checked.append(
+                f"last publish: {path.name} on {when.date().isoformat()} "
+                f"(within the last {age.total_seconds() / 3600:.0f}h; the receipt "
+                f"records a date, not a time)")
+        else:
+            report.checked.append(
+                f"last publish: {path.name} on {when.date().isoformat()} "
+                f"({age.total_seconds() / 3600:.0f}h ago)")
         for name in undated_receipts():
             report.checked.append(f"undated receipt (not counted as recent): {name}")
         if age > max_publish_age:
@@ -383,7 +415,16 @@ def main(argv=None) -> int:
     in_ci = os.environ.get("GITHUB_ACTIONS")
     if in_ci:
         if not report.healthy:
-            print("::error title=Automation is stalled::the watchdog opened/updated a tracking issue")
+            # Name every blocking finding in the annotation. The step used to fail
+            # with a bare "exit code 1" and a run log that could not be opened, so
+            # the one question the owner asks — *what* is stalled — had no answer on
+            # the page where the red X appeared.
+            blocking = [f for f in report.findings if f.fatal]
+            for finding in blocking:
+                detail = " ".join(str(finding.detail).split())
+                print(f"::error title=Automation is stalled ({finding.area})::{detail[:400]}")
+            if not blocking:
+                print("::error title=Automation is stalled::the watchdog opened/updated a tracking issue")
         elif action == "closed":
             print("::notice title=Automation recovered::tracking issue closed")
     return 0 if report.healthy else 1

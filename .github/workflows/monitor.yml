@@ -68,6 +68,13 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Audit every automation and its outcome
+        id: audit
+        # This step exits 1 *because* something is failing — that is the alarm, and
+        # the job ends red on purpose. But the next step files the issue, and it had
+        # no `always()`, so on 2 November the monitor raised the alarm and then
+        # skipped the step that would have told anyone: the only trace was a red X
+        # with "exit code 1". The alarm and its reporting must not be in series.
+        continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -75,6 +82,7 @@ jobs:
         run: python -m scripts.automation_monitor --save
 
       - name: File or close the stall issue
+        if: ${{ always() && !cancelled() }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -84,17 +92,32 @@ jobs:
       - name: Commit the monitor snapshot
         # A dated record of what was wrong and when, so a recurring fault is visible
         # instead of being rediscovered every few days.
+        #
+        # Re-point at the current main first and commit on top of it. The old
+        # `git pull --rebase --autostash` hit the same content conflict on all five
+        # attempts during the 2 November release and could never win.
         if: ${{ always() && !cancelled() }}
         run: |
+          set -e
           git config user.name "automation-monitor"
           git config user.email "actions@users.noreply.github.com"
-          if [ -f content/monitor/status.json ]; then
-            git add content/monitor/status.json
-            if git diff --staged --quiet; then
-              echo "snapshot unchanged"
-            else
-              git commit -m "chore(monitor): automation status snapshot [skip ci]"
-              git pull --rebase --autostash origin "${GITHUB_REF_NAME:-main}" || true
-              git push || echo "::warning::could not push the snapshot; the issue is the record of truth"
-            fi
+          test -f content/monitor/status.json || { echo "no snapshot to record"; exit 0; }
+          git fetch --quiet origin main
+          git reset --mixed origin/main
+          git add content/monitor/status.json
+          if git diff --cached --quiet; then
+            echo "snapshot unchanged"
+            exit 0
           fi
+          git commit --quiet -m "chore(monitor): automation status snapshot [skip ci]"
+          git push --quiet origin HEAD:main \
+            || echo "::warning::could not push the snapshot; the issue is the record of truth"
+
+      - name: Fail the job if the audit found a stalled automation
+        # The alarm stays an alarm: the issue is filed, the snapshot is committed,
+        # and only then does the run go red.
+        if: ${{ always() && !cancelled() && steps.audit.outcome == 'failure' }}
+        run: |
+          echo "::error title=An automation is failing::see the filed issue for the per-workflow verdicts"
+          exit 1
+

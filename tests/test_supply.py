@@ -424,6 +424,50 @@ class TestWatchdog(unittest.TestCase):
         self.assertTrue(any(f.area == "publishing" for f in report.findings))
 
 
+class TestPublishAgeIsNotInflatedByADateOnlyReceipt(unittest.TestCase):
+    """A receipt written as a bare date used to be read as midnight.
+
+    0013 was uploaded at 17:14 WAT and the watchdog reported "20h ago" three hours
+    later, because 2026-11-02 was parsed as 00:00. The one number the owner asks
+    for — when did it last publish — was wrong by up to a day.
+    """
+
+    def _receipt(self, tmp, stamp):
+        path = Path(tmp) / "0013-test.md"
+        path.write_text(f"---\nstatus: published\npublished_on: '{stamp}'\n"
+                        "youtube_video_id: 'abc123'\n---\nbody\n", encoding="utf-8")
+        return path
+
+    def test_a_bare_date_is_a_lower_bound_not_midnight(self):
+        import datetime as dt
+        from scripts import pipeline_watchdog as pw
+
+        with tempfile.TemporaryDirectory() as tmp:
+            self._receipt(tmp, "2026-11-02")
+            newest = pw.last_publish(Path(tmp))
+        self.assertIsNotNone(newest)
+        path, when = newest
+        self.assertEqual(when.hour, 23, "a date-only receipt must not mean midnight")
+        self.assertIn(path.name, pw.approximate_receipts())
+
+    def test_a_full_timestamp_is_exact_and_not_flagged(self):
+        from scripts import pipeline_watchdog as pw
+
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "0013-test.md"
+            path.write_text("---\nstatus: published\n"
+                            "published_at: '2026-11-02T17:14:00Z'\n"
+                            "youtube_video_id: 'abc123'\n---\n", encoding="utf-8")
+            _, when = pw.last_publish(Path(tmp))
+            self.assertEqual(when.hour, 17)
+            self.assertEqual(pw.approximate_receipts(), [])
+
+    def test_the_publisher_writes_both_a_date_and_an_instant(self):
+        source = (Path(__file__).resolve().parents[1] / "pipeline" / "run.py").read_text()
+        self.assertIn('("published_on", stamp)', source)
+        self.assertIn('("published_at", stamp_precise)', source)
+
+
 class TestIssueSync(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()

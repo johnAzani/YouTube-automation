@@ -29,14 +29,30 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Re-enable all scheduled workflows (self-heal)
+      - name: Re-enable every workflow (self-heal)
+        # This used to re-enable a hardcoded three: produce, dry-run and itself.
+        # GitHub disables a scheduled workflow after 60 days without repository
+        # activity, and it disables *individual* workflows when they fail to parse —
+        # so the list has to come from the repository, not from memory. Fourteen
+        # workflows existed the day this was written.
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          for wf in produce.yml dry-run.yml keepalive.yml; do
-            echo "ensuring $wf is enabled..."
-            gh api -X PUT "repos/${GITHUB_REPOSITORY}/actions/workflows/${wf}/enable" && echo "  ok" || echo "  (not found or already enabled)"
+          set -o pipefail
+          mapfile -t FILES < <(gh api "repos/${GITHUB_REPOSITORY}/actions/workflows?per_page=100"                                 --jq '.workflows[] | select(.state != "deleted_by_user") | .path'                                 | sed 's|^.github/workflows/||' | sort)
+          echo "found ${#FILES[@]} workflow(s): ${FILES[*]}"
+          failed=0
+          for wf in "${FILES[@]}"; do
+            if gh api -X PUT "repos/${GITHUB_REPOSITORY}/actions/workflows/${wf}/enable" >/dev/null 2>&1; then
+              echo "  enabled $wf"
+            else
+              echo "  could not enable $wf"
+              failed=$((failed + 1))
+            fi
           done
+          if [ "$failed" -gt 0 ]; then
+            echo "::warning::$failed workflow(s) could not be re-enabled by this token"
+          fi
 
       - name: Commit timestamp if repo activity is aging (resets 60-day clock)
         run: |
