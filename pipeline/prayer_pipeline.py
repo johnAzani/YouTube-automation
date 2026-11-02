@@ -13,6 +13,30 @@ from .prayer_visuals import render
 from .tts import _probe_duration
 
 
+def already_published(doc) -> str | None:
+    """The existing video id if this exact title is already on the channel.
+
+    Two API units, spent *before* a 25-minute render. On 2 November a video that was
+    already live on the channel sat in the queue as `approved` because the commit
+    that would have recorded it failed; without this check the next release slot
+    would have re-rendered the whole thing from scratch and only then discovered the
+    duplicate.
+    """
+    if getattr(CONFIG, "allow_duplicate_uploads", False):
+        return None
+    try:
+        from googleapiclient.discovery import build
+
+        from .upload import _credentials, check_existing_channel_duplicate
+
+        youtube = build("youtube", "v3", credentials=_credentials(), cache_discovery=False)
+        found = check_existing_channel_duplicate(youtube, doc.title, doc.slug)
+        return str(found["id"]) if found else None
+    except Exception as exc:  # noqa: BLE001 - never block a release on a pre-check
+        print(f"[prayer] duplicate pre-check skipped: {exc!r}")
+        return None
+
+
 def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
     """Run the approved rendering pipeline with hard safety checks.
 
@@ -34,6 +58,22 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
     enforce(doc)
     _require_production_prerequisites(doc, dry_run, CONFIG.youtube_refresh_token,
                                       CONFIG.youtube_client_id, CONFIG.youtube_client_secret)
+    if not dry_run:
+        existing = already_published(doc)
+        if existing:
+            print(f"[prayer] {doc.id} is already live as {existing}; recording it instead "
+                  f"of re-rendering")
+            _mark_job_uploaded(path, doc, existing)
+            result = {'id': doc.id, 'slug': doc.slug, 'video': None, 'thumbnail': None,
+                      'duration_seconds': None, 'tts_engine': 'none', 'dry_run': False,
+                      'video_id': existing, 'watch_url': f'https://youtu.be/{existing}',
+                      'privacy_status': 'already_published', 'uploaded': False}
+            OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+            (OUTPUT_DIR / doc.slug).mkdir(parents=True, exist_ok=True)
+            (OUTPUT_DIR / doc.slug / 'job_result.json').write_text(
+                json.dumps(result, indent=2), encoding='utf-8')
+            return result
+
     if not get_gemini_api_key():
         raise RuntimeError('Gemini API key missing; refusing voice substitution')
     if not (Path(model_dir) / 'model.bin').is_file() or importlib.util.find_spec('faster_whisper') is None:
