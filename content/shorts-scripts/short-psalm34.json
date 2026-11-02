@@ -1,0 +1,375 @@
+{
+  "key": "short-psalm34",
+  "psalm": 34,
+  "title": [
+    "BEDTIME PRAYER",
+    "PSALM 34"
+  ],
+  "poster": [
+    "FIND PEACE TONIGHT",
+    "REST IN GOD'S LOVE",
+    "A BEDTIME PRAYER",
+    "PSALM 34"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm moonlit lake reflections",
+    "gentle night forest breeze",
+    "flickering candle soft light",
+    "starry night sky over ocean",
+    "peaceful misty forest night",
+    "glowing embers campfire night",
+    "tranquil snow falling night",
+    "serene aurora borealis night",
+    "minimalist glowing cross icon night"
+  ],
+  "scenes": [
+    {
+      "a": "Close your eyes now, dear one, and take a deep, calming breath.",
+      "img": "short-psalm34-scene-01.jpg",
+      "kicker": "PSALM 34",
+      "sub": "DEEP, CALMING BREATH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let your shoulders relax as you exhale slowly, releasing the day's worries.",
+      "img": "short-psalm34-scene-02.jpg",
+      "kicker": "PSALM 34",
+      "sub": "RELEASE YOUR WORRIES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In this quiet moment, turn your heart to the peace that awaits you.",
+      "img": "short-psalm34-scene-03.jpg",
+      "kicker": "PSALM 34",
+      "sub": "PEACE THAT AWAITS",
+      "cam": "pan_right",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Remember the promise: 'The Lord is close to the brokenhearted and saves those who are crushed in spirit.'",
+      "img": "short-psalm34-scene-04.jpg",
+      "kicker": "PSALM 34:18",
+      "sub": "GOD IS CLOSE TO YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "May you feel His comforting presence surrounding you, guarding your slumber.",
+      "img": "short-psalm34-scene-05.jpg",
+      "kicker": "PSALM 34",
+      "sub": "COMFORTING PRESENCE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "He hears your whispered prayers and watches over your rest. Trust in His unfailing love tonight.",
+      "img": "short-psalm34-scene-06.jpg",
+      "kicker": "PSALM 34",
+      "sub": "UNFAILING LOVE",
+      "cam": "pan_left",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Let every anxious thought fade, replaced by a profound sense of peace.",
+      "img": "short-psalm34-scene-07.jpg",
+      "kicker": "PSALM 34",
+      "sub": "PROFOUND PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You are held, you are cherished, and you are safe. Rest now, deeply and peacefully, in His embrace.",
+      "img": "short-psalm34-scene-08.jpg",
+      "kicker": "PSALM 34",
+      "sub": "HELD AND CHERISHED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Amen. For more daily prayers and peaceful reflections, please subscribe to our channel.",
+      "img": "short-psalm34-scene-09.jpg",
+      "kicker": "SUBSCRIBE",
+      "sub": "DAILY PRAYERS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Close your eyes now, dear one, and take a deep, calming breath."
+    ],
+    [
+      8,
+      16,
+      "Let your shoulders relax as you exhale slowly, releasing the day's worries."
+    ],
+    [
+      16,
+      24,
+      "In this quiet moment, turn your heart to the peace that awaits you."
+    ],
+    [
+      24,
+      34,
+      "Remember the promise: 'The Lord is close to the brokenhearted and saves those who are crushed in spirit.'"
+    ],
+    [
+      34,
+      42,
+      "May you feel His comforting presence surrounding you, guarding your slumber."
+    ],
+    [
+      42,
+      49,
+      "He hears your whispered prayers and watches over your rest. Trust in His unfailing love tonight."
+    ],
+    [
+      49,
+      56,
+      "Let every anxious thought fade, replaced by a profound sense of peace."
+    ],
+    [
+      56,
+      64,
+      "You are held, you are cherished, and you are safe. Rest now, deeply and peacefully, in His embrace."
+    ],
+    [
+      64,
+      69,
+      "Amen. For more daily prayers and peaceful reflections, please subscribe to our channel."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "CLOSE YOUR EYES NOW"
+      ],
+      [
+        "DEEP",
+        "CALMING BREATH"
+      ],
+      "PSALM 34"
+    ],
+    [
+      8,
+      16,
+      [
+        "LET YOUR SHOULDERS RELAX"
+      ],
+      [
+        "EXHALE SLOWLY"
+      ],
+      "PSALM 34"
+    ],
+    [
+      16,
+      24,
+      [
+        "TURN YOUR HEART TO PEACE"
+      ],
+      [
+        "QUIET MOMENT"
+      ],
+      "PSALM 34"
+    ],
+    [
+      24,
+      34,
+      [
+        "THE LORD IS CLOSE"
+      ],
+      [
+        "BROKENHEARTED",
+        "CRUSHED IN SPIRIT"
+      ],
+      "PSALM 34 : 18"
+    ],
+    [
+      34,
+      42,
+      [
+        "HIS COMFORTING PRESENCE"
+      ],
+      [
+        "GUARDING YOUR SLUMBER"
+      ],
+      "PSALM 34"
+    ],
+    [
+      42,
+      49,
+      [
+        "HE HEARS YOUR PRAYERS"
+      ],
+      [
+        "UNFAILING LOVE"
+      ],
+      "PSALM 34"
+    ],
+    [
+      49,
+      56,
+      [
+        "ANXIOUS THOUGHT FADE"
+      ],
+      [
+        "PROFOUND SENSE OF PEACE"
+      ],
+      "PSALM 34"
+    ],
+    [
+      56,
+      64,
+      [
+        "YOU ARE HELD, CHERISHED, SAFE"
+      ],
+      [
+        "REST DEEPLY"
+      ],
+      "PSALM 34"
+    ],
+    [
+      64,
+      69,
+      [
+        "AMEN"
+      ],
+      [
+        "PLEASE SUBSCRIBE"
+      ],
+      "DAILY PRAYERS"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Close your eyes now, dear one, and take a deep, calming breath.",
+      "kind": "phrase",
+      "words": [
+        "deep",
+        "calming breath"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let your shoulders relax as you exhale slowly, releasing the day's worries.",
+      "kind": "phrase",
+      "words": [
+        "exhale slowly",
+        "releasing"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In this quiet moment, turn your heart to the peace that awaits you.",
+      "kind": "phrase",
+      "words": [
+        "peace",
+        "awaits you"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Remember the promise: 'The Lord is close to the brokenhearted and saves those who are crushed in spirit.'",
+      "kind": "phrase",
+      "words": [
+        "Lord is close",
+        "brokenhearted",
+        "crushed in spirit"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May you feel His comforting presence surrounding you, guarding your slumber.",
+      "kind": "phrase",
+      "words": [
+        "comforting presence",
+        "guarding your slumber"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He hears your whispered prayers and watches over your rest. Trust in His unfailing love tonight.",
+      "kind": "phrase",
+      "words": [
+        "hears your whispered prayers",
+        "unfailing love"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let every anxious thought fade, replaced by a profound sense of peace.",
+      "kind": "phrase",
+      "words": [
+        "anxious thought fade",
+        "profound sense of peace"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You are held, you are cherished, and you are safe. Rest now, deeply and peacefully, in His embrace.",
+      "kind": "phrase",
+      "words": [
+        "held",
+        "cherished",
+        "safe",
+        "rest now"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. For more daily prayers and peaceful reflections, please subscribe to our channel.",
+      "kind": "phrase",
+      "words": [
+        "subscribe",
+        "channel"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ]
+}

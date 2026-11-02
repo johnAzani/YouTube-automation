@@ -67,6 +67,7 @@ originality:
   source_notes: true         # scriptures and classical commentaries documented
   ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
 ---
+
 ## Scene 1 — He Shall Give His Angels Charge (Verse 11a)
 
 Before you drift into sleep tonight, remember this: you are not alone in the dark.
@@ -77,6 +78,7 @@ Heavenly beings are stationed at the thresholds of your life, assigned by God to
 
 You do not walk any path unguarded. You do not sleep any night unwatched.
 
+Heavenly Father, as I prepare to close my eyes, I lean into the profound truth that You have dispatched Your celestial host specifically for me this night. I thank You that Your command is unyielding, and Your care for my soul extends into the deepest slumber. Let this awareness quiet every anxious thought and still every restless spirit within me. I ask that these charged angels stand guard over my mind, preventing any disturbing dreams or unsettling influences from touching my spirit, ensuring my rest is truly blessed and secure under their vigilant watch. Amen.
 
 ## Scene 2 — To Keep You in All Your Ways (Verse 11b)
 
@@ -88,6 +90,7 @@ The same angels who ministered to Christ in the wilderness are assigned to guard
 
 Rest deeply. Heaven itself is keeping vigil over you tonight.
 
+Lord, I am so grateful that Your divine guardians do not falter or sleep, but remain steadfast in their mission to keep me in *all* my ways. Even as my consciousness fades, I trust that their watch continues over my body, my spirit, and the unconscious journey of my dreams. Protect me from every unseen adversary, every spiritual attack that might seek entry when my defenses are lowered. May I wake with the renewed strength that comes from a night wholly protected by Your unwavering commitment to my well-being, kept safe in every imaginable way. Amen.
 
 ## Scene 3 — They Shall Bear You Up in Their Hands (Verse 12a)
 
@@ -99,6 +102,7 @@ No fall is final when angelic hands are positioned to catch you.
 
 Surrender your fear of falling. You are being carried.
 
+Almighty God, I find immense comfort in the promise that they shall bear me up in their hands. I recall moments of stumbling and uncertainty in my waking life, and I now lay down knowing that even in the vulnerability of sleep, I am cradled. Protect me from any physical discomfort, from any sudden jolt or disruption that might break my peace. Let me feel, through the stillness of this night, the tangible support of Your unseen carriers, lifting me above any unseen hazards, ensuring a peaceful and undisturbed passage through the hours of darkness. Amen.
 
 ## Scene 4 — Lest Thou Dash Thy Foot Against a Stone (Verse 12b)
 
@@ -110,6 +114,7 @@ Nothing is too small for His attention, and nothing is too great for His power.
 
 Sleep without fear of harm. You are surrounded by an invisible garrison of divine protection.
 
+Merciful Father, Your meticulous care, which prevents even a foot from dashing against a stone, fills my heart with profound peace. I pray for Your comprehensive protection over my physical body as I sleep, guarding against any illness, pain, or discomfort that might seek to disturb my rest. Let this divine shield encompass every aspect of my being, dispelling all fear of accidents or unexpected troubles. Grant me the deep, undisturbed sleep of one fully confident in Your sovereign attention to the smallest details of my existence. Amen.
 
 ## Scene 5 — Sleep Under Angelic Watch (Verses 11–12 Synthesis)
 
@@ -119,5 +124,6 @@ Close your eyes knowing that heavenly guardians stand at the door of your room, 
 
 No evil shall come near you, for the Lord has commanded His angels concerning you.
 
-Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.
+Gracious God, as I finally yield to sleep, I carry the powerful synthesis of Your promises: the charge given, the keeping in all my ways, and the bearing up in hands. I embrace the reality that Your heavenly guardians are not just around me, but intimately involved in my protection throughout this night. Thank You for this unparalleled watch, for sealing off every entryway to harm, and for ushering in a profound sense of security. May I awaken in the morning refreshed, renewed, and acutely aware of Your enduring presence that guarded me through the dark. Amen.
 
+Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.

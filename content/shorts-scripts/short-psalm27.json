@@ -1,0 +1,321 @@
+{
+  "key": "short-psalm27",
+  "psalm": 27,
+  "title": [
+    "A PRAYER",
+    "OF PEACEFUL REST"
+  ],
+  "poster": [
+    "FIND YOUR PEACE",
+    "IN HIS WORDS",
+    "PSALM 27",
+    "BEDTIME PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm mountain lake night mist",
+    "peaceful forest stream moonlight",
+    "flickering candle soft light night",
+    "serene starry night sky tranquil",
+    "gentle ocean waves night",
+    "still forest night ambiance",
+    "dew drops on leaves moonlit"
+  ],
+  "scenes": [
+    {
+      "a": "Close your eyes now, and take a deep, calming breath. Let your body relax, sinking gently into the comfort beneath you.",
+      "img": "short-psalm27-scene-01.jpg",
+      "kicker": "A PRAYER",
+      "sub": "FOR PEACEFUL REST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Release any worries or tensions. This is a moment for peace, a time to rest your heart and mind.",
+      "img": "short-psalm27-scene-02.jpg",
+      "kicker": "LET GO",
+      "sub": "FIND YOUR INNER CALM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Tonight, we turn to Psalm 27:1: 'The LORD is my light and my salvation; whom shall I fear? The LORD is the stronghold of my life; of whom shall I be afraid?'",
+      "img": "short-psalm27-scene-03.jpg",
+      "kicker": "PSALM 27:1",
+      "sub": "THE LORD IS MY LIGHT",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Let these powerful words be a shield. Feel divine protection enveloping you in its gentle embrace.",
+      "img": "short-psalm27-scene-04.jpg",
+      "kicker": "DIVINE PROTECTION",
+      "sub": "A SHIELD AROUND YOU",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "May your sleep be peaceful and undisturbed, filled with security and unwavering trust.",
+      "img": "short-psalm27-scene-05.jpg",
+      "kicker": "PEACEFUL SLUMBER",
+      "sub": "REST IN HIS SECURITY",
+      "cam": "push_in",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Rest in the knowledge that you are cherished, guarded, and always held in loving care.",
+      "img": "short-psalm27-scene-06.jpg",
+      "kicker": "LOVING CARE",
+      "sub": "YOU ARE CHERISHED",
+      "cam": "pan_left",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "As you drift into sleep, carry this peace. Let it guide you to a restful and rejuvenating slumber.",
+      "img": "short-psalm27-scene-07.jpg",
+      "kicker": "SWEET DREAMS",
+      "sub": "GUIDED BY HIS PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "Close your eyes now, and take a deep, calming breath. Let your body relax, sinking gently into the comfort beneath you."
+    ],
+    [
+      7,
+      14,
+      "Release any worries or tensions. This is a moment for peace, a time to rest your heart and mind."
+    ],
+    [
+      14,
+      29,
+      "Tonight, we turn to Psalm 27:1: 'The LORD is my light and my salvation; whom shall I fear? The LORD is the stronghold of my life; of whom shall I be afraid?'"
+    ],
+    [
+      29,
+      36,
+      "Let these powerful words be a shield. Feel divine protection enveloping you in its gentle embrace."
+    ],
+    [
+      36,
+      42,
+      "May your sleep be peaceful and undisturbed, filled with security and unwavering trust."
+    ],
+    [
+      42,
+      49,
+      "Rest in the knowledge that you are cherished, guarded, and always held in loving care."
+    ],
+    [
+      49,
+      56,
+      "As you drift into sleep, carry this peace. Let it guide you to a restful and rejuvenating slumber."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "CLOSE YOUR EYES",
+        "TAKE A DEEP BREATH"
+      ],
+      [
+        "CALMING BREATH"
+      ],
+      "PSALM 27"
+    ],
+    [
+      7,
+      14,
+      [
+        "RELEASE WORRIES",
+        "FIND YOUR PEACE"
+      ],
+      [
+        "WORRIES",
+        "PEACE"
+      ],
+      "PSALM 27"
+    ],
+    [
+      14,
+      29,
+      [
+        "THE LORD IS MY LIGHT",
+        "WHOM SHALL I FEAR?"
+      ],
+      [
+        "LORD",
+        "LIGHT",
+        "SALVATION",
+        "FEAR"
+      ],
+      "PSALM 27 : 1"
+    ],
+    [
+      29,
+      36,
+      [
+        "WORDS ARE A SHIELD",
+        "DIVINE PROTECTION"
+      ],
+      [
+        "SHIELD",
+        "DIVINE PROTECTION"
+      ],
+      "PSALM 27"
+    ],
+    [
+      36,
+      42,
+      [
+        "PEACEFUL SLEEP",
+        "UNWAVERING TRUST"
+      ],
+      [
+        "PEACEFUL",
+        "TRUST"
+      ],
+      "PSALM 27"
+    ],
+    [
+      42,
+      49,
+      [
+        "YOU ARE CHERISHED",
+        "HELD IN LOVING CARE"
+      ],
+      [
+        "CHERISHED",
+        "LOVING CARE"
+      ],
+      "PSALM 27"
+    ],
+    [
+      49,
+      56,
+      [
+        "CARRY THIS PEACE",
+        "RESTFUL SLUMBER"
+      ],
+      [
+        "PEACE",
+        "RESTFUL SLUMBER"
+      ],
+      "PSALM 27"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Close your eyes now, and take a deep, calming breath. Let your body relax, sinking gently into the comfort beneath you.",
+      "kind": "phrase",
+      "words": [
+        "deep",
+        "calming",
+        "breath"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Release any worries or tensions. This is a moment for peace, a time to rest your heart and mind.",
+      "kind": "phrase",
+      "words": [
+        "Release",
+        "worries",
+        "tensions"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Tonight, we turn to Psalm 27:1: 'The LORD is my light and my salvation; whom shall I fear? The LORD is the stronghold of my life; of whom shall I be afraid?'",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "light",
+        "salvation",
+        "stronghold"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let these powerful words be a shield. Feel divine protection enveloping you in its gentle embrace.",
+      "kind": "phrase",
+      "words": [
+        "powerful",
+        "words",
+        "shield"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your sleep be peaceful and undisturbed, filled with security and unwavering trust.",
+      "kind": "phrase",
+      "words": [
+        "peaceful",
+        "undisturbed",
+        "security",
+        "trust"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Rest in the knowledge that you are cherished, guarded, and always held in loving care.",
+      "kind": "phrase",
+      "words": [
+        "cherished",
+        "guarded",
+        "loving",
+        "care"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As you drift into sleep, carry this peace. Let it guide you to a restful and rejuvenating slumber.",
+      "kind": "phrase",
+      "words": [
+        "carry",
+        "peace",
+        "restful",
+        "rejuvenating",
+        "slumber"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ]
+}

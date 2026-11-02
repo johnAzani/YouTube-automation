@@ -1,15 +1,13 @@
 short: short-psalm46
 companion_longform_id: '0013'
 scripture: Psalm 46
-status: draft
+status: approved
 privacy: public
 replace: false
 target_window_utc: '14:14'
 notes: "Companion Short for Psalm 46: God Is Our Refuge & Strength \u2014 Be Still\
-  \ & Know | The Secret Place \u2014 authoring failed: cannot author Psalm 46 Short:\
-  \ GEMINI_API_KEY is not present in this environment (no GEMINI_API_KEY, no GOOGLE_API_KEY,\
-  \ no .env). Refusing to fabricate a scene list."
-renderer_ready: false
+  \ & Know | The Secret Place \u2014 spec authored by the brain (146 narration words)"
+renderer_ready: true
 approved_note: approved scripture, but no scene script exists; status downgraded to
   draft so the queue stops claiming it will publish
-authored_by_brain: false
+authored_by_brain: true

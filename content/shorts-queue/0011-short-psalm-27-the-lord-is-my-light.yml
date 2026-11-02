@@ -1,14 +1,12 @@
 short: short-psalm27
 companion_longform_id: '0011'
 scripture: Psalm 27
-status: draft
+status: approved
 privacy: public
 replace: false
 target_window_utc: '14:14'
 notes: "Companion Short for Psalm 27: The Lord Is My Light & My Salvation \u2014 Fear\
   \ No Evil \u2014 Night Prayer for Sleep, Peace & Divine Guard | The Secret Place\
-  \ \u2014 authoring failed: cannot author Psalm 27 Short: GEMINI_API_KEY is not present\
-  \ in this environment (no GEMINI_API_KEY, no GOOGLE_API_KEY, no .env). Refusing\
-  \ to fabricate a scene list."
-renderer_ready: false
-authored_by_brain: false
+  \ \u2014 spec authored by the brain (134 narration words)"
+renderer_ready: true
+authored_by_brain: true
