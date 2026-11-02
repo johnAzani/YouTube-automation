@@ -54,6 +54,15 @@ MAX_DISPATCHES = 3
 # workflow from hammering the queue every fifteen minutes.
 MAX_ATTEMPTS_PER_SLOT = 3
 
+# A run whose runner has died holds the `content-state` lock forever, and a wedged
+# run does not enforce its own timeouts: on 2 November a produce run sat
+# `in_progress` for two and a half hours past both its 90-minute step cap and its
+# 120-minute job cap. Everything else that writes content/ queued behind it,
+# including this supervisor and the monitor — the watchers were stuck behind the
+# thing they exist to catch. So the supervisor cancels them.
+JOB_CAP = timedelta(minutes=120)
+STUCK_GRACE = timedelta(minutes=10)
+
 NEVER_DISPATCH = {"monitor.yml", "automation-health.yml", "scheduler-supervisor.yml",
                   "dry-run.yml", "preview-render.yml", "prayer-alignment-check.yml"}
 
@@ -183,11 +192,54 @@ def dispatch(workflow: str) -> tuple[bool, str]:
     return False, (proc.stderr or proc.stdout or "gh workflow run failed").strip()[:200]
 
 
+def stuck_runs(now: datetime | None = None, runs=None) -> list[dict]:
+    """Runs that are `in_progress` well past the cap their workflow declares.
+
+    Only timed-out-by-wall-clock counts: a run that is genuinely working reports
+    step progress, but GitHub's API does not expose that cheaply, so the test is
+    the job cap plus a grace period. Ten minutes of grace is enough that a long
+    step which is about to finish is not killed underneath itself.
+    """
+    now = now or datetime.now(timezone.utc)
+    payload = runs if runs is not None else _safe_runs()
+    rows = payload.get("workflow_runs", payload) if isinstance(payload, dict) else payload
+    out = []
+    for run in rows or []:
+        if str(run.get("status")) != "in_progress":
+            continue
+        created = run.get("run_started_at") or run.get("created_at")
+        if not created:
+            continue
+        try:
+            started = datetime.fromisoformat(str(created).replace("Z", "+00:00"))
+        except ValueError:
+            continue
+        if now - started > JOB_CAP + STUCK_GRACE:
+            out.append({
+                "id": run.get("id"),
+                "workflow": (run.get("name") or "").strip(),
+                "started": started.isoformat(),
+                "minutes": int((now - started).total_seconds() // 60),
+            })
+    return out
+
+
+def cancel_run(run_id) -> tuple[bool, str]:
+    from scripts.automation_monitor import repo_slug
+
+    proc = subprocess.run(["gh", "api", "--method", "POST",
+                           f"repos/{repo_slug()}/actions/runs/{run_id}/cancel"],
+                          capture_output=True, text=True, cwd=ROOT, timeout=120)
+    if proc.returncode == 0:
+        return True, "cancelled"
+    return False, (proc.stderr or proc.stdout or "cancel failed").strip()[:200]
+
+
 def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
               state: dict | None = None) -> dict:
     now = now or datetime.now(timezone.utc)
     state = load_state() if state is None else state
-    result = {"dispatched": [], "skipped": [], "failed": []}
+    result = {"dispatched": [], "skipped": [], "failed": [], "cancelled": []}
 
     try:
         missing = due_but_missing(now, runs)
@@ -260,6 +312,23 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
         (result["dispatched"] if ok else result["failed"]).append(
             {"workflow": workflow, "slot": slot, "result": message})
 
+    # A wedged run holds the content-state lock, so nothing else that writes
+    # content/ can start — including this pass, once it queues behind the very run
+    # it should be cleaning up. Cancel first, dispatch second.
+    try:
+        for stuck in stuck_runs(now, runs):
+            if dry_run:
+                result["cancelled"].append({**stuck, "result": "would cancel"})
+                continue
+            ok, message = cancel_run(stuck["id"])
+            result["cancelled"].append({**stuck, "result": message,
+                                        "ok": ok})
+            if not ok:
+                result["failed"].append({"workflow": stuck["workflow"],
+                                         "reason": f"could not cancel run {stuck['id']}: {message}"})
+    except Exception as exc:  # noqa: BLE001 - never lose the dispatch pass over this
+        result["failed"].append({"workflow": "-", "reason": f"stuck-run check failed: {exc}"})
+
     if not dry_run:
         save_state(state)
     return result
@@ -281,15 +350,21 @@ def main(argv=None) -> int:
             print(f"[supervisor] skip {row['workflow']}: {row['reason']}")
         for row in result["failed"]:
             print(f"[supervisor] FAILED {row['workflow']}: {row.get('reason') or row.get('result')}")
-        if not any(result[key] for key in ("dispatched", "skipped", "failed")):
+        for row in result.get("cancelled", []):
+            print(f"[supervisor] cancelled {row['workflow']} run {row['id']} "
+                  f"(in progress {row['minutes']}m): {row['result']}")
+        if not any(result[key] for key in ("dispatched", "skipped", "failed", "cancelled")):
             print("[supervisor] every scheduled workflow has run for its current slot")
 
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
-    if summary and (result["dispatched"] or result["failed"]):
+    if summary and (result["dispatched"] or result["failed"] or result.get("cancelled")):
         with open(summary, "a", encoding="utf-8") as fh:
             fh.write("### 🔁 Schedule supervisor\n\n")
             for row in result["dispatched"]:
                 fh.write(f"- dispatched `{row['workflow']}` for the {row['slot']} slot\n")
+            for row in result.get("cancelled", []):
+                fh.write(f"- cancelled `{row['workflow']}` run {row['id']}: "
+                         f"in progress {row['minutes']} minutes with no result\n")
             for row in result["failed"]:
                 fh.write(f"- **could not dispatch** `{row['workflow']}`: "
                          f"{row.get('reason') or row.get('result')}\n")

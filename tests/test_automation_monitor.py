@@ -337,7 +337,9 @@ class TestMonitorWorkflow(unittest.TestCase):
         """It had never run: its 06:23/09:23/12:23 UTC slots produced no runs at all."""
         self.assertIn("push:", self.text)
         self.assertIn("workflow_run:", self.text)
-        self.assertIn("group: content-state", self.text)
+        # ...and it must not share the publish lock, or a wedged production run
+        # can keep the monitor from ever starting (2 November, 2h25m).
+        self.assertNotIn("group: content-state", self.text)
 
     def test_the_watchdog_is_allowed_to_fail_the_job(self):
         # A red monitor run is a signal; swallowing it would recreate the bug.

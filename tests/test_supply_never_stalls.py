@@ -439,9 +439,14 @@ class TestTheWorkflowCannotLoseState(unittest.TestCase):
     def workflow(self, name):
         return (Path(__file__).resolve().parents[1] / ".github" / "workflows" / name).read_text()
 
-    def test_production_and_the_supervisor_share_one_content_lock(self):
+    def test_production_holds_the_content_lock(self):
         self.assertIn("group: content-state", self.workflow("produce.yml"))
-        self.assertIn("group: content-state", self.workflow("scheduler-supervisor.yml"))
+
+    def test_the_watchers_cannot_be_blocked_by_what_they_watch(self):
+        # 2 November: a wedged produce run held content-state for 2h25m and both
+        # watchers queued behind it, so nothing noticed.
+        for name in ("monitor.yml", "scheduler-supervisor.yml", "automation-health.yml"):
+            self.assertNotIn("group: content-state", self.workflow(name), name)
 
     def test_the_publish_commit_cannot_loop_on_the_same_conflict(self):
         """On 2 Nov it retried `pull --rebase` five times and hit the same conflict
