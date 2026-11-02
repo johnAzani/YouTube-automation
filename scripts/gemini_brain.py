@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import os
 import sys
 from dataclasses import asdict
@@ -100,8 +101,14 @@ def cmd_auto_replenish(brain: GeminiBrain, min_days: float) -> int:
     `replenish_pipeline` directly, because authoring alone was how a queue grew to
     twenty-one approved scripts that no run could publish.
     """
-    wanted = max(1, int(round(min_days / 2.0)))  # two release slots per day
-    return cmd_ensure_supply(brain, max_expansions=3, target=900, min_publishable=wanted)
+    # Days of runway -> scripts to keep publishable. This read "two release slots
+    # per day" while produce.yml fires three (06:14, 14:14, 19:14), so a nightly
+    # pass aimed at one publishable script left the evening slot with nothing.
+    from pipeline.supply import SLOTS_PER_DAY
+
+    wanted = max(1, math.ceil(min_days * SLOTS_PER_DAY))
+    return cmd_ensure_supply(brain, max_expansions=SLOTS_PER_DAY, target=900,
+                             min_publishable=wanted)
 
 
 def cmd_author_shorts(brain: GeminiBrain) -> int:
@@ -150,10 +157,12 @@ def cmd_preflight(brain: GeminiBrain) -> int:
 
 
 def cmd_ensure_supply(brain: GeminiBrain, max_expansions: int, target: int,
-                      min_publishable: int = 1) -> int:
+                      min_publishable: int | None = None) -> int:
     """Lengthen the backlog, author if still empty, verify — one unattended loop."""
-    from pipeline.supply import ensure_supply
+    from pipeline.supply import SLOTS_PER_DAY, ensure_supply
 
+    if min_publishable is None:
+        min_publishable = SLOTS_PER_DAY
     report = ensure_supply(brain, limit=max_expansions, target=target,
                            min_publishable=min_publishable)
     for row in report.expanded:

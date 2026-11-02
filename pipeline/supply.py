@@ -48,6 +48,11 @@ MAX_MODEL_CALLS_PER_RUN = 10
 MAX_AUTHORS_PER_RUN = 2
 EXPANSION_TARGET_WORDS = 900
 
+# The release slots in .github/workflows/produce.yml: 06:14, 14:14 and 19:14 UTC.
+# Supply is measured against this, not against "scripts", because the queue is
+# consumed three times a day and a target of one leaves the 7:14pm slot empty.
+SLOTS_PER_DAY = 3
+
 
 @dataclass
 class SupplyReport:
@@ -263,6 +268,12 @@ def ensure_supply(brain, limit: int = MAX_EXPANSIONS_PER_RUN,
     report.wanted = min_publishable
     report.publishable_before = len(publishable_longform(queue_dir))
 
+    # Lengthening is the only way the under-floor backlog ever becomes publishable,
+    # and it was capped at three per run no matter how far behind the queue was:
+    # the backlog could not close while production was spending three schedules a
+    # day. Spend enough model calls to close the gap, still within one run's budget.
+    shortfall = max(0, min_publishable - report.publishable_before)
+    limit = max(limit, min(shortfall, MAX_EXPANSIONS_WHEN_EMPTY))
     if report.publishable_before == 0:
         limit = max(limit, MAX_EXPANSIONS_WHEN_EMPTY)
     report.expanded = expand_backlog(limit=limit, target=target, queue_dir=queue_dir, write=write)
