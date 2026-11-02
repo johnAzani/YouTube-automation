@@ -67,6 +67,7 @@ originality:
   source_notes: true         # scriptures and classical commentaries documented
   ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
 ---
+
 ## Scene 1 — The Terror by Night (Verses 5–6)
 
 Before you close your eyes tonight, bring every fear that has been whispering in the dark into the light of God's presence.
@@ -78,7 +79,7 @@ God does not promise that dangers will not exist; He promises that you will not 
 The terror of the night loses its power when you remember that the Almighty watches over your sleep.
 
 Lay down every anxious thought. The darkness holds no authority over those who dwell under the shadow of the Almighty.
-
+Dear God, as I prepare for sleep, I lay before You every shadow of apprehension that lingers in my mind. I acknowledge the fear of the unknown, the whispers of anxiety about tomorrow, and any unease that seeks to disturb my peace. I rest in Your promise that I shall not be afraid for the terror by night. Let Your powerful presence be my comfort and my shield, dispelling every dark thought and replacing it with the profound assurance of Your unfailing protection.
 
 ## Scene 2 — The Arrow That Flies by Day (Verse 5b)
 
@@ -89,7 +90,7 @@ But the same God who keeps you through the night watches over you through the da
 There is no hour when His protection lapses, no moment when His gaze turns away.
 
 Rest in the knowledge that every projectile aimed at your peace has already been intercepted by divine providence.
-
+Oh Lord, I bring to You the memory of unexpected harms, the sharp pains of betrayal, and the sudden challenges that have pierced my spirit during the waking hours. I pray that Your mighty hand continues to deflect every future arrow aimed at my well-being, whether it be injustice, misunderstanding, or unforeseen adversity. Thank You for being my constant guard, intercepting every hostile intention and upholding my peace in the midst of life's battleground.
 
 ## Scene 3 — The Pestilence That Walketh in Darkness (Verse 6a)
 
@@ -100,7 +101,7 @@ But light and darkness are alike to God. He sees what you cannot see, and He gua
 Breathe deeply. The invisible dangers that haunt your imagination are visible to the One who numbers the hairs on your head.
 
 You are not exposed. You are covered.
-
+Heavenly Father, I entrust to Your care all the unseen threats, the insidious illnesses, and the hidden dangers that creep silently in the darkness of this world. You are the God who sees all, and nothing is concealed from Your gaze. I pray for Your divine immunity against any spiritual, emotional, or physical 'pestilence' that seeks to undermine my health or my joy. Cover me with Your protective hand, making me impervious to the silent attacks that target the vulnerable hours.
 
 ## Scene 4 — The Destruction That Wasteth at Noonday (Verse 6b)
 
@@ -111,7 +112,7 @@ But God's protection is not limited to the shadows. His shield covers you in ful
 Whatever threatens to consume your resources, your health, or your future — the Almighty is your boundary.
 
 No destruction shall come near your dwelling.
-
+Almighty Protector, even in the clarity of day, destruction can waste and diminish. I ask You to guard my possessions, my relationships, and my future plans from any form of open assault or corrosive influence. Preserve me from any form of ruin that operates under the guise of normalcy, whether it be financial hardship, relational breakdown, or the erosion of my spirit. Be my impenetrable fortress against all forms of wasting, ensuring Your goodness endures around me.
 
 ## Scene 5 — Sleep Under Divine Cover (Verses 5–6 Synthesis)
 
@@ -120,6 +121,6 @@ From the terror of midnight to the destruction of midday, from the arrow of sudd
 Tonight, you do not have to stay vigilant. The One who never slumbers is keeping watch.
 
 Close your eyes. Release every fear. Sleep in the certainty that no terror, no arrow, no pestilence, and no destruction shall come near your dwelling.
+Lord, I embrace the profound truth that from the first shadow of dusk to the full light of dawn, and through the busy hours of the day, I am enveloped in Your complete protection. I release my need to control or comprehend every potential danger, surrendering myself entirely to Your sovereign care. I thank You that I can truly close my eyes and find deep rest, knowing that Your promises of deliverance from terror, arrows, pestilence, and destruction are my constant reality.
 
 Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.
-

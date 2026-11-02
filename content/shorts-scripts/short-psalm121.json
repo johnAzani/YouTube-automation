@@ -1,0 +1,373 @@
+{
+  "key": "short-psalm121",
+  "psalm": 121,
+  "title": [
+    "SLEEP IN PEACE",
+    "UNDER HIS WATCHFUL EYE"
+  ],
+  "poster": [
+    "FINDING TRANQUILITY",
+    "IN HIS LOVING PRESENCE",
+    "A BEDTIME PRAYER",
+    "FOR RESTFUL SLEEP"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm forest lake night stars",
+    "gentle rippling stream moonlight",
+    "distant mountain range moonrise night",
+    "soft glowing candle interior dark",
+    "serene moonlit ocean shore waves",
+    "peaceful night sky stars timelapse"
+  ],
+  "scenes": [
+    {
+      "a": "Take a deep, calming breath now. Let the day's worries gently fade as you prepare for rest. Inhale peace, exhale tension from your body.",
+      "img": "short-psalm121-scene-01.jpg",
+      "kicker": "PREPARE FOR REST",
+      "sub": "INHALE PEACE, EXHALE TENSION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Feel the quiet presence of your Creator surrounding you, a watchful, loving gaze through the night. You are held securely.",
+      "img": "short-psalm121-scene-02.jpg",
+      "kicker": "HIS LOVING GAZE",
+      "sub": "YOU ARE HELD SECURELY",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Remember the promise from Psalm 121: 'He will not let your foot be moved; he who keeps you will not slumber.' What a profound comfort!",
+      "img": "short-psalm121-scene-03.jpg",
+      "kicker": "PSALM 121:3-4",
+      "sub": "HE WILL NOT LET YOUR FOOT BE MOVED",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Rest in this powerful assurance. May your sleep be deep and undisturbed, your dreams peaceful.",
+      "img": "short-psalm121-scene-04.jpg",
+      "kicker": "REST IN ASSURANCE",
+      "sub": "DEEP, UNDISTURBED SLEEP",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Wake refreshed, renewed, and ready for a new day. You are truly blessed.",
+      "img": "short-psalm121-scene-05.jpg",
+      "kicker": "WAKE REFRESHED",
+      "sub": "TRULY BLESSED",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Find more moments of peace. Subscribe to The Secret Place.",
+      "img": "short-psalm121-scene-06.jpg",
+      "kicker": "FIND MORE PEACE",
+      "sub": "SUBSCRIBE TO THE SECRET PLACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "Take a deep, calming breath now. Let the day's worries gently fade as you prepare for rest. Inhale peace, exhale tension from your body."
+    ],
+    [
+      10,
+      21,
+      "Feel the quiet presence of your Creator surrounding you, a watchful, loving gaze through the night. You are held securely."
+    ],
+    [
+      21,
+      33,
+      "Remember the promise from Psalm 121: 'He will not let your foot be moved; he who keeps you will not slumber.' What a profound comfort!"
+    ],
+    [
+      33,
+      44,
+      "Rest in this powerful assurance. May your sleep be deep and undisturbed, your dreams peaceful."
+    ],
+    [
+      44,
+      54,
+      "Wake refreshed, renewed, and ready for a new day. You are truly blessed."
+    ],
+    [
+      54,
+      60,
+      "Find more moments of peace. Subscribe to The Secret Place."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "TAKE A DEEP, CALMING BREATH NOW.",
+        "LET WORRIES FADE."
+      ],
+      [
+        "breath",
+        "fade"
+      ],
+      "PREPARE FOR REST"
+    ],
+    [
+      10,
+      21,
+      [
+        "FEEL HIS QUIET PRESENCE",
+        "YOU ARE HELD SECURELY"
+      ],
+      [
+        "presence",
+        "held"
+      ],
+      "WATCHFUL, LOVING GAZE"
+    ],
+    [
+      21,
+      33,
+      [
+        "HE WILL NOT LET YOUR FOOT BE MOVED",
+        "HE WHO KEEPS YOU WILL NOT SLUMBER"
+      ],
+      [
+        "moved",
+        "slumber"
+      ],
+      "PSALM 121"
+    ],
+    [
+      33,
+      44,
+      [
+        "REST IN THIS POWERFUL ASSURANCE.",
+        "SLEEP DEEP AND UNDISTURBED."
+      ],
+      [
+        "assurance",
+        "undisturbed"
+      ],
+      "PEACEFUL DREAMS"
+    ],
+    [
+      44,
+      54,
+      [
+        "WAKE REFRESHED, RENEWED,",
+        "READY FOR A NEW DAY."
+      ],
+      [
+        "refreshed",
+        "renewed"
+      ],
+      "TRULY BLESSED"
+    ],
+    [
+      54,
+      60,
+      [
+        "FIND MORE MOMENTS OF PEACE.",
+        "SUBSCRIBE TO THE SECRET PLACE."
+      ],
+      [
+        "peace",
+        "Subscribe"
+      ],
+      "THE SECRET PLACE"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Take a deep, calming breath now.",
+      "kind": "phrase",
+      "words": [
+        "deep",
+        "calming",
+        "breath"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let the day's worries gently fade",
+      "kind": "phrase",
+      "words": [
+        "worries",
+        "fade"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Inhale peace, exhale tension from your body.",
+      "kind": "phrase",
+      "words": [
+        "Inhale",
+        "peace",
+        "exhale",
+        "tension"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Feel the quiet presence of your Creator surrounding you,",
+      "kind": "phrase",
+      "words": [
+        "quiet",
+        "presence",
+        "Creator"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "a watchful, loving gaze through the night.",
+      "kind": "phrase",
+      "words": [
+        "watchful",
+        "loving",
+        "gaze"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You are held securely.",
+      "kind": "phrase",
+      "words": [
+        "held",
+        "securely"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Remember the promise from Psalm 121:",
+      "kind": "phrase",
+      "words": [
+        "Remember",
+        "promise",
+        "Psalm 121"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "'He will not let your foot be moved; he who keeps you will not slumber.'",
+      "kind": "phrase",
+      "words": [
+        "not",
+        "slumber"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "What a profound comfort!",
+      "kind": "phrase",
+      "words": [
+        "profound",
+        "comfort"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Rest in this powerful assurance.",
+      "kind": "phrase",
+      "words": [
+        "Rest",
+        "powerful",
+        "assurance"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your sleep be deep and undisturbed, your dreams peaceful.",
+      "kind": "phrase",
+      "words": [
+        "sleep",
+        "deep",
+        "undisturbed",
+        "dreams",
+        "peaceful"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Wake refreshed, renewed, and ready for a new day.",
+      "kind": "phrase",
+      "words": [
+        "Wake",
+        "refreshed",
+        "renewed",
+        "new",
+        "day"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You are truly blessed.",
+      "kind": "phrase",
+      "words": [
+        "truly",
+        "blessed"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Find more moments of peace.",
+      "kind": "phrase",
+      "words": [
+        "Find",
+        "moments",
+        "peace"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Secret Place.",
+      "kind": "phrase",
+      "words": [
+        "Subscribe",
+        "Secret",
+        "Place"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ]
+}

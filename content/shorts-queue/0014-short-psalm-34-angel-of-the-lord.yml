@@ -1,15 +1,14 @@
 short: short-psalm34
 companion_longform_id: '0014'
 scripture: Psalm 34
-status: draft
+status: approved
 privacy: public
 replace: false
 target_window_utc: '14:14'
 notes: "Companion Short for Psalm 34: The Angel of the Lord Encamps Round About You\
-  \ \u2014 Bedtime Prayer | The Secret Place \u2014 authoring failed: cannot author\
-  \ Psalm 34 Short: GEMINI_API_KEY is not present in this environment (no GEMINI_API_KEY,\
-  \ no GOOGLE_API_KEY, no .env). Refusing to fabricate a scene list."
-renderer_ready: false
+  \ \u2014 Bedtime Prayer | The Secret Place \u2014 spec authored by the brain (125\
+  \ narration words)"
+renderer_ready: true
 approved_note: approved scripture, but no scene script exists; status downgraded to
   draft so the queue stops claiming it will publish
-authored_by_brain: false
+authored_by_brain: true

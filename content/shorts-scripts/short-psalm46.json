@@ -1,0 +1,508 @@
+{
+  "key": "short-psalm46",
+  "psalm": 46,
+  "title": [
+    "GOD OUR REFUGE",
+    "STRENGTH IN STILLNESS"
+  ],
+  "poster": [
+    "YOUR PEACEFUL NIGHT",
+    "STARTS HERE",
+    "CALM YOUR HEART",
+    "REST IN HIS STRENGTH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm candle flame dark room",
+    "peaceful night sky stars",
+    "forest path night mist",
+    "still water reflections night",
+    "cozy bedroom window rain",
+    "calm dark ocean waves night"
+  ],
+  "scenes": [
+    {
+      "a": "Take a deep breath with me now.",
+      "img": "short-psalm46-scene-01.jpg",
+      "kicker": "A QUIET HEART",
+      "sub": "FINDING PEACE TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "'God is our refuge and strength, a very present help in trouble.'",
+      "img": "short-psalm46-scene-02.jpg",
+      "kicker": "PSALM 46 : 1",
+      "sub": "GOD OUR REFUGE & STRENGTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He is your fortress, your protector through the hours of darkness.",
+      "img": "short-psalm46-scene-03.jpg",
+      "kicker": "YOUR PROTECTOR",
+      "sub": "HE HOLDS YOU SECURELY",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "He is here in your quiet moments, a gentle presence surrounding you.",
+      "img": "short-psalm46-scene-04.jpg",
+      "kicker": "DIVINE PRESENCE",
+      "sub": "HIS PEACE FILLS YOU",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Release the burdens of the day, trusting in His unfailing love.",
+      "img": "short-psalm46-scene-05.jpg",
+      "kicker": "RESTORE YOUR SOUL",
+      "sub": "UNFAILING LOVE TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Rest now in His profound peace.",
+      "img": "short-psalm46-scene-06.jpg",
+      "kicker": "REST IN PEACE",
+      "sub": "YOU ARE ALWAYS LOVED",
+      "cam": "pan_right",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      4,
+      "Take a deep breath with me now. In... and out."
+    ],
+    [
+      4,
+      8,
+      "Feel your body soften, your mind begin to quiet."
+    ],
+    [
+      8,
+      12,
+      "As you prepare for rest, remember this enduring truth:"
+    ],
+    [
+      12,
+      18,
+      "'God is our refuge and strength, a very present help in trouble.'"
+    ],
+    [
+      18,
+      24,
+      "Let these powerful words settle deep within your spirit tonight."
+    ],
+    [
+      24,
+      29,
+      "He is your fortress, your protector through the hours of darkness."
+    ],
+    [
+      29,
+      36,
+      "Cast all your worries upon Him, knowing He holds you securely."
+    ],
+    [
+      36,
+      42,
+      "He is here in your quiet moments, a gentle presence surrounding you."
+    ],
+    [
+      42,
+      48,
+      "Allow His perfect peace to fill every corner of your being."
+    ],
+    [
+      48,
+      53,
+      "Release the burdens of the day, trusting in His unfailing love."
+    ],
+    [
+      53,
+      58,
+      "May your sleep be sweet, deeply restorative,"
+    ],
+    [
+      58,
+      63,
+      "and filled with a sense of His divine embrace."
+    ],
+    [
+      63,
+      68,
+      "You are safe, you are loved, you are watched over."
+    ],
+    [
+      68,
+      72,
+      "Rest now in His profound peace."
+    ],
+    [
+      72,
+      75,
+      "Subscribe to The Secret Place for daily prayers."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      4,
+      [
+        "TAKE A DEEP BREATH",
+        "NOW"
+      ],
+      [
+        "breath",
+        "now"
+      ],
+      "YOUR BREATH IS PRAYER"
+    ],
+    [
+      4,
+      8,
+      [
+        "BODY SOFTEN",
+        "MIND QUIET"
+      ],
+      [
+        "soften",
+        "quiet"
+      ],
+      "INNER CALM"
+    ],
+    [
+      8,
+      12,
+      [
+        "PREPARE FOR REST",
+        "REMEMBER TRUTH"
+      ],
+      [
+        "rest",
+        "truth"
+      ],
+      "ETERNAL TRUTH"
+    ],
+    [
+      12,
+      18,
+      [
+        "GOD IS OUR REFUGE",
+        "AND STRENGTH"
+      ],
+      [
+        "refuge",
+        "strength"
+      ],
+      "PSALM 46 : 1"
+    ],
+    [
+      18,
+      24,
+      [
+        "POWERFUL WORDS",
+        "SETTLE DEEP"
+      ],
+      [
+        "words",
+        "deep"
+      ],
+      "SPIRITUAL ANCHOR"
+    ],
+    [
+      24,
+      29,
+      [
+        "YOUR FORTRESS",
+        "YOUR PROTECTOR"
+      ],
+      [
+        "fortress",
+        "protector"
+      ],
+      "DIVINE SHELTER"
+    ],
+    [
+      29,
+      36,
+      [
+        "CAST YOUR WORRIES",
+        "HE HOLDS YOU"
+      ],
+      [
+        "worries",
+        "holds"
+      ],
+      "BURDEN LIFTED"
+    ],
+    [
+      36,
+      42,
+      [
+        "QUIET MOMENTS",
+        "GENTLE PRESENCE"
+      ],
+      [
+        "moments",
+        "presence"
+      ],
+      "HIS NEARNESS"
+    ],
+    [
+      42,
+      48,
+      [
+        "PERFECT PEACE",
+        "FILL YOUR BEING"
+      ],
+      [
+        "peace",
+        "fill"
+      ],
+      "INNER SANCTUARY"
+    ],
+    [
+      48,
+      53,
+      [
+        "RELEASE BURDENS",
+        "UNFAILING LOVE"
+      ],
+      [
+        "release",
+        "love"
+      ],
+      "ETERNAL TRUST"
+    ],
+    [
+      53,
+      58,
+      [
+        "SWEET SLEEP",
+        "DEEPLY RESTORATIVE"
+      ],
+      [
+        "sleep",
+        "restorative"
+      ],
+      "SOUL'S RENEWAL"
+    ],
+    [
+      58,
+      63,
+      [
+        "DIVINE EMBRACE",
+        "FILL YOUR SOUL"
+      ],
+      [
+        "divine",
+        "embrace"
+      ],
+      "GOD'S HUG"
+    ],
+    [
+      63,
+      68,
+      [
+        "YOU ARE SAFE",
+        "YOU ARE LOVED"
+      ],
+      [
+        "safe",
+        "loved"
+      ],
+      "BELOVED OF GOD"
+    ],
+    [
+      68,
+      72,
+      [
+        "REST NOW",
+        "HIS PROFOUND PEACE"
+      ],
+      [
+        "Rest",
+        "peace"
+      ],
+      "DEEP REST"
+    ],
+    [
+      72,
+      75,
+      [
+        "SUBSCRIBE",
+        "DAILY PRAYERS"
+      ],
+      [
+        "Subscribe",
+        "prayers"
+      ],
+      "JOIN US"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Take a deep breath with me now.",
+      "kind": "phrase",
+      "words": [
+        "Take",
+        "a",
+        "deep",
+        "breath"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Feel your body soften, your mind begin to quiet.",
+      "kind": "phrase",
+      "words": [
+        "Feel",
+        "your",
+        "body",
+        "soften"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "'God is our refuge and strength, a very present help in trouble.'",
+      "kind": "phrase",
+      "words": [
+        "God",
+        "is",
+        "our",
+        "refuge",
+        "and",
+        "strength"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He is your fortress, your protector through the hours of darkness.",
+      "kind": "phrase",
+      "words": [
+        "your",
+        "fortress",
+        "your",
+        "protector"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Cast all your worries upon Him, knowing He holds you securely.",
+      "kind": "phrase",
+      "words": [
+        "Cast",
+        "all",
+        "your",
+        "worries"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "He is here in your quiet moments, a gentle presence surrounding you.",
+      "kind": "phrase",
+      "words": [
+        "gentle",
+        "presence",
+        "surrounding",
+        "you"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Allow His perfect peace to fill every corner of your being.",
+      "kind": "phrase",
+      "words": [
+        "perfect",
+        "peace",
+        "to",
+        "fill"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Release the burdens of the day, trusting in His unfailing love.",
+      "kind": "phrase",
+      "words": [
+        "Release",
+        "the",
+        "burdens"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "May your sleep be sweet, deeply restorative, and filled with a sense of His divine embrace.",
+      "kind": "phrase",
+      "words": [
+        "sleep",
+        "be",
+        "sweet",
+        "deeply",
+        "restorative"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "You are safe, you are loved, you are watched over.",
+      "kind": "phrase",
+      "words": [
+        "You",
+        "are",
+        "safe",
+        "you",
+        "are",
+        "loved"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Rest now in His profound peace.",
+      "kind": "phrase",
+      "words": [
+        "Rest",
+        "now",
+        "in",
+        "His",
+        "profound",
+        "peace"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ]
+}
