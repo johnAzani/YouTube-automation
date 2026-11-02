@@ -39,8 +39,8 @@ class MonitorCase(unittest.TestCase):
         patch.start()
         self.addCleanup(patch.stop)
 
-        patch = mock.patch.object(am, "last_commit_for", return_value=NOW - timedelta(days=30))
-        self.last_commit = patch.start()
+        patch = mock.patch.object(am, "last_edit", return_value=NOW - timedelta(days=30))
+        self.last_edit = patch.start()
         self.addCleanup(patch.stop)
 
     def classify(self, runs):
@@ -57,7 +57,7 @@ class TestRunEvidence(MonitorCase):
         self.assertFalse(report.healthy)
 
     def test_a_brand_new_workflow_is_not_a_fault_yet(self):
-        with mock.patch.object(am, "first_commit_for", return_value=NOW - timedelta(hours=2)):
+        with mock.patch.object(am, "last_edit", return_value=NOW - timedelta(hours=2)):
             report = self.classify([])
         row = report.automations[0]
         self.assertEqual(row.verdict, "NEW")
@@ -68,8 +68,19 @@ class TestRunEvidence(MonitorCase):
         self.assertEqual(report.automations[0].verdict, "OK")
         self.assertTrue(report.healthy)
 
-    def test_a_success_older_than_the_cron_window_is_overdue(self):
+    def test_a_stale_success_is_never_ok(self):
+        # A daily cron with a 40h-old run has missed today's slot; it is caught
+        # there rather than waiting for the generic overdue window.
         report = self.classify([run("produce.yml", 40)])
+        self.assertIn(report.automations[0].verdict, {"MISSED SLOT", "OVERDUE"})
+        self.assertEqual(report.automations[0].severity, "blocking")
+
+    def test_a_cron_the_slot_parser_cannot_read_still_goes_overdue(self):
+        self.files = [("produce.yml", "Produce video", ["14 6 1 * *"])]  # day-of-month
+        patch = mock.patch.object(am, "workflow_files", return_value=self.files)
+        patch.start()
+        self.addCleanup(patch.stop)
+        report = self.classify([run("produce.yml", 24 * 40)])
         self.assertEqual(report.automations[0].verdict, "OVERDUE")
         self.assertEqual(report.automations[0].severity, "blocking")
 
@@ -79,7 +90,7 @@ class TestRunEvidence(MonitorCase):
         self.assertEqual(report.automations[0].severity, "blocking")
 
     def test_a_failure_older_than_the_last_edit_is_only_untested(self):
-        self.last_commit.return_value = NOW - timedelta(hours=1)
+        self.last_edit.return_value = NOW - timedelta(hours=1)
         report = self.classify([run("produce.yml", 3, "failure")])
         row = report.automations[0]
         self.assertEqual(row.verdict, "UNTESTED FIX")
@@ -101,6 +112,97 @@ class TestRunEvidence(MonitorCase):
         text = am.render(self.classify([run("produce.yml", 2)]))
         self.assertIn("produce.yml", text)
         self.assertIn("OK", text)
+
+
+class TestMissedSlots(unittest.TestCase):
+    """A slot that produced no run is a fault the same day, not a week later."""
+
+    def setUp(self):
+        self.files = [("weekly.yml", "Weekly", ["23 3 * * 1"])]   # Mondays 03:23 UTC
+        patch = mock.patch.object(am, "workflow_files", return_value=self.files)
+        patch.start()
+        self.addCleanup(patch.stop)
+
+    def classify(self, last_run):
+        patch = mock.patch.object(am, "last_edit", return_value=NOW - timedelta(days=30))
+        patch.start()
+        self.addCleanup(patch.stop)
+        report = am.MonitorReport()
+        return am.classify(report, [run("weekly.yml", last_run)], now=NOW)
+
+    def test_the_monday_slot_is_recognised(self):
+        # NOW is Monday 09:00; the slot was 03:23 — 5h37m ago.
+        self.assertEqual(am.prev_occurrence(["23 3 * * 1"], NOW),
+                         datetime(2026, 11, 2, 3, 23, tzinfo=timezone.utc))
+
+    def test_no_run_since_todays_slot_is_blocking(self):
+        row = self.classify(24 * 7 - 1).automations[0]      # last ran a week ago
+        self.assertEqual(row.verdict, "MISSED SLOT")
+        self.assertEqual(row.severity, "blocking")
+        self.assertIn("did not run", row.detail)
+
+    def test_a_run_just_after_the_slot_is_fine(self):
+        row = self.classify(5).automations[0]               # 5h ago = 04:00
+        self.assertEqual(row.verdict, "OK")
+
+    def test_a_late_scheduler_within_grace_is_not_an_alarm(self):
+        row = self.classify(4).automations[0]               # 05:00, ~1.6h after slot
+        self.assertEqual(row.verdict, "OK")
+
+    def test_grace_is_measured_after_the_slot_not_before_it(self):
+        """A slot 30 minutes old with no run yet is late, not missed."""
+        from scripts import automation_monitor as amod
+
+        now = datetime(2026, 11, 2, 6, 45, tzinfo=timezone.utc)   # 06:14 slot +31m
+        auto = amod.Automation(workflow="daily.yml", name="D", crons=["14 6 * * *"])
+        auto.last_run = datetime(2026, 11, 1, 6, 14, tzinfo=timezone.utc)
+        auto.last_slot = amod.prev_occurrence(auto.crons, now)
+        auto.last_edited = datetime(2026, 10, 1, tzinfo=timezone.utc)
+        amod._verdict(auto, now)
+        self.assertNotEqual(auto.verdict, "MISSED SLOT")
+
+    def test_every_three_hours_is_understood(self):
+        slot = am.prev_occurrence(["23 */3 * * *"], NOW)
+        self.assertEqual(slot, datetime(2026, 11, 2, 6, 23, tzinfo=timezone.utc))
+
+    def test_the_slot_is_reported_in_the_owners_zone(self):
+        """The owner reads WAT, so a 03:23 UTC Monday slot is 04:23 Monday morning."""
+        row = self.classify(24 * 7 - 1).automations[0]
+        self.assertIn("Mon 02 Nov 04:23 WAT", row.detail)
+        self.assertNotIn("UTC", row.detail)
+
+    def test_the_table_prints_wat_not_utc(self):
+        report = self.classify(24 * 7 - 1)
+        table = am.render(report)
+        self.assertIn("all times WAT", table)
+        self.assertIn("26 Oct 11:00", table)   # last run 26 Oct 10:00 UTC -> 11:00 WAT
+
+    def test_day_of_week_lists_are_understood(self):
+        slot = am.prev_occurrence(["14 19 * * 0,3"], NOW)   # Sunday & Wednesday
+        self.assertEqual(slot, datetime(2026, 11, 1, 19, 14, tzinfo=timezone.utc))
+
+
+class TestLastEditedIsHonest(unittest.TestCase):
+    """A squashed checkout claims every file changed at the tip commit."""
+
+    def test_local_git_is_not_trusted_without_history(self):
+        with mock.patch.object(am, "history_depth", return_value=1):
+            self.assertIsNone(am.last_commit_for(am.WORKFLOWS / "produce.yml"))
+
+    def test_github_is_preferred_when_available(self):
+        api = mock.Mock(returncode=0,
+                        stdout='[{"commit": {"committer": {"date": "2026-10-30T22:37:39Z"}}}]')
+        with mock.patch.object(am, "gh_available", return_value=True), \
+             mock.patch.object(am, "_gh", return_value=api), \
+             mock.patch.object(am, "repo_slug", return_value="o/r"):
+            self.assertEqual(am.last_edit("metrics.yml"),
+                             datetime(2026, 10, 30, 22, 37, 39, tzinfo=timezone.utc))
+
+    def test_it_falls_back_to_git_when_the_api_is_unavailable(self):
+        with mock.patch.object(am, "gh_available", return_value=False), \
+             mock.patch.object(am, "last_commit_for",
+                               return_value=datetime(2026, 10, 1, tzinfo=timezone.utc)):
+            self.assertIsNotNone(am.last_edit("produce.yml"))
 
 
 class TestOutcomes(unittest.TestCase):

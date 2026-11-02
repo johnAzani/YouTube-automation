@@ -42,9 +42,14 @@ MONITOR_STATE = ROOT / "content" / "monitor" / "status.json"
 
 # A workflow is "fresh" if it ran inside its own cadence plus this grace.
 GRACE = timedelta(hours=6)
-# A run older than the newest commit to its own workflow file cannot be evidence
-# that the workflow works now — it was fixed afterwards.
-RETEST_WINDOW = timedelta(minutes=1)
+# A scheduled slot is considered missed once this long has passed with no run.
+# GitHub's scheduler is best-effort and routinely 10-60 minutes late, so a tight
+# window would cry wolf; three hours is long enough to be sure and short enough
+# to act inside the same working day.
+SLOT_GRACE = timedelta(hours=3)
+# Every stamp this module prints is in the owner's zone. WAT is UTC+1 with no DST,
+# so this is a fixed offset and cannot drift.
+WAT = timezone(timedelta(hours=1))
 
 
 @dataclass
@@ -57,6 +62,9 @@ class Automation:
     last_success: datetime | None = None
     failures_5: int = 0
     runs_14d: int = 0
+    last_edited: datetime | None = None
+    last_slot: datetime | None = None
+    missed_slots: int = 0
     max_gap: timedelta = timedelta(days=1)
     effect: str = ""
     verdict: str = ""
@@ -72,6 +80,9 @@ class Automation:
             "last_conclusion": self.last_conclusion,
             "last_success": self.last_success.isoformat() if self.last_success else None,
             "runs_14d": self.runs_14d,
+            "last_edited": self.last_edited.isoformat() if self.last_edited else None,
+            "last_slot": self.last_slot.isoformat() if self.last_slot else None,
+            "missed_slots": self.missed_slots,
             "failures_5": self.failures_5,
             "effect": self.effect,
             "verdict": self.verdict,
@@ -180,6 +191,57 @@ def cron_gap(crons: list[str]) -> timedelta:
     return widest
 
 
+def _expand(field: str, low: int, high: int) -> set[int] | None:
+    """Expand a cron field. None means 'any' (unbounded)."""
+    field = field.strip()
+    if field == "*":
+        return None
+    values: set[int] = set()
+    for part in field.split(","):
+        if part.startswith("*/"):
+            step = int(part[2:])
+            values |= set(range(low, high + 1, step))
+        elif part.isdigit():
+            values.add(int(part))
+    return values or None
+
+
+def prev_occurrence(crons: list[str], now: datetime) -> datetime | None:
+    """The most recent time one of these crons was due, at or before `now`.
+
+    Needed because "last run was 9 days ago" is a different fault from "the Monday
+    4:23am slot came and went today": the first is a broken workflow, the second is
+    a scheduler that dropped a slot, and only this comparison can tell them apart.
+    """
+    latest: datetime | None = None
+    for expr in crons:
+        parts = expr.split()
+        if len(parts) != 5:
+            continue
+        minute_s, hour_s, dom_s, _mon, dow_s = parts
+        if dom_s != "*":
+            continue  # day-of-month shapes are not used here; do not guess
+        if not minute_s.isdigit():
+            continue
+        minute = int(minute_s)
+        hours = _expand(hour_s, 0, 23) or set(range(24))
+        dows = _expand(dow_s, 0, 7)
+        for back in range(0, 9):
+            day = (now - timedelta(days=back)).date()
+            if dows is not None:
+                cron_dow = (day.weekday() + 1) % 7      # cron: Sunday = 0
+                if cron_dow not in dows and not (cron_dow == 0 and 7 in dows):
+                    continue
+            for hour in sorted(hours, reverse=True):
+                candidate = datetime(day.year, day.month, day.day, hour, minute,
+                                     tzinfo=timezone.utc)
+                if candidate <= now and (latest is None or candidate > latest):
+                    latest = candidate
+            if latest is not None:
+                break
+    return latest
+
+
 def workflow_files() -> list[tuple[str, str, list[str]]]:
     out = []
     for path in sorted(WORKFLOWS.glob("*.yml")):
@@ -211,11 +273,45 @@ def first_commit_for(path: Path) -> datetime | None:
     return _parse(stamps[-1]) if stamps else None
 
 
+def history_depth() -> int:
+    """How many commits this clone actually has."""
+    proc = subprocess.run(["git", "rev-list", "--count", "HEAD"], capture_output=True,
+                          text=True, cwd=ROOT, timeout=30)
+    try:
+        return int((proc.stdout or "0").strip())
+    except ValueError:
+        return 0
+
+
 def last_commit_for(path: Path) -> datetime | None:
+    """Local git answer, or None when the clone cannot answer honestly.
+
+    A squashed or shallow checkout has one commit that "touched" every file, so
+    `git log -1 -- <path>` returns the tip for everything. That reads as "every
+    workflow was edited minutes ago", which silently downgraded real failures to
+    "untested fix". When the depth is 1, say so instead of guessing.
+    """
+    if history_depth() < 2:
+        return None
     proc = subprocess.run(["git", "log", "-1", "--format=%cI", "--", str(path)],
                           capture_output=True, text=True, cwd=ROOT, timeout=30)
     stamp = (proc.stdout or "").strip()
     return _parse(stamp) if stamp else None
+
+
+def last_edit(workflow: str) -> datetime | None:
+    """When this workflow file last changed, preferring GitHub over local git."""
+    rel = f".github/workflows/{workflow}"
+    if gh_available():
+        proc = _gh(["api", f"repos/{repo_slug()}/commits?path={rel}&per_page=1"])
+        if proc.returncode == 0:
+            rows = json.loads(proc.stdout or "[]")
+            if rows:
+                stamp = (rows[0].get("commit") or {}).get("committer", {}).get("date")
+                parsed = _parse(stamp)
+                if parsed:
+                    return parsed
+    return last_commit_for(WORKFLOWS / workflow)
 
 
 # --------------------------------------------------------------------------- #
@@ -256,14 +352,39 @@ def classify(report: MonitorReport, runs: list[dict], now: datetime | None = Non
             auto.runs_14d = len(recent)
             auto.failures_5 = sum(1 for r in recent[:5] if r.get("conclusion") == "failure")
 
+        auto.last_edited = last_edit(filename)
+        auto.last_slot = prev_occurrence(crons, now)
+        # A slot is only missed once the grace window after it has closed: GitHub's
+        # scheduler is routinely late, and crying wolf 20 minutes in would be noise.
+        if (auto.last_slot and now > auto.last_slot + SLOT_GRACE
+                and (auto.last_run is None or auto.last_run < auto.last_slot)):
+            auto.missed_slots = 1
         report.automations.append(auto)
         _verdict(auto, now)
     return report
 
 
+def _wat(then: datetime) -> str:
+    """A slot, in the owner's zone with the weekday that belongs to it."""
+    return then.astimezone(WAT).strftime("%a %d %b %H:%M")
+
+
+def _ago(then: datetime | None, now: datetime) -> str:
+    if then is None:
+        return "never"
+    delta = now - then
+    if delta < timedelta(minutes=1):
+        return "just now"
+    if delta < timedelta(hours=1):
+        return f"{int(delta.total_seconds() // 60)}m ago"
+    if delta < timedelta(days=2):
+        return f"{delta.total_seconds() / 3600:.1f}h ago"
+    return f"{delta.days}d ago"
+
+
 def _verdict(auto: Automation, now: datetime) -> None:
     if auto.last_run is None:
-        added = first_commit_for(WORKFLOWS / auto.workflow)
+        added = auto.last_edited
         if added and now - added < auto.max_gap + GRACE:
             auto.verdict, auto.severity = "NEW", "warning"
             auto.detail = (f"added {added.date().isoformat()}; its first scheduled "
@@ -274,22 +395,34 @@ def _verdict(auto: Automation, now: datetime) -> None:
                        "fails, so nothing reports this unless something looks for it")
         return
 
+    # A failed run that was followed by an edit is untested, not fixed. The edit has
+    # to be a real one: this comparison is why "last edited" is read from GitHub
+    # rather than from a squashed checkout that claims every file changed today.
+    if auto.last_conclusion == "failure":
+        if auto.last_edited and auto.last_run < auto.last_edited:
+            auto.verdict, auto.severity = "UNTESTED FIX", "warning"
+            auto.detail = (f"failed {_ago(auto.last_run, now)}; edited "
+                           f"{_ago(auto.last_edited, now)} — needs one green run")
+        else:
+            auto.verdict, auto.severity = "FAILING", "blocking"
+            auto.detail = (f"failed {_ago(auto.last_run, now)} and nothing was changed "
+                           f"since; the next slot will fail the same way")
+        return
+
+    # The slot that should have produced a run and did not. This is how a weekly
+    # job is caught the same day, instead of a week later.
+    if (auto.last_slot and now > auto.last_slot + SLOT_GRACE
+            and (auto.last_run is None or auto.last_run < auto.last_slot)):
+        auto.verdict, auto.severity = "MISSED SLOT", "blocking"
+        auto.detail = (f"was due {_wat(auto.last_slot)} WAT and did not run; "
+                       f"last run {_ago(auto.last_run, now)}")
+        return
+
     overdue_at = auto.last_run + auto.max_gap + GRACE
     if now > overdue_at:
         auto.verdict, auto.severity = "OVERDUE", "blocking"
         auto.detail = (f"last run {auto.last_run.date().isoformat()}; expected again by "
                        f"{overdue_at.date().isoformat()}")
-        return
-
-    if auto.last_conclusion == "failure":
-        fixed_at = last_commit_for(WORKFLOWS / auto.workflow)
-        if fixed_at and auto.last_run and auto.last_run < fixed_at:
-            auto.verdict, auto.severity = "UNTESTED FIX", "warning"
-            auto.detail = (f"last run failed at {auto.last_run.isoformat()}, but the "
-                           f"workflow was changed afterwards — needs one green run")
-        else:
-            auto.verdict, auto.severity = "FAILING", "blocking"
-            auto.detail = f"last run failed with nothing changed since"
         return
 
     if auto.failures_5 >= 3:
@@ -356,11 +489,14 @@ def check_outcomes(report: MonitorReport, now: datetime | None = None,
 def render(report: MonitorReport) -> str:
     lines = ["", "AUTOMATION MONITOR — every scheduled workflow, plus the outcome that matters"]
     lines.append("=" * 100)
-    lines.append(f"{'workflow':<28}{'verdict':<14}{'last run':<18}{'runs/14d':<10}detail")
-    lines.append("-" * 100)
+    lines.append(f"{'workflow':<26}{'verdict':<14}{'last run':<15}{'edited':<15}{'runs':<6}detail")
+    lines.append("all times WAT (Africa/Lagos)")
+    lines.append("-" * 108)
+    def stamp(d):
+        return d.astimezone(WAT).strftime("%d %b %H:%M") if d else "never"
     for a in sorted(report.automations, key=lambda x: ("blocking", "warning", "ok").index(x.severity)):
-        last = a.last_run.strftime("%m-%d %H:%M") if a.last_run else "never"
-        lines.append(f"{a.workflow:<28}{a.verdict:<14}{last:<18}{a.runs_14d:<10}{a.detail}")
+        lines.append(f"{a.workflow:<26}{a.verdict:<14}{stamp(a.last_run):<15}"
+                     f"{stamp(a.last_edited):<15}{a.runs_14d:<6}{a.detail}")
     lines.append("")
     lines.append("OUTCOMES")
     for row in report.outcomes:
