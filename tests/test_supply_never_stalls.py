@@ -487,6 +487,47 @@ class TestTheReleaseCanBeStartedOnDemand(unittest.TestCase):
         self.assertIn("inputs.job == ''", text)
 
 
+class TestARepairCannotEatARelease(unittest.TestCase):
+    """On 2 November two runs spent exactly 90:00 in the release step and finished
+    neither job: a thumbnail repair and a 45-minute render shared one budget.
+    """
+
+    def _wf(self):
+        import yaml
+        path = Path(__file__).resolve().parents[1] / ".github" / "workflows" / "produce.yml"
+        return yaml.safe_load(path.read_text(encoding="utf-8"))
+
+    def _steps(self):
+        return self._wf()["jobs"][next(iter(self._wf()["jobs"]))]["steps"]
+
+    def test_recording_already_live_jobs_has_its_own_step(self):
+        names = [s.get("name", "") for s in self._steps()]
+        self.assertIn("Record videos that are live but not yet in the repo", names)
+
+    def test_the_repair_step_cannot_block_the_release(self):
+        repair = [s for s in self._steps()
+                  if s.get("name", "").startswith("Record videos that are live")][0]
+        self.assertTrue(repair.get("continue-on-error"))
+        self.assertLessEqual(repair.get("timeout-minutes", 999), 20)
+
+    def test_the_release_step_keeps_its_own_full_budget(self):
+        release = [s for s in self._steps()
+                   if s.get("name", "").startswith("Render and upload the long-form")][0]
+        self.assertGreaterEqual(release.get("timeout-minutes", 0), 90)
+
+    def test_the_repair_runs_before_the_render(self):
+        names = [s.get("name", "") for s in self._steps()]
+        repair_at = names.index("Record videos that are live but not yet in the repo")
+        render_at = names.index("Render and upload the long-form edition")
+        self.assertLess(repair_at, render_at)
+
+    def test_the_repair_command_never_renders(self):
+        from pipeline import run as pr
+        self.assertTrue(hasattr(pr, "record_published_jobs"))
+        source = (Path(__file__).resolve().parents[1] / "pipeline" / "run.py").read_text()
+        self.assertIn("--record-published", source)
+
+
 class TestTheReleaseIsObservable(unittest.TestCase):
     """A 30-minute render and a wedged one used to look identical.
 

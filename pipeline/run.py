@@ -471,17 +471,55 @@ def empty_reason() -> str:
     return "the queue has scripts but none is eligible"
 
 
+def record_published_jobs() -> int:
+    """Write the receipt for every approved job that is already live on the channel.
+
+    Its own entry point so a workflow can give it its own step and its own timeout.
+    When this work ran inside the render step, a repair plus a render shared one
+    90-minute budget and both runs on 2 November timed out with a video live and
+    unrecorded.
+    """
+    from .prayer_pipeline import record_if_live
+
+    recorded, checked = [], 0
+    for path in select_jobs(False, None, False) or []:
+        checked += 1
+        try:
+            result = record_if_live(path)
+        except Exception as exc:  # noqa: BLE001 - a repair must never block a release
+            _log(f"could not check {path.name}: {exc!r}")
+            continue
+        if result:
+            recorded.append((path.name, result["video_id"]))
+
+    for name, video_id in recorded:
+        print(f"[run] recorded {name} -> {video_id}")
+    _log(f"recorded {len(recorded)} already-live job(s) of {checked} checked")
+    summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary:
+        with open(summary, "a", encoding="utf-8") as f:
+            f.write(f"### Receipts written: {len(recorded)} of {checked} checked\n\n")
+            for name, video_id in recorded:
+                f.write(f"- `{name}` → https://youtu.be/{video_id}\n")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description="YouTube automation pipeline")
     p.add_argument("--job", help="path to a specific script markdown file")
     p.add_argument("--all", action="store_true", help="process every approved job")
     p.add_argument("--next", action="store_true", help="process the next approved job")
     p.add_argument("--dry-run", action="store_true", help="render only; never upload")
+    p.add_argument("--record-published", action="store_true",
+                   help="record jobs whose video is already live, then exit; never render")
     args = p.parse_args(argv)
 
     dry = args.dry_run or CONFIG.dry_run or os.environ.get("DRY_RUN", "").lower() in {"1", "true", "yes"}
     CONFIG.dry_run = dry
     CONFIG.ensure_dirs()
+
+    if args.record_published:
+        return record_published_jobs()
 
     paths = select_jobs(args.all, args.job, args.next)
     if not paths:
