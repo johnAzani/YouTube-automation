@@ -171,6 +171,73 @@ class TestExpansion(unittest.TestCase):
         self.assertEqual(len(calls), 2)
 
 
+class TestSupplyIsCountedInSlotsNotScripts(unittest.TestCase):
+    """The nightly brain aimed at one publishable script while three slots fired.
+
+    produce.yml publishes at 06:14, 14:14 and 19:14 UTC. `cmd_auto_replenish` read
+    "two release slots per day" and computed `min_days / 2`, so `--min-runway 2`
+    asked for **one** script in the queue at 4:14am and the 8:14pm slot found
+    nothing to render.
+    """
+
+    def test_the_slot_count_matches_the_workflow(self):
+        import re
+        from pathlib import Path
+
+        cron = (Path(__file__).resolve().parents[1] / ".github" / "workflows"
+                / "produce.yml").read_text(encoding="utf-8")
+        slots = re.findall(r'- cron: "(\d+) (\d+) \* \* \*"', cron)
+        self.assertEqual(len(slots), sp.SLOTS_PER_DAY,
+                         "SLOTS_PER_DAY must track the real release schedule")
+
+    def test_two_days_of_runway_means_six_publishable_scripts(self):
+        from unittest import mock
+
+        import scripts.gemini_brain as gb
+
+        brain = mock.Mock()
+        with mock.patch.object(gb, "cmd_ensure_supply", return_value=0) as cmd:
+            gb.cmd_auto_replenish(brain, 2)
+        self.assertEqual(cmd.call_args.kwargs["min_publishable"], 6)
+        self.assertEqual(cmd.call_args.kwargs["max_expansions"], sp.SLOTS_PER_DAY)
+
+    def test_a_short_queue_spends_more_of_the_expansion_budget(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            d = Path(tmp)
+            for i in range(8):
+                write_job(d, name=f"910{i}-test.md")
+            calls = []
+
+            def counting(job, target=900):
+                calls.append(job.job_id)
+                return good_provider(job, target)
+
+            with mock.patch.dict("tools.expand_scripts.PROVIDERS", {"gemini": counting}):
+                report = sp.ensure_supply(None, limit=sp.SLOTS_PER_DAY,
+                                          min_publishable=6, queue_dir=d, max_authors=0)
+        self.assertGreater(len(calls), sp.SLOTS_PER_DAY)
+        self.assertEqual(len(calls), sp.MAX_EXPANSIONS_WHEN_EMPTY)
+        self.assertEqual(report.wanted, 6)
+
+    def test_a_full_queue_still_spends_only_its_allowance(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            d = Path(tmp)
+            long_body = BODY + ("\n\nQuiet words that carry the prayer onward at a "
+                                "sleeping pace, again and again through the night.\n" * 120)
+            for i in range(6):
+                write_job(d, status="approved", body=long_body, name=f"920{i}-full.md")
+            calls = []
+
+            def counting(job, target=900):
+                calls.append(job.job_id)
+                return good_provider(job, target)
+
+            with mock.patch.dict("tools.expand_scripts.PROVIDERS", {"gemini": counting}):
+                sp.ensure_supply(None, limit=sp.SLOTS_PER_DAY, min_publishable=6,
+                                 queue_dir=d, max_authors=0)
+        self.assertEqual(calls, [])
+
+
 class FakeBrain:
     """Stands in for GeminiBrain.replenish_pipeline."""
 
