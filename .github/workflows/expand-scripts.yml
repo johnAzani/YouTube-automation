@@ -18,7 +18,7 @@ on:
     # 02:14 UTC — ahead of the 03:14 brain run and the 06:14 release, so any
     # approved-but-short script is lengthened before the publisher looks for work.
     # A scheduled run always writes; only manual dispatches default to a dry run.
-    - cron: "14 2 * * *"
+    - cron: "14 2 * * *"   # 3:14am Nigeria time
   workflow_dispatch:
     inputs:
       ids:

@@ -5,7 +5,7 @@ on:
     # Executes twice weekly:
     # 1. Wednesdays at 19:14 UTC (8:14pm local) — Midweek Prayer Wall & Intercession
     # 2. Sundays at 19:14 UTC (8:14pm local) — Sunday Evening Thanksgiving & Scripture Poll
-    - cron: '14 19 * * 0,3'
+    - cron: '14 19 * * 0,3'   # 8:14pm Sunday and Wednesday, Nigeria time
   workflow_dispatch:
     inputs:
       dry_run:

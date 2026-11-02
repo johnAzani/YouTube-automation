@@ -11,7 +11,7 @@ name: Keepalive
 
 on:
   schedule:
-    - cron: "23 3 * * 1"   # weekly self-heal (Mondays 03:23 UTC)
+    - cron: "23 3 * * 1"   # weekly self-heal (Mondays 4:23am Nigeria time = 03:23 UTC)
   workflow_dispatch:
 
 permissions:

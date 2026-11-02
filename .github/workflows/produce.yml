@@ -9,9 +9,9 @@ on:
     # 1. 06:14 UTC — Morning scripture devotional (07:14 WAT)
     # 2. 14:14 UTC — US afternoon / transatlantic priming (15:14 WAT / 10:14 EST)
     # 3. 19:14 UTC — Peak evening bedtime prayer sanctuary (20:14 WAT / 8:14pm local)
-    - cron: "14 6 * * *"
-    - cron: "14 14 * * *"
-    - cron: "14 19 * * *"
+    - cron: "14 6 * * *"    # 7:14am Nigeria time
+    - cron: "14 14 * * *"  # 3:14pm Nigeria time
+    - cron: "14 19 * * *"  # 8:14pm Nigeria time (the 19:14 release slot)
   workflow_dispatch:
     inputs:
       job:

@@ -3,7 +3,7 @@ name: Gemini Brain Autonomous Queue Replenishment
 on:
   schedule:
     # Runs daily at 03:14 UTC (3 hours ahead of morning produce.yml cron)
-    - cron: "14 3 * * *"
+    - cron: "14 3 * * *"   # 4:14am Nigeria time, before the 7:14am production run
   workflow_dispatch:
     inputs:
       force_generate:

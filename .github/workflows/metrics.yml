@@ -2,7 +2,7 @@ name: Weekly metrics snapshot
 
 on:
   schedule:
-    - cron: "41 18 * * 5"   # Fridays 18:41 UTC — end of the week, US afternoon
+    - cron: "41 18 * * 5"   # Fridays 7:41pm Nigeria time (18:41 UTC) — end of the week, US afternoon
   workflow_dispatch:
 
 permissions:
