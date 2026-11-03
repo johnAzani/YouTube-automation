@@ -129,6 +129,42 @@ def _emit(message: str) -> None:
         print(f"[gemini-tts] {message}", flush=True)
 
 
+#: Set once a chunk stalls on the `interactions` transport. Every later chunk in
+#: this process then uses `models.generate_content`, which honours the request
+#: timeout — one bad transport must not cost twelve stalls.
+_INTERACTIONS_STALLED = False
+
+
+def _guarded_chunk(client, text, voice_name, system_instruction, model, temp_raw,
+                   index, total):
+    """One chunk, with a deadline the transport cannot ignore.
+
+    A stalled chunk is retried once — a dead connection is worth one more go —
+    and then abandoned by name, so the release fails at "TTS chunk 7/12" instead
+    of sitting silently inside chunk 7 until the step is killed.
+    """
+    from .gemini_client import GeminiRequestTimedOut, hard_deadline, http_timeout_seconds
+
+    label = f"TTS chunk {index}/{total}"
+    last = None
+    for attempt in (1, 2):
+        try:
+            with hard_deadline(http_timeout_seconds(), label):
+                return _synthesize_single_chunk(client, text, voice_name, system_instruction,
+                                                 model, temp_raw)
+        except GeminiRequestTimedOut as exc:
+            global _INTERACTIONS_STALLED
+            last = exc
+            # Demote the transport for the rest of this process: the next chunk
+            # goes straight to the path that honours the request timeout instead
+            # of paying another full stall to learn the same lesson.
+            _INTERACTIONS_STALLED = True
+            _emit(f"{label} stalled on attempt {attempt}: {exc}")
+            if attempt == 1:
+                continue
+    raise last
+
+
 def _synthesize_single_chunk(
     client,
     text: str,
@@ -142,10 +178,18 @@ def _synthesize_single_chunk(
     from google.genai import types
 
     # 1. Try modern Interactions API if available (Gemini TTS standard)
-    if hasattr(client, "interactions"):
+    global _INTERACTIONS_STALLED
+    if hasattr(client, "interactions") and not _INTERACTIONS_STALLED:
         for tts_model in (model,):
             try:
+                from .gemini_client import http_timeout_seconds
+
+                # `interactions` builds its own httpx client whose default is
+                # `Timeout(timeout=None, connect=5.0)` — bounded to connect,
+                # unbounded to read. Passing `timeout` here is the only thing that
+                # bounds the response for this path.
                 interaction = client.interactions.create(
+                    timeout=http_timeout_seconds(),
                     model=tts_model,
                     input=[{
                         "type": "user_input",
@@ -165,6 +209,14 @@ def _synthesize_single_chunk(
                     mime_type = getattr(output_audio, "mime_type", "audio/pcm;rate=24000") or "audio/pcm"
                     return mime_type
             except Exception as exc:
+                from .gemini_client import GeminiRequestTimedOut
+
+                # A stall is not "this transport is unavailable": falling through
+                # to the next path silently is what let a hang look like a slow
+                # synthesis for 170 minutes. Report it and let the retry wrapper
+                # decide.
+                if isinstance(exc, GeminiRequestTimedOut):
+                    raise
                 error = str(exc).lower()
                 if any(x in error for x in ("429", "resource_exhausted", "quota")):
                     from pipeline.quota_handler import GeminiQuotaExceededError, calculate_next_quota_reset_utc
@@ -260,7 +312,8 @@ def synthesize_gemini_audio(
         )
 
     from .assemble import ffmpeg_bin
-    from .gemini_client import Deadline, make_client, stage_budget_seconds
+    from .gemini_client import (Deadline, hard_deadline, http_timeout_seconds,
+                                make_client, stage_budget_seconds)
 
     # Bounded per request AND bounded as a stage. Without the first, one stalled
     # socket can consume the whole release step and print nothing (0017, run
@@ -284,8 +337,10 @@ def synthesize_gemini_audio(
         budget.check("single chunk")
         temp_raw = out_path.with_suffix(".raw_audio")
         try:
-            mime_type = _synthesize_single_chunk(client, chunks[0], voice_name, system_instruction, model, temp_raw)
-            _convert_raw_audio(temp_raw, out_path, mime_type)
+            mime_type = _guarded_chunk(client, chunks[0], voice_name, system_instruction,
+                                       model, temp_raw, 1, 1)
+            with hard_deadline(http_timeout_seconds(), "audio conversion"):
+                _convert_raw_audio(temp_raw, out_path, mime_type)
         finally:
             if temp_raw.is_file():
                 temp_raw.unlink()
@@ -302,8 +357,16 @@ def synthesize_gemini_audio(
                   f"({budget.elapsed():.0f}s elapsed)")
             chunk_raw = temp_dir / f"chunk_{idx:03d}.raw"
             chunk_wav = temp_dir / f"chunk_{idx:03d}.wav"
-            mime_type = _synthesize_single_chunk(client, chunk, voice_name, system_instruction, model, chunk_raw)
-            _convert_raw_audio(chunk_raw, chunk_wav, mime_type)
+            # Resume: a run that stalls at chunk 9 must not repay chunks 1-8. The
+            # text is unchanged within one synthesis, so a finished chunk is valid.
+            if chunk_wav.is_file() and chunk_wav.stat().st_size > 0:
+                chunk_wavs.append(chunk_wav)
+                _emit(f"TTS chunk {idx + 1}/{len(chunks)} reused from this attempt")
+                continue
+            mime_type = _guarded_chunk(client, chunk, voice_name, system_instruction,
+                                       model, chunk_raw, idx + 1, len(chunks))
+            with hard_deadline(http_timeout_seconds(), f"audio conversion, chunk {idx + 1}"):
+                _convert_raw_audio(chunk_raw, chunk_wav, mime_type)
             chunk_wavs.append(chunk_wav)
 
         # Concat chunks into final audio file with ffmpeg concat demuxer

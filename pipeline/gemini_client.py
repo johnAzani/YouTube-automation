@@ -29,6 +29,7 @@ the release reports as `✗ speech synthesis …` instead of dying as a blank
 from __future__ import annotations
 
 import os
+from contextlib import contextmanager
 
 #: Per-request ceiling. A single Gemini TTS call for one ~450-character chunk
 #: normally answers in well under 30 seconds; three minutes is generous enough
@@ -89,6 +90,46 @@ def make_client(api_key: str | None = None):
     if not key:
         raise RuntimeError("GEMINI_API_KEY is not set")
     return genai.Client(api_key=key, http_options=http_options())
+
+
+@contextmanager
+def hard_deadline(seconds: float, what: str):
+    """A wall-clock kill for a single call, enforced by the interpreter.
+
+    On 3 November run `41560585702` sat inside one speech-synthesis call for 170
+    minutes — the step's whole budget — despite `HttpOptions.timeout` being set
+    to 180s. The cause is in the library: the `interactions` transport ships
+    `httpx.Timeout(timeout=None, connect=5.0)`, so connecting is bounded and
+    **reading is not**. A stalled response therefore waits forever, and no
+    option we pass to `genai.Client` changes it.
+
+    So the bound is enforced here instead, with `SIGALRM`, which no transport can
+    ignore. This is a last line of defence, not a substitute for a real timeout:
+    it is a no-op off the main thread and off Unix, and it runs *in addition to*
+    the per-request timeout that paths honouring it will hit first.
+    """
+    import signal
+    import threading
+
+    usable = (hasattr(signal, "SIGALRM") and seconds and seconds > 0
+              and threading.current_thread() is threading.main_thread())
+    if not usable:  # pragma: no cover - threads/Windows keep the old behaviour
+        yield
+        return
+
+    def _fire(signum, frame):  # noqa: ANN001 - signal handler signature
+        raise GeminiRequestTimedOut(
+            f"{what} did not return within {seconds:g}s and was abandoned. "
+            f"A stalled response is a failure, not a slow success."
+        )
+
+    previous = signal.signal(signal.SIGALRM, _fire)
+    signal.setitimer(signal.ITIMER_REAL, float(seconds))
+    try:
+        yield
+    finally:
+        signal.setitimer(signal.ITIMER_REAL, 0)
+        signal.signal(signal.SIGALRM, previous)
 
 
 def is_timeout_error(exc: BaseException) -> bool:

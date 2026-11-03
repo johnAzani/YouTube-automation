@@ -220,3 +220,148 @@ class AFailureCanBeReadAfterwards(unittest.TestCase):
 
 if __name__ == "__main__":  # pragma: no cover
     unittest.main()
+
+
+class AStalledHTTPSReadCannotOutlastTheStep(unittest.TestCase):
+    """Run 41560585702 sat inside one speech call for 170 minutes.
+
+    Root cause, from the library itself: the `interactions` transport is built on
+    `httpx.Timeout(timeout=None, connect=5.0)` — connecting is bounded, *reading
+    is not*. `HttpOptions.timeout` never reaches it. So the interpreter's own
+    alarm enforces the bound, and a stall becomes a named failure with a retry.
+    """
+
+    def test_the_hard_deadline_fires_on_a_blocked_call(self):
+        from pipeline.gemini_client import GeminiRequestTimedOut, hard_deadline
+
+        with self.assertRaises(GeminiRequestTimedOut):
+            with hard_deadline(0.15, "TTS chunk 3/12"):
+                time.sleep(3)
+
+    def test_the_alarm_is_always_cleared(self):
+        import signal
+        from pipeline.gemini_client import GeminiRequestTimedOut, hard_deadline
+
+        with self.assertRaises(GeminiRequestTimedOut):
+            with hard_deadline(0.1, "x"):
+                time.sleep(2)
+        self.assertEqual(signal.getitimer(signal.ITIMER_REAL)[0], 0.0,
+                         "a leftover alarm would kill an unrelated later call")
+        signal.alarm(0)
+
+    def test_a_fast_call_is_untouched(self):
+        from pipeline.gemini_client import hard_deadline
+
+        with hard_deadline(5, "fast"):
+            time.sleep(0.01)
+
+    def test_the_interactions_call_passes_its_own_timeout(self):
+        text = (REPO / "pipeline" / "gemini_tts.py").read_text(encoding="utf-8")
+        self.assertIn("timeout=http_timeout_seconds()", text,
+                      "the interactions transport defaults to an infinite read timeout")
+
+    def test_every_chunk_is_guarded_and_a_stall_is_retried_once(self):
+        from pipeline import gemini_tts
+
+        attempts = []
+        stalls = 3
+
+        def always_stalls(*a, **k):
+            attempts.append(1)
+            time.sleep(2)
+            return "audio/pcm"
+
+        with mock.patch.object(gemini_tts, "_synthesize_single_chunk", always_stalls), \
+             mock.patch.dict(os.environ, {"GEMINI_HTTP_TIMEOUT_SECONDS": "1"}):
+            from pipeline.gemini_client import GeminiRequestTimedOut
+            with self.assertRaises(GeminiRequestTimedOut) as caught:
+                gemini_tts._guarded_chunk(object(), "text", "Charon", "instr", "m",
+                                          Path("/tmp/raw"), 7, 12)
+        self.assertEqual(len(attempts), 2, "a stalled chunk gets exactly one retry")
+        self.assertIn("TTS chunk 7/12", str(caught.exception))
+
+    def test_a_retry_that_works_returns_the_audio(self):
+        from pipeline import gemini_tts
+
+        calls = {"n": 0}
+
+        def flaky(*a, **k):
+            calls["n"] += 1
+            if calls["n"] == 1:
+                time.sleep(2)
+            return "audio/pcm;rate=24000"
+
+        with mock.patch.object(gemini_tts, "_synthesize_single_chunk", flaky), \
+             mock.patch.dict(os.environ, {"GEMINI_HTTP_TIMEOUT_SECONDS": "1"}):
+            self.assertEqual(gemini_tts._guarded_chunk(object(), "t", "Charon", "i", "m",
+                                                       Path("/tmp/raw"), 1, 3),
+                             "audio/pcm;rate=24000")
+        self.assertEqual(calls["n"], 2)
+
+    def test_the_tts_call_is_wrapped_by_the_stage_budget_too(self):
+        text = (REPO / "pipeline" / "gemini_tts.py").read_text(encoding="utf-8")
+        self.assertIn("budget.check(", text)
+        self.assertIn("TTS chunk", text, "per-chunk progress must be visible in the trail")
+
+
+class OneBadTransportDoesNotCostEveryChunk(unittest.TestCase):
+    """A stalled `interactions` read must demote itself, not repeat twelve times."""
+
+    def test_a_stall_demotes_the_transport_for_the_rest_of_the_process(self):
+        from pipeline import gemini_tts
+
+        original = gemini_tts._INTERACTIONS_STALLED
+        gemini_tts._INTERACTIONS_STALLED = False
+        try:
+            def stalls(*a, **k):
+                time.sleep(2)
+
+            with mock.patch.object(gemini_tts, "_synthesize_single_chunk", stalls), \
+                 mock.patch.dict(os.environ, {"GEMINI_HTTP_TIMEOUT_SECONDS": "1"}):
+                from pipeline.gemini_client import GeminiRequestTimedOut
+                with self.assertRaises(GeminiRequestTimedOut):
+                    gemini_tts._guarded_chunk(object(), "t", "Charon", "i", "m",
+                                              Path("/tmp/raw"), 1, 12)
+            self.assertTrue(gemini_tts._INTERACTIONS_STALLED,
+                            "the next chunk must not pay the same stall again")
+        finally:
+            gemini_tts._INTERACTIONS_STALLED = original
+
+    def test_a_finished_chunk_is_not_repaid(self):
+        text = (REPO / "pipeline" / "gemini_tts.py").read_text(encoding="utf-8")
+        self.assertIn("reused from this attempt", text,
+                      "a run that stalls at chunk 9 must keep chunks 1-8")
+
+
+class AReportMustNotHideInItsOwnNoise(unittest.TestCase):
+    """Issue #216 was 85 identical stall lines and nothing else."""
+
+    def test_repeated_stall_notices_become_one_line(self):
+        from scripts.release_report import collapse_repeats
+
+        text = "\n".join(
+            [f"[progress 03:{minute:02d}:25Z] … still inside speech synthesis — "
+             f"888 words, Charon after {82 + 2 * (minute - 0):.0f} min" for minute in range(0, 20)]
+            + ["[progress 04:28:25Z] ✗ speech synthesis failed after 10200.0s"])
+        collapsed = collapse_repeats(text)
+        self.assertEqual(len(collapsed.splitlines()), 2)
+        self.assertIn("20 reports", collapsed)
+        self.assertIn("✗ speech synthesis failed", collapsed)
+
+    def test_a_lone_stall_line_is_still_useful(self):
+        from scripts.release_report import collapse_repeats
+
+        text = "[progress 03:00:25Z] … still inside encode — 6.0 min after 12.0 min"
+        collapsed = collapse_repeats(text)
+        self.assertIn("still inside encode", collapsed)
+        self.assertIn("12 min", collapsed)
+
+    def test_the_report_says_when_not_one_stage_finished(self):
+        from scripts import release_report
+
+        trail = ("03:00:25Z ▶ speech synthesis — 888 words, Charon\n"
+                 "03:02:25Z … still inside speech synthesis — 888 words after 2.0 min\n")
+        _, body = release_report.render(release_report.summarise(
+            release_report.parse_trail(trail)))
+        self.assertIn("Not one stage finished", body)
+        self.assertIn("03:00:25Z ▶ speech synthesis", body)
