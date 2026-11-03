@@ -384,14 +384,22 @@ def resolve_edition(key: str) -> ShortEdition | None:
     except Exception:  # noqa: BLE001
         return None
 
-    label = f"Psalm {spec.psalm}" if spec.psalm else key.removeprefix("short-").replace("-", " ").title()
+    from .metadata import smart_truncate_title
+
+    label = (
+        spec.scripture.strip()
+        if getattr(spec, "scripture", "").strip()
+        else (f"Psalm {spec.psalm}" if spec.psalm else key.removeprefix("short-").replace("-", " ").title())
+    )
     hook = (spec.poster[3] if len(spec.poster) >= 4 and spec.poster[3] else "Divine Peace").title()
-    tag_key = label.lower().replace(" ", "")
+    raw_title = f"Say This {label} Prayer Before You Sleep | {hook}"
+    clean_title = f"{smart_truncate_title(raw_title, 86)} #Shorts"
+    tag_key = re.sub(r"[^a-zA-Z0-9]+", "", label)
     return ShortEdition(
         key=key,
         job_id=f"SHORT-{key.removeprefix('short-').upper()}",
         slug=f"{key}-night-prayer",
-        title=f"Say This {label} Prayer Before You Sleep | {hook} #Shorts",
+        title=clean_title,
         niche="faith and prayer",
         tags=[
             "shorts",
@@ -407,7 +415,7 @@ def resolve_edition(key: str) -> ShortEdition | None:
             f"{spec.narration_text}\n\n"
             f"Scripture reference: {label} (KJV / Public Domain biblical text).\n"
             "Produced by The Secret Place | Daily Prayer & Scripture.\n\n"
-            f"#Shorts #{tag_key.capitalize()} #NightPrayer #BedtimePrayer #DailyScripture #TheSecretPlace"
+            f"#Shorts #{tag_key} #NightPrayer #BedtimePrayer #DailyScripture #TheSecretPlace"
         ),
     )
 
@@ -611,6 +619,7 @@ def _write_published_record(
         f'youtube_watch_url: "{watch_url}"\n'
         f'youtube_studio_url: "{studio_url}"\n'
         f'privacy_status: "{privacy_status}"\n'
+        'metadata_revision: "selar-seo-v1"\n'
         f"width: {probe.width}\n"
         f"height: {probe.height}\n"
         f"duration_seconds: {round(probe.duration_seconds, 2)}\n"
@@ -913,8 +922,16 @@ def run_short_release(
         hero_bg = REPO_ROOT / "image-search" / "short-prayer-cover-poster.jpg"
         kicker, line1, line2, tag = "PRAYER BEFORE SLEEP", "PSALM", "91", "DIVINE PROTECTION"
         if edition.key != "short-psalm91":
-            m_num = re.search(r"psalm\s*(\d+)", f"{edition.key} {edition.title}", re.I)
-            line2 = m_num.group(1) if m_num else "PEACE"
+            m_book = re.search(
+                r"(?i)\b((?:1|2)\s*(?:Timothy|Peter|Corinthians|John)|Psalm|Proverbs|Isaiah|Matthew|John|Philippians|Numbers|Romans)\s*(\d+)",
+                f"{edition.title} {edition.key}",
+            )
+            if m_book:
+                line1 = re.sub(r"\s+", " ", m_book.group(1)).strip().upper()
+                line2 = m_book.group(2)
+            else:
+                m_num = re.search(r"psalm\s*(\d+)", f"{edition.key} {edition.title}", re.I)
+                line2 = m_num.group(1) if m_num else "PEACE"
             try:
                 from .short_script import load_spec, spec_path
 
@@ -1121,6 +1138,40 @@ def _author_missing_short_specs() -> list[dict]:
     return authored
 
 
+def recent_short_published_within(
+    hours: float = 3.0,
+    published_dir: Path | None = None,
+    now: datetime | None = None,
+) -> tuple[Path, float] | None:
+    """Return `(receipt_path, age_minutes)` if a Short published within `hours`."""
+    if hours <= 0:
+        return None
+    directory = published_dir or PUBLISHED_DIR
+    if not directory.is_dir():
+        return None
+    now_dt = now or datetime.now(timezone.utc)
+    newest: tuple[Path, float] | None = None
+    for path in sorted(directory.glob("short-*.md")):
+        try:
+            text = path.read_text(encoding="utf-8")
+            if "youtube_video_id:" not in text:
+                continue
+            m = re.search(r'^published_at:\s*"?([^"\n]+)"?', text, re.M)
+            if not m:
+                continue
+            when = datetime.fromisoformat(m.group(1).strip().replace("Z", "+00:00"))
+            if when.tzinfo is None:
+                when = when.replace(tzinfo=timezone.utc)
+        except Exception:  # noqa: BLE001
+            continue
+        age_sec = (now_dt - when).total_seconds()
+        if 0 <= age_sec < hours * 3600.0:
+            age_min = age_sec / 60.0
+            if newest is None or age_min < newest[1]:
+                newest = (path, age_min)
+    return newest
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Render, verify, and upload an authored YouTube Short")
     parser.add_argument("--short", default="", help="Short edition key (e.g. short-enron)")
@@ -1161,6 +1212,23 @@ def main(argv: list[str] | None = None) -> int:
                     print(f"::error title=Shorts selection bug::{len(ready)} ready manifest(s) were not selected")
                     return 1
                 return 0
+            if not dry and not args.force and os.environ.get("GITHUB_ACTIONS"):
+                try:
+                    min_gap_h = float(os.environ.get("SHORTS_MIN_GAP_HOURS", "3.0"))
+                except ValueError:
+                    min_gap_h = 3.0
+                recent = recent_short_published_within(hours=min_gap_h)
+                if recent is not None:
+                    rec_path, age_min = recent
+                    print(
+                        f"[short-release] Pacing guard: {rec_path.name} published {age_min:.0f}m ago "
+                        f"(< {min_gap_h:.1f}h slot spacing); keeping queued Shorts paced for the next window."
+                    )
+                    print(
+                        f"::notice title=Short pacing cooldown::Latest Short ({rec_path.name}) "
+                        f"published {age_min:.0f}m ago; preserving queue for the next scheduled slot."
+                    )
+                    return 0
             manifest_path, short_key = queued
             if os.environ.get("GITHUB_ACTIONS"):
                 print(f"::notice title=Short selected::`{short_key}` from "

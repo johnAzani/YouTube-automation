@@ -36,6 +36,51 @@ from scripts.auto_scheduler import build_schedule_audit, ScheduleAudit
 from scripts.continuous_research import SCRIPTURE_ROADMAP
 
 
+_BOOK_RE = re.compile(
+    r"(?i)\b((?:[12]\s+)?(?:Psalm[s]?|Proverbs|Isaiah|Matthew|Mark|Luke|John|"
+    r"Romans|Corinthians|Philippians|Timothy|Peter|Numbers|Joshua|Hebrews|Lamentations))"
+    r"\s+(\d+)(?::(\d+(?:[–\-]\d+(?:,\s*\d+)?)?))?"
+)
+
+
+def extract_scripture_reference(doc: ScriptDoc) -> str:
+    """Extract canonical scripture reference (e.g. 'Psalm 121', 'Proverbs 3:24-26')."""
+    m = _BOOK_RE.search(doc.title or "")
+    if m:
+        book = re.sub(r"\s+", " ", m.group(1)).strip().title()
+        if book == "Psalms":
+            book = "Psalm"
+        chap = m.group(2)
+        verse = m.group(3).replace("–", "-") if m.group(3) else ""
+        return f"{book} {chap}:{verse}" if verse else f"{book} {chap}"
+    return (doc.title or doc.slug).split("|")[0].split(":")[0].strip()
+
+
+def short_key_for_doc(doc: ScriptDoc) -> str:
+    """Deterministic `^short-[a-z0-9]+$` key avoiding chapter collisions and hyphens."""
+    ref = extract_scripture_reference(doc)
+    m = _BOOK_RE.search(ref)
+    if m:
+        book_clean = re.sub(r"[^a-z0-9]+", "", m.group(1).lower())
+        if book_clean == "psalms":
+            book_clean = "psalm"
+        chap = m.group(2)
+        verse_raw = m.group(3) or ""
+        first_verse = re.match(r"(\d+)", verse_raw)
+        if book_clean == "psalm":
+            if first_verse:
+                return f"short-psalm{chap}v{first_verse.group(1)}"
+            hay = f"{doc.title} {doc.slug}".lower()
+            if "complete" in hay and str(doc.id) not in {"0008", "0009", "0010"}:
+                return f"short-psalm{chap}full"
+            return f"short-psalm{chap}"
+        if first_verse:
+            return f"short-{book_clean}{chap}v{first_verse.group(1)}"
+        return f"short-{book_clean}{chap}"
+    fallback = re.sub(r"[^a-z0-9]+", "", (doc.slug or doc.id or "prayer").lower())[:24]
+    return f"short-{fallback or 'prayer'}"
+
+
 @dataclass
 class BrainGenerationResult:
     job_id: str
@@ -336,15 +381,13 @@ Type Amen to agree with this prayer, and subscribe to The Secret Place to pray w
         from .short_script import (ShortSpecError, build_prompt, parse_model_json,
                                    require_valid, validate_spec)
 
-        psalm_match = re.search(r"Psalm\s+(\d+)", longform_doc.title)
-        scripture = f"Psalm {psalm_match.group(1)}" if psalm_match else longform_doc.title.split(":")[0]
+        scripture = extract_scripture_reference(longform_doc)
         if not self.is_api_available():
             raise BrainAuthoringError(
                 f"cannot author {scripture} Short: {self.api_status()['reason']}. "
                 "Refusing to fabricate a scene list."
             )
-        key = key or (f"short-psalm{psalm_match.group(1)}" if psalm_match else
-                      f"short-{longform_doc.slug[:30].strip('-')}")
+        key = key or short_key_for_doc(longform_doc)
         prompt = build_prompt(scripture, key=key)
         last_error = ""
         for attempt in (1, 2):
@@ -354,7 +397,8 @@ Type Amen to agree with this prayer, and subscribe to The Secret Place to pray w
                     contents=prompt if attempt == 1 else f"{prompt}\n\nPrevious output was rejected: {last_error}\nFix exactly that and return only JSON.",
                 )
                 data = parse_model_json(getattr(resp, "text", "") or "")
-                spec = validate_spec(data)
+                data.setdefault("scripture", scripture)
+                spec = validate_spec(data, key=key)
                 if spec.problems:
                     last_error = "; ".join(spec.problems[:4])
                     continue
@@ -384,8 +428,8 @@ Type Amen to agree with this prayer, and subscribe to The Secret Place to pray w
         from .short_script import save_spec
 
         SHORTS_QUEUE_DIR.mkdir(parents=True, exist_ok=True)
-        psalm = re.search(r"Psalm\s+(\d+)", longform_doc.title)
-        key = f"short-psalm{psalm.group(1)}" if psalm else f"short-{longform_doc.slug[:30].strip('-')}"
+        key = short_key_for_doc(longform_doc)
+        scripture_ref = extract_scripture_reference(longform_doc)
         manifest_filename = f"{longform_doc.id}-{key}.yml"
         manifest_path = SHORTS_QUEUE_DIR / manifest_filename
 
@@ -403,7 +447,7 @@ Type Amen to agree with this prayer, and subscribe to The Secret Place to pray w
         manifest_data = {
             "short": key,
             "companion_longform_id": longform_doc.id,
-            "scripture": longform_doc.title.split(":")[0].strip(),
+            "scripture": scripture_ref,
             # Approved only when something can actually build it.
             "status": "approved" if renderable else "draft",
             "renderer_ready": renderable,
@@ -434,25 +478,20 @@ Type Amen to agree with this prayer, and subscribe to The Secret Place to pray w
         return None
 
     def author_missing_shorts(self) -> list[dict[str, Any]]:
-        """Author a spec for every queued Short that has no renderer yet.
-
-        `generate_companion_short` only writes specs for Shorts it creates. Manifests
-        created earlier — or whose first authoring attempt failed — would otherwise
-        wait forever, which is exactly the state that made the Shorts stage print
-        "nothing to do". This walks the queue and fills the gap, so the queue drains
-        itself instead of needing a person to hand-write scene data.
-        """
+        """Author specs for blocked Shorts manifests in `SHORTS_QUEUE_DIR`."""
         from .short_release import _renderer_script_keys
         from .short_script import save_spec
 
         rows: list[dict[str, Any]] = []
         renderable = _renderer_script_keys()
+
         for path in sorted(Path(SHORTS_QUEUE_DIR).glob("*.yml")):
             try:
                 data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
             except Exception as exc:  # noqa: BLE001
                 rows.append({"file": path.name, "key": "", "verdict": "unreadable", "reason": str(exc)})
                 continue
+            cid = str(data.get("companion_longform_id", "")).strip()
             key = str(data.get("short", "")).strip()
             if not key:
                 rows.append({"file": path.name, "key": "", "verdict": "no_key", "reason": "manifest has no `short`"})
@@ -461,10 +500,9 @@ Type Amen to agree with this prayer, and subscribe to The Secret Place to pray w
                 rows.append({"file": path.name, "key": key, "verdict": "renderable", "reason": "already has a spec"})
                 continue
 
-            doc = self._companion_doc(str(data.get("companion_longform_id", "")).strip())
+            doc = self._companion_doc(cid)
             if doc is None:
-                reason = (f"no long-form script for companion id "
-                          f"{data.get('companion_longform_id')!r}; cannot author {key}")
+                reason = f"no long-form script for companion id {cid!r}; cannot author {key}"
                 data.update(status="draft", renderer_ready=False, authored_by_brain=False,
                             notes=f"authoring blocked: {reason}")
                 path.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
@@ -495,6 +533,78 @@ Type Amen to agree with this prayer, and subscribe to The Secret Place to pray w
                          "reason": f"{spec.words} narration words"})
         return rows
 
+    def replenish_shorts_queue(self, min_ready: int = 6) -> list[dict[str, Any]]:
+        """Replenish companion Shorts from approved long-form scripts when ready Shorts < `min_ready`."""
+        from .short_release import EDITIONS, _renderer_script_keys, resolve_edition
+
+        rows: list[dict[str, Any]] = []
+        renderable = _renderer_script_keys()
+        ready_count = 0
+        covered_ids: set[str] = set()
+        covered_keys: set[str] = set()
+
+        for pub_path in sorted(Path(PUBLISHED_DIR).glob("short-*.md")):
+            try:
+                pub_txt = pub_path.read_text(encoding="utf-8")
+                m_slug = re.search(r"^slug:\s*(\S+)", pub_txt, re.M)
+                if m_slug:
+                    covered_keys.add(m_slug.group(1).strip())
+            except Exception:  # noqa: BLE001
+                continue
+        for k_ed, ed in EDITIONS.items():
+            if (Path(PUBLISHED_DIR) / f"{ed.slug}.md").is_file():
+                covered_keys.add(k_ed)
+
+        for path in sorted(Path(SHORTS_QUEUE_DIR).glob("*.yml")):
+            try:
+                data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+            except Exception:  # noqa: BLE001
+                continue
+            cid = str(data.get("companion_longform_id", "")).strip()
+            if cid:
+                covered_ids.add(cid)
+            key = str(data.get("short", "")).strip()
+            if key:
+                covered_keys.add(key)
+            if key in renderable and str(data.get("status", "")).strip().lower() == "approved":
+                ready_count += 1
+
+        if ready_count >= min_ready:
+            return rows
+
+        for qpath in sorted(Path(QUEUE_DIR).glob("*.md")):
+            if ready_count >= min_ready:
+                break
+            try:
+                qdoc = parse_script(qpath)
+            except Exception:  # noqa: BLE001
+                continue
+            if str(qdoc.status).strip().lower() != "approved":
+                continue
+            if str(qdoc.id).strip() in covered_ids:
+                continue
+            cand_key = short_key_for_doc(qdoc)
+            ed_cand = resolve_edition(cand_key)
+            if cand_key in covered_keys or (ed_cand and (Path(PUBLISHED_DIR) / f"{ed_cand.slug}.md").is_file()):
+                continue
+            if cand_key not in renderable and not self.is_api_available():
+                continue
+            mpath, mkey = self.generate_companion_short(qdoc)
+            mdata = yaml.safe_load(mpath.read_text(encoding="utf-8")) or {}
+            verdict = "authored" if mdata.get("status") == "approved" else "failed"
+            if verdict == "authored":
+                ready_count += 1
+                renderable.add(mkey)
+                covered_ids.add(str(qdoc.id).strip())
+                covered_keys.add(mkey)
+            rows.append({
+                "file": mpath.name,
+                "key": mkey,
+                "verdict": verdict,
+                "reason": str(mdata.get("notes", ""))[:120],
+            })
+        return rows
+
     def verify_and_stage(self, script_path: Path) -> BrainGenerationResult:
         """Run factchecking claim extraction, verify queue integrity, and stage for production."""
         from scripts.factcheck import main as factcheck_main, out_path
@@ -511,7 +621,7 @@ Type Amen to agree with this prayer, and subscribe to The Secret Place to pray w
 
         return BrainGenerationResult(
             job_id=doc.id,
-            scripture=doc.title.split(":")[0].strip(),
+            scripture=extract_scripture_reference(doc),
             longform_path=script_path,
             short_manifest_path=short_path,
             factcheck_path=factcheck_path if factcheck_path.is_file() else None,

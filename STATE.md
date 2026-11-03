@@ -108,20 +108,25 @@
 21. `0034-psalm-91-complete-night-prayer-of-divine-protection.md` (Approved, 975 spoken words — full 16-verse KJV Psalm 91 sleep sanctuary)
 22. `0035-psalm-23-complete-night-prayer-restore-my-soul.md` (Approved, 995 spoken words — full 6-verse KJV Psalm 23 sleep sanctuary)
 
-### Armed Brain-Authored Shorts in `content/shorts-queue/` + `content/shorts-scripts/`:
-* `short-psalm121`, `short-psalm27`, `short-psalm46`, `short-psalm34` — all 4 remaining validated, paginated to bold 2–3 line (`38–44px`) DOCOGA REELS v2 kinetic cards, and wired with automatic local `words-{key}.json` alignment.
+### Armed Brain-Authored Shorts in `content/shorts-queue/` + `content/shorts-scripts/` (9 Ready):
+* `short-psalm34`, `short-psalm91v5`, `short-psalm91v11`, `short-psalm4v8`, `short-psalm16v7`, `short-psalm18v2`, `short-psalm31v5`, `short-proverbs3v24`, `short-isaiah26v3` — all 9 validated (`90–165` words, bold 2–3 line DOCOGA REELS v2 kinetic cards, exact KJV text, local `words-{key}.json` alignment), paced at `>= 3.0 hours` between automatic Short releases, and replenished autonomously by `gemini_brain.yml` whenever ready Shorts drop below `6`.
 
 ### Published Video Records in `content/published/`:
-* `0008-psalm-91-prayer-of-divine-protection.md` (`7RDX0fbIOtQ` — Psalm 91 Brief Blessing, `ctr-v3-cinema` thumbnail synced)
+* `0008-psalm-91-prayer-of-divine-protection.md` (`7RDX0fbIOtQ` — Psalm 91 Brief Blessing, `ctr-v3-cinema` thumbnail synced, auto-retrofitted with Selar links)
 * `0009-psalm-23-the-lord-is-my-shepherd.md` (`JZv67RNPCEI` — deleted remotely on YouTube; replaced in queue by full-length `0035`)
-* `0010-psalm-121-he-who-keeps-you-will-neither-slumber-no.md` (`6M6oV8MxD9s` — Psalm 121, `ctr-v3-cinema` thumbnail synced)
-* `0013-psalm-46-god-is-our-refuge-and-strength.md` (`1g8TXHD0Xks` — Psalm 46, `ctr-v3-cinema` thumbnail synced)
-* `0018-psalm-3-3-5-the-shield-that-lifts-my-head.md` (`vs2xt72CgcI` — Psalm 3:3-5, `ctr-v3-cinema` thumbnail synced)
-* `short-0003-psalm-23-the-lord-is-my-shepherd.md` (`kLgHN57fb1w` / `short-psalm23`, published Tuesday 3 November 2026 at 3:18pm Nigeria time)
+* `0010-psalm-121-he-who-keeps-you-will-neither-slumber-no.md` (`6M6oV8MxD9s` — Psalm 121, `ctr-v3-cinema` thumbnail synced, title & Selar metadata auto-retrofitted)
+* `0013-psalm-46-god-is-our-refuge-and-strength.md` (`1g8TXHD0Xks` — Psalm 46, `ctr-v3-cinema` thumbnail synced, auto-retrofitted with Selar links)
+* `0018-psalm-3-3-5-the-shield-that-lifts-my-head.md` (`vs2xt72CgcI` — Psalm 3:3-5, `ctr-v3-cinema` thumbnail synced, auto-retrofitted with Selar links)
+* `short-0006-psalm-46-god-is-our-refuge.md` (`mjr36vC_PtM` / `short-psalm46`, published Tuesday 3 November 2026 at 9:09pm Nigeria time)
+* `short-0005-psalm-27-the-lord-is-my-light.md` (`KkPAtMLoGf4` / `short-psalm27`, published Tuesday 3 November 2026 at 7:58pm Nigeria time)
+* `short-0004-psalm-121-he-who-keeps-you.md` (`xkpfupurX-0` / `short-psalm121`, published Tuesday 3 November 2026 at 7:43pm Nigeria time)
+* `short-0003-psalm-23-the-lord-is-my-shepherd.md` (`kLgHN57fb1w` / `short-psalm23`, published Tuesday 3 November 2026 at 3:14pm Nigeria time)
 * `short-0002-psalm-91-prayer-of-protection.md` (`SG69BbNlfRw` / `short-psalm91`)
 * `short-0001-enron-70b-fraud.md` (`DLEWL6dm5lo` / legacy)
 
 ### 2026-11-03 Autonomous Hardening Summary (Tuesday 3 November, Nigeria time):
+* **Metadata Perfection, Selar Integration & Live Channel Retrofit (`PR #230` + Autopilot Lock):** Wired both live Selar links (`https://selar.com/i000qy7g39` & `https://selar.com/showlove/thesecretplace`) across Line 2 watch-page fold, sanctuary resource blocks, pastoral owner comments, faith Shorts bridges, and Spanish/Portuguese localizations; upgraded all 22 queued prayer titles (`55–62` chars), `seo_hook` snippets, quote-aware `<= 500`-char tags, verified `.srt` closed captions, `BT.709` + `48 kHz` AAC + sRGB ICC profiles, and idempotent `metadata_revision: "selar-seo-v1"` live-channel sync inside `monitor.yml`.
+* **Quota-Aware Pacing & Autonomous Shorts Runway:** Added `SHORTS_MIN_GAP_HOURS` (`3.0h`) pacing guard on automatic Short releases, quota-cooldown recognition across `produce.yml`, `scheduler_supervisor.py`, and `automation_monitor.py` (eliminating supervisor retry storms and false stall alerts after daily uploads), non-Psalm/verse-aware `short_key_for_doc()` (`^short-[a-z0-9]+$`), and automatic companion Short replenishment in `author_missing_shorts()`.
 * **Brain-Authored Shorts Engine Completed End-to-End:** `pipeline/short_release.py` now generates `assets/deepdive/words-{key}.json` via local CPU `faster-whisper` (with deterministic proportional fallback), dynamically synthesizes `ShortEdition` metadata for any future brain-authored Short spec, pauses cleanly on daily quota exhaustion, and uses `short-prayer-cover-poster.jpg` for all prayer Shorts; `tools/shorts.py` renders all prayer Shorts with full DOCOGA REELS v2 kinetic typography, sequential word-aligned captions, punctuation-tolerant anchor matching, and clean procedural-plate source manifests.
 * **TTS Burst Resilience & Quota Gating:** `pipeline/gemini_tts.py` distinguishes 3-RPM burst `429`s from daily free-tier exhaustion across both `interactions.create` and `models.generate_content`, checks single-chunk audio against truncation, and caches chunks with `.sha256` verification (`save-always: true` in `produce.yml`); `pipeline/run.py` enforces `quota_blocked_until()` before starting subsequent queue jobs and skips manual release-ticket issues on `privacy: public` uploads.
 * **Hermetic Crisis/Comment Guards & Watchdog Self-Healing:** `scripts/reply_comments.py` and `tests/test_comments_end_to_end.py` never escalate simulated/dry-run/test comments to GitHub issues; `monitor.yml` granted `contents: write`; `gemini_brain.yml` aligned on `concurrency: group: content-state`; `pipeline_watchdog.py` sweeps synthetic `c4`/`c_sim_6` issues and superseded public release tickets automatically in CI.

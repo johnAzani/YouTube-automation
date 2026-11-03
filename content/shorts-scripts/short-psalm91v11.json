@@ -1,0 +1,230 @@
+{
+  "key": "short-psalm91v11",
+  "psalm": 91,
+  "title": [
+    "ANGELS GUARD YOU",
+    "PSALM 91:11-12"
+  ],
+  "poster": [
+    "ANGELS STAND WATCH",
+    "AROUND YOUR BED",
+    "PSALM 91:11-12",
+    "ANGELIC NIGHT GUARD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "golden candlelight dark sanctuary evening",
+    "starry night sky mountain peaks clear",
+    "calm misty valley moonlight serene",
+    "still forest lake night reflection",
+    "soft clouds moonlight night sky",
+    "gentle dawn glow quiet horizon"
+  ],
+  "scenes": [
+    {
+      "a": "Rest your head upon your pillow",
+      "img": "short-psalm91v11-scene-01.jpg",
+      "kicker": "PSALM 91:11",
+      "sub": "UNCLENCH YOUR HANDS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "For he shall give his angels charge over thee",
+      "img": "short-psalm91v11-scene-02.jpg",
+      "kicker": "PSALM 91:11",
+      "sub": "ANGELS IN CHARGE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "They shall bear thee up in their hands",
+      "img": "short-psalm91v11-scene-03.jpg",
+      "kicker": "PSALM 91:12",
+      "sub": "HELD IN THEIR HANDS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord of hosts, surround this bed",
+      "img": "short-psalm91v11-scene-04.jpg",
+      "kicker": "HEAVENLY GUARD",
+      "sub": "WATCH OVER MY HOME",
+      "cam": "pan_left",
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    {
+      "a": "Keep every shadow far from my dreams",
+      "img": "short-psalm91v11-scene-05.jpg",
+      "kicker": "SWEET SLUMBER",
+      "sub": "PEACE UNTIL DAWN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to The Secret Place",
+      "img": "short-psalm91v11-scene-06.jpg",
+      "kicker": "AMEN",
+      "sub": "PRAY WITH US NIGHTLY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Rest your head upon your pillow tonight, breathe out slowly, and remember you are never alone in the dark."
+    ],
+    [
+      8,
+      17,
+      "For he shall give his angels charge over thee, to keep thee in all thy ways."
+    ],
+    [
+      17,
+      25,
+      "They shall bear thee up in their hands, lest thou dash thy foot against a stone."
+    ],
+    [
+      25,
+      35,
+      "Lord of hosts, surround this bed and every loved one under this roof with Your faithful heavenly watch tonight."
+    ],
+    [
+      35,
+      44,
+      "Keep every shadow far from my dreams, quiet my spirit, and carry me gently into deep restorative sleep."
+    ],
+    [
+      44,
+      52,
+      "Type Amen to receive this blessing, and subscribe to The Secret Place for nightly scripture prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "REST YOUR HEAD",
+        "NEVER ALONE TONIGHT"
+      ],
+      [
+        "REST",
+        "NEVER",
+        "ALONE"
+      ],
+      "BEDTIME SANCTUARY"
+    ],
+    [
+      8,
+      17,
+      [
+        "HIS ANGELS HAVE",
+        "CHARGE OVER THEE"
+      ],
+      [
+        "ANGELS",
+        "CHARGE",
+        "KEEP"
+      ],
+      "PSALM 91 : 11"
+    ],
+    [
+      17,
+      25,
+      [
+        "BORNE UP SAFELY",
+        "IN THEIR HANDS"
+      ],
+      [
+        "HANDS"
+      ],
+      "PSALM 91 : 12"
+    ],
+    [
+      25,
+      35,
+      [
+        "SURROUND THIS BED",
+        "HEAVENLY WATCH"
+      ],
+      [
+        "SURROUND",
+        "WATCH"
+      ],
+      "PRAYER OF KEEPING"
+    ],
+    [
+      35,
+      44,
+      [
+        "GUARD MY DREAMS",
+        "DEEP PEACEFUL SLEEP"
+      ],
+      [
+        "DREAMS",
+        "SLEEP"
+      ],
+      "NIGHT BLESSING"
+    ],
+    [
+      44,
+      52,
+      [
+        "TYPE AMEN TONIGHT",
+        "THE SECRET PLACE"
+      ],
+      [
+        "AMEN",
+        "SUBSCRIBE"
+      ],
+      "NIGHTLY SCRIPTURE"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "he shall give his angels charge over thee",
+      "kind": "quote",
+      "words": [
+        "ANGELS",
+        "OVER THEE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "surround this bed and every loved one",
+      "kind": "phrase",
+      "words": [
+        "HEAVENLY",
+        "NIGHT WATCH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 91:11-12"
+}

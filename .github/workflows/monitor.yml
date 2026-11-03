@@ -73,7 +73,9 @@ jobs:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
-        run: python -m scripts.sync_published_thumbnails
+        run: |
+          python -m scripts.sync_published_thumbnails
+          python -m scripts.retrofit_published_metadata --sync-pending
 
       - name: Audit every automation and its outcome
         id: audit

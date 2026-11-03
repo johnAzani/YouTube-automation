@@ -1,0 +1,229 @@
+{
+  "key": "short-psalm4v8",
+  "psalm": 4,
+  "title": [
+    "LIE DOWN IN PEACE",
+    "PSALM 4:8 PRAYER"
+  ],
+  "poster": [
+    "IN PEACE I WILL",
+    "LIE DOWN AND SLEEP",
+    "PSALM 4:8",
+    "DWELL IN SAFETY"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "tranquil lake dusk reflection twilight",
+    "soft candle glow quiet bedroom dark",
+    "gentle stream forest night moonlight",
+    "clear starry sky peaceful meadow",
+    "calm ocean tide moonlight night",
+    "misty hills dawn golden stillness"
+  ],
+  "scenes": [
+    {
+      "a": "Exhale the unfinished work of today",
+      "img": "short-psalm4v8-scene-01.jpg",
+      "kicker": "PSALM 4:8",
+      "sub": "LAY TODAY DOWN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "I will both lay me down in peace, and sleep",
+      "img": "short-psalm4v8-scene-02.jpg",
+      "kicker": "PSALM 4:8",
+      "sub": "LIE DOWN IN PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.55,
+        0.45
+      ]
+    },
+    {
+      "a": "For thou, Lord, only makest me dwell in safety",
+      "img": "short-psalm4v8-scene-03.jpg",
+      "kicker": "PSALM 4:8",
+      "sub": "DWELL IN SAFETY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Gracious Father, untangle my thoughts",
+      "img": "short-psalm4v8-scene-04.jpg",
+      "kicker": "QUIET MIND",
+      "sub": "SURRENDER TOMORROW",
+      "cam": "pan_left",
+      "focus": [
+        0.45,
+        0.45
+      ]
+    },
+    {
+      "a": "Let Your stillness settle over my room",
+      "img": "short-psalm4v8-scene-05.jpg",
+      "kicker": "SAFE IN HIM",
+      "sub": "DEEP UNBROKEN SLEEP",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to The Secret Place",
+      "img": "short-psalm4v8-scene-06.jpg",
+      "kicker": "AMEN",
+      "sub": "PRAY EVERY NIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Exhale the unfinished work of today, soften your breathing, and let your weary heart come home to quiet stillness."
+    ],
+    [
+      8,
+      16,
+      "Hear David's night song: I will both lay me down in peace, and sleep."
+    ],
+    [
+      16,
+      25,
+      "For thou, Lord, only makest me dwell in safety through every dark and silent hour."
+    ],
+    [
+      25,
+      35,
+      "Gracious Father, untangle my thoughts from every worry about tomorrow and hold my entire household securely in Your hand."
+    ],
+    [
+      35,
+      44,
+      "Let Your stillness settle over my room tonight like a warm blanket until morning mercies wake me refreshed."
+    ],
+    [
+      44,
+      52,
+      "Whisper Amen to rest in His safety tonight, and subscribe to The Secret Place so we can pray together nightly."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "EXHALE TODAY'S WORK",
+        "COME TO STILLNESS"
+      ],
+      [
+        "EXHALE",
+        "STILLNESS"
+      ],
+      "EVENING RELEASE"
+    ],
+    [
+      8,
+      16,
+      [
+        "LAY ME DOWN",
+        "IN PEACE AND SLEEP"
+      ],
+      [
+        "PEACE",
+        "SLEEP"
+      ],
+      "PSALM 4 : 8"
+    ],
+    [
+      16,
+      25,
+      [
+        "THOU LORD ONLY",
+        "MAKEST ME SAFE"
+      ],
+      [
+        "LORD",
+        "SAFETY"
+      ],
+      "PSALM 4 : 8"
+    ],
+    [
+      25,
+      35,
+      [
+        "UNTANGLE MY MIND",
+        "HELD IN YOUR HAND"
+      ],
+      [
+        "THOUGHTS",
+        "HAND"
+      ],
+      "BEDTIME PRAYER"
+    ],
+    [
+      35,
+      44,
+      [
+        "SETTLE IN PEACE",
+        "WAKE REFRESHED"
+      ],
+      [
+        "STILLNESS",
+        "REFRESHED"
+      ],
+      "NIGHT SANCTUARY"
+    ],
+    [
+      44,
+      52,
+      [
+        "REST IN SAFETY",
+        "THE SECRET PLACE"
+      ],
+      [
+        "SAFETY",
+        "SUBSCRIBE"
+      ],
+      "THE SECRET PLACE"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "lay me down in peace, and sleep",
+      "kind": "quote",
+      "words": [
+        "LIE DOWN",
+        "IN PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "only makest me dwell in safety",
+      "kind": "quote",
+      "words": [
+        "DWELL IN",
+        "SAFETY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 4:8"
+}

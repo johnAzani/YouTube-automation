@@ -148,12 +148,17 @@ FAILED_CONCLUSIONS = {"failure", "cancelled", "timed_out", "startup_failure"}
 def _failed_dispatches(state: dict, latest: dict[str, tuple[datetime, str | None]],
                        now: datetime) -> list[tuple[str, str]]:
     """Ledger entries whose dispatched run has finished badly and can be retried."""
+    from scripts.automation_monitor import active_quota_cooldown
+
+    produce_cooldown = active_quota_cooldown(now)
     out: list[tuple[str, str]] = []
     for key, entry in state.items():
         if "@" not in key:
             continue
         workflow, slot = key.rsplit("@", 1)
         if workflow in NEVER_DISPATCH:
+            continue
+        if workflow == "produce.yml" and produce_cooldown is not None:
             continue
         try:
             slot_at = datetime.fromisoformat(slot)
@@ -266,6 +271,10 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
         if (workflow, slot) not in candidates:
             candidates.append((workflow, slot))
 
+    from scripts.automation_monitor import active_quota_cooldown
+
+    produce_cooldown = active_quota_cooldown(now)
+
     # Say out loud what the ledger decided, so a slot that is deliberately not
     # retried is visible in the log instead of merely absent.
     for key, entry in state.items():
@@ -285,6 +294,8 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
         if finished is not None and finished[1] == "success" \
                 and finished[0].isoformat() >= entry.get("at", ""):
             reason = "its dispatched run succeeded"
+        elif workflow == "produce.yml" and produce_cooldown is not None:
+            reason = "waiting for daily free-tier TTS quota reset"
         elif attempts >= MAX_ATTEMPTS_PER_SLOT:
             reason = f"already dispatched {attempts}x for this slot; not trying again"
         else:

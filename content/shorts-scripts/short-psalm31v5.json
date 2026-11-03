@@ -1,0 +1,231 @@
+{
+  "key": "short-psalm31v5",
+  "psalm": 31,
+  "title": [
+    "INTO THY HAND",
+    "PSALM 31:5 REST"
+  ],
+  "poster": [
+    "INTO THINE HAND",
+    "I COMMIT MY SPIRIT",
+    "PSALM 31:5",
+    "REDEEMED IN PEACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "soft candlelight wooden table dark",
+    "calm moonlit bay gentle ripples",
+    "starry night sky quiet hills",
+    "misty pine trees night stillness",
+    "peaceful lake reflection twilight",
+    "warm sunrise glow horizon clouds"
+  ],
+  "scenes": [
+    {
+      "a": "Open your hands upon the blanket",
+      "img": "short-psalm31v5-scene-01.jpg",
+      "kicker": "PSALM 31:5",
+      "sub": "SURRENDER TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Bow down thine ear to me; deliver me speedily",
+      "img": "short-psalm31v5-scene-02.jpg",
+      "kicker": "PSALM 31:2",
+      "sub": "MY STRONG ROCK",
+      "cam": "pan_right",
+      "focus": [
+        0.55,
+        0.45
+      ]
+    },
+    {
+      "a": "Into thine hand I commit my spirit",
+      "img": "short-psalm31v5-scene-03.jpg",
+      "kicker": "PSALM 31:5",
+      "sub": "INTO THINE HAND",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Redeemer of truth, receive every care",
+      "img": "short-psalm31v5-scene-04.jpg",
+      "kicker": "FAITHFUL HANDS",
+      "sub": "RELEASE EVERY CARE",
+      "cam": "pan_left",
+      "focus": [
+        0.45,
+        0.45
+      ]
+    },
+    {
+      "a": "Keep my soul tranquil until dawn",
+      "img": "short-psalm31v5-scene-05.jpg",
+      "kicker": "QUIET TRUST",
+      "sub": "PEACEFUL SLUMBER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to The Secret Place",
+      "img": "short-psalm31v5-scene-06.jpg",
+      "kicker": "AMEN",
+      "sub": "THE SECRET PLACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Open your hands upon the blanket tonight, breathe out slowly, and release everything you tried to carry alone today."
+    ],
+    [
+      8,
+      17,
+      "Bow down thine ear to me; deliver me speedily: be thou my strong rock, for an house of defence to save me."
+    ],
+    [
+      17,
+      26,
+      "Into thine hand I commit my spirit: thou hast redeemed me, O Lord God of truth."
+    ],
+    [
+      26,
+      36,
+      "Redeemer of truth, receive every care on my mind tonight and cradle my entire household in Your faithful hands."
+    ],
+    [
+      36,
+      44,
+      "Keep my soul tranquil through the night watches until dawn and awaken me in the joy of Your steadfast mercy."
+    ],
+    [
+      44,
+      52,
+      "Whisper Amen as you drift peacefully to sleep, and subscribe to The Secret Place for nightly scripture prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "OPEN YOUR HANDS",
+        "RELEASE TODAY"
+      ],
+      [
+        "RELEASE",
+        "BREATHE"
+      ],
+      "BEDTIME SURRENDER"
+    ],
+    [
+      8,
+      17,
+      [
+        "MY STRONG ROCK",
+        "HOUSE OF DEFENCE"
+      ],
+      [
+        "STRONG",
+        "ROCK",
+        "DEFENCE"
+      ],
+      "PSALM 31 : 2"
+    ],
+    [
+      17,
+      26,
+      [
+        "INTO THINE HAND",
+        "I COMMIT MY SPIRIT"
+      ],
+      [
+        "HAND",
+        "SPIRIT",
+        "TRUTH"
+      ],
+      "PSALM 31 : 5"
+    ],
+    [
+      26,
+      36,
+      [
+        "GOD OF TRUTH",
+        "CRADLE THIS HOME"
+      ],
+      [
+        "TRUTH",
+        "FAITHFUL"
+      ],
+      "EVENING PRAYER"
+    ],
+    [
+      36,
+      44,
+      [
+        "TRANQUIL UNTIL DAWN",
+        "STEADFAST MERCY"
+      ],
+      [
+        "TRANQUIL",
+        "MERCY"
+      ],
+      "NIGHT BENEDICTION"
+    ],
+    [
+      44,
+      52,
+      [
+        "WHISPER AMEN",
+        "THE SECRET PLACE"
+      ],
+      [
+        "AMEN",
+        "SUBSCRIBE"
+      ],
+      "PRAY WITH US"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "into thine hand i commit my spirit",
+      "kind": "quote",
+      "words": [
+        "INTO THY",
+        "HAND"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "o lord god of truth",
+      "kind": "quote",
+      "words": [
+        "GOD OF",
+        "TRUTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 31:5"
+}

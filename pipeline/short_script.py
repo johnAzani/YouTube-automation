@@ -65,6 +65,7 @@ class ShortSpec:
     kinetic_phrases: list[list]    # [[start, end, [lines], [highlights], attribution], ...]
     beats: list[dict] = field(default_factory=list)
     problems: list[str] = field(default_factory=list)
+    scripture: str = ""
 
     @property
     def narration_text(self) -> str:
@@ -75,13 +76,16 @@ class ShortSpec:
         return len(self.narration_text.split())
 
     def as_dict(self) -> dict:
-        return {
+        out = {
             "key": self.key, "psalm": self.psalm, "title": list(self.title),
             "poster": list(self.poster), "end": list(self.end),
             "stock_queries": self.stock_queries, "scenes": self.scenes,
             "captions": self.captions, "kinetic_phrases": self.kinetic_phrases,
             "beats": self.beats, "words": self.words, "problems": self.problems,
         }
+        if self.scripture:
+            out["scripture"] = self.scripture
+        return out
 
     def to_renderer(self) -> dict:
         """The exact shape `tools/shorts.py` SCRIPTS expects."""
@@ -134,7 +138,7 @@ def validate_spec(data: dict, key: str | None = None) -> ShortSpec:
 
     scriptural = _norm(data.get("scripture", ""))
     psalm = data.get("psalm") if isinstance(data.get("psalm"), int) else None
-    match = re.search(r"(\d+)", scriptural)
+    match = re.search(r"(?i)\bpsalm[s]?\s+(\d+)", scriptural)
     if match:
         psalm = int(match.group(1))
 
@@ -237,6 +241,7 @@ def validate_spec(data: dict, key: str | None = None) -> ShortSpec:
         key=key, psalm=psalm, title=title, poster=poster, end=end,
         stock_queries=queries, scenes=scenes, captions=captions,
         kinetic_phrases=phrases, beats=beats, problems=problems,
+        scripture=scriptural,
     )
 
 

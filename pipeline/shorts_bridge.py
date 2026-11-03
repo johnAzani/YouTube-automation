@@ -100,8 +100,66 @@ def resolve_short_key(key_or_title: str) -> str | None:
     return None
 
 
+def _dynamic_counterpart_from_repo(short_key_or_title: str) -> dict[str, Any] | None:
+    """Resolve any brain-authored Short key against published or queued long-form docs."""
+    needle = (short_key_or_title or "").strip().lower()
+    if not needle:
+        return None
+    try:
+        from .gemini_brain import extract_scripture_reference, short_key_for_doc
+        from .script_doc import parse_script
+    except Exception:  # noqa: BLE001
+        return None
+
+    for p in sorted(PUBLISHED_DIR.glob("*.md")):
+        if p.name.startswith("short-"):
+            continue
+        try:
+            doc = parse_script(p)
+        except Exception:  # noqa: BLE001
+            continue
+        if str(doc.meta.get("youtube_status", "")).strip() == "deleted_or_missing":
+            continue
+        vid = str(doc.meta.get("youtube_video_id", "")).strip()
+        if not vid:
+            continue
+        ref = extract_scripture_reference(doc)
+        if short_key_for_doc(doc) == needle or (ref and ref.lower() in needle):
+            return {
+                "found": True,
+                "video_id": vid,
+                "url": f"https://youtu.be/{vid}",
+                "title": doc.title,
+                "scripture": ref,
+                "theme": "peaceful rest and sovereign nighttime protection",
+                "is_live_video": True,
+            }
+
+    for p in sorted(QUEUE_DIR.glob("*.md")):
+        try:
+            doc = parse_script(p)
+        except Exception:  # noqa: BLE001
+            continue
+        ref = extract_scripture_reference(doc)
+        if short_key_for_doc(doc) == needle or (ref and ref.lower() in needle):
+            return {
+                "found": True,
+                "video_id": None,
+                "url": DEFAULT_PLAYLIST_FALLBACK,
+                "title": doc.title,
+                "scripture": ref,
+                "theme": "peaceful rest and sovereign nighttime protection",
+                "is_live_video": False,
+            }
+    return None
+
+
 def resolve_longform_counterpart(short_key_or_title: str) -> dict[str, Any]:
     """Find the live or scheduled long-form video matching a Short."""
+    dyn = _dynamic_counterpart_from_repo(short_key_or_title)
+    if dyn is not None:
+        return dyn
+
     short_key = resolve_short_key(short_key_or_title)
     if not short_key or short_key not in SHORT_LONGFORM_CATALOG:
         return {
@@ -128,6 +186,8 @@ def resolve_longform_counterpart(short_key_or_title: str) -> dict[str, Any]:
     for cand in published_candidates:
         if cand.is_file():
             text = cand.read_text(encoding="utf-8")
+            if "deleted_or_missing" in text:
+                continue
             m = re.search(r"youtube_video_id:\s*[\"']?([A-Za-z0-9_-]{11})[\"']?", text)
             if m:
                 vid = m.group(1)
