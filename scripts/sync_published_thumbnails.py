@@ -127,6 +127,7 @@ def sync_published_thumbnails(
 
     yt = None if dry_run else (youtube_client or _build_youtube_client())
     remote_by_id: dict[str, dict[str, Any]] = {}
+    videos_list_ok = False
     if yt is not None:
         vids = [str(doc.meta.get("youtube_video_id")).strip() for _, doc in pending]
         try:
@@ -135,6 +136,7 @@ def sync_published_thumbnails(
                 .list(part="snippet,status,contentDetails", id=",".join(vids[:50]))
                 .execute()
             )
+            videos_list_ok = True
             for item in resp.get("items", []):
                 if item.get("id"):
                     remote_by_id[str(item["id"])] = item
@@ -248,10 +250,18 @@ def sync_published_thumbnails(
                         print(f"[thumb-sync] could not clarify title on {vid}: {exc!r}")
 
         if not dry_run:
-            status = thumb_setter(vid, primary.path)
-            row["thumbnail_status"] = status
-            if status == "ok":
+            if videos_list_ok and remote is None:
+                row["thumbnail_status"] = "video_not_found"
+                stamp_frontmatter_field(path, "youtube_status", "deleted_or_missing")
                 stamp_frontmatter_field(path, "thumbnail_revision", THUMBNAIL_REVISION)
+            else:
+                status = thumb_setter(vid, primary.path)
+                row["thumbnail_status"] = status
+                if status == "ok":
+                    stamp_frontmatter_field(path, "thumbnail_revision", THUMBNAIL_REVISION)
+                elif "HttpError 404" in str(status):
+                    stamp_frontmatter_field(path, "youtube_status", "deleted_or_missing")
+                    stamp_frontmatter_field(path, "thumbnail_revision", THUMBNAIL_REVISION)
         print(f"::notice title=Live thumbnail sync::{json.dumps(row)}")
         results.append(row)
 

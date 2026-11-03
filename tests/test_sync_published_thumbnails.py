@@ -161,6 +161,24 @@ class TestSyncPublishedThumbnails(unittest.TestCase):
         fake_yt.videos.assert_not_called()
         self.assertEqual(thumb_uploads, [])
 
+    def test_deleted_remote_video_stamps_receipt_without_wasting_thumbnail_quota(self):
+        fake_yt = mock.MagicMock()
+        fake_yt.videos.return_value.list.return_value.execute.return_value = {"items": []}
+        thumb_setter = mock.MagicMock(return_value="ok")
+
+        rows = spt.sync_published_thumbnails(
+            published_dir=self.pub_dir,
+            out_root=self.out_dir,
+            youtube_client=fake_yt,
+            thumb_setter=thumb_setter,
+        )
+        self.assertEqual(len(rows), 2)
+        self.assertTrue(all(r["thumbnail_status"] == "video_not_found" for r in rows))
+        thumb_setter.assert_not_called()
+        doc_0009 = parse_script(self.pub_dir / "0009-psalm-23-the-lord-is-my-shepherd.md")
+        self.assertEqual(doc_0009.meta.get("youtube_status"), "deleted_or_missing")
+        self.assertEqual(doc_0009.meta.get("thumbnail_revision"), spt.THUMBNAIL_REVISION)
+
 
 if __name__ == "__main__":
     unittest.main()
