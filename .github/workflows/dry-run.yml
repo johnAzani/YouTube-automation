@@ -209,10 +209,12 @@ jobs:
         id: pick
         run: |
           JOB=$(python - <<'PY'
+          import contextlib, sys
           from pathlib import Path
           from pipeline.script_doc import parse_script
           from pipeline.run import _validate_finance_niche, select_jobs
-          nxt = select_jobs(False, None, True)
+          with contextlib.redirect_stdout(sys.stderr):
+              nxt = select_jobs(False, None, True)
           if nxt:
               print(nxt[0])
           else:

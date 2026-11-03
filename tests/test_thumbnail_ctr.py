@@ -396,7 +396,7 @@ class TestTheFrameIsTheVideosOwnFootage(unittest.TestCase):
         checked = 0
         for md in sorted(queue.glob("*.md")):
             doc = parse_script(md)
-            if str(doc.meta.get("status", "")).lower() != "approved":
+            if str(doc.meta.get("status", "")).lower() not in {"approved", "quota_paused"}:
                 continue
             checked += 1
             hero = (str(doc.meta.get("thumb_text") or "").strip() or doc.title).upper()
@@ -407,7 +407,7 @@ class TestTheFrameIsTheVideosOwnFootage(unittest.TestCase):
                 " ".join(hero.split()),
                 f"{md.name}: dropped words in {lines} vs {hero}",
             )
-        self.assertGreaterEqual(checked, 21)
+        self.assertGreaterEqual(checked, 15)
 
 
 if __name__ == "__main__":

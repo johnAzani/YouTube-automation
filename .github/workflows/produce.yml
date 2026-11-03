@@ -80,6 +80,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Snapshot starting commit for isolated content staging
+        run: echo "START_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -121,8 +124,9 @@ jobs:
         # The free tier allows TEN text-to-speech requests per day. A six-minute
         # prayer needs two; a bad afternoon can still use three or four. Losing a
         # finished chunk because the step ended is a request the channel cannot
-        # afford, so finished chunks and Short narrations are saved even on failure.
-        uses: actions/cache@v4
+        # afford, so finished chunks and Short narrations are restored here and
+        # saved via actions/cache/save@v4 (if: always()) below even on failure.
+        uses: actions/cache/restore@v4
         with:
           path: |
             output/*/_gemini_chunks_*
@@ -131,7 +135,6 @@ jobs:
           key: chunks-${{ github.run_id }}
           restore-keys: |
             chunks-
-          save-always: true
 
       # Second safety net. If the brain's cron was delayed, skipped, or its API call
       # failed, this run repairs the queue itself instead of printing "nothing to
@@ -285,11 +288,25 @@ jobs:
           set -e
           git config user.name "youtube-automation-bot"
           git config user.email "actions@users.noreply.github.com"
+          base_ref="${START_SHA:-HEAD}"
+          git diff --name-only --diff-filter=D "$base_ref" -- content/ > /tmp/produce-deleted.txt
+          {
+            git diff --name-only --diff-filter=ACMR "$base_ref" -- content/
+            git ls-files --others --exclude-standard -- content/
+          } | sort -u > /tmp/produce-touched.txt
+          if [ ! -s /tmp/produce-deleted.txt ] && [ ! -s /tmp/produce-touched.txt ]; then
+            echo "queue state unchanged (nothing to record)"
+            exit 0
+          fi
           for attempt in 1 2 3 4 5 6; do
             git fetch --quiet origin main
             git reset --mixed origin/main
-            git checkout origin/main -- content/monitor/status.json 2>/dev/null || true
-            git add -A content/
+            while IFS= read -r p; do
+              [ -n "$p" ] && git rm --cached --ignore-unmatch --quiet -- "$p"
+            done < /tmp/produce-deleted.txt
+            while IFS= read -r p; do
+              [ -n "$p" ] && [ -e "$p" ] && git add -- "$p"
+            done < /tmp/produce-touched.txt
             if git diff --cached --quiet; then
               echo "queue state unchanged (nothing to record)"
               exit 0
@@ -304,6 +321,17 @@ jobs:
           done
           echo "::error title=Queue state lost::could not record the published/ move; the next run may re-upload the same video"
           exit 1
+
+      - name: Save finished speech chunks (even on quota pause or failure)
+        if: always()
+        continue-on-error: true
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            output/*/_gemini_chunks_*
+            assets/deepdive/short-*.mp3
+            assets/deepdive/words-short-*.json
+          key: chunks-${{ github.run_id }}
 
       # Style proof without a 1 GB download: three frames from the master,
       # small enough to open from the run page. Shows HUD, typography,

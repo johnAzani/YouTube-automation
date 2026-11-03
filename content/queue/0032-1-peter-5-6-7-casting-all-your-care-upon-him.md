@@ -10,7 +10,7 @@ category: education
 voice: Charon
 target_minutes: 6
 tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "CAST ALL YOUR CARE ON HIM"
+thumb_text: "HE CARES FOR YOU"
 description: |
   Say this 1 Peter 5:6-7 (KJV) prayer before you sleep tonight.
   Humble yourselves therefore under the mighty hand of God, that he may exalt you in due time: Casting all your care upon him; for he careth for you.

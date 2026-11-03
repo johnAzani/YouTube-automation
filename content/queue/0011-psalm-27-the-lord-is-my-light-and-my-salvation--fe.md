@@ -20,7 +20,7 @@ tags:
 - christian meditation
 - divine protection
 - rest and healing
-thumb_text: OF WHOM SHALL I BE AFRAID?
+thumb_text: "WHOM SHALL I FEAR"
 description: 'Say this Psalm 27 (KJV) prayer before you sleep tonight. Surrender the
   burdens, anxieties,
 

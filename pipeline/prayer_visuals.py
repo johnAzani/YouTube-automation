@@ -15,7 +15,37 @@ from PIL import Image
 from .assemble import ffmpeg_bin
 
 
-MAX_LINES_PER_CARD = 6   # what the widescreen layout can draw at once
+MAX_LINES_PER_CARD = 3   # DOCOGA REELS v2 bold 2-3 line display cards (never 6-line walls)
+LONGFORM_MUSIC_VOLUME = 0.58  # exact Shorts background music mix level (tools/shorts.py)
+
+
+def build_prayer_music_score(duration: float, scenes, words, out_dir: Path) -> Path:
+    """Synthesize the exact Shorts background music score (`tools/score.py`) for long-form."""
+    from tools.score import generate_score
+
+    cuts = [0.0]
+    acc = 0.0
+    for _path, sec in scenes[:-1]:
+        acc += float(sec)
+        if 0.0 < acc < duration:
+            cuts.append(acc)
+
+    hushes = []
+    for word, start, end in words:
+        cleaned = re.sub(r"[^a-z]", "", word.lower())
+        if cleaned in {"amen", "selah"} and start > 1.0:
+            hushes.append(
+                {
+                    "t": float(start),
+                    "dur": min(1.2, max(0.35, float(end) - float(start))),
+                    "depth": 0.55,
+                    "lead": 0.45,
+                }
+            )
+
+    key = "prayer-longform"
+    generate_score(key, float(duration), cuts, [], [], hushes, out_dir=str(out_dir))
+    return Path(out_dir) / f"music-{key}.wav"
 
 
 def sentence_stream(words, *, timing_source):
@@ -106,12 +136,24 @@ def render(narration: Path, scenes, words, duration: float, output: Path, *,
     decoder = encoder = None
     index = 0
     elapsed = 0.0
-    with tempfile.TemporaryFile() as errors:
+    fade_in = min(0.8, max(0.05, duration * 0.10))
+    fade_out = min(2.4, max(0.10, duration * 0.25))
+    fade_out_st = max(0.0, duration - fade_out)
+    audio_filter = (
+        f"[2:a]volume={LONGFORM_MUSIC_VOLUME:.2f},"
+        f"afade=t=in:st=0:d={fade_in:.2f},"
+        f"afade=t=out:st={fade_out_st:.2f}:d={fade_out:.2f}[m];"
+        "[1:a]aformat=channel_layouts=stereo,volume=1.0[v];"
+        "[m][v]amix=inputs=2:duration=longest:normalize=0,alimiter=limit=0.95[a]"
+    )
+    with tempfile.TemporaryDirectory() as score_tmp, tempfile.TemporaryFile() as errors:
         try:
+            music_wav = build_prayer_music_score(duration, scenes, words, Path(score_tmp))
             encoder = subprocess.Popen([ffmpeg_bin(), '-y', '-loglevel', 'error',
                 '-f', 'rawvideo', '-pixel_format', 'rgb24', '-video_size', f'{width}x{height}',
-                '-framerate', str(fps), '-i', 'pipe:0', '-i', str(narration),
-                '-map', '0:v:0', '-map', '1:a:0', '-t', str(duration), '-c:v', 'libx264',
+                '-framerate', str(fps), '-i', 'pipe:0', '-i', str(narration), '-i', str(music_wav),
+                '-filter_complex', audio_filter,
+                '-map', '0:v:0', '-map', '[a]', '-t', str(duration), '-c:v', 'libx264',
                 '-preset', 'fast', '-crf', '21', '-pix_fmt', 'yuv420p', '-c:a', 'aac',
                 '-b:a', '160k', '-movflags', '+faststart', str(temp)],
                 stdin=subprocess.PIPE, stdout=subprocess.DEVNULL, stderr=errors)

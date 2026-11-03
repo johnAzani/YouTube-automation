@@ -82,3 +82,58 @@ class PrayerVisualTests(unittest.TestCase):
             subprocess.run([ffmpeg_bin(), '-loglevel', 'error', '-y', '-f', 'lavfi', '-i', 'anullsrc=r=8000:cl=mono', '-t', '301', str(p/'audio.wav')], check=True)
             out = render(p/'audio.wav', [(p/'a.png', 150.5), (p/'b.png', 150.5)], [('Start.', .1, .9), ('End.', 299, 300)], 301, p/'out.mp4', timing_source='measured', width=160, height=90, fps=1)
             self.assertAlmostEqual(_probe_duration(out), 301, delta=.2)
+
+    def test_longform_render_mixes_shorts_background_music(self):
+        """A silent narration input must still output the stereo Shorts score bed."""
+        import subprocess
+        import wave
+        import numpy as np
+        from pipeline.assemble import ffmpeg_bin
+
+        with TemporaryDirectory() as tmp:
+            p = Path(tmp)
+            Image.new('RGB', (320, 180), (20, 45, 95)).save(p / 'plate.png')
+            silent_nar = p / 'silent.wav'
+            decoded_pcm = p / 'decoded.wav'
+            subprocess.run(
+                [ffmpeg_bin(), '-loglevel', 'error', '-y', '-f', 'lavfi', '-i', 'anullsrc=r=44100:cl=mono', '-t', '6', str(silent_nar)],
+                check=True,
+            )
+            out = render(
+                silent_nar,
+                [(p / 'plate.png', 3.0), (p / 'plate.png', 3.0)],
+                [('Peace', 0.4, 1.2), ('tonight.', 1.3, 2.2), ('Amen.', 4.6, 5.4)],
+                6.0,
+                p / 'with_music.mp4',
+                timing_source='measured',
+                width=320,
+                height=180,
+                fps=4,
+            )
+            subprocess.run(
+                [ffmpeg_bin(), '-loglevel', 'error', '-y', '-i', str(out), '-vn', '-ac', '2', '-ar', '44100', str(decoded_pcm)],
+                check=True,
+            )
+            with wave.open(str(decoded_pcm), 'rb') as wf:
+                self.assertEqual(wf.getnchannels(), 2)
+                samples = np.frombuffer(wf.readframes(wf.getnframes()), dtype='<i2').astype(np.float64) / 32768.0
+            stereo = samples.reshape(-1, 2)
+            rms = float(np.sqrt(np.mean(stereo ** 2)))
+            peak = float(np.max(np.abs(stereo)))
+            stereo_diff = float(np.max(np.abs(stereo[:, 0] - stereo[:, 1])))
+            self.assertGreater(rms, 0.005, "Long-form output MP4 is missing the Shorts background music bed")
+            self.assertGreater(peak, 0.03)
+            self.assertGreater(stereo_diff, 0.001, "Expected true stereo-detuned Shorts pad bed")
+
+    def test_brain_authored_short_cards_paginate_to_three_lines_max(self):
+        from tools.shorts import SCRIPTS, build_kinetic_stream
+
+        for key in ('short-psalm121', 'short-psalm27', 'short-psalm46', 'short-psalm34'):
+            if key not in SCRIPTS:
+                continue
+            fake_words = [(i * 0.45, i * 0.45 + 0.38, f'word{i}') for i in range(130)]
+            stream = build_kinetic_stream(key, fake_words, adur=58.0)
+            self.assertGreater(len(stream), 0, key)
+            for card in stream:
+                self.assertLessEqual(len(card['lines']), 3, f"{key}: {card['lines']}")
+
