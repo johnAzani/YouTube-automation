@@ -205,6 +205,14 @@ def _ffmpeg_exe() -> str | None:
     import shutil
 
     try:
+        from .assemble import ffmpeg_bin
+
+        exe = ffmpeg_bin()
+        if exe:
+            return exe
+    except Exception:
+        pass
+    try:
         import imageio_ffmpeg  # type: ignore
 
         exe = imageio_ffmpeg.get_ffmpeg_exe()
@@ -216,7 +224,7 @@ def _ffmpeg_exe() -> str | None:
 
 
 def _extract_video_frames(video_path: Path) -> list[Path]:
-    """Sample up to 3 candidate stills from a video asset so .mp4 B-roll can be scored."""
+    """Sample up to 4 candidate stills from a video asset so .mp4 B-roll can be scored."""
     import subprocess
 
     ffmpeg = _ffmpeg_exe()
@@ -228,7 +236,7 @@ def _extract_video_frames(video_path: Path) -> list[Path]:
     except OSError:
         return []
 
-    stamps = (1.5, 4.0, 7.5)
+    stamps = (0.4, 1.5, 4.0, 7.5)
     frames: list[Path] = []
     for idx, sec in enumerate(stamps):
         dest = cache_dir / f"{video_path.stem}_f{idx}.jpg"

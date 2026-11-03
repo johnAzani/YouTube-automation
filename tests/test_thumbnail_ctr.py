@@ -337,16 +337,20 @@ class TestTheFrameIsTheVideosOwnFootage(unittest.TestCase):
         self.assertIn("fetch_scene_assets", source)
 
     def test_mp4_asset_is_extracted_to_real_frame_for_backdrop(self):
-        import shutil
         import subprocess
-        if not shutil.which("ffmpeg"):
+        from pipeline.assemble import ffmpeg_bin
+
+        try:
+            ffmpeg = ffmpeg_bin()
+        except RuntimeError:
             self.skipTest("ffmpeg unavailable")
         mp4 = self.tmp / "scene-plate.mp4"
         subprocess.run(
             [
-                "ffmpeg", "-y", "-loglevel", "error",
-                "-loop", "1", "-t", "1.6",
+                ffmpeg, "-y", "-loglevel", "error",
+                "-loop", "1",
                 "-i", str(self.photos[0]),
+                "-t", "2.5",
                 "-vf", "scale=640:360",
                 "-c:v", "libx264", "-pix_fmt", "yuv420p",
                 str(mp4),
