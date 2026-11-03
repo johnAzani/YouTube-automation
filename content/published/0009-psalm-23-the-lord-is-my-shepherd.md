@@ -5,6 +5,8 @@ slug: psalm-23-the-lord-is-my-shepherd
 status: published
 published_on: "2026-10-31"
 youtube_video_id: "JZv67RNPCEI"
+youtube_status: "deleted_or_missing"
+thumbnail_revision: "ctr-v3-cinema"
 privacy: public
 format: longform
 niche: faith and prayer
@@ -70,8 +72,6 @@ originality:
   no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
   source_notes: true         # scriptures and classical commentaries documented
   ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
-youtube_status: "deleted_or_missing"
-thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Good Shepherd & Surrender of Want (Verse 1)
