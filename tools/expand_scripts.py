@@ -484,6 +484,11 @@ def main(argv=None) -> int:
     parser.add_argument("--diff", action="store_true", help="print a unified diff per job")
     args = parser.parse_args(argv)
 
+    write = args.write and not args.dry_run
+    if write and args.provider == "template":
+        print("refusing --write with the template provider: padding is not writing")
+        return 2
+
     jobs = under_gate()
     if args.ids:
         wanted = {i.strip() for i in args.ids.split(",") if i.strip()}
@@ -501,11 +506,6 @@ def main(argv=None) -> int:
             print(f"{job.job_id}  {job.words:>4}w  {job.path.name}{flag}")
         print(f"\n{len(jobs)} under the gate, {bad} with a scripture-label defect")
         return 1 if args.check and bad else 0
-
-    write = args.write and not args.dry_run
-    if write and args.provider == "template":
-        print("refusing --write with the template provider: padding is not writing")
-        return 2
 
     results = [expand_job(job, args.provider, args.target, write) for job in jobs]
     for res in results:

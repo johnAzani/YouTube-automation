@@ -260,6 +260,20 @@ def _guarded_chunk(client, text, voice_name, system_instruction, model, temp_raw
 WORDS_PER_MINUTE = 145
 
 
+def _is_daily_quota_error(err_lower: str) -> bool:
+    """True when Gemini explicitly reports daily free-tier exhaustion vs RPM burst."""
+    daily_tokens = (
+        "per_day",
+        "perday",
+        "requests per day",
+        "per day",
+        "daily quota",
+        "daily limit",
+        "generaterequestsperday",
+    )
+    return any(tok in err_lower for tok in daily_tokens)
+
+
 def _assert_not_truncated(audio: Path, text: str) -> None:
     """Refuse audio far shorter than the words it is meant to contain.
 
@@ -271,7 +285,7 @@ def _assert_not_truncated(audio: Path, text: str) -> None:
     from .tts import _probe_duration
 
     words = len(text.split())
-    if not words:
+    if words < 50:
         return
     expected = words / WORDS_PER_MINUTE * 60
     actual = _probe_duration(audio)
@@ -341,7 +355,45 @@ def _synthesize_single_chunk(
                 error = str(exc).lower()
                 if any(x in error for x in ("429", "resource_exhausted", "quota")):
                     from pipeline.quota_handler import GeminiQuotaExceededError, calculate_next_quota_reset_utc
-                    raise GeminiQuotaExceededError(str(exc), reset_utc=calculate_next_quota_reset_utc()) from exc
+                    if _is_daily_quota_error(error):
+                        raise GeminiQuotaExceededError(str(exc), reset_utc=calculate_next_quota_reset_utc()) from exc
+                    # 3-RPM burst rate limit on interactions.create: wait for the
+                    # 60s rolling window before declaring the whole day exhausted.
+                    last_burst = exc
+                    for burst_idx, burst_wait in enumerate((12, 22, 30), start=1):
+                        print(f"[gemini-tts] interactions burst rate limit (attempt {burst_idx}/3); "
+                              f"pausing {burst_wait}s for RPM window...", flush=True)
+                        time.sleep(burst_wait)
+                        try:
+                            interaction = client.interactions.create(
+                                timeout=http_timeout_seconds(),
+                                model=tts_model,
+                                input=[{"type": "user_input",
+                                        "content": [{"type": "text", "text": text}]}],
+                                response_format={"type": "audio"},
+                                generation_config={"speech_config": [{"voice": voice_name}]},
+                            )
+                        except Exception as burst_again:  # noqa: BLE001
+                            last_burst = burst_again
+                            again_low = str(burst_again).lower()
+                            if _is_daily_quota_error(again_low):
+                                break
+                            if any(x in again_low for x in ("429", "resource_exhausted", "quota")):
+                                continue
+                            raise
+                        output_audio = getattr(interaction, "output_audio", None)
+                        if output_audio and getattr(output_audio, "data", None):
+                            data_val = output_audio.data
+                            if isinstance(data_val, str):
+                                import base64
+                                temp_raw.write_bytes(base64.b64decode(data_val))
+                            else:
+                                temp_raw.write_bytes(data_val)
+                            return (getattr(output_audio, "mime_type",
+                                            "audio/pcm;rate=24000") or "audio/pcm")
+                    raise GeminiQuotaExceededError(
+                        str(last_burst), reset_utc=calculate_next_quota_reset_utc()
+                    ) from last_burst
                 if _transient(exc):
                     # 503 UNAVAILABLE ("high demand") is the single most common TTS
                     # failure at peak and it is *temporary*. Treating it like an
@@ -419,7 +471,7 @@ def _synthesize_single_chunk(
                         time.sleep(backoff)
                         continue
                 if "429" in err_msg or "resource_exhausted" in err_msg or "quota" in err_msg:
-                    if attempt < max_retries - 1:
+                    if not _is_daily_quota_error(err_msg) and attempt < max_retries - 1:
                         backoff = (attempt + 1) * 8
                         print(f"[gemini-tts] Rate limit reached. Pausing {backoff}s for burst limit to reset...")
                         time.sleep(backoff)
@@ -514,9 +566,11 @@ def synthesize_gemini_audio(
         finally:
             if temp_raw.is_file():
                 temp_raw.unlink()
+        _assert_not_truncated(out_path, text)
         return out_path
 
     # Multi-chunk synthesis for longform content
+    import hashlib
     chunk_wavs: list[Path] = []
     temp_dir = out_path.parent / f"_gemini_chunks_{out_path.stem}"
     temp_dir.mkdir(parents=True, exist_ok=True)
@@ -527,16 +581,24 @@ def synthesize_gemini_audio(
                   f"({budget.elapsed():.0f}s elapsed)")
             chunk_raw = temp_dir / f"chunk_{idx:03d}.raw"
             chunk_wav = temp_dir / f"chunk_{idx:03d}.wav"
-            # Resume: a run that stalls at chunk 9 must not repay chunks 1-8. The
-            # text is unchanged within one synthesis, so a finished chunk is valid.
+            chunk_sha = temp_dir / f"chunk_{idx:03d}.sha256"
+            expected_sha = hashlib.sha256(f"{voice_name}:{model}:{chunk}".encode("utf-8")).hexdigest()
+            # Resume: a run that stalls at chunk 9 must not repay chunks 1-8. Verify
+            # the chunk text hash so an expanded script never reuses stale audio.
             if chunk_wav.is_file() and chunk_wav.stat().st_size > 0:
-                chunk_wavs.append(chunk_wav)
-                _emit(f"TTS chunk {idx + 1}/{len(chunks)} reused from this attempt")
-                continue
+                cached_sha = chunk_sha.read_text(encoding="utf-8").strip() if chunk_sha.is_file() else expected_sha
+                if cached_sha == expected_sha:
+                    if not chunk_sha.is_file():
+                        chunk_sha.write_text(expected_sha, encoding="utf-8")
+                    chunk_wavs.append(chunk_wav)
+                    _emit(f"TTS chunk {idx + 1}/{len(chunks)} reused from this attempt")
+                    continue
+                chunk_wav.unlink(missing_ok=True)
             mime_type = _guarded_chunk(client, chunk, voice_name, system_instruction,
                                        model, chunk_raw, idx + 1, len(chunks))
             with hard_deadline(http_timeout_seconds(), f"audio conversion, chunk {idx + 1}"):
                 _convert_raw_audio(chunk_raw, chunk_wav, mime_type)
+            chunk_sha.write_text(expected_sha, encoding="utf-8")
             chunk_wavs.append(chunk_wav)
 
         # Concat chunks into final audio file with ffmpeg concat demuxer

@@ -156,6 +156,7 @@ jobs:
         run: |
           shopt -s nullglob
           for f in output/*/*.mp4; do
+            case "$f" in output/asset_cache/*|output/alignment-model/*) continue ;; esac
             size=$(du -h "$f" | cut -f1)
             specs=$(ffmpeg -hide_banner -i "$f" 2>&1 | grep -E 'Duration|Stream #' | tr -s ' ' | tr '\n' '/')
             echo "== $f ($size) $specs"
@@ -169,5 +170,8 @@ jobs:
           name: dry-render-${{ github.run_id }}
           path: |
             output/
+            !output/asset_cache/**
+            !output/alignment-model/**
+            !output/*/_gemini_chunks_*/**
             render.log
           retention-days: 7

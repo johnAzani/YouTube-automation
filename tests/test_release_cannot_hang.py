@@ -543,3 +543,27 @@ class ADeadQuotaStopsTheQueueInsteadOfBurningTomorrows(unittest.TestCase):
         text = (REPO / ".github" / "workflows" / "produce.yml").read_text(encoding="utf-8")
         self.assertIn("_gemini_chunks_", text,
                       "a finished chunk must not be paid for twice in one day")
+
+    def test_a_live_pause_blocks_even_when_later_jobs_are_approved(self):
+        import io
+        from contextlib import redirect_stdout
+        from datetime import datetime, timedelta, timezone
+        from pipeline import run
+
+        future = datetime.now(timezone.utc) + timedelta(hours=12)
+        buffer = io.StringIO()
+        with mock.patch.dict(os.environ, {"DRY_RUN": "0"}, clear=False), \
+             mock.patch.object(run.CONFIG, "dry_run", False), \
+             mock.patch.object(run, "select_jobs", return_value=[Path("content/queue/0019.md")]), \
+             mock.patch.object(run, "quota_blocked_until", return_value=future), \
+             mock.patch.object(run, "process") as proc_mock, \
+             redirect_stdout(buffer):
+            code = run.main(["--next"])
+        self.assertEqual(code, 3)
+        proc_mock.assert_not_called()
+
+    def test_daily_quota_error_detection_vs_rpm_burst(self):
+        from pipeline.gemini_tts import _is_daily_quota_error
+
+        self.assertTrue(_is_daily_quota_error("429 resource_exhausted: generate_requests_per_day exceeded"))
+        self.assertFalse(_is_daily_quota_error("429 resource_exhausted: rate limit reached per_minute"))

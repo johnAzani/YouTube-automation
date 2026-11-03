@@ -2,7 +2,7 @@
 **Document Status:** Permanent Single Source of Truth (`STATE.md`)  
 **Channel Identity:** *The Secret Place* (`@TheSecretPlace`)  
 **Production Studio:** Autonomous ₦0 / $0 Faith & Scripture Production Lab on GitHub Actions  
-**Last Synchronized:** 2026-11-02 (Nigeria time, WAT / UTC+1 — all human-facing times in this document are Nigeria time, see §7)  
+**Last Synchronized:** 2026-11-03 (Nigeria time, WAT / UTC+1 — all human-facing times in this document are Nigeria time, see §7)  
 **Primary Banking Rail:** First Bank of Nigeria (FBN) USD Domiciliary Account (`FBNINGLA`)
 
 ---
@@ -40,9 +40,9 @@
   * `GEMINI_API_KEY` (Free Google AI Studio key)
   * `AUTO_PUBLISH=true` (Releases publish directly as public)
 * **Release Schedule (`.github/workflows/produce.yml`):**
-  * `19:14 UTC` (20:14 WAT / **8:14pm local bedtime prayer surge**)
-  * `06:14 UTC` (07:14 WAT / morning scripture devotional)
-  * `14:14 UTC` (15:14 WAT / US transatlantic afternoon priming)
+  * `06:14 UTC` (**7:14am Nigeria time** — morning scripture devotional)
+  * `14:14 UTC` (**3:14pm Nigeria time** — US transatlantic afternoon priming)
+  * `20:14 UTC` (**9:14pm Nigeria time** — nighttime bedtime prayer surge)
 
 ### B. Nigerian Banking & Monetization Architecture (ALREADY ACTIVE)
 * **Target Bank:** First Bank of Nigeria (FBN).
@@ -83,45 +83,44 @@
 
 ## 3. Current Queue & Script Inventory
 
-### Approved & Ready for Production in `content/queue/` (24 scripts — full 30-night runway):
-1. `0009-psalm-23-the-lord-is-my-shepherd.md` (Next up for longform release; covers Nights 4–6)
-2. `0010-psalm-121-he-who-keeps-you-will-neither-slumber-no.md` (Approved; covers Nights 7–8)
-3. `0011-psalm-27-the-lord-is-my-light-and-my-salvation--fe.md` (Approved; covers Nights 10–11)
-4. `0013-psalm-46-god-is-our-refuge-and-strength.md` (Approved; covers Nights 12–13)
-5. `0014-psalm-34-the-angel-of-the-lord-encampeth.md` (Approved; covers Night 14)
-6. `0015-psalm-91-5-6-deliverance-from-terror-by-night.md` (Approved; covers Night 2)
-7. `0016-psalm-91-11-12-angelic-guardians-bed.md` (Approved; covers Night 3)
-8. `0017-psalm-4-8-in-peace-i-will-lie-down-and-sleep.md` (Approved; covers Night 9)
-9. `0018-psalm-3-3-5-the-shield-that-lifts-my-head.md` (Approved; covers Night 15)
-10. `0019-psalm-16-7-8-counsel-in-the-night-seasons.md` (Approved; covers Night 16)
-11. `0020-psalm-18-2-my-rock-my-fortress-my-deliverer.md` (Approved; covers Night 17)
-12. `0021-psalm-31-1-5-committing-my-spirit-to-his-hand.md` (Approved; covers Night 18)
-13. `0022-psalm-37-3-4-7-rest-in-the-lord-wait-patiently.md` (Approved; covers Night 19)
-14. `0023-psalm-63-5-7-remembering-god-upon-my-bed.md` (Approved; covers Night 20)
-15. `0024-psalm-139-11-12-darkness-is-as-light-to-him.md` (Approved; covers Night 21)
-16. `0025-proverbs-3-24-26-when-you-lie-down-sleep-is-sweet.md` (Approved; covers Night 22)
-17. `0026-isaiah-26-3-4-kept-in-perfect-peace.md` (Approved; covers Night 23)
-18. `0027-isaiah-41-10-upholding-you-with-his-right-hand.md` (Approved; covers Night 24)
-19. `0028-matthew-11-28-30-rest-for-the-weary-soul.md` (Approved; covers Night 25)
-20. `0029-john-14-27-my-peace-i-give-unto-you.md` (Approved; covers Night 26)
-21. `0030-philippians-4-6-7-the-peace-that-guards-heart-and-mind.md` (Approved; covers Night 27)
-22. `0031-2-timothy-1-7-power-love-and-a-sound-mind.md` (Approved; covers Night 28)
-23. `0032-1-peter-5-6-7-casting-all-your-care-upon-him.md` (Approved; covers Night 29)
-24. `0033-numbers-6-24-26-the-priestly-benediction-of-peace.md` (Approved; covers Night 30)
+### Approved & Ready for Production in `content/queue/` (20 full-length prayers ≥ 850 spoken words + 5 Shorts):
+1. `0011-psalm-27-the-lord-is-my-light-and-my-salvation--fe.md` (Approved, 967 spoken words — re-authored with authentic KJV Psalm 27)
+2. `0014-psalm-34-the-angel-of-the-lord-encampeth.md` (Approved, 922 spoken words)
+3. `0015-psalm-91-5-6-deliverance-from-terror-by-night.md` (Approved, 882 spoken words)
+4. `0016-psalm-91-11-12-angelic-guardians-bed.md` (Approved, 885 spoken words)
+5. `0017-psalm-4-8-in-peace-i-will-lie-down-and-sleep.md` (Approved, 888 spoken words — unpaused after false burst `429`)
+6. `0019-psalm-16-7-8-counsel-in-the-night-seasons.md` (Approved, 958 spoken words)
+7. `0020-psalm-18-2-my-rock-my-fortress-my-deliverer.md` (Approved, 902 spoken words)
+8. `0021-psalm-31-1-5-committing-my-spirit-to-his-hand.md` (Approved, 1,123 spoken words)
+9. `0022-psalm-37-3-4-7-rest-in-the-lord-wait-patiently.md` (Approved, 900 spoken words)
+10. `0023-psalm-63-5-7-remembering-god-upon-my-bed.md` (Approved, 892 spoken words)
+11. `0024-psalm-139-11-12-darkness-is-as-light-to-him.md` (Approved, 888 spoken words)
+12. `0025-proverbs-3-24-26-when-you-lie-down-sleep-is-sweet.md` (Approved, 918 spoken words)
+13. `0026-isaiah-26-3-4-kept-in-perfect-peace.md` (Approved, 1,029 spoken words)
+14. `0027-isaiah-41-10-upholding-you-with-his-right-hand.md` (Approved, 883 spoken words)
+15. `0028-matthew-11-28-30-rest-for-the-weary-soul.md` (Approved, 853 spoken words)
+16. `0029-john-14-27-my-peace-i-give-unto-you.md` (Approved, 1,075 spoken words)
+17. `0030-philippians-4-6-7-the-peace-that-guards-heart-and-mind.md` (Approved, 895 spoken words)
+18. `0031-2-timothy-1-7-power-love-and-a-sound-mind.md` (Approved, 876 spoken words)
+19. `0032-1-peter-5-6-7-casting-all-your-care-upon-him.md` (Approved, 875 spoken words)
+20. `0033-numbers-6-24-26-the-priestly-benediction-of-peace.md` (Approved, 855 spoken words)
 
-### Night-to-Queue Coverage Map (30/30 complete):
-* Night 1 (Psalm 91:1-2) → Published `0008-psalm-91-prayer-of-divine-protection.md`
-* Nights 2–3 → `0015`, `0016` (Psalm 91:5-6, Psalm 91:11-12)
-* Nights 4–6 → `0009` (Psalm 23)
-* Nights 7–8 → `0010` (Psalm 121)
-* Night 9 → `0017` (Psalm 4:8)
-* Nights 10–11 → `0011` (Psalm 27)
-* Nights 12–13 → `0013` (Psalm 46)
-* Night 14 → `0014` (Psalm 34)
-* Nights 15–30 → `0018` through `0033` (Psalm 3 through Numbers 6:24-26)
+### Armed Brain-Authored Shorts in `content/shorts-queue/` + `content/shorts-scripts/`:
+* `short-psalm23`, `short-psalm121`, `short-psalm27`, `short-psalm46`, `short-psalm34` — all 5 validated, upgraded to full uppercase DOCOGA REELS v2 kinetic cards, and wired with automatic local `words-{key}.json` alignment.
 
 ### Published Video Records in `content/published/`:
+* `0008-psalm-91-prayer-of-divine-protection.md` (`7RDX0fbIOtQ` — Psalm 91)
+* `0009-psalm-23-the-lord-is-my-shepherd.md` (`JZv67RNPCEI` — Psalm 23)
+* `0010-psalm-121-he-who-keeps-you-will-neither-slumber-no.md` (`6M6oV8MxD9s` — Psalm 121)
+* `0013-psalm-46-god-is-our-refuge-and-strength.md` (`1g8TXHD0Xks` — Psalm 46)
+* `0018-psalm-3-3-5-the-shield-that-lifts-my-head.md` (`vs2xt72CgcI` — Psalm 3:3-5, published Tuesday 3 November 2026 at 11:24am Nigeria time)
 * `short-0002-psalm-91-prayer-of-protection.md` (`SG69BbNlfRw` / `short-psalm91`)
+* `short-0001-enron-70b-fraud.md` (`DLEWL6dm5lo` / legacy)
+
+### 2026-11-03 Autonomous Hardening Summary (Tuesday 3 November, Nigeria time):
+* **Brain-Authored Shorts Engine Completed End-to-End:** `pipeline/short_release.py` now generates `assets/deepdive/words-{key}.json` via local CPU `faster-whisper` (with deterministic proportional fallback), dynamically synthesizes `ShortEdition` metadata for any future brain-authored Short spec, pauses cleanly on daily quota exhaustion, and uses `short-prayer-cover-poster.jpg` for all prayer Shorts; `tools/shorts.py` renders all prayer Shorts with full DOCOGA REELS v2 kinetic typography, sequential word-aligned captions, punctuation-tolerant anchor matching, and clean procedural-plate source manifests.
+* **TTS Burst Resilience & Quota Gating:** `pipeline/gemini_tts.py` distinguishes 3-RPM burst `429`s from daily free-tier exhaustion across both `interactions.create` and `models.generate_content`, checks single-chunk audio against truncation, and caches chunks with `.sha256` verification (`save-always: true` in `produce.yml`); `pipeline/run.py` enforces `quota_blocked_until()` before starting subsequent queue jobs and skips manual release-ticket issues on `privacy: public` uploads.
+* **Hermetic Crisis/Comment Guards & Watchdog Self-Healing:** `scripts/reply_comments.py` and `tests/test_comments_end_to_end.py` never escalate simulated/dry-run/test comments to GitHub issues; `monitor.yml` granted `contents: write`; `gemini_brain.yml` aligned on `concurrency: group: content-state`; `pipeline_watchdog.py` sweeps synthetic `c4`/`c_sim_6` issues and superseded public release tickets automatically in CI.
 
 ### Factcheck Worksheets in `content/factcheck/`:
 * 19 worksheets generated for queue scripts `0015`–`0033` via `scripts/factcheck.py`

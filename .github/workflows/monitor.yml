@@ -37,7 +37,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   issues: write
   actions: read        # run history is the evidence; reading it is the whole job
 

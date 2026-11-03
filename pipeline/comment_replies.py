@@ -192,11 +192,26 @@ STRICT INVARIANTS:
 """
 
 
+def _clean_salutation(author: str) -> str:
+    """Turn a YouTube display name or @handle into a warm human salutation."""
+    raw = (author or "").strip()
+    if not raw:
+        return "Friend"
+    if raw.startswith("@"):
+        stem = re.split(r"[-_.\d\s]+", raw.lstrip("@"))[0]
+        clean = re.sub(r"[^a-zA-Z]", "", stem)
+        if len(clean) < 2 or clean.lower() in {"user", "channel", "youtube", "anon", "anonymous"}:
+            return "Friend"
+        return clean.capitalize()
+    first = re.sub(r"[^a-zA-Z]", "", raw.split()[0])
+    if len(first) < 2 or first.lower() in {"user", "anon", "anonymous"}:
+        return "Friend"
+    return first
+
+
 def generate_fallback_reply(author: str, text: str, category: str) -> str:
     """Curated theological fallback replies if Gemini API is temporarily offline."""
-    first_name = author.split()[0] if author else "Friend"
-    # Sanitize name
-    first_name = re.sub(r"[^a-zA-Z]", "", first_name) or "Friend"
+    first_name = _clean_salutation(author)
 
     if category == "CRISIS_DISTRESS":
         return (
@@ -284,8 +299,9 @@ def generate_reply_with_gemini(
     if not client:
         return generate_fallback_reply(comment.author_name, comment.text, comment.category)
 
+    safe_name = _clean_salutation(comment.author_name)
     user_prompt = f"""
-Viewer Display Name: {comment.author_name}
+Viewer Display Name: {safe_name}
 Viewer Comment: "{comment.text}"
 Detected Category: {comment.category}
 

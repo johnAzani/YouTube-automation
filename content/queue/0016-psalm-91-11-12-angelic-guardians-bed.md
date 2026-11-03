@@ -80,6 +80,9 @@ You do not walk any path unguarded. You do not sleep any night unwatched.
 
 Heavenly Father, as I prepare to close my eyes, I lean into the profound truth that You have dispatched Your celestial host specifically for me this night. I thank You that Your command is unyielding, and Your care for my soul extends into the deepest slumber. Let this awareness quiet every anxious thought and still every restless spirit within me. I ask that these charged angels stand guard over my mind, preventing any disturbing dreams or unsettling influences from touching my spirit, ensuring my rest is truly blessed and secure under their vigilant watch. Amen.
 
+
+May every breath I draw upon this pillow remind my spirit that heaven's messengers never grow weary, standing faithful vigil around my thoughts, my household, and my slumber until morning light returns.
+
 ## Scene 2 — To Keep You in All Your Ways (Verse 11b)
 
 In every way — your thoughts, your steps, your decisions, your rest — divine guardians keep watch.
@@ -116,6 +119,9 @@ Sleep without fear of harm. You are surrounded by an invisible garrison of divin
 
 Merciful Father, Your meticulous care, which prevents even a foot from dashing against a stone, fills my heart with profound peace. I pray for Your comprehensive protection over my physical body as I sleep, guarding against any illness, pain, or discomfort that might seek to disturb my rest. Let this divine shield encompass every aspect of my being, dispelling all fear of accidents or unexpected troubles. Grant me the deep, undisturbed sleep of one fully confident in Your sovereign attention to the smallest details of my existence. Amen.
 
+
+Where tension has gathered in my neck, my chest, or my weary limbs, let Your calming warmth loosen every knot of strain and remind my heart that nothing concerning my household ever escapes Your watchful eye.
+
 ## Scene 5 — Sleep Under Angelic Watch (Verses 11–12 Synthesis)
 
 From the charge given to the angels, to the keeping in all your ways, to the bearing up in their hands — every word of this promise is for you tonight.
@@ -125,5 +131,8 @@ Close your eyes knowing that heavenly guardians stand at the door of your room, 
 No evil shall come near you, for the Lord has commanded His angels concerning you.
 
 Gracious God, as I finally yield to sleep, I carry the powerful synthesis of Your promises: the charge given, the keeping in all my ways, and the bearing up in hands. I embrace the reality that Your heavenly guardians are not just around me, but intimately involved in my protection throughout this night. Thank You for this unparalleled watch, for sealing off every entryway to harm, and for ushering in a profound sense of security. May I awaken in the morning refreshed, renewed, and acutely aware of Your enduring presence that guarded me through the dark. Amen.
+
+
+Cover every loved one connected to my prayers tonight beneath that same celestial guard, filling each quiet room with sanctuary peace until daybreak.
 
 Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.

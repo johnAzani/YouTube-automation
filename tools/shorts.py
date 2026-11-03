@@ -739,31 +739,74 @@ def align_card_words_to_speech(card_words, seg_words, default_t0, default_t1):
             aligned.append((prev_t, prev_t + 0.35))
     return aligned
 
-def build_kinetic_stream(key, raw_words):
-    phrases_def = SCRIPTS[key].get('kinetic_phrases')
+def _map_authored_clause_ranges(clauses, raw_words):
+    """Map brain-authored clauses sequentially onto `raw_words` word indices."""
+    import re
+    total_raw = len(raw_words)
+    if total_raw == 0:
+        return [(0, 0) for _ in clauses]
+    counts = [
+        max(1, len([w for w in re.split(r'\s+', str(c[2]).strip()) if re.sub(r"[^a-z0-9']+", '', w.lower())]))
+        for c in clauses
+    ]
+    ranges = []
+    cursor = 0
+    sum_counts = max(1, sum(counts))
+    for idx, cnt in enumerate(counts):
+        if idx == len(counts) - 1:
+            w0 = min(cursor, total_raw - 1)
+            w1 = total_raw - 1
+        else:
+            # Scale slightly if spoken tokenization differs by 1-2 words from text split
+            scaled = max(1, round(cnt * total_raw / sum_counts))
+            w0 = min(cursor, total_raw - 1)
+            w1 = min(total_raw - 1, max(w0, cursor + scaled - 1))
+            cursor = min(total_raw - 1, w1 + 1)
+        ranges.append((w0, w1))
+    return ranges
+
+
+def build_kinetic_stream(key, raw_words, adur=None):
+    cfg = SCRIPTS[key]
+    phrases_def = cfg.get('kinetic_phrases')
     if not phrases_def:
         return []
+    authored = bool(cfg.get('authored_spec'))
+    clause_ranges = (
+        _map_authored_clause_ranges(cfg.get('captions') or [], raw_words)
+        if authored and cfg.get('captions') and len(cfg.get('captions')) == len(phrases_def)
+        else None
+    )
     stream = []
     for idx, entry in enumerate(phrases_def):
         if len(entry) == 5 and isinstance(entry[2], (list, tuple)):
             w0, w1, lines_list, acc, kck = entry
-            lines = list(lines_list)
+            lines = [str(l).upper() for l in lines_list if l]
             l1 = lines[0] if len(lines) > 0 else ''
             l2 = lines[1] if len(lines) > 1 else ''
         elif len(entry) == 4 and isinstance(entry[2], (list, tuple)):
             w0, w1, lines_list, acc = entry
-            lines = list(lines_list)
+            lines = [str(l).upper() for l in lines_list if l]
             l1 = lines[0] if len(lines) > 0 else ''
             l2 = lines[1] if len(lines) > 1 else ''
             kck = SACRED_KICKERS[idx] if idx < len(SACRED_KICKERS) else 'COVENANT OF PEACE'
         elif len(entry) == 6:
             w0, w1, l1, l2, acc, kck = entry
-            lines = [l for l in (l1, l2) if l]
+            lines = [str(l).upper() for l in (l1, l2) if l]
         else:
             w0, w1, l1, l2, acc = entry
-            lines = [l for l in (l1, l2) if l]
+            lines = [str(l).upper() for l in (l1, l2) if l]
             kck = SACRED_KICKERS[idx] if idx < len(SACRED_KICKERS) else 'COVENANT OF PEACE'
-        seg = raw_words[w0:w1 + 1]
+        if clause_ranges is not None:
+            rw0, rw1 = clause_ranges[idx]
+            seg = raw_words[rw0:rw1 + 1]
+        elif authored or isinstance(w0, float) or isinstance(w1, float) or int(w1) >= len(raw_words):
+            seg = [w for w in raw_words if float(w0) - 0.15 <= w[0] <= float(w1) + 0.25]
+            if not seg and raw_words:
+                approx_idx = min(len(raw_words) - 1, int((idx / max(1, len(phrases_def))) * len(raw_words)))
+                seg = [raw_words[approx_idx]]
+        else:
+            seg = raw_words[int(w0):int(w1) + 1]
         t_start = seg[0][0]
         t_end = seg[-1][1]
         all_cwords = [w for l in lines for w in l.split()]
@@ -774,7 +817,7 @@ def build_kinetic_stream(key, raw_words):
             lines=lines,
             line1=l1,
             line2=l2,
-            accent_words=acc,
+            accent_words=[str(a).upper() for a in acc],
             kicker=kck,
             words=seg,
             card_words=all_cwords,
@@ -789,11 +832,12 @@ def build_kinetic_stream(key, raw_words):
         else:
             stream[i]['disp_t0'] = stream[i - 1]['t1']
 
+    end_cap = (adur - 0.4) if adur is not None else (39.55 if key == 'short-psalm91' else stream[-1]['t1'] + 0.35)
     for i in range(len(stream)):
         if i + 1 < len(stream):
-            stream[i]['disp_t1'] = stream[i]['t1']
+            stream[i]['disp_t1'] = max(stream[i]['disp_t0'] + 0.2, stream[i]['t1'])
         else:
-            stream[i]['disp_t1'] = 39.55
+            stream[i]['disp_t1'] = max(stream[i]['t1'], end_cap)
     return stream
 
 def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False, canvas_size=None):
@@ -912,7 +956,12 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False, canvas_size=Non
             is_active = (w_t0 <= t < w_t1)
             is_upcoming = (t < w_t0)
 
-            is_accent = any(aw in w for aw in active['accent_words'])
+            w_clean_up = ''.join(ch for ch in w.upper() if ch.isalnum())
+            is_accent = any(
+                ''.join(ch for ch in str(aw).upper() if ch.isalnum()) in w_clean_up
+                for aw in active['accent_words']
+                if aw
+            )
 
             if is_active:
                 col = (255, 222, 60, int(255 * alpha))          # Blazing active gold
@@ -977,10 +1026,22 @@ def kinetic_typography_layer(bg_rgb, stream, t, is_prayer=False, canvas_size=Non
     return layer
 
 def build_caption_stream(key, raw_words):
-    clauses = SCRIPTS[key]['captions']
+    cfg = SCRIPTS[key]
+    clauses = cfg['captions']
+    authored = bool(cfg.get('authored_spec'))
+    clause_ranges = _map_authored_clause_ranges(clauses, raw_words) if authored else None
     stream = []
-    for i0, i1, text in clauses:
-        seg = raw_words[i0:i1 + 1]
+    for idx, (i0, i1, text) in enumerate(clauses):
+        if clause_ranges is not None:
+            rw0, rw1 = clause_ranges[idx]
+            seg = raw_words[rw0:rw1 + 1]
+        elif isinstance(i0, float) or isinstance(i1, float) or int(i1) >= len(raw_words):
+            seg = [w for w in raw_words if float(i0) - 0.15 <= w[0] <= float(i1) + 0.25]
+            if not seg and raw_words:
+                approx_idx = min(len(raw_words) - 1, int((idx / max(1, len(clauses))) * len(raw_words)))
+                seg = [raw_words[approx_idx]]
+        else:
+            seg = raw_words[int(i0):int(i1) + 1]
         t_start, t_end = seg[0][0], seg[-1][1]
         cwords = text.split()
         n = len(cwords)
@@ -1274,19 +1335,46 @@ def load_words(key):
     path = os.path.join(AUDIO, f'words-{key}.json')
     return json.load(open(path))
 
+def _norm_anchor_token(tok):
+    import re
+    return re.sub(r"[^a-z0-9']+", '', str(tok).lower()).strip("'")
+
+
 def find_phrase(words, phrase, occ=0):
-    ws = phrase.split()
-    hits = []
-    for i in range(len(words) - len(ws) + 1):
-        if [words[i + j][2] for j in range(len(ws))] == ws:
-            hits.append(words[i:i + len(ws)])
-    return hits[occ] if len(hits) > occ else None
+    ws = [_norm_anchor_token(t) for t in str(phrase).split()]
+    ws = [t for t in ws if t]
+    if not ws or not words:
+        return None
+    norm_words = [_norm_anchor_token(w[2]) for w in words]
+    # Try full normalized phrase first, then progressive prefix down to 2 words
+    min_len = 1 if len(ws) == 1 else 2
+    for span in range(len(ws), min_len - 1, -1):
+        target = ws[:span]
+        hits = []
+        for i in range(len(words) - span + 1):
+            if norm_words[i:i + span] == target:
+                hits.append(words[i:i + span])
+        if len(hits) > occ:
+            return hits[occ]
+        if hits and occ > 0:
+            return hits[-1]
+    # Last-resort single distinctive word (>=4 chars)
+    for tok in ws:
+        if len(tok) >= 4:
+            hits = [[words[i]] for i, nw in enumerate(norm_words) if nw == tok]
+            if hits:
+                return hits[min(occ, len(hits) - 1)]
+    return None
 
 def resolve_beats(key, words):
+    authored = bool(SCRIPTS[key].get('authored_spec'))
     beats = []
     for b in SCRIPTS[key]['beats']:
         hit = find_phrase(words, b['a'], b.get('occ', 0))
         if not hit:
+            if authored:
+                print(f'  [shorts] skipping unmatched authored beat anchor in {key}: {b["a"]!r}')
+                continue
             raise SystemExit(f'beat anchor not found in words-{key}.json: {b["a"]!r}')
         b2 = dict(b)
         b2['t0'] = hit[0][0]
@@ -1304,7 +1392,9 @@ def resolve_beats(key, words):
     return beats
 
 def resolve_scenes(key, words, total_dur):
+    authored = bool(SCRIPTS[key].get('authored_spec'))
     raw_scenes = SCRIPTS[key]['scenes']
+    n_sc = max(1, len(raw_scenes))
     resolved = []
     for idx, sc in enumerate(raw_scenes):
         sc2 = dict(sc)
@@ -1313,21 +1403,40 @@ def resolve_scenes(key, words, total_dur):
         else:
             hit = find_phrase(words, sc['a'], sc.get('occ', 0))
             if not hit:
-                raise SystemExit(f'scene anchor not found in words-{key}.json: {sc["a"]!r}')
-            sc2['t0'] = max(0.0, hit[0][0] - 0.15)
+                if authored:
+                    prev_t = resolved[-1]['t0']
+                    est_t = max(prev_t + 1.2, (total_dur * idx) / n_sc)
+                    print(f'  [shorts] interpolating scene {idx + 1} anchor in {key}: {sc["a"]!r} -> {est_t:.2f}s')
+                    sc2['t0'] = min(max(0.5, total_dur - 1.5), est_t)
+                else:
+                    raise SystemExit(f'scene anchor not found in words-{key}.json: {sc["a"]!r}')
+            else:
+                sc2['t0'] = max(0.0, hit[0][0] - 0.15)
         resolved.append(sc2)
     for idx in range(1, len(resolved)):
         if resolved[idx]['t0'] <= resolved[idx - 1]['t0']:
-            raise SystemExit(
-                f"scene order error in {key}: {resolved[idx]['kicker']!r} t0={resolved[idx]['t0']:.2f} "
-                f"<= previous {resolved[idx - 1]['t0']:.2f} — list scenes in spoken order"
-            )
+            if authored:
+                next_bound = (
+                    resolved[idx + 1]['t0']
+                    if idx + 1 < len(resolved) and resolved[idx + 1]['t0'] > resolved[idx - 1]['t0'] + 1.0
+                    else total_dur - 0.8
+                )
+                resolved[idx]['t0'] = min(
+                    max(resolved[idx - 1]['t0'] + 0.8, (resolved[idx - 1]['t0'] + next_bound) / 2.0),
+                    max(resolved[idx - 1]['t0'] + 0.4, total_dur - 0.6),
+                )
+            else:
+                raise SystemExit(
+                    f"scene order error in {key}: {resolved[idx]['kicker']!r} t0={resolved[idx]['t0']:.2f} "
+                    f"<= previous {resolved[idx - 1]['t0']:.2f} — list scenes in spoken order"
+                )
     for idx in range(len(resolved)):
         resolved[idx]['t1'] = resolved[idx + 1]['t0'] if idx + 1 < len(resolved) else total_dur
     return resolved
 
 # --------------------------------------------------- speech-synced beats ----
 def build_music_plan(key, words, beats):
+    authored = bool(SCRIPTS[key].get('authored_spec'))
     hushes, swells = [], []
     for b in beats:
         if b.get('kind') == 'count':
@@ -1342,6 +1451,8 @@ def build_music_plan(key, words, beats):
         h = dict(cue['hush'])
         hit = find_phrase(words, h['a'], h.get('occ', 0))
         if not hit:
+            if authored:
+                continue
             raise SystemExit(f"hush anchor not found: {h['a']!r}")
         hushes.append(dict(t=hit[0][0], dur=h.get('dur', 1.2), depth=h.get('depth', 0.85), lead=h.get('lead', 0.5)))
     return hushes, swells
@@ -1974,7 +2085,7 @@ def main(key):
     beats = resolve_beats(key, words)
     scenes = resolve_scenes(key, words, total)
     cap_stream = build_caption_stream(key, words)
-    kinetic_stream = build_kinetic_stream(key, words)
+    kinetic_stream = build_kinetic_stream(key, words, adur=adur)
 
     if os.environ.get('ENABLE_STOCK_BROLL', '1').strip().lower() not in ('0', 'false', 'no', 'off'):
         try:
@@ -2016,6 +2127,7 @@ def main(key):
                 if 'synthetic' not in plate_cache:
                     plate_cache['synthetic'] = synthetic_plate(sc, key)
                 sc['fallback_plate'] = plate_cache['synthetic']
+                sc['fallback_is_synthetic'] = True
                 sc['plate'] = None
                 print(f"  scene {sc['t0']:5.1f}-{sc['t1']:5.1f}s | PLATE "
                       f"(video scene, no photo for {sc['img']})")
@@ -2030,7 +2142,7 @@ def main(key):
                 if 'synthetic' not in plate_cache:
                     plate_cache['synthetic'] = synthetic_plate(sc, key)
                 sc['plate'] = plate_cache['synthetic']
-                sc['used_fallback'] = True
+                sc['used_synthetic_plate'] = True
                 sc['img'] = sc.get('img') or ''
                 print(f"  scene {sc['t0']:5.1f}-{sc['t1']:5.1f}s | PLATE "
                       f"(no photo for {os.path.basename(str(source_path))})")
@@ -2041,7 +2153,7 @@ def main(key):
             label = (f"{sc.get('source')} {sc.get('source_size')}" if sc.get('media_path') else sc['img'])
             print(f"  scene {sc['t0']:5.1f}-{sc['t1']:5.1f}s | PHOTO {label}")
 
-    for _line in LICENCE_REPORT(sorted({sc['img'] for sc in scenes if not sc.get('media_path')})):
+    for _line in LICENCE_REPORT(sorted({sc['img'] for sc in scenes if not sc.get('media_path') and sc.get('img') and not sc.get('used_synthetic_plate')})):
         print(_line)
 
     music = os.path.join(AUDIO, f'music-{key}.wav')
@@ -2094,7 +2206,10 @@ def main(key):
             if source is None:
                 source = sc['fallback_plate']
                 sc['media_kind'] = 'image'
-                sc['used_fallback'] = True
+                if sc.get('fallback_is_synthetic'):
+                    sc['used_synthetic_plate'] = True
+                else:
+                    sc['used_fallback'] = True
                 stop_video_plate(video_proc)
                 video_proc = None
                 active_video_scene = -1
@@ -2105,7 +2220,7 @@ def main(key):
             source = sc['plate']
 
         sc['last_source'] = source
-        is_prayer = (key == 'short-psalm91' or 'prayer' in key)
+        is_prayer = bool(cfg.get('is_prayer')) or (key == 'short-psalm91' or 'psalm' in key or 'prayer' in key)
         # DOCOGA REELS v2: camera punch-in on scene start (4% zoom-in easing) and accelerate-out
         punch_z = (1.0 + 0.035 * (1.0 - ease_out_cubic(clamp01(pos / 0.45)))) if is_prayer else 1.0
         accel_z = (1.0 + 0.020 * ease_out_cubic(clamp01((pos - (sc_dur - 0.20)) / 0.20))) if (is_prayer and pos > sc_dur - 0.20) else 1.0
@@ -2167,17 +2282,30 @@ def main(key):
 
     report = []
     for si, sc in enumerate(scenes):
-        report.append(dict(
-            scene=si + 1,
-            query=(cfg.get('stock_queries') or [''] * len(scenes))[si],
-            media=('authored photo fallback' if not sc.get('media_path') or sc.get('used_fallback') else sc.get('media_kind')),
-            provider=sc.get('source', 'existing story archive'),
-            source_url=sc.get('source_url', ''),
-            license=(sc.get('license_note') if sc.get('media_path') else LICENCE_NOTE(sc.get('img', ''))),
-            dimensions=sc.get('source_size', None),
-            fallback=(not bool(sc.get('media_path')) or bool(sc.get('used_fallback', False))),
-            file=sc.get('media_path', sc.get('img', '')),
-        ))
+        if sc.get('used_synthetic_plate'):
+            report.append(dict(
+                scene=si + 1,
+                query=(cfg.get('stock_queries') or [''] * len(scenes))[si],
+                media='procedural sacred plate',
+                provider='procedural',
+                source_url='',
+                license='Public Domain / 100% procedural render',
+                dimensions=(W, H),
+                fallback=False,
+                file='',
+            ))
+        else:
+            report.append(dict(
+                scene=si + 1,
+                query=(cfg.get('stock_queries') or [''] * len(scenes))[si],
+                media=('authored photo fallback' if not sc.get('media_path') or sc.get('used_fallback') else sc.get('media_kind')),
+                provider=sc.get('source', 'existing story archive'),
+                source_url=sc.get('source_url', ''),
+                license=(sc.get('license_note') if sc.get('media_path') else LICENCE_NOTE(sc.get('img', ''))),
+                dimensions=sc.get('source_size', None),
+                fallback=(not bool(sc.get('media_path')) or bool(sc.get('used_fallback', False))),
+                file=sc.get('media_path', sc.get('img', '')),
+            ))
     report_dir = os.path.join(ROOT, 'output', 'short-stock', key)
     os.makedirs(report_dir, exist_ok=True)
     with open(os.path.join(report_dir, 'scene-sources.json'), 'w', encoding='utf-8') as f:

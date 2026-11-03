@@ -244,7 +244,7 @@ def main() -> int:
         reply_text = generate_reply_with_gemini(c, api_key=engine.gemini_api_key)
         print(f"  Drafted Reply: \"{reply_text}\"")
 
-        if c.category == "CRISIS_DISTRESS":
+        if c.category == "CRISIS_DISTRESS" and not args.reply_to_crisis:
             held.append({"comment_id": c.comment_id, "author": c.author_name,
                          "video_id": c.video_id, "text": c.text, "draft": reply_text})
 
@@ -269,7 +269,7 @@ def main() -> int:
               "failed": len(failures), "held_for_human": len(held),
               "ledger": len(engine.replied_log),
               "target": args.video_id or "all channel videos"})
-    if held:
+    if held and not is_dry_run and not args.simulate:
         _escalate_crisis(held)
     if attempted and not replied_count and failures:
         print("::error title=No reply was posted::every insert failed — see the log above")

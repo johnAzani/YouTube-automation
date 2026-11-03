@@ -8,6 +8,7 @@ These tests drive the real CLI with a fake YouTube service — fetch, classify,
 draft, insert, persist the ledger — and pin that a broken run cannot exit 0.
 """
 import io
+import os
 import re
 import sys
 import tempfile
@@ -106,6 +107,10 @@ class CLITestCase(unittest.TestCase):
         log_patch = mock.patch.object(cr, "DEFAULT_REPLIED_LOG", self.log)
         log_patch.start()
         self.addCleanup(log_patch.stop)
+
+        env_patch = mock.patch.dict(os.environ, {"GH_TOKEN": "", "GITHUB_TOKEN": ""}, clear=False)
+        env_patch.start()
+        self.addCleanup(env_patch.stop)
 
     def run_cli(self, argv, youtube):
         import scripts.reply_comments as cli
@@ -256,6 +261,28 @@ class TestTheWorkflowActuallyPosts(unittest.TestCase):
 
     def test_the_ledger_file_exists_in_the_repo(self):
         self.assertTrue((ROOT / "content" / "comments" / "replied.json").is_file())
+
+
+class TestCrisisHermeticGuards(CLITestCase):
+    def test_reply_to_crisis_does_not_also_escalate_issue(self):
+        youtube = FakeYouTube([thread("c4", "I want to end my life tonight", author="Ann")])
+        with mock.patch("scripts.reply_comments._escalate_crisis") as esc:
+            code, _, _ = self.run_cli(["--apply", "--reply-to-crisis"], youtube)
+        self.assertEqual(code, 0)
+        esc.assert_not_called()
+
+    def test_simulate_and_dry_run_never_escalate_crisis_issues(self):
+        youtube = FakeYouTube([thread("c4", "I want to end my life tonight", author="Ann")])
+        with mock.patch("scripts.reply_comments._escalate_crisis") as esc:
+            self.run_cli(["--simulate"], youtube)
+            self.run_cli(["--dry-run"], youtube)
+        esc.assert_not_called()
+
+    def test_handle_author_salutation_never_leaks_at_sign(self):
+        reply = cr.generate_fallback_reply("@grace-i8g", "Amen! Thank you Lord", "AMEN_AFFIRMATION")
+        self.assertNotIn("@", reply)
+        self.assertIn("Grace", reply)
+        self.assertTrue(cr._reply_is_safe(reply))
 
 
 if __name__ == "__main__":

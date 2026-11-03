@@ -23,10 +23,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from pipeline.script_doc import parse_script  # noqa: E402
+from pipeline.script_doc import MIN_LONGFORM_WORDS, parse_script  # noqa: E402
 
 # Must match the gate in pipeline/prayer_pipeline.py.
-MIN_WORDS = 650
+MIN_WORDS = MIN_LONGFORM_WORDS
 # Measured Charon delivery is 2.6 words/second in the approved renderer.
 WORDS_PER_SECOND = 2.6
 

@@ -409,6 +409,8 @@ def _open_release_ticket(doc: ScriptDoc, url: str, privacy: str, video_id: str =
 
     if not os.environ.get("GITHUB_ACTIONS"):
         return
+    if str(privacy or "").strip().lower() == "public":
+        return
     title = f"Release ticket: {doc.title}"
     studio = f"https://studio.youtube.com/video/{video_id}/edit" if video_id else ""
     shorts_url = (
@@ -563,10 +565,18 @@ def main(argv: list[str] | None = None) -> int:
         return record_published_jobs()
 
     paths = select_jobs(args.all, args.job, args.next)
+    if not dry and not args.job:
+        # Quota first: while any long-form pause is still live, starting the NEXT
+        # approved script in the queue spends tomorrow's 10 requests/day allowance
+        # instead of letting the paused script finish after reset.
+        blocked = quota_blocked_until()
+        if blocked is not None:
+            print(f"::error title=Release did not publish::Gemini's free-tier TTS "
+                  f"allowance (10 requests/day) is spent until "
+                  f"{blocked.isoformat()} UTC. The next slot after that will publish; "
+                  f"nothing was uploaded and nothing was wasted today.", flush=True)
+            return 3
     if not paths:
-        # Quota first: it is the one reason that is nobody's mistake and has a time
-        # attached. Starting another video while a pause is live just spends
-        # tomorrow's ten requests today.
         blocked = quota_blocked_until()
         if blocked is not None:
             print(f"::error title=Release did not publish::Gemini's free-tier TTS "

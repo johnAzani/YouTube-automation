@@ -128,12 +128,19 @@
       0,
       10,
       [
-        "TAKE A DEEP, CALMING BREATH NOW.",
-        "LET WORRIES FADE."
+        "TAKE A DEEP, CALMING BREATH",
+        "NOW. LET THE DAY'S WORRIES",
+        "GENTLY FADE AS YOU PREPARE",
+        "FOR REST. INHALE PEACE,",
+        "EXHALE TENSION FROM YOUR BODY."
       ],
       [
-        "breath",
-        "fade"
+        "BREATH",
+        "FADE",
+        "CALMING",
+        "WORRIES",
+        "GENTLY",
+        "PREPARE"
       ],
       "PREPARE FOR REST"
     ],
@@ -141,12 +148,19 @@
       10,
       21,
       [
-        "FEEL HIS QUIET PRESENCE",
-        "YOU ARE HELD SECURELY"
+        "FEEL THE QUIET PRESENCE",
+        "OF YOUR CREATOR SURROUNDING",
+        "YOU, A WATCHFUL, LOVING",
+        "GAZE THROUGH THE NIGHT.",
+        "YOU ARE HELD SECURELY."
       ],
       [
-        "presence",
-        "held"
+        "PRESENCE",
+        "HELD",
+        "QUIET",
+        "CREATOR",
+        "SURROUNDING",
+        "WATCHFUL"
       ],
       "WATCHFUL, LOVING GAZE"
     ],
@@ -154,12 +168,19 @@
       21,
       33,
       [
-        "HE WILL NOT LET YOUR FOOT BE MOVED",
-        "HE WHO KEEPS YOU WILL NOT SLUMBER"
+        "REMEMBER THE PROMISE FROM PSALM",
+        "121: 'HE WILL NOT LET",
+        "YOUR FOOT BE MOVED; HE",
+        "WHO KEEPS YOU WILL NOT",
+        "SLUMBER.' WHAT A PROFOUND COMFORT!"
       ],
       [
-        "moved",
-        "slumber"
+        "MOVED",
+        "SLUMBER",
+        "REMEMBER",
+        "PROMISE",
+        "PSALM",
+        "KEEPS"
       ],
       "PSALM 121"
     ],
@@ -167,12 +188,18 @@
       33,
       44,
       [
-        "REST IN THIS POWERFUL ASSURANCE.",
-        "SLEEP DEEP AND UNDISTURBED."
+        "REST IN THIS POWERFUL",
+        "ASSURANCE. MAY YOUR SLEEP",
+        "BE DEEP AND UNDISTURBED,",
+        "YOUR DREAMS PEACEFUL."
       ],
       [
-        "assurance",
-        "undisturbed"
+        "ASSURANCE",
+        "UNDISTURBED",
+        "POWERFUL",
+        "SLEEP",
+        "DREAMS",
+        "PEACEFUL"
       ],
       "PEACEFUL DREAMS"
     ],
@@ -181,11 +208,16 @@
       54,
       [
         "WAKE REFRESHED, RENEWED,",
-        "READY FOR A NEW DAY."
+        "AND READY FOR",
+        "A NEW DAY. YOU",
+        "ARE TRULY BLESSED."
       ],
       [
-        "refreshed",
-        "renewed"
+        "REFRESHED",
+        "RENEWED",
+        "READY",
+        "TRULY",
+        "BLESSED"
       ],
       "TRULY BLESSED"
     ],
@@ -193,12 +225,16 @@
       54,
       60,
       [
-        "FIND MORE MOMENTS OF PEACE.",
-        "SUBSCRIBE TO THE SECRET PLACE."
+        "FIND MORE MOMENTS",
+        "OF PEACE. SUBSCRIBE TO",
+        "THE SECRET PLACE."
       ],
       [
-        "peace",
-        "Subscribe"
+        "PEACE",
+        "SUBSCRIBE",
+        "MOMENTS",
+        "SECRET",
+        "PLACE"
       ],
       "THE SECRET PLACE"
     ]

@@ -208,6 +208,41 @@ def file_issue(title: str, body: str, repo: str) -> str:
     return created.stdout.strip()
 
 
+def close_resolved_issues(repo: str, run_id: str = "") -> list[int]:
+    """Close open `Release failed...` / `Release died inside...` issues after a green release."""
+    if not shutil.which("gh"):
+        return []
+    found = subprocess.run(
+        ["gh", "issue", "list", "--repo", repo, "--state", "open",
+         "--search", '"Release " in:title',
+         "--json", "number,title", "--limit", "50"],
+        capture_output=True, text=True, check=False,
+    )
+    if found.returncode != 0:
+        return []
+    try:
+        rows = json.loads(found.stdout or "[]")
+        numbers = [
+            int(r["number"]) for r in rows
+            if str(r.get("title", "")).startswith(("Release failed", "Release died inside"))
+        ]
+    except (ValueError, KeyError, TypeError):
+        return []
+    closed: list[int] = []
+    note = (
+        f"Resolved automatically: a subsequent Production Release succeeded"
+        + (f" (run `{run_id}`)." if run_id else ".")
+    )
+    for num in numbers:
+        res = subprocess.run(
+            ["gh", "issue", "close", str(num), "--repo", repo, "--comment", note],
+            capture_output=True, text=True, check=False,
+        )
+        if res.returncode == 0:
+            closed.append(num)
+    return closed
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Report where a release died.")
     parser.add_argument("--trail", default=os.environ.get("PROGRESS_TRAIL", ""))
@@ -217,7 +252,15 @@ def main(argv: list[str] | None = None) -> int:
                                                          "johnAzani/YouTube-automation"))
     parser.add_argument("--issue", action="store_true",
                         help="file (or comment on) a GitHub issue")
+    parser.add_argument("--close-resolved", action="store_true",
+                        help="close open Production Release failed issues after a successful release")
     args = parser.parse_args(argv)
+
+    if args.close_resolved:
+        closed = close_resolved_issues(args.repo, args.run_id)
+        if closed:
+            print(f"[release-report] closed resolved failure issues: {closed}")
+        return 0
 
     trail_text = ""
     if args.trail and Path(args.trail).is_file():

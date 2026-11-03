@@ -183,6 +183,43 @@ class TestQueueDataMatchesReality(unittest.TestCase):
                 self.assertIn(data.get("short"), renderable,
                               f"{path.name} is approved but has no scene script")
 
+    def test_dynamic_authored_spec_resolves_edition_without_hardcoded_entry(self):
+        from pipeline import short_script as ss
+        import json
+
+        sample = (ROOT / "content" / "shorts-scripts" / "short-psalm23.json").read_text(encoding="utf-8")
+        spec_data = json.loads(sample)
+        spec_data["key"] = "short-psalm23b"
+        spec_data["psalm"] = 23
+        with tempfile.TemporaryDirectory() as tmp:
+            fake_spec_path = Path(tmp) / "short-psalm23b.json"
+            fake_spec_path.write_text(json.dumps(spec_data), encoding="utf-8")
+            with mock.patch.object(ss, "spec_path", return_value=fake_spec_path):
+                ed = sr.resolve_edition("short-psalm23b")
+        self.assertIsNotNone(ed)
+        self.assertEqual(ed.key, "short-psalm23b")
+        self.assertIn("Psalm 23", ed.title)
+
+    def test_fallback_word_timings_are_monotonic_and_clean(self):
+        rows = sr._fallback_word_timings("The LORD is my shepherd; I shall not want.", 12.0)
+        self.assertEqual(len(rows), 9)
+        for i in range(1, len(rows)):
+            self.assertGreaterEqual(rows[i][0], rows[i - 1][0])
+            self.assertGreater(rows[i][1], rows[i][0])
+
+    def test_narration_quota_error_propagates_for_manifest_pause(self):
+        from pipeline import short_script as ss
+        from pipeline.quota_handler import GeminiQuotaExceededError
+
+        real_spec = ROOT / "content" / "shorts-scripts" / "short-psalm23.json"
+        with mock.patch("pipeline.gemini_tts.synthesize_gemini_audio",
+                        side_effect=GeminiQuotaExceededError("daily limit")):
+            with tempfile.TemporaryDirectory() as tmp:
+                with mock.patch.object(sr, "REPO_ROOT", Path(tmp)), \
+                     mock.patch.object(ss, "spec_path", return_value=real_spec):
+                    with self.assertRaises(GeminiQuotaExceededError):
+                        sr._ensure_narration("short-psalm23")
+
 
 if __name__ == "__main__":
     unittest.main()

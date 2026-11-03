@@ -81,6 +81,9 @@ The terror of the night loses its power when you remember that the Almighty watc
 Lay down every anxious thought. The darkness holds no authority over those who dwell under the shadow of the Almighty.
 Dear God, as I prepare for sleep, I lay before You every shadow of apprehension that lingers in my mind. I acknowledge the fear of the unknown, the whispers of anxiety about tomorrow, and any unease that seeks to disturb my peace. I rest in Your promise that I shall not be afraid for the terror by night. Let Your powerful presence be my comfort and my shield, dispelling every dark thought and replacing it with the profound assurance of Your unfailing protection.
 
+
+Where midnight silence once amplified old fears, let Your covenant word echo louder than every threat, surrounding my bed with steady courage, calm breathing, and unbroken trust in the shadow of the Almighty.
+
 ## Scene 2 — The Arrow That Flies by Day (Verse 5b)
 
 The arrow that flieth by day represents every sudden attack, every unexpected loss, every betrayal that strikes without warning.
@@ -114,6 +117,9 @@ Whatever threatens to consume your resources, your health, or your future — th
 No destruction shall come near your dwelling.
 Almighty Protector, even in the clarity of day, destruction can waste and diminish. I ask You to guard my possessions, my relationships, and my future plans from any form of open assault or corrosive influence. Preserve me from any form of ruin that operates under the guise of normalcy, whether it be financial hardship, relational breakdown, or the erosion of my spirit. Be my impenetrable fortress against all forms of wasting, ensuring Your goodness endures around me.
 
+
+Even where pressures have felt relentless throughout this week, restore what fatigue has drained and surround every threshold of my household with Your steadfast covenant mercy.
+
 ## Scene 5 — Sleep Under Divine Cover (Verses 5–6 Synthesis)
 
 From the terror of midnight to the destruction of midday, from the arrow of sudden attack to the pestilence of unseen danger — God's word covers every threat, every hour, every season.
@@ -122,5 +128,8 @@ Tonight, you do not have to stay vigilant. The One who never slumbers is keeping
 
 Close your eyes. Release every fear. Sleep in the certainty that no terror, no arrow, no pestilence, and no destruction shall come near your dwelling.
 Lord, I embrace the profound truth that from the first shadow of dusk to the full light of dawn, and through the busy hours of the day, I am enveloped in Your complete protection. I release my need to control or comprehend every potential danger, surrendering myself entirely to Your sovereign care. I thank You that I can truly close my eyes and find deep rest, knowing that Your promises of deliverance from terror, arrows, pestilence, and destruction are my constant reality.
+
+
+Quiet my pulse, unclench my shoulders, and let the rhythm of my breathing settle beneath the canopy of Your everlasting wings as every anxious scenario fades into silence. Amen.
 
 Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.

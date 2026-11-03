@@ -33,7 +33,7 @@ from .run import _open_release_ticket, _require_production_prerequisites
 from .script_doc import Scene, ScriptDoc
 
 SHORTS_QUEUE_DIR = CONTENT_DIR / "shorts-queue"
-MAX_SHORT_SECONDS = 60.0
+MAX_SHORT_SECONDS = 180.0
 MIN_SHORT_SECONDS = 15.0
 
 
@@ -368,6 +368,50 @@ def _renderer_script_keys() -> set[str]:
     return keys | authored_keys()
 
 
+def resolve_edition(key: str) -> ShortEdition | None:
+    """Return the ShortEdition for `key`, synthesizing one for brain-authored specs."""
+    if key in EDITIONS:
+        return EDITIONS[key]
+    try:
+        from .short_script import load_spec, spec_path
+
+        path = spec_path(key)
+        if not path.is_file():
+            return None
+        spec = load_spec(path)
+        if spec.problems:
+            return None
+    except Exception:  # noqa: BLE001
+        return None
+
+    label = f"Psalm {spec.psalm}" if spec.psalm else key.removeprefix("short-").replace("-", " ").title()
+    hook = (spec.poster[3] if len(spec.poster) >= 4 and spec.poster[3] else "Divine Peace").title()
+    tag_key = label.lower().replace(" ", "")
+    return ShortEdition(
+        key=key,
+        job_id=f"SHORT-{key.removeprefix('short-').upper()}",
+        slug=f"{key}-night-prayer",
+        title=f"Say This {label} Prayer Before You Sleep | {hook} #Shorts",
+        niche="faith and prayer",
+        tags=[
+            "shorts",
+            label.lower(),
+            "night prayer",
+            "bedtime prayer",
+            "prayer of protection",
+            "daily scripture",
+            "peaceful sleep",
+            "the secret place",
+        ],
+        description=(
+            f"{spec.narration_text}\n\n"
+            f"Scripture reference: {label} (KJV / Public Domain biblical text).\n"
+            "Produced by The Secret Place | Daily Prayer & Scripture.\n\n"
+            f"#Shorts #{tag_key.capitalize()} #NightPrayer #BedtimePrayer #DailyScripture #TheSecretPlace"
+        ),
+    )
+
+
 def queue_report(queue_dir: Path | None = None) -> list[dict]:
     """Every manifest in the Shorts queue with its verdict and the reason.
 
@@ -384,13 +428,16 @@ def queue_report(queue_dir: Path | None = None) -> list[dict]:
         data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
         key = str(data.get("short") or data.get("edition") or "").strip()
         status = str(data.get("status", "")).strip().lower()
-        if key not in EDITIONS:
+        brain_queued = bool(data.get("scripture") or data.get("authored_by_brain"))
+        if key not in EDITIONS and key not in renderable and not brain_queued:
             verdict, reason = "unusable", f"unknown short key {key!r} not in EDITIONS"
         elif key not in renderable:
             verdict, reason = (
                 "needs_renderer",
                 f"no scene script {key!r} in content/shorts-scripts/ or tools/shorts.py",
             )
+        elif resolve_edition(key) is None:
+            verdict, reason = "unusable", f"unknown short key {key!r} not in EDITIONS or shorts-scripts"
         elif status != "approved":
             verdict, reason = "not_approved", f"status is {status or 'missing'}"
         else:
@@ -458,8 +505,9 @@ def select_next_queued_short(
                 pdir / f"{key}.md",
                 pdir / f"{path.stem}.md",
             ]
-            if key in EDITIONS:
-                published_candidates.append(pdir / f"{EDITIONS[key].slug}.md")
+            ed_cand = resolve_edition(key)
+            if ed_cand is not None:
+                published_candidates.append(pdir / f"{ed_cand.slug}.md")
 
             is_already_published = False
             for p_cand in published_candidates:
@@ -477,13 +525,13 @@ def select_next_queued_short(
             if is_already_published:
                 continue
 
-        # Skip manifests referencing short keys that aren't valid EDITIONS keys
-        if key not in EDITIONS:
-            print(f"[queue] Skipping manifest {path.name}: unknown short key {key!r} not in EDITIONS")
-            continue
-
         if key not in _renderer_script_keys():
             print(f"[queue] Skipping manifest {path.name}: renderer has no script for {key!r}")
+            continue
+
+        # Skip manifests referencing short keys that aren't valid EDITIONS or authored specs
+        if resolve_edition(key) is None:
+            print(f"[queue] Skipping manifest {path.name}: unknown short key {key!r} not in EDITIONS")
             continue
 
         return path, key
@@ -625,32 +673,140 @@ def _close_superseded_tickets(title: str, new_shorts_url: str) -> None:
         pass
 
 
+def _clean_word_token(word: str) -> str:
+    return re.sub(r"[^a-z0-9']+", "", word.lower()).strip("'")
+
+
+def _fallback_word_timings(narration_text: str, duration_s: float) -> list[list]:
+    """Deterministic monotonic word timings when faster-whisper weights are absent."""
+    tokens = [_clean_word_token(w) for w in narration_text.split()]
+    tokens = [t for t in tokens if t]
+    if not tokens:
+        return [[0.0, round(max(0.5, duration_s), 2), "amen"]]
+    usable_dur = max(1.0, float(duration_s) - 0.15)
+    weights = [max(2, len(t)) for t in tokens]
+    total_w = float(sum(weights))
+    cursor = 0.0
+    out: list[list] = []
+    for tok, wt in zip(tokens, weights):
+        dt = usable_dur * (wt / total_w)
+        t0 = round(cursor, 2)
+        t1 = round(min(usable_dur, cursor + max(0.04, dt - 0.01)), 2)
+        if t1 <= t0:
+            t1 = round(t0 + 0.04, 2)
+        out.append([t0, t1, tok])
+        cursor += dt
+    return out
+
+
+def _ensure_word_timings(short_key: str, audio_path: Path, narration_text: str) -> Path:
+    """Generate `assets/deepdive/words-{short_key}.json` (`[[t0, t1, word], ...]`).
+
+    Uses the preinstalled local faster-whisper CPU model (`output/alignment-model`)
+    at $0.00 when available, falling back to character-weighted monotonic timing
+    over the probed narration duration so `tools/shorts.py` never crashes on a
+    missing word-alignment file.
+    """
+    words_path = audio_path.parent / f"words-{short_key}.json"
+    if words_path.is_file() and words_path.stat().st_size > 10:
+        return words_path
+
+    model_dir = REPO_ROOT / "output" / "alignment-model"
+    rows: list[list] = []
+    if (model_dir / "model.bin").is_file():
+        try:
+            from .prayer_alignment import align
+
+            aligned = align(audio_path, narration_text, model_dir)
+            for orig, start_s, end_s in aligned:
+                tok = _clean_word_token(orig) or orig.lower()
+                t0 = round(float(start_s), 2)
+                t1 = round(max(float(start_s) + 0.03, float(end_s)), 2)
+                rows.append([t0, t1, tok])
+            print(f"[short-release] aligned {len(rows)} words via faster-whisper for {short_key}")
+        except Exception as exc:  # noqa: BLE001
+            print(f"[short-release] faster-whisper alignment fallback for {short_key}: {exc}")
+            rows = []
+
+    if not rows:
+        dur = probe_media(audio_path).duration_seconds
+        rows = _fallback_word_timings(narration_text, dur)
+        print(f"[short-release] generated {len(rows)} proportional word timings ({dur:.1f}s) for {short_key}")
+
+    words_path.parent.mkdir(parents=True, exist_ok=True)
+    words_path.write_text(json.dumps(rows, ensure_ascii=False), encoding="utf-8")
+    return words_path
+
+
 def _ensure_narration(short_key: str) -> None:
-    """Make sure an authored Short has audio before the renderer looks for it.
+    """Make sure an authored Short has audio and word timings before rendering.
 
     A brain-authored Short ships as a spec: captions only, no MP3. The same Charon
-    voice that narrates the long-form reads the captions here, so a Short can go
-    from spec to video with no human step and no cost.
+    voice that narrates the long-form reads the captions here, and local word
+    alignment writes `words-{short_key}.json` so `tools/shorts.py` can render with
+    zero human steps and $0.00 cost.
     """
+    from .quota_handler import GeminiQuotaExceededError, QuotaExceededError
+
     try:
         from .short_script import load_spec, spec_path
 
         path = spec_path(short_key)
         if not path.is_file():
-            return  # hand-written SCRIPTS entry: its audio is committed
+            return  # hand-written SCRIPTS entry: its audio & words JSON are committed
         spec = load_spec(path)
         audio = REPO_ROOT / "assets" / "deepdive" / f"{short_key}.mp3"
-        if audio.is_file():
-            return
-        from .gemini_tts import synthesize_gemini_audio
+        if not audio.is_file():
+            from .gemini_tts import synthesize_gemini_audio
 
-        audio.parent.mkdir(parents=True, exist_ok=True)
-        print(f"[short-release] synthesising narration for {short_key} ({spec.words} words)")
-        synthesize_gemini_audio(spec.narration_text, audio, voice="Charon")
+            audio.parent.mkdir(parents=True, exist_ok=True)
+            print(f"[short-release] synthesising narration for {short_key} ({spec.words} words)")
+            synthesize_gemini_audio(spec.narration_text, audio, voice="Charon")
+        _ensure_word_timings(short_key, audio, spec.narration_text)
+    except (QuotaExceededError, GeminiQuotaExceededError):
+        raise
     except Exception as exc:  # noqa: BLE001
         raise RuntimeError(
             f"cannot prepare narration for {short_key} ({exc}); refusing to render a silent Short"
         ) from exc
+
+
+def _pause_manifest_on_quota(
+    manifest_path: Path | None,
+    stage_dir: Path,
+    exc: Exception,
+    base_result: dict,
+) -> dict:
+    from .quota_handler import GeminiQuotaExceededError, calculate_next_quota_reset_utc
+
+    reset_utc = getattr(exc, "reset_utc", None) or calculate_next_quota_reset_utc()
+    reset_iso = reset_utc.isoformat()
+    is_gemini = isinstance(exc, GeminiQuotaExceededError)
+    pause_label = "Gemini API" if is_gemini else "YouTube API"
+    print(f"[short-release] Daily {pause_label} limit reached ($0.00 lock): {exc}. Pausing job until {reset_iso}...")
+    if manifest_path and manifest_path.is_file():
+        try:
+            qdata = yaml.safe_load(manifest_path.read_text(encoding="utf-8")) or {}
+            qdata["status"] = "quota_paused"
+            qdata["quota_reset_utc"] = reset_iso
+            qdata["pause_reason"] = (
+                "gemini_api_daily_quota_exhausted" if is_gemini else "youtube_api_daily_quota_exhausted"
+            )
+            manifest_path.write_text(yaml.safe_dump(qdata, sort_keys=False), encoding="utf-8")
+            print(f"[short-release] Manifest {manifest_path.name} marked as quota_paused.")
+        except Exception as save_err:
+            print(f"[short-release] Failed to update queue manifest: {save_err}")
+    stage_dir.mkdir(parents=True, exist_ok=True)
+    result = {
+        **base_result,
+        "uploaded": False,
+        "paused": True,
+        "status": "quota_paused",
+        "pause_reason": "quota_exceeded",
+        "quota_reset_utc": reset_iso,
+    }
+    (stage_dir / "job_result.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
+    return result
 
 
 def run_short_release(
@@ -660,12 +816,13 @@ def run_short_release(
     force: bool = False,
     manifest_path: Path | None = None,
 ) -> dict:
-    if short_key not in EDITIONS:
+    edition = resolve_edition(short_key)
+    if edition is None:
         raise RuntimeError(f"Unknown Short edition {short_key!r}; expected one of {sorted(EDITIONS)}")
 
-    edition = EDITIONS[short_key]
     doc = _build_script_doc(edition)
     published_record = PUBLISHED_DIR / f"{edition.slug}.md"
+    stage_dir = OUTPUT_DIR / edition.slug
 
     legacy_video_ids: list[str] = []
     desired_privacy: str | None = None
@@ -711,8 +868,19 @@ def run_short_release(
     video_path = REPO_ROOT / "social" / f"{short_key}.mp4"
     sources_path = REPO_ROOT / "output" / "short-stock" / short_key / "scene-sources.json"
 
+    from .quota_handler import GeminiQuotaExceededError, QuotaExceededError
+
     if not skip_render:
-        _ensure_narration(short_key)
+        try:
+            _ensure_narration(short_key)
+        except (QuotaExceededError, GeminiQuotaExceededError) as exc:
+            return _pause_manifest_on_quota(
+                manifest_path,
+                stage_dir,
+                exc,
+                {"id": edition.job_id, "key": edition.key, "slug": edition.slug,
+                 "title": edition.title, "format": "short", "dry_run": dry_run},
+            )
         render_env = dict(os.environ)
         if render_env.get("SHORT_DISABLE_STOCK_BROLL", "").strip().lower() in {"1", "true", "yes", "on"}:
             render_env["ENABLE_STOCK_BROLL"] = "0"
@@ -738,15 +906,30 @@ def run_short_release(
 
     from .thumbnail import generate_short_scroll_stopper_thumbnail
 
-    if edition.key == "short-psalm91":
+    if edition.niche == "faith and prayer" or "psalm" in edition.key or "prayer" in edition.key:
         hero_bg = REPO_ROOT / "image-search" / "short-prayer-cover-poster.jpg"
+        kicker, line1, line2, tag = "PRAYER BEFORE SLEEP", "PSALM", "91", "DIVINE PROTECTION"
+        if edition.key != "short-psalm91":
+            m_num = re.search(r"psalm\s*(\d+)", f"{edition.key} {edition.title}", re.I)
+            line2 = m_num.group(1) if m_num else "PEACE"
+            try:
+                from .short_script import load_spec, spec_path
+
+                sp = spec_path(edition.key)
+                if sp.is_file():
+                    spec_obj = load_spec(sp)
+                    if len(spec_obj.poster) >= 4:
+                        kicker = spec_obj.poster[0][:28]
+                        tag = spec_obj.poster[3][:28]
+            except Exception:  # noqa: BLE001
+                tag = "DIVINE PEACE"
         staged_thumb = generate_short_scroll_stopper_thumbnail(
             bg_path=hero_bg,
             out_path=stage_dir / "thumbnail.jpg",
-            kicker="PRAYER BEFORE SLEEP",
-            line1="PSALM",
-            line2="91",
-            tag="DIVINE PROTECTION",
+            kicker=kicker,
+            line1=line1,
+            line2=line2,
+            tag=tag,
         )
     else:
         hero_bg = REPO_ROOT / "image-search" / "short-enron-thumb-hero.jpg"
