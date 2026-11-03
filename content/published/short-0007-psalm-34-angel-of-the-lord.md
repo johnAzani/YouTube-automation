@@ -17,6 +17,7 @@ width: 720
 height: 1280
 duration_seconds: 53.29
 scenes_verified: 9
+metadata_revision: "selar-seo-v1"
 ---
 
 The angel of the Lord encamps all around those who fear Him, and delivers them. Oh, taste and see that the Lord is good; blessed is the man who trusts in Him!

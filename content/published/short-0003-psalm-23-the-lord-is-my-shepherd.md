@@ -16,6 +16,7 @@ width: 720
 height: 1280
 duration_seconds: 52.37
 scenes_verified: 8
+metadata_revision: "selar-seo-v1"
 ---
 
 The Lord is my shepherd; I shall not want. He makes me to lie down in green pastures.

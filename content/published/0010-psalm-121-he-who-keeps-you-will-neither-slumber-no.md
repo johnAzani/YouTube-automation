@@ -72,6 +72,7 @@ originality:
 published_on: "2026-11-01"
 youtube_video_id: "6M6oV8MxD9s"
 thumbnail_revision: "ctr-v3-cinema"
+metadata_revision: "selar-seo-v1"
 ---
 
 ## Scene 1 — Lifting Eyes to the Hills (Verses 1–2)

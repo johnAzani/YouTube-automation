@@ -16,6 +16,7 @@ width: 720
 height: 1280
 duration_seconds: 39.55
 scenes_verified: 8
+metadata_revision: "selar-seo-v1"
 ---
 
 He who dwells in the secret place of the Most High shall abide under the shadow of the Almighty.
