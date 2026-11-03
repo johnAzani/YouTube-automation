@@ -69,6 +69,7 @@ originality:
 published_on: "2026-11-03"
 published_at: "2026-11-03T10:24:34Z"
 youtube_video_id: "vs2xt72CgcI"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — But Thou, O LORD, Art a Shield for Me (Verse 3a)
