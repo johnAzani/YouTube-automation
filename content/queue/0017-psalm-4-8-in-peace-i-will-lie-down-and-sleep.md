@@ -1,71 +1,99 @@
 ---
-id: "0017"
-title: "Psalm 4:8 — In Peace I Will Lie Down and Sleep | Bedtime Prayer for Safety | The Secret Place"
+id: '0017'
+title: "Psalm 4:8 \u2014 In Peace I Will Lie Down and Sleep | Bedtime Prayer for Safety\
+  \ | The Secret Place"
 slug: psalm-4-8-in-peace-i-will-lie-down-and-sleep
-status: approved
+status: quota_paused
 privacy: public
 format: longform
 niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "LAY DOWN IN PEACE"
-description: |
-  Say this Psalm 4:8 (KJV) prayer before you sleep tonight.
-  I will both lay me down in peace, and sleep: for thou, LORD, only makest me dwell in safety.
+tags:
+- bedtime prayer
+- night prayer
+- scripture meditation
+- peaceful sleep
+- the secret place
+- christian meditation
+- divine protection
+- rest and healing
+thumb_text: LAY DOWN IN PEACE
+description: 'Say this Psalm 4:8 (KJV) prayer before you sleep tonight.
+
+  I will both lay me down in peace, and sleep: for thou, LORD, only makest me dwell
+  in safety.
+
 
   This is a full devotional prayer and scripture exposition covering Psalm 4:8 (KJV)
+
   with peaceful nighttime ambient soundscapes.
 
+
   Scripture References & Sources:
+
   - The Holy Bible, Psalm 4:8 (KJV) (King James Version)
+
   - Spurgeon, C.H. (1885). The Treasury of David.
-  - Matthew Henry's Commentary on the Whole Bible.
+
+  - Matthew Henry''s Commentary on the Whole Bible.
+
 
   Produced by The Secret Place | Daily Prayer & Scripture.
+
+  '
 asset_queries:
-  - "person sleeping peacefully moonlight bedroom serene night"
-  - "candle light warm bedroom evening prayer sanctuary"
-  - "silhouette figure praying hands moonlight window night"
-  - "peaceful night landscape moon over calm lake"
-  - "divine light rays through clouds heaven protection"
-  - "ancient stone chapel night sky stars peaceful"
+- person sleeping peacefully moonlight bedroom serene night
+- candle light warm bedroom evening prayer sanctuary
+- silhouette figure praying hands moonlight window night
+- peaceful night landscape moon over calm lake
+- divine light rays through clouds heaven protection
+- ancient stone chapel night sky stars peaceful
 asset_query_verification:
-  verified_on: "2026-10-29"
-  method: "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule"
+  verified_on: '2026-10-29'
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4,
+    filtered by pipeline/assets.py licence rule
   queries:
-    - query: "person sleeping peacefully moonlight bedroom serene night"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "candle light warm bedroom evening prayer sanctuary"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "silhouette figure praying hands moonlight window night"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "peaceful night landscape moon over calm lake"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "divine light rays through clouds heaven protection"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "ancient stone chapel night sky stars peaceful"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
+  - query: person sleeping peacefully moonlight bedroom serene night
+    verified: true
+    usable: 4
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
+  - query: candle light warm bedroom evening prayer sanctuary
+    verified: true
+    usable: 4
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
+  - query: silhouette figure praying hands moonlight window night
+    verified: true
+    usable: 4
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
+  - query: peaceful night landscape moon over calm lake
+    verified: true
+    usable: 4
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
+  - query: divine light rays through clouds heaven protection
+    verified: true
+    usable: 4
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
+  - query: ancient stone chapel night sky stars peaceful
+    verified: true
+    usable: 4
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
 originality:
-  original_thesis: true      # devotional prayer narrative emphasizing peaceful surrender and divine protection
-  unique_structure: true     # 5-movement exposition moving from scripture reading to theological application to rest
-  human_rewrite: true        # carefully curated theological wording with sacred meditative breathing cadence
-  no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
-  source_notes: true         # scriptures and classical commentaries documented
-  ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
+  original_thesis: true
+  unique_structure: true
+  human_rewrite: true
+  no_ai_persona: true
+  source_notes: true
+  ai_disclosure: false
+quota_reset_utc: '2026-11-03T08:00:00+00:00'
+pause_reason: gemini_api_daily_quota_exhausted
 ---
 
 ## Scene 1 — I Will Both Lay Me Down in Peace (Verse 8a)

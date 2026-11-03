@@ -67,6 +67,7 @@ originality:
   source_notes: true         # scriptures and classical commentaries documented
   ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
 ---
+
 ## Scene 1 — Thou Wilt Keep Him in Perfect Peace (Verse 3a)
 
 Perfect peace is not the absence of trouble; it is the presence of God in your mind.
@@ -77,6 +78,7 @@ The condition for perfect peace is simple: keep your mind stayed on God.
 
 When your thoughts wander to anxiety, gently bring them back to Him.
 
+Heavenly Father, as the day concludes, I humbly ask that You would keep my spirit in that perfect peace You promise, not as the world understands it, but as a divine stillness within. Though external circumstances may swirl with uncertainties and the quiet of the night often amplifies my worries, I surrender these to You. Grant me the grace to perceive Your ever-present hand and to rest in the calm assurance that You are sovereign over all, allowing Your divine stillness to pervade my entire being as I fix my gaze upon You. May Your calming presence actively guard the gates of my mind, directing every stray thought back to Your truth. I trust that Your Holy Spirit will meticulously maintain this inner tranquility, shielding me from all earthly anxieties and ensuring my rest is deep and undisturbed in Your steadfast love.
 
 ## Scene 2 — Whose Mind Is Stayed on Thee (Verse 3b)
 
@@ -88,6 +90,7 @@ Before sleep, fix your thoughts on God's character, His promises, His faithfulne
 
 Let your last conscious thoughts be thoughts of Him.
 
+Lord, I pray for a mind stayed on You, an inner compass always pointing towards Your truth. As I prepare for sleep, help me consciously anchor my thoughts, not allowing them to drift into tomorrow’s unknowns or yesterday’s regrets. Instead, let them rest firmly on Your unwavering character, Your countless promises, and Your perfect, proven faithfulness throughout all generations. May my final thoughts before slumber be a meditation on Your holiness and grace. Empower me to intentionally redirect my focus from any distracting noise or unsettling reflection towards the certainty of Your word. Let my consciousness be so saturated with Your divine attributes that my spirit finds its true anchor, even in the deepest slumber, protected from the world's shifting sands.
 
 ## Scene 3 — Because He Trusteth in Thee (Verse 3c)
 
@@ -99,6 +102,7 @@ Trust is not a feeling; it is a choice to believe that God is who He says He is.
 
 Choose trust tonight. Receive peace tonight.
 
+Almighty God, I choose tonight to deepen my trust in You, knowing that true peace emanates from this profound reliance. Help me to make a conscious, unwavering decision to believe every word You have spoken about Your nature and Your love. Even when fears surface or doubts whisper, strengthen my resolve to fully commit my burdens and my very being into Your capable hands, confident that Your integrity is absolute and Your care for me is boundless. I declare my dependence on Your unfailing wisdom and sovereign control over every aspect of my life. May this act of trust become a deep wellspring of quiet confidence within me, extinguishing every shadow of anxiety and ushering in a blessed, tranquil repose under Your watchful eye.
 
 ## Scene 4 — Trust Ye in the LORD for Ever (Verse 4a)
 
@@ -110,6 +114,7 @@ Not just for tonight, not just for this crisis, but forever.
 
 Your trust rests on an everlasting foundation.
 
+Eternal God, instill within me a trust that transcends the fleeting circumstances of life, a trust that is not merely for this night’s rest or for resolving current trials, but for all time, eternally. May my reliance on You be an enduring commitment, a perpetual declaration of Your sovereignty and goodness. Solidify my heart to acknowledge that You are the only everlasting foundation worthy of my complete and unending faith, today, tomorrow, and forevermore. Let my spirit find its ultimate security in the unchangeable nature of Your divine character, knowing that Your promises remain steadfast through every generation. I commit to placing my hope in Your eternal reign, confident that Your lovingkindness endures forever, guiding my path both now and always.
 
 ## Scene 5 — For in the LORD JEHOVAH Is Everlasting Strength (Verse 4b)
 
@@ -121,6 +126,7 @@ His strength does not fade. His power does not diminish. His help does not run o
 
 Sleep in everlasting strength.
 
+Jehovah, my self-existent and mighty God, I lean into Your everlasting strength tonight, knowing it is my impregnable refuge. Your power does not wane with the rising and setting of the sun, nor does Your help ever diminish. As I close my eyes, I declare my dependence upon Your inexhaustible might, confident that Your unfailing strength will sustain me through the night and into the new day, protecting and upholding me without end. I rest assured that Your omnipotence stands guard over my sleep, rendering me impervious to fear or harm. May Your formidable power be the very essence of my peace, allowing me to fully release all burdens and find complete restoration in the protective embrace of Your infinite strength.
 
 ## Scene 6 — Perfect Peace Tonight (Verses 3–4 Synthesis)
 
@@ -130,5 +136,6 @@ Tonight, keep your mind stayed on God. Trust Him forever. Rest in His everlastin
 
 You are kept in perfect peace.
 
-Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.
+Oh Lord, as all these truths coalesce, I envision Your divine fortress of peace encircling me this night. My mind, stayed on You, finds its anchor. My heart, choosing to trust You forever, finds its rest. My soul, enfolded in Your everlasting strength, finds true security. May this profound synthesis of Your promises guard my dreams and quiet every anxious thought, leaving me utterly secure and perfectly at peace in Your loving presence until morning. I pray that this holistic embrace of Your Word will permeate every part of my being, renewing my spirit and calming my emotions. Let Your perfect peace be the atmosphere of my rest, preparing me to awaken refreshed and ready to serve You anew with a mind stayed on You.
 
+Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.
