@@ -420,3 +420,126 @@ class ATransient503MustNotCostTheSlot(unittest.TestCase):
                 gemini_tts._guarded_chunk(object(), "t", "Charon", "i", "m",
                                           Path("/tmp/raw"), 1, 12)
         self.assertEqual(calls["n"], 1, "sleeping through a quota wall wastes the slot")
+
+
+class TenRequestsPerDayIsTheRealConstraint(unittest.TestCase):
+    """Google's refusal, verbatim, on 3 November:
+
+        Generate content requests per day limit exceeded on Free Tier.
+        * Quota exceeded for metric: ...generate_content_free_tier_requests,
+          limit: 10, model: gemini-3.8-flash-tts
+
+    An 888-word prayer is ~5,200 characters. At the old 450-character chunking that
+    is **thirteen** requests — more than the entire daily allowance for one video.
+    Every release burned the day's ten on a single prayer and then paused itself
+    until the next reset, which is why nothing has published since 2 November.
+    """
+
+    def test_a_six_minute_prayer_fits_in_a_day(self):
+        from pipeline.gemini_tts import DEFAULT_CHUNK_CHARS, _chunk_text
+
+        prayer = "word " * 888            # one 888-word script
+        chunks = _chunk_text(prayer, max_chars=DEFAULT_CHUNK_CHARS)
+        self.assertLessEqual(len(chunks), 3,
+                             f"{len(chunks)} requests for one video against a limit of 10/day")
+        self.assertGreater(len(prayer), 4000)  # the fixture really is long
+
+    def test_the_chunk_size_can_be_overridden(self):
+        from pipeline.gemini_tts import chunk_chars
+
+        with mock.patch.dict(os.environ, {"TTS_CHUNK_CHARS": "1200"}):
+            self.assertEqual(chunk_chars(), 1200)
+        with mock.patch.dict(os.environ, {"TTS_CHUNK_CHARS": "12"}):   # nonsense
+            self.assertEqual(chunk_chars(), 4000)
+
+    def test_one_giant_paragraph_is_still_split(self):
+        from pipeline.gemini_tts import _chunk_text
+
+        chunks = _chunk_text("Short sentence. " * 600, max_chars=1000)
+        self.assertTrue(all(len(c) <= 1100 for c in chunks), [len(c) for c in chunks])
+        self.assertGreater(len(chunks), 1)
+
+    def test_truncated_audio_is_refused_rather_than_published(self):
+        from pipeline import gemini_tts
+
+        with mock.patch("pipeline.tts._probe_duration", return_value=60.0):
+            with self.assertRaises(RuntimeError) as caught:
+                gemini_tts._assert_not_truncated(Path("/tmp/x.mp3"), "word " * 888)
+        self.assertIn("truncated", str(caught.exception).lower())
+
+    def test_full_length_audio_passes(self):
+        from pipeline import gemini_tts
+
+        with mock.patch("pipeline.tts._probe_duration", return_value=367.0):
+            gemini_tts._assert_not_truncated(Path("/tmp/x.mp3"), "word " * 888)
+
+    def test_an_unknown_duration_does_not_block(self):
+        from pipeline import gemini_tts
+
+        with mock.patch("pipeline.tts._probe_duration", return_value=None):
+            gemini_tts._assert_not_truncated(Path("/tmp/x.mp3"), "word " * 888)
+
+
+class ADeadQuotaStopsTheQueueInsteadOfBurningTomorrows(unittest.TestCase):
+    """While a pause is live, starting another video spends tomorrow's allowance."""
+
+    def _queue(self, tmp, reset):
+        import textwrap
+        queue = Path(tmp) / "queue"
+        queue.mkdir()
+        (queue / "0017-test.md").write_text(textwrap.dedent(f"""\
+            ---
+            id: '0017'
+            title: "T"
+            slug: t
+            status: quota_paused
+            format: longform
+            quota_reset_utc: '{reset}'
+            ---
+            body
+            """), encoding="utf-8")
+        return queue
+
+    def test_a_live_pause_reports_when_it_ends(self):
+        import tempfile
+        from datetime import datetime, timedelta, timezone
+        from pipeline import run
+
+        future = (datetime.now(timezone.utc) + timedelta(hours=23)).isoformat()
+        with tempfile.TemporaryDirectory() as tmp:
+            queue = self._queue(tmp, future)
+            with mock.patch.object(run, "QUEUE_DIR", queue):
+                blocked = run.quota_blocked_until()
+        self.assertIsNotNone(blocked)
+
+    def test_an_expired_pause_does_not_block(self):
+        import tempfile
+        from datetime import datetime, timedelta, timezone
+        from pipeline import run
+
+        past = (datetime.now(timezone.utc) - timedelta(hours=1)).isoformat()
+        with tempfile.TemporaryDirectory() as tmp:
+            queue = self._queue(tmp, past)
+            with mock.patch.object(run, "QUEUE_DIR", queue):
+                self.assertIsNone(run.quota_blocked_until())
+
+    def test_an_empty_slot_while_blocked_exits_three_with_the_reset_time(self):
+        import io
+        from contextlib import redirect_stdout
+        from datetime import datetime, timedelta, timezone
+        from pipeline import run
+
+        future = datetime.now(timezone.utc) + timedelta(hours=23)
+        buffer = io.StringIO()
+        with mock.patch.object(run, "select_jobs", return_value=[]), \
+             mock.patch.object(run, "quota_blocked_until", return_value=future), \
+             redirect_stdout(buffer):
+            code = run.main(["--next"])
+        self.assertEqual(code, 3)
+        self.assertIn("10 requests/day", buffer.getvalue())
+        self.assertIn(future.isoformat(), buffer.getvalue())
+
+    def test_the_speech_chunks_are_cached_across_runs(self):
+        text = (REPO / ".github" / "workflows" / "produce.yml").read_text(encoding="utf-8")
+        self.assertIn("_gemini_chunks_", text,
+                      "a finished chunk must not be paid for twice in one day")

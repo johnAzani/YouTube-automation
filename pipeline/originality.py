@@ -18,10 +18,21 @@ REQUIRED_FLAGS = (
     "source_notes",
 )
 
+#: Phrases that would make the channel an AI persona posing as a professional.
+#:
+#: `\bmy firm\b` used to be in this list on its own, and on 3 November it rejected
+#: a perfectly good approved prayer because it ends "You are my firm foundation".
+#: The gate must catch the *claim of professional practice*, not the word "firm",
+#: so each phrase now needs its professional context. A false positive here blocks
+#: a publishable video forever (the queue cannot pass its own integrity tests),
+#: which is worse than the phrasing it was guarding against.
 FORBIDDEN_PERSONA_PATTERNS = (
     r"\bas a (?:doctor|physician|lawyer|attorney|financial advisor|financial planner)\b",
     r"\bi am a (?:doctor|physician|lawyer|attorney|financial advisor|certified)\b",
-    r"\bmy (?:patients|clients|firm)\b",
+    r"\bmy (?:patients|clients)\b",
+    r"\bmy firm(?:'s)?\s+(?:manages|advises|represents|handles|clients|staff|"
+    r"partners|practice|portfolio|team)\b",
+    r"\b(?:at|with) my firm\b",
 )
 
 

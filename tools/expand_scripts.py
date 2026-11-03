@@ -241,6 +241,17 @@ def validate(original: Job, expanded: str, target: int = TARGET_WORDS,
 
     if "subscribe" in lowered and lowered.count("subscribe") > 1:
         problems.append("more than one subscribe call to action")
+
+    # The demonetisation gate is applied to the *written* file by the queue's own
+    # integrity tests, so the expansion pass must not introduce anything that would
+    # fail it. On 3 November the brain wrote a line into an approved script that
+    # tripped the AI-persona pattern, and the queue stopped passing its own tests.
+    import re as _re
+    from pipeline.originality import FORBIDDEN_PERSONA_PATTERNS
+
+    for pattern in FORBIDDEN_PERSONA_PATTERNS:
+        if _re.search(pattern, expanded, _re.I):
+            problems.append(f"expansion trips the AI-persona gate: {pattern}")
     return problems
 
 

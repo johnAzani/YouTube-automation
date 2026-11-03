@@ -255,6 +255,7 @@ class TestAnEmptySlotIsAFailure(unittest.TestCase):
         from pipeline import run as pr
 
         with mock.patch.object(pr, "select_jobs", return_value=[]), \
+             mock.patch.object(pr, "quota_blocked_until", return_value=None), \
              mock.patch.object(pr, "empty_reason", return_value="21 scripts under the floor"):
             self.assertEqual(pr.main(["--next"]), 2)
 
