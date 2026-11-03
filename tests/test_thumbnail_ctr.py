@@ -400,8 +400,8 @@ class TestTheFrameIsTheVideosOwnFootage(unittest.TestCase):
                 continue
             checked += 1
             hero = (str(doc.meta.get("thumb_text") or "").strip() or doc.title).upper()
-            _font, lines, _tracking, _leading, px = ctr._layout(draw, hero, (82, 76, 728, 568))
-            self.assertGreaterEqual(px, 115, f"{md.name}: {hero} -> {px}px")
+            _font, lines, _tracking, _leading, px = ctr._layout(draw, hero, (86, 76, 746, 568))
+            self.assertGreaterEqual(px, 105, f"{md.name}: {hero} -> {px}px")
             self.assertEqual(
                 " ".join(lines),
                 " ".join(hero.split()),

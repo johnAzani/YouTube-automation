@@ -961,7 +961,7 @@ def render_ctr(variant: CtrVariant, out_path: Path, size=CANVAS,
                backdrop=None) -> CtrReport:
     active = variant
     if backdrop and variant.hero and variant.text_box[2] > variant.text_box[0]:
-        active = dataclasses.replace(variant, text_box=(82, 76, 728, 568))
+        active = dataclasses.replace(variant, text_box=(86, 76, 746, 568))
     avoid = None
     if active.hero:
         x0, y0, x1, y1 = active.text_box
