@@ -301,6 +301,55 @@ jobs:
           retention-days: 14
           if-no-files-found: ignore
 
+      - name: Collect the run's own report (small, readable from the API)
+        # The full render artifact is ~1 GB and the log archive is unreachable from
+        # automation, so a green run could not be interrogated at all: on 3 November
+        # the 07:27 release finished green in four minutes with nothing uploaded and
+        # there was no way — from the API — to ask it what it had done. These are
+        # kilobytes and they answer every question: which job was picked, how long
+        # each stage took, and what the release decided.
+        if: always()
+        run: |
+          set +e
+          mkdir -p output/report
+          for f in run.log short.log record.log supply.log output/progress-trail.log; do
+            [ -f "$f" ] && cp "$f" "output/report/$(basename "$f")" 2>/dev/null
+          done
+          for d in output/*/job_result.json; do
+            [ -f "$d" ] || continue
+            slug=$(basename "$(dirname "$d")")
+            cp "$d" "output/report/job_result-$slug.json"
+          done
+          python - <<'PYREPORT'
+          import json, os
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          report = {"generated_at": datetime.now(timezone.utc).isoformat(),
+                    "run_id": os.environ.get("GITHUB_RUN_ID"),
+                    "event": os.environ.get("GITHUB_EVENT_NAME"),
+                    "queue": sorted(p.name for p in Path("content/queue").glob("*.md")),
+                    "published": sorted(p.name for p in Path("content/published").glob("*.md")),
+                    "results": []}
+          for path in sorted(Path("output").glob("*/job_result.json")):
+              try:
+                  report["results"].append(json.loads(path.read_text()))
+              except Exception:
+                  pass
+          Path("output/report/summary.json").write_text(json.dumps(report, indent=2))
+          print(json.dumps(report, indent=2)[:2000])
+          PYREPORT
+          ls -la output/report || true
+
+      - name: Upload the run report (7 days)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-report-${{ github.run_id }}
+          path: output/report/
+          retention-days: 7
+          if-no-files-found: ignore
+
       - name: Upload render for QC (expires in 1 day — videos never live in git)
         uses: actions/upload-artifact@v4
         if: always()

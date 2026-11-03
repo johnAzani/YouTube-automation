@@ -16,6 +16,8 @@ from unittest import mock
 
 from pipeline import progress
 
+REPO = Path(__file__).resolve().parents[1]
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -160,3 +162,70 @@ class TestTheAdvisoryCheckIsNotPermanentlyRed(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class AQuotaPauseIsNotARelease(unittest.TestCase):
+    """Run 41596457350 finished GREEN in four minutes having published nothing.
+
+    0017 hit exhausted Gemini quota, `produce()` returned a `quota_paused` dict
+    instead of raising, and every caller treated a returned dict as success. A
+    green tick with no upload is the exact report the owner keeps having to make
+    himself — three slots a day can do this indefinitely.
+    """
+
+    def _run_main(self, result):
+        from pipeline import run
+
+        with mock.patch.object(run, "select_jobs", return_value=[Path("content/queue/0017.md")]), \
+             mock.patch.object(run, "process", return_value=result):
+            return run.main(["--next"])
+
+    def test_a_quota_pause_exits_non_zero_and_names_the_reset(self):
+        code = self._run_main({"job": "0017", "status": "quota_paused",
+                               "quota_reset_utc": "2026-11-03T08:00:00+00:00"})
+        self.assertEqual(code, 3, "a paused release must not report success")
+
+    def test_a_pause_says_so_in_an_annotation(self):
+        import io
+        from contextlib import redirect_stdout
+
+        buffer = io.StringIO()
+        with redirect_stdout(buffer):
+            self._run_main({"job": "0017", "status": "quota_paused",
+                            "quota_reset_utc": "2026-11-03T08:00:00+00:00"})
+        printed = buffer.getvalue()
+        self.assertIn("::error title=Release did not publish::", printed)
+        self.assertIn("2026-11-03T08:00:00", printed)
+
+    def test_a_real_upload_announces_the_video(self):
+        import io
+        from contextlib import redirect_stdout
+
+        buffer = io.StringIO()
+        with redirect_stdout(buffer):
+            code = self._run_main({"uploaded": True, "video_id": "abc123",
+                                   "watch_url": "https://youtu.be/abc123",
+                                   "privacy_status": "public", "duration_seconds": 372})
+        self.assertEqual(code, 0)
+        self.assertIn("::notice title=Published::abc123", buffer.getvalue())
+
+    def test_a_success_with_no_upload_cannot_be_silent(self):
+        import io
+        from contextlib import redirect_stdout
+
+        buffer = io.StringIO()
+        with redirect_stdout(buffer):
+            self._run_main({"slug": "x", "dry_run": False})
+        self.assertIn("no upload", buffer.getvalue())
+
+    def test_the_short_release_treats_a_pause_as_a_failure_too(self):
+        text = (REPO / "pipeline" / "short_release.py").read_text(encoding="utf-8")
+        self.assertIn('if outcome.get("paused"):', text)
+        self.assertIn("Short did not upload", text)
+        self.assertIn("::notice title=Short published::", text)
+
+    def test_every_run_ships_a_readable_report(self):
+        text = (REPO / ".github" / "workflows" / "produce.yml").read_text(encoding="utf-8")
+        self.assertIn("release-report-${{ github.run_id }}", text,
+                      "a green run must be interrogable without a 1 GB download")
+        self.assertIn("output/report/summary.json", text)
