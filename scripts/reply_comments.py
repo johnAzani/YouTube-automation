@@ -97,14 +97,23 @@ def _escalate_crisis(held: list[dict]) -> str:
         "--description", "A viewer disclosed distress; needs a personal reply")
 
     import json as _json
-    listing = _gh("issue", "list", "--label", "viewer-crisis", "--state", "open",
-                  "--json", "number", "--limit", "5")
+    # Label first, then title. `gh issue create --label ...` returns success on
+    # this repository while the label is silently not applied — so a label-only
+    # lookup found nothing and every scheduled pass opened a brand-new issue for
+    # the same viewer (#203, #204, #205, #206, #207, #209, #211, #213, #214, #217,
+    # #218). The title search does not depend on the label landing.
     numbers = []
-    if listing.returncode == 0 and listing.stdout.strip():
-        try:
-            numbers = [row["number"] for row in _json.loads(listing.stdout)]
-        except (ValueError, KeyError, TypeError):
-            numbers = []
+    for args in (["--label", "viewer-crisis"],
+                 ["--search", '"Viewer in distress" in:title']):
+        listing = _gh("issue", "list", *args, "--state", "open",
+                      "--json", "number", "--limit", "5")
+        if listing.returncode == 0 and listing.stdout.strip():
+            try:
+                numbers = [row["number"] for row in _json.loads(listing.stdout)]
+            except (ValueError, KeyError, TypeError):
+                numbers = []
+        if numbers:
+            break
 
     if numbers:
         number = str(numbers[0])

@@ -324,12 +324,27 @@ def gh_available() -> bool:
 
 
 def open_issue_number() -> int | None:
-    proc = _gh(["issue", "list", "--label", ISSUE_LABEL, "--state", "open",
-                "--json", "number", "--limit", "1"])
-    if proc.returncode != 0:
-        raise RuntimeError(f"gh issue list failed: {(proc.stderr or '').strip()[:200]}")
-    rows = json.loads(proc.stdout or "[]")
-    return int(rows[0]["number"]) if rows else None
+    """The open tracking issue, found by label *or* by title.
+
+    The label search alone is not enough: on this repository `gh issue create
+    --label ...` returns success while the label is silently not applied, so a
+    label-only lookup finds nothing and every pass opens a fresh issue. That is
+    exactly how one viewer's disclosure became #203, #204, #205, #206, #207,
+    #209, #211, #213, #214, #217 and #218.
+    """
+    for args in (["--label", ISSUE_LABEL],
+                 ["--search", f'"{ISSUE_TITLE}" in:title']):
+        proc = _gh(["issue", "list", *args, "--state", "open", "--json", "number",
+                    "--limit", "1"])
+        if proc.returncode != 0:
+            continue
+        try:
+            rows = json.loads(proc.stdout or "[]")
+        except ValueError:
+            rows = []
+        if rows:
+            return int(rows[0]["number"])
+    return None
 
 
 def ensure_label() -> None:
@@ -409,8 +424,19 @@ def main(argv=None) -> int:
             tag = "BLOCKING" if finding.fatal else "warning"
             print(f"[watchdog] {tag}: {finding.area} — {finding.detail}")
 
-    action = sync_issue(report, dry_run=args.dry_run)
+    delivery_note = ""
+    try:
+        action = sync_issue(report, dry_run=args.dry_run)
+    except Exception as exc:  # noqa: BLE001 - reporting must never replace reporting
+        # The findings above are the message. If the issue cannot be filed we say
+        # so, loudly, and still return the verdict — on 3 November `gh issue list`
+        # raised here and the step ended with a bare exit code, so the alarm that
+        # was supposed to hold the findings destroyed them on the way out.
+        action = "could not deliver"
+        delivery_note = f"{type(exc).__name__}: {exc}"
     print(f"[watchdog] issue: {action} — {'healthy' if report.healthy else 'unhealthy'}")
+    if delivery_note:
+        print(f"::warning title=The stall report could not be filed::{delivery_note[:300]}")
 
     in_ci = os.environ.get("GITHUB_ACTIONS")
     if in_ci:
