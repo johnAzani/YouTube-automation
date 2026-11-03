@@ -83,7 +83,7 @@
 
 ## 3. Current Queue & Script Inventory
 
-### Approved & Ready for Production in `content/queue/` (21 full-length prayers ≥ 850 spoken words + 5 Shorts):
+### Approved & Ready for Production in `content/queue/` (22 full-length prayers ≥ 850 spoken words + 5 Shorts):
 1. `0011-psalm-27-the-lord-is-my-light-and-my-salvation--fe.md` (Approved, 967 spoken words — re-authored with authentic KJV Psalm 27)
 2. `0014-psalm-34-the-angel-of-the-lord-encampeth.md` (Approved, 922 spoken words)
 3. `0015-psalm-91-5-6-deliverance-from-terror-by-night.md` (Approved, 882 spoken words)
@@ -105,6 +105,7 @@
 19. `0032-1-peter-5-6-7-casting-all-your-care-upon-him.md` (Approved, 875 spoken words)
 20. `0033-numbers-6-24-26-the-priestly-benediction-of-peace.md` (Approved, 855 spoken words)
 21. `0034-psalm-91-complete-night-prayer-of-divine-protection.md` (Approved, 975 spoken words — full 16-verse KJV Psalm 91 sleep sanctuary)
+22. `0035-psalm-23-complete-night-prayer-restore-my-soul.md` (Approved, 995 spoken words — full 6-verse KJV Psalm 23 sleep sanctuary)
 
 ### Armed Brain-Authored Shorts in `content/shorts-queue/` + `content/shorts-scripts/`:
 * `short-psalm23`, `short-psalm121`, `short-psalm27`, `short-psalm46`, `short-psalm34` — all 5 validated, upgraded to full uppercase DOCOGA REELS v2 kinetic cards, and wired with automatic local `words-{key}.json` alignment.
