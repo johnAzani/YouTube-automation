@@ -1,6 +1,6 @@
 ---
-id: "0023"
-title: "Psalm 63:5-7 — Remembering God Upon My Bed | Night Prayer for Satisfaction | The Secret Place"
+id: '0023'
+title: Psalm 63:6-7 Night Prayer | Remembering God Upon My Bed
 slug: psalm-63-5-7-remembering-god-upon-my-bed
 status: approved
 privacy: public
@@ -9,63 +9,82 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "SAFE ON MY BED"
-description: |
-  Say this Psalm 63:5-7 (KJV) prayer before you sleep tonight.
+tags:
+- psalm 63 6 7 prayer
+- psalm 63 night prayer
+- meditate in the night watches
+- shadow of thy wings prayer
+- prayer before sleep
+- bedtime prayer
+- peaceful sleep
+- the secret place
+thumb_text: SAFE ON MY BED
+description: 'Say this Psalm 63:5-7 (KJV) prayer before you sleep tonight.
+
   My soul shall be satisfied as with marrow and fatness; and my mouth shall praise thee with joyful lips: When I remember thee upon my bed, and meditate on thee in the night watches. Because thou hast been my help, therefore in the shadow of thy wings will I rejoice.
 
+
   This is a full devotional prayer and scripture exposition covering Psalm 63:5-7 (KJV)
+
   with peaceful nighttime ambient soundscapes.
 
+
   Scripture References & Sources:
+
   - The Holy Bible, Psalm 63:5-7 (KJV) (King James Version)
+
   - Spurgeon, C.H. (1885). The Treasury of David.
-  - Matthew Henry's Commentary on the Whole Bible.
+
+  - Matthew Henry''s Commentary on the Whole Bible.
+
 
   Produced by The Secret Place | Daily Prayer & Scripture.
+
+  '
 asset_queries:
-  - "person sleeping peacefully moonlight bed sheets soft night"
-  - "wings dove shelter divine protection light sanctuary"
-  - "ancient church candlelight evening prayer peaceful"
-  - "golden light rays through clouds heaven rejoicing"
-  - "night sky moon stars over quiet countryside"
-  - "peaceful sunrise morning light over calm lake"
+- person sleeping peacefully moonlight bed sheets soft night
+- wings dove shelter divine protection light sanctuary
+- ancient church candlelight evening prayer peaceful
+- golden light rays through clouds heaven rejoicing
+- night sky moon stars over quiet countryside
+- peaceful sunrise morning light over calm lake
 asset_query_verification:
-  verified_on: "2026-10-29"
-  method: "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule"
+  verified_on: '2026-10-29'
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule
   queries:
-    - query: "person sleeping peacefully moonlight bed sheets soft night"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "wings dove shelter divine protection light sanctuary"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "ancient church candlelight evening prayer peaceful"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "golden light rays through clouds heaven rejoicing"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "night sky moon stars over quiet countryside"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "peaceful sunrise morning light over calm lake"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
+  - query: person sleeping peacefully moonlight bed sheets soft night
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: wings dove shelter divine protection light sanctuary
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: ancient church candlelight evening prayer peaceful
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: golden light rays through clouds heaven rejoicing
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: night sky moon stars over quiet countryside
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: peaceful sunrise morning light over calm lake
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
 originality:
-  original_thesis: true      # devotional prayer narrative emphasizing peaceful surrender and divine protection
-  unique_structure: true     # 5-movement exposition moving from scripture reading to theological application to rest
-  human_rewrite: true        # carefully curated theological wording with sacred meditative breathing cadence
-  no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
-  source_notes: true         # scriptures and classical commentaries documented
-  ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
+  original_thesis: true
+  unique_structure: true
+  human_rewrite: true
+  no_ai_persona: true
+  source_notes: true
+  ai_disclosure: false
+seo_hook: Pray this Psalm 63:5-7 KJV night prayer as you remember the Lord upon your bed and rest beneath the shadow of His wings.
+category_id: '22'
 ---
 
 ## Scene 1 — My Soul Shall Be Satisfied as with Marrow and Fatness (Verse 5a)

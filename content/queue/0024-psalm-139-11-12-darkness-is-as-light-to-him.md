@@ -1,6 +1,6 @@
 ---
-id: "0024"
-title: "Psalm 139:11-12 — Darkness Is as Light to Him | Night Prayer for God's Presence | The Secret Place"
+id: '0024'
+title: Psalm 139:11-12 Night Prayer | No Darkness Hides From God
 slug: psalm-139-11-12-darkness-is-as-light-to-him
 status: approved
 privacy: public
@@ -9,63 +9,82 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "NO DARK TOO DEEP"
-description: |
-  Say this Psalm 139:11-12 (KJV) prayer before you sleep tonight.
+tags:
+- psalm 139 11 12 prayer
+- psalm 139 night prayer
+- darkness is as light to thee
+- bedtime prayer for god's presence
+- prayer before sleep
+- peaceful sleep
+- divine protection
+- the secret place
+thumb_text: NO DARK TOO DEEP
+description: 'Say this Psalm 139:11-12 (KJV) prayer before you sleep tonight.
+
   If I say, Surely the darkness shall cover me; even the night shall be light about me. Yea, the darkness hideth not from thee; but the night shineth as the day: the darkness and the light are both alike to thee.
 
+
   This is a full devotional prayer and scripture exposition covering Psalm 139:11-12 (KJV)
+
   with peaceful nighttime ambient soundscapes.
 
+
   Scripture References & Sources:
+
   - The Holy Bible, Psalm 139:11-12 (KJV) (King James Version)
+
   - Spurgeon, C.H. (1885). The Treasury of David.
-  - Matthew Henry's Commentary on the Whole Bible.
+
+  - Matthew Henry''s Commentary on the Whole Bible.
+
 
   Produced by The Secret Place | Daily Prayer & Scripture.
+
+  '
 asset_queries:
-  - "night sky moon stars light breaking through clouds"
-  - "divine light rays piercing darkness heaven presence"
-  - "silhouette person praying moonlight window night"
-  - "ancient chapel interior candlelight peaceful sanctuary"
-  - "golden dawn light over misty landscape morning"
-  - "peaceful nocturnal landscape moon over quiet hills"
+- night sky moon stars light breaking through clouds
+- divine light rays piercing darkness heaven presence
+- silhouette person praying moonlight window night
+- ancient chapel interior candlelight peaceful sanctuary
+- golden dawn light over misty landscape morning
+- peaceful nocturnal landscape moon over quiet hills
 asset_query_verification:
-  verified_on: "2026-10-29"
-  method: "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule"
+  verified_on: '2026-10-29'
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule
   queries:
-    - query: "night sky moon stars light breaking through clouds"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "divine light rays piercing darkness heaven presence"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "silhouette person praying moonlight window night"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "ancient chapel interior candlelight peaceful sanctuary"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "golden dawn light over misty landscape morning"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "peaceful nocturnal landscape moon over quiet hills"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
+  - query: night sky moon stars light breaking through clouds
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: divine light rays piercing darkness heaven presence
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: silhouette person praying moonlight window night
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: ancient chapel interior candlelight peaceful sanctuary
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: golden dawn light over misty landscape morning
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: peaceful nocturnal landscape moon over quiet hills
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
 originality:
-  original_thesis: true      # devotional prayer narrative emphasizing peaceful surrender and divine protection
-  unique_structure: true     # 5-movement exposition moving from scripture reading to theological application to rest
-  human_rewrite: true        # carefully curated theological wording with sacred meditative breathing cadence
-  no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
-  source_notes: true         # scriptures and classical commentaries documented
-  ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
+  original_thesis: true
+  unique_structure: true
+  human_rewrite: true
+  no_ai_persona: true
+  source_notes: true
+  ai_disclosure: false
+seo_hook: Pray this Psalm 139:11-12 KJV night prayer before sleep knowing even the deepest darkness shines like day in God's presence.
+category_id: '22'
 ---
 
 ## Scene 1 — If I Say, Surely the Darkness Shall Cover Me (Verse 11a)

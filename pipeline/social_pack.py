@@ -11,16 +11,72 @@ import re
 
 CHANNEL_HANDLE = "@TheSecretPlace"
 SUBSCRIBE_URL = "https://www.youtube.com/@TheSecretPlace?sub_confirmation=1"
-PODCAST_URL = "https://johnazani.github.io/YouTube-automation/podcast.xml"
+PODCAST_URL = os.environ.get("PODCAST_URL", "https://www.youtube.com/@TheSecretPlace/podcasts")
 SELAR_STORE_URL = os.environ.get("SELAR_STORE_URL", "https://selar.com/showlove/thesecretplace")
 SELAR_JOURNAL_URL = os.environ.get("SELAR_JOURNAL_URL", "https://selar.com/i000qy7g39")
 
-# Official Playlists
+# Official Series & Flagship Sanctuary Links (real live URLs; env-overridable once playlist IDs are minted)
 PLAYLIST_LINKS = {
-    "Night Prayers": "https://www.youtube.com/playlist?list=PL_NIGHT_PRAYERS",
-    "Bedtime Scripture Meditations (432 Hz)": "https://www.youtube.com/playlist?list=PL_BEDTIME_SLEEP",
-    "Complete Psalms Devotional Series": "https://www.youtube.com/playlist?list=PL_COMPLETE_PSALMS",
+    "Night Prayers": os.environ.get("YT_PLAYLIST_NIGHT_PRAYERS", "https://youtu.be/7RDX0fbIOtQ"),
+    "Bedtime Scripture Meditations": os.environ.get("YT_PLAYLIST_BEDTIME_SLEEP", "https://youtu.be/6M6oV8MxD9s"),
+    "Bedtime Scripture Meditations (432 Hz)": os.environ.get("YT_PLAYLIST_BEDTIME_SLEEP", "https://youtu.be/6M6oV8MxD9s"),
+    "Complete Psalms Devotional Series": os.environ.get("YT_PLAYLIST_COMPLETE_PSALMS", "https://youtu.be/1g8TXHD0Xks"),
 }
+
+
+def build_above_fold_selar_line() -> str:
+    """Single quiet pastoral resource line placed right at the watch-page fold (Line 2)."""
+    if not SELAR_JOURNAL_URL:
+        return ""
+    return f"📖 30-Night Bedside Prayer Journal: {SELAR_JOURNAL_URL}"
+
+
+def build_sanctuary_resource_block(
+    scripture_source: str = "The Holy Bible (King James Version, Public Domain)",
+    include_store_links: bool = True,
+    include_crisis_support: bool = True,
+) -> str:
+    """Clean, reverent Sanctuary Resource & Session Continuation block for descriptions."""
+    lines: list[str] = []
+    if include_store_links and (SELAR_JOURNAL_URL or SELAR_STORE_URL):
+        lines.append("🕊️ OFFLINE BEDTIME PRAYER SANCTUARY")
+        if SELAR_JOURNAL_URL:
+            lines.append(
+                f"• 30-Night Scripture Protection Prayer Journal (Printable PDF): {SELAR_JOURNAL_URL}"
+            )
+        if SELAR_STORE_URL:
+            lines.append(
+                f"• Partner in Prayer & Voluntary Ministry Support: {SELAR_STORE_URL}"
+            )
+        lines.append("")
+
+    lines.extend(
+        [
+            "🙏 CONTINUE PRAYING THROUGH THE NIGHT",
+            f"• Psalm 91 Night Prayer of Protection: {PLAYLIST_LINKS['Night Prayers']}",
+            f"• Psalm 121 Unsleeping Watch Prayer: {PLAYLIST_LINKS['Bedtime Scripture Meditations']}",
+            f"• Subscribe to The Secret Place: {SUBSCRIBE_URL}",
+            "",
+        ]
+    )
+
+    if include_crisis_support:
+        lines.extend(
+            [
+                "❤️ PASTORAL & CRISIS CARE",
+                "If tonight feels heavy or overwhelming, please know you are deeply loved and never alone.",
+                "• US & Canada: Call or text 988 | UK: Call 111 | International: https://findahelpline.com",
+                "",
+            ]
+        )
+
+    lines.extend(
+        [
+            f"Scripture & Devotional Attribution: {scripture_source}.",
+            "Curated by The Secret Place editorial team with reverent narration and nighttime sanctuary score.",
+        ]
+    )
+    return "\n".join(lines).strip()
 
 
 def build_standardized_description_footer(
@@ -44,10 +100,10 @@ def build_standardized_description_footer(
         f"Subscribe for nightly prayers and biblical peace: {SUBSCRIBE_URL}\n\n"
         f"🎧 OFFICIAL SERIES PLAYLISTS (CONTINUOUS AUTOPLAY):\n"
         f"• Night Prayers of Protection: {PLAYLIST_LINKS['Night Prayers']}\n"
-        f"• Bedtime Sleep Meditations (432 Hz): {PLAYLIST_LINKS['Bedtime Scripture Meditations (432 Hz)']}\n"
+        f"• Bedtime Sleep Meditations: {PLAYLIST_LINKS['Bedtime Scripture Meditations']}\n"
         f"• Complete Psalms Expositions: {PLAYLIST_LINKS['Complete Psalms Devotional Series']}\n\n"
-        f"🎙️ AUDIO PODCAST (APPLE / SPOTIFY):\n"
-        f"Listen free to our nighttime audio stream: {PODCAST_URL}\n"
+        f"🎙️ AUDIO PODCAST:\n"
+        f"Listen free to our nighttime audio sanctuary: {PODCAST_URL}\n"
         f"{store_block}\n"
         f"📖 SCRIPTURE & ATTRIBUTION:\n"
         f"{scripture_source}\n"
@@ -64,8 +120,15 @@ def build_standardized_description_footer(
 
 
 def sanitize_persona_integrity(text: str) -> str:
-    """Ensure zero personal creator names appear in metadata or comments."""
-    cleaned = re.sub(r"\bJohn\s+Azani\b", "The Secret Place", text, flags=re.IGNORECASE)
+    """Ensure zero personal creator names or handles appear in metadata or comments."""
+    cleaned = re.sub(
+        r"https?://johnazani\.github\.io/[^\s)]*",
+        "https://www.youtube.com/@TheSecretPlace/podcasts",
+        text,
+        flags=re.IGNORECASE,
+    )
+    cleaned = re.sub(r"\bJohn\s+Azani\b", "The Secret Place", cleaned, flags=re.IGNORECASE)
     cleaned = re.sub(r"\bAzani\s+John\b", "The Secret Place", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"\bjohnazani\b", "TheSecretPlace", cleaned, flags=re.IGNORECASE)
     cleaned = re.sub(r"\bAzani\b", "The Secret Place", cleaned, flags=re.IGNORECASE)
     return cleaned

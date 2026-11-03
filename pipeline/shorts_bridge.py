@@ -46,7 +46,7 @@ SHORT_LONGFORM_CATALOG: dict[str, dict[str, str]] = {
         "longform_slug": "0010-psalm-121-my-help-comes-from-the-lord",
         "scripture": "Psalm 121",
         "title": "Psalm 121: He Who Keeps You Will Not Slumber — Nighttime Sleep Prayer",
-        "fallback_video_id": "",
+        "fallback_video_id": "6M6oV8MxD9s",
         "theme": "unsleeping protection and peaceful sleep",
     },
     "short-psalm27": {
@@ -62,7 +62,7 @@ SHORT_LONGFORM_CATALOG: dict[str, dict[str, str]] = {
         "longform_slug": "0013-psalm-46-refuge-in-times-of-trouble",
         "scripture": "Psalm 46",
         "title": "Psalm 46: God Is Our Refuge and Strength — Be Still and Know",
-        "fallback_video_id": "",
+        "fallback_video_id": "1g8TXHD0Xks",
         "theme": "stillness in storms and God's sovereign shelter",
     },
     "short-psalm34": {
@@ -75,7 +75,7 @@ SHORT_LONGFORM_CATALOG: dict[str, dict[str, str]] = {
     },
 }
 
-DEFAULT_PLAYLIST_FALLBACK = "https://www.youtube.com/playlist?list=PL_NIGHT_PRAYERS"
+DEFAULT_PLAYLIST_FALLBACK = "https://www.youtube.com/@TheSecretPlace/playlists"
 
 
 def resolve_short_key(key_or_title: str) -> str | None:
@@ -166,7 +166,7 @@ def resolve_longform_counterpart(short_key_or_title: str) -> dict[str, Any]:
 
 
 def generate_short_bridge_comment(short_key_or_title: str) -> str:
-    """Generate high-converting pinned comment bridging Shorts viewers to full prayer."""
+    """Generate high-converting comment bridging Shorts viewers to full prayer & channel bio."""
     counterpart = resolve_longform_counterpart(short_key_or_title)
     url = counterpart["url"]
     scripture = counterpart.get("scripture", "this Scripture")
@@ -174,8 +174,11 @@ def generate_short_bridge_comment(short_key_or_title: str) -> str:
 
     comment = (
         f"🕊️ PRAY THE FULL NIGHTTIME SCRIPTURE MEDITATION:\n"
-        f"Experience the complete 8-minute prayer and exposition of {scripture} before sleep:\n"
+        f"Tap the linked full-length prayer right above this title (or visit @TheSecretPlace) "
+        f"to experience the complete bedtime prayer of {scripture}:\n"
         f"👉 {url}\n\n"
+        f"📖 Our printable 30-Night Bedside Prayer Journal & voluntary ministry support links are "
+        f"clickable directly on our @TheSecretPlace channel profile.\n\n"
         f"Rest under God's covenant of {theme} tonight. "
         f"Write 'AMEN' in faith and leave your prayer request below — we are interceding for your household! 🙏🕊️✨"
     )
@@ -183,7 +186,9 @@ def generate_short_bridge_comment(short_key_or_title: str) -> str:
 
 
 def enrich_short_description_with_bridge(description: str, short_key_or_title: str) -> str:
-    """Inject prominent bridge link at the very top of Short description."""
+    """Inject prominent bridge link and Selar sanctuary links into a faith Short description."""
+    from .social_pack import SELAR_JOURNAL_URL, SELAR_STORE_URL
+
     counterpart = resolve_longform_counterpart(short_key_or_title)
     url = counterpart["url"]
     scripture = counterpart.get("scripture", "Scripture")
@@ -193,6 +198,19 @@ def enrich_short_description_with_bridge(description: str, short_key_or_title: s
         f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
     )
 
-    if url in description:
-        return description  # Already enriched
-    return header + description
+    out = description if (url in description) else (header + description)
+
+    if SELAR_JOURNAL_URL and SELAR_JOURNAL_URL not in out:
+        selar_block = (
+            f"\n\n🕊️ BEDTIME PRAYER SANCTUARY (Also in @TheSecretPlace bio):\n"
+            f"• 30-Night Scripture Protection Prayer Journal (PDF): {SELAR_JOURNAL_URL}\n"
+            f"• Partner in Prayer & Voluntary Ministry Support: {SELAR_STORE_URL}"
+        )
+        # Insert before trailing hashtag line if present so hashtags stay at the bottom
+        lines = out.rstrip().splitlines()
+        if lines and lines[-1].lstrip().startswith("#"):
+            hashtag_line = lines.pop()
+            out = "\n".join(lines).rstrip() + selar_block + "\n\n" + hashtag_line
+        else:
+            out = out.rstrip() + selar_block
+    return out

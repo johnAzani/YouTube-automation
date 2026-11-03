@@ -1,6 +1,6 @@
 ---
-id: "0028"
-title: "Matthew 11:28-30 — Rest for the Weary Soul | Bedtime Prayer for Rest | The Secret Place"
+id: 0028
+title: Matthew 11:28-30 Bedtime Prayer | Deep Rest for Weary Souls
 slug: matthew-11-28-30-rest-for-the-weary-soul
 status: approved
 privacy: public
@@ -9,63 +9,82 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "COME AND REST"
-description: |
-  Say this Matthew 11:28-30 (KJV) prayer before you sleep tonight.
+tags:
+- matthew 11 28 bedtime prayer
+- come unto me all ye that labour
+- rest for the weary soul prayer
+- night prayer for exhaustion
+- prayer before sleep
+- peaceful sleep
+- rest and healing
+- the secret place
+thumb_text: COME AND REST
+description: 'Say this Matthew 11:28-30 (KJV) prayer before you sleep tonight.
+
   Come unto me, all ye that labour and are heavy laden, and I will give you rest. Take my yoke upon you, and learn of me; for I am meek and lowly in heart: and ye shall find rest unto your souls. For my yoke is easy, and my burden is light.
 
+
   This is a full devotional prayer and scripture exposition covering Matthew 11:28-30 (KJV)
+
   with peaceful nighttime ambient soundscapes.
 
+
   Scripture References & Sources:
+
   - The Holy Bible, Matthew 11:28-30 (KJV) (King James Version)
+
   - Spurgeon, C.H. (1885). The Treasury of David.
-  - Matthew Henry's Commentary on the Whole Bible.
+
+  - Matthew Henry''s Commentary on the Whole Bible.
+
 
   Produced by The Secret Place | Daily Prayer & Scripture.
+
+  '
 asset_queries:
-  - "person laying down heavy burden stone path peaceful"
-  - "yoke oxen wooden field sunrise peaceful agriculture"
-  - "divine light shoulders relieving burden heaven sanctuary"
-  - "ancient stone gate entrance warm candlelight evening"
-  - "golden light rays over calm landscape morning dawn"
-  - "peaceful sunrise over misty field countryside serene"
+- person laying down heavy burden stone path peaceful
+- yoke oxen wooden field sunrise peaceful agriculture
+- divine light shoulders relieving burden heaven sanctuary
+- ancient stone gate entrance warm candlelight evening
+- golden light rays over calm landscape morning dawn
+- peaceful sunrise over misty field countryside serene
 asset_query_verification:
-  verified_on: "2026-10-29"
-  method: "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule"
+  verified_on: '2026-10-29'
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule
   queries:
-    - query: "person laying down heavy burden stone path peaceful"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "yoke oxen wooden field sunrise peaceful agriculture"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "divine light shoulders relieving burden heaven sanctuary"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "ancient stone gate entrance warm candlelight evening"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "golden light rays over calm landscape morning dawn"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "peaceful sunrise over misty field countryside serene"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
+  - query: person laying down heavy burden stone path peaceful
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: yoke oxen wooden field sunrise peaceful agriculture
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: divine light shoulders relieving burden heaven sanctuary
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: ancient stone gate entrance warm candlelight evening
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: golden light rays over calm landscape morning dawn
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: peaceful sunrise over misty field countryside serene
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
 originality:
-  original_thesis: true      # devotional prayer narrative emphasizing peaceful surrender and divine protection
-  unique_structure: true     # 5-movement exposition moving from scripture reading to theological application to rest
-  human_rewrite: true        # carefully curated theological wording with sacred meditative breathing cadence
-  no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
-  source_notes: true         # scriptures and classical commentaries documented
-  ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
+  original_thesis: true
+  unique_structure: true
+  human_rewrite: true
+  no_ai_persona: true
+  source_notes: true
+  ai_disclosure: false
+seo_hook: Pray this Matthew 11:28-30 KJV bedtime prayer to lay every heavy burden at Christ's feet and receive deep rest for your weary soul.
+category_id: '22'
 ---
 
 ## Scene 1 — Come Unto Me, All Ye That Labour and Are Heavy Laden (Verse 28a)

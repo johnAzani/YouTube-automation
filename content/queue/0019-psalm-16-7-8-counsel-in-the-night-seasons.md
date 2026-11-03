@@ -1,6 +1,6 @@
 ---
-id: "0019"
-title: "Psalm 16:7-8 — Counsel in the Night Seasons | Bedtime Prayer for Wisdom | The Secret Place"
+id: 0019
+title: Psalm 16:7-8 Night Prayer | God's Quiet Counsel Before Sleep
 slug: psalm-16-7-8-counsel-in-the-night-seasons
 status: approved
 privacy: public
@@ -9,63 +9,82 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "GUIDED BY NIGHT"
-description: |
-  Say this Psalm 16:7-8 (KJV) prayer before you sleep tonight.
+tags:
+- psalm 16 7 8 prayer
+- psalm 16 night prayer
+- counsel in the night seasons
+- bedtime prayer for wisdom and peace
+- prayer before sleep
+- scripture meditation
+- peaceful sleep
+- the secret place
+thumb_text: GUIDED BY NIGHT
+description: 'Say this Psalm 16:7-8 (KJV) prayer before you sleep tonight.
+
   I will bless the LORD, who hath given me counsel: my reins also instruct me in the night seasons. I have set the LORD always before me: because he is at my right hand, I shall not be moved.
 
+
   This is a full devotional prayer and scripture exposition covering Psalm 16:7-8 (KJV)
+
   with peaceful nighttime ambient soundscapes.
 
+
   Scripture References & Sources:
+
   - The Holy Bible, Psalm 16:7-8 (KJV) (King James Version)
+
   - Spurgeon, C.H. (1885). The Treasury of David.
-  - Matthew Henry's Commentary on the Whole Bible.
+
+  - Matthew Henry''s Commentary on the Whole Bible.
+
 
   Produced by The Secret Place | Daily Prayer & Scripture.
+
+  '
 asset_queries:
-  - "person meditating moonlight night peace silhouette"
-  - "ancient scroll candle light night study sanctuary"
-  - "divine light wisdom rays clouds heaven peaceful"
-  - "hands open receiving prayer moonlight window night"
-  - "star night sky over quiet countryside peaceful"
-  - "golden hour dawn light over calm mountains morning"
+- person meditating moonlight night peace silhouette
+- ancient scroll candle light night study sanctuary
+- divine light wisdom rays clouds heaven peaceful
+- hands open receiving prayer moonlight window night
+- star night sky over quiet countryside peaceful
+- golden hour dawn light over calm mountains morning
 asset_query_verification:
-  verified_on: "2026-10-29"
-  method: "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule"
+  verified_on: '2026-10-29'
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule
   queries:
-    - query: "person meditating moonlight night peace silhouette"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "ancient scroll candle light night study sanctuary"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "divine light wisdom rays clouds heaven peaceful"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "hands open receiving prayer moonlight window night"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "star night sky over quiet countryside peaceful"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "golden hour dawn light over calm mountains morning"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
+  - query: person meditating moonlight night peace silhouette
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: ancient scroll candle light night study sanctuary
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: divine light wisdom rays clouds heaven peaceful
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: hands open receiving prayer moonlight window night
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: star night sky over quiet countryside peaceful
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: golden hour dawn light over calm mountains morning
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
 originality:
-  original_thesis: true      # devotional prayer narrative emphasizing peaceful surrender and divine protection
-  unique_structure: true     # 5-movement exposition moving from scripture reading to theological application to rest
-  human_rewrite: true        # carefully curated theological wording with sacred meditative breathing cadence
-  no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
-  source_notes: true         # scriptures and classical commentaries documented
-  ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
+  original_thesis: true
+  unique_structure: true
+  human_rewrite: true
+  no_ai_persona: true
+  source_notes: true
+  ai_disclosure: false
+seo_hook: Pray this Psalm 16:7-8 KJV night prayer before sleep to receive God's gentle counsel, steady peace, and unshakable rest tonight.
+category_id: '22'
 ---
 
 ## Scene 1 — I Will Bless the LORD, Who Hath Given Me Counsel (Verse 7a)

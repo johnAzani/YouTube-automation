@@ -1,6 +1,6 @@
 ---
-id: "0022"
-title: "Psalm 37:3-4, 7 — Rest in the Lord and Wait Patiently | Bedtime Prayer for Contentment | The Secret Place"
+id: '0022'
+title: Psalm 37:7 Bedtime Prayer | Rest in the Lord & Fret Not
 slug: psalm-37-3-4-7-rest-in-the-lord-wait-patiently
 status: approved
 privacy: public
@@ -9,68 +9,87 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "REST IN THE LORD"
-description: |
-  Say this Psalm 37:3-4, 7 (KJV) prayer before you sleep tonight.
+tags:
+- psalm 37 7 prayer
+- rest in the lord and wait patiently
+- psalm 37 bedtime prayer
+- prayer to stop worrying at night
+- prayer before sleep
+- peaceful sleep
+- christian sleep prayer
+- the secret place
+thumb_text: REST IN THE LORD
+description: 'Say this Psalm 37:3-4, 7 (KJV) prayer before you sleep tonight.
+
   Trust in the LORD, and do good; so shalt thou dwell in the land, and verily thou shalt be fed. Delight thyself also in the LORD: and he shall give thee the desires of thine heart. Rest in the LORD, and wait patiently for him: fret not thyself because of him who prospereth in his way, because of the man who bringeth wicked devices to pass.
 
+
   This is a full devotional prayer and scripture exposition covering Psalm 37:3-4, 7 (KJV)
+
   with peaceful nighttime ambient soundscapes.
 
+
   Scripture References & Sources:
+
   - The Holy Bible, Psalm 37:3-4, 7 (KJV) (King James Version)
+
   - Spurgeon, C.H. (1885). The Treasury of David.
-  - Matthew Henry's Commentary on the Whole Bible.
+
+  - Matthew Henry''s Commentary on the Whole Bible.
+
 
   Produced by The Secret Place | Daily Prayer & Scripture.
+
+  '
 asset_queries:
-  - "person sitting peacefully green pasture sunset rest"
-  - "still water reflection calm lake evening peaceful"
-  - "golden hour light over meadow quiet countryside"
-  - "hands open receiving prayer sunset warm sanctuary"
-  - "divine light breaking through clouds over peaceful landscape"
-  - "sunrise over rolling hills morning mist serene"
-  - "peaceful night landscape moon over quiet fields stars"
+- person sitting peacefully green pasture sunset rest
+- still water reflection calm lake evening peaceful
+- golden hour light over meadow quiet countryside
+- hands open receiving prayer sunset warm sanctuary
+- divine light breaking through clouds over peaceful landscape
+- sunrise over rolling hills morning mist serene
+- peaceful night landscape moon over quiet fields stars
 asset_query_verification:
-  verified_on: "2026-10-29"
-  method: "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule"
+  verified_on: '2026-10-29'
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule
   queries:
-    - query: "person sitting peacefully green pasture sunset rest"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "still water reflection calm lake evening peaceful"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "golden hour light over meadow quiet countryside"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "hands open receiving prayer sunset warm sanctuary"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "divine light breaking through clouds over peaceful landscape"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "sunrise over rolling hills morning mist serene"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "peaceful night landscape moon over quiet fields stars"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
+  - query: person sitting peacefully green pasture sunset rest
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: still water reflection calm lake evening peaceful
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: golden hour light over meadow quiet countryside
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: hands open receiving prayer sunset warm sanctuary
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: divine light breaking through clouds over peaceful landscape
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: sunrise over rolling hills morning mist serene
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: peaceful night landscape moon over quiet fields stars
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
 originality:
-  original_thesis: true      # devotional prayer narrative emphasizing peaceful surrender and divine protection
-  unique_structure: true     # 5-movement exposition moving from scripture reading to theological application to rest
-  human_rewrite: true        # carefully curated theological wording with sacred meditative breathing cadence
-  no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
-  source_notes: true         # scriptures and classical commentaries documented
-  ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
+  original_thesis: true
+  unique_structure: true
+  human_rewrite: true
+  no_ai_persona: true
+  source_notes: true
+  ai_disclosure: false
+seo_hook: Pray this Psalm 37:3-7 KJV bedtime prayer before sleep to quiet racing thoughts, stop fretting, and rest patiently in the Lord.
+category_id: '22'
 ---
 
 ## Scene 1 — Trust in the LORD, and Do Good (Verse 3a)

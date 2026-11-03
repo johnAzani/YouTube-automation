@@ -1,6 +1,6 @@
 ---
-id: "0035"
-title: "Psalm 23 (Complete Prayer): The Lord Is My Shepherd — Night Prayer to Restore Your Soul | The Secret Place"
+id: '0035'
+title: Psalm 23 Complete KJV Night Prayer | Restore Your Weary Soul
 slug: psalm-23-complete-night-prayer-restore-my-soul
 status: approved
 privacy: public
@@ -9,59 +9,79 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-tags: [psalm 23, the lord is my shepherd, prayer before sleep, bedtime prayer, peaceful sleep, the secret place, scripture meditation, christian meditation, rest and healing]
-thumb_text: "RESTORE MY SOUL"
-description: |
-  Pray all six verses of Psalm 23 (KJV) before you sleep tonight. Lay every burden,
+tags:
+- psalm 23 complete night prayer
+- the lord is my shepherd prayer
+- restore my soul bedtime prayer
+- psalm 23 kjv sleep meditation
+- prayer before sleep
+- peaceful sleep
+- rest and healing
+- the secret place
+thumb_text: RESTORE MY SOUL
+description: 'Pray all six verses of Psalm 23 (KJV) before you sleep tonight. Lay every burden,
+
   unfinished errand, and quiet grief of this day at the feet of the Good Shepherd,
+
   and let Him lead your heart beside the still waters.
+
   The LORD is my shepherd; I shall not want. He maketh me to lie down in green
+
   pastures: he leadeth me beside the still waters. He restoreth my soul.
 
+
   This is a complete devotional night prayer and verse-by-verse scripture meditation
+
   through Psalm 23:1-6 (King James Version) with peaceful 432 Hz sanctuary soundscapes.
 
+
   Scripture References & Sources:
+
   - The Holy Bible, Psalm 23:1-6 (King James Version)
+
   - Spurgeon, C.H. (1885). The Treasury of David, Psalm 23 Commentary.
-  - Matthew Henry's Commentary on the Whole Bible, Psalm 23.
+
+  - Matthew Henry''s Commentary on the Whole Bible, Psalm 23.
+
 
   Produced by The Secret Place | Daily Prayer & Scripture.
+
+  '
 asset_queries:
-  - "mountain meadow pasture landscape"
-  - "calm mountain lake still water reflection nightfall"
-  - "forest sunlight mist"
-  - "mountain valley fog mist"
-  - "ancient stone sanctuary warm candle light evening"
-  - "peaceful sunrise over misty alpine valley"
+- mountain meadow pasture landscape
+- calm mountain lake still water reflection nightfall
+- forest sunlight mist
+- mountain valley fog mist
+- ancient stone sanctuary warm candle light evening
+- peaceful sunrise over misty alpine valley
 asset_query_verification:
-  verified_on: "2026-11-03"
-  method: "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule"
+  verified_on: '2026-11-03'
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule
   queries:
-    - query: "mountain meadow pasture landscape"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — USGS / NPS meadow and pasture landscape photography"
-    - query: "calm mountain lake still water reflection nightfall"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — NPS Mirror Lake and Crater Lake twilight scans"
-    - query: "forest sunlight mist"
-      verified: true
-      usable: 3
-      evidence: "3x Public domain — USFS forest crepuscular ray and mist photography"
-    - query: "mountain valley fog mist"
-      verified: true
-      usable: 3
-      evidence: "3x Public domain — USGS mountain valley mist and fog photography"
-    - query: "ancient stone sanctuary warm candle light evening"
-      verified: true
-      usable: 3
-      evidence: "3x CC0 / Public domain — Library of Congress ancient sanctuary plates"
-    - query: "peaceful sunrise over misty alpine valley"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — USGS alpine valley dawn mist photography"
+  - query: mountain meadow pasture landscape
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — USGS / NPS meadow and pasture landscape photography
+  - query: calm mountain lake still water reflection nightfall
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — NPS Mirror Lake and Crater Lake twilight scans
+  - query: forest sunlight mist
+    verified: true
+    usable: 3
+    evidence: 3x Public domain — USFS forest crepuscular ray and mist photography
+  - query: mountain valley fog mist
+    verified: true
+    usable: 3
+    evidence: 3x Public domain — USGS mountain valley mist and fog photography
+  - query: ancient stone sanctuary warm candle light evening
+    verified: true
+    usable: 3
+    evidence: 3x CC0 / Public domain — Library of Congress ancient sanctuary plates
+  - query: peaceful sunrise over misty alpine valley
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — USGS alpine valley dawn mist photography
 originality:
   original_thesis: true
   unique_structure: true
@@ -69,6 +89,8 @@ originality:
   no_ai_persona: true
   source_notes: true
   ai_disclosure: false
+seo_hook: Pray this complete Psalm 23 KJV night prayer before sleep as the Good Shepherd leads you beside still waters and restores your soul.
+category_id: '22'
 ---
 
 ## Scene 1 — The Good Shepherd and the End of Striving (Verse 1)

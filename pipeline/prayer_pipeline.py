@@ -253,13 +253,17 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
             json.dumps([r.as_dict() for r in thumb_reports], indent=2), encoding="utf-8")
         thumbs = [r.path for r in thumb_reports]
         pack = write_metadata_pack(doc, durations, out)
+        from .captions import write_srt_file
+        srt_path = write_srt_file(out / 'captions.en.srt', words, doc.full_narration, duration=duration)
         result = {'id': doc.id, 'slug': doc.slug, 'video': str(final), 'thumbnail': str(thumbs[0]),
+                  'captions': str(srt_path) if srt_path else '',
                   'duration_seconds': duration, 'tts_engine': 'gemini-api', 'dry_run': dry_run}
         if not dry_run:
             from .upload import upload
             with stage("upload", "YouTube"):
                 up = upload(doc, final, thumbs[0], privacy=doc.meta.get('privacy'),
-                            publish_at=doc.meta.get('publish_at'), description=pack.get('description'))
+                            publish_at=doc.meta.get('publish_at'), description=pack.get('description'),
+                            caption_path=srt_path, tags=pack.get('tags'))
             if not up.video_id:
                 raise RuntimeError('YouTube returned no video ID; queue unchanged')
             # Persist the receipt before any nonessential notification.

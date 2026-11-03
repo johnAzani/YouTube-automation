@@ -1,6 +1,6 @@
 ---
-id: "0021"
-title: "Psalm 31:1, 5 — Committing My Spirit to His Hand | Bedtime Prayer for Surrender | The Secret Place"
+id: '0021'
+title: Psalm 31:5 Bedtime Prayer | Into Your Hands I Commit My Spirit
 slug: psalm-31-1-5-committing-my-spirit-to-his-hand
 status: approved
 privacy: public
@@ -9,63 +9,82 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "INTO THINE HAND"
-description: |
-  Say this Psalm 31:1, 5 (KJV) prayer before you sleep tonight.
+tags:
+- psalm 31 5 bedtime prayer
+- into thine hand i commit my spirit
+- psalm 31 night prayer
+- prayer of surrender before sleep
+- prayer before sleep
+- peaceful sleep
+- rest and healing
+- the secret place
+thumb_text: INTO THINE HAND
+description: 'Say this Psalm 31:1, 5 (KJV) prayer before you sleep tonight.
+
   In thee, O LORD, do I put my trust; let me never be ashamed: deliver me in thy righteousness. Into thine hand I commit my spirit: thou hast redeemed me, O LORD God of truth.
 
+
   This is a full devotional prayer and scripture exposition covering Psalm 31:1, 5 (KJV)
+
   with peaceful nighttime ambient soundscapes.
 
+
   Scripture References & Sources:
+
   - The Holy Bible, Psalm 31:1, 5 (KJV) (King James Version)
+
   - Spurgeon, C.H. (1885). The Treasury of David.
-  - Matthew Henry's Commentary on the Whole Bible.
+
+  - Matthew Henry''s Commentary on the Whole Bible.
+
 
   Produced by The Secret Place | Daily Prayer & Scripture.
+
+  '
 asset_queries:
-  - "hands praying receiving light silhouette night peace"
-  - "ancient stone altar candlelight sanctuary evening prayer"
-  - "divine hand reaching down light heaven protection"
-  - "person kneeling prayer moonlight bedroom serene night"
-  - "golden light rays descending clouds divine presence"
-  - "peaceful night landscape moon over quiet valley stars"
+- hands praying receiving light silhouette night peace
+- ancient stone altar candlelight sanctuary evening prayer
+- divine hand reaching down light heaven protection
+- person kneeling prayer moonlight bedroom serene night
+- golden light rays descending clouds divine presence
+- peaceful night landscape moon over quiet valley stars
 asset_query_verification:
-  verified_on: "2026-10-29"
-  method: "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule"
+  verified_on: '2026-10-29'
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule
   queries:
-    - query: "hands praying receiving light silhouette night peace"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "ancient stone altar candlelight sanctuary evening prayer"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "divine hand reaching down light heaven protection"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "person kneeling prayer moonlight bedroom serene night"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "golden light rays descending clouds divine presence"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "peaceful night landscape moon over quiet valley stars"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
+  - query: hands praying receiving light silhouette night peace
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: ancient stone altar candlelight sanctuary evening prayer
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: divine hand reaching down light heaven protection
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: person kneeling prayer moonlight bedroom serene night
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: golden light rays descending clouds divine presence
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: peaceful night landscape moon over quiet valley stars
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
 originality:
-  original_thesis: true      # devotional prayer narrative emphasizing peaceful surrender and divine protection
-  unique_structure: true     # 5-movement exposition moving from scripture reading to theological application to rest
-  human_rewrite: true        # carefully curated theological wording with sacred meditative breathing cadence
-  no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
-  source_notes: true         # scriptures and classical commentaries documented
-  ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
+  original_thesis: true
+  unique_structure: true
+  human_rewrite: true
+  no_ai_persona: true
+  source_notes: true
+  ai_disclosure: false
+seo_hook: Pray this Psalm 31:1-5 KJV bedtime prayer before you sleep to surrender every burden and commit your spirit into the Father's hands.
+category_id: '22'
 ---
 
 ## Scene 1 — In Thee, O LORD, Do I Put My Trust (Verse 1a)

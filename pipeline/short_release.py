@@ -971,8 +971,17 @@ def run_short_release(
             upload,
         )
 
+        short_desc = edition.description
+        if any(k in edition.niche.lower() for k in ("faith", "prayer", "scripture", "devotional")):
+            try:
+                from .shorts_bridge import enrich_short_description_with_bridge
+
+                short_desc = enrich_short_description_with_bridge(edition.description, edition.key)
+            except Exception as bridge_exc:  # noqa: BLE001
+                print(f"[short-release] Notice: short bridge enrichment skipped: {bridge_exc}")
+
         try:
-            up = upload(doc, staged_video, thumbnail_path=staged_thumb, description=edition.description, privacy=desired_privacy, publish_at=desired_publish_at)
+            up = upload(doc, staged_video, thumbnail_path=None, description=short_desc, privacy=desired_privacy, publish_at=desired_publish_at)
         except (QuotaExceededError, GeminiQuotaExceededError) as exc:
             reset_utc = getattr(exc, "reset_utc", None) or calculate_next_quota_reset_utc()
             reset_iso = reset_utc.isoformat()

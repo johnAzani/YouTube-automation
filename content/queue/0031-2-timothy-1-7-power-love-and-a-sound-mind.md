@@ -1,6 +1,6 @@
 ---
-id: "0031"
-title: "2 Timothy 1:7 — Power, Love, and a Sound Mind | Night Prayer for Mental Clarity | The Secret Place"
+id: '0031'
+title: 2 Timothy 1:7 Night Prayer | Power, Love & a Sound Mind
 slug: 2-timothy-1-7-power-love-and-a-sound-mind
 status: approved
 privacy: public
@@ -9,63 +9,82 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "NO SPIRIT OF FEAR"
-description: |
-  Say this 2 Timothy 1:7 (KJV) prayer before you sleep tonight.
+tags:
+- 2 timothy 1 7 night prayer
+- power love and a sound mind prayer
+- god has not given us a spirit of fear
+- bedtime prayer against fear
+- prayer before sleep
+- peaceful sleep
+- christian meditation
+- the secret place
+thumb_text: NO SPIRIT OF FEAR
+description: 'Say this 2 Timothy 1:7 (KJV) prayer before you sleep tonight.
+
   For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.
 
+
   This is a full devotional prayer and scripture exposition covering 2 Timothy 1:7 (KJV)
+
   with peaceful nighttime ambient soundscapes.
 
+
   Scripture References & Sources:
+
   - The Holy Bible, 2 Timothy 1:7 (KJV) (King James Version)
+
   - Spurgeon, C.H. (1885). The Treasury of David.
-  - Matthew Henry's Commentary on the Whole Bible.
+
+  - Matthew Henry''s Commentary on the Whole Bible.
+
 
   Produced by The Secret Place | Daily Prayer & Scripture.
+
+  '
 asset_queries:
-  - "person sleeping peacefully moonlight bed sound mind calm"
-  - "divine power light rays clouds heaven sanctuary"
-  - "ancient scripture scroll candlelight night study peaceful"
-  - "heart mind protected golden light divine presence"
-  - "night sky moon stars over quiet countryside peaceful"
-  - "sunrise dawn light over calm fields morning serene"
+- person sleeping peacefully moonlight bed sound mind calm
+- divine power light rays clouds heaven sanctuary
+- ancient scripture scroll candlelight night study peaceful
+- heart mind protected golden light divine presence
+- night sky moon stars over quiet countryside peaceful
+- sunrise dawn light over calm fields morning serene
 asset_query_verification:
-  verified_on: "2026-10-29"
-  method: "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule"
+  verified_on: '2026-10-29'
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule
   queries:
-    - query: "person sleeping peacefully moonlight bed sound mind calm"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "divine power light rays clouds heaven sanctuary"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "ancient scripture scroll candlelight night study peaceful"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "heart mind protected golden light divine presence"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "night sky moon stars over quiet countryside peaceful"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "sunrise dawn light over calm fields morning serene"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
+  - query: person sleeping peacefully moonlight bed sound mind calm
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: divine power light rays clouds heaven sanctuary
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: ancient scripture scroll candlelight night study peaceful
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: heart mind protected golden light divine presence
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: night sky moon stars over quiet countryside peaceful
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: sunrise dawn light over calm fields morning serene
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
 originality:
-  original_thesis: true      # devotional prayer narrative emphasizing peaceful surrender and divine protection
-  unique_structure: true     # 5-movement exposition moving from scripture reading to theological application to rest
-  human_rewrite: true        # carefully curated theological wording with sacred meditative breathing cadence
-  no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
-  source_notes: true         # scriptures and classical commentaries documented
-  ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
+  original_thesis: true
+  unique_structure: true
+  human_rewrite: true
+  no_ai_persona: true
+  source_notes: true
+  ai_disclosure: false
+seo_hook: Pray this 2 Timothy 1:7 KJV night prayer before sleep to rebuke nighttime fear and rest in God's power, love, and sound mind.
+category_id: '22'
 ---
 
 ## Scene 1 — For God Hath Not Given Us the Spirit of Fear (Verse 7a)
