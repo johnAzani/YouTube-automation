@@ -552,7 +552,9 @@ class ADeadQuotaStopsTheQueueInsteadOfBurningTomorrows(unittest.TestCase):
 
         future = datetime.now(timezone.utc) + timedelta(hours=12)
         buffer = io.StringIO()
-        with mock.patch.object(run, "select_jobs", return_value=[Path("content/queue/0019.md")]), \
+        with mock.patch.dict(os.environ, {"DRY_RUN": "0"}, clear=False), \
+             mock.patch.object(run.CONFIG, "dry_run", False), \
+             mock.patch.object(run, "select_jobs", return_value=[Path("content/queue/0019.md")]), \
              mock.patch.object(run, "quota_blocked_until", return_value=future), \
              mock.patch.object(run, "process") as proc_mock, \
              redirect_stdout(buffer):

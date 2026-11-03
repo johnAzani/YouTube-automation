@@ -203,17 +203,21 @@ jobs:
           JOB=$(python - <<'PY'
           from pathlib import Path
           from pipeline.script_doc import parse_script
-          from pipeline.run import _validate_finance_niche
-          for p in sorted(Path("content/queue").glob("*.md")):
-              if p.stem.lower() == "readme":
-                  continue
-              doc = parse_script(p)
-              try:
-                  _validate_finance_niche(doc)
-              except RuntimeError:
-                  continue
-              print(p)
-              break
+          from pipeline.run import _validate_finance_niche, select_jobs
+          nxt = select_jobs(False, None, True)
+          if nxt:
+              print(nxt[0])
+          else:
+              for p in sorted(Path("content/queue").glob("*.md")):
+                  if p.stem.lower() == "readme":
+                      continue
+                  doc = parse_script(p)
+                  try:
+                      _validate_finance_niche(doc)
+                  except RuntimeError:
+                      continue
+                  print(p)
+                  break
           PY
           )
           if [ -z "$JOB" ]; then
