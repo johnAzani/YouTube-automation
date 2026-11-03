@@ -80,6 +80,9 @@ Every concern can become a prayer. Every worry can become supplication.
 
 Father, as I prepare for sleep, I bring before You every lingering care that tries to steal my peace. I refuse to be anxious about tomorrow's schedule, today's unfinished tasks, or any unknown challenge that looms. Instead, I surrender these thoughts to You, trusting Your sovereignty over all things. Let this act of letting go be a sincere prayer, transforming worry into worship, and allowing Your gentle presence to settle over my spirit as I rest.
 
+
+Where racing thoughts once crowded the quiet hours of night, let grateful supplication clear a wide sanctuary of calm within my chest so Christ's own tranquility governs every beat of my heart.
+
 ## Scene 2 — In Every Thing by Prayer and Supplication with Thanksgiving (Verse 6b)
 
 Prayer is the language of trust. Supplication is the language of need. Thanksgiving is the language of faith.
@@ -128,6 +131,9 @@ It stands guard at the door of your thoughts and emotions.
 
 Almighty Protector, I receive Your promise that Your peace will stand as a vigilant guardian over my heart and mind tonight. Let it actively defend my emotions from bitterness, discouragement, or unrest, and protect my thoughts from spirals of anxiety, fear, or negative rumination. Through Christ Jesus, I trust that this divine peace forms an impenetrable fortress around my inner being, allowing me to rest securely, knowing my deepest self is kept safe in Your loving care until morning.
 
+
+Station Your heavenly sentry at every doorway of my imagination so that midnight stillness brings healing refreshment rather than rehearsed worry, keeping my inner world calm and undivided beneath the lordship of Jesus.
+
 ## Scene 6 — Sleep Guarded by Divine Peace (Verses 6–7 Synthesis)
 
 From prayerful surrender, to thanksgiving, to making requests known, to receiving peace that passes understanding, to being kept by that peace — every step leads to guarded rest.
@@ -137,5 +143,8 @@ Tonight, pray about everything. Thank God for everything. Receive the peace that
 Sleep under the garrison of divine peace.
 
 Merciful Father, as I prepare to close my eyes, I lean into the full cycle of Your peace tonight. From the initial act of surrendering every worry, through expressing my needs with a grateful heart, to receiving the incomprehensible peace that flows from You, I rest in Your presence. Let Your peace be a constant garrison, not only safeguarding my sleep but also actively preserving my heart and mind throughout the night. I choose to sleep deeply, completely enveloped and guarded by Your perfect, divine peace.
+
+
+Bless my home with unshaken serenity, quiet every weary nerve in my body, and awaken me at dawn with gratitude already rising in my spirit. Amen.
 
 Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.

@@ -16,7 +16,7 @@ permissions:
   issues: write
 
 concurrency:
-  group: gemini-brain
+  group: content-state
   cancel-in-progress: false
 
 jobs:
@@ -80,15 +80,24 @@ jobs:
 
       - name: Commit newly authored queue items
         run: |
+          set -e
           git config user.name "gemini-brain-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add content/queue/ content/shorts-queue/ content/shorts-scripts/ content/factcheck/
-          if ! git diff --cached --quiet; then
+          for attempt in 1 2 3 4 5; do
+            git fetch --quiet origin main
+            git reset --mixed origin/main
+            git add content/queue/ content/shorts-queue/ content/shorts-scripts/ content/factcheck/
+            if git diff --cached --quiet; then
+              echo "### 🧠 Gemini Brain Queue Audit" >> "$GITHUB_STEP_SUMMARY"
+              echo "Queue runway is healthy. No replenishment needed." >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
             git commit -m "chore(brain): autonomous scripture queue replenishment [skip ci]"
-            git push
-            echo "### 🧠 Gemini Brain Staged New Devotional" >> "$GITHUB_STEP_SUMMARY"
-            echo "New scripture devotional and companion Short authored and armed for production." >> "$GITHUB_STEP_SUMMARY"
-          else
-            echo "### 🧠 Gemini Brain Queue Audit" >> "$GITHUB_STEP_SUMMARY"
-            echo "Queue runway is healthy. No replenishment needed." >> "$GITHUB_STEP_SUMMARY"
-          fi
+            if git push origin HEAD:main; then
+              echo "### 🧠 Gemini Brain Staged New Devotional" >> "$GITHUB_STEP_SUMMARY"
+              echo "New scripture devotional and companion Short authored and armed for production." >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
+            sleep $((attempt * 3))
+          done
+          exit 1

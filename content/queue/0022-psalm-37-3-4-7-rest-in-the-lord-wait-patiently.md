@@ -145,6 +145,9 @@ Release comparison. Release anxiety. Rest in God.
 
 Heavenly Protector, I bring before You any thoughts of fretting or comparison that linger in my mind tonight. Help me to release the tendency to measure my path against the fleeting success of others. Remind me that their prosperity does not determine my blessing, nor does their way escape Your divine judgment. Let me find profound rest, free from anxiety, knowing You are just and watchful over all.
 
+
+Wash away every trace of envy, hurry, or quiet discouragement over prayers that are still unfolding behind the scenes, and anchor my soul in grateful contentment for how faithfully You have carried me thus far.
+
 ## Scene 7 — Rest and Wait (Verses 3–7 Synthesis)
 
 From trust to provision, to delight, to answered desire, to rest, to freedom from fretting — every step leads to peace.
@@ -154,5 +157,8 @@ Tonight, dwell in the land of trust. Feed on God's faithfulness. Delight in Him.
 You are fed. You are provided. You are at peace.
 
 Oh God, as I come to the close of this prayer, I embrace the journey You have laid out in Psalm 37. May I fully dwell in the secure land of Your unwavering trust, continually feeding on Your boundless faithfulness. Let my heart truly delight in Your presence, waiting patiently for Your perfect timing in all things, free from the snare of fretting. Grant me a peaceful night, confident in Your love and provision.
+
+
+Quiet every restless question about next month or next year, and cradle my mind in gentle stillness throughout the night watches until morning mercies rise anew. Amen.
 
 Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.

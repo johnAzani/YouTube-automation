@@ -173,12 +173,13 @@
       0,
       4,
       [
-        "TAKE A DEEP BREATH",
-        "NOW"
+        "TAKE A DEEP",
+        "BREATH WITH ME NOW.",
+        "IN... AND OUT."
       ],
       [
-        "breath",
-        "now"
+        "BREATH",
+        "NOW"
       ],
       "YOUR BREATH IS PRAYER"
     ],
@@ -186,12 +187,14 @@
       4,
       8,
       [
-        "BODY SOFTEN",
-        "MIND QUIET"
+        "FEEL YOUR BODY",
+        "SOFTEN, YOUR MIND",
+        "BEGIN TO QUIET."
       ],
       [
-        "soften",
-        "quiet"
+        "SOFTEN",
+        "QUIET",
+        "BEGIN"
       ],
       "INNER CALM"
     ],
@@ -199,12 +202,16 @@
       8,
       12,
       [
-        "PREPARE FOR REST",
-        "REMEMBER TRUTH"
+        "AS YOU PREPARE",
+        "FOR REST, REMEMBER",
+        "THIS ENDURING TRUTH:"
       ],
       [
-        "rest",
-        "truth"
+        "REST",
+        "TRUTH",
+        "PREPARE",
+        "REMEMBER",
+        "ENDURING"
       ],
       "ETERNAL TRUTH"
     ],
@@ -212,12 +219,16 @@
       12,
       18,
       [
-        "GOD IS OUR REFUGE",
-        "AND STRENGTH"
+        "'GOD IS OUR",
+        "REFUGE AND STRENGTH,",
+        "A VERY PRESENT",
+        "HELP IN TROUBLE.'"
       ],
       [
-        "refuge",
-        "strength"
+        "REFUGE",
+        "STRENGTH",
+        "PRESENT",
+        "TROUBLE"
       ],
       "PSALM 46 : 1"
     ],
@@ -225,12 +236,17 @@
       18,
       24,
       [
-        "POWERFUL WORDS",
-        "SETTLE DEEP"
+        "LET THESE POWERFUL",
+        "WORDS SETTLE DEEP WITHIN",
+        "YOUR SPIRIT TONIGHT."
       ],
       [
-        "words",
-        "deep"
+        "WORDS",
+        "DEEP",
+        "THESE",
+        "POWERFUL",
+        "SETTLE",
+        "WITHIN"
       ],
       "SPIRITUAL ANCHOR"
     ],
@@ -238,12 +254,15 @@
       24,
       29,
       [
-        "YOUR FORTRESS",
-        "YOUR PROTECTOR"
+        "HE IS YOUR FORTRESS,",
+        "YOUR PROTECTOR THROUGH THE",
+        "HOURS OF DARKNESS."
       ],
       [
-        "fortress",
-        "protector"
+        "FORTRESS",
+        "PROTECTOR",
+        "HOURS",
+        "DARKNESS"
       ],
       "DIVINE SHELTER"
     ],
@@ -251,12 +270,15 @@
       29,
       36,
       [
-        "CAST YOUR WORRIES",
-        "HE HOLDS YOU"
+        "CAST ALL YOUR WORRIES",
+        "UPON HIM, KNOWING HE",
+        "HOLDS YOU SECURELY."
       ],
       [
-        "worries",
-        "holds"
+        "WORRIES",
+        "HOLDS",
+        "KNOWING",
+        "SECURELY"
       ],
       "BURDEN LIFTED"
     ],
@@ -264,12 +286,17 @@
       36,
       42,
       [
-        "QUIET MOMENTS",
-        "GENTLE PRESENCE"
+        "HE IS HERE",
+        "IN YOUR QUIET",
+        "MOMENTS, A GENTLE",
+        "PRESENCE SURROUNDING YOU."
       ],
       [
-        "moments",
-        "presence"
+        "MOMENTS",
+        "PRESENCE",
+        "QUIET",
+        "GENTLE",
+        "SURROUNDING"
       ],
       "HIS NEARNESS"
     ],
@@ -277,12 +304,17 @@
       42,
       48,
       [
-        "PERFECT PEACE",
-        "FILL YOUR BEING"
+        "ALLOW HIS PERFECT PEACE",
+        "TO FILL EVERY CORNER",
+        "OF YOUR BEING."
       ],
       [
-        "peace",
-        "fill"
+        "PEACE",
+        "FILL",
+        "ALLOW",
+        "PERFECT",
+        "CORNER",
+        "BEING"
       ],
       "INNER SANCTUARY"
     ],
@@ -290,12 +322,16 @@
       48,
       53,
       [
-        "RELEASE BURDENS",
-        "UNFAILING LOVE"
+        "RELEASE THE BURDENS OF",
+        "THE DAY, TRUSTING IN",
+        "HIS UNFAILING LOVE."
       ],
       [
-        "release",
-        "love"
+        "RELEASE",
+        "LOVE",
+        "BURDENS",
+        "TRUSTING",
+        "UNFAILING"
       ],
       "ETERNAL TRUST"
     ],
@@ -303,12 +339,15 @@
       53,
       58,
       [
-        "SWEET SLEEP",
-        "DEEPLY RESTORATIVE"
+        "MAY YOUR",
+        "SLEEP BE",
+        "SWEET, DEEPLY RESTORATIVE,"
       ],
       [
-        "sleep",
-        "restorative"
+        "SLEEP",
+        "RESTORATIVE",
+        "SWEET",
+        "DEEPLY"
       ],
       "SOUL'S RENEWAL"
     ],
@@ -316,12 +355,15 @@
       58,
       63,
       [
-        "DIVINE EMBRACE",
-        "FILL YOUR SOUL"
+        "AND FILLED WITH",
+        "A SENSE OF",
+        "HIS DIVINE EMBRACE."
       ],
       [
-        "divine",
-        "embrace"
+        "DIVINE",
+        "EMBRACE",
+        "FILLED",
+        "SENSE"
       ],
       "GOD'S HUG"
     ],
@@ -329,12 +371,14 @@
       63,
       68,
       [
-        "YOU ARE SAFE",
-        "YOU ARE LOVED"
+        "YOU ARE SAFE,",
+        "YOU ARE LOVED, YOU",
+        "ARE WATCHED OVER."
       ],
       [
-        "safe",
-        "loved"
+        "SAFE",
+        "LOVED",
+        "WATCHED"
       ],
       "BELOVED OF GOD"
     ],
@@ -343,11 +387,13 @@
       72,
       [
         "REST NOW",
-        "HIS PROFOUND PEACE"
+        "IN HIS",
+        "PROFOUND PEACE."
       ],
       [
-        "Rest",
-        "peace"
+        "REST",
+        "PEACE",
+        "PROFOUND"
       ],
       "DEEP REST"
     ],
@@ -355,12 +401,16 @@
       72,
       75,
       [
-        "SUBSCRIBE",
-        "DAILY PRAYERS"
+        "SUBSCRIBE TO THE",
+        "SECRET PLACE",
+        "FOR DAILY PRAYERS."
       ],
       [
-        "Subscribe",
-        "prayers"
+        "SUBSCRIBE",
+        "PRAYERS",
+        "SECRET",
+        "PLACE",
+        "DAILY"
       ],
       "JOIN US"
     ]

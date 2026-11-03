@@ -67,7 +67,6 @@ originality:
   source_notes: true         # scriptures and classical commentaries documented
   ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
 ---
-
 ## Scene 1 — The LORD Bless Thee, and Keep Thee (Verse 24a)
 
 The oldest blessing in Scripture, spoken over God's people for thousands of years.
@@ -78,7 +77,10 @@ Blessing is God's favor poured out on your life. Keeping is God's protection aro
 
 Receive both tonight.
 
-Oh Lord, we humbly come before You tonight, seeking the profound reality of Your ancient blessing. We pray that You would indeed bless us, pouring out Your divine favor over every aspect of our lives as we prepare for rest. May Your goodness overflow into our dreams, thoughts, and the quiet moments before sleep, settling our spirits with an unshakeable assurance of Your boundless provision. Furthermore, we ask that You would faithfully keep us, maintaining Your vigilant protection around us through every hour of darkness. Guard our bodies from harm, our minds from anxious thoughts, and our spirits from any spiritual disturbance. Let Your strong hand be a constant shield, deflecting all worry, fear, and negativity, allowing us to sleep securely in the unwavering knowledge of Your ceaseless watch. We wholeheartedly receive this dual promise of blessing and keeping tonight, resting completely in Your tender and faithful care.
+First spoken by Aaron over the tents of Israel in the wilderness, these words were authored by God Himself so His covenant name would rest upon His children every night. Notice how divine wisdom pairs provision with preservation: He does not merely pour blessing into your hands and leave you unguarded in the dark, for the same Lord who enriches your soul also stations a sleepless watch around your walls, your family, and your rest.
+
+Heavenly Father, as the stillness of night settles across my home, place Your ancient covenant name upon my life once more. Pour Your quiet blessing over every labour of this day, and set Your faithful guard around every door, window, and sleeping loved one tonight so that nothing harmful may cross the threshold of our peace. Even while our eyes are closed in deep slumber, let Your unseen hand preserve our health, steady our household, and prepare fresh mercy for the morning ahead.
+
 
 ## Scene 2 — The LORD Make His Face Shine Upon Thee, and Be Gracious Unto Thee (Verse 25a)
 
@@ -90,7 +92,10 @@ Grace is unmerited favor. You do not earn it; you receive it.
 
 Sleep in the light of His shining face.
 
-Merciful God, as we close our eyes and prepare for slumber, we pray that You would truly make Your face shine upon us this very night. Let Your approval, Your gentle smile, and Your deep delight be a tangible presence in our space, dispelling all shadows of self-doubt and unworthiness with the radiant warmth of Your unconditional acceptance. We long to feel the comforting sunshine of Your favor, knowing that we are loved beyond measure. Be graciously present unto us, O Lord, bestowing Your unmerited favor freely and abundantly into our hearts. We recognize we do not earn such profound kindness, yet we open our spirits fully to receive it as a pure and undeserved gift. Let this grace permeate our entire being, calming every agitation and bringing a profound sense of peace. May we sleep cradled in the luminous glow of Your shining face, utterly secure in Your boundless grace.
+Many hearts struggle to fall asleep because an inner critic replays every mistake, every sharp word, or every task left incomplete before sundown. Into that courtroom of self-reproach steps the shining face of a gracious Father whose mercy triumphs over judgment. Just as warm morning sunlight melts frost from a winter field without violence, the radiance of God's favour melts away shame and invites your weary spirit to exhale completely.
+
+Gracious Redeemer, let the warmth of Your shining face dispel every shadow of guilt, inadequacy, or heavy regret lingering in my mind tonight. Remind my heart that my safety with You rests not upon a flawless day, but upon Your boundless, unmerited grace, allowing me to lie down forgiven, accepted, and dearly cherished in Your sight.
+
 
 ## Scene 3 — The LORD Lift Up His Countenance Upon Thee (Verse 26a)
 
@@ -102,7 +107,10 @@ You are not overlooked. You are not forgotten. You are seen by the Almighty.
 
 His eyes are on you tonight.
 
-Almighty God, as darkness falls and stillness settles, we earnestly pray that You would lift up Your countenance upon us. Let Your full attention, Your complete and undivided presence, be unmistakably upon us through these sleeping hours. We ask for the deep comfort of knowing that we are not overlooked in the vastness of Your creation, nor are we forgotten in the quiet of the night. You see us, O God, in our entirety – our hopes, our fears, our very breath, and the unspoken desires of our hearts. Let this profound awareness of being seen and acknowledged by the Almighty bring deep solace and unshakeable assurance. May Your eyes remain steadfastly on us tonight, watching over our slumber, guarding our souls, and reminding us of our immense worth in Your loving sight. We rest in the certainty that Your gaze is fixed on us with unwavering love and vigilant care.
+When an earthly friend looks up from every distraction to meet your eyes with undivided warmth, loneliness instantly loses its sting. How much greater is the comfort that the Maker of constellations turns His full countenance toward your bedside tonight! No silent tear on your pillow goes unnoticed, no whispered prayer for your children drifts into empty air, and no midnight hour passes outside His tender gaze.
+
+Ever-Present Lord, thank You that when the lights go out and the house grows quiet, Your watchful countenance remains lifted toward me in love. Comfort every lonely or tender corner of my heart tonight, assure my spirit that my future is held securely in Your hands, and fill this quiet room with the unmistakable nearness of Your presence.
+
 
 ## Scene 4 — And Give Thee Peace (Verse 26b)
 
@@ -114,7 +122,10 @@ Not just the absence of conflict, but the fullness of wholeness — shalom.
 
 This is the peace that closes every night and opens every morning.
 
-Gracious Father, we humbly request the concluding and encompassing gift of this sacred benediction: we pray that You would give us Your peace. Not merely the absence of conflict or external noise, but the profound, all-encompassing fullness of Your shalom, which brings wholeness to every part of our being. We pray for this divine wholeness in our spirit, soul, and body as we prepare for tranquil rest. Let this peace settle every anxious thought, quiet every racing mind, and soothe every weary part of our existence. May Your divine tranquility permeate our homes and our very spirits, creating a sanctuary from the world's chaos and internal strife. Grant us the peace that gently closes every night, dissolving all disturbances, fears, and regrets from the day. And let this same peace be the foundational strength upon which we open every new morning, refreshed and re-centered in Your unwavering steadfastness. We receive Your perfect shalom now, O Lord.
+Biblical shalom reaches into every layer of human existence — calming the racing mind, soothing the tired body, reconciling strained affections, and anchoring the soul in eternal hope. Because this peace is God's gift rather than your own manufacture, you do not have to wrestle yourself into tranquility tonight; you simply open your hands on the bedsheets and receive what heaven freely speaks over you.
+
+God of Peace, breathe Your restoring shalom through every thought, nerve, and heartbeat within me as I surrender to sleep. Quiet every anxious question about tomorrow, shield my dreams from heaviness or alarm, and weave Your wholeness into my body and spirit through every hour until daybreak. Let Your calm abide in every hallway of this home, softening every worried breath into restful confidence beneath Your unchanging covenant care.
+
 
 ## Scene 5 — Sleep in the Benediction (Verses 24–26 Synthesis)
 
@@ -124,6 +135,7 @@ The LORD bless you and keep you. The LORD make His face shine upon you. The LORD
 
 Sleep in the benediction. Wake in the blessing.
 
-Heavenly Father, we embrace the entirety of this ancient benediction as it fully covers us tonight. From the blessing of Your abundant favor and the keeping of Your watchful protection, to the radiant light of Your face shining upon us with approval, and the boundless measure of Your unmerited grace. We acknowledge the deep comfort of Your countenance lifted upon us, assuring us we are fully seen and completely present in Your loving gaze. And finally, we gratefully receive the gift of Your comprehensive shalom, bringing wholeness and profound rest to our deepest core. We pray that every clause of this powerful blessing would seep into the very fabric of our being, anchoring us in Your eternal truth and strengthening us for the journey ahead. Allow us to genuinely sleep in the full embrace of this benediction, trusting its power to sustain us through the night and into the promise of a new day.
+Almighty Father, seal this threefold benediction over my household from midnight until dawn. Let Your blessing rest upon our home, Your shining grace quiet our hearts, and Your abiding countenance cradle us in unbroken sleep until morning mercies greet us anew. May every quiet hour of this night unfold beneath the canopy of Your priestly shalom, renewing exhausted strength, calming every anxious thought, and filling our waking tomorrow with gratitude for Your steadfast covenant love. Amen.
 
 Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.
+

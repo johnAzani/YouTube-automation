@@ -2,9 +2,8 @@
 id: "0011"
 title: "Psalm 27: The Lord Is My Light & My Salvation — Fear No Evil — Night Prayer for Sleep, Peace & Divine Guard | The Secret Place"
 slug: psalm-27-the-lord-is-my-light-and-my-salvation--fe
-status: draft
+status: approved
 privacy: public
-reauthor_required: "Body quotes Psalm 121 verses under a Psalm 27 title — re-author with Psalm 27 text before approving"
 format: longform
 niche: faith and prayer
 category: education
@@ -13,17 +12,17 @@ target_minutes: 6
 tags: [psalm 27, prayer before sleep, bedtime prayer, peaceful sleep, the secret place, scripture meditation, christian meditation, divine protection, rest and healing]
 thumb_text: "OF WHOM SHALL I BE AFRAID?"
 description: |
-  Say this Psalm 27 prayer before you sleep tonight. Surrender the burdens, anxieties,
-  and fatigue of this day into the hands of the One who keeps you.
-  He who keeps you will neither slumber nor sleep. The Lord is your keeper;
-  the Lord is your shade at your right hand. The sun shall not strike you by day,
-  nor the moon by night.
+  Say this Psalm 27 (KJV) prayer before you sleep tonight. Surrender the burdens, anxieties,
+  and fatigue of this day into the hands of the Lord who is your everlasting light.
+  The LORD is my light and my salvation; whom shall I fear? the LORD is the strength
+  of my life; of whom shall I be afraid? For in the time of trouble he shall hide me
+  in his pavilion: in the secret of his tabernacle shall he hide me.
 
-  This is a full devotional prayer and scripture exposition covering Psalm 27
+  This is a full devotional prayer and scripture exposition covering Psalm 27 (KJV)
   with peaceful nighttime ambient soundscapes.
 
   Scripture References & Sources:
-  - The Holy Bible, Psalm 27 (King James Version / English Standard Version)
+  - The Holy Bible, Psalm 27 (King James Version)
   - Spurgeon, C.H. (1885). The Treasury of David, Psalm 27 Commentary.
   - Matthew Henry's Commentary on the Whole Bible, Psalm 27.
 
@@ -64,52 +63,62 @@ asset_query_verification:
       usable: 4
       evidence: "4x Public domain — USGS alpine valley dawn mist photography"
 originality:
-  original_thesis: true      # devotional prayer narrative emphasizing peaceful surrender and sleepless divine vigilance
-  unique_structure: true     # 6-movement exposition moving from lifting eyes to the hills to the keeper of soul
-  human_rewrite: true        # carefully curated theological wording with sacred meditative breathing cadence
-  no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
-  source_notes: true         # scriptures and classical commentaries documented
-  ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
+  original_thesis: true
+  unique_structure: true
+  human_rewrite: true
+  no_ai_persona: true
+  source_notes: true
+  ai_disclosure: false
 ---
 
-## Scene 1 — Lifting Eyes to the Hills (Verses 1–2)
-Before you close your eyes tonight, take a deep breath and release the weight of everything you carried today.
-I will lift up mine eyes unto the hills, from whence cometh my help.
-My help cometh from the Lord, which made heaven and earth.
-When you look at your circumstances, worry feels overwhelming; but when you look up to the Creator, peace enters your room.
-Rest tonight in the sovereign care of the Maker of the universe.
+## Scene 1 — My Light and My Salvation (Verse 1)
 
-## Scene 2 — The Foot That Shall Not Slip (Verse 3)
-He will not suffer thy foot to be moved: He that keepeth thee will not slumber.
-Notice the deep gentleness of this promise. God does not grow weary.
-He does not turn His eyes away when the world goes dark.
-Even while you rest in quiet sleep, His heavenly hand is steadying your steps and ordering your tomorrow.
-Breathe out the tension in your shoulders and receive His sleepless watch.
+Before you close your eyes tonight, breathe in slowly and let the noise of this day fall silent at your bedroom door.
 
-## Scene 3 — The Sleepless Watchman of Israel (Verse 4)
-Behold, He that keepeth Israel shall neither slumber nor sleep.
-Throughout this entire night, you do not have to stay awake guarding your worries.
-God is on duty. He is the eternal Watchman who never grows drowsy and never abandons His post.
-Surrender your home, your children, and your future into His faithful keeping.
-He has you safe in His everlasting arms.
+The LORD is my light and my salvation; whom shall I fear? the LORD is the strength of my life; of whom shall I be afraid?
 
-## Scene 4 — The Shade at Your Right Hand (Verses 5–6)
-The Lord is thy keeper: the Lord is thy shade upon thy right hand.
-The sun shall not smite thee by day, nor the moon by night.
-Whatever heat or burden pressed against your spirit during the daylight hours, the shadow of the Almighty is cooling your soul.
-His presence surrounds you like a divine shield against every unseen danger.
-You are fully covered by His grace.
+Darkness often magnifies every unanswered question, turning small uncertainties into towering shadows across the ceiling. Yet David begins his night song not by measuring the size of his enemies, but by naming the radiance of his Redeemer. Light is not merely something God sends from a distance; the Lord Himself is your light, illuminating your bedroom with covenant mercy and driving back every spirit of dread.
 
-## Scene 5 — Preserved from All Evil (Verse 7)
-The Lord shall preserve thee from all evil: He shall preserve thy soul.
-Let this eternal promise quiet every fearful thought whispering in the quiet of this room.
-God preserves your heart from bitterness, your mind from anxiety, and your spirit from defeat.
-He guards what matters most: your eternal soul.
-Sleep in freedom knowing that no weapon formed against you will prevail.
+Heavenly Father, as the lamps go out across my home, shine Your gentle, unquenchable light over my mind and spirit. Where exhaustion has made me feel fragile, become the strength of my life tonight. Dispel every nameless apprehension, silence every rehearsal of tomorrow's battles, and anchor my breathing in the quiet certainty that when the Almighty is my salvation, nothing in this night has permission to terrify my soul.
 
-## Scene 6 — Preserving Your Coming and Going (Verse 8)
-The Lord shall preserve thy going out and thy coming in from this time forth, and even for evermore.
-As you close your eyes, receive this final benediction of peace.
-Tomorrow's journeys are already covered by God's faithfulness.
-Sleep deeply, sleep peacefully, and rest in the sanctuary of His presence.
+## Scene 2 — Confident When Hosts Encamp (Verses 2–3)
+
+Though an host should encamp against me, my heart shall not fear: though war should rise against me, in this will I be confident.
+
+Notice that David does not pretend opposition never gathers. Deadlines press in, family burdens weigh heavily, and old regrets sometimes try to surround the pillow like an unseen camp. Yet confidence in Scripture is never denial of reality; it is reliance upon a greater Presence standing between you and everything that threatens your peace.
+
+Almighty Defender, I bring before You every pressure that followed me into this evening — every strained conversation, every financial concern, and every unspoken burden for the people I love. Stand between my household and every form of spiritual or emotional unrest tonight. Teach my heart this holy defiance against panic, so that even if a hundred unanswered questions wait outside tomorrow's door, my spirit remains calm, steady, and undefeated in Your care.
+
+## Scene 3 — Beholding the Beauty of the Lord (Verse 4)
+
+One thing have I desired of the LORD, that will I seek after; that I may dwell in the house of the LORD all the days of my life, to behold the beauty of the LORD, and to enquire in his temple.
+
+Anxiety scatters the mind into a hundred fragments, pulling your thoughts toward every task left undone. Peace returns the moment twenty competing worries bow before one supreme desire: simply to abide in God's presence and gaze upon His goodness. Your bed tonight is not a courtroom where today is judged; it is an altar of quiet communion where you rest beneath your Father's gaze.
+
+Gracious Lord, gather my scattered thoughts into one tranquil desire tonight. Free me from the exhausting habit of replaying today's imperfections or trying to solve next week in the dark. Let the final meditation of my waking mind be the beauty of Your faithfulness, Your patience with my weakness, and the tenderness with which You welcome me into Your sanctuary of rest.
+
+## Scene 4 — Hidden in His Pavilion Upon a Rock (Verses 5–6)
+
+For in the time of trouble he shall hide me in his pavilion: in the secret of his tabernacle shall he hide me; he shall set me up upon a rock.
+
+In ancient royal campaigns, the king's pavilion sat at the very center of the camp, surrounded on every side by his most trusted guards. To be hidden in God's pavilion means that nothing can reach your life without first passing through His sovereign permission, and beneath your weary body He places an unshakable rock that cannot shift while you sleep.
+
+Merciful Father, draw the curtains of Your royal pavilion around this room and around every member of my family tonight. Hide our minds from disturbing dreams, shield our bodies from nocturnal restlessness, and lift our hearts high above the swirling currents of worry. Set my spirit upon the solid rock of Your unchanging promises so that my sleep is deep, uninterrupted, and restorative until morning light.
+
+## Scene 5 — Seeking Thy Face in the Quiet Hours (Verses 8–9)
+
+When thou saidst, Seek ye my face; my heart said unto thee, Thy face, LORD, will I seek. Hide not thy face far from me; put not thy servant away in anger: thou hast been my help; leave me not, neither forsake me, O God of my salvation.
+
+Every honest night prayer remembers past mercies as proof of tonight's safety. The same Lord who carried you through yesterday's valleys has never once abandoned you in the dark, and His invitation still whispers gently over your pillow: seek My face, and let everything else wait until dawn.
+
+Faithful Redeemer, my heart answers Your call tonight with simple gratitude. You have been my help through seasons I thought I could never survive, and You will not forsake me now while my eyes are closed. Wrap every lonely or heavy place within me in the warmth of Your nearness, reminding my soul that I fall asleep held securely by the God of my salvation.
+
+## Scene 6 — Seeing the Goodness of the Lord & Waiting in Courage (Verses 13–14)
+
+I had fainted, unless I had believed to see the goodness of the LORD in the land of the living. Wait on the LORD: be of good courage, and he shall strengthen thine heart: wait, I say, on the LORD.
+
+Sleep itself is an act of sacred waiting — closing your eyes in humble trust that God is already preparing goodness for the morning ahead. You do not need to carry tonight on your own shoulders when the Everlasting Light is watching over every hour until daybreak.
+
+Eternal Father, renew my courage as I surrender consciousness into Your hands. Strengthen my heart while I slumber, restore every tired cell, and awaken me tomorrow morning with fresh hope to witness Your goodness in the land of the living. Amen.
+
 Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.

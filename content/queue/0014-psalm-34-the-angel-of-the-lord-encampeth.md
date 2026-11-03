@@ -72,6 +72,9 @@ I sought the Lord, and He heard me, and delivered me from all my fears.
 They looked to Him and were radiant, and their faces were not ashamed.
 Oh, Lord, as this day closes, I reaffirm my commitment to bless You at all times, letting Your praise continually be in my mouth, even as I drift into sleep. My soul truly makes its boast in You tonight, knowing Your faithfulness. I thank You, God, for You have heard me when I sought You throughout this day, delivering me from every fear and worry that tried to take hold. May my heart look to You and be radiant, Lord, free from the shadow of shame, resting secure in Your unfailing love and constant presence, always ready to exalt Your name.
 
+
+Let every corner of my dwelling become an altar of quiet thanksgiving tonight, where fear loses its footing, anxious striving melts into worship, and my whole household rests beneath the faithful watch of heaven's host.
+
 ## Scene 2 — The Poor Man's Cry & The Angelic Encampment (Verses 6-7)
 This poor man cried out, and the Lord heard him, and saved him out of all his troubles.
 The angel of the Lord encamps all around those who fear Him, and delivers them.
@@ -93,6 +96,9 @@ If you carried sorrow or heavy grief into this evening, know that God sits close
 He counts your tears, heals your inner wounds, and whispers peace to your weary spirit.
 Merciful God, I join the righteous in crying out to You tonight, knowing that You hear every plea and promise to deliver me out of all my troubles. Your nearness to the brokenhearted is a profound comfort, Lord, and I lean into Your presence if my spirit feels heavy or burdened. You save such as have a contrite spirit, tenderly mending what is wounded within me. I lay before You any sorrow or grief, confident that You sit close beside me, counting every tear, healing every inner wound, and whispering Your deep and perfect peace to my weary spirit as I sleep.
 
+
+Where unspoken disappointment or quiet exhaustion has lingered behind a brave face all day, let Your gentle compassion soften every guarded place within my heart and breathe restorative stillness through this silent room.
+
 ## Scene 5 — Redemption & Unbroken Refuge (Verses 19-22)
 Many are the afflictions of the righteous, but the Lord delivers him out of them all.
 He guards all his bones; not one of them is broken.
@@ -100,5 +106,8 @@ The Lord redeems the soul of His servants, and none of those who trust in Him sh
 Close your eyes in confidence. You are redeemed, protected, and deeply loved by God.
 Amen.
 Sovereign Lord, though many may be the afflictions of the righteous, I find profound comfort in Your promise to deliver me out of them all. You are my faithful guardian, watching over my very being, ensuring that no essential part of me is broken beyond repair. My soul rests in Your redemption, knowing that because I trust in You, I shall never be condemned. I close my eyes tonight in deep confidence, Father, for I am completely redeemed by Your grace, protected by Your mighty hand, and profoundly loved by You, my God. Amen, and may Your peace reign.
+
+
+Let every accusation of guilt or regret dissolve beneath Your finished mercy tonight, so my breathing slows into unhurried, peaceful rest until morning dawns across my window.
 
 Subscribe for more calming scripture prayers.

@@ -42,8 +42,21 @@ class TestRunwayAudit(unittest.TestCase):
             capture_output=True, text=True, cwd=str(ROOT))
         rows = json.loads(completed.stdout)
         self.assertEqual(len(rows), len(audit(QUEUE)))
-        self.assertEqual(completed.returncode, 1,
-                         'a queue containing below-floor scripts must exit non-zero')
+        expected_rc = 1 if any(not r['full_length_ok'] for r in rows) else 0
+        self.assertEqual(completed.returncode, expected_rc)
+
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            short_file = Path(tmp) / '0999-short.md'
+            short_file.write_text(
+                "---\nid: '0999'\ntitle: T\nslug: t\nstatus: approved\nformat: longform\nniche: faith and prayer\n---\n## Scene 1\nLord keep me tonight.\n",
+                encoding='utf-8',
+            )
+            bad = subprocess.run(
+                [sys.executable, str(ROOT / 'scripts' / 'audit_runway.py'), '--queue', tmp, '--json'],
+                capture_output=True, text=True, cwd=str(ROOT))
+            self.assertEqual(bad.returncode, 1,
+                             'a queue containing below-floor scripts must exit non-zero')
 
     def test_short_queue_exits_zero(self):
         # A queue with nothing below the floor is not an error.

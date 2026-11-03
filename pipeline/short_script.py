@@ -86,6 +86,8 @@ class ShortSpec:
     def to_renderer(self) -> dict:
         """The exact shape `tools/shorts.py` SCRIPTS expects."""
         return {
+            "is_prayer": True,
+            "authored_spec": True,
             "title": self.title,
             "poster": self.poster,
             "midpoint_poster_window": None,
@@ -131,7 +133,7 @@ def validate_spec(data: dict, key: str | None = None) -> ShortSpec:
         problems.append("end card must be two non-empty lines")
 
     scriptural = _norm(data.get("scripture", ""))
-    psalm = None
+    psalm = data.get("psalm") if isinstance(data.get("psalm"), int) else None
     match = re.search(r"(\d+)", scriptural)
     if match:
         psalm = int(match.group(1))
@@ -325,7 +327,8 @@ HARD RULES — violations are rejected by code:
 - kicker <= {kicker} characters, sub <= {sub} characters, ALL CAPS.
 - cam is one of {cams}. focus is [x, y] with x/y between 0 and 1.
 - `kinetic_phrases` has exactly one entry per caption, same start/end seconds, with
-  the on-screen lines and the words to illuminate.
+  2-5 ALL-CAPS stacked lines covering the spoken words of that caption (3-6 words
+  per line so each word illuminates as spoken) and ALL-CAPS highlight words.
 - Every `beats[].a` anchor MUST be copied verbatim from the narration.
 - No personal names, no "narrated by", no clickbait, no promises of healing.
 """
