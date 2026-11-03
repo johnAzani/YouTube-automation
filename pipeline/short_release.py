@@ -583,7 +583,9 @@ def _write_published_record(
     channel_audit: list[dict] | None = None,
 ) -> Path:
     PUBLISHED_DIR.mkdir(parents=True, exist_ok=True)
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    now_utc = datetime.now(timezone.utc)
+    today = now_utc.strftime("%Y-%m-%d")
+    stamp_precise = now_utc.strftime("%Y-%m-%dT%H:%M:%SZ")
     shorts_url = f"https://www.youtube.com/shorts/{video_id}"
     studio_url = f"https://studio.youtube.com/video/{video_id}/edit"
     thumb_block = ""
@@ -603,6 +605,7 @@ def _write_published_record(
         f"niche: {edition.niche}\n"
         "category: education\n"
         f'published_on: "{today}"\n'
+        f'published_at: "{stamp_precise}"\n'
         f'youtube_video_id: "{video_id}"\n'
         f'youtube_shorts_url: "{shorts_url}"\n'
         f'youtube_watch_url: "{watch_url}"\n'

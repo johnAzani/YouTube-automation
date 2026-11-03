@@ -10,7 +10,7 @@ category: education
 voice: Charon
 target_minutes: 6
 tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "INTO THINE HAND I COMMIT"
+thumb_text: "INTO THINE HAND"
 description: |
   Say this Psalm 31:1, 5 (KJV) prayer before you sleep tonight.
   In thee, O LORD, do I put my trust; let me never be ashamed: deliver me in thy righteousness. Into thine hand I commit my spirit: thou hast redeemed me, O LORD God of truth.

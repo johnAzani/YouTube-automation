@@ -10,7 +10,7 @@ category: education
 voice: Charon
 target_minutes: 6
 tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "COUNSEL IN THE NIGHT"
+thumb_text: "GUIDED BY NIGHT"
 description: |
   Say this Psalm 16:7-8 (KJV) prayer before you sleep tonight.
   I will bless the LORD, who hath given me counsel: my reins also instruct me in the night seasons. I have set the LORD always before me: because he is at my right hand, I shall not be moved.

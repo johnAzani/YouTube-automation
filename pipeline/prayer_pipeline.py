@@ -26,7 +26,7 @@ def _refresh_live_thumbnail(doc, video_id: str, out_dir: Path) -> str | None:
     """
     try:
         from .assets import fetch_scene_assets
-        from .thumbnail_ctr import generate_ctr_pack, pick_backdrop
+        from .thumbnail_ctr import curated_backdrop_for, generate_ctr_pack, pick_backdrop
         from .upload import set_video_thumbnail
 
         backdrop = None
@@ -37,6 +37,7 @@ def _refresh_live_thumbnail(doc, video_id: str, out_dir: Path) -> str | None:
                                          target_width=1280, target_height=720,
                                          allow_generated=False)
             backdrop = pick_backdrop([m.path for m in matches])
+        backdrop = backdrop or curated_backdrop_for(doc.id or doc.slug)
         reports = generate_ctr_pack(out_dir / "thumbnails",
                                     hero_override=doc.meta.get("thumb_text"),
                                     doc_key=doc.id or doc.slug,
@@ -239,13 +240,13 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
         # mobile legibility, contrast, safe zones and visibility against YouTube's
         # dark-mode page, and writes a report so the run page shows the numbers.
         # See docs/THUMBNAIL_RESEARCH.md.
-        from .thumbnail_ctr import pick_backdrop
+        from .thumbnail_ctr import curated_backdrop_for, pick_backdrop
 
         with stage("thumbnail pack", "3 concepts"):
             thumb_reports = generate_ctr_pack(out / "thumbnails",
                                               hero_override=doc.meta.get("thumb_text"),
                                               doc_key=doc.id or doc.slug,
-                                              backdrop=pick_backdrop(assets))
+                                              backdrop=pick_backdrop(assets) or curated_backdrop_for(doc.id or doc.slug))
         for report in thumb_reports:
             mobile_preview(report.path, report.path.with_name(report.path.stem + "_mobile.png"))
         (out / "thumbnails" / "report.json").write_text(

@@ -163,69 +163,293 @@ def variations_for(doc_key: str, variants=CTR_VARIANTS) -> tuple["CtrVariant", .
 # read as the same image. A channel whose videos each show *their own* psalm should
 # not have one illustrated template; the backdrop is now the footage the video is
 # actually made of, graded to the same measured rules.
-def pick_backdrop(paths) -> "Path | None":
-    """The most visually interesting of the job's own assets.
+CURATED_SANCTUARY_PLATES: dict[str, str] = {
+    "0008": "long-prayer-scene-05.jpg",   # Psalm 91 — golden wings over mountain valley
+    "0009": "long-prayer-scene-01.jpg",   # Psalm 23 — still alpine waters at dawn
+    "0010": "long-prayer-scene-04.jpg",   # Psalm 121 — starry night & lit cabin over lake
+    "0011": "long-prayer-thumb-hero.jpg", # Psalm 27 — blazing light breaking storm clouds
+    "0013": "long-prayer-scene-02.jpg",   # Psalm 46 — mountain stone fortress in sunbeams
+    "0018": "long-prayer-scene-06.jpg",   # Psalm 3  — triumphant golden dawn over peaks
+}
 
-    RMS contrast decides: a flat sky gives the type nothing to sit against, while a
-    detailed mountain or storm cloud survives being darkened and still reads at
-    168 px. Deterministic, so a retried run picks the same picture.
+_ALL_CURATED_PLATES: tuple[str, ...] = (
+    "long-prayer-thumb-hero.jpg",
+    "long-prayer-scene-01.jpg",
+    "long-prayer-scene-02.jpg",
+    "long-prayer-scene-03.jpg",
+    "long-prayer-scene-04.jpg",
+    "long-prayer-scene-05.jpg",
+    "long-prayer-scene-06.jpg",
+)
+
+_VIDEO_EXTS = {".mp4", ".mov", ".webm", ".mkv", ".m4v"}
+
+
+def curated_backdrop_for(doc_key: str | None = None) -> "Path | None":
+    """Deterministic cleared 16:9 sanctuary plate when stock clips yield no bright still."""
+    plate_dir = Path(__file__).resolve().parent.parent / "image-search"
+    clean_key = (doc_key or "").strip()
+    if clean_key in CURATED_SANCTUARY_PLATES:
+        candidate = plate_dir / CURATED_SANCTUARY_PLATES[clean_key]
+        if candidate.is_file():
+            return candidate
+    available = [plate_dir / name for name in _ALL_CURATED_PLATES if (plate_dir / name).is_file()]
+    if not available:
+        return None
+    digest = hashlib.sha1((clean_key or "default").encode("utf-8")).hexdigest()
+    idx = int(digest[:8], 16) % len(available)
+    return available[idx]
+
+
+def _ffmpeg_exe() -> str | None:
+    import shutil
+
+    try:
+        import imageio_ffmpeg  # type: ignore
+
+        exe = imageio_ffmpeg.get_ffmpeg_exe()
+        if exe:
+            return exe
+    except Exception:
+        pass
+    return shutil.which("ffmpeg")
+
+
+def _extract_video_frames(video_path: Path) -> list[Path]:
+    """Sample up to 3 candidate stills from a video asset so .mp4 B-roll can be scored."""
+    import subprocess
+
+    ffmpeg = _ffmpeg_exe()
+    if not ffmpeg or not video_path.is_file():
+        return []
+    cache_dir = video_path.parent / "_backdrop_frames"
+    try:
+        cache_dir.mkdir(parents=True, exist_ok=True)
+    except OSError:
+        return []
+
+    stamps = (1.5, 4.0, 7.5)
+    frames: list[Path] = []
+    for idx, sec in enumerate(stamps):
+        dest = cache_dir / f"{video_path.stem}_f{idx}.jpg"
+        if not dest.is_file() or dest.stat().st_size < 1024:
+            cmd = [
+                ffmpeg, "-y", "-loglevel", "error",
+                "-ss", f"{sec:.2f}", "-i", str(video_path),
+                "-frames:v", "1", "-vf", "scale=1280:-2",
+                "-q:v", "3", str(dest),
+            ]
+            try:
+                subprocess.run(cmd, check=False, capture_output=True, timeout=15)
+            except Exception:
+                continue
+        if dest.is_file() and dest.stat().st_size >= 1024:
+            frames.append(dest)
+    return frames
+
+
+def _percentile_from_hist(hist: list[int], pct: float) -> int:
+    total = sum(hist)
+    if total <= 0:
+        return 0
+    target = total * pct
+    acc = 0
+    for idx, count in enumerate(hist):
+        acc += count
+        if acc >= target:
+            return idx
+    return 255
+
+
+def _score_backdrop_image(path: Path) -> tuple[float, float] | None:
+    """Return (composite_score, p95_luma) for a candidate image, or None if unreadable."""
+    try:
+        with Image.open(path) as im:
+            grey = im.convert("L")
+            grey.thumbnail((320, 180))
+            w, h = grey.size
+            if w < 16 or h < 16:
+                return None
+            stddev = ImageStat.Stat(grey).stddev[0]
+            full_hist = grey.histogram()
+            p95 = _percentile_from_hist(full_hist, 0.95)
+            right = grey.crop((int(w * 0.44), int(h * 0.08), int(w * 0.95), int(h * 0.82)))
+            r_hist = right.histogram()
+            r_mean = ImageStat.Stat(right).mean[0]
+            r_p90 = _percentile_from_hist(r_hist, 0.90)
+            r_p15 = _percentile_from_hist(r_hist, 0.15)
+    except Exception:  # noqa: BLE001 - an unreadable asset is not a backdrop
+        return None
+
+    if stddev < 4.0:
+        return (stddev * 0.1, float(p95))
+    focal_span = max(0, r_p90 - r_p15)
+    dark_penalty = 0.35 if (p95 < 55 and r_p90 < 48) else 1.0
+    score = (stddev + 0.32 * focal_span + 0.16 * min(r_mean, 155.0)) * dark_penalty
+    return (score, float(p95))
+
+
+def pick_backdrop(paths) -> "Path | None":
+    """The most visually compelling of the job's own assets (photos AND .mp4 clips).
+
+    Scores both contrast and right-side focal illumination so a pitch-black night
+    sky cannot beat a mountain dawn clip, and extracts candidate frames from .mp4
+    video B-roll automatically. Deterministic, so a retried run picks the same frame.
     """
     from pathlib import Path as _Path
 
-    best = None
-    for path in paths or ():
-        path = _Path(path)
+    candidates: list[Path] = []
+    for raw in paths or ():
+        path = _Path(raw)
         if not path.is_file():
             continue
-        try:
-            with Image.open(path) as im:
-                grey = im.convert("L")
-                grey.thumbnail((320, 320))
-                score = ImageStat.Stat(grey).stddev[0]
-        except Exception:  # noqa: BLE001 - an unreadable asset is not a backdrop
+        if path.suffix.lower() in _VIDEO_EXTS:
+            candidates.extend(_extract_video_frames(path))
+        else:
+            candidates.append(path)
+
+    best: tuple[float, float, Path] | None = None
+    for cand in candidates:
+        scored = _score_backdrop_image(cand)
+        if scored is None:
             continue
+        score, p95 = scored
         if best is None or score > best[0]:
-            best = (score, path)
-    return best[1] if best else None
+            best = (score, p95, cand)
+    if best is None:
+        return None
+    # Reject pitch-black mud frames from live video extraction so a curated plate can step in,
+    # while still allowing synthetic greyscale/colour stills passed in unit tests.
+    if best[1] < 28.0 and "_backdrop_frames" in str(best[2]):
+        return None
+    return best[2]
 
 
 def _night_grade(img: Image.Image, palette: Palette) -> Image.Image:
-    """Cool the picture to the channel's night, then lift the black point.
+    """Adaptive exposure + split-tone nocturnal grade that preserves bright focal light.
 
-    The lift is the whole point: a photo darkened the obvious way collapses into the
-    #0F0F0F page behind it and the frame loses its edge in the dark feed.
+    Previously a flat 42% blend with (5, 11, 28) crushed dark/twilight photographs
+    into muddy charcoal before `_finish()`'s S-curve crushed them a second time.
+    Now dark frames are lifted first, deep shadows cool to sapphire, and highlights
+    stay radiant warm gold/cream so the right-hand subject pops on mobile feeds.
     """
-    tint = Image.new("RGB", img.size, palette.sky_top)
-    img = Image.blend(img, tint, 0.42)
-    return img.point(lambda v: int(40 + (v / 255.0) ** 1.08 * 215))
+    w, h = img.size
+    right = img.convert("L").crop((int(w * 0.45), int(h * 0.08), int(w * 0.95), int(h * 0.80)))
+    r_hist = right.histogram()
+    r_p50 = _percentile_from_hist(r_hist, 0.50)
+    r_p94 = _percentile_from_hist(r_hist, 0.94)
+
+    # 1. Auto-expose under-lit night/dusk frames so the focal subject reads at 168 px.
+    gamma = 0.88
+    if r_p50 < 45:
+        gamma = 0.54
+    elif r_p50 < 75:
+        gamma = 0.66
+    elif r_p50 < 105:
+        gamma = 0.78
+    gain = 1.0
+    if 12 < r_p94 < 205:
+        gain = min(1.55, 218.0 / max(40.0, float(r_p94)))
+
+    lut = [
+        min(255, max(0, int(round(38 + (((i / 255.0) ** gamma) * 217.0 * gain)))))
+        for i in range(256)
+    ]
+    lifted = img.point(lut * 3)
+
+    # 2. Cool shadows toward deep sapphire while keeping highlights warm and luminous.
+    lum = lifted.convert("L")
+    shadow_tint = Image.new("RGB", img.size, (14, 28, 62))
+    shadow_mask = lum.point(lambda v: max(0, min(135, int((155 - v) * 0.85))))
+    graded = Image.composite(shadow_tint, lifted, shadow_mask)
+
+    warm_tint = Image.new("RGB", img.size, palette.glow)
+    hi_mask = lum.point(lambda v: max(0, min(95, int((v - 135) * 0.75))))
+    return Image.composite(warm_tint, graded, hi_mask)
 
 
-def _text_scrim(img: Image.Image, box, strength: float = 0.52) -> Image.Image:
-    """Darken the side the type sits on, fading out across the frame."""
+def _text_scrim(img: Image.Image, box, strength: float = 0.72) -> Image.Image:
+    """Silky cosine-feathered left scrim + soft local cushion with zero hard seam."""
     w, h = img.size
     x0, y0, x1, y1 = box
-    ramp_end = min(w, x1 + int(w * 0.22))
+    fade_start = max(0, int(w * 0.14))
+    fade_end = min(w, x1 + int(w * 0.24))
     grad = Image.new("L", (w, 1), 0)
     px = grad.load()
     for x in range(w):
-        t = 1.0 if x <= x1 else max(0.0, 1.0 - (x - x1) / max(1, ramp_end - x1))
+        if x <= fade_start:
+            t = 1.0
+        elif x >= fade_end:
+            t = 0.0
+        else:
+            u = (x - fade_start) / max(1, fade_end - fade_start)
+            # Smooth cosine ease-out: zero derivative at both endpoints, no visible seam
+            t = 0.5 * (1.0 + math.cos(math.pi * u))
         px[x, 0] = int(255 * strength * t)
-    mask = grad.resize((w, h))
-    return Image.composite(Image.new("RGB", img.size, (3, 7, 18)), img, mask)
+    mask = grad.resize((w, h), Image.Resampling.BILINEAR)
+
+    # Reinforce softly right behind the text block so contrast clears 9:1 without darkening the sky
+    local = Image.new("L", (w, h), 0)
+    ImageDraw.Draw(local).rounded_rectangle(
+        [max(0, x0 - 44), max(0, y0 - 28), min(w, x1 + 24), min(h, y1 + 28)],
+        radius=72, fill=int(255 * strength * 0.55),
+    )
+    local = local.filter(ImageFilter.GaussianBlur(58))
+    combined = ImageChops.lighter(mask, local)
+    return Image.composite(Image.new("RGB", img.size, (4, 10, 26)), img, combined)
+
+
+def _calm_badge_zone(img: Image.Image) -> Image.Image:
+    """Soften high-frequency detail under YouTube's bottom-right duration badge."""
+    w, h = img.size
+    blurred = img.filter(ImageFilter.GaussianBlur(14))
+    cushion = Image.blend(blurred, Image.new("RGB", img.size, (20, 28, 50)), 0.58)
+    mask = Image.new("L", img.size, 0)
+    ImageDraw.Draw(mask).rounded_rectangle([995, 565, w + 30, h + 30], radius=48, fill=235)
+    mask = mask.filter(ImageFilter.GaussianBlur(24))
+    return Image.composite(cushion, img, mask)
 
 
 def _photo_backdrop(path, size, variant: "CtrVariant", palette: Palette) -> Image.Image:
     from PIL import ImageOps
 
     with Image.open(path) as src:
-        img = ImageOps.fit(src.convert("RGB"), size, method=Image.LANCZOS,
-                           centering=(variant.moon[0], variant.moon[1]))
-    img = _night_grade(img, palette)
+        fitted = ImageOps.fit(
+            src.convert("RGB"), size, method=Image.LANCZOS,
+            centering=(variant.moon[0], variant.moon[1]),
+        )
+    w, h = size
+    if variant.hero:
+        # Place the brightest natural light source on the right opposite the left text stack.
+        grey = fitted.convert("L")
+        left_p90 = _percentile_from_hist(
+            grey.crop((int(w * 0.05), int(h * 0.08), int(w * 0.45), int(h * 0.75))).histogram(),
+            0.90,
+        )
+        right_p90 = _percentile_from_hist(
+            grey.crop((int(w * 0.55), int(h * 0.08), int(w * 0.95), int(h * 0.75))).histogram(),
+            0.90,
+        )
+        if left_p90 > right_p90 + 28:
+            fitted = ImageOps.mirror(fitted)
+
+    img = _night_grade(fitted, palette)
+
+    # Guarantee a warm celestial focal bloom on the right even if the source photo is dark.
+    focal_crop = img.convert("L").crop((int(w * 0.52), int(h * 0.12), int(w * 0.94), int(h * 0.72)))
+    focal_p95 = _percentile_from_hist(focal_crop.histogram(), 0.95)
+    glow_centre = (int(w * variant.moon[0]), int(h * variant.moon[1]))
+    glow_r = variant.moon_scale * min(w, h)
+    bloom_strength = 0.36 if focal_p95 < 135 else 0.14
+    img = _screen(img, _radial_glow(size, glow_centre, glow_r * 2.4, palette.glow, bloom_strength))
+    if focal_p95 < 95:
+        img = _screen(img, _radial_glow(size, glow_centre, glow_r * 0.95, (255, 240, 200), 0.34))
+
     if variant.hero and variant.text_box[2] > variant.text_box[0]:
         img = _text_scrim(img, variant.text_box)
     elif variant.hero:
         img = _text_scrim(img, (0, 0, size[0] // 2, size[1]))
-    return img
+    return _calm_badge_zone(img)
 
 
 # --------------------------------------------------------------------------- #
@@ -593,22 +817,24 @@ def draw_ctr_hero(img: Image.Image, hero: str, variant: CtrVariant):
     block_h = leading * len(lines)
     y = y0 + (y1 - y0 - block_h) // 2
 
-    # shadow pass first, as one layer, so overlapping glyphs do not double-darken
+    # shadow + warm gold accent bloom pass, as one layer, so glyphs pop at 168 px
     shadow = Image.new("RGBA", img.size, (0, 0, 0, 0))
     sd = ImageDraw.Draw(shadow)
     sy = y
-    for line in lines:
-        lw = _tracked_width(sd, line, font, tracking)
-        lx = x0 if variant.text_box[2] - x0 > 0 else x0
-        _tracked(sd, (lx, sy + int(size * 0.05)), line, font, (0, 0, 0, 215), tracking)
+    for i, line in enumerate(lines):
+        lx = x0
+        is_accent = variant.accent_last and i == len(lines) - 1
+        if is_accent:
+            _tracked(sd, (lx, sy), line, font, (255, 198, 56, 105), tracking)
+        _tracked(sd, (lx, sy + int(size * 0.055)), line, font, (0, 0, 0, 235), tracking)
         sy += leading
-    shadow = shadow.filter(ImageFilter.GaussianBlur(size * 0.055))
+    shadow = shadow.filter(ImageFilter.GaussianBlur(size * 0.058))
     img = Image.alpha_composite(img.convert("RGBA"), shadow).convert("RGB")
 
     draw = ImageDraw.Draw(img)
     contrast = 99.0
     sy = y
-    stroke = max(2, int(size * 0.018))
+    stroke = max(3, int(size * 0.024))
     for i, line in enumerate(lines):
         lw = _tracked_width(draw, line, font, tracking)
         colour = variant.palette.accent if (variant.accent_last and i == len(lines) - 1) else variant.palette.text
@@ -616,7 +842,7 @@ def draw_ctr_hero(img: Image.Image, hero: str, variant: CtrVariant):
         behind = _mean_colour(img, box)
         contrast = min(contrast, contrast_ratio(colour, behind))
         _tracked(draw, (x0, sy), line, font, colour, tracking,
-                 stroke_width=stroke, stroke_fill=(4, 9, 22))
+                 stroke_width=stroke, stroke_fill=(3, 7, 18))
         sy += leading
     return img, size, len(lines), contrast
 
@@ -725,31 +951,41 @@ def bright_share(img: Image.Image, threshold: int = INK_THRESHOLD) -> float:
 
 def render_ctr(variant: CtrVariant, out_path: Path, size=CANVAS,
                backdrop=None) -> CtrReport:
+    active = variant
+    if backdrop and variant.hero and variant.text_box[2] > variant.text_box[0]:
+        active = dataclasses.replace(variant, text_box=(82, 76, 728, 568))
     avoid = None
-    if variant.hero:
-        x0, y0, x1, y1 = variant.text_box
+    if active.hero:
+        x0, y0, x1, y1 = active.text_box
         avoid = (x0 - 40, y0 - 40, x1 + 40, y1 + 40)
-    img = paint_ctr_scene(variant, size, avoid=avoid, backdrop=backdrop)
+    img = paint_ctr_scene(active, size, avoid=avoid, backdrop=backdrop)
     notes: list[str] = []
     hero_px, lines, contrast = 0, 0, 99.0
-    if variant.hero:
-        img, hero_px, lines, contrast = draw_ctr_hero(img, variant.hero, variant)
+    if active.hero:
+        base_scene = img.copy()
+        img, hero_px, lines, contrast = draw_ctr_hero(img, active.hero, active)
+        if contrast < MIN_CONTRAST:
+            reinforced = _text_scrim(base_scene, active.text_box, strength=0.48)
+            img, hero_px, lines, contrast = draw_ctr_hero(reinforced, active.hero, active)
+            notes.append(f"scrim reinforced to {contrast:.1f}:1")
     img = _finish(img)
+    if backdrop:
+        img = _calm_badge_zone(img)
     img = img.filter(ImageFilter.UnsharpMask(radius=2.0, percent=62, threshold=2))
-    if variant.hero and contrast < MIN_CONTRAST:
+    if active.hero and contrast < MIN_CONTRAST:
         notes.append(f"contrast {contrast:.1f} below {MIN_CONTRAST} — needs a scrim")
     out_path.parent.mkdir(parents=True, exist_ok=True)
     img.save(out_path, "JPEG", quality=92, optimize=True, subsampling=0)
     el = edge_luma(img)
     return CtrReport(
-        path=out_path, variant=variant.label, concept=variant.concept,
-        hero=variant.hero or "", hero_px=hero_px, lines=lines,
-        words=len(variant.hero.split()) if variant.hero else 0,
-        contrast=contrast if variant.hero else 0.0,
+        path=out_path, variant=active.label, concept=active.concept,
+        hero=active.hero or "", hero_px=hero_px, lines=lines,
+        words=len(active.hero.split()) if active.hero else 0,
+        contrast=contrast if active.hero else 0.0,
         mean_luma=ImageStat.Stat(img.convert("L")).mean[0], edge_luma=el,
         bright_share=bright_share(img), border_dark=border_dark_share(img),
         file_kb=out_path.stat().st_size // 1024,
-        safe_zone_ok=box_within_safe(variant.text_box) if variant.hero else True,
+        safe_zone_ok=box_within_safe(active.text_box) if active.hero else True,
         badge_zone_ok=badge_zone_clear(img), edge_visible=el >= EDGE_LUMA_MIN,
         backdrop=f"photo:{Path(backdrop).name}" if backdrop else "procedural",
         notes=notes,

@@ -333,7 +333,77 @@ class TestTheFrameIsTheVideosOwnFootage(unittest.TestCase):
         source = (Path(__file__).resolve().parents[1]
                   / "pipeline" / "prayer_pipeline.py").read_text(encoding="utf-8")
         self.assertIn("backdrop=pick_backdrop(assets)", source)
+        self.assertIn("curated_backdrop_for", source)
         self.assertIn("fetch_scene_assets", source)
+
+    def test_mp4_asset_is_extracted_to_real_frame_for_backdrop(self):
+        import shutil
+        import subprocess
+        if not shutil.which("ffmpeg"):
+            self.skipTest("ffmpeg unavailable")
+        mp4 = self.tmp / "scene-plate.mp4"
+        subprocess.run(
+            [
+                "ffmpeg", "-y", "-loglevel", "error",
+                "-loop", "1", "-t", "1.6",
+                "-i", str(self.photos[0]),
+                "-vf", "scale=640:360",
+                "-c:v", "libx264", "-pix_fmt", "yuv420p",
+                str(mp4),
+            ],
+            check=True,
+        )
+        picked = ctr.pick_backdrop([mp4])
+        self.assertIsNotNone(picked)
+        assert picked is not None
+        self.assertTrue(picked.is_file())
+        self.assertEqual(picked.suffix.lower(), ".jpg")
+
+    def test_curated_sanctuary_plates_exist_and_rotate_across_jobs(self):
+        seen = {ctr.curated_backdrop_for(f"{n:04d}") for n in range(8, 20)}
+        self.assertNotIn(None, seen)
+        self.assertGreaterEqual(len(seen), 5)
+
+    def test_bright_rocky_bottom_right_corner_is_calmed_for_duration_badge(self):
+        from PIL import Image, ImageStat
+        from pipeline.thumbnail_studio import DURATION_BADGE_BOX
+        bright_corner = self.tmp / "bright-corner.jpg"
+        im = Image.open(self.photos[0]).convert("RGB").resize((1280, 720))
+        im.paste((245, 240, 225), (1040, 610, 1280, 720))
+        im.save(bright_corner, quality=92)
+        reports = ctr.generate_ctr_pack(
+            TMP / "footage-badge-calm",
+            hero_override="Whom Shall I Fear",
+            doc_key="0011",
+            backdrop=bright_corner,
+        )
+        self.assertTrue(reports[0].badge_zone_ok)
+        self.assertTrue(reports[0].edge_visible)
+        out = Image.open(reports[0].path).convert("L").crop(DURATION_BADGE_BOX)
+        self.assertLess(ImageStat.Stat(out).mean[0], 85.0)
+
+    def test_every_approved_queue_script_fits_cleanly_without_dropping_words(self):
+        from pathlib import Path
+        from PIL import Image, ImageDraw
+        from pipeline.script_doc import parse_script
+
+        queue = Path(__file__).resolve().parents[1] / "content" / "queue"
+        draw = ImageDraw.Draw(Image.new("RGB", (1280, 720)))
+        checked = 0
+        for md in sorted(queue.glob("*.md")):
+            doc = parse_script(md)
+            if str(doc.meta.get("status", "")).lower() != "approved":
+                continue
+            checked += 1
+            hero = (str(doc.meta.get("thumb_text") or "").strip() or doc.title).upper()
+            _font, lines, _tracking, _leading, px = ctr._layout(draw, hero, (82, 76, 728, 568))
+            self.assertGreaterEqual(px, 115, f"{md.name}: {hero} -> {px}px")
+            self.assertEqual(
+                " ".join(lines),
+                " ".join(hero.split()),
+                f"{md.name}: dropped words in {lines} vs {hero}",
+            )
+        self.assertGreaterEqual(checked, 21)
 
 
 if __name__ == "__main__":

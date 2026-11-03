@@ -10,7 +10,7 @@ category: education
 voice: Charon
 target_minutes: 6
 tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "MY PEACE I GIVE YOU"
+thumb_text: "HIS DEEP PEACE"
 description: |
   Say this John 14:27 (KJV) prayer before you sleep tonight.
   Peace I leave with you, my peace I give unto you: not as the world giveth, give I unto you. Let not your heart be troubled, neither let it be afraid.

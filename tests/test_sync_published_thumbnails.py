@@ -1,0 +1,166 @@
+"""Regression tests for scripts.sync_published_thumbnails."""
+from __future__ import annotations
+
+import tempfile
+import unittest
+from pathlib import Path
+from unittest import mock
+
+import yaml
+
+from pipeline.script_doc import parse_script
+from scripts import sync_published_thumbnails as spt
+
+
+class TestIsoDurationParser(unittest.TestCase):
+    def test_parses_seconds_minutes_hours(self):
+        self.assertEqual(spt.parse_iso8601_duration("PT57S"), 57)
+        self.assertEqual(spt.parse_iso8601_duration("PT5M35S"), 335)
+        self.assertEqual(spt.parse_iso8601_duration("PT6M"), 360)
+        self.assertEqual(spt.parse_iso8601_duration("PT1H2M3S"), 3723)
+        self.assertEqual(spt.parse_iso8601_duration(""), 0)
+
+
+class TestSyncPublishedThumbnails(unittest.TestCase):
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        self.pub_dir = Path(self._tmp.name) / "published"
+        self.out_dir = Path(self._tmp.name) / "out"
+        self.pub_dir.mkdir(parents=True, exist_ok=True)
+
+        self._write_receipt(
+            "0008-psalm-91-prayer-of-divine-protection.md",
+            {
+                "id": "0008",
+                "slug": "psalm-91-prayer-of-divine-protection",
+                "title": "Psalm 91: The Complete Prayer of Divine Protection Before You Sleep | The Secret Place",
+                "format": "longform",
+                "privacy": "public",
+                "youtube_video_id": "7RDX0fbIOtQ",
+                "thumb_text": "UNDER HIS WINGS",
+                "status": "published",
+            },
+        )
+        self._write_receipt(
+            "0009-psalm-23-the-lord-is-my-shepherd.md",
+            {
+                "id": "0009",
+                "slug": "psalm-23-the-lord-is-my-shepherd",
+                "title": "Psalm 23 | The Lord Is My Shepherd — Evening Sleep Prayer",
+                "format": "longform",
+                "privacy": "public",
+                "youtube_video_id": "JZv67RNPCEI",
+                "thumb_text": "THE LORD IS MY SHEPHERD",
+                "status": "published",
+            },
+        )
+        self._write_receipt(
+            "short-0002-psalm-91-prayer-of-protection.md",
+            {
+                "id": "short-0002",
+                "slug": "psalm-91-prayer-of-protection",
+                "title": "Psalm 91 #Shorts",
+                "format": "short",
+                "youtube_video_id": "SG69BbNlfRw",
+                "status": "published",
+            },
+        )
+
+    def tearDown(self):
+        self._tmp.cleanup()
+
+    def _write_receipt(self, filename: str, fm: dict) -> Path:
+        p = self.pub_dir / filename
+        p.write_text(
+            "---\n" + yaml.safe_dump(fm, sort_keys=False) + "---\nBody text.\n",
+            encoding="utf-8",
+        )
+        return p
+
+    def test_skips_cleanly_without_youtube_credentials(self):
+        with mock.patch.object(spt, "_has_youtube_credentials", return_value=False):
+            rows = spt.sync_published_thumbnails(published_dir=self.pub_dir, out_root=self.out_dir)
+        self.assertEqual(rows, [])
+
+    def test_syncs_longform_promotes_0009_clarifies_0008_and_is_idempotent(self):
+        fake_items = [
+            {
+                "id": "7RDX0fbIOtQ",
+                "snippet": {
+                    "title": "Psalm 91: The Complete Prayer of Divine Protection Before You Sleep | The Secret Place",
+                    "description": "Desc",
+                    "categoryId": "22",
+                },
+                "status": {"privacyStatus": "public", "uploadStatus": "processed"},
+                "contentDetails": {"duration": "PT40S"},
+            },
+            {
+                "id": "JZv67RNPCEI",
+                "snippet": {
+                    "title": "Psalm 23 | The Lord Is My Shepherd — Evening Sleep Prayer",
+                    "description": "Desc",
+                    "categoryId": "22",
+                },
+                "status": {"privacyStatus": "private", "uploadStatus": "processed"},
+                "contentDetails": {"duration": "PT5M21S"},
+            },
+        ]
+
+        fake_yt = mock.MagicMock()
+        fake_yt.videos.return_value.list.return_value.execute.return_value = {"items": fake_items}
+        thumb_uploads: list[tuple[str, Path]] = []
+
+        def _fake_set_thumb(vid: str, path: Path) -> str:
+            self.assertTrue(path.is_file())
+            self.assertLess(path.stat().st_size, 2 * 1024 * 1024)
+            thumb_uploads.append((vid, path))
+            return "ok"
+
+        rows = spt.sync_published_thumbnails(
+            published_dir=self.pub_dir,
+            out_root=self.out_dir,
+            youtube_client=fake_yt,
+            thumb_setter=_fake_set_thumb,
+        )
+        self.assertEqual(len(rows), 2)
+        self.assertEqual([v for v, _ in thumb_uploads], ["7RDX0fbIOtQ", "JZv67RNPCEI"])
+        self.assertEqual(rows[0]["hero"], "UNDER HIS WINGS")
+        self.assertEqual(rows[1]["hero"], "RESTORE MY SOUL")
+
+        # Verify 0008 (<90s) had its misleading "Complete Prayer" title clarified
+        # and 0009 (private, >=180s, processed) was promoted to public.
+        update_calls = fake_yt.videos.return_value.update.call_args_list
+        self.assertEqual(len(update_calls), 2)
+        by_id = {c.kwargs["body"]["id"]: c.kwargs for c in update_calls}
+
+        self.assertEqual(by_id["7RDX0fbIOtQ"]["part"], "snippet")
+        self.assertNotIn("Complete Prayer", by_id["7RDX0fbIOtQ"]["body"]["snippet"]["title"])
+        self.assertIn("Brief Blessing", by_id["7RDX0fbIOtQ"]["body"]["snippet"]["title"])
+
+        self.assertEqual(by_id["JZv67RNPCEI"]["part"], "status")
+        self.assertEqual(by_id["JZv67RNPCEI"]["body"]["status"]["privacyStatus"], "public")
+
+        # Verify YAML receipts were stamped and Short was untouched.
+        doc_0008 = parse_script(self.pub_dir / "0008-psalm-91-prayer-of-divine-protection.md")
+        doc_0009 = parse_script(self.pub_dir / "0009-psalm-23-the-lord-is-my-shepherd.md")
+        doc_short = parse_script(self.pub_dir / "short-0002-psalm-91-prayer-of-protection.md")
+        self.assertEqual(doc_0008.meta.get("thumbnail_revision"), spt.THUMBNAIL_REVISION)
+        self.assertEqual(doc_0009.meta.get("thumbnail_revision"), spt.THUMBNAIL_REVISION)
+        self.assertNotIn("thumbnail_revision", doc_short.meta)
+
+        # Second run must be a complete zero-API-call no-op!
+        fake_yt.reset_mock()
+        thumb_uploads.clear()
+        rows2 = spt.sync_published_thumbnails(
+            published_dir=self.pub_dir,
+            out_root=self.out_dir,
+            youtube_client=fake_yt,
+            thumb_setter=_fake_set_thumb,
+        )
+        self.assertEqual(rows2, [])
+        fake_yt.videos.assert_not_called()
+        self.assertEqual(thumb_uploads, [])
+
+
+if __name__ == "__main__":
+    unittest.main()
