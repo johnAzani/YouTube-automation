@@ -17,7 +17,6 @@ width: 720
 height: 1280
 duration_seconds: 61.81
 scenes_verified: 7
-metadata_revision: "selar-seo-v1"
 ---
 
 The Lord is my light and my salvation; whom shall I fear? The Lord is the strength of my life; of whom shall I be afraid?

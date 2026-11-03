@@ -17,7 +17,6 @@ width: 720
 height: 1280
 duration_seconds: 63.29
 scenes_verified: 6
-metadata_revision: "selar-seo-v1"
 ---
 
 God is our refuge and strength, a very present help in trouble. Therefore we will not fear, though the earth be removed.
