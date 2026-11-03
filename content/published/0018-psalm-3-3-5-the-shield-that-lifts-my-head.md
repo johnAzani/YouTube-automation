@@ -2,7 +2,7 @@
 id: "0018"
 title: "Psalm 3:3-5 — The Shield That Lifts My Head | Night Prayer for Restoration | The Secret Place"
 slug: psalm-3-3-5-the-shield-that-lifts-my-head
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -66,6 +66,9 @@ originality:
   no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
   source_notes: true         # scriptures and classical commentaries documented
   ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
+published_on: "2026-11-03"
+published_at: "2026-11-03T10:24:34Z"
+youtube_video_id: "vs2xt72CgcI"
 ---
 
 ## Scene 1 — But Thou, O LORD, Art a Shield for Me (Verse 3a)

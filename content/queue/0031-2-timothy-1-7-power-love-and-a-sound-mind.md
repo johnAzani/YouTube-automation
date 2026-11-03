@@ -67,6 +67,7 @@ originality:
   source_notes: true         # scriptures and classical commentaries documented
   ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
 ---
+
 ## Scene 1 — For God Hath Not Given Us the Spirit of Fear (Verse 7a)
 
 Fear is not from God. It is not His gift to you.
@@ -77,6 +78,7 @@ If fear is present in your heart tonight, it did not come from your Father.
 
 Reject it. It is not yours to carry.
 
+O Divine Father, tonight we acknowledge that the spirit of fear is an intruder, a foreign element in the sanctuary You have created within us. It attempts to whisper doubts and anxieties, to paralyze our will and obscure Your clear path. We declare that this fear, which seeks to grip our hearts with apprehension about tomorrow's unknown or yesterday's regrets, holds no authority over Your children. Grant us the unwavering conviction to identify fear not as a part of Your divine design, but as an adversary to be dismissed. Empower us, Lord, to stand firm in Your truth, to refuse to entertain its debilitating presence, and to actively cast off every fearful thought that tries to settle in our minds, knowing it originates outside Your perfect love and peace.
 
 ## Scene 2 — But of Power (Verse 7b)
 
@@ -88,6 +90,7 @@ Power to endure. Power to overcome. Power to sleep in the midst of storm.
 
 You are not powerless. You are empowered by the Holy Spirit.
 
+Gracious God, we embrace the truth that Your nature is not one of weakness, but of inherent, boundless power. You do not leave us defenseless against the storms of life or the anxieties of the night. Instead, You clothe us with an inner strength, a spiritual fortitude that transcends our human limitations. This power, imparted by Your Holy Spirit, enables us to face every challenge with supernatural resilience, to persevere when our own strength falters, and to find a profound stillness even when external circumstances rage. Tonight, we receive this divine empowerment, trusting it to calm our restless spirits, to fortify our minds against weariness, and to grant us a deep, restorative sleep, confident in Your sovereign control.
 
 ## Scene 3 — And of Love (Verse 7c)
 
@@ -99,6 +102,7 @@ God's love for you is the foundation of your security tonight.
 
 Rest in love. Sleep in love. Wake in love.
 
+Merciful Father, Your love is the very essence of our being, the secure foundation upon which our lives are built. It is a love so perfect and all-encompassing that it actively expels all shadows of fear and insecurity. We rest in the certainty that this unwavering love surrounds us, protects us, and holds us tenderly through the watches of the night. It reminds us that we are precious in Your sight, cherished beyond measure, and utterly safe within Your embrace. Tonight, let the warmth of Your divine affection wash over our souls, quieting every apprehension and filling every void. May Your perfect love be the soft pillow for our heads and the comforting blanket for our weary bodies, allowing us to surrender fully into tranquil sleep, knowing we are eternally held.
 
 ## Scene 4 — And of a Sound Mind (Verse 7d)
 
@@ -110,6 +114,7 @@ Racing thoughts can be calmed. Anxiety can be silenced. Confusion can be replace
 
 God gives you a sound mind tonight.
 
+Almighty God, we humbly ask for the precious gift of a sound mind, a mind that reflects Your order, clarity, and peace. In a world often filled with chaotic thoughts and overwhelming information, grant us the discernment to quiet the internal noise and focus on Your unchanging truth. We present to You every racing thought, every anxious rumination, every fragment of confusion that attempts to disrupt our tranquility. Let Your spirit bring discipline to our thought life, replacing agitation with serene understanding and mental restlessness with deep, abiding peace. May our minds be a sanctuary of calm reflection, rooted in Your wisdom, capable of clear discernment, and free from the oppression of worry as we lay down to rest.
 
 ## Scene 5 — Sleep with Power, Love, and a Sound Mind (Verse 7 Synthesis)
 
@@ -119,5 +124,6 @@ Tonight, receive power instead of fear. Receive love instead of anxiety. Receive
 
 Sleep with a sound mind, guarded by divine love and power.
 
-Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.
+Loving Creator, as we prepare for rest, we consciously choose to embody these divine replacements You offer. We relinquish every last vestige of fear, trading its heavy burden for the exhilarating lightness of Your empowering presence. We open our hearts wide to receive Your boundless love, allowing it to envelop us entirely, dissolving all anxiety and filling us with a peace that surpasses understanding. And we gratefully accept the gift of a sound mind, permitting Your divine order to quiet the tumultuous currents of our thoughts, bringing clarity and calm to our inner landscape. May these precious gifts—power, love, and a sound mind—stand guard over us throughout the night, transforming our sleep into a sacred time of restoration and renewal, preparing us to greet a new day with unwavering faith and renewed purpose.
 
+Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.

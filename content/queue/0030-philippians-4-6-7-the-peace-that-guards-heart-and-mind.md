@@ -67,6 +67,7 @@ originality:
   source_notes: true         # scriptures and classical commentaries documented
   ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
 ---
+
 ## Scene 1 — Be Careful for Nothing (Verse 6a)
 
 Be careful for nothing — not anxious about anything.
@@ -77,6 +78,7 @@ This does not mean be irresponsible. It means be free from anxiety.
 
 Every concern can become a prayer. Every worry can become supplication.
 
+Father, as I prepare for sleep, I bring before You every lingering care that tries to steal my peace. I refuse to be anxious about tomorrow's schedule, today's unfinished tasks, or any unknown challenge that looms. Instead, I surrender these thoughts to You, trusting Your sovereignty over all things. Let this act of letting go be a sincere prayer, transforming worry into worship, and allowing Your gentle presence to settle over my spirit as I rest.
 
 ## Scene 2 — In Every Thing by Prayer and Supplication with Thanksgiving (Verse 6b)
 
@@ -88,6 +90,7 @@ Bring everything to God — the big things and the small things — with thanksg
 
 Your requests are welcome in His presence.
 
+Heavenly Father, I come before You in full assurance, bringing every detail of my life, both significant and small. I lift up my needs for rest, for renewal, for protection during these nighttime hours. I also express profound gratitude for Your constant provision, for the breath in my lungs, for the shelter over my head, and for Your unfailing love. May this tapestry of prayer, supplication, and thanksgiving be a sweet aroma to You as I lay down to sleep, acknowledging Your goodness in all things.
 
 ## Scene 3 — Let Your Requests Be Made Known Unto God (Verse 6c)
 
@@ -99,6 +102,7 @@ Praying is not informing God; it is aligning your heart with His.
 
 Tell Him everything tonight. Hold nothing back.
 
+Lord, You know my deepest desires and unspoken fears, yet You invite me to articulate them. Tonight, I lay bare my heart before You, making known every quiet hope for tomorrow, every burden I carry, and every vulnerability I feel as darkness falls. I don't inform You, but rather, I seek to align my will with Yours, trusting that as I voice these requests, Your perfect plan unfolds. May my transparency tonight deepen my intimacy with You, preparing my soul for peaceful slumber.
 
 ## Scene 4 — And the Peace of God, Which Passeth All Understanding (Verse 7a)
 
@@ -110,6 +114,7 @@ It is peace when there is no reason for peace. It is calm when there is every re
 
 This peace is supernatural. It is divine. It is yours.
 
+Gracious God, I humbly ask for the experience of Your supernatural peace tonight. Let this divine tranquility, which transcends all human reasoning and worldly circumstances, envelop me. Even if my mind races or my heart feels troubled by unresolved issues, I choose to receive Your unexplainable calm. May this profound peace, independent of my surroundings or feelings, be a tangible reality in my spirit, guiding my thoughts away from turmoil and into Your comforting embrace as I drift into sleep.
 
 ## Scene 5 — Shall Keep Your Hearts and Minds Through Christ Jesus (Verse 7b)
 
@@ -121,6 +126,7 @@ It keeps your heart from bitterness. It keeps your mind from anxiety.
 
 It stands guard at the door of your thoughts and emotions.
 
+Almighty Protector, I receive Your promise that Your peace will stand as a vigilant guardian over my heart and mind tonight. Let it actively defend my emotions from bitterness, discouragement, or unrest, and protect my thoughts from spirals of anxiety, fear, or negative rumination. Through Christ Jesus, I trust that this divine peace forms an impenetrable fortress around my inner being, allowing me to rest securely, knowing my deepest self is kept safe in Your loving care until morning.
 
 ## Scene 6 — Sleep Guarded by Divine Peace (Verses 6–7 Synthesis)
 
@@ -130,5 +136,6 @@ Tonight, pray about everything. Thank God for everything. Receive the peace that
 
 Sleep under the garrison of divine peace.
 
-Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.
+Merciful Father, as I prepare to close my eyes, I lean into the full cycle of Your peace tonight. From the initial act of surrendering every worry, through expressing my needs with a grateful heart, to receiving the incomprehensible peace that flows from You, I rest in Your presence. Let Your peace be a constant garrison, not only safeguarding my sleep but also actively preserving my heart and mind throughout the night. I choose to sleep deeply, completely enveloped and guarded by Your perfect, divine peace.
 
+Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.
