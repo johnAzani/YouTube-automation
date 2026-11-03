@@ -10,7 +10,7 @@ category: education
 voice: Charon
 target_minutes: 6
 tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "LORD LIFTS MY HEAD"
+thumb_text: "LIFT MY HEAD"
 description: |
   Say this Psalm 3:3-5 (KJV) prayer before you sleep tonight.
   But thou, O LORD, art a shield for me; my glory, and the lifter up of mine head. I cried unto the LORD with my voice, and he heard me out of his holy hill. I laid me down and slept; I awaked; for the LORD sustained me.

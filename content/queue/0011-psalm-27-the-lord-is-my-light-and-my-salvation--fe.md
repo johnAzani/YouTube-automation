@@ -10,7 +10,7 @@ category: education
 voice: Charon
 target_minutes: 6
 tags: [psalm 27, prayer before sleep, bedtime prayer, peaceful sleep, the secret place, scripture meditation, christian meditation, divine protection, rest and healing]
-thumb_text: "OF WHOM SHALL I BE AFRAID?"
+thumb_text: "WHOM SHALL I FEAR"
 description: |
   Say this Psalm 27 (KJV) prayer before you sleep tonight. Surrender the burdens, anxieties,
   and fatigue of this day into the hands of the Lord who is your everlasting light.

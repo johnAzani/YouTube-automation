@@ -67,6 +67,14 @@ jobs:
       - name: Python deps
         run: pip install -r requirements.txt
 
+      - name: Sync live channel thumbnails
+        continue-on-error: true
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: python -m scripts.sync_published_thumbnails
+
       - name: Audit every automation and its outcome
         id: audit
         # This step exits 1 *because* something is failing — that is the alarm, and
@@ -101,15 +109,17 @@ jobs:
           set -e
           git config user.name "automation-monitor"
           git config user.email "actions@users.noreply.github.com"
-          test -f content/monitor/status.json || { echo "no snapshot to record"; exit 0; }
           git fetch --quiet origin main
           git reset --mixed origin/main
-          git add content/monitor/status.json
+          if [ -f content/monitor/status.json ]; then
+            git add content/monitor/status.json
+          fi
+          git add content/published/*.md
           if git diff --cached --quiet; then
             echo "snapshot unchanged"
             exit 0
           fi
-          git commit --quiet -m "chore(monitor): automation status snapshot [skip ci]"
+          git commit --quiet -m "chore(monitor): automation status snapshot & live thumbnail sync [skip ci]"
           git push --quiet origin HEAD:main \
             || echo "::warning::could not push the snapshot; the issue is the record of truth"
 
