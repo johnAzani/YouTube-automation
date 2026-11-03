@@ -450,6 +450,39 @@ def _open_release_ticket(doc: ScriptDoc, url: str, privacy: str, video_id: str =
         _log(f"release ticket created: {(proc.stdout or '').strip()[:200]}")
 
 
+def quota_blocked_until(now: datetime | None = None) -> datetime | None:
+    """The latest quota-pause reset still in the future, if the day is spent.
+
+    The free tier allows **ten** TTS requests per day for `gemini-3.8-flash-tts`.
+    A paused job records when the allowance returns. Starting another video before
+    then cannot succeed — it only spends tomorrow's requests on a doomed attempt,
+    three times a day. So while any pause is still live, the release waits.
+    """
+    from .quota_handler import is_quota_pause_expired
+
+    now = now or datetime.now(timezone.utc)
+    latest: datetime | None = None
+    for path in sorted(QUEUE_DIR.glob("*.md")):
+        try:
+            doc = parse_script(path)
+        except Exception:  # noqa: BLE001
+            continue
+        if str(doc.status).strip().lower() != "quota_paused":
+            continue
+        raw = str(doc.meta.get("quota_reset_utc") or "").strip()
+        if not raw or is_quota_pause_expired(raw):
+            continue
+        try:
+            when = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        except ValueError:
+            continue
+        if when.tzinfo is None:
+            when = when.replace(tzinfo=timezone.utc)
+        if when > now and (latest is None or when > latest):
+            latest = when
+    return latest
+
+
 def empty_reason() -> str:
     """Why nothing could be published, in one sentence with the numbers in it."""
     from .script_doc import MIN_LONGFORM_WORDS, parse_script
@@ -531,6 +564,16 @@ def main(argv: list[str] | None = None) -> int:
 
     paths = select_jobs(args.all, args.job, args.next)
     if not paths:
+        # Quota first: it is the one reason that is nobody's mistake and has a time
+        # attached. Starting another video while a pause is live just spends
+        # tomorrow's ten requests today.
+        blocked = quota_blocked_until()
+        if blocked is not None:
+            print(f"::error title=Release did not publish::Gemini's free-tier TTS "
+                  f"allowance (10 requests/day) is spent until "
+                  f"{blocked.isoformat()} UTC. The next slot after that will publish; "
+                  f"nothing was uploaded and nothing was wasted today.", flush=True)
+            return 3
         # This used to `return 0` with a friendly notice, on the theory that a red
         # cron every three hours would train everyone to ignore the dashboard. In
         # practice it meant three production runs a day exited green while the

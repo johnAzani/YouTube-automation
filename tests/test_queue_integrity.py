@@ -97,3 +97,41 @@ class QueueIntegrityTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ThePersonaGateMustNotRejectAPrayer(unittest.TestCase):
+    """`\\bmy firm\\b` alone rejected "You are my firm foundation" on 3 November.
+
+    A false positive here does not merely warn — the queue stops passing its own
+    integrity tests, so an approved, publishable prayer is blocked forever. The
+    gate must catch the *claim of professional practice*, not the word.
+    """
+
+    def test_a_prayer_ending_in_my_firm_foundation_passes(self):
+        import re
+        from pipeline.originality import FORBIDDEN_PERSONA_PATTERNS
+
+        text = "Anchor my soul in Your truth. You are my firm foundation."
+        hits = [p for p in FORBIDDEN_PERSONA_PATTERNS if re.search(p, text, re.I)]
+        self.assertEqual(hits, [])
+
+    def test_a_real_professional_claim_is_still_caught(self):
+        import re
+        from pipeline.originality import FORBIDDEN_PERSONA_PATTERNS
+
+        for text in ("as a doctor I can tell you",
+                     "my patients always ask me",
+                     "at my firm we advise clients",
+                     "my firm manages retirement portfolios"):
+            with self.subTest(text=text):
+                hits = [p for p in FORBIDDEN_PERSONA_PATTERNS if re.search(p, text, re.I)]
+                self.assertTrue(hits, f"{text!r} should be blocked")
+
+    def test_the_expansion_pass_cannot_poison_an_approved_script(self):
+        from tools import expand_scripts as ex
+
+        job = ex.Job(path=Path("content/queue/0001-test.md"),
+                     meta={"id": "0001", "psalm": 4}, body="Lord, keep me.\n")
+        expanded = job.body + "\nAs a doctor, I see this every night.\n"
+        problems = ex.validate(job, expanded, require_floor=False)
+        self.assertTrue(any("AI-persona" in p for p in problems), problems)

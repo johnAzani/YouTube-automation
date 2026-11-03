@@ -58,11 +58,51 @@ def get_gemini_api_key() -> Optional[str]:
     return None
 
 
+#: Characters per TTS request. This is a *quota* setting, not a technical one.
+#:
+#: The free tier allows **10 generateContent requests per day** for
+#: `gemini-3.8-flash-tts` — Google's own refusal on 3 November named the metric and
+#: the limit. An 888-word prayer is ~5,200 characters, so the old 450-character
+#: chunking asked for **thirteen** requests to narrate one video: more than the
+#: entire daily budget, which is why releases burned all ten requests on a single
+#: video and then paused themselves until the next reset.
+#:
+#: At 4,000 characters a six-minute prayer is two requests, a Short is one, and a
+#: day can carry a long-form and a Short with room for a retry. Override with
+#: `TTS_CHUNK_CHARS` if the model needs smaller input.
+DEFAULT_CHUNK_CHARS = 4000
+
+
+def chunk_chars() -> int:
+    raw = os.environ.get("TTS_CHUNK_CHARS", "").strip()
+    if raw:
+        try:
+            value = int(raw)
+            if 500 <= value <= 20000:
+                return value
+        except ValueError:
+            pass
+    return DEFAULT_CHUNK_CHARS
+
+
 def _chunk_text(text: str, max_chars: int = 500) -> list[str]:
     """Split long narrative text at paragraph boundaries into <= max_chars chunks."""
     paragraphs = [p.strip() for p in text.split("\n\n") if p.strip()]
     if not paragraphs:
         paragraphs = [text.strip()]
+    # A single paragraph can be longer than the limit; split it at sentence ends so
+    # the cap is real rather than advisory.
+    split: list[str] = []
+    for p in paragraphs:
+        while len(p) > max_chars:
+            cut = p.rfind(". ", 0, max_chars)
+            cut = cut + 1 if cut > max_chars // 2 else max_chars
+            split.append(p[:cut].strip())
+            p = p[cut:].strip()
+        if p:
+            split.append(p)
+    paragraphs = split or paragraphs
+
     chunks: list[str] = []
     curr: list[str] = []
     curr_len = 0
@@ -214,6 +254,36 @@ def _guarded_chunk(client, text, voice_name, system_instruction, model, temp_raw
                 _t.sleep(wait)
                 continue
     raise last
+
+
+#: Charon's pace, used only to notice a *truncated* result.
+WORDS_PER_MINUTE = 145
+
+
+def _assert_not_truncated(audio: Path, text: str) -> None:
+    """Refuse audio far shorter than the words it is meant to contain.
+
+    One 4,000-character request is the only way to fit a six-minute prayer inside a
+    ten-request day, so the risk moves: if the model truncates a long answer we must
+    not publish the first three minutes of a prayer and call it the whole thing.
+    This is a floor, not a fine measurement.
+    """
+    from .tts import _probe_duration
+
+    words = len(text.split())
+    if not words:
+        return
+    expected = words / WORDS_PER_MINUTE * 60
+    actual = _probe_duration(audio)
+    if actual is None:
+        return
+    _emit(f"narration is {actual:.0f}s for {words} words (expected ~{expected:.0f}s)")
+    if actual < expected * 0.7:
+        raise RuntimeError(
+            f"Narration came back truncated: {actual:.0f}s of audio for {words} words, "
+            f"when Charon needs ~{expected:.0f}s. Send it in smaller TTS_CHUNK_CHARS "
+            f"pieces rather than publishing a partial prayer."
+        )
 
 
 def _synthesize_single_chunk(
@@ -427,7 +497,12 @@ def synthesize_gemini_audio(
     out_path = Path(out_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
-    chunks = _chunk_text(text, max_chars=450)
+    limit = chunk_chars()
+    chunks = _chunk_text(text, max_chars=limit)
+    # The arithmetic that matters under a 10-request-per-day quota, printed before
+    # the first call, so the run page answers "does this even fit today".
+    _emit(f"narration is {len(text)} characters → {len(chunks)} TTS request(s) "
+          f"of up to {limit} characters")
     if len(chunks) == 1:
         budget.check("single chunk")
         temp_raw = out_path.with_suffix(".raw_audio")
@@ -476,6 +551,10 @@ def synthesize_gemini_audio(
         ]
         subprocess.run(concat_cmd, check=True, capture_output=True)
     finally:
-        shutil.rmtree(temp_dir, ignore_errors=True)
+        # Chunks are kept on purpose: under a ten-request daily quota, a run that
+        # dies at chunk 2 of 2 must not start from zero tomorrow. The workflow
+        # caches this directory.
+        pass
 
+    _assert_not_truncated(out_path, text)
     return out_path

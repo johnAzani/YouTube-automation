@@ -109,6 +109,18 @@ jobs:
           restore-keys: |
             assets-
 
+      - name: Restore finished speech chunks
+        # The free tier allows TEN text-to-speech requests per day. A six-minute
+        # prayer needs two; a bad afternoon can still use three or four. Losing a
+        # finished chunk because the step ended is a request the channel cannot
+        # afford, so finished chunks are cached by script text and reused tomorrow.
+        uses: actions/cache@v4
+        with:
+          path: output/*/_gemini_chunks_*
+          key: chunks-${{ hashFiles('content/queue/*.md') }}
+          restore-keys: |
+            chunks-
+
       # Second safety net. If the brain's cron was delayed, skipped, or its API call
       # failed, this run repairs the queue itself instead of printing "nothing to
       # do" and exiting green. When the queue is already publishable it costs
