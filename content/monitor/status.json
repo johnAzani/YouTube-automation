@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T19:01:22.845141+00:00",
+  "generated_at": "2026-11-03T19:45:34.721030+00:00",
   "healthy": false,
   "automations": [
     {
@@ -18,7 +18,7 @@
       "failures_5": 0,
       "effect": "reports and files stalls",
       "verdict": "OK",
-      "detail": "last success 0.5h ago",
+      "detail": "last success 1.3h ago",
       "severity": "ok"
     },
     {
@@ -34,12 +34,12 @@
       "last_success": "2026-11-03T18:32:41+00:00",
       "runs_14d": 19,
       "last_edited": "2026-11-02T19:54:33+00:00",
-      "last_slot": "2026-11-03T15:14:00+00:00",
+      "last_slot": "2026-11-03T19:14:00+00:00",
       "missed_slots": 0,
       "failures_5": 0,
       "effect": "posts replies and records them in content/comments/replied.json",
       "verdict": "OK",
-      "detail": "last success 0.5h ago",
+      "detail": "last success 1.2h ago",
       "severity": "ok"
     },
     {
@@ -58,7 +58,7 @@
       "failures_5": 0,
       "effect": "writes content/community/<id>-READY.md",
       "verdict": "OK",
-      "detail": "last success 44.2h ago",
+      "detail": "last success 44.9h ago",
       "severity": "ok"
     },
     {
@@ -77,7 +77,7 @@
       "failures_5": 2,
       "effect": "writes content/queue/ or content/shorts-scripts/",
       "verdict": "OK",
-      "detail": "last success 8.2h ago",
+      "detail": "last success 8.9h ago",
       "severity": "ok"
     },
     {
@@ -96,7 +96,7 @@
       "failures_5": 0,
       "effect": "re-arms scheduled workflows",
       "verdict": "OK",
-      "detail": "last success 31.6h ago",
+      "detail": "last success 32.3h ago",
       "severity": "ok"
     },
     {
@@ -115,7 +115,7 @@
       "failures_5": 0,
       "effect": "writes content/metrics.csv and opens a snapshot issue",
       "verdict": "OK",
-      "detail": "last success 4.7h ago",
+      "detail": "last success 5.5h ago",
       "severity": "ok"
     },
     {
@@ -124,17 +124,17 @@
       "crons": [
         "23 */3 * * *"
       ],
-      "last_run": "2026-11-03T18:56:49+00:00",
+      "last_run": "2026-11-03T19:38:46+00:00",
       "last_conclusion": null,
       "last_success": "2026-11-03T18:42:19+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-03T14:06:40+00:00",
       "last_slot": "2026-11-03T18:23:00+00:00",
       "missed_slots": 0,
-      "failures_5": 0,
+      "failures_5": 1,
       "effect": "this report",
       "verdict": "OK",
-      "detail": "last success 0.3h ago",
+      "detail": "last success 1.1h ago",
       "severity": "ok"
     },
     {
@@ -150,12 +150,12 @@
       "last_success": "2026-11-03T09:40:46+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-03T15:23:07+00:00",
-      "last_slot": "2026-11-03T14:14:00+00:00",
+      "last_slot": "2026-11-03T19:14:00+00:00",
       "missed_slots": 0,
       "failures_5": 4,
       "effect": "publishes a video: content/published/ gains a receipt with a video id",
       "verdict": "FAILING",
-      "detail": "failed 13m ago and nothing was changed since; the next slot will fail the same way",
+      "detail": "failed 58m ago and nothing was changed since; the next slot will fail the same way",
       "severity": "blocking"
     },
     {
@@ -174,14 +174,14 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 0.2h ago",
+      "detail": "last success 0.9h ago",
       "severity": "ok"
     }
   ],
   "outcomes": [
     {
       "outcome": "last upload",
-      "detail": "2026-11-03 (19h ago)",
+      "detail": "2026-11-03 (20h ago)",
       "severity": "ok"
     },
     {
