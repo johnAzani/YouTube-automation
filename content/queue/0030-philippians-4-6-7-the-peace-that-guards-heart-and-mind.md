@@ -1,6 +1,6 @@
 ---
-id: "0030"
-title: "Philippians 4:6-7 — The Peace That Guards Heart and Mind | Bedtime Prayer for Anxiety | The Secret Place"
+id: '0030'
+title: Philippians 4:6-7 Bedtime Prayer | Peace Over Heart & Mind
 slug: philippians-4-6-7-the-peace-that-guards-heart-and-mind
 status: approved
 privacy: public
@@ -9,63 +9,82 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "GUARD YOUR MIND"
-description: |
-  Say this Philippians 4:6-7 (KJV) prayer before you sleep tonight.
+tags:
+- philippians 4 6 7 bedtime prayer
+- peace of god which passeth all understanding
+- night prayer for anxiety and sleep
+- guard your heart and mind prayer
+- prayer before sleep
+- peaceful sleep
+- scripture meditation
+- the secret place
+thumb_text: GUARD YOUR MIND
+description: 'Say this Philippians 4:6-7 (KJV) prayer before you sleep tonight.
+
   Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God. And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.
 
+
   This is a full devotional prayer and scripture exposition covering Philippians 4:6-7 (KJV)
+
   with peaceful nighttime ambient soundscapes.
 
+
   Scripture References & Sources:
+
   - The Holy Bible, Philippians 4:6-7 (KJV) (King James Version)
+
   - Spurgeon, C.H. (1885). The Treasury of David.
-  - Matthew Henry's Commentary on the Whole Bible.
+
+  - Matthew Henry''s Commentary on the Whole Bible.
+
 
   Produced by The Secret Place | Daily Prayer & Scripture.
+
+  '
 asset_queries:
-  - "person praying peacefully moonlight night serene silhouette"
-  - "divine peace garrison guard light heaven sanctuary"
-  - "ancient stone wall candlelight evening prayer peaceful"
-  - "golden light rays over calm landscape morning dawn"
-  - "night sky moon stars over quiet hills"
-  - "peaceful sunrise over misty valley countryside serene"
+- person praying peacefully moonlight night serene silhouette
+- divine peace garrison guard light heaven sanctuary
+- ancient stone wall candlelight evening prayer peaceful
+- golden light rays over calm landscape morning dawn
+- night sky moon stars over quiet hills
+- peaceful sunrise over misty valley countryside serene
 asset_query_verification:
-  verified_on: "2026-10-29"
-  method: "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule"
+  verified_on: '2026-10-29'
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule
   queries:
-    - query: "person praying peacefully moonlight night serene silhouette"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "divine peace garrison guard light heaven sanctuary"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "ancient stone wall candlelight evening prayer peaceful"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "golden light rays over calm landscape morning dawn"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "night sky moon stars over quiet hills"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "peaceful sunrise over misty valley countryside serene"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
+  - query: person praying peacefully moonlight night serene silhouette
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: divine peace garrison guard light heaven sanctuary
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: ancient stone wall candlelight evening prayer peaceful
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: golden light rays over calm landscape morning dawn
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: night sky moon stars over quiet hills
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: peaceful sunrise over misty valley countryside serene
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
 originality:
-  original_thesis: true      # devotional prayer narrative emphasizing peaceful surrender and divine protection
-  unique_structure: true     # 5-movement exposition moving from scripture reading to theological application to rest
-  human_rewrite: true        # carefully curated theological wording with sacred meditative breathing cadence
-  no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
-  source_notes: true         # scriptures and classical commentaries documented
-  ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
+  original_thesis: true
+  unique_structure: true
+  human_rewrite: true
+  no_ai_persona: true
+  source_notes: true
+  ai_disclosure: false
+seo_hook: Pray this Philippians 4:6-7 KJV bedtime prayer to release nighttime anxiety and let the peace of God guard your heart and mind.
+category_id: '22'
 ---
 
 ## Scene 1 — Be Careful for Nothing (Verse 6a)

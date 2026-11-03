@@ -154,8 +154,11 @@ def render(narration: Path, scenes, words, duration: float, output: Path, *,
                 '-framerate', str(fps), '-i', 'pipe:0', '-i', str(narration), '-i', str(music_wav),
                 '-filter_complex', audio_filter,
                 '-map', '0:v:0', '-map', '[a]', '-t', str(duration), '-c:v', 'libx264',
-                '-preset', 'fast', '-crf', '21', '-pix_fmt', 'yuv420p', '-c:a', 'aac',
-                '-b:a', '160k', '-movflags', '+faststart', str(temp)],
+                '-profile:v', 'high', '-preset', 'fast', '-crf', '21', '-pix_fmt', 'yuv420p',
+                '-colorspace', 'bt709', '-color_primaries', 'bt709', '-color_trc', 'bt709', '-color_range', 'tv',
+                '-c:a', 'aac', '-ar', '48000', '-b:a', '192k',
+                '-metadata:s:v:0', 'language=eng', '-metadata:s:a:0', 'language=eng',
+                '-movflags', '+faststart', str(temp)],
                 stdin=subprocess.PIPE, stdout=subprocess.DEVNULL, stderr=errors)
             for scene_index, (path, seconds) in enumerate(scenes):
                 scene_start = elapsed

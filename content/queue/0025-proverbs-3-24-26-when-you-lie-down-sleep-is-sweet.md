@@ -1,6 +1,6 @@
 ---
-id: "0025"
-title: "Proverbs 3:24-26 — When You Lie Down, Sleep Is Sweet | Bedtime Prayer for Sweet Rest | The Secret Place"
+id: '0025'
+title: Proverbs 3:24-26 Bedtime Prayer | Lie Down & Sleep Sweetly
 slug: proverbs-3-24-26-when-you-lie-down-sleep-is-sweet
 status: approved
 privacy: public
@@ -9,63 +9,82 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "SWEET SLEEP TONIGHT"
-description: |
-  Say this Proverbs 3:24-26 (KJV) prayer before you sleep tonight.
+tags:
+- proverbs 3 24 bedtime prayer
+- when you lie down your sleep will be sweet
+- proverbs 3 night prayer
+- bible verses for sweet sleep
+- prayer before sleep
+- peaceful sleep
+- divine protection
+- the secret place
+thumb_text: SWEET SLEEP TONIGHT
+description: 'Say this Proverbs 3:24-26 (KJV) prayer before you sleep tonight.
+
   When thou liest down, thou shalt not be afraid: yea, thou shalt lie down, and thy sleep shall be sweet. Be not afraid of sudden fear, neither of the desolation of the wicked, when it cometh. For the LORD shall be thy confidence, and shall keep thy foot from being taken.
 
+
   This is a full devotional prayer and scripture exposition covering Proverbs 3:24-26 (KJV)
+
   with peaceful nighttime ambient soundscapes.
 
+
   Scripture References & Sources:
+
   - The Holy Bible, Proverbs 3:24-26 (KJV) (King James Version)
+
   - Spurgeon, C.H. (1885). The Treasury of David.
-  - Matthew Henry's Commentary on the Whole Bible.
+
+  - Matthew Henry''s Commentary on the Whole Bible.
+
 
   Produced by The Secret Place | Daily Prayer & Scripture.
+
+  '
 asset_queries:
-  - "person sleeping sweetly peaceful moonlight bed soft night"
-  - "sweet sleep rest dreamy clouds heaven light sanctuary"
-  - "ancient stone cottage night window candlelight peaceful"
-  - "divine protection shield light over sleeping figure"
-  - "golden moonlight over quiet countryside peaceful night"
-  - "sunrise morning light over calm fields dawn serene"
+- person sleeping sweetly peaceful moonlight bed soft night
+- sweet sleep rest dreamy clouds heaven light sanctuary
+- ancient stone cottage night window candlelight peaceful
+- divine protection shield light over sleeping figure
+- golden moonlight over quiet countryside peaceful night
+- sunrise morning light over calm fields dawn serene
 asset_query_verification:
-  verified_on: "2026-10-29"
-  method: "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule"
+  verified_on: '2026-10-29'
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule
   queries:
-    - query: "person sleeping sweetly peaceful moonlight bed soft night"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "sweet sleep rest dreamy clouds heaven light sanctuary"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "ancient stone cottage night window candlelight peaceful"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "divine protection shield light over sleeping figure"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "golden moonlight over quiet countryside peaceful night"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "sunrise morning light over calm fields dawn serene"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
+  - query: person sleeping sweetly peaceful moonlight bed soft night
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: sweet sleep rest dreamy clouds heaven light sanctuary
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: ancient stone cottage night window candlelight peaceful
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: divine protection shield light over sleeping figure
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: golden moonlight over quiet countryside peaceful night
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: sunrise morning light over calm fields dawn serene
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
 originality:
-  original_thesis: true      # devotional prayer narrative emphasizing peaceful surrender and divine protection
-  unique_structure: true     # 5-movement exposition moving from scripture reading to theological application to rest
-  human_rewrite: true        # carefully curated theological wording with sacred meditative breathing cadence
-  no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
-  source_notes: true         # scriptures and classical commentaries documented
-  ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
+  original_thesis: true
+  unique_structure: true
+  human_rewrite: true
+  no_ai_persona: true
+  source_notes: true
+  ai_disclosure: false
+seo_hook: Pray this Proverbs 3:24-26 KJV bedtime prayer so when you lie down tonight you will not be afraid and your sleep will be sweet.
+category_id: '22'
 ---
 
 ## Scene 1 — When Thou Liest Down, Thou Shalt Not Be Afraid (Verse 24a)

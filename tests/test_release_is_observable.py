@@ -177,6 +177,7 @@ class AQuotaPauseIsNotARelease(unittest.TestCase):
         from pipeline import run
 
         with mock.patch.object(run, "select_jobs", return_value=[Path("content/queue/0017.md")]), \
+             mock.patch.object(run, "quota_blocked_until", return_value=None), \
              mock.patch.object(run, "process", return_value=result):
             return run.main(["--next"])
 

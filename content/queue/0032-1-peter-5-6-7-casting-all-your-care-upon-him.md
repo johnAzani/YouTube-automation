@@ -1,6 +1,6 @@
 ---
-id: "0032"
-title: "1 Peter 5:6-7 — Casting All Your Care Upon Him | Bedtime Prayer for Release | The Secret Place"
+id: '0032'
+title: 1 Peter 5:7 Bedtime Prayer | Cast Every Anxious Care on God
 slug: 1-peter-5-6-7-casting-all-your-care-upon-him
 status: approved
 privacy: public
@@ -9,63 +9,82 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "HE CARES FOR YOU"
-description: |
-  Say this 1 Peter 5:6-7 (KJV) prayer before you sleep tonight.
+tags:
+- 1 peter 5 7 bedtime prayer
+- casting all your care upon him
+- he careth for you prayer
+- night prayer to release worry
+- prayer before sleep
+- peaceful sleep
+- rest and healing
+- the secret place
+thumb_text: HE CARES FOR YOU
+description: 'Say this 1 Peter 5:6-7 (KJV) prayer before you sleep tonight.
+
   Humble yourselves therefore under the mighty hand of God, that he may exalt you in due time: Casting all your care upon him; for he careth for you.
 
+
   This is a full devotional prayer and scripture exposition covering 1 Peter 5:6-7 (KJV)
+
   with peaceful nighttime ambient soundscapes.
 
+
   Scripture References & Sources:
+
   - The Holy Bible, 1 Peter 5:6-7 (KJV) (King James Version)
+
   - Spurgeon, C.H. (1885). The Treasury of David.
-  - Matthew Henry's Commentary on the Whole Bible.
+
+  - Matthew Henry''s Commentary on the Whole Bible.
+
 
   Produced by The Secret Place | Daily Prayer & Scripture.
+
+  '
 asset_queries:
-  - "person casting burden into light heaven peaceful night"
-  - "divine hand receiving burden clouds light sanctuary"
-  - "ancient stone altar candlelight evening prayer peaceful"
-  - "golden light rays over calm landscape morning dawn"
-  - "night sky moon stars over quiet hills serene"
-  - "peaceful sunrise over misty countryside morning"
+- person casting burden into light heaven peaceful night
+- divine hand receiving burden clouds light sanctuary
+- ancient stone altar candlelight evening prayer peaceful
+- golden light rays over calm landscape morning dawn
+- night sky moon stars over quiet hills serene
+- peaceful sunrise over misty countryside morning
 asset_query_verification:
-  verified_on: "2026-10-29"
-  method: "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule"
+  verified_on: '2026-10-29'
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule
   queries:
-    - query: "person casting burden into light heaven peaceful night"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "divine hand receiving burden clouds light sanctuary"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "ancient stone altar candlelight evening prayer peaceful"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "golden light rays over calm landscape morning dawn"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "night sky moon stars over quiet hills serene"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "peaceful sunrise over misty countryside morning"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
+  - query: person casting burden into light heaven peaceful night
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: divine hand receiving burden clouds light sanctuary
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: ancient stone altar candlelight evening prayer peaceful
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: golden light rays over calm landscape morning dawn
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: night sky moon stars over quiet hills serene
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: peaceful sunrise over misty countryside morning
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
 originality:
-  original_thesis: true      # devotional prayer narrative emphasizing peaceful surrender and divine protection
-  unique_structure: true     # 5-movement exposition moving from scripture reading to theological application to rest
-  human_rewrite: true        # carefully curated theological wording with sacred meditative breathing cadence
-  no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
-  source_notes: true         # scriptures and classical commentaries documented
-  ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
+  original_thesis: true
+  unique_structure: true
+  human_rewrite: true
+  no_ai_persona: true
+  source_notes: true
+  ai_disclosure: false
+seo_hook: Pray this 1 Peter 5:6-7 KJV bedtime prayer before sleep to cast every anxious care upon the Lord because He cares deeply for you.
+category_id: '22'
 ---
 ## Scene 1 — Humble Yourselves Therefore Under the Mighty Hand of God (Verse 6a)
 

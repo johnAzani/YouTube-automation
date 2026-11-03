@@ -1,6 +1,6 @@
 ---
-id: "0016"
-title: "Psalm 91:11-12 — Angelic Guardians Stationed at Your Bed | Night Prayer for Protection | The Secret Place"
+id: '0016'
+title: Psalm 91:11-12 Night Prayer | Angels Guard Your Home & Sleep
 slug: psalm-91-11-12-angelic-guardians-bed
 status: approved
 privacy: public
@@ -9,63 +9,82 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "ANGELS WATCH OVER YOU"
-description: |
-  Say this Psalm 91:11-12 (KJV) prayer before you sleep tonight.
+tags:
+- psalm 91 11 12 prayer
+- angels watch over me prayer
+- psalm 91 angelic protection
+- night prayer for family protection
+- prayer before sleep
+- bedtime prayer
+- peaceful sleep
+- the secret place
+thumb_text: ANGELS WATCH OVER YOU
+description: 'Say this Psalm 91:11-12 (KJV) prayer before you sleep tonight.
+
   For he shall give his angels charge over thee, to keep thee in all thy ways. They shall bear thee up in their hands, lest thou dash thy foot against a stone.
 
+
   This is a full devotional prayer and scripture exposition covering Psalm 91:11-12 (KJV)
+
   with peaceful nighttime ambient soundscapes.
 
+
   Scripture References & Sources:
+
   - The Holy Bible, Psalm 91:11-12 (KJV) (King James Version)
+
   - Spurgeon, C.H. (1885). The Treasury of David.
-  - Matthew Henry's Commentary on the Whole Bible.
+
+  - Matthew Henry''s Commentary on the Whole Bible.
+
 
   Produced by The Secret Place | Daily Prayer & Scripture.
+
+  '
 asset_queries:
-  - "angel wings statue cathedral light peaceful sanctuary"
-  - "silhouette person sleeping moonlight starry window"
-  - "golden divine light rays through clouds heaven"
-  - "ancient church interior candlelight evening prayer"
-  - "protective hands holding glowing light sanctuary"
-  - "peaceful night sky moon clouds stars astronomy"
+- angel wings statue cathedral light peaceful sanctuary
+- silhouette person sleeping moonlight starry window
+- golden divine light rays through clouds heaven
+- ancient church interior candlelight evening prayer
+- protective hands holding glowing light sanctuary
+- peaceful night sky moon clouds stars astronomy
 asset_query_verification:
-  verified_on: "2026-10-29"
-  method: "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule"
+  verified_on: '2026-10-29'
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule
   queries:
-    - query: "angel wings statue cathedral light peaceful sanctuary"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "silhouette person sleeping moonlight starry window"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "golden divine light rays through clouds heaven"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "ancient church interior candlelight evening prayer"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "protective hands holding glowing light sanctuary"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "peaceful night sky moon clouds stars astronomy"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
+  - query: angel wings statue cathedral light peaceful sanctuary
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: silhouette person sleeping moonlight starry window
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: golden divine light rays through clouds heaven
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: ancient church interior candlelight evening prayer
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: protective hands holding glowing light sanctuary
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: peaceful night sky moon clouds stars astronomy
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
 originality:
-  original_thesis: true      # devotional prayer narrative emphasizing peaceful surrender and divine protection
-  unique_structure: true     # 5-movement exposition moving from scripture reading to theological application to rest
-  human_rewrite: true        # carefully curated theological wording with sacred meditative breathing cadence
-  no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
-  source_notes: true         # scriptures and classical commentaries documented
-  ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
+  original_thesis: true
+  unique_structure: true
+  human_rewrite: true
+  no_ai_persona: true
+  source_notes: true
+  ai_disclosure: false
+seo_hook: Pray this Psalm 91:11-12 KJV bedtime prayer before sleep knowing God gives His angels charge over your bed, family, and dwelling.
+category_id: '22'
 ---
 
 ## Scene 1 — He Shall Give His Angels Charge (Verse 11a)

@@ -1,6 +1,6 @@
 ---
-id: "0029"
-title: "John 14:27 — My Peace I Give Unto You | Bedtime Prayer for Peace | The Secret Place"
+id: 0029
+title: John 14:27 Bedtime Prayer | Let Not Your Heart Be Troubled
 slug: john-14-27-my-peace-i-give-unto-you
 status: approved
 privacy: public
@@ -9,63 +9,82 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "HIS DEEP PEACE"
-description: |
-  Say this John 14:27 (KJV) prayer before you sleep tonight.
+tags:
+- john 14 27 bedtime prayer
+- peace i leave with you prayer
+- let not your heart be troubled
+- night prayer for anxious heart
+- prayer before sleep
+- peaceful sleep
+- christian sleep prayer
+- the secret place
+thumb_text: HIS DEEP PEACE
+description: 'Say this John 14:27 (KJV) prayer before you sleep tonight.
+
   Peace I leave with you, my peace I give unto you: not as the world giveth, give I unto you. Let not your heart be troubled, neither let it be afraid.
 
+
   This is a full devotional prayer and scripture exposition covering John 14:27 (KJV)
+
   with peaceful nighttime ambient soundscapes.
 
+
   Scripture References & Sources:
+
   - The Holy Bible, John 14:27 (KJV) (King James Version)
+
   - Spurgeon, C.H. (1885). The Treasury of David.
-  - Matthew Henry's Commentary on the Whole Bible.
+
+  - Matthew Henry''s Commentary on the Whole Bible.
+
 
   Produced by The Secret Place | Daily Prayer & Scripture.
+
+  '
 asset_queries:
-  - "person sleeping peacefully moonlight bed serene night"
-  - "dove olive branch divine peace light clouds heaven"
-  - "ancient stone sanctuary candlelight evening prayer peaceful"
-  - "golden light rays descending clouds divine presence"
-  - "night sky moon stars over quiet countryside"
-  - "sunrise morning light over calm water dawn serene"
+- person sleeping peacefully moonlight bed serene night
+- dove olive branch divine peace light clouds heaven
+- ancient stone sanctuary candlelight evening prayer peaceful
+- golden light rays descending clouds divine presence
+- night sky moon stars over quiet countryside
+- sunrise morning light over calm water dawn serene
 asset_query_verification:
-  verified_on: "2026-10-29"
-  method: "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule"
+  verified_on: '2026-10-29'
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule
   queries:
-    - query: "person sleeping peacefully moonlight bed serene night"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "dove olive branch divine peace light clouds heaven"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "ancient stone sanctuary candlelight evening prayer peaceful"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "golden light rays descending clouds divine presence"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "night sky moon stars over quiet countryside"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "sunrise morning light over calm water dawn serene"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
+  - query: person sleeping peacefully moonlight bed serene night
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: dove olive branch divine peace light clouds heaven
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: ancient stone sanctuary candlelight evening prayer peaceful
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: golden light rays descending clouds divine presence
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: night sky moon stars over quiet countryside
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: sunrise morning light over calm water dawn serene
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
 originality:
-  original_thesis: true      # devotional prayer narrative emphasizing peaceful surrender and divine protection
-  unique_structure: true     # 5-movement exposition moving from scripture reading to theological application to rest
-  human_rewrite: true        # carefully curated theological wording with sacred meditative breathing cadence
-  no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
-  source_notes: true         # scriptures and classical commentaries documented
-  ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
+  original_thesis: true
+  unique_structure: true
+  human_rewrite: true
+  no_ai_persona: true
+  source_notes: true
+  ai_disclosure: false
+seo_hook: Pray this John 14:27 KJV bedtime prayer before sleep to receive Christ's deep peace and calm a troubled or anxious heart tonight.
+category_id: '22'
 ---
 
 ## Scene 1 — Peace I Leave with You (Verse 27a)

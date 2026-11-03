@@ -1,6 +1,6 @@
 ---
-id: "0020"
-title: "Psalm 18:2 — My Rock, My Fortress, My Deliverer | Night Prayer for Strength | The Secret Place"
+id: '0020'
+title: Psalm 18:2 Night Prayer for Strength | My Rock & Fortress
 slug: psalm-18-2-my-rock-my-fortress-my-deliverer
 status: approved
 privacy: public
@@ -9,63 +9,82 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "LORD IS MY ROCK"
-description: |
-  Say this Psalm 18:2 (KJV) prayer before you sleep tonight.
+tags:
+- psalm 18 2 prayer
+- the lord is my rock and fortress
+- psalm 18 night prayer
+- bedtime prayer for strength
+- prayer before sleep
+- divine protection
+- peaceful sleep
+- the secret place
+thumb_text: LORD IS MY ROCK
+description: 'Say this Psalm 18:2 (KJV) prayer before you sleep tonight.
+
   The LORD is my rock, and my fortress, and my deliverer; my God, my strength, in whom I will trust; my buckler, and the horn of my salvation, and my high tower.
 
+
   This is a full devotional prayer and scripture exposition covering Psalm 18:2 (KJV)
+
   with peaceful nighttime ambient soundscapes.
 
+
   Scripture References & Sources:
+
   - The Holy Bible, Psalm 18:2 (KJV) (King James Version)
+
   - Spurgeon, C.H. (1885). The Treasury of David.
-  - Matthew Henry's Commentary on the Whole Bible.
+
+  - Matthew Henry''s Commentary on the Whole Bible.
+
 
   Produced by The Secret Place | Daily Prayer & Scripture.
+
+  '
 asset_queries:
-  - "ancient stone fortress castle mountain peak sunset"
-  - "silhouette person standing on rock divine light"
-  - "high tower stone structure night sky stars peaceful"
-  - "shield buckler armor divine protection light sanctuary"
-  - "golden light rays through clouds over mountain peak"
-  - "peaceful sunrise over rocky mountain landscape dawn"
+- ancient stone fortress castle mountain peak sunset
+- silhouette person standing on rock divine light
+- high tower stone structure night sky stars peaceful
+- shield buckler armor divine protection light sanctuary
+- golden light rays through clouds over mountain peak
+- peaceful sunrise over rocky mountain landscape dawn
 asset_query_verification:
-  verified_on: "2026-10-29"
-  method: "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule"
+  verified_on: '2026-10-29'
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule
   queries:
-    - query: "ancient stone fortress castle mountain peak sunset"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "silhouette person standing on rock divine light"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "high tower stone structure night sky stars peaceful"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "shield buckler armor divine protection light sanctuary"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "golden light rays through clouds over mountain peak"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "peaceful sunrise over rocky mountain landscape dawn"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
+  - query: ancient stone fortress castle mountain peak sunset
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: silhouette person standing on rock divine light
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: high tower stone structure night sky stars peaceful
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: shield buckler armor divine protection light sanctuary
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: golden light rays through clouds over mountain peak
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: peaceful sunrise over rocky mountain landscape dawn
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
 originality:
-  original_thesis: true      # devotional prayer narrative emphasizing peaceful surrender and divine protection
-  unique_structure: true     # 5-movement exposition moving from scripture reading to theological application to rest
-  human_rewrite: true        # carefully curated theological wording with sacred meditative breathing cadence
-  no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
-  source_notes: true         # scriptures and classical commentaries documented
-  ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
+  original_thesis: true
+  unique_structure: true
+  human_rewrite: true
+  no_ai_persona: true
+  source_notes: true
+  ai_disclosure: false
+seo_hook: Pray this Psalm 18:2 KJV night prayer before sleep and rest safely in the Lord who is your Rock, your Fortress, and your Deliverer.
+category_id: '22'
 ---
 
 ## Scene 1 — The LORD Is My Rock (Verse 2a)

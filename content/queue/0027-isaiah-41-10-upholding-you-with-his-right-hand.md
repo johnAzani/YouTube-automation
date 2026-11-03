@@ -1,6 +1,6 @@
 ---
-id: "0027"
-title: "Isaiah 41:10 — Upholding You With His Right Hand | Night Prayer for Courage | The Secret Place"
+id: '0027'
+title: Isaiah 41:10 Night Prayer | Fear Not, God Is With You Tonight
 slug: isaiah-41-10-upholding-you-with-his-right-hand
 status: approved
 privacy: public
@@ -9,63 +9,82 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "I AM WITH THEE"
-description: |
-  Say this Isaiah 41:10 (KJV) prayer before you sleep tonight.
+tags:
+- isaiah 41 10 night prayer
+- fear thou not for i am with thee
+- isaiah 41 bedtime prayer
+- prayer for courage and peace
+- prayer before sleep
+- peaceful sleep
+- divine protection
+- the secret place
+thumb_text: I AM WITH THEE
+description: 'Say this Isaiah 41:10 (KJV) prayer before you sleep tonight.
+
   Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness.
 
+
   This is a full devotional prayer and scripture exposition covering Isaiah 41:10 (KJV)
+
   with peaceful nighttime ambient soundscapes.
 
+
   Scripture References & Sources:
+
   - The Holy Bible, Isaiah 41:10 (KJV) (King James Version)
+
   - Spurgeon, C.H. (1885). The Treasury of David.
-  - Matthew Henry's Commentary on the Whole Bible.
+
+  - Matthew Henry''s Commentary on the Whole Bible.
+
 
   Produced by The Secret Place | Daily Prayer & Scripture.
+
+  '
 asset_queries:
-  - "divine right hand reaching down light heaven protection"
-  - "person standing on rock storm calmed by god presence"
-  - "ancient stone pillar light rays heaven sanctuary"
-  - "golden hand silhouette divine light clouds evening"
-  - "peaceful night landscape moon over mountains stars"
-  - "sunrise dawn light over quiet valley morning serene"
+- divine right hand reaching down light heaven protection
+- person standing on rock storm calmed by god presence
+- ancient stone pillar light rays heaven sanctuary
+- golden hand silhouette divine light clouds evening
+- peaceful night landscape moon over mountains stars
+- sunrise dawn light over quiet valley morning serene
 asset_query_verification:
-  verified_on: "2026-10-29"
-  method: "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule"
+  verified_on: '2026-10-29'
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule
   queries:
-    - query: "divine right hand reaching down light heaven protection"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "person standing on rock storm calmed by god presence"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "ancient stone pillar light rays heaven sanctuary"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "golden hand silhouette divine light clouds evening"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "peaceful night landscape moon over mountains stars"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
-    - query: "sunrise dawn light over quiet valley morning serene"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"
+  - query: divine right hand reaching down light heaven protection
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: person standing on rock storm calmed by god presence
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: ancient stone pillar light rays heaven sanctuary
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: golden hand silhouette divine light clouds evening
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: peaceful night landscape moon over mountains stars
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+  - query: sunrise dawn light over quiet valley morning serene
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
 originality:
-  original_thesis: true      # devotional prayer narrative emphasizing peaceful surrender and divine protection
-  unique_structure: true     # 5-movement exposition moving from scripture reading to theological application to rest
-  human_rewrite: true        # carefully curated theological wording with sacred meditative breathing cadence
-  no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
-  source_notes: true         # scriptures and classical commentaries documented
-  ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
+  original_thesis: true
+  unique_structure: true
+  human_rewrite: true
+  no_ai_persona: true
+  source_notes: true
+  ai_disclosure: false
+seo_hook: Pray this Isaiah 41:10 KJV night prayer before sleep and rest unafraid knowing God strengthens, helps, and upholds you tonight.
+category_id: '22'
 ---
 
 ## Scene 1 — Fear Thou Not; For I Am with Thee (Verse 10a)

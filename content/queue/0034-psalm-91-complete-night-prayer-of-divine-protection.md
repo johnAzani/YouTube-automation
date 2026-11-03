@@ -1,6 +1,6 @@
 ---
-id: "0034"
-title: "Psalm 91 (All 16 Verses): Abiding in the Secret Place — Full Night Prayer for Sleep & Protection | The Secret Place"
+id: '0034'
+title: Psalm 91 Complete KJV Night Prayer | Abiding Under His Wings
 slug: psalm-91-complete-night-prayer-of-divine-protection
 status: approved
 privacy: public
@@ -9,60 +9,81 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 7
-tags: [psalm 91, prayer before sleep, bedtime prayer, peaceful sleep, the secret place, scripture meditation, christian meditation, divine protection, rest and healing]
-thumb_text: "ABIDE IN HIM"
-description: |
-  Pray all sixteen verses of Psalm 91 (KJV) before you sleep tonight. Step out of
+tags:
+- psalm 91 complete night prayer
+- psalm 91 all 16 verses prayer
+- abiding in the secret place
+- psalm 91 kjv bedtime prayer
+- prayer before sleep
+- divine protection
+- peaceful sleep
+- the secret place
+thumb_text: ABIDE IN HIM
+description: 'Pray all sixteen verses of Psalm 91 (KJV) before you sleep tonight. Step out of
+
   the noise and weariness of this day into the secret place of the Most High, and
+
   rest beneath the shadow of the Almighty.
+
   He that dwelleth in the secret place of the most High shall abide under the shadow
+
   of the Almighty. I will say of the LORD, He is my refuge and my fortress: my God;
+
   in him will I trust.
 
+
   This is a complete devotional night prayer and verse-by-verse scripture meditation
+
   through Psalm 91:1-16 (King James Version) with peaceful 432 Hz sanctuary soundscapes.
 
+
   Scripture References & Sources:
+
   - The Holy Bible, Psalm 91:1-16 (King James Version)
+
   - Spurgeon, C.H. (1885). The Treasury of David, Psalm 91 Commentary.
-  - Matthew Henry's Commentary on the Whole Bible, Psalm 91.
+
+  - Matthew Henry''s Commentary on the Whole Bible, Psalm 91.
+
 
   Produced by The Secret Place | Daily Prayer & Scripture.
+
+  '
 asset_queries:
-  - "ancient mountain fortress sunset clouds"
-  - "sunlight breaking through clouds mountain pass"
-  - "starry night sky over quiet forest hills"
-  - "calm mountain lake still water reflection nightfall"
-  - "ancient stone sanctuary warm candle light evening"
-  - "peaceful sunrise over misty alpine valley"
+- ancient mountain fortress sunset clouds
+- sunlight breaking through clouds mountain pass
+- starry night sky over quiet forest hills
+- calm mountain lake still water reflection nightfall
+- ancient stone sanctuary warm candle light evening
+- peaceful sunrise over misty alpine valley
 asset_query_verification:
-  verified_on: "2026-11-03"
-  method: "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule"
+  verified_on: '2026-11-03'
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule
   queries:
-    - query: "ancient mountain fortress sunset clouds"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — USGS / NPS mountain ridge and twilight photography"
-    - query: "sunlight breaking through clouds mountain pass"
-      verified: true
-      usable: 3
-      evidence: "3x Public domain — USFS Rocky Mountain National Forest crepuscular ray scans"
-    - query: "starry night sky over quiet forest hills"
-      verified: true
-      usable: 3
-      evidence: "3x Public domain — NASA astronomy starry night sky imagery"
-    - query: "calm mountain lake still water reflection nightfall"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — NPS Mirror Lake and Crater Lake twilight scans"
-    - query: "ancient stone sanctuary warm candle light evening"
-      verified: true
-      usable: 3
-      evidence: "3x CC0 / Public domain — Library of Congress ancient sanctuary plates"
-    - query: "peaceful sunrise over misty alpine valley"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — USGS alpine valley dawn mist photography"
+  - query: ancient mountain fortress sunset clouds
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — USGS / NPS mountain ridge and twilight photography
+  - query: sunlight breaking through clouds mountain pass
+    verified: true
+    usable: 3
+    evidence: 3x Public domain — USFS Rocky Mountain National Forest crepuscular ray scans
+  - query: starry night sky over quiet forest hills
+    verified: true
+    usable: 3
+    evidence: 3x Public domain — NASA astronomy starry night sky imagery
+  - query: calm mountain lake still water reflection nightfall
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — NPS Mirror Lake and Crater Lake twilight scans
+  - query: ancient stone sanctuary warm candle light evening
+    verified: true
+    usable: 3
+    evidence: 3x CC0 / Public domain — Library of Congress ancient sanctuary plates
+  - query: peaceful sunrise over misty alpine valley
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — USGS alpine valley dawn mist photography
 originality:
   original_thesis: true
   unique_structure: true
@@ -70,6 +91,8 @@ originality:
   no_ai_persona: true
   source_notes: true
   ai_disclosure: false
+seo_hook: Pray all 16 verses of Psalm 91 (KJV) before sleep to abide in the secret place of the Most High under God's wings and angelic guard.
+category_id: '22'
 ---
 
 ## Scene 1 — Entering the Secret Place (Verses 1–2)

@@ -81,24 +81,10 @@ def _credentials():
 
 
 def build_description(doc: ScriptDoc) -> str:
-    niche = getattr(doc, "niche", "") or str(doc.meta.get("niche", ""))
-    slug = getattr(doc, "slug", "")
-    is_prayer = any(k in niche.lower() or k in slug.lower() for k in ("faith", "prayer", "scripture", "devotional", "psalm"))
-    parts = [doc.description or doc.title]
-    parts.append("")
-    parts.append("—")
-    if is_prayer:
-        parts.append("Scripture & Devotional Commentary: Original editorial production by The Secret Place.")
-        parts.append("Production Disclosure: Audio narration and visual motion design were created or enhanced")
-        parts.append("using Google Gemini AI and studio DSP synthesizers under human editorial direction.")
-    else:
-        parts.append("Research notes & sources are listed above. Produced with an open,")
-        parts.append("human-edited documentary pipeline (scripts reviewed by a human editor).")
-    tags = " ".join(f"#{t.replace(' ', '')}" for t in doc.tags[:8])
-    if tags:
-        parts.append("")
-        parts.append(tags)
-    return "\n".join(parts)[:4900]
+    """Unified description builder delegating to `pipeline.metadata.build_description`."""
+    from .metadata import build_description as _meta_build_description
+
+    return _meta_build_description(doc)
 
 
 def _normalize_title(title: str) -> str:
@@ -162,16 +148,44 @@ def upload(
     privacy: str | None = None,
     publish_at: str | None = None,
     description: str | None = None,
+    caption_path: Path | None = None,
+    tags: list[str] | None = None,
 ) -> UploadResult:
     from googleapiclient.discovery import build
     from googleapiclient.http import MediaFileUpload
+    from .metadata import (
+        build_tags,
+        fit_youtube_tags,
+        is_faith_doc,
+        smart_truncate_title,
+        truncate_utf8_bytes,
+    )
+    from .social_pack import (
+        SELAR_JOURNAL_URL,
+        SELAR_STORE_URL,
+        build_sanctuary_resource_block,
+    )
 
     creds = _credentials()
     youtube = build("youtube", "v3", credentials=creds, cache_discovery=False)
 
+    safe_title = smart_truncate_title(doc.title, 95)
+    faith = is_faith_doc(doc)
+    is_short = (
+        getattr(doc, "format", "") == "short"
+        or str(doc.meta.get("format", "")).lower() == "short"
+        or "#shorts" in safe_title.lower()
+    )
+
     # --- DUPLICATE UPLOAD SAFETY SHIELD ----------------------------------
     if not CONFIG.allow_duplicate_uploads:
-        existing = check_existing_channel_duplicate(youtube, doc.title, getattr(doc, "slug", None))
+        existing = check_existing_channel_duplicate(
+            youtube, safe_title, getattr(doc, "slug", None)
+        ) or (
+            check_existing_channel_duplicate(youtube, doc.title, getattr(doc, "slug", None))
+            if doc.title != safe_title
+            else None
+        )
         if existing:
             print("\n" + "=" * 70)
             print("🛑 [upload] DUPLICATE SHIELD: PREVENTED UNINTENTIONAL / ACCIDENTAL UPLOAD")
@@ -197,18 +211,36 @@ def upload(
     elif CONFIG.auto_publish and privacy == "private":
         privacy = "public"
 
-    full_desc = (description or build_description(doc))[:4900]
+    raw_desc = description or build_description(doc)
+    if faith and SELAR_JOURNAL_URL and (SELAR_JOURNAL_URL not in raw_desc or SELAR_STORE_URL not in raw_desc):
+        raw_desc = raw_desc.rstrip() + "\n\n" + build_sanctuary_resource_block(include_store_links=True)
+    full_desc = truncate_utf8_bytes(raw_desc, max_bytes=4900)
+
+    allow_432 = "432" in safe_title.lower() or "dark_screen" in (getattr(doc, "slug", "") or "").lower()
+    safe_tags = fit_youtube_tags(
+        tags if tags is not None else build_tags(doc),
+        CONFIG.tags_extra,
+        max_chars=490,
+        allow_432hz=allow_432,
+    )
+    category_id = str(doc.meta.get("category_id") or ("22" if faith else "27"))
+    niche_str = getattr(doc, "niche", "") or str(doc.meta.get("niche", "faith and prayer" if faith else "education"))
+
     body = {
         "snippet": {
-            "title": doc.title[:95],
+            "title": safe_title,
             "description": full_desc,
-            "tags": (doc.tags + CONFIG.tags_extra)[:20],
-            "categoryId": "27",
+            "tags": safe_tags,
+            "categoryId": category_id,
             "defaultLanguage": "en",
+            "defaultAudioLanguage": "en",
         },
         "status": {
             "privacyStatus": privacy,
             "selfDeclaredMadeForKids": False,
+            "containsSyntheticMedia": bool(doc.meta.get("contains_synthetic_media", False)),
+            "embeddable": True,
+            "publicStatsViewable": True,
         },
     }
     if publish_at and privacy == "private":
@@ -218,7 +250,7 @@ def upload(
     insert_parts = "snippet,status"
     try:
         from .localize_metadata import build_metadata_localizations
-        locs = build_metadata_localizations(doc.title, full_desc, getattr(doc, "niche", "faith and prayer"))
+        locs = build_metadata_localizations(safe_title, full_desc, niche_str)
         if locs:
             body["localizations"] = locs
             insert_parts = "snippet,status,localizations"
@@ -248,13 +280,21 @@ def upload(
     video_id = response["id"]
     stored_privacy = response.get("status", {}).get("privacyStatus", privacy)
 
-    if thumbnail_path and thumbnail_path.exists():
+    if thumbnail_path and thumbnail_path.exists() and not is_short:
         try:
             youtube.thumbnails().set(
                 videoId=video_id, media_body=MediaFileUpload(str(thumbnail_path))
             ).execute()
         except Exception as exc:  # noqa: BLE001
             print(f"[upload] thumbnail set failed (quota is 50 units/day): {exc!r}")
+
+    if caption_path and caption_path.is_file() and not is_short:
+        try:
+            from .captions import upload_captions
+
+            upload_captions(youtube, video_id, caption_path, language="en")
+        except Exception as exc:  # noqa: BLE001
+            print(f"[upload] caption upload skipped: {exc!r}")
 
     if CONFIG.playlist_id:
         try:
@@ -284,6 +324,65 @@ def upload(
         watch_url=f"https://youtu.be/{video_id}",
         auto_published=stored_privacy == "public",
     )
+
+
+def update_live_video_metadata(
+    video_id: str,
+    *,
+    new_title: str | None = None,
+    new_description: str | None = None,
+    new_tags: list[str] | None = None,
+    localizations: dict | None = None,
+    youtube=None,
+) -> dict:
+    """Safely update an already-published video's metadata without wiping omitted snippet fields.
+
+    Per YouTube Data API v3 `videos.update` rules, calling `videos.update(part='snippet')`
+    deletes any omitted property (`tags`, `categoryId`, `defaultLanguage`, `defaultAudioLanguage`).
+    This helper always fetches `videos.list(part='snippet,localizations')` first (1 unit) and
+    mutates the returned snippet in place before calling `videos.update` (50 units).
+    """
+    from .metadata import fit_youtube_tags, smart_truncate_title, truncate_utf8_bytes
+
+    vid = (video_id or "").strip()
+    if not vid:
+        raise ValueError("video_id is required")
+
+    if youtube is None:
+        from googleapiclient.discovery import build
+
+        creds = _credentials()
+        youtube = build("youtube", "v3", credentials=creds, cache_discovery=False)
+
+    listed = youtube.videos().list(part="snippet,localizations", id=vid).execute()
+    items = listed.get("items", [])
+    if not items:
+        raise RuntimeError(f"Video {vid} not found on channel")
+
+    current = items[0]
+    snippet = dict(current.get("snippet", {}))
+    locs = dict(current.get("localizations", {}) or {})
+
+    if new_title is not None:
+        snippet["title"] = smart_truncate_title(new_title, 95)
+    if new_description is not None:
+        snippet["description"] = truncate_utf8_bytes(new_description, max_bytes=4900)
+    if new_tags is not None:
+        snippet["tags"] = fit_youtube_tags(new_tags, max_chars=490)
+
+    snippet.setdefault("categoryId", "22")
+    snippet["defaultLanguage"] = snippet.get("defaultLanguage") or "en"
+    snippet["defaultAudioLanguage"] = snippet.get("defaultAudioLanguage") or "en"
+
+    if localizations is not None:
+        locs.update(localizations)
+
+    parts = "snippet,localizations" if locs else "snippet"
+    payload = {"id": vid, "snippet": snippet}
+    if locs:
+        payload["localizations"] = locs
+
+    return youtube.videos().update(part=parts, body=payload).execute()
 
 
 def set_video_thumbnail(video_id: str, thumbnail_path: Path) -> str:

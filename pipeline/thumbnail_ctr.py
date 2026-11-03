@@ -983,7 +983,20 @@ def render_ctr(variant: CtrVariant, out_path: Path, size=CANVAS,
     if active.hero and contrast < MIN_CONTRAST:
         notes.append(f"contrast {contrast:.1f} below {MIN_CONTRAST} — needs a scrim")
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    img.save(out_path, "JPEG", quality=92, optimize=True, subsampling=0)
+    icc_bytes: bytes | None = None
+    try:
+        from PIL import ImageCms
+
+        icc_bytes = ImageCms.ImageCmsProfile(ImageCms.createProfile("sRGB")).tobytes()
+    except Exception:  # noqa: BLE001
+        icc_bytes = None
+    save_kwargs = {"optimize": True, "subsampling": 0}
+    if icc_bytes:
+        save_kwargs["icc_profile"] = icc_bytes
+    for q in (92, 88, 84, 80, 75):
+        img.save(out_path, "JPEG", quality=q, **save_kwargs)
+        if out_path.stat().st_size <= 1_950_000:
+            break
     el = edge_luma(img)
     return CtrReport(
         path=out_path, variant=active.label, concept=active.concept,

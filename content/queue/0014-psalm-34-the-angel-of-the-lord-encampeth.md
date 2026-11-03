@@ -1,6 +1,6 @@
 ---
-id: "0014"
-title: "Psalm 34: The Angel of the Lord Encamps Round About You — Bedtime Prayer | The Secret Place"
+id: '0014'
+title: Psalm 34 Night Prayer for Sleep | Angels Stand Watch Over You
 slug: psalm-34-the-angel-of-the-lord-encampeth
 status: approved
 privacy: public
@@ -9,59 +9,79 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-tags: [psalm 34, angel of the lord, night prayer, prayer before sleep, bedtime prayer, peaceful sleep, the secret place, scripture meditation]
-thumb_text: "ANGELS STAND WATCH"
-description: |
-  Say this Psalm 34 prayer before you sleep tonight. Let God's promise of deliverance
+tags:
+- psalm 34 night prayer
+- angel of the lord encamps
+- psalm 34 prayer for protection
+- prayer before sleep
+- bedtime prayer
+- peaceful sleep
+- kjv scripture prayer
+- the secret place
+thumb_text: ANGELS STAND WATCH
+description: 'Say this Psalm 34 prayer before you sleep tonight. Let God''s promise of deliverance
+
   and angelic guard surround your bed, your home, and your mind.
+
   The angel of the Lord encamps all around those who fear Him, and delivers them.
+
   Oh, taste and see that the Lord is good; blessed is the man who trusts in Him!
 
+
   This is a full devotional prayer and scripture exposition covering Psalm 34
+
   with peaceful 432 Hz nighttime ambient soundscapes.
 
+
   Scripture References & Sources:
+
   - The Holy Bible, Psalm 34 (King James Version / English Standard Version)
-  - Matthew Henry's Commentary on the Whole Bible, Psalm 34.
+
+  - Matthew Henry''s Commentary on the Whole Bible, Psalm 34.
+
 
   Produced by The Secret Place | Daily Prayer & Scripture.
+
+  '
 asset_queries:
-  - "candle glowing sanctuary warm evening light"
-  - "angelic golden light through clouds evening sky"
-  - "calm mountain lake sunset water reflection"
-  - "dark mountain valley mist evening quiet"
-  - "starry night sky milky way mountains"
+- candle glowing sanctuary warm evening light
+- angelic golden light through clouds evening sky
+- calm mountain lake sunset water reflection
+- dark mountain valley mist evening quiet
+- starry night sky milky way mountains
 asset_query_verification:
-  verified_on: "2026-10-29"
-  method: "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule"
+  verified_on: '2026-10-29'
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule
   queries:
-    - query: "candle glowing sanctuary warm evening light"
-      verified: true
-      usable: 3
-      evidence: "3x Public domain — Metropolitan Museum of Art historic sanctuary photography"
-    - query: "angelic golden light through clouds evening sky"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — NOAA / NASA twilight sky crepuscular beam scans"
-    - query: "calm mountain lake sunset water reflection"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — NPS mountain lake dusk reflection scans"
-    - query: "dark mountain valley mist evening quiet"
-      verified: true
-      usable: 3
-      evidence: "3x Public domain — USGS alpine valley and gorge fog scans"
-    - query: "starry night sky milky way mountains"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — NPS / NASA dark sky reserve astrophotography"
+  - query: candle glowing sanctuary warm evening light
+    verified: true
+    usable: 3
+    evidence: 3x Public domain — Metropolitan Museum of Art historic sanctuary photography
+  - query: angelic golden light through clouds evening sky
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — NOAA / NASA twilight sky crepuscular beam scans
+  - query: calm mountain lake sunset water reflection
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — NPS mountain lake dusk reflection scans
+  - query: dark mountain valley mist evening quiet
+    verified: true
+    usable: 3
+    evidence: 3x Public domain — USGS alpine valley and gorge fog scans
+  - query: starry night sky milky way mountains
+    verified: true
+    usable: 4
+    evidence: 4x Public domain — NPS / NASA dark sky reserve astrophotography
 originality:
-  original_thesis: true      # devotional prayer narrative emphasizing angelic guardianship, unbroken comfort, and deliverance
-  unique_structure: true     # 5-movement exposition moving from thanksgiving to angelic watch, providence, and heart healing
-  human_rewrite: true        # carefully curated theological wording with sacred meditative breathing cadence
-  no_ai_persona: true        # authentic reverent scripture presentation; no fake guru, no claims of fortune
-  source_notes: true         # scriptures and classical commentaries documented
-  ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
+  original_thesis: true
+  unique_structure: true
+  human_rewrite: true
+  no_ai_persona: true
+  source_notes: true
+  ai_disclosure: false
+seo_hook: Pray this Psalm 34 KJV bedtime prayer before you sleep as the angel of the Lord encamps around your home in peace and protection.
+category_id: '22'
 ---
 
 ## Scene 1 — Continual Praise & Radiant Faces (Verses 1-5)

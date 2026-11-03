@@ -1,7 +1,6 @@
 ---
 id: '0017'
-title: "Psalm 4:8 \u2014 In Peace I Will Lie Down and Sleep | Bedtime Prayer for Safety\
-  \ | The Secret Place"
+title: Psalm 4:8 Bedtime Prayer | In Peace I Will Lie Down & Sleep
 slug: psalm-4-8-in-peace-i-will-lie-down-and-sleep
 status: approved
 privacy: public
@@ -11,19 +10,18 @@ category: education
 voice: Charon
 target_minutes: 6
 tags:
-- bedtime prayer
-- night prayer
-- scripture meditation
+- psalm 4 8 bedtime prayer
+- in peace i will lie down and sleep
+- psalm 4 night prayer
+- prayer for deep sleep
+- prayer before sleep
+- christian sleep meditation
 - peaceful sleep
 - the secret place
-- christian meditation
-- divine protection
-- rest and healing
 thumb_text: LAY DOWN IN PEACE
 description: 'Say this Psalm 4:8 (KJV) prayer before you sleep tonight.
 
-  I will both lay me down in peace, and sleep: for thou, LORD, only makest me dwell
-  in safety.
+  I will both lay me down in peace, and sleep: for thou, LORD, only makest me dwell in safety.
 
 
   This is a full devotional prayer and scripture exposition covering Psalm 4:8 (KJV)
@@ -52,39 +50,32 @@ asset_queries:
 - ancient stone chapel night sky stars peaceful
 asset_query_verification:
   verified_on: '2026-10-29'
-  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4,
-    filtered by pipeline/assets.py licence rule
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule
   queries:
   - query: person sleeping peacefully moonlight bedroom serene night
     verified: true
     usable: 4
-    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
-      \ imagery"
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
   - query: candle light warm bedroom evening prayer sanctuary
     verified: true
     usable: 4
-    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
-      \ imagery"
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
   - query: silhouette figure praying hands moonlight window night
     verified: true
     usable: 4
-    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
-      \ imagery"
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
   - query: peaceful night landscape moon over calm lake
     verified: true
     usable: 4
-    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
-      \ imagery"
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
   - query: divine light rays through clouds heaven protection
     verified: true
     usable: 4
-    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
-      \ imagery"
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
   - query: ancient stone chapel night sky stars peaceful
     verified: true
     usable: 4
-    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
-      \ imagery"
+    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
 originality:
   original_thesis: true
   unique_structure: true
@@ -92,6 +83,8 @@ originality:
   no_ai_persona: true
   source_notes: true
   ai_disclosure: false
+seo_hook: Pray this Psalm 4:8 KJV bedtime prayer to lie down in peace and sleep deeply beneath the Lord's watchful safety tonight.
+category_id: '22'
 ---
 
 ## Scene 1 — I Will Both Lay Me Down in Peace (Verse 8a)
