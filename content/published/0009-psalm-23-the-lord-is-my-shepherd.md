@@ -5,8 +5,6 @@ slug: psalm-23-the-lord-is-my-shepherd
 status: published
 published_on: "2026-10-31"
 youtube_video_id: "JZv67RNPCEI"
-youtube_status: "deleted_or_missing"
-thumbnail_revision: "ctr-v3-cinema"
 privacy: public
 format: longform
 niche: faith and prayer
