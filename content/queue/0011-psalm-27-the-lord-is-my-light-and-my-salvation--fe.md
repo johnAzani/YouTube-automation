@@ -2,7 +2,7 @@
 id: '0011'
 title: Psalm 27 Night Prayer for Sleep & Peace | Fear No Evil Tonight
 slug: psalm-27-the-lord-is-my-light-and-my-salvation--fe
-status: quota_paused
+status: approved
 privacy: public
 format: longform
 niche: faith and prayer
@@ -90,8 +90,6 @@ originality:
   no_ai_persona: true
   source_notes: true
   ai_disclosure: false
-quota_reset_utc: '2026-11-04T08:00:00+00:00'
-pause_reason: gemini_api_daily_quota_exhausted
 seo_hook: Pray this Psalm 27 KJV night prayer before sleep for deep peace, freedom from nighttime fear, and God's protection over your home.
 category_id: '22'
 ---

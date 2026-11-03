@@ -17,6 +17,7 @@ width: 720
 height: 1280
 duration_seconds: 47.69
 scenes_verified: 6
+metadata_revision: "selar-seo-v1"
 ---
 
 I will lift up mine eyes unto the hills, from whence cometh my help. My help cometh from the Lord, which made heaven and earth.

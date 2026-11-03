@@ -330,6 +330,30 @@ EFFECTS = {
 }
 
 
+def active_quota_cooldown(now: datetime | None = None) -> datetime | None:
+    """Return `quota_reset_utc` if daily TTS quota is waiting (<25h) after a recent (<24h) publish."""
+    now = now or datetime.now(timezone.utc)
+    try:
+        from pipeline.run import quota_blocked_until
+        from scripts.pipeline_watchdog import last_publish
+
+        blocked = quota_blocked_until(now)
+        if blocked is None:
+            return None
+        wait = blocked - now
+        if wait <= timedelta(0) or wait > timedelta(hours=25):
+            return None
+        newest = last_publish()
+        if newest is None:
+            return None
+        _, published_when = newest
+        if now - published_when > timedelta(hours=24):
+            return None
+        return blocked
+    except Exception:  # noqa: BLE001
+        return None
+
+
 def classify(report: MonitorReport, runs: list[dict], now: datetime | None = None,
              expect_gh: bool = True) -> MonitorReport:
     now = now or datetime.now(timezone.utc)
@@ -337,6 +361,8 @@ def classify(report: MonitorReport, runs: list[dict], now: datetime | None = Non
     for run in runs:
         path = (run.get("path") or "").split("/")[-1]
         by_workflow.setdefault(path, []).append(run)
+
+    cooldown_until = active_quota_cooldown(now)
 
     for filename, name, crons in workflow_files():
         auto = Automation(workflow=filename, name=name, crons=crons,
@@ -361,7 +387,7 @@ def classify(report: MonitorReport, runs: list[dict], now: datetime | None = Non
                 and (auto.last_run is None or auto.last_run < auto.last_slot)):
             auto.missed_slots = 1
         report.automations.append(auto)
-        _verdict(auto, now)
+        _verdict(auto, now, quota_cooldown=cooldown_until if filename == "produce.yml" else None)
     return report
 
 
@@ -411,7 +437,8 @@ def _is_self(auto: Automation) -> bool:
     return running in names
 
 
-def _verdict(auto: Automation, now: datetime) -> None:
+def _verdict(auto: Automation, now: datetime,
+             quota_cooldown: datetime | None = None) -> None:
     if auto.last_run is None:
         added = auto.last_edited
         if added and now - added < auto.max_gap + GRACE:
@@ -428,7 +455,11 @@ def _verdict(auto: Automation, now: datetime) -> None:
     # to be a real one: this comparison is why "last edited" is read from GitHub
     # rather than from a squashed checkout that claims every file changed today.
     if auto.last_conclusion == "failure":
-        if auto.last_edited and auto.last_run < auto.last_edited:
+        if quota_cooldown is not None:
+            auto.verdict, auto.severity = "QUOTA WAIT", "info"
+            auto.detail = (f"daily $0.00 TTS allowance spent after today's upload(s); "
+                           f"resumes {_wat(quota_cooldown)} WAT")
+        elif auto.last_edited and auto.last_run < auto.last_edited:
             auto.verdict, auto.severity = "UNTESTED FIX", "warning"
             auto.detail = (f"failed {_ago(auto.last_run, now)}; edited "
                            f"{_ago(auto.last_edited, now)} — needs one green run")
@@ -489,6 +520,16 @@ def check_outcomes(report: MonitorReport, now: datetime | None = None,
         text = path.read_text(encoding="utf-8")
         if "youtube_video_id:" not in text:
             continue
+        m_at = re.search(r'^published_at:\s*"?([0-9]{4}-[0-9]{2}-[0-9]{2}T[^"\n]+)"?', text, re.M)
+        if m_at:
+            try:
+                stamp = datetime.fromisoformat(m_at.group(1).strip().replace("Z", "+00:00"))
+                if stamp.tzinfo is None:
+                    stamp = stamp.replace(tzinfo=timezone.utc)
+                newest_date = max(newest_date or stamp, stamp)
+                continue
+            except ValueError:
+                pass
         match = re.search(r'^published_on:\s*"?([0-9]{4}-[0-9]{2}-[0-9]{2})', text, re.M)
         if not match:
             continue

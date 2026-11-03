@@ -1,0 +1,229 @@
+{
+  "key": "short-psalm91v5",
+  "psalm": 91,
+  "title": [
+    "NO TERROR BY NIGHT",
+    "PSALM 91:5-6"
+  ],
+  "poster": [
+    "NO TERROR BY NIGHT",
+    "SLEEP IN GOD'S PEACE",
+    "A BEDTIME PRAYER",
+    "FEAR NO NIGHT SHADOW"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm starry night sky over quiet hills",
+    "warm candle flame glowing dark room",
+    "still moonlit lake reflection peaceful",
+    "gentle forest mist moonlight night",
+    "serene ocean horizon twilight stars",
+    "dawn light breaking mountain ridge"
+  ],
+  "scenes": [
+    {
+      "a": "Take a slow, peaceful breath",
+      "img": "short-psalm91v5-scene-01.jpg",
+      "kicker": "PSALM 91:5",
+      "sub": "RELEASE TONIGHT'S DREAD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Thou shalt not be afraid for the terror by night",
+      "img": "short-psalm91v5-scene-02.jpg",
+      "kicker": "PSALM 91:5",
+      "sub": "NO TERROR BY NIGHT",
+      "cam": "pan_right",
+      "focus": [
+        0.55,
+        0.45
+      ]
+    },
+    {
+      "a": "Nor for the pestilence that walketh in darkness",
+      "img": "short-psalm91v5-scene-03.jpg",
+      "kicker": "PSALM 91:6",
+      "sub": "COVERED IN THE DARK",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, station Your peace",
+      "img": "short-psalm91v5-scene-04.jpg",
+      "kicker": "NIGHT WATCH",
+      "sub": "GUARD THIS BEDROOM",
+      "cam": "pan_left",
+      "focus": [
+        0.45,
+        0.45
+      ]
+    },
+    {
+      "a": "Silence every anxious thought",
+      "img": "short-psalm91v5-scene-05.jpg",
+      "kicker": "DEEP STILLNESS",
+      "sub": "REST WITHOUT FEAR",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to The Secret Place",
+      "img": "short-psalm91v5-scene-06.jpg",
+      "kicker": "NIGHTLY PRAYER",
+      "sub": "SLEEP IN HIS PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Take a slow, peaceful breath as the house grows quiet, and let every burden slip from your shoulders."
+    ],
+    [
+      8,
+      17,
+      "Thou shalt not be afraid for the terror by night; nor for the arrow that flieth by day."
+    ],
+    [
+      17,
+      26,
+      "Nor for the pestilence that walketh in darkness; nor for the destruction that wasteth at noonday."
+    ],
+    [
+      26,
+      36,
+      "Heavenly Father, station Your peace at every door and window of this home while my eyes are closed tonight."
+    ],
+    [
+      36,
+      45,
+      "Silence every anxious thought, calm every racing heartbeat, and wrap my mind in unbroken rest until morning light."
+    ],
+    [
+      45,
+      53,
+      "Whisper Amen in your heart tonight, and subscribe to The Secret Place to pray with us every evening."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "TAKE A SLOW BREATH",
+        "LET EVERY BURDEN SLIP"
+      ],
+      [
+        "PEACEFUL",
+        "BREATH"
+      ],
+      "PREPARE FOR SLEEP"
+    ],
+    [
+      8,
+      17,
+      [
+        "NOT BE AFRAID",
+        "FOR TERROR BY NIGHT"
+      ],
+      [
+        "AFRAID",
+        "TERROR",
+        "NIGHT"
+      ],
+      "PSALM 91 : 5"
+    ],
+    [
+      17,
+      26,
+      [
+        "NOR PESTILENCE",
+        "IN THE DARKNESS"
+      ],
+      [
+        "DARKNESS"
+      ],
+      "PSALM 91 : 6"
+    ],
+    [
+      26,
+      36,
+      [
+        "STATION YOUR PEACE",
+        "OVER THIS HOME"
+      ],
+      [
+        "PEACE",
+        "HOME"
+      ],
+      "EVENING PRAYER"
+    ],
+    [
+      36,
+      45,
+      [
+        "SILENCE EVERY FEAR",
+        "UNBROKEN REST TONIGHT"
+      ],
+      [
+        "SILENCE",
+        "REST"
+      ],
+      "DIVINE COVERING"
+    ],
+    [
+      45,
+      53,
+      [
+        "WHISPER AMEN TONIGHT",
+        "THE SECRET PLACE"
+      ],
+      [
+        "AMEN",
+        "SUBSCRIBE"
+      ],
+      "PRAY EVERY NIGHT"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "thou shalt not be afraid for the terror by night",
+      "kind": "quote",
+      "words": [
+        "NO TERROR",
+        "BY NIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "station your peace at every door",
+      "kind": "phrase",
+      "words": [
+        "PEACE OVER",
+        "THIS HOME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 91:5-6"
+}

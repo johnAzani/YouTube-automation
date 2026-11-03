@@ -1,0 +1,230 @@
+{
+  "key": "short-isaiah26v3",
+  "psalm": null,
+  "title": [
+    "PERFECT PEACE",
+    "ISAIAH 26:3-4"
+  ],
+  "poster": [
+    "KEPT IN",
+    "PERFECT PEACE",
+    "ISAIAH 26:3-4",
+    "PERFECT NIGHT PEACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "still mountain lake mirror night stars",
+    "calm candle flame quiet room dark",
+    "peaceful night clouds silver moonlight",
+    "ancient olive trees twilight stillness",
+    "tranquil sea horizon night sky",
+    "soft golden sunrise mountain mist"
+  ],
+  "scenes": [
+    {
+      "a": "Turn your thoughts gently toward God",
+      "img": "short-isaiah26v3-scene-01.jpg",
+      "kicker": "ISAIAH 26:3",
+      "sub": "STAY YOUR MIND",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Thou wilt keep him in perfect peace",
+      "img": "short-isaiah26v3-scene-02.jpg",
+      "kicker": "ISAIAH 26:3",
+      "sub": "IN PERFECT PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.55,
+        0.45
+      ]
+    },
+    {
+      "a": "In the Lord Jehovah is everlasting strength",
+      "img": "short-isaiah26v3-scene-03.jpg",
+      "kicker": "ISAIAH 26:4",
+      "sub": "EVERLASTING ROCK",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Prince of Peace, fix my wandering mind",
+      "img": "short-isaiah26v3-scene-04.jpg",
+      "kicker": "QUIET HEART",
+      "sub": "ANCHORED IN YOU",
+      "cam": "pan_left",
+      "focus": [
+        0.45,
+        0.45
+      ]
+    },
+    {
+      "a": "Hush every storm inside my chest",
+      "img": "short-isaiah26v3-scene-05.jpg",
+      "kicker": "DEEP REST",
+      "sub": "SLEEP IN STILLNESS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to The Secret Place",
+      "img": "short-isaiah26v3-scene-06.jpg",
+      "kicker": "AMEN",
+      "sub": "NIGHTLY PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Turn your thoughts gently toward God tonight, inhale deeply, and let every racing worry slow down into quiet stillness."
+    ],
+    [
+      8,
+      17,
+      "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee."
+    ],
+    [
+      17,
+      26,
+      "Trust ye in the Lord for ever: for in the Lord Jehovah is everlasting strength."
+    ],
+    [
+      26,
+      36,
+      "Prince of Peace, fix my wandering mind upon Your faithfulness tonight and cover my family beneath Your everlasting arms."
+    ],
+    [
+      36,
+      44,
+      "Hush every storm inside my chest and carry my weary body into deep, undisturbed sleep until daybreak."
+    ],
+    [
+      44,
+      52,
+      "Whisper Amen to rest in His perfect peace tonight, and subscribe to The Secret Place to pray with us nightly."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "TURN YOUR THOUGHTS",
+        "SLOW TO STILLNESS"
+      ],
+      [
+        "GENTLY",
+        "STILLNESS"
+      ],
+      "QUIET SURRENDER"
+    ],
+    [
+      8,
+      17,
+      [
+        "KEPT IN",
+        "PERFECT PEACE"
+      ],
+      [
+        "PERFECT",
+        "PEACE",
+        "TRUSTETH"
+      ],
+      "ISAIAH 26 : 3"
+    ],
+    [
+      17,
+      26,
+      [
+        "TRUST IN THE LORD",
+        "EVERLASTING STRENGTH"
+      ],
+      [
+        "TRUST",
+        "STRENGTH"
+      ],
+      "ISAIAH 26 : 4"
+    ],
+    [
+      26,
+      36,
+      [
+        "STAY MY MIND",
+        "EVERLASTING ARMS"
+      ],
+      [
+        "PEACE",
+        "FAITHFULNESS"
+      ],
+      "EVENING PRAYER"
+    ],
+    [
+      36,
+      44,
+      [
+        "HUSH EVERY STORM",
+        "UNDISTURBED SLEEP"
+      ],
+      [
+        "HUSH",
+        "SLEEP"
+      ],
+      "PERFECT PEACE"
+    ],
+    [
+      44,
+      52,
+      [
+        "REST IN HIS PEACE",
+        "THE SECRET PLACE"
+      ],
+      [
+        "AMEN",
+        "SUBSCRIBE"
+      ],
+      "PRAY EVERY NIGHT"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "keep him in perfect peace",
+      "kind": "quote",
+      "words": [
+        "PERFECT",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "everlasting strength",
+      "kind": "quote",
+      "words": [
+        "EVERLASTING",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 26:3-4"
+}

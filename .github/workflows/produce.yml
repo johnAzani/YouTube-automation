@@ -232,6 +232,12 @@ jobs:
             tail -n 60 run.log
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
+          if [ "$rc" -eq 3 ]; then
+            if python -c "from datetime import datetime, timedelta, timezone; from scripts.pipeline_watchdog import last_publish; lp=last_publish(); raise SystemExit(0 if (lp and datetime.now(timezone.utc) - lp[1] < timedelta(hours=24)) else 1)"; then
+              echo "::notice title=Daily free-tier quota cooldown::Channel already published within the last 24h; long-form edition paused cleanly until next daily reset ($0.00 lock)."
+              exit 0
+            fi
+          fi
           if [ "$rc" -ne 0 ]; then
             tail -n 15 run.log | while IFS= read -r line; do
               echo "::error::$line"

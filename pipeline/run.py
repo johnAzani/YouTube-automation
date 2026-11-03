@@ -91,7 +91,8 @@ def _mark_job_uploaded(path: Path, doc: ScriptDoc, video_id: str) -> Path:
     if not replacements:
         raise RuntimeError(f"Cannot stamp {path}: missing top-level status; leaving the queue job untouched.")
     for key, value in (("published_on", stamp), ("published_at", stamp_precise),
-                       ("youtube_video_id", video_id), ("thumbnail_revision", "ctr-v3-cinema")):
+                       ("youtube_video_id", video_id), ("thumbnail_revision", "ctr-v3-cinema"),
+                       ("metadata_revision", "selar-seo-v1")):
         line = f"{key}: {json.dumps(value)}"
         pattern = rf"(?m)^{re.escape(key)}\s*:.*$"
         if re.search(pattern, metadata):

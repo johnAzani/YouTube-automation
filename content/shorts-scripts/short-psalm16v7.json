@@ -1,0 +1,231 @@
+{
+  "key": "short-psalm16v7",
+  "psalm": 16,
+  "title": [
+    "NIGHT COUNSEL",
+    "PSALM 16:7-8"
+  ],
+  "poster": [
+    "HE COUNSELS ME",
+    "IN THE NIGHT SEASONS",
+    "PSALM 16:7-8",
+    "NEVER BE MOVED"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "quiet starry sky pine forest night",
+    "flickering candle warm amber dark",
+    "still alpine water reflection night",
+    "moonlight through gentle clouds sky",
+    "peaceful night meadow mist calm",
+    "first light horizon calm sea"
+  ],
+  "scenes": [
+    {
+      "a": "Close your eyes and breathe gently",
+      "img": "short-psalm16v7-scene-01.jpg",
+      "kicker": "PSALM 16:7",
+      "sub": "QUIET NIGHT HOURS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "I will bless the Lord, who hath given me counsel",
+      "img": "short-psalm16v7-scene-02.jpg",
+      "kicker": "PSALM 16:7",
+      "sub": "GIVEN ME COUNSEL",
+      "cam": "pan_right",
+      "focus": [
+        0.55,
+        0.45
+      ]
+    },
+    {
+      "a": "Because he is at my right hand, I shall not be moved",
+      "img": "short-psalm16v7-scene-03.jpg",
+      "kicker": "PSALM 16:8",
+      "sub": "SHALL NOT BE MOVED",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Faithful Counselor, speak gentle wisdom",
+      "img": "short-psalm16v7-scene-04.jpg",
+      "kicker": "HIS NEARNESS",
+      "sub": "PEACE OVER MY HEART",
+      "cam": "pan_left",
+      "focus": [
+        0.45,
+        0.45
+      ]
+    },
+    {
+      "a": "Anchor my spirit while I slumber",
+      "img": "short-psalm16v7-scene-05.jpg",
+      "kicker": "STEADFAST REST",
+      "sub": "UNSHAKEN TONIGHT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to The Secret Place",
+      "img": "short-psalm16v7-scene-06.jpg",
+      "kicker": "AMEN",
+      "sub": "PRAY EVERY EVENING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Close your eyes and breathe gently tonight; even the quiet midnight hours belong completely to the Lord who loves you."
+    ],
+    [
+      8,
+      17,
+      "I will bless the Lord, who hath given me counsel: my reins also instruct me in the night seasons."
+    ],
+    [
+      17,
+      26,
+      "I have set the Lord always before me: because he is at my right hand, I shall not be moved."
+    ],
+    [
+      26,
+      36,
+      "Faithful Counselor, speak gentle wisdom over every unanswered question and replace nighttime restlessness with calm, steady trust."
+    ],
+    [
+      36,
+      44,
+      "Anchor my spirit while I slumber deeply so nothing in this world shakes my peace before morning dawns."
+    ],
+    [
+      44,
+      52,
+      "Agree in prayer by whispering Amen tonight, and subscribe to The Secret Place for nightly scripture rest."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "CLOSE YOUR EYES",
+        "MIDNIGHT IS HIS"
+      ],
+      [
+        "BREATHE",
+        "LORD"
+      ],
+      "NIGHT WATCH"
+    ],
+    [
+      8,
+      17,
+      [
+        "BLESS THE LORD",
+        "IN NIGHT SEASONS"
+      ],
+      [
+        "BLESS",
+        "COUNSEL",
+        "NIGHT"
+      ],
+      "PSALM 16 : 7"
+    ],
+    [
+      17,
+      26,
+      [
+        "AT MY RIGHT HAND",
+        "NOT BE MOVED"
+      ],
+      [
+        "RIGHT",
+        "HAND",
+        "MOVED"
+      ],
+      "PSALM 16 : 8"
+    ],
+    [
+      26,
+      36,
+      [
+        "SPEAK YOUR PEACE",
+        "CALM TRUST TONIGHT"
+      ],
+      [
+        "WISDOM",
+        "TRUST"
+      ],
+      "EVENING PRAYER"
+    ],
+    [
+      36,
+      44,
+      [
+        "ANCHOR MY SPIRIT",
+        "UNSHAKEN PEACE"
+      ],
+      [
+        "ANCHOR",
+        "PEACE"
+      ],
+      "STEADFAST REST"
+    ],
+    [
+      44,
+      52,
+      [
+        "WHISPER AMEN",
+        "THE SECRET PLACE"
+      ],
+      [
+        "AMEN",
+        "SUBSCRIBE"
+      ],
+      "PRAYER SANCTUARY"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "instruct me in the night seasons",
+      "kind": "quote",
+      "words": [
+        "THE NIGHT",
+        "SEASONS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "i shall not be moved",
+      "kind": "quote",
+      "words": [
+        "SHALL NOT",
+        "BE MOVED"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 16:7-8"
+}

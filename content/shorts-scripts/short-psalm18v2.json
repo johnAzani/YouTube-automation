@@ -1,0 +1,230 @@
+{
+  "key": "short-psalm18v2",
+  "psalm": 18,
+  "title": [
+    "MY ROCK & FORTRESS",
+    "PSALM 18:2 PRAYER"
+  ],
+  "poster": [
+    "THE LORD IS MY ROCK",
+    "AND MY FORTRESS",
+    "PSALM 18:2",
+    "SAFE STRONGHOLD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "granite mountain peak starry night sky",
+    "ancient stone archway warm candle glow",
+    "calm mountain tarn moonlit water",
+    "deep night sky milky way quiet",
+    "peaceful canyon twilight shadows",
+    "golden dawn over rocky coastline"
+  ],
+  "scenes": [
+    {
+      "a": "Let your shoulders drop tonight",
+      "img": "short-psalm18v2-scene-01.jpg",
+      "kicker": "PSALM 18:2",
+      "sub": "STEP INTO REFUGE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The Lord is my rock, and my fortress, and my deliverer",
+      "img": "short-psalm18v2-scene-02.jpg",
+      "kicker": "PSALM 18:2",
+      "sub": "ROCK AND FORTRESS",
+      "cam": "pan_right",
+      "focus": [
+        0.55,
+        0.45
+      ]
+    },
+    {
+      "a": "My God, my strength, in whom I will trust",
+      "img": "short-psalm18v2-scene-03.jpg",
+      "kicker": "PSALM 18:2",
+      "sub": "MY BUCKLER & TOWER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Mighty Fortress, stand as walls of peace",
+      "img": "short-psalm18v2-scene-04.jpg",
+      "kicker": "HIGH TOWER",
+      "sub": "SHELTER THIS HOME",
+      "cam": "pan_left",
+      "focus": [
+        0.45,
+        0.45
+      ]
+    },
+    {
+      "a": "Carry every weight too heavy for me",
+      "img": "short-psalm18v2-scene-05.jpg",
+      "kicker": "UNSHAKABLE",
+      "sub": "SLEEP SECURELY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to The Secret Place",
+      "img": "short-psalm18v2-scene-06.jpg",
+      "kicker": "AMEN",
+      "sub": "NIGHTLY SCRIPTURE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Let your shoulders drop tonight and breathe deeply; you do not have to be strong in your own strength anymore."
+    ],
+    [
+      8,
+      17,
+      "Declare with David tonight: The Lord is my rock, and my fortress, and my deliverer."
+    ],
+    [
+      17,
+      26,
+      "My God, my strength, in whom I will trust; my buckler, and the horn of my salvation, and my high tower."
+    ],
+    [
+      26,
+      36,
+      "Mighty Fortress, stand as walls of peace around my bedroom and shelter everyone I love through every hour tonight."
+    ],
+    [
+      36,
+      44,
+      "Carry every weight too heavy for me today and grant my tired body deep, quiet slumber upon Your solid rock."
+    ],
+    [
+      44,
+      52,
+      "Say Amen in faith tonight, and subscribe to The Secret Place to end every evening in God's Word."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "DROP EVERY BURDEN",
+        "REST IN HIS MIGHT"
+      ],
+      [
+        "BREATHE",
+        "STRENGTH"
+      ],
+      "QUIET SURRENDER"
+    ],
+    [
+      8,
+      17,
+      [
+        "THE LORD IS",
+        "MY ROCK & FORTRESS"
+      ],
+      [
+        "ROCK",
+        "FORTRESS",
+        "DELIVERER"
+      ],
+      "PSALM 18 : 2"
+    ],
+    [
+      17,
+      26,
+      [
+        "IN WHOM I TRUST",
+        "MY HIGH TOWER"
+      ],
+      [
+        "TRUST",
+        "TOWER"
+      ],
+      "PSALM 18 : 2"
+    ],
+    [
+      26,
+      36,
+      [
+        "WALLS OF PEACE",
+        "SHELTER MY FAMILY"
+      ],
+      [
+        "PEACE",
+        "SHELTER"
+      ],
+      "NIGHT PRAYER"
+    ],
+    [
+      36,
+      44,
+      [
+        "UPON YOUR ROCK",
+        "QUIET SLUMBER"
+      ],
+      [
+        "SLUMBER",
+        "ROCK"
+      ],
+      "SAFE REFUGE"
+    ],
+    [
+      44,
+      52,
+      [
+        "SAY AMEN TONIGHT",
+        "THE SECRET PLACE"
+      ],
+      [
+        "AMEN",
+        "SUBSCRIBE"
+      ],
+      "PRAY EVERY NIGHT"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "the lord is my rock, and my fortress",
+      "kind": "quote",
+      "words": [
+        "MY ROCK",
+        "MY FORTRESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and my high tower",
+      "kind": "quote",
+      "words": [
+        "MY HIGH",
+        "TOWER"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 18:2"
+}
