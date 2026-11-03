@@ -67,6 +67,7 @@ originality:
   source_notes: true         # scriptures and classical commentaries documented
   ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
 ---
+
 ## Scene 1 — If I Say, Surely the Darkness Shall Cover Me (Verse 11a)
 
 There are nights when darkness feels like it will swallow you whole.
@@ -77,6 +78,7 @@ But darkness is not a hiding place from God. It is not a barrier to His presence
 
 The darkest hour of your life is not beyond His reach.
 
+Oh Lord, tonight I bring before You those moments, those nights, when the sheer weight of shadows seems to press in, threatening to consume all hope and peace. I confess the times I have felt utterly exposed and vulnerable in the absence of light, longing for some protective veil to shield me from overwhelming thoughts or unseen anxieties. When the world outside goes silent and the internal noise amplifies, it is easy to assume that I am left to fend for myself against the gloom. Yet, even as I ponder the depths of night, I recall Your unfailing promise that no dark corner, no hidden sorrow, no secret worry can ever truly separate me from Your loving gaze. You are intimately present, even when my senses perceive only absence.
 
 ## Scene 2 — Even the Night Shall Be Light About Me (Verse 11b)
 
@@ -88,6 +90,7 @@ His light is not dependent on the sun. It is not switched off when you close you
 
 The darkness around you is illuminated by His presence.
 
+Heavenly Father, I thank You for the profound truth that Your divine radiance transcends the physical limitations of day and night. When the world dims and sleep draws near, I pray that Your Spirit would transform the surrounding shadows into a comforting glow, a beacon of Your steadfast love. Let this truth anchor my soul, reminding me that even in the quietest, most solitary hours, I am bathed in the warmth of Your watchfulness. Dispel the anxieties that thrive in obscurity, replacing them with the gentle assurance that Your presence makes every moment, even the deepest night, a sacred space filled with Your illuminating grace. May Your light within me shine brightly, guiding my thoughts and calming my spirit as I rest.
 
 ## Scene 3 — Yea, the Darkness Hideth Not from Thee (Verse 12a)
 
@@ -99,6 +102,7 @@ Your secret tears, your silent fears, your unspoken pains — all are seen and k
 
 And because they are seen, they are also cared for.
 
+Oh Lord, it is both humbling and profoundly reassuring to know that absolutely nothing can ever be concealed from Your all-seeing eyes, not even the most private corners of my heart where fear or shame might try to linger. I lay before You now the burdens I carry silently, the worries that keep me awake, and the unresolved feelings that I might not even fully articulate to myself. You are intimately acquainted with every facet of my being, seeing beyond superficial appearances to the very core of my soul. There is no need to pretend or to hide my vulnerabilities from You, for Your gaze is not one of judgment, but of perfect understanding and unwavering compassion. Thank You for seeing all of me, and still loving me unconditionally.
 
 ## Scene 4 — But the Night Shineth as the Day (Verse 12b)
 
@@ -110,6 +114,7 @@ His watchfulness does not dim when the sun goes down. His care does not pause fo
 
 You are as visible to Him at midnight as at noon.
 
+Almighty God, I stand in awe of Your boundless nature, where the human distinctions of light and shadow, day and night, hold no sway over Your eternal essence. Your vigilance is continuous, never wavering with the setting sun or deepening twilight. I find immense peace in the knowledge that Your loving attention remains fixed upon me, whether I am navigating the vibrancy of day or seeking solace in the stillness of night. My moments of slumber do not escape Your notice, nor does my vulnerability in sleep make me less present to Your watchful eye. You are truly my ever-present Guardian, and I rest securely in the understanding that Your care is as brilliant and unwavering at every hour.
 
 ## Scene 5 — Sleep in the Light of His Presence (Verses 11–12 Synthesis)
 
@@ -117,5 +122,6 @@ From the fear of being covered by darkness, to the promise of night turned to li
 
 Tonight, sleep in the knowledge that darkness is as light to God. You are seen. You are known. You are never in the dark alone.
 
-Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.
+Gracious Father, as I prepare to enter the quiet repose of sleep, I carry with me the profound comfort of Psalm 139. I am no longer held captive by the fear that darkness might overwhelm me, for I know that 'the darkness hideth not from thee; but the night shineth as the day: the darkness and the light are both alike to thee.' This truth liberates my spirit from all anxious imaginings and allows me to surrender my worries into Your capable hands. I trust in Your unwavering presence, knowing that You are meticulously aware of my every thought and feeling. Guide my dreams, guard my sleep, and let Your peace settle deep within my soul. May I awaken refreshed, renewed, and ever more mindful of Your constant, illuminating love.
 
+Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.
