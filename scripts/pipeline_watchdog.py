@@ -42,7 +42,12 @@ sys.path.insert(0, str(ROOT))
 
 ISSUE_LABEL = "pipeline-watchdog"
 ISSUE_TITLE = "🚨 The Secret Place pipeline needs attention"
-MAX_PUBLISH_AGE = timedelta(days=3)
+# The channel releases three times a day (06:14, 14:14, 19:14 UTC). Three days —
+# the old value — meant a release path that uploaded nothing could stay "healthy"
+# for 24 missed slots. On 3 November the last upload was already 31 hours old and
+# the watchdog called the pipeline healthy. One day and two hours is long enough to
+# ride out a single failed slot and short enough to say so the same day.
+MAX_PUBLISH_AGE = timedelta(hours=26)
 
 
 @dataclass

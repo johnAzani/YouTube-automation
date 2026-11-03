@@ -691,6 +691,8 @@ def run_short_release(
         if manifest_path and manifest_path.is_file():
             manifest_path.unlink()
         print(f"[short-release] 🛑 DUPLICATE PREVENTED: {edition.slug} is already recorded in {published_record.relative_to(REPO_ROOT)}. Skipping upload.")
+        print(f"::notice title=Short already published::`{edition.slug}` is recorded as "
+              f"{previous_video_id or 'unknown'}; nothing was uploaded.")
         return {
             "uploaded": False,
             "duplicate_prevented": True,
@@ -965,16 +967,40 @@ def main(argv: list[str] | None = None) -> int:
                     return 1
                 return 0
             manifest_path, short_key = queued
+            if os.environ.get("GITHUB_ACTIONS"):
+                print(f"::notice title=Short selected::`{short_key}` from "
+                      f"{manifest_path.name if manifest_path else 'the built-in editions'}")
         elif not short_key:
             short_key = "short-enron"
 
-        run_short_release(
+        outcome = run_short_release(
             short_key=short_key,
             dry_run=dry,
             skip_render=args.skip_render,
             force=args.force,
             manifest_path=manifest_path,
-        )
+        ) or {}
+
+        # A returned dict is not a success. This is the same defect as the
+        # long-form release: a quota pause returns quietly, `main` returns 0, and
+        # the step is green with nothing uploaded. Say which happened.
+        if outcome.get("paused"):
+            print(f"::error title=Short did not upload::Gemini/YouTube quota is "
+                  f"exhausted; `{short_key}` is paused until "
+                  f"{outcome.get('quota_reset_utc')} and nothing was uploaded.", flush=True)
+            return 3
+        if outcome.get("uploaded"):
+            print(f"::notice title=Short published::{(outcome.get('shorts_url') or outcome.get('watch_url') or '')}",
+                  flush=True)
+        elif outcome.get("duplicate_prevented"):
+            print(f"::notice title=Short already live::`{short_key}` recorded as "
+                  f"{outcome.get('video_id') or 'unknown'}; nothing re-uploaded.", flush=True)
+        elif dry:
+            print(f"::notice title=Short rendered only::`{short_key}` rendered under "
+                  f"DRY_RUN; nothing uploaded.", flush=True)
+        else:
+            print(f"::notice title=Short finished with no upload::`{short_key}` — see the "
+                  f"step summary for the reason.", flush=True)
     except Exception as exc:  # noqa: BLE001
         safe_msg = _scrub(f"{type(exc).__name__}: {exc}")
         print(f"[short-release] FAILED — {safe_msg}", file=sys.stderr)

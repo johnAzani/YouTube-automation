@@ -563,6 +563,21 @@ def main(argv: list[str] | None = None) -> int:
                     f.write(f"### ❌ FAILED `{path.name}`\n\n```\n{exc}\n\n{tb}\n```\n")
             return 1
 
+        # A quota pause is NOT a release. `produce()` returns this dict instead of
+        # raising, and every caller treated a returned dict as success — so on
+        # 3 November the 07:27 release paused 0017 for exhausted Gemini quota,
+        # uploaded nothing, wrote no receipt, and the run finished GREEN. Three
+        # slots a day can do that while the channel publishes nothing, which is
+        # exactly the report the owner keeps having to make himself.
+        if result.get("status") == "quota_paused":
+            reset = result.get("quota_reset_utc") or "an unknown time"
+            _log(f"quota paused: {path.name} will publish after {reset}")
+            print(f"::error title=Release did not publish::Gemini quota is exhausted; "
+                  f"{path.name} is paused until {reset} UTC and nothing was uploaded. "
+                  f"The $0.00 free tier allows a limited number of videos per day.",
+                  flush=True)
+            return 3
+
         # A job whose video is already on the channel is bookkeeping, not a release:
         # recording it must not consume the whole slot. Keep going until something is
         # actually published (or the eligible jobs run out).
@@ -573,6 +588,22 @@ def main(argv: list[str] | None = None) -> int:
             remaining = [p for p in (select_jobs(False, None, False) or [])
                          if p not in tried]
 
+    # The outcome, in one line, as an annotation. A run page is behind a sign-in and
+    # the log archive is unreachable from automation; an annotation is readable by
+    # both, and it means "green" always comes with a sentence saying what went out.
+    for result in results:
+        if result.get("uploaded"):
+            print(f"::notice title=Published::{(result.get('video_id') or '?')} — "
+                  f"{result.get('watch_url') or ''} ({result.get('duration_seconds') or 0:.0f}s)")
+        elif result.get("privacy_status") == "already_published":
+            print(f"::notice title=Already live::id {result.get('id')} was already on the "
+                  f"channel as {result.get('video_id')}; recorded, not re-uploaded.")
+        elif result.get("dry_run"):
+            print(f"::notice title=Rendered only::`{result.get('slug')}` rendered under "
+                  f"DRY_RUN; nothing uploaded.")
+        else:
+            print(f"::notice title=Release finished with no upload::"
+                  f"{json.dumps({k: result.get(k) for k in ('id', 'slug', 'status')})}")
     _log(f"done: {len(results)} job(s)")
     return 0
 
