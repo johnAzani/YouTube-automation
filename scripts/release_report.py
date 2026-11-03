@@ -77,7 +77,8 @@ def summarise(rows: list[tuple[str, str, str]]) -> dict:
             still_open = [n for n in still_open if n != name]
             failure = {"stage": name, "stamp": stamp, "detail": body}
     return {"open": still_open, "finished": finished, "failure": failure,
-            "last": rows[-1] if rows else None, "count": len(rows)}
+            "last": rows[-1] if rows else None, "count": len(rows),
+            "rows": rows}
 
 
 def render(summary: dict, log_tail: str = "", run_id: str = "") -> tuple[str, str]:
@@ -109,14 +110,67 @@ def render(summary: dict, log_tail: str = "", run_id: str = "") -> tuple[str, st
             lines.append(f"| `{row['stage']}` | {row['stamp']}Z | {row['seconds']:.0f}s |")
         total = sum(row["seconds"] for row in finished)
         lines.append(f"| **accounted for** | | **{total / 60:.1f} min** |")
+    rows = summary.get("rows") or []
+    moments = [f"{stamp}Z {marker} {body}" for stamp, marker, body in rows
+               if not STALL_RE.search(body)]
+    if moments:
+        lines += ["", "### Last progress lines", "```", *moments[-10:], "```"]
+    if not summary["finished"] and dying_in:
+        lines += ["", f"Not one stage finished. `{dying_in}` was the only thing that "
+                      "opened, and it never closed."]
     if not summary["count"]:
         lines += ["", "_No progress lines were written — the failure happened before the "
                       "first stage opened (checkout, deps, or the script itself)._"]
     if log_tail.strip():
-        lines += ["", "### End of the job log", "```", log_tail.strip()[-4000:], "```"]
+        lines += ["", "### End of the job log", "```",
+                  collapse_repeats(log_tail.strip())[-4000:], "```"]
     lines += ["", "_Filed automatically by `scripts/release_report.py`; the trail comes from "
                   "`pipeline/progress.py`, which writes it as the release runs._"]
     return title, "\n".join(lines)
+
+
+#: `[progress 03:00:25Z] … still inside speech synthesis — 888 words, Charon after 82.0 min`
+STALL_RE = re.compile(r"still inside (.+?) after ([\d.]+) min")
+
+
+def collapse_repeats(text: str) -> str:
+    """One line per stalled stage, not one per report.
+
+    Issue #216 carried 85 identical "still inside speech synthesis after N min"
+    lines and nothing else — the tail was all heartbeat, so the report hid the
+    only fact that mattered behind its own noise. Consecutive stall notices for
+    the same stage become a single line spanning the first and last.
+    """
+    out: list[str] = []
+    run_stage = None
+    run_first = run_last = 0.0
+    run_count = 0
+
+    def flush() -> None:
+        nonlocal run_stage, run_count
+        if run_stage is None:
+            return
+        if run_count == 1:
+            out.append(f"... still inside {run_stage} after {run_first:.0f} min")
+        else:
+            out.append(f"... still inside {run_stage} for {run_count} reports, "
+                       f"{run_first:.0f} → {run_last:.0f} min")
+        run_stage, run_count = None, 0
+
+    for line in text.splitlines():
+        match = STALL_RE.search(line)
+        if match:
+            stage, minutes = match.group(1), float(match.group(2))
+            if stage != run_stage:
+                flush()
+                run_stage, run_first = stage, minutes
+            run_last = minutes
+            run_count += 1
+            continue
+        flush()
+        out.append(line)
+    flush()
+    return "\n".join(out)
 
 
 def _tail(path: Path, lines: int) -> str:

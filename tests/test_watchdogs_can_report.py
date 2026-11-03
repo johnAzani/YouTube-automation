@@ -6,12 +6,15 @@ its three workflows were red at the end of the day with nothing said about why.
 """
 from __future__ import annotations
 
+import os
 import unittest
 from pathlib import Path
+from unittest import mock
 
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
+REPO = ROOT
 
 
 def code_only(text: str) -> str:
@@ -131,3 +134,109 @@ class TestOnePythonVersionAcrossTheFleet(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class AWorkflowCannotLatchItselfRed(unittest.TestCase):
+    """Two watchdogs were stuck red because they counted their own red runs.
+
+    On 3 November `automation-health.yml` and `monitor.yml` both read FAILING with
+    "failed 41m ago and nothing was changed since". The failure they were reading
+    was their own previous verdict, so neither could ever recover — a loop with no
+    exit condition, in the two jobs whose job is to notice loops.
+    """
+
+    def _automation(self, workflow, conclusion="failure"):
+        from datetime import datetime, timedelta, timezone
+        from scripts import automation_monitor as am
+
+        auto = am.Automation(workflow=workflow, name=workflow, crons=["0 * * * *"])
+        auto.last_run = datetime.now(timezone.utc) - timedelta(minutes=41)
+        auto.last_conclusion = conclusion
+        auto.last_edited = auto.last_run - timedelta(days=1)
+        auto.max_gap = timedelta(days=1)
+        return auto
+
+    def test_its_own_red_run_is_not_evidence_against_itself(self):
+        from datetime import datetime, timezone
+        from scripts import automation_monitor as am
+
+        auto = self._automation("Automation monitor")
+        with mock.patch.dict(os.environ, {"GITHUB_WORKFLOW": "Automation monitor"}):
+            # GITHUB_WORKFLOW carries the display name; the check must match either.
+            am._verdict(auto, datetime.now(timezone.utc))
+        self.assertEqual(auto.verdict, "SELF-REPORT")
+        self.assertEqual(auto.severity, "info")
+
+    def test_another_workflows_red_run_is_still_a_stall(self):
+        from datetime import datetime, timezone
+        from scripts import automation_monitor as am
+
+        auto = self._automation("produce.yml")
+        with mock.patch.dict(os.environ, {"GITHUB_WORKFLOW": "Automation monitor"}):
+            am._verdict(auto, datetime.now(timezone.utc))
+        self.assertEqual(auto.verdict, "FAILING")
+        self.assertEqual(auto.severity, "blocking")
+
+    def test_the_health_job_installs_its_dependencies(self):
+        text = (REPO / ".github" / "workflows" / "automation-health.yml").read_text()
+        self.assertIn("pip install -r requirements.txt", text,
+                      "the watchdog imports PyYAML; without deps it dies before it can report")
+
+    def test_a_blanket_true_cannot_hide_a_crash(self):
+        text = (REPO / ".github" / "workflows" / "automation-health.yml").read_text()
+        self.assertNotIn("scripts.automation_health || true", text,
+                         "`|| true` turned a ModuleNotFoundError into a green tick")
+        self.assertIn("no audit table was produced", text)
+
+
+class TheReporterCannotCrashOnItsOwnVocabulary(unittest.TestCase):
+    """`render()` raised ValueError on any severity it had not seen before.
+
+    Adding one verdict ("info", for the self-report case) took the whole monitor
+    down inside its own renderer — the alarm dying on the way to the alarm bell.
+    """
+
+    def test_an_unfamiliar_severity_still_renders(self):
+        from datetime import datetime, timezone
+        from scripts import automation_monitor as am
+
+        auto = am.Automation(workflow="x.yml", name="X", crons=["0 * * * *"])
+        auto.verdict, auto.detail, auto.severity = "WEIRD", "something new", "novel"
+        auto.last_run = datetime.now(timezone.utc)
+        report = am.MonitorReport(generated_at=datetime.now(timezone.utc),
+                                  automations=[auto], outcomes=[])
+        text = am.render(report)
+        self.assertIn("WEIRD", text)
+        self.assertIn("something new", text)
+
+
+class AFailedDeliveryMustNotDestroyTheFinding(unittest.TestCase):
+    def test_the_watchdog_still_reports_when_filing_fails(self):
+        from scripts import pipeline_watchdog as pw
+
+        report = pw.Report()
+        report.add("queues", "nothing is publishable")
+        with mock.patch.object(pw, "sync_issue", side_effect=RuntimeError("gh exploded")), \
+             mock.patch.object(pw, "build_report", return_value=report), \
+             mock.patch.dict(os.environ, {"GITHUB_ACTIONS": "true"}):
+            code = pw.main([])
+        self.assertEqual(code, 1, "an unhealthy pipeline must still exit non-zero")
+
+    def test_the_issue_is_found_by_title_when_the_label_did_not_stick(self):
+        from scripts import pipeline_watchdog as pw
+
+        seen = []
+
+        class Result:
+            def __init__(self, stdout="", returncode=0):
+                self.stdout, self.returncode, self.stderr = stdout, returncode, ""
+
+        def fake_gh(args):
+            seen.append(args)
+            if "--label" in args:
+                return Result("[]")          # labels are not applied on this repo
+            return Result('{"number": 42}'.replace("{", "[{").replace("}", "}]"))
+
+        with mock.patch.object(pw, "_gh", fake_gh):
+            self.assertEqual(pw.open_issue_number(), 42)
+        self.assertTrue(any("--search" in args for args in seen))

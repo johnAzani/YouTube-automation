@@ -383,6 +383,34 @@ def _ago(then: datetime | None, now: datetime) -> str:
     return f"{delta.days}d ago"
 
 
+def _running_workflow() -> str:
+    """The `name:` of the workflow executing this check, if any.
+
+    A self-reporting job cannot judge its own exit code. On 3 November this
+    workflow went red once, and from then on every pass read its own previous
+    red run as evidence — "failed 41m ago and nothing was changed since" — and
+    failed again, forever. `automation-health.yml` latched the same way. Two
+    workflows stuck red because they were watching themselves is the opposite of
+    a monitor; the loop has no exit condition.
+    """
+    return (os.environ.get("GITHUB_WORKFLOW") or "").strip()
+
+
+def _is_self(auto: Automation) -> bool:
+    """Is this row the workflow that is running the check?
+
+    `GITHUB_WORKFLOW` holds the display name ("Automation monitor") while the row
+    is keyed by file ("monitor.yml"), so both are compared — and the first version
+    of this check matched neither, which left the latch in place.
+    """
+    running = _running_workflow().strip().lower()
+    if not running:
+        return False
+    names = {str(auto.workflow).lower(), str(auto.name).lower(),
+             str(auto.workflow).lower().removesuffix(".yml")}
+    return running in names
+
+
 def _verdict(auto: Automation, now: datetime) -> None:
     if auto.last_run is None:
         added = auto.last_edited
@@ -404,6 +432,14 @@ def _verdict(auto: Automation, now: datetime) -> None:
             auto.verdict, auto.severity = "UNTESTED FIX", "warning"
             auto.detail = (f"failed {_ago(auto.last_run, now)}; edited "
                            f"{_ago(auto.last_edited, now)} — needs one green run")
+        elif _is_self(auto):
+            # Its own last run is this check's own previous verdict. Judging it
+            # would make the monitor permanently red after one bad night, with no
+            # way to clear — so it is reported, and not counted as a stall.
+            auto.verdict, auto.severity = "SELF-REPORT", "info"
+            auto.detail = (f"this is the check itself; its previous run ended "
+                           f"{auto.last_conclusion} {_ago(auto.last_run, now)}, which "
+                           f"is its own verdict and not independent evidence")
         else:
             auto.verdict, auto.severity = "FAILING", "blocking"
             auto.detail = (f"failed {_ago(auto.last_run, now)} and nothing was changed "
@@ -537,13 +573,19 @@ def render(report: MonitorReport) -> str:
     lines.append("-" * 108)
     def stamp(d):
         return d.astimezone(WAT).strftime("%d %b %H:%M") if d else "never"
-    for a in sorted(report.automations, key=lambda x: ("blocking", "warning", "ok").index(x.severity)):
+    # Rank by a dict, not tuple.index: one unknown severity used to raise
+    # ValueError *inside the renderer*, so a new verdict took the whole monitor
+    # down instead of printing. A reporter must not be able to crash on its own
+    # vocabulary.
+    rank = {"blocking": 0, "warning": 1, "info": 2, "ok": 3}
+    for a in sorted(report.automations, key=lambda x: rank.get(x.severity, 9)):
         lines.append(f"{a.workflow:<26}{a.verdict:<14}{stamp(a.last_run):<15}"
                      f"{stamp(a.last_edited):<15}{a.runs_14d:<6}{a.detail}")
     lines.append("")
     lines.append("OUTCOMES")
     for row in report.outcomes:
-        mark = {"blocking": "!!", "warning": " ~", "ok": "  "}[row["severity"]]
+        mark = {"blocking": "!!", "warning": " ~", "info": " i", "ok": "  "}.get(
+            row["severity"], " ?")
         lines.append(f" {mark} {row['outcome']:<24}{row['detail']}")
     lines.append("")
     return "\n".join(lines)

@@ -43,11 +43,32 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Python deps
+        # This job had no dependency install. `python -m scripts.pipeline_watchdog`
+        # imports PyYAML to read the workflow files, so every run died on
+        # ModuleNotFoundError — and because the step above ended with `|| true`,
+        # the crash looked like a clean pass. The workflow was red for days with
+        # the annotation "Process completed with exit code 1" and nothing else.
+        run: pip install -r requirements.txt
+
       - name: Are the crons firing?
+        id: crons
+        # No blanket `|| true`: that is what hid a ModuleNotFoundError behind a
+        # green tick. The script itself returns 0 when it merely *reports* a queue
+        # as empty; a non-zero exit here is a crash, and a crash must be loud.
+        continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python -m scripts.automation_health || true
+          set -o pipefail
+          python -m scripts.automation_health 2>&1 | tee health.log
+          rc=${PIPESTATUS[0]}
+          { echo "### 🩺 Cron audit (exit $rc)"; echo '```'; tail -n 30 health.log; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          if [ "$rc" -ne 0 ] && ! grep -q "^queue: " health.log; then
+            echo "::error title=The health check itself crashed::exit $rc and no audit table was produced — this is a broken check, not a finding"
+            exit 1
+          fi
+          exit 0
 
       - name: File or close the stall issue
         if: github.event_name != 'push'
