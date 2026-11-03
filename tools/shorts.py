@@ -811,18 +811,44 @@ def build_kinetic_stream(key, raw_words, adur=None):
         t_end = seg[-1][1]
         all_cwords = [w for l in lines for w in l.split()]
         word_timings = align_card_words_to_speech(all_cwords, seg, t_start, t_end)
-        stream.append(dict(
-            t0=t_start,
-            t1=t_end,
-            lines=lines,
-            line1=l1,
-            line2=l2,
-            accent_words=[str(a).upper() for a in acc],
-            kicker=kck,
-            words=seg,
-            card_words=all_cwords,
-            word_timings=word_timings,
-        ))
+        if authored and len(lines) > 3:
+            # Paginate 4-6 line brain-authored scenes into balanced 2-3 line display cards
+            # so every Short renders at bold 38-44px DOCOGA REELS v2 scale like short-psalm91.
+            n_sub = math.ceil(len(lines) / 3)
+            per_sub = math.ceil(len(lines) / n_sub)
+            w_cursor = 0
+            for off in range(0, len(lines), per_sub):
+                sub_lines = lines[off:off + per_sub]
+                sub_words = [w for l in sub_lines for w in l.split()]
+                sub_timings = word_timings[w_cursor:w_cursor + len(sub_words)]
+                w_cursor += len(sub_words)
+                if not sub_timings:
+                    continue
+                stream.append(dict(
+                    t0=sub_timings[0][0],
+                    t1=sub_timings[-1][1],
+                    lines=sub_lines,
+                    line1=sub_lines[0],
+                    line2=sub_lines[1] if len(sub_lines) > 1 else '',
+                    accent_words=[str(a).upper() for a in acc],
+                    kicker=kck,
+                    words=seg,
+                    card_words=sub_words,
+                    word_timings=sub_timings,
+                ))
+        else:
+            stream.append(dict(
+                t0=t_start,
+                t1=t_end,
+                lines=lines,
+                line1=l1,
+                line2=l2,
+                accent_words=[str(a).upper() for a in acc],
+                kicker=kck,
+                words=seg,
+                card_words=all_cwords,
+                word_timings=word_timings,
+            ))
 
     # Sentence-level display windows: advance immediately to next sentence when speech finishes;
     # zero delay, zero lingering on old text that the voice has already passed

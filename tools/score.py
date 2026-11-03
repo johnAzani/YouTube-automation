@@ -99,10 +99,15 @@ PROG = [
 ]
 
 def _pad_bed(total, detune, seed):
-    n = int(total * SR)
+    n = max(1, int(round(total * SR)))
     out = np.zeros(n)
-    seg = total / len(PROG)
-    for i, chord in enumerate(PROG):
+    if total <= 125.0:
+        chords = list(PROG)
+    else:
+        cycles = max(1, round(total / (len(PROG) * 7.0)))
+        chords = PROG * cycles + [PROG[0]]
+    seg = total / len(chords)
+    for i, chord in enumerate(chords):
         t0 = i * seg
         s0, ln = int(t0 * SR), int((seg + 1.2) * SR)
         ln = min(ln, n - s0)
@@ -111,12 +116,12 @@ def _pad_bed(total, detune, seed):
         v = np.zeros(ln)
         for j, f in enumerate(chord):
             v += _tone(f, ln, detune=detune * (1 + 0.0009 * (j - 1)), seed=seed + i * 7 + j) / 3
-        v *= _env_adsr(ln, 1.6, 1.4)
+        v *= _env_adsr(ln, min(1.6, seg * 0.35), min(1.4, seg * 0.35))
         out[s0:s0 + ln] += v
     return _fft_shape(out, 1300, 1.8)
 
 def _music_bed(total, cuts, big_hits):
-    n = int(total * SR)
+    n = max(1, int(round(total * SR)))
     t = np.arange(n) / SR
     padL = _pad_bed(total, 0.9992, 11)
     padR = _pad_bed(total, 1.0008, 23)
@@ -129,7 +134,8 @@ def _music_bed(total, cuts, big_hits):
              + 0.55 * np.sin(2 * np.pi * 41 * tt) * np.exp(-tt * 9))
     for k in np.arange(0.9, total - 0.4, 1.18):
         s = int(k * SR)
-        heart[s:s + thump_n] += thump[:n - s]
+        if s < n:
+            heart[s:s + thump_n] += thump[:n - s]
     rng = np.random.default_rng(5)
     wind = _fft_shape(rng.normal(0, 1, n), 320, 1.4)
     wind *= 0.45 + 0.30 * np.sin(2 * np.pi * 0.07 * t + 1.2)
@@ -143,7 +149,11 @@ def _music_bed(total, cuts, big_hits):
         shape = np.where(w < 0.38, w / 0.38, 1.0 - (w - 0.38) / 0.62) ** 1.2
         swell[a0:a1] = np.maximum(swell[a0:a1], 0.32 + 0.50 * shape)
     fin = int(max(0.0, total - 10.0) * SR)
-    swell[fin:] = np.maximum(swell[fin:], np.linspace(0.34, 0.92, n - fin))
+    if total <= 125.0:
+        swell[fin:] = np.maximum(swell[fin:], np.linspace(0.34, 0.92, n - fin))
+    elif n > fin:
+        arch = np.sin(np.linspace(0.0, math.pi, n - fin))
+        swell[fin:] = np.maximum(swell[fin:], 0.32 + 0.36 * arch)
 
     center = 0.42 * sub + 0.20 * heart + 0.16 * wind
     left = (0.40 * padL + center) * swell
@@ -331,7 +341,7 @@ def generate_score(key, total, cuts, events, beds=None, hushes=None, swell_hits=
     beds = beds or []
     hushes = hushes or []
     events = events or []
-    n = int(total * SR)
+    n = max(1, int(round(total * SR)))
     print(f'score[{key}]: {total:.1f}s  hits={len(events)}  beds={len(beds)}  hushes={len(hushes)}')
 
     # ---- music with hush + swell automation ----

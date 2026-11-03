@@ -346,6 +346,7 @@ class TestRecordingADuplicateDoesNotConsumeTheSlot(unittest.TestCase):
 
         with mock.patch.object(pr, "select_jobs", side_effect=fake_select), \
              mock.patch.object(pr, "process", fake_process), \
+             mock.patch.object(pr, "quota_blocked_until", return_value=None), \
              mock.patch.object(pr, "CONFIG") as cfg, \
              mock.patch.dict("os.environ", {"DRY_RUN": "0"}):
             cfg.dry_run = False
@@ -368,6 +369,7 @@ class TestRecordingADuplicateDoesNotConsumeTheSlot(unittest.TestCase):
 
         with mock.patch.object(pr, "select_jobs", return_value=[a, b]), \
              mock.patch.object(pr, "process", fake_process), \
+             mock.patch.object(pr, "quota_blocked_until", return_value=None), \
              mock.patch.object(pr, "CONFIG") as cfg, \
              mock.patch.dict("os.environ", {"DRY_RUN": "0"}):
             cfg.dry_run = False

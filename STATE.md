@@ -77,13 +77,14 @@
 * **Duplicate Prevention Shield:** `pipeline/upload.py` queries channel titles before upload; unlinks matching queue manifests to prevent duplicate reels.
 * **Pastoral Comment Engine (`.github/workflows/comments.yml`):** Autonomous responder locked at 20 replies/day (1,000 YouTube Data API units / 10% daily budget), zero duplicate replies, crisis helpline auto-escalation (988 US/CA, 111 UK), crypto scammer auto-silencing.
 * **Community Tab Autopilot (`.github/workflows/community.yml`):** Scheduled Wednesday & Sunday prayer polls and thanksgiving cards at 8:14pm local.
+* **Unified Shorts & Long-Form Background Music Lock (`tools/score.py`, `pipeline/prayer_visuals.py`):** Every long-form prayer video now synthesizes and mixes the exact same reverent stereo Shorts background music score (`tools/score.py::generate_score` — stereo-detuned `Am–F–C–G–Am–Dm–F–E` pad bed cycled at ~7.0s per chord, 55/82.4 Hz sub foundation, soft heartbeat pulse, ambient breath, scene-cut swells, `"Amen"` hush, and `volume=0.58` stereo `amix` + `alimiter=0.95`).
 * **Dark Bedroom Sanctuary (`pipeline/dark_screen.py`):** 3 minutes of DOCOGA REELS v2 glassmorphism cross-fading over 45 seconds into pure OLED pitch black (`RGB 0,0,0`) while unbroken 432 Hz audio plays all night.
 
 ---
 
 ## 3. Current Queue & Script Inventory
 
-### Approved & Ready for Production in `content/queue/` (22 full-length prayers ≥ 850 spoken words + 5 Shorts):
+### Approved & Ready for Production in `content/queue/` (22 full-length prayers ≥ 850 spoken words + 4 Shorts):
 1. `0011-psalm-27-the-lord-is-my-light-and-my-salvation--fe.md` (Approved, 967 spoken words — re-authored with authentic KJV Psalm 27)
 2. `0014-psalm-34-the-angel-of-the-lord-encampeth.md` (Approved, 922 spoken words)
 3. `0015-psalm-91-5-6-deliverance-from-terror-by-night.md` (Approved, 882 spoken words)
@@ -108,14 +109,15 @@
 22. `0035-psalm-23-complete-night-prayer-restore-my-soul.md` (Approved, 995 spoken words — full 6-verse KJV Psalm 23 sleep sanctuary)
 
 ### Armed Brain-Authored Shorts in `content/shorts-queue/` + `content/shorts-scripts/`:
-* `short-psalm23`, `short-psalm121`, `short-psalm27`, `short-psalm46`, `short-psalm34` — all 5 validated, upgraded to full uppercase DOCOGA REELS v2 kinetic cards, and wired with automatic local `words-{key}.json` alignment.
+* `short-psalm121`, `short-psalm27`, `short-psalm46`, `short-psalm34` — all 4 remaining validated, paginated to bold 2–3 line (`38–44px`) DOCOGA REELS v2 kinetic cards, and wired with automatic local `words-{key}.json` alignment.
 
 ### Published Video Records in `content/published/`:
-* `0008-psalm-91-prayer-of-divine-protection.md` (`7RDX0fbIOtQ` — Psalm 91)
-* `0009-psalm-23-the-lord-is-my-shepherd.md` (`JZv67RNPCEI` — Psalm 23)
-* `0010-psalm-121-he-who-keeps-you-will-neither-slumber-no.md` (`6M6oV8MxD9s` — Psalm 121)
-* `0013-psalm-46-god-is-our-refuge-and-strength.md` (`1g8TXHD0Xks` — Psalm 46)
-* `0018-psalm-3-3-5-the-shield-that-lifts-my-head.md` (`vs2xt72CgcI` — Psalm 3:3-5, published Tuesday 3 November 2026 at 11:24am Nigeria time)
+* `0008-psalm-91-prayer-of-divine-protection.md` (`7RDX0fbIOtQ` — Psalm 91 Brief Blessing, `ctr-v3-cinema` thumbnail synced)
+* `0009-psalm-23-the-lord-is-my-shepherd.md` (`JZv67RNPCEI` — deleted remotely on YouTube; replaced in queue by full-length `0035`)
+* `0010-psalm-121-he-who-keeps-you-will-neither-slumber-no.md` (`6M6oV8MxD9s` — Psalm 121, `ctr-v3-cinema` thumbnail synced)
+* `0013-psalm-46-god-is-our-refuge-and-strength.md` (`1g8TXHD0Xks` — Psalm 46, `ctr-v3-cinema` thumbnail synced)
+* `0018-psalm-3-3-5-the-shield-that-lifts-my-head.md` (`vs2xt72CgcI` — Psalm 3:3-5, `ctr-v3-cinema` thumbnail synced)
+* `short-0003-psalm-23-the-lord-is-my-shepherd.md` (`kLgHN57fb1w` / `short-psalm23`, published Tuesday 3 November 2026 at 3:18pm Nigeria time)
 * `short-0002-psalm-91-prayer-of-protection.md` (`SG69BbNlfRw` / `short-psalm91`)
 * `short-0001-enron-70b-fraud.md` (`DLEWL6dm5lo` / legacy)
 
