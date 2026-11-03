@@ -1,67 +1,94 @@
 ---
-id: "0011"
-title: "Psalm 27: The Lord Is My Light & My Salvation — Fear No Evil — Night Prayer for Sleep, Peace & Divine Guard | The Secret Place"
+id: '0011'
+title: "Psalm 27: The Lord Is My Light & My Salvation \u2014 Fear No Evil \u2014 Night\
+  \ Prayer for Sleep, Peace & Divine Guard | The Secret Place"
 slug: psalm-27-the-lord-is-my-light-and-my-salvation--fe
-status: approved
+status: quota_paused
 privacy: public
 format: longform
 niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-tags: [psalm 27, prayer before sleep, bedtime prayer, peaceful sleep, the secret place, scripture meditation, christian meditation, divine protection, rest and healing]
-thumb_text: "WHOM SHALL I FEAR"
-description: |
-  Say this Psalm 27 (KJV) prayer before you sleep tonight. Surrender the burdens, anxieties,
+tags:
+- psalm 27
+- prayer before sleep
+- bedtime prayer
+- peaceful sleep
+- the secret place
+- scripture meditation
+- christian meditation
+- divine protection
+- rest and healing
+thumb_text: OF WHOM SHALL I BE AFRAID?
+description: 'Say this Psalm 27 (KJV) prayer before you sleep tonight. Surrender the
+  burdens, anxieties,
+
   and fatigue of this day into the hands of the Lord who is your everlasting light.
+
   The LORD is my light and my salvation; whom shall I fear? the LORD is the strength
-  of my life; of whom shall I be afraid? For in the time of trouble he shall hide me
+
+  of my life; of whom shall I be afraid? For in the time of trouble he shall hide
+  me
+
   in his pavilion: in the secret of his tabernacle shall he hide me.
 
+
   This is a full devotional prayer and scripture exposition covering Psalm 27 (KJV)
+
   with peaceful nighttime ambient soundscapes.
 
+
   Scripture References & Sources:
+
   - The Holy Bible, Psalm 27 (King James Version)
+
   - Spurgeon, C.H. (1885). The Treasury of David, Psalm 27 Commentary.
-  - Matthew Henry's Commentary on the Whole Bible, Psalm 27.
+
+  - Matthew Henry''s Commentary on the Whole Bible, Psalm 27.
+
 
   Produced by The Secret Place | Daily Prayer & Scripture.
+
+  '
 asset_queries:
-  - "mountain meadow alpine sunset golden hour peaceful"
-  - "calm mountain lake still water reflection nightfall"
-  - "starry night sky over quiet forest hills"
-  - "sunlight breaking through clouds mountain pass"
-  - "ancient stone sanctuary warm candle light evening"
-  - "peaceful sunrise over misty alpine valley"
+- mountain meadow alpine sunset golden hour peaceful
+- calm mountain lake still water reflection nightfall
+- starry night sky over quiet forest hills
+- sunlight breaking through clouds mountain pass
+- ancient stone sanctuary warm candle light evening
+- peaceful sunrise over misty alpine valley
 asset_query_verification:
-  verified_on: "2026-10-29"
-  method: "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule"
+  verified_on: '2026-10-29'
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4,
+    filtered by pipeline/assets.py licence rule
   queries:
-    - query: "mountain meadow alpine sunset golden hour peaceful"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — USGS / NPS alpine meadow and sunset photography"
-    - query: "calm mountain lake still water reflection nightfall"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — NPS Mirror Lake and Crater Lake twilight scans"
-    - query: "starry night sky over quiet forest hills"
-      verified: true
-      usable: 3
-      evidence: "3x Public domain — NASA astronomy starry night sky imagery"
-    - query: "sunlight breaking through clouds mountain pass"
-      verified: true
-      usable: 3
-      evidence: "3x Public domain — USFS Rocky Mountain National Forest crepuscular ray scans"
-    - query: "ancient stone sanctuary warm candle light evening"
-      verified: true
-      usable: 3
-      evidence: "3x CC0 / Public domain — Library of Congress ancient sanctuary plates"
-    - query: "peaceful sunrise over misty alpine valley"
-      verified: true
-      usable: 4
-      evidence: "4x Public domain — USGS alpine valley dawn mist photography"
+  - query: mountain meadow alpine sunset golden hour peaceful
+    verified: true
+    usable: 4
+    evidence: "4x Public domain \u2014 USGS / NPS alpine meadow and sunset photography"
+  - query: calm mountain lake still water reflection nightfall
+    verified: true
+    usable: 4
+    evidence: "4x Public domain \u2014 NPS Mirror Lake and Crater Lake twilight scans"
+  - query: starry night sky over quiet forest hills
+    verified: true
+    usable: 3
+    evidence: "3x Public domain \u2014 NASA astronomy starry night sky imagery"
+  - query: sunlight breaking through clouds mountain pass
+    verified: true
+    usable: 3
+    evidence: "3x Public domain \u2014 USFS Rocky Mountain National Forest crepuscular\
+      \ ray scans"
+  - query: ancient stone sanctuary warm candle light evening
+    verified: true
+    usable: 3
+    evidence: "3x CC0 / Public domain \u2014 Library of Congress ancient sanctuary\
+      \ plates"
+  - query: peaceful sunrise over misty alpine valley
+    verified: true
+    usable: 4
+    evidence: "4x Public domain \u2014 USGS alpine valley dawn mist photography"
 originality:
   original_thesis: true
   unique_structure: true
@@ -69,6 +96,8 @@ originality:
   no_ai_persona: true
   source_notes: true
   ai_disclosure: false
+quota_reset_utc: '2026-11-04T08:00:00+00:00'
+pause_reason: gemini_api_daily_quota_exhausted
 ---
 
 ## Scene 1 — My Light and My Salvation (Verse 1)

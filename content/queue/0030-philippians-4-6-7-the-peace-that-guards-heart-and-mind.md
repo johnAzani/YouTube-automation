@@ -10,7 +10,7 @@ category: education
 voice: Charon
 target_minutes: 6
 tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "GUARD YOUR MIND"
+thumb_text: "PEACE OF GOD GUARDS YOU"
 description: |
   Say this Philippians 4:6-7 (KJV) prayer before you sleep tonight.
   Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God. And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.
