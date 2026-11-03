@@ -3,7 +3,7 @@ id: '0017'
 title: "Psalm 4:8 \u2014 In Peace I Will Lie Down and Sleep | Bedtime Prayer for Safety\
   \ | The Secret Place"
 slug: psalm-4-8-in-peace-i-will-lie-down-and-sleep
-status: quota_paused
+status: approved
 privacy: public
 format: longform
 niche: faith and prayer
@@ -92,8 +92,6 @@ originality:
   no_ai_persona: true
   source_notes: true
   ai_disclosure: false
-quota_reset_utc: '2026-11-03T08:00:00+00:00'
-pause_reason: gemini_api_daily_quota_exhausted
 ---
 
 ## Scene 1 — I Will Both Lay Me Down in Peace (Verse 8a)

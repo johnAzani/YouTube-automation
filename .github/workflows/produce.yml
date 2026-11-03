@@ -336,8 +336,24 @@ jobs:
                   report["results"].append(json.loads(path.read_text()))
               except Exception:
                   pass
+          Path("output/report").mkdir(parents=True, exist_ok=True)
           Path("output/report/summary.json").write_text(json.dumps(report, indent=2))
-          print(json.dumps(report, indent=2)[:2000])
+
+          # Also as annotations. The artifact itself lives on a host that automation
+          # cannot reach (the same host as the log archive), so the report has to be
+          # readable through the API that *is* reachable: `::notice` lines.
+          stage_lines = []
+          trail = Path("output/progress-trail.log")
+          if trail.is_file():
+              for line in trail.read_text(errors="replace").splitlines():
+                  if any(mark in line for mark in ("▶", "✓", "✗")):
+                      stage_lines.append(line.strip())
+          if stage_lines:
+              print("::notice title=Stages::" + " | ".join(stage_lines[-8:]))
+          for res in report["results"][-2:]:
+              print("::notice title=Job result::" + json.dumps(res)[:900])
+          print(f"::notice title=Queues::queued={len(report['queue'])} "
+                f"published={len(report['published'])} event={report['event']}")
           PYREPORT
           ls -la output/report || true
 

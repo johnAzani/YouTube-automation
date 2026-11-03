@@ -260,7 +260,7 @@ class AStalledHTTPSReadCannotOutlastTheStep(unittest.TestCase):
         self.assertIn("timeout=http_timeout_seconds()", text,
                       "the interactions transport defaults to an infinite read timeout")
 
-    def test_every_chunk_is_guarded_and_a_stall_is_retried_once(self):
+    def test_every_chunk_is_guarded_and_a_stall_is_retried(self):
         from pipeline import gemini_tts
 
         attempts = []
@@ -277,7 +277,7 @@ class AStalledHTTPSReadCannotOutlastTheStep(unittest.TestCase):
             with self.assertRaises(GeminiRequestTimedOut) as caught:
                 gemini_tts._guarded_chunk(object(), "text", "Charon", "instr", "m",
                                           Path("/tmp/raw"), 7, 12)
-        self.assertEqual(len(attempts), 2, "a stalled chunk gets exactly one retry")
+        self.assertEqual(len(attempts), 3, "a stalled chunk gets two more goes, then stops")
         self.assertIn("TTS chunk 7/12", str(caught.exception))
 
     def test_a_retry_that_works_returns_the_audio(self):
@@ -365,3 +365,58 @@ class AReportMustNotHideInItsOwnNoise(unittest.TestCase):
             release_report.parse_trail(trail)))
         self.assertIn("Not one stage finished", body)
         self.assertIn("03:00:25Z ▶ speech synthesis", body)
+
+
+class ATransient503MustNotCostTheSlot(unittest.TestCase):
+    """Both release steps died on `503 UNAVAILABLE … high demand` on 3 November.
+
+    503 is Google being busy for a minute. It propagated straight out of the
+    release, so an overloaded moment upstream cost the whole 170-minute slot —
+    twice, once for the long-form and once for the Short.
+    """
+
+    def test_a_503_is_temporary_and_a_quota_refusal_is_not(self):
+        from pipeline.gemini_tts import _transient
+
+        self.assertTrue(_transient(Exception("503 UNAVAILABLE. high demand")))
+        self.assertTrue(_transient(Exception("500 internal error")))
+        self.assertTrue(_transient(Exception("ReadTimeout")))
+        self.assertFalse(_transient(Exception("429 RESOURCE_EXHAUSTED quota")))
+        self.assertFalse(_transient(ValueError("bad request")))
+
+    def test_the_label_names_the_http_code(self):
+        from pipeline.gemini_tts import _transient_label
+
+        self.assertIn("503", _transient_label(Exception("503 UNAVAILABLE")))
+
+    def test_a_chunk_retries_the_overload_then_succeeds(self):
+        from pipeline import gemini_tts
+
+        calls = {"n": 0}
+
+        def flaky(*a, **k):
+            calls["n"] += 1
+            if calls["n"] < 3:
+                raise RuntimeError("503 UNAVAILABLE. This model is currently experiencing high demand.")
+            return "audio/pcm"
+
+        with mock.patch.object(gemini_tts, "_synthesize_single_chunk", flaky), \
+             mock.patch.object(gemini_tts, "_BACKOFF", (0, 0, 0)):
+            self.assertEqual(gemini_tts._guarded_chunk(object(), "t", "Charon", "i", "m",
+                                                       Path("/tmp/raw"), 2, 12), "audio/pcm")
+        self.assertEqual(calls["n"], 3)
+
+    def test_a_quota_refusal_still_fails_fast(self):
+        from pipeline import gemini_tts
+
+        calls = {"n": 0}
+
+        def quota(*a, **k):
+            calls["n"] += 1
+            raise RuntimeError("429 RESOURCE_EXHAUSTED: quota exceeded")
+
+        with mock.patch.object(gemini_tts, "_synthesize_single_chunk", quota):
+            with self.assertRaises(RuntimeError):
+                gemini_tts._guarded_chunk(object(), "t", "Charon", "i", "m",
+                                          Path("/tmp/raw"), 1, 12)
+        self.assertEqual(calls["n"], 1, "sleeping through a quota wall wastes the slot")
