@@ -217,7 +217,11 @@ jobs:
         # these runs and the run page is behind a sign-in, so three consecutive
         # 90-minute timeouts were undiagnosable. The trail written during the run
         # is turned into an issue, which both the owner and the automation can read.
-        if: ${{ failure() }}
+        # `cancelled()` as well as `failure()`. A run killed by the supervisor — or
+        # by a human clicking Cancel — is not a `failure()`, so the report step was
+        # skipped exactly when it was most needed: 41540026963 was cancelled at
+        # minute 167 of the render and filed nothing at all.
+        if: ${{ cancelled() || failure() }}
         env:
           GH_TOKEN: ${{ github.token }}
           GITHUB_RUN_ID: ${{ github.run_id }}

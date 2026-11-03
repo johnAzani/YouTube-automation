@@ -204,7 +204,7 @@ class AFailureCanBeReadAfterwards(unittest.TestCase):
         text = (REPO / ".github" / "workflows" / "produce.yml").read_text(encoding="utf-8")
         self.assertIn("PROGRESS_TRAIL:", text)
         self.assertIn("python -m scripts.release_report", text)
-        self.assertIn("if: ${{ failure() }}", text)
+        self.assertIn("cancelled() || failure()", text)
 
     def test_the_trail_is_written_as_the_release_runs(self):
         from pipeline import progress

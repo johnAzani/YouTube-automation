@@ -60,7 +60,15 @@ MAX_ATTEMPTS_PER_SLOT = 3
 # 120-minute job cap. Everything else that writes content/ queued behind it,
 # including this supervisor and the monitor — the watchers were stuck behind the
 # thing they exist to catch. So the supervisor cancels them.
-JOB_CAP = timedelta(minutes=120)
+# The cap must sit ABOVE the longest step a healthy release can legitimately be
+# inside, or the supervisor becomes the thing that kills the release. It was 120
+# minutes while produce's long-form step was allowed 170: on 3 November run
+# 41540026963 was rendering at minute 167 and this cancelled it — silently, as
+# `cancelled`, with the video still unpublished and nothing filed. Three nights in
+# a row, the outer guard won and the inner guard never got its 170 minutes.
+# 200 (+10 grace = 210) stays inside produce's own 240-minute job cap, so a truly
+# wedged run is still cancelled before the runner gives up on it.
+JOB_CAP = timedelta(minutes=200)
 STUCK_GRACE = timedelta(minutes=10)
 
 NEVER_DISPATCH = {"monitor.yml", "automation-health.yml", "scheduler-supervisor.yml",

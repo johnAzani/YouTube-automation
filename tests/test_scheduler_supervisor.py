@@ -215,15 +215,20 @@ class TestAWedgedRunIsNotAllowedToHoldTheLock(unittest.TestCase):
         return datetime(2026, 11, 2, 18, 45, tzinfo=UTC)
 
     def test_a_run_past_its_cap_is_reported_stuck(self):
+        # Just past JOB_CAP + STUCK_GRACE. It used to be 149 minutes, back when the
+        # supervisor cancelled at 130 — which was shorter than the 170-minute step a
+        # healthy render is allowed, so this test was encoding the bug.
         rows = [{"id": 99, "name": "Produce video", "status": "in_progress",
-                 "run_started_at": "2026-11-02T16:15:34Z"}]
+                 "run_started_at": "2026-11-02T14:30:00Z"}]
         stuck = sup.stuck_runs(self.now(), rows)
         self.assertEqual([r["id"] for r in stuck], [99])
-        self.assertEqual(stuck[0]["minutes"], 149)
+        self.assertEqual(stuck[0]["minutes"], 255)
 
     def test_a_run_still_inside_its_cap_is_left_alone(self):
+        # Three hours in: a slow-but-healthy release, exactly the one the old cap
+        # killed at minute 167.
         rows = [{"id": 7, "name": "Produce video", "status": "in_progress",
-                 "run_started_at": "2026-11-02T18:00:00Z"}]
+                 "run_started_at": "2026-11-02T15:45:00Z"}]
         self.assertEqual(sup.stuck_runs(self.now(), rows), [])
 
     def test_a_finished_run_is_never_cancelled(self):
