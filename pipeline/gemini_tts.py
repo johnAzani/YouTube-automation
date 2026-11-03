@@ -135,6 +135,40 @@ def _emit(message: str) -> None:
 _INTERACTIONS_STALLED = False
 
 
+#: Backoff for temporary upstream trouble. Short on purpose: a 172-second video
+#: is twelve chunks, and a two-minute sleep per chunk would eat the step budget.
+_BACKOFF = (5, 15, 45)
+
+
+def _transient(exc: BaseException) -> bool:
+    """Is this worth another attempt, or is it a real refusal?
+
+    503 UNAVAILABLE ("This model is currently experiencing high demand") is
+    temporary and extremely common on the free TTS tier at peak hours. It used to
+    propagate straight out of the release, so one overloaded minute on Google's
+    side cost the whole 170-minute slot — twice on 3 November.
+    """
+    text = f"{type(exc).__name__} {exc}".lower()
+    if any(marker in text for marker in ("429", "resource_exhausted", "quota")):
+        return False          # quota is handled by quota_handler, not by sleeping
+    if any(marker in text for marker in ("503", "500", "502", "504", "unavailable",
+                                         "overloaded", "high demand", "deadline",
+                                         "timeout", "timed out", "connection reset",
+                                         "remoteprotocol", "internal error")):
+        return True
+    return False
+
+
+def _transient_label(exc: BaseException) -> str:
+    text = f"{type(exc).__name__}: {exc}"
+    for marker in ("503", "500", "502", "504"):
+        if marker in text:
+            return f"Gemini returned HTTP {marker}"
+    if "timeout" in text.lower() or "timed out" in text.lower():
+        return "Gemini timed out"
+    return "Gemini was temporarily unavailable"
+
+
 def _guarded_chunk(client, text, voice_name, system_instruction, model, temp_raw,
                    index, total):
     """One chunk, with a deadline the transport cannot ignore.
@@ -147,7 +181,7 @@ def _guarded_chunk(client, text, voice_name, system_instruction, model, temp_raw
 
     label = f"TTS chunk {index}/{total}"
     last = None
-    for attempt in (1, 2):
+    for attempt in (1, 2, 3):
         try:
             with hard_deadline(http_timeout_seconds(), label):
                 return _synthesize_single_chunk(client, text, voice_name, system_instruction,
@@ -160,7 +194,24 @@ def _guarded_chunk(client, text, voice_name, system_instruction, model, temp_raw
             # of paying another full stall to learn the same lesson.
             _INTERACTIONS_STALLED = True
             _emit(f"{label} stalled on attempt {attempt}: {exc}")
-            if attempt == 1:
+            if attempt < 3:
+                continue
+        except Exception as exc:  # noqa: BLE001 - classify, then decide
+            from .gemini_client import GeminiRequestTimedOut as _Timeout
+
+            if isinstance(exc, _Timeout):
+                raise
+            # Only temporary upstream trouble is retried here; a quota refusal and
+            # a bad request must fail fast so the caller can pause the job.
+            if not _transient(exc):
+                raise
+            last = exc
+            _emit(f"{label} attempt {attempt} hit {_transient_label(exc)}")
+            if attempt < 3:
+                import time as _t
+                wait = _BACKOFF[min(attempt - 1, len(_BACKOFF) - 1)]
+                _emit(f"{label} retrying in {wait}s")
+                _t.sleep(wait)
                 continue
     raise last
 
@@ -221,7 +272,44 @@ def _synthesize_single_chunk(
                 if any(x in error for x in ("429", "resource_exhausted", "quota")):
                     from pipeline.quota_handler import GeminiQuotaExceededError, calculate_next_quota_reset_utc
                     raise GeminiQuotaExceededError(str(exc), reset_utc=calculate_next_quota_reset_utc()) from exc
-                print(f"[gemini-tts] interactions.create({tts_model}) unavailable: {exc!r}")
+                if _transient(exc):
+                    # 503 UNAVAILABLE ("high demand") is the single most common TTS
+                    # failure at peak and it is *temporary*. Treating it like an
+                    # unsupported transport threw away a whole release slot on
+                    # 3 November; wait and try again instead.
+                    last = exc
+                    for wait in _BACKOFF:
+                        print(f"[gemini-tts] {_transient_label(exc)} — retrying "
+                              f"interactions in {wait}s", flush=True)
+                        time.sleep(wait)
+                        try:
+                            interaction = client.interactions.create(
+                                timeout=http_timeout_seconds(),
+                                model=tts_model,
+                                input=[{"type": "user_input",
+                                        "content": [{"type": "text", "text": text}]}],
+                                response_format={"type": "audio"},
+                                generation_config={"speech_config": [{"voice": voice_name}]},
+                            )
+                        except Exception as again:  # noqa: BLE001
+                            last = again
+                            if not _transient(again):
+                                break
+                            continue
+                        output_audio = getattr(interaction, "output_audio", None)
+                        if output_audio and getattr(output_audio, "data", None):
+                            data_val = output_audio.data
+                            if isinstance(data_val, str):
+                                import base64
+                                temp_raw.write_bytes(base64.b64decode(data_val))
+                            else:
+                                temp_raw.write_bytes(data_val)
+                            return (getattr(output_audio, "mime_type",
+                                            "audio/pcm;rate=24000") or "audio/pcm")
+                    print(f"[gemini-tts] interactions still failing after retries: {last!r}",
+                          flush=True)
+                else:
+                    print(f"[gemini-tts] interactions.create({tts_model}) unavailable: {exc!r}")
 
     # 2. Try models.generate_content with AUDIO modality across candidate audio models
     candidate_models = [model]
@@ -229,7 +317,7 @@ def _synthesize_single_chunk(
     response = None
     last_exc = None
     for cur_model in candidate_models:
-        max_retries = 2
+        max_retries = 1 + len(_BACKOFF)
         for attempt in range(max_retries):
             try:
                 response = client.models.generate_content(
@@ -253,6 +341,13 @@ def _synthesize_single_chunk(
                 if "404" in err_msg or "not_found" in err_msg or "only supports text" in err_msg or "invalid_argument" in err_msg:
                     print(f"[gemini-tts] Model {cur_model} unavailable; no alternate model is permitted: {exc!r}")
                     break
+                if _transient(exc):
+                    if attempt < max_retries - 1:
+                        backoff = _BACKOFF[min(attempt, len(_BACKOFF) - 1)]
+                        print(f"[gemini-tts] {_transient_label(exc)}. Retrying in "
+                              f"{backoff}s (attempt {attempt + 2}/{max_retries})...", flush=True)
+                        time.sleep(backoff)
+                        continue
                 if "429" in err_msg or "resource_exhausted" in err_msg or "quota" in err_msg:
                     if attempt < max_retries - 1:
                         backoff = (attempt + 1) * 8
