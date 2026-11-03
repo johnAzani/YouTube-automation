@@ -79,7 +79,6 @@ originality:
   ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
 published_on: "2026-10-29"
 youtube_video_id: "7RDX0fbIOtQ"
-thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Habitation of the Most High (Verses 1–2)

@@ -10,7 +10,7 @@ category: education
 voice: Charon
 target_minutes: 6
 tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "SAFE ON MY BED"
+thumb_text: "REMEMBER THEE ON MY BED"
 description: |
   Say this Psalm 63:5-7 (KJV) prayer before you sleep tonight.
   My soul shall be satisfied as with marrow and fatness; and my mouth shall praise thee with joyful lips: When I remember thee upon my bed, and meditate on thee in the night watches. Because thou hast been my help, therefore in the shadow of thy wings will I rejoice.

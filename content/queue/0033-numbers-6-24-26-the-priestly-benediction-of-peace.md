@@ -10,7 +10,7 @@ category: education
 voice: Charon
 target_minutes: 6
 tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "BLESSED AND KEPT"
+thumb_text: "THE LORD BLESS AND KEEP YOU"
 description: |
   Say this Numbers 6:24-26 (KJV) prayer before you sleep tonight.
   The LORD bless thee, and keep thee: The LORD make his face shine upon thee, and be gracious unto thee: The LORD lift up his countenance upon thee, and give thee peace.

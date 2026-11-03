@@ -10,7 +10,7 @@ category: education
 voice: Charon
 target_minutes: 6
 tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "SWEET SLEEP TONIGHT"
+thumb_text: "THY SLEEP SHALL BE SWEET"
 description: |
   Say this Proverbs 3:24-26 (KJV) prayer before you sleep tonight.
   When thou liest down, thou shalt not be afraid: yea, thou shalt lie down, and thy sleep shall be sweet. Be not afraid of sudden fear, neither of the desolation of the wicked, when it cometh. For the LORD shall be thy confidence, and shall keep thy foot from being taken.

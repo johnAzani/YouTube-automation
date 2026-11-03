@@ -69,7 +69,6 @@ originality:
   ai_disclosure: false       # original motion graphics and synthetic voiceover; no photorealistic synthetic media
 published_on: "2026-11-02"
 youtube_video_id: "1g8TXHD0Xks"
-thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Unshakable Refuge in Trouble (Verses 1-3)

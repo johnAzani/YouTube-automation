@@ -10,7 +10,7 @@ category: education
 voice: Charon
 target_minutes: 6
 tags: [bedtime prayer, night prayer, scripture meditation, peaceful sleep, the secret place, christian meditation, divine protection, rest and healing]
-thumb_text: "NO DARK TOO DEEP"
+thumb_text: "DARKNESS IS LIGHT TO HIM"
 description: |
   Say this Psalm 139:11-12 (KJV) prayer before you sleep tonight.
   If I say, Surely the darkness shall cover me; even the night shall be light about me. Yea, the darkness hideth not from thee; but the night shineth as the day: the darkness and the light are both alike to thee.
