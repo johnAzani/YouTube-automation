@@ -2,7 +2,7 @@
 id: '0036'
 title: "Psalm 5 Morning Prayer | Begin Your Day in God's Presence"
 slug: psalm-5-morning-prayer-begin-your-day
-status: approved
+status: published
 channel: prayer2
 privacy: private
 format: longform
@@ -83,6 +83,11 @@ originality:
   ai_disclosure: false
 seo_hook: "Pray this Psalm 5 KJV morning prayer at sunrise, begin your day in God's presence, and walk into today under His favour and shield."
 category_id: '22'
+published_on: "2026-11-04"
+published_at: "2026-11-04T20:52:34Z"
+youtube_video_id: "oS7f32WDj_Y"
+thumbnail_revision: "ctr-v3-cinema"
+metadata_revision: "selar-seo-v1"
 ---
 
 ## Scene 1 — Give Ear to My Words, O Lord (Psalm 5:1–2)
