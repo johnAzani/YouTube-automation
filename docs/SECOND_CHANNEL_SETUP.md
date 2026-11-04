@@ -49,7 +49,8 @@ the Secret Place queue-repair and authored-Shorts steps.
 ### 2b. Create the separate Google Cloud project
 1. Google Cloud Console → create project (e.g. `morning-altar-youtube`).
    **Do not link a billing account.** *(Done 2026-11-04: project
-   "The Morning Altar" created and selected.)*
+   "The Morning Altar" created and selected; Google Auth Platform
+   configured — OAuth Overview reached, no OAuth client created yet.)*
 2. Enable **YouTube Data API v3** (APIs & Services → Library → search
    "YouTube Data API v3" → Enable). Do this in the new project, not Channel
    1's — quota pools are per project.
