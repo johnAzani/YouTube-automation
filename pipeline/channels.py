@@ -70,7 +70,7 @@ CHANNELS: dict[str, ChannelProfile] = {
     "prayer2": ChannelProfile(
         id="prayer2",
         display_name="The Morning Altar",
-        handle="@MorningAltarPrayer",
+        handle="@TheMorningAltarDaily",
         secret_prefix="PRAYER2_",
         # New GCP projects are unaudited, so API uploads are private-locked
         # until the compliance audit passes. Private drafts by design.

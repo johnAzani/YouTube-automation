@@ -144,7 +144,7 @@ class ChannelAwareDescriptionTests(unittest.TestCase):
     def test_prayer2_description_never_borrows_selar_funnel(self):
         CONFIG.channel_id = "prayer2"
         CONFIG.channel_name = "The Morning Altar"
-        CONFIG.channel_handle = "@MorningAltarPrayer"
+        CONFIG.channel_handle = "@TheMorningAltarDaily"
         text = build_description(self._faith_doc())
         self.assertNotIn("selar.com", text)
         self.assertNotIn("The Secret Place", text)

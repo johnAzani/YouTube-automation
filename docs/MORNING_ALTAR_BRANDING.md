@@ -2,8 +2,8 @@
 ## Complete Faceless Channel Branding & Identity Kit — Channel 2 (`prayer2`)
 
 **Primary Brand Name:** **The Morning Altar | Daily Sunrise Prayer**
-**Handle (first choice):** `@MorningAltarPrayer`
-**Fallback handles (in order):** `@TheMorningAltarDaily`, `@MorningAltarDevotional`, `@MorningAltarPrayers`
+**Handle (claimed 2026-11-04):** `@TheMorningAltarDaily` — https://www.youtube.com/@TheMorningAltarDaily
+**Unclaimed fallbacks (not used):** `@MorningAltarPrayer`, `@MorningAltarDevotional`, `@MorningAltarPrayers`
 **Core Scripture Foundation:** *Psalm 5:3 — "My voice shalt thou hear in the morning, O LORD; in the morning will I direct my prayer unto thee, and will look up." (KJV)*
 **Channel Format:** 100% faceless Christian **morning** prayer, declaration & sunrise devotional studio.
 **Internal channel id:** `prayer2` (secret prefix `PRAYER2_`, see `pipeline/channels.py`)
@@ -104,8 +104,11 @@ re-typing over the PNGs.
 
 ## 5. Launch Checklist
 
-- [ ] Create the channel and claim the handle (§1)
-- [ ] Upload avatar, banner, watermark (§4)
+- [x] Create the channel and claim the handle — `@TheMorningAltarDaily` (2026-11-04)
+- [ ] Upload avatar (§4) — still showing YouTube's camera placeholder in the 2026-11-04 screenshot
+- [ ] Re-upload banner **v2** (§4) — v1 text was cropped on mobile ("HE MORNING ALT…"); v2 keeps all text inside the 1546×423 safe area
+- [ ] Upload watermark (§4)
+- [ ] Verify the Name field is exactly `The Morning Altar | Daily Sunrise Prayer` (screenshot shows "…Prayer Han…" — tap the pencil and remove any extra characters)
 - [ ] Paste About description + channel keywords (§2–§3)
 - [ ] Enable 2-step verification + custom thumbnails (Studio → Settings)
 - [ ] Create the **separate** GCP + Gemini projects and GitHub secrets
