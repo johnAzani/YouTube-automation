@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T22:36:16.352506+00:00",
+  "generated_at": "2026-11-04T22:37:52.211277+00:00",
   "healthy": false,
   "automations": [
     {
@@ -8,18 +8,18 @@
       "crons": [
         "14 20 * * *"
       ],
-      "last_run": "2026-11-04T21:50:47+00:00",
-      "last_conclusion": "success",
+      "last_run": "2026-11-04T22:37:16+00:00",
+      "last_conclusion": null,
       "last_success": "2026-11-04T21:50:47+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-03T07:18:16+00:00",
       "last_slot": "2026-11-04T20:14:00+00:00",
       "missed_slots": 0,
-      "failures_5": 3,
+      "failures_5": 2,
       "effect": "reports and files stalls",
-      "verdict": "FLAKY",
-      "detail": "3 of its last 5 runs failed",
-      "severity": "warning"
+      "verdict": "OK",
+      "detail": "last success 0.8h ago",
+      "severity": "ok"
     },
     {
       "workflow": "comments.yml",
@@ -58,7 +58,7 @@
       "failures_5": 3,
       "effect": "writes content/community/<id>-READY.md",
       "verdict": "FAILING",
-      "detail": "failed 1.2h ago and nothing was changed since; the next slot will fail the same way",
+      "detail": "failed 1.3h ago and nothing was changed since; the next slot will fail the same way",
       "severity": "blocking"
     },
     {
@@ -143,7 +143,7 @@
       "crons": [
         "23 */3 * * *"
       ],
-      "last_run": "2026-11-04T22:35:24+00:00",
+      "last_run": "2026-11-04T22:37:16+00:00",
       "last_conclusion": null,
       "last_success": null,
       "runs_14d": 20,
@@ -168,14 +168,14 @@
       "last_conclusion": "failure",
       "last_success": "2026-11-04T20:09:52+00:00",
       "runs_14d": 20,
-      "last_edited": "2026-11-04T14:13:24+00:00",
+      "last_edited": "2026-11-04T22:28:06+00:00",
       "last_slot": "2026-11-04T19:14:00+00:00",
       "missed_slots": 0,
       "failures_5": 1,
       "effect": "publishes a video: content/published/ gains a receipt with a video id",
-      "verdict": "FAILING",
-      "detail": "failed 1.8h ago and nothing was changed since; the next slot will fail the same way",
-      "severity": "blocking"
+      "verdict": "UNTESTED FIX",
+      "detail": "failed 1.8h ago; edited 9m ago \u2014 needs one green run",
+      "severity": "warning"
     },
     {
       "workflow": "scheduler-supervisor.yml",
@@ -183,9 +183,9 @@
       "crons": [
         "*/15 * * * *"
       ],
-      "last_run": "2026-11-04T22:35:41+00:00",
+      "last_run": "2026-11-04T22:37:16+00:00",
       "last_conclusion": null,
-      "last_success": "2026-11-04T22:34:21+00:00",
+      "last_success": "2026-11-04T22:35:41+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-02T19:19:32+00:00",
       "last_slot": null,
@@ -200,12 +200,12 @@
   "outcomes": [
     {
       "outcome": "last upload",
-      "detail": "2026-11-04 (2h ago)",
+      "detail": "2026-11-04 (8h ago)",
       "severity": "ok"
     },
     {
       "outcome": "publishable runway",
-      "detail": "20 of 20 approved script(s) over the 850-word floor (25 in queue)",
+      "detail": "21 of 21 approved script(s) over the 850-word floor (26 in queue)",
       "severity": "ok"
     },
     {
