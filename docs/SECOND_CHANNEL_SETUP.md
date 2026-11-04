@@ -112,16 +112,19 @@ the Secret Place queue-repair and authored-Shorts steps.
 
 ### 2e. Add the GitHub secrets (Settings → Secrets and variables → Actions)
 
-*Status 2026-11-04: `PRAYER2_YOUTUBE_CLIENT_ID` and
-`PRAYER2_YOUTUBE_CLIENT_SECRET` added; Data Access scopes
-(`youtube.upload`, `youtube.readonly`) saved; Branding saved (app home /
-privacy / terms pages + `johnazani.github.io` authorized domain; logo
-deliberately left empty so verification is not triggered); Audience
+*Status 2026-11-04: all values in — `PRAYER2_YOUTUBE_CLIENT_ID`,
+`PRAYER2_YOUTUBE_CLIENT_SECRET`, `PRAYER2_YOUTUBE_REFRESH_TOKEN` and
+`PRAYER2_GEMINI_API_KEY` added; `PRAYER2_YOUTUBE_CHANNEL_ID` stored as a
+Secret (workflows accept it from Variables **or** Secrets). Data Access
+scopes (`youtube.upload`, `youtube.readonly`) saved; Branding saved (app
+home / privacy / terms pages + `johnazani.github.io` authorized domain;
+logo deliberately left empty so verification is not triggered); Audience
 published — Publishing status **In production**, External, OAuth user cap
 1/100 (the "requires verification" banner is expected; verification is
-intentionally not submitted, same as Channel 1); `PRAYER2_YOUTUBE_REFRESH_TOKEN`
-minted in OAuth Playground and added to GitHub secrets (owner screenshot
-2026-11-04). Still outstanding: only `PRAYER2_GEMINI_API_KEY` (§2d).*
+intentionally not submitted, same as Channel 1). **PR #243 merged to
+`main` 2026-11-04** (merge commit `dd5f2a6`) — run all channel-2
+workflows from `main`. Next: **Weekly metrics snapshot** with Target
+channel `prayer2` as the read-only credential test.*
 
 | Secret | Value |
 |---|---|
