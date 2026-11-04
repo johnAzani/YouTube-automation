@@ -209,6 +209,34 @@ def _transient_label(exc: BaseException) -> str:
     return "Gemini was temporarily unavailable"
 
 
+def read_aloud_instruction(prompt_style: str = "calm, reverent, peaceful devotional tone") -> str:
+    """The read-aloud contract sent with every TTS request.
+
+    The `interactions` transport has no separate system-instruction channel,
+    so this text used to travel ONLY on the `generate_content` fallback —
+    whichever transport answered decided whether the model ever heard
+    "read this, don't comment on it". On 4 November 2026 the Psalm 27 video
+    (7ll7w1hYf7o) opened by speaking the delivery instructions aloud instead
+    of the prayer: proof that bare script text invites direction-narration.
+    Every transport now prefixes this contract to the script itself, marked
+    as not-to-be-spoken, with the script fenced behind a unique delimiter.
+    """
+    return (
+        "Read the text between the markers aloud, word for word, in a "
+        f"{prompt_style}. Everything outside the markers is an instruction "
+        "for you and must never be spoken. Do not add commentary, "
+        "introductions, scene titles, or conclusions, and do not read the "
+        "markers themselves. Begin speaking at the first word after "
+        "the opening marker."
+    )
+
+
+#: Fences the script inside a TTS request so instruction and script can
+#: never be confused for one another (see read_aloud_instruction).
+SCRIPT_START = "<<<SCRIPT START — speak only what follows>>>"
+SCRIPT_END = "<<<SCRIPT END>>>"
+
+
 def _guarded_chunk(client, text, voice_name, system_instruction, model, temp_raw,
                    index, total):
     """One chunk, with a deadline the transport cannot ignore.
@@ -328,7 +356,7 @@ def _synthesize_single_chunk(
                     model=tts_model,
                     input=[{
                         "type": "user_input",
-                        "content": [{"type": "text", "text": text}],
+                        "content": [{"type": "text", "text": f"{system_instruction}\n\n{SCRIPT_START}\n{text}\n{SCRIPT_END}"}],
                     }],
                     response_format={"type": "audio"},
                     generation_config={"speech_config": [{"voice": voice_name}]},
@@ -369,7 +397,7 @@ def _synthesize_single_chunk(
                                 timeout=http_timeout_seconds(),
                                 model=tts_model,
                                 input=[{"type": "user_input",
-                                        "content": [{"type": "text", "text": text}]}],
+                                        "content": [{"type": "text", "text": f"{system_instruction}\n\n{SCRIPT_START}\n{text}\n{SCRIPT_END}"}]}],
                                 response_format={"type": "audio"},
                                 generation_config={"speech_config": [{"voice": voice_name}]},
                             )
@@ -409,7 +437,7 @@ def _synthesize_single_chunk(
                                 timeout=http_timeout_seconds(),
                                 model=tts_model,
                                 input=[{"type": "user_input",
-                                        "content": [{"type": "text", "text": text}]}],
+                                        "content": [{"type": "text", "text": f"{system_instruction}\n\n{SCRIPT_START}\n{text}\n{SCRIPT_END}"}]}],
                                 response_format={"type": "audio"},
                                 generation_config={"speech_config": [{"voice": voice_name}]},
                             )
@@ -444,7 +472,7 @@ def _synthesize_single_chunk(
             try:
                 response = client.models.generate_content(
                     model=cur_model,
-                    contents=f"{system_instruction}\n\nText to read:\n{text}",
+                    contents=f"{system_instruction}\n\n{SCRIPT_START}\n{text}\n{SCRIPT_END}",
                     config=types.GenerateContentConfig(
                         response_modalities=["AUDIO"],
                         speech_config=types.SpeechConfig(
@@ -540,11 +568,7 @@ def synthesize_gemini_audio(
     budget = Deadline(stage_budget_seconds(900), "speech synthesis")
     voice_name = GEMINI_VOICES.get(voice.lower(), voice)
 
-    system_instruction = (
-        f"You are a professional voiceover narrator. Read the provided text aloud in a {prompt_style}. "
-        "Do not add any conversational commentary, introductory remarks, or concluding remarks. "
-        "Only speak the exact provided words naturally with reverent pacing and appropriate pauses."
-    )
+    system_instruction = read_aloud_instruction(prompt_style)
 
     out_path = Path(out_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
