@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T16:35:59.963843+00:00",
+  "generated_at": "2026-11-04T16:37:23.436031+00:00",
   "healthy": false,
   "automations": [
     {
@@ -18,7 +18,7 @@
       "failures_5": 1,
       "effect": "reports and files stalls",
       "verdict": "OK",
-      "detail": "last success 0.0h ago",
+      "detail": "last success 0.1h ago",
       "severity": "ok"
     },
     {
@@ -39,7 +39,7 @@
       "failures_5": 0,
       "effect": "posts replies and records them in content/comments/replied.json",
       "verdict": "OK",
-      "detail": "last success 1.2h ago",
+      "detail": "last success 1.3h ago",
       "severity": "ok"
     },
     {
@@ -134,7 +134,7 @@
       "failures_5": 3,
       "effect": "writes content/metrics.csv and opens a snapshot issue",
       "verdict": "FAILING",
-      "detail": "failed 6m ago and nothing was changed since; the next slot will fail the same way",
+      "detail": "failed 7m ago and nothing was changed since; the next slot will fail the same way",
       "severity": "blocking"
     },
     {
