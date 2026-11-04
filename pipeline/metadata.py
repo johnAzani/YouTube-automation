@@ -291,7 +291,11 @@ def build_description(
     # The Morning Altar) must not inherit them — see pipeline/channels.py.
     from .channels import get_channel
 
-    sanctuary_links = faith and get_channel(CONFIG.channel_id).include_sanctuary_links
+    # The script's own channel wins over the ambient CONFIG channel: a
+    # Morning Altar script must never inherit Selar links just because it
+    # was rendered while CONFIG pointed at The Secret Place (and vice versa).
+    doc_channel = get_channel(doc.explicit_channel or CONFIG.channel_id)
+    sanctuary_links = faith and doc_channel.include_sanctuary_links
 
     #Zone 1: Search Snippet (Line 1) + Watch-Page Fold Selar Journal Link (Line 2)
     zone1_lines = [hook]
@@ -335,9 +339,13 @@ def build_description(
         # A channel without its own resource funnel yet (e.g. The Morning
         # Altar at launch): invite subscription to *this* channel only —
         # never borrow The Secret Place's Selar/store links.
-        profile = get_channel(CONFIG.channel_id)
-        channel_name = CONFIG.channel_name or profile.display_name
-        channel_handle = CONFIG.channel_handle or profile.handle
+        profile = doc_channel
+        if profile.id == CONFIG.channel_id:
+            channel_name = CONFIG.channel_name or profile.display_name
+            channel_handle = CONFIG.channel_handle or profile.handle
+        else:
+            channel_name = profile.display_name
+            channel_handle = profile.handle
         parts.extend(
             [
                 "",

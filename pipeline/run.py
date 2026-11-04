@@ -195,6 +195,10 @@ def process(path: Path, dry_run: bool) -> dict:
 
     # Explicit --job runs bypass select_jobs, so enforce routing here too:
     # never render/upload a script under the wrong channel's credentials.
+    # (Only when the file exists — a missing path is produce()'s error to raise.)
+    if not Path(path).is_file():
+        model = Path(os.environ.get("PRAYER_ALIGNMENT_MODEL", OUTPUT_DIR / "alignment-model"))
+        return produce(path, dry_run, model)
     doc = parse_script(path)
     target_channel = normalize_channel_id(CONFIG.channel_id)
     if doc.channel != target_channel:

@@ -177,7 +177,7 @@ def generate_pastoral_pinned_comment(doc: ScriptDoc) -> str:
 
     from .channels import get_channel
 
-    sanctuary_links = get_channel(CONFIG.channel_id).include_sanctuary_links
+    sanctuary_links = get_channel(doc.explicit_channel or CONFIG.channel_id).include_sanctuary_links
     selar_lines: list[str] = []
     if sanctuary_links and SELAR_JOURNAL_URL:
         selar_lines.append(f"📖 Printable 30-Night Bedside Prayer Journal: {SELAR_JOURNAL_URL}")
@@ -185,7 +185,7 @@ def generate_pastoral_pinned_comment(doc: ScriptDoc) -> str:
         selar_lines.append(f"🤍 Voluntary Ministry Support: {SELAR_STORE_URL}")
     selar_footer = ("\n\n" + "\n".join(selar_lines)) if selar_lines else ""
 
-    if CONFIG.channel_id == "prayer2":
+    if (doc.explicit_channel or CONFIG.channel_id) == "prayer2":
         morning_comment = (
             f"🌅 Beloved family, if you are beginning this day with us, write 'AMEN' in faith to claim "
             f"God's promise of {theme} over your home, your work, and your mind today.\n\n"

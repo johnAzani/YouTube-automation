@@ -66,14 +66,20 @@ def test_every_queued_faith_script_has_crisp_title_hook_and_both_selar_links():
         assert len(desc.encode("utf-8")) <= 4900
         assert "<" not in desc and ">" not in desc
 
-        # Both verified live Selar links MUST be present in every faith description
-        assert SELAR_JOURNAL_URL in desc, f"{p.name} missing Prayer Journal Selar link"
-        assert SELAR_STORE_URL in desc, f"{p.name} missing Show Love Selar link"
-
-        # Line 2 above-the-fold placement check
         lines = desc.splitlines()
         assert lines[0] == hook
-        assert SELAR_JOURNAL_URL in lines[1], f"{p.name} missing Line 2 watch-page fold Selar link"
+        if doc.channel != "secret-place":
+            # Other channels (e.g. The Morning Altar) must never borrow
+            # The Secret Place's Selar funnel — see pipeline/channels.py.
+            assert "selar.com" not in desc, f"{p.name} leaks Selar links to {doc.channel}"
+        else:
+            # Both verified live Selar links MUST be present in every
+            # Secret Place faith description
+            assert SELAR_JOURNAL_URL in desc, f"{p.name} missing Prayer Journal Selar link"
+            assert SELAR_STORE_URL in desc, f"{p.name} missing Show Love Selar link"
+
+            # Line 2 above-the-fold placement check
+            assert SELAR_JOURNAL_URL in lines[1], f"{p.name} missing Line 2 watch-page fold Selar link"
 
         # Valid 00:00 chapters block
         assert "\nCHAPTERS\n00:00 " in desc
@@ -91,9 +97,13 @@ def test_every_queued_faith_script_has_crisp_title_hook_and_both_selar_links():
         assert all("432" not in t for t in tags)
 
         # Pastoral comment includes both clickable Selar links on long-form
+        # (Secret Place only; other channels get their own comment, no Selar)
         comment = generate_pastoral_pinned_comment(doc)
-        assert SELAR_JOURNAL_URL in comment
-        assert SELAR_STORE_URL in comment
+        if doc.channel == "secret-place":
+            assert SELAR_JOURNAL_URL in comment
+            assert SELAR_STORE_URL in comment
+        else:
+            assert "selar.com" not in comment
         assert "AMEN" in comment
 
     assert len(faith_docs) >= 22

@@ -85,7 +85,7 @@ originality:
   no_ai_persona: true
   source_notes: true
   ai_disclosure: false
-seo_hook: "Pray this Psalm 5 KJV morning prayer at sunrise to begin your day in God's presence, lay every request before Him, and walk into today under His favour and shield."
+seo_hook: "Pray this Psalm 5 KJV morning prayer at sunrise, begin your day in God's presence, and walk into today under His favour and shield."
 category_id: '22'
 ---
 
