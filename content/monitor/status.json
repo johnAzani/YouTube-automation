@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T16:15:55.356820+00:00",
+  "generated_at": "2026-11-04T16:17:25.203846+00:00",
   "healthy": false,
   "automations": [
     {
@@ -58,7 +58,7 @@
       "failures_5": 0,
       "effect": "writes content/community/<id>-READY.md",
       "verdict": "OK",
-      "detail": "last success 65.4h ago",
+      "detail": "last success 65.5h ago",
       "severity": "ok"
     },
     {
@@ -193,7 +193,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 0.4h ago",
+      "detail": "last success 0.5h ago",
       "severity": "ok"
     }
   ],
