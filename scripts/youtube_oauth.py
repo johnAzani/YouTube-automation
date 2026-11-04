@@ -10,7 +10,10 @@ It prints the values to put in GitHub secrets separately:
     YOUTUBE_CLIENT_SECRET   (the raw OAuth client secret)
     YOUTUBE_REFRESH_TOKEN   (the refresh token)
 
-Default scopes: youtube.upload + youtube.readonly.
+Default scopes (--purpose upload): youtube.upload + youtube.readonly +
+youtube.force-ssl — the exact set `pipeline/upload.py` SCOPES requests.
+A token minted with fewer scopes is rejected with invalid_scope by every
+pipeline script, so if you mint in OAuth Playground instead, tick all three.
 Use --purpose analytics for a separate read-only Analytics token, or
 --purpose analytics-revenue to include monetary reports. Never paste tokens in chat.
 """

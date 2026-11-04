@@ -65,9 +65,17 @@ the Secret Place queue-repair and authored-Shorts steps.
      7 days (`docs/SETUP.md` §1b). Unverified is fine for your own account —
      expect a warning screen later and click through only for your own app.
    - **Data Access → "Add or remove scopes" → "Manually add scopes"** →
-     paste `https://www.googleapis.com/auth/youtube.upload` and
-     `https://www.googleapis.com/auth/youtube.readonly` → "Add to table" →
-     Update → Save.
+     paste all three scope URLs (one per line) → "Add to table" → Update →
+     Save:
+     - `https://www.googleapis.com/auth/youtube.upload`
+     - `https://www.googleapis.com/auth/youtube.readonly`
+     - `https://www.googleapis.com/auth/youtube.force-ssl`
+
+     All three are required: the pipeline's credential object
+     (`pipeline/upload.py` `SCOPES`) always requests upload + readonly +
+     force-ssl, and Google rejects a refresh token whose granted scopes
+     don't cover the requested set (`invalid_scope`). force-ssl is also
+     what the comments workflows use.
    - **Clients → "Create client" → Web application**: name
      `Morning Altar YouTube Uploader` → Authorized redirect URIs →
      `https://developers.google.com/oauthplayground` → **Create**. Copy the
@@ -77,7 +85,8 @@ the Secret Place queue-repair and authored-Shorts steps.
 ### 2c. Mint the Morning Altar refresh token
 1. OAuth Playground → gear icon → use your **new** client ID/secret,
    **Server-side**, **Offline**, consent prompt.
-2. Authorize scopes `youtube.upload` + `youtube.readonly` **while signed in
+2. Authorize scopes `youtube.upload` + `youtube.readonly` +
+   `youtube.force-ssl` **while signed in
    as / selecting The Morning Altar channel** — this is the step that decides
    which channel the token uploads to. Picking your personal channel here is
    the #1 multi-channel mistake; `verify_target_channel` will catch it later
@@ -103,6 +112,17 @@ the Secret Place queue-repair and authored-Shorts steps.
       test user also unblocks authorization, but those refresh tokens
       hard-expire after 7 days — the exact failure Trap 1 exists to avoid).
 
+   **Troubleshooting — "the stored refresh token cannot be exchanged for
+   the scopes this script needs" (seen 2026-11-04, metrics run #25):** the
+   token was minted with only upload + readonly, but every pipeline script
+   requests upload + readonly + **force-ssl**. Scopes are frozen into the
+   refresh token at mint time, so the fix has two halves: (a) add
+   `youtube.force-ssl` under **Data Access** (step 3 above), then (b)
+   re-authorize in OAuth Playground with all three scopes ticked and
+   replace the `PRAYER2_YOUTUBE_REFRESH_TOKEN` secret with the new token.
+   Re-minting alone (without the Data Access change) just reproduces the
+   same two-scope token.
+
 ### 2d. Create the separate Gemini project + key
 1. Google AI Studio → create a **new project** → create API key in it.
    (A second key inside Channel 1's project would share its free-tier pool —
@@ -112,7 +132,10 @@ the Secret Place queue-repair and authored-Shorts steps.
 
 ### 2e. Add the GitHub secrets (Settings → Secrets and variables → Actions)
 
-*Status 2026-11-04: `PRAYER2_YOUTUBE_CLIENT_ID` and
+*Status 2026-11-04: metrics run #25 failed on a two-scope refresh token —
+owner to add `youtube.force-ssl` to Data Access, re-mint with all three
+scopes, and replace `PRAYER2_YOUTUBE_REFRESH_TOKEN` (see §2c). Earlier:
+`PRAYER2_YOUTUBE_CLIENT_ID` and
 `PRAYER2_YOUTUBE_CLIENT_SECRET` added; Data Access scopes
 (`youtube.upload`, `youtube.readonly`) saved; Branding saved (app home /
 privacy / terms pages + `johnazani.github.io` authorized domain; logo
