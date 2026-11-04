@@ -35,17 +35,20 @@ from scripts.manage_playlists import sync_all_series_playlists
 
 
 def check_zero_dollar_lock() -> dict:
-    """Audit system parameters to confirm strict $0.00 / month cost lock."""
+    """Report repository-side cost controls without pretending to inspect billing."""
     reset_utc = calculate_next_quota_reset_utc()
     return {
-        "status": "active_locked",
-        "monthly_cost_usd": 0.00,
+        "status": "account_side_billing_unverified",
+        "monthly_cost_usd": None,
+        "billing_disabled_verified": False,
+        "required_manual_control": "Keep billing disabled on the project behind GEMINI_API_KEY",
         "tts_engine": "gemini-3.8-flash-tts (prebuilt Charon)",
-        "tts_cost": "$0.00 (Free Tier 15 RPM / 1,500 RPD)",
-        "compute_cost": "$0.00 (GitHub-Hosted Standard Linux Runners)",
-        "music_bed_cost": "$0.00 (In-House Procedural DSP Audio Synthesis)",
-        "stills_cost": "$0.00 (Verified Public Domain & Free Stock Ledgers)",
-        "youtube_api_cost": "$0.00 (10,000 Free Daily Quota Units)",
+        "tts_limit": "Project/model-specific; 10 requests/day was reported by production run 41743246072",
+        "tts_cost": "No paid fallback; provider billing status cannot be inspected by this script",
+        "compute_cost": "Public GitHub Actions runner; eligibility/terms are external",
+        "music_bed_cost": "Procedural/local DSP; no paid music service",
+        "stills_cost": "Approved/licensed asset ledger; no paid stock fallback",
+        "youtube_api_cost": "Free finite quota; current project quota is not inspected here",
         "quota_reset_utc": reset_utc.isoformat(),
     }
 
@@ -153,9 +156,10 @@ def main() -> None:
     full_report = {
         "timestamp_utc": datetime.now(timezone.utc).isoformat(),
         "channel": "The Secret Place (@TheSecretPlace)",
-        "subscribers": 1230,
-        "ypp_sub_target_met": True,
+        "subscribers": None,
+        "ypp_sub_target_met": None,
         "target_watch_hours": 4000,
+        "channel_analytics_status": "not queried by this repository-local audit",
         "zero_dollar_lock": cost_lock,
         "duplicate_shield": dup_shield,
         "schedule": {
@@ -172,14 +176,11 @@ def main() -> None:
             "next_post": CANONICAL_COMMUNITY_SCHEDULE[0].post_id,
         },
         "thumbnail_ab_testing": {
-            "status": "ONLINE",
-            "models": ["Variant A (Emotional)", "Variant B (Covenant)", "Variant C (Deep Sleep)"],
-            "scorer": "WCAG AAA Luminance + Mobile Downscale Acuity",
+            "status": "not verified by this repository-local audit",
+            "note": "Local thumbnail generation is not evidence of live YouTube A/B testing",
         },
         "metadata_localization": {
-            "status": "ONLINE",
-            "languages": ["es (Spanish)", "pt (Portuguese)"],
-            "quota_cost": "$0.00 (0 extra units)",
+            "status": "not verified by this repository-local audit",
         },
         "comments_engine": comments,
         "playlists": {
@@ -212,11 +213,12 @@ def main() -> None:
     print("=" * 74)
     print(f"Date & Time:     {friendly_date}")
     print(f"Channel:         {full_report['channel']}")
-    print(f"Subscribers:     {full_report['subscribers']} / 1,000 (✅ YPP Threshold Surpassed)")
-    print(f"Primary Goal:    4,000 Valid Public Watch Hours (Fast-Tracked)")
+    print("Subscribers:     not queried by this repository-local audit")
+    print("Primary Goal:    4,000 valid public watch hours (not measured here)")
     print("-" * 74)
-    print("FINANCIAL GOVERNANCE ($0.00 HARD COST LOCK):")
-    print(f"  • Monthly Spend:     ${cost_lock['monthly_cost_usd']:.2f} / month (LOCKED)")
+    print("FINANCIAL GOVERNANCE (ACCOUNT-SIDE CHECK REQUIRED):")
+    print("  • Monthly Spend:     unknown — billing is not inspectable from this repository")
+    print(f"  • Cost Controls:     {cost_lock['status']}")
     print(f"  • TTS Engine:        {cost_lock['tts_engine']} — {cost_lock['tts_cost']}")
     print(f"  • Audio Synthesis:   {cost_lock['music_bed_cost']}")
     print(f"  • Daily Quota Reset: {friendly_reset}")
@@ -238,18 +240,18 @@ def main() -> None:
     print(f"  • Series Playlists:  {playlist_report['playlists_synced']} official autoplay series verified")
     print(f"  • Video Placements:  {playlist_report['videos_assigned']} mapped to series for max session time")
     print("-" * 74)
-    print("COMMUNITY TAB & CTR SCORING ENGINES:")
-    print(f"  • Community Posts:   {len(CANONICAL_COMMUNITY_SCHEDULE)} liturgical polls/devotionals scheduled")
-    print(f"  • Rendered Cards:    {len(comm_manifests)} square glassmorphic cards in content/community/")
-    print(f"  • Thumbnail Testing: A/B/C Scorer Online (WCAG AAA Contrast + Mobile Edge Acuity)")
-    print(f"  • Localizations:     Spanish (es) & Portuguese (pt) Active ($0.00 extra cost)")
+    print("COMMUNITY TAB & THUMBNAIL STATUS:")
+    print(f"  • Community Posts:   {len(CANONICAL_COMMUNITY_SCHEDULE)} scheduled entries")
+    print(f"  • Rendered Cards:    {len(comm_manifests)} local manifests")
+    print("  • Live A/B Testing:  not verified by this local audit")
+    print("  • Localized Metadata: not verified by this local audit")
     print("-" * 74)
     print("COMMENT ENGAGEMENT & PASTORAL CARE:")
     print(f"  • Cadence:           3-Pulse Cadence (8:14am, 4:14pm, 8:14pm)")
     print(f"  • Replied Ledger:    {comments['historical_replies_recorded']} comments recorded")
     print(f"  • Engine Readiness:  {'ONLINE' if comments['engine_ready'] else 'OFFLINE'}")
     print("=" * 74)
-    print("[+] Autonomous Studio Health: 100% OPTIMAL. READY FOR HEADLESS EXECUTION.\n")
+    print("[i] Local audit complete. External billing, channel analytics, GitHub scheduler delivery, and actual YouTube publication were not verified.\n")
 
 
 if __name__ == "__main__":

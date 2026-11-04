@@ -107,7 +107,7 @@ def classify(sentence: str) -> tuple[bool, list[str]]:
     # Proper nouns: a named entity is a claim about the world. Consecutive capitals are one
     # name, so "Wall Street" surfaces as itself rather than "Wall, Street". A lone capital
     # at index 0 is ambiguous — that is just sentence grammar — but two capitals at index 0
-    # is almost certainly a name ("Lehman Brothers"), so those are kept.
+    # is almost certainly a name (for example, "King David"), so those are kept.
     names: list[str] = []
     run: list[str] = []
     run_start = 0

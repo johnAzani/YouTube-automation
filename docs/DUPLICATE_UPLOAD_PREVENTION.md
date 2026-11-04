@@ -3,7 +3,7 @@
 **Channel Identity:** *The Secret Place* (`@TheSecretPlace`) — Sacred Scripture, Bedtime Prayer & Faith Contemplation Studio  
 **Target Invariant:** Zero Duplicate Uploads · Zero Unintentional Releases · Permanent Channel Cleanliness  
 **Associated Code:** `pipeline/upload.py`, `pipeline/short_release.py`, `pipeline/run.py`, `scripts/cleanup_duplicate_shorts.py`, `.github/workflows/produce.yml`  
-**Governance Invariant:** Permanent $0.00 / month hard cost lock (`docs/ZERO_DOLLAR_LOCK.md`)
+**Governance Invariant:** $0 operating-cost target (provider billing must be disabled) (`docs/ZERO_DOLLAR_LOCK.md`)
 
 ---
 

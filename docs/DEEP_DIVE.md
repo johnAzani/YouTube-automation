@@ -71,7 +71,7 @@ This is the #1 reason unattended YouTube uploaders die in week two.
 
 | Audience country | Typical long-form RPM | vs US |
 |---|---|---|
-| United States | **$8–$18** (finance up to $25–30) | 1× |
+| United States | **$8–$18** (illustrative range only; prayer-channel RPM varies by audience and season) | 1× |
 | United Kingdom / Canada / Australia | $6–$14 | 0.7–0.9× |
 | South Africa | $1–$4 | 0.2–0.4× |
 | **Nigeria** | **$0.30–$2** (often $0.50–1) | **0.05–0.15×** |
@@ -89,7 +89,7 @@ Implications (these are strategy decisions, not footnotes):
 3. If a video unexpectedly pops in a low-RPM region: don't chase it — algorithm
    diversification across geographies is normal.
 
-### 2.2 Revenue scenario model (ads only, one channel, history/science niche, $5–8 RPM)
+### 2.2 Revenue scenario model (ads only, one faith-and-prayer channel; actual RPM varies and is not guaranteed)
 
 | Scenario | Month 6 | Month 12 | Month 24 | What it assumes |
 |---|---|---|---|---|
@@ -127,8 +127,8 @@ Plan for the middle; treat the tail as tail. The ₦0 infrastructure is what mak
 | Super Thanks / Memberships | Expanded YPP (500 subs) | Small ($5–50/mo early) but real proof-of-revenue. |
 | **Mid-roll ads** | 8+ min videos | Our 8–12 min target exists for this. |
 | Sponsorships | ~10K+ views/video | Market rate ≈ **$15–30 CPM per integration** (e.g. 50K views × $20 = ~$1K per dedicated mention). |
-| Affiliate links | From month 3–6 | Amazon Associates (free), software programs (20–40% recurring), finance ($50–200/signup — only in non-advisory framing). |
-| Digital product | From ~month 9 | PDF research packs / courses; Gumroad free tier. |
+| Prayer products | As available | Voluntary Selar offerings, prayer journal, and offline bedtime sanctuary audio; never promise spiritual or financial outcomes. |
+| Digital product | Existing catalog | Prayer journal PDF and offline bedtime sanctuary audio are offered through Selar. |
 
 ### 2.5 Getting the money to Nigeria (AdSense)
 

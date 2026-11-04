@@ -2,7 +2,7 @@
 
 Synthesizes high-volume YouTube search autocomplete terms, pain-point keywords,
 and liturgical prayer queries to maximize algorithmic recommendation velocity
-and Google Search indexing under the permanent $0.00 / month cost lock.
+and Google Search indexing under the $0 operating-cost target (provider billing must be disabled).
 
 Eliminates guesswork in video tagging and title authoring by aligning content
 directly with what viewers in distress and seeking sleep prayer actually search.

@@ -2,7 +2,7 @@
 
 Funnels fast top-of-funnel YouTube Shorts viewers directly into full-length
 Deep-Dive and Bedtime Sleep Sanctuary videos to accelerate valid public watch hours
-toward the 4,000-hour YPP monetization bar under the permanent $0.00 cost lock.
+toward the 4,000-hour YPP monetization bar under the $0 operating-cost target (provider billing must be disabled).
 
 Key Capabilities:
   1. Bidirectional mapping between Short editions and Longform Deep-Dive masters.

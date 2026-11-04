@@ -183,8 +183,6 @@ def ledger_files(ledger: dict) -> dict:
 
 def build_entries(previous: dict) -> tuple[list[dict], list[dict]]:
     """Return (entries, findings). `findings` lists drift between ledger and directory."""
-    from tools.make_plates import ensure_plates
-    ensure_plates()
     prev_by_sha = {str(e.get("sha256")): e for e in previous.values()}
     entries, findings = [], []
     on_disk = sorted(p for p in IMG_DIR.iterdir()

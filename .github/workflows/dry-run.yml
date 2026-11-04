@@ -5,8 +5,8 @@ name: Dry-run pipeline (CI proof)
 # History (read before "simplifying" this file):
 #   The previous version ran only `pipeline.run --dry-run` on `content/queue/*.md | head -n1`
 #   with `ENABLE_KEYLESS_SOURCES=0`. That combination cannot pass:
-#     1. head -n1 selected an out-of-niche `niche: history` draft, so
-#        `pipeline.run::_validate_finance_niche` raised before a frame was rendered; and
+#     1. head -n1 selected a draft outside the prayer channel niche, so
+#        `pipeline.run::_validate_channel_niche` refused an out-of-channel script before rendering; and
 #     2. with keyless sources off AND no Pexels/Pixabay secrets, `fetch_scene_assets` has no
 #        provider left, and `pipeline/run.py` hard-fails rather than substituting a title card.
 #   The repo sat red. See MAINTENANCE.md §2.
@@ -111,11 +111,11 @@ jobs:
       # action's header for the 2026-10-23 job-timeout this replaces.
       - uses: ./.github/actions/setup-render-deps
 
-      - name: Render long-form deep dive (Enron, ~115s @ 720p)
-        run: python tools/deep_dive.py enron
+      - name: Render Psalm 91 long-form prayer (720p)
+        run: python tools/deep_dive.py psalm91
 
-      - name: Render vertical Short (Enron, 9:16)
-        run: python tools/shorts.py short-enron
+      - name: Render Psalm 91 vertical Short (9:16)
+        run: python tools/shorts.py short-psalm91
 
       # Assert the renders are real media, not zero-byte stubs.
       - name: Verify output is valid video with an audio track
@@ -133,7 +133,7 @@ jobs:
                 | sed 's/.* //' | tr 'A-Z' 'a-z'
             fi
           }
-          for f in social/deep-dive-enron.mp4 social/short-enron.mp4; do
+          for f in social/deep-dive-psalm91.mp4 social/short-psalm91.mp4; do
             test -s "$f" || { echo "::error::$f missing or empty"; exit 1; }
             streams="$(probe_streams "$f")"
             echo "$streams" | grep -q video || { echo "::error::$f has no video stream"; exit 1; }
@@ -144,7 +144,7 @@ jobs:
       # The source ledger is the monetization audit trail (docs/ASSET_SOURCING.md).
       - name: Verify per-scene source ledger
         run: |
-          for f in output/deep-stock/enron/scene-sources.json output/short-stock/short-enron/scene-sources.json; do
+          for f in output/deep-stock/psalm91/scene-sources.json output/short-stock/short-psalm91/scene-sources.json; do
             test -s "$f" || { echo "::error::$f missing"; exit 1; }
             python - "$f" <<'PY'
           import json, sys
@@ -162,8 +162,8 @@ jobs:
           name: offline-render-${{ github.run_id }}
           path: |
             social/*.mp4
-            output/deep-stock/enron/scene-sources.json
-            output/short-stock/short-enron/scene-sources.json
+            output/deep-stock/psalm91/scene-sources.json
+            output/short-stock/short-psalm91/scene-sources.json
           retention-days: 1
 
   # ---------------------------------------------------------------------------
@@ -205,14 +205,14 @@ jobs:
       # Pick an IN-NICHE job explicitly rather than `head -n1`. The unit-test guard
       # already guarantees every queued job is in-niche; this makes the selection
       # independent of filename ordering anyway.
-      - name: Select an in-niche queue job
+      - name: Select a prayer-channel queue job
         id: pick
         run: |
           JOB=$(python - <<'PY'
           import contextlib, sys
           from pathlib import Path
           from pipeline.script_doc import parse_script
-          from pipeline.run import _validate_finance_niche, select_jobs
+          from pipeline.run import _validate_channel_niche, select_jobs
           with contextlib.redirect_stdout(sys.stderr):
               nxt = select_jobs(False, None, True)
           if nxt:
@@ -223,7 +223,7 @@ jobs:
                       continue
                   doc = parse_script(p)
                   try:
-                      _validate_finance_niche(doc)
+                      _validate_channel_niche(doc)
                   except RuntimeError:
                       continue
                   print(p)
@@ -231,7 +231,7 @@ jobs:
           PY
           )
           if [ -z "$JOB" ]; then
-            echo "::warning::no in-niche job in content/queue/ — nothing to render"
+            echo "::warning::no prayer-channel job in content/queue/ — nothing to render"
             echo "job=" >> "$GITHUB_OUTPUT"
           else
             echo "job=$JOB" >> "$GITHUB_OUTPUT"

@@ -27,25 +27,23 @@ class ClaimExtractionTests(unittest.TestCase):
     def test_spelled_out_figure_is_a_claim(self):
         """The narration spells numbers out for TTS, so digit-matching would find nothing."""
         ok, reasons = factcheck.classify(
-            "By the end of two thousand and seven Lehman was running roughly thirty-one "
-            "dollars of assets for every dollar of shareholder equity.")
+            "Psalm ninety-one contains sixteen verses, and the opening verse names the Most High as a refuge.")
         self.assertTrue(ok)
         self.assertIn("figure", reasons)
 
     def test_date_is_a_claim(self):
-        ok, reasons = factcheck.classify("On the morning of September fifteenth the firm filed.")
+        ok, reasons = factcheck.classify("On the morning of September fifteenth the night prayer was spoken.")
         self.assertTrue(ok)
         self.assertIn("date", reasons)
 
     def test_plain_sentence_with_no_figure_or_name_is_not_a_claim(self):
-        ok, reasons = factcheck.classify("That is a repurchase agreement, and in substance "
-                                         "it is a secured loan.")
+        ok, reasons = factcheck.classify("The room grew quiet, and in time the heart began to rest.")
         self.assertFalse(ok, f"expected no reasons, got {reasons}")
 
     def test_sentence_initial_name_is_kept_when_it_is_clearly_a_name(self):
-        _, reasons = factcheck.classify("Lehman Brothers had survived the Civil War.")
+        _, reasons = factcheck.classify("King David prayed for refuge during the night.")
         named = [r for r in reasons if r.startswith("named:")]
-        self.assertIn("Lehman Brothers", named[0],
+        self.assertIn("King David", named[0],
                       "two capitals at index 0 is a name, not just sentence grammar")
 
     def test_lone_sentence_initial_capital_is_not_treated_as_a_name(self):
@@ -53,20 +51,20 @@ class ClaimExtractionTests(unittest.TestCase):
         self.assertFalse(ok, f"a normal capitalised first word is not a claim: {reasons}")
 
     def test_multiword_names_group_instead_of_splitting(self):
-        _, reasons = factcheck.classify("It moved to New York and became a name on Wall Street.")
+        _, reasons = factcheck.classify("It spoke of Mount Zion and remembered King David.")
         named = [r for r in reasons if r.startswith("named:")]
         self.assertTrue(named)
-        self.assertIn("New York", named[0])
-        self.assertIn("Wall Street", named[0])
+        self.assertIn("Mount Zion", named[0])
+        self.assertIn("King David", named[0])
 
     def test_possessive_is_trimmed_without_mangling_the_word(self):
         """Regression: an earlier version used `rstrip("'s")`, which strips a character set
-        and would have turned "Lehman Brothers" into "Lehman Brother"."""
-        _, reasons = factcheck.classify("Lehman Brothers had survived the Civil War.")
+        and would have altered a multiword biblical name."""
+        _, reasons = factcheck.classify("King David prayed for refuge during the night.")
         named = [r for r in reasons if r.startswith("named:")]
         self.assertTrue(named)
-        self.assertIn("Lehman Brothers", named[0])
-        self.assertNotIn("Lehman Brother,", named[0])
+        self.assertIn("King David", named[0])
+        self.assertNotIn("King Davi,", named[0])
 
 
 class WorksheetTests(unittest.TestCase):
@@ -110,15 +108,14 @@ class WorksheetTests(unittest.TestCase):
                               "worksheet must embed the source sha256 so staleness is visible")
 
     def test_worksheet_lists_the_jobs_own_declared_sources(self):
-        doc = parse_script(QUEUE_DIR / "0003-how-lehman-brothers-died.md")
+        doc = parse_script(QUEUE_DIR / "0011-psalm-27-the-lord-is-my-light-and-my-salvation--fe.md")
         text = (OUT_DIR / f"{doc.id}-{doc.slug}.md").read_text(encoding="utf-8")
         for source in factcheck._sources(doc):
             self.assertIn(source, text, f"declared source missing from worksheet: {source}")
-        self.assertIn("Valukas", text, "the Lehman examiner report should be listed first")
 
     def test_no_substantive_sentence_is_silently_dropped(self):
         """The extractor is deliberately dumb, so it misses claims with no figure, date or
-        proper noun — "a repo is in substance a secured loan" is load-bearing and has none.
+        proper noun — a line about quieting the mind can still be important without a named entity.
         Those must still appear, as a reading prompt, or a human could tick every box and
         never see them."""
         for path in self.jobs:
@@ -145,7 +142,7 @@ class WorksheetTests(unittest.TestCase):
 
     def test_regeneration_is_refused_without_force(self):
         """A filled-in worksheet is human work; the tool must not clobber it silently."""
-        doc = parse_script(QUEUE_DIR / "0003-how-lehman-brothers-died.md")
+        doc = parse_script(QUEUE_DIR / "0011-psalm-27-the-lord-is-my-light-and-my-salvation--fe.md")
         dest = factcheck.out_path(doc)
         original = dest.read_text(encoding="utf-8")
         marker = "\n- [x] I checked this one\n"

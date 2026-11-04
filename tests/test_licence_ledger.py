@@ -1,11 +1,9 @@
 """The `image-search/` licence ledger must exist, match the bytes, and be believed.
 
-`tools/deep_dive.py` and `tools/shorts.py` fall back to these 49 authored stills whenever a
-stock provider returns nothing. Before the ledger, both wrote one blanket string into their
-credits — *"source/license metadata unavailable"* — for every still, which hid the fact that
-10 of them carry embedded Getty Images rights metadata and 3 more an "All Rights Reserved"
-photographer copyright. `scripts/licence_ledger.py` derives the real status from each file's
-own metadata; these tests keep the ledger honest and keep the renderers reading it.
+Production renderers must only use cleared assets or recorded free-source acquisitions.
+Historical rights-encumbered and unverified files remain as isolated audit fixtures so the
+ledger tests can prove that embedded rights claims, corrupt media, and missing provenance are
+rejected rather than silently treated as licensed.
 """
 from pathlib import Path
 import subprocess
@@ -28,8 +26,6 @@ def _stills_on_disk() -> list[Path]:
 class LicenceLedgerTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        from tools.make_plates import ensure_plates
-        ensure_plates()
         cls.ledger = licences.load_ledger(use_cache=False)
         cls.stills = _stills_on_disk()
 
@@ -105,7 +101,7 @@ class LicenceLedgerTests(unittest.TestCase):
     def test_unsafe_and_uncleared_are_two_distinct_tiers(self):
         """`unsafe_stills` is the must-not-render list; `uncleared_stills` is the honest
         answer to "may I monetize this?". They must not be conflated: 35 of the 49 stills
-        are `unverified`, and a 35-line warning would be scrolled past."""
+        are `unverified`, and a warning for every fixture would be scrolled past."""
         used = ["andrew-fastow-enron-cfo-trial-photo-2.jpg",       # encumbered
                 "johnstown-flood-1889-ruins-destruction-h-1.jpg",  # unverified
                 "johnstown-flood-1889-ruins-destruction-h-5.png"]  # corrupt

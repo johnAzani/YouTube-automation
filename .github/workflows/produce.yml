@@ -32,7 +32,7 @@ on:
         required: false
         default: ""
       short:
-        description: "Authored 9:16 Short key to render & upload (e.g. short-enron)"
+        description: "Authored 9:16 Short key to render & upload (e.g. short-psalm91)"
         required: false
         default: ""
       dry_run:

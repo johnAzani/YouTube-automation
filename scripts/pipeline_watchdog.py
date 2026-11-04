@@ -453,7 +453,7 @@ def cleanup_stale_issues(report: Report, dry_run: bool = False) -> list[int]:
             reason = "Closing synthetic test/simulation fixture issue (`c4`/`c_sim_6`); hermetic test guards are active."
         elif title.startswith("Release ticket: "):
             t_clean = title.removeprefix("Release ticket: ").strip()
-            if t_clean in pub_titles or "Enron" in t_clean:
+            if t_clean in pub_titles:
                 reason = "Closing superseded release ticket (video is already published publicly on YouTube)."
         elif report.healthy and title.startswith(("Release failed", "Release died inside")):
             reason = "Closing resolved release-failure report (pipeline and queues are healthy)."

@@ -2,7 +2,7 @@
 
 Fast-tracks 4,000 Valid Public Watch Hours for the YouTube Partner Program (YPP)
 by autonomously compiling 1-Hour, 3-Hour, and 8-Hour bedtime scripture sanctuaries
-under the permanent $0.00 / month cost lock.
+under the $0 operating-cost target (provider billing must be disabled).
 
 A single viewer sleeping through an 8-hour compilation logs 8 valid watch hours.
 With procedural 432 Hz Solfeggio soundscapes, Delta binaural entrainment, and

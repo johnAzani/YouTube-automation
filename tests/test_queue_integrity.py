@@ -1,9 +1,9 @@
 """Queue-integrity regressions.
 
 These tests exist because of a real outage: commit 333767c added
-`_validate_finance_niche` to `pipeline/run.py`, but the two `niche: history` drafts stayed in
-`content/queue/`. `dry-run.yml` selected `content/queue/*.md | head -n1`, so every CI run
-crashed on the niche gate before rendering a single frame. The repo sat red.
+`_validate_channel_niche` to `pipeline/run.py`, but out-of-channel drafts stayed in
+`content/queue/`. Every job in the scheduler glob must now match The Secret Place
+faith-and-prayer niche before it can render or upload.
 
 `test_every_queued_job_is_in_niche` is the guard that makes that class of bug impossible:
 anything the scheduler can pick up must already satisfy the gate it will be run against.
@@ -11,7 +11,7 @@ anything the scheduler can pick up must already satisfy the gate it will be run 
 from pathlib import Path
 import unittest
 
-from pipeline.run import _validate_finance_niche
+from pipeline.run import _validate_channel_niche
 from pipeline.script_doc import ScriptDoc, parse_script
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -37,7 +37,7 @@ class QueueIntegrityTests(unittest.TestCase):
             doc = parse_script(path)
             with self.subTest(job=path.name):
                 try:
-                    _validate_finance_niche(doc)
+                    _validate_channel_niche(doc)
                 except RuntimeError as exc:
                     self.fail(f"{path.name} would fail the niche gate in CI: {exc}")
 
@@ -48,7 +48,7 @@ class QueueIntegrityTests(unittest.TestCase):
             with self.subTest(job=path.name):
                 refused = False
                 try:
-                    _validate_finance_niche(doc)
+                    _validate_channel_niche(doc)
                 except RuntimeError:
                     refused = True
                 if refused:

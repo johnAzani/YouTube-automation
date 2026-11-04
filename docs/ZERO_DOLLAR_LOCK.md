@@ -1,80 +1,55 @@
-# Architectural Guarantee: $0.00 / Month Permanent Free-Tier Lock
+# The Secret Place: zero-cost operating contract
 
-***
+This document describes what the repository can enforce and what must be locked in the provider accounts. It is not a claim that the automation can inspect Google billing settings or guarantee that a third-party free tier will remain unchanged forever.
 
-## 1. Executive Commitment
+## Non-negotiable target
 
-**The Secret Place** YouTube automation and editorial production pipeline is permanently and architecturally locked at **$0.00 / month**. Under no circumstances will any component require, incur, or transition to a paid subscription, credit card charge, or billable cloud tier.
+**Operating target: $0.00.** Do not add paid APIs, paid SaaS, paid Actions runners, paid fallback voices, paid stock, or paid hosting. When a quota or prerequisite blocks a release, fail closed and wait; never switch to a paid service to keep the schedule.
 
-If any external API quota limit is reached, the system **fails closed**: jobs pause automatically and resume only after free quotas refresh. It will never fall back to a paid tier.
+A source-code repository cannot see whether the Google Cloud project behind `GEMINI_API_KEY` has billing enabled. Therefore, the $0 guarantee is conditional on the account-side setting below. Do not enable billing on the project used for this channel. If its free quota is exhausted, the request must fail rather than become billable. The workflow cannot independently verify that project setting.
 
----
+## What the active production path uses
 
-## 2. Subsystem-by-Subsystem Zero-Cost Audit
+| Stage | Current implementation | Cost boundary / constraint |
+|---|---|---|
+| Long-form and Short narration | Google Gemini TTS, model `gemini-3.8-flash-tts`, voice Charon | Uses the configured API project. Its free limits are project/model/tier-specific and can change. The latest production failure reported **10 TTS requests/day** exhausted; do not treat older generic Gemini limits as TTS limits. |
+| Queue writing / expansion | Gemini text API | Also quota-limited; it is a separate API workload from TTS. Queue repair is bounded and production can continue from existing approved scripts if the brain is unavailable. |
+| Video rendering and alignment | FFmpeg and local CPU alignment on GitHub Actions runners | No third-party render/transcription SaaS. Public-repository runner eligibility and GitHub policy remain external dependencies. |
+| Visuals | Existing licensed asset catalogue and keyless/free sources, with the source/licence ledger gate | No paid stock fallback. A missing or unverified source must fail or use an already-approved local plate. |
+| Upload | YouTube Data API with the channel's OAuth credentials | YouTube API quota is free but finite and can be changed or exhausted. No paid upload fallback. |
+| Workflow, source, and review pages | GitHub Actions and GitHub Pages | This repository relies on public-repository free allowances and current GitHub terms. |
 
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│                   PERMANENT $0.00 ZERO-COST PIPELINE                   │
-├─────────────────────────┬──────────────────────┬───────────────────────┤
-│ Subsystem               │ Free Tier Limit      │ Fail-Closed Mechanism │
-├─────────────────────────┼──────────────────────┼───────────────────────┤
-│ Google Gemini Voice TTS │ 15 RPM / 1,500 RPD   │ Automatic 429 backoff │
-│ Microsoft Edge Voice    │ Free Neural Stream   │ Paragraph chunking    │
-│ Visual Plates & B-Roll  │ Public Domain / CC0  │ SHA-256 Ledger gate   │
-│ Audio DSP Soundscapes   │ 100% Procedural DSP  │ SciPy/NumPy synthesis │
-│ Cloud Compute & CI/CD   │ Free GitHub Runners  │ Public repo unlimited │
-│ YouTube Data API v3     │ 10,000 units / day   │ Daily quota pause     │
-│ Hosting & Review Portal │ Free GitHub Pages    │ Static build delivery │
-└─────────────────────────┴──────────────────────┴───────────────────────┤
-│ TOTAL MONTHLY COST      │ $0.00 / month FOREVER│ ZERO FINANCIAL RISK   │
-└─────────────────────────┴──────────────────────┴───────────────────────┘
-```
+The old generic figures sometimes quoted for Gemini (for example, 1,500 requests/day) are **not** evidence of the TTS allowance. The active model's quota must be read from its API error/Google project quota page. No exact daily publishing volume is guaranteed by a free-tier request count: long-form narration may consume multiple calls, Shorts consume calls when their audio is not cached, and transient failures may consume attempts.
 
----
+## Required account-side lock (manual, cannot be proved by CI)
 
-## 3. Subsystem Breakdown
+1. Keep the API key on a Google AI Studio / Generative Language API project with **billing disabled**. Do not attach a billing account or enable Vertex AI billing for this key.
+2. Restrict the key to the APIs and environments actually needed. Never put it in repository content, logs, fixtures, or a commit; GitHub Actions receives it through `GEMINI_API_KEY`.
+3. If the provider console shows the project is billable or its status is uncertain, remove the key from production secrets and pause publishing until the account is checked. A repository variable such as `ZERO_DOLLAR_MODE=true` cannot prove billing is disabled.
+4. Keep optional Pexels/Pixabay keys absent unless their free-plan terms and limits have been reviewed. Missing optional asset keys must not trigger a paid fallback.
+5. Do not add a paid fallback model, voice, rendering service, runner, storage service, or stock source in a future change.
 
-### A. Google Gemini Brain & Voiceover Synthesis ($0.00 Hard Lock)
-1. **Google Gemini Free Tier Invariant**:
-   * Operates strictly within Google AI Studio's **Free Tier** ($0.00 / month forever).
-   * Free limits: **15 Requests Per Minute (RPM)**, **1,500 Requests Per Day (RPD)**, **1,000,000 Tokens Per Minute (TPM)**.
-   * Under no circumstances will any call transition to Vertex AI billable tiers, pay-as-you-go billing accounts, or credit card charges.
-2. **Locked-in Daily Quota Reset & Auto-Continuation**:
-   * Google's daily free tier quota resets daily at **midnight Pacific Time** (08:00 UTC PST / 07:00 UTC PDT).
-   * If the daily quota finishes (HTTP 429 / `RESOURCE_EXHAUSTED`), `pipeline/quota_handler.py` catches `GeminiQuotaExceededError`, calculates the exact next reset timestamp (`calculate_next_quota_reset_utc()`), and safely marks the queue job as `status: quota_paused` with `quota_reset_utc: <ISO 8601>`.
-   * **Seamless Auto-Resume**: The production cron runs twice daily (`06:14 UTC` and `14:14 UTC`). When `now_utc >= quota_reset_utc`, `select_jobs` in `pipeline/run.py` and `select_next_queued_short` in `pipeline/short_release.py` automatically detect that the quota has refreshed, unpause the job to `status: approved`, and seamlessly continue rendering and uploading with the permanent `Charon` voice at **$0.00**.
-   * **Voice Integrity Invariant**: The pipeline never falls back to an unapproved voice when Gemini quota finishes. It fails closed, pauses, and resumes with the official Google voice (`Charon`) at the next reset.
-3. **Microsoft Edge-TTS (`edge-tts`)**:
-   * Secondary zero-cost fallback for dev rendering; 100% free with no credit card required.
+## Fail-closed behavior in code
 
-### B. Procedural Ambient Soundscapes ($0.00)
-* Soundscapes, score beds, and harmonic prayer drones are synthesized in mathematical code via `tools/score.py` using **SciPy** and **NumPy** DSP sine/harmonic wave generators.
-* Zero commercial music licenses, zero royalty payments, and 0.00% Content ID copyright claims.
+- Gemini TTS quota errors pause the affected long-form item or Short manifest with a reset timestamp. They do not switch production narration to Edge TTS or a different paid model.
+- A shared circuit breaker now checks both queue types before every Gemini TTS request. A live TTS quota pause for either format blocks another narration request until the reset; this prevents the next Short/long-form job from repeatedly probing an exhausted allowance.
+- Finished chunk audio is cached/restored between production runs, so a resumed long-form narration does not intentionally repay already-completed chunks. Cache availability is best-effort, not guaranteed storage.
+- YouTube quota failures pause uploads; they do not change provider or privacy settings.
+- The misleading, unused `ZERO_DOLLAR_MODE` config field was removed. No repository flag can attest that an external billing account is disabled.
 
-### C. Visual Plates & Stock Media ($0.00)
-* All visual assets are sourced strictly from verified **Public Domain** and **CC0 Creative Commons** archives:
-  * United States Geological Survey (USGS) landscape archives.
-  * National Oceanic and Atmospheric Administration (NOAA) cloud and ray photography.
-  * National Park Service (NPS) alpine lake scans.
-  * NASA Astronomy Picture of the Day (APOD) and European Southern Observatory (ESO) night sky archives.
-  * Metropolitan Museum of Art Open Access collection.
-  * Wikimedia Commons and Library of Congress public domain scans.
-* **Fail-Closed Gate**: `pipeline/licences.py` inspects SHA-256 hashes against `image-search/LICENSES.yml`. Any unverified or proprietary still (e.g. Getty Images) causes the build to fail immediately.
+## Operating expectations
 
-### D. Cloud Video Assembly & Ingestion Compute ($0.00)
-* GitHub Actions provides **unlimited free compute minutes** for public repositories on standard `ubuntu-latest` 4-core runners.
-* Video assembly runs FFmpeg locally inside the runner; zero third-party video-rendering cloud SaaS fees.
+- The production workflow has three scheduled slots per day at 06:14, 14:14, and 19:14 UTC, but one or more may publish nothing because of quota, missing credentials, a failed runner, or an empty eligible queue.
+- A quota reset is not a promise that the next slot will upload. The queue still needs an approved eligible script, valid audio/rendering, and a successful YouTube upload.
+- The latest observed production failure (run `41743246072`, 2026-11-04) exhausted the Gemini TTS daily allowance. The run paused a long-form item until the returned reset time and uploaded nothing. This is the correct $0 behavior, not a missed guaranteed upload.
+- Free-tier limits and platform policies can change. Recheck the provider's own console and public terms periodically; code can prevent paid fallback but cannot freeze another company's free plan.
 
-### E. YouTube Data API v3 ($0.00)
-* YouTube provides every Google Cloud project with a default **10,000 units/day free quota**.
-* Standard `videos.insert` upload consumes 1,600 units. The pipeline uploads 1–2 videos per day ($\sim 3,200$ units), remaining well within the free limit.
-* `pipeline/upload.py` monitors quota errors (`QuotaExceededError`) and pauses jobs until 08:00 UTC (midnight Pacific) without incurring overage fees.
+## Review checklist for future changes
 
-### F. Hosting & Preview Portal ($0.00)
-* The showcase review portal (`https://johnazani.github.io/YouTube-automation/`) is hosted for free on **GitHub Pages**.
-
----
-
-## 4. Operational Invariant
-
-> **Rule:** No PR or dependency may introduce a paid SaaS subscription, billing account requirement, or external credit card integration. The channel will remain 100% free to operate indefinitely.
+- [ ] No paid API, paid subscription, paid Actions runner, or billable fallback is introduced.
+- [ ] Every new provider call has a bounded timeout, quota/transient classification, and fail-closed path.
+- [ ] Quota state is shared across formats that use the same provider/model.
+- [ ] TTS chunk/audio cache survives the common retry path without stale-text reuse.
+- [ ] Uploads are verified and recorded; retries cannot knowingly duplicate a live video.
+- [ ] Documentation states observed/project-specific limits, not generic quota figures as guarantees.
+- [ ] The account-side billing-disabled prerequisite remains true; repository code cannot attest it.

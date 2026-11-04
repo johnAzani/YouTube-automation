@@ -2,7 +2,7 @@
 
 Generates precise sleep timer intervals (e.g. 15-min drift, 30-min peace, 60-min delta rest),
 chapter timestamps, and Schema.org structured metadata for Google Search Key Moments
-under the permanent $0.00 / month cost lock.
+under the $0 operating-cost target (provider billing must be disabled).
 """
 from __future__ import annotations
 

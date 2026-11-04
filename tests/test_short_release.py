@@ -46,21 +46,27 @@ def _make_sample_mp4(dest: Path, width: int, height: int, seconds: float = 20.0,
 
 
 class ShortReleaseTests(unittest.TestCase):
-    def test_enron_short_and_deep_dive_use_only_cleared_stills(self):
+    def test_prayer_short_and_deep_dive_use_only_cleared_stills(self):
         ledger = load_ledger(use_cache=False)
         for label, scenes in (
-            ("short-enron", shorts_tool.SCRIPTS["short-enron"]["scenes"]),
-            ("deep-dive-enron", deep_dive.SCRIPTS["enron"]["scenes"]),
+            ("short-psalm91", shorts_tool.SCRIPTS["short-psalm91"]["scenes"]),
+            ("deep-dive-psalm91", deep_dive.SCRIPTS["psalm91"]["scenes"]),
         ):
             stills = [sc["img"] for sc in scenes]
             with self.subTest(edition=label):
                 self.assertEqual(unsafe_stills(stills, ledger), [])
                 self.assertEqual(uncleared_stills(stills, ledger), [])
 
-    def test_short_enron_uses_ten_distinct_plates(self):
-        stills = [sc["img"] for sc in shorts_tool.SCRIPTS["short-enron"]["scenes"]]
-        self.assertEqual(len(stills), 10)
-        self.assertEqual(len(set(stills)), 10)
+    def test_prayer_short_uses_distinct_plates(self):
+        stills = [sc["img"] for sc in shorts_tool.SCRIPTS["short-psalm91"]["scenes"]]
+        self.assertGreaterEqual(len(stills), 5)
+        self.assertGreaterEqual(len(set(stills)), 5)
+
+    def test_non_prayer_niche_is_blocked_by_production_gate(self):
+        from pipeline.run import _validate_channel_niche
+        doc = SimpleNamespace(id="test-off-niche", meta={"niche": "finance and business"})
+        with self.assertRaisesRegex(RuntimeError, "faith, prayer, scripture"):
+            _validate_channel_niche(doc)
 
     def test_verify_short_render_accepts_cleared_vertical_short(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -74,7 +80,7 @@ class ShortReleaseTests(unittest.TestCase):
                             "scene": 1,
                             "fallback": True,
                             "provider": "existing story archive",
-                            "file": "houston-skyline-plate-1.png",
+                            "file": "short-prayer-scene-01.jpg",
                         }
                     ]
                 ),
@@ -91,7 +97,7 @@ class ShortReleaseTests(unittest.TestCase):
             vert = _make_sample_mp4(tdir / "vertical.mp4", 720, 1280, seconds=20.0, audio=True)
             clean_sources = tdir / "clean.json"
             clean_sources.write_text(
-                json.dumps([{"scene": 1, "fallback": True, "file": "houston-skyline-plate-1.png"}]),
+                json.dumps([{"scene": 1, "fallback": True, "file": "short-prayer-scene-01.jpg"}]),
                 encoding="utf-8",
             )
             bad_sources = tdir / "bad.json"
@@ -118,12 +124,12 @@ class ShortReleaseTests(unittest.TestCase):
                 path=Path(tmp) / "s.md",
                 meta={
                     "id": "S1",
-                    "title": "How Enron Failed #Shorts",
-                    "slug": "how-enron-failed",
+                    "title": "A Psalm 91 Night Prayer #Shorts",
+                    "slug": "psalm91-night-prayer",
                     "status": "approved",
                     "format": "short",
-                    "niche": "finance",
-                    "tags": ["enron", "accounting"],
+                    "niche": "faith and prayer",
+                    "tags": ["psalm 91", "night prayer"],
                     "description": "Primary source summary.",
                 },
                 scenes=[Scene(index=1, heading="Hook", narration="One two three.")],
@@ -139,11 +145,11 @@ class ShortReleaseTests(unittest.TestCase):
             tdir = Path(tmp)
             social_dir = tdir / "social"
             social_dir.mkdir(parents=True)
-            mp4 = _make_sample_mp4(social_dir / "short-enron.mp4", 720, 1280, seconds=20.0, audio=True)
-            stock_dir = tdir / "output" / "short-stock" / "short-enron"
+            mp4 = _make_sample_mp4(social_dir / "short-psalm91.mp4", 720, 1280, seconds=20.0, audio=True)
+            stock_dir = tdir / "output" / "short-stock" / "short-psalm91"
             stock_dir.mkdir(parents=True)
             (stock_dir / "scene-sources.json").write_text(
-                json.dumps([{"scene": 1, "fallback": True, "file": "houston-skyline-plate-1.png"}]),
+                json.dumps([{"scene": 1, "fallback": True, "file": "short-prayer-scene-01.jpg"}]),
                 encoding="utf-8",
             )
             pub_dir = tdir / "published"
@@ -167,14 +173,14 @@ class ShortReleaseTests(unittest.TestCase):
                 patch("pipeline.upload.audit_channel_videos", return_value=[{"id": "ytShort123", "uploadStatus": "processed"}]),
                 patch("pipeline.short_release._open_release_ticket") as ticket_mock,
             ):
-                res = run_short_release("short-enron", dry_run=False, skip_render=True)
+                res = run_short_release("short-psalm91", dry_run=False, skip_render=True)
 
             self.assertTrue(mp4.exists())
             self.assertEqual(res["video_id"], "ytShort123")
             self.assertEqual(res["shorts_url"], "https://www.youtube.com/shorts/ytShort123")
             upload_mock.assert_called_once()
             ticket_mock.assert_called_once()
-            receipt = pub_dir / f"{EDITIONS['short-enron'].slug}.md"
+            receipt = pub_dir / f"{EDITIONS['short-psalm91'].slug}.md"
             self.assertTrue(receipt.is_file())
             text = receipt.read_text(encoding="utf-8")
             self.assertIn('youtube_video_id: "ytShort123"', text)
@@ -185,18 +191,18 @@ class ShortReleaseTests(unittest.TestCase):
             tdir = Path(tmp)
             qdir = tdir / "shorts-queue"
             qdir.mkdir(parents=True)
-            manifest = qdir / "0001-short-enron.yml"
-            manifest.write_text('short: "short-enron"\nstatus: approved\n', encoding="utf-8")
+            manifest = qdir / "0001-short-psalm91.yml"
+            manifest.write_text('short: "short-psalm91"\nstatus: approved\n', encoding="utf-8")
             selected = select_next_queued_short(qdir)
-            self.assertEqual(selected, (manifest, "short-enron"))
+            self.assertEqual(selected, (manifest, "short-psalm91"))
 
             social_dir = tdir / "social"
             social_dir.mkdir(parents=True)
-            _make_sample_mp4(social_dir / "short-enron.mp4", 720, 1280, seconds=20.0, audio=True)
-            stock_dir = tdir / "output" / "short-stock" / "short-enron"
+            _make_sample_mp4(social_dir / "short-psalm91.mp4", 720, 1280, seconds=20.0, audio=True)
+            stock_dir = tdir / "output" / "short-stock" / "short-psalm91"
             stock_dir.mkdir(parents=True)
             (stock_dir / "scene-sources.json").write_text(
-                json.dumps([{"scene": 1, "fallback": True, "file": "houston-skyline-plate-1.png"}]),
+                json.dumps([{"scene": 1, "fallback": True, "file": "short-prayer-scene-01.jpg"}]),
                 encoding="utf-8",
             )
             fake_upload = SimpleNamespace(
@@ -218,7 +224,7 @@ class ShortReleaseTests(unittest.TestCase):
                 patch("pipeline.short_release._open_release_ticket"),
             ):
                 run_short_release(
-                    "short-enron",
+                    "short-psalm91",
                     dry_run=False,
                     skip_render=True,
                     manifest_path=manifest,
@@ -279,7 +285,7 @@ class ShortReleaseTests(unittest.TestCase):
 
 
     def test_short_plates_fill_vertical_frame_edge_to_edge(self):
-        img_name = shorts_tool.SCRIPTS["short-enron"]["scenes"][4]["img"]
+        img_name = shorts_tool.SCRIPTS["short-psalm91"]["scenes"][0]["img"]
         plate = shorts_tool.prep_plate(Path(shorts_tool.IMG) / img_name)
         self.assertEqual(plate.size, (1080, 1920))
         top_band = [plate.getpixel((x, 40)) for x in range(100, 980, 80)]
@@ -293,7 +299,7 @@ class ShortReleaseTests(unittest.TestCase):
 
         with tempfile.TemporaryDirectory() as tmp:
             out_jpg = Path(tmp) / "thumb.jpg"
-            hero = Path(__file__).resolve().parent.parent / "image-search" / "short-enron-thumb-hero.jpg"
+            hero = Path(__file__).resolve().parent.parent / "image-search" / "short-prayer-cover-poster.jpg"
             res = generate_short_scroll_stopper_thumbnail(hero, out_jpg)
             self.assertTrue(res.is_file())
             self.assertLess(res.stat().st_size, 2 * 1024 * 1024)

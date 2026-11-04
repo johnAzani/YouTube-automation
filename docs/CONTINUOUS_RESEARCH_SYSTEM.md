@@ -249,4 +249,4 @@ This plan is updated continuously through three automated and operational trigge
 2. **Post-Release Ingestion Trigger:** Following every YouTube upload (e.g. Job 0009), the release ticket logs performance, and the queue automatically stages the next scripture candidate from `SCRIPTURE_ROADMAP`.
 3. **Monthly Algorithmic Re-Indexing Trigger:** The editorial studio audits YouTube Creator Liaison policy announcements and search trend indices, tuning metadata and pacing to ensure continuous compliance and maximum reach.
 
-*All components operate under the permanent fail-closed $0.00 / month cost lock.*
+*All components operate under the $0 operating-cost target; account-side provider billing must be disabled.*
