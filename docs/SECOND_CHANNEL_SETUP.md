@@ -119,9 +119,9 @@ privacy / terms pages + `johnazani.github.io` authorized domain; logo
 deliberately left empty so verification is not triggered); Audience
 published — Publishing status **In production**, External, OAuth user cap
 1/100 (the "requires verification" banner is expected; verification is
-intentionally not submitted, same as Channel 1). Still outstanding:
-`PRAYER2_YOUTUBE_REFRESH_TOKEN` (§2c — retry OAuth Playground now that the
-app is In production) and `PRAYER2_GEMINI_API_KEY` (§2d).*
+intentionally not submitted, same as Channel 1); `PRAYER2_YOUTUBE_REFRESH_TOKEN`
+minted in OAuth Playground and added to GitHub secrets (owner screenshot
+2026-11-04). Still outstanding: only `PRAYER2_GEMINI_API_KEY` (§2d).*
 
 | Secret | Value |
 |---|---|
