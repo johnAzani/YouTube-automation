@@ -130,7 +130,7 @@ minted in OAuth Playground and added to GitHub secrets (owner screenshot
 | `PRAYER2_YOUTUBE_REFRESH_TOKEN` | Token from 2c, minted for The Morning Altar |
 | `PRAYER2_YOUTUBE_PLAYLIST_ID` | *(optional)* a Morning Altar playlist ID |
 | `PRAYER2_GEMINI_API_KEY` | Key from 2d |
-| `PRAYER2_YOUTUBE_CHANNEL_ID` | *(recommended, as a repository **Variable**)* the channel's `UC…` ID — Studio → Settings → Channel → Advanced. Activates the wrong-channel guard |
+| `PRAYER2_YOUTUBE_CHANNEL_ID` | *(recommended; repository **Variable** or Secret — workflows accept either)* the channel's `UC…` ID — Studio → Settings → Channel → Advanced, or youtube.com/account_advanced while switched to the channel. Activates the wrong-channel guard |
 
 Shared, no need to duplicate: `PEXELS_API_KEY`, `PIXABAY_API_KEY`, GitHub
 Actions minutes (public repo), ffmpeg, stock sources.
