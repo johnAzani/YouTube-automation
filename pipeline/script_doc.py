@@ -91,6 +91,29 @@ class ScriptDoc:
         return str(self.meta.get("slug", self.path.stem))
 
     @property
+    def channel(self) -> str:
+        """Target channel id (frontmatter `channel:`; default `secret-place`)."""
+        from .channels import channel_for_doc
+
+        return channel_for_doc(self.meta)
+
+    @property
+    def explicit_channel(self) -> str:
+        """Channel explicitly declared in frontmatter, or "" when undeclared.
+
+        Docs authored before channel support carry no `channel:` key; callers
+        that respect the ambient CONFIG channel (e.g. description building
+        during a channel-scoped workflow run) must use this so a missing
+        declaration doesn't silently masquerade as `secret-place`.
+        """
+        raw = str(self.meta.get("channel", "") or "").strip()
+        if not raw:
+            return ""
+        from .channels import normalize_channel_id
+
+        return normalize_channel_id(raw)
+
+    @property
     def status(self) -> str:
         return str(self.meta.get("status", "draft")).lower()
 

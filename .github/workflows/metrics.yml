@@ -13,6 +13,12 @@ on:
     workflows: ["Produce video"]
     types: [completed]
   workflow_dispatch:
+    inputs:
+      channel:
+        description: "Target channel (own GCP project & secrets)"
+        type: choice
+        options: [secret-place, prayer2]
+        default: secret-place
 
 permissions:
   contents: write
@@ -23,9 +29,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
-      YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
-      YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
-      YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+      CHANNEL_ID: ${{ inputs.channel || 'secret-place' }}
+      YOUTUBE_CLIENT_ID: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID }}
+      YOUTUBE_CLIENT_SECRET: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET }}
+      YOUTUBE_REFRESH_TOKEN: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN }}
+      YOUTUBE_EXPECTED_CHANNEL_ID: ${{ inputs.channel == 'prayer2' && (vars.PRAYER2_YOUTUBE_CHANNEL_ID || secrets.PRAYER2_YOUTUBE_CHANNEL_ID) || (vars.YOUTUBE_CHANNEL_ID || secrets.YOUTUBE_CHANNEL_ID) }}
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
@@ -49,7 +57,7 @@ jobs:
         uses: actions/upload-artifact@v4
         if: success() && hashFiles('content/metrics.csv') != ''
         with:
-          name: public-video-metrics-${{ github.run_id }}
+          name: public-video-metrics-${{ inputs.channel || 'secret-place' }}-${{ github.run_id }}
           path: |
             content/metrics.csv
             content/channel-metrics.json

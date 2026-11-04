@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import re
 
+from .config import CONFIG
 from .metadata import smart_truncate_title, truncate_utf8_bytes
 from .social_pack import SELAR_JOURNAL_URL, SELAR_STORE_URL
 
@@ -269,6 +270,7 @@ def build_metadata_localizations(
     title: str,
     description: str,
     niche: str = "faith and prayer",
+    channel_name: str = "The Secret Place",
 ) -> dict[str, dict[str, str]]:
     """Build localized Spanish (`es`) and Portuguese (`pt`) metadata within API byte limits."""
     niche_lower = (niche or "").lower()
@@ -289,7 +291,7 @@ def build_metadata_localizations(
         pt_selar = _localized_selar_header("pt", description)
         return {
             "es": {
-                "title": smart_truncate_title("Oración de la Noche para Dormir en Paz | The Secret Place", 95),
+                "title": smart_truncate_title(f"Oración de la Noche para Dormir en Paz | {channel_name}", 95),
                 "description": truncate_utf8_bytes(
                     "Oración nocturna de protección divina y paz. Descansa bajo la sombra del Altísimo.\n\n"
                     f"{es_selar}"

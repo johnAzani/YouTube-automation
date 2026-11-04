@@ -27,6 +27,17 @@ def _env_bool(name: str, default: bool = False) -> bool:
 
 @dataclass
 class Config:
+    # --- channel ---------------------------------------------------------
+    # Which YouTube channel this run targets (pipeline/channels.py). The
+    # workflow maps that channel's prefixed secrets onto the canonical
+    # YOUTUBE_*/GEMINI_* names below, so credentials are never mixed.
+    channel_id: str = os.environ.get("CHANNEL_ID", "secret-place")
+    channel_name: str = os.environ.get("CHANNEL_NAME", "")
+    channel_handle: str = os.environ.get("CHANNEL_HANDLE", "")
+    # Optional UC… channel ID guard: when set, upload aborts before sending
+    # anything if the refresh token authorizes a different channel.
+    expected_youtube_channel_id: str = os.environ.get("YOUTUBE_EXPECTED_CHANNEL_ID", "")
+
     # --- rendering -------------------------------------------------------
     width: int = int(os.environ.get("VIDEO_WIDTH", "1280"))
     height: int = int(os.environ.get("VIDEO_HEIGHT", "720"))

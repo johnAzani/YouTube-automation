@@ -141,6 +141,38 @@ def check_existing_channel_duplicate(youtube, title: str, slug: str | None = Non
         return None
 
 
+def verify_target_channel(youtube) -> dict:
+    """Confirm the refresh token authorizes the channel this run targets.
+
+    A refresh token silently uploads to whichever channel was selected during
+    OAuth consent. When ``YOUTUBE_EXPECTED_CHANNEL_ID`` is set, abort *before*
+    any upload if the token belongs to a different channel — the fail-closed
+    guard against pasting Channel 1's token into Channel 2's secrets.
+    Returns the authorized channel's ``{id, title}``.
+    """
+    resp = youtube.channels().list(part="id,snippet", mine=True).execute()
+    items = resp.get("items", [])
+    if not items:
+        raise RuntimeError(
+            "YouTube returned no channel for these credentials (mine=True). "
+            "Re-mint the refresh token while signed into the target channel."
+        )
+    channel = items[0]
+    actual_id = channel.get("id", "")
+    title = (channel.get("snippet") or {}).get("title", "")
+    expected = CONFIG.expected_youtube_channel_id.strip()
+    if expected and actual_id != expected:
+        raise RuntimeError(
+            f"Refusing to upload: credentials authorize channel {actual_id} "
+            f"({title!r}) but this run expects {expected} "
+            f"(CHANNEL_ID={CONFIG.channel_id}). The refresh token was minted "
+            "for the wrong channel — re-mint it for the target channel."
+        )
+    print(f"[upload] target channel verified: {title} ({actual_id}) "
+          f"for CHANNEL_ID={CONFIG.channel_id}")
+    return {"id": actual_id, "title": title}
+
+
 def upload(
     doc: ScriptDoc,
     video_path: Path,
@@ -212,7 +244,14 @@ def upload(
         privacy = "public"
 
     raw_desc = description or build_description(doc)
-    if faith and SELAR_JOURNAL_URL and (SELAR_JOURNAL_URL not in raw_desc or SELAR_STORE_URL not in raw_desc):
+    from .channels import get_channel
+
+    if (
+        faith
+        and get_channel(CONFIG.channel_id).include_sanctuary_links
+        and SELAR_JOURNAL_URL
+        and (SELAR_JOURNAL_URL not in raw_desc or SELAR_STORE_URL not in raw_desc)
+    ):
         raw_desc = raw_desc.rstrip() + "\n\n" + build_sanctuary_resource_block(include_store_links=True)
     full_desc = truncate_utf8_bytes(raw_desc, max_bytes=4900)
 
@@ -250,7 +289,13 @@ def upload(
     insert_parts = "snippet,status"
     try:
         from .localize_metadata import build_metadata_localizations
-        locs = build_metadata_localizations(safe_title, full_desc, niche_str)
+        channel_profile = get_channel(CONFIG.channel_id)
+        locs = build_metadata_localizations(
+            safe_title,
+            full_desc,
+            niche_str,
+            channel_name=CONFIG.channel_name or channel_profile.display_name,
+        )
         if locs:
             body["localizations"] = locs
             insert_parts = "snippet,status,localizations"

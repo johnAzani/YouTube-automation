@@ -3,7 +3,7 @@
 > 📌 **LIVING SYSTEM STATE & MASTER RECORD:** See **[STATE.md](STATE.md)** for the complete single-source-of-truth status of all active components, live Selar links, credentials, and next steps before starting any session.
 
 A **₦0 / $0** autonomous scripture, prayer, and bedtime contemplation production studio running on **GitHub Actions**.
-Living Master State: **[STATE.md](STATE.md)** · Channel Plan: **[PLAN.md](PLAN.md)** · Setup: **[docs/SETUP.md](docs/SETUP.md)** ·
+Living Master State: **[STATE.md](STATE.md)** · Channel Plan: **[PLAN.md](PLAN.md)** · Setup: **[docs/SETUP.md](docs/SETUP.md)** · Second Channel: **[docs/SECOND_CHANNEL_SETUP.md](docs/SECOND_CHANNEL_SETUP.md)** ·
 Selar Nigeria Banking: **[docs/SELAR_NIGERIA_SETUP.md](docs/SELAR_NIGERIA_SETUP.md)** · Maintenance: **[MAINTENANCE.md](MAINTENANCE.md)**
 
 ---

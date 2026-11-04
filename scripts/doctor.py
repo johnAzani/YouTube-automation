@@ -60,6 +60,24 @@ def main() -> int:
         present = bool(os.environ.get(secret)) or (REPO / ".env").exists()
         check(f"secret/env: {secret}", present, "docs/SETUP.md §2–4 (or .env locally)")
 
+    # Channel registry (pipeline/channels.py): the selected channel must be
+    # known, and its GitHub secret names are reported so a missing PRAYER2_*
+    # secret is obvious before a production run. Locally the canonical names
+    # above are what the pipeline reads; in Actions the workflow maps the
+    # selected channel's prefixed secrets onto them.
+    try:
+        from pipeline.channels import get_channel
+
+        profile = get_channel(os.environ.get("CHANNEL_ID"))
+        names = profile.secret_names()
+        check(
+            f"channel: {profile.id} ({profile.display_name} {profile.handle})",
+            True,
+            "GitHub secrets: " + ", ".join(names.values()),
+        )
+    except Exception as exc:  # noqa: BLE001
+        check("channel: CHANNEL_ID recognised", False, f"{exc} — see pipeline/channels.py")
+
     check("AUTO_PUBLISH off until API audit passes",
           os.environ.get("AUTO_PUBLISH", "false").lower() in {"", "0", "false", "no"},
           "set AUTO_PUBLISH=true only after the YouTube API compliance audit")
