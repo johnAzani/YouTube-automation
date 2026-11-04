@@ -175,10 +175,11 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
         # text must not be paid for again in minutes and free-tier quota. The
         # sidecar records which text produced this file, so an edited script still
         # re-synthesises and an unchanged one is reused.
-        # tts-v2: the read-aloud contract now travels with the script on every
-        # transport (Psalm 27 read its delivery instructions aloud under v1).
-        # The version bump invalidates any v1 narration cached beside a script.
-        speech_key = _fingerprint("tts-v2", DEFAULT_MODEL, "Charon", doc.full_narration)
+        # tts-v3: the spoken payload is the bare script again, with style
+        # guidance moved to the API system channel. v2 audio literally
+        # narrates the read-aloud contract (Psalm 5, oS7f32WDj_Y), so the
+        # bump invalidates every v1/v2 narration cached beside a script.
+        speech_key = _fingerprint("tts-v3", DEFAULT_MODEL, "Charon", doc.full_narration)
         cached = _cached_json(out / 'narration.json', speech_key)
         if cached and audio.is_file():
             emit(f"reusing narration from the previous attempt ({cached.get('duration', 0):.0f}s)")

@@ -50,12 +50,15 @@ def test_gemini_tts_retry_on_429(tmp_path: Path):
         assert mock_sleep.call_count == 1
 
 
-# --- The read-aloud contract must reach the model on EVERY transport ---------
-# 4 Nov 2026: the Psalm 27 video (7ll7w1hYf7o) opened by speaking the delivery
-# instructions aloud. Root cause: the `interactions` transport — the primary
-# path — received the bare script and never saw the "read, don't comment"
-# instruction, which only existed on the generate_content fallback as an
-# unfenced "Text to read:" prefix the model could narrate as stage direction.
+# --- The spoken payload must be the script, byte for byte, and NOTHING else --
+# A TTS model speaks its text payload verbatim. Two owner-reported failures:
+#   * Psalm 27 (7ll7w1hYf7o): instruction glued into `contents` ("Text to
+#     read:") was narrated as stage direction.
+#   * Psalm 5 (oS7f32WDj_Y): the follow-up fix put a fenced read-aloud
+#     contract INTO every payload, and the video opened by literally saying
+#     "Read the text between the markers aloud, in a calm...".
+# So style guidance now travels ONLY via GenerateContentConfig's
+# system_instruction channel; every text payload equals the script exactly.
 
 SCRIPT = "Before you close your eyes tonight, breathe in slowly."
 
@@ -73,7 +76,7 @@ def _fake_audio_response():
     return FakeResponse()
 
 
-def test_every_transport_payload_carries_the_contract_and_fenced_script():
+def test_generate_content_payload_is_bare_script_and_instruction_is_system():
     instruction = gemini_tts.read_aloud_instruction()
     client = MagicMock()
     client.interactions = None  # force the generate_content transport
@@ -81,22 +84,24 @@ def test_every_transport_payload_carries_the_contract_and_fenced_script():
     raw = Path("/tmp/_tts_contract_test.raw")
     gemini_tts._synthesize_single_chunk(client, SCRIPT, "Charon", instruction,
                                         gemini_tts.DEFAULT_MODEL, raw)
-    contents = client.models.generate_content.call_args.kwargs["contents"]
-    assert "Read the text between the markers aloud" in contents
-    assert "must never be spoken" in contents
-    assert gemini_tts.SCRIPT_START in contents
-    assert gemini_tts.SCRIPT_END in contents
-    assert SCRIPT in contents
-    assert "Text to read:" not in contents
+    call = client.models.generate_content.call_args
+    assert call.kwargs["contents"] == SCRIPT, (
+        "the spoken payload must be the script itself — any instruction, "
+        "fence, or marker inside it WILL be read aloud (Psalm 5, oS7f32WDj_Y)"
+    )
+    config = call.kwargs["config"]
+    assert config.system_instruction == instruction
+    assert "markers" not in config.system_instruction
 
 
-def test_interactions_payload_is_fenced_too():
+def test_no_transport_payload_carries_instruction_or_markers():
     source = Path(gemini_tts.__file__).read_text(encoding="utf-8")
-    assert source.count("SCRIPT_START") >= 4, (
-        "every interactions.create payload (initial, burst-retry, transient-retry) "
-        "plus the generate_content payload must fence the script — a payload that "
-        "sends the bare script reproduces the Psalm 27 narration-of-instructions bug"
-    )
-    assert '"text": text}' not in source.replace(" ", ""), (
-        "no TTS payload may send the bare script without the read-aloud contract"
-    )
+    assert "SCRIPT_START" not in source and "SCRIPT_END" not in source
+    # the old contract's wording may survive only inside comments/docstrings
+    # that explain the bug; it must never appear in a payload expression
+    for line in source.splitlines():
+        if "Read the text between the markers" in line:
+            assert line.lstrip().startswith(("#", "*", "\"")), line
+    # every interactions payload is the bare chunk text
+    assert source.count('"text": text}') >= 3
+    assert 'f"{system_instruction}' not in source
