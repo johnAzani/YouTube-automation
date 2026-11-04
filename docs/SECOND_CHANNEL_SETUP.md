@@ -142,12 +142,17 @@ the Secret Place queue-repair and authored-Shorts steps.
 
 ### 2e. Add the GitHub secrets (Settings → Secrets and variables → Actions)
 
-*Status 2026-11-04: run #25's two-scope token is fixed (three scopes
-saved in Data Access, token re-minted, secret replaced — run #27 got
-past the credential exchange). Current blocker: **YouTube Data API v3
-is not enabled in the Morning Altar project** (run #27,
-`accessNotConfigured`) — owner to Enable it under APIs & Services →
-Library, wait a few minutes, and re-run the snapshot. Earlier:
+*Status 2026-11-04 (COMPLETE): **The Morning Altar is live end-to-end.**
+Data API enabled → metrics run #28 succeeded (1 subscriber, 0 public
+videos). Script 0036 (Psalm 5) approved under owner authorization,
+dry-run render succeeded (run 41887937132), and the first video was
+uploaded **private** on 2026-11-04: `oS7f32WDj_Y` (7:57) — receipt in
+`content/published/0036-*.md`. Remaining owner actions: final watch in
+Studio, then publish manually (channel policy keeps uploads private);
+watermark + channel keywords via desktop Studio. Earlier: run #25's
+two-scope token was fixed (three scopes saved in Data Access, token
+re-minted, secret replaced — run #27 got past the credential exchange,
+then hit `accessNotConfigured` until the API was enabled). Earlier:
 `PRAYER2_YOUTUBE_CLIENT_ID` and
 `PRAYER2_YOUTUBE_CLIENT_SECRET` added; Data Access scopes
 (`youtube.upload`, `youtube.readonly`) saved; Branding saved (app home /
