@@ -190,10 +190,15 @@
 2. **Expand the Nightly Prayer Queue to 30 Continuous Nights — COMPLETE (October 30, 2026):**
    * All 24 queue scripts (IDs `0009`–`0033`) authored, factcheck worksheets generated, and all 217 tests passing.
    * Guarantees a full 30-day automated release runway at `19:14 UTC` / `06:14 UTC` / `14:14 UTC`.
-3. **Assemble 1-Hour & 3-Hour Dark Screen Sleep Compilations:**
-   * Combine Psalms 91, 23, and 121 with continuous 432 Hz Solfeggio soundscapes into long-form compilations to accelerate toward 4,000 public watch hours.
-4. **Monitor YouTube Analytics Telemetry:**
-   * Track subscriber velocity and watch hours on `docs/index.html` via automated nightly metrics snapshots (`.github/workflows/metrics.yml`).
+3. **Closed-Loop Growth Engine — COMPLETE (November 4, 2026):**
+   * The brain no longer authors blind. `pipeline/performance_feedback.py` scores every published long-form video on reach (view velocity) + satisfaction (engagement), aggregates by theme, and writes the derived-only `content/research/performance_feedback.json`. `GeminiBrain.select_next_scripture()` now favours the themes that are actually winning (confidence-gated; falls back to roadmap order on too little data).
+   * `.github/workflows/growth-autopilot.yml` runs daily at 3:14am Nigeria time: metrics snapshot → feedback → series-playlist autoplay sync (session watch-time) → live-count milestone celebration. Every engine fail-soft; only the derived feedback is committed.
+   * SEO tag enrichment (`seo_suggest` high-intent taxonomy) wired into `build_tags`; `continuous_research` next-job is now dynamic, not the stale hardcoded Psalm 23.
+   * Full research + honest API limits: `docs/GROWTH_FEEDBACK_LOOP_2026-11-04.md`.
+4. **Assemble 1-Hour & 3-Hour Dark Screen Sleep Compilations — DEFERRED (policy + memory):**
+   * The current compilation is a static plate + ambient tone bed with **no narration** — the "minimal narrative" pattern YouTube's inauthentic-content policy flags, and `synthesize_sleep_bed` would OOM at multi-hour lengths. **Not auto-published.** Safe path forward: chunked/streaming audio synthesis + a real narration library first. See `docs/GROWTH_FEEDBACK_LOOP_2026-11-04.md` §5.
+5. **Monitor YouTube Analytics Telemetry:**
+   * Track subscriber velocity and watch hours via the daily growth-autopilot snapshot + weekly `metrics.yml`. Per-video thumbnail CTR/impressions are **not** available via targeted Analytics queries (bulk Reporting API only); the loop uses public view velocity + engagement as the proxy and never fabricates CTR. Optional Analytics enrichment (retention/APV) needs a one-time `--purpose analytics` OAuth token; the loop works without it.
 
 ---
 
@@ -670,7 +675,8 @@ minutes. Every time below is Abuja/Lagos wall clock.
 
 | When it runs (Nigeria) | What happens | cron (UTC) |
 |---|---|---|
-| **4:14am, daily** | **The brain**: lengthens short scripts, authors a new long-form if the queue lacks runway, authors Short specs for anything blocked | `14 3 * * *` |
+| **3:14am, daily** | **Growth autopilot**: snapshots public metrics, computes the closed-loop performance feedback the brain reads, syncs series playlists (session watch-time), celebrates the live subscriber milestone | `14 2 * * *` |
+| **4:14am, daily** | **The brain**: lengthens short scripts, authors a new long-form if the queue lacks runway, authors Short specs for anything blocked — now steered by the performance feedback | `14 3 * * *` |
 | **4:23am, Monday** | Keepalive self-heal | `23 3 * * 1` |
 | **7:14am, daily** | Production run #1 — repairs the queue first, then publishes | `14 6 * * *` |
 | **8:14am, daily** | Comment replies | `14 7 * * *` |
@@ -1109,3 +1115,67 @@ video and a green tick, which is the failure this whole afternoon was about. Whe
 `--next` records an already-live job it now selects again and renders the next
 eligible script, stopping at the first real publish. Two tests: it moves on after a
 duplicate, and it stops after one real release rather than draining the queue.
+
+---
+
+## The brain stopped publishing blind — 4 November 2026 (Wednesday, Nigeria time)
+
+The deep audit asked one question of every growth module: *which workflow actually calls
+you?* Most of the answers were "none." Roughly twenty growth modules were built and
+unit-tested and then left dormant — series playlists, milestones, the SEO taxonomy, the
+sleep-compilation renderer, the podcast feed. And the one lever that mattered most was not
+dormant, it was **absent**: there was no feedback loop. `select_next_scripture()` walked a
+static roadmap in fixed order; `metrics.yml` collected views/likes/comments every week and
+dropped them into an artifact nothing read. The channel could not double down on what
+worked. It published blind.
+
+**The loop is now closed.** `pipeline/performance_feedback.py` reads the public snapshot plus
+the published receipts, takes the latest reading per video, and scores each long-form on
+reach (views/day, gated to ≥3 days old) and satisfaction ((likes+comments)/views, gated to
+≥25 views), blended 50/50 and normalised across the measured cohort. Shorts are a separate
+lane — their discovery engine is different and they must not steer long-form. It aggregates
+by theme and writes `content/research/performance_feedback.json`: **derived only** — theme
+ranks, average scores, guidance. No raw counts, no video IDs. The raw snapshot stays an
+Actions artifact, and `content/metrics.csv` is now gitignored (it was not before — raw API
+metrics could have landed in this public repo).
+
+**The brain reads it at the one choke point both authoring paths share.** Eligible roadmap
+candidates are ranked in three bands: themes at/above the measured average go first, unmeasured
+themes keep their roadmap place, below-average themes go last. Fewer than three measured
+videos → a neutral report and the roadmap order is preserved; it never steers on noise. A
+missing or corrupt artifact is caught and logged, never fatal. The confidence gate and the
+fail-soft path are both tested.
+
+**The dormant engines are wired.** `.github/workflows/growth-autopilot.yml` runs daily at
+3:14am Nigeria time (02:14 UTC, before the brain): snapshot → feedback → series-playlist
+autoplay sync → live-count milestone celebration. Playlist sync is idempotent (searches by
+title before creating, skips videos already present), so after the first sync it costs almost
+nothing and chains finished prayers into the next one — session watch-time, the lever that
+moves the 4,000-hour goal. `celebrate_milestone.py` no longer guesses 1230; it reads the live
+count from the snapshot and skips rather than fabricates. The commit step copies monitor.yml's
+fetch + reset --mixed pattern (never pull --rebase, which conflicted five times on 2 Nov) and
+stages only the derived feedback. Every engine is fail-soft; one failing never blocks the rest.
+
+**Two smaller fixes.** `build_tags` now folds in the `seo_suggest` high-intent taxonomy — the
+queries sleepless viewers actually type — and every candidate still passes `fit_youtube_tags`,
+so the 500-char budget, 18-tag cap and 432 gate are untouched (verified: 18 tags, cost 470, no
+432). And `continuous_research` no longer hardcodes the already-published Psalm 23 as the next
+job; it reuses the brain's feedback-aware selection.
+
+**What was deliberately not done, and why.** The multi-hour sleep compilation is a static
+plate + ambient tone with no narration — the "minimal narrative" pattern the inauthentic-content
+policy flags, and `synthesize_sleep_bed` would OOM at length (whole-duration float64 arrays).
+It is not auto-published; the safe path is chunked synthesis + a real narration library first.
+The podcast feed cannot auto-grow without hosted per-episode audio (narration MP3s are CI
+artifacts, never hosted). Community posts, Test & Compare, end-screen/card elements, the Shorts
+related-video link and the podcast flag are all Studio-only — no public API — so the automation
+stages what it can and never claims to have posted what it cannot. Per-video thumbnail CTR is
+bulk Reporting API only; the loop uses public velocity + engagement as the proxy and never
+fabricates a CTR. Full detail and sources: `docs/GROWTH_FEEDBACK_LOOP_2026-11-04.md`.
+
+**Cost: $0.00.** Only the free Data API and the already-configured upload token; no new secret,
+no paid tier, no manual gate. Tests: 25 new (feedback + brain-steering integration), the two
+tests that pinned the old stale behavior updated to the new correct behavior, and the
+scheduler-supervisor tests made robust to new workflows. **Full suite: 734 passed + 1632
+subtests, 0 failed.** Nothing here guarantees results; it guarantees the channel stops
+publishing blind and starts compounding.

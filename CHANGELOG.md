@@ -5,6 +5,19 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-04 — closed-loop growth engine: the brain stops publishing blind, dormant engines wired ($0.00)
+
+- **New `pipeline/performance_feedback.py` + `scripts/performance_feedback.py`** — the missing keystone. Reads the public metrics snapshot + published receipts, scores each long-form video on reach (view velocity, ≥3-day gate) and satisfaction (engagement rate, ≥25-view gate), aggregates by theme, and writes the **derived-only** `content/research/performance_feedback.json` (theme ranks + guidance; no raw counts or video IDs). Confidence-gated (<3 measured videos → neutral) and fail-soft; Shorts are a separate lane and never steer long-form.
+- **`GeminiBrain.select_next_scripture()` now reads the feedback** at the sole authoring choke point: above-average themes first, unmeasured keep roadmap place, below-average last. Missing/corrupt artifact never blocks authoring.
+- **New `.github/workflows/growth-autopilot.yml`** — daily 03:14 Nigeria time (02:14 UTC): metrics snapshot → feedback → **series-playlist autoplay sync** (session watch-time, idempotent) → **live-count milestone celebration**. Every engine fail-soft; commits only the derived feedback via the monitor.yml fetch+reset pattern; raw metrics + milestone card are 30-day artifacts. Uses the existing upload token; no new secret.
+- **`scripts/celebrate_milestone.py`** reads the live subscriber count from `channel-metrics.json` instead of the hardcoded 1230; skips rather than guesses when unavailable.
+- **`pipeline/metadata.build_tags`** wires in the dormant `seo_suggest` high-intent taxonomy (pain-point/search queries); still bounded by `fit_youtube_tags` (500-char budget, 18-tag cap, 432 gate) — verified 18 tags / cost 470 / no 432.
+- **`scripts/continuous_research.py`** next-job is now feedback-aware/dynamic instead of the stale hardcoded Psalm 23 (already published).
+- **Privacy:** `content/metrics.csv` added to `.gitignore` (raw API metrics can no longer be committed to the public repo).
+- **Deliberately not auto-published:** multi-hour sleep compilations (static plate + ambient tone = inauthentic-content risk + multi-hour OOM) and podcast auto-grow (needs hosted per-episode audio). Honest Studio-only limits documented (Community posts, Test & Compare, end screens/cards, Shorts related-video link, per-video thumbnail CTR).
+- **Docs:** `docs/GROWTH_FEEDBACK_LOOP_2026-11-04.md` (deep research + sources + limits); STATE.md §4/§7 + ledger updated.
+- **Tests:** 25 new (feedback engine + brain-steering integration); 2 stale-behavior tests updated; scheduler-supervisor tests made robust to new workflows. **Full suite: 734 passed + 1632 subtests, 0 failed.**
+
 ## 2026-10-23 — branch consolidation onto `main`, 100% Enron rights clearance, and first YouTube Short release pipeline
 
 - Consolidate all unmerged research, drafts, and strategy work (PR #11) onto `main`, close superseded partial draft PR #10, and delete all stale `arena/*` remote branches.

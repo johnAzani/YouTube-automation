@@ -21,18 +21,48 @@ from pipeline.milestones import (
 )
 
 
+def _live_subscriber_count() -> int | None:
+    """Read the freshest public subscriber count from the metrics snapshot.
+
+    The growth autopilot runs metrics_snapshot first, which writes
+    content/channel-metrics.json. Using that live number (instead of a hardcoded
+    guess) keeps milestone celebrations honest. Returns None when unavailable.
+    """
+    import json
+
+    path = REPO_ROOT / "content" / "channel-metrics.json"
+    if not path.is_file():
+        return None
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        count = data.get("subscriber_count")
+        return int(count) if count is not None else None
+    except (OSError, ValueError, TypeError, json.JSONDecodeError):
+        return None
+
+
 def main():
     parser = argparse.ArgumentParser(description="Celebrate Subscriber Milestones autonomously.")
-    parser.add_argument("--subs", type=int, default=1230, help="Current channel subscriber count")
+    parser.add_argument("--subs", type=int, default=None,
+                        help="Current subscriber count (default: read live from channel-metrics.json)")
     parser.add_argument("--dry-run", action="store_true", help="Render card without publishing")
     args = parser.parse_args()
 
-    achieved, upcoming = get_current_milestone_status(current_subs=args.subs)
+    subs = args.subs
+    if subs is None:
+        subs = _live_subscriber_count()
+        if subs is None:
+            print("[milestone] No live subscriber count available; run metrics_snapshot first. "
+                  "Skipping celebration rather than guessing.")
+            return
+        print(f"[milestone] Using live subscriber count from channel-metrics.json: {subs}")
+
+    achieved, upcoming = get_current_milestone_status(current_subs=subs)
 
     print("==========================================================================")
     print("THE SECRET PLACE — SUBSCRIBER MILESTONE CELEBRATION ENGINE")
     print("==========================================================================")
-    print(f"Current Subscriber Count: {args.subs}")
+    print(f"Current Subscriber Count: {subs}")
 
     if achieved:
         print(f"[+] Latest Milestone Achieved: {achieved.headline} ({achieved.subs_target} subs)")
@@ -48,7 +78,7 @@ def main():
         print("[*] No milestones achieved yet.")
 
     if upcoming:
-        remaining = upcoming.subs_target - args.subs
+        remaining = upcoming.subs_target - subs
         print(f"\n[*] Next Upcoming Milestone: {upcoming.headline} ({upcoming.subs_target} subs)")
         print(f"    Souls needed to reach next tier: {remaining}")
 

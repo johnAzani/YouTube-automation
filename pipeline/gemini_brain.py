@@ -146,17 +146,29 @@ class GeminiBrain:
         return build_schedule_audit()
 
     def select_next_scripture(self) -> dict[str, Any]:
-        """Find the top-priority scripture from the continuous research roadmap not yet in queue or published."""
+        """Find the top-priority scripture from the continuous research roadmap not yet in queue or published.
+
+        Closed-loop steering: when the performance-feedback artifact has enough
+        measured data, eligible roadmap candidates are reordered to favour the
+        themes that are actually winning on the channel. With too little data the
+        roadmap order is preserved, so the brain never steers on noise.
+        """
         existing_ids = set()
         for p in QUEUE_DIR.glob("*.md"):
             existing_ids.add(p.name[:4])
         for p in PUBLISHED_DIR.glob("*.md"):
             existing_ids.add(p.name[:4])
 
-        for candidate in SCRIPTURE_ROADMAP:
-            cand_id = candidate["id"]
-            if cand_id not in existing_ids:
-                return candidate
+        eligible = [c for c in SCRIPTURE_ROADMAP if c["id"] not in existing_ids]
+        if eligible:
+            try:
+                from .performance_feedback import load_feedback_report, rank_candidates
+                eligible = rank_candidates(eligible, load_feedback_report())
+            except Exception as exc:  # noqa: BLE001
+                # Feedback is an optimisation, never a gate: a missing or malformed
+                # artifact must not stop the queue from being replenished.
+                print(f"[gemini-brain] performance feedback skipped: {exc}")
+            return eligible[0]
 
         # If all predefined items are present, generate next dynamic Psalm
         return {

@@ -206,7 +206,21 @@ def build_intelligence_report() -> ChannelIntelligence:
     subs, videos = read_local_metrics()
     pub_count, q_count, active_release = audit_queue_and_published()
 
-    next_job = SCRIPTURE_ROADMAP[1]  # Psalm 23 (Job 0009)
+    # Feedback-aware next recommendation. This used to be hardcoded to
+    # SCRIPTURE_ROADMAP[1] (Psalm 23), which is already published — a stale guess.
+    # Reuse the brain's sole selection choke point so the briefing reflects the
+    # closed-loop steering (and skips anything already queued/published). The import
+    # is lazy because gemini_brain imports SCRIPTURE_ROADMAP back from this module.
+    try:
+        from pipeline.gemini_brain import GeminiBrain
+
+        next_job = GeminiBrain().select_next_scripture()
+    except Exception:  # noqa: BLE001
+        # Fail-soft: first roadmap candidate not already queued/published.
+        existing = {p.name[:4] for p in QUEUE_DIR.glob("*.md")} | {
+            p.name[:4] for p in PUBLISHED_DIR.glob("*.md")
+        }
+        next_job = next((c for c in SCRIPTURE_ROADMAP if c["id"] not in existing), SCRIPTURE_ROADMAP[0])
 
     benchmarks = {
         "target_ctr_browse": "7.0% – 12.0%",
