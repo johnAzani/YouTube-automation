@@ -48,13 +48,30 @@ the Secret Place queue-repair and authored-Shorts steps.
 
 ### 2b. Create the separate Google Cloud project
 1. Google Cloud Console → create project (e.g. `morning-altar-youtube`).
-   **Do not link a billing account.**
-2. Enable **YouTube Data API v3**.
-3. Google Auth Platform → **External** audience → set the app **In
-   production** (in *Testing*, refresh tokens expire after 7 days —
-   `docs/SETUP.md` §1b). Unverified is fine for your own account.
-4. Create a **Web application** OAuth client with authorized redirect URI
-   `https://developers.google.com/oauthplayground`.
+   **Do not link a billing account.** *(Done 2026-11-04: project
+   "The Morning Altar" created and selected.)*
+2. Enable **YouTube Data API v3** (APIs & Services → Library → search
+   "YouTube Data API v3" → Enable). Do this in the new project, not Channel
+   1's — quota pools are per project.
+3. Configure the Google Auth Platform (new console UI, left menu:
+   Overview / Branding / Audience / Clients / Data Access):
+   - **Overview → "Get started"** wizard: App name `The Morning Altar
+     Automation`, pick your email as user-support email → Next → Audience:
+     **External** → Next → Contact information: your email → Next →
+     tick the Google API Services policy agreement → **Create**.
+   - **Audience → "Publish app"** → Confirm. This moves the app from
+     *Testing* to **In production**; in Testing, refresh tokens expire after
+     7 days (`docs/SETUP.md` §1b). Unverified is fine for your own account —
+     expect a warning screen later and click through only for your own app.
+   - **Data Access → "Add or remove scopes" → "Manually add scopes"** →
+     paste `https://www.googleapis.com/auth/youtube.upload` and
+     `https://www.googleapis.com/auth/youtube.readonly` → "Add to table" →
+     Update → Save.
+   - **Clients → "Create client" → Web application**: name
+     `Morning Altar YouTube Uploader` → Authorized redirect URIs →
+     `https://developers.google.com/oauthplayground` → **Create**. Copy the
+     client ID and client secret straight into the GitHub secrets in §2e —
+     never into chat, issues or commits.
 
 ### 2c. Mint the Morning Altar refresh token
 1. OAuth Playground → gear icon → use your **new** client ID/secret,
