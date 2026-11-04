@@ -49,38 +49,6 @@ class ShortEdition:
 
 
 EDITIONS: dict[str, ShortEdition] = {
-    "short-enron": ShortEdition(
-        key="short-enron",
-        job_id="SHORT-0001",
-        slug="short-0001-how-enron-died",
-        title="How Enron Faked $70 Billion in Plain Sight #Shorts",
-        niche="finance and business",
-        tags=[
-            "shorts",
-            "enron",
-            "accounting scandal",
-            "mark to market",
-            "financial history",
-            "corporate collapse",
-            "business documentary",
-        ],
-        description=(
-            "Enron hit $90.75 a share and a ~$70B valuation before one question — "
-            "\"Is Enron Overpriced?\" — exposed mark-to-market accounting and off-balance-sheet "
-            "partnerships hiding billions in debt.\n\n"
-            "On December 2, 2001, Enron filed for Chapter 11 bankruptcy with $63.4B in "
-            "reported assets.\n\n"
-            "A money story, not money advice. No picks, no predictions — just the record.\n\n"
-            "Primary & archival sources:\n"
-            "- McLean, Bethany (2001). \"Is Enron Overpriced?\" Fortune, March 5, 2001.\n"
-            "- Powers, William C., Jr. et al. (2002). Report of Investigation by the Special "
-            "Investigative Committee of the Board of Directors of Enron Corp., Feb 1, 2002.\n"
-            "- In re Enron Corp., Case No. 01-16034 (AJG), U.S. Bankruptcy Court, S.D.N.Y., "
-            "Voluntary Petition (Dec 2, 2001).\n"
-            "- Enron Corp. Form 10-K & Form 8-K filings, U.S. Securities and Exchange Commission.\n\n"
-            "#Shorts #Enron #FinancialHistory #Accounting #Documentary"
-        ),
-    ),
     "short-psalm91": ShortEdition(
         key="short-psalm91",
         job_id="SHORT-0002",
@@ -955,9 +923,7 @@ def run_short_release(
             tag=tag,
         )
     else:
-        hero_bg = REPO_ROOT / "image-search" / "short-enron-thumb-hero.jpg"
-        if not hero_bg.is_file():
-            hero_bg = REPO_ROOT / "image-search" / "short-enron-crash-poster.jpg"
+        hero_bg = REPO_ROOT / "image-search" / "short-prayer-cover-poster.jpg"
         staged_thumb = generate_short_scroll_stopper_thumbnail(
             bg_path=hero_bg,
             out_path=stage_dir / "thumbnail.jpg",

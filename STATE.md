@@ -1,15 +1,15 @@
 # 🕊️ The Secret Place — Master Project State & Living Memory Ledger
 **Document Status:** Permanent Single Source of Truth (`STATE.md`)  
 **Channel Identity:** *The Secret Place* (`@TheSecretPlace`)  
-**Production Studio:** Autonomous ₦0 / $0 Faith & Scripture Production Lab on GitHub Actions  
-**Last Synchronized:** 2026-11-03 (Nigeria time, WAT / UTC+1 — all human-facing times in this document are Nigeria time, see §7)  
+**Production Studio:** Prayer-channel automation with a $0 operating-cost target; provider billing is an external prerequisite and must be disabled
+**Last Synchronized:** 2026-11-04 (Nigeria time, WAT / UTC+1 — all human-facing times in this document are Nigeria time, see §7)
 **Primary Banking Rail:** First Bank of Nigeria (FBN) USD Domiciliary Account (`FBNINGLA`)
 
 ---
 
 ## ⚠️ CRITICAL NOTICE FOR ANY FUTURE AI SESSION OR AGENT
-> **DO NOT TREAT THIS CONVERSATION AS A BLANK SLATE.**  
-> Everything in this document has already been built, tested, and verified.
+> **USE THE CURRENT STATUS BELOW, THEN VERIFY THE REPOSITORY AND RUNS.**
+> This ledger contains historical notes; old milestones, quotas, and schedules may be stale and are not proof of current behavior.
 > - **DO NOT** re-ask the user if they have YouTube secrets or credentials (they are ALREADY configured and verified).
 > - **DO NOT** attempt to change, audition, or suggest new voices (Google Gemini TTS `Charon` is permanently locked).
 > - **DO NOT** re-ask how to monetize or set up Selar (both the Show Love hub and Product #2 are ALREADY live).
@@ -19,17 +19,25 @@
 
 ---
 
-## 1. Permanent System Invariants ($0.00 Hard Cost Lock)
+## Current Operational Status (2026-11-04)
 
-1. **$0.00 / Month Hard Cost Lock:** Under no circumstances may any pipeline component require or transition to a paid subscription, billable cloud tier, or credit card charge. If external rate limits or free quotas are reached, jobs fail closed (pause and wait for next reset).
-2. **Permanent Voice Standard:** Google Gemini API TTS (`model: gemini-3.8-flash-tts`, `voice: Charon`) locked at free tier.
+- PR #240 is open from `arena/acb65d4f-youtube-automation`; the cleanup and audit changes described in `docs/PRAYER_AUTOMATION_AUDIT.md` are not on `main` until the PR is merged.
+- Latest known `main` production run `41743246072` failed at Gemini TTS daily quota; Psalm 27 was paused until the reset returned by the provider, and nothing uploaded. This does not promise the next slot will publish.
+- The latest provider error reported a 10-request/day cap for `gemini-3.8-flash-tts`. Limits are project/model-specific and can change; generic Gemini limits are not TTS guarantees.
+- **$0 target, not an account-side proof:** the project behind `GEMINI_API_KEY` must have billing disabled. Repository code cannot inspect or guarantee that setting. Do not attach billing or add a paid fallback.
+- Production schedules are 06:14, 14:14, and 19:14 UTC (07:14, 15:14, and 20:14 WAT). A slot can fail or finish without an upload; inspect release outcome and receipt.
+
+## 1. System Invariants ($0 operating-cost target)
+
+1. **$0 operating-cost target:** Never add a paid service or billable fallback. On exhausted free quotas, fail closed. Account-side billing must be disabled; code cannot verify this externally.
+2. **Voice:** Production narration uses Google Gemini TTS (`model: gemini-3.8-flash-tts`, `voice: Charon`); a TTS quota failure pauses instead of switching to another paid provider/model.
 3. **Visual Theme Standard:** Signature DOCOGA REELS v2 sapphire glassmorphic visual system with directional drop shadows, Inter typography, radiant gold active-word illumination, and full-bleed 16:9 widescreen long-form and 9:16 vertical Shorts plates.
 4. **Persona & Attributions:** Strictly *The Secret Place* editorial team. Zero mentions of personal creator names in scripts, descriptions, metadata, or audio.
 5. **Website Function:** The website (`docs/index.html` / GitHub Pages) is exclusively an **analytics display and asset download dashboard**. There is NO manual review gate on the website; releases are published directly to YouTube.
 
 ---
 
-## 2. Completed Milestones (100% Done & Verified)
+## 2. Historical Milestones (verify before relying on them)
 
 ### A. YouTube Credentials & Upload Automation (ALREADY ACTIVE)
 * **Status:** Verified and functional. Videos have already been uploaded previously.
@@ -251,7 +259,7 @@
 
 ---
 
-## 6. Permanent System Invariants ($0.00 Hard Cost Lock)
+## Historical Invariant Notes (superseded by current status above)
 
 1. **$0.00 / Month Hard Cost Lock:** Under no circumstances may any pipeline component require or transition to a paid subscription, billable cloud tier, or credit card charge. If external rate limits or free quotas are reached, jobs fail closed (pause and wait for next reset).
 2. **Permanent Voice Standard:** Google Gemini API TTS (`model: gemini-3.8-flash-tts`, `voice: Charon`) locked at free tier.
@@ -301,7 +309,7 @@ On checking directly in the sandbox, no Gemini API key, Google application crede
 
 - Google's Gemini pricing page lists Standard `gemini-3.8-flash-tts` input and output as free on the free tier, with separately priced paid-tier usage. A free-capable model is not proof that the deployed API key's project is free. Official pricing: https://ai.google.dev/gemini-api/docs/pricing .
 - Google says API keys inherit their parent project's billing status; the Projects page displays billing tier, and disabling billing on a project returns it to the free tier. A paid-project balance reaching zero does not automatically downgrade to free. Official billing documentation: https://ai.google.dev/gemini-api/docs/billing . Actual Gemini project ID, billing status, and real paid/free tier remain UNKNOWN here; no Google project auth or API key is available in the sandbox.
-- A 429 can reflect minute, daily, token or paid-tier spend limits; it is not proof of free billing. Free daily RPD resets at midnight Pacific local time, not permanently 08:00 UTC: https://ai.google.dev/gemini-api/docs/rate-limits . `pipeline/quota_handler.py` currently hard-codes 08:00 UTC and inaccurately states 1,500 RPD / 15 RPM as universal. This is a research finding; it has not yet been fixed. On 1 November 2026 Pacific midnight is 08:00 in Lagos; from 2 November it is 09:00 in Lagos because daylight saving changes.
+- Historical finding at the time of this note: a 429 can reflect minute, daily, token or paid-tier spend limits; it is not proof of free billing. The then-current reset calculation/quota prose was subsequently revised on the session branch; see `docs/ZERO_DOLLAR_LOCK.md` for the current, qualified guidance. Provider-specific limits and actual billing remain external to this repository.
 - Google Cloud's billing status API `projects.getBillingInfo` returns `billingEnabled` and requires an authenticated principal with `resourcemanager.projects.get`; matching a secret API key to its owning project can require `apikeys.keys.lookup`. Neither the secret key nor access to a Google Cloud identity is available here. References: https://docs.cloud.google.com/billing/docs/access-control ; https://docs.cloud.google.com/api-keys/docs/reference/rest/v2/keys/lookupKey . A successful `models.list` does not prove billing tier or inference eligibility: https://ai.google.dev/gemini-api/docs/troubleshooting .
 - Alert-only budgets do not enforce a hard stop; spend caps may exist for supported services but availability, zero-threshold behavior, reporting delay and scope need separate verification. Unlinking billing may stop other project services and doesn't erase already accrued costs: https://docs.cloud.google.com/billing/docs/how-to/budgets ; https://docs.cloud.google.com/billing/docs/how-to/modify-project . Do not change billing without owner approval.
 - The repository is public, so standard GitHub-hosted runners are free for compute, but artifact/cache storage policies have separate allowances. GitHub API returned 40 unexpired artifacts totalling 8,022,777,290 bytes at investigation time (including repeated ~599 MB GitHub Pages artifacts). Account-wide plan, accrued storage and actual charges were not accessible; this is a risk to investigate, not evidence of a charge. Example: scheduled blocked production still generated `render-41229855644` (~534 MB), because its artifact step captures `output/` including cached assets. Avoid purging artifacts without authorization. Reference: https://docs.github.com/en/billing/concepts/product-billing/github-actions .
@@ -582,7 +590,7 @@ were hiding it:
 1. **A Short needs a hand-authored scene script.** `tools/shorts.py` holds a
    `SCRIPTS` dict with per-Short scene definitions (1668 lines: plates, camera
    moves, on-screen kickers, narration timing). There is no generator for those.
-   The prayer renderer uses `short-psalm91`; legacy Enron/Johnstown scene definitions remain only as offline automation regression fixtures. Every approved manifest in the queue pointed at a key with no script, so `select_next_queued_short()` returned `None`, the stage printed "nothing to do", and exited 0. Green run, no video.
+   Historical incident note (later repaired): at that time the prayer renderer used `short-psalm91`, while queue manifests pointed at missing scene keys and the stage exited 0 without a video. The current branch has removed the active non-prayer renderer specs, includes prayer-only catalog tests, and reports explicit Short outcomes; verify current workflow results rather than relying on this old incident description.
 2. **The brain hardcoded the key.** `generate_companion_short` wrote
    `short: short-psalm91` and `status: approved` for *every* long-form job — a
    second Psalm 91 Short queued against any new psalm, and the same

@@ -2,7 +2,7 @@
 
 All behaviour is driven by environment variables so the same code runs
 identically on a laptop, in CI (GitHub Actions), or on a self-hosted runner.
-Nothing here costs money — see PLAN.md §3.
+This module cannot verify provider billing; see docs/ZERO_DOLLAR_LOCK.md.
 """
 from __future__ import annotations
 
@@ -41,8 +41,6 @@ class Config:
     gemini_api_key: str = os.environ.get("GEMINI_API_KEY", "")
     tts_rate: str = os.environ.get("TTS_RATE", "+0%")
     words_per_second: float = float(os.environ.get("WORDS_PER_SECOND", "2.5"))
-    zero_dollar_mode: bool = _env_bool("ZERO_DOLLAR_MODE", True)
-
     # --- assets ----------------------------------------------------------
     pexels_api_key: str = os.environ.get("PEXELS_API_KEY", "")
     pixabay_api_key: str = os.environ.get("PIXABAY_API_KEY", "")

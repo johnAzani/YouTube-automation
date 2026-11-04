@@ -4,7 +4,7 @@
 **Role:** Master Autonomous Creative & Editorial Intelligence Engine  
 **Engine Implementation:** `pipeline/gemini_brain.py` & `scripts/gemini_brain.py`  
 **Autonomous Workflow:** `.github/workflows/gemini_brain.yml` (Runs daily at `03:14 UTC`)  
-**Cost Invariant:** Fail-closed $0.00 / month hard cost lock (`docs/ZERO_DOLLAR_LOCK.md`)
+**Cost Target:** $0 operation with fail-closed quota handling; provider billing must be disabled outside the repository (`docs/ZERO_DOLLAR_LOCK.md`)
 
 ---
 
@@ -28,11 +28,11 @@ The Gemini Brain handles the cognitive and editorial functions previously perfor
 ┌─────────────────────────────────┬────────────────────────────────────────────────────────┐
 │ Invariant                       │ Architectural Enforcement                              │
 ├─────────────────────────────────┼────────────────────────────────────────────────────────┤
-│ **1. Permanent $0.00 Cost Lock**│ Free Gemini API tier (15 RPM / 1,500 RPD); standard    │
-│                                 │ GitHub Actions runners; 100% public domain media.      │
+│ **1. $0 Operating-Cost Target**│ No paid fallbacks; provider billing must be disabled.  │
+│                                 │ Quotas are project/model-specific and can change.     │
 ├─────────────────────────────────┼────────────────────────────────────────────────────────┤
-│ **2. Locked-in Voice: Charon**  │ Permanently locked to `gemini-3.8-flash-tts` (`Charon`).│
-│                                 │ The Brain never auditions or alters voice models.      │
+│ **2. Voice: Charon**            │ Production narration uses `gemini-3.8-flash-tts`     │
+│                                 │ (`Charon`); quota exhaustion pauses rather than swaps.│
 ├─────────────────────────────────┼────────────────────────────────────────────────────────┤
 │ **3. DOCOGA REELS v2 Standard** │ Inter-Black typography, sapphire glassmorphism cards,  │
 │                                 │ radiant gold active-word sync, zero-latency transitions│
@@ -48,11 +48,13 @@ The Gemini Brain handles the cognitive and editorial functions previously perfor
 └─────────────────────────────────┴────────────────────────────────────────────────────────┘
 ```
 
-### 2.1 Quota Exhaustion & Midnight Pacific Reset Lock ($0.00 Invariant)
-Google Gemini API operates exclusively on Google AI Studio's **Free Tier** (15 Requests/Min, 1,500 Requests/Day).
-- **Strict $0.00 Protection**: Under no circumstances will any component transition to paid Vertex AI, request billable overages, or require a credit card.
-- **Fail-Closed Quota Pausing**: If the daily quota finishes (HTTP 429 `RESOURCE_EXHAUSTED`), `pipeline/quota_handler.py` catches `GeminiQuotaExceededError`. The job is marked as `status: quota_paused` with `quota_reset_utc` calculated to the exact next **midnight Pacific Time (08:00 UTC)** reset.
-- **Autonomous Resumption**: On subsequent scheduled cron runs (`06:14 UTC` and `14:14 UTC`), `select_jobs` and `select_next_queued_short` check if the reset timestamp has passed. As soon as the daily quota resets, the job is automatically restored to `status: approved` and continues rendering, narrating with `Charon`, and uploading without human intervention.
+### 2.1 Quota Exhaustion & Resumption (Conditional, Not a Publish Guarantee)
+Free limits depend on the provider project, model, and tier. The latest production error (run `41743246072`, 2026-11-04) reported a **10 TTS requests/day** limit for `gemini-3.8-flash-tts`; this observed limit is not a permanent contract or the generic Gemini text quota.
+
+- Quota errors fail closed: the affected queue item is paused with the reset timestamp returned/calculated by `pipeline/quota_handler.py`. The shared TTS breaker also prevents a queued Short from probing the same exhausted TTS allowance after a long-form failure, and vice versa.
+- Reset-aware queue selection may unpause work after the timestamp. That does not guarantee publication: script eligibility, the remaining free quota, rendering, credentials, GitHub Actions, and YouTube upload must still succeed.
+- Repository code cannot inspect whether the Google project is billable. The account-side prerequisite is billing disabled for the project behind `GEMINI_API_KEY`; see `docs/ZERO_DOLLAR_LOCK.md`.
+- Production currently has three slots per day (`06:14`, `14:14`, `19:14 UTC`). A slot can complete without publishing; inspect the explicit release outcome and receipt.
 
 ---
 

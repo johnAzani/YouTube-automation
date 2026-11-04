@@ -3,7 +3,7 @@
 **Channel Identity:** *The Secret Place* (`@TheSecretPlace`) — Sacred Scripture, Bedtime Prayer & Faith Contemplation Studio  
 **Target Milestone:** 4,000 Public Watch Hours (Accelerating Second-Session Co-Visitations & Returning Viewers)  
 **Associated Code:** `pipeline/comment_replies.py`, `scripts/reply_comments.py`, `.github/workflows/comments.yml`  
-**Financial Governance:** Permanent $0.00 / month hard cost lock (`docs/ZERO_DOLLAR_LOCK.md`)
+**Financial Governance:** $0 operating-cost target (provider billing must be disabled) (`docs/ZERO_DOLLAR_LOCK.md`)
 
 ---
 

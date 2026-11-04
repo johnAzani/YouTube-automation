@@ -19,7 +19,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from .config import CONFIG, OUTPUT_DIR, QUEUE_DIR, PUBLISHED_DIR, REPO_ROOT
+from .config import CONFIG, CONTENT_DIR, OUTPUT_DIR, QUEUE_DIR, PUBLISHED_DIR, REPO_ROOT
 from .originality import enforce, OriginalityError
 from .script_doc import MIN_LONGFORM_WORDS, ScriptDoc, parse_script
 
@@ -454,25 +454,39 @@ def _open_release_ticket(doc: ScriptDoc, url: str, privacy: str, video_id: str =
 
 
 def quota_blocked_until(now: datetime | None = None) -> datetime | None:
-    """The latest quota-pause reset still in the future, if the day is spent.
+    """Latest live quota pause across long-form and Short release queues.
 
-    The free tier allows **ten** TTS requests per day for `gemini-3.8-flash-tts`.
-    A paused job records when the allowance returns. Starting another video before
-    then cannot succeed — it only spends tomorrow's requests on a doomed attempt,
-    three times a day. So while any pause is still live, the release waits.
+    The observed `gemini-3.8-flash-tts` allowance is project/model-specific, not a
+    permanent global contract. When one format records a live pause, this gate
+    prevents another format from starting a release that cannot complete today.
+    The per-request TTS breaker also covers manual job dispatches and cache-miss
+    requests that bypass this run-level check.
     """
     from .quota_handler import is_quota_pause_expired
 
     now = now or datetime.now(timezone.utc)
     latest: datetime | None = None
+    paused_items: list[dict] = []
     for path in sorted(QUEUE_DIR.glob("*.md")):
         try:
             doc = parse_script(path)
+            if str(doc.status).strip().lower() == "quota_paused":
+                paused_items.append(doc.meta)
         except Exception:  # noqa: BLE001
             continue
-        if str(doc.status).strip().lower() != "quota_paused":
-            continue
-        raw = str(doc.meta.get("quota_reset_utc") or "").strip()
+    shorts_dir = CONTENT_DIR / "shorts-queue"
+    if shorts_dir.is_dir():
+        import yaml
+        for path in sorted(shorts_dir.glob("*.yml")):
+            try:
+                data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+                if isinstance(data, dict) and str(data.get("status", "")).strip().lower() == "quota_paused":
+                    paused_items.append(data)
+            except Exception:  # noqa: BLE001
+                continue
+
+    for metadata in paused_items:
+        raw = str(metadata.get("quota_reset_utc") or "").strip()
         if not raw or is_quota_pause_expired(raw):
             continue
         try:

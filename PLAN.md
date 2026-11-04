@@ -1,19 +1,10 @@
-# Master Architecture & Operational Plan — The Secret Place
-## Complete In-Depth Autonomous Production, 2026 Recommendation Engine, 4,000 Watch Hours Mathematical Engine & Continuous Research System ($0.00 / Month Hard Cost Lock)
+# The Secret Place — channel strategy and automation architecture
 
-> 📌 **LIVING SYSTEM STATE & MASTER LEDGER:** See **[STATE.md](STATE.md)** for current component status, live Selar links, active credentials, and next immediate tasks before executing changes.
-
-> **Channel Strategic Status — October 29, 2026:**
-> • **Channel Identity:** *The Secret Place* (`@TheSecretPlace`) — Sacred Scripture, Bedtime Prayer & Faith Contemplation Studio.
-> • **Audience Equity:** **1,230 Verified Subscribers** (✅ Surpassed the 1,000 YPP threshold; primary milestone: 4,000 Valid Public Watch Hours).
-> • **Live Anchor Master:** YouTube Video ID **`7RDX0fbIOtQ`** (*Psalm 91: The Complete Prayer of Divine Protection Before You Sleep*).
-> • **Official Visual Standard:** **DOCOGA REELS v2** Kinetic Display Typography Engine (16:9 widescreen long-form & 9:16 vertical Shorts, Inter-Black display type, sapphire glassmorphism cards, directional drop shadows, radiant gold active-word synchronization).
-> • **Voiceover Invariant:** Permanently locked to **Google Gemini TTS** (`gemini-3.8-flash-tts`, prebuilt voice **`Charon`**) via `$0.00` free tier. Standing instruction: Never audition or alter voice.
-> • **Financial Governance:** Strict, fail-closed **$0.00 / month hard cost lock** (`docs/ZERO_DOLLAR_LOCK.md`). Zero cloud bills, zero paid APIs, zero credit card exposure.
-> • **Autonomous Unattended Execution:** Fully headless creation, rendering, and scheduled publishing running on GitHub Actions cron (`06:14 UTC` & `14:14 UTC`) without requiring chat pings or user presence.
-> • **Continuous Research Engine:** Self-updating intelligence loop driven by `scripts/continuous_research.py`, `scripts/auto_scheduler.py`, and `docs/CONTINUOUS_RESEARCH_SYSTEM.md`.
-
-**Status:** Living Document (Continuously Researched & Self-Updating) · **Branch:** `arena/c2e2ed52-youtube-automation`
+> **Current status (2026-11-04):** Treat this document's forecasts and old milestones as historical plans, not live telemetry. See [`STATE.md`](STATE.md) and [`docs/PRAYER_AUTOMATION_AUDIT.md`](docs/PRAYER_AUTOMATION_AUDIT.md) for current repository/run status. The latest known production attempt exhausted the Gemini TTS quota and uploaded nothing. Production slots are 06:14, 14:14, and 19:14 UTC; any slot can fail or publish nothing.
+>
+> The operating-cost target is $0, but the project behind `GEMINI_API_KEY` must have billing disabled. Repository code cannot verify external billing. The latest reported TTS cap was 10 requests/day for `gemini-3.8-flash-tts`; it is project/model-specific and may change. No paid fallback is allowed.
+>
+> Channel analytics such as current subscriber count, watch hours, YPP status, and actual costs are not verified by this plan. Do not use prior numeric snapshots or illustrative performance forecasts as live facts.
 
 ---
 
@@ -23,16 +14,16 @@
 *The Secret Place* is an editorial digital prayer and scripture meditation studio producing reverent, high-retention biblical audio-visual experiences designed for bedtime listening, anxiety relief, and spiritual contemplation. The channel operates as a faceless institutional studio (strictly avoiding personal creator naming, e.g. John Azani), maintaining an atmosphere of sacred reverence, visual tranquility, and cinematic elegance.
 
 ### 0.2 The Seven Inviolable System Invariants
-1. **Permanent $0.00 / Month Hard Cost Lock:**
-   Under no circumstances may any component require, incur, or transition to a paid subscription, credit card charge, or billable cloud tier (`docs/ZERO_DOLLAR_LOCK.md`). Rendering runs entirely on free GitHub Actions standard runners (4-core Linux, 16 GB RAM); voiceover runs on Google Gemini's 15 RPM / 1,500 RPD free tier; ambient audio is procedurally synthesized via DSP (`tools/score.py`); visual assets originate from verified public-domain ledgers (Wikimedia, USGS, NPS, NASA) and free commercial APIs (Pexels, Pixabay). If external limits are encountered, the system **fails closed** (`status: quota_paused`) until quotas reset.
+1. **$0 Operating-Cost Target:**
+   Do not add paid services, billable fallbacks, or credit-card dependencies. Rendering and ambient audio use local tooling; TTS and YouTube APIs have finite project-specific quotas. The latest TTS failure reported 10 requests/day for `gemini-3.8-flash-tts`, not the older generic Gemini text allowance. Quota exhaustion must fail closed. Billing must be disabled on the provider project; the repository cannot verify account-side billing (`docs/ZERO_DOLLAR_LOCK.md`).
 2. **Locked-in Google Gemini Voice (`Charon`):**
    The voice of *The Secret Place* is permanently locked to Google Gemini API (`model: gemini-3.8-flash-tts`, voice `Charon`). It provides a deep, warm, authoritative, yet gentle delivery suited for evening prayer. The system must never audition, replace, or alter this voice model.
 3. **DOCOGA REELS v2 Visual Standard:**
    Subtitles are never rendered as cheap bottom-aligned captions. Both long-form videos and Shorts share the exact same official channel aesthetic: full-bleed cinematic nature plates, sapphire-blue glassmorphic cards (`rgba(8, 22, 50, 0.57)`), subtle frosted blur, directional drop shadows, and Inter-Black kinetic display typography with real-time radiant gold active-word illumination (`#FFD700`). Text moves immediately upon speech cessation with zero delay and no lingering words.
 4. **4,000 Watch Hours Mathematical Acceleration:**
-   With **1,230 subscribers** already secured, the channel bypasses the typical "subscriber grind" and focuses 100% of algorithmic optimization on generating **4,000 valid public watch hours** (240,000 minutes) to enter the YouTube Partner Program (YPP).
+   The strategy prioritizes authentic public watch time while tracking current subscriber and YPP status in YouTube Studio; this repository plan does not contain live analytics.
 5. **Autonomous Unattended Creation & Scheduling:**
-   The production pipeline executes on automated GitHub Actions cron schedules (`06:14 UTC` and `14:14 UTC` daily). It autonomously processes queue manifests, renders videos, burns synchronized typography, synthesizes procedural audio beds, uploads to YouTube with native `publishAt` scheduling or immediate `public` visibility, commits state back to git with `[skip ci]`, and creates GitHub Issue release tickets without requiring the creator to be online or initiate chat pings.
+   The production workflow is scheduled at `06:14`, `14:14`, and `19:14 UTC` daily. Runs may fail or end without publication due to quotas, queue eligibility, credentials, or workflow errors. On a successful path, it renders eligible prayer content, uploads to YouTube, and records repository state; inspect the run outcome and receipt rather than assuming a cron means a release.
 6. **Continuous Research & Self-Updating Architecture:**
    The strategy is not a static document. Weekly automated metrics workflows (`.github/workflows/metrics.yml`) ingest YouTube telemetry. `scripts/continuous_research.py` and `scripts/auto_scheduler.py` analyze view velocity, retention drop-offs, and scripture search demand shifts to continuously prioritize upcoming queue jobs.
 7. **Duplicate & Unintentional Upload Prevention Shield (`docs/DUPLICATE_UPLOAD_PREVENTION.md`):**
@@ -104,41 +95,33 @@ The Faith, Devotional, and Bedtime Scripture niche possesses three unique algori
 
 ---
 
-## 2. Mathematical Watch Hour Acceleration Engine (Crossing 4,000 Hours with 1,230 Subscribers)
+## 2. Watch-Hour Goals and Scenario Planning
 
 ### 2.1 The Core Arithmetic of YPP Monetization
 - **YPP Requirement:** 4,000 Valid Public Watch Hours within the preceding 365 rolling days.
 - **Total Minutes Required:** $4,000 \times 60 = 240,000\text{ minutes}$ ($14,400,000\text{ seconds}$).
 - **The Short-Form Watch Time Trap:** Under YouTube Partner Program regulations, watch time generated from the Shorts Feed does **NOT** count toward the 4,000-hour requirement. Shorts build subscribers; long-form builds watch hours.
 
-### 2.2 Content Format Performance Comparison
+### 2.2 Illustrative Watch-Time Arithmetic (Not Channel Analytics)
 
-| Format Category | Average Duration | Realistic AVD | Watch Minutes / View | Views Needed for 4,000 Hours | Views / Day (60-Day Pacing) |
-|---|---|---|---|---|---|
-| Micro-Clips / Shorts | 45 seconds | 35 seconds (0.58 min) | 0.58 min | **413,793 views** (Banned in Shorts Feed) | 6,896 / day |
-| Standard Explainer | 3.5 minutes | 1.8 minutes (51%) | 1.80 min | **133,333 views** | 2,222 / day |
-| **Core Deep-Dive Devotional** | **6.0 – 8.0 minutes** | **5.0 minutes (70%)** | **5.00 min** | **48,000 views** | **800 / day** |
-| **1-Hour Bedtime Suite** | **60 minutes** | **35.0 minutes (58%)** | **35.00 min** | **6,857 views** | **114 / day** |
-| **3-Hour Sleep Marathon** | **180 minutes** | **60.0 minutes (33%)** | **60.00 min** | **4,000 views** | **66 / day** |
+The table below is arithmetic only. Duration, average view duration, view counts, eligibility, and upload volume are assumptions—not observed performance or a promise of YPP progress. Shorts-feed watch time is treated differently from eligible long-form public watch time; verify current YouTube Partner Program rules in Studio.
 
-### 2.3 Subscriber Conversion & Algorithmic Seed Velocity
-Having **1,230 verified subscribers** provides *The Secret Place* with an immense competitive advantage over brand-new channels:
-1. **Day-1 Seed Traffic:**
-   - When a new deep-dive devotional is published, YouTube immediately tests it against a sample of our 1,230 subscribers.
-   - If **20% of subscribers** (246 viewers) watch within the first 12 hours, with an AVD of 5.0 minutes, that single video generates **1,230 watch minutes (20.5 watch hours)** immediately.
-2. **The Recommendation Multiplier:**
-   - Strong Day-1 engagement (CTR >8%, AVD >70%) signals to YouTube's MMoE ranking model that the video has high viewer satisfaction.
-   - The algorithm expands distribution from subscribers to lookalike audiences browsing for bedtime prayers, yielding an **8× to 15× multiplier** on impressions.
-   - A single high-performing upload yields 2,500 to 4,000 total views, generating **200 to 330 watch hours**.
-3. **Catalog Compounding Effect:**
-   - A library of **15 core deep-dive devotionals** averaging 250 watch hours each generates **3,750 watch hours**.
-   - Back-catalog views from previous uploads continue accumulating 20–50 hours per day, pushing the channel past the 4,000-hour threshold within **45 to 60 days**.
+| Illustrative Format | Assumed Average View Duration | Approx. Views for 4,000 Hours |
+|---|---:|---:|
+| 3.5-minute prayer | 1.8 minutes | 133,334 |
+| 6–8-minute devotional | 5.0 minutes | 48,000 |
+| 1-hour prayer suite | 35 minutes | 6,858 |
+| 3-hour sleep suite | 60 minutes | 4,000 |
 
-### 2.4 The Multi-Hour Bedtime Suite Accelerator (`docs/FAST_TRACK_4000_WATCH_HOURS.md`)
-To compress the timeline into weeks, the channel deploys **Extended Sleep Suites** (combining authored Psalm masters into seamless 1-hour and 3-hour ambient prayer journeys):
-- A 3-hour compilation (`Psalms 91, 23, 121, 27, 46`) played by just **100 nightly sleepers** for **20 nights** generates:
-  $$100\text{ listeners} \times 20\text{ nights} \times 120\text{ min AVD} = 240,000\text{ minutes} = \mathbf{4,000\text{ Watch Hours}}$$
-- This dual-track strategy (6–8 min deep dives for discovery + 1–3 hr sleep suites for pure watch time accumulation) guarantees rapid YPP entry at $0.00 cost.
+These calculations exclude ineligible/private/deleted views and do not model discovery, retention, returning viewers, claims, or policy review. Use current YouTube Studio numbers before making a forecast.
+
+### 2.3 Audience Conversion and Recommendation (Unknown Until Measured)
+The repository does not query or verify current subscribers, impressions, click-through rate, average view duration, recommendation multipliers, or watch hours. Do not treat the former fixed subscriber counts or assumed CTR/retention values in this plan as live facts. For a scenario, use the current verified subscriber count `S`, measured view rate `r`, and measured average view duration `d`; expected watch minutes are `S × r × d`, and every input should be labelled as an assumption or an observed analytics value.
+
+No number of uploads, retention target, or recommendation multiplier guarantees a monetization outcome. Keep prayer content truthful and valuable even when growth is slow; do not optimize for volume at the expense of script accuracy, rights, or pastoral care.
+
+### 2.4 Longer Prayer Compilations (Optional Strategy)
+Longer scripture/prayer compilations may suit listeners seeking extended devotional audio, but they are not a guaranteed accelerator. Their production, licensing, scripture accuracy, retention, platform eligibility, and actual operating cost must be checked before scheduling. Any watch-time arithmetic is a scenario, not a commitment or forecast.
 
 ### 2.5 Implemented Production Engines & Autopilot Systems (October 2026)
 1. **Multi-Hour Bedtime Sleep Sanctuary Suite (`tools/build_sleep_suite.py` / `pipeline/sleep_suite.py`):**
@@ -171,16 +154,16 @@ To compress the timeline into weeks, the channel deploys **Extended Sleep Suites
 
 ## 3. Autonomous Headless Production & Unattended Scheduling Architecture
 
-The channel is engineered to operate 100% autonomously without human presence, chat pings, or manual intervention.
+The pipeline automates recurring production tasks, but external account settings, provider quotas, GitHub Actions scheduling, and YouTube can still block a release. This architecture is best-effort automation, not guaranteed unattended publishing.
 
 ```
                    AUTONOMOUS UNATTENDED CI/CD PIPELINE
                                      │
            ┌─────────────────────────┴─────────────────────────┐
            ▼                                                   ▼
-  MORNING CRON (06:14 UTC)                            AFTERNOON CRON (14:14 UTC)
-  • Africa/Europe Morning Prayer Window               • US Bedtime Priming Window (4h pre-peak)
-  • West Coast US Late-Night Window                   • Optimal YouTube transcode caching
+  RELEASE ATTEMPTS (06:14 / 14:14 / 19:14 UTC)
+  • Three GitHub Actions schedule slots; any may fail or publish nothing
+  • Queue, quota, credentials, render, and YouTube upload gates must all pass
            │                                                   │
            └─────────────────────────┬─────────────────────────┘
                                      ▼
@@ -222,29 +205,19 @@ The channel is engineered to operate 100% autonomously without human presence, c
   - Scheduling rule: Always upload 2 to 4 hours prior to the darkest purple band or 48-hour velocity crest to seed subscriber CTR and AVD ahead of the peak surge.
   - Day-of-week ranking: Sunday (#1), Friday (#2), and Thursday (#3) command the highest contemplative devotional watch time.
 
-### 3.2 Headless Queue Progression & Storage Discipline
-- **Long-Form Queue (`content/queue/*.md`):** Script files contain YAML frontmatter declaring `id`, `status: approved`, `privacy: public` (or `publish_at`), and scene bodies.
-- **Shorts Queue (`content/shorts-queue/*.yml`):** Manifests declare `short: "short-psalm91"`, `status: approved`, and `privacy: public`.
-- **Git Commit-Back (`[skip ci]`):** Upon verified upload, the runner updates the file status to `published`, records `youtube_video_id` and `watch_url`, moves the script to `content/published/`, and commits back to the branch with the `[skip ci]` flag to prevent recursive workflow triggers.
-- **Strict Storage Discipline:** Video files are **never** committed to Git. Videos exist only in ephemeral Actions artifact storage for 24 hours for inspection before automatic expiration.
+### 3.2 Queue, Receipts, and Temporary Media
+- Long-form scripts live in `content/queue/`; Short manifests/specs live in `content/shorts-queue/` and `content/shorts-scripts/`. Approval, niche, word-count, render, and duplicate checks all gate production.
+- A successful upload must return a YouTube video ID and be recorded in `content/published/`. Failed state commits or missing receipts must be reconciled before retrying to avoid duplicate uploads.
+- Render output is ignored from Git. TTS chunks/audio may be cached by GitHub Actions, but cache retention is best-effort and is not durable storage. Artifact retention follows each workflow's configuration and GitHub policy; do not assume a fixed 24-hour lifetime.
 
-### 3.3 Zero-Dollar Fail-Closed Quota Safeguards
-- **YouTube Data API v3 Budget:** Standard free tier provides 10,000 units/day.
-  - Video Insert: 1,600 units (or 1 upload from dedicated bucket).
-  - Thumbnail Set: 50 units.
-  - Video List / Audit: 1 unit.
-  - Daily Budget: 1 long-form + 1 Short consumes ~1,755 units out of 10,000 (17.5% utilization), leaving massive safety margins.
-- **Fail-Closed Protection:** If YouTube API returns `quotaExceeded` (HTTP 403), `pipeline/quota_handler.py` catches the exception, calculates `quota_reset_utc` (midnight Pacific Time = 07:00 / 08:00 UTC), marks the manifest as `status: quota_paused`, and exits gracefully with exit code 0.
-- **Autonomous Resumption:** When the next scheduled cron runs, `pipeline/short_release.py` and `pipeline/run.py` inspect `quota_reset_utc`. If `now_utc >= quota_reset_utc`, the job is automatically flipped back to `approved` and uploaded without requiring user intervention.
+### 3.3 Provider Quotas and Fail-Closed Handling
+- Gemini text, Gemini TTS, and YouTube Data API quotas are separate, finite, and project/configuration-specific. The latest production error reported a 10-request/day allowance for `gemini-3.8-flash-tts`; this is an observed value, not a permanent limit.
+- TTS quota pauses are shared across Long-form and Shorts before any new Gemini request is sent. Jobs may resume after the recorded reset, but only if all other eligibility and publishing gates pass.
+- Do not use historical API-unit arithmetic in this plan as current project quota. The API error and provider console are authoritative. The repository does not enforce provider billing and cannot inspect billing status.
+- The $0 target requires billing disabled on the Google project behind `GEMINI_API_KEY`; no paid fallback is permitted. If that account setting is uncertain, pause use of the key.
 
-### 3.4 Autonomous Comment Reply Engine & Community Flywheel (`docs/COMMENT_REPLY_SYSTEM.md`)
-- **Second-Session Co-Visitation Engine:** Replying to viewer comments triggers instant device push notifications, driving viewers back into the video for a second session and boosting the video's candidate ranking in Suggested and Browse feeds.
-- **Intent Classification & Pastoral Synthesis:** `pipeline/comment_replies.py` categorizes incoming comments into Prayer Requests, Amen Affirmations, Rest/Sleep Testimonies, Scripture Inquiries, Scam Defense, and Crisis Care. Google Gemini Brain composes unique, context-tailored pastoral replies at $0.00 cost.
-- **Anti-Spam & Shadowban Immunity:** Generates 100% unique wording per reply (strictly avoiding repetitive templates flagged by YouTube's spam filters) and applies randomized human jitter pacing (4–8s delay).
-- **Quota Allocation:** 3-Pulse Daily Cadence (8:14am morning launch velocity, 4:14pm global priming, 8:14pm bedtime sweep) with 8 replies/pulse consumes ~1,200 YouTube units (12% of free daily budget) and <1.5% of Gemini daily free tier.
-- **CLI & Automation:** `scripts/reply_comments.py` supports `--dry-run` and `--apply`, backed by `.github/workflows/comments.yml` and deduplication tracking in `content/comments/replied.json`.
-
----
+### 3.4 Comments, Community Posts, and Other Secondary Workflows
+Comment replies, community posts, playlist updates, and metrics are separate automations from the video release pipeline. They have their own schedules, credentials, quota use, and failure modes. Do not infer that a comment or playlist action increases recommendations; no such benefit is verified here. Gemini text generation may use a separate finite quota, and account billing must remain disabled for the $0 target.
 
 ## 4. Technical Video, Audio & Motion Specifications (To the Thinnest Detail)
 
@@ -424,37 +397,19 @@ The secret to compounding YouTube growth is continuous algorithmic calibration. 
 
 ## 8. Risk Management Matrix & Fail-Safe Contingency Protocols
 
-```
-┌─────────────────────────────────┬──────────┬────────────────────────────────────────────────────────┐
-│ Risk Factor                     │ Severity │ Architectural Mitigation Protocol                      │
-├─────────────────────────────────┼──────────┼────────────────────────────────────────────────────────┤
-│ Google Gemini TTS API Quota     │ High     │ Exponential backoff + fail-closed quota pause;         │
-│ Exhaustion (15 RPM / 1,500 RPD) │          │ auto-resumes at midnight PST (`quota_reset_utc`).      │
-├─────────────────────────────────┼──────────┼────────────────────────────────────────────────────────┤
-│ YouTube Data API Daily Quota    │ High     │ Strict budget allocation (1,755 / 10,000 units);       │
-│ Exhaustion (10,000 units/day)   │          │ jobs pause gracefully and unpause on next cycle.       │
-├─────────────────────────────────┼──────────┼────────────────────────────────────────────────────────┤
-│ OAuth Refresh Token Revocation  │ High     │ GCP OAuth consent screen set to "In Production" to     │
-│ (7-Day Expiry in Testing Mode)  │          │ prevent automatic 7-day token expiration.              │
-├─────────────────────────────────┼──────────┼────────────────────────────────────────────────────────┤
-│ GitHub Actions Cron Delay       │ Low      │ Pipeline is fully idempotent; jobs run sequentially    │
-│ (Best-effort queue jitter)      │          │ with concurrency locks (`concurrency: produce`).       │
-├─────────────────────────────────┼──────────┼────────────────────────────────────────────────────────┤
-│ Sudden Algorithmic Policy Shift │ Medium   │ In-house procedural DSP audio + verified public-domain │
-│ Regarding AI Content            │          │ visuals ensure 100% human-transformed compliance.      │
-├─────────────────────────────────┼──────────┼────────────────────────────────────────────────────────┤
-│ Zero-Dollar Budget Invariant    │ Critical │ Pipeline fails closed rather than incurring charges;   │
-│ Breach                          │          │ zero credit card information stored in repository.     │
-└─────────────────────────────────┴──────────┴────────────────────────────────────────────────────────┘
-```
+| Risk | Current mitigation | Remaining limitation |
+|---|---|---|
+| Gemini TTS quota | Cross-queue pause checks, per-request fail-fast, resumable chunks | Project/model limits change; latest observed cap was 10 TTS requests/day; cache is best-effort |
+| YouTube API quota / OAuth failure | Bounded upload flow, pause handling, duplicate reconciliation, durable receipt | Actual project quota/token status is external; a failed upload means no release |
+| GitHub Actions schedule suppression | Supervisor and monitor inspect missed slots; concurrency protects content state | They also depend on GitHub Actions; an independent sender is not configured |
+| Rights, niche, or content validation | Prayer niche gates, source/licence ledger, script and render checks | Checks cannot guarantee theological accuracy, copyright status for every source, or policy outcome |
+| Unexpected provider charges | No paid fallback; quota failures stop work | Billing is not inspectable from code; billing must be disabled on the project behind `GEMINI_API_KEY` |
 
 ---
 
 ## 9. Conclusion & Immediate Execution Runway
 
-*The Secret Place* possesses an exceptional strategic setup: **1,230 verified subscribers**, an authored flagship live master (`7RDX0fbIOtQ`), an approved queue job (`0009` Psalm 23), an approved Short manifest (`short-0002` Psalm 91), and an autonomous production pipeline ready to execute unattended on GitHub Actions cron.
-
-By strictly adhering to the **$0.00 cost lock**, maintaining the **DOCOGA REELS v2 visual standard**, leveraging the locked-in **Google Gemini `Charon` voice**, and continuously researching audience signals through automated telemetry, the channel is engineered to rapidly surpass the **4,000 public watch hours threshold** and establish a compounding, monetized Christian media institution.
+This plan is a strategy reference, not a live operational certificate. Current audience metrics, upload status, YPP eligibility, and provider billing must be verified from YouTube Studio, the release receipts, and the provider account. Automation can reduce manual work, but free quotas and workflow failures can block publication; no schedule or content strategy guarantees growth or monetization.
 
 ---
 

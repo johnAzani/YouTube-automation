@@ -4,7 +4,7 @@
 **Document Version:** 1.0 (Master Algorithmic & Analytics Release Timing Specification)  
 **Target Demographics:** Tier-1 US/UK/CA High-RPM Bedtime Listeners + International Morning Devotional Audience  
 **Associated Workflows:** `.github/workflows/produce.yml` (`06:14 UTC` and `14:14 UTC` daily cron slots)  
-**Governance Invariant:** Permanent $0.00 / month hard cost lock (`docs/ZERO_DOLLAR_LOCK.md`)
+**Governance Invariant:** $0 operating-cost target (provider billing must be disabled) (`docs/ZERO_DOLLAR_LOCK.md`)
 
 ---
 

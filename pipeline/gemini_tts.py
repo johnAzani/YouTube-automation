@@ -218,6 +218,18 @@ def _guarded_chunk(client, text, voice_name, system_instruction, model, temp_raw
     of sitting silently inside chunk 7 until the step is killed.
     """
     from .gemini_client import GeminiRequestTimedOut, hard_deadline, http_timeout_seconds
+    from .quota_handler import GeminiQuotaExceededError, active_gemini_tts_pause_until
+
+    # The API quota is shared by all narration formats. Check the persisted queue
+    # before every network call so a paused Short blocks long-form TTS (and vice
+    # versa), including manual/specific-job dispatches that bypass run-level gates.
+    paused_until = active_gemini_tts_pause_until()
+    if paused_until is not None:
+        raise GeminiQuotaExceededError(
+            "A prior long-form or Short narration exhausted the shared Gemini TTS daily quota; "
+            "no new request was sent.",
+            reset_utc=paused_until,
+        )
 
     label = f"TTS chunk {index}/{total}"
     last = None

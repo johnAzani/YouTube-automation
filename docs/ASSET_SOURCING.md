@@ -97,16 +97,14 @@ The manual GitHub Actions workflow is `Remaster prayer channel assets` (`.github
 External stock endpoints are not reachable from every sandbox/network. A failed local search is recorded in the render log and does not mean those free providers are unavailable to the GitHub-hosted runner. Never describe an unverified fallback as stock footage: the per-scene source ledger distinguishes video, stock photo, and authored archive-photo fallback.
 
 
-### Procedural plates and regression fixtures
+### Prayer scenes and regression fixtures
 
-`tools/make_plates.py` creates deterministic procedural plates for visual-pipeline tests. The
-Psalm 91 prayer video and Short are the only authored sample renders published by the remaster
-workflow. Older non-prayer story assets remain isolated regression fixtures for renderer and
-licence-gate tests; they are not active scripts, channel samples, or upload candidates.
+The active long-form and Short renderer catalogs are prayer-only. Historical non-prayer images
+remain solely as licensing/audit fixtures; they are not active scripts, channel samples, or upload
+candidates. Do not add new off-channel scene specs or use those fixtures for production.
 
-The plate generator requires no source images, downloads, or fonts. CI rebuilds missing plates;
-`tests/test_original_plates.py` verifies their deterministic hashes. A Pillow upgrade may change
-PNG encoding, so inspect hash drift before regenerating the ledger.
+Prayer renderers use scene-specific images or generated fallback plates in memory; there is no
+separate image generator that writes unrelated story artwork into `image-search/` during CI.
 
 Never substitute an unverified photo and call it licensed. Production scenes must have a cleared
 asset or a valid stock-source record.

@@ -2,7 +2,7 @@
 
 Generates verified Spanish (es) and Portuguese (pt) metadata localizations
 for YouTube video uploads, unlocking global Hispanic, Lusophone African, and
-Brazilian audiences under the $0.00 hard cost lock (0 extra API quota units).
+Brazilian audiences under the $0 operating-cost target (no paid fallback) (0 extra API quota units).
 """
 from __future__ import annotations
 

@@ -1,12 +1,8 @@
 #!/usr/bin/env python3
-"""Shorts assembler — full-bleed 9:16 vertical documentary engine.
+"""Prayer-first 9:16 vertical renderer for The Secret Place.
 
-- 720x1280 @24fps (9:16 vertical), 1080x1920 super-sampled plates, smooth cinema camera
-- Full-bleed edge-to-edge cover framing for both real HD stock video clips and documentary photography
-- Natural rich documentary color grading + real frosted-glass backdrop blur cards
-- Verified 20:9 / 19.5:9 YouTube Shorts safe-zone layout (clears status bar, header icons, right rail, and bottom channel chrome)
-- Clip-first free stock search (Pexels, Pixabay, Wikimedia Commons, Internet Archive, NASA) with cleared 9:16 documentary plates as offline fail-safe
-- Score-only audio (voice + background music, zero SFX), hush/swell automation
+Renders approved scripture/devotional Shorts with safe-zone-aware captions,
+licensed or existing prayer visuals, local FFmpeg encoding, and narration timing.
 
 Run: .venv/bin/python tools/shorts.py short-psalm91
 """
@@ -54,13 +50,7 @@ FFMPEG = _resolve_ffmpeg()
 FDIR = os.path.join(ROOT, 'assets', 'fonts')
 IMG = os.path.join(ROOT, 'image-search')
 
-# Ensure procedural backup plates remain present on disk for shared repo checks:
-# houston-skyline-plate-1.png houston-skyline-plate-2.png houston-skyline-plate-3.png
-# houston-skyline-plate-4.png houston-skyline-plate-5.png enron-market-board-plate-1.png
-# enron-ledger-grid-plate-1.png enron-pipeline-corridor-plate-1.png
-# enron-spe-network-plate-1.png enron-courtroom-columns-plate-1.png
-from tools.make_plates import ensure_plates
-ensure_plates()
+# Ensure procedural backup plates remain present on disk for prayer renders.
 AUDIO = os.path.join(ROOT, 'assets', 'deepdive')
 
 FONT_CACHE = {}
@@ -1185,177 +1175,6 @@ def caption_ribbon_layer(bg_rgb, stream, t, is_prayer=False):
             x += ww + gap
     return layer
 
-# ------------------------- contextual visual diagrams (viz_layer) — vertical ----
-def viz_layer(bg_rgb, viz_kind, t_scene, scene_dur):
-    layer = Image.new('RGBA', (W, H), (0, 0, 0, 0))
-    if not viz_kind:
-        return layer
-    in_e = ease_out_expo(clamp01((t_scene - 0.15) / 0.5))
-    out_a = 1.0 if (scene_dur - t_scene) > 0.45 else clamp01((scene_dur - t_scene) / 0.45)
-    a = in_e * out_a
-    if a <= 0.02:
-        return layer
-    prog = clamp01((t_scene - 0.15) / 1.65)
-    d = ImageDraw.Draw(layer)
-    vcx = 315  # centered cleanly left of right-rail icons (SAFE_L=76 .. RAIL_SAFE_R=554)
-
-    if viz_kind == 'pressure_gauge':
-        pw, ph, px, py = 360, 102, vcx - 180, 560
-        paste_frosted(layer, bg_rgb, glass_card(pw, ph, radius=14), px, py, a)
-        f1 = fnt('Bold', 12)
-        d.text((px + 16, py + 12), 'HYDROSTATIC DAM LOAD', font=f1, fill=ICE + (int(235 * a),))
-        d.rectangle([px + 16, py + 34, px + pw - 16, py + 54], fill=(255, 255, 255, int(42 * a)))
-        bw = int((pw - 32) * ease_out_expo(prog))
-        col = CRIMSON if prog > 0.75 else YELLOW
-        if bw > 2:
-            d.rectangle([px + 16, py + 34, px + 16 + bw, py + 54], fill=col + (int(240 * a),))
-        d.text((px + 16, py + 68), 'EARTHEN CREST: CRITICAL', font=f1, fill=col + (int(245 * a),))
-
-    elif viz_kind == 'dam_anatomy':
-        pw, ph, px, py = 400, 156, vcx - 200, 545
-        paste_frosted(layer, bg_rgb, glass_card(pw, ph, radius=14), px, py, a)
-        fh = fnt('Black', 12)
-        fb = fnt('SemiBold', 11)
-        d.text((px + 16, py + 12), 'FATAL MODIFICATIONS TO DAM', font=fh, fill=YELLOW + (int(245 * a),))
-        items = [(0.08, '01  IRON SCREENS CLOG PIPES'), (0.32, '02  SPILLWAY CHOKED'), (0.56, '03  CREST LOWERED 3FT')]
-        for idx, (thr, txt) in enumerate(items):
-            ia = clamp01((prog - thr) / 0.25) * a
-            if ia > 0.02:
-                yy = py + 36 + idx * 36
-                d.rounded_rectangle([px + 16, yy, px + pw - 16, yy + 28], radius=8, fill=(255, 86, 92, int(48 * ia)), outline=CRIMSON + (int(165 * ia),), width=1)
-                d.text((px + 26, yy + 6), txt, font=fb, fill=WHITE + (int(245 * ia),))
-
-    elif viz_kind == 'rain_rising':
-        for r in range(22):
-            rx = int(((r * 137 + t_scene * 420) % (W + 100)) - 50)
-            ry = int(((r * 91 + t_scene * 780) % (H + 120)) - 60)
-            d.line([(rx, ry), (rx - 10, ry + 32)], fill=(185, 220, 255, int(70 * a)), width=2)
-        pw, ph, px, py = 340, 114, vcx - 170, 565
-        paste_frosted(layer, bg_rgb, glass_card(pw, ph, radius=14), px, py, a)
-        f1 = fnt('Bold', 12)
-        d.text((px + 16, py + 12), 'RESERVOIR WATER LEVEL', font=f1, fill=ICE + (int(235 * a),))
-        d.rectangle([px + 16, py + 36, px + pw - 16, py + 60], outline=ICE + (int(140 * a),), width=2)
-        fill_w = int((pw - 36) * ease_out_cubic(prog))
-        col = CRIMSON if prog > 0.8 else YELLOW
-        d.rectangle([px + 18, py + 38, px + 18 + fill_w, py + 58], fill=col + (int(230 * a),))
-        d.text((px + 16, py + 72), 'STATUS: OVERTOPPING CREST', font=f1, fill=CRIMSON + (int(245 * a),))
-
-    elif viz_kind == 'valley_drop':
-        pw, ph, px, py = 390, 128, vcx - 195, 565
-        paste_frosted(layer, bg_rgb, glass_card(pw, ph, radius=14), px, py, a)
-        f1 = fnt('Bold', 12)
-        f2 = fnt('SemiBold', 10)
-        d.text((px + 16, py + 10), '14-MILE VALLEY DROP', font=f1, fill=YELLOW + (int(245 * a),))
-        pts = [(px + 22, py + 40), (px + 125, py + 60), (px + 235, py + 84), (px + 355, py + 94)]
-        d.line(pts, fill=ICE + (int(165 * a),), width=3)
-        wx = int(px + 22 + (355 - 22) * ease_in_out_sine(prog))
-        wy = int(py + 40 + (94 - 40) * ease_in_out_sine(prog))
-        d.ellipse([wx - 6, wy - 6, wx + 6, wy + 6], fill=YELLOW + (int(255 * a),))
-        d.text((px + 16, py + 102), 'SOUTH FORK (3:10 PM)', font=f2, fill=ICE + (int(225 * a),))
-        d.text((px + 220, py + 102), 'JOHNSTOWN (4:07 PM)', font=f2, fill=WHITE + (int(240 * a),))
-
-    elif viz_kind == 'wave_scale':
-        pw, ph, px, py = 360, 142, vcx - 180, 560
-        paste_frosted(layer, bg_rgb, glass_card(pw, ph, radius=14), px, py, a)
-        f1 = fnt('Bold', 12)
-        f2 = fnt('Bold', 10)
-        d.text((px + 16, py + 10), 'FLOOD WAVE SCALE', font=f1, fill=YELLOW + (int(245 * a),))
-        base_y = py + 118
-        bars = [('LOCOMOTIVE', 14, ICE), ('HOUSE', 24, WHITE), ('FLOOD', 36, CRIMSON)]
-        for idx, (lab, ft, col) in enumerate(bars):
-            bx = px + 28 + idx * 108
-            bh = int((ft / 36.0) * 68 * ease_out_expo(clamp01((prog - idx * 0.15) / 0.55)))
-            d.rectangle([bx, base_y - bh, bx + 56, base_y], fill=col + (int(230 * a),))
-            d.text((bx + 8, base_y - bh - 14), f'{ft} FT', font=f2, fill=WHITE + (int(240 * a),))
-            d.text((bx, base_y + 5), lab, font=f2, fill=ICE + (int(215 * a),))
-
-    elif viz_kind == 'mtm_ledger':
-        pw, ph, px, py = 396, 122, vcx - 198, 565
-        paste_frosted(layer, bg_rgb, glass_card(pw, ph, radius=14), px, py, a)
-        f1 = fnt('Bold', 12)
-        f2 = fnt('Black', 12)
-        d.text((px + 16, py + 10), 'MARK-TO-MARKET ILLUSION', font=f1, fill=YELLOW + (int(245 * a),))
-        for yr in range(10):
-            bx = px + 16 + yr * 21
-            d.rectangle([bx, py + 34, bx + 15, py + 70], fill=(120, 175, 240, int(190 * a)), outline=WHITE + (int(120 * a),))
-        d.text((px + 16, py + 80), '10-YR PROJECTION', font=fnt('SemiBold', 10), fill=ICE + (int(225 * a),))
-        if prog > 0.25:
-            pa = clamp01((prog - 0.25) / 0.4) * a
-            d.rounded_rectangle([px + 228, py + 30, px + 380, py + 78], radius=8, fill=(255, 201, 60, int(62 * pa)), outline=YELLOW + (int(235 * pa),), width=2)
-            d.text((px + 240, py + 39), 'BOOKED DAY 1', font=f2, fill=YELLOW + (int(250 * pa),))
-            d.text((px + 240, py + 56), 'AS PROFIT', font=fnt('Bold', 10), fill=WHITE + (int(245 * pa),))
-
-    elif viz_kind == 'stock_boom':
-        pw, ph, px, py = 380, 130, vcx - 190, 565
-        paste_frosted(layer, bg_rgb, glass_card(pw, ph, radius=14), px, py, a)
-        f1 = fnt('Bold', 12)
-        f2 = fnt('Black', 17)
-        d.text((px + 16, py + 10), 'NYSE: ENE · SHARE PRICE', font=f1, fill=ICE + (int(235 * a),))
-        vals = [0.18, 0.24, 0.31, 0.42, 0.39, 0.55, 0.68, 0.79, 0.92, 1.00]
-        n_pts = max(2, int(len(vals) * ease_out_cubic(prog)))
-        pts = []
-        for idx in range(n_pts):
-            vx = px + 18 + idx * ((pw - 36) / (len(vals) - 1))
-            vy = py + 104 - vals[idx] * 58
-            pts.append((vx, vy))
-        if len(pts) >= 2:
-            d.line(pts, fill=EMERALD + (int(245 * a),), width=3)
-            lx, ly = pts[-1]
-            d.ellipse([lx - 6, ly - 6, lx + 6, ly + 6], fill=YELLOW + (int(255 * a),))
-            cur_p = 18.0 + (90.75 - 18.0) * vals[n_pts - 1]
-            d.text((px + pw - 92, py + 10), f'${cur_p:0.2f}', font=f2, fill=EMERALD + (int(250 * a),))
-
-    elif viz_kind == 'shell_maze':
-        pw, ph, px, py = 408, 122, vcx - 204, 565
-        paste_frosted(layer, bg_rgb, glass_card(pw, ph, radius=14), px, py, a)
-        f1 = fnt('Bold', 12)
-        f2 = fnt('Black', 10)
-        d.text((px + 14, py + 10), 'OFF-BALANCE-SHEET SHELL MAZE', font=f1, fill=YELLOW + (int(245 * a),))
-        nodes = ['ENRON', 'LJM 1&2', 'RAPTOR', 'CHEWCO']
-        for idx, nm in enumerate(nodes):
-            na = clamp01((prog - idx * 0.16) / 0.3) * a
-            if na > 0.02:
-                nx = px + 14 + idx * 96
-                ny = py + 34
-                col = CRIMSON if idx > 0 else ICE
-                d.rounded_rectangle([nx, ny, nx + 86, ny + 38], radius=8, fill=(20, 45, 90, int(195 * na)), outline=col + (int(220 * na),), width=2)
-                d.text((nx + 8, ny + 12), nm, font=f2, fill=WHITE + (int(250 * na),))
-        d.text((px + 14, py + 84), 'RESULT: $30B+ LOSSES HIDDEN', font=fnt('Bold', 11), fill=CRIMSON + (int(245 * a),))
-
-    elif viz_kind == 'insider_split':
-        pw, ph, px, py = 392, 124, vcx - 196, 565
-        paste_frosted(layer, bg_rgb, glass_card(pw, ph, radius=14), px, py, a)
-        fb = fnt('Bold', 11)
-        d.rounded_rectangle([px + 14, py + 12, px + pw - 14, py + 54], radius=8, fill=(72, 232, 164, int(38 * a)), outline=EMERALD + (int(180 * a),), width=2)
-        d.text((px + 22, py + 16), 'MESSAGE TO STAFF:', font=fb, fill=EMERALD + (int(240 * a),))
-        d.text((px + 22, py + 31), '"KEEP BUYING ENRON"', font=fnt('Black', 12), fill=WHITE + (int(250 * a),))
-        if prog > 0.30:
-            sa = clamp01((prog - 0.30) / 0.35) * a
-            d.rounded_rectangle([px + 14, py + 62, px + pw - 14, py + 108], radius=8, fill=(255, 86, 92, int(48 * sa)), outline=CRIMSON + (int(210 * sa),), width=2)
-            d.text((px + 22, py + 68), 'EXECUTIVES DID:', font=fb, fill=CRIMSON + (int(245 * sa),))
-            d.text((px + 22, py + 84), 'CASHED OUT $1.1B', font=fnt('Black', 12), fill=YELLOW + (int(250 * sa),))
-
-    elif viz_kind == 'stock_crash':
-        pw, ph, px, py = 380, 130, vcx - 190, 565
-        paste_frosted(layer, bg_rgb, glass_card(pw, ph, radius=14), px, py, a)
-        f1 = fnt('Bold', 12)
-        f2 = fnt('Black', 17)
-        d.text((px + 16, py + 10), 'NYSE: ENE · COLLAPSE', font=f1, fill=ICE + (int(235 * a),))
-        vals = [1.0, 0.88, 0.74, 0.58, 0.42, 0.28, 0.15, 0.06, 0.01, 0.003]
-        n_pts = max(2, int(len(vals) * ease_out_cubic(prog)))
-        pts = []
-        for idx in range(n_pts):
-            vx = px + 18 + idx * ((pw - 36) / (len(vals) - 1))
-            vy = py + 104 - vals[idx] * 58
-            pts.append((vx, vy))
-        if len(pts) >= 2:
-            d.line(pts, fill=CRIMSON + (int(250 * a),), width=3)
-            lx, ly = pts[-1]
-            d.ellipse([lx - 6, ly - 6, lx + 6, ly + 6], fill=CRIMSON + (int(255 * a),))
-            cur_p = 90.75 * vals[n_pts - 1]
-            d.text((px + pw - 92, py + 10), f'${cur_p:0.2f}', font=f2, fill=CRIMSON + (int(250 * a),))
-    return layer
-
 # ---------------------------------------------------------- word sync ----
 def load_words(key):
     path = os.path.join(AUDIO, f'words-{key}.json')
@@ -1766,154 +1585,6 @@ def ambient_layer(t, is_prayer=False):
 
 # ------------------------------------------------------------------ scripts ----
 SCRIPTS = {
-    'short-johnstown': dict(
-        title=('THE CANAL THAT BROKE A CITY', 'CONEMAUGH VALLEY · MAY 31, 1889'),
-        end=('FOLLOW', 'Full documentaries + Shorts weekly'),
-        out='short-johnstown.mp4',
-        narration='short-johnstown.mp3',
-        stock_queries=[
-            'South Fork Dam Lake Conemaugh Pennsylvania reservoir archival',
-            'historic Pennsylvania fishing hunting club lake 1880s',
-            'dam spillway screens fish reservoir water',
-            'heavy rain reservoir flood dam overflow',
-            'historic dam failure flood valley Pennsylvania',
-            'flood water train wreckage river debris',
-            'historic flood rubble stone bridge fire aftermath',
-            'Red Cross disaster relief volunteers historic Pennsylvania',
-            'historic courtroom negligence civil liability trial',
-        ],
-        scenes=[
-            dict(a='', img='south-fork-dam-lake-conemaugh-johnstown--3.jpg', kicker='MAY 31, 1889', sub='14 MILES ABOVE JOHNSTOWN', cam='push_in', focus=(0.5, 0.42)),
-            dict(a='wealthy pittsburgh', img='south-fork-fishing-and-hunting-club-club-3.jpg', kicker='A FISHING CLUB PLAYGROUND', sub='SOUTH FORK CLUB', cam='push_in', focus=(0.5, 0.40)),
-            dict(a='they filled the spillway', img='south-fork-dam-lake-conemaugh-johnstown--3.jpg', kicker='THE FATAL MODIFICATIONS', sub='SCREENS · CHOKED SPILLWAY · LOWERED CREST', cam='pan_left', focus=(0.5, 0.45), viz='dam_anatomy'),
-            dict(a='six to eight inches', img='south-fork-dam-lake-conemaugh-johnstown--3.jpg', kicker='6–8 INCHES IN 24 HOURS', sub='NOWHERE LEFT TO GO', cam='pull_out', focus=(0.5, 0.42), viz='rain_rising'),
-            dict(a='three ten in the often', img='south-fork-dam-lake-conemaugh-johnstown--4.jpg', kicker='3:10 PM · THE DAM FAILS', sub='20M TONS UNLEASHED', cam='push_in', focus=(0.52, 0.45), viz='valley_drop'),
-            dict(a='twenty million pounds of water', img='johnstown-train-clean.jpg', kicker='36-FOOT WALL OF WATER', sub='HOMES · TRAINS · 10M LBS DEBRIS', cam='pan_right', focus=(0.52, 0.45), viz='wave_scale'),
-            dict(a='the wreckage', img='johnstown-flood-1889-ruins-destruction-h-1.jpg', kicker='62 ACRES BURNED 3 DAYS', sub='THE STONE BRIDGE INFERNO', cam='push_in', focus=(0.48, 0.45), warm=0.18),
-            dict(a='the club', img='south-fork-dam-lake-conemaugh-johnstown--1.jpg', kicker='2,209 LIVES LOST', sub='NEVER HELD RESPONSIBLE', cam='pull_out', focus=(0.5, 0.42)),
-            dict(a='an act of god', img='south-fork-dam-lake-conemaugh-johnstown--2.jpg', kicker='COURT: "ACT OF GOD"', sub='DAMS FAIL BY DECISIONS', cam='push_in', focus=(0.5, 0.42)),
-        ],
-        teases=[
-            dict(t=10.5, text='THE DAM BREAKS AT 3:10 PM'),
-            dict(t=24.0, text='A 36-FOOT WALL OF WATER'),
-            dict(t=34.0, text='THE VERDICT THAT NEVER CAME'),
-        ],
-        sfx_cues=[
-            dict(hush=dict(a='twenty million pounds of water', lead=0.55, dur=1.2, depth=0.88)),
-            dict(hush=dict(a='an act of god', lead=0.45, dur=1.3, depth=0.88)),
-        ],
-        beats=[
-            dict(a='two thousand dollar', kind='count', num=2000, pre='$', label='BOUGHT FOR — PITTSBURGH BARONS', dur=1.2, slot='C'),
-            dict(a='two thousand two hundred', kind='count', num=2209, label='PEOPLE KILLED', dur=1.3, big=True, slot='C'),
-            dict(a='private fishing', kind='phrase', words=['PRIVATE', 'FISHING', 'LAKE'], hi=2, slot='TC'),
-            dict(a='spillway', kind='phrase', words=['SPILLWAY', 'CHOKED'], hi=0, slot='C'),
-            dict(a='drain pipes', kind='phrase', words=['SCREENS', 'ON', 'DRAIN', 'PIPES'], hi=0, slot='C'),
-            dict(a='six to eight inches', kind='count', txt='6–8 IN', label='OF RAIN IN 24 HOURS', dur=1.0, slot='C'),
-            dict(a='three ten in the often', kind='date', main='3:10 PM', sub='SOUTH FORK DAM FAILS', slot='C'),
-            dict(a='twenty million pounds of water', kind='count', num=20, suf='M', label='TONS OF WATER UNLEASHED', dur=1.3, slot='C'),
-            dict(a='wall fell to six', kind='count', txt='36 FT', label='WALL OF WATER', dur=1.0, slot='C'),
-            dict(a='three days', kind='date', main='3 DAYS', sub='FIRES BURNED AT STONE BRIDGE', slot='C'),
-            dict(a='five months', kind='date', main='5 MONTHS', sub='CLARA BARTON & RED CROSS', slot='C'),
-            dict(a='an act of god', kind='quote', words=['AN', 'ACT', 'OF', 'GOD'], attrib='— COURT RULING · $0 LIABILITY', slot='C'),
-            dict(a='fail by decisions', kind='phrase', words=['FAIL', 'BY', 'DECISIONS'], hi=2, slot='C'),
-        ],
-        captions=[
-            (0, 16, 'In 1889, a $2,000 dam killed 2,209 people.'),
-            (17, 24, 'Wealthy Pittsburgh industrialists bought the South Fork Dam'),
-            (25, 31, 'just to keep a private fishing lake.'),
-            (32, 39, 'They filled the spillway to widen the road,'),
-            (40, 53, 'and covered the drain pipes with screens so the game fish could not escape.'),
-            (54, 65, 'Then 6 to 8 inches of rain fell in 24 hours.'),
-            (66, 77, 'And at 3:10 in the afternoon, the dam gave way.'),
-            (78, 89, '20 million tons of water dropped 14 miles in under an hour —'),
-            (90, 95, 'a wall 36 feet high.'),
-            (96, 101, 'The wreckage burned for 3 days.'),
-            (102, 108, 'Clara Barton stayed 5 months.'),
-            (109, 114, 'And the club? Never held responsible.'),
-            (115, 123, 'For the courts called it an act of God.'),
-            (124, 130, 'But dams do not fail by accident.'),
-            (131, 134, 'They fail by decisions.'),
-        ],
-    ),
-    'short-enron': dict(
-        title=('HOW ENRON DIED', 'HOUSTON, TEXAS · DEC 2, 2001'),
-        poster=("WALL STREET'S LIE", '$70B', 'FRAUD', 'GONE IN 24 DAYS'),
-        midpoint_poster_window=(23.6, 27.6),
-        end=('FOLLOW', 'Money, Explained — new every week'),
-        out='short-enron.mp4',
-        narration='short-enron.mp3',
-        # Live-CI verified documentary video & photography queries (Pexels/Pixabay portrait HD video + Wikimedia/Archive)
-        stock_queries=[
-            'financial district night city',
-            'new york stock exchange trading floor',
-            'financial district skyscraper manhattan',
-            'newspaper headlines',
-            'ledger accounting book',
-            'steel mill factory',
-            'financial district skyscraper manhattan',
-            'bank run',
-            'abandoned office room',
-            'courtroom judge bench',
-        ],
-        scenes=[
-            dict(a='', img='short-enron-broll-01.jpg', lock_plate=True, kicker='WINTER 2001 · HOUSTON', sub='MOST INNOVATIVE COMPANY UNRAVELS', cam='tilt_up', focus=(0.5, 0.45)),
-            dict(a='ninety dollars', img='short-enron-broll-02.jpg', kicker='PEAK: $90.75 / SHARE', sub='NYSE: ENE · AUG 2000', cam='push_in', focus=(0.5, 0.45), viz='stock_boom'),
-            dict(a='fortune my busy nostra', img='short-enron-broll-03.jpg', kicker='FORTUNE · 6 YEARS RUNNING', sub='"MOST INNOVATIVE COMPANY"', cam='pull_out', focus=(0.5, 0.45)),
-            dict(a='is enron overpriced', img='short-enron-broll-04.jpg', kicker='MAR 2001 · BETHANY McLEAN', sub='"IS ENRON OVERPRICED?"', cam='pan_right', focus=(0.5, 0.48)),
-            dict(a='the profits were fiction', img='short-enron-broll-05.jpg', kicker='CFO ANDREW FASTOW', sub='ARCHITECT OF THE ILLUSION', cam='push_in', focus=(0.48, 0.48)),
-            dict(a='mom to market accounting', img='short-enron-broll-06.jpg', kicker='MARK-TO-MARKET', sub='10 YRS PROFIT BOOKED DAY ONE', cam='pan_left', focus=(0.5, 0.45), viz='mtm_ledger'),
-            dict(a='off the books', img='short-enron-crash-poster.jpg', lock_plate=True, kicker='LJM · RAPTOR · CHEWCO', sub='$30B+ DEBT IN SHELL ENTITIES', cam='push_in', focus=(0.5, 0.45), viz='shell_maze'),
-            dict(a='december second', img='short-enron-broll-08.jpg', lock_plate=True, kicker='DEC 2, 2001 · CHAPTER 11', sub='$63.4B RECORD CH. 11 AT FILING', cam='pull_out', focus=(0.5, 0.45), viz='stock_crash'),
-            dict(a='twenty thousand employees', img='short-enron-broll-09.jpg', kicker='20,000 JOBS & PENSIONS GONE', sub='85,000 AT ANDERSEN DISSOLVED', cam='pan_right', focus=(0.52, 0.48)),
-            dict(a='they called themselves', img='short-enron-broll-10.jpg', kicker='THE RECKONING', sub='FASTOW & SKILLING IMPRISONED', cam='push_in', focus=(0.48, 0.45)),
-        ],
-        teases=[
-            dict(t=6.2, text='ONE QUESTION ENDS IT ALL'),
-            dict(t=11.6, text='10 YRS PROFIT BOOKED DAY 1'),
-            dict(t=22.0, text='DEC 2 — $63.4B CHAPTER 11'),
-        ],
-        sfx_cues=[
-            dict(hush=dict(a='is enron overpriced', lead=0.50, dur=1.2, depth=0.88)),
-            dict(hush=dict(a='december second', lead=0.55, dur=1.3, depth=0.90)),
-            dict(hush=dict(a='the company cannot', lead=0.50, dur=1.4, depth=0.85)),
-        ],
-        beats=[
-            dict(a='six years in a row', kind='phrase', words=['6', 'YEARS', 'IN', 'A', 'ROW'], hi=0, slot='C'),
-            dict(a='ninety dollars', kind='count', num=90.75, dec=2, pre='$', label='PEAK SHARE PRICE', dur=1.0, slot='C'),
-            dict(a='seventy billion dollars', kind='count', num=70, pre='$', suf='B', label='PEAK VALUATION', dur=1.2, slot='C'),
-            dict(a='is enron overpriced', kind='quote', hold=3.0, words=['IS', 'ENRON', 'OVERPRICED?'], attrib='— BETHANY McLEAN, FORTUNE', slot='C'),
-            dict(a='the profits were fiction', kind='phrase', words=['PROFITS', 'WERE', 'FICTION'], hi=2, slot='C'),
-            dict(a='mom to market accounting', kind='phrase', words=['MARK-TO-MARKET'], hi=0, size=26, slot='C'),
-            dict(a='off the books partnerships', kind='phrase', words=['OFF-BOOKS', 'PARTNERSHIPS'], hi=0, slot='C'),
-            dict(a='december second', kind='date', main='DEC 2, 2001', sub='CHAPTER 11 FILED', slot='C'),
-            dict(a='sixty three billion dollars', kind='count', num=63.4, pre='$', suf='B', dec=1, label='IN ASSETS WIPED OUT', dur=1.3, slot='C'),
-            dict(a='twenty thousand employees', kind='count', num=20000, label='JOBS & PENSIONS GONE', dur=1.2, slot='C'),
-            dict(a='eighty five thousand', kind='count', num=85000, label='AT ANDERSEN DISSOLVED', dur=1.2, slot='C'),
-            dict(a='the smartest guys in the room', kind='quote', words=['SMARTEST', 'GUYS', 'IN', 'THE', 'ROOM'], attrib='— ENRON SLOGAN', slot='C'),
-            dict(a='it is not making money', kind='quote', words=['IF', 'IT', 'CANNOT', 'EXPLAIN', 'IT,', 'IT\'S', 'NOT', 'MAKING', 'MONEY.'], attrib='— THE LESSON', slot='C'),
-        ],
-        captions=[
-            (0, 11, "Enron was voted America's most innovative company, 6 years in a row."),
-            (12, 15, 'Its stock hit $90.'),
-            (16, 22, 'The market value passed $70 billion.'),
-            (23, 29, 'Then Fortune magazine asked one question:'),
-            (30, 32, 'Is Enron overpriced?'),
-            (33, 36, 'The profits were fiction'),
-            (37, 47, '— projected decades of earnings, booked the day the deal was signed.'),
-            (48, 51, 'Mark-to-market accounting,'),
-            (52, 57, 'hidden in off-the-books partnerships,'),
-            (58, 63, 'run by the chief financial officer.'),
-            (64, 73, 'On Dec 2, 2001, Enron filed for bankruptcy.'),
-            (74, 79, '$63 billion in assets.'),
-            (80, 88, '20,000 employees lost their jobs & pensions.'),
-            (89, 96, 'Arthur Andersen — 85,000 people —'),
-            (97, 99, 'dissolved overnight.'),
-            (100, 108, 'They called themselves the smartest guys in the room.'),
-            (109, 117, 'If a company cannot explain how it makes money,'),
-            (118, 122, 'it is not making money.'),
-            (123, 127, 'Follow for Money, Explained.'),
-        ],
-    ),
     'short-psalm91': dict(
         title=('THE SECRET PLACE', 'PSALM 91 · NIGHT PRAYER'),
         poster=("PRAYER BEFORE SLEEP", 'PSALM 91', 'PROTECTION', 'DIVINE SHIELD TONIGHT'),
@@ -2280,7 +1951,6 @@ def main(key):
         in_mid_poster = bool(mp_win and poster_spec and (mp_win[0] <= t <= mp_win[1]))
         in_open_poster = bool(poster_spec and t < 2.8 and not is_prayer)
         if not in_open_poster and not in_mid_poster:
-            ov.alpha_composite(viz_layer(frame, sc.get('viz'), pos, sc_dur))
             if not is_prayer:
                 ov.alpha_composite(beats_layer(frame, beats, t, expire_t, is_prayer=is_prayer))
                 ov.alpha_composite(tease_layer(frame, cfg.get('teases', []), t))

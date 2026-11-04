@@ -138,7 +138,7 @@ Under no circumstances will any component require or transition to a paid cloud 
 
 ### 5.2 Compute & Voiceover ($0.00 Free Tier)
 - **Rendering Compute:** Free, unlimited GitHub Actions standard runners (4-core Linux, 16 GB RAM) on public repository.
-- **Voiceover Engine:** Google Gemini AI (`gemini-3.8-flash-tts`, prebuilt voice `Charon`) locked within the 15 RPM / 1,500 RPD free tier with automatic pause/resume.
+- **Voiceover Engine:** Google Gemini TTS (`gemini-3.8-flash-tts`, prebuilt voice `Charon`); limits are project/model-specific. The latest observed production cap was 10 requests/day, with fail-closed pause/resume. See `docs/ZERO_DOLLAR_LOCK.md`.
 - **Hosting & Review:** GitHub Pages static hosting ($0.00).
 
 ---
