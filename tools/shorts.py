@@ -2099,6 +2099,7 @@ def main(key):
     cfg = SCRIPTS[key]
     out = os.path.join(ROOT, 'social', cfg['out'])
     os.makedirs(os.path.dirname(out), exist_ok=True)
+    os.makedirs(os.path.dirname(out), exist_ok=True)
     nar_src = os.path.join(AUDIO, cfg['narration'])
     nar = os.path.join(AUDIO, f'narration-{key}.m4a')
     shutil.copy(nar_src, '/tmp/_short_in.mp3')

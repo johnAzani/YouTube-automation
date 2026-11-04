@@ -1853,6 +1853,7 @@ SCRIPTS = {
 def main(key):
     cfg = SCRIPTS[key]
     out = os.path.join(ROOT, 'social', cfg['out'])
+    os.makedirs(os.path.dirname(out), exist_ok=True)
     is_prayer = (key in ('psalm91', 'short-psalm91') or 'prayer' in key)
     if 'narration' in cfg:
         nar_src = os.path.join(AUDIO, cfg['narration'])
