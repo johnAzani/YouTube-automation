@@ -114,8 +114,10 @@ the Secret Place queue-repair and authored-Shorts steps.
 
 *Status 2026-11-04: `PRAYER2_YOUTUBE_CLIENT_ID` and
 `PRAYER2_YOUTUBE_CLIENT_SECRET` added; Data Access scopes
-(`youtube.upload`, `youtube.readonly`) saved. Still outstanding:
-Branding App-domain fields + Publish app (§2c troubleshooting), then
+(`youtube.upload`, `youtube.readonly`) saved; Branding saved (app home /
+privacy / terms pages + `johnazani.github.io` authorized domain; logo
+deliberately left empty so verification is not triggered). Still
+outstanding: Publish app (§2c troubleshooting), then
 `PRAYER2_YOUTUBE_REFRESH_TOKEN` (§2c) and `PRAYER2_GEMINI_API_KEY` (§2d).*
 
 | Secret | Value |
