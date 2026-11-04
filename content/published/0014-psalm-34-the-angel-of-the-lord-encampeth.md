@@ -2,7 +2,7 @@
 id: '0014'
 title: Psalm 34 Night Prayer for Sleep | Angels Stand Watch Over You
 slug: psalm-34-the-angel-of-the-lord-encampeth
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -82,6 +82,11 @@ originality:
   ai_disclosure: false
 seo_hook: Pray this Psalm 34 KJV bedtime prayer before you sleep as the angel of the Lord encamps around your home in peace and protection.
 category_id: '22'
+published_on: "2026-11-04"
+published_at: "2026-11-04T15:06:00Z"
+youtube_video_id: "UZ5A3bd6M2E"
+thumbnail_revision: "ctr-v3-cinema"
+metadata_revision: "selar-seo-v1"
 ---
 
 ## Scene 1 — Continual Praise & Radiant Faces (Verses 1-5)
