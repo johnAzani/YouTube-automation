@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T15:16:04.460155+00:00",
+  "generated_at": "2026-11-04T15:22:36.375797+00:00",
   "healthy": false,
   "automations": [
     {
@@ -18,7 +18,7 @@
       "failures_5": 1,
       "effect": "reports and files stalls",
       "verdict": "OK",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 0.2h ago",
       "severity": "ok"
     },
     {
@@ -29,8 +29,8 @@
         "14 15 * * *",
         "14 19 * * *"
       ],
-      "last_run": "2026-11-04T09:54:14+00:00",
-      "last_conclusion": "success",
+      "last_run": "2026-11-04T15:22:12+00:00",
+      "last_conclusion": null,
       "last_success": "2026-11-04T09:54:14+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-04T14:13:24+00:00",
@@ -39,7 +39,7 @@
       "failures_5": 0,
       "effect": "posts replies and records them in content/comments/replied.json",
       "verdict": "OK",
-      "detail": "last success 5.4h ago",
+      "detail": "last success 5.5h ago",
       "severity": "ok"
     },
     {
@@ -58,7 +58,7 @@
       "failures_5": 0,
       "effect": "writes content/community/<id>-READY.md",
       "verdict": "OK",
-      "detail": "last success 64.4h ago",
+      "detail": "last success 64.5h ago",
       "severity": "ok"
     },
     {
@@ -77,7 +77,7 @@
       "failures_5": 2,
       "effect": "writes content/queue/ or content/shorts-scripts/",
       "verdict": "FAILING",
-      "detail": "failed 4.4h ago and nothing was changed since; the next slot will fail the same way",
+      "detail": "failed 4.5h ago and nothing was changed since; the next slot will fail the same way",
       "severity": "blocking"
     },
     {
@@ -115,7 +115,7 @@
       "failures_5": 0,
       "effect": "re-arms scheduled workflows",
       "verdict": "OK",
-      "detail": "last success 51.8h ago",
+      "detail": "last success 51.9h ago",
       "severity": "ok"
     },
     {
@@ -125,17 +125,17 @@
         "41 18 * * 5"
       ],
       "last_run": "2026-11-04T15:15:23+00:00",
-      "last_conclusion": null,
+      "last_conclusion": "failure",
       "last_success": "2026-11-04T15:06:53+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-04T14:13:24+00:00",
       "last_slot": "2026-10-30T18:41:00+00:00",
       "missed_slots": 0,
-      "failures_5": 0,
+      "failures_5": 1,
       "effect": "writes content/metrics.csv and opens a snapshot issue",
-      "verdict": "OK",
-      "detail": "last success 0.2h ago",
-      "severity": "ok"
+      "verdict": "FAILING",
+      "detail": "failed 7m ago and nothing was changed since; the next slot will fail the same way",
+      "severity": "blocking"
     },
     {
       "workflow": "monitor.yml",
@@ -143,7 +143,7 @@
       "crons": [
         "23 */3 * * *"
       ],
-      "last_run": "2026-11-04T15:15:25+00:00",
+      "last_run": "2026-11-04T15:22:20+00:00",
       "last_conclusion": null,
       "last_success": null,
       "runs_14d": 20,
@@ -183,9 +183,9 @@
       "crons": [
         "*/15 * * * *"
       ],
-      "last_run": "2026-11-04T15:15:34+00:00",
+      "last_run": "2026-11-04T15:22:20+00:00",
       "last_conclusion": null,
-      "last_success": "2026-11-04T15:14:08+00:00",
+      "last_success": "2026-11-04T15:15:34+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-02T19:19:32+00:00",
       "last_slot": null,
@@ -193,7 +193,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 0.0h ago",
+      "detail": "last success 0.1h ago",
       "severity": "ok"
     }
   ],
