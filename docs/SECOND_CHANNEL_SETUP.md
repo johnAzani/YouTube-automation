@@ -85,6 +85,24 @@ the Secret Place queue-repair and authored-Shorts steps.
 3. Exchange the code and keep the refresh token private. **Never paste it
    into chat, issues, commits or workflow inputs.**
 
+   **Troubleshooting — "Access blocked: The Morning Altar Automation has not
+   completed the Google verification process" (seen 2026-11-04):** this is
+   Google refusing authorization because the app is still in **Testing**
+   and/or its **Branding** page is incomplete (`docs/DEEP_DIVE.md` Trap 1).
+   Fix in this order, then re-run step 1:
+   1. **Branding** page: app name + support email (from the wizard), plus
+      Application home page `https://johnazani.github.io/YouTube-automation/app.html`
+      and Privacy policy `https://johnazani.github.io/YouTube-automation/privacy.html`;
+      add `johnazani.github.io` under authorized domains if the form asks.
+   2. **Audience** page: Publishing status must be **In production** — use
+      **Publish app** if it still says Testing. Publishing ≠ verification:
+      an unverified production app still issues long-lived tokens; you just
+      click *Advanced → Go to The Morning Altar Automation (unsafe)* once on
+      your own consent screen.
+   3. Do **not** settle for the Testing-mode shortcut (adding yourself as a
+      test user also unblocks authorization, but those refresh tokens
+      hard-expire after 7 days — the exact failure Trap 1 exists to avoid).
+
 ### 2d. Create the separate Gemini project + key
 1. Google AI Studio → create a **new project** → create API key in it.
    (A second key inside Channel 1's project would share its free-tier pool —
