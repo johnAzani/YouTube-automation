@@ -147,7 +147,15 @@ Data API enabled → metrics run #28 succeeded (1 subscriber, 0 public
 videos). Script 0036 (Psalm 5) approved under owner authorization,
 dry-run render succeeded (run 41887937132), and the first video was
 uploaded **private** on 2026-11-04: `oS7f32WDj_Y` (7:57) — receipt in
-`content/published/0036-*.md`. Remaining owner actions: final watch in
+`content/published/0036-*.md`. **That upload is defective and must
+never be published:** its `tts-v2` narration speaks the read-aloud
+contract aloud (fixed script-only in `tts-v3`, PR #253). Job 0036 was
+therefore deliberately re-queued (PR #254): the queue file is restored
+as approved, the defective receipt retired (still in git history), and
+Produce video gained an explicit per-run `allow_duplicate` tick-box —
+the replacement run must tick it, because the defective video still
+exists on the channel with the same title. Delete `oS7f32WDj_Y` in
+Studio once the corrected replacement is verified. Remaining owner actions: final watch in
 Studio, then publish manually (channel policy keeps uploads private);
 watermark + channel keywords via desktop Studio. Earlier: run #25's
 two-scope token was fixed (three scopes saved in Data Access, token
