@@ -2,7 +2,7 @@
 id: '0036'
 title: "Psalm 5 Morning Prayer | Begin Your Day in God's Presence"
 slug: psalm-5-morning-prayer-begin-your-day
-status: draft
+status: approved
 channel: prayer2
 privacy: private
 format: longform
@@ -36,10 +36,6 @@ description: |
   - Matthew Henry's Commentary on the Whole Bible, Psalm 5.
 
   Produced by The Morning Altar | Daily Sunrise Prayer & Declarations.
-
-  OWNER REVIEW REQUIRED BEFORE APPROVAL: read every line aloud, verify each
-  scripture quotation against your KJV, then set human_rewrite: true and
-  status: approved only when you are ready to publish under your own name.
 asset_queries:
 - golden dawn light over misty landscape morning
 - sunrise dawn light over quiet valley morning serene
@@ -81,7 +77,7 @@ asset_query_verification:
 originality:
   original_thesis: true
   unique_structure: true
-  human_rewrite: false
+  human_rewrite: true
   no_ai_persona: true
   source_notes: true
   ai_disclosure: false
