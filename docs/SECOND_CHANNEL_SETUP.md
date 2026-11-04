@@ -123,6 +123,16 @@ the Secret Place queue-repair and authored-Shorts steps.
    Re-minting alone (without the Data Access change) just reproduces the
    same two-scope token.
 
+   **Troubleshooting — "YouTube Data API v3 has not been used in project
+   … before or it is disabled" (seen 2026-11-04, metrics run #27):** the
+   token now exchanges fine (this error is *progress* past the scope
+   problem), but the API itself was never switched on in the new project.
+   Enabling an API is per project, so Channel 1's enabled state does not
+   carry over. Fix: in the Morning Altar project open APIs & Services →
+   Library (or the link in the error message), Enable **YouTube Data
+   API v3**, wait a few minutes for it to propagate, then re-run. No
+   secret or scope changes are needed.
+
 ### 2d. Create the separate Gemini project + key
 1. Google AI Studio → create a **new project** → create API key in it.
    (A second key inside Channel 1's project would share its free-tier pool —
@@ -132,9 +142,12 @@ the Secret Place queue-repair and authored-Shorts steps.
 
 ### 2e. Add the GitHub secrets (Settings → Secrets and variables → Actions)
 
-*Status 2026-11-04: metrics run #25 failed on a two-scope refresh token —
-owner to add `youtube.force-ssl` to Data Access, re-mint with all three
-scopes, and replace `PRAYER2_YOUTUBE_REFRESH_TOKEN` (see §2c). Earlier:
+*Status 2026-11-04: run #25's two-scope token is fixed (three scopes
+saved in Data Access, token re-minted, secret replaced — run #27 got
+past the credential exchange). Current blocker: **YouTube Data API v3
+is not enabled in the Morning Altar project** (run #27,
+`accessNotConfigured`) — owner to Enable it under APIs & Services →
+Library, wait a few minutes, and re-run the snapshot. Earlier:
 `PRAYER2_YOUTUBE_CLIENT_ID` and
 `PRAYER2_YOUTUBE_CLIENT_SECRET` added; Data Access scopes
 (`youtube.upload`, `youtube.readonly`) saved; Branding saved (app home /
@@ -144,7 +157,7 @@ published — Publishing status **In production**, External, OAuth user cap
 1/100 (the "requires verification" banner is expected; verification is
 intentionally not submitted, same as Channel 1); `PRAYER2_YOUTUBE_REFRESH_TOKEN`
 minted in OAuth Playground and added to GitHub secrets (owner screenshot
-2026-11-04). Still outstanding: only `PRAYER2_GEMINI_API_KEY` (§2d).*
+2026-11-04) and since replaced with a three-scope token; `PRAYER2_GEMINI_API_KEY` also added (§2d); `PRAYER2_YOUTUBE_CHANNEL_ID` stored as a Secret (workflows accept Variables or Secrets). **PR #243 merged to `main` 2026-11-04** — run channel-2 workflows from `main`.*
 
 | Secret | Value |
 |---|---|
