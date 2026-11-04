@@ -37,10 +37,13 @@ Everything here is ₦0. Follow in order; items marked ⏱ have lead time, so st
    local `scripts/youtube_oauth.py` flow is for a computer running a callback server; it
    is not the phone/GitHub path.
 5. On <https://developers.google.com/oauthplayground/>, use your own client ID and secret,
-   choose **Server-side**, **Offline**, and consent prompting, then authorize the scopes
-   `https://www.googleapis.com/auth/youtube.upload` and
-   `https://www.googleapis.com/auth/youtube.readonly`. Exchange the code and keep the
-   refresh token private.
+   choose **Server-side**, **Offline**, and consent prompting, then authorize all three
+   scopes: `https://www.googleapis.com/auth/youtube.upload`,
+   `https://www.googleapis.com/auth/youtube.readonly` and
+   `https://www.googleapis.com/auth/youtube.force-ssl`. (The pipeline always requests
+   this exact set — `pipeline/upload.py` SCOPES — and a token minted with fewer scopes
+   fails everywhere with invalid_scope.) Exchange the code and keep the refresh token
+   private.
 6. In GitHub repository Settings → Secrets and variables → Actions, create three
    separate secrets: `YOUTUBE_CLIENT_ID` (the Web client ID), `YOUTUBE_CLIENT_SECRET`
    (the raw Web client secret—not JSON), and `YOUTUBE_REFRESH_TOKEN` (the refresh token).
