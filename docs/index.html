@@ -153,8 +153,8 @@
     </div>
     <div class="kpi-card">
       <div class="kpi-title">Publishing Engine</div>
-      <div class="kpi-val green">Direct Upload</div>
-      <div class="kpi-sub">Auto-published directly to YouTube (0 manual review gate)</div>
+      <div class="kpi-val green">Configured</div>
+      <div class="kpi-sub">Workflow attempts upload after release gates; verify the Actions result and published receipt</div>
     </div>
     <div class="kpi-card">
       <div class="kpi-title">YouTube Channel</div>
@@ -322,42 +322,39 @@
     </table>
   </div>
 
-  <!-- SECTION 4: UNATTENDED CRON RELEASE SCHEDULE & BEST TIME TO POST -->
+  <!-- SECTION 4: CONFIGURED RELEASE ATTEMPTS -->
   <h2>
-    <span>⚙️ Autonomous Unattended Release Schedule &amp; Best Time to Post</span>
-    <span style="font-size: 13px; font-weight: 500; color: #8ba2c7;">GitHub Actions Cron (07:14, 15:14 &amp; 21:14 Nigeria WAT)</span>
+    <span>⚙️ Scheduled Release Attempts</span>
+    <span style="font-size: 13px; font-weight: 500; color: #8ba2c7;">GitHub Actions: 06:14, 14:14 &amp; 19:14 UTC (07:14, 15:14 &amp; 20:14 Nigeria WAT)</span>
   </h2>
   <div class="row">
     <section class="card">
-      <p class="label">MORNING SLOT — 06:14 UTC</p>
-      <p class="meta"><strong>Local Times:</strong> 07:14 Lagos · 02:14 New York (EST) · 23:14 Los Angeles (PST)</p>
-      <p class="meta">Serves early morning devotions across West Africa & Europe, while capturing late-night insomnia viewers on the US West Coast.</p>
-      <div class="copy-box">Autonomous Actions:
-• pipeline.short_release --next
-• pipeline.run --next
-• Direct upload to YouTube (privacy: public)
-• Commit published receipt with [skip ci]</div>
+      <p class="label">DAILY SCHEDULE</p>
+      <p class="meta">The production workflow is scheduled three times daily. Runner delays, queue state, credentials, finite provider quotas, or pipeline errors can prevent a release.</p>
+      <div class="copy-box">Each scheduled run attempts:
+• Render and upload the next eligible Short
+• Recover receipts for videos already live
+• Render and upload the next eligible long-form prayer
+• Record successful publication in the repository
+
+Check the Actions run and durable receipt to confirm publication.</div>
     </section>
 
     <section class="card">
-      <p class="label">AFTERNOON SLOT — 14:14 UTC</p>
-      <p class="meta"><strong>Local Times:</strong> 15:14 Lagos · 10:14 New York (EST) · 07:14 Los Angeles (PST)</p>
-      <p class="meta">Primary publishing slot. Allows YouTube 4–6 hours to transcode VP9/AV01 1080p video before the peak US Eastern bedtime prayer surge (19:30–22:30 EST).</p>
-      <div class="copy-box">Autonomous Actions:
-• DOCOGA REELS v2 Kinetic Typography Render
-• Procedural DSP Audio Scoring (-14 LUFS)
-• Direct YouTube API Upload (Auto-Publish)
-• Automatic Release Ticket Issue Creation</div>
+      <p class="label">TIMING &amp; DUPLICATE SAFEGUARDS</p>
+      <p class="meta">These are configured release times, not evidence of an optimal audience window. This static page does not query YouTube analytics. Workflow receipt/channel checks reduce duplicate risk but cannot guarantee publication or eliminate every external failure.</p>
+      <div class="btn-group" style="margin-top: 8px;">
+        <a class="btn-secondary" href="https://studio.youtube.com/channel/analytics/tab-audience" target="_blank" rel="noopener">Check the live Studio audience report</a>
+      </div>
     </section>
   </div>
   <div class="row" style="margin-top: 16px;">
     <section class="card wide">
-    <section class="card wide">
-      <p class="label">🛑 DUPLICATE UPLOAD & UNINTENTIONAL RELEASE PREVENTION SHIELD</p>
-      <p class="meta">Multi-layered safeguards permanently block duplicate Reels/Shorts and accidental uploads. Pre-upload remote YouTube title queries, published ledger quarantine, and the removal of git-push triggers ensure only unique, scheduled content goes live.</p>
+      <p class="label">PUBLICATION STATUS</p>
+      <p class="meta">A successful render is not the same as a successful upload. Confirm the final workflow outcome and a publication receipt (or the public video in YouTube Studio) before reporting that an item went live.</p>
       <div class="btn-group" style="margin-top: 8px;">
         <a class="btn-secondary" href="https://github.com/johnAzani/YouTube-automation/blob/main/docs/DUPLICATE_UPLOAD_PREVENTION.md" target="_blank" rel="noopener" style="margin-left: 0;">📖 View Duplicate Prevention Shield (docs/DUPLICATE_UPLOAD_PREVENTION.md)</a>
-        <a class="btn-secondary" href="https://studio.youtube.com/channel/analytics" target="_blank" rel="noopener">🧹 Run scripts/cleanup_duplicate_shorts.py to Clean Channel Feed</a>
+        <a class="btn-secondary" href="https://studio.youtube.com/channel/analytics" target="_blank" rel="noopener">Open the live YouTube Studio channel</a>
       </div>
     </section>
   </div>
