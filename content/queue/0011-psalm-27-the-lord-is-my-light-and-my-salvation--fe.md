@@ -2,7 +2,7 @@
 id: '0011'
 title: Psalm 27 Night Prayer for Sleep & Peace | Fear No Evil Tonight
 slug: psalm-27-the-lord-is-my-light-and-my-salvation--fe
-status: approved
+status: quota_paused
 privacy: public
 format: longform
 niche: faith and prayer
@@ -20,13 +20,15 @@ tags:
 - divine protection prayer
 - the secret place
 thumb_text: WHOM SHALL I FEAR
-description: 'Say this Psalm 27 (KJV) prayer before you sleep tonight. Surrender the burdens, anxieties,
+description: 'Say this Psalm 27 (KJV) prayer before you sleep tonight. Surrender the
+  burdens, anxieties,
 
   and fatigue of this day into the hands of the Lord who is your everlasting light.
 
   The LORD is my light and my salvation; whom shall I fear? the LORD is the strength
 
-  of my life; of whom shall I be afraid? For in the time of trouble he shall hide me
+  of my life; of whom shall I be afraid? For in the time of trouble he shall hide
+  me
 
   in his pavilion: in the secret of his tabernacle shall he hide me.
 
@@ -57,32 +59,35 @@ asset_queries:
 - peaceful sunrise over misty alpine valley
 asset_query_verification:
   verified_on: '2026-10-29'
-  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4,
+    filtered by pipeline/assets.py licence rule
   queries:
   - query: mountain meadow alpine sunset golden hour peaceful
     verified: true
     usable: 4
-    evidence: 4x Public domain — USGS / NPS alpine meadow and sunset photography
+    evidence: "4x Public domain \u2014 USGS / NPS alpine meadow and sunset photography"
   - query: calm mountain lake still water reflection nightfall
     verified: true
     usable: 4
-    evidence: 4x Public domain — NPS Mirror Lake and Crater Lake twilight scans
+    evidence: "4x Public domain \u2014 NPS Mirror Lake and Crater Lake twilight scans"
   - query: starry night sky over quiet forest hills
     verified: true
     usable: 3
-    evidence: 3x Public domain — NASA astronomy starry night sky imagery
+    evidence: "3x Public domain \u2014 NASA astronomy starry night sky imagery"
   - query: sunlight breaking through clouds mountain pass
     verified: true
     usable: 3
-    evidence: 3x Public domain — USFS Rocky Mountain National Forest crepuscular ray scans
+    evidence: "3x Public domain \u2014 USFS Rocky Mountain National Forest crepuscular\
+      \ ray scans"
   - query: ancient stone sanctuary warm candle light evening
     verified: true
     usable: 3
-    evidence: 3x CC0 / Public domain — Library of Congress ancient sanctuary plates
+    evidence: "3x CC0 / Public domain \u2014 Library of Congress ancient sanctuary\
+      \ plates"
   - query: peaceful sunrise over misty alpine valley
     verified: true
     usable: 4
-    evidence: 4x Public domain — USGS alpine valley dawn mist photography
+    evidence: "4x Public domain \u2014 USGS alpine valley dawn mist photography"
 originality:
   original_thesis: true
   unique_structure: true
@@ -90,8 +95,11 @@ originality:
   no_ai_persona: true
   source_notes: true
   ai_disclosure: false
-seo_hook: Pray this Psalm 27 KJV night prayer before sleep for deep peace, freedom from nighttime fear, and God's protection over your home.
+seo_hook: Pray this Psalm 27 KJV night prayer before sleep for deep peace, freedom
+  from nighttime fear, and God's protection over your home.
 category_id: '22'
+quota_reset_utc: '2026-11-04T08:00:00+00:00'
+pause_reason: gemini_api_daily_quota_exhausted
 ---
 
 ## Scene 1 — My Light and My Salvation (Verse 1)
