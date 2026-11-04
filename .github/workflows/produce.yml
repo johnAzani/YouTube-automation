@@ -44,6 +44,10 @@ on:
         description: "Render only, skip upload"
         type: boolean
         default: false
+      allow_duplicate:
+        description: "Replacement run: upload even though a video with this title exists (job 0036 re-queue; leave OFF otherwise)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write        # move queue file / record published receipt in content/published/
@@ -83,6 +87,10 @@ jobs:
       YOUTUBE_PLAYLIST_ID: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_PLAYLIST_ID || secrets.YOUTUBE_PLAYLIST_ID }}
       YOUTUBE_EXPECTED_CHANNEL_ID: ${{ inputs.channel == 'prayer2' && (vars.PRAYER2_YOUTUBE_CHANNEL_ID || secrets.PRAYER2_YOUTUBE_CHANNEL_ID) || (vars.YOUTUBE_CHANNEL_ID || secrets.YOUTUBE_CHANNEL_ID) }}
       AUTO_PUBLISH: ${{ inputs.channel == 'prayer2' && 'false' || (secrets.AUTO_PUBLISH || 'true') }}
+      # Deliberate replacement runs only (e.g. re-rendered narration). Surfaced
+      # as an explicit tick-box so a replacement is a conscious, logged choice —
+      # never a repo-wide secret silently left on. Default stays shielded.
+      ALLOW_DUPLICATE_UPLOADS: ${{ (inputs.allow_duplicate || false) && 'true' || 'false' }}
       DEFAULT_PRIVACY: ${{ inputs.channel == 'prayer2' && 'private' || 'public' }}
       GEMINI_API_KEY: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_GEMINI_API_KEY || secrets.GEMINI_API_KEY }}
       # pipeline.run shells out to `gh issue create` for the release ticket

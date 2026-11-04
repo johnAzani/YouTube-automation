@@ -173,3 +173,27 @@ class WorkflowSelectorTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+    def test_produce_workflow_exposes_replacement_run_override(self):
+        # A corrected re-render of an already-uploaded job (0036 after the
+        # tts-v2 narration defect) must be a conscious, per-run choice:
+        # the workflow surfaces allow_duplicate as an explicit tick-box
+        # mapped to ALLOW_DUPLICATE_UPLOADS, defaulting to shielded.
+        text = (ROOT / ".github" / "workflows" / "produce.yml").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("allow_duplicate:", text)
+        self.assertIn("ALLOW_DUPLICATE_UPLOADS: ${{ (inputs.allow_duplicate || false)",
+                      text)
+
+    def test_job_0036_is_requeued_after_defective_first_upload(self):
+        queue_job = ROOT / "content" / "queue" / "0036-psalm-5-morning-prayer-begin-your-day.md"
+        published = ROOT / "content" / "published" / "0036-psalm-5-morning-prayer-begin-your-day.md"
+        self.assertTrue(queue_job.is_file())
+        self.assertFalse(published.exists(),
+                         "the defective upload's receipt was retired so the "
+                         "replacement run can write a fresh one")
+        doc = parse_script(queue_job)
+        self.assertEqual(doc.status, "approved")
+        self.assertEqual(doc.channel, "prayer2")
+        self.assertNotIn("youtube_video_id", doc.meta)
