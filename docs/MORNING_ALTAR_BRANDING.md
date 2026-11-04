@@ -105,10 +105,10 @@ re-typing over the PNGs.
 ## 5. Launch Checklist
 
 - [x] Create the channel and claim the handle — `@TheMorningAltarDaily` (2026-11-04)
-- [ ] Upload avatar (§4) — still showing YouTube's camera placeholder in the 2026-11-04 screenshot
-- [ ] Re-upload banner **v2** (§4) — v1 text was cropped on mobile ("HE MORNING ALT…"); v2 keeps all text inside the 1546×423 safe area
-- [ ] Upload watermark (§4)
-- [ ] Verify the Name field is exactly `The Morning Altar | Daily Sunrise Prayer` (screenshot shows "…Prayer Han…" — tap the pencil and remove any extra characters)
+- [x] Upload avatar (§4) — confirmed on the live channel page, 2026-11-04
+- [x] Re-upload banner **v2** (§4) — v1 text was cropped on mobile ("HE MORNING ALT…"); v2 keeps all text inside the 1546×423 safe area and displays in full on the channel page (the Edit-channel screen zoom-crops it; that preview is not what viewers see)
+- [ ] Upload watermark (§4) — YouTube Studio on desktop only (Customization → Branding)
+- [x] Verify the Name field is exactly `The Morning Altar | Daily Sunrise Prayer` — confirmed 2026-11-04 (extra characters removed); handle `@TheMorningAltarDaily`, first subscriber recorded the same day
 - [ ] Paste About description + channel keywords (§2–§3)
 - [ ] Enable 2-step verification + custom thumbnails (Studio → Settings)
 - [ ] Create the **separate** GCP + Gemini projects and GitHub secrets
