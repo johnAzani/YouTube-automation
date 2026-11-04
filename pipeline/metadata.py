@@ -378,15 +378,25 @@ def fit_youtube_tags(
 
 
 def build_tags(doc: ScriptDoc) -> list[str]:
-    """Generate scripture-aware, high-intent backend tags within the 500-char API budget."""
+    """Generate scripture-aware, high-intent backend tags within the 500-char API budget.
+
+    The dormant high-intent search taxonomy (``seo_suggest``) is now wired in: after
+    the scripture-specific and brand seeds, it contributes the pain-point and search
+    queries viewers actually type (insomnia, anxiety, spiritual warfare, …). Every
+    candidate still passes through ``fit_youtube_tags``, which enforces the 500-char
+    quote-aware budget, the 18-tag cap, and the 432 Hz gate — so this is additive and
+    can never break the tag contract.
+    """
     allow_432 = "432" in (doc.title or "").lower() or "dark_screen" in (doc.slug or "").lower()
     seeds: list[str] = []
+    scripture_ref = ""
 
     if is_faith_doc(doc):
         m = _SCRIPTURE_RE.search(doc.title or "")
         if m:
             ref_raw = " ".join(m.group(1).lower().replace(":", " ").replace("–", " ").replace("-", " ").split())
             book_chap = " ".join(ref_raw.split()[:2])
+            scripture_ref = book_chap
             seeds.extend(
                 [
                     f"{book_chap} night prayer",
@@ -410,6 +420,18 @@ def build_tags(doc: ScriptDoc) -> list[str]:
                 "the secret place prayer",
             ]
         )
+        # High-intent search taxonomy: what distressed / sleepless viewers actually
+        # type. fit_youtube_tags drops any 432 Hz qualifier unless this is a 432 video.
+        try:
+            from .seo_suggest import get_taxonomy_for_scripture
+
+            tax = get_taxonomy_for_scripture(scripture_ref or "General Bedtime")
+            seeds.extend(tax.get("primary_searches", []))
+            seeds.extend(tax.get("pain_points", []))
+            seeds.extend(tax.get("qualifiers", []))
+        except Exception:  # noqa: BLE001
+            # SEO enrichment is an optimisation, never a gate.
+            pass
 
     return fit_youtube_tags(seeds, max_chars=490, allow_432hz=allow_432)
 

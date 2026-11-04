@@ -1,0 +1,114 @@
+name: Growth autopilot
+
+# The closed-loop growth engine. Every day it:
+#   1. snapshots public channel metrics (views/likes/comments + live subscriber count),
+#   2. computes the performance-feedback artifact the brain reads to favour the themes
+#      that are actually winning (the missing keystone — the brain used to author blind),
+#   3. syncs the official series playlists so finished videos autoplay the next one
+#      (session watch-time, the lever that moves the 4,000-hour YPP goal),
+#   4. celebrates the live subscriber milestone (renders the Community card + copy).
+#
+# $0.00 lock: only the free YouTube Data API is used (the same upload token already
+# configured). No paid tier, no new secret. Every engine is fail-soft — one failing
+# never blocks the others, and the feedback commit still lands.
+#
+# Privacy: the raw per-video snapshot stays a short-lived Actions artifact. Only the
+# derived, aggregate performance_feedback.json is committed to source.
+on:
+  schedule:
+    # 02:14 UTC = 03:14 Nigeria time — runs before the 03:14 UTC brain so the freshest
+    # feedback is committed before the next authoring pass reads it.
+    - cron: "14 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: growth-autopilot
+  cancel-in-progress: false
+
+jobs:
+  growth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+      YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+      YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+      GH_TOKEN: ${{ github.token }}
+      # The autopilot is a measurement/sync job, not the weekly human report: do not
+      # file a GitHub issue on every daily run.
+      METRICS_POST_ISSUE: "0"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Python deps
+        run: pip install -r requirements.txt
+
+      - name: Snapshot public channel metrics
+        id: metrics
+        continue-on-error: true
+        run: python -u scripts/metrics_snapshot.py
+
+      - name: Compute closed-loop performance feedback
+        # Reads the snapshot just written + the published receipts. With too little
+        # data it writes a neutral "insufficient_data" report and the brain keeps its
+        # roadmap order — it never blocks authoring.
+        run: python -u scripts/performance_feedback.py
+
+      - name: Sync official series playlists (session watch-time)
+        continue-on-error: true
+        run: python -u scripts/manage_playlists.py
+
+      - name: Celebrate live subscriber milestone
+        continue-on-error: true
+        run: python -u scripts/celebrate_milestone.py
+
+      - name: Upload metrics + milestone card as short-lived artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: growth-autopilot-${{ github.run_id }}
+          path: |
+            content/metrics.csv
+            content/channel-metrics.json
+            content/community/milestone_*.png
+          retention-days: 30
+          if-no-files-found: ignore
+
+      - name: Commit the derived feedback artifact
+        # Copy the monitor.yml pattern: fetch + reset --mixed (never pull --rebase,
+        # which conflicted on the 2 Nov release), add only the derived artifact, and
+        # push with [skip ci]. Raw metrics are gitignored and never committed.
+        run: |
+          git config user.name "growth-autopilot"
+          git config user.email "actions@users.noreply.github.com"
+          git fetch --quiet origin main
+          git reset --mixed origin/main
+          if [ -f content/research/performance_feedback.json ]; then
+            git add content/research/performance_feedback.json
+          fi
+          if git diff --cached --quiet; then
+            echo "feedback unchanged"
+            exit 0
+          fi
+          git commit --quiet -m "chore(growth): refresh closed-loop performance feedback [skip ci]"
+          git push --quiet origin HEAD:main \
+            || echo "::warning::could not push the feedback artifact; the run log is the record"
+
+      - name: Surface a failing engine without masking the others
+        if: always()
+        run: |
+          if [ "${{ steps.metrics.outcome }}" != "success" ]; then
+            echo "::warning title=Metrics snapshot degraded::feedback fell back to the latest available data; check the YouTube token"
+          fi
+          echo "Growth autopilot finished. Feedback, playlists and milestone each ran fail-soft."

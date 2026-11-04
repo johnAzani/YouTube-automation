@@ -34,6 +34,24 @@ def healthy(now):
     return [run(wf, now - timedelta(minutes=30)) for wf, _n, _c in workflow_files()]
 
 
+def pad_history(history, now):
+    """Give every scheduled workflow absent from `history` a recent healthy run.
+
+    These tests pin the supervisor's logic for the specific workflows they set up.
+    When a new scheduled workflow is added to the repo (e.g. growth-autopilot.yml),
+    it must not silently become an extra due-but-missing candidate and break an
+    exact-set assertion. Padding keeps each test focused on its intended workflows
+    while staying correct as the workflow roster grows.
+    """
+    from scripts.automation_monitor import workflow_files
+    present = {(r.get("path") or "").split("/")[-1] for r in history}
+    padded = list(history)
+    for wf, _n, _c in workflow_files():
+        if wf not in present:
+            padded.append(run(wf, now - timedelta(minutes=30)))
+    return padded
+
+
 class TestSlotDetection(unittest.TestCase):
     def now(self):
         return datetime(2026, 11, 2, 8, 0, tzinfo=UTC)
@@ -53,7 +71,7 @@ class TestSlotDetection(unittest.TestCase):
             ("produce.yml", now - timedelta(hours=9)),
             ("comments.yml", now - timedelta(hours=9)),
         )
-        found = {wf for wf, _ in sup.due_but_missing(now, history)}
+        found = {wf for wf, _ in sup.due_but_missing(now, pad_history(history, now))}
         self.assertEqual(found, {"gemini_brain.yml", "keepalive.yml", "produce.yml"})
 
     def test_a_workflow_that_ran_for_the_slot_is_left_alone(self):
@@ -68,7 +86,7 @@ class TestSlotDetection(unittest.TestCase):
         history = runs(("gemini_brain.yml", now - timedelta(days=1)),
                        ("comments.yml", now - timedelta(days=1)))
         early = datetime(2026, 11, 2, 4, 0, tzinfo=UTC)    # 46 min after 03:14
-        self.assertEqual(sup.due_but_missing(early, history), [])
+        self.assertEqual(sup.due_but_missing(early, pad_history(history, early)), [])
 
     def test_comments_due_at_0714_is_not_raced_mid_morning(self):
         """The exact false positive this threshold was widened to prevent."""
@@ -115,7 +133,7 @@ class TestDispatchRails(unittest.TestCase):
                                      conclusion="failure")]
         state = {"produce.yml@2026-11-02T06:14:00+00:00": {"at": "2026-11-02T07:00:00+00:00",
                                                           "attempts": 1}}
-        out = sup.supervise(now, history, dry_run=True, state=state)
+        out = sup.supervise(now, pad_history(history, now), dry_run=True, state=state)
         self.assertIn("produce.yml", [r["workflow"] for r in out["dispatched"]])
 
     def test_a_successful_dispatch_is_never_repeated(self):
@@ -140,13 +158,14 @@ class TestDispatchRails(unittest.TestCase):
 
     def test_one_slot_is_dispatched_only_once(self):
         state = {}
-        first = sup.supervise(self.now(), self.runs(), dry_run=True, state=state)
+        history = pad_history(self.runs(), self.now())
+        first = sup.supervise(self.now(), history, dry_run=True, state=state)
         self.assertEqual(len(first["dispatched"]), 3)
         # a real pass writes the ledger; simulate that then re-run the same slot
         for row in first["dispatched"]:
             state[f"{row['workflow']}@{row['slot']}"] = {"at": "2099-01-01T00:00:00+00:00",
                                                         "attempts": sup.MAX_ATTEMPTS_PER_SLOT}
-        second = sup.supervise(self.now(), self.runs(), dry_run=True, state=state)
+        second = sup.supervise(self.now(), history, dry_run=True, state=state)
         self.assertEqual(second["dispatched"], [])
         self.assertTrue(all(r["reason"].startswith("already dispatched")
                             for r in second["skipped"]))

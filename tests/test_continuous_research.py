@@ -19,7 +19,18 @@ class ContinuousResearchTests(unittest.TestCase):
                 self.assertGreaterEqual(intel.subscriber_count, 1000)
                 self.assertTrue(intel.ypp_subscriber_milestone)
                 self.assertEqual(intel.ypp_watch_hours_target, 4000)
-                self.assertIn("Psalm 23", intel.next_recommended_job["scripture"])
+                # The next recommendation is now feedback-aware and dynamic (it used
+                # to be hardcoded to the already-published Psalm 23). Assert it is a
+                # valid roadmap-shaped candidate that is not already queued/published,
+                # rather than pinning a specific stale scripture.
+                job = intel.next_recommended_job
+                self.assertTrue(job.get("scripture"))
+                self.assertTrue(job.get("id"))
+                self.assertTrue(job.get("theme"))
+                existing = {p.name[:4] for p in continuous_research.QUEUE_DIR.glob("*.md")} | {
+                    p.name[:4] for p in continuous_research.PUBLISHED_DIR.glob("*.md")
+                }
+                self.assertNotIn(job["id"], existing)
                 self.assertTrue((tmp_root / "content/research/channel_intelligence.json").is_file())
 
     def test_scripture_roadmap_integrity(self):

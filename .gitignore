@@ -25,7 +25,10 @@ image-search/houston-skyline-plate-*.png
 image-search/enron-*-plate-*.png
 
 # API reports belong in short-lived Actions artifacts, not source history.
+# Only the derived, aggregate performance-feedback artifact is committed; the raw
+# per-video snapshot (views/likes/comments) stays an Actions artifact.
 content/channel-metrics.json
+content/metrics.csv
 env/
 
 # Built product packs for Selar — regenerate via scripts/generate_night_queue.py + tools/build_sleep_suite.py
