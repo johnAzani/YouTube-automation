@@ -116,9 +116,12 @@ the Secret Place queue-repair and authored-Shorts steps.
 `PRAYER2_YOUTUBE_CLIENT_SECRET` added; Data Access scopes
 (`youtube.upload`, `youtube.readonly`) saved; Branding saved (app home /
 privacy / terms pages + `johnazani.github.io` authorized domain; logo
-deliberately left empty so verification is not triggered). Still
-outstanding: Publish app (§2c troubleshooting), then
-`PRAYER2_YOUTUBE_REFRESH_TOKEN` (§2c) and `PRAYER2_GEMINI_API_KEY` (§2d).*
+deliberately left empty so verification is not triggered); Audience
+published — Publishing status **In production**, External, OAuth user cap
+1/100 (the "requires verification" banner is expected; verification is
+intentionally not submitted, same as Channel 1). Still outstanding:
+`PRAYER2_YOUTUBE_REFRESH_TOKEN` (§2c — retry OAuth Playground now that the
+app is In production) and `PRAYER2_GEMINI_API_KEY` (§2d).*
 
 | Secret | Value |
 |---|---|
