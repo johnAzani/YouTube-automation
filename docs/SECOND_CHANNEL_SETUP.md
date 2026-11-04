@@ -94,6 +94,10 @@ the Secret Place queue-repair and authored-Shorts steps.
 
 ### 2e. Add the GitHub secrets (Settings → Secrets and variables → Actions)
 
+*Status 2026-11-04: `PRAYER2_YOUTUBE_CLIENT_ID` and
+`PRAYER2_YOUTUBE_CLIENT_SECRET` added. Still outstanding:
+`PRAYER2_YOUTUBE_REFRESH_TOKEN` (§2c) and `PRAYER2_GEMINI_API_KEY` (§2d).*
+
 | Secret | Value |
 |---|---|
 | `PRAYER2_YOUTUBE_CLIENT_ID` | Web OAuth client ID from the **new** GCP project |
