@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T22:45:45.206743+00:00",
+  "generated_at": "2026-11-04T22:46:51.836538+00:00",
   "healthy": false,
   "automations": [
     {
@@ -18,7 +18,7 @@
       "failures_5": 2,
       "effect": "reports and files stalls",
       "verdict": "OK",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 0.2h ago",
       "severity": "ok"
     },
     {
@@ -143,17 +143,17 @@
       "crons": [
         "23 */3 * * *"
       ],
-      "last_run": "2026-11-04T22:44:57+00:00",
+      "last_run": "2026-11-04T22:46:11+00:00",
       "last_conclusion": null,
       "last_success": null,
       "runs_14d": 20,
       "last_edited": "2026-11-03T20:27:15+00:00",
       "last_slot": "2026-11-04T21:23:00+00:00",
       "missed_slots": 0,
-      "failures_5": 3,
+      "failures_5": 4,
       "effect": "this report",
       "verdict": "FLAKY",
-      "detail": "3 of its last 5 runs failed",
+      "detail": "4 of its last 5 runs failed",
       "severity": "warning"
     },
     {
@@ -174,7 +174,7 @@
       "failures_5": 1,
       "effect": "publishes a video: content/published/ gains a receipt with a video id",
       "verdict": "UNTESTED FIX",
-      "detail": "failed 2.0h ago; edited 17m ago \u2014 needs one green run",
+      "detail": "failed 2.0h ago; edited 18m ago \u2014 needs one green run",
       "severity": "warning"
     },
     {
@@ -183,9 +183,9 @@
       "crons": [
         "*/15 * * * *"
       ],
-      "last_run": "2026-11-04T22:44:57+00:00",
+      "last_run": "2026-11-04T22:46:19+00:00",
       "last_conclusion": null,
-      "last_success": "2026-11-04T22:40:00+00:00",
+      "last_success": "2026-11-04T22:44:57+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-02T19:19:32+00:00",
       "last_slot": null,
@@ -193,7 +193,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 0.0h ago",
       "severity": "ok"
     }
   ],
