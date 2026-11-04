@@ -11,6 +11,11 @@ on:
     - cron: '14 19 * * *'   # 8:14pm Nigeria time
   workflow_dispatch:
     inputs:
+      channel:
+        description: 'Target channel (own GCP project & secrets)'
+        type: choice
+        options: [secret-place, prayer2]
+        default: secret-place
       limit:
         description: 'Maximum comments to reply to per pulse (default 8, max 25)'
         required: false
@@ -56,10 +61,12 @@ jobs:
 
       - name: Run Comment Reply Engine
         env:
-          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
-          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
-          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CHANNEL_ID: ${{ inputs.channel || 'secret-place' }}
+          YOUTUBE_CLIENT_ID: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_EXPECTED_CHANNEL_ID: ${{ inputs.channel == 'prayer2' && vars.PRAYER2_YOUTUBE_CHANNEL_ID || vars.YOUTUBE_CHANNEL_ID }}
+          GEMINI_API_KEY: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_GEMINI_API_KEY || secrets.GEMINI_API_KEY }}
           # The engine files one issue when a viewer discloses distress instead of
           # answering them in public. Without a token that escalation is a log line.
           GH_TOKEN: ${{ github.token }}

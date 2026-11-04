@@ -19,6 +19,7 @@ import json
 import re
 from pathlib import Path
 
+from .config import CONFIG
 from .script_doc import ScriptDoc
 from .social_pack import (
     SELAR_JOURNAL_URL,
@@ -286,9 +287,15 @@ def build_description(
     hook = _synthesize_seo_hook(doc)
     body = _unwrap_prose_paragraphs(doc.description or "")
 
+    # Selar/store links are The Secret Place's funnel. Other channels (e.g.
+    # The Morning Altar) must not inherit them — see pipeline/channels.py.
+    from .channels import get_channel
+
+    sanctuary_links = faith and get_channel(CONFIG.channel_id).include_sanctuary_links
+
     #Zone 1: Search Snippet (Line 1) + Watch-Page Fold Selar Journal Link (Line 2)
     zone1_lines = [hook]
-    if faith and not is_short:
+    if sanctuary_links and not is_short:
         fold_selar = build_above_fold_selar_line()
         if fold_selar and (SELAR_JOURNAL_URL not in body) and (SELAR_JOURNAL_URL not in extra_links):
             zone1_lines.append(fold_selar)
@@ -308,7 +315,7 @@ def build_description(
     # Zone 4: Sanctuary Resources (Both Live Selar Links + Internal Session Web + Pastoral Care)
     if extra_links:
         parts.extend(["", extra_links.strip()])
-    elif faith:
+    elif sanctuary_links:
         already_has_both_selar = (
             (not SELAR_JOURNAL_URL or SELAR_JOURNAL_URL in body)
             and (not SELAR_STORE_URL or SELAR_STORE_URL in body)
@@ -324,6 +331,29 @@ def build_description(
                 parts.extend(["", "\n".join(short_resources)])
             else:
                 parts.extend(["", build_sanctuary_resource_block(include_store_links=True)])
+    elif faith:
+        # A channel without its own resource funnel yet (e.g. The Morning
+        # Altar at launch): invite subscription to *this* channel only —
+        # never borrow The Secret Place's Selar/store links.
+        profile = get_channel(CONFIG.channel_id)
+        channel_name = CONFIG.channel_name or profile.display_name
+        channel_handle = CONFIG.channel_handle or profile.handle
+        parts.extend(
+            [
+                "",
+                "\n".join(
+                    [
+                        "🙏 BEGIN EVERY MORNING IN PRAYER",
+                        f"• Subscribe to {channel_name}: "
+                        f"https://www.youtube.com/{channel_handle}?sub_confirmation=1",
+                        "",
+                        "Scripture & Devotional Attribution: The Holy Bible "
+                        "(King James Version, Public Domain).",
+                        f"Curated by the {channel_name} editorial team.",
+                    ]
+                ),
+            ]
+        )
     elif not is_short:
         parts.extend(
             [

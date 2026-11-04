@@ -12,6 +12,11 @@ name: Set video thumbnail (validated studio)
 on:
   workflow_dispatch:
     inputs:
+      channel:
+        description: "Target channel (own GCP project & secrets)"
+        type: choice
+        options: [secret-place, prayer2]
+        default: secret-place
       job:
         description: "Published job file (content/published/…md)"
         required: true
@@ -42,9 +47,11 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
-  YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
-  YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+  CHANNEL_ID: ${{ inputs.channel || 'secret-place' }}
+  YOUTUBE_CLIENT_ID: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID }}
+  YOUTUBE_CLIENT_SECRET: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET }}
+  YOUTUBE_REFRESH_TOKEN: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN }}
+  YOUTUBE_EXPECTED_CHANNEL_ID: ${{ inputs.channel == 'prayer2' && vars.PRAYER2_YOUTUBE_CHANNEL_ID || vars.YOUTUBE_CHANNEL_ID }}
 
 jobs:
   thumbnail:

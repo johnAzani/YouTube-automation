@@ -50,6 +50,17 @@ Everything here is ₦0. Follow in order; items marked ⏱ have lead time, so st
    enough for this repo's one-video-per-run schedule; a quota audit is not an OAuth
    setup prerequisite.
 
+## 1c. Second channel (separate GCP project per channel)
+
+This repo also runs **The Morning Altar** (`prayer2`) — same code, fully
+separate free-tier stack (own GCP project, YouTube quota pool, Gemini
+project, OAuth token and `PRAYER2_*` secrets; manual `channel: prayer2`
+workflow runs, private drafts until its API audit passes). Setup is a
+one-time ~30 minutes in your own Google account; the repo side (registry,
+queue routing, wrong-channel upload guard, workflow selectors, brand kit)
+is already built. Follow **[docs/SECOND_CHANNEL_SETUP.md](SECOND_CHANNEL_SETUP.md)**
+and **[docs/MORNING_ALTAR_BRANDING.md](MORNING_ALTAR_BRANDING.md)**.
+
 ## 2. Free API keys (10 minutes)
 
 | Key | Where | Used for |

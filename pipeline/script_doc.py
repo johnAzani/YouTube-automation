@@ -91,6 +91,13 @@ class ScriptDoc:
         return str(self.meta.get("slug", self.path.stem))
 
     @property
+    def channel(self) -> str:
+        """Target channel id (frontmatter `channel:`; default `secret-place`)."""
+        from .channels import channel_for_doc
+
+        return channel_for_doc(self.meta)
+
+    @property
     def status(self) -> str:
         return str(self.meta.get("status", "draft")).lower()
 

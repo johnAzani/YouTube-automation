@@ -14,6 +14,7 @@ from __future__ import annotations
 
 from typing import Any
 
+from .config import CONFIG
 from .script_doc import ScriptDoc
 from .social_pack import SELAR_JOURNAL_URL, SELAR_STORE_URL, sanitize_persona_integrity
 
@@ -174,12 +175,26 @@ def generate_pastoral_pinned_comment(doc: ScriptDoc) -> str:
             theme = verse_theme
             break
 
+    from .channels import get_channel
+
+    sanctuary_links = get_channel(CONFIG.channel_id).include_sanctuary_links
     selar_lines: list[str] = []
-    if SELAR_JOURNAL_URL:
+    if sanctuary_links and SELAR_JOURNAL_URL:
         selar_lines.append(f"📖 Printable 30-Night Bedside Prayer Journal: {SELAR_JOURNAL_URL}")
-    if SELAR_STORE_URL:
+    if sanctuary_links and SELAR_STORE_URL:
         selar_lines.append(f"🤍 Voluntary Ministry Support: {SELAR_STORE_URL}")
     selar_footer = ("\n\n" + "\n".join(selar_lines)) if selar_lines else ""
+
+    if CONFIG.channel_id == "prayer2":
+        morning_comment = (
+            f"🌅 Beloved family, if you are beginning this day with us, write 'AMEN' in faith to claim "
+            f"God's promise of {theme} over your home, your work, and your mind today.\n\n"
+            f"📖 Psalm 5:3 — 'My voice shalt thou hear in the morning, O Lord; in the morning will I "
+            f"direct my prayer unto thee, and will look up.'\n\n"
+            f"Drop your prayer requests below — our pastoral editorial team reads and intercedes over "
+            f"every single name. Go into today covered, calm, and confident. You are not alone. 🙏✨"
+        )
+        return sanitize_persona_integrity(morning_comment.strip())
 
     comment = (
         f"🕊️ Beloved family, if you are listening to this tonight, write 'AMEN' in faith to claim "

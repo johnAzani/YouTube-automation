@@ -129,6 +129,9 @@ def _validate_finance_niche(doc: ScriptDoc) -> None:
 def select_jobs(all_flag: bool, job_path: str | None, next_flag: bool) -> list[Path]:
     if job_path:
         return [Path(job_path)]
+    from .channels import normalize_channel_id
+
+    target_channel = normalize_channel_id(CONFIG.channel_id)
     jobs = sorted(QUEUE_DIR.glob("*.md"))
     approved: list[Path] = []
     for j in jobs:
@@ -136,6 +139,13 @@ def select_jobs(all_flag: bool, job_path: str | None, next_flag: bool) -> list[P
             doc = parse_script(j)
         except Exception as exc:  # noqa: BLE001
             _log(f"skip {j.name}: parse error {exc}")
+            continue
+
+        # Channel routing: a run only picks up its own channel's scripts.
+        # Without this, selecting PRAYER2 credentials would upload The Secret
+        # Place's next approved script to The Morning Altar (or vice versa).
+        if doc.channel != target_channel:
+            _log(f"skip {j.name}: channel={doc.channel} (this run targets {target_channel})")
             continue
 
         raw_status = str(doc.status).strip().lower()
@@ -180,7 +190,19 @@ def select_jobs(all_flag: bool, job_path: str | None, next_flag: bool) -> list[P
 
 def process(path: Path, dry_run: bool) -> dict:
     """Use only the approved prayer renderer; never fall back to the old style."""
+    from .channels import normalize_channel_id
     from .prayer_pipeline import produce
+
+    # Explicit --job runs bypass select_jobs, so enforce routing here too:
+    # never render/upload a script under the wrong channel's credentials.
+    doc = parse_script(path)
+    target_channel = normalize_channel_id(CONFIG.channel_id)
+    if doc.channel != target_channel:
+        raise RuntimeError(
+            f"Refusing cross-channel run for job {doc.id}: script channel={doc.channel!r} "
+            f"but this run targets {target_channel!r} (CHANNEL_ID). "
+            "Select the matching channel so its own GCP quota and token are used."
+        )
     model = Path(os.environ.get("PRAYER_ALIGNMENT_MODEL", OUTPUT_DIR / "alignment-model"))
     return produce(path, dry_run, model)
 

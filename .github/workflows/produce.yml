@@ -27,6 +27,11 @@ on:
     types: [publish-now]
   workflow_dispatch:
     inputs:
+      channel:
+        description: "Target channel (each uses its own GCP project, quota & secrets)"
+        type: choice
+        options: [secret-place, prayer2]
+        default: secret-place
       job:
         description: "Specific script file in content/queue/ (blank = next approved)"
         required: false
@@ -64,15 +69,22 @@ jobs:
     timeout-minutes: 240
     env:
       DRY_RUN: ${{ (inputs.dry_run || false) && '1' || '0' }}
+      # Channel selector: schedule/repository_dispatch default to channel 1
+      # (secret-place). Manual runs may pick prayer2 (The Morning Altar),
+      # whose PRAYER2_* secrets come from its own GCP + Gemini projects.
+      CHANNEL_ID: ${{ inputs.channel || 'secret-place' }}
+      CHANNEL_NAME: ${{ inputs.channel == 'prayer2' && 'The Morning Altar' || 'The Secret Place' }}
+      CHANNEL_HANDLE: ${{ inputs.channel == 'prayer2' && '@MorningAltarPrayer' || '@TheSecretPlace' }}
       PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
       PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
-      YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
-      YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
-      YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
-      YOUTUBE_PLAYLIST_ID: ${{ secrets.YOUTUBE_PLAYLIST_ID }}
-      AUTO_PUBLISH: ${{ secrets.AUTO_PUBLISH || 'true' }}
-      DEFAULT_PRIVACY: "public"
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      YOUTUBE_CLIENT_ID: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID }}
+      YOUTUBE_CLIENT_SECRET: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET }}
+      YOUTUBE_REFRESH_TOKEN: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN }}
+      YOUTUBE_PLAYLIST_ID: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_PLAYLIST_ID || secrets.YOUTUBE_PLAYLIST_ID }}
+      YOUTUBE_EXPECTED_CHANNEL_ID: ${{ inputs.channel == 'prayer2' && vars.PRAYER2_YOUTUBE_CHANNEL_ID || vars.YOUTUBE_CHANNEL_ID }}
+      AUTO_PUBLISH: ${{ inputs.channel == 'prayer2' && 'false' || (secrets.AUTO_PUBLISH || 'true') }}
+      DEFAULT_PRIVACY: ${{ inputs.channel == 'prayer2' && 'private' || 'public' }}
+      GEMINI_API_KEY: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_GEMINI_API_KEY || secrets.GEMINI_API_KEY }}
       # pipeline.run shells out to `gh issue create` for the release ticket
       # (SETUP.md §6.4). gh needs a token: without GH_TOKEN the call fails
       # unauthenticated and the QC issue would silently never appear.
@@ -146,7 +158,9 @@ jobs:
         # is empty, and killing the run first would lose that upload. The alarm for
         # "nothing is publishable" is the watchdog at the end of this job.
         continue-on-error: true
-        if: ${{ inputs.short == '' && inputs.job == '' }}
+        # Queue repair authors Secret Place supply; Morning Altar scripts are
+        # human-queued with `channel: prayer2` until it gets its own brain pass.
+        if: ${{ inputs.short == '' && inputs.job == '' && inputs.channel != 'prayer2' }}
         env:
           GITHUB_ACTIONS: "true"
         run: |
@@ -160,7 +174,9 @@ jobs:
         # timeout instead of living inside one opaque 30-minute step.
         continue-on-error: true
         timeout-minutes: 30
-        if: ${{ inputs.job == '' }}
+        # Authored Shorts are Secret Place editions; skipped for prayer2 until
+        # Morning Altar Shorts get their own queue (wrong-channel safety).
+        if: ${{ inputs.job == '' && inputs.channel != 'prayer2' }}
         run: |
           set -o pipefail
           if [ -n "${{ inputs.short }}" ]; then
