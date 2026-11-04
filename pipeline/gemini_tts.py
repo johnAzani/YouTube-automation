@@ -210,31 +210,33 @@ def _transient_label(exc: BaseException) -> str:
 
 
 def read_aloud_instruction(prompt_style: str = "calm, reverent, peaceful devotional tone") -> str:
-    """The read-aloud contract sent with every TTS request.
+    """Style guidance for the TTS model — delivered ONLY via the API's
+    system-instruction channel, never inside the text payload.
 
-    The `interactions` transport has no separate system-instruction channel,
-    so this text used to travel ONLY on the `generate_content` fallback —
-    whichever transport answered decided whether the model ever heard
-    "read this, don't comment on it". On 4 November 2026 the Psalm 27 video
-    (7ll7w1hYf7o) opened by speaking the delivery instructions aloud instead
-    of the prayer: proof that bare script text invites direction-narration.
-    Every transport now prefixes this contract to the script itself, marked
-    as not-to-be-spoken, with the script fenced behind a unique delimiter.
+    A TTS model speaks its text payload verbatim; it has no notion of
+    "instructions inside the transcript". Two owner-reported failures
+    prove both halves of that sentence:
+
+    * Psalm 27 (`7ll7w1hYf7o`, 4 Nov 2026) narrated its delivery
+      directions: the generate_content fallback glued the instruction to
+      the script as a "Text to read:" prefix inside `contents`.
+    * Psalm 5 (`oS7f32WDj_Y`, 4 Nov 2026) opened by literally saying
+      "Read the text between the markers aloud, in a calm..." — the
+      follow-up fix had moved that contract INTO every transport's text
+      payload behind `<<<SCRIPT START>>>` fences, and the model read
+      the contract and fences as the first lines of the prayer.
+
+    So: the payload is the script, byte for byte, and nothing else.
+    Where a transport exposes a genuine system channel
+    (GenerateContentConfig.system_instruction), the style guidance goes
+    there. Where it does not (`interactions`), the payload stays bare —
+    a TTS voice needs no prose instruction to read text aloud.
     """
     return (
-        "Read the text between the markers aloud, word for word, in a "
-        f"{prompt_style}. Everything outside the markers is an instruction "
-        "for you and must never be spoken. Do not add commentary, "
-        "introductions, scene titles, or conclusions, and do not read the "
-        "markers themselves. Begin speaking at the first word after "
-        "the opening marker."
+        "You are a professional voiceover narrator. Read the provided "
+        f"text aloud in a {prompt_style}. Speak only the provided words: "
+        "no commentary, introductions, scene titles, or conclusions."
     )
-
-
-#: Fences the script inside a TTS request so instruction and script can
-#: never be confused for one another (see read_aloud_instruction).
-SCRIPT_START = "<<<SCRIPT START — speak only what follows>>>"
-SCRIPT_END = "<<<SCRIPT END>>>"
 
 
 def _guarded_chunk(client, text, voice_name, system_instruction, model, temp_raw,
@@ -356,7 +358,7 @@ def _synthesize_single_chunk(
                     model=tts_model,
                     input=[{
                         "type": "user_input",
-                        "content": [{"type": "text", "text": f"{system_instruction}\n\n{SCRIPT_START}\n{text}\n{SCRIPT_END}"}],
+                        "content": [{"type": "text", "text": text}],
                     }],
                     response_format={"type": "audio"},
                     generation_config={"speech_config": [{"voice": voice_name}]},
@@ -397,7 +399,7 @@ def _synthesize_single_chunk(
                                 timeout=http_timeout_seconds(),
                                 model=tts_model,
                                 input=[{"type": "user_input",
-                                        "content": [{"type": "text", "text": f"{system_instruction}\n\n{SCRIPT_START}\n{text}\n{SCRIPT_END}"}]}],
+                                        "content": [{"type": "text", "text": text}]}],
                                 response_format={"type": "audio"},
                                 generation_config={"speech_config": [{"voice": voice_name}]},
                             )
@@ -437,7 +439,7 @@ def _synthesize_single_chunk(
                                 timeout=http_timeout_seconds(),
                                 model=tts_model,
                                 input=[{"type": "user_input",
-                                        "content": [{"type": "text", "text": f"{system_instruction}\n\n{SCRIPT_START}\n{text}\n{SCRIPT_END}"}]}],
+                                        "content": [{"type": "text", "text": text}]}],
                                 response_format={"type": "audio"},
                                 generation_config={"speech_config": [{"voice": voice_name}]},
                             )
@@ -472,8 +474,9 @@ def _synthesize_single_chunk(
             try:
                 response = client.models.generate_content(
                     model=cur_model,
-                    contents=f"{system_instruction}\n\n{SCRIPT_START}\n{text}\n{SCRIPT_END}",
+                    contents=text,
                     config=types.GenerateContentConfig(
+                        system_instruction=system_instruction,
                         response_modalities=["AUDIO"],
                         speech_config=types.SpeechConfig(
                             voice_config=types.VoiceConfig(
