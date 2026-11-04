@@ -122,7 +122,7 @@
 * `short-0004-psalm-121-he-who-keeps-you.md` (`xkpfupurX-0` / `short-psalm121`, published Tuesday 3 November 2026 at 7:43pm Nigeria time)
 * `short-0003-psalm-23-the-lord-is-my-shepherd.md` (`kLgHN57fb1w` / `short-psalm23`, published Tuesday 3 November 2026 at 3:14pm Nigeria time)
 * `short-0002-psalm-91-prayer-of-protection.md` (`SG69BbNlfRw` / `short-psalm91`)
-* `short-0001-enron-70b-fraud.md` (`DLEWL6dm5lo` / legacy)
+* `short-0001-how-enron-died.md` (`DLEWL6dm5lo` / historical non-prayer upload; receipt retained for audit/de-duplication only)
 
 ### 2026-11-03 Autonomous Hardening Summary (Tuesday 3 November, Nigeria time):
 * **Metadata Perfection, Selar Integration & Live Channel Retrofit (`PR #230` + Autopilot Lock):** Wired both live Selar links (`https://selar.com/i000qy7g39` & `https://selar.com/showlove/thesecretplace`) across Line 2 watch-page fold, sanctuary resource blocks, pastoral owner comments, faith Shorts bridges, and Spanish/Portuguese localizations; upgraded all 22 queued prayer titles (`55–62` chars), `seo_hook` snippets, quote-aware `<= 500`-char tags, verified `.srt` closed captions, `BT.709` + `48 kHz` AAC + sRGB ICC profiles, and idempotent `metadata_revision: "selar-seo-v1"` live-channel sync inside `monitor.yml`.
@@ -582,10 +582,7 @@ were hiding it:
 1. **A Short needs a hand-authored scene script.** `tools/shorts.py` holds a
    `SCRIPTS` dict with per-Short scene definitions (1668 lines: plates, camera
    moves, on-screen kickers, narration timing). There is no generator for those.
-   The renderer knows three keys — `short-enron`, `short-johnstown`,
-   `short-psalm91` — while `EDITIONS` defines seven. Every approved manifest in the
-   queue pointed at a key with no script, so `select_next_queued_short()` returned
-   `None`, the stage printed "nothing to do", and exited 0. Green run, no video.
+   The prayer renderer uses `short-psalm91`; legacy Enron/Johnstown scene definitions remain only as offline automation regression fixtures. Every approved manifest in the queue pointed at a key with no script, so `select_next_queued_short()` returned `None`, the stage printed "nothing to do", and exited 0. Green run, no video.
 2. **The brain hardcoded the key.** `generate_companion_short` wrote
    `short: short-psalm91` and `status: approved` for *every* long-form job — a
    second Psalm 91 Short queued against any new psalm, and the same

@@ -99,13 +99,19 @@ def test_every_queued_faith_script_has_crisp_title_hook_and_both_selar_links():
     assert len(faith_docs) >= 22
 
 
-def test_finance_scripts_never_receive_faith_or_selar_links():
-    lehman = parse_script(QUEUE_DIR / "0003-how-lehman-brothers-died.md")
-    assert not is_faith_doc(lehman)
-    desc = build_description(lehman, [60.0] * len(lehman.scenes))
+def test_nonfaith_scripts_never_receive_faith_or_selar_links():
+    from pipeline.script_doc import ScriptDoc
+
+    nonfaith = ScriptDoc(
+        path=Path("business-fixture.md"),
+        meta={"id": "fixture-1", "title": "Business fixture", "niche": "business", "format": "longform"},
+        scenes=[],
+    )
+    assert not is_faith_doc(nonfaith)
+    desc = build_description(nonfaith, [])
     assert "selar.com" not in desc.lower()
-    assert generate_pastoral_pinned_comment(lehman) == ""
-    assert build_metadata_localizations(lehman.title, desc, "finance and business") == {}
+    assert generate_pastoral_pinned_comment(nonfaith) == ""
+    assert build_metadata_localizations(nonfaith.title, desc, "business") == {}
 
 
 def test_smart_truncate_title_never_chops_mid_word_or_leaves_dangling_ampersand():

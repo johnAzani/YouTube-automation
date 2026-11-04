@@ -57,18 +57,18 @@ Everything here is ₦0. Follow in order; items marked ⏱ have lead time, so st
 | `PEXELS_API_KEY` | https://www.pexels.com/api/ | stock video/photos |
 | `PIXABAY_API_KEY` | https://pixabay.com/api/docs/ | stock fallback |
 
-Both are free API tiers; Pexels/Pixabay can return both video and photos. Without keys, the renderer tries Openverse, Wikimedia Commons, Internet Archive, and NASA using explicit commercial-use/attribution filters. It requests clips first, then photos; if an automated job still finds no legal visual, it fails that scene rather than publishing a generic card. Existing authored documentaries keep their story-specific photo fallback.
+Both are free API tiers; Pexels/Pixabay can return both video and photos. Without keys, the renderer tries Openverse, Wikimedia Commons, Internet Archive, and NASA using explicit commercial-use/attribution filters. It requests clips first, then photos; if an automated job still finds no legal visual, it fails that scene rather than publishing a generic card. Prayer sample renders use the channel-specific stills recorded in `image-search/LICENSES.yml`.
 
-## 3. Remaster the existing deep dives and Shorts (free GitHub Actions)
+## 3. Remaster the Psalm 91 prayer samples (free GitHub Actions)
 
 After this workflow is present on the repository's default branch, open
-**Actions → Remaster documentary assets → Run workflow**, select the branch you want the
-refreshed demos published to, choose `all` (or deep dives/Shorts) and leave
+**Actions → Remaster prayer channel assets → Run workflow**, select the branch you want the
+refreshed prayer samples published to, choose `all`, `prayer-video`, or `prayer-short` and leave
 **Search free video first** enabled. The workflow pushes its results back to whichever
 branch it was dispatched from (it used to be pinned to a single Arena session branch and
 refused to run anywhere else — fixed 2026-10-20). The workflow uses optional Pexels/Pixabay secrets,
 then keyless free providers, preserves the whole source frame, writes per-scene license
-ledgers, and publishes updated demos to GitHub Pages. If a source API is unreachable,
+ledgers, and publishes updated prayer samples to GitHub Pages. If a source API is unreachable,
 the existing scene-specific photo remains; the local sandbox itself may not reach those
 external domains.
 
@@ -94,14 +94,14 @@ Repo → **Settings → Secrets and variables → Actions** → New repository s
 
 ## 6. First production run
 
-1. Write/approve a script in `content/queue/` (copy `content/queue/0003-how-lehman-brothers-died.md`
+1. Write/approve a script in `content/queue/` (copy `content/queue/0011-psalm-27-the-lord-is-my-light-and-my-salvation--fe.md`
    — the required frontmatter shape is documented in `pipeline/script_doc.py`'s docstring).
    Checklist: PLAN.md §4.4 — every `originality:` flag must be honestly true
    (`human_rewrite` stays `false` until *you* have verified the facts and rewritten the
    narration; the originality gate blocks the run until then).
 
-   **Shortcut for the fact-check:** `python scripts/factcheck.py 0003` writes
-   `content/factcheck/0003-….md` — every claim in the script pulled out as a checkbox, next
+   **Shortcut for the fact-check:** `python scripts/factcheck.py 0011` writes
+   `content/factcheck/0011-….md` — every claim in the script pulled out as a checkbox, next
    to the job's own declared sources, with a blank for the source you confirmed it against.
    It verifies nothing and pre-ticks nothing; it just saves you the hour of extraction. Tick
    the boxes, rewrite as you go, then flip the two flags **in the script file**. Re-running

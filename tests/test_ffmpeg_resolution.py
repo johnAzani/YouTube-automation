@@ -94,7 +94,7 @@ class RendererClisUseTheSharedResolver(unittest.TestCase):
     """The two CLIs CI renders with must not re-implement (and break) resolution."""
 
     def test_both_delegate_to_ffmpeg_bin(self):
-        for rel in ("tools/deep_dive.py", "tools/shorts.py", "tools/motionstudio.py"):
+        for rel in ("tools/deep_dive.py", "tools/shorts.py"):
             src = _code_lines((ROOT / rel).read_text())
             self.assertNotIn(
                 "os.environ.get('FFMPEG_BINARY', 'ffmpeg')", src,

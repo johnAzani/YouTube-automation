@@ -29,7 +29,7 @@ Every code path resolves through `pipeline/assemble.py::ffmpeg_bin()`:
 $FFMPEG_BINARY (only if it resolves) → PATH → imageio_ffmpeg static build
 ```
 
-`tools/deep_dive.py`, `tools/shorts.py` and `tools/motionstudio.py` used to default to the
+`tools/deep_dive.py` and `tools/shorts.py` used to default to the
 literal `"ffmpeg"` with **no fallback**, so they needed system ffmpeg on `PATH` or a
 hand-exported `FFMPEG_BINARY`. That was the wrong way round: `imageio-ffmpeg` is already in
 `requirements.txt`, so a static build is always present after `pip install -r requirements.txt`.
@@ -132,7 +132,7 @@ timeout as `cancelled`, so it did not look like a failure at all.
 exists before apt is even attempted.
 
 **Second defect, found while fixing the first.** `tools/deep_dive.py`, `tools/shorts.py` and
-`tools/motionstudio.py` did `os.environ.get('FFMPEG_BINARY', 'ffmpeg')` — no fallback to the
+The retired MotionStudio sample tool did `os.environ.get('FFMPEG_BINARY', 'ffmpeg')` — no fallback to the
 static build that was sitting right there in the venv. §1 documented this as intentional
 ("GitHub runners install real ffmpeg via apt, so CI never needs this"); the incident disproved
 the premise. `remaster.yml` made it worse by hard-pinning `FFMPEG_BINARY: ffmpeg` at job level,

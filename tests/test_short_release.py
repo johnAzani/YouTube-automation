@@ -62,6 +62,12 @@ class ShortReleaseTests(unittest.TestCase):
         self.assertEqual(len(stills), 10)
         self.assertEqual(len(set(stills)), 10)
 
+    def test_legacy_non_prayer_edition_is_blocked_from_production_upload(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            with patch("pipeline.short_release.PUBLISHED_DIR", Path(tmp) / "published"):
+                with self.assertRaisesRegex(RuntimeError, "faith, prayer, scripture"):
+                    run_short_release("short-enron", dry_run=False, skip_render=True)
+
     def test_verify_short_render_accepts_cleared_vertical_short(self):
         with tempfile.TemporaryDirectory() as tmp:
             tdir = Path(tmp)
@@ -118,12 +124,12 @@ class ShortReleaseTests(unittest.TestCase):
                 path=Path(tmp) / "s.md",
                 meta={
                     "id": "S1",
-                    "title": "How Enron Failed #Shorts",
-                    "slug": "how-enron-failed",
+                    "title": "A Psalm 91 Night Prayer #Shorts",
+                    "slug": "psalm91-night-prayer",
                     "status": "approved",
                     "format": "short",
-                    "niche": "finance",
-                    "tags": ["enron", "accounting"],
+                    "niche": "faith and prayer",
+                    "tags": ["psalm 91", "night prayer"],
                     "description": "Primary source summary.",
                 },
                 scenes=[Scene(index=1, heading="Hook", narration="One two three.")],
@@ -139,11 +145,11 @@ class ShortReleaseTests(unittest.TestCase):
             tdir = Path(tmp)
             social_dir = tdir / "social"
             social_dir.mkdir(parents=True)
-            mp4 = _make_sample_mp4(social_dir / "short-enron.mp4", 720, 1280, seconds=20.0, audio=True)
-            stock_dir = tdir / "output" / "short-stock" / "short-enron"
+            mp4 = _make_sample_mp4(social_dir / "short-psalm91.mp4", 720, 1280, seconds=20.0, audio=True)
+            stock_dir = tdir / "output" / "short-stock" / "short-psalm91"
             stock_dir.mkdir(parents=True)
             (stock_dir / "scene-sources.json").write_text(
-                json.dumps([{"scene": 1, "fallback": True, "file": "houston-skyline-plate-1.png"}]),
+                json.dumps([{"scene": 1, "fallback": True, "file": "short-prayer-scene-01.jpg"}]),
                 encoding="utf-8",
             )
             pub_dir = tdir / "published"
@@ -167,14 +173,14 @@ class ShortReleaseTests(unittest.TestCase):
                 patch("pipeline.upload.audit_channel_videos", return_value=[{"id": "ytShort123", "uploadStatus": "processed"}]),
                 patch("pipeline.short_release._open_release_ticket") as ticket_mock,
             ):
-                res = run_short_release("short-enron", dry_run=False, skip_render=True)
+                res = run_short_release("short-psalm91", dry_run=False, skip_render=True)
 
             self.assertTrue(mp4.exists())
             self.assertEqual(res["video_id"], "ytShort123")
             self.assertEqual(res["shorts_url"], "https://www.youtube.com/shorts/ytShort123")
             upload_mock.assert_called_once()
             ticket_mock.assert_called_once()
-            receipt = pub_dir / f"{EDITIONS['short-enron'].slug}.md"
+            receipt = pub_dir / f"{EDITIONS['short-psalm91'].slug}.md"
             self.assertTrue(receipt.is_file())
             text = receipt.read_text(encoding="utf-8")
             self.assertIn('youtube_video_id: "ytShort123"', text)
@@ -185,18 +191,18 @@ class ShortReleaseTests(unittest.TestCase):
             tdir = Path(tmp)
             qdir = tdir / "shorts-queue"
             qdir.mkdir(parents=True)
-            manifest = qdir / "0001-short-enron.yml"
-            manifest.write_text('short: "short-enron"\nstatus: approved\n', encoding="utf-8")
+            manifest = qdir / "0001-short-psalm91.yml"
+            manifest.write_text('short: "short-psalm91"\nstatus: approved\n', encoding="utf-8")
             selected = select_next_queued_short(qdir)
-            self.assertEqual(selected, (manifest, "short-enron"))
+            self.assertEqual(selected, (manifest, "short-psalm91"))
 
             social_dir = tdir / "social"
             social_dir.mkdir(parents=True)
-            _make_sample_mp4(social_dir / "short-enron.mp4", 720, 1280, seconds=20.0, audio=True)
-            stock_dir = tdir / "output" / "short-stock" / "short-enron"
+            _make_sample_mp4(social_dir / "short-psalm91.mp4", 720, 1280, seconds=20.0, audio=True)
+            stock_dir = tdir / "output" / "short-stock" / "short-psalm91"
             stock_dir.mkdir(parents=True)
             (stock_dir / "scene-sources.json").write_text(
-                json.dumps([{"scene": 1, "fallback": True, "file": "houston-skyline-plate-1.png"}]),
+                json.dumps([{"scene": 1, "fallback": True, "file": "short-prayer-scene-01.jpg"}]),
                 encoding="utf-8",
             )
             fake_upload = SimpleNamespace(
@@ -218,7 +224,7 @@ class ShortReleaseTests(unittest.TestCase):
                 patch("pipeline.short_release._open_release_ticket"),
             ):
                 run_short_release(
-                    "short-enron",
+                    "short-psalm91",
                     dry_run=False,
                     skip_render=True,
                     manifest_path=manifest,

@@ -608,10 +608,10 @@ Type Amen to agree with this prayer, and subscribe to The Secret Place to pray w
     def verify_and_stage(self, script_path: Path) -> BrainGenerationResult:
         """Run factchecking claim extraction, verify queue integrity, and stage for production."""
         from scripts.factcheck import main as factcheck_main, out_path
-        from pipeline.run import _validate_finance_niche
+        from pipeline.run import _validate_channel_niche
 
         doc = parse_script(script_path)
-        _validate_finance_niche(doc)
+        _validate_channel_niche(doc)
 
         # Generate the mandatory factcheck worksheet with sha256 binding
         factcheck_main([doc.id, "--force"])

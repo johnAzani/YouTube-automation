@@ -2,8 +2,8 @@
 
 Why this test exists
 --------------------
-`content/queue/0003-how-lehman-brothers-died.md` shipped with eight scene queries that had never
-been checked against a keyless provider. `pipeline/assets.py` sources scenes from Pexels/Pixabay
+An earlier prayer-queue draft shipped with scene queries that had never been checked
+against a keyless provider. `pipeline/assets.py` sources scenes from Pexels/Pixabay
 (both need an API key) and then from Wikimedia Commons / Internet Archive / NASA (all keyless), so
 on a CI runner with no secrets **only** the keyless providers run. Several of 0003's queries
 returned nothing usable on Commons, and the advisory `pipeline-dry-run` job stayed red for weeks

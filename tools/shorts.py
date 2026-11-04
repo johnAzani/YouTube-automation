@@ -8,7 +8,7 @@
 - Clip-first free stock search (Pexels, Pixabay, Wikimedia Commons, Internet Archive, NASA) with cleared 9:16 documentary plates as offline fail-safe
 - Score-only audio (voice + background music, zero SFX), hush/swell automation
 
-Run: .venv/bin/python tools/shorts.py [short-johnstown|short-enron]
+Run: .venv/bin/python tools/shorts.py short-psalm91
 """
 import os, sys, json, math, subprocess, shutil
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageEnhance, ImageChops
@@ -2344,7 +2344,7 @@ def main(key):
     print('done', out, os.path.getsize(out) // 1024, 'KB')
 
 if __name__ == '__main__':
-    arg = sys.argv[1] if len(sys.argv) > 1 else 'short-johnstown'
+    arg = sys.argv[1] if len(sys.argv) > 1 else 'short-psalm91'
     if arg not in SCRIPTS:
         raise SystemExit(f'unknown script {arg!r} — choose from {sorted(SCRIPTS)}')
     main(arg)

@@ -9,7 +9,7 @@ The video pipeline attempts scene-matched moving footage first, then a scene-mat
 5. **Internet Archive** — keyless metadata/search; only items with explicit CC BY/CC0/public-domain rights and downloadable media are considered.
 6. **NASA Image and Video Library** — keyless search; public-domain default, but the item must be checked for third-party material.
 
-Pexels/Pixabay keys are optional. They are free to obtain from their respective platforms; never place a key in code or commit it. The scheduled `produce.yml` workflow already reads these GitHub secrets. When no source returns a legal, downloadable match, the general automation stops that job with a clear scene/query error rather than publishing a generic card. The authored Johnstown/Enron deep dives and Shorts retain a story-specific photo for every scene, so an unavailable API or a bad video decode cannot leave a blank shot.
+Pexels/Pixabay keys are optional. They are free to obtain from their respective platforms; never place a key in code or commit it. The scheduled `produce.yml` workflow already reads these GitHub secrets. When no source returns a legal, downloadable match, the general automation stops that job with a clear scene/query error rather than publishing a generic card. The Psalm 91 prayer sample renders retain a channel-specific visual for every scene, so an unavailable API or bad video decode cannot leave a blank shot.
 
 ## Aspect-ratio and quality rules
 
@@ -21,11 +21,9 @@ Pexels/Pixabay keys are optional. They are free to obtain from their respective 
 
 ## The authored-still licence ledger (`image-search/LICENSES.yml`)
 
-`tools/deep_dive.py` and `tools/shorts.py` fall back to the 49 authored stills in `image-search/`
-whenever a stock provider returns nothing. Until 2026-10-22 nothing recorded where those files
-came from, and both tools wrote the same blanket string into `scene-sources.json` for every one
-of them — which said the same thing about a public-domain 1889 photograph and a rights-managed
-Getty frame.
+Prayer-channel renders use the channel-specific stills in `image-search/`. A small set of older
+story images is retained only for isolated renderer and licensing regression tests; those files
+are not part of the production queue or channel remaster workflow and must never be uploaded.
 
 `scripts/licence_ledger.py` derives each file's status from **its own** metadata: EXIF
 `Copyright` / `Artist` / `ImageDescription`, embedded XMP packets, and raw byte markers
@@ -40,12 +38,7 @@ is keyed by SHA-256, so a swapped file cannot inherit its predecessor's clearanc
 | `cleared` | a human verified the licence and recorded `license` + `source_url` | yes |
 
 Current state, scanned 2026-10-22: **13 rights-encumbered, 1 corrupt, 35 unverified, 0 cleared.**
-The encumbered set is 10 stills carrying embedded Getty Images rights metadata (all Enron) and
-3 carrying an "All Rights Reserved" photographer copyright (Johnstown Flood National Memorial).
-Nine of those 13 are referenced by scene tables (8 Enron, 1 Johnstown), so the Enron deep
-dive and Shorts are **not** safe to monetize until the files are replaced. Only 23 of the 49
-stills are referenced at all — the other 26 are unused inventory. The renderers now say so at
-runtime and write the real status into `scene-sources.json` instead of the blanket string.
+The ledger includes old renderer-test fixtures with embedded rights claims and unused historical image files. These are not channel assets: the production queue and sample workflows are prayer-only. Never upload any unverified or rights-encumbered fixture.
 
 ```bash
 python scripts/licence_ledger.py check   # what CI runs — drift = non-zero exit
@@ -94,9 +87,9 @@ Pexels or Pixabay key if a scene keeps rendering the wrong picture.
 
 ## Reproducible controls
 
-The manual GitHub Actions workflow is `Remaster documentary assets` (`.github/workflows/remaster.yml`). Run it from the branch you want the refreshed demos published to, choose `all`/`deepdives`/`shorts`, and leave `use_free_stock` on to search providers. If GitHub does not list the workflow yet, the file must first be merged to the repository's default branch. The workflow publishes back to the branch it was dispatched from; it refuses to run from a non-branch ref such as a tag or pull-request ref.
+The manual GitHub Actions workflow is `Remaster prayer channel assets` (`.github/workflows/remaster.yml`). Run it from the branch you want the refreshed Psalm 91 prayer samples published to, choose `all`/`prayer-video`/`prayer-short`, and leave `use_free_stock` on to search providers. If GitHub does not list the workflow yet, the file must first be merged to the repository's default branch. The workflow publishes back to the branch it was dispatched from; it refuses to run from a non-branch ref such as a tag or pull-request ref.
 
-- `ENABLE_STOCK_BROLL=0` skips online search in the authored Shorts/deep-dive remaster engines and uses their scene-specific story stills.
+- `ENABLE_STOCK_BROLL=0` skips online search in the authored Shorts/deep-dive remaster engines and uses the prayer channel's scene-specific stills.
 - `ENABLE_KEYLESS_SOURCES=0` disables Openverse, Wikimedia, Internet Archive, and NASA while keeping configured Pexels/Pixabay.
 - `PEXELS_API_KEY` and `PIXABAY_API_KEY` are optional free-tier secrets. Do not put them in an `.env` committed to Git.
 - Provider errors, absent credentials, no matching item, or a broken codec degrade to a still/fallback; they do not fail the whole render.
@@ -104,30 +97,16 @@ The manual GitHub Actions workflow is `Remaster documentary assets` (`.github/wo
 External stock endpoints are not reachable from every sandbox/network. A failed local search is recorded in the render log and does not mean those free providers are unavailable to the GitHub-hosted runner. Never describe an unverified fallback as stock footage: the per-scene source ledger distinguishes video, stock photo, and authored archive-photo fallback.
 
 
-### Original skyline illustrations (2026-10-23)
+### Procedural plates and regression fixtures
 
-The five Getty-backed Houston headquarters images are no longer referenced by the
-Enron scene tables. They are replaced by **abstract skyline illustrations**, not
-photos of Houston or Enron Center. The original photographs remain in the ledger
-with their existing rights-encumbered status; they have not been relicensed.
+`tools/make_plates.py` creates deterministic procedural plates for visual-pipeline tests. The
+Psalm 91 prayer video and Short are the only authored sample renders published by the remaster
+workflow. Older non-prayer story assets remain isolated regression fixtures for renderer and
+licence-gate tests; they are not active scripts, channel samples, or upload candidates.
 
-`tools/make_plates.py` generates five PNGs from fixed seeds without any source
-images, fonts or downloads. They are ignored by Git. CI render setup rebuilds
-these assets; renderer and ledger CLIs build missing ones automatically. For an
-explicit rebuild, run:
+The plate generator requires no source images, downloads, or fonts. CI rebuilds missing plates;
+`tests/test_original_plates.py` verifies their deterministic hashes. A Pillow upgrade may change
+PNG encoding, so inspect hash drift before regenerating the ledger.
 
-```bash
-.venv/bin/python tools/make_plates.py
-.venv/bin/python scripts/licence_ledger.py check
-```
-
-The five originals are recorded as `cleared` based on code provenance and
-repeat-generation byte comparison, **not a human licence review of a downloaded
-photo**. `tests/test_original_plates.py` reproduces each recorded hash. A Pillow
-upgrade may change PNG encoding; inspect such drift before regenerating the ledger.
-
-Current pool: **54 assets: 13 rights-encumbered, 1 corrupt, 35 unverified,
-5 original illustrations cleared**. The older count above describes the initial
-scan. Remaining scene-table references include the Fastow/news images in Enron
-and one Johnstown club image. These demo videos are still **not cleared for a
-monetized upload**. Never substitute an unverified photo and call it licensed.
+Never substitute an unverified photo and call it licensed. Production scenes must have a cleared
+asset or a valid stock-source record.

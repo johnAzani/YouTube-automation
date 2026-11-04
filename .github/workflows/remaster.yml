@@ -1,12 +1,12 @@
-name: Remaster documentary assets
+name: Remaster prayer channel assets
 
 on:
   workflow_dispatch:
     inputs:
       edition:
-        description: Which finished episodes to remaster and publish to Pages
+        description: Which prayer-channel sample assets to remaster and publish to Pages
         type: choice
-        options: [all, deepdives, shorts]
+        options: [all, prayer-video, prayer-short]
         default: all
         required: true
       use_free_stock:
@@ -48,15 +48,15 @@ jobs:
       - name: Render requested edition with clip-first free sourcing
         run: |
           set -euo pipefail
-          if [[ "${{ inputs.edition }}" == "all" || "${{ inputs.edition }}" == "deepdives" ]]; then
-            python tools/deep_dive.py enron
-            cp social/deep-dive-enron.mp4 docs/media/deep-dive-enron.mp4
-            cp output/deep-stock/enron/scene-sources.json docs/media/deep-dive-enron-sources.json
+          if [[ "${{ inputs.edition }}" == "all" || "${{ inputs.edition }}" == "prayer-video" ]]; then
+            python tools/deep_dive.py psalm91
+            cp social/deep-dive-psalm91.mp4 docs/media/deep-dive-psalm91.mp4
+            cp output/deep-stock/psalm91/scene-sources.json docs/media/deep-dive-psalm91-sources.json
           fi
-          if [[ "${{ inputs.edition }}" == "all" || "${{ inputs.edition }}" == "shorts" ]]; then
-            python tools/shorts.py short-enron
-            cp social/short-enron.mp4 docs/media/shorts-enron.mp4
-            cp output/short-stock/short-enron/scene-sources.json docs/media/shorts-enron-sources.json
+          if [[ "${{ inputs.edition }}" == "all" || "${{ inputs.edition }}" == "prayer-short" ]]; then
+            python tools/shorts.py short-psalm91
+            cp social/short-psalm91.mp4 docs/media/shorts-psalm91.mp4
+            cp output/short-stock/short-psalm91/scene-sources.json docs/media/shorts-psalm91-sources.json
           fi
       - name: Publish updated samples and source ledgers to GitHub Pages
         run: |
@@ -72,7 +72,7 @@ jobs:
           echo "Publishing to $GITHUB_REF_NAME"
           git config user.name "youtube-automation-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add docs/media/*.mp4 docs/media/*-sources.json
+          git add docs/media/deep-dive-psalm91.mp4 docs/media/shorts-psalm91.mp4 docs/media/deep-dive-psalm91-sources.json docs/media/shorts-psalm91-sources.json
           if ! git diff --cached --quiet; then
             git commit -m "chore(remaster): publish clip-first aspect-safe editions [skip ci]"
             git push origin "HEAD:$GITHUB_REF_NAME"

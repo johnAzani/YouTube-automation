@@ -1,17 +1,8 @@
 """Read `image-search/LICENSES.yml` and tell callers whether a still may be used.
 
-The authored Johnstown/Enron stills in `image-search/` are the fallback visual for every
-scene in `tools/deep_dive.py` and `tools/shorts.py` when a stock provider returns nothing.
-Until the ledger existed, both tools wrote the same fixed string into their credits file —
-*"pre-existing image-search still; source/license metadata unavailable in current ledger"* —
-which said the same thing about a public-domain 1889 Library of Congress photograph and
-about a rights-managed Getty frame. Ten of the 49 files turn out to carry embedded Getty
-Images rights metadata and three more an "All Rights Reserved" photographer copyright.
-
-This module makes the distinction available to the renderers and to `scripts/doctor.py`.
-It never blocks a render on its own: the authored deep dives are archived, out-of-niche
-demonstrations, and a hard refusal would break a working tool over a bookkeeping gap. What
-it does is make the credits file tell the truth and make the gap impossible to miss.
+Prayer-channel assets and retained renderer/licensing regression fixtures share the same
+per-file ledger. Production queues and release workflows are prayer-only; legacy fixtures
+exist to keep automation safety checks testable and are never approved for upload.
 
 Ledger maintenance lives in `scripts/licence_ledger.py` (``write`` regenerates, ``check``
 is what CI runs).

@@ -14,7 +14,7 @@ Upgrades over v3:
 4. Strict non-overlapping speech-synced hero beats + live word-by-word broadcast
    caption ribbon at lower-center that highlights every spoken word in real time.
 
-Run: .venv/bin/python tools/deep_dive.py [johnstown|enron]
+Run: .venv/bin/python tools/deep_dive.py psalm91
 """
 import os, sys, json, math, subprocess, shutil
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops

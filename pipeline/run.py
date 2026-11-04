@@ -115,14 +115,14 @@ def _mark_job_uploaded(path: Path, doc: ScriptDoc, video_id: str) -> Path:
     return dest
 
 
-def _validate_finance_niche(doc: ScriptDoc) -> None:
+def _validate_channel_niche(doc: ScriptDoc) -> None:
     """Keep every automated channel upload inside approved channel niches."""
     niche = str(doc.meta.get("niche", "")).strip().lower()
-    allowed = ("finance", "financial", "business", "markets", "economics", "faith", "prayer", "scripture", "devotional")
+    allowed = ("faith", "prayer", "scripture", "devotional")
     if not any(term in niche for term in allowed):
         raise RuntimeError(
             f"Refusing out-of-niche job {doc.id}: niche={niche or '(missing)'!r}. "
-            "This channel publishes finance, business, markets, or economics only."
+            "The Secret Place publishes faith, prayer, scripture, and devotional content only."
         )
 
 
@@ -188,7 +188,7 @@ def process(path: Path, dry_run: bool) -> dict:
 def _disabled_legacy_process(path: Path, dry_run: bool) -> dict:
     """Retained for migration only; never call from production."""
     doc = parse_script(path)
-    _validate_finance_niche(doc)
+    _validate_channel_niche(doc)
     _log(f"job {doc.id} «{doc.title}» format={doc.format} words={doc.word_count}")
 
     # ---- 1. originality gate ------------------------------------------

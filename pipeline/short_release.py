@@ -29,7 +29,7 @@ import yaml
 from .assemble import ffmpeg_bin
 from .config import CONFIG, CONTENT_DIR, OUTPUT_DIR, PUBLISHED_DIR, REPO_ROOT
 from .licences import load_ledger, uncleared_stills, unsafe_stills
-from .run import _open_release_ticket, _require_production_prerequisites
+from .run import _open_release_ticket, _require_production_prerequisites, _validate_channel_niche
 from .script_doc import Scene, ScriptDoc
 
 SHORTS_QUEUE_DIR = CONTENT_DIR / "shorts-queue"
@@ -869,6 +869,9 @@ def run_short_release(
             "message": f"Already published as {previous_video_id}",
         }
 
+    if not dry_run:
+        _validate_channel_niche(doc)
+
     _require_production_prerequisites(
         doc,
         dry_run,
@@ -1174,7 +1177,7 @@ def recent_short_published_within(
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Render, verify, and upload an authored YouTube Short")
-    parser.add_argument("--short", default="", help="Short edition key (e.g. short-enron)")
+    parser.add_argument("--short", default="", help="Short edition key (e.g. short-psalm91)")
     parser.add_argument("--next", action="store_true", help="Process next approved Short in content/shorts-queue/")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--skip-render", action="store_true")
@@ -1234,7 +1237,7 @@ def main(argv: list[str] | None = None) -> int:
                 print(f"::notice title=Short selected::`{short_key}` from "
                       f"{manifest_path.name if manifest_path else 'the built-in editions'}")
         elif not short_key:
-            short_key = "short-enron"
+            short_key = "short-psalm91"
 
         outcome = run_short_release(
             short_key=short_key,
