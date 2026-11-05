@@ -163,11 +163,17 @@ models, text is a verbatim transcript and style belongs in
 from every TTS request, moves style to `speech_metadata.style` /
 the interactions `speech_metadata` annotation, versions every cache
 key by the delivery recipe (`tts-v4-speech-metadata-style`), and bumps
-the Actions chunk-cache key. Both `oS7f32WDj_Y` and `R8mVvedhYVw` stay
-private and unpublished; delete them in Studio only after a corrected
-replacement is verified to begin with the prayer itself. Remaining owner actions: final watch in
-Studio, then publish manually (channel policy keeps uploads private);
-watermark + channel keywords via desktop Studio. Earlier: run #25's
+the Actions chunk-cache key. That fix shipped as `tts-v4` (PR #256) and
+is **proven on real audio**: corrected upload `_vp27ZYPYaY` from run
+`42010285242` (2026-11-05, 7:46) was owner-verified to begin with the
+prayer itself, made **public**, and both defective uploads were deleted
+in Studio. The run still concluded *failure* — a monitor snapshot
+(`d5a74af`, 47 seconds after PR #264 merged) resurrected the retired
+receipt, so the run uploaded and then could not write its own receipt;
+the repo receipt was reconciled with the live video ID afterwards, and
+`produce()` now fails fast (PR #267) when a published record already
+exists. Remaining owner actions: watermark + channel keywords via
+desktop Studio only. Earlier: run #25's
 two-scope token was fixed (three scopes saved in Data Access, token
 re-minted, secret replaced — run #27 got past the credential exchange,
 then hit `accessNotConfigured` until the API was enabled). Earlier:
