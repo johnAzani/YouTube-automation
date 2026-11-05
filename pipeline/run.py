@@ -126,9 +126,39 @@ def _validate_finance_niche(doc: ScriptDoc) -> None:
         )
 
 
+def resolve_job_path(job_arg: str) -> Path:
+    """Resolve a --job argument to a queue file.
+
+    Accepts a full path, a bare filename, or a bare job id / filename
+    prefix ("0036"). The Actions form once received "0036" verbatim, the
+    pipeline looked for a file literally named `content/queue/0036`, and
+    the run died in two minutes (Produce video #89) — an id is how a
+    human naturally names a job, so resolve it instead of demanding the
+    full filename. Ambiguous or unknown selectors fail with the list of
+    real files rather than a bare FileNotFoundError.
+    """
+    arg = (job_arg or "").strip()
+    if not arg:
+        raise ValueError("--job requires a path, filename, or job id")
+    candidate = Path(arg)
+    if candidate.is_file():
+        return candidate
+    in_queue = QUEUE_DIR / candidate.name
+    if in_queue.is_file():
+        return in_queue
+    matches = sorted(QUEUE_DIR.glob(f"{candidate.name}*.md"))
+    if len(matches) == 1:
+        return matches[0]
+    available = ", ".join(p.name for p in sorted(QUEUE_DIR.glob("*.md"))) or "(queue is empty)"
+    if matches:
+        names = ", ".join(p.name for p in matches)
+        raise ValueError(f"--job {arg!r} is ambiguous: {names}. Available: {available}")
+    raise ValueError(f"--job {arg!r} matches no file in content/queue/. Available: {available}")
+
+
 def select_jobs(all_flag: bool, job_path: str | None, next_flag: bool) -> list[Path]:
     if job_path:
-        return [Path(job_path)]
+        return [resolve_job_path(job_path)]
     from .channels import normalize_channel_id
 
     target_channel = normalize_channel_id(CONFIG.channel_id)
