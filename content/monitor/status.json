@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T20:07:32.670382+00:00",
+  "generated_at": "2026-11-05T20:09:55.490171+00:00",
   "healthy": true,
   "automations": [
     {
@@ -77,7 +77,7 @@
       "failures_5": 1,
       "effect": "writes content/queue/ or content/shorts-scripts/",
       "verdict": "OK",
-      "detail": "last success 9.2h ago",
+      "detail": "last success 9.3h ago",
       "severity": "ok"
     },
     {
@@ -143,9 +143,9 @@
       "crons": [
         "23 */3 * * *"
       ],
-      "last_run": "2026-11-05T20:06:55+00:00",
+      "last_run": "2026-11-05T20:09:14+00:00",
       "last_conclusion": null,
-      "last_success": "2026-11-05T18:50:08+00:00",
+      "last_success": "2026-11-05T20:06:55+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-05T15:12:39+00:00",
       "last_slot": "2026-11-05T18:23:00+00:00",
@@ -153,7 +153,7 @@
       "failures_5": 0,
       "effect": "this report",
       "verdict": "OK",
-      "detail": "last success 1.3h ago",
+      "detail": "last success 0.1h ago",
       "severity": "ok"
     },
     {
@@ -174,7 +174,7 @@
       "failures_5": 4,
       "effect": "publishes a video: content/published/ gains a receipt with a video id",
       "verdict": "UNTESTED FIX",
-      "detail": "failed 5.6h ago; edited 1.6h ago \u2014 needs one green run",
+      "detail": "failed 5.6h ago; edited 1.7h ago \u2014 needs one green run",
       "severity": "warning"
     },
     {
@@ -183,9 +183,9 @@
       "crons": [
         "*/15 * * * *"
       ],
-      "last_run": "2026-11-05T18:49:56+00:00",
+      "last_run": "2026-11-05T20:08:12+00:00",
       "last_conclusion": "success",
-      "last_success": "2026-11-05T18:49:56+00:00",
+      "last_success": "2026-11-05T20:08:12+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-02T19:19:32+00:00",
       "last_slot": null,
@@ -193,7 +193,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 1.3h ago",
+      "detail": "last success 0.0h ago",
       "severity": "ok"
     }
   ],
