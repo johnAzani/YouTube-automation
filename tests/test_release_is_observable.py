@@ -79,7 +79,9 @@ class TestTheReleaseCannotKillItself(unittest.TestCase):
 
         data = yaml.safe_load((ROOT / ".github" / "workflows" / "produce.yml")
                               .read_text(encoding="utf-8"))
-        return data["jobs"][next(iter(data["jobs"]))]
+        # Named, not positional: since 2026-11-05 a `plan` job (which picks
+        # the channels for this run) precedes the produce job.
+        return data["jobs"]["produce"]
 
     def test_the_job_cap_exceeds_the_sum_of_its_step_caps(self):
         job = self._job()

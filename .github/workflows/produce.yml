@@ -5,7 +5,8 @@ name: Produce video
 # production uploads only run on the official release cron schedule or manual dispatch.
 on:
   schedule:
-    # Daily release slots:
+    # Daily release slots for BOTH channels (the plan job below expands a
+    # scheduled run to secret-place + prayer2, produced sequentially):
     # 1. 06:14 UTC — Morning scripture devotional (07:14 WAT)
     # 2. 14:14 UTC — US afternoon / transatlantic priming (15:14 WAT / 10:14 EST)
     # 3. 19:14 UTC — Peak evening bedtime prayer sanctuary (20:14 WAT / 8:14pm local)
@@ -63,7 +64,36 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  plan:
+    # Which channels this run produces. A scheduled slot serves BOTH
+    # channels (owner decision, 2026-11-05: The Morning Altar runs on the
+    # same schedule and public/auto-publish terms as The Secret Place);
+    # a manual dispatch serves exactly the channel it was given; the
+    # repository_dispatch "publish-now" button stays Secret Place only.
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      channels: ${{ steps.plan.outputs.channels }}
+    steps:
+      - id: plan
+        run: |
+          case "${{ github.event_name }}" in
+            schedule)          channels='["secret-place","prayer2"]' ;;
+            workflow_dispatch) channels='["${{ inputs.channel }}"]' ;;
+            *)                 channels='["secret-place"]' ;;
+          esac
+          echo "channels=$channels" >> "$GITHUB_OUTPUT"
+          echo "producing for: $channels"
+
   produce:
+    needs: plan
+    # One channel at a time: both legs write content/ state to main, and
+    # the queue-state commit assumes it is the only producer running.
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        channel: ${{ fromJSON(needs.plan.outputs.channels) }}
     runs-on: ubuntu-latest     # public repo: 4-core/16GB, free & unlimited
     # Must exceed the sum of the step caps below, or the job kills itself before
     # any step reaches its own limit. It was 120 while the steps summed to 140:
@@ -73,26 +103,29 @@ jobs:
     timeout-minutes: 240
     env:
       DRY_RUN: ${{ (inputs.dry_run || false) && '1' || '0' }}
-      # Channel selector: schedule/repository_dispatch default to channel 1
-      # (secret-place). Manual runs may pick prayer2 (The Morning Altar),
-      # whose PRAYER2_* secrets come from its own GCP + Gemini projects.
-      CHANNEL_ID: ${{ inputs.channel || 'secret-place' }}
-      CHANNEL_NAME: ${{ inputs.channel == 'prayer2' && 'The Morning Altar' || 'The Secret Place' }}
-      CHANNEL_HANDLE: ${{ inputs.channel == 'prayer2' && '@TheMorningAltarDaily' || '@TheSecretPlace' }}
+      # Channel for this matrix leg (see the plan job): scheduled runs do
+      # both channels in sequence, manual runs do the selected one. Each
+      # channel's own PRAYER2_* / unprefixed secrets are mapped onto the
+      # canonical names below, so credentials are never mixed.
+      CHANNEL_ID: ${{ matrix.channel || 'secret-place' }}
+      CHANNEL_NAME: ${{ matrix.channel == 'prayer2' && 'The Morning Altar' || 'The Secret Place' }}
+      CHANNEL_HANDLE: ${{ matrix.channel == 'prayer2' && '@TheMorningAltarDaily' || '@TheSecretPlace' }}
       PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
       PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
-      YOUTUBE_CLIENT_ID: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID }}
-      YOUTUBE_CLIENT_SECRET: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET }}
-      YOUTUBE_REFRESH_TOKEN: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN }}
-      YOUTUBE_PLAYLIST_ID: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_PLAYLIST_ID || secrets.YOUTUBE_PLAYLIST_ID }}
-      YOUTUBE_EXPECTED_CHANNEL_ID: ${{ inputs.channel == 'prayer2' && (vars.PRAYER2_YOUTUBE_CHANNEL_ID || secrets.PRAYER2_YOUTUBE_CHANNEL_ID) || (vars.YOUTUBE_CHANNEL_ID || secrets.YOUTUBE_CHANNEL_ID) }}
-      AUTO_PUBLISH: ${{ inputs.channel == 'prayer2' && 'false' || (secrets.AUTO_PUBLISH || 'true') }}
+      YOUTUBE_CLIENT_ID: ${{ matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID }}
+      YOUTUBE_CLIENT_SECRET: ${{ matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET }}
+      YOUTUBE_REFRESH_TOKEN: ${{ matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN }}
+      YOUTUBE_PLAYLIST_ID: ${{ matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_PLAYLIST_ID || secrets.YOUTUBE_PLAYLIST_ID }}
+      YOUTUBE_EXPECTED_CHANNEL_ID: ${{ matrix.channel == 'prayer2' && (vars.PRAYER2_YOUTUBE_CHANNEL_ID || secrets.PRAYER2_YOUTUBE_CHANNEL_ID) || (vars.YOUTUBE_CHANNEL_ID || secrets.YOUTUBE_CHANNEL_ID) }}
+      # Both channels publish on the same terms (owner decision 2026-11-05):
+      # The Morning Altar is public + auto-publish, like The Secret Place.
+      AUTO_PUBLISH: ${{ secrets.AUTO_PUBLISH || 'true' }}
       # Deliberate replacement runs only (e.g. re-rendered narration). Surfaced
       # as an explicit tick-box so a replacement is a conscious, logged choice —
       # never a repo-wide secret silently left on. Default stays shielded.
       ALLOW_DUPLICATE_UPLOADS: ${{ (inputs.allow_duplicate || false) && 'true' || 'false' }}
-      DEFAULT_PRIVACY: ${{ inputs.channel == 'prayer2' && 'private' || 'public' }}
-      GEMINI_API_KEY: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_GEMINI_API_KEY || secrets.GEMINI_API_KEY }}
+      DEFAULT_PRIVACY: public
+      GEMINI_API_KEY: ${{ matrix.channel == 'prayer2' && secrets.PRAYER2_GEMINI_API_KEY || secrets.GEMINI_API_KEY }}
       # pipeline.run shells out to `gh issue create` for the release ticket
       # (SETUP.md §6.4). gh needs a token: without GH_TOKEN the call fails
       # unauthenticated and the QC issue would silently never appear.
@@ -131,6 +164,32 @@ jobs:
           fi
           python scripts/check_prayer_alignment.py --model output/alignment-model
 
+      - name: Check the Morning Altar queue
+        # The Morning Altar has no brain supply pass yet: its scripts are
+        # human-queued. An empty Morning Altar queue must idle this leg
+        # with a notice, not fail the whole slot — The Secret Place treats
+        # an empty queue as a fault precisely because its brain guarantees
+        # supply, and that guarantee does not exist for prayer2 yet.
+        id: channel_queue
+        if: ${{ matrix.channel == 'prayer2' && inputs.job == '' && inputs.short == '' }}
+        run: |
+          python - <<'PYQUEUE'
+          import os
+
+          from pipeline.run import select_jobs
+
+          jobs = select_jobs(False, None, True)
+          has_job = bool(jobs)
+          print(f"Morning Altar next publishable job: {jobs[0] if has_job else 'none'}")
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
+              fh.write(f"has_job={str(has_job).lower()}\n")
+          if not has_job:
+              print("::notice title=Morning Altar queue empty::No approved "
+                    "Morning Altar script is ready, so this leg uploads "
+                    "nothing. Add an approved `channel: prayer2` script to "
+                    "content/queue/ and the next slot will publish it.")
+          PYQUEUE
+
       - name: Restore stock-asset cache
         uses: actions/cache@v4
         with:
@@ -168,7 +227,7 @@ jobs:
         continue-on-error: true
         # Queue repair authors Secret Place supply; Morning Altar scripts are
         # human-queued with `channel: prayer2` until it gets its own brain pass.
-        if: ${{ inputs.short == '' && inputs.job == '' && inputs.channel != 'prayer2' }}
+        if: ${{ inputs.short == '' && inputs.job == '' && matrix.channel != 'prayer2' }}
         env:
           GITHUB_ACTIONS: "true"
         run: |
@@ -184,7 +243,7 @@ jobs:
         timeout-minutes: 30
         # Authored Shorts are Secret Place editions; skipped for prayer2 until
         # Morning Altar Shorts get their own queue (wrong-channel safety).
-        if: ${{ inputs.job == '' && inputs.channel != 'prayer2' }}
+        if: ${{ inputs.job == '' && matrix.channel != 'prayer2' }}
         run: |
           set -o pipefail
           if [ -n "${{ inputs.short }}" ]; then
@@ -235,7 +294,7 @@ jobs:
         # a slow runner, and the per-stage progress lines now say where the time
         # went if it ever comes close.
         timeout-minutes: 170
-        if: ${{ inputs.short == '' }}
+        if: ${{ inputs.short == '' && (matrix.channel != 'prayer2' || inputs.job != '' || steps.channel_queue.outputs.has_job == 'true') }}
         env:
           # An append-only trail of what this step was doing, written as it runs.
           # The step summary needs a GitHub sign-in to read and the log archive is
@@ -277,6 +336,11 @@ jobs:
         run: python -m scripts.release_report --close-resolved || true
 
       - name: Say where the release died
+        # Scheduling note for future editors: a scheduled run is one workflow
+        # run with two sequential channel legs, and the Morning Altar leg is
+        # allowed to idle green on an empty queue (see the queue check above).
+        # Do not "fix" that by failing the leg — a false failure here would
+        # page the owner three times a day for a supply gap, not a breakage.
         # `gh run view --log-failed` returns "failed to get run log … EOF" for
         # these runs and the run page is behind a sign-in, so three consecutive
         # 90-minute timeouts were undiagnosable. The trail written during the run

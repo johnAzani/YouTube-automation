@@ -36,9 +36,15 @@ pipeline already pauses and resumes at the midnight-Pacific reset
 | Brand kit + launch checklist | `docs/MORNING_ALTAR_BRANDING.md` |
 | First Morning Altar script | `content/published/0036-psalm-5-morning-prayer-begin-your-day.md` (uploaded `_vp27ZYPYaY`, public; the corrected-video history is in the §2e status note) |
 
-Scheduled (cron) runs always target `secret-place`. `prayer2` runs are
-manual-dispatch only for now, and for `prayer2` the Produce workflow skips
-the Secret Place queue-repair and authored-Shorts steps.
+Scheduled (cron) Produce runs serve **both** channels (owner decision,
+2026-11-05): each slot runs The Secret Place and then The Morning Altar,
+sequentially, and `prayer2` uploads are **public with auto-publish**, on the
+same terms as `secret-place`. A manual Produce dispatch still produces only
+the channel selected. For `prayer2` the Produce workflow skips the Secret
+Place queue-repair and authored-Shorts steps, and because Morning Altar
+scripts are human-queued (no brain supply yet), a scheduled `prayer2` leg
+with no approved `channel: prayer2` script in `content/queue/` idles with a
+"Morning Altar queue empty" notice instead of failing the slot.
 
 ## 2. What only you can do (your Google account — ~30 minutes)
 
@@ -213,13 +219,20 @@ Actions minutes (public repo), ffmpeg, stock sources.
    `prayer2` run will skip (or, for an explicit `--job`, refuse) them.
 2. Actions → **Produce video** → Run workflow → **channel: prayer2**,
    `dry_run` ticked (render-only rehearsal) → check the artifact.
-3. Run again with `dry_run` unticked. The upload lands **private** (new
-   project, unaudited). Open the release ticket / Studio and publish
-   manually, exactly as Channel 1 started.
+3. Run again with `dry_run` unticked, or simply queue an approved script:
+   since 2026-11-05 the scheduled slots (07:14 / 15:14 / 20:14 Lagos)
+   produce The Morning Altar right after The Secret Place, uploading
+   **public with auto-publish**. Note YouTube can still clamp uploads from
+   an unaudited API project to private server-side; check the release
+   ticket's recorded privacy after the first scheduled upload. Keep the
+   Morning Altar queue stocked by hand — until it has its own supply pass,
+   an empty queue means the slot idles (watch for the "Morning Altar queue
+   empty" notice) rather than failing.
 4. Metrics / Comments / Set-thumbnail also accept the same `channel`
    selector for manual runs. Community, growth-autopilot, monitor and the
    brain still operate on Channel 1 only until Morning Altar has its own
-   data history.
+   data history; the scheduler supervisor's dropped-slot recovery does
+   dispatch both Produce channels.
 
 ## 4. Adding a third channel later
 
