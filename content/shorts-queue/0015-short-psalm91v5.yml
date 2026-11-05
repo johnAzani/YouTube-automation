@@ -1,7 +1,7 @@
 short: short-psalm91v5
 companion_longform_id: '0015'
 scripture: Psalm 91:5-6
-status: approved
+status: quota_paused
 renderer_ready: true
 authored_by_brain: true
 privacy: public
@@ -9,3 +9,5 @@ replace: false
 target_window_utc: '14:14'
 notes: "Companion Short for Psalm 91:5-6 Night Prayer | Deliverance From Terror by\
   \ Night \u2014 spec authored by the brain (107 narration words)"
+quota_reset_utc: '2026-11-06T08:00:00+00:00'
+pause_reason: gemini_api_daily_quota_exhausted
