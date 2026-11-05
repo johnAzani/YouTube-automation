@@ -2,7 +2,7 @@
 id: '0037'
 title: "Psalm 143:8 Morning Prayer | The Morning Altar"
 slug: psalm-143-8-morning-prayer-hear-thy-lovingkindness
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -86,6 +86,11 @@ originality:
 seo_hook: "Pray this Psalm 143:8 KJV morning prayer at sunrise and ask God to show you the way you should walk today."
 category_id: '22'
 approved_by: brain
+published_on: "2026-11-05"
+published_at: "2026-11-05T21:51:45Z"
+youtube_video_id: "oVy7uG5H1RU"
+thumbnail_revision: "ctr-v3-cinema"
+metadata_revision: "selar-seo-v1"
 ---
 
 ## Scene 1 — Cause Me to Hear Thy Lovingkindness in the Morning (Psalm 143:8)
