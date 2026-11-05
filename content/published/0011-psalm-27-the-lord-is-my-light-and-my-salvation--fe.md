@@ -2,7 +2,7 @@
 id: '0011'
 title: Psalm 27 Night Prayer for Sleep & Peace | Fear No Evil Tonight
 slug: psalm-27-the-lord-is-my-light-and-my-salvation--fe
-status: approved
+status: published
 privacy: private
 format: longform
 niche: faith and prayer
@@ -100,6 +100,9 @@ seo_hook: Pray this Psalm 27 KJV night prayer before sleep for deep peace, freed
 category_id: '22'
 thumbnail_revision: "ctr-v3-cinema"
 metadata_revision: "selar-seo-v1"
+published_on: "2026-11-05"
+published_at: "2026-11-05T13:41:35Z"
+youtube_video_id: "BFlkzRVMf8o"
 ---
 
 ## Scene 1 — My Light and My Salvation (Verse 1)
