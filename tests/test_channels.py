@@ -186,14 +186,18 @@ if __name__ == "__main__":
         self.assertIn("ALLOW_DUPLICATE_UPLOADS: ${{ (inputs.allow_duplicate || false)",
                       text)
 
-    def test_job_0036_is_requeued_after_defective_first_upload(self):
+    def test_job_0036_is_published_with_the_corrected_tts_v4_upload(self):
+        # The corrected replacement (tts-v4) was uploaded by run 42010285242
+        # on 2026-11-05 and is live and public on The Morning Altar. The run
+        # still concluded failure because a monitor snapshot had resurrected
+        # the retired receipt, so the queue file survived on main; reconciled
+        # here with the owner-supplied video id (_vp27ZYPYaY).
         queue_job = ROOT / "content" / "queue" / "0036-psalm-5-morning-prayer-begin-your-day.md"
         published = ROOT / "content" / "published" / "0036-psalm-5-morning-prayer-begin-your-day.md"
-        self.assertTrue(queue_job.is_file())
-        self.assertFalse(published.exists(),
-                         "the defective upload's receipt was retired so the "
-                         "replacement run can write a fresh one")
-        doc = parse_script(queue_job)
-        self.assertEqual(doc.status, "approved")
+        self.assertFalse(queue_job.exists())
+        self.assertTrue(published.is_file())
+        doc = parse_script(published)
+        self.assertEqual(doc.status, "published")
         self.assertEqual(doc.channel, "prayer2")
-        self.assertNotIn("youtube_video_id", doc.meta)
+        self.assertEqual(doc.meta.get("youtube_video_id"), "_vp27ZYPYaY")
+        self.assertEqual(doc.meta.get("published_on"), "2026-11-05")
