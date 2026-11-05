@@ -17,7 +17,6 @@ Secret naming convention (GitHub Actions secrets):
       PRAYER2_YOUTUBE_REFRESH_TOKEN
       PRAYER2_YOUTUBE_PLAYLIST_ID      (optional)
       PRAYER2_GEMINI_API_KEY
-      PRAYER2_AUTO_PUBLISH             (optional; prayer2 stays private)
 
 Workflows map the selected channel's secrets onto the canonical env names
 (``YOUTUBE_CLIENT_ID`` etc.) before any pipeline code runs, so the pipeline
@@ -72,10 +71,13 @@ CHANNELS: dict[str, ChannelProfile] = {
         display_name="The Morning Altar",
         handle="@TheMorningAltarDaily",
         secret_prefix="PRAYER2_",
-        # New GCP projects are unaudited, so API uploads are private-locked
-        # until the compliance audit passes. Private drafts by design.
-        default_privacy="private",
-        auto_publish=False,
+        # Owner decision, 2026-11-05: The Morning Altar publishes on the
+        # same terms as The Secret Place — scheduled Produce runs include
+        # it and uploads are public with auto-publish. YouTube may still
+        # clamp an upload from an unaudited API project to private; the
+        # pipeline records the privacy YouTube actually returns.
+        default_privacy="public",
+        auto_publish=True,
         include_sanctuary_links=False,
     ),
 }

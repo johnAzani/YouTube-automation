@@ -506,7 +506,9 @@ class TestARepairCannotEatARelease(unittest.TestCase):
         return yaml.safe_load(path.read_text(encoding="utf-8"))
 
     def _steps(self):
-        return self._wf()["jobs"][next(iter(self._wf()["jobs"]))]["steps"]
+        # Named, not positional: since 2026-11-05 a `plan` job (which picks
+        # the channels for this run) precedes the produce job.
+        return self._wf()["jobs"]["produce"]["steps"]
 
     def test_recording_already_live_jobs_has_its_own_step(self):
         names = [s.get("name", "") for s in self._steps()]

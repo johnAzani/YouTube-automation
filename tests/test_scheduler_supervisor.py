@@ -221,6 +221,51 @@ class TestWorkflowFile(unittest.TestCase):
         text = (sup.ROOT / ".github/workflows/scheduler-supervisor.yml").read_text()
         self.assertIn("actions: write", text)
 
+    def test_produce_recovery_dispatches_both_channels(self):
+        """A dropped Produce slot now costs BOTH channels a video.
+
+        Since 2026-11-05 a scheduled Produce run produces secret-place and
+        prayer2, so the supervisor's recovery dispatch must fire one run
+        per channel — a bare dispatch would silently recover only The
+        Secret Place.
+        """
+        calls = []
+
+        class _Proc:
+            returncode = 0
+            stdout = ""
+            stderr = ""
+
+        def fake_run(cmd, **_kwargs):
+            calls.append(cmd)
+            return _Proc()
+
+        with mock.patch.object(sup.subprocess, "run", side_effect=fake_run):
+            ok, _msg = sup.dispatch("produce.yml")
+        self.assertTrue(ok)
+        self.assertEqual(
+            calls,
+            [["gh", "workflow", "run", "produce.yml", "-f", "channel=secret-place"],
+             ["gh", "workflow", "run", "produce.yml", "-f", "channel=prayer2"]],
+        )
+
+    def test_non_produce_dispatch_is_unchanged(self):
+        calls = []
+
+        class _Proc:
+            returncode = 0
+            stdout = ""
+            stderr = ""
+
+        def fake_run(cmd, **_kwargs):
+            calls.append(cmd)
+            return _Proc()
+
+        with mock.patch.object(sup.subprocess, "run", side_effect=fake_run):
+            ok, _msg = sup.dispatch("gemini_brain.yml")
+        self.assertTrue(ok)
+        self.assertEqual(calls, [["gh", "workflow", "run", "gemini_brain.yml"]])
+
 
 class TestAWedgedRunIsNotAllowedToHoldTheLock(unittest.TestCase):
     """On 2 November a produce run sat in_progress 2h25m past its 120-minute cap.

@@ -52,8 +52,13 @@ class ChannelRegistryTests(unittest.TestCase):
         prayer2 = get_channel("prayer2")
         self.assertEqual(prayer2.display_name, "The Morning Altar")
         self.assertEqual(prayer2.secret_prefix, "PRAYER2_")
-        self.assertEqual(prayer2.default_privacy, "private")
-        self.assertFalse(prayer2.auto_publish)
+        # Owner decision 2026-11-05: The Morning Altar publishes on the
+        # same terms as The Secret Place — public, auto-published.
+        self.assertEqual(prayer2.default_privacy, "public")
+        self.assertTrue(prayer2.auto_publish)
+        secret_place = get_channel("secret-place")
+        self.assertEqual(secret_place.default_privacy, prayer2.default_privacy)
+        self.assertEqual(secret_place.auto_publish, prayer2.auto_publish)
         self.assertEqual(
             prayer2.secret_names()["refresh_token"], "PRAYER2_YOUTUBE_REFRESH_TOKEN"
         )
@@ -169,6 +174,41 @@ class WorkflowSelectorTests(unittest.TestCase):
             "PRAYER2_GEMINI_API_KEY",
         ):
             self.assertIn(f"secrets.{name}", text)
+
+    def test_scheduled_produce_runs_cover_both_channels(self):
+        """A cron slot must produce Morning Altar videos too (2026-11-05).
+
+        The plan job expands a schedule event to both channels and the
+        produce job runs them as a sequential matrix; each leg maps only
+        its own channel's secrets, and prayer2 is no longer forced private.
+        """
+        text = (ROOT / ".github" / "workflows" / "produce.yml").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn('schedule)          channels=\'["secret-place","prayer2"]\'', text)
+        self.assertIn("matrix:", text)
+        self.assertIn("channel: ${{ fromJSON(needs.plan.outputs.channels) }}", text)
+        self.assertIn("max-parallel: 1", text)
+        self.assertIn("CHANNEL_ID: ${{ matrix.channel || 'secret-place' }}", text)
+        self.assertIn("matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID", text)
+        self.assertIn("matrix.channel == 'prayer2' && secrets.PRAYER2_GEMINI_API_KEY", text)
+        self.assertNotIn("matrix.channel == 'prayer2' && 'false'", text)
+        self.assertNotIn("matrix.channel == 'prayer2' && 'private'", text)
+        self.assertIn("DEFAULT_PRIVACY: public", text)
+
+    def test_empty_morning_altar_queue_idles_instead_of_failing(self):
+        """No approved prayer2 script queued => the leg uploads nothing.
+
+        Morning Altar scripts are human-queued (no brain supply yet), so an
+        empty queue is a supply gap, not a breakage: the render step is
+        gated on the queue check while Secret Place keeps its hard fault.
+        """
+        text = (ROOT / ".github" / "workflows" / "produce.yml").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("id: channel_queue", text)
+        self.assertIn("Morning Altar queue empty", text)
+        self.assertIn("steps.channel_queue.outputs.has_job == 'true'", text)
 
 
 if __name__ == "__main__":

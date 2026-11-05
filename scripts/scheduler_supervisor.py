@@ -198,6 +198,34 @@ def _latest_runs(runs: list[dict]) -> dict[str, tuple[datetime, str | None]]:
 
 
 def dispatch(workflow: str) -> tuple[bool, str]:
+    """Dispatch a workflow, returning (ok, message).
+
+    ``produce.yml`` is special: since 2026-11-05 a scheduled slot serves
+    BOTH channels, so recovering a dropped slot means one dispatch per
+    channel. A bare ``gh workflow run produce.yml`` would recover only the
+    default Secret Place leg and silently leave The Morning Altar behind.
+    The two runs share the workflow's content-state concurrency group, so
+    they execute sequentially, never in parallel.
+    """
+    if workflow == "produce.yml":
+        messages: list[str] = []
+        dispatched: list[str] = []
+        for channel in ("secret-place", "prayer2"):
+            proc = subprocess.run(
+                ["gh", "workflow", "run", workflow, "-f", f"channel={channel}"],
+                capture_output=True, text=True, cwd=ROOT, timeout=120,
+            )
+            if proc.returncode == 0:
+                dispatched.append(channel)
+            else:
+                messages.append(
+                    f"{channel}: "
+                    + (proc.stderr or proc.stdout or "gh workflow run failed").strip()[:160]
+                )
+        if len(dispatched) == 2:
+            return True, "dispatched secret-place + prayer2"
+        detail = "; ".join(messages) or "no channel dispatched"
+        return False, f"dispatched {dispatched or 'none'}; {detail}"[:200]
     proc = subprocess.run(["gh", "workflow", "run", workflow], capture_output=True,
                           text=True, cwd=ROOT, timeout=120)
     if proc.returncode == 0:
