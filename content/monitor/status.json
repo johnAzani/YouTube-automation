@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T20:09:55.490171+00:00",
+  "generated_at": "2026-11-05T21:31:38.230464+00:00",
   "healthy": true,
   "automations": [
     {
@@ -13,12 +13,12 @@
       "last_success": "2026-11-05T18:39:03+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-05T18:29:50+00:00",
-      "last_slot": "2026-11-04T20:14:00+00:00",
+      "last_slot": "2026-11-05T20:14:00+00:00",
       "missed_slots": 0,
       "failures_5": 0,
       "effect": "reports and files stalls",
       "verdict": "OK",
-      "detail": "last success 1.5h ago",
+      "detail": "last success 2.9h ago",
       "severity": "ok"
     },
     {
@@ -29,9 +29,9 @@
         "14 15 * * *",
         "14 19 * * *"
       ],
-      "last_run": "2026-11-05T15:25:03+00:00",
+      "last_run": "2026-11-05T21:28:35+00:00",
       "last_conclusion": "success",
-      "last_success": "2026-11-05T15:25:03+00:00",
+      "last_success": "2026-11-05T21:28:35+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-04T14:13:24+00:00",
       "last_slot": "2026-11-05T19:14:00+00:00",
@@ -39,7 +39,7 @@
       "failures_5": 0,
       "effect": "posts replies and records them in content/comments/replied.json",
       "verdict": "OK",
-      "detail": "last success 4.7h ago",
+      "detail": "last success 0.1h ago",
       "severity": "ok"
     },
     {
@@ -77,7 +77,7 @@
       "failures_5": 1,
       "effect": "writes content/queue/ or content/shorts-scripts/",
       "verdict": "OK",
-      "detail": "last success 9.3h ago",
+      "detail": "last success 10.6h ago",
       "severity": "ok"
     },
     {
@@ -96,7 +96,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 10.7h ago",
+      "detail": "last success 12.1h ago",
       "severity": "ok"
     },
     {
@@ -115,7 +115,7 @@
       "failures_5": 0,
       "effect": "re-arms scheduled workflows",
       "verdict": "OK",
-      "detail": "last success 80.7h ago",
+      "detail": "last success 82.1h ago",
       "severity": "ok"
     },
     {
@@ -134,7 +134,7 @@
       "failures_5": 0,
       "effect": "writes content/metrics.csv and opens a snapshot issue",
       "verdict": "OK",
-      "detail": "last success 5.5h ago",
+      "detail": "last success 6.9h ago",
       "severity": "ok"
     },
     {
@@ -143,17 +143,17 @@
       "crons": [
         "23 */3 * * *"
       ],
-      "last_run": "2026-11-05T20:09:14+00:00",
+      "last_run": "2026-11-05T21:30:44+00:00",
       "last_conclusion": null,
-      "last_success": "2026-11-05T20:06:55+00:00",
+      "last_success": "2026-11-05T20:09:14+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-05T15:12:39+00:00",
-      "last_slot": "2026-11-05T18:23:00+00:00",
+      "last_slot": "2026-11-05T21:23:00+00:00",
       "missed_slots": 0,
       "failures_5": 0,
       "effect": "this report",
       "verdict": "OK",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 1.4h ago",
       "severity": "ok"
     },
     {
@@ -164,17 +164,17 @@
         "14 14 * * *",
         "14 19 * * *"
       ],
-      "last_run": "2026-11-05T14:34:29+00:00",
-      "last_conclusion": "failure",
+      "last_run": "2026-11-05T21:04:20+00:00",
+      "last_conclusion": null,
       "last_success": "2026-11-05T13:14:17+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-05T18:29:50+00:00",
       "last_slot": "2026-11-05T19:14:00+00:00",
       "missed_slots": 0,
-      "failures_5": 4,
+      "failures_5": 3,
       "effect": "publishes a video: content/published/ gains a receipt with a video id",
-      "verdict": "UNTESTED FIX",
-      "detail": "failed 5.6h ago; edited 1.7h ago \u2014 needs one green run",
+      "verdict": "FLAKY",
+      "detail": "3 of its last 5 runs failed",
       "severity": "warning"
     },
     {
@@ -183,9 +183,9 @@
       "crons": [
         "*/15 * * * *"
       ],
-      "last_run": "2026-11-05T20:08:12+00:00",
+      "last_run": "2026-11-05T21:29:20+00:00",
       "last_conclusion": "success",
-      "last_success": "2026-11-05T20:08:12+00:00",
+      "last_success": "2026-11-05T21:29:20+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-02T19:19:32+00:00",
       "last_slot": null,
@@ -200,12 +200,12 @@
   "outcomes": [
     {
       "outcome": "last upload",
-      "detail": "2026-11-05 (6h ago)",
+      "detail": "2026-11-05 (8h ago)",
       "severity": "ok"
     },
     {
       "outcome": "publishable runway",
-      "detail": "23 of 23 approved script(s) over the 850-word floor (28 in queue)",
+      "detail": "22 of 22 approved script(s) over the 850-word floor (28 in queue)",
       "severity": "ok"
     },
     {
