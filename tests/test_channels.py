@@ -186,27 +186,23 @@ if __name__ == "__main__":
         self.assertIn("ALLOW_DUPLICATE_UPLOADS: ${{ (inputs.allow_duplicate || false)",
                       text)
 
-    def test_job_0011_receipt_is_retired_for_the_corrected_replacement(self):
-        # The tts-v2 upload 7ll7w1hYf7o narrated instructions aloud; the
-        # owner kept it unlisted on The Secret Place. The queue file is
-        # approved again with privacy private so the tts-v4 replacement
-        # uploads privately for owner review, and the receipt that pinned
-        # 7ll7w1hYf7o is now retired so the explicit --job 0011 produce
-        # run can render and write a fresh receipt. While the receipt is
-        # absent, automated --next selection may pick this job up like
-        # any other approved script — dispatch the replacement run
-        # immediately after this retires.
+    def test_job_0011_is_published_with_the_corrected_tts_v4_upload(self):
+        # The corrected replacement (tts-v4) was uploaded by run 42033981791
+        # on 2026-11-05 and is live on The Secret Place. Unlike job 0036's
+        # run, this one wrote its own receipt: the queue file was consumed
+        # and the published record names the new video (BFlkzRVMf8o). The
+        # upload landed private (script privacy) for owner review; the
+        # defective 7ll7w1hYf7o stays unlisted until the owner deletes it.
         queue_job = ROOT / "content" / "queue" / "0011-psalm-27-the-lord-is-my-light-and-my-salvation--fe.md"
         published = ROOT / "content" / "published" / "0011-psalm-27-the-lord-is-my-light-and-my-salvation--fe.md"
-        self.assertTrue(queue_job.is_file())
-        self.assertFalse(published.exists(),
-                         "the defective upload's receipt is retired so the "
-                         "replacement run can write a fresh one")
-        queue_doc = parse_script(queue_job)
-        self.assertEqual(queue_doc.status, "approved")
-        self.assertEqual(queue_doc.channel, "secret-place")
-        self.assertEqual(queue_doc.meta.get("privacy"), "private")
-        self.assertNotIn("youtube_video_id", queue_doc.meta)
+        self.assertFalse(queue_job.exists())
+        self.assertTrue(published.is_file())
+        doc = parse_script(published)
+        self.assertEqual(doc.status, "published")
+        self.assertEqual(doc.channel, "secret-place")
+        self.assertEqual(doc.meta.get("privacy"), "private")
+        self.assertEqual(doc.meta.get("youtube_video_id"), "BFlkzRVMf8o")
+        self.assertEqual(doc.meta.get("published_on"), "2026-11-05")
 
     def test_job_0036_is_published_with_the_corrected_tts_v4_upload(self):
         # The corrected replacement (tts-v4) was uploaded by run 42010285242
