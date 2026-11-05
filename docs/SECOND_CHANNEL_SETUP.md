@@ -34,7 +34,7 @@ pipeline already pauses and resumes at the midnight-Pacific reset
 | Channel-aware descriptions (Selar/store links stay on Channel 1 only) | `pipeline/metadata.py`, `pipeline/pinned_comments.py`, `pipeline/localize_metadata.py` |
 | Channel selector (`secret-place` / `prayer2`) | Produce, Metrics, Comments, Set-thumbnail workflows |
 | Brand kit + launch checklist | `docs/MORNING_ALTAR_BRANDING.md` |
-| First (draft) Morning Altar script | `content/queue/0036-psalm-5-morning-prayer-begin-your-day.md` |
+| First Morning Altar script | `content/published/0036-psalm-5-morning-prayer-begin-your-day.md` (uploaded `_vp27ZYPYaY`, public; the corrected-video history is in the §2e status note) |
 
 Scheduled (cron) runs always target `secret-place`. `prayer2` runs are
 manual-dispatch only for now, and for `prayer2` the Produce workflow skips
@@ -172,8 +172,12 @@ in Studio. The run still concluded *failure* — a monitor snapshot
 receipt, so the run uploaded and then could not write its own receipt;
 the repo receipt was reconciled with the live video ID afterwards, and
 `produce()` now fails fast (PR #267) when a published record already
-exists. Remaining owner actions: watermark + channel keywords via
-desktop Studio only. Earlier: run #25's
+exists. The same tts-v4 was then re-proven on channel 1: the corrected
+Psalm 27 replacement `BFlkzRVMf8o` (run `42033981791`, 2026-11-05)
+uploaded **private** to The Secret Place, wrote its own receipt
+cleanly, and was owner-verified — publish it in Studio and delete
+`7ll7w1hYf7o` there. Remaining owner actions: watermark + channel
+keywords via desktop Studio only. Earlier: run #25's
 two-scope token was fixed (three scopes saved in Data Access, token
 re-minted, secret replaced — run #27 got past the credential exchange,
 then hit `accessNotConfigured` until the API was enabled). Earlier:
