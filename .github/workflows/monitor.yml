@@ -113,6 +113,13 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git fetch --quiet origin main
           git reset --mixed origin/main
+          # A run that checked out before a receipt was retired on main still
+          # holds the deleted file in its workspace; reset --mixed leaves it
+          # untracked and the `git add` below would resurrect it (this is how
+          # the retired R8mVvedhYVw receipt came back at b7fbfde, 2026-11-05).
+          # Drop published receipts that no longer exist on main; genuine
+          # stamp edits touch files that do exist there, so they survive.
+          git clean -f content/published/
           if [ -f content/monitor/status.json ]; then
             git add content/monitor/status.json
           fi
