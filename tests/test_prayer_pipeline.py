@@ -173,6 +173,27 @@ class PrayerPipelineTests(unittest.TestCase):
                     produce(root/'job.md', False, root/'missing-model')
                 tts.assert_not_called()
 
+    def test_existing_published_record_fails_before_tts(self):
+        """A published record for the same job file must stop the run before
+        any synthesis: on 5 November 2026 job 0036 rendered 52 minutes and
+        uploaded, then failed when the receipt move refused to overwrite a
+        stale record resurrected by a monitor snapshot."""
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            doc = ScriptDoc(root/'job.md', {'id': 'test', 'status': 'approved', 'format': 'longform', 'niche': 'prayer', 'voice': 'Charon'}, [Scene(1, 'One', 'hello ' * 900)])
+            published_dir = root / 'published'
+            published_dir.mkdir()
+            (published_dir / 'job.md').write_text('status: published')
+            with patch('pipeline.prayer_pipeline.parse_script', return_value=doc), \
+                 patch('pipeline.prayer_pipeline.enforce'), \
+                 patch('pipeline.run._require_production_prerequisites'), \
+                 patch('pipeline.prayer_pipeline.PUBLISHED_DIR', published_dir), \
+                 patch('pipeline.prayer_pipeline.get_gemini_api_key', return_value='fake'), \
+                 patch('pipeline.prayer_pipeline.synthesize_gemini_audio') as tts:
+                with self.assertRaisesRegex(RuntimeError, 'already exists'):
+                    produce(root/'job.md', False, root/'model')
+            tts.assert_not_called()
+
     def test_wrong_voice_is_rejected_before_tts(self):
         doc = ScriptDoc(Path('job.md'), {'status':'approved','format':'longform','niche':'prayer','voice':'Other'}, [Scene(1,'One','hello')])
         with patch('pipeline.prayer_pipeline.parse_script', return_value=doc), \

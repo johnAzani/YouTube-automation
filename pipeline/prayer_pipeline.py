@@ -4,7 +4,7 @@ import importlib.util
 import json
 from pathlib import Path
 
-from .config import CONFIG, OUTPUT_DIR
+from .config import CONFIG, OUTPUT_DIR, PUBLISHED_DIR
 from .script_doc import MIN_LONGFORM_WORDS, MIN_NARRATION_SECONDS, parse_script
 from .originality import enforce
 from .progress import Heartbeat, emit, stage
@@ -154,6 +154,23 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
     _require_production_prerequisites(doc, dry_run, CONFIG.youtube_refresh_token,
                                       CONFIG.youtube_client_id, CONFIG.youtube_client_secret)
     if not dry_run:
+        # A published record for this exact job file means the video was
+        # already released (or a stale record is impersonating one). Rendering
+        # anyway uploads a duplicate and only fails afterwards, when the
+        # receipt move refuses to overwrite the record — on 5 November 2026
+        # job 0036 rendered for 52 minutes and uploaded before discovering a
+        # stale record that a monitor snapshot had resurrected after its
+        # retirement was merged. Fail here instead: a deliberate replacement
+        # must retire the record first, and a lost receipt is recovered by
+        # record_if_live below (which only runs when no record exists).
+        published_record = PUBLISHED_DIR / Path(path).name
+        if published_record.is_file():
+            raise RuntimeError(
+                f'Published record {published_record} already exists for job '
+                f'{doc.id}; refusing to render or upload a duplicate. If this '
+                'is a deliberate replacement, retire the record first (the '
+                'replacement run will write a fresh one).'
+            )
         recorded = record_if_live(path, doc)
         if recorded:
             return recorded
