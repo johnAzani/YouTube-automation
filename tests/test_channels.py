@@ -186,28 +186,27 @@ if __name__ == "__main__":
         self.assertIn("ALLOW_DUPLICATE_UPLOADS: ${{ (inputs.allow_duplicate || false)",
                       text)
 
-    def test_job_0011_is_requeued_after_defective_first_upload(self):
+    def test_job_0011_receipt_is_retired_for_the_corrected_replacement(self):
         # The tts-v2 upload 7ll7w1hYf7o narrated instructions aloud; the
-        # owner kept it unlisted on The Secret Place. The receipt is
-        # retained (pinning the defective video's id) while the queue file
-        # is approved again, so automated --next selection is blocked by
-        # the duplicate shield in select_jobs() and only an explicit
-        # --job 0011 run (with the duplicate override) can replace it.
-        # The replacement uploads private for owner review first.
+        # owner kept it unlisted on The Secret Place. The queue file is
+        # approved again with privacy private so the tts-v4 replacement
+        # uploads privately for owner review, and the receipt that pinned
+        # 7ll7w1hYf7o is now retired so the explicit --job 0011 produce
+        # run can render and write a fresh receipt. While the receipt is
+        # absent, automated --next selection may pick this job up like
+        # any other approved script — dispatch the replacement run
+        # immediately after this retires.
         queue_job = ROOT / "content" / "queue" / "0011-psalm-27-the-lord-is-my-light-and-my-salvation--fe.md"
         published = ROOT / "content" / "published" / "0011-psalm-27-the-lord-is-my-light-and-my-salvation--fe.md"
         self.assertTrue(queue_job.is_file())
-        self.assertTrue(published.is_file(),
-                        "the defective upload's receipt is retained so "
-                        "automated queue selection skips this job")
+        self.assertFalse(published.exists(),
+                         "the defective upload's receipt is retired so the "
+                         "replacement run can write a fresh one")
         queue_doc = parse_script(queue_job)
         self.assertEqual(queue_doc.status, "approved")
         self.assertEqual(queue_doc.channel, "secret-place")
         self.assertEqual(queue_doc.meta.get("privacy"), "private")
         self.assertNotIn("youtube_video_id", queue_doc.meta)
-        published_doc = parse_script(published)
-        self.assertEqual(published_doc.status, "published")
-        self.assertEqual(published_doc.meta.get("youtube_video_id"), "7ll7w1hYf7o")
 
     def test_job_0036_is_published_with_the_corrected_tts_v4_upload(self):
         # The corrected replacement (tts-v4) was uploaded by run 42010285242
