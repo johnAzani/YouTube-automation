@@ -147,15 +147,29 @@ def queue_health() -> list[dict]:
     build (short scripts, mislabelled scripture). Counting *renderable* rows rather
     than approved rows is what makes a stall visible before it lasts a week.
     """
-    from pipeline.run import select_jobs
+    from pipeline.channels import CHANNELS
+    from pipeline.supply import publishable_longform
     from pipeline.short_release import queue_report
 
     rows: list[dict] = []
-    try:
-        longform = select_jobs(all_flag=False, job_path=None, next_flag=False)
-        rows.append({"queue": "longform", "ready": len(longform), "note": "approved and above the word floor"})
-    except Exception as exc:  # a broken queue is a finding, not a crash
-        rows.append({"queue": "longform", "ready": 0, "note": f"selection failed: {exc}"})
+    # Per-channel long-form runway: the old single "longform" row counted
+    # only the ambient/default channel, so the watchdog could stay green
+    # while The Morning Altar had nothing to publish. Every channel now
+    # gets its own row (plus the historic "longform" alias for channel 1).
+    for channel_id in CHANNELS:
+        label = f"longform:{channel_id}"
+        try:
+            ready = publishable_longform(channel_id=channel_id)
+            rows.append({"queue": label, "channel": channel_id,
+                         "ready": len(ready),
+                         "note": "approved and above the word floor"})
+            if channel_id == "secret-place":
+                rows.append({"queue": "longform", "channel": channel_id,
+                             "ready": len(ready),
+                             "note": "approved and above the word floor"})
+        except Exception as exc:  # a broken queue is a finding, not a crash
+            rows.append({"queue": label, "channel": channel_id, "ready": 0,
+                         "note": f"selection failed: {exc}"})
     try:
         shorts = queue_report()
         ready = sum(1 for r in shorts if r["verdict"] == "ready")

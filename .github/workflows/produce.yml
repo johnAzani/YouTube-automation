@@ -165,11 +165,11 @@ jobs:
           python scripts/check_prayer_alignment.py --model output/alignment-model
 
       - name: Check the Morning Altar queue
-        # The Morning Altar has no brain supply pass yet: its scripts are
-        # human-queued. An empty Morning Altar queue must idle this leg
-        # with a notice, not fail the whole slot — The Secret Place treats
-        # an empty queue as a fault precisely because its brain guarantees
-        # supply, and that guarantee does not exist for prayer2 yet.
+        # The Morning Altar brain now supplies `channel: prayer2` scripts
+        # unattended (gemini_brain.yml + the repair pass below). An empty
+        # Morning Altar queue must still idle this leg with a notice, not
+        # fail the whole slot — free-tier exhaustion is a pause, not a
+        # fault, and The Secret Place leg must never be blocked by it.
         id: channel_queue
         if: ${{ matrix.channel == 'prayer2' && inputs.job == '' && inputs.short == '' }}
         run: |
@@ -186,8 +186,9 @@ jobs:
           if not has_job:
               print("::notice title=Morning Altar queue empty::No approved "
                     "Morning Altar script is ready, so this leg uploads "
-                    "nothing. Add an approved `channel: prayer2` script to "
-                    "content/queue/ and the next slot will publish it.")
+                    "nothing. The Morning Altar brain supplies approved "
+                    "`channel: prayer2` scripts to content/queue/; the next "
+                    "slot will publish the first one it queues.")
           PYQUEUE
 
       - name: Restore stock-asset cache
@@ -225,14 +226,21 @@ jobs:
         # is empty, and killing the run first would lose that upload. The alarm for
         # "nothing is publishable" is the watchdog at the end of this job.
         continue-on-error: true
-        # Queue repair authors Secret Place supply; Morning Altar scripts are
-        # human-queued with `channel: prayer2` until it gets its own brain pass.
-        if: ${{ inputs.short == '' && inputs.job == '' && matrix.channel != 'prayer2' }}
+        # Queue repair is channel-scoped: each leg lengthens/authors only
+        # its own channel's scripts, with its own Gemini quota pool. The
+        # Morning Altar pass counts only `channel: prayer2` publishable
+        # scripts and stages no Secret Place Short. Non-blocking + the
+        # empty-queue gate above mean exhaustion idles this leg green.
+        if: ${{ inputs.short == '' && inputs.job == '' }}
         env:
           GITHUB_ACTIONS: "true"
         run: |
           set -o pipefail
-          python scripts/gemini_brain.py --ensure-supply 2>&1 | tee supply.log
+          if [ "$CHANNEL_ID" = "prayer2" ]; then
+            python scripts/gemini_brain.py --ensure-supply-for prayer2 --min-publishable 3 2>&1 | tee supply.log
+          else
+            python scripts/gemini_brain.py --ensure-supply 2>&1 | tee supply.log
+          fi
           { echo "### 📜 Queue repair"; echo '```'; grep -v '^\[run\]' supply.log | tail -30; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Render the Short (9:16)

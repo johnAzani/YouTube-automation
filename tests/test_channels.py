@@ -228,7 +228,9 @@ class WorkflowSelectorTests(unittest.TestCase):
         # run, this one wrote its own receipt: the queue file was consumed
         # and the published record names the new video (BFlkzRVMf8o). The
         # upload landed private (script privacy) for owner review; the
-        # defective 7ll7w1hYf7o stays unlisted until the owner deletes it.
+        # owner has since flipped BFlkzRVMf8o public in Studio and deleted
+        # the defective 7ll7w1hYf7o there (owner-completed), so the receipt
+        # now records the public end state.
         queue_job = ROOT / "content" / "queue" / "0011-psalm-27-the-lord-is-my-light-and-my-salvation--fe.md"
         published = ROOT / "content" / "published" / "0011-psalm-27-the-lord-is-my-light-and-my-salvation--fe.md"
         self.assertFalse(queue_job.exists())
@@ -236,7 +238,7 @@ class WorkflowSelectorTests(unittest.TestCase):
         doc = parse_script(published)
         self.assertEqual(doc.status, "published")
         self.assertEqual(doc.channel, "secret-place")
-        self.assertEqual(doc.meta.get("privacy"), "private")
+        self.assertEqual(doc.meta.get("privacy"), "public")
         self.assertEqual(doc.meta.get("youtube_video_id"), "BFlkzRVMf8o")
         self.assertEqual(doc.meta.get("published_on"), "2026-11-05")
 

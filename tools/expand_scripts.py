@@ -145,11 +145,24 @@ def load_job(path: Path) -> Job:
     return Job(path=path, meta=meta, body=body)
 
 
-def under_gate(paths: list[Path] | None = None) -> list[Job]:
+def _job_channel(job: Job) -> str:
+    raw = str(job.meta.get("channel", "") or "").strip().lower().replace("_", "-")
+    aliases = {"morning-altar": "prayer2", "the-morning-altar": "prayer2", "channel2": "prayer2",
+               "secret_place": "secret-place", "the-secret-place": "secret-place", "channel1": "secret-place"}
+    return aliases.get(raw, raw) if raw else "secret-place"
+
+
+def under_gate(paths: list[Path] | None = None, channel_id: str | None = None) -> list[Job]:
     jobs = []
+    wanted = None
+    if channel_id:
+        wanted = str(channel_id).strip().lower().replace("_", "-")
+        wanted = {"morning-altar": "prayer2", "the-morning-altar": "prayer2"}.get(wanted, wanted)
     for path in paths or sorted(QUEUE_DIR.glob("*.md")):
         job = load_job(path)
         if job.status == "approved" and job.words < MIN_WORDS:
+            if wanted and _job_channel(job) != wanted:
+                continue  # expansion must never spend one channel's quota on another's script
             jobs.append(job)
     return jobs
 

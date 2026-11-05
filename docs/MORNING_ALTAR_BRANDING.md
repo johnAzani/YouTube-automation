@@ -113,10 +113,14 @@ re-typing over the PNGs.
 - [ ] Enable 2-step verification + custom thumbnails (Studio → Settings)
 - [ ] Create the **separate** GCP + Gemini projects and GitHub secrets
       (`docs/SECOND_CHANNEL_SETUP.md`) — never reuse Channel 1's token
-- [ ] First script is queued as a draft: `content/queue/0036-psalm-5-morning-prayer-begin-your-day.md`
-      (`channel: prayer2`, `status: draft`). Review it aloud, verify the KJV
-      quotations, set `human_rewrite: true`, then `status: approved`
-- [ ] First production run: Actions → Produce video → Run workflow →
-      **channel = prayer2**, `dry_run` ticked first; then unticked
-      (uploads land **private** until the new project's API audit passes —
-      publish manually from Studio)
+- [x] First script published: `content/published/0036-psalm-5-morning-prayer-begin-your-day.md`
+      (`channel: prayer2`, Psalm 5, uploaded `_vp27ZYPYaY`, public)
+- [x] Brain supply is autonomous: the channel-scoped brain
+      (`scripts/gemini_brain.py --ensure-supply-for prayer2`) authors,
+      verifies and approves Morning Altar scripts from
+      `MORNING_ALTAR_ROADMAP` on the `PRAYER2_` Gemini pool, stages no
+      companion Short, and idles safely when the free tier is exhausted
+- [ ] First scheduled production is automatic since 2026-11-05: Produce
+      runs The Morning Altar after The Secret Place in every slot,
+      uploading **public with auto-publish** (YouTube may still clamp an
+      unaudited API project's upload to private server-side)

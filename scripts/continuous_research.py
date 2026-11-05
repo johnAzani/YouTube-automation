@@ -108,6 +108,125 @@ SCRIPTURE_ROADMAP = [
 ]
 
 
+# The Morning Altar (prayer2) owns the sunrise, not the night. Its roadmap is
+# deliberately separate from SCRIPTURE_ROADMAP: reusing night/sleep entries
+# would misbrand the channel and duplicate Secret Place content. Job ids stay
+# globally unique across content/queue/ + content/published/ (0036 was the
+# first Morning Altar video, Psalm 5), so Morning Altar ids continue from 0037.
+MORNING_ALTAR_ROADMAP = [
+    {
+        "id": "0037",
+        "scripture": "Psalm 143:8",
+        "theme": "Cause Me to Hear Thy Lovingkindness in the Morning",
+        "hook": "YOUR MERCY THIS MORNING",
+        "verses": "Verse 8 (Exposition)",
+        "target_duration": "5:30 - 6:00",
+        "primary_intent": "Morning mercy, guidance for the day, trusting God's leading",
+        "search_volume_tier": "Tier 2 (High Intent Morning Prayer)",
+        "status": "recommended_next",
+        "video_id": None,
+    },
+    {
+        "id": "0038",
+        "scripture": "Lamentations 3:22-23",
+        "theme": "Great Is Thy Faithfulness - New Mercies Every Morning",
+        "hook": "NEW MERCIES TODAY",
+        "verses": "Verses 22-23 (Exposition)",
+        "target_duration": "5:30 - 6:00",
+        "primary_intent": "New mercies, fresh start, hope after a hard season",
+        "search_volume_tier": "Tier 1 (Evergreen Morning Devotional)",
+        "status": "planned",
+        "video_id": None,
+    },
+    {
+        "id": "0039",
+        "scripture": "Mark 1:35",
+        "theme": "Jesus Rose Early - Begin the Day in Prayer",
+        "hook": "RISE AND PRAY",
+        "verses": "Verse 35 (Exposition)",
+        "target_duration": "5:30 - 6:00",
+        "primary_intent": "Early prayer, solitude with God before the day's demands",
+        "search_volume_tier": "Tier 2 (Morning Discipline)",
+        "status": "planned",
+        "video_id": None,
+    },
+    {
+        "id": "0040",
+        "scripture": "Proverbs 3:5-6",
+        "theme": "Trust in the Lord - He Shall Direct Thy Paths",
+        "hook": "HE DIRECTS MY PATH",
+        "verses": "Verses 5-6 (Exposition)",
+        "target_duration": "5:30 - 6:00",
+        "primary_intent": "Guidance for decisions, prayer before work, surrendering outcomes",
+        "search_volume_tier": "Tier 1 (Guidance and Decisions)",
+        "status": "planned",
+        "video_id": None,
+    },
+    {
+        "id": "0041",
+        "scripture": "Psalm 118:24",
+        "theme": "This Is the Day the Lord Hath Made",
+        "hook": "THIS IS THE DAY",
+        "verses": "Verse 24 (Exposition)",
+        "target_duration": "5:30 - 6:00",
+        "primary_intent": "Morning joy, gratitude, rejoicing at the start of the day",
+        "search_volume_tier": "Tier 2 (Morning Declaration)",
+        "status": "planned",
+        "video_id": None,
+    },
+    {
+        "id": "0042",
+        "scripture": "Numbers 6:24-26",
+        "theme": "The Lord Bless Thee and Keep Thee - A Morning Blessing",
+        "hook": "THE LORD BLESS THEE",
+        "verses": "Verses 24-26 (Exposition)",
+        "target_duration": "5:30 - 6:00",
+        "primary_intent": "Blessing over family, home, work and the road ahead",
+        "search_volume_tier": "Tier 2 (Blessing Prayer)",
+        "status": "planned",
+        "video_id": None,
+    },
+    {
+        "id": "0043",
+        "scripture": "Psalm 90:17",
+        "theme": "Establish Thou the Work of Our Hands",
+        "hook": "ESTABLISH MY WORK",
+        "verses": "Verse 17 (Exposition)",
+        "target_duration": "5:30 - 6:00",
+        "primary_intent": "Prayer before work, favour on the day's labour, daily guidance",
+        "search_volume_tier": "Tier 2 (Prayer Before Work)",
+        "status": "planned",
+        "video_id": None,
+    },
+    {
+        "id": "0044",
+        "scripture": "Isaiah 50:4",
+        "theme": "He Wakeneth Morning by Morning",
+        "hook": "WAKENED BY GOD",
+        "verses": "Verse 4 (Exposition)",
+        "target_duration": "5:30 - 6:00",
+        "primary_intent": "Hearing God in the morning, a tongue for the weary, sunrise devotion",
+        "search_volume_tier": "Tier 2 (Sunrise Devotional)",
+        "status": "planned",
+        "video_id": None,
+    },
+]
+
+
+def roadmap_for_channel(channel_id: str | None = None) -> list[dict]:
+    """The scripture roadmap that belongs to a channel (never shared)."""
+    value = str(channel_id or "").strip().lower().replace("_", "-")
+    if value in {"prayer2", "morning-altar", "the-morning-altar", "channel2"}:
+        return MORNING_ALTAR_ROADMAP
+    return SCRIPTURE_ROADMAP
+
+
+ROADMAPS = {
+    "secret-place": SCRIPTURE_ROADMAP,
+    "prayer2": MORNING_ALTAR_ROADMAP,
+}
+
+
 @dataclass
 class ChannelIntelligence:
     audited_at: str

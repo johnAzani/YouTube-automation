@@ -10,6 +10,11 @@ on:
         description: "Force generation of next scripture devotional regardless of runway"
         type: boolean
         default: false
+      channel:
+        description: "Channel to replenish (schedule runs both)"
+        type: choice
+        options: [both, secret-place, prayer2]
+        default: both
 
 permissions:
   contents: write
@@ -20,11 +25,37 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      channels: ${{ steps.plan.outputs.channels }}
+    steps:
+      - id: plan
+        run: |
+          case "${{ github.event_name }}" in
+            schedule)          channels='["secret-place","prayer2"]' ;;
+            workflow_dispatch) case "${{ inputs.channel }}" in
+                                 both) channels='["secret-place","prayer2"]' ;;
+                                 *)    channels='["${{ inputs.channel }}"]' ;;
+                               esac ;;
+            *)                 channels='["secret-place","prayer2"]' ;;
+          esac
+          echo "channels=$channels" >> "$GITHUB_OUTPUT"
+          echo "Brain plan: $channels"
+
   brain-replenish:
+    needs: plan
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        channel: ${{ fromJSON(needs.plan.outputs.channels) }}
     env:
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      CHANNEL_ID: ${{ matrix.channel }}
+      # Morning Altar authoring uses its own Gemini project/quota pool.
+      GEMINI_API_KEY: ${{ matrix.channel == 'prayer2' && secrets.PRAYER2_GEMINI_API_KEY || secrets.GEMINI_API_KEY }}
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
@@ -45,14 +76,23 @@ jobs:
       - name: Keep the long-form queue publishable
         # Lengthens approved-but-short scripts, then authors only if the queue still
         # lacks runway. Exits non-zero when nothing can publish, which is the point:
-        # a stalled queue must not look like a satisfied one.
+        # a stalled queue must not look like a satisfied one. Each channel is
+        # counted and authored separately, with its own Gemini quota pool;
+        # free-tier exhaustion (429) therefore idles only that channel and
+        # never spends money or borrows the other channel's quota ($0 lock).
         run: |
           set -o pipefail
-          python scripts/gemini_brain.py --auto-replenish --min-runway 2 2>&1 | tee supply.log
+          if [ "$CHANNEL_ID" = "prayer2" ]; then
+            python scripts/gemini_brain.py --ensure-supply-for prayer2 --min-publishable 6 2>&1 | tee supply.log
+          else
+            python scripts/gemini_brain.py --auto-replenish --min-runway 2 2>&1 | tee supply.log
+          fi
 
       - name: Author specs for Shorts that cannot render yet
         # A blocked spec must not stop the long-form replenishment in the same run;
         # the step summary and automation_health both report what stayed blocked.
+        # Secret Place only: The Morning Altar stages no companion Shorts.
+        if: ${{ matrix.channel != 'prayer2' }}
         continue-on-error: true
         run: python scripts/gemini_brain.py --author-shorts 2>&1 | tee shorts.log
 
@@ -60,7 +100,7 @@ jobs:
         if: ${{ inputs.force_generate == true }}
         run: |
           set -o pipefail
-          python scripts/gemini_brain.py --generate-next 2>&1 | tee brain.log
+          python scripts/gemini_brain.py --channel "$CHANNEL_ID" --generate-next 2>&1 | tee brain.log
 
       - name: Summarise supply and Short authoring
         if: always()

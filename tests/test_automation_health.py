@@ -108,17 +108,20 @@ class TestQueueHealth(unittest.TestCase):
     def test_reports_both_queues(self):
         rows = {r["queue"]: r for r in ah.queue_health()}
         self.assertIn("longform", rows)
+        self.assertIn("longform:secret-place", rows)
+        self.assertIn("longform:prayer2", rows)
         self.assertIn("shorts", rows)
 
     def test_a_queue_is_measured_by_what_can_actually_run(self):
         with mock.patch("pipeline.short_release.queue_report",
                         return_value=[{"verdict": "needs_renderer"}]), \
-             mock.patch("pipeline.run.select_jobs", return_value=[]):
+             mock.patch("pipeline.supply.publishable_longform", return_value=[]):
             rows = {r["queue"]: r for r in ah.queue_health()}
         self.assertEqual(rows["shorts"]["ready"], 0)
         self.assertIn("content/shorts-scripts/", rows["shorts"]["note"])
         self.assertIn("brain authors", rows["shorts"]["note"])
         self.assertEqual(rows["longform"]["ready"], 0)
+        self.assertEqual(rows["longform:prayer2"]["ready"], 0)
 
     def test_a_broken_queue_is_a_finding_not_a_crash(self):
         with mock.patch("pipeline.short_release.queue_report", side_effect=RuntimeError("boom")):
