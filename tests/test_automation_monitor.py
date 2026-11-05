@@ -346,6 +346,20 @@ class TestMonitorWorkflow(unittest.TestCase):
         self.assertNotIn("|| true", self.text.split("File or close the stall issue")[1]
                          .split("Commit the monitor snapshot")[0])
 
+    def test_snapshot_cannot_restage_a_stale_published_receipt(self):
+        """A stale checkout must not overwrite a corrected receipt on main.
+
+        PR #268 corrected Psalm 5's receipt to `_vp27ZYPYaY`, but monitor
+        runs that had checked out earlier still held the retired
+        `R8mVvedhYVw` file. `git reset --mixed` leaves tracked files alone,
+        so the old blanket add re-staged the stale receipt. The snapshot
+        step must rebuild published/ from origin/main and re-apply only
+        receipt edits its own sync steps made during this run.
+        """
+        self.assertIn("git restore --source=origin/main --staged --worktree -- content/published/", self.text)
+        self.assertIn('git cat-file -e "origin/main:$path"', self.text)
+        self.assertIn("git clean -f content/published/", self.text)
+
 
 if __name__ == "__main__":
     unittest.main()

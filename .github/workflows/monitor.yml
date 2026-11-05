@@ -111,15 +111,31 @@ jobs:
           set -e
           git config user.name "automation-monitor"
           git config user.email "actions@users.noreply.github.com"
+          # Preserve only the published-receipt edits this run's sync steps
+          # actually made. A run that checked out before a receipt changed
+          # on main otherwise carries the stale file in its working tree:
+          # `git reset --mixed` does not touch tracked files, so a blanket
+          # `git add content/published/*.md` below would re-stage the old
+          # receipt over the corrected one. That is how the retired
+          # R8mVvedhYVw receipt kept coming back after PR #268 corrected it
+          # to _vp27ZYPYaY. Start from main's receipts, then re-apply only
+          # this run's own edits to receipts that still exist on main.
+          sync_dir="$(mktemp -d)"
+          git diff --name-only -z -- content/published/ > "$sync_dir/files.z"
+          git ls-files --others --exclude-standard -z -- content/published/ >> "$sync_dir/files.z"
+          while IFS= read -r -d '' path; do
+            mkdir -p "$sync_dir/$(dirname "$path")"
+            cp -- "$path" "$sync_dir/$path"
+          done < "$sync_dir/files.z"
           git fetch --quiet origin main
           git reset --mixed origin/main
-          # A run that checked out before a receipt was retired on main still
-          # holds the deleted file in its workspace; reset --mixed leaves it
-          # untracked and the `git add` below would resurrect it (this is how
-          # the retired R8mVvedhYVw receipt came back at b7fbfde, 2026-11-05).
-          # Drop published receipts that no longer exist on main; genuine
-          # stamp edits touch files that do exist there, so they survive.
+          git restore --source=origin/main --staged --worktree -- content/published/
           git clean -f content/published/
+          while IFS= read -r -d '' path; do
+            if git cat-file -e "origin/main:$path" 2>/dev/null; then
+              cp -- "$sync_dir/$path" "$path"
+            fi
+          done < "$sync_dir/files.z"
           if [ -f content/monitor/status.json ]; then
             git add content/monitor/status.json
           fi
