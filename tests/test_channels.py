@@ -186,6 +186,29 @@ if __name__ == "__main__":
         self.assertIn("ALLOW_DUPLICATE_UPLOADS: ${{ (inputs.allow_duplicate || false)",
                       text)
 
+    def test_job_0011_is_requeued_after_defective_first_upload(self):
+        # The tts-v2 upload 7ll7w1hYf7o narrated instructions aloud; the
+        # owner kept it unlisted on The Secret Place. The receipt is
+        # retained (pinning the defective video's id) while the queue file
+        # is approved again, so automated --next selection is blocked by
+        # the duplicate shield in select_jobs() and only an explicit
+        # --job 0011 run (with the duplicate override) can replace it.
+        # The replacement uploads private for owner review first.
+        queue_job = ROOT / "content" / "queue" / "0011-psalm-27-the-lord-is-my-light-and-my-salvation--fe.md"
+        published = ROOT / "content" / "published" / "0011-psalm-27-the-lord-is-my-light-and-my-salvation--fe.md"
+        self.assertTrue(queue_job.is_file())
+        self.assertTrue(published.is_file(),
+                        "the defective upload's receipt is retained so "
+                        "automated queue selection skips this job")
+        queue_doc = parse_script(queue_job)
+        self.assertEqual(queue_doc.status, "approved")
+        self.assertEqual(queue_doc.channel, "secret-place")
+        self.assertEqual(queue_doc.meta.get("privacy"), "private")
+        self.assertNotIn("youtube_video_id", queue_doc.meta)
+        published_doc = parse_script(published)
+        self.assertEqual(published_doc.status, "published")
+        self.assertEqual(published_doc.meta.get("youtube_video_id"), "7ll7w1hYf7o")
+
     def test_job_0036_is_published_with_the_corrected_tts_v4_upload(self):
         # The corrected replacement (tts-v4) was uploaded by run 42010285242
         # on 2026-11-05 and is live and public on The Morning Altar. The run
