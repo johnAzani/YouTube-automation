@@ -66,6 +66,7 @@ class ShortSpec:
     beats: list[dict] = field(default_factory=list)
     problems: list[str] = field(default_factory=list)
     scripture: str = ""
+    channel: str = "secret-place"
 
     @property
     def narration_text(self) -> str:
@@ -77,7 +78,7 @@ class ShortSpec:
 
     def as_dict(self) -> dict:
         out = {
-            "key": self.key, "psalm": self.psalm, "title": list(self.title),
+            "key": self.key, "channel": self.channel, "psalm": self.psalm, "title": list(self.title),
             "poster": list(self.poster), "end": list(self.end),
             "stock_queries": self.stock_queries, "scenes": self.scenes,
             "captions": self.captions, "kinetic_phrases": self.kinetic_phrases,
@@ -92,6 +93,7 @@ class ShortSpec:
         return {
             "is_prayer": True,
             "authored_spec": True,
+            "channel": self.channel,
             "title": self.title,
             "poster": self.poster,
             "midpoint_poster_window": None,
@@ -117,9 +119,20 @@ def _norm(text: str) -> str:
     return re.sub(r"\s+", " ", str(text or "")).strip()
 
 
-def validate_spec(data: dict, key: str | None = None) -> ShortSpec:
-    """Return a validated ShortSpec, accumulating every problem rather than the first."""
+def validate_spec(data: dict, key: str | None = None,
+                  channel_id: str | None = None) -> ShortSpec:
+    """Return a validated ShortSpec, accumulating every problem rather than the first.
+
+    `channel_id` is the channel the spec must belong to (a spec is written for
+    exactly one channel's voice); it defaults to whatever the spec declares, and
+    an unreadable/unknown declaration fails closed to channel 1 so an old spec
+    without the field keeps working.
+    """
+    from .channels import normalize_channel_id
+
     problems: list[str] = []
+    declared_channel = normalize_channel_id(
+        channel_id if channel_id is not None else data.get("channel"))
     key = key or str(data.get("key", "")).strip()
     if not re.fullmatch(r"short-[a-z0-9]+", key or ""):
         problems.append(f"invalid key {key!r} (expected short-<slug>)")
@@ -241,7 +254,7 @@ def validate_spec(data: dict, key: str | None = None) -> ShortSpec:
         key=key, psalm=psalm, title=title, poster=poster, end=end,
         stock_queries=queries, scenes=scenes, captions=captions,
         kinetic_phrases=phrases, beats=beats, problems=problems,
-        scripture=scriptural,
+        scripture=scriptural, channel=declared_channel,
     )
 
 
@@ -301,7 +314,7 @@ def authored_keys() -> set[str]:
 # --------------------------------------------------------------------------- #
 # Model contract
 # --------------------------------------------------------------------------- #
-PROMPT = """You are writing a 9:16 YouTube Short for a faceless bedtime-prayer channel.
+PROMPT = """You are writing a 9:16 YouTube Short for {channel_label}.
 
 Return ONLY compact JSON matching this schema, no prose and no code fences:
 
@@ -310,7 +323,7 @@ Return ONLY compact JSON matching this schema, no prose and no code fences:
   "scripture": "{scripture}",
   "title": ["LINE ONE", "LINE TWO"],
   "poster": ["LINE", "LINE", "LINE", "LINE"],
-  "end": ["SUBSCRIBE", "The Secret Place — prayers every day"],
+  "end": ["SUBSCRIBE", "{end_card}"],
   "stock_queries": ["calm mountain lake night", "..."],
   "scenes": [
     {{"a": "anchor phrase", "img": "{key}-scene-01.jpg", "kicker": "PSALM NN:1",
@@ -322,13 +335,13 @@ Return ONLY compact JSON matching this schema, no prose and no code fences:
 }}
 
 HARD RULES — violations are rejected by code:
-- The narration must be {words} words, a calm second-person pre-sleep prayer,
+- The narration must be {words} words, a calm second-person {prayer_kind} prayer,
   {min_seconds}-{max_seconds} seconds when read slowly. It opens by inviting the
-  listener to breathe, quotes the scripture once, prays, and ends with a single
+  listener to {opening}, quotes the scripture once, prays, and ends with a single
   subscribe invitation.
 - Quote ONLY {scripture}. Never quote another psalm or verse reference.
-- One `stock_queries` entry per scene, describing calm nature or candle imagery
-  suitable for a night prayer (no people's faces, no text in the image).
+- One `stock_queries` entry per scene, describing {imagery} imagery suitable for
+  a {prayer_kind} prayer (no people's faces, no text in the image).
 - kicker <= {kicker} characters, sub <= {sub} characters, ALL CAPS.
 - cam is one of {cams}. focus is [x, y] with x/y between 0 and 1.
 - `kinetic_phrases` has exactly one entry per caption, same start/end seconds, with
@@ -339,11 +352,21 @@ HARD RULES — violations are rejected by code:
 """
 
 
-def build_prompt(scripture: str, key: str = "short-psalmNN", words: int = 120) -> str:
+def build_prompt(scripture: str, key: str = "short-psalmNN", words: int = 120,
+                 channel_id: str | None = None) -> str:
+    """The model contract, in the voice of the channel the Short belongs to."""
+    from .channel_capabilities import brand_for
+
+    brand = brand_for(channel_id)
     return PROMPT.format(
         key=key, scripture=scripture, words=words,
         min_seconds=MIN_SECONDS, max_seconds=MAX_SECONDS,
         kicker=MAX_KICKER_CHARS, sub=MAX_SUB_CHARS, cams=list(CAMS),
+        channel_label=brand.short_channel_label,
+        end_card=brand.short_end_card,
+        prayer_kind=brand.short_prayer_kind,
+        opening=brand.short_opening,
+        imagery=brand.short_imagery,
     )
 
 

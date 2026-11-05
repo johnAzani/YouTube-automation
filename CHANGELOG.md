@@ -5,6 +5,21 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-05 — channel parity locked: one engine, every channel (no per-channel branches left)
+
+- **New `pipeline/channel_capabilities.py`** — the only place that knows which channel is which. Each channel declares its equipment files, roadmap namespace, brand strings (title suffix, CTA, producer line, required/forbidden phrases, pinned comments, Shorts dressing), Short key namespace, supply target and legacy queue-row name. `REQUIRED_CAPABILITIES` lists the ten capabilities every channel has; there are **no per-channel feature flags**.
+- **Every hardcoded channel branch removed** from `pipeline/gemini_brain.py`, `pipeline/brain_equipment/equipment_registry.py`, `pipeline/pinned_comments.py`, `pipeline/short_release.py`, `pipeline/short_script.py`, `pipeline/shorts_bridge.py`, `tools/expand_scripts.py`, `scripts/gemini_brain.py`, `scripts/continuous_research.py`, `scripts/scheduler_supervisor.py`, `scripts/automation_health.py`, `scripts/pipeline_watchdog.py`.
+- **Secret Place brought up to Morning Altar's level**: same supply entry point (`--ensure-supply-for <channel>` in both workflows), per-channel watchdog rows (its empty queue now raises its own alarm instead of being folded into a legacy row), per-channel Shorts rows, channel-branded audit output, and data-gated performance steering (no longer a Secret-Place-only code path).
+- **The Morning Altar brought up to Secret Place's level**: companion **Shorts** are now a capability of every channel — manifests carry `channel:`, keys are namespaced (`short-morning…`), editions/titles/tags/descriptions/end cards/pinned comments are branded per channel, selection and the pacing guard are channel-scoped, and published receipts record their channel.
+- **Authoring is model-only on every channel.** The Psalm 121 "equipped template" is gone: it was emitted under other psalms' titles (the 0011 defect) and was under the 850-word publish floor anyway, so it could only ever produce a mislabelled or unpublishable file. Both channels now refuse identically and idle. Roadmap exhaustion also refuses on both (no more reusing a psalm with a fresh id).
+- **Correctness fix found while doing this:** a brand rejection raised inside the authoring loop was being swallowed by the generic exception handler and fell through to the offline fallback, i.e. "this text is mislabelled" could become "publish it". `BrainAuthoringError` now propagates.
+- **Workflow symmetry**: `produce.yml` and `gemini_brain.yml` no longer gate a step on `matrix.channel != 'prayer2'`; queue check, queue repair, Shorts and render run for every channel, parameterised by `CHANNEL_ID`.
+- **New `tests/test_channel_parity.py` (30 tests) + `scripts/channel_parity.py`** — the lock. CI fails on: a capability missing for a channel, a channel literal in a comparison anywhere in `pipeline/`/`scripts/`/`tools/` (allowlist: the registry, profiles, roadmap map, dataclass defaults), a channel-gated workflow step, a workflow that stops covering a channel, un-namespaced/colliding Short keys, editions resolving across channels, or branding that leaks between channels. `automation-health.yml` runs the CLI daily and prints the matrix to the run summary.
+- **Docs:** `docs/CHANNEL_PARITY.md` (the rule + how to add a channel), updates to `docs/MORNING_ALTAR_BRANDING.md`, `docs/SECOND_CHANNEL_SETUP.md`, `docs/GEMINI_BRAIN.md`.
+- **Tests:** full suite **812 passed + 1725 subtests, 0 failed** (was 782).
+
+---
+
 ## 2026-11-04 — closed-loop growth engine: the brain stops publishing blind, dormant engines wired ($0.00)
 
 - **New `pipeline/performance_feedback.py` + `scripts/performance_feedback.py`** — the missing keystone. Reads the public metrics snapshot + published receipts, scores each long-form video on reach (view velocity, ≥3-day gate) and satisfaction (engagement rate, ≥25-view gate), aggregates by theme, and writes the **derived-only** `content/research/performance_feedback.json` (theme ranks + guidance; no raw counts or video IDs). Confidence-gated (<3 measured videos → neutral) and fail-soft; Shorts are a separate lane and never steer long-form.

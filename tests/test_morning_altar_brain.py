@@ -7,6 +7,8 @@ queue making an empty Morning Altar queue look supplied.
 """
 import tempfile
 import unittest
+
+import yaml
 from pathlib import Path
 from unittest import mock
 
@@ -76,20 +78,45 @@ class TestMorningPromptAndRoadmap(unittest.TestCase):
         self.assertEqual(brain.channel_id, "prayer2")
         self.assertIn("PRAYER2_GEMINI_API_KEY", brain.api_status()["key_names"])
 
-    def test_prayer2_offline_authoring_refuses_secret_place_template(self):
+    def test_prayer2_offline_authoring_refuses_rather_than_mislabels(self):
         brain = GeminiBrain(api_key="", channel_id="prayer2")
         with self.assertRaises(BrainAuthoringError):
             brain.author_longform_script(
                 {"id": "0037", "scripture": "Psalm 143:8",
                  "theme": "Morning Mercy", "hook": "MERCY"})
 
-    def test_prayer2_never_stages_a_companion_short(self):
-        brain = GeminiBrain(api_key="", channel_id="prayer2")
+    def test_every_channel_stages_its_own_companion_short(self):
+        """Shorts parity: a Morning Altar script stages a Morning Altar Short.
+
+        The manifest names its channel and the key is namespaced, so the shared
+        queue can serve both channels without one dressing the other's Short.
+        """
+        from pipeline.script_doc import parse_script
+
+        for channel_id in ("secret-place", "prayer2"):
+            with tempfile.TemporaryDirectory() as tmp:
+                d = Path(tmp)
+                path = write_job(d, job_id="9102", channel=channel_id,
+                                 name=f"9102-{channel_id}.md")
+                brain = GeminiBrain(api_key="", channel_id=channel_id)
+                with mock.patch("pipeline.gemini_brain.SHORTS_QUEUE_DIR", d / "shorts"):
+                    manifest_path, key = brain.generate_companion_short(parse_script(path))
+                manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+                self.assertEqual(manifest["channel"], channel_id)
+                self.assertEqual(manifest["companion_longform_id"], "9102")
+                self.assertRegex(key, r"^short-[a-z0-9]+$")
+                self.assertEqual(key.startswith("short-morning"), channel_id == "prayer2")
+
+    def test_a_brain_never_stages_a_short_for_the_other_channel(self):
+        from pipeline.script_doc import parse_script
+
         with tempfile.TemporaryDirectory() as tmp:
-            path = write_job(Path(tmp))
-            from pipeline.script_doc import parse_script
-            with self.assertRaises(BrainAuthoringError):
-                brain.generate_companion_short(parse_script(path))
+            d = Path(tmp)
+            path = write_job(d, job_id="9103", channel="secret-place", name="9103.md")
+            brain = GeminiBrain(api_key="", channel_id="prayer2")
+            with mock.patch("pipeline.gemini_brain.SHORTS_QUEUE_DIR", d / "shorts"):
+                with self.assertRaises(BrainAuthoringError):
+                    brain.generate_companion_short(parse_script(path))
 
     def test_model_output_with_wrong_channel_branding_is_rejected(self):
         brain = GeminiBrain(api_key="", channel_id="prayer2")
@@ -137,7 +164,10 @@ class TestPerChannelSupplyCounting(unittest.TestCase):
                 {"queue": "shorts", "ready": 1, "note": "ok"}]
         with mock.patch("scripts.automation_health.queue_health", return_value=rows):
             report = wd.build_report(published_dir=self.dir, workflow_rows=[])
-        self.assertTrue(any(f.area == "morning altar queue" for f in report.findings))
+        self.assertTrue(any(f.area == "long-form queue" and "Morning Altar" in f.detail
+                            for f in report.findings))
+        # Channel 1 is healthy in these rows, so it must not also be reported.
+        self.assertFalse(any("The Secret Place" in f.detail for f in report.findings))
 
 
 class PrayerFakeBrain:
@@ -185,19 +215,25 @@ class TestChannelApprovalGate(unittest.TestCase):
 
 
 class TestWorkflowWiring(unittest.TestCase):
+    """Both channels run the same steps — no per-channel gates in the YAML."""
+
     ROOT = Path(__file__).resolve().parents[1]
 
-    def test_brain_workflow_runs_both_channels_with_prayer2_key(self):
+    def test_brain_workflow_runs_both_channels_identically(self):
         text = (self.ROOT / ".github/workflows/gemini_brain.yml").read_text()
         self.assertIn('channels=\'["secret-place","prayer2"]\'', text)
         self.assertIn("PRAYER2_GEMINI_API_KEY", text)
-        self.assertIn("--ensure-supply-for prayer2", text)
-        self.assertIn("matrix.channel != 'prayer2'", text)  # no Shorts for prayer2
+        # One command for every channel, parameterised by CHANNEL_ID.
+        self.assertIn('--ensure-supply-for "$CHANNEL_ID" --min-publishable 6', text)
+        self.assertNotIn("--ensure-supply-for prayer2", text)
+        # Shorts authoring is not gated to one channel any more.
+        self.assertNotIn("matrix.channel != 'prayer2'", text)
 
-    def test_produce_repair_covers_prayer2_but_shorts_stay_secret_place(self):
+    def test_produce_repair_and_shorts_cover_both_channels(self):
         text = (self.ROOT / ".github/workflows/produce.yml").read_text()
-        self.assertIn('if [ "$CHANNEL_ID" = "prayer2" ]; then', text)
-        self.assertIn("--ensure-supply-for prayer2", text)
+        self.assertIn('--ensure-supply-for "$CHANNEL_ID" --min-publishable 3', text)
+        self.assertNotIn('if [ "$CHANNEL_ID" = "prayer2" ]; then', text)
+        self.assertNotIn("matrix.channel != 'prayer2'", text)
 
 
 if __name__ == "__main__":

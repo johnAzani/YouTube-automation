@@ -339,7 +339,10 @@ def build_description(
         # A channel without its own resource funnel yet (e.g. The Morning
         # Altar at launch): invite subscription to *this* channel only —
         # never borrow The Secret Place's Selar/store links.
+        from .channel_capabilities import subscribe_heading_for
+
         profile = doc_channel
+        profile_subscribe_heading = subscribe_heading_for(profile.id)
         if profile.id == CONFIG.channel_id:
             channel_name = CONFIG.channel_name or profile.display_name
             channel_handle = CONFIG.channel_handle or profile.handle
@@ -351,7 +354,7 @@ def build_description(
                 "",
                 "\n".join(
                     [
-                        "🙏 BEGIN EVERY MORNING IN PRAYER",
+                        profile_subscribe_heading,
                         f"• Subscribe to {channel_name}: "
                         f"https://www.youtube.com/{channel_handle}?sub_confirmation=1",
                         "",

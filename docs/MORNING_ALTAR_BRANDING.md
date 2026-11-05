@@ -38,7 +38,10 @@ That separation is a policy safeguard, not just branding:
 1. **Sunrise Prayers & Morning Declarations** (Psalm 5, Psalm 143:8, Lamentations 3:22–23, Mark 1:35).
 2. **Prayer Before Work & Daily Guidance** (decisions, favour, protection on the road, God's leading — Psalm 5:8, Proverbs 3:5–6, Psalm 90:17).
 3. **Morning Warfare & Blessing** (putting on the day: Ephesians 6, Psalm 5:12 favour shield, Numbers 6 blessing over family).
-4. **Sunrise Shorts** (30–60 second first-light declarations — later phase; the Shorts queue is still Secret-Place-only in the workflow).
+4. **Sunrise Shorts** (30–60 second first-light declarations). Shorts are a
+   capability of *every* channel: manifests declare their channel, keys are
+   namespaced (`short-morning…`), and the brand gate dresses them in this
+   channel's title/tags/description. See `docs/CHANNEL_PARITY.md`.
 
 ### Voice & Editorial Identity
 - Same locked production voice (**Gemini `Charon`**) and $0.00 stack, but its

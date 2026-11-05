@@ -208,9 +208,11 @@ def dispatch(workflow: str) -> tuple[bool, str]:
     they execute sequentially, never in parallel.
     """
     if workflow == "produce.yml":
+        from pipeline.channel_capabilities import known_channels
+
         messages: list[str] = []
         dispatched: list[str] = []
-        for channel in ("secret-place", "prayer2"):
+        for channel in known_channels():
             proc = subprocess.run(
                 ["gh", "workflow", "run", workflow, "-f", f"channel={channel}"],
                 capture_output=True, text=True, cwd=ROOT, timeout=120,
@@ -222,8 +224,8 @@ def dispatch(workflow: str) -> tuple[bool, str]:
                     f"{channel}: "
                     + (proc.stderr or proc.stdout or "gh workflow run failed").strip()[:160]
                 )
-        if len(dispatched) == 2:
-            return True, "dispatched secret-place + prayer2"
+        if len(dispatched) == len(known_channels()):
+            return True, "dispatched " + " + ".join(dispatched)
         detail = "; ".join(messages) or "no channel dispatched"
         return False, f"dispatched {dispatched or 'none'}; {detail}"[:200]
     proc = subprocess.run(["gh", "workflow", "run", workflow], capture_output=True,

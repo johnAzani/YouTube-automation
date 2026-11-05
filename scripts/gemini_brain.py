@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Google Gemini Brain CLI & Automation Runner.
 
-Enables Google Gemini to act as the autonomous brain of The Secret Place, performing
-scripture research, longform devotional authoring, factchecking, and queue replenishment.
+Runs the autonomous brain of whichever channel ``--channel`` selects (default
+``secret-place``): scripture research, longform devotional authoring, factchecking,
+Shorts authoring and queue replenishment, with that channel's own equipment,
+roadmap, branding and Gemini quota pool. Both channels run this identical code.
 
 Usage:
     python scripts/gemini_brain.py --audit            # Audit brain equipment, API status, and runway
@@ -43,13 +45,24 @@ def cmd_audit(brain: GeminiBrain) -> int:
         api_status = f"NO KEY HERE — {status['reason']}"
 
     print("=" * 76)
-    print("THE SECRET PLACE — GOOGLE GEMINI AUTONOMOUS BRAIN AUDIT")
+    print(f"{brain.channel.display_name.upper()} — GOOGLE GEMINI AUTONOMOUS BRAIN AUDIT")
     print("=" * 76)
+    # Supply is measured for *this* brain's channel; the equity figures come from
+    # the metrics snapshot, which currently only has Channel 1 history, so they are
+    # labelled rather than presented as this channel's numbers.
+    from pipeline.short_release import queue_report
+    from pipeline.supply import publishable_longform
+
+    publishable = len(publishable_longform(channel_id=brain.channel_id))
+    shorts_ready = sum(1 for row in queue_report(channel_id=brain.channel_id)
+                       if row["verdict"] == "ready")
     print(f"Brain Model:        {brain.model}")
     print(f"Gemini API Status:  {api_status}")
-    print(f"Channel Equity:     {audit.subscribers:,} Subscribers")
+    print(f"Channel Equity:     {audit.subscribers:,} Subscribers "
+          f"(metrics snapshot — Channel 1 history only)")
     print(f"Watch Hours Target: {audit.watch_hours_target:,} Public Hours")
-    print(f"Queue Runway:       {audit.runway_days} Days ({audit.longform_approved_count} LF + {audit.shorts_approved_count} Shorts approved)")
+    print(f"Queue Runway:       {publishable} publishable long-form + "
+          f"{shorts_ready} renderable Short(s) for {brain.channel.display_name}")
     print("-" * 76)
     print("EQUIPPED BRAIN MODULES:")
     for mod_name, meta in equipped.items():
@@ -65,10 +78,13 @@ def cmd_audit(brain: GeminiBrain) -> int:
     return 0
 
 
-def cmd_equip() -> int:
+def cmd_equip(channel_id: str | None = None) -> int:
+    from pipeline.channel_capabilities import capabilities_for
+
     equipped = list_equipped_modules()
+    display = capabilities_for(channel_id).brand.display_name
     print("=" * 76)
-    print("THE SECRET PLACE — ACTIVE GEMINI BRAIN EQUIPMENT REGISTRY")
+    print(f"{display.upper()} — ACTIVE GEMINI BRAIN EQUIPMENT REGISTRY")
     print("=" * 76)
     for mod_name, meta in equipped.items():
         print(f"MODULE: {mod_name} ({meta['size_bytes']} bytes)")
@@ -230,7 +246,8 @@ def main(argv: list[str] | None = None) -> int:
                         help="Author scene specs for queued Shorts that have no renderer")
     parser.add_argument("--min-runway", type=float, default=2.0, help="Minimum runway days threshold (default: 2.0)")
     parser.add_argument("--channel", default=None,
-                        help="Channel to supply: secret-place (default) or prayer2 (The Morning Altar)")
+                        help="Channel to work on (default: CHANNEL_ID, else secret-place). "
+                             "Every channel runs the same code path.")
     parser.add_argument("--ensure-supply-for", dest="ensure_supply_for", default=None,
                         help="Run the supply loop for this channel id with a channel-scoped brain")
 
@@ -242,7 +259,7 @@ def main(argv: list[str] | None = None) -> int:
     brain = GeminiBrain(channel_id=args.channel) if args.channel else GeminiBrain()
 
     if args.equip:
-        return cmd_equip()
+        return cmd_equip(brain.channel_id)
     if args.generate_next:
         return cmd_generate_next(brain)
     if args.preflight:
@@ -252,10 +269,8 @@ def main(argv: list[str] | None = None) -> int:
                                  args.min_publishable,
                                  channel_id=args.channel)
     if args.author_shorts:
-        if getattr(brain, "channel_id", "secret-place") == "prayer2":
-            print("[gemini-brain] Shorts authoring is Secret Place only; "
-                  "The Morning Altar stages no companion Shorts in this phase.")
-            return 0
+        # Every channel authors its own Shorts; the queue manifests name their
+        # channel, so one leg can never dress the other channel's Short.
         return cmd_author_shorts(brain)
     if args.auto_replenish:
         return cmd_auto_replenish(brain, args.min_runway)

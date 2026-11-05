@@ -74,25 +74,23 @@ jobs:
         run: python scripts/gemini_brain.py --preflight
 
       - name: Keep the long-form queue publishable
-        # Lengthens approved-but-short scripts, then authors only if the queue still
-        # lacks runway. Exits non-zero when nothing can publish, which is the point:
-        # a stalled queue must not look like a satisfied one. Each channel is
-        # counted and authored separately, with its own Gemini quota pool;
-        # free-tier exhaustion (429) therefore idles only that channel and
-        # never spends money or borrows the other channel's quota ($0 lock).
+        # One command for every channel — the channel is data, so there is no
+        # per-channel branch to drift. It lengthens approved-but-short scripts,
+        # then authors only if the queue still lacks runway. Exits non-zero when
+        # nothing can publish, which is the point: a stalled queue must not look
+        # like a satisfied one. Each channel is counted and authored separately,
+        # with its own Gemini quota pool; free-tier exhaustion (429) therefore
+        # idles only that channel and never spends money or borrows the other
+        # channel's quota ($0 lock).
         run: |
           set -o pipefail
-          if [ "$CHANNEL_ID" = "prayer2" ]; then
-            python scripts/gemini_brain.py --ensure-supply-for prayer2 --min-publishable 6 2>&1 | tee supply.log
-          else
-            python scripts/gemini_brain.py --auto-replenish --min-runway 2 2>&1 | tee supply.log
-          fi
+          python scripts/gemini_brain.py --ensure-supply-for "$CHANNEL_ID" --min-publishable 6 2>&1 | tee supply.log
 
       - name: Author specs for Shorts that cannot render yet
+        # Every channel authors its own Shorts: manifests name their channel, so a
+        # spec or an upload can never be dressed in the other channel's branding.
         # A blocked spec must not stop the long-form replenishment in the same run;
         # the step summary and automation_health both report what stayed blocked.
-        # Secret Place only: The Morning Altar stages no companion Shorts.
-        if: ${{ matrix.channel != 'prayer2' }}
         continue-on-error: true
         run: python scripts/gemini_brain.py --author-shorts 2>&1 | tee shorts.log
 

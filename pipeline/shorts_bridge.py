@@ -225,33 +225,43 @@ def resolve_longform_counterpart(short_key_or_title: str) -> dict[str, Any]:
     }
 
 
-def generate_short_bridge_comment(short_key_or_title: str) -> str:
-    """Generate high-converting comment bridging Shorts viewers to full prayer & channel bio."""
+def generate_short_bridge_comment(short_key_or_title: str,
+                                  channel_id: str | None = None) -> str:
+    """Bridge a Short's viewers to the full prayer, in that channel's voice.
+
+    The comment used to be hardcoded to The Secret Place's handle and night
+    language, which would have mislabelled every Morning Altar Short. Branding now
+    comes from the channel's capability block, and the store/journal footer only
+    appears on channels that actually own that funnel.
+    """
+    from .channel_capabilities import short_pinned_comment_for
+    from .channels import normalize_channel_id
+
     counterpart = resolve_longform_counterpart(short_key_or_title)
     url = counterpart["url"]
-    scripture = counterpart.get("scripture", "this Scripture")
-    theme = counterpart.get("theme", "divine peace and angelic protection")
+    scripture = counterpart.get("scripture") or "this Scripture"
+    theme = counterpart.get("theme") or "divine peace and angelic protection"
 
-    comment = (
-        f"🕊️ PRAY THE FULL NIGHTTIME SCRIPTURE MEDITATION:\n"
-        f"Tap the linked full-length prayer right above this title (or visit @TheSecretPlace) "
-        f"to experience the complete bedtime prayer of {scripture}:\n"
-        f"👉 {url}\n\n"
-        f"📖 Our printable 30-Night Bedside Prayer Journal & voluntary ministry support links are "
-        f"clickable directly on our @TheSecretPlace channel profile.\n\n"
-        f"Rest under God's covenant of {theme} tonight. "
-        f"Write 'AMEN' in faith and leave your prayer request below — we are interceding for your household! 🙏🕊️✨"
-    )
-    return comment.strip()
+    owner = normalize_channel_id(channel_id or counterpart.get("channel"))
+    return short_pinned_comment_for(owner, url=url, scripture=scripture,
+                                    theme=theme, footer="").strip()
 
 
-def enrich_short_description_with_bridge(description: str, short_key_or_title: str) -> str:
-    """Inject prominent bridge link and Selar sanctuary links into a faith Short description."""
+def enrich_short_description_with_bridge(description: str, short_key_or_title: str,
+                                        channel_id: str | None = None) -> str:
+    """Put the full-prayer link (and, where it exists, the store) in a Short's description.
+
+    Faith Shorts earn their long-form watch time through this link, so every channel
+    gets the header. The Selar/journal block belongs to the channel that owns that
+    funnel and is therefore capability-driven, not hardcoded.
+    """
+    from .channels import get_channel, normalize_channel_id
     from .social_pack import SELAR_JOURNAL_URL, SELAR_STORE_URL
 
     counterpart = resolve_longform_counterpart(short_key_or_title)
     url = counterpart["url"]
-    scripture = counterpart.get("scripture", "Scripture")
+    scripture = counterpart.get("scripture") or "Scripture"
+    owner = normalize_channel_id(channel_id or counterpart.get("channel"))
 
     header = (
         f"🕊️ PRAY THE COMPLETE 8-MINUTE {scripture.upper()} MEDITATION: 👉 {url}\n"
@@ -260,9 +270,12 @@ def enrich_short_description_with_bridge(description: str, short_key_or_title: s
 
     out = description if (url in description) else (header + description)
 
+    if not get_channel(owner).include_sanctuary_links:
+        return out
     if SELAR_JOURNAL_URL and SELAR_JOURNAL_URL not in out:
+        handle = get_channel(owner).handle
         selar_block = (
-            f"\n\n🕊️ BEDTIME PRAYER SANCTUARY (Also in @TheSecretPlace bio):\n"
+            f"\n\n🕊️ BEDTIME PRAYER SANCTUARY (Also in {handle} bio):\n"
             f"• 30-Night Scripture Protection Prayer Journal (PDF): {SELAR_JOURNAL_URL}\n"
             f"• Partner in Prayer & Voluntary Ministry Support: {SELAR_STORE_URL}"
         )

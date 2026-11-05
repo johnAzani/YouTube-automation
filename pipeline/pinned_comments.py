@@ -161,7 +161,8 @@ def generate_pastoral_pinned_comment(doc: ScriptDoc) -> str:
             from .shorts_bridge import generate_short_bridge_comment
 
             short_key = getattr(doc, "slug", "") or doc.title
-            return sanitize_persona_integrity(generate_short_bridge_comment(short_key))
+            return sanitize_persona_integrity(generate_short_bridge_comment(
+                short_key, channel_id=doc.explicit_channel or CONFIG.channel_id))
         except Exception:
             pass
 
@@ -175,9 +176,11 @@ def generate_pastoral_pinned_comment(doc: ScriptDoc) -> str:
             theme = verse_theme
             break
 
+    from .channel_capabilities import pinned_comment_for
     from .channels import get_channel
 
-    sanctuary_links = get_channel(doc.explicit_channel or CONFIG.channel_id).include_sanctuary_links
+    channel_id = doc.explicit_channel or CONFIG.channel_id
+    sanctuary_links = get_channel(channel_id).include_sanctuary_links
     selar_lines: list[str] = []
     if sanctuary_links and SELAR_JOURNAL_URL:
         selar_lines.append(f"📖 Printable 30-Night Bedside Prayer Journal: {SELAR_JOURNAL_URL}")
@@ -185,25 +188,11 @@ def generate_pastoral_pinned_comment(doc: ScriptDoc) -> str:
         selar_lines.append(f"🤍 Voluntary Ministry Support: {SELAR_STORE_URL}")
     selar_footer = ("\n\n" + "\n".join(selar_lines)) if selar_lines else ""
 
-    if (doc.explicit_channel or CONFIG.channel_id) == "prayer2":
-        morning_comment = (
-            f"🌅 Beloved family, if you are beginning this day with us, write 'AMEN' in faith to claim "
-            f"God's promise of {theme} over your home, your work, and your mind today.\n\n"
-            f"📖 Psalm 5:3 — 'My voice shalt thou hear in the morning, O Lord; in the morning will I "
-            f"direct my prayer unto thee, and will look up.'\n\n"
-            f"Drop your prayer requests below — our pastoral editorial team reads and intercedes over "
-            f"every single name. Go into today covered, calm, and confident. You are not alone. 🙏✨"
-        )
-        return sanitize_persona_integrity(morning_comment.strip())
-
-    comment = (
-        f"🕊️ Beloved family, if you are listening to this tonight, write 'AMEN' in faith to claim "
-        f"God's promise of {theme} over your home, your children, and your mind.\n\n"
-        f"📖 {scripture_hook}\n\n"
-        f"Drop your prayer requests below — our pastoral editorial team reads and intercedes over "
-        f"every single name before this night closes. Rest in holy stillness tonight. You are not alone. 🙏✨"
-        f"{selar_footer}"
-    )
+    # One template per channel, declared in the capability matrix: neither channel
+    # gets a bespoke code path (which is how The Morning Altar inherited a night
+    # comment in the first place).
+    comment = pinned_comment_for(
+        channel_id, theme=theme, scripture_hook=scripture_hook, footer=selar_footer)
     return sanitize_persona_integrity(comment.strip())
 
 

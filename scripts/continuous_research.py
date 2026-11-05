@@ -214,11 +214,22 @@ MORNING_ALTAR_ROADMAP = [
 
 
 def roadmap_for_channel(channel_id: str | None = None) -> list[dict]:
-    """The scripture roadmap that belongs to a channel (never shared)."""
-    value = str(channel_id or "").strip().lower().replace("_", "-")
-    if value in {"prayer2", "morning-altar", "the-morning-altar", "channel2"}:
-        return MORNING_ALTAR_ROADMAP
-    return SCRIPTURE_ROADMAP
+    """The scripture roadmap that belongs to a channel (never shared).
+
+    The mapping is declarative: each channel's capability block names its roadmap
+    namespace, so adding a channel means adding a roadmap and a registry entry, not
+    editing this function.
+    """
+    from pipeline.channel_capabilities import capabilities_for
+
+    namespace = capabilities_for(channel_id).roadmap
+    try:
+        return ROADMAPS[namespace]
+    except KeyError:
+        raise ValueError(
+            f"channel {channel_id!r} declares roadmap {namespace!r}, which does not "
+            f"exist; known roadmaps: {', '.join(sorted(ROADMAPS))}"
+        ) from None
 
 
 ROADMAPS = {

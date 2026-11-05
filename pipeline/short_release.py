@@ -46,6 +46,7 @@ class ShortEdition:
     niche: str
     tags: list[str]
     description: str
+    channel: str = "secret-place"
 
 
 EDITIONS: dict[str, ShortEdition] = {
@@ -368,10 +369,21 @@ def _renderer_script_keys() -> set[str]:
     return keys | authored_keys()
 
 
-def resolve_edition(key: str) -> ShortEdition | None:
-    """Return the ShortEdition for `key`, synthesizing one for brain-authored specs."""
+def resolve_edition(key: str, channel_id: str | None = None) -> ShortEdition | None:
+    """Return the ShortEdition for `key`, synthesizing one for authored specs.
+
+    Every edition knows which channel it belongs to, and every channel dresses its
+    own Shorts: the hand-written EDITIONS are The Secret Place's, and a brain-authored
+    spec carries the channel that wrote it. Passing `channel_id` filters to that
+    channel, so a release leg can never upload another channel's Short.
+    """
+    from .channels import normalize_channel_id
+
+    wanted = normalize_channel_id(channel_id) if channel_id is not None else None
+
     if key in EDITIONS:
-        return EDITIONS[key]
+        edition = EDITIONS[key]
+        return edition if wanted in (None, edition.channel) else None
     try:
         from .short_script import load_spec, spec_path
 
@@ -384,7 +396,13 @@ def resolve_edition(key: str) -> ShortEdition | None:
     except Exception:  # noqa: BLE001
         return None
 
+    from .channel_capabilities import brand_for
     from .metadata import smart_truncate_title
+
+    owner = getattr(spec, "channel", "secret-place")
+    if wanted is not None and owner != wanted:
+        return None
+    brand = brand_for(owner)
 
     label = (
         spec.scripture.strip()
@@ -392,48 +410,47 @@ def resolve_edition(key: str) -> ShortEdition | None:
         else (f"Psalm {spec.psalm}" if spec.psalm else key.removeprefix("short-").replace("-", " ").title())
     )
     hook = (spec.poster[3] if len(spec.poster) >= 4 and spec.poster[3] else "Divine Peace").title()
-    raw_title = f"Say This {label} Prayer Before You Sleep | {hook}"
+    raw_title = brand.short_title_template.format(label=label, hook=hook)
     clean_title = f"{smart_truncate_title(raw_title, 86)} #Shorts"
     tag_key = re.sub(r"[^a-zA-Z0-9]+", "", label)
     return ShortEdition(
         key=key,
         job_id=f"SHORT-{key.removeprefix('short-').upper()}",
-        slug=f"{key}-night-prayer",
+        slug=f"{key}-{brand.short_prayer_kind}-prayer",
         title=clean_title,
         niche="faith and prayer",
-        tags=[
-            "shorts",
-            label.lower(),
-            "night prayer",
-            "bedtime prayer",
-            "prayer of protection",
-            "daily scripture",
-            "peaceful sleep",
-            "the secret place",
-        ],
+        tags=["shorts", label.lower(), *brand.short_tags],
         description=(
             f"{spec.narration_text}\n\n"
             f"Scripture reference: {label} (KJV / Public Domain biblical text).\n"
-            "Produced by The Secret Place | Daily Prayer & Scripture.\n\n"
-            f"#Shorts #{tag_key} #NightPrayer #BedtimePrayer #DailyScripture #TheSecretPlace"
+            f"{brand.producer_line}\n\n"
+            f"{brand.short_hashtags.format(tag_key=tag_key)}"
         ),
+        channel=owner,
     )
 
 
-def queue_report(queue_dir: Path | None = None) -> list[dict]:
+def queue_report(queue_dir: Path | None = None,
+                 channel_id: str | None = None) -> list[dict]:
     """Every manifest in the Shorts queue with its verdict and the reason.
 
     The stage used to print "nothing to do" and exit 0, which is indistinguishable
     from success on the run page. Three approved manifests sat here for days while
     the renderer had no script for their keys.
     """
+    from .channels import normalize_channel_id
+
     qdir = SHORTS_QUEUE_DIR if queue_dir is None else queue_dir
     if not qdir.is_dir():
         return []
+    wanted = normalize_channel_id(channel_id) if channel_id is not None else None
     renderable = _renderer_script_keys()
     rows: list[dict] = []
     for path in sorted(qdir.glob("*.yml")):
         data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        owner = normalize_channel_id(data.get("channel"))
+        if wanted is not None and owner != wanted:
+            continue
         key = str(data.get("short") or data.get("edition") or "").strip()
         status = str(data.get("status", "")).strip().lower()
         brain_queued = bool(data.get("scripture") or data.get("authored_by_brain"))
@@ -444,25 +461,29 @@ def queue_report(queue_dir: Path | None = None) -> list[dict]:
                 "needs_renderer",
                 f"no scene script {key!r} in content/shorts-scripts/ or tools/shorts.py",
             )
-        elif resolve_edition(key) is None:
+        elif resolve_edition(key, channel_id=owner) is None:
             verdict, reason = "unusable", f"unknown short key {key!r} not in EDITIONS or shorts-scripts"
         elif status != "approved":
             verdict, reason = "not_approved", f"status is {status or 'missing'}"
         else:
             verdict, reason = "ready", "will render on the next run"
-        rows.append({"file": path.name, "short": key, "status": status,
-                     "verdict": verdict, "reason": reason})
+        rows.append({"file": path.name, "short": key, "channel": owner,
+                     "status": status, "verdict": verdict, "reason": reason})
     return rows
 
 
 def select_next_queued_short(
     queue_dir: Path | None = None,
     published_dir: Path | None = None,
+    channel_id: str | None = None,
 ) -> tuple[Path, str] | None:
-    """Return `(manifest_path, short_key)` for the first approved or quota-resumed Short in queue."""
+    """Return `(manifest_path, short_key)` for this channel's next ready Short."""
+    from .channels import normalize_channel_id as _norm
+
     qdir = SHORTS_QUEUE_DIR if queue_dir is None else queue_dir
     if not qdir.is_dir():
         return None
+    wanted = _norm(channel_id if channel_id is not None else CONFIG.channel_id)
 
     # Determine published directory for duplicate validation
     pdir: Path | None = None
@@ -475,6 +496,8 @@ def select_next_queued_short(
 
     for path in sorted(qdir.glob("*.yml")):
         data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        if _norm(data.get("channel")) != wanted:
+            continue  # one channel's Short never publishes on another's leg
         raw_status = str(data.get("status", "")).strip().lower()
 
         # Check if job was paused due to daily quota exhaustion
@@ -538,7 +561,7 @@ def select_next_queued_short(
             continue
 
         # Skip manifests referencing short keys that aren't valid EDITIONS or authored specs
-        if resolve_edition(key) is None:
+        if resolve_edition(key, channel_id=wanted) is None:
             print(f"[queue] Skipping manifest {path.name}: unknown short key {key!r} not in EDITIONS")
             continue
 
@@ -551,7 +574,8 @@ def _build_script_doc(edition: ShortEdition) -> ScriptDoc:
     if edition.niche == "faith and prayer":
         try:
             from .shorts_bridge import enrich_short_description_with_bridge
-            desc = enrich_short_description_with_bridge(desc, edition.key)
+            desc = enrich_short_description_with_bridge(
+                desc, edition.key, channel_id=edition.channel)
         except Exception:
             pass
 
@@ -563,6 +587,7 @@ def _build_script_doc(edition: ShortEdition) -> ScriptDoc:
             "slug": edition.slug,
             "status": "approved",
             "format": "short",
+            "channel": edition.channel,
             "niche": edition.niche,
             "category": "education",
             "tags": list(edition.tags),
@@ -610,6 +635,7 @@ def _write_published_record(
         f"slug: {edition.slug}\n"
         "status: published\n"
         "format: short\n"
+        f"channel: {edition.channel}\n"
         f"niche: {edition.niche}\n"
         "category: education\n"
         f'published_on: "{today}"\n'
@@ -828,9 +854,12 @@ def run_short_release(
     force: bool = False,
     manifest_path: Path | None = None,
 ) -> dict:
-    edition = resolve_edition(short_key)
+    edition = resolve_edition(short_key, channel_id=CONFIG.channel_id)
     if edition is None:
-        raise RuntimeError(f"Unknown Short edition {short_key!r}; expected one of {sorted(EDITIONS)}")
+        known = sorted(EDITIONS) + sorted(k for k in _renderer_script_keys() if k not in EDITIONS)
+        raise RuntimeError(
+            f"Unknown Short edition {short_key!r} for channel {CONFIG.channel_id!r}; "
+            f"known editions: {known}")
 
     doc = _build_script_doc(edition)
     published_record = PUBLISHED_DIR / f"{edition.slug}.md"
@@ -993,7 +1022,8 @@ def run_short_release(
             try:
                 from .shorts_bridge import enrich_short_description_with_bridge
 
-                short_desc = enrich_short_description_with_bridge(edition.description, edition.key)
+                short_desc = enrich_short_description_with_bridge(
+                    edition.description, edition.key, channel_id=edition.channel)
             except Exception as bridge_exc:  # noqa: BLE001
                 print(f"[short-release] Notice: short bridge enrichment skipped: {bridge_exc}")
 
@@ -1121,7 +1151,7 @@ def _author_missing_short_specs() -> list[dict]:
     and the queue keeps reporting itself as stalled.
     """
     try:
-        rows = queue_report()
+        rows = queue_report(channel_id=CONFIG.channel_id)
     except Exception as exc:  # noqa: BLE001
         print(f"[short-release] cannot inspect queue for authoring: {exc}")
         return []
@@ -1142,13 +1172,22 @@ def recent_short_published_within(
     hours: float = 3.0,
     published_dir: Path | None = None,
     now: datetime | None = None,
+    channel_id: str | None = None,
 ) -> tuple[Path, float] | None:
-    """Return `(receipt_path, age_minutes)` if a Short published within `hours`."""
+    """Return `(receipt_path, age_minutes)` if a Short published within `hours`.
+
+    Scoped per channel: one channel's Short must not pause the other channel's
+    slot, which is what a shared pacing guard would do the moment both channels
+    publish Shorts.
+    """
     if hours <= 0:
         return None
     directory = published_dir or PUBLISHED_DIR
     if not directory.is_dir():
         return None
+    from .channels import normalize_channel_id
+
+    wanted = normalize_channel_id(channel_id) if channel_id is not None else None
     now_dt = now or datetime.now(timezone.utc)
     newest: tuple[Path, float] | None = None
     for path in sorted(directory.glob("short-*.md")):
@@ -1156,6 +1195,11 @@ def recent_short_published_within(
             text = path.read_text(encoding="utf-8")
             if "youtube_video_id:" not in text:
                 continue
+            if wanted is not None:
+                m_ch = re.search(r"^channel:\s*(\S+)", text, re.M)
+                owner = normalize_channel_id(m_ch.group(1) if m_ch else None)
+                if owner != wanted:
+                    continue
             m = re.search(r'^published_at:\s*"?([^"\n]+)"?', text, re.M)
             if not m:
                 continue
@@ -1191,14 +1235,14 @@ def main(argv: list[str] | None = None) -> int:
         manifest_path: Path | None = None
         short_key = args.short.strip()
         if args.next and not short_key:
-            queued = select_next_queued_short()
+            queued = select_next_queued_short(channel_id=CONFIG.channel_id)
             if queued is None:
                 # Before declaring nothing to do, have the brain author the specs
                 # the queue is blocked on.
                 if _author_missing_short_specs():
-                    queued = select_next_queued_short()
+                    queued = select_next_queued_short(channel_id=CONFIG.channel_id)
             if queued is None:
-                rows = queue_report()
+                rows = queue_report(channel_id=CONFIG.channel_id)
                 ready = [r for r in rows if r["verdict"] == "ready"]
                 blocked = [r for r in rows if r["verdict"] in {"needs_renderer", "unusable", "not_approved"}]
                 print("[short-release] nothing to do — no Short in the queue can render right now.")
@@ -1217,7 +1261,8 @@ def main(argv: list[str] | None = None) -> int:
                     min_gap_h = float(os.environ.get("SHORTS_MIN_GAP_HOURS", "3.0"))
                 except ValueError:
                     min_gap_h = 3.0
-                recent = recent_short_published_within(hours=min_gap_h)
+                recent = recent_short_published_within(
+                    hours=min_gap_h, channel_id=CONFIG.channel_id)
                 if recent is not None:
                     rec_path, age_min = recent
                     print(

@@ -70,6 +70,17 @@ jobs:
           fi
           exit 0
 
+      - name: Prove the channels are in parity
+        # The parity rule is enforced by tests/test_channel_parity.py, and printed
+        # here so a run page shows it too: every channel has every capability, and
+        # neither channel has a code path the other lacks.
+        run: |
+          set -o pipefail
+          python scripts/channel_parity.py 2>&1 | tee parity.log
+          rc=${PIPESTATUS[0]}
+          { echo "### ⚖️ Channel parity (exit $rc)"; echo '```'; cat parity.log; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          exit "$rc"
+
       - name: File or close the stall issue
         if: github.event_name != 'push'
         # The owner is not watching the Actions tab. An issue is an email, so the

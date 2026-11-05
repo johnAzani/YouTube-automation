@@ -164,31 +164,30 @@ jobs:
           fi
           python scripts/check_prayer_alignment.py --model output/alignment-model
 
-      - name: Check the Morning Altar queue
-        # The Morning Altar brain now supplies `channel: prayer2` scripts
-        # unattended (gemini_brain.yml + the repair pass below). An empty
-        # Morning Altar queue must still idle this leg with a notice, not
-        # fail the whole slot — free-tier exhaustion is a pause, not a
-        # fault, and The Secret Place leg must never be blocked by it.
+      - name: Check this channel's queue
+        # Both channels get the same gate: an empty queue idles that leg with a
+        # notice instead of failing the slot (free-tier exhaustion is a pause, not
+        # a fault), and one channel's empty queue can never block the other's leg.
         id: channel_queue
-        if: ${{ matrix.channel == 'prayer2' && inputs.job == '' && inputs.short == '' }}
+        if: ${{ inputs.job == '' && inputs.short == '' }}
         run: |
           python - <<'PYQUEUE'
           import os
 
           from pipeline.run import select_jobs
 
+          channel = os.environ["CHANNEL_ID"]
           jobs = select_jobs(False, None, True)
           has_job = bool(jobs)
-          print(f"Morning Altar next publishable job: {jobs[0] if has_job else 'none'}")
+          print(f"{channel} next publishable job: {jobs[0] if has_job else 'none'}")
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
               fh.write(f"has_job={str(has_job).lower()}\n")
           if not has_job:
-              print("::notice title=Morning Altar queue empty::No approved "
-                    "Morning Altar script is ready, so this leg uploads "
-                    "nothing. The Morning Altar brain supplies approved "
-                    "`channel: prayer2` scripts to content/queue/; the next "
-                    "slot will publish the first one it queues.")
+              print(f"::notice title={channel} queue empty::No approved {channel} "
+                    f"script is ready, so this leg uploads nothing. Its brain "
+                    f"supplies approved scripts to content/queue/ for this "
+                    f"channel only; the next slot will publish the first one "
+                    f"it queues.")
           PYQUEUE
 
       - name: Restore stock-asset cache
@@ -226,21 +225,16 @@ jobs:
         # is empty, and killing the run first would lose that upload. The alarm for
         # "nothing is publishable" is the watchdog at the end of this job.
         continue-on-error: true
-        # Queue repair is channel-scoped: each leg lengthens/authors only
-        # its own channel's scripts, with its own Gemini quota pool. The
-        # Morning Altar pass counts only `channel: prayer2` publishable
-        # scripts and stages no Secret Place Short. Non-blocking + the
-        # empty-queue gate above mean exhaustion idles this leg green.
+        # Queue repair is channel-scoped and identical on both channels: each leg
+        # lengthens/authors only its own channel's scripts, with its own Gemini
+        # quota pool. Non-blocking + the empty-queue gate above mean exhaustion
+        # idles this leg green.
         if: ${{ inputs.short == '' && inputs.job == '' }}
         env:
           GITHUB_ACTIONS: "true"
         run: |
           set -o pipefail
-          if [ "$CHANNEL_ID" = "prayer2" ]; then
-            python scripts/gemini_brain.py --ensure-supply-for prayer2 --min-publishable 3 2>&1 | tee supply.log
-          else
-            python scripts/gemini_brain.py --ensure-supply 2>&1 | tee supply.log
-          fi
+          python scripts/gemini_brain.py --ensure-supply-for "$CHANNEL_ID" --min-publishable 3 2>&1 | tee supply.log
           { echo "### 📜 Queue repair"; echo '```'; grep -v '^\[run\]' supply.log | tail -30; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Render the Short (9:16)
@@ -249,9 +243,10 @@ jobs:
         # timeout instead of living inside one opaque 30-minute step.
         continue-on-error: true
         timeout-minutes: 30
-        # Authored Shorts are Secret Place editions; skipped for prayer2 until
-        # Morning Altar Shorts get their own queue (wrong-channel safety).
-        if: ${{ inputs.job == '' && matrix.channel != 'prayer2' }}
+        # Every channel renders and uploads its own Shorts: manifests carry their
+        # channel and the selector filters by this leg's CHANNEL_ID, so a Short can
+        # never be uploaded to the wrong channel.
+        if: ${{ inputs.job == '' }}
         run: |
           set -o pipefail
           if [ -n "${{ inputs.short }}" ]; then
@@ -302,7 +297,7 @@ jobs:
         # a slow runner, and the per-stage progress lines now say where the time
         # went if it ever comes close.
         timeout-minutes: 170
-        if: ${{ inputs.short == '' && (matrix.channel != 'prayer2' || inputs.job != '' || steps.channel_queue.outputs.has_job == 'true') }}
+        if: ${{ inputs.short == '' && (inputs.job != '' || steps.channel_queue.outputs.has_job == 'true') }}
         env:
           # An append-only trail of what this step was doing, written as it runs.
           # The step summary needs a GitHub sign-in to read and the log archive is

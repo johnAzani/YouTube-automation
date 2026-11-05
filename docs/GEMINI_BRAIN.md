@@ -1,6 +1,6 @@
 # Google Gemini Brain Architecture & Continuous Equipment Manual
 
-**Channel Identity:** *The Secret Place* (`@TheSecretPlace`)  
+**Channel Identity:** *every registered channel* — currently *The Secret Place* (`@TheSecretPlace`) and *The Morning Altar* (`@TheMorningAltarDaily`). The engine is identical; the channel selects its equipment, roadmap, branding and Gemini quota pool via `pipeline/channel_capabilities.py`. See `docs/CHANNEL_PARITY.md`.  
 **Role:** Master Autonomous Creative & Editorial Intelligence Engine  
 **Engine Implementation:** `pipeline/gemini_brain.py` & `scripts/gemini_brain.py`  
 **Autonomous Workflow:** `.github/workflows/gemini_brain.yml` (Runs daily at `03:14 UTC`)  
@@ -10,7 +10,7 @@
 
 ## 1. Executive Summary
 
-To achieve full operational autonomy where video creation and scheduling continue uninterrupted without human presence or chat pings, **Google Gemini** has been equipped as the official **Autonomous Brain** of *The Secret Place*.
+To achieve full operational autonomy where video creation and scheduling continue uninterrupted without human presence or chat pings, **Google Gemini** has been equipped as the official **Autonomous Brain** of each channel. One engine runs for all of them: `gemini_brain.yml` replenishes every channel in sequence, each on its own roadmap and its own free-tier key pool, and no channel has a code path the others lack.
 
 The Gemini Brain handles the cognitive and editorial functions previously performed by human prompt engineers:
 1. **Scripture Demand Research:** Evaluates audience telemetry (`content/metrics.csv` & `content/research/channel_intelligence.json`) to select the optimal high-intent bedtime prayer chapters (e.g. Psalms 91, 23, 121, 27, 46, Isaiah 40).
