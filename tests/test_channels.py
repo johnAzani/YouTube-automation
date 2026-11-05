@@ -16,7 +16,7 @@ from pipeline.channels import (
 )
 from pipeline.config import CONFIG
 from pipeline.metadata import build_description
-from pipeline.script_doc import ScriptDoc
+from pipeline.script_doc import ScriptDoc, parse_script
 from pipeline.upload import verify_target_channel
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -210,10 +210,6 @@ class WorkflowSelectorTests(unittest.TestCase):
         self.assertIn("Morning Altar queue empty", text)
         self.assertIn("steps.channel_queue.outputs.has_job == 'true'", text)
 
-
-if __name__ == "__main__":
-    unittest.main()
-
     def test_produce_workflow_exposes_replacement_run_override(self):
         # A corrected re-render of an already-uploaded job (0036 after the
         # tts-v2 narration defect) must be a conscious, per-run choice:
@@ -259,3 +255,7 @@ if __name__ == "__main__":
         self.assertEqual(doc.channel, "prayer2")
         self.assertEqual(doc.meta.get("youtube_video_id"), "_vp27ZYPYaY")
         self.assertEqual(doc.meta.get("published_on"), "2026-11-05")
+
+
+if __name__ == "__main__":
+    unittest.main()
