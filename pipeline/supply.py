@@ -56,6 +56,7 @@ SLOTS_PER_DAY = 3
 
 @dataclass
 class SupplyReport:
+    channel: str = ""
     publishable_before: int = 0
     expanded: list[dict[str, Any]] = field(default_factory=list)
     authored: Any = None
@@ -71,6 +72,7 @@ class SupplyReport:
 
     def as_dict(self) -> dict[str, Any]:
         return {
+            "channel": self.channel,
             "publishable_before": self.publishable_before,
             "wanted": self.wanted,
             "publishable_after": self.publishable_after,
@@ -91,39 +93,75 @@ class SupplyReport:
         return "; ".join(bits)
 
 
-def publishable_longform(queue_dir: Path | None = None) -> list[Path]:
+def _wanted_channel(channel_id: str | None, brain=None) -> str | None:
+    if channel_id:
+        from .channels import normalize_channel_id
+        return normalize_channel_id(channel_id)
+    brain_channel = getattr(brain, "channel_id", None) if brain is not None else None
+    if brain_channel:
+        from .channels import normalize_channel_id
+        return normalize_channel_id(brain_channel)
+    return None
+
+
+def publishable_longform(queue_dir: Path | None = None,
+                         channel_id: str | None = None) -> list[Path]:
     """Approved scripts that are actually over the word floor.
 
     Uses the production selector, so this can never disagree with what the
-    publisher will pick up.
+    publisher will pick up. When `channel_id` is given the count is strictly
+    that channel's: a healthy Secret Place queue must never make a starving
+    Morning Altar queue look supplied (and vice versa).
     """
-    from .run import select_jobs
+    from .channels import normalize_channel_id
+    from .script_doc import MIN_LONGFORM_WORDS, parse_script
+
+    wanted = normalize_channel_id(channel_id) if channel_id else None
 
     if queue_dir is not None:  # tests: a scratch queue
-        from .script_doc import MIN_LONGFORM_WORDS, parse_script
-
         out: list[Path] = []
         for path in sorted(Path(queue_dir).glob("*.md")):
             try:
                 doc = parse_script(path)
             except Exception:  # noqa: BLE001
                 continue
+            if wanted and doc.channel != wanted:
+                continue
             if str(doc.status).strip().lower() == "approved" and doc.word_count >= MIN_LONGFORM_WORDS:
                 out.append(path)
         return out
-    return select_jobs(all_flag=False, job_path=None, next_flag=False) or []
+
+    if wanted is None:
+        from .run import select_jobs
+        return select_jobs(all_flag=False, job_path=None, next_flag=False) or []
+
+    # Explicit channel against the real queue: scan with the same rules the
+    # production selector applies (approved, over floor, own channel only).
+    from .config import QUEUE_DIR
+    out = []
+    for path in sorted(Path(QUEUE_DIR).glob("*.md")):
+        try:
+            doc = parse_script(path)
+        except Exception:  # noqa: BLE001
+            continue
+        if doc.channel != wanted:
+            continue
+        if str(doc.status).strip().lower() == "approved" and doc.word_count >= MIN_LONGFORM_WORDS:
+            out.append(path)
+    return out
 
 
-def under_gate_jobs(queue_dir: Path | None = None):
+def under_gate_jobs(queue_dir: Path | None = None, channel_id: str | None = None):
     from tools.expand_scripts import under_gate
 
     if queue_dir is None:
-        return under_gate()
-    return under_gate(sorted(Path(queue_dir).glob("*.md")))
+        return under_gate(channel_id=channel_id)
+    return under_gate(sorted(Path(queue_dir).glob("*.md")), channel_id=channel_id)
 
 
 def expand_backlog(limit: int = MAX_EXPANSIONS_PER_RUN, target: int = EXPANSION_TARGET_WORDS,
-                   queue_dir: Path | None = None, write: bool = True) -> list[dict[str, Any]]:
+                   queue_dir: Path | None = None, write: bool = True,
+                   channel_id: str | None = None) -> list[dict[str, Any]]:
     """Lengthen up to `limit` approved-but-short scripts. Returns one row each.
 
     A provider that cannot write (no key, quota, model refusal) is reported per
@@ -133,7 +171,7 @@ def expand_backlog(limit: int = MAX_EXPANSIONS_PER_RUN, target: int = EXPANSION_
 
     rows: list[dict[str, Any]] = []
     calls = 0
-    for job in under_gate_jobs(queue_dir)[:limit]:
+    for job in under_gate_jobs(queue_dir, channel_id=channel_id)[:limit]:
         if calls >= MAX_MODEL_CALLS_PER_RUN:
             break
         result = expand_job(job, provider="gemini", target=target, write=write)
@@ -221,6 +259,17 @@ def author_new(brain, expand_target: int = EXPANSION_TARGET_WORDS) -> dict[str, 
         doc = parse_script(result.longform_path)
 
     row["words"] = doc.word_count
+    # Channel is a hard gate, not metadata decoration: a brain scoped to one
+    # channel must never approve a script that declares (or defaults to)
+    # another. Undeclared defaults to secret-place, so a Morning Altar brain
+    # whose model omitted `channel: prayer2` fails here instead of feeding
+    # the wrong channel.
+    brain_channel = _wanted_channel(None, brain)
+    if brain_channel and doc.channel != brain_channel:
+        row["ok"] = False
+        row["reason"] = (f"authored script declares channel {doc.channel!r}, "
+                         f"expected {brain_channel!r}; refused")
+        return row
     if doc.word_count < MIN_LONGFORM_WORDS:
         row["ok"] = False
         row["reason"] = (f"authored {doc.word_count} words; still under the "
@@ -257,16 +306,19 @@ def ensure_supply(brain, limit: int = MAX_EXPANSIONS_PER_RUN,
                   target: int = EXPANSION_TARGET_WORDS,
                   queue_dir: Path | None = None, write: bool = True,
                   min_publishable: int = 1,
-                  max_authors: int = MAX_AUTHORS_PER_RUN) -> SupplyReport:
+                  max_authors: int = MAX_AUTHORS_PER_RUN,
+                  channel_id: str | None = None) -> SupplyReport:
     """The whole loop: lengthen the backlog, author what is still missing, verify.
 
     `min_publishable` is how much runway to leave behind: 1 means "tomorrow can
     publish", 2 means "tomorrow and the day after". Authoring stops at that count
     so a healthy queue spends nothing.
     """
+    channel = _wanted_channel(channel_id, brain)
     report = SupplyReport()
+    report.channel = channel or ""
     report.wanted = min_publishable
-    report.publishable_before = len(publishable_longform(queue_dir))
+    report.publishable_before = len(publishable_longform(queue_dir, channel_id=channel))
 
     # Lengthening is the only way the under-floor backlog ever becomes publishable,
     # and it was capped at three per run no matter how far behind the queue was:
@@ -276,12 +328,12 @@ def ensure_supply(brain, limit: int = MAX_EXPANSIONS_PER_RUN,
     limit = max(limit, min(shortfall, MAX_EXPANSIONS_WHEN_EMPTY))
     if report.publishable_before == 0:
         limit = max(limit, MAX_EXPANSIONS_WHEN_EMPTY)
-    report.expanded = expand_backlog(limit=limit, target=target, queue_dir=queue_dir, write=write)
+    report.expanded = expand_backlog(limit=limit, target=target, queue_dir=queue_dir, write=write, channel_id=channel)
     for row in report.expanded:
         if row.get("problems"):
             report.blocked.append(f"{row['job_id']}: {row['problems'][0]}")
 
-    report.publishable_after = len(publishable_longform(queue_dir))
+    report.publishable_after = len(publishable_longform(queue_dir, channel_id=channel))
 
     authored: list[dict[str, Any]] = []
     for _ in range(max(0, max_authors)):
@@ -292,7 +344,7 @@ def ensure_supply(brain, limit: int = MAX_EXPANSIONS_PER_RUN,
         if not row.get("ok"):
             report.blocked.append(f"authoring: {row.get('reason')}")
             break
-        report.publishable_after = len(publishable_longform(queue_dir))
+        report.publishable_after = len(publishable_longform(queue_dir, channel_id=channel))
 
     report.authored = authored[0] if len(authored) == 1 else (authored or None)
     report.authored_all = authored

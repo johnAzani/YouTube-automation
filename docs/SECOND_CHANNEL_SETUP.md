@@ -40,11 +40,14 @@ Scheduled (cron) Produce runs serve **both** channels (owner decision,
 2026-11-05): each slot runs The Secret Place and then The Morning Altar,
 sequentially, and `prayer2` uploads are **public with auto-publish**, on the
 same terms as `secret-place`. A manual Produce dispatch still produces only
-the channel selected. For `prayer2` the Produce workflow skips the Secret
-Place queue-repair and authored-Shorts steps, and because Morning Altar
-scripts are human-queued (no brain supply yet), a scheduled `prayer2` leg
-with no approved `channel: prayer2` script in `content/queue/` idles with a
-"Morning Altar queue empty" notice instead of failing the slot.
+the channel selected. For `prayer2` the Produce workflow runs a
+channel-scoped queue-repair pass (Secret Place Shorts stay Secret Place
+only). The Morning Altar brain now owns Morning Altar script supply
+unattended: `gemini_brain.yml` replenishes both channels (each with its
+own Gemini quota pool), so a scheduled `prayer2` leg normally finds an
+approved `channel: prayer2` script in `content/queue/`. If free-tier
+capacity is exhausted, the leg still idles with a "Morning Altar queue
+empty" notice instead of failing the slot or spending money ($0 lock).
 
 ## 2. What only you can do (your Google account — ~30 minutes)
 
@@ -181,8 +184,11 @@ the repo receipt was reconciled with the live video ID afterwards, and
 exists. The same tts-v4 was then re-proven on channel 1: the corrected
 Psalm 27 replacement `BFlkzRVMf8o` (run `42033981791`, 2026-11-05)
 uploaded **private** to The Secret Place, wrote its own receipt
-cleanly, and was owner-verified — publish it in Studio and delete
-`7ll7w1hYf7o` there. Remaining owner actions: watermark + channel
+cleanly, and was owner-verified. The owner has since flipped
+`BFlkzRVMf8o` **public** in Studio and deleted the defective
+`7ll7w1hYf7o` there (owner-completed 2026-11-05); the published
+receipt in `content/published/0011-*.md` now records `privacy: public`
+for that video. Remaining owner actions: watermark + channel
 keywords via desktop Studio only. Earlier: run #25's
 two-scope token was fixed (three scopes saved in Data Access, token
 re-minted, secret replaced — run #27 got past the credential exchange,
@@ -224,15 +230,18 @@ Actions minutes (public repo), ffmpeg, stock sources.
    produce The Morning Altar right after The Secret Place, uploading
    **public with auto-publish**. Note YouTube can still clamp uploads from
    an unaudited API project to private server-side; check the release
-   ticket's recorded privacy after the first scheduled upload. Keep the
-   Morning Altar queue stocked by hand — until it has its own supply pass,
-   an empty queue means the slot idles (watch for the "Morning Altar queue
-   empty" notice) rather than failing.
+   ticket's recorded privacy after the first scheduled upload. The
+   Morning Altar brain keeps the queue stocked unattended (Morning Altar
+   roadmap, sunrise branding, `PRAYER2_` Gemini pool, no companion
+   Shorts); if free-tier capacity is exhausted, an empty queue means the
+   slot idles (watch for the "Morning Altar queue empty" notice) rather
+   than failing or spending money.
 4. Metrics / Comments / Set-thumbnail also accept the same `channel`
-   selector for manual runs. Community, growth-autopilot, monitor and the
-   brain still operate on Channel 1 only until Morning Altar has its own
-   data history; the scheduler supervisor's dropped-slot recovery does
-   dispatch both Produce channels.
+   selector for manual runs. Community, growth-autopilot and monitor
+   still operate on Channel 1 only until Morning Altar has its own data
+   history; the brain now replenishes **both** channels, and the
+   scheduler supervisor's dropped-slot recovery dispatches both Produce
+   channels.
 
 ## 4. Adding a third channel later
 

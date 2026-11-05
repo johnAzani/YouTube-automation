@@ -38,9 +38,34 @@ DEFAULT_VOICE = "Charon"
 FALLBACK_EDGE_VOICE = "en-US-DavisNeural"
 
 
-def get_gemini_api_key() -> Optional[str]:
+def gemini_key_names(channel_id: str | None = None) -> list[str]:
+    """Env names checked for a channel's Gemini key, in priority order.
+
+    Each channel owns a separate Gemini project/quota pool (see
+    pipeline/channels.py): `prayer2` reads PRAYER2_GEMINI_API_KEY first.
+    The canonical GEMINI_API_KEY / GOOGLE_API_KEY remain fallbacks because
+    workflows map the selected channel's secret onto GEMINI_API_KEY, and
+    channel 1 (secret-place) is unprefixed by design.
+    """
+    names: list[str] = []
+    if channel_id:
+        try:
+            from .channels import get_channel
+            prefixed = get_channel(channel_id).secret_name("GEMINI_API_KEY")
+            if prefixed not in names:
+                names.append(prefixed)
+        except Exception:
+            pass
+    for name in ("GEMINI_API_KEY", "GOOGLE_API_KEY"):
+        if name not in names:
+            names.append(name)
+    return names
+
+
+def get_gemini_api_key(channel_id: str | None = None) -> Optional[str]:
     """Look for Gemini API key across common environment variables and .env file."""
-    for key in ("GEMINI_API_KEY", "GOOGLE_API_KEY"):
+    names = gemini_key_names(channel_id)
+    for key in names:
         val = os.environ.get(key)
         if val and val.strip():
             return val.strip()
@@ -53,7 +78,7 @@ def get_gemini_api_key() -> Optional[str]:
             if line.startswith("#") or "=" not in line:
                 continue
             k, v = line.split("=", 1)
-            if k.strip() in ("GEMINI_API_KEY", "GOOGLE_API_KEY") and v.strip():
+            if k.strip() in names and v.strip():
                 return v.strip().strip('"').strip("'")
     return None
 

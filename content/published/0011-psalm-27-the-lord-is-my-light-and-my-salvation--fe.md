@@ -3,7 +3,7 @@ id: '0011'
 title: Psalm 27 Night Prayer for Sleep & Peace | Fear No Evil Tonight
 slug: psalm-27-the-lord-is-my-light-and-my-salvation--fe
 status: published
-privacy: private
+privacy: public
 format: longform
 niche: faith and prayer
 category: education

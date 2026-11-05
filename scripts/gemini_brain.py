@@ -32,6 +32,7 @@ from pipeline.gemini_brain import BrainAuthoringError, GeminiBrain
 
 def cmd_audit(brain: GeminiBrain) -> int:
     audit = brain.audit_status()
+    print(f"Channel:            {brain.channel_id} ({brain.channel.display_name})")
     equipped = list_equipped_modules()
     status = brain.api_status()
     if status["client_ready"]:
@@ -94,6 +95,29 @@ def cmd_generate_next(brain: GeminiBrain) -> int:
     return 1
 
 
+def cmd_ensure_supply_for_channel(channel_id: str, max_expansions: int = 3,
+                                  target: int = 900,
+                                  min_publishable: int | None = None,
+                                  min_runway: float | None = None) -> int:
+    """Run the supply loop for one named channel with its own brain/quota.
+
+    This is the Morning Altar entry point: it builds a channel-scoped brain
+    (PRAYER2_ Gemini pool, morning roadmap/branding, no Short staging) and
+    counts only that channel's publishable queue. Fail-safe: an exhausted
+    free tier or rejected script reports blocked and returns non-zero for
+    the scheduled workflow, or an idle notice for the Produce repair pass —
+    it never spends money and never approves defective work.
+    """
+    from pipeline.gemini_brain import GeminiBrain as _Brain
+    brain = _Brain(channel_id=channel_id)
+    if min_runway is not None:
+        wanted = max(1, int(min_runway * 3 + 0.999))
+        return cmd_ensure_supply(brain, max_expansions, target,
+                                 min_publishable=wanted)
+    return cmd_ensure_supply(brain, max_expansions, target,
+                             min_publishable=min_publishable)
+
+
 def cmd_auto_replenish(brain: GeminiBrain, min_days: float) -> int:
     """The scheduled brain pass: keep `min_days` of runway publishable.
 
@@ -108,7 +132,8 @@ def cmd_auto_replenish(brain: GeminiBrain, min_days: float) -> int:
 
     wanted = max(1, math.ceil(min_days * SLOTS_PER_DAY))
     return cmd_ensure_supply(brain, max_expansions=SLOTS_PER_DAY, target=900,
-                             min_publishable=wanted)
+                             min_publishable=wanted,
+                             channel_id=getattr(brain, "channel_id", None))
 
 
 def cmd_author_shorts(brain: GeminiBrain) -> int:
@@ -158,14 +183,16 @@ def cmd_preflight(brain: GeminiBrain) -> int:
 
 
 def cmd_ensure_supply(brain: GeminiBrain, max_expansions: int, target: int,
-                      min_publishable: int | None = None) -> int:
+                      min_publishable: int | None = None,
+                      channel_id: str | None = None) -> int:
     """Lengthen the backlog, author if still empty, verify — one unattended loop."""
     from pipeline.supply import SLOTS_PER_DAY, ensure_supply
 
     if min_publishable is None:
         min_publishable = SLOTS_PER_DAY
     report = ensure_supply(brain, limit=max_expansions, target=target,
-                           min_publishable=min_publishable)
+                           min_publishable=min_publishable,
+                           channel_id=channel_id or getattr(brain, "channel_id", None))
     for row in report.expanded:
         state = "WROTE" if row.get("written") else "skipped"
         print(f"[brain] expand {row['job_id']}: {row['before']} -> {row['after']} words {state}")
@@ -202,9 +229,17 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--author-shorts", action="store_true",
                         help="Author scene specs for queued Shorts that have no renderer")
     parser.add_argument("--min-runway", type=float, default=2.0, help="Minimum runway days threshold (default: 2.0)")
+    parser.add_argument("--channel", default=None,
+                        help="Channel to supply: secret-place (default) or prayer2 (The Morning Altar)")
+    parser.add_argument("--ensure-supply-for", dest="ensure_supply_for", default=None,
+                        help="Run the supply loop for this channel id with a channel-scoped brain")
 
     args = parser.parse_args(argv)
-    brain = GeminiBrain()
+    if args.ensure_supply_for:
+        return cmd_ensure_supply_for_channel(
+            args.ensure_supply_for, max_expansions=args.max_expansions,
+            target=args.target, min_publishable=args.min_publishable)
+    brain = GeminiBrain(channel_id=args.channel) if args.channel else GeminiBrain()
 
     if args.equip:
         return cmd_equip()
@@ -214,8 +249,13 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_preflight(brain)
     if args.ensure_supply:
         return cmd_ensure_supply(brain, args.max_expansions, args.target,
-                                 args.min_publishable)
+                                 args.min_publishable,
+                                 channel_id=args.channel)
     if args.author_shorts:
+        if getattr(brain, "channel_id", "secret-place") == "prayer2":
+            print("[gemini-brain] Shorts authoring is Secret Place only; "
+                  "The Morning Altar stages no companion Shorts in this phase.")
+            return 0
         return cmd_author_shorts(brain)
     if args.auto_replenish:
         return cmd_auto_replenish(brain, args.min_runway)

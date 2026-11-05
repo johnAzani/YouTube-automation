@@ -176,6 +176,16 @@ def check_queues(report: Report, max_publish_age: timedelta = MAX_PUBLISH_AGE,
                        f"nothing in content/queue/ is approved and over the "
                        f"{MIN_LONGFORM_WORDS}-word floor. The brain should have lengthened "
                        f"or authored one; check `python scripts/gemini_brain.py --ensure-supply`.")
+        if row["queue"] == "longform:prayer2" and row["ready"] == 0:
+            from pipeline.script_doc import MIN_LONGFORM_WORDS
+
+            # Morning Altar starvation must not hide behind a healthy
+            # Secret Place queue: its scheduled legs idle green by design,
+            # so this watchdog row is the alarm that supply has stopped.
+            report.add("morning altar queue",
+                       f"no Morning Altar (`channel: prayer2`) script is approved and over the "
+                       f"{MIN_LONGFORM_WORDS}-word floor. The Morning Altar brain should have "
+                       f"authored one; check `python scripts/gemini_brain.py --ensure-supply-for prayer2`.")
         if row["queue"] == "shorts" and row["ready"] == 0:
             report.add("shorts queue",
                        f"no Short can render ({row['note']}). Check "

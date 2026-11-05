@@ -28,17 +28,18 @@ from pipeline.brain_equipment.equipment_registry import (
     compile_full_brain_prompt,
     list_equipped_modules,
 )
+from pipeline.channels import get_channel, normalize_channel_id
 from pipeline.config import CONFIG, QUEUE_DIR, PUBLISHED_DIR
-from pipeline.gemini_tts import get_gemini_api_key
+from pipeline.gemini_tts import gemini_key_names, get_gemini_api_key
 from pipeline.script_doc import ScriptDoc, parse_script
 from pipeline.short_release import SHORTS_QUEUE_DIR
 from scripts.auto_scheduler import build_schedule_audit, ScheduleAudit
-from scripts.continuous_research import SCRIPTURE_ROADMAP
+from scripts.continuous_research import SCRIPTURE_ROADMAP, roadmap_for_channel
 
 
 _BOOK_RE = re.compile(
     r"(?i)\b((?:[12]\s+)?(?:Psalm[s]?|Proverbs|Isaiah|Matthew|Mark|Luke|John|"
-    r"Romans|Corinthians|Philippians|Timothy|Peter|Numbers|Joshua|Hebrews|Lamentations))"
+    r"Romans|Corinthians|Philippians|Ephesians|Timothy|Peter|Numbers|Joshua|Hebrews|Lamentations))"
     r"\s+(\d+)(?::(\d+(?:[–\-]\d+(?:,\s*\d+)?)?))?"
 )
 
@@ -101,10 +102,18 @@ class BrainAuthoringError(RuntimeError):
 class GeminiBrain:
     """Master Autonomous Creative & Editorial Director powered by Google Gemini."""
 
-    def __init__(self, api_key: Optional[str] = None, model: str = "gemini-2.5-flash") -> None:
-        self.api_key = api_key or get_gemini_api_key()
+    def __init__(self, api_key: Optional[str] = None, model: str = "gemini-2.5-flash",
+                 channel_id: Optional[str] = None) -> None:
+        # Channel-scoped brain: a prayer2 brain compiles Morning Altar
+        # equipment, reads the PRAYER2_ Gemini quota pool first, selects
+        # from the morning roadmap and never stages Secret Place Shorts.
+        # Empty/None keeps the historic Secret Place behaviour exactly.
+        self.channel_id = normalize_channel_id(
+            channel_id or os.environ.get("CHANNEL_ID") or CONFIG.channel_id)
+        self.channel = get_channel(self.channel_id)
+        self.api_key = api_key or get_gemini_api_key(self.channel_id)
         self.model = model
-        self.system_prompt = compile_full_brain_prompt()
+        self.system_prompt = compile_full_brain_prompt(self.channel_id)
         self._client = None
         # Why the client is missing matters: "the key is not set" and "the key is
         # set but the SDK could not start" need different fixes, and conflating
@@ -129,8 +138,9 @@ class GeminiBrain:
         """Exactly why the API is or is not usable here."""
         key_present = bool(self.api_key)
         if not key_present:
-            reason = ("GEMINI_API_KEY is not present in this environment "
-                      "(no GEMINI_API_KEY, no GOOGLE_API_KEY, no .env)")
+            names = ", ".join(gemini_key_names(self.channel_id))
+            reason = (f"GEMINI_API_KEY is not present in this environment "
+                      f"(no {names}, no .env) for channel {self.channel_id}")
         elif self._client is None:
             reason = f"key is present but the genai client failed to start: {self._client_error}"
         else:
@@ -140,6 +150,9 @@ class GeminiBrain:
             "client_ready": self._client is not None,
             "model": self.model,
             "reason": reason,
+            "channel": self.channel_id,
+            "channel_id": self.channel_id,
+            "key_names": gemini_key_names(self.channel_id),
         }
 
     def audit_status(self) -> ScheduleAudit:
@@ -159,16 +172,29 @@ class GeminiBrain:
         for p in PUBLISHED_DIR.glob("*.md"):
             existing_ids.add(p.name[:4])
 
-        eligible = [c for c in SCRIPTURE_ROADMAP if c["id"] not in existing_ids]
+        roadmap = roadmap_for_channel(self.channel_id)
+        eligible = [c for c in roadmap if c["id"] not in existing_ids]
         if eligible:
-            try:
-                from .performance_feedback import load_feedback_report, rank_candidates
-                eligible = rank_candidates(eligible, load_feedback_report())
-            except Exception as exc:  # noqa: BLE001
-                # Feedback is an optimisation, never a gate: a missing or malformed
-                # artifact must not stop the queue from being replenished.
-                print(f"[gemini-brain] performance feedback skipped: {exc}")
+            # Performance steering is measured on Secret Place videos; never
+            # let it reorder (or leak into) the Morning Altar roadmap.
+            if self.channel_id != "prayer2":
+                try:
+                    from .performance_feedback import load_feedback_report, rank_candidates
+                    eligible = rank_candidates(eligible, load_feedback_report())
+                except Exception as exc:  # noqa: BLE001
+                    # Feedback is an optimisation, never a gate: a missing or malformed
+                    # artifact must not stop the queue from being replenished.
+                    print(f"[gemini-brain] performance feedback skipped: {exc}")
             return eligible[0]
+
+        if self.channel_id == "prayer2":
+            # No faithful generic morning fallback exists (the equipped
+            # template is Psalm 121 night text). Refuse rather than mislabel.
+            raise BrainAuthoringError(
+                "Morning Altar roadmap is exhausted: every morning candidate "
+                "is already queued or published. Extend MORNING_ALTAR_ROADMAP "
+                "instead of reusing a Secret Place/night scripture."
+            )
 
         # If all predefined items are present, generate next dynamic Psalm
         return {
@@ -192,13 +218,24 @@ class GeminiBrain:
         hook = scripture_data.get("hook", "THE LORD IS YOUR KEEPER")
 
         author_words = max(950, MIN_LONGFORM_WORDS + 100)
+        channel_directive = ""
+        if self.channel_id == "prayer2":
+            channel_directive = """
+CHANNEL: The Morning Altar (prayer2) - sunrise, never bedtime.
+- Frontmatter MUST include exactly: channel: prayer2
+- Title MUST end with: | The Morning Altar
+- Tags MUST include "morning prayer" and "the morning altar"; NEVER "the secret place", sleep or bedtime terms.
+- Description MUST credit: Produced by The Morning Altar | Daily Sunrise Prayer
+- Scenes follow the sunrise arc in the rubric and end with: "Type Amen to agree with this prayer, and subscribe to The Morning Altar to begin every sunrise with us."
+- Asset queries MUST be sunrise/dawn/morning-light scenes, never night or moonlight.
+"""
         user_prompt = f"""
 Please author the official, complete long-form devotional script for:
 - Job ID: {job_id}
 - Scripture: {scripture}
 - Central Theme: {theme}
 - Visual Hook Text: "{hook}"
-
+{channel_directive}
 Follow all channel invariants, DOCOGA REELS v2 guidelines, and theological rubrics.
 
 LENGTH IS A HARD REQUIREMENT: at least {author_words} words of narration across the scenes.
@@ -231,6 +268,7 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                             text = text[:-3]
                         text = text.strip()
                         if "id:" in text and "## Scene" in text:
+                            self._enforce_channel_metadata(text, scripture_data)
                             return text
                     except Exception as model_err:
                         err_str = str(model_err).lower()
@@ -247,6 +285,13 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         # other scripture is exactly how job 0011 acquired Psalm 121 verses under a
         # Psalm 27 title, so the fallback is now scoped to the psalm it was written
         # from and refuses everything else rather than mislabel scripture.
+        if self.channel_id == "prayer2":
+            raise BrainAuthoringError(
+                f"no faithful offline Morning Altar template for {scripture!r}: "
+                "the equipped generator is Secret Place Psalm 121 night text only, "
+                "and the prayer2 Gemini key is unavailable/quota-exhausted. "
+                "Refusing to emit mislabeled or misbranded scripture ($0 lock: idle, never spend)."
+            )
         if "121" not in scripture:
             raise BrainAuthoringError(
                 f"no faithful offline template for {scripture!r}: the equipped generator is "
@@ -378,6 +423,39 @@ Sleep deeply, sleep peacefully, and rest in the sanctuary of His presence.
 Type Amen to agree with this prayer, and subscribe to The Secret Place to pray with us every night.
 """
 
+    def _enforce_channel_metadata(self, text: str, scripture_data: dict[str, Any] | None = None) -> None:
+        """Refuse model output that is branded for the wrong channel.
+
+        A Morning Altar script carrying Secret Place sleep branding (or a
+        Secret Place script carrying Morning Altar metadata) is the same
+        class of defect as Psalm 121 text under a Psalm 27 title: it must
+        never reach the queue. This runs before any file is written.
+        """
+        head = text[:4000]
+        channel_match = re.search(r"^channel:\s*([^\n#]+)", head, re.M)
+        declared = normalize_channel_id(channel_match.group(1)) if channel_match else ""
+        if self.channel_id == "prayer2":
+            problems = []
+            if declared != "prayer2":
+                problems.append("frontmatter does not declare `channel: prayer2`")
+            if "The Morning Altar" not in head:
+                problems.append("title/description does not name The Morning Altar")
+            if "subscribe to The Secret Place" in text or "pray with us every night" in text:
+                problems.append("carries the Secret Place closing/CTA")
+            lowered = text.lower()
+            for term in ("before you sleep", "bedtime prayer", "prayer before sleep", "close your eyes tonight"):
+                if term in lowered:
+                    problems.append(f"carries Secret Place sleep language: {term!r}")
+                    break
+            if problems:
+                raise BrainAuthoringError(
+                    "Morning Altar authoring rejected: " + "; ".join(problems))
+        else:
+            if declared == "prayer2":
+                raise BrainAuthoringError(
+                    "Secret Place brain received a `channel: prayer2` script; "
+                    "a script belongs to one channel only")
+
     def author_short_spec(self, longform_doc: ScriptDoc, key: str | None = None) -> "ShortSpec":
         """Ask the model to write a complete 9:16 Short spec, then validate it.
 
@@ -436,6 +514,11 @@ Type Amen to agree with this prayer, and subscribe to The Secret Place to pray w
         picks up from ``content/shorts-scripts/``. If authoring fails the manifest
         stays a draft that says why.
         """
+        if longform_doc.channel == "prayer2" or self.channel_id == "prayer2":
+            raise BrainAuthoringError(
+                "The Morning Altar has no companion Short in this phase: "
+                "the Shorts queue is Secret Place only, and a prayer2 script "
+                "must never stage a Secret Place Short manifest")
         from .short_release import _renderer_script_keys
         from .short_script import save_spec
 
@@ -593,6 +676,8 @@ Type Amen to agree with this prayer, and subscribe to The Secret Place to pray w
                 continue
             if str(qdoc.status).strip().lower() != "approved":
                 continue
+            if qdoc.channel == "prayer2":
+                continue  # Shorts queue is Secret Place only
             if str(qdoc.id).strip() in covered_ids:
                 continue
             cand_key = short_key_for_doc(qdoc)
@@ -629,6 +714,22 @@ Type Amen to agree with this prayer, and subscribe to The Secret Place to pray w
         factcheck_main([doc.id, "--force"])
         factcheck_path = out_path(doc)
 
+        if doc.channel == "prayer2":
+            # Morning Altar: long-form only in this phase. The Shorts queue
+            # is Secret Place only (docs/MORNING_ALTAR_BRANDING.md §1), so
+            # staging a companion Short here would cross channels.
+            return BrainGenerationResult(
+                job_id=doc.id,
+                scripture=extract_scripture_reference(doc),
+                longform_path=script_path,
+                short_manifest_path=None,
+                factcheck_path=factcheck_path if factcheck_path.is_file() else None,
+                status=doc.status,
+                word_count=doc.word_count,
+                scene_count=len(doc.scenes),
+                used_gemini_api=self.is_api_available(),
+            )
+
         short_path, _ = self.generate_companion_short(doc)
 
         return BrainGenerationResult(
@@ -645,8 +746,18 @@ Type Amen to agree with this prayer, and subscribe to The Secret Place to pray w
 
     def replenish_pipeline(self, min_runway_days: float = 2.0) -> Optional[BrainGenerationResult]:
         """Inspect queue runway; if below threshold, author, verify, and stage the next scripture."""
+        if self.channel_id == "prayer2" and min_runway_days < 900:
+            # Secret Place audit counts only channel 1. Morning Altar runway
+            # is its own publishable count; 2 days at the shared 3-slot
+            # cadence is the same target the supply loop uses.
+            from .supply import publishable_longform as _publishable
+            have = len(_publishable(channel_id="prayer2"))
+            wanted = max(1, int(min_runway_days * 3 + 0.999))
+            if have >= wanted:
+                print(f"[gemini-brain] Morning Altar runway healthy ({have} publishable >= {wanted}). No replenishment needed.")
+                return None
         audit = self.audit_status()
-        if audit.runway_days >= min_runway_days:
+        if self.channel_id != "prayer2" and audit.runway_days >= min_runway_days:
             print(f"[gemini-brain] Runway healthy ({audit.runway_days} days >= {min_runway_days} days). No replenishment needed.")
             return None
 
