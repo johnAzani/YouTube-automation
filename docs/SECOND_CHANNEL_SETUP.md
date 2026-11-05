@@ -149,13 +149,23 @@ dry-run render succeeded (run 41887937132), and the first video was
 uploaded **private** on 2026-11-04: `oS7f32WDj_Y` (7:57) — receipt in
 `content/published/0036-*.md`. **That upload is defective and must
 never be published:** its `tts-v2` narration speaks the read-aloud
-contract aloud (fixed script-only in `tts-v3`, PR #253). Job 0036 was
-therefore deliberately re-queued (PR #254): the queue file is restored
-as approved, the defective receipt retired (still in git history), and
-Produce video gained an explicit per-run `allow_duplicate` tick-box —
-the replacement run must tick it, because the defective video still
-exists on the channel with the same title. Delete `oS7f32WDj_Y` in
-Studio once the corrected replacement is verified. Remaining owner actions: final watch in
+contract aloud. Job 0036 was deliberately re-queued (PR #254) and the
+replacement (run 41958248221, `R8mVvedhYVw`, supposedly `tts-v3`) **is
+also defective** — it still reads instruction-shaped text aloud. Deep
+diagnosis found two evidence-backed causes: (1) the workflow restores
+`_gemini_chunks_*` across runs while the per-chunk reuse hash keyed
+only on `voice:model:chunk-text`, so defective-era chunk audio could
+be silently reused; (2) PR #253 carried style in
+`GenerateContentConfig.system_instruction`, a channel Google's
+official Gemini 3.8 TTS migration guide does not document — for 3.8
+models, text is a verbatim transcript and style belongs in
+`speech_metadata.style`. The next fix removes `system_instruction`
+from every TTS request, moves style to `speech_metadata.style` /
+the interactions `speech_metadata` annotation, versions every cache
+key by the delivery recipe (`tts-v4-speech-metadata-style`), and bumps
+the Actions chunk-cache key. Both `oS7f32WDj_Y` and `R8mVvedhYVw` stay
+private and unpublished; delete them in Studio only after a corrected
+replacement is verified to begin with the prayer itself. Remaining owner actions: final watch in
 Studio, then publish manually (channel policy keeps uploads private);
 watermark + channel keywords via desktop Studio. Earlier: run #25's
 two-scope token was fixed (three scopes saved in Data Access, token

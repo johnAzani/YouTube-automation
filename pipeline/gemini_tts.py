@@ -85,6 +85,69 @@ def chunk_chars() -> int:
     return DEFAULT_CHUNK_CHARS
 
 
+def _chunk_cache_key(voice_name: str, model: str, chunk: str) -> str:
+    """Cache identity of one synthesized chunk.
+
+    Includes the delivery recipe — v1/v2/v3 chunks are worthless no
+    matter how well the script text matches, because the recipe (what
+    else reached the model, and how) is what made them defective.
+    """
+    import hashlib
+
+    return hashlib.sha256(
+        f"{DELIVERY_RECIPE}:{voice_name}:{model}:{chunk}".encode("utf-8")
+    ).hexdigest()
+
+
+def build_tts_part(text: str, prompt_style: str):
+    """One generate_content part: verbatim transcript + style metadata.
+
+    `text` is the script chunk and nothing else — no instruction, no
+    fence, no marker. Delivery lives in speech_metadata.style, the
+    channel Google documents for Gemini 3.8 TTS style direction.
+    """
+    from google.genai import types
+
+    return types.Part(
+        text=text,
+        speech_metadata=types.SpeechMetadata(style=style_text(prompt_style)),
+    )
+
+
+def build_interactions_content(text: str, prompt_style: str) -> list[dict]:
+    """One interactions content block: verbatim transcript + annotation.
+
+    The interactions schema's equivalent of speech_metadata is a
+    `speech_metadata` annotation on the text content (style instruction
+    for the speech synthesis). The text itself stays byte-for-byte the
+    script chunk.
+    """
+    return [
+        {
+            "type": "text",
+            "text": text,
+            "annotations": [
+                {
+                    "type": "speech_metadata",
+                    "start_index": 0,
+                    "end_index": len(text.encode("utf-8")),
+                    "style": style_text(prompt_style),
+                }
+            ],
+        }
+    ]
+
+
+def build_interactions_speech_config(voice_name: str, prompt_style: str) -> list[dict]:
+    """interactions generation_config speech entries (voice + style).
+
+    The speech_config schema carries only language/speaker/voice, so the
+    style also rides here as an annotation-shaped entry when accepted;
+    the authoritative carrier is the content annotation above.
+    """
+    return [{"voice": voice_name}]
+
+
 def _chunk_text(text: str, max_chars: int = 500) -> list[str]:
     """Split long narrative text at paragraph boundaries into <= max_chars chunks."""
     paragraphs = [p.strip() for p in text.split("\n\n") if p.strip()]
@@ -209,37 +272,39 @@ def _transient_label(exc: BaseException) -> str:
     return "Gemini was temporarily unavailable"
 
 
-def read_aloud_instruction(prompt_style: str = "calm, reverent, peaceful devotional tone") -> str:
-    """Style guidance for the TTS model — delivered ONLY via the API's
-    system-instruction channel, never inside the text payload.
+def style_text(prompt_style: str = "calm, reverent, peaceful devotional tone") -> str:
+    """Delivery style for the voice — carried ONLY in speech_metadata.style.
 
-    A TTS model speaks its text payload verbatim; it has no notion of
-    "instructions inside the transcript". Two owner-reported failures
-    prove both halves of that sentence:
+    Gemini 3.8 TTS models read the `text` of each part as a verbatim
+    transcript (Google's migration guide: "directions written into the
+    text might be spoken aloud… Put sustained acting, tone, prosody, and
+    pacing directions in speech_metadata.style"). Every earlier carrier
+    has been owner-verified to leak into the audio:
 
-    * Psalm 27 (`7ll7w1hYf7o`, 4 Nov 2026) narrated its delivery
-      directions: the generate_content fallback glued the instruction to
-      the script as a "Text to read:" prefix inside `contents`.
-    * Psalm 5 (`oS7f32WDj_Y`, 4 Nov 2026) opened by literally saying
-      "Read the text between the markers aloud, in a calm..." — the
-      follow-up fix had moved that contract INTO every transport's text
-      payload behind `<<<SCRIPT START>>>` fences, and the model read
-      the contract and fences as the first lines of the prayer.
+    * "Text to read:" prefix in `contents` — Psalm 27 (7ll7w1hYf7o)
+    * fenced read-aloud contract in every payload — Psalm 5 (oS7f32WDj_Y)
+    * GenerateContentConfig.system_instruction — Psalm 5 replacement
+      (R8mVvedhYVw). A TTS model has no conversational frame in which a
+      "system instruction" stays unspoken; three defective uploads trace
+      to instruction-shaped text reaching the model at all. The style
+      string is therefore short delivery adjectives, never imperative
+      sentences addressed to the model.
 
-    So: the payload is the script, byte for byte, and nothing else.
-    Where a transport exposes a genuine system channel
-    (GenerateContentConfig.system_instruction), the style guidance goes
-    there. Where it does not (`interactions`), the payload stays bare —
-    a TTS voice needs no prose instruction to read text aloud.
+    Narration cache keys and chunk hashes are versioned by
+    DELIVERY_RECIPE, so changing any of this invalidates every cached
+    chunk — see _chunk_cache_key.
     """
-    return (
-        "You are a professional voiceover narrator. Read the provided "
-        f"text aloud in a {prompt_style}. Speak only the provided words: "
-        "no commentary, introductions, scene titles, or conclusions."
-    )
+    return prompt_style
 
 
-def _guarded_chunk(client, text, voice_name, system_instruction, model, temp_raw,
+#: Version of the full delivery recipe: model-facing style carrier +
+#: style string + chunking. Bump whenever the recipe changes; it is mixed
+#: into every narration fingerprint and per-chunk cache hash so no audio
+#: synthesized under an older recipe can ever be reused.
+DELIVERY_RECIPE = "tts-v4-speech-metadata-style"
+
+
+def _guarded_chunk(client, text, voice_name, prompt_style, model, temp_raw,
                    index, total):
     """One chunk, with a deadline the transport cannot ignore.
 
@@ -254,7 +319,7 @@ def _guarded_chunk(client, text, voice_name, system_instruction, model, temp_raw
     for attempt in (1, 2, 3):
         try:
             with hard_deadline(http_timeout_seconds(), label):
-                return _synthesize_single_chunk(client, text, voice_name, system_instruction,
+                return _synthesize_single_chunk(client, text, voice_name, prompt_style,
                                                  model, temp_raw)
         except GeminiRequestTimedOut as exc:
             global _INTERACTIONS_STALLED
@@ -334,7 +399,7 @@ def _synthesize_single_chunk(
     client,
     text: str,
     voice_name: str,
-    system_instruction: str,
+    prompt_style: str,
     model: str,
     temp_raw: Path,
 ) -> str:
@@ -358,7 +423,7 @@ def _synthesize_single_chunk(
                     model=tts_model,
                     input=[{
                         "type": "user_input",
-                        "content": [{"type": "text", "text": text}],
+                        "content": build_interactions_content(text, prompt_style),
                     }],
                     response_format={"type": "audio"},
                     generation_config={"speech_config": [{"voice": voice_name}]},
@@ -399,7 +464,7 @@ def _synthesize_single_chunk(
                                 timeout=http_timeout_seconds(),
                                 model=tts_model,
                                 input=[{"type": "user_input",
-                                        "content": [{"type": "text", "text": text}]}],
+                                        "content": build_interactions_content(text, prompt_style)}],
                                 response_format={"type": "audio"},
                                 generation_config={"speech_config": [{"voice": voice_name}]},
                             )
@@ -439,7 +504,7 @@ def _synthesize_single_chunk(
                                 timeout=http_timeout_seconds(),
                                 model=tts_model,
                                 input=[{"type": "user_input",
-                                        "content": [{"type": "text", "text": text}]}],
+                                        "content": build_interactions_content(text, prompt_style)}],
                                 response_format={"type": "audio"},
                                 generation_config={"speech_config": [{"voice": voice_name}]},
                             )
@@ -474,9 +539,8 @@ def _synthesize_single_chunk(
             try:
                 response = client.models.generate_content(
                     model=cur_model,
-                    contents=text,
+                    contents=build_tts_part(text, prompt_style),
                     config=types.GenerateContentConfig(
-                        system_instruction=system_instruction,
                         response_modalities=["AUDIO"],
                         speech_config=types.SpeechConfig(
                             voice_config=types.VoiceConfig(
@@ -571,7 +635,7 @@ def synthesize_gemini_audio(
     budget = Deadline(stage_budget_seconds(900), "speech synthesis")
     voice_name = GEMINI_VOICES.get(voice.lower(), voice)
 
-    system_instruction = read_aloud_instruction(prompt_style)
+    style = style_text(prompt_style)
 
     out_path = Path(out_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -586,7 +650,7 @@ def synthesize_gemini_audio(
         budget.check("single chunk")
         temp_raw = out_path.with_suffix(".raw_audio")
         try:
-            mime_type = _guarded_chunk(client, chunks[0], voice_name, system_instruction,
+            mime_type = _guarded_chunk(client, chunks[0], voice_name, style,
                                        model, temp_raw, 1, 1)
             with hard_deadline(http_timeout_seconds(), "audio conversion"):
                 _convert_raw_audio(temp_raw, out_path, mime_type)
@@ -609,7 +673,7 @@ def synthesize_gemini_audio(
             chunk_raw = temp_dir / f"chunk_{idx:03d}.raw"
             chunk_wav = temp_dir / f"chunk_{idx:03d}.wav"
             chunk_sha = temp_dir / f"chunk_{idx:03d}.sha256"
-            expected_sha = hashlib.sha256(f"{voice_name}:{model}:{chunk}".encode("utf-8")).hexdigest()
+            expected_sha = _chunk_cache_key(voice_name, model, chunk)
             # Resume: a run that stalls at chunk 9 must not repay chunks 1-8. Verify
             # the chunk text hash so an expanded script never reuses stale audio.
             if chunk_wav.is_file() and chunk_wav.stat().st_size > 0:
@@ -621,7 +685,7 @@ def synthesize_gemini_audio(
                     _emit(f"TTS chunk {idx + 1}/{len(chunks)} reused from this attempt")
                     continue
                 chunk_wav.unlink(missing_ok=True)
-            mime_type = _guarded_chunk(client, chunk, voice_name, system_instruction,
+            mime_type = _guarded_chunk(client, chunk, voice_name, style,
                                        model, chunk_raw, idx + 1, len(chunks))
             with hard_deadline(http_timeout_seconds(), f"audio conversion, chunk {idx + 1}"):
                 _convert_raw_audio(chunk_raw, chunk_wav, mime_type)

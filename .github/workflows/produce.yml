@@ -152,7 +152,7 @@ jobs:
             output/*/_gemini_chunks_*
             assets/deepdive/short-*.mp3
             assets/deepdive/words-short-*.json
-          key: chunks-${{ github.run_id }}
+          key: chunks-tts-v4-${{ github.run_id }}
           restore-keys: |
             chunks-
 
@@ -361,7 +361,7 @@ jobs:
             output/*/_gemini_chunks_*
             assets/deepdive/short-*.mp3
             assets/deepdive/words-short-*.json
-          key: chunks-${{ github.run_id }}
+          key: chunks-tts-v4-${{ github.run_id }}
 
       # Style proof without a 1 GB download: three frames from the master,
       # small enough to open from the run page. Shows HUD, typography,
