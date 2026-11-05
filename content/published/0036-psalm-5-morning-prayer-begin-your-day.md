@@ -84,8 +84,8 @@ originality:
 seo_hook: "Pray this Psalm 5 KJV morning prayer at sunrise, begin your day in God's presence, and walk into today under His favour and shield."
 category_id: '22'
 published_on: "2026-11-05"
-published_at: "2026-11-05T03:37:50Z"
-youtube_video_id: "R8mVvedhYVw"
+published_at: "2026-11-05T11:17:00Z"
+youtube_video_id: "_vp27ZYPYaY"
 thumbnail_revision: "ctr-v3-cinema"
 metadata_revision: "selar-seo-v1"
 ---
