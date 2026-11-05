@@ -146,18 +146,16 @@ def load_job(path: Path) -> Job:
 
 
 def _job_channel(job: Job) -> str:
-    raw = str(job.meta.get("channel", "") or "").strip().lower().replace("_", "-")
-    aliases = {"morning-altar": "prayer2", "the-morning-altar": "prayer2", "channel2": "prayer2",
-               "secret_place": "secret-place", "the-secret-place": "secret-place", "channel1": "secret-place"}
-    return aliases.get(raw, raw) if raw else "secret-place"
+    from pipeline.channels import normalize_channel_id
+
+    return normalize_channel_id(job.meta.get("channel"))
 
 
 def under_gate(paths: list[Path] | None = None, channel_id: str | None = None) -> list[Job]:
+    from pipeline.channels import normalize_channel_id
+
     jobs = []
-    wanted = None
-    if channel_id:
-        wanted = str(channel_id).strip().lower().replace("_", "-")
-        wanted = {"morning-altar": "prayer2", "the-morning-altar": "prayer2"}.get(wanted, wanted)
+    wanted = normalize_channel_id(channel_id) if channel_id else None
     for path in paths or sorted(QUEUE_DIR.glob("*.md")):
         job = load_job(path)
         if job.status == "approved" and job.words < MIN_WORDS:

@@ -167,29 +167,56 @@ def check_queues(report: Report, max_publish_age: timedelta = MAX_PUBLISH_AGE,
         report.add("queues", f"could not read the queues: {exc}")
         return report
 
+    from pipeline.channel_capabilities import capabilities_for
+    from pipeline.script_doc import MIN_LONGFORM_WORDS
+
+    channel_rows = {row["queue"] for row in rows if ":" in str(row.get("queue", ""))}
+
     for row in rows:
-        report.checked.append(f"{row['queue']} queue: {row['ready']} ready ({row['note']})")
-        if row["queue"] == "longform" and row["ready"] == 0:
-            from pipeline.script_doc import MIN_LONGFORM_WORDS
+        queue_name = str(row.get("queue", ""))
+        report.checked.append(f"{queue_name} queue: {row['ready']} ready ({row['note']})")
+        if row["ready"] > 0:
+            continue
 
-            report.add("long-form queue",
-                       f"nothing in content/queue/ is approved and over the "
-                       f"{MIN_LONGFORM_WORDS}-word floor. The brain should have lengthened "
-                       f"or authored one; check `python scripts/gemini_brain.py --ensure-supply`.")
-        if row["queue"] == "longform:prayer2" and row["ready"] == 0:
-            from pipeline.script_doc import MIN_LONGFORM_WORDS
+        kind, _, suffix = queue_name.partition(":")
+        per_channel = bool(suffix)
+        # The row name is authoritative; `channel` is only a convenience.
+        channel_id = suffix or row.get("channel")
+        if not per_channel and channel_id and f"{queue_name}:{channel_id}" in channel_rows:
+            # The unprefixed row is the historic alias for channel 1; when the
+            # per-channel rows exist they carry this finding, so it is not said
+            # twice.
+            continue
 
-            # Morning Altar starvation must not hide behind a healthy
-            # Secret Place queue: its scheduled legs idle green by design,
-            # so this watchdog row is the alarm that supply has stopped.
-            report.add("morning altar queue",
-                       f"no Morning Altar (`channel: prayer2`) script is approved and over the "
-                       f"{MIN_LONGFORM_WORDS}-word floor. The Morning Altar brain should have "
-                       f"authored one; check `python scripts/gemini_brain.py --ensure-supply-for prayer2`.")
-        if row["queue"] == "shorts" and row["ready"] == 0:
-            report.add("shorts queue",
-                       f"no Short can render ({row['note']}). Check "
-                       f"`python scripts/gemini_brain.py --author-shorts`.", fatal=False)
+        try:
+            caps = capabilities_for(channel_id)
+            display = caps.brand.display_name
+        except ValueError:
+            display = f"channel {channel_id}"
+            caps = None
+
+        if kind == "longform":
+            # Starvation on one channel must never hide behind a healthy queue on
+            # the other: each channel's own row raises its own finding.
+            report.add(
+                "long-form queue",
+                f"{display} has nothing in content/queue/ that is approved and over "
+                f"the {MIN_LONGFORM_WORDS}-word floor. Its brain should have lengthened "
+                f"or authored one; check `python scripts/gemini_brain.py "
+                f"--ensure-supply-for {channel_id or '<channel>'}`.",
+            )
+        elif kind == "shorts":
+            if not row.get("blocked", 1):
+                # An empty Shorts queue is not a stall; a queue of manifests that
+                # cannot be built is. Say nothing until there is something stuck.
+                continue
+            report.add(
+                "shorts queue",
+                f"{display} has no Short that can render ({row['note']}). Check "
+                f"`CHANNEL_ID={channel_id or '<channel>'} python scripts/gemini_brain.py "
+                f"--author-shorts`.",
+                fatal=False,
+            )
 
     newest = last_publish(published_dir)
     if newest is None:

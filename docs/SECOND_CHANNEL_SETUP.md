@@ -33,6 +33,7 @@ pipeline already pauses and resumes at the midnight-Pacific reset
 | Wrong-channel guard — aborts before upload if the token authorizes a different channel than `YOUTUBE_EXPECTED_CHANNEL_ID` | `pipeline/upload.py::verify_target_channel` |
 | Channel-aware descriptions (Selar/store links stay on Channel 1 only) | `pipeline/metadata.py`, `pipeline/pinned_comments.py`, `pipeline/localize_metadata.py` |
 | Channel selector (`secret-place` / `prayer2`) | Produce, Metrics, Comments, Set-thumbnail workflows |
+| Capability matrix + parity lock (no per-channel feature branches) | `pipeline/channel_capabilities.py`, `scripts/channel_parity.py`, `tests/test_channel_parity.py`, `docs/CHANNEL_PARITY.md` |
 | Brand kit + launch checklist | `docs/MORNING_ALTAR_BRANDING.md` |
 | First Morning Altar script | `content/published/0036-psalm-5-morning-prayer-begin-your-day.md` (uploaded `_vp27ZYPYaY`, public; the corrected-video history is in the §2e status note) |
 
@@ -40,14 +41,18 @@ Scheduled (cron) Produce runs serve **both** channels (owner decision,
 2026-11-05): each slot runs The Secret Place and then The Morning Altar,
 sequentially, and `prayer2` uploads are **public with auto-publish**, on the
 same terms as `secret-place`. A manual Produce dispatch still produces only
-the channel selected. For `prayer2` the Produce workflow runs a
-channel-scoped queue-repair pass (Secret Place Shorts stay Secret Place
-only). The Morning Altar brain now owns Morning Altar script supply
-unattended: `gemini_brain.yml` replenishes both channels (each with its
-own Gemini quota pool), so a scheduled `prayer2` leg normally finds an
-approved `channel: prayer2` script in `content/queue/`. If free-tier
-capacity is exhausted, the leg still idles with a "Morning Altar queue
-empty" notice instead of failing the slot or spending money ($0 lock).
+the channel selected. Both legs run the *same* steps — queue check, queue
+repair, Shorts, render — parameterised by `CHANNEL_ID`; there is no
+per-channel branch left in either workflow. Queue repair, Shorts authoring,
+Short rendering, queue-health rows and watchdog alerts are all channel-scoped,
+so each channel's Shorts and scripts are queued, dressed and published only
+on that channel's leg. The Morning Altar brain owns Morning Altar supply
+unattended: `gemini_brain.yml` replenishes both channels (each with its own
+Gemini quota pool), so a scheduled `prayer2` leg normally finds an approved
+`channel: prayer2` script in `content/queue/`. If free-tier capacity is
+exhausted, the leg still idles with a `<channel> queue empty` notice instead
+of failing the slot or spending money ($0 lock). See
+`docs/CHANNEL_PARITY.md` for the rule that keeps the two channels identical.
 
 ## 2. What only you can do (your Google account — ~30 minutes)
 
@@ -232,10 +237,11 @@ Actions minutes (public repo), ffmpeg, stock sources.
    an unaudited API project to private server-side; check the release
    ticket's recorded privacy after the first scheduled upload. The
    Morning Altar brain keeps the queue stocked unattended (Morning Altar
-   roadmap, sunrise branding, `PRAYER2_` Gemini pool, no companion
-   Shorts); if free-tier capacity is exhausted, an empty queue means the
-   slot idles (watch for the "Morning Altar queue empty" notice) rather
-   than failing or spending money.
+   roadmap, sunrise branding, `PRAYER2_` Gemini pool), and its Sunrise
+   Shorts are authored, rendered and uploaded on the `prayer2` leg only.
+   If free-tier capacity is exhausted, an empty queue means the slot idles
+   (watch for the "prayer2 queue empty" notice) rather than failing or
+   spending money.
 4. Metrics / Comments / Set-thumbnail also accept the same `channel`
    selector for manual runs. Community, growth-autopilot and monitor
    still operate on Channel 1 only until Morning Altar has its own data

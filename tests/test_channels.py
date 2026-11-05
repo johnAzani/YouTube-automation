@@ -196,19 +196,22 @@ class WorkflowSelectorTests(unittest.TestCase):
         self.assertNotIn("matrix.channel == 'prayer2' && 'private'", text)
         self.assertIn("DEFAULT_PRIVACY: public", text)
 
-    def test_empty_morning_altar_queue_idles_instead_of_failing(self):
-        """No approved prayer2 script queued => the leg uploads nothing.
+    def test_an_empty_queue_idles_the_leg_on_every_channel(self):
+        """Both channels share one gate: an empty queue idles, it does not fail.
 
-        Morning Altar scripts are human-queued (no brain supply yet), so an
-        empty queue is a supply gap, not a breakage: the render step is
-        gated on the queue check while Secret Place keeps its hard fault.
+        The gate used to exist for The Morning Altar only, while The Secret Place
+        leg ran `--next` into an empty queue and failed the slot. One code path now
+        serves both, parameterised by CHANNEL_ID.
         """
         text = (ROOT / ".github" / "workflows" / "produce.yml").read_text(
-            encoding="utf-8"
-        )
+            encoding="utf-8")
         self.assertIn("id: channel_queue", text)
-        self.assertIn("Morning Altar queue empty", text)
-        self.assertIn("steps.channel_queue.outputs.has_job == 'true'", text)
+        self.assertIn('channel = os.environ["CHANNEL_ID"]', text)
+        self.assertIn("queue empty::", text)
+        self.assertNotIn("matrix.channel == 'prayer2' && inputs.job", text)
+        # The render step is gated on this channel's own queue check, for every
+        # channel — not only for the second one.
+        self.assertIn("steps.channel_queue.outputs.has_job", text)
 
     def test_produce_workflow_exposes_replacement_run_override(self):
         # A corrected re-render of an already-uploaded job (0036 after the

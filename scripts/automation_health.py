@@ -147,40 +147,45 @@ def queue_health() -> list[dict]:
     build (short scripts, mislabelled scripture). Counting *renderable* rows rather
     than approved rows is what makes a stall visible before it lasts a week.
     """
+    from pipeline.channel_capabilities import capabilities_for
     from pipeline.channels import CHANNELS
     from pipeline.supply import publishable_longform
     from pipeline.short_release import queue_report
 
     rows: list[dict] = []
-    # Per-channel long-form runway: the old single "longform" row counted
-    # only the ambient/default channel, so the watchdog could stay green
-    # while The Morning Altar had nothing to publish. Every channel now
-    # gets its own row (plus the historic "longform" alias for channel 1).
+    # Per-channel rows: the old single "longform"/"shorts" pair counted only the
+    # ambient channel, so the watchdog could stay green while another channel had
+    # nothing to publish. Every channel now reports both queues, and the historic
+    # unprefixed row names are kept as aliases for channel 1 only.
     for channel_id in CHANNELS:
-        label = f"longform:{channel_id}"
+        caps = capabilities_for(channel_id)
         try:
-            ready = publishable_longform(channel_id=channel_id)
-            rows.append({"queue": label, "channel": channel_id,
-                         "ready": len(ready),
-                         "note": "approved and above the word floor"})
-            if channel_id == "secret-place":
-                rows.append({"queue": "longform", "channel": channel_id,
-                             "ready": len(ready),
-                             "note": "approved and above the word floor"})
+            count = len(publishable_longform(channel_id=channel_id))
+            note = "approved and above the word floor"
         except Exception as exc:  # a broken queue is a finding, not a crash
-            rows.append({"queue": label, "channel": channel_id, "ready": 0,
-                         "note": f"selection failed: {exc}"})
-    try:
-        shorts = queue_report()
-        ready = sum(1 for r in shorts if r["verdict"] == "ready")
-        blocked = sum(1 for r in shorts if r["verdict"] != "ready")
-        rows.append({"queue": "shorts", "ready": ready,
-                     "note": (f"{blocked} manifest(s) with no scene spec yet — the brain authors "
-                             f"these into content/shorts-scripts/ on the next brain or "
-                             f"release run")
-                             if ready == 0 else "renderable now"})
-    except Exception as exc:
-        rows.append({"queue": "shorts", "ready": 0, "note": f"queue_report failed: {exc}"})
+            count, note = 0, f"selection failed: {exc}"
+        rows.append({"queue": f"longform:{channel_id}", "channel": channel_id,
+                     "ready": count, "note": note})
+        if caps.legacy_queue_alias:
+            rows.append({"queue": caps.legacy_queue_alias, "channel": channel_id,
+                         "ready": count, "note": note})
+
+    for channel_id in CHANNELS:
+        caps = capabilities_for(channel_id)
+        try:
+            shorts = queue_report(channel_id=channel_id)
+            ready = sum(1 for r in shorts if r["verdict"] == "ready")
+            blocked = sum(1 for r in shorts if r["verdict"] != "ready")
+            note = ("renderable now" if ready else
+                    f"{blocked} manifest(s) with no scene spec yet — the brain authors "
+                    f"these into content/shorts-scripts/ on the next brain or release run")
+        except Exception as exc:
+            ready, blocked, note = 0, 1, f"queue_report failed: {exc}"
+        rows.append({"queue": f"shorts:{channel_id}", "channel": channel_id,
+                     "ready": ready, "blocked": blocked, "note": note})
+        if caps.legacy_queue_alias:
+            rows.append({"queue": "shorts", "channel": channel_id,
+                         "ready": ready, "blocked": blocked, "note": note})
     return rows
 
 
