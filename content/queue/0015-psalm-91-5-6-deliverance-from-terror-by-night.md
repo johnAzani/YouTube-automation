@@ -21,10 +21,13 @@ tags:
 thumb_text: NO TERROR BY NIGHT
 description: 'Say this Psalm 91:5-6 (KJV) prayer before you sleep tonight.
 
-  Thou shalt not be afraid for the terror by night; nor for the arrow that flieth by day; Nor for the pestilence that walketh in darkness; nor for the destruction that wasteth at noonday.
+  Thou shalt not be afraid for the terror by night; nor for the arrow that flieth
+  by day; Nor for the pestilence that walketh in darkness; nor for the destruction
+  that wasteth at noonday.
 
 
-  This is a full devotional prayer and scripture exposition covering Psalm 91:5-6 (KJV)
+  This is a full devotional prayer and scripture exposition covering Psalm 91:5-6
+  (KJV)
 
   with peaceful nighttime ambient soundscapes.
 
@@ -50,32 +53,39 @@ asset_queries:
 - golden hour sunrise over calm ocean waves peaceful
 asset_query_verification:
   verified_on: '2026-10-29'
-  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4,
+    filtered by pipeline/assets.py licence rule
   queries:
   - query: peaceful sleeping person moonlight bedroom quiet night
     verified: true
     usable: 4
-    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
   - query: moonlight through window dark forest silhouette
     verified: true
     usable: 4
-    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
   - query: ancient stone church night sky stars peaceful
     verified: true
     usable: 4
-    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
   - query: silhouette praying hands sunset warm light sanctuary
     verified: true
     usable: 4
-    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
   - query: protective wings dove shelter divine presence light
     verified: true
     usable: 4
-    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
   - query: golden hour sunrise over calm ocean waves peaceful
     verified: true
     usable: 4
-    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
 originality:
   original_thesis: true
   unique_structure: true
@@ -83,7 +93,8 @@ originality:
   no_ai_persona: true
   source_notes: true
   ai_disclosure: false
-seo_hook: Pray this Psalm 91:5-6 KJV night prayer before sleep for deliverance from terror by night, bad dreams, and anxious thoughts.
+seo_hook: Pray this Psalm 91:5-6 KJV night prayer before sleep for deliverance from
+  terror by night, bad dreams, and anxious thoughts.
 category_id: '22'
 ---
 
