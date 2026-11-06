@@ -30,8 +30,8 @@
       "workflow": "keepalive.yml"
     }
   ],
-  "generated_at": "2026-11-06T08:26:43.878894+00:00",
-  "last_run_at": "2026-11-06T08:25:50+00:00",
+  "generated_at": "2026-11-06T08:28:28.631734+00:00",
+  "last_run_at": "2026-11-06T08:27:11+00:00",
   "on_time": [
     {
       "late_minutes": 98,
@@ -50,7 +50,7 @@
     {
       "late_minutes": 104,
       "name": "Automation monitor",
-      "ran_at": "2026-11-06T08:07:25+00:00",
+      "ran_at": "2026-11-06T08:07:38+00:00",
       "slot": "2026-11-06T06:23:00+00:00",
       "workflow": "monitor.yml"
     },
@@ -64,11 +64,11 @@
     {
       "late_minutes": 80,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-06T08:07:25+00:00",
+      "ran_at": "2026-11-06T08:07:38+00:00",
       "slot": "2026-11-06T06:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 0,
+  "silence_minutes": 1,
   "warn_minutes": 120
 }
