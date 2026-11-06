@@ -171,6 +171,64 @@ def cmd_author_shorts(brain: GeminiBrain) -> int:
     return 0
 
 
+#: Models the probe asks about: every candidate the code can choose, in the order it
+#: would choose them. Keeping this list next to the probe means the answer to "what
+#: can we actually use today?" is one CI run away.
+PROBE_MODELS = ("gemini-3.5-flash-lite", "gemini-3.1-flash-lite", "gemini-3.6-flash",
+                "gemini-3.8-flash", "gemini-3.8-flash-tts", "gemini-3.8-flash-lite-tts")
+
+
+def cmd_probe_models(brain: GeminiBrain, generate: bool = False) -> int:
+    """Ask the API, per model, whether it exists *and* whether it answers.
+
+    `models.get` costs no generation quota and settles existence, but on 6 November
+    every one of those models existed while `gemini-3.8-flash` answered `503` for
+    three and a half hours. Existence is not service. With `generate`, one request of
+    one token per model measures service — six requests in total, once per push, on
+    models that are otherwise idle.
+
+    Prints a table and one annotation per model, so the verdict is readable in the
+    run summary without downloading anything.
+    """
+    if brain._client is None:
+        print(f"::error title=Gemini probe::no client — {brain.api_status()['reason']}")
+        return 1
+    ok = 0
+    for name in PROBE_MODELS:
+        meta, serves, detail = "", "", ""
+        try:
+            info = brain._client.models.get(model=name)
+            meta = (f"in={getattr(info, 'input_token_limit', '?')} "
+                    f"out={getattr(info, 'output_token_limit', '?')}")
+        except Exception as exc:  # noqa: BLE001
+            detail = f"{type(exc).__name__}: {exc}"
+            print(f"::error title=Gemini probe::{name} — metadata unavailable — {detail}")
+            print(f"[probe] {name:28} MISSING  {detail[:120]}")
+            continue
+        if generate:
+            try:
+                brain._client.models.generate_content(
+                    model=name,
+                    contents="Reply with the single word: ready",
+                    config={"max_output_tokens": 1},
+                )
+                serves = "SERVING"
+                ok += 1
+            except Exception as exc:  # noqa: BLE001
+                serves = "REFUSED"
+                detail = f"{type(exc).__name__}: {exc}"
+        print(f"[probe] {name:28} {serves or 'exists':8} {meta} {detail[:100]}")
+        level = "notice" if (serves in {"SERVING", ""}) and not detail else "warning"
+        if serves == "REFUSED":
+            level = "warning"
+        print(f"::{level} title=Gemini probe::{name} — {serves or 'metadata only'} "
+              f"({meta}){' — ' + detail[:160] if detail else ''}")
+    if generate and not ok:
+        print("::error title=Gemini probe::no probed model answered a one-token request")
+        return 1
+    return 0
+
+
 def cmd_preflight(brain: GeminiBrain) -> int:
     """Prove the runner can reach Gemini before anything depends on it.
 
@@ -243,6 +301,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--equip", action="store_true", help="List equipped brain knowledge modules")
     parser.add_argument("--generate-next", action="store_true", help="Generate and stage the next scripture release")
     parser.add_argument("--auto-replenish", action="store_true", help="Replenish queue if runway < threshold")
+    parser.add_argument("--probe-models", dest="probe_models", action="store_true",
+                        help="Ask the API which candidate models exist and, with "
+                             "--probe-generate, which of them actually answer")
+    parser.add_argument("--probe-generate", dest="probe_generate", action="store_true",
+                        help="Spend one one-token request per probed model to measure service")
     parser.add_argument("--preflight", action="store_true",
                         help="Check the key and make one live model call, then exit")
     parser.add_argument("--ensure-supply", action="store_true",
@@ -272,6 +335,8 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_equip(brain.channel_id)
     if args.generate_next:
         return cmd_generate_next(brain)
+    if args.probe_models:
+        return cmd_probe_models(brain, generate=args.probe_generate)
     if args.preflight:
         return cmd_preflight(brain)
     if args.ensure_supply:

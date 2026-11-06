@@ -125,10 +125,41 @@ class BrainGenerationResult:
 #: 08:00 and 08:03 UTC). Nothing in this repository changed: a model lifetime is
 #: not a dependency we control, so the model is configurable and the retired one
 #: is never the first choice.
-DEFAULT_TEXT_MODEL = os.environ.get("GEMINI_TEXT_MODEL", "gemini-3.8-flash")
+#: The model the brain authors with.
+#:
+#: It is a **quota** decision, not a quality one. Google's free tier gives
+#: `gemini-3.8-flash` (the model this repo moved to when 2.5-flash was withdrawn on
+#: 20 October 2026) roughly **20 requests a day**, and one brain pass spends more than
+#: that: a preflight call, up to six scripts through `--ensure-supply-for`, up to
+#: thirteen Short specs through `--author-shorts`, then `--generate-next`. A model
+#: whose whole day is 20 requests cannot carry a pipeline that needs 20+ per pass, and
+#: the refusal that follows looks exactly like the capacity `503` seen all morning on
+#: 6 November. `gemini-3.5-flash-lite` is the same generation, the documented successor
+#: to the 2.5 Flash-Lite this pipeline started on, and carries **500 requests a day**.
+#:
+#: Free-tier daily allowances (AI Studio's rate-limit page; Google stopped publishing
+#: them in the docs — see docs/research/gemini-model-and-quota-policy.md):
+#:   gemini-3.8-flash 20 · gemini-3.6-flash 20 · gemini-3.5-flash-lite 500 ·
+#:   gemini-3.1-flash-lite 500 · gemini-4-argon / gemini-3.1-pro paid only.
+DEFAULT_TEXT_MODEL = os.environ.get("GEMINI_TEXT_MODEL", "gemini-3.5-flash-lite")
 
 #: Models that answered 404 "no longer available" and must never be tried first.
 RETIRED_TEXT_MODELS = ("gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash")
+
+#: Deprecated but still routed by Google (gemini-3.7-flash has been redirected to
+#: 3.8-flash since 8 October 2026). Asked for explicitly, they answer; requested as
+#: the *default*, they hide which model actually ran.
+DEPRECATED_TEXT_MODELS = ("gemini-3.7-flash",)
+
+#: The fallback chain, ordered by free-tier allowance and then by generation, so an
+#: outage on one model's capacity pool moves to a model that can still afford the day.
+FALLBACK_TEXT_MODELS = ("gemini-3.5-flash-lite", "gemini-3.1-flash-lite",
+                        "gemini-3.6-flash", "gemini-3.8-flash")
+
+#: Requests a single brain pass may make. A guard, not a target: the retry loops are
+#: bounded per call, and this bounds the *whole pass* so a bad morning cannot eat the
+#: day's allowance before the first script is written.
+MAX_CALLS_PER_RUN = int(os.environ.get("GEMINI_MAX_CALLS_PER_RUN", "40") or "40")
 
 
 def text_model_candidates(primary: str | None = None) -> list[str]:
@@ -141,7 +172,8 @@ def text_model_candidates(primary: str | None = None) -> list[str]:
     requested = (primary or "").strip()
     if requested in RETIRED_TEXT_MODELS:
         requested = ""      # a retired model is never the thing we start with
-    order = [requested, DEFAULT_TEXT_MODEL, *RETIRED_TEXT_MODELS]
+    order = [requested, DEFAULT_TEXT_MODEL, *FALLBACK_TEXT_MODELS,
+             *DEPRECATED_TEXT_MODELS, *RETIRED_TEXT_MODELS]
     seen: list[str] = []
     for name in order:
         if name and name not in seen:
@@ -216,13 +248,21 @@ class GeminiBrain:
         # them sent this project chasing a secret that had been configured for
         # weeks — the same key narrates every video.
         self._client_error: Optional[str] = None
+        #: Requests issued by this pass. Bounded so a bad morning cannot spend the
+        #: whole free-tier day before the first script is authored.
+        self.calls_made = 0
         if self.api_key:
             try:
                 from google import genai
                 from .gemini_client import make_client
                 # Bounded per request: an unbounded client is how a stalled
                 # socket becomes a 90-minute step timeout with no error.
-                self._client = make_client(self.api_key)
+                #
+                # `attempts=1` hands retry authority to `_call_model`, which knows
+                # which model it is talking to and how much of that model's day is
+                # left. With the SDK retrying too, one logical call could issue ten
+                # requests — SDK 2 × our 5 — against a free tier of 20 a day.
+                self._client = make_client(self.api_key, attempts=1)
             except Exception as exc:  # noqa: BLE001
                 self._client_error = f"{type(exc).__name__}: {exc}"
                 print(f"[gemini-brain] Could not initialize genai.Client: {exc}")
@@ -377,6 +417,12 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         transport failure, and is always re-raised.
         """
         for attempt in range(1 + len(_TRANSIENT_BACKOFF)):
+            if self.calls_made >= MAX_CALLS_PER_RUN:
+                raise BrainAuthoringError(
+                    f"this pass has already made {self.calls_made} Gemini requests "
+                    f"(GEMINI_MAX_CALLS_PER_RUN={MAX_CALLS_PER_RUN}); stopping rather "
+                    f"than spending the rest of the day's free-tier allowance")
+            self.calls_made += 1
             try:
                 resp = self._client.models.generate_content(
                     model=model,

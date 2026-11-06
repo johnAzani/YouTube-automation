@@ -1,8 +1,12 @@
 name: Read-only Gemini key diagnostic
 
-# This diagnostic requests model metadata only: it does not generate content,
-# inspect other secrets, or verify billing. It never prints the API key or API
-# response, and runs only from this trusted branch.
+# This diagnostic requests model metadata (free, no generation quota) and — since
+# 6 November 2026 — one one-token generation per candidate model, because metadata
+# cannot tell "exists" from "is serving": every model existed while gemini-3.8-flash
+# answered `503 UNAVAILABLE` for three and a half hours and the whole pipeline stood
+# still. The generation is capped at six one-token requests, runs only when this file
+# is pushed, and it never prints the API key or a raw response body. Billing is still
+# not verified here.
 # This was pinned to the branch of an Arena session that no longer exists, and its
 # job carried the same `if`, so it could not run on any branch that still does. A
 # diagnostic that cannot run is worse than none: it looks like coverage.
@@ -52,7 +56,6 @@ jobs:
               except Exception:
                   results.append('- Requested model metadata: request failed; no response details logged.')
           results.append('- Billing tier and project ownership: NOT verified by this test.')
-          results.append('- No speech generation or upload was attempted.')
           text = '\n'.join(results) + '\n'
           print(text)
           # Publish only fixed, sanitized outcome strings as check annotations;
@@ -62,3 +65,13 @@ jobs:
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as summary:
               summary.write(text)
           PY
+
+      - name: Which candidate models actually answer today (one token each)
+        # Six one-token requests, once per push of this file. This is the only way to
+        # learn that a model is refusing service before the 4:14am brain pass does.
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        shell: bash
+        run: |
+          pip install --quiet -r requirements.txt
+          python scripts/gemini_brain.py --probe-models --probe-generate || true

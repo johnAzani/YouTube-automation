@@ -57,23 +57,41 @@ def http_timeout_seconds() -> int:
     return value if value > 0 else DEFAULT_HTTP_TIMEOUT_SECONDS
 
 
-def http_options():
+def http_options(attempts: int | None = None):
     """`types.HttpOptions` carrying the timeout and retry budget.
 
     Imported lazily so that importing this module never requires `google-genai`
     (the watchdog and the test suite import pipeline modules freely).
+
+    `attempts=1` disables the SDK's own retries. That matters where the caller has a
+    retry loop of its own: the SDK retries 5xx (including 503) *before* the caller
+    sees the error, so the two multiply. On 6 November a brain call could issue ten
+    requests — SDK 2 attempts × our 5 — against a model whose whole free-tier day is
+    20 requests. One retry authority per call, chosen by the caller.
+
+    `http_status_codes` deliberately omits 429: a quota refusal must reach
+    `quota_handler`, which paces the day, rather than be retried inside the socket.
     """
     from google.genai import types
 
-    attempts = DEFAULT_HTTP_ATTEMPTS
+    attempts = attempts or DEFAULT_HTTP_ATTEMPTS
+    if attempts is None:
+        attempts = DEFAULT_HTTP_ATTEMPTS
     raw = os.environ.get("GEMINI_HTTP_ATTEMPTS", "").strip()
-    if raw:
+    if raw and attempts == DEFAULT_HTTP_ATTEMPTS:
         try:
             attempts = max(1, int(raw))
         except ValueError:
             pass
     try:
-        retry = types.HttpRetryOptions(attempts=attempts)
+        retry = types.HttpRetryOptions(
+            attempts=attempts,
+            initial_delay=2.0,
+            max_delay=30.0,
+            exp_base=2.0,
+            jitter=0.2,
+            http_status_codes=[408, 500, 502, 503, 504],
+        )
     except Exception:  # noqa: BLE001 - older/newer SDK shape; timeout matters more
         retry = None
     kwargs = {"timeout": http_timeout_seconds() * 1000}
@@ -82,14 +100,14 @@ def http_options():
     return types.HttpOptions(**kwargs)
 
 
-def make_client(api_key: str | None = None):
+def make_client(api_key: str | None = None, attempts: int | None = None):
     """A `genai.Client` that cannot hang for longer than the timeout above."""
     from google import genai
 
     key = api_key or os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
     if not key:
         raise RuntimeError("GEMINI_API_KEY is not set")
-    return genai.Client(api_key=key, http_options=http_options())
+    return genai.Client(api_key=key, http_options=http_options(attempts))
 
 
 @contextmanager

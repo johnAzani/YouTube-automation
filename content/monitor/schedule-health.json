@@ -1,81 +1,9 @@
 {
   "alarm_minutes": 240,
-  "delivered_late": [
-    {
-      "late_minutes": 5264,
-      "name": "Weekly metrics snapshot",
-      "ran_at": "2026-11-03T10:25:46+00:00",
-      "slot": "2026-10-30T18:41:00+00:00",
-      "workflow": "metrics.yml"
-    },
-    {
-      "late_minutes": 346,
-      "name": "Growth autopilot",
-      "ran_at": "2026-11-06T08:00:31+00:00",
-      "slot": "2026-11-06T02:14:00+00:00",
-      "workflow": "growth-autopilot.yml"
-    },
-    {
-      "late_minutes": 286,
-      "name": "Gemini Brain Autonomous Queue Replenishment",
-      "ran_at": "2026-11-06T08:00:33+00:00",
-      "slot": "2026-11-06T03:14:00+00:00",
-      "workflow": "gemini_brain.yml"
-    },
-    {
-      "late_minutes": 276,
-      "name": "Keepalive",
-      "ran_at": "2026-11-02T07:59:10+00:00",
-      "slot": "2026-11-02T03:23:00+00:00",
-      "workflow": "keepalive.yml"
-    }
-  ],
-  "generated_at": "2026-11-06T12:48:55.807858+00:00",
-  "last_run_at": "2026-11-06T12:47:54+00:00",
-  "on_time": [
-    {
-      "late_minutes": 98,
-      "name": "automation-health",
-      "ran_at": "2026-11-05T21:52:23+00:00",
-      "slot": "2026-11-05T20:14:00+00:00",
-      "workflow": "automation-health.yml"
-    },
-    {
-      "late_minutes": 90,
-      "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-06T08:44:31+00:00",
-      "slot": "2026-11-06T07:14:00+00:00",
-      "workflow": "comments.yml"
-    },
-    {
-      "late_minutes": 100,
-      "name": "Autonomous Community Tab Automation",
-      "ran_at": "2026-11-04T20:54:26+00:00",
-      "slot": "2026-11-04T19:14:00+00:00",
-      "workflow": "community.yml"
-    },
-    {
-      "late_minutes": 6,
-      "name": "Automation monitor",
-      "ran_at": "2026-11-06T12:29:27+00:00",
-      "slot": "2026-11-06T12:23:00+00:00",
-      "workflow": "monitor.yml"
-    },
-    {
-      "late_minutes": 106,
-      "name": "Produce video",
-      "ran_at": "2026-11-06T08:00:34+00:00",
-      "slot": "2026-11-06T06:14:00+00:00",
-      "workflow": "produce.yml"
-    },
-    {
-      "late_minutes": 0,
-      "name": "Scheduler supervisor",
-      "ran_at": "2026-11-06T12:47:54+00:00",
-      "slot": "2026-11-06T12:47:00+00:00",
-      "workflow": "scheduler-supervisor.yml"
-    }
-  ],
-  "silence_minutes": 1,
+  "delivered_late": [],
+  "generated_at": "2026-11-02T18:45:00+00:00",
+  "last_run_at": null,
+  "on_time": [],
+  "silence_minutes": null,
   "warn_minutes": 120
 }
