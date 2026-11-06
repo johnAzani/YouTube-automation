@@ -30,8 +30,8 @@
       "workflow": "keepalive.yml"
     }
   ],
-  "generated_at": "2026-11-06T19:36:50.516492+00:00",
-  "last_run_at": "2026-11-06T19:34:59+00:00",
+  "generated_at": "2026-11-06T19:44:07.375241+00:00",
+  "last_run_at": "2026-11-06T19:43:37+00:00",
   "on_time": [
     {
       "late_minutes": 100,
@@ -55,6 +55,6 @@
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 1,
+  "silence_minutes": 0,
   "warn_minutes": 120
 }
