@@ -55,3 +55,48 @@ class TestWatchersDoNotPingPong(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestUpstreamOutagesKeepRetrying(unittest.TestCase):
+    """An outage that ends by itself must not cost the whole day.
+
+    6 November: gemini-3.8-flash returned `503 UNAVAILABLE — high demand` from 09:16Z
+    through 10:30Z. The attempts were spent, the code fingerprint had not changed
+    (nothing was wrong with it), so the slot would have gone unserved until 03:14Z
+    the next morning even after Google recovered.
+    """
+
+    @property
+    def sup(self):
+        from scripts import scheduler_supervisor
+
+        return scheduler_supervisor
+
+    def _entry(self, *, result: str, minutes_ago: int, attempts: int = 3):
+        from datetime import datetime, timedelta, timezone
+
+        now = datetime(2026, 11, 6, 12, 0, tzinfo=timezone.utc)
+        entry = {"at": (now - timedelta(minutes=minutes_ago)).isoformat(),
+                 "result": result, "attempts": attempts}
+        return self.sup, entry, now
+
+    def test_a_503_keeps_its_slot_retryable_after_a_cooldown(self):
+        sup, entry, now = self._entry(result="service unavailable: 503 UNAVAILABLE",
+                                      minutes_ago=45)
+        self.assertTrue(sup.is_upstream_failure(entry))
+        self.assertTrue(sup.upstream_retry_due(entry, now))
+
+    def test_it_does_not_retry_before_the_cooldown(self):
+        sup, entry, now = self._entry(result="503 UNAVAILABLE high demand", minutes_ago=5)
+        self.assertFalse(sup.upstream_retry_due(entry, now))
+
+    def test_a_code_failure_is_not_retried_as_an_outage(self):
+        sup, entry, now = self._entry(result="BrainAuthoringError: mislabelled scripture",
+                                      minutes_ago=120)
+        self.assertFalse(sup.is_upstream_failure(entry))
+        self.assertFalse(sup.upstream_retry_due(entry, now))
+
+    def test_an_endless_outage_stops_hammering(self):
+        sup, entry, now = self._entry(result="503 UNAVAILABLE", minutes_ago=45,
+                                      attempts=self.sup.UPSTREAM_MAX_ATTEMPTS)
+        self.assertFalse(sup.upstream_retry_due(entry, now))
