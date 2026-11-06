@@ -240,8 +240,12 @@ class TestDispatchRails(unittest.TestCase):
         self.assertEqual(len(first["dispatched"]), 3)
         # a real pass writes the ledger; simulate that then re-run the same slot
         for row in first["dispatched"]:
-            state[f"{row['workflow']}@{row['slot']}"] = {"at": "2099-01-01T00:00:00+00:00",
-                                                        "attempts": sup.MAX_ATTEMPTS_PER_SLOT}
+            state[f"{row['workflow']}@{row['slot']}"] = {
+                "at": "2099-01-01T00:00:00+00:00",
+                "attempts": sup.MAX_ATTEMPTS_PER_SLOT,
+                # a real pass stamps the code it dispatched, so nothing was fixed since
+                "code_id": sup.code_fingerprint(row["workflow"]),
+            }
         second = sup.supervise(self.now(), history, dry_run=True, state=state)
         self.assertEqual(second["dispatched"], [])
         self.assertTrue(all(r["reason"].startswith("already dispatched")
@@ -274,19 +278,39 @@ class TestDispatchRails(unittest.TestCase):
             out = sup.supervise(now, history, dry_run=True, state=state)
         self.assertIn("gemini_brain.yml", [r["workflow"] for r in out["dispatched"]])
 
-    def test_the_renewal_happens_once_per_commit_not_every_pass(self):
-        import subprocess
+    def test_the_fingerprint_ignores_monitor_commits(self):
+        """Only code counts. Actions rewrites content/monitor every few hours.
 
-        head = subprocess.run(["git", "log", "-1", "--format=%cI", "HEAD"],
-                              capture_output=True, text=True, cwd=sup.ROOT).stdout.strip()
-        entry = {"at": "2020-01-01T00:00:00+00:00", "attempts": 3}
-        self.assertTrue(sup.code_changed_since(entry, _cache={}),
-                        "an attempt older than HEAD was made by older code")
-        entry["renewed_for"] = head
-        self.assertFalse(sup.code_changed_since(entry, _cache={}),
-                         "renewed already for this commit — do not loop")
-        future = {"at": "2099-01-01T00:00:00+00:00", "attempts": 3}
-        self.assertFalse(sup.code_changed_since(future, _cache={}))
+        If those renewals counted, a genuinely broken workflow would retry forever
+        with nothing having been fixed — the loop guard would be gone.
+        """
+        import tempfile
+        from pathlib import Path
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "scripts").mkdir()
+            (root / "scripts" / "job.py").write_text("print('v1')\n")
+            (root / "content" / "monitor").mkdir(parents=True)
+            (root / "content" / "monitor" / "schedule-health.json").write_text("{}")
+            with mock.patch.object(sup, "ROOT", root):
+                first = sup.code_fingerprint("x.yml", _cache={})
+                (root / "content" / "monitor" / "schedule-health.json").write_text(
+                    '{"updated": "later"}')
+                self.assertEqual(first, sup.code_fingerprint("x.yml", _cache={}),
+                                 "content is not code")
+                (root / "scripts" / "job.py").write_text("print('v2')\n")
+                self.assertNotEqual(first, sup.code_fingerprint("x.yml", _cache={}),
+                                    "a code change must renew the budget")
+
+    def test_an_attempt_without_a_fingerprint_is_renewed_once(self):
+        head = sup.code_fingerprint("gemini_brain.yml")
+        entry = {"at": "2026-11-02T07:00:00+00:00", "attempts": 3}
+        self.assertTrue(sup.code_changed_since(entry, "gemini_brain.yml"))
+        entry["code_id"] = head          # the renewal stamps what it ran
+        self.assertFalse(sup.code_changed_since(entry, "gemini_brain.yml"))
+        entry["code_id"] = "0000000000000000"
+        self.assertTrue(sup.code_changed_since(entry, "gemini_brain.yml"))
 
     def test_a_failed_dispatch_is_retried_once_the_code_changes(self):
         """The retry path has its own cap, and it must honour a fix too.

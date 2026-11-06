@@ -133,3 +133,66 @@ class TestSpeechModelRedirect(unittest.TestCase):
         text_back, mimes = _response_parts(_Resp())
         self.assertEqual(text_back, "")
         self.assertEqual(mimes, ["audio/pcm;rate=24000"])
+
+
+class TestTransientServiceFailures(unittest.TestCase):
+    """503 is the service being busy — wait it out instead of burning the slot.
+
+    6 November 08:45Z: the brain reached a live model (the retirement fix worked) and
+    still failed, because three calls in a row returned `503 UNAVAILABLE — high
+    demand` and the loop skipped to the next candidate model instead of waiting.
+    """
+
+    def test_high_demand_is_transient(self):
+        from pipeline.gemini_brain import is_transient
+
+        exc = RuntimeError("503 UNAVAILABLE. This model is currently experiencing high demand.")
+        self.assertTrue(is_transient(exc))
+
+    def test_a_retirement_is_not_transient(self):
+        from pipeline.gemini_brain import is_transient
+
+        self.assertFalse(is_transient(RuntimeError("404 NOT_FOUND: no longer available")))
+
+    def test_a_quota_error_is_not_transient(self):
+        from pipeline.gemini_brain import is_transient
+
+        self.assertFalse(is_transient(RuntimeError("429 RESOURCE_EXHAUSTED: quota")))
+
+    def test_the_model_is_retried_before_giving_up(self):
+        from unittest import mock
+
+        from pipeline import gemini_brain
+
+        brain = gemini_brain.GeminiBrain(api_key="")
+        calls = {"n": 0}
+
+        class _Resp:
+            text = "id: 0038\n## Scene 1\n## Scene 2"
+
+        def _generate(**kwargs):
+            calls["n"] += 1
+            if calls["n"] < 3:
+                raise RuntimeError("503 UNAVAILABLE. high demand")
+            return _Resp()
+
+        brain._client = mock.MagicMock()
+        brain._client.models.generate_content.side_effect = _generate
+        with mock.patch.object(gemini_brain, "_TRANSIENT_BACKOFF", (0, 0, 0)):
+            text = brain._call_model("gemini-3.8-flash", "prompt")
+        self.assertEqual(calls["n"], 3, "two 503s, then the same model answers")
+        self.assertIn("## Scene", text)
+
+    def test_a_retired_model_is_not_retried(self):
+        from unittest import mock
+
+        from pipeline import gemini_brain
+
+        brain = gemini_brain.GeminiBrain(api_key="")
+        brain._client = mock.MagicMock()
+        brain._client.models.generate_content.side_effect = RuntimeError(
+            "404 NOT_FOUND: models/gemini-2.5-flash is no longer available to new users")
+        with mock.patch.object(gemini_brain, "_TRANSIENT_BACKOFF", (0, 0, 0)):
+            self.assertEqual(brain._call_model("gemini-2.5-flash", "prompt"), "")
+        self.assertEqual(brain._client.models.generate_content.call_count, 1,
+                         "a withdrawn model will not become available on retry")
