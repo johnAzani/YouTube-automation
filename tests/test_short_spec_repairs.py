@@ -68,3 +68,40 @@ class TestBlankHighlightsAreRepaired(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestEscalationAcrossModels(unittest.TestCase):
+    """A capability defect is not fixed by re-asking the same model.
+
+    6 November: `gemini-3.5-flash-lite` returned a 43-word Short where 90-165 is
+    enforced, twice, and the run gave up — five scenes instead of six, and no retry
+    left. The chain already holds stronger models; a rejected spec should climb it.
+    """
+
+    def test_a_thin_spec_escalates_to_the_next_model(self):
+        from unittest import mock
+
+        from pipeline import gemini_brain
+
+        brain = gemini_brain.GeminiBrain(api_key="")
+        brain._client = mock.MagicMock()
+        thin = json.dumps({"title": ["A", "B"]})          # rejected by validation
+        good = json.dumps(_baseline())
+
+        def _generate(model, contents, config=None):
+            text = thin if model == "gemini-3.5-flash-lite" else good
+            return mock.MagicMock(text=text)
+
+        brain._client.models.generate_content.side_effect = _generate
+        from pipeline.script_doc import parse_script
+
+        doc = parse_script(Path(__file__).resolve().parents[1] / "content" / "published"
+                           / "0013-psalm-46-god-is-our-refuge-and-strength.md")
+        with mock.patch.object(gemini_brain, "_TRANSIENT_BACKOFF", ()), \
+             mock.patch("builtins.print"):
+            spec = brain.author_short_spec(doc, key="short-isaiah26v3")
+        self.assertEqual(spec.key, "short-isaiah26v3")
+        models = [c.kwargs["model"] if c.kwargs else c.args[0]
+                  for c in brain._client.models.generate_content.call_args_list]
+        self.assertEqual(models[0], "gemini-3.5-flash-lite")
+        self.assertIn("gemini-3.1-flash-lite", models, "the chain must be climbed")

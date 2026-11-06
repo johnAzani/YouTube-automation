@@ -513,15 +513,19 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         key = key or short_key_for_doc(longform_doc)
         prompt = build_prompt(scripture, key=key, channel_id=self.channel_id)
         last_error = ""
-        for attempt in (1, 2):
-            try:
-                # `model=self.model` alone meant a Short could not be authored at
-                # all on a retired model — and the first Morning Altar Shorts were
-                # due the morning 2.5-flash was withdrawn.
+        # Two attempts per model, then *change the model*: a spec that comes back
+        # under the word floor or with five scenes instead of six is a capability
+        # defect, not a transport one, and re-asking the same model a third time
+        # spends another request on the same answer. On 6 November the lite model
+        # returned 43 words where 90-165 is enforced; the run gave up instead of
+        # asking a stronger model in the same chain.
+        for model in text_model_candidates(self.model):
+            if model in RETIRED_TEXT_MODELS:
+                continue
+            for attempt in (1, 2):
                 contents = prompt if attempt == 1 else (
                     f"{prompt}\n\nPrevious output was rejected: {last_error}\n"
-                    "Fix exactly that and return only JSON."
-                )
+                    "Fix exactly that and return only JSON.")
                 resp = None
                 for wait in (0, *_TRANSIENT_BACKOFF):
                     if wait:
@@ -531,30 +535,48 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                               flush=True)
                         time.sleep(wait)
                     try:
+                        self.calls_made += 1
+                        if self.calls_made > MAX_CALLS_PER_RUN:
+                            raise BrainAuthoringError(
+                                f"this pass has already made {self.calls_made} Gemini "
+                                f"requests (GEMINI_MAX_CALLS_PER_RUN={MAX_CALLS_PER_RUN})")
                         resp = self._client.models.generate_content(
-                            model=live_model(self.model), contents=contents)
+                            model=model, contents=contents)
                         break
+                    except BrainAuthoringError:
+                        raise
                     except Exception as exc:  # noqa: BLE001
+                        if is_model_retired(exc):
+                            report_retired_model(model, exc)
+                            resp = None
+                            break
                         if not is_transient(exc):
                             raise
                 if resp is None:
-                    last_error = "service unavailable (503) after retries"
+                    last_error = f"{model}: no answer"
                     continue
-                data = parse_model_json(getattr(resp, "text", "") or "")
-                data.setdefault("scripture", scripture)
-                data.setdefault("channel", self.channel_id)
-                # The spec is written for *this* channel: a spec that comes back
-                # declaring another one is rejected by validation, not relabelled.
-                spec = validate_spec(data, key=key, channel_id=self.channel_id)
-                if spec.problems:
-                    last_error = "; ".join(spec.problems[:4])
-                    continue
-                return require_valid(spec)
-            except ShortSpecError as exc:
-                last_error = str(exc)
-            except Exception as exc:  # noqa: BLE001
-                last_error = f"{type(exc).__name__}: {exc}"
-        raise BrainAuthoringError(f"{scripture} Short spec rejected twice: {last_error}")
+                try:
+                    data = parse_model_json(getattr(resp, "text", "") or "")
+                    data.setdefault("scripture", scripture)
+                    data.setdefault("channel", self.channel_id)
+                    # The spec is written for *this* channel: a spec that comes back
+                    # declaring another one is rejected by validation, not relabelled.
+                    spec = validate_spec(data, key=key, channel_id=self.channel_id)
+                    if spec.problems:
+                        last_error = "; ".join(spec.problems[:4])
+                        continue
+                    if spec.repairs:
+                        print(f"[gemini-brain] Short {key}: repaired "
+                              f"{'; '.join(spec.repairs)}")
+                    return require_valid(spec)
+                except ShortSpecError as exc:
+                    last_error = str(exc)
+                except Exception as exc:  # noqa: BLE001
+                    last_error = f"{type(exc).__name__}: {exc}"
+            print(f"[gemini-brain] Short {key}: {model} could not produce a valid spec "
+                  f"({last_error[:120]}); trying the next model", flush=True)
+        raise BrainAuthoringError(
+            f"{scripture} Short spec rejected on every candidate model: {last_error}")
 
     def generate_companion_short(self, longform_doc: ScriptDoc) -> tuple[Path, str]:
         """Queue a companion 9:16 Short for this long-form video.
