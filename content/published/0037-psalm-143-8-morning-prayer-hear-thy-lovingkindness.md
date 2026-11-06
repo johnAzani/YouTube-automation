@@ -90,7 +90,7 @@ published_on: "2026-11-05"
 published_at: "2026-11-05T21:51:45Z"
 youtube_video_id: "oVy7uG5H1RU"
 thumbnail_pending: true
-thumbnail_error: "HttpError: <HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=oVy7uG5H1RU&alt=json&uploadType=media returned \"The thumbnail can't be set for the specified video. The re"
+thumbnail_error: "HttpError: The thumbnail can't be set for the specified video. The request might not be properly authorized. [forbidden]"
 metadata_revision: "selar-seo-v1"
 ---
 
