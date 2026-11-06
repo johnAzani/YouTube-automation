@@ -52,6 +52,21 @@ def parse_iso8601_duration(iso_dur: str) -> int:
     return hours * 3600 + minutes * 60 + seconds
 
 
+def clear_frontmatter_field(path: Path, key: str) -> None:
+    """Remove a top-level field from a receipt's frontmatter (idempotent).
+
+    Used when a failure is repaired: a receipt that says `thumbnail_pending: false`
+    beside a 403 sentence describes two different days at once, and the next reader
+    cannot tell which one is true.
+    """
+    text = path.read_text(encoding="utf-8")
+    m = re.match(r"\A---\s*\n(.*?)\n---(?P<tail>\s*\n.*|\Z)", text, re.S)
+    if not m:
+        return
+    metadata = re.sub(rf"(?m)^{re.escape(key)}\s*:.*\n?", "", m.group(1))
+    path.write_text(f"---\n{metadata}\n---{m.group('tail')}", encoding="utf-8")
+
+
 def stamp_frontmatter_field(path: Path, key: str, value: str) -> None:
     """Insert or update a top-level scalar field in a Markdown receipt's YAML frontmatter."""
     text = path.read_text(encoding="utf-8")
@@ -340,6 +355,8 @@ def sync_published_thumbnails(
                 status = thumb_setter(vid, primary.path)
                 row["thumbnail_status"] = status
                 if status == "ok":
+                    # The refusal sentence describes a failure that no longer exists.
+                    clear_frontmatter_field(path, "thumbnail_error")
                     stamp_frontmatter_field(path, "thumbnail_revision", THUMBNAIL_REVISION)
                     stamp_frontmatter_field(path, "thumbnail_pending", False)
                 elif "HttpError 404" in str(status):

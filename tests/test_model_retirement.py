@@ -196,3 +196,42 @@ class TestTransientServiceFailures(unittest.TestCase):
             self.assertEqual(brain._call_model("gemini-2.5-flash", "prompt"), "")
         self.assertEqual(brain._client.models.generate_content.call_count, 1,
                          "a withdrawn model will not become available on retry")
+
+
+class TestPreflightSurvivesASpike(unittest.TestCase):
+    """Preflight is the gate for the whole run, and it had no retry at all.
+
+    6 November: three brain runs (09:16Z, 09:22Z, 09:24Z) died in preflight on one
+    `503 UNAVAILABLE` before any authoring code ran — so the backoff added to the
+    authoring path never got a chance to help.
+    """
+
+    def test_preflight_uses_the_bounded_retry(self):
+        from unittest import mock
+
+        from scripts import gemini_brain as runner
+
+        brain = mock.MagicMock()
+        brain.model = "gemini-3.8-flash"
+        brain.api_status.return_value = {"key_present": True, "client_ready": True,
+                                         "model": brain.model, "reason": "ok"}
+        brain._call_model.return_value = "ready"
+        with mock.patch.dict("os.environ", {"GITHUB_ACTIONS": ""}):
+            self.assertEqual(runner.cmd_preflight(brain), 0)
+        brain._call_model.assert_called_once()
+
+    def test_a_sustained_outage_is_named_upstream_not_silent(self):
+        from unittest import mock
+
+        from scripts import gemini_brain as runner
+
+        brain = mock.MagicMock()
+        brain.model = "gemini-3.8-flash"
+        brain.api_status.return_value = {"key_present": True, "client_ready": True,
+                                         "model": brain.model, "reason": "ok"}
+        brain._call_model.return_value = ""
+        with mock.patch.dict("os.environ", {"GITHUB_ACTIONS": "true"}), \
+             mock.patch("builtins.print") as printed:
+            self.assertEqual(runner.cmd_preflight(brain), 1)
+        text = " ".join(str(c) for c in printed.call_args_list)
+        self.assertIn("upstream capacity", text)

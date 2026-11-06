@@ -29,6 +29,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from pipeline.brain_equipment.equipment_registry import list_equipped_modules
+from pipeline import gemini_brain as gemini_brain_module
 from pipeline.gemini_brain import BrainAuthoringError, GeminiBrain
 
 
@@ -187,10 +188,19 @@ def cmd_preflight(brain: GeminiBrain) -> int:
         print(f"::error title=Gemini unreachable::{status['reason']}")
         return 1
     try:
-        resp = brain._client.models.generate_content(
-            model=brain.model, contents="Reply with the single word: ready")
-        text = (getattr(resp, "text", "") or "").strip()
-        print(f"[preflight] live call:    {text[:60] or '(empty response)'}")
+        # The same bounded retry the authoring calls use. This single call gates the
+        # entire brain run, and on 6 November it was the *only* call that failed:
+        # three runs in a row (09:16Z, 09:22Z, 09:24Z) died here on a 503 "high
+        # demand" before any authoring code ran, so the backoff added to the
+        # authoring path never got a chance to work.
+        text = (brain._call_model(brain.model, "Reply with the single word: ready") or "").strip()
+        if not text:
+            print(f"::error title=Gemini service unavailable::{brain.model} did not answer "
+                  f"after {1 + len(gemini_brain_module._TRANSIENT_BACKOFF)} attempts "
+                  f"(503 UNAVAILABLE — upstream capacity, not this code). The next "
+                  f"dispatch authorises nothing until Gemini answers.")
+            return 1
+        print(f"[preflight] live call:    {text[:60]}")
         return 0
     except Exception as exc:  # noqa: BLE001
         where = "GitHub Actions" if in_ci else "this machine"
