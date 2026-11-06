@@ -76,7 +76,7 @@ Midday Prayer, Noon Prayer, Afternoon Prayer, Prayer at Noon, Midday Devotional,
 | Asset | Dimensions | Workspace File | Where it goes in YouTube Studio |
 |---|---|---|---|
 | Profile picture / avatar | `800 × 800 px` (PNG) | `docs/media/midday-watch-avatar.png` | Customization → Branding → Picture |
-| Banner | `2560 × 1440 px` (PNG; type inside `1235 × 338 px`, scenery inside the band a phone shows) | `docs/media/midday-watch-banner.png` | Customization → Branding → Banner image |
+| Banner | `2560 × 1440 px` (PNG; type inside `1235 × 338 px`, all scenery outside the centre `1546 × 423` a phone shows) | `docs/media/midday-watch-banner.png` | Customization → Branding → Banner image |
 | Video watermark | `150 × 150 px` (PNG, transparent) | `docs/media/midday-watch-watermark.png` | Customization → Branding → Video watermark (Entire video) |
 | Thumbnail template | `1280 × 720 px` (PNG) | `docs/media/midday-watch-thumbnail-template.png` | Reference for the CTR system; not uploaded |
 | Brand sheet | `1800 × 1760 px` (PNG) | `docs/media/midday-watch-brand-sheet.png` | Review/share: every asset and the palette on one page |
@@ -89,19 +89,36 @@ documents and the four images at full resolution. It is rebuilt by the generator
 disagrees with the assets on disk — a stale kit is worse than none, because it
 ships the wrong banner.
 
-### Banner: the band a phone actually shows
-The `1235 × 338` box is where the **type** has to fit; it is not the shape of the
-window. Measured on a 1080 × 2400 Android phone against the live channel on
-2026-11-06, the banner card renders `1005 × 295 px` = **3.41 : 1**, which is the
-centre `2560 × 753` of the file — 415 px taller than the safe box. The first
-upload followed the spec and still looked broken on the phone: the sun was sliced
-by the top edge (a gold sliver in the rounded corner) and the watchtower rose out
-of nothing as a black notch, because the horizon sat below the band entirely. The
-sun and the tower are now laid out inside that band, and the ground is a gradient
-from noon light at the horizon to furrow shadow at the foot of the frame.
+### Banner: what a phone actually shows
+A phone crops the banner to the **centre `1546 × 423`** and scales that up to the
+card. It is not a letterbox of the whole 2560 px width — that was the assumption
+behind the bug below.
 
-**The Edit-channel preview is not the check** — it zoom-crops. Upload, then open
-the channel on a phone.
+How it was measured (2026-11-06, 1080 × 2400 Android, live channel):
+
+- the banner card renders **984 × 271 px = 3.63 : 1**;
+- the wordmark is 1091 px wide in the file and 699 px wide in that card, so the
+  card is showing `984 × 1091 / 699` = **1535 px** of the file's middle six-tenths;
+- fitting every candidate crop to the screenshot agreed: **MAE 7.6 at 1526 × 443**,
+  7.8 at 1546 × 423, 11+ at 2560 × 705.
+
+Consequence, and the reason this section exists: **nothing hard may cross the edge
+of that window.** It is either wholly inside it, or wholly outside it.
+
+| Upload | What the phone showed |
+|---|---|
+| first attempt | the sun sliced by the top edge — a gold wedge in the rounded corner |
+| second attempt | the sun sliced on a different axis — a gold crescent at the right edge |
+| now | clean: wordmark, rule, tagline, verse, and the warm haze at the foot of the card |
+
+The sun now rides **above** the window and the watchtower stands **right of** it, so
+the phone gets a wordmark card and the TV's wider frame gets the full noon
+landscape: sun high in the top-right sky, tower on the field at the right. The land
+is a gradient from noon light at the horizon to furrow shadow at the foot of the
+frame, not the flat slab a two-colour fill produced.
+
+**The Edit-channel preview is not the check** — it zoom-crops. Upload, then open the
+channel on a phone, because the phone is the only device that tells the truth here.
 
 The assets are **drawn in code**, not generated as pictures, because every one of
 them carries type the viewer is meant to read — and generated imagery mangles
@@ -153,7 +170,7 @@ disc still read.
 
 - [x] Create the channel and claim the handle (§ top) — done 2026-11-06, `@TheMiddayWatch`, first choice
 - [x] Upload avatar (`docs/media/midday-watch-avatar.png`) — done 2026-11-06
-- [~] Upload banner (`docs/media/midday-watch-banner.png`) — uploaded 2026-11-06, **re-cut the same day** after the phone check above; re-upload this file
+- [~] Upload banner (`docs/media/midday-watch-banner.png`) — uploaded 2026-11-06, **re-cut twice that day** after the phone checks above; re-upload this file
 - [ ] Upload watermark (`docs/media/midday-watch-watermark.png`) — desktop Studio only
 - [~] Name field is `The Midday Watch` (set 2026-11-06); the longer `The Midday Watch | Noonday Prayer` is optional, the tagline and Psalm 55:17 already sit in the banner
 - [ ] Paste the About description (§2) and keywords (§3)
