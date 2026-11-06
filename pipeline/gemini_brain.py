@@ -16,6 +16,7 @@ import math
 import os
 import re
 import sys
+import time
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -154,6 +155,26 @@ def live_model(primary: str | None = None) -> str:
         if name not in RETIRED_TEXT_MODELS:
             return name
     return DEFAULT_TEXT_MODEL
+
+
+#: Bounded backoff for transient service failures (503 "high demand", 500, timeouts).
+#: 6 November 08:45Z: the model was finally live and the authoring run still failed,
+#: because three calls in a row came back 503 UNAVAILABLE and the loop skipped to the
+#: next candidate model instead of letting the spike pass.
+_TRANSIENT_BACKOFF = (5, 15, 30)
+
+
+def is_transient(exc: BaseException) -> bool:
+    """Is this the service being busy rather than the request being wrong?
+
+    A 503 says "ask again"; a 404 (retired model) or a 429 (quota) says "stop".
+    Treating all three alike is what turned a two-minute demand spike into a lost
+    authoring slot.
+    """
+    text = str(exc).lower()
+    markers = ("503", "unavailable", "high demand", "500", "internal", "deadline",
+               "timeout", "timed out", "connection reset", "remoteprotocolerror")
+    return any(marker in text for marker in markers)
 
 
 def is_model_retired(exc: BaseException) -> bool:
@@ -313,40 +334,20 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         if self.is_api_available():
             try:
                 for candidate_model in text_model_candidates(self.model):
-                    try:
-                        resp = self._client.models.generate_content(
-                            model=candidate_model,
-                            contents=user_prompt,
-                            config={"system_instruction": self.system_prompt},
-                        )
-                        text = getattr(resp, "text", "") or ""
-                        text = text.strip()
-                        # Strip accidental triple backticks if model wrapped it
-                        if text.startswith("```markdown"):
-                            text = text[11:]
-                        elif text.startswith("```"):
-                            text = text[3:]
-                        if text.endswith("```"):
-                            text = text[:-3]
-                        text = text.strip()
-                        if "id:" in text and "## Scene" in text:
-                            self._enforce_channel_metadata(text, scripture_data)
-                            return text
-                    except BrainAuthoringError:
-                        # A branded rejection is a verdict, not a transport
-                        # failure: retrying the next model or falling back would
-                        # turn "this text is mislabelled" into "publish it".
-                        raise
-                    except Exception as model_err:
-                        err_str = str(model_err).lower()
-                        if "429" in err_str or "resource_exhausted" in err_str or "quota" in err_str:
-                            from pipeline.quota_handler import calculate_next_quota_reset_utc
-                            reset_dt = calculate_next_quota_reset_utc()
-                            print(f"[gemini-brain] Google Gemini daily free tier quota reached ($0.00 lock active). Reset at {reset_dt.isoformat()} UTC.")
-                            break
-                        if is_model_retired(model_err):
-                            report_retired_model(candidate_model, model_err)
-                        print(f"[gemini-brain] Model {candidate_model} call failed: {model_err}")
+                    text = (self._call_model(candidate_model, user_prompt) or "").strip()
+                    if not text:
+                        continue
+                    # Strip accidental triple backticks if model wrapped it
+                    if text.startswith("```markdown"):
+                        text = text[11:]
+                    elif text.startswith("```"):
+                        text = text[3:]
+                    if text.endswith("```"):
+                        text = text[:-3]
+                    text = text.strip()
+                    if "id:" in text and "## Scene" in text:
+                        self._enforce_channel_metadata(text, scripture_data)
+                        return text
             except BrainAuthoringError:
                 raise
             except Exception as api_err:
@@ -366,6 +367,49 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
             f"quota-exhausted. Refusing to emit mislabelled or unpublishable scripture "
             f"($0 lock: idle, never spend)."
         )
+
+    def _call_model(self, model: str, prompt: str) -> str:
+        """One model call with bounded backoff for a busy service.
+
+        Returns the raw text, or "" when this model cannot answer (retired, out of
+        quota, or still busy after the retries) so the caller can try the next
+        candidate. `BrainAuthoringError` is a verdict about the *text*, not a
+        transport failure, and is always re-raised.
+        """
+        for attempt in range(1 + len(_TRANSIENT_BACKOFF)):
+            try:
+                resp = self._client.models.generate_content(
+                    model=model,
+                    contents=prompt,
+                    config={"system_instruction": self.system_prompt},
+                )
+                return getattr(resp, "text", "") or ""
+            except BrainAuthoringError:
+                raise
+            except Exception as exc:  # noqa: BLE001
+                err = str(exc).lower()
+                if is_model_retired(exc):
+                    report_retired_model(model, exc)
+                    return ""
+                if "429" in err or "resource_exhausted" in err or "quota" in err:
+                    from pipeline.quota_handler import calculate_next_quota_reset_utc
+
+                    reset_dt = calculate_next_quota_reset_utc()
+                    print("[gemini-brain] Google Gemini daily free tier quota reached "
+                          f"($0.00 lock active). Reset at {reset_dt.isoformat()} UTC.")
+                    return ""
+                if is_transient(exc) and attempt < len(_TRANSIENT_BACKOFF):
+                    wait = _TRANSIENT_BACKOFF[attempt]
+                    print(f"[gemini-brain] {model}: service busy ({type(exc).__name__}). "
+                          f"Waiting {wait}s (attempt {attempt + 2}/"
+                          f"{1 + len(_TRANSIENT_BACKOFF)})...", flush=True)
+                    time.sleep(wait)
+                    continue
+                print(f"[gemini-brain] Model {model} call failed: {exc}")
+                return ""
+        print(f"[gemini-brain] Model {model} still busy after "
+              f"{len(_TRANSIENT_BACKOFF)} retries; trying the next candidate.")
+        return ""
 
     def _enforce_channel_metadata(self, text: str, scripture_data: dict[str, Any] | None = None) -> None:
         """Refuse model output that is branded for the wrong channel.
@@ -428,10 +472,28 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                 # `model=self.model` alone meant a Short could not be authored at
                 # all on a retired model — and the first Morning Altar Shorts were
                 # due the morning 2.5-flash was withdrawn.
-                resp = self._client.models.generate_content(
-                    model=live_model(self.model),
-                    contents=prompt if attempt == 1 else f"{prompt}\n\nPrevious output was rejected: {last_error}\nFix exactly that and return only JSON.",
+                contents = prompt if attempt == 1 else (
+                    f"{prompt}\n\nPrevious output was rejected: {last_error}\n"
+                    "Fix exactly that and return only JSON."
                 )
+                resp = None
+                for wait in (0, *_TRANSIENT_BACKOFF):
+                    if wait:
+                        # Same 503 spike that killed a long-form run at 08:45Z
+                        # would also kill the Short: wait, do not re-prompt.
+                        print(f"[gemini-brain] Short {key}: service busy, waiting {wait}s...",
+                              flush=True)
+                        time.sleep(wait)
+                    try:
+                        resp = self._client.models.generate_content(
+                            model=live_model(self.model), contents=contents)
+                        break
+                    except Exception as exc:  # noqa: BLE001
+                        if not is_transient(exc):
+                            raise
+                if resp is None:
+                    last_error = "service unavailable (503) after retries"
+                    continue
                 data = parse_model_json(getattr(resp, "text", "") or "")
                 data.setdefault("scripture", scripture)
                 data.setdefault("channel", self.channel_id)

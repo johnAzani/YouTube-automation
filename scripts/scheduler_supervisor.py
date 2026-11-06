@@ -23,6 +23,7 @@ Safety rails, because a dispatcher that loops is worse than a dropped cron:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import subprocess
@@ -179,36 +180,61 @@ def _slot_window(workflow: str, crons: list[str], slot: datetime) -> timedelta:
     return min(max(period, DISPATCH_AFTER * 2), MAX_SLOT_WINDOW)
 
 
-def code_changed_since(entry: dict, _cache: dict[str, datetime | None] = {}) -> bool:
-    """Has the repository changed since that attempt was made?
+#: Files whose contents *are* the code a workflow runs. `content/` is deliberately
+#: absent: Actions rewrites `content/monitor/*.json` every few hours on its own, and
+#: if those renewals counted, a broken workflow would retry forever with nothing fixed.
+_CODE_ROOTS = ("pipeline", "scripts")
+_CODE_EXTRA = ("requirements.txt", ".github/actions")
 
-    Attempt budgets exist to stop a *permanently broken* workflow from hammering the
+
+def code_fingerprint(workflow: str | None = None, _cache: dict[str, str] = {}) -> str:
+    """A stable id for the code a workflow would run right now.
+
+    A commit date cannot answer this question here: the supervisor runs in a
+    depth-1 checkout, where the tip commit *is* the whole history and looks like it
+    touched every file. A content hash can, and it is what gets compared.
+    """
+    cache_key = workflow or ""
+    if cache_key in _cache:
+        return _cache[cache_key]
+    digest = hashlib.sha256()
+    for name in _CODE_ROOTS:
+        root = ROOT / name
+        if not root.is_dir():
+            continue
+        for path in sorted(root.rglob("*.py")):
+            digest.update(path.relative_to(ROOT).as_posix().encode())
+            digest.update(path.read_bytes())
+    for name in _CODE_EXTRA:
+        path = ROOT / name
+        if path.is_file():
+            digest.update(name.encode())
+            digest.update(path.read_bytes())
+    if workflow:
+        wf = ROOT / ".github" / "workflows" / workflow
+        if wf.is_file():
+            digest.update(wf.read_bytes())
+    _cache[cache_key] = digest.hexdigest()[:16]
+    return _cache[cache_key]
+
+
+def code_changed_since(entry: dict, workflow: str | None = None) -> bool:
+    """Has the code changed since that attempt was made?
+
+    Attempt budgets exist to stop a permanently broken workflow from hammering the
     queue. They must not stop a *fixed* one: on the morning of 6 November the brain
     burned all three attempts against a retired Gemini model, the fix landed at
     08:30, and the ledger would have refused to run it again until the next day's
-    slot. A commit newer than the last attempt is new code, so the budget is renewed
-    — once per commit, so the loop guard still holds.
+    slot. Different code means different failures, so the budget is renewed — once
+    per fingerprint, so the loop guard still holds.
     """
-    stamp = str(entry.get("at") or "").strip()
-    if not stamp:
+    if not entry.get("at"):
         return False
-    head = _cache.get("head")
-    if head is None:
-        try:
-            proc = subprocess.run(["git", "log", "-1", "--format=%cI", "HEAD"],
-                                  capture_output=True, text=True, cwd=ROOT, timeout=30)
-            head = datetime.fromisoformat((proc.stdout or "").strip())
-        except Exception:  # noqa: BLE001
-            head = False  # type: ignore[assignment]
-        _cache["head"] = head  # type: ignore[assignment]
-    if not head:
-        return False
-    if str(entry.get("renewed_for") or "") == head.isoformat():
-        return False          # already renewed for this commit; do not loop
-    try:
-        return head > datetime.fromisoformat(stamp)
-    except ValueError:
-        return False
+    known = str(entry.get("code_id") or "")
+    current = code_fingerprint(workflow)
+    if not known:
+        return True           # attempt predates the fingerprint; renew once and stamp
+    return known != current
 
 
 def _cron_map() -> dict[str, list[str]]:
@@ -349,7 +375,7 @@ def _failed_dispatches(state: dict, latest: dict[str, tuple[datetime, str | None
         if int(entry.get("attempts", 1)) >= _attempt_cap(workflow):
             # A slot whose attempts were burned by code that has since been fixed must
             # be retryable: the failures came from older code, not from the workflow.
-            if not code_changed_since(entry):
+            if not code_changed_since(entry, workflow):
                 continue
         finished = latest.get(workflow)
         if finished is None:
@@ -628,19 +654,12 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
                                           "reason": "its dispatched run succeeded"})
                 continue
             if attempts >= _attempt_cap(workflow):
-                if code_changed_since(previous):
+                if code_changed_since(previous, workflow):
                     # The code that failed has been replaced. Run the new code.
-                    previous["renewed_for"] = str(previous.get("renewed_for") or "") or None
-                    try:
-                        proc = subprocess.run(["git", "log", "-1", "--format=%cI", "HEAD"],
-                                              capture_output=True, text=True, cwd=ROOT,
-                                              timeout=30)
-                        previous["renewed_for"] = (proc.stdout or "").strip()
-                    except Exception:  # noqa: BLE001
-                        pass
                     attempts = 0
-                    print(f"[supervisor] {workflow}: attempts renewed — the repository "
-                          f"changed after the last attempt, so the failures came from "
+                    print(f"[supervisor] {workflow}: attempts renewed — the code changed "
+                          f"since the last attempt ({str(previous.get('code_id') or '?'):8} -> "
+                          f"{code_fingerprint(workflow)}), so those failures came from "
                           f"older code")
                 else:
                     result["skipped"].append({"workflow": workflow, "slot": slot,
@@ -656,7 +675,8 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
                                          "result": "would dispatch"})
             continue
         ok, message = dispatch(workflow, slot)
-        state[key] = {"at": now.isoformat(), "result": message, "attempts": attempts + 1}
+        state[key] = {"at": now.isoformat(), "result": message, "attempts": attempts + 1,
+                      "code_id": code_fingerprint(workflow)}
         (result["dispatched"] if ok else result["failed"]).append(
             {"workflow": workflow, "slot": slot, "result": message})
 
