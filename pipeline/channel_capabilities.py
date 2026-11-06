@@ -128,6 +128,15 @@ _MORNING_ALTAR_COMMENT = (
     "every single name. Go into today covered, calm, and confident. You are not alone. 🙏✨{footer}"
 )
 
+_MIDDAY_WATCH_COMMENT = (
+    "☀️ Beloved family, if you are pausing your day with us right now, write 'AMEN' in faith to "
+    "claim God's promise of {theme} over your work, your home, and your mind this afternoon.\n\n"
+    "📖 {scripture_hook}\n\n"
+    "Drop your prayer request below — our pastoral editorial team reads and intercedes over "
+    "every single name. Whatever this afternoon is asking of you, you are not carrying it "
+    "alone. 🙏✨{footer}"
+)
+
 _BRANDS: dict[str, Brand] = {
     "secret-place": Brand(
         channel_id="secret-place",
@@ -146,6 +155,9 @@ _BRANDS: dict[str, Brand] = {
             "@TheMorningAltarDaily",
             "the morning altar",
             "begin every sunrise with us",
+            "The Midday Watch",
+            "@TheMiddayWatch",
+            "noonday prayer",
         ),
         authoring_directive=(
             "CHANNEL: The Secret Place (secret-place) - night prayer, never a morning devotional.",
@@ -211,6 +223,9 @@ _BRANDS: dict[str, Brand] = {
             "night prayer",
             "close your eyes tonight",
             "pray with us every night",
+            "The Midday Watch",
+            "@TheMiddayWatch",
+            "noonday prayer",
         ),
         authoring_directive=(
             "CHANNEL: The Morning Altar (prayer2) - sunrise, never bedtime.",
@@ -251,6 +266,71 @@ _BRANDS: dict[str, Brand] = {
             "confident. 🙏🌅✨{footer}"
         ),
     ),
+    "prayer3": Brand(
+        channel_id="prayer3",
+        display_name="The Midday Watch",
+        handle="@TheMiddayWatch",
+        declaration="prayer3",
+        title_suffix="| The Midday Watch",
+        producer_line="Produced by The Midday Watch | Noonday Prayer & Scripture",
+        closing_cta=(
+            "Type Amen to agree with this prayer, and subscribe to The Midday Watch "
+            "to pause and pray with us at noon."
+        ),
+        required_phrases=("The Midday Watch",),
+        forbidden_phrases=(
+            "The Secret Place",
+            "@TheSecretPlace",
+            "The Morning Altar",
+            "@TheMorningAltarDaily",
+            "before you sleep",
+            "bedtime prayer",
+            "prayer before sleep",
+            "night prayer",
+            "begin every sunrise with us",
+            "sunrise prayer",
+        ),
+        authoring_directive=(
+            "CHANNEL: The Midday Watch (prayer3) - the middle of the day, never bedtime and "
+            "never sunrise.",
+            "Frontmatter MUST include exactly: channel: prayer3",
+            "Title MUST end with: | The Midday Watch",
+            'Tags MUST include "midday prayer" and "the midday watch"; never sunrise, sleep, '
+            'bedtime or night-prayer terms.',
+            "Description MUST credit: Produced by The Midday Watch | Noonday Prayer & Scripture",
+            'Scenes follow the noonday arc in the rubric and end with: "Type Amen to agree with '
+            'this prayer, and subscribe to The Midday Watch to pause and pray with us at noon."',
+            "Asset queries MUST be midday light, a quiet desk, an open window at noon or "
+            "high-sun landscape scenes - never candlelight, starfields or dawn.",
+        ),
+        short_title_template="Say This {label} Prayer at Noon | {hook}",
+        subscribe_heading="🙏 PAUSE AND PRAY AT NOON",
+        short_target_window_utc="12:14",
+        short_channel_label="a faceless noonday-prayer channel called The Midday Watch",
+        short_prayer_kind="midday",
+        short_opening="pause what you are doing",
+        short_imagery="midday light through a window, a quiet desk, high sun on open ground",
+        short_tags=(
+            "midday prayer",
+            "noon prayer",
+            "afternoon prayer",
+            "the midday watch",
+            "scripture meditation",
+        ),
+        short_hashtags="#Shorts #{tag_key} #MiddayPrayer #NoonPrayer #DailyDevotion #TheMiddayWatch",
+        short_end_card="The Midday Watch — pause and pray at noon",
+        short_key_namespace="midday",
+        longform_pinned_comment=_MIDDAY_WATCH_COMMENT,
+        short_pinned_comment=(
+            "☀️ PRAY THE FULL NOONDAY SCRIPTURE MEDITATION:\n"
+            "Tap the linked full-length prayer right above this title (or visit {handle}) "
+            "to pray the complete midday prayer of {scripture}:\n"
+            "👉 {url}\n\n"
+            "Write 'AMEN' in faith and leave your prayer request below — we are interceding "
+            "over your afternoon right now. Whatever the rest of this day holds, you are not "
+            "carrying it alone. 🙏☀️✨{footer}"
+        ),
+    ),
 }
 
 _CAPABILITIES: dict[str, ChannelCapabilities] = {
@@ -275,6 +355,18 @@ _CAPABILITIES: dict[str, ChannelCapabilities] = {
         },
         roadmap="prayer2",
         roadmap_name="MORNING_ALTAR_ROADMAP",
+        legacy_queue_alias="",
+        supply_min_publishable=6,
+    ),
+    "prayer3": ChannelCapabilities(
+        channel_id="prayer3",
+        brand=_BRANDS["prayer3"],
+        equipment={
+            "system_instruction": "midday_system_instruction.md",
+            "theological_rubric": "midday_theological_rubric.md",
+        },
+        roadmap="prayer3",
+        roadmap_name="MIDDAY_WATCH_ROADMAP",
         legacy_queue_alias="",
         supply_min_publishable=6,
     ),

@@ -232,9 +232,114 @@ def roadmap_for_channel(channel_id: str | None = None) -> list[dict]:
         ) from None
 
 
+#: The third channel's roadmap. Separate from the night and sunrise lists for the
+#: same reason those two are separate: reusing an entry would misbrand the channel
+#: and duplicate published content. Job ids stay globally unique across
+#: content/queue/ + content/published/, so this channel continues from 0045.
+MIDDAY_WATCH_ROADMAP = [
+    {
+        "id": "0045",
+        "scripture": "Psalm 55:17",
+        "theme": "At Noon Will I Pray - The Middle-Hour Meeting",
+        "hook": "PRAY AT NOON",
+        "verses": "Verse 17 (Exposition)",
+        "target_duration": "5:30 - 6:00",
+        "primary_intent": "Midday pause, prayer in the middle of work, being heard at noon",
+        "search_volume_tier": "Tier 1 (Noonday Prayer)",
+        "status": "planned",
+        "video_id": None,
+    },
+    {
+        "id": "0046",
+        "scripture": "Psalm 91:6",
+        "theme": "The Destruction That Wasteth at Noonday",
+        "hook": "NOONDAY SHIELD",
+        "verses": "Verse 6 (Exposition)",
+        "target_duration": "5:30 - 6:00",
+        "primary_intent": "Protection in the middle of the day, sudden bad news, unseen danger",
+        "search_volume_tier": "Tier 1 (Protection)",
+        "status": "planned",
+        "video_id": None,
+    },
+    {
+        "id": "0047",
+        "scripture": "Proverbs 16:3",
+        "theme": "Commit Thy Works - The Afternoon Offering",
+        "hook": "COMMIT YOUR WORK",
+        "verses": "Verse 3 (Exposition)",
+        "target_duration": "5:30 - 6:00",
+        "primary_intent": "Prayer over work and decisions, committing outcomes, established thoughts",
+        "search_volume_tier": "Tier 1 (Work and Decisions)",
+        "status": "planned",
+        "video_id": None,
+    },
+    {
+        "id": "0048",
+        "scripture": "Isaiah 40:31",
+        "theme": "Renewed Strength for the Hours That Remain",
+        "hook": "RENEW MY STRENGTH",
+        "verses": "Verse 31 (Exposition)",
+        "target_duration": "5:30 - 6:00",
+        "primary_intent": "Weariness at midday, waiting on God, strength given rather than summoned",
+        "search_volume_tier": "Tier 1 (Strength and Weariness)",
+        "status": "planned",
+        "video_id": None,
+    },
+    {
+        "id": "0049",
+        "scripture": "Psalm 119:114",
+        "theme": "Thou Art My Hiding Place and My Shield",
+        "hook": "MY HIDING PLACE",
+        "verses": "Verse 114 (Exposition)",
+        "target_duration": "5:30 - 6:00",
+        "primary_intent": "A quiet refuge in a loud day, hope in the word, shielding the mind",
+        "search_volume_tier": "Tier 2 (Refuge and Peace)",
+        "status": "planned",
+        "video_id": None,
+    },
+    {
+        "id": "0050",
+        "scripture": "Isaiah 58:10",
+        "theme": "Thy Light Shall Rise in Obscurity",
+        "hook": "LIGHT IN THE DARK",
+        "verses": "Verse 10 (Exposition)",
+        "target_duration": "5:30 - 6:00",
+        "primary_intent": "Integrity in unglamorous hours, light for a heavy afternoon, generosity of spirit",
+        "search_volume_tier": "Tier 2 (Integrity)",
+        "status": "planned",
+        "video_id": None,
+    },
+    {
+        "id": "0051",
+        "scripture": "Psalm 37:5",
+        "theme": "Commit Thy Way unto the Lord - Trust at Midday",
+        "hook": "COMMIT YOUR DAY",
+        "verses": "Verse 5 (Exposition)",
+        "target_duration": "5:30 - 6:00",
+        "primary_intent": "Trust when the day has not gone as planned, handing over the remainder",
+        "search_volume_tier": "Tier 2 (Trust)",
+        "status": "planned",
+        "video_id": None,
+    },
+    {
+        "id": "0052",
+        "scripture": "Psalm 63:1",
+        "theme": "My Soul Thirsteth for Thee in a Dry Land",
+        "hook": "THIRSTING FOR YOU",
+        "verses": "Verse 1 (Exposition)",
+        "target_duration": "5:30 - 6:00",
+        "primary_intent": "Desert hours, dryness of soul in the middle of the day, earnest seeking",
+        "search_volume_tier": "Tier 2 (Earnest Seeking)",
+        "status": "planned",
+        "video_id": None,
+    },
+]
+
+
 ROADMAPS = {
     "secret-place": SCRIPTURE_ROADMAP,
     "prayer2": MORNING_ALTAR_ROADMAP,
+    "prayer3": MIDDAY_WATCH_ROADMAP,
 }
 
 

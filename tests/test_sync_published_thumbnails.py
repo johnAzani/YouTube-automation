@@ -305,13 +305,14 @@ class TestChannelScopedThumbnailRepair(unittest.TestCase):
             spt.collect_pending_receipts(published_dir=self.pub_dir, channel_id="prayer2"), []
         )
 
-    def test_all_channels_mode_covers_every_registered_channel(self):
-        from pipeline.channels import CHANNELS
+    def test_all_channels_mode_covers_every_live_channel(self):
+        from pipeline.channels import scheduled_channels
 
         with mock.patch.object(spt, "_has_youtube_credentials", return_value=False):
             results = spt.sync_all_channels(force=True)
-        self.assertEqual(sorted(results), sorted(CHANNELS))
-        self.assertEqual(set(results), {"secret-place", "prayer2"})
+        self.assertEqual(sorted(results), sorted(scheduled_channels()))
+        self.assertIn("secret-place", results)
+        self.assertIn("prayer2", results)
 
     def test_monitor_workflow_supplies_both_channels_credentials(self):
         text = (Path(__file__).resolve().parent.parent / ".github/workflows/monitor.yml").read_text()

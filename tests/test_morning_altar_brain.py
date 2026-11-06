@@ -221,7 +221,10 @@ class TestWorkflowWiring(unittest.TestCase):
 
     def test_brain_workflow_runs_both_channels_identically(self):
         text = (self.ROOT / ".github/workflows/gemini_brain.yml").read_text()
-        self.assertIn('channels=\'["secret-place","prayer2"]\'', text)
+        from pipeline.channels import scheduled_channels
+
+        for cid in scheduled_channels():
+            self.assertIn(cid, text, f"the brain never replenishes {cid}")
         self.assertIn("PRAYER2_GEMINI_API_KEY", text)
         # One command for every channel, parameterised by CHANNEL_ID.
         self.assertIn('--ensure-supply-for "$CHANNEL_ID" --min-publishable 6', text)

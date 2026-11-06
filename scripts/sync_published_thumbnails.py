@@ -384,11 +384,17 @@ def sync_published_thumbnails(
 def sync_all_channels(force: bool = False, dry_run: bool = False) -> dict[str, list[dict[str, Any]]]:
     """Repair every channel, each with its own credentials.
 
-    One channel's failure must never silence the other's repair — the two pools
-    are separate, so a 403 on one says nothing about the other.
+    One channel's failure must never silence another's repair — the pools are
+    separate, so a 403 on one says nothing about the other.
+
+    Live channels only: a registered channel with no credentials has no videos to
+    repair, and reporting it as broken every three hours is the noise this repo
+    keeps paying for.
     """
+    from pipeline.channels import scheduled_channels
+
     results: dict[str, list[dict[str, Any]]] = {}
-    for cid in sorted(CHANNELS):
+    for cid in sorted(scheduled_channels()):
         try:
             results[cid] = sync_published_thumbnails(
                 force=force, dry_run=dry_run, channel=cid

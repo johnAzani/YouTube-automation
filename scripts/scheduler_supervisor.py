@@ -331,9 +331,9 @@ def due_but_missing(now: datetime | None = None,
 
 
 def _channels() -> list[str]:
-    from pipeline.channel_capabilities import known_channels
+    from pipeline.channels import scheduled_channels
 
-    return list(known_channels())
+    return list(scheduled_channels())
 
 
 def _safe_runs() -> list[dict]:

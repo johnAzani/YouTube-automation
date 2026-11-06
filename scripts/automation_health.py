@@ -148,7 +148,7 @@ def queue_health() -> list[dict]:
     than approved rows is what makes a stall visible before it lasts a week.
     """
     from pipeline.channel_capabilities import capabilities_for
-    from pipeline.channels import CHANNELS
+    from pipeline.channels import scheduled_channels
     from pipeline.supply import publishable_longform
     from pipeline.short_release import queue_report
 
@@ -157,7 +157,7 @@ def queue_health() -> list[dict]:
     # ambient channel, so the watchdog could stay green while another channel had
     # nothing to publish. Every channel now reports both queues, and the historic
     # unprefixed row names are kept as aliases for channel 1 only.
-    for channel_id in CHANNELS:
+    for channel_id in scheduled_channels():
         caps = capabilities_for(channel_id)
         try:
             count = len(publishable_longform(channel_id=channel_id))
@@ -170,7 +170,7 @@ def queue_health() -> list[dict]:
             rows.append({"queue": caps.legacy_queue_alias, "channel": channel_id,
                          "ready": count, "note": note})
 
-    for channel_id in CHANNELS:
+    for channel_id in scheduled_channels():
         caps = capabilities_for(channel_id)
         try:
             shorts = queue_report(channel_id=channel_id)
