@@ -17,6 +17,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from typing import Any
 
 from .config import CONFIG
 from .script_doc import ScriptDoc
@@ -487,6 +488,51 @@ def update_live_video_metadata(
     return youtube.videos().update(part=parts, body=payload).execute()
 
 
+def diagnose_thumbnail_refusal(video_id: str) -> dict[str, Any]:
+    """Name *why* YouTube refused a thumbnail, instead of quoting the 403.
+
+    The refusal sentence is the same for every cause — "The request might not be
+    properly authorized" — so a receipt that stores only that sentence cannot be
+    acted on. This asks the API the three questions that separate the causes:
+
+    * does the authenticated account own the video at all (`channel_id` vs
+      `auth_channel_id`)? A token for the wrong channel of a brand account fails
+      here, and it is indistinguishable from a verification problem in the message;
+    * is the video finished processing (`upload_status`)? thumbnails.set is refused
+      on a video that is still `uploaded`;
+    * has the channel been verified for custom thumbnails (`long_uploads_status`)?
+
+    Returns `{}` when the lookup itself fails: a diagnostic must never turn one
+    failure into two.
+    """
+    vid = (video_id or "").strip()
+    if not vid:
+        return {}
+    try:
+        from googleapiclient.discovery import build
+
+        youtube = build("youtube", "v3", credentials=_credentials(), cache_discovery=False)
+        mine = youtube.channels().list(part="id,snippet,status", mine=True).execute()
+        auth_channel = ((mine.get("items") or [{}])[0])
+        video = youtube.videos().list(part="snippet,status", id=vid).execute()
+        item = (video.get("items") or [{}])[0]
+        return {
+            "auth_channel_id": auth_channel.get("id", ""),
+            "auth_channel_title": (auth_channel.get("snippet") or {}).get("title", ""),
+            "long_uploads_status": (auth_channel.get("status") or {}).get(
+                "longUploadsStatus", ""),
+            "video_channel_id": (item.get("snippet") or {}).get("channelId", ""),
+            "video_channel_title": (item.get("snippet") or {}).get("channelTitle", ""),
+            "video_privacy": (item.get("status") or {}).get("privacyStatus", ""),
+            "upload_status": (item.get("status") or {}).get("uploadStatus", ""),
+            "same_channel": (auth_channel.get("id", "") ==
+                             (item.get("snippet") or {}).get("channelId", "")),
+        }
+    except Exception as exc:  # noqa: BLE001
+        print(f"[upload] thumbnail diagnosis for {vid} unavailable: {exc}")
+        return {}
+
+
 def set_video_thumbnail(video_id: str, thumbnail_path: Path) -> str:
     """Apply a custom thumbnail to an existing YouTube video ID and return 'ok' or error string."""
     vid = (video_id or "").strip()
@@ -506,8 +552,11 @@ def set_video_thumbnail(video_id: str, thumbnail_path: Path) -> str:
         return "ok"
     except Exception as exc:  # noqa: BLE001
         msg = f"{type(exc).__name__}: {_api_error_text(exc)}"
+        diagnosis = diagnose_thumbnail_refusal(vid)
+        if diagnosis:
+            msg += (" | " + "; ".join(f"{k}={v}" for k, v in diagnosis.items()))
         print(f"[upload] set_video_thumbnail({vid}) failed: {msg}")
-        return msg[:400]
+        return msg[:900]
 
 
 def audit_channel_videos(extra_video_ids: list[str] | None = None) -> list[dict]:
