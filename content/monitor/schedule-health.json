@@ -1,0 +1,9 @@
+{
+  "alarm_minutes": 240,
+  "delivered_late": [],
+  "generated_at": "2026-11-02T18:45:00+00:00",
+  "last_run_at": null,
+  "on_time": [],
+  "silence_minutes": null,
+  "warn_minutes": 120
+}

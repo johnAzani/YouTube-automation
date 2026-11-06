@@ -360,8 +360,13 @@ class TestWatchdog(unittest.TestCase):
 
         if fresh:
             self.receipt()
+        # The schedule check measures the *live* repo (silence, late deliveries) and is
+        # pinned in tests/test_scheduler_supervisor.py. These tests are about queue
+        # supply, so the scheduler reading is stubbed rather than allowed to leak a real
+        # stall — or a real quiet night — into a queue assertion.
         with mock.patch("scripts.automation_health.queue_health",
-                        return_value=rows or self.healthy_rows()):
+                        return_value=rows or self.healthy_rows()), \
+             mock.patch.object(wd, "check_schedule_health", return_value={}):
             return wd.build_report(published_dir=self.dir, workflow_rows=list(workflow_rows))
 
     def test_a_working_pipeline_is_healthy(self):

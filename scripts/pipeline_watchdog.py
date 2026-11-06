@@ -329,6 +329,59 @@ def check_automations(report: Report) -> bool:
     return bool(monitored.automations)
 
 
+def check_schedule_health(report: Report, now: datetime | None = None) -> dict:
+    """Is the repository running at all — and if it ran, was it on time?
+
+    Every other check in this file is a verdict about a workflow, and each of those
+    verdicts is produced by a workflow. On the night of 5-6 November nothing started
+    between 02:52 and 07:52, so no verdict was recomputed and `status.json` still
+    read healthy at breakfast: the alarm was starved by the same outage it exists to
+    report. Silence is a property of the whole repo, so it is measured here from the
+    run history directly, and whichever pass is alive files it.
+    """
+    try:
+        from scripts.scheduler_supervisor import (
+            SILENCE_ALARM_MINUTES,
+            SILENCE_WARN_MINUTES,
+            schedule_health,
+        )
+
+        health = schedule_health(now)
+    except Exception as exc:  # noqa: BLE001
+        report.add("schedule", f"could not measure scheduler health: {exc}", fatal=False)
+        return {}
+
+    silence = health.get("silence_minutes")
+    late = health.get("delivered_late") or []
+    if silence is None:
+        report.add("schedule", "no run history at all — the scheduler has delivered nothing",
+                   fatal=True)
+        return health
+
+    if silence >= SILENCE_ALARM_MINUTES:
+        worst = ", ".join(f"{r['name']} +{r['late_minutes']}m" for r in late[:3]) or "none"
+        report.add(
+            "schedule",
+            f"**nothing has run for {silence // 60}h{silence % 60:02d}m** (last start "
+            f"`{health.get('last_run_at')}`). GitHub delivered no cron event; the next "
+            f"delivery runs a supervisor pass that performs every overdue job. Late "
+            f"deliveries: {worst}",
+            fatal=True,
+        )
+    elif silence >= SILENCE_WARN_MINUTES:
+        report.checked.append(
+            f"schedule: quiet {silence} min (warning threshold {SILENCE_WARN_MINUTES})"
+        )
+    else:
+        report.checked.append(f"schedule: last start {silence} min ago")
+
+    for row in late[:3]:
+        report.checked.append(
+            f"late delivery: {row['name']} served {row['slot']} +{row['late_minutes']} min"
+        )
+    return health
+
+
 def check_workflows(report: Report, rows=None) -> Report:
     """Every scheduled workflow must have run inside its own cron window."""
     if rows is None:
@@ -348,6 +401,7 @@ def check_workflows(report: Report, rows=None) -> Report:
 def build_report(now: datetime | None = None, published_dir: Path | None = None,
                  workflow_rows=None, expect_brain: bool | None = None) -> Report:
     report = Report()
+    check_schedule_health(report, now=now)
     check_queues(report, published_dir=published_dir, now=now)
     check_brain_api(report, expect=expect_brain)
     check_workflows(report, rows=workflow_rows)

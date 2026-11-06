@@ -95,11 +95,47 @@ class TestSlotDetection(unittest.TestCase):
         found = {wf for wf, _ in sup.due_but_missing(now, history)}
         self.assertNotIn("comments.yml", found)
 
-    def test_a_slot_too_old_to_be_useful_is_not_dispatched(self):
+    def test_a_daily_slot_stays_recoverable_until_its_successor_is_due(self):
+        """10 hours late is *normal* here, so it must still be recovered.
+
+        Measured over 1-6 November: this repo's brain slot (03:14) is delivered at
+        ~10:53 — 7h39m late — almost every day. The old flat 6-hour window threw
+        exactly those deliveries away, so a night when the scheduler delivered
+        nothing had no recovery path at all (5-6 November: nothing ran 02:52-07:52).
+        """
         now = self.now()
         history = runs(("gemini_brain.yml", now - timedelta(days=3)))
-        late = datetime(2026, 11, 2, 14, 0, tzinfo=UTC)    # 10h after the slot
-        self.assertEqual(sup.due_but_missing(late, history), [])
+        late = datetime(2026, 11, 2, 14, 0, tzinfo=UTC)    # 10h after the 03:14 slot
+        found = {wf for wf, _ in sup.due_but_missing(late, pad_history(history, late))}
+        self.assertIn("gemini_brain.yml", found)
+
+    def test_a_weekly_slot_older_than_a_day_is_not_dispatched(self):
+        """A weekly slot keeps a one-day leash — the MAX_SLOT_WINDOW cap."""
+        # metrics.yml is weekly (Fri 18:41). Two days after the slot, its window is
+        # over: the next Friday is the right time to run it, not now.
+        now = datetime(2026, 11, 4, 8, 0, tzinfo=UTC)     # Wed, 37h after Fri 18:41
+        history = runs(("metrics.yml", datetime(2026, 10, 23, 18, 41, tzinfo=UTC)))
+        found = {wf for wf, _ in sup.due_but_missing(now, pad_history(history, now))}
+        self.assertNotIn("metrics.yml", found)
+
+    def test_publishing_keeps_a_tighter_leash_than_authoring(self):
+        """A video hours late is worse than no video: produce stays at 6 hours."""
+        now = self.now()
+        history = runs(("produce.yml", now - timedelta(days=2)))
+        late = datetime(2026, 11, 2, 14, 0, tzinfo=UTC)    # 06:14 slot, 7h46m old
+        found = {wf for wf, _ in sup.due_but_missing(late, pad_history(history, late))}
+        self.assertNotIn("produce.yml", found)
+
+    def test_only_the_newest_missed_slot_is_dispatched_per_workflow(self):
+        """Catching up must publish once, not once per missed slot."""
+        now = self.now()
+        rows = sup._newest_per_workflow([
+            ("produce.yml", "2026-11-01T19:14:00+00:00"),
+            ("produce.yml", "2026-11-02T06:14:00+00:00"),
+            ("gemini_brain.yml", "2026-11-02T03:14:00+00:00"),
+        ])
+        self.assertEqual(rows, [("gemini_brain.yml", "2026-11-02T03:14:00+00:00"),
+                                ("produce.yml", "2026-11-02T06:14:00+00:00")])
 
     def test_supervisor_workflows_never_dispatch_themselves(self):
         now = self.now()
@@ -196,12 +232,106 @@ class TestDispatchRails(unittest.TestCase):
         save.assert_not_called()
 
 
+class TestScheduleHealth(unittest.TestCase):
+    """Silence is a property of the repo, so it must be measurable and reportable."""
+
+    def now(self):
+        return datetime(2026, 11, 6, 7, 52, tzinfo=UTC)
+
+    def history(self, now):
+        """Something ran at 02:49; then nothing. The 5-6 November night, exactly."""
+        return [run("scheduler-supervisor.yml", datetime(2026, 11, 6, 2, 49, tzinfo=UTC)),
+                run("comments.yml", datetime(2026, 11, 6, 0, 16, tzinfo=UTC))]
+
+    def test_silence_is_measured_across_every_workflow(self):
+        health = sup.schedule_health(self.now(), self.history(self.now))
+        self.assertEqual(health["silence_minutes"], 303)   # 02:49 -> 07:52
+        self.assertEqual(health["last_run_at"], "2026-11-06T02:49:00+00:00")
+
+    def test_a_five_hour_stall_is_an_error_annotation(self):
+        health = sup.schedule_health(self.now(), self.history(self.now))
+        with mock.patch("builtins.print") as printed:
+            sup.report_schedule_health(health)
+        out = " ".join(str(c) for c in printed.call_args_list)
+        self.assertIn("::error", out)
+        self.assertIn("Schedule stalled", out)
+
+    def test_a_normal_gap_is_not_an_alarm(self):
+        now = self.now()
+        health = sup.schedule_health(now, [run("comments.yml", now - timedelta(minutes=20))])
+        with mock.patch("builtins.print") as printed:
+            sup.report_schedule_health(health)
+        out = " ".join(str(c) for c in printed.call_args_list)
+        self.assertNotIn("::error", out)
+        self.assertNotIn("::warning", out)
+
+    def test_a_late_delivery_is_recorded_with_its_lateness(self):
+        """The brain serves its 03:14 slot at 10:53 here. That is a fact worth keeping."""
+        now = datetime(2026, 11, 5, 12, 0, tzinfo=UTC)
+        rows = pad_history(
+            [run("gemini_brain.yml", datetime(2026, 11, 5, 10, 53, tzinfo=UTC))], now
+        )
+        health = sup.schedule_health(now, rows)
+        brain = [r for r in health["delivered_late"] if r["workflow"] == "gemini_brain.yml"]
+        self.assertEqual(len(brain), 1)
+        self.assertEqual(brain[0]["late_minutes"], 459)     # 03:14 -> 10:53
+        self.assertEqual(brain[0]["slot"], "2026-11-05T03:14:00+00:00")
+
+    def test_a_real_pass_leaves_the_measurement_behind(self):
+        now = self.now()
+        # A "real" pass in the sense that matters here: the ledger and the health
+        # snapshot are written. Both writes are redirected — this test must never
+        # touch content/monitor/ (it did once, and overwrote the dispatch ledger) and
+        # must never call `gh workflow run` for real.
+        with mock.patch.object(sup, "save_schedule_health") as saved, \
+             mock.patch.object(sup, "save_state") as ledger, \
+             mock.patch.object(sup, "dispatch", return_value=(True, "dispatched")):
+            sup.supervise(now, self.history(now), dry_run=False, state={})
+        saved.assert_called_once()
+        ledger.assert_called_once()
+        self.assertEqual(saved.call_args[0][0]["silence_minutes"], 303)
+
+    def test_the_watchdog_files_a_stalled_schedule(self):
+        from scripts import pipeline_watchdog as wd
+
+        with mock.patch.object(sup, "schedule_health",
+                               return_value={"silence_minutes": 303,
+                                             "last_run_at": "2026-11-06T02:49:00+00:00",
+                                             "delivered_late": []}):
+            report = wd.Report()
+            wd.check_schedule_health(report, now=self.now())
+        self.assertFalse(report.healthy)
+        self.assertTrue(any("nothing has run" in f.detail for f in report.findings))
+
+
 class TestWorkflowFile(unittest.TestCase):
-    def test_supervisor_runs_often_enough_to_catch_a_slot_the_same_morning(self):
+    def test_supervisor_asks_for_slots_the_scheduler_can_actually_deliver(self):
+        """`*/15` was an illusion: 96 cron events a day, ~4 runs delivered.
+
+        Workflows with a handful of crons get every one of them (comments 3/3,
+        produce 3/3, brain 1/1, growth 1/1 over the same period); the supervisor's
+        96 asked for far more than the scheduler hands out and got thinned and
+        shifted at random. Eight spread-out slots are the honest request, and each
+        one recovers whatever is overdue.
+        """
+        import re
+
         from scripts.automation_monitor import cron_gap
+
         text = (sup.ROOT / ".github/workflows/scheduler-supervisor.yml").read_text()
-        self.assertIn('cron: "*/15 * * * *"', text)
-        self.assertGreater(cron_gap(["*/15 * * * *"]), timedelta(0))
+        crons = re.findall(r'cron:\s*["\']([^"\']+)["\']', text)
+        self.assertTrue(crons, "the supervisor must still run on a schedule")
+        self.assertFalse([c for c in crons if c.startswith("*/")],
+                         f"no high-frequency cron: {crons}")
+        hours: list[int] = []
+        for expr in crons:
+            hours.extend(int(h) for h in expr.split()[1].split(",") if h.isdigit())
+        hours.sort()
+        self.assertGreaterEqual(len(hours), 6, "spread the passes across the day")
+        # Never more than three hours between passes, wrapping midnight.
+        gaps = [(b - a) for a, b in zip(hours, hours[1:])] + [24 - hours[-1] + hours[0]]
+        self.assertLessEqual(max(gaps), 3, f"passes at {hours}")
+        self.assertTrue(cron_gap(crons) > timedelta(0))
 
     def test_supervisor_does_not_depend_only_on_a_schedule(self):
         """The scheduler is the thing that fails; the fallback must not be it."""
