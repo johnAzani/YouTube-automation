@@ -51,6 +51,33 @@ from pipeline.quota_handler import (
 )
 
 
+def _api_error_text(exc: Exception) -> str:
+    """The API's own sentence, not a 300-character HTTPError repr.
+
+    `set_video_thumbnail` used to store `str(exc)[:220]`, which for the two
+    Morning Altar videos cut the message at "The thumbnail can't be set for the
+    specified video. The re" — the useful half gone, so the reason could not be
+    acted on. googleapiclient carries the parsed error body on `.content`.
+    """
+    import json as _json
+
+    content = getattr(exc, "content", None)
+    if content:
+        try:
+            raw = content.decode("utf-8") if isinstance(content, (bytes, bytearray)) else str(content)
+            payload = _json.loads(raw)
+            message = str(payload.get("error", {}).get("message") or "").strip()
+            reason = ""
+            errors = payload.get("error", {}).get("errors") or []
+            if errors and isinstance(errors[0], dict):
+                reason = str(errors[0].get("reason") or "").strip()
+            if message:
+                return f"{message} [{reason}]" if reason else message
+        except Exception:  # noqa: BLE001
+            pass
+    return str(exc)
+
+
 def _client_credentials(client_id: str, client_secret: str) -> tuple[str, str]:
     """Validate the separate raw Web client ID and secret values."""
     client_id = client_id.strip()
@@ -342,7 +369,7 @@ def upload(
             thumbnail_status = "ok"
             print(f"[upload] custom thumbnail applied to {video_id}")
         except Exception as exc:  # noqa: BLE001
-            thumbnail_status = f"failed: {exc}"
+            thumbnail_status = f"failed: {_api_error_text(exc)}"
             print(f"[upload] thumbnail set FAILED (50 units/day; channel "
                   f"{CONFIG.channel_id}): {exc!r}")
             # Loud on purpose. A custom thumbnail needs a channel that YouTube
@@ -351,8 +378,9 @@ def upload(
             # exactly how two published videos ended up with no thumbnail.
             print(f"::error title=YouTube refused the custom thumbnail "
                   f"({CONFIG.channel_id})::video {video_id} published, thumbnail "
-                  f"NOT applied — {exc}. Check phone verification on the channel, "
-                  f"the youtube.force-ssl scope on the refresh token, and today's "
+                  f"NOT applied — {_api_error_text(exc)}. Check custom-thumbnail "
+                  f"eligibility on the channel (phone verification), the "
+                  f"youtube.force-ssl scope on the refresh token, and today's "
                   f"quota. The receipt records it as pending, so the monitor "
                   f"retries it instead of pretending it worked.")
     elif is_short:
@@ -477,9 +505,9 @@ def set_video_thumbnail(video_id: str, thumbnail_path: Path) -> str:
         print(f"[upload] set custom thumbnail on {vid}")
         return "ok"
     except Exception as exc:  # noqa: BLE001
-        msg = f"{type(exc).__name__}: {exc}"
+        msg = f"{type(exc).__name__}: {_api_error_text(exc)}"
         print(f"[upload] set_video_thumbnail({vid}) failed: {msg}")
-        return msg[:220]
+        return msg[:400]
 
 
 def audit_channel_videos(extra_video_ids: list[str] | None = None) -> list[dict]:

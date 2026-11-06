@@ -101,6 +101,32 @@ class ProductionSafetyTests(unittest.TestCase):
                 self.assertIn("thumbnail_pending: true", text)
 
 
+    def test_api_error_text_keeps_youtubes_sentence_not_the_repr(self):
+        # The message that got cut in half on the two Morning Altar videos:
+        # "The thumbnail can't be set for the specified video. The re..."
+        import json as _json
+
+        from pipeline.upload import _api_error_text
+
+        body = {
+            "error": {
+                "code": 403,
+                "message": ("The thumbnail can't be set for the specified video. "
+                            "The request might not be properly authorized."),
+                "errors": [{"reason": "forbidden", "domain": "youtube.thumbnail"}],
+            }
+        }
+        exc = type("FakeHttpError", (Exception,), {"content": _json.dumps(body).encode()})("boom")
+        text = _api_error_text(exc)
+        self.assertIn("might not be properly authorized", text)
+        self.assertIn("forbidden", text)
+        self.assertNotIn("<HttpError", text)
+
+    def test_api_error_text_falls_back_for_plain_exceptions(self):
+        from pipeline.upload import _api_error_text
+
+        self.assertEqual(_api_error_text(ValueError("plain")), "plain")
+
     def test_release_ticket_opens_in_actions_with_token_and_studio_link(self):
         doc = SimpleNamespace(title="How Test Died")
         with patch.dict(os.environ, {"GITHUB_ACTIONS": "1", "GH_TOKEN": "tok"}, clear=False), \
