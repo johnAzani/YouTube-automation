@@ -87,7 +87,7 @@ published_on: "2026-11-05"
 published_at: "2026-11-05T11:17:00Z"
 youtube_video_id: "_vp27ZYPYaY"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The thumbnail can't be set for the specified video. The request might not be properly authorized. [forbidden]"
+thumbnail_error: "HttpError: The thumbnail can't be set for the specified video. The request might not be properly authorized. [forbidden] | auth_channel_id=UCtPI1r8vgtJ9n__7ksLBmCA; auth_channel_title=The Secret Place | Daily Prayer & Scripture; long_uploads_status=allowed; video_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; video_channel_title=The Morning Altar | Daily Sunrise Prayer; video_privacy=public; upload_status=processed; same_channel=False"
 metadata_revision: "selar-seo-v1"
 ---
 
