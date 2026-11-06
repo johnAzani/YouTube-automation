@@ -16,9 +16,9 @@
       "workflow": "growth-autopilot.yml"
     },
     {
-      "late_minutes": 290,
+      "late_minutes": 294,
       "name": "automation-health",
-      "ran_at": "2026-11-06T01:04:12+00:00",
+      "ran_at": "2026-11-06T01:08:09+00:00",
       "slot": "2026-11-05T20:14:00+00:00",
       "workflow": "automation-health.yml"
     },
@@ -37,8 +37,8 @@
       "workflow": "keepalive.yml"
     }
   ],
-  "generated_at": "2026-11-06T14:26:31.759270+00:00",
-  "last_run_at": "2026-11-06T14:26:05+00:00",
+  "generated_at": "2026-11-06T14:28:05.497003+00:00",
+  "last_run_at": "2026-11-06T14:27:52+00:00",
   "on_time": [
     {
       "late_minutes": 90,
@@ -55,16 +55,16 @@
       "workflow": "community.yml"
     },
     {
-      "late_minutes": 6,
+      "late_minutes": 12,
       "name": "Automation monitor",
-      "ran_at": "2026-11-06T12:29:27+00:00",
+      "ran_at": "2026-11-06T12:35:44+00:00",
       "slot": "2026-11-06T12:23:00+00:00",
       "workflow": "monitor.yml"
     },
     {
-      "late_minutes": 68,
+      "late_minutes": 71,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-06T13:55:21+00:00",
+      "ran_at": "2026-11-06T13:58:12+00:00",
       "slot": "2026-11-06T12:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
