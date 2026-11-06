@@ -87,8 +87,8 @@
     "result": "dispatched"
   },
   "produce.yml@2026-11-06T06:14:00+00:00": {
-    "at": "2026-11-06T08:13:15.664253+00:00",
-    "attempts": 3,
+    "at": "2026-11-06T08:26:43.878894+00:00",
+    "attempts": 4,
     "result": "dispatched secret-place; prayer2 next pass (content-state takes one pending run)"
   }
 }
