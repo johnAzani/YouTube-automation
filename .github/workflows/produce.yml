@@ -31,7 +31,7 @@ on:
       channel:
         description: "Target channel (each uses its own GCP project, quota & secrets)"
         type: choice
-        options: [secret-place, prayer2]
+        options: [secret-place, prayer2, prayer3]
         default: secret-place
       job:
         description: "Specific script file in content/queue/ (blank = next approved)"
@@ -76,9 +76,24 @@ jobs:
       channels: ${{ steps.plan.outputs.channels }}
     steps:
       - id: plan
+        env:
+          # A channel joins the scheduled slots the moment its own credentials
+          # exist — no code change and no per-channel switch. This is a
+          # readiness probe, not a feature flag: The Midday Watch was registered
+          # on 2026-11-06 with no Google Cloud project yet, and scheduling three
+          # legs a day that cannot authenticate would page the owner three times
+          # a day for work that has not been provisioned.
+          PRAYER3_READY: ${{ secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN != '' }}
         run: |
           case "${{ github.event_name }}" in
-            schedule)          channels='["secret-place","prayer2"]' ;;
+            schedule)
+              channels='["secret-place","prayer2"]'
+              if [ "$PRAYER3_READY" = "true" ]; then
+                channels='["secret-place","prayer2","prayer3"]'
+              else
+                echo "::notice title=prayer3 waits for credentials::PRAYER3_YOUTUBE_REFRESH_TOKEN is not set, so The Midday Watch is registered but not yet scheduled. Add its four secrets and the next slot picks it up."
+              fi
+              ;;
             workflow_dispatch) channels='["${{ inputs.channel }}"]' ;;
             *)                 channels='["secret-place"]' ;;
           esac
@@ -104,19 +119,19 @@ jobs:
     env:
       DRY_RUN: ${{ (inputs.dry_run || false) && '1' || '0' }}
       # Channel for this matrix leg (see the plan job): scheduled runs do
-      # both channels in sequence, manual runs do the selected one. Each
-      # channel's own PRAYER2_* / unprefixed secrets are mapped onto the
+      # every provisioned channel in sequence, manual runs do the selected one. Each
+      # channel's own PRAYER3_* / PRAYER2_* / unprefixed secrets are mapped onto the
       # canonical names below, so credentials are never mixed.
       CHANNEL_ID: ${{ matrix.channel || 'secret-place' }}
-      CHANNEL_NAME: ${{ matrix.channel == 'prayer2' && 'The Morning Altar' || 'The Secret Place' }}
-      CHANNEL_HANDLE: ${{ matrix.channel == 'prayer2' && '@TheMorningAltarDaily' || '@TheSecretPlace' }}
+      CHANNEL_NAME: ${{ matrix.channel == 'prayer3' && 'The Midday Watch' || (matrix.channel == 'prayer2' && 'The Morning Altar' || 'The Secret Place') }}
+      CHANNEL_HANDLE: ${{ matrix.channel == 'prayer3' && '@TheMiddayWatch' || (matrix.channel == 'prayer2' && '@TheMorningAltarDaily' || '@TheSecretPlace') }}
       PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
       PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
-      YOUTUBE_CLIENT_ID: ${{ matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID }}
-      YOUTUBE_CLIENT_SECRET: ${{ matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET }}
-      YOUTUBE_REFRESH_TOKEN: ${{ matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN }}
-      YOUTUBE_PLAYLIST_ID: ${{ matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_PLAYLIST_ID || secrets.YOUTUBE_PLAYLIST_ID }}
-      YOUTUBE_EXPECTED_CHANNEL_ID: ${{ matrix.channel == 'prayer2' && (vars.PRAYER2_YOUTUBE_CHANNEL_ID || secrets.PRAYER2_YOUTUBE_CHANNEL_ID) || (vars.YOUTUBE_CHANNEL_ID || secrets.YOUTUBE_CHANNEL_ID) }}
+      YOUTUBE_CLIENT_ID: ${{ matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID) }}
+      YOUTUBE_CLIENT_SECRET: ${{ matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET) }}
+      YOUTUBE_REFRESH_TOKEN: ${{ matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN) }}
+      YOUTUBE_PLAYLIST_ID: ${{ matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_PLAYLIST_ID || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_PLAYLIST_ID || secrets.YOUTUBE_PLAYLIST_ID) }}
+      YOUTUBE_EXPECTED_CHANNEL_ID: ${{ matrix.channel == 'prayer3' && (vars.PRAYER3_YOUTUBE_CHANNEL_ID || secrets.PRAYER3_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer2' && (vars.PRAYER2_YOUTUBE_CHANNEL_ID || secrets.PRAYER2_YOUTUBE_CHANNEL_ID) || (vars.YOUTUBE_CHANNEL_ID || secrets.YOUTUBE_CHANNEL_ID)) }}
       # Both channels publish on the same terms (owner decision 2026-11-05):
       # The Morning Altar is public + auto-publish, like The Secret Place.
       AUTO_PUBLISH: ${{ secrets.AUTO_PUBLISH || 'true' }}
@@ -125,7 +140,7 @@ jobs:
       # never a repo-wide secret silently left on. Default stays shielded.
       ALLOW_DUPLICATE_UPLOADS: ${{ (inputs.allow_duplicate || false) && 'true' || 'false' }}
       DEFAULT_PRIVACY: public
-      GEMINI_API_KEY: ${{ matrix.channel == 'prayer2' && secrets.PRAYER2_GEMINI_API_KEY || secrets.GEMINI_API_KEY }}
+      GEMINI_API_KEY: ${{ matrix.channel == 'prayer3' && secrets.PRAYER3_GEMINI_API_KEY || (matrix.channel == 'prayer2' && secrets.PRAYER2_GEMINI_API_KEY || secrets.GEMINI_API_KEY) }}
       # pipeline.run shells out to `gh issue create` for the release ticket
       # (SETUP.md §6.4). gh needs a token: without GH_TOKEN the call fails
       # unauthenticated and the QC issue would silently never appear.

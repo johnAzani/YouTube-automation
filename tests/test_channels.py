@@ -8,6 +8,8 @@ secret names, frontmatter routing, and the pre-upload channel check.
 import unittest
 from pathlib import Path
 
+import yaml
+
 from pipeline.channels import (
     CHANNELS,
     channel_for_doc,
@@ -48,7 +50,14 @@ class _FakeYouTube:
 
 class ChannelRegistryTests(unittest.TestCase):
     def test_profiles_and_secret_prefixes(self):
-        self.assertEqual(set(CHANNELS), {"secret-place", "prayer2"})
+        # Every registered channel is a full profile with its own secret prefix.
+        self.assertIn("secret-place", CHANNELS)
+        self.assertIn("prayer2", CHANNELS)
+        for cid, profile in CHANNELS.items():
+            if cid == "secret-place":
+                self.assertEqual(profile.secret_prefix, "")
+            else:
+                self.assertEqual(profile.secret_prefix, f"{cid.upper()}_")
         prayer2 = get_channel("prayer2")
         self.assertEqual(prayer2.display_name, "The Morning Altar")
         self.assertEqual(prayer2.secret_prefix, "PRAYER2_")
@@ -166,7 +175,11 @@ class WorkflowSelectorTests(unittest.TestCase):
         text = (ROOT / ".github" / "workflows" / "produce.yml").read_text(
             encoding="utf-8"
         )
-        self.assertIn("options: [secret-place, prayer2]", text)
+        data = yaml.safe_load(text)
+        on = data.get("on") or data.get(True)  # PyYAML reads bare `on:` as a boolean
+        options = on["workflow_dispatch"]["inputs"]["channel"]["options"]
+        for cid in CHANNELS:
+            self.assertIn(cid, options, f"produce cannot be dispatched for {cid}")
         for name in (
             "PRAYER2_YOUTUBE_CLIENT_ID",
             "PRAYER2_YOUTUBE_CLIENT_SECRET",
@@ -185,7 +198,13 @@ class WorkflowSelectorTests(unittest.TestCase):
         text = (ROOT / ".github" / "workflows" / "produce.yml").read_text(
             encoding="utf-8"
         )
-        self.assertIn('schedule)          channels=\'["secret-place","prayer2"]\'', text)
+        from pipeline.channels import scheduled_channels
+
+        for cid in scheduled_channels():
+            self.assertIn(cid, text, f"a scheduled slot never produces {cid}")
+        self.assertIn("PRAYER3_READY", text,
+                      "a registered-but-unprovisioned channel needs a readiness "
+                      "probe, or its legs fail three times a day")
         self.assertIn("matrix:", text)
         self.assertIn("channel: ${{ fromJSON(needs.plan.outputs.channels) }}", text)
         self.assertIn("max-parallel: 1", text)

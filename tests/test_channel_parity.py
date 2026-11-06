@@ -282,14 +282,33 @@ class TestShortsParity(unittest.TestCase):
 class TestQueueAndReceiptParity(unittest.TestCase):
     """Health rows and published receipts are per channel, for every channel."""
 
-    def test_every_channel_gets_both_queue_rows(self):
+    def test_every_scheduled_channel_gets_both_queue_rows(self):
+        """Rows follow *live* channels.
+
+        A registered channel with no Google credentials has no supply problem to
+        report — it has no work by design. Reporting empty queues for it would
+        keep the watchdog amber forever and teach the owner to ignore it, which
+        is the fault this whole file exists to prevent.
+        """
+        from pipeline.channels import scheduled_channels
         from scripts.automation_health import queue_health
 
         by_queue = {row["queue"]: row for row in queue_health()}
-        for channel_id in cc.known_channels():
+        for channel_id in scheduled_channels():
             self.assertIn(f"longform:{channel_id}", by_queue)
             self.assertIn(f"shorts:{channel_id}", by_queue)
             self.assertEqual(by_queue[f"longform:{channel_id}"]["channel"], channel_id)
+
+    def test_an_unprovisioned_channel_is_not_reported_as_starved(self):
+        from pipeline.channels import scheduled_channels
+        from scripts.automation_health import queue_health
+
+        by_queue = {row["queue"]: row for row in queue_health()}
+        pending = [c for c in cc.known_channels() if c not in scheduled_channels()]
+        for channel_id in pending:
+            self.assertNotIn(f"longform:{channel_id}", by_queue,
+                             f"{channel_id} has no credentials yet but is reported as a "
+                             f"starving channel")
 
     def test_the_legacy_row_stays_with_the_channel_that_had_it(self):
         from scripts.automation_health import queue_health
@@ -367,10 +386,20 @@ class TestWorkflowParity(unittest.TestCase):
             for channel_id in cc.known_channels():
                 self.assertIn(channel_id, text, f"{name} cannot target {channel_id}")
 
-    def test_the_supervisor_dispatches_every_channel(self):
+    def test_the_supervisor_dispatches_every_scheduled_channel(self):
+        """Every live channel is dispatched, and the list is never written out by hand.
+
+        The source of truth is `scheduled_channels()` — registered *and*
+        provisioned. A channel that is registered but has no credentials yet is
+        deliberately not dispatched: three unresolvable legs a day is noise, not
+        coverage.
+        """
+        from pipeline.channels import scheduled_channels
+
         text = (ROOT / "scripts/scheduler_supervisor.py").read_text(encoding="utf-8")
         self.assertNotIn('for channel in ("secret-place", "prayer2")', text)
-        self.assertIn("known_channels()", text)
+        self.assertIn("scheduled_channels()", text)
+        self.assertTrue(scheduled_channels(), "no channel is anywhere near live")
 
 
 class TestNoHardcodedChannelBranches(unittest.TestCase):

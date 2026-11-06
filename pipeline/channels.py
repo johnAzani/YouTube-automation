@@ -42,6 +42,13 @@ class ChannelProfile:
     default_privacy: str
     auto_publish: bool
     include_sanctuary_links: bool  # Selar/store links belong to channel 1 only
+    #: True once this channel's Google credentials (refresh token + Gemini key)
+    #: exist in the repository. "Registered" and "live" are different things: a
+    #: channel with no credentials is fully capable in code but must not be
+    #: handed three production slots a day that cannot authenticate, nor have its
+    #: empty queues reported as a supply failure. Scheduled work, queue rows and
+    #: supervisor dispatches all follow this one flag.
+    provisioned: bool = True
 
     def secret_name(self, base: str) -> str:
         return f"{self.secret_prefix}{base}"
@@ -80,6 +87,25 @@ CHANNELS: dict[str, ChannelProfile] = {
         auto_publish=True,
         include_sanctuary_links=False,
     ),
+    "prayer3": ChannelProfile(
+        id="prayer3",
+        display_name="The Midday Watch",
+        handle="@TheMiddayWatch",
+        secret_prefix="PRAYER3_",
+        # Owner decision, 2026-11-06: the third channel is a prayer channel and
+        # publishes on the same terms as the other two. It has no Google Cloud
+        # project yet, so it stays out of the scheduled slots until its refresh
+        # token exists — see the credential probe in produce.yml, which is a
+        # readiness gate, not a channel switch.
+        default_privacy="public",
+        auto_publish=True,
+        include_sanctuary_links=False,
+        # No Google Cloud project yet (owner, 6 Nov 2026). Flip to True in the
+        # same commit that adds PRAYER3_* secrets: the schedule, the queue rows
+        # and the supervisor all turn on together, and the two workflows probe
+        # for the refresh token anyway, so an early flip still cannot upload.
+        provisioned=False,
+    ),
 }
 
 # Friendly aliases accepted in frontmatter / workflow inputs.
@@ -90,6 +116,10 @@ _ALIASES = {
     "morning-altar": "prayer2",
     "the-morning-altar": "prayer2",
     "channel2": "prayer2",
+    "midday": "prayer3",
+    "noonday": "prayer3",
+    "the-midday-watch": "prayer3",
+    "channel3": "prayer3",
 }
 
 
@@ -108,6 +138,18 @@ def get_channel(channel_id: str | None = None) -> ChannelProfile:
     except KeyError:
         known = ", ".join(sorted(CHANNELS))
         raise ValueError(f"Unknown CHANNEL_ID {cid!r}; known channels: {known}") from None
+
+
+def scheduled_channels() -> tuple[str, ...]:
+    """Channels that are live: registered *and* provisioned with credentials.
+
+    Everything that spends schedule, quota or alarm on a channel reads this;
+    everything that describes what a channel is *capable* of reads
+    ``CHANNELS``/``known_channels()``. The distinction exists so adding a
+    channel cannot make the monitor and the supervisor complain about work that
+    the owner has deliberately not provisioned yet.
+    """
+    return tuple(cid for cid, profile in CHANNELS.items() if profile.provisioned)
 
 
 def channel_for_doc(meta: dict | None) -> str:
