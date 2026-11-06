@@ -32,7 +32,13 @@ on:
     workflows:
       - "Produce video"
       - "Dry-run pipeline (CI proof)"
-      - "Scheduler supervisor"
+    # NOT "Scheduler supervisor". The supervisor already triggers on *this* workflow
+    # completing ("each completion is a chance to notice that something else did
+    # not"), so listing it here made the pair trigger each other forever: from 09:42
+    # to 09:54 on 6 November the two alternated roughly once a minute — 40+ runs,
+    # each writing a commit and auditing the channel, while the brain run dispatched
+    # at 09:34Z sat `queued` for over an hour behind them. A watcher must not be
+    # woken by the watcher it wakes.
     types: [completed]
   workflow_dispatch:
 
@@ -52,6 +58,12 @@ concurrency:
 
 jobs:
   monitor:
+    # Depth guard: run at most one hop away from a real trigger. `workflow_run.event`
+    # is the event that started the *completed* run, so this refuses a chain of
+    # "a run that was itself started by a run finished". The accidental monitor <-> 
+    # supervisor ping-pong of 6 November would have stopped at the second hop even
+    # with both triggers still in place.
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.event != 'workflow_run' }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
