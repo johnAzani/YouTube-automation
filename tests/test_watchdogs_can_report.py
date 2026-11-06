@@ -240,3 +240,47 @@ class AFailedDeliveryMustNotDestroyTheFinding(unittest.TestCase):
         with mock.patch.object(pw, "_gh", fake_gh):
             self.assertEqual(pw.open_issue_number(), 42)
         self.assertTrue(any("--search" in args for args in seen))
+
+
+class TestADegradedVerdictNamesItself(unittest.TestCase):
+    """A red run whose annotation says only "the watchdog opened an issue" has not
+    reported anything. That is exactly what run 42235642633 showed on 6 November:
+    the exit 1 came from warnings (a fix never run green, a flaky workflow), no
+    blocking finding existed, and the annotation named none of them.
+    """
+
+    def _run_main(self, report):
+        import io
+        from contextlib import redirect_stdout
+        from scripts import pipeline_watchdog as wd
+
+        buf = io.StringIO()
+        with mock.patch.object(wd, "build_report", return_value=report), \
+             mock.patch.object(wd, "sync_issue", return_value="updated"), \
+             mock.patch.object(wd, "cleanup_stale_issues", return_value=[]), \
+             mock.patch.dict(os.environ, {"GITHUB_ACTIONS": "true"}), \
+             redirect_stdout(buf):
+            code = wd.main([])
+        return code, buf.getvalue()
+
+    def test_each_warning_is_named_on_the_run_page(self):
+        from scripts import pipeline_watchdog as wd
+
+        report = wd.Report()
+        report.add("automations", "gemini_brain.yml: FLAKY — 4 of its last 5 runs failed",
+                   fatal=False, warning=True)
+        code, out = self._run_main(report)
+        self.assertEqual(code, 1, "degraded is not healthy; the run must stay red")
+        self.assertIn("::error title=Pipeline is degraded (automations)", out)
+        self.assertIn("gemini_brain.yml: FLAKY", out)
+
+    def test_a_blocking_finding_still_wins_the_title(self):
+        from scripts import pipeline_watchdog as wd
+
+        report = wd.Report()
+        report.add("long-form queue", "Secret Place has nothing approved", fatal=True)
+        report.add("automations", "comments.yml: FLAKY", fatal=False, warning=True)
+        code, out = self._run_main(report)
+        self.assertEqual(code, 1)
+        self.assertIn("::error title=Automation is stalled (long-form queue)", out)
+        self.assertNotIn("Pipeline is degraded", out)
