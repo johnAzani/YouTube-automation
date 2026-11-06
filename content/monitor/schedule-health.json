@@ -28,18 +28,18 @@
       "ran_at": "2026-11-02T07:59:10+00:00",
       "slot": "2026-11-02T03:23:00+00:00",
       "workflow": "keepalive.yml"
-    }
-  ],
-  "generated_at": "2026-11-06T13:55:22.203962+00:00",
-  "last_run_at": "2026-11-06T13:55:21+00:00",
-  "on_time": [
+    },
     {
-      "late_minutes": 98,
+      "late_minutes": 247,
       "name": "automation-health",
-      "ran_at": "2026-11-05T21:52:23+00:00",
+      "ran_at": "2026-11-06T00:21:26+00:00",
       "slot": "2026-11-05T20:14:00+00:00",
       "workflow": "automation-health.yml"
-    },
+    }
+  ],
+  "generated_at": "2026-11-06T13:56:53.306425+00:00",
+  "last_run_at": "2026-11-06T13:56:39+00:00",
+  "on_time": [
     {
       "late_minutes": 90,
       "name": "Autonomous Comment Replies",
