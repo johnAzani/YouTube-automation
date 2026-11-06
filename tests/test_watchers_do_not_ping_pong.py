@@ -100,3 +100,37 @@ class TestUpstreamOutagesKeepRetrying(unittest.TestCase):
         sup, entry, now = self._entry(result="503 UNAVAILABLE", minutes_ago=45,
                                       attempts=self.sup.UPSTREAM_MAX_ATTEMPTS)
         self.assertFalse(sup.upstream_retry_due(entry, now))
+
+
+class TestAnUnprovenFixIsNotRecovery(unittest.TestCase):
+    """The monitor closed the stall issue at 10:37Z with the brain still 503-ing.
+
+    Every merge turned the brain's red FAILING verdict into an amber UNTESTED FIX —
+    "a fix is deployed and has never run green" — and `Report.healthy` only looked at
+    fatal findings, so amber was silent and the issue closed itself. Today that
+    closed the ticket while nothing had published since 5 November.
+    """
+
+    def test_a_warning_keeps_the_pipeline_unhealthy(self):
+        from scripts.pipeline_watchdog import Report
+
+        report = Report()
+        report.add("automations", "gemini_brain.yml: UNTESTED FIX — a fix is deployed",
+                   fatal=False, warning=True)
+        self.assertFalse(report.healthy)
+
+    def test_info_does_not(self):
+        from scripts.pipeline_watchdog import Report
+
+        report = Report()
+        report.add("automations", "produce.yml: QUOTA WAIT — resets at 08:00Z",
+                   fatal=False)
+        self.assertTrue(report.healthy, "a documented wait is not a fault")
+
+    def test_the_monitor_warning_becomes_a_warning_finding(self):
+        import inspect
+
+        from scripts import pipeline_watchdog
+
+        source = inspect.getsource(pipeline_watchdog.check_automations)
+        self.assertIn('warning=automation.severity == "warning"', source)
