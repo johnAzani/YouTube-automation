@@ -1,7 +1,7 @@
 short: short-psalm91v11
 companion_longform_id: '0016'
 scripture: Psalm 91:11-12
-status: approved
+status: quota_paused
 renderer_ready: true
 authored_by_brain: true
 privacy: public
@@ -9,3 +9,5 @@ replace: false
 target_window_utc: '14:14'
 notes: "Companion Short for Psalm 91:11-12 Night Prayer | Angels Guard Your Home &\
   \ Sleep \u2014 spec authored by the brain (104 narration words)"
+quota_reset_utc: '2026-11-06T08:00:00+00:00'
+pause_reason: gemini_api_daily_quota_exhausted
