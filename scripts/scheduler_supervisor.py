@@ -346,6 +346,39 @@ def _safe_runs() -> list[dict]:
 
 FAILED_CONCLUSIONS = {"failure", "cancelled", "timed_out", "startup_failure"}
 
+#: Failures that are not the code's fault: the *service* was unavailable. Google's
+#: gemini-3.8-flash answered 503 "high demand" for hours on 6 November, and every
+#: brain attempt in that window was burned by an outage the repo could not fix.
+#: Once the budget is spent, such a slot keeps retrying on a timer — a fixed code
+#: fingerprint cannot describe an outage that ends by itself.
+UPSTREAM_MARKERS = ("service unavailable", "503", "high demand", "upstream capacity",
+                    "connection reset", "timed out", "timeout", "deadline")
+UPSTREAM_RETRY_AFTER = timedelta(minutes=30)
+UPSTREAM_MAX_ATTEMPTS = 8
+
+
+def is_upstream_failure(entry: dict) -> bool:
+    """Did that attempt fail because the service was down rather than the code?"""
+    result = str(entry.get("result") or "").lower()
+    return any(marker in result for marker in UPSTREAM_MARKERS)
+
+
+def upstream_retry_due(entry: dict, now: datetime) -> bool:
+    """May a spent slot be tried again because the outage may have ended?
+
+    Cooldown-priced, not open-ended: at most one attempt per 30 minutes and at most
+    8 in total, so an outage that lasts all day cannot hammer the queue either.
+    """
+    if not is_upstream_failure(entry):
+        return False
+    if int(entry.get("attempts", 0)) >= UPSTREAM_MAX_ATTEMPTS:
+        return False
+    try:
+        last = datetime.fromisoformat(str(entry.get("at") or ""))
+    except (TypeError, ValueError):
+        return False
+    return (now - last) >= UPSTREAM_RETRY_AFTER
+
 
 def _failed_dispatches(state: dict, latest: dict[str, tuple[datetime, str | None]],
                        now: datetime) -> list[tuple[str, str]]:
@@ -375,7 +408,8 @@ def _failed_dispatches(state: dict, latest: dict[str, tuple[datetime, str | None
         if int(entry.get("attempts", 1)) >= _attempt_cap(workflow):
             # A slot whose attempts were burned by code that has since been fixed must
             # be retryable: the failures came from older code, not from the workflow.
-            if not code_changed_since(entry, workflow):
+            # Likewise an outage that has since cleared (see UPSTREAM_MARKERS).
+            if not code_changed_since(entry, workflow) and not upstream_retry_due(entry, now):
                 continue
         finished = latest.get(workflow)
         if finished is None:
@@ -661,6 +695,11 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
                           f"since the last attempt ({str(previous.get('code_id') or '?'):8} -> "
                           f"{code_fingerprint(workflow)}), so those failures came from "
                           f"older code")
+                elif upstream_retry_due(previous, now):
+                    # The outage, not the code, burned those attempts.
+                    print(f"[supervisor] {workflow}: retrying after an upstream "
+                          f"failure (attempt {attempts + 1}/{UPSTREAM_MAX_ATTEMPTS}, "
+                          f"cooldown {int(UPSTREAM_RETRY_AFTER.total_seconds() // 60)}m)")
                 else:
                     result["skipped"].append({"workflow": workflow, "slot": slot,
                                               "reason": f"already dispatched {attempts}x for this "
