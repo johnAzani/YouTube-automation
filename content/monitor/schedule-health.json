@@ -37,9 +37,16 @@
       "workflow": "keepalive.yml"
     }
   ],
-  "generated_at": "2026-11-06T16:50:14.453226+00:00",
-  "last_run_at": "2026-11-06T16:49:18+00:00",
+  "generated_at": "2026-11-06T16:52:06.415533+00:00",
+  "last_run_at": "2026-11-06T16:50:57+00:00",
   "on_time": [
+    {
+      "late_minutes": 96,
+      "name": "Autonomous Comment Replies",
+      "ran_at": "2026-11-06T16:50:16+00:00",
+      "slot": "2026-11-06T15:14:00+00:00",
+      "workflow": "comments.yml"
+    },
     {
       "late_minutes": 100,
       "name": "Autonomous Community Tab Automation",
@@ -62,6 +69,6 @@
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 0,
+  "silence_minutes": 1,
   "warn_minutes": 120
 }
