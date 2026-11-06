@@ -37,8 +37,8 @@
       "workflow": "keepalive.yml"
     }
   ],
-  "generated_at": "2026-11-06T14:43:23.372358+00:00",
-  "last_run_at": "2026-11-06T14:42:34+00:00",
+  "generated_at": "2026-11-06T14:44:39.226226+00:00",
+  "last_run_at": "2026-11-06T14:43:55+00:00",
   "on_time": [
     {
       "late_minutes": 90,
@@ -62,9 +62,9 @@
       "workflow": "monitor.yml"
     },
     {
-      "late_minutes": 90,
+      "late_minutes": 91,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-06T14:17:17+00:00",
+      "ran_at": "2026-11-06T14:18:53+00:00",
       "slot": "2026-11-06T12:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
