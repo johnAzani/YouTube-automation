@@ -179,6 +179,38 @@ def _slot_window(workflow: str, crons: list[str], slot: datetime) -> timedelta:
     return min(max(period, DISPATCH_AFTER * 2), MAX_SLOT_WINDOW)
 
 
+def code_changed_since(entry: dict, _cache: dict[str, datetime | None] = {}) -> bool:
+    """Has the repository changed since that attempt was made?
+
+    Attempt budgets exist to stop a *permanently broken* workflow from hammering the
+    queue. They must not stop a *fixed* one: on the morning of 6 November the brain
+    burned all three attempts against a retired Gemini model, the fix landed at
+    08:30, and the ledger would have refused to run it again until the next day's
+    slot. A commit newer than the last attempt is new code, so the budget is renewed
+    — once per commit, so the loop guard still holds.
+    """
+    stamp = str(entry.get("at") or "").strip()
+    if not stamp:
+        return False
+    head = _cache.get("head")
+    if head is None:
+        try:
+            proc = subprocess.run(["git", "log", "-1", "--format=%cI", "HEAD"],
+                                  capture_output=True, text=True, cwd=ROOT, timeout=30)
+            head = datetime.fromisoformat((proc.stdout or "").strip())
+        except Exception:  # noqa: BLE001
+            head = False  # type: ignore[assignment]
+        _cache["head"] = head  # type: ignore[assignment]
+    if not head:
+        return False
+    if str(entry.get("renewed_for") or "") == head.isoformat():
+        return False          # already renewed for this commit; do not loop
+    try:
+        return head > datetime.fromisoformat(stamp)
+    except ValueError:
+        return False
+
+
 def _cron_map() -> dict[str, list[str]]:
     """{workflow_file: crons} — the schedule each workflow actually declares."""
     from scripts.automation_monitor import workflow_files
@@ -248,6 +280,15 @@ def due_but_missing(now: datetime | None = None,
         if filename in inflight:
             continue          # a run is working on it right now; never race it
         if filename == "produce.yml":
+            # The $0.00 lock: when the free-tier speech allowance is spent, a
+            # dispatch cannot publish — it can only burn what is left of it. On
+            # 6 November the supervisor re-dispatched this slot five times while
+            # narration was failing, and the fifth attempt hit 429 and paused the
+            # channel until the next day. Never dispatch a publish into a cooldown.
+            from scripts.automation_monitor import active_quota_cooldown
+
+            if active_quota_cooldown(now) is not None:
+                continue
             # A run, or even a *successful* run, is not a published video. Both
             # channels must have a receipt for this slot, or the leg that never
             # happened is dispatched on its own.
@@ -306,7 +347,10 @@ def _failed_dispatches(state: dict, latest: dict[str, tuple[datetime, str | None
         if now > slot_at + _slot_window(workflow, crons_by_workflow.get(workflow, []), slot_at):
             continue
         if int(entry.get("attempts", 1)) >= _attempt_cap(workflow):
-            continue
+            # A slot whose attempts were burned by code that has since been fixed must
+            # be retryable: the failures came from older code, not from the workflow.
+            if not code_changed_since(entry):
+                continue
         finished = latest.get(workflow)
         if finished is None:
             continue
@@ -584,10 +628,25 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
                                           "reason": "its dispatched run succeeded"})
                 continue
             if attempts >= _attempt_cap(workflow):
-                result["skipped"].append({"workflow": workflow, "slot": slot,
-                                          "reason": f"already dispatched {attempts}x for this "
-                                                    f"slot; not trying again"})
-                continue
+                if code_changed_since(previous):
+                    # The code that failed has been replaced. Run the new code.
+                    previous["renewed_for"] = str(previous.get("renewed_for") or "") or None
+                    try:
+                        proc = subprocess.run(["git", "log", "-1", "--format=%cI", "HEAD"],
+                                              capture_output=True, text=True, cwd=ROOT,
+                                              timeout=30)
+                        previous["renewed_for"] = (proc.stdout or "").strip()
+                    except Exception:  # noqa: BLE001
+                        pass
+                    attempts = 0
+                    print(f"[supervisor] {workflow}: attempts renewed — the repository "
+                          f"changed after the last attempt, so the failures came from "
+                          f"older code")
+                else:
+                    result["skipped"].append({"workflow": workflow, "slot": slot,
+                                              "reason": f"already dispatched {attempts}x for this "
+                                                        f"slot; not trying again"})
+                    continue
         if len(result["dispatched"]) >= MAX_DISPATCHES:
             result["skipped"].append({"workflow": workflow, "slot": slot,
                                       "reason": "per-pass dispatch limit reached"})

@@ -216,13 +216,15 @@ class TestDispatchRails(unittest.TestCase):
         self.assertTrue(any("succeeded" in r["reason"] for r in out["skipped"]))
 
     def test_a_permanently_failing_slot_stops_being_retried(self):
+        """No code change since the failure -> the budget holds."""
         now = self.now()
         history = self.runs() + [run("produce.yml", now - timedelta(minutes=20),
                                      conclusion="failure")]
         state = {"produce.yml@2026-11-02T06:14:00+00:00":
                  {"at": "2026-11-02T07:00:00+00:00",
                   "attempts": sup._attempt_cap("produce.yml")}}
-        with mock.patch.object(sup, "published_channels_since", return_value=set()):
+        with mock.patch.object(sup, "published_channels_since", return_value=set()), \
+             mock.patch.object(sup, "code_changed_since", return_value=False):
             out = sup.supervise(now, history, dry_run=True, state=state)
         self.assertNotIn("produce.yml", [r["workflow"] for r in out["dispatched"]])
         self.assertTrue(any("not trying again" in r["reason"] for r in out["skipped"]))
@@ -255,6 +257,56 @@ class TestDispatchRails(unittest.TestCase):
             out = sup.supervise(now, history, dry_run=True, state={})
         self.assertEqual(len(out["dispatched"]), 1)
         self.assertTrue(any("limit" in r["reason"] for r in out["skipped"]))
+
+    def test_a_fix_gets_a_fresh_budget(self):
+        """A retired model burned the brain's three attempts; the fix must still run.
+
+        On 6 November the brain failed three times against `gemini-2.5-flash`, the
+        model fix merged at 08:30, and the ledger would have refused to run it again
+        until the next day's slot — the fix locked out by the failures it fixes.
+        """
+        now = self.now()
+        state = {"gemini_brain.yml@2026-11-02T03:14:00+00:00":
+                 {"at": "2026-11-02T07:00:00+00:00",
+                  "attempts": sup.MAX_ATTEMPTS_PER_SLOT}}
+        history = pad_history(self.runs(), now)
+        with mock.patch.object(sup, "code_changed_since", return_value=True):
+            out = sup.supervise(now, history, dry_run=True, state=state)
+        self.assertIn("gemini_brain.yml", [r["workflow"] for r in out["dispatched"]])
+
+    def test_the_renewal_happens_once_per_commit_not_every_pass(self):
+        import subprocess
+
+        head = subprocess.run(["git", "log", "-1", "--format=%cI", "HEAD"],
+                              capture_output=True, text=True, cwd=sup.ROOT).stdout.strip()
+        entry = {"at": "2020-01-01T00:00:00+00:00", "attempts": 3}
+        self.assertTrue(sup.code_changed_since(entry, _cache={}),
+                        "an attempt older than HEAD was made by older code")
+        entry["renewed_for"] = head
+        self.assertFalse(sup.code_changed_since(entry, _cache={}),
+                         "renewed already for this commit — do not loop")
+        future = {"at": "2099-01-01T00:00:00+00:00", "attempts": 3}
+        self.assertFalse(sup.code_changed_since(future, _cache={}))
+
+    def test_a_failed_dispatch_is_retried_once_the_code_changes(self):
+        """The retry path has its own cap, and it must honour a fix too.
+
+        `due_but_missing` treats "a run exists after the slot" as served, so retries
+        of *failed* dispatched runs come from `_failed_dispatches`. Renewing only in
+        the other path left the brain locked out after three failures against the
+        retired model — the fix merged at 08:30 and nothing would have used it.
+        """
+        now = self.now()
+        history = pad_history(
+            [run("gemini_brain.yml", now - timedelta(minutes=25), conclusion="failure")],
+            now,
+        )
+        state = {"gemini_brain.yml@2026-11-02T03:14:00+00:00":
+                 {"at": "2026-11-02T07:00:00+00:00", "attempts": 3}}
+        with mock.patch.object(sup, "code_changed_since", return_value=True), \
+             mock.patch.object(sup, "published_channels_since", return_value=set()):
+            out = sup.supervise(now, history, dry_run=True, state=state)
+        self.assertIn("gemini_brain.yml", [r["workflow"] for r in out["dispatched"]])
 
     def test_unreadable_schedule_is_a_failure_not_a_silent_pass(self):
         from unittest import mock
