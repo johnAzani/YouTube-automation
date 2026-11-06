@@ -37,13 +37,33 @@ STATE = ROOT / "content" / "monitor" / "dispatched.json"
 
 # Dispatch a slot this long after it was due. GitHub's scheduler is routinely 10-40
 # minutes late, so anything shorter races it and risks a *duplicate* run — which for
-# produce.yml means a duplicate upload. Wider than the monitor's alarm (3h) is not
-# needed; 90 minutes still catches a dropped slot the same morning.
+# produce.yml means a duplicate upload.
 DISPATCH_AFTER = timedelta(minutes=90)
-# Never dispatch a slot older than this: by then the release window has passed and
-# publishing late is worse than waiting for the next one.
-DISPATCH_WINDOW = timedelta(hours=6)
-MAX_DISPATCHES = 3
+# How long a dropped slot stays worth recovering. This used to be a flat 6 hours for
+# every workflow, and that single constant is why the night of 5-6 November published
+# nothing: measured over 1-6 November, this repo's scheduled runs land a median of
+# ~57 minutes late, p95 ~3.4 hours, and the brain's 03:14 slot is delivered at ~10:53
+# — 7 hours 39 minutes late, every single day. The supervisor itself is cron-driven
+# and was delivered ~4 times a day despite asking for 96, so by the time it looked,
+# the slot it was built to recover had expired out of its own window. A slot is now
+# recoverable until its **successor is due** (i.e. for one occurrence period), which
+# is the only interval in which "this occurrence did not happen" still means
+# something. upload-shaped work keeps a tighter leash: publishing hours late is worse
+# than waiting for the next slot.
+USEFUL_WINDOW: dict[str, timedelta] = {"produce.yml": timedelta(hours=6)}
+MAX_SLOT_WINDOW = timedelta(hours=24)
+# At most one dispatch per workflow per pass (see `_newest_per_workflow`), so the cap
+# only has to be larger than the roster of dispatchable workflows.
+MAX_DISPATCHES = 8
+# Silence thresholds, from this repo's own delivery record (1-6 Nov: 14 scheduled
+# deliveries in 16 active hours; inter-delivery gap median 57 min, p90 ~3.3 h, max
+# 3.4 h). 2 hours is worth saying out loud on a run; 4 hours is outside anything the
+# scheduler has ever done while healthy and belongs in the issue tracker.
+SILENCE_WARN_MINUTES = 120
+SILENCE_ALARM_MINUTES = 240
+# A delivery this much later than the slot it serves is "late", not "on time".
+LATE_SLOT_MINUTES = 120
+SCHEDULE_HEALTH = ROOT / "content" / "monitor" / "schedule-health.json"
 # A dispatch is not a success. On 2 November the 07:14 produce slot was
 # dispatched at 08:59 and the run then failed; treating the slot as settled would
 # have left the channel with no video until the next day.
@@ -90,6 +110,50 @@ def save_state(state: dict) -> None:
     STATE.write_text(json.dumps(state, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
+def _slot_window(workflow: str, crons: list[str], slot: datetime) -> timedelta:
+    """How long `slot` stays worth recovering: until its successor is due.
+
+    The previous occurrence before `slot` is exactly one period earlier, so
+    `slot - prev` is that period (a daily cron -> 24h, three-a-day -> 8h). The
+    flat 6-hour rule this replaces expired *before* the supervisor's own next
+    delivery on this repo, which is how a missed night went unrepaired.
+    """
+    from scripts.automation_monitor import prev_occurrence
+
+    window = USEFUL_WINDOW.get(workflow)
+    if window is not None:
+        return window
+    previous = prev_occurrence(crons, slot - timedelta(minutes=1))
+    if previous is None:
+        return DISPATCH_AFTER * 2
+    period = slot - previous
+    return min(max(period, DISPATCH_AFTER * 2), MAX_SLOT_WINDOW)
+
+
+def _cron_map() -> dict[str, list[str]]:
+    """{workflow_file: crons} — the schedule each workflow actually declares."""
+    from scripts.automation_monitor import workflow_files
+
+    return {name: crons for name, _display, crons in workflow_files()}
+
+
+def _newest_per_workflow(rows: list[tuple[str, str]]) -> list[tuple[str, str]]:
+    """Keep only the newest missing slot per workflow — catching up publishes once.
+
+    Three missed produce slots are three uploads if each is dispatched, and two of
+    them would be hours stale besides. The newest missed slot is the one a run
+    should serve; the older ones are superseded by it, not queued behind it. The
+    same holds for authoring and replying: one pass catches up everything that is
+    due.
+    """
+    newest: dict[str, tuple[str, str]] = {}
+    for workflow, slot in rows:
+        current = newest.get(workflow)
+        if current is None or slot > current[1]:
+            newest[workflow] = (workflow, slot)
+    return sorted(newest.values(), key=lambda row: row[1])
+
+
 def due_but_missing(now: datetime | None = None,
                     runs: list[dict] | None = None) -> list[tuple[str, str]]:
     """[(workflow_file, slot_iso)] for every slot that is due and produced no run.
@@ -124,13 +188,15 @@ def due_but_missing(now: datetime | None = None,
         slot = prev_occurrence(crons, now)
         if slot is None:
             continue
-        if now < slot + DISPATCH_AFTER or now > slot + DISPATCH_WINDOW:
+        if now < slot + DISPATCH_AFTER:
+            continue
+        if now > slot + _slot_window(filename, crons, slot):
             continue
         last_run = latest.get(filename)
         if last_run is not None and last_run >= slot:
             continue          # it ran for this slot; nothing to do
         out.append((filename, slot.isoformat()))
-    return out
+    return _newest_per_workflow(out)
 
 
 def _safe_runs() -> list[dict]:
@@ -151,6 +217,7 @@ def _failed_dispatches(state: dict, latest: dict[str, tuple[datetime, str | None
     from scripts.automation_monitor import active_quota_cooldown
 
     produce_cooldown = active_quota_cooldown(now)
+    crons_by_workflow = _cron_map()
     out: list[tuple[str, str]] = []
     for key, entry in state.items():
         if "@" not in key:
@@ -165,7 +232,9 @@ def _failed_dispatches(state: dict, latest: dict[str, tuple[datetime, str | None
             dispatched_at = datetime.fromisoformat(entry.get("at", ""))
         except (TypeError, ValueError):
             continue
-        if now < slot_at + DISPATCH_AFTER or now > slot_at + DISPATCH_WINDOW:
+        if now < slot_at + DISPATCH_AFTER:
+            continue
+        if now > slot_at + _slot_window(workflow, crons_by_workflow.get(workflow, []), slot_at):
             continue
         if int(entry.get("attempts", 1)) >= MAX_ATTEMPTS_PER_SLOT:
             continue
@@ -278,6 +347,92 @@ def cancel_run(run_id) -> tuple[bool, str]:
     return False, (proc.stderr or proc.stdout or "cancel failed").strip()[:200]
 
 
+def schedule_health(now: datetime | None = None, runs=None) -> dict:
+    """How quiet the repo is, and how late each delivery actually was.
+
+    Silence is the fault this whole file exists for and could not previously
+    describe: on the night of 5-6 November nothing ran between 02:52 and 07:52 and
+    every verdict in `content/monitor/status.json` still read OK, because each one
+    was last computed hours earlier by a workflow that itself never started. Silence
+    is a property of the repo, not of any single workflow, so it is measured here,
+    across every run, and reported by whatever pass happens to be alive.
+    """
+    from scripts.automation_monitor import fetch_runs, prev_occurrence, workflow_files
+
+    now = now or datetime.now(timezone.utc)
+    if runs is None:
+        runs = _safe_runs()
+    rows = runs.get("workflow_runs", runs) if isinstance(runs, dict) else runs
+    rows = rows or []
+
+    by_workflow: dict[str, list[datetime]] = {}
+    newest: datetime | None = None
+    for run in rows:
+        path = (run.get("path") or "").split("/")[-1]
+        stamp = run.get("created_at")
+        if not path or not stamp:
+            continue
+        try:
+            when = datetime.fromisoformat(str(stamp).replace("Z", "+00:00"))
+        except ValueError:
+            continue
+        by_workflow.setdefault(path, []).append(when)
+        if newest is None or when > newest:
+            newest = when
+
+    silence = int((now - newest).total_seconds() // 60) if newest else None
+
+    late: list[dict] = []
+    on_time: list[dict] = []
+    for filename, name, crons in workflow_files():
+        slot = prev_occurrence(crons, now)
+        if slot is None:
+            continue
+        stamps = sorted(t for t in by_workflow.get(filename, []) if t >= slot)
+        if not stamps:
+            continue                      # missed, not late — this is dispatch work
+        lag = int((stamps[0] - slot).total_seconds() // 60)
+        row = {"workflow": filename, "name": name, "slot": slot.isoformat(),
+               "ran_at": stamps[0].isoformat(), "late_minutes": lag}
+        (late if lag >= LATE_SLOT_MINUTES else on_time).append(row)
+
+    return {
+        "generated_at": now.isoformat(),
+        "silence_minutes": silence,
+        "last_run_at": newest.isoformat() if newest else None,
+        "delivered_late": sorted(late, key=lambda r: -r["late_minutes"]),
+        "on_time": on_time,
+        "warn_minutes": SILENCE_WARN_MINUTES,
+        "alarm_minutes": SILENCE_ALARM_MINUTES,
+    }
+
+
+def report_schedule_health(health: dict) -> None:
+    """Say it on the run — an annotation nobody has to go looking for."""
+    silence = health.get("silence_minutes")
+    late = health.get("delivered_late") or []
+    if silence is not None and silence >= SILENCE_ALARM_MINUTES:
+        worst = ", ".join(f"{r['name']} +{r['late_minutes']}m" for r in late[:4]) or "—"
+        print(f"::error title=Schedule stalled::no workflow has started for "
+              f"{silence} minutes ({silence // 60}h{silence % 60:02d}m). GitHub delivered "
+              f"no cron event in that time; every overdue job is being dispatched by this "
+              f"pass. Deliveries that did arrive were late: {worst}.")
+    elif silence is not None and silence >= SILENCE_WARN_MINUTES:
+        print(f"::warning title=Schedule quiet::no workflow has started for {silence} "
+              f"minutes. Normal here is under an hour; this pass recovers anything overdue.")
+    for row in late[:5]:
+        print(f"[supervisor] late delivery: {row['name']} served "
+              f"{row['slot']} at {row['ran_at']} (+{row['late_minutes']}m)")
+    if silence is not None and silence < SILENCE_WARN_MINUTES:
+        print(f"[supervisor] scheduler healthy: last start {silence} min ago")
+
+
+def save_schedule_health(health: dict) -> None:
+    SCHEDULE_HEALTH.parent.mkdir(parents=True, exist_ok=True)
+    SCHEDULE_HEALTH.write_text(json.dumps(health, indent=2, sort_keys=True) + "\n",
+                               encoding="utf-8")
+
+
 def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
               state: dict | None = None) -> dict:
     now = now or datetime.now(timezone.utc)
@@ -291,6 +446,7 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
         return result
 
     latest = _latest_runs(runs if runs is not None else _safe_runs())
+    crons_by_workflow = _cron_map()
 
     # Two kinds of work: slots that produced no run at all, and slots whose
     # *dispatched* run has since failed. The second kind looks healthy to
@@ -300,6 +456,7 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
     for workflow, slot in _failed_dispatches(state, latest, now):
         if (workflow, slot) not in candidates:
             candidates.append((workflow, slot))
+    candidates = _newest_per_workflow(candidates)
 
     from scripts.automation_monitor import active_quota_cooldown
 
@@ -317,7 +474,9 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
             slot_at = datetime.fromisoformat(slot)
         except ValueError:
             continue
-        if now < slot_at + DISPATCH_AFTER or now > slot_at + DISPATCH_WINDOW:
+        if now < slot_at + DISPATCH_AFTER:
+            continue
+        if now > slot_at + _slot_window(workflow, crons_by_workflow.get(workflow, []), slot_at):
             continue
         attempts = int(entry.get("attempts", 1))
         finished = latest.get(workflow)
@@ -378,6 +537,15 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
     except Exception as exc:  # noqa: BLE001 - never lose the dispatch pass over this
         result["failed"].append({"workflow": "-", "reason": f"stuck-run check failed: {exc}"})
 
+    try:
+        health = schedule_health(now, runs)
+        result["health"] = health
+        report_schedule_health(health)
+        if not dry_run:
+            save_schedule_health(health)
+    except Exception as exc:  # noqa: BLE001 - the dispatch pass must survive this
+        result["failed"].append({"workflow": "-", "reason": f"schedule health failed: {exc}"})
+
     if not dry_run:
         save_state(state)
     return result
@@ -387,9 +555,20 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description="Dispatch scheduled workflows that never fired.")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--json", action="store_true")
+    parser.add_argument("--health-only", action="store_true",
+                        help="report scheduler silence/lateness and dispatch nothing")
     args = parser.parse_args(argv)
 
-    result = supervise(dry_run=args.dry_run)
+    if args.health_only:
+        health = schedule_health()
+        report_schedule_health(health)
+        if not args.dry_run:
+            save_schedule_health(health)
+        if args.json:
+            print(json.dumps(health, indent=2))
+        return 0
+
+    result = supervise(dry_run=args.dry_run, runs=_safe_runs())
     if args.json:
         print(json.dumps(result, indent=2))
     else:
@@ -409,6 +588,14 @@ def main(argv=None) -> int:
     if summary and (result["dispatched"] or result["failed"] or result.get("cancelled")):
         with open(summary, "a", encoding="utf-8") as fh:
             fh.write("### 🔁 Schedule supervisor\n\n")
+            health = result.get("health") or {}
+            if health.get("silence_minutes") is not None:
+                fh.write(f"- scheduler silence: **{health['silence_minutes']} min** since the "
+                         f"last workflow started (`{health.get('last_run_at')}`)\n")
+            for row in (health.get("delivered_late") or [])[:5]:
+                fh.write(f"- late delivery: `{row['workflow']}` served {row['slot']} "
+                         f"+{row['late_minutes']} min\n")
+            fh.write("\n")
             for row in result["dispatched"]:
                 fh.write(f"- dispatched `{row['workflow']}` for the {row['slot']} slot\n")
             for row in result.get("cancelled", []):

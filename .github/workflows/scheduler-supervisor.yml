@@ -17,7 +17,15 @@ name: Scheduler supervisor
 # finishes, which is exactly when a catch-up pass is worth having.
 on:
   schedule:
-    - cron: "*/15 * * * *"   # frequent on purpose: one dropped slot is not a lost day
+    # Eight spread-out passes, not `*/15`. Measured over 1-6 November: this repo asks
+    # GitHub for ~150 cron events a day and receives a handful, 1-8 hours late. The
+    # `*/15` cron asked for 96 of them and was delivered ~4 times a day, at random
+    # hours — including not at all between 02:52 and 07:52 on 5-6 November, when the
+    # night's whole schedule went unserved. Workflows that ask for a *few* crons get
+    # every one of them (comments 3/3, produce 3/3, brain 1/1 over the same window),
+    # so the honest request is a few well-placed slots, each of which recovers
+    # everything overdue at that moment.
+    - cron: "47 0,3,6,9,12,15,18,21 * * *"
   push:
     branches: [main]
   workflow_run:
@@ -36,6 +44,15 @@ on:
       # CI gives the supervisor a chance every time CI does, on any branch.
       - "Dry-run pipeline (CI proof)"
       - "pages build and deployment"
+      # Every other timer in this repo. Each completion is a free chance to notice a
+      # slot that never started, and completions keep happening even when cron
+      # delivery does not — the night of 5-6 November had none precisely because
+      # nothing at all was running, which is the case eight crons above are for.
+      - "Weekly metrics snapshot"
+      - "Growth autopilot"
+      - "Set video thumbnail (validated studio)"
+      - "Validate prayer speech alignment"
+      - "Expand the script queue"
     types: [completed]
   # An external tick, because every other trigger can be suppressed by the very
   # failure this watches for. Today's crons have not fired since 18:05 UTC, and a
@@ -89,13 +106,16 @@ jobs:
         run: |
           git config user.name "scheduler-supervisor"
           git config user.email "actions@users.noreply.github.com"
-          if [ -f content/monitor/dispatched.json ]; then
-            git add content/monitor/dispatched.json
-            if git diff --staged --quiet; then
-              echo "no dispatches this pass"
-            else
-              git commit -m "chore(monitor): record dispatched slots [skip ci]"
-              git pull --rebase --autostash origin "${GITHUB_REF_NAME:-main}" || true
-              git push || echo "::warning::could not push the dispatch ledger"
-            fi
+          # The ledger records what was dispatched; schedule-health.json records how
+          # quiet the repo was and how late each delivery arrived. Both belong in the
+          # history: a night nobody can measure is a night nobody can fix.
+          for f in content/monitor/dispatched.json content/monitor/schedule-health.json; do
+            if [ -f "$f" ]; then git add "$f"; fi
+          done
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(monitor): record dispatched slots and scheduler health [skip ci]"
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME:-main}" || true
+            git push || echo "::warning::could not push the dispatch ledger"
+          else
+            echo "no dispatches and no schedule change this pass"
           fi

@@ -5,6 +5,52 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-06 — the schedule was measured, and the recovery was rebuilt around the measurement
+
+Between **02:52 and 07:52 UTC** (03:52–08:52 WAT) nothing in this repo ran at all: not the brain's
+03:14 slot, not produce's 06:14 slot, not the monitor's two checks, not the supervisor's
+fifteen-minute tick. Every workflow was `active`, there were zero queued runs, and GitHub reported
+no open incident. The owner found out by asking. What the run history actually shows:
+
+- **Cron delivery here is late, not punctual.** Over 1-6 November a scheduled run lands a median
+  of ~57 min after the slot it serves, p90 ~3.3 h, p95 ~3.4 h — and the brain's 03:14 slot is
+  delivered at **10:53, every day: +7 h 39 m**. The 14:14 produce slot lands 14:26–14:34.
+- **High-frequency crons are thinned; low-frequency ones are not.** Comments (3 crons) got 3 runs
+  a day; produce (3) got 3; brain (1) got 1; growth (1) got 1. The supervisor asked for **96**
+  (`*/15`) and was delivered **~4** — at random hours. Its 15-minute cadence was an illusion.
+- **So the recovery path expired before it could run.** The supervisor only dispatched a dropped
+  slot between 90 min and 6 h after it was due. But it was *delivered* hours late and only a few
+  times a day, so by the time it looked, the slot it exists to recover was outside its own window.
+  A missed night therefore had no repair path at all.
+- **And the alarm was starved.** Every verdict in `content/monitor/status.json` is recomputed by a
+  cron-driven workflow; when none of them start, the file keeps its last values and still reads
+  healthy. Silence was not a state the system could represent.
+
+Fixes:
+
+- **`_slot_window()`** — a dropped slot is recoverable until its **successor is due** (one
+  occurrence period), instead of a flat 6 h. Publishing keeps a tighter 6-hour leash
+  (`USEFUL_WINDOW`): a video hours late is worse than the next slot. Weekly slots cap at 24 h.
+- **`_newest_per_workflow()`** — catching up dispatches **one** run per workflow (the newest
+  missed slot), because three missed produce slots are three uploads otherwise.
+- **`schedule_health()` + `content/monitor/schedule-health.json`** — repo-wide
+  `silence_minutes`, `last_run_at`, and per-workflow `late_minutes` (the 03:14→10:53 case is now
+  recorded as +459). `::error title=Schedule stalled` at 240 min, `::warning` at 120 min, both
+  thresholds derived from the measured p90/max of normal delivery.
+- **`pipeline_watchdog.check_schedule_health()`** — silence is now a first-class, *fatal* finding
+  in the watchdog issue, measured from run history rather than from another workflow's verdict,
+  so whichever pass is alive reports it. This is the first check in the file that is about the
+  repository instead of about one workflow.
+- **`scheduler-supervisor.yml`** — `*/15` → `47 0,3,6,9,12,15,18,21 * * *` (ask for what the
+  scheduler actually delivers, never more than 3 h apart), plus `workflow_run` triggers on
+  metrics, growth, thumbnails, alignment and expand-scripts so every completion is a free
+  recovery chance. The dispatch ledger and the health snapshot are both committed.
+- **`expand-scripts.yml`** gained the `name:` it never had — without it the workflow is addressable
+  only by file path and is invisible to every `workflow_run` list.
+- **Tests:** 12 new/updated (`tests/test_scheduler_supervisor.py`, `tests/test_supply.py`) pinning
+  period-based recovery, newest-slot-only dispatch, produce's tighter leash, the +459 min late
+  delivery, the stall annotation, the watchdog finding, and the new cadence.
+
 ## 2026-11-06 — a published video can no longer go live without a thumbnail and say it has one
 
 The two videos on The Morning Altar published with YouTube's auto-picked frame instead of their

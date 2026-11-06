@@ -1,3 +1,4 @@
+name: Expand the script queue
 # Expands approved-but-too-short prayer scripts to full length.
 #
 # Why: prayer_pipeline refuses any script under the shared long-form floor
