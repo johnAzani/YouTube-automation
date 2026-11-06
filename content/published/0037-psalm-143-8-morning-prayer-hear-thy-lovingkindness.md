@@ -89,7 +89,8 @@ approved_by: brain
 published_on: "2026-11-05"
 published_at: "2026-11-05T21:51:45Z"
 youtube_video_id: "oVy7uG5H1RU"
-thumbnail_revision: "ctr-v3-cinema"
+thumbnail_pending: true
+thumbnail_error: "not applied at upload time — thumbnails.set failed inside a silent except (pre-2026-11-06 receipts stamped revision before confirming); monitor retries"
 metadata_revision: "selar-seo-v1"
 ---
 

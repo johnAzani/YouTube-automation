@@ -5,6 +5,39 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-06 — a published video can no longer go live without a thumbnail and say it has one
+
+The two videos on The Morning Altar published with YouTube's auto-picked frame instead of their
+`ctr-v3-cinema` card. Nothing reported it, and the code was doing three things at once to hide it:
+
+- **The uploader swallowed the failure.** `upload()` applied the thumbnail inside a bare
+  `except` that printed one line into a step log (`thumbnail set failed (quota is 50
+  units/day): ...`) and continued. The run stayed green, the video published.
+- **The receipt lied.** `_mark_job_uploaded()` stamped `thumbnail_revision: ctr-v3-cinema`
+  unconditionally — before knowing whether the thumbnail landed. The live repair pass
+  (`scripts/sync_published_thumbnails.py`) trusts that stamp, so both videos were skipped
+  forever as "already repaired".
+- **The repair pass only knew one channel.** The monitor ran it with channel 1's token, which
+  cannot touch channel 2's videos anyway.
+
+- **`UploadResult.thumbnail_status`** — `ok` / `failed: <reason>` / `missing_file` /
+  `by_design_short` / `not_requested`. A refusal now prints an `::error` annotation naming the
+  channel, the video and the three things to check (phone verification, `youtube.force-ssl`,
+  quota) and appears on the run summary.
+- **Honest receipts**: `thumbnail_revision` is stamped only when YouTube accepted the
+  thumbnail. Otherwise the receipt records `thumbnail_pending: true` + `thumbnail_error`, which
+  is what queues the video for repair. `THUMBNAIL_REVISION` moved to `pipeline/thumbnail_ctr.py`
+  so the uploader and the repair pass share one literal.
+- **Channel-scoped repair**: `collect_pending_receipts(channel_id=...)` and
+  `sync_published_thumbnails(channel=...)` only touch receipts belonging to the channel whose
+  credentials are loaded; a refused repair keeps `thumbnail_pending` and records the API's own
+  words. New `--all-channels` runs every channel with its own token; `monitor.yml` now passes
+  both channels' secrets and runs the repair for both.
+- **The two live videos un-stuck**: receipts 0036/0037 lost their false revision stamp and are
+  queued for the next monitor pass.
+- **Tests**: 8 new (`tests/test_production_safety.py`, `tests/test_sync_published_thumbnails.py`)
+  pinning stamp-on-success-only, pending-on-refusal, channel isolation and both-channel coverage.
+
 ## 2026-11-05 — channel parity locked: one engine, every channel (no per-channel branches left)
 
 - **New `pipeline/channel_capabilities.py`** — the only place that knows which channel is which. Each channel declares its equipment files, roadmap namespace, brand strings (title suffix, CTA, producer line, required/forbidden phrases, pinned comments, Shorts dressing), Short key namespace, supply target and legacy queue-row name. `REQUIRED_CAPABILITIES` lists the ten capabilities every channel has; there are **no per-channel feature flags**.

@@ -180,5 +180,146 @@ class TestSyncPublishedThumbnails(unittest.TestCase):
         self.assertEqual(doc_0009.meta.get("thumbnail_revision"), spt.THUMBNAIL_REVISION)
 
 
+class TestChannelScopedThumbnailRepair(unittest.TestCase):
+    """A token repairs its own channel only, and a refusal must be visible.
+
+    Both channels got a video published with no custom thumbnail while the
+    receipt claimed `thumbnail_revision: ctr-v3-cinema`: `upload()` swallowed the
+    `thumbnails.set` error, the receipt was stamped anyway, and this repair pass
+    then skipped the video forever. These pin the three things that fix it.
+    """
+
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        self.pub_dir = Path(self._tmp.name) / "published"
+        self.out_dir = Path(self._tmp.name) / "out"
+        self.pub_dir.mkdir(parents=True, exist_ok=True)
+        self._write(
+            "0036-psalm-5-morning-prayer.md",
+            {
+                "id": "0036",
+                "slug": "psalm-5-morning-prayer",
+                "title": "Psalm 5 | Morning Prayer",
+                "format": "longform",
+                "privacy": "public",
+                "channel": "prayer2",
+                "youtube_video_id": "_vp27ZYPYaY",
+                "status": "published",
+                "thumbnail_pending": True,
+            },
+        )
+        self._write(
+            "0040-psalm-4-night-prayer.md",
+            {
+                "id": "0040",
+                "slug": "psalm-4-night-prayer",
+                "title": "Psalm 4 | Night Prayer",
+                "format": "longform",
+                "privacy": "public",
+                "youtube_video_id": "SPvideoID1",
+                "status": "published",
+            },
+        )
+
+    def tearDown(self):
+        self._tmp.cleanup()
+
+    def _write(self, filename: str, fm: dict) -> Path:
+        p = self.pub_dir / filename
+        p.write_text(
+            "---\n" + yaml.safe_dump(fm, sort_keys=False) + "---\nBody text.\n",
+            encoding="utf-8",
+        )
+        return p
+
+    def _fake_client(self, ids: list[str]):
+        yt = mock.MagicMock()
+        yt.videos.return_value.list.return_value.execute.return_value = {
+            "items": [
+                {
+                    "id": vid,
+                    "snippet": {"title": f"t {vid}", "description": "d", "categoryId": "22"},
+                    "status": {"privacyStatus": "public", "uploadStatus": "processed"},
+                    "contentDetails": {"duration": "PT7M18S"},
+                }
+                for vid in ids
+            ]
+        }
+        return yt
+
+    def test_each_channel_repairs_only_its_own_receipts(self):
+        seen: list[str] = []
+
+        def _setter(vid, path):
+            seen.append(vid)
+            return "ok"
+
+        spt.sync_published_thumbnails(
+            published_dir=self.pub_dir,
+            out_root=self.out_dir,
+            youtube_client=self._fake_client(["_vp27ZYPYaY"]),
+            thumb_setter=_setter,
+            channel="prayer2",
+        )
+        self.assertEqual(seen, ["_vp27ZYPYaY"], "must not touch the other channel's video")
+
+        seen.clear()
+        spt.sync_published_thumbnails(
+            published_dir=self.pub_dir,
+            out_root=self.out_dir,
+            youtube_client=self._fake_client(["SPvideoID1"]),
+            thumb_setter=_setter,
+            channel="secret-place",
+        )
+        self.assertEqual(seen, ["SPvideoID1"])
+
+    def test_a_refused_thumbnail_is_recorded_and_stays_queued(self):
+        rows = spt.sync_published_thumbnails(
+            published_dir=self.pub_dir,
+            out_root=self.out_dir,
+            youtube_client=self._fake_client(["_vp27ZYPYaY"]),
+            thumb_setter=lambda vid, path: "HttpError 403 insufficientPermissions",
+            channel="prayer2",
+        )
+        self.assertEqual(len(rows), 1)
+        doc = parse_script(self.pub_dir / "0036-psalm-5-morning-prayer.md")
+        self.assertNotIn("thumbnail_revision", doc.meta)
+        self.assertTrue(doc.meta.get("thumbnail_pending"))
+        self.assertIn("insufficientPermissions", str(doc.meta.get("thumbnail_error")))
+        # Still pending, so the next monitor pass retries it.
+        pending = spt.collect_pending_receipts(published_dir=self.pub_dir, channel_id="prayer2")
+        self.assertEqual([d.id for _, d in pending], ["0036"])
+
+    def test_a_repaired_thumbnail_is_stamped_and_retires_the_pending_flag(self):
+        spt.sync_published_thumbnails(
+            published_dir=self.pub_dir,
+            out_root=self.out_dir,
+            youtube_client=self._fake_client(["_vp27ZYPYaY"]),
+            thumb_setter=lambda vid, path: "ok",
+            channel="prayer2",
+        )
+        doc = parse_script(self.pub_dir / "0036-psalm-5-morning-prayer.md")
+        self.assertEqual(doc.meta.get("thumbnail_revision"), spt.THUMBNAIL_REVISION)
+        self.assertFalse(doc.meta.get("thumbnail_pending"))
+        self.assertEqual(
+            spt.collect_pending_receipts(published_dir=self.pub_dir, channel_id="prayer2"), []
+        )
+
+    def test_all_channels_mode_covers_every_registered_channel(self):
+        from pipeline.channels import CHANNELS
+
+        with mock.patch.object(spt, "_has_youtube_credentials", return_value=False):
+            results = spt.sync_all_channels(force=True)
+        self.assertEqual(sorted(results), sorted(CHANNELS))
+        self.assertEqual(set(results), {"secret-place", "prayer2"})
+
+    def test_monitor_workflow_supplies_both_channels_credentials(self):
+        text = (Path(__file__).resolve().parent.parent / ".github/workflows/monitor.yml").read_text()
+        self.assertIn("sync_published_thumbnails --all-channels", text)
+        for key in ("YOUTUBE_CLIENT_ID", "PRAYER2_YOUTUBE_CLIENT_ID",
+                    "PRAYER2_YOUTUBE_CLIENT_SECRET", "PRAYER2_YOUTUBE_REFRESH_TOKEN"):
+            self.assertIn(key, text)
+
+
 if __name__ == "__main__":
     unittest.main()

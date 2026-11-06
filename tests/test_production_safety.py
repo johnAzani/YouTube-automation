@@ -68,6 +68,38 @@ class ProductionSafetyTests(unittest.TestCase):
             self.assertIn("status: published", dest.read_text(encoding="utf-8"))
             self.assertIn('youtube_video_id: "video-123"', dest.read_text(encoding="utf-8"))
 
+    def _stamp(self, thumbnail_status):
+        temp_dir = tempfile.mkdtemp()
+        queue_path = Path(temp_dir) / "job.md"
+        queue_path.write_text("---\nstatus: approved\n---\nbody\n", encoding="utf-8")
+        with patch("pipeline.run.PUBLISHED_DIR", Path(temp_dir) / "published"):
+            dest = _mark_job_uploaded(
+                queue_path, self.approved_doc, "video-123", thumbnail_status
+            )
+        return dest.read_text(encoding="utf-8")
+
+    def test_receipt_claims_a_thumbnail_only_when_youtube_took_it(self):
+        # The whole bug, in one assertion: two Morning Altar videos published with
+        # no custom thumbnail while their receipts said "ctr-v3-cinema". A receipt
+        # may only claim a revision once `thumbnails.set` actually returned ok.
+        applied = self._stamp("ok")
+        self.assertIn('thumbnail_revision: "ctr-v3-cinema"', applied)
+        self.assertNotIn("thumbnail_pending", applied)
+
+    def test_refused_thumbnail_keeps_the_video_queued_for_repair(self):
+        refused = self._stamp("failed: HttpError 403 insufficientPermissions")
+        self.assertNotIn("thumbnail_revision", refused)
+        self.assertIn("thumbnail_pending: true", refused)
+        self.assertIn("insufficientPermissions", refused)
+
+    def test_short_or_missing_thumbnail_is_recorded_as_pending_not_done(self):
+        for status in ("by_design_short", "missing_file", "not_requested"):
+            with self.subTest(status=status):
+                self.approved_doc.meta = {}
+                text = self._stamp(status)
+                self.assertNotIn("thumbnail_revision", text)
+                self.assertIn("thumbnail_pending: true", text)
+
 
     def test_release_ticket_opens_in_actions_with_token_and_studio_link(self):
         doc = SimpleNamespace(title="How Test Died")

@@ -68,13 +68,22 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Sync live channel thumbnails
+        # EVERY channel, each with its own token (`--all-channels`). This step was
+        # single-channel and it trusted `thumbnail_revision`, so a video whose
+        # custom thumbnail YouTube refused at upload time — refused silently, by
+        # a bare except in pipeline/upload.py — was never retried and never
+        # mentioned. Receipts now say `thumbnail_pending` until the thumbnail is
+        # really live, and this pass repairs both channels.
         continue-on-error: true
         env:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          PRAYER2_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER2_YOUTUBE_CLIENT_ID }}
+          PRAYER2_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER2_YOUTUBE_CLIENT_SECRET }}
+          PRAYER2_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN }}
         run: |
-          python -m scripts.sync_published_thumbnails
+          python -m scripts.sync_published_thumbnails --all-channels
           python -m scripts.retrofit_published_metadata --sync-pending
 
       - name: Audit every automation and its outcome
