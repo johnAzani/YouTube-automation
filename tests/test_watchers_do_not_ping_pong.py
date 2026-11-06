@@ -134,3 +134,51 @@ class TestAnUnprovenFixIsNotRecovery(unittest.TestCase):
 
         source = inspect.getsource(pipeline_watchdog.check_automations)
         self.assertIn('warning=automation.severity == "warning"', source)
+
+
+class TestUpstreamEvidenceIsQuotedFromTheRun(unittest.TestCase):
+    """The ledger records the *dispatch*, not the failure — the first version was inert.
+
+    `entry["result"]` says "dispatched"; the reason a brain run dies is in its
+    annotations. Without reading them, the retry rule could never fire and the slot
+    still sat out the outage until the next day.
+    """
+
+    def test_runner_boilerplate_is_not_an_outage(self):
+        from scripts import scheduler_supervisor as sup
+
+        noisy = ("The ubuntu-latest label will migrate to Ubuntu 26 beginning October 19, "
+                 "2026. Node.js 20 is deprecated. Process completed with exit code 1.")
+        self.assertFalse(sup.is_upstream_failure({"result": "dispatched"}, noisy))
+
+    def test_the_503_annotation_is(self):
+        from scripts import scheduler_supervisor as sup
+
+        real = ("Gemini service unavailable | gemini-3.8-flash did not answer after 5 "
+                "attempts (503 UNAVAILABLE — upstream capacity, not this code).")
+        self.assertTrue(sup.is_upstream_failure({"result": "dispatched"}, real))
+
+    def test_the_latest_failed_run_is_the_one_quoted(self):
+        from unittest import mock
+
+        from scripts import scheduler_supervisor as sup
+
+        runs = [
+            {"path": "gemini_brain.yml", "conclusion": "failure", "id": 1,
+             "created_at": "2026-11-06T09:00:00Z"},
+            {"path": "gemini_brain.yml", "conclusion": "failure", "id": 2,
+             "created_at": "2026-11-06T10:51:00Z"},
+            {"path": "produce.yml", "conclusion": "failure", "id": 3,
+             "created_at": "2026-11-06T10:59:00Z"},
+        ]
+        seen = {}
+
+        def _annotations(run_id, _cache=None):
+            seen["id"] = run_id
+            return "503 UNAVAILABLE"
+
+        with mock.patch.object(sup, "run_annotations", side_effect=_annotations), \
+             mock.patch.object(sup, "run_annotations", _annotations):
+            ev = sup.last_failure_evidence("gemini_brain.yml", runs, "2026-11-06T10:40:00Z")
+        self.assertEqual(seen["id"], 2, "another workflow's failure must not be quoted")
+        self.assertIn("503", ev)
