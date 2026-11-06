@@ -57,89 +57,113 @@ class TestTheAssetsAreTheRightShape(unittest.TestCase):
 
 
 class TestTheBannerSurvivesTheCropAPhoneShows(unittest.TestCase):
-    """The band a phone shows is taller than the box the spec calls mobile-safe.
+    """A phone crops the banner to its centre 1546 x 423 and scales that up.
 
-    Photographed on a 1080x2400 Android phone (2026-11-06, the live channel): the
-    banner card renders 1005x295 px = 3.41:1, which is the centre 2560x753 of the
-    file — 139 px taller than the 1546x423 TV band and 415 px taller than the
-    1235x338 safe box. The first upload placed the sun at y=0.255h and the horizon
-    at y=0.802h, so on the phone the disc was sliced by the top edge (a gold sliver
-    in the rounded corner) and the tower rose out of nothing as a black notch. All
-    of the type was inside the safe box; none of it was the problem.
+    Measured from two screenshots of the live channel (2026-11-06, 1080 x 2400
+    Android). The card is 3.63 : 1, but it does not show the whole 2560 width: the
+    wordmark is 1091 px wide in the file and 699 px wide in a 984 px card, so the
+    card is showing 984 * 1091 / 699 = 1535 px of the middle. Fitting candidate
+    crops to the screenshot agreed (MAE 7.6 at 1526 x 443; 11+ at 2560 x 705).
+
+    The first fix read the card's ratio alone, assumed the full width, and left the
+    sun straddling the edge of the real window — on the phone, a gold crescent in
+    the rounded corner. Type inside the box is not enough; *nothing hard* may cross
+    its edge.
     """
 
-    RATIOS = (assets.PHONE_CROP_RATIO, 3.65)   # the phone, and YouTube's TV band
+    #: The measured window, plus two plausible neighbouring ones, so a slightly
+    #: different card size on another device cannot reintroduce a sliced shape.
+    WINDOWS = ((1546, 423), (1520, 400), (1600, 450))
 
     @classmethod
     def setUpClass(cls):
         cls.banner = Image.open(MEDIA / "midday-watch-banner.png").convert("RGB")
         cls.palette = assets.PALETTES["midday-watch"]
 
-    def band(self, ratio):
-        return self.banner.crop(assets.phone_crop_box(self.banner.size, ratio))
+    def window(self, size):
+        return self.banner.crop(assets.phone_crop_box(self.banner.size, size))
 
-    def test_the_phone_band_is_taller_than_the_safe_box(self):
-        """Two different boxes: the type fits the safe box, the scenery the band."""
-        band = self.band(assets.PHONE_CROP_RATIO)
-        self.assertEqual(band.width, assets.BANNER[0])
-        self.assertGreater(band.height, assets.BANNER_SAFE[1],
-                           "a phone shows a taller band than the 1235x338 safe box")
+    def test_the_window_is_the_safe_area_not_the_aspect_ratio(self):
+        self.assertEqual(assets.PHONE_CROP, (1546, 423))
+        safe_w, safe_h = assets.BANNER_SAFE
+        self.assertLess(safe_w, assets.PHONE_CROP[0])
+        self.assertLess(safe_h, assets.PHONE_CROP[1])
 
-    def test_the_sun_disc_is_whole_inside_the_band(self):
-        """A disc touching an edge is the sliver that made the first upload look broken."""
+    def test_the_type_sits_wholly_inside_the_window(self):
+        """Everything a viewer must read is inside the crop, with room to spare."""
+        w, h = self.banner.size
+        box = assets.phone_crop_box(self.banner.size)
+        left, top = box[0], box[1]
+        px = self.banner.load()
+        xs, ys = [], []
+        for y in range(top, top + assets.PHONE_CROP[1]):
+            for x in range(left, left + assets.PHONE_CROP[0]):
+                r, g, b = px[x, y]
+                if r > 235 and g > 235 and b > 225:      # the wordmark, in Ivory
+                    xs.append(x - left)
+                    ys.append(y - top)
+        self.assertTrue(xs, "no wordmark inside the phone window")
+        self.assertGreater(min(xs), 40)
+        self.assertLess(max(xs), assets.PHONE_CROP[0] - 40)
+        self.assertGreater(min(ys), 40)
+        self.assertLess(max(ys), assets.PHONE_CROP[1] - 40)
+
+    def test_no_sun_or_tower_is_visible_in_the_window(self):
+        """They live outside it on purpose — a shape cut by the edge is the bug."""
         sun_rgb = self.palette["sun"]
-        for ratio in self.RATIOS:
-            with self.subTest(ratio=ratio):
-                band = self.band(ratio)
-                w, h = band.size
-                # Only the right-hand third: the gold rule and the verse sit left of it.
-                region = band.crop((int(w * 0.70), 0, w, h)).load()
-                xs, ys = [], []
-                for y in range(0, h, 2):
-                    for x in range(0, w - int(w * 0.70), 2):
-                        if region[x, y] == sun_rgb:
-                            xs.append(x)
-                            ys.append(y)
-                self.assertTrue(xs, "no sun disc in the right-hand third of the banner")
-                left, right = min(xs), max(xs)
-                top, bottom = min(ys), max(ys)
-                self.assertGreater(left, 24, "sun disc touches the left of the band")
-                self.assertLess(right, w - int(w * 0.70) - 24, "sun disc is cut on the right")
-                self.assertGreater(top, 24, "sun disc is sliced by the top edge of the band")
-                self.assertLess(bottom, h - 24, "sun disc is sliced by the bottom edge")
-                aspect = (right - left) / max(1, bottom - top)
-                self.assertGreater(aspect, 0.85, "the clipped sun is not a disc any more")
-                self.assertLess(aspect, 1.15, "the clipped sun is not a disc any more")
-
-    def test_the_ground_is_visible_at_the_foot_of_the_band(self):
-        """A tower on a featureless field reads as a floating black notch."""
-        for ratio in self.RATIOS:
-            with self.subTest(ratio=ratio):
-                band = self.band(ratio)
-                w, h = band.size
-                px = band.load()
-                warm = total = 0
-                for y in range(h - 12, h):
-                    for x in range(0, w, 6):
-                        r, g, b = px[x, y]
-                        total += 1
-                        warm += r > b + 40        # sky is blue; ground is warm
-                self.assertGreater(warm / total, 0.95,
-                                   "the bottom of the band is sky, not ground")
-
-    def test_the_tower_stands_on_that_ground(self):
-        """Its foot must be inside the band, not sawn off by the bottom edge."""
         shadow = self.palette["shadow"]
-        for ratio in self.RATIOS:
-            with self.subTest(ratio=ratio):
-                band = self.band(ratio)
-                w, h = band.size
-                px = band.load()
-                col = int(w * 0.842)
-                rows = [y for y in range(h) if px[col, y] == shadow]
-                self.assertTrue(rows, "no tower in the band")
-                self.assertLess(max(rows), h - 16,
-                                "the tower's foot is cut by the bottom edge of the band")
+        for size in self.WINDOWS:
+            with self.subTest(window=size):
+                win = self.window(size)
+                px = win.load()
+                # Look only right of the type block: the gold rule and the verse are
+                # drawn in the sun colour too, and they are meant to be in the window.
+                start_x = (size[0] + assets.BANNER_SAFE[0]) // 2 + 8
+                sun = shadow_hits = 0
+                for y in range(0, win.height, 2):
+                    for x in range(start_x, win.width, 2):
+                        p = px[x, y]
+                        if p == shadow:
+                            shadow_hits += 1
+                        elif p == sun_rgb:
+                            sun += 1
+                self.assertEqual(sun, 0, "the sun is cut by the phone window's edge")
+                self.assertEqual(shadow_hits, 0, "the tower is cut by the window's edge")
+
+    def test_the_window_edges_are_clean_sky(self):
+        """No hard shape may touch the crop: the corner of the card must be sky."""
+        w, h = self.banner.size
+        left, top, right, bottom = assets.phone_crop_box(self.banner.size)
+        win = self.banner.crop((left, top, right, bottom))
+        px = win.load()
+        ring = 6
+        for y in range(win.height):
+            for x in range(win.width):
+                if ring <= x < win.width - ring and ring <= y < win.height - ring:
+                    continue
+                p = px[x, y]
+                bright = sum(p) / 3
+                # Warm haze at the foot of the card is deliberate; a disc, a tower or
+                # a letterform touching the edge is not.
+                self.assertLess(bright, 150, f"something hard at the window edge ({x},{y})")
+                self.assertNotEqual(p, self.palette["sun"], f"sun at the edge ({x},{y})")
+                self.assertNotEqual(p, self.palette["shadow"], f"tower at the edge ({x},{y})")
+
+    def test_the_scenery_survives_the_16_9_frame(self):
+        """Outside the window the artwork must still be a scene, not a void."""
+        px = self.banner.load()
+        sun = self.palette["sun"]
+        shadow = self.palette["shadow"]
+        cx = int(self.banner.width * 0.838)
+        cy = int(self.banner.height * 0.140)
+        r = int(self.banner.width * 0.051)
+        # sample the sun's ring, not its brass centre
+        self.assertEqual(px[cx + int(r * 0.8), cy], sun,
+                         "no sun in the sky the TV shows")
+        tower_x = int(self.banner.width * 0.852)
+        tower_y = int(self.banner.height * 0.640)   # the shaft, above its foot
+        self.assertEqual(px[tower_x, tower_y], shadow,
+                         "no tower on the ground the TV shows")
 
 
 class TestThePaletteIsTheDocumentedOne(unittest.TestCase):

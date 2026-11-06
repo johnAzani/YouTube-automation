@@ -17,7 +17,7 @@ The layout constants are YouTube's, not our preference:
                (TV/desktop) or the centre 1235 x 338 px (mobile). All text lives
                inside the smaller of those, or it is cropped on a phone. The
                *scenery* has to survive the taller band a phone really shows —
-               measured, not assumed: see PHONE_CROP_RATIO;
+               measured, not assumed: see PHONE_CROP;
   * watermark  150 x 150 px with transparency, bottom-right of every video.
 
 Usage
@@ -46,18 +46,22 @@ BANNER = (2560, 1440)
 #: Text must live inside this box or mobile crops it.
 BANNER_SAFE = (1235, 338)
 
-#: The band a phone actually shows, as an aspect ratio (width / height).
+#: The window a phone actually shows: the centre 1546 x 423 of the file.
 #:
-#: The 1235x338 "mobile safe area" is the box the *type* has to fit in; it is not
-#: the shape of the window. Photographed on a 1080x2400 Android phone (2026-11-06,
-#: @TheMiddayWatch), the banner card renders 1005x295 px = 3.41:1, i.e. the centre
-#: 2560x753 slice of a 2560x1440 file — 139 px taller than the 423 px TV band and
-#: 415 px taller than the safe box. A first render put the sun at y=0.255h and the
-#: horizon at y=0.802h, so on the phone the disc was sliced by the top edge (a gold
-#: sliver in the rounded corner) and the tower rose out of a featureless field as a
-#: black notch. Nothing was "wrong" by the spec; the spec just does not describe
-#: what a viewer sees. Scenery is now laid out inside this band instead.
-PHONE_CROP_RATIO = 3.4
+#: This is YouTube's documented "TV/mobile safe area" — but the phone does not
+#: merely keep the type inside it, it *crops* to it and scales what is left up to
+#: the card. Two screenshots of the live channel (2026-11-06, 1080x2400 Android)
+#: measured card ratios of 3.63:1 and 3.63:1, which is 2560 x 705 if the card were
+#: showing the full width — it is not. The wordmark is 1091 px wide in the file and
+#: rendered 699 px wide in a 984 px card, so the card shows 984 * 1091 / 699 =
+#: 1535 px of the 2560: the middle six-tenths. Fitting every candidate crop to the
+#: screenshot confirmed it (MAE 7.6 at 1526x443, 7.8 at 1546x423, 11+ at 2560x705).
+#:
+#: A first fix read the card's aspect ratio and assumed the full width, decided the
+#: window was 2560 x 753, and left the sun straddling its edge — on the phone that
+#: is a gold crescent in the corner. Scenery must now be laid out so that no hard
+#: shape crosses this box: it is either wholly inside, or wholly outside.
+PHONE_CROP = (1546, 423)
 WATERMARK = (150, 150)
 THUMBNAIL = (1280, 720)
 #: The one-page brand sheet. Tall enough that the notes column and the footer
@@ -89,12 +93,12 @@ def font(name: str, size: int) -> ImageFont.FreeTypeFont:
     return ImageFont.truetype(str(FONT_DIR / name), size)
 
 
-def phone_crop_box(size, ratio: float = PHONE_CROP_RATIO):
-    """The centred slice of a banner that a phone shows, as a PIL crop box."""
+def phone_crop_box(size, crop=PHONE_CROP):
+    """The centred window a phone shows of a banner, as a PIL crop box."""
     w, h = size
-    band_h = int(round(w / ratio))
-    top = (h - band_h) // 2
-    return (0, top, w, top + band_h)
+    cw, ch = crop
+    left, top = (w - cw) // 2, (h - ch) // 2
+    return (left, top, left + cw, top + ch)
 
 
 def multi_stop_gradient(size, stops) -> Image.Image:
@@ -278,11 +282,13 @@ def make_avatar(palette: dict) -> Image.Image:
 def make_banner(palette: dict) -> Image.Image:
     """2560x1440: the mark inside the phone band, the type inside the safe box.
 
-    Two boxes, not one. Type has to sit in the centre 1235x338 (BANNER_SAFE) or a
-    phone crops the wordmark. Scenery has to sit in the taller centre band a phone
-    really shows (PHONE_CROP_RATIO) or it gets sliced: the sun cut by the top edge
-    and the tower rising out of nothing, both seen on the live channel 2026-11-06.
-    Desktop and TV then see more sky above and more field below the same scene.
+    Two boxes, not one. Type has to sit in the centre 1235x338 (BANNER_SAFE) so it
+    never comes near a crop edge. Scenery has to sit wholly outside the centre
+    1546x423 window a phone shows (PHONE_CROP), or wholly inside it — a shape that
+    straddles the edge is the gold crescent that appeared in the corner of the live
+    channel on 2026-11-06. So the sun rides high in the top-right and the tower
+    stands right of the window: the phone gets a clean wordmark card, and the TV's
+    wider frame gets the full noon landscape.
     """
     w, h = BANNER
     box = phone_crop_box((w, h))
@@ -293,19 +299,19 @@ def make_banner(palette: dict) -> Image.Image:
         (0.70, (196, 148, 92)),   # warm haze where the field begins
         (1.00, (150, 106, 66)),
     ])
-    # Sun: whole disc (and so its halo's hot core) well inside the phone band.
-    sun_y = box[1] + int((box[3] - box[1]) * 0.30)          # ~0.40h on 16:9
-    img = sun(img, (int(w * 0.838), sun_y), int(w * 0.055), palette, halo=0.45)
-    # x = 0.838w, not 0.775w: at 0.775 the disc's left edge overlapped the safe box
-    # and crowded the final "H" of the wordmark on the phone.
-    # Horizon near the bottom of the phone band, so the field is actually visible.
-    horizon = box[1] + int((box[3] - box[1]) * 0.865)
+    # Sun: wholly above the phone window (box[1] = 508), with 11 px to spare even
+    # against the wider-and-shorter crop a 16:9 TV card would show (top 343).
+    sun_y = int(h * 0.140)
+    img = sun(img, (int(w * 0.838), sun_y), int(w * 0.051), palette, halo=0.45)
+    # Horizon below the phone window: the phone sees the haze at its foot, the TV
+    # sees the whole field.
+    horizon = box[3] + int(h * 0.055)
     img = horizon_bloom(img, horizon - int(h * 0.002), palette["sun"], 0.30)
     img = noon_field(img, palette, horizon)
 
     d = ImageDraw.Draw(img)
-    # Tower stands on that field, and its foot stays above the band's bottom edge.
-    watchtower(d, (w, h), (int(w * 0.842), horizon + int(h * 0.023)),
+    # Tower stands on that field, wholly right of the window (right edge 2053).
+    watchtower(d, (w, h), (int(w * 0.852), horizon + int(h * 0.016)),
                int(w * 0.042), int(h * 0.150), palette["shadow"])
 
     # ---- text, all of it inside the mobile-safe box -------------------------
@@ -460,15 +466,15 @@ def make_brand_sheet(palette: dict, media_dir: Path) -> Image.Image:
 
     # --- banner: the band a phone actually shows ------------------------------
     # The phone band, not BANNER_SAFE: the safe box is where the *type* must fit,
-    # the band is the window the scenery has to survive (see PHONE_CROP_RATIO).
+    # the window the phone crops to (see PHONE_CROP): type inside it, scenery out.
     banner = Image.open(media_dir / f"{palette['slug']}-banner.png").convert("RGB")
     crop = banner.crop(phone_crop_box(banner.size))
     scale = 1640 / crop.width
     crop = crop.resize((1640, int(crop.height * scale)), Image.Resampling.LANCZOS)
     y = 660
     sheet.paste(crop, (80, y))
-    d.text((80, y - 40), "BANNER  2560 × 1440 — this is the band a phone shows "
-                         f"(3.4 : 1, centre {2560} × {int(round(2560 / PHONE_CROP_RATIO))})",
+    d.text((80, y - 40), "BANNER  2560 × 1440 — this is exactly what a phone shows "
+                         f"(centre {PHONE_CROP[0]} × {PHONE_CROP[1]})",
            font=label, fill=palette["sun"])
 
     # --- thumbnail ------------------------------------------------------------
@@ -523,10 +529,10 @@ UPLOAD ORDER (Studio -> Customization -> Branding)
   Then paste the About text and the keywords from MIDDAY_WATCH_BRANDING.md sections 2 and 3.
 
 CHECK THE BANNER ON A PHONE, NOT IN THE PREVIEW
-  A phone shows the centre band of the banner at about 3.4 : 1 (2560 x 753 of the
-  file), which is taller than the 1235 x 338 the type has to fit inside. The sun and
-  the watchtower are laid out inside that band on purpose. The Edit-channel preview
-  zoom-crops and is not what viewers see.
+  A phone crops the banner to the centre 1546 x 423 and scales that up to the card,
+  so nothing hard may cross that edge: the sun and the watchtower sit wholly outside
+  it (they play on the TV's wider frame) and all the type sits wholly inside it. The
+  Edit-channel preview zoom-crops and is not what viewers see.
 
 PALETTE
   Zenith Blue   #0d3350    Noon Sky      #1c5d7a    High Sun      #ffc247
