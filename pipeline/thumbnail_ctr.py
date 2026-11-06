@@ -38,6 +38,12 @@ the text box, text contrast, safe-zone and badge clearance, file size.
 """
 from __future__ import annotations
 
+# One revision string for the whole pipeline. A receipt carrying it claims the
+# cinema thumbnail is LIVE on YouTube; it is written only after the uploader
+# confirms `thumbnails.set` succeeded (pipeline/run.py), and it is what
+# scripts/sync_published_thumbnails.py checks before spending 50 quota units.
+THUMBNAIL_REVISION = "ctr-v3-cinema"
+
 import dataclasses
 import hashlib
 import json

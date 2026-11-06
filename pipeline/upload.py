@@ -34,6 +34,14 @@ class UploadResult:
     privacy_status: str
     watch_url: str
     auto_published: bool
+    # What actually happened to the custom thumbnail: "ok" (YouTube accepted
+    # it), "failed: <reason>" (YouTube refused it), "missing_file" (nothing to
+    # send), "by_design_short" (Shorts get no custom thumbnail), "not_requested".
+    # It used to be invisible: the `thumbnails.set` call sat in a bare except
+    # that printed one line into a step log nobody reads, so two Morning Altar
+    # videos went live with YouTube's auto-picked frame while every receipt
+    # claimed a `ctr-v3-cinema` thumbnail. Report it, stamp it, retry it.
+    thumbnail_status: str = "not_requested"
 
 
 from pipeline.quota_handler import (
@@ -324,14 +332,34 @@ def upload(
 
     video_id = response["id"]
     stored_privacy = response.get("status", {}).get("privacyStatus", privacy)
+    thumbnail_status = "not_requested"
 
     if thumbnail_path and thumbnail_path.exists() and not is_short:
         try:
             youtube.thumbnails().set(
                 videoId=video_id, media_body=MediaFileUpload(str(thumbnail_path))
             ).execute()
+            thumbnail_status = "ok"
+            print(f"[upload] custom thumbnail applied to {video_id}")
         except Exception as exc:  # noqa: BLE001
-            print(f"[upload] thumbnail set failed (quota is 50 units/day): {exc!r}")
+            thumbnail_status = f"failed: {exc}"
+            print(f"[upload] thumbnail set FAILED (50 units/day; channel "
+                  f"{CONFIG.channel_id}): {exc!r}")
+            # Loud on purpose. A custom thumbnail needs a channel that YouTube
+            # has unlocked for the feature (phone verification) and an OAuth
+            # token carrying youtube.force-ssl; a silent failure here is
+            # exactly how two published videos ended up with no thumbnail.
+            print(f"::error title=YouTube refused the custom thumbnail "
+                  f"({CONFIG.channel_id})::video {video_id} published, thumbnail "
+                  f"NOT applied — {exc}. Check phone verification on the channel, "
+                  f"the youtube.force-ssl scope on the refresh token, and today's "
+                  f"quota. The receipt records it as pending, so the monitor "
+                  f"retries it instead of pretending it worked.")
+    elif is_short:
+        thumbnail_status = "by_design_short"
+    else:
+        thumbnail_status = "missing_file"
+        print(f"[upload] no thumbnail file to apply for {video_id}")
 
     if caption_path and caption_path.is_file() and not is_short:
         try:
@@ -368,6 +396,7 @@ def upload(
         privacy_status=stored_privacy,
         watch_url=f"https://youtu.be/{video_id}",
         auto_published=stored_privacy == "public",
+        thumbnail_status=thumbnail_status,
     )
 
 

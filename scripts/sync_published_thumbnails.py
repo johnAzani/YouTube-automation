@@ -17,12 +17,15 @@ import re
 from pathlib import Path
 from typing import Any
 
+from pipeline.channels import CHANNELS, channel_for_doc, get_channel
 from pipeline.config import CONFIG, OUTPUT_DIR, PUBLISHED_DIR
 from pipeline.script_doc import parse_script
-from pipeline.thumbnail_ctr import curated_backdrop_for, generate_ctr_pack
-from pipeline.upload import _credentials, set_video_thumbnail
-
-THUMBNAIL_REVISION = "ctr-v3-cinema"
+from pipeline.thumbnail_ctr import (
+    THUMBNAIL_REVISION,
+    curated_backdrop_for,
+    generate_ctr_pack,
+)
+from pipeline.upload import set_video_thumbnail
 
 # Curated 3-word mobile-maximised hooks for the initial published prayers so we do
 # not have to alter historical frontmatter that existing unit tests assert against.
@@ -71,9 +74,17 @@ def stamp_frontmatter_field(path: Path, key: str, value: str) -> None:
 def collect_pending_receipts(
     published_dir: Path = PUBLISHED_DIR,
     force: bool = False,
+    channel_id: str | None = None,
 ) -> list[tuple[Path, Any]]:
-    """Return `(path, ScriptDoc)` for published longform jobs needing thumbnail sync."""
+    """Return `(path, ScriptDoc)` for published longform jobs needing thumbnail sync.
+
+    ``channel_id`` restricts the scan to one channel's receipts. It is not
+    optional bookkeeping: each channel has its own OAuth token, and a token can
+    only touch its own channel's videos, so repairing The Morning Altar with
+    The Secret Place's credentials fails with 403 (and vice versa).
+    """
     pending: list[tuple[Path, Any]] = []
+    want = str(channel_id).strip().lower() if channel_id else ""
     if not published_dir.is_dir():
         return pending
     for path in sorted(published_dir.glob("*.md")):
@@ -81,6 +92,8 @@ def collect_pending_receipts(
             doc = parse_script(path)
         except Exception as exc:  # noqa: BLE001
             print(f"[thumb-sync] skip unreadable {path.name}: {exc}")
+            continue
+        if want and channel_for_doc(doc.meta) != want:
             continue
         fmt = str(getattr(doc, "format", "") or doc.meta.get("format", "")).strip().lower()
         vid = str(doc.meta.get("youtube_video_id", "") or "").strip()
@@ -93,18 +106,41 @@ def collect_pending_receipts(
     return pending
 
 
-def _has_youtube_credentials() -> bool:
-    return bool(
-        (CONFIG.youtube_client_id or "").strip()
-        and (CONFIG.youtube_client_secret or "").strip()
-        and (CONFIG.youtube_refresh_token or "").strip()
+def _channel_credentials(profile) -> tuple[str, str, str]:
+    """(client_id, client_secret, refresh_token) for one channel, from its env names."""
+    names = profile.secret_names()
+    return (
+        os.environ.get(names["client_id"], "").strip(),
+        os.environ.get(names["client_secret"], "").strip(),
+        os.environ.get(names["refresh_token"], "").strip(),
     )
 
 
-def _build_youtube_client():
+def _has_youtube_credentials(profile=None) -> bool:
+    profile = profile or get_channel(CONFIG.channel_id)
+    return all(_channel_credentials(profile))
+
+
+def _build_youtube_client(profile=None):
+    """A YouTube client authorized as `profile`'s channel (never anyone else's)."""
+    from google.auth.transport.requests import Request
+    from google.oauth2.credentials import Credentials
     from googleapiclient.discovery import build
 
-    return build("youtube", "v3", credentials=_credentials(), cache_discovery=False)
+    from pipeline.upload import SCOPES
+
+    profile = profile or get_channel(CONFIG.channel_id)
+    client_id, client_secret, refresh_token = _channel_credentials(profile)
+    creds = Credentials(
+        token=None,
+        refresh_token=refresh_token,
+        token_uri="https://oauth2.googleapis.com/token",
+        client_id=client_id,
+        client_secret=client_secret,
+        scopes=SCOPES,
+    )
+    creds.refresh(Request())
+    return build("youtube", "v3", credentials=creds, cache_discovery=False)
 
 
 def sync_published_thumbnails(
@@ -114,18 +150,31 @@ def sync_published_thumbnails(
     dry_run: bool = False,
     youtube_client: Any = None,
     thumb_setter=set_video_thumbnail,
+    channel: str | None = None,
 ) -> list[dict[str, Any]]:
-    """Render and apply cinema thumbnails (+ privacy/title hygiene) for live videos."""
-    pending = collect_pending_receipts(published_dir=published_dir, force=force)
+    """Render and apply cinema thumbnails (+ privacy/title hygiene) for live videos.
+
+    Only the receipts belonging to `channel` (default: the run's CHANNEL_ID) are
+    touched, and only that channel's OAuth token is used — a token can repair its
+    own channel and nothing else.
+    """
+    profile = get_channel(channel or CONFIG.channel_id)
+    pending = collect_pending_receipts(
+        published_dir=published_dir, force=force, channel_id=profile.id
+    )
     if not pending:
-        print(f"[thumb-sync] all published long-form videos are at {THUMBNAIL_REVISION}")
+        print(f"[thumb-sync] {profile.id}: all published long-form videos are at "
+              f"{THUMBNAIL_REVISION}")
         return []
 
-    if not dry_run and youtube_client is None and not _has_youtube_credentials():
-        print("[thumb-sync] skipped: YouTube OAuth credentials not present in environment")
+    if not dry_run and youtube_client is None and not _has_youtube_credentials(profile):
+        print(f"[thumb-sync] {profile.id}: skipped — this channel's YouTube OAuth "
+              f"secrets ({profile.secret_names()['client_id']} / _SECRET / "
+              f"_REFRESH_TOKEN) are not present in the environment. The videos stay "
+              f"marked thumbnail_pending, so the next monitor pass retries them.")
         return []
 
-    yt = None if dry_run else (youtube_client or _build_youtube_client())
+    yt = None if dry_run else (youtube_client or _build_youtube_client(profile))
     remote_by_id: dict[str, dict[str, Any]] = {}
     videos_list_ok = False
     if yt is not None:
@@ -259,12 +308,42 @@ def sync_published_thumbnails(
                 row["thumbnail_status"] = status
                 if status == "ok":
                     stamp_frontmatter_field(path, "thumbnail_revision", THUMBNAIL_REVISION)
+                    stamp_frontmatter_field(path, "thumbnail_pending", False)
                 elif "HttpError 404" in str(status):
                     stamp_frontmatter_field(path, "youtube_status", "deleted_or_missing")
                     stamp_frontmatter_field(path, "thumbnail_revision", THUMBNAIL_REVISION)
+                    stamp_frontmatter_field(path, "thumbnail_pending", False)
+                else:
+                    # Still not fixed. Say so, keep it queued for the next pass, and
+                    # put the API's own words in the frontmatter — "no thumbnail"
+                    # with no reason is what made this invisible for two videos.
+                    stamp_frontmatter_field(path, "thumbnail_pending", True)
+                    stamp_frontmatter_field(path, "thumbnail_error", str(status)[:220])
+                    print(f"::warning title=Thumbnail still refused "
+                          f"({profile.id})::{vid} — {status}. The receipt keeps "
+                          f"thumbnail_pending: true and the next monitor pass retries "
+                          f"it (50 quota units per attempt).")
         print(f"::notice title=Live thumbnail sync::{json.dumps(row)}")
         results.append(row)
 
+    return results
+
+
+def sync_all_channels(force: bool = False, dry_run: bool = False) -> dict[str, list[dict[str, Any]]]:
+    """Repair every channel, each with its own credentials.
+
+    One channel's failure must never silence the other's repair — the two pools
+    are separate, so a 403 on one says nothing about the other.
+    """
+    results: dict[str, list[dict[str, Any]]] = {}
+    for cid in sorted(CHANNELS):
+        try:
+            results[cid] = sync_published_thumbnails(
+                force=force, dry_run=dry_run, channel=cid
+            )
+        except Exception as exc:  # noqa: BLE001
+            print(f"[thumb-sync] {cid}: aborted — {exc!r}")
+            results[cid] = [{"id": "-", "thumbnail_status": f"error: {exc}"[:220]}]
     return results
 
 
@@ -272,9 +351,18 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Sync repaired thumbnails to live published videos.")
     parser.add_argument("--force", action="store_true", help="Re-apply even when thumbnail_revision matches")
     parser.add_argument("--dry-run", action="store_true", help="Render locally without calling YouTube")
+    parser.add_argument("--channel", default="", help="Channel to repair (default: the run's CHANNEL_ID)")
+    parser.add_argument("--all-channels", action="store_true",
+                        help="Repair every registered channel with its own credentials")
     args = parser.parse_args(argv)
     dry = args.dry_run or os.environ.get("DRY_RUN", "").lower() in {"1", "true", "yes"}
-    sync_published_thumbnails(force=args.force, dry_run=dry)
+    if args.all_channels:
+        results = sync_all_channels(force=args.force, dry_run=dry)
+        for cid, rows in results.items():
+            fixed = sum(1 for r in rows if r.get("thumbnail_status") == "ok")
+            print(f"[thumb-sync] {cid}: {fixed}/{len(rows)} thumbnail(s) applied")
+        return 0
+    sync_published_thumbnails(force=args.force, dry_run=dry, channel=args.channel or None)
     return 0
 
 

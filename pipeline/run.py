@@ -22,6 +22,7 @@ from pathlib import Path
 from .config import CONFIG, OUTPUT_DIR, QUEUE_DIR, PUBLISHED_DIR, REPO_ROOT
 from .originality import enforce, OriginalityError
 from .script_doc import MIN_LONGFORM_WORDS, ScriptDoc, parse_script
+from .thumbnail_ctr import THUMBNAIL_REVISION
 
 
 def _log(msg: str) -> None:
@@ -67,8 +68,24 @@ def _require_real_narration(engine: str, dry_run: bool) -> None:
         )
 
 
-def _mark_job_uploaded(path: Path, doc: ScriptDoc, video_id: str) -> Path:
-    """Move and stamp a queue job only after YouTube confirms an uploaded video ID."""
+def _mark_job_uploaded(
+    path: Path,
+    doc: ScriptDoc,
+    video_id: str,
+    thumbnail_status: str = "not_requested",
+) -> Path:
+    """Move and stamp a queue job only after YouTube confirms an uploaded video ID.
+
+    ``thumbnail_status`` is what YouTube actually did with the custom thumbnail
+    (see ``UploadResult``). The receipt only claims ``thumbnail_revision`` when
+    the thumbnail really landed; otherwise it records ``thumbnail_pending`` plus
+    the reason, which is what makes ``scripts/sync_published_thumbnails.py``
+    retry the video on the next monitor pass. It used to be stamped
+    unconditionally, so a refused thumbnail looked finished forever — that is
+    why the two Morning Altar videos had none and nothing said so.
+    """
+    thumb_ok = str(thumbnail_status).strip().lower() == "ok"
+    thumb_note = "" if thumb_ok else str(thumbnail_status or "not_requested").strip()[:220]
     if not video_id:
         raise RuntimeError("YouTube returned no video ID; leaving the queue job untouched.")
     dest = PUBLISHED_DIR / path.name
@@ -90,9 +107,16 @@ def _mark_job_uploaded(path: Path, doc: ScriptDoc, video_id: str) -> Path:
     metadata, replacements = re.subn(r"(?m)^status\s*:.*$", "status: published", metadata, count=1)
     if not replacements:
         raise RuntimeError(f"Cannot stamp {path}: missing top-level status; leaving the queue job untouched.")
-    for key, value in (("published_on", stamp), ("published_at", stamp_precise),
-                       ("youtube_video_id", video_id), ("thumbnail_revision", "ctr-v3-cinema"),
-                       ("metadata_revision", "selar-seo-v1")):
+    stamped = [("published_on", stamp), ("published_at", stamp_precise),
+               ("youtube_video_id", video_id), ("metadata_revision", "selar-seo-v1")]
+    if thumb_ok:
+        stamped.append(("thumbnail_revision", THUMBNAIL_REVISION))
+    else:
+        # Honest state: the repair pass in the monitor is what fixes this, so
+        # leave a marker it can see rather than a revision it can trust.
+        stamped.append(("thumbnail_pending", True))
+        stamped.append(("thumbnail_error", thumb_note))
+    for key, value in stamped:
         line = f"{key}: {json.dumps(value)}"
         pattern = rf"(?m)^{re.escape(key)}\s*:.*$"
         if re.search(pattern, metadata):
@@ -109,6 +133,11 @@ def _mark_job_uploaded(path: Path, doc: ScriptDoc, video_id: str) -> Path:
     doc.meta["published_on"] = stamp
     doc.meta["published_at"] = stamp_precise
     doc.meta["youtube_video_id"] = video_id
+    if thumb_ok:
+        doc.meta["thumbnail_revision"] = THUMBNAIL_REVISION
+    else:
+        doc.meta["thumbnail_pending"] = True
+        doc.meta["thumbnail_error"] = thumb_note
     PUBLISHED_DIR.mkdir(parents=True, exist_ok=True)
     shutil.move(str(path), dest)
     _log(f"job file moved to {dest}")
@@ -425,8 +454,9 @@ def _disabled_legacy_process(path: Path, dry_run: bool) -> dict:
                 "video_id": up.video_id,
                 "watch_url": f"https://youtu.be/{up.video_id}",
                 "privacy_status": up.privacy_status,
+                "thumbnail_status": up.thumbnail_status,
             })
-            _mark_job_uploaded(path, doc, up.video_id)
+            _mark_job_uploaded(path, doc, up.video_id, up.thumbnail_status)
             (out_dir / "job_result.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
             return result
         if not up.video_id:
@@ -436,12 +466,14 @@ def _disabled_legacy_process(path: Path, dry_run: bool) -> dict:
             "video_id": up.video_id,
             "watch_url": up.watch_url,
             "privacy_status": up.privacy_status,
+            "thumbnail_status": up.thumbnail_status,
         })
-        _log(f"uploaded {up.watch_url} (privacy={up.privacy_status})")
+        _log(f"uploaded {up.watch_url} (privacy={up.privacy_status}, "
+             f"thumbnail={up.thumbnail_status})")
         _open_release_ticket(doc, up.watch_url, up.privacy_status, up.video_id)
 
         # A queue transition is allowed only after a confirmed upload.
-        _mark_job_uploaded(path, doc, up.video_id)
+        _mark_job_uploaded(path, doc, up.video_id, up.thumbnail_status)
 
     (out_dir / "job_result.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
 
@@ -454,6 +486,10 @@ def _disabled_legacy_process(path: Path, dry_run: bool) -> dict:
             f.write(f"- tts: {narration_engine}\n- video: `{final.name}`\n")
             if result.get("watch_url"):
                 f.write(f"- watch: {result['watch_url']}\n")
+            if result.get("thumbnail_status"):
+                # A published video with no custom thumbnail is a silent CTR
+                # loss; say it on the run page instead of only in a log line.
+                f.write(f"- thumbnail: `{result['thumbnail_status']}`\n")
             f.write("\n> ⚠️ Human QC required before publish: thumbnail, title, intro hook (first 30s), "
                     "captions, and the originality checklist signature.\n")
     return result
