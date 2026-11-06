@@ -1,0 +1,261 @@
+{
+  "key": "short-morningmark1v35",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "THE MORNING ALTAR",
+    "A PRAYER AT SUNRISE"
+  ],
+  "poster": [
+    "BEGIN YOUR",
+    "DAY IN QUIET",
+    "PRAYER WITH",
+    "THE MORNING ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "dark mountain valley before dawn blue hour",
+    "mist rising over a quiet calm lake at dawn",
+    "soft golden morning light filtering through forest trees",
+    "warm sunrise glow on an empty mountain meadow",
+    "sun breaking over a serene horizon with gentle light",
+    "peaceful dawn sky with soft clouds and early morning light"
+  ],
+  "scenes": [
+    {
+      "a": "Quiet your heart as the world wakes up around you.",
+      "img": "short-morningmark1v35-scene-01.jpg",
+      "kicker": "MARK 1:35",
+      "sub": "GREET THE DAWN IN PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Before the demands of the day pull at your thoughts, step into the quiet.",
+      "img": "short-morningmark1v35-scene-02.jpg",
+      "kicker": "MARK 1:35",
+      "sub": "FIND YOUR SECRET PLACE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The gospel records a profound rhythm in the life of Jesus.",
+      "img": "short-morningmark1v35-scene-03.jpg",
+      "kicker": "MARK 1:35",
+      "sub": "THE EARLY MORNING EXAMPLE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Very early in the morning, while it was still dark, Jesus got up, left the house and went off to a solitary place, where he prayed.",
+      "img": "short-morningmark1v35-scene-04.jpg",
+      "kicker": "MARK 1:35",
+      "sub": "HE WITHDREW TO PRAY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Lord, grant us that same hunger for your presence as this new day begins.",
+      "img": "short-morningmark1v35-scene-05.jpg",
+      "kicker": "MARK 1:35",
+      "sub": "SEEK HIS PRESENCE FIRST",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Quiet our anxious thoughts, anchor our hearts in your peace, and walk with us through every moment ahead. Amen.",
+      "img": "short-morningmark1v35-scene-06.jpg",
+      "kicker": "MARK 1:35",
+      "sub": "SUBSCRIBE FOR DAILY PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "Quiet your heart as the world wakes up around you."
+    ],
+    [
+      16,
+      32,
+      "Before the demands of the day pull at your thoughts, step into the quiet."
+    ],
+    [
+      33,
+      48,
+      "The gospel records a profound rhythm in the life of Jesus."
+    ],
+    [
+      49,
+      75,
+      "Very early in the morning, while it was still dark, Jesus got up, left the house and went off to a solitary place, where he prayed."
+    ],
+    [
+      76,
+      98,
+      "Lord, grant us that same hunger for your presence as this new day begins."
+    ],
+    [
+      99,
+      125,
+      "Quiet our anxious thoughts, anchor our hearts in your peace, and walk with us through every moment ahead. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "QUIET YOUR HEART",
+        "AS THE WORLD",
+        "WAKES UP"
+      ],
+      "QUIET",
+      "MARK 1 : 35"
+    ],
+    [
+      16,
+      32,
+      [
+        "BEFORE THE DEMANDS",
+        "OF THE DAY",
+        "STEP INTO THE QUIET"
+      ],
+      "DEMANDS",
+      "MARK 1 : 35"
+    ],
+    [
+      33,
+      48,
+      [
+        "THE GOSPEL RECORDS",
+        "A PROFOUND RHYTHM",
+        "IN THE LIFE OF JESUS"
+      ],
+      "RHYTHM",
+      "MARK 1 : 35"
+    ],
+    [
+      49,
+      75,
+      [
+        "VERY EARLY IN",
+        "THE MORNING",
+        "JESUS WENT OFF",
+        "TO PRAY"
+      ],
+      "PRAYED",
+      "MARK 1 : 35"
+    ],
+    [
+      76,
+      98,
+      [
+        "LORD GRANT US",
+        "THAT SAME HUNGER",
+        "FOR YOUR PRESENCE"
+      ],
+      "PRESENCE",
+      "MARK 1 : 35"
+    ],
+    [
+      99,
+      125,
+      [
+        "ANCHOR OUR HEARTS",
+        "IN YOUR PEACE",
+        "WALK WITH US"
+      ],
+      "PEACE",
+      "MARK 1 : 35"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Quiet your heart as the world wakes up around you.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Before the demands of the day pull at your thoughts, step into the quiet.",
+      "kind": "phrase",
+      "words": [
+        "DEMANDS",
+        "DAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The gospel records a profound rhythm in the life of Jesus.",
+      "kind": "phrase",
+      "words": [
+        "PROFOUND",
+        "RHYTHM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Very early in the morning, while it was still dark, Jesus got up, left the house and went off to a solitary place, where he prayed.",
+      "kind": "phrase",
+      "words": [
+        "EARLY",
+        "MORNING",
+        "PRAYED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, grant us that same hunger for your presence as this new day begins.",
+      "kind": "phrase",
+      "words": [
+        "HUNGER",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Quiet our anxious thoughts, anchor our hearts in your peace, and walk with us through every moment ahead. Amen.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "PEACE",
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Mark 1:35"
+}
