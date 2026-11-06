@@ -9,9 +9,9 @@
       "workflow": "metrics.yml"
     },
     {
-      "late_minutes": 717,
+      "late_minutes": 736,
       "name": "automation-health",
-      "ran_at": "2026-11-06T08:11:59+00:00",
+      "ran_at": "2026-11-06T08:30:34+00:00",
       "slot": "2026-11-05T20:14:00+00:00",
       "workflow": "automation-health.yml"
     },
@@ -37,8 +37,8 @@
       "workflow": "keepalive.yml"
     }
   ],
-  "generated_at": "2026-11-06T17:28:55.588597+00:00",
-  "last_run_at": "2026-11-06T17:28:10+00:00",
+  "generated_at": "2026-11-06T17:31:40.420381+00:00",
+  "last_run_at": "2026-11-06T17:30:45+00:00",
   "on_time": [
     {
       "late_minutes": 96,
