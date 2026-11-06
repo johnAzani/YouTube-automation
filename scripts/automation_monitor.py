@@ -494,6 +494,14 @@ def _verdict(auto: Automation, now: datetime,
         return
 
     if auto.failures_5 >= 3:
+        # The monitor exits non-zero *because* the pipeline is unhealthy — its own
+        # red runs are this report, not a fault in it. Counting them as FLAKY put
+        # "monitor.yml: 4 of its last 5 runs failed" at the top of the very issue
+        # that explains why, which is noise where the signal should be sharpest.
+        if auto.workflow == "monitor.yml":
+            auto.verdict, auto.severity = "SELF-REPORT", "info"
+            auto.detail = ("its red runs are the verdicts below, not failures of it")
+            return
         auto.verdict, auto.severity = "FLAKY", "warning"
         auto.detail = f"{auto.failures_5} of its last 5 runs failed"
         return

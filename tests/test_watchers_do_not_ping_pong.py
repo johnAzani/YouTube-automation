@@ -182,3 +182,42 @@ class TestUpstreamEvidenceIsQuotedFromTheRun(unittest.TestCase):
             ev = sup.last_failure_evidence("gemini_brain.yml", runs, "2026-11-06T10:40:00Z")
         self.assertEqual(seen["id"], 2, "another workflow's failure must not be quoted")
         self.assertIn("503", ev)
+
+
+class TestTheMonitorIsNotFlakyForReporting(unittest.TestCase):
+    """`monitor.yml` exits non-zero *because* the pipeline is unhealthy.
+
+    Counting that as FLAKY put "monitor.yml: 4 of its last 5 runs failed" at the top
+    of the issue that explains why the pipeline is unhealthy — noise exactly where
+    the signal should be sharpest.
+    """
+
+    def _auto(self, workflow: str, failures: int):
+        from datetime import datetime, timedelta, timezone
+
+        from scripts.automation_monitor import Automation
+
+        now = datetime.now(timezone.utc)
+        auto = Automation(workflow=workflow, name=workflow, crons=[])
+        auto.last_run = now - timedelta(minutes=5)
+        auto.last_success = now - timedelta(minutes=5)
+        auto.last_conclusion = "success"
+        auto.failures_5 = failures
+        auto.max_gap = timedelta(hours=6)
+        return auto, now
+
+    def test_its_red_runs_are_a_self_report(self):
+        from scripts import automation_monitor as mon
+
+        auto, now = self._auto("monitor.yml", 4)
+        mon._verdict(auto, now)
+        self.assertEqual(auto.verdict, "SELF-REPORT")
+        self.assertEqual(auto.severity, "info")
+
+    def test_any_other_workflow_is_still_flaky(self):
+        from scripts import automation_monitor as mon
+
+        auto, now = self._auto("community.yml", 3)
+        mon._verdict(auto, now)
+        self.assertEqual(auto.verdict, "FLAKY")
+        self.assertEqual(auto.severity, "warning")
