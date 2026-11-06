@@ -65,6 +65,9 @@ class ShortSpec:
     kinetic_phrases: list[list]    # [[start, end, [lines], [highlights], attribution], ...]
     beats: list[dict] = field(default_factory=list)
     problems: list[str] = field(default_factory=list)
+    #: Mechanical defects this validator fixed rather than rejected, so a reader can
+    #: see exactly what was changed on the model's behalf.
+    repairs: list[str] = field(default_factory=list)
     scripture: str = ""
     channel: str = "secret-place"
 
@@ -84,6 +87,8 @@ class ShortSpec:
             "captions": self.captions, "kinetic_phrases": self.kinetic_phrases,
             "beats": self.beats, "words": self.words, "problems": self.problems,
         }
+        if self.repairs:
+            out["repairs"] = list(self.repairs)
         if self.scripture:
             out["scripture"] = self.scripture
         return out
@@ -117,6 +122,19 @@ class ShortSpec:
 # --------------------------------------------------------------------------- #
 def _norm(text: str) -> str:
     return re.sub(r"\s+", " ", str(text or "")).strip()
+
+
+def _norm_words(text: str) -> str:
+    """Comparison form: lowercase, punctuation flattened, whitespace collapsed.
+
+    `_norm` only collapses whitespace, so an anchor that *is* verbatim still failed
+    when the model ended it with a full stop and the narration carried a comma. On 6
+    November that false rejection cost the Morning Altar both of its Shorts: each spec
+    was rejected twice, and on a 20-request-a-day model the re-prompt is not free.
+    Punctuation is not content.
+    """
+    lowered = str(text or "").lower().replace("\u2019", "'").replace("\u2018", "'")
+    return re.sub(r"\s+", " ", re.sub(r"[^\w\s']", " ", lowered)).strip()
 
 
 def validate_spec(data: dict, key: str | None = None,
@@ -207,6 +225,17 @@ def validate_spec(data: dict, key: str | None = None,
         problems.append(f"last caption ends at {captions[-1][1]}s, over the {MAX_SECONDS}s ceiling")
 
     phrases = [list(k) for k in (data.get("kinetic_phrases") or [])]
+    # A blank highlight word highlights nothing; it is a formatting defect, not a
+    # reason to reject the Short and spend another two requests re-prompting. Strip
+    # the empties and record it — the renderer treats an empty list as "no highlight"
+    # exactly as it would for a phrase that never had one.
+    repairs: list[str] = []
+    for i, phrase in enumerate(phrases):
+        if len(phrase) == 5 and isinstance(phrase[3], list):
+            kept = [w for w in phrase[3] if _norm(w)]
+            if len(kept) != len(phrase[3]):
+                phrase[3] = kept
+                repairs.append(f"kinetic phrase {i + 1}: dropped blank highlight word(s)")
     if len(phrases) != len(captions):
         problems.append(f"{len(phrases)} kinetic phrases for {len(captions)} captions — one per caption")
     for i, phrase in enumerate(phrases):
@@ -222,11 +251,11 @@ def validate_spec(data: dict, key: str | None = None,
             problems.append(f"kinetic phrase {i + 1}: blank highlight word")
 
     beats = [dict(b) for b in (data.get("beats") or [])]
-    narration = " ".join(_norm(c[2]) for c in captions if len(c) == 3).lower()
+    narration = _norm_words(" ".join(_norm(c[2]) for c in captions if len(c) == 3))
     for i, beat in enumerate(beats):
         if beat.get("kind") not in BEAT_KINDS:
             problems.append(f"beat {i + 1}: kind {beat.get('kind')!r} not in {BEAT_KINDS}")
-        anchor = _norm(beat.get("a", "")).lower()
+        anchor = _norm_words(beat.get("a", ""))
         if not anchor:
             problems.append(f"beat {i + 1}: missing anchor phrase")
         elif anchor not in narration:
@@ -254,7 +283,7 @@ def validate_spec(data: dict, key: str | None = None,
         key=key, psalm=psalm, title=title, poster=poster, end=end,
         stock_queries=queries, scenes=scenes, captions=captions,
         kinetic_phrases=phrases, beats=beats, problems=problems,
-        scripture=scriptural, channel=declared_channel,
+        repairs=repairs, scripture=scriptural, channel=declared_channel,
     )
 
 
