@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-06T09:07:11.265654+00:00",
-  "healthy": false,
+  "generated_at": "2026-11-06T09:08:36.104586+00:00",
+  "healthy": true,
   "automations": [
     {
       "workflow": "automation-health.yml",
@@ -67,18 +67,18 @@
       "crons": [
         "14 3 * * *"
       ],
-      "last_run": "2026-11-06T08:50:45+00:00",
-      "last_conclusion": "failure",
+      "last_run": "2026-11-06T09:07:14+00:00",
+      "last_conclusion": null,
       "last_success": "2026-11-05T10:53:06+00:00",
-      "runs_14d": 17,
+      "runs_14d": 18,
       "last_edited": "2026-11-05T18:29:50+00:00",
       "last_slot": "2026-11-06T03:14:00+00:00",
       "missed_slots": 0,
-      "failures_5": 5,
+      "failures_5": 4,
       "effect": "writes content/queue/ or content/shorts-scripts/",
-      "verdict": "FAILING",
-      "detail": "failed 16m ago and nothing was changed since; the next slot will fail the same way",
-      "severity": "blocking"
+      "verdict": "FLAKY",
+      "detail": "4 of its last 5 runs failed",
+      "severity": "warning"
     },
     {
       "workflow": "growth-autopilot.yml",
@@ -143,14 +143,14 @@
       "crons": [
         "23 */3 * * *"
       ],
-      "last_run": "2026-11-06T09:06:27+00:00",
+      "last_run": "2026-11-06T09:07:23+00:00",
       "last_conclusion": null,
       "last_success": "2026-11-06T08:54:33+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-06T01:03:55+00:00",
       "last_slot": "2026-11-06T06:23:00+00:00",
       "missed_slots": 0,
-      "failures_5": 1,
+      "failures_5": 2,
       "effect": "this report",
       "verdict": "OK",
       "detail": "last success 0.2h ago",
@@ -183,9 +183,9 @@
       "crons": [
         "47 0,3,6,9,12,15,18,21 * * *"
       ],
-      "last_run": "2026-11-06T09:06:27+00:00",
+      "last_run": "2026-11-06T09:07:48+00:00",
       "last_conclusion": null,
-      "last_success": "2026-11-06T08:56:26+00:00",
+      "last_success": "2026-11-06T09:06:27+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-06T07:59:18+00:00",
       "last_slot": "2026-11-06T06:47:00+00:00",
@@ -193,7 +193,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 0.2h ago",
+      "detail": "last success 0.0h ago",
       "severity": "ok"
     }
   ],
