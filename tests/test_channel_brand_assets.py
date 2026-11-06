@@ -56,6 +56,92 @@ class TestTheAssetsAreTheRightShape(unittest.TestCase):
         self.assertEqual(image.size, assets.BANNER)
 
 
+class TestTheBannerSurvivesTheCropAPhoneShows(unittest.TestCase):
+    """The band a phone shows is taller than the box the spec calls mobile-safe.
+
+    Photographed on a 1080x2400 Android phone (2026-11-06, the live channel): the
+    banner card renders 1005x295 px = 3.41:1, which is the centre 2560x753 of the
+    file — 139 px taller than the 1546x423 TV band and 415 px taller than the
+    1235x338 safe box. The first upload placed the sun at y=0.255h and the horizon
+    at y=0.802h, so on the phone the disc was sliced by the top edge (a gold sliver
+    in the rounded corner) and the tower rose out of nothing as a black notch. All
+    of the type was inside the safe box; none of it was the problem.
+    """
+
+    RATIOS = (assets.PHONE_CROP_RATIO, 3.65)   # the phone, and YouTube's TV band
+
+    @classmethod
+    def setUpClass(cls):
+        cls.banner = Image.open(MEDIA / "midday-watch-banner.png").convert("RGB")
+        cls.palette = assets.PALETTES["midday-watch"]
+
+    def band(self, ratio):
+        return self.banner.crop(assets.phone_crop_box(self.banner.size, ratio))
+
+    def test_the_phone_band_is_taller_than_the_safe_box(self):
+        """Two different boxes: the type fits the safe box, the scenery the band."""
+        band = self.band(assets.PHONE_CROP_RATIO)
+        self.assertEqual(band.width, assets.BANNER[0])
+        self.assertGreater(band.height, assets.BANNER_SAFE[1],
+                           "a phone shows a taller band than the 1235x338 safe box")
+
+    def test_the_sun_disc_is_whole_inside_the_band(self):
+        """A disc touching an edge is the sliver that made the first upload look broken."""
+        sun_rgb = self.palette["sun"]
+        for ratio in self.RATIOS:
+            with self.subTest(ratio=ratio):
+                band = self.band(ratio)
+                w, h = band.size
+                # Only the right-hand third: the gold rule and the verse sit left of it.
+                region = band.crop((int(w * 0.70), 0, w, h)).load()
+                xs, ys = [], []
+                for y in range(0, h, 2):
+                    for x in range(0, w - int(w * 0.70), 2):
+                        if region[x, y] == sun_rgb:
+                            xs.append(x)
+                            ys.append(y)
+                self.assertTrue(xs, "no sun disc in the right-hand third of the banner")
+                left, right = min(xs), max(xs)
+                top, bottom = min(ys), max(ys)
+                self.assertGreater(left, 24, "sun disc touches the left of the band")
+                self.assertLess(right, w - int(w * 0.70) - 24, "sun disc is cut on the right")
+                self.assertGreater(top, 24, "sun disc is sliced by the top edge of the band")
+                self.assertLess(bottom, h - 24, "sun disc is sliced by the bottom edge")
+                aspect = (right - left) / max(1, bottom - top)
+                self.assertGreater(aspect, 0.85, "the clipped sun is not a disc any more")
+                self.assertLess(aspect, 1.15, "the clipped sun is not a disc any more")
+
+    def test_the_ground_is_visible_at_the_foot_of_the_band(self):
+        """A tower on a featureless field reads as a floating black notch."""
+        for ratio in self.RATIOS:
+            with self.subTest(ratio=ratio):
+                band = self.band(ratio)
+                w, h = band.size
+                px = band.load()
+                warm = total = 0
+                for y in range(h - 12, h):
+                    for x in range(0, w, 6):
+                        r, g, b = px[x, y]
+                        total += 1
+                        warm += r > b + 40        # sky is blue; ground is warm
+                self.assertGreater(warm / total, 0.95,
+                                   "the bottom of the band is sky, not ground")
+
+    def test_the_tower_stands_on_that_ground(self):
+        """Its foot must be inside the band, not sawn off by the bottom edge."""
+        shadow = self.palette["shadow"]
+        for ratio in self.RATIOS:
+            with self.subTest(ratio=ratio):
+                band = self.band(ratio)
+                w, h = band.size
+                px = band.load()
+                col = int(w * 0.842)
+                rows = [y for y in range(h) if px[col, y] == shadow]
+                self.assertTrue(rows, "no tower in the band")
+                self.assertLess(max(rows), h - 16,
+                                "the tower's foot is cut by the bottom edge of the band")
+
+
 class TestThePaletteIsTheDocumentedOne(unittest.TestCase):
     def test_every_palette_colour_appears_in_the_branding_doc(self):
         palette = assets.PALETTES["midday-watch"]
@@ -175,7 +261,22 @@ class TestTheKitCanBeHandedOver(unittest.TestCase):
 
     def test_the_brand_sheet_renders(self):
         sheet = Image.open(MEDIA / "midday-watch-brand-sheet.png")
-        self.assertEqual(sheet.size, (1800, 1700))
+        self.assertEqual(sheet.size, assets.SHEET)
+
+    def test_the_kit_rebuilds_from_the_generator(self):
+        """Every asset in the archive must be reproducible, not hand-staged."""
+        import zipfile
+
+        with tempfile.TemporaryDirectory() as tmp:
+            built = assets.build_kit(Path(tmp) / "kit.zip", MEDIA, ROOT / "docs")
+            with zipfile.ZipFile(built) as zf:
+                names = set(zf.namelist())
+                self.assertIn(TestTheKitCanBeHandedOver.KIT + "START_HERE.txt", names)
+                for name in ("avatar", "banner", "watermark", "thumbnail-template"):
+                    filename = f"midday-watch-{name}.png"
+                    with self.subTest(asset=filename):
+                        self.assertEqual(zf.read(TestTheKitCanBeHandedOver.KIT + filename),
+                                         (MEDIA / filename).read_bytes())
 
     def test_the_doc_points_at_the_download(self):
         doc = DOC.read_text(encoding="utf-8")

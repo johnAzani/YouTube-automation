@@ -15,7 +15,9 @@ The layout constants are YouTube's, not our preference:
                ~12% of any edge;
   * banner     2560 x 1440 px, but every viewer sees the centre 1546 x 423 px
                (TV/desktop) or the centre 1235 x 338 px (mobile). All text lives
-               inside the smaller of those, or it is cropped on a phone;
+               inside the smaller of those, or it is cropped on a phone. The
+               *scenery* has to survive the taller band a phone really shows —
+               measured, not assumed: see PHONE_CROP_RATIO;
   * watermark  150 x 150 px with transparency, bottom-right of every video.
 
 Usage
@@ -43,8 +45,24 @@ AVATAR = (800, 800)
 BANNER = (2560, 1440)
 #: Text must live inside this box or mobile crops it.
 BANNER_SAFE = (1235, 338)
+
+#: The band a phone actually shows, as an aspect ratio (width / height).
+#:
+#: The 1235x338 "mobile safe area" is the box the *type* has to fit in; it is not
+#: the shape of the window. Photographed on a 1080x2400 Android phone (2026-11-06,
+#: @TheMiddayWatch), the banner card renders 1005x295 px = 3.41:1, i.e. the centre
+#: 2560x753 slice of a 2560x1440 file — 139 px taller than the 423 px TV band and
+#: 415 px taller than the safe box. A first render put the sun at y=0.255h and the
+#: horizon at y=0.802h, so on the phone the disc was sliced by the top edge (a gold
+#: sliver in the rounded corner) and the tower rose out of a featureless field as a
+#: black notch. Nothing was "wrong" by the spec; the spec just does not describe
+#: what a viewer sees. Scenery is now laid out inside this band instead.
+PHONE_CROP_RATIO = 3.4
 WATERMARK = (150, 150)
 THUMBNAIL = (1280, 720)
+#: The one-page brand sheet. Tall enough that the notes column and the footer
+#: clear the thumbnail: at 1700 the footer sat under it.
+SHEET = (1800, 1760)
 
 #: Per-channel palettes. A channel's palette is data here for the same reason its
 #: brand strings live in pipeline/channel_capabilities.py: one place, no drift.
@@ -69,6 +87,14 @@ PALETTES = {
 
 def font(name: str, size: int) -> ImageFont.FreeTypeFont:
     return ImageFont.truetype(str(FONT_DIR / name), size)
+
+
+def phone_crop_box(size, ratio: float = PHONE_CROP_RATIO):
+    """The centred slice of a banner that a phone shows, as a PIL crop box."""
+    w, h = size
+    band_h = int(round(w / ratio))
+    top = (h - band_h) // 2
+    return (0, top, w, top + band_h)
 
 
 def multi_stop_gradient(size, stops) -> Image.Image:
@@ -168,6 +194,38 @@ def layered_landscape(img: Image.Image, palette: dict, horizon: float,
     return img
 
 
+def mix_colour(a, b, k: float):
+    """Blend two RGB tuples; k=0 is a, k=1 is b."""
+    return tuple(int(round(x + (y - x) * k)) for x, y in zip(a, b))
+
+
+def noon_field(img: Image.Image, palette: dict, horizon: float) -> Image.Image:
+    """The banner's ground: bright at the horizon, furrow-dark at the foot.
+
+    Two flat warm layers (what the avatar and thumbnail use) put a 300 px slab of
+    one brown across the bottom third of a 16:9 banner, which read as a painted
+    rectangle rather than a field — seen in QA 2026-11-06. A gradient carries the
+    recession, and two ridge silhouettes give it form, so the light stays noon at
+    the horizon and only deepens toward the frame edge.
+    """
+    w, h = img.size
+    t0 = horizon / h
+    mid = mix_colour(palette["field"], palette["field_deep"], 0.55)
+    ground = multi_stop_gradient((w, h), [
+        (0.00, palette["field"]),
+        (t0, palette["field"]),
+        (min(1.0, (t0 + 1.0) / 2), mid),
+        (1.00, palette["field_deep"]),
+    ])
+    far = ridge_mask((w, h), horizon, h * 0.022, 2.5, 0.0)
+    img.paste(ground, (0, 0), far)
+    # Front ridge, a little deeper: form without a hard band across the frame.
+    shade = Image.new("RGB", (w, h), palette["field_deep"])
+    front = ridge_mask((w, h), horizon + h * 0.075, h * 0.016, 3.1, 1.8)
+    img.paste(Image.blend(ground, shade, 0.35), (0, 0), front)
+    return img
+
+
 def watchtower(draw, size, base, width, height, colour):
     """A watchtower on the ridge: the mark that makes the name literal."""
     w, h = size
@@ -218,21 +276,37 @@ def make_avatar(palette: dict) -> Image.Image:
 
 
 def make_banner(palette: dict) -> Image.Image:
+    """2560x1440: the mark inside the phone band, the type inside the safe box.
+
+    Two boxes, not one. Type has to sit in the centre 1235x338 (BANNER_SAFE) or a
+    phone crops the wordmark. Scenery has to sit in the taller centre band a phone
+    really shows (PHONE_CROP_RATIO) or it gets sliced: the sun cut by the top edge
+    and the tower rising out of nothing, both seen on the live channel 2026-11-06.
+    Desktop and TV then see more sky above and more field below the same scene.
+    """
     w, h = BANNER
+    box = phone_crop_box((w, h))
     img = multi_stop_gradient((w, h), [
         (0.00, palette["sky"]),
         (0.42, palette["panel"]),
-        (0.74, (86, 122, 130)),
-        (0.86, (196, 148, 92)),   # warm haze where the field begins
+        (0.60, (86, 122, 130)),
+        (0.70, (196, 148, 92)),   # warm haze where the field begins
         (1.00, (150, 106, 66)),
     ])
-    img = sun(img, (int(w * 0.775), int(h * 0.255)), int(w * 0.055), palette, halo=0.45)
-    img = horizon_bloom(img, int(h * 0.800), palette["sun"], 0.30)
-    img = layered_landscape(img, palette, int(h * 0.802))
+    # Sun: whole disc (and so its halo's hot core) well inside the phone band.
+    sun_y = box[1] + int((box[3] - box[1]) * 0.30)          # ~0.40h on 16:9
+    img = sun(img, (int(w * 0.838), sun_y), int(w * 0.055), palette, halo=0.45)
+    # x = 0.838w, not 0.775w: at 0.775 the disc's left edge overlapped the safe box
+    # and crowded the final "H" of the wordmark on the phone.
+    # Horizon near the bottom of the phone band, so the field is actually visible.
+    horizon = box[1] + int((box[3] - box[1]) * 0.865)
+    img = horizon_bloom(img, horizon - int(h * 0.002), palette["sun"], 0.30)
+    img = noon_field(img, palette, horizon)
 
     d = ImageDraw.Draw(img)
-    watchtower(d, (w, h), (int(w * 0.842), int(h * 0.862)),
-               int(w * 0.034), int(h * 0.180), palette["shadow"])
+    # Tower stands on that field, and its foot stays above the band's bottom edge.
+    watchtower(d, (w, h), (int(w * 0.842), horizon + int(h * 0.023)),
+               int(w * 0.042), int(h * 0.150), palette["shadow"])
 
     # ---- text, all of it inside the mobile-safe box -------------------------
     safe_w, safe_h = BANNER_SAFE
@@ -333,7 +407,7 @@ def make_brand_sheet(palette: dict, media_dir: Path) -> Image.Image:
     Includes the mobile crop of the banner (the centre 1235x338 a phone shows) and
     the watermark on a checkerboard, because both are things a flat preview hides.
     """
-    W, H = 1800, 1700
+    W, H = SHEET
     ink = (16, 22, 28)
     sheet = Image.new("RGB", (W, H), ink)
     d = ImageDraw.Draw(sheet)
@@ -384,18 +458,18 @@ def make_brand_sheet(palette: dict, media_dir: Path) -> Image.Image:
         d.text((cx + 96, cy + 14), name, font=small, fill=palette["ivory"])
         d.text((cx + 96, cy + 42), hex_code, font=small, fill=palette["haze"])
 
-    # --- banner: the crop a phone actually shows ------------------------------
+    # --- banner: the band a phone actually shows ------------------------------
+    # The phone band, not BANNER_SAFE: the safe box is where the *type* must fit,
+    # the band is the window the scenery has to survive (see PHONE_CROP_RATIO).
     banner = Image.open(media_dir / f"{palette['slug']}-banner.png").convert("RGB")
-    safe_w, safe_h = BANNER_SAFE
-    left = (banner.width - safe_w) // 2
-    top = (banner.height - safe_h) // 2
-    crop = banner.crop((left, top, left + safe_w, top + safe_h))
+    crop = banner.crop(phone_crop_box(banner.size))
     scale = 1640 / crop.width
     crop = crop.resize((1640, int(crop.height * scale)), Image.Resampling.LANCZOS)
     y = 660
     sheet.paste(crop, (80, y))
-    d.text((80, y - 40), "BANNER  2560 × 1440 — this strip is the part a phone shows "
-                         "(centre 1235 × 338)", font=label, fill=palette["sun"])
+    d.text((80, y - 40), "BANNER  2560 × 1440 — this is the band a phone shows "
+                         f"(3.4 : 1, centre {2560} × {int(round(2560 / PHONE_CROP_RATIO))})",
+           font=label, fill=palette["sun"])
 
     # --- thumbnail ------------------------------------------------------------
     thumb = Image.open(media_dir / f"{palette['slug']}-thumbnail-template.png").convert("RGB")
@@ -418,10 +492,81 @@ def make_brand_sheet(palette: dict, media_dir: Path) -> Image.Image:
         d.text((900, ty + 10 + i * 34), line, font=small, fill=palette["haze"])
 
     footer = font("Inter-Regular.ttf", 20)
-    d.text((80, H - 54), "The Midday Watch · prayer3 · registered in code, not yet live · "
-                         "kit: docs/MIDDAY_WATCH_BRANDING.md", font=footer,
-           fill=(120, 132, 140))
+    d.text((80, H - 54), "The Midday Watch · prayer3 · live on @TheMiddayWatch, "
+                         "uploads not yet provisioned · kit: docs/MIDDAY_WATCH_BRANDING.md",
+           font=footer, fill=(120, 132, 140))
     return sheet
+
+#: The download-and-hand-off archive. Rebuilt by --kit, never edited by hand: the
+#: test suite compares every byte inside it with the file in docs/media, because the
+#: copy that gets uploaded to YouTube is the copy in the zip.
+KIT_DIR = "midday-watch-brand-kit"
+KIT_ZIP = "midday-watch-brand-assets.zip"
+
+START_HERE = """THE MIDDAY WATCH — brand kit
+prayer3 · handle @TheMiddayWatch · Psalm 55:17
+
+WHAT IS IN HERE
+  midday-watch-avatar.png              800 x 800   profile picture (shown as a circle)
+  midday-watch-banner.png             2560 x 1440  channel banner (all type inside 1235 x 338)
+  midday-watch-watermark.png           150 x 150   video watermark, transparent
+  midday-watch-thumbnail-template.png 1280 x 720   reference for the thumbnail system, not uploaded
+  midday-watch-brand-sheet.png        1800 x 1760  every asset + the palette on one page
+  MIDDAY_WATCH_BRANDING.md                         the full identity document
+  THIRD_CHANNEL_SETUP.md                           how the channel is wired into the pipeline
+  START_HERE.txt                                   this file
+
+UPLOAD ORDER (Studio -> Customization -> Branding)
+  1. Picture        midday-watch-avatar.png
+  2. Banner image   midday-watch-banner.png
+  3. Video watermark (Entire video)   midday-watch-watermark.png   [desktop Studio only]
+  Then paste the About text and the keywords from MIDDAY_WATCH_BRANDING.md sections 2 and 3.
+
+CHECK THE BANNER ON A PHONE, NOT IN THE PREVIEW
+  A phone shows the centre band of the banner at about 3.4 : 1 (2560 x 753 of the
+  file), which is taller than the 1235 x 338 the type has to fit inside. The sun and
+  the watchtower are laid out inside that band on purpose. The Edit-channel preview
+  zoom-crops and is not what viewers see.
+
+PALETTE
+  Zenith Blue   #0d3350    Noon Sky      #1c5d7a    High Sun      #ffc247
+  Warm Brass    #e39a34    Ivory         #fbf6ec    Sand Haze     #d9e6ea
+  Hard Shadow   #0a1a26    Sunlit Field  #b98b4e    Deep Furrow   #74522e
+
+REDRAW FROM SOURCE
+  python tools/make_channel_brand_assets.py --channel midday-watch --sheet --kit
+  (add --force to overwrite art that already exists; nothing is replaced silently)
+"""
+
+
+def build_kit(zip_path: Path, media_dir: Path, docs_dir: Path) -> Path:
+    """Write the hand-off archive: four uploads, the sheet, both docs, START_HERE.
+
+    Generated rather than staged by hand, because a kit that is half hand-copied
+    drifts from the art it claims to contain — and the file that reaches YouTube is
+    the one inside the zip.
+    """
+    import zipfile
+
+    palette = PALETTES["midday-watch"]
+    members = [(media_dir / f"{palette['slug']}{suffix}", f"{palette['slug']}{suffix}")
+               for suffix, _ in ASSETS.values()]
+    members.append((media_dir / f"{palette['slug']}-brand-sheet.png",
+                    f"{palette['slug']}-brand-sheet.png"))
+    members.append((docs_dir / "MIDDAY_WATCH_BRANDING.md", "MIDDAY_WATCH_BRANDING.md"))
+    members.append((docs_dir / "THIRD_CHANNEL_SETUP.md", "THIRD_CHANNEL_SETUP.md"))
+
+    missing = [str(src) for src, _ in members if not src.exists()]
+    if missing:
+        raise SystemExit("cannot build the kit, these files are missing:\n  "
+                         + "\n  ".join(missing))
+
+    with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
+        zf.writestr(f"{KIT_DIR}/START_HERE.txt", START_HERE)   # reads first in the list
+        for src, name in members:
+            zf.write(src, f"{KIT_DIR}/{name}")
+    return zip_path
+
 
 ASSETS = {
     "avatar": ("-avatar.png", make_avatar),
@@ -437,6 +582,8 @@ def main(argv=None) -> int:
     ap.add_argument("--out", default=str(OUT_DIR))
     ap.add_argument("--sheet", action="store_true",
                     help="also render the one-page brand sheet (all assets at a glance)")
+    ap.add_argument("--kit", action="store_true",
+                    help="also build the downloadable zip (art + sheet + both docs)")
     ap.add_argument("--force", action="store_true",
                     help="overwrite existing files (approved art must be redrawn on purpose)")
     args = ap.parse_args(argv)
@@ -461,6 +608,11 @@ def main(argv=None) -> int:
         sheet = make_brand_sheet(palette, out_dir)
         sheet.save(sheet_path, optimize=True)
         print(f"{'sheet':10s} {sheet_path} {sheet.size[0]}x{sheet.size[1]}")
+
+    if args.kit:
+        zip_path = build_kit(out_dir / KIT_ZIP, out_dir, ROOT / "docs")
+        size_kb = zip_path.stat().st_size / 1024
+        print(f"{'kit':10s} {zip_path} ({size_kb:.0f} KB)")
     return 0
 
 

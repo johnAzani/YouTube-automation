@@ -2,12 +2,15 @@
 ## Complete Faceless Channel Branding & Identity Kit — Channel 3 (`prayer3`)
 
 **Primary Brand Name:** **The Midday Watch | Noonday Prayer**
-**Handle (to claim):** `@TheMiddayWatch`
-**Unclaimed fallbacks, in order:** `@TheMiddayWatchDaily`, `@MiddayWatchPrayer`, `@NoondayWatch`
+**Handle (claimed 2026-11-06):** `@TheMiddayWatch` — the first choice, no fallback needed
+**Fallbacks, unused:** `@TheMiddayWatchDaily`, `@MiddayWatchPrayer`, `@NoondayWatch`
 **Core Scripture Foundation:** *Psalm 55:17 — "Evening, and morning, and at noon, will I pray, and cry aloud: and he shall hear my voice." (KJV)*
 **Channel Format:** 100% faceless Christian **noonday** prayer & midday devotional studio.
 **Internal channel id:** `prayer3` (secret prefix `PRAYER3_`, see `pipeline/channels.py`)
-**Status:** registered in code, **not yet live** — no Google Cloud project yet. See `docs/THIRD_CHANNEL_SETUP.md`.
+**Status:** channel **live** on 2026-11-06 — name, handle, avatar and banner are on
+`@TheMiddayWatch`. Publishing is **not provisioned**: no Google Cloud project, no
+`PRAYER3_*` secrets, `provisioned=False` in `pipeline/channels.py`. See
+`docs/THIRD_CHANNEL_SETUP.md`.
 
 > ⚠️ A handle cannot be reserved from this repository. Claim the first available
 > in YouTube Studio at channel creation, then update `pipeline/channels.py`,
@@ -73,18 +76,32 @@ Midday Prayer, Noon Prayer, Afternoon Prayer, Prayer at Noon, Midday Devotional,
 | Asset | Dimensions | Workspace File | Where it goes in YouTube Studio |
 |---|---|---|---|
 | Profile picture / avatar | `800 × 800 px` (PNG) | `docs/media/midday-watch-avatar.png` | Customization → Branding → Picture |
-| Banner | `2560 × 1440 px` (PNG, all text inside `1235 × 338 px`) | `docs/media/midday-watch-banner.png` | Customization → Branding → Banner image |
+| Banner | `2560 × 1440 px` (PNG; type inside `1235 × 338 px`, scenery inside the band a phone shows) | `docs/media/midday-watch-banner.png` | Customization → Branding → Banner image |
 | Video watermark | `150 × 150 px` (PNG, transparent) | `docs/media/midday-watch-watermark.png` | Customization → Branding → Video watermark (Entire video) |
 | Thumbnail template | `1280 × 720 px` (PNG) | `docs/media/midday-watch-thumbnail-template.png` | Reference for the CTR system; not uploaded |
-| Brand sheet | `1800 × 1700 px` (PNG) | `docs/media/midday-watch-brand-sheet.png` | Review/share: every asset and the palette on one page |
+| Brand sheet | `1800 × 1760 px` (PNG) | `docs/media/midday-watch-brand-sheet.png` | Review/share: every asset and the palette on one page |
 | Complete kit | `.zip` (~460 KB) | `docs/media/midday-watch-brand-assets.zip` | Download-and-hand-off: the four uploads + both docs + the sheet |
 
 **Download everything:** `docs/media/midday-watch-brand-assets.zip` unpacks to
 `midday-watch-brand-kit/` with a `START_HERE.txt`, the brand sheet, both
-documents and the four images at full resolution. It is rebuilt from the same
-files, and `tests/test_channel_brand_assets.py` fails if the archive ever
+documents and the four images at full resolution. It is rebuilt by the generator
+(`--kit`), and `tests/test_channel_brand_assets.py` fails if the archive ever
 disagrees with the assets on disk — a stale kit is worse than none, because it
 ships the wrong banner.
+
+### Banner: the band a phone actually shows
+The `1235 × 338` box is where the **type** has to fit; it is not the shape of the
+window. Measured on a 1080 × 2400 Android phone against the live channel on
+2026-11-06, the banner card renders `1005 × 295 px` = **3.41 : 1**, which is the
+centre `2560 × 753` of the file — 415 px taller than the safe box. The first
+upload followed the spec and still looked broken on the phone: the sun was sliced
+by the top edge (a gold sliver in the rounded corner) and the watchtower rose out
+of nothing as a black notch, because the horizon sat below the band entirely. The
+sun and the tower are now laid out inside that band, and the ground is a gradient
+from noon light at the horizon to furrow shadow at the foot of the frame.
+
+**The Edit-channel preview is not the check** — it zoom-crops. Upload, then open
+the channel on a phone.
 
 The assets are **drawn in code**, not generated as pictures, because every one of
 them carries type the viewer is meant to read — and generated imagery mangles
@@ -94,6 +111,7 @@ letterforms. Regenerate any time:
 python tools/make_channel_brand_assets.py --channel midday-watch            # skips existing files
 python tools/make_channel_brand_assets.py --channel midday-watch --sheet    # + the one-page sheet
 python tools/make_channel_brand_assets.py --channel midday-watch --force    # redraw everything
+python tools/make_channel_brand_assets.py --channel midday-watch --sheet --kit  # + sheet + download zip
 ```
 
 Nothing is overwritten without `--force`, so approved art cannot be replaced by a
@@ -133,11 +151,11 @@ disc still read.
 
 ## 5. Launch Checklist
 
-- [ ] Create the channel and claim the handle (§ top) — update the registry if you took a fallback
-- [ ] Upload avatar (`docs/media/midday-watch-avatar.png`)
-- [ ] Upload banner (`docs/media/midday-watch-banner.png`) — check it on desktop **and** phone; the Edit-channel preview zoom-crops and is not what viewers see
+- [x] Create the channel and claim the handle (§ top) — done 2026-11-06, `@TheMiddayWatch`, first choice
+- [x] Upload avatar (`docs/media/midday-watch-avatar.png`) — done 2026-11-06
+- [~] Upload banner (`docs/media/midday-watch-banner.png`) — uploaded 2026-11-06, **re-cut the same day** after the phone check above; re-upload this file
 - [ ] Upload watermark (`docs/media/midday-watch-watermark.png`) — desktop Studio only
-- [ ] Set the Name field to exactly `The Midday Watch | Noonday Prayer`
+- [~] Name field is `The Midday Watch` (set 2026-11-06); the longer `The Midday Watch | Noonday Prayer` is optional, the tagline and Psalm 55:17 already sit in the banner
 - [ ] Paste the About description (§2) and keywords (§3)
 - [ ] Enable 2-step verification and custom thumbnails
 - [ ] Create the **separate** GCP + Gemini projects and the six `PRAYER3_*` secrets — `docs/THIRD_CHANNEL_SETUP.md`
