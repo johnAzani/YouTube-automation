@@ -310,7 +310,10 @@ Follow all channel rules: Warm, reverent, scripturally rooted, no self-promotion
 Do not include quotation marks or meta-commentary; output only the exact comment reply text.
 """
 
-    models = ["gemini-2.5-flash", "gemini-1.5-flash", "gemini-2.0-flash"]
+    # Newest first: `gemini-2.5-flash` was retired on 6 November 2026 (404 "no longer
+    # available to new users") and kept every reply attempt failing to the next name.
+    # The retired models stay last so an older project key still has a path.
+    models = ["gemini-3.8-flash", "gemini-2.5-flash", "gemini-1.5-flash", "gemini-2.0-flash"]
     for model_name in models:
         try:
             resp = client.models.generate_content(

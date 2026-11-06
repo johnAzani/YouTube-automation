@@ -115,6 +115,61 @@ class BrainGenerationResult:
     used_gemini_api: bool
 
 
+#: The text model the brain authors with.
+#:
+#: `gemini-2.5-flash` was retired on 6 November 2026 — the API answers
+#:   404 NOT_FOUND. "This model models/gemini-2.5-flash is no longer available to
+#:        new users. Please update your code to use models/gemini-3.8-flash..."
+#: and every authoring run died on it (brain runs 42184621470, 42184973219 at
+#: 08:00 and 08:03 UTC). Nothing in this repository changed: a model lifetime is
+#: not a dependency we control, so the model is configurable and the retired one
+#: is never the first choice.
+DEFAULT_TEXT_MODEL = os.environ.get("GEMINI_TEXT_MODEL", "gemini-3.8-flash")
+
+#: Models that answered 404 "no longer available" and must never be tried first.
+RETIRED_TEXT_MODELS = ("gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash")
+
+
+def text_model_candidates(primary: str | None = None) -> list[str]:
+    """Every model worth trying, in order, without duplicates.
+
+    The primary is whatever this brain was configured with; `DEFAULT_TEXT_MODEL`
+    follows; retired names come last so an older key on an older project can still
+    work, but a retired model can never be the thing we *start* with.
+    """
+    requested = (primary or "").strip()
+    if requested in RETIRED_TEXT_MODELS:
+        requested = ""      # a retired model is never the thing we start with
+    order = [requested, DEFAULT_TEXT_MODEL, *RETIRED_TEXT_MODELS]
+    seen: list[str] = []
+    for name in order:
+        if name and name not in seen:
+            seen.append(name)
+    return seen
+
+
+def live_model(primary: str | None = None) -> str:
+    """The first model we would actually start with: never a retired one."""
+    for name in text_model_candidates(primary):
+        if name not in RETIRED_TEXT_MODELS:
+            return name
+    return DEFAULT_TEXT_MODEL
+
+
+def is_model_retired(exc: BaseException) -> bool:
+    """Did the service say this model no longer exists for us?"""
+    text = str(exc).lower()
+    return ("404" in text or "not_found" in text) and "no longer available" in text
+
+
+def report_retired_model(model: str, exc: BaseException) -> None:
+    """Say it once, where a human sees it — a retired model is not a soft failure."""
+    print(f"::error title=Gemini text model retired::{model} is gone ({exc}). "
+          f"Authoring needs a live model: set GEMINI_TEXT_MODEL or update "
+          f"DEFAULT_TEXT_MODEL in pipeline/gemini_brain.py. Nothing can be authored "
+          f"until this is fixed.")
+
+
 class BrainAuthoringError(RuntimeError):
     """Raised when the brain cannot faithfully author the requested scripture."""
 
@@ -122,7 +177,7 @@ class BrainAuthoringError(RuntimeError):
 class GeminiBrain:
     """Master Autonomous Creative & Editorial Director powered by Google Gemini."""
 
-    def __init__(self, api_key: Optional[str] = None, model: str = "gemini-2.5-flash",
+    def __init__(self, api_key: Optional[str] = None, model: str = DEFAULT_TEXT_MODEL,
                  channel_id: Optional[str] = None) -> None:
         # Channel-scoped brain: a prayer2 brain compiles Morning Altar
         # equipment, reads the PRAYER2_ Gemini quota pool first, selects
@@ -257,7 +312,7 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
 """
         if self.is_api_available():
             try:
-                for candidate_model in (self.model, "gemini-2.5-flash", "gemini-1.5-flash", "gemini-2.0-flash"):
+                for candidate_model in text_model_candidates(self.model):
                     try:
                         resp = self._client.models.generate_content(
                             model=candidate_model,
@@ -289,6 +344,8 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                             reset_dt = calculate_next_quota_reset_utc()
                             print(f"[gemini-brain] Google Gemini daily free tier quota reached ($0.00 lock active). Reset at {reset_dt.isoformat()} UTC.")
                             break
+                        if is_model_retired(model_err):
+                            report_retired_model(candidate_model, model_err)
                         print(f"[gemini-brain] Model {candidate_model} call failed: {model_err}")
             except BrainAuthoringError:
                 raise
@@ -368,8 +425,11 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         last_error = ""
         for attempt in (1, 2):
             try:
+                # `model=self.model` alone meant a Short could not be authored at
+                # all on a retired model — and the first Morning Altar Shorts were
+                # due the morning 2.5-flash was withdrawn.
                 resp = self._client.models.generate_content(
-                    model=self.model,
+                    model=live_model(self.model),
                     contents=prompt if attempt == 1 else f"{prompt}\n\nPrevious output was rejected: {last_error}\nFix exactly that and return only JSON.",
                 )
                 data = parse_model_json(getattr(resp, "text", "") or "")
