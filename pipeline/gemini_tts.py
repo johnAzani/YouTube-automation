@@ -284,6 +284,47 @@ def _schema_drift(exc: BaseException) -> bool:
     return "unknown name" in text or "cannot find field" in text
 
 
+_MODEL_IN_TEXT = None
+
+
+def suggested_model(*texts: str) -> str | None:
+    """The model the service tells us to use, if it names one.
+
+    Gemini replies in prose when a model is withdrawn — "Please update your code to
+    use models/gemini-3.8-flash" — and a voice call that comes back as *text* is the
+    same message in a different wrapper. Reading it and retrying once beats
+    failing with "no audio content" and leaving a human to guess the new name.
+    """
+    import re
+
+    global _MODEL_IN_TEXT
+    if _MODEL_IN_TEXT is None:
+        _MODEL_IN_TEXT = re.compile(r"models/([A-Za-z0-9][A-Za-z0-9.\-]+)")
+    for text in texts:
+        if not text:
+            continue
+        match = _MODEL_IN_TEXT.search(str(text))
+        if match:
+            return match.group(1)
+    return None
+
+
+def _response_parts(response) -> tuple[str, list[str]]:
+    """(any text the model returned, per-part mime types) — evidence, not a guess."""
+    text_parts: list[str] = []
+    mimes: list[str] = []
+    candidates = getattr(response, "candidates", None) or []
+    for candidate in candidates:
+        content = getattr(candidate, "content", None)
+        for part in (getattr(content, "parts", None) or []):
+            inline = getattr(part, "inline_data", None)
+            if inline is not None:
+                mimes.append(str(getattr(inline, "mime_type", "?") or "?"))
+            if getattr(part, "text", None):
+                text_parts.append(str(part.text))
+    return (" ".join(text_parts).strip(), mimes)
+
+
 def _report_drift(exc: BaseException) -> None:
     """Say what happened, once, where a human will see it."""
     global _DRIFT_REPORTED
@@ -585,12 +626,17 @@ def _synthesize_single_chunk(
                     if _schema_drift(exc):
                         _report_drift(exc)
 
-    # 2. Try models.generate_content with AUDIO modality across candidate audio models
-    candidate_models = [model]
-
+    # 2. Try models.generate_content with AUDIO modality across candidate audio models.
+    #
+    # One redirect is allowed. When a model is withdrawn the service answers with
+    # prose naming its replacement ("Please update your code to use
+    # models/gemini-3.8-flash"), as a 404 for text and as *text in place of audio*
+    # for speech. Reading that suggestion and retrying once is the difference between
+    # a self-healing pipeline and a morning spent guessing a model name.
     response = None
     last_exc = None
-    for cur_model in candidate_models:
+    cur_model = model
+    for redirect in range(2):
         max_retries = 1 + len(_BACKOFF)
         for attempt in range(max_retries):
             try:
@@ -639,26 +685,53 @@ def _synthesize_single_chunk(
                             reset_utc=reset_dt,
                         ) from exc
                 raise
-        if response:
+        if not response:
             break
+
+        audio_bytes: bytes | None = None
+        mime_type: str = "audio/wav"
+        candidates = getattr(response, "candidates", None) or []
+        for candidate in candidates:
+            content = getattr(candidate, "content", None)
+            for part in (getattr(content, "parts", None) or []):
+                inline = getattr(part, "inline_data", None)
+                if inline is not None and getattr(inline, "data", None):
+                    data_val = inline.data
+                    if isinstance(data_val, str):
+                        import base64
+                        audio_bytes = base64.b64decode(data_val)
+                    else:
+                        audio_bytes = data_val
+                    mime_type = getattr(inline, "mime_type", None) or "audio/wav"
+                    break
+            if audio_bytes:
+                break
+        if audio_bytes:
+            break
+
+        # No audio. Report the evidence instead of a bare sentence, then take the
+        # service's own advice about which model to use, if it gave any.
+        text_back, mimes = _response_parts(response)
+        detail = f"model={cur_model} mime_types={mimes or 'none'}"
+        if text_back:
+            detail += f" text={text_back[:300]!r}"
+        print(f"::error title=Gemini TTS returned no audio::{detail}")
+        hint = suggested_model(text_back)
+        if hint and hint != cur_model and redirect == 0:
+            print(f"[gemini-tts] the service names {hint!r} as the replacement for "
+                  f"{cur_model!r}; retrying once with it")
+            cur_model = hint
+            response = None
+            continue
+        raise RuntimeError(
+            f"Gemini API returned no audio content for model {cur_model} "
+            f"(mime_types={mimes or 'none'}"
+            + (f", text={text_back[:200]!r}" if text_back else "")
+            + "). Set GEMINI_TTS_MODEL or update DEFAULT_MODEL in pipeline/gemini_tts.py."
+        )
 
     if not response and last_exc:
         raise last_exc
-
-    audio_bytes: bytes | None = None
-    mime_type: str = "audio/wav"
-
-    if response and response.candidates and response.candidates[0].content:
-        for part in response.candidates[0].content.parts:
-            if getattr(part, "inline_data", None) and part.inline_data.data:
-                data_val = part.inline_data.data
-                if isinstance(data_val, str):
-                    import base64
-                    audio_bytes = base64.b64decode(data_val)
-                else:
-                    audio_bytes = data_val
-                mime_type = part.inline_data.mime_type or "audio/wav"
-                break
 
     if not audio_bytes:
         raise RuntimeError("Gemini API returned no audio content in response.")
