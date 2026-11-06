@@ -204,7 +204,7 @@ class TestBrainAuthorsTheShort(unittest.TestCase):
         import yaml
         data = yaml.safe_load(path.read_text())
         self.assertEqual(data["status"], "draft")
-        self.assertIn("rejected twice", data["notes"])
+        self.assertIn("rejected on every candidate model", data["notes"])
         self.assertFalse((self.dir / "specs" / "short-psalm121.json").exists())
 
 
