@@ -9,6 +9,20 @@
       "workflow": "metrics.yml"
     },
     {
+      "late_minutes": 346,
+      "name": "Growth autopilot",
+      "ran_at": "2026-11-06T08:00:31+00:00",
+      "slot": "2026-11-06T02:14:00+00:00",
+      "workflow": "growth-autopilot.yml"
+    },
+    {
+      "late_minutes": 286,
+      "name": "Gemini Brain Autonomous Queue Replenishment",
+      "ran_at": "2026-11-06T08:00:33+00:00",
+      "slot": "2026-11-06T03:14:00+00:00",
+      "workflow": "gemini_brain.yml"
+    },
+    {
       "late_minutes": 276,
       "name": "Keepalive",
       "ran_at": "2026-11-02T07:59:10+00:00",
@@ -16,8 +30,8 @@
       "workflow": "keepalive.yml"
     }
   ],
-  "generated_at": "2026-11-06T08:00:29.583521+00:00",
-  "last_run_at": "2026-11-06T07:59:47+00:00",
+  "generated_at": "2026-11-06T08:01:49.717078+00:00",
+  "last_run_at": "2026-11-06T08:01:10+00:00",
   "on_time": [
     {
       "late_minutes": 98,
@@ -39,6 +53,13 @@
       "ran_at": "2026-11-06T07:59:47+00:00",
       "slot": "2026-11-06T06:23:00+00:00",
       "workflow": "monitor.yml"
+    },
+    {
+      "late_minutes": 106,
+      "name": "Produce video",
+      "ran_at": "2026-11-06T08:00:34+00:00",
+      "slot": "2026-11-06T06:14:00+00:00",
+      "workflow": "produce.yml"
     },
     {
       "late_minutes": 72,
