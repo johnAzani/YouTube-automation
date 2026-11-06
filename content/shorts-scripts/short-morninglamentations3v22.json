@@ -1,0 +1,308 @@
+{
+  "key": "short-morninglamentations3v22",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "NEW EVERY MORNING",
+    "LAMENTATIONS 3:22-23"
+  ],
+  "poster": [
+    "THE MORNING ALTAR",
+    "GREAT IS FAITHFULNESS",
+    "LAMENTATIONS 3:22-23",
+    "SUNRISE PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "serene lake at sunrise misty golden light calm water morning",
+    "golden sunrise light rays breaking over misty mountain landscape morning",
+    "open window glowing sunrise sunbeams morning room peaceful",
+    "sunrise sky cloud horizon warm golden orange light peaceful morning",
+    "gentle morning light meadow sunbeams dew drops golden hour",
+    "peaceful sunrise ocean horizon calm waves morning sun light"
+  ],
+  "scenes": [
+    {
+      "a": "gentle morning",
+      "img": "short-morninglamentations3v22-scene-01.jpg",
+      "kicker": "LAMENTATIONS 3:22-23",
+      "sub": "BREATHE IN THE STILLNESS OF DAWN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "faithful promise",
+      "img": "short-morninglamentations3v22-scene-02.jpg",
+      "kicker": "LAMENTATIONS 3:22-23",
+      "sub": "RECEIVE GOD'S FAITHFUL PROMISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "great love",
+      "img": "short-morninglamentations3v22-scene-03.jpg",
+      "kicker": "LAMENTATIONS 3:22-23",
+      "sub": "HIS COMPASSIONS NEVER FAIL",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "endless mercy",
+      "img": "short-morninglamentations3v22-scene-04.jpg",
+      "kicker": "LAMENTATIONS 3:22-23",
+      "sub": "ANCHOR YOUR SOUL IN MERCY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "unconditional love",
+      "img": "short-morninglamentations3v22-scene-05.jpg",
+      "kicker": "LAMENTATIONS 3:22-23",
+      "sub": "FILL OUR HEARTS WITH HOPE",
+      "cam": "push_in",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "begin every sunrise in prayer",
+      "img": "short-morninglamentations3v22-scene-06.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "BEGIN EVERY SUNRISE IN PRAYER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "Open your eyes to this gentle morning and breathe in the quiet stillness of dawn."
+    ],
+    [
+      7,
+      14,
+      "As the soft light breaks across the horizon, open your heart to receive the faithful promise of God."
+    ],
+    [
+      14,
+      26,
+      "Scripture tells us: 'Because of the Lord's great love we are not consumed, for his compassions never fail. They are new every morning; great is your faithfulness.'"
+    ],
+    [
+      26,
+      34,
+      "Heavenly Father, we anchor our souls in Your endless mercy today. Wash away yesterday's heavy burdens and renew our spirits with Your peace."
+    ],
+    [
+      34,
+      42,
+      "Teach us to walk in Your unconditional love as this new day begins. May Your presence guide our every step and fill our hearts with hope."
+    ],
+    [
+      42,
+      48,
+      "Subscribe to The Morning Altar to begin every sunrise in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "OPEN YOUR EYES TO THIS GENTLE MORNING",
+        "BREATHE IN THE QUIET STILLNESS OF DAWN"
+      ],
+      [
+        "GENTLE",
+        "MORNING",
+        "QUIET",
+        "STILLNESS"
+      ],
+      "LAMENTATIONS 3:22-23"
+    ],
+    [
+      7,
+      14,
+      [
+        "AS SOFT LIGHT BREAKS ACROSS HORIZON",
+        "OPEN YOUR HEART TO GOD'S FAITHFUL PROMISE"
+      ],
+      [
+        "SOFT",
+        "LIGHT",
+        "FAITHFUL",
+        "PROMISE"
+      ],
+      "LAMENTATIONS 3:22-23"
+    ],
+    [
+      14,
+      26,
+      [
+        "BECAUSE OF THE LORD'S GREAT LOVE",
+        "HIS COMPASSIONS NEVER FAIL",
+        "THEY ARE NEW EVERY MORNING",
+        "GREAT IS YOUR FAITHFULNESS"
+      ],
+      [
+        "GREAT",
+        "LOVE",
+        "NEVER",
+        "FAIL",
+        "FAITHFULNESS"
+      ],
+      "LAMENTATIONS 3:22-23"
+    ],
+    [
+      26,
+      34,
+      [
+        "WE ANCHOR OUR SOULS IN ENDLESS MERCY",
+        "WASH AWAY BURDENS AND RENEW OUR SPIRITS"
+      ],
+      [
+        "ANCHOR",
+        "SOULS",
+        "RENEW",
+        "PEACE"
+      ],
+      "LAMENTATIONS 3:22-23"
+    ],
+    [
+      34,
+      42,
+      [
+        "TEACH US TO WALK IN UNCONDITIONAL LOVE",
+        "MAY YOUR PRESENCE GUIDE OUR EVERY STEP"
+      ],
+      [
+        "WALK",
+        "LOVE",
+        "GUIDE",
+        "HOPE"
+      ],
+      "LAMENTATIONS 3:22-23"
+    ],
+    [
+      42,
+      48,
+      [
+        "SUBSCRIBE TO THE MORNING ALTAR",
+        "BEGIN EVERY SUNRISE IN PRAYER"
+      ],
+      [
+        "SUBSCRIBE",
+        "MORNING",
+        "ALTAR",
+        "PRAYER"
+      ],
+      "THE MORNING ALTAR"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "gentle morning",
+      "kind": "phrase",
+      "words": [
+        "GENTLE",
+        "MORNING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "faithful promise",
+      "kind": "phrase",
+      "words": [
+        "FAITHFUL",
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "great love",
+      "kind": "phrase",
+      "words": [
+        "GREAT",
+        "LOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "new every morning",
+      "kind": "phrase",
+      "words": [
+        "NEW",
+        "EVERY",
+        "MORNING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "endless mercy",
+      "kind": "phrase",
+      "words": [
+        "ENDLESS",
+        "MERCY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "unconditional love",
+      "kind": "phrase",
+      "words": [
+        "UNCONDITIONAL",
+        "LOVE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "fill our hearts with hope",
+      "kind": "phrase",
+      "words": [
+        "FILL",
+        "HEARTS",
+        "HOPE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "begin every sunrise in prayer",
+      "kind": "phrase",
+      "words": [
+        "BEGIN",
+        "SUNRISE",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Lamentations 3:22-23"
+}
