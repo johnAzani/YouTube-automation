@@ -54,7 +54,8 @@ MAX_PUBLISH_AGE = timedelta(hours=26)
 class Finding:
     area: str
     detail: str
-    fatal: bool = True  # fatal = nothing can publish because of this
+    fatal: bool = True   # fatal = nothing can publish because of this
+    warning: bool = False  # not proven either way: a deployed fix that never ran
 
 
 @dataclass
@@ -64,16 +65,28 @@ class Report:
 
     @property
     def healthy(self) -> bool:
-        return not any(f.fatal for f in self.findings)
+        """Is the pipeline *proven* working — not merely "nothing is red right now"?
 
-    def add(self, area: str, detail: str, fatal: bool = True) -> None:
-        self.findings.append(Finding(area, detail, fatal))
+        A warning used to be silent here: it appeared in the run summary and nowhere
+        else, so the tracking issue was closed while the pipeline was untested. On
+        6 November at 10:37Z the monitor closed it with the brain still returning
+        `503` on every call, because each merge had turned its red FAILING verdict
+        into the amber UNTESTED FIX — "a fix is deployed and has never run green".
+        That is not recovery. Recovery is a successful run, and until one exists the
+        issue stays open.
+        """
+        return not any(f.fatal or f.warning for f in self.findings)
+
+    def add(self, area: str, detail: str, fatal: bool = True,
+            warning: bool = False) -> None:
+        self.findings.append(Finding(area, detail, fatal, warning))
 
     def as_dict(self) -> dict:
         return {
             "healthy": self.healthy,
             "checked": self.checked,
-            "findings": [{"area": f.area, "detail": f.detail, "fatal": f.fatal}
+            "findings": [{"area": f.area, "detail": f.detail, "fatal": f.fatal,
+                          "warning": f.warning}
                          for f in self.findings],
         }
 
@@ -318,14 +331,16 @@ def check_automations(report: Report) -> bool:
         if automation.severity == "ok":
             report.checked.append(state)
             continue
-        report.add("automations", state, fatal=automation.severity == "blocking")
+        report.add("automations", state, fatal=automation.severity == "blocking",
+                   warning=automation.severity == "warning")
 
     for row in monitored.outcomes:
         state = f"{row['outcome']}: {row['detail']}"
         if row["severity"] == "ok":
             report.checked.append(state)
         else:
-            report.add("outcome", state, fatal=row["severity"] == "blocking")
+            report.add("outcome", state, fatal=row["severity"] == "blocking",
+                       warning=row["severity"] == "warning")
     return bool(monitored.automations)
 
 
@@ -491,8 +506,9 @@ def sync_issue(report: Report, now: datetime | None = None, dry_run: bool = Fals
         if number is None:
             return "healthy"
         _gh(["issue", "close", str(number), "--comment",
-             "Pipeline is healthy again: every queue has work and every scheduled "
-             "workflow has run inside its window. Closing automatically."])
+             "Pipeline is healthy again: every queue has work, every scheduled "
+             "workflow has run inside its window, and none is carrying an unproven "
+             "fix. Closing automatically."])
         return "closed"
 
     body = issue_body(report, now)
