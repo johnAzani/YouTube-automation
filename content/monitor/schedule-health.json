@@ -9,9 +9,9 @@
       "workflow": "metrics.yml"
     },
     {
-      "late_minutes": 705,
+      "late_minutes": 713,
       "name": "automation-health",
-      "ran_at": "2026-11-06T07:59:47+00:00",
+      "ran_at": "2026-11-06T08:07:00+00:00",
       "slot": "2026-11-05T20:14:00+00:00",
       "workflow": "automation-health.yml"
     },
@@ -37,8 +37,8 @@
       "workflow": "keepalive.yml"
     }
   ],
-  "generated_at": "2026-11-06T15:46:31.254140+00:00",
-  "last_run_at": "2026-11-06T15:45:44+00:00",
+  "generated_at": "2026-11-06T16:50:14.453226+00:00",
+  "last_run_at": "2026-11-06T16:49:18+00:00",
   "on_time": [
     {
       "late_minutes": 100,
@@ -55,10 +55,10 @@
       "workflow": "monitor.yml"
     },
     {
-      "late_minutes": 100,
+      "late_minutes": 62,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-06T14:27:52+00:00",
-      "slot": "2026-11-06T12:47:00+00:00",
+      "ran_at": "2026-11-06T16:49:18+00:00",
+      "slot": "2026-11-06T15:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
