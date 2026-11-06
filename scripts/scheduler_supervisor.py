@@ -27,6 +27,7 @@ import json
 import os
 import subprocess
 import sys
+import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -110,6 +111,54 @@ def save_state(state: dict) -> None:
     STATE.write_text(json.dumps(state, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
+def _attempt_cap(workflow: str) -> int:
+    """Attempts allowed per slot. Produce needs one per channel, plus a retry each."""
+    if workflow == "produce.yml":
+        return 2 * len(_channels()) + 1
+    return MAX_ATTEMPTS_PER_SLOT
+
+
+def published_channels_since(slot: datetime, published_dir: Path | None = None) -> set[str]:
+    """Channels with a *published* long-form receipt at or after `slot`.
+
+    The schedule's unit of work is a video per channel, so a produce run is only
+    evidence that the slot was served if a receipt exists for each channel. Judging
+    that by "a produce run happened" is how one leg's completion silently certified
+    the other channel's missing video.
+    """
+    from pipeline.channels import channel_for_doc
+    from pipeline.config import PUBLISHED_DIR
+    from pipeline.script_doc import parse_script
+
+    directory = published_dir or PUBLISHED_DIR
+    done: set[str] = set()
+    if not directory.is_dir():
+        return done
+    for path in directory.glob("*.md"):
+        try:
+            doc = parse_script(path)
+        except Exception:  # noqa: BLE001
+            continue
+        fmt = str(getattr(doc, "format", "") or doc.meta.get("format", "")).strip().lower()
+        if fmt != "longform" or not str(doc.meta.get("youtube_video_id") or "").strip():
+            continue
+        stamps = [str(doc.meta.get(key) or "") for key in ("published_at", "published_on")]
+        when = None
+        for stamp in stamps:
+            try:
+                when = datetime.fromisoformat(stamp.replace("Z", "+00:00"))
+                break
+            except ValueError:
+                continue
+        if when is None:
+            continue
+        if when.tzinfo is None:
+            when = when.replace(tzinfo=timezone.utc)
+        if when >= slot:
+            done.add(channel_for_doc(doc.meta))
+    return done
+
+
 def _slot_window(workflow: str, crons: list[str], slot: datetime) -> timedelta:
     """How long `slot` stays worth recovering: until its successor is due.
 
@@ -169,6 +218,7 @@ def due_but_missing(now: datetime | None = None,
         runs = fetch_runs()
 
     latest: dict[str, datetime] = {}
+    inflight: set[str] = set()
     for run in runs:
         path = (run.get("path") or "").split("/")[-1]
         stamp = run.get("created_at")
@@ -180,6 +230,8 @@ def due_but_missing(now: datetime | None = None,
             continue
         if path not in latest or when > latest[path]:
             latest[path] = when
+        if str(run.get("status")) in {"queued", "in_progress", "waiting", "requested", "pending"}:
+            inflight.add(path)
 
     out: list[tuple[str, str]] = []
     for filename, _name, crons in workflow_files():
@@ -193,10 +245,27 @@ def due_but_missing(now: datetime | None = None,
         if now > slot + _slot_window(filename, crons, slot):
             continue
         last_run = latest.get(filename)
+        if filename in inflight:
+            continue          # a run is working on it right now; never race it
+        if filename == "produce.yml":
+            # A run, or even a *successful* run, is not a published video. Both
+            # channels must have a receipt for this slot, or the leg that never
+            # happened is dispatched on its own.
+            missing = set(_channels()) - published_channels_since(slot)
+            if not missing:
+                continue
+            out.append((filename, slot.isoformat()))
+            continue
         if last_run is not None and last_run >= slot:
             continue          # it ran for this slot; nothing to do
         out.append((filename, slot.isoformat()))
     return _newest_per_workflow(out)
+
+
+def _channels() -> list[str]:
+    from pipeline.channel_capabilities import known_channels
+
+    return list(known_channels())
 
 
 def _safe_runs() -> list[dict]:
@@ -236,7 +305,7 @@ def _failed_dispatches(state: dict, latest: dict[str, tuple[datetime, str | None
             continue
         if now > slot_at + _slot_window(workflow, crons_by_workflow.get(workflow, []), slot_at):
             continue
-        if int(entry.get("attempts", 1)) >= MAX_ATTEMPTS_PER_SLOT:
+        if int(entry.get("attempts", 1)) >= _attempt_cap(workflow):
             continue
         finished = latest.get(workflow)
         if finished is None:
@@ -266,37 +335,45 @@ def _latest_runs(runs: list[dict]) -> dict[str, tuple[datetime, str | None]]:
     return out
 
 
-def dispatch(workflow: str) -> tuple[bool, str]:
+def dispatch(workflow: str, slot: str | None = None) -> tuple[bool, str]:
     """Dispatch a workflow, returning (ok, message).
 
-    ``produce.yml`` is special: since 2026-11-05 a scheduled slot serves
-    BOTH channels, so recovering a dropped slot means one dispatch per
-    channel. A bare ``gh workflow run produce.yml`` would recover only the
-    default Secret Place leg and silently leave The Morning Altar behind.
-    The two runs share the workflow's content-state concurrency group, so
-    they execute sequentially, never in parallel.
+    ``produce.yml`` is special in two ways, both learned the hard way.
+
+    1. **One channel per dispatch.** A scheduled slot serves BOTH channels, so a
+       recovery has to reach both. But the two legs share the ``content-state``
+       concurrency group, which allows only one *pending* run: on 6 November 08:00
+       the two dispatches went out one second apart and GitHub cancelled the
+       secret-place leg before it got a runner, while the pass reported
+       "dispatched secret-place + prayer2". So this dispatches the channel that is
+       provably missing and lets the next pass (triggered by this run completing)
+       take the other one.
+    2. **Receipts, not runs, decide.** `published_channels_since()` is the only
+       evidence that a channel's video exists.
     """
     if workflow == "produce.yml":
-        from pipeline.channel_capabilities import known_channels
-
-        messages: list[str] = []
-        dispatched: list[str] = []
-        for channel in known_channels():
-            proc = subprocess.run(
-                ["gh", "workflow", "run", workflow, "-f", f"channel={channel}"],
-                capture_output=True, text=True, cwd=ROOT, timeout=120,
-            )
-            if proc.returncode == 0:
-                dispatched.append(channel)
-            else:
-                messages.append(
-                    f"{channel}: "
-                    + (proc.stderr or proc.stdout or "gh workflow run failed").strip()[:160]
-                )
-        if len(dispatched) == len(known_channels()):
-            return True, "dispatched " + " + ".join(dispatched)
-        detail = "; ".join(messages) or "no channel dispatched"
-        return False, f"dispatched {dispatched or 'none'}; {detail}"[:200]
+        if slot:
+            try:
+                since = datetime.fromisoformat(slot)
+            except ValueError:
+                since = datetime.now(timezone.utc) - timedelta(hours=24)
+        else:
+            since = datetime.now(timezone.utc) - timedelta(hours=24)
+        missing = [c for c in _channels() if c not in published_channels_since(since)]
+        if not missing:
+            return True, "both channels already published for this slot"
+        channel = missing[0]
+        proc = subprocess.run(
+            ["gh", "workflow", "run", workflow, "-f", f"channel={channel}"],
+            capture_output=True, text=True, cwd=ROOT, timeout=120,
+        )
+        if proc.returncode == 0:
+            rest = [c for c in missing[1:]]
+            note = f"dispatched {channel}"
+            if rest:
+                note += f"; {', '.join(rest)} next pass (content-state takes one pending run)"
+            return True, note[:300]
+        return False, (proc.stderr or proc.stdout or "gh workflow run failed").strip()[:240]
     proc = subprocess.run(["gh", "workflow", "run", workflow], capture_output=True,
                           text=True, cwd=ROOT, timeout=120)
     if proc.returncode == 0:
@@ -497,12 +574,16 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
         attempts = int(previous.get("attempts", 1)) if previous else 0
         if previous:
             finished = latest.get(workflow)
-            if finished is not None and finished[1] == "success" \
+            if workflow != "produce.yml" and finished is not None \
+                    and finished[1] == "success" \
                     and finished[0].isoformat() >= previous.get("at", ""):
+                # For produce this shortcut is wrong: a successful run for one
+                # channel says nothing about the other's video, and it would leave
+                # that channel with no publish and no second dispatch.
                 result["skipped"].append({"workflow": workflow, "slot": slot,
                                           "reason": "its dispatched run succeeded"})
                 continue
-            if attempts >= MAX_ATTEMPTS_PER_SLOT:
+            if attempts >= _attempt_cap(workflow):
                 result["skipped"].append({"workflow": workflow, "slot": slot,
                                           "reason": f"already dispatched {attempts}x for this "
                                                     f"slot; not trying again"})
@@ -515,7 +596,7 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
             result["dispatched"].append({"workflow": workflow, "slot": slot,
                                          "result": "would dispatch"})
             continue
-        ok, message = dispatch(workflow)
+        ok, message = dispatch(workflow, slot)
         state[key] = {"at": now.isoformat(), "result": message, "attempts": attempts + 1}
         (result["dispatched"] if ok else result["failed"]).append(
             {"workflow": workflow, "slot": slot, "result": message})

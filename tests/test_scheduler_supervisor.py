@@ -71,8 +71,42 @@ class TestSlotDetection(unittest.TestCase):
             ("produce.yml", now - timedelta(hours=9)),
             ("comments.yml", now - timedelta(hours=9)),
         )
-        found = {wf for wf, _ in sup.due_but_missing(now, pad_history(history, now))}
+        # Produce is judged by receipts now: no channel has published for this slot.
+        with mock.patch.object(sup, "published_channels_since", return_value=set()):
+            found = {wf for wf, _ in sup.due_but_missing(now, pad_history(history, now))}
         self.assertEqual(found, {"gemini_brain.yml", "keepalive.yml", "produce.yml"})
+
+    def test_a_produce_run_is_not_evidence_that_a_channel_published(self):
+        """The half-recovery that started this: one leg's success certified both.
+
+        At 08:00 on 6 November the supervisor dispatched both channels, GitHub
+        cancelled the first one while it was still pending, and the pass recorded
+        "dispatched secret-place + prayer2". A *successful* produce run is not a
+        published video either, so the slot stays open until receipts say otherwise.
+        """
+        now = self.now()
+        history = pad_history(
+            [run("produce.yml", now - timedelta(hours=1, minutes=30))], now
+        )
+        with mock.patch.object(sup, "published_channels_since",
+                               return_value={"secret-place"}):
+            found = {wf for wf, _ in sup.due_but_missing(now, history)}
+        self.assertIn("produce.yml", found, "prayer2 still has no video for this slot")
+
+        with mock.patch.object(sup, "published_channels_since",
+                               return_value={"secret-place", "prayer2"}):
+            found = {wf for wf, _ in sup.due_but_missing(now, history)}
+        self.assertNotIn("produce.yml", found)
+
+    def test_a_produce_run_in_flight_is_never_raced(self):
+        now = self.now()
+        history = pad_history([], now) + [
+            {"name": "Produce video", "path": ".github/workflows/produce.yml",
+             "created_at": (now - timedelta(minutes=5)).isoformat().replace("+00:00", "Z"),
+             "status": "in_progress", "conclusion": None}]
+        with mock.patch.object(sup, "published_channels_since", return_value=set()):
+            found = {wf for wf, _ in sup.due_but_missing(now, history)}
+        self.assertNotIn("produce.yml", found)
 
     def test_a_workflow_that_ran_for_the_slot_is_left_alone(self):
         now = self.now()
@@ -185,17 +219,22 @@ class TestDispatchRails(unittest.TestCase):
         now = self.now()
         history = self.runs() + [run("produce.yml", now - timedelta(minutes=20),
                                      conclusion="failure")]
-        state = {"produce.yml@2026-11-02T06:14:00+00:00": {"at": "2026-11-02T07:00:00+00:00",
-                                                          "attempts": sup.MAX_ATTEMPTS_PER_SLOT}}
-        out = sup.supervise(now, history, dry_run=True, state=state)
+        state = {"produce.yml@2026-11-02T06:14:00+00:00":
+                 {"at": "2026-11-02T07:00:00+00:00",
+                  "attempts": sup._attempt_cap("produce.yml")}}
+        with mock.patch.object(sup, "published_channels_since", return_value=set()):
+            out = sup.supervise(now, history, dry_run=True, state=state)
         self.assertNotIn("produce.yml", [r["workflow"] for r in out["dispatched"]])
         self.assertTrue(any("not trying again" in r["reason"] for r in out["skipped"]))
+        # Produce gets one attempt per channel (plus a retry each), everything else 3.
         self.assertEqual(sup.MAX_ATTEMPTS_PER_SLOT, 3)
+        self.assertEqual(sup._attempt_cap("produce.yml"), 5)
 
     def test_one_slot_is_dispatched_only_once(self):
         state = {}
         history = pad_history(self.runs(), self.now())
-        first = sup.supervise(self.now(), history, dry_run=True, state=state)
+        with mock.patch.object(sup, "published_channels_since", return_value=set()):
+            first = sup.supervise(self.now(), history, dry_run=True, state=state)
         self.assertEqual(len(first["dispatched"]), 3)
         # a real pass writes the ledger; simulate that then re-run the same slot
         for row in first["dispatched"]:
@@ -351,13 +390,11 @@ class TestWorkflowFile(unittest.TestCase):
         text = (sup.ROOT / ".github/workflows/scheduler-supervisor.yml").read_text()
         self.assertIn("actions: write", text)
 
-    def test_produce_recovery_dispatches_both_channels(self):
-        """A dropped Produce slot now costs BOTH channels a video.
+    def test_produce_recovery_targets_the_channel_that_has_no_video(self):
+        """A dropped Produce slot costs BOTH channels a video — recover them one at a time.
 
-        Since 2026-11-05 a scheduled Produce run produces secret-place and
-        prayer2, so the supervisor's recovery dispatch must fire one run
-        per channel — a bare dispatch would silently recover only The
-        Secret Place.
+        Not both at once: the two legs share `content-state`, which allows a single
+        *pending* run, so the second dispatch cancels the first (6 November 08:00).
         """
         calls = []
 
@@ -370,14 +407,27 @@ class TestWorkflowFile(unittest.TestCase):
             calls.append(cmd)
             return _Proc()
 
-        with mock.patch.object(sup.subprocess, "run", side_effect=fake_run):
-            ok, _msg = sup.dispatch("produce.yml")
+        with mock.patch.object(sup.subprocess, "run", side_effect=fake_run), \
+             mock.patch.object(sup, "published_channels_since", return_value={"secret-place"}):
+            ok, msg = sup.dispatch("produce.yml", "2026-11-06T06:14:00+00:00")
         self.assertTrue(ok)
-        self.assertEqual(
-            calls,
-            [["gh", "workflow", "run", "produce.yml", "-f", "channel=secret-place"],
-             ["gh", "workflow", "run", "produce.yml", "-f", "channel=prayer2"]],
-        )
+        self.assertEqual(calls, [["gh", "workflow", "run", "produce.yml",
+                                  "-f", "channel=prayer2"]])
+        self.assertIn("dispatched prayer2", msg)
+
+    def test_produce_recovery_dispatches_nothing_when_both_channels_published(self):
+        class _Proc:
+            returncode = 0
+            stdout = ""
+            stderr = ""
+
+        with mock.patch.object(sup.subprocess, "run") as proc, \
+             mock.patch.object(sup, "published_channels_since",
+                               return_value={"secret-place", "prayer2"}):
+            ok, msg = sup.dispatch("produce.yml", "2026-11-06T06:14:00+00:00")
+        self.assertTrue(ok)
+        proc.assert_not_called()
+        self.assertIn("already published", msg)
 
     def test_non_produce_dispatch_is_unchanged(self):
         calls = []
