@@ -488,7 +488,7 @@ def update_live_video_metadata(
     return youtube.videos().update(part=parts, body=payload).execute()
 
 
-def diagnose_thumbnail_refusal(video_id: str) -> dict[str, Any]:
+def diagnose_thumbnail_refusal(video_id: str, youtube: Any = None) -> dict[str, Any]:
     """Name *why* YouTube refused a thumbnail, instead of quoting the 403.
 
     The refusal sentence is the same for every cause — "The request might not be
@@ -509,9 +509,11 @@ def diagnose_thumbnail_refusal(video_id: str) -> dict[str, Any]:
     if not vid:
         return {}
     try:
-        from googleapiclient.discovery import build
+        if youtube is None:
+            from googleapiclient.discovery import build
 
-        youtube = build("youtube", "v3", credentials=_credentials(), cache_discovery=False)
+            youtube = build("youtube", "v3", credentials=_credentials(),
+                            cache_discovery=False)
         mine = youtube.channels().list(part="id,snippet,status", mine=True).execute()
         auth_channel = ((mine.get("items") or [{}])[0])
         video = youtube.videos().list(part="snippet,status", id=vid).execute()
