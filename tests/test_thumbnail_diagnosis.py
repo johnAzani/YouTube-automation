@@ -74,3 +74,25 @@ class TestThumbnailDiagnosis(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestRepairClearsTheOldRefusal(unittest.TestCase):
+    """A receipt must not say `thumbnail_pending: false` and 403 at the same time."""
+
+    def test_clear_frontmatter_field_removes_the_line(self):
+        import tempfile
+        from pathlib import Path
+
+        from scripts.sync_published_thumbnails import clear_frontmatter_field
+
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "0036.md"
+            path.write_text(
+                "---\nid: '0036'\nthumbnail_pending: false\n"
+                "thumbnail_error: \"HttpError: forbidden\"\nthumbnail_revision: \"v3\"\n---\n"
+                "\n# Body\n", encoding="utf-8")
+            clear_frontmatter_field(path, "thumbnail_error")
+            text = path.read_text(encoding="utf-8")
+        self.assertNotIn("thumbnail_error", text)
+        self.assertIn("thumbnail_revision", text)
+        self.assertIn("# Body", text, "the body survives the rewrite")

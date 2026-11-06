@@ -161,7 +161,7 @@ def live_model(primary: str | None = None) -> str:
 #: 6 November 08:45Z: the model was finally live and the authoring run still failed,
 #: because three calls in a row came back 503 UNAVAILABLE and the loop skipped to the
 #: next candidate model instead of letting the spike pass.
-_TRANSIENT_BACKOFF = (5, 15, 30)
+_TRANSIENT_BACKOFF = (5, 15, 30, 60)
 
 
 def is_transient(exc: BaseException) -> bool:
