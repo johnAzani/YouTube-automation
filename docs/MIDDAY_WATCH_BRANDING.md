@@ -75,15 +75,25 @@ Midday Prayer, Noon Prayer, Afternoon Prayer, Prayer at Noon, Midday Devotional,
 | Profile picture / avatar | `800 × 800 px` (PNG) | `docs/media/midday-watch-avatar.png` | Customization → Branding → Picture |
 | Banner | `2560 × 1440 px` (PNG, all text inside `1235 × 338 px`) | `docs/media/midday-watch-banner.png` | Customization → Branding → Banner image |
 | Video watermark | `150 × 150 px` (PNG, transparent) | `docs/media/midday-watch-watermark.png` | Customization → Branding → Video watermark (Entire video) |
-| Thumbnail template | `1280 × 720 px` (JPG/PNG) | `docs/media/midday-watch-thumbnail-template.png` | Reference for the CTR system; not uploaded |
+| Thumbnail template | `1280 × 720 px` (PNG) | `docs/media/midday-watch-thumbnail-template.png` | Reference for the CTR system; not uploaded |
+| Brand sheet | `1800 × 1700 px` (PNG) | `docs/media/midday-watch-brand-sheet.png` | Review/share: every asset and the palette on one page |
+| Complete kit | `.zip` (~460 KB) | `docs/media/midday-watch-brand-assets.zip` | Download-and-hand-off: the four uploads + both docs + the sheet |
+
+**Download everything:** `docs/media/midday-watch-brand-assets.zip` unpacks to
+`midday-watch-brand-kit/` with a `START_HERE.txt`, the brand sheet, both
+documents and the four images at full resolution. It is rebuilt from the same
+files, and `tests/test_channel_brand_assets.py` fails if the archive ever
+disagrees with the assets on disk — a stale kit is worse than none, because it
+ships the wrong banner.
 
 The assets are **drawn in code**, not generated as pictures, because every one of
 them carries type the viewer is meant to read — and generated imagery mangles
 letterforms. Regenerate any time:
 
 ```bash
-python tools/make_channel_brand_assets.py --channel midday-watch          # skips existing files
-python tools/make_channel_brand_assets.py --channel midday-watch --force  # redraw
+python tools/make_channel_brand_assets.py --channel midday-watch            # skips existing files
+python tools/make_channel_brand_assets.py --channel midday-watch --sheet    # + the one-page sheet
+python tools/make_channel_brand_assets.py --channel midday-watch --force    # redraw everything
 ```
 
 Nothing is overwritten without `--force`, so approved art cannot be replaced by a

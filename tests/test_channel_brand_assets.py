@@ -117,3 +117,67 @@ class TestRedrawingIsDeliberate(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestTheKitCanBeHandedOver(unittest.TestCase):
+    """The download has to be the same art as the repo, or it ships the wrong banner.
+
+    A brand kit is a hand-off: it leaves this repository and lands in YouTube
+    Studio. A stale archive is worse than no archive — the file that gets uploaded
+    is the one in the zip.
+    """
+
+    ZIP = MEDIA / "midday-watch-brand-assets.zip"
+    KIT = "midday-watch-brand-kit/"
+
+    def _names(self):
+        import zipfile
+
+        with zipfile.ZipFile(self.ZIP) as zf:
+            return zf.namelist()
+
+    def test_the_archive_exists_and_carries_every_upload(self):
+        for name in ("midday-watch-avatar.png", "midday-watch-banner.png",
+                     "midday-watch-watermark.png", "midday-watch-thumbnail-template.png",
+                     "midday-watch-brand-sheet.png", "MIDDAY_WATCH_BRANDING.md",
+                     "THIRD_CHANNEL_SETUP.md", "START_HERE.txt"):
+            with self.subTest(item=name):
+                self.assertIn(self.KIT + name, self._names())
+
+    def test_the_archive_is_the_art_on_disk(self):
+        import zipfile
+
+        with zipfile.ZipFile(self.ZIP) as zf:
+            for name in ("avatar", "banner", "watermark", "thumbnail-template", "brand-sheet"):
+                filename = f"midday-watch-{name}.png"
+                with self.subTest(asset=filename):
+                    self.assertEqual(
+                        zf.read(self.KIT + filename),
+                        (MEDIA / filename).read_bytes(),
+                        f"{filename} in the zip is not the file in docs/media — "
+                        f"rebuild the kit")
+
+    def test_the_archive_images_are_the_right_sizes(self):
+        import io
+        import zipfile
+
+        expected = {
+            "midday-watch-avatar.png": (800, 800),
+            "midday-watch-banner.png": (2560, 1440),
+            "midday-watch-watermark.png": (150, 150),
+            "midday-watch-thumbnail-template.png": (1280, 720),
+        }
+        with zipfile.ZipFile(self.ZIP) as zf:
+            for name, size in expected.items():
+                with self.subTest(asset=name):
+                    image = Image.open(io.BytesIO(zf.read(self.KIT + name)))
+                    self.assertEqual(image.size, size)
+
+    def test_the_brand_sheet_renders(self):
+        sheet = Image.open(MEDIA / "midday-watch-brand-sheet.png")
+        self.assertEqual(sheet.size, (1800, 1700))
+
+    def test_the_doc_points_at_the_download(self):
+        doc = DOC.read_text(encoding="utf-8")
+        self.assertIn("midday-watch-brand-assets.zip", doc)
+        self.assertIn("midday-watch-brand-sheet.png", doc)
