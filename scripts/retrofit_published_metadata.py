@@ -17,7 +17,9 @@ import json
 import os
 import re
 from pathlib import Path
+from typing import Any
 
+from pipeline.channels import channel_for_doc, get_channel
 from pipeline.config import CONFIG, REPO_ROOT
 from pipeline.localize_metadata import build_metadata_localizations
 from pipeline.metadata import (
@@ -95,6 +97,10 @@ def collect_published_faith_targets(
                 "id": doc.id,
                 "video_id": video_id,
                 "is_short": is_short,
+                # Which token may touch this video. Same defect as the thumbnail
+                # sync: one global token repaired both channels, so every Morning
+                # Altar video answered 403 to The Secret Place's account.
+                "channel": channel_for_doc(doc.meta),
                 "title": clean_title,
                 "description": desc,
                 "tags": tags,
@@ -122,6 +128,16 @@ def sync_published_metadata(
         print("[retrofit] Skipped: YouTube OAuth credentials not present in environment.")
         return []
 
+    clients: dict[str, Any] = {}
+
+    def _client_for(channel_id: str):
+        """One authenticated client per channel, built from that channel's secrets."""
+        if channel_id not in clients:
+            from scripts.sync_published_thumbnails import _build_youtube_client
+
+            clients[channel_id] = _build_youtube_client(get_channel(channel_id))
+        return clients[channel_id]
+
     outcomes: list[dict] = []
     for t in targets:
         summary = {
@@ -138,12 +154,16 @@ def sync_published_metadata(
         )
         if not dry_run:
             try:
+                # The token that owns this video, not whichever one CONFIG holds.
+                extra = ({} if updater is not update_live_video_metadata
+                         else {"youtube": _client_for(t.get("channel") or CONFIG.channel_id)})
                 updater(
                     t["video_id"],
                     new_title=t["title"],
                     new_description=t["description"],
                     new_tags=t["tags"],
                     localizations=t["localizations"],
+                    **extra,
                 )
                 stamp_frontmatter_field(t["path"], "metadata_revision", METADATA_REVISION)
                 summary["status"] = "updated"

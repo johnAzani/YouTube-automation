@@ -143,13 +143,36 @@ def _build_youtube_client(profile=None):
     return build("youtube", "v3", credentials=creds, cache_discovery=False)
 
 
+def _setter_for(youtube) -> Any:
+    """A `thumbnails.set` caller bound to one channel's authenticated client."""
+    from pipeline.upload import _api_error_text, diagnose_thumbnail_refusal
+
+    def _set(video_id: str, thumbnail_path: Path) -> str:
+        from googleapiclient.http import MediaFileUpload
+
+        try:
+            youtube.thumbnails().set(
+                videoId=video_id,
+                media_body=MediaFileUpload(str(thumbnail_path), mimetype="image/jpeg"),
+            ).execute()
+            return "ok"
+        except Exception as exc:  # noqa: BLE001
+            msg = f"{type(exc).__name__}: {_api_error_text(exc)}"
+            diagnosis = diagnose_thumbnail_refusal(video_id, youtube=youtube)
+            if diagnosis:
+                msg += " | " + "; ".join(f"{k}={v}" for k, v in diagnosis.items())
+            return msg[:900]
+
+    return _set
+
+
 def sync_published_thumbnails(
     published_dir: Path = PUBLISHED_DIR,
     out_root: Path = OUTPUT_DIR / "live-thumb-sync",
     force: bool = False,
     dry_run: bool = False,
     youtube_client: Any = None,
-    thumb_setter=set_video_thumbnail,
+    thumb_setter=None,
     channel: str | None = None,
 ) -> list[dict[str, Any]]:
     """Render and apply cinema thumbnails (+ privacy/title hygiene) for live videos.
@@ -175,6 +198,16 @@ def sync_published_thumbnails(
         return []
 
     yt = None if dry_run else (youtube_client or _build_youtube_client(profile))
+    # The setter must use *this* channel's client. It defaulted to
+    # `pipeline.upload.set_video_thumbnail`, which builds its own client from the
+    # global CONFIG — The Secret Place's token. So every Morning Altar receipt was
+    # thumbnailed by The Secret Place's account and answered `403 forbidden`, and
+    # the reason was unknowable from the message: the videos.list audit above used
+    # the right client, only the write did not. Diagnosed 09:15Z 6 Nov:
+    # auth_channel_id=UCtPI1r8vgtJ9n__7ksLBmCA (Secret Place) vs
+    # video_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ (Morning Altar), same_channel=False.
+    if thumb_setter is None:
+        thumb_setter = _setter_for(yt) if yt is not None else set_video_thumbnail
     remote_by_id: dict[str, dict[str, Any]] = {}
     videos_list_ok = False
     if yt is not None:
