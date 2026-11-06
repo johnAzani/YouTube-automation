@@ -326,6 +326,103 @@ def make_thumbnail_template(palette: dict) -> Image.Image:
     return img
 
 
+
+def make_brand_sheet(palette: dict, media_dir: Path) -> Image.Image:
+    """One image showing every asset, so a reviewer can judge the set at a glance.
+
+    Includes the mobile crop of the banner (the centre 1235x338 a phone shows) and
+    the watermark on a checkerboard, because both are things a flat preview hides.
+    """
+    W, H = 1800, 1700
+    ink = (16, 22, 28)
+    sheet = Image.new("RGB", (W, H), ink)
+    d = ImageDraw.Draw(sheet)
+
+    title = font("Inter-Black.ttf", 46)
+    sub = font("Inter-Regular.ttf", 24)
+    label = font("Inter-SemiBold.ttf", 22)
+    small = font("Inter-Regular.ttf", 19)
+
+    tracked_text(d, (80, 62), palette["name"].upper(), title, palette["ivory"], 3.0)
+    d.text((80, 122), f"{palette['verse']}  ·  {palette['tagline']}", font=sub,
+           fill=palette["haze"])
+
+    # --- avatar + watermark ---------------------------------------------------
+    avatar = Image.open(media_dir / f"{palette['slug']}-avatar.png").convert("RGB")
+    avatar = avatar.resize((360, 360), Image.Resampling.LANCZOS)
+    sheet.paste(avatar, (80, 200))
+    d.text((80, 572), "AVATAR  800 × 800", font=label, fill=palette["sun"])
+
+    # watermark on a checkerboard: transparency is invisible on a flat colour
+    wm = Image.open(media_dir / f"{palette['slug']}-watermark.png").convert("RGBA")
+    wm = wm.resize((220, 220), Image.Resampling.LANCZOS)
+    tile = 22
+    board = Image.new("RGB", (240, 240), (58, 62, 66))
+    bd = ImageDraw.Draw(board)
+    for y in range(0, 240, tile):
+        for x in range(0, 240, tile):
+            if (x // tile + y // tile) % 2 == 0:
+                bd.rectangle([x, y, x + tile - 1, y + tile - 1], fill=(96, 101, 106))
+    board.paste(wm, (10, 10), wm)
+    sheet.paste(board, (480, 270))
+    d.text((480, 572), "WATERMARK  150 × 150 (transparent)", font=label,
+           fill=palette["sun"])
+
+    # --- palette --------------------------------------------------------------
+    swatch_x, swatch_y = 820, 210
+    d.text((swatch_x, swatch_y - 44), "PALETTE", font=label, fill=palette["sun"])
+    roles = [("sky", "Zenith Blue"), ("panel", "Noon Sky"), ("sun", "High Sun"),
+             ("brass", "Warm Brass"), ("ivory", "Ivory"), ("haze", "Sand Haze"),
+             ("shadow", "Hard Shadow"), ("field", "Sunlit Field"),
+             ("field_deep", "Deep Furrow")]
+    for i, (key, name) in enumerate(roles):
+        col = palette[key]
+        cx = swatch_x + (i % 3) * 250
+        cy = swatch_y + (i // 3) * 118
+        d.rounded_rectangle([cx, cy, cx + 84, cy + 84], radius=10, fill=col)
+        hex_code = "#{:02x}{:02x}{:02x}".format(*col)
+        d.text((cx + 96, cy + 14), name, font=small, fill=palette["ivory"])
+        d.text((cx + 96, cy + 42), hex_code, font=small, fill=palette["haze"])
+
+    # --- banner: the crop a phone actually shows ------------------------------
+    banner = Image.open(media_dir / f"{palette['slug']}-banner.png").convert("RGB")
+    safe_w, safe_h = BANNER_SAFE
+    left = (banner.width - safe_w) // 2
+    top = (banner.height - safe_h) // 2
+    crop = banner.crop((left, top, left + safe_w, top + safe_h))
+    scale = 1640 / crop.width
+    crop = crop.resize((1640, int(crop.height * scale)), Image.Resampling.LANCZOS)
+    y = 660
+    sheet.paste(crop, (80, y))
+    d.text((80, y - 40), "BANNER  2560 × 1440 — this strip is the part a phone shows "
+                         "(centre 1235 × 338)", font=label, fill=palette["sun"])
+
+    # --- thumbnail ------------------------------------------------------------
+    thumb = Image.open(media_dir / f"{palette['slug']}-thumbnail-template.png").convert("RGB")
+    ty = y + crop.height + 66
+    thumb = thumb.resize((760, 428), Image.Resampling.LANCZOS)
+    sheet.paste(thumb, (80, ty))
+    d.text((80, ty - 40), "THUMBNAIL  1280 × 720", font=label, fill=palette["sun"])
+    notes = [
+        "Mark: a high sun over a watchtower on a warm noon field.",
+        "No lettering in the avatar or watermark — at 48 px and 22 px",
+        "a wordmark is mush; a disc and a tower still read.",
+        "",
+        "Thumbnail type sits above the field and clear of the",
+        "duration badge, so it survives the 246 × 138 phone tile.",
+        "",
+        "Redraw: python tools/make_channel_brand_assets.py",
+        "        --channel midday-watch --force",
+    ]
+    for i, line in enumerate(notes):
+        d.text((900, ty + 10 + i * 34), line, font=small, fill=palette["haze"])
+
+    footer = font("Inter-Regular.ttf", 20)
+    d.text((80, H - 54), "The Midday Watch · prayer3 · registered in code, not yet live · "
+                         "kit: docs/MIDDAY_WATCH_BRANDING.md", font=footer,
+           fill=(120, 132, 140))
+    return sheet
+
 ASSETS = {
     "avatar": ("-avatar.png", make_avatar),
     "banner": ("-banner.png", make_banner),
@@ -338,6 +435,8 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="Render a channel's brand assets.")
     ap.add_argument("--channel", default="midday-watch", choices=sorted(PALETTES))
     ap.add_argument("--out", default=str(OUT_DIR))
+    ap.add_argument("--sheet", action="store_true",
+                    help="also render the one-page brand sheet (all assets at a glance)")
     ap.add_argument("--force", action="store_true",
                     help="overwrite existing files (approved art must be redrawn on purpose)")
     args = ap.parse_args(argv)
@@ -356,6 +455,12 @@ def main(argv=None) -> int:
         image.save(path, optimize=True)
         print(f"{kind:10s} {path.relative_to(ROOT) if path.is_relative_to(ROOT) else path} "
               f"{image.size[0]}x{image.size[1]} {image.mode}")
+
+    if args.sheet:
+        sheet_path = out_dir / f"{palette['slug']}-brand-sheet.png"
+        sheet = make_brand_sheet(palette, out_dir)
+        sheet.save(sheet_path, optimize=True)
+        print(f"{'sheet':10s} {sheet_path} {sheet.size[0]}x{sheet.size[1]}")
     return 0
 
 
