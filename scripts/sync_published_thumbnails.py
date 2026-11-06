@@ -318,7 +318,7 @@ def sync_published_thumbnails(
                     # put the API's own words in the frontmatter — "no thumbnail"
                     # with no reason is what made this invisible for two videos.
                     stamp_frontmatter_field(path, "thumbnail_pending", True)
-                    stamp_frontmatter_field(path, "thumbnail_error", str(status)[:220])
+                    stamp_frontmatter_field(path, "thumbnail_error", str(status)[:400])
                     print(f"::warning title=Thumbnail still refused "
                           f"({profile.id})::{vid} — {status}. The receipt keeps "
                           f"thumbnail_pending: true and the next monitor pass retries "
