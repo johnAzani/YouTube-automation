@@ -33,3 +33,6 @@ env/
 
 # Built product packs for Selar — regenerate via scripts/generate_night_queue.py + tools/build_sleep_suite.py
 *.zip
+
+# Brain staging: a job is validated here before the scheduler can see it
+content/queue/.incoming/

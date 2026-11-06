@@ -621,7 +621,18 @@ def main(argv=None) -> int:
                 detail = " ".join(str(finding.detail).split())
                 print(f"::error title=Automation is stalled ({finding.area})::{detail[:400]}")
             if not blocking:
-                print("::error title=Automation is stalled::the watchdog opened/updated a tracking issue")
+                # Unhealthy without a blocking finding means a *warning* is holding
+                # the issue open — a fix deployed but never run green, or a workflow
+                # flaky enough to be untrustworthy. Those kept the run red while the
+                # only annotation said "the watchdog opened/updated a tracking issue"
+                # (run 42235642633, 6 November 14:37Z), so the red X named nothing.
+                # A degraded verdict is still a verdict and has to say which one.
+                degraded = [f for f in report.findings if f.warning]
+                for finding in degraded:
+                    detail = " ".join(str(finding.detail).split())
+                    print(f"::error title=Pipeline is degraded ({finding.area})::{detail[:400]}")
+                if not degraded:
+                    print("::error title=Automation is stalled::the watchdog opened/updated a tracking issue")
         elif action == "closed":
             print("::notice title=Automation recovered::tracking issue closed")
     return 0 if report.healthy else 1

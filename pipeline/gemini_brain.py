@@ -103,6 +103,46 @@ def _base_short_key_for_doc(doc: ScriptDoc) -> str:
     return f"short-{fallback or 'prayer'}"
 
 
+#: Front-matter keys every queue job must declare before the scheduler can pick it up.
+#:
+#: `job_id` is deliberately not one of them. On 6 November 2026 a model answered with
+#: a `job_id: 0040` header and no `id:`; the acceptance gate was the substring test
+#: `"id:" in text`, which `job_id:` satisfies, so the file was written into
+#: `content/queue/` as `0040-devotional-0040.md`. YAML reads bare `0040` as octal — the
+#: job parsed with `job_id: 32` — and the job then failed the niche gate, the
+#: originality gate and the fact-check worksheet requirement, turning nine integrity
+#: tests red on main. The gate has to ask for the keys the queue actually needs.
+#: `channel:` is not listed: the 25 channel-1 jobs authored before the declaration
+#: rule carry no `channel:` key at all, and `_enforce_channel_metadata` already
+#: refuses a script that declares the wrong (or no) channel at authoring time.
+REQUIRED_JOB_KEYS = ("id", "slug", "title", "status", "niche", "thumb_text",
+                     "originality")
+
+
+def job_front_matter(text: str) -> dict[str, Any]:
+    """The YAML header of a model-authored job, or {} when it does not have one."""
+    body = text.lstrip()
+    if not body.startswith("---"):
+        return {}
+    body = body[3:]
+    end = body.find("\n---")
+    if end == -1:
+        return {}
+    try:
+        meta = yaml.safe_load(body[:end])
+    except yaml.YAMLError:
+        return {}
+    return meta if isinstance(meta, dict) else {}
+
+
+def missing_job_keys(text: str) -> list[str]:
+    """Which REQUIRED_JOB_KEYS this output fails to declare (empty when complete)."""
+    meta = job_front_matter(text)
+    if not meta:
+        return list(REQUIRED_JOB_KEYS)
+    return [key for key in REQUIRED_JOB_KEYS if not str(meta.get(key) or "").strip()]
+
+
 @dataclass
 class BrainGenerationResult:
     job_id: str
@@ -371,6 +411,7 @@ sentences; write more prayer, more scripture exposition, more stillness.
 
 Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not include markdown code block backticks.
 """
+        incomplete: list[str] = []
         if self.is_api_available():
             try:
                 for candidate_model in text_model_candidates(self.model):
@@ -385,13 +426,34 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                     if text.endswith("```"):
                         text = text[:-3]
                     text = text.strip()
-                    if "id:" in text and "## Scene" in text:
-                        self._enforce_channel_metadata(text, scripture_data)
-                        return text
+                    if "## Scene" not in text:
+                        print(f"[gemini-brain] {candidate_model} returned no scenes — "
+                              f"trying the next model.")
+                        incomplete.append(candidate_model)
+                        continue
+                    self._enforce_channel_metadata(text, scripture_data)
+                    missing = missing_job_keys(text)
+                    if missing:
+                        # A script without the queue's own front matter cannot be
+                        # staged, so asking this model again wastes the allowance and
+                        # writing it anyway poisons the queue. Climb to the next model.
+                        print(f"[gemini-brain] {candidate_model} returned a script missing "
+                              f"queue front matter ({', '.join(missing)}) — trying the "
+                              f"next model.")
+                        incomplete.append(candidate_model)
+                        continue
+                    return text
             except BrainAuthoringError:
                 raise
             except Exception as api_err:
                 print(f"[gemini-brain] Gemini API generation failed ({api_err}).")
+            if incomplete:
+                raise BrainAuthoringError(
+                    f"{brand.display_name}: every candidate model returned a script "
+                    f"without the front matter the queue requires (no `## Scene`, or "
+                    f"missing {', '.join(REQUIRED_JOB_KEYS)}) — last tried "
+                    f"{incomplete[-1]}. Nothing was written: a job that cannot satisfy "
+                    f"the queue gate must never enter content/queue/.")
 
         # Authoring is model-only for every channel, with identical wording.
         # The old "equipped template" was fixed Psalm 121 night text and was
@@ -844,13 +906,36 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         # "runway healthy" for every caller, which is how a stalled queue looked
         # like a satisfied one.
         script_text = self.author_longform_script(next_candidate)
-        slug_match = re.search(r"^slug:\s*([a-zA-Z0-9\-]+)", script_text, re.MULTILINE)
-        slug = slug_match.group(1).strip() if slug_match else f"devotional-{next_candidate['id']}"
+        meta = job_front_matter(script_text)
+        slug = str(meta.get("slug") or "").strip()
+        if not slug:
+            # No guessed name. The old fallback here wrote
+            # `0040-devotional-0040.md` into the queue on 6 November when the model
+            # answered with `job_id:` and no `slug:`, which is how an unvalidatable
+            # job reached main.
+            raise BrainAuthoringError(
+                f"{caps.brand.display_name}: the model returned a script with no `slug:` "
+                f"line, so it has no queue identity. Nothing was written.")
         script_filename = f"{next_candidate['id']}-{slug}.md"
         script_path = QUEUE_DIR / script_filename
 
-        script_path.write_text(script_text, encoding="utf-8")
-        result = self.verify_and_stage(script_path)
+        # Validate in a directory the scheduler never globs, then move it in. The
+        # write used to happen first and every gate after it, so a refusal left the
+        # file sitting in content/queue/ — and the production workflow's
+        # "commit queue state" step, which stages everything under content/ on
+        # `always()`, carried that refusal into main.
+        staging_dir = QUEUE_DIR / ".incoming"
+        staging_dir.mkdir(parents=True, exist_ok=True)
+        staged_path = staging_dir / script_filename
+        staged_path.write_text(script_text, encoding="utf-8")
+        try:
+            staging_result = self.verify_and_stage(staged_path)
+        except BaseException:
+            staged_path.unlink(missing_ok=True)
+            raise
+        os.replace(staged_path, script_path)
+        staging_result.longform_path = script_path
+        result = staging_result
         print(f"[gemini-brain] Successfully authored & staged Job {result.job_id}: "
               f"{script_path.name} ({result.word_count} words, {result.scene_count} scenes).")
         return result
