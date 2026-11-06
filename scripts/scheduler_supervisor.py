@@ -31,6 +31,7 @@ import sys
 import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from typing import Any
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
@@ -351,25 +352,78 @@ FAILED_CONCLUSIONS = {"failure", "cancelled", "timed_out", "startup_failure"}
 #: brain attempt in that window was burned by an outage the repo could not fix.
 #: Once the budget is spent, such a slot keeps retrying on a timer — a fixed code
 #: fingerprint cannot describe an outage that ends by itself.
+#: Deliberately narrow. The evidence is now a run's full annotation text, which also
+#: carries runner boilerplate ("Node.js 20 is deprecated…"), so a loose marker such as
+#: "500" or "internal" would read an ordinary failure as an outage.
 UPSTREAM_MARKERS = ("service unavailable", "503", "high demand", "upstream capacity",
-                    "connection reset", "timed out", "timeout", "deadline")
+                    "unavailable —", "deadline exceeded", "timed out")
 UPSTREAM_RETRY_AFTER = timedelta(minutes=30)
 UPSTREAM_MAX_ATTEMPTS = 8
 
 
-def is_upstream_failure(entry: dict) -> bool:
-    """Did that attempt fail because the service was down rather than the code?"""
-    result = str(entry.get("result") or "").lower()
-    return any(marker in result for marker in UPSTREAM_MARKERS)
+def is_upstream_failure(entry: dict, evidence: str = "") -> bool:
+    """Did that attempt fail because the service was down rather than the code?
+
+    Two sources, because the ledger alone cannot answer it: `entry["result"]` records
+    what the *dispatch* said ("dispatched"), not why the run later failed. The first
+    version of this checked only that string and so never fired — the brain kept
+    sitting out the outage until the next day. `evidence` is the failed run's own
+    annotations, quoted from the API.
+    """
+    text = f"{entry.get('result') or ''} {evidence or ''}".lower()
+    return any(marker in text for marker in UPSTREAM_MARKERS)
 
 
-def upstream_retry_due(entry: dict, now: datetime) -> bool:
+def run_annotations(run_id: Any, _cache: dict[str, str] = {}) -> str:
+    """Every annotation on a run's jobs, as one searchable string (cached per pass)."""
+    from scripts.automation_monitor import repo_slug
+
+    key = str(run_id)
+    if key in _cache:
+        return _cache[key]
+    text = ""
+    try:
+        proc = subprocess.run(
+            ["gh", "api", f"repos/{repo_slug()}/actions/runs/{run_id}/jobs"],
+            capture_output=True, text=True, timeout=60)
+        jobs = json.loads(proc.stdout or "{}").get("jobs", [])[:4]
+        for job in jobs:
+            resp = subprocess.run(
+                ["gh", "api", f"repos/{repo_slug()}/check-runs/{job.get('id')}/annotations"],
+                capture_output=True, text=True, timeout=60)
+            for ann in json.loads(resp.stdout or "[]") or []:
+                if isinstance(ann, dict):
+                    text += f" {ann.get('title', '')} {ann.get('message', '')}"
+    except Exception:  # noqa: BLE001
+        text = ""
+    _cache[key] = text
+    return text
+
+
+def last_failure_evidence(workflow: str, runs: list[dict], after: str = "") -> str:
+    """The annotations of that workflow's most recent failure (empty when unknown)."""
+    failed = [r for r in runs
+              if r.get("path") == workflow and r.get("conclusion") in FAILED_CONCLUSIONS]
+    if after:
+        try:
+            cutoff = datetime.fromisoformat(str(after))
+            failed = [r for r in failed
+                      if datetime.fromisoformat(str(r.get("created_at") or "").replace("Z", "+00:00")) >= cutoff]
+        except (TypeError, ValueError):
+            pass
+    if not failed:
+        return ""
+    latest = max(failed, key=lambda r: str(r.get("created_at") or ""))
+    return run_annotations(latest.get("id"))
+
+
+def upstream_retry_due(entry: dict, now: datetime, evidence: str = "") -> bool:
     """May a spent slot be tried again because the outage may have ended?
 
     Cooldown-priced, not open-ended: at most one attempt per 30 minutes and at most
     8 in total, so an outage that lasts all day cannot hammer the queue either.
     """
-    if not is_upstream_failure(entry):
+    if not is_upstream_failure(entry, evidence):
         return False
     if int(entry.get("attempts", 0)) >= UPSTREAM_MAX_ATTEMPTS:
         return False
@@ -381,7 +435,7 @@ def upstream_retry_due(entry: dict, now: datetime) -> bool:
 
 
 def _failed_dispatches(state: dict, latest: dict[str, tuple[datetime, str | None]],
-                       now: datetime) -> list[tuple[str, str]]:
+                       now: datetime, evidence_lookup=None) -> list[tuple[str, str]]:
     """Ledger entries whose dispatched run has finished badly and can be retried."""
     from scripts.automation_monitor import active_quota_cooldown
 
@@ -409,7 +463,9 @@ def _failed_dispatches(state: dict, latest: dict[str, tuple[datetime, str | None
             # A slot whose attempts were burned by code that has since been fixed must
             # be retryable: the failures came from older code, not from the workflow.
             # Likewise an outage that has since cleared (see UPSTREAM_MARKERS).
-            if not code_changed_since(entry, workflow) and not upstream_retry_due(entry, now):
+            evidence = evidence_lookup(workflow, entry) if evidence_lookup else ""
+            if not code_changed_since(entry, workflow) and not upstream_retry_due(
+                    entry, now, evidence):
                 continue
         finished = latest.get(workflow)
         if finished is None:
@@ -626,7 +682,12 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
         result["failed"].append({"workflow": "-", "reason": f"cannot read schedule: {exc}"})
         return result
 
-    latest = _latest_runs(runs if runs is not None else _safe_runs())
+    run_history = runs if runs is not None else _safe_runs()
+    latest = _latest_runs(run_history)
+
+    def evidence_for(workflow: str, entry: dict) -> str:
+        """Why that workflow's most recent failure happened, from its own annotations."""
+        return last_failure_evidence(workflow, run_history, str(entry.get("at") or ""))
     crons_by_workflow = _cron_map()
 
     # Two kinds of work: slots that produced no run at all, and slots whose
@@ -634,7 +695,8 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
     # `due_but_missing` (a run exists after the slot) which is exactly how today's
     # produce failure would have been left for tomorrow.
     candidates = list(missing)
-    for workflow, slot in _failed_dispatches(state, latest, now):
+    for workflow, slot in _failed_dispatches(state, latest, now,
+                                             evidence_lookup=evidence_for):
         if (workflow, slot) not in candidates:
             candidates.append((workflow, slot))
     candidates = _newest_per_workflow(candidates)
@@ -695,7 +757,7 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
                           f"since the last attempt ({str(previous.get('code_id') or '?'):8} -> "
                           f"{code_fingerprint(workflow)}), so those failures came from "
                           f"older code")
-                elif upstream_retry_due(previous, now):
+                elif upstream_retry_due(previous, now, evidence_for(workflow, previous)):
                     # The outage, not the code, burned those attempts.
                     print(f"[supervisor] {workflow}: retrying after an upstream "
                           f"failure (attempt {attempts + 1}/{UPSTREAM_MAX_ATTEMPTS}, "
