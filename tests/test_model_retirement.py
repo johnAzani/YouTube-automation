@@ -30,7 +30,9 @@ ROOT = Path(__file__).resolve().parent.parent
 class TestTheBrainStartsWithALiveModel(unittest.TestCase):
     def test_the_default_is_not_a_retired_model(self):
         self.assertNotIn(DEFAULT_TEXT_MODEL, RETIRED_TEXT_MODELS)
-        self.assertEqual(DEFAULT_TEXT_MODEL, "gemini-3.8-flash")
+        # Moved from gemini-3.8-flash on 6 November: its free tier is ~20 requests a
+        # day and one brain pass needs more. See tests/test_model_quota_policy.py.
+        self.assertEqual(DEFAULT_TEXT_MODEL, "gemini-3.5-flash-lite")
 
     def test_a_retired_configured_model_never_wins(self):
         for retired in RETIRED_TEXT_MODELS:
@@ -54,7 +56,7 @@ class TestTheBrainStartsWithALiveModel(unittest.TestCase):
         brain = gemini_brain.GeminiBrain(api_key="", model="gemini-2.5-flash")
         chain = text_model_candidates(brain.model)
         first_live = next(m for m in chain if m not in RETIRED_TEXT_MODELS)
-        self.assertEqual(first_live, "gemini-3.8-flash")
+        self.assertEqual(first_live, DEFAULT_TEXT_MODEL)
 
 
 class TestRetirementIsLoud(unittest.TestCase):

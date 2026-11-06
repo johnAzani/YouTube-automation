@@ -1,8 +1,12 @@
 name: Read-only Gemini key diagnostic
 
-# This diagnostic requests model metadata only: it does not generate content,
-# inspect other secrets, or verify billing. It never prints the API key or API
-# response, and runs only from this trusted branch.
+# This diagnostic requests model metadata (free, no generation quota) and — since
+# 6 November 2026 — one one-token generation per candidate model, because metadata
+# cannot tell "exists" from "is serving": every model existed while gemini-3.8-flash
+# answered `503 UNAVAILABLE` for three and a half hours and the whole pipeline stood
+# still. The generation is capped at six one-token requests, runs only when this file
+# is pushed, and it never prints the API key or a raw response body. Billing is still
+# not verified here.
 # This was pinned to the branch of an Arena session that no longer exists, and its
 # job carried the same `if`, so it could not run on any branch that still does. A
 # diagnostic that cannot run is worse than none: it looks like coverage.
@@ -52,7 +56,6 @@ jobs:
               except Exception:
                   results.append('- Requested model metadata: request failed; no response details logged.')
           results.append('- Billing tier and project ownership: NOT verified by this test.')
-          results.append('- No speech generation or upload was attempted.')
           text = '\n'.join(results) + '\n'
           print(text)
           # Publish only fixed, sanitized outcome strings as check annotations;
@@ -61,4 +64,78 @@ jobs:
               print('::notice::' + result.removeprefix('- '))
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as summary:
               summary.write(text)
+          PY
+
+      - name: Which candidate models actually answer today (one token each)
+        # Six one-token requests, once per push of this file — the only way to learn
+        # that a model is refusing service before the 4:14am brain pass does.
+        #
+        # Deliberately stdlib-only. The first version installed requirements.txt and
+        # called the SDK probe; it died in pip and reported nothing but "exit code 1",
+        # which is the same silence this file exists to end. urllib cannot fail to
+        # install, and the answer we need (HTTP status per model) comes straight from
+        # the API.
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import urllib.error
+          import urllib.request
+
+          MODELS = [
+              "gemini-3.5-flash-lite",     # primary: ~500 free requests/day
+              "gemini-3.1-flash-lite",     # fallback 1
+              "gemini-3.6-flash",          # fallback 2 (retires 19 Nov 2026)
+              "gemini-3.8-flash",          # fallback 3 (~20/day)
+              "gemini-3.8-flash-tts",      # narration
+          ]
+          key = os.environ.get("GEMINI_API_KEY", "").strip()
+          if not key:
+              print("::error title=Gemini probe::GEMINI_API_KEY unavailable to this workflow")
+              raise SystemExit(0)
+
+          def probe(model):
+              body = json.dumps({
+                  "contents": [{"parts": [{"text": "ok"}]}],
+                  "generationConfig": {"maxOutputTokens": 1},
+              }).encode()
+              req = urllib.request.Request(
+                  f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+                  data=body,
+                  headers={"x-goog-api-key": key, "content-type": "application/json"},
+                  method="POST",
+              )
+              try:
+                  with urllib.request.urlopen(req, timeout=45) as resp:
+                      return resp.status, "SERVING"
+              except urllib.error.HTTPError as exc:
+                  detail = {
+                      404: "NOT AVAILABLE to this project",
+                      429: "QUOTA EXHAUSTED",
+                      503: "SERVICE UNAVAILABLE (capacity)",
+                      500: "SERVER ERROR",
+                      400: "BAD REQUEST (model rejects this payload)",
+                  }.get(exc.code, "")
+                  return exc.code, detail
+              except Exception as exc:
+                  return 0, f"request failed: {type(exc).__name__}"
+
+          rows, serving = [], 0
+          for model in MODELS:
+              code, detail = probe(model)
+              if code == 200:
+                  serving += 1
+              rows.append(f"{model:26} HTTP {code or '---'}  {detail}")
+              level = "notice" if code == 200 else "warning"
+              print(f"::{level} title=Gemini probe::{model} — HTTP {code or '---'} {detail}")
+          report = "| Model | Result |\n|---|---|\n" + "\n".join(
+              f"| `{r.split()[0]}` | {r[28:].strip()} |" for r in rows)
+          print("\n".join(rows))
+          if serving == 0:
+              print("::error title=Gemini probe::no probed model answered a one-token request")
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as summary:
+              summary.write("## Which Gemini models answer today\n\n" + report + "\n")
           PY
