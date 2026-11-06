@@ -142,7 +142,30 @@ which pauses the work until the Pacific reset, rather than be retried inside a s
    exist (free) and which serve (one token each), wired into
    `gemini-key-diagnostic.yml` so a push answers the question in annotations.
 
-## 7. What this does *not* prove, and how it will be proven
+## 7. Measured: which models answer, at 13:52Z on 6 November 2026
+
+Asked from CI with this repository's own `GEMINI_API_KEY` — one one-token request per
+model, run `42229011296` of `gemini-key-diagnostic.yml`:
+
+| Model | HTTP | Meaning |
+|---|---|---|
+| `gemini-3.5-flash-lite` | **200** | **serving** — the new primary |
+| `gemini-3.1-flash-lite` | **200** | serving — fallback 1 |
+| `gemini-3.6-flash` | **200** | serving — fallback 2 |
+| `gemini-3.8-flash` | **503** | capacity refusal — the model the pipeline was using |
+| `gemini-3.8-flash-tts` | **200** | serving — narration is fine |
+
+Three conclusions, none of them available from the logs before this:
+
+1. **The outage is model-specific, not project-wide.** The same key, in the same
+   minute, was refused by 3.8-flash and served by four other models. "Google is down"
+   was never the accurate diagnosis; "3.8-flash's pool is refusing" is.
+2. **The switch is verified, not hoped for.** `gemini-3.5-flash-lite` answered a real
+   request minutes before this policy was merged.
+3. **Speech was never blocked by capacity** — `gemini-3.8-flash-tts` served. Today's
+   missing video is a quota limit (10 requests/day), not an outage.
+
+## 8. What this does *not* prove, and how it will be proven
 
 Nothing above demonstrates that `gemini-3.5-flash-lite` is serving **right now**. Only
 the probe can answer that, and it runs with the real key in CI. If the probe reports
@@ -151,7 +174,7 @@ model-specific and the next lever is the model tier, not the model name — that
 billing decision for the owner, not a code one, and this repo's $0.00 lock means the
 pipeline idles rather than spends.
 
-## 8. Sources
+## 9. Sources
 
 - Gemini API models — <https://ai.google.dev/gemini-api/docs/models> (fetched 6 Nov 2026)
 - Gemini model versions & lifecycle —
