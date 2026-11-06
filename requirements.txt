@@ -10,7 +10,17 @@ pypdfium2>=4.0
 edge-tts>=6.1
 
 # Google Gemini voiceover / AI audio synthesis
-google-genai>=2.0.0
+#
+# PINNED BELOW THE NEXT MAJOR, deliberately. `google-genai 3.0.0` shipped on
+# 2026-11-06 at 02:29 UTC and the very first narration after it was installed
+# (08:05 UTC, produce run 42184629022) died with
+#   400 INVALID_ARGUMENT. Unknown name "speechMetadata" at contents[0].parts[0];
+#       Unknown name "speechConfig" at generation_config
+# i.e. the TTS request shape no longer matches what the service accepts. The same
+# code, same workflow, same model published at 21:51 UTC the night before on
+# 2.34.0. An unbounded major is not a dependency, it is an outage waiting for a
+# release: tests/test_dependency_pins.py fails if this bound is removed.
+google-genai>=2.34,<3
 
 # YouTube upload (Data API v3 — free, 100 uploads/day bucket)
 google-api-python-client>=2.100
