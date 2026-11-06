@@ -268,6 +268,34 @@ _INTERACTIONS_STALLED = False
 _BACKOFF = (5, 15, 45)
 
 
+_DRIFT_REPORTED = False
+
+
+def _schema_drift(exc: BaseException) -> bool:
+    """Is this the service rejecting our request *shape*?
+
+    "Unknown name X ... Cannot find field" means the payload no longer matches the
+    endpoint. It is never a quota problem and never fixes itself by retrying; it is
+    the SDK or the model contract moving. On 6 November 2026 this arrived as
+    `google-genai 3.0.0` (published 02:29 UTC) and took narration down mid-morning:
+    nothing in this repository had changed.
+    """
+    text = str(exc).lower()
+    return "unknown name" in text or "cannot find field" in text
+
+
+def _report_drift(exc: BaseException) -> None:
+    """Say what happened, once, where a human will see it."""
+    global _DRIFT_REPORTED
+    if _DRIFT_REPORTED:
+        return
+    _DRIFT_REPORTED = True
+    print(f"::error title=Gemini TTS rejected the request shape::{exc} — this is SDK or "
+          f"model-contract drift, not quota and not retryable. Check the google-genai "
+          f"pin in requirements.txt (>=2.34,<3 exists because 3.0.0 broke exactly this) "
+          f"and the TTS model name. Retrying will not fix it; the run stops here.")
+
+
 def _transient(exc: BaseException) -> bool:
     """Is this worth another attempt, or is it a real refusal?
 
@@ -550,8 +578,12 @@ def _synthesize_single_chunk(
                                             "audio/pcm;rate=24000") or "audio/pcm")
                     print(f"[gemini-tts] interactions still failing after retries: {last!r}",
                           flush=True)
+                    if _schema_drift(last or exc):
+                        _report_drift(last or exc)
                 else:
                     print(f"[gemini-tts] interactions.create({tts_model}) unavailable: {exc!r}")
+                    if _schema_drift(exc):
+                        _report_drift(exc)
 
     # 2. Try models.generate_content with AUDIO modality across candidate audio models
     candidate_models = [model]
@@ -580,6 +612,8 @@ def _synthesize_single_chunk(
             except Exception as exc:
                 last_exc = exc
                 err_msg = str(exc).lower()
+                if _schema_drift(exc):
+                    _report_drift(exc)
                 if "404" in err_msg or "not_found" in err_msg or "only supports text" in err_msg or "invalid_argument" in err_msg:
                     print(f"[gemini-tts] Model {cur_model} unavailable; no alternate model is permitted: {exc!r}")
                     break
