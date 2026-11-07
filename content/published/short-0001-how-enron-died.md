@@ -16,7 +16,7 @@ width: 720
 height: 1280
 duration_seconds: 52.17
 scenes_verified: 10
-thumbnail_attempts: 1
+thumbnail_attempts: 2
 thumbnail_pending: true
 thumbnail_error: "deferred_processing_unknown"
 ---
