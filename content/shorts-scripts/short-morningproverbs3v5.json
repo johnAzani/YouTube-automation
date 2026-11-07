@@ -1,0 +1,277 @@
+{
+  "key": "short-morningproverbs3v5",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "TRUST IN THE LORD",
+    "MORNING SUNRISE PRAYER"
+  ],
+  "poster": [
+    "THE MORNING ALTAR",
+    "PROVERBS 3:5-6",
+    "TRUST IN THE LORD",
+    "START YOUR DAY IN PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "serene lake at early golden dawn fog",
+    "sunbeams shining through morning mist forest",
+    "peaceful golden sunrise over calm ocean horizon",
+    "open window morning light soft breeze curtain",
+    "empty dirt trail through misty sunrise mountains",
+    "glorious golden sunrise clouds sky background"
+  ],
+  "scenes": [
+    {
+      "a": "Welcome this new morning and lay your heart open before the Lord.",
+      "img": "short-morningproverbs3v5-scene-01.jpg",
+      "kicker": "PROVERBS 3:5-6",
+      "sub": "WELCOME THE NEW MORNING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "As light rises over the horizon, receive His holy word from Proverbs 3:5-6:",
+      "img": "short-morningproverbs3v5-scene-02.jpg",
+      "kicker": "PROVERBS 3:5-6",
+      "sub": "RECEIVE HIS HOLY WORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Trust in the Lord with all your heart, and lean not on your own understanding; in all your ways acknowledge Him, and He shall direct your paths.",
+      "img": "short-morningproverbs3v5-scene-03.jpg",
+      "kicker": "PROVERBS 3:5-6",
+      "sub": "TRUST IN THE LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Heavenly Father, as this day begins, we surrender our plans to You. Forgive our urge to control what we cannot see.",
+      "img": "short-morningproverbs3v5-scene-04.jpg",
+      "kicker": "PROVERBS 3:5-6",
+      "sub": "SURRENDER YOUR PLANS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant us the stillness to trust Your guidance and the courage to follow Your lead. Walk before us today and align our steps with Your perfect will.",
+      "img": "short-morningproverbs3v5-scene-05.jpg",
+      "kicker": "PROVERBS 3:5-6",
+      "sub": "ALIGN OUR STEPS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Amen. Subscribe to The Morning Altar to begin every sunrise in prayer.",
+      "img": "short-morningproverbs3v5-scene-06.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "BEGIN EVERY SUNRISE IN PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Welcome this new morning and lay your heart open before the Lord."
+    ],
+    [
+      8,
+      17,
+      "As light rises over the horizon, receive His holy word from Proverbs 3:5-6:"
+    ],
+    [
+      17,
+      30,
+      "Trust in the Lord with all your heart, and lean not on your own understanding; in all your ways acknowledge Him, and He shall direct your paths."
+    ],
+    [
+      30,
+      42,
+      "Heavenly Father, as this day begins, we surrender our plans to You. Forgive our urge to control what we cannot see."
+    ],
+    [
+      42,
+      54,
+      "Grant us the stillness to trust Your guidance and the courage to follow Your lead. Walk before us today and align our steps with Your perfect will."
+    ],
+    [
+      54,
+      62,
+      "Amen. Subscribe to The Morning Altar to begin every sunrise in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "WELCOME THIS NEW MORNING",
+        "AND LAY YOUR HEART OPEN",
+        "BEFORE THE LORD"
+      ],
+      [
+        "NEW MORNING",
+        "HEART OPEN"
+      ],
+      "PROVERBS 3:5-6"
+    ],
+    [
+      8,
+      17,
+      [
+        "AS LIGHT RISES OVER HORIZON",
+        "RECEIVE HIS HOLY WORD NOW",
+        "FROM PROVERBS THREE FIVE SIX"
+      ],
+      [
+        "LIGHT RISES",
+        "HOLY WORD"
+      ],
+      "PROVERBS 3:5-6"
+    ],
+    [
+      17,
+      30,
+      [
+        "TRUST IN THE LORD WITH HEART",
+        "LEAN NOT ON OWN UNDERSTANDING",
+        "ACKNOWLEDGE HIM IN ALL WAYS",
+        "HE SHALL DIRECT YOUR PATHS"
+      ],
+      [
+        "TRUST",
+        "ALL YOUR HEART",
+        "DIRECT YOUR PATHS"
+      ],
+      "PROVERBS 3:5-6"
+    ],
+    [
+      30,
+      42,
+      [
+        "HEAVENLY FATHER AS DAY BEGINS",
+        "WE SURRENDER OUR PLANS TO YOU",
+        "FORGIVE URGE TO CONTROL ALL"
+      ],
+      [
+        "SURRENDER",
+        "OUR PLANS"
+      ],
+      "PROVERBS 3:5-6"
+    ],
+    [
+      42,
+      54,
+      [
+        "GRANT US STILLNESS TO TRUST",
+        "YOUR GUIDANCE AND COURAGE TODAY",
+        "ALIGN OUR STEPS WITH WILL"
+      ],
+      [
+        "STILLNESS",
+        "ALIGN OUR STEPS"
+      ],
+      "PROVERBS 3:5-6"
+    ],
+    [
+      54,
+      62,
+      [
+        "AMEN SUBSCRIBE TO MORNING ALTAR",
+        "BEGIN EVERY SUNRISE IN PRAYER"
+      ],
+      [
+        "AMEN",
+        "SUBSCRIBE"
+      ],
+      "PROVERBS 3:5-6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Welcome this new morning and lay your heart open before the Lord.",
+      "kind": "phrase",
+      "words": [
+        "NEW MORNING",
+        "HEART OPEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As light rises over the horizon, receive His holy word from Proverbs 3:5-6:",
+      "kind": "phrase",
+      "words": [
+        "LIGHT RISES",
+        "HOLY WORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Trust in the Lord with all your heart, and lean not on your own understanding; in all your ways acknowledge Him, and He shall direct your paths.",
+      "kind": "phrase",
+      "words": [
+        "TRUST IN THE LORD",
+        "DIRECT YOUR PATHS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, as this day begins, we surrender our plans to You. Forgive our urge to control what we cannot see.",
+      "kind": "phrase",
+      "words": [
+        "HEAVENLY FATHER",
+        "SURRENDER OUR PLANS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us the stillness to trust Your guidance and the courage to follow Your lead. Walk before us today and align our steps with Your perfect will.",
+      "kind": "phrase",
+      "words": [
+        "STILLNESS",
+        "TRUST YOUR GUIDANCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Subscribe to The Morning Altar to begin every sunrise in prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "SUNRISE IN PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 3:5-6"
+}

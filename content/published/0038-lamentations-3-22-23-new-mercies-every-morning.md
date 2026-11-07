@@ -2,7 +2,7 @@
 id: '0038'
 title: "Lamentations 3:22-23 Morning Prayer | The Morning Altar"
 slug: lamentations-3-22-23-new-mercies-every-morning
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -85,6 +85,12 @@ originality:
 seo_hook: "Declare Lamentations 3:22-23 at sunrise: His mercies are new every morning and great is His faithfulness today."
 category_id: '22'
 approved_by: brain
+published_on: "2026-11-07"
+published_at: "2026-11-07T16:44:33Z"
+youtube_video_id: "3tm3_lNvoGM"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — It Is of the Lord's Mercies That We Are Not Consumed (Lamentations 3:22)
