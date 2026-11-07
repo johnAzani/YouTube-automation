@@ -16,9 +16,16 @@
       "workflow": "metrics.yml"
     }
   ],
-  "generated_at": "2026-11-07T20:32:00.257031+00:00",
-  "last_run_at": "2026-11-07T20:31:19+00:00",
+  "generated_at": "2026-11-07T20:39:28.625685+00:00",
+  "last_run_at": "2026-11-07T20:39:24+00:00",
   "on_time": [
+    {
+      "late_minutes": 24,
+      "name": "automation-health",
+      "ran_at": "2026-11-07T20:38:46+00:00",
+      "slot": "2026-11-07T20:14:00+00:00",
+      "workflow": "automation-health.yml"
+    },
     {
       "late_minutes": 12,
       "name": "Autonomous Comment Replies",
