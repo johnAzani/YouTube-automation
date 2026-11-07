@@ -2,7 +2,7 @@
 id: '0045'
 title: Psalm 55:17 Midday Prayer | The Midday Watch
 slug: psalm-55-17-at-noon-will-i-pray
-status: approved
+status: published
 channel: prayer3
 privacy: public
 format: longform
@@ -76,6 +76,12 @@ originality:
   no_ai_persona: true
   source_notes: true
 originality_note: high-original-theological-commentary
+published_on: "2026-11-07"
+published_at: "2026-11-07T18:17:21Z"
+youtube_video_id: "xjiV3SHKsR4"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — The Noonday Hook & The Pause
