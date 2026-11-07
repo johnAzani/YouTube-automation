@@ -89,8 +89,9 @@ published_on: "2026-11-07"
 published_at: "2026-11-07T20:29:37Z"
 youtube_video_id: "Nq7a1yC4Rzw"
 metadata_revision: "selar-seo-v1"
-thumbnail_pending: true
-thumbnail_error: "not_requested"
+thumbnail_pending: false
+
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Rising up a Great While Before Day (Mark 1:35)
