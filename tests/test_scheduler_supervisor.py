@@ -606,6 +606,7 @@ class TestAWedgedRunIsNotAllowedToHoldTheLock(unittest.TestCase):
                  "started": "2026-11-02T16:15:34+00:00", "minutes": 149}]), \
              mock.patch.object(sup, "cancel_run", side_effect=lambda i: (calls.append(i), (True, "cancelled"))[1]), \
              mock.patch.object(sup, "dispatch", return_value=(True, "dispatched")), \
+             mock.patch.object(sup, "save_schedule_health"), \
              mock.patch.object(sup, "save_state"):
             result = sup.supervise(self.now(), runs=rows, state={})
         self.assertEqual(calls, [99])

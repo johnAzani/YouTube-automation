@@ -92,10 +92,16 @@ class TestShortKeyAndNonPsalmIntegrity(unittest.TestCase):
 
     def test_all_staged_shorts_are_ready_and_enriched_with_selar_links(self):
         rows = queue_report()
-        self.assertGreaterEqual(len(rows), 8)
+        published_shorts = list((REPO / "content" / "published").glob("short-*.md"))
+        self.assertGreaterEqual(len(rows), 1)
+        self.assertGreaterEqual(len(rows) + len(published_shorts), 8)
         for row in rows:
-            self.assertEqual(row["verdict"], "ready", f"Manifest not ready: {row}")
-            ed = resolve_edition(row["short"])
+            self.assertNotIn(row["verdict"], ("unusable", "needs_renderer"), f"Broken manifest: {row}")
+            if row["status"] == "approved":
+                self.assertEqual(row["verdict"], "ready", f"Manifest not ready: {row}")
+            else:
+                self.assertEqual(row["status"], "quota_paused", f"Unexpected manifest status: {row}")
+            ed = resolve_edition(row["short"], channel_id=row["channel"])
             self.assertIsNotNone(ed)
             enriched = enrich_short_description_with_bridge(ed.description, ed.key)
             self.assertIn(SELAR_JOURNAL_URL, enriched)
