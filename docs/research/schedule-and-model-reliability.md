@@ -5,6 +5,14 @@ comes from this repository — the Actions API, the supervisor's own ledger, the
 annotations, and the code that runs — not from a vendor blog. Where a source is
 external it is cited in §11 and §16.1.
 
+> **The one-paragraph version (§53):** prayer3 has no scripts, so the coverage test can
+> never be satisfied, so the supervisor dispatches `produce.yml -f channel=prayer3` on
+> every pass; each pass re-renders the same 882-word narration against a **10-request
+> per day** speech budget; when the budget is gone the endpoint returns 200 with no
+> audio and the pipeline reports "SDK drift, set GEMINI_TTS_MODEL"; and the health job
+> fails on the parity assertion and skips the step that would file the issue. Produce
+> has not succeeded since 5 Nov 13:14Z.
+>
 > **§42–§48 reproduce the central claims by execution** — the supervisor's own
 > functions, driven with a synthetic run list, build `gh workflow run produce.yml -f
 > channel=prayer3`, and its ledger counter goes 1-2-3-1 from one stale checkout.
@@ -1823,3 +1831,170 @@ for filename, _name, crons in workflow_files():
 print(live_model(), [(m, model_attempt_limit(m), m in TWENTY_A_DAY_MODELS)
                      for m in text_model_candidates()])
 ```
+
+## 49. Finding 34 — what production runs today, versus what this branch measures
+
+Every experiment above ran against this branch. Production runs `main`, and `main` is
+this branch **minus R1 and R2**:
+
+| Fact | `main` (production) | this branch |
+| :--- | :--- | :--- |
+| `state[key]["attempts"] = attempts + 1` from a stale read | `main:781` | `:796` |
+| coverage test returns `"every channel already published for this slot"` | `main:526` | same |
+| `_attempt_cap` produce 7 / brain 3 | `main:116` | same |
+| `MAX_CALLS_PER_RUN = 40`, per channel job | `main:202` | same (`:651`, `:812`) |
+| `DEPRECATED_TEXT_MODELS = ("gemini-3.7-flash",)` while 3.7 stays in the chain | `main:192` | same |
+| attempts per model | **2 for every model** (`main:587`) | 3 for the two 500/day models, 2 for the rest |
+| requests for one fully-rejected logical call | **10** (`5 models × 2`) | 12 |
+| quota-aware stop, salvage, retirement skip | absent | R1 |
+
+So §42–§48 are production facts, with one correction: **the cost of a rejected script
+is 10 requests in production today, not 12.** R1 raises it to 12 because it grants a
+third attempt to the two models that have 500 requests a day — which is the wrong way
+round, and worth watching when R1 lands: the cheap models can afford attempts, the
+expensive ones cannot.
+
+## 50. Finding 35 — the real ceiling is ten speech requests a day, and it is spent before the work starts
+
+`pipeline/gemini_tts.py` states it in a comment (`:84–:99`): *"The free tier allows 10
+generateContent requests per day for `gemini-3.8-flash-tts`"*, which is why chunks were
+raised from 450 to 4,000 characters. The API says the same thing, in public, every time
+it refuses:
+
+```
+429 RESOURCE_EXHAUSTED
+  quotaMetric: generativelanguage.googleapis.com/generate_content_free_tier_requests
+  quotaId:     GenerateRequestsPerDayPerProjectPerModel-FreeTier
+  quotaValue:  10        model: gemini-3.8-flash-tts
+  retryDelay:  81935s    → please retry in 22h45m35s
+```
+
+Three refusals, three days, read straight off the annotations:
+
+| When (UTC) | `retryDelay` | Implied reset | Budget gone by |
+| :--- | :--- | :--- | :--- |
+| 5 Nov **00:26:54** | `7h33m5s` | 08:00Z | **before 00:27** — 16 hours into the window |
+| 6 Nov **08:36:25** | `23h23m34s` | 08:00Z next day | **36 minutes after reset** |
+| 7 Nov **09:14:24** | `22h45m35s` | 08:00Z next day | **by 08:29** (see §51) |
+
+The budget is two requests for a long-form (882 words ≈ 2 chunks at 4,000 chars) and one
+for a Short. A channel-day is three. The whole plan — three channels, one long-form and
+one Short each — is nine of ten, with **one** request of slack for retries.
+
+And the same script keeps being rendered:
+
+| Day | Length | Result |
+| :--- | :--- | :--- |
+| 5 Nov 00:23:52 | 882 words | 429 after 182.3 s |
+| 6 Nov 08:36:20 | 882 words | 429 after 4.9 s |
+| 7 Nov 08:29:06 | 882 words | no audio after 4.6 s |
+| 7 Nov 08:46:16 | 882 words | no audio after 7.5 s |
+| 7 Nov 09:14:21 | 882 words | 429 after 2.5 s |
+
+**Five attempts at one piece of narration, across three days.** Each attempt is two
+requests against a budget of ten. The pipeline does not know it is re-rendering the same
+text, because it never records that it spent anything.
+
+## 51. Finding 36 — one condition, three error shapes, and the label is wrong in two of them
+
+The same exhausted budget surfaces as three different exceptions, and only one of them
+is named correctly:
+
+| Shape | Text | What the code says | True? |
+| :--- | :--- | :--- | :--- |
+| 429 `RESOURCE_EXHAUSTED` | explicit quota metric, `quotaValue: 10` | `GeminiQuotaExceededError`, notes the reset | ✅ |
+| **200 with no audio** | `mime_types=none`, no text | `_report_drift`: *"model-contract drift, not quota and not retryable. Set GEMINI_TTS_MODEL or update DEFAULT_MODEL"* | ❌ |
+| 400 `INVALID_ARGUMENT` | `Unknown name "speechMetadata"`, `Unknown name "speechConfig"` | bubbles up as a raw `ClientError` | ❌ |
+
+The middle row is the one that matters. Forty-five minutes apart, at 08:29 and 09:14 on
+7 November, the **same request** against the **same model** returned first an empty 200
+and then an explicit 429. They are one condition. The 200 case is what a spent budget
+looks like when the Interactions endpoint answers politely, and it is being reported to
+the operator as SDK drift with instructions to change the model name — the one action
+that cannot help, and which would break a working pipeline if taken.
+
+This breaks the rule this work is held to: **a quota failure must never be reported as a
+format failure.** It also mis-times the recovery: the API hands over `retryDelay`
+(81,935 s, to the second) and nothing in this repository reads `RetryInfo` — the only
+references are inside `google/api_core`. `calculate_next_quota_reset_utc()` is then used
+only on the path that already knows it is a quota error.
+
+The third row is a separate defect: the `generateContent` fallback at `:648` builds
+`types.SpeechConfig`, a field the endpoint rejects by name. That path fails 100 % of the
+time (1.3 s, 6 Nov 08:05:20), so it is not a fallback — it is a guaranteed failure that
+only adds a second, more confusing error to the first.
+
+The fix is small and offline-testable: count speech requests per (project, model, day)
+in the same state file the supervisor already writes; when a response carries no audio
+**and** the day's counter is at the cap, raise `GeminiQuotaExceededError` with the
+counter as evidence; delete the `generateContent` fallback or fix its field names.
+
+## 52. Finding 37 — produce has not succeeded in 44 hours, and the health job cannot say why
+
+| Fact | Value |
+| :--- | :--- |
+| last successful produce run | **5 Nov 13:14Z** (`42033981791`, 27.9 min) |
+| produce runs since 6 Nov 07:00 | 12 — 11 failure, 1 cancelled, **0 success** |
+| 6 Nov, 08:00–08:31 | five produce failures in 31 minutes, all inside the 882-word render |
+| automation-health, last 60 runs | **12 consecutive failures**, last success 6 Nov 15:33Z |
+| those 60 runs | 45 `push`, 12 `workflow_run`, 3 `schedule` |
+
+Every health run inspected stops at the same step:
+
+```
+5 Are the crons firing?:            success
+6 Prove the channels are in parity: failure
+7 File or close the stall issue:    skipped
+```
+
+Step 7 carries `if: github.event_name != 'push'` and nothing else — no `always()` — so a
+failing parity step skips the one step whose job is to say what is wrong. The run goes
+red and reports **a step name**, which is precisely the failure mode §45 describes from
+the other side: three faces of one content gap, and the alarm that could name it is
+switched off by the alarm it would explain.
+
+The 45 push-triggered runs are the second half of the problem: every chore commit
+(`[skip ci]` does not prevent `push` events for the job's own paths) re-installs
+dependencies and re-fails, so the one genuinely informative check is drowned in its own
+retriggers.
+
+## 53. Round 5 conclusion — the pump and the ceiling multiply
+
+Read the three findings together and the last 44 hours have a single cause:
+
+1. prayer3 has no scripts, so the coverage test can never be satisfied (§42), so the
+   supervisor dispatches `produce.yml -f channel=prayer3` on every pass (§32, §42);
+2. every one of those runs renders the **same** 882-word narration, two speech requests
+   each, against a budget of ten (§50);
+3. when the budget is gone the endpoint answers 200-with-no-audio, the pipeline calls it
+   SDK drift and stops the run with the wrong remedy (§51);
+4. the health job that could report any of this fails on an unrelated parity assertion
+   and skips the step that files the issue (§52).
+
+Nothing here is a hosting, checkout, runner or bandwidth problem. It is one missing
+content input, amplified by a dispatch loop with no memory, into a 10-request ceiling
+being spent before the day's work begins.
+
+**Revised order.** R16 still leads, because it is the amplifier. It is now followed not by
+R12 but by the speech-budget fix (R19 below), because a correct dispatch loop still only
+buys three requests of headroom:
+
+| # | Item | Why now |
+| :-- | :--- | :--- |
+| **R16** | coverage test only over channels the plan can serve; empty channel = supply fault | §42 — proven by execution |
+| **R19** | speech-request ledger per (project, model, day); empty audio at cap = quota, not drift; drop the dead `generateContent` fallback | §50, §51 — the actual blocker |
+| **R5** | cold start: `max_authors = shortfall` for a channel at zero | §44 |
+| **R12** | preflight must not spend completion quota | §22 |
+| **R3** | per-day request ledger for the brain too | §43 |
+| **R9** | break the watcher loop | E5 |
+| **R10** | API-derived dispatch dedupe | E4 |
+| **R20** | health: `if: always()` on the filing step, `continue-on-error` on parity, and no push trigger | §52 |
+| remaining | R8″, R13, R17, R18, R2a, R11, R14, R15 | unchanged |
+
+**Predictions.** (1) Adding six scripts to `content/queue/` for prayer3 turns the parity
+step green, stops the `channel=prayer3` dispatches, and produce's next run renders
+without a 429 — all three at once, no code changed. (2) A speech-request counter alone,
+with no other change, will make the next day's first failure say *quota* — and the run
+after it will still fail, because nothing yet stops the second dispatch from trying.
+(3) The `generateContent` fallback has never once returned audio; every 400 in the run
+list that names `speechConfig` is it.
