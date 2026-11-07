@@ -16,8 +16,8 @@
       "workflow": "metrics.yml"
     }
   ],
-  "generated_at": "2026-11-07T20:54:56.572510+00:00",
-  "last_run_at": "2026-11-07T20:54:14+00:00",
+  "generated_at": "2026-11-07T20:56:13.008784+00:00",
+  "last_run_at": "2026-11-07T20:55:30+00:00",
   "on_time": [
     {
       "late_minutes": 24,
@@ -64,7 +64,7 @@
     {
       "late_minutes": 54,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-07T19:41:00+00:00",
+      "ran_at": "2026-11-07T19:41:30+00:00",
       "slot": "2026-11-07T18:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
