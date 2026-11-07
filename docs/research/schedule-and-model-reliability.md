@@ -2444,3 +2444,162 @@ requests were just spent. The same idea, one directory over, is the whole fix.
 3. Removing `pushed:`/`workflow_run` triggers from automation-health (R20) will not
    change a single failure — 12 of 12 are the parity assertion — but it will stop the
    alarm from being dismissed as noise, which is the only reason it is still unread.
+
+---
+
+# Round 8 — the pause is undone by the act of looking
+
+R23 and R25 are implemented on this branch (§73). This round is what the code says once
+narration stops being the only question.
+
+## 67. Finding 48 — a paused script is re-armed by the next selection, so the pause lasts zero runs
+
+The long-form path *does* keep quota state, and it is written well. Annotation from
+run `42109221833`, 5 November 21:04:
+
+> *"Gemini quota is exhausted; `0015-psalm-91-5-6-deliverance-from-terror-by-night.md` is
+> paused until 2026-11-06T08:00:00+00:00 UTC and nothing was uploaded."*
+
+That is the sentence this repository should be able to say about every failure: the item,
+the reason, the time it can be tried again, and the fact that nothing went out. The
+script carries `status: quota_paused` and a `paused_until`.
+
+But the pause is released by **selection**, not by a scheduler:
+
+```
+$ python -c "from pipeline.run import select_jobs; print(select_jobs(next_flag=True))"
+[run] Quota reset time passed (2026-11-07T08:00:00+00:00). Auto-unpausing
+      0015-psalm-91-5-6-deliverance-from-terror-by-night.md...
+[run] skip 0038-lamentations-3-22-23-new-mercies-every-morning.md: channel=prayer2
+      (this run targets secret-place)
+select_jobs -> ['content/queue/0015-psalm-91-5-6-deliverance-from-terror-by-night.md']
+```
+
+Two things fall out of four lines of output. First: **the first produce run after 08:00Z
+un-pauses the script and immediately re-renders it** — the quota resets at 08:00Z and the
+pauses are written to expire at 08:00Z, so the pause protects exactly nothing. The script
+is paused until the moment it is allowed to fail again, and the next look releases it.
+
+Second: the selector is channel-aware (`skip … channel=prayer2 (this run targets
+secret-place)`), which confirms §57 from the other side — a run with no `-f channel=`
+serves secret-place, and the twenty-five unattributed scripts are exactly what it finds.
+
+So the same 882-word script is not stubborn. It is *restored*: paused at 21:04 on
+5 November, released at 08:00 the next morning, attempted at 08:13, 08:26 and 08:31,
+refused by the model three times, released again the next morning, attempted at 08:29 and
+08:46. Five attempts at one narration across three days, each two requests, and the
+mechanism that made it repeatable is the reset time being the same instant as the
+release time.
+
+## 68. Finding 49 — only a quota refusal changes the script's state; silence changes nothing
+
+| Failure | Raises | Writes state? | Next pass |
+| :--- | :--- | :--- | :--- |
+| `429` on the day's ten | `GeminiQuotaExceededError` | `status: quota_paused`, `paused_until` | tries again at the reset |
+| `200` with no audio | `RuntimeError` | **nothing** | tries again immediately |
+
+The row with no state is the row that has repeated every day since 5 November. A refusal
+that leaves the script approved is a refusal the next dispatch cannot see — and the
+supervisor's own ledger (§54) is keyed by workflow and slot, never by script, so nothing
+downstream can connect "0015 has been attempted five times" to anything.
+
+This is the asymmetry §65 found between the Shorts path and the long-form path, seen from
+the other end: the Shorts path at least writes `quota_paused` on a quota error; the
+long-form path writes `quota_paused` on a quota error *and nothing at all* on the failure
+that actually happens.
+
+## 69. Finding 50 — the queue census, and what is in it that will never publish
+
+```
+content/queue/            27 files
+  publishable (secret-place)  19
+  status: draft                5   ← 0003–0007, finance, never approved
+  status: quota_paused         1   ← 0015, released by the next look
+  channel: prayer2             2   ← 0038, 0039
+  channel: prayer3             0
+```
+
+The five finance drafts are the oldest files in the queue and have never been approved.
+They are not blocking anything — the selector filters on `status` — but they are the
+reason a naive count ("27 scripts queued!") reads as healthy while the channel that is
+starving has none. Any dashboard built on `ls content/queue | wc -l` will be wrong by
+27 minus 19.
+
+## 70. Finding 51 — duplicate release tickets, and the reason there are only two
+
+`_open_release_ticket` returns early for `privacy == "public"`, so the normal path
+produces no ticket at all. When an upload does land non-public, the ticket is opened with
+no dedupe key:
+
+```
+#250  Release ticket: Psalm 5 Morning Prayer | Begin Your Day in God's Presence
+#255  Release ticket: Psalm 5 Morning Prayer | Begin Your Day in God's Presence
+```
+
+Two runs, one video, two identical open issues four days apart. It is the smallest defect
+in this document — but it is the same shape as everything else here: an action taken
+per-run with no memory of the previous run. `video_id` is in hand at the call site and
+would make it idempotent.
+
+## 71. Finding 52 — what the next dispatch will actually do
+
+With R23 and R25 on this branch, the next produce dispatch will:
+
+1. select `0015` (shown above, executed), un-pausing it at the same time;
+2. ask Gemini for 5,237 characters in two chunks — and get the empty `200` again, because
+   nothing about the request has changed;
+3. catch it, log that Gemini produced no audio, and narrate with **edge-tts** instead;
+4. write `narration.json` with `engine: edge-tts`, keyed to `edge-tts` so a future Gemini
+   run re-synthesises rather than reusing the take;
+5. spend **zero** Gemini speech requests, where the same path has spent two per attempt
+   since 5 November;
+6. reach the alignment, asset, encode and upload stages — which is the first time in three
+   days any run has got that far.
+
+Steps 5 and 6 are the test of this document. If the next run publishes a video narrated by
+`edge-tts`, then every finding from §50 onwards was downstream of an unreachable fallback,
+and the remaining list (R21, R16, R19, R24, R5) is about *quality and discipline*, not
+about being able to publish at all.
+
+## 72. Round 8 ranking
+
+| # | Item | Status |
+| :-- | :--- | :--- |
+| **R23** | free-engine fallback in the prayer path | **implemented** (`3a73cdf`) |
+| **R25** | the same fallback for Shorts | **implemented** (`975dc55`) |
+| **R21** | stamp + verify `channel:` at authoring | open — the root cause (§57) |
+| **R26** | a silent refusal must set state, and `select_jobs` must not release a pause it cannot honour | open — §67, §68 |
+| **R16** | coverage test only over servable channels | open — §42 |
+| **R19** | speech-request counter, honest labels | open — §55 |
+| **R24** | `TTS_CHUNK_CHARS=2000` experiment | open — §62 |
+| **R5**, **R20**, **R22**, **R12**, **R3** | cold start, health `always()`, inventory gates, preflight, brain ledger | open |
+
+**Prediction.** The first produce run after 14:14Z today publishes a long-form with
+`tts_engine: edge-tts` and `0015`'s status moves to published — and `automation-health`
+stays red, because prayer3 still has no scripts. One of those two is a fix; the other is
+content.
+
+---
+
+## 73. What shipped with this round
+
+```
+3a73cdf  R23: let the prayer path fall back to the free engine instead of going silent
+975dc55  R25: the Shorts path had the same hole, so give it the same second engine
+```
+
+- `pipeline/tts.py`: `synthesize_edge(text, out_path, voice)` — the free engine as a named
+  function, returning `(engine, word_times)`. `synthesize()` now calls it instead of
+  carrying the same six lines inline.
+- `pipeline/prayer_pipeline.py`: `_narrate(doc, audio)` — try Gemini, re-raise
+  `GeminiQuotaExceededError` untouched, otherwise speak with edge-tts and report which
+  engine spoke. `narration.json` gains `engine`, and a fallback take is cached under its
+  own engine so a run with Gemini available re-synthesises. The result record no longer
+  hardcodes `'tts_engine': 'gemini-api'`.
+- `pipeline/short_release.py`: `_synthesise_narration(text, audio)` — same rule; if nothing
+  can speak it returns `placeholder` and the caller keeps its original "refusing to render
+  a silent Short" refusal.
+- Six offline tests (three each) covering: no-audio falls back and asks Gemini exactly
+  once; a spent allowance propagates and never reaches edge-tts; the engine is reported,
+  not assumed; a placeholder is silence, not a voice. Full suite: **1050 passed**
+  (one pre-existing content-inventory assertion deselected — see R22).
