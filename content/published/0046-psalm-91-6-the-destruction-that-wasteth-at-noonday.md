@@ -84,12 +84,11 @@ originality_note: Original theological commentary incorporating Charles Spurgeon
   The Treasury of David and Matthew Henry's Commentary on the Whole Bible, KJV verbatim
   quotations.
 published_on: "2026-11-07"
-published_at: "2026-11-07T19:25:00Z"
+published_at: "2026-11-07T20:35:38Z"
 youtube_video_id: "GeZ3liNIxag"
 metadata_revision: "selar-seo-v1"
-thumbnail_pending: false
-
-thumbnail_revision: "ctr-v3-cinema"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — The Noonday Hook & The Pause
