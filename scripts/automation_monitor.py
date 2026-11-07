@@ -407,6 +407,7 @@ def classify(report: MonitorReport, runs: list[dict], now: datetime | None = Non
                           max_gap=cron_gap(crons), effect=EFFECTS.get(filename, ""))
         mine = sorted(by_workflow.get(filename, []),
                       key=lambda r: r.get("created_at") or "", reverse=True)
+        auto.last_edited = last_edit(filename)
         if mine:
             auto.last_run = _parse(mine[0].get("created_at"))
             auto.last_conclusion = mine[0].get("conclusion")
@@ -415,9 +416,18 @@ def classify(report: MonitorReport, runs: list[dict], now: datetime | None = Non
             recent = [r for r in mine
                       if _parse(r.get("created_at")) and now - _parse(r["created_at"]) <= timedelta(days=14)]
             auto.runs_14d = len(recent)
-            auto.failures_5 = sum(1 for r in recent[:5] if r.get("conclusion") == "failure")
-
-        auto.last_edited = last_edit(filename)
+            window = recent[:5]
+            if auto.last_edited is not None:
+                post_edit = [
+                    r for r in recent
+                    if (_parse(r.get("created_at")) or datetime.min.replace(tzinfo=timezone.utc)) >= auto.last_edited
+                ]
+                if post_edit:
+                    # A landed fix has run at least once: judge flakiness on the
+                    # post-fix runs so superseded pre-fix failures do not keep a
+                    # repaired workflow pinned to FLAKY.
+                    window = post_edit[:5]
+            auto.failures_5 = sum(1 for r in window if r.get("conclusion") == "failure")
         auto.last_slot = prev_occurrence(crons, now)
         # A slot is only missed once the grace window after it has closed: GitHub's
         # scheduler is routinely late, and crying wolf 20 minutes in would be noise.

@@ -653,6 +653,42 @@ class TestAWedgedRunIsNotAllowedToHoldTheLock(unittest.TestCase):
         data = yaml.safe_load((root / "produce.yml").read_text(encoding="utf-8"))
         self.assertEqual(data["concurrency"]["group"], "content-state")
 
+    def test_a_just_dispatched_slot_is_not_duplicated_within_spawn_grace(self):
+        """7 Nov 16:33 -> 16:38 race: while a newly dispatched run is spawning or in flight, never double-dispatch."""
+        now = datetime(2026, 11, 7, 16, 34, 20, tzinfo=UTC)
+        slot = "2026-11-07T14:14:00+00:00"
+        history = pad_history(
+            [run("produce.yml", now - timedelta(hours=5))],
+            now,
+        )
+        state = {
+            f"produce.yml@{slot}": {
+                "at": (now - timedelta(seconds=24)).isoformat(),
+                "attempts": 1,
+                "code_id": sup.code_fingerprint("produce.yml"),
+                "attempted_channels": ["prayer3"],
+            }
+        }
+        with mock.patch.object(sup, "published_channels_since", return_value={"secret-place", "prayer2"}):
+            out = sup.supervise(now, history, dry_run=True, state=state)
+        self.assertEqual(out["dispatched"], [])
+        self.assertTrue(any("waiting for its dispatched run" in r["reason"] for r in out["skipped"]))
+
+    def test_an_inflight_run_blocks_failed_dispatch_retry_too(self):
+        now = datetime(2026, 11, 2, 8, 0, tzinfo=UTC)
+        history = pad_history(
+            [
+                run("produce.yml", now - timedelta(minutes=30), conclusion="failure"),
+                run("produce.yml", now - timedelta(minutes=2), status="queued", conclusion=None),
+            ],
+            now,
+        )
+        state = {"produce.yml@2026-11-02T06:14:00+00:00": {"at": "2026-11-02T07:00:00+00:00", "attempts": 1}}
+        with mock.patch.object(sup, "published_channels_since", return_value={"secret-place"}):
+            out = sup.supervise(now, history, dry_run=True, state=state)
+        self.assertNotIn("produce.yml", [r["workflow"] for r in out["dispatched"]])
+
+
 
 if __name__ == "__main__":
     unittest.main()

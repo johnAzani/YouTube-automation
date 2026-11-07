@@ -87,5 +87,17 @@ class Config:
         for d in (OUTPUT_DIR, ASSET_CACHE_DIR, PUBLISHED_DIR):
             d.mkdir(parents=True, exist_ok=True)
 
+    def refresh(self) -> None:
+        """Reload channel and credential fields from `os.environ`."""
+        self.channel_id = os.environ.get("CHANNEL_ID", "secret-place")
+        self.channel_name = os.environ.get("CHANNEL_NAME", "")
+        self.channel_handle = os.environ.get("CHANNEL_HANDLE", "")
+        self.expected_youtube_channel_id = os.environ.get("YOUTUBE_EXPECTED_CHANNEL_ID", "")
+        self.gemini_api_key = os.environ.get("GEMINI_API_KEY", "")
+        self.youtube_client_id = os.environ.get("YOUTUBE_CLIENT_ID", "")
+        self.youtube_client_secret = os.environ.get("YOUTUBE_CLIENT_SECRET", "")
+        self.youtube_refresh_token = os.environ.get("YOUTUBE_REFRESH_TOKEN", "")
+        self.playlist_id = os.environ.get("YOUTUBE_PLAYLIST_ID", "")
+
 
 CONFIG = Config()

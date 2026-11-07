@@ -744,7 +744,9 @@ class GeminiBrain:
             # returns the roadmap order unchanged.
             try:
                 from .performance_feedback import load_feedback_report, rank_candidates
-                eligible = rank_candidates(eligible, load_feedback_report())
+                eligible = rank_candidates(
+                    eligible, load_feedback_report(channel_id=self.channel_id)
+                )
             except Exception as exc:  # noqa: BLE001
                 # Feedback is an optimisation, never a gate: a missing or malformed
                 # artifact must not stop the queue from being replenished.

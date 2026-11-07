@@ -197,16 +197,44 @@ def add_video_to_playlist(
         return False
 
 
-def collect_published_videos() -> list[dict]:
-    """Collect published videos from content/published/."""
-    videos = []
-    # Always include live anchor video
-    videos.append({
-        "video_id": "7RDX0fbIOtQ",
-        "title": "Psalm 91: The Complete Prayer of Divine Protection Before You Sleep",
-        "tags": ["psalm 91", "prayer of protection", "sleep prayer", "the secret place"],
-        "niche": "faith and prayer",
-    })
+def playlists_for_channel(channel_id: str | None = None) -> dict[str, PlaylistSpec]:
+    """Return the official series playlists configured for `channel_id`."""
+    from .channel_capabilities import brand_for
+    from .channels import normalize_channel_id
+
+    eff = normalize_channel_id(channel_id or CONFIG.channel_id)
+    brand = brand_for(eff)
+    if not brand.series_playlists:
+        return dict(OFFICIAL_PLAYLISTS)
+    return {
+        key: PlaylistSpec(
+            key=key,
+            title=title,
+            description=desc,
+            privacy_status="public",
+            matching_keywords=list(kws),
+        )
+        for key, title, desc, kws in brand.series_playlists
+    }
+
+
+def collect_published_videos(channel_id: str | None = None) -> list[dict]:
+    """Collect published videos from content/published/ scoped to `channel_id`."""
+    from .channel_capabilities import brand_for
+    from .channels import normalize_channel_id
+
+    eff = normalize_channel_id(channel_id or CONFIG.channel_id)
+    brand = brand_for(eff)
+    videos: list[dict] = []
+    anchor_id = ""
+    if brand.anchor_video:
+        anchor_id, anchor_title, anchor_tags = brand.anchor_video
+        videos.append({
+            "video_id": anchor_id,
+            "title": anchor_title,
+            "tags": list(anchor_tags),
+            "niche": "faith and prayer",
+        })
 
     if not PUBLISHED_DIR.exists():
         return videos
@@ -214,8 +242,12 @@ def collect_published_videos() -> list[dict]:
     for pub_file in sorted(PUBLISHED_DIR.glob("*.md")):
         try:
             doc = parse_script(pub_file)
+            if doc.channel != eff:
+                continue
+            if str(doc.meta.get("youtube_status", "")).strip() == "deleted_or_missing":
+                continue
             vid = doc.meta.get("youtube_video_id") or doc.meta.get("video_id")
-            if vid and vid != "7RDX0fbIOtQ":
+            if vid and str(vid).strip() != anchor_id:
                 videos.append({
                     "video_id": str(vid).strip(),
                     "title": doc.title,
@@ -228,21 +260,32 @@ def collect_published_videos() -> list[dict]:
     return videos
 
 
-def sync_all_series_playlists(youtube: Any = None, dry_run: bool = False) -> dict:
+def sync_all_series_playlists(
+    youtube: Any = None,
+    dry_run: bool = False,
+    channel_id: str | None = None,
+) -> dict:
     """Audit and sync all official channel playlists with published videos."""
-    videos = collect_published_videos()
+    from .channel_capabilities import brand_for
+    from .channels import normalize_channel_id
+
+    eff = normalize_channel_id(channel_id or CONFIG.channel_id)
+    brand = brand_for(eff)
+    playlists = playlists_for_channel(eff)
+    videos = collect_published_videos(channel_id=eff)
     sync_report: dict[str, Any] = {
+        "channel": eff,
         "playlists_synced": 0,
         "videos_assigned": 0,
         "playlists": {},
     }
 
     print("=" * 72)
-    print("THE SECRET PLACE — OFFICIAL SERIES PLAYLIST AUTOPLAY SYNC")
+    print(f"{brand.display_name.upper()} ({eff}) — OFFICIAL SERIES PLAYLIST AUTOPLAY SYNC")
     print("=" * 72)
     print(f"[*] Found {len(videos)} published channel video(s) to organize.")
 
-    for key, spec in OFFICIAL_PLAYLISTS.items():
+    for key, spec in playlists.items():
         pl_id = ensure_playlist_exists(youtube, spec, dry_run=dry_run)
         sync_report["playlists"][key] = {
             "title": spec.title,

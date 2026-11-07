@@ -371,6 +371,30 @@ goes before you until evening falls and brings your labor to peaceful completion
             self.assertIn(token_var, monitor_text, f"monitor.yml missing {token_var} for {cid}")
             self.assertIn(token_var, set_thumb_text, f"set-thumbnail.yml missing {token_var} for {cid}")
 
+    def test_growth_community_and_supervisor_workflows_are_multi_channel_and_push_safe(self):
+        """Pin #1 (3-channel growth-autopilot) and #2 (isolated push & fresh-main supervisor)."""
+        from pipeline.channels import CHANNELS
+
+        growth_path = ROOT / ".github" / "workflows" / "growth-autopilot.yml"
+        growth_text = growth_path.read_text(encoding="utf-8")
+        growth = yaml.safe_load(growth_text)
+        self.assertIn("plan", growth["jobs"])
+        self.assertEqual(growth["jobs"]["growth"]["strategy"]["max-parallel"], 1)
+        for cid, profile in CHANNELS.items():
+            prefix = (profile.secret_prefix or "").strip().rstrip("_")
+            token_var = f"{prefix}_YOUTUBE_REFRESH_TOKEN" if prefix else "YOUTUBE_REFRESH_TOKEN"
+            self.assertIn(token_var, growth_text, f"growth-autopilot.yml missing {token_var} for {cid}")
+
+        community_text = (ROOT / ".github" / "workflows" / "community.yml").read_text(encoding="utf-8")
+        self.assertIn("git fetch --quiet origin main", community_text)
+        self.assertNotIn("git add content/community/\n", community_text)
+        self.assertNotIn("\n          git push\n", community_text)
+
+        sup_text = (ROOT / ".github" / "workflows" / "scheduler-supervisor.yml").read_text(encoding="utf-8")
+        self.assertIn("git pull --ff-only origin main || true", sup_text)
+        self.assertIn("/tmp/supervisor-ledger", sup_text)
+
+
 
 if __name__ == "__main__":
     unittest.main()

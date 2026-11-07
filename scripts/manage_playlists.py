@@ -17,14 +17,18 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+from pipeline.channels import add_channel_arg, apply_channel_env
 from pipeline.config import CONFIG
 from pipeline.playlists import sync_all_series_playlists
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="YouTube Series Playlist Management Engine")
+    add_channel_arg(parser)
     parser.add_argument("--dry-run", action="store_true", help="Simulate playlist updates without API calls")
     args = parser.parse_args()
+    channel_id = apply_channel_env(args.channel)
+    CONFIG.refresh()
 
     youtube = None
     dry_run = args.dry_run
@@ -45,7 +49,7 @@ def main() -> None:
                 print("[playlist] Defaulting to dry-run simulation mode.")
                 dry_run = True
 
-    sync_all_series_playlists(youtube=youtube, dry_run=dry_run)
+    sync_all_series_playlists(youtube=youtube, dry_run=dry_run, channel_id=channel_id)
 
 
 if __name__ == "__main__":

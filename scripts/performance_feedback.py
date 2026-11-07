@@ -25,6 +25,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+from pipeline.channel_capabilities import brand_for  # noqa: E402
+from pipeline.channels import add_channel_arg, normalize_channel_id  # noqa: E402
 from pipeline.performance_feedback import (  # noqa: E402
     build_feedback_report,
     write_feedback_report,
@@ -33,18 +35,21 @@ from pipeline.performance_feedback import (  # noqa: E402
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="Closed-loop performance feedback ($0.00 lock)")
+    add_channel_arg(ap)
     ap.add_argument("--dry-run", action="store_true", help="Print the report without writing the artifact")
     ap.add_argument("--json", action="store_true", help="Print raw JSON only")
     args = ap.parse_args(argv)
 
-    report = build_feedback_report()
+    channel_id = normalize_channel_id(args.channel) if args.channel else None
+    brand_title = brand_for(channel_id).display_name.upper() if channel_id else "THE SECRET PLACE"
+    report = build_feedback_report(channel_id=channel_id)
 
     if args.json:
         print(json.dumps(report, indent=2))
         return 0
 
     print("=" * 72)
-    print("THE SECRET PLACE — CLOSED-LOOP PERFORMANCE FEEDBACK ($0.00 LOCK)")
+    print(f"{brand_title} — CLOSED-LOOP PERFORMANCE FEEDBACK ($0.00 LOCK)")
     print("=" * 72)
     print(f"Measured long-form videos: {report['measured_longform_videos']} "
           f"of {report['total_longform_videos']}")
@@ -58,7 +63,7 @@ def main(argv: list[str] | None = None) -> int:
         print("[dry-run] artifact not written")
         return 0
 
-    path = write_feedback_report(report)
+    path = write_feedback_report(report, channel_id=channel_id)
     print(f"[+] Feedback artifact written: {path.relative_to(ROOT)}")
     print("=" * 72)
     return 0
