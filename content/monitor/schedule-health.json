@@ -23,8 +23,8 @@
       "workflow": "metrics.yml"
     }
   ],
-  "generated_at": "2026-11-07T08:28:53.894135+00:00",
-  "last_run_at": "2026-11-07T08:27:58+00:00",
+  "generated_at": "2026-11-07T08:44:33.577019+00:00",
+  "last_run_at": "2026-11-07T08:43:57+00:00",
   "on_time": [
     {
       "late_minutes": 33,
