@@ -124,8 +124,8 @@ But the same God who keeps you through the night watches over you through the da
 
 There is no hour when His protection lapses, no moment when His gaze turns away.
 
-Rest in the knowledge that every projectile aimed at your peace has already been intercepted by divine providence.
-Oh Lord, I bring to You the memory of unexpected harms, the sharp pains of betrayal, and the sudden challenges that have pierced my spirit during the waking hours. I pray that Your mighty hand continues to deflect every future arrow aimed at my well-being, whether it be injustice, misunderstanding, or unforeseen adversity. Thank You for being my constant guard, intercepting every hostile intention and upholding my peace in the midst of life's battleground.
+Rest in the knowledge that every fiery dart aimed at your peace has already been turned aside by divine providence.
+Oh Lord, I bring to You the memory of unexpected trials, the sharp sting of disappointment, and the sudden challenges that have weighed upon my spirit during the waking hours. I pray that Your mighty hand continues to turn aside every future trial aimed at my well-being, whether it be injustice, misunderstanding, or unforeseen adversity. Thank You for being my constant guard, turning aside every contrary wind and upholding my peace in the midst of life's journey.
 
 ## Scene 3 — The Pestilence That Walketh in Darkness (Verse 6a)
 
@@ -133,10 +133,10 @@ Pestilence walks in darkness — unseen, silent, creeping through the shadows.
 
 But light and darkness are alike to God. He sees what you cannot see, and He guards what you cannot guard.
 
-Breathe deeply. The invisible dangers that haunt your imagination are visible to the One who numbers the hairs on your head.
+Breathe deeply. The invisible dangers that trouble your imagination are visible to the One who numbers the hairs on your head.
 
 You are not exposed. You are covered.
-Heavenly Father, I entrust to Your care all the unseen threats, the insidious illnesses, and the hidden dangers that creep silently in the darkness of this world. You are the God who sees all, and nothing is concealed from Your gaze. I pray for Your divine immunity against any spiritual, emotional, or physical 'pestilence' that seeks to undermine my health or my joy. Cover me with Your protective hand, making me impervious to the silent attacks that target the vulnerable hours.
+Heavenly Father, I entrust to Your care all the unseen burdens, the quiet anxieties, and the hidden cares that move silently in the darkness of this world. You are the God who sees all, and nothing is concealed from Your gaze. I pray for Your divine covering over my spirit, my household, my strength, and my joy whenever heavy seasons draw near. Shelter me beneath Your protective hand, keeping my heart steady and peaceful through the quiet watches of the night.
 
 ## Scene 4 — The Destruction That Wasteth at Noonday (Verse 6b)
 
@@ -144,10 +144,10 @@ Even at the brightest hour, when every eye is open and every danger seems visibl
 
 But God's protection is not limited to the shadows. His shield covers you in full daylight as well.
 
-Whatever threatens to consume your resources, your health, or your future — the Almighty is your boundary.
+Whatever threatens to consume your resources, your strength, or your future — the Almighty is your boundary.
 
 No destruction shall come near your dwelling.
-Almighty Protector, even in the clarity of day, destruction can waste and diminish. I ask You to guard my possessions, my relationships, and my future plans from any form of open assault or corrosive influence. Preserve me from any form of ruin that operates under the guise of normalcy, whether it be financial hardship, relational breakdown, or the erosion of my spirit. Be my impenetrable fortress against all forms of wasting, ensuring Your goodness endures around me.
+Almighty Protector, even in the brightness of day, sudden storms can weary and diminish. I ask You to guard my household, my relationships, and my future plans from every sudden trial or exhausting strain. Preserve me from every sorrow that weighs upon daily life, whether it be financial pressure, relational strain, or the weariness of my spirit. Be my steadfast refuge in every season, ensuring Your goodness and mercy endure around my home.
 
 
 Even where pressures have felt relentless throughout this week, restore what fatigue has drained and surround every threshold of my household with Your steadfast covenant mercy.

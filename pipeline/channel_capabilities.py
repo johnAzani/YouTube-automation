@@ -118,6 +118,8 @@ class Brand:
     feedback_artifact_name: str = "performance_feedback.json"
     anchor_video: tuple[str, str, tuple[str, ...]] | None = None
     series_playlists: tuple[tuple[str, str, str, tuple[str, ...]], ...] = ()
+    #: Per-channel Community Tab schedule (empty tuple -> canonical Secret Place schedule)
+    community_posts: tuple[dict, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -381,6 +383,84 @@ _BRANDS: dict[str, Brand] = {
                 ("psalm", "scripture", "devotion", "morning prayer"),
             ),
         ),
+        community_posts=(
+            {
+                "post_id": "comm-prayer2-001-sunday-dawn",
+                "post_type": "POLL",
+                "title": "Where do you need God's fresh mercy at sunrise today?",
+                "body_text": (
+                    "It is of the Lord's mercies that we are not consumed, because his compassions fail not. "
+                    "They are new every morning: great is thy faithfulness (Lamentations 3:22-23).\n\n"
+                    "Before this new week gathers speed, commit your first thoughts at The Morning Altar. "
+                    "Vote below and type 'AMEN' to agree in sunrise prayer! 🌅🙏"
+                ),
+                "poll": {
+                    "question": "What are you placing on The Morning Altar this morning?",
+                    "options": [
+                        "Peace & protection over my household today",
+                        "Wisdom & favor in my work and decisions",
+                        "Strength, health & renewed joy at daybreak",
+                        "Guidance for an open door this week",
+                    ],
+                    "context_scripture": "Lamentations 3:22-23",
+                },
+                "image_rel_path": "comm-prayer2-001-sunday-dawn.png",
+                "target_utc": "06:00",
+                "tags": ["#MorningPrayer", "#TheMorningAltar", "#Lamentations3", "#DailyDevotion"],
+            },
+            {
+                "post_id": "comm-prayer2-002-midweek-altar",
+                "post_type": "PRAYER_WALL",
+                "title": "The Morning Altar Sunrise Prayer Wall: Share Today's Requests",
+                "body_text": (
+                    "My voice shalt thou hear in the morning, O Lord; in the morning will I direct my prayer unto thee, "
+                    "and will look up (Psalm 5:3).\n\n"
+                    "Beloved family, drop your morning prayer requests below before you step into today's work. "
+                    "Our morning prayer team intercedes over every household named here. Write 'AMEN' in faith!"
+                ),
+                "poll": None,
+                "image_rel_path": "comm-prayer2-002-midweek-altar.png",
+                "target_utc": "06:00",
+                "tags": ["#MorningPrayerWall", "#Psalm5", "#TheMorningAltar", "#SunrisePrayer"],
+            },
+            {
+                "post_id": "comm-prayer2-003-thursday-direction",
+                "post_type": "POLL",
+                "title": "Which morning scripture anchors your steps today?",
+                "body_text": (
+                    "Trust in the Lord with all thine heart; and lean not unto thine own understanding. "
+                    "In all thy ways acknowledge him, and he shall direct thy paths (Proverbs 3:5-6).\n\n"
+                    "Walk into today confident that the Father goes before you."
+                ),
+                "poll": {
+                    "question": "Which morning promise are you standing on today?",
+                    "options": [
+                        "Proverbs 3:5-6 — He directs my paths",
+                        "Psalm 143:8 — Lovingkindness in the morning",
+                        "Psalm 90:14 — Satisfy us early with Thy mercy",
+                        "Isaiah 40:31 — Renewed strength like eagles",
+                    ],
+                    "context_scripture": "Proverbs 3:5-6",
+                },
+                "image_rel_path": "comm-prayer2-003-thursday-direction.png",
+                "target_utc": "06:00",
+                "tags": ["#Proverbs3", "#MorningScripture", "#TheMorningAltar"],
+            },
+            {
+                "post_id": "comm-prayer2-004-friday-joy",
+                "post_type": "SCRIPTURE_DEVOTIONAL",
+                "title": "Joy Cometh in the Morning: Step Into Today Unafraid",
+                "body_text": (
+                    "Weeping may endure for a night, but joy cometh in the morning (Psalm 30:5).\n\n"
+                    "Whatever yesterday carried, a fresh dawn of God's favor has risen over your life today. "
+                    "Type 'NEW MERCIES TODAY' in the comments if you receive His morning peace! 🌅✨"
+                ),
+                "poll": None,
+                "image_rel_path": "comm-prayer2-004-friday-joy.png",
+                "target_utc": "06:00",
+                "tags": ["#Psalm30", "#JoyInTheMorning", "#TheMorningAltar"],
+            },
+        ),
     ),
     "prayer3": Brand(
         channel_id="prayer3",
@@ -487,6 +567,81 @@ _BRANDS: dict[str, Brand] = {
                 "Produced by The Midday Watch | Noonday Prayer & Scripture.",
                 ("psalm", "scripture", "devotion", "noon prayer", "midday"),
             ),
+        ),
+        community_posts=(
+            {
+                "post_id": "comm-prayer3-001-sunday-noon",
+                "post_type": "POLL",
+                "title": "Pause at Noon: What do you need God to steady this afternoon?",
+                "body_text": (
+                    "Evening, and morning, and at noon, will I pray, and cry aloud: and he shall hear my voice (Psalm 55:17).\n\n"
+                    "Step away from the rush for sixty seconds at The Midday Watch and reset your heart in Christ's peace. "
+                    "Vote below and write 'AMEN' to agree in midday prayer! ☀️🙏"
+                ),
+                "poll": {
+                    "question": "Where do you need the Lord's steady hand most this afternoon?",
+                    "options": [
+                        "Quiet focus & clarity in the middle of work",
+                        "Renewed physical & emotional strength",
+                        "Peace over an anxious conversation or decision",
+                        "Protection & grace over my family today",
+                    ],
+                    "context_scripture": "Psalm 55:17",
+                },
+                "image_rel_path": "comm-prayer3-001-sunday-noon.png",
+                "target_utc": "12:00",
+                "tags": ["#MiddayPrayer", "#TheMiddayWatch", "#Psalm55", "#NoonPrayer"],
+            },
+            {
+                "post_id": "comm-prayer3-002-midweek-watch",
+                "post_type": "PRAYER_WALL",
+                "title": "The Midday Watch Noonday Prayer Wall: Leave Your Afternoon Requests",
+                "body_text": (
+                    "Commit thy works unto the Lord, and thy thoughts shall be established (Proverbs 16:3).\n\n"
+                    "Halfway through the day, lay down what has felt heavy since morning. Drop your midday prayer "
+                    "request below — our midday prayer team is interceding right now. Type 'AMEN' in faith!"
+                ),
+                "poll": None,
+                "image_rel_path": "comm-prayer3-002-midweek-watch.png",
+                "target_utc": "12:00",
+                "tags": ["#NoondayPrayerWall", "#Proverbs16", "#TheMiddayWatch"],
+            },
+            {
+                "post_id": "comm-prayer3-003-thursday-shield",
+                "post_type": "POLL",
+                "title": "Which noonday scripture resets your spirit in a busy week?",
+                "body_text": (
+                    "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee (Isaiah 26:3).\n\n"
+                    "Let God's word anchor the rest of your afternoon."
+                ),
+                "poll": {
+                    "question": "Which scripture are you carrying through this afternoon?",
+                    "options": [
+                        "Psalm 55:17 — At noon will I pray",
+                        "Isaiah 26:3 — Kept in perfect peace",
+                        "Psalm 91:6 — Shielded at noonday",
+                        "Philippians 4:6-7 — Peace that guards the heart",
+                    ],
+                    "context_scripture": "Isaiah 26:3",
+                },
+                "image_rel_path": "comm-prayer3-003-thursday-shield.png",
+                "target_utc": "12:00",
+                "tags": ["#Isaiah26", "#MiddayScripture", "#TheMiddayWatch"],
+            },
+            {
+                "post_id": "comm-prayer3-004-friday-strength",
+                "post_type": "SCRIPTURE_DEVOTIONAL",
+                "title": "Finish the Day Steady: The Lord Is At Your Right Hand",
+                "body_text": (
+                    "The Lord is thy keeper: the Lord is thy shade upon thy right hand (Psalm 121:5).\n\n"
+                    "Even in the heat of the afternoon, you do not walk unshielded. "
+                    "Type 'STEADY IN HIS PEACE' below to claim renewed strength for the hours ahead! ☀️🛡️"
+                ),
+                "poll": None,
+                "image_rel_path": "comm-prayer3-004-friday-strength.png",
+                "target_utc": "12:00",
+                "tags": ["#Psalm121", "#AfternoonStrength", "#TheMiddayWatch"],
+            },
         ),
     ),
 }

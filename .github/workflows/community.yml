@@ -8,6 +8,11 @@ on:
     - cron: '14 19 * * 0,3'   # 8:14pm Sunday and Wednesday, Nigeria time
   workflow_dispatch:
     inputs:
+      channel:
+        description: 'Target channel id (secret-place, prayer2, prayer3; blank = all scheduled channels)'
+        type: string
+        required: false
+        default: ''
       dry_run:
         description: 'Simulate without posting'
         type: boolean
@@ -43,27 +48,39 @@ jobs:
           pip install -r requirements.txt
 
       # YouTube's Data API has no endpoint for creating Community posts, so this
-      # cannot post by itself. It prepares the exact card and copy for the human to
-      # paste into Studio, and says so on the run page instead of reporting success.
+      # cannot post by itself. It prepares the exact card and copy for every
+      # scheduled channel (or the requested channel) so the human can paste into Studio.
       - name: Prepare today's post for manual publishing
         env:
+          INPUT_CHANNEL: ${{ inputs.channel }}
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          PRAYER2_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER2_YOUTUBE_CLIENT_ID }}
+          PRAYER2_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER2_YOUTUBE_CLIENT_SECRET }}
+          PRAYER2_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER3_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER3_YOUTUBE_CLIENT_ID }}
+          PRAYER3_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER3_YOUTUBE_CLIENT_SECRET }}
+          PRAYER3_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN }}
         run: |
-          python scripts/post_community.py --publish
+          if [ -n "$INPUT_CHANNEL" ]; then
+            python scripts/post_community.py --publish --channel "$INPUT_CHANNEL"
+          else
+            python scripts/post_community.py --publish --all-channels
+          fi
           python - <<'PY'
           import glob, pathlib
           packs = sorted(glob.glob('content/community/*-READY.md'))
           if not packs:
               raise SystemExit('no READY pack was written')
-          pack = pathlib.Path(packs[0])
-          body = pack.read_text(encoding='utf-8')
-          print(f'::notice title=Community post ready ({pack.name})::'
-                'YouTube has no API for Community posts. Open Studio -> Create -> Post, '
-                'attach the card, paste the copy. The full text is in the artifact and '
-                'in content/community/')
-          print(body)
+          for p in packs:
+              pack = pathlib.Path(p)
+              body = pack.read_text(encoding='utf-8')
+              print(f'::notice title=Community post ready ({pack.name})::'
+                    'YouTube has no API for Community posts. Open Studio -> Create -> Post, '
+                    'attach the card, paste the copy. The full text is in the artifact and '
+                    'in content/community/')
+              print(body)
           PY
 
       - name: Upload the ready-to-post pack

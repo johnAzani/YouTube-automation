@@ -103,6 +103,7 @@ jobs:
         run: |
           python -m scripts.sync_published_thumbnails --all-channels
           python -m scripts.retrofit_published_metadata --sync-pending
+          GH_TOKEN="${{ secrets.GITHUB_TOKEN }}" python -m scripts.release_report --sweep-stale || true
 
       - name: Audit every automation and its outcome
         id: audit

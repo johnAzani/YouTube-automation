@@ -38,6 +38,55 @@ DEFAULT_VOICE = "Charon"
 FALLBACK_EDGE_VOICE = "en-US-DavisNeural"
 
 
+class GeminiContentBlockedError(RuntimeError):
+    """Raised when Gemini TTS refuses a script chunk on content/safety grounds."""
+
+
+def is_content_blocked_error(exc: BaseException | str) -> bool:
+    """True when an exception indicates Gemini TTS safety/content refusal or empty audio block."""
+    if isinstance(exc, GeminiContentBlockedError):
+        return True
+    low = str(exc).lower()
+    return any(
+        token in low
+        for token in (
+            "content_blocked",
+            "prohibited_content",
+            "blocked for an unspecified policy reason",
+            "returned no audio content for model",
+            "finish_reason: safety",
+        )
+    )
+
+
+def _split_chunk_in_half(text: str) -> list[str]:
+    """Split a long chunk near its midpoint on paragraph or sentence boundaries."""
+    cleaned = text.strip()
+    if len(cleaned) < 500:
+        return [cleaned]
+    paragraphs = [p.strip() for p in cleaned.split("\n\n") if p.strip()]
+    if len(paragraphs) >= 2:
+        mid = len(cleaned) // 2
+        acc: list[str] = []
+        acc_len = 0
+        for idx, para in enumerate(paragraphs[:-1]):
+            acc.append(para)
+            acc_len += len(para) + 2
+            if acc_len >= mid:
+                left = "\n\n".join(acc).strip()
+                right = "\n\n".join(paragraphs[idx + 1 :]).strip()
+                if left and right:
+                    return [left, right]
+        half = max(1, len(paragraphs) // 2)
+        return ["\n\n".join(paragraphs[:half]).strip(), "\n\n".join(paragraphs[half:]).strip()]
+
+    sentences = [s.strip() for s in cleaned.replace(". ", ".\n").splitlines() if s.strip()]
+    if len(sentences) >= 2:
+        half = max(1, len(sentences) // 2)
+        return [" ".join(sentences[:half]).strip(), " ".join(sentences[half:]).strip()]
+    return [cleaned]
+
+
 def gemini_key_names(channel_id: str | None = None) -> list[str]:
     """Env names checked for a channel's Gemini key, in priority order.
 
@@ -778,14 +827,74 @@ def synthesize_gemini_audio(
     # the first call, so the run page answers "does this even fit today".
     _emit(f"narration is {len(text)} characters → {len(chunks)} TTS request(s) "
           f"of up to {limit} characters")
+
+    def _synth_with_block_recovery(
+        chunk_text_val: str,
+        raw_target: Path,
+        out_target: Path,
+        c_idx: int,
+        c_total: int,
+    ) -> None:
+        try:
+            mtype = _guarded_chunk(
+                client, chunk_text_val, voice_name, style, model, raw_target, c_idx, c_total
+            )
+            with hard_deadline(http_timeout_seconds(), f"audio conversion, chunk {c_idx}"):
+                _convert_raw_audio(raw_target, out_target, mtype)
+            return
+        except Exception as exc:  # noqa: BLE001
+            if not is_content_blocked_error(exc):
+                raise
+            halves = _split_chunk_in_half(chunk_text_val)
+            if len(halves) < 2:
+                raise GeminiContentBlockedError(str(exc)) from exc
+            _emit(
+                f"TTS chunk {c_idx}/{c_total} hit Gemini content filter; "
+                f"retrying as 2 smaller sub-chunks ({len(halves[0])} + {len(halves[1])} chars)"
+            )
+            sub_dir = out_target.parent / f"_sub_{out_target.stem}_{c_idx:03d}"
+            sub_dir.mkdir(parents=True, exist_ok=True)
+            sub_wavs: list[Path] = []
+            try:
+                for s_idx, half_text in enumerate(halves, start=1):
+                    budget.check(f"chunk {c_idx}.{s_idx}/{c_total}")
+                    s_raw = sub_dir / f"part_{s_idx}.raw"
+                    s_wav = sub_dir / f"part_{s_idx}.wav"
+                    try:
+                        s_mime = _guarded_chunk(
+                            client, half_text, voice_name, style, model, s_raw, c_idx, c_total
+                        )
+                    except Exception as sub_exc:  # noqa: BLE001
+                        if is_content_blocked_error(sub_exc):
+                            raise GeminiContentBlockedError(str(sub_exc)) from sub_exc
+                        raise
+                    with hard_deadline(http_timeout_seconds(), f"audio conversion, sub-chunk {c_idx}.{s_idx}"):
+                        _convert_raw_audio(s_raw, s_wav, s_mime)
+                    sub_wavs.append(s_wav)
+                sub_concat = sub_dir / "concat.txt"
+                sub_concat.write_text(
+                    "\n".join(f"file '{p.resolve()}'" for p in sub_wavs), encoding="utf-8"
+                )
+                sub_cmd = [ffmpeg_bin(), "-y", "-f", "concat", "-safe", "0", "-i", str(sub_concat)]
+                if out_target.suffix.lower() == ".wav":
+                    sub_cmd += ["-c:a", "pcm_s16le", str(out_target)]
+                else:
+                    sub_cmd += [
+                        "-c:a",
+                        "libmp3lame" if out_target.suffix.lower() == ".mp3" else "aac",
+                        "-b:a",
+                        "192k",
+                        str(out_target),
+                    ]
+                subprocess.run(sub_cmd, check=True, capture_output=True)
+            finally:
+                shutil.rmtree(sub_dir, ignore_errors=True)
+
     if len(chunks) == 1:
         budget.check("single chunk")
         temp_raw = out_path.with_suffix(".raw_audio")
         try:
-            mime_type = _guarded_chunk(client, chunks[0], voice_name, style,
-                                       model, temp_raw, 1, 1)
-            with hard_deadline(http_timeout_seconds(), "audio conversion"):
-                _convert_raw_audio(temp_raw, out_path, mime_type)
+            _synth_with_block_recovery(chunks[0], temp_raw, out_path, 1, 1)
         finally:
             if temp_raw.is_file():
                 temp_raw.unlink()
@@ -817,10 +926,7 @@ def synthesize_gemini_audio(
                     _emit(f"TTS chunk {idx + 1}/{len(chunks)} reused from this attempt")
                     continue
                 chunk_wav.unlink(missing_ok=True)
-            mime_type = _guarded_chunk(client, chunk, voice_name, style,
-                                       model, chunk_raw, idx + 1, len(chunks))
-            with hard_deadline(http_timeout_seconds(), f"audio conversion, chunk {idx + 1}"):
-                _convert_raw_audio(chunk_raw, chunk_wav, mime_type)
+            _synth_with_block_recovery(chunk, chunk_raw, chunk_wav, idx + 1, len(chunks))
             chunk_sha.write_text(expected_sha, encoding="utf-8")
             chunk_wavs.append(chunk_wav)
 

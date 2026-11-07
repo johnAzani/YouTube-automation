@@ -15,25 +15,66 @@ on:
   workflow_dispatch:
     inputs:
       channel:
-        description: "Target channel (own GCP project & secrets)"
-        type: choice
-        options: [secret-place, prayer2, prayer3]
-        default: secret-place
+        description: "Target channel (blank = all provisioned channels)"
+        required: false
+        default: ""
+        type: string
 
 permissions:
   contents: write
   issues: write
 
 jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      channels: ${{ steps.discover.outputs.channels }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Discover provisioned channels for metrics snapshot
+        id: discover
+        env:
+          INPUT_CHANNEL: ${{ inputs.channel }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          PRAYER2_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER3_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json, os, sys
+          sys.path.insert(0, ".")
+          from pipeline.channels import CHANNELS, normalize_channel_id, scheduled_channels
+          requested = (os.environ.get("INPUT_CHANNEL") or "").strip()
+          if requested:
+              channels = [normalize_channel_id(requested)]
+          else:
+              channels = []
+              for cid in scheduled_channels():
+                  p = CHANNELS[cid].secret_prefix.rstrip("_")
+                  key = f"{p}_YOUTUBE_REFRESH_TOKEN" if p else "YOUTUBE_REFRESH_TOKEN"
+                  if (os.environ.get(key) or "").strip():
+                      channels.append(cid)
+              if not channels:
+                  channels = ["secret-place"]
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
+              fh.write(f"channels={json.dumps(channels)}\n")
+          print(f"metrics channels: {channels}")
+          PY
+
   snapshot:
+    needs: plan
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        channel: ${{ fromJson(needs.plan.outputs.channels) }}
     env:
-      CHANNEL_ID: ${{ inputs.channel || 'secret-place' }}
-      YOUTUBE_CLIENT_ID: ${{ inputs.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_ID || (inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID) }}
-      YOUTUBE_CLIENT_SECRET: ${{ inputs.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_SECRET || (inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET) }}
-      YOUTUBE_REFRESH_TOKEN: ${{ inputs.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN || (inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN) }}
-      YOUTUBE_EXPECTED_CHANNEL_ID: ${{ inputs.channel == 'prayer3' && (vars.PRAYER3_YOUTUBE_CHANNEL_ID || secrets.PRAYER3_YOUTUBE_CHANNEL_ID) || (inputs.channel == 'prayer2' && (vars.PRAYER2_YOUTUBE_CHANNEL_ID || secrets.PRAYER2_YOUTUBE_CHANNEL_ID) || (vars.YOUTUBE_CHANNEL_ID || secrets.YOUTUBE_CHANNEL_ID)) }}
+      CHANNEL_ID: ${{ matrix.channel }}
+      YOUTUBE_CLIENT_ID: ${{ matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID) }}
+      YOUTUBE_CLIENT_SECRET: ${{ matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET) }}
+      YOUTUBE_REFRESH_TOKEN: ${{ matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN) }}
+      YOUTUBE_EXPECTED_CHANNEL_ID: ${{ matrix.channel == 'prayer3' && (vars.PRAYER3_YOUTUBE_CHANNEL_ID || secrets.PRAYER3_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer2' && (vars.PRAYER2_YOUTUBE_CHANNEL_ID || secrets.PRAYER2_YOUTUBE_CHANNEL_ID) || (vars.YOUTUBE_CHANNEL_ID || secrets.YOUTUBE_CHANNEL_ID)) }}
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
@@ -46,10 +87,10 @@ jobs:
       - name: Python deps
         run: pip install -r requirements.txt
 
-      - name: Snapshot channel metrics
+      - name: Snapshot channel metrics (${{ matrix.channel }})
         env:
           METRICS_POST_ISSUE: ${{ github.event_name == 'workflow_run' && '0' || '1' }}
-        run: python -u scripts/metrics_snapshot.py
+        run: python -u scripts/metrics_snapshot.py --channel "${{ matrix.channel }}"
 
       # This repository is public. Keep the public-video snapshot out of git history
       # and retain it only as a short-lived artifact; never commit API metrics to source.
@@ -57,7 +98,7 @@ jobs:
         uses: actions/upload-artifact@v4
         if: success() && hashFiles('content/metrics.csv') != ''
         with:
-          name: public-video-metrics-${{ inputs.channel || 'secret-place' }}-${{ github.run_id }}
+          name: public-video-metrics-${{ matrix.channel }}-${{ github.run_id }}
           path: |
             content/metrics.csv
             content/channel-metrics.json
