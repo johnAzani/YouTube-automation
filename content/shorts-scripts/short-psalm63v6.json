@@ -1,0 +1,317 @@
+{
+  "key": "short-psalm63v6",
+  "channel": "secret-place",
+  "psalm": 63,
+  "title": [
+    "PEACEFUL NIGHT PRAYER",
+    "PSALM 63:6-7"
+  ],
+  "poster": [
+    "REST IN HIS SHADOW",
+    "BEDTIME PRAYER",
+    "PSALM 63:6-7",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm night sky over peaceful lake",
+    "gently flickering single candle darkness",
+    "starry night sky soft mist trees",
+    "soft moonlight glowing through clouds",
+    "cozy lit bedroom dark night window",
+    "placid water reflection moonlight night",
+    "calm ocean waves at night under stars"
+  ],
+  "scenes": [
+    {
+      "a": "Take a deep breath",
+      "img": "short-psalm63v6-scene-01.jpg",
+      "kicker": "PSALM 63:6-7",
+      "sub": "STILLNESS OF THE NIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "let go of every burden",
+      "img": "short-psalm63v6-scene-02.jpg",
+      "kicker": "PSALM 63:6-7",
+      "sub": "RELEASE YOUR BURDENS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "On my bed I remember you",
+      "img": "short-psalm63v6-scene-03.jpg",
+      "kicker": "PSALM 63:6",
+      "sub": "THROUGH THE WATCHES OF NIGHT",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "in the shadow of your wings",
+      "img": "short-psalm63v6-scene-04.jpg",
+      "kicker": "PSALM 63:7",
+      "sub": "IN THE SHADOW OF HIS WINGS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "in these quiet midnight hours",
+      "img": "short-psalm63v6-scene-05.jpg",
+      "kicker": "NIGHT PRAYER",
+      "sub": "WRAPPED IN FAITHFUL LOVE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "cover us with Your gentle peace",
+      "img": "short-psalm63v6-scene-06.jpg",
+      "kicker": "GOD IS OUR REFUGE",
+      "sub": "REST IN HIS PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "subscribe to join us in prayer",
+      "img": "short-psalm63v6-scene-07.jpg",
+      "kicker": "THE SECRET PLACE",
+      "sub": "JOIN US EVERY NIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "Take a deep breath and let the stillness of the night settle over your heart."
+    ],
+    [
+      6,
+      12,
+      "As you lie down, let go of every burden from today."
+    ],
+    [
+      12,
+      20,
+      "Psalm 63 verses 6 and 7 says: On my bed I remember you; I think of you through the watches of the night."
+    ],
+    [
+      20,
+      27,
+      "Because you are my help, I sing in the shadow of your wings."
+    ],
+    [
+      27,
+      34,
+      "Lord, in these quiet midnight hours, we wrap ourselves in Your faithful love."
+    ],
+    [
+      34,
+      41,
+      "Shield our mind from restlessness and cover us with Your gentle peace. You are our refuge and our strength."
+    ],
+    [
+      41,
+      48,
+      "Rest now under the shadow of His wings, and subscribe to join us in prayer every night."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "TAKE A DEEP BREATH AND",
+        "LET THE STILLNESS SETTLE",
+        "OVER YOUR HEART"
+      ],
+      [
+        "STILLNESS",
+        "HEART"
+      ],
+      "PSALM 63 : 6-7"
+    ],
+    [
+      6,
+      12,
+      [
+        "AS YOU LIE DOWN",
+        "LET GO OF EVERY BURDEN",
+        "FROM TODAY"
+      ],
+      [
+        "BURDEN",
+        "LET GO"
+      ],
+      "PSALM 63 : 6-7"
+    ],
+    [
+      12,
+      20,
+      [
+        "ON MY BED I REMEMBER YOU",
+        "I THINK OF YOU THROUGH",
+        "THE WATCHES OF THE NIGHT"
+      ],
+      [
+        "REMEMBER",
+        "WATCHES"
+      ],
+      "PSALM 63 : 6"
+    ],
+    [
+      20,
+      27,
+      [
+        "BECAUSE YOU ARE MY HELP",
+        "I SING IN THE SHADOW",
+        "OF YOUR WINGS"
+      ],
+      [
+        "HELP",
+        "SHADOW"
+      ],
+      "PSALM 63 : 7"
+    ],
+    [
+      27,
+      34,
+      [
+        "IN THESE QUIET MIDNIGHT HOURS",
+        "WE WRAP OURSELVES IN YOUR",
+        "FAITHFUL LOVE"
+      ],
+      [
+        "MIDNIGHT",
+        "FAITHFUL LOVE"
+      ],
+      "BEDTIME PRAYER"
+    ],
+    [
+      34,
+      41,
+      [
+        "SHIELD OUR MIND FROM RESTLESSNESS",
+        "AND COVER US WITH PEACE",
+        "YOU ARE OUR REFUGE"
+      ],
+      [
+        "PEACE",
+        "REFUGE"
+      ],
+      "BEDTIME PRAYER"
+    ],
+    [
+      41,
+      48,
+      [
+        "REST NOW UNDER HIS WINGS",
+        "SUBSCRIBE TO JOIN US IN",
+        "PRAYER EVERY NIGHT"
+      ],
+      [
+        "REST",
+        "SUBSCRIBE"
+      ],
+      "THE SECRET PLACE"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Take a deep breath",
+      "kind": "phrase",
+      "words": [
+        "DEEP",
+        "BREATH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "let go of every burden",
+      "kind": "phrase",
+      "words": [
+        "EVERY",
+        "BURDEN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "On my bed I remember you",
+      "kind": "phrase",
+      "words": [
+        "REMEMBER",
+        "YOU"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "in the shadow of your wings",
+      "kind": "phrase",
+      "words": [
+        "SHADOW",
+        "WINGS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "in these quiet midnight hours",
+      "kind": "phrase",
+      "words": [
+        "MIDNIGHT",
+        "HOURS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "cover us with Your gentle peace",
+      "kind": "phrase",
+      "words": [
+        "GENTLE",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "subscribe to join us in prayer",
+      "kind": "phrase",
+      "words": [
+        "JOIN",
+        "US"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 63:6-7"
+}

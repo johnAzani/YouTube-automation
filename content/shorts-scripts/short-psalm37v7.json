@@ -1,0 +1,324 @@
+{
+  "key": "short-psalm37v7",
+  "channel": "secret-place",
+  "psalm": 37,
+  "title": [
+    "BE STILL AND REST",
+    "BEDTIME PRAYER"
+  ],
+  "poster": [
+    "BEDTIME PRAYER",
+    "PSALM 37:7",
+    "BE STILL BEFORE THE LORD",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm mountain lake night starry sky quiet moon reflection serene atmosphere",
+    "single candle glowing softly dark warm room relaxing peaceful atmosphere",
+    "calm ocean waves gently touching sandy shore dusk starry night sky",
+    "misty pine forest twilight moonlight shining through trees serene atmosphere",
+    "night sky glowing nebula soft starry space peaceful blue dark lighting",
+    "gentle stream flowing at night under moonlight quiet forest serene",
+    "cozy dimly lit lantern warm glow serene night view window"
+  ],
+  "scenes": [
+    {
+      "a": "Take a deep breath and let your shoulders drop as tonight draws to a quiet close.",
+      "img": "short-psalm37v7-scene-01.jpg",
+      "kicker": "BEDTIME PRAYER",
+      "sub": "BE STILL BEFORE THE LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Release every lingering concern, every unfinished task, and every heavy thought into God’s gentle hands.",
+      "img": "short-psalm37v7-scene-02.jpg",
+      "kicker": "PSALM 37:7",
+      "sub": "WAIT PATIENTLY FOR HIM",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The Scriptures remind us in Psalm 37:7: Be still before the Lord and wait patiently for him.",
+      "img": "short-psalm37v7-scene-03.jpg",
+      "kicker": "PSALM 37:7",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "You do not need to figure out tomorrow tonight. Heavenly Father, cover this precious soul with your quiet peace.",
+      "img": "short-psalm37v7-scene-04.jpg",
+      "kicker": "NIGHTLY PRAYER",
+      "sub": "GOD GIVES YOU REST",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Soften their heart, still their anxious mind, and grant them deep, restful sleep beneath your protective wings.",
+      "img": "short-psalm37v7-scene-05.jpg",
+      "kicker": "PSALM 37:7",
+      "sub": "PEACE THAT PASSES UNDERSTANDING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let your presence surround them through the dark hours, filling their spirit with calm and quiet rest.",
+      "img": "short-psalm37v7-scene-06.jpg",
+      "kicker": "PEACEFUL NIGHT",
+      "sub": "UNFAILING LOVE AND CARE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May they wake renewed in your unfailing love. Subscribe to join The Secret Place for prayers every night. Amen.",
+      "img": "short-psalm37v7-scene-07.jpg",
+      "kicker": "THE SECRET PLACE",
+      "sub": "PRAYERS EVERY NIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Take a deep breath and let your shoulders drop as tonight draws to a quiet close."
+    ],
+    [
+      8,
+      16,
+      "Release every lingering concern, every unfinished task, and every heavy thought into God’s gentle hands."
+    ],
+    [
+      16,
+      24,
+      "The Scriptures remind us in Psalm 37:7: Be still before the Lord and wait patiently for him."
+    ],
+    [
+      24,
+      32,
+      "You do not need to figure out tomorrow tonight. Heavenly Father, cover this precious soul with your quiet peace."
+    ],
+    [
+      32,
+      40,
+      "Soften their heart, still their anxious mind, and grant them deep, restful sleep beneath your protective wings."
+    ],
+    [
+      40,
+      48,
+      "Let your presence surround them through the dark hours, filling their spirit with calm and quiet rest."
+    ],
+    [
+      48,
+      56,
+      "May they wake renewed in your unfailing love. Subscribe to join The Secret Place for prayers every night. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "TAKE A DEEP BREATH",
+        "AND LET YOUR SHOULDERS DROP",
+        "AS TONIGHT DRAWS",
+        "TO A QUIET CLOSE."
+      ],
+      [
+        "DEEP BREATH",
+        "QUIET CLOSE"
+      ],
+      "BEDTIME PRAYER"
+    ],
+    [
+      8,
+      16,
+      [
+        "RELEASE EVERY LINGERING CONCERN,",
+        "EVERY UNFINISHED TASK,",
+        "AND EVERY HEAVY THOUGHT",
+        "INTO GOD'S GENTLE HANDS."
+      ],
+      [
+        "LINGERING CONCERN",
+        "GENTLE HANDS"
+      ],
+      "PSALM 37:7"
+    ],
+    [
+      16,
+      24,
+      [
+        "THE SCRIPTURES REMIND US",
+        "IN PSALM 37:7:",
+        "BE STILL BEFORE THE LORD",
+        "AND WAIT PATIENTLY FOR HIM."
+      ],
+      [
+        "BE STILL",
+        "WAIT PATIENTLY"
+      ],
+      "PSALM 37:7"
+    ],
+    [
+      24,
+      32,
+      [
+        "YOU DO NOT NEED TO FIGURE",
+        "OUT TOMORROW TONIGHT.",
+        "HEAVENLY FATHER, COVER THIS",
+        "PRECIOUS SOUL WITH QUIET PEACE."
+      ],
+      [
+        "QUIET PEACE",
+        "PRECIOUS SOUL"
+      ],
+      "NIGHTLY PRAYER"
+    ],
+    [
+      32,
+      40,
+      [
+        "SOFTEN THEIR HEART,",
+        "STILL THEIR ANXIOUS MIND,",
+        "AND GRANT THEM DEEP,",
+        "RESTFUL SLEEP BENEATH WINGS."
+      ],
+      [
+        "ANXIOUS MIND",
+        "RESTFUL SLEEP"
+      ],
+      "PSALM 37:7"
+    ],
+    [
+      40,
+      48,
+      [
+        "LET YOUR PRESENCE SURROUND THEM",
+        "THROUGH THE DARK HOURS,",
+        "FILLING THEIR SPIRIT WITH",
+        "CALM AND QUIET REST."
+      ],
+      [
+        "PRESENCE SURROUND",
+        "QUIET REST"
+      ],
+      "PEACEFUL NIGHT"
+    ],
+    [
+      48,
+      56,
+      [
+        "MAY THEY WAKE RENEWED",
+        "IN YOUR UNFAILING LOVE.",
+        "SUBSCRIBE TO JOIN THE SECRET PLACE",
+        "FOR PRAYERS EVERY NIGHT. AMEN."
+      ],
+      [
+        "UNFAILING LOVE",
+        "SUBSCRIBE"
+      ],
+      "THE SECRET PLACE"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Take a deep breath and let your shoulders drop as tonight draws to a quiet close.",
+      "kind": "phrase",
+      "words": [
+        "DEEP",
+        "BREATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Release every lingering concern, every unfinished task, and every heavy thought into God’s gentle hands.",
+      "kind": "phrase",
+      "words": [
+        "GENTLE",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Scriptures remind us in Psalm 37:7: Be still before the Lord and wait patiently for him.",
+      "kind": "phrase",
+      "words": [
+        "BE",
+        "STILL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You do not need to figure out tomorrow tonight. Heavenly Father, cover this precious soul with your quiet peace.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Soften their heart, still their anxious mind, and grant them deep, restful sleep beneath your protective wings.",
+      "kind": "phrase",
+      "words": [
+        "RESTFUL",
+        "SLEEP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let your presence surround them through the dark hours, filling their spirit with calm and quiet rest.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May they wake renewed in your unfailing love. Subscribe to join The Secret Place for prayers every night. Amen.",
+      "kind": "phrase",
+      "words": [
+        "UNFAILING",
+        "LOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 37:7"
+}
