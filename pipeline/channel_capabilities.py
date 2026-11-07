@@ -92,6 +92,13 @@ class Brand:
     short_hashtags: str
     short_end_card: str
     short_key_namespace: str    # "" for channel 1; keeps Short keys globally unique
+    #: Comment replies (audited 2026-11-07). The reply engine used to be
+    #: channel-blind: it hardcoded "the pastoral voice of The Secret Place" and
+    #: replied as channel 1 on whatever credentials it was handed. Who answers,
+    #: and the daypart that answer belongs to, are brand data like any other —
+    #: declared once here instead of a second copy inside the reply engine.
+    comment_persona: str        # "the pastoral prayer team at {display_name}"
+    comment_farewell: str       # the daypart-correct closing line
     #: Pinned comments. Both are .format() templates.
     longform_pinned_comment: str
     short_pinned_comment: str
@@ -188,6 +195,8 @@ _BRANDS: dict[str, Brand] = {
         short_hashtags="#Shorts #{tag_key} #NightPrayer #BedtimePrayer #DailyScripture #TheSecretPlace",
         short_end_card="The Secret Place — prayers every day",
         short_key_namespace="",
+        comment_persona="the pastoral prayer team at The Secret Place",
+        comment_farewell="Rest in His peace tonight.",
         longform_pinned_comment=_SECRET_PLACE_COMMENT,
         short_pinned_comment=(
             "🕊️ PRAY THE FULL NIGHTTIME SCRIPTURE MEDITATION:\n"
@@ -255,6 +264,8 @@ _BRANDS: dict[str, Brand] = {
         short_hashtags="#Shorts #{tag_key} #MorningPrayer #SunrisePrayer #DailyDevotion #TheMorningAltar",
         short_end_card="The Morning Altar — begin every sunrise in prayer",
         short_key_namespace="morning",
+        comment_persona="the morning prayer team at The Morning Altar",
+        comment_farewell="Go into your day covered by His grace.",
         longform_pinned_comment=_MORNING_ALTAR_COMMENT,
         short_pinned_comment=(
             "🌅 PRAY THE FULL SUNRISE SCRIPTURE MEDITATION:\n"
@@ -320,6 +331,8 @@ _BRANDS: dict[str, Brand] = {
         short_hashtags="#Shorts #{tag_key} #MiddayPrayer #NoonPrayer #DailyDevotion #TheMiddayWatch",
         short_end_card="The Midday Watch — pause and pray at noon",
         short_key_namespace="midday",
+        comment_persona="the midday prayer team at The Midday Watch",
+        comment_farewell="Walk through this afternoon steady in His peace.",
         longform_pinned_comment=_MIDDAY_WATCH_COMMENT,
         short_pinned_comment=(
             "☀️ PRAY THE FULL NOONDAY SCRIPTURE MEDITATION:\n"

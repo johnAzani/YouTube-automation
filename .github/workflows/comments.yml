@@ -1,5 +1,11 @@
 name: Autonomous Comment Replies
 
+# Who this answers for. Until 2026-11-07 the scheduled run was hardcoded to
+# The Secret Place: prayer2 and prayer3 were offered in the manual channel picker
+# and never touched by a cron, so two of the three channels had no comment
+# coverage at all — their viewers' prayer requests sat unanswered while this
+# workflow reported success three times a day. The plan job below expands a
+# scheduled run to every channel whose credentials exist, exactly like produce.yml.
 on:
   schedule:
     # 3-Pulse Comment Engagement Cadence ($0.00 Cost Lock):
@@ -20,6 +26,10 @@ on:
         description: 'Maximum comments to reply to per pulse (default 8, max 25)'
         required: false
         default: '8'
+      pages:
+        description: 'Pages of comment threads to walk (default 3, 100 threads each)'
+        required: false
+        default: '3'
       video_id:
         description: 'Target specific YouTube video ID (leave blank for all channel videos)'
         required: false
@@ -39,7 +49,44 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  plan:
+    # A channel is answered on the schedule the moment its own refresh token
+    # exists — readiness probe, not a feature flag. Same doctrine as produce.yml.
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      channels: ${{ steps.plan.outputs.channels }}
+    steps:
+      - id: plan
+        env:
+          PRAYER2_READY: ${{ secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN != '' }}
+          PRAYER3_READY: ${{ secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN != '' }}
+        run: |
+          case "${{ github.event_name }}" in
+            schedule)
+              channels='["secret-place"]'
+              if [ "$PRAYER2_READY" = "true" ]; then channels='["secret-place","prayer2"]'; fi
+              if [ "$PRAYER3_READY" = "true" ]; then
+                channels='["secret-place","prayer2","prayer3"]'
+              else
+                echo "::notice title=prayer3 comment replies wait for credentials::PRAYER3_YOUTUBE_REFRESH_TOKEN is not set, so The Midday Watch is not scheduled for replies yet."
+              fi
+              ;;
+            workflow_dispatch) channels='["${{ inputs.channel }}"]' ;;
+            *)                 channels='["secret-place"]' ;;
+          esac
+          echo "channels=$channels" >> "$GITHUB_OUTPUT"
+          echo "replying for: $channels"
+
   reply:
+    needs: plan
+    # One channel at a time: every leg commits the same
+    # content/comments/replied.json to main.
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        channel: ${{ fromJSON(needs.plan.outputs.channels) }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -61,16 +108,17 @@ jobs:
 
       - name: Run Comment Reply Engine
         env:
-          CHANNEL_ID: ${{ inputs.channel || 'secret-place' }}
-          YOUTUBE_CLIENT_ID: ${{ inputs.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_ID || (inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID) }}
-          YOUTUBE_CLIENT_SECRET: ${{ inputs.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_SECRET || (inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET) }}
-          YOUTUBE_REFRESH_TOKEN: ${{ inputs.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN || (inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN) }}
-          YOUTUBE_EXPECTED_CHANNEL_ID: ${{ inputs.channel == 'prayer3' && (vars.PRAYER3_YOUTUBE_CHANNEL_ID || secrets.PRAYER3_YOUTUBE_CHANNEL_ID) || (inputs.channel == 'prayer2' && (vars.PRAYER2_YOUTUBE_CHANNEL_ID || secrets.PRAYER2_YOUTUBE_CHANNEL_ID) || (vars.YOUTUBE_CHANNEL_ID || secrets.YOUTUBE_CHANNEL_ID)) }}
-          GEMINI_API_KEY: ${{ inputs.channel == 'prayer3' && secrets.PRAYER3_GEMINI_API_KEY || (inputs.channel == 'prayer2' && secrets.PRAYER2_GEMINI_API_KEY || secrets.GEMINI_API_KEY) }}
+          CHANNEL_ID: ${{ matrix.channel }}
+          YOUTUBE_CLIENT_ID: ${{ matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID) }}
+          YOUTUBE_CLIENT_SECRET: ${{ matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET) }}
+          YOUTUBE_REFRESH_TOKEN: ${{ matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN) }}
+          YOUTUBE_EXPECTED_CHANNEL_ID: ${{ matrix.channel == 'prayer3' && (vars.PRAYER3_YOUTUBE_CHANNEL_ID || secrets.PRAYER3_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer2' && (vars.PRAYER2_YOUTUBE_CHANNEL_ID || secrets.PRAYER2_YOUTUBE_CHANNEL_ID) || (vars.YOUTUBE_CHANNEL_ID || secrets.YOUTUBE_CHANNEL_ID)) }}
+          GEMINI_API_KEY: ${{ matrix.channel == 'prayer3' && secrets.PRAYER3_GEMINI_API_KEY || (matrix.channel == 'prayer2' && secrets.PRAYER2_GEMINI_API_KEY || secrets.GEMINI_API_KEY) }}
           # The engine files one issue when a viewer discloses distress instead of
           # answering them in public. Without a token that escalation is a log line.
           GH_TOKEN: ${{ github.token }}
-          LIMIT: ${{ github.event.inputs.limit || '10' }}
+          LIMIT: ${{ github.event.inputs.limit || '8' }}
+          PAGES: ${{ github.event.inputs.pages || '3' }}
           VIDEO_ID: ${{ github.event.inputs.video_id || '' }}
           DRY_RUN: ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }}
         run: |
@@ -78,7 +126,7 @@ jobs:
           # when it could not list comments. Without this, `| tee` would swallow
           # that and the run would go green having replied to nothing.
           set -o pipefail
-          ARGS="--limit $LIMIT"
+          ARGS="--limit $LIMIT --pages $PAGES"
           if [ -n "$VIDEO_ID" ]; then
             ARGS="$ARGS --video-id $VIDEO_ID"
           fi
@@ -87,7 +135,7 @@ jobs:
           else
             ARGS="$ARGS --apply"
           fi
-          echo "Executing: python scripts/reply_comments.py $ARGS"
+          echo "Executing: python scripts/reply_comments.py $ARGS (channel $CHANNEL_ID)"
           python scripts/reply_comments.py $ARGS 2>&1 | tee reply.log
 
       - name: Commit replied comments ledger
@@ -104,7 +152,12 @@ jobs:
             else
               git commit -m "chore(comments): record replied comment IDs [skip ci]"
               # Another workflow may have pushed while this one was replying.
-              git pull --rebase --autostash origin "${GITHUB_REF_NAME:-main}"
-              git push
+              # One rebase is not enough when produce and the supervisor are both
+              # writing content/ at the same time: retry before failing the run.
+              for attempt in 1 2 3; do
+                git pull --rebase --autostash origin "${GITHUB_REF_NAME:-main}" && git push && break
+                echo "push attempt $attempt lost the race; retrying"
+                sleep 5
+              done
             fi
           fi
