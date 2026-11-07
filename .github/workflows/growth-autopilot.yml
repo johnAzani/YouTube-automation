@@ -20,6 +20,12 @@ on:
     # feedback is committed before the next authoring pass reads it.
     - cron: "14 2 * * *"
   workflow_dispatch:
+    inputs:
+      channel:
+        description: "Channel id (secret-place, prayer2, prayer3; blank = all provisioned channels)"
+        required: false
+        default: ""
+        type: string
 
 permissions:
   contents: write
@@ -30,13 +36,61 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      channels: ${{ steps.discover.outputs.channels }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Discover provisioned channels for growth sync
+        id: discover
+        env:
+          INPUT_CHANNEL: ${{ inputs.channel }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          PRAYER2_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER3_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json, os, sys
+          sys.path.insert(0, ".")
+          from pipeline.channels import CHANNELS, normalize_channel_id, scheduled_channels
+          requested = (os.environ.get("INPUT_CHANNEL") or "").strip()
+          if requested:
+              channels = [normalize_channel_id(requested)]
+          else:
+              channels = []
+              for cid in scheduled_channels():
+                  p = CHANNELS[cid].secret_prefix.rstrip("_")
+                  token_key = f"{p}_YOUTUBE_REFRESH_TOKEN" if p else "YOUTUBE_REFRESH_TOKEN"
+                  if (os.environ.get(token_key) or "").strip():
+                      channels.append(cid)
+              if not channels:
+                  channels = ["secret-place"]
+          print(f"Discovered growth channels: {channels}")
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
+              fh.write(f"channels={json.dumps(channels)}\n")
+          PY
+
   growth:
+    needs: plan
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        channel: ${{ fromJson(needs.plan.outputs.channels) }}
     env:
+      CHANNEL_ID: ${{ matrix.channel }}
       YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
       YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
       YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+      PRAYER2_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER2_YOUTUBE_CLIENT_ID }}
+      PRAYER2_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER2_YOUTUBE_CLIENT_SECRET }}
+      PRAYER2_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN }}
+      PRAYER3_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER3_YOUTUBE_CLIENT_ID }}
+      PRAYER3_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER3_YOUTUBE_CLIENT_SECRET }}
+      PRAYER3_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN }}
       GH_TOKEN: ${{ github.token }}
       # The autopilot is a measurement/sync job, not the weekly human report: do not
       # file a GitHub issue on every daily run.
@@ -46,6 +100,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Refresh main tip across matrix legs
+        run: git pull --ff-only origin main || true
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -54,61 +111,71 @@ jobs:
       - name: Python deps
         run: pip install -r requirements.txt
 
-      - name: Snapshot public channel metrics
+      - name: Snapshot public channel metrics (${{ matrix.channel }})
         id: metrics
         continue-on-error: true
-        run: python -u scripts/metrics_snapshot.py
+        run: python -u scripts/metrics_snapshot.py --channel "${{ matrix.channel }}"
 
-      - name: Compute closed-loop performance feedback
+      - name: Compute closed-loop performance feedback (${{ matrix.channel }})
         # Reads the snapshot just written + the published receipts. With too little
         # data it writes a neutral "insufficient_data" report and the brain keeps its
         # roadmap order — it never blocks authoring.
-        run: python -u scripts/performance_feedback.py
+        run: python -u scripts/performance_feedback.py --channel "${{ matrix.channel }}"
 
-      - name: Sync official series playlists (session watch-time)
+      - name: Sync official series playlists (${{ matrix.channel }})
         continue-on-error: true
-        run: python -u scripts/manage_playlists.py
+        run: python -u scripts/manage_playlists.py --channel "${{ matrix.channel }}"
 
-      - name: Celebrate live subscriber milestone
+      - name: Celebrate live subscriber milestone (${{ matrix.channel }})
         continue-on-error: true
-        run: python -u scripts/celebrate_milestone.py
+        run: python -u scripts/celebrate_milestone.py --channel "${{ matrix.channel }}"
 
       - name: Upload metrics + milestone card as short-lived artifacts
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: growth-autopilot-${{ github.run_id }}
+          name: growth-autopilot-${{ matrix.channel }}-${{ github.run_id }}
           path: |
             content/metrics.csv
-            content/channel-metrics.json
+            content/channel-metrics*.json
             content/community/milestone_*.png
           retention-days: 30
           if-no-files-found: ignore
 
-      - name: Commit the derived feedback artifact
-        # Copy the monitor.yml pattern: fetch + reset --mixed (never pull --rebase,
-        # which conflicted on the 2 Nov release), add only the derived artifact, and
-        # push with [skip ci]. Raw metrics are gitignored and never committed.
+      - name: Commit the derived feedback artifact (${{ matrix.channel }})
+        # Preserve only this leg's derived feedback file across fetch + reset --mixed
+        # so multi-leg runs never stage unrelated upstream commits as deletions.
         run: |
-          git config user.name "growth-autopilot"
-          git config user.email "actions@users.noreply.github.com"
-          git fetch --quiet origin main
-          git reset --mixed origin/main
-          if [ -f content/research/performance_feedback.json ]; then
-            git add content/research/performance_feedback.json
-          fi
-          if git diff --cached --quiet; then
-            echo "feedback unchanged"
+          FEEDBACK_REL="$(python3 -c 'import sys; sys.path.insert(0, "."); from pathlib import Path; from pipeline.performance_feedback import feedback_path_for, REPO_ROOT; print(feedback_path_for(sys.argv[1]).relative_to(REPO_ROOT))' "${{ matrix.channel }}")"
+          if [ ! -f "$FEEDBACK_REL" ]; then
+            echo "no feedback file written at $FEEDBACK_REL"
             exit 0
           fi
-          git commit --quiet -m "chore(growth): refresh closed-loop performance feedback [skip ci]"
-          git push --quiet origin HEAD:main \
-            || echo "::warning::could not push the feedback artifact; the run log is the record"
+          cp "$FEEDBACK_REL" /tmp/channel_feedback.json
+          git config user.name "growth-autopilot"
+          git config user.email "actions@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch --quiet origin main
+            git reset --mixed origin/main
+            mkdir -p "$(dirname "$FEEDBACK_REL")"
+            cp /tmp/channel_feedback.json "$FEEDBACK_REL"
+            git add "$FEEDBACK_REL"
+            if git diff --cached --quiet; then
+              echo "feedback unchanged for ${{ matrix.channel }}"
+              exit 0
+            fi
+            git commit --quiet -m "chore(growth): refresh ${{ matrix.channel }} performance feedback [skip ci]"
+            if git push --quiet origin HEAD:main; then
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          echo "::warning::could not push the feedback artifact; the run log is the record"
 
       - name: Surface a failing engine without masking the others
         if: always()
         run: |
           if [ "${{ steps.metrics.outcome }}" != "success" ]; then
-            echo "::warning title=Metrics snapshot degraded::feedback fell back to the latest available data; check the YouTube token"
+            echo "::warning title=Metrics snapshot degraded (${{ matrix.channel }})::feedback fell back to the latest available data; check the YouTube token"
           fi
-          echo "Growth autopilot finished. Feedback, playlists and milestone each ran fail-soft."
+          echo "Growth autopilot (${{ matrix.channel }}) finished. Feedback, playlists and milestone each ran fail-soft."

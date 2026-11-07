@@ -160,3 +160,36 @@ def scheduled_channels() -> tuple[str, ...]:
 def channel_for_doc(meta: dict | None) -> str:
     """The channel a script belongs to (frontmatter `channel:`, default ch.1)."""
     return normalize_channel_id((meta or {}).get("channel"))
+
+
+def add_channel_arg(parser) -> None:
+    """Attach a standard `--channel` CLI option to an `ArgumentParser`."""
+    parser.add_argument(
+        "--channel",
+        default=None,
+        help="Target channel id (secret-place, prayer2, prayer3; defaults to CHANNEL_ID or secret-place)",
+    )
+
+
+def apply_channel_env(channel_id: str | None = None) -> str:
+    """Resolve `channel_id` and map its prefixed secrets onto canonical env vars."""
+    explicit = channel_id or os.environ.get("CHANNEL_ID")
+    cid = normalize_channel_id(explicit)
+    if explicit:
+        os.environ["CHANNEL_ID"] = cid
+        profile = get_channel(cid)
+        if profile.secret_prefix:
+            mapping = {
+                "YOUTUBE_CLIENT_ID": profile.secret_name("YOUTUBE_CLIENT_ID"),
+                "YOUTUBE_CLIENT_SECRET": profile.secret_name("YOUTUBE_CLIENT_SECRET"),
+                "YOUTUBE_REFRESH_TOKEN": profile.secret_name("YOUTUBE_REFRESH_TOKEN"),
+                "YOUTUBE_PLAYLIST_ID": profile.secret_name("YOUTUBE_PLAYLIST_ID"),
+                "GEMINI_API_KEY": profile.secret_name("GEMINI_API_KEY"),
+            }
+            for canonical, prefixed in mapping.items():
+                if prefixed in os.environ and os.environ[prefixed]:
+                    os.environ[canonical] = os.environ[prefixed]
+                elif prefixed not in os.environ:
+                    os.environ.pop(canonical, None)
+    return cid
+

@@ -139,8 +139,20 @@ def scopes_for_refresh() -> list[str]:
     return list(SCOPES)
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
+    import argparse
     from googleapiclient.discovery import build
+    from pipeline.channels import add_channel_arg, apply_channel_env
+
+    parser = argparse.ArgumentParser(description=__doc__)
+    add_channel_arg(parser)
+    eff_argv = argv if argv is not None else (
+        sys.argv[1:] if sys.argv and "metrics_snapshot" in sys.argv[0] else []
+    )
+    args = parser.parse_args(eff_argv)
+    channel_key = apply_channel_env(args.channel)
+    if args.channel:
+        CONFIG.refresh()
 
     if not all((CONFIG.youtube_refresh_token, CONFIG.youtube_client_id, CONFIG.youtube_client_secret)):
         missing = [name for name, value in (
@@ -199,8 +211,12 @@ def main() -> int:
     today = dt.date.today()
     today_text = today.isoformat()
     channel_snapshot = _subscriber_snapshot(items[0], today_text)
+    channel_snapshot["channel_key"] = channel_key
     CSV_PATH.parent.mkdir(parents=True, exist_ok=True)
     CSV_PATH.with_name("channel-metrics.json").write_text(
+        json.dumps(channel_snapshot, indent=2) + "\n", encoding="utf-8"
+    )
+    CSV_PATH.with_name(f"channel-metrics-{channel_key}.json").write_text(
         json.dumps(channel_snapshot, indent=2) + "\n", encoding="utf-8"
     )
     print(_subscriber_summary(channel_snapshot))

@@ -101,23 +101,37 @@ jobs:
       - name: Dispatch missed slots
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python -m scripts.scheduler_supervisor
+        run: |
+          git pull --ff-only origin main || true
+          python -m scripts.scheduler_supervisor
 
       - name: Record the dispatch ledger
         if: ${{ always() && !cancelled() }}
         run: |
+          mkdir -p /tmp/supervisor-ledger
+          for f in content/monitor/dispatched.json content/monitor/schedule-health.json; do
+            if [ -f "$f" ]; then cp "$f" "/tmp/supervisor-ledger/$(basename "$f")"; fi
+          done
+          if [ -z "$(ls -A /tmp/supervisor-ledger 2>/dev/null)" ]; then
+            echo "no ledger files present"
+            exit 0
+          fi
           git config user.name "scheduler-supervisor"
           git config user.email "actions@users.noreply.github.com"
-          # The ledger records what was dispatched; schedule-health.json records how
-          # quiet the repo was and how late each delivery arrived. Both belong in the
-          # history: a night nobody can measure is a night nobody can fix.
-          for f in content/monitor/dispatched.json content/monitor/schedule-health.json; do
-            if [ -f "$f" ]; then git add "$f"; fi
+          for attempt in 1 2 3; do
+            git fetch --quiet origin main
+            git reset --mixed origin/main
+            mkdir -p content/monitor
+            cp /tmp/supervisor-ledger/* content/monitor/
+            git add content/monitor/dispatched.json content/monitor/schedule-health.json 2>/dev/null || true
+            if git diff --cached --quiet; then
+              echo "no dispatches and no schedule change this pass"
+              exit 0
+            fi
+            git commit --quiet -m "chore(monitor): record dispatched slots and scheduler health [skip ci]"
+            if git push --quiet origin HEAD:main; then
+              exit 0
+            fi
+            sleep $((attempt * 2))
           done
-          if ! git diff --staged --quiet; then
-            git commit -m "chore(monitor): record dispatched slots and scheduler health [skip ci]"
-            git pull --rebase --autostash origin "${GITHUB_REF_NAME:-main}" || true
-            git push || echo "::warning::could not push the dispatch ledger"
-          else
-            echo "no dispatches and no schedule change this pass"
-          fi
+          echo "::warning::could not push the dispatch ledger"

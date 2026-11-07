@@ -104,6 +104,24 @@ class TestRunEvidence(MonitorCase):
         report = self.classify(runs)
         self.assertEqual(report.automations[0].verdict, "FLAKY")
 
+    def test_one_green_run_after_a_fix_clears_pre_fix_flakiness(self):
+        """UNTESTED FIX promises 'needs one green run' — pre-fix failures must not keep it FLAKY."""
+        self.last_edit.return_value = NOW - timedelta(hours=2)
+        runs = [
+            run("produce.yml", 1, "success"),
+            run("produce.yml", 5, "failure"),
+            run("produce.yml", 9, "failure"),
+            run("produce.yml", 14, "failure"),
+        ]
+        row = self.classify(runs).automations[0]
+        self.assertEqual(row.verdict, "OK")
+        self.assertEqual(row.failures_5, 0)
+
+        # Conversely, repeated failures *after* the edit still report FLAKY.
+        self.last_edit.return_value = NOW - timedelta(hours=20)
+        row_post_fail = self.classify(runs).automations[0]
+        self.assertEqual(row_post_fail.verdict, "FLAKY")
+
     def test_an_empty_history_never_reports_healthy(self):
         report = self.classify([])
         self.assertFalse(report.healthy)

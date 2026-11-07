@@ -118,8 +118,18 @@ def get_current_milestone_status(current_subs: int = 1230) -> tuple[MilestoneTie
     return achieved, upcoming
 
 
-def render_milestone_card(tier: MilestoneTier, out_path: Path | None = None) -> Image.Image:
+def render_milestone_card(
+    tier: MilestoneTier,
+    out_path: Path | None = None,
+    channel_id: str | None = None,
+) -> Image.Image:
     """Render a 1080x1080 celebratory Community Tab card."""
+    from .channel_capabilities import brand_for
+    from .channels import normalize_channel_id
+
+    eff = normalize_channel_id(channel_id or CONFIG.channel_id)
+    brand_name = brand_for(eff).display_name.upper()
+
     img = Image.new("RGBA", (CW, CH), (0, 0, 0, 255))
     draw = ImageDraw.Draw(img)
 
@@ -155,7 +165,7 @@ def render_milestone_card(tier: MilestoneTier, out_path: Path | None = None) -> 
 
     # 4. Top Header Badge
     font_badge = _get_inter_font(22, "SemiBold")
-    badge_text = "THE SECRET PLACE  ·  COMMUNITY MILESTONE CELEBRATION"
+    badge_text = f"{brand_name}  ·  COMMUNITY MILESTONE CELEBRATION"
     bb = draw.textbbox((0, 0), badge_text, font=font_badge)
     draw.text(((CW - (bb[2] - bb[0])) // 2, int(CH * 0.17)), badge_text, font=font_badge, fill=MUTED_TEXT)
 
@@ -192,7 +202,7 @@ def render_milestone_card(tier: MilestoneTier, out_path: Path | None = None) -> 
 
     # 9. Footer
     font_foot = _get_inter_font(22, "SemiBold")
-    foot_text = "TO GOD BE ALL THE GLORY  ·  THE SECRET PLACE"
+    foot_text = f"TO GOD BE ALL THE GLORY  ·  {brand_name}"
     fb = draw.textbbox((0, 0), foot_text, font=font_foot)
     draw.text(((CW - (fb[2] - fb[0])) // 2, int(CH * 0.82)), foot_text, font=font_foot, fill=GOLD_TEXT)
 

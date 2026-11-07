@@ -114,6 +114,10 @@ class Brand:
         "and release every anxious thought into the Father's keeping before sleep."
     )
     verified_commons_queries: tuple[tuple[str, int, str], ...] = ()
+    #: Per-channel closed-loop feedback artifact & series playlists (growth-autopilot)
+    feedback_artifact_name: str = "performance_feedback.json"
+    anchor_video: tuple[str, str, tuple[str, ...]] | None = None
+    series_playlists: tuple[tuple[str, str, str, tuple[str, ...]], ...] = ()
 
 
 @dataclass(frozen=True)
@@ -235,6 +239,40 @@ _BRANDS: dict[str, Brand] = {
             ("still water perfect reflection moon night sky stars", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
             ("star night sky over quiet countryside peaceful", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
         ),
+        feedback_artifact_name="performance_feedback.json",
+        anchor_video=(
+            "7RDX0fbIOtQ",
+            "Psalm 91: The Complete Prayer of Divine Protection Before You Sleep",
+            ("psalm 91", "prayer of protection", "sleep prayer", "the secret place"),
+        ),
+        series_playlists=(
+            (
+                "night_prayers",
+                "Night Prayers of Divine Protection — The Secret Place",
+                "Say these powerful Psalm prayers before you sleep tonight. Let God's covenant of "
+                "divine protection, peace, and angelic shelter surround your home, family, and mind from wall to wall.\n\n"
+                "Featuring Psalm 91, Psalm 23, Psalm 121, and Psalm 27 with peaceful 432 Hz bedtime meditation soundscapes.\n\n"
+                "Produced by The Secret Place | Daily Scripture & Bedtime Prayer.",
+                ("psalm 91", "protection", "night prayer", "sleep prayer", "secret place"),
+            ),
+            (
+                "bedtime_sleep",
+                "Bedtime Scripture Meditations for Deep Sleep & Peace (432 Hz)",
+                "Soothing scripture meditations, biblical sleep prayers, and calming nighttime scriptures "
+                "designed to overcome insomnia, quiet racing thoughts, and guide you into deep, restorative rest.\n\n"
+                "Featuring 432 Hz Solfeggio acoustic beds and sacred scripture.\n\n"
+                "Produced by The Secret Place | Daily Scripture & Bedtime Prayer.",
+                ("sleep", "bedtime", "rest", "peace", "432 hz", "meditation"),
+            ),
+            (
+                "complete_psalms",
+                "The Complete Psalms Devotional Series (Exposition & Prayer)",
+                "Verse-by-verse devotional prayer and classical commentary across the Book of Psalms. "
+                "Deep-dive into God's word with classical exposition, historical context, and contemplative evening prayer.\n\n"
+                "Produced by The Secret Place | Daily Scripture & Bedtime Prayer.",
+                ("psalm", "scripture", "exposition", "devotional"),
+            ),
+        ),
     ),
     "prayer2": Brand(
         channel_id="prayer2",
@@ -316,6 +354,33 @@ _BRANDS: dict[str, Brand] = {
             ("peaceful sunrise over misty countryside morning", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
             ("peaceful sunrise over misty alpine valley", 4, "4x Public domain — USGS alpine valley dawn mist photography"),
         ),
+        feedback_artifact_name="performance_feedback_prayer2.json",
+        anchor_video=None,
+        series_playlists=(
+            (
+                "morning_prayers",
+                "Morning Prayers to Begin Your Day — The Morning Altar",
+                "Begin every sunrise at The Morning Altar with KJV scripture declarations and guided prayer "
+                "for peace, protection, and God's presence over your household.\n\n"
+                "Produced by The Morning Altar | Daily Sunrise Prayer.",
+                ("morning prayer", "sunrise", "morning altar", "lamentations", "mark", "begin your day"),
+            ),
+            (
+                "sunrise_guidance",
+                "Sunrise Scripture Prayers for Wisdom, Favor & Work — The Morning Altar",
+                "Commit your plans, decisions, and daily work to the Lord at daybreak with Proverbs and Psalms "
+                "morning prayers.\n\n"
+                "Produced by The Morning Altar | Daily Sunrise Prayer.",
+                ("proverbs", "trust", "guidance", "mercy", "mercies", "work", "morning"),
+            ),
+            (
+                "morning_psalms",
+                "Morning Psalms & Daily Devotions (KJV) — The Morning Altar",
+                "Verse-by-verse sunrise Psalm meditations and classical KJV morning prayers to anchor your heart before the day begins.\n\n"
+                "Produced by The Morning Altar | Daily Sunrise Prayer.",
+                ("psalm", "scripture", "devotion", "morning prayer"),
+            ),
+        ),
     ),
     "prayer3": Brand(
         channel_id="prayer3",
@@ -396,6 +461,32 @@ _BRANDS: dict[str, Brand] = {
             ("peaceful mountain river calm water forest", 4, "4x Public domain — NPS mountain stream and river dawn scans"),
             ("golden light rays through clouds over mountain peak", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
             ("sun rays breaking clouds mountains", 3, "3x Public domain — NOAA National Weather Service crepuscular ray mountain photography"),
+        ),
+        feedback_artifact_name="performance_feedback_prayer3.json",
+        anchor_video=None,
+        series_playlists=(
+            (
+                "midday_prayers",
+                "Midday Prayers to Pause & Reset Your Day — The Midday Watch",
+                "Step away from the noise at noon with KJV scripture meditations and steady prayer "
+                "for peace, focus, and protection through the afternoon.\n\n"
+                "Produced by The Midday Watch | Noonday Prayer & Scripture.",
+                ("midday", "noon", "noonday", "midday watch", "pause"),
+            ),
+            (
+                "afternoon_strength",
+                "Noonday Prayers for Work, Clarity & Renewed Strength — The Midday Watch",
+                "Commit the work of your hands to the Lord and receive renewed afternoon strength from Proverbs, Isaiah, and the Psalms.\n\n"
+                "Produced by The Midday Watch | Noonday Prayer & Scripture.",
+                ("proverbs", "isaiah", "strength", "work", "commit", "midday prayer"),
+            ),
+            (
+                "midday_psalms",
+                "Psalms at Noon (KJV Devotional Series) — The Midday Watch",
+                "Verse-by-verse midday Psalm prayers and classical KJV reflections for stillness and courage in the middle of the day.\n\n"
+                "Produced by The Midday Watch | Noonday Prayer & Scripture.",
+                ("psalm", "scripture", "devotion", "noon prayer", "midday"),
+            ),
         ),
     ),
 }

@@ -77,8 +77,34 @@ jobs:
 
       - name: Commit Generated Community Cards
         run: |
+          mkdir -p /tmp/community-out
+          git status --porcelain content/community/ | while read -r _st path; do
+            if [ -f "$path" ]; then
+              cp "$path" "/tmp/community-out/$(basename "$path")"
+            fi
+          done
+          if [ -z "$(ls -A /tmp/community-out 2>/dev/null)" ]; then
+            echo "Community cards unchanged; nothing to commit."
+            exit 0
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add content/community/
-          git diff --staged --quiet || git commit -m "chore(community): update community tab cards and manifests [skip ci]"
-          git push
+          for attempt in 1 2 3; do
+            git fetch --quiet origin main
+            git reset --mixed origin/main
+            mkdir -p content/community
+            for f in /tmp/community-out/*; do
+              cp "$f" "content/community/$(basename "$f")"
+              git add "content/community/$(basename "$f")"
+            done
+            if git diff --cached --quiet; then
+              echo "Community cards already up to date on main."
+              exit 0
+            fi
+            git commit --quiet -m "chore(community): update community tab cards and manifests [skip ci]"
+            if git push --quiet origin HEAD:main; then
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          echo "::warning::could not push community cards after 3 attempts; artifact is still uploaded"

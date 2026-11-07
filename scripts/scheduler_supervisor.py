@@ -526,6 +526,21 @@ def _failed_dispatches(state: dict, latest: dict[str, tuple[datetime, str | None
     return out
 
 
+DISPATCH_SPAWN_GRACE = timedelta(minutes=2)
+
+
+def _inflight_workflows(runs: list[dict]) -> set[str]:
+    """Workflow filenames that currently have a queued or running job."""
+    active: set[str] = set()
+    for run in runs:
+        path = (run.get("path") or "").split("/")[-1]
+        if not path:
+            continue
+        if str(run.get("status")) in {"queued", "in_progress", "waiting", "requested", "pending"}:
+            active.add(path)
+    return active
+
+
 def _latest_runs(runs: list[dict]) -> dict[str, tuple[datetime, str | None]]:
     """{workflow_file: (created_at, conclusion)} for the newest run of each."""
     out: dict[str, tuple[datetime, str | None]] = {}
@@ -764,6 +779,7 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
 
     run_history = runs if runs is not None else _safe_runs()
     latest = _latest_runs(run_history)
+    inflight = _inflight_workflows(run_history)
 
     def evidence_for(workflow: str, entry: dict) -> str:
         """Why that workflow's most recent failure happened, from its own annotations."""
@@ -818,6 +834,10 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
         key = f"{workflow}@{slot}"
         previous = state.get(key)
         attempts = int(previous.get("attempts", 1)) if previous else 0
+        if workflow in inflight:
+            result["skipped"].append({"workflow": workflow, "slot": slot,
+                                      "reason": "a run is already in progress or queued"})
+            continue
         if previous:
             finished = latest.get(workflow)
             if workflow != "produce.yml" and finished is not None \
@@ -847,6 +867,18 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
                                               "reason": f"already dispatched {attempts}x for this "
                                                         f"slot; not trying again"})
                     continue
+            try:
+                dispatched_at = datetime.fromisoformat(str(previous.get("at") or "").replace("Z", "+00:00"))
+            except ValueError:
+                dispatched_at = None
+            if (
+                dispatched_at is not None
+                and timedelta(0) <= (now - dispatched_at) < DISPATCH_SPAWN_GRACE
+                and (finished is None or finished[0] < dispatched_at)
+            ):
+                result["skipped"].append({"workflow": workflow, "slot": slot,
+                                          "reason": "waiting for its dispatched run to appear"})
+                continue
         if len(result["dispatched"]) >= MAX_DISPATCHES:
             result["skipped"].append({"workflow": workflow, "slot": slot,
                                       "reason": "per-pass dispatch limit reached"})

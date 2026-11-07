@@ -268,3 +268,42 @@ class TestBrainIntegration:
         brain = gb.GeminiBrain()
         cand = brain.select_next_scripture()  # must not raise
         assert cand.get("scripture")
+
+    def test_channel_scoped_feedback_paths_and_brain_isolation(self, tmp_path, monkeypatch):
+        import pipeline.gemini_brain as gb
+        from pipeline import performance_feedback as pf
+
+        assert pf.feedback_path_for("secret-place").name == "performance_feedback.json"
+        assert pf.feedback_path_for("prayer2").name == "performance_feedback_prayer2.json"
+        assert pf.feedback_path_for("prayer3").name == "performance_feedback_prayer3.json"
+
+        pub = tmp_path / "published"
+        pub.mkdir()
+        (pub / "0008-psalm-91.md").write_text(
+            '---\nid: "0008"\ntitle: "Psalm 91 Bedtime Prayer"\nchannel: secret-place\n'
+            'format: longform\nyoutube_video_id: vid_sp\npublished_on: "2026-11-01"\n---\n## S\nAmen.\n',
+            encoding="utf-8",
+        )
+        (pub / "0045-psalm-23-midday.md").write_text(
+            '---\nid: "0045"\ntitle: "Psalm 23 Midday Prayer"\nchannel: prayer3\n'
+            'format: longform\nyoutube_video_id: vid_p3\npublished_on: "2026-11-01"\n---\n## S\nAmen.\n',
+            encoding="utf-8",
+        )
+        p3_index = pf.load_published_index(published_dir=pub, channel_id="prayer3")
+        assert list(p3_index) == ["vid_p3"]
+
+        seen_channels: list[str | None] = []
+        monkeypatch.setattr(gb, "QUEUE_DIR", tmp_path / "queue")
+        monkeypatch.setattr(gb, "PUBLISHED_DIR", pub)
+        (tmp_path / "queue").mkdir()
+
+        def spy_load(path=None, channel_id=None):
+            seen_channels.append(channel_id)
+            return None
+
+        monkeypatch.setattr("pipeline.performance_feedback.load_feedback_report", spy_load)
+        brain = gb.GeminiBrain(channel_id="prayer3")
+        cand = brain.select_next_scripture()
+        assert cand.get("scripture")
+        assert seen_channels == ["prayer3"]
+

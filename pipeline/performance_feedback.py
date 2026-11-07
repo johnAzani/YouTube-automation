@@ -154,10 +154,26 @@ def load_metric_snapshots(csv_path: Path | None = None) -> list[dict]:
     return rows
 
 
-def load_published_index(published_dir: Path | None = None) -> dict[str, dict]:
-    """Map video_id -> receipt metadata (title, format, scripture, theme)."""
+def feedback_path_for(channel_id: str | None = None) -> Path:
+    """Path to the committed aggregate feedback artifact for `channel_id`."""
+    if not channel_id:
+        return FEEDBACK_JSON
+    from .channel_capabilities import brand_for
+    from .channels import normalize_channel_id
+
+    brand = brand_for(normalize_channel_id(channel_id))
+    return REPO_ROOT / "content" / "research" / brand.feedback_artifact_name
+
+
+def load_published_index(
+    published_dir: Path | None = None,
+    channel_id: str | None = None,
+) -> dict[str, dict]:
+    """Index published receipts by YouTube video ID (`{video_id: {...}}`)."""
+    from .channels import normalize_channel_id
     from .script_doc import parse_script
 
+    wanted = normalize_channel_id(channel_id) if channel_id else None
     pdir = Path(published_dir) if published_dir else PUBLISHED_DIR
     index: dict[str, dict] = {}
     if not pdir.exists():
@@ -167,6 +183,8 @@ def load_published_index(published_dir: Path | None = None) -> dict[str, dict]:
             doc = parse_script(p)
         except Exception:
             continue
+        if wanted and doc.channel != wanted:
+            continue
         vid = str(doc.meta.get("youtube_video_id", "") or "")
         if not vid:
             continue
@@ -174,6 +192,7 @@ def load_published_index(published_dir: Path | None = None) -> dict[str, dict]:
         index[vid] = {
             "title": title,
             "format": doc.format,
+            "channel": doc.channel,
             "scripture": extract_scripture(title),
             "theme": classify_theme(title, doc.tags),
             "published_on": str(doc.meta.get("published_on", "") or ""),
@@ -349,10 +368,18 @@ def build_feedback_report(
     snapshots: list[dict] | None = None,
     published_index: dict[str, dict] | None = None,
     today: date | None = None,
+    channel_id: str | None = None,
 ) -> dict:
     """Build the committed, public-safe feedback artifact."""
     snapshots = snapshots if snapshots is not None else load_metric_snapshots()
-    published_index = published_index if published_index is not None else load_published_index()
+    published_index = (
+        published_index
+        if published_index is not None
+        else load_published_index(channel_id=channel_id)
+    )
+    if channel_id and snapshots:
+        # Restrict snapshot rows to videos belonging to this channel's published index
+        snapshots = [r for r in snapshots if r.get("video_id") in published_index]
     today = today or datetime.now(timezone.utc).date()
 
     perf = compute_video_performance(snapshots, published_index, today)
@@ -398,15 +425,22 @@ def build_feedback_report(
     }
 
 
-def write_feedback_report(report: dict, out_path: Path | None = None) -> Path:
-    path = Path(out_path) if out_path else FEEDBACK_JSON
+def write_feedback_report(
+    report: dict,
+    out_path: Path | None = None,
+    channel_id: str | None = None,
+) -> Path:
+    path = Path(out_path) if out_path else feedback_path_for(channel_id)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     return path
 
 
-def load_feedback_report(path: Path | None = None) -> dict | None:
-    p = Path(path) if path else FEEDBACK_JSON
+def load_feedback_report(
+    path: Path | None = None,
+    channel_id: str | None = None,
+) -> dict | None:
+    p = Path(path) if path else feedback_path_for(channel_id)
     if not p.is_file():
         return None
     try:

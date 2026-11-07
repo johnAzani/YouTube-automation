@@ -81,3 +81,24 @@ def test_sync_all_series_playlists_dry_run():
     assert "night_prayers" in report["playlists"]
     assert "bedtime_sleep" in report["playlists"]
     assert "complete_psalms" in report["playlists"]
+
+
+def test_channel_scoped_playlists_do_not_cross_contaminate():
+    """Each channel gets its own branded playlists and never pulls Secret Place's anchor video."""
+    from pipeline.playlists import playlists_for_channel
+
+    p2_specs = playlists_for_channel("prayer2")
+    p3_specs = playlists_for_channel("prayer3")
+    assert set(p2_specs) == {"morning_prayers", "sunrise_guidance", "morning_psalms"}
+    assert set(p3_specs) == {"midday_prayers", "afternoon_strength", "midday_psalms"}
+
+    p2_vids = collect_published_videos(channel_id="prayer2")
+    p3_vids = collect_published_videos(channel_id="prayer3")
+    assert "7RDX0fbIOtQ" not in [v["video_id"] for v in p2_vids]
+    assert "7RDX0fbIOtQ" not in [v["video_id"] for v in p3_vids]
+
+    r3 = sync_all_series_playlists(youtube=None, dry_run=True, channel_id="prayer3")
+    assert r3["channel"] == "prayer3"
+    assert r3["playlists_synced"] == 3
+    assert "midday_prayers" in r3["playlists"]
+
