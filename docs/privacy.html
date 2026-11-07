@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Privacy Policy for The Secret Place Video Studio.">
-  <title>Privacy Policy — The Secret Place Video Studio</title>
+  <meta name="description" content="Privacy Policy for the owner's YouTube production workflow.">
+  <title>Privacy Policy — YouTube production workflow</title>
   <style>
     :root { color-scheme: light; font-family: system-ui, sans-serif; }
     body { margin: 0; background: #f4f7fb; color: #1c2733; line-height: 1.65; }
@@ -17,15 +17,16 @@
 <body>
 <main>
   <h1>Privacy Policy</h1>
-  <p><strong>The Secret Place Video Studio</strong> is an editorial video-production workflow. It is not offered as a service to the public. This policy explains how the workflow handles information when its owner connects a YouTube account.</p>
+  <p><strong>This YouTube production workflow</strong> (it runs the owner's three channels: <em>The Secret Place</em>, <em>The Morning Altar</em> and <em>The Midday Watch</em>) is an editorial video-production workflow. It is not offered as a service to the public. This policy explains how the workflow handles information when its owner connects a YouTube account.</p>
   <p><strong>Effective date:</strong> 21 October 2026</p>
 
   <h2>Google and YouTube data accessed</h2>
-  <p>With the account owner's authorization, the workflow requests the Google OAuth scopes <code>youtube.upload</code> and <code>youtube.readonly</code>. It uses them only to:</p>
+  <p>With the account owner's authorization, the workflow requests three Google OAuth scopes — <code>youtube.upload</code>, <code>youtube.readonly</code> and <code>youtube.force-ssl</code>. Each channel is authorised separately, with its own OAuth client, so a token can only ever reach the one channel it was minted for. The workflow uses those scopes only to:</p>
   <ul>
     <li>upload the owner's video drafts and their metadata to the owner's YouTube channel;</li>
     <li>optionally set a thumbnail or add a video to a playlist when configured; and</li>
-    <li>run a weekly performance snapshot for videos whose YouTube privacy status is <strong>public</strong>.</li>
+    <li>run a weekly performance snapshot for videos whose YouTube privacy status is <strong>public</strong>; and</li>
+    <li>read the comments on the owner's own videos and publish a reply when a comment matches the channel's configured reply rules. <code>youtube.force-ssl</code> exists for that read-and-reply step; no other channel's comments are read, and no comment is deleted.</li>
   </ul>
   <p>The metrics workflow excludes private and unlisted videos and does not export channel-level subscriber totals. It stores a snapshot of public-video titles, IDs, publication dates, views, likes, and comments as a GitHub Actions artifact for up to 30 days. It does not commit that metrics file to the repository.</p>
 
@@ -49,7 +50,7 @@
   <h2>Security and contact</h2>
   <p>Access is limited by Google OAuth authorization and GitHub repository/workflow permissions. No system can guarantee absolute security; the repository owner should use a unique account password, two-step verification, least-privilege access, and GitHub secrets rather than committed credentials. For privacy questions, contact the developer support email shown on the Google OAuth consent screen.</p>
 
-  <p><a href="app.html">Back to The Secret Place Video Studio</a></p>
+  <p><a href="app.html">Back to the studio page</a></p>
 </main>
 </body>
 </html>
