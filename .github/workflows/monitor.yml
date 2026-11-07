@@ -168,8 +168,13 @@ jobs:
               cp -- "$sync_dir/$path" "$path"
             fi
           done < "$sync_dir/files.z"
+          git restore --source=origin/main --staged --worktree -- content/queue/ content/shorts-queue/ docs/network-state.json 2>/dev/null || true
+          python -m scripts.build_dashboard_data || true
           if [ -f content/monitor/status.json ]; then
             git add content/monitor/status.json
+          fi
+          if [ -f docs/network-state.json ]; then
+            git add docs/network-state.json
           fi
           git add content/published/*.md
           if git diff --cached --quiet; then

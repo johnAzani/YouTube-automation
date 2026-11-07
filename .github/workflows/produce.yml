@@ -451,6 +451,12 @@ jobs:
               echo "queue state unchanged (nothing to record)"
               exit 0
             fi
+            idx_dir="$(mktemp -d)"
+            if git checkout-index -a -f --prefix="$idx_dir/" \
+               && python -m scripts.build_dashboard_data --repo-root "$idx_dir" --out docs/network-state.json; then
+              [ -f docs/network-state.json ] && git add -- docs/network-state.json
+            fi
+            rm -rf "$idx_dir"
             git commit --quiet -m "chore(content): publish job [skip ci]"
             if git push --quiet origin HEAD:main; then
               echo "queue state recorded on attempt $attempt"

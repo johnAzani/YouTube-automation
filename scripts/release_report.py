@@ -220,14 +220,18 @@ def is_quota_cooldown_only(summary: dict, log_tail: str) -> bool:
     )
 
 
-def _published_public_titles(published_dir: Path | None = None) -> set[str]:
-    """Titles of scripts in `content/published/` that are already live and public."""
+def _published_public_index(
+    published_dir: Path | None = None,
+) -> tuple[set[str], set[str], dict[str, str]]:
+    """Return `(public_titles, public_video_ids, canonical_vid_by_title)` from `content/published/`."""
     import yaml
 
     pdir = published_dir or (REPO / "content" / "published")
     titles: set[str] = set()
+    video_ids: set[str] = set()
+    canonical_by_title: dict[str, str] = {}
     if not pdir.is_dir():
-        return titles
+        return titles, video_ids, canonical_by_title
     for md in pdir.glob("*.md"):
         try:
             raw = md.read_text(encoding="utf-8")
@@ -236,19 +240,26 @@ def _published_public_titles(published_dir: Path | None = None) -> set[str]:
             meta = yaml.safe_load(raw.split("---", 2)[1]) or {}
         except Exception:  # noqa: BLE001
             continue
-        if (
-            str(meta.get("status") or "").strip().lower() == "published"
-            and str(meta.get("privacy") or "").strip().lower() == "public"
-            and str(meta.get("youtube_video_id") or "").strip()
-        ):
-            title = str(meta.get("title") or "").strip()
+        vid = str(meta.get("youtube_video_id") or "").strip()
+        status = str(meta.get("status") or "").strip().lower()
+        privacy = str(meta.get("privacy") or meta.get("privacy_status") or "").strip().lower()
+        title = str(meta.get("title") or "").strip()
+        if status == "published" and vid and title:
+            canonical_by_title[title] = vid
+        if status == "published" and privacy == "public" and vid:
+            video_ids.add(vid)
             if title:
                 titles.add(title)
-    return titles
+                titles.add(title.split("|")[0].strip())
+    return titles, video_ids, canonical_by_title
+
+
+def _published_public_titles(published_dir: Path | None = None) -> set[str]:
+    return _published_public_index(published_dir)[0]
 
 
 def sweep_stale_release_issues(repo: str, published_dir: Path | None = None) -> list[int]:
-    """Close non-failure quota-pause `Release failed` issues and already-public `Release ticket:` issues."""
+    """Close non-failure quota-pause `Release failed` issues and resolved/superseded `Release ticket:` issues."""
     if not shutil.which("gh"):
         return []
     found = subprocess.run(
@@ -266,7 +277,7 @@ def sweep_stale_release_issues(repo: str, published_dir: Path | None = None) -> 
     except (ValueError, TypeError):
         return []
 
-    public_titles = _published_public_titles(published_dir)
+    public_titles, public_vids, canonical_by_title = _published_public_index(published_dir)
     closed: list[int] = []
     for row in rows:
         num = int(row.get("number", 0) or 0)
@@ -282,10 +293,22 @@ def sweep_stale_release_issues(repo: str, published_dir: Path | None = None) -> 
             )
         elif title.startswith("Release ticket:"):
             video_title = title[len("Release ticket:") :].strip()
-            if video_title and video_title in public_titles:
+            title_head = video_title.split("|")[0].strip()
+            vid_matches = re.findall(r"(?:youtu\.be/|watch\?v=|/video/)([A-Za-z0-9_-]{11})", body)
+            canonical_vid = canonical_by_title.get(video_title, "")
+            if (
+                (video_title and video_title in public_titles)
+                or (title_head and title_head in public_titles)
+                or any(v in public_vids for v in vid_matches)
+            ):
                 comment = (
                     "Closing automatically: this video is already `published` and `public` "
                     "in `content/published/`."
+                )
+            elif canonical_vid and vid_matches and all(v != canonical_vid for v in vid_matches):
+                comment = (
+                    f"Closing automatically: this draft upload was superseded by canonical upload "
+                    f"`{canonical_vid}` in `content/published/`."
                 )
         if comment:
             res = subprocess.run(

@@ -3,16 +3,90 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Secret Place — Live Analytics & Telemetry Dashboard</title>
+<title>Sanctuary Prayer Network — 3-Channel Live Operations &amp; Video Catalog</title>
 <style>
   :root { color-scheme: dark; }
   body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #030a18; color: #eef4ff; }
-  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 16px 80px; }
+  .wrap { max-width: 1140px; margin: 0 auto; padding: 24px 16px 80px; }
   h1 { color: #ffc93c; font-size: 28px; margin-bottom: 6px; font-weight: 800; letter-spacing: -0.5px; }
-  h2 { color: #ffd75a; font-size: 20px; margin-top: 36px; margin-bottom: 14px; border-bottom: 1px solid #142848; padding-bottom: 8px; display: flex; align-items: center; justify-content: space-between; }
+  h2 { color: #ffd75a; font-size: 20px; margin-top: 36px; margin-bottom: 14px; border-bottom: 1px solid #142848; padding-bottom: 8px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
   .sub { color: #a9bbd0; line-height: 1.5; font-size: 15px; margin-top: 0; }
   .badge { display: inline-block; background: #ffc93c; color: #030a18; font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; margin-bottom: 10px; }
   .badge-live { display: inline-block; background: #00e676; color: #030a18; font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; margin-bottom: 10px; margin-left: 6px; }
+  .sync-stamp { color: #8ba2c7; font-size: 12px; font-weight: 600; margin-left: 8px; }
+
+  .channel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 18px;
+    margin: 16px 0 28px;
+  }
+  .channel-card {
+    background: linear-gradient(165deg, #081a36 0%, #051024 100%);
+    border: 1px solid #1c3f73;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .channel-card.daypart-sunrise { border-top: 3px solid #fbbf24; }
+  .channel-card.daypart-noon { border-top: 3px solid #38bdf8; }
+  .channel-card.daypart-night { border-top: 3px solid #a78bfa; }
+  .ch-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .ch-name { font-size: 19px; font-weight: 800; color: #ffd75a; margin: 0; }
+  .ch-handle { font-size: 12.5px; color: #8ba2c7; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .ch-stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; background: #040c1d; border: 1px solid #132c52; border-radius: 10px; padding: 10px; text-align: center; }
+  .ch-stat-num { font-size: 18px; font-weight: 800; color: #eef4ff; }
+  .ch-stat-lbl { font-size: 10.5px; color: #8ba2c7; text-transform: uppercase; letter-spacing: 0.4px; }
+  .ch-box { background: rgba(4, 12, 28, 0.75); border: 1px solid #142e54; border-radius: 8px; padding: 9px 11px; font-size: 12.5px; color: #cfe0f7; line-height: 1.45; }
+  .ch-box strong { color: #ffc93c; font-size: 11px; text-transform: uppercase; display: block; margin-bottom: 2px; letter-spacing: 0.4px; }
+  .ch-box a { color: #7dd3fc; text-decoration: none; font-weight: 600; }
+  .ch-box a:hover { text-decoration: underline; }
+
+  .filter-bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; margin: 12px 0 16px; }
+  .filter-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+  .pill-btn { cursor: pointer; background: #081a34; color: #bcd0ea; border: 1px solid #1e4273; border-radius: 20px; padding: 6px 13px; font-size: 12.5px; font-weight: 700; transition: all 0.15s ease; }
+  .pill-btn:hover { border-color: #ffc93c; color: #fff; }
+  .pill-btn.active { background: #ffc93c; color: #030a18; border-color: #ffc93c; }
+  .search-input { background: #040d1e; border: 1px solid #1e4273; color: #eef4ff; border-radius: 8px; padding: 7px 12px; font-size: 13px; min-width: 230px; outline: none; }
+  .search-input:focus { border-color: #ffc93c; }
+
+  .catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+  }
+  .video-card {
+    background: #061327;
+    border: 1px solid #163259;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+  .video-card:hover { transform: translateY(-2px); border-color: #ffc93c; }
+  .video-thumb-wrap { position: relative; aspect-ratio: 16/9; background: #020712; overflow: hidden; }
+  .video-thumb-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .fmt-badge { position: absolute; top: 8px; left: 8px; padding: 2px 8px; border-radius: 6px; font-size: 10.5px; font-weight: 800; text-transform: uppercase; background: rgba(3,10,24,0.86); color: #ffc93c; border: 1px solid rgba(255,201,60,0.55); }
+  .fmt-badge.short { color: #38bdf8; border-color: rgba(56,189,248,0.6); }
+  .dur-badge { position: absolute; bottom: 8px; right: 8px; padding: 2px 7px; border-radius: 5px; font-size: 11px; font-weight: 700; background: rgba(3,10,24,0.88); color: #eef4ff; }
+  .video-body { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 8px; flex: 1; justify-content: space-between; }
+  .video-title { font-size: 13.5px; font-weight: 700; color: #eef4ff; line-height: 1.4; margin: 0; }
+  .video-meta { font-size: 11.5px; color: #8ba2c7; display: flex; justify-content: space-between; gap: 6px; align-items: center; }
+  .video-actions { display: flex; gap: 8px; margin-top: 4px; }
+  .video-actions a { flex: 1; text-align: center; padding: 6px 8px; border-radius: 6px; font-size: 12px; font-weight: 700; text-decoration: none; }
+  .link-watch { background: #ffc93c; color: #030a18; }
+  .link-watch:hover { background: #ffe07a; }
+  .link-studio { background: #0c2344; color: #d0e4ff; border: 1px solid #2b5486; }
+  .link-studio:hover { background: #163a6b; }
+  .status-pill.warn { background: rgba(251, 191, 36, 0.18); color: #fbbf24; border: 1px solid #fbbf24; }
+  .status-pill.private { background: rgba(148, 163, 184, 0.18); color: #cbd5e1; border: 1px solid #64748b; }
   
   .direct-upload-banner {
     background: linear-gradient(135deg, rgba(0, 230, 118, 0.12) 0%, rgba(14, 42, 84, 0.6) 100%);
@@ -117,18 +191,135 @@
 
   <header>
     <div>
-      <span class="badge">CHANNEL ANALYTICS CONTROL CENTER</span>
-      <span class="badge" style="background:#10b981;color:#fff">● AUTONOMOUS PUBLISHING LIVE (3× DAILY WAT)</span>
+      <span class="badge">3-CHANNEL SANCTUARY NETWORK</span>
+      <span class="badge" style="background:#10b981;color:#fff">● AUTONOMOUS PUBLISHING LIVE (3 CHANNELS · $0.00 LOCK)</span>
+      <span id="live-sync-stamp" class="sync-stamp">Synced from network-state.json</span>
     </div>
-    <h1>The Secret Place — Live Analytics & Telemetry Dashboard</h1>
-    <p class="sub">Headless Autonomous Creation & Scheduling · $0.00 / Month Hard Cost Lock · Continuous Research Engine</p>
+    <h1>Sanctuary Prayer Network — Live Operations &amp; Video Catalog</h1>
+    <p class="sub">The Secret Place (Night) · The Morning Altar (Sunrise) · The Midday Watch (Noon) · Permanent $0.00 / Month Hard Cost Lock</p>
   </header>
 
   <div class="direct-upload-banner" style="border-color:#10b981;background:rgba(16,185,129,.14)">
-    <strong style="color:#6ee7b7">Autonomous long-form &amp; Shorts publishing is live.</strong> Three daily production slots run at 7:14 AM, 3:14 PM, and 8:14 PM Nigeria WAT (06:14, 14:14, 19:14 UTC) with 22 full-length prayers (&ge;850 words) and 5 DOCOGA REELS v2 Shorts armed in queue.
+    <strong style="color:#6ee7b7">3-channel autonomous long-form &amp; Shorts publishing is live.</strong>
+    <span id="live-banner-copy">Independent free-tier GCP/YouTube/Gemini pools power <em>The Secret Place</em>, <em>The Morning Altar</em>, and <em>The Midday Watch</em> across daily WAT production windows — currently tracking 29 published masters and 33 armed queue items at $0.00/mo.</span>
   </div>
 
-  <section id="style-preview" class="card wide" aria-labelledby="preview-title" style="margin:20px 0 26px">
+  <!-- Real-Time Network KPIs (hydrated live from ./network-state.json) -->
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-title">Published Network Catalog</div>
+      <div id="kpi-published-val" class="kpi-val green">29 Masters</div>
+      <div id="kpi-published-sub" class="kpi-sub">13 Long-Form + 16 Shorts live across 3 channels</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-title">Provisioned Channels</div>
+      <div id="kpi-channels-val" class="kpi-val green">3 / 3 Live</div>
+      <div id="kpi-channels-sub" class="kpi-sub">Night · Sunrise · Midday isolated OAuth &amp; TTS pools</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-title">Armed Queue Runway</div>
+      <div id="kpi-queue-val" class="kpi-val green">24 Long + 9 Shorts</div>
+      <div id="kpi-queue-sub" class="kpi-sub">Approved scripture scripts &amp; companion 9:16 Shorts</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-title">Latest Network Upload</div>
+      <div id="kpi-latest-val" class="kpi-val" style="font-size: 19px;">ihcyceRJ3YM</div>
+      <div id="kpi-latest-sub" class="kpi-sub">The Midday Watch · Psalm 91:6 Noon Prayer</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-title">Automation Watchdog</div>
+      <div id="kpi-health-val" class="kpi-val green">Healthy</div>
+      <div id="kpi-health-sub" class="kpi-sub">10 autonomous GitHub Actions workflows monitored</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-title">Operational Cost</div>
+      <div id="kpi-cost-val" class="kpi-val green">$0.00 / mo</div>
+      <div class="kpi-sub">Fail-closed permanent zero-dollar hard cost lock</div>
+    </div>
+  </div>
+
+  <!-- LIVE 3-CHANNEL COMMAND CENTER -->
+  <h2>
+    <span>🏛️ 3-Channel Sanctuary Network Command Center</span>
+    <span style="font-size: 13px; font-weight: 500; color: #8ba2c7;">Live Per-Channel Inventory, Latest Releases &amp; Next Armed Queue</span>
+  </h2>
+  <div id="channel-command-grid" class="channel-grid">
+    <div class="channel-card daypart-night">
+      <div class="ch-header">
+        <div>
+          <p class="ch-name">🌙 The Secret Place</p>
+          <span class="ch-handle">@TheSecretPlace · Night Prayer</span>
+        </div>
+        <span class="status-pill published">LIVE</span>
+      </div>
+      <p class="meta" style="margin:0">Pre-sleep KJV scripture meditation, protection prayers &amp; rest.</p>
+    </div>
+    <div class="channel-card daypart-sunrise">
+      <div class="ch-header">
+        <div>
+          <p class="ch-name">🌅 The Morning Altar</p>
+          <span class="ch-handle">@TheMorningAltarDaily · Morning Prayer</span>
+        </div>
+        <span class="status-pill published">LIVE</span>
+      </div>
+      <p class="meta" style="margin:0">Daily sunrise KJV prayers &amp; morning declarations.</p>
+    </div>
+    <div class="channel-card daypart-noon">
+      <div class="ch-header">
+        <div>
+          <p class="ch-name">☀️ The Midday Watch</p>
+          <span class="ch-handle">@TheMiddayWatch · Midday Prayer</span>
+        </div>
+        <span class="status-pill published">LIVE</span>
+      </div>
+      <p class="meta" style="margin:0">Noonday KJV scripture pause, strength &amp; renewal.</p>
+    </div>
+  </div>
+
+  <!-- LIVE PUBLISHED VIDEO & SHORTS CATALOG -->
+  <h2>
+    <span>🎬 Live Multi-Channel Published Catalog</span>
+    <span id="catalog-count-label" style="font-size: 13px; font-weight: 500; color: #8ba2c7;">Showing all published masters</span>
+  </h2>
+  <div class="card wide">
+    <div class="filter-bar">
+      <div class="filter-pills" id="channel-filter-pills" role="group" aria-label="Filter by channel">
+        <button type="button" class="pill-btn active" data-channel="all">All Channels</button>
+      </div>
+      <div class="filter-pills" id="format-filter-pills" role="group" aria-label="Filter by format">
+        <button type="button" class="pill-btn active" data-format="all">All Formats</button>
+        <button type="button" class="pill-btn" data-format="longform">16:9 Long-Form</button>
+        <button type="button" class="pill-btn" data-format="short">9:16 Shorts</button>
+      </div>
+      <input id="catalog-search" class="search-input" type="search" placeholder="Search scripture, title, or video ID..." aria-label="Search published videos">
+    </div>
+    <div id="live-catalog-grid" class="catalog-grid"></div>
+  </div>
+
+  <!-- LIVE AUTOMATION HEALTH MATRIX -->
+  <h2>
+    <span>🛡️ Autonomous Workflow Watchdog &amp; Telemetry</span>
+    <span style="font-size: 13px; font-weight: 500; color: #8ba2c7;">Hydrated from content/monitor/status.json</span>
+  </h2>
+  <div class="card wide">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Workflow</th>
+          <th>Verdict</th>
+          <th>14d Runs</th>
+          <th>Missed Slots</th>
+          <th>Status Detail</th>
+          <th>Primary Autonomous Effect</th>
+        </tr>
+      </thead>
+      <tbody id="automation-health-tbody">
+        <tr><td colspan="6">Loading live workflow status from <code>network-state.json</code>...</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <section id="style-preview" class="card wide" aria-labelledby="preview-title" style="margin:26px 0 26px">
     <p class="label">WIDESCREEN STYLE PREVIEW</p>
     <h2 id="preview-title" style="margin:8px 0 12px;display:block">The Secret Place · Psalm 91</h2>
     <p class="meta">Canonical 9-second DOCOGA REELS v2 widescreen reference locked into <code>pipeline/prayer_pipeline.py</code> with local CPU word-by-word gold illumination and Charon narration.</p>
@@ -138,40 +329,6 @@
     </video>
     <p class="meta" style="margin-top:10px"><a href="media/approved-style-preview.mp4" style="color:#ffd75a">Open the preview directly</a></p>
   </section>
-
-  <!-- Real-Time Channel KPIs -->
-  <div class="kpi-grid">
-    <div class="kpi-card">
-      <div class="kpi-title">Audience Equity</div>
-      <div class="kpi-val green">1,230</div>
-      <div class="kpi-sub">Verified Subscribers (✅ 1,000 YPP Threshold Surpassed)</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-title">Published Masters</div>
-      <div class="kpi-val green">5 Long + 2 Shorts</div>
-      <div class="kpi-sub">Psalms 91, 23, 121, 46 &amp; 3 live on YouTube</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-title">Publishing Engine</div>
-      <div class="kpi-val green">Direct Upload</div>
-      <div class="kpi-sub">Auto-published directly to YouTube (0 manual review gate)</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-title">Latest Live Master</div>
-      <div class="kpi-val" style="font-size: 20px;">vs2xt72CgcI</div>
-      <div class="kpi-sub">Psalm 3:3-5 — The Shield That Lifts My Head</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-title">Armed Queue Runway</div>
-      <div class="kpi-val green">22 Long + 5 Shorts</div>
-      <div class="kpi-sub">100% of approved long-forms &ge;850 spoken words</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-title">Operational Cost</div>
-      <div class="kpi-val green">$0.00 / mo</div>
-      <div class="kpi-sub">Fail-closed permanent zero-dollar hard cost lock</div>
-    </div>
-  </div>
 
   <!-- SECTION 1: YOUTUBE STUDIO DIRECT ACCESS -->
   <h2>
@@ -351,7 +508,6 @@
     </section>
   </div>
   <div class="row" style="margin-top: 16px;">
-    <section class="card wide">
     <section class="card wide">
       <p class="label">🛑 DUPLICATE UPLOAD & UNINTENTIONAL RELEASE PREVENTION SHIELD</p>
       <p class="meta">Multi-layered safeguards permanently block duplicate Reels/Shorts and accidental uploads. Pre-upload remote YouTube title queries, published ledger quarantine, and the removal of git-push triggers ensure only unique, scheduled content goes live.</p>
@@ -680,9 +836,272 @@
   </div>
 
   <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #142848; text-align: center; color: #8ba2c7; font-size: 13px;">
-    The Secret Place Digital Production Studio · Operating under Fail-Closed $0.00 / Month Hard Cost Lock · Continuous Research Engine Active
+    Sanctuary Prayer Network (The Secret Place · The Morning Altar · The Midday Watch) · Fail-Closed $0.00 / Month Hard Cost Lock · Autonomous Pipeline Active
   </footer>
 
 </div>
+<script>
+(function () {
+  var activeChannel = "all";
+  var activeFormat = "all";
+  var searchQuery = "";
+  var networkState = null;
+
+  function esc(str) {
+    return String(str == null ? "" : str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function daypartMeta(daypart) {
+    var d = String(daypart || "").toLowerCase();
+    if (d.indexOf("sunrise") !== -1 || d.indexOf("morning") !== -1) {
+      return { icon: "🌅", cls: "daypart-sunrise" };
+    }
+    if (d.indexOf("noon") !== -1 || d.indexOf("midday") !== -1) {
+      return { icon: "☀️", cls: "daypart-noon" };
+    }
+    return { icon: "🌙", cls: "daypart-night" };
+  }
+
+  function renderKPIs(state) {
+    var t = state.totals || {};
+    var c = state.cost_lock || {};
+    var stamp = document.getElementById("live-sync-stamp");
+    if (stamp && state.generated_at) {
+      stamp.textContent = "Snapshot: " + state.generated_at.replace("T", " ").replace("Z", " UTC");
+    }
+    var banner = document.getElementById("live-banner-copy");
+    if (banner) {
+      banner.innerHTML =
+        "Independent free-tier GCP/YouTube/Gemini pools power " +
+        (state.channels || []).map(function (ch) { return "<em>" + esc(ch.display_name) + "</em>"; }).join(", ") +
+        " — currently tracking <strong>" + esc(t.published_total || 0) + " published masters</strong> (" +
+        esc(t.published_longform || 0) + " long-form + " + esc(t.published_shorts || 0) + " Shorts) and <strong>" +
+        esc((t.queued_longform || 0) + (t.queued_shorts || 0)) + " armed queue items</strong> at $" +
+        Number(c.monthly_cost_usd || 0).toFixed(2) + "/mo.";
+    }
+    var pubVal = document.getElementById("kpi-published-val");
+    var pubSub = document.getElementById("kpi-published-sub");
+    if (pubVal) pubVal.textContent = (t.published_total || 0) + " Masters";
+    if (pubSub) pubSub.textContent = (t.published_longform || 0) + " Long-Form + " + (t.published_shorts || 0) + " Shorts (" + (t.public_total || 0) + " public)";
+
+    var chVal = document.getElementById("kpi-channels-val");
+    if (chVal) chVal.textContent = (c.channels_provisioned || 0) + " / " + (c.channels_total || 0) + " Live";
+
+    var qVal = document.getElementById("kpi-queue-val");
+    if (qVal) qVal.textContent = (t.queued_longform || 0) + " Long + " + (t.queued_shorts || 0) + " Shorts";
+
+    var videos = state.videos || [];
+    if (videos.length > 0) {
+      var latest = videos[0];
+      var lVal = document.getElementById("kpi-latest-val");
+      var lSub = document.getElementById("kpi-latest-sub");
+      if (lVal) {
+        lVal.innerHTML = latest.watch_url
+          ? '<a href="' + esc(latest.watch_url) + '" target="_blank" rel="noopener" style="color:#ffd640;text-decoration:none">' + esc(latest.youtube_video_id || latest.id) + " ↗</a>"
+          : esc(latest.youtube_video_id || latest.id);
+      }
+      if (lSub) lSub.textContent = latest.channel_name + " · " + latest.title;
+    }
+
+    var hVal = document.getElementById("kpi-health-val");
+    var hSub = document.getElementById("kpi-health-sub");
+    if (hVal) {
+      hVal.textContent = t.network_healthy ? "Healthy" : "Attention";
+      hVal.className = "kpi-val " + (t.network_healthy ? "green" : "");
+    }
+    if (hSub) {
+      hSub.textContent = (t.automations_ok || 0) + " / " + (t.automations_total || 0) + " workflows green · 0 missed cron slots";
+    }
+  }
+
+  function renderChannels(state) {
+    var grid = document.getElementById("channel-command-grid");
+    if (!grid) return;
+    var cards = (state.channels || []).map(function (ch) {
+      var dp = daypartMeta(ch.daypart);
+      var counts = ch.counts || {};
+      var latestHtml = ch.latest_video
+        ? '<a href="' + esc(ch.latest_video.watch_url) + '" target="_blank" rel="noopener">' +
+          esc(ch.latest_video.title) + "</a><br><span style=\"color:#8ba2c7;font-size:11px\">" +
+          esc(ch.latest_video.published_on || "") + " · " + esc(ch.latest_video.format) + "</span>"
+        : '<span style="color:#8ba2c7">Awaiting first release</span>';
+
+      var nextParts = [];
+      if (ch.next_queued_longform) {
+        var qStatus = ch.next_queued_longform.status === "quota_paused" ? " (resumes 08:00 UTC)" : "";
+        nextParts.push("16:9 #" + esc(ch.next_queued_longform.id) + " — " + esc(ch.next_queued_longform.title) + esc(qStatus));
+      }
+      if (ch.next_queued_short) {
+        nextParts.push("9:16 " + esc(ch.next_queued_short.scripture || ch.next_queued_short.short) + " (" + esc(ch.next_queued_short.target_window_utc) + " UTC)");
+      }
+      var nextHtml = nextParts.length ? nextParts.join("<br>") : "Brain replenishes at 03:14 UTC";
+
+      return (
+        '<article class="channel-card ' + dp.cls + '">' +
+          '<div>' +
+            '<div class="ch-header">' +
+              '<div>' +
+                '<p class="ch-name">' + dp.icon + " " + esc(ch.display_name) + '</p>' +
+                '<span class="ch-handle">' + esc(ch.handle) + " · " + esc(ch.prayer_label) + '</span>' +
+              '</div>' +
+              '<span class="status-pill published">' + (ch.provisioned ? "PROVISIONED" : "STAGED") + '</span>' +
+            '</div>' +
+            '<p class="meta" style="margin:8px 0 10px">' + esc(ch.tagline) + '</p>' +
+            '<div class="ch-stat-row">' +
+              '<div><div class="ch-stat-num">' + esc(counts.published_longform || 0) + '</div><div class="ch-stat-lbl">16:9 Live</div></div>' +
+              '<div><div class="ch-stat-num">' + esc(counts.published_shorts || 0) + '</div><div class="ch-stat-lbl">Shorts Live</div></div>' +
+              '<div><div class="ch-stat-num">' + esc((counts.queued_longform || 0) + (counts.queued_shorts || 0)) + '</div><div class="ch-stat-lbl">Armed Queue</div></div>' +
+            '</div>' +
+          '</div>' +
+          '<div style="display:flex;flex-direction:column;gap:8px">' +
+            '<div class="ch-box"><strong>Latest Published Master</strong>' + latestHtml + '</div>' +
+            '<div class="ch-box"><strong>Next Armed Release</strong>' + nextHtml + '</div>' +
+          '</div>' +
+        '</article>'
+      );
+    });
+    grid.innerHTML = cards.join("");
+  }
+
+  function buildChannelFilterButtons(state) {
+    var wrap = document.getElementById("channel-filter-pills");
+    if (!wrap) return;
+    var total = (state.videos || []).length;
+    var html = '<button type="button" class="pill-btn active" data-channel="all">All Channels (' + total + ')</button>';
+    (state.channels || []).forEach(function (ch) {
+      var n = (ch.counts && ch.counts.published_total) || 0;
+      html += '<button type="button" class="pill-btn" data-channel="' + esc(ch.id) + '">' + esc(ch.display_name) + " (" + n + ")</button>";
+    });
+    wrap.innerHTML = html;
+    wrap.querySelectorAll(".pill-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        activeChannel = btn.getAttribute("data-channel") || "all";
+        wrap.querySelectorAll(".pill-btn").forEach(function (b) { b.classList.toggle("active", b === btn); });
+        renderCatalog();
+      });
+    });
+  }
+
+  function renderCatalog() {
+    if (!networkState) return;
+    var grid = document.getElementById("live-catalog-grid");
+    var label = document.getElementById("catalog-count-label");
+    if (!grid) return;
+    var q = searchQuery.trim().toLowerCase();
+    var filtered = (networkState.videos || []).filter(function (v) {
+      if (activeChannel !== "all" && v.channel !== activeChannel) return false;
+      if (activeFormat !== "all" && v.format !== activeFormat) return false;
+      if (q) {
+        var hay = (v.title + " " + v.id + " " + v.youtube_video_id + " " + v.channel_name + " " + v.thumb_text).toLowerCase();
+        if (hay.indexOf(q) === -1) return false;
+      }
+      return true;
+    });
+    if (label) {
+      label.textContent = "Showing " + filtered.length + " of " + (networkState.videos || []).length + " published videos";
+    }
+    if (!filtered.length) {
+      grid.innerHTML = '<p class="meta" style="grid-column:1/-1;padding:12px 4px">No published videos match the current filter.</p>';
+      return;
+    }
+    grid.innerHTML = filtered.map(function (v) {
+      var isShort = v.format === "short";
+      var privBadge = v.privacy !== "public"
+        ? ' <span class="status-pill private">' + esc(v.privacy) + '</span>'
+        : "";
+      var imgHtml = v.thumb_url
+        ? '<img src="' + esc(v.thumb_url) + '" alt="' + esc(v.title) + '" loading="lazy">'
+        : "";
+      return (
+        '<article class="video-card">' +
+          '<div>' +
+            '<div class="video-thumb-wrap">' +
+              imgHtml +
+              '<span class="fmt-badge ' + (isShort ? "short" : "") + '">' + (isShort ? "9:16 Short" : "16:9 Prayer") + '</span>' +
+              '<span class="dur-badge">' + esc(v.duration_label) + '</span>' +
+            '</div>' +
+            '<div class="video-body">' +
+              '<div>' +
+                '<p class="video-title">' + esc(v.title) + privBadge + '</p>' +
+                '<div class="video-meta" style="margin-top:6px">' +
+                  '<span>' + esc(v.channel_name) + '</span>' +
+                  '<span>' + esc(v.published_on || "") + '</span>' +
+                '</div>' +
+              '</div>' +
+              '<div class="video-actions">' +
+                (v.watch_url ? '<a class="link-watch" href="' + esc(v.watch_url) + '" target="_blank" rel="noopener">▶ Watch</a>' : '') +
+                (v.studio_url ? '<a class="link-studio" href="' + esc(v.studio_url) + '" target="_blank" rel="noopener">⚙ Studio</a>' : '') +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+        '</article>'
+      );
+    }).join("");
+  }
+
+  function renderAutomations(state) {
+    var tbody = document.getElementById("automation-health-tbody");
+    if (!tbody) return;
+    var rows = state.automations || [];
+    if (!rows.length) {
+      tbody.innerHTML = '<tr><td colspan="6">No automation records found.</td></tr>';
+      return;
+    }
+    tbody.innerHTML = rows.map(function (a) {
+      var pillCls = a.severity === "ok" ? "published" : "warn";
+      return (
+        "<tr>" +
+          "<td><strong>" + esc(a.name) + "</strong><br><span style=\"color:#8ba2c7;font-size:11.5px\">" + esc(a.workflow) + "</span></td>" +
+          '<td><span class="status-pill ' + pillCls + '">' + esc(a.verdict) + "</span></td>" +
+          "<td>" + esc(a.runs_14d) + "</td>" +
+          "<td>" + esc(a.missed_slots) + "</td>" +
+          "<td>" + esc(a.detail) + "</td>" +
+          "<td style=\"color:#a9bbd0;font-size:12.5px\">" + esc(a.effect) + "</td>" +
+        "</tr>"
+      );
+    }).join("");
+  }
+
+  document.querySelectorAll("#format-filter-pills .pill-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      activeFormat = btn.getAttribute("data-format") || "all";
+      document.querySelectorAll("#format-filter-pills .pill-btn").forEach(function (b) {
+        b.classList.toggle("active", b === btn);
+      });
+      renderCatalog();
+    });
+  });
+
+  var searchInput = document.getElementById("catalog-search");
+  if (searchInput) {
+    searchInput.addEventListener("input", function () {
+      searchQuery = searchInput.value || "";
+      renderCatalog();
+    });
+  }
+
+  fetch("./network-state.json", { cache: "no-cache" })
+    .then(function (res) {
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      return res.json();
+    })
+    .then(function (data) {
+      networkState = data;
+      renderKPIs(data);
+      renderChannels(data);
+      buildChannelFilterButtons(data);
+      renderCatalog();
+      renderAutomations(data);
+    })
+    .catch(function (err) {
+      var stamp = document.getElementById("live-sync-stamp");
+      if (stamp) stamp.textContent = "Offline preview (" + err.message + ")";
+    });
+})();
+</script>
 </body>
 </html>

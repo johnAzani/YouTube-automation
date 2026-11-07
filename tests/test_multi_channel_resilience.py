@@ -547,7 +547,94 @@ goes before you until evening falls and brings your labor to peaceful completion
             self.assertIn(token_var, comm_text, f"community.yml missing {token_var}")
             self.assertIn(token_var, metrics_text, f"metrics.yml missing {token_var}")
 
+    def test_normalize_authored_script_spaces_alphabetic_em_dashes(self):
+        """#333 prevention: Brain normalizer spaces word—word compounds while keeping numeric 5–6 ranges."""
+        from pipeline.gemini_brain import normalize_authored_script_markdown
 
+        raw = (
+            "---\nid: '0098'\ntitle: 'Proverbs 16:3 Prayer'\nstatus: approved\nchannel: prayer3\n---\n\n"
+            "## Scene 1 — Commit Thy Works (Psalm 91:5–6)\n\n"
+            "Every project, every labor—lift all of it into His hands from Psalm 91:5–6.\n"
+        )
+        cleaned = normalize_authored_script_markdown(raw, channel_id="prayer3")
+        self.assertIn("labor — lift", cleaned)
+        self.assertIn("Psalm 91:5–6", cleaned)
+
+    def test_sweep_stale_release_issues_closes_superseded_private_drafts(self):
+        """#250/#255 cleanup: close superseded private draft tickets while keeping canonical private ticket open."""
+        from scripts import release_report as rr
+
+        with tempfile.TemporaryDirectory() as tmp:
+            pub_dir = Path(tmp)
+            (pub_dir / "0036-psalm-5.md").write_text(
+                "---\n"
+                'title: "Psalm 5 Morning Prayer | Begin Your Day in God\'s Presence"\n'
+                "status: published\n"
+                "privacy: private\n"
+                'youtube_video_id: "_vp27ZYPYaY"\n'
+                "---\nBody\n",
+                encoding="utf-8",
+            )
+            fake_open = [
+                {
+                    "number": 250,
+                    "title": "Release ticket: Psalm 5 Morning Prayer | Begin Your Day in God's Presence",
+                    "body": "- Watch link: https://youtu.be/oS7f32WDj_Y\n",
+                },
+                {
+                    "number": 255,
+                    "title": "Release ticket: Psalm 5 Morning Prayer | Begin Your Day in God's Presence",
+                    "body": "- Watch link: https://youtu.be/R8mVvedhYVw\n",
+                },
+                {
+                    "number": 260,
+                    "title": "Release ticket: Psalm 5 Morning Prayer | Begin Your Day in God's Presence",
+                    "body": "- Watch link: https://youtu.be/_vp27ZYPYaY\n",
+                },
+            ]
+            with mock.patch("shutil.which", return_value="/usr/bin/gh"), \
+                 mock.patch(
+                     "subprocess.run",
+                     side_effect=lambda cmd, **kw: SimpleNamespace(
+                         returncode=0,
+                         stdout=json.dumps(fake_open) if cmd[:3] == ["gh", "issue", "list"] else "",
+                         stderr="",
+                     ),
+                 ):
+                swept = rr.sweep_stale_release_issues("johnAzani/YouTube-automation", published_dir=pub_dir)
+            self.assertEqual(swept, [250, 255])
+
+    def test_build_dashboard_data_covers_all_channels_with_material_change_guard(self):
+        """Item #4: network-state.json covers all 3 channels and ignores volatile age/timestamp drift."""
+        import copy
+        from pipeline.channels import CHANNELS
+        from scripts.build_dashboard_data import (
+            build_network_state,
+            material_fingerprint,
+            write_network_state,
+        )
+
+        state = build_network_state(ROOT)
+        self.assertEqual({c["id"] for c in state["channels"]}, set(CHANNELS))
+        self.assertGreaterEqual(state["totals"]["published_total"], 29)
+        self.assertEqual(state["cost_lock"]["monthly_cost_usd"], 0.0)
+
+        drifted = copy.deepcopy(state)
+        drifted["generated_at"] = "2099-01-01T00:00:00Z"
+        if drifted["automations"]:
+            drifted["automations"][0]["detail"] = "last success 9.4h ago"
+            state["automations"][0]["detail"] = "last success 0.2h ago"
+        self.assertEqual(material_fingerprint(state), material_fingerprint(drifted))
+
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "network-state.json"
+            self.assertTrue(write_network_state(out, repo_root=ROOT))
+            self.assertFalse(write_network_state(out, repo_root=ROOT))
+
+        dashboard_html = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
+        self.assertIn("./network-state.json", dashboard_html)
+        self.assertIn("channel-command-grid", dashboard_html)
+        self.assertIn("live-catalog-grid", dashboard_html)
 
 
 if __name__ == "__main__":

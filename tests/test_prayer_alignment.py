@@ -126,6 +126,42 @@ class TestTolerantMatch(unittest.TestCase):
         self.assertEqual(len(words), 2)
         self.assertAlmostEqual(words[1][2], 1.2, places=3)
 
+    def test_em_dash_compound_with_low_whisper_confidence_aligns(self):
+        # Issue #333 (job 0047 word 722): script token "labor—lift" was split by
+        # Faster-Whisper into ["labor", "lift"] with p=0.112 after the dash pause.
+        script = ['their', 'labor—lift', 'all', 'of', 'it']
+        recognized = heard(
+            ('their', 0.0, 0.3, 0.95),
+            ('labor,', 0.3, 0.75, 0.91),
+            ('lift', 0.85, 1.2, 0.112),
+            ('all', 1.2, 1.45, 0.96),
+            ('of', 1.45, 1.6, 0.97),
+            ('it', 1.6, 1.85, 0.95),
+        )
+        words = preview.match(script, recognized)
+        self.assertEqual(len(words), 5)
+        self.assertEqual(words[1][0], 'labor—lift')
+        self.assertAlmostEqual(words[1][1], 0.3, places=3)
+        self.assertAlmostEqual(words[1][2], 1.2, places=3)
+
+    def test_long_transcript_tolerates_single_low_confidence_wobble(self):
+        # A 30-word verified transcript (>=95% exact coverage) must not abort
+        # over a single muffled archaic word ("thee" heard as "the" at p=0.12).
+        script = (
+            'Lord we commit our works unto thee today and trust thy steady hand '
+            'to establish every thought and guide our steps in peace and quietness '
+            'through all these noon hours'
+        ).split()
+        items = []
+        t = 0.0
+        for w in script:
+            spoken_word = 'the' if w == 'thee' else w
+            prob = 0.12 if w == 'thee' else 0.95
+            items.append((spoken_word, t, t + 0.25, prob))
+            t += 0.25
+        words = preview.match(script, heard(*items))
+        self.assertEqual(len(words), len(script))
+
 
 if __name__ == '__main__':
     unittest.main()
