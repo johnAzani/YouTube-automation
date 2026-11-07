@@ -2912,3 +2912,71 @@ prayer3, where nothing is yet approved, it fails outright and leaves the queue e
    `produce (prayer3)` leg. It will find nothing publishable and exit non-zero. That is
    correct behaviour and a useful receipt: it will be the first run in this repository's
    history where the third channel's leg exists and says why it cannot work.
+
+---
+
+# Round 10 — the refusal existed; the request never did
+
+## 83. Finding 58 — the key was enforced but never asked for
+
+R21 turned out to be smaller and more embarrassing than §76 described, and the reason is
+worth stating precisely: **the guard already existed, and the repair path did not know the
+key was required.**
+
+`_enforce_channel_metadata` (`gemini_brain.py:726`) refuses model output that names no
+channel or another channel's, and it runs before any file is written. So no unowned script
+has been added to the queue since it landed. And yet:
+
+```python
+REQUIRED_JOB_KEYS = ("id", "slug", "title", "status", "niche", "thumb_text",
+                     "originality")          # ← no "channel"
+```
+
+`missing_job_keys()` derives from that tuple, and `_repair_envelope` asks the model for
+exactly the keys that function reports:
+
+```python
+"Return ONLY a YAML front matter block … containing at least these keys: {missing}."
+```
+
+So the sequence on every prayer3 attempt was:
+
+1. the model writes a usable body and an envelope with seven of the eight keys;
+2. `missing_job_keys()` returns `[]`, because `channel` is not on the list;
+3. `_enforce_channel_metadata` raises — *"frontmatter does not declare channel: prayer3"*;
+4. the loop moves to the next model, and repeats until the chain reaches the retired ones;
+5. the pass ends with `Long-form supply empty`.
+
+**We rejected the model for not supplying a key we never asked it for.** Five runs on
+7 November, all of them, on a channel whose credentials were already in place (§82).
+
+## 84. What R21 changes
+
+| Change | File | Effect |
+| :--- | :--- | :--- |
+| `channel` joins `REQUIRED_JOB_KEYS` | `gemini_brain.py:118` | `missing_job_keys()` reports it, so step 3 above can never happen silently again |
+| `_repair_envelope` supplies the channel verbatim | `gemini_brain.py:601` | the one key the model must not infer is handed to it: `- channel: prayer3` |
+| A literal front-matter block opens the prompt | `equipment_registry.py:front_matter_skeleton` | the model sees the key names instead of a sentence about them; the block is templated with the run's channel, default from `CONFIG` |
+| `_require_own_channel` gates the write | `gemini_brain.py:1067` | a script that names no channel, or another channel's, never becomes a queue item — whatever route it arrived by |
+
+The parity rule bit immediately: the first draft of the skeleton defaulted with
+`channel_id or "secret-place"`, and `tests/test_channel_parity.py::test_no_comparison_names_a_channel`
+failed on it — a channel id inside an `if/else`. The default now comes from
+`CONFIG.channel_id`, the branch names nothing, and the rule that "channel differences are
+data, not code" held against the very change that was written to enforce it.
+
+Eight new tests in `tests/test_brain_channel_attribution.py`, plus an honest rewrite of
+`test_every_file_the_brain_wrote_before_is_accepted_today`: it now asserts that the only
+thing missing from the 25 legacy scripts is their owner, rather than asserting they are
+complete (they are not — that is §57). Suite: **1058 passed**.
+
+## 85. Predictions for the next two runs
+
+1. **The 14:14Z scheduled produce run** is the first with a `produce (prayer3)` leg
+   (§82). It will report nothing publishable and exit non-zero — correct, and the first
+   receipt of its kind.
+2. **The next brain pass after R21 lands** will either write a prayer3 script whose
+   envelope declares `channel: prayer3` — in which case `publishable_longform('prayer3')`
+   goes from 0 to 1 and the parity gate starts to matter again — or fail with a message
+   that names `channel` among the missing keys instead of a generic branding refusal. Both
+   outcomes are strictly more informative than the five identical failures of today.
