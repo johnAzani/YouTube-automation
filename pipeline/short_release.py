@@ -766,6 +766,36 @@ def _fallback_word_timings(narration_text: str, duration_s: float) -> list[list]
     return out
 
 
+def _synthesise_narration(text: str, audio: Path) -> str:
+    """Speak a Short with Gemini — or with the free engine if Gemini declines.
+
+    The Shorts path had the same hole as the long-form one (R23): a direct call, no
+    fallback, so the empty `200` that has blocked every Short since 6 November became
+    "refusing to render a silent Short" and cost the slot. `edge-tts` is free, needs no
+    key, and narrates the same words.
+
+    A spent allowance is still re-raised untouched: the $0.00 lock pauses the channel,
+    it never borrows. Returns the engine that spoke so the caller can tell a fallback
+    take from a refusal — `"placeholder"` means nothing spoke at all.
+    """
+    from .gemini_tts import synthesize_gemini_audio
+    from .quota_handler import GeminiQuotaExceededError
+    from .tts import synthesize_edge
+
+    try:
+        synthesize_gemini_audio(text, audio, voice="Charon")
+        return "gemini-3.8-flash-tts"
+    except GeminiQuotaExceededError:
+        raise
+    except Exception as exc:  # noqa: BLE001 - any other refusal is worth a second engine
+        print(f"[short-release] gemini narration produced no audio ({exc}); "
+              f"falling back to edge-tts")
+
+    engine, _words = synthesize_edge(text, audio, "Charon")
+    print(f"[short-release] narration engine this run: {engine}")
+    return engine
+
+
 def _ensure_word_timings(short_key: str, audio_path: Path, narration_text: str) -> Path:
     """Generate `assets/deepdive/words-{short_key}.json` (`[[t0, t1, word], ...]`).
 
@@ -828,7 +858,11 @@ def _ensure_narration(short_key: str) -> None:
 
             audio.parent.mkdir(parents=True, exist_ok=True)
             print(f"[short-release] synthesising narration for {short_key} ({spec.words} words)")
-            synthesize_gemini_audio(spec.narration_text, audio, voice="Charon")
+            engine = _synthesise_narration(spec.narration_text, audio)
+            if engine == "placeholder":
+                raise RuntimeError(
+                    f"no engine could narrate {short_key}: gemini returned no audio and "
+                    f"edge-tts was unreachable; refusing to render a silent Short")
         _ensure_word_timings(short_key, audio, spec.narration_text)
     except (QuotaExceededError, GeminiQuotaExceededError):
         raise

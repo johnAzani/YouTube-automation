@@ -307,3 +307,50 @@ def test_queue_skips_known_edition_missing_from_renderer(tmp_path):
     assert selected is not None
     assert selected[1] == 'short-psalm91'
     assert (queue / '01.yml').exists()
+
+
+class ShortNarrationFallbackTests(unittest.TestCase):
+    """The same wall in the Shorts path, and the same rule about it.
+
+    `_prepare_narration` raised "refusing to render a silent Short" whenever Gemini
+    returned no audio — which, since 6 November, was every attempt. The refusal was
+    correct; having no second engine was not.
+    """
+
+    def test_no_audio_falls_back_to_the_free_engine(self):
+        from pipeline.short_release import _synthesise_narration
+
+        with tempfile.TemporaryDirectory() as tmp:
+            audio = Path(tmp) / "short.mp3"
+            with patch("pipeline.gemini_tts.synthesize_gemini_audio",
+                            side_effect=RuntimeError("Gemini API returned no audio content "
+                                                     "(mime_types=none)")) as gemini, \
+                 patch("pipeline.tts.synthesize_edge",
+                            return_value=("edge-tts", [])) as edge:
+                engine = _synthesise_narration("word " * 200, audio)
+        self.assertEqual(engine, "edge-tts")
+        gemini.assert_called_once()
+        edge.assert_called_once()
+
+    def test_a_spent_allowance_pauses_the_short_instead_of_borrowing(self):
+        from pipeline.quota_handler import GeminiQuotaExceededError
+        from pipeline.short_release import _synthesise_narration
+
+        with tempfile.TemporaryDirectory() as tmp:
+            with patch("pipeline.gemini_tts.synthesize_gemini_audio",
+                            side_effect=GeminiQuotaExceededError("daily limit")), \
+                 patch("pipeline.tts.synthesize_edge") as edge:
+                with self.assertRaises(GeminiQuotaExceededError):
+                    _synthesise_narration("word " * 200, Path(tmp) / "short.mp3")
+        edge.assert_not_called()
+
+    def test_placeholder_is_reported_as_silence_not_as_a_voice(self):
+        from pipeline.short_release import _synthesise_narration
+
+        with tempfile.TemporaryDirectory() as tmp:
+            with patch("pipeline.gemini_tts.synthesize_gemini_audio",
+                            side_effect=RuntimeError("boom")), \
+                 patch("pipeline.tts.synthesize_edge",
+                            return_value=("placeholder", [])):
+                engine = _synthesise_narration("word " * 200, Path(tmp) / "short.mp3")
+        self.assertEqual(engine, "placeholder")
