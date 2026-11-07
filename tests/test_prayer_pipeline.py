@@ -4,7 +4,7 @@ from tempfile import TemporaryDirectory
 from unittest.mock import patch, MagicMock
 from types import SimpleNamespace
 
-from pipeline.prayer_pipeline import produce
+from pipeline.prayer_pipeline import produce, _narrate
 from pipeline.script_doc import ScriptDoc, Scene
 
 
@@ -201,3 +201,51 @@ class PrayerPipelineTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, 'Charon'):
                 produce(Path('job.md'), False, Path('model'))
             tts.assert_not_called()
+
+
+class NarrationFallbackTests(unittest.TestCase):
+    """A channel that cannot speak publishes nothing, and spends the day doing it.
+
+    The prayer path called Gemini with no fallback, so a `200` with no audio — the
+    live failure on 6 and 7 November — ended the run. `edge-tts` is free, needs no
+    key, and was already a declared dependency. What it must never do is paper over
+    a spent quota: the $0.00 lock pauses the channel instead.
+    """
+
+    def _doc(self):
+        return SimpleNamespace(full_narration="word " * 900, word_count=900)
+
+    def test_no_audio_from_gemini_falls_back_to_the_free_engine(self):
+        with TemporaryDirectory() as tmp:
+            audio = Path(tmp) / "narration.mp3"
+            with patch('pipeline.prayer_pipeline.synthesize_gemini_audio',
+                       side_effect=RuntimeError(
+                           "Gemini API returned no audio content for model "
+                           "gemini-3.8-flash-tts (mime_types=none)")) as gemini, \
+                 patch('pipeline.prayer_pipeline.synthesize_edge',
+                       return_value=("edge-tts", [])) as edge:
+                engine = _narrate(self._doc(), audio)
+        self.assertEqual(engine, "edge-tts")
+        gemini.assert_called_once()
+        edge.assert_called_once()
+
+    def test_a_spent_quota_is_not_a_reason_to_borrow_another_engine(self):
+        from pipeline.quota_handler import GeminiQuotaExceededError
+
+        with TemporaryDirectory() as tmp:
+            with patch('pipeline.prayer_pipeline.synthesize_gemini_audio',
+                       side_effect=GeminiQuotaExceededError("daily free tier limit")), \
+                 patch('pipeline.prayer_pipeline.synthesize_edge') as edge:
+                with self.assertRaises(GeminiQuotaExceededError):
+                    _narrate(self._doc(), Path(tmp) / "narration.mp3")
+        edge.assert_not_called()
+
+    def test_the_engine_is_reported_not_assumed(self):
+        """A fallback take must be recorded as a fallback take."""
+        with TemporaryDirectory() as tmp:
+            audio = Path(tmp) / "narration.mp3"
+            with patch('pipeline.prayer_pipeline.synthesize_gemini_audio',
+                       side_effect=RuntimeError("boom")), \
+                 patch('pipeline.prayer_pipeline.synthesize_edge',
+                       return_value=("placeholder", [])):
+                self.assertEqual(_narrate(self._doc(), audio), "placeholder")

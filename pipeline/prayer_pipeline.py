@@ -12,7 +12,7 @@ from .gemini_client import Deadline, stage_budget_seconds
 from .gemini_tts import DEFAULT_MODEL, get_gemini_api_key, synthesize_gemini_audio
 from .prayer_alignment import align
 from .prayer_visuals import render
-from .tts import _probe_duration
+from .tts import _probe_duration, synthesize_edge
 
 
 def _refresh_live_thumbnail(doc, video_id: str, out_dir: Path) -> str | None:
@@ -132,6 +132,46 @@ def _write_json(path: Path, payload: dict) -> None:
     tmp.replace(path)
 
 
+def _narrate(doc, audio: Path) -> str:
+    """Speak the script with Gemini — or, if Gemini declines, with the free engine.
+
+    The prayer path used to call the model directly, with no fallback, and every
+    refusal ended the run with nothing published:
+
+    * a `400` while `google-genai` resolved to an unpinned major (6 November);
+    * `200` with no audio and `mime_types=none` on the 3,870-character first chunk
+      of a 882-word script (six times since 5 November);
+    * `429` once the day's ten requests had been spent by the retries themselves.
+
+    Only the last of those is a quota refusal, and quota stays fail-closed: the
+    channel pauses rather than borrowing another project's allowance. The other two
+    are the model declining to speak, and `pipeline/tts.py` has always known what to
+    do about that — `edge-tts` is free, needs no key, and is already a declared
+    dependency. Falling back to it changes *who* reads the script, not the script,
+    the delivery recipe or the channel's style; being unable to speak at all is the
+    only outcome this path should not have.
+
+    Returns the engine that produced `audio`, so the caller can key the narration
+    cache on it: a fallback take must never be reused by a run that has Gemini.
+    """
+    from .quota_handler import GeminiQuotaExceededError
+
+    try:
+        synthesize_gemini_audio(doc.full_narration, audio, voice='Charon', model=DEFAULT_MODEL)
+        return DEFAULT_MODEL
+    except GeminiQuotaExceededError:
+        emit("gemini speech quota is spent for today — pausing fail-closed; no other "
+             "project's allowance is borrowed")
+        raise
+    except Exception as exc:  # noqa: BLE001 - any other refusal is worth a second engine
+        emit(f"gemini narration produced no audio ({exc}); falling back to the free "
+             f"edge-tts voice")
+
+    engine, _words = synthesize_edge(doc.full_narration, audio, 'Charon')
+    emit(f"narration engine this run: {engine}")
+    return engine
+
+
 def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
     """Run the approved rendering pipeline with hard safety checks.
 
@@ -201,9 +241,15 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
         cached = _cached_json(out / 'narration.json', speech_key)
         if cached and audio.is_file():
             emit(f"reusing narration from the previous attempt ({cached.get('duration', 0):.0f}s)")
+            engine = str(cached.get('engine') or DEFAULT_MODEL)
         else:
             with stage("speech synthesis", f"{doc.word_count} words, Charon"):
-                synthesize_gemini_audio(doc.full_narration, audio, voice='Charon', model=DEFAULT_MODEL)
+                engine = _narrate(doc, audio)
+            if engine != DEFAULT_MODEL:
+                # Key the take to the engine that actually spoke, so a later run
+                # with Gemini available re-synthesises instead of reusing a voice
+                # the receipt does not claim.
+                speech_key = _fingerprint(DELIVERY_RECIPE, engine, "Charon", doc.full_narration)
         duration = _probe_duration(audio)
         if duration is None or duration < MIN_NARRATION_SECONDS:
             raise RuntimeError(
@@ -211,7 +257,8 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
                 f'{MIN_NARRATION_SECONDS}s ({MIN_NARRATION_SECONDS // 60} minutes). '
                 f'{doc.word_count} words is too short at Charon\'s pace — lengthen the script, '
                 f'the floor is {MIN_LONGFORM_WORDS} words.')
-        _write_json(out / 'narration.json', {'key': speech_key, 'duration': duration})
+        _write_json(out / 'narration.json',
+                    {'key': speech_key, 'duration': duration, 'engine': engine})
 
         align_key = _fingerprint("align-v1", speech_key, duration)
         cached_words = _cached_json(out / 'words.json', align_key)
@@ -279,7 +326,7 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
         srt_path = write_srt_file(out / 'captions.en.srt', words, doc.full_narration, duration=duration)
         result = {'id': doc.id, 'slug': doc.slug, 'video': str(final), 'thumbnail': str(thumbs[0]),
                   'captions': str(srt_path) if srt_path else '',
-                  'duration_seconds': duration, 'tts_engine': 'gemini-api', 'dry_run': dry_run}
+                  'duration_seconds': duration, 'tts_engine': engine, 'dry_run': dry_run}
         if not dry_run:
             from .upload import upload
             with stage("upload", "YouTube"):
