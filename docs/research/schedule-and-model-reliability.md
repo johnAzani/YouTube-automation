@@ -5,6 +5,13 @@ comes from this repository — the Actions API, the supervisor's own ledger, the
 annotations, and the code that runs — not from a vendor blog. Where a source is
 external it is cited in §11 and §16.1.
 
+> **Newest (§63):** the free engine is already installed. `pipeline/tts.py` falls back
+> Gemini → **edge-tts** (free, no key) → placeholder, and `edge-tts>=6.1` is a declared
+> dependency. But `run.py:251` routes every faith script to `prayer_pipeline`, which calls
+> Gemini directly with **no fallback at all** — so the one branch that would catch the
+> live "returned no audio content" error is unreachable. A three-line `except` publishes
+> tonight at $0.
+>
 > **Corrected in §56:** the empty `200` and the `429` are *not* one condition. On
 > 6 November the day was nineteen minutes old and had spent nothing when the first
 > `200`-with-no-audio arrived. Empty audio is its own defect — and it still counts as a
@@ -2243,3 +2250,197 @@ pipeline currently has.
 3. The day's speech budget will still be spent by 09:00 until the *dispatch* count is
    connected to the request count. Fixing the labels without fixing the counter changes
    what the failure says, not whether it happens.
+
+---
+
+# Round 7 — the engine that was already installed, and the day the pump was born
+
+## 61. Correction to §56: the `400` was the SDK, not a dead fallback
+
+§56 called the `400 INVALID_ARGUMENT` a `generateContent` fallback that "has never once
+returned audio". That was wrong, and `requirements.txt` on `main` says so in its own
+words:
+
+```
+# PINNED BELOW THE NEXT MAJOR, deliberately. `google-genai 3.0.0` shipped on
+# 2026-11-06 at 02:29 UTC and the very first narration after it was installed
+# (08:05 UTC, produce run 42184629022) died with
+#   400 INVALID_ARGUMENT. Unknown name "speechMetadata" at contents[0].parts[0];
+#       Unknown name "speechConfig" at generation_config
+# … The same code, same workflow, same model published at 21:51 UTC the night
+# before on 2.34.0.
+google-genai>=2.34,<3
+```
+
+The pin cites the same run I pulled the annotation from. So the two `400`s at 08:05 and
+08:10 were **the primary path on SDK 3.0.0** — an unpinned `>=2.34` that resolved to a
+major release at the worst possible moment — and they stopped the moment `a9a670f` landed
+at 08:11. What followed (empty audio at 08:24) is a *different* failure, and it is the one
+still live.
+
+Timeline for the morning of 6 November, all times UTC:
+
+| Time | Event |
+| :--- | :--- |
+| 02:29 | `google-genai 3.0.0` published |
+| 07:57 | `e0e66c0` — "recover slots on the scheduler's real behaviour" |
+| 08:00:36 | first produce run of the day installs 3.0.0 → `400` |
+| **08:06** | **`9eb30ee` — "a produce slot is served per channel, judged by receipts"** |
+| 08:11 | `a9a670f` pins `<3` → `400`s stop |
+| 08:13–08:31 | three more dispatches → empty audio ×2 → `429` |
+| 08:43 | `8165a42` — "never dispatch into a quota cooldown" |
+
+## 62. Finding 44 — the narration that fails is the *long* request
+
+Measured on the real queue, with the real chunker:
+
+```
+0015-psalm-91-5-6-deliverance-from-terror-by-night.md
+  words=882  chars=5237  chunks=2  sizes=[3870, 1362]  channel=secret-place
+```
+
+The renderer chunks at `TTS_CHUNK_CHARS = 4000`, so the first request carries **3,870
+characters** and the second 1,362. Every long-form failure in §54 is on that first chunk,
+in 4.6–6.2 seconds.
+
+And the same model narrated successfully on the evening of 6 November — four Shorts
+published at 14:19, 20:33, 20:46 and 23:49 — whose narration is a single request of
+roughly a third that size. So:
+
+- the model is not withdrawn (four Shorts that evening say so);
+- the quota was not the cause at 08:24 (nineteen minutes into a fresh day, §56);
+- the request that fails is the one that carries ~3,870 characters.
+
+That is a correlation, not a proof, and it is cheap to falsify: `TTS_CHUNK_CHARS` is
+already an environment override (`500–20000`, `:108`). Set it to `2000` and the same
+script becomes **three** requests of ~1,750 characters — one more request, and if the
+hypothesis is right, the first working narration since 5 November.
+
+## 63. Finding 45 — the free engine is installed, wired … and unreachable
+
+`pipeline/tts.py:synthesize()` already implements the chain this pipeline needs:
+
+```python
+gemini_key = get_gemini_api_key()
+if gemini_key:
+    try:
+        synthesize_gemini_audio(text, audio_path, voice=voice)
+        engine = "gemini-api"
+    except GeminiQuotaExceededError:
+        raise                                   # $0.00 lock: fail closed
+    except Exception as exc:                    # ← incl. "returned no audio content"
+        print(f"[tts] gemini-api unavailable ({exc!r}); falling back to edge-tts")
+
+if engine != "gemini-api":
+    ... asyncio.run(_edge_tts(text, edge_voice, ...))       # free, no API key
+    ... except: _placeholder_audio(...)                     # last resort, silence
+```
+
+`edge-tts>=6.1` is in `requirements.txt`. It needs no key. It is the engine that narrated
+this channel before Gemini was adopted.
+
+And the path that actually runs these three channels never reaches it.
+`pipeline/run.py:251` routes every faith document to the prayer renderer:
+
+```python
+# "Use only the approved prayer renderer; never fall back to the old style."
+from .prayer_pipeline import produce
+```
+
+and `prayer_pipeline.produce()` calls the model directly, with no `try`:
+
+```python
+with stage("speech synthesis", f"{doc.word_count} words, Charon"):
+    synthesize_gemini_audio(doc.full_narration, audio, voice="Charon", model=DEFAULT_MODEL)
+```
+
+Three facts follow. The comment's intent — *never fall back to the old style* — is a
+statement about **quality** (an older, worse delivery recipe). It was implemented as a
+statement about **engine**, and those are not the same thing: falling back to edge-tts
+would change who speaks, not how the script is written. Second, `synthesize()`'s
+`except Exception` is precisely the branch that would catch "returned no audio content" —
+the live failure — and it cannot be reached from `run.py` for these channels. Third, a
+channel that cannot speak tonight could speak tonight, at zero cost, with a fallback that
+already exists and is already tested by the old path.
+
+That is the cheapest thing in this document. It is also the one the $0.00 lock permits:
+edge-tts is free, it consumes no Gemini quota, and it cannot borrow another channel's key.
+
+## 64. Finding 46 — the pump has a birth certificate
+
+`git log` on `scripts/scheduler_supervisor.py`, plus the commit body of `9eb30ee`:
+
+> *"The first live recovery pass published for one channel only. The supervisor fired
+> both legs one second apart; `content-state` allows a single pending run, so GitHub
+> cancelled the secret-place leg before it got a runner… Receipts, not runs, decide."*
+
+That commit introduced `published_channels_since()` and the one-channel-per-pass
+dispatch:
+
+```python
+missing = [c for c in _channels() if c not in published_channels_since(since)]
+if not missing: ...
+channel = missing[0]
+rest = [c for c in missing[1:]]
+```
+
+The ledger shows what happened next, and it is the cleanest before/after in the whole
+document:
+
+| Slot | `attempts` (n) |
+| :--- | :--- |
+| 2026-11-02T06:14 | 3 |
+| 2026-11-03T14:14 | 3 |
+| 2026-11-05T06:14 | 3 |
+| **2026-11-06T06:14** | **5** ← first day of per-channel dispatch |
+| 2026-11-07T06:14 | 3 |
+
+Three was the pattern for four days; five arrived on the first day the supervisor began
+dispatching a single named channel and re-testing coverage on the next pass. The intent
+was right — the cancellation problem it fixed was real — but it converted one dispatch
+into a *loop*, and nothing in the loop knows what a dispatch costs.
+
+## 65. Finding 47 — one part of this pipeline has quota memory, and it is not the part that needs it
+
+`short_release.py` handles a quota failure by writing state:
+
+```
+[short-release] Manifest <name> marked as quota_paused.
+qdata["status"] = "quota_paused"
+```
+
+and the selector re-arms it on a new day (`:504`, `:513`) — a `quota_paused` Short is
+promoted back to `approved` when the window has turned. `content/shorts-queue/0015-short-psalm91v5.yml`
+carries exactly that status right now, which is why this morning's first Short attempt
+was that manifest.
+
+So the repository already has the pattern R19 asks for: a per-item, persistent,
+quota-aware status that survives runs. The long-form path has none of it. Its narration
+cache is keyed on `DELIVERY_RECIPE + model + voice + text` and is written **only on
+success** — so a failed render leaves no trace, no cooldown, and no memory that two
+requests were just spent. The same idea, one directory over, is the whole fix.
+
+## 66. Round 7 ranking — restore the free engine first
+
+| # | Item | Cost of doing nothing |
+| :-- | :--- | :--- |
+| **R23** | prayer path: catch the no-audio/quota failure and fall back to `tts.synthesize()` (edge-tts, free), keeping the prayer *style* when Gemini answers | every channel silent since 5 Nov |
+| **R21** | stamp + verify `channel:` at authoring | prayer3 can never be fed |
+| **R16** | coverage test only over servable channels | each pass spends a slot's two requests |
+| **R19** | speech-request counter + `quota_paused`-style state for long-form | the day is spent by 09:00 |
+| **R24** | try `TTS_CHUNK_CHARS=2000` — one-line experiment, no code | the long-form path stays broken even after R19 |
+| **R5** | cold start | prayer3 at zero |
+| **R20**, R22, R12, R3 | health `always()`, inventory gates, preflight, brain ledger | alarms that cannot speak |
+
+**Predictions.**
+
+1. `TTS_CHUNK_CHARS=2000` on the next produce run: if the hypothesis in §62 holds, the
+   first chunk request succeeds and the run gets two-thirds of the way to a video before
+   its third request. If it fails identically at ~1,750 characters, the size theory is
+   dead and the remaining difference is the Short path's single-call shape.
+2. An edge-tts fallback in `prayer_pipeline` publishes a video **within one dispatch**
+   and spends zero Gemini requests. If it does not, the failure is downstream of
+   narration and every TTS finding in this document is a red herring.
+3. Removing `pushed:`/`workflow_run` triggers from automation-health (R20) will not
+   change a single failure — 12 of 12 are the parity assertion — but it will stop the
+   alarm from being dismissed as noise, which is the only reason it is still unread.
