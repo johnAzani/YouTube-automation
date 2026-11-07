@@ -15,7 +15,7 @@ on:
       channel:
         description: "Target channel (own GCP project & secrets)"
         type: choice
-        options: [secret-place, prayer2]
+        options: [secret-place, prayer2, prayer3]
         default: secret-place
       job:
         description: "Published job file (content/published/…md)"
@@ -48,10 +48,10 @@ concurrency:
 
 env:
   CHANNEL_ID: ${{ inputs.channel || 'secret-place' }}
-  YOUTUBE_CLIENT_ID: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID }}
-  YOUTUBE_CLIENT_SECRET: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET }}
-  YOUTUBE_REFRESH_TOKEN: ${{ inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN }}
-  YOUTUBE_EXPECTED_CHANNEL_ID: ${{ inputs.channel == 'prayer2' && (vars.PRAYER2_YOUTUBE_CHANNEL_ID || secrets.PRAYER2_YOUTUBE_CHANNEL_ID) || (vars.YOUTUBE_CHANNEL_ID || secrets.YOUTUBE_CHANNEL_ID) }}
+  YOUTUBE_CLIENT_ID: ${{ inputs.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_ID || (inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID) }}
+  YOUTUBE_CLIENT_SECRET: ${{ inputs.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_SECRET || (inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET) }}
+  YOUTUBE_REFRESH_TOKEN: ${{ inputs.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN || (inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN) }}
+  YOUTUBE_EXPECTED_CHANNEL_ID: ${{ inputs.channel == 'prayer3' && (vars.PRAYER3_YOUTUBE_CHANNEL_ID || secrets.PRAYER3_YOUTUBE_CHANNEL_ID) || (inputs.channel == 'prayer2' && (vars.PRAYER2_YOUTUBE_CHANNEL_ID || secrets.PRAYER2_YOUTUBE_CHANNEL_ID) || (vars.YOUTUBE_CHANNEL_ID || secrets.YOUTUBE_CHANNEL_ID)) }}
 
 jobs:
   thumbnail:
