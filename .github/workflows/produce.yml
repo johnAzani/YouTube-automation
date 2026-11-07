@@ -179,32 +179,6 @@ jobs:
           fi
           python scripts/check_prayer_alignment.py --model output/alignment-model
 
-      - name: Check this channel's queue
-        # Both channels get the same gate: an empty queue idles that leg with a
-        # notice instead of failing the slot (free-tier exhaustion is a pause, not
-        # a fault), and one channel's empty queue can never block the other's leg.
-        id: channel_queue
-        if: ${{ inputs.job == '' && inputs.short == '' }}
-        run: |
-          python - <<'PYQUEUE'
-          import os
-
-          from pipeline.run import select_jobs
-
-          channel = os.environ["CHANNEL_ID"]
-          jobs = select_jobs(False, None, True)
-          has_job = bool(jobs)
-          print(f"{channel} next publishable job: {jobs[0] if has_job else 'none'}")
-          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
-              fh.write(f"has_job={str(has_job).lower()}\n")
-          if not has_job:
-              print(f"::notice title={channel} queue empty::No approved {channel} "
-                    f"script is ready, so this leg uploads nothing. Its brain "
-                    f"supplies approved scripts to content/queue/ for this "
-                    f"channel only; the next slot will publish the first one "
-                    f"it queues.")
-          PYQUEUE
-
       - name: Restore stock-asset cache
         uses: actions/cache@v4
         with:
@@ -226,8 +200,9 @@ jobs:
             output/*/_gemini_chunks_*
             assets/deepdive/short-*.mp3
             assets/deepdive/words-short-*.json
-          key: chunks-tts-v4-${{ github.run_id }}
+          key: chunks-tts-v4-${{ matrix.channel }}-${{ github.run_id }}
           restore-keys: |
+            chunks-tts-v4-${{ matrix.channel }}-
             chunks-
 
       # Second safety net. If the brain's cron was delayed, skipped, or its API call
@@ -240,9 +215,9 @@ jobs:
         # is empty, and killing the run first would lose that upload. The alarm for
         # "nothing is publishable" is the watchdog at the end of this job.
         continue-on-error: true
-        # Queue repair is channel-scoped and identical on both channels: each leg
+        # Queue repair is channel-scoped and identical on every channel: each leg
         # lengthens/authors only its own channel's scripts, with its own Gemini
-        # quota pool. Non-blocking + the empty-queue gate above mean exhaustion
+        # quota pool. Non-blocking + the empty-queue gate below mean exhaustion
         # idles this leg green.
         if: ${{ inputs.short == '' && inputs.job == '' }}
         env:
@@ -251,6 +226,31 @@ jobs:
           set -o pipefail
           python scripts/gemini_brain.py --ensure-supply-for "$CHANNEL_ID" --min-publishable 3 2>&1 | tee supply.log
           { echo "### 📜 Queue repair"; echo '```'; grep -v '^\[run\]' supply.log | tail -30; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Check this channel's queue
+        # Evaluated *after* queue repair so a script freshly authored or lengthened
+        # by `--ensure-supply-for` can publish immediately in this same run.
+        id: channel_queue
+        if: ${{ inputs.job == '' && inputs.short == '' }}
+        run: |
+          python - <<'PYQUEUE'
+          import os
+
+          from pipeline.run import select_jobs
+
+          channel = os.environ["CHANNEL_ID"]
+          jobs = select_jobs(False, None, True)
+          has_job = bool(jobs)
+          print(f"{channel} next publishable job: {jobs[0] if has_job else 'none'}")
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
+              fh.write(f"has_job={str(has_job).lower()}\n")
+          if not has_job:
+              print(f"::notice title={channel} queue empty::No approved {channel} "
+                    f"script is ready, so this leg uploads nothing. Its brain "
+                    f"supplies approved scripts to content/queue/ for this "
+                    f"channel only; the next slot will publish the first one "
+                    f"it queues.")
+          PYQUEUE
 
       - name: Render the Short (9:16)
         # The Short is the ride-along, never the release. Two things follow: its
@@ -443,7 +443,7 @@ jobs:
             output/*/_gemini_chunks_*
             assets/deepdive/short-*.mp3
             assets/deepdive/words-short-*.json
-          key: chunks-tts-v4-${{ github.run_id }}
+          key: chunks-tts-v4-${{ matrix.channel }}-${{ github.run_id }}
 
       # Style proof without a 1 GB download: three frames from the master,
       # small enough to open from the run page. Shows HUD, typography,
@@ -471,7 +471,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: style-frames-${{ github.run_id }}
+          name: style-frames-${{ github.run_id }}-${{ matrix.channel }}
           path: output/style-frames/
           retention-days: 14
           if-no-files-found: ignore
@@ -536,7 +536,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: release-report-${{ github.run_id }}
+          name: release-report-${{ github.run_id }}-${{ matrix.channel }}
           path: output/report/
           retention-days: 7
           if-no-files-found: ignore
@@ -545,7 +545,7 @@ jobs:
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: render-${{ github.run_id }}
+          name: render-${{ github.run_id }}-${{ matrix.channel }}
           path: |
             output/
             !output/asset_cache/**

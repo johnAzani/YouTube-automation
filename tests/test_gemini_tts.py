@@ -171,5 +171,5 @@ def test_produce_workflow_chunk_cache_keys_are_recipe_versioned():
         Path(__file__).resolve().parent.parent
         / ".github" / "workflows" / "produce.yml"
     ).read_text()
-    assert "key: chunks-tts-v4-${{ github.run_id }}" in workflow
+    assert "key: chunks-tts-v4-${{ matrix.channel }}-${{ github.run_id }}" in workflow
     assert "key: chunks-${{ github.run_id }}" not in workflow

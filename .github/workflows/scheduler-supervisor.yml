@@ -43,7 +43,9 @@ on:
       # own push trigger and its 10:00/10:15 schedule slots produced nothing. Riding
       # CI gives the supervisor a chance every time CI does, on any branch.
       - "Dry-run pipeline (CI proof)"
-      - "pages build and deployment"
+      # NOT "pages build and deployment": committing schedule-health.json on main
+      # triggers GitHub Pages, which completed and triggered this supervisor again
+      # every 60 seconds in an infinite loop (~350 empty commits/day).
       # Every other timer in this repo. Each completion is a free chance to notice a
       # slot that never started, and completions keep happening even when cron
       # delivery does not — the night of 5-6 November had none precisely because

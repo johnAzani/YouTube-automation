@@ -46,6 +46,7 @@ MAX_EXPANSIONS_PER_RUN = 3
 MAX_EXPANSIONS_WHEN_EMPTY = 5
 MAX_MODEL_CALLS_PER_RUN = 10
 MAX_AUTHORS_PER_RUN = 2
+MAX_AUTHORS_WHEN_EMPTY = 4
 EXPANSION_TARGET_WORDS = 900
 
 # The release slots in .github/workflows/produce.yml: 06:14, 14:14 and 19:14 UTC.
@@ -87,8 +88,18 @@ class SupplyReport:
         if self.expanded:
             wrote = [e for e in self.expanded if e.get("written")]
             bits.append(f"{len(wrote)}/{len(self.expanded)} script(s) lengthened")
-        if self.authored:
-            bits.append(f"authored {self.authored.get('job_id')}")
+        authored_rows = (
+            [self.authored] if isinstance(self.authored, dict)
+            else list(self.authored) if isinstance(self.authored, list)
+            else []
+        )
+        authored_ids = [
+            str(r.get("job_id"))
+            for r in authored_rows
+            if isinstance(r, dict) and r.get("job_id")
+        ]
+        if authored_ids:
+            bits.append(f"authored {', '.join(authored_ids)}")
         bits.append(f"{self.publishable_after} publishable after")
         return "; ".join(bits)
 
@@ -295,6 +306,11 @@ def author_new(brain, expand_target: int = EXPANSION_TARGET_WORDS) -> dict[str, 
         set_status(result.longform_path, "approved", approved_by="brain")
         doc = parse_script(result.longform_path)
         row["approved_by_brain"] = True
+        live_queue = (ROOT / "content" / "queue").resolve()
+        if result.longform_path.parent.resolve() == live_queue:
+            from scripts.factcheck import main as factcheck_main
+
+            factcheck_main([str(result.longform_path), "--force"])
 
     row["publishable"] = doc.word_count >= MIN_LONGFORM_WORDS
     row["words"] = doc.word_count
@@ -306,7 +322,7 @@ def ensure_supply(brain, limit: int = MAX_EXPANSIONS_PER_RUN,
                   target: int = EXPANSION_TARGET_WORDS,
                   queue_dir: Path | None = None, write: bool = True,
                   min_publishable: int = 1,
-                  max_authors: int = MAX_AUTHORS_PER_RUN,
+                  max_authors: int | None = None,
                   channel_id: str | None = None) -> SupplyReport:
     """The whole loop: lengthen the backlog, author what is still missing, verify.
 
@@ -335,8 +351,13 @@ def ensure_supply(brain, limit: int = MAX_EXPANSIONS_PER_RUN,
 
     report.publishable_after = len(publishable_longform(queue_dir, channel_id=channel))
 
+    author_budget = (
+        (MAX_AUTHORS_WHEN_EMPTY if report.publishable_after == 0 else MAX_AUTHORS_PER_RUN)
+        if max_authors is None
+        else max_authors
+    )
     authored: list[dict[str, Any]] = []
-    for _ in range(max(0, max_authors)):
+    for _ in range(max(0, author_budget)):
         if report.publishable_after >= min_publishable or brain is None:
             break
         row = author_new(brain, expand_target=target)

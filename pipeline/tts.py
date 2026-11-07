@@ -157,7 +157,12 @@ def _placeholder_audio(text: str, out_path: Path) -> list[tuple[str, float, floa
     return word_times
 
 
-def synthesize_edge(text: str, out_path: Path, voice: str = "") -> tuple[str, list[tuple[str, float, float]]]:
+def synthesize_edge(
+    text: str,
+    out_path: Path,
+    voice: str = "",
+    rate: str = "",
+) -> tuple[str, list[tuple[str, float, float]]]:
     """Narrate with edge-tts alone — the free engine, no key, no quota.
 
     Split out of `synthesize()` so that a caller which has *already* tried Gemini
@@ -172,8 +177,9 @@ def synthesize_edge(text: str, out_path: Path, voice: str = "") -> tuple[str, li
     out_path = Path(out_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     edge_voice = voice if (voice and voice.startswith("en-")) else "en-US-DavisNeural"
+    effective_rate = rate or CONFIG.tts_rate
     try:
-        word_times = asyncio.run(_edge_tts(text, edge_voice, CONFIG.tts_rate, out_path))
+        word_times = asyncio.run(_edge_tts(text, edge_voice, effective_rate, out_path))
         if not out_path.exists() or out_path.stat().st_size < 512:
             raise RuntimeError("edge-tts produced no audio")
         if not word_times:  # some edge-tts versions don't emit boundaries

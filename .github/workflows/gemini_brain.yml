@@ -78,12 +78,14 @@ jobs:
       - uses: ./.github/actions/setup-render-deps
 
       - name: Can this runner reach Gemini?
+        id: preflight
         # A wrong answer here is expensive. GEMINI_API_KEY has been configured since
         # week one and narrates every video; authoring reported "key unavailable"
         # whenever the client failed for an unrelated reason. Prove the call first.
         run: python scripts/gemini_brain.py --preflight
 
       - name: Keep the long-form queue publishable
+        id: supply
         # One command for every channel — the channel is data, so there is no
         # per-channel branch to drift. It lengthens approved-but-short scripts,
         # then authors only if the queue still lacks runway. Exits non-zero when
@@ -92,6 +94,10 @@ jobs:
         # with its own Gemini quota pool; free-tier exhaustion (429) therefore
         # idles only that channel and never spends money or borrows the other
         # channel's quota ($0 lock).
+        # Run Shorts authoring and commit even when long-form only partially
+        # replenished so newly authored scripts are never discarded; the final
+        # gate below still fails the job if supply failed.
+        continue-on-error: true
         run: |
           set -o pipefail
           python scripts/gemini_brain.py --ensure-supply-for "$CHANNEL_ID" --min-publishable 6 2>&1 | tee supply.log
@@ -126,7 +132,12 @@ jobs:
             echo '```' >> "$GITHUB_STEP_SUMMARY"
           fi
 
+      - name: Refresh factcheck worksheets before commit
+        if: ${{ steps.preflight.outcome == 'success' && !cancelled() }}
+        run: python scripts/factcheck.py --all --force
+
       - name: Commit newly authored queue items
+        if: ${{ steps.preflight.outcome == 'success' && !cancelled() }}
         run: |
           set -e
           git config user.name "gemini-brain-bot"
@@ -149,3 +160,7 @@ jobs:
             sleep $((attempt * 3))
           done
           exit 1
+
+      - name: Report long-form supply outcome
+        if: ${{ steps.supply.outcome == 'failure' }}
+        run: exit 1

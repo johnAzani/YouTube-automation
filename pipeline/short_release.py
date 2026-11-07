@@ -1342,6 +1342,21 @@ def main(argv: list[str] | None = None) -> int:
                     return 1
                 return 0
             if not dry and not args.force and os.environ.get("GITHUB_ACTIONS"):
+                from .run import quota_blocked_until
+
+                blocked = quota_blocked_until(channel_id=CONFIG.channel_id)
+                if blocked is not None:
+                    print(
+                        f"[short-release] Daily speech quota for {CONFIG.channel_id} "
+                        f"is spent until {blocked.isoformat()} UTC; keeping queued Shorts "
+                        f"intact for the next window."
+                    )
+                    print(
+                        f"::notice title=Short quota cooldown::{CONFIG.channel_id} "
+                        f"speech quota resets at {blocked.isoformat()} UTC; queued "
+                        f"Shorts preserved."
+                    )
+                    return 0
                 try:
                     min_gap_h = float(os.environ.get("SHORTS_MIN_GAP_HOURS", "3.0"))
                 except ValueError:
