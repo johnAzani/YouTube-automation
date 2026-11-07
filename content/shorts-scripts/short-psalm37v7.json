@@ -1,0 +1,349 @@
+{
+  "key": "short-psalm37v7",
+  "channel": "secret-place",
+  "psalm": 37,
+  "title": [
+    "REST IN THE",
+    "SILENCE OF GOD"
+  ],
+  "poster": [
+    "FIND PEACE",
+    "RELEASE YOUR",
+    "CARES TO HIM",
+    "PRAYER FOR SLEEP"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm mountain lake at night",
+    "flickering candle in dark room",
+    "soft moonlight over pine trees",
+    "misty forest path at twilight",
+    "glowing embers in fireplace",
+    "starlit night sky over ocean",
+    "gentle rippling water at night",
+    "soft morning mist on a meadow"
+  ],
+  "scenes": [
+    {
+      "a": "Take a deep breath and let your shoulders drop.",
+      "img": "short-psalm37v7-scene-01.jpg",
+      "kicker": "FIND STILLNESS",
+      "sub": "LET GO OF THE DAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In this sacred space, we find the quiet presence of the Lord.",
+      "img": "short-psalm37v7-scene-02.jpg",
+      "kicker": "GOD IS NEAR",
+      "sub": "REST IN HIS HOLY PEACE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Listen to the word of Psalm 37:7, which says, Be still before the Lord and wait patiently for Him.",
+      "img": "short-psalm37v7-scene-03.jpg",
+      "kicker": "PSALM 37:7",
+      "sub": "WAIT PATIENTLY FOR HIM",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Release the heavy burdens you have carried through these long hours.",
+      "img": "short-psalm37v7-scene-04.jpg",
+      "kicker": "RELEASE BURDENS",
+      "sub": "YOU ARE HELD TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, help me to stop striving and truly trust in your timing.",
+      "img": "short-psalm37v7-scene-05.jpg",
+      "kicker": "TRUST HIS TIMING",
+      "sub": "SURRENDER YOUR WORRIES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Cover my mind with your perfect peace as I drift off to sleep.",
+      "img": "short-psalm37v7-scene-06.jpg",
+      "kicker": "DIVINE PEACE",
+      "sub": "SLEEP IN SAFETY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I choose to rest my heart in your hands, knowing you are watching.",
+      "img": "short-psalm37v7-scene-07.jpg",
+      "kicker": "SAFE IN HIM",
+      "sub": "REST YOUR WEARY HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May your spirit remain close as the moonlight fills this room tonight.",
+      "img": "short-psalm37v7-scene-08.jpg",
+      "kicker": "GENTLE SLEEP",
+      "sub": "SURRENDER EVERYTHING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Take a deep breath and let your shoulders drop."
+    ],
+    [
+      9,
+      17,
+      "In this sacred space, we find the quiet presence of the Lord."
+    ],
+    [
+      18,
+      28,
+      "Listen to the word of Psalm 37:7, which says, Be still before the Lord and wait patiently for Him."
+    ],
+    [
+      29,
+      39,
+      "Release the heavy burdens you have carried through these long hours."
+    ],
+    [
+      40,
+      50,
+      "Lord, help me to stop striving and truly trust in your timing."
+    ],
+    [
+      51,
+      61,
+      "Cover my mind with your perfect peace as I drift off to sleep."
+    ],
+    [
+      62,
+      72,
+      "I choose to rest my heart in your hands, knowing you are watching."
+    ],
+    [
+      73,
+      85,
+      "May your spirit remain close as the moonlight fills this room tonight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "TAKE A DEEP BREATH",
+        "LET SHOULDERS DROP",
+        "FIND YOUR PEACE"
+      ],
+      [
+        "DEEP BREATH"
+      ],
+      "PSALM 37:7"
+    ],
+    [
+      9,
+      17,
+      [
+        "IN THIS SACRED SPACE",
+        "FIND HIS QUIET",
+        "PRESENCE TONIGHT"
+      ],
+      [
+        "SACRED SPACE"
+      ],
+      "PSALM 37:7"
+    ],
+    [
+      18,
+      28,
+      [
+        "BE STILL BEFORE",
+        "THE LORD AND WAIT",
+        "PATIENTLY FOR HIM"
+      ],
+      [
+        "BE STILL"
+      ],
+      "PSALM 37:7"
+    ],
+    [
+      29,
+      39,
+      [
+        "RELEASE THE HEAVY",
+        "BURDENS CARRIED THROUGH",
+        "THESE LONG HOURS"
+      ],
+      [
+        "RELEASE BURDENS"
+      ],
+      "PSALM 37:7"
+    ],
+    [
+      40,
+      50,
+      [
+        "HELP ME STOP",
+        "STRIVING AND TRUST",
+        "IN HIS TIMING"
+      ],
+      [
+        "TRUST TIMING"
+      ],
+      "PSALM 37:7"
+    ],
+    [
+      51,
+      61,
+      [
+        "COVER MY MIND",
+        "WITH PERFECT PEACE",
+        "AS I DRIFT OFF"
+      ],
+      [
+        "PERFECT PEACE"
+      ],
+      "PSALM 37:7"
+    ],
+    [
+      62,
+      72,
+      [
+        "REST MY HEART",
+        "IN YOUR HANDS",
+        "YOU ARE WATCHING"
+      ],
+      [
+        "REST MY HEART"
+      ],
+      "PSALM 37:7"
+    ],
+    [
+      73,
+      85,
+      [
+        "SPIRIT REMAIN CLOSE",
+        "MOONLIGHT FILLS ROOM",
+        "SLEEP IN SAFETY"
+      ],
+      [
+        "MOONLIGHT"
+      ],
+      "PSALM 37:7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Take a deep breath and let your shoulders drop.",
+      "kind": "phrase",
+      "words": [
+        "DEEP",
+        "BREATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In this sacred space, we find the quiet presence of the Lord.",
+      "kind": "phrase",
+      "words": [
+        "SACRED",
+        "SPACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Listen to the word of Psalm 37:7, which says, Be still before the Lord and wait patiently for Him.",
+      "kind": "phrase",
+      "words": [
+        "BE",
+        "STILL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Release the heavy burdens you have carried through these long hours.",
+      "kind": "phrase",
+      "words": [
+        "RELEASE",
+        "BURDENS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, help me to stop striving and truly trust in your timing.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "TIMING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Cover my mind with your perfect peace as I drift off to sleep.",
+      "kind": "phrase",
+      "words": [
+        "PERFECT",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I choose to rest my heart in your hands, knowing you are watching.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your spirit remain close as the moonlight fills this room tonight.",
+      "kind": "phrase",
+      "words": [
+        "MOONLIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 37:7"
+}
