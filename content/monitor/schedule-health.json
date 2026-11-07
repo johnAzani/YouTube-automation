@@ -23,8 +23,8 @@
       "workflow": "metrics.yml"
     }
   ],
-  "generated_at": "2026-11-07T14:02:41.335558+00:00",
-  "last_run_at": "2026-11-07T14:02:00+00:00",
+  "generated_at": "2026-11-07T14:08:31.058602+00:00",
+  "last_run_at": "2026-11-07T14:07:29+00:00",
   "on_time": [
     {
       "late_minutes": 33,
@@ -76,6 +76,6 @@
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 0,
+  "silence_minutes": 1,
   "warn_minutes": 120
 }
