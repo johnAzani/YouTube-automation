@@ -1,0 +1,334 @@
+{
+  "key": "short-morningproverbs3v5",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "TRUST IN",
+    "THE LORD"
+  ],
+  "poster": [
+    "BEGIN",
+    "EVERY",
+    "SUNRISE",
+    "IN PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "serene misty mountain dawn sunrise",
+    "golden sun rays through forest trees",
+    "calm lake reflecting morning sky",
+    "peaceful horizon at early morning light",
+    "golden hour over quiet valley landscape",
+    "sunlight breaking over calm ocean horizon",
+    "soft morning mist resting on green hills",
+    "gentle dawn glow illuminating quiet nature"
+  ],
+  "scenes": [
+    {
+      "a": "As the first gentle light breaks across the quiet horizon, take a deep, steady breath and quiet your heart.",
+      "img": "short-morningproverbs3v5-scene-01.jpg",
+      "kicker": "PROVERBS 3:5-6",
+      "sub": "WELCOME THE NEW DAWN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Heavenly Father, as this morning sun rises to greet the earth, we lift our thoughts to You above.",
+      "img": "short-morningproverbs3v5-scene-02.jpg",
+      "kicker": "PROVERBS 3:5-6",
+      "sub": "LIFT YOUR THOUGHTS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Your word reminds us to trust in the Lord with all our heart and lean not on our own understanding.",
+      "img": "short-morningproverbs3v5-scene-03.jpg",
+      "kicker": "PROVERBS 3:5-6",
+      "sub": "LEAN NOT ON YOUR OWN",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In all our ways we acknowledge You, knowing You will make our paths straight and steady.",
+      "img": "short-morningproverbs3v5-scene-04.jpg",
+      "kicker": "PROVERBS 3:5-6",
+      "sub": "ACKNOWLEDGE HIS WAY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Remove every anxious thought from our minds as we step forward into this brand new day.",
+      "img": "short-morningproverbs3v5-scene-05.jpg",
+      "kicker": "PROVERBS 3:5-6",
+      "sub": "REMOVE ANXIOUS THOUGHTS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.35
+      ]
+    },
+    {
+      "a": "Guide our hands, protect our steps, and fill our souls with Your enduring, profound peace.",
+      "img": "short-morningproverbs3v5-scene-06.jpg",
+      "kicker": "PROVERBS 3:5-6",
+      "sub": "FILL SOULS WITH PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "May Your grace surround us from this sunrise until the evening shadows begin to fall.",
+      "img": "short-morningproverbs3v5-scene-07.jpg",
+      "kicker": "PROVERBS 3:5-6",
+      "sub": "GRACE UNTIL EVENING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "In Jesus' name we pray, Amen. Subscribe to The Morning Altar for your daily sunrise prayer.",
+      "img": "short-morningproverbs3v5-scene-08.jpg",
+      "kicker": "PROVERBS 3:5-6",
+      "sub": "DAILY SUNRISE PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "As the first gentle light breaks across the quiet horizon, take a deep, steady breath and quiet your heart."
+    ],
+    [
+      15,
+      30,
+      "Heavenly Father, as this morning sun rises to greet the earth, we lift our thoughts to You above."
+    ],
+    [
+      30,
+      45,
+      "Your word reminds us to trust in the Lord with all our heart and lean not on our own understanding."
+    ],
+    [
+      45,
+      60,
+      "In all our ways we acknowledge You, knowing You will make our paths straight and steady."
+    ],
+    [
+      60,
+      75,
+      "Remove every anxious thought from our minds as we step forward into this brand new day."
+    ],
+    [
+      75,
+      90,
+      "Guide our hands, protect our steps, and fill our souls with Your enduring, profound peace."
+    ],
+    [
+      90,
+      105,
+      "May Your grace surround us from this sunrise until the evening shadows begin to fall."
+    ],
+    [
+      105,
+      120,
+      "In Jesus' name we pray, Amen. Subscribe to The Morning Altar for your daily sunrise prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "GENTLE LIGHT BREAKS",
+        "ACROSS THE HORIZON",
+        "TAKE A DEEP BREATH"
+      ],
+      "BREATH",
+      "PROVERBS 3 : 5"
+    ],
+    [
+      15,
+      30,
+      [
+        "HEAVENLY FATHER",
+        "MORNING SUN RISES",
+        "LIFT OUR THOUGHTS"
+      ],
+      "FATHER",
+      "PROVERBS 3 : 5"
+    ],
+    [
+      30,
+      45,
+      [
+        "TRUST IN THE LORD",
+        "WITH ALL OUR HEART",
+        "LEAN NOT ON YOUR OWN"
+      ],
+      "LORD",
+      "PROVERBS 3 : 5"
+    ],
+    [
+      45,
+      60,
+      [
+        "IN ALL OUR WAYS",
+        "WE ACKNOWLEDGE YOU",
+        "MAKE OUR PATHS STRAIGHT"
+      ],
+      "STRAIGHT",
+      "PROVERBS 3 : 6"
+    ],
+    [
+      60,
+      75,
+      [
+        "REMOVE EVERY ANXIOUS",
+        "THOUGHT FROM OUR MINDS",
+        "STEP INTO THE DAY"
+      ],
+      "MINDS",
+      "PROVERBS 3 : 6"
+    ],
+    [
+      75,
+      90,
+      [
+        "GUIDE OUR HANDS",
+        "PROTECT OUR STEPS",
+        "FILL OUR SOULS"
+      ],
+      "SOULS",
+      "PROVERBS 3 : 6"
+    ],
+    [
+      90,
+      105,
+      [
+        "MAY YOUR GRACE",
+        "SURROUND US TODAY",
+        "UNTIL EVENING FALLS"
+      ],
+      "GRACE",
+      "PROVERBS 3 : 6"
+    ],
+    [
+      105,
+      120,
+      [
+        "IN JESUS NAME",
+        "WE PRAY AMEN",
+        "SUBSCRIBE FOR PRAYER"
+      ],
+      "AMEN",
+      "PROVERBS 3 : 6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As the first gentle light breaks across the quiet horizon, take a deep, steady breath and quiet your heart.",
+      "kind": "phrase",
+      "words": [
+        "GENTLE",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, as this morning sun rises to greet the earth, we lift our thoughts to You above.",
+      "kind": "phrase",
+      "words": [
+        "HEAVENLY",
+        "FATHER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your word reminds us to trust in the Lord with all our heart and lean not on our own understanding.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In all our ways we acknowledge You, knowing You will make our paths straight and steady.",
+      "kind": "phrase",
+      "words": [
+        "PATHS",
+        "STRAIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Remove every anxious thought from our minds as we step forward into this brand new day.",
+      "kind": "phrase",
+      "words": [
+        "ANXIOUS",
+        "THOUGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guide our hands, protect our steps, and fill our souls with Your enduring, profound peace.",
+      "kind": "phrase",
+      "words": [
+        "PROTECT",
+        "STEPS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May Your grace surround us from this sunrise until the evening shadows begin to fall.",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "SURROUND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In Jesus' name we pray, Amen. Subscribe to The Morning Altar for your daily sunrise prayer.",
+      "kind": "phrase",
+      "words": [
+        "PRAY",
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 3:5-6"
+}
