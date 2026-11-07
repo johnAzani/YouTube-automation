@@ -881,6 +881,12 @@ Ordered by *publishing unblocked per unit of risk*, superseding §9's order.
 R4's order changed because of §13: adding an external tick to a supervisor that
 already runs 187 times a day adds nothing but load. Stop the loop, then add the tick.
 
+> **Round 3 supersedes this table's head.** §29 adds four changes the Round 2 data
+> could not see (R12 preflight, R13 quota-window cron, R14 window-based evidence,
+> R15 honest cooldown label). With those counted, the five cheapest high-effect
+> changes are **R12, R13, R9, R10, R8′** — one cron value, two YAML/logic lines, and
+> two small code changes.
+
 ## 21. What the next run will tell us
 
 Three predictions, all falsifiable from the run list alone:
@@ -896,3 +902,297 @@ Three predictions, all falsifiable from the run list alone:
 
 If none of those happen, the empty audio is something else, and the diagnostic will
 say what.
+
+---
+
+# Round 3 — the code paths behind the numbers
+
+Round 2 counted the traffic. Round 3 opens the functions that produce it, and adds
+three findings that change the priority order again: the *liveness probe* is the
+biggest spender of the scarcest quota, the schedule sits in the worst corner of the
+quota day, and the watchdog's own evidence window collapses under load.
+
+## 22. Finding 14 — the liveness probe is the largest consumer of the scarcest quota
+
+`gemini_brain.yml` runs, per channel job, before anything else:
+
+```yaml
+- name: Can this runner reach Gemini?
+  run: python scripts/gemini_brain.py --preflight
+```
+
+and `--preflight` is not a connectivity check. It is a **full generateContent call**:
+
+```python
+text = (brain._call_model(brain.model, "Reply with the single word: ready") or "").strip()
+```
+
+`_call_model` is the same retrying path authoring uses. On 6 November, 18 of the 19
+brain dispatches died *at this step*, and the annotation says the model "did not
+answer after 5 attempts" — five billed requests per channel, per dispatch, to ask
+whether the service is up:
+
+| Quantity | Value |
+| :--- | ---: |
+| Brain dispatches on 6 Nov that failed at `--preflight` | **18** |
+| Channel jobs per dispatch (secret-place + prayer2) | 2 |
+| Attempts per call before R1 | 5 |
+| **Requests spent purely on liveness probes** | **180** |
+| Daily allowance for `gemini-3.8-flash`, per project | 20 |
+| Two projects | 40 |
+
+**180 requests against a 40-request day.** The probe alone spent the allowance
+four and a half times over, before a single script was authored. R1 reduces each
+call to two attempts, which brings it to 72 — still 1.8 days' worth.
+
+This is the missing term in Round 1's arithmetic. The retry ladder was not the
+problem; **the probe multiplied by the dispatch count** was. It also explains the
+shape of the 6 November timeline exactly: the probes failed first (08:45–09:16),
+then the quota was gone, then every later attempt had nothing to spend and the
+`503 → 24 RPD exhausted` confusion began.
+
+A liveness probe does not need a completion. Two options, both cheaper than one
+`generateContent`:
+
+* `client.models.get(model=...)` — a metadata read, no token spend, and it answers
+  "is this model still served for this key" (the 404 retirement case);
+* or delete the probe and let the first real authoring call report the failure with
+  the vocabulary R1/R2 already added. The probe exists because authoring once
+  mis-reported a client-construction failure as "GEMINI_API_KEY unavailable" — that
+  is now a distinct `api_status()` branch, which does not need a model call.
+
+**R12: preflight must not spend completion quota** (code, ~15 lines).
+
+## 23. Finding 15 — the schedule sits in the worst corner of the quota day
+
+Daily quotas reset at midnight Pacific. On 7 November that is **08:00Z**. Line the
+repo's slots up against that boundary:
+
+| Slot (UTC) | Hours into the quota day that starts 08:00Z | Meaning |
+| :--- | ---: | :--- |
+| brain 03:14 | 19.2 h | last hours of the day — whatever the previous day's produce runs left |
+| produce 06:14 | 22.2 h | the *last* consumer of an exhausted day |
+| produce 14:14 | 6.2 h | first real consumer of the fresh day |
+| produce 19:14 | 11.2 h | second |
+| (next day) brain 03:14 | 19.2 h | back to the tail |
+| (next day) produce 06:14 | 22.2 h | tail again |
+
+Three consequences, none of which are visible in any comment in the repo:
+
+1. The brain's one daily authoring pass runs **19 hours into the quota day**, i.e.
+   after the three produce slots have already been spent. Any day that used its
+   allowance leaves the night's authoring with nothing — which is what the 03:14
+   failures look like from the outside.
+2. The morning release at 06:14Z is the **last** consumer of the day and cannot use
+   the reset that arrives two hours later. A quota-starved morning is not
+   recoverable until 14:14Z, which is why the morning video is the one that
+   disappears from the channel.
+3. The one dispatch that "worked" on 6 November was at **14:02Z** — six hours after
+   the reset, at 6 hours into the fresh day. The supervisor was, by accident,
+   doing the right thing for the wrong reason: it re-dispatched a slot until it
+   landed in the fresh budget window.
+
+The fix is a cron line, not code. The queue is maintained to `--min-publishable 6`,
+so nothing depends on an 03:14 authoring pass existing *before* the 06:14 release:
+six publishable scripts means five more days of runway. Moving the brain to
+**08:14Z** puts the only authoring pass of the day in the only window where its
+allowance is guaranteed, and removes the reason the supervisor keeps re-dispatching
+the night slot.
+
+**R13: brain 03:14Z → 08:14Z; give the morning release a post-reset catch-up**
+(config, 1–2 lines).
+
+## 24. Finding 16 — the TTS failure is two different texts, two lengths, one shape
+
+Round 2 could not name the empty-audio cause. Round 3 narrows what it *cannot* be.
+
+**It is not the text.** Today's 08:29Z run failed at narration for the long-form
+(882 words) *and* for the Short (107 words):
+
+* `0034` Psalm 91 — narration 5,513 characters / 975 words → chunks `[3833, 1678]`;
+* `0035` Psalm 23 — narration 5,781 characters / 1,025 words → chunks `[4000, 1781]`;
+* `short-psalm91v5` — 107 words, **one** chunk of ~700 characters.
+
+A safety block on a specific passage would not hit a 107-word Short and a 975-word
+prayer with the same message on the same run. **It is not a length cap**: 700
+characters is nowhere near the 8,192-token input limit, and the estimated audio for
+the Short is well under a minute against the 16,384-token output ceiling.
+
+**It is not the style string.** Every call site uses the default:
+
+```
+pipeline/prayer_pipeline.py:206  synthesize_gemini_audio(doc.full_narration, audio, voice='Charon', model=DEFAULT_MODEL)
+pipeline/short_release.py:831    synthesize_gemini_audio(spec.narration_text, audio, voice="Charon")
+```
+
+`prompt_style` is never passed, so `style_text()` returns `"calm, reverent, peaceful
+devotional tone"` — a short attribute list, exactly what Google's prompting guide
+asks for. (Worth pinning: if someone later passes a paragraph, that *would* be a
+candidate cause.)
+
+**What is left is the request shape**, and there are exactly two variables in it:
+
+| Variable | Current value | Google's 3.8 vocabulary |
+| :--- | :--- | :--- |
+| `models.generate_content(...)` fallback modality | `response_modalities=["AUDIO"]` | the migration guide names `AUDIO_WAV` / `AUDIO_L16` / `AUDIO_MULAW` / `AUDIO_ALAW`; WAV is the 3.8 default, and `AUDIO` is the 3.1 vocabulary |
+| style carrier | `Part(text=…, speech_metadata=SpeechMetadata(style=…))` | documented as a `part.speech_metadata` object *or* an interactions `speech_metadata` annotation — the fallback path is the one path documented least |
+
+The 400s already seen this week (`Unknown name "speechMetadata"`, `Developer
+instruction is not enabled for this model`) show this model rejects request shapes
+loudly *when it rejects them*; a silent 200 with no parts is what is left when it
+accepts a shape it cannot fulfil. So the first probe should change exactly one
+thing — the modality enum — and log the two fields that say why:
+
+```
+finish_reason: candidates[0].finish_reason
+prompt_feedback: response.prompt_feedback.block_reason
+```
+
+**R8 (revised):** in the fallback path, ask for `AUDIO_WAV`; log `finish_reason` and
+`prompt_feedback.block_reason` in the failure message; treat an empty candidate as
+retryable **once** with jitter; keep the interactions path first, because that is
+the documented shape. One run then decides between "blocked", "generation failure"
+and "wrong modality" instead of us guessing a fourth time.
+
+## 25. Finding 17 — the watchdog's evidence window collapses exactly when it is needed
+
+`scripts/automation_monitor.py:135`:
+
+```python
+def fetch_runs(per_page: int = 20) -> list[dict]:
+    ...
+    resp = _gh(["api", f"repos/{repo_slug()}/actions/workflows/{wid}/runs?per_page={per_page}"])
+```
+
+Twenty runs per workflow, per pass. Everything the monitor believes is computed from
+those twenty:
+
+* `runs_14d` is `len([r for r in mine if within 14 days])` — it **saturates at 20**.
+  In today's `status.json` seven of ten workflows report exactly `runs_14d: 20`,
+  which reads as "20 runs in a fortnight" and actually means "all of the last twenty
+  happened inside the window I can see".
+* `missed_slots` is computed over the same twenty. During the storm, twenty
+  supervisor runs span about **ninety minutes** — a monitor sampling that window
+  physically cannot see a three-hour scheduling gap, which is the one thing it was
+  built to see. In a quiet week the same code sees days. **The verdict's meaning
+  depends on load**, which is why `missed_slots: 0` sits next to a night with no
+  runs at all.
+* `last_conclusion` was `None` for `automation-health`, `gemini_brain` and
+  `scheduler-supervisor` in the 05:51 snapshot: the newest run was in flight when
+  the monitor looked, and an in-flight run skips the `== "failure"` branch entirely.
+  With 187 passes a day that sampling collision is not rare.
+
+Nineteen API calls per pass (one `/actions/workflows` plus eighteen run lists), and
+**both** watchers call it: ~352 passes/day × 19 ≈ **6,700 calls/day, ~280/hour**.
+GitHub's `GITHUB_TOKEN` budget is 1,000 requests/hour per repo, so this is
+*dismissed as a cause* — but it is a quarter of the budget, spent entirely on
+watching, and it is paid every time a watcher wakes up.
+
+**R14:** fetch by *window* (`created=>=now-14d`) rather than by count, and treat an
+in-flight newest run as "no verdict yet" rather than as neutral. That is what makes
+`missed_slots` mean the same thing on a quiet day and a storming one.
+
+## 26. Finding 18 — "QUOTA WAIT" is the wrong label, and one channel's pause gates all three
+
+`pipeline/run.py:548` `quota_blocked_until()` scans **every** long-form queue file
+for `status: quota_paused` with a future reset, and `active_quota_cooldown()` adds
+"a publish in the last 24h". If any file matches:
+
+* `scripts/automation_monitor.py:459` labels the whole of `produce.yml`
+  **`QUOTA WAIT — daily $0.00 TTS allowance spent after today's upload(s); resumes …`**;
+* `scripts/scheduler_supervisor.py:311` refuses to dispatch produce at all.
+
+Two defects, both of which the owner's own constraints already forbid:
+
+1. **The label is asserted, not measured.** Today's failure is
+   `no audio content (mime_types=none)` — a model-contract failure. The board says
+   "allowance spent". A service failure is being reported as a quota failure, which
+   is the mirror image of the rule in §1: *a service/quota failure must not be
+   reported as a format failure*, and a contract failure must not be reported as
+   quota.
+2. **The gate is global.** There is no channel filter. `quota_blocked_until` does not
+   look at `channel:`, so a paused **prayer2** job stops **secret-place** and
+   **prayer3** from being dispatched — three separate projects, three separate
+   allowances, one latch. That is the exact opposite of the "never borrow another
+   channel's quota" rule, and it is why an unrelated pause can leave the 19:14 slot
+   unserved.
+
+**R15:** record *why* a job was paused (`quota_error` vs `tts_no_audio` vs
+`model_retired`) and label the cooldown from that; filter the gate by channel.
+
+## 27. Finding 19 — the loop's physical cost, and what it is not
+
+Worth stating so nobody optimises the wrong thing. The repository is **1.09 GB** on
+GitHub (`.git` is 585 MB locally, shallow). The largest tracked objects are not
+videos:
+
+| Object | Size |
+| :--- | ---: |
+| `docs/products/432hz-offline-bedtime-sanctuary-pack.zip.part00`–`part07` | 7 × 80 MB |
+| `docs/media/shorts-enron.mp4` | 16.8 MB |
+
+…yet **checkout is 14–23 seconds** and a whole supervisor pass is **42–72 seconds**,
+stable between 2 and 7 November. So the storm's cost is not bandwidth:
+
+| Resource | Cost of the storm |
+| :--- | :--- |
+| runner time | 187 × ~55 s ≈ **2.9 h/day** (free, public repo) |
+| git history | 385 commits/day ≈ **1.5 MB/day** of new blobs (174 ledgers + 130 `status.json` snapshots, plus git object overhead) |
+| API | ~6,700 calls/day (~280/h) — a quarter of the 1,000/h budget |
+| human signal | 96 monitor reds/day, one issue |
+
+The expensive resource is the last one. Everything else is noise that makes the
+noise indistinguishable from the failure.
+
+## 28. Finding 20 — a Short that cannot succeed, and the flip-flop that proves nobody noticed
+
+`content/shorts-queue/0015-short-psalm91v5.yml` — one manifest, five days:
+
+| Commit | Time | Status in that commit |
+| :--- | :--- | :--- |
+| `fef1b351` | 3 Nov 20:27 | `approved` |
+| `e5e2aed4` | 5 Nov 21:06 | **`quota_paused`** |
+| `9eb30ee8` | 6 Nov 08:06 | `approved` |
+| `17561dfa` | 6 Nov 08:08 | **`quota_paused`** |
+| `98a83a80` | 6 Nov 08:25 | `approved` |
+| `729a0fa1` | 6 Nov 14:14 | **`quota_paused`** |
+| `575366b2` | 7 Nov 08:29 | `approved` |
+
+Pause → unpause → pause → unpause, twice inside one morning. The unpauses are
+`chore(content): publish job` commits: the reader auto-unpaused it at the reset, the
+release spent a request, narration came back empty, and the job paused it again. Each
+cycle costs at least one of ten daily TTS requests, and this Short has never
+produced audio.
+
+A timer alone must not re-arm a job whose failure was not a quota refusal. The
+pause record needs the reason (`R15`), and the unpause needs a budget check
+(`R2a`). Otherwise the queue will keep spending a tenth of the day's speech
+allowance on the same un-narratable Short, every day, forever.
+
+## 29. Round 3 ranking delta
+
+| # | Change | Size | Why now |
+| :-- | :--- | :--- | :--- |
+| **R12** | preflight stops spending completion quota | ~15 lines | it is the single largest consumer of the 20/day allowance — 180 requests on 6 Nov against 40 available |
+| **R13** | brain 03:14Z → 08:14Z; post-reset catch-up for the morning slot | 1–2 lines | the day's only authoring pass currently runs at hour 19 of a spent day |
+| **R8′** | `AUDIO_WAV` + `finish_reason`/`prompt_feedback` + one bounded retry | ~60 lines | two texts and two lengths fail identically, so the shape is the prime suspect |
+| **R14** | fetch runs by window, not by count; in-flight ≠ neutral | ~30 lines | `missed_slots` currently means something different under load |
+| **R15** | label the cooldown from the pause reason; filter it per channel | ~40 lines | "QUOTA WAIT" is asserted for a contract failure, and one channel's pause stops three |
+| R9, R10, R2a, R3, R5, R4, R6, R11 | unchanged from §20 | | R9 still first among the loop fixes |
+
+Combined with §20, the five cheapest high-effect changes are **R12, R13, R9, R10,
+R8′** — two of them are measured in lines of YAML and one is a single cron value.
+
+## 30. Round 3 predictions
+
+1. If R12 lands, a 19-dispatch day costs ~38 requests instead of ~180, and the
+   `503 → quota gone → nothing works` cascade stops being *self-inflicted*. The next
+   storm will show 503s that end when capacity returns, not at midnight Pacific.
+2. If R13 lands, the 03:14 failures disappear and the supervisor stops re-dispatching
+   that slot after the reset (there is nothing left to recover).
+3. If R8′ lands and the modality was the cause, narration returns on the first run.
+   If it was a block, the message will name `SAFETY`; if it was generation failure,
+   the one retry succeeds and the residual failures cluster in the 08:00–10:00Z
+   capacity trough, exactly like the brain's 503s.
+4. If R9 lands, `runs_14d` stops saturating at 20 within a day, because the same code
+   will see a real fortnight of history for the first time.
