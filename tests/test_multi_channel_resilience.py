@@ -433,7 +433,9 @@ goes before you until evening falls and brings your labor to peaceful completion
                     "duration_seconds": 365,
                 }
 
-            with mock.patch.object(prun, "QUEUE_DIR", qdir), \
+            with mock.patch.dict(os.environ, {"DRY_RUN": "0"}), \
+                 mock.patch.object(prun.CONFIG, "dry_run", False), \
+                 mock.patch.object(prun, "QUEUE_DIR", qdir), \
                  mock.patch.object(prun, "quota_blocked_until", return_value=None), \
                  mock.patch.object(prun, "select_jobs", side_effect=[[bad], [good]]), \
                  mock.patch.object(prun, "process", side_effect=fake_process):
