@@ -81,14 +81,14 @@ def _brain(script, channel_id: str = "prayer3"):
     brain = GeminiBrain(api_key="", channel_id=channel_id)
     calls: list[tuple[str, str]] = []
     brain._client = _FakeClient(script, calls)
+    brain._sleep = lambda _seconds: None
     return brain, calls
 
 
 class AuthoringCase(unittest.TestCase):
     def setUp(self):
-        patcher = mock.patch.object(gemini_brain, "_TRANSIENT_BACKOFF", ())
-        patcher.start()
-        self.addCleanup(patcher.stop)
+        # The real ladder, with the sleeping stubbed out: the budget arithmetic is what
+        # these tests assert, so the delays must be recorded, not skipped.
         self.scripture = {"id": "0044", "scripture": "Psalm 46:10",
                           "theme": "Stillness at Noon", "hook": "BE STILL AND KNOW"}
 
@@ -144,6 +144,84 @@ class TestServiceFailuresAreNamed(AuthoringCase):
         self.assertIn("## Scene 1", text)
         self.assertEqual(calls[0][0], gemini_brain.DEFAULT_TEXT_MODEL)
         self.assertGreater(len(calls), 1)
+
+
+class TestTheRetryBudgetIsPerPass(AuthoringCase):
+    """R1 — measured on 7 November: 25 requests / 9m10s for ONE logical call.
+
+    With five live models and five attempts each, a busy morning spent 125 % of a
+    20-request/day model's whole day on a single authoring attempt, and an
+    empty-queue pass (up to 8 logical calls) could not finish inside the 30-minute
+    job timeout. The budget now belongs to the *pass*.
+    """
+
+    def test_a_twenty_request_model_gets_two_attempts_not_five(self):
+        brain, calls = _brain(lambda m, c, n: RuntimeError("503 UNAVAILABLE"))
+        with mock.patch("builtins.print"):
+            with self.assertRaises(BrainAuthoringError):
+                brain.author_longform_script(self.scripture)
+        per_model = {}
+        for model, _ in calls:
+            per_model[model] = per_model.get(model, 0) + 1
+        for model in gemini_brain.TWENTY_A_DAY_MODELS:
+            if model in per_model:
+                self.assertEqual(per_model[model], 2, f"{model} spent a quarter of its day")
+        self.assertEqual(gemini_brain.model_attempt_limit("gemini-3.5-flash-lite"), 3)
+        self.assertEqual(gemini_brain.model_attempt_limit("gemini-3.8-flash"), 2)
+
+    def test_the_whole_pass_sleeps_no_more_than_its_budget(self):
+        slept: list[float] = []
+        brain, _ = _brain(lambda m, c, n: RuntimeError("503 UNAVAILABLE"))
+        brain._sleep = slept.append
+        with mock.patch("builtins.print"):
+            with self.assertRaises(BrainAuthoringError):
+                brain.author_longform_script(self.scripture)
+        self.assertLessEqual(sum(slept), gemini_brain.MAX_TRANSIENT_SLEEP_SECONDS)
+        # 2 lite waits + 2 lite waits + 1 + 1 + 1 for the 20-a-day pair and the alias:
+        # every model is still tried, and the pass is bounded at two minutes.
+        self.assertEqual(len(slept), 7, slept)
+
+    def test_waits_carry_jitter(self):
+        brain, _ = _brain(lambda m, c, n: COMPLETE)
+        waits = [brain._budgeted_wait("gemini-3.5-flash-lite", 0, 4) for _ in range(40)]
+        self.assertGreater(len(set(waits)), 1, "identical waits retry in lockstep")
+        base = gemini_brain._TRANSIENT_BACKOFF[0]
+        self.assertTrue(all(base * 0.79 <= w <= base * 1.21 for w in waits), waits)
+
+    def test_a_spent_budget_stops_climbing_rather_than_waiting_zero(self):
+        brain, calls = _brain(lambda m, c, n: RuntimeError("503 UNAVAILABLE"))
+        brain._sleep = lambda _s: None
+        brain.transient_slept = gemini_brain.MAX_TRANSIENT_SLEEP_SECONDS
+        with mock.patch("builtins.print"):
+            with self.assertRaises(BrainAuthoringError) as ctx:
+                brain.author_longform_script(self.scripture)
+        self.assertEqual(len(calls), 5, "each model is asked exactly once")
+        self.assertIn("backoff budget", str(ctx.exception))
+
+    def test_the_failure_names_the_budget_when_it_is_what_ran_out(self):
+        """Deterministic: the message logic is the assertion, not a jittered sum."""
+        brain, _ = _brain(lambda m, c, n: COMPLETE)
+        brand = gemini_brain.brand_for("prayer3")
+        brain.transient_slept = gemini_brain.MAX_TRANSIENT_SLEEP_SECONDS
+        message = brain._authoring_failure(
+            brand, [{"model": "gemini-3.5-flash-lite", "outcome": "busy after retries"}])
+        self.assertIn("backoff", message)
+        self.assertIn("later slot", message)
+        # and it stays quiet when the budget was not the thing that ran out
+        brain.transient_slept = 0.0
+        quiet = brain._authoring_failure(
+            brand, [{"model": "gemini-3.5-flash-lite", "outcome": "missing id"}])
+        self.assertNotIn("backoff", quiet)
+
+    def test_quota_still_stops_the_chain_before_any_wait(self):
+        slept: list[float] = []
+        brain, calls = _brain(lambda m, c, n: RuntimeError("429 RESOURCE_EXHAUSTED"))
+        brain._sleep = slept.append
+        with mock.patch("builtins.print"):
+            with self.assertRaises(BrainAuthoringError):
+                brain.author_longform_script(self.scripture)
+        self.assertEqual(len(calls), 1)
+        self.assertEqual(slept, [], "a spent daily allowance is not a patient problem")
 
 
 class TestUsableTextIsNotThrownAway(AuthoringCase):

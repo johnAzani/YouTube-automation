@@ -282,7 +282,40 @@ def live_model(primary: str | None = None) -> str:
 #: 6 November 08:45Z: the model was finally live and the authoring run still failed,
 #: because three calls in a row came back 503 UNAVAILABLE and the loop skipped to the
 #: next candidate model instead of letting the spike pass.
-_TRANSIENT_BACKOFF = (5, 15, 30, 60)
+#:
+#: Three rungs, not four. With five live models in the chain the old (5, 15, 30, 60)
+#: ladder allowed **25 requests and 9m10s for ONE logical call** — measured on
+#: 7 November: 125 % of a 20-request/day model, and a third of the 30-minute job
+#: timeout, of which an empty-queue pass may need eight. See
+#: docs/research/schedule-and-model-reliability.md §6.2.
+_TRANSIENT_BACKOFF = (5, 15, 30)
+
+#: Total backoff a *pass* may sleep, across every model and every logical call. The
+#: budget is per pass rather than per model because the failure mode was cumulative:
+#: each model looked frugal on its own and the pass still died of wall clock.
+MAX_TRANSIENT_SLEEP_SECONDS = 120.0
+
+#: ±20 % on every wait. Google's own troubleshooting guide asks for jitter so clients
+#: that hit the same spike do not retry in lockstep; without it the three channel legs
+#: of one matrix retry within the same second.
+TRANSIENT_JITTER = 0.2
+
+#: Models on the 20-request/day free tier. A five-attempt storm on one of these spends
+#: a quarter of its whole day on a single logical call, which is how gemini-3.8-flash
+#: came to be named 29 times in this repo's failure annotations. One retry is enough.
+TWENTY_A_DAY_MODELS = ("gemini-3.6-flash", "gemini-3.8-flash", "gemini-3.7-flash")
+
+
+#: Attempts per logical call on a 500-request/day model: one plus two waits, 20 s of
+#: backoff. Three is enough to ride out a demand spike; four was enough to starve the
+#: rest of the chain of the pass budget (measured: the first two lite models ate the
+#: whole 90 s and the remaining three got one attempt each).
+LITE_MODEL_ATTEMPTS = 3
+
+
+def model_attempt_limit(model: str) -> int:
+    """How many requests one logical call may spend on `model`."""
+    return 2 if model in TWENTY_A_DAY_MODELS else LITE_MODEL_ATTEMPTS
 
 
 def is_transient(exc: BaseException) -> bool:
@@ -349,6 +382,10 @@ class GeminiBrain:
         self.quota_stop = ""
         #: Attempts this pass made, one row per model: what it did and why.
         self.authoring_outcomes: list[dict[str, str]] = []
+        #: Seconds this pass has slept inside backoff, against
+        #: `MAX_TRANSIENT_SLEEP_SECONDS`. Injectable sleep so tests do not wait.
+        self.transient_slept = 0.0
+        self._sleep = time.sleep
         if self.api_key:
             try:
                 from google import genai
@@ -593,6 +630,10 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         if self.quota_stop:
             tail = (f" The project's daily free-tier text allowance is spent; it resets "
                     f"at {self.quota_stop}.")
+        elif self.transient_slept >= MAX_TRANSIENT_SLEEP_SECONDS * 0.9:
+            tail = (f" The pass spent its whole {MAX_TRANSIENT_SLEEP_SECONDS:.0f}s backoff "
+                    f"budget on 503s ({self.transient_slept:.0f}s); a later slot has a "
+                    f"different capacity moment.")
         return (f"{brand.display_name}: no candidate model could author this scripture — "
                 f"{seen}.{tail} Nothing was written: a job that cannot satisfy the queue "
                 f"gate must never enter content/queue/.")
@@ -605,7 +646,8 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         candidate. `BrainAuthoringError` is a verdict about the *text*, not a
         transport failure, and is always re-raised.
         """
-        for attempt in range(1 + len(_TRANSIENT_BACKOFF)):
+        attempts_allowed = model_attempt_limit(model)
+        for attempt in range(attempts_allowed):
             if self.calls_made >= MAX_CALLS_PER_RUN:
                 raise BrainAuthoringError(
                     f"this pass has already made {self.calls_made} Gemini requests "
@@ -640,21 +682,46 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                     self.last_reason = "quota exhausted"
                     self.quota_stop = reset_dt.isoformat()
                     return ""
-                if is_transient(exc) and attempt < len(_TRANSIENT_BACKOFF):
-                    wait = _TRANSIENT_BACKOFF[attempt]
+                if is_transient(exc) and attempt + 1 < attempts_allowed:
+                    wait = self._budgeted_wait(model, attempt, attempts_allowed)
+                    if wait is None:
+                        self.last_reason = ("busy after retries: pass backoff budget "
+                                            f"({MAX_TRANSIENT_SLEEP_SECONDS:.0f}s) spent")
+                        print(f"[gemini-brain] {model}: service busy, but this pass has "
+                              f"spent its {MAX_TRANSIENT_SLEEP_SECONDS:.0f}s of backoff "
+                              f"— trying the next model.", flush=True)
+                        return ""
                     print(f"[gemini-brain] {model}: service busy ({type(exc).__name__}). "
-                          f"Waiting {wait}s (attempt {attempt + 2}/"
-                          f"{1 + len(_TRANSIENT_BACKOFF)})...", flush=True)
-                    time.sleep(wait)
+                          f"Waiting {wait:.0f}s (attempt {attempt + 2}/"
+                          f"{attempts_allowed})...", flush=True)
+                    self._sleep(wait)
+                    self.transient_slept += wait
                     continue
                 print(f"[gemini-brain] Model {model} call failed: {exc}")
                 reason = ("busy after retries" if is_transient(exc) else "failed")
                 self.last_reason = f"{reason}: {exc}"[:180]
                 return ""
         print(f"[gemini-brain] Model {model} still busy after "
-              f"{len(_TRANSIENT_BACKOFF)} retries; trying the next candidate.")
-        self.last_reason = "busy (503) after 5 attempts"
+              f"{attempts_allowed} attempt(s); trying the next candidate.")
+        self.last_reason = f"busy after retries: {attempts_allowed} attempt(s) on {model}"
         return ""
+
+    def _budgeted_wait(self, model: str, attempt: int, attempts_allowed: int) -> float | None:
+        """The jittered wait this pass can still afford, or None if the budget is spent.
+
+        None rather than 0: "no time left to be patient" is a different answer from
+        "wait zero seconds", and the caller must stop climbing this model.
+        """
+        import random as _random
+
+        if not _TRANSIENT_BACKOFF:      # a test may empty the ladder to run instantly
+            return 0.0
+        base = _TRANSIENT_BACKOFF[min(attempt, len(_TRANSIENT_BACKOFF) - 1)]
+        jittered = base * (1.0 + _random.uniform(-TRANSIENT_JITTER, TRANSIENT_JITTER))
+        remaining = MAX_TRANSIENT_SLEEP_SECONDS - self.transient_slept
+        if remaining < base * 0.5:
+            return None
+        return round(min(jittered, remaining), 1)
 
     def _enforce_channel_metadata(self, text: str, scripture_data: dict[str, Any] | None = None) -> None:
         """Refuse model output that is branded for the wrong channel.
@@ -726,13 +793,21 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                     f"{prompt}\n\nPrevious output was rejected: {last_error}\n"
                     "Fix exactly that and return only JSON.")
                 resp = None
-                for wait in (0, *_TRANSIENT_BACKOFF):
-                    if wait:
+                for rung in range(1 + len(_TRANSIENT_BACKOFF)):
+                    if rung:
                         # Same 503 spike that killed a long-form run at 08:45Z
-                        # would also kill the Short: wait, do not re-prompt.
-                        print(f"[gemini-brain] Short {key}: service busy, waiting {wait}s...",
-                              flush=True)
-                        time.sleep(wait)
+                        # would also kill the Short: wait, do not re-prompt. The wait
+                        # is drawn from the same pass-level budget as long-form
+                        # authoring, so a busy night cannot spend it twice over.
+                        wait = self._budgeted_wait(model, rung - 1, 1 + len(_TRANSIENT_BACKOFF))
+                        if wait is None:
+                            last_error = ("pass backoff budget spent before this model "
+                                          "could answer")
+                            break
+                        print(f"[gemini-brain] Short {key}: service busy, waiting "
+                              f"{wait:.0f}s...", flush=True)
+                        self._sleep(wait)
+                        self.transient_slept += wait
                     try:
                         self.calls_made += 1
                         if self.calls_made > MAX_CALLS_PER_RUN:

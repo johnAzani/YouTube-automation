@@ -196,8 +196,12 @@ class TestTransientServiceFailures(unittest.TestCase):
 
         brain._client = mock.MagicMock()
         brain._client.models.generate_content.side_effect = _generate
-        with mock.patch.object(gemini_brain, "_TRANSIENT_BACKOFF", (0, 0, 0)):
-            text = brain._call_model("gemini-3.8-flash", "prompt")
+        # A 500-request/day model: three attempts (1 + two waits) is the ceiling since
+        # 7 November. A 20-request/day model gets two, so it cannot spend a quarter of
+        # its day riding out one spike — see test_a_twenty_request_model_gets_two_attempts.
+        with mock.patch.object(gemini_brain, "_TRANSIENT_BACKOFF", (0, 0, 0)), \
+             mock.patch.object(brain, "_sleep", lambda _s: None):
+            text = brain._call_model("gemini-3.5-flash-lite", "prompt")
         self.assertEqual(calls["n"], 3, "two 503s, then the same model answers")
         self.assertIn("## Scene", text)
 

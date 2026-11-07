@@ -352,11 +352,23 @@ FAILED_CONCLUSIONS = {"failure", "cancelled", "timed_out", "startup_failure"}
 #: brain attempt in that window was burned by an outage the repo could not fix.
 #: Once the budget is spent, such a slot keeps retrying on a timer — a fixed code
 #: fingerprint cannot describe an outage that ends by itself.
-#: Deliberately narrow. The evidence is now a run's full annotation text, which also
-#: carries runner boilerplate ("Node.js 20 is deprecated…"), so a loose marker such as
-#: "500" or "internal" would read an ordinary failure as an outage.
+#: Deliberately narrow on *generic* errors. The evidence is now a run's full annotation
+#: text, which also carries runner boilerplate ("Node.js 20 is deprecated…"), so a loose
+#: marker such as "500" or "internal" would read an ordinary failure as an outage.
+#: "no candidate model" and "supply empty" are deliberately absent: they are the
+#: wrapper around *every* authoring failure, including the deterministic ones a retry
+#: cannot fix (retired model, wrong branding, missing front matter). Those are handled
+#: by `code_changed_since` instead.
 UPSTREAM_MARKERS = ("service unavailable", "503", "high demand", "upstream capacity",
-                    "unavailable —", "deadline exceeded", "timed out")
+                    "unavailable —", "deadline exceeded", "timed out",
+                    # Added 7 November, from the annotations the supervisor was
+                    # already fetching and then ignoring: a 429 answered "daily free
+                    # tier quota reached", a busy fleet answered "busy after retries",
+                    # and neither matched a marker, so the slot was marked served by a
+                    # run that had failed. Each is a state that ends by itself — the
+                    # allowance resets at midnight Pacific, capacity returns in
+                    # minutes — which is exactly what the retry timer exists for.
+                    "quota", "resource_exhausted", "rate limit", "busy after retries")
 UPSTREAM_RETRY_AFTER = timedelta(minutes=30)
 UPSTREAM_MAX_ATTEMPTS = 8
 

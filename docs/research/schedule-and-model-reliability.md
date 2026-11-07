@@ -337,7 +337,7 @@ Three red workflows, one cause, and the cause was reported as a content problem.
 
 Nothing here spends money; all of it is `$0`-lock compatible.
 
-### R1 — Make the retry budget honest (code, ~40 lines)
+### R1 — Make the retry budget honest — **implemented, `57367ca`+**
 
 Cap **total** transient wait per pass, not per model: e.g. 6 requests / 3 minutes of
 sleep, with jitter (`5 + U(0,5)`, `15 + U(0,10)`, …), and stop trying a model after 2
@@ -346,7 +346,23 @@ branch (`_authoring_failure`) instead of being killed at 30 minutes.
 *Effect:* the job always reports a reason; ~60 % less wall clock on a 503 morning.
 *Verify:* `tests/test_brain_authoring_resilience.py` extended with a time-budget test.
 
-### R2 — Teach the supervisor the words it is missing (code, ~10 lines)
+**As built** (the numbers below replace the 25-request / 9m10s worst case):
+
+| Rule | Before | After |
+| :--- | ---: | ---: |
+| Attempts per 20-RPD model | 5 | **2** |
+| Attempts per 500-RPD model | 5 | **3** |
+| Requests per logical call | 25 | **11** |
+| Sleep per logical call | 550 s | **45–55 s, jittered ±20 %** |
+| Sleep per *pass* (all models, all calls) | unbounded | **120 s, then the pass reports** |
+
+The per-pass budget is the important half: the old policy was frugal per model and
+ruinous in aggregate, which is how a 30-minute job died without a verdict. The failure
+now ends with "the pass spent its whole 120 s backoff budget on 503s; a later slot has a
+different capacity moment", which is also the sentence that tells a human to wait rather
+than re-dispatch.
+
+### R2 — Teach the supervisor the words it is missing — **implemented**
 
 Add `quota`, `resource_exhausted`, `busy after retries`, `no candidate model`,
 `supply empty` to `UPSTREAM_MARKERS`, and treat "supply empty" as downstream-fixable
@@ -354,6 +370,12 @@ Add `quota`, `resource_exhausted`, `busy after retries`, `no candidate model`,
 *Effect:* a 429 at 05:39 is retried at 09:47 instead of losing the day.
 *Risk:* retry storms — bounded already by `UPSTREAM_RETRY_AFTER = 30 min` and
 `UPSTREAM_MAX_ATTEMPTS = 8`.
+
+**As built:** `quota`, `resource_exhausted`, `rate limit`, `busy after retries` were
+added. `no candidate model` and `supply empty` were deliberately *not* added — they wrap
+every authoring failure, including the deterministic ones (retired model, wrong
+branding, missing envelope) that a retry cannot fix and where `code_changed_since` is the
+correct lever. `tests/test_watchers_do_not_ping_pong.py` pins both directions.
 
 ### R2a — Reserve the TTS margin (code, ~15 lines)
 

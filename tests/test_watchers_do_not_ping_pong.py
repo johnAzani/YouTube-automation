@@ -158,6 +158,34 @@ class TestUpstreamEvidenceIsQuotedFromTheRun(unittest.TestCase):
                 "attempts (503 UNAVAILABLE — upstream capacity, not this code).")
         self.assertTrue(sup.is_upstream_failure({"result": "dispatched"}, real))
 
+    def test_a_quota_answer_is_an_outage_and_is_retried(self):
+        """7 November: the brain answered 429 all morning and the slot was never retried.
+
+        `UPSTREAM_MARKERS` had no word for a spent allowance, so `is_upstream_failure`
+        said no, `upstream_retry_due` said no, and the ledger kept the slot marked
+        served by a run that had failed. The allowance resets by itself: that is the
+        definition of the retry timer's job.
+        """
+        from scripts import scheduler_supervisor as sup
+
+        evidence = ("Gemini Brain | Google Gemini daily free tier quota reached "
+                    "($0.00 lock active). Reset at 2026-11-08T08:00:00+00:00 UTC.")
+        self.assertTrue(sup.is_upstream_failure({"result": "dispatched"}, evidence))
+        self.assertTrue(sup.is_upstream_failure(
+            {"result": "dispatched"}, "busy after retries: 503 UNAVAILABLE: high demand"))
+        self.assertTrue(sup.is_upstream_failure(
+            {"result": "dispatched"}, "429 RESOURCE_EXHAUSTED: rate limit exceeded"))
+
+    def test_a_deterministic_authoring_failure_is_still_not_an_outage(self):
+        """Retrying a retired model or bad branding just spends the allowance again."""
+        from scripts import scheduler_supervisor as sup
+
+        retired = ("The Midday Watch: no candidate model could author this scripture — "
+                   "gemini-2.5-flash: retired (404). Nothing was written.")
+        self.assertFalse(sup.is_upstream_failure({"result": "dispatched"}, retired))
+        self.assertFalse(sup.is_upstream_failure(
+            {"result": "dispatched"}, "does not declare channel: prayer3"))
+
     def test_the_latest_failed_run_is_the_one_quoted(self):
         from unittest import mock
 
