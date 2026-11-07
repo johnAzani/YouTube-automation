@@ -2845,3 +2845,70 @@ So: not exhausted; starved, unattributable, half-provisioned, and held behind an
 channel's pause. The cheapest of the three to settle is the provisioning question — one
 secret decides whether prayer3 can ever publish on schedule — and it is a question only the
 repository owner can answer.
+
+---
+
+## 82. Correction to §81 — the Midday Watch is fully provisioned, and its key works
+
+The repository owner's secrets page settles it:
+
+| Secret | Last updated |
+| :--- | :--- |
+| `GEMINI_API_KEY`, `YOUTUBE_CLIENT_ID`, `YOUTUBE_CLIENT_SECRET`, `YOUTUBE_REFRESH_TOKEN` | 2 weeks / last week (unprefixed = secret-place) |
+| `PRAYER2_GEMINI_API_KEY`, `PRAYER2_YOUTUBE_*` (id, client id, client secret, refresh token) | 3 days ago |
+| `PRAYER3_YOUTUBE_CHANNEL_ID`, `_CLIENT_ID`, `_CLIENT_SECRET`, `_REFRESH_TOKEN` | **8 hours ago** |
+| `PRAYER3_GEMINI_API_KEY` | **7 hours ago** |
+
+So gate 2 in §81 is **withdrawn**: `prayer3` has every secret `produce.yml` and
+`gemini_brain.yml` gate it on. The channel was provisioned within the last eight hours —
+which is why the question "has it exhausted its quota too?" is the natural one, and why the
+answer matters: its very first calls are failing, and they are not failing on quota.
+
+**Why no `produce (prayer3)` leg has ever appeared** is now explained, and it is not a
+provisioning gap. `produce.yml`'s plan step has two branches:
+
+```bash
+case "${{ github.event_name }}" in
+  schedule)          channels="$provisioned" ;;            # all three, if ready
+  workflow_dispatch) channels='["${{ inputs.channel }}"]' ;; # exactly the one asked for
+  *)                 channels='["secret-place"]' ;;
+esac
+```
+
+Every produce run since the secrets landed has been a **`workflow_dispatch` from the
+supervisor with `-f channel=secret-place`** (§75), and that branch replaces the matrix with
+a single channel. The scheduled runs that did expand (6 Nov 14:12, 20:26, 23:43) all
+predate the secrets, so the matrix had only two entries. The next scheduled run is the
+first chance for a prayer3 leg — 14:14Z today.
+
+**Why the brain's prayer3 job still fails.** Its step list is decisive:
+
+```
+5 Can this runner reach Gemini?        success   ← the key is valid and the API answers
+6 Keep the long-form queue publishable failure   ← --ensure-supply-for prayer3 --min-publishable 6
+7 Author specs for Shorts…             skipped
+```
+
+Preflight succeeds, so this is not a bad key, not a disabled API, not a missing project.
+And it is not quota either: a `429` raises `GeminiQuotaExceededError`, which stops the pass
+outright (§43) — but this pass walks **past every live model** and only stops when it
+reaches `gemini-2.0-flash` and `gemini-2.5-flash`, which answer `404 no longer available`
+because they are retired (§61).
+
+A chain that reaches the retired models has had a script-shaped answer from every live
+model and rejected each one. That is the §76 defect seen from the inside: the prompt asks
+for `channel:` in prose, shows no front-matter skeleton, the model omits a required key,
+validation refuses the script, and the pass tries the next model until there are none left.
+For secret-place the omission *silently attributes* the script to the wrong channel; for
+prayer3, where nothing is yet approved, it fails outright and leaves the queue empty.
+
+**Consequences for the two open questions.**
+
+1. R21 (front-matter skeleton + a validator that names the missing key) is no longer just
+   the fix for misattribution — it is the fix for prayer3's authoring failure, on a channel
+   whose credentials are already in place. The next brain run after it should be the first
+   to write a prayer3 script that survives validation.
+2. The 14:14Z scheduled produce run will, for the first time, contain a
+   `produce (prayer3)` leg. It will find nothing publishable and exit non-zero. That is
+   correct behaviour and a useful receipt: it will be the first run in this repository's
+   history where the third channel's leg exists and says why it cannot work.
