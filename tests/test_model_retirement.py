@@ -12,8 +12,10 @@ pointed at a live model, and keep a retirement loud when it happens again.
 """
 from __future__ import annotations
 
+import os
 import unittest
 from pathlib import Path
+from unittest import mock
 
 from pipeline import gemini_brain
 from pipeline.gemini_brain import (
@@ -39,12 +41,26 @@ class TestTheBrainStartsWithALiveModel(unittest.TestCase):
             with self.subTest(retired=retired):
                 self.assertNotIn(live_model(retired), RETIRED_TEXT_MODELS)
 
-    def test_retired_models_are_still_reachable_but_always_last(self):
+    def test_retired_models_are_not_tried_at_all_by_default(self):
+        """404 on every project we own, so a default chain that contains them is waste.
+
+        On 7 November the prayer3 pass spent three requests and three red
+        annotations on gemini-2.5/2.0/1.5-flash, all 404, and then reported a
+        formatting problem. They stay reachable for an older project key through
+        GEMINI_ALLOW_RETIRED_MODELS=1, and only then, always last.
+        """
         chain = text_model_candidates("gemini-2.5-flash")
         self.assertEqual(chain[0], DEFAULT_TEXT_MODEL,
                          "an explicitly configured retired model must not be tried first")
-        self.assertIn("gemini-2.5-flash", chain, "still reachable for an older project key")
+        for retired in RETIRED_TEXT_MODELS:
+            self.assertNotIn(retired, chain, "a retired model must not be attempted")
         self.assertEqual(len(chain), len(set(chain)), "no duplicate attempts")
+
+    def test_an_older_project_key_can_opt_back_in(self):
+        with mock.patch.dict(os.environ, {gemini_brain.ALLOW_RETIRED_ENV: "1"}):
+            chain = text_model_candidates("gemini-2.5-flash")
+        for retired in RETIRED_TEXT_MODELS:
+            self.assertIn(retired, chain)
         live = [m for m in chain if m not in RETIRED_TEXT_MODELS]
         self.assertEqual(chain[: len(live)], live, "a live model must come before any retired one")
 

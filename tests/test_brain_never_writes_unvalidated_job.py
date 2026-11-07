@@ -125,7 +125,12 @@ class TestAuthoringClimbsInsteadOfWritingJunk(unittest.TestCase):
             with self.assertRaises(BrainAuthoringError) as ctx:
                 brain.author_longform_script({"id": "0040", "scripture": "Proverbs 3:5-6"})
         message = str(ctx.exception)
-        self.assertIn("front matter the queue requires", message)
+        # The failure must name what each model actually did. The old wording
+        # ("every candidate returned a script without front matter") described a
+        # formatting fault even when the models had never answered at all.
+        self.assertIn("no candidate model could author", message)
+        self.assertIn("missing id", message)
+        self.assertIn("gemini-3.5-flash-lite", message)
         self.assertIn("Nothing was written", message)
 
 
