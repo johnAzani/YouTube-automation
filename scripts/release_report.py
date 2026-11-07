@@ -24,6 +24,7 @@ import argparse
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -208,10 +209,99 @@ def file_issue(title: str, body: str, repo: str) -> str:
     return created.stdout.strip()
 
 
+def is_quota_cooldown_only(summary: dict, log_tail: str) -> bool:
+    """True when the log shows a clean $0.00 daily free-tier TTS quota pause rather than a crash."""
+    if summary.get("open") or summary.get("failure"):
+        return False
+    low = (log_tail or "").lower()
+    return (
+        "free-tier tts allowance (10 requests/day) is spent until" in low
+        or ("gemini quota is exhausted;" in low and "is paused until" in low)
+    )
+
+
+def _published_public_titles(published_dir: Path | None = None) -> set[str]:
+    """Titles of scripts in `content/published/` that are already live and public."""
+    import yaml
+
+    pdir = published_dir or (REPO / "content" / "published")
+    titles: set[str] = set()
+    if not pdir.is_dir():
+        return titles
+    for md in pdir.glob("*.md"):
+        try:
+            raw = md.read_text(encoding="utf-8")
+            if not raw.startswith("---"):
+                continue
+            meta = yaml.safe_load(raw.split("---", 2)[1]) or {}
+        except Exception:  # noqa: BLE001
+            continue
+        if (
+            str(meta.get("status") or "").strip().lower() == "published"
+            and str(meta.get("privacy") or "").strip().lower() == "public"
+            and str(meta.get("youtube_video_id") or "").strip()
+        ):
+            title = str(meta.get("title") or "").strip()
+            if title:
+                titles.add(title)
+    return titles
+
+
+def sweep_stale_release_issues(repo: str, published_dir: Path | None = None) -> list[int]:
+    """Close non-failure quota-pause `Release failed` issues and already-public `Release ticket:` issues."""
+    if not shutil.which("gh"):
+        return []
+    found = subprocess.run(
+        [
+            "gh", "issue", "list", "--repo", repo, "--state", "open",
+            "--search", '"Release " in:title',
+            "--json", "number,title,body", "--limit", "50",
+        ],
+        capture_output=True, text=True, check=False,
+    )
+    if found.returncode != 0:
+        return []
+    try:
+        rows = json.loads(found.stdout or "[]")
+    except (ValueError, TypeError):
+        return []
+
+    public_titles = _published_public_titles(published_dir)
+    closed: list[int] = []
+    for row in rows:
+        num = int(row.get("number", 0) or 0)
+        title = str(row.get("title") or "")
+        body = str(row.get("body") or "")
+        if not num:
+            continue
+        comment = ""
+        if title.startswith("Release failed") and is_quota_cooldown_only({}, body):
+            comment = (
+                "Closing automatically: this run paused cleanly on the daily $0.00 "
+                "free-tier TTS quota limit (not a pipeline failure)."
+            )
+        elif title.startswith("Release ticket:"):
+            video_title = title[len("Release ticket:") :].strip()
+            if video_title and video_title in public_titles:
+                comment = (
+                    "Closing automatically: this video is already `published` and `public` "
+                    "in `content/published/`."
+                )
+        if comment:
+            res = subprocess.run(
+                ["gh", "issue", "close", str(num), "--repo", repo, "--comment", comment],
+                capture_output=True, text=True, check=False,
+            )
+            if res.returncode == 0:
+                closed.append(num)
+    return closed
+
+
 def close_resolved_issues(repo: str, run_id: str = "") -> list[int]:
     """Close open `Release failed...` / `Release died inside...` issues after a green release."""
     if not shutil.which("gh"):
         return []
+    closed = sweep_stale_release_issues(repo)
     found = subprocess.run(
         ["gh", "issue", "list", "--repo", repo, "--state", "open",
          "--search", '"Release " in:title',
@@ -219,16 +309,16 @@ def close_resolved_issues(repo: str, run_id: str = "") -> list[int]:
         capture_output=True, text=True, check=False,
     )
     if found.returncode != 0:
-        return []
+        return closed
     try:
         rows = json.loads(found.stdout or "[]")
         numbers = [
             int(r["number"]) for r in rows
             if str(r.get("title", "")).startswith(("Release failed", "Release died inside"))
+            and int(r["number"]) not in closed
         ]
     except (ValueError, KeyError, TypeError):
-        return []
-    closed: list[int] = []
+        return closed
     note = (
         f"Resolved automatically: a subsequent Production Release succeeded"
         + (f" (run `{run_id}`)." if run_id else ".")
@@ -254,7 +344,15 @@ def main(argv: list[str] | None = None) -> int:
                         help="file (or comment on) a GitHub issue")
     parser.add_argument("--close-resolved", action="store_true",
                         help="close open Production Release failed issues after a successful release")
+    parser.add_argument("--sweep-stale", action="store_true",
+                        help="close non-failure quota-pause issues and already-public release tickets")
     args = parser.parse_args(argv)
+
+    if args.sweep_stale:
+        swept = sweep_stale_release_issues(args.repo)
+        if swept:
+            print(f"[release-report] swept stale release issues: {swept}")
+        return 0
 
     if args.close_resolved:
         closed = close_resolved_issues(args.repo, args.run_id)
@@ -266,10 +364,14 @@ def main(argv: list[str] | None = None) -> int:
     if args.trail and Path(args.trail).is_file():
         trail_text = Path(args.trail).read_text(encoding="utf-8", errors="replace")
     summary = summarise(parse_trail(trail_text))
-    title, body = render(summary, _tail(Path(args.log), 60), args.run_id)
+    log_tail = _tail(Path(args.log), 60)
+    title, body = render(summary, log_tail, args.run_id)
     print(title)
     print(body)
     if args.issue:
+        if is_quota_cooldown_only(summary, log_tail):
+            print("[release-report] daily free-tier TTS quota pause; skipping issue creation")
+            return 0
         where = file_issue(title, body, args.repo)
         if where:
             print(f"[release-report] {where}")

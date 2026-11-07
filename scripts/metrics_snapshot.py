@@ -85,17 +85,25 @@ def _subscriber_summary(snapshot: dict) -> str:
     return f"Subscribers (YouTube-reported): {count:,}. YouTube rounds this count to three significant figures."
 
 
-def _post_github_issue(channel_snapshot: dict, rows: list[dict], today_text: str) -> None:
+def _post_github_issue(
+    channel_snapshot: dict,
+    rows: list[dict],
+    today_text: str,
+    channel_key: str | None = None,
+) -> None:
     """Post an analytics snapshot issue to GitHub so the autonomous pipeline & agent have live tracking."""
+    from pipeline.channel_capabilities import brand_for
+
     env = {**os.environ}
     if not env.get("GH_TOKEN") and env.get("GITHUB_TOKEN"):
         env["GH_TOKEN"] = env["GITHUB_TOKEN"]
     if not env.get("GH_TOKEN"):
         return
 
-    title = f"📊 Channel Analytics Snapshot: {today_text}"
+    brand_name = brand_for(channel_key).display_name
+    title = f"📊 Channel Analytics Snapshot ({brand_name}): {today_text}"
     lines = [
-        f"## 📊 The Secret Place — Channel & Video Metrics ({today_text})",
+        f"## 📊 {brand_name} — Channel & Video Metrics ({today_text})",
         "",
         _subscriber_summary(channel_snapshot),
         "",
@@ -249,7 +257,7 @@ def main(argv: list[str] | None = None) -> int:
                     "it expires after 30 days.\n")
 
     if os.environ.get("METRICS_POST_ISSUE", "1") != "0":
-        _post_github_issue(channel_snapshot, rows, today_text)
+        _post_github_issue(channel_snapshot, rows, today_text, channel_key=channel_key)
     return 0
 
 

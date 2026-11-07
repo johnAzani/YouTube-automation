@@ -59,6 +59,30 @@ def _require_production_prerequisites(
         )
 
 
+def _quarantine_tts_blocked_job(path: Path, reason: str) -> None:
+    """Mark a queue script `status: tts_blocked` so it cannot poison subsequent slots."""
+    try:
+        text = path.read_text(encoding="utf-8")
+    except OSError:
+        return
+    fm = re.match(r"\A---\s*\n(.*?)\n---(?P<tail>\s*\n.*|\Z)", text, re.S)
+    if not fm:
+        return
+    meta = fm.group(1)
+    meta, n = re.subn(r"(?m)^status\s*:.*$", "status: tts_blocked", meta, count=1)
+    if not n:
+        meta = "status: tts_blocked\n" + meta
+    clean_reason = re.sub(r"\s+", " ", str(reason)).strip()[:220]
+    line = f"tts_blocked_reason: {json.dumps(clean_reason)}"
+    if re.search(r"(?m)^tts_blocked_reason\s*:.*$", meta):
+        meta = re.sub(r"(?m)^tts_blocked_reason\s*:.*$", line, meta, count=1)
+    else:
+        meta += f"\n{line}"
+    tmp = path.with_name(path.name + ".tmp")
+    tmp.write_text(f"---\n{meta}\n---{fm.group('tail')}", encoding="utf-8")
+    tmp.replace(path)
+
+
 def _require_real_narration(engine: str, dry_run: bool) -> None:
     """Placeholder audio is useful for offline renders, but never publishable."""
     if not dry_run and engine not in ("edge-tts", "gemini-api"):
@@ -754,6 +778,25 @@ def main(argv: list[str] | None = None) -> int:
             result = process(path, dry)
             results.append(result)
         except Exception as exc:  # noqa: BLE001
+            from .gemini_tts import is_content_blocked_error
+
+            if not dry and args.next and is_content_blocked_error(exc):
+                _quarantine_tts_blocked_job(path, str(exc))
+                clean_exc = str(exc).replace("\n", " ")[:240]
+                _log(f"quarantined TTS-blocked script {path.name}: {clean_exc}")
+                print(
+                    f"::warning file={path},title=Quarantined TTS-blocked script::"
+                    f"{path.name} triggered Gemini TTS content filter ({clean_exc}); "
+                    f"marked status=tts_blocked and advancing to next eligible script.",
+                    flush=True,
+                )
+                if not remaining:
+                    remaining = [
+                        p for p in (select_jobs(False, None, False) or [])
+                        if p not in tried
+                    ]
+                if remaining:
+                    continue
             _log(f"FAILED {path}: {exc}")
             import traceback
             tb = traceback.format_exc()

@@ -137,24 +137,68 @@ CANONICAL_COMMUNITY_SCHEDULE: list[CommunityPost] = [
 ]
 
 
-def select_today_community_post(dt: datetime | None = None) -> CommunityPost:
+def community_schedule_for(channel_id: str | None = None) -> list[CommunityPost]:
+    """Return the 4-post liturgical Community Tab schedule for `channel_id`."""
+    if not channel_id:
+        return list(CANONICAL_COMMUNITY_SCHEDULE)
+    from .channel_capabilities import brand_for
+    from .channels import normalize_channel_id
+
+    brand = brand_for(normalize_channel_id(channel_id))
+    if not brand.community_posts:
+        return list(CANONICAL_COMMUNITY_SCHEDULE)
+    out: list[CommunityPost] = []
+    for raw in brand.community_posts:
+        poll_raw = raw.get("poll")
+        poll_obj = (
+            CommunityPoll(
+                question=poll_raw["question"],
+                options=list(poll_raw["options"]),
+                context_scripture=poll_raw["context_scripture"],
+                body_text="Vote and declare your faith in the comments below.",
+                tags=list(raw.get("tags") or []),
+            )
+            if poll_raw
+            else None
+        )
+        out.append(
+            CommunityPost(
+                post_id=raw["post_id"],
+                post_type=raw["post_type"],
+                title=raw["title"],
+                body_text=raw["body_text"],
+                poll=poll_obj,
+                image_rel_path=raw.get("image_rel_path"),
+                target_utc=raw.get("target_utc", "12:00"),
+                tags=list(raw.get("tags") or []),
+            )
+        )
+    return out
+
+
+def select_today_community_post(
+    dt: datetime | None = None,
+    channel_id: str | None = None,
+) -> CommunityPost:
     """Select the appropriate community post matching the day of the week."""
+    schedule = community_schedule_for(channel_id)
     dt = dt or datetime.now(timezone.utc)
     weekday = dt.weekday()  # 0=Mon, 1=Tue, 2=Wed, 3=Thu, 4=Fri, 5=Sat, 6=Sun
     if weekday == 6:  # Sunday
-        return CANONICAL_COMMUNITY_SCHEDULE[0]
+        return schedule[0]
     elif weekday in (1, 2):  # Tue / Wed Midweek Prayer Wall
-        return CANONICAL_COMMUNITY_SCHEDULE[1]
+        return schedule[1]
     elif weekday == 3:  # Thursday Interactive Poll
-        return CANONICAL_COMMUNITY_SCHEDULE[2]
+        return schedule[2]
     else:  # Fri / Sat / Mon
-        return CANONICAL_COMMUNITY_SCHEDULE[3]
+        return schedule[3]
 
 
 def publish_community_post(
     post: CommunityPost,
     youtube: Any = None,
     dry_run: bool = True,
+    channel_id: str | None = None,
 ) -> dict[str, Any]:
     """Stage today's post for publication inside YouTube.
 
@@ -168,18 +212,24 @@ def publish_community_post(
     workflow that posted nothing looked healthy for weeks.
     """
     COMMUNITY_DIR.mkdir(parents=True, exist_ok=True)
+    from .channel_capabilities import brand_for
+    from .channels import normalize_channel_id
+
+    eff = normalize_channel_id(channel_id or CONFIG.channel_id)
+    brand = brand_for(eff)
+
     card_path = COMMUNITY_DIR / post.image_rel_path if post.image_rel_path else None
     if card_path is not None and not card_path.is_file():
-        render_community_card(post, out_path=card_path)
+        render_community_card(post, out_path=card_path, channel_id=eff)
 
     pack = COMMUNITY_DIR / f"{post.post_id}-READY.md"
     lines = [
-        f"# Ready to post — {post.post_id}",
+        f"# Ready to post — {post.post_id} ({brand.display_name} · {brand.handle})",
         "",
         "YouTube's API cannot create Community posts. Paste this into YouTube Studio",
         "→ Create → Post, attach the card, and schedule it if you like.",
         "",
-        f"**Target:** {post.target_utc} UTC · **Type:** {post.post_type}",
+        f"**Channel:** {brand.display_name} (`{eff}`) · **Target:** {post.target_utc} UTC · **Type:** {post.post_type}",
         "",
         "## Body",
         "",
@@ -231,8 +281,15 @@ def render_community_card(
     width: int = CW,
     height: int = CH,
     out_path: Path | None = None,
+    channel_id: str | None = None,
 ) -> Image.Image:
     """Render a 1080x1080 square visual card matching DOCOGA REELS v2 glassmorphism."""
+    from .channel_capabilities import brand_for
+    from .channels import normalize_channel_id
+
+    eff = normalize_channel_id(channel_id or CONFIG.channel_id)
+    brand_title = brand_for(eff).display_name.upper()
+
     img = Image.new("RGBA", (width, height), (0, 0, 0, 255))
     draw = ImageDraw.Draw(img)
 
@@ -268,7 +325,7 @@ def render_community_card(
 
     # 4. Header Badges
     font_badge = _get_inter_font(22, "SemiBold")
-    badge_text = "THE SECRET PLACE  ·  DAILY COMMUNITY PRAYER"
+    badge_text = f"{brand_title}  ·  DAILY COMMUNITY PRAYER"
     bbox_b = draw.textbbox((0, 0), badge_text, font=font_badge)
     bw = bbox_b[2] - bbox_b[0]
     draw.text(((width - bw) // 2, int(height * 0.14)), badge_text, font=font_badge, fill=MUTED_TEXT)
@@ -355,13 +412,16 @@ def render_community_card(
     return res
 
 
-def export_weekly_community_manifest(out_dir: Path | None = None) -> list[Path]:
+def export_weekly_community_manifest(
+    out_dir: Path | None = None,
+    channel_id: str | None = None,
+) -> list[Path]:
     """Export the 7-day canonical community post schedule and render visual cards."""
     target_dir = out_dir or COMMUNITY_DIR
     target_dir.mkdir(parents=True, exist_ok=True)
 
     generated_files = []
-    for post in CANONICAL_COMMUNITY_SCHEDULE:
+    for post in community_schedule_for(channel_id):
         # 1. Export JSON post manifest
         post_json = target_dir / f"{post.post_id}.json"
         data = {
@@ -383,7 +443,7 @@ def export_weekly_community_manifest(out_dir: Path | None = None) -> list[Path]:
 
         # 2. Render visual card
         card_png = target_dir / f"{post.post_id}.png"
-        render_community_card(post, out_path=card_png)
+        render_community_card(post, out_path=card_png, channel_id=channel_id)
         generated_files.append(card_png)
 
     return generated_files

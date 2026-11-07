@@ -702,6 +702,36 @@ def findings(report: MonitorReport) -> list[tuple[str, str, bool]]:
     return out
 
 
+_AGE_NOISE_RE = re.compile(r"\b(?:just now|\d+(?:\.\d+)?[mhd] ago)\b")
+
+
+def _status_material(payload: dict) -> dict:
+    """Strip clock-ticking fields so unchanged monitor checks do not spam commits."""
+    norm = json.loads(json.dumps(payload))
+    norm.pop("generated_at", None)
+    for row in norm.get("automations") or []:
+        if isinstance(row, dict) and isinstance(row.get("detail"), str):
+            row["detail"] = _AGE_NOISE_RE.sub("<age>", row["detail"])
+    for row in norm.get("outcomes") or []:
+        if isinstance(row, dict) and isinstance(row.get("detail"), str):
+            row["detail"] = _AGE_NOISE_RE.sub("<age>", row["detail"])
+    return norm
+
+
+def save_monitor_state(payload: dict, path: Path = MONITOR_STATE) -> bool:
+    """Write `status.json` only when verdicts, counts, or run timestamps changed."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if path.is_file():
+        try:
+            existing = json.loads(path.read_text(encoding="utf-8"))
+            if _status_material(existing) == _status_material(payload):
+                return False
+        except (OSError, ValueError, TypeError):
+            pass
+    path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    return True
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description="Audit every automation and its outcomes.")
     parser.add_argument("--json", action="store_true")
@@ -729,9 +759,7 @@ def main(argv=None) -> int:
         print(render(report))
 
     if args.save:
-        MONITOR_STATE.parent.mkdir(parents=True, exist_ok=True)
-        MONITOR_STATE.write_text(json.dumps(report.as_dict(), indent=2) + "\n",
-                                 encoding="utf-8")
+        save_monitor_state(report.as_dict(), MONITOR_STATE)
 
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary:

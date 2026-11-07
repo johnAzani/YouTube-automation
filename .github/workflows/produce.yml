@@ -75,33 +75,58 @@ jobs:
     outputs:
       channels: ${{ steps.plan.outputs.channels }}
     steps:
+      - uses: actions/checkout@v4
       - id: plan
         env:
           # A channel joins the scheduled slots the moment its own credentials
-          # exist — no code change and no per-channel switch. This is a
-          # readiness probe, not a feature flag: The Midday Watch was registered
-          # on 2026-11-06 with no Google Cloud project yet, and scheduling three
-          # legs a day that cannot authenticate would page the owner three times
-          # a day for work that has not been provisioned.
+          # exist — no code change and no per-channel switch.
           PRAYER3_READY: ${{ secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN != '' }}
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_CHANNEL: ${{ inputs.channel }}
         run: |
-          case "${{ github.event_name }}" in
-            schedule)
-              channels='["secret-place","prayer2"]'
-              if [ "$PRAYER3_READY" = "true" ]; then
-                channels='["secret-place","prayer2","prayer3"]'
-              else
-                echo "::notice title=prayer3 waits for credentials::PRAYER3_YOUTUBE_REFRESH_TOKEN is not set, so The Midday Watch is registered but not yet scheduled. Add its four secrets and the next slot picks it up."
-              fi
-              ;;
-            workflow_dispatch) channels='["${{ inputs.channel }}"]' ;;
-            *)                 channels='["secret-place"]' ;;
-          esac
-          echo "channels=$channels" >> "$GITHUB_OUTPUT"
-          echo "producing for: $channels"
+          python3 - <<'PY'
+          import json, os, sys
+          from datetime import datetime, timezone
+          sys.path.insert(0, ".")
+          from scripts.automation_monitor import active_quota_cooldown
+
+          event = os.environ.get("EVENT_NAME", "")
+          p3_ready = os.environ.get("PRAYER3_READY", "").lower() == "true"
+          if event == "schedule":
+              candidates = ["secret-place", "prayer2"]
+              if p3_ready:
+                  candidates.append("prayer3")
+              else:
+                  print(
+                      "::notice title=prayer3 waits for credentials::"
+                      "PRAYER3_YOUTUBE_REFRESH_TOKEN is not set, so The Midday Watch "
+                      "is registered but not yet scheduled."
+                  )
+              now = datetime.now(timezone.utc)
+              channels = []
+              for cid in candidates:
+                  reset = active_quota_cooldown(now, channel_id=cid)
+                  if reset is not None:
+                      print(
+                          f"::notice title={cid} in daily TTS quota cooldown::"
+                          f"Skipping scheduled leg until {reset.isoformat()} UTC ($0.00 lock)."
+                      )
+                      continue
+                  channels.append(cid)
+          elif event == "workflow_dispatch":
+              channels = [(os.environ.get("INPUT_CHANNEL") or "secret-place").strip()]
+          else:
+              channels = ["secret-place"]
+
+          payload = json.dumps(channels)
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
+              fh.write(f"channels={payload}\n")
+          print(f"producing for: {payload}")
+          PY
 
   produce:
     needs: plan
+    if: ${{ needs.plan.outputs.channels != '[]' && needs.plan.outputs.channels != '' }}
     # One channel at a time: both legs write content/ state to main, and
     # the queue-state commit assumes it is the only producer running.
     strategy:
@@ -263,6 +288,7 @@ jobs:
         # never be uploaded to the wrong channel.
         if: ${{ inputs.job == '' }}
         run: |
+          set +e
           set -o pipefail
           if [ -n "${{ inputs.short }}" ]; then
             python -m pipeline.short_release --short "${{ inputs.short }}" 2>&1 | tee short.log
@@ -293,6 +319,7 @@ jobs:
         continue-on-error: true
         if: ${{ inputs.short == '' && inputs.job == '' }}
         run: |
+          set +e
           set -o pipefail
           python -m pipeline.run --record-published 2>&1 | tee record.log
           rc=$?
@@ -320,6 +347,7 @@ jobs:
           # below quote the run back as an issue we can actually read.
           PROGRESS_TRAIL: output/progress-trail.log
         run: |
+          set +e
           set -o pipefail
           if [ -n "${{ inputs.job }}" ]; then
             python -m pipeline.run --job "content/queue/${{ inputs.job }}" 2>&1 | tee run.log
@@ -334,8 +362,8 @@ jobs:
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
           if [ "$rc" -eq 3 ]; then
-            if python -c "from datetime import datetime, timedelta, timezone; from scripts.pipeline_watchdog import last_publish; lp=last_publish(); raise SystemExit(0 if (lp and datetime.now(timezone.utc) - lp[1] < timedelta(hours=24)) else 1)"; then
-              echo "::notice title=Daily free-tier quota cooldown::Channel already published within the last 24h; long-form edition paused cleanly until next daily reset ($0.00 lock)."
+            if python -c "import os; from datetime import datetime, timedelta, timezone; from scripts.pipeline_watchdog import last_publish_for_channel; lp=last_publish_for_channel(os.environ.get('CHANNEL_ID','secret-place')); raise SystemExit(0 if (lp and datetime.now(timezone.utc) - lp[1] < timedelta(hours=24)) else 1)"; then
+              echo "::notice title=Daily free-tier quota cooldown (${CHANNEL_ID})::Channel already published within the last 24h; long-form edition paused cleanly until next daily reset ($0.00 lock)."
               exit 0
             fi
           fi

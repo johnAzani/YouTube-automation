@@ -394,6 +394,158 @@ goes before you until evening falls and brings your labor to peaceful completion
         self.assertIn("git pull --ff-only origin main || true", sup_text)
         self.assertIn("/tmp/supervisor-ledger", sup_text)
 
+    def test_tts_content_blocked_splits_and_run_quarantines_head_of_line(self):
+        """#1: A content_blocked script must split sub-chunks first and quarantine+advance if still blocked."""
+        from pipeline import gemini_tts, run as prun
+
+        self.assertTrue(gemini_tts.is_content_blocked_error("Error code: 400 - {'code': 'content_blocked'}"))
+        self.assertTrue(
+            gemini_tts.is_content_blocked_error(
+                "Gemini API returned no audio content for model gemini-3.8-flash-tts"
+            )
+        )
+        long_text = ("Paragraph one of prayer. " * 20) + "\n\n" + ("Paragraph two of prayer. " * 20)
+        halves = gemini_tts._split_chunk_in_half(long_text)
+        self.assertEqual(len(halves), 2)
+
+        with tempfile.TemporaryDirectory() as tmp:
+            qdir = Path(tmp) / "queue"
+            qdir.mkdir()
+            bad = qdir / "0015-blocked.md"
+            good = qdir / "0016-clean.md"
+            for p, jid in ((bad, "0015"), (good, "0016")):
+                p.write_text(
+                    f'---\nid: "{jid}"\ntitle: "Psalm {jid} Prayer"\nstatus: approved\n'
+                    f'format: longform\nniche: faith and prayer\n---\n\n## Scene 1\n'
+                    + ("steadfast " * 860)
+                    + "\n",
+                    encoding="utf-8",
+                )
+
+            def fake_process(path: Path, dry: bool):
+                if path == bad:
+                    raise gemini_tts.GeminiContentBlockedError("content_blocked on chunk 1/2")
+                return {
+                    "uploaded": True,
+                    "video_id": "clean_vid_16",
+                    "watch_url": "https://youtu.be/clean_vid_16",
+                    "privacy_status": "public",
+                    "duration_seconds": 365,
+                }
+
+            with mock.patch.object(prun, "QUEUE_DIR", qdir), \
+                 mock.patch.object(prun, "quota_blocked_until", return_value=None), \
+                 mock.patch.object(prun, "select_jobs", side_effect=[[bad], [good]]), \
+                 mock.patch.object(prun, "process", side_effect=fake_process):
+                rc = prun.main(["--next"])
+
+            self.assertEqual(rc, 0)
+            bad_after = bad.read_text(encoding="utf-8")
+            self.assertIn("status: tts_blocked", bad_after)
+            self.assertIn("tts_blocked_reason:", bad_after)
+
+    def test_produce_workflow_plan_skips_quota_cooldown_and_guards_bash_errexit(self):
+        produce_text = (ROOT / ".github" / "workflows" / "produce.yml").read_text(encoding="utf-8")
+        self.assertIn("active_quota_cooldown(now, channel_id=cid)", produce_text)
+        self.assertIn("last_publish_for_channel", produce_text)
+        # Ensure `set +e` precedes `set -o pipefail` so rc=3 reaches the cooldown handler
+        self.assertIn("set +e\n          set -o pipefail", produce_text)
+
+    def test_monitor_status_material_guard_and_release_report_quota_hygiene(self):
+        """#2: Clock-only diffs in status.json are suppressed; quota-pause & public tickets auto-close."""
+        from scripts import automation_monitor as am
+        from scripts import release_report as rr
+
+        with tempfile.TemporaryDirectory() as tmp:
+            st_path = Path(tmp) / "status.json"
+            v1 = {
+                "generated_at": "2026-11-07T19:43:00+00:00",
+                "healthy": True,
+                "automations": [{"workflow": "comments.yml", "verdict": "OK", "detail": "last success 0.3h ago"}],
+                "outcomes": [{"outcome": "last upload", "verdict": "OK", "detail": "uploaded 0h ago"}],
+            }
+            v2 = {
+                "generated_at": "2026-11-07T19:51:00+00:00",
+                "healthy": True,
+                "automations": [{"workflow": "comments.yml", "verdict": "OK", "detail": "last success 0.4h ago"}],
+                "outcomes": [{"outcome": "last upload", "verdict": "OK", "detail": "uploaded 1h ago"}],
+            }
+            v3 = {
+                **v2,
+                "healthy": False,
+                "automations": [{"workflow": "comments.yml", "verdict": "FAILING", "detail": "failed 5m ago"}],
+            }
+            self.assertTrue(am.save_monitor_state(v1, st_path))
+            self.assertFalse(am.save_monitor_state(v2, st_path), "clock-only age drift must not rewrite status.json")
+            self.assertTrue(am.save_monitor_state(v3, st_path), "verdict change must rewrite status.json")
+
+            # Quota pause vs real stage failure in release_report
+            quota_log = "::error title=Release did not publish::Gemini's free-tier TTS allowance (10 requests/day) is spent until 2026-11-08T08:00:00+00:00 UTC."
+            self.assertTrue(rr.is_quota_cooldown_only({"open": [], "failure": None}, quota_log))
+            self.assertFalse(
+                rr.is_quota_cooldown_only(
+                    {"open": [], "failure": {"stage": "speech synthesis"}},
+                    quota_log,
+                )
+            )
+
+            # Sweep stale issues (#311 quota pause + #255/#250 public release tickets)
+            pub_dir = Path(tmp) / "published"
+            pub_dir.mkdir()
+            (pub_dir / "0036-psalm-5.md").write_text(
+                '---\nid: "0036"\ntitle: "Psalm 5 Morning Prayer | Begin Your Day in God\'s Presence"\n'
+                'status: published\nprivacy: public\nyoutube_video_id: _vp27ZYPYaY\n---\nAmen.\n',
+                encoding="utf-8",
+            )
+            fake_open = [
+                {"number": 311, "title": "Release failed (run 42231785039)", "body": quota_log},
+                {"number": 326, "title": "Release failed in speech synthesis (run 42355558122)", "body": "content_blocked"},
+                {"number": 255, "title": "Release ticket: Psalm 5 Morning Prayer | Begin Your Day in God's Presence", "body": " checklist"},
+            ]
+            closed_nums: list[str] = []
+
+            def fake_run(cmd, **kwargs):
+                if cmd[:3] == ["gh", "issue", "list"]:
+                    return SimpleNamespace(returncode=0, stdout=json.dumps(fake_open), stderr="")
+                if cmd[:3] == ["gh", "issue", "close"]:
+                    closed_nums.append(cmd[3])
+                    return SimpleNamespace(returncode=0, stdout="", stderr="")
+                return SimpleNamespace(returncode=1, stdout="", stderr="")
+
+            with mock.patch("shutil.which", return_value="/usr/bin/gh"), \
+                 mock.patch("subprocess.run", side_effect=fake_run):
+                swept = rr.sweep_stale_release_issues("johnAzani/YouTube-automation", published_dir=pub_dir)
+            self.assertEqual(swept, [311, 255])
+            self.assertNotIn("326", closed_nums)
+
+    def test_community_and_metrics_workflows_cover_all_three_channels(self):
+        """#3: community.yml & metrics.yml cover secret-place, prayer2, and prayer3."""
+        from pipeline.channels import CHANNELS
+        from pipeline.community_posts import community_schedule_for, publish_community_post
+
+        with tempfile.TemporaryDirectory() as tmp:
+            with mock.patch("pipeline.community_posts.COMMUNITY_DIR", Path(tmp)):
+                seen_ids = set()
+                for cid in CHANNELS:
+                    sched = community_schedule_for(cid)
+                    self.assertEqual(len(sched), 4)
+                    res = publish_community_post(sched[0], dry_run=True, channel_id=cid)
+                    self.assertEqual(res["status"], "ready_for_manual_post")
+                    self.assertTrue(Path(res["ready_pack"]).is_file())
+                    self.assertTrue(Path(res["card_path"]).is_file())
+                    seen_ids.add(sched[0].post_id)
+                self.assertEqual(len(seen_ids), 3)
+
+        comm_text = (ROOT / ".github" / "workflows" / "community.yml").read_text(encoding="utf-8")
+        metrics_text = (ROOT / ".github" / "workflows" / "metrics.yml").read_text(encoding="utf-8")
+        self.assertIn("--all-channels", comm_text)
+        for cid, profile in CHANNELS.items():
+            prefix = (profile.secret_prefix or "").strip().rstrip("_")
+            token_var = f"{prefix}_YOUTUBE_REFRESH_TOKEN" if prefix else "YOUTUBE_REFRESH_TOKEN"
+            self.assertIn(token_var, comm_text, f"community.yml missing {token_var}")
+            self.assertIn(token_var, metrics_text, f"metrics.yml missing {token_var}")
+
+
 
 
 if __name__ == "__main__":

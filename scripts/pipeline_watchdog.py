@@ -169,6 +169,53 @@ def last_publish(published_dir: Path | None = None) -> tuple[Path, datetime] | N
     return newest
 
 
+def last_publish_for_channel(
+    channel_id: str | None = None,
+    published_dir: Path | None = None,
+) -> tuple[Path, datetime] | None:
+    """Newest published receipt carrying a real YouTube video id for `channel_id`."""
+    from pipeline.channels import channel_for_doc, normalize_channel_id
+    from pipeline.config import PUBLISHED_DIR
+
+    wanted = normalize_channel_id(channel_id)
+    directory = published_dir or PUBLISHED_DIR
+    newest: tuple[Path, datetime] | None = None
+    for path in sorted(Path(directory).glob("*.md")):
+        try:
+            text = path.read_text(encoding="utf-8")
+            if not text.startswith("---"):
+                continue
+            meta = yaml.safe_load(text.split("---", 2)[1]) or {}
+        except Exception:  # noqa: BLE001
+            continue
+        if channel_for_doc(meta) != wanted:
+            continue
+        video_id = str(meta.get("youtube_video_id") or "").strip()
+        if not video_id:
+            continue
+        stamp = (
+            meta.get("published_at")
+            or meta.get("uploaded_at")
+            or meta.get("published_on")
+            or meta.get("date")
+            or meta.get("publish_at")
+        )
+        if not stamp:
+            continue
+        raw = str(stamp).strip()
+        try:
+            when = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+            if when.tzinfo is None:
+                when = when.replace(tzinfo=timezone.utc)
+        except ValueError:
+            continue
+        if len(raw) == 10:
+            when = when.replace(hour=23, minute=59, second=59)
+        if newest is None or when > newest[1]:
+            newest = (path, when)
+    return newest
+
+
 def check_queues(report: Report, max_publish_age: timedelta = MAX_PUBLISH_AGE,
                  published_dir: Path | None = None, now: datetime | None = None) -> Report:
     from scripts.automation_health import queue_health
