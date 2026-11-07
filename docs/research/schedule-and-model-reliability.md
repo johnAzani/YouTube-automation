@@ -5,6 +5,10 @@ comes from this repository — the Actions API, the supervisor's own ledger, the
 annotations, and the code that runs — not from a vendor blog. Where a source is
 external it is cited in §11 and §16.1.
 
+> **§42–§48 reproduce the central claims by execution** — the supervisor's own
+> functions, driven with a synthetic run list, build `gh workflow run produce.yml -f
+> channel=prayer3`, and its ledger counter goes 1-2-3-1 from one stale checkout.
+>
 > **Read §31–§40 if you read nothing else.** Round 4 found the two things that
 > decide whether fixing narration actually helps: the channels have published **nine
 > long-form videos in ten days** against a plan of six a day (§31), and the
@@ -1539,3 +1543,283 @@ the same sentence.
 **Repository history for the flip-flop:** `gh api 'repos/{repo}/commits?path=content/shorts-queue/0015-short-psalm91v5.yml'`,
 then the file contents at each commit (`contents/…?ref=<sha>`) — seven commits,
 `approved`/`quota_paused` alternating (§28).
+
+---
+
+# Round 5 — reproduced, not inferred
+
+Rounds 1–4 read code and run history. This round **executes it**: a throwaway script
+(`python -c` against the real modules in `.venv`) that drives the supervisor's own
+decision functions with a synthetic run list and a temporary
+`content/published/` directory. Every number below is printed by that script, not
+derived by hand.
+
+```python
+import scripts.scheduler_supervisor as S
+from scripts.automation_monitor import workflow_files, prev_occurrence
+from pipeline.gemini_brain import MAX_CALLS_PER_RUN, model_attempt_limit, text_model_candidates
+```
+
+## 42. Finding 29 — the four claims of Rounds 2–4, reproduced
+
+```
+== E1  who counts as a channel, and what the cap is
+   scheduled_channels(): ['secret-place', 'prayer2', 'prayer3']
+   _attempt_cap('produce.yml'): 7   _attempt_cap('gemini_brain.yml'): 3
+   MAX_CALLS_PER_RUN (brain pass): 40
+```
+
+```
+== E2  the coverage test with two channels served and prayer3 empty
+   receipts since the slot: ['prayer2', 'secret-place']
+   missing: ['prayer3'] -> dispatch target: prayer3
+   dispatch() -> True 'dispatched prayer3'
+   argv -> ['gh', 'workflow', 'run', 'produce.yml', '-f', 'channel=prayer3']
+```
+
+```
+== E3  the same test once prayer3 has one receipt
+   receipts: ['prayer2', 'prayer3', 'secret-place']  missing: []
+   dispatch() -> True 'every channel already published for this slot'
+```
+
+That is §32, executed: with two of three channels served the supervisor's own
+function builds the exact command that dispatches an empty channel, and the test only
+goes quiet when that channel has published something it cannot publish.
+
+```
+== E4  the ledger write, from two checkouts of the same file
+   pass A (read 0) -> 1
+   pass B (read 1) -> 2
+   pass C (read 2) -> 3
+   pass D, stale checkout from 08:00 (read 0) -> 1
+   ledger now says: 1 (cap is 3 )
+```
+
+That is §14, executed. The write is one line
+(`state[key] = {..., "attempts": attempts + 1, ...}`, `scheduler_supervisor.py:796`);
+a pass that checked out main before the previous writes finishes *after* them and
+restores a smaller number. The cap of 3 is never reached because the counter never
+survives three consecutive reads.
+
+```
+== E5  how much of the clock a slot is dispatchable for
+   comments.yml                  18.8 h/day  crons=3
+   gemini_brain.yml              22.5 h/day  crons=1
+   growth-autopilot.yml          22.5 h/day  crons=1
+   metrics.yml                   18.7 h/day  crons=1
+   produce.yml                   11.3 h/day  crons=3
+   community.yml / keepalive.yml  0.0 h/day  crons=1
+```
+
+A daily cron has a 24-hour recovery window and a 90-minute grace, so the brain slot is
+recoverable for **22.5 of every 24 hours** — the window is not an exception handler,
+it is the normal state. Produce, on three slots five to eleven hours apart, is
+recoverable for 11.3 hours a day.
+
+```
+== E6  the model roster, with the attempts each is allowed
+   live_model(): gemini-3.5-flash-lite
+   0. gemini-3.5-flash-lite    attempts=3  (500/day)
+   1. gemini-3.1-flash-lite    attempts=3  (500/day)
+   2. gemini-3.6-flash         attempts=2  (20/day)
+   3. gemini-3.8-flash         attempts=2  (20/day)
+   4. gemini-3.7-flash         attempts=2  (20/day)
+```
+
+One logical call that no model can satisfy — the case the 7 November prayer3 pass
+describes in its own source comment: *"every candidate model returned a script without
+front matter"* — costs `2×3 + 3×2 =` **12 requests**, across five models, for zero
+output.
+
+## 43. Finding 30 — the pass guard is set at double the daily allowance
+
+```python
+MAX_CALLS_PER_RUN = int(os.environ.get("GEMINI_MAX_CALLS_PER_RUN", "40") or "40")
+```
+
+and it is enforced per `GeminiBrain` instance, i.e. **per channel job**
+(`gemini_brain.py:651`, `:812`).
+
+| Ceiling | Value | Against a 20-request day |
+| :--- | ---: | :--- |
+| `MAX_MODEL_CALLS_PER_RUN` (supply expansions only) | 10 | 50 % |
+| `MAX_CALLS_PER_RUN` (**the whole pass**) | **40** | **200 %** |
+| the same, per dispatch (2–3 channel jobs) | 80–120 | 400–600 % |
+| observed dispatches on 6 Nov | 19 | |
+
+So the guard that is supposed to stop "a bad morning eating the day's allowance" is
+itself two days long, and the dispatcher may run it nineteen times. R1 made each call
+cheap (25 → 12 requests); the *pass* and the *dispatch count* were never the ceilings
+that a 20-request day requires.
+
+The correct shape is the one R3 describes — a request ledger keyed by
+(project, model, day) that the pass consults before each call — plus `MAX_CALLS_PER_RUN`
+set to something a day can pay for (≤ 10 for a 20-request model). There is no
+configuration in which 40 is safe.
+
+## 44. Finding 31 — the cold start is six successes away, and each failure costs twelve
+
+Prayer3's queue is empty and `--min-publishable 6` with `MAX_AUTHORS_PER_RUN = 2` means
+three clean passes. With the roster above:
+
+| Outcome | Requests |
+| :--- | ---: |
+| one authored script (first model, first attempt) | 1 |
+| one rejected script, walked to the end of the chain | **12** |
+| a six-script cold start, all first-attempt | 6 |
+| a six-script cold start where each is rejected once | up to 72 |
+
+The 20-request day pays for the first row and not the fourth. Today's prayer3
+dispatches (04:54, 04:58, 05:39, 06:00) were all in the fourth regime: four passes, no
+script, and — because prayer3 has its own project — the whole of prayer3's day spent
+proving that the chain cannot write a Midday Watch script. This is why R5 (cold start)
+is not a nicety: the only way prayer3 ever leaves zero is a pass that *succeeds*, and
+the failure mode spends the day first.
+
+## 45. Finding 32 — the daily health red is one assertion, and it is a content gap
+
+`automation-health.yml` fails at `python scripts/channel_parity.py` every day.
+Executed here, in one second, offline:
+
+```
+PASS  every registered channel has a capability block
+PASS  secret-place: brain equipment compiles / roadmap / prompt / pinned comment
+PASS  prayer2:      brain equipment compiles / roadmap / prompt / pinned comment
+PASS  prayer3:      brain equipment compiles / roadmap / prompt / pinned comment
+FAIL  prayer3: has a queued script to key a Short from — no queued script for this channel
+PASS  short keys are unique across channels
+PASS  produce.yml: schedules every channel
+PASS  gemini_brain.yml: schedules every channel
+==============================================================================
+1 PARITY FAILURE(S)
+```
+
+Nineteen passes, one failure, and the failure is the *same* fact as §32 and §44:
+prayer3 has no scripts. Three of this repository's red signals — the parity step, the
+produce dispatch loop and the brain's `Long-form supply empty` — are one content gap
+with three faces. That is the clearest argument yet for fixing the cold start before
+touching anything else: it clears three alarms at once.
+
+## 46. Finding 33 — the third leg pushes the run past the supervisor's canceller
+
+`produce.yml` runs its channels as a matrix with `max-parallel: 1`, so a run's wall
+clock is the **sum** of its legs. Measured:
+
+| Observation | Value |
+| :--- | ---: |
+| two-leg runs that really published (4–5 Nov) | 26–44 min |
+| the slow encoder outlier (5 Nov, one leg) | 54.5 min for the encode step alone |
+| failed-fast legs (6 Nov, TTS failure) | 8.4 min and 12.3 min |
+| supervisor cancel threshold | `JOB_CAP` 200 min + 10 min grace |
+| `produce.yml`'s own job cap | 240 min |
+
+Two legs at the published pace is 26–44 minutes. Three legs at the outlier pace is
+3 × 54.5 = **164 minutes** — inside 210, but with 46 minutes of margin for a slot that
+also repairs its queue, records live videos and uploads three Shorts. And a run
+cancelled by the supervisor loses everything it had not yet committed, including the
+TTS requests already spent.
+
+The canceller was sized when a run had two legs. Adding a channel raises the ceiling of
+a legitimate run by 50 % and does not raise the guard at all.
+
+## 47. Round 5 ranking delta
+
+No change to the order, but R16 and R5 are now *proven* rather than argued, and R3's
+target number is explicit:
+
+| # | Change | Evidence now |
+| :-- | :--- | :--- |
+| **R16** | coverage test: only channels the plan can serve, and a channel with no scripts is a supply fault | E2/E3 — the supervisor builds `channel=prayer3` with two of three served |
+| **R5** | cold start: allow `max_authors = shortfall`, once, for a channel at zero | §44 — six successes, and a single rejection costs 12 requests |
+| **R12** | preflight must not spend completion quota | §22 — 180 requests against 40 on 6 Nov |
+| **R3** | per-day request ledger | §43 — the pass guard is 40 against a 20-request day |
+| **R9** | break the watcher loop | E5 — 22.5 h/day of "the slot is recoverable" |
+| **R10** | API-derived dispatch dedupe | E4 — 1,2,3,1 from one stale checkout |
+| remaining | R8″, R13, R17, R18, R2a, R11, R14, R15 | unchanged |
+
+## 48. Round 5 predictions, all falsifiable from the run list
+
+1. Flip prayer3's queue to six scripts by hand and the parity step goes green, the
+   produce dispatch pattern moves off `channel=prayer3`, and `automation-health`
+   stops filing — without a single code change. (This is the cheapest possible test of
+   §45, and it is reversible: six drafts, not uploads.)
+2. Lower `GEMINI_MAX_CALLS_PER_RUN` to 8 and a 19-dispatch day is still *authorised*
+   to spend 19 × 2 jobs × 8 = 304 requests across two projects that have 40 between
+   them. Tightening the number cannot fix a ceiling that is per job and a problem that
+   is per day; a green run after such a change would be luck, not a fix.
+3. A third leg on a slow day produces the first `cancelled` produce run with a video
+   already uploaded — because the cancellation lands inside the render, not before it.
+
+## Appendix A — the reproduction script (Round 5)
+
+Nothing in §42 is hand-derived; this is the whole script, run from the repository root
+with `.venv/bin/python` and `PYTHONPATH=.`. It executes the supervisor's own
+functions and touches nothing: `subprocess.run` is patched, so the `gh workflow run`
+command is *captured*, not sent.
+
+```python
+"""Round-5 experiments: executed, not read."""
+import datetime as dt, tempfile
+from pathlib import Path
+from unittest import mock
+
+import scripts.scheduler_supervisor as S
+from scripts.automation_monitor import workflow_files, prev_occurrence
+from pipeline.gemini_brain import (TWENTY_A_DAY_MODELS, MAX_CALLS_PER_RUN,
+                                   model_attempt_limit, text_model_candidates,
+                                   live_model)
+
+UTC = dt.timezone.utc
+SLOT = dt.datetime(2026, 11, 7, 6, 14, tzinfo=UTC)     # the 06:14 produce slot
+NOW  = dt.datetime(2026, 11, 7, 9, 0,  tzinfo=UTC)     # when the pass looks
+
+# E1 — who counts as a channel, and what the caps are
+print(S._channels(), S._attempt_cap("produce.yml"), S._attempt_cap("gemini_brain.yml"),
+      MAX_CALLS_PER_RUN)
+
+def receipt(channel, when="2026-11-07T08:40:00Z"):
+    return (f"---\nid: '0040'\nformat: longform\nchannel: {channel}\n"
+            f"youtube_video_id: abc123\npublished_at: \"{when}\"\n---\nbody\n")
+
+# E2/E3 — the coverage test, with and without a prayer3 receipt
+for served in (("secret-place", "prayer2"),
+               ("secret-place", "prayer2", "prayer3")):
+    with tempfile.TemporaryDirectory() as tmp:
+        pub = Path(tmp)
+        for i, ch in enumerate(served):
+            (pub / f"00{40+i}-{ch}.md").write_text(receipt(ch), encoding="utf-8")
+        missing = [c for c in S._channels() if c not in S.published_channels_since(SLOT, pub)]
+        captured = {}
+        class Fake:
+            returncode = 0; stdout = ""; stderr = ""
+        with mock.patch.object(S, "subprocess", mock.Mock(
+                 run=lambda argv, **kw: (captured.setdefault("argv", argv), Fake())[1])), \
+             mock.patch("pipeline.config.PUBLISHED_DIR", pub):
+            print(missing, S.dispatch("produce.yml", SLOT.isoformat()), captured.get("argv"))
+
+# E4 — the ledger write, from a stale checkout (scheduler_supervisor.py:796)
+key = "gemini_brain.yml@" + dt.datetime(2026, 11, 7, 3, 14, tzinfo=UTC).isoformat()
+state, stale = {}, {}
+def write(seen):
+    state[key] = {"at": NOW.isoformat(), "result": "dispatched",
+                  "attempts": int(seen) + 1, "code_id": "x" * 16}
+    return state[key]["attempts"]
+for read in (state, state, state, stale):        # A, B, C, then the stale pass D
+    print(write(read.get(key, {}).get("attempts", 0)))
+
+# E5 — how many minutes a day each slot is dispatchable for
+day = dt.datetime(2026, 11, 7, tzinfo=UTC)
+for filename, _name, crons in workflow_files():
+    if filename in S.NEVER_DISPATCH:
+        continue
+    n = sum(1 for m in range(1440)
+            if (lambda now, slot: slot and now >= slot + S.DISPATCH_AFTER
+                and now <= slot + S._slot_window(filename, crons, slot))(
+                    day + dt.timedelta(minutes=m), prev_occurrence(crons, day + dt.timedelta(minutes=m))))
+    print(filename, round(n / 60, 1), "h/day")
+
+# E6 — the roster and the attempts each model is allowed
+print(live_model(), [(m, model_attempt_limit(m), m in TWENTY_A_DAY_MODELS)
+                     for m in text_model_candidates()])
+```
