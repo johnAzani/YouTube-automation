@@ -2603,3 +2603,188 @@ content.
   once; a spent allowance propagates and never reaches edge-tts; the engine is reported,
   not assumed; a placeholder is silence, not a voice. Full suite: **1050 passed**
   (one pre-existing content-inventory assertion deselected — see R22).
+
+---
+
+# Round 9 — who gets the dispatch, and what the prompt never showed
+
+## 74. Finding 53 — the dispatcher is not a rotation; it is a queue in a fixed order
+
+`dispatch()` picks `missing[0]` where `missing` preserves `_channels()` =
+`scheduled_channels()` = `['secret-place', 'prayer2', 'prayer3']`. Executed against the
+real function, with `published_channels_since` stubbed to describe each case:
+
+```
+channels: ['secret-place', 'prayer2', 'prayer3']
+
+A) nothing served since the 06:14 slot
+   -> gh workflow run produce.yml -f channel=secret-place
+      "dispatched secret-place; prayer2, prayer3 next pass (content-state takes one pending run)"
+
+B) secret-place served, prayer2/prayer3 not
+   -> gh workflow run produce.yml -f channel=prayer2
+      "dispatched prayer2; prayer3 next pass (content-state takes one pending run)"
+
+C) secret-place + prayer2 served, prayer3 not
+   -> gh workflow run produce.yml -f channel=prayer3
+      "dispatched prayer3"
+
+D) all served
+   -> (nothing dispatched) "every channel already published for this slot"
+```
+
+So the "next pass" promise is conditional on the *current* dispatch succeeding: prayer2
+is reached only when secret-place already has a receipt, and **prayer3 is reached only
+when both of the others do**. Under a channel that fails every time, the third channel is
+not starved by a race, a budget or a bug — it is last in a list and the list never
+advances.
+
+## 75. Finding 54 — correction: production has never dispatched prayer3
+
+Round 4 (§32, §42) said the coverage test "builds the exact command that dispatches an
+empty channel" and that produce was being "dispatched forever for prayer3". The first
+half is true — E9 C shows the command exists — but the second half is not what happens.
+In the production ledger, across all 25 keys:
+
+```
+$ git show origin/main:content/monitor/dispatched.json | grep -c "dispatched prayer3"
+0
+$ … | grep -o '"result": "dispatched [^"]*"' | sort | uniq -c
+   1 "dispatched secret-place; prayer2, prayer3 next pass (content-state takes one pending run)"
+   1 "dispatched secret-place; prayer2 next pass (content-state takes one pending run)"
+```
+
+And the runs themselves say who was targeted:
+
+| Run | Job |
+| :--- | :--- |
+| 08:00:36 6 Nov | `produce (prayer2)` |
+| 08:06:11 6 Nov | `produce (prayer2)` |
+| 08:13:17 6 Nov | `produce (secret-place)` |
+| 08:26:45 6 Nov | `produce (secret-place)` |
+| 08:31:16 6 Nov | `produce (secret-place)` |
+| 08:27 / 08:44 / 09:12 7 Nov | `produce (secret-place)` ×3 |
+
+The pump's **target** is secret-place; its **cause** is still prayer3 — the coverage test
+cannot be satisfied while a channel has no scripts, so no pass ever returns
+`every channel already published`, so a dispatch is issued every time. But the dispatch
+lands on the first unserved channel, which is secret-place, which then re-renders 0015
+(§62: 882 words, `[3870, 1362]`) and spends secret-place's ten speech requests.
+
+That is the whole engine of this outage, stated exactly: **prayer3's missing scripts cause
+secret-place's quota to be spent.** R16 was right about the mechanism and wrong about the
+victim, and the difference matters for the fix — stopping the loop does not require making
+prayer3 publish, only making the test unsatisfiable *and* the dispatch harmless.
+
+## 76. Finding 55 — the prompt states the rule in prose and never shows the shape
+
+`compile_full_brain_prompt('prayer3')` is 9,352 characters. It contains the requirement
+exactly once, as a sentence:
+
+> *"Frontmatter must declare `channel: prayer3`, `privacy: public`, `voice: Charon`,
+> `format: longform`, and a title ending with `| The Midday Watch`."*
+
+and it contains no front-matter example at all: `slug:` appears **zero** times,
+`target_minutes:` **zero** times, and there is no YAML block to copy. The model has to
+infer the exact key names from prose, and the census of what it actually wrote is
+unusually clean:
+
+| Field | Present in the 27 queued scripts |
+| :--- | :--- |
+| `id`, `slug`, `title`, `status`, `format`, `niche`, `voice`, `target_minutes` | **27 / 27** |
+| `privacy` | 22 / 27 |
+| **`channel`** | **2 / 27** |
+
+The model gets nine fields right every single time and omits exactly the one field that
+is described only in prose and validated nowhere. That is not sloppiness; it is a prompt
+that asks for a key it never shows.
+
+The same defect has already cost one production incident, recorded in the code at
+`gemini_brain.py:1128`:
+
+> *"The old fallback here wrote `0040-devotional-0040.md` into the queue on 6 November
+> when the model answered with `job_id:` and no `slug:` line, which is how an
+> unvalidatable job reached main."*
+
+Two fields, two incidents, one cause. The repair is not a smarter model: it is a literal
+front-matter skeleton in the prompt **and** a validator that refuses a script whose
+`channel` is absent or differs from the brain's own id (R21).
+
+## 77. Finding 56 — the code already knows a declared channel from a defaulted one
+
+`ScriptDoc.channel` defaults to `secret-place` when the key is missing (`script_doc.py:94`),
+and there is a second property beside it:
+
+```python
+def explicit_channel(self) -> str:
+    """…Docs authored before channel support carry no `channel:` key; callers that
+    respect the ambient CONFIG channel (e.g. description building)…"""
+```
+
+So "declared" and "defaulted" are distinguishable in the model — and
+`publishable_longform(channel_id=…)` uses the *defaulted* one (`doc.channel != wanted`).
+That single choice is why 25 unattributed scripts count as secret-place's supply: 19
+publishable for secret-place, 2 for prayer2, 0 for prayer3 — while the honest answer is
+"19 for whoever wrote them, and nobody declared".
+
+Switching the count to `explicit_channel` would empty secret-place's queue instead of
+fixing prayer3 — which is exactly why R21 has to come before any tightening here: stamp at
+authoring, then the count can afford to be strict.
+
+## 78. Finding 57 — the five-minute floor has nine seconds of margin, and R23 changes the voice
+
+```python
+CHARON_WORDS_PER_MINUTE = 165
+MIN_NARRATION_SECONDS = 300
+MIN_LONGFORM_WORDS = required_words(MIN_NARRATION_SECONDS) + 25   # 850
+850 words / 165 wpm = 309 s   → 9.1 s of margin over the gate
+```
+
+The floor is calibrated to *Charon's measured pace* and to nothing else. That is fine
+while Charon is the only narrator — and R23 just added a second one. `en-US-DavisNeural`
+at `TTS_RATE=+0%` speaks at a similar but not identical rate; if it is ~3 % faster, an
+850-word script lands at 300 s or under, and the run fails *after* the narration, with:
+
+> *"…{words} words is too short at Charon's pace — lengthen the script, the floor is 850
+> words."*
+
+Charon did not speak. That sentence would be the third mislabel in this document, and this
+one I introduced. Two cheap repairs, both worth doing with R28: name the engine in the
+message (`at edge-tts/en-US-DavisNeural's pace`), and pin the fallback's rate slightly slow
+(`TTS_RATE=-5%`), which buys ~15 s of margin on the same script.
+
+The measured scripts are safe — 882 words is 321 s at Charon's pace, and every queued
+script is over 870 words — so this is a margin to close, not an outage to chase.
+
+## 79. Round 9 ranking
+
+| # | Item | Why it moved |
+| :-- | :--- | :--- |
+| **R27** | dispatch the *least recently attempted* unserved channel, not `missing[0]` | §74 — prayer3 is last and the list never advances; a failing first channel monopolises every dispatch |
+| **R21** | literal front-matter skeleton in the prompt + refuse a script whose `channel` is missing or foreign | §76 — nine fields right, one omitted, twice |
+| **R26** | a silent refusal must set state; don't release a pause the selector cannot honour | §67, §68 |
+| **R16** | coverage over servable channels (now with the target corrected) | §75 |
+| **R28** | the narration floor must name the engine that spoke; slow the fallback's rate | §78 — introduced by R23 |
+| **R19**, **R24**, **R5**, **R20**, **R22**, **R12**, **R3** | request counter, chunk experiment, cold start, health `always()`, inventory gates, preflight, brain ledger | unchanged |
+
+**Predictions.**
+
+1. With R21 alone (stamp + verify), a prayer3 brain run that succeeds increments
+   `publishable_longform('prayer3')` from 0 to 1 on the first script, and the parity gate
+   goes green on the sixth. Nothing else needs to change.
+2. With R27 alone, the next unserved channel after a secret-place dispatch is prayer2 —
+   whose two scripts already exist — so a single pass would publish on prayer2 instead of
+   re-rendering 0015. That is a fix that requires no content at all, only an ordering that
+   remembers.
+3. Leaving both undone, the dispatcher will pick secret-place on every pass for as long as
+   the coverage test exists, and secret-place's ten speech requests will be spent by 09:00
+   every day.
+
+## 80. What is still unmeasured
+
+Listed so the next round is not a repeat: the alignment model's download path in CI (does
+`output/alignment-model` survive a cache miss?); the thumbnail gate's behaviour when a
+render is produced by a fallback engine (does it still require a *new* thumbnail per
+upload?); whether `metrics.yml`'s 18.7 dispatchable hours mask a second quota pool; and
+the comment-reply workflow's `1,000 requests/hour` ceiling against its ten dispatches a
+day.
