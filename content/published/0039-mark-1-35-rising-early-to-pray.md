@@ -2,7 +2,7 @@
 id: '0039'
 title: "Mark 1:35 Morning Prayer | The Morning Altar"
 slug: mark-1-35-rising-early-to-pray
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -85,6 +85,12 @@ originality:
 seo_hook: "Rise early like Jesus in Mark 1:35 and begin this day alone with the Father before the demands begin."
 category_id: '22'
 approved_by: brain
+published_on: "2026-11-07"
+published_at: "2026-11-07T20:29:37Z"
+youtube_video_id: "Nq7a1yC4Rzw"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Rising up a Great While Before Day (Mark 1:35)
