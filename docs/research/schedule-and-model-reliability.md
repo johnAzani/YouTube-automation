@@ -1,8 +1,17 @@
 # Why the automation is red: cron delivery, the model roster, and quota arithmetic
 
-**Measured 7 November 2026, 08:00–09:40 WAT.** Every number below comes from this
-repository — the Actions API, the supervisor's own ledger, and the code that runs —
-not from a vendor blog. Where a source is external it is cited in §11.
+**Measured 7 November 2026, 08:00–09:40 WAT. Rounds 1 and 2.** Every number below
+comes from this repository — the Actions API, the supervisor's own ledger, the run
+annotations, and the code that runs — not from a vendor blog. Where a source is
+external it is cited in §11 and §16.1.
+
+> **Read §13 first if you only read one section.** Round 1 (below, §0–§12) counted
+> *scheduled* deliveries and concluded the scheduler was the problem. Round 2
+> (§13–§21) pulled every run rather than every scheduled run and found that **~350 of
+> this repo's ~450 daily runs are watchers triggering each other**, that the dispatch
+> ledger silently resets its own attempt counter, and that the narration failure the
+> channels are red for today is a *fourth*, undocumented failure mode. Round 1's
+> numbers are still correct; they are simply not the largest term.
 
 Scope: the three failures that turned the board red this week (produce, gemini_brain,
 automation-health), the watchdog that reports them, and the schedule those three
@@ -337,6 +346,11 @@ Three red workflows, one cause, and the cause was reported as a content problem.
 
 Nothing here spends money; all of it is `$0`-lock compatible.
 
+> **Superseded order.** §20 re-ranks these after the Round 2 measurements. R1 and R2
+> shipped; the next three are R8 (TTS forensics), R9 (break the watcher loop) and R10
+> (an honest dispatch ledger), because §13–§15 show the per-day multiplier matters more
+> than the per-pass budget. The entries below are kept for their reasoning.
+
 ### R1 — Make the retry budget honest — **implemented, `57367ca`+**
 
 Cap **total** transient wait per pass, not per model: e.g. 6 requests / 3 minutes of
@@ -467,6 +481,41 @@ does not double the allowance". RPD resets at midnight Pacific. A community meas
 on 6 November 2026 (AI4RA/promptulus #33) found 3.8-flash "many 503s, some requests
 hung past 2 minutes" against 1 503 in 107 requests on 3.5-flash-lite.
 
+**Round 2 additions:**
+
+**Empty candidate semantics (the `mime_types=none` failure):**
+`https://ai.google.dev/api/generate-content` — an empty `candidates` list arrives with
+HTTP 200 when an input or output safety stage blocks the request or generation fails;
+`candidates[0].finish_reason` and `response.prompt_feedback.block_reason` are the fields
+that distinguish them, and a filtered request is still billed for prompt tokens.
+Corroborated by two 2026 fixes with the same diagnosis: `harry0703/MoneyPrinterTurbo`
+#1721 (28 Oct 2026) — "when Gemini TTS returns no audio, the current error omits the
+provider's finish reason or prompt-block reason… log `finish_reason` and
+`prompt_block_reason` before returning failure" — and `tetsuo-ai/agenc-core` #2106,
+"Gemini responses with a prompt-level block and no candidates are parsed as successful
+empty completions".
+
+**Gemini 3.8 TTS request shape and limits:**
+`https://ai.google.dev/gemini-api/docs/speech-generation` — the documented call is
+`client.interactions.create(...)` with `input=[{"type": "user_input", "content":
+[{"type": "text", "text": …, "annotations": [{"type": "speech_metadata", "style": …}]}]}]`,
+`response_format={"type": "audio"}`, `generation_config={"speech_config": [{"voice": …}]}`;
+the part `text` is a **verbatim transcript** and `style` is a short attribute list
+("whispering", "out of breath"), not prose; unary requests return complete
+`audio/wav` (24 kHz mono 16-bit) rather than headerless PCM. Model card,
+`https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash-tts` — **input 8,192
+tokens, output 16,384 tokens** (serving limit), last updated September 2026, plus
+`gemini-3.8-flash-lite-tts` as the throughput alternative. A third-party integration
+(`mozilla-ai/any-llm` #1574, 2026) notes it could not verify live that
+`Part.speech_metadata.style` is honoured by `generateContent` — so "styled but silent"
+is a shape this codebase should be able to distinguish from "blocked".
+
+**GitHub concurrency semantics:**
+`https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/control-workflow-concurrency`
+— by default a group admits one running and **one pending** run; a newly queued run
+replaces the pending one (`queue: single`), which is why the loop of §13 also produced
+300 cancelled Pages builds.
+
 ---
 
 ## 12. Open questions only the owner can answer
@@ -481,3 +530,369 @@ hung past 2 minutes" against 1 503 in 107 requests on 3.5-flash-lite.
 5. **TTS margin** (R2a): accept *deferral* rather than *pause* when the day's tenth
    request would be spent on a retry? That is a product decision (a late video) not a
    technical one.
+
+---
+
+# Round 2 — the telemetry, read to the thinnest detail
+
+Round 1 counted cron deliveries and annotations. That was the wrong grain: it measured
+the *scheduled* firings and concluded the scheduler was unreliable. Pulling every run
+between 2 and 7 November instead shows that **most of this repo's runs are not
+scheduled at all** — they are triggered by each other. The scheduled drop is real, but
+it is the smaller half of the story, and the larger half is self-inflicted.
+
+Everything below comes from the Actions API, the commit history and the run
+annotations, not from inference:
+
+```
+gh api repos/johnAzani/YouTube-automation/actions/workflows/<id>/runs
+gh api repos/johnAzani/YouTube-automation/check-runs/<job>/annotations
+gh api repos/johnAzani/YouTube-automation/commits?since=...
+```
+
+## 13. Finding 8 — the watchers are running 350–450 times a day, and most of
+## those runs are caused by the watchers
+
+Whole-repo run counts, all workflows, including cancelled ones:
+
+| Day | Workflow runs |
+| :--- | ---: |
+| 5 Nov | 514 |
+| 6 Nov | **912** |
+| 7 Nov (to 08:45Z) | 179 |
+
+Per workflow since 2 November (the day the current monitors were merged):
+
+| Workflow | Runs | Per day | Scheduled runs in that window |
+| :--- | ---: | ---: | ---: |
+| `scheduler-supervisor.yml` | 970 | ~187 | 8/day requested |
+| `monitor.yml` | 859 | ~165 | 8/day requested |
+| `automation-health.yml` | 110 | ~21 | 1/day requested |
+| `produce.yml` | 106 (since 21 Oct) | 3–12 | 3/day requested |
+| `gemini_brain.yml` | 35 (since 30 Oct) | 1–19 | 1/day requested |
+
+**870 of the supervisor's 970 runs and 768 of the monitor's 859** were `workflow_run`
+triggers, not cron. The supervisor received **17 of the ~42 cron events** it asked for
+since 2 November (40 %), which is Round 1's finding reproduced — it is just no longer
+the reason it runs so often. In the 24 hours from 6 Nov 08:00Z:
+
+| Trigger | Supervisor | Monitor |
+| :--- | ---: | ---: |
+| `workflow_run` (another workflow finished) | 254 | 155 |
+| `push` | 27 | 27 |
+| `schedule` | 3 | 3 |
+
+Median gap between supervisor runs in that window: **1.2 minutes**. p90: 8.1 minutes.
+It ran 50 times in the 08:00 hour and 46 times in the 09:00 hour.
+
+### 13.1 The chain, proved from `head_sha`
+
+Every supervisor run's `head_sha` is the default-branch commit it checked out, so the
+commit message names what caused it. Sample from 04:00–05:00Z on 7 November:
+
+```
+04:16:57 supervisor  be31781  chore(monitor): record dispatched slots and scheduler health
+04:18:13 supervisor  84ff97f  chore(monitor): automation status snapshot & live thumbnail sync
+04:18:47 supervisor  84ff97f  chore(monitor): automation status snapshot & live thumbnail sync
+04:38:20 supervisor  1fdaa2d  chore(monitor): automation status snapshot & live thumbnail sync
+04:38:33 supervisor  1fdaa2d  chore(monitor): automation status snapshot & live thumbnail sync
+04:38:54 supervisor  1fdaa2d  chore(monitor): automation status snapshot & live thumbnail sync
+04:41:12 supervisor  c822abd  chore(monitor): automation status snapshot & live thumbnail sync
+04:55:23 supervisor  2db15e1  chore(monitor): automation status snapshot & live thumbnail sync
+```
+
+Not one of them is a code commit. They are **telemetry commits written by the other
+watcher**, and they close a loop:
+
+1. a supervisor pass or a monitor pass writes `content/monitor/*.json` and commits it;
+2. the push triggers `pages build and deployment` — Pages is not a workflow and is
+   *not* suppressed by the `GITHUB_TOKEN` rule that stops bot pushes from starting
+   `on: push` workflows;
+3. the Pages build completing fires `scheduler-supervisor.yml`, because its
+   `workflow_run.workflows` list contains `pages build and deployment`;
+4. the supervisor writes its own `schedule-health.json`, which contains a fresh
+   `generated_at`, so `git diff --staged --quiet` is **never** true and it always
+   commits;
+5. go to 2.
+
+The loop needs no cron, no user and no failure. It sustains itself at roughly one
+supervisor run per minute for hour-long bursts. In 24 hours it produced:
+
+| Artefact | Count |
+| :--- | ---: |
+| Commits to `main` | 385 |
+| …of which `chore(monitor): record dispatched slots…` | 174 |
+| …of which `chore(monitor): automation status snapshot…` | 130 |
+| Pages builds | 353 (300 cancelled, 47 success, 6 failure) |
+| CI runs | 95 (67 push, 28 pull_request), 72 failed |
+
+`content/monitor/status.json` and `content/monitor/schedule-health.json` both stamp
+`generated_at: datetime.now(...)` (`scripts/automation_monitor.py:115`,
+`scripts/scheduler_supervisor.py:651`). A wall-clock field inside a committed file is a
+commit generator: the "did anything change?" test can never pass.
+
+### 13.2 Why 300 Pages builds were cancelled
+
+`concurrency` defaults to `queue: single` — at most one running and one pending
+member per group; a newly queued run *replaces* the pending one. Every supervisor run
+that arrives while another is running cancels the queued one (57 of 284 in 24 hours;
+88 of 174 on 2 November). So the loop does not just run a lot, it also churns the
+queue: the runs that get cancelled are the ones that would have done the work, and
+the ones that survive are the ones that started earliest, with the stalest checkout.
+
+## 14. Finding 9 — the dispatch ledger is a race, so the cap it enforces does not exist
+
+`scheduler_supervisor.py` is careful: one dispatch per slot, at most `_attempt_cap()`
+retries (default 3, 8 for upstream outages), 90 minutes before a slot counts as
+missed, a `code_changed_since` escape hatch, and an upstream-outage cooldown. All of
+it is stored in one committed JSON file, `content/monitor/dispatched.json`, written
+read-modify-write by every pass.
+
+With ~187 passes a day, that file has ~187 concurrent writers that each check out a
+*different* commit. The counter therefore does not climb, it **sawtooths**. Actual
+`attempts` values for the `gemini_brain.yml@2026-11-06T03:14` slot, in commit order:
+
+```
+08:45  1        09:34  1        12:30  1        13:53  4
+08:50  2        10:33  2        12:40  2        14:02  1
+09:07  3        10:47  3        12:48  3
+09:16  1  ←reset 12:30? →  1
+09:24  2
+09:27  3
+```
+
+`1 → 2 → 3 → 1` three times in six hours. A pass that checked out main *before* the
+increment wrote its stale+1 over the newer value. Consequences:
+
+* `_attempt_cap()` and `UPSTREAM_MAX_ATTEMPTS = 8` never bind — the counter is
+  perpetually small;
+* `dispatched.json` on `main` records **one** brain dispatch and **one** produce
+  dispatch per day, while the run history shows **19 brain runs and 11 produce runs**
+  on 6 November;
+* every restart of the counter is a fresh authorisation to dispatch again.
+
+This is the single most expensive bug in the repository, because the thing it fails
+to bound is the thing that spends quota.
+
+## 15. Finding 10 — 19 dispatches is not a retry policy, it is a quota fire
+
+Per brain run, the ceilings in `pipeline/supply.py` are:
+
+| Knob | Value | Meaning |
+| :--- | ---: | :--- |
+| `MAX_EXPANSIONS_WHEN_EMPTY` | 5 | lengthen up to 5 under-floor scripts |
+| `MAX_MODEL_CALLS_PER_RUN` | 10 | total expansion calls per run |
+| `MAX_AUTHORS_PER_RUN` | 2 | new editions authored per run |
+| `--min-publishable` | 6 | runway the pass must leave behind |
+
+An empty queue therefore authorises roughly 10 expansion calls plus 2 authoring
+chains in **one** run, and the run is executed **once per channel job**. Worst case
+per dispatch, two channels: ~24–40 model requests. The daily allowance for the
+20-RPD models (3.6/3.8/3.7-flash, per project) is 20.
+
+`gemini_brain.yml` dispatches on 6 November, all `workflow_dispatch`, all from the
+supervisor:
+
+```
+08:00:33  08:03:33  08:09:32  08:45:25  08:50:45  09:07:14  09:16:33  09:24:10
+09:27:50  09:34:11  10:33:32  10:43:46  10:47:00  10:51:09  12:30:12  12:40:48
+12:48:57  13:53:37  14:02:17
+```
+
+And the annotations from those runs, verbatim, showing what each attempt returned:
+
+| Time (UTC) | What the run got back |
+| :--- | :--- |
+| 08:00, 08:03 | `404 NOT_FOUND: models/gemini-2.5-flash is no longer available to new users` |
+| 08:45–09:27 | `503 UNAVAILABLE: This model is currently experiencing high demand` |
+| 09:34 → 13:53 | `gemini-3.8-flash did not answer after 5 attempts (503 UNAVAILABLE — upstream capacity, not this code)` |
+| 14:02 | **success** (queue replenished once the afternoon capacity window opened) |
+
+The 14:02 run proves the outage was capacity, not code — and it took 19 attempts,
+six hours of queue churn and most of two projects' daily allowance to arrive at the
+one pass that would have worked. This is the mechanism by which a dip in capacity
+becomes a whole-day outage: **the retries spend the resource whose exhaustion causes
+the retries.** R1 shrank the per-pass spend from 25 requests to 11; it did not touch
+the per-day multiplier, which is the dispatch count.
+
+## 16. Finding 11 — "no audio content" is a different failure, and it is the current blocker
+
+The produce leg has been failing at narration since 4 November 20:56Z. The message
+has changed three times, and the three messages are three *different* causes that the
+code currently reports in the same vocabulary:
+
+| When | Message | What it actually is |
+| :--- | :--- | :--- |
+| 5 Nov 08:38 | `400 INVALID_ARGUMENT: Developer instruction is not enabled for this model` | a request *shape* the model refuses (system instruction) |
+| 6 Nov 08:05, 08:10 | `400 INVALID_ARGUMENT: Invalid JSON payload … Unknown name "speechMetadata"` | SDK/API contract drift (`google-genai 3.0.0`, shipped 02:29 UTC) |
+| 4 Nov 20:56 · 5 Nov 09:41, 09:46, 14:39 · 6 Nov 08:24, 08:28 · **7 Nov 08:29, 08:46** | `RuntimeError: Gemini API returned no audio content for model gemini-3.8-flash-tts (mime_types=none)` | **HTTP 200, zero audio parts** — a refusal or a generation failure, reported as neither |
+| 5 Nov 00:26 · 6 Nov 08:36 | `429 RESOURCE_EXHAUSTED` → `GeminiQuotaExceededError`, job paused | the allowance is gone |
+
+The last row is the only one the code handles well. The third row is what is failing
+*today*, and it fails in **4.6–7.5 seconds** — not a timeout, not a rate limit, not a
+quota pause. `pipeline/gemini_tts.py` walks its candidate parts, finds no
+`inline_data`, prints `mime_types=none`, and raises. It never inspects
+`candidates[0].finish_reason`, and never inspects `response.prompt_feedback`, so the
+one field that would say *why* (blocked input? blocked output? MAX_TOKENS? an internal
+generation failure?) is discarded.
+
+### 16.1 What Google documents about an empty response
+
+Three facts from the TTS and `generateContent` documentation decide the fix:
+
+1. **An empty `candidates` list is not an error.** The API returns HTTP 200 with a
+   valid response object and no candidates when a safety stage blocks the input or the
+   output, or when generation itself fails. `finish_reason` on the candidate and
+   `prompt_feedback.block_reason` on the response are the two fields that distinguish
+   them.
+2. **Filtered requests are still charged.** A blocked/empty response bills prompt
+   tokens. So every one of those 5-second failures consumed one of the day's ten TTS
+   requests.
+3. **`gemini-3.8-flash-tts` has an 8,192-token input limit and a 16,384-token output
+   limit** (model card, "Gemini API serving limit"). The output limit is the one that
+   matters here: the audio *is* the output, so a request can only narrate as much as
+   16,384 audio tokens will hold.
+
+The documented call shape is `client.interactions.create(...)` with
+`input=[{"type": "user_input", "content": [{"type": "text", "text": …, "annotations":
+[{"type": "speech_metadata", "style": "calm and reverent"}]}]}]`,
+`response_format={"type": "audio"}`, and `generation_config={"speech_config":
+[{"voice": "Charon"}]}`. That is what the code's primary path does. The code's
+*fallback* path (`models.generate_content` with `response_modalities=["AUDIO"]`) is
+the older schema — and the docs are explicit that Gemini 3.8 TTS treats the part
+`text` as a verbatim transcript and expects style as a **short attribute list**
+("whispering", "out of breath", "mature and calm"), not a paragraph of direction.
+`style_text()` returns whatever `prompt_style` the caller passes, so the length of
+that string is a live variable nobody has measured.
+
+### 16.2 The arithmetic of a ten-request day, with retries
+
+At `DEFAULT_CHUNK_CHARS = 4000`:
+
+| Item | Words | Characters | Requests | Notes |
+| :--- | ---: | ---: | ---: | :--- |
+| Long-form `0034` Psalm 91 | 1,039 | 5,886 | 2 | |
+| Long-form `0035` Psalm 23 | 1,089 | 6,146 | 2 | |
+| Long-form `0015` (paused) | 929 | 5,535 | 2 | |
+| A Short | ~110 | ~700 | 1 | |
+| **Per day, 3 slots × 2 channels** | | | **6 + 3 Shorts = 9** | one spare request |
+
+One spare request is not a retry budget. It is a coin flip. And because an empty
+response is *charged*, a single failing chunk can burn the spare and the next slot's
+first chunk with it — which is precisely what the `quota_paused` Short `0015` records.
+
+The 16,384-token output cap implies roughly **8.5 minutes of speech per request**
+(at Google's ~32 audio tokens/second — an estimate, not a documented figure). Every
+long-form in this queue is **6.2–7.3 minutes at 150 spoken words per minute**, which is
+also an estimate, and both are cheap to confirm with one probe call.
+So the 4,000-character chunk is a *quota* choice, not a technical one, and it is
+currently spending two requests where one would fit. A duration-aware chunker —
+cap the estimated audio at ~7 minutes and refuse to exceed 16,384 tokens — turns the
+day into **3 long-form requests + 3 Short requests = 6**, leaving **four** for the
+retries that R8 needs. That is the difference between "cannot retry" and "can".
+
+### 16.3 What is still unproven
+
+The cause of the empty candidate is not established from here: it could be a safety
+stage on the style string, a generation failure under capacity pressure, or a silent
+refusal of the `speech_metadata` part by the fallback transport. The point is that
+**the code cannot tell us, and one run with `finish_reason` and
+`prompt_feedback.block_reason` in the error would.** The 2026 MoneyPrinterTurbo fix
+(#1721) did exactly this and is the pattern to copy: report the two metadata fields,
+nothing else in the payload, and change no retry behaviour until the cause is known.
+
+## 17. Finding 12 — reading the queue writes to the queue, and that kept CI red
+
+`pipeline/short_release.py:506` — inside `select_next_queued_short()`, a *reader* —
+rewrites a manifest with `yaml.safe_dump` and flips `quota_paused` to `approved` when
+`quota_reset_utc` has passed. `build_schedule_audit()` called that selector *after*
+counting the queue, so its own report described a queue that no longer existed one
+line later:
+
+```
+[queue] Quota reset time passed (2026-11-07T08:00:00+00:00). Auto-unpausing 0015-short-psalm91v5.yml...
+AssertionError: 5 != 6
+```
+
+That is the failure CI has been showing on every push since the 08:00Z reset — 72 of
+95 CI runs in 24 hours were red — and CI completing is one of the supervisor's
+`workflow_run` triggers, **on every branch**. A red test suite is therefore not just
+noise: it is another pump in the loop of §13. Fixed in this branch by settling the
+queue before counting it, with a test that pins the order rather than the file.
+
+Two structural notes that are *not* fixed, because they are design decisions:
+
+* a read path that writes is how `0015` kept reappearing as `approved` (it was flipped
+  three times by automated passes, and reverted by hand each time);
+* the unpause is **time-only**: it re-arms a Short whose narration failed, without
+  asking whether the day's ten TTS requests can afford it. That is R2a's job.
+
+## 18. Finding 13 — a monitor that is red 96 times a day is not a monitor
+
+In 24 hours the monitor ran 185 times: 35 success, 96 failure, 54 cancelled. Every
+failure is *correct* — it is reporting a genuinely stalled automation — and every
+failure also writes a commit. The job fails on purpose (`Fail the job if the audit
+found a stalled automation`), which means the owner's signal is 96 red X's and one
+issue, and the difference between "the pipeline is stalled" and "the monitor is
+broken" is invisible in the run list.
+
+The queue-stall constraint says a stalled queue must not look satisfied. It does not
+require the *runner* to be red — the issue is the alarm, and the run's exit code is a
+poor one: it cannot be distinguished from a crash, and each red run feeds the trigger
+loop. The honest split is:
+
+| Condition | Exit | Alarm |
+| :--- | :--- | :--- |
+| It measured, and something is stalled | 0 | the issue (as today) |
+| It could not measure (API down, auth refused, no runs visible) | non-zero | the issue |
+
+Do not change this without the owner: it is the one place where "red" is currently
+doing useful work, and it is also the one place where red is most ambiguous.
+
+## 19. The picture in one table
+
+| Layer | Scheduled request | Actual delivery | Verdict |
+| :--- | :--- | :--- | :--- |
+| GitHub cron → workflows | ~150 events/day | a handful, 4–7 h late | unreliable, and known |
+| Watcher self-triggering | 0 | **~350 runs/day** | the dominant traffic |
+| Commits to `main` | 0 | **385/day** | self-sustaining |
+| Dispatch dedupe | ≤3 attempts/slot | unbounded (counter resets) | **broken** |
+| Brain model calls | 20/day/project | ~19 dispatches × 24–40 | **burns the day by 09:00** |
+| TTS requests | 10/day/project | 9 committed, 0 spare | **no retry is affordable** |
+| TTS failure reporting | names the model | says `mime_types=none` | **cannot diagnose itself** |
+| Queue reads | pure | rewrite manifests | **breaks CI, re-arms pauses** |
+
+## 20. Revised ranking (Round 2)
+
+Ordered by *publishing unblocked per unit of risk*, superseding §9's order.
+
+| # | Change | Kind | Why it moves the needle |
+| :-- | :--- | :--- | :--- |
+| **R8** | TTS: report `finish_reason` + `prompt_feedback.block_reason`, treat an empty candidate as retryable **once**, and chunk by estimated audio minutes (≤7 min / ≤16,384 tokens) | code, ~60 lines | the only thing standing between three queued videos and the channel; also makes the next failure legible |
+| **R9** | Break the loop: drop `pages build and deployment` from the supervisor's `workflow_run` list; exclude `generated_at`/`last_run_at` from the "did anything change" test | 2 lines + 1 test | removes ~350 runs and ~300 commits a day; every other fix is cheaper afterwards |
+| **R10** | Dedupe dispatches from the Actions API (or an append-only `dispatches/` directory) instead of a read-modify-write JSON | code, ~40 lines | restores the attempt cap that §14 proves does not exist |
+| **R2a** | Reserve the tenth TTS request; only unpause a `quota_paused` item when the day's ledger can afford it | code, ~30 lines | prerequisite for R8's retry, and stops the flip-flop of `0015` |
+| **R3** | Per-model, per-project daily usage ledger (`content/monitor/model-usage.json`) | code, ~80 lines | the only way "20/day" is enforced across 19 dispatches |
+| **R11** | Reads never write: move the unpause into one reconciliation step that edits only the `status:` line | code, ~40 lines | fixes silent manifest rewrites; already fixed the audit's count |
+| **R5** | Cold start: allow `max_authors = shortfall` when a channel has zero publishable scripts (6 calls is a fifth of a 20-RPD day) | code, ~10 lines | prayer3 currently needs 3 pristine days to reach parity |
+| **R4** | External 15-minute `repository_dispatch: watchdog-tick` | owner + PAT | still the root-cause fix for cron, now *after* R9 (the loop must stop first, or 96 ticks become 96 more pumps) |
+| R6/R7 | Brand windows; fix the wall-clock comments (`alarm_minutes: 240`) | code/docs | unchanged |
+
+R4's order changed because of §13: adding an external tick to a supervisor that
+already runs 187 times a day adds nothing but load. Stop the loop, then add the tick.
+
+## 21. What the next run will tell us
+
+Three predictions, all falsifiable from the run list alone:
+
+1. If R9 lands, supervisor runs drop from ~187/day to ~12–15/day (8 crons + real
+   completions) within one day, and commits to `main` drop to ~20/day.
+2. If R8 lands and the empty candidate is a *block*, the new error will name
+   `block_reason: SAFETY` (or a style-related refusal) and the fix is the style
+   string, not the transport.
+3. If R8 lands and the empty candidate is a *generation failure under load*, the
+   retry will succeed within two attempts on most passes, and the remaining failures
+   will cluster in the 08:00–10:00Z window where 503s already cluster.
+
+If none of those happen, the empty audio is something else, and the diagnostic will
+say what.
