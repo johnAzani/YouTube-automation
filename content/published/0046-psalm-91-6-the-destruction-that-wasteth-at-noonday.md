@@ -2,7 +2,7 @@
 id: '0046'
 title: Psalm 91:6 Midday Prayer | The Midday Watch
 slug: psalm-91-6-the-destruction-that-wasteth-at-noonday
-status: approved
+status: published
 channel: prayer3
 privacy: public
 format: longform
@@ -83,6 +83,12 @@ originality:
 originality_note: Original theological commentary incorporating Charles Spurgeon's
   The Treasury of David and Matthew Henry's Commentary on the Whole Bible, KJV verbatim
   quotations.
+published_on: "2026-11-07"
+published_at: "2026-11-07T19:25:00Z"
+youtube_video_id: "GeZ3liNIxag"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — The Noonday Hook & The Pause
