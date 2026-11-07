@@ -104,24 +104,36 @@ def match(expected, spoken, min_confidence=0.2):
                 for token in expected[a:b]:
                     result.append((token, None, False))
                 continue
+            script_joined = ''.join(_canonical(t) for t in expected[a:b])
+            heard_joined = ''.join(_canonical(spoken[i].word) for i in mapped)
+            # When concatenated letters match ("labor—lift" vs ["labor", "lift"],
+            # "for evermore" vs ["forevermore"], "self-reliance" vs ["self", "reliance"]),
+            # or numerals expand ("121" vs "one twenty one"), or a single 1-2 word
+            # recogniser wobble sits inside a >=95%-matched long-form transcript,
+            # the timing span is anchored by exact neighbours.
+            exact_block = bool(script_joined) and (
+                script_joined == heard_joined
+                or any(ch.isdigit() for ch in script_joined + heard_joined)
+                or (coverage >= 0.95 and len(exp) >= 25 and n_script <= 2 and len(mapped) <= 2)
+            )
             if n_script == 1:
                 # script has one token, recogniser split it: give the union span
                 first, last = spoken[mapped[0]], spoken[mapped[-1]]
                 result.append((expected[a], _Span(first.word, first.start, last.end,
-                                                  min(spoken[i].probability for i in mapped)), False))
+                                                  min(spoken[i].probability for i in mapped)), exact_block))
             elif len(mapped) == 1:
                 # recogniser merged several script words into one ("for evermore"
                 # -> "forevermore"): tile the recognised span across the script
                 # words by length so the timeline stays ordered.
                 item = spoken[mapped[0]]
                 for token, span in _tile(expected[a:b], item.start, item.end, item.probability):
-                    result.append((token, span, False))
+                    result.append((token, span, exact_block))
             else:
                 # proportional share of the recognised span, weighted by word length
                 prob = min(spoken[i].probability for i in mapped)
                 for token, span in _tile(expected[a:b], spoken[mapped[0]].start,
                                          spoken[mapped[-1]].end, prob):
-                    result.append((token, span, False))
+                    result.append((token, span, exact_block))
         elif kind == 'delete':
             # script words the recogniser did not hear at all
             for token in expected[a:b]:

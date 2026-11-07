@@ -94,7 +94,7 @@ As the sun breaches the horizon this morning, painting the sky with gold and amb
 
 Listen to the enduring declaration of Psalm 118, verse 24, in the translation of the ages: "This is the day which the Lord hath made; we will rejoice and be glad in it." Charles Spurgeon, writing in The Treasury of David, notes that this verse bursts forth like a sudden beam of sunlight through a stormy sky. It is not merely a polite observation about the rotation of the earth; it is a profound theological decree. The day is not an accident. It is not a blank slate left to the caprice of fate or the malice of circumstance. It is a divine construct. God has manufactured this twenty-four-hour span out of His own infinite wisdom and love. 
 
-Think upon this with sober and joyful awe. The morning light that touches your window sill right now was summoned by the word of God. The breath in your lungs, the beating of your heart, the very sanity of your mind to perceive this new day—all are gifts from His open hand. Therefore, our posture this morning is one of deliberate, intentional rejoicing. We say to our own souls, as the Psalmist did: We will rejoice and we will be glad in it. Not because every circumstance is easy, not because every problem is solved, but because the Lord hath made this day, and His presence is the guarantee of our preservation. Let us quiet our hearts right now and hand this fresh morning over to Him.
+Think upon this with sober and joyful awe. The morning light that touches your window sill right now was summoned by the word of God. The breath in your lungs, the beating of your heart, the very sanity of your mind to perceive this new day — all are gifts from His open hand. Therefore, our posture this morning is one of deliberate, intentional rejoicing. We say to our own souls, as the Psalmist did: We will rejoice and we will be glad in it. Not because every circumstance is easy, not because every problem is solved, but because the Lord hath made this day, and His presence is the guarantee of our preservation. Let us quiet our hearts right now and hand this fresh morning over to Him.
 
 ## Scene 2 — New Mercies & Faithfulness at Dawn
 
@@ -124,11 +124,11 @@ Because this day belongs to the Lord, we step into it covered by His divine prot
 
 As we walk out into a world that is often weary, cynical, and spiritually restless, we need a heavenly defense. We do not walk in presumption, but we walk in the robust confidence of Psalm 5:12: "For thou, Lord, will bless the righteous; with favour wilt thou compass him as with a shield." 
 
-Think upon that divine imagery: compassed with favor as with a shield. A shield is not something you hold for a moment and drop; it surrounds you on every side. It is a perimeter of divine grace. The arrows of discouragement, the fiery darts of anxiety, the unexpected trials that seek to pierce the peace of your heart—they must first pass through the sovereign shield of God's favor. 
+Think upon that divine imagery: compassed with favor as with a shield. A shield is not something you hold for a moment and drop; it surrounds you on every side. It is a perimeter of divine grace. The arrows of discouragement, the fiery darts of anxiety, the unexpected trials that seek to pierce the peace of your heart — they must first pass through the sovereign shield of God's favor. 
 
 Lord, we ask for Your supernatural protection today. Guard our minds from toxic thoughts and paralyzing fears. Guard our lips from idle or destructive words. Guard our bodies from sickness, accident, and harm. Let Your angels encamp around our homes, our families, and our workplaces. 
 
-And let Your favor go before us like a herald. Open doors that no man can shut. Grant us grace in the eyes of those we encounter today—colleagues, supervisors, strangers, and loved ones. May our lives be a silent, luminous testimony of Your goodness. When opposition arises, be our strong tower. When weariness threatens to overtake our afternoon, be our everlasting strength. We are safe in Your hands, for Your name is a strong tower, and the righteous run into it and are safe.
+And let Your favor go before us like a herald. Open doors that no man can shut. Grant us grace in the eyes of those we encounter today — colleagues, supervisors, strangers, and loved ones. May our lives be a silent, luminous testimony of Your goodness. When opposition arises, be our strong tower. When weariness threatens to overtake our afternoon, be our everlasting strength. We are safe in Your hands, for Your name is a strong tower, and the righteous run into it and are safe.
 
 ## Scene 5 — Blessing Over Work, Family & Home
 
@@ -149,6 +149,6 @@ We draw our morning communion to a close, but the day itself is only just beginn
 Listen once more to the triumphant chord of our meditation: "This is the day which the Lord hath made; we will rejoice and be glad in it." Carry those words with you like a song in your heart. When the morning rush gives way to midday pressure, whisper that verse to your soul. When unexpected news tries to derail your peace, anchor yourself upon that rock. God made this day. He has not lost control of a single second of it. 
 
 Receive this final benediction: 
-The Lord bless you and sustain you as you step out into the world. May His face shine upon your path, may His strength be made perfect in your weakness, and may His peace—which surpasses all human understanding—guard your heart and your mind in Christ Jesus throughout this entire day. Go forth in courage, go forth in grace, and go forth in the unshakeable joy of the Lord.
+The Lord bless you and sustain you as you step out into the world. May His face shine upon your path, may His strength be made perfect in your weakness, and may His peace — which surpasses all human understanding — guard your heart and your mind in Christ Jesus throughout this entire day. Go forth in courage, go forth in grace, and go forth in the unshakeable joy of the Lord.
 
 Type Amen to agree with this prayer, and subscribe to The Morning Altar to begin every sunrise with us.

@@ -298,7 +298,9 @@ def normalize_authored_script_markdown(
 
         inline_narr = _NARRATION_INLINE_RE.match(line)
         if inline_narr:
-            cleaned_lines.append(re.sub(r"\*{1,2}([^*\n]+)\*{1,2}", r"\1", inline_narr.group(1).strip()))
+            cleaned_inline = re.sub(r"\*{1,2}([^*\n]+)\*{1,2}", r"\1", inline_narr.group(1).strip())
+            cleaned_inline = re.sub(r"([A-Za-z])([—–])([A-Za-z])", r"\1 \2 \3", cleaned_inline)
+            cleaned_lines.append(cleaned_inline)
             continue
 
         if _STAGE_LINE_RE.match(line):
@@ -308,6 +310,7 @@ def normalize_authored_script_markdown(
             line = line[2:]
 
         line = re.sub(r"\*{1,2}([^*\n]+)\*{1,2}", r"\1", line)
+        line = re.sub(r"([A-Za-z])([—–])([A-Za-z])", r"\1 \2 \3", line)
         cleaned_lines.append(line)
 
     clean_body = re.sub(r"\n{3,}", "\n\n", "\n".join(cleaned_lines)).strip() + "\n"
