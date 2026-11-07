@@ -31,8 +31,9 @@ Nothing else in the pipeline changed: one code path, one capability matrix, no
 
 ## 2. Registered vs live — the distinction that keeps the alarm honest
 
-`pipeline/channels.py` marks the channel `provisioned=False`. That flag is read in
-exactly three places and nowhere else:
+`pipeline/channels.py` marks the channel `provisioned=True` since **2026-11-07**
+(it was `False` for the one day between registration and credentials). That flag is
+read in exactly three places and nowhere else:
 
 * `scheduled_channels()` — the list the **scheduler supervisor** dispatches;
 * `scripts/automation_health.queue_health()` — the per-channel rows the monitor and
@@ -111,15 +112,21 @@ Google AI Studio → new project → create API key in it. Free tier only, no bi
 | `PRAYER3_YOUTUBE_CHANNEL_ID` | the channel's `UC…` id — the wrong-token guard; without it a mis-mapped token could upload to the wrong channel |
 | `PRAYER3_YOUTUBE_PLAYLIST_ID` | optional |
 
-### Before the first upload — the one code change
-Flip one word in `pipeline/channels.py`:
+### Before the first upload — the one code change (done 2026-11-07)
+One word in `pipeline/channels.py`:
 
 ```python
-    provisioned=False,   #  →  provisioned=True,
+    provisioned=True,    # was False until the credentials existed
 ```
 
-and push. That is the whole switch. Nothing else has to be remembered, and the
-parity tests fail if the flip is made without the secrets being referenced.
+That is the whole switch. Nothing else has to be remembered, and the parity tests
+fail if the flip is made without the secrets being referenced.
+
+It was flipped the moment the refresh token reached the repository secrets, and not
+a day later, because `produce.yml` schedules the channel off **that secret alone**.
+A channel that runs while `provisioned` is False is a channel absent from
+`scheduled_channels()` — and therefore absent from the health monitor, the queue
+rows and the supervisor: work happening where nothing is watching it.
 
 ## 4. What happens the moment it is live
 

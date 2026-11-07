@@ -34,6 +34,18 @@ def healthy(now):
     return [run(wf, now - timedelta(minutes=30)) for wf, _n, _c in workflow_files()]
 
 
+def two_channel_world():
+    """Pin the supervisor's channel list to the 2 November fixture.
+
+    These tests model the morning of 2 November, when two channels existed. The
+    live registry has three now, and a test that silently changes what it asserts
+    when a channel is added stops pinning anything. The wiring — that the
+    supervisor's list *is* the scheduled-channel list — is pinned separately, in
+    `test_the_supervisor_watches_every_scheduled_channel`.
+    """
+    return mock.patch.object(sup, "_channels", return_value=("secret-place", "prayer2"))
+
+
 def pad_history(history, now):
     """Give every scheduled workflow absent from `history` a recent healthy run.
 
@@ -88,12 +100,14 @@ class TestSlotDetection(unittest.TestCase):
         history = pad_history(
             [run("produce.yml", now - timedelta(hours=1, minutes=30))], now
         )
-        with mock.patch.object(sup, "published_channels_since",
+        with two_channel_world(), \
+             mock.patch.object(sup, "published_channels_since",
                                return_value={"secret-place"}):
             found = {wf for wf, _ in sup.due_but_missing(now, history)}
         self.assertIn("produce.yml", found, "prayer2 still has no video for this slot")
 
-        with mock.patch.object(sup, "published_channels_since",
+        with two_channel_world(), \
+             mock.patch.object(sup, "published_channels_since",
                                return_value={"secret-place", "prayer2"}):
             found = {wf for wf, _ in sup.due_but_missing(now, history)}
         self.assertNotIn("produce.yml", found)
@@ -111,7 +125,8 @@ class TestSlotDetection(unittest.TestCase):
     def test_a_workflow_that_ran_for_the_slot_is_left_alone(self):
         now = self.now()
         # every workflow ran 30 min ago, including the brain's 03:14 slot
-        found = {wf for wf, _ in sup.due_but_missing(now, healthy(now))}
+        with two_channel_world():
+            found = {wf for wf, _ in sup.due_but_missing(now, healthy(now))}
         self.assertEqual(found, set())
 
     def test_a_merely_late_schedule_is_not_duplicated(self):
@@ -174,13 +189,30 @@ class TestSlotDetection(unittest.TestCase):
     def test_supervisor_workflows_never_dispatch_themselves(self):
         now = self.now()
         history = healthy(now) + [run(w, now - timedelta(days=2)) for w in sup.NEVER_DISPATCH]
-        self.assertEqual([wf for wf, _ in sup.due_but_missing(now, history)], [])
+        with two_channel_world():
+            self.assertEqual([wf for wf, _ in sup.due_but_missing(now, history)], [])
 
     def test_a_workflow_whose_runs_are_absent_for_the_slot_is_still_caught(self):
         """Empty run history must not read as "nothing to do"."""
         now = self.now()
         found = {wf for wf, _ in sup.due_but_missing(now, [])}
         self.assertIn("gemini_brain.yml", found)
+
+
+class TestTheChannelListIsNotMaintainedByHand(unittest.TestCase):
+    def test_the_supervisor_watches_every_scheduled_channel(self):
+        """One source of truth: the registry's live channels, in registry order.
+
+        The tests above pin produce's logic against a fixed two-channel fixture so
+        that adding a channel does not quietly rewrite what they assert. This is
+        the other half of that bargain: the supervisor's list really is the live
+        one — when The Midday Watch was provisioned on 2026-11-07 it joined here
+        with no second place to remember.
+        """
+        from pipeline.channels import scheduled_channels
+
+        self.assertEqual(tuple(sup._channels()), tuple(scheduled_channels()))
+        self.assertIn("prayer3", sup._channels())
 
 
 class TestDispatchRails(unittest.TestCase):
@@ -211,7 +243,8 @@ class TestDispatchRails(unittest.TestCase):
         history = self.runs() + [run("produce.yml", now - timedelta(minutes=20))]
         state = {"produce.yml@2026-11-02T06:14:00+00:00": {"at": "2026-11-02T07:00:00+00:00",
                                                           "attempts": 1}}
-        out = sup.supervise(now, history, dry_run=True, state=state)
+        with two_channel_world():
+            out = sup.supervise(now, history, dry_run=True, state=state)
         self.assertNotIn("produce.yml", [r["workflow"] for r in out["dispatched"]])
         self.assertTrue(any("succeeded" in r["reason"] for r in out["skipped"]))
 
@@ -223,26 +256,33 @@ class TestDispatchRails(unittest.TestCase):
         state = {"produce.yml@2026-11-02T06:14:00+00:00":
                  {"at": "2026-11-02T07:00:00+00:00",
                   "attempts": sup._attempt_cap("produce.yml")}}
-        with mock.patch.object(sup, "published_channels_since", return_value=set()), \
+        with two_channel_world(), \
+             mock.patch.object(sup, "published_channels_since", return_value=set()), \
              mock.patch.object(sup, "code_changed_since", return_value=False):
             out = sup.supervise(now, history, dry_run=True, state=state)
         self.assertNotIn("produce.yml", [r["workflow"] for r in out["dispatched"]])
         self.assertTrue(any("not trying again" in r["reason"] for r in out["skipped"]))
         # Produce gets one attempt per channel (plus a retry each), everything else 3.
         self.assertEqual(sup.MAX_ATTEMPTS_PER_SLOT, 3)
-        self.assertEqual(sup._attempt_cap("produce.yml"), 5)
+        with two_channel_world():
+            self.assertEqual(sup._attempt_cap("produce.yml"), 5)
+        # …and the cap follows the channel count: three channels means 7, not a
+        # number that silently keeps the two-channel budget forever.
+        self.assertEqual(sup._attempt_cap("produce.yml"), 2 * len(sup._channels()) + 1)
 
     def test_one_slot_is_dispatched_only_once(self):
         state = {}
         history = pad_history(self.runs(), self.now())
-        with mock.patch.object(sup, "published_channels_since", return_value=set()):
+        with two_channel_world(), \
+             mock.patch.object(sup, "published_channels_since", return_value=set()):
             first = sup.supervise(self.now(), history, dry_run=True, state=state)
         self.assertEqual(len(first["dispatched"]), 3)
         # a real pass writes the ledger; simulate that then re-run the same slot
         for row in first["dispatched"]:
             state[f"{row['workflow']}@{row['slot']}"] = {
                 "at": "2099-01-01T00:00:00+00:00",
-                "attempts": sup.MAX_ATTEMPTS_PER_SLOT,
+                # the cap this workflow actually has: produce's is per channel
+                "attempts": sup._attempt_cap(row["workflow"]),
                 # a real pass stamps the code it dispatched, so nothing was fixed since
                 "code_id": sup.code_fingerprint(row["workflow"]),
             }
@@ -497,7 +537,8 @@ class TestWorkflowFile(unittest.TestCase):
             stdout = ""
             stderr = ""
 
-        with mock.patch.object(sup.subprocess, "run") as proc, \
+        with two_channel_world(), \
+             mock.patch.object(sup.subprocess, "run") as proc, \
              mock.patch.object(sup, "published_channels_since",
                                return_value={"secret-place", "prayer2"}):
             ok, msg = sup.dispatch("produce.yml", "2026-11-06T06:14:00+00:00")

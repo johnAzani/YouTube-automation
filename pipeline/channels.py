@@ -93,18 +93,23 @@ CHANNELS: dict[str, ChannelProfile] = {
         handle="@TheMiddayWatch",
         secret_prefix="PRAYER3_",
         # Owner decision, 2026-11-06: the third channel is a prayer channel and
-        # publishes on the same terms as the other two. It has no Google Cloud
-        # project yet, so it stays out of the scheduled slots until its refresh
-        # token exists — see the credential probe in produce.yml, which is a
-        # readiness gate, not a channel switch.
+        # publishes on the same terms as the other two — public uploads, three
+        # legs a day. Provisioned 2026-11-07 (see the note below).
         default_privacy="public",
         auto_publish=True,
         include_sanctuary_links=False,
-        # No Google Cloud project yet (owner, 6 Nov 2026). Flip to True in the
-        # same commit that adds PRAYER3_* secrets: the schedule, the queue rows
-        # and the supervisor all turn on together, and the two workflows probe
-        # for the refresh token anyway, so an early flip still cannot upload.
-        provisioned=False,
+        # Live 2026-11-07. The owner's own Google Cloud project `The Midday Watch`
+        # exists, its three scopes are registered, and PRAYER3_YOUTUBE_CLIENT_ID,
+        # _CLIENT_SECRET and _REFRESH_TOKEN are in the repository secrets — the
+        # refresh token was minted while signed in as @TheMiddayWatch.
+        #
+        # Flipped on its own, deliberately: produce.yml already schedules the
+        # channel the moment that refresh token exists (the readiness probe reads
+        # the secret, not this flag), so leaving the flag False would have had the
+        # channel *running* while `scheduled_channels()` kept it out of the health
+        # monitor and the supervisor — work happening where nothing was watching.
+        # One flag, one meaning: registered + credentialed = scheduled + watched.
+        provisioned=True,
     ),
 }
 

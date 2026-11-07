@@ -8,9 +8,12 @@
 **Channel Format:** 100% faceless Christian **noonday** prayer & midday devotional studio.
 **Internal channel id:** `prayer3` (secret prefix `PRAYER3_`, see `pipeline/channels.py`)
 **Status:** channel **live** on 2026-11-06 — name, handle, avatar and banner are on
-`@TheMiddayWatch`. Publishing is **not provisioned**: no Google Cloud project, no
-`PRAYER3_*` secrets, `provisioned=False` in `pipeline/channels.py`. See
-`docs/THIRD_CHANNEL_SETUP.md`.
+`@TheMiddayWatch`. **Provisioned 2026-11-07**: its own Cloud project, three scopes,
+consent screen published to production, `PRAYER3_YOUTUBE_CLIENT_ID`,
+`_CLIENT_SECRET`, `_REFRESH_TOKEN` in the repository secrets, and
+`provisioned=True` in `pipeline/channels.py`. Still outstanding:
+`PRAYER3_GEMINI_API_KEY` (authoring) and `PRAYER3_YOUTUBE_CHANNEL_ID` (the
+wrong-token guard). See `docs/THIRD_CHANNEL_SETUP.md`.
 
 > ⚠️ A handle cannot be reserved from this repository. Claim the first available
 > in YouTube Studio at channel creation, then update `pipeline/channels.py`,
@@ -176,6 +179,6 @@ disc still read.
 - [ ] Paste the About description (§2) and keywords (§3)
 - [ ] Enable 2-step verification and custom thumbnails
 - [ ] Create the **separate** GCP + Gemini projects and the six `PRAYER3_*` secrets — `docs/THIRD_CHANNEL_SETUP.md`
-- [ ] Flip `provisioned=False` → `True` in `pipeline/channels.py`
+- [x] Flip `provisioned=False` → `True` in `pipeline/channels.py` — done 2026-11-07
 - [ ] First authored script from roadmap id **0045** (Psalm 55:17) and its companion Short (`short-midday…`)
 - [ ] First upload verified on `@TheMiddayWatch` — `PRAYER3_YOUTUBE_CHANNEL_ID` is what makes a wrong-token write impossible
