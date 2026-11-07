@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T04:09:36.937174+00:00",
+  "generated_at": "2026-11-07T04:10:45.403766+00:00",
   "healthy": false,
   "automations": [
     {
@@ -18,7 +18,7 @@
       "failures_5": 5,
       "effect": "reports and files stalls",
       "verdict": "FAILING",
-      "detail": "failed just now and nothing was changed since; the next slot will fail the same way",
+      "detail": "failed 1m ago and nothing was changed since; the next slot will fail the same way",
       "severity": "blocking"
     },
     {
@@ -39,7 +39,7 @@
       "failures_5": 0,
       "effect": "posts replies and records them in content/comments/replied.json",
       "verdict": "OK",
-      "detail": "last success 4.4h ago",
+      "detail": "last success 4.5h ago",
       "severity": "ok"
     },
     {
@@ -87,8 +87,8 @@
         "14 2 * * *"
       ],
       "last_run": "2026-11-07T04:09:39+00:00",
-      "last_conclusion": null,
-      "last_success": "2026-11-06T09:19:32+00:00",
+      "last_conclusion": "success",
+      "last_success": "2026-11-07T04:09:39+00:00",
       "runs_14d": 4,
       "last_edited": "2026-11-04T09:36:24+00:00",
       "last_slot": "2026-11-07T02:14:00+00:00",
@@ -96,7 +96,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 18.8h ago",
+      "detail": "last success 0.0h ago",
       "severity": "ok"
     },
     {
@@ -150,7 +150,7 @@
       "last_edited": "2026-11-06T10:32:11+00:00",
       "last_slot": "2026-11-07T03:23:00+00:00",
       "missed_slots": 0,
-      "failures_5": 3,
+      "failures_5": 4,
       "effect": "this report",
       "verdict": "SELF-REPORT",
       "detail": "its red runs are the verdicts below, not failures of it",
@@ -183,9 +183,9 @@
       "crons": [
         "47 0,3,6,9,12,15,18,21 * * *"
       ],
-      "last_run": "2026-11-07T04:09:00+00:00",
+      "last_run": "2026-11-07T04:10:15+00:00",
       "last_conclusion": null,
-      "last_success": "2026-11-07T01:00:11+00:00",
+      "last_success": "2026-11-07T04:09:00+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-06T07:59:18+00:00",
       "last_slot": "2026-11-07T03:47:00+00:00",
@@ -193,7 +193,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 3.2h ago",
+      "detail": "last success 0.0h ago",
       "severity": "ok"
     }
   ],
