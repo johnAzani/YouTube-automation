@@ -23,8 +23,8 @@
       "workflow": "metrics.yml"
     }
   ],
-  "generated_at": "2026-11-07T09:42:48.765675+00:00",
-  "last_run_at": "2026-11-07T09:42:07+00:00",
+  "generated_at": "2026-11-07T10:09:07.382096+00:00",
+  "last_run_at": "2026-11-07T10:08:26+00:00",
   "on_time": [
     {
       "late_minutes": 33,
@@ -69,10 +69,10 @@
       "workflow": "monitor.yml"
     },
     {
-      "late_minutes": 36,
+      "late_minutes": 21,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-07T07:23:50+00:00",
-      "slot": "2026-11-07T06:47:00+00:00",
+      "ran_at": "2026-11-07T10:08:26+00:00",
+      "slot": "2026-11-07T09:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
