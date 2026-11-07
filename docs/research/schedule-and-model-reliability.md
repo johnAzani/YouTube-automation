@@ -16,10 +16,12 @@ GitHub delivers this repository's cron events **1–8 hours late and drops 10–
 them**, so the wall-clock schedule printed in every workflow comment is fiction. The
 supervisor compensates, but it is itself cron-driven and was delivered 17 times in 12
 days out of ~96 due. When the brain finally runs it needs a Gemini call for a channel
-with no queue; the free-tier roster is 20 requests/day for two of its five models and
-500 for the other three, and the retry policy can spend **25 requests and 9 minutes on
-a single logical call**, which is more than the 30-minute job timeout can absorb across
-the 8 logical calls one supply pass may attempt. The pass is therefore **killed before
+with no queue; each channel has **its own project** (confirmed), so the 500-request
+lite pools have 6–25× headroom and are not the constraint — but the two fallback models
+are **20 requests/day per channel**, and the retry policy can spend **25 requests and 9
+minutes on a single logical call**, which is more than a 20-request day and more than
+the 30-minute job timeout can absorb across the 8 logical calls one supply pass may
+attempt. The pass is therefore **killed before
 it can report**, and the annotation says *"nothing in content/queue can publish"*.
 That is the truth of the symptom and none of the cause.
 
@@ -170,10 +172,31 @@ morning). The two are different events that produced the same annotation.
 | `2.5 / 2.0 / 1.5-flash` | — | **0 — retired** | removed from the chain by this branch |
 
 Quotas are **per project *and* per model**; a second API key in the same Google Cloud
-project does not add allowance. `gemini_brain.yml:33-35` treats each channel as
-having "its own Gemini quota pool" — that is only true if `PRAYER2_GEMINI_API_KEY` and
-`PRAYER3_GEMINI_API_KEY` live in **different projects**. This cannot be verified from
-the repository and is the single most consequential unknown in this document (§12 Q1).
+project does not add allowance — so whether the three keys share a project decides
+every arithmetic question in this section.
+
+> **Confirmed by the owner, 7 November 09:55 WAT: the three keys are in three separate
+> Google Cloud projects.** `gemini_brain.yml:33-35` ("its own Gemini quota pool") is
+> therefore accurate, and the rest of this section is rewritten for that fact.
+
+Per-channel allowance, per day:
+
+| Resource | Per channel per day | Consumed by a declared day | Headroom |
+| :--- | ---: | ---: | --- |
+| `3.5/3.1-flash-lite` text | **500** | ~20–80 requests (see 6.2) | **6–25×** |
+| `3.6/3.8-flash` text | **20** | one bad logical call = 25 | **negative** |
+| TTS `3.8-flash-tts` | **10** | 9 (see 6.4) | **1 request** |
+
+Two consequences, and they point in opposite directions:
+
+* **The 500-RPD pool is not the constraint.** Even two processes per pass at the
+  40-request ceiling is 80 of 500 — 16 %. Quota exhaustion on the lite models cannot
+  explain a week of failures.
+* **The 20-RPD pools are the trap.** A single 503-heavy logical call spends 25 requests
+  (6.2). That is 125 % of `3.8-flash`'s *entire day* for that channel, and 125 % of
+  `3.6-flash`'s. One busy minute removes both fallback models until midnight Pacific,
+  which is precisely why `gemini-3.8-flash` is named 29 times in the failure text and
+  why the retry storm feeds itself.
 
 ### 6.2 The retry policy
 
@@ -223,13 +246,38 @@ trap: the model Google recommends is the one with 4 % of the lite model's allowa
 
 ### 6.4 The TTS side has the same shape
 
-`pipeline/gemini_tts.py:84-102`: 10 requests/day, 4,000-character chunks, so a 6-minute
-prayer is 2 requests and a Short is 1. The declared schedule is 3 slots × 3 channels =
-9 releases/day = **≥18 requests if the keys share a project**. Issue #311's own words,
-recorded 6 Nov 23:52Z: *"Gemini's free-tier TTS allowance (10 requests/day) is spent
-until 2026-11-07T08:00:00+00:00 UTC. The next slot after that will publish."* The reset
-is midnight Pacific (08:00Z in November = 09:00 WAT) — which is why the 09:00 WAT line
-in today's plan matters.
+`pipeline/gemini_tts.py:84-102`: 10 requests/day **per project**, 4,000-character
+chunks. Measured on the queue that exists right now (27 scripts, front matter and
+headings stripped):
+
+| Script size | Scripts | TTS requests |
+| :--- | ---: | ---: |
+| 4,646–7,994 chars (min 4,646, median **5,330**) | 25 | **2** |
+| 9,039 chars | 1 | 3 |
+| 26,033 chars (`0007-the-day-the-exchange-pressed-undo`) | 1 | 7 |
+
+Shorts: caption text median **697** chars (max 1,003) → **1** request.
+
+Now the day, per channel, at the declared three slots (each produce run renders one
+long-form *and* one Short — `produce.yml:255-280`):
+
+```
+3 × long-form (2 requests)   = 6
+3 × Short    (1 request)     = 3
+                              ---
+total                        = 9 of 10      → exactly one retry for the whole day
+```
+
+One script over 8,000 characters makes it 10 of 10 — zero margin. Two, or one transient
+failure, makes it 11 and the third slot pauses itself. That is Issue #311 verbatim,
+6 Nov 23:52Z: *"Gemini's free-tier TTS allowance (10 requests/day) is spent until
+2026-11-07T08:00:00+00:00 UTC. The next slot after that will publish."* The reset is
+midnight Pacific (08:00Z in November = 09:00 WAT).
+
+So TTS is not oversubscribed by the schedule — it is subscribed to **90 %**, and the
+remaining 10 % is the only thing standing between a normal day and a paused slot. Every
+narration retry is paid out of that last request; the 13-request chunking bug (three
+days ago) spent the whole day on one video.
 
 ---
 
@@ -307,13 +355,22 @@ Add `quota`, `resource_exhausted`, `busy after retries`, `no candidate model`,
 *Risk:* retry storms — bounded already by `UPSTREAM_RETRY_AFTER = 30 min` and
 `UPSTREAM_MAX_ATTEMPTS = 8`.
 
-### R3 — A per-model usage ledger (code, ~80 lines)
+### R2a — Reserve the TTS margin (code, ~15 lines)
+
+With 9 of 10 requests committed, nothing may spend the last one casually. Count the day's
+narration requests in the receipt/ledger and refuse a *retry* when it would cross the
+allowance, deferring to the next slot instead of pausing mid-render. Cheapest possible
+form: read `content/monitor/tts-usage.json` before `synthesize_gemini_audio`.
+
+### R3 — A per-model usage ledger (code, ~80 lines) — now per project, so it works
 
 `content/monitor/model-usage.json`: `{date_pacific: {model: requests}}`, incremented in
 `_call_model`, consulted by `text_model_candidates`. Skip a 20-RPD model once it has
 spent 18. Reset keyed on midnight Pacific, the same clock Google uses.
 *Effect:* stops burning 3.8/3.6 on retries that cannot succeed; makes the daily budget
-observable in a file a human can read.
+observable in a file a human can read. With three separate projects this is a *per-channel*
+budget of 20 — one 25-request logical call still wipes it, which is why R1 (fewer attempts
+per pass) and R3 belong together.
 
 ### R4 — Take the supervisor off GitHub's scheduler (config, zero code, needs the owner)
 
@@ -323,7 +380,7 @@ every 15 minutes turns 1.2 deliveries/day into 96. Cost: one fine-grained PAT wi
 `Actions: write`. This is the single highest-leverage change on the board, and it is
 also the only one I cannot do: the token is yours.
 
-### R5 — Cold start for a new channel (code + content, medium)
+### R5 — Cold start for a new channel (code + content, medium) — **now the top content blocker**
 
 `--min-publishable 6` cannot be satisfied by one pass (`MAX_AUTHORS_PER_RUN = 2`), so
 `prayer3` needs **three successful passes** to reach parity. Either (a) the brain
@@ -392,11 +449,13 @@ hung past 2 minutes" against 1 503 in 107 requests on 3.5-flash-lite.
 
 ## 12. Open questions only the owner can answer
 
-1. **Are `GEMINI_API_KEY`, `PRAYER2_GEMINI_API_KEY` and `PRAYER3_GEMINI_API_KEY` in
-   three separate Google Cloud projects?** If not, the "per-channel quota pool" in
-   `gemini_brain.yml:33-35` is decorative and the 500 RPD is shared three ways.
-   Check: AI Studio → rate limits, per key.
+1. ~~Are the three keys in separate projects?~~ **Answered 7 Nov: yes, three separate
+   projects.** Per-channel pools are real; the 500-RPD pool is not the constraint and
+   the 20-RPD pools are the trap (§6.1).
 2. **Is the channel YPP-approved?** `thumbnails.set` needs it (§ Shorts work).
 3. **Will you add an external 15-minute tick** (R4)? It needs a PAT with `Actions:
    write`; it is the only change that fixes the root of Finding 1.
 4. **Brand windows** (R6): should a morning edition be withheld if it lands at 16:12 WAT?
+5. **TTS margin** (R2a): accept *deferral* rather than *pause* when the day's tenth
+   request would be spent on a retry? That is a product decision (a late video) not a
+   technical one.
