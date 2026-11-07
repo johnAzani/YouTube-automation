@@ -5,6 +5,13 @@ comes from this repository — the Actions API, the supervisor's own ledger, the
 annotations, and the code that runs — not from a vendor blog. Where a source is
 external it is cited in §11 and §16.1.
 
+> **Read §31–§40 if you read nothing else.** Round 4 found the two things that
+> decide whether fixing narration actually helps: the channels have published **nine
+> long-form videos in ten days** against a plan of six a day (§31), and the
+> supervisor's "was this slot served?" test requires a receipt from a provisioned
+> channel that has **no scripts at all**, so `produce` is dispatchable on nearly every
+> pass and will move onto that empty channel the moment the others recover (§32).
+>
 > **Read §13 first if you only read one section.** Round 1 (below, §0–§12) counted
 > *scheduled* deliveries and concluded the scheduler was the problem. Round 2
 > (§13–§21) pulled every run rather than every scheduled run and found that **~350 of
@@ -1196,3 +1203,339 @@ R8′** — two of them are measured in lines of YAML and one is a single cron v
    capacity trough, exactly like the brain's 503s.
 4. If R9 lands, `runs_14d` stops saturating at 20 within a day, because the same code
    will see a real fortnight of history for the first time.
+
+---
+
+# Round 4 — the ledger of what actually published, and the loop that cannot terminate
+
+Round 3 explained the traffic. Round 4 asks the only question that matters — *how much
+did the channels actually publish* — and then follows the newest supervisor logic
+until it stops making sense, which it does in one specific place.
+
+## 31. Finding 21 — the output ledger: nine long-forms in ten days
+
+From `content/published/*.md` (a receipt exists only for a real upload):
+
+| Day | Long-form uploads | Shorts |
+| :--- | :--- | ---: |
+| 23 Oct | — | 1 |
+| 28 Oct | — | 1 |
+| 29 Oct | 1 (secret-place) | — |
+| 31 Oct | 1 (secret-place) | — |
+| 1 Nov | 1 (secret-place) | — |
+| 2 Nov | 1 (secret-place) | — |
+| 3 Nov | 1 (secret-place) | 5 |
+| 4 Nov | 1 (secret-place) | — |
+| 5 Nov | **3** (secret-place 1, prayer2 2) | — |
+| 6 Nov | **0** | 4 |
+| 7 Nov | **0** | — |
+| **Total** | **9** | **11** |
+
+The plan is three long-form slots a day across two channels (six uploads) plus a Short
+per leg. The demonstrated ceiling is **one long-form a day on one channel**, reached
+once (5 Nov) at three. Everything the automation has ever published of substance fits
+in nine receipts.
+
+Two things follow.
+
+**The quota arithmetic in §6 and §16.2 was written for a throughput that has never
+happened.** "Nine of ten TTS requests committed" describes a day with three long-form
+uploads and three Shorts. The real day has one upload attempt that fails at narration.
+The allowance is not being split between videos; it is being spent on *retries of the
+first* video.
+
+**The runway metric reads the wrong number.** `--min-publishable 6` and the monitor's
+"runway days" divide the queue by three slots a day. At the observed rate of one
+upload a day, the 19 publishable secret-place scripts are **19 days** of runway being
+reported as six. A queue depth is only meaningful against the consumption rate that
+actually occurs, and nothing in the repo records that rate.
+
+## 32. Finding 22 — the coverage test cannot be satisfied, so `produce` is dispatched forever
+
+The supervisor decides whether a produce slot was served by receipts:
+
+```python
+missing = [c for c in _channels() if c not in published_channels_since(since)]
+if not missing:
+    return True, "every channel already published for this slot"
+channel = missing[0]
+```
+
+and `_channels()` is `scheduled_channels()`, i.e. **every provisioned channel**:
+
+```python
+CHANNELS = {"secret-place": ..., "prayer2": ..., "prayer3": ...}
+# prayer3: provisioned=True  (flipped 2026-11-07)
+```
+
+Prayer3 is provisioned, and `content/queue/` contains **zero** scripts for it, so it
+cannot publish a long-form at all. The set of channels with a receipt can therefore
+never equal the set of channels required, and `missing` is never empty. Measured
+consequences in the current state:
+
+* nothing has published a long-form since 5 Nov, so *all three* channels are missing;
+  `missing[0]` is `secret-place`, and that is exactly what today's dispatches were:
+  produce at **08:27** and again at **08:44**, both `produce (secret-place)`;
+* the 6 November pattern is the same shape — 11 produce runs, one per supervisor pass
+  that found the queue still short of a receipt.
+
+And `USEFUL_WINDOW["produce.yml"]` is 6 hours with slots at 06:14, 14:14 and 19:14, so
+a "recent enough to recover" slot exists for roughly **18 hours of every day**. The
+dispatchable window is nearly all of the clock.
+
+Once TTS is fixed and secret-place and prayer2 start publishing again, the order
+matters in a way nobody intended: `missing[0]` moves to **prayer3**, which fails
+instantly ("nothing in content/queue can publish"), so **every** subsequent pass
+dispatches prayer3 again, forever, at three legs a day and ~18 dispatchable hours.
+
+This is a *structural* pump independent of §14's counter race. Even with a perfect
+ledger, the cap is `2 × 3 + 1 = 7` attempts per slot: 21 produce legs a day for a
+channel with nothing to publish.
+
+**R16:** judge a slot against the channels the plan can actually serve, and exclude a
+channel with no publishable script from the coverage test (it is a *supply* problem,
+not a *schedule* problem, and R5 is where it belongs). Without this, fixing TTS makes
+the storm worse rather than better.
+
+## 33. Finding 23 — every produce leg is also an authoring run, so the quota has two pumps
+
+Step 11 of every produce leg:
+
+```yaml
+- name: Repair the queue before publishing
+  run: python scripts/gemini_brain.py --ensure-supply-for "$CHANNEL_ID" --min-publishable 3
+```
+
+That is the same supply loop the brain runs, at a **different target**: the brain asks
+for 6, produce asks for 3. So:
+
+| Workflow | `--min-publishable` | Worst-case model calls per leg |
+| :--- | ---: | :--- |
+| `gemini_brain.yml` | 6 | ~10 expansions + 2 authoring chains |
+| `produce.yml` | 3 | ~10 expansions + 2 authoring chains |
+
+The same channel can therefore be simultaneously **healthy** to produce (3 publishable)
+and **empty** to the brain (fewer than 6) — which is a scheduling disagreement encoded
+as two constants. It also means a produce dispatch is not "render one video"; it is
+another authoring pass, spending the same 20-request day. On 6 November: 19 brain
+dispatches *plus* 11 produce legs, each able to spend 12–14 calls.
+
+## 34. Finding 24 — the per-run budget is 60–70 % of the day, so the retry cap is set above what the day can pay for
+
+| Knob | Value |
+| :--- | ---: |
+| `MAX_EXPANSIONS_WHEN_EMPTY` | 5 |
+| `MAX_MODEL_CALLS_PER_RUN` | 10 |
+| `MAX_AUTHORS_PER_RUN` | 2 |
+| daily allowance, `gemini-3.8-flash`, per project | 20 |
+
+One channel job with an empty queue can spend ten expansion calls plus two authoring
+chains — **12–14 of 20 requests, 60–70 % of the day, in one pass.** The design is
+therefore "one pass per channel per day, and no second one". The supervisor's cap of
+**three** attempts per slot (seven for produce) is two to six attempts more than the
+budget can fund, *before* the counter race of §14 makes the cap infinite.
+
+This is why R1 was necessary but not sufficient: the per-call ladder is now cheap, but
+`MAX_MODEL_CALLS_PER_RUN` is a *per-run* ceiling with no per-*day* ceiling behind it.
+The only thing that can bound a 19-dispatch day is a ledger that counts requests across
+runs — which is R3, and it is now the highest-value code change after R16 and R12.
+
+## 35. Finding 25 — the YouTube unit budget is spent by repair loops, not by uploads
+
+I assumed uploads were the expensive call and went to the calculator to price them.
+**They are not expensive any more.** YouTube's current quota page (last updated
+2026-11-03) re-priced exactly this:
+
+> Projects that enable the YouTube Data API have a default quota allocation of 100
+> `search.list` calls, **100 `videos.insert` calls**, and 10,000 units per day combined
+> for all other endpoints… The `search.list` and `videos.insert` methods have their own
+> quota buckets. Each of these methods has a default daily limit of 100 per day.
+> **The quota cost is 1 per call.**
+
+So the real cost table for this pipeline is:
+
+| Call | Units | Own bucket | Where |
+| :--- | ---: | :--- | :--- |
+| `videos.insert` | **1** | 100/day | `pipeline/upload.py:342` |
+| `thumbnails.set` | 50 | — | `pipeline/upload.py:367` (long-form only) |
+| `playlistItems.insert` | 50 | — | `pipeline/upload.py:403` when `CONFIG.playlist_id` |
+| `captions.insert` | 400 | — | via `pipeline/captions.py` |
+| `videos.update` | 50 | — | metadata retrofit |
+| `comments.insert` | **50** per the calculator; **2** per `pipeline/comment_replies.py:9` | — | autonomous replies |
+
+The design's day — three long-form and three Shorts per project — is therefore
+`6 units of insert` (6 % of its own bucket) plus the metadata calls:
+
+```
+3 × (50 thumbnail + 50 playlist + 400 captions) = 1,500 units   of a 10,000-unit day
+```
+
+**The plan fits comfortably.** The budget that does not fit is any *retry* of those
+calls, because each one is 50–400 units against a pool that the uploads barely touch.
+A single `thumbnails.set` retried on every monitor pass is 50 × 185 = **9,250 units a
+day** — 92 % of the pool, from a repair loop (§38).
+
+And nothing counts units: the first notification is `quotaExceeded` in
+`pipeline/upload.py:352`, converted to `QuotaExceededError`, paused with the **same**
+`status: quota_paused` and `quota_reset_utc` fields a TTS pause uses
+(`pipeline/run.py:349`, `438`). So a YouTube-pool exhaustion is displayed as
+`QUOTA WAIT — daily $0.00 TTS allowance spent` (§26) and latches **all three channels**
+in the supervisor — two of which have their own untouched unit pools.
+
+One more inconsistency worth naming: the repository's comment code believes
+`comments.insert` costs **2** units and says the old docstrings (which said 50) were
+"25× the real cost" (`pipeline/comment_replies.py:9`). The calculator says **50**. Whichever
+is right, the code carries a units model it has not verified against today's pricing,
+and the reply budget is derived from it.
+
+**R17:** one units ledger per project per day, with the prices above, checked before a
+leg starts and before any repair retries a 50-unit call; and a pause reason on the job
+so the board can say *which* budget ran out.
+
+## 36. Finding 26 — three ways this TTS code can see "no audio" while audio exists
+
+Round 3 guessed the modality. Reading the pinned SDK (2.34.0) instead of the docs gives
+a sharper answer, and corrects one thing in Round 3.
+
+**Correction first:** `types.Modality` in 2.34.0 contains exactly `AUDIO`, `IMAGE`,
+`TEXT`, `VIDEO`. There is **no `AUDIO_WAV`**: the `AUDIO_WAV`/`AUDIO_L16` names in
+Google's migration guide belong to `response_format.mime_type` in the interactions API,
+whose enum in this SDK is
+
+```
+AudioResponseFormatMimeType = audio/mp3 | audio/ogg_opus | audio/l16 | audio/wav | audio/alaw | audio/mulaw
+```
+
+So R8′ cannot be "ask for AUDIO_WAV in `response_modalities`" — that would be an
+invented value. It must be `response_format={"type": "audio", "mime_type": "audio/wav"}`
+on the interactions call, which is documented and typed.
+
+**Then the three silent paths.** The code reads exactly one thing:
+
+```python
+output_audio = getattr(interaction, "output_audio", None)
+if output_audio and getattr(output_audio, "data", None):   # ← only `data`
+    ...
+```
+
+and on the fallback transport it walks `content.parts` for `inline_data`. That misses:
+
+| What the response can be | What the code sees | What the SDK actually offers |
+| :--- | :--- | :--- |
+| Audio delivered as a **URI** (`response_format.delivery = "uri"`) | `data` is `None` → "no audio" | `AudioContent.uri` (`AudioResponseFormatDelivery = inline \| uri`) |
+| Audio **not generated**: `status ∈ {failed, incomplete, budget_exceeded, cancelled}` | "no audio" | `Interaction.status`, `Interaction.errors[].code/message` |
+| Audio **truncated at the output cap** | "no audio" | `Interaction.usage.total_output_tokens` against 16,384 |
+
+`budget_exceeded` is a documented interaction status, and it is exactly what a TTS
+request that runs into the 16,384-token output ceiling would return: HTTP 200, status
+"budget_exceeded", no `output_audio`, no exception. The code would report
+`mime_types=none` and a human would spend an afternoon on the model name.
+
+**R8″** (replaces R8′): on the interactions path, when `output_audio` is absent, read
+`status`, `errors`, `usage.total_output_tokens` and `output_audio.uri` before raising,
+and put them in the annotation. Five fields, zero extra requests, and the next failure
+names its own cause.
+
+## 37. Finding 27 — the chunk cache saves one leg per run, and nobody can tell
+
+`produce.yml` restores and saves speech chunks with:
+
+```yaml
+key: chunks-tts-v4-${{ github.run_id }}
+restore-keys: |
+  chunks-
+```
+
+`github.run_id` is shared by every job in a run, and a scheduled produce run is two
+legs (secret-place, prayer2). The chunk directories are per-leg
+(`output/<slug>/_gemini_chunks_<stem>`), so the two legs produce **different** content
+under **one** immutable cache key: the first save wins, the second is refused. The step
+carries `continue-on-error: true`, so the refusal is neither red nor visible — both
+legs report `success` (verified on run `42288352182`).
+
+Three consequences:
+
+1. one leg's finished narration is silently discarded every run — up to two TTS
+   requests re-spent on the next attempt;
+2. `restore-keys: chunks-` matches *any* recent cache, including another channel's, so
+   what a leg resumes from depends on which job last saved;
+3. size: 24 kHz mono 16-bit is 48 kB/s, a 4,000-character chunk is ~4.8 minutes ≈
+   **14 MB**, a long-form narration is two chunks ≈ 28 MB. Nine leg-saves a day is
+   **~250 MB/day**, against GitHub's 10 GB per-repo cache ceiling and its LRU eviction
+   — so cache reuse is least reliable exactly when the allowance is tightest.
+
+**R18:** one key per run *and channel* (`chunks-tts-v4-<run_id>-<channel>`), and fail
+the step loudly if a save is refused.
+
+## 38. Finding 28 — the tripwire that would be catastrophic, and is not firing
+
+For completeness, because it was the obvious suspect and it is wrong today:
+`sync_published_thumbnails --all-channels` retries every receipt with
+`thumbnail_pending: true` on **every monitor pass** (185 passes in 24 hours), at 50
+units each. A single permanently-refused thumbnail would cost 9,250 units/day — the
+whole channel's YouTube quota, from a repair loop nobody associates with uploads.
+
+Today: **zero** receipts carry `thumbnail_pending: true` (only `0036` and `0037`, both `false`). So it
+is not a current cause. It is one refused thumbnail away from being 92 % of the
+channel's unit pool, and the reason it would go unnoticed is §26: the resulting
+`quotaExceeded` gets written as a TTS pause.
+
+## 39. Ranking after Round 4
+
+| # | Change | Size | Why |
+| :-- | :--- | :--- | :--- |
+| **R16** | a slot is served when the channels the plan *can* serve have receipts; a channel with nothing publishable is a supply fault, not a schedule fault | ~20 lines | without it, fixing TTS converts 11 produce runs/day into prayer3 forever |
+| **R12** | preflight stops spending completion quota | ~15 lines | 180 requests on 6 Nov against 40 available |
+| **R8″** | interactions `response_format.mime_type="audio/wav"` + `status`/`errors`/`usage`/`uri` in the error | ~25 lines | names the failure instead of guessing a fourth time |
+| **R9** | break the watcher loop (Pages trigger, wall-clock stamps) | 2 lines + test | 350 runs and 300 commits a day |
+| **R10** | API-derived dispatch dedupe | ~40 lines | the cap that §14 proves does not exist |
+| **R17** | YouTube units ledger per project per day | ~60 lines | uploads are 1 unit now; the pool is spent by 50–400-unit metadata repairs that nobody counts |
+| **R13** | brain 03:14Z → 08:14Z | 1 line | hour 19 of a spent day |
+| **R3** | per-model daily ledger | ~80 lines | the only thing that bounds `MAX_MODEL_CALLS_PER_RUN` across runs |
+| **R18** | per-channel chunk cache key | ~3 lines | one leg's narration is silently discarded per run |
+| R5, Rev | prayer3 cold start; the `--min-publishable` 6-vs-3 disagreement | small | both are now *loop* fixes, not content fixes |
+| R2a, R11, R14, R15, R6, R7 | unchanged | | |
+
+## 40. Round 4 predictions
+
+1. When TTS starts returning audio again, **produce dispatches do not fall** — they
+   move from secret-place to prayer3 and continue at roughly one per supervisor pass,
+   because of §32. R16 is a prerequisite for R8″ being *useful*.
+2. Upload volume will never exhaust the YouTube pool: six inserts cost six units of a
+   100-call bucket. The first `quotaExceeded` will come from a metadata repair loop
+   (§35, §38) and the board will call it a TTS problem (§26) — which is the failure
+   mode to watch for, not "too many videos".
+3. The first real diagnosis of the empty narration will come from `status` or
+   `usage.total_output_tokens`, not from the model name — which is why R8″ is five
+   fields, not a new transport.
+
+## 41. Sources added in Round 4
+
+**YouTube Data API pricing (primary, and it changed the finding):**
+`https://developers.google.com/youtube/data/determine_quota_cost` (last updated
+2026-11-03) — 100 `search.list` calls, 100 `videos.insert` calls and 10,000 units/day
+for everything else; `videos.insert` costs **1** unit in its own bucket;
+`thumbnails.set` 50; `playlistItems.insert` 50; `captions.insert` 400;
+`videos.update` 50. This is the opposite of the 1,600-unit-per-upload model the repo's
+comments assume, and it moves the risk from "too many uploads" to "retried metadata
+calls".
+
+**The pinned SDK, read rather than assumed** (`google-genai 2.34.0`, installed in
+`.venv`):
+
+| Fact | Where |
+| :--- | :--- |
+| `types.Modality` = `AUDIO, IMAGE, TEXT, VIDEO` — **no `AUDIO_WAV`** | `google.genai.types` |
+| `AudioResponseFormatMimeType` = `audio/mp3, audio/ogg_opus, audio/l16, audio/wav, audio/alaw, audio/mulaw` | `google.genai.interactions` |
+| `AudioResponseFormatDelivery` = `inline, uri` | same |
+| `Interaction.status` ∈ `in_progress, requires_action, completed, failed, cancelled, incomplete, budget_exceeded, queued, requires_continuation` | same |
+| `Interaction` also carries `errors[].code/message`, `usage.total_output_tokens`, `output_audio.uri` | same |
+| `AudioContent` = `channels, data, mime_type, sample_rate, type, uri` | same |
+
+`pipeline/gemini_tts.py` reads `output_audio.data` and nothing else, which is why an
+`uri` delivery, a `budget_exceeded` status and a genuinely empty candidate all produce
+the same sentence.
+
+**Repository history for the flip-flop:** `gh api 'repos/{repo}/commits?path=content/shorts-queue/0015-short-psalm91v5.yml'`,
+then the file contents at each commit (`contents/…?ref=<sha>`) — seven commits,
+`approved`/`quota_paused` alternating (§28).
