@@ -561,6 +561,154 @@ def set_video_thumbnail(video_id: str, thumbnail_path: Path) -> str:
         return msg[:900]
 
 
+#: thumbnails.set has supported Shorts only since 2026-11-03, and the docs attach
+#: a condition the old code could not have honoured: call it "only after the video
+#: has finished processing (when processingDetails.processingStatus is
+#: succeeded). If called before video processing is complete, the custom thumbnail
+#: might not be applied to the Short." "Might not be applied" is the silent failure
+#: this codebase refuses to accept, so we wait for the status and then verify.
+SHORTS_THUMBNAIL_WAIT_SECONDS = 600
+SHORTS_THUMBNAIL_POLL_SECONDS = 15
+THUMBNAIL_VERIFY_ATTEMPTS = 3
+
+
+def _thumb_client(youtube: Any = None) -> Any:
+    if youtube is not None:
+        return youtube
+    from googleapiclient.discovery import build
+
+    return build("youtube", "v3", credentials=_credentials(), cache_discovery=False)
+
+
+def wait_for_processing(video_id: str, *, youtube: Any = None,
+                        timeout_seconds: int = SHORTS_THUMBNAIL_WAIT_SECONDS,
+                        poll_seconds: int = SHORTS_THUMBNAIL_POLL_SECONDS,
+                        sleep: Any = None) -> str:
+    """Block until `processingStatus` is `succeeded`. Returns the last status seen."""
+    import time as _time
+
+    sleep = sleep or _time.sleep
+    client = _thumb_client(youtube)
+    waited = 0
+    status = ""
+    while True:
+        try:
+            resp = client.videos().list(part="status,processingDetails", id=video_id).execute()
+            item = (resp.get("items") or [{}])[0]
+            status = str((item.get("processingDetails") or {}).get("processingStatus") or "")
+            if not status:
+                status = str((item.get("status") or {}).get("uploadStatus") or "")
+        except Exception as exc:  # noqa: BLE001
+            print(f"[upload] could not read processing status of {video_id}: {exc}")
+            return "unknown"
+        if status in {"succeeded", "failed", "terminated", "processed"}:
+            return "succeeded" if status == "processed" else status
+        if not status:
+            # No status at all means the gate cannot be evaluated. Waiting ten
+            # minutes on a field that is not coming is how a run hangs; say so.
+            return "unknown"
+        if waited >= timeout_seconds:
+            return status or "timeout"
+        sleep(poll_seconds)
+        waited += poll_seconds
+
+
+def _upload_rate_limited(exc: Exception) -> bool:
+    msg = str(exc).lower()
+    return "uploadratelimitexceeded" in msg or "429" in msg or "too many" in msg
+
+
+def verify_shorts_thumbnail(video_id: str, *, youtube: Any = None,
+                            attempts: int = THUMBNAIL_VERIFY_ATTEMPTS,
+                            sleep: Any = None) -> dict[str, Any]:
+    """Ask YouTube whether the Short really carries a custom 9:16 thumbnail.
+
+    The thumbnails resource defines `shortsAspectRatio` as "the Shorts aspect ratio
+    (9:16) version of the thumbnail image ... available for YouTube Shorts that
+    have a custom thumbnail set". Its presence is the only programmatic proof, and
+    the bundled discovery document predates the field (google-api-python-client
+    2.201.0), so this reads the raw response keys.
+    """
+    import time as _time
+
+    sleep = sleep or _time.sleep
+    client = _thumb_client(youtube)
+    seen: dict[str, Any] = {}
+    for attempt in range(max(1, attempts)):
+        try:
+            resp = client.videos().list(part="snippet", id=video_id).execute()
+            item = (resp.get("items") or [{}])[0]
+            thumbs = ((item.get("snippet") or {}).get("thumbnails") or {})
+            seen = {"has_shorts_aspect": "shortsAspectRatio" in thumbs,
+                    "keys": sorted(thumbs)}
+        except Exception as exc:  # noqa: BLE001
+            return {"has_shorts_aspect": None, "error": str(exc)[:200]}
+        if seen.get("has_shorts_aspect"):
+            return seen
+        if attempt + 1 < attempts:
+            sleep(5)
+    return seen
+
+
+def apply_shorts_thumbnail(
+    video_id: str,
+    thumbnail_path: Path,
+    *,
+    youtube: Any = None,
+    wait_seconds: int = SHORTS_THUMBNAIL_WAIT_SECONDS,
+    poll_seconds: int = SHORTS_THUMBNAIL_POLL_SECONDS,
+    sleep: Any = None,
+) -> str:
+    """Set a Short's custom thumbnail and prove it landed. Returns a status string.
+
+    Order matters and is the whole point: wait for processing, set, retry a 429,
+    then verify `shortsAspectRatio` exists. A Short that is published with an
+    unverified thumbnail is a Short whose channel page shows a random frame — the
+    state every Short was in until 2026-11-07.
+    """
+    from googleapiclient.http import MediaFileUpload
+
+    vid = (video_id or "").strip()
+    if not vid or not Path(thumbnail_path).is_file():
+        return "skipped"
+    client = _thumb_client(youtube)
+
+    status = wait_for_processing(vid, youtube=client, timeout_seconds=wait_seconds,
+                                 poll_seconds=poll_seconds, sleep=sleep)
+    if status != "succeeded":
+        print(f"[upload] {vid}: processing status {status!r}; deferring the thumbnail")
+        return f"deferred_processing_{status or 'unknown'}"
+
+    last_error = ""
+    for attempt in range(3):
+        try:
+            client.thumbnails().set(
+                videoId=vid,
+                media_body=MediaFileUpload(str(thumbnail_path), mimetype="image/jpeg"),
+            ).execute()
+            print(f"[upload] set custom Shorts thumbnail on {vid}")
+            break
+        except Exception as exc:  # noqa: BLE001
+            last_error = f"{type(exc).__name__}: {_api_error_text(exc)}"
+            if _upload_rate_limited(exc) and attempt < 2:
+                import time as _time
+
+                (sleep or _time.sleep)(20 * (attempt + 1))
+                continue
+            print(f"[upload] shorts thumbnail set({vid}) failed: {last_error}")
+            diagnosis = diagnose_thumbnail_refusal(vid, youtube=client)
+            if diagnosis:
+                last_error += " | " + "; ".join(f"{k}={v}" for k, v in diagnosis.items())
+            return last_error[:900]
+    else:
+        return last_error[:900]
+
+    check = verify_shorts_thumbnail(vid, youtube=client, sleep=sleep)
+    if check.get("has_shorts_aspect"):
+        return "ok"
+    return f"unverified: thumbnails={','.join(check.get('keys') or []) or 'none'}"
+
+
 def audit_channel_videos(extra_video_ids: list[str] | None = None) -> list[dict]:
     """Return status/thumbnail metadata for recent channel uploads plus any explicit video IDs."""
     try:

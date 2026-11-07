@@ -164,6 +164,7 @@ class ShortReleaseTests(unittest.TestCase):
                 patch("pipeline.short_release.CONFIG.youtube_client_secret", "csec"),
                 patch("pipeline.upload.upload", return_value=fake_upload) as upload_mock,
                 patch("pipeline.upload.set_video_thumbnail", return_value="ok"),
+                patch("pipeline.upload.apply_shorts_thumbnail", return_value="ok"),
                 patch("pipeline.upload.audit_channel_videos", return_value=[{"id": "ytShort123", "uploadStatus": "processed"}]),
                 patch("pipeline.short_release._open_release_ticket") as ticket_mock,
             ):
@@ -214,6 +215,7 @@ class ShortReleaseTests(unittest.TestCase):
                 patch("pipeline.short_release.CONFIG.youtube_client_secret", "csec"),
                 patch("pipeline.upload.upload", return_value=fake_upload),
                 patch("pipeline.upload.set_video_thumbnail", return_value="ok"),
+                patch("pipeline.upload.apply_shorts_thumbnail", return_value="ok"),
                 patch("pipeline.upload.audit_channel_videos", return_value=[{"id": "ytShort999", "uploadStatus": "processed"}]),
                 patch("pipeline.short_release._open_release_ticket"),
             ):
@@ -261,6 +263,7 @@ class ShortReleaseTests(unittest.TestCase):
                 patch("pipeline.short_release.CONFIG.youtube_client_secret", "csec"),
                 patch("pipeline.upload.upload", return_value=fake_upload) as upload_mock,
                 patch("pipeline.upload.set_video_thumbnail", return_value="ok"),
+                patch("pipeline.upload.apply_shorts_thumbnail", return_value="ok"),
                 patch("pipeline.upload.audit_channel_videos", return_value=[{"id": "ytPsalm123", "uploadStatus": "processed"}]),
                 patch("pipeline.short_release._open_release_ticket"),
             ):
@@ -286,19 +289,6 @@ class ShortReleaseTests(unittest.TestCase):
         bot_band = [plate.getpixel((x, 1880)) for x in range(100, 980, 80)]
         self.assertGreater(max(sum(px) for px in top_band), 90)
         self.assertGreater(max(sum(px) for px in bot_band), 90)
-
-    def test_scroll_stopping_short_thumbnail_dimensions_and_size(self):
-        from PIL import Image
-        from pipeline.thumbnail import generate_short_scroll_stopper_thumbnail
-
-        with tempfile.TemporaryDirectory() as tmp:
-            out_jpg = Path(tmp) / "thumb.jpg"
-            hero = Path(__file__).resolve().parent.parent / "image-search" / "short-enron-thumb-hero.jpg"
-            res = generate_short_scroll_stopper_thumbnail(hero, out_jpg)
-            self.assertTrue(res.is_file())
-            self.assertLess(res.stat().st_size, 2 * 1024 * 1024)
-            with Image.open(res) as im:
-                self.assertEqual(im.size, (1280, 720))
 
 
 

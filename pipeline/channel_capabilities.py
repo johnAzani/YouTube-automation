@@ -99,6 +99,11 @@ class Brand:
     #: declared once here instead of a second copy inside the reply engine.
     comment_persona: str        # "the pastoral prayer team at {display_name}"
     comment_farewell: str       # the daypart-correct closing line
+    #: The ribbon line on a Short's 9:16 poster (2026-11-07). The poster used to
+    #: hardcode "PRAYER BEFORE SLEEP" for every channel, so a sunrise Short wore
+    #: the night channel's wording. `short_prayer_kind` still picks the colour
+    #: grade (night / dawn / noon); this picks the words.
+    shorts_poster_kicker: str
     #: Pinned comments. Both are .format() templates.
     longform_pinned_comment: str
     short_pinned_comment: str
@@ -197,6 +202,7 @@ _BRANDS: dict[str, Brand] = {
         short_key_namespace="",
         comment_persona="the pastoral prayer team at The Secret Place",
         comment_farewell="Rest in His peace tonight.",
+        shorts_poster_kicker="PRAYER BEFORE SLEEP",
         longform_pinned_comment=_SECRET_PLACE_COMMENT,
         short_pinned_comment=(
             "🕊️ PRAY THE FULL NIGHTTIME SCRIPTURE MEDITATION:\n"
@@ -266,6 +272,7 @@ _BRANDS: dict[str, Brand] = {
         short_key_namespace="morning",
         comment_persona="the morning prayer team at The Morning Altar",
         comment_farewell="Go into your day covered by His grace.",
+        shorts_poster_kicker="BEGIN YOUR DAY IN PRAYER",
         longform_pinned_comment=_MORNING_ALTAR_COMMENT,
         short_pinned_comment=(
             "🌅 PRAY THE FULL SUNRISE SCRIPTURE MEDITATION:\n"
@@ -333,6 +340,7 @@ _BRANDS: dict[str, Brand] = {
         short_key_namespace="midday",
         comment_persona="the midday prayer team at The Midday Watch",
         comment_farewell="Walk through this afternoon steady in His peace.",
+        shorts_poster_kicker="PAUSE AND PRAY AT NOON",
         longform_pinned_comment=_MIDDAY_WATCH_COMMENT,
         short_pinned_comment=(
             "☀️ PRAY THE FULL NOONDAY SCRIPTURE MEDITATION:\n"
