@@ -5,6 +5,14 @@ comes from this repository — the Actions API, the supervisor's own ledger, the
 annotations, and the code that runs — not from a vendor blog. Where a source is
 external it is cited in §11 and §16.1.
 
+> **Corrected in §56:** the empty `200` and the `429` are *not* one condition. On
+> 6 November the day was nineteen minutes old and had spent nothing when the first
+> `200`-with-no-audio arrived. Empty audio is its own defect — and it still counts as a
+> request, which is how two of them plus a Short become a day's quota. §54–§60 also find
+> the root cause: **25 of 27 queued scripts declare no channel at all**, so a script the
+> brain writes for prayer3 is published as secret-place, and nothing in `verify_and_stage`
+> checks.
+>
 > **The one-paragraph version (§53):** prayer3 has no scripts, so the coverage test can
 > never be satisfied, so the supervisor dispatches `produce.yml -f channel=prayer3` on
 > every pass; each pass re-renders the same 882-word narration against a **10-request
@@ -1998,3 +2006,240 @@ with no other change, will make the next day's first failure say *quota* — and
 after it will still fail, because nothing yet stops the second dispatch from trying.
 (3) The `generateContent` fallback has never once returned audio; every 400 in the run
 list that names `speechConfig` is it.
+
+---
+
+# Round 6 — the ledger says five, the quota says ten, and the channel says nothing at all
+
+Round 5 ended with a claim I have to correct. It read the empty-200 and the 429 as one
+condition. The 6 November morning shows they are two, and the order they arrived in
+names the cause.
+
+## 54. Finding 38 — the supervisor's own ledger, read from production
+
+`content/monitor/dispatched.json` on `main` is the record §42 (E4) reproduced in a
+sandbox. In production it has 25 keys. The produce slot, verbatim:
+
+```
+2026-11-02T10:47:51  produce.yml@2026-11-02T06:14:00+00:00  n=3  dispatched
+2026-11-03T19:55:39  produce.yml@2026-11-03T14:14:00+00:00  n=3  dispatched
+2026-11-05T09:41:38  produce.yml@2026-11-05T06:14:00+00:00  n=3  dispatched
+2026-11-06T08:31:14  produce.yml@2026-11-06T06:14:00+00:00  n=5  dispatched secret-place; prayer2 next pass (content-…
+2026-11-07T09:12:53  produce.yml@2026-11-07T06:14:00+00:00  n=3  dispatched secret-place; prayer2, prayer3 next pass
+```
+
+`n` is `attempts`: how many times that slot has been dispatched **today**. The cap is 7
+(E1). On 6 November it reached 5.
+
+Those five dispatches are visible as five runs, 08:00:36 → 08:31:16, and each one's
+synthesis step is in its annotations:
+
+| Run started | Synthesis at | Words | Result |
+| :--- | :--- | ---: | :--- |
+| 08:00:36 | 08:05:18 | 1102 | `400 INVALID_ARGUMENT` — `Unknown name "speechMetadata"`, `Unknown name "speechConfig"` (1.3 s) |
+| 08:06:11 | 08:10:36 | 1102 | `400 INVALID_ARGUMENT` (1.1 s) |
+| 08:13:17 | 08:24:50 | 882 | `no audio content … mime_types=none` (6.2 s) |
+| 08:26:45 | 08:28:42 | 882 | `no audio content … mime_types=none` (4.7 s) |
+| 08:31:16 | 08:36:20 | 882 | `429 RESOURCE_EXHAUSTED`, quota 10, `retry in 23h23m34s` (4.9 s) |
+
+Five retries of one slot, in thirty-one minutes, ending in the day's quota at 08:36.
+
+## 55. Finding 39 — the arithmetic that closes: attempts × requests = the day
+
+The 06:14 slot on 6 November: `n=5` in the ledger, five runs in the log, and
+`limit: 10` in the 429 twelve minutes after the fifth started. Each run attempted a
+long-form narration, which this repository chunks at 4,000 characters:
+
+```
+882 words  → 5,241 characters → 2 TTS requests   (measured, §57)
+```
+
+**5 attempts × 2 requests = 10 — the whole day, spent by one slot's retry loop, before
+eight in the morning.** The cap allows 7 attempts, which on a three-chunk day would be
+21 requests: two days of quota for one slot. The ledger and the refusal are the same
+number, and they are three lines apart in two different systems.
+
+This is what makes R16 expensive. The dispatch pump is not only noisy — each extra
+dispatch of a slot that cannot succeed is *two speech requests*, and the ledger's own
+counter (n) is not connected to the quota in any way.
+
+## 56. Finding 40 — correcting Round 5: the empty 200 is not the quota
+
+§51 said the 429 and the empty-200 were one condition. The 6 November order disproves
+it, and the arithmetic is unambiguous:
+
+- At 08:05 and 08:10 the same pipeline made two requests and got **400s**. A malformed
+  request is not served, so **it consumes nothing**.
+- At 08:24 — nineteen minutes into a day that had not yet spent a single request — the
+  next attempt returned **200 with no audio**. A quota that has not been spent cannot
+  be the reason.
+
+So the empty 200 is its own failure: the model accepts the request and produces nothing.
+What it *does* do is count. Six minutes later the day is gone, and by 08:36 the same
+request returns the honest 429.
+
+The corrected picture:
+
+| Shape | What it is | Costs a request? | What the code calls it |
+| :--- | :--- | :--- | :--- |
+| `400 INVALID_ARGUMENT` (`speechMetadata`, `speechConfig`) | malformed request — a broken path | no | raw `ClientError` |
+| `200`, `mime_types=none` | the model returned no audio | **yes** | "model-contract drift" |
+| `429 RESOURCE_EXHAUSTED` | the day's ten are spent | — | `GeminiQuotaExceededError` |
+
+The middle row is the actual defect, and it is worse than a mislabel: **a failure that
+produces nothing still spends the budget.** Two of them plus a retried Short is a day.
+The pipeline's own advice — "not retryable, set `GEMINI_TTS_MODEL`" — is applied to the
+one failure that *is* worth retrying with a different delivery recipe, and withheld from
+the one that is not.
+
+Which recipe? `DELIVERY_RECIPE = "tts-v4-speech-metadata-style"` sends the style in
+`speech_metadata`. The 400s at 08:05 and 08:10 name exactly that field
+(`Unknown name "speechMetadata" at contents[0].parts[0]`) and were returned by the
+`generateContent` fallback (`:648`, `types.SpeechConfig`). So on the morning of
+6 November this repository had two paths: one rejected by name, and one that returns
+silence. The 1,102-word script never got a single request served; the 882-word script
+got silence twice and then the quota.
+
+## 57. Finding 41 — the root cause: a script's channel is whatever the model remembered to write
+
+Round 5 said prayer3 has no scripts. Here is why, executed against the real queue:
+
+```
+declared `channel:` in content/queue/  →  {<absent>: 25, prayer2: 2}
+parsed doc.channel                     →  {secret-place: 25, prayer2: 2}
+publishable_longform('secret-place')   →  19
+publishable_longform('prayer2')        →   2
+publishable_longform('prayer3')        →   0
+```
+
+Twenty-seven queued scripts. **Twenty-five declare no channel at all**, so they parse as
+`secret-place` — the default. Two declare `prayer2`. Nothing declares `prayer3`, and
+nothing can, unless the model volunteers the line.
+
+Both shapes came from the same author:
+
+```
+4880f6e gemini-brain-bot chore(brain): autonomous scripture queue replenishment [skip ci]
+  content/queue/0039-mark-1-35-rising-early-to-pray.md      → channel: prayer2
+  content/queue/0033-numbers-6-24-26-the-priestly-benediction-of-peace.md → (no channel line)
+```
+
+One bot commit, one channel declared, one not. And nothing checks. `verify_and_stage`
+runs the finance-niche validator, writes a factcheck worksheet and generates a companion
+Short — it never compares `doc.channel` to `self.channel_id`:
+
+```python
+doc = parse_script(script_path)
+_validate_finance_niche(doc)
+factcheck_main([doc.id, "--force"])
+short_path, _ = self.generate_companion_short(doc)
+return BrainGenerationResult(...)          # doc.channel is never examined
+```
+
+`docs/MIDDAY_WATCH_BRANDING.md:36` states the design: *"scripts declare their owner in
+frontmatter (`channel: prayer3`), the pipeline refuses cross-channel…"*. The refusal does
+not exist in the code path that writes scripts.
+
+**The loop this closes.** A brain run for prayer3 authors a script whose front matter may
+omit `channel:`; it lands in `content/queue/` attributed to secret-place. prayer3's
+`publishable_longform` stays 0, so the parity gate stays red, so the coverage test stays
+unsatisfiable, so the supervisor keeps dispatching `channel=prayer3`, so produce re-renders
+the same head-of-queue script, so the channel's ten speech requests go, so the run fails,
+so the parity gate stays red. Every finding in this document from §32 onwards is downstream
+of a missing front-matter line and the missing assertion that would have caught it.
+
+## 58. Finding 42 — two reds nobody counted, and forty-four Pages builds
+
+Today, 00:00Z–10:00Z, every workflow run by count:
+
+| Workflow | Runs | Result |
+| :--- | ---: | :--- |
+| pages build and deployment | **44** | 30 `cancelled`, 14 success |
+| Scheduler supervisor | 27 | 26 success, 1 cancelled |
+| Automation monitor | **12** | **12 failure** |
+| Dry-run pipeline (CI proof) | **11** | 8 failure, 3 cancelled |
+| Produce video | 3 | 3 failure |
+| Gemini Brain | 1 | 1 failure |
+
+- **Automation monitor: 12 of 12 failed** — and it is the one component telling the
+  truth. Its annotations name the causes precisely: *"gemini_brain.yml: FAILING — failed
+  3.7h ago and nothing was changed since"*, *"The Midday Watch has nothing in
+  content/queue/ that is approved and over the 850-word floor … check
+  `python scripts/gemini_brain.py --ensure-supply-for prayer3`"*. It fails **by design**
+  when it finds a stall, so its redness is accurate reporting, drowned by the other ten
+  reds.
+- **Dry-run pipeline (CI proof): 8 failures on push**, from one assertion:
+
+  ```
+  AssertionError: 6 not greater than or equal to 8
+  tests/test_channel_autopilot_lock.py::TestShortKeyAndNonPsalmIntegrity::
+      test_all_staged_shorts_are_ready_and_enriched_with_selar_links
+  ```
+
+  Executed here: `queue_report()` returns **6** rows — `short-psalm91v5` `not_approved`,
+  and five `ready`. The test requires a staging depth of 8, which the release path
+  consumes faster than the poster refills. Same shape as the parity gate: an inventory
+  invariant enforced as a hard CI failure with nothing that maintains the inventory. (And
+  the release path selected `short-psalm91v5` — the `not_approved` one — for narration
+  this morning, which is the reverse of the rule the test is trying to protect.)
+- **44 Pages deployments in ten hours**, 30 of them cancelled: every content commit
+  triggers a build of the docs site. That is the largest single consumer of run minutes
+  in the repository.
+
+## 59. Finding 43 — the plan does not fit the quota, even when everything works
+
+Ten speech requests a day, per project per model (§50). The plan, per channel per day:
+
+| Item | Requests |
+| :--- | ---: |
+| long-form narration (882 words → 2 chunks) | 2 |
+| companion Short narration | 1 |
+| **one channel-day** | **3** |
+| three channels | **9** |
+| remaining for every retry, every re-render, every queue repair | **1** |
+
+One. And the supervisor's produce cap is 7 dispatches per slot per day, each of which
+may attempt 3. There is no configuration of the current design in which three channels
+publish daily *and* survive a single failure. That is not a bug to fix at the margin; it
+is a budget the pipeline has never been able to keep, which is why the published ledger
+(§31) shows 9 long-form videos in ten days rather than 30.
+
+Two ways forward, and they are not mutually exclusive: make the requests count
+(4,000-character chunks are already the maximum sensible size — 2 is the floor for a
+six-minute prayer), or stop paying twice for the same narration.
+
+The chunk cache exists for exactly the second reason and cannot help here. It is wired
+properly — `actions/cache/restore@v4` on `output/*/_gemini_chunks_*`, saved with
+`if: always()` under `chunks-tts-v4-${{ github.run_id }}` with the prefix key `chunks-`
+— but it only ever holds chunks that were *finished*. Every one of the attempts in §55
+died on the first chunk (1.1 s, 4.7 s, 4.9 s, 6.2 s), so there was nothing to restore,
+and each retry paid full price. A cache rescues a run that stalls at chunk 2 of 3. It
+cannot rescue a run whose narration never starts, which is the only failure this
+pipeline currently has.
+
+## 60. Round 6 ranking — attribution first, then the amplifier
+
+| # | Item | Why here now |
+| :-- | :--- | :--- |
+| **R21** | stamp `channel:` at authoring from `self.channel_id` and **refuse** a script whose declared channel differs; assert it in `verify_and_stage` | §57 — the root cause; the docs already promise this |
+| **R16** | coverage test only over channels the plan can serve; empty channel = supply fault, not a dispatch | §42, §55 — the amplifier, and it spends quota |
+| **R19** | per-request speech counter; empty-200 at cap = quota; a request that returns no audio still counts and must be visible | §55, §56 |
+| **R19b** | make the delivery recipe produce audio, and delete the `generateContent` fallback that returns `400` by name | §56 — the only failures worth a fix are the ones that produce nothing |
+| **R5** | cold start (`max_authors = shortfall`) — now *after* R21, since without it the scripts still cannot be attributed | §44, §57 |
+| **R12** | preflight must not spend completion quota | §22 |
+| **R3** | per-day request ledger for the brain | §43 |
+| **R20** | health: `always()` on the filing step, `continue-on-error` on parity, no push trigger | §52 |
+| **R22** | CI proofs that assert content inventory (parity ≥1 script/channel, ≥8 staged Shorts) must run as a report, not as a gate — or be given something that maintains the inventory | §58 |
+| remaining | R8″, R9, R10, R13, R17, R18, R2a, R11, R14, R15 | unchanged |
+
+**Predictions, falsifiable from the next pass's own files.**
+
+1. A brain run for prayer3 that succeeds will produce a file with **no `channel:` line**
+   more often than not — 25 of the 27 precedents say so. Stamping it is a one-line change
+   in `replenish_pipeline`, and it is the difference between a channel that can be fed and
+   one that cannot.
+2. With the channel stamped, prayer3 needs six scripts and the parity gate goes green —
+   and the `channel=prayer3` dispatches stop without touching the supervisor at all.
+3. The day's speech budget will still be spent by 09:00 until the *dispatch* count is
+   connected to the request count. Fixing the labels without fixing the counter changes
+   what the failure says, not whether it happens.
