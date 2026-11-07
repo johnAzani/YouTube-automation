@@ -157,6 +157,33 @@ def _placeholder_audio(text: str, out_path: Path) -> list[tuple[str, float, floa
     return word_times
 
 
+def synthesize_edge(text: str, out_path: Path, voice: str = "") -> tuple[str, list[tuple[str, float, float]]]:
+    """Narrate with edge-tts alone — the free engine, no key, no quota.
+
+    Split out of `synthesize()` so that a caller which has *already* tried Gemini
+    can fall back without trying it a second time. Under a ten-request day the
+    difference matters: on a spent day every retry is another request the channel
+    cannot afford, and the whole point of a fallback is to stop asking.
+
+    Returns `(engine, word_times)`, where `engine` is `"edge-tts"` or, when the
+    free engine is also unreachable, `"placeholder"` (silent tone bed) — the same
+    last resort `synthesize()` has always used.
+    """
+    out_path = Path(out_path)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    edge_voice = voice if (voice and voice.startswith("en-")) else "en-US-DavisNeural"
+    try:
+        word_times = asyncio.run(_edge_tts(text, edge_voice, CONFIG.tts_rate, out_path))
+        if not out_path.exists() or out_path.stat().st_size < 512:
+            raise RuntimeError("edge-tts produced no audio")
+        if not word_times:  # some edge-tts versions don't emit boundaries
+            word_times = _estimate_word_times(text, CONFIG.words_per_second)
+        return "edge-tts", word_times
+    except Exception as exc:  # noqa: BLE001 - fallback is the point
+        print(f"[tts] edge-tts unavailable ({exc!r}); using offline placeholder narration")
+        return "placeholder", _placeholder_audio(text, out_path)
+
+
 def synthesize(text: str, out_dir: Path, voice: str = "", srt_name: str = "captions") -> NarrationResult:
     out_dir.mkdir(parents=True, exist_ok=True)
     audio_path = out_dir / "narration.mp3"
@@ -185,17 +212,7 @@ def synthesize(text: str, out_dir: Path, voice: str = "", srt_name: str = "capti
 
     # 2. Fall back to edge-tts if Gemini was not used or failed
     if engine != "gemini-api":
-        edge_voice = voice if (voice and voice.startswith("en-")) else "en-US-DavisNeural"
-        try:
-            word_times = asyncio.run(_edge_tts(text, edge_voice, CONFIG.tts_rate, audio_path))
-            if not audio_path.exists() or audio_path.stat().st_size < 512:
-                raise RuntimeError("edge-tts produced no audio")
-            if not word_times:  # some edge-tts versions don't emit boundaries
-                word_times = _estimate_word_times(text, CONFIG.words_per_second)
-        except Exception as exc:  # noqa: BLE001 - fallback is the point
-            print(f"[tts] edge-tts unavailable ({exc!r}); using offline placeholder narration")
-            word_times = _placeholder_audio(text, audio_path)
-            engine = "placeholder"
+        engine, word_times = synthesize_edge(text, audio_path, voice)
 
     duration = word_times[-1][2] + 0.3 if word_times else 0.0
     # Prefer real audio duration when ffprobe is available

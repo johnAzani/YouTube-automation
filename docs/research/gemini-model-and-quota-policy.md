@@ -128,9 +128,13 @@ which pauses the work until the Pacific reset, rather than be retried inside a s
    model this pipeline was built on, with ~25× the daily allowance of 3.8-flash.
    `GEMINI_TEXT_MODEL` still overrides it.
 2. **Fallback chain, ordered by allowance first and generation second:**
-   `3.5-flash-lite → 3.1-flash-lite → 3.6-flash → 3.8-flash`, with deprecated and
-   retired names only after that (so an older key still works, but a retired model can
-   never be what we start with).
+   `3.5-flash-lite → 3.1-flash-lite → 3.6-flash → 3.8-flash → 3.7-flash` (deprecated
+   alias). **Retired names are not tried at all** unless `GEMINI_ALLOW_RETIRED_MODELS=1`
+   restores them, and even then they come last. Corrected 7 November after the
+   prayer3 supply run (06:39Z) spent three requests and three red annotations on
+   `2.5-flash`, `2.0-flash` and `1.5-flash`, all 404 — then reported the failure as a
+   *formatting* problem, which sent the diagnosis at the parser while the service was
+   the issue. An older project whose key still routes those names can opt back in.
 3. **One retry authority.** The brain builds its client with `attempts=1`; the SDK does
    not retry, `_call_model` does, with 5s/15s/30s/60s and a 30-minute supervisor
    cooldown behind it.
@@ -187,3 +191,34 @@ pipeline idles rather than spends.
   `CHANGELOG` 3.0.0 (v1 default, httpx2)
 - 503 discussion — <https://discuss.ai.google.dev/t/gemini-3-8-flash-api-continuously-returning-http-503-model-shows-operational-on-status-page/197810>,
   <https://discuss.ai.google.dev/t/gemini-model-usage-error/198545>
+
+## 7. What the 7 November 2026 failure actually was
+
+The prayer3 supply step (`--ensure-supply-for prayer3 --min-publishable 6`) had to
+author from scratch and failed. Reading the job summary line by line:
+
+| Model | What it did |
+| :--- | :--- |
+| `gemini-3.1-flash-lite` | answered, but no `## Scene` heading |
+| `gemini-3.6-flash` | 503 busy, then answered **without queue front matter** |
+| `gemini-3.8-flash` | 503 `UNAVAILABLE` through four backoffs |
+| `gemini-3.7-flash` | 503 `UNAVAILABLE` through four backoffs |
+| `gemini-2.5-flash` | 404 `NOT_FOUND` — retired |
+| `gemini-2.0-flash` | 404 `NOT_FOUND` — retired |
+| `gemini-1.5-flash` | 404 `NOT_FOUND` — retired |
+
+Three fixes, all in `pipeline/gemini_brain.py`:
+
+1. **Retired models are not attempted** (opt-in env above). They cost a request each
+   and emit a red annotation that looks like a code fault.
+2. **A quota answer stops the chain.** Every model shares the project's daily
+   allowance, so a `429 RESOURCE_EXHAUSTED` is not a reason to try six more.
+3. **Usable text is not thrown away.** An equivalent scene heading (`### SCENE 1`,
+   `**Scene 2** — Title`) is normalised to `## Scene N`, and a body that arrived
+   without its YAML envelope gets **one** targeted repair call to the same model
+   (bounded to two per run) instead of being discarded. The envelope is never
+   invented locally: `originality` is an attestation, so it comes from the model or
+   the script is refused.
+
+The failure message now lists what each model did, so the next red run names the
+service, the quota or the format instead of always blaming the format.

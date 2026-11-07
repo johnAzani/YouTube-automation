@@ -614,6 +614,7 @@ def _write_published_record(
     scene_count: int,
     thumbnail_results: dict[str, str] | None = None,
     channel_audit: list[dict] | None = None,
+    poster: dict | None = None,
 ) -> Path:
     PUBLISHED_DIR.mkdir(parents=True, exist_ok=True)
     now_utc = datetime.now(timezone.utc)
@@ -625,6 +626,33 @@ def _write_published_record(
     if thumbnail_results:
         lines = "\n".join(f"- `{vid}`: `{status}`" for vid, status in thumbnail_results.items())
         thumb_block = f"\n\n## Custom Thumbnail Apply Results\n\n{lines}\n"
+        if poster:
+            thumb_block += ("\nPoster: "
+                            f"{poster.get('width')}x{poster.get('height')}, "
+                            f"contrast {poster.get('contrast')}:1, "
+                            f"hero {poster.get('hero_px')}px, "
+                            f"grade `{poster.get('grade')}`, "
+                            f"safe-zone {poster.get('safe_zone_ok')}, "
+                            f"revision `{poster.get('revision')}`\n")
+
+    # A receipt is only allowed to say "done" when YouTube confirmed it. The old
+    # path wrote `not_supported_for_shorts` from a hardcoded string, so nine live
+    # Shorts looked explained and had no thumbnail at all.
+    landed = any(str(v) == "ok" for v in (thumbnail_results or {}).values())
+    thumb_fields = ""
+    if thumbnail_results:
+        if landed and poster:
+            thumb_fields += f'thumbnail_revision: "{poster.get("revision")}"\n'
+            thumb_fields += f'thumbnail_channel_grade: "{poster.get("grade")}"\n'
+        else:
+            failure = next((str(v) for v in thumbnail_results.values()), "not_attempted")
+            thumb_fields += "thumbnail_pending: true\n"
+            thumb_fields += f'thumbnail_error: {json.dumps(failure[:220])}\n'
+        if poster:
+            thumb_fields += ("thumbnail_poster: "
+                             + json.dumps(list(poster.get("lines") or [])) + "\n")
+            thumb_fields += f'thumbnail_kicker: {json.dumps(str(poster.get("kicker") or ""))}\n'
+            thumb_fields += f'thumbnail_plate: {json.dumps(str(poster.get("plate") or ""))}\n'
     audit_block = ""
     if channel_audit:
         audit_block = f"\n\n## Channel Video Status Audit\n\n```json\n{json.dumps(channel_audit, indent=2)}\n```\n"
@@ -650,6 +678,7 @@ def _write_published_record(
         f"height: {probe.height}\n"
         f"duration_seconds: {round(probe.duration_seconds, 2)}\n"
         f"scenes_verified: {scene_count}\n"
+        f"{thumb_fields}"
         "---\n\n"
         f"{edition.description}"
         f"{thumb_block}"
@@ -737,6 +766,36 @@ def _fallback_word_timings(narration_text: str, duration_s: float) -> list[list]
     return out
 
 
+def _synthesise_narration(text: str, audio: Path) -> str:
+    """Speak a Short with Gemini — or with the free engine if Gemini declines.
+
+    The Shorts path had the same hole as the long-form one (R23): a direct call, no
+    fallback, so the empty `200` that has blocked every Short since 6 November became
+    "refusing to render a silent Short" and cost the slot. `edge-tts` is free, needs no
+    key, and narrates the same words.
+
+    A spent allowance is still re-raised untouched: the $0.00 lock pauses the channel,
+    it never borrows. Returns the engine that spoke so the caller can tell a fallback
+    take from a refusal — `"placeholder"` means nothing spoke at all.
+    """
+    from .gemini_tts import synthesize_gemini_audio
+    from .quota_handler import GeminiQuotaExceededError
+    from .tts import synthesize_edge
+
+    try:
+        synthesize_gemini_audio(text, audio, voice="Charon")
+        return "gemini-3.8-flash-tts"
+    except GeminiQuotaExceededError:
+        raise
+    except Exception as exc:  # noqa: BLE001 - any other refusal is worth a second engine
+        print(f"[short-release] gemini narration produced no audio ({exc}); "
+              f"falling back to edge-tts")
+
+    engine, _words = synthesize_edge(text, audio, "Charon")
+    print(f"[short-release] narration engine this run: {engine}")
+    return engine
+
+
 def _ensure_word_timings(short_key: str, audio_path: Path, narration_text: str) -> Path:
     """Generate `assets/deepdive/words-{short_key}.json` (`[[t0, t1, word], ...]`).
 
@@ -799,7 +858,11 @@ def _ensure_narration(short_key: str) -> None:
 
             audio.parent.mkdir(parents=True, exist_ok=True)
             print(f"[short-release] synthesising narration for {short_key} ({spec.words} words)")
-            synthesize_gemini_audio(spec.narration_text, audio, voice="Charon")
+            engine = _synthesise_narration(spec.narration_text, audio)
+            if engine == "placeholder":
+                raise RuntimeError(
+                    f"no engine could narrate {short_key}: gemini returned no audio and "
+                    f"edge-tts was unreachable; refusing to render a silent Short")
         _ensure_word_timings(short_key, audio, spec.narration_text)
     except (QuotaExceededError, GeminiQuotaExceededError):
         raise
@@ -945,49 +1008,53 @@ def run_short_release(
     shutil.copy2(video_path, staged_video)
     shutil.copy2(sources_path, stage_dir / "scene-sources.json")
 
-    from .thumbnail import generate_short_scroll_stopper_thumbnail
+    # The poster is a native 9:16 image now, not a 1280x720 plate that YouTube
+    # would crop to a 405px strip (see pipeline/shorts_poster.py). It is measured
+    # before it is written: contrast >= 7.0 behind the hero, every word inside the
+    # Shorts UI safe zone, or it refuses.
+    from .channel_capabilities import brand_for
+    from .shorts_poster import (
+        POSTER_REVISION,
+        PosterRefused,
+        kicker_for,
+        lines_from_title,
+        poster_for_spec,
+        render_shorts_poster,
+    )
 
-    if edition.niche == "faith and prayer" or "psalm" in edition.key or "prayer" in edition.key:
-        hero_bg = REPO_ROOT / "image-search" / "short-prayer-cover-poster.jpg"
-        kicker, line1, line2, tag = "PRAYER BEFORE SLEEP", "PSALM", "91", "DIVINE PROTECTION"
-        if edition.key != "short-psalm91":
-            m_book = re.search(
-                r"(?i)\b((?:1|2)\s*(?:Timothy|Peter|Corinthians|John)|Psalm|Proverbs|Isaiah|Matthew|John|Philippians|Numbers|Romans)\s*(\d+)",
-                f"{edition.title} {edition.key}",
-            )
-            if m_book:
-                line1 = re.sub(r"\s+", " ", m_book.group(1)).strip().upper()
-                line2 = m_book.group(2)
-            else:
-                m_num = re.search(r"psalm\s*(\d+)", f"{edition.key} {edition.title}", re.I)
-                line2 = m_num.group(1) if m_num else "PEACE"
-            try:
-                from .short_script import load_spec, spec_path
+    brand = brand_for(edition.channel)
+    spec_payload: dict | None = None
+    try:
+        from .short_script import spec_path as _spec_path
 
-                sp = spec_path(edition.key)
-                if sp.is_file():
-                    spec_obj = load_spec(sp)
-                    if len(spec_obj.poster) >= 4:
-                        kicker = spec_obj.poster[0][:28]
-                        tag = spec_obj.poster[3][:28]
-            except Exception:  # noqa: BLE001
-                tag = "DIVINE PEACE"
-        staged_thumb = generate_short_scroll_stopper_thumbnail(
-            bg_path=hero_bg,
-            out_path=stage_dir / "thumbnail.jpg",
-            kicker=kicker,
-            line1=line1,
-            line2=line2,
-            tag=tag,
-        )
-    else:
-        hero_bg = REPO_ROOT / "image-search" / "short-enron-thumb-hero.jpg"
-        if not hero_bg.is_file():
-            hero_bg = REPO_ROOT / "image-search" / "short-enron-crash-poster.jpg"
-        staged_thumb = generate_short_scroll_stopper_thumbnail(
-            bg_path=hero_bg,
-            out_path=stage_dir / "thumbnail.jpg",
-        )
+        _sp = _spec_path(edition.key)
+        if _sp.is_file():
+            spec_payload = json.loads(_sp.read_text(encoding="utf-8"))
+    except Exception as spec_exc:  # noqa: BLE001
+        print(f"[short-release] Notice: spec poster unavailable for {edition.key}: {spec_exc}")
+
+    staged_thumb: Path | None = stage_dir / "thumbnail.jpg"
+    poster_report = None
+    try:
+        if spec_payload:
+            poster_report = poster_for_spec(spec_payload, staged_thumb,
+                                            channel_id=edition.channel)
+        else:
+            h1, h2, sub, tag = lines_from_title(edition.title, brand.display_name.upper())
+            poster_report = render_shorts_poster(
+                staged_thumb, lines=(h1, h2, sub, tag),
+                kicker=kicker_for(edition.channel), channel_id=edition.channel)
+        print(f"[short-release] poster {poster_report.width}x{poster_report.height} "
+              f"contrast={poster_report.contrast:.1f} hero={poster_report.hero_px}px "
+              f"grade={poster_report.grade}")
+    except (PosterRefused, Exception) as refused:  # noqa: BLE001 - never block a release
+        # A Short is the ride-along, never the release: publish it, but say out
+        # loud that its poster was refused and leave the receipt marked so the
+        # monitor's repair pass retries instead of pretending it is fine.
+        reason = "poster refused" if isinstance(refused, PosterRefused) else "poster failed"
+        print(f"::warning title=Shorts {reason}::{edition.key} — {refused}")
+        staged_thumb = None
+        poster_report = None
 
     result: dict = {
         "id": edition.job_id,
@@ -1000,7 +1067,8 @@ def run_short_release(
         "duration_seconds": round(probe.duration_seconds, 2),
         "scenes_verified": len(scenes),
         "video": str(staged_video),
-        "thumbnail": str(staged_thumb),
+        "thumbnail": str(staged_thumb) if staged_thumb else "",
+        "thumbnail_report": poster_report.as_dict() if poster_report else None,
         "dry_run": dry_run,
     }
 
@@ -1011,6 +1079,7 @@ def run_short_release(
             calculate_next_quota_reset_utc,
         )
         from .upload import (
+            apply_shorts_thumbnail,
             audit_channel_videos,
             delete_video,
             set_video_thumbnail,
@@ -1074,15 +1143,30 @@ def run_short_release(
         if not up.video_id:
             raise RuntimeError("YouTube upload returned no video ID; leaving published ledger untouched.")
 
-        # Shorts cannot take custom thumbnails: thumbnails.set fails for them, and
-        # the call still costs quota. Record it instead of paying for a known failure.
-        thumb_results: dict[str, str] = {up.video_id: "not_supported_for_shorts"}
-        print("[short-release] skipping thumbnails.set: YouTube rejects custom thumbnails on Shorts")
+        # thumbnails.set has supported Shorts since 2026-11-03 (API revision history),
+        # after processing completes. Before that the API accepted the call and
+        # ignored it, which is why this path skipped it and every receipt recorded
+        # `not_supported_for_shorts` without ever asking YouTube. `apply_shorts_thumbnail`
+        # waits for processing, sets, retries a 429, and verifies the response really
+        # carries `shortsAspectRatio` before calling it done.
+        thumb_results: dict[str, str] = {}
+        if staged_thumb is not None:
+            try:
+                thumb_results[up.video_id] = apply_shorts_thumbnail(up.video_id, staged_thumb)
+            except Exception as thumb_exc:  # noqa: BLE001
+                # The Short is published; a thumbnail is not worth a red release.
+                # The receipt records `thumbnail_pending: true`, and the monitor's
+                # repair pass applies it on a later run (thumbnails.set is 50 units).
+                thumb_results[up.video_id] = f"error: {type(thumb_exc).__name__}: {thumb_exc}"[:300]
+                print(f"::warning title=Shorts thumbnail not applied::{up.video_id} — {thumb_exc}")
+            print(f"[short-release] shorts thumbnail: {thumb_results[up.video_id]}")
+        else:
+            thumb_results[up.video_id] = "poster_refused"
 
         # Ensure every unlocked legacy Short on the channel stops carrying the old frame
         for old_vid in legacy_video_ids:
             if old_vid and old_vid != up.video_id:
-                thumb_results[old_vid] = "not_supported_for_shorts"
+                thumb_results[old_vid] = "deleted_legacy_duplicate"
                 delete_video(old_vid)
 
         channel_audit = audit_channel_videos([up.video_id, *legacy_video_ids])
@@ -1123,6 +1207,7 @@ def run_short_release(
             len(scenes),
             thumbnail_results=thumb_results,
             channel_audit=channel_audit,
+            poster=poster_report.as_dict() if poster_report else None,
         )
         if manifest_path and manifest_path.is_file():
             manifest_path.unlink()

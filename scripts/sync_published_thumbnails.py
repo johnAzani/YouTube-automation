@@ -20,12 +20,22 @@ from typing import Any
 from pipeline.channels import CHANNELS, channel_for_doc, get_channel
 from pipeline.config import CONFIG, OUTPUT_DIR, PUBLISHED_DIR
 from pipeline.script_doc import parse_script
+from pipeline.shorts_poster import (
+    POSTER_REVISION as SHORTS_POSTER_REVISION,
+    PosterRefused,
+    poster_for_slug,
+    render_shorts_poster,
+)
 from pipeline.thumbnail_ctr import (
     THUMBNAIL_REVISION,
     curated_backdrop_for,
     generate_ctr_pack,
 )
-from pipeline.upload import set_video_thumbnail
+from pipeline.upload import apply_shorts_thumbnail, set_video_thumbnail
+
+#: Stop retrying a Short whose thumbnail YouTube keeps refusing (no YPP, bad token
+#: scope): five honest attempts, then a human decides. `--force` clears the block.
+SHORTS_MAX_ATTEMPTS = 5
 
 # Curated 3-word mobile-maximised hooks for the initial published prayers so we do
 # not have to alter historical frontmatter that existing unit tests assert against.
@@ -67,14 +77,19 @@ def clear_frontmatter_field(path: Path, key: str) -> None:
     path.write_text(f"---\n{metadata}\n---{m.group('tail')}", encoding="utf-8")
 
 
-def stamp_frontmatter_field(path: Path, key: str, value: str) -> None:
-    """Insert or update a top-level scalar field in a Markdown receipt's YAML frontmatter."""
+def stamp_frontmatter_field(path: Path, key: str, value: str, raw: bool = False) -> None:
+    """Insert or update a top-level field in a Markdown receipt's YAML frontmatter.
+
+    Values are JSON-quoted by default, which is exactly right for scalars and wrong
+    for a list: `thumbnail_poster` must read as `["PSALM 91", ...]` in the receipt,
+    not as a quoted blob of JSON, so lists pass `raw=True` with YAML flow syntax.
+    """
     text = path.read_text(encoding="utf-8")
     m = re.match(r"\A---\s*\n(.*?)\n---(?P<tail>\s*\n.*|\Z)", text, re.S)
     if not m:
         raise ValueError(f"{path}: missing YAML frontmatter")
     metadata = m.group(1)
-    line = f"{key}: {json.dumps(value)}"
+    line = f"{key}: {value if raw else json.dumps(value)}"
     pattern = rf"(?m)^{re.escape(key)}\s*:.*$"
     if re.search(pattern, metadata):
         metadata = re.sub(pattern, line, metadata, count=1)
@@ -119,6 +134,84 @@ def collect_pending_receipts(
             continue
         pending.append((path, doc))
     return pending
+
+
+def collect_pending_short_receipts(
+    published_dir: Path = PUBLISHED_DIR,
+    force: bool = False,
+    channel_id: str | None = None,
+) -> list[tuple[Path, Any]]:
+    """Return `(path, ScriptDoc)` for published Shorts whose poster is not confirmed.
+
+    Shorts were excluded here by `fmt != "longform"`, which is the second half of
+    the reason nine live Shorts carry an auto-grabbed frame: the release path never
+    asked YouTube for a thumbnail, and the only repair pass that could have fixed
+    it on a later run skipped them by format. thumbnails.set has supported Shorts
+    since 2026-11-03, so a Short is now repairable exactly like a long-form video.
+    """
+    pending: list[tuple[Path, Any]] = []
+    want = str(channel_id).strip().lower() if channel_id else ""
+    if not published_dir.is_dir():
+        return pending
+    for path in sorted(published_dir.glob("*.md")):
+        try:
+            doc = parse_script(path)
+        except Exception as exc:  # noqa: BLE001
+            print(f"[thumb-sync] skip unreadable {path.name}: {exc}")
+            continue
+        if want and channel_for_doc(doc.meta) != want:
+            continue
+        fmt = str(getattr(doc, "format", "") or doc.meta.get("format", "")).strip().lower()
+        vid = str(doc.meta.get("youtube_video_id", "") or "").strip()
+        if fmt != "short" or not vid:
+            continue
+        rev = str(doc.meta.get("thumbnail_revision", "") or "").strip()
+        if not force and rev == SHORTS_POSTER_REVISION:
+            continue
+        # A permanent refusal (no YPP, wrong token scope) would otherwise cost 50
+        # units every monitor pass, forever. Five honest attempts, then wait for a
+        # human: `--force` clears the block and `thumbnail_error` says why.
+        try:
+            attempts = int(doc.meta.get("thumbnail_attempts") or 0)
+        except (TypeError, ValueError):
+            attempts = 0
+        if not force and attempts >= SHORTS_MAX_ATTEMPTS:
+            print(f"[thumb-sync] skip {path.name}: {attempts} failed Shorts thumbnail "
+                  f"attempts (last: {str(doc.meta.get('thumbnail_error') or '')[:120]!r}); "
+                  f"run with --force to retry")
+            continue
+        pending.append((path, doc))
+    return pending
+
+
+def _shorts_poster_for(doc, out_path: Path, channel_id: str):
+    """Rebuild a live Short's poster: receipt copy first, then its spec.
+
+    Receipts from 2026-11-07 onward carry the authored lockup, so a repair never
+    depends on the queue still holding the manifest. Older receipts fall back to
+    the spec the slug names, which every published Short in this repo still has.
+    """
+    lines = doc.meta.get("thumbnail_poster")
+    if isinstance(lines, str) and lines.strip().startswith("["):
+        try:
+            lines = json.loads(lines)
+        except ValueError:
+            lines = None
+    if isinstance(lines, (list, tuple)) and len(lines) >= 2:
+        return render_shorts_poster(
+            out_path,
+            lines=[str(x) for x in lines][:4],
+            kicker=str(doc.meta.get("thumbnail_kicker") or "") or None,
+            channel_id=channel_id,
+            plate=str(doc.meta.get("thumbnail_plate") or "") or None,
+        )
+    report = poster_for_slug(str(doc.slug or doc.id or ""), out_path, channel_id=channel_id)
+    if report is not None:
+        return report
+    from pipeline.shorts_poster import lines_from_title
+
+    h1, h2, sub, tag = lines_from_title(str(doc.title or ""), "")
+    return render_shorts_poster(out_path, lines=(h1, h2, sub, tag), channel_id=channel_id)
 
 
 def _channel_credentials(profile) -> tuple[str, str, str]:
@@ -189,6 +282,8 @@ def sync_published_thumbnails(
     youtube_client: Any = None,
     thumb_setter=None,
     channel: str | None = None,
+    shorts_only: bool = False,
+    limit: int | None = None,
 ) -> list[dict[str, Any]]:
     """Render and apply cinema thumbnails (+ privacy/title hygiene) for live videos.
 
@@ -197,12 +292,17 @@ def sync_published_thumbnails(
     own channel and nothing else.
     """
     profile = get_channel(channel or CONFIG.channel_id)
-    pending = collect_pending_receipts(
+    pending = [] if shorts_only else collect_pending_receipts(
         published_dir=published_dir, force=force, channel_id=profile.id
     )
-    if not pending:
-        print(f"[thumb-sync] {profile.id}: all published long-form videos are at "
-              f"{THUMBNAIL_REVISION}")
+    pending_shorts = collect_pending_short_receipts(
+        published_dir=published_dir, force=force, channel_id=profile.id
+    )
+    if limit is not None and limit >= 0:
+        pending_shorts = pending_shorts[:limit]
+    if not pending and not pending_shorts:
+        print(f"[thumb-sync] {profile.id}: every published video is at "
+              f"{THUMBNAIL_REVISION} / {SHORTS_POSTER_REVISION}")
         return []
 
     if not dry_run and youtube_client is None and not _has_youtube_credentials(profile):
@@ -376,6 +476,57 @@ def sync_published_thumbnails(
                           f"thumbnail_pending: true and the next monitor pass retries "
                           f"it (50 quota units per attempt).")
         print(f"::notice title=Live thumbnail sync::{json.dumps(row)}")
+        results.append(row)
+
+    # ---- Shorts: the same contract, at 9:16 ------------------------------- #
+    for path, doc in pending_shorts:
+        vid = str(doc.meta.get("youtube_video_id", "")).strip()
+        doc_key = str(doc.id or doc.slug)
+        row: dict[str, Any] = {"id": doc_key, "video_id": vid, "format": "short",
+                               "thumbnail_status": "dry_run" if dry_run else "pending"}
+        poster = None
+        try:
+            poster = _shorts_poster_for(doc, out_root / "shorts" / doc_key / "poster.jpg",
+                                        profile.id)
+            row["poster"] = poster.as_dict()
+            row["contrast"] = round(poster.contrast, 2)
+            row["hero_px"] = poster.hero_px
+        except PosterRefused as exc:
+            row["thumbnail_status"] = f"poster_refused: {exc}"
+            print(f"::warning title=Shorts poster refused ({profile.id})::{doc_key} — {exc}")
+            if not dry_run:
+                stamp_frontmatter_field(path, "thumbnail_pending", True)
+                stamp_frontmatter_field(path, "thumbnail_error", str(exc)[:900])
+            results.append(row)
+            continue
+
+        if not dry_run and poster is not None:
+            status = apply_shorts_thumbnail(vid, poster.path, youtube=yt)
+            row["thumbnail_status"] = status
+            if status == "ok":
+                stamp_frontmatter_field(path, "thumbnail_revision", SHORTS_POSTER_REVISION)
+                stamp_frontmatter_field(path, "thumbnail_pending", False)
+                stamp_frontmatter_field(path, "thumbnail_attempts", 0)
+                clear_frontmatter_field(path, "thumbnail_error")
+                stamp_frontmatter_field(
+                    path, "thumbnail_poster",
+                    "[" + ", ".join(json.dumps(str(x)) for x in poster.lines) + "]",
+                    raw=True)
+                stamp_frontmatter_field(path, "thumbnail_kicker", poster.kicker)
+                stamp_frontmatter_field(path, "thumbnail_plate", poster.plate)
+            else:
+                try:
+                    seen = int(doc.meta.get("thumbnail_attempts") or 0)
+                except (TypeError, ValueError):
+                    seen = 0
+                stamp_frontmatter_field(path, "thumbnail_attempts", seen + 1)
+                stamp_frontmatter_field(path, "thumbnail_pending", True)
+                stamp_frontmatter_field(path, "thumbnail_error", str(status)[:900])
+                print(f"::warning title=Shorts thumbnail not applied "
+                      f"({profile.id})::{vid} — {status}. The receipt keeps "
+                      f"thumbnail_pending: true and the next monitor pass retries it "
+                      f"(50 quota units per attempt).")
+        print(f"::notice title=Shorts thumbnail sync::{json.dumps(row)}")
         results.append(row)
 
     return results
