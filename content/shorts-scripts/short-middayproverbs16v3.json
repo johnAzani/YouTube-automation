@@ -1,0 +1,286 @@
+{
+  "key": "short-middayproverbs16v3",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "COMMIT YOUR WORK",
+    "PROVERBS 16:3"
+  ],
+  "poster": [
+    "THE MIDDAY WATCH",
+    "PAUSE AND PRAY",
+    "PROVERBS 16:3",
+    "MIDDAY PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "midday sun shining through a quiet office window",
+    "open Bible on wooden desk soft midday sunlight",
+    "bright midday light on open grass field gentle breeze",
+    "peaceful sunlit room with wooden table and plants",
+    "warm sunlight pouring onto clear wooden workspace",
+    "calm blue sky high sun midday atmosphere"
+  ],
+  "scenes": [
+    {
+      "a": "Pause whatever you are doing right now and take a calm, deep breath this midday.",
+      "img": "short-middayproverbs16v3-scene-01.jpg",
+      "kicker": "PROVERBS 16:3",
+      "sub": "PAUSE AND BREATHE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "God's Word tells us in Proverbs 16 verse 3: Commit to the Lord whatever you do, and your plans will succeed.",
+      "img": "short-middayproverbs16v3-scene-02.jpg",
+      "kicker": "PROVERBS 16:3",
+      "sub": "COMMIT YOUR WORK",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "As the noon sun stands high, release the heavy burden of your unfinished tasks into His hands.",
+      "img": "short-middayproverbs16v3-scene-03.jpg",
+      "kicker": "PROVERBS 16:3",
+      "sub": "RELEASE YOUR BURDENS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Surrender your daily efforts, your quiet worries, and your future ambitions to the Lord right now.",
+      "img": "short-middayproverbs16v3-scene-04.jpg",
+      "kicker": "PROVERBS 16:3",
+      "sub": "SURRENDER EVERYTHING",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, establish our thoughts and guide every step we take throughout the rest of this day.",
+      "img": "short-middayproverbs16v3-scene-05.jpg",
+      "kicker": "PROVERBS 16:3",
+      "sub": "GUIDE OUR STEPS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Rest in His guidance and walk in peace. Subscribe to pause and pray with us every noon.",
+      "img": "short-middayproverbs16v3-scene-06.jpg",
+      "kicker": "PROVERBS 16:3",
+      "sub": "PAUSE AND PRAY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "Pause whatever you are doing right now and take a calm, deep breath this midday."
+    ],
+    [
+      7,
+      16,
+      "God's Word tells us in Proverbs 16 verse 3: Commit to the Lord whatever you do, and your plans will succeed."
+    ],
+    [
+      16,
+      25,
+      "As the noon sun stands high, release the heavy burden of your unfinished tasks into His hands."
+    ],
+    [
+      25,
+      34,
+      "Surrender your daily efforts, your quiet worries, and your future ambitions to the Lord right now."
+    ],
+    [
+      34,
+      43,
+      "Heavenly Father, establish our thoughts and guide every step we take throughout the rest of this day."
+    ],
+    [
+      43,
+      52,
+      "Rest in His guidance and walk in peace. Subscribe to pause and pray with us every noon."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "PAUSE WHATEVER YOU ARE DOING",
+        "RIGHT NOW AND TAKE A",
+        "CALM DEEP BREATH THIS MIDDAY"
+      ],
+      [
+        "CALM",
+        "DEEP",
+        "BREATH"
+      ],
+      "PROVERBS 16:3"
+    ],
+    [
+      7,
+      16,
+      [
+        "COMMIT TO THE LORD",
+        "WHATEVER YOU DO AND YOUR",
+        "PLANS WILL BE ESTABLISHED"
+      ],
+      [
+        "COMMIT",
+        "TO",
+        "THE",
+        "LORD"
+      ],
+      "PROVERBS 16:3"
+    ],
+    [
+      16,
+      25,
+      [
+        "RELEASE THE HEAVY BURDEN",
+        "OF YOUR UNFINISHED TASKS",
+        "INTO HIS FAITHFUL HANDS"
+      ],
+      [
+        "RELEASE",
+        "YOUR",
+        "UNFINISHED",
+        "TASKS"
+      ],
+      "PROVERBS 16:3"
+    ],
+    [
+      25,
+      34,
+      [
+        "SURRENDER YOUR DAILY EFFORTS",
+        "YOUR QUIET WORRIES AND",
+        "FUTURE AMBITIONS RIGHT NOW"
+      ],
+      [
+        "SURRENDER",
+        "YOUR",
+        "DAILY",
+        "EFFORTS"
+      ],
+      "PROVERBS 16:3"
+    ],
+    [
+      34,
+      43,
+      [
+        "HEAVENLY FATHER ESTABLISH OUR",
+        "THOUGHTS AND GUIDE EVERY",
+        "STEP WE TAKE TODAY"
+      ],
+      [
+        "GUIDE",
+        "EVERY",
+        "STEP"
+      ],
+      "PROVERBS 16:3"
+    ],
+    [
+      43,
+      52,
+      [
+        "REST IN HIS GUIDANCE AND",
+        "WALK IN PEACE SUBSCRIBE TO",
+        "PRAY WITH US EVERY NOON"
+      ],
+      [
+        "REST",
+        "IN",
+        "HIS",
+        "GUIDANCE"
+      ],
+      "PROVERBS 16:3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Pause whatever you are doing right now and take a calm, deep breath this midday.",
+      "kind": "phrase",
+      "words": [
+        "DEEP",
+        "BREATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "God's Word tells us in Proverbs 16 verse 3: Commit to the Lord whatever you do, and your plans will succeed.",
+      "kind": "phrase",
+      "words": [
+        "COMMIT",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As the noon sun stands high, release the heavy burden of your unfinished tasks into His hands.",
+      "kind": "phrase",
+      "words": [
+        "RELEASE",
+        "BURDEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Surrender your daily efforts, your quiet worries, and your future ambitions to the Lord right now.",
+      "kind": "phrase",
+      "words": [
+        "SURRENDER",
+        "EFFORTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, establish our thoughts and guide every step we take throughout the rest of this day.",
+      "kind": "phrase",
+      "words": [
+        "GUIDE",
+        "STEPS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Rest in His guidance and walk in peace. Subscribe to pause and pray with us every noon.",
+      "kind": "phrase",
+      "words": [
+        "PAUSE",
+        "PRAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 16:3"
+}

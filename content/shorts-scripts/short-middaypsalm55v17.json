@@ -1,0 +1,282 @@
+{
+  "key": "short-middaypsalm55v17",
+  "channel": "prayer3",
+  "psalm": 55,
+  "title": [
+    "PAUSE YOUR DAY",
+    "FIND STILLNESS"
+  ],
+  "poster": [
+    "MIDDAY PRAYER",
+    "PSALM 55:17",
+    "THE MIDDAY WATCH",
+    "SEEK THE LORD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "sunlight streaming through a window onto a wooden floor",
+    "a quiet desk with a closed journal and a cup of tea",
+    "high sun over a vast open field with gentle breeze",
+    "dappled light filtering through green tree leaves",
+    "soft light reflecting on a glass of water",
+    "peaceful shadows lengthening on a clean wall"
+  ],
+  "scenes": [
+    {
+      "a": "Take a moment to pause whatever you are doing right now.",
+      "img": "short-middaypsalm55v17-scene-01.jpg",
+      "kicker": "MIDDAY REFLECTION",
+      "sub": "STOP EVERYTHING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The world is noisy and fast, but this midday hour is for you to rest.",
+      "img": "short-middaypsalm55v17-scene-02.jpg",
+      "kicker": "FIND YOUR STILLNESS",
+      "sub": "BREATHE DEEPLY",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.7
+      ]
+    },
+    {
+      "a": "In the scripture of Psalm 55:17, we find these words: Evening, and morning, and at noon, will I pray, and cry aloud: and he shall hear my voice.",
+      "img": "short-middaypsalm55v17-scene-03.jpg",
+      "kicker": "PSALM 55:17",
+      "sub": "GOD HEARS YOU",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Let us offer a simple prayer together in this quiet space today.",
+      "img": "short-middaypsalm55v17-scene-04.jpg",
+      "kicker": "PRAY WITH ME",
+      "sub": "A QUIET OFFERING",
+      "cam": "push_in",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, thank you for this midday moment of quiet reflection.",
+      "img": "short-middaypsalm55v17-scene-05.jpg",
+      "kicker": "HEAVENLY FATHER",
+      "sub": "THANK YOU FOR PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Grant us the wisdom to hear your voice clearly amidst the busy day.",
+      "img": "short-middaypsalm55v17-scene-06.jpg",
+      "kicker": "SEEKING WISDOM",
+      "sub": "GUIDE OUR STEPS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Take a moment to pause whatever you are doing right now."
+    ],
+    [
+      8,
+      16,
+      "The world is noisy and fast, but this midday hour is for you to rest."
+    ],
+    [
+      16,
+      28,
+      "In the scripture of Psalm 55:17, we find these words: Evening, and morning, and at noon, will I pray, and cry aloud: and he shall hear my voice."
+    ],
+    [
+      28,
+      36,
+      "Let us offer a simple prayer together in this quiet space today."
+    ],
+    [
+      36,
+      44,
+      "Heavenly Father, thank you for this midday moment of quiet reflection."
+    ],
+    [
+      44,
+      52,
+      "Grant us the wisdom to hear your voice clearly amidst the busy day."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "TAKE A MOMENT",
+        "TO PAUSE",
+        "WHATEVER YOU ARE",
+        "DOING RIGHT NOW"
+      ],
+      [
+        "PAUSE",
+        "RIGHT NOW"
+      ],
+      "PSALM 55:17"
+    ],
+    [
+      8,
+      16,
+      [
+        "THE WORLD IS",
+        "NOISY AND FAST",
+        "BUT THIS MIDDAY",
+        "IS FOR YOU"
+      ],
+      [
+        "NOISY",
+        "MIDDAY"
+      ],
+      "PSALM 55:17"
+    ],
+    [
+      16,
+      28,
+      [
+        "EVENING AND MORNING",
+        "AND AT NOON",
+        "WILL I PRAY",
+        "AND CRY ALOUD"
+      ],
+      [
+        "AT NOON",
+        "CRY ALOUD"
+      ],
+      "PSALM 55:17"
+    ],
+    [
+      28,
+      36,
+      [
+        "LET US OFFER",
+        "A SIMPLE PRAYER",
+        "TOGETHER IN THIS",
+        "QUIET SPACE"
+      ],
+      [
+        "SIMPLE PRAYER",
+        "QUIET SPACE"
+      ],
+      "PSALM 55:17"
+    ],
+    [
+      36,
+      44,
+      [
+        "HEAVENLY FATHER",
+        "THANK YOU FOR",
+        "THIS MIDDAY MOMENT",
+        "OF QUIET REFLECTION"
+      ],
+      [
+        "HEAVENLY FATHER",
+        "REFLECTION"
+      ],
+      "PSALM 55:17"
+    ],
+    [
+      44,
+      52,
+      [
+        "GRANT US THE",
+        "WISDOM TO HEAR",
+        "YOUR VOICE CLEARLY",
+        "AMIDST THE DAY"
+      ],
+      [
+        "WISDOM",
+        "VOICE CLEARLY"
+      ],
+      "PSALM 55:17"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Take a moment to pause whatever you are doing right now.",
+      "kind": "phrase",
+      "words": [
+        "PAUSE",
+        "RIGHT NOW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The world is noisy and fast, but this midday hour is for you to rest.",
+      "kind": "phrase",
+      "words": [
+        "NOISY",
+        "MIDDAY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "In the scripture of Psalm 55:17, we find these words: Evening, and morning, and at noon, will I pray, and cry aloud: and he shall hear my voice.",
+      "kind": "phrase",
+      "words": [
+        "AT NOON",
+        "CRY ALOUD"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Let us offer a simple prayer together in this quiet space today.",
+      "kind": "phrase",
+      "words": [
+        "SIMPLE PRAYER",
+        "QUIET SPACE"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, thank you for this midday moment of quiet reflection.",
+      "kind": "phrase",
+      "words": [
+        "HEAVENLY FATHER",
+        "REFLECTION"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us the wisdom to hear your voice clearly amidst the busy day.",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "VOICE CLEARLY"
+      ],
+      "hi": 5,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 55:17"
+}

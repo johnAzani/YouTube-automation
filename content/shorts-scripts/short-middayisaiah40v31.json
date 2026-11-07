@@ -1,0 +1,296 @@
+{
+  "key": "short-middayisaiah40v31",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "RENEW YOUR STRENGTH",
+    "MIDDAY PRAYER"
+  ],
+  "poster": [
+    "THE MIDDAY WATCH",
+    "PAUSE AND PRAY",
+    "ISAIAH 40:31",
+    "MIDDAY RENEWAL"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "midday sun streaming through wooden window frame desk",
+    "bright midday sunlight open Bible on wooden table",
+    "high sun over calm open mountain meadow valley",
+    "soft midday light quiet room warm wooden tea table",
+    "sunlit open field green grass bright blue sky",
+    "warm midday sunlight peaceful interior room window view"
+  ],
+  "scenes": [
+    {
+      "a": "Pause what you are doing right now and take a deep breath.",
+      "img": "short-middayisaiah40v31-scene-01.jpg",
+      "kicker": "ISAIAH 40:31",
+      "sub": "PAUSE IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "His word promises in Isaiah chapter forty verse thirty one, those who wait upon the Lord shall renew their strength;",
+      "img": "short-middayisaiah40v31-scene-02.jpg",
+      "kicker": "ISAIAH 40:31",
+      "sub": "THEY THAT WAIT UPON THE LORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",
+      "img": "short-middayisaiah40v31-scene-03.jpg",
+      "kicker": "ISAIAH 40:31",
+      "sub": "MOUNT UP WITH WINGS AS EAGLES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Father God, we pause at midday to rest in your loving presence.",
+      "img": "short-middayisaiah40v31-scene-04.jpg",
+      "kicker": "ISAIAH 40:31",
+      "sub": "FILL US WITH HOLY PEACE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Renew our minds, lift our heavy burdens, and grant us fresh grace to finish this day with joy.",
+      "img": "short-middayisaiah40v31-scene-05.jpg",
+      "kicker": "ISAIAH 40:31",
+      "sub": "FINISH THIS DAY WITH JOY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Subscribe to join us tomorrow for another midday watch prayer.",
+      "img": "short-middayisaiah40v31-scene-06.jpg",
+      "kicker": "ISAIAH 40:31",
+      "sub": "THE MIDDAY WATCH",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Pause what you are doing right now and take a deep breath. In the middle of this busy day, bring your tired heart before the Lord."
+    ],
+    [
+      8,
+      17,
+      "His word promises in Isaiah chapter forty verse thirty one, those who wait upon the Lord shall renew their strength;"
+    ],
+    [
+      17,
+      25,
+      "they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint."
+    ],
+    [
+      25,
+      33,
+      "Father God, we pause at midday to rest in your loving presence. Where our own strength has failed, fill us with your holy peace."
+    ],
+    [
+      33,
+      42,
+      "Renew our minds, lift our heavy burdens, and grant us fresh grace to finish this day with joy."
+    ],
+    [
+      42,
+      48,
+      "Subscribe to join us tomorrow for another midday watch prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "PAUSE WHAT YOU ARE DOING",
+        "RIGHT NOW AND TAKE A DEEP BREATH",
+        "BRING YOUR TIRED HEART TO GOD"
+      ],
+      [
+        "PAUSE",
+        "DEEP",
+        "BREATH"
+      ],
+      "ISAIAH 40:31"
+    ],
+    [
+      8,
+      17,
+      [
+        "HIS WORD PROMISES IN ISAIAH",
+        "THOSE WHO WAIT UPON THE LORD",
+        "SHALL RENEW THEIR STRENGTH"
+      ],
+      [
+        "WAIT",
+        "RENEW",
+        "STRENGTH"
+      ],
+      "ISAIAH 40:31"
+    ],
+    [
+      17,
+      25,
+      [
+        "THEY SHALL MOUNT UP WITH WINGS",
+        "AS EAGLES THEY SHALL RUN",
+        "AND NOT BE WEARY OR FAINT"
+      ],
+      [
+        "MOUNT",
+        "EAGLES",
+        "RUN"
+      ],
+      "ISAIAH 40:31"
+    ],
+    [
+      25,
+      33,
+      [
+        "FATHER WE PAUSE AT MIDDAY",
+        "TO REST IN YOUR PRESENCE",
+        "FILL US WITH HOLY PEACE"
+      ],
+      [
+        "REST",
+        "PRESENCE",
+        "PEACE"
+      ],
+      "ISAIAH 40:31"
+    ],
+    [
+      33,
+      42,
+      [
+        "RENEW OUR MINDS LIFT BURDENS",
+        "GRANT US FRESH GRACE TODAY",
+        "TO FINISH WITH GREAT JOY"
+      ],
+      [
+        "RENEW",
+        "FRESH",
+        "JOY"
+      ],
+      "ISAIAH 40:31"
+    ],
+    [
+      42,
+      48,
+      [
+        "SUBSCRIBE TO JOIN US TOMORROW",
+        "FOR ANOTHER MIDDAY WATCH PRAYER"
+      ],
+      [
+        "SUBSCRIBE",
+        "MIDDAY"
+      ],
+      "ISAIAH 40:31"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Pause what you are doing right now and take a deep breath.",
+      "kind": "phrase",
+      "words": [
+        "PAUSE",
+        "DEEP",
+        "BREATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "His word promises in Isaiah chapter forty verse thirty one, those who wait upon the Lord shall renew their strength;",
+      "kind": "phrase",
+      "words": [
+        "WAIT",
+        "RENEW",
+        "STRENGTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",
+      "kind": "phrase",
+      "words": [
+        "MOUNT",
+        "WINGS",
+        "EAGLES"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Father God, we pause at midday to rest in your loving presence.",
+      "kind": "phrase",
+      "words": [
+        "MIDDAY",
+        "REST",
+        "PRESENCE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Where our own strength has failed, fill us with your holy peace.",
+      "kind": "phrase",
+      "words": [
+        "HOLY",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Renew our minds, lift our heavy burdens, and grant us fresh grace to finish this day with joy.",
+      "kind": "phrase",
+      "words": [
+        "RENEW",
+        "FRESH",
+        "JOY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to join us tomorrow for another midday watch prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "MIDDAY",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 40:31"
+}

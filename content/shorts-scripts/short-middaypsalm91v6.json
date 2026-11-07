@@ -1,0 +1,354 @@
+{
+  "key": "short-middaypsalm91v6",
+  "channel": "prayer3",
+  "psalm": 91,
+  "title": [
+    "MIDDAY WATCH",
+    "PSALM 91:6 PRAYER"
+  ],
+  "poster": [
+    "PAUSE AT NOON",
+    "PSALM 91:6",
+    "MIDDAY WATCH",
+    "DAILY PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "midday sunbeam streaming through quiet office window",
+    "high noon sun glowing over golden wheat field",
+    "bright daylight over open mountain meadow silent",
+    "wooden desk bathed in warm midday sunlight shadow",
+    "sunlight filtering through green canopy leaves zenith",
+    "soft noon light illuminating calm empty room",
+    "peaceful open field under bright clear blue sky",
+    "bright sun shining on quiet sanctuary altar bench"
+  ],
+  "scenes": [
+    {
+      "a": "Pause where you are right now and step away from your busy day.",
+      "img": "short-middaypsalm91v6-scene-01.jpg",
+      "kicker": "PSALM 91:6",
+      "sub": "PAUSE AND STEP AWAY FROM WORK",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The bright midday sun shines high above, reminding us of God's constant light over our daily lives.",
+      "img": "short-middaypsalm91v6-scene-02.jpg",
+      "kicker": "NOONDAY WATCH",
+      "sub": "GOD IS OUR CONSTANT LIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Psalm 91:6 reminds us: nor the pestilence that walks in darkness, nor the destruction that lays waste at noonday.",
+      "img": "short-middaypsalm91v6-scene-03.jpg",
+      "kicker": "PSALM 91:6",
+      "sub": "PROTECTION AT NOONDAY",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "In this quiet midday moment, bring your heart before the Lord.",
+      "img": "short-middaypsalm91v6-scene-04.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "BRING YOUR HEART TO GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Heavenly Father, protect our minds and bodies from every subtle attack and every sudden trial that seeks to disrupt our peace today.",
+      "img": "short-middaypsalm91v6-scene-05.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "SHIELDED FROM EVERY TRIAL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Shield us softly under your loving wings through these afternoon hours,",
+      "img": "short-middaypsalm91v6-scene-06.jpg",
+      "kicker": "FAITH AND PEACE",
+      "sub": "UNDER HIS LOVING WINGS",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "so we may walk in faith without fear or any anxiety.",
+      "img": "short-middaypsalm91v6-scene-07.jpg",
+      "kicker": "FAITH AND PEACE",
+      "sub": "WALK WITHOUT FEAR TODAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Midday Watch to pause and pray with us every noon.",
+      "img": "short-middaypsalm91v6-scene-08.jpg",
+      "kicker": "NOONDAY WATCH",
+      "sub": "PAUSE AND PRAY EVERY NOON",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "Pause where you are right now and step away from your busy day."
+    ],
+    [
+      6,
+      13,
+      "The bright midday sun shines high above, reminding us of God's constant light over our daily lives."
+    ],
+    [
+      13,
+      22,
+      "Psalm 91:6 reminds us: nor the pestilence that walks in darkness, nor the destruction that lays waste at noonday."
+    ],
+    [
+      22,
+      28,
+      "In this quiet midday moment, bring your heart before the Lord."
+    ],
+    [
+      28,
+      36,
+      "Heavenly Father, protect our minds and bodies from every subtle attack and every sudden trial that seeks to disrupt our peace today."
+    ],
+    [
+      36,
+      43,
+      "Shield us softly under your loving wings through these afternoon hours,"
+    ],
+    [
+      43,
+      49,
+      "so we may walk in faith without fear or any anxiety."
+    ],
+    [
+      49,
+      55,
+      "Subscribe to The Midday Watch to pause and pray with us every noon."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "PAUSE WHERE YOU ARE RIGHT NOW",
+        "STEP AWAY FROM YOUR BUSY DAY"
+      ],
+      [
+        "PAUSE",
+        "STEP AWAY"
+      ],
+      "PSALM 91 : 6"
+    ],
+    [
+      6,
+      13,
+      [
+        "THE BRIGHT MIDDAY SUN SHINES HIGH",
+        "REMINDING US OF GODS CONSTANT LIGHT"
+      ],
+      [
+        "MIDDAY SUN",
+        "CONSTANT LIGHT"
+      ],
+      "PSALM 91 : 6"
+    ],
+    [
+      13,
+      22,
+      [
+        "NOR THE PESTILENCE THAT WALKS",
+        "NOR THE DESTRUCTION THAT LAYS WASTE",
+        "AT NOONDAY"
+      ],
+      [
+        "PESTILENCE",
+        "DESTRUCTION",
+        "NOONDAY"
+      ],
+      "PSALM 91 : 6"
+    ],
+    [
+      22,
+      28,
+      [
+        "IN THIS QUIET MIDDAY MOMENT",
+        "BRING YOUR HEART BEFORE THE LORD"
+      ],
+      [
+        "QUIET MOMENT",
+        "HEART"
+      ],
+      "PSALM 91 : 6"
+    ],
+    [
+      28,
+      36,
+      [
+        "PROTECT OUR MINDS AND BODIES",
+        "FROM EVERY SUBTLE ATTACK AND TRIAL",
+        "DISRUPTING OUR PEACE TODAY"
+      ],
+      [
+        "PROTECT",
+        "PEACE TODAY"
+      ],
+      "PSALM 91 : 6"
+    ],
+    [
+      36,
+      43,
+      [
+        "SHIELD US SOFTLY UNDER WINGS",
+        "THROUGH THESE AFTERNOON HOURS"
+      ],
+      [
+        "SHIELD US",
+        "AFTERNOON"
+      ],
+      "PSALM 91 : 6"
+    ],
+    [
+      43,
+      49,
+      [
+        "SO WE MAY WALK IN FAITH",
+        "WITHOUT FEAR OR ANY ANXIETY"
+      ],
+      [
+        "WALK IN FAITH",
+        "WITHOUT FEAR"
+      ],
+      "PSALM 91 : 6"
+    ],
+    [
+      49,
+      55,
+      [
+        "SUBSCRIBE TO THE MIDDAY WATCH",
+        "PAUSE AND PRAY WITH US AT NOON"
+      ],
+      [
+        "MIDDAY WATCH",
+        "PAUSE AND PRAY"
+      ],
+      "PSALM 91 : 6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Pause where you are right now and step away from your busy day.",
+      "kind": "phrase",
+      "words": [
+        "PAUSE",
+        "STEP AWAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The bright midday sun shines high above, reminding us of God's constant light over our daily lives.",
+      "kind": "phrase",
+      "words": [
+        "MIDDAY SUN",
+        "CONSTANT LIGHT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Psalm 91:6 reminds us: nor the pestilence that walks in darkness, nor the destruction that lays waste at noonday.",
+      "kind": "phrase",
+      "words": [
+        "PESTILENCE",
+        "DESTRUCTION",
+        "NOONDAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In this quiet midday moment, bring your heart before the Lord.",
+      "kind": "phrase",
+      "words": [
+        "QUIET MOMENT",
+        "HEART"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, protect our minds and bodies from every subtle attack and every sudden trial that seeks to disrupt our peace today.",
+      "kind": "phrase",
+      "words": [
+        "PROTECT",
+        "PEACE TODAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Shield us softly under your loving wings through these afternoon hours,",
+      "kind": "phrase",
+      "words": [
+        "SHIELD US",
+        "AFTERNOON"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "so we may walk in faith without fear or any anxiety.",
+      "kind": "phrase",
+      "words": [
+        "WALK IN FAITH",
+        "WITHOUT FEAR"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Midday Watch to pause and pray with us every noon.",
+      "kind": "phrase",
+      "words": [
+        "MIDDAY WATCH",
+        "PAUSE AND PRAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 91:6"
+}
