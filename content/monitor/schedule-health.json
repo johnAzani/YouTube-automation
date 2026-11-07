@@ -9,6 +9,13 @@
       "workflow": "keepalive.yml"
     },
     {
+      "late_minutes": 209,
+      "name": "Produce video",
+      "ran_at": "2026-11-07T22:43:30+00:00",
+      "slot": "2026-11-07T19:14:00+00:00",
+      "workflow": "produce.yml"
+    },
+    {
       "late_minutes": 126,
       "name": "Weekly metrics snapshot",
       "ran_at": "2026-11-06T20:47:15+00:00",
@@ -16,8 +23,8 @@
       "workflow": "metrics.yml"
     }
   ],
-  "generated_at": "2026-11-07T21:52:23.361129+00:00",
-  "last_run_at": "2026-11-07T21:51:40+00:00",
+  "generated_at": "2026-11-07T22:48:14.617039+00:00",
+  "last_run_at": "2026-11-07T22:47:18+00:00",
   "on_time": [
     {
       "late_minutes": 24,
