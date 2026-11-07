@@ -358,6 +358,19 @@ goes before you until evening falls and brings your labor to peaceful completion
         for forbidden in ("Visual Asset", "Kinetic Visual", "Typography:", "Narration:", "---", "*", "["):
             self.assertNotIn(forbidden, joined)
 
+    def test_thumbnail_workflows_wire_every_registered_channel(self):
+        """Every registered channel must receive its YouTube credentials in monitor.yml & set-thumbnail.yml."""
+        from pipeline.channels import CHANNELS
+
+        monitor_text = (ROOT / ".github" / "workflows" / "monitor.yml").read_text(encoding="utf-8")
+        set_thumb_text = (ROOT / ".github" / "workflows" / "set-thumbnail.yml").read_text(encoding="utf-8")
+        for cid, profile in CHANNELS.items():
+            self.assertIn(cid, set_thumb_text, f"set-thumbnail.yml missing channel option {cid}")
+            prefix = (profile.secret_prefix or "").strip().rstrip("_")
+            token_var = f"{prefix}_YOUTUBE_REFRESH_TOKEN" if prefix else "YOUTUBE_REFRESH_TOKEN"
+            self.assertIn(token_var, monitor_text, f"monitor.yml missing {token_var} for {cid}")
+            self.assertIn(token_var, set_thumb_text, f"set-thumbnail.yml missing {token_var} for {cid}")
+
 
 if __name__ == "__main__":
     unittest.main()

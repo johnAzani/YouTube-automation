@@ -85,15 +85,21 @@ jobs:
         # custom thumbnail YouTube refused at upload time — refused silently, by
         # a bare except in pipeline/upload.py — was never retried and never
         # mentioned. Receipts now say `thumbnail_pending` until the thumbnail is
-        # really live, and this pass repairs both channels.
+        # really live, and this pass repairs every scheduled channel.
         continue-on-error: true
         env:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_CHANNEL_ID: ${{ vars.YOUTUBE_CHANNEL_ID || secrets.YOUTUBE_CHANNEL_ID }}
           PRAYER2_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER2_YOUTUBE_CLIENT_ID }}
           PRAYER2_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER2_YOUTUBE_CLIENT_SECRET }}
           PRAYER2_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER2_YOUTUBE_CHANNEL_ID: ${{ vars.PRAYER2_YOUTUBE_CHANNEL_ID || secrets.PRAYER2_YOUTUBE_CHANNEL_ID }}
+          PRAYER3_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER3_YOUTUBE_CLIENT_ID }}
+          PRAYER3_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER3_YOUTUBE_CLIENT_SECRET }}
+          PRAYER3_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER3_YOUTUBE_CHANNEL_ID: ${{ vars.PRAYER3_YOUTUBE_CHANNEL_ID || secrets.PRAYER3_YOUTUBE_CHANNEL_ID }}
         run: |
           python -m scripts.sync_published_thumbnails --all-channels
           python -m scripts.retrofit_published_metadata --sync-pending
@@ -109,6 +115,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PRAYER2_GEMINI_API_KEY: ${{ secrets.PRAYER2_GEMINI_API_KEY }}
+          PRAYER3_GEMINI_API_KEY: ${{ secrets.PRAYER3_GEMINI_API_KEY }}
           EXPECT_BRAIN_API: "1"
         run: python -m scripts.automation_monitor --save
 
@@ -117,6 +125,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PRAYER2_GEMINI_API_KEY: ${{ secrets.PRAYER2_GEMINI_API_KEY }}
+          PRAYER3_GEMINI_API_KEY: ${{ secrets.PRAYER3_GEMINI_API_KEY }}
           EXPECT_BRAIN_API: "1"
         run: python -m scripts.pipeline_watchdog
 
