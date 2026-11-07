@@ -135,13 +135,14 @@
     "result": "dispatched secret-place; prayer2, prayer3 next pass (content-state takes one pending run)"
   },
   "produce.yml@2026-11-07T14:14:00+00:00": {
-    "at": "2026-11-07T17:24:15.914404+00:00",
+    "at": "2026-11-07T18:18:12.760496+00:00",
     "attempted_channels": [
       "prayer2",
       "prayer3",
+      "prayer3",
       "prayer3"
     ],
-    "attempts": 3,
+    "attempts": 4,
     "code_id": "4a337a8b96714819",
     "result": "dispatched prayer3"
   }
