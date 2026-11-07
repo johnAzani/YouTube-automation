@@ -19,11 +19,12 @@ width: 720
 height: 1280
 duration_seconds: 42.33
 scenes_verified: 6
-thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCUGoTVLxkAv25Z85wBcBF3w; auth_channel_title=The Midday Watch; long_uploads_status=eligi"
+thumbnail_pending: false
 thumbnail_poster: ["MIDDAY PRAYER", "PSALM 55:17", "THE MIDDAY WATCH", "SEEK THE LORD"]
 thumbnail_kicker: "PAUSE AND PRAY AT NOON"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
 ---
 
 Take a moment to pause whatever you are doing right now. The world is noisy and fast, but this midday hour is for you to rest. In the scripture of Psalm 55:17, we find these words: Evening, and morning, and at noon, will I pray, and cry aloud: and he shall hear my voice. Let us offer a simple prayer together in this quiet space today. Heavenly Father, thank you for this midday moment of quiet reflection. Grant us the wisdom to hear your voice clearly amidst the busy day.
