@@ -14,10 +14,17 @@
       "ran_at": "2026-11-06T20:47:15+00:00",
       "slot": "2026-11-06T18:41:00+00:00",
       "workflow": "metrics.yml"
+    },
+    {
+      "late_minutes": 122,
+      "name": "Autonomous Comment Replies",
+      "ran_at": "2026-11-07T17:16:30+00:00",
+      "slot": "2026-11-07T15:14:00+00:00",
+      "workflow": "comments.yml"
     }
   ],
-  "generated_at": "2026-11-07T17:16:24.092163+00:00",
-  "last_run_at": "2026-11-07T17:15:37+00:00",
+  "generated_at": "2026-11-07T17:17:36.496101+00:00",
+  "last_run_at": "2026-11-07T17:17:21+00:00",
   "on_time": [
     {
       "late_minutes": 33,
