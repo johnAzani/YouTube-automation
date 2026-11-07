@@ -48,30 +48,45 @@ The system operates strictly within YouTube's standard free tier of **10,000 quo
 
 | API Endpoint | Method | Quota Cost | Purpose |
 | :--- | :--- | :---: | :--- |
-| `commentThreads.list` | `GET` | **1 unit** | Fetches up to 100 comment threads (top-level comment, author metadata, reply count). |
-| `comments.insert` | `POST` | **50 units** | Inserts a reply to an existing comment thread (`parentId`). |
-| `channels.list` | `GET` | **1 unit** | Resolves the channel's own channel ID to prevent replying to own comments. |
+| `commentThreads.list` | `GET` | **1 unit** | Fetches up to 100 comment threads (top-level comment, author metadata, reply count). The cost is per call, not per thread, so the engine always asks for 100. |
+| `comments.list` | `GET` | **1 unit** | Lists the replies of one thread (`parentId`). Used only when the listing truncated the replies and the engine must prove it has not already answered. |
+| `comments.insert` | `POST` | **2 units** | Inserts a reply to an existing comment thread (`parentId`). |
+| `channels.list` | `GET` | **1 unit** | Resolves the channel's own channel ID to prevent replying to own comments, and to prove the credentials belong to the channel being answered. |
+
+> **Corrected 2026-11-07.** This table used to price `comments.insert` at 50 units and
+> warn that "15 replies = 750 units". The API's own description of the `part`
+> parameter says otherwise, verbatim: *"Set the parameter value to snippet. The
+> snippet part has a quota cost of 2 units."* (bundled discovery document,
+> `googleapiclient/discovery_cache/documents/youtube.v3.json`). A reply costs 25x
+> less than this document claimed, which is why the daily cap was set so low that
+> the engine answered almost nobody: six replies in four days on ~12 green runs.
+> The same 2-unit fact is recorded in the module docstring of
+> `pipeline/comment_replies.py`.
 
 ### 2.2 Daily Quota Safety Budget
 
+Every channel has its **own** Google Cloud project, so this budget is per channel,
+not shared. The figures below are the reply engine's own consumption.
+
 ```
 ┌──────────────────────────────────────────────┬────────────────────────┐
-│ Activity                                     │ Daily Quota Units      │
+│ Activity (per channel, per day)              │ Daily Quota Units      │
 ├──────────────────────────────────────────────┼────────────────────────┤
-│ 1 Long-form Video Upload (`videos.insert`)    │ 1,600 units            │
-│ 1 Long-form Custom Thumbnail                 │ 50 units               │
-│ 1 YouTube Short Upload                       │ 1,600 units            │
-│ 1 YouTube Short Custom Thumbnail             │ 50 units               │
-│ 5 Channel Status & Metric Audits             │ 5 units                │
-│ 3 Comment Thread Scans (up to 300 comments)  │ 3 units                │
-│ **15 Automated Comment Replies (15 × 50)**   │ **750 units**          │
+│ 3 pulses × `channels.list`                   │ 3 units                │
+│ 3 pulses × 3 pages of `commentThreads.list`  │ 9 units                │
+│ 3 pulses × up to 8 reply audits (`comments.list`) │ 24 units          │
+│ **3 pulses × 8 replies × 2 units**           │ **48 units**           │
 ├──────────────────────────────────────────────┼────────────────────────┤
-│ **Total Daily Usage**                        │ **4,058 units / 10,000**│
-│ **Remaining Safety Headroom**                │ **5,942 units (59.4%)**│
+│ **Reply engine total**                       │ **84 units / 10,000**  │
+│ **Remaining headroom for uploads etc.**      │ **9,916 units (99.2%)**│
 └──────────────────────────────────────────────┴────────────────────────┘
 ```
 
-> **$0.00 Cost Invariant:** At 15–20 comment replies per day, YouTube API utilization is ~40%, leaving massive safety margin. Google Gemini generates replies via its 1,500 requests/day free tier (consuming only ~1% of daily allowance). Total monthly cost: **$0.00**.
+> **$0.00 Cost Invariant:** 24 replies a day per channel costs 48 units — 0.5% of
+> the free tier. The binding constraint is not quota, it is Gemini's free-tier
+> request allowance, which is why `generate_reply_with_gemini` walks a ladder of
+> models ordered by daily allowance and why a quota error falls back to the
+> curated reply instead of retrying. Total monthly cost: **$0.00**.
 
 ---
 
@@ -116,6 +131,26 @@ Every incoming comment is analyzed and classified before drafting:
 └───────────────────┴──────────────────────────────────────────────────────────────────┘
 ```
 
+**The order the checks run in matters** (rewritten 2026-11-07):
+
+1. `CRISIS_DISTRESS` — always first.
+2. `SPAM_SCAM` — an advert wearing a prayer comment. A **contact channel**
+   (WhatsApp/Telegram), a **phone number**, an invitation to move off-platform
+   ("dm me", "contact the prophet"), or **two or more money signals**
+   ("invest … crypto … returns"). A bare link is *not* enough: the engine used to
+   file a viewer who shared the verse the video was quoting as a scammer, and a
+   nine-digit run anywhere in the text as a phone number — which also matched
+   scripture citations. Those comments were ledgered as `SPAM_FILTERED` and never
+   looked at again.
+3. `PRAYER_REQUEST` if the comment **asks** ("please pray", "pray for",
+   "intercede", "prayer request"). This used to be tested *after* testimony
+   keywords, so "I have insomnia, please pray for me" was thanked for sleeping
+   instead of prayed for.
+4. `INQUIRY` — keyword plus a question mark **or** a question opener ("what
+   music…" is a question even without the "?").
+5. `TESTIMONY_REST`, then a bare prayer keyword, then `AMEN_AFFIRMATION`, then
+   `GENERAL`.
+
 ---
 
 ## 5. Anti-Spam, Anti-Shadowban & Safety Invariants
@@ -123,6 +158,19 @@ Every incoming comment is analyzed and classified before drafting:
 ### 5.1 The Anti-Template Invariant (Zero Boilerplate)
 YouTube's **Project Sentinel / SpamBrain** flags channels that post identical repeated strings (e.g., posting "Thank you for watching, God bless!" to 20 comments). Doing so results in **comment ghosting** (replies hidden from public view) or API quota suspension.
 * **The Solution:** Google Gemini Brain generates a **100% unique, freshly composed reply** for each comment, tailored specifically to the viewer's words.
+* **When Gemini is unreachable** (no key, every model exhausted, 429), the engine
+  posts a curated fallback — and that fallback is not a fixed paragraph:
+  1. it names the burden the comment names ("the surgery ahead", "the sleepless
+     nights you described"), so it answers *this* viewer;
+  2. it closes in the channel's own daypart, taken from
+     `brand.comment_farewell` — "Rest in His peace tonight" only ever appears on
+     the night channel;
+  3. it is chosen deterministically from the comment id, so a retried comment
+     receives the sentence it would have received before the crash;
+  4. if the same sentence has already been published twice
+     (`TEMPLATE_REPEAT_LIMIT`), the comment is **held**, not posted
+     (`HELD_TEMPLATE_REPEAT` in the ledger). Gemini-authored replies are never
+     capped this way.
 
 ### 5.2 Human Jitter Pacing
 Automated bots often submit 10 API requests per second. The Comment Reply Engine introduces a randomized delay of **4.0 to 8.0 seconds** between consecutive API insertions (`time.sleep(random.uniform(4, 8))`), mimicking natural human pastoral interaction.
@@ -147,10 +195,39 @@ The system records every replied comment ID in a persistent ledger:
   1. Is `comment_id` in `replied.json`? If yes, skip.
   2. Is `authorChannelId` equal to the channel's own ID? If yes, skip.
   3. Does the comment thread already contain a reply authored by the channel? If yes, skip.
+  4. If the thread says `canReply: false` or `isPublic: false`, record why and never
+     look at it again.
+  5. If `totalReplyCount` is larger than the replies the listing returned (the API
+     hands back *"a limited number of replies (if any)"*), ask `comments.list`
+     directly — at most 8 such audits a run — rather than answer a person the
+     channel already answered.
+
+**Statuses in the ledger.** The row is reserved *before* the insert and updated
+after it, so the ledger is never a guess:
+
+| `status` | meaning |
+| :--- | :--- |
+| `posted` | reply id recorded; never touched again |
+| `pending` | reserved by a run that is inserting right now |
+| `unconfirmed` | the insert raised and may or may not have landed. The next live run calls `reconcile_unconfirmed()`: if the thread carries a reply from our channel the row becomes `posted`, otherwise the row is dropped so the comment can be answered. |
+| `held_for_human` | a crisis disclosure; recorded with the unposted draft, never answered in public unless `--reply-to-crisis` |
+| `held` | the fallback sentence had already been used twice |
+
+Rows that are deliberately *not* replies also carry their reason in `category`:
+`PREVIOUSLY_REPLIED`, `SPAM_FILTERED`, `CANNOT_REPLY`, `NOT_PUBLIC`.
 
 ### 5.4 Pastoral Identity Invariants
 * **Strict Anonymity:** Strictly **ZERO mentions of John Azani or Azani John**.
-* **Studio Persona:** All replies come from *The Secret Place* editorial and prayer family.
+* **One voice per channel.** The voice is brand data, not a string in the engine:
+  `Brand.comment_persona` and `Brand.comment_farewell` in
+  `pipeline/channel_capabilities.py`. Before 2026-11-07 the engine introduced
+  itself as *The Secret Place* on whichever credentials it was handed, so a
+  prayer2/prayer3 dispatch answered in channel 1's voice. `_reply_is_safe()` now
+  also rejects any reply that names another channel, using that brand's
+  `forbidden_phrases`.
+* **Wrong-channel refusal.** If the credentials resolve to a channel other than
+  `YOUTUBE_EXPECTED_CHANNEL_ID`, the run stops with a `CommentFetchError` instead
+  of posting under the wrong ministry's name.
 * **No Financial Solicitation:** Never ask for donations, tithes, email addresses, or phone numbers.
 * **No False Guarantees:** Never guarantee material wealth or instant miraculous fixes; anchor all hope in God's peace, presence, and sovereign care.
 
@@ -171,8 +248,18 @@ python scripts/reply_comments.py --video-id 7RDX0fbIOtQ --dry-run
 ### 6.2 Live Production Execution
 Post approved replies to YouTube:
 ```bash
-python scripts/reply_comments.py --apply --limit 15
+python scripts/reply_comments.py --apply --limit 8
 ```
+
+Answer as a specific channel (voice comes from `--channel`, credentials from the
+environment — each channel's secrets map to `YOUTUBE_*` / `GEMINI_API_KEY`):
+```bash
+CHANNEL_ID=prayer3 python scripts/reply_comments.py --apply --channel prayer3 --limit 8
+```
+
+`--pages` (default 3) is how many pages of 100 threads are walked. One page used
+to be the whole world: the fetch ignored `nextPageToken`, so an unanswered
+comment older than the newest page was unreachable and every run still exited 0.
 
 ### 6.3 Automated GitHub Actions Execution
 The repository includes an autonomous workflow: [`.github/workflows/comments.yml`](../.github/workflows/comments.yml).
@@ -180,6 +267,18 @@ The repository includes an autonomous workflow: [`.github/workflows/comments.yml
   - **Pulse 1 (07:14 UTC / 8:14am local):** Morning release +1hr First-Hour Velocity pulse.
   - **Pulse 2 (15:14 UTC / 4:14pm local):** Afternoon release +1hr global priming pulse.
   - **Pulse 3 (19:14 UTC / 8:14pm local):** Bedtime sanctuary & evening prayer sweep.
-* **Batch Sizing:** Default 8 comments per pulse (up to 24/day), consuming ~1,200 quota units/day (<12% of YouTube Data API daily free allowance).
-* **Manual Dispatch:** Can be triggered on-demand via GitHub Actions UI with custom `limit` and `video_id` parameters.
-* **Ledger Auto-Commit:** Commits `content/comments/replied.json` back to the repository with `[skip ci]`.
+* **Channels:** A scheduled run expands to **every channel whose refresh token
+  exists** (`PRAYER2_READY` / `PRAYER3_READY` probes in the `plan` job), exactly
+  like `produce.yml`; a manual dispatch answers the channel it was given. Before
+  2026-11-07 the scheduled run was hardcoded to The Secret Place and the other two
+  channels were never read.
+* **Batch Sizing:** Default 8 comments per pulse per channel (up to 24/day),
+  consuming ~84 quota units/day (<1% of the free tier).
+* **Manual Dispatch:** Can be triggered on-demand via GitHub Actions UI with custom
+  `channel`, `limit`, `pages` and `video_id` parameters.
+* **Prioritisation:** candidates are ranked before drafting — prayer requests
+  first, then unanswered threads, then likes, then the 24–48h window where a reply
+  is still a conversation. The engine used to answer the first N threads the API
+  happened to return, so an "Amen 🙏" posted a minute ago beat a prayer request
+  that had waited two days.
+* **Ledger Auto-Commit:** Commits `content/comments/replied.json` back to the repository with `[skip ci]`, retrying the rebase-then-push cycle up to three times so a race with `produce.yml` does not fail the run.

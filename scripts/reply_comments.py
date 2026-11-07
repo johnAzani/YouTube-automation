@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
-"""Autonomous / Assisted YouTube Comment Reply CLI for The Secret Place.
+"""Autonomous / assisted comment reply CLI, for whichever channel it is given.
 
-Audits recent viewer comments, categorizes intent (Prayer Request, Amen,
-Testimony, Inquiry, Scam), generates context-aware pastoral replies using
-Google Gemini Brain, and safely publishes them via YouTube Data API v3 while
-enforcing strict anti-spam, anti-shadowban, and $0.00 quota safety invariants.
+Audits recent viewer comments, categorises intent (crisis, scam, prayer request,
+testimony, inquiry, Amen), drafts a reply with Gemini's free tier, and publishes
+it through YouTube Data API v3 under the $0.00 quota lock. The voice comes from
+the channel's brand, so the same CLI answers as The Secret Place, The Morning
+Altar or The Midday Watch depending on `--channel` / `CHANNEL_ID` and the
+credentials it was handed.
 
 Usage:
-    python scripts/reply_comments.py --simulate            # Run simulation with 6 realistic viewer comments
-    python scripts/reply_comments.py --dry-run             # Inspect candidate replies without posting
-    python scripts/reply_comments.py --video-id 7RDX0fbIOtQ --limit 10
-    python scripts/reply_comments.py --apply --limit 15    # Post approved pastoral replies
+    python scripts/reply_comments.py --simulate                 # 6 realistic viewer comments
+    python scripts/reply_comments.py --dry-run                  # draft without posting
+    python scripts/reply_comments.py --video-id 7RDX0fbIOtQ --limit 8
+    python scripts/reply_comments.py --apply --limit 8          # post pastoral replies
+    python scripts/reply_comments.py --apply --channel prayer2  # answer as channel 2
 """
 from __future__ import annotations
 
@@ -18,6 +21,7 @@ import argparse
 import json
 import os
 import sys
+import tempfile
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -29,6 +33,7 @@ from pipeline.comment_replies import (
     classify_comment_intent,
     generate_reply_with_gemini,
 )
+from pipeline.channel_capabilities import brand_for
 from pipeline.config import CONFIG
 from pipeline.quota_handler import GeminiQuotaExceededError, QuotaExceededError
 from pipeline.upload import _credentials
@@ -135,7 +140,15 @@ def _escalate_crisis(held: list[dict]) -> str:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Autonomous / Assisted YouTube Comment Reply System")
     parser.add_argument("--video-id", help="Target specific YouTube video ID (e.g. 7RDX0fbIOtQ)")
-    parser.add_argument("--limit", type=int, default=10, help="Max comments to process (default: 10, max: 25)")
+    parser.add_argument("--limit", type=int, default=8,
+                        help="Max comments to answer per pulse (default: 8, max: 25). "
+                             "The workflow description said 8 and passed 10.")
+    parser.add_argument("--channel", default=None,
+                        help="Channel to answer as (default: $CHANNEL_ID). Selects the "
+                             "brand voice; credentials still come from the environment.")
+    parser.add_argument("--pages", type=int, default=3,
+                        help="Pages of comment threads to walk (default: 3). The engine "
+                             "used to read one page and forget nextPageToken.")
     parser.add_argument("--dry-run", action="store_true", help="Draft replies with Gemini without posting to YouTube")
     parser.add_argument("--apply", action="store_true", help="Post drafted replies to YouTube")
     parser.add_argument("--simulate", action="store_true", help="Run simulated cohort of typical viewer comments to verify response logic")
@@ -146,11 +159,13 @@ def main() -> int:
 
     # Default to dry-run unless --apply is explicitly passed
     is_dry_run = not args.apply or args.dry_run
+    channel_id = args.channel or CONFIG.channel_id
+    brand = brand_for(channel_id)
 
     print("\n" + "=" * 70)
-    print("  THE SECRET PLACE — AUTONOMOUS COMMENT REPLY ENGINE")
+    print(f"  {brand.display_name.upper()} ({brand.handle}) — COMMENT REPLY ENGINE")
     print(f"  Mode: {'SIMULATION / PREVIEW' if (args.simulate or is_dry_run) else 'LIVE PRODUCTION (Posting to YouTube)'}")
-    print(f"  Batch Limit: {min(args.limit, 25)}")
+    print(f"  Batch Limit: {min(args.limit, 25)}   Pages: {max(args.pages, 1)}")
     print("=" * 70 + "\n")
 
     youtube = None
@@ -168,10 +183,27 @@ def main() -> int:
     elif not args.simulate:
         print("[comments] Notice: Running in credential-free simulation / dry-run mode.")
 
+    # A simulation is a rehearsal, not a pulse: give it a throwaway ledger so it
+    # can neither hide a real comment behind a synthetic id nor mark one handled.
+    sim_log = (Path(tempfile.mkdtemp(prefix="comment-sim-")) / "replied.json"
+               if args.simulate else None)
     engine = CommentReplyEngine(
         youtube_service=youtube,
         gemini_api_key=CONFIG.gemini_api_key or os.environ.get("GEMINI_API_KEY", ""),
+        channel_id=channel_id,
+        replied_log_path=sim_log,
     )
+
+    # A previous pulse that died between reserving a reply and writing it back
+    # leaves a `pending`/`unconfirmed` row. Resolve those against the thread before
+    # fetching, or this run either answers the person twice or never again.
+    if youtube and not is_dry_run and not args.simulate:
+        try:
+            engine.reconcile_unconfirmed()
+        except QuotaExceededError as qe:
+            print(f"[comments] YouTube quota reached while reconciling: {qe}")
+            _summary({"mode": "quota_paused", "reason": str(qe), "channel": channel_id})
+            return 0
 
     # 1. Fetch Candidate Comments (or generate simulation cohort)
     candidates = []
@@ -208,6 +240,7 @@ def main() -> int:
             candidates = engine.fetch_candidate_comments(
                 video_id=args.video_id,
                 max_results=min(args.limit, 25),
+                max_pages=max(args.pages, 1),
             )
         except QuotaExceededError as qe:
             # Not an error: the free tier resets. Say when, and exit green so the
@@ -227,7 +260,7 @@ def main() -> int:
     if not candidates:
         print("[comments] No unresponded candidate comments found.")
         print(f"[comments] Total comments logged in deduplication ledger: {len(engine.replied_log)}")
-        _summary({"mode": "idle", "candidates": 0, "posted": 0,
+        _summary({"mode": "idle", "channel": channel_id, "candidates": 0, "posted": 0,
                   "ledger": len(engine.replied_log)})
         return 0
 
@@ -241,7 +274,8 @@ def main() -> int:
         print(f"[{idx}/{len(candidates)}] Comment from '{c.author_name}' ({c.category}):")
         print(f"  Text: \"{c.text}\"")
 
-        reply_text = generate_reply_with_gemini(c, api_key=engine.gemini_api_key)
+        reply_text = generate_reply_with_gemini(c, api_key=engine.gemini_api_key,
+                                                channel_id=engine.channel_id)
         print(f"  Drafted Reply: \"{reply_text}\"")
 
         if c.category == "CRISIS_DISTRESS" and not args.reply_to_crisis:
@@ -253,6 +287,10 @@ def main() -> int:
                                         allow_crisis=args.reply_to_crisis)
             if success:
                 replied_count += 1
+            elif engine.last_skip_reason:
+                # Held on purpose (a fallback that has already been published, an
+                # empty draft) — a skip is not a failed insert.
+                print(f"  Held: {engine.last_skip_reason}")
             elif c.category != "CRISIS_DISTRESS":
                 failures.append(c.comment_id)
         except QuotaExceededError as qe:
@@ -264,9 +302,13 @@ def main() -> int:
     attempted = len(candidates) - len(held)
     print(f"\n[comments] Completed batch: {replied_count} posted, "
           f"{len(failures)} failed, {len(held)} held for a human, out of {len(candidates)}.")
-    _summary({"mode": "dry_run" if is_dry_run else "live",
+    if engine.skipped:
+        print(f"[comments] skipped: {json.dumps(engine.skipped)}")
+    _summary({"mode": "simulation" if args.simulate else ("dry_run" if is_dry_run else "live"),
+              "channel": channel_id,
               "candidates": len(candidates), "posted": replied_count,
               "failed": len(failures), "held_for_human": len(held),
+              "skipped": json.dumps(engine.skipped) if engine.skipped else "-",
               "ledger": len(engine.replied_log),
               "target": args.video_id or "all channel videos"})
     if held and not is_dry_run and not args.simulate:
