@@ -2788,3 +2788,60 @@ render is produced by a fallback engine (does it still require a *new* thumbnail
 upload?); whether `metrics.yml`'s 18.7 dispatchable hours mask a second quota pool; and
 the comment-reply workflow's `1,000 requests/hour` ceiling against its ten dispatches a
 day.
+## 81. Is the Midday Watch's quota spent too? No — it is blocked by three other things
+
+Asked directly, and the answer is worth recording because the intuition ("one channel ran
+out, so they all did") is wrong in every part.
+
+**Its speech quota has never been touched.** `prayer3` has never rendered anything: no
+scripts, and no produce run has ever carried a `produce (prayer3)` leg. Zero of its ten
+daily TTS requests have been spent, today or on any day.
+
+**Its text quota is not the visible cause either.** The brain's matrix did include prayer3
+today — five times — and every one failed while secret-place and prayer2 succeeded in the
+*same* runs:
+
+| Run (UTC) | prayer3 | secret-place | prayer2 |
+| :--- | :--- | :--- | :--- |
+| 04:54 | failure | success | success |
+| 04:58 | failure | — | — |
+| 05:39 | failure | success | success |
+| 06:00 | failure | success | success |
+| 10:04 | failure | success | success |
+
+A shared pool running dry cannot explain three jobs in one run disagreeing. What prayer3's
+annotations *do* say is narrower: `Long-form supply empty :: nothing in content/queue can
+publish`, and then two `Gemini text model retired` errors for `gemini-2.0-flash` and
+`gemini-2.5-flash` — models `RETIRED_TEXT_MODELS` already lists, reached because every live
+candidate before them refused. The pass never says *why* they refused, which is the gap
+R19 exists to close. (The bot cannot fetch job logs, so "no evidence of exhaustion" is the
+strongest honest claim.)
+
+**Three gates block it, and only one of them is about quota.**
+
+1. **No scripts** (§57, §76): 0 publishable, for the front-matter reason.
+2. **Half-provisioned**: the two workflows disagree about what "ready" means.
+   `gemini_brain.yml:39` gates prayer3 on `secrets.PRAYER3_GEMINI_API_KEY`, and the brain's
+   matrix *does* include it — so the key exists. `produce.yml:86` gates prayer3 on
+   `secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN`, and no produce run has ever had a prayer3 leg —
+   so on the schedule path it does not exist. The channel can author (in principle) and
+   cannot publish.
+3. **A global cooldown, caused by another channel.** `quota_blocked_until()` scans every
+   queued script, whatever its channel, and returns the latest live
+   `quota_reset_utc`. `0015` (secret-place) carries:
+
+   ```yaml
+   status: quota_paused
+   quota_reset_utc: '2026-11-08T08:00:00+00:00'
+   pause_reason: gemini_api_daily_quota_exhausted
+   ```
+
+   so the cooldown is live until 08:00Z tomorrow, and `supervise()` refuses to dispatch
+   `produce.yml` at all while it is (`"never dispatch a publish into a quota cooldown"`,
+   `:463`, `:743`). **Secret-place running out of speech idles prayer2 and prayer3 as
+   well** — the opposite of the isolation the separate projects were meant to give.
+
+So: not exhausted; starved, unattributable, half-provisioned, and held behind another
+channel's pause. The cheapest of the three to settle is the provisioning question — one
+secret decides whether prayer3 can ever publish on schedule — and it is a question only the
+repository owner can answer.
