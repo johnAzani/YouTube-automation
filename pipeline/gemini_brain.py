@@ -1115,7 +1115,7 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         _validate_finance_niche(doc)
 
         # Generate the mandatory factcheck worksheet with sha256 binding
-        factcheck_main([doc.id, "--force"])
+        factcheck_main([str(script_path), "--force"])
         factcheck_path = out_path(doc)
 
         short_path, _ = self.generate_companion_short(doc)

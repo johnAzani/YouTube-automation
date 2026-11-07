@@ -63,19 +63,31 @@ def _checks() -> list[dict]:
                   channel_id, theme="peace", scripture_hook="Psalm 1:1", footer=""),
               "")
 
-    # Shorts: one key per channel per scripture, and editions never cross over.
+    # Shorts: one key per channel per identical scripture, and editions never
+    # cross over. A synthetic Psalm 23:1 probe proves namespace isolation across
+    # every registered channel even when a newly provisioned channel's live queue
+    # is momentarily empty (inventory is checked separately by automation_health).
+    from pipeline.script_doc import ScriptDoc
+
     keys: dict[str, str] = {}
     collisions: list[str] = []
     for channel_id in channels:
         brand = cc.brand_for(channel_id)
-        tmp = ROOT / "content" / "queue"
-        sample = next((p for p in sorted(tmp.glob("*.md"))
-                       if parse_script(p).channel == channel_id), None)
-        if sample is None:
-            check(f"{channel_id}: has a queued script to key a Short from", False,
-                  "no queued script for this channel")
-            continue
-        key = short_key_for_doc(parse_script(sample))
+        probe_doc = ScriptDoc(
+            path=Path(f"9999-parity-probe-{channel_id}.md"),
+            meta={
+                "id": "9999",
+                "title": f"Psalm 23:1 — Daily Prayer | {brand.display_name}",
+                "slug": f"parity-probe-{channel_id}",
+                "status": "draft",
+                "format": "longform",
+                "niche": "faith and prayer",
+                "channel": channel_id,
+                "scripture": "Psalm 23:1",
+            },
+        )
+        key = short_key_for_doc(probe_doc)
+        check(f"{channel_id}: derives a channel-scoped Short key", bool(key), key)
         if key in keys:
             collisions.append(f"{key}: {keys[key]} + {channel_id}")
         keys[key] = channel_id

@@ -330,26 +330,64 @@ EFFECTS = {
 }
 
 
-def active_quota_cooldown(now: datetime | None = None) -> datetime | None:
-    """Return `quota_reset_utc` if daily TTS quota is waiting (<25h) after a recent (<24h) publish."""
+def _servable_scheduled_channels() -> list[str]:
+    from pipeline.channels import scheduled_channels
+    from pipeline.short_release import select_next_queued_short
+    from pipeline.supply import publishable_longform
+
+    channels = list(scheduled_channels())
+    supplied = [
+        c for c in channels
+        if publishable_longform(channel_id=c) or select_next_queued_short(channel_id=c) is not None
+    ]
+    return supplied or channels
+
+
+def active_quota_cooldown(
+    now: datetime | None = None,
+    channel_id: str | None = None,
+) -> datetime | None:
+    """Return `quota_reset_utc` when daily TTS quota is waiting (<25h) after a recent (<24h) publish.
+
+    When `channel_id` is given, evaluates that channel's own quota pool only.
+    When `channel_id` is None (repo-wide `produce.yml` verdict), returns a cooldown
+    only if *every* servable scheduled channel is quota-blocked — one channel's
+    exhausted free-tier pool never masks or blocks another channel that can publish.
+    """
     now = now or datetime.now(timezone.utc)
     try:
         from pipeline.run import quota_blocked_until
         from scripts.pipeline_watchdog import last_publish
 
-        blocked = quota_blocked_until(now)
-        if blocked is None:
-            return None
-        wait = blocked - now
-        if wait <= timedelta(0) or wait > timedelta(hours=25):
-            return None
         newest = last_publish()
         if newest is None:
             return None
         _, published_when = newest
         if now - published_when > timedelta(hours=24):
             return None
-        return blocked
+
+        def _valid_block(ch: str) -> datetime | None:
+            blocked = quota_blocked_until(now, channel_id=ch)
+            if blocked is None:
+                return None
+            wait = blocked - now
+            if wait <= timedelta(0) or wait > timedelta(hours=25):
+                return None
+            return blocked
+
+        if channel_id is not None:
+            return _valid_block(channel_id)
+
+        targets = _servable_scheduled_channels()
+        if not targets:
+            return None
+        blocks: list[datetime] = []
+        for ch in targets:
+            b = _valid_block(ch)
+            if b is None:
+                return None
+            blocks.append(b)
+        return min(blocks)
     except Exception:  # noqa: BLE001
         return None
 

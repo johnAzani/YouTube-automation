@@ -307,19 +307,16 @@ def due_but_missing(now: datetime | None = None,
         if filename in inflight:
             continue          # a run is working on it right now; never race it
         if filename == "produce.yml":
-            # The $0.00 lock: when the free-tier speech allowance is spent, a
-            # dispatch cannot publish — it can only burn what is left of it. On
-            # 6 November the supervisor re-dispatched this slot five times while
-            # narration was failing, and the fifth attempt hit 429 and paused the
-            # channel until the next day. Never dispatch a publish into a cooldown.
+            # The $0.00 lock, evaluated per channel: one channel exhausting its
+            # 10-request speech allowance must never hold back another channel's
+            # independent GCP quota pool, and an empty-queue channel is a brain
+            # supply fault rather than a produce dispatch target.
             from scripts.automation_monitor import active_quota_cooldown
 
             if active_quota_cooldown(now) is not None:
                 continue
-            # A run, or even a *successful* run, is not a published video. Both
-            # channels must have a receipt for this slot, or the leg that never
-            # happened is dispatched on its own.
-            missing = set(_channels()) - published_channels_since(slot)
+            done = published_channels_since(slot)
+            missing = _unserved_produce_channels(done, now=now)
             if not missing:
                 continue
             out.append((filename, slot.isoformat()))
@@ -334,6 +331,45 @@ def _channels() -> list[str]:
     from pipeline.channels import scheduled_channels
 
     return list(scheduled_channels())
+
+
+def _channel_has_supply(channel_id: str) -> bool:
+    try:
+        from pipeline.short_release import select_next_queued_short
+        from pipeline.supply import publishable_longform
+
+        return bool(
+            publishable_longform(channel_id=channel_id)
+            or select_next_queued_short(channel_id=channel_id) is not None
+        )
+    except Exception:  # noqa: BLE001
+        return True
+
+
+def _unserved_produce_channels(
+    done: set[str],
+    *,
+    now: datetime | None = None,
+    attempted: list[str] | tuple[str, ...] | None = None,
+) -> list[str]:
+    """Servable channels that still owe a receipt for this slot, least-tried first."""
+    from scripts.automation_monitor import active_quota_cooldown
+
+    channels = _channels()
+    supplied = [c for c in channels if _channel_has_supply(c)]
+    pool = supplied or channels
+    ready = [
+        c for c in pool
+        if c not in done and active_quota_cooldown(now, channel_id=c) is None
+    ]
+    prior = list(attempted or ())
+    counts = {c: prior.count(c) for c in ready}
+    return [
+        c for _idx, c in sorted(
+            enumerate(ready),
+            key=lambda pair: (counts.get(pair[1], 0), pair[0]),
+        )
+    ]
 
 
 def _safe_runs() -> list[dict]:
@@ -507,35 +543,41 @@ def _latest_runs(runs: list[dict]) -> dict[str, tuple[datetime, str | None]]:
     return out
 
 
-def dispatch(workflow: str, slot: str | None = None) -> tuple[bool, str]:
+def dispatch(
+    workflow: str,
+    slot: str | None = None,
+    *,
+    now: datetime | None = None,
+    attempted: list[str] | tuple[str, ...] | None = None,
+) -> tuple[bool, str]:
     """Dispatch a workflow, returning (ok, message).
 
-    ``produce.yml`` is special in two ways, both learned the hard way.
+    ``produce.yml`` is special in three ways:
 
-    1. **One channel per dispatch.** A scheduled slot serves every channel, so a
-       recovery has to reach all of them. But the legs share the ``content-state``
-       concurrency group, which allows only one *pending* run: on 6 November 08:00
-       the two dispatches went out one second apart and GitHub cancelled the
-       secret-place leg before it got a runner, while the pass reported
-       "dispatched secret-place + prayer2". So this dispatches the channel that is
-       provably missing and lets the next pass (triggered by this run completing)
-       take the other one.
+    1. **One channel per dispatch.** Legs share ``content-state``, which allows
+       only one pending run at a time.
     2. **Receipts, not runs, decide.** `published_channels_since()` is the only
        evidence that a channel's video exists.
+    3. **Per-channel supply, quota isolation, and rotation.** Channels with no
+       queued content or in active quota cooldown are skipped, and unattempted
+       channels go ahead of previously attempted ones so a failing first channel
+       never starves the rest.
     """
     if workflow == "produce.yml":
         if slot:
             try:
                 since = datetime.fromisoformat(slot)
             except ValueError:
-                since = datetime.now(timezone.utc) - timedelta(hours=24)
+                since = (now or datetime.now(timezone.utc)) - timedelta(hours=24)
         else:
-            since = datetime.now(timezone.utc) - timedelta(hours=24)
-        missing = [c for c in _channels() if c not in published_channels_since(since)]
+            since = (now or datetime.now(timezone.utc)) - timedelta(hours=24)
+        missing = _unserved_produce_channels(
+            published_channels_since(since),
+            now=now,
+            attempted=attempted,
+        )
         if not missing:
-            # "every", not "both": the sentence was written when there were two
-            # channels, and a recovery log that miscounts is a log nobody trusts.
-            return True, "every channel already published for this slot"
+            return True, "every servable channel already published (or in quota cooldown) for this slot"
         channel = missing[0]
         proc = subprocess.run(
             ["gh", "workflow", "run", workflow, "-f", f"channel={channel}"],
@@ -678,8 +720,32 @@ def report_schedule_health(health: dict) -> None:
         print(f"[supervisor] scheduler healthy: last start {silence} min ago")
 
 
+def _schedule_health_material(health: dict) -> dict:
+    """Fields whose change warrants a repo commit (ignores wall-clock ticks)."""
+    silence = health.get("silence_minutes")
+    warn = int(health.get("warn_minutes") or SILENCE_WARN_MINUTES)
+    alarm = int(health.get("alarm_minutes") or SILENCE_ALARM_MINUTES)
+    band = (
+        "alarm" if (silence is not None and silence >= alarm)
+        else "warn" if (silence is not None and silence >= warn)
+        else "ok"
+    )
+    return {
+        "band": band,
+        "delivered_late": health.get("delivered_late") or [],
+        "on_time": health.get("on_time") or [],
+    }
+
+
 def save_schedule_health(health: dict) -> None:
     SCHEDULE_HEALTH.parent.mkdir(parents=True, exist_ok=True)
+    if SCHEDULE_HEALTH.is_file():
+        try:
+            existing = json.loads(SCHEDULE_HEALTH.read_text(encoding="utf-8"))
+            if _schedule_health_material(existing) == _schedule_health_material(health):
+                return
+        except (OSError, ValueError):
+            pass
     SCHEDULE_HEALTH.write_text(json.dumps(health, indent=2, sort_keys=True) + "\n",
                                encoding="utf-8")
 
@@ -789,9 +855,29 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
             result["dispatched"].append({"workflow": workflow, "slot": slot,
                                          "result": "would dispatch"})
             continue
-        ok, message = dispatch(workflow, slot)
-        state[key] = {"at": now.isoformat(), "result": message, "attempts": attempts + 1,
-                      "code_id": code_fingerprint(workflow)}
+        prior_attempted = list((previous or {}).get("attempted_channels") or [])
+        import inspect
+
+        params = inspect.signature(dispatch).parameters
+        if "now" in params and "attempted" in params:
+            ok, message = dispatch(workflow, slot, now=now, attempted=prior_attempted)
+        else:
+            ok, message = dispatch(workflow, slot)
+        entry_out: dict = {
+            "at": now.isoformat(),
+            "result": message,
+            "attempts": attempts + 1,
+            "code_id": code_fingerprint(workflow),
+        }
+        if workflow == "produce.yml":
+            dispatched_ch = ""
+            if ok and message.startswith("dispatched "):
+                dispatched_ch = message[len("dispatched "):].split(";", 1)[0].strip()
+            if dispatched_ch:
+                prior_attempted.append(dispatched_ch)
+            if prior_attempted:
+                entry_out["attempted_channels"] = prior_attempted
+        state[key] = entry_out
         (result["dispatched"] if ok else result["failed"]).append(
             {"workflow": workflow, "slot": slot, "result": message})
 

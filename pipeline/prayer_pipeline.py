@@ -167,7 +167,7 @@ def _narrate(doc, audio: Path) -> str:
         emit(f"gemini narration produced no audio ({exc}); falling back to the free "
              f"edge-tts voice")
 
-    engine, _words = synthesize_edge(doc.full_narration, audio, 'Charon')
+    engine, _words = synthesize_edge(doc.full_narration, audio, 'Charon', rate='-5%')
     emit(f"narration engine this run: {engine}")
     return engine
 
@@ -252,10 +252,11 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
                 speech_key = _fingerprint(DELIVERY_RECIPE, engine, "Charon", doc.full_narration)
         duration = _probe_duration(audio)
         if duration is None or duration < MIN_NARRATION_SECONDS:
+            speaker = "Charon" if engine == DEFAULT_MODEL else engine
             raise RuntimeError(
-                f'Actual Charon narration is {duration or 0:.0f}s; the channel needs '
+                f'Actual {speaker} narration is {duration or 0:.0f}s; the channel needs '
                 f'{MIN_NARRATION_SECONDS}s ({MIN_NARRATION_SECONDS // 60} minutes). '
-                f'{doc.word_count} words is too short at Charon\'s pace — lengthen the script, '
+                f'{doc.word_count} words is too short at {speaker}\'s pace — lengthen the script, '
                 f'the floor is {MIN_LONGFORM_WORDS} words.')
         _write_json(out / 'narration.json',
                     {'key': speech_key, 'duration': duration, 'engine': engine})

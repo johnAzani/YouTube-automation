@@ -2980,3 +2980,21 @@ complete (they are not — that is §57). Suite: **1058 passed**.
    goes from 0 to 1 and the parity gate starts to matter again — or fail with a message
    that names `channel` among the missing keys instead of a generic branding refusal. Both
    outcomes are strictly more informative than the five identical failures of today.
+
+## 86. Round 11 — Post-Consolidation Audit & Multi-Channel Decoupling (2026-11-07 14:45Z)
+
+After PR #327 consolidated `main` (`06e82b2`), live runs confirmed R21 worked (`prayer2`
+and `prayer3` both authored two channel-attributed scripts in `run 42380190774`) and
+exposed the remaining multi-channel coupling defects:
+
+| Item | Defect found | Fix shipped |
+| :--- | :--- | :--- |
+| Multi-author summary crash | `SupplyReport.authored` became a `list` when `len(authored) >= 2`, crashing `SupplyReport.summary()` (`AttributeError: 'list' object has no attribute 'get'`) right before commit and discarding all 4 newly authored `prayer2`/`prayer3` scripts | `pipeline/supply.py::SupplyReport.summary` handles both `dict` and `list`; `gemini_brain.yml` refreshes factcheck worksheets and commits valid staged scripts before failing on partial supply |
+| **R5** cold-start runway | Empty channels (`publishable_after == 0`) were capped at 2 scripts/pass | `MAX_AUTHORS_WHEN_EMPTY = 4` lets cold-start channels reach >1 day of 3-slot runway in one pass |
+| Staged factcheck + expander | `factcheck.py` missed `.incoming/` staged paths and `author_new` mutated `status: approved` after hashing; `tools/expand_scripts.py` still called retired `gemini-2.5-flash` with night-only wording | `factcheck.py` accepts explicit file paths, `author_new` refreshes the sha256 worksheet after approval, and `expand_scripts.py` uses `text_model_candidates()` + `brand_for()` forbidden-phrase gates |
+| **R15 + R16 + R27** | `quota_blocked_until()` scanned `content/queue/` globally (so `secret-place` job `0015` blocked `prayer2` and `prayer3`), and `scheduler_supervisor.dispatch` picked `missing[0]` in fixed order | `quota_blocked_until`, `empty_reason`, and `active_quota_cooldown` are channel-scoped; `_unserved_produce_channels` skips empty/cooldown channels and rotates least-recently-attempted channels first |
+| **R9** Pages loop | Committing `schedule-health.json` triggered `pages build and deployment`, which triggered `scheduler-supervisor.yml` every ~60s (~350 empty commits/day) | Removed `"pages build and deployment"` from `scheduler-supervisor.yml` `workflow_run` and skipped no-op wall-clock writes in `save_schedule_health` |
+| **R18** + 409 artifacts | `produce.yml` shared `chunks-tts-v4-${{ github.run_id }}` and `release-report`/`style-frames`/`render` artifact names across matrix legs, and ran `channel_queue` before `supply` repair | Keyed chunk caches and artifacts per `${{ matrix.channel }}` and moved `channel_queue` after `supply` repair |
+| **R20 + R22 + R28 + §70** | `channel_parity.py` failed on 0-inventory channels; `automation-health.yml` skipped issue sync on step failure; fallback `edge-tts` pace/error named `Charon`; duplicate release tickets | Synthetic `Psalm 23:1` parity probe (`PARITY OK` across all 3 channels), `always() && !cancelled()` issue sync, `-5%` `edge-tts` pace + honest engine label, and receipt-backed ticket dedupe |
+
+Suite: **1070 passed** (`tests/test_multi_channel_resilience.py` adds 11 regression guards).

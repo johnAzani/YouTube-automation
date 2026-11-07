@@ -258,7 +258,11 @@ def main(argv=None) -> int:
 
     jobs = queued_jobs()
     if args.job:
-        jobs = [p for p in jobs if p.stem.startswith(args.job)]
+        explicit = Path(args.job)
+        if explicit.is_file():
+            jobs = [explicit]
+        else:
+            jobs = [p for p in jobs if p.stem.startswith(args.job)]
         if not jobs:
             print(f"no queued job matching {args.job!r} in {QUEUE_DIR.relative_to(ROOT)}")
             return 1

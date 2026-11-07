@@ -502,7 +502,7 @@ def _open_release_ticket(doc: ScriptDoc, url: str, privacy: str, video_id: str =
 
     if not os.environ.get("GITHUB_ACTIONS"):
         return
-    if str(privacy or "").strip().lower() == "public":
+    if str(privacy or "").strip().lower() in {"public", "already_published", "duplicate_prevented"}:
         return
     title = f"Release ticket: {doc.title}"
     studio = f"https://studio.youtube.com/video/{video_id}/edit" if video_id else ""
@@ -528,6 +528,18 @@ def _open_release_ticket(doc: ScriptDoc, url: str, privacy: str, video_id: str =
     env = {**os.environ}
     if not env.get("GH_TOKEN") and env.get("GITHUB_TOKEN"):
         env["GH_TOKEN"] = env["GITHUB_TOKEN"]
+    if video_id and PUBLISHED_DIR.is_dir():
+        for rec in PUBLISHED_DIR.glob("*.md"):
+            try:
+                text = rec.read_text(encoding="utf-8", errors="ignore")
+            except OSError:
+                continue
+            if (
+                (f'youtube_video_id: "{video_id}"' in text or f"youtube_video_id: {video_id}" in text)
+                and "release_ticket_opened: true" in text
+            ):
+                _log(f"release ticket skipped: already opened for {video_id} ({rec.name})")
+                return
     try:
         proc = subprocess.run(
             ["gh", "issue", "create", "--title", title, "--body", body],
@@ -543,51 +555,95 @@ def _open_release_ticket(doc: ScriptDoc, url: str, privacy: str, video_id: str =
              f"{(proc.stderr or proc.stdout or '').strip()[:300]}")
     else:
         _log(f"release ticket created: {(proc.stdout or '').strip()[:200]}")
+        if video_id and PUBLISHED_DIR.is_dir():
+            for rec in PUBLISHED_DIR.glob("*.md"):
+                try:
+                    text = rec.read_text(encoding="utf-8", errors="ignore")
+                except OSError:
+                    continue
+                if f'youtube_video_id: "{video_id}"' in text or f"youtube_video_id: {video_id}" in text:
+                    if "release_ticket_opened:" not in text and text.startswith("---\n"):
+                        rec.write_text(
+                            text.replace("---\n", "---\nrelease_ticket_opened: true\n", 1),
+                            encoding="utf-8",
+                        )
+                    break
 
 
-def quota_blocked_until(now: datetime | None = None) -> datetime | None:
-    """The latest quota-pause reset still in the future, if the day is spent.
+def quota_blocked_until(
+    now: datetime | None = None,
+    channel_id: str | None = None,
+) -> datetime | None:
+    """The latest quota-pause reset still in the future for *this* channel.
 
-    The free tier allows **ten** TTS requests per day for `gemini-3.8-flash-tts`.
-    A paused job records when the allowance returns. Starting another video before
-    then cannot succeed — it only spends tomorrow's requests on a doomed attempt,
-    three times a day. So while any pause is still live, the release waits.
+    Each scheduled channel has its own Google Cloud project and free-tier TTS
+    allowance. A paused job on one channel must never hold back another
+    channel's release slot.
     """
+    import yaml
+
+    from .channels import normalize_channel_id
     from .quota_handler import is_quota_pause_expired
 
     now = now or datetime.now(timezone.utc)
+    wanted = normalize_channel_id(channel_id if channel_id is not None else CONFIG.channel_id)
     latest: datetime | None = None
+
+    def _record(raw_reset: str) -> None:
+        nonlocal latest
+        raw = str(raw_reset or "").strip()
+        if not raw or is_quota_pause_expired(raw):
+            return
+        try:
+            when = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        except ValueError:
+            return
+        if when.tzinfo is None:
+            when = when.replace(tzinfo=timezone.utc)
+        if when > now and (latest is None or when > latest):
+            latest = when
+
     for path in sorted(QUEUE_DIR.glob("*.md")):
         try:
             doc = parse_script(path)
         except Exception:  # noqa: BLE001
             continue
+        if doc.channel != wanted:
+            continue
         if str(doc.status).strip().lower() != "quota_paused":
             continue
-        raw = str(doc.meta.get("quota_reset_utc") or "").strip()
-        if not raw or is_quota_pause_expired(raw):
-            continue
-        try:
-            when = datetime.fromisoformat(raw.replace("Z", "+00:00"))
-        except ValueError:
-            continue
-        if when.tzinfo is None:
-            when = when.replace(tzinfo=timezone.utc)
-        if when > now and (latest is None or when > latest):
-            latest = when
+        _record(str(doc.meta.get("quota_reset_utc") or ""))
+
+    shorts_dir = QUEUE_DIR.parent / "shorts-queue"
+    if shorts_dir.is_dir():
+        for path in sorted(shorts_dir.glob("*.yml")):
+            try:
+                data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+            except Exception:  # noqa: BLE001
+                continue
+            if normalize_channel_id(data.get("channel")) != wanted:
+                continue
+            if str(data.get("status") or "").strip().lower() != "quota_paused":
+                continue
+            _record(str(data.get("quota_reset_utc") or ""))
+
     return latest
 
 
-def empty_reason() -> str:
-    """Why nothing could be published, in one sentence with the numbers in it."""
+def empty_reason(channel_id: str | None = None) -> str:
+    """Why nothing could be published on this channel, in one sentence."""
+    from .channels import normalize_channel_id
     from .script_doc import MIN_LONGFORM_WORDS, parse_script
 
+    wanted = normalize_channel_id(channel_id if channel_id is not None else CONFIG.channel_id)
     queue = sorted(QUEUE_DIR.glob("*.md"))
     approved, short, missing = 0, [], 0
     for path in queue:
         try:
             doc = parse_script(path)
         except Exception:  # noqa: BLE001
+            continue
+        if doc.channel != wanted:
             continue
         if doc.status != "approved":
             missing += 1

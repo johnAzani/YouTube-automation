@@ -263,13 +263,25 @@ def validate(original: Job, expanded: str, target: int = TARGET_WORDS,
     for pattern in FORBIDDEN_PERSONA_PATTERNS:
         if _re.search(pattern, expanded, _re.I):
             problems.append(f"expansion trips the AI-persona gate: {pattern}")
+
+    declared_channel = str(original.meta.get("channel") or "").strip()
+    if declared_channel:
+        from pipeline.channel_capabilities import brand_for
+
+        brand = brand_for(declared_channel)
+        for forbidden in brand.forbidden_phrases:
+            if forbidden.lower() in lowered:
+                problems.append(
+                    f"expansion introduced forbidden phrase {forbidden!r} for {brand.display_name}"
+                )
+                break
     return problems
 
 
 # --------------------------------------------------------------------------- #
 # Providers
 # --------------------------------------------------------------------------- #
-PROMPT = """You are extending a bedtime prayer script for a faceless scripture channel.
+PROMPT = """You are extending a devotional prayer script for {channel_desc}.
 
 RULES THAT WILL BE ENFORCED BY CODE — a violation discards your output:
 1. Every existing line must survive verbatim, in the same order. Do not rewrite,
@@ -288,7 +300,7 @@ RULES THAT WILL BE ENFORCED BY CODE — a violation discards your output:
    must remain the final line of the script.
 6. Do not pad or repeat: no sentence may appear twice, and no filler paragraphs
    that only restate the heading. Every new word must say something specific about
-   this psalm and this person's night.
+   this psalm and this person's hour of prayer.{forbidden_rule}
 7. The finished script must be between {min_words} and {max_words} words.
 
 TITLE: {title}
@@ -322,27 +334,47 @@ def budget_for(job: Job, target: int = TARGET_WORDS) -> tuple[int, int]:
 
 
 def gemini_provider(job: Job, target: int) -> str:
-    """Live provider: same client and model the authoring brain already uses."""
+    """Live provider: same client and model candidates the authoring brain uses."""
+    from pipeline.channel_capabilities import brand_for
+    from pipeline.channels import gemini_api_key
+    from pipeline.gemini_brain import is_model_retired, report_retired_model, text_model_candidates
+    from pipeline.gemini_client import make_client
     from pipeline.gemini_tts import get_gemini_api_key  # local import: offline tests
 
-    key = get_gemini_api_key()
+    declared_channel = str(job.meta.get("channel") or "").strip()
+    brand = brand_for(declared_channel or None)
+    key = (gemini_api_key(brand.channel_id) if declared_channel else "") or get_gemini_api_key()
     if not key:
         raise ExpandError("GEMINI_API_KEY is not set; refusing to write")
-    from google import genai
-
-    from pipeline.gemini_client import make_client
     client = make_client(key)
     need, per_scene = budget_for(job, target)
+    forbidden_rule = ""
+    if brand.forbidden_phrases:
+        banned = ", ".join(brand.forbidden_phrases[:8])
+        forbidden_rule = f" Never use off-brand phrases ({banned})."
     prompt = PROMPT.format(
+        channel_desc=f"{brand.display_name} ({brand.short_channel_label})",
+        forbidden_rule=forbidden_rule,
         psalm_label=f"Psalm {job.psalm}" if job.psalm else "the psalm named in the title",
         title=job.title, words=job.words, target=target, body=job.body,
         need=need, per_scene=per_scene, min_words=MIN_WORDS, max_words=MAX_WORDS,
     )
-    response = client.models.generate_content(model="gemini-2.5-flash", contents=prompt)
-    text = (getattr(response, "text", "") or "").strip()
-    if not text:
-        raise ExpandError("model returned nothing")
-    return text
+    last_err: Exception | None = None
+    for model in text_model_candidates():
+        try:
+            response = client.models.generate_content(model=model, contents=prompt)
+            text = (getattr(response, "text", "") or "").strip()
+            if text:
+                return text
+        except Exception as exc:  # noqa: BLE001
+            last_err = exc
+            if is_model_retired(exc):
+                report_retired_model(model, exc)
+                continue
+            raise
+    if last_err is not None:
+        raise ExpandError(f"all expansion models failed; last error: {last_err}") from last_err
+    raise ExpandError("model returned nothing")
 
 
 def template_provider(job: Job, target: int) -> str:
