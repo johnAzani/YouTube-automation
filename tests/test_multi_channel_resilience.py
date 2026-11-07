@@ -294,6 +294,70 @@ class TestMultiChannelWorkflowAndVoiceIsolation(unittest.TestCase):
 
         subproc.assert_not_called()
 
+    def test_brain_workflow_uses_isolated_staging_not_directory_wide_git_add(self):
+        """Multi-channel Brain runs must never run `reset --mixed origin/main` + `git add content/queue/`."""
+        wf = ROOT / ".github" / "workflows" / "gemini_brain.yml"
+        text = wf.read_text(encoding="utf-8")
+        self.assertNotIn("git add content/queue/ content/shorts-queue/", text)
+        self.assertIn("START_SHA=", text)
+        self.assertIn("/tmp/brain-touched.txt", text)
+
+    def test_normalize_authored_script_strips_double_frontmatter_and_stage_directions(self):
+        """Regression: `_repair_envelope` + stage directions must never leak into TTS narration."""
+        from pipeline import originality
+        from pipeline.gemini_brain import normalize_authored_script_markdown
+        from pipeline.script_doc import parse_script
+
+        raw = """---
+id: '0049'
+slug: psalm-55-17-midday-pause
+title: "Psalm 55:17 — At Noon Will I Pray | The Midday Watch"
+status: approved
+channel: prayer3
+niche: daily-devotional
+thumb_text: "PAUSE AT NOON"
+originality: "Original devotional exposition on Psalm 55:17 KJV."
+---
+
+---
+title: "Psalm 55:17 — At Noon Will I Pray | The Midday Watch"
+description: "Pause at noonday with Psalm 55:17."
+tags: ["midday prayer", "psalm 55"]
+---
+
+### Scene 1: The Noonday Hook & The Pause (Movement 1)
+- Visual Asset Query: "Sunbeams piercing through quiet cathedral windows high resolution public domain"
+- Kinetic Visual: "PAUSE AT NOON"
+- Narration:
+Evening, and morning, and at noon, will I pray, and cry aloud: and he shall hear my voice.
+Step out of the noise of *this hour* and breathe before the throne of grace, laying down every burden,
+every unfinished task, every anxious calculation of the morning, and receiving the steady peace of God
+that keeps heart and mind anchored in Christ Jesus throughout the heat of this day.
+
+### Scene 2: Sent Back Into the Day
+[Visual Asset 2: Calm river under afternoon sun]
+[Narration:]
+Commit thy works unto the Lord, and thy thoughts shall be established as you walk back into the afternoon
+in quietness, diligence, integrity, and unshaken confidence that the Father who heard your voice at noon
+goes before you until evening falls and brings your labor to peaceful completion. Amen.
+"""
+        cleaned = normalize_authored_script_markdown(raw, channel_id="prayer3")
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "0049-psalm-55-17-midday-pause.md"
+            out.write_text(cleaned, encoding="utf-8")
+            doc = parse_script(out)
+
+        self.assertEqual(doc.channel, "prayer3")
+        self.assertEqual(doc.meta["niche"], "faith and prayer")
+        self.assertEqual(len(doc.scenes), 2)
+        self.assertEqual(doc.scenes[0].heading, "The Noonday Hook & The Pause")
+        self.assertEqual(originality.check(doc), [])
+        self.assertEqual(len(doc.meta.get("asset_queries") or []), 6)
+        self.assertIsInstance(doc.meta.get("asset_query_verification"), dict)
+        joined = "\n".join(s.narration for s in doc.scenes)
+        for forbidden in ("Visual Asset", "Kinetic Visual", "Typography:", "Narration:", "---", "*", "["):
+            self.assertNotIn(forbidden, joined)
+
 
 if __name__ == "__main__":
     unittest.main()

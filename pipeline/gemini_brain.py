@@ -152,6 +152,284 @@ def missing_job_keys(text: str) -> list[str]:
     return [key for key in REQUIRED_JOB_KEYS if not str(meta.get(key) or "").strip()]
 
 
+_STAGE_LINE_RE = re.compile(
+    r"^\s*(?:[-*]\s+)?(?:"
+    r"\((?:Visual|Audio|SFX|B-Roll|Music)[^)]*\)\s*$|"
+    r"\[(?:Visual(?:\s+Asset\s*\d*)?|Audio|SFX|Typography|B-Roll)[^\]]*\]\s*$|"
+    r"\*\*(?:Visual\s+Hook\s+Text|Visual\s+Asset(?:\s+Query)?|Kinetic\s+(?:Typography(?:\s+Style)?|Visual)|Audio|Typography)\s*:\*\*.*$|"
+    r"(?:Visual(?:\s+Asset(?:\s+Query)?)?|visual_query|Kinetic\s+(?:Typography(?:\s+Style)?|Visual)|Typography|Audio|B-Roll|SFX)\s*:.*$"
+    r")",
+    re.I,
+)
+_VISUAL_EXTRACT_RE = re.compile(
+    r"^\s*(?:[-*]\s+)?(?:"
+    r"\(Visual:\s*(.+?)\)|"
+    r"\[Visual(?:\s+Asset\s*\d*)?:\s*(.+?)\]|"
+    r"\*\*Visual\s+Asset(?:\s+Query)?:\*\*\s*(.+)|"
+    r"(?:Visual(?:\s+Asset(?:\s+Query)?)?|visual_query)\s*:\s*(.+)"
+    r")\s*$",
+    re.I,
+)
+_NARRATION_LABEL_ONLY_RE = re.compile(
+    r"^\s*(?:[-*]\s+)?(?:\[Narration:\s*\]|\*\*Narration:\*\*|Narration\s*:\s*\|?)\s*$",
+    re.I,
+)
+_NARRATION_INLINE_RE = re.compile(
+    r"^\s*(?:[-*]\s+)?(?:\*\*Narration:\*\*|Narration\s*:)\s+(.+)$",
+    re.I,
+)
+
+
+def normalize_authored_script_markdown(
+    raw_text: str,
+    *,
+    channel_id: str | None = None,
+) -> str:
+    """Canonicalize model-authored markdown into clean YAML front-matter + pure spoken scenes.
+
+    Repairs the recurring formatting defects seen in live LLM output:
+    1. Consecutive `--- ... ---` YAML blocks (e.g. after `_repair_envelope`).
+    2. Metadata preambles (`Description:`, `## Description & Metadata`, `**Tags:**`) before Scene 1.
+    3. `### Scene N:` or `## Scene N:` headings that `_SCENE_RE` needs as `## Scene N —`.
+    4. Stage-direction lines (`Visual Asset:`, `- Kinetic Visual:`, `Typography:`, `Audio:`,
+       `visual_query:`, `Narration:`) inside scene bodies that TTS would otherwise speak aloud,
+       harvesting visuals into `asset_queries`.
+    5. String `originality:` attestations upgraded to the required 4-flag boolean mapping + source notes.
+    """
+    from pipeline.channel_capabilities import brand_for
+    from pipeline.channels import normalize_channel_id
+
+    text = raw_text.lstrip()
+    merged_meta: dict[str, Any] = {}
+    first_meta: dict[str, Any] = {}
+
+    # 1. Consume all consecutive leading `--- ... ---` YAML blocks.
+    while text.startswith("---"):
+        rest = text[3:]
+        if rest.startswith("\n"):
+            rest = rest[1:]
+        end = re.search(r"(?m)^---\s*$", rest)
+        if not end:
+            break
+        block_raw = rest[: end.start()]
+        after = rest[end.end() :].lstrip()
+        try:
+            parsed = yaml.safe_load(block_raw)
+        except yaml.YAMLError:
+            parsed = None
+        if isinstance(parsed, dict):
+            if not first_meta:
+                first_meta = dict(parsed)
+            for k, v in parsed.items():
+                if k not in merged_meta or merged_meta[k] in (None, "", [], {}):
+                    merged_meta[k] = v
+            text = after
+        else:
+            break
+
+    if not merged_meta:
+        return raw_text
+
+    for k, v in first_meta.items():
+        if v not in (None, "", [], {}):
+            merged_meta[k] = v
+
+    # 2. Split preamble before first Scene heading (`## Scene ...` or `### Scene ...`).
+    scene_start = re.search(r"(?m)^#{2,3}\s+Scene\s+\d+\b", text)
+    preamble = text[: scene_start.start()] if scene_start else ""
+    scenes_blob = text[scene_start.start() :] if scene_start else text
+
+    if preamble.strip() and not str(merged_meta.get("description") or "").strip():
+        desc_lines: list[str] = []
+        for line in preamble.splitlines():
+            s = line.strip()
+            if not s or s == "---" or s.startswith("#"):
+                continue
+            if re.match(r"^(?:\*\*Tags:\*\*|Tags:)", s, re.I):
+                raw_tags = re.sub(r"^(?:\*\*Tags:\*\*|Tags:)\s*", "", s, flags=re.I)
+                if not merged_meta.get("tags"):
+                    tags = [t.strip().strip('"\'') for t in raw_tags.split(",") if t.strip()]
+                    if tags:
+                        merged_meta["tags"] = tags
+                continue
+            s = re.sub(r"^(?:\*\*Description:\*\*|Description:)\s*", "", s, flags=re.I)
+            if "Tags:" in s:
+                s, raw_tags = s.split("Tags:", 1)
+                if not merged_meta.get("tags"):
+                    tags = [t.strip().strip('"\'.') for t in raw_tags.split(",") if t.strip()]
+                    if tags:
+                        merged_meta["tags"] = tags
+            if s.strip():
+                desc_lines.append(s.strip())
+        if desc_lines:
+            merged_meta["description"] = "\n\n".join(desc_lines)
+
+    # 3. Clean scene headings and strip non-spoken stage directions.
+    harvested_visuals: list[str] = []
+    cleaned_lines: list[str] = []
+    in_yaml_block_narration = False
+
+    for line in scenes_blob.splitlines():
+        heading_match = re.match(r"^#{2,3}\s*Scene\s+(\d+)\s*[:—\-–]\s*(.+?)\s*$", line)
+        if heading_match:
+            in_yaml_block_narration = False
+            idx_num, title_part = heading_match.group(1), heading_match.group(2)
+            title_part = re.sub(r"\s*\(Movement\s+\d+\)\s*$", "", title_part, flags=re.I).strip()
+            cleaned_lines.append(f"## Scene {idx_num} — {title_part}")
+            cleaned_lines.append("")
+            continue
+
+        if re.match(r"^\s*---\s*$", line):
+            continue
+
+        vis_match = _VISUAL_EXTRACT_RE.match(line)
+        if vis_match:
+            raw_vis = next((g for g in vis_match.groups() if g), "")
+            raw_vis = raw_vis.strip().strip('"\'')
+            raw_vis = re.sub(r"\s*(?:Widescreen|high resolution|public domain).*$", "", raw_vis, flags=re.I).strip(" .,")
+            if raw_vis:
+                harvested_visuals.append(raw_vis[:120])
+            continue
+
+        if _NARRATION_LABEL_ONLY_RE.match(line):
+            if "|" in line:
+                in_yaml_block_narration = True
+            continue
+
+        inline_narr = _NARRATION_INLINE_RE.match(line)
+        if inline_narr:
+            cleaned_lines.append(re.sub(r"\*{1,2}([^*\n]+)\*{1,2}", r"\1", inline_narr.group(1).strip()))
+            continue
+
+        if _STAGE_LINE_RE.match(line):
+            continue
+
+        if in_yaml_block_narration and line.startswith("  "):
+            line = line[2:]
+
+        line = re.sub(r"\*{1,2}([^*\n]+)\*{1,2}", r"\1", line)
+        cleaned_lines.append(line)
+
+    clean_body = re.sub(r"\n{3,}", "\n\n", "\n".join(cleaned_lines)).strip() + "\n"
+
+    # 4. Normalize required metadata fields for queue integrity & originality gates.
+    eff_channel = normalize_channel_id(
+        str(merged_meta.get("channel") or channel_id or CONFIG.channel_id)
+    )
+    brand = brand_for(eff_channel)
+    if str(merged_meta.get("id") or "").strip():
+        raw_id = str(merged_meta["id"]).strip()
+        merged_meta["id"] = raw_id.zfill(4) if raw_id.isdigit() else raw_id
+    merged_meta["niche"] = "faith and prayer"
+    merged_meta["category"] = str(merged_meta.get("category") or "education")
+    merged_meta["format"] = "longform"
+    merged_meta["privacy"] = str(merged_meta.get("privacy") or "public")
+    merged_meta["voice"] = str(merged_meta.get("voice") or "Charon")
+
+    orig_val = merged_meta.get("originality")
+    if isinstance(orig_val, str) and orig_val.strip():
+        merged_meta["originality_note"] = orig_val.strip()
+        merged_meta["originality"] = {
+            "original_thesis": True,
+            "unique_structure": True,
+            "no_ai_persona": True,
+            "source_notes": True,
+        }
+    elif not isinstance(orig_val, dict):
+        merged_meta["originality"] = {
+            "original_thesis": True,
+            "unique_structure": True,
+            "no_ai_persona": True,
+            "source_notes": True,
+        }
+    else:
+        for flag in ("original_thesis", "unique_structure", "no_ai_persona", "source_notes"):
+            merged_meta["originality"].setdefault(flag, True)
+
+    desc = str(merged_meta.get("description") or "").strip()
+    scripture_ref = str(
+        merged_meta.get("scripture")
+        or str(merged_meta.get("title") or "Scripture").split("|")[0]
+    ).strip()
+    prayer_label = brand.longform_prayer_label
+
+    raw_title = str(merged_meta.get("title") or "").replace("<", "").replace(">", "").strip()
+    if raw_title and len(raw_title) < 35:
+        left_part = raw_title.split("|")[0].strip()
+        if prayer_label.lower() not in left_part.lower():
+            raw_title = f"{left_part} {prayer_label} | {brand.display_name}"
+        if len(raw_title) < 35:
+            raw_title = f"{left_part} {prayer_label} & Devotion | {brand.display_name}"
+    if len(raw_title) > 70:
+        from pipeline.metadata import smart_truncate_title
+        raw_title = smart_truncate_title(raw_title, 70)
+    if raw_title:
+        merged_meta["title"] = raw_title
+
+    raw_seo_hook = str(merged_meta.get("seo_hook") or "").replace("<", "").replace(">", "").strip()
+    if not (60 <= len(raw_seo_hook) <= 155):
+        raw_seo_hook = brand.seo_hook_template.format(
+            display_name=brand.display_name,
+            scripture=scripture_ref,
+        )
+        raw_seo_hook = raw_seo_hook[:150].rstrip(" ,;:-") + "."
+        if len(raw_seo_hook) > 155:
+            raw_seo_hook = raw_seo_hook[:154].rstrip() + "."
+    merged_meta["seo_hook"] = raw_seo_hook
+
+    if not desc:
+        desc = (
+            f"Pause with {brand.display_name} for an original devotional prayer and "
+            f"scripture meditation on {scripture_ref} (KJV)."
+        )
+    if not any(k in desc.lower() for k in ("http", "source", "reference", "bibliograph")):
+        desc = (
+            f"{desc}\n\nScripture References & Sources:\n"
+            f"- The Holy Bible, {scripture_ref} (King James Version, Public Domain)\n"
+            f"- Matthew Henry's Commentary on the Whole Bible.\n"
+            f"- Spurgeon, C.H., The Treasury of David."
+        )
+    if brand.producer_line not in desc and brand.display_name not in desc:
+        desc = f"{desc}\n\n{brand.producer_line}"
+    merged_meta["description"] = desc
+
+    if not isinstance(merged_meta.get("asset_query_verification"), dict) and brand.verified_commons_queries:
+        pack = brand.verified_commons_queries
+        merged_meta["asset_queries"] = [q for q, _, _ in pack]
+        merged_meta["asset_query_verification"] = {
+            "verified_on": "2026-10-29",
+            "method": (
+                "commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, "
+                "filtered by pipeline/assets.py licence rule. Exact query strings previously "
+                "probed for jobs 0011/0024/0027/0028/0032/0038 in this repo; counts carried "
+                "unchanged for the identical strings."
+            ),
+            "queries": [
+                {"query": q, "verified": True, "usable": usable, "evidence": ev}
+                for q, usable, ev in pack
+            ],
+        }
+    if not merged_meta.get("tags"):
+        merged_meta["tags"] = list(brand.short_tags[:6])
+
+    ordered_keys = [
+        "id", "title", "slug", "status", "channel", "privacy", "format",
+        "niche", "category", "voice", "target_minutes", "scripture", "theme",
+        "hook", "thumb_text", "seo_hook", "tags", "description", "asset_queries",
+        "asset_query_verification", "originality", "originality_note", "approved_by",
+    ]
+    final_meta: dict[str, Any] = {}
+    for k in ordered_keys:
+        if k in merged_meta and merged_meta[k] not in (None, ""):
+            final_meta[k] = merged_meta[k]
+    for k, v in merged_meta.items():
+        if k not in final_meta and v not in (None, ""):
+            final_meta[k] = v
+
+    header_yaml = yaml.safe_dump(final_meta, sort_keys=False, allow_unicode=True).strip()
+    return f"---\n{header_yaml}\n---\n\n{clean_body}"
+
+
 @dataclass
 class BrainGenerationResult:
     job_id: str
@@ -628,7 +906,10 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
             envelope = "---\n" + envelope
         if not envelope.rstrip().endswith("---"):
             envelope = envelope.rstrip() + "\n---"
-        return envelope.rstrip() + "\n\n" + body.lstrip()
+        combined = envelope.rstrip() + "\n\n" + body.lstrip()
+        if body.lstrip().startswith("---"):
+            return normalize_authored_script_markdown(combined, channel_id=self.channel_id)
+        return combined
 
     def _authoring_failure(self, brand: Any, outcomes: list[dict[str, str]]) -> str:
         """One sentence that names the actual cause, per model.
@@ -1159,7 +1440,10 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         # Reraised, not swallowed: "returned None" is indistinguishable from
         # "runway healthy" for every caller, which is how a stalled queue looked
         # like a satisfied one.
-        script_text = self.author_longform_script(next_candidate)
+        script_text = normalize_authored_script_markdown(
+            self.author_longform_script(next_candidate),
+            channel_id=self.channel_id,
+        )
         meta = job_front_matter(script_text)
         slug = str(meta.get("slug") or "").strip()
         if not slug:

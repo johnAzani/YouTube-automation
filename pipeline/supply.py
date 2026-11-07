@@ -299,6 +299,17 @@ def author_new(brain, expand_target: int = EXPANSION_TARGET_WORDS) -> dict[str, 
                          f"{doc.title.split(':')[0]} title; refused")
         return row
 
+    live_queue = (ROOT / "content" / "queue").resolve()
+    if result.longform_path.parent.resolve() == live_queue:
+        from . import originality
+        orig_problems = originality.check(doc)
+        if orig_problems:
+            if str(doc.status).strip().lower() == "approved":
+                set_status(result.longform_path, "draft")
+            row["ok"] = False
+            row["reason"] = f"originality check failed: {'; '.join(orig_problems)}"
+            return row
+
     # The editorial gate is real, it is just no longer a human queue: the brain
     # approves only a script that cleared the floor, the scripture check, and the
     # factcheck worksheet `verify_and_stage` wrote. A human can still downgrade it.
@@ -306,7 +317,6 @@ def author_new(brain, expand_target: int = EXPANSION_TARGET_WORDS) -> dict[str, 
         set_status(result.longform_path, "approved", approved_by="brain")
         doc = parse_script(result.longform_path)
         row["approved_by_brain"] = True
-        live_queue = (ROOT / "content" / "queue").resolve()
         if result.longform_path.parent.resolve() == live_queue:
             from scripts.factcheck import main as factcheck_main
 

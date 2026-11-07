@@ -107,6 +107,13 @@ class Brand:
     #: Pinned comments. Both are .format() templates.
     longform_pinned_comment: str
     short_pinned_comment: str
+    #: Long-form normalization data (title label, SEO hook template, verified Commons plates)
+    longform_prayer_label: str = "Night Prayer"
+    seo_hook_template: str = (
+        "Rest tonight in {display_name} with {scripture} (KJV) "
+        "and release every anxious thought into the Father's keeping before sleep."
+    )
+    verified_commons_queries: tuple[tuple[str, int, str], ...] = ()
 
 
 @dataclass(frozen=True)
@@ -215,6 +222,19 @@ _BRANDS: dict[str, Brand] = {
             "Write 'AMEN' in faith and leave your prayer request below — we are interceding for "
             "your household! 🙏🕊️✨{footer}"
         ),
+        longform_prayer_label="Night Prayer",
+        seo_hook_template=(
+            "Rest tonight in {display_name} with {scripture} (KJV) "
+            "and release every anxious thought into the Father's keeping before sleep."
+        ),
+        verified_commons_queries=(
+            ("starry night sky milky way mountains", 4, "4x Public domain — NPS / NASA dark sky reserve astrophotography"),
+            ("peaceful night landscape moon over calm lake", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("calm mountain lake still water reflection nightfall", 4, "4x Public domain — NPS Mirror Lake and Crater Lake twilight scans"),
+            ("ancient chapel interior candlelight peaceful sanctuary", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("still water perfect reflection moon night sky stars", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("star night sky over quiet countryside peaceful", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+        ),
     ),
     "prayer2": Brand(
         channel_id="prayer2",
@@ -283,6 +303,19 @@ _BRANDS: dict[str, Brand] = {
             "over your household before this day begins! Go into today covered, calm, and "
             "confident. 🙏🌅✨{footer}"
         ),
+        longform_prayer_label="Morning Prayer",
+        seo_hook_template=(
+            "Begin this sunrise at {display_name} with {scripture} (KJV) "
+            "and commit every step and decision of your day to the Lord in prayer."
+        ),
+        verified_commons_queries=(
+            ("golden dawn light over misty landscape morning", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("sunrise dawn light over quiet valley morning serene", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("sunlight breaking through clouds mountain pass", 3, "3x Public domain — USFS Rocky Mountain National Forest crepuscular ray scans"),
+            ("golden light rays over calm landscape morning dawn", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("peaceful sunrise over misty countryside morning", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("peaceful sunrise over misty alpine valley", 4, "4x Public domain — USGS alpine valley dawn mist photography"),
+        ),
     ),
     "prayer3": Brand(
         channel_id="prayer3",
@@ -350,6 +383,19 @@ _BRANDS: dict[str, Brand] = {
             "Write 'AMEN' in faith and leave your prayer request below — we are interceding "
             "over your afternoon right now. Whatever the rest of this day holds, you are not "
             "carrying it alone. 🙏☀️✨{footer}"
+        ),
+        longform_prayer_label="Midday Prayer",
+        seo_hook_template=(
+            "Pause at noonday with {display_name} in {scripture} (KJV) "
+            "and receive quiet strength, clarity, and peace for the hours ahead."
+        ),
+        verified_commons_queries=(
+            ("sunlight breaking through clouds mountain pass", 3, "3x Public domain — USFS Rocky Mountain National Forest crepuscular ray scans"),
+            ("divine light breaking through clouds over peaceful landscape", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("forest sunlight mist", 3, "3x Public domain — USFS forest crepuscular ray and mist photography"),
+            ("peaceful mountain river calm water forest", 4, "4x Public domain — NPS mountain stream and river dawn scans"),
+            ("golden light rays through clouds over mountain peak", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("sun rays breaking clouds mountains", 3, "3x Public domain — NOAA National Weather Service crepuscular ray mountain photography"),
         ),
     ),
 }

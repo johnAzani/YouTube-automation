@@ -1,0 +1,367 @@
+{
+  "key": "short-morningpsalm118v24",
+  "channel": "prayer2",
+  "psalm": 118,
+  "title": [
+    "THE MORNING ALTAR",
+    "PSALM 118:24"
+  ],
+  "poster": [
+    "THIS IS THE DAY",
+    "THE LORD HAS MADE",
+    "LET US REJOICE",
+    "AND BE GLAD IN IT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "golden hour sunlight over misty mountain valley",
+    "soft light through sheer curtains in morning bedroom",
+    "dew drops on green meadow grass at sunrise",
+    "calm lake water reflecting orange dawn sky",
+    "golden sun rays piercing through forest trees",
+    "warm coffee steam rising in early morning light",
+    "soft light hitting open bible pages on wood table",
+    "slow panoramic view of ocean horizon at sunrise"
+  ],
+  "scenes": [
+    {
+      "a": "Slowly open your eyes",
+      "img": "short-morningpsalm118v24-scene-01.jpg",
+      "kicker": "RISE AND REFLECT",
+      "sub": "GREET THE LIGHT OF A NEW DAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "take a deep breath",
+      "img": "short-morningpsalm118v24-scene-02.jpg",
+      "kicker": "BREATHE IN PEACE",
+      "sub": "LET THE STILLNESS FILL YOU",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "This is the day",
+      "img": "short-morningpsalm118v24-scene-03.jpg",
+      "kicker": "PSALM 118:24",
+      "sub": "THE LORD HAS MADE THIS DAY",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Let us rejoice",
+      "img": "short-morningpsalm118v24-scene-04.jpg",
+      "kicker": "CHOOSE GRATITUDE",
+      "sub": "BE GLAD IN HIS MERCY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Offer your heart",
+      "img": "short-morningpsalm118v24-scene-05.jpg",
+      "kicker": "SACRED MORNING",
+      "sub": "SURRENDER YOUR WORRIES NOW",
+      "cam": "push_in",
+      "focus": [
+        0.7,
+        0.3
+      ]
+    },
+    {
+      "a": "Walk in His grace",
+      "img": "short-morningpsalm118v24-scene-06.jpg",
+      "kicker": "STEADY FAITH",
+      "sub": "GUIDED BY THE MORNING SUN",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Go forth in light",
+      "img": "short-morningpsalm118v24-scene-07.jpg",
+      "kicker": "FINAL BLESSING",
+      "sub": "YOUR DAY IS SET BEFORE YOU",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "The Morning Altar",
+      "img": "short-morningpsalm118v24-scene-08.jpg",
+      "kicker": "DAILY PRAYER",
+      "sub": "SUBSCRIBE FOR YOUR DAWN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "Slowly open your eyes and take a deep breath, welcoming the quiet grace of this new morning light."
+    ],
+    [
+      15,
+      30,
+      "This is the day the Lord has made, let us rejoice and be glad in it, finding peace in His promise."
+    ],
+    [
+      30,
+      45,
+      "Offer your heart to Him, releasing the burdens of yesterday, and trusting that His mercies are truly brand new."
+    ],
+    [
+      45,
+      60,
+      "Walk in His grace, let His strength be your steady foundation, and remain anchored in the hope of His love."
+    ],
+    [
+      60,
+      75,
+      "Whatever challenges arise, know that you are held by the Creator who sustains the sun and the morning tide."
+    ],
+    [
+      75,
+      90,
+      "Go forth in light, carry this stillness into your tasks, and keep your soul turned toward His holy peace."
+    ],
+    [
+      90,
+      105,
+      "May your spirit remain centered, may your mind be calm, and may your steps be ordered by His perfect will."
+    ],
+    [
+      105,
+      120,
+      "Thank you for joining The Morning Altar, subscribe now and begin every single sunrise in sacred prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "OPEN YOUR EYES",
+        "TAKE A DEEP BREATH",
+        "WELCOME THE LIGHT"
+      ],
+      [
+        "OPEN",
+        "BREATH",
+        "LIGHT"
+      ],
+      "PSALM 118:24"
+    ],
+    [
+      15,
+      30,
+      [
+        "THIS IS THE DAY",
+        "THE LORD HAS MADE",
+        "REJOICE AND BE GLAD"
+      ],
+      [
+        "REJOICE",
+        "GLAD",
+        "LORD"
+      ],
+      "PSALM 118:24"
+    ],
+    [
+      30,
+      45,
+      [
+        "OFFER YOUR HEART",
+        "RELEASE ALL BURDENS",
+        "MERCIES ARE NEW"
+      ],
+      [
+        "OFFER",
+        "RELEASE",
+        "NEW"
+      ],
+      "PSALM 118:24"
+    ],
+    [
+      45,
+      60,
+      [
+        "WALK IN GRACE",
+        "BE YOUR FOUNDATION",
+        "ANCHORED IN HOPE"
+      ],
+      [
+        "GRACE",
+        "FOUNDATION",
+        "HOPE"
+      ],
+      "PSALM 118:24"
+    ],
+    [
+      60,
+      75,
+      [
+        "CHALLENGES ARISE",
+        "HELD BY CREATOR",
+        "SUSTAINS THE SUN"
+      ],
+      [
+        "HELD",
+        "CREATOR",
+        "SUN"
+      ],
+      "PSALM 118:24"
+    ],
+    [
+      75,
+      90,
+      [
+        "GO FORTH IN LIGHT",
+        "CARRY THE STILLNESS",
+        "HIS HOLY PEACE"
+      ],
+      [
+        "LIGHT",
+        "STILLNESS",
+        "PEACE"
+      ],
+      "PSALM 118:24"
+    ],
+    [
+      90,
+      105,
+      [
+        "SPIRIT REMAINS CENTERED",
+        "MIND BE CALM",
+        "ORDERED BY WILL"
+      ],
+      [
+        "CENTERED",
+        "CALM",
+        "WILL"
+      ],
+      "PSALM 118:24"
+    ],
+    [
+      105,
+      120,
+      [
+        "JOIN THE ALTAR",
+        "SUBSCRIBE TODAY",
+        "BEGIN EVERY SUNRISE"
+      ],
+      [
+        "JOIN",
+        "SUBSCRIBE",
+        "SUNRISE"
+      ],
+      "PSALM 118:24"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Slowly open your eyes",
+      "kind": "phrase",
+      "words": [
+        "OPEN",
+        "YOUR",
+        "EYES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "This is the day",
+      "kind": "phrase",
+      "words": [
+        "THIS",
+        "IS",
+        "THE",
+        "DAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let us rejoice",
+      "kind": "phrase",
+      "words": [
+        "REJOICE",
+        "AND",
+        "BE",
+        "GLAD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Offer your heart",
+      "kind": "phrase",
+      "words": [
+        "OFFER",
+        "YOUR",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Walk in His grace",
+      "kind": "phrase",
+      "words": [
+        "WALK",
+        "IN",
+        "HIS",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Go forth in light",
+      "kind": "phrase",
+      "words": [
+        "GO",
+        "FORTH",
+        "IN",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Morning Altar",
+      "kind": "phrase",
+      "words": [
+        "MORNING",
+        "ALTAR",
+        "SUBSCRIBE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 118:24"
+}

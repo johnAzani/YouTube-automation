@@ -69,6 +69,13 @@ jobs:
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Advance to latest main and snapshot starting tree
+        run: |
+          git pull --ff-only origin main || true
+          echo "START_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
 
       - uses: actions/setup-python@v5
         with:
@@ -134,7 +141,7 @@ jobs:
 
       - name: Refresh factcheck worksheets before commit
         if: ${{ steps.preflight.outcome == 'success' && !cancelled() }}
-        run: python scripts/factcheck.py --all --force
+        run: python scripts/factcheck.py --all
 
       - name: Commit newly authored queue items
         if: ${{ steps.preflight.outcome == 'success' && !cancelled() }}
@@ -142,10 +149,30 @@ jobs:
           set -e
           git config user.name "gemini-brain-bot"
           git config user.email "actions@users.noreply.github.com"
+          base_ref="${START_SHA:-HEAD}"
+          git diff --name-only --diff-filter=D "$base_ref" -- \
+            content/queue/ content/shorts-queue/ content/shorts-scripts/ content/factcheck/ \
+            > /tmp/brain-deleted.txt
+          {
+            git diff --name-only --diff-filter=ACMR "$base_ref" -- \
+              content/queue/ content/shorts-queue/ content/shorts-scripts/ content/factcheck/
+            git ls-files --others --exclude-standard -- \
+              content/queue/ content/shorts-queue/ content/shorts-scripts/ content/factcheck/
+          } | sort -u > /tmp/brain-touched.txt
+          if [ ! -s /tmp/brain-deleted.txt ] && [ ! -s /tmp/brain-touched.txt ]; then
+            echo "### 🧠 Gemini Brain Queue Audit" >> "$GITHUB_STEP_SUMMARY"
+            echo "Queue runway is healthy. No replenishment needed." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
           for attempt in 1 2 3 4 5; do
             git fetch --quiet origin main
             git reset --mixed origin/main
-            git add content/queue/ content/shorts-queue/ content/shorts-scripts/ content/factcheck/
+            while IFS= read -r p; do
+              [ -n "$p" ] && git rm --cached --ignore-unmatch --quiet -- "$p"
+            done < /tmp/brain-deleted.txt
+            while IFS= read -r p; do
+              [ -n "$p" ] && [ -e "$p" ] && git add -- "$p"
+            done < /tmp/brain-touched.txt
             if git diff --cached --quiet; then
               echo "### 🧠 Gemini Brain Queue Audit" >> "$GITHUB_STEP_SUMMARY"
               echo "Queue runway is healthy. No replenishment needed." >> "$GITHUB_STEP_SUMMARY"

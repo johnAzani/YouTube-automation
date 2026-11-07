@@ -69,17 +69,39 @@ fill in the values; do not rename, reorder or omit a key.
 
 ---
 id: '<the 4-digit id you were assigned>'
-title: "<scripture reference> | <this channel's title suffix>"
+title: "<scripture reference> <Morning/Midday/Night> Prayer | <this channel's display name> (35-70 chars)"
 slug: <kebab-case-slug-of-the-title>
 status: approved
 channel: {channel}
 privacy: public
 format: longform
-niche: <this channel's niche>
+niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
+thumb_text: "<2 TO 4 UPPERCASE HOOK WORDS>"
+seo_hook: "<one compelling 75-140 char opening sentence naming the KJV scripture and prayer promise>"
+description: |
+  <2-3 sentence devotional summary quoting the KJV passage>
+
+  Scripture References & Sources:
+  - The Holy Bible (King James Version, Public Domain)
+  - Matthew Henry's Commentary on the Whole Bible.
+tags:
+  - "<channel name lowercase>"
+  - "<scripture reference lowercase>"
+originality:
+  original_thesis: true
+  unique_structure: true
+  no_ai_persona: true
+  source_notes: true
 ---
+
+After the closing `---`, write ONLY `## Scene 1 — <Title>`, `## Scene 2 — <Title>`, etc.,
+followed immediately by pure spoken prayer narration prose. NEVER write stage-direction
+prefixes (`Visual Asset:`, `Visual:`, `Kinetic Visual:`, `Typography:`, `Audio:`,
+`Narration:`, `visual_query:`) or a second `---` YAML block inside the body — every word
+under `## Scene N` is spoken aloud by TTS.
 """
 
 
