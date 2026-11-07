@@ -500,8 +500,8 @@ def dispatch(workflow: str, slot: str | None = None) -> tuple[bool, str]:
 
     ``produce.yml`` is special in two ways, both learned the hard way.
 
-    1. **One channel per dispatch.** A scheduled slot serves BOTH channels, so a
-       recovery has to reach both. But the two legs share the ``content-state``
+    1. **One channel per dispatch.** A scheduled slot serves every channel, so a
+       recovery has to reach all of them. But the legs share the ``content-state``
        concurrency group, which allows only one *pending* run: on 6 November 08:00
        the two dispatches went out one second apart and GitHub cancelled the
        secret-place leg before it got a runner, while the pass reported
@@ -521,7 +521,9 @@ def dispatch(workflow: str, slot: str | None = None) -> tuple[bool, str]:
             since = datetime.now(timezone.utc) - timedelta(hours=24)
         missing = [c for c in _channels() if c not in published_channels_since(since)]
         if not missing:
-            return True, "both channels already published for this slot"
+            # "every", not "both": the sentence was written when there were two
+            # channels, and a recovery log that miscounts is a log nobody trusts.
+            return True, "every channel already published for this slot"
         channel = missing[0]
         proc = subprocess.run(
             ["gh", "workflow", "run", workflow, "-f", f"channel={channel}"],

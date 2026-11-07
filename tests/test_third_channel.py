@@ -1,4 +1,4 @@
-"""The third channel: registered, fully capable, and deliberately not yet live.
+"""The third channel: registered, fully capable, and live since 2026-11-07.
 
 Owner decision, 6 November 2026: the third channel is still a prayer channel — the
 middle of the day, between The Secret Place's night and The Morning Altar's
@@ -11,6 +11,12 @@ different states and the codebase has to say so out loud:
 * **live** — it has a Google Cloud project, an OAuth refresh token and a Gemini
   key, so `provisioned` is True and the scheduler gives it three production legs
   a day.
+
+It went live on 2026-11-07, the day after it was registered: the owner created the
+`The Midday Watch` Cloud project, registered the three scopes, published the OAuth
+consent screen to production (so the refresh token does not expire after 7 days)
+and added the `PRAYER3_*` secrets. The flip below is that day, recorded because a
+flag that changes meaning without a date is a flag nobody can audit later.
 
 Building it any other way is how a channel ends up silently doing less.
 """
@@ -43,19 +49,23 @@ class TestTheThirdChannelIsRegistered(unittest.TestCase):
             with self.subTest(alias=alias):
                 self.assertEqual(normalize_channel_id(alias), CID)
 
-    def test_it_is_registered_but_not_scheduled_yet(self):
+    def test_it_is_scheduled_now_that_it_has_credentials(self):
+        """Live 2026-11-07. While the flag was False the channel could still *run*:
+        produce.yml keys off the refresh-token secret, not off this flag — so the
+        flag being False kept it out of the health monitor and the supervisor while
+        it was scheduled anyway. That is the state this test exists to prevent."""
         self.assertIn(CID, CHANNELS)
-        self.assertNotIn(CID, scheduled_channels(),
-                         "it has no credentials yet; three unresolvable legs a day "
-                         "is noise, not coverage")
-        self.assertFalse(CHANNELS[CID].provisioned)
+        self.assertIn(CID, scheduled_channels(),
+                      "the refresh token exists, so the channel runs; a channel that "
+                      "runs must be a channel the monitor and supervisor can see")
+        self.assertTrue(CHANNELS[CID].provisioned)
 
-    def test_provisioning_is_the_only_thing_keeping_it_out_of_the_schedule(self):
-        """Flipping the flag must be all it takes — no second switch to remember."""
+    def test_the_flag_is_still_the_only_switch(self):
+        """Nothing else keys off the channel's name: same capabilities either way."""
         import dataclasses
 
-        flipped = dataclasses.replace(CHANNELS[CID], provisioned=True)
-        self.assertTrue(flipped.provisioned)
+        off = dataclasses.replace(CHANNELS[CID], provisioned=False)
+        self.assertFalse(off.provisioned)
         self.assertEqual(cc.capabilities_for(CID).supply_min_publishable, 6)
 
 
