@@ -1,0 +1,323 @@
+{
+  "key": "short-morningnumbers6v24",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "THE MORNING ALTAR",
+    "NUMBERS 6:24-26"
+  ],
+  "poster": [
+    "GREET",
+    "THE",
+    "NEW",
+    "DAWN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "golden sunlight hitting mountain mist",
+    "calm lake reflection at sunrise",
+    "soft light through open window curtain",
+    "dew drops on morning grass close up",
+    "birds flying over horizon at dawn",
+    "sun rising over a quiet valley",
+    "soft morning mist in pine forest"
+  ],
+  "scenes": [
+    {
+      "a": "Welcome the morning light.",
+      "img": "short-morningnumbers6v24-scene-01.jpg",
+      "kicker": "NUMBERS 6:24-26",
+      "sub": "WELCOME THE MORNING LIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The Lord bless you and keep you.",
+      "img": "short-morningnumbers6v24-scene-02.jpg",
+      "kicker": "NUMBERS 6:24-26",
+      "sub": "MAY HIS LIGHT BE UPON YOU",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "The Lord make his face shine upon you.",
+      "img": "short-morningnumbers6v24-scene-03.jpg",
+      "kicker": "NUMBERS 6:24-26",
+      "sub": "WALK IN RADIANT PEACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "And be gracious to you.",
+      "img": "short-morningnumbers6v24-scene-04.jpg",
+      "kicker": "NUMBERS 6:24-26",
+      "sub": "RECEIVE HIS GRACE TODAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The Lord lift up his countenance upon you.",
+      "img": "short-morningnumbers6v24-scene-05.jpg",
+      "kicker": "NUMBERS 6:24-26",
+      "sub": "HE SEES YOUR HEART",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "And give you peace.",
+      "img": "short-morningnumbers6v24-scene-06.jpg",
+      "kicker": "NUMBERS 6:24-26",
+      "sub": "REST IN HIS QUIET PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May your path be steady.",
+      "img": "short-morningnumbers6v24-scene-07.jpg",
+      "kicker": "NUMBERS 6:24-26",
+      "sub": "GO FORTH IN TRANQUILITY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "Welcome the morning light. The Lord bless you and keep you."
+    ],
+    [
+      13,
+      25,
+      "The Lord make his face shine upon you, and be gracious to you."
+    ],
+    [
+      26,
+      38,
+      "The Lord lift up his countenance upon you, and give you peace."
+    ],
+    [
+      39,
+      52,
+      "May this truth anchor your soul as you step into the day."
+    ],
+    [
+      53,
+      68,
+      "May your path be steady, your heart be open, and your spirit remain still."
+    ],
+    [
+      69,
+      85,
+      "Father, let these words linger in the air long after the sun has risen high."
+    ],
+    [
+      86,
+      100,
+      "Walk in the assurance of his constant presence, knowing you are never truly alone."
+    ],
+    [
+      101,
+      120,
+      "Find rest in his promise, carry his light, and please subscribe to join us tomorrow."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "WELCOME THE MORNING LIGHT",
+        "THE LORD BLESS YOU",
+        "AND KEEP YOU"
+      ],
+      [
+        "BLESS"
+      ],
+      "NUMBERS 6:24"
+    ],
+    [
+      13,
+      25,
+      [
+        "THE LORD MAKE HIS FACE",
+        "SHINE UPON YOU",
+        "AND BE GRACIOUS"
+      ],
+      [
+        "SHINE"
+      ],
+      "NUMBERS 6:24"
+    ],
+    [
+      26,
+      38,
+      [
+        "THE LORD LIFT UP",
+        "HIS COUNTENANCE UPON YOU",
+        "AND GIVE YOU PEACE"
+      ],
+      [
+        "PEACE"
+      ],
+      "NUMBERS 6:26"
+    ],
+    [
+      39,
+      52,
+      [
+        "MAY THIS TRUTH",
+        "ANCHOR YOUR SOUL",
+        "AS YOU STEP INTO DAY"
+      ],
+      [
+        "ANCHOR"
+      ],
+      "NUMBERS 6:26"
+    ],
+    [
+      53,
+      68,
+      [
+        "MAY YOUR PATH BE STEADY",
+        "HEART BE OPEN",
+        "SPIRIT REMAIN STILL"
+      ],
+      [
+        "STEADY"
+      ],
+      "NUMBERS 6:26"
+    ],
+    [
+      69,
+      85,
+      [
+        "FATHER LET THESE WORDS",
+        "LINGER IN THE AIR",
+        "LONG AFTER SUNRISE"
+      ],
+      [
+        "LINGER"
+      ],
+      "NUMBERS 6:26"
+    ],
+    [
+      86,
+      100,
+      [
+        "WALK IN THE ASSURANCE",
+        "OF HIS PRESENCE",
+        "YOU ARE NEVER ALONE"
+      ],
+      [
+        "PRESENCE"
+      ],
+      "NUMBERS 6:26"
+    ],
+    [
+      101,
+      120,
+      [
+        "FIND REST IN HIS PROMISE",
+        "CARRY HIS LIGHT",
+        "SUBSCRIBE FOR MORE"
+      ],
+      [
+        "SUBSCRIBE"
+      ],
+      "NUMBERS 6:26"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Welcome the morning light.",
+      "kind": "phrase",
+      "words": [
+        "WELCOME",
+        "MORNING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord bless you and keep you.",
+      "kind": "phrase",
+      "words": [
+        "BLESS",
+        "KEEP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord make his face shine upon you.",
+      "kind": "phrase",
+      "words": [
+        "SHINE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And be gracious to you.",
+      "kind": "phrase",
+      "words": [
+        "GRACIOUS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord lift up his countenance upon you.",
+      "kind": "phrase",
+      "words": [
+        "COUNTENANCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And give you peace.",
+      "kind": "phrase",
+      "words": [
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your path be steady.",
+      "kind": "phrase",
+      "words": [
+        "STEADY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Numbers 6:24-26"
+}

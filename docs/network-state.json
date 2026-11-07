@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T22:01:45Z",
+  "generated_at": "2026-11-07T23:32:42Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,10 +7,10 @@
     "channels_total": 3
   },
   "totals": {
-    "published_total": 29,
-    "published_longform": 13,
-    "published_shorts": 16,
-    "public_total": 27,
+    "published_total": 31,
+    "published_longform": 14,
+    "published_shorts": 17,
+    "public_total": 29,
     "queued_longform": 24,
     "queued_shorts": 9,
     "automations_ok": 7,
@@ -99,27 +99,27 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 8,
-        "published_longform": 4,
-        "published_shorts": 4,
-        "public_total": 7,
+        "published_total": 10,
+        "published_longform": 5,
+        "published_shorts": 5,
+        "public_total": 9,
         "queued_longform": 2,
         "queued_other": 0,
         "queued_shorts": 0
       },
       "latest_video": {
-        "id": "0039",
-        "title": "Mark 1:35 Morning Prayer | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "Nq7a1yC4Rzw",
-        "watch_url": "https://youtu.be/Nq7a1yC4Rzw",
-        "published_on": "2026-11-07",
-        "published_at": "2026-11-07T20:29:37Z"
-      },
-      "next_queued_longform": {
         "id": "0040",
         "title": "Proverbs 3:5-6 Morning Prayer | The Morning Altar",
-        "words": 1699,
+        "format": "longform",
+        "youtube_video_id": "PIPx_odfiag",
+        "watch_url": "https://youtu.be/PIPx_odfiag",
+        "published_on": "2026-11-07",
+        "published_at": "2026-11-07T23:32:11Z"
+      },
+      "next_queued_longform": {
+        "id": "0041",
+        "title": "Psalm 118:24 Morning Prayer | The Morning Altar",
+        "words": 1842,
         "status": "approved"
       },
       "next_queued_short": null,
@@ -180,6 +180,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0040",
+      "slug": "proverbs-3-5-6-trust-in-the-lord",
+      "file": "0040-proverbs-3-5-6-trust-in-the-lord.md",
+      "title": "Proverbs 3:5-6 Morning Prayer | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-07",
+      "published_at": "2026-11-07T23:32:11Z",
+      "youtube_video_id": "PIPx_odfiag",
+      "watch_url": "https://youtu.be/PIPx_odfiag",
+      "youtu_be_url": "https://youtu.be/PIPx_odfiag",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/PIPx_odfiag/edit",
+      "thumb_url": "https://i.ytimg.com/vi/PIPx_odfiag/hqdefault.jpg",
+      "thumb_text": "TRUST IN THE LORD",
+      "duration_label": "~12 min",
+      "words": 1699
+    },
+    {
+      "id": "SHORT-MORNINGNUMBERS6V24",
+      "slug": "short-morningnumbers6v24-sunrise-prayer",
+      "file": "short-morningnumbers6v24-sunrise-prayer.md",
+      "title": "Say This Numbers 6:24-26 Prayer at Sunrise | Dawn #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-07",
+      "published_at": "2026-11-07T22:52:00Z",
+      "youtube_video_id": "SKP1Qxmel-0",
+      "watch_url": "https://www.youtube.com/shorts/SKP1Qxmel-0",
+      "youtu_be_url": "https://youtu.be/SKP1Qxmel-0",
+      "shorts_url": "https://www.youtube.com/shorts/SKP1Qxmel-0",
+      "studio_url": "https://studio.youtube.com/video/SKP1Qxmel-0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/SKP1Qxmel-0/hqdefault.jpg",
+      "thumb_text": "GREET \u00b7 THE",
+      "duration_label": "49s",
+      "words": 411
+    },
     {
       "id": "SHORT-MIDDAYPSALM91V6",
       "slug": "short-middaypsalm91v6-midday-prayer",
@@ -1111,19 +1157,6 @@
         "words": 1025
       },
       {
-        "id": "0040",
-        "slug": "proverbs-3-5-6-trust-in-the-lord",
-        "file": "0040-proverbs-3-5-6-trust-in-the-lord.md",
-        "title": "Proverbs 3:5-6 Morning Prayer | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1699
-      },
-      {
         "id": "0041",
         "slug": "psalm-118-24-this-is-the-day-the-lord-hath-made",
         "file": "0041-psalm-118-24-this-is-the-day-the-lord-hath-made.md",
@@ -1135,6 +1168,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1842
+      },
+      {
+        "id": "0042",
+        "slug": "numbers-6-24-26-morning-prayer",
+        "file": "0042-numbers-6-24-26-morning-prayer.md",
+        "title": "Numbers 6:24-26 Morning Prayer | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1656
       },
       {
         "id": "0047",

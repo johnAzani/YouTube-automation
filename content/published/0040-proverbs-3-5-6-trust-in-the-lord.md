@@ -2,7 +2,7 @@
 id: '0040'
 title: Proverbs 3:5-6 Morning Prayer | The Morning Altar
 slug: proverbs-3-5-6-trust-in-the-lord
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -83,6 +83,12 @@ originality:
 originality_note: Original theological exegesis drawing upon Charles Spurgeon and
   Matthew Henry, combined with DOCOGA REELS v2 kinetic typography and custom morning
   prayer movements for prayer2.
+published_on: "2026-11-07"
+published_at: "2026-11-07T23:32:11Z"
+youtube_video_id: "PIPx_odfiag"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — The Sunrise Hook & Directing the Prayer
