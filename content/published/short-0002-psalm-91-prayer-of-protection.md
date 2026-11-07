@@ -17,6 +17,12 @@ height: 1280
 duration_seconds: 39.55
 scenes_verified: 8
 metadata_revision: "selar-seo-v1"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_pending: false
+thumbnail_attempts: 0
+thumbnail_poster: ["PSALM 91 PRAYER", "BEFORE YOU SLEEP", "DIVINE PROTECTION", "THE SECRET PLACE"]
+thumbnail_kicker: ""
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 He who dwells in the secret place of the Most High shall abide under the shadow of the Almighty.

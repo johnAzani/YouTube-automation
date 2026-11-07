@@ -16,6 +16,9 @@ width: 720
 height: 1280
 duration_seconds: 52.17
 scenes_verified: 10
+thumbnail_attempts: 1
+thumbnail_pending: true
+thumbnail_error: "deferred_processing_unknown"
 ---
 
 Enron hit $90.75 a share and a ~$70B valuation before one question — "Is Enron Overpriced?" — exposed mark-to-market accounting and off-balance-sheet partnerships hiding billions in debt.

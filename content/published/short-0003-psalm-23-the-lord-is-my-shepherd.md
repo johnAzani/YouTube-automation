@@ -17,6 +17,12 @@ height: 1280
 duration_seconds: 52.37
 scenes_verified: 8
 metadata_revision: "selar-seo-v1"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_pending: false
+thumbnail_attempts: 0
+thumbnail_poster: ["PSALM 23 PRAYER", "BEFORE YOU SLEEP", "DIVINE PEACE", "THE SECRET PLACE"]
+thumbnail_kicker: ""
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 The Lord is my shepherd; I shall not want. He makes me to lie down in green pastures.

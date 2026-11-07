@@ -18,6 +18,12 @@ height: 1280
 duration_seconds: 47.69
 scenes_verified: 6
 metadata_revision: "selar-seo-v1"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_pending: false
+thumbnail_attempts: 0
+thumbnail_poster: ["PSALM 121 PRAYER", "BEFORE YOU SLEEP", "HE WHO KEEPS YOU", "THE SECRET PLACE"]
+thumbnail_kicker: ""
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 I will lift up mine eyes unto the hills, from whence cometh my help. My help cometh from the Lord, which made heaven and earth.

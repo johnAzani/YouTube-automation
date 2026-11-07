@@ -18,6 +18,12 @@ height: 1280
 duration_seconds: 63.29
 scenes_verified: 6
 metadata_revision: "selar-seo-v1"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_pending: false
+thumbnail_attempts: 0
+thumbnail_poster: ["PSALM 46 PRAYER", "BEFORE YOU SLEEP", "BE STILL & KNOW", "THE SECRET PLACE"]
+thumbnail_kicker: ""
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 God is our refuge and strength, a very present help in trouble. Therefore we will not fear, though the earth be removed.

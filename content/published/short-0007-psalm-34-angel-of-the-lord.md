@@ -18,6 +18,12 @@ height: 1280
 duration_seconds: 53.29
 scenes_verified: 9
 metadata_revision: "selar-seo-v1"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_pending: false
+thumbnail_attempts: 0
+thumbnail_poster: ["PSALM 34 PRAYER", "BEFORE YOU SLEEP", "ANGELS STAND WATCH", "THE SECRET PLACE"]
+thumbnail_kicker: ""
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 The angel of the Lord encamps all around those who fear Him, and delivers them. Oh, taste and see that the Lord is good; blessed is the man who trusts in Him!

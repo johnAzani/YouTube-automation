@@ -18,6 +18,12 @@ height: 1280
 duration_seconds: 61.81
 scenes_verified: 7
 metadata_revision: "selar-seo-v1"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_pending: false
+thumbnail_attempts: 0
+thumbnail_poster: ["PSALM 27 PRAYER", "BEFORE YOU SLEEP", "FEAR NO EVIL", "THE SECRET PLACE"]
+thumbnail_kicker: ""
+thumbnail_plate: "short-prayer-cover-poster.jpg"
 ---
 
 The Lord is my light and my salvation; whom shall I fear? The Lord is the strength of my life; of whom shall I be afraid?
