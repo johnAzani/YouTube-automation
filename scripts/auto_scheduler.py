@@ -159,6 +159,14 @@ def audit_shorts_queue() -> tuple[list[QueueItemStatus], list[Path]]:
 
 def build_schedule_audit() -> ScheduleAudit:
     now_utc = datetime.now(timezone.utc)
+    # Settle the queue *before* counting it. `select_next_queued_short()` is not a
+    # pure read: a Short paused on the daily TTS quota is auto-unpaused — and its
+    # manifest rewritten — the moment the reset time has passed. Counting first and
+    # selecting afterwards reported 5 approved Shorts for the same instant in which
+    # the queue held 6, which is why `test_build_schedule_audit_structure` failed
+    # ("5 != 6") on every run from the 08:00Z reset on 7 November, and why every red
+    # CI run re-triggered the scheduler supervisor through `workflow_run`.
+    selected_short = select_next_queued_short()
     lf_items, lf_approved = audit_longform_queue()
     sh_items, sh_approved = audit_shorts_queue()
 
@@ -174,7 +182,6 @@ def build_schedule_audit() -> ScheduleAudit:
         next_lf_str = f"Job {doc_next.id} — {doc_next.title}"
 
     next_sh_str = None
-    selected_short = select_next_queued_short()
     if selected_short:
         m_path, s_key = selected_short
         s_ed = EDITIONS.get(s_key)

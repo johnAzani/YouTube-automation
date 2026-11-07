@@ -81,3 +81,38 @@ class TestAutoScheduler(unittest.TestCase):
         # runway is derived from runnable work, so zero is a legitimate reading and
         # must be reported as zero rather than flattered by unbuildable queue rows
         self.assertGreaterEqual(audit.runway_days, 0)
+
+    def test_the_audit_counts_the_queue_after_it_has_settled_a_due_unpause(self):
+        """A due unpause is a *write*, so it has to happen before the count.
+
+        `select_next_queued_short()` flips `quota_paused` to `approved` and rewrites
+        the manifest as soon as the reset time has passed. Auditing first and
+        selecting afterwards described a queue that no longer existed one line
+        later: 5 approved Shorts reported where the queue held 6. This pins the
+        order rather than the particular file.
+        """
+        import yaml
+
+        with tempfile.TemporaryDirectory() as tmp:
+            qdir = Path(tmp)
+            manifest = qdir / "a.yml"
+            manifest.write_text(
+                "short: short-psalm91\nstatus: quota_paused\n"
+                "quota_reset_utc: 2026-11-07T08:00:00+00:00\n",
+                encoding="utf-8",
+            )
+
+            def settle(*_args, **_kwargs):
+                data = yaml.safe_load(manifest.read_text(encoding="utf-8"))
+                data["status"] = "approved"
+                manifest.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+                return (manifest, "short-psalm91")
+
+            with mock.patch("scripts.auto_scheduler.SHORTS_QUEUE_DIR", qdir), \
+                 mock.patch("scripts.auto_scheduler.select_next_queued_short", settle), \
+                 mock.patch("pipeline.short_release._renderer_script_keys",
+                            return_value={"short-psalm91"}):
+                audit = build_schedule_audit()
+
+        self.assertEqual(audit.shorts_approved_count, 1)
+        self.assertIn("short-psalm91", audit.next_short or "")

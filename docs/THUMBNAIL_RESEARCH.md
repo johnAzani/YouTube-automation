@@ -323,3 +323,131 @@ The backdrop is now the footage **the video is actually made of**:
 Measured on a real 1024×1536 night photograph: contact 11.0:1, border luma 36.0
 (minimum 26), 167 KiB, safe zone and badge clearance intact. A pure-black asset
 still lands at 26.2 — the grade is what guarantees the edge, not the picture.
+
+---
+
+## 12. Shorts custom thumbnails (7 November 2026) — the platform changed, the code did not
+
+### 12.1 What the API actually says now
+
+The claim that "YouTube rejects custom thumbnails on Shorts" was true only before
+the Data API revision of **2026-11-03**, which added `thumbnails.set` support for
+Shorts and the `shortsAspectRatio` thumbnail object. Everything the old code did
+followed from that claim: `pipeline/short_release.py` skipped the call and wrote
+`not_supported_for_shorts` into the receipt, so the skip looked like a decision
+instead of a gap.
+
+Read against today's documentation:
+
+| Question | Answer | Source |
+| :--- | :--- | :--- |
+| Does `thumbnails.set` work on a Short? | Yes, since 2026-11-03 | `thumbnails/set` reference, revised 2026-11-03 |
+| When may it be called? | After `processingDetails.processingStatus == succeeded` | `thumbnails/set` reference |
+| What shape must the image be? | Anything accepted, then **centre-cropped to 9:16** | `thumbnails` resource, `shortsAspectRatio` |
+| Maximum size | 50 MB (was 2 MB before 2026-09-14) | revision history |
+| Formats | JPEG, PNG, `image/*` | `thumbnails/set` reference |
+| Quota | 50 units per call | quota table |
+| How is success proven? | `snippet.thumbnails.shortsAspectRatio` exists | `thumbnails` resource |
+| Where does it appear? | Search, channel page, subscriptions, playlists, home — **not** the swipe feed | platform guides, Aug 2026 |
+| May anyone use it? | No: YPP membership required | YouTube Help |
+
+The last two matter more than the rest. A Shorts custom thumbnail is a *discovery*
+asset, not a feed asset: the swipe feed plays the video, so it shows a frame, not
+the poster. The poster earns its keep wherever a Short is presented as a tile.
+Shorts thumbnail CTR is still only published in Studio, so no API-side CTR claim
+is made anywhere in this repo.
+
+### 12.2 Why 1080×1920 and not 1280×720
+
+The old renderer produced 1280×720 with the lockup inside a 405 px centre column,
+on the theory that YouTube would letterbox it. YouTube crops instead:
+
+| Input | Pixels kept after the 9:16 crop | Effective scale |
+| :--- | :--- | :--- |
+| 1280×720 | 405×720 = 31.6% | hero upscaled 2.67× |
+| **1080×1920** | **100%** | **1.0×** |
+
+Two thirds of a 16:9 frame is not just wasted, it is *unpredictable*: the crop is
+centred, so no layout rule written against the full frame survives. `PSALM` set at
+459 px inside a 405 px strip was clipped, and the composite measured 2.89:1 behind
+its hero against this repo's 7.0 floor — a frame that fails its own legibility test
+three ways while looking fine in a file browser.
+
+Evidence, rendered and committed in `docs/media/shorts-thumb-research/`:
+
+* `todays-file-1280x720.jpg` — what the pipeline used to upload;
+* `todays-file-cropped-to-9x16-by-youtube.jpg` — what a viewer actually got;
+* `proposed-v2-night-1080x1920.jpg` — authored at native size (contrast 17.88:1);
+* `proposed-v2-morning-1080x1920.jpg` — same contract, dawn grade (17.56:1).
+
+### 12.3 The implemented contract
+
+`pipeline/shorts_poster.py` (`POSTER_REVISION = "shorts-poster-v1"`):
+
+* canvas `1080×1920`; safe box `(72, 200, 1008, 1500)` — the region YouTube does
+  not cover with its own chrome on a Shorts tile;
+* text width 796 px; hero Inter Black 132→64 px in steps of 2, per-line, so a long
+  line shrinks instead of overflowing; sub 54→32; kicker 50→34; tag 38→26;
+* translucent sapphire card `(8, 22, 52, 216)` with a 4 px gold outline, laid out
+  around the measured text so the card hugs the lockup instead of floating;
+* contrast is measured on the **composited pixels** behind the top-left of the card
+  and refused below 7.0;
+* any glyph outside the safe box raises `PosterRefused`; the caller keeps the Short
+  published, stamps `thumbnail_pending: true`, and the monitor retries;
+* one plate (`short-prayer-cover-poster.jpg`) graded three ways — `night`, `dawn`,
+  `noon` — matching each channel's daypart, with a `NAVY_MOON` gradient fallback;
+* copy comes from the spec's authored `poster` four-line stack: lines 1–2 hero,
+  line 3 the gold sub-line, line 4 the tag pill. A dangling connector at the end of
+  line 3 ("PRAYER WITH") is folded into line 4 ("THE MORNING ALTAR"), because a
+  poster cannot reproduce a four-line stack verbatim without reading as a fragment;
+* the ribbon is dropped when it echoes the hero (`kicker_is_redundant`): on The
+  Morning Altar, "BEGIN YOUR DAY IN PRAYER" over "BEGIN YOUR / DAY IN QUIET" is the
+  same sentence twice in 200 px of premium space;
+* every poster carries the channel name in the tag pill when the copy does not
+  supply one.
+
+### 12.4 The gate is the receipt
+
+`thumbnails.set` returns 200 even when nothing changed, so the code does not trust
+it. `pipeline/upload.py::apply_shorts_thumbnail()` waits for processing, sets,
+retries a `429 uploadRateLimitExceeded` twice with backoff, then re-reads
+`snippet.thumbnails` and requires `shortsAspectRatio`. Only then is the receipt
+stamped with `thumbnail_revision: shorts-poster-v1`. Otherwise it keeps
+`thumbnail_pending: true` plus the API's own words in `thumbnail_error`, and the
+new pass in `scripts/sync_published_thumbnails.py` retries it on the next monitor
+run — the same contract long-form thumbnails already had.
+
+Statuses: `ok`, `deferred_processing_<status>`, `skipped`, `unverified: …`, or the
+raw API error with appended diagnosis fields.
+
+### 12.5 Backfill
+
+Nine live Shorts predate the fix. `scripts/backfill_short_thumbnails.py` renders
+and applies the poster for each published Short receipt whose `thumbnail_revision`
+is not `shorts-poster-v1`, one channel at a time with that channel's own token:
+
+```bash
+python scripts/backfill_short_thumbnails.py --dry-run        # render, spend nothing
+python scripts/backfill_short_thumbnails.py --limit 3        # canary (~150 units)
+python scripts/backfill_short_thumbnails.py                  # the rest
+```
+
+Cost is 50 units per attempt against a 10,000/day bucket; nine Shorts is 450.
+
+### 12.6 Dead code removed
+
+`pipeline/thumbnail.py::generate_short_vertical_poster` (720×1280, unused) and
+`generate_short_scroll_stopper_thumbnail` (1280×720 with a 405 px centre column,
+the renderer behind the clipped `PSALM`) were deleted with their test. Both
+encoded the letterbox theory; keeping them would invite a future caller to
+reintroduce a frame that loses 68% of its pixels.
+
+### Sources for this section
+
+- YouTube Data API — `thumbnails.set` (revised 2026-11-03); `thumbnails` resource
+  (`shortsAspectRatio`); API revision history (2026-11-03 Shorts support, 2026-09-14
+  2 MB → 50 MB); quota cost table.
+- Platform guides (Aug 2026) on where a Shorts custom thumbnail appears and the
+  1080×1920 recommendation, versus the older 1280×720 advice.
+- Vendor pages claiming Shorts thumbnails are "rejected" — cited only as evidence
+  of how widely the pre-2026-11-03 belief persists, not as fact.

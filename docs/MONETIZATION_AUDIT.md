@@ -165,13 +165,20 @@ In video production and algorithmic optimization, aspect ratio mismatch is a pri
 
 ### 5.2 Studio Aspect Ratio Specification Matrix
 
+> **Corrected 7 November 2026.** The Shorts row used to read "Shorts Shelf Desktop
+> Thumb — 1280×720, center 405 px locked", which described a renderer that no
+> longer exists and contradicted the API: `thumbnails.set` accepts a custom Shorts
+> thumbnail since the Data API revision of 2026-11-03 and **centre-crops it to
+> 9:16**. A 1280×720 input therefore discards ~68% of its pixels and upscales the
+> remainder 2.67×; the poster is authored at native 1080×1920 instead
+> (`pipeline/shorts_poster.py`). See `docs/THUMBNAIL_RESEARCH.md` §12.
+
 | Production Asset | Target Format | Canvas Resolution | Aspect Ratio | Source Plate Dimension | Aspect Match | Distortion / Crop Factor |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Master Documentary Video** | 16:9 Widescreen | 1280×720 / 1920×1080 | **16:9 (1.778)** | 1376×768 (`long-prayer-scene-*.jpg`) | **Native 16:9** | **0.0% (Zero Distortion)** |
 | **Long-Form Video Thumbnail** | 16:9 Widescreen | 1280×720 | **16:9 (1.778)** | 1376×768 (`long-prayer-thumb-hero.jpg`) | **Native 16:9** | **0.0% (Zero Distortion)** |
-| **Shorts Video (Reels/TikTok)** | 9:16 Vertical | 720×1280 / 1080×1920 | **9:16 (0.5625)** | 768×1376 (`short-prayer-scene-*.jpg`) | **Native 9:16** | **0.0% (Zero Distortion)** |
-| **Shorts Mobile Feed Poster** | 9:16 Vertical | 720×1280 | **9:16 (0.5625)** | 768×1376 (`short-prayer-cover-poster.jpg`) | **Native 9:16** | **0.0% (Zero Distortion)** |
-| **Shorts Shelf Desktop Thumb** | 16:9 / 9:16 Safe | 1280×720 | **16:9 (1.778)** | 1376×768 (Center 405px locked) | **Native 16:9** | **0.0% (Zero Distortion)** |
+| **Shorts Video Poster (in-video lockup)** | 9:16 Vertical | 1080×1920 | **9:16 (0.5625)** | 768×1376 (`short-prayer-scene-*.jpg`) | **Native 9:16** | **0.0% (Zero Distortion)** |
+| **Shorts Custom Thumbnail (API)** | 9:16 Vertical | **1080×1920** | **9:16 (0.5625)** | 768×1376 (`short-prayer-cover-poster.jpg`) | **Native 9:16** | **0.0% (Zero Distortion)** |
 
 ---
 
@@ -420,7 +427,7 @@ SPOKEN: "As you can see, The Secret Place is a dedicated, human-curated editoria
 Before publishing monetized content or submitting the YPP application, verify that every item on this checklist is completed:
 
 - [x] **Brand Studio Identity:** Verified as *The Secret Place* (`@TheSecretPlace`), with faceless branding, sanctuary sapphire aesthetics, and zero personal name references.
-- [x] **Native Aspect Ratio Matching:** All 16:9 widescreen long-form videos and thumbnails consume native 16:9 assets (1376×768 / 1280×720); all 9:16 Shorts consume native 9:16 assets (768×1376 / 720×1280).
+- [x] **Native Aspect Ratio Matching:** All 16:9 widescreen long-form videos and thumbnails consume native 16:9 assets (1376×768 / 1280×720); all 9:16 Shorts — including their custom API thumbnails, which YouTube crops to 9:16 — consume native 9:16 assets (768×1376 plate → 1080×1920 poster).
 - [x] **Licensing Ledger Clearance:** All stills validated `status: cleared` in `image-search/LICENSES.yml` with cryptographic SHA-256 hashes; `tests/test_licence_ledger.py` passes 100%.
 - [x] **Zero Content ID Risk:** Score generated exclusively through in-house procedural DSP synthesizer (`tools/score.py`); zero external audio samples.
 - [x] **Commercial TTS Licensing:** Voiceover produced via Google Gemini API (`gemini-3.8-flash-tts`) with clause-level breath pauses; fully compliant with Google commercial terms.

@@ -164,6 +164,7 @@ class ShortReleaseTests(unittest.TestCase):
                 patch("pipeline.short_release.CONFIG.youtube_client_secret", "csec"),
                 patch("pipeline.upload.upload", return_value=fake_upload) as upload_mock,
                 patch("pipeline.upload.set_video_thumbnail", return_value="ok"),
+                patch("pipeline.upload.apply_shorts_thumbnail", return_value="ok"),
                 patch("pipeline.upload.audit_channel_videos", return_value=[{"id": "ytShort123", "uploadStatus": "processed"}]),
                 patch("pipeline.short_release._open_release_ticket") as ticket_mock,
             ):
@@ -214,6 +215,7 @@ class ShortReleaseTests(unittest.TestCase):
                 patch("pipeline.short_release.CONFIG.youtube_client_secret", "csec"),
                 patch("pipeline.upload.upload", return_value=fake_upload),
                 patch("pipeline.upload.set_video_thumbnail", return_value="ok"),
+                patch("pipeline.upload.apply_shorts_thumbnail", return_value="ok"),
                 patch("pipeline.upload.audit_channel_videos", return_value=[{"id": "ytShort999", "uploadStatus": "processed"}]),
                 patch("pipeline.short_release._open_release_ticket"),
             ):
@@ -261,6 +263,7 @@ class ShortReleaseTests(unittest.TestCase):
                 patch("pipeline.short_release.CONFIG.youtube_client_secret", "csec"),
                 patch("pipeline.upload.upload", return_value=fake_upload) as upload_mock,
                 patch("pipeline.upload.set_video_thumbnail", return_value="ok"),
+                patch("pipeline.upload.apply_shorts_thumbnail", return_value="ok"),
                 patch("pipeline.upload.audit_channel_videos", return_value=[{"id": "ytPsalm123", "uploadStatus": "processed"}]),
                 patch("pipeline.short_release._open_release_ticket"),
             ):
@@ -287,19 +290,6 @@ class ShortReleaseTests(unittest.TestCase):
         self.assertGreater(max(sum(px) for px in top_band), 90)
         self.assertGreater(max(sum(px) for px in bot_band), 90)
 
-    def test_scroll_stopping_short_thumbnail_dimensions_and_size(self):
-        from PIL import Image
-        from pipeline.thumbnail import generate_short_scroll_stopper_thumbnail
-
-        with tempfile.TemporaryDirectory() as tmp:
-            out_jpg = Path(tmp) / "thumb.jpg"
-            hero = Path(__file__).resolve().parent.parent / "image-search" / "short-enron-thumb-hero.jpg"
-            res = generate_short_scroll_stopper_thumbnail(hero, out_jpg)
-            self.assertTrue(res.is_file())
-            self.assertLess(res.stat().st_size, 2 * 1024 * 1024)
-            with Image.open(res) as im:
-                self.assertEqual(im.size, (1280, 720))
-
 
 
 if __name__ == "__main__":
@@ -317,3 +307,50 @@ def test_queue_skips_known_edition_missing_from_renderer(tmp_path):
     assert selected is not None
     assert selected[1] == 'short-psalm91'
     assert (queue / '01.yml').exists()
+
+
+class ShortNarrationFallbackTests(unittest.TestCase):
+    """The same wall in the Shorts path, and the same rule about it.
+
+    `_prepare_narration` raised "refusing to render a silent Short" whenever Gemini
+    returned no audio — which, since 6 November, was every attempt. The refusal was
+    correct; having no second engine was not.
+    """
+
+    def test_no_audio_falls_back_to_the_free_engine(self):
+        from pipeline.short_release import _synthesise_narration
+
+        with tempfile.TemporaryDirectory() as tmp:
+            audio = Path(tmp) / "short.mp3"
+            with patch("pipeline.gemini_tts.synthesize_gemini_audio",
+                            side_effect=RuntimeError("Gemini API returned no audio content "
+                                                     "(mime_types=none)")) as gemini, \
+                 patch("pipeline.tts.synthesize_edge",
+                            return_value=("edge-tts", [])) as edge:
+                engine = _synthesise_narration("word " * 200, audio)
+        self.assertEqual(engine, "edge-tts")
+        gemini.assert_called_once()
+        edge.assert_called_once()
+
+    def test_a_spent_allowance_pauses_the_short_instead_of_borrowing(self):
+        from pipeline.quota_handler import GeminiQuotaExceededError
+        from pipeline.short_release import _synthesise_narration
+
+        with tempfile.TemporaryDirectory() as tmp:
+            with patch("pipeline.gemini_tts.synthesize_gemini_audio",
+                            side_effect=GeminiQuotaExceededError("daily limit")), \
+                 patch("pipeline.tts.synthesize_edge") as edge:
+                with self.assertRaises(GeminiQuotaExceededError):
+                    _synthesise_narration("word " * 200, Path(tmp) / "short.mp3")
+        edge.assert_not_called()
+
+    def test_placeholder_is_reported_as_silence_not_as_a_voice(self):
+        from pipeline.short_release import _synthesise_narration
+
+        with tempfile.TemporaryDirectory() as tmp:
+            with patch("pipeline.gemini_tts.synthesize_gemini_audio",
+                            side_effect=RuntimeError("boom")), \
+                 patch("pipeline.tts.synthesize_edge",
+                            return_value=("placeholder", [])):
+                engine = _synthesise_narration("word " * 200, Path(tmp) / "short.mp3")
+        self.assertEqual(engine, "placeholder")

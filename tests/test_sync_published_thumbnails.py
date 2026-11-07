@@ -106,8 +106,28 @@ class TestSyncPublishedThumbnails(unittest.TestCase):
             },
         ]
 
+        # Per-id fake: the Shorts path asks for processingStatus and then for
+        # snippet.thumbnails.shortsAspectRatio, and the whole point is that both
+        # questions get the right answer for the right video.
+        by_id = {item["id"]: item for item in fake_items}
+        by_id["SG69BbNlfRw"] = {
+            "id": "SG69BbNlfRw",
+            "snippet": {"title": "Psalm 91 #Shorts", "description": "d", "categoryId": "22",
+                        "thumbnails": {"default": {"url": "d"},
+                                       "shortsAspectRatio": {"url": "s", "width": 1080,
+                                                             "height": 1920}}},
+            "status": {"privacyStatus": "public", "uploadStatus": "processed"},
+            "processingDetails": {"processingStatus": "succeeded"},
+            "contentDetails": {"duration": "PT49S"},
+        }
+
+        def _fake_list(**kwargs):
+            wanted = [v for v in str(kwargs.get("id") or "").split(",") if v]
+            rows = [by_id[v] for v in wanted if v in by_id]
+            return mock.Mock(execute=mock.Mock(return_value={"items": rows}))
+
         fake_yt = mock.MagicMock()
-        fake_yt.videos.return_value.list.return_value.execute.return_value = {"items": fake_items}
+        fake_yt.videos.return_value.list.side_effect = _fake_list
         thumb_uploads: list[tuple[str, Path]] = []
 
         def _fake_set_thumb(vid: str, path: Path) -> str:
@@ -122,10 +142,18 @@ class TestSyncPublishedThumbnails(unittest.TestCase):
             youtube_client=fake_yt,
             thumb_setter=_fake_set_thumb,
         )
-        self.assertEqual(len(rows), 2)
+        # Two long-form videos plus the Short that no earlier pass would touch.
+        self.assertEqual(len(rows), 3)
         self.assertEqual([v for v, _ in thumb_uploads], ["7RDX0fbIOtQ", "JZv67RNPCEI"])
         self.assertEqual(rows[0]["hero"], "UNDER HIS WINGS")
         self.assertEqual(rows[1]["hero"], "RESTORE MY SOUL")
+        short_row = rows[2]
+        self.assertEqual(short_row["format"], "short")
+        self.assertEqual(short_row["thumbnail_status"], "ok")
+        self.assertEqual(short_row["poster"]["width"], 1080)
+        self.assertEqual(short_row["poster"]["height"], 1920)
+        self.assertGreaterEqual(short_row["poster"]["contrast"], 7.0)
+        self.assertTrue(short_row["poster"]["safe_zone_ok"])
 
         # Verify 0008 (<90s) had its misleading "Complete Prayer" title clarified
         # and 0009 (private, >=180s, processed) was promoted to public.
@@ -146,7 +174,11 @@ class TestSyncPublishedThumbnails(unittest.TestCase):
         doc_short = parse_script(self.pub_dir / "short-0002-psalm-91-prayer-of-protection.md")
         self.assertEqual(doc_0008.meta.get("thumbnail_revision"), spt.THUMBNAIL_REVISION)
         self.assertEqual(doc_0009.meta.get("thumbnail_revision"), spt.THUMBNAIL_REVISION)
-        self.assertNotIn("thumbnail_revision", doc_short.meta)
+        # A Short is now stamped like any other video — and only when YouTube
+        # confirmed the 9:16 variant exists (`shortsAspectRatio`).
+        self.assertEqual(doc_short.meta.get("thumbnail_revision"), spt.SHORTS_POSTER_REVISION)
+        self.assertEqual(doc_short.meta.get("thumbnail_pending"), False)
+        self.assertEqual(len(doc_short.meta.get("thumbnail_poster") or []), 4)
 
         # Second run must be a complete zero-API-call no-op!
         fake_yt.reset_mock()
@@ -172,8 +204,12 @@ class TestSyncPublishedThumbnails(unittest.TestCase):
             youtube_client=fake_yt,
             thumb_setter=thumb_setter,
         )
-        self.assertEqual(len(rows), 2)
-        self.assertTrue(all(r["thumbnail_status"] == "video_not_found" for r in rows))
+        longform_rows = [r for r in rows if r.get("format") != "short"]
+        short_rows = [r for r in rows if r.get("format") == "short"]
+        self.assertEqual(len(longform_rows), 2)
+        self.assertTrue(all(r["thumbnail_status"] == "video_not_found" for r in longform_rows))
+        self.assertEqual(len(short_rows), 1, "the Short is repaired by this pass too")
+        self.assertTrue(short_rows[0]["thumbnail_status"].startswith("deferred_processing"))
         thumb_setter.assert_not_called()
         doc_0009 = parse_script(self.pub_dir / "0009-psalm-23-the-lord-is-my-shepherd.md")
         self.assertEqual(doc_0009.meta.get("youtube_status"), "deleted_or_missing")

@@ -115,7 +115,16 @@ def _base_short_key_for_doc(doc: ScriptDoc) -> str:
 #: `channel:` is not listed: the 25 channel-1 jobs authored before the declaration
 #: rule carry no `channel:` key at all, and `_enforce_channel_metadata` already
 #: refuses a script that declares the wrong (or no) channel at authoring time.
-REQUIRED_JOB_KEYS = ("id", "slug", "title", "status", "niche", "thumb_text",
+#: Keys a model-authored script must declare before it may enter the queue.
+#:
+#: `channel` is on this list because of what its absence costs. On 7 November 2026
+#: 25 of the 27 queued scripts carried no `channel:` line at all, so they parsed as
+#: `secret-place` — which is why the Midday Watch's queue was empty while the other
+#: two channels' queues grew with scripts written for it. It is also why the prayer3
+#: brain failed five runs in a row: `_enforce_channel_metadata` refuses a script with
+#: no `channel:`, but the key was not required here, so `_repair_envelope` was never
+#: asked to supply it and every candidate model's answer was thrown away instead.
+REQUIRED_JOB_KEYS = ("id", "slug", "title", "status", "channel", "niche", "thumb_text",
                      "originality")
 
 
@@ -202,6 +211,53 @@ FALLBACK_TEXT_MODELS = ("gemini-3.5-flash-lite", "gemini-3.1-flash-lite",
 MAX_CALLS_PER_RUN = int(os.environ.get("GEMINI_MAX_CALLS_PER_RUN", "40") or "40")
 
 
+#: Retired models answer 404 on every project we own. Trying them anyway costs a
+#: request slot, a wait, and one red annotation each, and it makes a quota failure
+#: look like a format failure — the 7 November prayer3 pass reported "every
+#: candidate model returned a script without front matter" when five of the seven
+#: candidates had never returned a script at all (three 503s, two 404s). An older
+#: project whose key still routes them can opt back in.
+ALLOW_RETIRED_ENV = "GEMINI_ALLOW_RETIRED_MODELS"
+
+
+def allow_retired_models() -> bool:
+    return os.environ.get(ALLOW_RETIRED_ENV, "").strip().lower() in {"1", "true", "yes", "on"}
+
+
+def strip_code_fences(text: str) -> str:
+    """Remove a markdown fence wrapping the whole answer, wherever it sits."""
+    body = (text or "").strip()
+    if not body.startswith("```"):
+        return body
+    body = body.split("\n", 1)[1] if "\n" in body else ""
+    if body.rstrip().endswith("```"):
+        body = body.rstrip()[:-3]
+    return body.strip()
+
+
+#: "## Scene 3", "### SCENE 3", "**Scene 3**", "Scene 3:" — the queue gate looks for
+#: the literal `## Scene`, and a model that answers with an equivalent heading had
+#: its whole script thrown away. This rewrites the heading, not the prose.
+_SCENE_HEADING = re.compile(
+    r"^[ \t]*(?:#{1,4}[ \t]*)?(?:\*\*[ \t]*)?scene[ \t]*(\d+)[ \t]*(?:\*\*)?[ \t]*"
+    r"(?:[—–:\-.][ \t]*([^\n]*?))?[ \t]*$",
+    re.IGNORECASE | re.MULTILINE,
+)
+
+
+def _scene_heading(match: "re.Match[str]") -> str:
+    title = (match.group(2) or "").strip().strip("*").strip()
+    return f"## Scene {match.group(1)}" + (f" — {title}" if title else "")
+
+
+def normalise_scene_headings(text: str) -> str:
+    """Rewrite an equivalent scene heading to the literal `## Scene N` the gate wants."""
+    body = text or ""
+    if "## Scene" in body:
+        return body
+    return _SCENE_HEADING.sub(_scene_heading, body)
+
+
 def text_model_candidates(primary: str | None = None) -> list[str]:
     """Every model worth trying, in order, without duplicates.
 
@@ -213,7 +269,9 @@ def text_model_candidates(primary: str | None = None) -> list[str]:
     if requested in RETIRED_TEXT_MODELS:
         requested = ""      # a retired model is never the thing we start with
     order = [requested, DEFAULT_TEXT_MODEL, *FALLBACK_TEXT_MODELS,
-             *DEPRECATED_TEXT_MODELS, *RETIRED_TEXT_MODELS]
+             *DEPRECATED_TEXT_MODELS]
+    if allow_retired_models():
+        order.extend(RETIRED_TEXT_MODELS)
     seen: list[str] = []
     for name in order:
         if name and name not in seen:
@@ -233,7 +291,40 @@ def live_model(primary: str | None = None) -> str:
 #: 6 November 08:45Z: the model was finally live and the authoring run still failed,
 #: because three calls in a row came back 503 UNAVAILABLE and the loop skipped to the
 #: next candidate model instead of letting the spike pass.
-_TRANSIENT_BACKOFF = (5, 15, 30, 60)
+#:
+#: Three rungs, not four. With five live models in the chain the old (5, 15, 30, 60)
+#: ladder allowed **25 requests and 9m10s for ONE logical call** — measured on
+#: 7 November: 125 % of a 20-request/day model, and a third of the 30-minute job
+#: timeout, of which an empty-queue pass may need eight. See
+#: docs/research/schedule-and-model-reliability.md §6.2.
+_TRANSIENT_BACKOFF = (5, 15, 30)
+
+#: Total backoff a *pass* may sleep, across every model and every logical call. The
+#: budget is per pass rather than per model because the failure mode was cumulative:
+#: each model looked frugal on its own and the pass still died of wall clock.
+MAX_TRANSIENT_SLEEP_SECONDS = 120.0
+
+#: ±20 % on every wait. Google's own troubleshooting guide asks for jitter so clients
+#: that hit the same spike do not retry in lockstep; without it the three channel legs
+#: of one matrix retry within the same second.
+TRANSIENT_JITTER = 0.2
+
+#: Models on the 20-request/day free tier. A five-attempt storm on one of these spends
+#: a quarter of its whole day on a single logical call, which is how gemini-3.8-flash
+#: came to be named 29 times in this repo's failure annotations. One retry is enough.
+TWENTY_A_DAY_MODELS = ("gemini-3.6-flash", "gemini-3.8-flash", "gemini-3.7-flash")
+
+
+#: Attempts per logical call on a 500-request/day model: one plus two waits, 20 s of
+#: backoff. Three is enough to ride out a demand spike; four was enough to starve the
+#: rest of the chain of the pass budget (measured: the first two lite models ate the
+#: whole 90 s and the remaining three got one attempt each).
+LITE_MODEL_ATTEMPTS = 3
+
+
+def model_attempt_limit(model: str) -> int:
+    """How many requests one logical call may spend on `model`."""
+    return 2 if model in TWENTY_A_DAY_MODELS else LITE_MODEL_ATTEMPTS
 
 
 def is_transient(exc: BaseException) -> bool:
@@ -291,6 +382,19 @@ class GeminiBrain:
         #: Requests issued by this pass. Bounded so a bad morning cannot spend the
         #: whole free-tier day before the first script is authored.
         self.calls_made = 0
+        #: Why the last `_call_model` came back empty ("retired", "quota", "busy",
+        #: "no response"), so the run can report the real cause per model instead of
+        #: blaming the script format for a service failure.
+        self.last_reason = ""
+        #: Set when Google says the daily allowance is gone. No candidate model can
+        #: answer after that, so the chain stops instead of burning six more calls.
+        self.quota_stop = ""
+        #: Attempts this pass made, one row per model: what it did and why.
+        self.authoring_outcomes: list[dict[str, str]] = []
+        #: Seconds this pass has slept inside backoff, against
+        #: `MAX_TRANSIENT_SLEEP_SECONDS`. Injectable sleep so tests do not wait.
+        self.transient_slept = 0.0
+        self._sleep = time.sleep
         if self.api_key:
             try:
                 from google import genai
@@ -411,49 +515,72 @@ sentences; write more prayer, more scripture exposition, more stillness.
 
 Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not include markdown code block backticks.
 """
-        incomplete: list[str] = []
         if self.is_api_available():
+            outcomes: list[dict[str, str]] = []
+            self.authoring_outcomes = outcomes
+            # Two envelope repairs per authoring run: enough to rescue a good body,
+            # never enough to spend the day on models that cannot write front matter.
+            repairs_left = 2
             try:
                 for candidate_model in text_model_candidates(self.model):
-                    text = (self._call_model(candidate_model, user_prompt) or "").strip()
+                    raw = self._call_model(candidate_model, user_prompt) or ""
+                    text = normalise_scene_headings(strip_code_fences(raw))
                     if not text:
+                        outcomes.append({"model": candidate_model,
+                                         "outcome": self.last_reason or "no response"})
+                        if self.quota_stop:
+                            break
                         continue
-                    # Strip accidental triple backticks if model wrapped it
-                    if text.startswith("```markdown"):
-                        text = text[11:]
-                    elif text.startswith("```"):
-                        text = text[3:]
-                    if text.endswith("```"):
-                        text = text[:-3]
-                    text = text.strip()
                     if "## Scene" not in text:
                         print(f"[gemini-brain] {candidate_model} returned no scenes — "
                               f"trying the next model.")
-                        incomplete.append(candidate_model)
+                        outcomes.append({"model": candidate_model,
+                                         "outcome": "no `## Scene` heading"})
                         continue
-                    self._enforce_channel_metadata(text, scripture_data)
                     missing = missing_job_keys(text)
-                    if missing:
-                        # A script without the queue's own front matter cannot be
-                        # staged, so asking this model again wastes the allowance and
-                        # writing it anyway poisons the queue. Climb to the next model.
-                        print(f"[gemini-brain] {candidate_model} returned a script missing "
-                              f"queue front matter ({', '.join(missing)}) — trying the "
-                              f"next model.")
-                        incomplete.append(candidate_model)
+                    if missing and not repairs_left:
+                        outcomes.append({"model": candidate_model,
+                                         "outcome": f"missing {', '.join(missing)} "
+                                                    f"(repair budget spent)"})
                         continue
+                    if missing:
+                        repairs_left -= 1
+                        # The body is usable; only the envelope is missing. One
+                        # targeted request for the front matter costs a single call,
+                        # while climbing to the next model costs a whole script and
+                        # buys nothing if the model never writes front matter unprompted:
+                        # on 7 November every candidate produced a body-or-nothing and
+                        # the queue stayed empty. Ask this model for the envelope only.
+                        print(f"[gemini-brain] {candidate_model} returned a body without "
+                              f"queue front matter ({', '.join(missing)}) — asking it for "
+                              f"the envelope only.")
+                        text = self._repair_envelope(candidate_model, text, scripture_data,
+                                                     missing)
+                        missing = missing_job_keys(text)
+                    if missing:
+                        print(f"[gemini-brain] {candidate_model} still missing "
+                              f"{', '.join(missing)} — trying the next model.")
+                        outcomes.append({"model": candidate_model,
+                                         "outcome": f"missing {', '.join(missing)}"})
+                        continue
+                    try:
+                        # Brand safety runs on the whole file, so it must run *after*
+                        # the envelope exists: a body-only answer was being rejected as
+                        # "does not declare channel:" before it could be repaired, and
+                        # that single ordering mistake discarded every usable script.
+                        self._enforce_channel_metadata(text, scripture_data)
+                    except BrainAuthoringError as branding:
+                        print(f"[gemini-brain] {candidate_model} rejected: {branding}")
+                        outcomes.append({"model": candidate_model,
+                                         "outcome": f"branding: {branding}"[:200]})
+                        continue
+                    outcomes.append({"model": candidate_model, "outcome": "accepted"})
                     return text
             except BrainAuthoringError:
                 raise
             except Exception as api_err:
                 print(f"[gemini-brain] Gemini API generation failed ({api_err}).")
-            if incomplete:
-                raise BrainAuthoringError(
-                    f"{brand.display_name}: every candidate model returned a script "
-                    f"without the front matter the queue requires (no `## Scene`, or "
-                    f"missing {', '.join(REQUIRED_JOB_KEYS)}) — last tried "
-                    f"{incomplete[-1]}. Nothing was written: a job that cannot satisfy "
-                    f"the queue gate must never enter content/queue/.")
+            raise BrainAuthoringError(self._authoring_failure(brand, outcomes))
 
         # Authoring is model-only for every channel, with identical wording.
         # The old "equipped template" was fixed Psalm 121 night text and was
@@ -470,6 +597,60 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
             f"($0 lock: idle, never spend)."
         )
 
+    def _repair_envelope(self, model: str, body: str, scripture_data: dict[str, Any],
+                         missing: list[str]) -> str:
+        """Ask the model for the front matter only, then splice it onto its own body.
+
+        This is a formatting repair, never an invention: the model wrote the script
+        and the attestation block, and it is asked for exactly the keys the queue
+        requires. Nothing is fabricated on its behalf — a script whose
+        `originality` checklist we invented would be a false attestation, so the
+        keys come from the model or the script is rejected.
+        """
+        prompt = (
+            "Your previous answer was the body of the script but it did not start with "
+            "the YAML front matter content/queue requires.\n"
+            f"Return ONLY a YAML front matter block, beginning and ending with a line of "
+            f"three dashes, containing at least these keys: {', '.join(missing)}.\n"
+            "Keys already known (use them verbatim):\n"
+            + "\n".join(f"- {k}: {v}" for k, v in scripture_data.items()
+                         if k in {"id", "scripture", "theme", "hook"})
+            # The channel is the one key the model must never infer. It is this
+            # run's identity, and a script that guesses it is published on another
+            # channel — the defect that emptied the Midday Watch's queue.
+            + f"\n- channel: {self.channel_id}"
+            + "\nScripture: the body you wrote. Output no prose and no code fences."
+        )
+        envelope = strip_code_fences(self._call_model(model, prompt) or "")
+        if not envelope:
+            return body
+        if not envelope.startswith("---"):
+            envelope = "---\n" + envelope
+        if not envelope.rstrip().endswith("---"):
+            envelope = envelope.rstrip() + "\n---"
+        return envelope.rstrip() + "\n\n" + body.lstrip()
+
+    def _authoring_failure(self, brand: Any, outcomes: list[dict[str, str]]) -> str:
+        """One sentence that names the actual cause, per model.
+
+        The old message said every candidate "returned a script without the front
+        matter" — on 7 November five of seven candidates never returned a script at
+        all (three 503s, two 404s, one empty). That wording sent the diagnosis at
+        the parser while the service was the problem.
+        """
+        seen = "; ".join(f"{row['model']}: {row['outcome']}" for row in outcomes) or "no model answered"
+        tail = ""
+        if self.quota_stop:
+            tail = (f" The project's daily free-tier text allowance is spent; it resets "
+                    f"at {self.quota_stop}.")
+        elif self.transient_slept >= MAX_TRANSIENT_SLEEP_SECONDS * 0.9:
+            tail = (f" The pass spent its whole {MAX_TRANSIENT_SLEEP_SECONDS:.0f}s backoff "
+                    f"budget on 503s ({self.transient_slept:.0f}s); a later slot has a "
+                    f"different capacity moment.")
+        return (f"{brand.display_name}: no candidate model could author this scripture — "
+                f"{seen}.{tail} Nothing was written: a job that cannot satisfy the queue "
+                f"gate must never enter content/queue/.")
+
     def _call_model(self, model: str, prompt: str) -> str:
         """One model call with bounded backoff for a busy service.
 
@@ -478,7 +659,8 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         candidate. `BrainAuthoringError` is a verdict about the *text*, not a
         transport failure, and is always re-raised.
         """
-        for attempt in range(1 + len(_TRANSIENT_BACKOFF)):
+        attempts_allowed = model_attempt_limit(model)
+        for attempt in range(attempts_allowed):
             if self.calls_made >= MAX_CALLS_PER_RUN:
                 raise BrainAuthoringError(
                     f"this pass has already made {self.calls_made} Gemini requests "
@@ -491,13 +673,16 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                     contents=prompt,
                     config={"system_instruction": self.system_prompt},
                 )
-                return getattr(resp, "text", "") or ""
+                text = (getattr(resp, "text", "") or "").strip()
+                self.last_reason = "" if text else "returned nothing"
+                return text
             except BrainAuthoringError:
                 raise
             except Exception as exc:  # noqa: BLE001
                 err = str(exc).lower()
                 if is_model_retired(exc):
                     report_retired_model(model, exc)
+                    self.last_reason = f"retired (404): {exc}"[:180]
                     return ""
                 if "429" in err or "resource_exhausted" in err or "quota" in err:
                     from pipeline.quota_handler import calculate_next_quota_reset_utc
@@ -505,19 +690,51 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                     reset_dt = calculate_next_quota_reset_utc()
                     print("[gemini-brain] Google Gemini daily free tier quota reached "
                           f"($0.00 lock active). Reset at {reset_dt.isoformat()} UTC.")
+                    # Every model shares the project's daily allowance, so there is
+                    # nothing left to try today — say it once and stop.
+                    self.last_reason = "quota exhausted"
+                    self.quota_stop = reset_dt.isoformat()
                     return ""
-                if is_transient(exc) and attempt < len(_TRANSIENT_BACKOFF):
-                    wait = _TRANSIENT_BACKOFF[attempt]
+                if is_transient(exc) and attempt + 1 < attempts_allowed:
+                    wait = self._budgeted_wait(model, attempt, attempts_allowed)
+                    if wait is None:
+                        self.last_reason = ("busy after retries: pass backoff budget "
+                                            f"({MAX_TRANSIENT_SLEEP_SECONDS:.0f}s) spent")
+                        print(f"[gemini-brain] {model}: service busy, but this pass has "
+                              f"spent its {MAX_TRANSIENT_SLEEP_SECONDS:.0f}s of backoff "
+                              f"— trying the next model.", flush=True)
+                        return ""
                     print(f"[gemini-brain] {model}: service busy ({type(exc).__name__}). "
-                          f"Waiting {wait}s (attempt {attempt + 2}/"
-                          f"{1 + len(_TRANSIENT_BACKOFF)})...", flush=True)
-                    time.sleep(wait)
+                          f"Waiting {wait:.0f}s (attempt {attempt + 2}/"
+                          f"{attempts_allowed})...", flush=True)
+                    self._sleep(wait)
+                    self.transient_slept += wait
                     continue
                 print(f"[gemini-brain] Model {model} call failed: {exc}")
+                reason = ("busy after retries" if is_transient(exc) else "failed")
+                self.last_reason = f"{reason}: {exc}"[:180]
                 return ""
         print(f"[gemini-brain] Model {model} still busy after "
-              f"{len(_TRANSIENT_BACKOFF)} retries; trying the next candidate.")
+              f"{attempts_allowed} attempt(s); trying the next candidate.")
+        self.last_reason = f"busy after retries: {attempts_allowed} attempt(s) on {model}"
         return ""
+
+    def _budgeted_wait(self, model: str, attempt: int, attempts_allowed: int) -> float | None:
+        """The jittered wait this pass can still afford, or None if the budget is spent.
+
+        None rather than 0: "no time left to be patient" is a different answer from
+        "wait zero seconds", and the caller must stop climbing this model.
+        """
+        import random as _random
+
+        if not _TRANSIENT_BACKOFF:      # a test may empty the ladder to run instantly
+            return 0.0
+        base = _TRANSIENT_BACKOFF[min(attempt, len(_TRANSIENT_BACKOFF) - 1)]
+        jittered = base * (1.0 + _random.uniform(-TRANSIENT_JITTER, TRANSIENT_JITTER))
+        remaining = MAX_TRANSIENT_SLEEP_SECONDS - self.transient_slept
+        if remaining < base * 0.5:
+            return None
+        return round(min(jittered, remaining), 1)
 
     def _enforce_channel_metadata(self, text: str, scripture_data: dict[str, Any] | None = None) -> None:
         """Refuse model output that is branded for the wrong channel.
@@ -589,13 +806,21 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                     f"{prompt}\n\nPrevious output was rejected: {last_error}\n"
                     "Fix exactly that and return only JSON.")
                 resp = None
-                for wait in (0, *_TRANSIENT_BACKOFF):
-                    if wait:
+                for rung in range(1 + len(_TRANSIENT_BACKOFF)):
+                    if rung:
                         # Same 503 spike that killed a long-form run at 08:45Z
-                        # would also kill the Short: wait, do not re-prompt.
-                        print(f"[gemini-brain] Short {key}: service busy, waiting {wait}s...",
-                              flush=True)
-                        time.sleep(wait)
+                        # would also kill the Short: wait, do not re-prompt. The wait
+                        # is drawn from the same pass-level budget as long-form
+                        # authoring, so a busy night cannot spend it twice over.
+                        wait = self._budgeted_wait(model, rung - 1, 1 + len(_TRANSIENT_BACKOFF))
+                        if wait is None:
+                            last_error = ("pass backoff budget spent before this model "
+                                          "could answer")
+                            break
+                        print(f"[gemini-brain] Short {key}: service busy, waiting "
+                              f"{wait:.0f}s...", flush=True)
+                        self._sleep(wait)
+                        self.transient_slept += wait
                     try:
                         self.calls_made += 1
                         if self.calls_made > MAX_CALLS_PER_RUN:
@@ -852,12 +1077,41 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
             })
         return rows
 
+    def _require_own_channel(self, doc: ScriptDoc, script_path: Path) -> None:
+        """Refuse a script that does not name this brain's channel.
+
+        `_enforce_channel_metadata` already refuses model output branded for someone
+        else, but it runs on text *before* the file exists. This runs on the parsed
+        document, immediately before the write that makes it a queue item, so a
+        script that reaches the queue by any other route — a repaired envelope, a
+        hand-edited file, a future authoring path — still cannot be written under a
+        channel that did not ask for it.
+
+        An undeclared channel is refused rather than defaulted: `doc.channel` falls
+        back to `secret-place`, and that fallback is exactly how 25 scripts written
+        for one channel were counted as another's.
+        """
+        declared = (doc.explicit_channel or "").strip()
+        if declared == self.channel_id:
+            return
+        if not declared:
+            raise BrainAuthoringError(
+                f"{script_path.name}: the script declares no `channel:` line, so it has "
+                f"no owner. Nothing was written to the queue — a script that names no "
+                f"channel parses as secret-place and would be published there. Add "
+                f"`channel: {self.channel_id}` to its front matter.")
+        raise BrainAuthoringError(
+            f"{script_path.name}: declares `channel: {declared}` but this is "
+            f"{self.channel_id}'s run. A script is never written into another "
+            f"channel's queue.")
+
     def verify_and_stage(self, script_path: Path) -> BrainGenerationResult:
         """Run factchecking claim extraction, verify queue integrity, and stage for production."""
         from scripts.factcheck import main as factcheck_main, out_path
         from pipeline.run import _validate_finance_niche
 
         doc = parse_script(script_path)
+        self._require_own_channel(doc, script_path)
         _validate_finance_niche(doc)
 
         # Generate the mandatory factcheck worksheet with sha256 binding
