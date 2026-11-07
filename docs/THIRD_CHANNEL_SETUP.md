@@ -58,16 +58,44 @@ channel, so sharing them would starve the two channels that are publishing.
    actually returns, so this is visible, not guessed.
 
 ### 3b. Create a separate Google Cloud project
-1. New project, e.g. `midday-watch-youtube`.
-2. Enable **YouTube Data API v3**.
-3. Configure the OAuth consent screen (External, Testing) with the same scopes the
-   other two channels use: `youtube.upload`, `youtube.readonly`, `youtube.force-ssl`.
-4. Create an OAuth **Desktop** client → client ID + secret.
+1. New project, e.g. `midday-watch-youtube`. **Do not link a billing account.**
+2. Enable **YouTube Data API v3** — in *this* project, not channel 1's or 2's;
+   the 10,000-unit daily quota is pooled per project.
+3. Google Auth Platform (left menu: Overview / Branding / Audience / Clients /
+   Data Access) → **Get started** wizard:
+   - App name `The Midday Watch Automation` (distinct from the other two, so the
+     consent screen says which channel you are authorising), user-support email
+     = yours;
+   - Audience: **External**;
+   - Contact information: your email; tick the API Services policy → **Create**.
+4. **Audience → Publish app → Confirm.** Do this *before* minting the token. A
+   consent screen left in **Testing** issues refresh tokens that hard-expire after
+   **7 days** (`docs/DEEP_DIVE.md` trap 1) — the pipeline uploads all week, then
+   dies with `invalid_grant`. Unverified *In production* is fine for your own
+   account: you click *Advanced → Go to … (unsafe)* once, on your own app.
+5. **Data Access → Add or remove scopes → Manually add scopes**, all three, one
+   per line — the pipeline always requests this exact set and Google rejects a
+   token whose grants do not cover it (`invalid_scope`):
+   - `https://www.googleapis.com/auth/youtube.upload`
+   - `https://www.googleapis.com/auth/youtube.readonly`
+   - `https://www.googleapis.com/auth/youtube.force-ssl`
+6. **Clients → Create client → Web application**, name
+   `Midday Watch YouTube Uploader`, authorised redirect URI
+   `https://developers.google.com/oauthplayground` → Create. Copy the client ID
+   and secret straight into the GitHub secrets in §3e — never into chat, an
+   issue or a commit.
+   *(A **Desktop** client plus `python scripts/youtube_oauth.py` is the
+   equivalent local route; it listens on `localhost:8765`, so it needs a
+   computer, not a phone. The two live channels were minted through the
+   Playground — both routes work, this one has the track record.)*
 
 ### 3c. Mint the refresh token
 OAuth Playground → gear icon → *use your own OAuth credentials* → paste the new
-client ID/secret → authorize the three scopes → exchange → **refresh token**.
-Never paste a token into an issue, a commit, or this file.
+client ID/secret → **Server-side**, **Offline**, consent prompt → authorize the
+three scopes **while signed in as The Midday Watch** (this is what decides which
+channel the token can publish to) → exchange → **refresh token**.
+
+Never paste a token into an issue, a commit, this file, or chat.
 
 ### 3d. Create the separate Gemini project
 Google AI Studio → new project → create API key in it. Free tier only, no billing.
