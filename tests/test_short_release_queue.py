@@ -159,14 +159,35 @@ class TestCompanionShortMapping(unittest.TestCase):
 
 
 class TestShortThumbnails(unittest.TestCase):
-    def test_thumbnail_call_is_not_made_for_shorts(self):
-        """YouTube rejects custom thumbnails on Shorts; the call still costs quota."""
+    """The Shorts path must *ask YouTube* for a 9:16 thumbnail and prove it landed.
+
+    Inverted on 2026-11-07: `thumbnails.set` has supported Shorts since the API
+    revision of 2026-11-03, and YouTube centre-crops to 9:16. The old rule here
+    ("never call it, Shorts are rejected") was true only before that date, was
+    never re-tested, and is why nine live Shorts still show an auto-grabbed frame
+    while their receipts claimed `not_supported_for_shorts`.
+    """
+
+    def test_shorts_path_sets_and_verifies_a_native_thumbnail(self):
         source = (ROOT / "pipeline" / "short_release.py").read_text(encoding="utf-8")
         tree = ast.parse(source)
-        calls = [n for n in ast.walk(tree)
-                 if isinstance(n, ast.Call) and getattr(n.func, "id", "") == "set_video_thumbnail"]
-        self.assertEqual(calls, [], "set_video_thumbnail must not be called on the Shorts path")
-        self.assertIn("not_supported_for_shorts", source)
+        called = {getattr(n.func, "id", "") or getattr(n.func, "attr", "")
+                  for n in ast.walk(tree) if isinstance(n, ast.Call)}
+        self.assertNotIn("set_video_thumbnail", called,
+                         "Shorts use apply_shorts_thumbnail (wait + set + verify)")
+        self.assertIn("apply_shorts_thumbnail", called,
+                      "the Shorts path must ask YouTube for a custom thumbnail")
+        self.assertIn("poster_for_spec", called, "the poster comes from the authored spec")
+
+    def test_the_hardcoded_skip_string_is_gone(self):
+        """No code path may claim Shorts thumbnails are unsupported any more."""
+        source = (ROOT / "pipeline" / "short_release.py").read_text(encoding="utf-8")
+        tree = ast.parse(source)
+        literals = [n.value for n in ast.walk(tree)
+                    if isinstance(n, ast.Constant) and isinstance(n.value, str)]
+        self.assertNotIn("not_supported_for_shorts", literals)
+        self.assertNotIn("not_supported_for_shorts",
+                         (ROOT / "pipeline" / "upload.py").read_text(encoding="utf-8"))
 
 
 class TestQueueDataMatchesReality(unittest.TestCase):
