@@ -115,7 +115,16 @@ def _base_short_key_for_doc(doc: ScriptDoc) -> str:
 #: `channel:` is not listed: the 25 channel-1 jobs authored before the declaration
 #: rule carry no `channel:` key at all, and `_enforce_channel_metadata` already
 #: refuses a script that declares the wrong (or no) channel at authoring time.
-REQUIRED_JOB_KEYS = ("id", "slug", "title", "status", "niche", "thumb_text",
+#: Keys a model-authored script must declare before it may enter the queue.
+#:
+#: `channel` is on this list because of what its absence costs. On 7 November 2026
+#: 25 of the 27 queued scripts carried no `channel:` line at all, so they parsed as
+#: `secret-place` — which is why the Midday Watch's queue was empty while the other
+#: two channels' queues grew with scripts written for it. It is also why the prayer3
+#: brain failed five runs in a row: `_enforce_channel_metadata` refuses a script with
+#: no `channel:`, but the key was not required here, so `_repair_envelope` was never
+#: asked to supply it and every candidate model's answer was thrown away instead.
+REQUIRED_JOB_KEYS = ("id", "slug", "title", "status", "channel", "niche", "thumb_text",
                      "originality")
 
 
@@ -605,7 +614,11 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
             f"three dashes, containing at least these keys: {', '.join(missing)}.\n"
             "Keys already known (use them verbatim):\n"
             + "\n".join(f"- {k}: {v}" for k, v in scripture_data.items()
-                         if k in {"id", "scripture", "theme", "hook", "channel"})
+                         if k in {"id", "scripture", "theme", "hook"})
+            # The channel is the one key the model must never infer. It is this
+            # run's identity, and a script that guesses it is published on another
+            # channel — the defect that emptied the Midday Watch's queue.
+            + f"\n- channel: {self.channel_id}"
             + "\nScripture: the body you wrote. Output no prose and no code fences."
         )
         envelope = strip_code_fences(self._call_model(model, prompt) or "")
@@ -1064,12 +1077,41 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
             })
         return rows
 
+    def _require_own_channel(self, doc: ScriptDoc, script_path: Path) -> None:
+        """Refuse a script that does not name this brain's channel.
+
+        `_enforce_channel_metadata` already refuses model output branded for someone
+        else, but it runs on text *before* the file exists. This runs on the parsed
+        document, immediately before the write that makes it a queue item, so a
+        script that reaches the queue by any other route — a repaired envelope, a
+        hand-edited file, a future authoring path — still cannot be written under a
+        channel that did not ask for it.
+
+        An undeclared channel is refused rather than defaulted: `doc.channel` falls
+        back to `secret-place`, and that fallback is exactly how 25 scripts written
+        for one channel were counted as another's.
+        """
+        declared = (doc.explicit_channel or "").strip()
+        if declared == self.channel_id:
+            return
+        if not declared:
+            raise BrainAuthoringError(
+                f"{script_path.name}: the script declares no `channel:` line, so it has "
+                f"no owner. Nothing was written to the queue — a script that names no "
+                f"channel parses as secret-place and would be published there. Add "
+                f"`channel: {self.channel_id}` to its front matter.")
+        raise BrainAuthoringError(
+            f"{script_path.name}: declares `channel: {declared}` but this is "
+            f"{self.channel_id}'s run. A script is never written into another "
+            f"channel's queue.")
+
     def verify_and_stage(self, script_path: Path) -> BrainGenerationResult:
         """Run factchecking claim extraction, verify queue integrity, and stage for production."""
         from scripts.factcheck import main as factcheck_main, out_path
         from pipeline.run import _validate_finance_niche
 
         doc = parse_script(script_path)
+        self._require_own_channel(doc, script_path)
         _validate_finance_niche(doc)
 
         # Generate the mandatory factcheck worksheet with sha256 binding
