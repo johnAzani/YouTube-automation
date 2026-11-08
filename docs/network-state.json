@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T13:43:15Z",
+  "generated_at": "2026-11-08T14:08:24Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,11 +7,11 @@
     "channels_total": 3
   },
   "totals": {
-    "published_total": 35,
-    "published_longform": 16,
+    "published_total": 36,
+    "published_longform": 17,
     "published_shorts": 19,
-    "public_total": 33,
-    "queued_longform": 31,
+    "public_total": 34,
+    "queued_longform": 30,
     "queued_shorts": 18,
     "automations_ok": 8,
     "automations_total": 10,
@@ -99,27 +99,27 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 12,
-        "published_longform": 6,
+        "published_total": 13,
+        "published_longform": 7,
         "published_shorts": 6,
-        "public_total": 11,
-        "queued_longform": 5,
+        "public_total": 12,
+        "queued_longform": 4,
         "queued_other": 0,
         "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0041",
-        "title": "Psalm 118:24 Morning Prayer | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "ciAKb9hv3LY",
-        "watch_url": "https://youtu.be/ciAKb9hv3LY",
-        "published_on": "2026-11-08",
-        "published_at": "2026-11-08T11:45:24Z"
-      },
-      "next_queued_longform": {
         "id": "0042",
         "title": "Numbers 6:24-26 Morning Prayer | The Morning Altar",
-        "words": 1656,
+        "format": "longform",
+        "youtube_video_id": "xpaLUtqsFTw",
+        "watch_url": "https://youtu.be/xpaLUtqsFTw",
+        "published_on": "2026-11-08",
+        "published_at": "2026-11-08T14:07:49Z"
+      },
+      "next_queued_longform": {
+        "id": "0043",
+        "title": "Psalm 90:17 Morning Prayer | The Morning Altar",
+        "words": 1337,
         "status": "approved"
       },
       "next_queued_short": {
@@ -211,6 +211,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "0042",
+      "slug": "numbers-6-24-26-morning-prayer",
+      "file": "0042-numbers-6-24-26-morning-prayer.md",
+      "title": "Numbers 6:24-26 Morning Prayer | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-08",
+      "published_at": "2026-11-08T14:07:49Z",
+      "youtube_video_id": "xpaLUtqsFTw",
+      "watch_url": "https://youtu.be/xpaLUtqsFTw",
+      "youtu_be_url": "https://youtu.be/xpaLUtqsFTw",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/xpaLUtqsFTw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/xpaLUtqsFTw/hqdefault.jpg",
+      "thumb_text": "THE LORD BLESS THEE",
+      "duration_label": "~11 min",
+      "words": 1656
+    },
     {
       "id": "SHORT-PSALM91V5",
       "slug": "short-psalm91v5-pre-sleep-prayer",
@@ -1278,19 +1301,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1025
-      },
-      {
-        "id": "0042",
-        "slug": "numbers-6-24-26-morning-prayer",
-        "file": "0042-numbers-6-24-26-morning-prayer.md",
-        "title": "Numbers 6:24-26 Morning Prayer | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1656
       },
       {
         "id": "0043",
