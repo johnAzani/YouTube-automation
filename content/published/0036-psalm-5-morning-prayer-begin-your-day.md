@@ -86,9 +86,10 @@ category_id: '22'
 published_on: "2026-11-05"
 published_at: "2026-11-05T11:17:00Z"
 youtube_video_id: "_vp27ZYPYaY"
-thumbnail_pending: false
+thumbnail_pending: true
 metadata_revision: "selar-seo-v1"
-thumbnail_revision: "ctr-v3-cinema"
+thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunrise Prayer; long_uploads_status=allowed; video_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; video_channel_title=The Morning Altar | Daily Sunrise Prayer; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_retry_after: "2026-11-09T01:51:23Z"
 ---
 
 ## Scene 1 — Give Ear to My Words, O Lord (Psalm 5:1–2)
