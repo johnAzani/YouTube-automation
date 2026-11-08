@@ -1,0 +1,323 @@
+{
+  "key": "short-morningpsalm88v13",
+  "channel": "prayer2",
+  "psalm": 88,
+  "title": [
+    "MORNING PRAYER",
+    "PSALM 88:13"
+  ],
+  "poster": [
+    "CRY FOR HELP",
+    "IN THE MORNING",
+    "MY PRAYER COMES",
+    "BEFORE YOU"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "calm mist over mountain lake dawn sunrise",
+    "golden sunrise light shining through forest trees morning",
+    "open window glowing sunrise morning golden hour soft light",
+    "peaceful morning meadow sunbeams dawn landscape",
+    "dramatic golden sunrise over foggy valley clouds",
+    "calm morning ocean horizon soft dawn sunlight",
+    "sunrise golden light on quiet mountain peak"
+  ],
+  "scenes": [
+    {
+      "a": "As the first light breaks across the sky, step into the stillness of this new morning.",
+      "img": "short-morningpsalm88v13-scene-01.jpg",
+      "kicker": "PSALM 88:13",
+      "sub": "DAWN BREAKS IN STILLNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Hear the words of Psalm 88 verse 13: But I cry to you for help, Lord; in the morning my prayer comes before you.",
+      "img": "short-morningpsalm88v13-scene-02.jpg",
+      "kicker": "PSALM 88:13",
+      "sub": "MY PRAYER COMES BEFORE YOU",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, before the demands of today rush in, we lift our hearts to you in quiet worship.",
+      "img": "short-morningpsalm88v13-scene-03.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "LIFT YOUR HEART TO GOD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Fill this day with your peace, guiding every step we take and every thought we hold.",
+      "img": "short-morningpsalm88v13-scene-04.jpg",
+      "kicker": "DIVINE PEACE",
+      "sub": "GUIDING EVERY STEP TODAY",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "May your presence surround us like the morning sun, renewing our spirit and restoring our hope.",
+      "img": "short-morningpsalm88v13-scene-05.jpg",
+      "kicker": "RENEWAL & HOPE",
+      "sub": "SURROUNDED BY HIS LIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "We place our worries into your faithful hands, trusting your grace for all that lies ahead.",
+      "img": "short-morningpsalm88v13-scene-06.jpg",
+      "kicker": "FAITHFUL HANDS",
+      "sub": "TRUSTING HIS GRACE",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Morning Altar to begin every sunrise in prayer.",
+      "img": "short-morningpsalm88v13-scene-07.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "BEGIN EVERY SUNRISE IN PRAYER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "As the first light breaks across the sky, step into the stillness of this new morning."
+    ],
+    [
+      7,
+      15,
+      "Hear the words of Psalm 88 verse 13: But I cry to you for help, Lord; in the morning my prayer comes before you."
+    ],
+    [
+      16,
+      22,
+      "Lord, before the demands of today rush in, we lift our hearts to you in quiet worship."
+    ],
+    [
+      23,
+      29,
+      "Fill this day with your peace, guiding every step we take and every thought we hold."
+    ],
+    [
+      30,
+      36,
+      "May your presence surround us like the morning sun, renewing our spirit and restoring our hope."
+    ],
+    [
+      37,
+      43,
+      "We place our worries into your faithful hands, trusting your grace for all that lies ahead."
+    ],
+    [
+      44,
+      50,
+      "Subscribe to The Morning Altar to begin every sunrise in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "AS THE FIRST LIGHT BREAKS",
+        "ACROSS THE SKY STEP INTO",
+        "THE STILLNESS OF THIS MORNING"
+      ],
+      [
+        "LIGHT",
+        "STILLNESS"
+      ],
+      "PSALM 88:13"
+    ],
+    [
+      7,
+      15,
+      [
+        "HEAR THE WORDS OF PSALM 88",
+        "I CRY TO YOU FOR HELP LORD",
+        "MY PRAYER COMES BEFORE YOU"
+      ],
+      [
+        "CRY",
+        "HELP",
+        "PRAYER"
+      ],
+      "PSALM 88:13"
+    ],
+    [
+      16,
+      22,
+      [
+        "BEFORE THE DEMANDS RUSH IN",
+        "WE LIFT OUR HEARTS TO YOU",
+        "IN QUIET WORSHIP TODAY"
+      ],
+      [
+        "HEARTS",
+        "QUIET",
+        "WORSHIP"
+      ],
+      "PSALM 88:13"
+    ],
+    [
+      23,
+      29,
+      [
+        "FILL THIS DAY WITH PEACE",
+        "GUIDING EVERY STEP WE TAKE",
+        "AND EVERY THOUGHT WE HOLD"
+      ],
+      [
+        "PEACE",
+        "GUIDING",
+        "THOUGHT"
+      ],
+      "PSALM 88:13"
+    ],
+    [
+      30,
+      36,
+      [
+        "MAY YOUR PRESENCE SURROUND US",
+        "LIKE THE MORNING SUN RENEWING",
+        "OUR SPIRIT AND RESTORING HOPE"
+      ],
+      [
+        "PRESENCE",
+        "RENEWING",
+        "HOPE"
+      ],
+      "PSALM 88:13"
+    ],
+    [
+      37,
+      43,
+      [
+        "WE PLACE OUR WORRIES INTO",
+        "YOUR FAITHFUL HANDS TRUSTING",
+        "YOUR GRACE FOR ALL AHEAD"
+      ],
+      [
+        "FAITHFUL",
+        "HANDS",
+        "GRACE"
+      ],
+      "PSALM 88:13"
+    ],
+    [
+      44,
+      50,
+      [
+        "SUBSCRIBE TO THE MORNING ALTAR",
+        "TO BEGIN EVERY SUNRISE",
+        "IN FAITHFUL PRAYER"
+      ],
+      [
+        "SUBSCRIBE",
+        "SUNRISE",
+        "PRAYER"
+      ],
+      "THE MORNING ALTAR"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As the first light breaks across the sky, step into the stillness of this new morning.",
+      "kind": "phrase",
+      "words": [
+        "LIGHT",
+        "STILLNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the words of Psalm 88 verse 13: But I cry to you for help, Lord; in the morning my prayer comes before you.",
+      "kind": "phrase",
+      "words": [
+        "HELP",
+        "PRAYER"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, before the demands of today rush in, we lift our hearts to you in quiet worship.",
+      "kind": "phrase",
+      "words": [
+        "HEARTS",
+        "WORSHIP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Fill this day with your peace, guiding every step we take and every thought we hold.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "GUIDING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your presence surround us like the morning sun, renewing our spirit and restoring our hope.",
+      "kind": "phrase",
+      "words": [
+        "PRESENCE",
+        "HOPE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "We place our worries into your faithful hands, trusting your grace for all that lies ahead.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFUL",
+        "GRACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Morning Altar to begin every sunrise in prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUNRISE",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 88:13"
+}

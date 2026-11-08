@@ -1,0 +1,402 @@
+{
+  "key": "short-morningpsalm59v16",
+  "channel": "prayer2",
+  "psalm": 59,
+  "title": [
+    "SUNRISE PRAYER",
+    "PSALM 59:16"
+  ],
+  "poster": [
+    "THE MORNING ALTAR",
+    "BEGIN EVERY SUNRISE IN PRAYER",
+    "PSALM 59:16",
+    "GOD IS MY REFUGES AND STRENGTH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "soft golden sunrise over misty valley",
+    "morning light breaking over serene mountains",
+    "sunbeams shining through dramatic morning clouds",
+    "calm morning lake reflecting golden sun",
+    "first sunlight touching green meadow dew",
+    "peaceful forest trail bathed in morning light",
+    "golden morning sky glowing with warmth",
+    "open window looking out at bright sunrise"
+  ],
+  "scenes": [
+    {
+      "a": "presence of God today.",
+      "img": "short-morningpsalm59v16-scene-01.jpg",
+      "kicker": "DAWN PRAYER",
+      "sub": "STEP INTO HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "promise of Psalm 59:16:",
+      "img": "short-morningpsalm59v16-scene-02.jpg",
+      "kicker": "PSALM 59:16",
+      "sub": "THE MORNING PROMISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "my refuge in times of trouble.",
+      "img": "short-morningpsalm59v16-scene-03.jpg",
+      "kicker": "GOD MY FORTRESS",
+      "sub": "SING OF HIS STRENGTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.35
+      ]
+    },
+    {
+      "a": "brand new day to you.",
+      "img": "short-morningpsalm59v16-scene-04.jpg",
+      "kicker": "NEW DAY PRAYER",
+      "sub": "OFFERING OUR HEARTS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "mercy is renewed with every sunrise.",
+      "img": "short-morningpsalm59v16-scene-05.jpg",
+      "kicker": "RENEWED MERCY",
+      "sub": "NEW EVERY MORNING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "give us courage for whatever lies ahead.",
+      "img": "short-morningpsalm59v16-scene-06.jpg",
+      "kicker": "STEADFAST PEACE",
+      "sub": "GUIDE OUR STEPS TODAY",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "protective wings today.",
+      "img": "short-morningpsalm59v16-scene-07.jpg",
+      "kicker": "HIS PROTECTION",
+      "sub": "REST SAFELY IN HIM",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "begin every sunrise in prayer.",
+      "img": "short-morningpsalm59v16-scene-08.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "BEGIN EVERY SUNRISE IN PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "Welcome the quiet light of dawn and step into the presence of God today."
+    ],
+    [
+      7,
+      14,
+      "As the sun rises, remember the promise of Psalm 59:16:"
+    ],
+    [
+      14,
+      28,
+      "I will sing of your strength, in the morning I will sing of your love; for you are my fortress, my refuge in times of trouble."
+    ],
+    [
+      28,
+      36,
+      "Heavenly Father, we lovingly offer this brand new day to you."
+    ],
+    [
+      36,
+      48,
+      "When shadows linger and worries press upon our hearts, remind us that your mercy is renewed with every sunrise."
+    ],
+    [
+      48,
+      60,
+      "Fill our souls with your steadfast peace, guide our steps with your truth, and give us courage for whatever lies ahead."
+    ],
+    [
+      60,
+      66,
+      "We rest safely beneath your protective wings today."
+    ],
+    [
+      66,
+      74,
+      "Subscribe to The Morning Altar to begin every sunrise in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "WELCOME THE QUIET LIGHT",
+        "OF DAWN AND STEP INTO",
+        "THE PRESENCE OF GOD TODAY"
+      ],
+      [
+        "PRESENCE",
+        "GOD"
+      ],
+      "PSALM 59:16"
+    ],
+    [
+      7,
+      14,
+      [
+        "AS THE SUN RISES",
+        "REMEMBER THE PROMISE OF",
+        "PSALM 59:16"
+      ],
+      [
+        "PROMISE",
+        "PSALM 59:16"
+      ],
+      "PSALM 59:16"
+    ],
+    [
+      14,
+      28,
+      [
+        "I WILL SING OF YOUR STRENGTH",
+        "IN THE MORNING I WILL SING",
+        "OF YOUR LOVE FOR YOU ARE",
+        "MY FORTRESS MY REFUGE",
+        "IN TIMES OF TROUBLE"
+      ],
+      [
+        "STRENGTH",
+        "LOVE",
+        "FORTRESS",
+        "REFUGE"
+      ],
+      "PSALM 59:16"
+    ],
+    [
+      28,
+      36,
+      [
+        "HEAVENLY FATHER WE LOVINGLY",
+        "OFFER THIS BRAND NEW DAY",
+        "TO YOU"
+      ],
+      [
+        "HEAVENLY FATHER",
+        "NEW DAY"
+      ],
+      "PSALM 59:16"
+    ],
+    [
+      36,
+      48,
+      [
+        "WHEN SHADOWS LINGER AND WORRIES",
+        "PRESS UPON OUR HEARTS",
+        "REMIND US THAT YOUR MERCY",
+        "IS RENEWED WITH EVERY SUNRISE"
+      ],
+      [
+        "SHADOWS",
+        "MERCY",
+        "SUNRISE"
+      ],
+      "PSALM 59:16"
+    ],
+    [
+      48,
+      60,
+      [
+        "FILL OUR SOULS WITH YOUR",
+        "STEADFAST PEACE GUIDE OUR",
+        "STEPS WITH YOUR TRUTH AND",
+        "GIVE US COURAGE FOR WHATEVER",
+        "LIES AHEAD"
+      ],
+      [
+        "STEADFAST PEACE",
+        "TRUTH",
+        "COURAGE"
+      ],
+      "PSALM 59:16"
+    ],
+    [
+      60,
+      66,
+      [
+        "WE REST SAFELY BENEATH",
+        "YOUR PROTECTIVE WINGS TODAY"
+      ],
+      [
+        "SAFELY",
+        "PROTECTIVE WINGS"
+      ],
+      "PSALM 59:16"
+    ],
+    [
+      66,
+      74,
+      [
+        "SUBSCRIBE TO THE MORNING ALTAR",
+        "TO BEGIN EVERY SUNRISE IN PRAYER"
+      ],
+      [
+        "SUBSCRIBE",
+        "THE MORNING ALTAR"
+      ],
+      "PSALM 59:16"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "presence of God today.",
+      "kind": "phrase",
+      "words": [
+        "PRESENCE",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "promise of Psalm 59:16:",
+      "kind": "phrase",
+      "words": [
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "sing of your strength,",
+      "kind": "phrase",
+      "words": [
+        "SING",
+        "STRENGTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "sing of your love;",
+      "kind": "phrase",
+      "words": [
+        "SING",
+        "LOVE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "you are my fortress,",
+      "kind": "phrase",
+      "words": [
+        "FORTRESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "my refuge in times of trouble.",
+      "kind": "phrase",
+      "words": [
+        "REFUGE",
+        "TROUBLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "brand new day to you.",
+      "kind": "phrase",
+      "words": [
+        "NEW",
+        "DAY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "mercy is renewed with every sunrise.",
+      "kind": "phrase",
+      "words": [
+        "MERCY",
+        "RENEWED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "steadfast peace,",
+      "kind": "phrase",
+      "words": [
+        "STEADFAST",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "give us courage",
+      "kind": "phrase",
+      "words": [
+        "COURAGE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "protective wings today.",
+      "kind": "phrase",
+      "words": [
+        "PROTECTIVE",
+        "WINGS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "begin every sunrise in prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUNRISE",
+        "PRAYER"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 59:16"
+}
