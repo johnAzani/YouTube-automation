@@ -333,6 +333,7 @@ def sync_published_thumbnails(
         published_dir=published_dir, force=force, channel_id=profile.id
     )
     if limit is not None and limit >= 0:
+        pending = pending[:limit]
         pending_shorts = pending_shorts[:limit]
     if not pending and not pending_shorts:
         print(f"[thumb-sync] {profile.id}: every published video is at "
@@ -375,9 +376,21 @@ def sync_published_thumbnails(
             print(f"[thumb-sync] warning: videos.list audit failed: {exc!r}")
 
     results: list[dict[str, Any]] = []
+    channel_rate_limited_until = ""
     for path, doc in pending:
         vid = str(doc.meta.get("youtube_video_id")).strip()
         doc_key = str(doc.id or doc.slug)
+        if channel_rate_limited_until:
+            stamp_frontmatter_field(path, "thumbnail_pending", True)
+            stamp_frontmatter_field(path, "thumbnail_retry_after", channel_rate_limited_until)
+            results.append({
+                "id": doc_key,
+                "video_id": vid,
+                "thumbnail_status": f"deferred_rate_limit_until:{channel_rate_limited_until}",
+                "privacy_updated": False,
+                "title_updated": False,
+            })
+            continue
         hero = LIVE_HERO_OVERRIDES.get(doc_key) or str(doc.meta.get("thumb_text") or "").strip() or doc.title
         plate = curated_backdrop_for(doc_key, channel_id=profile.id)
         reports = generate_ctr_pack(
@@ -511,9 +524,10 @@ def sync_published_thumbnails(
                             datetime.now(timezone.utc)
                             + timedelta(hours=THUMBNAIL_RATE_LIMIT_COOLDOWN_HOURS)
                         ).strftime("%Y-%m-%dT%H:%M:%SZ")
+                        channel_rate_limited_until = retry_at
                         stamp_frontmatter_field(path, "thumbnail_retry_after", retry_at)
                         print(f"::warning title=Thumbnail rate-limited "
-                              f"({profile.id})::{vid} — backing off until {retry_at} "
+                              f"({profile.id})::{vid} — backing off entire channel until {retry_at} "
                               f"to preserve daily YouTube API quota.")
                     else:
                         print(f"::warning title=Thumbnail still refused "
@@ -527,6 +541,16 @@ def sync_published_thumbnails(
     for path, doc in pending_shorts:
         vid = str(doc.meta.get("youtube_video_id", "")).strip()
         doc_key = str(doc.id or doc.slug)
+        if channel_rate_limited_until:
+            stamp_frontmatter_field(path, "thumbnail_pending", True)
+            stamp_frontmatter_field(path, "thumbnail_retry_after", channel_rate_limited_until)
+            results.append({
+                "id": doc_key,
+                "video_id": vid,
+                "format": "short",
+                "thumbnail_status": f"deferred_rate_limit_until:{channel_rate_limited_until}",
+            })
+            continue
         row: dict[str, Any] = {"id": doc_key, "video_id": vid, "format": "short",
                                "thumbnail_status": "dry_run" if dry_run else "pending"}
         poster = None
@@ -570,6 +594,7 @@ def sync_published_thumbnails(
                         datetime.now(timezone.utc)
                         + timedelta(hours=THUMBNAIL_RATE_LIMIT_COOLDOWN_HOURS)
                     ).strftime("%Y-%m-%dT%H:%M:%SZ")
+                    channel_rate_limited_until = retry_at
                     stamp_frontmatter_field(path, "thumbnail_retry_after", retry_at)
                 else:
                     stamp_frontmatter_field(path, "thumbnail_attempts", seen + 1)
@@ -585,7 +610,14 @@ def sync_published_thumbnails(
     return results
 
 
-def sync_all_channels(force: bool = False, dry_run: bool = False) -> dict[str, list[dict[str, Any]]]:
+DEFAULT_CHANNEL_PASS_LIMIT = 4
+
+
+def sync_all_channels(
+    force: bool = False,
+    dry_run: bool = False,
+    limit: int | None = DEFAULT_CHANNEL_PASS_LIMIT,
+) -> dict[str, list[dict[str, Any]]]:
     """Repair every channel, each with its own credentials.
 
     One channel's failure must never silence another's repair — the pools are
@@ -601,7 +633,7 @@ def sync_all_channels(force: bool = False, dry_run: bool = False) -> dict[str, l
     for cid in sorted(scheduled_channels()):
         try:
             results[cid] = sync_published_thumbnails(
-                force=force, dry_run=dry_run, channel=cid
+                force=force, dry_run=dry_run, channel=cid, limit=limit
             )
         except Exception as exc:  # noqa: BLE001
             print(f"[thumb-sync] {cid}: aborted — {exc!r}")

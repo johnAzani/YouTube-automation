@@ -173,6 +173,19 @@ def _narrate(doc, audio: Path) -> str:
     return engine
 
 
+def _purge_corrupted_speech_artifacts(out_dir: Path) -> None:
+    """Remove poisoned narration and cached TTS chunks after speech alignment rejects audio."""
+    import shutil
+
+    for name in ("narration.mp3", "narration.json", "words.json"):
+        (out_dir / name).unlink(missing_ok=True)
+    for chunk_dir in out_dir.glob("_gemini_chunks_*"):
+        if chunk_dir.is_dir():
+            shutil.rmtree(chunk_dir, ignore_errors=True)
+        else:
+            chunk_dir.unlink(missing_ok=True)
+
+
 def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
     """Run the approved rendering pipeline with hard safety checks.
 
@@ -268,8 +281,36 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
             words = [tuple(w) for w in cached_words['words']]
             emit(f"reusing the previous word alignment ({len(words)} words)")
         else:
-            with stage("speech alignment", f"{duration:.0f}s of audio"):
-                words = align(audio, doc.full_narration, Path(model_dir))
+            try:
+                with stage("speech alignment", f"{duration:.0f}s of audio"):
+                    words = align(audio, doc.full_narration, Path(model_dir))
+            except ValueError as align_exc:
+                # Corrupted/hallucinated TTS audio failed the >=85% word-match gate.
+                # Purge narration + _gemini_chunks_* immediately so CI never caches
+                # poisoned chunks across retries, and fall back to neural edge-tts.
+                _purge_corrupted_speech_artifacts(out)
+                if engine != DEFAULT_MODEL:
+                    raise
+                emit(f"gemini audio failed alignment ({align_exc}); purged bad chunks "
+                     f"and falling back to free edge-tts voice")
+                with stage("speech synthesis (fallback)", f"{doc.word_count} words, edge-tts"):
+                    engine, _ = synthesize_edge(doc.full_narration, audio, 'Charon', rate='-5%')
+                duration = _probe_duration(audio)
+                if duration is None or duration < MIN_NARRATION_SECONDS:
+                    raise RuntimeError(
+                        f'Fallback {engine} narration is {duration or 0:.0f}s; minimum is '
+                        f'{MIN_NARRATION_SECONDS}s.'
+                    ) from align_exc
+                speech_key = _fingerprint(DELIVERY_RECIPE, engine, "Charon", doc.full_narration)
+                _write_json(out / 'narration.json',
+                            {'key': speech_key, 'duration': duration, 'engine': engine})
+                align_key = _fingerprint("align-v1", speech_key, duration)
+                try:
+                    with stage("speech alignment (fallback)", f"{duration:.0f}s of audio"):
+                        words = align(audio, doc.full_narration, Path(model_dir))
+                except ValueError:
+                    _purge_corrupted_speech_artifacts(out)
+                    raise
             _write_json(out / 'words.json', {'key': align_key, 'words': [list(w) for w in words]})
         boundaries = [0.0]
         count = 0

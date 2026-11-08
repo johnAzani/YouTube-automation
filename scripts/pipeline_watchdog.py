@@ -172,6 +172,8 @@ def last_publish(published_dir: Path | None = None) -> tuple[Path, datetime] | N
 def last_publish_for_channel(
     channel_id: str | None = None,
     published_dir: Path | None = None,
+    *,
+    longform_only: bool = False,
 ) -> tuple[Path, datetime] | None:
     """Newest published receipt carrying a real YouTube video id for `channel_id`."""
     from pipeline.channels import channel_for_doc, normalize_channel_id
@@ -190,6 +192,10 @@ def last_publish_for_channel(
             continue
         if channel_for_doc(meta) != wanted:
             continue
+        if longform_only:
+            fmt = str(meta.get("format") or "").strip().lower()
+            if fmt == "short" or path.name.startswith("short-"):
+                continue
         video_id = str(meta.get("youtube_video_id") or "").strip()
         if not video_id:
             continue

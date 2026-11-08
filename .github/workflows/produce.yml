@@ -225,10 +225,9 @@ jobs:
             output/*/_gemini_chunks_*
             assets/deepdive/short-*.mp3
             assets/deepdive/words-short-*.json
-          key: chunks-tts-v4-${{ matrix.channel }}-${{ github.run_id }}
+          key: chunks-tts-v5-${{ matrix.channel }}-${{ github.run_id }}
           restore-keys: |
-            chunks-tts-v4-${{ matrix.channel }}-
-            chunks-
+            chunks-tts-v5-${{ matrix.channel }}-
 
       # Second safety net. If the brain's cron was delayed, skipped, or its API call
       # failed, this run repairs the queue itself instead of printing "nothing to
@@ -362,24 +361,27 @@ jobs:
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
           if [ "$rc" -eq 3 ]; then
-            if python -c "import os; from datetime import datetime, timedelta, timezone; from scripts.pipeline_watchdog import last_publish_for_channel; lp=last_publish_for_channel(os.environ.get('CHANNEL_ID','secret-place')); raise SystemExit(0 if (lp and datetime.now(timezone.utc) - lp[1] < timedelta(hours=24)) else 1)"; then
-              echo "::notice title=Daily free-tier quota cooldown (${CHANNEL_ID})::Channel already published within the last 24h; long-form edition paused cleanly until next daily reset ($0.00 lock)."
+            echo "LONGFORM_UPLOADED=false" >> "$GITHUB_ENV"
+            if python -c "import os; from datetime import datetime, timedelta, timezone; from scripts.pipeline_watchdog import last_publish_for_channel; lp=last_publish_for_channel(os.environ.get('CHANNEL_ID','secret-place'), longform_only=True); raise SystemExit(0 if (lp and datetime.now(timezone.utc) - lp[1] < timedelta(hours=24)) else 1)"; then
+              echo "::notice title=Daily free-tier quota cooldown (${CHANNEL_ID})::Channel already published a long-form prayer within the last 24h; long-form edition paused cleanly until next daily reset ($0.00 lock)."
               exit 0
             fi
           fi
           if [ "$rc" -ne 0 ]; then
+            echo "LONGFORM_UPLOADED=false" >> "$GITHUB_ENV"
             tail -n 15 run.log | while IFS= read -r line; do
               echo "::error::$line"
             done
             exit "$rc"
           fi
+          echo "LONGFORM_UPLOADED=true" >> "$GITHUB_ENV"
 
       - name: Close resolved release failure issues
-        if: ${{ success() && inputs.short == '' }}
+        if: ${{ success() && inputs.short == '' && env.LONGFORM_UPLOADED == 'true' }}
         env:
           GH_TOKEN: ${{ github.token }}
           GITHUB_RUN_ID: ${{ github.run_id }}
-        run: python -m scripts.release_report --close-resolved || true
+        run: python -m scripts.release_report --close-resolved --channel "$CHANNEL_ID" || true
 
       - name: Say where the release died
         # Scheduling note for future editors: a scheduled run is one workflow
@@ -402,7 +404,7 @@ jobs:
         run: |
           set +e
           python -m scripts.release_report --trail output/progress-trail.log \
-            --log run.log --issue || true
+            --log run.log --channel "$CHANNEL_ID" --issue || true
 
       - name: Report a stall if the queues are empty
         # Runs even when the render failed: that is precisely when the owner needs
@@ -477,7 +479,7 @@ jobs:
             output/*/_gemini_chunks_*
             assets/deepdive/short-*.mp3
             assets/deepdive/words-short-*.json
-          key: chunks-tts-v4-${{ matrix.channel }}-${{ github.run_id }}
+          key: chunks-tts-v5-${{ matrix.channel }}-${{ github.run_id }}
 
       # Style proof without a 1 GB download: three frames from the master,
       # small enough to open from the run page. Shows HUD, typography,

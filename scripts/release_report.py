@@ -82,7 +82,12 @@ def summarise(rows: list[tuple[str, str, str]]) -> dict:
             "rows": rows}
 
 
-def render(summary: dict, log_tail: str = "", run_id: str = "") -> tuple[str, str]:
+def render(
+    summary: dict,
+    log_tail: str = "",
+    run_id: str = "",
+    channel_id: str = "",
+) -> tuple[str, str]:
     """(title, body) for the issue. Pure, so it can be tested exactly."""
     failure = summary["failure"]
     dying_in = summary["open"][-1] if summary["open"] else None
@@ -96,6 +101,8 @@ def render(summary: dict, log_tail: str = "", run_id: str = "") -> tuple[str, st
         title += f" (run {run_id})"
 
     lines = ["The long-form release did not finish. This is what it was doing.", ""]
+    if channel_id:
+        lines.append(f"- **Channel:** `{channel_id}`")
     if run_id:
         lines.append(f"- Run: https://github.com/johnAzani/YouTube-automation/actions/runs/{run_id}")
     if failure:
@@ -182,18 +189,34 @@ def _tail(path: Path, lines: int) -> str:
     return "\n".join(text.splitlines()[-lines:])
 
 
-def file_issue(title: str, body: str, repo: str) -> str:
-    """Open it, or comment on the open one the same title already made."""
+def _issue_channel(body: str) -> str:
+    m = re.search(r"- \*\*Channel:\*\*\s*`([^`]+)`", body or "")
+    return m.group(1).strip().lower() if m else ""
+
+
+def file_issue(title: str, body: str, repo: str, channel_id: str = "") -> str:
+    """Open it, or comment on the open one the same title (and channel) already made."""
     existing = subprocess.run(
         ["gh", "issue", "list", "--repo", repo, "--state", "open",
-         "--search", title.split(" (run ")[0] + " in:title", "--json", "number", "--limit", "5"],
+         "--search", title.split(" (run ")[0] + " in:title",
+         "--json", "number,body", "--limit", "10"],
         capture_output=True, text=True, check=False,
     )
+    want_ch = (channel_id or "").strip().lower()
     if existing.returncode == 0 and existing.stdout.strip():
         try:
-            numbers = [row["number"] for row in json.loads(existing.stdout)]
+            rows = json.loads(existing.stdout)
         except (ValueError, KeyError, TypeError):
-            numbers = []
+            rows = []
+        numbers = []
+        for row in rows:
+            num = row.get("number")
+            if not num:
+                continue
+            row_ch = _issue_channel(str(row.get("body") or ""))
+            if want_ch and row_ch and row_ch != want_ch:
+                continue
+            numbers.append(num)
         if numbers:
             subprocess.run(["gh", "issue", "comment", str(numbers[0]), "--repo", repo,
                             "--body", body], check=False)
@@ -358,30 +381,44 @@ def sweep_stale_release_issues(repo: str, published_dir: Path | None = None) -> 
     return closed
 
 
-def close_resolved_issues(repo: str, run_id: str = "") -> list[int]:
-    """Close open `Release failed...` / `Release died inside...` issues after a green release."""
+def close_resolved_issues(repo: str, run_id: str = "", channel_id: str = "") -> list[int]:
+    """Close open `Release failed...` / `Release died inside...` issues after a green release on the same channel."""
+    from pipeline.channels import DEFAULT_CHANNEL_ID, normalize_channel_id
+
     if not shutil.which("gh"):
         return []
     closed = sweep_stale_release_issues(repo)
     found = subprocess.run(
         ["gh", "issue", "list", "--repo", repo, "--state", "open",
          "--search", '"Release " in:title',
-         "--json", "number,title", "--limit", "50"],
+         "--json", "number,title,body", "--limit", "50"],
         capture_output=True, text=True, check=False,
     )
     if found.returncode != 0:
         return closed
+    want_ch = normalize_channel_id(channel_id) if (channel_id or "").strip() else ""
     try:
         rows = json.loads(found.stdout or "[]")
-        numbers = [
-            int(r["number"]) for r in rows
-            if str(r.get("title", "")).startswith(("Release failed", "Release died inside"))
-            and int(r["number"]) not in closed
-        ]
+        numbers = []
+        for r in rows:
+            num = int(r["number"])
+            if num in closed:
+                continue
+            if not str(r.get("title", "")).startswith(("Release failed", "Release died inside")):
+                continue
+            issue_ch = _issue_channel(str(r.get("body") or ""))
+            if want_ch:
+                # Tagged issues only close when that exact channel succeeds;
+                # untagged legacy issues belong to DEFAULT_CHANNEL_ID.
+                effective_issue_ch = issue_ch or DEFAULT_CHANNEL_ID
+                if effective_issue_ch != want_ch:
+                    continue
+            numbers.append(num)
     except (ValueError, KeyError, TypeError):
         return closed
+    ch_label = f" (`{want_ch}`)" if want_ch else ""
     note = (
-        f"Resolved automatically: a subsequent Production Release succeeded"
+        f"Resolved automatically: a subsequent Production Release{ch_label} succeeded"
         + (f" (run `{run_id}`)." if run_id else ".")
     )
     for num in numbers:
@@ -399,6 +436,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--trail", default=os.environ.get("PROGRESS_TRAIL", ""))
     parser.add_argument("--log", default="run.log")
     parser.add_argument("--run-id", default=os.environ.get("GITHUB_RUN_ID", ""))
+    parser.add_argument("--channel", default=os.environ.get("CHANNEL_ID", ""),
+                        help="Channel that ran (scopes issue filing & auto-close)")
     parser.add_argument("--repo", default=os.environ.get("GITHUB_REPOSITORY",
                                                          "johnAzani/YouTube-automation"))
     parser.add_argument("--issue", action="store_true",
@@ -416,7 +455,7 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     if args.close_resolved:
-        closed = close_resolved_issues(args.repo, args.run_id)
+        closed = close_resolved_issues(args.repo, args.run_id, channel_id=args.channel)
         if closed:
             print(f"[release-report] closed resolved failure issues: {closed}")
         return 0
@@ -426,14 +465,14 @@ def main(argv: list[str] | None = None) -> int:
         trail_text = Path(args.trail).read_text(encoding="utf-8", errors="replace")
     summary = summarise(parse_trail(trail_text))
     log_tail = _tail(Path(args.log), 60)
-    title, body = render(summary, log_tail, args.run_id)
+    title, body = render(summary, log_tail, args.run_id, channel_id=args.channel)
     print(title)
     print(body)
     if args.issue:
         if is_quota_cooldown_only(summary, log_tail):
             print("[release-report] daily free-tier TTS quota pause; skipping issue creation")
             return 0
-        where = file_issue(title, body, args.repo)
+        where = file_issue(title, body, args.repo, channel_id=args.channel)
         if where:
             print(f"[release-report] {where}")
     return 0
