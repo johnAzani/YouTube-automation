@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T11:45:57Z",
+  "generated_at": "2026-11-08T13:23:11Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 3
   },
   "totals": {
-    "published_total": 34,
+    "published_total": 35,
     "published_longform": 16,
-    "published_shorts": 18,
-    "public_total": 32,
+    "published_shorts": 19,
+    "public_total": 33,
     "queued_longform": 31,
-    "queued_shorts": 19,
+    "queued_shorts": 18,
     "automations_ok": 8,
     "automations_total": 10,
     "network_healthy": true
@@ -32,32 +32,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 17,
+        "published_total": 18,
         "published_longform": 7,
-        "published_shorts": 10,
-        "public_total": 16,
+        "published_shorts": 11,
+        "public_total": 17,
         "queued_longform": 20,
         "queued_other": 5,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-PSALM16V7",
-        "title": "Say This Psalm 16:7-8 Prayer Before You Sleep | Never Be Moved #Shorts",
+        "id": "SHORT-PSALM91V5",
+        "title": "Say This Psalm 91:5-6 Prayer Before You Sleep | Fear No Night Shadow #Shorts",
         "format": "short",
-        "youtube_video_id": "d0Et8L_6y1o",
-        "watch_url": "https://www.youtube.com/shorts/d0Et8L_6y1o",
-        "published_on": "2026-11-07",
-        "published_at": "2026-11-07T13:01:17Z"
+        "youtube_video_id": "SVhby9Yv0Wg",
+        "watch_url": "https://www.youtube.com/shorts/SVhby9Yv0Wg",
+        "published_on": "2026-11-08",
+        "published_at": "2026-11-08T13:22:21Z"
       },
       "next_queued_longform": {
         "id": "0015",
         "title": "Psalm 91:5-6 Night Prayer | Deliverance From Terror by Night",
         "words": 883,
-        "status": "approved"
+        "status": "quota_paused"
       },
       "next_queued_short": {
-        "short": "short-psalm91v5",
-        "scripture": "Psalm 91:5-6",
+        "short": "short-psalm18v2",
+        "scripture": "Psalm 18:2",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -211,6 +211,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PSALM91V5",
+      "slug": "short-psalm91v5-pre-sleep-prayer",
+      "file": "short-psalm91v5-pre-sleep-prayer.md",
+      "title": "Say This Psalm 91:5-6 Prayer Before You Sleep | Fear No Night Shadow #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-08",
+      "published_at": "2026-11-08T13:22:21Z",
+      "youtube_video_id": "SVhby9Yv0Wg",
+      "watch_url": "https://www.youtube.com/shorts/SVhby9Yv0Wg",
+      "youtu_be_url": "https://youtu.be/SVhby9Yv0Wg",
+      "shorts_url": "https://www.youtube.com/shorts/SVhby9Yv0Wg",
+      "studio_url": "https://studio.youtube.com/video/SVhby9Yv0Wg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/SVhby9Yv0Wg/hqdefault.jpg",
+      "thumb_text": "NO TERROR BY NIGHT \u00b7 SLEEP IN GOD'S PEACE",
+      "duration_label": "49s",
+      "words": 621
+    },
     {
       "id": "0041",
       "slug": "psalm-118-24-this-is-the-day-the-lord-hath-made",
@@ -1003,7 +1026,7 @@
         "title": "Psalm 91:5-6 Night Prayer | Deliverance From Terror by Night",
         "channel": "secret-place",
         "channel_name": "The Secret Place",
-        "status": "approved",
+        "status": "quota_paused",
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,
@@ -1401,17 +1424,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-psalm91v5",
-        "file": "0015-short-psalm91v5.yml",
-        "companion_longform_id": "0015",
-        "scripture": "Psalm 91:5-6",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
       {
         "short": "short-psalm18v2",
         "file": "0020-short-psalm18v2.yml",
