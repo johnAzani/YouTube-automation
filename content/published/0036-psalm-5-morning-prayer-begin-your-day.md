@@ -86,8 +86,9 @@ category_id: '22'
 published_on: "2026-11-05"
 published_at: "2026-11-05T11:17:00Z"
 youtube_video_id: "_vp27ZYPYaY"
-thumbnail_pending: true
+thumbnail_pending: false
 metadata_revision: "selar-seo-v1"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Give Ear to My Words, O Lord (Psalm 5:1–2)

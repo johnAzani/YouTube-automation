@@ -85,9 +85,10 @@ originality_note: Original theological commentary drawing upon Matthew Henry and
 published_on: "2026-11-08"
 published_at: "2026-11-08T00:33:51Z"
 youtube_video_id: "nXa4e8jXjug"
-thumbnail_pending: true
+thumbnail_pending: false
 
 metadata_revision: "selar-seo-v1"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Noonday Hook & The Pause
