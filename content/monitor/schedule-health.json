@@ -9,6 +9,13 @@
       "workflow": "keepalive.yml"
     },
     {
+      "late_minutes": 165,
+      "name": "Produce video",
+      "ran_at": "2026-11-08T08:59:56+00:00",
+      "slot": "2026-11-08T06:14:00+00:00",
+      "workflow": "produce.yml"
+    },
+    {
       "late_minutes": 143,
       "name": "Growth autopilot",
       "ran_at": "2026-11-08T04:37:34+00:00",
@@ -23,8 +30,8 @@
       "workflow": "metrics.yml"
     }
   ],
-  "generated_at": "2026-11-08T08:59:49.602815+00:00",
-  "last_run_at": "2026-11-08T08:59:05+00:00",
+  "generated_at": "2026-11-08T10:28:33.738650+00:00",
+  "last_run_at": "2026-11-08T10:27:42+00:00",
   "on_time": [
     {
       "late_minutes": 24,
@@ -32,6 +39,13 @@
       "ran_at": "2026-11-07T20:38:46+00:00",
       "slot": "2026-11-07T20:14:00+00:00",
       "workflow": "automation-health.yml"
+    },
+    {
+      "late_minutes": 105,
+      "name": "Autonomous Comment Replies",
+      "ran_at": "2026-11-08T08:59:58+00:00",
+      "slot": "2026-11-08T07:14:00+00:00",
+      "workflow": "comments.yml"
     },
     {
       "late_minutes": 100,
@@ -48,17 +62,10 @@
       "workflow": "gemini_brain.yml"
     },
     {
-      "late_minutes": 19,
-      "name": "Automation monitor",
-      "ran_at": "2026-11-08T06:42:55+00:00",
-      "slot": "2026-11-08T06:23:00+00:00",
-      "workflow": "monitor.yml"
-    },
-    {
-      "late_minutes": 6,
+      "late_minutes": 40,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-08T06:53:49+00:00",
-      "slot": "2026-11-08T06:47:00+00:00",
+      "ran_at": "2026-11-08T10:27:42+00:00",
+      "slot": "2026-11-08T09:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],

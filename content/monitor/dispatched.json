@@ -165,12 +165,13 @@
     "result": "dispatched prayer3"
   },
   "produce.yml@2026-11-08T06:14:00+00:00": {
-    "at": "2026-11-08T08:59:49.602815+00:00",
+    "at": "2026-11-08T10:28:33.738650+00:00",
     "attempted_channels": [
-      "secret-place"
+      "secret-place",
+      "prayer2"
     ],
-    "attempts": 1,
+    "attempts": 2,
     "code_id": "ec8e29d767246275",
-    "result": "dispatched secret-place; prayer2, prayer3 next pass (content-state takes one pending run)"
+    "result": "dispatched prayer2; prayer3, secret-place next pass (content-state takes one pending run)"
   }
 }
