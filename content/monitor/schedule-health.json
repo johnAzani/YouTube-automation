@@ -9,13 +9,6 @@
       "workflow": "keepalive.yml"
     },
     {
-      "late_minutes": 165,
-      "name": "Produce video",
-      "ran_at": "2026-11-08T08:59:56+00:00",
-      "slot": "2026-11-08T06:14:00+00:00",
-      "workflow": "produce.yml"
-    },
-    {
       "late_minutes": 143,
       "name": "Growth autopilot",
       "ran_at": "2026-11-08T04:37:34+00:00",
@@ -30,8 +23,8 @@
       "workflow": "metrics.yml"
     }
   ],
-  "generated_at": "2026-11-08T13:44:05.780513+00:00",
-  "last_run_at": "2026-11-08T13:43:20+00:00",
+  "generated_at": "2026-11-08T14:18:36.762693+00:00",
+  "last_run_at": "2026-11-08T14:17:50+00:00",
   "on_time": [
     {
       "late_minutes": 24,
