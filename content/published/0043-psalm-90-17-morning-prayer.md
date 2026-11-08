@@ -81,8 +81,9 @@ published_on: "2026-11-08"
 published_at: "2026-11-08T19:01:40Z"
 youtube_video_id: "3n4RudmOpgk"
 metadata_revision: "selar-seo-v1"
-thumbnail_pending: true
-thumbnail_error: "not_requested"
+thumbnail_pending: false
+
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — First Light and Directing the Prayer
