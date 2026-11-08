@@ -1,0 +1,242 @@
+{
+  "key": "short-middaypsalm63v1",
+  "channel": "prayer3",
+  "psalm": 63,
+  "title": [
+    "A MIDDAY MOMENT",
+    "WITH PSALM 63:1"
+  ],
+  "poster": [
+    "PAUSE YOUR DAY",
+    "FIND STILLNESS NOW",
+    "GOD IS YOUR",
+    "ONLY STRENGTH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "sunlight streaming through a window onto a wooden desk",
+    "calm golden hour light on a meadow at midday",
+    "close up of a single open journal on a desk",
+    "soft light reflecting on water surface",
+    "gentle breeze moving wheat in an open field",
+    "dust motes dancing in a sunbeam inside a room"
+  ],
+  "scenes": [
+    {
+      "a": "Stop everything you are doing right now.",
+      "img": "short-middaypsalm63v1-scene-01.jpg",
+      "kicker": "PSALM 63:1",
+      "sub": "PAUSE YOUR DAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Take a deep breath and center your heart.",
+      "img": "short-middaypsalm63v1-scene-02.jpg",
+      "kicker": "BEYOND THE NOISE",
+      "sub": "FIND STILLNESS NOW",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "O God, you are my God, earnestly I seek you; my soul thirsts for you, my body longs for you, in a dry and weary land where there is no water.",
+      "img": "short-middaypsalm63v1-scene-03.jpg",
+      "kicker": "GOD IS NEAR",
+      "sub": "EARNEST SEEKING",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "In this middle hour of the day, bring your thirst to the only One who satisfies.",
+      "img": "short-middaypsalm63v1-scene-04.jpg",
+      "kicker": "DIVINE SUSTENANCE",
+      "sub": "HE SATISFIES",
+      "cam": "push_in",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "May your spirit be refreshed as you rest in His presence away from the rush of the world.",
+      "img": "short-middaypsalm63v1-scene-05.jpg",
+      "kicker": "REST YOUR SOUL",
+      "sub": "FIND REFRESHMENT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Midday Watch to pause and pray with us again tomorrow.",
+      "img": "short-middaypsalm63v1-scene-06.jpg",
+      "kicker": "DAILY PRAYER",
+      "sub": "SUBSCRIBE FOR MORE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "Stop everything you are doing right now."
+    ],
+    [
+      15,
+      30,
+      "Take a deep breath and center your heart."
+    ],
+    [
+      30,
+      70,
+      "O God, you are my God, earnestly I seek you; my soul thirsts for you, my body longs for you, in a dry and weary land where there is no water."
+    ],
+    [
+      70,
+      95,
+      "In this middle hour of the day, bring your thirst to the only One who satisfies."
+    ],
+    [
+      95,
+      120,
+      "May your spirit be refreshed as you rest in His presence away from the rush of the world."
+    ],
+    [
+      120,
+      135,
+      "Subscribe to The Midday Watch to pause and pray with us again tomorrow."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "STOP EVERYTHING",
+        "YOU ARE DOING",
+        "RIGHT NOW"
+      ],
+      [
+        "STOP",
+        "NOW"
+      ],
+      "PSALM 63:1"
+    ],
+    [
+      15,
+      30,
+      [
+        "TAKE A BREATH",
+        "CENTER YOUR HEART",
+        "FIND PEACE"
+      ],
+      [
+        "BREATH",
+        "CENTER"
+      ],
+      "PSALM 63:1"
+    ],
+    [
+      30,
+      70,
+      [
+        "O GOD YOU ARE",
+        "MY GOD EARNESTLY",
+        "I SEEK YOU",
+        "MY SOUL THIRSTS",
+        "MY BODY LONGS"
+      ],
+      [
+        "GOD",
+        "SEEK",
+        "THIRSTS"
+      ],
+      "PSALM 63:1"
+    ],
+    [
+      70,
+      95,
+      [
+        "MIDDAY HOUR",
+        "BRING YOUR THIRST",
+        "TO THE ONLY ONE",
+        "WHO SATISFIES"
+      ],
+      [
+        "THIRST",
+        "SATISFIES"
+      ],
+      "PSALM 63:1"
+    ],
+    [
+      95,
+      120,
+      [
+        "SPIRIT REFRESHED",
+        "REST IN HIS",
+        "PRESENCE NOW",
+        "AWAY FROM RUSH"
+      ],
+      [
+        "REFRESHED",
+        "REST"
+      ],
+      "PSALM 63:1"
+    ],
+    [
+      120,
+      135,
+      [
+        "SUBSCRIBE NOW",
+        "TO PAUSE",
+        "AND PRAY DAILY"
+      ],
+      [
+        "SUBSCRIBE",
+        "PRAY"
+      ],
+      "PSALM 63:1"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Stop everything you are doing right now.",
+      "kind": "phrase",
+      "words": [
+        "STOP",
+        "NOW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "O God, you are my God, earnestly I seek you; my soul thirsts for you, my body longs for you, in a dry and weary land where there is no water.",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "SEEK",
+        "THIRSTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 63:1"
+}
