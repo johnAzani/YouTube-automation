@@ -47,12 +47,29 @@ TITLE_FIXES: dict[str, str] = {
 }
 
 
-def _has_youtube_credentials() -> bool:
+def _has_youtube_credentials(channel_id: str | None = None) -> bool:
+    if channel_id:
+        from scripts.sync_published_thumbnails import _has_youtube_credentials as _has_channel_creds
+
+        if _has_channel_creds(get_channel(channel_id)):
+            return True
     return bool(
         (CONFIG.youtube_client_id or "").strip()
         and (CONFIG.youtube_client_secret or "").strip()
         and (CONFIG.youtube_refresh_token or "").strip()
     )
+
+
+def _extract_clean_short_body(raw_markdown: str, doc) -> str:
+    """Extract only the viewer-facing Short body, stripping receipt audit sections."""
+    m = re.match(r"\A---\s*\n.*?\n---\s*\n(.*)", raw_markdown, re.S)
+    body = m.group(1) if m else doc.full_narration
+    body = re.split(
+        r"\n##\s+(?:Custom Thumbnail|Channel Video Status)",
+        body,
+        maxsplit=1,
+    )[0].strip()
+    return body or build_description(doc)
 
 
 def collect_published_faith_targets(
@@ -79,6 +96,7 @@ def collect_published_faith_targets(
             continue
 
         doc_channel = channel_for_doc(doc.meta)
+        channel_profile = get_channel(doc_channel)
         is_short = doc.format == "short" or "short-" in path.name
         clean_title = TITLE_FIXES.get(str(doc.id), smart_truncate_title(doc.title, 95))
         if is_short:
@@ -88,13 +106,19 @@ def collect_published_faith_targets(
             else:
                 short_key_match = re.search(r"psalm-(\d+)", path.name)
                 short_key = f"short-psalm{short_key_match.group(1)}" if short_key_match else slug_str
-            base_desc = doc.full_narration.split("## Custom Thumbnail")[0].strip() or build_description(doc)
+            base_desc = _extract_clean_short_body(raw, doc)
             desc = enrich_short_description_with_bridge(base_desc, short_key, channel_id=doc_channel)
         else:
             desc = build_description(doc)
 
         tags = build_tags(doc)
-        locs = build_metadata_localizations(clean_title, desc, "faith and prayer")
+        locs = build_metadata_localizations(
+            clean_title,
+            desc,
+            "faith and prayer",
+            channel_name=channel_profile.display_name,
+            channel_id=doc_channel,
+        )
         targets.append(
             {
                 "path": path,
@@ -129,9 +153,11 @@ def sync_published_metadata(
         print(f"[retrofit] All live faith videos are already at {METADATA_REVISION}.")
         return []
 
-    if not dry_run and updater is update_live_video_metadata and not _has_youtube_credentials():
-        print("[retrofit] Skipped: YouTube OAuth credentials not present in environment.")
-        return []
+    if not dry_run and updater is update_live_video_metadata:
+        target_channels = {str(t.get("channel") or CONFIG.channel_id) for t in targets}
+        if not any(_has_youtube_credentials(cid) for cid in target_channels):
+            print("[retrofit] Skipped: YouTube OAuth credentials not present in environment.")
+            return []
 
     clients: dict[str, Any] = {}
 
@@ -158,10 +184,15 @@ def sync_published_metadata(
             f"desc={summary['desc_bytes']}B, tags={summary['tag_count']}"
         )
         if not dry_run:
+            target_cid = str(t.get("channel") or CONFIG.channel_id)
+            if updater is update_live_video_metadata and not _has_youtube_credentials(target_cid):
+                summary["status"] = "skipped_missing_credentials"
+                outcomes.append(summary)
+                continue
             try:
                 # The token that owns this video, not whichever one CONFIG holds.
                 extra = ({} if updater is not update_live_video_metadata
-                         else {"youtube": _client_for(t.get("channel") or CONFIG.channel_id)})
+                         else {"youtube": _client_for(target_cid)})
                 updater(
                     t["video_id"],
                     new_title=t["title"],

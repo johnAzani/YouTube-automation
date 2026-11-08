@@ -86,7 +86,6 @@ originality_note: Original theological commentary incorporating Charles Spurgeon
 published_on: "2026-11-07"
 published_at: "2026-11-07T20:35:38Z"
 youtube_video_id: "GeZ3liNIxag"
-metadata_revision: "selar-seo-v1"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"

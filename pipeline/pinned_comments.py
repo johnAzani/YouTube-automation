@@ -12,11 +12,95 @@ Cost & Safety Invariants:
 """
 from __future__ import annotations
 
+import re
 from typing import Any
 
 from .config import CONFIG
 from .script_doc import ScriptDoc
 from .social_pack import SELAR_JOURNAL_URL, SELAR_STORE_URL, sanitize_persona_integrity
+
+_DAYTIME_COMMENT_HOOKS: list[tuple[str, str, str]] = [
+    (
+        "proverbs 3:5",
+        "Proverbs 3:5-6 — 'Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge Him, and He shall direct thy paths.'",
+        "divine direction, clear wisdom, and ordered steps",
+    ),
+    (
+        "psalm 91:6",
+        "Psalm 91:5-6 — 'Thou shalt not be afraid... nor for the destruction that wasteth at noonday.'",
+        "sovereign covering and steadfast protection",
+    ),
+    (
+        "psalm 91:2",
+        "Psalm 91:2 — 'I will say of the LORD, He is my refuge and my fortress: my God; in Him will I trust.'",
+        "unshakable refuge and covenant protection",
+    ),
+    (
+        "psalm 37:5",
+        "Psalm 37:5 — 'Commit thy way unto the LORD; trust also in Him; and He shall bring it to pass.'",
+        "quiet confidence and faithful guidance",
+    ),
+    (
+        "psalm 5",
+        "Psalm 5:3 — 'My voice shalt thou hear in the morning, O LORD; in the morning will I direct my prayer unto thee, and will look up.'",
+        "fresh morning mercy and attentive grace",
+    ),
+    (
+        "psalm 143",
+        "Psalm 143:8 — 'Cause me to hear thy lovingkindness in the morning; for in thee do I trust: cause me to know the way wherein I should walk.'",
+        "unfailing lovingkindness and clear daily direction",
+    ),
+    (
+        "lamentations 3",
+        "Lamentations 3:22-23 — 'It is of the LORD's mercies that we are not consumed, because His compassions fail not. They are new every morning: great is thy faithfulness.'",
+        "brand-new morning mercies and great faithfulness",
+    ),
+    (
+        "mark 1",
+        "Mark 1:35 — 'And in the morning, rising up a great while before day, He went out, and departed into a solitary place, and there prayed.'",
+        "sacred communion and quiet strength from the Father",
+    ),
+    (
+        "psalm 55",
+        "Psalm 55:17 — 'Evening, and morning, and at noon, will I pray, and cry aloud: and He shall hear my voice.'",
+        "unbroken communion and answered prayer",
+    ),
+    (
+        "proverbs 16",
+        "Proverbs 16:3 — 'Commit thy works unto the LORD, and thy thoughts shall be established.'",
+        "established thoughts, clarity, and blessed work",
+    ),
+    (
+        "isaiah 40",
+        "Isaiah 40:31 — 'But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles.'",
+        "renewed strength and unwearying endurance",
+    ),
+    (
+        "psalm 118",
+        "Psalm 118:24 — 'This is the day which the LORD hath made; we will rejoice and be glad in it.'",
+        "joy, gladness, and sovereign favor",
+    ),
+    (
+        "psalm 90",
+        "Psalm 90:14, 17 — 'O satisfy us early with thy mercy... and establish thou the work of our hands upon us.'",
+        "early mercy and God's favor establishing the work of your hands",
+    ),
+    (
+        "psalm 19",
+        "Psalm 19:14 — 'Let the words of my mouth, and the meditation of my heart, be acceptable in thy sight, O LORD, my strength, and my redeemer.'",
+        "pure words, guarded thoughts, and redeeming strength",
+    ),
+    (
+        "psalm 25",
+        "Psalm 25:4-5 — 'Shew me thy ways, O LORD; teach me thy paths. Lead me in thy truth, and teach me.'",
+        "truthful guidance and steady direction",
+    ),
+    (
+        "joshua 1",
+        "Joshua 1:9 — 'Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest.'",
+        "courage, strength, and God's abiding presence",
+    ),
+]
 
 _SCRIPTURE_COMMENT_HOOKS: list[tuple[str, str, str]] = [
     (
@@ -166,20 +250,30 @@ def generate_pastoral_pinned_comment(doc: ScriptDoc) -> str:
         except Exception:
             pass
 
-    scripture_hook = (
-        "Numbers 6:24-26 — 'The Lord bless you and keep you; the Lord make His face shine upon you and give you peace.'"
+    from .channel_capabilities import brand_for, pinned_comment_for
+    from .channels import DEFAULT_CHANNEL_ID, get_channel, normalize_channel_id
+
+    channel_id = normalize_channel_id(doc.explicit_channel or CONFIG.channel_id)
+    brand = brand_for(channel_id)
+    scripture_hook = brand.default_comment_scripture_hook
+    theme = brand.default_comment_theme
+
+    hook_table = (
+        [*_SCRIPTURE_COMMENT_HOOKS, *_DAYTIME_COMMENT_HOOKS]
+        if channel_id == DEFAULT_CHANNEL_ID
+        else [*_DAYTIME_COMMENT_HOOKS, *_SCRIPTURE_COMMENT_HOOKS]
     )
-    theme = "sacred peace and restorative sleep"
-    for key, verse_text, verse_theme in _SCRIPTURE_COMMENT_HOOKS:
-        if key in title_lower:
+    for key, verse_text, verse_theme in hook_table:
+        if re.search(rf"\b{re.escape(key)}(?!\d)", title_lower):
+            if channel_id != DEFAULT_CHANNEL_ID and any(
+                w in (verse_text + " " + verse_theme).lower()
+                for w in ("sleep", "slumber", "night", "tonight", "bed", "liest down")
+            ):
+                continue
             scripture_hook = verse_text
             theme = verse_theme
             break
 
-    from .channel_capabilities import pinned_comment_for
-    from .channels import get_channel
-
-    channel_id = doc.explicit_channel or CONFIG.channel_id
     sanctuary_links = get_channel(channel_id).include_sanctuary_links
     selar_lines: list[str] = []
     if sanctuary_links and SELAR_JOURNAL_URL:

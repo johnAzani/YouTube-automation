@@ -35,8 +35,12 @@ _TRAILING_DANGLERS = {
 }
 
 _SCRIPTURE_RE = re.compile(
-    r"\b((?:[123]\s+)?(?:Psalm|Psalms|Proverbs|Isaiah|Matthew|Mark|Luke|John|"
-    r"Romans|Philippians|Timothy|Peter|Numbers|Jude|Hebrews|Corinthians|Ephesians)"
+    r"\b((?:[123]\s+)?(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|"
+    r"Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalm|Psalms|Proverbs|Ecclesiastes|"
+    r"Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|"
+    r"Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|"
+    r"Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|Thessalonians|"
+    r"Timothy|Titus|Philemon|Hebrews|James|Peter|Jude|Revelation)"
     r"\s+\d+(?::\d+(?:[-–]\d+)?)?)\b",
     re.IGNORECASE,
 )
@@ -51,7 +55,10 @@ def is_faith_doc(doc: ScriptDoc) -> bool:
         return False
     return any(
         k in niche or k in slug or k in title
-        for k in ("faith", "prayer", "scripture", "devotional", "psalm", "proverbs", "isaiah", "gospel", "bible")
+        for k in (
+            "faith", "prayer", "scripture", "devotional", "psalm", "proverbs",
+            "isaiah", "lamentations", "gospel", "bible", "sunrise", "midday", "noonday",
+        )
     )
 
 
@@ -88,7 +95,13 @@ def smart_truncate_title(title: str, limit: int = 95) -> str:
         return cleaned
 
     # 1. Strip redundant trailing channel suffix first if present
-    for sep in (" | The Secret Place", " — The Secret Place", " - The Secret Place"):
+    from .channel_capabilities import brand_for, known_channels
+
+    trailing_suffixes: list[str] = []
+    for cid in known_channels():
+        dn = brand_for(cid).display_name
+        trailing_suffixes.extend((f" | {dn}", f" — {dn}", f" - {dn}"))
+    for sep in trailing_suffixes:
         if cleaned.endswith(sep) and len(cleaned) - len(sep) >= 30:
             trimmed = cleaned[: -len(sep)].rstrip()
             if len(trimmed) <= limit:
@@ -223,7 +236,10 @@ def _hashtags_for_doc(doc: ScriptDoc) -> list[str]:
             break
 
     if faith:
-        for fallback in ("#NightPrayer", "#PrayerBeforeSleep", "#BedtimePrayer", "#TheSecretPlace"):
+        from .channel_capabilities import brand_for
+
+        doc_cid = getattr(doc, "explicit_channel", "") or CONFIG.channel_id
+        for fallback in brand_for(doc_cid).seo_fallback_hashtags:
             if len(result) >= 5:
                 break
             _add(fallback)
@@ -261,17 +277,14 @@ def _synthesize_seo_hook(doc: ScriptDoc) -> str:
         return sanitize_youtube_text(explicit)[:155]
 
     if is_faith_doc(doc):
+        from .channel_capabilities import brand_for
+
+        brand = brand_for(getattr(doc, "explicit_channel", "") or CONFIG.channel_id)
         m = _SCRIPTURE_RE.search(doc.title or "")
         if m:
             ref = m.group(1)
-            return (
-                f"Pray this {ref} KJV night prayer before sleep for deep peace, "
-                f"quiet rest, and God's protection over your home tonight."
-            )[:155]
-        return (
-            "Pray this KJV bedtime scripture prayer before you sleep for deep peace, "
-            "freedom from anxiety, and God's watchful protection tonight."
-        )[:155]
+            return brand.seo_hook_ref_template.format(ref=ref)[:155]
+        return brand.seo_hook_generic[:155]
 
     return smart_truncate_title(doc.title, 150)
 
@@ -432,47 +445,40 @@ def build_tags(doc: ScriptDoc) -> list[str]:
     seeds: list[str] = []
     scripture_ref = ""
 
+    from .channel_capabilities import brand_for
+    from .channels import DEFAULT_CHANNEL_ID, get_channel, normalize_channel_id
+
+    eff_cid = normalize_channel_id(getattr(doc, "explicit_channel", "") or CONFIG.channel_id)
+    brand = brand_for(eff_cid)
+
     if is_faith_doc(doc):
         m = _SCRIPTURE_RE.search(doc.title or "")
         if m:
             ref_raw = " ".join(m.group(1).lower().replace(":", " ").replace("–", " ").replace("-", " ").split())
-            book_chap = " ".join(ref_raw.split()[:2])
+            parts = ref_raw.split()
+            book_chap = " ".join(parts[:3] if parts and parts[0] in {"1", "2", "3"} else parts[:2])
             scripture_ref = book_chap
-            seeds.extend(
-                [
-                    f"{book_chap} night prayer",
-                    f"{book_chap} prayer for sleep",
-                    book_chap,
-                ]
-            )
+            for suffix in brand.seo_book_tag_suffixes:
+                seeds.append(f"{book_chap} {suffix}")
+            seeds.append(book_chap)
             if ref_raw != book_chap:
                 seeds.insert(0, f"{ref_raw} prayer")
 
     seeds.extend(doc.tags or [])
 
     if is_faith_doc(doc):
-        seeds.extend(
-            [
-                "prayer before sleep",
-                "night prayer for peace and protection",
-                "bedtime prayer",
-                "christian sleep prayer",
-                "kjv scripture prayer",
-                "the secret place prayer",
-            ]
-        )
-        # High-intent search taxonomy: what distressed / sleepless viewers actually
-        # type. fit_youtube_tags drops any 432 Hz qualifier unless this is a 432 video.
-        try:
-            from .seo_suggest import get_taxonomy_for_scripture
+        seeds.extend(brand.seo_tag_seeds)
+        if eff_cid == DEFAULT_CHANNEL_ID:
+            # Bedtime search taxonomy belongs to the night-prayer channel.
+            try:
+                from .seo_suggest import get_taxonomy_for_scripture
 
-            tax = get_taxonomy_for_scripture(scripture_ref or "General Bedtime")
-            seeds.extend(tax.get("primary_searches", []))
-            seeds.extend(tax.get("pain_points", []))
-            seeds.extend(tax.get("qualifiers", []))
-        except Exception:  # noqa: BLE001
-            # SEO enrichment is an optimisation, never a gate.
-            pass
+                tax = get_taxonomy_for_scripture(scripture_ref or "General Bedtime")
+                seeds.extend(tax.get("primary_searches", []))
+                seeds.extend(tax.get("pain_points", []))
+                seeds.extend(tax.get("qualifiers", []))
+            except Exception:  # noqa: BLE001
+                pass
 
     return fit_youtube_tags(seeds, max_chars=490, allow_432hz=allow_432)
 
@@ -498,9 +504,12 @@ def title_report(doc: ScriptDoc) -> dict:
 
 
 def write_metadata_pack(doc: ScriptDoc, scene_durations: list[float], out_dir: Path) -> dict:
+    from .channels import get_channel
+
     out_dir.mkdir(parents=True, exist_ok=True)
     chapters = chapters_from_scenes(doc, scene_durations)
     safe_title = smart_truncate_title(doc.title, 95)
+    allow_selar = is_faith_doc(doc) and get_channel(doc.explicit_channel or CONFIG.channel_id).include_sanctuary_links
     pack = {
         "title": safe_title,
         "title_report": title_report(doc),
@@ -508,8 +517,8 @@ def write_metadata_pack(doc: ScriptDoc, scene_durations: list[float], out_dir: P
         "tags": build_tags(doc),
         "chapters": [{"time": s, "name": n} for s, n in chapters],
         "hashtags": _hashtags_for_doc(doc),
-        "selar_journal_url": SELAR_JOURNAL_URL if is_faith_doc(doc) else "",
-        "selar_store_url": SELAR_STORE_URL if is_faith_doc(doc) else "",
+        "selar_journal_url": SELAR_JOURNAL_URL if allow_selar else "",
+        "selar_store_url": SELAR_STORE_URL if allow_selar else "",
         "publish_hint": "Schedule 2–4h before your audience peak (Analytics → Audience). "
                         "Pinned comment + community post + end screen within the first hour. "
                         "Do not change title/thumbnail in the first 24h.",

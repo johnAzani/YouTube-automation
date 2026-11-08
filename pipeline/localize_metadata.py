@@ -251,8 +251,105 @@ _LANG_INVITATION = {
     "pt": "Ouça esta oração bíblica antes de dormir para receber a paz profunda de Deus e proteção sobre o seu lar.",
 }
 
+_BOOK_TRANSLATIONS: dict[str, tuple[str, str]] = {
+    "genesis": ("Génesis", "Gênesis"),
+    "exodus": ("Éxodo", "Êxodo"),
+    "leviticus": ("Levítico", "Levítico"),
+    "numbers": ("Números", "Números"),
+    "deuteronomy": ("Deuteronomio", "Deuteronômio"),
+    "joshua": ("Josué", "Josué"),
+    "judges": ("Jueces", "Juízes"),
+    "ruth": ("Rut", "Rute"),
+    "1 samuel": ("1 Samuel", "1 Samuel"),
+    "2 samuel": ("2 Samuel", "2 Samuel"),
+    "1 kings": ("1 Reyes", "1 Reis"),
+    "2 kings": ("2 Reyes", "2 Reis"),
+    "1 chronicles": ("1 Crónicas", "1 Crônicas"),
+    "2 chronicles": ("2 Crónicas", "2 Crônicas"),
+    "ezra": ("Esdras", "Esdras"),
+    "nehemiah": ("Nehemías", "Neemias"),
+    "esther": ("Ester", "Ester"),
+    "job": ("Job", "Jó"),
+    "psalm": ("Salmo", "Salmo"),
+    "psalms": ("Salmo", "Salmo"),
+    "proverbs": ("Proverbios", "Provérbios"),
+    "ecclesiastes": ("Eclesiastés", "Eclesiastes"),
+    "isaiah": ("Isaías", "Isaías"),
+    "jeremiah": ("Jeremías", "Jeremias"),
+    "lamentations": ("Lamentaciones", "Lamentações"),
+    "ezekiel": ("Ezequiel", "Ezequiel"),
+    "daniel": ("Daniel", "Daniel"),
+    "hosea": ("Oseas", "Oseias"),
+    "joel": ("Joel", "Joel"),
+    "amos": ("Amós", "Amós"),
+    "obadiah": ("Abdías", "Obadias"),
+    "jonah": ("Jonás", "Jonas"),
+    "micah": ("Miqueas", "Miqueias"),
+    "nahum": ("Nahúm", "Naum"),
+    "habakkuk": ("Habacuc", "Habacuque"),
+    "zephaniah": ("Sofonías", "Sofonias"),
+    "haggai": ("Hageo", "Ageu"),
+    "zechariah": ("Zacarías", "Zacarias"),
+    "malachi": ("Malaquías", "Malaquias"),
+    "matthew": ("Mateo", "Mateus"),
+    "mark": ("Marcos", "Marcos"),
+    "luke": ("Lucas", "Lucas"),
+    "john": ("Juan", "João"),
+    "acts": ("Hechos", "Atos"),
+    "romans": ("Romanos", "Romanos"),
+    "1 corinthians": ("1 Corintios", "1 Coríntios"),
+    "2 corinthians": ("2 Corintios", "2 Coríntios"),
+    "galatians": ("Gálatas", "Gálatas"),
+    "ephesians": ("Efesios", "Efésios"),
+    "philippians": ("Filipenses", "Filipenses"),
+    "colossians": ("Colosenses", "Colossenses"),
+    "1 thessalonians": ("1 Tesalonicenses", "1 Tessalonicenses"),
+    "2 thessalonians": ("2 Tesalonicenses", "2 Tessalonicenses"),
+    "1 timothy": ("1 Timoteo", "1 Timóteo"),
+    "2 timothy": ("2 Timoteo", "2 Timóteo"),
+    "titus": ("Tito", "Tito"),
+    "philemon": ("Filemón", "Filemom"),
+    "hebrews": ("Hebreos", "Hebreus"),
+    "james": ("Santiago", "Tiago"),
+    "1 peter": ("1 Pedro", "1 Pedro"),
+    "2 peter": ("2 Pedro", "2 Pedro"),
+    "1 john": ("1 Juan", "1 João"),
+    "2 john": ("2 Juan", "2 João"),
+    "3 john": ("3 Juan", "3 João"),
+    "jude": ("Judas", "Judas"),
+    "revelation": ("Apocalipsis", "Apocalipse"),
+}
 
-def _localized_selar_header(lang_code: str, existing_desc: str) -> str:
+_LOCALIZE_REF_RE = re.compile(
+    r"\b((?:[123]\s+)?(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|"
+    r"Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalm|Psalms|Proverbs|Ecclesiastes|"
+    r"Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|"
+    r"Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|"
+    r"Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|Thessalonians|"
+    r"Timothy|Titus|Philemon|Hebrews|James|Peter|Jude|Revelation))"
+    r"\s+(\d+(?::\d+(?:[-–]\d+)?)?)\b",
+    re.IGNORECASE,
+)
+
+
+def _translate_scripture_ref(title: str) -> tuple[str, str]:
+    """Return `(es_ref, pt_ref)` such as `('Lamentaciones 3:22-23', 'Lamentações 3:22-23')`."""
+    m = _LOCALIZE_REF_RE.search(title or "")
+    if not m:
+        return ("", "")
+    book_key = " ".join(m.group(1).lower().split())
+    chap_verse = m.group(2).replace("–", "-")
+    es_book, pt_book = _BOOK_TRANSLATIONS.get(book_key, (m.group(1).title(), m.group(1).title()))
+    return (f"{es_book} {chap_verse}", f"{pt_book} {chap_verse}")
+
+
+def _localized_selar_header(
+    lang_code: str,
+    existing_desc: str,
+    include_sanctuary_links: bool = True,
+) -> str:
+    if not include_sanctuary_links:
+        return ""
     if not SELAR_JOURNAL_URL or SELAR_JOURNAL_URL in (existing_desc or ""):
         return ""
     if lang_code == "pt":
@@ -271,11 +368,63 @@ def build_metadata_localizations(
     description: str,
     niche: str = "faith and prayer",
     channel_name: str = "The Secret Place",
+    channel_id: str | None = None,
 ) -> dict[str, dict[str, str]]:
     """Build localized Spanish (`es`) and Portuguese (`pt`) metadata within API byte limits."""
     niche_lower = (niche or "").lower()
     if any(k in niche_lower for k in ("finance", "business", "economics", "corporate")):
         return {}
+
+    from .channel_capabilities import brand_for, channel_for_display_name
+    from .channels import DEFAULT_CHANNEL_ID, get_channel, normalize_channel_id
+
+    resolved_cid = (
+        normalize_channel_id(channel_id)
+        if channel_id
+        else (channel_for_display_name(channel_name) or DEFAULT_CHANNEL_ID)
+    )
+    brand = brand_for(resolved_cid)
+    eff_channel_name = (
+        channel_name
+        if (channel_name and channel_for_display_name(channel_name) == resolved_cid)
+        else brand.display_name
+    )
+    allow_selar = get_channel(resolved_cid).include_sanctuary_links
+
+    # Non-default channels (e.g. sunrise & midday ministries) generate clean daypart-scoped
+    # Spanish & Portuguese titles/descriptions without bedtime dictionary substitution or Selar leaks.
+    if resolved_cid != DEFAULT_CHANNEL_ID:
+        ref_es, ref_pt = _translate_scripture_ref(title)
+        es_title = (
+            brand.localized_ref_title_es.format(ref_es=ref_es, channel_name=eff_channel_name)
+            if ref_es
+            else brand.localized_title_es.format(channel_name=eff_channel_name)
+        )
+        pt_title = (
+            brand.localized_ref_title_pt.format(ref_pt=ref_pt, channel_name=eff_channel_name)
+            if ref_pt
+            else brand.localized_title_pt.format(channel_name=eff_channel_name)
+        )
+        es_selar = _localized_selar_header("es", description, include_sanctuary_links=allow_selar)
+        pt_selar = _localized_selar_header("pt", description, include_sanctuary_links=allow_selar)
+        return {
+            "es": {
+                "title": smart_truncate_title(es_title, 95),
+                "description": truncate_utf8_bytes(
+                    f"{brand.localized_desc_lead_es}\n\n{brand.localized_invite_es}\n\n"
+                    f"{es_selar}{description}",
+                    max_bytes=4900,
+                ),
+            },
+            "pt": {
+                "title": smart_truncate_title(pt_title, 95),
+                "description": truncate_utf8_bytes(
+                    f"{brand.localized_desc_lead_pt}\n\n{brand.localized_invite_pt}\n\n"
+                    f"{pt_selar}{description}",
+                    max_bytes=4900,
+                ),
+            },
+        }
 
     title_lower = (title or "").lower()
     matched_key = None
@@ -287,22 +436,26 @@ def build_metadata_localizations(
             break
 
     if not matched_key:
-        es_selar = _localized_selar_header("es", description)
-        pt_selar = _localized_selar_header("pt", description)
+        es_selar = _localized_selar_header("es", description, include_sanctuary_links=allow_selar)
+        pt_selar = _localized_selar_header("pt", description, include_sanctuary_links=allow_selar)
         return {
             "es": {
-                "title": smart_truncate_title(f"Oración de la Noche para Dormir en Paz | {channel_name}", 95),
+                "title": smart_truncate_title(
+                    brand.localized_title_es.format(channel_name=eff_channel_name), 95
+                ),
                 "description": truncate_utf8_bytes(
-                    "Oración nocturna de protección divina y paz. Descansa bajo la sombra del Altísimo.\n\n"
+                    f"{brand.localized_desc_lead_es}\n\n"
                     f"{es_selar}"
                     f"{description}",
                     max_bytes=4900,
                 ),
             },
             "pt": {
-                "title": smart_truncate_title("Oração da Noite para Dormir em Paz | The Secret Place", 95),
+                "title": smart_truncate_title(
+                    brand.localized_title_pt.format(channel_name=eff_channel_name), 95
+                ),
                 "description": truncate_utf8_bytes(
-                    "Oração poderosa da noite para proteção e paz espiritual. Descanse sob as asas de Deus.\n\n"
+                    f"{brand.localized_desc_lead_pt}\n\n"
                     f"{pt_selar}"
                     f"{description}",
                     max_bytes=4900,
@@ -316,7 +469,9 @@ def build_metadata_localizations(
     for lang_code, trans in loc_data.items():
         loc_title = smart_truncate_title(trans["title"], 95)
         invite = _LANG_INVITATION.get(lang_code, _LANG_INVITATION["es"])
-        selar_hdr = _localized_selar_header(lang_code, description)
+        selar_hdr = _localized_selar_header(
+            lang_code, description, include_sanctuary_links=allow_selar
+        )
         loc_desc = truncate_utf8_bytes(
             f"{trans['hook']}\n\n{invite}\n\n{selar_hdr}{description}",
             max_bytes=4900,

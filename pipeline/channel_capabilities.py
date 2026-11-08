@@ -130,6 +130,43 @@ class Brand:
     milestone_cadence_phrase: str = "every night"
     milestone_closing_blessing: str = "Peace be upon your home tonight."
     milestone_2000_closing: str = "your evening sanctuary of rest"
+    #: Daypart-scoped SEO hashtags, fallback hooks, backend tag seeds, localizations & comments
+    seo_fallback_hashtags: tuple[str, ...] = (
+        "#NightPrayer", "#PrayerBeforeSleep", "#BedtimePrayer", "#TheSecretPlace",
+    )
+    seo_hook_ref_template: str = (
+        "Pray this {ref} KJV night prayer before sleep for deep peace, "
+        "quiet rest, and God's protection over your home tonight."
+    )
+    seo_hook_generic: str = (
+        "Pray this KJV bedtime scripture prayer before you sleep for deep peace, "
+        "freedom from anxiety, and God's watchful protection tonight."
+    )
+    seo_book_tag_suffixes: tuple[str, ...] = ("night prayer", "prayer for sleep")
+    seo_tag_seeds: tuple[str, ...] = (
+        "prayer before sleep",
+        "night prayer for peace and protection",
+        "bedtime prayer",
+        "christian sleep prayer",
+        "kjv scripture prayer",
+        "the secret place prayer",
+    )
+    localized_title_es: str = "Oración de la Noche para Dormir en Paz | {channel_name}"
+    localized_title_pt: str = "Oração da Noite para Dormir em Paz | {channel_name}"
+    localized_ref_title_es: str = "{ref_es} Oración de la Noche para Dormir en Paz | {channel_name}"
+    localized_ref_title_pt: str = "{ref_pt} Oração da Noite para Dormir em Paz | {channel_name}"
+    localized_desc_lead_es: str = "Oración nocturna de protección divina y paz. Descansa bajo la sombra del Altísimo."
+    localized_desc_lead_pt: str = "Oração poderosa da noite para proteção e paz espiritual. Descanse sob as asas de Deus."
+    localized_invite_es: str = (
+        "Escucha esta oración bíblica antes de dormir para recibir la paz profunda de Dios y protección sobre tu hogar."
+    )
+    localized_invite_pt: str = (
+        "Ouça esta oração bíblica antes de dormir para receber a paz profunda de Deus e proteção sobre o seu lar."
+    )
+    default_comment_scripture_hook: str = (
+        "Numbers 6:24-26 — 'The Lord bless you and keep you; the Lord make His face shine upon you and give you peace.'"
+    )
+    default_comment_theme: str = "sacred peace and restorative sleep"
 
 
 @dataclass(frozen=True)
@@ -157,8 +194,7 @@ _SECRET_PLACE_COMMENT = (
 _MORNING_ALTAR_COMMENT = (
     "🌅 Beloved family, if you are beginning this day with us, write 'AMEN' in faith to claim "
     "God's promise of {theme} over your home, your work, and your mind today.\n\n"
-    "📖 Psalm 5:3 — 'My voice shalt thou hear in the morning, O Lord; in the morning will I "
-    "direct my prayer unto thee, and will look up.'\n\n"
+    "📖 {scripture_hook}\n\n"
     "Drop your prayer requests below — our pastoral editorial team reads and intercedes over "
     "every single name. Go into today covered, calm, and confident. You are not alone. 🙏✨{footer}"
 )
@@ -479,6 +515,45 @@ _BRANDS: dict[str, Brand] = {
         milestone_cadence_phrase="every sunrise",
         milestone_closing_blessing="Go into today covered by His grace.",
         milestone_2000_closing="your daily sunrise altar of prayer",
+        seo_fallback_hashtags=(
+            "#MorningPrayer", "#SunrisePrayer", "#DailyDevotion", "#TheMorningAltar",
+        ),
+        seo_hook_ref_template=(
+            "Pray this {ref} KJV morning prayer at sunrise for daily guidance, "
+            "fresh mercy, and God's covering over your steps today."
+        ),
+        seo_hook_generic=(
+            "Pray this KJV sunrise scripture prayer to begin your day in God's "
+            "presence, wisdom, and steadfast covering."
+        ),
+        seo_book_tag_suffixes=("morning prayer", "sunrise prayer"),
+        seo_tag_seeds=(
+            "morning prayer before work",
+            "daily morning prayer",
+            "sunrise scripture prayer",
+            "prayer to start your day",
+            "kjv morning devotion",
+            "the morning altar prayer",
+            "prayer for guidance and wisdom",
+            "christian morning prayer",
+        ),
+        localized_title_es="Oración de la Mañana al Amanecer en Paz | {channel_name}",
+        localized_title_pt="Oração da Manhã ao Amanhecer em Paz | {channel_name}",
+        localized_ref_title_es="{ref_es} Oración de la Mañana para Empezar el Día | {channel_name}",
+        localized_ref_title_pt="{ref_pt} Oração da Manhã para Começar o Dia | {channel_name}",
+        localized_desc_lead_es="Oración matutina de sabiduría, gracia y cobertura divina para comenzar el día.",
+        localized_desc_lead_pt="Oração matinal de sabedoria, graça e cobertura divina para começar o dia.",
+        localized_invite_es=(
+            "Escucha esta oración bíblica al amanecer para comenzar tu día con la sabiduría, gracia y cobertura de Dios."
+        ),
+        localized_invite_pt=(
+            "Ouça esta oração bíblica ao amanhecer para começar o seu dia com a sabedoria, graça e cobertura de Deus."
+        ),
+        default_comment_scripture_hook=(
+            "Psalm 5:3 — 'My voice shalt thou hear in the morning, O Lord; in the morning will I "
+            "direct my prayer unto thee, and will look up.'"
+        ),
+        default_comment_theme="fresh morning mercy, clear guidance, and daily covering",
     ),
     "prayer3": Brand(
         channel_id="prayer3",
@@ -669,6 +744,44 @@ _BRANDS: dict[str, Brand] = {
         milestone_cadence_phrase="at noon",
         milestone_closing_blessing="Carry His quiet strength into the hours ahead.",
         milestone_2000_closing="your daily noonday sanctuary of prayer",
+        seo_fallback_hashtags=(
+            "#MiddayPrayer", "#NoonPrayer", "#DailyDevotion", "#TheMiddayWatch",
+        ),
+        seo_hook_ref_template=(
+            "Pause at noonday with this {ref} KJV midday prayer for renewed strength, "
+            "quiet clarity, and God's peace over the hours ahead."
+        ),
+        seo_hook_generic=(
+            "Pause at noon with this KJV midday scripture prayer for quiet strength, "
+            "clear wisdom, and steadfast peace through the afternoon."
+        ),
+        seo_book_tag_suffixes=("midday prayer", "noon prayer"),
+        seo_tag_seeds=(
+            "midday prayer for strength",
+            "noonday scripture prayer",
+            "afternoon prayer break",
+            "prayer at noon",
+            "kjv midday devotion",
+            "the midday watch prayer",
+            "prayer for clarity and peace",
+            "christian midday prayer",
+        ),
+        localized_title_es="Oración del Mediodía para Fortaleza y Paz | {channel_name}",
+        localized_title_pt="Oração do Meio-Dia para Força e Paz | {channel_name}",
+        localized_ref_title_es="{ref_es} Oración del Mediodía para Fortaleza y Paz | {channel_name}",
+        localized_ref_title_pt="{ref_pt} Oração do Meio-Dia para Força e Paz | {channel_name}",
+        localized_desc_lead_es="Oración del mediodía para recibir fortaleza renovada, claridad y la paz de Dios.",
+        localized_desc_lead_pt="Oração do meio-dia para receber força renovada, clareza e a paz de Deus.",
+        localized_invite_es=(
+            "Haz una pausa al mediodía con esta oración bíblica para recibir fortaleza renovada, claridad y la paz de Dios."
+        ),
+        localized_invite_pt=(
+            "Faça uma pausa ao meio-dia com esta oração bíblica para receber força renovada, clareza e a paz de Deus."
+        ),
+        default_comment_scripture_hook=(
+            "Psalm 55:17 — 'Evening, and morning, and at noon, will I pray, and cry aloud: and He shall hear my voice.'"
+        ),
+        default_comment_theme="renewed midday strength, quiet wisdom, and steadfast peace",
     ),
 }
 
@@ -789,6 +902,17 @@ def channel_for_short_key(key_or_title: str) -> str | None:
     for cid, brand in _BRANDS.items():
         ns = brand.short_key_namespace
         if ns and (s.startswith(f"short-{ns}") or f"-{ns}-" in s or f"short_{ns}" in s):
+            return cid
+    return None
+
+
+def channel_for_display_name(channel_name: str | None) -> str | None:
+    """Resolve a channel id from its display name or @handle."""
+    raw = (channel_name or "").strip().lower()
+    if not raw:
+        return None
+    for cid, brand in _BRANDS.items():
+        if raw in {brand.display_name.lower(), brand.handle.lower(), cid}:
             return cid
     return None
 

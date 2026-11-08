@@ -14,7 +14,6 @@ youtube_shorts_url: "https://www.youtube.com/shorts/OMDT_HJUcEs"
 youtube_watch_url: "https://youtu.be/OMDT_HJUcEs"
 youtube_studio_url: "https://studio.youtube.com/video/OMDT_HJUcEs/edit"
 privacy_status: "public"
-metadata_revision: "selar-seo-v1"
 width: 720
 height: 1280
 duration_seconds: 55.73

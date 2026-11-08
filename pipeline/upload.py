@@ -331,6 +331,7 @@ def upload(
             full_desc,
             niche_str,
             channel_name=CONFIG.channel_name or channel_profile.display_name,
+            channel_id=channel_profile.id,
         )
         if locs:
             body["localizations"] = locs
