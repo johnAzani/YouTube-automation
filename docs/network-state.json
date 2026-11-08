@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T19:57:08Z",
+  "generated_at": "2026-11-08T20:03:03Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,11 +7,11 @@
     "channels_total": 3
   },
   "totals": {
-    "published_total": 40,
-    "published_longform": 19,
+    "published_total": 41,
+    "published_longform": 20,
     "published_shorts": 21,
-    "public_total": 38,
-    "queued_longform": 28,
+    "public_total": 39,
+    "queued_longform": 27,
     "queued_shorts": 16,
     "automations_ok": 10,
     "automations_total": 10,
@@ -99,27 +99,27 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 15,
-        "published_longform": 8,
+        "published_total": 16,
+        "published_longform": 9,
         "published_shorts": 7,
-        "public_total": 14,
-        "queued_longform": 3,
+        "public_total": 15,
+        "queued_longform": 2,
         "queued_other": 0,
         "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0043",
-        "title": "Psalm 90:17 Morning Prayer | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "3n4RudmOpgk",
-        "watch_url": "https://youtu.be/3n4RudmOpgk",
-        "published_on": "2026-11-08",
-        "published_at": "2026-11-08T19:01:40Z"
-      },
-      "next_queued_longform": {
         "id": "0044",
         "title": "Isaiah 50:4 Morning Prayer | The Morning Altar",
-        "words": 1478,
+        "format": "longform",
+        "youtube_video_id": "2IcuUyX_Y4U",
+        "watch_url": "https://youtu.be/2IcuUyX_Y4U",
+        "published_on": "2026-11-08",
+        "published_at": "2026-11-08T20:02:33Z"
+      },
+      "next_queued_longform": {
+        "id": "0053",
+        "title": "Psalm 59:16 Morning Prayer | The Morning Altar",
+        "words": 1075,
         "status": "approved"
       },
       "next_queued_short": {
@@ -212,6 +212,29 @@
   ],
   "videos": [
     {
+      "id": "0044",
+      "slug": "isaiah-50-4-morning-prayer",
+      "file": "0044-isaiah-50-4-morning-prayer.md",
+      "title": "Isaiah 50:4 Morning Prayer | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-08",
+      "published_at": "2026-11-08T20:02:33Z",
+      "youtube_video_id": "2IcuUyX_Y4U",
+      "watch_url": "https://youtu.be/2IcuUyX_Y4U",
+      "youtu_be_url": "https://youtu.be/2IcuUyX_Y4U",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/2IcuUyX_Y4U/edit",
+      "thumb_url": "https://i.ytimg.com/vi/2IcuUyX_Y4U/hqdefault.jpg",
+      "thumb_text": "WAKENED BY GOD",
+      "duration_label": "~10 min",
+      "words": 1478
+    },
+    {
       "id": "0043",
       "slug": "psalm-90-17-morning-prayer",
       "file": "0043-psalm-90-17-morning-prayer.md",
@@ -223,7 +246,7 @@
       "niche": "faith and prayer",
       "privacy": "public",
       "published_on": "2026-11-08",
-      "published_at": "2026-11-08T19:01:40Z",
+      "published_at": "2026-11-08T19:10:43Z",
       "youtube_video_id": "3n4RudmOpgk",
       "watch_url": "https://youtu.be/3n4RudmOpgk",
       "youtu_be_url": "https://youtu.be/3n4RudmOpgk",
@@ -1393,19 +1416,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1025
-      },
-      {
-        "id": "0044",
-        "slug": "isaiah-50-4-morning-prayer",
-        "file": "0044-isaiah-50-4-morning-prayer.md",
-        "title": "Isaiah 50:4 Morning Prayer | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1478
       },
       {
         "id": "0049",

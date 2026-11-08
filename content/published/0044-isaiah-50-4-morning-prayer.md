@@ -2,7 +2,7 @@
 id: '0044'
 title: Isaiah 50:4 Morning Prayer | The Morning Altar
 slug: isaiah-50-4-morning-prayer
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -78,6 +78,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-08"
+published_at: "2026-11-08T20:02:33Z"
+youtube_video_id: "2IcuUyX_Y4U"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — The Sunrise Awakening
