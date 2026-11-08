@@ -865,14 +865,14 @@ goes before you until evening falls and brings your labor to peaceful completion
         self.assertNotIn("@TheSecretPlace", cp_m5["url"])
         self.assertNotIn("nighttime", cp_m5["theme"])
 
-        # Queued Morning Altar & Midday Watch Shorts -> each channel's own playlists tab
-        cp_m90 = resolve_longform_counterpart("short-morningpsalm90v17")
-        self.assertEqual(cp_m90["channel"], "prayer2")
-        self.assertEqual(cp_m90["url"], "https://www.youtube.com/@TheMorningAltarDaily/playlists")
+        # Future / unpublished Morning Altar & Midday Watch Shorts -> each channel's own playlists tab
+        cp_m_unpub = resolve_longform_counterpart("short-morningpsalm150v6")
+        self.assertEqual(cp_m_unpub["channel"], "prayer2")
+        self.assertEqual(cp_m_unpub["url"], "https://www.youtube.com/@TheMorningAltarDaily/playlists")
 
-        cp_mid37 = resolve_longform_counterpart("short-middaypsalm37v5")
-        self.assertEqual(cp_mid37["channel"], "prayer3")
-        self.assertEqual(cp_mid37["url"], "https://www.youtube.com/@TheMiddayWatch/playlists")
+        cp_mid_unpub = resolve_longform_counterpart("short-middaypsalm150v6")
+        self.assertEqual(cp_mid_unpub["channel"], "prayer3")
+        self.assertEqual(cp_mid_unpub["url"], "https://www.youtube.com/@TheMiddayWatch/playlists")
 
         # Midday Psalm 91:6 must link prayer3's 0046, never secret-place's 0008 (7RDX0fbIOtQ)
         cp_mid91 = resolve_longform_counterpart("short-middaypsalm91v6")
@@ -1046,6 +1046,63 @@ goes before you until evening falls and brings your labor to peaceful completion
             for bad in brand_for(doc.channel).forbidden_phrases:
                 self.assertNotIn(bad.lower(), low, f"{p.name} leaked {bad!r} in comment")
         self.assertGreaterEqual(checked, 20)
+
+    def test_watchdog_and_monitor_alert_when_one_channel_stalls_behind_active_sibling(self):
+        """A recent upload on secret-place never masks a >26h/>48h stall on prayer2 or prayer3."""
+        from scripts import automation_monitor as am
+        from scripts import pipeline_watchdog as pw
+
+        now = datetime(2026, 11, 8, 20, 0, tzinfo=timezone.utc)
+        with tempfile.TemporaryDirectory() as tmp:
+            pub = Path(tmp) / "published"
+            pub.mkdir()
+            qdir = Path(tmp) / "content" / "queue"
+            qdir.mkdir(parents=True)
+            (qdir / "0099-ok.md").write_text(
+                "---\nid: '0099'\nstatus: approved\nformat: longform\n---\n\n## Scene 1\n"
+                + ("word " * 900),
+                encoding="utf-8",
+            )
+
+            # secret-place uploaded 2h ago (fresh), prayer2 32h ago (>26h), prayer3 52h ago (>48h)
+            (pub / "0020-sp.md").write_text(
+                f"---\nchannel: secret-place\nyoutube_video_id: sp1\n"
+                f"published_at: '{(now - timedelta(hours=2)).strftime('%Y-%m-%dT%H:%M:%SZ')}'\n---\n",
+                encoding="utf-8",
+            )
+            (pub / "0040-p2.md").write_text(
+                f"---\nchannel: prayer2\nyoutube_video_id: p21\n"
+                f"published_at: '{(now - timedelta(hours=32)).strftime('%Y-%m-%dT%H:%M:%SZ')}'\n---\n",
+                encoding="utf-8",
+            )
+            (pub / "0045-p3.md").write_text(
+                f"---\nchannel: prayer3\nyoutube_video_id: p31\n"
+                f"published_at: '{(now - timedelta(hours=52)).strftime('%Y-%m-%dT%H:%M:%SZ')}'\n---\n",
+                encoding="utf-8",
+            )
+
+            wd_rep = pw.Report()
+            with mock.patch("scripts.automation_health.queue_health", return_value=[
+                {"queue": "longform:secret-place", "channel": "secret-place", "ready": 5, "note": "ok"},
+                {"queue": "longform:prayer2", "channel": "prayer2", "ready": 4, "note": "ok"},
+                {"queue": "longform:prayer3", "channel": "prayer3", "ready": 4, "note": "ok"},
+            ]):
+                pw.check_queues(wd_rep, published_dir=pub, now=now)
+
+            self.assertFalse(wd_rep.healthy)
+            pub_findings = [f.detail for f in wd_rep.findings if f.area == "publishing"]
+            self.assertEqual(len(pub_findings), 2)
+            self.assertTrue(any("The Morning Altar (prayer2)" in d for d in pub_findings))
+            self.assertTrue(any("The Midday Watch (prayer3)" in d for d in pub_findings))
+
+            mon_rep = am.MonitorReport()
+            with mock.patch.object(am, "ROOT", Path(tmp)):
+                am.check_outcomes(mon_rep, now=now, published_dir=pub, log_path=Path(tmp) / "none.json")
+            by_name = {o["outcome"]: o for o in mon_rep.outcomes}
+            self.assertEqual(by_name["last upload"]["severity"], "ok")
+            self.assertEqual(by_name["last upload (secret-place)"]["severity"], "ok")
+            self.assertEqual(by_name["last upload (prayer2)"]["severity"], "warning")
+            self.assertEqual(by_name["last upload (prayer3)"]["severity"], "blocking")
 
 
 if __name__ == "__main__":

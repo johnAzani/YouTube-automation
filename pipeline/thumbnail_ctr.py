@@ -79,7 +79,7 @@ INK_THRESHOLD = 150
 
 
 # --------------------------------------------------------------------------- #
-# Palettes — all navy/gold, differentiated by light temperature
+# Palettes — nocturnal (night), sunrise (dawn), and midday (noon)
 # --------------------------------------------------------------------------- #
 NIGHT_LAMP = Palette("night-lamp", (5, 11, 28), (26, 52, 96), (255, 208, 128),
                      (255, 202, 74), (255, 250, 238))
@@ -87,6 +87,20 @@ NIGHT_STILL = Palette("night-still", (4, 9, 24), (18, 40, 80), (214, 232, 255),
                       (255, 214, 92), (255, 250, 238))
 NIGHT_DAWN = Palette("night-dawn", (9, 15, 38), (82, 64, 82), (255, 194, 124),
                      (255, 210, 92), (255, 250, 238))
+
+DAWN_GOLD = Palette("dawn-gold", (18, 10, 30), (118, 58, 42), (255, 204, 114),
+                    (255, 212, 84), (255, 251, 240))
+DAWN_ROSE = Palette("dawn-rose", (14, 9, 26), (92, 46, 54), (255, 190, 142),
+                    (255, 214, 92), (255, 250, 240))
+DAWN_HORIZON = Palette("dawn-horizon", (20, 12, 34), (136, 72, 46), (255, 214, 126),
+                       (255, 214, 88), (255, 251, 240))
+
+NOON_GOLD = Palette("noon-gold", (14, 20, 30), (106, 74, 34), (255, 218, 124),
+                    (255, 216, 78), (255, 252, 242))
+NOON_AMBER = Palette("noon-amber", (12, 17, 26), (82, 60, 32), (255, 208, 116),
+                     (255, 218, 84), (255, 251, 240))
+NOON_SANCTUARY = Palette("noon-sanctuary", (16, 22, 32), (124, 86, 38), (255, 224, 136),
+                         (255, 218, 86), (255, 252, 242))
 
 
 @dataclass(frozen=True)
@@ -104,6 +118,7 @@ class CtrVariant:
     text_box: tuple[int, int, int, int]
     house: tuple[float, float] | None = None   # (x fraction, height fraction of h)
     accent_last: bool = True
+    grade: str = "night"
 
 
 CTR_VARIANTS = (
@@ -126,6 +141,75 @@ CTR_VARIANTS = (
         rays=True, seed=303, text_box=(0, 0, 0, 0), house=(0.205, 0.170),
     ),
 )
+
+DAWN_VARIANTS = (
+    CtrVariant(
+        label="hook", concept="imperative — PRAY AT SUNRISE",
+        hero="PRAY AT SUNRISE", palette=DAWN_GOLD,
+        moon=(0.775, 0.43), moon_scale=0.205, horizon=0.735, dawn=0.92,
+        rays=True, seed=401, text_box=(86, 84, 690, 470), house=(0.315, 0.150),
+        grade="dawn",
+    ),
+    CtrVariant(
+        label="quiet", concept="curiosity — FIRST LIGHT PEACE",
+        hero="FIRST LIGHT PEACE", palette=DAWN_ROSE,
+        moon=(0.800, 0.38), moon_scale=0.190, horizon=0.780, dawn=0.55,
+        rays=False, seed=502, text_box=(86, 84, 706, 470), house=(0.300, 0.152),
+        grade="dawn",
+    ),
+    CtrVariant(
+        label="poster", concept="textless — sunrise sanctuary",
+        hero=None, palette=DAWN_HORIZON,
+        moon=(0.555, 0.465), moon_scale=0.238, horizon=0.700, dawn=0.98,
+        rays=True, seed=603, text_box=(0, 0, 0, 0), house=(0.205, 0.170),
+        grade="dawn",
+    ),
+)
+
+NOON_VARIANTS = (
+    CtrVariant(
+        label="hook", concept="imperative — PRAY AT NOON",
+        hero="PRAY AT NOON", palette=NOON_GOLD,
+        moon=(0.775, 0.37), moon_scale=0.205, horizon=0.735, dawn=0.86,
+        rays=True, seed=701, text_box=(86, 84, 690, 470), house=(0.315, 0.150),
+        grade="noon",
+    ),
+    CtrVariant(
+        label="quiet", concept="curiosity — STAND FIRM TODAY",
+        hero="STAND FIRM TODAY", palette=NOON_AMBER,
+        moon=(0.800, 0.34), moon_scale=0.190, horizon=0.780, dawn=0.48,
+        rays=False, seed=802, text_box=(86, 84, 706, 470), house=(0.300, 0.152),
+        grade="noon",
+    ),
+    CtrVariant(
+        label="poster", concept="textless — midday sanctuary",
+        hero=None, palette=NOON_SANCTUARY,
+        moon=(0.555, 0.405), moon_scale=0.238, horizon=0.700, dawn=0.92,
+        rays=True, seed=903, text_box=(0, 0, 0, 0), house=(0.205, 0.170),
+        grade="noon",
+    ),
+)
+
+
+def variants_for_channel(channel_id: str | None = None) -> tuple["CtrVariant", ...]:
+    """Select the 16:9 CTR variant pack matching `channel_id`'s daypart grade."""
+    if not channel_id:
+        return CTR_VARIANTS
+    from .channel_capabilities import brand_for
+
+    brand = brand_for(channel_id)
+    grade = (brand.ctr_grade or "night").strip().lower()
+    if grade == "dawn":
+        base = DAWN_VARIANTS
+    elif grade == "noon":
+        base = NOON_VARIANTS
+    else:
+        return CTR_VARIANTS
+    return (
+        dataclasses.replace(base[0], hero=brand.ctr_hook_hero),
+        dataclasses.replace(base[1], hero=brand.ctr_quiet_hero),
+        base[2],
+    )
 
 
 # --------------------------------------------------------------------------- #
@@ -191,15 +275,34 @@ _ALL_CURATED_PLATES: tuple[str, ...] = (
 _VIDEO_EXTS = {".mp4", ".mov", ".webm", ".mkv", ".m4v"}
 
 
-def curated_backdrop_for(doc_key: str | None = None) -> "Path | None":
+_DAYLIGHT_CURATED_PLATES: tuple[str, ...] = (
+    "long-prayer-thumb-hero.jpg",
+    "long-prayer-scene-01.jpg",
+    "long-prayer-scene-02.jpg",
+    "long-prayer-scene-03.jpg",
+    "long-prayer-scene-05.jpg",
+    "long-prayer-scene-06.jpg",
+)
+
+
+def curated_backdrop_for(
+    doc_key: str | None = None,
+    channel_id: str | None = None,
+) -> "Path | None":
     """Deterministic cleared 16:9 sanctuary plate when stock clips yield no bright still."""
     plate_dir = Path(__file__).resolve().parent.parent / "image-search"
     clean_key = (doc_key or "").strip()
-    if clean_key in CURATED_SANCTUARY_PLATES:
+    grade = "night"
+    if channel_id:
+        from .channel_capabilities import brand_for
+
+        grade = (brand_for(channel_id).ctr_grade or "night").strip().lower()
+    if grade == "night" and clean_key in CURATED_SANCTUARY_PLATES:
         candidate = plate_dir / CURATED_SANCTUARY_PLATES[clean_key]
         if candidate.is_file():
             return candidate
-    available = [plate_dir / name for name in _ALL_CURATED_PLATES if (plate_dir / name).is_file()]
+    pool = _ALL_CURATED_PLATES if grade == "night" else _DAYLIGHT_CURATED_PLATES
+    available = [plate_dir / name for name in pool if (plate_dir / name).is_file()]
     if not available:
         return None
     digest = hashlib.sha1((clean_key or "default").encode("utf-8")).hexdigest()
@@ -382,7 +485,68 @@ def _night_grade(img: Image.Image, palette: Palette) -> Image.Image:
     return Image.composite(warm_tint, graded, hi_mask)
 
 
-def _text_scrim(img: Image.Image, box, strength: float = 0.72) -> Image.Image:
+def _daypart_grade(img: Image.Image, palette: Palette, grade: str = "night") -> Image.Image:
+    """Route photographic backdrops through the channel's daypart color science."""
+    if grade == "night":
+        return _night_grade(img, palette)
+
+    w, h = img.size
+    right = img.convert("L").crop((int(w * 0.45), int(h * 0.08), int(w * 0.95), int(h * 0.80)))
+    r_hist = right.histogram()
+    r_p50 = _percentile_from_hist(r_hist, 0.50)
+    r_p94 = _percentile_from_hist(r_hist, 0.94)
+
+    gamma = 0.86
+    if r_p50 < 45:
+        gamma = 0.52
+    elif r_p50 < 75:
+        gamma = 0.64
+    elif r_p50 < 105:
+        gamma = 0.76
+    gain = 1.0
+    if 12 < r_p94 < 210:
+        gain = min(1.55, 224.0 / max(40.0, float(r_p94)))
+
+    lut = [
+        min(255, max(0, int(round(36 + (((i / 255.0) ** gamma) * 219.0 * gain)))))
+        for i in range(256)
+    ]
+    lifted = img.point(lut * 3)
+    lum = lifted.convert("L")
+
+    # Warm plum-umber shadows at dawn; burnished bronze-slate shadows at noon
+    shadow_rgb = (34, 16, 28) if grade == "dawn" else (28, 22, 14)
+    shadow_tint = Image.new("RGB", img.size, shadow_rgb)
+    shadow_mask = lum.point(lambda v: max(0, min(145, int((158 - v) * 0.88))))
+    graded = Image.composite(shadow_tint, lifted, shadow_mask)
+
+    warm_tint = Image.new("RGB", img.size, palette.glow)
+    hi_mask = lum.point(lambda v: max(0, min(115, int((v - 115) * 0.82))))
+    return Image.composite(warm_tint, graded, hi_mask)
+
+
+def _scrim_rgb_for(grade: str) -> tuple[int, int, int]:
+    if grade == "dawn":
+        return (16, 9, 20)
+    if grade == "noon":
+        return (16, 12, 9)
+    return (4, 10, 26)
+
+
+def _badge_rgb_for(grade: str) -> tuple[int, int, int]:
+    if grade == "dawn":
+        return (36, 22, 32)
+    if grade == "noon":
+        return (34, 26, 20)
+    return (20, 28, 50)
+
+
+def _text_scrim(
+    img: Image.Image,
+    box,
+    strength: float = 0.72,
+    scrim_rgb: tuple[int, int, int] = (4, 10, 26),
+) -> Image.Image:
     """Silky cosine-feathered left scrim + soft local cushion with zero hard seam."""
     w, h = img.size
     x0, y0, x1, y1 = box
@@ -410,14 +574,17 @@ def _text_scrim(img: Image.Image, box, strength: float = 0.72) -> Image.Image:
     )
     local = local.filter(ImageFilter.GaussianBlur(58))
     combined = ImageChops.lighter(mask, local)
-    return Image.composite(Image.new("RGB", img.size, (4, 10, 26)), img, combined)
+    return Image.composite(Image.new("RGB", img.size, scrim_rgb), img, combined)
 
 
-def _calm_badge_zone(img: Image.Image) -> Image.Image:
+def _calm_badge_zone(
+    img: Image.Image,
+    cushion_rgb: tuple[int, int, int] = (20, 28, 50),
+) -> Image.Image:
     """Soften high-frequency detail under YouTube's bottom-right duration badge."""
     w, h = img.size
     blurred = img.filter(ImageFilter.GaussianBlur(14))
-    cushion = Image.blend(blurred, Image.new("RGB", img.size, (20, 28, 50)), 0.58)
+    cushion = Image.blend(blurred, Image.new("RGB", img.size, cushion_rgb), 0.58)
     mask = Image.new("L", img.size, 0)
     ImageDraw.Draw(mask).rounded_rectangle([995, 565, w + 30, h + 30], radius=48, fill=235)
     mask = mask.filter(ImageFilter.GaussianBlur(24))
@@ -447,23 +614,26 @@ def _photo_backdrop(path, size, variant: "CtrVariant", palette: Palette) -> Imag
         if left_p90 > right_p90 + 28:
             fitted = ImageOps.mirror(fitted)
 
-    img = _night_grade(fitted, palette)
+    grade = getattr(variant, "grade", "night") or "night"
+    img = _daypart_grade(fitted, palette, grade)
 
     # Guarantee a warm celestial focal bloom on the right even if the source photo is dark.
     focal_crop = img.convert("L").crop((int(w * 0.52), int(h * 0.12), int(w * 0.94), int(h * 0.72)))
     focal_p95 = _percentile_from_hist(focal_crop.histogram(), 0.95)
     glow_centre = (int(w * variant.moon[0]), int(h * variant.moon[1]))
     glow_r = variant.moon_scale * min(w, h)
-    bloom_strength = 0.36 if focal_p95 < 135 else 0.14
+    bloom_strength = 0.42 if grade != "night" else (0.36 if focal_p95 < 135 else 0.14)
     img = _screen(img, _radial_glow(size, glow_centre, glow_r * 2.4, palette.glow, bloom_strength))
-    if focal_p95 < 95:
-        img = _screen(img, _radial_glow(size, glow_centre, glow_r * 0.95, (255, 240, 200), 0.34))
+    if focal_p95 < 95 or grade != "night":
+        core_strength = 0.28 if grade != "night" else 0.34
+        img = _screen(img, _radial_glow(size, glow_centre, glow_r * 0.95, (255, 242, 204), core_strength))
 
+    scrim_rgb = _scrim_rgb_for(grade)
     if variant.hero and variant.text_box[2] > variant.text_box[0]:
-        img = _text_scrim(img, variant.text_box)
+        img = _text_scrim(img, variant.text_box, scrim_rgb=scrim_rgb)
     elif variant.hero:
-        img = _text_scrim(img, (0, 0, size[0] // 2, size[1]))
-    return _calm_badge_zone(img)
+        img = _text_scrim(img, (0, 0, size[0] // 2, size[1]), scrim_rgb=scrim_rgb)
+    return _calm_badge_zone(img, cushion_rgb=_badge_rgb_for(grade))
 
 
 # --------------------------------------------------------------------------- #
@@ -542,6 +712,59 @@ def _moon(img: Image.Image, centre, radius: float, palette: Palette) -> Image.Im
                fill=tuple(int(c * 0.055) for c in palette.glow))
     img = _screen(img, shaft.filter(ImageFilter.GaussianBlur(r * 0.6)))
     return img
+
+
+def _sun(img: Image.Image, centre, radius: float, palette: Palette, rays: bool = True) -> Image.Image:
+    """Radiant sunrise/midday solar disc + corona + crepuscular beams (no lunar maria)."""
+    cx, cy = centre
+    r = int(radius)
+    img = _screen(img, _radial_glow(img.size, centre, r * 4.4, palette.glow, 0.24))
+    img = _screen(img, _radial_glow(img.size, centre, r * 1.85, (255, 224, 146), 0.24))
+
+    if rays:
+        ray_layer = Image.new("RGB", img.size, (0, 0, 0))
+        rd = ImageDraw.Draw(ray_layer)
+        for angle_deg in (-58, -32, -8, 16, 42):
+            ang = math.radians(angle_deg + 90)
+            length = max(img.size) * 0.95
+            ex = cx + math.cos(ang) * length
+            ey = cy + math.sin(ang) * length
+            perp_x, perp_y = -math.sin(ang), math.cos(ang)
+            w0, w1 = r * 0.22, r * 1.15
+            rd.polygon([
+                (cx - perp_x * w0, cy - perp_y * w0),
+                (cx + perp_x * w0, cy + perp_y * w0),
+                (ex + perp_x * w1, ey + perp_y * w1),
+                (ex - perp_x * w1, ey - perp_y * w1),
+            ], fill=tuple(int(c * 0.065) for c in palette.glow))
+        img = _screen(img, ray_layer.filter(ImageFilter.GaussianBlur(r * 0.36)))
+
+    pad = 6
+    size = (r * 2 + pad * 2, r * 2 + pad * 2)
+    disc = Image.new("RGB", size, (255, 214, 132))
+    d = ImageDraw.Draw(disc)
+    steps = 40
+    for i in range(steps, 0, -1):
+        rr = r * i / steps
+        t = i / steps
+        col = (
+            255,
+            int(253 - 34 * (t ** 1.7)),
+            int(242 - 104 * (t ** 1.5)),
+        )
+        d.ellipse([pad + r - rr, pad + r - rr, pad + r + rr, pad + r + rr], fill=col)
+
+    mask = Image.new("L", size, 0)
+    ImageDraw.Draw(mask).ellipse([pad, pad, pad + r * 2, pad + r * 2], fill=255)
+    img.paste(disc, (cx - r - pad, cy - r - pad), mask.filter(ImageFilter.GaussianBlur(5.0)))
+
+    shaft = Image.new("RGB", img.size, (0, 0, 0))
+    sd = ImageDraw.Draw(shaft)
+    spread = r * 1.75
+    sd.polygon([(cx - r * 0.55, cy), (cx + r * 0.55, cy),
+                (cx + spread, img.size[1]), (cx - spread, img.size[1])],
+               fill=tuple(int(c * 0.075) for c in palette.glow))
+    return _screen(img, shaft.filter(ImageFilter.GaussianBlur(r * 0.65)))
 
 
 def _ridge_mask(size, baseline: float, amp: float, side: str, seed: int,
@@ -647,16 +870,25 @@ def _terrain(img: Image.Image, variant: "CtrVariant") -> Image.Image:
                          fill=tuple(int(c * variant.dawn * 0.30 * t ** 1.8) for c in pal.glow))
         img = _screen(img, band.filter(ImageFilter.GaussianBlur(30)))
 
+    grade = getattr(variant, "grade", "night") or "night"
+    if grade == "dawn":
+        ridge_far, ridge_near = (54, 30, 38), (20, 11, 22)
+    elif grade == "noon":
+        ridge_far, ridge_near = (52, 38, 24), (19, 15, 12)
+    else:
+        ridge_far, ridge_near = (24, 42, 80), (8, 16, 36)
+
     crest = []
     for baseline, amp, colour, seed in (
-        (variant.horizon, 0.038, (24, 42, 80), variant.seed + 2),
-        (variant.horizon + 0.075, 0.026, (8, 16, 36), variant.seed + 3),
+        (variant.horizon, 0.038, ridge_far, variant.seed + 2),
+        (variant.horizon + 0.075, 0.026, ridge_near, variant.seed + 3),
     ):
         mask, pts = _ridge_mask(img.size, baseline, amp, "low", seed)
         img = Image.composite(Image.new("RGB", img.size, colour), img, mask)
         line = Image.new("RGB", img.size, (0, 0, 0))
         ld = ImageDraw.Draw(line)
-        ld.line(pts, fill=tuple(int(c * 0.20) for c in pal.glow), width=3)
+        rim_scale = 0.30 if grade != "night" else 0.20
+        ld.line(pts, fill=tuple(int(c * rim_scale) for c in pal.glow), width=3)
         img = _screen(img, line.filter(ImageFilter.GaussianBlur(2.6)))
         crest = pts   # keep the nearest ridge for house placement
 
@@ -699,28 +931,40 @@ def paint_ctr_scene(variant: "CtrVariant", size=CANVAS, avoid=None,
     pal = variant.palette
     if backdrop:
         return _photo_backdrop(backdrop, size, variant, pal)
+    grade = getattr(variant, "grade", "night") or "night"
     img = _vertical_gradient(size, pal.sky_top, pal.sky_bottom)
     centre = (int(w * variant.moon[0]), int(h * variant.moon[1]))
     radius = variant.moon_scale * min(w, h)
 
-    # atmospheric haze, low strength: depth without lifting the sky out of night
+    # atmospheric haze, low strength: depth without washing out left-side text contrast
     haze = Image.new("RGB", size, (0, 0, 0))
     hd = ImageDraw.Draw(haze)
     rng = random.Random(variant.seed + 4)
+    sec_haze = (196, 118, 92) if grade == "dawn" else ((198, 152, 82) if grade == "noon" else (86, 126, 196))
     for _ in range(6):
         cx = rng.uniform(0, w)
         cy = rng.uniform(0, h * 0.7)
         rx = rng.uniform(w * 0.20, w * 0.45)
         ry = rng.uniform(h * 0.10, h * 0.28)
-        tint = pal.glow if rng.random() < 0.55 else (86, 126, 196)
+        tint = pal.glow if rng.random() < 0.55 else sec_haze
         hd.ellipse([cx - rx, cy - ry, cx + rx, cy + ry],
                    fill=tuple(int(c * rng.uniform(0.05, 0.10)) for c in tint))
     img = _screen(img, haze.filter(ImageFilter.GaussianBlur(100)))
 
-    img = _stars(img, 1100, variant.seed, avoid=avoid)
+    if grade == "night":
+        img = _stars(img, 1100, variant.seed, avoid=avoid)
+    elif grade == "dawn":
+        img = _stars(img, 140, variant.seed, avoid=avoid)
     img = _terrain(img, variant)
-    img = _moon(img, centre, radius, pal)
+    if grade == "night":
+        img = _moon(img, centre, radius, pal)
+    else:
+        img = _sun(img, centre, radius, pal, rays=variant.rays)
     img = _reflection(img, variant)
+
+    # Ensure deep bimodal contrast behind left-side hero text on bright dawn/noon skies
+    if grade != "night" and variant.hero and variant.text_box[2] > variant.text_box[0]:
+        img = _text_scrim(img, variant.text_box, strength=0.46, scrim_rgb=_scrim_rgb_for(grade))
 
     # vignette: darken the corners, but never below YouTube's #0F0F0F page, or
     # the thumbnail loses its edge in the dark-mode feed.
@@ -728,7 +972,8 @@ def paint_ctr_scene(variant: "CtrVariant", size=CANVAS, avoid=None,
     ImageDraw.Draw(vig).ellipse(
         [-int(w * 0.18), -int(h * 0.20), int(w * 0.98), int(h * 1.10)], fill=0)
     vig = vig.filter(ImageFilter.GaussianBlur(170))
-    dark = Image.new("RGB", size, (23, 30, 52))
+    vig_rgb = (38, 24, 34) if grade == "dawn" else ((36, 28, 22) if grade == "noon" else (23, 30, 52))
+    dark = Image.new("RGB", size, vig_rgb)
     img = Image.composite(img, dark, vig.point(lambda v: 255 - v))
     return img
 
@@ -974,17 +1219,23 @@ def render_ctr(variant: CtrVariant, out_path: Path, size=CANVAS,
         avoid = (x0 - 40, y0 - 40, x1 + 40, y1 + 40)
     img = paint_ctr_scene(active, size, avoid=avoid, backdrop=backdrop)
     notes: list[str] = []
+    grade = getattr(active, "grade", "night") or "night"
     hero_px, lines, contrast = 0, 0, 99.0
     if active.hero:
         base_scene = img.copy()
         img, hero_px, lines, contrast = draw_ctr_hero(img, active.hero, active)
         if contrast < MIN_CONTRAST:
-            reinforced = _text_scrim(base_scene, active.text_box, strength=0.48)
+            reinforced = _text_scrim(
+                base_scene,
+                active.text_box,
+                strength=0.52,
+                scrim_rgb=_scrim_rgb_for(grade),
+            )
             img, hero_px, lines, contrast = draw_ctr_hero(reinforced, active.hero, active)
             notes.append(f"scrim reinforced to {contrast:.1f}:1")
     img = _finish(img)
     if backdrop:
-        img = _calm_badge_zone(img)
+        img = _calm_badge_zone(img, cushion_rgb=_badge_rgb_for(grade))
     img = img.filter(ImageFilter.UnsharpMask(radius=2.0, percent=62, threshold=2))
     if active.hero and contrast < MIN_CONTRAST:
         notes.append(f"contrast {contrast:.1f} below {MIN_CONTRAST} — needs a scrim")
@@ -1022,15 +1273,19 @@ def render_ctr(variant: CtrVariant, out_path: Path, size=CANVAS,
 def generate_ctr_pack(out_dir: Path, variants=CTR_VARIANTS,
                       hero_override: str | None = None,
                       doc_key: str | None = None,
-                      backdrop=None) -> list[CtrReport]:
+                      backdrop=None,
+                      channel_id: str | None = None) -> list[CtrReport]:
     """Render the pack for one job.
 
     `hero_override` replaces the copy on the text variants with the script's own
     ``thumb_text`` — the per-psalm line the brain authored, which the pipeline used
     to discard in favour of the fixed "PRAY THIS TONIGHT" on every video. The
     textless poster keeps no copy; that is the point of it. `doc_key` re-seeds the
-    art so two releases never render the same frame.
+    art so two releases never render the same frame. `channel_id` selects the
+    daypart palette (`night` / `dawn` / `noon`) when custom `variants` are not passed.
     """
+    if channel_id and variants is CTR_VARIANTS:
+        variants = variants_for_channel(channel_id)
     if doc_key:
         variants = variations_for(doc_key, variants)
 

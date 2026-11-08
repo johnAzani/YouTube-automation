@@ -410,5 +410,64 @@ class TestTheFrameIsTheVideosOwnFootage(unittest.TestCase):
         self.assertGreaterEqual(checked, 15)
 
 
+class TestDaypartPacks(unittest.TestCase):
+    """Sunrise (prayer2) and Midday (prayer3) 16:9 CTR packs meet all dark-feed rules."""
+
+    def test_sunrise_and_midday_procedural_packs_pass_all_ctr_metrics(self):
+        night_reports = ctr.generate_ctr_pack(TMP / "dp-night", doc_key="0036", channel_id="secret-place")
+        dawn_reports = ctr.generate_ctr_pack(TMP / "dp-dawn", doc_key="0036", channel_id="prayer2")
+        noon_reports = ctr.generate_ctr_pack(TMP / "dp-noon", doc_key="0045", channel_id="prayer3")
+
+        self.assertEqual(dawn_reports[0].hero, "PRAY AT SUNRISE")
+        self.assertEqual(dawn_reports[1].hero, "FIRST LIGHT PEACE")
+        self.assertEqual(dawn_reports[2].hero, "")
+
+        self.assertEqual(noon_reports[0].hero, "PRAY AT NOON")
+        self.assertEqual(noon_reports[1].hero, "STAND FIRM TODAY")
+        self.assertEqual(noon_reports[2].hero, "")
+
+        for label, pack in (("dawn", dawn_reports), ("noon", noon_reports)):
+            for r in pack:
+                self.assertGreaterEqual(r.edge_luma, ctr.EDGE_LUMA_MIN, f"{label}:{r.variant}")
+                self.assertLess(r.border_dark, 0.05, f"{label}:{r.variant}")
+                self.assertGreater(r.bright_share, 0.06, f"{label}:{r.variant}")
+                self.assertTrue(r.badge_zone_ok, f"{label}:{r.variant}")
+                self.assertLess(r.path.stat().st_size, 2 * 1024 * 1024)
+                if r.hero:
+                    self.assertGreaterEqual(r.contrast, MIN_CONTRAST, f"{label}:{r.variant}")
+                    self.assertTrue(r.safe_zone_ok, f"{label}:{r.variant}")
+                    self.assertNotIn("TONIGHT", r.hero)
+                    self.assertNotIn("SLEEP", r.hero)
+
+        # Sunrise and midday frames carry warmer red-vs-blue balance than nocturnal sapphire
+        def _rb_delta(path: Path) -> float:
+            with Image.open(path) as im:
+                r_ch, _g_ch, b_ch = ImageStat.Stat(im).mean
+                return r_ch - b_ch
+
+        self.assertGreater(_rb_delta(dawn_reports[0].path), _rb_delta(night_reports[0].path) + 15.0)
+        self.assertGreater(_rb_delta(noon_reports[0].path), _rb_delta(night_reports[0].path) + 15.0)
+
+    def test_sunrise_and_midday_photo_backdrops_pass_contrast_and_skip_night_cabin(self):
+        for cid in ("prayer2", "prayer3"):
+            for key in ("0010", "0036", "0040", "0045", "0048"):
+                plate = ctr.curated_backdrop_for(key, channel_id=cid)
+                self.assertIsNotNone(plate)
+                self.assertNotEqual(plate.name, "long-prayer-scene-04.jpg")
+            plate = ctr.curated_backdrop_for("0036", channel_id=cid)
+            reports = ctr.generate_ctr_pack(
+                TMP / f"dp-photo-{cid}",
+                hero_override="NEW MERCIES TODAY" if cid == "prayer2" else "NOONDAY SHIELD",
+                doc_key="0036",
+                backdrop=plate,
+                channel_id=cid,
+            )
+            for r in reports:
+                self.assertGreaterEqual(r.edge_luma, ctr.EDGE_LUMA_MIN)
+                self.assertTrue(r.badge_zone_ok)
+                if r.hero:
+                    self.assertGreaterEqual(r.contrast, MIN_CONTRAST)
+
+
 if __name__ == "__main__":
     unittest.main()

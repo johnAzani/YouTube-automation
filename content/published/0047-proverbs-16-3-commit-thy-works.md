@@ -28,7 +28,6 @@ tags:
 description: 'A reverent midday prayer and deep scriptural exposition for the afternoon
   hours based on Proverbs 16:3. Produced by The Midday Watch | Noonday Prayer & Scripture
 
-
   Scripture References & Sources:
 
   - The Holy Bible, Proverbs 16:3 (King James Version, Public Domain)
@@ -86,9 +85,8 @@ originality_note: Original theological commentary drawing upon Matthew Henry and
 published_on: "2026-11-08"
 published_at: "2026-11-08T00:33:51Z"
 youtube_video_id: "nXa4e8jXjug"
-thumbnail_pending: false
+thumbnail_pending: true
 
-thumbnail_revision: "ctr-v3-cinema"
 metadata_revision: "selar-seo-v1"
 ---
 

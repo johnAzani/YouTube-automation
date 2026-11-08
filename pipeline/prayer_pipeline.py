@@ -37,11 +37,12 @@ def _refresh_live_thumbnail(doc, video_id: str, out_dir: Path) -> str | None:
                                          target_width=1280, target_height=720,
                                          allow_generated=False)
             backdrop = pick_backdrop([m.path for m in matches])
-        backdrop = backdrop or curated_backdrop_for(doc.id or doc.slug)
+        backdrop = backdrop or curated_backdrop_for(doc.id or doc.slug, channel_id=doc.channel)
         reports = generate_ctr_pack(out_dir / "thumbnails",
                                     hero_override=doc.meta.get("thumb_text"),
                                     doc_key=doc.id or doc.slug,
-                                    backdrop=backdrop)
+                                    backdrop=backdrop,
+                                    channel_id=doc.channel)
         if not reports:
             return None
         status = set_video_thumbnail(video_id, reports[0].path)
@@ -316,7 +317,8 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
             thumb_reports = generate_ctr_pack(out / "thumbnails",
                                               hero_override=doc.meta.get("thumb_text"),
                                               doc_key=doc.id or doc.slug,
-                                              backdrop=pick_backdrop(assets) or curated_backdrop_for(doc.id or doc.slug))
+                                              backdrop=pick_backdrop(assets) or curated_backdrop_for(doc.id or doc.slug, channel_id=doc.channel),
+                                              channel_id=doc.channel)
         for report in thumb_reports:
             mobile_preview(report.path, report.path.with_name(report.path.stem + "_mobile.png"))
         (out / "thumbnails" / "report.json").write_text(

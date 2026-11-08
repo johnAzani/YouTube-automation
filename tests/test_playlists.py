@@ -102,3 +102,96 @@ def test_channel_scoped_playlists_do_not_cross_contaminate():
     assert r3["playlists_synced"] == 3
     assert "midday_prayers" in r3["playlists"]
 
+
+def test_series_playlists_exclude_shorts_across_all_three_channels():
+    """Long-form Series Playlists never include vertical #Shorts on any channel."""
+    from pipeline.playlists import collect_published_short_video_ids
+
+    for cid in ("secret-place", "prayer2", "prayer3"):
+        lf_vids = collect_published_videos(channel_id=cid)
+        short_ids = collect_published_short_video_ids(channel_id=cid)
+        assert len(lf_vids) >= 1
+        assert len(short_ids) >= 1
+        for v in lf_vids:
+            assert v["video_id"] not in short_ids, f"{cid} Short {v['video_id']} leaked into longform playlist pool"
+            assert "#shorts" not in v["title"].lower(), f"{cid} #Shorts title {v['title']!r} leaked into longform pool"
+
+
+def test_sync_all_series_playlists_prunes_shorts_and_caches_api_calls(tmp_path):
+    """Live sync caches playlists.list + playlistItems.list and deletes legacy #Shorts."""
+    pub = tmp_path / "published"
+    pub.mkdir()
+    (pub / "0045-psalm-55-noon.md").write_text(
+        "---\nid: '0045'\ntitle: 'Psalm 55:17 Midday Prayer | The Midday Watch'\n"
+        "channel: prayer3\nstatus: published\nformat: longform\n"
+        "tags: ['midday prayer', 'psalm']\nyoutube_video_id: 'lf_existing'\n---\n\n## Scene 1\nBody.\n",
+        encoding="utf-8",
+    )
+    (pub / "0046-psalm-91-noon.md").write_text(
+        "---\nid: '0046'\ntitle: 'Psalm 91:6 Noonday Prayer | The Midday Watch'\n"
+        "channel: prayer3\nstatus: published\nformat: longform\n"
+        "tags: ['midday prayer', 'psalm']\nyoutube_video_id: 'lf_new'\n---\n\n## Scene 1\nBody.\n",
+        encoding="utf-8",
+    )
+    (pub / "short-midday-psalm55.md").write_text(
+        "---\nid: 's1'\ntitle: 'Say This Psalm 55:17 Prayer at Noon | #Shorts'\n"
+        "channel: prayer3\nstatus: published\nformat: short\n"
+        "tags: ['midday prayer']\nyoutube_video_id: 'short_vid_1'\n---\n\nBody.\n",
+        encoding="utf-8",
+    )
+
+    from pipeline.playlists import playlists_for_channel
+
+    specs = playlists_for_channel("prayer3")
+    mock_yt = MagicMock()
+    mock_yt.playlists().list().execute.return_value = {
+        "items": [
+            {"id": f"pl_{k}", "snippet": {"title": s.title}}
+            for k, s in specs.items()
+        ]
+    }
+    mock_yt.playlistItems().list().execute.return_value = {
+        "items": [
+            {
+                "id": "item_short_1",
+                "snippet": {
+                    "title": "Say This Psalm 55:17 Prayer at Noon | #Shorts",
+                    "resourceId": {"videoId": "short_vid_1"},
+                },
+            },
+            {
+                "id": "item_lf_1",
+                "snippet": {
+                    "title": "Psalm 55:17 Midday Prayer | The Midday Watch",
+                    "resourceId": {"videoId": "lf_existing"},
+                },
+            },
+        ]
+    }
+    # Reset call counts accumulated while chaining return_value setup above
+    mock_yt.playlists().list.reset_mock()
+    mock_yt.playlistItems().list.reset_mock()
+
+    report = sync_all_series_playlists(
+        youtube=mock_yt,
+        dry_run=False,
+        channel_id="prayer3",
+        published_dir=pub,
+    )
+
+    # Cached: 1 playlists.list call for the whole channel, 1 playlistItems.list per playlist (3 total)
+    assert mock_yt.playlists().list.call_count == 1
+    assert mock_yt.playlistItems().list.call_count == 3
+    # Pruned the Short from all 3 playlists
+    assert report["shorts_pruned"] == 3
+    assert mock_yt.playlistItems().delete.call_count == 3
+    # Inserted lf_new into matching playlists, skipped lf_existing, never inserted short_vid_1
+    inserted_vids = [
+        c.kwargs["body"]["snippet"]["resourceId"]["videoId"]
+        for c in mock_yt.playlistItems().insert.call_args_list
+    ]
+    assert "short_vid_1" not in inserted_vids
+    assert "lf_existing" not in inserted_vids
+    assert set(inserted_vids) == {"lf_new"}
+
+

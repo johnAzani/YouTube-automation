@@ -610,7 +610,7 @@ def check_outcomes(report: MonitorReport, now: datetime | None = None,
         text = path.read_text(encoding="utf-8")
         if "youtube_video_id:" not in text:
             continue
-        m_at = re.search(r'^published_at:\s*"?([0-9]{4}-[0-9]{2}-[0-9]{2}T[^"\n]+)"?', text, re.M)
+        m_at = re.search(r"""^published_at:\s*['"]?([0-9]{4}-[0-9]{2}-[0-9]{2}T[^'"\n]+)['"]?""", text, re.M)
         if m_at:
             try:
                 stamp = datetime.fromisoformat(m_at.group(1).strip().replace("Z", "+00:00"))
@@ -620,7 +620,7 @@ def check_outcomes(report: MonitorReport, now: datetime | None = None,
                 continue
             except ValueError:
                 pass
-        match = re.search(r'^published_on:\s*"?([0-9]{4}-[0-9]{2}-[0-9]{2})', text, re.M)
+        match = re.search(r"""^published_on:\s*['"]?([0-9]{4}-[0-9]{2}-[0-9]{2})""", text, re.M)
         if not match:
             continue
         try:
@@ -639,6 +639,36 @@ def check_outcomes(report: MonitorReport, now: datetime | None = None,
     else:
         report.outcomes.append({"outcome": "last upload", "detail": "none recorded",
                                 "severity": "blocking"})
+
+    # Per-channel publish recency: prevent an active channel from masking a stalled sibling channel.
+    try:
+        from pipeline.channel_capabilities import brand_for
+        from pipeline.channels import scheduled_channels
+        from scripts.pipeline_watchdog import last_publish_for_channel
+
+        ch_publishes: list[tuple[str, Path, datetime]] = []
+        for ch in scheduled_channels():
+            hit = last_publish_for_channel(ch, published)
+            if hit is not None:
+                ch_publishes.append((ch, hit[0], hit[1]))
+        if len(ch_publishes) > 1:
+            for ch, ch_path, ch_when in ch_publishes:
+                ch_age = max(now - ch_when, timedelta(0))
+                sev = (
+                    "blocking" if ch_age > timedelta(hours=48)
+                    else ("warning" if ch_age > timedelta(hours=26) else "ok")
+                )
+                disp = brand_for(ch).display_name
+                report.outcomes.append({
+                    "outcome": f"last upload ({ch})",
+                    "detail": (
+                        f"{disp}: {ch_when.date().isoformat()} "
+                        f"({ch_age.total_seconds() / 3600:.0f}h ago — {ch_path.name})"
+                    ),
+                    "severity": sev,
+                })
+    except Exception:  # noqa: BLE001
+        pass
 
     # A production run that finishes successfully and uploads nothing is the exact
     # failure the owner kept reporting: green tick, no video.

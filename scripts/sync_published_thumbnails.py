@@ -379,12 +379,13 @@ def sync_published_thumbnails(
         vid = str(doc.meta.get("youtube_video_id")).strip()
         doc_key = str(doc.id or doc.slug)
         hero = LIVE_HERO_OVERRIDES.get(doc_key) or str(doc.meta.get("thumb_text") or "").strip() or doc.title
-        plate = curated_backdrop_for(doc_key)
+        plate = curated_backdrop_for(doc_key, channel_id=profile.id)
         reports = generate_ctr_pack(
             out_root / doc_key,
             hero_override=hero,
             doc_key=doc_key,
             backdrop=plate,
+            channel_id=profile.id,
         )
         primary = reports[0]
         row: dict[str, Any] = {

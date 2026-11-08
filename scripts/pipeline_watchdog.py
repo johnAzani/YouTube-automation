@@ -315,6 +315,32 @@ def check_queues(report: Report, max_publish_age: timedelta = MAX_PUBLISH_AGE,
             report.add("publishing",
                        f"last upload was {age.days} days ago ({when.date().isoformat()}). "
                        f"The release crons are running but publishing nothing.")
+
+        from pipeline.channels import scheduled_channels
+
+        per_channel_latest: list[tuple[str, Path, datetime]] = []
+        for ch in scheduled_channels():
+            ch_hit = last_publish_for_channel(ch, published_dir)
+            if ch_hit is not None:
+                per_channel_latest.append((ch, ch_hit[0], ch_hit[1]))
+
+        for ch, ch_path, ch_when in per_channel_latest:
+            ch_age = max(now - ch_when, timedelta(0))
+            report.checked.append(
+                f"last publish:{ch}: {ch_path.name} on {ch_when.date().isoformat()} "
+                f"({ch_age.total_seconds() / 3600:.0f}h ago)"
+            )
+            if len(per_channel_latest) > 1 and ch_age > max_publish_age:
+                try:
+                    ch_display = capabilities_for(ch).brand.display_name
+                except ValueError:
+                    ch_display = f"channel {ch}"
+                report.add(
+                    "publishing",
+                    f"{ch_display} ({ch}) last uploaded {ch_age.total_seconds() / 3600:.0f}h ago "
+                    f"({ch_when.date().isoformat()} — {ch_path.name}), exceeding the "
+                    f"{int(max_publish_age.total_seconds() // 3600)}h per-channel threshold.",
+                )
     return report
 
 
