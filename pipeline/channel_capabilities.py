@@ -120,6 +120,16 @@ class Brand:
     series_playlists: tuple[tuple[str, str, str, tuple[str, ...]], ...] = ()
     #: Per-channel Community Tab schedule (empty tuple -> canonical Secret Place schedule)
     community_posts: tuple[dict, ...] = ()
+    #: Shorts-to-longform conversion bridge copy & fallback title
+    short_bridge_theme: str = "peaceful rest and sovereign nighttime protection"
+    short_fallback_title: str = "Night Prayers of Divine Protection"
+    #: Subscriber milestone celebration copy (daypart-specific, zero cross-channel bleed)
+    milestone_subheading_1250: str = "A SANCTUARY OF PEACE ACROSS THE NATIONS"
+    milestone_subheading_1500: str = "UNBROKEN NIGHTTIME PRAYER WATCH"
+    milestone_sanctuary_phrase: str = "before sleep"
+    milestone_cadence_phrase: str = "every night"
+    milestone_closing_blessing: str = "Peace be upon your home tonight."
+    milestone_2000_closing: str = "your evening sanctuary of rest"
 
 
 @dataclass(frozen=True)
@@ -461,6 +471,14 @@ _BRANDS: dict[str, Brand] = {
                 "tags": ["#Psalm30", "#JoyInTheMorning", "#TheMorningAltar"],
             },
         ),
+        short_bridge_theme="morning mercy, clear guidance, and daily covering",
+        short_fallback_title="Morning Prayers to Begin Your Day — The Morning Altar",
+        milestone_subheading_1250="A SUNRISE ALTAR ACROSS THE NATIONS",
+        milestone_subheading_1500="UNBROKEN DAILY SUNRISE PRAYER",
+        milestone_sanctuary_phrase="at daybreak",
+        milestone_cadence_phrase="every sunrise",
+        milestone_closing_blessing="Go into today covered by His grace.",
+        milestone_2000_closing="your daily sunrise altar of prayer",
     ),
     "prayer3": Brand(
         channel_id="prayer3",
@@ -643,6 +661,14 @@ _BRANDS: dict[str, Brand] = {
                 "tags": ["#Psalm121", "#AfternoonStrength", "#TheMiddayWatch"],
             },
         ),
+        short_bridge_theme="noonday strength, quiet wisdom, and steadfast peace",
+        short_fallback_title="Noonday Prayers for Strength & Clarity — The Midday Watch",
+        milestone_subheading_1250="A NOONDAY REFUGE ACROSS THE NATIONS",
+        milestone_subheading_1500="UNBROKEN NOONDAY PRAYER WATCH",
+        milestone_sanctuary_phrase="at high noon",
+        milestone_cadence_phrase="at noon",
+        milestone_closing_blessing="Carry His quiet strength into the hours ahead.",
+        milestone_2000_closing="your daily noonday sanctuary of prayer",
     ),
 }
 
@@ -753,6 +779,18 @@ def short_key(channel_id: str | None, base_key: str) -> str:
         return base_key
     stem = base_key.removeprefix("short-")
     return f"short-{namespace}{stem}"
+
+
+def channel_for_short_key(key_or_title: str) -> str | None:
+    """Infer the owning channel from a namespaced Short key or slug."""
+    s = (key_or_title or "").strip().lower()
+    if not s:
+        return None
+    for cid, brand in _BRANDS.items():
+        ns = brand.short_key_namespace
+        if ns and (s.startswith(f"short-{ns}") or f"-{ns}-" in s or f"short_{ns}" in s):
+            return cid
+    return None
 
 
 def pinned_comment_for(channel_id: str | None, theme: str, scripture_hook: str,

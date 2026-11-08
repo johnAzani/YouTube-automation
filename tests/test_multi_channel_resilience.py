@@ -849,6 +849,94 @@ goes before you until evening falls and brings your labor to peaceful completion
             self.assertEqual(extract_scripture_reference(doc), expected_ref)
             self.assertEqual(short_key_for_doc(doc), expected_key)
 
+    def test_shorts_bridge_never_leaks_cross_channel_handles_or_videos(self):
+        """Shorts-to-longform bridge stays strictly inside the Short's own channel."""
+        from pipeline.channel_capabilities import brand_for, known_channels
+        from pipeline.shorts_bridge import (
+            enrich_short_description_with_bridge,
+            generate_short_bridge_comment,
+            resolve_longform_counterpart,
+        )
+
+        # Published Morning Altar Short -> Morning Altar's own Psalm 5 video (never @TheSecretPlace)
+        cp_m5 = resolve_longform_counterpart("short-morningpsalm5")
+        self.assertEqual(cp_m5["channel"], "prayer2")
+        self.assertTrue(cp_m5["is_live_video"])
+        self.assertNotIn("@TheSecretPlace", cp_m5["url"])
+        self.assertNotIn("nighttime", cp_m5["theme"])
+
+        # Queued Morning Altar & Midday Watch Shorts -> each channel's own playlists tab
+        cp_m90 = resolve_longform_counterpart("short-morningpsalm90v17")
+        self.assertEqual(cp_m90["channel"], "prayer2")
+        self.assertEqual(cp_m90["url"], "https://www.youtube.com/@TheMorningAltarDaily/playlists")
+
+        cp_mid37 = resolve_longform_counterpart("short-middaypsalm37v5")
+        self.assertEqual(cp_mid37["channel"], "prayer3")
+        self.assertEqual(cp_mid37["url"], "https://www.youtube.com/@TheMiddayWatch/playlists")
+
+        # Midday Psalm 91:6 must link prayer3's 0046, never secret-place's 0008 (7RDX0fbIOtQ)
+        cp_mid91 = resolve_longform_counterpart("short-middaypsalm91v6")
+        self.assertEqual(cp_mid91["channel"], "prayer3")
+        self.assertNotEqual(cp_mid91["video_id"], "7RDX0fbIOtQ")
+
+        for short_key, cid in (
+            ("short-psalm91", "secret-place"),
+            ("short-morningpsalm90v17", "prayer2"),
+            ("short-middaypsalm37v5", "prayer3"),
+        ):
+            comment = generate_short_bridge_comment(short_key)
+            desc = enrich_short_description_with_bridge("Prayer body.\n\n#Shorts", short_key)
+            for other in known_channels():
+                if other == cid:
+                    continue
+                self.assertNotIn(brand_for(other).handle, comment)
+                self.assertNotIn(brand_for(other).handle, desc)
+            for bad in brand_for(cid).forbidden_phrases:
+                self.assertNotIn(bad.lower(), comment.lower())
+
+    def test_performance_feedback_classifies_sunrise_and_midday_catalog_cleanly(self):
+        """Every published long-form prayer classifies into a specific theme and extracts scripture."""
+        from pipeline.performance_feedback import extract_scripture, load_published_index
+
+        for cid in ("secret-place", "prayer2", "prayer3"):
+            idx = load_published_index(channel_id=cid)
+            longform = [v for v in idx.values() if v["format"] != "short"]
+            self.assertGreaterEqual(len(longform), 3)
+            for v in longform:
+                self.assertNotEqual(
+                    v["theme"],
+                    "general_prayer",
+                    f"{cid} video {v['title']!r} fell into unranked general_prayer",
+                )
+                self.assertTrue(v["scripture"], f"{cid} video {v['title']!r} extracted blank scripture")
+
+        self.assertEqual(extract_scripture("Lamentations 3:22-23 Morning Prayer"), "Lamentations 3")
+        self.assertEqual(extract_scripture("2 Chronicles 20:12 Midday Prayer"), "2 Chronicles 20")
+        self.assertEqual(extract_scripture("Zephaniah 3:17 Night Prayer"), "Zephaniah 3")
+        self.assertEqual(extract_scripture("1 Thessalonians 5:16-18 Midday Prayer"), "1 Thessalonians 5")
+
+    def test_milestone_tiers_for_every_channel_are_free_of_forbidden_phrases(self):
+        """Subscriber milestone copy uses each channel's own ministry identity and daypart."""
+        from pipeline.channel_capabilities import brand_for, known_channels
+        from pipeline.milestones import get_current_milestone_status, milestone_tiers_for_channel
+
+        for cid in known_channels():
+            brand = brand_for(cid)
+            tiers = milestone_tiers_for_channel(cid)
+            self.assertEqual(len(tiers), 4)
+            achieved, upcoming = get_current_milestone_status(1260, channel_id=cid)
+            self.assertIsNotNone(achieved)
+            self.assertEqual(achieved.subs_target, 1250)
+            self.assertEqual(upcoming.subs_target, 1500)
+            for tier in tiers:
+                blob = f"{tier.headline} {tier.subheading} {tier.pastoral_message}".lower()
+                for bad in brand.forbidden_phrases:
+                    self.assertNotIn(
+                        bad.lower(),
+                        blob,
+                        f"{cid} milestone {tier.subs_target} contains forbidden {bad!r}",
+                    )
+
 
 if __name__ == "__main__":
     unittest.main()

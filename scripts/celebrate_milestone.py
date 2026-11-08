@@ -73,7 +73,7 @@ def main():
             return
         print(f"[milestone] Using live subscriber count from channel-metrics.json: {subs}")
 
-    achieved, upcoming = get_current_milestone_status(current_subs=subs)
+    achieved, upcoming = get_current_milestone_status(current_subs=subs, channel_id=channel_id)
 
     print("==========================================================================")
     print(f"{brand_title} — SUBSCRIBER MILESTONE CELEBRATION ENGINE")
