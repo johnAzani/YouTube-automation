@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T04:40:50.000368+00:00",
+  "generated_at": "2026-11-08T08:58:54.088621+00:00",
   "as_of": "2026-11-08",
   "sufficient_data": false,
   "measured_longform_videos": 0,
@@ -7,8 +7,8 @@
   "ranked_themes": [],
   "themes": [
     {
-      "theme": "trust_surrender",
-      "videos": 1,
+      "theme": "midday_strength_endurance",
+      "videos": 2,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -21,14 +21,6 @@
       "avg_score": 0.0,
       "avg_engagement": 0.0,
       "top_scripture": "Psalm 91"
-    },
-    {
-      "theme": "general_prayer",
-      "videos": 1,
-      "measured_videos": 0,
-      "avg_score": 0.0,
-      "avg_engagement": 0.0,
-      "top_scripture": "Psalm 55"
     }
   ],
   "guidance": [
