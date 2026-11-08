@@ -20,10 +20,11 @@ height: 1280
 duration_seconds: 50.45
 scenes_verified: 7
 thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunris"
+thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunrise Prayer; long_uploads_status=allowed; video_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; video_channel_title=The Morning Altar | Daily Sunrise Prayer; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["DIRECT", "YOUR", "MORNING", "PRAYER"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-08T19:42:15Z"
 ---
 
 Before the rush begins and before your phone demands your attention, pause in the quiet dawn. Psalm 5 verse 3 declares: My voice shalt thou hear in the morning, O Lord. In the morning will I direct my prayer unto thee, and will look up. Do not carry yesterday's heaviness into this fresh sunrise that God has prepared. Father, order our steps today, guard our words, and steady our minds in your truth. For thou, Lord, wilt bless the righteous; compass us with thy favour as with a shield. Type Amen to claim this morning covering, and subscribe to The Morning Altar to pray every sunrise.
