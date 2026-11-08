@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T20:03:03Z",
+  "generated_at": "2026-11-08T21:14:18Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 3
   },
   "totals": {
-    "published_total": 41,
-    "published_longform": 20,
-    "published_shorts": 21,
-    "public_total": 39,
-    "queued_longform": 27,
-    "queued_shorts": 16,
+    "published_total": 43,
+    "published_longform": 21,
+    "published_shorts": 22,
+    "public_total": 41,
+    "queued_longform": 26,
+    "queued_shorts": 15,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -161,32 +161,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 7,
-        "published_longform": 4,
-        "published_shorts": 3,
-        "public_total": 7,
-        "queued_longform": 5,
+        "published_total": 9,
+        "published_longform": 5,
+        "published_shorts": 4,
+        "public_total": 9,
+        "queued_longform": 4,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0048",
-        "title": "Isaiah 40:31 Midday Prayer | The Midday Watch",
-        "format": "longform",
-        "youtube_video_id": "b9CpOl0tJSE",
-        "watch_url": "https://youtu.be/b9CpOl0tJSE",
-        "published_on": "2026-11-08",
-        "published_at": "2026-11-08T14:53:44Z"
-      },
-      "next_queued_longform": {
         "id": "0049",
         "title": "Psalm 119:114 Midday Prayer | The Midday Watch",
-        "words": 1735,
+        "format": "longform",
+        "youtube_video_id": "pz0EB-NhiBc",
+        "watch_url": "https://youtu.be/pz0EB-NhiBc",
+        "published_on": "2026-11-08",
+        "published_at": "2026-11-08T21:13:39Z"
+      },
+      "next_queued_longform": {
+        "id": "0050",
+        "title": "Isaiah 58:10 Midday Prayer | The Midday Watch",
+        "words": 1870,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middayisaiah40v31",
-        "scripture": "Isaiah 40:31",
+        "short": "short-middaypsalm119v114",
+        "scripture": "Psalm 119:114",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -211,6 +211,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0049",
+      "slug": "psalm-119-114-midday-prayer",
+      "file": "0049-psalm-119-114-midday-prayer.md",
+      "title": "Psalm 119:114 Midday Prayer | The Midday Watch",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-08",
+      "published_at": "2026-11-08T21:13:39Z",
+      "youtube_video_id": "pz0EB-NhiBc",
+      "watch_url": "https://youtu.be/pz0EB-NhiBc",
+      "youtu_be_url": "https://youtu.be/pz0EB-NhiBc",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/pz0EB-NhiBc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/pz0EB-NhiBc/hqdefault.jpg",
+      "thumb_text": "MY HIDING PLACE",
+      "duration_label": "~12 min",
+      "words": 1735
+    },
+    {
+      "id": "SHORT-MIDDAYISAIAH40V31",
+      "slug": "short-middayisaiah40v31-midday-prayer",
+      "file": "short-middayisaiah40v31-midday-prayer.md",
+      "title": "Say This Isaiah 40:31 Prayer at Noon | Midday Renewal #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-08",
+      "published_at": "2026-11-08T20:09:58Z",
+      "youtube_video_id": "CYzdQnuobZU",
+      "watch_url": "https://www.youtube.com/shorts/CYzdQnuobZU",
+      "youtu_be_url": "https://youtu.be/CYzdQnuobZU",
+      "shorts_url": "https://www.youtube.com/shorts/CYzdQnuobZU",
+      "studio_url": "https://studio.youtube.com/video/CYzdQnuobZU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/CYzdQnuobZU/hqdefault.jpg",
+      "thumb_text": "THE MIDDAY WATCH \u00b7 PAUSE AND PRAY",
+      "duration_label": "56s",
+      "words": 388
+    },
     {
       "id": "0044",
       "slug": "isaiah-50-4-morning-prayer",
@@ -1418,19 +1464,6 @@
         "words": 1025
       },
       {
-        "id": "0049",
-        "slug": "psalm-119-114-midday-prayer",
-        "file": "0049-psalm-119-114-midday-prayer.md",
-        "title": "Psalm 119:114 Midday Prayer | The Midday Watch",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1735
-      },
-      {
         "id": "0050",
         "slug": "isaiah-58-10-midday-prayer",
         "file": "0050-isaiah-58-10-midday-prayer.md",
@@ -1597,17 +1630,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-middayisaiah40v31",
-        "file": "0048-short-middayisaiah40v31.yml",
-        "companion_longform_id": "0048",
-        "scripture": "Isaiah 40:31",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaypsalm119v114",
