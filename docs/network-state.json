@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T21:29:52Z",
+  "generated_at": "2026-11-08T23:03:06Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,11 +7,11 @@
     "channels_total": 3
   },
   "totals": {
-    "published_total": 43,
+    "published_total": 44,
     "published_longform": 21,
-    "published_shorts": 22,
-    "public_total": 41,
-    "queued_longform": 26,
+    "published_shorts": 23,
+    "public_total": 42,
+    "queued_longform": 27,
     "queued_shorts": 15,
     "automations_ok": 10,
     "automations_total": 10,
@@ -99,32 +99,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 16,
+        "published_total": 17,
         "published_longform": 9,
-        "published_shorts": 7,
-        "public_total": 15,
-        "queued_longform": 2,
+        "published_shorts": 8,
+        "public_total": 16,
+        "queued_longform": 3,
         "queued_other": 0,
         "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0044",
-        "title": "Isaiah 50:4 Morning Prayer | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "2IcuUyX_Y4U",
-        "watch_url": "https://youtu.be/2IcuUyX_Y4U",
+        "id": "SHORT-MORNINGPSALM90V17",
+        "title": "Say This Psalm 90:17 Prayer at Sunrise | Psalm 90:17 #Shorts",
+        "format": "short",
+        "youtube_video_id": "XqhZqDHC8xM",
+        "watch_url": "https://www.youtube.com/shorts/XqhZqDHC8xM",
         "published_on": "2026-11-08",
-        "published_at": "2026-11-08T20:02:33Z"
+        "published_at": "2026-11-08T23:01:49Z"
       },
       "next_queued_longform": {
         "id": "0053",
         "title": "Psalm 59:16 Morning Prayer | The Morning Altar",
         "words": 1075,
-        "status": "approved"
+        "status": "quota_paused"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm90v17",
-        "scripture": "Psalm 90:17",
+        "short": "short-morningisaiah50v4",
+        "scripture": "Isaiah 50:4",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -211,6 +211,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM90V17",
+      "slug": "short-morningpsalm90v17-sunrise-prayer",
+      "file": "short-morningpsalm90v17-sunrise-prayer.md",
+      "title": "Say This Psalm 90:17 Prayer at Sunrise | Psalm 90:17 #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-08",
+      "published_at": "2026-11-08T23:01:49Z",
+      "youtube_video_id": "XqhZqDHC8xM",
+      "watch_url": "https://www.youtube.com/shorts/XqhZqDHC8xM",
+      "youtu_be_url": "https://youtu.be/XqhZqDHC8xM",
+      "shorts_url": "https://www.youtube.com/shorts/XqhZqDHC8xM",
+      "studio_url": "https://studio.youtube.com/video/XqhZqDHC8xM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/XqhZqDHC8xM/hqdefault.jpg",
+      "thumb_text": "LET THE FAVOR \u00b7 OF THE LORD",
+      "duration_label": "57s",
+      "words": 617
+    },
     {
       "id": "0049",
       "slug": "psalm-119-114-midday-prayer",
@@ -1509,7 +1532,7 @@
         "title": "Psalm 59:16 Morning Prayer | The Morning Altar",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
-        "status": "approved",
+        "status": "quota_paused",
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,
@@ -1527,6 +1550,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1698
+      },
+      {
+        "id": "0055",
+        "slug": "psalm-92-1-2-morning-prayer",
+        "file": "0055-psalm-92-1-2-morning-prayer.md",
+        "title": "Psalm 92:1-2 Morning Prayer | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1437
       },
       {
         "id": "0083",
@@ -1610,17 +1646,6 @@
         "target_window_utc": "14:14"
       },
       {
-        "short": "short-morningpsalm90v17",
-        "file": "0043-short-morningpsalm90v17.yml",
-        "companion_longform_id": "0043",
-        "scripture": "Psalm 90:17",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
-      },
-      {
         "short": "short-morningisaiah50v4",
         "file": "0044-short-morningisaiah50v4.yml",
         "companion_longform_id": "0044",
@@ -1691,6 +1716,17 @@
         "file": "0054-short-morningpsalm88v13.yml",
         "companion_longform_id": "0054",
         "scripture": "Psalm 88:13",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
+      },
+      {
+        "short": "short-morningpsalm92v1",
+        "file": "0055-short-morningpsalm92v1.yml",
+        "companion_longform_id": "0055",
+        "scripture": "Psalm 92:1-2",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",

@@ -1,0 +1,324 @@
+{
+  "key": "short-morningpsalm92v1",
+  "channel": "prayer2",
+  "psalm": 92,
+  "title": [
+    "BEGIN WITH THANKS",
+    "PSALM 92 MORNING PRAYER"
+  ],
+  "poster": [
+    "IT IS GOOD",
+    "TO GIVE THANKS",
+    "TO THE LORD",
+    "MORNING PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "golden sunrise over misty forest landscape",
+    "open window view morning sunbeam rays",
+    "calm mountain lake glowing morning dawn light",
+    "peaceful meadow bathed in early morning sunlight",
+    "sun rising over quiet pine forest valley",
+    "golden morning horizon serene ocean calm water",
+    "soft morning sunlight glowing through green trees"
+  ],
+  "scenes": [
+    {
+      "a": "Welcome the gentle light of this beautiful new morning as you pause and open your heart.",
+      "img": "short-morningpsalm92v1-scene-01.jpg",
+      "kicker": "MORNING DEVOTION",
+      "sub": "OPEN YOUR HEART TO GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Holy Scripture declares, It is good to give thanks to the Lord, to sing praises to your name, O Most High, to declare your steadfast love in the morning, and your faithfulness by night.",
+      "img": "short-morningpsalm92v1-scene-02.jpg",
+      "kicker": "PSALM 92:1-2",
+      "sub": "DECLARE HIS STEADFAST LOVE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, as dawn breaks today, we lift our voices in humble gratitude for your endless grace.",
+      "img": "short-morningpsalm92v1-scene-03.jpg",
+      "kicker": "DAWN PRAYER",
+      "sub": "LIFT YOUR VOICE IN THANKS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "May your unwavering love anchor our spirits and guide our steps through every challenge today.",
+      "img": "short-morningpsalm92v1-scene-04.jpg",
+      "kicker": "STEADFAST LOVE",
+      "sub": "ANCHOR YOUR SPIRIT IN PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Fill our minds with quiet peace and illuminate our daily journey with your divine wisdom.",
+      "img": "short-morningpsalm92v1-scene-05.jpg",
+      "kicker": "DIVINE WISDOM",
+      "sub": "ILLUMINATE YOUR JOURNEY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We praise your holy name and surrender this morning completely into your safe, loving hands.",
+      "img": "short-morningpsalm92v1-scene-06.jpg",
+      "kicker": "SURRENDER ALL",
+      "sub": "HELD IN LOVING HANDS",
+      "cam": "tilt_up",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Subscribe to join The Morning Altar for sunrise prayer.",
+      "img": "short-morningpsalm92v1-scene-07.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "BEGIN EVERY DAY IN PRAYER",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "Welcome the gentle light of this beautiful new morning as you pause and open your heart."
+    ],
+    [
+      7,
+      20,
+      "Holy Scripture declares, It is good to give thanks to the Lord, to sing praises to your name, O Most High, to declare your steadfast love in the morning, and your faithfulness by night."
+    ],
+    [
+      20,
+      28,
+      "Lord, as dawn breaks today, we lift our voices in humble gratitude for your endless grace."
+    ],
+    [
+      28,
+      36,
+      "May your unwavering love anchor our spirits and guide our steps through every challenge today."
+    ],
+    [
+      36,
+      44,
+      "Fill our minds with quiet peace and illuminate our daily journey with your divine wisdom."
+    ],
+    [
+      44,
+      52,
+      "We praise your holy name and surrender this morning completely into your safe, loving hands."
+    ],
+    [
+      52,
+      57,
+      "Subscribe to join The Morning Altar for sunrise prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "WELCOME THE GENTLE LIGHT",
+        "OF THIS NEW MORNING",
+        "OPEN YOUR HEART"
+      ],
+      [
+        "GENTLE",
+        "LIGHT",
+        "HEART"
+      ],
+      "PSALM 92 : 1-2"
+    ],
+    [
+      7,
+      20,
+      [
+        "IT IS GOOD TO GIVE THANKS",
+        "TO SING PRAISES TO YOUR NAME",
+        "DECLARE YOUR STEADFAST LOVE"
+      ],
+      [
+        "THANKS",
+        "PRAISES",
+        "STEADFAST"
+      ],
+      "PSALM 92 : 1-2"
+    ],
+    [
+      20,
+      28,
+      [
+        "AS DAWN BREAKS TODAY",
+        "WE LIFT OUR VOICES",
+        "IN HUMBLE GRATITUDE"
+      ],
+      [
+        "DAWN",
+        "VOICES",
+        "GRATITUDE"
+      ],
+      "PSALM 92 : 1-2"
+    ],
+    [
+      28,
+      36,
+      [
+        "MAY YOUR UNWAVERING LOVE",
+        "ANCHOR OUR SPIRITS",
+        "GUIDE OUR STEPS TODAY"
+      ],
+      [
+        "UNWAVERING",
+        "ANCHOR",
+        "GUIDE"
+      ],
+      "PSALM 92 : 1-2"
+    ],
+    [
+      36,
+      44,
+      [
+        "FILL OUR MINDS WITH PEACE",
+        "ILLUMINATE OUR JOURNEY",
+        "WITH DIVINE WISDOM"
+      ],
+      [
+        "PEACE",
+        "ILLUMINATE",
+        "WISDOM"
+      ],
+      "PSALM 92 : 1-2"
+    ],
+    [
+      44,
+      52,
+      [
+        "WE PRAISE YOUR HOLY NAME",
+        "AND SURRENDER THIS MORNING",
+        "INTO YOUR LOVING HANDS"
+      ],
+      [
+        "PRAISE",
+        "SURRENDER",
+        "HANDS"
+      ],
+      "PSALM 92 : 1-2"
+    ],
+    [
+      52,
+      57,
+      [
+        "SUBSCRIBE TO JOIN",
+        "THE MORNING ALTAR",
+        "FOR SUNRISE PRAYER"
+      ],
+      [
+        "SUBSCRIBE",
+        "SUNRISE",
+        "PRAYER"
+      ],
+      "PSALM 92 : 1-2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Welcome the gentle light of this beautiful new morning as you pause and open your heart.",
+      "kind": "phrase",
+      "words": [
+        "GENTLE",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Holy Scripture declares, It is good to give thanks to the Lord, to sing praises to your name, O Most High, to declare your steadfast love in the morning, and your faithfulness by night.",
+      "kind": "phrase",
+      "words": [
+        "THANKS",
+        "PRAISES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, as dawn breaks today, we lift our voices in humble gratitude for your endless grace.",
+      "kind": "phrase",
+      "words": [
+        "DAWN",
+        "GRATITUDE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your unwavering love anchor our spirits and guide our steps through every challenge today.",
+      "kind": "phrase",
+      "words": [
+        "UNWAVERING",
+        "LOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Fill our minds with quiet peace and illuminate our daily journey with your divine wisdom.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We praise your holy name and surrender this morning completely into your safe, loving hands.",
+      "kind": "phrase",
+      "words": [
+        "HOLY",
+        "SURRENDER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to join The Morning Altar for sunrise prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "SUNRISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 92:1-2"
+}
