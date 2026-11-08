@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T06:55:09Z",
+  "generated_at": "2026-11-08T09:04:55Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -53,13 +53,13 @@
         "id": "0015",
         "title": "Psalm 91:5-6 Night Prayer | Deliverance From Terror by Night",
         "words": 883,
-        "status": "quota_paused"
+        "status": "approved"
       },
       "next_queued_short": {
         "short": "short-psalm91v5",
         "scripture": "Psalm 91:5-6",
         "target_window_utc": "14:14",
-        "status": "quota_paused"
+        "status": "approved"
       },
       "feedback": {
         "available": true,
@@ -135,7 +135,7 @@
         "total_longform_videos": 5,
         "top_themes": [
           {
-            "theme": "general_prayer",
+            "theme": "morning_mercy_renewal",
             "videos": 4,
             "top_scripture": "Psalm 5"
           },
@@ -197,19 +197,14 @@
         "total_longform_videos": 3,
         "top_themes": [
           {
-            "theme": "trust_surrender",
-            "videos": 1,
+            "theme": "midday_strength_endurance",
+            "videos": 2,
             "top_scripture": "Proverbs 16"
           },
           {
             "theme": "protection",
             "videos": 1,
             "top_scripture": "Psalm 91"
-          },
-          {
-            "theme": "general_prayer",
-            "videos": 1,
-            "top_scripture": "Psalm 55"
           }
         ]
       }
@@ -962,7 +957,7 @@
         "title": "Psalm 91:5-6 Night Prayer | Deliverance From Terror by Night",
         "channel": "secret-place",
         "channel_name": "The Secret Place",
-        "status": "quota_paused",
+        "status": "approved",
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,
@@ -1328,7 +1323,7 @@
         "scripture": "Psalm 91:5-6",
         "channel": "secret-place",
         "channel_name": "The Secret Place",
-        "status": "quota_paused",
+        "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
       },
