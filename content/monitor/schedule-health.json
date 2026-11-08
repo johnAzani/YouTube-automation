@@ -21,10 +21,17 @@
       "ran_at": "2026-11-06T20:47:15+00:00",
       "slot": "2026-11-06T18:41:00+00:00",
       "workflow": "metrics.yml"
+    },
+    {
+      "late_minutes": 121,
+      "name": "Autonomous Community Tab Automation",
+      "ran_at": "2026-11-08T21:15:33+00:00",
+      "slot": "2026-11-08T19:14:00+00:00",
+      "workflow": "community.yml"
     }
   ],
-  "generated_at": "2026-11-08T21:15:28.353220+00:00",
-  "last_run_at": "2026-11-08T21:14:41+00:00",
+  "generated_at": "2026-11-08T21:17:45.269217+00:00",
+  "last_run_at": "2026-11-08T21:17:15+00:00",
   "on_time": [
     {
       "late_minutes": 60,
