@@ -89,6 +89,7 @@ youtube_video_id: "PIPx_odfiag"
 metadata_revision: "selar-seo-v1"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunrise Prayer; long_uploads_status=allowed; video_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; video_channel_title=The Morning Altar | Daily Sunrise Prayer; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_retry_after: "2026-11-08T10:59:30Z"
 ---
 
 ## Scene 1 — The Sunrise Hook & Directing the Prayer
