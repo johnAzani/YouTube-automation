@@ -245,7 +245,7 @@ class TestMultiChannelWorkflowAndVoiceIsolation(unittest.TestCase):
     def test_produce_artifacts_and_chunk_caches_are_channel_scoped(self):
         """R18 + HTTP 409 artifact conflict guard + post-repair queue check."""
         text = (ROOT / ".github" / "workflows" / "produce.yml").read_text(encoding="utf-8")
-        self.assertIn("chunks-tts-v4-${{ matrix.channel }}-${{ github.run_id }}", text)
+        self.assertIn("chunks-tts-v5-${{ matrix.channel }}-${{ github.run_id }}", text)
         self.assertIn("release-report-${{ github.run_id }}-${{ matrix.channel }}", text)
         self.assertIn("style-frames-${{ github.run_id }}-${{ matrix.channel }}", text)
         self.assertIn("render-${{ github.run_id }}-${{ matrix.channel }}", text)
@@ -1103,6 +1103,235 @@ goes before you until evening falls and brings your labor to peaceful completion
             self.assertEqual(by_name["last upload (secret-place)"]["severity"], "ok")
             self.assertEqual(by_name["last upload (prayer2)"]["severity"], "warning")
             self.assertEqual(by_name["last upload (prayer3)"]["severity"], "blocking")
+
+    def test_poisoned_speech_alignment_purges_chunks_and_falls_back_to_edge_tts(self):
+        """Alignment rejection purges narration + _gemini_chunks_* and falls back cleanly to edge-tts."""
+        from types import SimpleNamespace
+        from pipeline import prayer_pipeline as pp
+        from pipeline.script_doc import Scene, ScriptDoc
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            model = root / "model"
+            model.mkdir()
+            (model / "model.bin").write_bytes(b"local")
+            slug_out = root / "0015-psalm-91-5-6"
+            (slug_out / "thumbnails").mkdir(parents=True)
+            chunk_dir = slug_out / "_gemini_chunks_deadbeef1234"
+            chunk_dir.mkdir(parents=True)
+            (chunk_dir / "part_000.wav").write_bytes(b"POISONED")
+
+            doc = ScriptDoc(
+                root / "0015.md",
+                {
+                    "id": "0015",
+                    "slug": "0015-psalm-91-5-6",
+                    "title": "Psalm 91:5-6 | Night Peace",
+                    "status": "approved",
+                    "format": "longform",
+                    "niche": "prayer",
+                    "voice": "Charon",
+                    "thumb_text": "NIGHT PEACE",
+                    "channel": "secret-place",
+                },
+                [Scene(1, "One", "hello " * 900)],
+            )
+            asset = root / "image.jpg"
+            asset.write_bytes(b"a")
+            output = root / "out.mp4"
+            output.write_bytes(b"b")
+            thumbnail = root / "thumb.jpg"
+            thumbnail.write_bytes(b"c")
+            words = [("hello", i * 0.4, i * 0.4 + 0.3) for i in range(900)]
+
+            align_calls: list[int] = []
+
+            def fake_align(audio_path, text, model_dir):
+                align_calls.append(1)
+                if len(align_calls) == 1:
+                    raise ValueError("Narration does not match the script (only 2% of words aligned).")
+                return words
+
+            def fake_edge(text, out_mp3, voice, rate="-5%"):
+                out_mp3.write_bytes(b"CLEAN_EDGE_MP3")
+                return ("edge-tts", "en-US-AndrewMultilingualNeural")
+
+            with mock.patch.object(pp, "parse_script", return_value=doc), \
+                 mock.patch.object(pp, "enforce"), \
+                 mock.patch("pipeline.run._require_production_prerequisites"), \
+                 mock.patch.object(pp, "get_gemini_api_key", return_value="fake"), \
+                 mock.patch.object(pp.importlib.util, "find_spec", return_value=True), \
+                 mock.patch.object(pp, "OUTPUT_DIR", root), \
+                 mock.patch.object(pp, "synthesize_gemini_audio",
+                                   side_effect=lambda *a, **k: (slug_out / "narration.mp3").write_bytes(b"BAD")), \
+                 mock.patch.object(pp, "_probe_duration", return_value=360.0), \
+                 mock.patch.object(pp, "align", side_effect=fake_align), \
+                 mock.patch.object(pp, "synthesize_edge", side_effect=fake_edge), \
+                 mock.patch("pipeline.assets.fetch_scene_assets", return_value=[SimpleNamespace(path=asset)]), \
+                 mock.patch.object(pp, "render", return_value=output), \
+                 mock.patch("pipeline.thumbnail_ctr.generate_ctr_pack",
+                            return_value=[SimpleNamespace(path=thumbnail, as_dict=lambda: {})]), \
+                 mock.patch("pipeline.thumbnail_studio.mobile_preview"), \
+                 mock.patch("pipeline.metadata.write_metadata_pack", return_value={"description": "prayer"}):
+                pp.produce(root / "0015.md", True, model)
+
+            self.assertEqual(len(align_calls), 2)
+            self.assertFalse(chunk_dir.exists(), "Poisoned _gemini_chunks_* must be purged immediately")
+            saved_meta = json.loads((slug_out / "narration.json").read_text(encoding="utf-8"))
+            self.assertEqual(saved_meta["engine"], "edge-tts")
+
+        produce_wf = (ROOT / ".github" / "workflows" / "produce.yml").read_text(encoding="utf-8")
+        self.assertIn("chunks-tts-v5-${{ matrix.channel }}-", produce_wf)
+        self.assertNotIn("chunks-tts-v4-", produce_wf)
+        self.assertNotIn("\n            chunks-\n", produce_wf)
+
+    def test_thumbnail_rate_limit_halts_channel_loop_without_burning_quota(self):
+        """First uploadRateLimitExceeded backs off remaining channel items with 0 extra API calls."""
+        from types import SimpleNamespace
+        from scripts import sync_published_thumbnails as spt
+
+        with tempfile.TemporaryDirectory() as tmp:
+            pub = Path(tmp) / "published"
+            out = Path(tmp) / "out"
+            pub.mkdir()
+            out.mkdir()
+            fake_jpg = Path(tmp) / "thumb.jpg"
+            fake_jpg.write_bytes(b"JPG")
+            vids = []
+            for idx in range(36, 40):
+                vid = f"vid00{idx}AAAA"
+                vids.append(vid)
+                (pub / f"00{idx}-morning-prayer.md").write_text(
+                    f'---\nid: "00{idx}"\ntitle: "Psalm {idx} Morning Prayer"\n'
+                    f'scripture: "Psalm {idx}:1"\nchannel: prayer2\nstatus: published\n'
+                    f'privacy: public\nyoutube_video_id: {vid}\nthumbnail_pending: true\n---\nAmen.\n',
+                    encoding="utf-8",
+                )
+            (pub / "short-morningpsalm36.md").write_text(
+                '---\nid: "short-36"\nslug: "short-morningpsalm36"\ntitle: "Morning Short #Shorts"\n'
+                'format: short\nchannel: prayer2\nstatus: published\nprivacy: public\n'
+                'youtube_video_id: shrt36AAAAA\nthumbnail_pending: true\n---\nAmen.\n',
+                encoding="utf-8",
+            )
+
+            fake_yt = mock.MagicMock()
+            fake_yt.videos().list().execute.return_value = {
+                "items": [
+                    {
+                        "id": v,
+                        "snippet": {"title": "T", "description": "D", "categoryId": "22"},
+                        "status": {"privacyStatus": "public"},
+                        "contentDetails": {"duration": "PT8M"},
+                    }
+                    for v in vids
+                ]
+            }
+
+            setter_calls: list[str] = []
+
+            def fake_setter(vid, thumb_path):
+                setter_calls.append(vid)
+                return "HttpError 429 uploadRateLimitExceeded: The user has uploaded too many thumbnails recently."
+
+            fake_rep = SimpleNamespace(
+                path=fake_jpg,
+                hero="MORNING PEACE",
+                hero_px=132,
+                contrast=12.5,
+                backdrop="dawn_sanctuary",
+                passes=True,
+                as_dict=lambda: {"passes": True},
+            )
+
+            with mock.patch.object(spt, "generate_ctr_pack", return_value=[fake_rep]), \
+                 mock.patch.object(spt, "apply_shorts_thumbnail", side_effect=AssertionError("Shorts API must be skipped once channel is rate-limited")):
+                rows = spt.sync_published_thumbnails(
+                    published_dir=pub,
+                    out_root=out,
+                    youtube_client=fake_yt,
+                    thumb_setter=fake_setter,
+                    channel="prayer2",
+                )
+
+            self.assertEqual(setter_calls, ["vid0036AAAA"], "Must stop calling thumbnails.set after first rate-limit hit")
+            self.assertEqual(len(rows), 5)
+            self.assertTrue(all("rate_limit" in r["thumbnail_status"] or "uploadRateLimitExceeded" in r["thumbnail_status"] for r in rows))
+            for md in pub.glob("*.md"):
+                self.assertIn("thumbnail_retry_after:", md.read_text(encoding="utf-8"))
+            self.assertEqual(spt.DEFAULT_CHANNEL_PASS_LIMIT, 4)
+
+    def test_release_report_channel_scoping_and_longform_only_publish_recency(self):
+        """A green sibling channel never closes another channel's failure ticket; Shorts don't mask long-form stalls."""
+        from scripts import pipeline_watchdog as pw
+        from scripts import release_report as rr
+
+        summary = rr.summarise(rr.parse_trail(
+            "19:16:00Z ▶ speech alignment — 469s of audio\n"
+            "19:18:17Z ✗ speech alignment — failed after 137s: ValueError: only 2% aligned\n"
+        ))
+        _, body = rr.render(summary, run_id="42465258075", channel_id="secret-place")
+        self.assertIn("- **Channel:** `secret-place`", body)
+
+        open_issues = [
+            {"number": 339, "title": "Release failed in speech alignment (run 42465258075)", "body": body},
+            {"number": 340, "title": "Release failed in encode (run 42465299999)", "body": "- **Channel:** `prayer2`"},
+            {"number": 301, "title": "Release died inside encode (run 41900000000)", "body": "Legacy untagged ticket"},
+        ]
+        closed_by_prayer2: list[int] = []
+
+        def fake_gh_p2(cmd, **kwargs):
+            res = mock.MagicMock(returncode=0, stdout="[]", stderr="")
+            if cmd[:3] == ["gh", "issue", "list"]:
+                res.stdout = json.dumps(open_issues)
+            elif cmd[:3] == ["gh", "issue", "close"]:
+                closed_by_prayer2.append(int(cmd[3]))
+            return res
+
+        with mock.patch("shutil.which", return_value="/usr/bin/gh"), \
+             mock.patch.object(rr, "sweep_stale_release_issues", return_value=[]), \
+             mock.patch("subprocess.run", side_effect=fake_gh_p2):
+            rr.close_resolved_issues("johnAzani/YouTube-automation", run_id="42471579273", channel_id="prayer2")
+
+        self.assertEqual(closed_by_prayer2, [340], "prayer2 must only close prayer2 issues, never secret-place (#339) or legacy (#301)")
+
+        closed_by_sp: list[int] = []
+
+        def fake_gh_sp(cmd, **kwargs):
+            res = mock.MagicMock(returncode=0, stdout="[]", stderr="")
+            if cmd[:3] == ["gh", "issue", "list"]:
+                res.stdout = json.dumps(open_issues)
+            elif cmd[:3] == ["gh", "issue", "close"]:
+                closed_by_sp.append(int(cmd[3]))
+            return res
+
+        with mock.patch("shutil.which", return_value="/usr/bin/gh"), \
+             mock.patch.object(rr, "sweep_stale_release_issues", return_value=[]), \
+             mock.patch("subprocess.run", side_effect=fake_gh_sp):
+            rr.close_resolved_issues("johnAzani/YouTube-automation", run_id="42500000001", channel_id="secret-place")
+
+        self.assertEqual(sorted(closed_by_sp), [301, 339])
+
+        with tempfile.TemporaryDirectory() as tmp:
+            pub = Path(tmp)
+            now = datetime(2026, 11, 8, 20, 0, tzinfo=timezone.utc)
+            (pub / "0014-longform.md").write_text(
+                f"---\nchannel: secret-place\nyoutube_video_id: lf0014AAAAA\n"
+                f"published_at: '{(now - timedelta(hours=36)).strftime('%Y-%m-%dT%H:%M:%SZ')}'\n---\n",
+                encoding="utf-8",
+            )
+            (pub / "short-psalm91v5.md").write_text(
+                f"---\nchannel: secret-place\nformat: short\nyoutube_video_id: sh91v5AAAAA\n"
+                f"published_at: '{(now - timedelta(hours=2)).strftime('%Y-%m-%dT%H:%M:%SZ')}'\n---\n",
+                encoding="utf-8",
+            )
+            any_lp = pw.last_publish_for_channel("secret-place", published_dir=pub)
+            lf_lp = pw.last_publish_for_channel("secret-place", published_dir=pub, longform_only=True)
+            self.assertEqual(any_lp[0].name, "short-psalm91v5.md")
+            self.assertEqual(lf_lp[0].name, "0014-longform.md")
+
+        produce_wf = (ROOT / ".github" / "workflows" / "produce.yml").read_text(encoding="utf-8")
+        self.assertIn("longform_only=True", produce_wf)
+        self.assertIn("env.LONGFORM_UPLOADED == 'true'", produce_wf)
 
 
 if __name__ == "__main__":
