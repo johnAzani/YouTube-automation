@@ -937,6 +937,116 @@ goes before you until evening falls and brings your labor to peaceful completion
                         f"{cid} milestone {tier.subs_target} contains forbidden {bad!r}",
                     )
 
+    def test_metadata_localizations_never_leak_night_copy_or_selar_onto_sunrise_or_midday(self):
+        """Spanish/Portuguese localizations on prayer2 & prayer3 stay strictly daypart-pure."""
+        from pipeline.localize_metadata import build_metadata_localizations
+
+        locs_p2 = build_metadata_localizations(
+            "Proverbs 3:5-6 Morning Prayer | The Morning Altar",
+            "Begin this sunrise in prayer.",
+            channel_id="prayer2",
+        )
+        self.assertIn("Proverbios 3:5-6", locs_p2["es"]["title"])
+        self.assertIn("Provérbios 3:5-6", locs_p2["pt"]["title"])
+        self.assertNotIn("3:24", locs_p2["es"]["title"])
+
+        locs_p3 = build_metadata_localizations(
+            "Psalm 91:6 Midday Prayer | The Midday Watch",
+            "Pause at noonday in prayer.",
+            channel_id="prayer3",
+        )
+        self.assertIn("Salmo 91:6", locs_p3["es"]["title"])
+        self.assertIn("Mediodía", locs_p3["es"]["title"])
+        self.assertIn("Meio-Dia", locs_p3["pt"]["title"])
+
+        for locs in (locs_p2, locs_p3):
+            for lang in ("es", "pt"):
+                blob = f"{locs[lang]['title']}\n{locs[lang]['description']}".lower()
+                self.assertNotIn("selar.com", blob)
+                self.assertNotIn("the secret place", blob)
+                for night_word in ("dormir", "noche", "nocturna", "noite"):
+                    self.assertNotIn(night_word, blob)
+
+    def test_metadata_tags_hashtags_and_seo_hooks_are_daypart_scoped(self):
+        """Sunrise and midday scripts never inherit bedtime hashtags or sleep backend tags."""
+        from pipeline.metadata import build_description, build_tags, write_metadata_pack
+        from pipeline.script_doc import parse_script
+
+        p2_doc = parse_script(ROOT / "content" / "published" / "0038-lamentations-3-22-23-new-mercies-every-morning.md")
+        p3_doc = parse_script(ROOT / "content" / "published" / "0046-psalm-91-6-the-destruction-that-wasteth-at-noonday.md")
+
+        for doc in (p2_doc, p3_doc):
+            desc = build_description(doc, [65.0] * len(doc.scenes))
+            tags = build_tags(doc)
+            for bad_ht in ("#NightPrayer", "#PrayerBeforeSleep", "#BedtimePrayer", "#TheSecretPlace"):
+                self.assertNotIn(bad_ht, desc)
+            for bad_tag_word in ("sleep", "night", "bedtime", "secret place"):
+                self.assertTrue(
+                    all(bad_tag_word not in t for t in tags),
+                    f"{doc.path.name} leaked {bad_tag_word!r} into tags: {tags}",
+                )
+            with tempfile.TemporaryDirectory() as tmp:
+                pack = write_metadata_pack(doc, [65.0] * len(doc.scenes), Path(tmp))
+                self.assertEqual(pack["selar_journal_url"], "")
+                self.assertEqual(pack["selar_store_url"], "")
+
+    def test_retrofit_published_metadata_strips_audit_json_and_links_published_shorts(self):
+        """Live retrofit strips receipt audit JSON and links paired Shorts directly to YouTube watch URLs."""
+        from pipeline.channel_capabilities import brand_for
+        from scripts.retrofit_published_metadata import collect_published_faith_targets
+
+        targets = collect_published_faith_targets(only_pending=False)
+        by_file = {t["file"]: t for t in targets}
+
+        expected_live_links = {
+            "short-middaypsalm55v17-midday-prayer.md": "https://youtu.be/xjiV3SHKsR4",
+            "short-middaypsalm91v6-midday-prayer.md": "https://youtu.be/GeZ3liNIxag",
+            "short-morninglamentations3v22-sunrise-prayer.md": "https://youtu.be/3tm3_lNvoGM",
+            "short-morningmark1v35-sunrise-prayer.md": "https://youtu.be/Nq7a1yC4Rzw",
+            "short-morningproverbs3v5-sunrise-prayer.md": "https://youtu.be/PIPx_odfiag",
+        }
+        for fname, watch_url in expected_live_links.items():
+            self.assertIn(watch_url, by_file[fname]["description"])
+
+        for t in targets:
+            desc = t["description"]
+            self.assertNotIn("## Custom Thumbnail", desc)
+            self.assertNotIn("## Channel Video Status", desc)
+            self.assertNotIn("```json", desc)
+            cid = t["channel"]
+            if cid != "secret-place":
+                self.assertNotIn("selar.com", desc.lower())
+                self.assertNotIn("selar.com", t["localizations"]["es"]["description"].lower())
+                self.assertNotIn("selar.com", t["localizations"]["pt"]["description"].lower())
+                for bad in brand_for(cid).forbidden_phrases:
+                    self.assertNotIn(bad.lower(), desc.lower())
+
+    def test_pastoral_pinned_comments_are_daypart_clean_across_all_published_and_queued_docs(self):
+        """Long-form pinned comments on prayer2 & prayer3 never emit bedtime verses or sleep themes."""
+        from pipeline.channel_capabilities import brand_for
+        from pipeline.metadata import is_faith_doc
+        from pipeline.pinned_comments import generate_pastoral_pinned_comment
+        from pipeline.script_doc import parse_script
+
+        paths = sorted((ROOT / "content" / "published").glob("*.md")) + sorted(
+            (ROOT / "content" / "queue").glob("*.md")
+        )
+        checked = 0
+        for p in paths:
+            if p.stem.lower() == "readme":
+                continue
+            doc = parse_script(p)
+            if not is_faith_doc(doc) or doc.channel == "secret-place":
+                continue
+            checked += 1
+            comment = generate_pastoral_pinned_comment(doc)
+            low = comment.lower()
+            for night_word in ("sleep", "slumber", "tonight", "liest down"):
+                self.assertNotIn(night_word, low, f"{p.name} leaked {night_word!r} in comment")
+            for bad in brand_for(doc.channel).forbidden_phrases:
+                self.assertNotIn(bad.lower(), low, f"{p.name} leaked {bad!r} in comment")
+        self.assertGreaterEqual(checked, 20)
+
 
 if __name__ == "__main__":
     unittest.main()

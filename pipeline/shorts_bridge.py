@@ -108,6 +108,18 @@ def playlist_fallback_for_channel(channel_id: str | None = None) -> str:
     return f"https://www.youtube.com/{handle}/playlists"
 
 
+_SHORT_SLUG_SUFFIX_RE = re.compile(
+    r"-(?:sunrise|morning|midday|noonday|afternoon|night|pre-sleep|bedtime)-prayer$"
+)
+
+
+def _normalize_short_lookup_key(raw: str) -> str:
+    s = (raw or "").strip().lower()
+    if s.startswith("short-"):
+        s = _SHORT_SLUG_SUFFIX_RE.sub("", s)
+    return s
+
+
 def _dynamic_counterpart_from_repo(
     short_key_or_title: str,
     channel_id: str | None = None,
@@ -116,6 +128,7 @@ def _dynamic_counterpart_from_repo(
     needle = (short_key_or_title or "").strip().lower()
     if not needle:
         return None
+    needle_key = _normalize_short_lookup_key(needle)
     try:
         from .channel_capabilities import brand_for, channel_for_short_key
         from .channels import normalize_channel_id
@@ -149,7 +162,7 @@ def _dynamic_counterpart_from_repo(
 
     # Pass 1: exact Short-key match on published long-form receipts
     for doc, vid, ref in pub_docs:
-        if short_key_for_doc(doc) == needle:
+        if short_key_for_doc(doc) in {needle, needle_key}:
             return {
                 "found": True,
                 "channel": doc.channel,
@@ -188,7 +201,7 @@ def _dynamic_counterpart_from_repo(
     for exact_only in (True, False):
         for doc, ref in queue_docs:
             matched = (
-                short_key_for_doc(doc) == needle
+                short_key_for_doc(doc) in {needle, needle_key}
                 if exact_only
                 else bool(ref and ref.lower() in needle)
             )

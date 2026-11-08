@@ -14,7 +14,6 @@ youtube_shorts_url: "https://www.youtube.com/shorts/LmXrGWOro9o"
 youtube_watch_url: "https://youtu.be/LmXrGWOro9o"
 youtube_studio_url: "https://studio.youtube.com/video/LmXrGWOro9o/edit"
 privacy_status: "public"
-metadata_revision: "selar-seo-v1"
 width: 720
 height: 1280
 duration_seconds: 42.33

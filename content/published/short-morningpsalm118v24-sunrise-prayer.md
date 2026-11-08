@@ -14,7 +14,6 @@ youtube_shorts_url: "https://www.youtube.com/shorts/DDTARcm-lbw"
 youtube_watch_url: "https://youtu.be/DDTARcm-lbw"
 youtube_studio_url: "https://studio.youtube.com/video/DDTARcm-lbw/edit"
 privacy_status: "public"
-metadata_revision: "selar-seo-v1"
 width: 720
 height: 1280
 duration_seconds: 65.25
