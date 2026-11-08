@@ -1328,14 +1328,18 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         if ready_count >= min_ready:
             return rows
 
-        for qpath in sorted(Path(QUEUE_DIR).glob("*.md")):
+        candidate_paths = [
+            *sorted(Path(QUEUE_DIR).glob("*.md")),
+            *sorted(Path(PUBLISHED_DIR).glob("[0-9]*.md")),
+        ]
+        for qpath in candidate_paths:
             if ready_count >= min_ready:
                 break
             try:
                 qdoc = parse_script(qpath)
             except Exception:  # noqa: BLE001
                 continue
-            if str(qdoc.status).strip().lower() != "approved":
+            if str(qdoc.status).strip().lower() not in {"approved", "published"}:
                 continue
             if qdoc.channel != self.channel_id:
                 continue  # a channel's Shorts come from its own long-form scripts

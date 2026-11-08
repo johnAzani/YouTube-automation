@@ -122,6 +122,19 @@ class TestRunEvidence(MonitorCase):
         row_post_fail = self.classify(runs).automations[0]
         self.assertEqual(row_post_fail.verdict, "FLAKY")
 
+    def test_edit_after_green_run_clears_pre_edit_flakiness_before_next_slot(self):
+        """#307 regression: when latest run is green and a fix landed after it, old pre-fix runs must not flag FLAKY."""
+        self.last_edit.return_value = NOW - timedelta(minutes=30)
+        runs = [
+            run("produce.yml", 2, "success"),
+            run("produce.yml", 6, "failure"),
+            run("produce.yml", 10, "failure"),
+            run("produce.yml", 14, "failure"),
+        ]
+        row = self.classify(runs).automations[0]
+        self.assertEqual(row.verdict, "OK")
+        self.assertEqual(row.failures_5, 0)
+
     def test_an_empty_history_never_reports_healthy(self):
         report = self.classify([])
         self.assertFalse(report.healthy)

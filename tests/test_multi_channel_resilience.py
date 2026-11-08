@@ -636,6 +636,118 @@ goes before you until evening falls and brings your labor to peaceful completion
         self.assertIn("channel-command-grid", dashboard_html)
         self.assertIn("live-catalog-grid", dashboard_html)
 
+    def test_apply_channel_env_preserves_workflow_mapped_credentials_and_blocks_cross_channel_leak(self):
+        """Run 42430375723 regression: workflow-scoped YOUTUBE_* vars survive apply_channel_env(same_ch)."""
+        from pipeline.channels import apply_channel_env
+
+        # Case 1: workflow job env already mapped PRAYER2 -> YOUTUBE_* and set CHANNEL_ID=prayer2
+        scoped_env = {
+            "CHANNEL_ID": "prayer2",
+            "YOUTUBE_CLIENT_ID": "p2-id",
+            "YOUTUBE_CLIENT_SECRET": "p2-sec",
+            "YOUTUBE_REFRESH_TOKEN": "p2-tok",
+        }
+        with mock.patch.dict(os.environ, scoped_env, clear=True):
+            cid = apply_channel_env("prayer2")
+            self.assertEqual(cid, "prayer2")
+            self.assertEqual(os.environ.get("YOUTUBE_CLIENT_ID"), "p2-id")
+            self.assertEqual(os.environ.get("YOUTUBE_REFRESH_TOKEN"), "p2-tok")
+
+        # Case 2: switching from secret-place to prayer2 without PRAYER2_* clears inherited creds
+        inherited_env = {
+            "CHANNEL_ID": "secret-place",
+            "YOUTUBE_CLIENT_ID": "sp-id",
+            "YOUTUBE_REFRESH_TOKEN": "sp-tok",
+        }
+        with mock.patch.dict(os.environ, inherited_env, clear=True):
+            apply_channel_env("prayer2")
+            self.assertIsNone(os.environ.get("YOUTUBE_CLIENT_ID"))
+            self.assertIsNone(os.environ.get("YOUTUBE_REFRESH_TOKEN"))
+
+    def test_every_scheduled_channel_has_ready_shorts_runway(self):
+        """shorts:<channel> must never start at 0 across provisioned channels."""
+        from pipeline.channels import scheduled_channels
+        from pipeline.short_release import count_ready_shorts
+
+        for cid in scheduled_channels():
+            self.assertGreaterEqual(
+                count_ready_shorts(channel_id=cid),
+                2,
+                f"channel {cid} has fewer than 2 ready Shorts in content/shorts-queue/",
+            )
+
+    def test_thumbnail_rate_limit_stamps_cooldown_and_skips_until_expiry(self):
+        """PIPx_odfiag uploadRateLimitExceeded regression: back off 6h instead of burning 50 units/pass."""
+        from scripts import sync_published_thumbnails as spt
+
+        with tempfile.TemporaryDirectory() as tmp:
+            pdir = Path(tmp) / "published"
+            out_dir = Path(tmp) / "out"
+            pdir.mkdir(parents=True, exist_ok=True)
+            rec = pdir / "0040-proverbs-3-5-6.md"
+            rec.write_text(
+                "---\n"
+                "id: '0040'\n"
+                "title: 'Proverbs 3:5-6 Morning Prayer | The Morning Altar'\n"
+                "slug: proverbs-3-5-6-trust-in-the-lord\n"
+                "status: published\n"
+                "channel: prayer2\n"
+                "format: longform\n"
+                "privacy: public\n"
+                "thumb_text: TRUST IN THE LORD\n"
+                "youtube_video_id: PIPx_odfiag\n"
+                "---\nBody\n",
+                encoding="utf-8",
+            )
+            fake_yt = mock.MagicMock()
+            fake_yt.videos.return_value.list.return_value.execute.return_value = {
+                "items": [{
+                    "id": "PIPx_odfiag",
+                    "snippet": {"title": "Proverbs 3:5-6 Morning Prayer | The Morning Altar"},
+                    "status": {"privacyStatus": "public", "uploadStatus": "processed"},
+                    "contentDetails": {"duration": "PT10M54S"},
+                }]
+            }
+            rate_err = "HttpError: The user has uploaded too many thumbnails recently. [uploadRateLimitExceeded]"
+            rows = spt.sync_published_thumbnails(
+                published_dir=pdir,
+                out_root=out_dir,
+                youtube_client=fake_yt,
+                thumb_setter=lambda vid, p: rate_err,
+                channel="prayer2",
+            )
+            self.assertEqual(len(rows), 1)
+            text = rec.read_text(encoding="utf-8")
+            self.assertIn("thumbnail_retry_after:", text)
+            # Immediate subsequent pass skips during active cooldown window
+            self.assertEqual(spt.collect_pending_receipts(published_dir=pdir, channel_id="prayer2"), [])
+            # `--force` overrides cooldown when requested explicitly
+            self.assertEqual(len(spt.collect_pending_receipts(published_dir=pdir, force=True, channel_id="prayer2")), 1)
+
+    def test_sweep_stale_release_issues_keeps_newest_analytics_snapshot_only(self):
+        """#78/#248/#320 cleanup: keep newest snapshot per channel prefix, close older ones."""
+        from scripts import release_report as rr
+
+        with tempfile.TemporaryDirectory() as tmp:
+            fake_snaps = [
+                {"number": 320, "title": "📊 Channel Analytics Snapshot: 2026-11-06"},
+                {"number": 248, "title": "📊 Channel Analytics Snapshot: 2026-11-04"},
+                {"number": 78, "title": "📊 Channel Analytics Snapshot: 2026-10-29"},
+            ]
+
+            def fake_run(cmd, **kw):
+                if cmd[:3] == ["gh", "issue", "list"]:
+                    q = " ".join(cmd)
+                    if "Channel Analytics Snapshot" in q:
+                        return SimpleNamespace(returncode=0, stdout=json.dumps(fake_snaps), stderr="")
+                    return SimpleNamespace(returncode=0, stdout="[]", stderr="")
+                return SimpleNamespace(returncode=0, stdout="", stderr="")
+
+            with mock.patch("shutil.which", return_value="/usr/bin/gh"), \
+                 mock.patch("subprocess.run", side_effect=fake_run):
+                closed = rr.sweep_stale_release_issues("johnAzani/YouTube-automation", published_dir=Path(tmp))
+            self.assertEqual(closed, [248, 78])
+
 
 if __name__ == "__main__":
     unittest.main()

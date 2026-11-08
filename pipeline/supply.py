@@ -380,6 +380,32 @@ def ensure_supply(brain, limit: int = MAX_EXPANSIONS_PER_RUN,
     report.authored = authored[0] if len(authored) == 1 else (authored or None)
     report.authored_all = authored
 
+    # Companion Shorts parity: when running against the live repo with a real
+    # Brain (`replenish_shorts_queue`), also ensure at least 2 renderable Shorts
+    # are armed so consuming 1 Short in `produce.yml` never leaves `shorts:<ch>`
+    # at 0 for the post-publish `automation-health.yml` gate.
+    if queue_dir is None and write and brain is not None and hasattr(brain, "replenish_shorts_queue"):
+        from .short_release import count_ready_shorts
+
+        min_shorts = max(2, min(min_publishable, 3))
+        if count_ready_shorts(channel_id=channel) < min_shorts:
+            try:
+                brain.replenish_shorts_queue(min_ready=min_shorts)
+            except Exception as exc:  # noqa: BLE001
+                report.blocked.append(f"shorts-replenish: {exc}")
+        while (
+            count_ready_shorts(channel_id=channel) < min_shorts
+            and len(authored) < max(2, author_budget)
+        ):
+            row = author_new(brain, expand_target=target)
+            authored.append(row)
+            if not row.get("ok"):
+                report.blocked.append(f"shorts-authoring: {row.get('reason')}")
+                break
+            report.publishable_after = len(publishable_longform(queue_dir, channel_id=channel))
+        report.authored = authored[0] if len(authored) == 1 else (authored or None)
+        report.authored_all = authored
+
     if report.publishable_after == 0 and not report.blocked:
         report.blocked.append(
             "no approved script is over the word floor and nothing could be authored"

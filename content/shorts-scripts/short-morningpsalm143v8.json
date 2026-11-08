@@ -1,0 +1,114 @@
+{
+  "key": "short-morningpsalm143v8",
+  "channel": "prayer2",
+  "psalm": 143,
+  "title": [
+    "THE MORNING ALTAR",
+    "PSALM 143:8"
+  ],
+  "poster": [
+    "HEAR HIS",
+    "LOVING",
+    "KINDNESS",
+    "AT DAWN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "sunrise dawn light over quiet valley morning serene",
+    "golden light rays over calm landscape morning dawn",
+    "peaceful sunrise over misty countryside morning",
+    "sunlight breaking through clouds mountain pass",
+    "golden dawn light over misty landscape morning",
+    "peaceful sunrise over misty alpine valley",
+    "dew drops on morning grass close up"
+  ],
+  "scenes": [
+    {
+      "a": "Breathe in the stillness of this sunrise",
+      "img": "short-morningpsalm143v8-scene-01.jpg",
+      "kicker": "PSALM 143:8",
+      "sub": "BREATHE IN THE SUNRISE",
+      "cam": "push_in",
+      "focus": [0.5, 0.5]
+    },
+    {
+      "a": "Cause me to hear thy lovingkindness in the morning",
+      "img": "short-morningpsalm143v8-scene-02.jpg",
+      "kicker": "PSALM 143:8",
+      "sub": "HEAR HIS LOVINGKINDNESS",
+      "cam": "tilt_up",
+      "focus": [0.5, 0.65]
+    },
+    {
+      "a": "for in thee do I trust",
+      "img": "short-morningpsalm143v8-scene-03.jpg",
+      "kicker": "STEADFAST TRUST",
+      "sub": "IN THEE DO I TRUST",
+      "cam": "pan_left",
+      "focus": [0.4, 0.5]
+    },
+    {
+      "a": "cause me to know the way wherein I should walk",
+      "img": "short-morningpsalm143v8-scene-04.jpg",
+      "kicker": "CLEAR DIRECTION",
+      "sub": "SHOW ME THE WAY TODAY",
+      "cam": "pull_out",
+      "focus": [0.5, 0.5]
+    },
+    {
+      "a": "for I lift up my soul unto thee",
+      "img": "short-morningpsalm143v8-scene-05.jpg",
+      "kicker": "LIFTED SOUL",
+      "sub": "LIFT YOUR SOUL TO GOD",
+      "cam": "pan_right",
+      "focus": [0.6, 0.5]
+    },
+    {
+      "a": "Lord let your mercy speak louder than worry",
+      "img": "short-morningpsalm143v8-scene-06.jpg",
+      "kicker": "MORNING MERCY",
+      "sub": "MERCY LOUDER THAN WORRY",
+      "cam": "push_in",
+      "focus": [0.5, 0.5]
+    },
+    {
+      "a": "subscribe to The Morning Altar",
+      "img": "short-morningpsalm143v8-scene-07.jpg",
+      "kicker": "DAILY SUNRISE",
+      "sub": "BEGIN EVERY DAY IN PEACE",
+      "cam": "pull_out",
+      "focus": [0.5, 0.35]
+    }
+  ],
+  "captions": [
+    [0, 13, "Breathe in the stillness of this sunrise before the noise of the world awakens."],
+    [14, 28, "Pray Psalm 143 verse 8 over your day: Cause me to hear thy lovingkindness in the morning;"],
+    [29, 41, "for in thee do I trust: cause me to know the way wherein I should walk;"],
+    [42, 54, "for I lift up my soul unto thee, O Lord my God."],
+    [55, 70, "Lord, let your mercy speak louder than worry and guide every decision set before our hands."],
+    [71, 86, "Grant wisdom in every conversation, peace in every trial, and steady strength until evening."],
+    [87, 103, "Write Amen in faith to walk in His counsel today, and subscribe to The Morning Altar."]
+  ],
+  "kinetic_phrases": [
+    [0, 13, ["BREATHE IN STILLNESS", "BEFORE THE WORLD", "AWAKENS TODAY"], ["STILLNESS"], "PSALM 143:8"],
+    [14, 28, ["CAUSE ME TO HEAR", "THY LOVINGKINDNESS", "IN THE MORNING"], ["LOVINGKINDNESS"], "PSALM 143:8"],
+    [29, 41, ["FOR IN THEE DO I TRUST", "SHOW ME THE WAY", "WHEREIN I SHOULD WALK"], ["TRUST"], "PSALM 143:8"],
+    [42, 54, ["FOR I LIFT UP", "MY SOUL UNTO THEE", "O LORD MY GOD"], ["SOUL"], "PSALM 143:8"],
+    [55, 70, ["LET YOUR MERCY SPEAK", "LOUDER THAN WORRY", "GUIDE EVERY DECISION"], ["MERCY"], "PSALM 143:8"],
+    [71, 86, ["WISDOM IN EVERY WORD", "PEACE IN EVERY TRIAL", "STRENGTH UNTIL EVENING"], ["WISDOM"], "PSALM 143:10"],
+    [87, 103, ["WRITE AMEN IN FAITH", "SUBSCRIBE TO", "THE MORNING ALTAR"], ["SUBSCRIBE"], "PSALM 143:8"]
+  ],
+  "beats": [
+    {"a": "Breathe in the stillness of this sunrise", "kind": "phrase", "words": ["STILLNESS", "SUNRISE"], "hi": 0, "slot": "C"},
+    {"a": "Cause me to hear thy lovingkindness in the morning", "kind": "quote", "words": ["LOVINGKINDNESS"], "hi": 0, "slot": "C"},
+    {"a": "for in thee do I trust", "kind": "quote", "words": ["TRUST"], "hi": 0, "slot": "C"},
+    {"a": "cause me to know the way wherein I should walk", "kind": "quote", "words": ["WAY", "WALK"], "hi": 0, "slot": "C"},
+    {"a": "for I lift up my soul unto thee", "kind": "quote", "words": ["SOUL"], "hi": 0, "slot": "C"},
+    {"a": "Lord let your mercy speak louder than worry", "kind": "phrase", "words": ["MERCY", "WORRY"], "hi": 0, "slot": "C"},
+    {"a": "subscribe to The Morning Altar", "kind": "phrase", "words": ["MORNING", "ALTAR"], "hi": 0, "slot": "C"}
+  ],
+  "scripture": "Psalm 143:8"
+}

@@ -71,6 +71,12 @@ jobs:
         channel: ${{ fromJson(needs.plan.outputs.channels) }}
     env:
       CHANNEL_ID: ${{ matrix.channel }}
+      PRAYER2_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER2_YOUTUBE_CLIENT_ID }}
+      PRAYER2_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER2_YOUTUBE_CLIENT_SECRET }}
+      PRAYER2_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN }}
+      PRAYER3_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER3_YOUTUBE_CLIENT_ID }}
+      PRAYER3_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER3_YOUTUBE_CLIENT_SECRET }}
+      PRAYER3_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN }}
       YOUTUBE_CLIENT_ID: ${{ matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID) }}
       YOUTUBE_CLIENT_SECRET: ${{ matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET) }}
       YOUTUBE_REFRESH_TOKEN: ${{ matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN) }}

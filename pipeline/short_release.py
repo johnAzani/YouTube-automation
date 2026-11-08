@@ -472,6 +472,17 @@ def queue_report(queue_dir: Path | None = None,
     return rows
 
 
+def count_ready_shorts(
+    queue_dir: Path | None = None,
+    channel_id: str | None = None,
+) -> int:
+    """Count renderable approved Shorts manifests for `channel_id`."""
+    return sum(
+        1 for row in queue_report(queue_dir=queue_dir, channel_id=channel_id)
+        if row.get("verdict") == "ready"
+    )
+
+
 def select_next_queued_short(
     queue_dir: Path | None = None,
     published_dir: Path | None = None,
