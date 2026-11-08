@@ -23,8 +23,8 @@
       "workflow": "metrics.yml"
     }
   ],
-  "generated_at": "2026-11-08T06:54:32.867258+00:00",
-  "last_run_at": "2026-11-08T06:53:49+00:00",
+  "generated_at": "2026-11-08T08:59:49.602815+00:00",
+  "last_run_at": "2026-11-08T08:59:05+00:00",
   "on_time": [
     {
       "late_minutes": 24,
@@ -32,13 +32,6 @@
       "ran_at": "2026-11-07T20:38:46+00:00",
       "slot": "2026-11-07T20:14:00+00:00",
       "workflow": "automation-health.yml"
-    },
-    {
-      "late_minutes": 90,
-      "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-07T08:44:38+00:00",
-      "slot": "2026-11-07T07:14:00+00:00",
-      "workflow": "comments.yml"
     },
     {
       "late_minutes": 100,
