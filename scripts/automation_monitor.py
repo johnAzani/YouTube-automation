@@ -300,19 +300,42 @@ def last_commit_for(path: Path) -> datetime | None:
     return _parse(stamp) if stamp else None
 
 
+#: Underlying Python modules whose edits fix or alter a scheduled workflow's behavior.
+WORKFLOW_CODE_PATHS: dict[str, tuple[str, ...]] = {
+    "gemini_brain.yml": ("pipeline/gemini_brain.py", "scripts/gemini_brain.py", "pipeline/supply.py"),
+    "community.yml": ("pipeline/community_posts.py", "scripts/post_community.py"),
+    "metrics.yml": ("scripts/metrics_snapshot.py", "pipeline/channels.py"),
+    "produce.yml": ("pipeline/run.py", "pipeline/prayer_pipeline.py", "pipeline/prayer_alignment.py", "pipeline/short_release.py"),
+    "comments.yml": ("pipeline/comment_responder.py", "scripts/reply_comments.py"),
+    "growth-autopilot.yml": ("scripts/growth_autopilot.py",),
+    "automation-health.yml": ("scripts/pipeline_watchdog.py", "scripts/automation_monitor.py"),
+    "monitor.yml": ("scripts/automation_monitor.py", "scripts/pipeline_watchdog.py"),
+}
+
+
 def last_edit(workflow: str) -> datetime | None:
-    """When this workflow file last changed, preferring GitHub over local git."""
-    rel = f".github/workflows/{workflow}"
+    """When this workflow (or its primary implementation module) last changed."""
+    candidates = [f".github/workflows/{workflow}", *WORKFLOW_CODE_PATHS.get(workflow, ())]
+    best: datetime | None = None
     if gh_available():
-        proc = _gh(["api", f"repos/{repo_slug()}/commits?path={rel}&per_page=1"])
-        if proc.returncode == 0:
+        slug = repo_slug()
+        for rel in candidates:
+            proc = _gh(["api", f"repos/{slug}/commits?path={rel}&per_page=1"])
+            if proc.returncode != 0:
+                continue
             rows = json.loads(proc.stdout or "[]")
             if rows:
                 stamp = (rows[0].get("commit") or {}).get("committer", {}).get("date")
                 parsed = _parse(stamp)
-                if parsed:
-                    return parsed
-    return last_commit_for(WORKFLOWS / workflow)
+                if parsed and (best is None or parsed > best):
+                    best = parsed
+        if best is not None:
+            return best
+    for rel in candidates:
+        local = last_commit_for(ROOT / rel)
+        if local and (best is None or local > best):
+            best = local
+    return best
 
 
 # --------------------------------------------------------------------------- #
@@ -418,15 +441,14 @@ def classify(report: MonitorReport, runs: list[dict], now: datetime | None = Non
             auto.runs_14d = len(recent)
             window = recent[:5]
             if auto.last_edited is not None:
+                # Judge flakiness strictly on runs created at or after the latest
+                # workflow/module edit so superseded pre-fix failures never keep a
+                # repaired workflow pinned to FLAKY before (or after) its next slot.
                 post_edit = [
                     r for r in recent
                     if (_parse(r.get("created_at")) or datetime.min.replace(tzinfo=timezone.utc)) >= auto.last_edited
                 ]
-                if post_edit:
-                    # A landed fix has run at least once: judge flakiness on the
-                    # post-fix runs so superseded pre-fix failures do not keep a
-                    # repaired workflow pinned to FLAKY.
-                    window = post_edit[:5]
+                window = post_edit[:5]
             auto.failures_5 = sum(1 for r in window if r.get("conclusion") == "failure")
         auto.last_slot = prev_occurrence(crons, now)
         # A slot is only missed once the grace window after it has closed: GitHub's
@@ -470,19 +492,33 @@ def _running_workflow() -> str:
     return (os.environ.get("GITHUB_WORKFLOW") or "").strip()
 
 
-def _is_self(auto: Automation) -> bool:
-    """Is this row the workflow that is running the check?
+_WATCHDOG_REPORTERS = frozenset({
+    "monitor.yml",
+    "monitor",
+    "automation monitor",
+    "automation-health.yml",
+    "automation-health",
+    ".github/workflows/automation-health.yml",
+})
 
-    `GITHUB_WORKFLOW` holds the display name ("Automation monitor") while the row
-    is keyed by file ("monitor.yml"), so both are compared — and the first version
-    of this check matched neither, which left the latch in place.
+
+def _is_self(auto: Automation) -> bool:
+    """Is this row the workflow running the check (or its twin watchdog reporter)?
+
+    Both `monitor.yml` and `automation-health.yml` exit non-zero on the exact same
+    `pipeline_watchdog` verdict. Treating only the single running file as self let
+    `monitor.yml` latch on `automation-health.yml`'s red exit and vice versa.
     """
     running = _running_workflow().strip().lower()
     if not running:
         return False
     names = {str(auto.workflow).lower(), str(auto.name).lower(),
              str(auto.workflow).lower().removesuffix(".yml")}
-    return running in names
+    if running in names:
+        return True
+    if running in _WATCHDOG_REPORTERS and (names & _WATCHDOG_REPORTERS):
+        return True
+    return False
 
 
 def _verdict(auto: Automation, now: datetime,
@@ -542,11 +578,9 @@ def _verdict(auto: Automation, now: datetime,
         return
 
     if auto.failures_5 >= 3:
-        # The monitor exits non-zero *because* the pipeline is unhealthy — its own
-        # red runs are this report, not a fault in it. Counting them as FLAKY put
-        # "monitor.yml: 4 of its last 5 runs failed" at the top of the very issue
-        # that explains why, which is noise where the signal should be sharpest.
-        if auto.workflow == "monitor.yml":
+        # The monitor and automation-health exit non-zero *because* the pipeline is
+        # unhealthy — their own red runs are this report, not a fault in them.
+        if str(auto.workflow).lower() in _WATCHDOG_REPORTERS:
             auto.verdict, auto.severity = "SELF-REPORT", "info"
             auto.detail = ("its red runs are the verdicts below, not failures of it")
             return

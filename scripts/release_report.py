@@ -317,6 +317,44 @@ def sweep_stale_release_issues(repo: str, published_dir: Path | None = None) -> 
             )
             if res.returncode == 0:
                 closed.append(num)
+
+    # Also keep only the single newest open `📊 Channel Analytics Snapshot` issue per
+    # channel prefix so weekly snapshots do not accumulate indefinitely (#78, #248, ...).
+    snap = subprocess.run(
+        [
+            "gh", "issue", "list", "--repo", repo, "--state", "open",
+            "--search", '"Channel Analytics Snapshot" in:title',
+            "--json", "number,title", "--limit", "50",
+        ],
+        capture_output=True, text=True, check=False,
+    )
+    if snap.returncode == 0:
+        try:
+            snap_rows = json.loads(snap.stdout or "[]")
+        except (ValueError, TypeError):
+            snap_rows = []
+        by_group: dict[str, list[int]] = {}
+        for row in snap_rows:
+            num = int(row.get("number", 0) or 0)
+            t = str(row.get("title") or "")
+            if not num or "Channel Analytics Snapshot" not in t:
+                continue
+            group = t.split(":", 1)[0].strip()
+            by_group.setdefault(group, []).append(num)
+        for group, nums in by_group.items():
+            ordered = sorted(nums, reverse=True)
+            newest = ordered[0]
+            for stale_num in ordered[1:]:
+                res = subprocess.run(
+                    [
+                        "gh", "issue", "close", str(stale_num), "--repo", repo,
+                        "--comment",
+                        f"Closing automatically: superseded by newer analytics snapshot #{newest}.",
+                    ],
+                    capture_output=True, text=True, check=False,
+                )
+                if res.returncode == 0:
+                    closed.append(stale_num)
     return closed
 
 

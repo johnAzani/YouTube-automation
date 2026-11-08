@@ -1,0 +1,114 @@
+{
+  "key": "short-morningpsalm5",
+  "channel": "prayer2",
+  "psalm": 5,
+  "title": [
+    "THE MORNING ALTAR",
+    "PSALM 5:3"
+  ],
+  "poster": [
+    "DIRECT",
+    "YOUR",
+    "MORNING",
+    "PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "golden dawn light over misty landscape morning",
+    "sunrise dawn light over quiet valley morning serene",
+    "sunlight breaking through clouds mountain pass",
+    "golden light rays over calm landscape morning dawn",
+    "peaceful sunrise over misty countryside morning",
+    "peaceful sunrise over misty alpine valley",
+    "calm lake reflection at sunrise"
+  ],
+  "scenes": [
+    {
+      "a": "Before the rush begins",
+      "img": "short-morningpsalm5-scene-01.jpg",
+      "kicker": "PSALM 5:3",
+      "sub": "BEFORE THE RUSH BEGINS",
+      "cam": "push_in",
+      "focus": [0.5, 0.5]
+    },
+    {
+      "a": "My voice shalt thou hear in the morning",
+      "img": "short-morningpsalm5-scene-02.jpg",
+      "kicker": "PSALM 5:3",
+      "sub": "LIFT YOUR VOICE AT DAWN",
+      "cam": "tilt_up",
+      "focus": [0.5, 0.65]
+    },
+    {
+      "a": "in the morning will I direct my prayer",
+      "img": "short-morningpsalm5-scene-03.jpg",
+      "kicker": "MORNING ALTAR",
+      "sub": "DIRECT YOUR HEART TO GOD",
+      "cam": "pan_left",
+      "focus": [0.4, 0.5]
+    },
+    {
+      "a": "and will look up",
+      "img": "short-morningpsalm5-scene-04.jpg",
+      "kicker": "EXPECTANT FAITH",
+      "sub": "LOOK UP IN EXPECTATION",
+      "cam": "pull_out",
+      "focus": [0.5, 0.5]
+    },
+    {
+      "a": "Father order our steps today",
+      "img": "short-morningpsalm5-scene-05.jpg",
+      "kicker": "DIVINE FAVOUR",
+      "sub": "ORDER EVERY STEP TODAY",
+      "cam": "pan_right",
+      "focus": [0.6, 0.5]
+    },
+    {
+      "a": "compass us with thy favour as with a shield",
+      "img": "short-morningpsalm5-scene-06.jpg",
+      "kicker": "PSALM 5:12",
+      "sub": "SURROUNDED BY HIS SHIELD",
+      "cam": "push_in",
+      "focus": [0.5, 0.5]
+    },
+    {
+      "a": "Subscribe to The Morning Altar",
+      "img": "short-morningpsalm5-scene-07.jpg",
+      "kicker": "DAILY SUNRISE",
+      "sub": "WALK IN PEACE TODAY",
+      "cam": "pull_out",
+      "focus": [0.5, 0.35]
+    }
+  ],
+  "captions": [
+    [0, 13, "Before the rush begins and before your phone demands your attention, pause in the quiet dawn."],
+    [14, 27, "Psalm 5 verse 3 declares: My voice shalt thou hear in the morning, O Lord."],
+    [28, 41, "In the morning will I direct my prayer unto thee, and will look up."],
+    [42, 56, "Do not carry yesterday's heaviness into this fresh sunrise that God has prepared."],
+    [57, 71, "Father, order our steps today, guard our words, and steady our minds in your truth."],
+    [72, 87, "For thou, Lord, wilt bless the righteous; compass us with thy favour as with a shield."],
+    [88, 104, "Type Amen to claim this morning covering, and subscribe to The Morning Altar to pray every sunrise."]
+  ],
+  "kinetic_phrases": [
+    [0, 13, ["BEFORE THE RUSH BEGINS", "PAUSE IN THE", "QUIET DAWN"], ["DAWN"], "PSALM 5:3"],
+    [14, 27, ["MY VOICE SHALT THOU", "HEAR IN THE MORNING", "O LORD"], ["MORNING"], "PSALM 5:3"],
+    [28, 41, ["IN THE MORNING WILL I", "DIRECT MY PRAYER", "AND WILL LOOK UP"], ["LOOK"], "PSALM 5:3"],
+    [42, 56, ["RELEASE YESTERDAY", "STEP INTO THIS", "FRESH SUNRISE"], ["SUNRISE"], "PSALM 5:3"],
+    [57, 71, ["FATHER ORDER OUR STEPS", "GUARD OUR WORDS", "STEADY OUR MINDS"], ["STEADY"], "PSALM 5:8"],
+    [72, 87, ["THOU WILT BLESS", "THE RIGHTEOUS WITH", "FAVOUR AS A SHIELD"], ["SHIELD"], "PSALM 5:12"],
+    [88, 104, ["TYPE AMEN IN FAITH", "SUBSCRIBE TO", "THE MORNING ALTAR"], ["SUBSCRIBE"], "PSALM 5:12"]
+  ],
+  "beats": [
+    {"a": "Before the rush begins", "kind": "phrase", "words": ["QUIET", "DAWN"], "hi": 0, "slot": "C"},
+    {"a": "My voice shalt thou hear in the morning", "kind": "quote", "words": ["MORNING"], "hi": 0, "slot": "C"},
+    {"a": "in the morning will I direct my prayer", "kind": "quote", "words": ["DIRECT", "PRAYER"], "hi": 0, "slot": "C"},
+    {"a": "and will look up", "kind": "quote", "words": ["LOOK", "UP"], "hi": 0, "slot": "C"},
+    {"a": "Father order our steps today", "kind": "phrase", "words": ["ORDER", "STEPS"], "hi": 0, "slot": "C"},
+    {"a": "compass us with thy favour as with a shield", "kind": "quote", "words": ["FAVOUR", "SHIELD"], "hi": 1, "slot": "C"},
+    {"a": "subscribe to The Morning Altar", "kind": "phrase", "words": ["MORNING", "ALTAR"], "hi": 0, "slot": "C"}
+  ],
+  "scripture": "Psalm 5"
+}

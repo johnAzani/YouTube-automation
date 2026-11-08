@@ -14,6 +14,7 @@ import argparse
 import json
 import os
 import re
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
@@ -36,6 +37,29 @@ from pipeline.upload import apply_shorts_thumbnail, set_video_thumbnail
 #: Stop retrying a Short whose thumbnail YouTube keeps refusing (no YPP, bad token
 #: scope): five honest attempts, then a human decides. `--force` clears the block.
 SHORTS_MAX_ATTEMPTS = 5
+
+#: Hours to back off when YouTube returns `uploadRateLimitExceeded` ("uploaded too
+#: many thumbnails recently"), saving 50 YouTube Data API quota units per 30m pass.
+THUMBNAIL_RATE_LIMIT_COOLDOWN_HOURS = 6
+
+
+def _cooldown_active(meta: dict[str, Any], now: datetime | None = None) -> str | None:
+    raw = str(meta.get("thumbnail_retry_after") or "").strip()
+    if not raw:
+        return None
+    try:
+        until = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if until.tzinfo is None:
+        until = until.replace(tzinfo=timezone.utc)
+    ref = now or datetime.now(timezone.utc)
+    return raw if until > ref else None
+
+
+def _is_thumbnail_rate_limited(status: Any) -> bool:
+    low = str(status or "").lower()
+    return "uploadratelimitexceeded" in low or "uploaded too many thumbnails" in low
 
 # Curated 3-word mobile-maximised hooks for the initial published prayers so we do
 # not have to alter historical frontmatter that existing unit tests assert against.
@@ -132,6 +156,11 @@ def collect_pending_receipts(
         rev = str(doc.meta.get("thumbnail_revision", "") or "").strip()
         if not force and rev == THUMBNAIL_REVISION:
             continue
+        if not force:
+            wait_until = _cooldown_active(doc.meta)
+            if wait_until:
+                print(f"[thumb-sync] skip {path.name}: uploadRateLimitExceeded cooldown until {wait_until}")
+                continue
         pending.append((path, doc))
     return pending
 
@@ -180,6 +209,11 @@ def collect_pending_short_receipts(
                   f"attempts (last: {str(doc.meta.get('thumbnail_error') or '')[:120]!r}); "
                   f"run with --force to retry")
             continue
+        if not force:
+            wait_until = _cooldown_active(doc.meta)
+            if wait_until:
+                print(f"[thumb-sync] skip {path.name}: uploadRateLimitExceeded cooldown until {wait_until}")
+                continue
         pending.append((path, doc))
     return pending
 
@@ -457,9 +491,11 @@ def sync_published_thumbnails(
                 if status == "ok":
                     # The refusal sentence describes a failure that no longer exists.
                     clear_frontmatter_field(path, "thumbnail_error")
+                    clear_frontmatter_field(path, "thumbnail_retry_after")
                     stamp_frontmatter_field(path, "thumbnail_revision", THUMBNAIL_REVISION)
                     stamp_frontmatter_field(path, "thumbnail_pending", False)
                 elif "HttpError 404" in str(status):
+                    clear_frontmatter_field(path, "thumbnail_retry_after")
                     stamp_frontmatter_field(path, "youtube_status", "deleted_or_missing")
                     stamp_frontmatter_field(path, "thumbnail_revision", THUMBNAIL_REVISION)
                     stamp_frontmatter_field(path, "thumbnail_pending", False)
@@ -468,13 +504,21 @@ def sync_published_thumbnails(
                     # put the API's own words in the frontmatter — "no thumbnail"
                     # with no reason is what made this invisible for two videos.
                     stamp_frontmatter_field(path, "thumbnail_pending", True)
-                    # Long enough to keep the diagnosis (`same_channel=`, `upload_status=`)
-                    # that explains *why* the refusal happened.
                     stamp_frontmatter_field(path, "thumbnail_error", str(status)[:900])
-                    print(f"::warning title=Thumbnail still refused "
-                          f"({profile.id})::{vid} — {status}. The receipt keeps "
-                          f"thumbnail_pending: true and the next monitor pass retries "
-                          f"it (50 quota units per attempt).")
+                    if _is_thumbnail_rate_limited(status):
+                        retry_at = (
+                            datetime.now(timezone.utc)
+                            + timedelta(hours=THUMBNAIL_RATE_LIMIT_COOLDOWN_HOURS)
+                        ).strftime("%Y-%m-%dT%H:%M:%SZ")
+                        stamp_frontmatter_field(path, "thumbnail_retry_after", retry_at)
+                        print(f"::warning title=Thumbnail rate-limited "
+                              f"({profile.id})::{vid} — backing off until {retry_at} "
+                              f"to preserve daily YouTube API quota.")
+                    else:
+                        print(f"::warning title=Thumbnail still refused "
+                              f"({profile.id})::{vid} — {status}. The receipt keeps "
+                              f"thumbnail_pending: true and the next monitor pass retries "
+                              f"it (50 quota units per attempt).")
         print(f"::notice title=Live thumbnail sync::{json.dumps(row)}")
         results.append(row)
 
@@ -508,6 +552,7 @@ def sync_published_thumbnails(
                 stamp_frontmatter_field(path, "thumbnail_pending", False)
                 stamp_frontmatter_field(path, "thumbnail_attempts", 0)
                 clear_frontmatter_field(path, "thumbnail_error")
+                clear_frontmatter_field(path, "thumbnail_retry_after")
                 stamp_frontmatter_field(
                     path, "thumbnail_poster",
                     "[" + ", ".join(json.dumps(str(x)) for x in poster.lines) + "]",
@@ -519,7 +564,14 @@ def sync_published_thumbnails(
                     seen = int(doc.meta.get("thumbnail_attempts") or 0)
                 except (TypeError, ValueError):
                     seen = 0
-                stamp_frontmatter_field(path, "thumbnail_attempts", seen + 1)
+                if _is_thumbnail_rate_limited(status):
+                    retry_at = (
+                        datetime.now(timezone.utc)
+                        + timedelta(hours=THUMBNAIL_RATE_LIMIT_COOLDOWN_HOURS)
+                    ).strftime("%Y-%m-%dT%H:%M:%SZ")
+                    stamp_frontmatter_field(path, "thumbnail_retry_after", retry_at)
+                else:
+                    stamp_frontmatter_field(path, "thumbnail_attempts", seen + 1)
                 stamp_frontmatter_field(path, "thumbnail_pending", True)
                 stamp_frontmatter_field(path, "thumbnail_error", str(status)[:900])
                 print(f"::warning title=Shorts thumbnail not applied "

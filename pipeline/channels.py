@@ -173,9 +173,12 @@ def add_channel_arg(parser) -> None:
 
 def apply_channel_env(channel_id: str | None = None) -> str:
     """Resolve `channel_id` and map its prefixed secrets onto canonical env vars."""
-    explicit = channel_id or os.environ.get("CHANNEL_ID")
+    prev_raw = (os.environ.get("CHANNEL_ID") or "").strip()
+    prev_cid = normalize_channel_id(prev_raw) if prev_raw else ""
+    explicit = channel_id or prev_raw
     cid = normalize_channel_id(explicit)
     if explicit:
+        already_scoped = bool(prev_raw) and prev_cid == cid
         os.environ["CHANNEL_ID"] = cid
         profile = get_channel(cid)
         if profile.secret_prefix:
@@ -189,7 +192,10 @@ def apply_channel_env(channel_id: str | None = None) -> str:
             for canonical, prefixed in mapping.items():
                 if prefixed in os.environ and os.environ[prefixed]:
                     os.environ[canonical] = os.environ[prefixed]
-                elif prefixed not in os.environ:
+                elif prefixed not in os.environ and not already_scoped:
+                    # Only clear inherited canonical vars when switching from an
+                    # unscoped/other channel; preserve vars already mapped for `cid`
+                    # by the workflow job `env:` block.
                     os.environ.pop(canonical, None)
     return cid
 

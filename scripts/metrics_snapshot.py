@@ -135,9 +135,54 @@ def _post_github_issue(
             check=False, capture_output=True, text=True, env=env,
         )
         if proc.returncode == 0:
-            print(f"analytics snapshot issue created: {(proc.stdout or '').strip()[:200]}")
+            created_out = (proc.stdout or "").strip()
+            print(f"analytics snapshot issue created: {created_out[:200]}")
+            _close_superseded_snapshot_issues(brand_name, created_out, env=env)
     except Exception as exc:
         print(f"analytics issue creation skipped: {exc!r}")
+
+
+def _close_superseded_snapshot_issues(brand_name: str, created_url: str, *, env: dict) -> list[int]:
+    """Close older open analytics snapshot issues for the same channel once a new one is filed."""
+    import re
+    from pipeline.channels import DEFAULT_CHANNEL_ID, normalize_channel_id
+
+    m = re.search(r"/issues/(\d+)\s*$", created_url or "")
+    keep_num = int(m.group(1)) if m else 0
+    found = subprocess.run(
+        [
+            "gh", "issue", "list", "--state", "open",
+            "--search", '"Channel Analytics Snapshot" in:title',
+            "--json", "number,title", "--limit", "50",
+        ],
+        check=False, capture_output=True, text=True, env=env,
+    )
+    if found.returncode != 0:
+        return []
+    try:
+        rows = json.loads(found.stdout or "[]")
+    except (ValueError, TypeError):
+        return []
+    prefixes = {f"📊 Channel Analytics Snapshot ({brand_name}):"}
+    if normalize_channel_id(os.environ.get("CHANNEL_ID")) == DEFAULT_CHANNEL_ID:
+        prefixes.add("📊 Channel Analytics Snapshot:")
+    closed: list[int] = []
+    for row in rows:
+        num = int(row.get("number") or 0)
+        t = str(row.get("title") or "")
+        if not num or num == keep_num:
+            continue
+        if any(t.startswith(p) for p in prefixes):
+            res = subprocess.run(
+                [
+                    "gh", "issue", "close", str(num),
+                    "--comment", "Closing automatically: superseded by a newer weekly analytics snapshot.",
+                ],
+                check=False, capture_output=True, text=True, env=env,
+            )
+            if res.returncode == 0:
+                closed.append(num)
+    return closed
 
 
 def scopes_for_refresh() -> list[str]:
