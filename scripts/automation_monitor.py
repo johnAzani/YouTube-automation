@@ -302,7 +302,7 @@ def last_commit_for(path: Path) -> datetime | None:
 
 #: Underlying Python modules whose edits fix or alter a scheduled workflow's behavior.
 WORKFLOW_CODE_PATHS: dict[str, tuple[str, ...]] = {
-    "gemini_brain.yml": ("pipeline/gemini_brain.py", "scripts/gemini_brain.py", "pipeline/supply.py"),
+    "gemini_brain.yml": ("pipeline/gemini_brain.py", "scripts/gemini_brain.py", "pipeline/supply.py", "scripts/continuous_research.py"),
     "community.yml": ("pipeline/community_posts.py", "scripts/post_community.py"),
     "metrics.yml": ("scripts/metrics_snapshot.py", "pipeline/channels.py"),
     "produce.yml": ("pipeline/run.py", "pipeline/prayer_pipeline.py", "pipeline/prayer_alignment.py", "pipeline/short_release.py"),

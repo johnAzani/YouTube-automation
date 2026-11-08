@@ -49,8 +49,13 @@ from scripts.continuous_research import SCRIPTURE_ROADMAP, roadmap_for_channel
 
 
 _BOOK_RE = re.compile(
-    r"(?i)\b((?:[12]\s+)?(?:Psalm[s]?|Proverbs|Isaiah|Matthew|Mark|Luke|John|"
-    r"Romans|Corinthians|Philippians|Ephesians|Timothy|Peter|Numbers|Joshua|Hebrews|Lamentations))"
+    r"(?i)\b((?:[123]\s+)?(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|"
+    r"Judges|Ruth|Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalm[s]?|"
+    r"Proverbs|Ecclesiastes|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|"
+    r"Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|"
+    r"Malachi|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians|Ephesians|"
+    r"Philippians|Colossians|Thessalonians|Timothy|Titus|Philemon|Hebrews|James|"
+    r"Peter|Jude|Revelation))"
     r"\s+(\d+)(?::(\d+(?:[–\-]\d+(?:,\s*\d+)?)?))?"
 )
 
@@ -1087,6 +1092,7 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         for model in text_model_candidates(self.model):
             if model in RETIRED_TEXT_MODELS:
                 continue
+            model_exhausted = False
             for attempt in (1, 2):
                 contents = prompt if attempt == 1 else (
                     f"{prompt}\n\nPrevious output was rejected: {last_error}\n"
@@ -1119,14 +1125,28 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                     except BrainAuthoringError:
                         raise
                     except Exception as exc:  # noqa: BLE001
+                        err_lower = str(exc).lower()
                         if is_model_retired(exc):
                             report_retired_model(model, exc)
                             resp = None
+                            model_exhausted = True
+                            break
+                        if "429" in err_lower or "resource_exhausted" in err_lower or "quota" in err_lower:
+                            # Free-tier daily quotas are enforced per model
+                            # (GenerateRequestsPerDayPerProjectPerModel-FreeTier),
+                            # e.g. 20/day on 3.6-flash vs 500/day on 3.5-flash-lite.
+                            # Skip remaining attempts on this model and try the next
+                            # candidate in the chain instead of aborting the whole pass.
+                            last_error = f"{model}: quota exhausted ({exc})"
+                            resp = None
+                            model_exhausted = True
                             break
                         if not is_transient(exc):
                             raise
+                if model_exhausted:
+                    break
                 if resp is None:
-                    last_error = f"{model}: no answer"
+                    last_error = last_error or f"{model}: no answer"
                     continue
                 try:
                     data = parse_model_json(getattr(resp, "text", "") or "")
@@ -1151,7 +1171,12 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         raise BrainAuthoringError(
             f"{scripture} Short spec rejected on every candidate model: {last_error}")
 
-    def generate_companion_short(self, longform_doc: ScriptDoc) -> tuple[Path, str]:
+    def generate_companion_short(
+        self,
+        longform_doc: ScriptDoc,
+        *,
+        require_renderable: bool = False,
+    ) -> tuple[Optional[Path], str]:
         """Queue a companion 9:16 Short for this long-form video.
 
         Two defects this replaces:
@@ -1163,8 +1188,12 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
           script existed for the key, so production skipped it silently forever.
 
         Now the brain *authors* the Short as a validated spec, which the renderer
-        picks up from ``content/shorts-scripts/``. If authoring fails the manifest
-        stays a draft that says why.
+        picks up from ``content/shorts-scripts/``. If authoring fails, direct
+        callers keep a draft manifest explaining why, while autonomous staging
+        callers (`require_renderable=True`) defer writing the manifest so
+        ``content/shorts-queue/`` never accumulates unrenderable ``needs_renderer``
+        files that break queue integrity gates; ``replenish_shorts_queue()`` will
+        retry cleanly on the next pass.
         """
         if longform_doc.channel != self.channel_id:
             # Cross-channel protection, identical in both directions: a brain
@@ -1192,6 +1221,14 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                 authoring_note = f"authoring failed: {exc}"
 
         renderable = key in _renderer_script_keys()
+        if require_renderable and not renderable:
+            print(
+                f"[gemini-brain] Deferring companion Short manifest {manifest_filename} "
+                f"until spec is renderable ({authoring_note[:160]})",
+                flush=True,
+            )
+            return None, key
+
         manifest_data = {
             "short": key,
             # Every manifest names its channel. Without this the shared queue
@@ -1351,7 +1388,15 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                 continue
             if cand_key not in renderable and not self.is_api_available():
                 continue
-            mpath, mkey = self.generate_companion_short(qdoc)
+            mpath, mkey = self.generate_companion_short(qdoc, require_renderable=True)
+            if mpath is None:
+                rows.append({
+                    "file": f"{qdoc.id}-{mkey}.yml",
+                    "key": mkey,
+                    "verdict": "failed",
+                    "reason": "spec authoring failed; manifest deferred to keep shorts-queue clean",
+                })
+                continue
             mdata = yaml.safe_load(mpath.read_text(encoding="utf-8")) or {}
             verdict = "authored" if mdata.get("status") == "approved" else "failed"
             if verdict == "authored":
@@ -1408,7 +1453,7 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         factcheck_main([str(script_path), "--force"])
         factcheck_path = out_path(doc)
 
-        short_path, _ = self.generate_companion_short(doc)
+        short_path, _ = self.generate_companion_short(doc, require_renderable=True)
 
         return BrainGenerationResult(
             job_id=doc.id,

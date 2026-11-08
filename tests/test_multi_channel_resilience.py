@@ -748,6 +748,107 @@ goes before you until evening falls and brings your labor to peaceful completion
                 closed = rr.sweep_stale_release_issues("johnAzani/YouTube-automation", published_dir=Path(tmp))
             self.assertEqual(closed, [248, 78])
 
+    def test_every_scheduled_channel_maintains_deep_roadmap_headroom(self):
+        """Every live channel must keep >=15 unqueued/unpublished scriptures and unique Short keys."""
+        from pipeline.channel_capabilities import brand_for
+        from pipeline.channels import scheduled_channels
+        from pipeline.gemini_brain import GeminiBrain, extract_scripture_reference, short_key_for_doc
+        from scripts.continuous_research import roadmap_for_channel
+
+        existing_ids = {p.name[:4] for p in (ROOT / "content" / "queue").glob("[0-9]*.md")} | {
+            p.name[:4] for p in (ROOT / "content" / "published").glob("[0-9]*.md")
+        }
+        seen_global_ids: set[str] = set()
+        for cid in scheduled_channels():
+            rm = roadmap_for_channel(cid)
+            brand = brand_for(cid)
+            eligible = [row for row in rm if row["id"] not in existing_ids]
+            self.assertGreaterEqual(
+                len(eligible),
+                15,
+                f"{cid} has only {len(eligible)} unqueued scriptures left in its roadmap",
+            )
+            brain = GeminiBrain(api_key="", channel_id=cid)
+            cand = brain.select_next_scripture()
+            self.assertIn(cand, eligible)
+
+            seen_channel_keys: set[str] = set()
+            for row in rm:
+                rid = row["id"]
+                self.assertNotIn(rid, seen_global_ids, f"duplicate roadmap id {rid}")
+                seen_global_ids.add(rid)
+                fake_doc = SimpleNamespace(
+                    id=rid,
+                    channel=cid,
+                    title=f"{row['scripture']} Prayer {brand.title_suffix}",
+                    slug=f"{rid}-test",
+                )
+                ref = extract_scripture_reference(fake_doc)
+                self.assertTrue(ref)
+                skey = short_key_for_doc(fake_doc)
+                self.assertRegex(skey, r"^short-[a-z0-9]+$")
+                self.assertNotIn(skey, seen_channel_keys, f"Short key collision {skey} in {cid}")
+                seen_channel_keys.add(skey)
+
+    def test_author_short_spec_advances_on_per_model_429_quota(self):
+        """A 429 on one model (e.g. 20/day 3.6-flash) skips remaining attempts on it and tries the next."""
+        from pipeline import gemini_brain as gb
+        from pipeline.script_doc import parse_script
+
+        valid_spec_json = (ROOT / "content" / "shorts-scripts" / "short-middaypsalm37v5.json").read_text(encoding="utf-8")
+        doc = parse_script(ROOT / "content" / "queue" / "0051-psalm-37-5-midday-prayer.md")
+
+        brain = gb.GeminiBrain(api_key="", channel_id="prayer3")
+        calls: list[str] = []
+
+        def fake_generate(model: str, contents: str, config=None):
+            calls.append(model)
+            if model == calls[0] and calls.count(model) == 1:
+                raise RuntimeError("429 RESOURCE_EXHAUSTED: limit 20 for model")
+            return SimpleNamespace(text=valid_spec_json)
+
+        brain._client = SimpleNamespace(models=SimpleNamespace(generate_content=fake_generate))
+        with mock.patch.object(gb, "_TRANSIENT_BACKOFF", ()), mock.patch("builtins.print"):
+            spec = brain.author_short_spec(doc, key="short-middaypsalm37v5")
+
+        self.assertEqual(spec.key, "short-middaypsalm37v5")
+        self.assertEqual(calls.count(calls[0]), 1, "must not burn a second attempt on a 429 model")
+        self.assertEqual(len(calls), 2, "must escalate to the next model in the chain")
+
+    def test_require_renderable_defers_manifest_instead_of_polluting_shorts_queue(self):
+        """Autonomous staging never writes broken `needs_renderer` manifests into shorts-queue."""
+        from pipeline import gemini_brain as gb
+        from pipeline import short_release as sr
+        from pipeline.script_doc import parse_script
+
+        doc = parse_script(ROOT / "content" / "queue" / "0051-psalm-37-5-midday-prayer.md")
+        with tempfile.TemporaryDirectory() as tmp:
+            qdir = Path(tmp) / "shorts-queue"
+            brain = gb.GeminiBrain(api_key="", channel_id="prayer3")
+            with mock.patch.object(gb, "SHORTS_QUEUE_DIR", qdir), \
+                 mock.patch.object(sr, "_renderer_script_keys", return_value=set()), \
+                 mock.patch("builtins.print"):
+                mpath, mkey = brain.generate_companion_short(doc, require_renderable=True)
+                self.assertIsNone(mpath)
+                self.assertEqual(mkey, "short-middaypsalm37v5")
+                self.assertEqual(list(qdir.glob("*.yml")), [])
+
+    def test_expanded_book_regex_parses_epistles_and_prophets_cleanly(self):
+        """Expanded `_BOOK_RE` extracts clean references and Short keys across OT/NT books."""
+        from pipeline.gemini_brain import extract_scripture_reference, short_key_for_doc
+
+        samples = [
+            ("2 Samuel 23:4 Morning Prayer | The Morning Altar", "prayer2", "2 Samuel 23:4", "short-morning2samuel23v4"),
+            ("2 Chronicles 20:12 Midday Prayer | The Midday Watch", "prayer3", "2 Chronicles 20:12", "short-midday2chronicles20v12"),
+            ("1 Thessalonians 5:16-18 Midday Prayer | The Midday Watch", "prayer3", "1 Thessalonians 5:16-18", "short-midday1thessalonians5v16"),
+            ("Zephaniah 3:17 Night Prayer | The Secret Place", "secret-place", "Zephaniah 3:17", "short-zephaniah3v17"),
+            ("1 John 4:18 Night Prayer | The Secret Place", "secret-place", "1 John 4:18", "short-1john4v18"),
+        ]
+        for title, cid, expected_ref, expected_key in samples:
+            doc = SimpleNamespace(id="9999", channel=cid, title=title, slug="test")
+            self.assertEqual(extract_scripture_reference(doc), expected_ref)
+            self.assertEqual(short_key_for_doc(doc), expected_key)
+
 
 if __name__ == "__main__":
     unittest.main()
