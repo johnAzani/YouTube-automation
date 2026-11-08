@@ -82,6 +82,7 @@ youtube_video_id: "xjiV3SHKsR4"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
+metadata_revision: "selar-seo-v1"
 ---
 
 ## Scene 1 — The Noonday Hook & The Pause

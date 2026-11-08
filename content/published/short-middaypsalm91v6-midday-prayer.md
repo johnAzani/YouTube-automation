@@ -23,6 +23,7 @@ thumbnail_channel_grade: "noon"
 thumbnail_poster: ["PAUSE AT NOON", "PSALM 91:6", "MIDDAY WATCH", "DAILY PRAYER"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+metadata_revision: "selar-seo-v1"
 ---
 
 Pause where you are right now and step away from your busy day. The bright midday sun shines high above, reminding us of God's constant light over our daily lives. Psalm 91:6 reminds us: nor the pestilence that walks in darkness, nor the destruction that lays waste at noonday. In this quiet midday moment, bring your heart before the Lord. Heavenly Father, protect our minds and bodies from every subtle attack and every sudden trial that seeks to disrupt our peace today. Shield us softly under your loving wings through these afternoon hours, so we may walk in faith without fear or any anxiety. Subscribe to The Midday Watch to pause and pray with us every noon.

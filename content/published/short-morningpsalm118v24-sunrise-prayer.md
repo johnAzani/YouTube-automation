@@ -23,6 +23,7 @@ thumbnail_channel_grade: "dawn"
 thumbnail_poster: ["THIS IS THE DAY", "THE LORD HAS MADE", "LET US REJOICE", "AND BE GLAD IN IT"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+metadata_revision: "selar-seo-v1"
 ---
 
 Slowly open your eyes and take a deep breath, welcoming the quiet grace of this new morning light. This is the day the Lord has made, let us rejoice and be glad in it, finding peace in His promise. Offer your heart to Him, releasing the burdens of yesterday, and trusting that His mercies are truly brand new. Walk in His grace, let His strength be your steady foundation, and remain anchored in the hope of His love. Whatever challenges arise, know that you are held by the Creator who sustains the sun and the morning tide. Go forth in light, carry this stillness into your tasks, and keep your soul turned toward His holy peace. May your spirit remain centered, may your mind be calm, and may your steps be ordered by His perfect will. Thank you for joining The Morning Altar, subscribe now and begin every single sunrise in sacred prayer.

@@ -24,6 +24,7 @@ thumbnail_attempts: 0
 thumbnail_poster: ["BEGIN YOUR", "DAY IN QUIET", "PRAYER WITH THE MORNING ALTAR", "THE MORNING ALTAR"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+metadata_revision: "selar-seo-v1"
 ---
 
 Quiet your heart as the world wakes up around you. Before the demands of the day pull at your thoughts, step into the quiet. The gospel records a profound rhythm in the life of Jesus. Very early in the morning, while it was still dark, Jesus got up, left the house and went off to a solitary place, where he prayed. Lord, grant us that same hunger for your presence as this new day begins. Quiet our anxious thoughts, anchor our hearts in your peace, and walk with us through every moment ahead. Amen.

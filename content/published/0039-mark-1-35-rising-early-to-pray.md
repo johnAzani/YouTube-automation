@@ -91,6 +91,7 @@ youtube_video_id: "Nq7a1yC4Rzw"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
+metadata_revision: "selar-seo-v1"
 ---
 
 ## Scene 1 — Rising up a Great While Before Day (Mark 1:35)

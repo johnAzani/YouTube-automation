@@ -91,6 +91,7 @@ youtube_video_id: "3tm3_lNvoGM"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
+metadata_revision: "selar-seo-v1"
 ---
 
 ## Scene 1 — It Is of the Lord's Mercies That We Are Not Consumed (Lamentations 3:22)

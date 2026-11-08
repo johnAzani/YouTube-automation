@@ -23,6 +23,7 @@ thumbnail_channel_grade: "dawn"
 thumbnail_poster: ["THE MORNING ALTAR", "PROVERBS 3:5-6", "TRUST IN THE LORD", "START YOUR DAY IN PRAYER"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+metadata_revision: "selar-seo-v1"
 ---
 
 Welcome this new morning and lay your heart open before the Lord. As light rises over the horizon, receive His holy word from Proverbs 3:5-6: Trust in the Lord with all your heart, and lean not on your own understanding; in all your ways acknowledge Him, and He shall direct your paths. Heavenly Father, as this day begins, we surrender our plans to You. Forgive our urge to control what we cannot see. Grant us the stillness to trust Your guidance and the courage to follow Your lead. Walk before us today and align our steps with Your perfect will. Amen. Subscribe to The Morning Altar to begin every sunrise in prayer.

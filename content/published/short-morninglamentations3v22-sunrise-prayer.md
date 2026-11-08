@@ -24,6 +24,7 @@ thumbnail_attempts: 0
 thumbnail_poster: ["THE MORNING ALTAR", "GREAT IS FAITHFULNESS", "LAMENTATIONS 3:22-23", "SUNRISE PRAYER"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+metadata_revision: "selar-seo-v1"
 ---
 
 Open your eyes to this gentle morning and breathe in the quiet stillness of dawn. As the soft light breaks across the horizon, open your heart to receive the faithful promise of God. Scripture tells us: 'Because of the Lord's great love we are not consumed, for his compassions never fail. They are new every morning; great is your faithfulness.' Heavenly Father, we anchor our souls in Your endless mercy today. Wash away yesterday's heavy burdens and renew our spirits with Your peace. Teach us to walk in Your unconditional love as this new day begins. May Your presence guide our every step and fill our hearts with hope. Subscribe to The Morning Altar to begin every sunrise in prayer.

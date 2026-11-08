@@ -24,6 +24,7 @@ thumbnail_kicker: "PAUSE AND PRAY AT NOON"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
 thumbnail_revision: "shorts-poster-v1"
 thumbnail_attempts: 0
+metadata_revision: "selar-seo-v1"
 ---
 
 Take a moment to pause whatever you are doing right now. The world is noisy and fast, but this midday hour is for you to rest. In the scripture of Psalm 55:17, we find these words: Evening, and morning, and at noon, will I pray, and cry aloud: and he shall hear my voice. Let us offer a simple prayer together in this quiet space today. Heavenly Father, thank you for this midday moment of quiet reflection. Grant us the wisdom to hear your voice clearly amidst the busy day.

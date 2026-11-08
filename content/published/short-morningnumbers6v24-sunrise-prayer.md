@@ -23,6 +23,7 @@ thumbnail_channel_grade: "dawn"
 thumbnail_poster: ["GREET", "THE", "NEW", "DAWN"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+metadata_revision: "selar-seo-v1"
 ---
 
 Welcome the morning light. The Lord bless you and keep you. The Lord make his face shine upon you, and be gracious to you. The Lord lift up his countenance upon you, and give you peace. May this truth anchor your soul as you step into the day. May your path be steady, your heart be open, and your spirit remain still. Father, let these words linger in the air long after the sun has risen high. Walk in the assurance of his constant presence, knowing you are never truly alone. Find rest in his promise, carry his light, and please subscribe to join us tomorrow.

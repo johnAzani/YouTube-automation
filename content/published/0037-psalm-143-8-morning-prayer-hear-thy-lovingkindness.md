@@ -91,6 +91,7 @@ published_at: "2026-11-05T21:51:45Z"
 youtube_video_id: "oVy7uG5H1RU"
 thumbnail_pending: false
 thumbnail_revision: "ctr-v3-cinema"
+metadata_revision: "selar-seo-v1"
 ---
 
 ## Scene 1 — Cause Me to Hear Thy Lovingkindness in the Morning (Psalm 143:8)
