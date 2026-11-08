@@ -2,7 +2,7 @@
 id: '0041'
 title: Psalm 118:24 Morning Prayer | The Morning Altar
 slug: psalm-118-24-this-is-the-day-the-lord-hath-made
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -84,6 +84,12 @@ originality:
 originality_note: 100% original theological commentary featuring Charles Spurgeon's
   The Treasury of David and Matthew Henry's Commentary. Zero AI slop, zero generic
   text.
+published_on: "2026-11-08"
+published_at: "2026-11-08T11:45:24Z"
+youtube_video_id: "ciAKb9hv3LY"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — The Sunrise Hook & Directing the Prayer

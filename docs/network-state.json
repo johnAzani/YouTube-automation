@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T09:04:55Z",
+  "generated_at": "2026-11-08T11:45:57Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 3
   },
   "totals": {
-    "published_total": 32,
-    "published_longform": 15,
-    "published_shorts": 17,
-    "public_total": 30,
-    "queued_longform": 28,
-    "queued_shorts": 16,
+    "published_total": 34,
+    "published_longform": 16,
+    "published_shorts": 18,
+    "public_total": 32,
+    "queued_longform": 31,
+    "queued_shorts": 19,
     "automations_ok": 8,
     "automations_total": 10,
     "network_healthy": true
@@ -99,32 +99,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 10,
-        "published_longform": 5,
-        "published_shorts": 5,
-        "public_total": 9,
-        "queued_longform": 4,
+        "published_total": 12,
+        "published_longform": 6,
+        "published_shorts": 6,
+        "public_total": 11,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0040",
-        "title": "Proverbs 3:5-6 Morning Prayer | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "PIPx_odfiag",
-        "watch_url": "https://youtu.be/PIPx_odfiag",
-        "published_on": "2026-11-07",
-        "published_at": "2026-11-07T23:32:11Z"
-      },
-      "next_queued_longform": {
         "id": "0041",
         "title": "Psalm 118:24 Morning Prayer | The Morning Altar",
-        "words": 1842,
+        "format": "longform",
+        "youtube_video_id": "ciAKb9hv3LY",
+        "watch_url": "https://youtu.be/ciAKb9hv3LY",
+        "published_on": "2026-11-08",
+        "published_at": "2026-11-08T11:45:24Z"
+      },
+      "next_queued_longform": {
+        "id": "0042",
+        "title": "Numbers 6:24-26 Morning Prayer | The Morning Altar",
+        "words": 1656,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm5",
-        "scripture": "Psalm 5",
+        "short": "short-morningpsalm143v8",
+        "scripture": "Psalm 143:8",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -165,9 +165,9 @@
         "published_longform": 3,
         "published_shorts": 2,
         "public_total": 5,
-        "queued_longform": 4,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 7
       },
       "latest_video": {
         "id": "0047",
@@ -211,6 +211,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0041",
+      "slug": "psalm-118-24-this-is-the-day-the-lord-hath-made",
+      "file": "0041-psalm-118-24-this-is-the-day-the-lord-hath-made.md",
+      "title": "Psalm 118:24 Morning Prayer | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-08",
+      "published_at": "2026-11-08T11:45:24Z",
+      "youtube_video_id": "ciAKb9hv3LY",
+      "watch_url": "https://youtu.be/ciAKb9hv3LY",
+      "youtu_be_url": "https://youtu.be/ciAKb9hv3LY",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/ciAKb9hv3LY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/ciAKb9hv3LY/hqdefault.jpg",
+      "thumb_text": "THIS IS THE DAY",
+      "duration_label": "~13 min",
+      "words": 1842
+    },
+    {
+      "id": "SHORT-MORNINGPSALM5",
+      "slug": "short-morningpsalm5-sunrise-prayer",
+      "file": "short-morningpsalm5-sunrise-prayer.md",
+      "title": "Say This Psalm 5 Prayer at Sunrise | Prayer #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-08",
+      "published_at": "2026-11-08T10:36:00Z",
+      "youtube_video_id": "T77LF1191Eg",
+      "watch_url": "https://www.youtube.com/shorts/T77LF1191Eg",
+      "youtu_be_url": "https://youtu.be/T77LF1191Eg",
+      "shorts_url": "https://www.youtube.com/shorts/T77LF1191Eg",
+      "studio_url": "https://studio.youtube.com/video/T77LF1191Eg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/T77LF1191Eg/hqdefault.jpg",
+      "thumb_text": "DIRECT \u00b7 YOUR",
+      "duration_label": "50s",
+      "words": 503
+    },
     {
       "id": "0047",
       "slug": "proverbs-16-3-commit-thy-works",
@@ -1211,19 +1257,6 @@
         "words": 1025
       },
       {
-        "id": "0041",
-        "slug": "psalm-118-24-this-is-the-day-the-lord-hath-made",
-        "file": "0041-psalm-118-24-this-is-the-day-the-lord-hath-made.md",
-        "title": "Psalm 118:24 Morning Prayer | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1842
-      },
-      {
         "id": "0042",
         "slug": "numbers-6-24-26-morning-prayer",
         "file": "0042-numbers-6-24-26-morning-prayer.md",
@@ -1313,6 +1346,58 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1695
+      },
+      {
+        "id": "0052",
+        "slug": "psalm-63-1-midday-prayer",
+        "file": "0052-psalm-63-1-midday-prayer.md",
+        "title": "Psalm 63:1 Midday Prayer | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 2549
+      },
+      {
+        "id": "0053",
+        "slug": "psalm-59-16-morning-prayer",
+        "file": "0053-psalm-59-16-morning-prayer.md",
+        "title": "Psalm 59:16 Morning Prayer | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1075
+      },
+      {
+        "id": "0054",
+        "slug": "psalm-88-13-morning-prayer-the-morning-altar",
+        "file": "0054-psalm-88-13-morning-prayer-the-morning-altar.md",
+        "title": "Psalm 88:13 Morning Prayer | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1698
+      },
+      {
+        "id": "0083",
+        "slug": "daniel-6-10-midday-prayer",
+        "file": "0083-daniel-6-10-midday-prayer.md",
+        "title": "Daniel 6:10 Midday Prayer | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1408
       }
     ],
     "shorts": [
@@ -1392,17 +1477,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-morningpsalm5",
-        "file": "0036-short-morningpsalm5.yml",
-        "companion_longform_id": "0036",
-        "scripture": "Psalm 5",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm143v8",
@@ -1486,6 +1560,50 @@
         "file": "0051-short-middaypsalm37v5.yml",
         "companion_longform_id": "0051",
         "scripture": "Psalm 37:5",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
+      },
+      {
+        "short": "short-middaypsalm63v1",
+        "file": "0052-short-middaypsalm63v1.yml",
+        "companion_longform_id": "0052",
+        "scripture": "Psalm 63:1",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
+      },
+      {
+        "short": "short-morningpsalm59v16",
+        "file": "0053-short-morningpsalm59v16.yml",
+        "companion_longform_id": "0053",
+        "scripture": "Psalm 59:16",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
+      },
+      {
+        "short": "short-morningpsalm88v13",
+        "file": "0054-short-morningpsalm88v13.yml",
+        "companion_longform_id": "0054",
+        "scripture": "Psalm 88:13",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
+      },
+      {
+        "short": "short-middaydaniel6v10",
+        "file": "0083-short-middaydaniel6v10.yml",
+        "companion_longform_id": "0083",
+        "scripture": "Daniel 6:10",
         "channel": "prayer3",
         "channel_name": "The Midday Watch",
         "status": "approved",
