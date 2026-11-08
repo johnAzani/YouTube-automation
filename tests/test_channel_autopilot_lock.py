@@ -103,9 +103,21 @@ class TestShortKeyAndNonPsalmIntegrity(unittest.TestCase):
                 self.assertEqual(row["status"], "quota_paused", f"Unexpected manifest status: {row}")
             ed = resolve_edition(row["short"], channel_id=row["channel"])
             self.assertIsNotNone(ed)
-            enriched = enrich_short_description_with_bridge(ed.description, ed.key)
-            self.assertIn(SELAR_JOURNAL_URL, enriched)
-            self.assertIn(SELAR_STORE_URL, enriched)
+            from pipeline.channel_capabilities import brand_for, known_channels
+            from pipeline.channels import get_channel
+
+            enriched = enrich_short_description_with_bridge(
+                ed.description, ed.key, channel_id=row["channel"]
+            )
+            if get_channel(row["channel"]).include_sanctuary_links:
+                self.assertIn(SELAR_JOURNAL_URL, enriched)
+                self.assertIn(SELAR_STORE_URL, enriched)
+            else:
+                self.assertNotIn(SELAR_JOURNAL_URL, enriched)
+                self.assertNotIn(SELAR_STORE_URL, enriched)
+            for other_cid in known_channels():
+                if other_cid != row["channel"]:
+                    self.assertNotIn(brand_for(other_cid).handle, enriched)
 
     def test_deleted_0009_is_never_linked_by_shorts_bridge(self):
         cp = resolve_longform_counterpart("short-psalm23")

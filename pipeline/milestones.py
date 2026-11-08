@@ -104,12 +104,76 @@ def _get_inter_font(size: int, weight: str = "Bold") -> ImageFont.FreeTypeFont |
         return ImageFont.load_default()
 
 
-def get_current_milestone_status(current_subs: int = 1230) -> tuple[MilestoneTier | None, MilestoneTier | None]:
-    """Return (latest_achieved_tier, next_upcoming_tier)."""
+def milestone_tiers_for_channel(channel_id: str | None = None) -> list[MilestoneTier]:
+    """Return channel-scoped subscriber milestone copy with zero cross-channel bleed."""
+    from .channel_capabilities import brand_for
+    from .channels import DEFAULT_CHANNEL_ID, normalize_channel_id
+
+    eff = normalize_channel_id(channel_id or CONFIG.channel_id)
+    if eff == DEFAULT_CHANNEL_ID:
+        return list(MILESTONE_TIERS)
+
+    brand = brand_for(eff)
+    return [
+        MilestoneTier(
+            subs_target=1000,
+            headline="1,000 SOULS IN PRAYER",
+            subheading="TO GOD BE THE GLORY · YPP MILESTONE REACHED",
+            scripture_ref="Psalm 103:1-2",
+            pastoral_message=(
+                "Beloved prayer family, our hearts overflow with gratitude to God. "
+                f"Over 1,000 believers from across the nations have gathered at {brand.display_name} "
+                f"to seek God's presence, wisdom, and peace {brand.milestone_sanctuary_phrase}.\n\n"
+                "'Bless the Lord, O my soul, and forget not all His benefits.' (Psalm 103:2)\n\n"
+                f"Thank you for praying with us {brand.milestone_cadence_phrase}. Let us know in the comments "
+                "what nation you are praying from! Type 'AMEN' and give glory to God! 🙏✨"
+            ),
+        ),
+        MilestoneTier(
+            subs_target=1250,
+            headline="1,250 BELIEVERS UNITED",
+            subheading=brand.milestone_subheading_1250,
+            scripture_ref="Psalm 34:3",
+            pastoral_message=(
+                f"Over 1,250 souls now gather in faith at {brand.display_name} {brand.milestone_cadence_phrase}. "
+                "'Oh, magnify the Lord with me, and let us exalt His name together.' (Psalm 34:3)\n\n"
+                "Drop your prayer requests below — we are interceding over every household represented here. "
+                f"{brand.milestone_closing_blessing}"
+            ),
+        ),
+        MilestoneTier(
+            subs_target=1500,
+            headline="1,500 STRONG IN FAITH",
+            subheading=brand.milestone_subheading_1500,
+            scripture_ref="Psalm 118:23",
+            pastoral_message=(
+                f"1,500 believers standing firm in God's covenant promises at {brand.display_name}. "
+                "'This is the Lord's doing; it is marvellous in our eyes.' (Psalm 118:23)\n\n"
+                f"Write 'AMEN' to claim His faithfulness over your household! {brand.milestone_closing_blessing}"
+            ),
+        ),
+        MilestoneTier(
+            subs_target=2000,
+            headline="2,000 SOULS IN COVENANT",
+            subheading="MULTITUDES GATHERED IN HIS PRESENCE",
+            scripture_ref="Psalm 121:1-2",
+            pastoral_message=(
+                "2,000 faithful praying hearts! Our help comes from the Lord, Maker of heaven and earth. "
+                f"Thank you for making {brand.display_name} {brand.milestone_2000_closing}."
+            ),
+        ),
+    ]
+
+
+def get_current_milestone_status(
+    current_subs: int = 1230,
+    channel_id: str | None = None,
+) -> tuple[MilestoneTier | None, MilestoneTier | None]:
+    """Return (latest_achieved_tier, next_upcoming_tier) for `channel_id`."""
     achieved = None
     upcoming = None
 
-    for tier in MILESTONE_TIERS:
+    for tier in milestone_tiers_for_channel(channel_id):
         if current_subs >= tier.subs_target:
             achieved = tier
         elif upcoming is None:

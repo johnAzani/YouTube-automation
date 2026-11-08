@@ -100,17 +100,37 @@ def resolve_short_key(key_or_title: str) -> str | None:
     return None
 
 
-def _dynamic_counterpart_from_repo(short_key_or_title: str) -> dict[str, Any] | None:
+def playlist_fallback_for_channel(channel_id: str | None = None) -> str:
+    """Official playlists tab URL for `channel_id` (never leaks another channel's handle)."""
+    from .channels import get_channel
+
+    handle = get_channel(channel_id).handle
+    return f"https://www.youtube.com/{handle}/playlists"
+
+
+def _dynamic_counterpart_from_repo(
+    short_key_or_title: str,
+    channel_id: str | None = None,
+) -> dict[str, Any] | None:
     """Resolve any brain-authored Short key against published or queued long-form docs."""
     needle = (short_key_or_title or "").strip().lower()
     if not needle:
         return None
     try:
+        from .channel_capabilities import brand_for, channel_for_short_key
+        from .channels import normalize_channel_id
         from .gemini_brain import extract_scripture_reference, short_key_for_doc
         from .script_doc import parse_script
     except Exception:  # noqa: BLE001
         return None
 
+    inferred_cid = (
+        normalize_channel_id(channel_id)
+        if channel_id
+        else channel_for_short_key(short_key_or_title)
+    )
+
+    pub_docs = []
     for p in sorted(PUBLISHED_DIR.glob("*.md")):
         if p.name.startswith("short-"):
             continue
@@ -118,54 +138,116 @@ def _dynamic_counterpart_from_repo(short_key_or_title: str) -> dict[str, Any] | 
             doc = parse_script(p)
         except Exception:  # noqa: BLE001
             continue
+        if inferred_cid and doc.channel != inferred_cid:
+            continue
         if str(doc.meta.get("youtube_status", "")).strip() == "deleted_or_missing":
             continue
         vid = str(doc.meta.get("youtube_video_id", "")).strip()
         if not vid:
             continue
-        ref = extract_scripture_reference(doc)
-        if short_key_for_doc(doc) == needle or (ref and ref.lower() in needle):
+        pub_docs.append((doc, vid, extract_scripture_reference(doc)))
+
+    # Pass 1: exact Short-key match on published long-form receipts
+    for doc, vid, ref in pub_docs:
+        if short_key_for_doc(doc) == needle:
             return {
                 "found": True,
+                "channel": doc.channel,
                 "video_id": vid,
                 "url": f"https://youtu.be/{vid}",
                 "title": doc.title,
                 "scripture": ref,
-                "theme": "peaceful rest and sovereign nighttime protection",
+                "theme": brand_for(doc.channel).short_bridge_theme,
                 "is_live_video": True,
             }
 
+    # Pass 2: scripture-title substring match on published long-form receipts
+    for doc, vid, ref in pub_docs:
+        if ref and ref.lower() in needle:
+            return {
+                "found": True,
+                "channel": doc.channel,
+                "video_id": vid,
+                "url": f"https://youtu.be/{vid}",
+                "title": doc.title,
+                "scripture": ref,
+                "theme": brand_for(doc.channel).short_bridge_theme,
+                "is_live_video": True,
+            }
+
+    queue_docs = []
     for p in sorted(QUEUE_DIR.glob("*.md")):
         try:
             doc = parse_script(p)
         except Exception:  # noqa: BLE001
             continue
-        ref = extract_scripture_reference(doc)
-        if short_key_for_doc(doc) == needle or (ref and ref.lower() in needle):
-            return {
-                "found": True,
-                "video_id": None,
-                "url": DEFAULT_PLAYLIST_FALLBACK,
-                "title": doc.title,
-                "scripture": ref,
-                "theme": "peaceful rest and sovereign nighttime protection",
-                "is_live_video": False,
-            }
+        if inferred_cid and doc.channel != inferred_cid:
+            continue
+        queue_docs.append((doc, extract_scripture_reference(doc)))
+
+    for exact_only in (True, False):
+        for doc, ref in queue_docs:
+            matched = (
+                short_key_for_doc(doc) == needle
+                if exact_only
+                else bool(ref and ref.lower() in needle)
+            )
+            if matched:
+                return {
+                    "found": True,
+                    "channel": doc.channel,
+                    "video_id": None,
+                    "url": playlist_fallback_for_channel(doc.channel),
+                    "title": doc.title,
+                    "scripture": ref,
+                    "theme": brand_for(doc.channel).short_bridge_theme,
+                    "is_live_video": False,
+                }
     return None
 
 
-def resolve_longform_counterpart(short_key_or_title: str) -> dict[str, Any]:
+def resolve_longform_counterpart(
+    short_key_or_title: str,
+    channel_id: str | None = None,
+) -> dict[str, Any]:
     """Find the live or scheduled long-form video matching a Short."""
-    dyn = _dynamic_counterpart_from_repo(short_key_or_title)
+    from .channel_capabilities import brand_for, channel_for_short_key
+    from .channels import DEFAULT_CHANNEL_ID, normalize_channel_id
+
+    inferred_cid = (
+        normalize_channel_id(channel_id)
+        if channel_id
+        else channel_for_short_key(short_key_or_title)
+    )
+
+    dyn = _dynamic_counterpart_from_repo(short_key_or_title, channel_id=inferred_cid)
     if dyn is not None:
         return dyn
+
+    eff_cid = inferred_cid or DEFAULT_CHANNEL_ID
+    brand = brand_for(eff_cid)
+    fallback_url = playlist_fallback_for_channel(eff_cid)
+
+    # SHORT_LONGFORM_CATALOG holds only the primary channel's historic Psalm masters;
+    # non-default channels never inherit another channel's video IDs or handles.
+    if eff_cid != DEFAULT_CHANNEL_ID:
+        return {
+            "found": False,
+            "channel": eff_cid,
+            "url": fallback_url,
+            "title": brand.short_fallback_title,
+            "theme": brand.short_bridge_theme,
+            "is_live_video": False,
+        }
 
     short_key = resolve_short_key(short_key_or_title)
     if not short_key or short_key not in SHORT_LONGFORM_CATALOG:
         return {
             "found": False,
-            "url": DEFAULT_PLAYLIST_FALLBACK,
-            "title": "Night Prayers of Divine Protection",
+            "channel": eff_cid,
+            "url": fallback_url,
+            "title": brand.short_fallback_title,
+            "theme": brand.short_bridge_theme,
             "is_live_video": False,
         }
 
@@ -193,6 +275,7 @@ def resolve_longform_counterpart(short_key_or_title: str) -> dict[str, Any]:
                 vid = m.group(1)
                 return {
                     "found": True,
+                    "channel": eff_cid,
                     "video_id": vid,
                     "url": f"https://youtu.be/{vid}",
                     "title": info["title"],
@@ -205,6 +288,7 @@ def resolve_longform_counterpart(short_key_or_title: str) -> dict[str, Any]:
     if fallback_vid:
         return {
             "found": True,
+            "channel": eff_cid,
             "video_id": fallback_vid,
             "url": f"https://youtu.be/{fallback_vid}",
             "title": info["title"],
@@ -216,8 +300,9 @@ def resolve_longform_counterpart(short_key_or_title: str) -> dict[str, Any]:
     # 3. Fallback to Series Playlist
     return {
         "found": True,
+        "channel": eff_cid,
         "video_id": None,
-        "url": DEFAULT_PLAYLIST_FALLBACK,
+        "url": fallback_url,
         "title": info["title"],
         "scripture": info["scripture"],
         "theme": info["theme"],
@@ -237,12 +322,12 @@ def generate_short_bridge_comment(short_key_or_title: str,
     from .channel_capabilities import short_pinned_comment_for
     from .channels import normalize_channel_id
 
-    counterpart = resolve_longform_counterpart(short_key_or_title)
+    counterpart = resolve_longform_counterpart(short_key_or_title, channel_id=channel_id)
     url = counterpart["url"]
     scripture = counterpart.get("scripture") or "this Scripture"
-    theme = counterpart.get("theme") or "divine peace and angelic protection"
-
     owner = normalize_channel_id(channel_id or counterpart.get("channel"))
+    theme = counterpart.get("theme") or "divine peace and protection"
+
     return short_pinned_comment_for(owner, url=url, scripture=scripture,
                                     theme=theme, footer="").strip()
 
@@ -258,7 +343,7 @@ def enrich_short_description_with_bridge(description: str, short_key_or_title: s
     from .channels import get_channel, normalize_channel_id
     from .social_pack import SELAR_JOURNAL_URL, SELAR_STORE_URL
 
-    counterpart = resolve_longform_counterpart(short_key_or_title)
+    counterpart = resolve_longform_counterpart(short_key_or_title, channel_id=channel_id)
     url = counterpart["url"]
     scripture = counterpart.get("scripture") or "Scripture"
     owner = normalize_channel_id(channel_id or counterpart.get("channel"))

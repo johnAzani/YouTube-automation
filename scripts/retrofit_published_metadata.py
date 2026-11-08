@@ -78,13 +78,18 @@ def collect_published_faith_targets(
         if only_pending and str(doc.meta.get("metadata_revision", "")).strip() == METADATA_REVISION:
             continue
 
+        doc_channel = channel_for_doc(doc.meta)
         is_short = doc.format == "short" or "short-" in path.name
         clean_title = TITLE_FIXES.get(str(doc.id), smart_truncate_title(doc.title, 95))
         if is_short:
-            short_key_match = re.search(r"psalm-(\d+)", path.name)
-            short_key = f"short-psalm{short_key_match.group(1)}" if short_key_match else doc.slug
+            slug_str = str(doc.slug or "").strip()
+            if slug_str.startswith("short-"):
+                short_key = slug_str
+            else:
+                short_key_match = re.search(r"psalm-(\d+)", path.name)
+                short_key = f"short-psalm{short_key_match.group(1)}" if short_key_match else slug_str
             base_desc = doc.full_narration.split("## Custom Thumbnail")[0].strip() or build_description(doc)
-            desc = enrich_short_description_with_bridge(base_desc, short_key)
+            desc = enrich_short_description_with_bridge(base_desc, short_key, channel_id=doc_channel)
         else:
             desc = build_description(doc)
 

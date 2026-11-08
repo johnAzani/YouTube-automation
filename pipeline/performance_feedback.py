@@ -77,7 +77,42 @@ THEME_KEYWORDS: dict[str, list[str]] = {
     "blessing_benediction": [
         "numbers 6", "benediction", "priestly", "the lord bless",
     ],
+    "morning_mercy_renewal": [
+        "psalm 5", "psalm 143", "lamentations 3", "psalm 59", "psalm 92",
+        "psalm 30", "psalm 57", "psalm 108", "psalm 65", "psalm 88",
+        "psalm 139", "mark 1", "hosea 6", "zephaniah 3", "exodus 16",
+        "new mercies", "lovingkindness", "sunrise", "awake early", "dawn",
+        "daybreak", "morning mercy", "fresh manna", "rising early",
+    ],
+    "daily_guidance_wisdom": [
+        "psalm 25", "psalm 119", "psalm 118", "psalm 19", "proverbs 4",
+        "isaiah 30", "isaiah 33", "isaiah 50", "joshua 1", "matthew 6",
+        "james 1", "micah 7", "2 samuel 23", "exodus 33", "deuteronomy 33",
+        "romans 12", "ephesians 6", "colossians 3", "direct my",
+        "ordered steps", "wisdom", "guidance", "lamp unto my feet",
+        "seek ye first", "armour of god",
+    ],
+    "midday_strength_endurance": [
+        "psalm 55", "psalm 63", "psalm 73", "psalm 84", "psalm 62",
+        "psalm 90", "isaiah 40", "isaiah 49", "isaiah 58", "isaiah 25",
+        "isaiah 32", "daniel 6", "acts 10", "galatians 6", "1 corinthians 15",
+        "2 corinthians 12", "2 chronicles 20", "nehemiah 2", "nehemiah 6",
+        "jeremiah 17", "john 4", "1 thessalonians 5", "hebrews 4",
+        "hebrews 12", "1 peter 4", "proverbs 15", "proverbs 18", "psalm 37",
+        "noonday", "midday", "at noon", "sixth hour", "endurance",
+        "renewed strength", "work of our hands", "living water",
+    ],
 }
+
+_SCRIPTURE_BOOK_NAMES = (
+    r"(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|"
+    r"Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalm|Psalms|Proverbs|"
+    r"Ecclesiastes|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|"
+    r"Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|"
+    r"Malachi|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians|"
+    r"Ephesians|Philippians|Colossians|Thessalonians|Timothy|Titus|Philemon|"
+    r"Hebrews|James|Peter|Jude|Revelation)"
+)
 
 
 def classify_theme(title: str, tags: Iterable[str] = ()) -> str:
@@ -92,8 +127,7 @@ def classify_theme(title: str, tags: Iterable[str] = ()) -> str:
     # "psalm 4" does not accidentally match "psalm 46".
     for theme, kws in THEME_KEYWORDS.items():
         for kw in kws:
-            if re.match(r"^(?:[123]\s+)?(?:psalm|isaiah|matthew|john|philippians|"
-                        r"numbers|proverbs|peter|timothy|mark|luke|romans|hebrews)", kw):
+            if re.match(rf"^(?:[123]\s+)?{_SCRIPTURE_BOOK_NAMES}\s+\d+$", kw, re.IGNORECASE):
                 if re.search(r"\b" + re.escape(kw) + r"(?!\d)", hay):
                     return theme
     # Then keyword matches in title, then tags.
@@ -111,9 +145,7 @@ def classify_theme(title: str, tags: Iterable[str] = ()) -> str:
 def extract_scripture(title: str) -> str:
     """Pull a normalised scripture reference (e.g. 'Psalm 91') from a title."""
     m = re.search(
-        r"\b((?:[123]\s+)?(?:Psalm|Psalms|Proverbs|Isaiah|Matthew|Mark|Luke|John|"
-        r"Romans|Philippians|Timothy|Peter|Numbers|Jude|Hebrews|Corinthians|Ephesians)"
-        r"\s+\d+)",
+        rf"\b((?:[123]\s+)?{_SCRIPTURE_BOOK_NAMES}\s+\d+)",
         title or "",
         re.IGNORECASE,
     )
