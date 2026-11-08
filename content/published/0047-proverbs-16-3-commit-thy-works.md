@@ -2,7 +2,7 @@
 id: '0047'
 title: Proverbs 16:3 Midday Prayer | The Midday Watch
 slug: proverbs-16-3-commit-thy-works
-status: approved
+status: published
 channel: prayer3
 privacy: public
 format: longform
@@ -83,6 +83,12 @@ originality:
   source_notes: true
 originality_note: Original theological commentary drawing upon Matthew Henry and Charles
   Spurgeon
+published_on: "2026-11-08"
+published_at: "2026-11-08T00:33:51Z"
+youtube_video_id: "nXa4e8jXjug"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — The Noonday Hook & The Pause

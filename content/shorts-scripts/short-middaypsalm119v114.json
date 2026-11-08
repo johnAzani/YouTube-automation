@@ -1,0 +1,282 @@
+{
+  "key": "short-middaypsalm119v114",
+  "channel": "prayer3",
+  "psalm": 119,
+  "title": [
+    "MY HIDING PLACE",
+    "MIDDAY PRAYER"
+  ],
+  "poster": [
+    "THE MIDDAY WATCH",
+    "PSALM 119:114",
+    "PAUSE & PRAY AT NOON",
+    "YOUR HIDING PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "sunlight streaming through window on quiet wooden desk midday",
+    "open bible on wooden desk bathed in warm midday sunlight",
+    "bright midday sun shining over peaceful green valley field",
+    "calm lake water reflecting bright noon sunlight peaceful nature",
+    "bright path through sunny forest midday sun rays",
+    "serene mountain peak bathed in bright midday sun blue sky"
+  ],
+  "scenes": [
+    {
+      "a": "Pause whatever you are doing in this quiet middle hour of your afternoon.",
+      "img": "short-middaypsalm119v114-scene-01.jpg",
+      "kicker": "PSALM 119:114",
+      "sub": "PAUSE AND REST YOUR SOUL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You are my hiding place and my shield; I hope in your word.",
+      "img": "short-middaypsalm119v114-scene-02.jpg",
+      "kicker": "PSALM 119:114",
+      "sub": "YOU ARE MY HIDING PLACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, as bright midday light fills our world, we run into your sanctuary",
+      "img": "short-middaypsalm119v114-scene-03.jpg",
+      "kicker": "PSALM 119:114",
+      "sub": "HIDE UNDER HIS WINGS",
+      "cam": "pan_right",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Shield our weary hearts from stress, noise, and heavy pressure.",
+      "img": "short-middaypsalm119v114-scene-04.jpg",
+      "kicker": "PSALM 119:114",
+      "sub": "ANCHOR YOUR DAILY HOPE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Strengthen our steps as we return to our afternoon tasks",
+      "img": "short-middaypsalm119v114-scene-05.jpg",
+      "kicker": "PSALM 119:114",
+      "sub": "GOD GUIDES YOUR STEPS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Subscribe to The Midday Watch right now to pause and pray with us every single day at noon.",
+      "img": "short-middaypsalm119v114-scene-06.jpg",
+      "kicker": "PSALM 119:114",
+      "sub": "PAUSE AND PRAY AT NOON",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "Pause whatever you are doing in this quiet middle hour of your afternoon. Take a deep breath now and rest your soul."
+    ],
+    [
+      10,
+      20,
+      "The Holy Scripture reminds us today in Psalm 119:114: You are my hiding place and my shield; I hope in your word."
+    ],
+    [
+      20,
+      30,
+      "Lord, as bright midday light fills our world, we run into your sanctuary and hide under your loving wings."
+    ],
+    [
+      30,
+      40,
+      "Shield our weary hearts from stress, noise, and heavy pressure. We anchor our daily hope in your promises."
+    ],
+    [
+      40,
+      50,
+      "Strengthen our steps as we return to our afternoon tasks, knowing you guide and protect our every step."
+    ],
+    [
+      50,
+      60,
+      "Amen. Subscribe to The Midday Watch right now to pause and pray with us every single day at noon."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "PAUSE WHATEVER YOU ARE DOING",
+        "IN THIS QUIET MIDDLE HOUR",
+        "TAKE A DEEP BREATH NOW",
+        "AND REST YOUR SOUL"
+      ],
+      [
+        "PAUSE",
+        "REST"
+      ],
+      "PSALM 119:114"
+    ],
+    [
+      10,
+      20,
+      [
+        "YOU ARE MY HIDING PLACE",
+        "AND MY SHIELD",
+        "I HOPE IN YOUR WORD"
+      ],
+      [
+        "HIDING PLACE",
+        "SHIELD",
+        "HOPE"
+      ],
+      "PSALM 119:114"
+    ],
+    [
+      20,
+      30,
+      [
+        "AS BRIGHT MIDDAY LIGHT FILLS OUR WORLD",
+        "WE RUN INTO YOUR SANCTUARY",
+        "UNDER YOUR LOVING WINGS"
+      ],
+      [
+        "SANCTUARY",
+        "LOVING WINGS"
+      ],
+      "PSALM 119:114"
+    ],
+    [
+      30,
+      40,
+      [
+        "SHIELD OUR WEARY HEARTS",
+        "FROM STRESS AND NOISE",
+        "WE ANCHOR OUR HOPE",
+        "IN YOUR PROMISES"
+      ],
+      [
+        "SHIELD",
+        "ANCHOR"
+      ],
+      "PSALM 119:114"
+    ],
+    [
+      40,
+      50,
+      [
+        "STRENGTHEN OUR STEPS AS WE RETURN",
+        "TO OUR AFTERNOON TASKS",
+        "KNOWING YOU GUIDE AND PROTECT"
+      ],
+      [
+        "STRENGTHEN",
+        "GUIDE",
+        "PROTECT"
+      ],
+      "PSALM 119:114"
+    ],
+    [
+      50,
+      60,
+      [
+        "SUBSCRIBE TO THE MIDDAY WATCH",
+        "PAUSE AND PRAY WITH US",
+        "EVERY SINGLE DAY AT NOON"
+      ],
+      [
+        "SUBSCRIBE",
+        "PAUSE AND PRAY"
+      ],
+      "PSALM 119:114"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Pause whatever you are doing in this quiet middle hour of your afternoon.",
+      "kind": "phrase",
+      "words": [
+        "PAUSE",
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You are my hiding place and my shield; I hope in your word.",
+      "kind": "phrase",
+      "words": [
+        "HIDING PLACE",
+        "SHIELD",
+        "HOPE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, as bright midday light fills our world, we run into your sanctuary",
+      "kind": "phrase",
+      "words": [
+        "SANCTUARY",
+        "LOVING WINGS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Shield our weary hearts from stress, noise, and heavy pressure.",
+      "kind": "phrase",
+      "words": [
+        "SHIELD",
+        "ANCHOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Strengthen our steps as we return to our afternoon tasks",
+      "kind": "phrase",
+      "words": [
+        "STRENGTHEN",
+        "GUIDE",
+        "PROTECT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Midday Watch right now to pause and pray with us every single day at noon.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PAUSE AND PRAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 119:114"
+}

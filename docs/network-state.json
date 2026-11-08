@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T23:32:42Z",
+  "generated_at": "2026-11-08T00:34:20Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 3
   },
   "totals": {
-    "published_total": 31,
-    "published_longform": 14,
+    "published_total": 32,
+    "published_longform": 15,
     "published_shorts": 17,
-    "public_total": 29,
+    "public_total": 30,
     "queued_longform": 24,
-    "queued_shorts": 9,
+    "queued_shorts": 10,
     "automations_ok": 7,
     "automations_total": 10,
     "network_healthy": true
@@ -143,27 +143,27 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 4,
-        "published_longform": 2,
+        "published_total": 5,
+        "published_longform": 3,
         "published_shorts": 2,
-        "public_total": 4,
+        "public_total": 5,
         "queued_longform": 2,
         "queued_other": 0,
-        "queued_shorts": 2
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYPSALM91V6",
-        "title": "Say This Psalm 91:6 Prayer at Noon | Daily Prayer #Shorts",
-        "format": "short",
-        "youtube_video_id": "ihcyceRJ3YM",
-        "watch_url": "https://www.youtube.com/shorts/ihcyceRJ3YM",
-        "published_on": "2026-11-07",
-        "published_at": "2026-11-07T20:35:38Z"
-      },
-      "next_queued_longform": {
         "id": "0047",
         "title": "Proverbs 16:3 Midday Prayer | The Midday Watch",
-        "words": 1394,
+        "format": "longform",
+        "youtube_video_id": "nXa4e8jXjug",
+        "watch_url": "https://youtu.be/nXa4e8jXjug",
+        "published_on": "2026-11-08",
+        "published_at": "2026-11-08T00:33:51Z"
+      },
+      "next_queued_longform": {
+        "id": "0048",
+        "title": "Isaiah 40:31 Midday Prayer | The Midday Watch",
+        "words": 1070,
         "status": "approved"
       },
       "next_queued_short": {
@@ -180,6 +180,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "0047",
+      "slug": "proverbs-16-3-commit-thy-works",
+      "file": "0047-proverbs-16-3-commit-thy-works.md",
+      "title": "Proverbs 16:3 Midday Prayer | The Midday Watch",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-08",
+      "published_at": "2026-11-08T00:33:51Z",
+      "youtube_video_id": "nXa4e8jXjug",
+      "watch_url": "https://youtu.be/nXa4e8jXjug",
+      "youtu_be_url": "https://youtu.be/nXa4e8jXjug",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/nXa4e8jXjug/edit",
+      "thumb_url": "https://i.ytimg.com/vi/nXa4e8jXjug/hqdefault.jpg",
+      "thumb_text": "COMMIT YOUR WORK AT NOON",
+      "duration_label": "~10 min",
+      "words": 1394
+    },
     {
       "id": "0040",
       "slug": "proverbs-3-5-6-trust-in-the-lord",
@@ -1183,19 +1206,6 @@
         "words": 1656
       },
       {
-        "id": "0047",
-        "slug": "proverbs-16-3-commit-thy-works",
-        "file": "0047-proverbs-16-3-commit-thy-works.md",
-        "title": "Proverbs 16:3 Midday Prayer | The Midday Watch",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1394
-      },
-      {
         "id": "0048",
         "slug": "isaiah-40-31-renewed-strength-for-the-hours-that-remain",
         "file": "0048-isaiah-40-31-renewed-strength-for-the-hours-that-remain.md",
@@ -1207,6 +1217,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1070
+      },
+      {
+        "id": "0049",
+        "slug": "psalm-119-114-midday-prayer",
+        "file": "0049-psalm-119-114-midday-prayer.md",
+        "title": "Psalm 119:114 Midday Prayer | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1735
       }
     ],
     "shorts": [
@@ -1303,6 +1326,17 @@
         "file": "0048-short-middayisaiah40v31.yml",
         "companion_longform_id": "0048",
         "scripture": "Isaiah 40:31",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
+      },
+      {
+        "short": "short-middaypsalm119v114",
+        "file": "0049-short-middaypsalm119v114.yml",
+        "companion_longform_id": "0049",
+        "scripture": "Psalm 119:114",
         "channel": "prayer3",
         "channel_name": "The Midday Watch",
         "status": "approved",
