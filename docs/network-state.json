@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T14:57:12Z",
+  "generated_at": "2026-11-08T19:02:18Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 3
   },
   "totals": {
-    "published_total": 38,
-    "published_longform": 18,
-    "published_shorts": 20,
-    "public_total": 36,
-    "queued_longform": 29,
-    "queued_shorts": 17,
+    "published_total": 40,
+    "published_longform": 19,
+    "published_shorts": 21,
+    "public_total": 38,
+    "queued_longform": 28,
+    "queued_shorts": 16,
     "automations_ok": 9,
     "automations_total": 10,
     "network_healthy": true
@@ -99,32 +99,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 13,
-        "published_longform": 7,
-        "published_shorts": 6,
-        "public_total": 12,
-        "queued_longform": 4,
+        "published_total": 15,
+        "published_longform": 8,
+        "published_shorts": 7,
+        "public_total": 14,
+        "queued_longform": 3,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0042",
-        "title": "Numbers 6:24-26 Morning Prayer | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "xpaLUtqsFTw",
-        "watch_url": "https://youtu.be/xpaLUtqsFTw",
-        "published_on": "2026-11-08",
-        "published_at": "2026-11-08T14:07:49Z"
-      },
-      "next_queued_longform": {
         "id": "0043",
         "title": "Psalm 90:17 Morning Prayer | The Morning Altar",
-        "words": 1337,
+        "format": "longform",
+        "youtube_video_id": "3n4RudmOpgk",
+        "watch_url": "https://youtu.be/3n4RudmOpgk",
+        "published_on": "2026-11-08",
+        "published_at": "2026-11-08T19:01:40Z"
+      },
+      "next_queued_longform": {
+        "id": "0044",
+        "title": "Isaiah 50:4 Morning Prayer | The Morning Altar",
+        "words": 1478,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm143v8",
-        "scripture": "Psalm 143:8",
+        "short": "short-morningpsalm90v17",
+        "scripture": "Psalm 90:17",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -211,6 +211,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0043",
+      "slug": "psalm-90-17-morning-prayer",
+      "file": "0043-psalm-90-17-morning-prayer.md",
+      "title": "Psalm 90:17 Morning Prayer | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-08",
+      "published_at": "2026-11-08T19:01:40Z",
+      "youtube_video_id": "3n4RudmOpgk",
+      "watch_url": "https://youtu.be/3n4RudmOpgk",
+      "youtu_be_url": "https://youtu.be/3n4RudmOpgk",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/3n4RudmOpgk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/3n4RudmOpgk/hqdefault.jpg",
+      "thumb_text": "ESTABLISH MY WORK",
+      "duration_label": "~9 min",
+      "words": 1337
+    },
+    {
+      "id": "SHORT-MORNINGPSALM143V8",
+      "slug": "short-morningpsalm143v8-sunrise-prayer",
+      "file": "short-morningpsalm143v8-sunrise-prayer.md",
+      "title": "Say This Psalm 143:8 Prayer at Sunrise | At Dawn #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-08",
+      "published_at": "2026-11-08T18:12:29Z",
+      "youtube_video_id": "pKSAuIEiae8",
+      "watch_url": "https://www.youtube.com/shorts/pKSAuIEiae8",
+      "youtu_be_url": "https://youtu.be/pKSAuIEiae8",
+      "shorts_url": "https://www.youtube.com/shorts/pKSAuIEiae8",
+      "studio_url": "https://studio.youtube.com/video/pKSAuIEiae8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/pKSAuIEiae8/hqdefault.jpg",
+      "thumb_text": "HEAR HIS \u00b7 LOVING",
+      "duration_label": "51s",
+      "words": 550
+    },
     {
       "id": "0048",
       "slug": "isaiah-40-31-renewed-strength-for-the-hours-that-remain",
@@ -1349,19 +1395,6 @@
         "words": 1025
       },
       {
-        "id": "0043",
-        "slug": "psalm-90-17-morning-prayer",
-        "file": "0043-psalm-90-17-morning-prayer.md",
-        "title": "Psalm 90:17 Morning Prayer | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1337
-      },
-      {
         "id": "0044",
         "slug": "isaiah-50-4-morning-prayer",
         "file": "0044-isaiah-50-4-morning-prayer.md",
@@ -1532,17 +1565,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-morningpsalm143v8",
-        "file": "0037-short-morningpsalm143v8.yml",
-        "companion_longform_id": "0037",
-        "scripture": "Psalm 143:8",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm90v17",

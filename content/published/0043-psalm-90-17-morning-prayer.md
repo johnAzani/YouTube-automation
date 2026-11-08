@@ -2,7 +2,7 @@
 id: '0043'
 title: Psalm 90:17 Morning Prayer | The Morning Altar
 slug: psalm-90-17-morning-prayer
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -77,6 +77,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-08"
+published_at: "2026-11-08T19:01:40Z"
+youtube_video_id: "3n4RudmOpgk"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — First Light and Directing the Prayer
