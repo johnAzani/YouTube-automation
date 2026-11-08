@@ -1,9 +1,9 @@
-# Ready to post — comm-001-sunday-peace
+# Ready to post — comm-001-sunday-peace (The Secret Place · @TheSecretPlace)
 
 YouTube's API cannot create Community posts. Paste this into YouTube Studio
 → Create → Post, attach the card, and schedule it if you like.
 
-**Target:** 14:00 UTC · **Type:** POLL
+**Channel:** The Secret Place (`secret-place`) · **Target:** 14:00 UTC · **Type:** POLL
 
 ## Body
 
