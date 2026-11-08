@@ -98,7 +98,8 @@ published_at: "2026-11-08T14:53:44Z"
 youtube_video_id: "b9CpOl0tJSE"
 metadata_revision: "selar-seo-v1"
 thumbnail_pending: true
-thumbnail_error: "not_requested"
+thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCUGoTVLxkAv25Z85wBcBF3w; auth_channel_title=The Midday Watch; long_uploads_status=allowed; video_channel_id=UCUGoTVLxkAv25Z85wBcBF3w; video_channel_title=The Midday Watch; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_retry_after: "2026-11-08T20:55:27Z"
 ---
 
 ## Scene 1 — The Noonday Hook & The Pause

@@ -20,10 +20,11 @@ height: 1280
 duration_seconds: 48.37
 scenes_verified: 6
 thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCUGoTVLxkAv25Z85wBcBF3w; auth_channel_title=The Midday Watch; long_uploads_s"
+thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCUGoTVLxkAv25Z85wBcBF3w; auth_channel_title=The Midday Watch; long_uploads_status=allowed; video_channel_id=UCUGoTVLxkAv25Z85wBcBF3w; video_channel_title=The Midday Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE MIDDAY WATCH", "PAUSE AND PRAY", "PROVERBS 16:3", "MIDDAY PRAYER"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-08T20:56:28Z"
 ---
 
 Pause whatever you are doing right now and take a calm, deep breath this midday. God's Word tells us in Proverbs 16 verse 3: Commit to the Lord whatever you do, and your plans will succeed. As the noon sun stands high, release the heavy burden of your unfinished tasks into His hands. Surrender your daily efforts, your quiet worries, and your future ambitions to the Lord right now. Heavenly Father, establish our thoughts and guide every step we take throughout the rest of this day. Rest in His guidance and walk in peace. Subscribe to pause and pray with us every noon.
