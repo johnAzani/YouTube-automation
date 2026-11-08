@@ -1,0 +1,317 @@
+{
+  "key": "short-middayisaiah58v10",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "MIDDAY REFLECTION",
+    "ISAIAH 58:10"
+  ],
+  "poster": [
+    "THE MIDDAY WATCH",
+    "PAUSE AT NOON",
+    "FIND REST",
+    "ISAIAH 58:10"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "bright midday sun through window blinds",
+    "quiet desk with journal and natural light",
+    "golden sun over vast open field",
+    "soft light reflecting on wooden table",
+    "rippling water under high midday sun",
+    "still forest canopy with light beams",
+    "empty chair in warm sunlit room"
+  ],
+  "scenes": [
+    {
+      "a": "Take a moment",
+      "img": "short-middayisaiah58v10-scene-01.jpg",
+      "kicker": "ISAIAH 58:10",
+      "sub": "PAUSE YOUR WORK",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "if you feed",
+      "img": "short-middayisaiah58v10-scene-02.jpg",
+      "kicker": "ISAIAH 58:10",
+      "sub": "THE PROMISE OF LIGHT",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "then your light",
+      "img": "short-middayisaiah58v10-scene-03.jpg",
+      "kicker": "ISAIAH 58:10",
+      "sub": "WALK IN CLARITY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "and your darkness",
+      "img": "short-middayisaiah58v10-scene-04.jpg",
+      "kicker": "ISAIAH 58:10",
+      "sub": "BE MADE AS NOONDAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord we bring",
+      "img": "short-middayisaiah58v10-scene-05.jpg",
+      "kicker": "ISAIAH 58:10",
+      "sub": "A PRAYER FOR PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "in this hour",
+      "img": "short-middayisaiah58v10-scene-06.jpg",
+      "kicker": "ISAIAH 58:10",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let us remain",
+      "img": "short-middayisaiah58v10-scene-07.jpg",
+      "kicker": "ISAIAH 58:10",
+      "sub": "STAY ROOTED IN TRUTH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "Take a moment to pause what you are doing and turn your heart toward the middle of the day."
+    ],
+    [
+      16,
+      32,
+      "If you feed the hungry and satisfy the needs of the afflicted, then your light will rise in the darkness."
+    ],
+    [
+      33,
+      50,
+      "And your darkness will become like the noonday. Lord, we bring our heavy burdens to You in this quiet hour."
+    ],
+    [
+      51,
+      75,
+      "We ask that You would refresh our weary spirits and guide us with Your gentle hand through the remainder of this busy day."
+    ],
+    [
+      76,
+      95,
+      "Grant us the grace to serve others with a selfless heart and to keep our eyes fixed solely upon Your eternal promise."
+    ],
+    [
+      96,
+      110,
+      "In this hour of stillness, we trust You to sustain our souls and lead us toward Your perfect peace and restoration."
+    ],
+    [
+      111,
+      120,
+      "Let us remain centered in Your presence today and every day. Amen. Please subscribe."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "TAKE A MOMENT",
+        "PAUSE WHAT YOU DO",
+        "HEART TOWARD THE DAY"
+      ],
+      [
+        "TAKE",
+        "MOMENT"
+      ],
+      "ISAIAH 58:10"
+    ],
+    [
+      16,
+      32,
+      [
+        "FEED THE HUNGRY",
+        "SATISFY THE AFFLICTED",
+        "LIGHT WILL RISE"
+      ],
+      [
+        "LIGHT",
+        "RISE"
+      ],
+      "ISAIAH 58:10"
+    ],
+    [
+      33,
+      50,
+      [
+        "DARKNESS WILL BECOME",
+        "LIKE THE NOONDAY",
+        "BRING OUR BURDENS"
+      ],
+      [
+        "NOONDAY",
+        "BURDENS"
+      ],
+      "ISAIAH 58:10"
+    ],
+    [
+      51,
+      75,
+      [
+        "REFRESH WEARY SPIRITS",
+        "GUIDE WITH HAND",
+        "THROUGH THE DAY"
+      ],
+      [
+        "REFRESH",
+        "SPIRITS"
+      ],
+      "ISAIAH 58:10"
+    ],
+    [
+      76,
+      95,
+      [
+        "SERVE WITH HEART",
+        "EYES FIXED UPON",
+        "ETERNAL PROMISE"
+      ],
+      [
+        "SERVE",
+        "FIXED"
+      ],
+      "ISAIAH 58:10"
+    ],
+    [
+      96,
+      110,
+      [
+        "HOUR OF STILLNESS",
+        "TRUST YOU SUSTAIN",
+        "PEACE AND RESTORATION"
+      ],
+      [
+        "STILLNESS",
+        "RESTORATION"
+      ],
+      "ISAIAH 58:10"
+    ],
+    [
+      111,
+      120,
+      [
+        "REMAIN CENTERED",
+        "IN YOUR PRESENCE",
+        "PLEASE SUBSCRIBE"
+      ],
+      [
+        "REMAIN",
+        "SUBSCRIBE"
+      ],
+      "ISAIAH 58:10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Take a moment",
+      "kind": "phrase",
+      "words": [
+        "TAKE",
+        "MOMENT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "if you feed",
+      "kind": "phrase",
+      "words": [
+        "FEED",
+        "HUNGRY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "then your light",
+      "kind": "phrase",
+      "words": [
+        "LIGHT",
+        "RISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and your darkness",
+      "kind": "phrase",
+      "words": [
+        "DARKNESS",
+        "NOONDAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord we bring",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "BURDENS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "in this hour",
+      "kind": "phrase",
+      "words": [
+        "STILLNESS",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let us remain",
+      "kind": "phrase",
+      "words": [
+        "REMAIN",
+        "SUBSCRIBE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 58:10"
+}
