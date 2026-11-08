@@ -1,0 +1,254 @@
+{
+  "key": "short-morningisaiah50v4",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "THE MORNING ALTAR",
+    "ISAIAH 50:4"
+  ],
+  "poster": [
+    "GREET THE",
+    "MORNING LIGHT",
+    "FIND YOUR",
+    "STILLNESS"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "cinematic misty sunrise over calm lake",
+    "soft morning sunlight through open window",
+    "dew drops on golden morning grass",
+    "sunlight reflecting on mountain river",
+    "golden hour rays through pine forest",
+    "serene horizon at break of dawn"
+  ],
+  "scenes": [
+    {
+      "a": "Gently open your eyes to the stillness",
+      "img": "short-morningisaiah50v4-scene-01.jpg",
+      "kicker": "ISAIAH 50:4",
+      "sub": "GREET THE MORNING LIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The world begins in quiet surrender",
+      "img": "short-morningisaiah50v4-scene-02.jpg",
+      "kicker": "ISAIAH 50:4",
+      "sub": "FIND YOUR STILLNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Listen to the word for this day",
+      "img": "short-morningisaiah50v4-scene-03.jpg",
+      "kicker": "ISAIAH 50:4",
+      "sub": "HEAR THE PROMISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "The Lord God has given me the tongue",
+      "img": "short-morningisaiah50v4-scene-04.jpg",
+      "kicker": "ISAIAH 50:4",
+      "sub": "THE DIVINE TONGUE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "That I may know how to sustain the weary",
+      "img": "short-morningisaiah50v4-scene-05.jpg",
+      "kicker": "ISAIAH 50:4",
+      "sub": "SUSTAIN THE WEARY",
+      "cam": "push_in",
+      "focus": [
+        0.3,
+        0.7
+      ]
+    },
+    {
+      "a": "Let this prayer anchor your spirit now",
+      "img": "short-morningisaiah50v4-scene-06.jpg",
+      "kicker": "ISAIAH 50:4",
+      "sub": "ANCHOR YOUR SPIRIT",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "Gently open your eyes to the stillness. The world begins in quiet surrender. Listen to the word for this day."
+    ],
+    [
+      16,
+      32,
+      "The Lord God has given me the tongue of those who are taught, that I may know how to sustain the weary."
+    ],
+    [
+      33,
+      48,
+      "He awakens my ear to listen as those who are taught. Let this prayer anchor your spirit now."
+    ],
+    [
+      49,
+      65,
+      "Creator, give me eyes to see the morning grace. Grant me a tongue that speaks hope to those around me."
+    ],
+    [
+      66,
+      85,
+      "May I listen well today. Help me sustain the heavy hearts I encounter, walking in your light always."
+    ],
+    [
+      86,
+      110,
+      "In this dawn, I offer my life to your service. Be my strength as the sun rises. Amen. Subscribe."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "GENTLY OPEN YOUR EYES",
+        "TO THE STILLNESS",
+        "WORLD BEGINS IN SURRENDER",
+        "LISTEN TO THE WORD"
+      ],
+      "STILLNESS",
+      "ISAIAH 50 : 4"
+    ],
+    [
+      16,
+      32,
+      [
+        "LORD GOD GIVEN TONGUE",
+        "OF THOSE TAUGHT",
+        "SUSTAIN THE WEARY",
+        "KNOW HOW TO SUSTAIN"
+      ],
+      "SUSTAIN",
+      "ISAIAH 50 : 4"
+    ],
+    [
+      33,
+      48,
+      [
+        "AWAKENS MY EAR",
+        "TO LISTEN AS TAUGHT",
+        "ANCHOR YOUR SPIRIT",
+        "PRAYER ANCHOR"
+      ],
+      "ANCHOR",
+      "ISAIAH 50 : 4"
+    ],
+    [
+      49,
+      65,
+      [
+        "EYES TO SEE",
+        "MORNING GRACE",
+        "TONGUE THAT SPEAKS",
+        "HOPE AROUND ME"
+      ],
+      "HOPE",
+      "ISAIAH 50 : 4"
+    ],
+    [
+      66,
+      85,
+      [
+        "LISTEN WELL TODAY",
+        "SUSTAIN HEAVY HEARTS",
+        "WALKING IN LIGHT",
+        "LIGHT ALWAYS"
+      ],
+      "LIGHT",
+      "ISAIAH 50 : 4"
+    ],
+    [
+      86,
+      110,
+      [
+        "OFFER MY LIFE",
+        "SERVICE TO YOU",
+        "BE MY STRENGTH",
+        "SUN RISES"
+      ],
+      "STRENGTH",
+      "ISAIAH 50 : 4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Gently open your eyes to the stillness",
+      "kind": "phrase",
+      "words": [
+        "GENTLY",
+        "STILLNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord God has given me the tongue",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "TONGUE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "That I may know how to sustain the weary",
+      "kind": "phrase",
+      "words": [
+        "SUSTAIN",
+        "WEARY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let this prayer anchor your spirit now",
+      "kind": "phrase",
+      "words": [
+        "PRAYER",
+        "ANCHOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Be my strength as the sun rises",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "SUN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 50:4"
+}

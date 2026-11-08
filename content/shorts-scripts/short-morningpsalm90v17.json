@@ -1,0 +1,358 @@
+{
+  "key": "short-morningpsalm90v17",
+  "channel": "prayer2",
+  "psalm": 90,
+  "title": [
+    "ESTABLISH OUR",
+    "HANDS TODAY"
+  ],
+  "poster": [
+    "LET THE FAVOR",
+    "OF THE LORD",
+    "BE UPON US",
+    "PSALM 90:17"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "sunrise misty mountain landscape soft light",
+    "golden sunrise over calm forest morning fog",
+    "sunbeams shining through morning meadow trees",
+    "peaceful empty path in morning forest golden light",
+    "serene morning lake reflection sunrise sky warm light",
+    "sun rising over valley cloud inversions glowing light",
+    "dramatic dawn sky orange horizon mountain silhouette",
+    "calm morning sea horizon glowing sunrise light"
+  ],
+  "scenes": [
+    {
+      "a": "Welcome this new morning light with a quiet and open heart today.",
+      "img": "short-morningpsalm90v17-scene-01.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "GREET THE DAWN WITH PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "As the golden dawn breaks over the horizon, we recall Psalm 90 verse 17.",
+      "img": "short-morningpsalm90v17-scene-02.jpg",
+      "kicker": "HOLY SCRIPTURE",
+      "sub": "GODS FAVOR OVER YOUR DAY",
+      "cam": "pan_right",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Let the favor of the Lord our God be upon us, and establish the work of our hands.",
+      "img": "short-morningpsalm90v17-scene-03.jpg",
+      "kicker": "PSALM 90:17",
+      "sub": "ESTABLISH THE WORK OF OUR HANDS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Heavenly Father, as this day begins, cover our humble steps with Your gentle grace.",
+      "img": "short-morningpsalm90v17-scene-04.jpg",
+      "kicker": "DAILY DEVOTION",
+      "sub": "WALK IN HIS GENTLE GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Guide our thoughts, strengthen our hands, and bless every honest effort we make today.",
+      "img": "short-morningpsalm90v17-scene-05.jpg",
+      "kicker": "PRAYER OF PURPOSE",
+      "sub": "BLESSINGS UPON YOUR EFFORTS",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "May everything we build reflect Your love and bring quiet peace to those we serve.",
+      "img": "short-morningpsalm90v17-scene-06.jpg",
+      "kicker": "REFLECT HIS LOVE",
+      "sub": "SERVE WITH A PEACEFUL HEART",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Anchor our hearts in Your abiding presence now and forever. Amen.",
+      "img": "short-morningpsalm90v17-scene-07.jpg",
+      "kicker": "AMEN",
+      "sub": "REST IN HIS ABIDING PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Morning Altar to begin every sunrise in prayer.",
+      "img": "short-morningpsalm90v17-scene-08.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "START EVERY DAY IN PRAYER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Welcome this new morning light with a quiet and open heart today."
+    ],
+    [
+      8,
+      16,
+      "As the golden dawn breaks over the horizon, we recall Psalm 90 verse 17."
+    ],
+    [
+      16,
+      26,
+      "Let the favor of the Lord our God be upon us, and establish the work of our hands."
+    ],
+    [
+      26,
+      34,
+      "Heavenly Father, as this day begins, cover our humble steps with Your gentle grace."
+    ],
+    [
+      34,
+      43,
+      "Guide our thoughts, strengthen our hands, and bless every honest effort we make today."
+    ],
+    [
+      43,
+      51,
+      "May everything we build reflect Your love and bring quiet peace to those we serve."
+    ],
+    [
+      51,
+      58,
+      "Anchor our hearts in Your abiding presence now and forever. Amen."
+    ],
+    [
+      58,
+      65,
+      "Subscribe to The Morning Altar to begin every sunrise in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "WELCOME THIS NEW",
+        "MORNING LIGHT WITH A",
+        "QUIET AND OPEN HEART"
+      ],
+      [
+        "MORNING LIGHT",
+        "OPEN HEART"
+      ],
+      "PSALM 90 : 17"
+    ],
+    [
+      8,
+      16,
+      [
+        "AS THE GOLDEN DAWN",
+        "BREAKS OVER HORIZON",
+        "WE RECALL THE WORD"
+      ],
+      [
+        "GOLDEN DAWN",
+        "THE WORD"
+      ],
+      "PSALM 90 : 17"
+    ],
+    [
+      16,
+      26,
+      [
+        "LET THE FAVOR OF THE LORD",
+        "OUR GOD BE UPON US AND",
+        "ESTABLISH OUR HANDS"
+      ],
+      [
+        "FAVOR OF THE LORD",
+        "ESTABLISH"
+      ],
+      "PSALM 90 : 17"
+    ],
+    [
+      26,
+      34,
+      [
+        "HEAVENLY FATHER AS DAY BEGINS",
+        "COVER OUR HUMBLE STEPS",
+        "WITH YOUR GENTLE GRACE"
+      ],
+      [
+        "HUMBLE STEPS",
+        "GENTLE GRACE"
+      ],
+      "PSALM 90 : 17"
+    ],
+    [
+      34,
+      43,
+      [
+        "GUIDE OUR THOUGHTS",
+        "STRENGTHEN OUR HANDS",
+        "BLESS EVERY EFFORT"
+      ],
+      [
+        "STRENGTHEN",
+        "BLESS"
+      ],
+      "PSALM 90 : 17"
+    ],
+    [
+      43,
+      51,
+      [
+        "MAY EVERYTHING WE BUILD",
+        "REFLECT YOUR LOVE AND BRING",
+        "QUIET PEACE TO ALL"
+      ],
+      [
+        "REFLECT YOUR LOVE",
+        "QUIET PEACE"
+      ],
+      "PSALM 90 : 17"
+    ],
+    [
+      51,
+      58,
+      [
+        "ANCHOR OUR HEARTS IN",
+        "YOUR ABIDING PRESENCE",
+        "NOW AND FOREVER AMEN"
+      ],
+      [
+        "ABIDING PRESENCE",
+        "AMEN"
+      ],
+      "PSALM 90 : 17"
+    ],
+    [
+      58,
+      65,
+      [
+        "SUBSCRIBE TO THE MORNING ALTAR",
+        "BEGIN EVERY SUNRISE",
+        "IN FAITH AND PRAYER"
+      ],
+      [
+        "THE MORNING ALTAR",
+        "SUNRISE IN PRAYER"
+      ],
+      "PSALM 90 : 17"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Welcome this new morning light with a quiet and open heart today.",
+      "kind": "phrase",
+      "words": [
+        "MORNING",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As the golden dawn breaks over the horizon, we recall Psalm 90 verse 17.",
+      "kind": "phrase",
+      "words": [
+        "GOLDEN",
+        "DAWN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let the favor of the Lord our God be upon us, and establish the work of our hands.",
+      "kind": "phrase",
+      "words": [
+        "FAVOR",
+        "ESTABLISH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, as this day begins, cover our humble steps with Your gentle grace.",
+      "kind": "phrase",
+      "words": [
+        "GENTLE",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guide our thoughts, strengthen our hands, and bless every honest effort we make today.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTHEN",
+        "BLESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May everything we build reflect Your love and bring quiet peace to those we serve.",
+      "kind": "phrase",
+      "words": [
+        "REFLECT",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Anchor our hearts in Your abiding presence now and forever. Amen.",
+      "kind": "phrase",
+      "words": [
+        "ABIDING",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Morning Altar to begin every sunrise in prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 90:17"
+}
