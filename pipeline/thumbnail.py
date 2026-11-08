@@ -152,17 +152,21 @@ def render_studio_thumbnail(
 
 def _safe_plate(doc: ScriptDoc, background: Path | None, out: Path,
                 title_size: int, bg_color: tuple[int, int, int], use_bg: bool) -> None:
+    from .channel_capabilities import brand_for
+
     bg = background if (use_bg and background is not None) else None
     niche = getattr(doc, "niche", "") or str(doc.meta.get("niche", ""))
     is_prayer = any(k in niche.lower() or k in doc.slug.lower() for k in ("faith", "prayer", "scripture", "devotional", "psalm"))
-    sub = "The Secret Place" if is_prayer else "Money, Explained"
+    brand = brand_for(getattr(doc, "channel", None)) if is_prayer else None
+    sub = brand.display_name if brand is not None else "Money, Explained"
+    kicker = brand.shorts_poster_kicker if brand is not None else sub.upper()
     try:
         render_studio_thumbnail(
             out,
             title=doc.thumb_text or doc.title,
             subtitle=sub,
-            kicker="PRAYER BEFORE SLEEP · PSALM 91" if is_prayer else sub.upper(),
-            tag="16 VERSES · FULL SCRIPTURE MEDITATION" if is_prayer else "DOCUMENTARY",
+            kicker=kicker,
+            tag="FULL KJV SCRIPTURE MEDITATION" if is_prayer else "DOCUMENTARY",
             bg_path=bg,
             is_prayer=is_prayer,
             bg_color=bg_color,

@@ -167,6 +167,10 @@ class Brand:
         "Numbers 6:24-26 — 'The Lord bless you and keep you; the Lord make His face shine upon you and give you peace.'"
     )
     default_comment_theme: str = "sacred peace and restorative sleep"
+    #: 16:9 long-form CTR thumbnail daypart grade & default Test & Compare hero copy
+    ctr_grade: str = "night"
+    ctr_hook_hero: str = "PRAY THIS TONIGHT"
+    ctr_quiet_hero: str = "WHILE YOU SLEEP"
 
 
 @dataclass(frozen=True)
@@ -554,6 +558,9 @@ _BRANDS: dict[str, Brand] = {
             "direct my prayer unto thee, and will look up.'"
         ),
         default_comment_theme="fresh morning mercy, clear guidance, and daily covering",
+        ctr_grade="dawn",
+        ctr_hook_hero="PRAY AT SUNRISE",
+        ctr_quiet_hero="FIRST LIGHT PEACE",
     ),
     "prayer3": Brand(
         channel_id="prayer3",
@@ -782,6 +789,9 @@ _BRANDS: dict[str, Brand] = {
             "Psalm 55:17 — 'Evening, and morning, and at noon, will I pray, and cry aloud: and He shall hear my voice.'"
         ),
         default_comment_theme="renewed midday strength, quiet wisdom, and steadfast peace",
+        ctr_grade="noon",
+        ctr_hook_hero="PRAY AT NOON",
+        ctr_quiet_hero="STAND FIRM TODAY",
     ),
 }
 

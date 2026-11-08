@@ -75,19 +75,27 @@ jobs:
           from pathlib import Path
           sys.path.insert(0, '.')
           from pipeline.script_doc import parse_script
-          from pipeline.thumbnail_ctr import generate_ctr_pack
+          from pipeline.thumbnail_ctr import curated_backdrop_for, generate_ctr_pack
           from pipeline.thumbnail_studio import choose_hero, generate_style_pack, mobile_preview
 
           job = Path('content/published') / os.environ['JOB']
           doc = parse_script(job)
           hero = os.environ.get('HERO') or ''
           out = Path('output/thumbnails')
+          doc_key = str(doc.id or doc.slug)
+          resolved_hero = hero or str(doc.meta.get('thumb_text') or '').strip() or choose_hero(doc)
 
           # CTR pack first: three concepts that never restate the title, sized and
-          # graded to survive a dark-mode phone feed.
-          ctr = generate_ctr_pack(out, hero_override=hero or None)
+          # graded to survive a dark-mode phone feed in the channel's own daypart.
+          ctr = generate_ctr_pack(
+              out,
+              hero_override=resolved_hero or None,
+              doc_key=doc_key,
+              backdrop=curated_backdrop_for(doc_key, channel_id=doc.channel),
+              channel_id=doc.channel,
+          )
           # The studio pack is kept as a control and for the older variants.
-          studio = generate_style_pack(hero or choose_hero(doc), out)
+          studio = generate_style_pack(resolved_hero, out)
           for r in ctr + studio:
               mobile_preview(r.path, r.path.with_name(r.path.stem + '_mobile.png'))
 

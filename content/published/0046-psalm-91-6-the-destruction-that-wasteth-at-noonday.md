@@ -27,7 +27,6 @@ description: 'A reverent midday devotional on Psalm 91:6, offering prayer, stren
   and protection against the hidden trials of the afternoon. Produced by The Midday
   Watch | Noonday Prayer & Scripture
 
-
   Scripture References & Sources:
 
   - The Holy Bible, Psalm 91:6 (King James Version, Public Domain)
@@ -86,9 +85,8 @@ originality_note: Original theological commentary incorporating Charles Spurgeon
 published_on: "2026-11-07"
 published_at: "2026-11-07T20:35:38Z"
 youtube_video_id: "GeZ3liNIxag"
-thumbnail_pending: false
+thumbnail_pending: true
 
-thumbnail_revision: "ctr-v3-cinema"
 metadata_revision: "selar-seo-v1"
 ---
 

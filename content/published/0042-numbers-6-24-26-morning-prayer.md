@@ -22,7 +22,6 @@ description: 'A sunrise morning prayer based upon Numbers 6:24-26, declaring the
   blessing, keeping, and face to shine upon your home, work, and family. Produced
   by The Morning Altar | Daily Sunrise Prayer.
 
-
   Scripture References & Sources:
 
   - The Holy Bible (King James Version, Public Domain)
@@ -76,9 +75,7 @@ published_on: "2026-11-08"
 published_at: "2026-11-08T14:07:49Z"
 youtube_video_id: "xpaLUtqsFTw"
 metadata_revision: "selar-seo-v1"
-thumbnail_pending: false
-
-thumbnail_revision: "ctr-v3-cinema"
+thumbnail_pending: true
 ---
 
 ## Scene 1 — The Sunrise Hook & Directing the Prayer

@@ -22,7 +22,6 @@ tags:
 description: 'Pause with The Midday Watch for an original devotional prayer and scripture
   meditation on Psalm 55:17 (KJV).
 
-
   Scripture References & Sources:
 
   - The Holy Bible, Psalm 55:17 (King James Version, Public Domain)
@@ -79,9 +78,8 @@ originality_note: high-original-theological-commentary
 published_on: "2026-11-07"
 published_at: "2026-11-07T18:17:21Z"
 youtube_video_id: "xjiV3SHKsR4"
-thumbnail_pending: false
+thumbnail_pending: true
 
-thumbnail_revision: "ctr-v3-cinema"
 metadata_revision: "selar-seo-v1"
 ---
 
