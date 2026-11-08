@@ -1,0 +1,276 @@
+{
+  "key": "short-middaypsalm37v5",
+  "channel": "prayer3",
+  "psalm": 37,
+  "scripture": "Psalm 37:5",
+  "title": [
+    "COMMIT YOUR DAY",
+    "PSALM 37:5"
+  ],
+  "poster": [
+    "THE MIDDAY WATCH",
+    "COMMIT YOUR WAY",
+    "UNTO THE LORD",
+    "PSALM 37:5"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "sunlight breaking through clouds mountain pass",
+    "bright midday sun through window blinds",
+    "divine light breaking through clouds over peaceful landscape",
+    "peaceful mountain river calm water forest",
+    "golden light rays through clouds over mountain peak",
+    "still forest canopy with light beams"
+  ],
+  "scenes": [
+    {
+      "a": "Step away from",
+      "img": "short-middaypsalm37v5-scene-01.jpg",
+      "kicker": "PSALM 37:5",
+      "sub": "PAUSE AT NOONDAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Commit thy way",
+      "img": "short-middaypsalm37v5-scene-02.jpg",
+      "kicker": "PSALM 37:5",
+      "sub": "TRUST ALSO IN HIM",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You do not",
+      "img": "short-middaypsalm37v5-scene-03.jpg",
+      "kicker": "PSALM 37:5",
+      "sub": "LAY DOWN THE WEIGHT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, right here",
+      "img": "short-middaypsalm37v5-scene-04.jpg",
+      "kicker": "PSALM 37:5",
+      "sub": "IN YOUR FAITHFUL HANDS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Steady our minds",
+      "img": "short-middaypsalm37v5-scene-05.jpg",
+      "kicker": "PSALM 37:5",
+      "sub": "RENEW QUIET STRENGTH",
+      "cam": "pan_left",
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    {
+      "a": "We trust You",
+      "img": "short-middaypsalm37v5-scene-06.jpg",
+      "kicker": "PSALM 37:5",
+      "sub": "HE BRINGS IT TO PASS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "Step away from your desk for a moment and lift your heart to God in the middle of the day."
+    ],
+    [
+      16,
+      34,
+      "Psalm thirty-seven, verse five declares: Commit thy way unto the Lord; trust also in him; and he shall bring it to pass."
+    ],
+    [
+      35,
+      54,
+      "You do not have to carry the unfinished work or the heavy decisions of this afternoon on your own shoulders."
+    ],
+    [
+      55,
+      75,
+      "Lord, right here at noonday, we place every task, every conversation, and every unseen outcome into Your faithful hands."
+    ],
+    [
+      76,
+      95,
+      "Steady our minds with Your wisdom, guard our speech with peace, and renew our quiet strength for the hours ahead."
+    ],
+    [
+      96,
+      114,
+      "We trust You to bring Your good purpose to pass today. Type Amen and subscribe to The Midday Watch."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "STEP AWAY NOW",
+        "LIFT YOUR HEART",
+        "MIDDLE OF THE DAY"
+      ],
+      [
+        "STEP",
+        "HEART"
+      ],
+      "PSALM 37:5"
+    ],
+    [
+      16,
+      34,
+      [
+        "COMMIT THY WAY",
+        "TRUST ALSO IN HIM",
+        "BRING IT TO PASS"
+      ],
+      [
+        "COMMIT",
+        "TRUST"
+      ],
+      "PSALM 37:5"
+    ],
+    [
+      35,
+      54,
+      [
+        "RELEASE UNFINISHED WORK",
+        "HEAVY DECISIONS",
+        "OFF YOUR SHOULDERS"
+      ],
+      [
+        "RELEASE",
+        "DECISIONS"
+      ],
+      "PSALM 37:5"
+    ],
+    [
+      55,
+      75,
+      [
+        "HERE AT NOONDAY",
+        "EVERY UNSEEN OUTCOME",
+        "YOUR FAITHFUL HANDS"
+      ],
+      [
+        "NOONDAY",
+        "FAITHFUL"
+      ],
+      "PSALM 37:5"
+    ],
+    [
+      76,
+      95,
+      [
+        "STEADY OUR MINDS",
+        "GUARD OUR SPEECH",
+        "RENEW QUIET STRENGTH"
+      ],
+      [
+        "STEADY",
+        "STRENGTH"
+      ],
+      "PSALM 37:5"
+    ],
+    [
+      96,
+      114,
+      [
+        "TRUST HIS PURPOSE",
+        "TYPE AMEN TODAY",
+        "THE MIDDAY WATCH"
+      ],
+      [
+        "TRUST",
+        "AMEN"
+      ],
+      "PSALM 37:5"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Step away from",
+      "kind": "phrase",
+      "words": [
+        "STEP",
+        "AWAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Commit thy way",
+      "kind": "phrase",
+      "words": [
+        "COMMIT",
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You do not",
+      "kind": "phrase",
+      "words": [
+        "CARRY",
+        "ALONE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, right here",
+      "kind": "phrase",
+      "words": [
+        "FAITHFUL",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Steady our minds",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We trust You",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ]
+}

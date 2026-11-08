@@ -104,7 +104,7 @@ class TestItsBrand(unittest.TestCase):
 class TestItsRoadmap(unittest.TestCase):
     def test_it_has_its_own_scriptures_and_ids(self):
         roadmap = roadmap_for_channel(CID)
-        self.assertEqual(len(roadmap), 8)
+        self.assertGreaterEqual(len(roadmap), 30)
         self.assertEqual(roadmap[0]["id"], "0045")
         ids = [row["id"] for row in roadmap]
         self.assertEqual(len(ids), len(set(ids)))
