@@ -23,7 +23,7 @@
       "workflow": "metrics.yml"
     }
   ],
-  "generated_at": "2026-11-08T06:22:59.985382+00:00",
+  "generated_at": "2026-11-08T06:23:45.826331+00:00",
   "last_run_at": "2026-11-08T06:22:48+00:00",
   "on_time": [
     {
@@ -53,13 +53,6 @@
       "ran_at": "2026-11-08T04:49:26+00:00",
       "slot": "2026-11-08T03:14:00+00:00",
       "workflow": "gemini_brain.yml"
-    },
-    {
-      "late_minutes": 73,
-      "name": "Automation monitor",
-      "ran_at": "2026-11-08T04:36:55+00:00",
-      "slot": "2026-11-08T03:23:00+00:00",
-      "workflow": "monitor.yml"
     },
     {
       "late_minutes": 83,
