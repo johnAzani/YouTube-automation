@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T02:31:13Z",
+  "generated_at": "2026-11-09T09:55:57Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 3
   },
   "totals": {
-    "published_total": 45,
+    "published_total": 46,
     "published_longform": 22,
-    "published_shorts": 23,
-    "public_total": 43,
-    "queued_longform": 26,
-    "queued_shorts": 15,
+    "published_shorts": 24,
+    "public_total": 44,
+    "queued_longform": 30,
+    "queued_shorts": 18,
     "automations_ok": 9,
     "automations_total": 10,
     "network_healthy": true
@@ -32,38 +32,38 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 18,
+        "published_total": 19,
         "published_longform": 7,
-        "published_shorts": 11,
-        "public_total": 17,
+        "published_shorts": 12,
+        "public_total": 18,
         "queued_longform": 20,
         "queued_other": 5,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-PSALM91V5",
-        "title": "Say This Psalm 91:5-6 Prayer Before You Sleep | Fear No Night Shadow #Shorts",
+        "id": "SHORT-PSALM18V2",
+        "title": "Say This Psalm 18:2 Prayer Before You Sleep | Safe Stronghold #Shorts",
         "format": "short",
-        "youtube_video_id": "SVhby9Yv0Wg",
-        "watch_url": "https://www.youtube.com/shorts/SVhby9Yv0Wg",
-        "published_on": "2026-11-08",
-        "published_at": "2026-11-08T13:22:21Z"
+        "youtube_video_id": "jhOlEJvNg-0",
+        "watch_url": "https://www.youtube.com/shorts/jhOlEJvNg-0",
+        "published_on": "2026-11-09",
+        "published_at": "2026-11-09T09:54:18Z"
       },
       "next_queued_longform": {
         "id": "0015",
         "title": "Psalm 91:5-6 Night Prayer | Deliverance From Terror by Night",
         "words": 883,
-        "status": "quota_paused"
+        "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm18v2",
-        "scripture": "Psalm 18:2",
+        "short": "short-psalm31v5",
+        "scripture": "Psalm 31:5",
         "target_window_utc": "14:14",
         "status": "approved"
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-08",
+        "as_of": "2026-11-09",
         "measured_longform_videos": 0,
         "total_longform_videos": 6,
         "top_themes": [
@@ -103,9 +103,9 @@
         "published_longform": 9,
         "published_shorts": 8,
         "public_total": 16,
-        "queued_longform": 3,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 6
       },
       "latest_video": {
         "id": "SHORT-MORNINGPSALM90V17",
@@ -130,9 +130,9 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-08",
+        "as_of": "2026-11-09",
         "measured_longform_videos": 0,
-        "total_longform_videos": 5,
+        "total_longform_videos": 9,
         "top_themes": [
           {
             "theme": "morning_mercy_renewal",
@@ -140,9 +140,14 @@
             "top_scripture": "Psalm 5"
           },
           {
-            "theme": "anxiety_peace",
+            "theme": "blessing_benediction",
             "videos": 1,
-            "top_scripture": "Proverbs 3"
+            "top_scripture": "Numbers 6"
+          },
+          {
+            "theme": "daily_guidance_wisdom",
+            "videos": 2,
+            "top_scripture": "Isaiah 50"
           }
         ]
       }
@@ -165,9 +170,9 @@
         "published_longform": 6,
         "published_shorts": 4,
         "public_total": 10,
-        "queued_longform": 3,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 7
       },
       "latest_video": {
         "id": "0050",
@@ -192,14 +197,19 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-08",
+        "as_of": "2026-11-09",
         "measured_longform_videos": 0,
-        "total_longform_videos": 3,
+        "total_longform_videos": 6,
         "top_themes": [
           {
+            "theme": "daily_guidance_wisdom",
+            "videos": 1,
+            "top_scripture": "Psalm 119"
+          },
+          {
             "theme": "midday_strength_endurance",
-            "videos": 2,
-            "top_scripture": "Proverbs 16"
+            "videos": 4,
+            "top_scripture": "Isaiah 58"
           },
           {
             "theme": "protection",
@@ -211,6 +221,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PSALM18V2",
+      "slug": "short-psalm18v2-pre-sleep-prayer",
+      "file": "short-psalm18v2-pre-sleep-prayer.md",
+      "title": "Say This Psalm 18:2 Prayer Before You Sleep | Safe Stronghold #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-09",
+      "published_at": "2026-11-09T09:54:18Z",
+      "youtube_video_id": "jhOlEJvNg-0",
+      "watch_url": "https://www.youtube.com/shorts/jhOlEJvNg-0",
+      "youtu_be_url": "https://youtu.be/jhOlEJvNg-0",
+      "shorts_url": "https://www.youtube.com/shorts/jhOlEJvNg-0",
+      "studio_url": "https://studio.youtube.com/video/jhOlEJvNg-0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/jhOlEJvNg-0/hqdefault.jpg",
+      "thumb_text": "THE LORD IS MY ROCK \u00b7 AND MY FORTRESS",
+      "duration_label": "54s",
+      "words": 630
+    },
     {
       "id": "0050",
       "slug": "isaiah-58-10-midday-prayer",
@@ -1256,7 +1289,7 @@
         "title": "Psalm 91:5-6 Night Prayer | Deliverance From Terror by Night",
         "channel": "secret-place",
         "channel_name": "The Secret Place",
-        "status": "quota_paused",
+        "status": "approved",
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,
@@ -1575,6 +1608,32 @@
         "words": 1437
       },
       {
+        "id": "0056",
+        "slug": "psalm-30-5-morning-prayer",
+        "file": "0056-psalm-30-5-morning-prayer.md",
+        "title": "Psalm 30:5 Morning Prayer | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1376
+      },
+      {
+        "id": "0057",
+        "slug": "psalm-19-4-6-morning-prayer-strength-for-the-race",
+        "file": "0057-psalm-19-4-6-morning-prayer-strength-for-the-race.md",
+        "title": "Psalm 19:4-6 Morning Prayer: Rejoicing as a Strong Man to Run a Race",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1597
+      },
+      {
         "id": "0083",
         "slug": "daniel-6-10-midday-prayer",
         "file": "0083-daniel-6-10-midday-prayer.md",
@@ -1586,20 +1645,35 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1408
+      },
+      {
+        "id": "0084",
+        "slug": "acts-10-9-midday-prayer",
+        "file": "0084-acts-10-9-midday-prayer.md",
+        "title": "Acts 10:9 Midday Prayer | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 2437
+      },
+      {
+        "id": "0085",
+        "slug": "psalm-37-6-clear-as-the-noonday-prayer",
+        "file": "0085-psalm-37-6-clear-as-the-noonday-prayer.md",
+        "title": "Psalm 37:6 Clear as the Noonday Prayer | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 2261
       }
     ],
     "shorts": [
-      {
-        "short": "short-psalm18v2",
-        "file": "0020-short-psalm18v2.yml",
-        "companion_longform_id": "0020",
-        "scripture": "Psalm 18:2",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
       {
         "short": "short-psalm31v5",
         "file": "0021-short-psalm31v5.yml",
@@ -1744,10 +1818,54 @@
         "target_window_utc": "06:14"
       },
       {
+        "short": "short-morningpsalm30v5",
+        "file": "0056-short-morningpsalm30v5.yml",
+        "companion_longform_id": "0056",
+        "scripture": "Psalm 30:5",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
+      },
+      {
+        "short": "short-morningpsalm19v4",
+        "file": "0057-short-morningpsalm19v4.yml",
+        "companion_longform_id": "0057",
+        "scripture": "Psalm 19:4-6",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
+      },
+      {
         "short": "short-middaydaniel6v10",
         "file": "0083-short-middaydaniel6v10.yml",
         "companion_longform_id": "0083",
         "scripture": "Daniel 6:10",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
+      },
+      {
+        "short": "short-middayacts10v9",
+        "file": "0084-short-middayacts10v9.yml",
+        "companion_longform_id": "0084",
+        "scripture": "Acts 10:9",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
+      },
+      {
+        "short": "short-middaypsalm37v6",
+        "file": "0085-short-middaypsalm37v6.yml",
+        "companion_longform_id": "0085",
+        "scripture": "Psalm 37:6",
         "channel": "prayer3",
         "channel_name": "The Midday Watch",
         "status": "approved",
