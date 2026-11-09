@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T09:55:57Z",
+  "generated_at": "2026-11-09T11:51:34Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -11,9 +11,9 @@
     "published_longform": 22,
     "published_shorts": 24,
     "public_total": 44,
-    "queued_longform": 30,
-    "queued_shorts": 18,
-    "automations_ok": 9,
+    "queued_longform": 33,
+    "queued_shorts": 22,
+    "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
   },
@@ -38,7 +38,7 @@
         "public_total": 18,
         "queued_longform": 20,
         "queued_other": 5,
-        "queued_shorts": 5
+        "queued_shorts": 6
       },
       "latest_video": {
         "id": "SHORT-PSALM18V2",
@@ -103,9 +103,9 @@
         "published_longform": 9,
         "published_shorts": 8,
         "public_total": 16,
-        "queued_longform": 5,
+        "queued_longform": 7,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 8
       },
       "latest_video": {
         "id": "SHORT-MORNINGPSALM90V17",
@@ -170,9 +170,9 @@
         "published_longform": 6,
         "published_shorts": 4,
         "public_total": 10,
-        "queued_longform": 5,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 8
       },
       "latest_video": {
         "id": "0050",
@@ -1634,6 +1634,32 @@
         "words": 1597
       },
       {
+        "id": "0058",
+        "slug": "psalm-57-8-awake-early-morning-prayer",
+        "file": "0058-psalm-57-8-awake-early-morning-prayer.md",
+        "title": "Psalm 57:8 Awake Early in Praise Morning Prayer | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1563
+      },
+      {
+        "id": "0059",
+        "slug": "psalm-108-2-morning-prayer",
+        "file": "0059-psalm-108-2-morning-prayer.md",
+        "title": "Psalm 108:2 Morning Prayer | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 960
+      },
+      {
         "id": "0083",
         "slug": "daniel-6-10-midday-prayer",
         "file": "0083-daniel-6-10-midday-prayer.md",
@@ -1671,6 +1697,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 2261
+      },
+      {
+        "id": "0086",
+        "slug": "psalm-121-5-6-midday-prayer",
+        "file": "0086-psalm-121-5-6-midday-prayer.md",
+        "title": "Psalm 121:5-6 Midday Prayer | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 2278
       }
     ],
     "shorts": [
@@ -1701,6 +1740,17 @@
         "file": "0023-short-psalm63v6.yml",
         "companion_longform_id": "0023",
         "scripture": "Psalm 63:6-7",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "14:14"
+      },
+      {
+        "short": "short-psalm139v11",
+        "file": "0024-short-psalm139v11.yml",
+        "companion_longform_id": "0024",
+        "scripture": "Psalm 139:11-12",
         "channel": "secret-place",
         "channel_name": "The Secret Place",
         "status": "approved",
@@ -1840,6 +1890,28 @@
         "target_window_utc": "06:14"
       },
       {
+        "short": "short-morningpsalm57v8",
+        "file": "0058-short-morningpsalm57v8.yml",
+        "companion_longform_id": "0058",
+        "scripture": "Psalm 57:8",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
+      },
+      {
+        "short": "short-morningpsalm108v2",
+        "file": "0059-short-morningpsalm108v2.yml",
+        "companion_longform_id": "0059",
+        "scripture": "Psalm 108:2",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
+      },
+      {
         "short": "short-middaydaniel6v10",
         "file": "0083-short-middaydaniel6v10.yml",
         "companion_longform_id": "0083",
@@ -1871,6 +1943,17 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
+      },
+      {
+        "short": "short-middaypsalm121v5",
+        "file": "0086-short-middaypsalm121v5.yml",
+        "companion_longform_id": "0086",
+        "scripture": "Psalm 121:5-6",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
       }
     ]
   },
@@ -1880,7 +1963,7 @@
       "name": "automation-health",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.2h ago",
+      "detail": "last success 9.5h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-09T02:19:40+00:00",
       "last_success": "2026-11-09T02:19:40+00:00",
@@ -1894,10 +1977,10 @@
       "name": "Autonomous Comment Replies",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 3.6h ago",
+      "detail": "last success 2.1h ago",
       "last_conclusion": "success",
-      "last_run": "2026-11-08T22:53:00+00:00",
-      "last_success": "2026-11-08T22:53:00+00:00",
+      "last_run": "2026-11-09T09:47:14+00:00",
+      "last_success": "2026-11-09T09:47:14+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -1908,7 +1991,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 3.6h ago",
+      "detail": "last success 13.0h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-08T22:53:40+00:00",
       "last_success": "2026-11-08T22:53:40+00:00",
@@ -1922,10 +2005,10 @@
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 16.2h ago",
+      "detail": "last success 0.4h ago",
       "last_conclusion": "success",
-      "last_run": "2026-11-08T10:19:26+00:00",
-      "last_success": "2026-11-08T10:19:26+00:00",
+      "last_run": "2026-11-09T11:28:49+00:00",
+      "last_success": "2026-11-09T11:28:49+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -1936,11 +2019,11 @@
       "name": "Growth autopilot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 17.6h ago",
+      "detail": "last success 2.1h ago",
       "last_conclusion": "success",
-      "last_run": "2026-11-08T08:55:55+00:00",
-      "last_success": "2026-11-08T08:55:55+00:00",
-      "runs_14d": 7,
+      "last_run": "2026-11-09T09:43:03+00:00",
+      "last_success": "2026-11-09T09:43:03+00:00",
+      "runs_14d": 9,
       "missed_slots": 0,
       "failures_5": 0,
       "effect": ""
@@ -1950,11 +2033,11 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 159.1h ago",
+      "detail": "last success 0.0h ago",
       "last_conclusion": "success",
-      "last_run": "2026-11-02T11:26:33+00:00",
-      "last_success": "2026-11-02T11:26:33+00:00",
-      "runs_14d": 3,
+      "last_run": "2026-11-09T11:48:56+00:00",
+      "last_success": "2026-11-09T11:48:56+00:00",
+      "runs_14d": 4,
       "missed_slots": 0,
       "failures_5": 0,
       "effect": "re-arms scheduled workflows"
@@ -1964,7 +2047,7 @@
       "name": "Weekly metrics snapshot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 2.3h ago",
+      "detail": "last success 11.6h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-09T00:14:40+00:00",
       "last_success": "2026-11-09T00:14:40+00:00",
@@ -1978,27 +2061,27 @@
       "name": "Automation monitor",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 5.0h ago",
+      "detail": "last success 14.4h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-09T02:29:38+00:00",
+      "last_run": "2026-11-09T11:49:52+00:00",
       "last_success": "2026-11-08T21:28:10+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
-      "failures_5": 1,
+      "failures_5": 2,
       "effect": "this report"
     },
     {
       "workflow": "produce.yml",
       "name": "Produce video",
-      "verdict": "UNTESTED FIX",
-      "severity": "warning",
-      "detail": "failed 3.6h ago; edited 10m ago \u2014 needs one green run",
-      "last_conclusion": "failure",
-      "last_run": "2026-11-08T22:52:11+00:00",
+      "verdict": "OK",
+      "severity": "ok",
+      "detail": "last success 17.0h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-09T11:37:52+00:00",
       "last_success": "2026-11-08T18:49:02+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
-      "failures_5": 0,
+      "failures_5": 1,
       "effect": "publishes a video: content/published/ gains a receipt with a video id"
     },
     {
@@ -2008,8 +2091,8 @@
       "severity": "ok",
       "detail": "last success 0.0h ago",
       "last_conclusion": "success",
-      "last_run": "2026-11-09T02:29:38+00:00",
-      "last_success": "2026-11-09T02:29:38+00:00",
+      "last_run": "2026-11-09T11:49:23+00:00",
+      "last_success": "2026-11-09T11:49:23+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
