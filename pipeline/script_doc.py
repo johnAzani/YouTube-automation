@@ -151,6 +151,24 @@ _FRONTMATTER_RE = re.compile(r"\A---\s*\n(.*?)\n---\s*\n(.*)\Z", re.S)
 _SCENE_RE = re.compile(r"^##\s+(?:Scene\s+(\d+)\s*[—\-–:]\s*)?(.+?)\s*$", re.M)
 
 
+def _load_yaml_mapping(raw_meta: str) -> dict:
+    """Parse YAML mapping with PyYAML when available, or a safe stdlib top-level fallback."""
+    if yaml is not None:
+        return yaml.safe_load(raw_meta) or {}
+    meta: dict = {}
+    for line in raw_meta.splitlines():
+        if not line or line.startswith((" ", "\t", "-", "#")):
+            continue
+        if ":" in line:
+            k, v = line.split(":", 1)
+            key = k.strip()
+            val = v.strip()
+            if val and val[0] == val[-1] and val[0] in {'"', "'"} and len(val) >= 2:
+                val = val[1:-1]
+            meta[key] = val
+    return meta
+
+
 def parse_script(path: Path) -> ScriptDoc:
     text = Path(path).read_text(encoding="utf-8")
     m = _FRONTMATTER_RE.match(text)
@@ -158,14 +176,7 @@ def parse_script(path: Path) -> ScriptDoc:
         raise ValueError(f"{path}: missing YAML frontmatter delimited by ---")
     raw_meta, body = m.group(1), m.group(2)
 
-    if yaml is not None:
-        meta = yaml.safe_load(raw_meta) or {}
-    else:  # minimal fallback: flat "key: value" lines
-        meta = {}
-        for line in raw_meta.splitlines():
-            if ":" in line:
-                k, v = line.split(":", 1)
-                meta[k.strip()] = v.strip().strip('"').strip("'")
+    meta = _load_yaml_mapping(raw_meta)
 
     # Split body into scenes on "## Scene N — Heading" (or plain "## Heading")
     splits = list(_SCENE_RE.finditer(body))

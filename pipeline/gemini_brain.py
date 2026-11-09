@@ -133,6 +133,54 @@ REQUIRED_JOB_KEYS = ("id", "slug", "title", "status", "channel", "niche", "thumb
                      "originality")
 
 
+_THUMB_LONG_WORD_SWAPS: dict[str, str] = {
+    "LOVINGKINDNESS": "MERCY",
+    "RIGHTEOUSNESS": "PEACE",
+    "FAITHFULNESS": "GRACE",
+    "UNDERSTANDING": "WISDOM",
+    "STRENGTHENING": "STRENGTH",
+    "TRANSGRESSION": "PARDON",
+    "TRANSGRESSIONS": "PARDON",
+    "SUPPLICATION": "PRAYER",
+    "SUPPLICATIONS": "PRAYER",
+    "SANCTIFICATION": "HOLINESS",
+}
+
+
+def _clamp_thumb_text_for_ctr(raw_thumb: str, daypart: str = "night") -> str:
+    """Guarantee `thumb_text` fits the 660px CTR hero box at >= 105px."""
+    words = [w for w in str(raw_thumb or "").strip().upper().split() if w]
+    words = [_THUMB_LONG_WORD_SWAPS.get(w.strip(".,;:!?"), w) for w in words]
+    candidate = " ".join(words[:3]).strip()
+    try:
+        from PIL import Image, ImageDraw
+        from . import thumbnail_ctr as ctr
+
+        draw = ImageDraw.Draw(Image.new("RGB", (1280, 720)))
+        if candidate:
+            _f, _l, _t, _ld, px = ctr._layout(draw, candidate, (86, 76, 746, 568))
+            if px >= 105:
+                return candidate
+        short_words = [w for w in words if len(w) <= 10][:3]
+        if len(short_words) >= 2:
+            alt = " ".join(short_words)
+            _f, _l, _t, _ld, px = ctr._layout(draw, alt, (86, 76, 746, 568))
+            if px >= 105:
+                return alt
+    except Exception:  # noqa: BLE001
+        if candidate and all(len(w) <= 10 for w in candidate.split()):
+            return candidate
+    defaults = {
+        "morning": "MORNING MERCY",
+        "midday": "MIDDAY PEACE",
+    }
+    low = str(daypart or "").lower()
+    for key, val in defaults.items():
+        if key in low:
+            return val
+    return "PERFECT PEACE"
+
+
 def job_front_matter(text: str) -> dict[str, Any]:
     """The YAML header of a model-authored job, or {} when it does not have one."""
     body = text.lstrip()
@@ -419,6 +467,10 @@ def normalize_authored_script_markdown(
         }
     if not merged_meta.get("tags"):
         merged_meta["tags"] = list(brand.short_tags[:6])
+    if merged_meta.get("thumb_text"):
+        merged_meta["thumb_text"] = _clamp_thumb_text_for_ctr(
+            str(merged_meta["thumb_text"]), daypart=brand.longform_prayer_label
+        )
 
     ordered_keys = [
         "id", "title", "slug", "status", "channel", "privacy", "format",

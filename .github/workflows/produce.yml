@@ -363,7 +363,7 @@ jobs:
           if [ "$rc" -eq 3 ]; then
             echo "LONGFORM_UPLOADED=false" >> "$GITHUB_ENV"
             if python -c "import os; from datetime import datetime, timedelta, timezone; from scripts.pipeline_watchdog import last_publish_for_channel; lp=last_publish_for_channel(os.environ.get('CHANNEL_ID','secret-place'), longform_only=True); raise SystemExit(0 if (lp and datetime.now(timezone.utc) - lp[1] < timedelta(hours=24)) else 1)"; then
-              echo "::notice title=Daily free-tier quota cooldown (${CHANNEL_ID})::Channel already published a long-form prayer within the last 24h; long-form edition paused cleanly until next daily reset ($0.00 lock)."
+              echo "::notice title=Daily free-tier quota cooldown (${CHANNEL_ID})::Channel already published a long-form prayer within the last 24h; long-form edition paused cleanly until next daily reset (\$0.00 lock)."
               exit 0
             fi
           fi

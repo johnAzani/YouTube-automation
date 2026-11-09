@@ -10,7 +10,7 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-thumb_text: LOVINGKINDNESS AT DAWN
+thumb_text: MORNING MERCY
 seo_hook: Begin this sunrise by declaring God's lovingkindness every morning, drawing
   from Psalm 92:1-2 to anchor your day in His steadfast faithfulness.
 tags:

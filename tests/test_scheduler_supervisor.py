@@ -523,7 +523,10 @@ class TestWorkflowFile(unittest.TestCase):
             calls.append(cmd)
             return _Proc()
 
-        with mock.patch.object(sup.subprocess, "run", side_effect=fake_run), \
+        with two_channel_world(), \
+             mock.patch.object(sup, "_channel_has_supply", return_value=True), \
+             mock.patch("scripts.automation_monitor.active_quota_cooldown", return_value=None), \
+             mock.patch.object(sup.subprocess, "run", side_effect=fake_run), \
              mock.patch.object(sup, "published_channels_since", return_value={"secret-place"}):
             ok, msg = sup.dispatch("produce.yml", "2026-11-06T06:14:00+00:00")
         self.assertTrue(ok)

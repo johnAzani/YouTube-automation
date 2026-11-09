@@ -1333,6 +1333,75 @@ goes before you until evening falls and brings your labor to peaceful completion
         self.assertIn("longform_only=True", produce_wf)
         self.assertIn("env.LONGFORM_UPLOADED == 'true'", produce_wf)
 
+    def test_active_quota_cooldown_works_without_pil_or_pyyaml_in_plan_runner(self):
+        """Bare ubuntu-latest plan job (no Pillow, no PyYAML) must still skip quota-paused channels."""
+        import subprocess
+        import sys
+
+        with tempfile.TemporaryDirectory() as tmp:
+            content = Path(tmp) / "content"
+            qdir = content / "queue"
+            pdir = content / "published"
+            sdir = content / "shorts-queue"
+            qdir.mkdir(parents=True)
+            pdir.mkdir(parents=True)
+            sdir.mkdir(parents=True)
+
+            (qdir / "0015-sp.md").write_text(
+                '---\nid: "0015"\ntitle: "Psalm 91:5-6"\nstatus: quota_paused\n'
+                'tags:\n- psalm 91:5-6\n- night: prayer\n'
+                'quota_reset_utc: "2026-11-09T08:00:00+00:00"\n---\n\n## Scene 1 — Rest\nAmen.\n',
+                encoding="utf-8",
+            )
+            (qdir / "0053-p2.md").write_text(
+                '---\nid: "0053"\ntitle: "Psalm 59:16"\nchannel: prayer2\nstatus: quota_paused\n'
+                'tags:\n- psalm 59:16\n'
+                'quota_reset_utc: "2026-11-09T08:00:00+00:00"\n---\n\n## Scene 1 — Dawn\nAmen.\n',
+                encoding="utf-8",
+            )
+            (qdir / "0051-p3.md").write_text(
+                '---\nid: "0051"\ntitle: "Psalm 37:5"\nchannel: prayer3\nstatus: approved\n---\n\n## Scene 1 — Noon\nAmen.\n',
+                encoding="utf-8",
+            )
+            (pdir / "0050-p3.md").write_text(
+                '---\nid: "0050"\nchannel: prayer3\nyoutube_video_id: _dwqP8DoW2Q\n'
+                'published_at: "2026-11-09T00:08:00Z"\n---\nAmen.\n',
+                encoding="utf-8",
+            )
+
+            probe = (
+                "import builtins, json, os, sys\n"
+                "real_import = builtins.__import__\n"
+                "def guard(name, *a, **kw):\n"
+                "    if name == 'PIL' or name.startswith('PIL.') or name == 'yaml':\n"
+                "        raise ModuleNotFoundError(f'No module named {name!r}')\n"
+                "    return real_import(name, *a, **kw)\n"
+                "builtins.__import__ = guard\n"
+                "sys.path.insert(0, os.getcwd())\n"
+                "from datetime import datetime, timezone\n"
+                "from scripts.automation_monitor import active_quota_cooldown\n"
+                "now = datetime(2026, 11, 9, 6, 14, tzinfo=timezone.utc)\n"
+                "out = {c: (active_quota_cooldown(now, channel_id=c).isoformat() if active_quota_cooldown(now, channel_id=c) else None) "
+                "for c in ('secret-place', 'prayer2', 'prayer3')}\n"
+                "print(json.dumps(out))\n"
+            )
+            env = {**os.environ, "CONTENT_DIR": str(content)}
+            proc = subprocess.run(
+                [sys.executable, "-c", probe],
+                cwd=str(ROOT),
+                env=env,
+                capture_output=True,
+                text=True,
+                check=True,
+            )
+            parsed = json.loads(proc.stdout.strip())
+            self.assertEqual(parsed["secret-place"], "2026-11-09T08:00:00+00:00")
+            self.assertEqual(parsed["prayer2"], "2026-11-09T08:00:00+00:00")
+            self.assertIsNone(parsed["prayer3"])
+
+        produce_wf = (ROOT / ".github" / "workflows" / "produce.yml").read_text(encoding="utf-8")
+        self.assertIn(r"(\$0.00 lock)", produce_wf)
+
 
 if __name__ == "__main__":
     unittest.main()
