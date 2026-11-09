@@ -1,0 +1,334 @@
+{
+  "key": "short-morningpsalm30v5",
+  "channel": "prayer2",
+  "psalm": 30,
+  "title": [
+    "BEGIN YOUR",
+    "SUNRISE PRAYER"
+  ],
+  "poster": [
+    "THE",
+    "MORNING",
+    "ALTAR",
+    "PSALM 30:5"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "dark misty mountain valley before dawn blue hour",
+    "golden sunlight slowly creeping over dark forest trees",
+    "warm morning sun rays shining through peaceful bedroom window",
+    "mist rising gently over a calm serene glassy mountain lake",
+    "bright golden morning light illuminating quiet valley landscape",
+    "radiant sunrise sky with soft clouds and gentle warm glow",
+    "peaceful morning horizon with bright light of new day",
+    "serene mountain peak bathed in warm golden morning sun"
+  ],
+  "scenes": [
+    {
+      "a": "Welcome the quiet of this new morning as the darkness slowly fades away.",
+      "img": "short-morningpsalm30v5-scene-01.jpg",
+      "kicker": "WELCOME THE DAWN",
+      "sub": "QUIET OF THIS NEW MORNING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Step into the fresh light that God has prepared for your soul today.",
+      "img": "short-morningpsalm30v5-scene-02.jpg",
+      "kicker": "FRESH LIGHT",
+      "sub": "PREPARED FOR YOUR SOUL",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Listen closely to the ancient truth found within the sacred scriptures.",
+      "img": "short-morningpsalm30v5-scene-03.jpg",
+      "kicker": "ANCIENT TRUTH",
+      "sub": "WITHIN THE SCRIPTURES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For his anger lasts only a moment, but his favor lasts a lifetime.",
+      "img": "short-morningpsalm30v5-scene-04.jpg",
+      "kicker": "PSALM 30:5",
+      "sub": "HIS FAVOR LASTS A LIFETIME",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Weeping may stay for the night, but rejoicing comes in the morning.",
+      "img": "short-morningpsalm30v5-scene-05.jpg",
+      "kicker": "JOY IN THE MORNING",
+      "sub": "REJOICING COMES WITH DAWN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Let this promise anchor your heart against every fear and every doubt.",
+      "img": "short-morningpsalm30v5-scene-06.jpg",
+      "kicker": "ANCHOR YOUR HEART",
+      "sub": "AGAINST EVERY FEAR",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, fill us with your steadfast peace as we walk through this day.",
+      "img": "short-morningpsalm30v5-scene-07.jpg",
+      "kicker": "STEADFAST PEACE",
+      "sub": "WALK THROUGH THIS DAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to The Morning Altar for daily prayer and sunrise scripture.",
+      "img": "short-morningpsalm30v5-scene-08.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "DAILY PRAYER AND SCRIPTURE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "Welcome the quiet of this new morning as the darkness slowly fades away."
+    ],
+    [
+      15,
+      30,
+      "Step into the fresh light that God has prepared for your soul today."
+    ],
+    [
+      30,
+      45,
+      "Listen closely to the ancient truth found within the sacred scriptures."
+    ],
+    [
+      45,
+      60,
+      "For his anger lasts only a moment, but his favor lasts a lifetime."
+    ],
+    [
+      60,
+      75,
+      "Weeping may stay for the night, but rejoicing comes in the morning."
+    ],
+    [
+      75,
+      90,
+      "Let this promise anchor your heart against every fear and every doubt."
+    ],
+    [
+      90,
+      105,
+      "Father, fill us with your steadfast peace as we walk through this day."
+    ],
+    [
+      105,
+      120,
+      "Subscribe to The Morning Altar for daily prayer and sunrise scripture."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "WELCOME THE QUIET",
+        "OF THIS NEW MORNING",
+        "AS DARKNESS FADES"
+      ],
+      "QUIET",
+      "PSALM 30 : 5"
+    ],
+    [
+      15,
+      30,
+      [
+        "STEP INTO THE LIGHT",
+        "PREPARED FOR",
+        "YOUR SOUL TODAY"
+      ],
+      "LIGHT",
+      "PSALM 30 : 5"
+    ],
+    [
+      30,
+      45,
+      [
+        "LISTEN CLOSELY",
+        "TO THE ANCIENT",
+        "TRUTH FOUND HERE"
+      ],
+      "TRUTH",
+      "PSALM 30 : 5"
+    ],
+    [
+      45,
+      60,
+      [
+        "HIS FAVOR LASTS",
+        "A LIFETIME",
+        "PSALM THIRTY FIVE"
+      ],
+      "LIFETIME",
+      "PSALM 30 : 5"
+    ],
+    [
+      60,
+      75,
+      [
+        "WEEPING STAYS",
+        "FOR THE NIGHT",
+        "REJOICING COMES"
+      ],
+      "REJOICING",
+      "PSALM 30 : 5"
+    ],
+    [
+      75,
+      90,
+      [
+        "LET THIS PROMISE",
+        "ANCHOR YOUR HEART",
+        "AGAINST ALL FEAR"
+      ],
+      "PROMISE",
+      "PSALM 30 : 5"
+    ],
+    [
+      90,
+      105,
+      [
+        "FATHER FILL US",
+        "WITH YOUR PEACE",
+        "THROUGH THIS DAY"
+      ],
+      "PEACE",
+      "PSALM 30 : 5"
+    ],
+    [
+      105,
+      120,
+      [
+        "SUBSCRIBE TO",
+        "THE MORNING ALTAR",
+        "FOR DAILY PRAYER"
+      ],
+      "SUBSCRIBE",
+      "PSALM 30 : 5"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Welcome the quiet of this new morning as the darkness slowly fades away.",
+      "kind": "phrase",
+      "words": [
+        "WELCOME",
+        "QUIET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Step into the fresh light that God has prepared for your soul today.",
+      "kind": "phrase",
+      "words": [
+        "FRESH",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Listen closely to the ancient truth found within the sacred scriptures.",
+      "kind": "phrase",
+      "words": [
+        "ANCIENT",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For his anger lasts only a moment, but his favor lasts a lifetime.",
+      "kind": "phrase",
+      "words": [
+        "FAVOR",
+        "LIFETIME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Weeping may stay for the night, but rejoicing comes in the morning.",
+      "kind": "phrase",
+      "words": [
+        "WEEPING",
+        "REJOICING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let this promise anchor your heart against every fear and every doubt.",
+      "kind": "phrase",
+      "words": [
+        "PROMISE",
+        "ANCHOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, fill us with your steadfast peace as we walk through this day.",
+      "kind": "phrase",
+      "words": [
+        "STEADFAST",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Morning Altar for daily prayer and sunrise scripture.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 30:5"
+}

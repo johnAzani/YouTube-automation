@@ -1,0 +1,296 @@
+{
+  "key": "short-morningpsalm19v4",
+  "channel": "prayer2",
+  "psalm": 19,
+  "title": [
+    "DAWN PRAYER",
+    "PSALM 19"
+  ],
+  "poster": [
+    "THE",
+    "MORNING",
+    "ALTAR",
+    "PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "serene misty mountain dawn sunrise",
+    "golden sunbeams breaking through forest trees morning",
+    "calm ocean horizon glowing with orange dawn light",
+    "peaceful valley filled with soft morning fog and light",
+    "dewdrops shining on green grass at sunrise close up",
+    "vast open sky with pastel pink and blue morning clouds",
+    "quiet winding river reflecting golden morning light"
+  ],
+  "scenes": [
+    {
+      "a": "As the morning light begins to break",
+      "img": "short-morningpsalm19v4-scene-01.jpg",
+      "kicker": "PSALM 19:4",
+      "sub": "WELCOME THE NEW LIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Their voice goes out through all the earth",
+      "img": "short-morningpsalm19v4-scene-02.jpg",
+      "kicker": "PSALM 19:4",
+      "sub": "HEAVEN SPEAKS IN SILENCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In the heavens he has set a tent for the sun",
+      "img": "short-morningpsalm19v4-scene-03.jpg",
+      "kicker": "PSALM 19:4",
+      "sub": "A TENT FOR THE SUN",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Which comes out like a bridegroom leaving his chamber",
+      "img": "short-morningpsalm19v4-scene-04.jpg",
+      "kicker": "PSALM 19:5",
+      "sub": "THE BRIDEGROOM RISES",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "And runs its course with joy like a strong man",
+      "img": "short-morningpsalm19v4-scene-05.jpg",
+      "kicker": "PSALM 19:5",
+      "sub": "RUNNING WITH JOY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Its rising is from the end of the heavens",
+      "img": "short-morningpsalm19v4-scene-06.jpg",
+      "kicker": "PSALM 19:6",
+      "sub": "FROM END TO END",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, let your quiet sunrise fill my heart",
+      "img": "short-morningpsalm19v4-scene-07.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "FILL MY HEART",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "As the morning light begins to break, pause and quiet your soul before God."
+    ],
+    [
+      6,
+      13,
+      "Their voice goes out through all the earth, and their words to the end of the world."
+    ],
+    [
+      13,
+      20,
+      "In the heavens he has set a tent for the sun,"
+    ],
+    [
+      20,
+      27,
+      "Which comes out like a bridegroom leaving his chamber,"
+    ],
+    [
+      27,
+      34,
+      "And runs its course with joy like a strong man."
+    ],
+    [
+      34,
+      41,
+      "Its rising is from the end of the heavens, and its circuit to the end of them."
+    ],
+    [
+      41,
+      48,
+      "Lord, let your quiet sunrise fill my heart with your enduring peace today. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "AS THE MORNING",
+        "LIGHT BEGINS",
+        "TO BREAK"
+      ],
+      "LIGHT",
+      "PSALM 19 : 4"
+    ],
+    [
+      6,
+      13,
+      [
+        "THEIR VOICE GOES OUT",
+        "THROUGH ALL THE EARTH",
+        "AND THEIR WORDS"
+      ],
+      "VOICE",
+      "PSALM 19 : 4"
+    ],
+    [
+      13,
+      20,
+      [
+        "IN THE HEAVENS",
+        "HE HAS SET A TENT",
+        "FOR THE SUN"
+      ],
+      "HEAVENS",
+      "PSALM 19 : 4"
+    ],
+    [
+      20,
+      27,
+      [
+        "WHICH COMES OUT",
+        "LIKE A BRIDEGROOM",
+        "LEAVING HIS CHAMBER"
+      ],
+      "BRIDEGROOM",
+      "PSALM 19 : 5"
+    ],
+    [
+      27,
+      34,
+      [
+        "AND RUNS ITS COURSE",
+        "WITH JOY LIKE",
+        "A STRONG MAN"
+      ],
+      "COURSE",
+      "PSALM 19 : 5"
+    ],
+    [
+      34,
+      41,
+      [
+        "ITS RISING IS FROM",
+        "THE END OF THE HEAVENS",
+        "AND ITS CIRCUIT"
+      ],
+      "RISING",
+      "PSALM 19 : 6"
+    ],
+    [
+      41,
+      48,
+      [
+        "LORD LET YOUR",
+        "QUIET SUNRISE FILL",
+        "MY HEART TODAY"
+      ],
+      "SUNRISE",
+      "PRAYER"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As the morning light begins to break",
+      "kind": "phrase",
+      "words": [
+        "MORNING",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Their voice goes out through all the earth",
+      "kind": "phrase",
+      "words": [
+        "VOICE",
+        "EARTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In the heavens he has set a tent for the sun",
+      "kind": "phrase",
+      "words": [
+        "HEAVENS",
+        "SUN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Which comes out like a bridegroom leaving his chamber",
+      "kind": "phrase",
+      "words": [
+        "BRIDEGROOM",
+        "CHAMBER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And runs its course with joy like a strong man",
+      "kind": "phrase",
+      "words": [
+        "COURSE",
+        "JOY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Its rising is from the end of the heavens",
+      "kind": "phrase",
+      "words": [
+        "RISING",
+        "HEAVENS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, let your quiet sunrise fill my heart",
+      "kind": "phrase",
+      "words": [
+        "SUNRISE",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 19:4-6"
+}
