@@ -114,7 +114,7 @@ CHANNELS: dict[str, ChannelProfile] = {
     "prayer4": ChannelProfile(
         id="prayer4",
         display_name="The Midnight Watch",
-        handle="@TheMidnightWatch",
+        handle="@TheMidnightWatchDaily",
         secret_prefix="PRAYER4_",
         # Owner decision, 2026-11-09: fourth prayer channel dedicated to the
         # 12:00 AM midnight watch & breakthrough intercession (Psalm 119:62 /
