@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T11:51:34Z",
+  "generated_at": "2026-11-09T12:37:13Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 3
   },
   "totals": {
-    "published_total": 46,
-    "published_longform": 22,
-    "published_shorts": 24,
-    "public_total": 44,
-    "queued_longform": 33,
-    "queued_shorts": 22,
+    "published_total": 48,
+    "published_longform": 23,
+    "published_shorts": 25,
+    "public_total": 46,
+    "queued_longform": 32,
+    "queued_shorts": 21,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -99,32 +99,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 17,
-        "published_longform": 9,
-        "published_shorts": 8,
-        "public_total": 16,
-        "queued_longform": 7,
+        "published_total": 19,
+        "published_longform": 10,
+        "published_shorts": 9,
+        "public_total": 18,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM90V17",
-        "title": "Say This Psalm 90:17 Prayer at Sunrise | Psalm 90:17 #Shorts",
-        "format": "short",
-        "youtube_video_id": "XqhZqDHC8xM",
-        "watch_url": "https://www.youtube.com/shorts/XqhZqDHC8xM",
-        "published_on": "2026-11-08",
-        "published_at": "2026-11-08T23:01:49Z"
-      },
-      "next_queued_longform": {
         "id": "0053",
         "title": "Psalm 59:16 Morning Prayer | The Morning Altar",
-        "words": 1075,
-        "status": "quota_paused"
+        "format": "longform",
+        "youtube_video_id": "05W-CWM6qWQ",
+        "watch_url": "https://youtu.be/05W-CWM6qWQ",
+        "published_on": "2026-11-09",
+        "published_at": "2026-11-09T12:36:27Z"
+      },
+      "next_queued_longform": {
+        "id": "0054",
+        "title": "Psalm 88:13 Morning Prayer | The Morning Altar",
+        "words": 1698,
+        "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningisaiah50v4",
-        "scripture": "Isaiah 50:4",
+        "short": "short-morningpsalm59v16",
+        "scripture": "Psalm 59:16",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -221,6 +221,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0053",
+      "slug": "psalm-59-16-morning-prayer",
+      "file": "0053-psalm-59-16-morning-prayer.md",
+      "title": "Psalm 59:16 Morning Prayer | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-09",
+      "published_at": "2026-11-09T12:36:27Z",
+      "youtube_video_id": "05W-CWM6qWQ",
+      "watch_url": "https://youtu.be/05W-CWM6qWQ",
+      "youtu_be_url": "https://youtu.be/05W-CWM6qWQ",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/05W-CWM6qWQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/05W-CWM6qWQ/hqdefault.jpg",
+      "thumb_text": "MORNING SONG OF MERCY",
+      "duration_label": "~7 min",
+      "words": 1075
+    },
+    {
+      "id": "SHORT-MORNINGISAIAH50V4",
+      "slug": "short-morningisaiah50v4-sunrise-prayer",
+      "file": "short-morningisaiah50v4-sunrise-prayer.md",
+      "title": "Say This Isaiah 50:4 Prayer at Sunrise | Stillness #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-09",
+      "published_at": "2026-11-09T11:47:01Z",
+      "youtube_video_id": "AcRcAH0n48k",
+      "watch_url": "https://www.youtube.com/shorts/AcRcAH0n48k",
+      "youtu_be_url": "https://youtu.be/AcRcAH0n48k",
+      "shorts_url": "https://www.youtube.com/shorts/AcRcAH0n48k",
+      "studio_url": "https://studio.youtube.com/video/AcRcAH0n48k/edit",
+      "thumb_url": "https://i.ytimg.com/vi/AcRcAH0n48k/hqdefault.jpg",
+      "thumb_text": "GREET THE \u00b7 MORNING LIGHT",
+      "duration_label": "60s",
+      "words": 623
+    },
     {
       "id": "SHORT-PSALM18V2",
       "slug": "short-psalm18v2-pre-sleep-prayer",
@@ -1569,19 +1615,6 @@
         "words": 2549
       },
       {
-        "id": "0053",
-        "slug": "psalm-59-16-morning-prayer",
-        "file": "0053-psalm-59-16-morning-prayer.md",
-        "title": "Psalm 59:16 Morning Prayer | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "quota_paused",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1075
-      },
-      {
         "id": "0054",
         "slug": "psalm-88-13-morning-prayer-the-morning-altar",
         "file": "0054-psalm-88-13-morning-prayer-the-morning-altar.md",
@@ -1778,17 +1811,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-morningisaiah50v4",
-        "file": "0044-short-morningisaiah50v4.yml",
-        "companion_longform_id": "0044",
-        "scripture": "Isaiah 50:4",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-middaypsalm119v114",

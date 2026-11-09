@@ -2,7 +2,7 @@
 id: '0053'
 title: Psalm 59:16 Morning Prayer | The Morning Altar
 slug: psalm-59-16-morning-prayer
-status: quota_paused
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -78,8 +78,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
-quota_reset_utc: '2026-11-09T08:00:00+00:00'
-pause_reason: gemini_api_daily_quota_exhausted
+published_on: "2026-11-09"
+published_at: "2026-11-09T12:36:27Z"
+youtube_video_id: "05W-CWM6qWQ"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — The Sunrise Hook & Directing the Prayer
