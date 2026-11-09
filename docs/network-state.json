@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T16:17:19Z",
+  "generated_at": "2026-11-09T16:31:22Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 4
   },
   "totals": {
-    "published_total": 49,
+    "published_total": 50,
     "published_longform": 23,
-    "published_shorts": 26,
-    "public_total": 47,
+    "published_shorts": 27,
+    "public_total": 48,
     "queued_longform": 32,
-    "queued_shorts": 20,
+    "queued_shorts": 19,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -99,22 +99,22 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 19,
+        "published_total": 20,
         "published_longform": 10,
-        "published_shorts": 9,
-        "public_total": 18,
+        "published_shorts": 10,
+        "public_total": 19,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0053",
-        "title": "Psalm 59:16 Morning Prayer | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "05W-CWM6qWQ",
-        "watch_url": "https://youtu.be/05W-CWM6qWQ",
+        "id": "SHORT-MORNINGPSALM59V16",
+        "title": "Say This Psalm 59:16 Prayer at Sunrise | God Is My Refuges And Strength #Shorts",
+        "format": "short",
+        "youtube_video_id": "5boMPL29htI",
+        "watch_url": "https://www.youtube.com/shorts/5boMPL29htI",
         "published_on": "2026-11-09",
-        "published_at": "2026-11-09T12:36:27Z"
+        "published_at": "2026-11-09T16:25:12Z"
       },
       "next_queued_longform": {
         "id": "0054",
@@ -123,8 +123,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm59v16",
-        "scripture": "Psalm 59:16",
+        "short": "short-morningpsalm88v13",
+        "scripture": "Psalm 88:13",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -252,6 +252,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM59V16",
+      "slug": "short-morningpsalm59v16-sunrise-prayer",
+      "file": "short-morningpsalm59v16-sunrise-prayer.md",
+      "title": "Say This Psalm 59:16 Prayer at Sunrise | God Is My Refuges And Strength #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-09",
+      "published_at": "2026-11-09T16:25:12Z",
+      "youtube_video_id": "5boMPL29htI",
+      "watch_url": "https://www.youtube.com/shorts/5boMPL29htI",
+      "youtu_be_url": "https://youtu.be/5boMPL29htI",
+      "shorts_url": "https://www.youtube.com/shorts/5boMPL29htI",
+      "studio_url": "https://studio.youtube.com/video/5boMPL29htI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/5boMPL29htI/hqdefault.jpg",
+      "thumb_text": "",
+      "duration_label": "60s",
+      "words": 609
+    },
     {
       "id": "SHORT-PSALM31V5",
       "slug": "short-psalm31v5-pre-sleep-prayer",
@@ -1898,17 +1921,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-morningpsalm59v16",
-        "file": "0053-short-morningpsalm59v16.yml",
-        "companion_longform_id": "0053",
-        "scripture": "Psalm 59:16",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm88v13",
