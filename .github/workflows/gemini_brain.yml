@@ -11,9 +11,9 @@ on:
         type: boolean
         default: false
       channel:
-        description: "Channel to replenish (schedule runs both)"
+        description: "Channel to replenish (schedule runs all provisioned channels)"
         type: choice
-        options: [both, secret-place, prayer2, prayer3]
+        options: [both, secret-place, prayer2, prayer3, prayer4]
         default: both
 
 permissions:
@@ -37,21 +37,28 @@ jobs:
           # is not a capability gap — it is an unmetered channel spending nothing,
           # and it would fail loudly every day until the owner provisions it.
           PRAYER3_READY: ${{ secrets.PRAYER3_GEMINI_API_KEY != '' }}
+          PRAYER4_READY: ${{ secrets.PRAYER4_GEMINI_API_KEY != '' }}
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_CHANNEL: ${{ inputs.channel }}
         run: |
-          provisioned='["secret-place","prayer2"]'
-          if [ "$PRAYER3_READY" = "true" ]; then
-            provisioned='["secret-place","prayer2","prayer3"]'
-          fi
-          case "${{ github.event_name }}" in
-            schedule)          channels="$provisioned" ;;
-            workflow_dispatch) case "${{ inputs.channel }}" in
-                                 both) channels="$provisioned" ;;
-                                 *)    channels='["${{ inputs.channel }}"]' ;;
-                               esac ;;
-            *)                 channels="$provisioned" ;;
-          esac
-          echo "channels=$channels" >> "$GITHUB_OUTPUT"
-          echo "Brain plan: $channels"
+          python3 - <<'PY'
+          import json, os
+          provisioned = ["secret-place", "prayer2"]
+          if os.environ.get("PRAYER3_READY", "").lower() == "true":
+              provisioned.append("prayer3")
+          if os.environ.get("PRAYER4_READY", "").lower() == "true":
+              provisioned.append("prayer4")
+          event = os.environ.get("EVENT_NAME", "")
+          inp = (os.environ.get("INPUT_CHANNEL") or "both").strip()
+          if event == "workflow_dispatch" and inp not in ("", "both"):
+              channels = [inp]
+          else:
+              channels = provisioned
+          payload = json.dumps(channels)
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
+              fh.write(f"channels={payload}\n")
+          print(f"Brain plan: {payload}")
+          PY
 
   brain-replenish:
     needs: plan
@@ -64,8 +71,8 @@ jobs:
         channel: ${{ fromJSON(needs.plan.outputs.channels) }}
     env:
       CHANNEL_ID: ${{ matrix.channel }}
-      # Morning Altar authoring uses its own Gemini project/quota pool.
-      GEMINI_API_KEY: ${{ matrix.channel == 'prayer3' && secrets.PRAYER3_GEMINI_API_KEY || (matrix.channel == 'prayer2' && secrets.PRAYER2_GEMINI_API_KEY || secrets.GEMINI_API_KEY) }}
+      # Each channel's authoring uses its own Gemini project/quota pool.
+      GEMINI_API_KEY: ${{ matrix.channel == 'prayer4' && secrets.PRAYER4_GEMINI_API_KEY || (matrix.channel == 'prayer3' && secrets.PRAYER3_GEMINI_API_KEY || (matrix.channel == 'prayer2' && secrets.PRAYER2_GEMINI_API_KEY || secrets.GEMINI_API_KEY)) }}
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4

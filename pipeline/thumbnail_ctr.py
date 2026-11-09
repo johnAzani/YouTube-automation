@@ -102,6 +102,15 @@ NOON_AMBER = Palette("noon-amber", (12, 17, 26), (82, 60, 32), (255, 208, 116),
 NOON_SANCTUARY = Palette("noon-sanctuary", (16, 22, 32), (124, 86, 38), (255, 224, 136),
                          (255, 218, 86), (255, 252, 242))
 
+MIDNIGHT_INDIGO = Palette("midnight-indigo", (7, 9, 30), (42, 34, 96), (255, 208, 118),
+                          (255, 206, 82), (255, 250, 238))
+MIDNIGHT_CROWN = Palette("midnight-crown", (6, 8, 26), (30, 28, 82), (226, 220, 255),
+                         (255, 214, 92), (255, 250, 238))
+MIDNIGHT_SANCTUARY = Palette("midnight-sanctuary", (9, 11, 34), (58, 42, 92), (255, 202, 118),
+                             (255, 210, 90), (255, 250, 238))
+
+_NOCTURNAL_GRADES = ("night", "midnight")
+
 
 @dataclass(frozen=True)
 class CtrVariant:
@@ -190,6 +199,30 @@ NOON_VARIANTS = (
     ),
 )
 
+MIDNIGHT_VARIANTS = (
+    CtrVariant(
+        label="hook", concept="imperative — PRAY AT MIDNIGHT",
+        hero="PRAY AT MIDNIGHT", palette=MIDNIGHT_INDIGO,
+        moon=(0.775, 0.39), moon_scale=0.208, horizon=0.735, dawn=0.72,
+        rays=True, seed=1001, text_box=(86, 84, 690, 470), house=(0.315, 0.150),
+        grade="midnight",
+    ),
+    CtrVariant(
+        label="quiet", concept="curiosity — CHAINS MUST BREAK",
+        hero="CHAINS MUST BREAK", palette=MIDNIGHT_CROWN,
+        moon=(0.800, 0.35), moon_scale=0.192, horizon=0.780, dawn=0.34,
+        rays=False, seed=1102, text_box=(86, 84, 706, 470), house=(0.300, 0.152),
+        grade="midnight",
+    ),
+    CtrVariant(
+        label="poster", concept="textless — midnight watchtower",
+        hero=None, palette=MIDNIGHT_SANCTUARY,
+        moon=(0.555, 0.415), moon_scale=0.238, horizon=0.700, dawn=0.84,
+        rays=True, seed=1203, text_box=(0, 0, 0, 0), house=(0.205, 0.170),
+        grade="midnight",
+    ),
+)
+
 
 def variants_for_channel(channel_id: str | None = None) -> tuple["CtrVariant", ...]:
     """Select the 16:9 CTR variant pack matching `channel_id`'s daypart grade."""
@@ -203,6 +236,8 @@ def variants_for_channel(channel_id: str | None = None) -> tuple["CtrVariant", .
         base = DAWN_VARIANTS
     elif grade == "noon":
         base = NOON_VARIANTS
+    elif grade == "midnight":
+        base = MIDNIGHT_VARIANTS
     else:
         return CTR_VARIANTS
     return (
@@ -297,11 +332,11 @@ def curated_backdrop_for(
         from .channel_capabilities import brand_for
 
         grade = (brand_for(channel_id).ctr_grade or "night").strip().lower()
-    if grade == "night" and clean_key in CURATED_SANCTUARY_PLATES:
+    if grade in _NOCTURNAL_GRADES and clean_key in CURATED_SANCTUARY_PLATES:
         candidate = plate_dir / CURATED_SANCTUARY_PLATES[clean_key]
         if candidate.is_file():
             return candidate
-    pool = _ALL_CURATED_PLATES if grade == "night" else _DAYLIGHT_CURATED_PLATES
+    pool = _ALL_CURATED_PLATES if grade in _NOCTURNAL_GRADES else _DAYLIGHT_CURATED_PLATES
     available = [plate_dir / name for name in pool if (plate_dir / name).is_file()]
     if not available:
         return None
@@ -487,7 +522,7 @@ def _night_grade(img: Image.Image, palette: Palette) -> Image.Image:
 
 def _daypart_grade(img: Image.Image, palette: Palette, grade: str = "night") -> Image.Image:
     """Route photographic backdrops through the channel's daypart color science."""
-    if grade == "night":
+    if grade in _NOCTURNAL_GRADES:
         return _night_grade(img, palette)
 
     w, h = img.size
@@ -951,19 +986,19 @@ def paint_ctr_scene(variant: "CtrVariant", size=CANVAS, avoid=None,
                    fill=tuple(int(c * rng.uniform(0.05, 0.10)) for c in tint))
     img = _screen(img, haze.filter(ImageFilter.GaussianBlur(100)))
 
-    if grade == "night":
-        img = _stars(img, 1100, variant.seed, avoid=avoid)
+    if grade in _NOCTURNAL_GRADES:
+        img = _stars(img, 1300 if grade == "midnight" else 1100, variant.seed, avoid=avoid)
     elif grade == "dawn":
         img = _stars(img, 140, variant.seed, avoid=avoid)
     img = _terrain(img, variant)
-    if grade == "night":
+    if grade in _NOCTURNAL_GRADES:
         img = _moon(img, centre, radius, pal)
     else:
         img = _sun(img, centre, radius, pal, rays=variant.rays)
     img = _reflection(img, variant)
 
     # Ensure deep bimodal contrast behind left-side hero text on bright dawn/noon skies
-    if grade != "night" and variant.hero and variant.text_box[2] > variant.text_box[0]:
+    if grade not in _NOCTURNAL_GRADES and variant.hero and variant.text_box[2] > variant.text_box[0]:
         img = _text_scrim(img, variant.text_box, strength=0.46, scrim_rgb=_scrim_rgb_for(grade))
 
     # vignette: darken the corners, but never below YouTube's #0F0F0F page, or

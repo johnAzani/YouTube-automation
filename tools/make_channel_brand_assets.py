@@ -86,6 +86,21 @@ PALETTES = {
         "field_deep": (116, 82, 46),# Deep Furrow   #74522e
         "slug": "midday-watch",
     },
+    "midnight-watch": {
+        "name": "The Midnight Watch",
+        "tagline": "Rise and pray at midnight",
+        "verse": "Psalm 119:62",
+        "sky": (10, 14, 42),        # Midnight Indigo #0a0e2a
+        "panel": (34, 32, 92),      # Royal Vigil     #22205c
+        "sun": (255, 208, 96),      # Watchtower Gold #ffd060
+        "brass": (222, 162, 62),    # Covenant Brass  #dea23e
+        "ivory": (251, 247, 238),   # Watch Ivory     #fbf7ee
+        "haze": (212, 220, 242),    # Starlight Mist  #d4dcf2
+        "shadow": (5, 7, 22),       # Deep Bastion    #050716
+        "field": (56, 52, 108),     # Fortress Ridge  #38346c
+        "field_deep": (26, 24, 62), # Night Rampart   #1a183e
+        "slug": "midnight-watch",
+    },
 }
 
 

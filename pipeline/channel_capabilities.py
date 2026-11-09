@@ -212,6 +212,15 @@ _MIDDAY_WATCH_COMMENT = (
     "alone. 🙏✨{footer}"
 )
 
+_MIDNIGHT_WATCH_COMMENT = (
+    "🕯️ Beloved watchmen, if you are standing in prayer at this midnight hour, write 'AMEN' in "
+    "faith to declare God's promise of {theme} over your household, your calling, and your season.\n\n"
+    "📖 {scripture_hook}\n\n"
+    "Leave your midnight prayer request below — our intercessory team stands on the watchtower "
+    "over every petition. Like Paul and Silas at midnight, praise goes before your breakthrough. "
+    "You are not standing alone. 🙏🔥{footer}"
+)
+
 _BRANDS: dict[str, Brand] = {
     "secret-place": Brand(
         channel_id="secret-place",
@@ -233,6 +242,9 @@ _BRANDS: dict[str, Brand] = {
             "The Midday Watch",
             "@TheMiddayWatch",
             "noonday prayer",
+            "The Midnight Watch",
+            "@TheMidnightWatch",
+            "stand on the watchtower in midnight prayer",
         ),
         authoring_directive=(
             "CHANNEL: The Secret Place (secret-place) - night prayer, never a morning devotional.",
@@ -351,6 +363,9 @@ _BRANDS: dict[str, Brand] = {
             "The Midday Watch",
             "@TheMiddayWatch",
             "noonday prayer",
+            "The Midnight Watch",
+            "@TheMidnightWatch",
+            "midnight watch",
         ),
         authoring_directive=(
             "CHANNEL: The Morning Altar (prayer2) - sunrise, never bedtime.",
@@ -585,6 +600,9 @@ _BRANDS: dict[str, Brand] = {
             "night prayer",
             "begin every sunrise with us",
             "sunrise prayer",
+            "The Midnight Watch",
+            "@TheMidnightWatch",
+            "midnight watch",
         ),
         authoring_directive=(
             "CHANNEL: The Midday Watch (prayer3) - the middle of the day, never bedtime and "
@@ -793,6 +811,242 @@ _BRANDS: dict[str, Brand] = {
         ctr_hook_hero="PRAY AT NOON",
         ctr_quiet_hero="STAND FIRM TODAY",
     ),
+    "prayer4": Brand(
+        channel_id="prayer4",
+        display_name="The Midnight Watch",
+        handle="@TheMidnightWatch",
+        declaration="prayer4",
+        title_suffix="| The Midnight Watch",
+        producer_line="Produced by The Midnight Watch | Midnight Prayer & Breakthrough Scripture",
+        closing_cta=(
+            "Type Amen to agree with this prayer, and subscribe to The Midnight Watch "
+            "to stand on the watchtower in midnight prayer."
+        ),
+        required_phrases=("The Midnight Watch",),
+        forbidden_phrases=(
+            "The Secret Place",
+            "@TheSecretPlace",
+            "The Morning Altar",
+            "@TheMorningAltarDaily",
+            "The Midday Watch",
+            "@TheMiddayWatch",
+            "before you sleep",
+            "bedtime prayer",
+            "prayer before sleep",
+            "begin every sunrise with us",
+            "sunrise prayer",
+            "pause and pray with us at noon",
+            "noonday prayer",
+        ),
+        authoring_directive=(
+            "CHANNEL: The Midnight Watch (prayer4) - wakeful 12:00 AM midnight watch & "
+            "breakthrough intercession (Psalm 119:62 / Acts 16:25), never bedtime/sleep, "
+            "never sunrise, and never midday.",
+            "Frontmatter MUST include exactly: channel: prayer4",
+            "Title MUST end with: | The Midnight Watch",
+            'Tags MUST include "midnight prayer" and "the midnight watch"; never sunrise, '
+            'midday, noonday, bedtime or sleep terms.',
+            "Description MUST credit: Produced by The Midnight Watch | Midnight Prayer & Breakthrough Scripture",
+            'Scenes follow the midnight watchtower arc in the rubric and end with: "Type Amen to '
+            'agree with this prayer, and subscribe to The Midnight Watch to stand on the '
+            'watchtower in midnight prayer."',
+            "Asset queries MUST be midnight watchtower, deep starlit sky, aurora, stone fortress "
+            "silhouette or lamp-lit vigil scenes - never sunrise, dawn or high noon.",
+        ),
+        short_title_template="Pray This {label} Midnight Prayer | {hook}",
+        subscribe_heading="🕯️ STAND ON THE MIDNIGHT WATCH",
+        short_target_window_utc="23:14",
+        short_channel_label="a faceless midnight-breakthrough prayer channel called The Midnight Watch",
+        short_prayer_kind="midnight",
+        short_opening="rise in spirit at this midnight hour",
+        short_imagery="midnight watchtower silhouette, deep starry heavens, lamp-lit sanctuary vigil",
+        short_tags=(
+            "midnight prayer",
+            "midnight watch",
+            "breakthrough prayer",
+            "the midnight watch",
+            "deliverance prayer",
+        ),
+        short_hashtags="#Shorts #{tag_key} #MidnightPrayer #MidnightWatch #BreakthroughPrayer #TheMidnightWatch",
+        short_end_card="The Midnight Watch — stand in prayer at midnight",
+        short_key_namespace="midnight",
+        comment_persona="the midnight intercessory team at The Midnight Watch",
+        comment_farewell="Stand firm on the watchtower — God hears at midnight.",
+        shorts_poster_kicker="RISE AND PRAY AT MIDNIGHT",
+        longform_pinned_comment=_MIDNIGHT_WATCH_COMMENT,
+        short_pinned_comment=(
+            "🕯️ PRAY THE COMPLETE MIDNIGHT WATCH INTERCESSION:\n"
+            "Tap the linked full-length prayer right above this title (or visit {handle}) "
+            "to stand in the full midnight prayer of {scripture}:\n"
+            "👉 {url}\n\n"
+            "Write 'AMEN' in faith and leave your midnight prayer request below — we are "
+            "standing on the watchtower over your household right now. Like Paul and Silas at "
+            "midnight, praise goes before your breakthrough! 🙏🕯️🔥{footer}"
+        ),
+        longform_prayer_label="Midnight Prayer",
+        seo_hook_template=(
+            "Rise at midnight with {display_name} in {scripture} (KJV) "
+            "for breakthrough intercession, spiritual deliverance, and unshakeable faith."
+        ),
+        verified_commons_queries=(
+            ("starry night sky milky way mountains", 4, "4x Public domain — NPS / NASA dark sky reserve astrophotography"),
+            ("aurora borealis night sky mountains", 4, "4x Public domain — NASA / NOAA / NPS northern lights night-watch photography"),
+            ("ancient chapel interior candlelight peaceful sanctuary", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("star night sky over quiet countryside peaceful", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("peaceful night landscape moon over calm lake", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("calm mountain lake still water reflection nightfall", 4, "4x Public domain — NPS Mirror Lake and Crater Lake twilight scans"),
+        ),
+        feedback_artifact_name="performance_feedback_prayer4.json",
+        anchor_video=None,
+        series_playlists=(
+            (
+                "midnight_watch_prayers",
+                "Midnight Watch Prayers for Breakthrough & Deliverance — The Midnight Watch",
+                "Rise at the twelfth hour like David (Psalm 119:62) and Paul & Silas (Acts 16:25) "
+                "with KJV midnight intercession for household deliverance and breakthrough.\n\n"
+                "Produced by The Midnight Watch | Midnight Prayer & Breakthrough Scripture.",
+                ("midnight", "watchtower", "breakthrough", "midnight watch", "deliverance"),
+            ),
+            (
+                "midnight_psalms",
+                "Midnight Psalms of Victory & Protection (KJV) — The Midnight Watch",
+                "Verse-by-verse midnight Psalm prayers and Spurgeon & Matthew Henry reflections "
+                "for standing firm in the darkest watch.\n\n"
+                "Produced by The Midnight Watch | Midnight Prayer & Breakthrough Scripture.",
+                ("psalm", "fortress", "refuge", "victory", "midnight prayer"),
+            ),
+            (
+                "watchman_intercession",
+                "Standing on the Watchtower: Family & Destiny Intercession — The Midnight Watch",
+                "Fervid KJV scripture prayers covering your home, children, calling, and coming season at the midnight gate.\n\n"
+                "Produced by The Midnight Watch | Midnight Prayer & Breakthrough Scripture.",
+                ("isaiah", "acts", "family", "household", "watchman", "intercession"),
+            ),
+        ),
+        community_posts=(
+            {
+                "post_id": "comm-prayer4-001-sunday-midnight",
+                "post_type": "POLL",
+                "title": "The Midnight Gate: What are you standing in faith for at midnight?",
+                "body_text": (
+                    "At midnight I will rise to give thanks unto thee because of thy righteous judgments (Psalm 119:62).\n\n"
+                    "Join watchmen around the world at The Midnight Watch as a new week opens. "
+                    "Vote below and type 'AMEN' to seal your midnight petition! 🕯️🙏"
+                ),
+                "poll": {
+                    "question": "Where are you believing God for midnight breakthrough right now?",
+                    "options": [
+                        "Breakthrough & open doors in a long-standing trial",
+                        "Spiritual covering & deliverance over my household",
+                        "Peace, clarity & strength in the darkest hour",
+                        "Restoration of health, purpose & family unity",
+                    ],
+                    "context_scripture": "Psalm 119:62",
+                },
+                "image_rel_path": "comm-prayer4-001-sunday-midnight.png",
+                "target_utc": "23:00",
+                "tags": ["#MidnightPrayer", "#TheMidnightWatch", "#Psalm119", "#MidnightWatch"],
+            },
+            {
+                "post_id": "comm-prayer4-002-midweek-watchtower",
+                "post_type": "PRAYER_WALL",
+                "title": "The Midnight Watchtower Prayer Wall: Leave Your Midnight Petitions",
+                "body_text": (
+                    "And at midnight Paul and Silas prayed, and sang praises unto God: and the prisoners heard them (Acts 16:25).\n\n"
+                    "No chain outlasts midnight praise. Leave your prayer request below — our intercessory team is standing on the watchtower "
+                    "with you tonight. Write 'AMEN' in faith!"
+                ),
+                "poll": None,
+                "image_rel_path": "comm-prayer4-002-midweek-watchtower.png",
+                "target_utc": "23:00",
+                "tags": ["#MidnightWatchtower", "#Acts16", "#TheMidnightWatch"],
+            },
+            {
+                "post_id": "comm-prayer4-003-thursday-fortress",
+                "post_type": "POLL",
+                "title": "Which midnight scripture anchors your faith on the watchtower?",
+                "body_text": (
+                    "I have set watchmen upon thy walls, O Jerusalem, which shall never hold their peace day nor night (Isaiah 62:6).\n\n"
+                    "Stand upon God's unfailing Word at the twelfth hour."
+                ),
+                "poll": {
+                    "question": "Which midnight scripture are you declaring right now?",
+                    "options": [
+                        "Psalm 119:62 — At midnight I will rise to give thanks",
+                        "Acts 16:25-26 — Midnight praise that looses bands",
+                        "Isaiah 62:6 — Watchmen upon the walls",
+                        "Zechariah 2:5 — A wall of fire round about",
+                    ],
+                    "context_scripture": "Isaiah 62:6",
+                },
+                "image_rel_path": "comm-prayer4-003-thursday-fortress.png",
+                "target_utc": "23:00",
+                "tags": ["#Isaiah62", "#MidnightScripture", "#TheMidnightWatch"],
+            },
+            {
+                "post_id": "comm-prayer4-004-friday-victory",
+                "post_type": "SCRIPTURE_DEVOTIONAL",
+                "title": "Midnight Praise Goes Before Your Breakthrough",
+                "body_text": (
+                    "For the weapons of our warfare are not carnal, but mighty through God to the pulling down of strong holds (2 Corinthians 10:4).\n\n"
+                    "Stand steady on the watchtower tonight. Type 'GOD HEARS AT MIDNIGHT' below in faith! 🕯️🔥"
+                ),
+                "poll": None,
+                "image_rel_path": "comm-prayer4-004-friday-victory.png",
+                "target_utc": "23:00",
+                "tags": ["#BreakthroughPrayer", "#MidnightPraise", "#TheMidnightWatch"],
+            },
+        ),
+        short_bridge_theme="midnight breakthrough, household covering, and unshakeable faith",
+        short_fallback_title="Midnight Watch Prayers for Breakthrough & Deliverance — The Midnight Watch",
+        milestone_subheading_1250="A MIDNIGHT WATCHTOWER ACROSS THE NATIONS",
+        milestone_subheading_1500="UNBROKEN MIDNIGHT INTERCESSION WATCH",
+        milestone_sanctuary_phrase="at the midnight hour",
+        milestone_cadence_phrase="every midnight",
+        milestone_closing_blessing="Stand firm on the watchtower — God hears at midnight.",
+        milestone_2000_closing="your midnight watchtower of prayer and breakthrough",
+        seo_fallback_hashtags=(
+            "#MidnightPrayer", "#MidnightWatch", "#BreakthroughPrayer", "#TheMidnightWatch",
+        ),
+        seo_hook_ref_template=(
+            "Rise at midnight with this {ref} KJV midnight prayer for spiritual breakthrough, "
+            "household deliverance, and steadfast faith on the watchtower."
+        ),
+        seo_hook_generic=(
+            "Rise at the midnight hour with this KJV midnight watch prayer for breakthrough, "
+            "deliverance, and God's covering over your household."
+        ),
+        seo_book_tag_suffixes=("midnight prayer", "midnight watch prayer"),
+        seo_tag_seeds=(
+            "midnight prayer for breakthrough",
+            "midnight watch prayer",
+            "12am midnight prayer kjv",
+            "paul and silas midnight prayer",
+            "kjv midnight intercession",
+            "the midnight watch prayer",
+            "midnight deliverance prayer",
+            "christian midnight prayer",
+        ),
+        localized_title_es="Oración de Medianoche por Victoria y Liberación | {channel_name}",
+        localized_title_pt="Oração da Meia-Noite por Vitória e Libertação | {channel_name}",
+        localized_ref_title_es="{ref_es} Oración de Medianoche por Victoria y Liberación | {channel_name}",
+        localized_ref_title_pt="{ref_pt} Oração da Meia-Noite por Vitória e Libertação | {channel_name}",
+        localized_desc_lead_es="Oración de medianoche para intercesión, liberación espiritual y victoria en Cristo.",
+        localized_desc_lead_pt="Oração da meia-noite para intercessão, libertação espiritual e vitória em Cristo.",
+        localized_invite_es=(
+            "Levántate a la medianoche con esta oración bíblica para clamar por liberación, fortaleza y victoria en Dios."
+        ),
+        localized_invite_pt=(
+            "Levante-se à meia-noite com esta oração bíblica para clamar por libertação, força e vitória em Deus."
+        ),
+        default_comment_scripture_hook=(
+            "Psalm 119:62 — 'At midnight I will rise to give thanks unto thee because of thy righteous judgments.'"
+        ),
+        default_comment_theme="midnight breakthrough, household deliverance, and unshakeable faith",
+        ctr_grade="midnight",
+        ctr_hook_hero="PRAY AT MIDNIGHT",
+        ctr_quiet_hero="CHAINS MUST BREAK",
+    ),
 }
 
 _CAPABILITIES: dict[str, ChannelCapabilities] = {
@@ -829,6 +1083,18 @@ _CAPABILITIES: dict[str, ChannelCapabilities] = {
         },
         roadmap="prayer3",
         roadmap_name="MIDDAY_WATCH_ROADMAP",
+        legacy_queue_alias="",
+        supply_min_publishable=6,
+    ),
+    "prayer4": ChannelCapabilities(
+        channel_id="prayer4",
+        brand=_BRANDS["prayer4"],
+        equipment={
+            "system_instruction": "midnight_system_instruction.md",
+            "theological_rubric": "midnight_theological_rubric.md",
+        },
+        roadmap="prayer4",
+        roadmap_name="MIDNIGHT_WATCH_ROADMAP",
         legacy_queue_alias="",
         supply_min_publishable=6,
     ),

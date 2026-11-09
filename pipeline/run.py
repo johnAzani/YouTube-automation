@@ -618,7 +618,7 @@ def quota_blocked_until(
     def _record(raw_reset: str) -> None:
         nonlocal latest
         raw = str(raw_reset or "").strip()
-        if not raw or is_quota_pause_expired(raw):
+        if not raw or is_quota_pause_expired(raw, now=now):
             return
         try:
             when = datetime.fromisoformat(raw.replace("Z", "+00:00"))
