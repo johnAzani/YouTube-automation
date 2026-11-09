@@ -23,6 +23,20 @@
       "workflow": "keepalive.yml"
     },
     {
+      "late_minutes": 213,
+      "name": "Produce video",
+      "ran_at": "2026-11-09T09:47:13+00:00",
+      "slot": "2026-11-09T06:14:00+00:00",
+      "workflow": "produce.yml"
+    },
+    {
+      "late_minutes": 153,
+      "name": "Autonomous Comment Replies",
+      "ran_at": "2026-11-09T09:47:14+00:00",
+      "slot": "2026-11-09T07:14:00+00:00",
+      "workflow": "comments.yml"
+    },
+    {
       "late_minutes": 126,
       "name": "Weekly metrics snapshot",
       "ran_at": "2026-11-06T20:47:15+00:00",
@@ -37,8 +51,8 @@
       "workflow": "community.yml"
     }
   ],
-  "generated_at": "2026-11-09T09:47:05.035542+00:00",
-  "last_run_at": "2026-11-09T09:46:07+00:00",
+  "generated_at": "2026-11-09T11:37:47.372422+00:00",
+  "last_run_at": "2026-11-09T11:37:05+00:00",
   "on_time": [
     {
       "late_minutes": 60,
@@ -46,6 +60,13 @@
       "ran_at": "2026-11-08T21:14:41+00:00",
       "slot": "2026-11-08T20:14:00+00:00",
       "workflow": "automation-health.yml"
+    },
+    {
+      "late_minutes": 110,
+      "name": "Scheduler supervisor",
+      "ran_at": "2026-11-09T11:37:05+00:00",
+      "slot": "2026-11-09T09:47:00+00:00",
+      "workflow": "scheduler-supervisor.yml"
     }
   ],
   "silence_minutes": 0,
