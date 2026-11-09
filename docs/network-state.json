@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T23:34:56Z",
+  "generated_at": "2026-11-09T23:39:34Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -187,7 +187,7 @@
         "id": "0052",
         "title": "Psalm 63:1 Midday Prayer | The Midday Watch",
         "words": 2549,
-        "status": "approved"
+        "status": "quota_paused"
       },
       "next_queued_short": {
         "short": "short-middaypsalm37v5",
@@ -1810,7 +1810,7 @@
         "title": "Psalm 63:1 Midday Prayer | The Midday Watch",
         "channel": "prayer3",
         "channel_name": "The Midday Watch",
-        "status": "approved",
+        "status": "quota_paused",
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,
