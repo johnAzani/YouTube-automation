@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T22:36:22Z",
+  "generated_at": "2026-11-09T22:55:10Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 4
   },
   "totals": {
-    "published_total": 54,
+    "published_total": 55,
     "published_longform": 25,
-    "published_shorts": 29,
-    "public_total": 52,
+    "published_shorts": 30,
+    "public_total": 53,
     "queued_longform": 30,
-    "queued_shorts": 17,
+    "queued_shorts": 16,
     "automations_ok": 8,
     "automations_total": 10,
     "network_healthy": false
@@ -166,22 +166,22 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 12,
+        "published_total": 13,
         "published_longform": 7,
-        "published_shorts": 5,
-        "public_total": 12,
+        "published_shorts": 6,
+        "public_total": 13,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0051",
-        "title": "Psalm 37:5 Midday Prayer | The Midday Watch",
-        "format": "longform",
-        "youtube_video_id": "PZo9K85i7Sc",
-        "watch_url": "https://youtu.be/PZo9K85i7Sc",
+        "id": "SHORT-MIDDAYISAIAH58V10",
+        "title": "Say This Isaiah 58:10 Prayer at Noon | Isaiah 58:10 #Shorts",
+        "format": "short",
+        "youtube_video_id": "o41KNZByE7k",
+        "watch_url": "https://www.youtube.com/shorts/o41KNZByE7k",
         "published_on": "2026-11-09",
-        "published_at": "2026-11-09T17:43:47Z"
+        "published_at": "2026-11-09T22:46:22Z"
       },
       "next_queued_longform": {
         "id": "0052",
@@ -190,8 +190,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middayisaiah58v10",
-        "scripture": "Isaiah 58:10",
+        "short": "short-middaypsalm37v5",
+        "scripture": "Psalm 37:5",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -252,6 +252,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYISAIAH58V10",
+      "slug": "short-middayisaiah58v10-midday-prayer",
+      "file": "short-middayisaiah58v10-midday-prayer.md",
+      "title": "Say This Isaiah 58:10 Prayer at Noon | Isaiah 58:10 #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-09",
+      "published_at": "2026-11-09T22:46:22Z",
+      "youtube_video_id": "o41KNZByE7k",
+      "watch_url": "https://www.youtube.com/shorts/o41KNZByE7k",
+      "youtu_be_url": "https://youtu.be/o41KNZByE7k",
+      "shorts_url": "https://www.youtube.com/shorts/o41KNZByE7k",
+      "studio_url": "https://studio.youtube.com/video/o41KNZByE7k/edit",
+      "thumb_url": "https://i.ytimg.com/vi/o41KNZByE7k/hqdefault.jpg",
+      "thumb_text": "THE MIDDAY WATCH \u00b7 PAUSE AT NOON",
+      "duration_label": "65s",
+      "words": 549
+    },
     {
       "id": "0054",
       "slug": "psalm-88-13-morning-prayer-the-morning-altar",
@@ -1943,17 +1966,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-middayisaiah58v10",
-        "file": "0050-short-middayisaiah58v10.yml",
-        "companion_longform_id": "0050",
-        "scripture": "Isaiah 58:10",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaypsalm37v5",
