@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-08T08:57:50.102206+00:00",
-  "as_of": "2026-11-08",
+  "generated_at": "2026-11-09T07:14:05.290826+00:00",
+  "as_of": "2026-11-09",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 5,
+  "total_longform_videos": 9,
   "ranked_themes": [],
   "themes": [
     {
@@ -13,6 +13,30 @@
       "avg_score": 0.1458,
       "avg_engagement": 0.0,
       "top_scripture": "Psalm 5"
+    },
+    {
+      "theme": "blessing_benediction",
+      "videos": 1,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": "Numbers 6"
+    },
+    {
+      "theme": "daily_guidance_wisdom",
+      "videos": 2,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": "Isaiah 50"
+    },
+    {
+      "theme": "midday_strength_endurance",
+      "videos": 1,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": "Psalm 90"
     },
     {
       "theme": "anxiety_peace",
