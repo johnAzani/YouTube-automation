@@ -23,6 +23,20 @@
       "workflow": "keepalive.yml"
     },
     {
+      "late_minutes": 205,
+      "name": "automation-health",
+      "ran_at": "2026-11-09T23:39:48+00:00",
+      "slot": "2026-11-09T20:14:00+00:00",
+      "workflow": "automation-health.yml"
+    },
+    {
+      "late_minutes": 203,
+      "name": "Autonomous Comment Replies",
+      "ran_at": "2026-11-09T22:37:13+00:00",
+      "slot": "2026-11-09T19:14:00+00:00",
+      "workflow": "comments.yml"
+    },
+    {
       "late_minutes": 126,
       "name": "Weekly metrics snapshot",
       "ran_at": "2026-11-06T20:47:15+00:00",
@@ -37,8 +51,8 @@
       "workflow": "community.yml"
     }
   ],
-  "generated_at": "2026-11-09T22:37:09.344230+00:00",
-  "last_run_at": "2026-11-09T22:36:32+00:00",
+  "generated_at": "2026-11-09T23:40:35.989210+00:00",
+  "last_run_at": "2026-11-09T23:39:48+00:00",
   "on_time": [
     {
       "late_minutes": 68,
