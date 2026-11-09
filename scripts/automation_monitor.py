@@ -411,7 +411,8 @@ def active_quota_cooldown(
                 return None
             blocks.append(b)
         return min(blocks)
-    except Exception:  # noqa: BLE001
+    except Exception as exc:  # noqa: BLE001
+        print(f"[monitor] active_quota_cooldown check failed: {exc!r}", file=sys.stderr)
         return None
 
 

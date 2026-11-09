@@ -35,7 +35,10 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-import yaml
+try:
+    import yaml  # type: ignore
+except ImportError:  # pragma: no cover - bare CI plan runner without PyYAML
+    yaml = None
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
@@ -115,6 +118,7 @@ def approximate_receipts() -> list[str]:
 def last_publish(published_dir: Path | None = None) -> tuple[Path, datetime] | None:
     """Newest published receipt that carries a real YouTube video id."""
     from pipeline.config import PUBLISHED_DIR
+    from pipeline.script_doc import _load_yaml_mapping
 
     directory = published_dir or PUBLISHED_DIR
     newest: tuple[Path, datetime] | None = None
@@ -125,7 +129,7 @@ def last_publish(published_dir: Path | None = None) -> tuple[Path, datetime] | N
             text = path.read_text(encoding="utf-8")
             if not text.startswith("---"):
                 continue
-            meta = yaml.safe_load(text.split("---", 2)[1]) or {}
+            meta = _load_yaml_mapping(text.split("---", 2)[1])
         except Exception:  # noqa: BLE001
             continue
         video_id = str(meta.get("youtube_video_id") or "").strip()
@@ -178,6 +182,7 @@ def last_publish_for_channel(
     """Newest published receipt carrying a real YouTube video id for `channel_id`."""
     from pipeline.channels import channel_for_doc, normalize_channel_id
     from pipeline.config import PUBLISHED_DIR
+    from pipeline.script_doc import _load_yaml_mapping
 
     wanted = normalize_channel_id(channel_id)
     directory = published_dir or PUBLISHED_DIR
@@ -187,7 +192,7 @@ def last_publish_for_channel(
             text = path.read_text(encoding="utf-8")
             if not text.startswith("---"):
                 continue
-            meta = yaml.safe_load(text.split("---", 2)[1]) or {}
+            meta = _load_yaml_mapping(text.split("---", 2)[1])
         except Exception:  # noqa: BLE001
             continue
         if channel_for_doc(meta) != wanted:

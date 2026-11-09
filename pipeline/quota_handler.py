@@ -11,7 +11,10 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Optional
 from zoneinfo import ZoneInfo
-import yaml
+try:
+    import yaml  # type: ignore
+except ImportError:  # pragma: no cover - bare CI plan runner without PyYAML
+    yaml = None
 
 from pipeline.script_doc import parse_script
 

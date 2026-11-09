@@ -21,8 +21,12 @@ from pathlib import Path
 
 from .config import CONFIG, OUTPUT_DIR, QUEUE_DIR, PUBLISHED_DIR, REPO_ROOT
 from .originality import enforce, OriginalityError
-from .script_doc import MIN_LONGFORM_WORDS, ScriptDoc, parse_script
-from .thumbnail_ctr import THUMBNAIL_REVISION
+from .script_doc import MIN_LONGFORM_WORDS, ScriptDoc, _load_yaml_mapping, parse_script
+
+try:
+    from .thumbnail_ctr import THUMBNAIL_REVISION
+except ImportError:  # pragma: no cover - bare CI plan runner without Pillow
+    THUMBNAIL_REVISION = "ctr-v3-cinema"
 
 
 def _log(msg: str) -> None:
@@ -604,8 +608,6 @@ def quota_blocked_until(
     allowance. A paused job on one channel must never hold back another
     channel's release slot.
     """
-    import yaml
-
     from .channels import normalize_channel_id
     from .quota_handler import is_quota_pause_expired
 
@@ -642,7 +644,7 @@ def quota_blocked_until(
     if shorts_dir.is_dir():
         for path in sorted(shorts_dir.glob("*.yml")):
             try:
-                data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+                data = _load_yaml_mapping(path.read_text(encoding="utf-8"))
             except Exception:  # noqa: BLE001
                 continue
             if normalize_channel_id(data.get("channel")) != wanted:
