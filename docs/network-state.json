@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T17:44:26Z",
+  "generated_at": "2026-11-09T17:49:01Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -53,7 +53,7 @@
         "id": "0015",
         "title": "Psalm 91:5-6 Night Prayer | Deliverance From Terror by Night",
         "words": 883,
-        "status": "approved"
+        "status": "quota_paused"
       },
       "next_queued_short": {
         "short": "short-psalm37v7",
@@ -1458,7 +1458,7 @@
         "title": "Psalm 91:5-6 Night Prayer | Deliverance From Terror by Night",
         "channel": "secret-place",
         "channel_name": "The Secret Place",
-        "status": "approved",
+        "status": "quota_paused",
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,

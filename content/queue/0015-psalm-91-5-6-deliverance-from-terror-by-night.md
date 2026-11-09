@@ -2,7 +2,7 @@
 id: '0015'
 title: Psalm 91:5-6 Night Prayer | Deliverance From Terror by Night
 slug: psalm-91-5-6-deliverance-from-terror-by-night
-status: approved
+status: quota_paused
 privacy: public
 format: longform
 niche: faith and prayer
@@ -96,6 +96,8 @@ originality:
 seo_hook: Pray this Psalm 91:5-6 KJV night prayer before sleep for deliverance from
   terror by night, bad dreams, and anxious thoughts.
 category_id: '22'
+quota_reset_utc: '2026-11-10T08:00:00+00:00'
+pause_reason: gemini_api_daily_quota_exhausted
 ---
 
 ## Scene 1 — The Terror by Night (Verses 5–6)
