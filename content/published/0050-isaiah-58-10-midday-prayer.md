@@ -2,7 +2,7 @@
 id: '0050'
 title: Isaiah 58:10 Midday Prayer | The Midday Watch
 slug: isaiah-58-10-midday-prayer
-status: approved
+status: published
 channel: prayer3
 privacy: public
 format: longform
@@ -77,6 +77,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-09"
+published_at: "2026-11-09T00:13:42Z"
+youtube_video_id: "_dwqP8DoW2Q"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — The Noonday Hook and the Midday Pause

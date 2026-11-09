@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T23:03:06Z",
+  "generated_at": "2026-11-09T00:14:19Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,11 +7,11 @@
     "channels_total": 3
   },
   "totals": {
-    "published_total": 44,
-    "published_longform": 21,
+    "published_total": 45,
+    "published_longform": 22,
     "published_shorts": 23,
-    "public_total": 42,
-    "queued_longform": 27,
+    "public_total": 43,
+    "queued_longform": 26,
     "queued_shorts": 15,
     "automations_ok": 10,
     "automations_total": 10,
@@ -161,27 +161,27 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 9,
-        "published_longform": 5,
+        "published_total": 10,
+        "published_longform": 6,
         "published_shorts": 4,
-        "public_total": 9,
-        "queued_longform": 4,
+        "public_total": 10,
+        "queued_longform": 3,
         "queued_other": 0,
         "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0049",
-        "title": "Psalm 119:114 Midday Prayer | The Midday Watch",
-        "format": "longform",
-        "youtube_video_id": "pz0EB-NhiBc",
-        "watch_url": "https://youtu.be/pz0EB-NhiBc",
-        "published_on": "2026-11-08",
-        "published_at": "2026-11-08T21:13:39Z"
-      },
-      "next_queued_longform": {
         "id": "0050",
         "title": "Isaiah 58:10 Midday Prayer | The Midday Watch",
-        "words": 1870,
+        "format": "longform",
+        "youtube_video_id": "_dwqP8DoW2Q",
+        "watch_url": "https://youtu.be/_dwqP8DoW2Q",
+        "published_on": "2026-11-09",
+        "published_at": "2026-11-09T00:13:42Z"
+      },
+      "next_queued_longform": {
+        "id": "0051",
+        "title": "Psalm 37:5 Midday Prayer | The Midday Watch",
+        "words": 1695,
         "status": "approved"
       },
       "next_queued_short": {
@@ -211,6 +211,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "0050",
+      "slug": "isaiah-58-10-midday-prayer",
+      "file": "0050-isaiah-58-10-midday-prayer.md",
+      "title": "Isaiah 58:10 Midday Prayer | The Midday Watch",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-09",
+      "published_at": "2026-11-09T00:13:42Z",
+      "youtube_video_id": "_dwqP8DoW2Q",
+      "watch_url": "https://youtu.be/_dwqP8DoW2Q",
+      "youtu_be_url": "https://youtu.be/_dwqP8DoW2Q",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/_dwqP8DoW2Q/edit",
+      "thumb_url": "https://i.ytimg.com/vi/_dwqP8DoW2Q/hqdefault.jpg",
+      "thumb_text": "LIGHT IN THE DARK",
+      "duration_label": "~13 min",
+      "words": 1870
+    },
     {
       "id": "SHORT-MORNINGPSALM90V17",
       "slug": "short-morningpsalm90v17-sunrise-prayer",
@@ -1485,19 +1508,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1025
-      },
-      {
-        "id": "0050",
-        "slug": "isaiah-58-10-midday-prayer",
-        "file": "0050-isaiah-58-10-midday-prayer.md",
-        "title": "Isaiah 58:10 Midday Prayer | The Midday Watch",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1870
       },
       {
         "id": "0051",
