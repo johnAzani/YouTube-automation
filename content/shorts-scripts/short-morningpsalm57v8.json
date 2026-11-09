@@ -1,0 +1,317 @@
+{
+  "key": "short-morningpsalm57v8",
+  "channel": "prayer2",
+  "psalm": 57,
+  "title": [
+    "AWAKE MY SOUL",
+    "MORNING PRAYER"
+  ],
+  "poster": [
+    "AWAKE MY SOUL",
+    "BEGIN WITH PSALM 57:8",
+    "AWAKEN THE DAWN",
+    "THE MORNING ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "golden sunrise over misty mountain ridge",
+    "calm lake morning reflection sunrise sky",
+    "sunbeams shining through misty morning forest trees",
+    "peaceful empty path in morning sunlight golden hour",
+    "open window glowing with sunrise dawn light",
+    "scenic mountain horizon glowing pink and gold at dawn",
+    "peaceful sun rising over clouds sky aerial view"
+  ],
+  "scenes": [
+    {
+      "a": "Welcome the soft light",
+      "img": "short-morningpsalm57v8-scene-01.jpg",
+      "kicker": "PSALM 57:8",
+      "sub": "WELCOME THE SACRED MORNING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Awake, my soul! Awake, harp and lyre!",
+      "img": "short-morningpsalm57v8-scene-02.jpg",
+      "kicker": "PSALM 57:8",
+      "sub": "AWAKEN THE DAWN IN PRAYER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, as this morning sun rises",
+      "img": "short-morningpsalm57v8-scene-03.jpg",
+      "kicker": "PSALM 57:8",
+      "sub": "SURRENDER YOUR WORRIES TODAY",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Fill our minds with Your quiet wisdom",
+      "img": "short-morningpsalm57v8-scene-04.jpg",
+      "kicker": "PSALM 57:8",
+      "sub": "GUIDE OUR STEPS IN WISDOM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May Your unfailing love protect us",
+      "img": "short-morningpsalm57v8-scene-05.jpg",
+      "kicker": "PSALM 57:8",
+      "sub": "UNFAILING LOVE AND PROTECTION",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "We give You glory for this sacred morning",
+      "img": "short-morningpsalm57v8-scene-06.jpg",
+      "kicker": "PSALM 57:8",
+      "sub": "REST IN ETERNAL GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to The Morning Altar",
+      "img": "short-morningpsalm57v8-scene-07.jpg",
+      "kicker": "PSALM 57:8",
+      "sub": "BEGIN EVERY DAY IN PRAYER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Welcome the soft light of a brand new day as peace fills your heart."
+    ],
+    [
+      8,
+      17,
+      "Scripture reminds us in Psalm 57:8, Awake, my soul! Awake, harp and lyre! I will awaken the dawn."
+    ],
+    [
+      17,
+      25,
+      "Lord, as this morning sun rises, we lift our spirits and surrender our worries to You."
+    ],
+    [
+      25,
+      33,
+      "Fill our minds with Your quiet wisdom and guide our steps into Your divine purpose today."
+    ],
+    [
+      33,
+      41,
+      "May Your unfailing love protect us and shine through everything we speak and do."
+    ],
+    [
+      41,
+      50,
+      "We give You glory for this sacred morning and rest securely in Your eternal grace."
+    ],
+    [
+      50,
+      58,
+      "Subscribe to The Morning Altar to begin every sunrise in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "WELCOME THE SOFT LIGHT",
+        "OF A BRAND NEW DAY",
+        "AS PEACE FILLS YOUR HEART"
+      ],
+      [
+        "WELCOME",
+        "PEACE"
+      ],
+      "PSALM 57:8"
+    ],
+    [
+      8,
+      17,
+      [
+        "AWAKE MY SOUL",
+        "AWAKE HARP AND LYRE",
+        "I WILL AWAKEN THE DAWN"
+      ],
+      [
+        "AWAKE",
+        "DAWN"
+      ],
+      "PSALM 57:8"
+    ],
+    [
+      17,
+      25,
+      [
+        "LORD AS THIS MORNING SUN RISES",
+        "WE LIFT OUR SPIRITS",
+        "AND SURRENDER OUR WORRIES"
+      ],
+      [
+        "LIFT",
+        "SURRENDER"
+      ],
+      "PSALM 57:8"
+    ],
+    [
+      25,
+      33,
+      [
+        "FILL OUR MINDS WITH WISDOM",
+        "AND GUIDE OUR STEPS",
+        "INTO YOUR DIVINE PURPOSE"
+      ],
+      [
+        "WISDOM",
+        "PURPOSE"
+      ],
+      "PSALM 57:8"
+    ],
+    [
+      33,
+      41,
+      [
+        "MAY YOUR UNFAILING LOVE",
+        "PROTECT US AND SHINE",
+        "THROUGH EVERYTHING WE DO"
+      ],
+      [
+        "LOVE",
+        "SHINE"
+      ],
+      "PSALM 57:8"
+    ],
+    [
+      41,
+      50,
+      [
+        "WE GIVE YOU GLORY",
+        "FOR THIS SACRED MORNING",
+        "AND REST IN ETERNAL GRACE"
+      ],
+      [
+        "GLORY",
+        "GRACE"
+      ],
+      "PSALM 57:8"
+    ],
+    [
+      50,
+      58,
+      [
+        "SUBSCRIBE TO THE MORNING ALTAR",
+        "TO BEGIN EVERY SUNRISE",
+        "IN FAITH AND PRAYER"
+      ],
+      [
+        "SUBSCRIBE",
+        "PRAYER"
+      ],
+      "PSALM 57:8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Welcome the soft light",
+      "kind": "phrase",
+      "words": [
+        "WELCOME",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Awake, my soul! Awake, harp and lyre!",
+      "kind": "phrase",
+      "words": [
+        "AWAKE",
+        "SOUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, as this morning sun rises",
+      "kind": "phrase",
+      "words": [
+        "SUN",
+        "RISES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Fill our minds with Your quiet wisdom",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "WISDOM"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "May Your unfailing love protect us",
+      "kind": "phrase",
+      "words": [
+        "UNFAILING",
+        "LOVE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "We give You glory for this sacred morning",
+      "kind": "phrase",
+      "words": [
+        "SACRED",
+        "MORNING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Morning Altar",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 57:8"
+}

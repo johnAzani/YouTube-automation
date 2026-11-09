@@ -1,0 +1,310 @@
+{
+  "key": "short-morningpsalm108v2",
+  "channel": "prayer2",
+  "psalm": 108,
+  "title": [
+    "AWAKEN THE DAWN",
+    "MORNING PRAYER"
+  ],
+  "poster": [
+    "AWAKEN THE DAWN",
+    "START YOUR DAY",
+    "IN GOD'S PRESENCE",
+    "PSALM 108:2"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "sunrise light over calm misty lake dawn morning",
+    "golden sunrise rays over mountain valley morning",
+    "sunbeams streaming through forest trees dawn",
+    "peaceful cloud inversion at sunrise mountain top",
+    "sunlit misty meadow morning dew golden light",
+    "calm ocean horizon at golden dawn sunrise",
+    "soft sunrise light glowing through window curtain"
+  ],
+  "scenes": [
+    {
+      "a": "gentle light of morning",
+      "img": "short-morningpsalm108v2-scene-01.jpg",
+      "kicker": "PSALM 108:2",
+      "sub": "AWAKEN THE DAWN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Awake, harp and lyre!",
+      "img": "short-morningpsalm108v2-scene-02.jpg",
+      "kicker": "PSALM 108:2",
+      "sub": "HARP AND LYRE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.35
+      ]
+    },
+    {
+      "a": "we awaken our hearts to praise",
+      "img": "short-morningpsalm108v2-scene-03.jpg",
+      "kicker": "MORNING ALTAR",
+      "sub": "PRAISE HIS HOLY NAME",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "lifting every care and burden",
+      "img": "short-morningpsalm108v2-scene-04.jpg",
+      "kicker": "MORNING ALTAR",
+      "sub": "BOUNDLESS PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "may your steadfast grace cover",
+      "img": "short-morningpsalm108v2-scene-05.jpg",
+      "kicker": "MORNING ALTAR",
+      "sub": "WALK IN TRUTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "resting in your eternal love",
+      "img": "short-morningpsalm108v2-scene-06.jpg",
+      "kicker": "MORNING ALTAR",
+      "sub": "REST IN ETERNAL LOVE",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to step into every sunrise",
+      "img": "short-morningpsalm108v2-scene-07.jpg",
+      "kicker": "MORNING ALTAR",
+      "sub": "BEGIN IN PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      9,
+      "Open your eyes to the gentle light of morning and take a deep, quiet breath as a new day begins."
+    ],
+    [
+      9,
+      18,
+      "Scripture speaks in Psalm 108:2: Awake, harp and lyre! I myself will awaken the dawn."
+    ],
+    [
+      18,
+      27,
+      "Lord, as golden light breaks over the earth, we awaken our hearts to praise your holy name."
+    ],
+    [
+      27,
+      36,
+      "Stir within us a soft song of gratitude, lifting every care and burden into your boundless peace."
+    ],
+    [
+      36,
+      45,
+      "May your truth guide our steps today, and may your steadfast grace cover all that lies ahead."
+    ],
+    [
+      45,
+      54,
+      "We dedicate every moment of this morning to you, resting in your eternal love."
+    ],
+    [
+      54,
+      63,
+      "Thank you for new mercies today. Subscribe to step into every sunrise with prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      9,
+      [
+        "OPEN YOUR EYES TO",
+        "THE GENTLE LIGHT",
+        "OF THIS NEW DAY"
+      ],
+      [
+        "GENTLE LIGHT"
+      ],
+      "PSALM 108:2"
+    ],
+    [
+      9,
+      18,
+      [
+        "AWAKE HARP AND LYRE",
+        "I MYSELF WILL",
+        "AWAKEN THE DAWN"
+      ],
+      [
+        "AWAKEN THE DAWN"
+      ],
+      "PSALM 108:2"
+    ],
+    [
+      18,
+      27,
+      [
+        "GOLDEN LIGHT BREAKS",
+        "WE AWAKEN OUR HEARTS",
+        "TO PRAISE HIS NAME"
+      ],
+      [
+        "AWAKEN OUR HEARTS"
+      ],
+      "PSALM 108:2"
+    ],
+    [
+      27,
+      36,
+      [
+        "STIR A SONG OF",
+        "GRATITUDE AND PEACE",
+        "IN OUR HEARTS"
+      ],
+      [
+        "GRATITUDE AND PEACE"
+      ],
+      "PSALM 108:2"
+    ],
+    [
+      36,
+      45,
+      [
+        "MAY YOUR TRUTH GUIDE",
+        "EVERY STEP TODAY",
+        "WITH STEADFAST GRACE"
+      ],
+      [
+        "STEADFAST GRACE"
+      ],
+      "PSALM 108:2"
+    ],
+    [
+      45,
+      54,
+      [
+        "DEDICATE THIS MORNING",
+        "RESTING ALWAYS IN",
+        "YOUR ETERNAL LOVE"
+      ],
+      [
+        "ETERNAL LOVE"
+      ],
+      "PSALM 108:2"
+    ],
+    [
+      54,
+      63,
+      [
+        "THANK YOU FOR MERCIES",
+        "SUBSCRIBE TO BEGIN",
+        "SUNRISE IN PRAYER"
+      ],
+      [
+        "SUNRISE IN PRAYER"
+      ],
+      "PSALM 108:2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "gentle light of morning",
+      "kind": "phrase",
+      "words": [
+        "GENTLE",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Awake, harp and lyre!",
+      "kind": "phrase",
+      "words": [
+        "HARP",
+        "LYRE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "we awaken our hearts to praise",
+      "kind": "phrase",
+      "words": [
+        "AWAKEN",
+        "HEARTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "lifting every care and burden",
+      "kind": "phrase",
+      "words": [
+        "BOUNDLESS",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "may your steadfast grace cover",
+      "kind": "phrase",
+      "words": [
+        "STEADFAST",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "resting in your eternal love",
+      "kind": "phrase",
+      "words": [
+        "ETERNAL",
+        "LOVE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to step into every sunrise",
+      "kind": "phrase",
+      "words": [
+        "EVERY",
+        "SUNRISE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 108:2"
+}
