@@ -92,7 +92,7 @@ thumbnail_pending: true
 
 metadata_revision: "selar-seo-v1"
 thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunrise Prayer; long_uploads_status=allowed; video_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; video_channel_title=The Morning Altar | Daily Sunrise Prayer; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_retry_after: "2026-11-09T17:50:33Z"
+thumbnail_retry_after: "2026-11-10T04:35:01Z"
 ---
 
 ## Scene 1 — It Is of the Lord's Mercies That We Are Not Consumed (Lamentations 3:22)

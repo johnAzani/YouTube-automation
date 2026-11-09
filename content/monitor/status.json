@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-09T17:16:28.712855+00:00",
-  "healthy": true,
+  "generated_at": "2026-11-09T22:35:32.277041+00:00",
+  "healthy": false,
   "automations": [
     {
       "workflow": "automation-health.yml",
@@ -8,18 +8,18 @@
       "crons": [
         "14 20 * * *"
       ],
-      "last_run": "2026-11-09T17:07:12+00:00",
-      "last_conclusion": "success",
+      "last_run": "2026-11-09T17:44:49+00:00",
+      "last_conclusion": "failure",
       "last_success": "2026-11-09T17:07:12+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-09T02:19:37+00:00",
-      "last_slot": "2026-11-08T20:14:00+00:00",
+      "last_slot": "2026-11-09T20:14:00+00:00",
       "missed_slots": 0,
-      "failures_5": 0,
+      "failures_5": 1,
       "effect": "reports and files stalls",
-      "verdict": "OK",
-      "detail": "last success 0.2h ago",
-      "severity": "ok"
+      "verdict": "SELF-REPORT",
+      "detail": "this is the check itself; its previous run ended failure 4.8h ago, which is its own verdict and not independent evidence",
+      "severity": "info"
     },
     {
       "workflow": "comments.yml",
@@ -29,18 +29,18 @@
         "14 15 * * *",
         "14 19 * * *"
       ],
-      "last_run": "2026-11-09T17:07:11+00:00",
+      "last_run": "2026-11-09T17:24:53+00:00",
       "last_conclusion": "success",
-      "last_success": "2026-11-09T17:07:11+00:00",
+      "last_success": "2026-11-09T17:24:53+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-09T14:12:44+00:00",
-      "last_slot": "2026-11-09T15:14:00+00:00",
-      "missed_slots": 0,
+      "last_slot": "2026-11-09T19:14:00+00:00",
+      "missed_slots": 1,
       "failures_5": 0,
       "effect": "posts replies and records them in content/comments/replied.json",
-      "verdict": "OK",
-      "detail": "last success 0.2h ago",
-      "severity": "ok"
+      "verdict": "MISSED SLOT",
+      "detail": "was due Mon 09 Nov 20:14 WAT and did not run; last run 5.2h ago",
+      "severity": "blocking"
     },
     {
       "workflow": "community.yml",
@@ -58,7 +58,7 @@
       "failures_5": 0,
       "effect": "writes content/community/<id>-READY.md",
       "verdict": "OK",
-      "detail": "last success 18.4h ago",
+      "detail": "last success 23.7h ago",
       "severity": "ok"
     },
     {
@@ -77,7 +77,7 @@
       "failures_5": 0,
       "effect": "writes content/queue/ or content/shorts-scripts/",
       "verdict": "OK",
-      "detail": "last success 5.8h ago",
+      "detail": "last success 11.1h ago",
       "severity": "ok"
     },
     {
@@ -96,7 +96,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 7.6h ago",
+      "detail": "last success 12.9h ago",
       "severity": "ok"
     },
     {
@@ -115,7 +115,7 @@
       "failures_5": 0,
       "effect": "re-arms scheduled workflows",
       "verdict": "OK",
-      "detail": "last success 5.5h ago",
+      "detail": "last success 10.8h ago",
       "severity": "ok"
     },
     {
@@ -124,9 +124,9 @@
       "crons": [
         "41 18 * * 5"
       ],
-      "last_run": "2026-11-09T00:14:40+00:00",
+      "last_run": "2026-11-09T17:44:49+00:00",
       "last_conclusion": "success",
-      "last_success": "2026-11-09T00:14:40+00:00",
+      "last_success": "2026-11-09T17:44:49+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-09T14:36:06+00:00",
       "last_slot": "2026-11-06T18:41:00+00:00",
@@ -134,7 +134,7 @@
       "failures_5": 0,
       "effect": "writes content/metrics.csv and opens a snapshot issue",
       "verdict": "OK",
-      "detail": "last success 17.0h ago",
+      "detail": "last success 4.8h ago",
       "severity": "ok"
     },
     {
@@ -143,17 +143,17 @@
       "crons": [
         "23 */3 * * *"
       ],
-      "last_run": "2026-11-09T17:15:31+00:00",
+      "last_run": "2026-11-09T22:31:36+00:00",
       "last_conclusion": null,
-      "last_success": "2026-11-09T17:08:08+00:00",
+      "last_success": "2026-11-09T17:15:31+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-09T14:12:44+00:00",
-      "last_slot": "2026-11-09T15:23:00+00:00",
+      "last_slot": "2026-11-09T21:23:00+00:00",
       "missed_slots": 0,
-      "failures_5": 0,
+      "failures_5": 1,
       "effect": "this report",
       "verdict": "OK",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 5.3h ago",
       "severity": "ok"
     },
     {
@@ -164,17 +164,17 @@
         "14 14 * * *",
         "14 19 * * *"
       ],
-      "last_run": "2026-11-09T16:08:57+00:00",
-      "last_conclusion": null,
-      "last_success": "2026-11-09T11:37:52+00:00",
+      "last_run": "2026-11-09T20:06:40+00:00",
+      "last_conclusion": "success",
+      "last_success": "2026-11-09T20:06:40+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-09T14:36:06+00:00",
-      "last_slot": "2026-11-09T14:14:00+00:00",
+      "last_slot": "2026-11-09T19:14:00+00:00",
       "missed_slots": 0,
-      "failures_5": 0,
+      "failures_5": 2,
       "effect": "publishes a video: content/published/ gains a receipt with a video id",
       "verdict": "OK",
-      "detail": "last success 5.6h ago",
+      "detail": "last success 2.5h ago",
       "severity": "ok"
     },
     {
@@ -183,17 +183,17 @@
       "crons": [
         "47 0,3,6,9,12,15,18,21 * * *"
       ],
-      "last_run": "2026-11-09T17:15:31+00:00",
+      "last_run": "2026-11-09T20:05:33+00:00",
       "last_conclusion": "success",
-      "last_success": "2026-11-09T17:15:31+00:00",
+      "last_success": "2026-11-09T20:05:33+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-07T19:31:06+00:00",
-      "last_slot": "2026-11-09T15:47:00+00:00",
+      "last_slot": "2026-11-09T21:47:00+00:00",
       "missed_slots": 0,
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 0.0h ago",
+      "detail": "last success 2.5h ago",
       "severity": "ok"
     }
   ],
@@ -205,22 +205,22 @@
     },
     {
       "outcome": "last upload (secret-place)",
-      "detail": "The Secret Place: 2026-11-09 (1h ago \u2014 short-psalm31v5-pre-sleep-prayer.md)",
+      "detail": "The Secret Place: 2026-11-09 (6h ago \u2014 short-psalm31v5-pre-sleep-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer2)",
-      "detail": "The Morning Altar: 2026-11-09 (1h ago \u2014 short-morningpsalm59v16-sunrise-prayer.md)",
+      "detail": "The Morning Altar: 2026-11-09 (1h ago \u2014 0054-psalm-88-13-morning-prayer-the-morning-altar.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer3)",
-      "detail": "The Midday Watch: 2026-11-09 (17h ago \u2014 0050-isaiah-58-10-midday-prayer.md)",
+      "detail": "The Midday Watch: 2026-11-09 (5h ago \u2014 0051-psalm-37-5-midday-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "publishable runway",
-      "detail": "32 of 32 approved script(s) over the 850-word floor (37 in queue)",
+      "detail": "29 of 29 approved script(s) over the 850-word floor (35 in queue)",
       "severity": "ok"
     },
     {
@@ -230,7 +230,7 @@
     },
     {
       "outcome": "replies recorded",
-      "detail": "14 live repl(ies), 15 row(s)",
+      "detail": "19 live repl(ies), 20 row(s)",
       "severity": "ok"
     }
   ]

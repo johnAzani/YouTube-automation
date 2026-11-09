@@ -19,11 +19,12 @@ width: 720
 height: 1280
 duration_seconds: 62.77
 scenes_verified: 6
-thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCUGoTVLxkAv25Z85wBcBF3w; auth_channel_title=The Midday Watch; long_uploads_s"
+thumbnail_pending: false
 thumbnail_poster: ["THE MIDDAY WATCH", "PSALM 119:114", "PAUSE & PRAY AT NOON", "YOUR HIDING PLACE"]
 thumbnail_kicker: "PAUSE AND PRAY AT NOON"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
 ---
 
 Pause whatever you are doing in this quiet middle hour of your afternoon. Take a deep breath now and rest your soul. The Holy Scripture reminds us today in Psalm 119:114: You are my hiding place and my shield; I hope in your word. Lord, as bright midday light fills our world, we run into your sanctuary and hide under your loving wings. Shield our weary hearts from stress, noise, and heavy pressure. We anchor our daily hope in your promises. Strengthen our steps as we return to our afternoon tasks, knowing you guide and protect our every step. Amen. Subscribe to The Midday Watch right now to pause and pray with us every single day at noon.
