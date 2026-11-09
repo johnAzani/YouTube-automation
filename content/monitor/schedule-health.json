@@ -37,24 +37,31 @@
       "workflow": "community.yml"
     }
   ],
-  "generated_at": "2026-11-09T20:06:34.338697+00:00",
-  "last_run_at": "2026-11-09T20:05:33+00:00",
+  "generated_at": "2026-11-09T22:37:09.344230+00:00",
+  "last_run_at": "2026-11-09T22:36:32+00:00",
   "on_time": [
     {
-      "late_minutes": 60,
-      "name": "automation-health",
-      "ran_at": "2026-11-08T21:14:41+00:00",
-      "slot": "2026-11-08T20:14:00+00:00",
-      "workflow": "automation-health.yml"
+      "late_minutes": 68,
+      "name": "Automation monitor",
+      "ran_at": "2026-11-09T22:31:36+00:00",
+      "slot": "2026-11-09T21:23:00+00:00",
+      "workflow": "monitor.yml"
     },
     {
-      "late_minutes": 78,
+      "late_minutes": 52,
+      "name": "Produce video",
+      "ran_at": "2026-11-09T20:06:40+00:00",
+      "slot": "2026-11-09T19:14:00+00:00",
+      "workflow": "produce.yml"
+    },
+    {
+      "late_minutes": 49,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-09T20:05:33+00:00",
-      "slot": "2026-11-09T18:47:00+00:00",
+      "ran_at": "2026-11-09T22:36:32+00:00",
+      "slot": "2026-11-09T21:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 1,
+  "silence_minutes": 0,
   "warn_minutes": 120
 }
