@@ -23,13 +23,6 @@
       "workflow": "keepalive.yml"
     },
     {
-      "late_minutes": 213,
-      "name": "Produce video",
-      "ran_at": "2026-11-09T09:47:13+00:00",
-      "slot": "2026-11-09T06:14:00+00:00",
-      "workflow": "produce.yml"
-    },
-    {
       "late_minutes": 153,
       "name": "Autonomous Comment Replies",
       "ran_at": "2026-11-09T09:47:14+00:00",
@@ -51,8 +44,8 @@
       "workflow": "community.yml"
     }
   ],
-  "generated_at": "2026-11-09T14:10:52.820407+00:00",
-  "last_run_at": "2026-11-09T14:10:13+00:00",
+  "generated_at": "2026-11-09T14:16:01.357648+00:00",
+  "last_run_at": "2026-11-09T14:15:09+00:00",
   "on_time": [
     {
       "late_minutes": 60,
