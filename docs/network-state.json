@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T17:49:01Z",
+  "generated_at": "2026-11-09T21:27:16Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 4
   },
   "totals": {
-    "published_total": 52,
-    "published_longform": 24,
-    "published_shorts": 28,
-    "public_total": 50,
-    "queued_longform": 31,
-    "queued_shorts": 18,
+    "published_total": 54,
+    "published_longform": 25,
+    "published_shorts": 29,
+    "public_total": 52,
+    "queued_longform": 30,
+    "queued_shorts": 17,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -99,32 +99,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 20,
-        "published_longform": 10,
-        "published_shorts": 10,
-        "public_total": 19,
-        "queued_longform": 6,
+        "published_total": 22,
+        "published_longform": 11,
+        "published_shorts": 11,
+        "public_total": 21,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM59V16",
-        "title": "Say This Psalm 59:16 Prayer at Sunrise | God Is My Refuges And Strength #Shorts",
-        "format": "short",
-        "youtube_video_id": "5boMPL29htI",
-        "watch_url": "https://www.youtube.com/shorts/5boMPL29htI",
-        "published_on": "2026-11-09",
-        "published_at": "2026-11-09T16:25:12Z"
-      },
-      "next_queued_longform": {
         "id": "0054",
         "title": "Psalm 88:13 Morning Prayer | The Morning Altar",
-        "words": 1698,
+        "format": "longform",
+        "youtube_video_id": "lhZrnZQq7GY",
+        "watch_url": "https://youtu.be/lhZrnZQq7GY",
+        "published_on": "2026-11-09",
+        "published_at": "2026-11-09T21:26:29Z"
+      },
+      "next_queued_longform": {
+        "id": "0055",
+        "title": "Psalm 92:1-2 Morning Prayer | The Morning Altar",
+        "words": 1437,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm88v13",
-        "scripture": "Psalm 88:13",
+        "short": "short-morningpsalm92v1",
+        "scripture": "Psalm 92:1-2",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -252,6 +252,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0054",
+      "slug": "psalm-88-13-morning-prayer-the-morning-altar",
+      "file": "0054-psalm-88-13-morning-prayer-the-morning-altar.md",
+      "title": "Psalm 88:13 Morning Prayer | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-09",
+      "published_at": "2026-11-09T21:26:29Z",
+      "youtube_video_id": "lhZrnZQq7GY",
+      "watch_url": "https://youtu.be/lhZrnZQq7GY",
+      "youtu_be_url": "https://youtu.be/lhZrnZQq7GY",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/lhZrnZQq7GY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/lhZrnZQq7GY/hqdefault.jpg",
+      "thumb_text": "FIRST WORDS TO GOD",
+      "duration_label": "~12 min",
+      "words": 1698
+    },
+    {
+      "id": "SHORT-MORNINGPSALM88V13",
+      "slug": "short-morningpsalm88v13-sunrise-prayer",
+      "file": "short-morningpsalm88v13-sunrise-prayer.md",
+      "title": "Say This Psalm 88:13 Prayer at Sunrise | Before You #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-09",
+      "published_at": "2026-11-09T20:16:44Z",
+      "youtube_video_id": "d069bzpeazk",
+      "watch_url": "https://www.youtube.com/shorts/d069bzpeazk",
+      "youtu_be_url": "https://youtu.be/d069bzpeazk",
+      "shorts_url": "https://www.youtube.com/shorts/d069bzpeazk",
+      "studio_url": "https://studio.youtube.com/video/d069bzpeazk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/d069bzpeazk/hqdefault.jpg",
+      "thumb_text": "CRY FOR HELP \u00b7 IN THE MORNING",
+      "duration_label": "50s",
+      "words": 623
+    },
     {
       "id": "0051",
       "slug": "psalm-37-5-midday-prayer",
@@ -1725,19 +1771,6 @@
         "words": 2549
       },
       {
-        "id": "0054",
-        "slug": "psalm-88-13-morning-prayer-the-morning-altar",
-        "file": "0054-psalm-88-13-morning-prayer-the-morning-altar.md",
-        "title": "Psalm 88:13 Morning Prayer | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1698
-      },
-      {
         "id": "0055",
         "slug": "psalm-92-1-2-morning-prayer",
         "file": "0055-psalm-92-1-2-morning-prayer.md",
@@ -1943,17 +1976,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-morningpsalm88v13",
-        "file": "0054-short-morningpsalm88v13.yml",
-        "companion_longform_id": "0054",
-        "scripture": "Psalm 88:13",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm92v1",
