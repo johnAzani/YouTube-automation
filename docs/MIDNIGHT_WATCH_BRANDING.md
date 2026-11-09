@@ -55,7 +55,7 @@ Midnight Prayer, The Midnight Watch, 12AM Prayer, Midnight Watch Prayer, Breakth
 | `docs/media/midnight-watch-watermark.png` | `150 × 150` RGBA | **Desktop YouTube Studio → Customization → Branding → Video watermark → Entire video** |
 | `docs/media/midnight-watch-thumbnail-template.png` | `1280 × 720` RGB | Reference sheet for automated CTR thumbnails (not uploaded manually) |
 
-### Documented Palette
-- **Midnight Indigo:** `#0a0e2a` · **Royal Vigil:** `#22205c` · **Watchtower Gold:** `#ffd060`
-- **Covenant Brass:** `#dea23e` · **Watch Ivory:** `#fbf7ee` · **Starlight Mist:** `#d4dcf2`
-- **Deep Bastion:** `#050716` · **Fortress Ridge:** `#38346c` · **Night Rampart:** `#1a183e`
+### Bespoke Visual Identity & Palette
+- **Emblem:** Gothic Obsidian & Antique Filigree Gold **Midnight Clock striking `XII` (12:00 AM)** under heavenly golden shafts of light — completely distinct from *The Secret Place* (cross & Bible), *The Morning Altar* (sunrise), and *The Midday Watch* (noon sun & tower).
+- **Obsidian Slate:** `#080709` · **Cathedral Charcoal:** `#141218` · **Antique Filigree Gold:** `#d4af5a`
+- **Heavenly Light Amber:** `#f6d58e` · **Crimson Velvet Accent:** `#2b1118` · **Warm Parchment Ivory:** `#f4ead5`
