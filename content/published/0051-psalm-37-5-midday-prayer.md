@@ -2,7 +2,7 @@
 id: '0051'
 title: Psalm 37:5 Midday Prayer | The Midday Watch
 slug: psalm-37-5-midday-prayer
-status: approved
+status: published
 channel: prayer3
 privacy: public
 format: longform
@@ -78,6 +78,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-09"
+published_at: "2026-11-09T17:43:47Z"
+youtube_video_id: "PZo9K85i7Sc"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — The Noonday Pause and the Turning of the Heart
