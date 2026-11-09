@@ -16,13 +16,6 @@
       "workflow": "produce.yml"
     },
     {
-      "late_minutes": 143,
-      "name": "Growth autopilot",
-      "ran_at": "2026-11-08T04:37:34+00:00",
-      "slot": "2026-11-08T02:14:00+00:00",
-      "workflow": "growth-autopilot.yml"
-    },
-    {
       "late_minutes": 126,
       "name": "Weekly metrics snapshot",
       "ran_at": "2026-11-06T20:47:15+00:00",
@@ -37,8 +30,8 @@
       "workflow": "community.yml"
     }
   ],
-  "generated_at": "2026-11-09T01:03:58.340375+00:00",
-  "last_run_at": "2026-11-09T01:03:10+00:00",
+  "generated_at": "2026-11-09T02:15:15.616565+00:00",
+  "last_run_at": "2026-11-09T02:14:10+00:00",
   "on_time": [
     {
       "late_minutes": 60,
@@ -76,6 +69,6 @@
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 0,
+  "silence_minutes": 1,
   "warn_minutes": 120
 }
