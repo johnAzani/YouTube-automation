@@ -20,7 +20,7 @@ on:
       channel:
         description: 'Target channel (own GCP project & secrets)'
         type: choice
-        options: [secret-place, prayer2, prayer3]
+        options: [secret-place, prayer2, prayer3, prayer4]
         default: secret-place
       limit:
         description: 'Maximum comments to reply to per pulse (default 8, max 25)'
@@ -61,22 +61,34 @@ jobs:
         env:
           PRAYER2_READY: ${{ secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN != '' }}
           PRAYER3_READY: ${{ secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN != '' }}
+          PRAYER4_READY: ${{ secrets.PRAYER4_YOUTUBE_REFRESH_TOKEN != '' }}
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_CHANNEL: ${{ inputs.channel }}
         run: |
-          case "${{ github.event_name }}" in
-            schedule)
-              channels='["secret-place"]'
-              if [ "$PRAYER2_READY" = "true" ]; then channels='["secret-place","prayer2"]'; fi
-              if [ "$PRAYER3_READY" = "true" ]; then
-                channels='["secret-place","prayer2","prayer3"]'
-              else
-                echo "::notice title=prayer3 comment replies wait for credentials::PRAYER3_YOUTUBE_REFRESH_TOKEN is not set, so The Midday Watch is not scheduled for replies yet."
-              fi
-              ;;
-            workflow_dispatch) channels='["${{ inputs.channel }}"]' ;;
-            *)                 channels='["secret-place"]' ;;
-          esac
-          echo "channels=$channels" >> "$GITHUB_OUTPUT"
-          echo "replying for: $channels"
+          python3 - <<'PY'
+          import json, os
+          event = os.environ.get("EVENT_NAME", "")
+          if event == "schedule":
+              channels = ["secret-place"]
+              if os.environ.get("PRAYER2_READY", "").lower() == "true":
+                  channels.append("prayer2")
+              if os.environ.get("PRAYER3_READY", "").lower() == "true":
+                  channels.append("prayer3")
+              else:
+                  print("::notice title=prayer3 comment replies wait for credentials::PRAYER3_YOUTUBE_REFRESH_TOKEN is not set, so The Midday Watch is not scheduled for replies yet.")
+              if os.environ.get("PRAYER4_READY", "").lower() == "true":
+                  channels.append("prayer4")
+              else:
+                  print("::notice title=prayer4 comment replies wait for credentials::PRAYER4_YOUTUBE_REFRESH_TOKEN is not set, so The Midnight Watch is not scheduled for replies yet.")
+          elif event == "workflow_dispatch":
+              channels = [(os.environ.get("INPUT_CHANNEL") or "secret-place").strip()]
+          else:
+              channels = ["secret-place"]
+          payload = json.dumps(channels)
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
+              fh.write(f"channels={payload}\n")
+          print(f"replying for: {payload}")
+          PY
 
   reply:
     needs: plan
@@ -109,11 +121,11 @@ jobs:
       - name: Run Comment Reply Engine
         env:
           CHANNEL_ID: ${{ matrix.channel }}
-          YOUTUBE_CLIENT_ID: ${{ matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID) }}
-          YOUTUBE_CLIENT_SECRET: ${{ matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET) }}
-          YOUTUBE_REFRESH_TOKEN: ${{ matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN) }}
-          YOUTUBE_EXPECTED_CHANNEL_ID: ${{ matrix.channel == 'prayer3' && (vars.PRAYER3_YOUTUBE_CHANNEL_ID || secrets.PRAYER3_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer2' && (vars.PRAYER2_YOUTUBE_CHANNEL_ID || secrets.PRAYER2_YOUTUBE_CHANNEL_ID) || (vars.YOUTUBE_CHANNEL_ID || secrets.YOUTUBE_CHANNEL_ID)) }}
-          GEMINI_API_KEY: ${{ matrix.channel == 'prayer3' && secrets.PRAYER3_GEMINI_API_KEY || (matrix.channel == 'prayer2' && secrets.PRAYER2_GEMINI_API_KEY || secrets.GEMINI_API_KEY) }}
+          YOUTUBE_CLIENT_ID: ${{ matrix.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID)) }}
+          YOUTUBE_CLIENT_SECRET: ${{ matrix.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET)) }}
+          YOUTUBE_REFRESH_TOKEN: ${{ matrix.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN)) }}
+          YOUTUBE_EXPECTED_CHANNEL_ID: ${{ matrix.channel == 'prayer4' && (vars.PRAYER4_YOUTUBE_CHANNEL_ID || secrets.PRAYER4_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer3' && (vars.PRAYER3_YOUTUBE_CHANNEL_ID || secrets.PRAYER3_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer2' && (vars.PRAYER2_YOUTUBE_CHANNEL_ID || secrets.PRAYER2_YOUTUBE_CHANNEL_ID) || (vars.YOUTUBE_CHANNEL_ID || secrets.YOUTUBE_CHANNEL_ID))) }}
+          GEMINI_API_KEY: ${{ matrix.channel == 'prayer4' && secrets.PRAYER4_GEMINI_API_KEY || (matrix.channel == 'prayer3' && secrets.PRAYER3_GEMINI_API_KEY || (matrix.channel == 'prayer2' && secrets.PRAYER2_GEMINI_API_KEY || secrets.GEMINI_API_KEY)) }}
           # The engine files one issue when a viewer discloses distress instead of
           # answering them in public. Without a token that escalation is a log line.
           GH_TOKEN: ${{ github.token }}

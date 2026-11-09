@@ -111,6 +111,22 @@ CHANNELS: dict[str, ChannelProfile] = {
         # One flag, one meaning: registered + credentialed = scheduled + watched.
         provisioned=True,
     ),
+    "prayer4": ChannelProfile(
+        id="prayer4",
+        display_name="The Midnight Watch",
+        handle="@TheMidnightWatch",
+        secret_prefix="PRAYER4_",
+        # Owner decision, 2026-11-09: fourth prayer channel dedicated to the
+        # 12:00 AM midnight watch & breakthrough intercession (Psalm 119:62 /
+        # Acts 16:25). Registered in full parity with provisioned=False until
+        # the owner creates its separate Google Cloud project and saves
+        # PRAYER4_YOUTUBE_CLIENT_ID, _CLIENT_SECRET, _REFRESH_TOKEN, and
+        # PRAYER4_GEMINI_API_KEY in GitHub Secrets.
+        default_privacy="public",
+        auto_publish=True,
+        include_sanctuary_links=False,
+        provisioned=False,
+    ),
 }
 
 # Friendly aliases accepted in frontmatter / workflow inputs.
@@ -125,6 +141,10 @@ _ALIASES = {
     "noonday": "prayer3",
     "the-midday-watch": "prayer3",
     "channel3": "prayer3",
+    "midnight": "prayer4",
+    "midnight-watch": "prayer4",
+    "the-midnight-watch": "prayer4",
+    "channel4": "prayer4",
 }
 
 

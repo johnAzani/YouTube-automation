@@ -53,15 +53,21 @@ def calculate_next_quota_reset_utc(now: datetime | None = None) -> datetime:
     return datetime(tomorrow.year, tomorrow.month, tomorrow.day, tzinfo=pacific).astimezone(timezone.utc)
 
 
-def is_quota_pause_expired(quota_reset_utc_str: str) -> bool:
+def is_quota_pause_expired(
+    quota_reset_utc_str: str,
+    now: Optional[datetime] = None,
+) -> bool:
     """Return True if the quota pause timestamp has passed."""
     if not quota_reset_utc_str:
         return True
     try:
-        reset_at = datetime.fromisoformat(quota_reset_utc_str)
+        reset_at = datetime.fromisoformat(quota_reset_utc_str.replace("Z", "+00:00"))
         if reset_at.tzinfo is None:
             reset_at = reset_at.replace(tzinfo=timezone.utc)
-        return datetime.now(timezone.utc) >= reset_at
+        ref = now or datetime.now(timezone.utc)
+        if ref.tzinfo is None:
+            ref = ref.replace(tzinfo=timezone.utc)
+        return ref >= reset_at
     except Exception:
         return True
 

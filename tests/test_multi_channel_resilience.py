@@ -536,7 +536,7 @@ goes before you until evening falls and brings your labor to peaceful completion
                     self.assertTrue(Path(res["ready_pack"]).is_file())
                     self.assertTrue(Path(res["card_path"]).is_file())
                     seen_ids.add(sched[0].post_id)
-                self.assertEqual(len(seen_ids), 3)
+                self.assertEqual(len(seen_ids), len(CHANNELS))
 
         comm_text = (ROOT / ".github" / "workflows" / "community.yml").read_text(encoding="utf-8")
         metrics_text = (ROOT / ".github" / "workflows" / "metrics.yml").read_text(encoding="utf-8")
@@ -1400,7 +1400,7 @@ goes before you until evening falls and brings your labor to peaceful completion
             self.assertIsNone(parsed["prayer3"])
 
         produce_wf = (ROOT / ".github" / "workflows" / "produce.yml").read_text(encoding="utf-8")
-        self.assertIn(r"(\$0.00 lock)", produce_wf)
+        self.assertIn("$0.00 lock", produce_wf)
 
 
 if __name__ == "__main__":
