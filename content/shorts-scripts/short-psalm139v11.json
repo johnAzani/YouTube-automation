@@ -1,0 +1,306 @@
+{
+  "key": "short-psalm139v11",
+  "channel": "secret-place",
+  "psalm": 139,
+  "title": [
+    "EVEN THE DARKNESS",
+    "SHINES LIKE DAY"
+  ],
+  "poster": [
+    "NIGHT SHINES",
+    "AS THE DAY",
+    "PSALM 139:11-12",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm starlit lake night dark blue reflection peaceful",
+    "single burning candle warm glow dark room serene",
+    "misty forest night moonbeams softly through trees",
+    "starry sky night sky aurora calm horizon",
+    "soft glowing lantern outdoors quiet night background",
+    "calm ocean shore night soft moonlight waves",
+    "warm candle flame close up peaceful dark night"
+  ],
+  "scenes": [
+    {
+      "a": "Take a slow, deep breath",
+      "img": "short-psalm139v11-scene-01.jpg",
+      "kicker": "PSALM 139:11-12",
+      "sub": "BREATHE IN GODS PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "As you close your eyes",
+      "img": "short-psalm139v11-scene-02.jpg",
+      "kicker": "PSALM 139:11-12",
+      "sub": "HIS PRESENCE SURROUNDS YOU",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "surely the darkness shall cover me",
+      "img": "short-psalm139v11-scene-03.jpg",
+      "kicker": "PSALM 139:11-12",
+      "sub": "DARKNESS CANNOT HIDE YOU",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "The night shines bright",
+      "img": "short-psalm139v11-scene-04.jpg",
+      "kicker": "PSALM 139:11-12",
+      "sub": "NIGHT SHINES AS THE DAY",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, when shadows feel heavy",
+      "img": "short-psalm139v11-scene-05.jpg",
+      "kicker": "BEDTIME PRAYER",
+      "sub": "LIGHT IN EVERY SHADOW",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Wrap them in peaceful sleep tonight",
+      "img": "short-psalm139v11-scene-06.jpg",
+      "kicker": "BEDTIME PRAYER",
+      "sub": "REST IN HIS GRACE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Subscribe to pray with us every night",
+      "img": "short-psalm139v11-scene-07.jpg",
+      "kicker": "THE SECRET PLACE",
+      "sub": "PRAYERS EVERY NIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Take a slow, deep breath and let the quiet of this calm night settle over your heart."
+    ],
+    [
+      8,
+      16,
+      "As you close your eyes, remember the gentle and eternal promise of God's holy presence."
+    ],
+    [
+      16,
+      28,
+      "Psalm 139:11-12 says, if I say surely the darkness shall cover me, even the darkness is not dark to You."
+    ],
+    [
+      28,
+      40,
+      "The night shines bright as the day, for darkness is as light to You."
+    ],
+    [
+      40,
+      50,
+      "Heavenly Father, when shadows feel heavy, remind this weary soul that Your light fills every dark space."
+    ],
+    [
+      50,
+      60,
+      "No night is ever too deep for Your grace to reach. Wrap them in peaceful sleep tonight."
+    ],
+    [
+      60,
+      70,
+      "Restore their spirit as they rest in Your care. Amen. Subscribe to pray with us every night."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "TAKE A SLOW DEEP BREATH",
+        "LET THE QUIET SETTLE OVER YOUR HEART"
+      ],
+      [
+        "DEEP BREATH",
+        "QUIET SETTLE"
+      ],
+      "PSALM 139 : 11-12"
+    ],
+    [
+      8,
+      16,
+      [
+        "CLOSE YOUR EYES AND REMEMBER",
+        "THE PROMISE OF GODS HOLY PRESENCE"
+      ],
+      [
+        "GODS HOLY PRESENCE"
+      ],
+      "PSALM 139 : 11-12"
+    ],
+    [
+      16,
+      28,
+      [
+        "SURELY THE DARKNESS SHALL COVER ME",
+        "EVEN THE DARKNESS IS NOT DARK TO YOU"
+      ],
+      [
+        "NOT DARK TO YOU"
+      ],
+      "PSALM 139 : 11-12"
+    ],
+    [
+      28,
+      40,
+      [
+        "THE NIGHT SHINES BRIGHT AS DAY",
+        "FOR DARKNESS IS AS LIGHT TO YOU"
+      ],
+      [
+        "SHINES BRIGHT",
+        "LIGHT TO YOU"
+      ],
+      "PSALM 139 : 11-12"
+    ],
+    [
+      40,
+      50,
+      [
+        "WHEN SHADOWS FEEL HEAVY",
+        "YOUR LIGHT FILLS EVERY DARK SPACE"
+      ],
+      [
+        "YOUR LIGHT FILLS"
+      ],
+      "PSALM 139 : 11-12"
+    ],
+    [
+      50,
+      60,
+      [
+        "NO NIGHT IS TOO DEEP",
+        "WRAP THEM IN PEACEFUL SLEEP TONIGHT"
+      ],
+      [
+        "PEACEFUL SLEEP"
+      ],
+      "PSALM 139 : 11-12"
+    ],
+    [
+      60,
+      70,
+      [
+        "RESTORE THEIR SPIRIT IN YOUR CARE",
+        "SUBSCRIBE TO PRAY WITH US EVERY NIGHT"
+      ],
+      [
+        "RESTORE THEIR SPIRIT",
+        "SUBSCRIBE"
+      ],
+      "PSALM 139 : 11-12"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Take a slow, deep breath",
+      "kind": "phrase",
+      "words": [
+        "DEEP",
+        "BREATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As you close your eyes",
+      "kind": "phrase",
+      "words": [
+        "GODS",
+        "HOLY",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "surely the darkness shall cover me",
+      "kind": "phrase",
+      "words": [
+        "NOT",
+        "DARK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The night shines bright",
+      "kind": "phrase",
+      "words": [
+        "SHINES",
+        "BRIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, when shadows feel heavy",
+      "kind": "phrase",
+      "words": [
+        "YOUR",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Wrap them in peaceful sleep tonight",
+      "kind": "phrase",
+      "words": [
+        "PEACEFUL",
+        "SLEEP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to pray with us every night",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 139:11-12"
+}
