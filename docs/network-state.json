@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T14:46:07Z",
+  "generated_at": "2026-11-09T16:17:19Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 4
   },
   "totals": {
-    "published_total": 48,
+    "published_total": 49,
     "published_longform": 23,
-    "published_shorts": 25,
-    "public_total": 46,
+    "published_shorts": 26,
+    "public_total": 47,
     "queued_longform": 32,
-    "queued_shorts": 21,
+    "queued_shorts": 20,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -32,22 +32,22 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 19,
+        "published_total": 20,
         "published_longform": 7,
-        "published_shorts": 12,
-        "public_total": 18,
+        "published_shorts": 13,
+        "public_total": 19,
         "queued_longform": 20,
         "queued_other": 5,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-PSALM18V2",
-        "title": "Say This Psalm 18:2 Prayer Before You Sleep | Safe Stronghold #Shorts",
+        "id": "SHORT-PSALM31V5",
+        "title": "Say This Psalm 31:5 Prayer Before You Sleep | Redeemed In Peace #Shorts",
         "format": "short",
-        "youtube_video_id": "jhOlEJvNg-0",
-        "watch_url": "https://www.youtube.com/shorts/jhOlEJvNg-0",
+        "youtube_video_id": "nHTVsgHaLpE",
+        "watch_url": "https://www.youtube.com/shorts/nHTVsgHaLpE",
         "published_on": "2026-11-09",
-        "published_at": "2026-11-09T09:54:18Z"
+        "published_at": "2026-11-09T16:15:42Z"
       },
       "next_queued_longform": {
         "id": "0015",
@@ -56,8 +56,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm31v5",
-        "scripture": "Psalm 31:5",
+        "short": "short-psalm37v7",
+        "scripture": "Psalm 37:7",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -252,6 +252,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PSALM31V5",
+      "slug": "short-psalm31v5-pre-sleep-prayer",
+      "file": "short-psalm31v5-pre-sleep-prayer.md",
+      "title": "Say This Psalm 31:5 Prayer Before You Sleep | Redeemed In Peace #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-09",
+      "published_at": "2026-11-09T16:15:42Z",
+      "youtube_video_id": "nHTVsgHaLpE",
+      "watch_url": "https://www.youtube.com/shorts/nHTVsgHaLpE",
+      "youtu_be_url": "https://youtu.be/nHTVsgHaLpE",
+      "shorts_url": "https://www.youtube.com/shorts/nHTVsgHaLpE",
+      "studio_url": "https://studio.youtube.com/video/nHTVsgHaLpE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/nHTVsgHaLpE/hqdefault.jpg",
+      "thumb_text": "INTO THINE HAND \u00b7 I COMMIT MY SPIRIT",
+      "duration_label": "63s",
+      "words": 632
+    },
     {
       "id": "0053",
       "slug": "psalm-59-16-morning-prayer",
@@ -1777,17 +1800,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-psalm31v5",
-        "file": "0021-short-psalm31v5.yml",
-        "companion_longform_id": "0021",
-        "scripture": "Psalm 31:5",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
       {
         "short": "short-psalm37v7",
         "file": "0022-short-psalm37v7.yml",
