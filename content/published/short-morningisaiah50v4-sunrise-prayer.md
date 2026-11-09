@@ -19,11 +19,12 @@ width: 720
 height: 1280
 duration_seconds: 60.05
 scenes_verified: 6
-thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunris"
+thumbnail_pending: false
 thumbnail_poster: ["GREET THE", "MORNING LIGHT", "FIND YOUR STILLNESS", "THE MORNING ALTAR"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
 ---
 
 Gently open your eyes to the stillness. The world begins in quiet surrender. Listen to the word for this day. The Lord God has given me the tongue of those who are taught, that I may know how to sustain the weary. He awakens my ear to listen as those who are taught. Let this prayer anchor your spirit now. Creator, give me eyes to see the morning grace. Grant me a tongue that speaks hope to those around me. May I listen well today. Help me sustain the heavy hearts I encounter, walking in your light always. In this dawn, I offer my life to your service. Be my strength as the sun rises. Amen. Subscribe.
