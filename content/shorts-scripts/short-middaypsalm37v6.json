@@ -1,0 +1,317 @@
+{
+  "key": "short-middaypsalm37v6",
+  "channel": "prayer3",
+  "psalm": 37,
+  "title": [
+    "MIDDAY PRAYER",
+    "PSALM 37:6"
+  ],
+  "poster": [
+    "PAUSE AT NOON",
+    "LET HIS LIGHT SHINE",
+    "PSALM 37:6",
+    "THE MIDDAY WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "sunlight streaming through quiet office window bright afternoon",
+    "bright noonday sun shining over vast green hills meadow",
+    "wooden desk open book warm afternoon sunlight reflection",
+    "sun rays beaming through majestic forest trees midday glow",
+    "calm glass lake reflecting bright blue sky clear noon light",
+    "soft golden afternoon light on quiet peaceful path",
+    "bright sky sunny clouds peaceful midday horizon"
+  ],
+  "scenes": [
+    {
+      "a": "Pause what you are doing right now and take a slow deep breath in the middle of your day.",
+      "img": "short-middaypsalm37v6-scene-01.jpg",
+      "kicker": "PAUSE & PRAY",
+      "sub": "TAKE A BREATH AT MIDDAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Psalm 37:6 promises, He will make your righteous reward shine like the dawn, your vindication like the noonday sun.",
+      "img": "short-middaypsalm37v6-scene-02.jpg",
+      "kicker": "PSALM 37:6",
+      "sub": "YOUR VINDICATION LIKE NOON",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Lord, as the midday sun reaches its highest point, we release every anxiety and burden into your hands.",
+      "img": "short-middaypsalm37v6-scene-03.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "RELEASE YOUR BURDENS TODAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Reveal your truth over our work, clear away confusion, and let your justice break through the darkest shadows.",
+      "img": "short-middaypsalm37v6-scene-04.jpg",
+      "kicker": "SEEK HIS TRUTH",
+      "sub": "LET HIS LIGHT BREAK THROUGH",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "We trust your perfect timing, knowing that you bring light to every hidden corner of our lives today.",
+      "img": "short-middaypsalm37v6-scene-05.jpg",
+      "kicker": "TRUST HIS TIMING",
+      "sub": "HE MAKES ALL THINGS BRIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "May your peace quiet our hearts as we step back into the remainder of this afternoon.",
+      "img": "short-middaypsalm37v6-scene-06.jpg",
+      "kicker": "REST IN PEACE",
+      "sub": "WALK IN MIDDAY PEACE",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to pause and pray with us every day at noon.",
+      "img": "short-middaypsalm37v6-scene-07.jpg",
+      "kicker": "JOIN THE WATCH",
+      "sub": "PAUSE AND PRAY AT NOON",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "Pause what you are doing right now and take a slow deep breath in the middle of your day."
+    ],
+    [
+      6,
+      13,
+      "Psalm 37:6 promises, He will make your righteous reward shine like the dawn, your vindication like the noonday sun."
+    ],
+    [
+      13,
+      20,
+      "Lord, as the midday sun reaches its highest point, we release every anxiety and burden into your hands."
+    ],
+    [
+      20,
+      27,
+      "Reveal your truth over our work, clear away confusion, and let your justice break through the darkest shadows."
+    ],
+    [
+      27,
+      34,
+      "We trust your perfect timing, knowing that you bring light to every hidden corner of our lives today."
+    ],
+    [
+      34,
+      40,
+      "May your peace quiet our hearts as we step back into the remainder of this afternoon."
+    ],
+    [
+      40,
+      45,
+      "Subscribe to pause and pray with us every day at noon."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "PAUSE WHAT YOU ARE DOING",
+        "TAKE A SLOW DEEP BREATH",
+        "IN MIDDLE OF YOUR DAY"
+      ],
+      [
+        "PAUSE",
+        "BREATH"
+      ],
+      "PSALM 37:6"
+    ],
+    [
+      6,
+      13,
+      [
+        "HE WILL MAKE YOUR REWARD",
+        "SHINE LIKE THE DAWN",
+        "VINDICATION LIKE NOONDAY SUN"
+      ],
+      [
+        "SHINE",
+        "NOONDAY"
+      ],
+      "PSALM 37:6"
+    ],
+    [
+      13,
+      20,
+      [
+        "MIDDAY SUN AT HIGHEST POINT",
+        "WE RELEASE EVERY ANXIETY",
+        "INTO YOUR LOVING HANDS"
+      ],
+      [
+        "RELEASE",
+        "HANDS"
+      ],
+      "PSALM 37:6"
+    ],
+    [
+      20,
+      27,
+      [
+        "REVEAL TRUTH OVER OUR WORK",
+        "CLEAR AWAY ALL CONFUSION",
+        "JUSTICE BREAK THROUGH SHADOWS"
+      ],
+      [
+        "TRUTH",
+        "JUSTICE"
+      ],
+      "PSALM 37:6"
+    ],
+    [
+      27,
+      34,
+      [
+        "WE TRUST YOUR PERFECT TIMING",
+        "YOU BRING LIGHT TO EVERY",
+        "HIDDEN CORNER OF OUR LIVES"
+      ],
+      [
+        "TRUST",
+        "LIGHT"
+      ],
+      "PSALM 37:6"
+    ],
+    [
+      34,
+      40,
+      [
+        "MAY YOUR PEACE QUIET HEARTS",
+        "AS WE STEP BACK INTO",
+        "THE REST OF THIS AFTERNOON"
+      ],
+      [
+        "PEACE",
+        "HEARTS"
+      ],
+      "PSALM 37:6"
+    ],
+    [
+      40,
+      45,
+      [
+        "SUBSCRIBE TO PAUSE AND PRAY",
+        "WITH US EVERY SINGLE DAY",
+        "RIGHT HERE AT NOON"
+      ],
+      [
+        "SUBSCRIBE",
+        "PRAY"
+      ],
+      "PSALM 37:6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Pause what you are doing right now and take a slow deep breath in the middle of your day.",
+      "kind": "phrase",
+      "words": [
+        "PAUSE",
+        "BREATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Psalm 37:6 promises, He will make your righteous reward shine like the dawn, your vindication like the noonday sun.",
+      "kind": "phrase",
+      "words": [
+        "SHINE",
+        "NOONDAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, as the midday sun reaches its highest point, we release every anxiety and burden into your hands.",
+      "kind": "phrase",
+      "words": [
+        "RELEASE",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Reveal your truth over our work, clear away confusion, and let your justice break through the darkest shadows.",
+      "kind": "phrase",
+      "words": [
+        "TRUTH",
+        "JUSTICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We trust your perfect timing, knowing that you bring light to every hidden corner of our lives today.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your peace quiet our hearts as we step back into the remainder of this afternoon.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "HEARTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to pause and pray with us every day at noon.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PRAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 37:6"
+}

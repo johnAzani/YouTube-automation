@@ -1,0 +1,325 @@
+{
+  "key": "short-middayacts10v9",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "THE MIDDAY",
+    "APPOINTMENT"
+  ],
+  "poster": [
+    "ACTS 10:9",
+    "A SACRED PAUSE",
+    "MIDDAY PRAYER",
+    "THE MIDDAY WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "bright sunlight streaming through a window",
+    "top down view of a clean wooden desk",
+    "high noon sun over an open field",
+    "sunlit meadow with gentle breeze",
+    "close up of a glass of water on a desk",
+    "shadows shifting on a white wall",
+    "still garden at midday"
+  ],
+  "scenes": [
+    {
+      "a": "Step away from the noise",
+      "img": "short-middayacts10v9-scene-01.jpg",
+      "kicker": "ACTS 10:9",
+      "sub": "THE MIDDAY PAUSE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "breathe in the grace",
+      "img": "short-middayacts10v9-scene-02.jpg",
+      "kicker": "ACTS 10:9",
+      "sub": "FINDING STILLNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Acts 10:9 tells us",
+      "img": "short-middayacts10v9-scene-03.jpg",
+      "kicker": "ACTS 10:9",
+      "sub": "PETER ON THE ROOFTOP",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "About the sixth hour",
+      "img": "short-middayacts10v9-scene-04.jpg",
+      "kicker": "ACTS 10:9",
+      "sub": "THE SIXTH HOUR",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Peter went up",
+      "img": "short-middayacts10v9-scene-05.jpg",
+      "kicker": "ACTS 10:9",
+      "sub": "AN ASCENT TO PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "to pray",
+      "img": "short-middayacts10v9-scene-06.jpg",
+      "kicker": "ACTS 10:9",
+      "sub": "A QUIET CONVERSATION",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father",
+      "img": "short-middayacts10v9-scene-07.jpg",
+      "kicker": "ACTS 10:9",
+      "sub": "PRESENT MOMENT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "Step away from the noise and breathe in the grace of this present moment."
+    ],
+    [
+      16,
+      32,
+      "Acts 10:9 tells us, about the sixth hour, Peter went up on the housetop to pray."
+    ],
+    [
+      33,
+      50,
+      "Like Peter, you are invited to lift your eyes from your daily tasks."
+    ],
+    [
+      51,
+      68,
+      "The world is loud, but this midday hour belongs entirely to your Creator."
+    ],
+    [
+      69,
+      85,
+      "Heavenly Father, anchor my heart in your truth during this busy day."
+    ],
+    [
+      86,
+      105,
+      "Let your peace steady my hands and clarify my thoughts in your presence."
+    ],
+    [
+      106,
+      120,
+      "Thank you for this sacred space to be still, to listen, and to rest."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "STEP AWAY FROM",
+        "THE NOISE AND",
+        "BREATHE IN THE",
+        "GRACE OF THIS",
+        "PRESENT MOMENT"
+      ],
+      [
+        "BREATHE",
+        "GRACE"
+      ],
+      "ACTS 10:9"
+    ],
+    [
+      16,
+      32,
+      [
+        "ACTS 10:9 TELLS US",
+        "ABOUT THE SIXTH HOUR",
+        "PETER WENT UP ON",
+        "THE HOUSETOP TO PRAY"
+      ],
+      [
+        "SIXTH HOUR",
+        "PRAY"
+      ],
+      "ACTS 10:9"
+    ],
+    [
+      33,
+      50,
+      [
+        "LIKE PETER YOU",
+        "ARE INVITED TO",
+        "LIFT YOUR EYES",
+        "FROM DAILY TASKS"
+      ],
+      [
+        "LIFT",
+        "EYES"
+      ],
+      "ACTS 10:9"
+    ],
+    [
+      51,
+      68,
+      [
+        "THE WORLD IS LOUD",
+        "BUT THIS MIDDAY HOUR",
+        "BELONGS ENTIRELY TO",
+        "YOUR CREATOR"
+      ],
+      [
+        "MIDDAY",
+        "CREATOR"
+      ],
+      "ACTS 10:9"
+    ],
+    [
+      69,
+      85,
+      [
+        "HEAVENLY FATHER",
+        "ANCHOR MY HEART",
+        "IN YOUR TRUTH",
+        "DURING THIS DAY"
+      ],
+      [
+        "HEAVENLY FATHER",
+        "ANCHOR"
+      ],
+      "ACTS 10:9"
+    ],
+    [
+      86,
+      105,
+      [
+        "LET YOUR PEACE",
+        "STEADY MY HANDS",
+        "AND CLARIFY MY",
+        "THOUGHTS IN PRESENCE"
+      ],
+      [
+        "PEACE",
+        "STEADY"
+      ],
+      "ACTS 10:9"
+    ],
+    [
+      106,
+      120,
+      [
+        "THANK YOU FOR",
+        "THIS SACRED SPACE",
+        "TO BE STILL",
+        "LISTEN AND REST"
+      ],
+      [
+        "SACRED SPACE",
+        "STILL"
+      ],
+      "ACTS 10:9"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Step away from the noise",
+      "kind": "phrase",
+      "words": [
+        "STEP",
+        "AWAY",
+        "NOISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "breathe in the grace",
+      "kind": "phrase",
+      "words": [
+        "BREATHE",
+        "GRACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Acts 10:9 tells us",
+      "kind": "phrase",
+      "words": [
+        "ACTS",
+        "10:9"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "About the sixth hour",
+      "kind": "phrase",
+      "words": [
+        "SIXTH",
+        "HOUR"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Peter went up",
+      "kind": "phrase",
+      "words": [
+        "PETER",
+        "WENT"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "to pray",
+      "kind": "phrase",
+      "words": [
+        "PRAY"
+      ],
+      "hi": 5,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father",
+      "kind": "phrase",
+      "words": [
+        "HEAVENLY",
+        "FATHER"
+      ],
+      "hi": 6,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Acts 10:9"
+}
