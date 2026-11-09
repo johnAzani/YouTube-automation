@@ -32,7 +32,7 @@ class TestFourthChannelRegistration(unittest.TestCase):
         self.assertIn("prayer4", CHANNELS)
         ch = get_channel("prayer4")
         self.assertEqual(ch.display_name, "The Midnight Watch")
-        self.assertEqual(ch.handle, "@TheMidnightWatch")
+        self.assertEqual(ch.handle, "@TheMidnightWatchDaily")
         self.assertEqual(ch.secret_prefix, "PRAYER4_")
         self.assertEqual(ch.secret_name("YOUTUBE_REFRESH_TOKEN"), "PRAYER4_YOUTUBE_REFRESH_TOKEN")
         self.assertEqual(ch.secret_name("GEMINI_API_KEY"), "PRAYER4_GEMINI_API_KEY")

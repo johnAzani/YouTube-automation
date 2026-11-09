@@ -47,7 +47,7 @@ daily quota and Gemini's free-tier RPD limits are enforced **per Google Cloud pr
 so isolating `prayer4` protects the three live channels' quotas.
 
 ### Step A — Create the YouTube channel & upload the brand art
-1. Create the YouTube Brand Account channel **The Midnight Watch** (`@TheMidnightWatch`).
+1. Create the YouTube Brand Account channel **The Midnight Watch** (`@TheMidnightWatchDaily`, `https://www.youtube.com/@TheMidnightWatchDaily`).
 2. In **YouTube Studio -> Customization -> Branding**, upload from `docs/media/`:
    * **Picture:** `midnight-watch-avatar.png` (`800 x 800`)
    * **Banner image:** `midnight-watch-banner.png` (`2560 x 1440`, mobile-safe `1235 x 338`)

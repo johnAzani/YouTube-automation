@@ -159,7 +159,7 @@ jobs:
       # canonical names below, so credentials are never mixed.
       CHANNEL_ID: ${{ matrix.channel || 'secret-place' }}
       CHANNEL_NAME: ${{ matrix.channel == 'prayer4' && 'The Midnight Watch' || (matrix.channel == 'prayer3' && 'The Midday Watch' || (matrix.channel == 'prayer2' && 'The Morning Altar' || 'The Secret Place')) }}
-      CHANNEL_HANDLE: ${{ matrix.channel == 'prayer4' && '@TheMidnightWatch' || (matrix.channel == 'prayer3' && '@TheMiddayWatch' || (matrix.channel == 'prayer2' && '@TheMorningAltarDaily' || '@TheSecretPlace')) }}
+      CHANNEL_HANDLE: ${{ matrix.channel == 'prayer4' && '@TheMidnightWatchDaily' || (matrix.channel == 'prayer3' && '@TheMiddayWatch' || (matrix.channel == 'prayer2' && '@TheMorningAltarDaily' || '@TheSecretPlace')) }}
       PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
       PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
       YOUTUBE_CLIENT_ID: ${{ matrix.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID)) }}
