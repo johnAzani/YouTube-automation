@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T22:55:10Z",
+  "generated_at": "2026-11-09T23:34:56Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 4
   },
   "totals": {
-    "published_total": 55,
+    "published_total": 56,
     "published_longform": 25,
-    "published_shorts": 30,
-    "public_total": 53,
+    "published_shorts": 31,
+    "public_total": 54,
     "queued_longform": 30,
-    "queued_shorts": 16,
+    "queued_shorts": 15,
     "automations_ok": 8,
     "automations_total": 10,
     "network_healthy": false
@@ -99,32 +99,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 22,
+        "published_total": 23,
         "published_longform": 11,
-        "published_shorts": 11,
-        "public_total": 21,
+        "published_shorts": 12,
+        "public_total": 22,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0054",
-        "title": "Psalm 88:13 Morning Prayer | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "lhZrnZQq7GY",
-        "watch_url": "https://youtu.be/lhZrnZQq7GY",
+        "id": "SHORT-MORNINGPSALM92V1",
+        "title": "Say This Psalm 92:1-2 Prayer at Sunrise | Morning Prayer #Shorts",
+        "format": "short",
+        "youtube_video_id": "eHfnoVXCsko",
+        "watch_url": "https://www.youtube.com/shorts/eHfnoVXCsko",
         "published_on": "2026-11-09",
-        "published_at": "2026-11-09T21:26:29Z"
+        "published_at": "2026-11-09T23:34:11Z"
       },
       "next_queued_longform": {
         "id": "0055",
         "title": "Psalm 92:1-2 Morning Prayer | The Morning Altar",
         "words": 1437,
-        "status": "approved"
+        "status": "quota_paused"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm92v1",
-        "scripture": "Psalm 92:1-2",
+        "short": "short-morningpsalm30v5",
+        "scripture": "Psalm 30:5",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -252,6 +252,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM92V1",
+      "slug": "short-morningpsalm92v1-sunrise-prayer",
+      "file": "short-morningpsalm92v1-sunrise-prayer.md",
+      "title": "Say This Psalm 92:1-2 Prayer at Sunrise | Morning Prayer #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-09",
+      "published_at": "2026-11-09T23:34:11Z",
+      "youtube_video_id": "eHfnoVXCsko",
+      "watch_url": "https://www.youtube.com/shorts/eHfnoVXCsko",
+      "youtu_be_url": "https://youtu.be/eHfnoVXCsko",
+      "shorts_url": "https://www.youtube.com/shorts/eHfnoVXCsko",
+      "studio_url": "https://studio.youtube.com/video/eHfnoVXCsko/edit",
+      "thumb_url": "https://i.ytimg.com/vi/eHfnoVXCsko/hqdefault.jpg",
+      "thumb_text": "IT IS GOOD \u00b7 TO GIVE THANKS",
+      "duration_label": "59s",
+      "words": 624
+    },
     {
       "id": "SHORT-MIDDAYISAIAH58V10",
       "slug": "short-middayisaiah58v10-midday-prayer",
@@ -1800,7 +1823,7 @@
         "title": "Psalm 92:1-2 Morning Prayer | The Morning Altar",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
-        "status": "approved",
+        "status": "quota_paused",
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,
@@ -1988,17 +2011,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-morningpsalm92v1",
-        "file": "0055-short-morningpsalm92v1.yml",
-        "companion_longform_id": "0055",
-        "scripture": "Psalm 92:1-2",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm30v5",
