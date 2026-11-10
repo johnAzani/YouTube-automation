@@ -89,10 +89,10 @@ approved_by: brain
 published_on: "2026-11-05"
 published_at: "2026-11-05T21:51:45Z"
 youtube_video_id: "oVy7uG5H1RU"
-thumbnail_pending: true
+thumbnail_pending: false
 metadata_revision: "selar-seo-v1"
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunrise Prayer; long_uploads_status=allowed; video_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; video_channel_title=The Morning Altar | Daily Sunrise Prayer; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_retry_after: "2026-11-10T17:42:39Z"
+
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Cause Me to Hear Thy Lovingkindness in the Morning (Psalm 143:8)

@@ -24,7 +24,7 @@ thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently.
 thumbnail_poster: ["CRY FOR HELP", "IN THE MORNING", "MY PRAYER COMES", "BEFORE YOU"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-10T17:42:39Z"
+thumbnail_retry_after: "2026-11-11T00:11:17Z"
 ---
 
 As the first light breaks across the sky, step into the stillness of this new morning. Hear the words of Psalm 88 verse 13: But I cry to you for help, Lord; in the morning my prayer comes before you. Lord, before the demands of today rush in, we lift our hearts to you in quiet worship. Fill this day with your peace, guiding every step we take and every thought we hold. May your presence surround us like the morning sun, renewing our spirit and restoring our hope. We place our worries into your faithful hands, trusting your grace for all that lies ahead. Subscribe to The Morning Altar to begin every sunrise in prayer.
