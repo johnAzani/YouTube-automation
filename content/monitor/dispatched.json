@@ -290,14 +290,15 @@
     "result": "dispatched prayer3; prayer4, prayer5, secret-place next pass (content-state takes one pending run)"
   },
   "produce.yml@2026-11-10T14:14:00+00:00": {
-    "at": "2026-11-10T19:09:03.538389+00:00",
+    "at": "2026-11-10T20:01:58.754837+00:00",
     "attempted_channels": [
       "secret-place",
       "prayer5",
-      "prayer6"
+      "prayer6",
+      "prayer5"
     ],
-    "attempts": 3,
+    "attempts": 4,
     "code_id": "3784c2fd0bb084db",
-    "result": "dispatched prayer6; prayer5 next pass (content-state takes one pending run)"
+    "result": "dispatched prayer5; prayer6 next pass (content-state takes one pending run)"
   }
 }
