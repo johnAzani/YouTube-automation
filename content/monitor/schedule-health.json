@@ -23,6 +23,13 @@
       "workflow": "keepalive.yml"
     },
     {
+      "late_minutes": 213,
+      "name": "Produce video",
+      "ran_at": "2026-11-09T09:47:13+00:00",
+      "slot": "2026-11-09T06:14:00+00:00",
+      "workflow": "produce.yml"
+    },
+    {
       "late_minutes": 205,
       "name": "automation-health",
       "ran_at": "2026-11-09T23:39:48+00:00",
@@ -30,10 +37,10 @@
       "workflow": "automation-health.yml"
     },
     {
-      "late_minutes": 203,
+      "late_minutes": 153,
       "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-09T22:37:13+00:00",
-      "slot": "2026-11-09T19:14:00+00:00",
+      "ran_at": "2026-11-09T09:47:14+00:00",
+      "slot": "2026-11-09T07:14:00+00:00",
       "workflow": "comments.yml"
     },
     {
@@ -51,28 +58,21 @@
       "workflow": "community.yml"
     }
   ],
-  "generated_at": "2026-11-09T23:40:35.989210+00:00",
-  "last_run_at": "2026-11-09T23:39:48+00:00",
+  "generated_at": "2026-11-10T02:06:20.882106+00:00",
+  "last_run_at": "2026-11-10T02:05:30+00:00",
   "on_time": [
     {
-      "late_minutes": 68,
+      "late_minutes": 102,
       "name": "Automation monitor",
-      "ran_at": "2026-11-09T22:31:36+00:00",
-      "slot": "2026-11-09T21:23:00+00:00",
+      "ran_at": "2026-11-10T02:05:30+00:00",
+      "slot": "2026-11-10T00:23:00+00:00",
       "workflow": "monitor.yml"
     },
     {
-      "late_minutes": 52,
-      "name": "Produce video",
-      "ran_at": "2026-11-09T20:06:40+00:00",
-      "slot": "2026-11-09T19:14:00+00:00",
-      "workflow": "produce.yml"
-    },
-    {
-      "late_minutes": 49,
+      "late_minutes": 78,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-09T22:36:32+00:00",
-      "slot": "2026-11-09T21:47:00+00:00",
+      "ran_at": "2026-11-10T02:05:30+00:00",
+      "slot": "2026-11-10T00:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
