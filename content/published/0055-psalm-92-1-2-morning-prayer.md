@@ -2,7 +2,7 @@
 id: '0055'
 title: Psalm 92:1-2 Morning Prayer | The Morning Altar
 slug: psalm-92-1-2-morning-prayer
-status: quota_paused
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -78,8 +78,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
-quota_reset_utc: '2026-11-10T08:00:00+00:00'
-pause_reason: gemini_api_daily_quota_exhausted
+published_on: "2026-11-10"
+published_at: "2026-11-10T11:23:49Z"
+youtube_video_id: "lvq0JNhyr-8"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — The Sunrise Hook & Directing the Prayer

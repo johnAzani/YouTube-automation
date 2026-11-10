@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T10:09:40Z",
+  "generated_at": "2026-11-10T11:24:34Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 5
   },
   "totals": {
-    "published_total": 57,
-    "published_longform": 25,
-    "published_shorts": 32,
-    "public_total": 55,
-    "queued_longform": 44,
-    "queued_shorts": 29,
+    "published_total": 59,
+    "published_longform": 26,
+    "published_shorts": 33,
+    "public_total": 57,
+    "queued_longform": 43,
+    "queued_shorts": 28,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -99,32 +99,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 23,
-        "published_longform": 11,
-        "published_shorts": 12,
-        "public_total": 22,
-        "queued_longform": 7,
+        "published_total": 25,
+        "published_longform": 12,
+        "published_shorts": 13,
+        "public_total": 24,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM92V1",
-        "title": "Say This Psalm 92:1-2 Prayer at Sunrise | Morning Prayer #Shorts",
-        "format": "short",
-        "youtube_video_id": "eHfnoVXCsko",
-        "watch_url": "https://www.youtube.com/shorts/eHfnoVXCsko",
-        "published_on": "2026-11-09",
-        "published_at": "2026-11-09T23:34:11Z"
-      },
-      "next_queued_longform": {
         "id": "0055",
         "title": "Psalm 92:1-2 Morning Prayer | The Morning Altar",
-        "words": 1437,
-        "status": "quota_paused"
+        "format": "longform",
+        "youtube_video_id": "lvq0JNhyr-8",
+        "watch_url": "https://youtu.be/lvq0JNhyr-8",
+        "published_on": "2026-11-10",
+        "published_at": "2026-11-10T11:23:49Z"
+      },
+      "next_queued_longform": {
+        "id": "0056",
+        "title": "Psalm 30:5 Morning Prayer | The Morning Altar",
+        "words": 1376,
+        "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm30v5",
-        "scripture": "Psalm 30:5",
+        "short": "short-morningpsalm19v4",
+        "scripture": "Psalm 19:4-6",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -305,6 +305,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0055",
+      "slug": "psalm-92-1-2-morning-prayer",
+      "file": "0055-psalm-92-1-2-morning-prayer.md",
+      "title": "Psalm 92:1-2 Morning Prayer | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-10",
+      "published_at": "2026-11-10T11:23:49Z",
+      "youtube_video_id": "lvq0JNhyr-8",
+      "watch_url": "https://youtu.be/lvq0JNhyr-8",
+      "youtu_be_url": "https://youtu.be/lvq0JNhyr-8",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/lvq0JNhyr-8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/lvq0JNhyr-8/hqdefault.jpg",
+      "thumb_text": "MORNING MERCY",
+      "duration_label": "~10 min",
+      "words": 1437
+    },
+    {
+      "id": "SHORT-MORNINGPSALM30V5",
+      "slug": "short-morningpsalm30v5-sunrise-prayer",
+      "file": "short-morningpsalm30v5-sunrise-prayer.md",
+      "title": "Say This Psalm 30:5 Prayer at Sunrise | Psalm 30:5 #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-10",
+      "published_at": "2026-11-10T10:15:30Z",
+      "youtube_video_id": "EQ8N0hM8aSE",
+      "watch_url": "https://www.youtube.com/shorts/EQ8N0hM8aSE",
+      "youtu_be_url": "https://youtu.be/EQ8N0hM8aSE",
+      "shorts_url": "https://www.youtube.com/shorts/EQ8N0hM8aSE",
+      "studio_url": "https://studio.youtube.com/video/EQ8N0hM8aSE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/EQ8N0hM8aSE/hqdefault.jpg",
+      "thumb_text": "THE \u00b7 MORNING",
+      "duration_label": "50s",
+      "words": 603
+    },
     {
       "id": "SHORT-PSALM37V7",
       "slug": "short-psalm37v7-pre-sleep-prayer",
@@ -1893,19 +1939,6 @@
         "words": 2549
       },
       {
-        "id": "0055",
-        "slug": "psalm-92-1-2-morning-prayer",
-        "file": "0055-psalm-92-1-2-morning-prayer.md",
-        "title": "Psalm 92:1-2 Morning Prayer | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "quota_paused",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1437
-      },
-      {
         "id": "0056",
         "slug": "psalm-30-5-morning-prayer",
         "file": "0056-psalm-30-5-morning-prayer.md",
@@ -2269,17 +2302,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-morningpsalm30v5",
-        "file": "0056-short-morningpsalm30v5.yml",
-        "companion_longform_id": "0056",
-        "scripture": "Psalm 30:5",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm19v4",
