@@ -1,0 +1,399 @@
+{
+  "key": "short-midnightexodus12v29",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "MIDNIGHT BREAKTHROUGH",
+    "EXODUS 12:29-31"
+  ],
+  "poster": [
+    "THE MIDNIGHT WATCH",
+    "EXODUS 12:29-31",
+    "BREAK EVERY CHAIN",
+    "STAND IN PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "midnight watchtower silhouette starry sky",
+    "lamp lit sanctuary altar night",
+    "ancient parchment scripture candle night",
+    "dramatic night sky glowing horizon exodus",
+    "deep starry heavens ancient ruins night",
+    "radiant golden light breaking dark clouds night",
+    "isolated watchtower illuminated night sky",
+    "glowing pathway moonlit mountain night",
+    "calm mountain lake midnight starry sky"
+  ],
+  "scenes": [
+    {
+      "a": "As midnight falls, step into the sanctuary of quiet prayer.",
+      "img": "short-midnightexodus12v29-scene-01.jpg",
+      "kicker": "THE MIDNIGHT WATCH",
+      "sub": "STEP INTO QUIET PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "At this quiet hour, heavy chains are broken in the spirit realm.",
+      "img": "short-midnightexodus12v29-scene-02.jpg",
+      "kicker": "EXODUS 12:29-31",
+      "sub": "CHAINS ARE BROKEN TONIGHT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Exodus chapter twelve, verses twenty-nine through thirty-one declares:",
+      "img": "short-midnightexodus12v29-scene-03.jpg",
+      "kicker": "EXODUS 12:29-31",
+      "sub": "GOD SPEAKS AT MIDNIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "At midnight the Lord smote all the firstborn in Egypt, and Pharaoh rose up in the night, saying, Rise up, and get you forth.",
+      "img": "short-midnightexodus12v29-scene-04.jpg",
+      "kicker": "EXODUS 12:29-31",
+      "sub": "RISE UP AND DEPART IN FAITH",
+      "cam": "pan_right",
+      "focus": [
+        0.55,
+        0.45
+      ]
+    },
+    {
+      "a": "Tonight, whatever spiritual stronghold has bound your peace or your family must release its grip.",
+      "img": "short-midnightexodus12v29-scene-05.jpg",
+      "kicker": "EXODUS 12:29-31",
+      "sub": "EVERY STRONGHOLD MUST FALL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The darkness of night cannot withstand the sudden light of divine deliverance.",
+      "img": "short-midnightexodus12v29-scene-06.jpg",
+      "kicker": "EXODUS 12:29-31",
+      "sub": "LIGHT BREAKS THE DARKNESS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.35
+      ]
+    },
+    {
+      "a": "Stand firm in faithful prayer while the world sleeps.",
+      "img": "short-midnightexodus12v29-scene-07.jpg",
+      "kicker": "THE MIDNIGHT WATCH",
+      "sub": "STAND FIRM WHILE WORLD SLEEPS",
+      "cam": "pan_left",
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    {
+      "a": "Receive your total freedom, walk out of bondage, and enter God's promise.",
+      "img": "short-midnightexodus12v29-scene-08.jpg",
+      "kicker": "EXODUS 12:29-31",
+      "sub": "WALK INTO GODS PROMISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Subscribe to The Midnight Watch and pray with us every night.",
+      "img": "short-midnightexodus12v29-scene-09.jpg",
+      "kicker": "THE MIDNIGHT WATCH",
+      "sub": "PRAY WITH US EVERY NIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "As midnight falls, step into the sanctuary of quiet prayer."
+    ],
+    [
+      7,
+      13,
+      "At this quiet hour, heavy chains are broken in the spirit realm."
+    ],
+    [
+      14,
+      19,
+      "Exodus chapter twelve, verses twenty-nine through thirty-one declares:"
+    ],
+    [
+      20,
+      31,
+      "At midnight the Lord smote all the firstborn in Egypt, and Pharaoh rose up in the night, saying, Rise up, and get you forth."
+    ],
+    [
+      32,
+      39,
+      "Tonight, whatever spiritual stronghold has bound your peace or your family must release its grip."
+    ],
+    [
+      40,
+      46,
+      "The darkness of night cannot withstand the sudden light of divine deliverance."
+    ],
+    [
+      47,
+      52,
+      "Stand firm in faithful prayer while the world sleeps."
+    ],
+    [
+      53,
+      59,
+      "Receive your total freedom, walk out of bondage, and enter God's promise."
+    ],
+    [
+      60,
+      65,
+      "Subscribe to The Midnight Watch and pray with us every night."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "AS MIDNIGHT FALLS",
+        "STEP INTO THE SANCTUARY",
+        "OF QUIET PRAYER"
+      ],
+      [
+        "SANCTUARY",
+        "PRAYER"
+      ],
+      "THE MIDNIGHT WATCH"
+    ],
+    [
+      7,
+      13,
+      [
+        "AT THIS QUIET HOUR",
+        "HEAVY CHAINS ARE BROKEN",
+        "IN THE SPIRIT REALM"
+      ],
+      [
+        "CHAINS",
+        "BROKEN"
+      ],
+      "EXODUS 12:29-31"
+    ],
+    [
+      14,
+      19,
+      [
+        "EXODUS CHAPTER TWELVE",
+        "VERSES TWENTY-NINE",
+        "THROUGH THIRTY-ONE DECLARES"
+      ],
+      [
+        "EXODUS",
+        "DECLARES"
+      ],
+      "EXODUS 12:29-31"
+    ],
+    [
+      20,
+      31,
+      [
+        "AT MIDNIGHT THE LORD SMOTE",
+        "ALL THE FIRSTBORN IN EGYPT",
+        "AND PHARAOH ROSE UP",
+        "SAYING RISE UP AND DEPART"
+      ],
+      [
+        "MIDNIGHT",
+        "RISE UP"
+      ],
+      "EXODUS 12:29-31"
+    ],
+    [
+      32,
+      39,
+      [
+        "TONIGHT WHATEVER STRONGHOLD",
+        "HAS BOUND YOUR PEACE",
+        "MUST RELEASE ITS GRIP"
+      ],
+      [
+        "STRONGHOLD",
+        "RELEASE"
+      ],
+      "EXODUS 12:29-31"
+    ],
+    [
+      40,
+      46,
+      [
+        "THE DARKNESS OF NIGHT",
+        "CANNOT WITHSTAND LIGHT",
+        "OF DIVINE DELIVERANCE"
+      ],
+      [
+        "LIGHT",
+        "DELIVERANCE"
+      ],
+      "EXODUS 12:29-31"
+    ],
+    [
+      47,
+      52,
+      [
+        "STAND FIRM IN FAITHFUL PRAYER",
+        "WHILE THE WORLD SLEEPS"
+      ],
+      [
+        "STAND FIRM",
+        "PRAYER"
+      ],
+      "THE MIDNIGHT WATCH"
+    ],
+    [
+      53,
+      59,
+      [
+        "RECEIVE YOUR TOTAL FREEDOM",
+        "WALK OUT OF BONDAGE",
+        "ENTER GODS PROMISE"
+      ],
+      [
+        "TOTAL FREEDOM",
+        "PROMISE"
+      ],
+      "EXODUS 12:29-31"
+    ],
+    [
+      60,
+      65,
+      [
+        "SUBSCRIBE TO THE MIDNIGHT WATCH",
+        "AND PRAY WITH US",
+        "EVERY NIGHT"
+      ],
+      [
+        "SUBSCRIBE",
+        "MIDNIGHT WATCH"
+      ],
+      "THE MIDNIGHT WATCH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As midnight falls, step into the sanctuary of quiet prayer.",
+      "kind": "phrase",
+      "words": [
+        "SANCTUARY",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "At this quiet hour, heavy chains are broken in the spirit realm.",
+      "kind": "phrase",
+      "words": [
+        "CHAINS",
+        "BROKEN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Exodus chapter twelve, verses twenty-nine through thirty-one declares:",
+      "kind": "phrase",
+      "words": [
+        "EXODUS",
+        "DECLARES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "At midnight the Lord smote all the firstborn in Egypt, and Pharaoh rose up in the night, saying, Rise up, and get you forth.",
+      "kind": "phrase",
+      "words": [
+        "MIDNIGHT",
+        "RISE UP"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Tonight, whatever spiritual stronghold has bound your peace or your family must release its grip.",
+      "kind": "phrase",
+      "words": [
+        "STRONGHOLD",
+        "RELEASE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "The darkness of night cannot withstand the sudden light of divine deliverance.",
+      "kind": "phrase",
+      "words": [
+        "LIGHT",
+        "DELIVERANCE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Stand firm in faithful prayer while the world sleeps.",
+      "kind": "phrase",
+      "words": [
+        "STAND FIRM",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Receive your total freedom, walk out of bondage, and enter God's promise.",
+      "kind": "phrase",
+      "words": [
+        "TOTAL FREEDOM",
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Midnight Watch and pray with us every night.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "MIDNIGHT WATCH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Exodus 12:29-31"
+}

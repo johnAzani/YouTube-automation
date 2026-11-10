@@ -1,0 +1,367 @@
+{
+  "key": "short-midnightzechariah2v5",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "WALL OF FIRE",
+    "MIDNIGHT WATCH"
+  ],
+  "poster": [
+    "A WALL OF FIRE",
+    "ROUND ABOUT HER",
+    "GLORY IN THE MIDST",
+    "ZECHARIAH 2:5"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "midnight watchtower silhouette under deep starry heavens",
+    "warm lantern light glowing in dark quiet sanctuary",
+    "blazing fire ring glowing beneath midnight sky stars",
+    "golden flame shield shining in dark midnight landscape",
+    "glowing lantern light illuminating tranquil night vigil",
+    "silent ancient stone tower under midnight starry sky",
+    "soft morning twilight breaking over calm horizon night",
+    "solitary lantern burning softly in dark midnight sanctuary"
+  ],
+  "scenes": [
+    {
+      "a": "As midnight arrives, rise in spirit and step into the holy presence of the Almighty.",
+      "img": "short-midnightzechariah2v5-scene-01.jpg",
+      "kicker": "ZECHARIAH 2:5",
+      "sub": "RISE IN SPIRIT AT MIDNIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "In this quiet hour, open your heart to hear the promise of Zechariah 2:5.",
+      "img": "short-midnightzechariah2v5-scene-02.jpg",
+      "kicker": "ZECHARIAH 2:5",
+      "sub": "OPEN YOUR HEART TO HIS PROMISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "'For I, saith the LORD, will be unto her a wall of fire round about, and will be the glory in the midst of her.'",
+      "img": "short-midnightzechariah2v5-scene-03.jpg",
+      "kicker": "ZECHARIAH 2:5",
+      "sub": "A WALL OF FIRE ROUND ABOUT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Heavenly Father, surround our lives and homes with your holy fire. Be a divine shield against every unseen danger tonight.",
+      "img": "short-midnightzechariah2v5-scene-04.jpg",
+      "kicker": "ZECHARIAH 2:5",
+      "sub": "BE OUR SHIELD TONIGHT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let your glorious light dwell deep within our souls, casting out all fear, trouble, and heaviness.",
+      "img": "short-midnightzechariah2v5-scene-05.jpg",
+      "kicker": "ZECHARIAH 2:5",
+      "sub": "CASTING OUT ALL FEAR",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Stand guard over our loved ones as we sleep peacefully in your care.",
+      "img": "short-midnightzechariah2v5-scene-06.jpg",
+      "kicker": "ZECHARIAH 2:5",
+      "sub": "STAND GUARD OVER US",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "May your sacred presence burn brightly around us until the morning comes.",
+      "img": "short-midnightzechariah2v5-scene-07.jpg",
+      "kicker": "ZECHARIAH 2:5",
+      "sub": "BURN BRIGHTLY UNTIL MORNING",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to join The Midnight Watch in nightly prayer.",
+      "img": "short-midnightzechariah2v5-scene-08.jpg",
+      "kicker": "ZECHARIAH 2:5",
+      "sub": "JOIN THE MIDNIGHT WATCH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "As midnight arrives, rise in spirit and step into the holy presence of the Almighty."
+    ],
+    [
+      7,
+      13,
+      "In this quiet hour, open your heart to hear the promise of Zechariah 2:5."
+    ],
+    [
+      13,
+      24,
+      "'For I, saith the LORD, will be unto her a wall of fire round about, and will be the glory in the midst of her.'"
+    ],
+    [
+      24,
+      32,
+      "Heavenly Father, surround our lives and homes with your holy fire. Be a divine shield against every unseen danger tonight."
+    ],
+    [
+      32,
+      40,
+      "Let your glorious light dwell deep within our souls, casting out all fear, trouble, and heaviness."
+    ],
+    [
+      40,
+      48,
+      "Stand guard over our loved ones as we sleep peacefully in your care."
+    ],
+    [
+      48,
+      55,
+      "May your sacred presence burn brightly around us until the morning comes."
+    ],
+    [
+      55,
+      60,
+      "Subscribe to join The Midnight Watch in nightly prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "AS MIDNIGHT ARRIVES",
+        "RISE IN SPIRIT AND STEP INTO",
+        "THE HOLY PRESENCE OF THE ALMIGHTY"
+      ],
+      [
+        "MIDNIGHT",
+        "HOLY",
+        "PRESENCE"
+      ],
+      "ZECHARIAH 2:5"
+    ],
+    [
+      7,
+      13,
+      [
+        "IN THIS QUIET HOUR",
+        "OPEN YOUR HEART TO HEAR",
+        "THE PROMISE OF ZECHARIAH"
+      ],
+      [
+        "QUIET",
+        "HEART",
+        "PROMISE"
+      ],
+      "ZECHARIAH 2:5"
+    ],
+    [
+      13,
+      24,
+      [
+        "FOR I SAITH THE LORD",
+        "WILL BE UNTO HER A WALL",
+        "OF FIRE ROUND ABOUT",
+        "AND GLORY IN HER MIDST"
+      ],
+      [
+        "WALL",
+        "FIRE",
+        "GLORY"
+      ],
+      "ZECHARIAH 2:5"
+    ],
+    [
+      24,
+      32,
+      [
+        "HEAVENLY FATHER SURROUND OUR HOMES",
+        "WITH YOUR HOLY FIRE",
+        "BE A DIVINE SHIELD TONIGHT"
+      ],
+      [
+        "SURROUND",
+        "HOLY",
+        "SHIELD"
+      ],
+      "ZECHARIAH 2:5"
+    ],
+    [
+      32,
+      40,
+      [
+        "LET YOUR GLORIOUS LIGHT DWELL",
+        "DEEP WITHIN OUR SOULS",
+        "CASTING OUT ALL FEAR"
+      ],
+      [
+        "GLORIOUS",
+        "LIGHT",
+        "CASTING"
+      ],
+      "ZECHARIAH 2:5"
+    ],
+    [
+      40,
+      48,
+      [
+        "STAND GUARD OVER OUR LOVED ONES",
+        "AS WE SLEEP PEACEFULLY",
+        "IN YOUR DIVINE CARE"
+      ],
+      [
+        "STAND",
+        "GUARD",
+        "PEACEFULLY"
+      ],
+      "ZECHARIAH 2:5"
+    ],
+    [
+      48,
+      55,
+      [
+        "MAY YOUR SACRED PRESENCE",
+        "BURN BRIGHTLY AROUND US",
+        "UNTIL THE MORNING COMES"
+      ],
+      [
+        "SACRED",
+        "PRESENCE",
+        "BRIGHTLY"
+      ],
+      "ZECHARIAH 2:5"
+    ],
+    [
+      55,
+      60,
+      [
+        "SUBSCRIBE TO JOIN THE MIDNIGHT WATCH",
+        "IN NIGHTLY PRAYER"
+      ],
+      [
+        "SUBSCRIBE",
+        "MIDNIGHT",
+        "WATCH"
+      ],
+      "ZECHARIAH 2:5"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As midnight arrives, rise in spirit and step into the holy presence of the Almighty.",
+      "kind": "phrase",
+      "words": [
+        "MIDNIGHT",
+        "HOLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In this quiet hour, open your heart to hear the promise of Zechariah 2:5.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "'For I, saith the LORD, will be unto her a wall of fire round about, and will be the glory in the midst of her.'",
+      "kind": "phrase",
+      "words": [
+        "WALL",
+        "FIRE",
+        "GLORY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, surround our lives and homes with your holy fire. Be a divine shield against every unseen danger tonight.",
+      "kind": "phrase",
+      "words": [
+        "SURROUND",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let your glorious light dwell deep within our souls, casting out all fear, trouble, and heaviness.",
+      "kind": "phrase",
+      "words": [
+        "GLORIOUS",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Stand guard over our loved ones as we sleep peacefully in your care.",
+      "kind": "phrase",
+      "words": [
+        "STAND",
+        "GUARD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your sacred presence burn brightly around us until the morning comes.",
+      "kind": "phrase",
+      "words": [
+        "SACRED",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to join The Midnight Watch in nightly prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "WATCH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Zechariah 2:5"
+}
