@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T03:50:42.796714+00:00",
+  "generated_at": "2026-11-10T09:45:22.312016+00:00",
   "as_of": "2026-11-10",
   "sufficient_data": false,
   "measured_longform_videos": 0,
@@ -23,20 +23,20 @@
       "top_scripture": "Proverbs 3"
     },
     {
-      "theme": "blessing_benediction",
-      "videos": 1,
-      "measured_videos": 0,
-      "avg_score": 0.0,
-      "avg_engagement": 0.0,
-      "top_scripture": "Numbers 6"
-    },
-    {
       "theme": "daily_guidance_wisdom",
       "videos": 2,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
       "top_scripture": "Isaiah 50"
+    },
+    {
+      "theme": "blessing_benediction",
+      "videos": 1,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": "Numbers 6"
     },
     {
       "theme": "midday_strength_endurance",
