@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T18:25:13Z",
+  "generated_at": "2026-11-10T18:27:10Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -11,11 +11,11 @@
     "published_longform": 30,
     "published_shorts": 39,
     "public_total": 67,
-    "queued_longform": 41,
-    "queued_shorts": 25,
-    "automations_ok": 8,
+    "queued_longform": 45,
+    "queued_shorts": 29,
+    "automations_ok": 9,
     "automations_total": 10,
-    "network_healthy": false
+    "network_healthy": true
   },
   "channels": [
     {
@@ -329,13 +329,23 @@
         "published_longform": 0,
         "published_shorts": 0,
         "public_total": 0,
-        "queued_longform": 0,
+        "queued_longform": 4,
         "queued_other": 0,
-        "queued_shorts": 0
+        "queued_shorts": 4
       },
       "latest_video": null,
-      "next_queued_longform": null,
-      "next_queued_short": null,
+      "next_queued_longform": {
+        "id": "0400",
+        "title": "Jeremiah 30:17 Healing Prayer | The Healing Balm",
+        "words": 905,
+        "status": "approved"
+      },
+      "next_queued_short": {
+        "short": "short-healingjeremiah30v17",
+        "scripture": "Jeremiah 30:17",
+        "target_window_utc": "15:44",
+        "status": "approved"
+      },
       "feedback": {
         "available": false,
         "measured_longform_videos": 0,
@@ -2466,6 +2476,58 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1721
+      },
+      {
+        "id": "0400",
+        "slug": "jeremiah-30-17-healing-prayer",
+        "file": "0400-jeremiah-30-17-healing-prayer.md",
+        "title": "Jeremiah 30:17 Healing Prayer | The Healing Balm",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 905
+      },
+      {
+        "id": "0401",
+        "slug": "psalm-103-1-5-healing-prayer",
+        "file": "0401-psalm-103-1-5-healing-prayer.md",
+        "title": "Psalm 103:1-5 Healing Prayer | The Healing Balm",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 897
+      },
+      {
+        "id": "0402",
+        "slug": "psalm-147-3-healing-prayer",
+        "file": "0402-psalm-147-3-healing-prayer.md",
+        "title": "Psalm 147:3 Healing Prayer | The Healing Balm",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 863
+      },
+      {
+        "id": "0403",
+        "slug": "isaiah-40-29-31-healing-prayer",
+        "file": "0403-isaiah-40-29-31-healing-prayer.md",
+        "title": "Isaiah 40:29-31 Healing Prayer | The Healing Balm",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 873
       }
     ],
     "shorts": [
@@ -2743,6 +2805,50 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
+      },
+      {
+        "short": "short-healingjeremiah30v17",
+        "file": "0400-short-healingjeremiah30v17.yml",
+        "companion_longform_id": "400",
+        "scripture": "Jeremiah 30:17",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
+      },
+      {
+        "short": "short-healingpsalm103v1",
+        "file": "0401-short-healingpsalm103v1.yml",
+        "companion_longform_id": "401",
+        "scripture": "Psalm 103:1-5",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
+      },
+      {
+        "short": "short-healingpsalm147v3",
+        "file": "0402-short-healingpsalm147v3.yml",
+        "companion_longform_id": "402",
+        "scripture": "Psalm 147:3",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
+      },
+      {
+        "short": "short-healingisaiah40v29",
+        "file": "0403-short-healingisaiah40v29.yml",
+        "companion_longform_id": "403",
+        "scripture": "Isaiah 40:29-31",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
       }
     ]
   },
@@ -2750,11 +2856,11 @@
     {
       "workflow": "automation-health.yml",
       "name": "automation-health",
-      "verdict": "SELF-REPORT",
-      "severity": "info",
-      "detail": "this is the check itself; its previous run ended failure 13m ago, which is its own verdict and not independent evidence",
-      "last_conclusion": "failure",
-      "last_run": "2026-11-10T18:10:15+00:00",
+      "verdict": "OK",
+      "severity": "ok",
+      "detail": "last success 6.7h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-10T18:25:24+00:00",
       "last_success": "2026-11-10T11:42:18+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
@@ -2794,7 +2900,7 @@
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 7.2h ago",
+      "detail": "last success 7.3h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-10T11:09:47+00:00",
       "last_success": "2026-11-10T11:09:47+00:00",
@@ -2834,15 +2940,15 @@
     {
       "workflow": "metrics.yml",
       "name": "Weekly metrics snapshot",
-      "verdict": "FAILING",
-      "severity": "blocking",
-      "detail": "failed 13m ago and nothing was changed since; the next slot will fail the same way",
+      "verdict": "UNTESTED FIX",
+      "severity": "warning",
+      "detail": "failed 15m ago; edited just now \u2014 needs one green run",
       "last_conclusion": "failure",
       "last_run": "2026-11-10T18:10:15+00:00",
       "last_success": "2026-11-10T02:05:30+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
-      "failures_5": 1,
+      "failures_5": 0,
       "effect": "writes content/metrics.csv and opens a snapshot issue"
     },
     {
@@ -2852,11 +2958,11 @@
       "severity": "ok",
       "detail": "last success 1.3h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-10T18:23:41+00:00",
+      "last_run": "2026-11-10T18:25:24+00:00",
       "last_success": "2026-11-10T17:09:11+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
-      "failures_5": 1,
+      "failures_5": 2,
       "effect": "this report"
     },
     {
@@ -2878,10 +2984,10 @@
       "name": "Scheduler supervisor",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.2h ago",
+      "detail": "last success 0.0h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-10T18:23:41+00:00",
-      "last_success": "2026-11-10T18:14:14+00:00",
+      "last_run": "2026-11-10T18:25:24+00:00",
+      "last_success": "2026-11-10T18:23:41+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
