@@ -123,6 +123,13 @@ BALM_ALABASTER = Palette("balm-alabaster", (10, 34, 50), (32, 98, 118), (252, 23
 BALM_SANCTUARY = Palette("balm-sanctuary", (9, 32, 46), (38, 106, 124), (254, 232, 172),
                          (250, 214, 112), (252, 248, 240))
 
+HARVEST_BURGUNDY = Palette("harvest-burgundy", (30, 11, 17), (108, 56, 28), (254, 222, 142),
+                           (250, 206, 90), (254, 249, 238))
+HARVEST_BRONZE = Palette("harvest-bronze", (26, 10, 15), (92, 48, 26), (255, 228, 156),
+                         (252, 212, 96), (254, 249, 238))
+HARVEST_SANCTUARY = Palette("harvest-sanctuary", (34, 13, 19), (122, 66, 32), (255, 232, 166),
+                            (252, 214, 102), (254, 249, 238))
+
 _NOCTURNAL_GRADES = ("night", "midnight")
 
 
@@ -285,6 +292,30 @@ BALM_VARIANTS = (
     ),
 )
 
+HARVEST_VARIANTS = (
+    CtrVariant(
+        label="hook", concept="imperative — OPEN THIS DOOR",
+        hero="OPEN THIS DOOR", palette=HARVEST_BURGUNDY,
+        moon=(0.774, 0.40), moon_scale=0.206, horizon=0.732, dawn=0.78,
+        rays=True, seed=1901, text_box=(86, 84, 690, 470), house=(0.312, 0.158),
+        grade="harvest",
+    ),
+    CtrVariant(
+        label="quiet", concept="curiosity — MY CUP OVERFLOWS",
+        hero="MY CUP OVERFLOWS", palette=HARVEST_BRONZE,
+        moon=(0.798, 0.38), moon_scale=0.192, horizon=0.762, dawn=0.56,
+        rays=True, seed=2002, text_box=(86, 84, 706, 470), house=(0.302, 0.160),
+        grade="harvest",
+    ),
+    CtrVariant(
+        label="poster", concept="textless — harvest storehouse sanctuary",
+        hero=None, palette=HARVEST_SANCTUARY,
+        moon=(0.555, 0.435), moon_scale=0.234, horizon=0.698, dawn=0.84,
+        rays=True, seed=2103, text_box=(0, 0, 0, 0), house=(0.215, 0.170),
+        grade="harvest",
+    ),
+)
+
 
 def variants_for_channel(channel_id: str | None = None) -> tuple["CtrVariant", ...]:
     """Select the 16:9 CTR variant pack matching `channel_id`'s daypart grade."""
@@ -304,6 +335,8 @@ def variants_for_channel(channel_id: str | None = None) -> tuple["CtrVariant", .
         base = HEARTH_VARIANTS
     elif grade == "balm":
         base = BALM_VARIANTS
+    elif grade == "harvest":
+        base = HARVEST_VARIANTS
     else:
         return CTR_VARIANTS
     return (

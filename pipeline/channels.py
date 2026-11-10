@@ -158,6 +158,21 @@ CHANNELS: dict[str, ChannelProfile] = {
         include_sanctuary_links=False,
         provisioned=True,
     ),
+    "prayer7": ChannelProfile(
+        id="prayer7",
+        display_name="The Provision Table",
+        handle="@TheProvisionTableDaily",
+        secret_prefix="PRAYER7_",
+        # Owner decision, 2026-11-10: seventh prayer channel dedicated to daily
+        # KJV wisdom, open doors, favour over honest work, and God's covenant
+        # provision (Psalm 23:5 / Deuteronomy 28:12 / Philippians 4:19). Kept
+        # provisioned=False until @TheProvisionTableDaily is created on YouTube
+        # and PRAYER7_* secrets are saved in GitHub Secrets.
+        default_privacy="public",
+        auto_publish=True,
+        include_sanctuary_links=False,
+        provisioned=False,
+    ),
 }
 
 # Friendly aliases accepted in frontmatter / workflow inputs.
@@ -186,6 +201,12 @@ _ALIASES = {
     "the-healing-balm": "prayer6",
     "restoration": "prayer6",
     "channel6": "prayer6",
+    "provision": "prayer7",
+    "provision-table": "prayer7",
+    "the-provision-table": "prayer7",
+    "stewardship": "prayer7",
+    "open-doors": "prayer7",
+    "channel7": "prayer7",
 }
 
 
