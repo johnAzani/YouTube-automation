@@ -1,0 +1,326 @@
+{
+  "key": "short-middayisaiah25v4",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "PAUSE AND PRAY",
+    "AT NOON"
+  ],
+  "poster": [
+    "THE MIDDAY WATCH",
+    "ISAIAH 25:4",
+    "PAUSE AND PRAY",
+    "AT NOON"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "bright midday sun shining through a quiet empty room window",
+    "sunlight streaming across a calm wooden desk with an open journal",
+    "high noon sun over a peaceful open green field with no people",
+    "soft golden light filtering through linen curtains at midday",
+    "gentle sunbeams resting on a quiet empty wooden table",
+    "tranquil midday light illuminating a still room with green plants",
+    "bright peaceful afternoon light glowing across a calm landscape",
+    "soft sun rays shining into a quiet sanctuary at midday"
+  ],
+  "scenes": [
+    {
+      "a": "Right now, wherever you are, gently pause whatever you are doing.",
+      "img": "short-middayisaiah25v4-scene-01.jpg",
+      "kicker": "ISAIAH 25:4",
+      "sub": "TAKE A MOMENT TO BREATHE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Take a slow, deep breath, and let the rush of the morning fade.",
+      "img": "short-middayisaiah25v4-scene-02.jpg",
+      "kicker": "MIDDAY WATCH",
+      "sub": "LET THE RUSH FADE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "As the sun reaches its highest point in the sky, turn your heart toward the Lord.",
+      "img": "short-middayisaiah25v4-scene-03.jpg",
+      "kicker": "TURN YOUR HEART",
+      "sub": "HIGH NOON LIGHT",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Listen to the unchanging words found in Isaiah twenty-five, verse four.",
+      "img": "short-middayisaiah25v4-scene-04.jpg",
+      "kicker": "HOLY SCRIPTURE",
+      "sub": "UNCHANGING WORDS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For you have been a stronghold to the poor, a stronghold to the needy in his distress.",
+      "img": "short-middayisaiah25v4-scene-05.jpg",
+      "kicker": "ISAIAH 25:4",
+      "sub": "A STRONGHOLD TO THE NEEDY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "A shelter from the storm and a shade from the heat.",
+      "img": "short-middayisaiah25v4-scene-06.jpg",
+      "kicker": "SHELTER FROM STORM",
+      "sub": "SHADE FROM THE HEAT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, in the middle of our busy days, we rest beneath Your quiet shade.",
+      "img": "short-middayisaiah25v4-scene-07.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "REST BENEATH SHADE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Be our shelter, strengthen our hands, and grant us peace for the hours ahead.",
+      "img": "short-middayisaiah25v4-scene-08.jpg",
+      "kicker": "GRANT US PEACE",
+      "sub": "HOURS AHEAD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Right now, wherever you are, gently pause whatever you are doing."
+    ],
+    [
+      8,
+      16,
+      "Take a slow, deep breath, and let the rush of the morning fade."
+    ],
+    [
+      16,
+      25,
+      "As the sun reaches its highest point in the sky, turn your heart toward the Lord."
+    ],
+    [
+      25,
+      33,
+      "Listen to the unchanging words found in Isaiah twenty-five, verse four."
+    ],
+    [
+      33,
+      43,
+      "For you have been a stronghold to the poor, a stronghold to the needy in his distress."
+    ],
+    [
+      43,
+      51,
+      "A shelter from the storm and a shade from the heat."
+    ],
+    [
+      51,
+      60,
+      "Lord, in the middle of our busy days, we rest beneath Your quiet shade."
+    ],
+    [
+      60,
+      70,
+      "Be our shelter, strengthen our hands, and grant us peace for the hours ahead."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "WHEREVER YOU ARE",
+        "GENTLY PAUSE"
+      ],
+      "PAUSE",
+      "ISAIAH 25 : 4"
+    ],
+    [
+      8,
+      16,
+      [
+        "TAKE A DEEP BREATH",
+        "LET THE RUSH FADE"
+      ],
+      "BREATH",
+      "ISAIAH 25 : 4"
+    ],
+    [
+      16,
+      25,
+      [
+        "HIGHEST POINT",
+        "TURN YOUR HEART"
+      ],
+      "HEART",
+      "ISAIAH 25 : 4"
+    ],
+    [
+      25,
+      33,
+      [
+        "UNCHANGING WORDS",
+        "FOUND IN SCRIPTURE"
+      ],
+      "WORDS",
+      "ISAIAH 25 : 4"
+    ],
+    [
+      33,
+      43,
+      [
+        "A STRONGHOLD",
+        "TO THE NEEDY"
+      ],
+      "STRONGHOLD",
+      "ISAIAH 25 : 4"
+    ],
+    [
+      43,
+      51,
+      [
+        "A SHELTER",
+        "FROM THE STORM"
+      ],
+      "SHELTER",
+      "ISAIAH 25 : 4"
+    ],
+    [
+      51,
+      60,
+      [
+        "OUR BUSY DAYS",
+        "REST BENEATH SHADE"
+      ],
+      "REST",
+      "ISAIAH 25 : 4"
+    ],
+    [
+      60,
+      70,
+      [
+        "BE OUR SHELTER",
+        "GRANT US PEACE"
+      ],
+      "PEACE",
+      "ISAIAH 25 : 4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Right now, wherever you are, gently pause whatever you are doing.",
+      "kind": "phrase",
+      "words": [
+        "gently",
+        "pause"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Take a slow, deep breath, and let the rush of the morning fade.",
+      "kind": "phrase",
+      "words": [
+        "deep",
+        "breath"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As the sun reaches its highest point in the sky, turn your heart toward the Lord.",
+      "kind": "phrase",
+      "words": [
+        "turn",
+        "heart"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Listen to the unchanging words found in Isaiah twenty-five, verse four.",
+      "kind": "phrase",
+      "words": [
+        "unchanging",
+        "words"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For you have been a stronghold to the poor, a stronghold to the needy in his distress.",
+      "kind": "phrase",
+      "words": [
+        "stronghold",
+        "needy"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "A shelter from the storm and a shade from the heat.",
+      "kind": "phrase",
+      "words": [
+        "shelter",
+        "shade"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, in the middle of our busy days, we rest beneath Your quiet shade.",
+      "kind": "phrase",
+      "words": [
+        "busy",
+        "days"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Be our shelter, strengthen our hands, and grant us peace for the hours ahead.",
+      "kind": "phrase",
+      "words": [
+        "grant",
+        "peace"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 25:4"
+}

@@ -1,0 +1,296 @@
+{
+  "key": "short-middayisaiah49v10",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "PAUSE",
+    "AT NOON"
+  ],
+  "poster": [
+    "THE",
+    "MIDDAY",
+    "WATCH",
+    "PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "bright midday sun shining through a quiet window into an empty room",
+    "serene open field under a high bright sun with gentle wind",
+    "calm clear water reflecting bright midday light with no people",
+    "soft sunbeams falling across a peaceful wooden desk indoors",
+    "vast quiet landscape bathed in warm bright midday illumination",
+    "tranquil nature scene with high noon light and gentle shadows",
+    "peaceful stream flowing under bright midday sunlight"
+  ],
+  "scenes": [
+    {
+      "a": "Take a quiet moment right now to pause whatever you are doing.",
+      "img": "short-middayisaiah49v10-scene-01.jpg",
+      "kicker": "THE MIDDAY WATCH",
+      "sub": "PAUSE YOUR DAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Let the noise of the morning fade away and settle your heart in stillness.",
+      "img": "short-middayisaiah49v10-scene-02.jpg",
+      "kicker": "ISAIAH 49:10",
+      "sub": "FIND STILLNESS NOW",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Listen to the promise written in Isaiah 49:10 for your soul today.",
+      "img": "short-middayisaiah49v10-scene-03.jpg",
+      "kicker": "HOLY SCRIPTURE",
+      "sub": "HEAR HIS PROMISE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "They shall not hunger nor thirst, neither shall the heat nor sun smite them.",
+      "img": "short-middayisaiah49v10-scene-04.jpg",
+      "kicker": "DIVINE GUIDANCE",
+      "sub": "NO HUNGER OR THIRST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "For he that hath mercy on them shall lead them, even by the springs of water shall he guide them.",
+      "img": "short-middayisaiah49v10-scene-05.jpg",
+      "kicker": "SPRING OF WATER",
+      "sub": "LED BY HIS MERCY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord, we thank you for your gentle guidance in the middle of this busy day.",
+      "img": "short-middayisaiah49v10-scene-06.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "THANKFUL HEARTS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Refresh our weary spirits and lead us beside still waters as we continue onward.",
+      "img": "short-middayisaiah49v10-scene-07.jpg",
+      "kicker": "STILL WATERS",
+      "sub": "REFRESHED SPIRITS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "Take a quiet moment right now to pause whatever you are doing."
+    ],
+    [
+      12,
+      24,
+      "Let the noise of the morning fade away and settle your heart in stillness."
+    ],
+    [
+      24,
+      36,
+      "Listen to the promise written in Isaiah 49:10 for your soul today."
+    ],
+    [
+      36,
+      48,
+      "They shall not hunger nor thirst, neither shall the heat nor sun smite them."
+    ],
+    [
+      48,
+      60,
+      "For he that hath mercy on them shall lead them, even by the springs of water shall he guide them."
+    ],
+    [
+      60,
+      72,
+      "Lord, we thank you for your gentle guidance in the middle of this busy day."
+    ],
+    [
+      72,
+      85,
+      "Refresh our weary spirits and lead us beside still waters as we continue onward."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "TAKE A QUIET",
+        "MOMENT RIGHT NOW",
+        "TO PAUSE"
+      ],
+      "PAUSE",
+      "ISAIAH 49:10"
+    ],
+    [
+      12,
+      24,
+      [
+        "LET THE NOISE",
+        "OF THE MORNING",
+        "SETTLE YOUR HEART"
+      ],
+      "HEART",
+      "ISAIAH 49:10"
+    ],
+    [
+      24,
+      36,
+      [
+        "LISTEN TO THE",
+        "PROMISE WRITTEN",
+        "IN ISAIAH"
+      ],
+      "PROMISE",
+      "ISAIAH 49:10"
+    ],
+    [
+      36,
+      48,
+      [
+        "THEY SHALL NOT",
+        "HUNGER OR THIRST",
+        "NOR SUN SMITE"
+      ],
+      "THIRST",
+      "ISAIAH 49:10"
+    ],
+    [
+      48,
+      60,
+      [
+        "FOR HE THAT HATH",
+        "MERCY SHALL LEAD",
+        "BY SPRINGS OF WATER"
+      ],
+      "SPRINGS",
+      "ISAIAH 49:10"
+    ],
+    [
+      60,
+      72,
+      [
+        "LORD WE THANK YOU",
+        "FOR YOUR GUIDANCE",
+        "IN THIS BUSY DAY"
+      ],
+      "GUIDANCE",
+      "ISAIAH 49:10"
+    ],
+    [
+      72,
+      85,
+      [
+        "REFRESH OUR WEARY",
+        "SPIRITS AND LEAD US",
+        "BESIDE STILL WATERS"
+      ],
+      "WATERS",
+      "ISAIAH 49:10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Take a quiet moment right now to pause whatever you are doing.",
+      "kind": "phrase",
+      "words": [
+        "TAKE",
+        "PAUSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let the noise of the morning fade away and settle your heart in stillness.",
+      "kind": "phrase",
+      "words": [
+        "SETTLE",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Listen to the promise written in Isaiah 49:10 for your soul today.",
+      "kind": "phrase",
+      "words": [
+        "LISTEN",
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "They shall not hunger nor thirst, neither shall the heat nor sun smite them.",
+      "kind": "phrase",
+      "words": [
+        "HUNGER",
+        "THIRST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For he that hath mercy on them shall lead them, even by the springs of water shall he guide them.",
+      "kind": "phrase",
+      "words": [
+        "MERCY",
+        "SPRINGS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we thank you for your gentle guidance in the middle of this busy day.",
+      "kind": "phrase",
+      "words": [
+        "THANK",
+        "GUIDANCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Refresh our weary spirits and lead us beside still waters as we continue onward.",
+      "kind": "phrase",
+      "words": [
+        "REFRESH",
+        "WATERS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 49:10"
+}
