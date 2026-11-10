@@ -133,13 +133,14 @@ CHANNELS: dict[str, ChannelProfile] = {
         secret_prefix="PRAYER5_",
         # Owner decision, 2026-11-10: fifth prayer channel dedicated to daily
         # Christian household, marriage, children, and covenant home prayer
-        # (Joshua 24:15 / Psalm 128:3). Registered in full parity with
-        # provisioned=False until @TheFamilyAltarDaily is created on YouTube
-        # and PRAYER5_* credentials are saved in GitHub Secrets.
+        # (Joshua 24:15 / Psalm 128:3). Provisioned 2026-11-10 once
+        # @TheFamilyAltarDaily's dedicated Google Cloud OAuth client, refresh
+        # token, channel ID, and Gemini API key (PRAYER5_*) were saved in
+        # GitHub Secrets.
         default_privacy="public",
         auto_publish=True,
         include_sanctuary_links=False,
-        provisioned=False,
+        provisioned=True,
     ),
 }
 

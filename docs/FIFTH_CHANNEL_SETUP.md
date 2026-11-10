@@ -1,13 +1,10 @@
 # Fifth Channel Setup — The Family Altar (`prayer5`)
 
-Status: **registered, ready for YouTube & Google Cloud credentials (`provisioned=False`).**
+Status: **LIVE (`provisioned=True` as of 2026-11-10).**
 Every line of code, editorial & theological equipment, 30-scripture household roadmap (`0300`–`0329`),
 Shorts namespacing (`short-family…`), CTR thumbnail pack (`hearth` covenant emerald-and-gold grade),
 Community Tab schedule, ES/PT localizations, bespoke brand artwork (`docs/media/family-altar-*.png`),
-and GitHub Actions workflow probes are wired into `main` in full parity with the four live channels.
-
-While `provisioned=False`, `scheduled_channels()` and `queue_health()` exclude `prayer5` so the
-watchdog and supervisor stay green until your `PRAYER5_*` secrets are saved.
+all 5 `PRAYER5_*` GitHub Secrets, and initial Day-1 launch scripts (`0300`–`0303`) are live on `main`.
 
 ---
 

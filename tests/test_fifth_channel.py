@@ -37,13 +37,15 @@ class TestFifthChannelRegistration(unittest.TestCase):
         for alias in ("prayer5", "family", "family-altar", "the-family-altar", "household", "channel5"):
             self.assertEqual(normalize_channel_id(alias), "prayer5")
 
-    def test_unprovisioned_channel_stays_out_of_scheduler_and_watchdog(self):
+    def test_provisioned_channel_is_active_in_scheduler_and_watchdog(self):
         ch = get_channel("prayer5")
-        self.assertFalse(ch.provisioned)
-        self.assertNotIn("prayer5", scheduled_channels())
+        self.assertTrue(ch.provisioned)
+        self.assertIn("prayer5", scheduled_channels())
         health_rows = {row["queue"]: row for row in queue_health()}
-        self.assertNotIn("longform:prayer5", health_rows)
-        self.assertNotIn("shorts:prayer5", health_rows)
+        self.assertIn("longform:prayer5", health_rows)
+        self.assertIn("shorts:prayer5", health_rows)
+        self.assertGreater(health_rows["longform:prayer5"]["ready"], 0)
+        self.assertGreater(health_rows["shorts:prayer5"]["ready"], 0)
 
 
 class TestFifthChannelIdentityAndVisuals(unittest.TestCase):

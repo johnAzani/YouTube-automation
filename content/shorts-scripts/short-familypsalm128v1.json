@@ -1,0 +1,331 @@
+{
+  "key": "short-familypsalm128v1",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "FAMILY PRAYER",
+    "PSALM 128:1-4"
+  ],
+  "poster": [
+    "THE FAMILY ALTAR",
+    "COVER MY FAMILY",
+    "PSALM 128:1-4",
+    "FAMILY PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar \u2014 cover your home in prayer"
+  ],
+  "stock_queries": [
+    "ancient chapel interior candlelight peaceful sanctuary",
+    "divine light breaking through clouds over peaceful landscape",
+    "peaceful mountain river calm water forest",
+    "forest sunlight mist",
+    "sunlight breaking through clouds mountain pass",
+    "golden light rays through clouds over mountain peak",
+    "warm candlelit sanctuary bible peaceful"
+  ],
+  "scenes": [
+    {
+      "a": "Gather your home and loved ones in faith as we pray Psalm one hundred and twenty-eight.",
+      "img": "short-familypsalm128v1-scene-01.jpg",
+      "kicker": "PSALM 128:1-4",
+      "sub": "BLESSING OVER YOUR HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Blessed is every one that feareth the LORD; that walketh in his ways.",
+      "img": "short-familypsalm128v1-scene-02.jpg",
+      "kicker": "PSALM 128:1-4",
+      "sub": "WALK IN HIS WAYS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For thou shalt eat the labour of thine hands: happy shalt thou be, and it shall be well with thee.",
+      "img": "short-familypsalm128v1-scene-03.jpg",
+      "kicker": "PSALM 128:1-4",
+      "sub": "IT SHALL BE WELL",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Thy children shall be like olive plants round about thy table, evergreen and rooted in grace.",
+      "img": "short-familypsalm128v1-scene-04.jpg",
+      "kicker": "PSALM 128:1-4",
+      "sub": "OLIVE PLANTS IN GRACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, cover our spouses, our sons, and our daughters beneath Your protecting wing today.",
+      "img": "short-familypsalm128v1-scene-05.jpg",
+      "kicker": "PSALM 128:1-4",
+      "sub": "PROTECT OUR CHILDREN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Bless the work of our hands, supply our table, and establish peace across our generations.",
+      "img": "short-familypsalm128v1-scene-06.jpg",
+      "kicker": "PSALM 128:1-4",
+      "sub": "GENERATIONAL PEACE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Type Amen and subscribe to The Family Altar to cover your home in daily prayer.",
+      "img": "short-familypsalm128v1-scene-07.jpg",
+      "kicker": "THE FAMILY ALTAR",
+      "sub": "COVER YOUR HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Gather your home and loved ones in faith as we pray Psalm one hundred and twenty-eight."
+    ],
+    [
+      9,
+      17,
+      "Blessed is every one that feareth the LORD; that walketh in his ways."
+    ],
+    [
+      18,
+      26,
+      "For thou shalt eat the labour of thine hands: happy shalt thou be, and it shall be well with thee."
+    ],
+    [
+      27,
+      35,
+      "Thy children shall be like olive plants round about thy table, evergreen and rooted in grace."
+    ],
+    [
+      36,
+      44,
+      "Father, cover our spouses, our sons, and our daughters beneath Your protecting wing today."
+    ],
+    [
+      45,
+      53,
+      "Bless the work of our hands, supply our table, and establish peace across our generations."
+    ],
+    [
+      54,
+      61,
+      "Type Amen and subscribe to The Family Altar to cover your home in daily prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "GATHER YOUR LOVED",
+        "ONES IN FAITH OVER",
+        "PSALM 128 TODAY"
+      ],
+      [
+        "GATHER",
+        "FAITH",
+        "PSALM"
+      ],
+      "PSALM 128:1-4"
+    ],
+    [
+      9,
+      17,
+      [
+        "BLESSED IS EVERY ONE",
+        "THAT FEARETH THE LORD",
+        "AND WALKS IN HIM"
+      ],
+      [
+        "BLESSED",
+        "LORD",
+        "WALKS"
+      ],
+      "PSALM 128:1-4"
+    ],
+    [
+      18,
+      26,
+      [
+        "THOU SHALT EAT THE",
+        "LABOUR OF THY HANDS",
+        "IT SHALL BE WELL"
+      ],
+      [
+        "LABOUR",
+        "HANDS",
+        "WELL"
+      ],
+      "PSALM 128:1-4"
+    ],
+    [
+      27,
+      35,
+      [
+        "THY CHILDREN LIKE",
+        "OLIVE PLANTS ROUND",
+        "ABOUT THY TABLE"
+      ],
+      [
+        "CHILDREN",
+        "OLIVE",
+        "TABLE"
+      ],
+      "PSALM 128:1-4"
+    ],
+    [
+      36,
+      44,
+      [
+        "FATHER COVER OUR",
+        "CHILDREN AND SPOUSE",
+        "BENEATH YOUR WING"
+      ],
+      [
+        "COVER",
+        "CHILDREN",
+        "WING"
+      ],
+      "PSALM 128:1-4"
+    ],
+    [
+      45,
+      53,
+      [
+        "BLESS OUR TABLE AND",
+        "ESTABLISH PEACE OVER",
+        "OUR GENERATIONS"
+      ],
+      [
+        "BLESS",
+        "PEACE",
+        "GENERATIONS"
+      ],
+      "PSALM 128:1-4"
+    ],
+    [
+      54,
+      61,
+      [
+        "SUBSCRIBE TO",
+        "THE FAMILY ALTAR",
+        "COVER MY FAMILY"
+      ],
+      [
+        "SUBSCRIBE",
+        "FAMILY",
+        "ALTAR"
+      ],
+      "THE FAMILY ALTAR"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Gather your home and loved ones in faith as we pray Psalm one hundred and twenty-eight.",
+      "kind": "phrase",
+      "words": [
+        "GATHER",
+        "FAITH",
+        "PSALM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Blessed is every one that feareth the LORD; that walketh in his ways.",
+      "kind": "phrase",
+      "words": [
+        "BLESSED",
+        "LORD",
+        "WALKS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For thou shalt eat the labour of thine hands: happy shalt thou be, and it shall be well with thee.",
+      "kind": "phrase",
+      "words": [
+        "LABOUR",
+        "HANDS",
+        "WELL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thy children shall be like olive plants round about thy table, evergreen and rooted in grace.",
+      "kind": "phrase",
+      "words": [
+        "CHILDREN",
+        "OLIVE",
+        "TABLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, cover our spouses, our sons, and our daughters beneath Your protecting wing today.",
+      "kind": "phrase",
+      "words": [
+        "COVER",
+        "CHILDREN",
+        "WING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Bless the work of our hands, supply our table, and establish peace across our generations.",
+      "kind": "phrase",
+      "words": [
+        "BLESS",
+        "PEACE",
+        "GENERATIONS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Type Amen and subscribe to The Family Altar to cover your home in daily prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "FAMILY",
+        "ALTAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 128:1-4"
+}
