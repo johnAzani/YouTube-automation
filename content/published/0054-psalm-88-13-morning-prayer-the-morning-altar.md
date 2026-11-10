@@ -77,9 +77,9 @@ published_on: "2026-11-09"
 published_at: "2026-11-09T21:26:29Z"
 youtube_video_id: "lhZrnZQq7GY"
 metadata_revision: "selar-seo-v1"
-thumbnail_pending: true
-thumbnail_error: "not_requested"
-thumbnail_retry_after: "2026-11-10T13:12:12Z"
+thumbnail_pending: false
+
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Sunrise Hook and Directing the Prayer
