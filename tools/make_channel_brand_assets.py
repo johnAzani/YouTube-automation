@@ -101,6 +101,21 @@ PALETTES = {
         "field_deep": (26, 24, 62), # Night Rampart   #1a183e
         "slug": "midnight-watch",
     },
+    "family-altar": {
+        "name": "The Family Altar",
+        "tagline": "As for me and my house",
+        "verse": "Joshua 24:15",
+        "sky": (12, 28, 19),        # Covenant Emerald #0c1c13
+        "panel": (26, 48, 34),      # Olive Sanctuary  #1a3022
+        "sun": (247, 212, 132),     # Hearth Gold      #f7d484
+        "brass": (214, 162, 74),    # Oil Lamp Brass   #d6a24a
+        "ivory": (252, 246, 232),   # Parchment Ivory  #fcf6e8
+        "haze": (208, 222, 206),    # Olive Mist       #d0dece
+        "shadow": (6, 15, 10),      # Deep Hearth      #060f0a
+        "field": (88, 68, 36),      # Timber Table     #584424
+        "field_deep": (52, 38, 20), # Stone Hearth     #342614
+        "slug": "family-altar",
+    },
 }
 
 

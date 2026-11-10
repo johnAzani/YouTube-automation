@@ -126,6 +126,21 @@ CHANNELS: dict[str, ChannelProfile] = {
         include_sanctuary_links=False,
         provisioned=True,
     ),
+    "prayer5": ChannelProfile(
+        id="prayer5",
+        display_name="The Family Altar",
+        handle="@TheFamilyAltarDaily",
+        secret_prefix="PRAYER5_",
+        # Owner decision, 2026-11-10: fifth prayer channel dedicated to daily
+        # Christian household, marriage, children, and covenant home prayer
+        # (Joshua 24:15 / Psalm 128:3). Registered in full parity with
+        # provisioned=False until @TheFamilyAltarDaily is created on YouTube
+        # and PRAYER5_* credentials are saved in GitHub Secrets.
+        default_privacy="public",
+        auto_publish=True,
+        include_sanctuary_links=False,
+        provisioned=False,
+    ),
 }
 
 # Friendly aliases accepted in frontmatter / workflow inputs.
@@ -144,6 +159,11 @@ _ALIASES = {
     "midnight-watch": "prayer4",
     "the-midnight-watch": "prayer4",
     "channel4": "prayer4",
+    "family": "prayer5",
+    "family-altar": "prayer5",
+    "the-family-altar": "prayer5",
+    "household": "prayer5",
+    "channel5": "prayer5",
 }
 
 

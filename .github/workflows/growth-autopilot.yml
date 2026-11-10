@@ -22,7 +22,7 @@ on:
   workflow_dispatch:
     inputs:
       channel:
-        description: "Channel id (secret-place, prayer2, prayer3; blank = all provisioned channels)"
+        description: "Channel id (secret-place, prayer2, prayer3, prayer4, prayer5; blank = all provisioned channels)"
         required: false
         default: ""
         type: string
@@ -50,6 +50,7 @@ jobs:
           PRAYER2_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN }}
           PRAYER3_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN }}
           PRAYER4_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER4_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER5_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER5_YOUTUBE_REFRESH_TOKEN }}
         run: |
           python3 - <<'PY'
           import json, os, sys
@@ -95,6 +96,9 @@ jobs:
       PRAYER4_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER4_YOUTUBE_CLIENT_ID }}
       PRAYER4_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER4_YOUTUBE_CLIENT_SECRET }}
       PRAYER4_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER4_YOUTUBE_REFRESH_TOKEN }}
+      PRAYER5_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER5_YOUTUBE_CLIENT_ID }}
+      PRAYER5_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER5_YOUTUBE_CLIENT_SECRET }}
+      PRAYER5_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER5_YOUTUBE_REFRESH_TOKEN }}
       GH_TOKEN: ${{ github.token }}
       # The autopilot is a measurement/sync job, not the weekly human report: do not
       # file a GitHub issue on every daily run.

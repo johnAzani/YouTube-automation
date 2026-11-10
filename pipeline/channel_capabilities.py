@@ -221,6 +221,16 @@ _MIDNIGHT_WATCH_COMMENT = (
     "You are not standing alone. 🙏🔥{footer}"
 )
 
+_FAMILY_ALTAR_COMMENT = (
+    "🏡 Beloved household of faith, if you are gathering your home and loved ones in prayer with "
+    "us today, write 'AMEN' in faith to claim God's promise of {theme} over your family, your "
+    "children, your marriage, and every room under your roof.\n\n"
+    "📖 {scripture_hook}\n\n"
+    "Share the first names or family needs you are lifting up below — our pastoral prayer team "
+    "intercedes over every household represented here. As for me and my house, we will serve the "
+    "LORD! 🙏🌿{footer}"
+)
+
 _BRANDS: dict[str, Brand] = {
     "secret-place": Brand(
         channel_id="secret-place",
@@ -246,6 +256,9 @@ _BRANDS: dict[str, Brand] = {
             "@TheMidnightWatchDaily",
             "@TheMidnightWatch",
             "stand on the watchtower in midnight prayer",
+            "The Family Altar",
+            "@TheFamilyAltarDaily",
+            "cover your home and family in daily prayer",
         ),
         authoring_directive=(
             "CHANNEL: The Secret Place (secret-place) - night prayer, never a morning devotional.",
@@ -368,6 +381,9 @@ _BRANDS: dict[str, Brand] = {
             "@TheMidnightWatchDaily",
             "@TheMidnightWatch",
             "midnight watch",
+            "The Family Altar",
+            "@TheFamilyAltarDaily",
+            "cover your home and family in daily prayer",
         ),
         authoring_directive=(
             "CHANNEL: The Morning Altar (prayer2) - sunrise, never bedtime.",
@@ -606,6 +622,9 @@ _BRANDS: dict[str, Brand] = {
             "@TheMidnightWatchDaily",
             "@TheMidnightWatch",
             "midnight watch",
+            "The Family Altar",
+            "@TheFamilyAltarDaily",
+            "cover your home and family in daily prayer",
         ),
         authoring_directive=(
             "CHANNEL: The Midday Watch (prayer3) - the middle of the day, never bedtime and "
@@ -840,6 +859,9 @@ _BRANDS: dict[str, Brand] = {
             "sunrise prayer",
             "pause and pray with us at noon",
             "noonday prayer",
+            "The Family Altar",
+            "@TheFamilyAltarDaily",
+            "cover your home and family in daily prayer",
         ),
         authoring_directive=(
             "CHANNEL: The Midnight Watch (prayer4) - wakeful 12:00 AM midnight watch & "
@@ -1050,6 +1072,243 @@ _BRANDS: dict[str, Brand] = {
         ctr_hook_hero="PRAY AT MIDNIGHT",
         ctr_quiet_hero="CHAINS MUST BREAK",
     ),
+    "prayer5": Brand(
+        channel_id="prayer5",
+        display_name="The Family Altar",
+        handle="@TheFamilyAltarDaily",
+        declaration="prayer5",
+        title_suffix="| The Family Altar",
+        producer_line="Produced by The Family Altar | Daily Household & Family Prayer",
+        closing_cta=(
+            "Type Amen to agree with this prayer, and subscribe to The Family Altar "
+            "to cover your home and family in daily prayer."
+        ),
+        required_phrases=("The Family Altar",),
+        forbidden_phrases=(
+            "The Secret Place",
+            "@TheSecretPlace",
+            "The Morning Altar",
+            "@TheMorningAltarDaily",
+            "The Midday Watch",
+            "@TheMiddayWatch",
+            "The Midnight Watch",
+            "@TheMidnightWatchDaily",
+            "before you sleep",
+            "bedtime prayer",
+            "prayer before sleep",
+            "begin every sunrise with us",
+            "pause and pray with us at noon",
+            "stand on the watchtower in midnight prayer",
+        ),
+        authoring_directive=(
+            "CHANNEL: The Family Altar (prayer5) - daily Christian household, marriage, "
+            "children & covenant home prayer (Joshua 24:15 / Psalm 128:3), never sleep/bedtime, "
+            "never sunrise-altar, never midday-watch, and never midnight-watch branding.",
+            "Frontmatter MUST include exactly: channel: prayer5",
+            "Title MUST end with: | The Family Altar",
+            'Tags MUST include "family prayer" and "the family altar"; never sleep, bedtime, '
+            'morning altar, midday watch, or midnight watch branding.',
+            "Description MUST credit: Produced by The Family Altar | Daily Household & Family Prayer",
+            'Scenes follow the covenant household arc in the rubric and end with: "Type Amen to '
+            'agree with this prayer, and subscribe to The Family Altar to cover your home and '
+            'family in daily prayer."',
+            "Asset queries MUST be warm candlelit sanctuary, olive groves, peaceful homestead, "
+            "quiet valley or calm countryside scenes.",
+        ),
+        short_title_template="Pray This {label} Family Prayer Over Your Home | {hook}",
+        subscribe_heading="🏡 COVER YOUR HOME IN DAILY PRAYER",
+        short_target_window_utc="17:14",
+        short_channel_label="a faceless Christian family-and-household prayer channel called The Family Altar",
+        short_prayer_kind="household",
+        short_opening="gather your home and loved ones in faith",
+        short_imagery="warm lamp-lit table with Bible, olive branches, peaceful countryside home",
+        short_tags=(
+            "family prayer",
+            "prayer for my home",
+            "prayer for children",
+            "the family altar",
+            "household blessing",
+        ),
+        short_hashtags="#Shorts #{tag_key} #FamilyPrayer #PrayerForMyHome #TheFamilyAltar #HouseholdBlessing",
+        short_end_card="The Family Altar — cover your home in prayer",
+        short_key_namespace="family",
+        comment_persona="the pastoral family prayer team at The Family Altar",
+        comment_farewell="May the peace of God dwell richly within your home.",
+        shorts_poster_kicker="BLESS THIS HOME IN PRAYER",
+        longform_pinned_comment=_FAMILY_ALTAR_COMMENT,
+        short_pinned_comment=(
+            "🏡 PRAY THE FULL HOUSEHOLD SCRIPTURE COVERING:\n"
+            "Tap the linked full-length prayer right above this title (or visit {handle}) "
+            "to pray the complete family blessing of {scripture} over your home:\n"
+            "👉 {url}\n\n"
+            "Write 'AMEN' in faith and share the family members you are lifting up below — "
+            "as for me and my house, we will serve the LORD! 🙏🌿✨{footer}"
+        ),
+        longform_prayer_label="Family Prayer",
+        seo_hook_template=(
+            "Gather at {display_name} in {scripture} (KJV) "
+            "to cover your home, marriage, children, and provision in daily prayer."
+        ),
+        verified_commons_queries=(
+            ("ancient chapel interior candlelight peaceful sanctuary", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("olive trees grove countryside landscape peaceful", 4, "4x Public domain — verified Wikimedia Commons / USDA / LoC agricultural & landscape scans"),
+            ("golden meadow valley peaceful pastoral landscape", 4, "4x Public domain — NPS / USFS pastoral valley photography"),
+            ("calm mountain lake still water reflection peaceful", 4, "4x Public domain — NPS Mirror Lake and Crater Lake scans"),
+            ("sunbeams forest trees golden light peaceful", 4, "4x Public domain — USFS / NPS woodland light photography"),
+            ("historic stone cottage homestead peaceful countryside", 4, "4x Public domain — NPS / Library of Congress historic homestead photography"),
+        ),
+        feedback_artifact_name="performance_feedback_prayer5.json",
+        anchor_video=None,
+        series_playlists=(
+            (
+                "household_blessing_prayers",
+                "Prayers for Home, Peace & Household Protection (KJV) — The Family Altar",
+                "Daily KJV scripture prayers anchored in Joshua 24:15 and Isaiah 32:18 to cover "
+                "every room, threshold, and loved one under your roof in God's peace.\n\n"
+                "Produced by The Family Altar | Daily Household & Family Prayer.",
+                ("home", "house", "household", "peaceable habitation", "family prayer"),
+            ),
+            (
+                "prayers_for_children_and_marriage",
+                "Prayers Over Children, Marriage & Generations (KJV) — The Family Altar",
+                "Verse-by-verse KJV family prayers from Psalm 128, Isaiah 54:13, and Proverbs "
+                "covering your spouse, sons, daughters, and future generations.\n\n"
+                "Produced by The Family Altar | Daily Household & Family Prayer.",
+                ("children", "marriage", "spouse", "psalm 128", "generations"),
+            ),
+            (
+                "family_provision_and_wisdom",
+                "Prayers for Godly Provision, Wisdom & Stewardship — The Family Altar",
+                "Reverent KJV scripture prayers with Charles Spurgeon & Matthew Henry reflections "
+                "for daily bread, honest labour, and divine wisdom in the home.\n\n"
+                "Produced by The Family Altar | Daily Household & Family Prayer.",
+                ("provision", "wisdom", "philippians 4", "proverbs", "blessing"),
+            ),
+        ),
+        community_posts=(
+            {
+                "post_id": "comm-prayer5-001-sunday-home",
+                "post_type": "POLL",
+                "title": "Sunday Family Altar: What are you praying over your household this week?",
+                "body_text": (
+                    "But as for me and my house, we will serve the LORD (Joshua 24:15).\n\n"
+                    "As a new week opens over your roof, where are you asking the Lord to pour out His grace first? "
+                    "Vote below and type 'AMEN' to cover your family in prayer! 🌿🙏"
+                ),
+                "poll": {
+                    "question": "What are you lifting up on the Family Altar first this week?",
+                    "options": [
+                        "Peace & unity across every room of our home",
+                        "Protection & wisdom over our children",
+                        "Strength & tenderness in marriage & family",
+                        "God's faithful provision & guidance ahead",
+                    ],
+                    "context_scripture": "Joshua 24:15",
+                },
+                "image_rel_path": "comm-prayer5-001-sunday-home.png",
+                "target_utc": "17:00",
+                "tags": ["#FamilyPrayer", "#TheFamilyAltar", "#Joshua2415", "#HouseholdBlessing"],
+            },
+            {
+                "post_id": "comm-prayer5-002-midweek-children",
+                "post_type": "PRAYER_WALL",
+                "title": "The Family Altar Prayer Wall: Covering Our Children & Loved Ones",
+                "body_text": (
+                    "And all thy children shall be taught of the LORD; and great shall be the peace of thy children (Isaiah 54:13).\n\n"
+                    "Leave the first name or relationship (son, daughter, spouse, parent) you are standing in faith for today — "
+                    "our prayer team is lifting every family before the throne of grace. Write 'AMEN' in faith!"
+                ),
+                "poll": None,
+                "image_rel_path": "comm-prayer5-002-midweek-children.png",
+                "target_utc": "17:00",
+                "tags": ["#PrayerForChildren", "#Isaiah5413", "#TheFamilyAltar"],
+            },
+            {
+                "post_id": "comm-prayer5-003-thursday-scripture",
+                "post_type": "POLL",
+                "title": "Which household scripture anchors your home today?",
+                "body_text": (
+                    "Except the LORD build the house, they labour in vain that build it (Psalm 127:1).\n\n"
+                    "Stand upon God's unchanging promises over every room of your home."
+                ),
+                "poll": {
+                    "question": "Which KJV household promise are you standing on right now?",
+                    "options": [
+                        "Joshua 24:15 — As for me and my house, we will serve the LORD",
+                        "Psalm 128:3 — Olive plants round about thy table",
+                        "Isaiah 32:18 — Dwell in a peaceable habitation",
+                        "Numbers 6:24-26 — The LORD bless thee, and keep thee",
+                    ],
+                    "context_scripture": "Psalm 127:1",
+                },
+                "image_rel_path": "comm-prayer5-003-thursday-scripture.png",
+                "target_utc": "17:00",
+                "tags": ["#Psalm127", "#Psalm128", "#TheFamilyAltar"],
+            },
+            {
+                "post_id": "comm-prayer5-004-friday-blessing",
+                "post_type": "SCRIPTURE_DEVOTIONAL",
+                "title": "Weekend Aaronic Blessing Over Every Household",
+                "body_text": (
+                    "The LORD bless thee, and keep thee: The LORD make his face shine upon thee, and be gracious unto thee (Numbers 6:24-25).\n\n"
+                    "May the peace of Christ rest upon your table, your family, and your home all weekend long. Type 'BLESS THIS HOME' below in faith! 🏡🙏"
+                ),
+                "poll": None,
+                "image_rel_path": "comm-prayer5-004-friday-blessing.png",
+                "target_utc": "17:00",
+                "tags": ["#Numbers6", "#HouseholdBlessing", "#TheFamilyAltar"],
+            },
+        ),
+        short_bridge_theme="household peace, family covering, and God's faithful provision",
+        short_fallback_title="Prayers for Home, Peace & Household Protection (KJV) — The Family Altar",
+        milestone_subheading_1250="A COVENANT FAMILY ALTAR ACROSS THE NATIONS",
+        milestone_subheading_1500="DAILY PRAYER OVER EVERY HOME & GENERATION",
+        milestone_sanctuary_phrase="around the family altar",
+        milestone_cadence_phrase="every day over your home",
+        milestone_closing_blessing="May the peace of God dwell richly within your home.",
+        milestone_2000_closing="your daily sanctuary of household and family prayer",
+        seo_fallback_hashtags=(
+            "#FamilyPrayer", "#PrayerForMyHome", "#HouseholdBlessing", "#TheFamilyAltar",
+        ),
+        seo_hook_ref_template=(
+            "Gather around the Family Altar with this {ref} KJV family prayer for household peace, "
+            "protection over your children, marriage unity, and God's faithful provision."
+        ),
+        seo_hook_generic=(
+            "Gather around the Family Altar with this KJV household prayer for family peace, "
+            "children's covering, marriage strength, and godly provision."
+        ),
+        seo_book_tag_suffixes=("family prayer", "prayer for my home"),
+        seo_tag_seeds=(
+            "prayer for my family and home",
+            "family prayer kjv",
+            "prayer for children protection",
+            "joshua 24 15 family prayer",
+            "household blessing prayer",
+            "the family altar prayer",
+            "christian marriage and family prayer",
+            "psalm 128 family blessing",
+        ),
+        localized_title_es="Oración por la Familia, los Hijos y el Hogar | {channel_name}",
+        localized_title_pt="Oração pela Família, Filhos e Lar | {channel_name}",
+        localized_ref_title_es="{ref_es} Oración por la Familia y el Hogar | {channel_name}",
+        localized_ref_title_pt="{ref_pt} Oração pela Família e pelo Lar | {channel_name}",
+        localized_desc_lead_es="Oración bíblica diaria por la paz del hogar, los hijos, el matrimonio y la provisión de Dios.",
+        localized_desc_lead_pt="Oração bíblica diária pela paz do lar, pelos filhos, pelo casamento e pela provisão de Deus.",
+        localized_invite_es=(
+            "Reúne tu hogar en oración con esta meditación bíblica para cubrir a tu familia, hijos y casa bajo la paz de Dios."
+        ),
+        localized_invite_pt=(
+            "Reúna seu lar em oração com esta meditação bíblica para cobrir sua família, filhos e casa sob a paz de Deus."
+        ),
+        default_comment_scripture_hook=(
+            "Joshua 24:15 — 'But as for me and my house, we will serve the LORD.'"
+        ),
+        default_comment_theme="household peace, family covering, and God's faithful provision",
+        ctr_grade="hearth",
+        ctr_hook_hero="BLESS THIS HOME",
+        ctr_quiet_hero="COVER MY FAMILY",
+    ),
 }
 
 _CAPABILITIES: dict[str, ChannelCapabilities] = {
@@ -1098,6 +1357,18 @@ _CAPABILITIES: dict[str, ChannelCapabilities] = {
         },
         roadmap="prayer4",
         roadmap_name="MIDNIGHT_WATCH_ROADMAP",
+        legacy_queue_alias="",
+        supply_min_publishable=6,
+    ),
+    "prayer5": ChannelCapabilities(
+        channel_id="prayer5",
+        brand=_BRANDS["prayer5"],
+        equipment={
+            "system_instruction": "family_system_instruction.md",
+            "theological_rubric": "family_theological_rubric.md",
+        },
+        roadmap="prayer5",
+        roadmap_name="FAMILY_ALTAR_ROADMAP",
         legacy_queue_alias="",
         supply_min_publishable=6,
     ),
