@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-09T09:44:23.082539+00:00",
-  "as_of": "2026-11-09",
+  "generated_at": "2026-11-10T03:50:02.302519+00:00",
+  "as_of": "2026-11-10",
   "sufficient_data": false,
   "measured_longform_videos": 0,
   "total_longform_videos": 6,
@@ -18,7 +18,7 @@
       "theme": "peace_rest",
       "videos": 1,
       "measured_videos": 0,
-      "avg_score": 0.2386,
+      "avg_score": 0.2424,
       "avg_engagement": 0.0,
       "top_scripture": "Psalm 121"
     },
@@ -26,7 +26,7 @@
       "theme": "light_courage",
       "videos": 1,
       "measured_videos": 0,
-      "avg_score": 0.2386,
+      "avg_score": 0.2182,
       "avg_engagement": 0.0,
       "top_scripture": "Psalm 27"
     },
@@ -34,7 +34,7 @@
       "theme": "protection",
       "videos": 3,
       "measured_videos": 0,
-      "avg_score": 0.1305,
+      "avg_score": 0.1299,
       "avg_engagement": 0.0,
       "top_scripture": "Psalm 3"
     }
