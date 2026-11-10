@@ -24,7 +24,7 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE MIDNIGHT WATCH", "RISE AT MIDNIGHT", "PSALM 119:62", "MIDNIGHT PRAYER"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_attempts: 2
+thumbnail_attempts: 3
 ---
 
 Rise in spirit at this midnight hour and lift your heart unto the living God. Psalm one hundred and nineteen verse sixty-two declares, At midnight I will rise to give thanks unto thee because of thy righteous judgments. Midnight is not an hour of defeat; in Scripture it is the appointed watch of thanksgiving and breakthrough. Before a single outward circumstance changes, praise honours the sovereignty of our faithful Father. Lord, we thank You at this twelfth hour for Your mercy over our homes, our families, and our season. Loose every heavy burden, guide every decision ahead, and anchor our minds in Your unshakeable Word. Type Amen and subscribe to The Midnight Watch to stand in prayer at midnight.
