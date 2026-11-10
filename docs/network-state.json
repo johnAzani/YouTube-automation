@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T11:52:20Z",
+  "generated_at": "2026-11-10T11:57:28Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -11,8 +11,8 @@
     "published_longform": 26,
     "published_shorts": 33,
     "public_total": 57,
-    "queued_longform": 43,
-    "queued_shorts": 29,
+    "queued_longform": 45,
+    "queued_shorts": 31,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -280,9 +280,9 @@
         "published_longform": 0,
         "published_shorts": 0,
         "public_total": 0,
-        "queued_longform": 4,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 6
       },
       "latest_video": null,
       "next_queued_longform": {
@@ -2254,6 +2254,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 905
+      },
+      {
+        "id": "0304",
+        "slug": "isaiah-32-18-household-peace-prayer",
+        "file": "0304-isaiah-32-18-household-peace-prayer.md",
+        "title": "Isaiah 32:18 Household Peace Prayer | The Family Altar",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1527
+      },
+      {
+        "id": "0305",
+        "slug": "proverbs-24-3-4-wisdom-house-prayer",
+        "file": "0305-proverbs-24-3-4-wisdom-house-prayer.md",
+        "title": "Proverbs 24:3-4 Daily Household Prayer | The Family Altar",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1721
       }
     ],
     "shorts": [
@@ -2575,6 +2601,28 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
+      },
+      {
+        "short": "short-familyisaiah32v18",
+        "file": "0304-short-familyisaiah32v18.yml",
+        "companion_longform_id": "0304",
+        "scripture": "Isaiah 32:18",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "17:14"
+      },
+      {
+        "short": "short-familyproverbs24v3",
+        "file": "0305-short-familyproverbs24v3.yml",
+        "companion_longform_id": "0305",
+        "scripture": "Proverbs 24:3-4",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "17:14"
       }
     ]
   },
@@ -2626,10 +2674,10 @@
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 6.4h ago",
-      "last_conclusion": "",
+      "detail": "last success 0.8h ago",
+      "last_conclusion": "success",
       "last_run": "2026-11-10T11:09:47+00:00",
-      "last_success": "2026-11-10T05:25:10+00:00",
+      "last_success": "2026-11-10T11:09:47+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -2640,7 +2688,7 @@
       "name": "Growth autopilot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 2.1h ago",
+      "detail": "last success 2.2h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-10T09:43:08+00:00",
       "last_success": "2026-11-10T09:43:08+00:00",
@@ -2654,7 +2702,7 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 24.0h ago",
+      "detail": "last success 24.1h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-09T11:48:56+00:00",
       "last_success": "2026-11-09T11:48:56+00:00",
@@ -2682,10 +2730,10 @@
       "name": "Automation monitor",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.2h ago",
+      "detail": "last success 0.1h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-10T11:50:48+00:00",
-      "last_success": "2026-11-10T11:42:18+00:00",
+      "last_run": "2026-11-10T11:55:35+00:00",
+      "last_success": "2026-11-10T11:50:48+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -2696,7 +2744,7 @@
       "name": "Produce video",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 1.8h ago",
+      "detail": "last success 1.9h ago",
       "last_conclusion": "",
       "last_run": "2026-11-10T11:41:15+00:00",
       "last_success": "2026-11-10T10:02:31+00:00",
@@ -2712,8 +2760,8 @@
       "severity": "ok",
       "detail": "last success 0.1h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-10T11:50:48+00:00",
-      "last_success": "2026-11-10T11:45:30+00:00",
+      "last_run": "2026-11-10T11:55:35+00:00",
+      "last_success": "2026-11-10T11:52:38+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
