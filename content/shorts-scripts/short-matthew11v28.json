@@ -1,0 +1,326 @@
+{
+  "key": "short-matthew11v28",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "FIND REST TONIGHT",
+    "MATTHEW 11:28-30 PRAYER"
+  ],
+  "poster": [
+    "LAY DOWN YOUR BURDENS",
+    "A QUIET BEDTIME PRAYER",
+    "JESUS PROMISES YOU REST",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm mountain lake glowing dusk reflection soft mist",
+    "single warm candle flickering dimly dark silent room",
+    "gentle ocean waves washing softly dark starry beach night",
+    "misty pine forest moonlight soft glowing twilight",
+    "cozy bedroom window starry night sky dark blue quiet glow",
+    "peaceful calm river evening lights gentle water flow dusk",
+    "warm lantern glowing dark forest night peaceful sanctuary"
+  ],
+  "scenes": [
+    {
+      "a": "Take a slow deep breath and let the heavy burdens of your day drift away in this quiet space.",
+      "img": "short-matthew11v28-scene-01.jpg",
+      "kicker": "MATTHEW 11:28",
+      "sub": "BEDTIME PRAYER FOR REST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Jesus invites you, Come to me, all who labor and are heavy laden, and I will give you rest.",
+      "img": "short-matthew11v28-scene-02.jpg",
+      "kicker": "MATTHEW 11:28",
+      "sub": "COME UNTO HIM AND REST",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Take my yoke upon you and learn from me, for I am gentle and lowly in heart.",
+      "img": "short-matthew11v28-scene-03.jpg",
+      "kicker": "MATTHEW 11:29",
+      "sub": "LEARN FROM HIS GENTLE HEART",
+      "cam": "tilt_up",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "And you will find rest for your souls, for my yoke is easy and my burden is light.",
+      "img": "short-matthew11v28-scene-04.jpg",
+      "kicker": "MATTHEW 11:30",
+      "sub": "HIS BURDEN IS LIGHT",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Tonight, release every anxious thought, every fear, and every unfinished task into His loving hands.",
+      "img": "short-matthew11v28-scene-05.jpg",
+      "kicker": "MATTHEW 11:28",
+      "sub": "RELEASE YOUR ANXIETIES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May His peaceful presence cover your spirit, bringing deep calm to your mind as you drift off to sleep.",
+      "img": "short-matthew11v28-scene-06.jpg",
+      "kicker": "MATTHEW 11:28",
+      "sub": "PEACEFUL SLEEP IN HIS PRESENCE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Rest peacefully tonight, and subscribe to The Secret Place for daily bedtime prayers.",
+      "img": "short-matthew11v28-scene-07.jpg",
+      "kicker": "THE SECRET PLACE",
+      "sub": "PRAYERS FOR EVERY NIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      9,
+      "Take a slow deep breath and let the heavy burdens of your day drift away in this quiet space."
+    ],
+    [
+      9,
+      18,
+      "Jesus invites you, Come to me, all who labor and are heavy laden, and I will give you rest."
+    ],
+    [
+      18,
+      27,
+      "Take my yoke upon you and learn from me, for I am gentle and lowly in heart."
+    ],
+    [
+      27,
+      36,
+      "And you will find rest for your souls, for my yoke is easy and my burden is light."
+    ],
+    [
+      36,
+      45,
+      "Tonight, release every anxious thought, every fear, and every unfinished task into His loving hands."
+    ],
+    [
+      45,
+      54,
+      "May His peaceful presence cover your spirit, bringing deep calm to your mind as you drift off to sleep."
+    ],
+    [
+      54,
+      60,
+      "Rest peacefully tonight, and subscribe to The Secret Place for daily bedtime prayers."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      9,
+      [
+        "TAKE A SLOW DEEP BREATH",
+        "LET HEAVY BURDENS DRIFT AWAY",
+        "IN THIS QUIET SPACE"
+      ],
+      [
+        "SLOW DEEP BREATH",
+        "HEAVY BURDENS"
+      ],
+      "MATTHEW 11:28"
+    ],
+    [
+      9,
+      18,
+      [
+        "JESUS INVITES YOU",
+        "COME TO ME ALL WHO LABOR",
+        "AND I WILL GIVE YOU REST"
+      ],
+      [
+        "COME TO ME",
+        "GIVE YOU REST"
+      ],
+      "MATTHEW 11:28"
+    ],
+    [
+      18,
+      27,
+      [
+        "TAKE MY YOKE UPON YOU",
+        "AND LEARN FROM ME",
+        "FOR I AM GENTLE AND LOWLY"
+      ],
+      [
+        "LEARN FROM ME",
+        "GENTLE AND LOWLY"
+      ],
+      "MATTHEW 11:29"
+    ],
+    [
+      27,
+      36,
+      [
+        "YOU WILL FIND REST FOR YOUR SOULS",
+        "FOR MY YOKE IS EASY",
+        "AND MY BURDEN IS LIGHT"
+      ],
+      [
+        "REST FOR YOUR SOULS",
+        "BURDEN IS LIGHT"
+      ],
+      "MATTHEW 11:30"
+    ],
+    [
+      36,
+      45,
+      [
+        "TONIGHT RELEASE EVERY ANXIOUS THOUGHT",
+        "EVERY FEAR AND UNFINISHED TASK",
+        "INTO HIS LOVING HANDS"
+      ],
+      [
+        "RELEASE EVERY ANXIOUS THOUGHT",
+        "HIS LOVING HANDS"
+      ],
+      "MATTHEW 11:28"
+    ],
+    [
+      45,
+      54,
+      [
+        "MAY HIS PEACEFUL PRESENCE",
+        "COVER YOUR SPIRIT WITH CALM",
+        "AS YOU DRIFT OFF TO SLEEP"
+      ],
+      [
+        "PEACEFUL PRESENCE",
+        "DRIFT OFF TO SLEEP"
+      ],
+      "MATTHEW 11:28"
+    ],
+    [
+      54,
+      60,
+      [
+        "REST PEACEFULLY TONIGHT",
+        "SUBSCRIBE TO THE SECRET PLACE",
+        "FOR DAILY BEDTIME PRAYERS"
+      ],
+      [
+        "SUBSCRIBE",
+        "THE SECRET PLACE"
+      ],
+      "THE SECRET PLACE"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Take a slow deep breath and let the heavy burdens of your day drift away in this quiet space.",
+      "kind": "phrase",
+      "words": [
+        "SLOW",
+        "DEEP",
+        "BREATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Jesus invites you, Come to me, all who labor and are heavy laden, and I will give you rest.",
+      "kind": "phrase",
+      "words": [
+        "COME",
+        "TO",
+        "ME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Jesus invites you, Come to me, all who labor and are heavy laden, and I will give you rest.",
+      "kind": "phrase",
+      "words": [
+        "GIVE",
+        "YOU",
+        "REST"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Take my yoke upon you and learn from me, for I am gentle and lowly in heart.",
+      "kind": "phrase",
+      "words": [
+        "GENTLE",
+        "AND",
+        "LOWLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And you will find rest for your souls, for my yoke is easy and my burden is light.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "FOR",
+        "YOUR",
+        "SOULS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Tonight, release every anxious thought, every fear, and every unfinished task into His loving hands.",
+      "kind": "phrase",
+      "words": [
+        "HIS",
+        "LOVING",
+        "HANDS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "May His peaceful presence cover your spirit, bringing deep calm to your mind as you drift off to sleep.",
+      "kind": "phrase",
+      "words": [
+        "DRIFT",
+        "OFF",
+        "TO",
+        "SLEEP"
+      ],
+      "hi": 3,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Matthew 11:28-30"
+}
