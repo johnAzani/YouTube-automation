@@ -2,7 +2,7 @@
 id: '0052'
 title: Psalm 63:1 Midday Prayer | The Midday Watch
 slug: psalm-63-1-midday-prayer
-status: quota_paused
+status: published
 channel: prayer3
 privacy: public
 format: longform
@@ -78,8 +78,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
-quota_reset_utc: '2026-11-10T08:00:00+00:00'
-pause_reason: gemini_api_daily_quota_exhausted
+published_on: "2026-11-10"
+published_at: "2026-11-10T13:59:39Z"
+youtube_video_id: "0Wg3MiZ8KIg"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — The Noonday Pause and the Dry Land

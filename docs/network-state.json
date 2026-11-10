@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-10T11:57:28Z",
+  "generated_at": "2026-11-10T14:00:36Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
     "channels_provisioned": 5,
-    "channels_total": 6
+    "channels_total": 5
   },
   "totals": {
-    "published_total": 59,
-    "published_longform": 26,
-    "published_shorts": 33,
-    "public_total": 57,
-    "queued_longform": 45,
-    "queued_shorts": 31,
+    "published_total": 61,
+    "published_longform": 27,
+    "published_shorts": 34,
+    "public_total": 59,
+    "queued_longform": 44,
+    "queued_shorts": 30,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -166,32 +166,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 13,
-        "published_longform": 7,
-        "published_shorts": 6,
-        "public_total": 13,
-        "queued_longform": 7,
+        "published_total": 15,
+        "published_longform": 8,
+        "published_shorts": 7,
+        "public_total": 15,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYISAIAH58V10",
-        "title": "Say This Isaiah 58:10 Prayer at Noon | Isaiah 58:10 #Shorts",
-        "format": "short",
-        "youtube_video_id": "o41KNZByE7k",
-        "watch_url": "https://www.youtube.com/shorts/o41KNZByE7k",
-        "published_on": "2026-11-09",
-        "published_at": "2026-11-09T22:46:22Z"
-      },
-      "next_queued_longform": {
         "id": "0052",
         "title": "Psalm 63:1 Midday Prayer | The Midday Watch",
-        "words": 2549,
-        "status": "quota_paused"
+        "format": "longform",
+        "youtube_video_id": "0Wg3MiZ8KIg",
+        "watch_url": "https://youtu.be/0Wg3MiZ8KIg",
+        "published_on": "2026-11-10",
+        "published_at": "2026-11-10T13:59:39Z"
+      },
+      "next_queued_longform": {
+        "id": "0083",
+        "title": "Daniel 6:10 Midday Prayer | The Midday Watch",
+        "words": 1408,
+        "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaypsalm37v5",
-        "scripture": "Psalm 37:5",
+        "short": "short-middaypsalm63v1",
+        "scripture": "Psalm 63:1",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -302,40 +302,55 @@
         "measured_longform_videos": 0,
         "top_themes": []
       }
-    },
-    {
-      "id": "prayer6",
-      "display_name": "The Healing Balm",
-      "handle": "@TheHealingBalmDaily",
-      "prayer_label": "Healing Prayer",
-      "daypart": "restoration",
-      "tagline": "Daily Healing & Restoration Prayer",
-      "target_window_utc": "15:44",
-      "poster_kicker": "RECEIVE GOD'S HEALING PEACE",
-      "provisioned": false,
-      "auto_publish": true,
-      "default_privacy": "public",
-      "supply_target": 6,
-      "counts": {
-        "published_total": 0,
-        "published_longform": 0,
-        "published_shorts": 0,
-        "public_total": 0,
-        "queued_longform": 0,
-        "queued_other": 0,
-        "queued_shorts": 0
-      },
-      "latest_video": null,
-      "next_queued_longform": null,
-      "next_queued_short": null,
-      "feedback": {
-        "available": false,
-        "measured_longform_videos": 0,
-        "top_themes": []
-      }
     }
   ],
   "videos": [
+    {
+      "id": "0052",
+      "slug": "psalm-63-1-midday-prayer",
+      "file": "0052-psalm-63-1-midday-prayer.md",
+      "title": "Psalm 63:1 Midday Prayer | The Midday Watch",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-10",
+      "published_at": "2026-11-10T13:59:39Z",
+      "youtube_video_id": "0Wg3MiZ8KIg",
+      "watch_url": "https://youtu.be/0Wg3MiZ8KIg",
+      "youtu_be_url": "https://youtu.be/0Wg3MiZ8KIg",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/0Wg3MiZ8KIg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/0Wg3MiZ8KIg/hqdefault.jpg",
+      "thumb_text": "THIRSTING FOR YOU",
+      "duration_label": "~18 min",
+      "words": 2549
+    },
+    {
+      "id": "SHORT-MIDDAYPSALM37V5",
+      "slug": "short-middaypsalm37v5-midday-prayer",
+      "file": "short-middaypsalm37v5-midday-prayer.md",
+      "title": "Say This Psalm 37:5 Prayer at Noon | Psalm 37:5 #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-10",
+      "published_at": "2026-11-10T12:00:27Z",
+      "youtube_video_id": "RO-oTWbR9hE",
+      "watch_url": "https://www.youtube.com/shorts/RO-oTWbR9hE",
+      "youtu_be_url": "https://youtu.be/RO-oTWbR9hE",
+      "shorts_url": "https://www.youtube.com/shorts/RO-oTWbR9hE",
+      "studio_url": "https://studio.youtube.com/video/RO-oTWbR9hE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/RO-oTWbR9hE/hqdefault.jpg",
+      "thumb_text": "THE MIDDAY WATCH \u00b7 COMMIT YOUR WAY",
+      "duration_label": "54s",
+      "words": 560
+    },
     {
       "id": "0055",
       "slug": "psalm-92-1-2-morning-prayer",
@@ -1957,19 +1972,6 @@
         "words": 1025
       },
       {
-        "id": "0052",
-        "slug": "psalm-63-1-midday-prayer",
-        "file": "0052-psalm-63-1-midday-prayer.md",
-        "title": "Psalm 63:1 Midday Prayer | The Midday Watch",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "quota_paused",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 2549
-      },
-      {
         "id": "0056",
         "slug": "psalm-30-5-morning-prayer",
         "file": "0056-psalm-30-5-morning-prayer.md",
@@ -2348,17 +2350,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-middaypsalm37v5",
-        "file": "0051-short-middaypsalm37v5.yml",
-        "companion_longform_id": "0051",
-        "scripture": "Psalm 37:5",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaypsalm63v1",
