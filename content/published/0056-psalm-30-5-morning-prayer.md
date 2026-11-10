@@ -2,7 +2,7 @@
 id: '0056'
 title: Psalm 30:5 Morning Prayer | The Morning Altar
 slug: psalm-30-5-morning-prayer
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -74,6 +74,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-10"
+published_at: "2026-11-10T15:55:51Z"
+youtube_video_id: "2s8CWNIoOz4"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — The Sunrise Hook & Directing the Prayer

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T14:58:09Z",
+  "generated_at": "2026-11-10T15:56:41Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 6
   },
   "totals": {
-    "published_total": 62,
-    "published_longform": 27,
-    "published_shorts": 35,
-    "public_total": 60,
-    "queued_longform": 44,
-    "queued_shorts": 29,
+    "published_total": 64,
+    "published_longform": 28,
+    "published_shorts": 36,
+    "public_total": 62,
+    "queued_longform": 43,
+    "queued_shorts": 28,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -99,32 +99,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 25,
-        "published_longform": 12,
-        "published_shorts": 13,
-        "public_total": 24,
-        "queued_longform": 6,
+        "published_total": 27,
+        "published_longform": 13,
+        "published_shorts": 14,
+        "public_total": 26,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0055",
-        "title": "Psalm 92:1-2 Morning Prayer | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "lvq0JNhyr-8",
-        "watch_url": "https://youtu.be/lvq0JNhyr-8",
-        "published_on": "2026-11-10",
-        "published_at": "2026-11-10T11:23:49Z"
-      },
-      "next_queued_longform": {
         "id": "0056",
         "title": "Psalm 30:5 Morning Prayer | The Morning Altar",
-        "words": 1376,
+        "format": "longform",
+        "youtube_video_id": "2s8CWNIoOz4",
+        "watch_url": "https://youtu.be/2s8CWNIoOz4",
+        "published_on": "2026-11-10",
+        "published_at": "2026-11-10T15:55:51Z"
+      },
+      "next_queued_longform": {
+        "id": "0057",
+        "title": "Psalm 19:4-6 Morning Prayer: Rejoicing as a Strong Man to Run a Race",
+        "words": 1597,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm19v4",
-        "scripture": "Psalm 19:4-6",
+        "short": "short-morningpsalm57v8",
+        "scripture": "Psalm 57:8",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -336,6 +336,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0056",
+      "slug": "psalm-30-5-morning-prayer",
+      "file": "0056-psalm-30-5-morning-prayer.md",
+      "title": "Psalm 30:5 Morning Prayer | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-10",
+      "published_at": "2026-11-10T15:55:51Z",
+      "youtube_video_id": "2s8CWNIoOz4",
+      "watch_url": "https://youtu.be/2s8CWNIoOz4",
+      "youtu_be_url": "https://youtu.be/2s8CWNIoOz4",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/2s8CWNIoOz4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/2s8CWNIoOz4/hqdefault.jpg",
+      "thumb_text": "JOY THIS MORNING",
+      "duration_label": "~9 min",
+      "words": 1376
+    },
+    {
+      "id": "SHORT-MORNINGPSALM19V4",
+      "slug": "short-morningpsalm19v4-sunrise-prayer",
+      "file": "short-morningpsalm19v4-sunrise-prayer.md",
+      "title": "Say This Psalm 19:4-6 Prayer at Sunrise | Prayer #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-10",
+      "published_at": "2026-11-10T15:07:21Z",
+      "youtube_video_id": "2sQFcWYcnss",
+      "watch_url": "https://www.youtube.com/shorts/2sQFcWYcnss",
+      "youtu_be_url": "https://youtu.be/2sQFcWYcnss",
+      "shorts_url": "https://www.youtube.com/shorts/2sQFcWYcnss",
+      "studio_url": "https://studio.youtube.com/video/2sQFcWYcnss/edit",
+      "thumb_url": "https://i.ytimg.com/vi/2sQFcWYcnss/hqdefault.jpg",
+      "thumb_text": "THE \u00b7 MORNING",
+      "duration_label": "38s",
+      "words": 561
+    },
     {
       "id": "SHORT-PSALM63V6",
       "slug": "short-psalm63v6-pre-sleep-prayer",
@@ -2026,19 +2072,6 @@
         "words": 1025
       },
       {
-        "id": "0056",
-        "slug": "psalm-30-5-morning-prayer",
-        "file": "0056-psalm-30-5-morning-prayer.md",
-        "title": "Psalm 30:5 Morning Prayer | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1376
-      },
-      {
         "id": "0057",
         "slug": "psalm-19-4-6-morning-prayer-strength-for-the-race",
         "file": "0057-psalm-19-4-6-morning-prayer-strength-for-the-race.md",
@@ -2404,17 +2437,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-morningpsalm19v4",
-        "file": "0057-short-morningpsalm19v4.yml",
-        "companion_longform_id": "0057",
-        "scripture": "Psalm 19:4-6",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm57v8",
