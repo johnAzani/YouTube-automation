@@ -37,8 +37,8 @@
       "workflow": "community.yml"
     }
   ],
-  "generated_at": "2026-11-10T07:14:39.805315+00:00",
-  "last_run_at": "2026-11-10T07:13:10+00:00",
+  "generated_at": "2026-11-10T09:48:10.126175+00:00",
+  "last_run_at": "2026-11-10T09:47:16+00:00",
   "on_time": [
     {
       "late_minutes": 95,
@@ -48,20 +48,13 @@
       "workflow": "growth-autopilot.yml"
     },
     {
-      "late_minutes": 46,
-      "name": "Automation monitor",
-      "ran_at": "2026-11-10T07:09:23+00:00",
-      "slot": "2026-11-10T06:23:00+00:00",
-      "workflow": "monitor.yml"
-    },
-    {
-      "late_minutes": 22,
+      "late_minutes": 0,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-10T07:09:23+00:00",
-      "slot": "2026-11-10T06:47:00+00:00",
+      "ran_at": "2026-11-10T09:47:16+00:00",
+      "slot": "2026-11-10T09:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 1,
+  "silence_minutes": 0,
   "warn_minutes": 120
 }
