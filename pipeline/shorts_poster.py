@@ -104,7 +104,7 @@ def _font(size: int, weight: str = "Black"):
 
 
 def grade_for(channel_id: Optional[str] = None) -> str:
-    """The daypart/sanctuary grade the channel lives in: night / dawn / noon / midnight / hearth."""
+    """The daypart/sanctuary grade the channel lives in: night / dawn / noon / midnight / hearth / balm."""
     kind = (brand_for(channel_id).short_prayer_kind or "").strip().lower()
     return {
         "pre-sleep": "night",
@@ -112,6 +112,7 @@ def grade_for(channel_id: Optional[str] = None) -> str:
         "midday": "noon",
         "midnight": "midnight",
         "household": "hearth",
+        "restoration": "balm",
     }.get(kind, "night")
 
 
@@ -246,6 +247,8 @@ _GRADES = {
                  "blend": 0.74, "brightness": 0.64, "tint": ((14, 12, 42), 0.42)},
     "hearth": {"shadow": (10, 24, 16), "mid": (96, 74, 34), "high": (252, 224, 156),
                "blend": 0.66, "brightness": 0.72, "tint": ((14, 28, 18), 0.36)},
+    "balm": {"shadow": (8, 30, 44), "mid": (30, 102, 122), "high": (250, 232, 182),
+             "blend": 0.64, "brightness": 0.73, "tint": ((11, 36, 52), 0.36)},
 }
 
 

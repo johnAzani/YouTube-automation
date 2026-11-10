@@ -231,6 +231,16 @@ _FAMILY_ALTAR_COMMENT = (
     "LORD! 🙏🌿{footer}"
 )
 
+_HEALING_BALM_COMMENT = (
+    "🕊️ Beloved friend, if you are praying for healing, peace of mind, or renewed strength for "
+    "yourself or someone you love today, write 'AMEN' in faith to rest upon God's promise of "
+    "{theme}.\n\n"
+    "📖 {scripture_hook}\n\n"
+    "Share the first name or healing need on your heart below — our pastoral prayer team lifts "
+    "every petition before the Great Physician who binds up the brokenhearted. May His healing "
+    "peace guard your heart and mind! 🙏💧{footer}"
+)
+
 _BRANDS: dict[str, Brand] = {
     "secret-place": Brand(
         channel_id="secret-place",
@@ -259,6 +269,9 @@ _BRANDS: dict[str, Brand] = {
             "The Family Altar",
             "@TheFamilyAltarDaily",
             "cover your home and family in daily prayer",
+            "The Healing Balm",
+            "@TheHealingBalmDaily",
+            "receive God's healing peace in daily prayer",
         ),
         authoring_directive=(
             "CHANNEL: The Secret Place (secret-place) - night prayer, never a morning devotional.",
@@ -384,6 +397,9 @@ _BRANDS: dict[str, Brand] = {
             "The Family Altar",
             "@TheFamilyAltarDaily",
             "cover your home and family in daily prayer",
+            "The Healing Balm",
+            "@TheHealingBalmDaily",
+            "receive God's healing peace in daily prayer",
         ),
         authoring_directive=(
             "CHANNEL: The Morning Altar (prayer2) - sunrise, never bedtime.",
@@ -625,6 +641,9 @@ _BRANDS: dict[str, Brand] = {
             "The Family Altar",
             "@TheFamilyAltarDaily",
             "cover your home and family in daily prayer",
+            "The Healing Balm",
+            "@TheHealingBalmDaily",
+            "receive God's healing peace in daily prayer",
         ),
         authoring_directive=(
             "CHANNEL: The Midday Watch (prayer3) - the middle of the day, never bedtime and "
@@ -862,6 +881,9 @@ _BRANDS: dict[str, Brand] = {
             "The Family Altar",
             "@TheFamilyAltarDaily",
             "cover your home and family in daily prayer",
+            "The Healing Balm",
+            "@TheHealingBalmDaily",
+            "receive God's healing peace in daily prayer",
         ),
         authoring_directive=(
             "CHANNEL: The Midnight Watch (prayer4) - wakeful 12:00 AM midnight watch & "
@@ -1099,6 +1121,9 @@ _BRANDS: dict[str, Brand] = {
             "begin every sunrise with us",
             "pause and pray with us at noon",
             "stand on the watchtower in midnight prayer",
+            "The Healing Balm",
+            "@TheHealingBalmDaily",
+            "receive God's healing peace in daily prayer",
         ),
         authoring_directive=(
             "CHANNEL: The Family Altar (prayer5) - daily Christian household, marriage, "
@@ -1309,6 +1334,249 @@ _BRANDS: dict[str, Brand] = {
         ctr_hook_hero="BLESS THIS HOME",
         ctr_quiet_hero="COVER MY FAMILY",
     ),
+    "prayer6": Brand(
+        channel_id="prayer6",
+        display_name="The Healing Balm",
+        handle="@TheHealingBalmDaily",
+        declaration="prayer6",
+        title_suffix="| The Healing Balm",
+        producer_line="Produced by The Healing Balm | Daily Healing & Restoration Prayer.",
+        closing_cta=(
+            "Type Amen to agree with this prayer, and subscribe to The Healing Balm "
+            "to receive God's healing peace in daily prayer."
+        ),
+        required_phrases=("The Healing Balm",),
+        forbidden_phrases=(
+            "The Secret Place",
+            "@TheSecretPlace",
+            "The Morning Altar",
+            "@TheMorningAltarDaily",
+            "The Midday Watch",
+            "@TheMiddayWatch",
+            "The Midnight Watch",
+            "@TheMidnightWatchDaily",
+            "The Family Altar",
+            "@TheFamilyAltarDaily",
+            "before you sleep",
+            "bedtime prayer",
+            "prayer before sleep",
+            "begin every sunrise with us",
+            "pause and pray with us at noon",
+            "stand on the watchtower in midnight prayer",
+            "cover your home and family in daily prayer",
+        ),
+        authoring_directive=(
+            "CHANNEL: The Healing Balm (prayer6) - daily KJV divine healing, comfort for the "
+            "brokenhearted, peace of mind, and restoration prayer (Jeremiah 30:17 / Psalm 147:3), "
+            "never sleep/bedtime, never sunrise-altar, never midday-watch, never midnight-watch, "
+            "and never family-altar branding.",
+            "Frontmatter MUST include exactly: channel: prayer6",
+            "Title MUST end with: | The Healing Balm",
+            'Tags MUST include "healing prayer" and "the healing balm"; never sleep, bedtime, '
+            'morning altar, midday watch, midnight watch, or family altar branding.',
+            "Description MUST credit: Produced by The Healing Balm | Daily Healing & Restoration Prayer.",
+            'Scenes follow the Balm of Gilead restoration arc in the rubric and end with: "Type '
+            "Amen to agree with this prayer, and subscribe to The Healing Balm to receive God's "
+            'healing peace in daily prayer."',
+            "Asset queries MUST be calm mountain rivers, living waters, sunlit forest mist, "
+            "peaceful sanctuary light, or serene valley horizons.",
+        ),
+        short_title_template="Pray This {label} Healing Prayer for Peace & Strength | {hook}",
+        subscribe_heading="🕊️ RECEIVE GOD'S HEALING PEACE DAILY",
+        short_target_window_utc="15:44",
+        short_channel_label="a faceless Christian healing-and-restoration prayer channel called The Healing Balm",
+        short_prayer_kind="restoration",
+        short_opening="bring every weary burden and healing need before the Lord",
+        short_imagery="tranquil turquoise living waters, warm golden sanctuary light, white dove peace",
+        short_tags=(
+            "healing prayer",
+            "prayer for healing",
+            "prayer for peace of mind",
+            "the healing balm",
+            "kjv healing scripture",
+        ),
+        short_hashtags="#Shorts #{tag_key} #HealingPrayer #PrayerForHealing #TheHealingBalm #PeaceOfMind",
+        short_end_card="The Healing Balm — receive God's healing peace",
+        short_key_namespace="healing",
+        comment_persona="the pastoral healing prayer team at The Healing Balm",
+        comment_farewell="May the Great Physician guard your heart, body, and mind in His peace.",
+        shorts_poster_kicker="RECEIVE GOD'S HEALING PEACE",
+        longform_pinned_comment=_HEALING_BALM_COMMENT,
+        short_pinned_comment=(
+            "🕊️ PRAY THE FULL KJV HEALING & RESTORATION PRAYER:\n"
+            "Tap the linked full-length prayer right above this title (or visit {handle}) "
+            "to pray the complete healing promise of {scripture} in faith:\n"
+            "👉 {url}\n\n"
+            "Write 'AMEN' in faith and share who you are lifting up for healing and peace today — "
+            "the Lord healeth the broken in heart! 🙏💧✨{footer}"
+        ),
+        longform_prayer_label="Healing Prayer",
+        seo_hook_template=(
+            "Rest at {display_name} in {scripture} (KJV) "
+            "to pray for divine healing, comfort, peace of mind, and renewed strength."
+        ),
+        verified_commons_queries=(
+            ("peaceful mountain river calm water forest", 4, "4x Public domain — NPS mountain stream and river scans"),
+            ("divine light breaking through clouds over peaceful landscape", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("ancient chapel interior candlelight peaceful sanctuary", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("forest sunlight mist", 3, "3x Public domain — USFS forest crepuscular ray and mist photography"),
+            ("sunlight breaking through clouds mountain pass", 3, "3x Public domain — USFS Rocky Mountain National Forest crepuscular ray scans"),
+            ("golden light rays through clouds over mountain peak", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+        ),
+        feedback_artifact_name="performance_feedback_prayer6.json",
+        anchor_video=None,
+        series_playlists=(
+            (
+                "healing_and_recovery_prayers",
+                "Prayers for Healing, Recovery & Strength (KJV) — The Healing Balm",
+                "Daily KJV scripture prayers anchored in Jeremiah 30:17, Psalm 103, and Exodus 15:26 "
+                "lifting weary bodies, hospital rooms, and loved ones before the Great Physician.\n\n"
+                "Produced by The Healing Balm | Daily Healing & Restoration Prayer.",
+                ("healing", "restore health", "recovery", "psalm 103", "jeremiah 30"),
+            ),
+            (
+                "peace_of_mind_and_comfort",
+                "Prayers for Peace of Mind, Anxiety & Broken Hearts (KJV) — The Healing Balm",
+                "Compassionate KJV prayers from Psalm 147:3, Philippians 4:6-7, and Isaiah 26:3 "
+                "for anxious thoughts, grief, and quiet rest in Christ.\n\n"
+                "Produced by The Healing Balm | Daily Healing & Restoration Prayer.",
+                ("peace of mind", "broken in heart", "anxiety", "philippians 4", "comfort"),
+            ),
+            (
+                "strength_for_the_weary",
+                "Prayers for Renewed Strength & Sustaining Grace — The Healing Balm",
+                "Reverent KJV scripture prayers with Charles Spurgeon & Matthew Henry reflections "
+                "from Isaiah 40:29-31 and 2 Corinthians 12:9 for weary seasons.\n\n"
+                "Produced by The Healing Balm | Daily Healing & Restoration Prayer.",
+                ("strength", "weary", "isaiah 40", "grace", "renewal"),
+            ),
+        ),
+        community_posts=(
+            {
+                "post_id": "comm-prayer6-001-sunday-balm",
+                "post_type": "POLL",
+                "title": "Sunday Healing Prayer: Where do you need the Lord's touch most this week?",
+                "body_text": (
+                    "For I will restore health unto thee, and I will heal thee of thy wounds, saith the LORD (Jeremiah 30:17).\n\n"
+                    "As a new week begins, how can our prayer team stand in faith with you or someone you love? "
+                    "Vote below and type 'AMEN' in faith! 🕊️🙏"
+                ),
+                "poll": {
+                    "question": "Where are you praying for God's healing peace first this week?",
+                    "options": [
+                        "Physical healing & recovery for myself or a loved one",
+                        "Quiet peace over an anxious or overburdened mind",
+                        "Comfort & binding up for a grieving or heavy heart",
+                        "Renewed daily strength for caregivers & weary hands",
+                    ],
+                    "context_scripture": "Jeremiah 30:17",
+                },
+                "image_rel_path": "comm-prayer6-001-sunday-balm.png",
+                "target_utc": "15:30",
+                "tags": ["#HealingPrayer", "#TheHealingBalm", "#Jeremiah3017", "#PeaceOfMind"],
+            },
+            {
+                "post_id": "comm-prayer6-002-midweek-wall",
+                "post_type": "PRAYER_WALL",
+                "title": "The Healing Balm Prayer Wall: Lifting Up the Sick & Weary",
+                "body_text": (
+                    "He healeth the broken in heart, and bindeth up their wounds (Psalm 147:3).\n\n"
+                    "Share a first name or general prayer need below — whether for recovery, hospital peace, "
+                    "or emotional comfort. Our prayer team is interceding in faith today. Write 'AMEN'!"
+                ),
+                "poll": None,
+                "image_rel_path": "comm-prayer6-002-midweek-wall.png",
+                "target_utc": "15:30",
+                "tags": ["#PrayerForHealing", "#Psalm147", "#TheHealingBalm"],
+            },
+            {
+                "post_id": "comm-prayer6-003-thursday-scripture",
+                "post_type": "POLL",
+                "title": "Which KJV healing promise anchors your heart today?",
+                "body_text": (
+                    "Bless the LORD, O my soul, and forget not all his benefits: Who forgiveth all thine iniquities; "
+                    "who healeth all thy diseases (Psalm 103:2-3).\n\n"
+                    "Rest your heart upon the unchanging Word of God."
+                ),
+                "poll": {
+                    "question": "Which KJV scripture of healing and peace speaks deepest to you today?",
+                    "options": [
+                        "Jeremiah 30:17 — I will restore health unto thee",
+                        "Psalm 147:3 — He healeth the broken in heart",
+                        "Isaiah 40:31 — They that wait upon the LORD shall renew strength",
+                        "Philippians 4:7 — The peace of God shall keep your hearts",
+                    ],
+                    "context_scripture": "Psalm 103:2-3",
+                },
+                "image_rel_path": "comm-prayer6-003-thursday-scripture.png",
+                "target_utc": "15:30",
+                "tags": ["#Psalm103", "#Isaiah4031", "#TheHealingBalm"],
+            },
+            {
+                "post_id": "comm-prayer6-004-friday-peace",
+                "post_type": "SCRIPTURE_DEVOTIONAL",
+                "title": "Weekend Benediction of Healing Peace & Restored Strength",
+                "body_text": (
+                    "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee (Isaiah 26:3).\n\n"
+                    "May the Great Physician surround your body, quiet your thoughts, and renew your strength all weekend long. "
+                    "Type 'PEACE BE STILL' below in faith! 🕊️💧"
+                ),
+                "poll": None,
+                "image_rel_path": "comm-prayer6-004-friday-peace.png",
+                "target_utc": "15:30",
+                "tags": ["#Isaiah263", "#HealingPeace", "#TheHealingBalm"],
+            },
+        ),
+        short_bridge_theme="divine healing, quiet peace of mind, and renewed strength",
+        short_fallback_title="Prayers for Healing, Recovery & Strength (KJV) — The Healing Balm",
+        milestone_subheading_1250="A SANCTUARY OF HEALING PRAYER ACROSS THE NATIONS",
+        milestone_subheading_1500="DAILY BALM OF SCRIPTURE FOR WEARY HEARTS",
+        milestone_sanctuary_phrase="beside the healing waters of Scripture",
+        milestone_cadence_phrase="every day for healing and peace",
+        milestone_closing_blessing="May the Great Physician guard your heart, body, and mind in His peace.",
+        milestone_2000_closing="your daily sanctuary of healing and restoration prayer",
+        seo_fallback_hashtags=(
+            "#HealingPrayer", "#PrayerForHealing", "#PeaceOfMind", "#TheHealingBalm",
+        ),
+        seo_hook_ref_template=(
+            "Pray this {ref} KJV healing prayer at The Healing Balm for physical recovery, "
+            "peace over anxious thoughts, comfort for broken hearts, and renewed strength."
+        ),
+        seo_hook_generic=(
+            "Pray this KJV healing and restoration prayer at The Healing Balm for recovery, "
+            "peace of mind, comfort in affliction, and God's sustaining grace."
+        ),
+        seo_book_tag_suffixes=("healing prayer", "prayer for healing and peace"),
+        seo_tag_seeds=(
+            "healing prayer kjv",
+            "prayer for healing and recovery",
+            "prayer for a sick loved one",
+            "prayer for anxiety and peace of mind",
+            "jeremiah 30 17 healing prayer",
+            "psalm 103 healing prayer",
+            "the healing balm prayer",
+            "christian prayer for strength and comfort",
+        ),
+        localized_title_es="Oración de Sanidad, Paz Mental y Fortaleza | {channel_name}",
+        localized_title_pt="Oração de Cura, Paz Interior e Força | {channel_name}",
+        localized_ref_title_es="{ref_es} Oración de Sanidad y Restauración | {channel_name}",
+        localized_ref_title_pt="{ref_pt} Oração de Cura e Restauração | {channel_name}",
+        localized_desc_lead_es="Oración bíblica diaria por sanidad divina, consuelo, paz mental y fuerzas renovadas.",
+        localized_desc_lead_pt="Oração bíblica diária por cura divina, consolo, paz interior e forças renovadas.",
+        localized_invite_es=(
+            "Une tu fe en oración con esta meditación bíblica para recibir la paz sanadora y el consuelo de Dios."
+        ),
+        localized_invite_pt=(
+            "Una sua fé em oração com esta meditação bíblica para receber a paz curadora e o consolo de Deus."
+        ),
+        default_comment_scripture_hook=(
+            "Jeremiah 30:17 — 'For I will restore health unto thee, and I will heal thee of thy wounds, saith the LORD.'"
+        ),
+        default_comment_theme="divine healing, quiet peace of mind, and renewed strength",
+        ctr_grade="balm",
+        ctr_hook_hero="HEAL ME O LORD",
+        ctr_quiet_hero="PEACE BE STILL",
+    ),
 }
 
 _CAPABILITIES: dict[str, ChannelCapabilities] = {
@@ -1369,6 +1637,18 @@ _CAPABILITIES: dict[str, ChannelCapabilities] = {
         },
         roadmap="prayer5",
         roadmap_name="FAMILY_ALTAR_ROADMAP",
+        legacy_queue_alias="",
+        supply_min_publishable=6,
+    ),
+    "prayer6": ChannelCapabilities(
+        channel_id="prayer6",
+        brand=_BRANDS["prayer6"],
+        equipment={
+            "system_instruction": "healing_system_instruction.md",
+            "theological_rubric": "healing_theological_rubric.md",
+        },
+        roadmap="prayer6",
+        roadmap_name="HEALING_BALM_ROADMAP",
         legacy_queue_alias="",
         supply_min_publishable=6,
     ),

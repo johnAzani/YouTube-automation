@@ -142,6 +142,22 @@ CHANNELS: dict[str, ChannelProfile] = {
         include_sanctuary_links=False,
         provisioned=True,
     ),
+    "prayer6": ChannelProfile(
+        id="prayer6",
+        display_name="The Healing Balm",
+        handle="@TheHealingBalmDaily",
+        secret_prefix="PRAYER6_",
+        # Owner decision, 2026-11-10: sixth prayer channel dedicated to daily
+        # KJV divine healing, comfort for the brokenhearted, peace of mind, and
+        # spiritual/physical restoration prayer (Jeremiah 30:17 / Psalm 147:3).
+        # Starts with provisioned=False until @TheHealingBalmDaily is created on
+        # YouTube and its separate Google Cloud OAuth credentials + Gemini API
+        # key (PRAYER6_*) are saved in GitHub Secrets.
+        default_privacy="public",
+        auto_publish=True,
+        include_sanctuary_links=False,
+        provisioned=False,
+    ),
 }
 
 # Friendly aliases accepted in frontmatter / workflow inputs.
@@ -165,6 +181,11 @@ _ALIASES = {
     "the-family-altar": "prayer5",
     "household": "prayer5",
     "channel5": "prayer5",
+    "healing": "prayer6",
+    "healing-balm": "prayer6",
+    "the-healing-balm": "prayer6",
+    "restoration": "prayer6",
+    "channel6": "prayer6",
 }
 
 
