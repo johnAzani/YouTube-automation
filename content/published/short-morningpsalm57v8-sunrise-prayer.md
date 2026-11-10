@@ -24,6 +24,7 @@ thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently.
 thumbnail_poster: ["AWAKE MY SOUL", "BEGIN WITH PSALM 57:8", "AWAKEN THE DAWN", "THE MORNING ALTAR"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-11T05:34:31Z"
 ---
 
 Welcome the soft light of a brand new day as peace fills your heart. Scripture reminds us in Psalm 57:8, Awake, my soul! Awake, harp and lyre! I will awaken the dawn. Lord, as this morning sun rises, we lift our spirits and surrender our worries to You. Fill our minds with Your quiet wisdom and guide our steps into Your divine purpose today. May Your unfailing love protect us and shine through everything we speak and do. We give You glory for this sacred morning and rest securely in Your eternal grace. Subscribe to The Morning Altar to begin every sunrise in prayer.

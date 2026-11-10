@@ -19,11 +19,12 @@ width: 720
 height: 1280
 duration_seconds: 52.13
 scenes_verified: 7
-thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCUGoTVLxkAv25Z85wBcBF3w; auth_channel_title=The Midday Watch; long_uploads_s"
+thumbnail_pending: false
 thumbnail_poster: ["THE MIDDAY WATCH", "PAUSE AND PRAY", "DANIEL 6:10", "NOON PRAYER"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
 ---
 
 Pause what you are doing right now and draw near to God. As Daniel did in Daniel six verse ten, three times a day he got down on his knees and prayed, giving thanks to his God. In the middle of your busy day, take this quiet moment to turn your heart toward heaven. Let the rush of your work fade away as you rest in His unshakeable peace. Father, we offer You this midday hour, giving thanks for Your constant presence and faithful care. Renew our strength, guide our steps, and fill our minds with Your quiet grace for the rest of today. Subscribe to The Midday Watch to pause and pray with us every noon.

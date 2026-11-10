@@ -20,10 +20,11 @@ height: 1280
 duration_seconds: 57.33
 scenes_verified: 7
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE MIDNIGHT WATCH", "CHAINS MUST BREAK", "ACTS 16:25-26", "MIDNIGHT PRAYER"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_attempts: 1
 ---
 
 Rise in spirit at this midnight hour and remember what happened in Philippi. Acts sixteen verse twenty-five says, And at midnight Paul and Silas prayed, and sang praises unto God. They did not wait for the prison doors to open first; they praised God right inside the darkest watch. And suddenly the foundations were shaken, all the doors were opened, and every band was loosed. Father, receive our midnight thanksgiving tonight over every trial, delay, and closed door. Loose heavy burdens from our households and establish Your peace and breakthrough in Christ. Type Amen and subscribe to The Midnight Watch to stand in prayer at midnight.
