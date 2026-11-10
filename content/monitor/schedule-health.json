@@ -2,20 +2,6 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
-      "late_minutes": 297,
-      "name": "Growth autopilot",
-      "ran_at": "2026-11-09T07:11:34+00:00",
-      "slot": "2026-11-09T02:14:00+00:00",
-      "workflow": "growth-autopilot.yml"
-    },
-    {
-      "late_minutes": 237,
-      "name": "Gemini Brain Autonomous Queue Replenishment",
-      "ran_at": "2026-11-09T07:11:36+00:00",
-      "slot": "2026-11-09T03:14:00+00:00",
-      "workflow": "gemini_brain.yml"
-    },
-    {
       "late_minutes": 228,
       "name": "Keepalive",
       "ran_at": "2026-11-09T07:11:37+00:00",
@@ -58,24 +44,17 @@
       "workflow": "community.yml"
     }
   ],
-  "generated_at": "2026-11-10T02:06:20.882106+00:00",
-  "last_run_at": "2026-11-10T02:05:30+00:00",
+  "generated_at": "2026-11-10T03:49:08.203660+00:00",
+  "last_run_at": "2026-11-10T03:48:06+00:00",
   "on_time": [
     {
-      "late_minutes": 102,
-      "name": "Automation monitor",
-      "ran_at": "2026-11-10T02:05:30+00:00",
-      "slot": "2026-11-10T00:23:00+00:00",
-      "workflow": "monitor.yml"
-    },
-    {
-      "late_minutes": 78,
+      "late_minutes": 1,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-10T02:05:30+00:00",
-      "slot": "2026-11-10T00:47:00+00:00",
+      "ran_at": "2026-11-10T03:48:06+00:00",
+      "slot": "2026-11-10T03:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 0,
+  "silence_minutes": 1,
   "warn_minutes": 120
 }
