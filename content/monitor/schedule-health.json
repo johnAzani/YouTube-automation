@@ -9,13 +9,6 @@
       "workflow": "keepalive.yml"
     },
     {
-      "late_minutes": 213,
-      "name": "Produce video",
-      "ran_at": "2026-11-09T09:47:13+00:00",
-      "slot": "2026-11-09T06:14:00+00:00",
-      "workflow": "produce.yml"
-    },
-    {
       "late_minutes": 205,
       "name": "automation-health",
       "ran_at": "2026-11-09T23:39:48+00:00",
@@ -49,17 +42,10 @@
       "ran_at": "2026-11-08T21:15:33+00:00",
       "slot": "2026-11-08T19:14:00+00:00",
       "workflow": "community.yml"
-    },
-    {
-      "late_minutes": 121,
-      "name": "Automation monitor",
-      "ran_at": "2026-11-10T05:24:25+00:00",
-      "slot": "2026-11-10T03:23:00+00:00",
-      "workflow": "monitor.yml"
     }
   ],
-  "generated_at": "2026-11-10T05:26:01.129204+00:00",
-  "last_run_at": "2026-11-10T05:25:57+00:00",
+  "generated_at": "2026-11-10T07:10:08.209041+00:00",
+  "last_run_at": "2026-11-10T07:09:43+00:00",
   "on_time": [
     {
       "late_minutes": 95,
@@ -69,10 +55,17 @@
       "workflow": "growth-autopilot.yml"
     },
     {
-      "late_minutes": 1,
+      "late_minutes": 46,
+      "name": "Automation monitor",
+      "ran_at": "2026-11-10T07:09:23+00:00",
+      "slot": "2026-11-10T06:23:00+00:00",
+      "workflow": "monitor.yml"
+    },
+    {
+      "late_minutes": 22,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-10T03:48:06+00:00",
-      "slot": "2026-11-10T03:47:00+00:00",
+      "ran_at": "2026-11-10T07:09:23+00:00",
+      "slot": "2026-11-10T06:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
