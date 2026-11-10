@@ -1,0 +1,318 @@
+{
+  "key": "short-isaiah41v10",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "REST IN HIS STRENGTH",
+    "BEDTIME PRAYER"
+  ],
+  "poster": [
+    "FEAR NOT FOR I AM WITH YOU",
+    "A NIGHTTIME PRAYER FOR PEACE",
+    "ISAIAH 41:10",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm mountain lake glowing night stars",
+    "peaceful forest night moonlight sky mist",
+    "gentle candle flame warm soft glow darkness",
+    "serene ocean horizon twilight quiet waves",
+    "misty valley night starry sky quiet night",
+    "calm twilight lake reflection still water",
+    "cozy bedroom warm light candle stillness"
+  ],
+  "scenes": [
+    {
+      "a": "Take a deep breath and let",
+      "img": "short-isaiah41v10-scene-01.jpg",
+      "kicker": "ISAIAH 41:10",
+      "sub": "BREATHE IN HIS PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Fear not, for I am with you",
+      "img": "short-isaiah41v10-scene-02.jpg",
+      "kicker": "ISAIAH 41:10",
+      "sub": "HE IS WITH YOU ALWAYS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "we lay down every fear and anxiety",
+      "img": "short-isaiah41v10-scene-03.jpg",
+      "kicker": "ISAIAH 41:10",
+      "sub": "RELEASE YOUR ANXIETY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Strengthen our tired minds and quiet",
+      "img": "short-isaiah41v10-scene-04.jpg",
+      "kicker": "ISAIAH 41:10",
+      "sub": "STRENGTHEN OUR MINDS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Rest your hand upon us tonight",
+      "img": "short-isaiah41v10-scene-05.jpg",
+      "kicker": "ISAIAH 41:10",
+      "sub": "SHIELDED IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "We rest secure, knowing you hold us",
+      "img": "short-isaiah41v10-scene-06.jpg",
+      "kicker": "ISAIAH 41:10",
+      "sub": "REST SECURE TONIGHT",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to join us in The Secret Place",
+      "img": "short-isaiah41v10-scene-07.jpg",
+      "kicker": "ISAIAH 41:10",
+      "sub": "JOIN US IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "Take a deep breath and let the quiet of this night settle over your heart."
+    ],
+    [
+      10,
+      22,
+      "Hear the gentle whisper of God in Isaiah forty-one verse ten: Fear not, for I am with you; be not dismayed, for I am your God; I will strengthen you, I will help you, I will uphold you with my righteous right hand."
+    ],
+    [
+      22,
+      31,
+      "Lord, as sleep draws near, we lay down every fear and anxiety into your loving hands."
+    ],
+    [
+      31,
+      39,
+      "Strengthen our tired minds and quiet every restless thought with your perfect peace."
+    ],
+    [
+      39,
+      47,
+      "Rest your hand upon us tonight and let your presence shield our home from harm."
+    ],
+    [
+      47,
+      55,
+      "We rest secure, knowing you hold us closely through every dark hour until dawn."
+    ],
+    [
+      55,
+      63,
+      "Subscribe to join us in The Secret Place for daily prayers every night. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "TAKE A DEEP BREATH AND LET",
+        "THE QUIET OF THIS NIGHT",
+        "SETTLE OVER YOUR HEART"
+      ],
+      [
+        "BREATH",
+        "QUIET",
+        "SETTLE"
+      ],
+      "ISAIAH 41:10"
+    ],
+    [
+      10,
+      22,
+      [
+        "FEAR NOT FOR I AM WITH YOU",
+        "BE NOT DISMAYED FOR I AM YOUR GOD",
+        "I WILL STRENGTHEN YOU AND HELP YOU",
+        "I WILL UPHOLD YOU WITH MY HAND"
+      ],
+      [
+        "FEAR NOT",
+        "STRENGTHEN",
+        "UPHOLD"
+      ],
+      "ISAIAH 41:10"
+    ],
+    [
+      22,
+      31,
+      [
+        "LORD AS SLEEP DRAWS NEAR",
+        "WE LAY DOWN EVERY FEAR",
+        "AND ANXIETY INTO YOUR HANDS"
+      ],
+      [
+        "SLEEP",
+        "FEAR",
+        "HANDS"
+      ],
+      "ISAIAH 41:10"
+    ],
+    [
+      31,
+      39,
+      [
+        "STRENGTHEN OUR TIRED MINDS",
+        "AND QUIET EVERY RESTLESS THOUGHT",
+        "WITH YOUR PERFECT PEACE"
+      ],
+      [
+        "STRENGTHEN",
+        "QUIET",
+        "PEACE"
+      ],
+      "ISAIAH 41:10"
+    ],
+    [
+      39,
+      47,
+      [
+        "REST YOUR HAND UPON US TONIGHT",
+        "AND LET YOUR PRESENCE SHIELD",
+        "OUR HOME FROM HARM"
+      ],
+      [
+        "REST",
+        "SHIELD",
+        "HOME"
+      ],
+      "ISAIAH 41:10"
+    ],
+    [
+      47,
+      55,
+      [
+        "WE REST SECURE KNOWING YOU HOLD US",
+        "CLOSELY THROUGH EVERY DARK HOUR",
+        "UNTIL THE DAWN"
+      ],
+      [
+        "REST SECURE",
+        "HOLD US",
+        "DAWN"
+      ],
+      "ISAIAH 41:10"
+    ],
+    [
+      55,
+      63,
+      [
+        "SUBSCRIBE TO JOIN US IN THE SECRET PLACE",
+        "FOR DAILY PRAYERS EVERY NIGHT",
+        "AMEN"
+      ],
+      [
+        "SUBSCRIBE",
+        "SECRET PLACE",
+        "AMEN"
+      ],
+      "ISAIAH 41:10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Take a deep breath and let",
+      "kind": "phrase",
+      "words": [
+        "DEEP BREATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Fear not, for I am with you",
+      "kind": "phrase",
+      "words": [
+        "FEAR NOT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "we lay down every fear and anxiety",
+      "kind": "phrase",
+      "words": [
+        "LAY DOWN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Strengthen our tired minds and quiet",
+      "kind": "phrase",
+      "words": [
+        "STRENGTHEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Rest your hand upon us tonight",
+      "kind": "phrase",
+      "words": [
+        "REST YOUR HAND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We rest secure, knowing you hold us",
+      "kind": "phrase",
+      "words": [
+        "REST SECURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to join us in The Secret Place",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 41:10"
+}
