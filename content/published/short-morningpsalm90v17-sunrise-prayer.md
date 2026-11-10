@@ -24,7 +24,7 @@ thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently.
 thumbnail_poster: ["LET THE FAVOR", "OF THE LORD", "BE UPON US", "PSALM 90:17"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-10T04:35:01Z"
+thumbnail_retry_after: "2026-11-10T11:24:55Z"
 ---
 
 Welcome this new morning light with a quiet and open heart today. As the golden dawn breaks over the horizon, we recall Psalm 90 verse 17. Let the favor of the Lord our God be upon us, and establish the work of our hands. Heavenly Father, as this day begins, cover our humble steps with Your gentle grace. Guide our thoughts, strengthen our hands, and bless every honest effort we make today. May everything we build reflect Your love and bring quiet peace to those we serve. Anchor our hearts in Your abiding presence now and forever. Amen. Subscribe to The Morning Altar to begin every sunrise in prayer.
