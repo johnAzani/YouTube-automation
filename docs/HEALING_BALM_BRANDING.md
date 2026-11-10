@@ -1,6 +1,6 @@
 # The Healing Balm — Official YouTube Brand Kit (`prayer6`)
 
-**Status:** **REGISTERED (`provisioned=False`)** — awaiting `@TheHealingBalmDaily` YouTube channel creation and `PRAYER6_*` GitHub Secrets. See `docs/SIXTH_CHANNEL_SETUP.md`.
+**Status:** **LIVE & PROVISIONED (2026-11-10)** on `@TheHealingBalmDaily` — dedicated Google Cloud project, all 5 `PRAYER6_*` secrets (`GEMINI_API_KEY`, `YOUTUBE_CHANNEL_ID`, `YOUTUBE_CLIENT_ID`, `YOUTUBE_CLIENT_SECRET`, `YOUTUBE_REFRESH_TOKEN`) saved in GitHub Secrets, `provisioned=True` in `pipeline/channels.py`. See `docs/SIXTH_CHANNEL_SETUP.md`.
 
 ## Visual Differentiation Across the 6-Channel Sanctuary Network
 - **Channel 1 — The Secret Place (`@TheSecretPlace`)**: Deep indigo-navy ring + Cross + Open Bible; mountain lake night banner.

@@ -1,0 +1,331 @@
+{
+  "key": "short-healingisaiah40v29",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "HEALING PRAYER",
+    "ISAIAH 40:29-31"
+  ],
+  "poster": [
+    "THE HEALING BALM",
+    "STRENGTH IN WEAKNESS",
+    "ISAIAH 40:29-31",
+    "HEALING PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm \u2014 receive God's healing peace"
+  ],
+  "stock_queries": [
+    "peaceful mountain river calm water forest",
+    "divine light breaking through clouds over peaceful landscape",
+    "ancient chapel interior candlelight peaceful sanctuary",
+    "forest sunlight mist",
+    "sunlight breaking through clouds mountain pass",
+    "golden light rays through clouds over mountain peak",
+    "serene valley stream morning light peaceful"
+  ],
+  "scenes": [
+    {
+      "a": "Bring your tired body and overburdened mind before the everlasting God who never grows weary.",
+      "img": "short-healingisaiah40v29-scene-01.jpg",
+      "kicker": "ISAIAH 40:28-31",
+      "sub": "UNWEARIED CREATOR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Isaiah forty verse twenty-nine declares, He giveth power to the faint; and to them that have no might he increaseth strength.",
+      "img": "short-healingisaiah40v29-scene-02.jpg",
+      "kicker": "ISAIAH 40:29",
+      "sub": "POWER TO THE FAINT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles.",
+      "img": "short-healingisaiah40v29-scene-03.jpg",
+      "kicker": "ISAIAH 40:31",
+      "sub": "WINGS AS EAGLES",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "They shall run, and not be weary; and they shall walk step by step, and not faint.",
+      "img": "short-healingisaiah40v29-scene-04.jpg",
+      "kicker": "ISAIAH 40:31",
+      "sub": "WALK AND NOT FAINT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, exchange our exhaustion for Your sustaining grace and quiet every anxious thought.",
+      "img": "short-healingisaiah40v29-scene-05.jpg",
+      "kicker": "ISAIAH 40:29-31",
+      "sub": "SUSTAINING GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Strengthen every recovering loved one, caregiver, and physician beneath Your gentle hand.",
+      "img": "short-healingisaiah40v29-scene-06.jpg",
+      "kicker": "ISAIAH 40:29-31",
+      "sub": "GENTLE SHEPHERD CARE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Type Amen and subscribe to The Healing Balm to receive God's healing peace in daily prayer.",
+      "img": "short-healingisaiah40v29-scene-07.jpg",
+      "kicker": "THE HEALING BALM",
+      "sub": "HEALING PEACE DAILY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Bring your tired body and overburdened mind before the everlasting God who never grows weary."
+    ],
+    [
+      9,
+      17,
+      "Isaiah forty verse twenty-nine declares, He giveth power to the faint; and to them that have no might he increaseth strength."
+    ],
+    [
+      18,
+      26,
+      "But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles."
+    ],
+    [
+      27,
+      35,
+      "They shall run, and not be weary; and they shall walk step by step, and not faint."
+    ],
+    [
+      36,
+      44,
+      "Father, exchange our exhaustion for Your sustaining grace and quiet every anxious thought."
+    ],
+    [
+      45,
+      53,
+      "Strengthen every recovering loved one, caregiver, and physician beneath Your gentle hand."
+    ],
+    [
+      54,
+      61,
+      "Type Amen and subscribe to The Healing Balm to receive God's healing peace in daily prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "BRING YOUR TIRED BODY",
+        "AND MIND BEFORE OUR",
+        "UNWEARIED GOD TODAY"
+      ],
+      [
+        "TIRED",
+        "UNWEARIED",
+        "GOD"
+      ],
+      "ISAIAH 40:28-31"
+    ],
+    [
+      9,
+      17,
+      [
+        "HE GIVETH POWER TO",
+        "THE FAINT AND INCREASES",
+        "STRENGTH IN WEAKNESS"
+      ],
+      [
+        "POWER",
+        "FAINT",
+        "STRENGTH"
+      ],
+      "ISAIAH 40:29"
+    ],
+    [
+      18,
+      26,
+      [
+        "THEY THAT WAIT UPON",
+        "THE LORD SHALL RENEW",
+        "THEIR STRENGTH TODAY"
+      ],
+      [
+        "WAIT",
+        "LORD",
+        "STRENGTH"
+      ],
+      "ISAIAH 40:31"
+    ],
+    [
+      27,
+      35,
+      [
+        "THEY SHALL WALK STEP",
+        "BY STEP IN GRACE",
+        "AND NOT FAINT TODAY"
+      ],
+      [
+        "WALK",
+        "GRACE",
+        "FAINT"
+      ],
+      "ISAIAH 40:31"
+    ],
+    [
+      36,
+      44,
+      [
+        "EXCHANGE EXHAUSTION",
+        "FOR YOUR SUSTAINING",
+        "HEALING GRACE TODAY"
+      ],
+      [
+        "EXCHANGE",
+        "SUSTAINING",
+        "GRACE"
+      ],
+      "ISAIAH 40:29-31"
+    ],
+    [
+      45,
+      53,
+      [
+        "STRENGTHEN OUR LOVED",
+        "ONES AND CAREGIVERS",
+        "IN YOUR GENTLE PEACE"
+      ],
+      [
+        "STRENGTHEN",
+        "GENTLE",
+        "PEACE"
+      ],
+      "ISAIAH 40:29-31"
+    ],
+    [
+      54,
+      61,
+      [
+        "SUBSCRIBE TO",
+        "THE HEALING BALM",
+        "STRENGTH IN WEAKNESS"
+      ],
+      [
+        "SUBSCRIBE",
+        "HEALING",
+        "STRENGTH"
+      ],
+      "THE HEALING BALM"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Bring your tired body and overburdened mind before the everlasting God who never grows weary.",
+      "kind": "phrase",
+      "words": [
+        "TIRED",
+        "UNWEARIED",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Isaiah forty verse twenty-nine declares, He giveth power to the faint; and to them that have no might he increaseth strength.",
+      "kind": "phrase",
+      "words": [
+        "POWER",
+        "FAINT",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles.",
+      "kind": "phrase",
+      "words": [
+        "WAIT",
+        "LORD",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "They shall run, and not be weary; and they shall walk step by step, and not faint.",
+      "kind": "phrase",
+      "words": [
+        "WALK",
+        "GRACE",
+        "FAINT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, exchange our exhaustion for Your sustaining grace and quiet every anxious thought.",
+      "kind": "phrase",
+      "words": [
+        "EXCHANGE",
+        "SUSTAINING",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Strengthen every recovering loved one, caregiver, and physician beneath Your gentle hand.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTHEN",
+        "GENTLE",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Type Amen and subscribe to The Healing Balm to receive God's healing peace in daily prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "HEALING",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 40:29-31"
+}
