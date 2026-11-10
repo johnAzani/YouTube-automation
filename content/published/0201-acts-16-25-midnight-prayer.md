@@ -2,7 +2,7 @@
 id: '0201'
 title: Acts 16:25-26 Midnight Prayer | The Midnight Watch
 slug: acts-16-25-midnight-prayer
-status: approved
+status: published
 channel: prayer4
 privacy: public
 format: longform
@@ -73,6 +73,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-10"
+published_at: "2026-11-10T23:16:01Z"
+youtube_video_id: "4NMgWbS5Bu8"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Rising at the Midnight Hour

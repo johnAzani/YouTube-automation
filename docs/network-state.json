@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T22:22:29Z",
+  "generated_at": "2026-11-10T23:16:55Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 7
   },
   "totals": {
-    "published_total": 72,
-    "published_longform": 31,
-    "published_shorts": 41,
-    "public_total": 70,
-    "queued_longform": 44,
-    "queued_shorts": 27,
+    "published_total": 74,
+    "published_longform": 32,
+    "published_shorts": 42,
+    "public_total": 72,
+    "queued_longform": 43,
+    "queued_shorts": 26,
     "automations_ok": 9,
     "automations_total": 10,
     "network_healthy": true
@@ -233,32 +233,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 2,
-        "published_longform": 1,
-        "published_shorts": 1,
-        "public_total": 2,
-        "queued_longform": 5,
+        "published_total": 4,
+        "published_longform": 2,
+        "published_shorts": 2,
+        "public_total": 4,
+        "queued_longform": 4,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0200",
-        "title": "Psalm 119:62 Midnight Prayer | The Midnight Watch",
-        "format": "longform",
-        "youtube_video_id": "veAZgP_yFg4",
-        "watch_url": "https://youtu.be/veAZgP_yFg4",
-        "published_on": "2026-11-10",
-        "published_at": "2026-11-10T17:26:23Z"
-      },
-      "next_queued_longform": {
         "id": "0201",
         "title": "Acts 16:25-26 Midnight Prayer | The Midnight Watch",
-        "words": 942,
+        "format": "longform",
+        "youtube_video_id": "4NMgWbS5Bu8",
+        "watch_url": "https://youtu.be/4NMgWbS5Bu8",
+        "published_on": "2026-11-10",
+        "published_at": "2026-11-10T23:16:01Z"
+      },
+      "next_queued_longform": {
+        "id": "0202",
+        "title": "Isaiah 62:6-7 Midnight Prayer | The Midnight Watch",
+        "words": 904,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightacts16v25",
-        "scripture": "Acts 16:25-26",
+        "short": "short-midnightisaiah62v6",
+        "scripture": "Isaiah 62:6-7",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -385,6 +385,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0201",
+      "slug": "acts-16-25-midnight-prayer",
+      "file": "0201-acts-16-25-midnight-prayer.md",
+      "title": "Acts 16:25-26 Midnight Prayer | The Midnight Watch",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-10",
+      "published_at": "2026-11-10T23:16:01Z",
+      "youtube_video_id": "4NMgWbS5Bu8",
+      "watch_url": "https://youtu.be/4NMgWbS5Bu8",
+      "youtu_be_url": "https://youtu.be/4NMgWbS5Bu8",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/4NMgWbS5Bu8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/4NMgWbS5Bu8/hqdefault.jpg",
+      "thumb_text": "CHAINS MUST BREAK",
+      "duration_label": "~6 min",
+      "words": 942
+    },
+    {
+      "id": "SHORT-MIDNIGHTACTS16V25",
+      "slug": "short-midnightacts16v25-midnight-prayer",
+      "file": "short-midnightacts16v25-midnight-prayer.md",
+      "title": "Pray This Acts 16:25-26 Midnight Prayer | Midnight Prayer #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-10",
+      "published_at": "2026-11-10T22:31:10Z",
+      "youtube_video_id": "YnvQH27q9NI",
+      "watch_url": "https://www.youtube.com/shorts/YnvQH27q9NI",
+      "youtu_be_url": "https://youtu.be/YnvQH27q9NI",
+      "shorts_url": "https://www.youtube.com/shorts/YnvQH27q9NI",
+      "studio_url": "https://studio.youtube.com/video/YnvQH27q9NI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/YnvQH27q9NI/hqdefault.jpg",
+      "thumb_text": "THE MIDNIGHT WATCH \u00b7 CHAINS MUST BREAK",
+      "duration_label": "57s",
+      "words": 258
+    },
     {
       "id": "SHORT-MIDDAYDANIEL6V10",
       "slug": "short-middaydaniel6v10-midday-prayer",
@@ -2422,19 +2468,6 @@
         "words": 1454
       },
       {
-        "id": "0201",
-        "slug": "acts-16-25-midnight-prayer",
-        "file": "0201-acts-16-25-midnight-prayer.md",
-        "title": "Acts 16:25-26 Midnight Prayer | The Midnight Watch",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 942
-      },
-      {
         "id": "0202",
         "slug": "isaiah-62-6-midnight-prayer",
         "file": "0202-isaiah-62-6-midnight-prayer.md",
@@ -2749,17 +2782,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightacts16v25",
-        "file": "0201-short-midnightacts16v25.yml",
-        "companion_longform_id": "201",
-        "scripture": "Acts 16:25-26",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightisaiah62v6",
