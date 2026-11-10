@@ -108,6 +108,10 @@ jobs:
           PRAYER5_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER5_YOUTUBE_CLIENT_SECRET }}
           PRAYER5_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER5_YOUTUBE_REFRESH_TOKEN }}
           PRAYER5_YOUTUBE_CHANNEL_ID: ${{ vars.PRAYER5_YOUTUBE_CHANNEL_ID || secrets.PRAYER5_YOUTUBE_CHANNEL_ID }}
+          PRAYER6_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER6_YOUTUBE_CLIENT_ID }}
+          PRAYER6_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER6_YOUTUBE_CLIENT_SECRET }}
+          PRAYER6_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER6_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER6_YOUTUBE_CHANNEL_ID: ${{ vars.PRAYER6_YOUTUBE_CHANNEL_ID || secrets.PRAYER6_YOUTUBE_CHANNEL_ID }}
         run: |
           python -m scripts.sync_published_thumbnails --all-channels
           python -m scripts.retrofit_published_metadata --sync-pending
@@ -128,6 +132,7 @@ jobs:
           PRAYER3_GEMINI_API_KEY: ${{ secrets.PRAYER3_GEMINI_API_KEY }}
           PRAYER4_GEMINI_API_KEY: ${{ secrets.PRAYER4_GEMINI_API_KEY }}
           PRAYER5_GEMINI_API_KEY: ${{ secrets.PRAYER5_GEMINI_API_KEY }}
+          PRAYER6_GEMINI_API_KEY: ${{ secrets.PRAYER6_GEMINI_API_KEY }}
           EXPECT_BRAIN_API: "1"
         run: python -m scripts.automation_monitor --save
 
@@ -140,6 +145,7 @@ jobs:
           PRAYER3_GEMINI_API_KEY: ${{ secrets.PRAYER3_GEMINI_API_KEY }}
           PRAYER4_GEMINI_API_KEY: ${{ secrets.PRAYER4_GEMINI_API_KEY }}
           PRAYER5_GEMINI_API_KEY: ${{ secrets.PRAYER5_GEMINI_API_KEY }}
+          PRAYER6_GEMINI_API_KEY: ${{ secrets.PRAYER6_GEMINI_API_KEY }}
           EXPECT_BRAIN_API: "1"
         run: python -m scripts.pipeline_watchdog
 

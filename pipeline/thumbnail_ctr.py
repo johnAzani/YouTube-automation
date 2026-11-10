@@ -116,6 +116,13 @@ HEARTH_OLIVE = Palette("hearth-olive", (11, 25, 17), (86, 64, 30), (255, 224, 14
 HEARTH_SANCTUARY = Palette("hearth-sanctuary", (12, 26, 18), (102, 72, 34), (255, 226, 152),
                            (250, 210, 96), (254, 249, 238))
 
+BALM_AZURE = Palette("balm-azure", (8, 30, 44), (24, 88, 108), (248, 222, 148),
+                     (246, 206, 102), (252, 248, 240))
+BALM_ALABASTER = Palette("balm-alabaster", (10, 34, 50), (32, 98, 118), (252, 230, 164),
+                         (248, 212, 108), (252, 248, 240))
+BALM_SANCTUARY = Palette("balm-sanctuary", (9, 32, 46), (38, 106, 124), (254, 232, 172),
+                         (250, 214, 112), (252, 248, 240))
+
 _NOCTURNAL_GRADES = ("night", "midnight")
 
 
@@ -254,6 +261,30 @@ HEARTH_VARIANTS = (
     ),
 )
 
+BALM_VARIANTS = (
+    CtrVariant(
+        label="hook", concept="imperative — HEAL ME O LORD",
+        hero="HEAL ME O LORD", palette=BALM_AZURE,
+        moon=(0.772, 0.40), moon_scale=0.206, horizon=0.730, dawn=0.74,
+        rays=True, seed=1601, text_box=(86, 84, 690, 470), house=(0.312, 0.158),
+        grade="balm",
+    ),
+    CtrVariant(
+        label="quiet", concept="curiosity — PEACE BE STILL",
+        hero="PEACE BE STILL", palette=BALM_ALABASTER,
+        moon=(0.798, 0.38), moon_scale=0.192, horizon=0.760, dawn=0.52,
+        rays=True, seed=1702, text_box=(86, 84, 706, 470), house=(0.302, 0.160),
+        grade="balm",
+    ),
+    CtrVariant(
+        label="poster", concept="textless — healing living waters",
+        hero=None, palette=BALM_SANCTUARY,
+        moon=(0.555, 0.435), moon_scale=0.234, horizon=0.698, dawn=0.82,
+        rays=True, seed=1803, text_box=(0, 0, 0, 0), house=(0.215, 0.170),
+        grade="balm",
+    ),
+)
+
 
 def variants_for_channel(channel_id: str | None = None) -> tuple["CtrVariant", ...]:
     """Select the 16:9 CTR variant pack matching `channel_id`'s daypart grade."""
@@ -271,6 +302,8 @@ def variants_for_channel(channel_id: str | None = None) -> tuple["CtrVariant", .
         base = MIDNIGHT_VARIANTS
     elif grade == "hearth":
         base = HEARTH_VARIANTS
+    elif grade == "balm":
+        base = BALM_VARIANTS
     else:
         return CTR_VARIANTS
     return (
