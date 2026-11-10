@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T20:19:45Z",
+  "generated_at": "2026-11-10T22:13:28Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 7
   },
   "totals": {
-    "published_total": 69,
-    "published_longform": 30,
-    "published_shorts": 39,
-    "public_total": 67,
-    "queued_longform": 45,
-    "queued_shorts": 29,
+    "published_total": 71,
+    "published_longform": 31,
+    "published_shorts": 40,
+    "public_total": 69,
+    "queued_longform": 44,
+    "queued_shorts": 28,
     "automations_ok": 9,
     "automations_total": 10,
     "network_healthy": true
@@ -99,32 +99,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 27,
-        "published_longform": 13,
-        "published_shorts": 14,
-        "public_total": 26,
-        "queued_longform": 5,
+        "published_total": 29,
+        "published_longform": 14,
+        "published_shorts": 15,
+        "public_total": 28,
+        "queued_longform": 4,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "0056",
-        "title": "Psalm 30:5 Morning Prayer | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "2s8CWNIoOz4",
-        "watch_url": "https://youtu.be/2s8CWNIoOz4",
-        "published_on": "2026-11-10",
-        "published_at": "2026-11-10T15:55:51Z"
-      },
-      "next_queued_longform": {
         "id": "0057",
         "title": "Psalm 19:4-6 Morning Prayer: Rejoicing as a Strong Man to Run a Race",
-        "words": 1597,
+        "format": "longform",
+        "youtube_video_id": "isIRHPSVy-0",
+        "watch_url": "https://youtu.be/isIRHPSVy-0",
+        "published_on": "2026-11-10",
+        "published_at": "2026-11-10T22:12:35Z"
+      },
+      "next_queued_longform": {
+        "id": "0058",
+        "title": "Psalm 57:8 Awake Early in Praise Morning Prayer | The Morning Altar",
+        "words": 1563,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm57v8",
-        "scripture": "Psalm 57:8",
+        "short": "short-morningpsalm108v2",
+        "scripture": "Psalm 108:2",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -385,6 +385,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0057",
+      "slug": "psalm-19-4-6-morning-prayer-strength-for-the-race",
+      "file": "0057-psalm-19-4-6-morning-prayer-strength-for-the-race.md",
+      "title": "Psalm 19:4-6 Morning Prayer: Rejoicing as a Strong Man to Run a Race",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-10",
+      "published_at": "2026-11-10T22:12:35Z",
+      "youtube_video_id": "isIRHPSVy-0",
+      "watch_url": "https://youtu.be/isIRHPSVy-0",
+      "youtu_be_url": "https://youtu.be/isIRHPSVy-0",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/isIRHPSVy-0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/isIRHPSVy-0/hqdefault.jpg",
+      "thumb_text": "STRENGTH FOR THE",
+      "duration_label": "~11 min",
+      "words": 1597
+    },
+    {
+      "id": "SHORT-MORNINGPSALM57V8",
+      "slug": "short-morningpsalm57v8-sunrise-prayer",
+      "file": "short-morningpsalm57v8-sunrise-prayer.md",
+      "title": "Say This Psalm 57:8 Prayer at Sunrise | The Morning Altar #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-10",
+      "published_at": "2026-11-10T20:57:48Z",
+      "youtube_video_id": "22AqGRO-jiY",
+      "watch_url": "https://www.youtube.com/shorts/22AqGRO-jiY",
+      "youtu_be_url": "https://youtu.be/22AqGRO-jiY",
+      "shorts_url": "https://www.youtube.com/shorts/22AqGRO-jiY",
+      "studio_url": "https://studio.youtube.com/video/22AqGRO-jiY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/22AqGRO-jiY/hqdefault.jpg",
+      "thumb_text": "AWAKE MY SOUL \u00b7 BEGIN WITH PSALM 57:8",
+      "duration_label": "53s",
+      "words": 613
+    },
     {
       "id": "SHORT-PSALM139V11",
       "slug": "short-psalm139v11-pre-sleep-prayer",
@@ -2236,19 +2282,6 @@
         "words": 1025
       },
       {
-        "id": "0057",
-        "slug": "psalm-19-4-6-morning-prayer-strength-for-the-race",
-        "file": "0057-psalm-19-4-6-morning-prayer-strength-for-the-race.md",
-        "title": "Psalm 19:4-6 Morning Prayer: Rejoicing as a Strong Man to Run a Race",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1597
-      },
-      {
         "id": "0058",
         "slug": "psalm-57-8-awake-early-morning-prayer",
         "file": "0058-psalm-57-8-awake-early-morning-prayer.md",
@@ -2605,17 +2638,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-morningpsalm57v8",
-        "file": "0058-short-morningpsalm57v8.yml",
-        "companion_longform_id": "0058",
-        "scripture": "Psalm 57:8",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm108v2",

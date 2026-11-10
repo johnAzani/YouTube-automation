@@ -2,7 +2,7 @@
 id: '0057'
 title: 'Psalm 19:4-6 Morning Prayer: Rejoicing as a Strong Man to Run a Race'
 slug: psalm-19-4-6-morning-prayer-strength-for-the-race
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -75,6 +75,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-10"
+published_at: "2026-11-10T22:12:35Z"
+youtube_video_id: "isIRHPSVy-0"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — The First Light and the Voice of the Morning
