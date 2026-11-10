@@ -1,0 +1,331 @@
+{
+  "key": "short-midnightacts16v25",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "MIDNIGHT PRAYER",
+    "ACTS 16:25-26"
+  ],
+  "poster": [
+    "THE MIDNIGHT WATCH",
+    "CHAINS MUST BREAK",
+    "ACTS 16:25-26",
+    "MIDNIGHT PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch \u2014 stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "starry night sky milky way mountains",
+    "aurora borealis night sky mountains",
+    "ancient chapel interior candlelight peaceful sanctuary",
+    "star night sky over quiet countryside peaceful",
+    "peaceful night landscape moon over calm lake",
+    "calm mountain lake still water reflection nightfall",
+    "starry night sky over stone watchtower silhouette"
+  ],
+  "scenes": [
+    {
+      "a": "Rise in spirit at this midnight hour and remember what happened in Philippi.",
+      "img": "short-midnightacts16v25-scene-01.jpg",
+      "kicker": "ACTS 16:25-26",
+      "sub": "MIDNIGHT IN PHILIPPI",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Acts sixteen verse twenty-five says, And at midnight Paul and Silas prayed, and sang praises unto God.",
+      "img": "short-midnightacts16v25-scene-02.jpg",
+      "kicker": "ACTS 16:25-26",
+      "sub": "PRAYED AND SANG PRAISES",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "They did not wait for the prison doors to open first; they praised God right inside the darkest watch.",
+      "img": "short-midnightacts16v25-scene-03.jpg",
+      "kicker": "ACTS 16:25-26",
+      "sub": "PRAISE IN THE DARK",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "And suddenly the foundations were shaken, all the doors were opened, and every band was loosed.",
+      "img": "short-midnightacts16v25-scene-04.jpg",
+      "kicker": "ACTS 16:25-26",
+      "sub": "DOORS WERE OPENED",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, receive our midnight thanksgiving tonight over every trial, delay, and closed door.",
+      "img": "short-midnightacts16v25-scene-05.jpg",
+      "kicker": "ACTS 16:25-26",
+      "sub": "MIDNIGHT THANKSGIVING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Loose heavy burdens from our households and establish Your peace and breakthrough in Christ.",
+      "img": "short-midnightacts16v25-scene-06.jpg",
+      "kicker": "ACTS 16:25-26",
+      "sub": "HOUSEHOLD BREAKTHROUGH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Type Amen and subscribe to The Midnight Watch to stand in prayer at midnight.",
+      "img": "short-midnightacts16v25-scene-07.jpg",
+      "kicker": "THE MIDNIGHT WATCH",
+      "sub": "STAND AT MIDNIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Rise in spirit at this midnight hour and remember what happened in Philippi."
+    ],
+    [
+      9,
+      17,
+      "Acts sixteen verse twenty-five says, And at midnight Paul and Silas prayed, and sang praises unto God."
+    ],
+    [
+      18,
+      26,
+      "They did not wait for the prison doors to open first; they praised God right inside the darkest watch."
+    ],
+    [
+      27,
+      35,
+      "And suddenly the foundations were shaken, all the doors were opened, and every band was loosed."
+    ],
+    [
+      36,
+      44,
+      "Father, receive our midnight thanksgiving tonight over every trial, delay, and closed door."
+    ],
+    [
+      45,
+      53,
+      "Loose heavy burdens from our households and establish Your peace and breakthrough in Christ."
+    ],
+    [
+      54,
+      61,
+      "Type Amen and subscribe to The Midnight Watch to stand in prayer at midnight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "RISE IN SPIRIT AT",
+        "THIS MIDNIGHT HOUR AND",
+        "REMEMBER PHILIPPI"
+      ],
+      [
+        "RISE",
+        "MIDNIGHT",
+        "PHILIPPI"
+      ],
+      "ACTS 16:25-26"
+    ],
+    [
+      9,
+      17,
+      [
+        "AT MIDNIGHT PAUL AND",
+        "SILAS PRAYED AND SANG",
+        "PRAISES UNTO GOD"
+      ],
+      [
+        "MIDNIGHT",
+        "PRAYED",
+        "PRAISES"
+      ],
+      "ACTS 16:25-26"
+    ],
+    [
+      18,
+      26,
+      [
+        "THEY PRAISED GOD",
+        "RIGHT INSIDE THE",
+        "DARKEST WATCH"
+      ],
+      [
+        "PRAISED",
+        "DARKEST",
+        "WATCH"
+      ],
+      "ACTS 16:25-26"
+    ],
+    [
+      27,
+      35,
+      [
+        "ALL THE DOORS WERE",
+        "OPENED AND EVERY",
+        "BAND WAS LOOSED"
+      ],
+      [
+        "DOORS",
+        "OPENED",
+        "LOOSED"
+      ],
+      "ACTS 16:25-26"
+    ],
+    [
+      36,
+      44,
+      [
+        "FATHER RECEIVE OUR",
+        "MIDNIGHT THANKSGIVING",
+        "OVER EVERY TRIAL"
+      ],
+      [
+        "FATHER",
+        "MIDNIGHT",
+        "THANKSGIVING"
+      ],
+      "ACTS 16:25-26"
+    ],
+    [
+      45,
+      53,
+      [
+        "LOOSE HEAVY BURDENS",
+        "AND ESTABLISH YOUR",
+        "PEACE IN CHRIST"
+      ],
+      [
+        "LOOSE",
+        "PEACE",
+        "CHRIST"
+      ],
+      "ACTS 16:25-26"
+    ],
+    [
+      54,
+      61,
+      [
+        "SUBSCRIBE TO",
+        "THE MIDNIGHT WATCH",
+        "STAND AT MIDNIGHT"
+      ],
+      [
+        "SUBSCRIBE",
+        "MIDNIGHT",
+        "WATCH"
+      ],
+      "THE MIDNIGHT WATCH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Rise in spirit at this midnight hour and remember what happened in Philippi.",
+      "kind": "phrase",
+      "words": [
+        "RISE",
+        "MIDNIGHT",
+        "PHILIPPI"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Acts sixteen verse twenty-five says, And at midnight Paul and Silas prayed, and sang praises unto God.",
+      "kind": "phrase",
+      "words": [
+        "MIDNIGHT",
+        "PRAYED",
+        "PRAISES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "They did not wait for the prison doors to open first; they praised God right inside the darkest watch.",
+      "kind": "phrase",
+      "words": [
+        "PRAISED",
+        "DARKEST",
+        "WATCH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And suddenly the foundations were shaken, all the doors were opened, and every band was loosed.",
+      "kind": "phrase",
+      "words": [
+        "DOORS",
+        "OPENED",
+        "LOOSED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, receive our midnight thanksgiving tonight over every trial, delay, and closed door.",
+      "kind": "phrase",
+      "words": [
+        "FATHER",
+        "MIDNIGHT",
+        "THANKSGIVING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Loose heavy burdens from our households and establish Your peace and breakthrough in Christ.",
+      "kind": "phrase",
+      "words": [
+        "LOOSE",
+        "PEACE",
+        "CHRIST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Type Amen and subscribe to The Midnight Watch to stand in prayer at midnight.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "MIDNIGHT",
+        "WATCH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Acts 16:25-26"
+}

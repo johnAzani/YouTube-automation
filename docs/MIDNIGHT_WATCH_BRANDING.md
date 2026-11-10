@@ -6,7 +6,7 @@
 **Core Scripture Foundation:** *Psalm 119:62 — "At midnight I will rise to give thanks unto thee because of thy righteous judgments." (KJV)* & *Acts 16:25–26 — "And at midnight Paul and Silas prayed, and sang praises unto God... and every one's bands were loosed." (KJV)*
 **Channel Format:** 100% faceless Christian **midnight watch & breakthrough intercession** studio.
 **Internal channel id:** `prayer4` (secret prefix `PRAYER4_`, see `pipeline/channels.py`)
-**Status:** YouTube channel **created 2026-11-09** (`@TheMidnightWatchDaily`). Next step: upload avatar, banner & watermark from `docs/media/`, paste the Description & Keywords below, mint `PRAYER4_*` credentials in a dedicated Google Cloud project, and flip `provisioned=True`. See `docs/FOURTH_CHANNEL_SETUP.md`.
+**Status:** **LIVE & PROVISIONED (2026-11-10)** on `@TheMidnightWatchDaily` — dedicated Google Cloud project, `PRAYER4_YOUTUBE_CLIENT_ID`, `_CLIENT_SECRET`, `_REFRESH_TOKEN`, and `PRAYER4_GEMINI_API_KEY` saved in GitHub Secrets, `provisioned=True` in `pipeline/channels.py`. See `docs/FOURTH_CHANNEL_SETUP.md`.
 
 ---
 

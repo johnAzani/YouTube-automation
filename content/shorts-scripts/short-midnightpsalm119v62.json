@@ -1,0 +1,331 @@
+{
+  "key": "short-midnightpsalm119v62",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "MIDNIGHT PRAYER",
+    "PSALM 119:62"
+  ],
+  "poster": [
+    "THE MIDNIGHT WATCH",
+    "RISE AT MIDNIGHT",
+    "PSALM 119:62",
+    "MIDNIGHT PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch \u2014 stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "starry night sky milky way mountains",
+    "aurora borealis night sky mountains",
+    "ancient chapel interior candlelight peaceful sanctuary",
+    "star night sky over quiet countryside peaceful",
+    "peaceful night landscape moon over calm lake",
+    "calm mountain lake still water reflection nightfall",
+    "starry night sky over stone watchtower silhouette"
+  ],
+  "scenes": [
+    {
+      "a": "Rise in spirit at this midnight hour and lift your heart unto the living God.",
+      "img": "short-midnightpsalm119v62-scene-01.jpg",
+      "kicker": "PSALM 119:62",
+      "sub": "RISE AT MIDNIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Psalm one hundred and nineteen verse sixty-two declares, At midnight I will rise to give thanks unto thee because of thy righteous judgments.",
+      "img": "short-midnightpsalm119v62-scene-02.jpg",
+      "kicker": "PSALM 119:62",
+      "sub": "GIVE THANKS UNTO THEE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Midnight is not an hour of defeat; in Scripture it is the appointed watch of thanksgiving and breakthrough.",
+      "img": "short-midnightpsalm119v62-scene-03.jpg",
+      "kicker": "PSALM 119:62",
+      "sub": "APPOINTED WATCH",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Before a single outward circumstance changes, praise honours the sovereignty of our faithful Father.",
+      "img": "short-midnightpsalm119v62-scene-04.jpg",
+      "kicker": "PSALM 119:62",
+      "sub": "PRAISE GOES FIRST",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we thank You at this twelfth hour for Your mercy over our homes, our families, and our season.",
+      "img": "short-midnightpsalm119v62-scene-05.jpg",
+      "kicker": "PSALM 119:62",
+      "sub": "COVER OUR HOUSEHOLD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Loose every heavy burden, guide every decision ahead, and anchor our minds in Your unshakeable Word.",
+      "img": "short-midnightpsalm119v62-scene-06.jpg",
+      "kicker": "PSALM 119:62",
+      "sub": "UNSHAKEABLE WORD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Type Amen and subscribe to The Midnight Watch to stand in prayer at midnight.",
+      "img": "short-midnightpsalm119v62-scene-07.jpg",
+      "kicker": "THE MIDNIGHT WATCH",
+      "sub": "STAND AT MIDNIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Rise in spirit at this midnight hour and lift your heart unto the living God."
+    ],
+    [
+      9,
+      17,
+      "Psalm one hundred and nineteen verse sixty-two declares, At midnight I will rise to give thanks unto thee because of thy righteous judgments."
+    ],
+    [
+      18,
+      26,
+      "Midnight is not an hour of defeat; in Scripture it is the appointed watch of thanksgiving and breakthrough."
+    ],
+    [
+      27,
+      35,
+      "Before a single outward circumstance changes, praise honours the sovereignty of our faithful Father."
+    ],
+    [
+      36,
+      44,
+      "Lord, we thank You at this twelfth hour for Your mercy over our homes, our families, and our season."
+    ],
+    [
+      45,
+      53,
+      "Loose every heavy burden, guide every decision ahead, and anchor our minds in Your unshakeable Word."
+    ],
+    [
+      54,
+      61,
+      "Type Amen and subscribe to The Midnight Watch to stand in prayer at midnight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "RISE IN SPIRIT AT",
+        "THIS MIDNIGHT HOUR AND",
+        "LIFT YOUR HEART TO GOD"
+      ],
+      [
+        "RISE",
+        "MIDNIGHT",
+        "GOD"
+      ],
+      "PSALM 119:62"
+    ],
+    [
+      9,
+      17,
+      [
+        "AT MIDNIGHT I WILL",
+        "RISE TO GIVE THANKS",
+        "UNTO THEE O LORD"
+      ],
+      [
+        "MIDNIGHT",
+        "RISE",
+        "THANKS"
+      ],
+      "PSALM 119:62"
+    ],
+    [
+      18,
+      26,
+      [
+        "MIDNIGHT IS THE",
+        "APPOINTED WATCH OF",
+        "THANKSGIVING AND FAITH"
+      ],
+      [
+        "MIDNIGHT",
+        "WATCH",
+        "FAITH"
+      ],
+      "PSALM 119:62"
+    ],
+    [
+      27,
+      35,
+      [
+        "PRAISE HONOURS THE",
+        "SOVEREIGNTY OF OUR",
+        "FAITHFUL FATHER"
+      ],
+      [
+        "PRAISE",
+        "SOVEREIGNTY",
+        "FATHER"
+      ],
+      "PSALM 119:62"
+    ],
+    [
+      36,
+      44,
+      [
+        "LORD WE THANK YOU",
+        "FOR YOUR MERCY OVER",
+        "OUR HOMES AND SEASON"
+      ],
+      [
+        "LORD",
+        "MERCY",
+        "HOMES"
+      ],
+      "PSALM 119:62"
+    ],
+    [
+      45,
+      53,
+      [
+        "LOOSE EVERY BURDEN",
+        "AND ANCHOR OUR MINDS",
+        "IN YOUR WORD"
+      ],
+      [
+        "LOOSE",
+        "ANCHOR",
+        "WORD"
+      ],
+      "PSALM 119:62"
+    ],
+    [
+      54,
+      61,
+      [
+        "SUBSCRIBE TO",
+        "THE MIDNIGHT WATCH",
+        "STAND AT MIDNIGHT"
+      ],
+      [
+        "SUBSCRIBE",
+        "MIDNIGHT",
+        "WATCH"
+      ],
+      "THE MIDNIGHT WATCH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Rise in spirit at this midnight hour and lift your heart unto the living God.",
+      "kind": "phrase",
+      "words": [
+        "RISE",
+        "MIDNIGHT",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Psalm one hundred and nineteen verse sixty-two declares, At midnight I will rise to give thanks unto thee because of thy righteous judgments.",
+      "kind": "phrase",
+      "words": [
+        "MIDNIGHT",
+        "RISE",
+        "THANKS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Midnight is not an hour of defeat; in Scripture it is the appointed watch of thanksgiving and breakthrough.",
+      "kind": "phrase",
+      "words": [
+        "MIDNIGHT",
+        "WATCH",
+        "FAITH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Before a single outward circumstance changes, praise honours the sovereignty of our faithful Father.",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "SOVEREIGNTY",
+        "FATHER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we thank You at this twelfth hour for Your mercy over our homes, our families, and our season.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "MERCY",
+        "HOMES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Loose every heavy burden, guide every decision ahead, and anchor our minds in Your unshakeable Word.",
+      "kind": "phrase",
+      "words": [
+        "LOOSE",
+        "ANCHOR",
+        "WORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Type Amen and subscribe to The Midnight Watch to stand in prayer at midnight.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "MIDNIGHT",
+        "WATCH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 119:62"
+}

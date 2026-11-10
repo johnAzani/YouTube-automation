@@ -118,14 +118,13 @@ CHANNELS: dict[str, ChannelProfile] = {
         secret_prefix="PRAYER4_",
         # Owner decision, 2026-11-09: fourth prayer channel dedicated to the
         # 12:00 AM midnight watch & breakthrough intercession (Psalm 119:62 /
-        # Acts 16:25). Registered in full parity with provisioned=False until
-        # the owner creates its separate Google Cloud project and saves
-        # PRAYER4_YOUTUBE_CLIENT_ID, _CLIENT_SECRET, _REFRESH_TOKEN, and
-        # PRAYER4_GEMINI_API_KEY in GitHub Secrets.
+        # Acts 16:25). Provisioned 2026-11-10 once @TheMidnightWatchDaily's
+        # dedicated Google Cloud OAuth client, refresh token, and Gemini API
+        # key (PRAYER4_*) were saved in GitHub Secrets.
         default_privacy="public",
         auto_publish=True,
         include_sanctuary_links=False,
-        provisioned=False,
+        provisioned=True,
     ),
 }
 

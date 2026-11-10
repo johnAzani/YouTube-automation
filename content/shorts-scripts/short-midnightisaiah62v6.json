@@ -1,0 +1,331 @@
+{
+  "key": "short-midnightisaiah62v6",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "MIDNIGHT PRAYER",
+    "ISAIAH 62:6-7"
+  ],
+  "poster": [
+    "THE MIDNIGHT WATCH",
+    "STAND ON THE WATCH",
+    "ISAIAH 62:6-7",
+    "MIDNIGHT PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch \u2014 stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "starry night sky milky way mountains",
+    "aurora borealis night sky mountains",
+    "ancient chapel interior candlelight peaceful sanctuary",
+    "star night sky over quiet countryside peaceful",
+    "peaceful night landscape moon over calm lake",
+    "calm mountain lake still water reflection nightfall",
+    "starry night sky over stone watchtower silhouette"
+  ],
+  "scenes": [
+    {
+      "a": "Rise in spirit at this midnight hour and take your post upon the walls of prayer.",
+      "img": "short-midnightisaiah62v6-scene-01.jpg",
+      "kicker": "ISAIAH 62:6-7",
+      "sub": "TAKE YOUR POST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Isaiah sixty-two verse six declares, I have set watchmen upon thy walls, O Jerusalem, which shall never hold their peace day nor night.",
+      "img": "short-midnightisaiah62v6-scene-02.jpg",
+      "kicker": "ISAIAH 62:6-7",
+      "sub": "WATCHMEN ON THE WALLS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "God Himself calls watchful believers to remind heaven of His unbreakable covenant promises.",
+      "img": "short-midnightisaiah62v6-scene-03.jpg",
+      "kicker": "ISAIAH 62:6-7",
+      "sub": "COVENANT PROMISES",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "A household guarded by persevering midnight prayer is never left uncovered in the dark.",
+      "img": "short-midnightisaiah62v6-scene-04.jpg",
+      "kicker": "ISAIAH 62:6-7",
+      "sub": "HOUSEHOLD COVERED",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, we stand upon the watchtower tonight over our families, our calling, and our season.",
+      "img": "short-midnightisaiah62v6-scene-05.jpg",
+      "kicker": "ISAIAH 62:6-7",
+      "sub": "INTERCEDE IN FAITH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Clear away every stumbling stone and establish Your peace, wisdom, and praise in our homes.",
+      "img": "short-midnightisaiah62v6-scene-06.jpg",
+      "kicker": "ISAIAH 62:6-7",
+      "sub": "ESTABLISH YOUR PEACE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Type Amen and subscribe to The Midnight Watch to stand in prayer at midnight.",
+      "img": "short-midnightisaiah62v6-scene-07.jpg",
+      "kicker": "THE MIDNIGHT WATCH",
+      "sub": "STAND AT MIDNIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Rise in spirit at this midnight hour and take your post upon the walls of prayer."
+    ],
+    [
+      9,
+      17,
+      "Isaiah sixty-two verse six declares, I have set watchmen upon thy walls, O Jerusalem, which shall never hold their peace day nor night."
+    ],
+    [
+      18,
+      26,
+      "God Himself calls watchful believers to remind heaven of His unbreakable covenant promises."
+    ],
+    [
+      27,
+      35,
+      "A household guarded by persevering midnight prayer is never left uncovered in the dark."
+    ],
+    [
+      36,
+      44,
+      "Father, we stand upon the watchtower tonight over our families, our calling, and our season."
+    ],
+    [
+      45,
+      53,
+      "Clear away every stumbling stone and establish Your peace, wisdom, and praise in our homes."
+    ],
+    [
+      54,
+      61,
+      "Type Amen and subscribe to The Midnight Watch to stand in prayer at midnight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "RISE IN SPIRIT AT",
+        "THIS MIDNIGHT HOUR",
+        "UPON THE WALLS"
+      ],
+      [
+        "RISE",
+        "MIDNIGHT",
+        "WALLS"
+      ],
+      "ISAIAH 62:6-7"
+    ],
+    [
+      9,
+      17,
+      [
+        "I HAVE SET WATCHMEN",
+        "UPON THY WALLS DAY",
+        "AND NIGHT SAITH GOD"
+      ],
+      [
+        "WATCHMEN",
+        "WALLS",
+        "GOD"
+      ],
+      "ISAIAH 62:6-7"
+    ],
+    [
+      18,
+      26,
+      [
+        "GOD CALLS WATCHMEN",
+        "TO PLEAD HIS SURE",
+        "COVENANT PROMISES"
+      ],
+      [
+        "WATCHMEN",
+        "PLEAD",
+        "PROMISES"
+      ],
+      "ISAIAH 62:6-7"
+    ],
+    [
+      27,
+      35,
+      [
+        "A HOME GUARDED BY",
+        "MIDNIGHT PRAYER IS",
+        "NEVER UNCOVERED"
+      ],
+      [
+        "HOME",
+        "MIDNIGHT",
+        "PRAYER"
+      ],
+      "ISAIAH 62:6-7"
+    ],
+    [
+      36,
+      44,
+      [
+        "FATHER WE STAND ON",
+        "THE WATCHTOWER OVER",
+        "OUR FAMILIES TONIGHT"
+      ],
+      [
+        "STAND",
+        "WATCHTOWER",
+        "FAMILIES"
+      ],
+      "ISAIAH 62:6-7"
+    ],
+    [
+      45,
+      53,
+      [
+        "CLEAR EVERY STONE",
+        "AND ESTABLISH YOUR",
+        "PEACE IN OUR HOMES"
+      ],
+      [
+        "CLEAR",
+        "ESTABLISH",
+        "PEACE"
+      ],
+      "ISAIAH 62:6-7"
+    ],
+    [
+      54,
+      61,
+      [
+        "SUBSCRIBE TO",
+        "THE MIDNIGHT WATCH",
+        "STAND AT MIDNIGHT"
+      ],
+      [
+        "SUBSCRIBE",
+        "MIDNIGHT",
+        "WATCH"
+      ],
+      "THE MIDNIGHT WATCH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Rise in spirit at this midnight hour and take your post upon the walls of prayer.",
+      "kind": "phrase",
+      "words": [
+        "RISE",
+        "MIDNIGHT",
+        "WALLS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Isaiah sixty-two verse six declares, I have set watchmen upon thy walls, O Jerusalem, which shall never hold their peace day nor night.",
+      "kind": "phrase",
+      "words": [
+        "WATCHMEN",
+        "WALLS",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "God Himself calls watchful believers to remind heaven of His unbreakable covenant promises.",
+      "kind": "phrase",
+      "words": [
+        "WATCHMEN",
+        "PLEAD",
+        "PROMISES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "A household guarded by persevering midnight prayer is never left uncovered in the dark.",
+      "kind": "phrase",
+      "words": [
+        "HOME",
+        "MIDNIGHT",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we stand upon the watchtower tonight over our families, our calling, and our season.",
+      "kind": "phrase",
+      "words": [
+        "STAND",
+        "WATCHTOWER",
+        "FAMILIES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Clear away every stumbling stone and establish Your peace, wisdom, and praise in our homes.",
+      "kind": "phrase",
+      "words": [
+        "CLEAR",
+        "ESTABLISH",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Type Amen and subscribe to The Midnight Watch to stand in prayer at midnight.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "MIDNIGHT",
+        "WATCH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 62:6-7"
+}

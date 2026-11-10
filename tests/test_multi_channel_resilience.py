@@ -790,39 +790,63 @@ goes before you until evening falls and brings your labor to peaceful completion
                 self.assertNotIn(skey, seen_channel_keys, f"Short key collision {skey} in {cid}")
                 seen_channel_keys.add(skey)
 
+    def _sample_midday_doc(self, tmp_dir: Path):
+        from pipeline.script_doc import parse_script
+
+        sample = tmp_dir / "0051-psalm-37-5-midday-prayer.md"
+        sample.write_text(
+            "---\n"
+            "id: '0051'\n"
+            "title: 'Psalm 37:5 Midday Prayer | The Midday Watch'\n"
+            "slug: psalm-37-5-midday-prayer\n"
+            "status: approved\n"
+            "channel: prayer3\n"
+            "privacy: public\n"
+            "format: longform\n"
+            "voice: Charon\n"
+            "tags:\n"
+            "- the midday watch\n"
+            "- midday prayer\n"
+            "- psalm 37:5\n"
+            "---\n\n"
+            "## Scene 1 — Pause at Noon\n\n"
+            "Commit thy way unto the LORD; trust also in him; and he shall bring it to pass.\n",
+            encoding="utf-8",
+        )
+        return parse_script(sample)
+
     def test_author_short_spec_advances_on_per_model_429_quota(self):
         """A 429 on one model (e.g. 20/day 3.6-flash) skips remaining attempts on it and tries the next."""
         from pipeline import gemini_brain as gb
-        from pipeline.script_doc import parse_script
 
         valid_spec_json = (ROOT / "content" / "shorts-scripts" / "short-middaypsalm37v5.json").read_text(encoding="utf-8")
-        doc = parse_script(ROOT / "content" / "queue" / "0051-psalm-37-5-midday-prayer.md")
+        with tempfile.TemporaryDirectory() as tmp:
+            doc = self._sample_midday_doc(Path(tmp))
 
-        brain = gb.GeminiBrain(api_key="", channel_id="prayer3")
-        calls: list[str] = []
+            brain = gb.GeminiBrain(api_key="", channel_id="prayer3")
+            calls: list[str] = []
 
-        def fake_generate(model: str, contents: str, config=None):
-            calls.append(model)
-            if model == calls[0] and calls.count(model) == 1:
-                raise RuntimeError("429 RESOURCE_EXHAUSTED: limit 20 for model")
-            return SimpleNamespace(text=valid_spec_json)
+            def fake_generate(model: str, contents: str, config=None):
+                calls.append(model)
+                if model == calls[0] and calls.count(model) == 1:
+                    raise RuntimeError("429 RESOURCE_EXHAUSTED: limit 20 for model")
+                return SimpleNamespace(text=valid_spec_json)
 
-        brain._client = SimpleNamespace(models=SimpleNamespace(generate_content=fake_generate))
-        with mock.patch.object(gb, "_TRANSIENT_BACKOFF", ()), mock.patch("builtins.print"):
-            spec = brain.author_short_spec(doc, key="short-middaypsalm37v5")
+            brain._client = SimpleNamespace(models=SimpleNamespace(generate_content=fake_generate))
+            with mock.patch.object(gb, "_TRANSIENT_BACKOFF", ()), mock.patch("builtins.print"):
+                spec = brain.author_short_spec(doc, key="short-middaypsalm37v5")
 
-        self.assertEqual(spec.key, "short-middaypsalm37v5")
-        self.assertEqual(calls.count(calls[0]), 1, "must not burn a second attempt on a 429 model")
-        self.assertEqual(len(calls), 2, "must escalate to the next model in the chain")
+            self.assertEqual(spec.key, "short-middaypsalm37v5")
+            self.assertEqual(calls.count(calls[0]), 1, "must not burn a second attempt on a 429 model")
+            self.assertEqual(len(calls), 2, "must escalate to the next model in the chain")
 
     def test_require_renderable_defers_manifest_instead_of_polluting_shorts_queue(self):
         """Autonomous staging never writes broken `needs_renderer` manifests into shorts-queue."""
         from pipeline import gemini_brain as gb
         from pipeline import short_release as sr
-        from pipeline.script_doc import parse_script
 
-        doc = parse_script(ROOT / "content" / "queue" / "0051-psalm-37-5-midday-prayer.md")
         with tempfile.TemporaryDirectory() as tmp:
+            doc = self._sample_midday_doc(Path(tmp))
             qdir = Path(tmp) / "shorts-queue"
             brain = gb.GeminiBrain(api_key="", channel_id="prayer3")
             with mock.patch.object(gb, "SHORTS_QUEUE_DIR", qdir), \
