@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-10T14:00:36Z",
+  "generated_at": "2026-11-10T14:58:09Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
     "channels_provisioned": 5,
-    "channels_total": 5
+    "channels_total": 6
   },
   "totals": {
-    "published_total": 61,
+    "published_total": 62,
     "published_longform": 27,
-    "published_shorts": 34,
-    "public_total": 59,
+    "published_shorts": 35,
+    "public_total": 60,
     "queued_longform": 44,
-    "queued_shorts": 30,
+    "queued_shorts": 29,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -32,22 +32,22 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 21,
+        "published_total": 22,
         "published_longform": 7,
-        "published_shorts": 14,
-        "public_total": 20,
+        "published_shorts": 15,
+        "public_total": 21,
         "queued_longform": 20,
         "queued_other": 5,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-PSALM37V7",
-        "title": "Say This Psalm 37:7 Prayer Before You Sleep | The Secret Place #Shorts",
+        "id": "SHORT-PSALM63V6",
+        "title": "Say This Psalm 63:6-7 Prayer Before You Sleep | The Secret Place #Shorts",
         "format": "short",
-        "youtube_video_id": "5ekShDmycic",
-        "watch_url": "https://www.youtube.com/shorts/5ekShDmycic",
+        "youtube_video_id": "-21nHlytKvw",
+        "watch_url": "https://www.youtube.com/shorts/-21nHlytKvw",
         "published_on": "2026-11-10",
-        "published_at": "2026-11-10T09:59:00Z"
+        "published_at": "2026-11-10T14:56:01Z"
       },
       "next_queued_longform": {
         "id": "0015",
@@ -56,8 +56,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm63v6",
-        "scripture": "Psalm 63:6-7",
+        "short": "short-psalm139v11",
+        "scripture": "Psalm 139:11-12",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -302,9 +302,63 @@
         "measured_longform_videos": 0,
         "top_themes": []
       }
+    },
+    {
+      "id": "prayer6",
+      "display_name": "The Healing Balm",
+      "handle": "@TheHealingBalmDaily",
+      "prayer_label": "Healing Prayer",
+      "daypart": "restoration",
+      "tagline": "Daily Healing & Restoration Prayer",
+      "target_window_utc": "15:44",
+      "poster_kicker": "RECEIVE GOD'S HEALING PEACE",
+      "provisioned": false,
+      "auto_publish": true,
+      "default_privacy": "public",
+      "supply_target": 6,
+      "counts": {
+        "published_total": 0,
+        "published_longform": 0,
+        "published_shorts": 0,
+        "public_total": 0,
+        "queued_longform": 0,
+        "queued_other": 0,
+        "queued_shorts": 0
+      },
+      "latest_video": null,
+      "next_queued_longform": null,
+      "next_queued_short": null,
+      "feedback": {
+        "available": false,
+        "measured_longform_videos": 0,
+        "top_themes": []
+      }
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PSALM63V6",
+      "slug": "short-psalm63v6-pre-sleep-prayer",
+      "file": "short-psalm63v6-pre-sleep-prayer.md",
+      "title": "Say This Psalm 63:6-7 Prayer Before You Sleep | The Secret Place #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-10",
+      "published_at": "2026-11-10T14:56:01Z",
+      "youtube_video_id": "-21nHlytKvw",
+      "watch_url": "https://www.youtube.com/shorts/-21nHlytKvw",
+      "youtu_be_url": "https://youtu.be/-21nHlytKvw",
+      "shorts_url": "https://www.youtube.com/shorts/-21nHlytKvw",
+      "studio_url": "https://studio.youtube.com/video/-21nHlytKvw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/-21nHlytKvw/hqdefault.jpg",
+      "thumb_text": "REST IN HIS SHADOW \u00b7 BEDTIME PRAYER",
+      "duration_label": "54s",
+      "words": 630
+    },
     {
       "id": "0052",
       "slug": "psalm-63-1-midday-prayer",
@@ -2285,17 +2339,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-psalm63v6",
-        "file": "0023-short-psalm63v6.yml",
-        "companion_longform_id": "0023",
-        "scripture": "Psalm 63:6-7",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
       {
         "short": "short-psalm139v11",
         "file": "0024-short-psalm139v11.yml",
