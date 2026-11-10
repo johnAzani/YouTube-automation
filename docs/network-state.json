@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T17:11:46Z",
+  "generated_at": "2026-11-10T17:27:07Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 6
   },
   "totals": {
-    "published_total": 66,
-    "published_longform": 29,
-    "published_shorts": 37,
-    "public_total": 64,
-    "queued_longform": 42,
-    "queued_shorts": 27,
+    "published_total": 68,
+    "published_longform": 30,
+    "published_shorts": 38,
+    "public_total": 66,
+    "queued_longform": 41,
+    "queued_shorts": 26,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -233,24 +233,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 0,
-        "published_longform": 0,
-        "published_shorts": 0,
-        "public_total": 0,
-        "queued_longform": 6,
+        "published_total": 2,
+        "published_longform": 1,
+        "published_shorts": 1,
+        "public_total": 2,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
-      "latest_video": null,
-      "next_queued_longform": {
+      "latest_video": {
         "id": "0200",
         "title": "Psalm 119:62 Midnight Prayer | The Midnight Watch",
-        "words": 928,
+        "format": "longform",
+        "youtube_video_id": "veAZgP_yFg4",
+        "watch_url": "https://youtu.be/veAZgP_yFg4",
+        "published_on": "2026-11-10",
+        "published_at": "2026-11-10T17:26:23Z"
+      },
+      "next_queued_longform": {
+        "id": "0201",
+        "title": "Acts 16:25-26 Midnight Prayer | The Midnight Watch",
+        "words": 942,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightpsalm119v62",
-        "scripture": "Psalm 119:62",
+        "short": "short-midnightacts16v25",
+        "scripture": "Acts 16:25-26",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -336,6 +344,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0200",
+      "slug": "psalm-119-62-midnight-prayer",
+      "file": "0200-psalm-119-62-midnight-prayer.md",
+      "title": "Psalm 119:62 Midnight Prayer | The Midnight Watch",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-10",
+      "published_at": "2026-11-10T17:26:23Z",
+      "youtube_video_id": "veAZgP_yFg4",
+      "watch_url": "https://youtu.be/veAZgP_yFg4",
+      "youtu_be_url": "https://youtu.be/veAZgP_yFg4",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/veAZgP_yFg4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/veAZgP_yFg4/hqdefault.jpg",
+      "thumb_text": "PRAY AT MIDNIGHT",
+      "duration_label": "~6 min",
+      "words": 928
+    },
+    {
+      "id": "SHORT-MIDNIGHTPSALM119V62",
+      "slug": "short-midnightpsalm119v62-midnight-prayer",
+      "file": "short-midnightpsalm119v62-midnight-prayer.md",
+      "title": "Pray This Psalm 119:62 Midnight Prayer | Midnight Prayer #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-10",
+      "published_at": "2026-11-10T16:51:09Z",
+      "youtube_video_id": "qGZanFd0FR4",
+      "watch_url": "https://www.youtube.com/shorts/qGZanFd0FR4",
+      "youtu_be_url": "https://youtu.be/qGZanFd0FR4",
+      "shorts_url": "https://www.youtube.com/shorts/qGZanFd0FR4",
+      "studio_url": "https://studio.youtube.com/video/qGZanFd0FR4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/qGZanFd0FR4/hqdefault.jpg",
+      "thumb_text": "THE MIDNIGHT WATCH \u00b7 RISE AT MIDNIGHT",
+      "duration_label": "61s",
+      "words": 215
+    },
     {
       "id": "0083",
       "slug": "daniel-6-10-midday-prayer",
@@ -2248,19 +2302,6 @@
         "words": 1454
       },
       {
-        "id": "0200",
-        "slug": "psalm-119-62-midnight-prayer",
-        "file": "0200-psalm-119-62-midnight-prayer.md",
-        "title": "Psalm 119:62 Midnight Prayer | The Midnight Watch",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 928
-      },
-      {
         "id": "0201",
         "slug": "acts-16-25-midnight-prayer",
         "file": "0201-acts-16-25-midnight-prayer.md",
@@ -2569,17 +2610,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightpsalm119v62",
-        "file": "0200-short-midnightpsalm119v62.yml",
-        "companion_longform_id": "200",
-        "scripture": "Psalm 119:62",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightacts16v25",
