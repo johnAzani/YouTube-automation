@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T09:59:43Z",
+  "generated_at": "2026-11-10T10:00:55Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 5
   },
   "totals": {
-    "published_total": 56,
+    "published_total": 57,
     "published_longform": 25,
-    "published_shorts": 31,
-    "public_total": 54,
+    "published_shorts": 32,
+    "public_total": 55,
     "queued_longform": 44,
-    "queued_shorts": 30,
+    "queued_shorts": 29,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": false
@@ -32,32 +32,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 20,
+        "published_total": 21,
         "published_longform": 7,
-        "published_shorts": 13,
-        "public_total": 19,
+        "published_shorts": 14,
+        "public_total": 20,
         "queued_longform": 20,
         "queued_other": 5,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-PSALM31V5",
-        "title": "Say This Psalm 31:5 Prayer Before You Sleep | Redeemed In Peace #Shorts",
+        "id": "SHORT-PSALM37V7",
+        "title": "Say This Psalm 37:7 Prayer Before You Sleep | The Secret Place #Shorts",
         "format": "short",
-        "youtube_video_id": "nHTVsgHaLpE",
-        "watch_url": "https://www.youtube.com/shorts/nHTVsgHaLpE",
-        "published_on": "2026-11-09",
-        "published_at": "2026-11-09T16:15:42Z"
+        "youtube_video_id": "5ekShDmycic",
+        "watch_url": "https://www.youtube.com/shorts/5ekShDmycic",
+        "published_on": "2026-11-10",
+        "published_at": "2026-11-10T09:59:00Z"
       },
       "next_queued_longform": {
         "id": "0015",
         "title": "Psalm 91:5-6 Night Prayer | Deliverance From Terror by Night",
         "words": 883,
-        "status": "quota_paused"
+        "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm37v7",
-        "scripture": "Psalm 37:7",
+        "short": "short-psalm63v6",
+        "scripture": "Psalm 63:6-7",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -305,6 +305,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PSALM37V7",
+      "slug": "short-psalm37v7-pre-sleep-prayer",
+      "file": "short-psalm37v7-pre-sleep-prayer.md",
+      "title": "Say This Psalm 37:7 Prayer Before You Sleep | The Secret Place #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-10",
+      "published_at": "2026-11-10T09:59:00Z",
+      "youtube_video_id": "5ekShDmycic",
+      "watch_url": "https://www.youtube.com/shorts/5ekShDmycic",
+      "youtu_be_url": "https://youtu.be/5ekShDmycic",
+      "shorts_url": "https://www.youtube.com/shorts/5ekShDmycic",
+      "studio_url": "https://studio.youtube.com/video/5ekShDmycic/edit",
+      "thumb_url": "https://i.ytimg.com/vi/5ekShDmycic/hqdefault.jpg",
+      "thumb_text": "BEDTIME PRAYER \u00b7 PSALM 37:7",
+      "duration_label": "68s",
+      "words": 638
+    },
     {
       "id": "SHORT-MORNINGPSALM92V1",
       "slug": "short-morningpsalm92v1-sunrise-prayer",
@@ -1603,7 +1626,7 @@
         "title": "Psalm 91:5-6 Night Prayer | Deliverance From Terror by Night",
         "channel": "secret-place",
         "channel_name": "The Secret Place",
-        "status": "quota_paused",
+        "status": "approved",
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,
@@ -2170,17 +2193,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-psalm37v7",
-        "file": "0022-short-psalm37v7.yml",
-        "companion_longform_id": "0022",
-        "scripture": "Psalm 37:7",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
       {
         "short": "short-psalm63v6",
         "file": "0023-short-psalm63v6.yml",
