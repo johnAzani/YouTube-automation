@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T05:26:40.959134+00:00",
+  "generated_at": "2026-11-10T05:34:13.591253+00:00",
   "healthy": false,
   "automations": [
     {
@@ -39,7 +39,7 @@
       "failures_5": 0,
       "effect": "posts replies and records them in content/comments/replied.json",
       "verdict": "OK",
-      "detail": "last success 3.3h ago",
+      "detail": "last success 3.4h ago",
       "severity": "ok"
     },
     {
@@ -58,7 +58,7 @@
       "failures_5": 0,
       "effect": "writes content/community/<id>-READY.md",
       "verdict": "OK",
-      "detail": "last success 30.6h ago",
+      "detail": "last success 30.7h ago",
       "severity": "ok"
     },
     {
@@ -77,7 +77,7 @@
       "failures_5": 0,
       "effect": "writes content/queue/ or content/shorts-scripts/",
       "verdict": "OK",
-      "detail": "last success 18.0h ago",
+      "detail": "last success 18.1h ago",
       "severity": "ok"
     },
     {
@@ -96,7 +96,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 1.6h ago",
+      "detail": "last success 1.8h ago",
       "severity": "ok"
     },
     {
@@ -115,7 +115,7 @@
       "failures_5": 0,
       "effect": "re-arms scheduled workflows",
       "verdict": "OK",
-      "detail": "last success 17.6h ago",
+      "detail": "last success 17.8h ago",
       "severity": "ok"
     },
     {
@@ -134,7 +134,7 @@
       "failures_5": 0,
       "effect": "writes content/metrics.csv and opens a snapshot issue",
       "verdict": "OK",
-      "detail": "last success 3.4h ago",
+      "detail": "last success 3.5h ago",
       "severity": "ok"
     },
     {
@@ -143,7 +143,7 @@
       "crons": [
         "23 */3 * * *"
       ],
-      "last_run": "2026-11-10T05:24:45+00:00",
+      "last_run": "2026-11-10T05:33:24+00:00",
       "last_conclusion": null,
       "last_success": "2026-11-09T17:15:31+00:00",
       "runs_14d": 20,
@@ -174,7 +174,7 @@
       "failures_5": 2,
       "effect": "publishes a video: content/published/ gains a receipt with a video id",
       "verdict": "OK",
-      "detail": "last success 3.4h ago",
+      "detail": "last success 3.5h ago",
       "severity": "ok"
     },
     {
@@ -183,9 +183,9 @@
       "crons": [
         "47 0,3,6,9,12,15,18,21 * * *"
       ],
-      "last_run": "2026-11-10T05:25:57+00:00",
+      "last_run": "2026-11-10T05:33:23+00:00",
       "last_conclusion": null,
-      "last_success": "2026-11-10T05:24:49+00:00",
+      "last_success": "2026-11-10T05:27:47+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-07T19:31:06+00:00",
       "last_slot": "2026-11-10T03:47:00+00:00",
@@ -193,7 +193,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 0.0h ago",
+      "detail": "last success 0.1h ago",
       "severity": "ok"
     }
   ],
@@ -230,7 +230,7 @@
     },
     {
       "outcome": "authored Short specs",
-      "detail": "48 spec(s)",
+      "detail": "49 spec(s)",
       "severity": "ok"
     },
     {
