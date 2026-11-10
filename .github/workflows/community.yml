@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       channel:
-        description: 'Target channel id (secret-place, prayer2, prayer3, prayer4, prayer5, prayer6; blank = all scheduled channels)'
+        description: 'Target channel id (secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7; blank = all scheduled channels)'
         type: string
         required: false
         default: ''
@@ -71,6 +71,9 @@ jobs:
           PRAYER6_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER6_YOUTUBE_CLIENT_ID }}
           PRAYER6_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER6_YOUTUBE_CLIENT_SECRET }}
           PRAYER6_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER6_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER7_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER7_YOUTUBE_CLIENT_ID }}
+          PRAYER7_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER7_YOUTUBE_CLIENT_SECRET }}
+          PRAYER7_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER7_YOUTUBE_REFRESH_TOKEN }}
         run: |
           if [ -n "$INPUT_CHANNEL" ]; then
             python scripts/post_community.py --publish --channel "$INPUT_CHANNEL"

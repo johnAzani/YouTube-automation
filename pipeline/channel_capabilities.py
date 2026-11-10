@@ -241,6 +241,14 @@ _HEALING_BALM_COMMENT = (
     "peace guard your heart and mind! 🙏💧{footer}"
 )
 
+_PROVISION_TABLE_COMMENT = (
+    "🌾 Beloved friend, if you are committing your work, decisions, and daily needs unto the "
+    "Lord today, write 'AMEN' in faith to stand upon God's promise of {theme}.\n\n"
+    "📖 {scripture_hook}\n\n"
+    "Share the work, open door, or household need you are lifting before Jehovah-Jireh below — "
+    "our pastoral prayer team intercedes over every petition. My cup runneth over! 🙏✨{footer}"
+)
+
 _BRANDS: dict[str, Brand] = {
     "secret-place": Brand(
         channel_id="secret-place",
@@ -272,6 +280,9 @@ _BRANDS: dict[str, Brand] = {
             "The Healing Balm",
             "@TheHealingBalmDaily",
             "receive God's healing peace in daily prayer",
+            "The Provision Table",
+            "@TheProvisionTableDaily",
+            "walk in God's daily wisdom and provision",
         ),
         authoring_directive=(
             "CHANNEL: The Secret Place (secret-place) - night prayer, never a morning devotional.",
@@ -400,6 +411,9 @@ _BRANDS: dict[str, Brand] = {
             "The Healing Balm",
             "@TheHealingBalmDaily",
             "receive God's healing peace in daily prayer",
+            "The Provision Table",
+            "@TheProvisionTableDaily",
+            "walk in God's daily wisdom and provision",
         ),
         authoring_directive=(
             "CHANNEL: The Morning Altar (prayer2) - sunrise, never bedtime.",
@@ -644,6 +658,9 @@ _BRANDS: dict[str, Brand] = {
             "The Healing Balm",
             "@TheHealingBalmDaily",
             "receive God's healing peace in daily prayer",
+            "The Provision Table",
+            "@TheProvisionTableDaily",
+            "walk in God's daily wisdom and provision",
         ),
         authoring_directive=(
             "CHANNEL: The Midday Watch (prayer3) - the middle of the day, never bedtime and "
@@ -884,6 +901,9 @@ _BRANDS: dict[str, Brand] = {
             "The Healing Balm",
             "@TheHealingBalmDaily",
             "receive God's healing peace in daily prayer",
+            "The Provision Table",
+            "@TheProvisionTableDaily",
+            "walk in God's daily wisdom and provision",
         ),
         authoring_directive=(
             "CHANNEL: The Midnight Watch (prayer4) - wakeful 12:00 AM midnight watch & "
@@ -1124,6 +1144,9 @@ _BRANDS: dict[str, Brand] = {
             "The Healing Balm",
             "@TheHealingBalmDaily",
             "receive God's healing peace in daily prayer",
+            "The Provision Table",
+            "@TheProvisionTableDaily",
+            "walk in God's daily wisdom and provision",
         ),
         authoring_directive=(
             "CHANNEL: The Family Altar (prayer5) - daily Christian household, marriage, "
@@ -1364,6 +1387,9 @@ _BRANDS: dict[str, Brand] = {
             "pause and pray with us at noon",
             "stand on the watchtower in midnight prayer",
             "cover your home and family in daily prayer",
+            "The Provision Table",
+            "@TheProvisionTableDaily",
+            "walk in God's daily wisdom and provision",
         ),
         authoring_directive=(
             "CHANNEL: The Healing Balm (prayer6) - daily KJV divine healing, comfort for the "
@@ -1577,6 +1603,255 @@ _BRANDS: dict[str, Brand] = {
         ctr_hook_hero="HEAL ME O LORD",
         ctr_quiet_hero="PEACE BE STILL",
     ),
+    "prayer7": Brand(
+        channel_id="prayer7",
+        display_name="The Provision Table",
+        handle="@TheProvisionTableDaily",
+        declaration="prayer7",
+        title_suffix="| The Provision Table",
+        producer_line="Produced by The Provision Table | Daily Wisdom, Open Doors & Provision Prayer.",
+        closing_cta=(
+            "Type Amen to agree with this prayer, and subscribe to The Provision Table "
+            "to walk in God's daily wisdom and provision."
+        ),
+        required_phrases=("The Provision Table",),
+        forbidden_phrases=(
+            "The Secret Place",
+            "@TheSecretPlace",
+            "The Morning Altar",
+            "@TheMorningAltarDaily",
+            "The Midday Watch",
+            "@TheMiddayWatch",
+            "The Midnight Watch",
+            "@TheMidnightWatchDaily",
+            "The Family Altar",
+            "@TheFamilyAltarDaily",
+            "The Healing Balm",
+            "@TheHealingBalmDaily",
+            "before you sleep",
+            "bedtime prayer",
+            "prayer before sleep",
+            "begin every sunrise with us",
+            "pause and pray with us at noon",
+            "stand on the watchtower in midnight prayer",
+            "cover your home and family in daily prayer",
+            "receive God's healing peace in daily prayer",
+        ),
+        authoring_directive=(
+            "CHANNEL: The Provision Table (prayer7) - daily KJV wisdom, open doors, "
+            "favour over honest labour, and covenant provision prayer (Psalm 23:5 / "
+            "Deuteronomy 28:12 / Philippians 4:19), never sleep/bedtime, never sunrise-altar, "
+            "never midday-watch, never midnight-watch, never family-altar, and never healing-balm branding.",
+            "Frontmatter MUST include exactly: channel: prayer7",
+            "Title MUST end with: | The Provision Table",
+            'Tags MUST include "prayer for open doors" and "the provision table"; never sleep, '
+            "bedtime, sunrise, midday, midnight-watch, family-altar, or healing-balm branding.",
+            "Description MUST credit: Produced by The Provision Table | Daily Wisdom, Open Doors & Provision Prayer.",
+            "Scenes follow the 6-movement Covenant Provision & Stewardship rubric (honouring honest "
+            "work, godly wisdom, and providence — zero prosperity-gospel gimmicks) and end with: "
+            '"Type Amen to agree with this prayer, and subscribe to The Provision Table to walk in '
+            "God's daily wisdom and provision.\"",
+            "Asset queries MUST be sunlit valleys, mountain passes, peaceful rivers, sunlit sanctuary "
+            "interiors, or golden horizon landscapes.",
+        ),
+        short_title_template="Pray This {label} Prayer for Open Doors & Provision | {hook}",
+        subscribe_heading="🌾 WALK IN GOD'S DAILY WISDOM & PROVISION",
+        short_target_window_utc="10:44",
+        short_channel_label=(
+            "a faceless KJV wisdom, open-doors, and daily provision prayer channel called The Provision Table"
+        ),
+        short_prayer_kind="stewardship",
+        short_opening="commit your work, decisions, and daily needs unto the Lord",
+        short_imagery="golden sunlit valleys, mountain passes, peaceful rivers, or sunlit sanctuary stone tables",
+        short_tags=(
+            "prayer for open doors",
+            "prayer for provision",
+            "prayer for wisdom and favor",
+            "deuteronomy 28 12 prayer",
+            "the provision table",
+        ),
+        short_hashtags="#Shorts #{tag_key} #PrayerForOpenDoors #GodsProvision #DailyScripture #TheProvisionTable",
+        short_end_card="The Provision Table — walk in God's daily provision",
+        short_key_namespace="provision",
+        comment_persona="the pastoral prayer team at The Provision Table",
+        comment_farewell="May the Lord bless the work of your hands and supply every need in Christ.",
+        shorts_poster_kicker="BLESS THE WORK OF OUR HANDS",
+        longform_pinned_comment=_PROVISION_TABLE_COMMENT,
+        short_pinned_comment=(
+            "🌾 PRAY THE FULL KJV WISDOM & PROVISION PRAYER:\n"
+            "Tap the linked full-length prayer right above this title (or visit {handle}) "
+            "to pray the complete covenant promise of {scripture} in faith:\n"
+            "👉 {url}\n\n"
+            "Write 'AMEN' in faith and share the work, open door, or household need you are "
+            "committing unto the Lord today — Jehovah-Jireh provides! 🙏🌾✨{footer}"
+        ),
+        longform_prayer_label="Provision Prayer",
+        seo_hook_template=(
+            "Come to {display_name} in {scripture} (KJV) "
+            "to pray for divine wisdom, open doors, favour over honest work, and daily provision."
+        ),
+        verified_commons_queries=(
+            ("golden light rays through clouds over mountain peak", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("divine light breaking through clouds over peaceful landscape", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("sunlight breaking through clouds mountain pass", 3, "3x Public domain — USFS Rocky Mountain National Forest crepuscular ray scans"),
+            ("peaceful mountain river calm water forest", 4, "4x Public domain — NPS mountain stream and river scans"),
+            ("ancient chapel interior candlelight peaceful sanctuary", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("forest sunlight mist", 3, "3x Public domain — USFS forest crepuscular ray and mist photography"),
+        ),
+        feedback_artifact_name="performance_feedback_prayer7.json",
+        anchor_video=None,
+        series_playlists=(
+            (
+                "open_doors_and_favor_prayers",
+                "Prayers for Open Doors, Favor & Honest Work (KJV) — The Provision Table",
+                "Daily KJV scripture prayers anchored in Deuteronomy 28:12, Revelation 3:8, and Psalm 90:17 "
+                "committing work, careers, trades, and vocations unto the Lord.\n\n"
+                "Produced by The Provision Table | Daily Wisdom, Open Doors & Provision Prayer.",
+                ("open doors", "favor", "work of our hands", "deuteronomy 28", "psalm 90"),
+            ),
+            (
+                "wisdom_and_direction_prayers",
+                "Prayers for Divine Wisdom, Discernment & Decisions (KJV) — The Provision Table",
+                "Reverent KJV prayers from James 1:5, Proverbs 3:5-6, and Proverbs 16:3 "
+                "for clarity at crossroads, stewardship, and godly counsel.\n\n"
+                "Produced by The Provision Table | Daily Wisdom, Open Doors & Provision Prayer.",
+                ("wisdom", "proverbs 3", "james 1", "direction", "decisions"),
+            ),
+            (
+                "daily_bread_and_provision",
+                "Prayers for Daily Provision & Overflowing Grace — The Provision Table",
+                "Faith-building KJV prayers with Charles Spurgeon & Matthew Henry reflections "
+                "from Psalm 23:5, Philippians 4:19, and Matthew 6:31-33.\n\n"
+                "Produced by The Provision Table | Daily Wisdom, Open Doors & Provision Prayer.",
+                ("provision", "psalm 23", "philippians 4", "supply", "cup runneth over"),
+            ),
+        ),
+        community_posts=(
+            {
+                "post_id": "comm-prayer7-001-sunday-table",
+                "post_type": "POLL",
+                "title": "Sunday Stewardship Prayer: What are you committing into the Lord's hands this week?",
+                "body_text": (
+                    "Commit thy works unto the LORD, and thy thoughts shall be established (Proverbs 16:3).\n\n"
+                    "As a new week opens before us, how can our prayer team agree with you in faith? "
+                    "Vote below and type 'AMEN'! 🌾🙏"
+                ),
+                "poll": {
+                    "question": "Where are you praying for God's wisdom and provision first this week?",
+                    "options": [
+                        "An open door in work, career, study, or honest business",
+                        "Clear godly wisdom for an important family or financial decision",
+                        "Daily bread, debt-free peace, and steady household supply",
+                        "Favour, integrity, and strength over the work of my hands",
+                    ],
+                    "context_scripture": "Proverbs 16:3",
+                },
+                "image_rel_path": "comm-prayer7-001-sunday-table.png",
+                "target_utc": "10:30",
+                "tags": ["#TheProvisionTable", "#PrayerForOpenDoors", "#Proverbs163", "#GodsProvision"],
+            },
+            {
+                "post_id": "comm-prayer7-002-midweek-wall",
+                "post_type": "PRAYER_WALL",
+                "title": "The Provision Table Prayer Wall: Praying Over Work, Doors & Daily Bread",
+                "body_text": (
+                    "But my God shall supply all your need according to his riches in glory by Christ Jesus (Philippians 4:19).\n\n"
+                    "Share a general work, study, decision, or provision need below — our pastoral team is praying "
+                    "in faith over every household and vocation represented here. Write 'AMEN'!"
+                ),
+                "poll": None,
+                "image_rel_path": "comm-prayer7-002-midweek-wall.png",
+                "target_utc": "10:30",
+                "tags": ["#Philippians419", "#PrayerForProvision", "#TheProvisionTable"],
+            },
+            {
+                "post_id": "comm-prayer7-003-thursday-scripture",
+                "post_type": "POLL",
+                "title": "Which KJV promise of wisdom and provision anchors your faith today?",
+                "body_text": (
+                    "Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; "
+                    "my cup runneth over (Psalm 23:5).\n\n"
+                    "Stand upon the faithful Word of our Shepherd."
+                ),
+                "poll": {
+                    "question": "Which KJV promise of provision and guidance speaks deepest to you today?",
+                    "options": [
+                        "Psalm 23:5 — Thou preparest a table before me; my cup runneth over",
+                        "Deuteronomy 28:12 — Bless all the work of thine hand",
+                        "Proverbs 3:5-6 — He shall direct thy paths",
+                        "Philippians 4:19 — My God shall supply all your need",
+                    ],
+                    "context_scripture": "Psalm 23:5",
+                },
+                "image_rel_path": "comm-prayer7-003-thursday-scripture.png",
+                "target_utc": "10:30",
+                "tags": ["#Psalm23", "#Deuteronomy2812", "#TheProvisionTable"],
+            },
+            {
+                "post_id": "comm-prayer7-004-friday-gratitude",
+                "post_type": "SCRIPTURE_DEVOTIONAL",
+                "title": "Weekend Thanksgiving for Daily Bread & Faithful Stewardship",
+                "body_text": (
+                    "And let the beauty of the LORD our God be upon us: and establish thou the work of our hands upon us (Psalm 90:17).\n\n"
+                    "May the Lord crown this week's honest labour with peace, gratitude, and overflowing grace. "
+                    "Type 'JEHOVAH JIREH' below in thanksgiving! 🌾✨"
+                ),
+                "poll": None,
+                "image_rel_path": "comm-prayer7-004-friday-gratitude.png",
+                "target_utc": "10:30",
+                "tags": ["#Psalm9017", "#JehovahJireh", "#TheProvisionTable"],
+            },
+        ),
+        short_bridge_theme="divine wisdom, open doors, and faithful daily provision",
+        short_fallback_title="Prayers for Open Doors, Wisdom & Provision (KJV) — The Provision Table",
+        milestone_subheading_1250="A SANCTUARY OF WISDOM & PROVISION PRAYER ACROSS THE NATIONS",
+        milestone_subheading_1500="DAILY SCRIPTURE COVERING OVER HONEST WORK & STEWARDSHIP",
+        milestone_sanctuary_phrase="around the Lord's prepared table",
+        milestone_cadence_phrase="every day for wisdom and provision",
+        milestone_closing_blessing="May Jehovah-Jireh bless the work of your hands and supply every need in Christ.",
+        milestone_2000_closing="your daily sanctuary of wisdom, open doors, and provision prayer",
+        seo_fallback_hashtags=(
+            "#PrayerForOpenDoors", "#PrayerForProvision", "#GodsWisdom", "#TheProvisionTable",
+        ),
+        seo_hook_ref_template=(
+            "Pray this {ref} KJV prayer at The Provision Table for divine wisdom, "
+            "open doors, favour over honest work, and God's faithful daily provision."
+        ),
+        seo_hook_generic=(
+            "Pray this KJV wisdom and provision prayer at The Provision Table for open doors, "
+            "clarity in decisions, favour at work, and daily bread in Christ."
+        ),
+        seo_book_tag_suffixes=("prayer for provision", "prayer for open doors and wisdom"),
+        seo_tag_seeds=(
+            "prayer for open doors kjv",
+            "prayer for wisdom and favor",
+            "prayer for provision and breakthrough",
+            "deuteronomy 28 12 prayer",
+            "psalm 23 5 prayer",
+            "philippians 4 19 prayer",
+            "the provision table prayer",
+            "prayer before work and business",
+        ),
+        localized_title_es="Oración por Puertas Abiertas, Sabiduría y Provisión | {channel_name}",
+        localized_title_pt="Oração por Portas Abertas, Sabedoria e Provisão | {channel_name}",
+        localized_ref_title_es="{ref_es} Oración por Sabiduría y Provisión | {channel_name}",
+        localized_ref_title_pt="{ref_pt} Oração por Sabedoria e Provisão | {channel_name}",
+        localized_desc_lead_es="Oración bíblica diaria por sabiduría divina, puertas abiertas, favor en el trabajo y provisión fiel.",
+        localized_desc_lead_pt="Oração bíblica diária por sabedoria divina, portas abertas, favor no trabalho e provisão fiel.",
+        localized_invite_es=(
+            "Une tu fe en oración con esta meditación bíblica para encomendar tu trabajo, tus decisiones y tus necesidades a Dios."
+        ),
+        localized_invite_pt=(
+            "Una sua fé em oração com esta meditação bíblica para entregar seu trabalho, suas decisões e suas necessidades a Deus."
+        ),
+        default_comment_scripture_hook=(
+            "Philippians 4:19 — 'But my God shall supply all your need according to his riches in glory by Christ Jesus.'"
+        ),
+        default_comment_theme="divine wisdom, open doors, and faithful daily provision",
+        ctr_grade="harvest",
+        ctr_hook_hero="OPEN THIS DOOR",
+        ctr_quiet_hero="MY CUP OVERFLOWS",
+    ),
 }
 
 _CAPABILITIES: dict[str, ChannelCapabilities] = {
@@ -1649,6 +1924,18 @@ _CAPABILITIES: dict[str, ChannelCapabilities] = {
         },
         roadmap="prayer6",
         roadmap_name="HEALING_BALM_ROADMAP",
+        legacy_queue_alias="",
+        supply_min_publishable=6,
+    ),
+    "prayer7": ChannelCapabilities(
+        channel_id="prayer7",
+        brand=_BRANDS["prayer7"],
+        equipment={
+            "system_instruction": "provision_system_instruction.md",
+            "theological_rubric": "provision_theological_rubric.md",
+        },
+        roadmap="prayer7",
+        roadmap_name="PROVISION_TABLE_ROADMAP",
         legacy_queue_alias="",
         supply_min_publishable=6,
     ),
