@@ -155,6 +155,31 @@ class TestSeventhChannelWorkflowWiring(unittest.TestCase):
         self.assertIn("PRAYER7_YOUTUBE_REFRESH_TOKEN", community)
         self.assertIn("PRAYER7_YOUTUBE_REFRESH_TOKEN", set_thumb)
 
+    def test_upload_credentials_fallback_to_inherent_token_scopes_on_invalid_scope(self):
+        from unittest import mock
+        from pipeline import upload
+
+        calls = []
+
+        class FakeCreds:
+            def __init__(self, **kwargs):
+                self.kwargs = kwargs
+                calls.append(kwargs)
+
+            def refresh(self, _req):
+                if self.kwargs.get("scopes") is not None:
+                    raise RuntimeError("RefreshError: ('invalid_scope: Bad Request')")
+
+        with mock.patch.object(upload.CONFIG, "youtube_client_id", "cid"), \
+             mock.patch.object(upload.CONFIG, "youtube_client_secret", "csec"), \
+             mock.patch.object(upload.CONFIG, "youtube_refresh_token", "rtok"), \
+             mock.patch("google.oauth2.credentials.Credentials", FakeCreds):
+            creds = upload._credentials()
+        self.assertEqual(len(calls), 2)
+        self.assertIsNotNone(calls[0]["scopes"])
+        self.assertIsNone(calls[1]["scopes"])
+        self.assertIsNone(creds.kwargs["scopes"])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -281,7 +281,20 @@ def _build_youtube_client(profile=None):
         client_secret=client_secret,
         scopes=SCOPES,
     )
-    creds.refresh(Request())
+    try:
+        creds.refresh(Request())
+    except Exception as exc:
+        if "invalid_scope" not in str(exc).lower():
+            raise
+        creds = Credentials(
+            token=None,
+            refresh_token=refresh_token,
+            token_uri="https://oauth2.googleapis.com/token",
+            client_id=client_id,
+            client_secret=client_secret,
+            scopes=None,
+        )
+        creds.refresh(Request())
     return build("youtube", "v3", credentials=creds, cache_discovery=False)
 
 
