@@ -1,0 +1,331 @@
+{
+  "key": "short-familypsalm127v1",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "FAMILY PRAYER",
+    "PSALM 127:1-5"
+  ],
+  "poster": [
+    "THE FAMILY ALTAR",
+    "GOD BUILDS THIS HOME",
+    "PSALM 127:1-5",
+    "FAMILY PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar \u2014 cover your home in prayer"
+  ],
+  "stock_queries": [
+    "ancient chapel interior candlelight peaceful sanctuary",
+    "divine light breaking through clouds over peaceful landscape",
+    "peaceful mountain river calm water forest",
+    "forest sunlight mist",
+    "sunlight breaking through clouds mountain pass",
+    "golden light rays through clouds over mountain peak",
+    "warm candlelit sanctuary bible peaceful"
+  ],
+  "scenes": [
+    {
+      "a": "Gather your home and loved ones in faith and place every family care into God's hands.",
+      "img": "short-familypsalm127v1-scene-01.jpg",
+      "kicker": "PSALM 127:1-5",
+      "sub": "TRUST THE BUILDER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Psalm one hundred and twenty-seven verse one says, Except the LORD build the house, they labour in vain that build it.",
+      "img": "short-familypsalm127v1-scene-02.jpg",
+      "kicker": "PSALM 127:1-5",
+      "sub": "THE LORD BUILDS IT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Except the LORD keep the city, the watchman waketh but in vain.",
+      "img": "short-familypsalm127v1-scene-03.jpg",
+      "kicker": "PSALM 127:1-5",
+      "sub": "THE LORD KEEPS US",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lo, children are an heritage of the LORD, shaped in love and aimed by faithful prayer.",
+      "img": "short-familypsalm127v1-scene-04.jpg",
+      "kicker": "PSALM 127:1-5",
+      "sub": "HERITAGE OF THE LORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, be the Master Builder of our marriages, our children's future, and our household peace.",
+      "img": "short-familypsalm127v1-scene-05.jpg",
+      "kicker": "PSALM 127:1-5",
+      "sub": "MASTER BUILDER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lift anxious striving off our shoulders, bless our honest work, and guard every door today.",
+      "img": "short-familypsalm127v1-scene-06.jpg",
+      "kicker": "PSALM 127:1-5",
+      "sub": "GUARD EVERY DOOR",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Type Amen and subscribe to The Family Altar to cover your home in daily prayer.",
+      "img": "short-familypsalm127v1-scene-07.jpg",
+      "kicker": "THE FAMILY ALTAR",
+      "sub": "COVER YOUR HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Gather your home and loved ones in faith and place every family care into God's hands."
+    ],
+    [
+      9,
+      17,
+      "Psalm one hundred and twenty-seven verse one says, Except the LORD build the house, they labour in vain that build it."
+    ],
+    [
+      18,
+      26,
+      "Except the LORD keep the city, the watchman waketh but in vain."
+    ],
+    [
+      27,
+      35,
+      "Lo, children are an heritage of the LORD, shaped in love and aimed by faithful prayer."
+    ],
+    [
+      36,
+      44,
+      "Father, be the Master Builder of our marriages, our children's future, and our household peace."
+    ],
+    [
+      45,
+      53,
+      "Lift anxious striving off our shoulders, bless our honest work, and guard every door today."
+    ],
+    [
+      54,
+      61,
+      "Type Amen and subscribe to The Family Altar to cover your home in daily prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "PLACE EVERY FAMILY",
+        "CARE INTO THE HANDS",
+        "OF OUR FAITHFUL GOD"
+      ],
+      [
+        "FAMILY",
+        "HANDS",
+        "GOD"
+      ],
+      "PSALM 127:1-5"
+    ],
+    [
+      9,
+      17,
+      [
+        "EXCEPT THE LORD",
+        "BUILD THE HOUSE THEY",
+        "LABOUR IN VAIN"
+      ],
+      [
+        "LORD",
+        "BUILD",
+        "HOUSE"
+      ],
+      "PSALM 127:1-5"
+    ],
+    [
+      18,
+      26,
+      [
+        "EXCEPT THE LORD",
+        "KEEP THE HOME THE",
+        "WATCHMAN WAKES IN VAIN"
+      ],
+      [
+        "LORD",
+        "KEEP",
+        "HOME"
+      ],
+      "PSALM 127:1-5"
+    ],
+    [
+      27,
+      35,
+      [
+        "CHILDREN ARE AN",
+        "HERITAGE OF THE LORD",
+        "COVERED IN PRAYER"
+      ],
+      [
+        "CHILDREN",
+        "HERITAGE",
+        "PRAYER"
+      ],
+      "PSALM 127:1-5"
+    ],
+    [
+      36,
+      44,
+      [
+        "BE THE BUILDER OF",
+        "OUR MARRIAGE CHILDREN",
+        "AND HOUSEHOLD PEACE"
+      ],
+      [
+        "BUILDER",
+        "CHILDREN",
+        "PEACE"
+      ],
+      "PSALM 127:1-5"
+    ],
+    [
+      45,
+      53,
+      [
+        "BLESS OUR WORK AND",
+        "GUARD EVERY DOOR",
+        "BENEATH YOUR PEACE"
+      ],
+      [
+        "BLESS",
+        "GUARD",
+        "PEACE"
+      ],
+      "PSALM 127:1-5"
+    ],
+    [
+      54,
+      61,
+      [
+        "SUBSCRIBE TO",
+        "THE FAMILY ALTAR",
+        "GOD BUILDS THIS HOME"
+      ],
+      [
+        "SUBSCRIBE",
+        "FAMILY",
+        "HOME"
+      ],
+      "THE FAMILY ALTAR"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Gather your home and loved ones in faith and place every family care into God's hands.",
+      "kind": "phrase",
+      "words": [
+        "FAMILY",
+        "HANDS",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Psalm one hundred and twenty-seven verse one says, Except the LORD build the house, they labour in vain that build it.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "BUILD",
+        "HOUSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Except the LORD keep the city, the watchman waketh but in vain.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "KEEP",
+        "HOME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lo, children are an heritage of the LORD, shaped in love and aimed by faithful prayer.",
+      "kind": "phrase",
+      "words": [
+        "CHILDREN",
+        "HERITAGE",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, be the Master Builder of our marriages, our children's future, and our household peace.",
+      "kind": "phrase",
+      "words": [
+        "BUILDER",
+        "CHILDREN",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lift anxious striving off our shoulders, bless our honest work, and guard every door today.",
+      "kind": "phrase",
+      "words": [
+        "BLESS",
+        "GUARD",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Type Amen and subscribe to The Family Altar to cover your home in daily prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "FAMILY",
+        "HOME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 127:1-5"
+}

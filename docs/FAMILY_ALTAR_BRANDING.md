@@ -1,6 +1,6 @@
 # The Family Altar — Official YouTube Brand Kit (`prayer5`)
 
-**Status:** Brand kit & codebase registered on `main` (`provisioned=False` until YouTube channel & `PRAYER5_*` secrets are connected). See `docs/FIFTH_CHANNEL_SETUP.md`.
+**Status:** **LIVE & PROVISIONED (2026-11-10)** on `@TheFamilyAltarDaily` — dedicated Google Cloud project, all 5 `PRAYER5_*` secrets (`GEMINI_API_KEY`, `YOUTUBE_CHANNEL_ID`, `YOUTUBE_CLIENT_ID`, `YOUTUBE_CLIENT_SECRET`, `YOUTUBE_REFRESH_TOKEN`) saved in GitHub Secrets, `provisioned=True` in `pipeline/channels.py`. See `docs/FIFTH_CHANNEL_SETUP.md`.
 
 ## Visual Differentiation Across the 5-Channel Sanctuary Network
 - **Channel 1 — The Secret Place (`@TheSecretPlace`)**: Deep indigo-navy ring + Cross + Open Bible; mountain lake night banner.
@@ -32,20 +32,20 @@ The Family Altar
 @TheFamilyAltarDaily
 ```
 
-### Channel Description
+### Channel Description (`919 / 1000` characters — fits YouTube's 1,000-char limit)
 ```text
-Welcome to The Family Altar — a daily Christian sanctuary of King James Version (KJV) Scripture and fervent household prayer covering your home, your marriage, your children, and God's faithful provision.
+Welcome to The Family Altar — a daily Christian sanctuary of King James Version (KJV) Scripture and fervent household prayer covering your home, marriage, children, and God's faithful provision.
 
 "But as for me and my house, we will serve the LORD." — Joshua 24:15 (KJV)
-"Thy wife shall be as a fruitful vine by the sides of thine house: thy children like olive plants round about thy table." — Psalm 128:3 (KJV)
+"Thy children like olive plants round about thy table." — Psalm 128:3 (KJV)
 
-Every day, we gather around God's unchanging Word — enriched with timeless pastoral reflections from Charles H. Spurgeon and Matthew Henry — to lift up:
-• Peace, unity, and Christlike grace across every room of your home (Isaiah 32:18)
-• Protection, godly wisdom, and spiritual covering over your sons, daughters, and grandchildren (Isaiah 54:13)
-• Strength, patience, and enduring love in marriage and family relationships (Colossians 3:14–15)
-• Honest daily bread, stewardship, and Jehovah-Jireh's faithful provision (Philippians 4:19)
+Every day we gather around God's Word — enriched with pastoral insights from Charles Spurgeon and Matthew Henry — to pray over:
+• Peace, unity, and grace in every room of your home (Isaiah 32:18)
+• Protection, godly wisdom, and peace over your children (Isaiah 54:13)
+• Strength, patience, and Christlike love in marriage (Colossians 3:14–15)
+• Daily bread, stewardship, and God's faithful provision (Philippians 4:19)
 
-Subscribe and turn on notifications to build a daily altar of prayer over your household. Type "Amen" in the comments and share the loved ones you are standing in faith for today!
+Subscribe and turn on notifications to cover your home and family in daily prayer. Type "Amen" in the comments and share who you are praying for today!
 ```
 
 ### Channel Keywords (YouTube Studio -> Settings -> Channel -> Basic info)
