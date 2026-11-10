@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T05:35:16Z",
+  "generated_at": "2026-11-10T07:11:22Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -11,9 +11,9 @@
     "published_longform": 25,
     "published_shorts": 31,
     "public_total": 54,
-    "queued_longform": 34,
-    "queued_shorts": 20,
-    "automations_ok": 8,
+    "queued_longform": 40,
+    "queued_shorts": 26,
+    "automations_ok": 9,
     "automations_total": 10,
     "network_healthy": false
   },
@@ -103,9 +103,9 @@
         "published_longform": 11,
         "published_shorts": 12,
         "public_total": 22,
-        "queued_longform": 5,
+        "queued_longform": 7,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 6
       },
       "latest_video": {
         "id": "SHORT-MORNINGPSALM92V1",
@@ -170,9 +170,9 @@
         "published_longform": 7,
         "published_shorts": 6,
         "public_total": 13,
-        "queued_longform": 5,
+        "queued_longform": 7,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 8
       },
       "latest_video": {
         "id": "SHORT-MIDDAYISAIAH58V10",
@@ -237,9 +237,9 @@
         "published_longform": 0,
         "published_shorts": 0,
         "public_total": 0,
-        "queued_longform": 4,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 6
       },
       "latest_video": null,
       "next_queued_longform": {
@@ -1892,6 +1892,32 @@
         "words": 960
       },
       {
+        "id": "0060",
+        "slug": "exodus-16-21-morning-prayer",
+        "file": "0060-exodus-16-21-morning-prayer.md",
+        "title": "Exodus 16:21 Morning Prayer | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1813
+      },
+      {
+        "id": "0061",
+        "slug": "isaiah-33-2-morning-prayer",
+        "file": "0061-isaiah-33-2-morning-prayer.md",
+        "title": "Isaiah 33:2 Morning Prayer | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1534
+      },
+      {
         "id": "0083",
         "slug": "daniel-6-10-midday-prayer",
         "file": "0083-daniel-6-10-midday-prayer.md",
@@ -1944,6 +1970,32 @@
         "words": 2278
       },
       {
+        "id": "0087",
+        "slug": "isaiah-49-10-midday-prayer",
+        "file": "0087-isaiah-49-10-midday-prayer.md",
+        "title": "Isaiah 49:10 Midday Prayer | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1796
+      },
+      {
+        "id": "0088",
+        "slug": "isaiah-25-4-midday-prayer",
+        "file": "0088-isaiah-25-4-midday-prayer.md",
+        "title": "Isaiah 25:4 Midday Prayer | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1454
+      },
+      {
         "id": "0200",
         "slug": "psalm-119-62-midnight-prayer",
         "file": "0200-psalm-119-62-midnight-prayer.md",
@@ -1994,6 +2046,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 882
+      },
+      {
+        "id": "0204",
+        "slug": "exodus-12-29-31-midnight-prayer-the-midnight-watch",
+        "file": "0204-exodus-12-29-31-midnight-prayer-the-midnight-watch.md",
+        "title": "Exodus 12:29-31 Midnight Prayer | The Midnight Watch",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1280
+      },
+      {
+        "id": "0205",
+        "slug": "zechariah-2-5-midnight-prayer-the-midnight-watch",
+        "file": "0205-zechariah-2-5-midnight-prayer-the-midnight-watch.md",
+        "title": "Zechariah 2:5 Midnight Prayer | The Midnight Watch",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1377
       }
     ],
     "shorts": [
@@ -2130,6 +2208,28 @@
         "target_window_utc": "06:14"
       },
       {
+        "short": "short-morningexodus16v21",
+        "file": "0060-short-morningexodus16v21.yml",
+        "companion_longform_id": "0060",
+        "scripture": "Exodus 16:21",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
+      },
+      {
+        "short": "short-morningisaiah33v2",
+        "file": "0061-short-morningisaiah33v2.yml",
+        "companion_longform_id": "0061",
+        "scripture": "Isaiah 33:2",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
+      },
+      {
         "short": "short-middaydaniel6v10",
         "file": "0083-short-middaydaniel6v10.yml",
         "companion_longform_id": "0083",
@@ -2167,6 +2267,28 @@
         "file": "0086-short-middaypsalm121v5.yml",
         "companion_longform_id": "0086",
         "scripture": "Psalm 121:5-6",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
+      },
+      {
+        "short": "short-middayisaiah49v10",
+        "file": "0087-short-middayisaiah49v10.yml",
+        "companion_longform_id": "0087",
+        "scripture": "Isaiah 49:10",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
+      },
+      {
+        "short": "short-middayisaiah25v4",
+        "file": "0088-short-middayisaiah25v4.yml",
+        "companion_longform_id": "0088",
+        "scripture": "Isaiah 25:4",
         "channel": "prayer3",
         "channel_name": "The Midday Watch",
         "status": "approved",
@@ -2216,6 +2338,28 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
+      },
+      {
+        "short": "short-midnightexodus12v29",
+        "file": "0204-short-midnightexodus12v29.yml",
+        "companion_longform_id": "0204",
+        "scripture": "Exodus 12:29-31",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "23:14"
+      },
+      {
+        "short": "short-midnightzechariah2v5",
+        "file": "0205-short-midnightzechariah2v5.yml",
+        "companion_longform_id": "0205",
+        "scripture": "Zechariah 2:5",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "23:14"
       }
     ]
   },
@@ -2226,12 +2370,12 @@
       "verdict": "SELF-REPORT",
       "severity": "info",
       "detail": "its red runs are the verdicts below, not failures of it",
-      "last_conclusion": "success",
-      "last_run": "2026-11-10T05:24:45+00:00",
+      "last_conclusion": "",
+      "last_run": "2026-11-10T07:09:43+00:00",
       "last_success": "2026-11-10T05:24:45+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
-      "failures_5": 4,
+      "failures_5": 3,
       "effect": "reports and files stalls"
     },
     {
@@ -2239,7 +2383,7 @@
       "name": "Autonomous Comment Replies",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 3.4h ago",
+      "detail": "last success 5.0h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-10T02:08:01+00:00",
       "last_success": "2026-11-10T02:08:01+00:00",
@@ -2253,7 +2397,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 30.7h ago",
+      "detail": "last success 32.3h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-08T22:53:40+00:00",
       "last_success": "2026-11-08T22:53:40+00:00",
@@ -2267,10 +2411,10 @@
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 18.1h ago",
-      "last_conclusion": "",
+      "detail": "last success 1.8h ago",
+      "last_conclusion": "success",
       "last_run": "2026-11-10T05:25:10+00:00",
-      "last_success": "2026-11-09T11:28:49+00:00",
+      "last_success": "2026-11-10T05:25:10+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -2281,7 +2425,7 @@
       "name": "Growth autopilot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 1.8h ago",
+      "detail": "last success 3.4h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-10T03:49:12+00:00",
       "last_success": "2026-11-10T03:49:12+00:00",
@@ -2295,7 +2439,7 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 17.8h ago",
+      "detail": "last success 19.4h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-09T11:48:56+00:00",
       "last_success": "2026-11-09T11:48:56+00:00",
@@ -2309,7 +2453,7 @@
       "name": "Weekly metrics snapshot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 3.5h ago",
+      "detail": "last success 5.1h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-10T02:05:30+00:00",
       "last_success": "2026-11-10T02:05:30+00:00",
@@ -2321,15 +2465,15 @@
     {
       "workflow": "monitor.yml",
       "name": "Automation monitor",
-      "verdict": "SELF-REPORT",
-      "severity": "info",
-      "detail": "its red runs are the verdicts below, not failures of it",
+      "verdict": "OK",
+      "severity": "ok",
+      "detail": "last success 13.9h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-10T05:33:24+00:00",
+      "last_run": "2026-11-10T07:09:43+00:00",
       "last_success": "2026-11-09T17:15:31+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
-      "failures_5": 3,
+      "failures_5": 0,
       "effect": "this report"
     },
     {
@@ -2337,13 +2481,13 @@
       "name": "Produce video",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 3.5h ago",
+      "detail": "last success 5.1h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-10T02:05:09+00:00",
       "last_success": "2026-11-10T02:05:09+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
-      "failures_5": 2,
+      "failures_5": 0,
       "effect": "publishes a video: content/published/ gains a receipt with a video id"
     },
     {
@@ -2351,10 +2495,10 @@
       "name": "Scheduler supervisor",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 0.0h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-10T05:33:23+00:00",
-      "last_success": "2026-11-10T05:27:47+00:00",
+      "last_run": "2026-11-10T07:09:43+00:00",
+      "last_success": "2026-11-10T07:09:23+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,

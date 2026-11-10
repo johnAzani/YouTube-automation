@@ -24,7 +24,7 @@ thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently.
 thumbnail_poster: ["IT IS GOOD", "TO GIVE THANKS", "TO THE LORD", "MORNING PRAYER"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-10T05:40:32Z"
+thumbnail_retry_after: "2026-11-10T13:10:19Z"
 ---
 
 Welcome the gentle light of this beautiful new morning as you pause and open your heart. Holy Scripture declares, It is good to give thanks to the Lord, to sing praises to your name, O Most High, to declare your steadfast love in the morning, and your faithfulness by night. Lord, as dawn breaks today, we lift our voices in humble gratitude for your endless grace. May your unwavering love anchor our spirits and guide our steps through every challenge today. Fill our minds with quiet peace and illuminate our daily journey with your divine wisdom. We praise your holy name and surrender this morning completely into your safe, loving hands. Subscribe to join The Morning Altar for sunrise prayer.

@@ -79,7 +79,7 @@ youtube_video_id: "lhZrnZQq7GY"
 metadata_revision: "selar-seo-v1"
 thumbnail_pending: true
 thumbnail_error: "not_requested"
-thumbnail_retry_after: "2026-11-10T05:40:32Z"
+thumbnail_retry_after: "2026-11-10T13:10:19Z"
 ---
 
 ## Scene 1 — The Sunrise Hook and Directing the Prayer
