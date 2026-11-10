@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T18:12:28Z",
+  "generated_at": "2026-11-10T18:22:11Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 6
   },
   "totals": {
-    "published_total": 68,
+    "published_total": 69,
     "published_longform": 30,
-    "published_shorts": 38,
-    "public_total": 66,
+    "published_shorts": 39,
+    "public_total": 67,
     "queued_longform": 41,
-    "queued_shorts": 26,
+    "queued_shorts": 25,
     "automations_ok": 9,
     "automations_total": 10,
     "network_healthy": false
@@ -32,32 +32,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 22,
+        "published_total": 23,
         "published_longform": 7,
-        "published_shorts": 15,
-        "public_total": 21,
+        "published_shorts": 16,
+        "public_total": 22,
         "queued_longform": 20,
         "queued_other": 5,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "SHORT-PSALM63V6",
-        "title": "Say This Psalm 63:6-7 Prayer Before You Sleep | The Secret Place #Shorts",
+        "id": "SHORT-PSALM139V11",
+        "title": "Say This Psalm 139:11-12 Prayer Before You Sleep | The Secret Place #Shorts",
         "format": "short",
-        "youtube_video_id": "-21nHlytKvw",
-        "watch_url": "https://www.youtube.com/shorts/-21nHlytKvw",
+        "youtube_video_id": "avnYVdvDmkc",
+        "watch_url": "https://www.youtube.com/shorts/avnYVdvDmkc",
         "published_on": "2026-11-10",
-        "published_at": "2026-11-10T14:56:01Z"
+        "published_at": "2026-11-10T18:21:05Z"
       },
       "next_queued_longform": {
         "id": "0015",
         "title": "Psalm 91:5-6 Night Prayer | Deliverance From Terror by Night",
         "words": 883,
-        "status": "approved"
+        "status": "quota_paused"
       },
       "next_queued_short": {
-        "short": "short-psalm139v11",
-        "scripture": "Psalm 139:11-12",
+        "short": "short-proverbs3v24",
+        "scripture": "Proverbs 3:24-26",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -344,6 +344,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PSALM139V11",
+      "slug": "short-psalm139v11-pre-sleep-prayer",
+      "file": "short-psalm139v11-pre-sleep-prayer.md",
+      "title": "Say This Psalm 139:11-12 Prayer Before You Sleep | The Secret Place #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-10",
+      "published_at": "2026-11-10T18:21:05Z",
+      "youtube_video_id": "avnYVdvDmkc",
+      "watch_url": "https://www.youtube.com/shorts/avnYVdvDmkc",
+      "youtu_be_url": "https://youtu.be/avnYVdvDmkc",
+      "shorts_url": "https://www.youtube.com/shorts/avnYVdvDmkc",
+      "studio_url": "https://studio.youtube.com/video/avnYVdvDmkc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/avnYVdvDmkc/hqdefault.jpg",
+      "thumb_text": "NIGHT SHINES \u00b7 AS THE DAY",
+      "duration_label": "62s",
+      "words": 637
+    },
     {
       "id": "0200",
       "slug": "psalm-119-62-midnight-prayer",
@@ -1918,7 +1941,7 @@
         "title": "Psalm 91:5-6 Night Prayer | Deliverance From Terror by Night",
         "channel": "secret-place",
         "channel_name": "The Secret Place",
-        "status": "approved",
+        "status": "quota_paused",
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,
@@ -2446,17 +2469,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-psalm139v11",
-        "file": "0024-short-psalm139v11.yml",
-        "companion_longform_id": "0024",
-        "scripture": "Psalm 139:11-12",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
       {
         "short": "short-proverbs3v24",
         "file": "0025-short-proverbs3v24.yml",
