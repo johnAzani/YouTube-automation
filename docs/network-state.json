@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T15:56:41Z",
+  "generated_at": "2026-11-10T16:43:06Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 6
   },
   "totals": {
-    "published_total": 64,
-    "published_longform": 28,
-    "published_shorts": 36,
-    "public_total": 62,
-    "queued_longform": 43,
-    "queued_shorts": 28,
+    "published_total": 66,
+    "published_longform": 29,
+    "published_shorts": 37,
+    "public_total": 64,
+    "queued_longform": 42,
+    "queued_shorts": 27,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -166,32 +166,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 15,
-        "published_longform": 8,
-        "published_shorts": 7,
-        "public_total": 15,
-        "queued_longform": 6,
+        "published_total": 17,
+        "published_longform": 9,
+        "published_shorts": 8,
+        "public_total": 17,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0052",
-        "title": "Psalm 63:1 Midday Prayer | The Midday Watch",
-        "format": "longform",
-        "youtube_video_id": "0Wg3MiZ8KIg",
-        "watch_url": "https://youtu.be/0Wg3MiZ8KIg",
-        "published_on": "2026-11-10",
-        "published_at": "2026-11-10T13:59:39Z"
-      },
-      "next_queued_longform": {
         "id": "0083",
         "title": "Daniel 6:10 Midday Prayer | The Midday Watch",
-        "words": 1408,
+        "format": "longform",
+        "youtube_video_id": "yeVMkN9BaqU",
+        "watch_url": "https://youtu.be/yeVMkN9BaqU",
+        "published_on": "2026-11-10",
+        "published_at": "2026-11-10T16:42:17Z"
+      },
+      "next_queued_longform": {
+        "id": "0084",
+        "title": "Acts 10:9 Midday Prayer | The Midday Watch",
+        "words": 2437,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaypsalm63v1",
-        "scripture": "Psalm 63:1",
+        "short": "short-middaydaniel6v10",
+        "scripture": "Daniel 6:10",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -336,6 +336,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0083",
+      "slug": "daniel-6-10-midday-prayer",
+      "file": "0083-daniel-6-10-midday-prayer.md",
+      "title": "Daniel 6:10 Midday Prayer | The Midday Watch",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-10",
+      "published_at": "2026-11-10T16:42:17Z",
+      "youtube_video_id": "yeVMkN9BaqU",
+      "watch_url": "https://youtu.be/yeVMkN9BaqU",
+      "youtu_be_url": "https://youtu.be/yeVMkN9BaqU",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/yeVMkN9BaqU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/yeVMkN9BaqU/hqdefault.jpg",
+      "thumb_text": "STEADFAST AT NOON",
+      "duration_label": "~10 min",
+      "words": 1408
+    },
+    {
+      "id": "SHORT-MIDDAYPSALM63V1",
+      "slug": "short-middaypsalm63v1-midday-prayer",
+      "file": "short-middaypsalm63v1-midday-prayer.md",
+      "title": "Say This Psalm 63:1 Prayer at Noon | Only Strength #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-10",
+      "published_at": "2026-11-10T16:04:51Z",
+      "youtube_video_id": "DUfaU5vsqYE",
+      "watch_url": "https://www.youtube.com/shorts/DUfaU5vsqYE",
+      "youtu_be_url": "https://youtu.be/DUfaU5vsqYE",
+      "shorts_url": "https://www.youtube.com/shorts/DUfaU5vsqYE",
+      "studio_url": "https://studio.youtube.com/video/DUfaU5vsqYE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/DUfaU5vsqYE/hqdefault.jpg",
+      "thumb_text": "PAUSE YOUR DAY \u00b7 FIND STILLNESS NOW",
+      "duration_label": "43s",
+      "words": 559
+    },
     {
       "id": "0056",
       "slug": "psalm-30-5-morning-prayer",
@@ -2137,19 +2183,6 @@
         "words": 1534
       },
       {
-        "id": "0083",
-        "slug": "daniel-6-10-midday-prayer",
-        "file": "0083-daniel-6-10-midday-prayer.md",
-        "title": "Daniel 6:10 Midday Prayer | The Midday Watch",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1408
-      },
-      {
         "id": "0084",
         "slug": "acts-10-9-midday-prayer",
         "file": "0084-acts-10-9-midday-prayer.md",
@@ -2426,17 +2459,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-middaypsalm63v1",
-        "file": "0052-short-middaypsalm63v1.yml",
-        "companion_longform_id": "0052",
-        "scripture": "Psalm 63:1",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-morningpsalm57v8",
