@@ -1,0 +1,350 @@
+{
+  "key": "short-morningexodus16v21",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "GATHERING THE MANNA",
+    "AT THE BREAK OF DAY"
+  ],
+  "poster": [
+    "THE MORNING ALTAR",
+    "EXODUS 16:21",
+    "A SACRED STILLNESS",
+    "BEGIN YOUR DAY HERE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "cinematic misty mountain sunrise",
+    "soft golden light hitting green forest leaves",
+    "calm lake reflection at dawn",
+    "open window overlooking misty valley at sunrise",
+    "macro shot of dew on grass at sunrise",
+    "soft light streaming through curtains",
+    "dramatic purple and orange dawn sky",
+    "peaceful morning forest clearing"
+  ],
+  "scenes": [
+    {
+      "a": "Step into the stillness",
+      "img": "short-morningexodus16v21-scene-01.jpg",
+      "kicker": "EXODUS 16:21",
+      "sub": "GREET THE MORNING LIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "the sun begins to rise",
+      "img": "short-morningexodus16v21-scene-02.jpg",
+      "kicker": "EXODUS 16:21",
+      "sub": "A QUIET OFFERING",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Exodus 16:21 says",
+      "img": "short-morningexodus16v21-scene-03.jpg",
+      "kicker": "EXODUS 16:21",
+      "sub": "THE WORD OF GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Every morning they gathered it",
+      "img": "short-morningexodus16v21-scene-04.jpg",
+      "kicker": "EXODUS 16:21",
+      "sub": "DAILY PROVISION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "as much as each needed",
+      "img": "short-morningexodus16v21-scene-05.jpg",
+      "kicker": "EXODUS 16:21",
+      "sub": "GIVEN BY GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May you find your portion",
+      "img": "short-morningexodus16v21-scene-06.jpg",
+      "kicker": "EXODUS 16:21",
+      "sub": "A PRAYER FOR PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "let your heart be filled",
+      "img": "short-morningexodus16v21-scene-07.jpg",
+      "kicker": "EXODUS 16:21",
+      "sub": "STRENGTH FOR TODAY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "walk in this quiet rhythm",
+      "img": "short-morningexodus16v21-scene-08.jpg",
+      "kicker": "EXODUS 16:21",
+      "sub": "THE MORNING ALTAR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "Step into the stillness of this morning as the sun begins to rise over the quiet earth."
+    ],
+    [
+      15,
+      30,
+      "Exodus 16:21 says, every morning they gathered it, as much as each needed, but when the sun grew hot, it melted away."
+    ],
+    [
+      30,
+      45,
+      "May you find your portion of grace today, gathered in the cool hours of this early morning light."
+    ],
+    [
+      45,
+      60,
+      "You do not need to hurry or store up for tomorrow, for the Creator provides exactly what you need."
+    ],
+    [
+      60,
+      75,
+      "Let your heart be filled with this truth, finding comfort in the simple rhythm of gathering his mercy."
+    ],
+    [
+      75,
+      90,
+      "As the light grows bright, may you trust that your cup is full and your path is prepared today."
+    ],
+    [
+      90,
+      105,
+      "Walk in this quiet rhythm, knowing that grace is new and sufficient for every demand you will face."
+    ],
+    [
+      105,
+      120,
+      "Surrender your plans, receive his peace, and subscribe to join us at the altar every single sunrise."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "STEP INTO",
+        "THE STILLNESS",
+        "THE SUN RISES"
+      ],
+      [
+        "STILLNESS"
+      ],
+      "EXODUS 16:21"
+    ],
+    [
+      15,
+      30,
+      [
+        "THEY GATHERED IT",
+        "EACH AS NEEDED",
+        "THE SUN MELTS IT"
+      ],
+      [
+        "GATHERED"
+      ],
+      "EXODUS 16:21"
+    ],
+    [
+      30,
+      45,
+      [
+        "FIND YOUR PORTION",
+        "GATHERED IN GRACE",
+        "EARLY MORNING LIGHT"
+      ],
+      [
+        "PORTION"
+      ],
+      "EXODUS 16:21"
+    ],
+    [
+      45,
+      60,
+      [
+        "DO NOT HURRY",
+        "THE CREATOR PROVIDES",
+        "EXACTLY WHAT NEEDED"
+      ],
+      [
+        "PROVIDES"
+      ],
+      "EXODUS 16:21"
+    ],
+    [
+      60,
+      75,
+      [
+        "HEART BE FILLED",
+        "FINDING COMFORT",
+        "SIMPLE RHYTHM"
+      ],
+      [
+        "COMFORT"
+      ],
+      "EXODUS 16:21"
+    ],
+    [
+      75,
+      90,
+      [
+        "LIGHT GROWS BRIGHT",
+        "TRUST YOUR CUP",
+        "PATH IS PREPARED"
+      ],
+      [
+        "TRUST"
+      ],
+      "EXODUS 16:21"
+    ],
+    [
+      90,
+      105,
+      [
+        "WALK IN RHYTHM",
+        "GRACE IS NEW",
+        "SUFFICIENT FOR ALL"
+      ],
+      [
+        "SUFFICIENT"
+      ],
+      "EXODUS 16:21"
+    ],
+    [
+      105,
+      120,
+      [
+        "SURRENDER YOUR PLANS",
+        "RECEIVE HIS PEACE",
+        "SUBSCRIBE TODAY"
+      ],
+      [
+        "PEACE"
+      ],
+      "EXODUS 16:21"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Step into the stillness",
+      "kind": "phrase",
+      "words": [
+        "STEP",
+        "STILLNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "the sun begins to rise",
+      "kind": "phrase",
+      "words": [
+        "SUN",
+        "RISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Exodus 16:21 says",
+      "kind": "phrase",
+      "words": [
+        "EXODUS",
+        "16:21"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Every morning they gathered it",
+      "kind": "phrase",
+      "words": [
+        "EVERY",
+        "GATHERED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "as much as each needed",
+      "kind": "phrase",
+      "words": [
+        "MUCH",
+        "NEEDED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May you find your portion",
+      "kind": "phrase",
+      "words": [
+        "FIND",
+        "PORTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "let your heart be filled",
+      "kind": "phrase",
+      "words": [
+        "HEART",
+        "FILLED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "walk in this quiet rhythm",
+      "kind": "phrase",
+      "words": [
+        "WALK",
+        "RHYTHM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Exodus 16:21"
+}

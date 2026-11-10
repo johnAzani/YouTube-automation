@@ -1,0 +1,324 @@
+{
+  "key": "short-morningisaiah33v2",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "BE OUR STRENGTH",
+    "EVERY MORNING"
+  ],
+  "poster": [
+    "ISAIAH 33:2",
+    "MORNING PRAYER",
+    "BEGIN WITH GOD",
+    "THE MORNING ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "golden sunrise over misty mountain peaks valley morning light",
+    "calm lake reflection early dawn golden hour trees",
+    "open meadow morning sunlight rays shining through mist",
+    "soft morning sunlight streaming through forest trees",
+    "peaceful rolling hills illuminated by early sunrise rays",
+    "gentle ocean tide morning sun horizon warm orange sky",
+    "serene mountain lake calm sunrise reflection warm glow"
+  ],
+  "scenes": [
+    {
+      "a": "As the morning sun begins to break, take a deep breath and open your heart to this new day.",
+      "img": "short-morningisaiah33v2-scene-01.jpg",
+      "kicker": "ISAIAH 33:2",
+      "sub": "GREET THE NEW DAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "In the quiet light of dawn, turn your thoughts to God and hear His word from Isaiah 33:2:",
+      "img": "short-morningisaiah33v2-scene-02.jpg",
+      "kicker": "ISAIAH 33:2",
+      "sub": "SEEK HIS PRESENCE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "O Lord, be gracious to us; we have waited for you. Be our arm every morning, our salvation in the time of trouble.",
+      "img": "short-morningisaiah33v2-scene-03.jpg",
+      "kicker": "ISAIAH 33:2",
+      "sub": "BE OUR ARM EVERY MORNING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Father, we present ourselves at Your morning altar, placing every fear and responsibility into Your strong hands.",
+      "img": "short-morningisaiah33v2-scene-04.jpg",
+      "kicker": "ISAIAH 33:2",
+      "sub": "SURRENDER AT HIS ALTAR",
+      "cam": "push_in",
+      "focus": [
+        0.48,
+        0.52
+      ]
+    },
+    {
+      "a": "Strengthen our arms for today, guide our steps in peace, and keep our minds anchored in Your unfailing love.",
+      "img": "short-morningisaiah33v2-scene-05.jpg",
+      "kicker": "ISAIAH 33:2",
+      "sub": "WALK IN HIS PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.52,
+        0.48
+      ]
+    },
+    {
+      "a": "May Your grace cover our households and carry us through every trial we encounter before dusk.",
+      "img": "short-morningisaiah33v2-scene-06.jpg",
+      "kicker": "ISAIAH 33:2",
+      "sub": "COVERED BY HIS GRACE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to set your altar each morning and walk in His strength every day.",
+      "img": "short-morningisaiah33v2-scene-07.jpg",
+      "kicker": "ISAIAH 33:2",
+      "sub": "BEGIN EVERY DAY IN PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "As the morning sun begins to break, take a deep breath and open your heart to this new day."
+    ],
+    [
+      7,
+      15,
+      "In the quiet light of dawn, turn your thoughts to God and hear His word from Isaiah 33:2:"
+    ],
+    [
+      16,
+      24,
+      "O Lord, be gracious to us; we have waited for you. Be our arm every morning, our salvation in the time of trouble."
+    ],
+    [
+      25,
+      33,
+      "Father, we present ourselves at Your morning altar, placing every fear and responsibility into Your strong hands."
+    ],
+    [
+      34,
+      42,
+      "Strengthen our arms for today, guide our steps in peace, and keep our minds anchored in Your unfailing love."
+    ],
+    [
+      43,
+      50,
+      "May Your grace cover our households and carry us through every trial we encounter before dusk."
+    ],
+    [
+      51,
+      57,
+      "Subscribe to set your altar each morning and walk in His strength every day."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "AS THE MORNING SUN",
+        "BEGINS TO BREAK",
+        "OPEN YOUR HEART",
+        "TO THIS NEW DAY"
+      ],
+      [
+        "MORNING SUN",
+        "NEW DAY"
+      ],
+      "ISAIAH 33:2"
+    ],
+    [
+      7,
+      15,
+      [
+        "IN THE QUIET LIGHT",
+        "OF DAWN",
+        "TURN YOUR THOUGHTS",
+        "TO GOD"
+      ],
+      [
+        "QUIET LIGHT",
+        "GOD"
+      ],
+      "ISAIAH 33:2"
+    ],
+    [
+      16,
+      24,
+      [
+        "O LORD BE GRACIOUS",
+        "WE HAVE WAITED FOR YOU",
+        "BE OUR ARM",
+        "EVERY MORNING"
+      ],
+      [
+        "BE GRACIOUS",
+        "OUR SALVATION"
+      ],
+      "ISAIAH 33:2"
+    ],
+    [
+      25,
+      33,
+      [
+        "FATHER WE PRESENT",
+        "AT YOUR MORNING ALTAR",
+        "PLACING EVERY FEAR",
+        "IN YOUR HANDS"
+      ],
+      [
+        "MORNING ALTAR",
+        "STRONG HANDS"
+      ],
+      "ISAIAH 33:2"
+    ],
+    [
+      34,
+      42,
+      [
+        "STRENGTHEN OUR ARMS",
+        "GUIDE STEPS IN PEACE",
+        "KEEP MINDS ANCHORED",
+        "IN UNFAILING LOVE"
+      ],
+      [
+        "GUIDE STEPS",
+        "UNFAILING LOVE"
+      ],
+      "ISAIAH 33:2"
+    ],
+    [
+      43,
+      50,
+      [
+        "MAY YOUR GRACE COVER",
+        "OUR HOUSEHOLDS",
+        "AND CARRY US THROUGH",
+        "EVERY TRIAL"
+      ],
+      [
+        "YOUR GRACE",
+        "EVERY TRIAL"
+      ],
+      "ISAIAH 33:2"
+    ],
+    [
+      51,
+      57,
+      [
+        "SUBSCRIBE TO SET",
+        "YOUR MORNING ALTAR",
+        "WALK IN HIS STRENGTH",
+        "EVERY DAY"
+      ],
+      [
+        "SUBSCRIBE",
+        "HIS STRENGTH"
+      ],
+      "ISAIAH 33:2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As the morning sun begins to break, take a deep breath and open your heart to this new day.",
+      "kind": "phrase",
+      "words": [
+        "MORNING SUN",
+        "NEW DAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In the quiet light of dawn, turn your thoughts to God and hear His word from Isaiah 33:2:",
+      "kind": "phrase",
+      "words": [
+        "QUIET LIGHT",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "O Lord, be gracious to us; we have waited for you. Be our arm every morning, our salvation in the time of trouble.",
+      "kind": "phrase",
+      "words": [
+        "BE GRACIOUS",
+        "OUR SALVATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we present ourselves at Your morning altar, placing every fear and responsibility into Your strong hands.",
+      "kind": "phrase",
+      "words": [
+        "MORNING ALTAR",
+        "STRONG HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Strengthen our arms for today, guide our steps in peace, and keep our minds anchored in Your unfailing love.",
+      "kind": "phrase",
+      "words": [
+        "GUIDE STEPS",
+        "UNFAILING LOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May Your grace cover our households and carry us through every trial we encounter before dusk.",
+      "kind": "phrase",
+      "words": [
+        "YOUR GRACE",
+        "EVERY TRIAL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to set your altar each morning and walk in His strength every day.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "HIS STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 33:2"
+}
