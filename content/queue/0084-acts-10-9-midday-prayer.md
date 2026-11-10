@@ -2,7 +2,7 @@
 id: 0084
 title: Acts 10:9 Midday Prayer | The Midday Watch
 slug: acts-10-9-midday-prayer
-status: approved
+status: quota_paused
 channel: prayer3
 privacy: public
 format: longform
@@ -46,34 +46,38 @@ asset_query_verification:
   - query: sunlight breaking through clouds mountain pass
     verified: true
     usable: 3
-    evidence: 3x Public domain — USFS Rocky Mountain National Forest crepuscular ray
-      scans
+    evidence: "3x Public domain \u2014 USFS Rocky Mountain National Forest crepuscular\
+      \ ray scans"
   - query: divine light breaking through clouds over peaceful landscape
     verified: true
     usable: 4
-    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
   - query: forest sunlight mist
     verified: true
     usable: 3
-    evidence: 3x Public domain — USFS forest crepuscular ray and mist photography
+    evidence: "3x Public domain \u2014 USFS forest crepuscular ray and mist photography"
   - query: peaceful mountain river calm water forest
     verified: true
     usable: 4
-    evidence: 4x Public domain — NPS mountain stream and river dawn scans
+    evidence: "4x Public domain \u2014 NPS mountain stream and river dawn scans"
   - query: golden light rays through clouds over mountain peak
     verified: true
     usable: 4
-    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
   - query: sun rays breaking clouds mountains
     verified: true
     usable: 3
-    evidence: 3x Public domain — NOAA National Weather Service crepuscular ray mountain
-      photography
+    evidence: "3x Public domain \u2014 NOAA National Weather Service crepuscular ray\
+      \ mountain photography"
 originality:
   original_thesis: true
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+quota_reset_utc: '2026-11-11T08:00:00+00:00'
+pause_reason: gemini_api_daily_quota_exhausted
 ---
 
 ## Scene 1 — The Sixth Hour Pause
