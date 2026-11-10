@@ -21,7 +21,7 @@ duration_seconds: 59.65
 scenes_verified: 8
 thumbnail_pending: true
 thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (0, 749, 1080, 798); shorten the authored lockup or reduce its size"
-thumbnail_retry_after: "2026-11-10T17:40:59Z"
+thumbnail_retry_after: "2026-11-10T17:42:39Z"
 ---
 
 Welcome the quiet light of dawn and step into the presence of God today. As the sun rises, remember the promise of Psalm 59:16: I will sing of your strength, in the morning I will sing of your love; for you are my fortress, my refuge in times of trouble. Heavenly Father, we lovingly offer this brand new day to you. When shadows linger and worries press upon our hearts, remind us that your mercy is renewed with every sunrise. Fill our souls with your steadfast peace, guide our steps with your truth, and give us courage for whatever lies ahead. We rest safely beneath your protective wings today. Subscribe to The Morning Altar to begin every sunrise in prayer.

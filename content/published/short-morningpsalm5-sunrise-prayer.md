@@ -24,7 +24,7 @@ thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently.
 thumbnail_poster: ["DIRECT", "YOUR", "MORNING", "PRAYER"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-10T17:40:59Z"
+thumbnail_retry_after: "2026-11-10T17:42:39Z"
 ---
 
 Before the rush begins and before your phone demands your attention, pause in the quiet dawn. Psalm 5 verse 3 declares: My voice shalt thou hear in the morning, O Lord. In the morning will I direct my prayer unto thee, and will look up. Do not carry yesterday's heaviness into this fresh sunrise that God has prepared. Father, order our steps today, guard our words, and steady our minds in your truth. For thou, Lord, wilt bless the righteous; compass us with thy favour as with a shield. Type Amen to claim this morning covering, and subscribe to The Morning Altar to pray every sunrise.
