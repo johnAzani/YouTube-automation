@@ -9,11 +9,25 @@
       "workflow": "keepalive.yml"
     },
     {
+      "late_minutes": 214,
+      "name": "Produce video",
+      "ran_at": "2026-11-10T09:48:20+00:00",
+      "slot": "2026-11-10T06:14:00+00:00",
+      "workflow": "produce.yml"
+    },
+    {
       "late_minutes": 205,
       "name": "automation-health",
       "ran_at": "2026-11-09T23:39:48+00:00",
       "slot": "2026-11-09T20:14:00+00:00",
       "workflow": "automation-health.yml"
+    },
+    {
+      "late_minutes": 154,
+      "name": "Autonomous Comment Replies",
+      "ran_at": "2026-11-10T09:48:21+00:00",
+      "slot": "2026-11-10T07:14:00+00:00",
+      "workflow": "comments.yml"
     },
     {
       "late_minutes": 131,
@@ -37,8 +51,8 @@
       "workflow": "community.yml"
     }
   ],
-  "generated_at": "2026-11-10T09:48:10.126175+00:00",
-  "last_run_at": "2026-11-10T09:47:16+00:00",
+  "generated_at": "2026-11-10T09:58:51.854256+00:00",
+  "last_run_at": "2026-11-10T09:58:40+00:00",
   "on_time": [
     {
       "late_minutes": 95,
@@ -46,6 +60,13 @@
       "ran_at": "2026-11-10T03:49:12+00:00",
       "slot": "2026-11-10T02:14:00+00:00",
       "workflow": "growth-autopilot.yml"
+    },
+    {
+      "late_minutes": 34,
+      "name": "Automation monitor",
+      "ran_at": "2026-11-10T09:57:56+00:00",
+      "slot": "2026-11-10T09:23:00+00:00",
+      "workflow": "monitor.yml"
     },
     {
       "late_minutes": 0,
