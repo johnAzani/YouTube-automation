@@ -1,0 +1,331 @@
+{
+  "key": "short-healingjeremiah30v17",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "HEALING PRAYER",
+    "JEREMIAH 30:17"
+  ],
+  "poster": [
+    "THE HEALING BALM",
+    "HEAL ME O LORD",
+    "JEREMIAH 30:17",
+    "HEALING PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm \u2014 receive God's healing peace"
+  ],
+  "stock_queries": [
+    "peaceful mountain river calm water forest",
+    "divine light breaking through clouds over peaceful landscape",
+    "ancient chapel interior candlelight peaceful sanctuary",
+    "forest sunlight mist",
+    "sunlight breaking through clouds mountain pass",
+    "golden light rays through clouds over mountain peak",
+    "serene valley stream morning light peaceful"
+  ],
+  "scenes": [
+    {
+      "a": "Bring every weary burden and healing need before the Great Physician right now.",
+      "img": "short-healingjeremiah30v17-scene-01.jpg",
+      "kicker": "JEREMIAH 30:17",
+      "sub": "BALM OF GILEAD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Jeremiah thirty verse seventeen promises, For I will restore health unto thee, and I will heal thee of thy wounds, saith the LORD.",
+      "img": "short-healingjeremiah30v17-scene-02.jpg",
+      "kicker": "JEREMIAH 30:17",
+      "sub": "I WILL RESTORE HEALTH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Jeremiah seventeen verse fourteen cries out in faith, Heal me, O LORD, and I shall be healed; save me, and I shall be saved.",
+      "img": "short-healingjeremiah30v17-scene-03.jpg",
+      "kicker": "JEREMIAH 17:14",
+      "sub": "HEAL ME O LORD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Where physical weakness or anxious waiting has weighed down your heart, Christ's grace remains sufficient.",
+      "img": "short-healingjeremiah30v17-scene-04.jpg",
+      "kicker": "JEREMIAH 30:17",
+      "sub": "SUFFICIENT GRACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, touch weary bodies, calm fearful thoughts, and guide every physician and caregiver in wisdom.",
+      "img": "short-healingjeremiah30v17-scene-05.jpg",
+      "kicker": "JEREMIAH 30:17",
+      "sub": "PEACE AND RECOVERY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Let the Balm of Gilead soothe every ache and fill your room with quiet peace today.",
+      "img": "short-healingjeremiah30v17-scene-06.jpg",
+      "kicker": "JEREMIAH 30:17",
+      "sub": "QUIET HEALING PEACE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Type Amen and subscribe to The Healing Balm to receive God's healing peace in daily prayer.",
+      "img": "short-healingjeremiah30v17-scene-07.jpg",
+      "kicker": "THE HEALING BALM",
+      "sub": "HEALING PEACE DAILY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Bring every weary burden and healing need before the Great Physician right now."
+    ],
+    [
+      9,
+      17,
+      "Jeremiah thirty verse seventeen promises, For I will restore health unto thee, and I will heal thee of thy wounds, saith the LORD."
+    ],
+    [
+      18,
+      26,
+      "Jeremiah seventeen verse fourteen cries out in faith, Heal me, O LORD, and I shall be healed; save me, and I shall be saved."
+    ],
+    [
+      27,
+      35,
+      "Where physical weakness or anxious waiting has weighed down your heart, Christ's grace remains sufficient."
+    ],
+    [
+      36,
+      44,
+      "Father, touch weary bodies, calm fearful thoughts, and guide every physician and caregiver in wisdom."
+    ],
+    [
+      45,
+      53,
+      "Let the Balm of Gilead soothe every ache and fill your room with quiet peace today."
+    ],
+    [
+      54,
+      61,
+      "Type Amen and subscribe to The Healing Balm to receive God's healing peace in daily prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "BRING EVERY HEALING",
+        "NEED BEFORE THE GREAT",
+        "PHYSICIAN TODAY"
+      ],
+      [
+        "HEALING",
+        "GREAT",
+        "PHYSICIAN"
+      ],
+      "JEREMIAH 30:17"
+    ],
+    [
+      9,
+      17,
+      [
+        "I WILL RESTORE HEALTH",
+        "UNTO THEE AND HEAL",
+        "THY WOUNDS SAITH GOD"
+      ],
+      [
+        "RESTORE",
+        "HEALTH",
+        "HEAL"
+      ],
+      "JEREMIAH 30:17"
+    ],
+    [
+      18,
+      26,
+      [
+        "HEAL ME O LORD",
+        "AND I SHALL BE",
+        "HEALED IN FAITH"
+      ],
+      [
+        "HEAL",
+        "LORD",
+        "FAITH"
+      ],
+      "JEREMIAH 17:14"
+    ],
+    [
+      27,
+      35,
+      [
+        "CHRISTS HEALING GRACE",
+        "REMAINS SUFFICIENT IN",
+        "EVERY WEARY SEASON"
+      ],
+      [
+        "HEALING",
+        "GRACE",
+        "SUFFICIENT"
+      ],
+      "JEREMIAH 30:17"
+    ],
+    [
+      36,
+      44,
+      [
+        "TOUCH WEARY BODIES",
+        "CALM ANXIOUS MINDS",
+        "AND RESTORE STRENGTH"
+      ],
+      [
+        "TOUCH",
+        "CALM",
+        "RESTORE"
+      ],
+      "JEREMIAH 30:17"
+    ],
+    [
+      45,
+      53,
+      [
+        "LET GODS HEALING BALM",
+        "FILL YOUR HEART WITH",
+        "QUIET PEACE TODAY"
+      ],
+      [
+        "HEALING",
+        "BALM",
+        "PEACE"
+      ],
+      "JEREMIAH 30:17"
+    ],
+    [
+      54,
+      61,
+      [
+        "SUBSCRIBE TO",
+        "THE HEALING BALM",
+        "HEAL ME O LORD"
+      ],
+      [
+        "SUBSCRIBE",
+        "HEALING",
+        "BALM"
+      ],
+      "THE HEALING BALM"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Bring every weary burden and healing need before the Great Physician right now.",
+      "kind": "phrase",
+      "words": [
+        "HEALING",
+        "GREAT",
+        "PHYSICIAN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Jeremiah thirty verse seventeen promises, For I will restore health unto thee, and I will heal thee of thy wounds, saith the LORD.",
+      "kind": "phrase",
+      "words": [
+        "RESTORE",
+        "HEALTH",
+        "HEAL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Jeremiah seventeen verse fourteen cries out in faith, Heal me, O LORD, and I shall be healed; save me, and I shall be saved.",
+      "kind": "phrase",
+      "words": [
+        "HEAL",
+        "LORD",
+        "FAITH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Where physical weakness or anxious waiting has weighed down your heart, Christ's grace remains sufficient.",
+      "kind": "phrase",
+      "words": [
+        "HEALING",
+        "GRACE",
+        "SUFFICIENT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, touch weary bodies, calm fearful thoughts, and guide every physician and caregiver in wisdom.",
+      "kind": "phrase",
+      "words": [
+        "TOUCH",
+        "CALM",
+        "RESTORE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let the Balm of Gilead soothe every ache and fill your room with quiet peace today.",
+      "kind": "phrase",
+      "words": [
+        "HEALING",
+        "BALM",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Type Amen and subscribe to The Healing Balm to receive God's healing peace in daily prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "HEALING",
+        "BALM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Jeremiah 30:17"
+}

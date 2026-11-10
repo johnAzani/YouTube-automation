@@ -150,13 +150,13 @@ CHANNELS: dict[str, ChannelProfile] = {
         # Owner decision, 2026-11-10: sixth prayer channel dedicated to daily
         # KJV divine healing, comfort for the brokenhearted, peace of mind, and
         # spiritual/physical restoration prayer (Jeremiah 30:17 / Psalm 147:3).
-        # Starts with provisioned=False until @TheHealingBalmDaily is created on
-        # YouTube and its separate Google Cloud OAuth credentials + Gemini API
-        # key (PRAYER6_*) are saved in GitHub Secrets.
+        # Provisioned 2026-11-10 once @TheHealingBalmDaily's dedicated Google
+        # Cloud OAuth client, refresh token, channel ID, and Gemini API key
+        # (PRAYER6_*) were saved in GitHub Secrets.
         default_privacy="public",
         auto_publish=True,
         include_sanctuary_links=False,
-        provisioned=False,
+        provisioned=True,
     ),
 }
 

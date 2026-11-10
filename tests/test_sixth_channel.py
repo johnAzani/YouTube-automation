@@ -37,13 +37,15 @@ class TestSixthChannelRegistration(unittest.TestCase):
         for alias in ("prayer6", "healing", "healing-balm", "the-healing-balm", "restoration", "channel6"):
             self.assertEqual(normalize_channel_id(alias), "prayer6")
 
-    def test_unprovisioned_channel_stays_out_of_scheduler_and_watchdog_until_live(self):
+    def test_provisioned_channel_is_active_in_scheduler_and_watchdog(self):
         ch = get_channel("prayer6")
-        self.assertFalse(ch.provisioned)
-        self.assertNotIn("prayer6", scheduled_channels())
+        self.assertTrue(ch.provisioned)
+        self.assertIn("prayer6", scheduled_channels())
         health_rows = {row["queue"]: row for row in queue_health()}
-        self.assertNotIn("longform:prayer6", health_rows)
-        self.assertNotIn("shorts:prayer6", health_rows)
+        self.assertIn("longform:prayer6", health_rows)
+        self.assertIn("shorts:prayer6", health_rows)
+        self.assertGreater(health_rows["longform:prayer6"]["ready"], 0)
+        self.assertGreater(health_rows["shorts:prayer6"]["ready"], 0)
 
 
 class TestSixthChannelIdentityAndVisuals(unittest.TestCase):

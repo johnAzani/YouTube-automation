@@ -1,0 +1,331 @@
+{
+  "key": "short-healingpsalm147v3",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "HEALING PRAYER",
+    "PSALM 147:3"
+  ],
+  "poster": [
+    "THE HEALING BALM",
+    "HEAL THIS HEART",
+    "PSALM 147:3",
+    "HEALING PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm \u2014 receive God's healing peace"
+  ],
+  "stock_queries": [
+    "peaceful mountain river calm water forest",
+    "divine light breaking through clouds over peaceful landscape",
+    "ancient chapel interior candlelight peaceful sanctuary",
+    "forest sunlight mist",
+    "sunlight breaking through clouds mountain pass",
+    "golden light rays through clouds over mountain peak",
+    "serene valley stream morning light peaceful"
+  ],
+  "scenes": [
+    {
+      "a": "Bring every hidden ache, grief, and healing need before the Lord of comfort today.",
+      "img": "short-healingpsalm147v3-scene-01.jpg",
+      "kicker": "PSALM 147:3",
+      "sub": "GOD OF ALL COMFORT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Psalm one hundred and forty-seven verse three promises, He healeth the broken in heart, and bindeth up their wounds.",
+      "img": "short-healingpsalm147v3-scene-02.jpg",
+      "kicker": "PSALM 147:3",
+      "sub": "BINDS EVERY WOUND",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He telleth the number of the stars and calls them by name, yet stoops to comfort your heart.",
+      "img": "short-healingpsalm147v3-scene-03.jpg",
+      "kicker": "PSALM 147:4",
+      "sub": "KNOWN BY NAME",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Great is our Lord, and of great power: His understanding of your pain is infinite.",
+      "img": "short-healingpsalm147v3-scene-04.jpg",
+      "kicker": "PSALM 147:5",
+      "sub": "INFINITE UNDERSTANDING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, bind up broken hearts, quiet anxious thoughts, and restore weary bodies in mercy.",
+      "img": "short-healingpsalm147v3-scene-05.jpg",
+      "kicker": "PSALM 147:3",
+      "sub": "QUIET EVERY STORM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Surround our loved ones, caregivers, and physicians with wisdom and gentle healing peace.",
+      "img": "short-healingpsalm147v3-scene-06.jpg",
+      "kicker": "PSALM 147:3",
+      "sub": "SURROUNDED IN GRACE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Type Amen and subscribe to The Healing Balm to receive God's healing peace in daily prayer.",
+      "img": "short-healingpsalm147v3-scene-07.jpg",
+      "kicker": "THE HEALING BALM",
+      "sub": "HEALING PEACE DAILY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Bring every hidden ache, grief, and healing need before the Lord of comfort today."
+    ],
+    [
+      9,
+      17,
+      "Psalm one hundred and forty-seven verse three promises, He healeth the broken in heart, and bindeth up their wounds."
+    ],
+    [
+      18,
+      26,
+      "He telleth the number of the stars and calls them by name, yet stoops to comfort your heart."
+    ],
+    [
+      27,
+      35,
+      "Great is our Lord, and of great power: His understanding of your pain is infinite."
+    ],
+    [
+      36,
+      44,
+      "Father, bind up broken hearts, quiet anxious thoughts, and restore weary bodies in mercy."
+    ],
+    [
+      45,
+      53,
+      "Surround our loved ones, caregivers, and physicians with wisdom and gentle healing peace."
+    ],
+    [
+      54,
+      61,
+      "Type Amen and subscribe to The Healing Balm to receive God's healing peace in daily prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "BRING EVERY HIDDEN",
+        "ACHE AND GRIEF BEFORE",
+        "OUR TENDER LORD TODAY"
+      ],
+      [
+        "ACHE",
+        "TENDER",
+        "LORD"
+      ],
+      "PSALM 147:3"
+    ],
+    [
+      9,
+      17,
+      [
+        "HE HEALETH THE BROKEN",
+        "IN HEART AND BINDETH",
+        "UP THEIR WOUNDS"
+      ],
+      [
+        "HEALETH",
+        "BROKEN",
+        "WOUNDS"
+      ],
+      "PSALM 147:3"
+    ],
+    [
+      18,
+      26,
+      [
+        "THE GOD WHO NUMBERS",
+        "EVERY STAR STOOPS TO",
+        "COMFORT YOUR HEART"
+      ],
+      [
+        "GOD",
+        "COMFORT",
+        "HEART"
+      ],
+      "PSALM 147:4"
+    ],
+    [
+      27,
+      35,
+      [
+        "GREAT IS OUR LORD AND",
+        "HIS UNDERSTANDING OF",
+        "YOUR PAIN IS INFINITE"
+      ],
+      [
+        "GREAT",
+        "LORD",
+        "INFINITE"
+      ],
+      "PSALM 147:5"
+    ],
+    [
+      36,
+      44,
+      [
+        "BIND UP BROKEN HEARTS",
+        "QUIET ANXIOUS MINDS",
+        "AND RESTORE STRENGTH"
+      ],
+      [
+        "BIND",
+        "QUIET",
+        "RESTORE"
+      ],
+      "PSALM 147:3"
+    ],
+    [
+      45,
+      53,
+      [
+        "SURROUND EVERY WEARY",
+        "SOUL IN YOUR GENTLE",
+        "HEALING PEACE TODAY"
+      ],
+      [
+        "WEARY",
+        "HEALING",
+        "PEACE"
+      ],
+      "PSALM 147:3"
+    ],
+    [
+      54,
+      61,
+      [
+        "SUBSCRIBE TO",
+        "THE HEALING BALM",
+        "HEAL THIS HEART"
+      ],
+      [
+        "SUBSCRIBE",
+        "HEALING",
+        "HEART"
+      ],
+      "THE HEALING BALM"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Bring every hidden ache, grief, and healing need before the Lord of comfort today.",
+      "kind": "phrase",
+      "words": [
+        "ACHE",
+        "TENDER",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Psalm one hundred and forty-seven verse three promises, He healeth the broken in heart, and bindeth up their wounds.",
+      "kind": "phrase",
+      "words": [
+        "HEALETH",
+        "BROKEN",
+        "WOUNDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He telleth the number of the stars and calls them by name, yet stoops to comfort your heart.",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "COMFORT",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Great is our Lord, and of great power: His understanding of your pain is infinite.",
+      "kind": "phrase",
+      "words": [
+        "GREAT",
+        "LORD",
+        "INFINITE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, bind up broken hearts, quiet anxious thoughts, and restore weary bodies in mercy.",
+      "kind": "phrase",
+      "words": [
+        "BIND",
+        "QUIET",
+        "RESTORE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Surround our loved ones, caregivers, and physicians with wisdom and gentle healing peace.",
+      "kind": "phrase",
+      "words": [
+        "WEARY",
+        "HEALING",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Type Amen and subscribe to The Healing Balm to receive God's healing peace in daily prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "HEALING",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 147:3"
+}

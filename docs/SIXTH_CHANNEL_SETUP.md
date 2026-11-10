@@ -1,12 +1,10 @@
 # Sixth Channel Setup — The Healing Balm (`prayer6`)
 
-Status: **REGISTERED (`provisioned=False`) — Ready for YouTube Channel Creation & `PRAYER6_*` Secrets.**
+Status: **LIVE (`provisioned=True` as of 2026-11-10).**
 Every line of code, editorial & theological equipment, 30-scripture healing & restoration roadmap (`0400`–`0429`),
 Shorts namespacing (`short-healing…`), CTR thumbnail pack (`balm` Gilead sapphire-and-alabaster grade),
-Community Tab schedule, ES/PT localizations, and bespoke brand artwork (`docs/media/healing-balm-*.png`)
-are wired into the repository in full parity with Channels 1–5.
-
-Because `provisioned=False` until you save the 5 `PRAYER6_*` GitHub Secrets, **zero scheduled runs or watchdog alerts** will fire prematurely while you set up the YouTube channel.
+Community Tab schedule, ES/PT localizations, bespoke brand artwork (`docs/media/healing-balm-*.png`),
+all 5 `PRAYER6_*` GitHub Secrets, and initial Day-1 launch scripts (`0400`–`0403`) are live on `main`.
 
 ---
 

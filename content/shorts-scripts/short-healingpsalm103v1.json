@@ -1,0 +1,331 @@
+{
+  "key": "short-healingpsalm103v1",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "HEALING PRAYER",
+    "PSALM 103:1-5"
+  ],
+  "poster": [
+    "THE HEALING BALM",
+    "RENEW MY STRENGTH",
+    "PSALM 103:1-5",
+    "HEALING PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm \u2014 receive God's healing peace"
+  ],
+  "stock_queries": [
+    "peaceful mountain river calm water forest",
+    "divine light breaking through clouds over peaceful landscape",
+    "ancient chapel interior candlelight peaceful sanctuary",
+    "forest sunlight mist",
+    "sunlight breaking through clouds mountain pass",
+    "golden light rays through clouds over mountain peak",
+    "serene valley stream morning light peaceful"
+  ],
+  "scenes": [
+    {
+      "a": "Bring every weary ache and heavy burden before the Father of tender mercies today.",
+      "img": "short-healingpsalm103v1-scene-01.jpg",
+      "kicker": "PSALM 103:1-5",
+      "sub": "TENDER MERCIES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Psalm one hundred and three says, Bless the LORD, O my soul, and forget not all his benefits.",
+      "img": "short-healingpsalm103v1-scene-02.jpg",
+      "kicker": "PSALM 103:2",
+      "sub": "FORGET NOT HIS BENEFITS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Who forgiveth all thine iniquities; who healeth all thy diseases; who crowneth thee with lovingkindness.",
+      "img": "short-healingpsalm103v1-scene-03.jpg",
+      "kicker": "PSALM 103:3-4",
+      "sub": "CROWNED WITH MERCY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "For He knoweth our frame and pitieth His children with gentle, unfailing compassion.",
+      "img": "short-healingpsalm103v1-scene-04.jpg",
+      "kicker": "PSALM 103:13-14",
+      "sub": "HE KNOWS OUR FRAME",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, renew exhausted strength like the eagle's and quiet every anxious thought in Christ.",
+      "img": "short-healingpsalm103v1-scene-05.jpg",
+      "kicker": "PSALM 103:5",
+      "sub": "RENEW MY STRENGTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Guide every physician and caregiver in wisdom and surround our loved ones with healing peace.",
+      "img": "short-healingpsalm103v1-scene-06.jpg",
+      "kicker": "PSALM 103:1-5",
+      "sub": "SURROUNDED IN PEACE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Type Amen and subscribe to The Healing Balm to receive God's healing peace in daily prayer.",
+      "img": "short-healingpsalm103v1-scene-07.jpg",
+      "kicker": "THE HEALING BALM",
+      "sub": "HEALING PEACE DAILY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Bring every weary ache and heavy burden before the Father of tender mercies today."
+    ],
+    [
+      9,
+      17,
+      "Psalm one hundred and three says, Bless the LORD, O my soul, and forget not all his benefits."
+    ],
+    [
+      18,
+      26,
+      "Who forgiveth all thine iniquities; who healeth all thy diseases; who crowneth thee with lovingkindness."
+    ],
+    [
+      27,
+      35,
+      "For He knoweth our frame and pitieth His children with gentle, unfailing compassion."
+    ],
+    [
+      36,
+      44,
+      "Father, renew exhausted strength like the eagle's and quiet every anxious thought in Christ."
+    ],
+    [
+      45,
+      53,
+      "Guide every physician and caregiver in wisdom and surround our loved ones with healing peace."
+    ],
+    [
+      54,
+      61,
+      "Type Amen and subscribe to The Healing Balm to receive God's healing peace in daily prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "BRING EVERY WEARY",
+        "BURDEN BEFORE THE GOD",
+        "OF TENDER MERCIES"
+      ],
+      [
+        "WEARY",
+        "GOD",
+        "MERCIES"
+      ],
+      "PSALM 103:1-5"
+    ],
+    [
+      9,
+      17,
+      [
+        "BLESS THE LORD O MY",
+        "SOUL AND FORGET NOT",
+        "ALL HIS BENEFITS"
+      ],
+      [
+        "BLESS",
+        "LORD",
+        "BENEFITS"
+      ],
+      "PSALM 103:2"
+    ],
+    [
+      18,
+      26,
+      [
+        "WHO FORGIVETH THINE",
+        "INIQUITIES AND HEALETH",
+        "ALL THY DISEASES"
+      ],
+      [
+        "FORGIVETH",
+        "HEALETH",
+        "DISEASES"
+      ],
+      "PSALM 103:3-4"
+    ],
+    [
+      27,
+      35,
+      [
+        "LIKE A FATHER HE",
+        "KNOWETH OUR FRAME AND",
+        "COMFORTS OUR HEARTS"
+      ],
+      [
+        "FATHER",
+        "FRAME",
+        "COMFORTS"
+      ],
+      "PSALM 103:13-14"
+    ],
+    [
+      36,
+      44,
+      [
+        "RENEW OUR STRENGTH",
+        "LIKE THE EAGLES AND",
+        "QUIET EVERY FEAR"
+      ],
+      [
+        "RENEW",
+        "STRENGTH",
+        "QUIET"
+      ],
+      "PSALM 103:5"
+    ],
+    [
+      45,
+      53,
+      [
+        "SURROUND OUR LOVED",
+        "ONES IN YOUR TENDER",
+        "HEALING PEACE TODAY"
+      ],
+      [
+        "LOVED",
+        "HEALING",
+        "PEACE"
+      ],
+      "PSALM 103:1-5"
+    ],
+    [
+      54,
+      61,
+      [
+        "SUBSCRIBE TO",
+        "THE HEALING BALM",
+        "RENEW MY STRENGTH"
+      ],
+      [
+        "SUBSCRIBE",
+        "HEALING",
+        "STRENGTH"
+      ],
+      "THE HEALING BALM"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Bring every weary ache and heavy burden before the Father of tender mercies today.",
+      "kind": "phrase",
+      "words": [
+        "WEARY",
+        "GOD",
+        "MERCIES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Psalm one hundred and three says, Bless the LORD, O my soul, and forget not all his benefits.",
+      "kind": "phrase",
+      "words": [
+        "BLESS",
+        "LORD",
+        "BENEFITS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Who forgiveth all thine iniquities; who healeth all thy diseases; who crowneth thee with lovingkindness.",
+      "kind": "phrase",
+      "words": [
+        "FORGIVETH",
+        "HEALETH",
+        "DISEASES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For He knoweth our frame and pitieth His children with gentle, unfailing compassion.",
+      "kind": "phrase",
+      "words": [
+        "FATHER",
+        "FRAME",
+        "COMFORTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, renew exhausted strength like the eagle's and quiet every anxious thought in Christ.",
+      "kind": "phrase",
+      "words": [
+        "RENEW",
+        "STRENGTH",
+        "QUIET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guide every physician and caregiver in wisdom and surround our loved ones with healing peace.",
+      "kind": "phrase",
+      "words": [
+        "LOVED",
+        "HEALING",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Type Amen and subscribe to The Healing Balm to receive God's healing peace in daily prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "HEALING",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 103:1-5"
+}
