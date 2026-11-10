@@ -1,0 +1,277 @@
+{
+  "key": "short-familyisaiah32v18",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "PEACE OVER",
+    "YOUR HOUSEHOLD"
+  ],
+  "poster": [
+    "PEACEFUL DWELLINGS",
+    "ISAIAH 32:18",
+    "BLESS YOUR HOME",
+    "THE FAMILY ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm candle lit wooden table with open Bible and olive branches cozy living room dusk",
+    "peaceful cozy cottage house illuminated at sunset warm light peaceful countryside",
+    "soft candle glow on open Holy Bible soft focus warm wooden table aesthetic",
+    "cozy rustic home doorway lit by warm lanterns gentle evening peaceful setting",
+    "warm lit family room living space Bible on table peaceful evening atmosphere",
+    "serene countryside home warm evening glowing windows calm starry night"
+  ],
+  "scenes": [
+    {
+      "a": "Gather your home and loved ones in faith tonight",
+      "img": "short-familyisaiah32v18-scene-01.jpg",
+      "kicker": "ISAIAH 32:18",
+      "sub": "GATHER YOUR HOUSEHOLD IN FAITH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "my people will live in peaceful dwelling places",
+      "img": "short-familyisaiah32v18-scene-02.jpg",
+      "kicker": "ISAIAH 32:18",
+      "sub": "PEACEFUL DWELLING PLACES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "we dedicate this home to Your holy presence",
+      "img": "short-familyisaiah32v18-scene-03.jpg",
+      "kicker": "ISAIAH 32:18",
+      "sub": "FILL EVERY ROOM WITH GRACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Guard our doors from discord, protect our hearts",
+      "img": "short-familyisaiah32v18-scene-04.jpg",
+      "kicker": "ISAIAH 32:18",
+      "sub": "PROTECTED FROM ALL ANXIETY",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Keep our family united in Your truth",
+      "img": "short-familyisaiah32v18-scene-05.jpg",
+      "kicker": "ISAIAH 32:18",
+      "sub": "UNITED IN TRUTH AND LOVE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "We place our sanctuary into Your faithful hands",
+      "img": "short-familyisaiah32v18-scene-06.jpg",
+      "kicker": "ISAIAH 32:18",
+      "sub": "COVER YOUR HOME IN PRAYER",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "Gather your home and loved ones in faith tonight as we seek the Lord's presence over your household."
+    ],
+    [
+      10,
+      22,
+      "Scripture declares in Isaiah 32:18, my people will live in peaceful dwelling places, in secure homes, in undisturbed places of rest."
+    ],
+    [
+      22,
+      35,
+      "Heavenly Father, we dedicate this home to Your holy presence and ask You to fill every room with quiet grace."
+    ],
+    [
+      35,
+      48,
+      "Guard our doors from discord, protect our hearts from anxiety, and let Your peace rest upon everyone who enters here."
+    ],
+    [
+      48,
+      60,
+      "Keep our family united in Your truth, rooted in love, and safe under the shadow of Your almighty wings tonight."
+    ],
+    [
+      60,
+      72,
+      "We place our sanctuary into Your faithful hands, trusting You for quiet rest. Subscribe to cover your family home in daily prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "GATHER YOUR HOME AND LOVED ONES",
+        "IN FAITH TONIGHT AS WE SEEK",
+        "THE LORDS PRESENCE OVER YOUR HOUSEHOLD"
+      ],
+      [
+        "LORDS PRESENCE",
+        "YOUR HOUSEHOLD"
+      ],
+      "ISAIAH 32:18"
+    ],
+    [
+      10,
+      22,
+      [
+        "SCRIPTURE DECLARES IN ISAIAH THIRTY TWO",
+        "MY PEOPLE WILL LIVE IN PEACEFUL DWELLINGS",
+        "IN SECURE HOMES AND UNDISTURBED REST"
+      ],
+      [
+        "PEACEFUL DWELLINGS",
+        "UNDISTURBED REST"
+      ],
+      "ISAIAH 32:18"
+    ],
+    [
+      22,
+      35,
+      [
+        "HEAVENLY FATHER WE DEDICATE THIS HOME",
+        "TO YOUR HOLY PRESENCE AND ASK YOU",
+        "TO FILL EVERY ROOM WITH QUIET GRACE"
+      ],
+      [
+        "HOLY PRESENCE",
+        "QUIET GRACE"
+      ],
+      "ISAIAH 32:18"
+    ],
+    [
+      35,
+      48,
+      [
+        "GUARD OUR DOORS FROM DISCORD",
+        "PROTECT OUR HEARTS FROM ANXIETY",
+        "LET YOUR PEACE REST UPON EVERYONE"
+      ],
+      [
+        "PROTECT OUR HEARTS",
+        "YOUR PEACE"
+      ],
+      "ISAIAH 32:18"
+    ],
+    [
+      48,
+      60,
+      [
+        "KEEP OUR FAMILY UNITED IN TRUTH",
+        "ROOTED IN LOVE AND SAFE UNDER",
+        "THE SHADOW OF YOUR ALMIGHTY WINGS"
+      ],
+      [
+        "ROOTED IN LOVE",
+        "ALMIGHTY WINGS"
+      ],
+      "ISAIAH 32:18"
+    ],
+    [
+      60,
+      72,
+      [
+        "WE PLACE OUR SANCTUARY IN FAITHFUL HANDS",
+        "TRUSTING YOU FOR QUIET REST TONIGHT",
+        "SUBSCRIBE TO COVER YOUR HOME IN PRAYER"
+      ],
+      [
+        "FAITHFUL HANDS",
+        "COVER YOUR HOME"
+      ],
+      "ISAIAH 32:18"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Gather your home and loved ones in faith tonight as we seek the Lord's presence over your household.",
+      "kind": "phrase",
+      "words": [
+        "LORD'S",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Scripture declares in Isaiah 32:18, my people will live in peaceful dwelling places, in secure homes, in undisturbed places of rest.",
+      "kind": "phrase",
+      "words": [
+        "PEACEFUL",
+        "DWELLING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, we dedicate this home to Your holy presence and ask You to fill every room with quiet grace.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "GRACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Guard our doors from discord, protect our hearts from anxiety, and let Your peace rest upon everyone who enters here.",
+      "kind": "phrase",
+      "words": [
+        "YOUR",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Keep our family united in Your truth, rooted in love, and safe under the shadow of Your almighty wings tonight.",
+      "kind": "phrase",
+      "words": [
+        "ROOTED",
+        "IN",
+        "LOVE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "We place our sanctuary into Your faithful hands, trusting You for quiet rest. Subscribe to cover your family home in daily prayer.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFUL",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 32:18"
+}

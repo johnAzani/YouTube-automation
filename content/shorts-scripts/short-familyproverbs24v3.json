@@ -1,0 +1,276 @@
+{
+  "key": "short-familyproverbs24v3",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "BY WISDOM",
+    "A HOUSE IS BUILT"
+  ],
+  "poster": [
+    "BY",
+    "WISDOM",
+    "A HOUSE",
+    "IS BUILT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit wooden table with open bible",
+    "peaceful rustic country home interior at sunset",
+    "fresh green olive branches on a wooden desk",
+    "cozy living room with soft glowing ambient light",
+    "quiet evening prayer corner with candle and bible",
+    "serene countryside house viewed through a calm window",
+    "gentle morning light falling on a family hearth"
+  ],
+  "scenes": [
+    {
+      "a": "Gather your family close",
+      "img": "short-familyproverbs24v3-scene-01.jpg",
+      "kicker": "PROVERBS 24:3",
+      "sub": "GATHER IN FAITH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "By wisdom a house is built",
+      "img": "short-familyproverbs24v3-scene-02.jpg",
+      "kicker": "PROVERBS 24:3",
+      "sub": "BUILD WITH WISDOM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "and through understanding it is established",
+      "img": "short-familyproverbs24v3-scene-03.jpg",
+      "kicker": "PROVERBS 24:3",
+      "sub": "STABLISHED IN PEACE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "through knowledge its rooms are filled",
+      "img": "short-familyproverbs24v3-scene-04.jpg",
+      "kicker": "PROVERBS 24:4",
+      "sub": "ROOMS FILLED WITH GRACE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "with rare and beautiful treasures",
+      "img": "short-familyproverbs24v3-scene-05.jpg",
+      "kicker": "PROVERBS 24:4",
+      "sub": "PRECIOUS TREASURES",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord bless every room",
+      "img": "short-familyproverbs24v3-scene-06.jpg",
+      "kicker": "HOUSEHOLD PRAYER",
+      "sub": "COVER YOUR HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Family Altar",
+      "img": "short-familyproverbs24v3-scene-07.jpg",
+      "kicker": "THE FAMILY ALTAR",
+      "sub": "DAILY HOUSEHOLD PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "Gather your family close in heart as we bring our household before the Lord today."
+    ],
+    [
+      6,
+      13,
+      "By wisdom a house is built and through understanding it is established."
+    ],
+    [
+      13,
+      20,
+      "Through knowledge its rooms are filled with rare and beautiful treasures of peace."
+    ],
+    [
+      20,
+      27,
+      "Lord bless every room beneath this roof with your enduring grace and quiet strength."
+    ],
+    [
+      27,
+      34,
+      "Guard our threshold from strife and let your steadfast love dwell here always."
+    ],
+    [
+      34,
+      41,
+      "May our family walk in your truth day by day, anchored in your unfailing word."
+    ],
+    [
+      41,
+      48,
+      "Subscribe to The Family Altar for daily prayers to cover your home in faith."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "GATHER YOUR FAMILY",
+        "CLOSE IN HEART",
+        "BEFORE THE LORD"
+      ],
+      "GATHER",
+      "PROVERBS 24:3"
+    ],
+    [
+      6,
+      13,
+      [
+        "BY WISDOM",
+        "A HOUSE IS BUILT",
+        "AND ESTABLISHED"
+      ],
+      "WISDOM",
+      "PROVERBS 24:3"
+    ],
+    [
+      13,
+      20,
+      [
+        "THROUGH KNOWLEDGE",
+        "ROOMS ARE FILLED",
+        "WITH TREASURES"
+      ],
+      "KNOWLEDGE",
+      "PROVERBS 24:4"
+    ],
+    [
+      20,
+      27,
+      [
+        "LORD BLESS",
+        "EVERY ROOM",
+        "WITH YOUR GRACE"
+      ],
+      "BLESS",
+      "HOUSEHOLD PRAYER"
+    ],
+    [
+      27,
+      34,
+      [
+        "GUARD OUR THRESHOLD",
+        "FROM STRIFE",
+        "AND LET LOVE DWELL"
+      ],
+      "GUARD",
+      "HOUSEHOLD PRAYER"
+    ],
+    [
+      34,
+      41,
+      [
+        "WALK IN YOUR TRUTH",
+        "DAY BY DAY",
+        "ANCHORED IN WORD"
+      ],
+      "TRUTH",
+      "HOUSEHOLD PRAYER"
+    ],
+    [
+      41,
+      48,
+      [
+        "SUBSCRIBE NOW",
+        "THE FAMILY ALTAR",
+        "COVER YOUR HOME"
+      ],
+      "SUBSCRIBE",
+      "THE FAMILY ALTAR"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Gather your family close",
+      "kind": "phrase",
+      "words": [
+        "GATHER",
+        "FAMILY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "By wisdom a house is built",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "HOUSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "through knowledge its rooms are filled",
+      "kind": "phrase",
+      "words": [
+        "KNOWLEDGE",
+        "ROOMS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord bless every room",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "BLESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Family Altar",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "ALTAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 24:3-4"
+}
