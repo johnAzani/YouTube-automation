@@ -15,7 +15,7 @@ on:
   workflow_dispatch:
     inputs:
       channel:
-        description: "Target channel (secret-place, prayer2, prayer3, prayer4; blank = all provisioned channels)"
+        description: "Target channel (secret-place, prayer2, prayer3, prayer4, prayer5; blank = all provisioned channels)"
         required: false
         default: ""
         type: string
@@ -39,6 +39,7 @@ jobs:
           PRAYER2_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN }}
           PRAYER3_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN }}
           PRAYER4_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER4_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER5_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER5_YOUTUBE_REFRESH_TOKEN }}
         run: |
           python3 - <<'PY'
           import json, os, sys
@@ -81,10 +82,13 @@ jobs:
       PRAYER4_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER4_YOUTUBE_CLIENT_ID }}
       PRAYER4_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER4_YOUTUBE_CLIENT_SECRET }}
       PRAYER4_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER4_YOUTUBE_REFRESH_TOKEN }}
-      YOUTUBE_CLIENT_ID: ${{ matrix.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID)) }}
-      YOUTUBE_CLIENT_SECRET: ${{ matrix.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET)) }}
-      YOUTUBE_REFRESH_TOKEN: ${{ matrix.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN)) }}
-      YOUTUBE_EXPECTED_CHANNEL_ID: ${{ matrix.channel == 'prayer4' && (vars.PRAYER4_YOUTUBE_CHANNEL_ID || secrets.PRAYER4_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer3' && (vars.PRAYER3_YOUTUBE_CHANNEL_ID || secrets.PRAYER3_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer2' && (vars.PRAYER2_YOUTUBE_CHANNEL_ID || secrets.PRAYER2_YOUTUBE_CHANNEL_ID) || (vars.YOUTUBE_CHANNEL_ID || secrets.YOUTUBE_CHANNEL_ID))) }}
+      PRAYER5_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER5_YOUTUBE_CLIENT_ID }}
+      PRAYER5_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER5_YOUTUBE_CLIENT_SECRET }}
+      PRAYER5_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER5_YOUTUBE_REFRESH_TOKEN }}
+      YOUTUBE_CLIENT_ID: ${{ matrix.channel == 'prayer5' && secrets.PRAYER5_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID))) }}
+      YOUTUBE_CLIENT_SECRET: ${{ matrix.channel == 'prayer5' && secrets.PRAYER5_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET))) }}
+      YOUTUBE_REFRESH_TOKEN: ${{ matrix.channel == 'prayer5' && secrets.PRAYER5_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN))) }}
+      YOUTUBE_EXPECTED_CHANNEL_ID: ${{ matrix.channel == 'prayer5' && (vars.PRAYER5_YOUTUBE_CHANNEL_ID || secrets.PRAYER5_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer4' && (vars.PRAYER4_YOUTUBE_CHANNEL_ID || secrets.PRAYER4_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer3' && (vars.PRAYER3_YOUTUBE_CHANNEL_ID || secrets.PRAYER3_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer2' && (vars.PRAYER2_YOUTUBE_CHANNEL_ID || secrets.PRAYER2_YOUTUBE_CHANNEL_ID) || (vars.YOUTUBE_CHANNEL_ID || secrets.YOUTUBE_CHANNEL_ID)))) }}
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4

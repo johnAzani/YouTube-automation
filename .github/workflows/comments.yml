@@ -20,7 +20,7 @@ on:
       channel:
         description: 'Target channel (own GCP project & secrets)'
         type: choice
-        options: [secret-place, prayer2, prayer3, prayer4]
+        options: [secret-place, prayer2, prayer3, prayer4, prayer5]
         default: secret-place
       limit:
         description: 'Maximum comments to reply to per pulse (default 8, max 25)'
@@ -62,6 +62,7 @@ jobs:
           PRAYER2_READY: ${{ secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN != '' }}
           PRAYER3_READY: ${{ secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN != '' }}
           PRAYER4_READY: ${{ secrets.PRAYER4_YOUTUBE_REFRESH_TOKEN != '' }}
+          PRAYER5_READY: ${{ secrets.PRAYER5_YOUTUBE_REFRESH_TOKEN != '' }}
           EVENT_NAME: ${{ github.event_name }}
           INPUT_CHANNEL: ${{ inputs.channel }}
         run: |
@@ -80,6 +81,10 @@ jobs:
                   channels.append("prayer4")
               else:
                   print("::notice title=prayer4 comment replies wait for credentials::PRAYER4_YOUTUBE_REFRESH_TOKEN is not set, so The Midnight Watch is not scheduled for replies yet.")
+              if os.environ.get("PRAYER5_READY", "").lower() == "true":
+                  channels.append("prayer5")
+              else:
+                  print("::notice title=prayer5 comment replies wait for credentials::PRAYER5_YOUTUBE_REFRESH_TOKEN is not set, so The Family Altar is not scheduled for replies yet.")
           elif event == "workflow_dispatch":
               channels = [(os.environ.get("INPUT_CHANNEL") or "secret-place").strip()]
           else:
@@ -121,11 +126,11 @@ jobs:
       - name: Run Comment Reply Engine
         env:
           CHANNEL_ID: ${{ matrix.channel }}
-          YOUTUBE_CLIENT_ID: ${{ matrix.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID)) }}
-          YOUTUBE_CLIENT_SECRET: ${{ matrix.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET)) }}
-          YOUTUBE_REFRESH_TOKEN: ${{ matrix.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN)) }}
-          YOUTUBE_EXPECTED_CHANNEL_ID: ${{ matrix.channel == 'prayer4' && (vars.PRAYER4_YOUTUBE_CHANNEL_ID || secrets.PRAYER4_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer3' && (vars.PRAYER3_YOUTUBE_CHANNEL_ID || secrets.PRAYER3_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer2' && (vars.PRAYER2_YOUTUBE_CHANNEL_ID || secrets.PRAYER2_YOUTUBE_CHANNEL_ID) || (vars.YOUTUBE_CHANNEL_ID || secrets.YOUTUBE_CHANNEL_ID))) }}
-          GEMINI_API_KEY: ${{ matrix.channel == 'prayer4' && secrets.PRAYER4_GEMINI_API_KEY || (matrix.channel == 'prayer3' && secrets.PRAYER3_GEMINI_API_KEY || (matrix.channel == 'prayer2' && secrets.PRAYER2_GEMINI_API_KEY || secrets.GEMINI_API_KEY)) }}
+          YOUTUBE_CLIENT_ID: ${{ matrix.channel == 'prayer5' && secrets.PRAYER5_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID))) }}
+          YOUTUBE_CLIENT_SECRET: ${{ matrix.channel == 'prayer5' && secrets.PRAYER5_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET))) }}
+          YOUTUBE_REFRESH_TOKEN: ${{ matrix.channel == 'prayer5' && secrets.PRAYER5_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN))) }}
+          YOUTUBE_EXPECTED_CHANNEL_ID: ${{ matrix.channel == 'prayer5' && (vars.PRAYER5_YOUTUBE_CHANNEL_ID || secrets.PRAYER5_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer4' && (vars.PRAYER4_YOUTUBE_CHANNEL_ID || secrets.PRAYER4_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer3' && (vars.PRAYER3_YOUTUBE_CHANNEL_ID || secrets.PRAYER3_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer2' && (vars.PRAYER2_YOUTUBE_CHANNEL_ID || secrets.PRAYER2_YOUTUBE_CHANNEL_ID) || (vars.YOUTUBE_CHANNEL_ID || secrets.YOUTUBE_CHANNEL_ID)))) }}
+          GEMINI_API_KEY: ${{ matrix.channel == 'prayer5' && secrets.PRAYER5_GEMINI_API_KEY || (matrix.channel == 'prayer4' && secrets.PRAYER4_GEMINI_API_KEY || (matrix.channel == 'prayer3' && secrets.PRAYER3_GEMINI_API_KEY || (matrix.channel == 'prayer2' && secrets.PRAYER2_GEMINI_API_KEY || secrets.GEMINI_API_KEY))) }}
           # The engine files one issue when a viewer discloses distress instead of
           # answering them in public. Without a token that escalation is a log line.
           GH_TOKEN: ${{ github.token }}

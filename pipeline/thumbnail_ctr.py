@@ -109,6 +109,13 @@ MIDNIGHT_CROWN = Palette("midnight-crown", (6, 8, 26), (30, 28, 82), (226, 220, 
 MIDNIGHT_SANCTUARY = Palette("midnight-sanctuary", (9, 11, 34), (58, 42, 92), (255, 202, 118),
                              (255, 210, 90), (255, 250, 238))
 
+HEARTH_EMERALD = Palette("hearth-emerald", (9, 22, 15), (68, 54, 26), (252, 216, 132),
+                         (248, 206, 94), (254, 249, 238))
+HEARTH_OLIVE = Palette("hearth-olive", (11, 25, 17), (86, 64, 30), (255, 224, 148),
+                       (252, 212, 96), (254, 249, 238))
+HEARTH_SANCTUARY = Palette("hearth-sanctuary", (12, 26, 18), (102, 72, 34), (255, 226, 152),
+                           (250, 210, 96), (254, 249, 238))
+
 _NOCTURNAL_GRADES = ("night", "midnight")
 
 
@@ -223,6 +230,30 @@ MIDNIGHT_VARIANTS = (
     ),
 )
 
+HEARTH_VARIANTS = (
+    CtrVariant(
+        label="hook", concept="imperative — BLESS THIS HOME",
+        hero="BLESS THIS HOME", palette=HEARTH_EMERALD,
+        moon=(0.770, 0.42), moon_scale=0.205, horizon=0.725, dawn=0.78,
+        rays=True, seed=1301, text_box=(86, 84, 690, 470), house=(0.320, 0.165),
+        grade="hearth",
+    ),
+    CtrVariant(
+        label="quiet", concept="curiosity — COVER MY FAMILY",
+        hero="COVER MY FAMILY", palette=HEARTH_OLIVE,
+        moon=(0.795, 0.39), moon_scale=0.194, horizon=0.755, dawn=0.58,
+        rays=True, seed=1402, text_box=(86, 84, 706, 470), house=(0.305, 0.168),
+        grade="hearth",
+    ),
+    CtrVariant(
+        label="poster", concept="textless — covenant family home",
+        hero=None, palette=HEARTH_SANCTUARY,
+        moon=(0.560, 0.43), moon_scale=0.232, horizon=0.695, dawn=0.86,
+        rays=True, seed=1503, text_box=(0, 0, 0, 0), house=(0.220, 0.175),
+        grade="hearth",
+    ),
+)
+
 
 def variants_for_channel(channel_id: str | None = None) -> tuple["CtrVariant", ...]:
     """Select the 16:9 CTR variant pack matching `channel_id`'s daypart grade."""
@@ -238,6 +269,8 @@ def variants_for_channel(channel_id: str | None = None) -> tuple["CtrVariant", .
         base = NOON_VARIANTS
     elif grade == "midnight":
         base = MIDNIGHT_VARIANTS
+    elif grade == "hearth":
+        base = HEARTH_VARIANTS
     else:
         return CTR_VARIANTS
     return (
