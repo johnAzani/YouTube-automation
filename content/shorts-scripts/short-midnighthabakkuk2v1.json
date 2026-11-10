@@ -1,0 +1,331 @@
+{
+  "key": "short-midnighthabakkuk2v1",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "MIDNIGHT PRAYER",
+    "HABAKKUK 2:1-3"
+  ],
+  "poster": [
+    "THE MIDNIGHT WATCH",
+    "WAIT FOR IT",
+    "HABAKKUK 2:1-3",
+    "MIDNIGHT PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch \u2014 stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "starry night sky milky way mountains",
+    "aurora borealis night sky mountains",
+    "ancient chapel interior candlelight peaceful sanctuary",
+    "star night sky over quiet countryside peaceful",
+    "peaceful night landscape moon over calm lake",
+    "calm mountain lake still water reflection nightfall",
+    "starry night sky over stone watchtower silhouette"
+  ],
+  "scenes": [
+    {
+      "a": "Rise in spirit at this midnight hour and take your stand upon the watchtower of faith.",
+      "img": "short-midnighthabakkuk2v1-scene-01.jpg",
+      "kicker": "HABAKKUK 2:1-3",
+      "sub": "STAND ON THE WATCH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Habakkuk two verse one says, I will stand upon my watch, and set me upon the tower, to see what He will say.",
+      "img": "short-midnighthabakkuk2v1-scene-02.jpg",
+      "kicker": "HABAKKUK 2:1-3",
+      "sub": "SET UPON THE TOWER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And the Lord answered, For the vision is yet for an appointed time: though it tarry, wait for it; because it will surely come.",
+      "img": "short-midnighthabakkuk2v1-scene-03.jpg",
+      "kicker": "HABAKKUK 2:1-3",
+      "sub": "IT WILL SURELY COME",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "What feels delayed to human eyes is moving strictly on heaven's appointed calendar.",
+      "img": "short-midnighthabakkuk2v1-scene-04.jpg",
+      "kicker": "HABAKKUK 2:1-3",
+      "sub": "APPOINTED TIME",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, at this midnight watch we thank You that Your Word never lies and never arrives late.",
+      "img": "short-midnighthabakkuk2v1-scene-05.jpg",
+      "kicker": "HABAKKUK 2:1-3",
+      "sub": "YOUR WORD NEVER FAILS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Strengthen our households to live by faith, loose weariness, and establish Your peace tonight.",
+      "img": "short-midnighthabakkuk2v1-scene-06.jpg",
+      "kicker": "HABAKKUK 2:1-3",
+      "sub": "LIVE BY FAITH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Type Amen and subscribe to The Midnight Watch to stand in prayer at midnight.",
+      "img": "short-midnighthabakkuk2v1-scene-07.jpg",
+      "kicker": "THE MIDNIGHT WATCH",
+      "sub": "STAND AT MIDNIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Rise in spirit at this midnight hour and take your stand upon the watchtower of faith."
+    ],
+    [
+      9,
+      17,
+      "Habakkuk two verse one says, I will stand upon my watch, and set me upon the tower, to see what He will say."
+    ],
+    [
+      18,
+      26,
+      "And the Lord answered, For the vision is yet for an appointed time: though it tarry, wait for it; because it will surely come."
+    ],
+    [
+      27,
+      35,
+      "What feels delayed to human eyes is moving strictly on heaven's appointed calendar."
+    ],
+    [
+      36,
+      44,
+      "Father, at this midnight watch we thank You that Your Word never lies and never arrives late."
+    ],
+    [
+      45,
+      53,
+      "Strengthen our households to live by faith, loose weariness, and establish Your peace tonight."
+    ],
+    [
+      54,
+      61,
+      "Type Amen and subscribe to The Midnight Watch to stand in prayer at midnight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "RISE IN SPIRIT AT",
+        "THIS MIDNIGHT HOUR",
+        "ON THE WATCHTOWER"
+      ],
+      [
+        "RISE",
+        "MIDNIGHT",
+        "WATCHTOWER"
+      ],
+      "HABAKKUK 2:1-3"
+    ],
+    [
+      9,
+      17,
+      [
+        "I WILL STAND UPON",
+        "MY WATCH AND SET ME",
+        "UPON THE TOWER"
+      ],
+      [
+        "STAND",
+        "WATCH",
+        "TOWER"
+      ],
+      "HABAKKUK 2:1-3"
+    ],
+    [
+      18,
+      26,
+      [
+        "THOUGH IT TARRY",
+        "WAIT FOR IT BECAUSE",
+        "IT WILL SURELY COME"
+      ],
+      [
+        "WAIT",
+        "SURELY",
+        "COME"
+      ],
+      "HABAKKUK 2:1-3"
+    ],
+    [
+      27,
+      35,
+      [
+        "GOD'S PROMISE MOVES",
+        "ON HEAVEN'S EXACT",
+        "APPOINTED TIME"
+      ],
+      [
+        "PROMISE",
+        "HEAVEN'S",
+        "TIME"
+      ],
+      "HABAKKUK 2:1-3"
+    ],
+    [
+      36,
+      44,
+      [
+        "FATHER WE THANK YOU",
+        "THAT YOUR WORD NEVER",
+        "ARRIVES LATE"
+      ],
+      [
+        "FATHER",
+        "WORD",
+        "NEVER"
+      ],
+      "HABAKKUK 2:1-3"
+    ],
+    [
+      45,
+      53,
+      [
+        "STRENGTHEN OUR HOMES",
+        "TO LIVE BY FAITH",
+        "IN YOUR PEACE"
+      ],
+      [
+        "STRENGTHEN",
+        "FAITH",
+        "PEACE"
+      ],
+      "HABAKKUK 2:1-3"
+    ],
+    [
+      54,
+      61,
+      [
+        "SUBSCRIBE TO",
+        "THE MIDNIGHT WATCH",
+        "STAND AT MIDNIGHT"
+      ],
+      [
+        "SUBSCRIBE",
+        "MIDNIGHT",
+        "WATCH"
+      ],
+      "THE MIDNIGHT WATCH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Rise in spirit at this midnight hour and take your stand upon the watchtower of faith.",
+      "kind": "phrase",
+      "words": [
+        "RISE",
+        "MIDNIGHT",
+        "WATCHTOWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Habakkuk two verse one says, I will stand upon my watch, and set me upon the tower, to see what He will say.",
+      "kind": "phrase",
+      "words": [
+        "STAND",
+        "WATCH",
+        "TOWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And the Lord answered, For the vision is yet for an appointed time: though it tarry, wait for it; because it will surely come.",
+      "kind": "phrase",
+      "words": [
+        "WAIT",
+        "SURELY",
+        "COME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "What feels delayed to human eyes is moving strictly on heaven's appointed calendar.",
+      "kind": "phrase",
+      "words": [
+        "PROMISE",
+        "HEAVEN'S",
+        "TIME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, at this midnight watch we thank You that Your Word never lies and never arrives late.",
+      "kind": "phrase",
+      "words": [
+        "FATHER",
+        "WORD",
+        "NEVER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Strengthen our households to live by faith, loose weariness, and establish Your peace tonight.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTHEN",
+        "FAITH",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Type Amen and subscribe to The Midnight Watch to stand in prayer at midnight.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "MIDNIGHT",
+        "WATCH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Habakkuk 2:1-3"
+}

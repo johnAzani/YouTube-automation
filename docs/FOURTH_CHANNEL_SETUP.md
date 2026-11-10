@@ -1,10 +1,10 @@
 # Fourth Channel Setup — The Midnight Watch (`prayer4`)
 
-Status: **registered, not yet live (`provisioned=False`).** Every line of code,
+Status: **LIVE (`provisioned=True` as of 2026-11-10).** Every line of code,
 equipment, 30-scripture roadmap (`0200`–`0229`), Shorts namespacing (`short-midnight…`),
 CTR thumbnail pack (`midnight` grade), Community Tab schedule, ES/PT localizations,
-brand artwork (`docs/media/midnight-watch-*.png`), and GitHub Actions workflow probes
-are wired into `main` in full parity with the three live channels.
+brand artwork (`docs/media/midnight-watch-*.png`), `PRAYER4_*` GitHub Secrets, and
+initial publishable launch scripts are live on `main`.
 
 The channel is a **midnight breakthrough & watchman prayer** channel anchored in
 **Psalm 119:62** (*"At midnight I will rise to give thanks unto thee because of thy

@@ -42,13 +42,15 @@ class TestFourthChannelRegistration(unittest.TestCase):
         for alias in ("prayer4", "midnight", "midnight-watch", "the-midnight-watch", "channel4"):
             self.assertEqual(normalize_channel_id(alias), "prayer4")
 
-    def test_unprovisioned_channel_stays_out_of_scheduler_and_watchdog(self):
+    def test_provisioned_channel_is_active_in_scheduler_and_watchdog(self):
         ch = get_channel("prayer4")
-        self.assertFalse(ch.provisioned)
-        self.assertNotIn("prayer4", scheduled_channels())
-        health_rows = queue_health()
-        self.assertNotIn("longform:prayer4", health_rows)
-        self.assertNotIn("shorts:prayer4", health_rows)
+        self.assertTrue(ch.provisioned)
+        self.assertIn("prayer4", scheduled_channels())
+        health_rows = {row["queue"]: row for row in queue_health()}
+        self.assertIn("longform:prayer4", health_rows)
+        self.assertIn("shorts:prayer4", health_rows)
+        self.assertGreater(health_rows["longform:prayer4"]["ready"], 0)
+        self.assertGreater(health_rows["shorts:prayer4"]["ready"], 0)
 
 
 class TestFourthChannelIdentityAndVisuals(unittest.TestCase):
