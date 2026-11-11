@@ -49,3 +49,28 @@ def test_ambiguous_prefix_lists_matches(queue):
 def test_select_jobs_resolves_bare_id(queue):
     (selected,) = select_jobs(all_flag=False, job_path="0036", next_flag=False)
     assert selected.name.startswith("0036-")
+
+
+def test_duplicate_ids_are_skipped_instead_of_selecting_by_slug(tmp_path, monkeypatch):
+    def job(name, job_id):
+        (tmp_path / name).write_text(
+            f"---\nid: '{job_id}'\nchannel: prayer8\nstatus: approved\nformat: short\n---\n\n## Scene 1 — Prayer\nGrace and peace.\n",
+            encoding="utf-8",
+        )
+    job("0600-a.md", "0600")
+    job("0600-b.md", "0600")
+    job("0601-good.md", "0601")
+    monkeypatch.setattr(run_module, "QUEUE_DIR", tmp_path)
+    monkeypatch.setattr(run_module.CONFIG, "channel_id", "prayer8")
+    assert run_module._duplicate_queue_ids(tmp_path) == {"0600"}
+    assert select_jobs(False, None, True) == [tmp_path / "0601-good.md"]
+
+
+def test_explicit_job_cannot_bypass_duplicate_guard(tmp_path, monkeypatch):
+    first = tmp_path / "0600-a.md"
+    for path in (first, tmp_path / "0600-b.md"):
+        path.write_text("---\nid: '0600'\nchannel: prayer8\nstatus: approved\n---\n\n## Scene 1 — Prayer\nGrace and peace.\n", encoding="utf-8")
+    monkeypatch.setattr(run_module, "QUEUE_DIR", tmp_path)
+    monkeypatch.setattr(run_module.CONFIG, "channel_id", "prayer8")
+    with pytest.raises(RuntimeError, match="duplicate queue ID"):
+        run_module.process(first, False)

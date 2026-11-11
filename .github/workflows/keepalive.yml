@@ -3,10 +3,11 @@ name: Keepalive
 # Protects the studio from two silent killers (docs/DEEP_DIVE.md §1):
 #  1. GitHub auto-disables scheduled workflows in PUBLIC repos after 60 days
 #     without repository activity. Only pushes reliably reset the timer.
-#  2. A workflow disabled for any reason never fires again until re-enabled.
+#  2. A workflow disabled by GitHub for inactivity needs re-enabling.
 #
-# This workflow: (a) re-enables every scheduled workflow weekly (self-heal),
-# (b) commits a timestamp file when the last commit is aging (resets the clock).
+# This workflow: (a) re-enables workflows disabled by inactivity (self-heal),
+# while respecting manual pauses, and (b) commits a timestamp file when the last
+# commit is aging (resets the clock).
 # Never delete this workflow.
 
 on:
@@ -30,17 +31,17 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Re-enable every workflow (self-heal)
-        # This used to re-enable a hardcoded three: produce, dry-run and itself.
-        # GitHub disables a scheduled workflow after 60 days without repository
-        # activity, and it disables *individual* workflows when they fail to parse —
-        # so the list has to come from the repository, not from memory. Fourteen
-        # workflows existed the day this was written.
+        # Recover only GitHub's inactivity disablement. A workflow disabled by
+        # the owner is an intentional pause and must never be silently re-enabled.
+        # Discover dynamically so newly added workflows are covered too.
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -o pipefail
-          mapfile -t FILES < <(gh api "repos/${GITHUB_REPOSITORY}/actions/workflows?per_page=100"                                 --jq '.workflows[] | select(.state != "deleted_by_user") | .path'                                 | sed 's|^.github/workflows/||' | sort)
-          echo "found ${#FILES[@]} workflow(s): ${FILES[*]}"
+          mapfile -t FILES < <(gh api "repos/${GITHUB_REPOSITORY}/actions/workflows?per_page=100" \
+            --jq '.workflows[] | select(.state == "disabled_inactivity") | .path' \
+            | sed 's|^.github/workflows/||' | sort)
+          echo "found ${#FILES[@]} inactivity-disabled workflow(s): ${FILES[*]}"
           failed=0
           for wf in "${FILES[@]}"; do
             if gh api -X PUT "repos/${GITHUB_REPOSITORY}/actions/workflows/${wf}/enable" >/dev/null 2>&1; then

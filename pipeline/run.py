@@ -213,6 +213,15 @@ def resolve_job_path(job_arg: str) -> Path:
     raise ValueError(f"--job {arg!r} matches no file in content/queue/. Available: {available}")
 
 
+def _duplicate_queue_ids(queue_dir: Path) -> set[str]:
+    """IDs are globally unique; a collision must never choose by filename order."""
+    counts: dict[str, int] = {}
+    for path in queue_dir.glob("[0-9][0-9][0-9][0-9]-*.md"):
+        job_id = path.name[:4]
+        counts[job_id] = counts.get(job_id, 0) + 1
+    return {job_id for job_id, count in counts.items() if count > 1}
+
+
 def select_jobs(all_flag: bool, job_path: str | None, next_flag: bool) -> list[Path]:
     if job_path:
         return [resolve_job_path(job_path)]
@@ -220,8 +229,12 @@ def select_jobs(all_flag: bool, job_path: str | None, next_flag: bool) -> list[P
 
     target_channel = normalize_channel_id(CONFIG.channel_id)
     jobs = sorted(QUEUE_DIR.glob("*.md"))
+    duplicate_ids = _duplicate_queue_ids(QUEUE_DIR)
     approved: list[Path] = []
     for j in jobs:
+        if j.name[:4] in duplicate_ids:
+            _log(f"skip {j.name}: duplicate job ID {j.name[:4]} needs resolution")
+            continue
         try:
             doc = parse_script(j)
         except Exception as exc:  # noqa: BLE001
@@ -287,6 +300,8 @@ def process(path: Path, dry_run: bool) -> dict:
         model = Path(os.environ.get("PRAYER_ALIGNMENT_MODEL", OUTPUT_DIR / "alignment-model"))
         return produce(path, dry_run, model)
     doc = parse_script(path)
+    if Path(path).parent.resolve() == QUEUE_DIR.resolve() and Path(path).name[:4] in _duplicate_queue_ids(QUEUE_DIR):
+        raise RuntimeError(f"Refusing job {doc.id}: duplicate queue ID must be resolved before publishing.")
     target_channel = normalize_channel_id(CONFIG.channel_id)
     if doc.channel != target_channel:
         raise RuntimeError(

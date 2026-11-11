@@ -1,35 +1,36 @@
 {
   "key": "short-shieldpsalm121v7",
   "channel": "prayer8",
-  "psalm": 121,
+  "psalm": null,
   "title": [
-    "UNDER GOD'S SHADOW",
-    "PSALM 121:7-8 PRAYER"
+    "PROTECTION PRAYER",
+    "PSALM 121:7-8"
   ],
   "poster": [
     "THE COVENANT SHIELD",
-    "DIVINE PROTECTION",
+    "GUARD MY STEPS",
     "PSALM 121:7-8",
-    "DAILY COVERING PRAYER"
+    "PROTECTION PRAYER"
   ],
   "end": [
     "SUBSCRIBE",
-    "The Covenant Shield — walk under God's daily covering"
+    "The Covenant Shield — daily protection prayer"
   ],
   "stock_queries": [
-    "golden light rays through dramatic mountain clouds",
-    "sunlit mountain pass peaceful pathway",
-    "ancient stone watchtower golden sunset light",
-    "peaceful forest river sunbeams mist",
-    "calm mountain lake sunset sky reflections",
-    "majestic mountain peak bathed in divine sunlight"
+    "sunlight breaking through clouds mountain pass",
+    "golden light rays through clouds over mountain peak",
+    "divine light breaking through clouds over peaceful landscape",
+    "peaceful mountain river calm water forest",
+    "ancient chapel interior candlelight peaceful sanctuary",
+    "forest sunlight mist",
+    "serene valley stream morning light peaceful"
   ],
   "scenes": [
     {
-      "a": "Place every step, every journey, and every unseen concern under the shadow of the Almighty today.",
+      "a": "Before you begin this journey, pause and place every road and every loved one before the Lord.",
       "img": "short-shieldpsalm121v7-scene-01.jpg",
       "kicker": "PSALM 121:7-8",
-      "sub": "DIVINE PROTECTION FOR YOUR STEPS",
+      "sub": "BRING YOUR FEARS",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -37,243 +38,236 @@
       ]
     },
     {
-      "a": "When uncertainty surrounds your path, rest in His holy promise.",
+      "a": "Psalm one hundred twenty-one says, The LORD shall preserve thee from all evil: he shall preserve thy soul.",
       "img": "short-shieldpsalm121v7-scene-02.jpg",
       "kicker": "PSALM 121:7-8",
-      "sub": "REST IN HIS PROMISE",
-      "cam": "pull_out",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "Scripture declares in Psalm 121:7-8: \"The Lord shall preserve thee from all evil: he shall preserve thy soul. The Lord shall preserve thy going out and thy coming in from this time forth, and even for evermore.\"",
-      "img": "short-shieldpsalm121v7-scene-03.jpg",
-      "kicker": "PSALM 121:7-8",
-      "sub": "GOD SHALL PRESERVE THY SOUL",
+      "sub": "HEAR THE WORD",
       "cam": "tilt_up",
       "focus": [
         0.5,
-        0.6
+        0.45
       ]
     },
     {
-      "a": "Father, shield this believer from all hidden snares and cover every path they walk today.",
-      "img": "short-shieldpsalm121v7-scene-04.jpg",
-      "kicker": "DIVINE SHIELD",
-      "sub": "PROTECTION FROM ALL SNARES",
-      "cam": "pan_left",
-      "focus": [
-        0.4,
-        0.5
-      ]
-    },
-    {
-      "a": "Guard their mind in perfect peace, protect their home, and surround them with holy angels continuously.",
-      "img": "short-shieldpsalm121v7-scene-05.jpg",
-      "kicker": "PERFECT PEACE",
-      "sub": "ANGELIC COVERING DAY AND NIGHT",
-      "cam": "push_in",
+      "a": "The LORD shall preserve thy going out and thy coming in from this time forth, and even for evermore.",
+      "img": "short-shieldpsalm121v7-scene-03.jpg",
+      "kicker": "PSALM 121:7-8",
+      "sub": "TRUST THE LORD",
+      "cam": "pan_right",
       "focus": [
         0.5,
-        0.5
+        0.45
       ]
     },
     {
-      "a": "Walk securely beneath His eternal canopy, knowing His loving protection over you never slumbers or sleeps. Subscribe to The Covenant Shield to walk under God's covering.",
-      "img": "short-shieldpsalm121v7-scene-06.jpg",
-      "kicker": "ETERNAL CANOPY",
-      "sub": "WALK UNDER HIS COVERING",
+      "a": "Our keeper neither slumbers nor sleeps. When the road is uncertain, we can bring our fears to Him.",
+      "img": "short-shieldpsalm121v7-scene-04.jpg",
+      "kicker": "PSALM 121:7-8",
+      "sub": "FATHER BE NEAR",
       "cam": "pull_out",
       "focus": [
         0.5,
-        0.4
+        0.45
+      ]
+    },
+    {
+      "a": "Father, grant every driver patience, every traveller wisdom, and every family peace in Your presence.",
+      "img": "short-shieldpsalm121v7-scene-05.jpg",
+      "kicker": "PSALM 121:7-8",
+      "sub": "GIVE US WISDOM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Walk with those facing danger or grief, and guide us to use care and good judgment along the way.",
+      "img": "short-shieldpsalm121v7-scene-06.jpg",
+      "kicker": "PSALM 121:7-8",
+      "sub": "PEACE IN CHRIST",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Type Amen and subscribe to The Covenant Shield for daily prayer and encouragement in God’s keeping.",
+      "img": "short-shieldpsalm121v7-scene-07.jpg",
+      "kicker": "COVENANT SHIELD",
+      "sub": "DAILY PROTECTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
       ]
     }
   ],
   "captions": [
     [
       0,
-      9,
-      "Place every step, every journey, and every unseen concern under the shadow of the Almighty today."
+      8,
+      "Before you begin this journey, pause and place every road and every loved one before the Lord."
     ],
     [
       9,
-      15,
-      "When uncertainty surrounds your path, rest in His holy promise."
+      17,
+      "Psalm one hundred twenty-one says, The LORD shall preserve thee from all evil: he shall preserve thy soul."
     ],
     [
-      15,
-      33,
-      "Scripture declares in Psalm 121:7-8: \"The Lord shall preserve thee from all evil: he shall preserve thy soul. The Lord shall preserve thy going out and thy coming in from this time forth, and even for evermore.\""
+      18,
+      26,
+      "The LORD shall preserve thy going out and thy coming in from this time forth, and even for evermore."
     ],
     [
-      33,
-      43,
-      "Father, shield this believer from all hidden snares and cover every path they walk today."
+      27,
+      35,
+      "Our keeper neither slumbers nor sleeps. When the road is uncertain, we can bring our fears to Him."
     ],
     [
-      43,
+      36,
+      44,
+      "Father, grant every driver patience, every traveller wisdom, and every family peace in Your presence."
+    ],
+    [
+      45,
       53,
-      "Guard their mind in perfect peace, protect their home, and surround them with holy angels continuously."
+      "Walk with those facing danger or grief, and guide us to use care and good judgment along the way."
     ],
     [
-      53,
-      65,
-      "Walk securely beneath His eternal canopy, knowing His loving protection over you never slumbers or sleeps. Subscribe to The Covenant Shield to walk under God's covering."
+      54,
+      62,
+      "Type Amen and subscribe to The Covenant Shield for daily prayer and encouragement in God’s keeping."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      9,
+      8,
       [
-        "PLACE EVERY STEP",
-        "UNDER THE SHADOW",
-        "OF THE ALMIGHTY"
+        "BRING YOUR FEARS"
       ],
-      [
-        "SHADOW",
-        "ALMIGHTY"
-      ],
+      [],
       "PSALM 121:7-8"
     ],
     [
       9,
-      15,
+      17,
       [
-        "REST IN HIS",
-        "HOLY PROMISE"
+        "HEAR THE WORD"
       ],
-      [
-        "HOLY",
-        "PROMISE"
-      ],
+      [],
       "PSALM 121:7-8"
     ],
     [
-      15,
-      33,
+      18,
+      26,
       [
-        "THE LORD SHALL",
-        "PRESERVE THEE FROM",
-        "ALL EVIL FOR EVERMORE"
+        "TRUST THE LORD"
       ],
-      [
-        "PRESERVE",
-        "EVIL"
-      ],
+      [],
       "PSALM 121:7-8"
     ],
     [
-      33,
-      43,
+      27,
+      35,
       [
-        "FATHER SHIELD THIS",
-        "BELIEVER FROM SNARES"
+        "FATHER BE NEAR"
       ],
-      [
-        "SHIELD",
-        "SNARES"
-      ],
-      "DIVINE PROTECTION"
+      [],
+      "PSALM 121:7-8"
     ],
     [
-      43,
-      53,
+      36,
+      44,
       [
-        "GUARD THEIR MIND",
-        "IN PERFECT PEACE"
+        "GIVE US WISDOM"
       ],
-      [
-        "PERFECT",
-        "PEACE"
-      ],
-      "PERFECT PEACE"
+      [],
+      "PSALM 121:7-8"
     ],
     [
+      45,
       53,
-      65,
       [
-        "WALK SECURELY UNDER",
-        "HIS ETERNAL CANOPY"
+        "PEACE IN CHRIST"
       ],
+      [],
+      "PSALM 121:7-8"
+    ],
+    [
+      54,
+      62,
       [
-        "ETERNAL",
-        "CANOPY"
+        "DAILY PROTECTION"
       ],
-      "COVENANT SHIELD"
+      [],
+      "PSALM 121:7-8"
     ]
   ],
   "beats": [
     {
-      "a": "under the shadow of the Almighty today.",
+      "a": "Before you begin this journey, pause and place every road and every loved one before the Lord.",
       "kind": "phrase",
       "words": [
-        "SHADOW",
-        "ALMIGHTY"
+        "BRING"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "rest in His holy promise.",
+      "a": "Psalm one hundred twenty-one says, The LORD shall preserve thee from all evil: he shall preserve thy soul.",
       "kind": "phrase",
       "words": [
-        "HOLY",
-        "PROMISE"
-      ],
-      "hi": 1,
-      "slot": "C"
-    },
-    {
-      "a": "The Lord shall preserve thee from all evil:",
-      "kind": "phrase",
-      "words": [
-        "PRESERVE",
-        "EVIL"
+        "HEAR"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "he shall preserve thy soul.",
+      "a": "The LORD shall preserve thy going out and thy coming in from this time forth, and even for evermore.",
       "kind": "phrase",
       "words": [
-        "PRESERVE",
-        "SOUL"
+        "TRUST"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Father, shield this believer",
+      "a": "Our keeper neither slumbers nor sleeps. When the road is uncertain, we can bring our fears to Him.",
       "kind": "phrase",
       "words": [
-        "SHIELD"
+        "FATHER"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Guard their mind in perfect peace,",
+      "a": "Father, grant every driver patience, every traveller wisdom, and every family peace in Your presence.",
       "kind": "phrase",
       "words": [
-        "PERFECT",
+        "GIVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Walk with those facing danger or grief, and guide us to use care and good judgment along the way.",
+      "kind": "phrase",
+      "words": [
         "PEACE"
       ],
-      "hi": 1,
+      "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Walk securely beneath His eternal canopy,",
+      "a": "Type Amen and subscribe to The Covenant Shield for daily prayer and encouragement in God’s keeping.",
       "kind": "phrase",
       "words": [
-        "ETERNAL",
-        "CANOPY"
+        "DAILY"
       ],
-      "hi": 1,
+      "hi": 0,
       "slot": "C"
     }
   ],

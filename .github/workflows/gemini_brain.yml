@@ -186,6 +186,10 @@ jobs:
           for attempt in 1 2 3 4 5; do
             git fetch --quiet origin main
             git reset --mixed origin/main
+            # A PR or another writer can commit while this run is authoring.
+            # Never stage stale output over newer work or a reused roadmap ID.
+            python scripts/guard_brain_commit.py --base "$base_ref" \
+              --touched /tmp/brain-touched.txt --deleted /tmp/brain-deleted.txt
             while IFS= read -r p; do
               [ -n "$p" ] && git rm --cached --ignore-unmatch --quiet -- "$p"
             done < /tmp/brain-deleted.txt

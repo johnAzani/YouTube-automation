@@ -1,0 +1,442 @@
+{
+  "key": "short-shieldgenesis15v1",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "GOD IS THY SHIELD",
+    "GENESIS 15:1 PRAYER"
+  ],
+  "poster": [
+    "THE COVENANT SHIELD",
+    "DAILY PROTECTION PRAYER",
+    "GOD IS THY SHIELD",
+    "GENESIS 15:1"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "sunlit mountain pass golden sunrise mist",
+    "ancient stone watchtower fortress hilltop sunset",
+    "golden sunlight rays breaking through clouds valley",
+    "peaceful river flowing through majestic pine forest",
+    "calm mountain lake evening dusk glow",
+    "dramatic sunbeams glowing through mountain peaks"
+  ],
+  "scenes": [
+    {
+      "a": "Place every step, journey, and unseen concern under the shadow of the Almighty today.",
+      "img": "short-shieldgenesis15v1-scene-01.jpg",
+      "kicker": "GENESIS 15:1",
+      "sub": "UNDER HIS DIVINE COVERING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "We stand upon Your unchanging Word in Genesis fifteen verse one: \"Fear not, Abram: I am thy shield, and thy exceeding great reward.\"",
+      "img": "short-shieldgenesis15v1-scene-02.jpg",
+      "kicker": "GENESIS 15:1",
+      "sub": "I AM THY SHIELD AND REWARD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, cover us with Your holy presence and surround our paths with Your quiet strength.",
+      "img": "short-shieldgenesis15v1-scene-03.jpg",
+      "kicker": "GENESIS 15:1",
+      "sub": "SURROUNDED BY HIS STRENGTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Shield our minds from all worry and defend our homes from every hidden snare.",
+      "img": "short-shieldgenesis15v1-scene-04.jpg",
+      "kicker": "GENESIS 15:1",
+      "sub": "DEFENDED FROM EVERY SNARE",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "May Your divine peace encompass our going out and our coming in throughout this night and morning.",
+      "img": "short-shieldgenesis15v1-scene-05.jpg",
+      "kicker": "GENESIS 15:1",
+      "sub": "ABIDING IN PERFECT PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to walk daily under God's protective holy shield.",
+      "img": "short-shieldgenesis15v1-scene-06.jpg",
+      "kicker": "GENESIS 15:1",
+      "sub": "THE COVENANT SHIELD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      5,
+      "Place every step, journey, and unseen concern"
+    ],
+    [
+      5,
+      10,
+      "under the shadow of the Almighty today."
+    ],
+    [
+      10,
+      15,
+      "Heavenly Father, as we walk through this day,"
+    ],
+    [
+      15,
+      20,
+      "be our invincible fortress and constant guard."
+    ],
+    [
+      20,
+      26,
+      "We stand upon Your unchanging Word in Genesis fifteen verse one:"
+    ],
+    [
+      26,
+      32,
+      "\"Fear not, Abram: I am thy shield, and thy exceeding great reward.\""
+    ],
+    [
+      32,
+      38,
+      "Lord, cover us with Your holy presence"
+    ],
+    [
+      38,
+      43,
+      "and surround our paths with Your quiet strength."
+    ],
+    [
+      43,
+      48,
+      "Shield our minds from all worry"
+    ],
+    [
+      48,
+      53,
+      "and defend our homes from every hidden snare."
+    ],
+    [
+      53,
+      58,
+      "May Your divine peace encompass our going out"
+    ],
+    [
+      58,
+      63,
+      "and our coming in throughout this night and morning."
+    ],
+    [
+      63,
+      68,
+      "Let Your holy angels guard every step we take."
+    ],
+    [
+      68,
+      72,
+      "In Jesus' name, Amen."
+    ],
+    [
+      72,
+      78,
+      "Subscribe to walk daily under God's protective holy shield."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      5,
+      [
+        "PLACE EVERY STEP AND JOURNEY",
+        "UNDER HIS UNSEEN CONCERN"
+      ],
+      [
+        "STEP",
+        "JOURNEY"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      5,
+      10,
+      [
+        "UNDER THE SHADOW OF THE",
+        "ALMIGHTY GOD TODAY"
+      ],
+      [
+        "SHADOW",
+        "ALMIGHTY"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      10,
+      15,
+      [
+        "HEAVENLY FATHER AS WE WALK",
+        "THROUGH THIS PRESENT DAY"
+      ],
+      [
+        "HEAVENLY",
+        "WALK"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      15,
+      20,
+      [
+        "BE OUR INVINCIBLE FORTRESS AND",
+        "OUR CONSTANT GUARD"
+      ],
+      [
+        "INVINCIBLE",
+        "FORTRESS"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      20,
+      26,
+      [
+        "WE STAND UPON YOUR UNCHANGING",
+        "WORD IN GENESIS FIFTEEN ONE"
+      ],
+      [
+        "UNCHANGING",
+        "WORD"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      26,
+      32,
+      [
+        "FEAR NOT I AM THY SHIELD",
+        "AND THY EXCEEDING GREAT REWARD"
+      ],
+      [
+        "SHIELD",
+        "REWARD"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      32,
+      38,
+      [
+        "LORD COVER US WITH YOUR",
+        "DIVINE HOLY PRESENCE"
+      ],
+      [
+        "COVER",
+        "PRESENCE"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      38,
+      43,
+      [
+        "AND SURROUND OUR PATHS WITH",
+        "YOUR QUIET STRENGTH"
+      ],
+      [
+        "SURROUND",
+        "STRENGTH"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      43,
+      48,
+      [
+        "SHIELD OUR MINDS FROM ALL",
+        "DISTRACTING WORRY"
+      ],
+      [
+        "SHIELD",
+        "WORRY"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      48,
+      53,
+      [
+        "AND DEFEND OUR HOMES FROM",
+        "EVERY HIDDEN SNARE"
+      ],
+      [
+        "DEFEND",
+        "SNARE"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      53,
+      58,
+      [
+        "MAY YOUR DIVINE PEACE ENCOMPASS",
+        "OUR GOING OUT TODAY"
+      ],
+      [
+        "PEACE",
+        "ENCOMPASS"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      58,
+      63,
+      [
+        "AND OUR COMING IN THROUGHOUT",
+        "THIS NIGHT AND MORNING"
+      ],
+      [
+        "COMING",
+        "NIGHT"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      63,
+      68,
+      [
+        "LET YOUR HOLY ANGELS GUARD",
+        "EVERY STEP WE TAKE"
+      ],
+      [
+        "ANGELS",
+        "GUARD"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      68,
+      72,
+      [
+        "IN JESUS HOLY NAME",
+        "WE PRAY AMEN"
+      ],
+      [
+        "JESUS",
+        "AMEN"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      72,
+      78,
+      [
+        "SUBSCRIBE TO WALK DAILY UNDER",
+        "GODS PROTECTIVE HOLY SHIELD"
+      ],
+      [
+        "SUBSCRIBE",
+        "SHIELD"
+      ],
+      "GENESIS 15:1"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Place every step, journey, and unseen concern under the shadow of the Almighty today.",
+      "kind": "phrase",
+      "words": [
+        "SHADOW",
+        "ALMIGHTY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "be our invincible fortress and constant guard.",
+      "kind": "phrase",
+      "words": [
+        "INVINCIBLE",
+        "FORTRESS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "\"Fear not, Abram: I am thy shield, and thy exceeding great reward.\"",
+      "kind": "phrase",
+      "words": [
+        "SHIELD",
+        "REWARD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, cover us with Your holy presence and surround our paths with Your quiet strength.",
+      "kind": "phrase",
+      "words": [
+        "PRESENCE",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Shield our minds from all worry and defend our homes from every hidden snare.",
+      "kind": "phrase",
+      "words": [
+        "SHIELD",
+        "DEFEND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May Your divine peace encompass our going out and our coming in throughout this night and morning.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "ENCOMPASS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to walk daily under God's protective holy shield.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Genesis 15:1"
+}

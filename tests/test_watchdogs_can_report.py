@@ -284,3 +284,9 @@ class TestADegradedVerdictNamesItself(unittest.TestCase):
         self.assertEqual(code, 1)
         self.assertIn("::error title=Automation is stalled (long-form queue)", out)
         self.assertNotIn("Pipeline is degraded", out)
+
+
+def test_keepalive_respects_manual_workflow_pauses():
+    run = by_name(steps("keepalive.yml"), "Re-enable every workflow")["run"]
+    assert 'select(.state == "disabled_inactivity")' in run
+    assert '.state != "deleted_by_user"' not in run
