@@ -2,7 +2,7 @@
 id: '0603'
 title: Ephesians 6:16 Shield of Faith Prayer | The Covenant Shield
 slug: ephesians-6-16-shield-of-faith-prayer
-status: draft
+status: approved
 channel: prayer8
 privacy: public
 format: longform

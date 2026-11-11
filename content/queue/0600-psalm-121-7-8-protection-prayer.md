@@ -2,7 +2,7 @@
 id: '0600'
 title: Psalm 121:7-8 Protection Prayer | The Covenant Shield
 slug: psalm-121-7-8-protection-prayer
-status: draft
+status: approved
 channel: prayer8
 privacy: public
 format: longform

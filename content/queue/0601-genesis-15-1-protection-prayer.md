@@ -2,7 +2,7 @@
 id: '0601'
 title: Genesis 15:1 Protection Prayer | The Covenant Shield
 slug: genesis-15-1-protection-prayer
-status: draft
+status: approved
 channel: prayer8
 privacy: public
 format: longform

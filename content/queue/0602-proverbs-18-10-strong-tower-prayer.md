@@ -2,7 +2,7 @@
 id: '0602'
 title: Proverbs 18:10 Strong Tower Prayer | The Covenant Shield
 slug: proverbs-18-10-strong-tower-prayer
-status: draft
+status: approved
 channel: prayer8
 privacy: public
 format: longform
