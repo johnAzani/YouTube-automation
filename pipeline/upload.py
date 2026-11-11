@@ -112,7 +112,24 @@ def _credentials():
         client_secret=client_secret,
         scopes=SCOPES,
     )
-    creds.refresh(Request())
+    try:
+        creds.refresh(Request())
+    except Exception as exc:
+        if "invalid_scope" not in str(exc).lower():
+            raise
+        # Tokens minted on OAuth Playground with the broader `youtube` scope
+        # (instead of the literal `youtube.readonly` string) reject downscoped
+        # refresh requests with `invalid_scope`. Retrying with `scopes=None`
+        # inherits the exact scopes originally granted to the refresh token.
+        creds = Credentials(
+            token=None,
+            refresh_token=CONFIG.youtube_refresh_token,
+            token_uri="https://oauth2.googleapis.com/token",
+            client_id=client_id,
+            client_secret=client_secret,
+            scopes=None,
+        )
+        creds.refresh(Request())
     return creds
 
 

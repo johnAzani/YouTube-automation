@@ -77,9 +77,9 @@ originality:
 
 ## Scene 1 — Approaching the Great Physician in Faith
 
-Grace and gentle comfort be unto you today, and welcome to The Healing Balm. Some wounds are visible to those around us, while others are carried quietly beneath a brave smile — grief over a loss, disappointment that lingers, anxious exhaustion, or tenderness over someone we love. Yet the Maker of heaven and earth stoops personally to attend every hidden ache. Hear the unforgettable words of King James Scripture in Psalm one hundred and forty-seven, verses three and four: He healeth the broken in heart, and bindeth up their wounds. He telleth the number of the stars; he calleth them all by their names. Bring your heart exactly as it is before that infinite, tender God right now.
+Grace and gentle comfort be unto you today, and welcome to The Healing Balm. Some wounds are visible to those around us, while others are carried quietly beneath a brave smile, grief over a loss, disappointment that lingers, anxious exhaustion, or tenderness over someone we love. Yet the Maker of heaven and earth stoops personally to attend every hidden ache. Hear the unforgettable words of King James Scripture in Psalm one hundred and forty-seven, verses three and four: He healeth the broken in heart, and bindeth up their wounds. He telleth the number of the stars; he calleth them all by their names. Bring your heart exactly as it is before that infinite, tender God right now.
 
-When our Lord Jesus stood in the synagogue of Nazareth in Luke chapter four, verse eighteen, He declared that the Father had sent Him to heal the brokenhearted — fulfilling this very psalm in living mercy before the eyes of hurting people who longed for gentle hope.
+When our Lord Jesus stood in the synagogue of Nazareth in Luke chapter four, verse eighteen, He declared that the Father had sent Him to heal the brokenhearted, fulfilling this very psalm in living mercy before the eyes of hurting people who longed for gentle hope.
 
 ## Scene 2 — The Balm of Gilead for Body, Soul & Spirit
 
@@ -89,7 +89,7 @@ In the original imagery of verse three, binding up wounds pictures cleansing the
 
 ## Scene 3 — Binding Up the Brokenhearted & Quieting Anxious Minds
 
-Look also at Psalm thirty-four, verse eighteen, which echoes this exact comfort: The LORD is nigh unto them that are of a broken heart; and saveth such as be of a contrite spirit. Suffering often whispers the lie that we are forgotten or distant from God, yet Scripture declares the exact opposite — the Lord is nigh, intimately close, beside the brokenhearted. Father of mercies and God of all comfort, wrap Thy nearness around every listener walking through bereavement, loneliness, emotional weariness, or fearful uncertainty right now. Quiet intrusive worries, soften sharp pangs of sorrow, and breathe calm clarity across every troubled mind.
+Look also at Psalm thirty-four, verse eighteen, which echoes this exact comfort: The LORD is nigh unto them that are of a broken heart; and saveth such as be of a contrite spirit. Suffering often whispers the lie that we are forgotten or distant from God, yet Scripture declares the exact opposite, the Lord is nigh, intimately close, beside the brokenhearted. Father of mercies and God of all comfort, wrap Thy nearness around every listener walking through bereavement, loneliness, emotional weariness, or fearful uncertainty right now. Quiet intrusive worries, soften sharp pangs of sorrow, and breathe calm clarity across every troubled mind.
 
 Remember also Isaiah chapter twenty-six, verse three: Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee. Stay our wandering thoughts upon Thy faithful heart today until quiet peace settles deep within every chamber of the soul and every fear loses its grip.
 
