@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T18:54:21Z",
+  "generated_at": "2026-11-11T18:59:32Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 93,
-    "published_longform": 41,
-    "published_shorts": 52,
-    "public_total": 91,
-    "queued_longform": 56,
-    "queued_shorts": 41,
+    "published_total": 95,
+    "published_longform": 42,
+    "published_shorts": 53,
+    "public_total": 93,
+    "queued_longform": 55,
+    "queued_shorts": 40,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -99,32 +99,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 32,
-        "published_longform": 15,
-        "published_shorts": 17,
-        "public_total": 31,
-        "queued_longform": 6,
+        "published_total": 34,
+        "published_longform": 16,
+        "published_shorts": 18,
+        "public_total": 33,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "0058",
-        "title": "Psalm 57:8 Awake Early in Praise Morning Prayer | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "Zi4ObOhb97s",
-        "watch_url": "https://youtu.be/Zi4ObOhb97s",
-        "published_on": "2026-11-11",
-        "published_at": "2026-11-11T10:14:27Z"
-      },
-      "next_queued_longform": {
         "id": "0059",
         "title": "Psalm 108:2 Morning Prayer | The Morning Altar",
-        "words": 960,
+        "format": "longform",
+        "youtube_video_id": "wXUTRMZFbf8",
+        "watch_url": "https://youtu.be/wXUTRMZFbf8",
+        "published_on": "2026-11-11",
+        "published_at": "2026-11-11T18:58:47Z"
+      },
+      "next_queued_longform": {
+        "id": "0060",
+        "title": "Exodus 16:21 Morning Prayer | The Morning Altar",
+        "words": 1813,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningisaiah33v2",
-        "scripture": "Isaiah 33:2",
+        "short": "short-morning2samuel23v4",
+        "scripture": "2 Samuel 23:4",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -491,6 +491,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0059",
+      "slug": "psalm-108-2-morning-prayer",
+      "file": "0059-psalm-108-2-morning-prayer.md",
+      "title": "Psalm 108:2 Morning Prayer | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T18:58:47Z",
+      "youtube_video_id": "wXUTRMZFbf8",
+      "watch_url": "https://youtu.be/wXUTRMZFbf8",
+      "youtu_be_url": "https://youtu.be/wXUTRMZFbf8",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/wXUTRMZFbf8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/wXUTRMZFbf8/hqdefault.jpg",
+      "thumb_text": "PRAISE AT DAYBREAK",
+      "duration_label": "~7 min",
+      "words": 960
+    },
+    {
+      "id": "SHORT-MORNINGISAIAH33V2",
+      "slug": "short-morningisaiah33v2-sunrise-prayer",
+      "file": "short-morningisaiah33v2-sunrise-prayer.md",
+      "title": "Say This Isaiah 33:2 Prayer at Sunrise | The Morning Altar #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T18:25:38Z",
+      "youtube_video_id": "T7xVEDNyy4w",
+      "watch_url": "https://www.youtube.com/shorts/T7xVEDNyy4w",
+      "youtu_be_url": "https://youtu.be/T7xVEDNyy4w",
+      "shorts_url": "https://www.youtube.com/shorts/T7xVEDNyy4w",
+      "studio_url": "https://studio.youtube.com/video/T7xVEDNyy4w/edit",
+      "thumb_url": "https://i.ytimg.com/vi/T7xVEDNyy4w/hqdefault.jpg",
+      "thumb_text": "ISAIAH 33:2 \u00b7 MORNING PRAYER",
+      "duration_label": "55s",
+      "words": 612
+    },
     {
       "id": "0016",
       "slug": "psalm-91-11-12-angelic-guardians-bed",
@@ -2868,19 +2914,6 @@
         "words": 1025
       },
       {
-        "id": "0059",
-        "slug": "psalm-108-2-morning-prayer",
-        "file": "0059-psalm-108-2-morning-prayer.md",
-        "title": "Psalm 108:2 Morning Prayer | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 960
-      },
-      {
         "id": "0060",
         "slug": "exodus-16-21-morning-prayer",
         "file": "0060-exodus-16-21-morning-prayer.md",
@@ -3417,17 +3450,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-morningisaiah33v2",
-        "file": "0061-short-morningisaiah33v2.yml",
-        "companion_longform_id": "0061",
-        "scripture": "Isaiah 33:2",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morning2samuel23v4",

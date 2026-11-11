@@ -2,7 +2,7 @@
 id: 0059
 title: Psalm 108:2 Morning Prayer | The Morning Altar
 slug: psalm-108-2-morning-prayer
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -75,6 +75,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-11"
+published_at: "2026-11-11T18:58:47Z"
+youtube_video_id: "wXUTRMZFbf8"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — The Call to Awake
