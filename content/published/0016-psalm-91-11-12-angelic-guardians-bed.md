@@ -2,7 +2,7 @@
 id: '0016'
 title: Psalm 91:11-12 Night Prayer | Angels Guard Your Home & Sleep
 slug: psalm-91-11-12-angelic-guardians-bed
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -85,6 +85,12 @@ originality:
   ai_disclosure: false
 seo_hook: Pray this Psalm 91:11-12 KJV bedtime prayer before sleep knowing God gives His angels charge over your bed, family, and dwelling.
 category_id: '22'
+published_on: "2026-11-11"
+published_at: "2026-11-11T18:11:38Z"
+youtube_video_id: "dgvGl0EZyYE"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — He Shall Give His Angels Charge (Verse 11a)

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T18:08:22Z",
+  "generated_at": "2026-11-11T18:12:31Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 90,
-    "published_longform": 40,
-    "published_shorts": 50,
-    "public_total": 88,
-    "queued_longform": 57,
-    "queued_shorts": 42,
+    "published_total": 92,
+    "published_longform": 41,
+    "published_shorts": 51,
+    "public_total": 90,
+    "queued_longform": 56,
+    "queued_shorts": 41,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -32,32 +32,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 25,
-        "published_longform": 8,
-        "published_shorts": 17,
-        "public_total": 24,
-        "queued_longform": 19,
+        "published_total": 27,
+        "published_longform": 9,
+        "published_shorts": 18,
+        "public_total": 26,
+        "queued_longform": 18,
         "queued_other": 5,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0015",
-        "title": "Psalm 91:5-6 Night Prayer | Deliverance From Terror by Night",
-        "format": "longform",
-        "youtube_video_id": "rb6X37vQt7o",
-        "watch_url": "https://youtu.be/rb6X37vQt7o",
-        "published_on": "2026-11-11",
-        "published_at": "2026-11-11T08:39:03Z"
-      },
-      "next_queued_longform": {
         "id": "0016",
         "title": "Psalm 91:11-12 Night Prayer | Angels Guard Your Home & Sleep",
-        "words": 885,
+        "format": "longform",
+        "youtube_video_id": "dgvGl0EZyYE",
+        "watch_url": "https://youtu.be/dgvGl0EZyYE",
+        "published_on": "2026-11-11",
+        "published_at": "2026-11-11T18:11:38Z"
+      },
+      "next_queued_longform": {
+        "id": "0017",
+        "title": "Psalm 4:8 Bedtime Prayer | In Peace I Will Lie Down & Sleep",
+        "words": 888,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-isaiah26v3",
-        "scripture": "Isaiah 26:3-4",
+        "short": "short-isaiah41v10",
+        "scripture": "Isaiah 41:10",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -491,6 +491,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0016",
+      "slug": "psalm-91-11-12-angelic-guardians-bed",
+      "file": "0016-psalm-91-11-12-angelic-guardians-bed.md",
+      "title": "Psalm 91:11-12 Night Prayer | Angels Guard Your Home & Sleep",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T18:11:38Z",
+      "youtube_video_id": "dgvGl0EZyYE",
+      "watch_url": "https://youtu.be/dgvGl0EZyYE",
+      "youtu_be_url": "https://youtu.be/dgvGl0EZyYE",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/dgvGl0EZyYE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/dgvGl0EZyYE/hqdefault.jpg",
+      "thumb_text": "ANGELS WATCH OVER YOU",
+      "duration_label": "~6 min",
+      "words": 885
+    },
+    {
+      "id": "SHORT-ISAIAH26V3",
+      "slug": "short-isaiah26v3-pre-sleep-prayer",
+      "file": "short-isaiah26v3-pre-sleep-prayer.md",
+      "title": "Say This Isaiah 26:3-4 Prayer Before You Sleep | Perfect Night Peace #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T17:29:11Z",
+      "youtube_video_id": "er20wTWclFo",
+      "watch_url": "https://www.youtube.com/shorts/er20wTWclFo",
+      "youtu_be_url": "https://youtu.be/er20wTWclFo",
+      "shorts_url": "https://www.youtube.com/shorts/er20wTWclFo",
+      "studio_url": "https://studio.youtube.com/video/er20wTWclFo/edit",
+      "thumb_url": "https://i.ytimg.com/vi/er20wTWclFo/hqdefault.jpg",
+      "thumb_text": "KEPT IN \u00b7 PERFECT PEACE",
+      "duration_label": "62s",
+      "words": 623
+    },
     {
       "id": "0400",
       "slug": "jeremiah-30-17-healing-prayer",
@@ -2565,19 +2611,6 @@
   "queues": {
     "longform": [
       {
-        "id": "0016",
-        "slug": "psalm-91-11-12-angelic-guardians-bed",
-        "file": "0016-psalm-91-11-12-angelic-guardians-bed.md",
-        "title": "Psalm 91:11-12 Night Prayer | Angels Guard Your Home & Sleep",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 885
-      },
-      {
         "id": "0017",
         "slug": "psalm-4-8-in-peace-i-will-lie-down-and-sleep",
         "file": "0017-psalm-4-8-in-peace-i-will-lie-down-and-sleep.md",
@@ -3307,17 +3340,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-isaiah26v3",
-        "file": "0026-short-isaiah26v3.yml",
-        "companion_longform_id": "0026",
-        "scripture": "Isaiah 26:3-4",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
       {
         "short": "short-isaiah41v10",
         "file": "0027-short-isaiah41v10.yml",
