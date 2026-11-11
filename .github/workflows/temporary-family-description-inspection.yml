@@ -6,6 +6,7 @@ on:
 permissions:
   contents: read
   actions: read
+  issues: write
 jobs:
   inspect:
     runs-on: ubuntu-latest
@@ -48,7 +49,19 @@ jobs:
                     'other_localizations_unchanged':all(loc.get(k)==v for k,v in oldloc.items() if k not in m.DESCRIPTIONS)}
               notice=json.dumps(info,ensure_ascii=True).replace('%','%25').replace('\n','%0A').replace('\r','%0D')
               print('::notice title=Read-only post-update comparison::'+notice)
+              if not (info['english_snippet_matches_approved'] and all(info['snippet_preserved_fields'].values())
+                      and info['privacy_unchanged'] and info['localization_languages_before'] == info['localization_languages_after']
+                      and info['other_localizations_unchanged'] and all(
+                          item['description_matches_approved'] and item['title_unchanged']
+                          for item in info['localizations'].values())):
+                  raise ValueError('Live metadata did not match the approved and preserved fields')
           except Exception as exc:
               print(f'::error title=Read-only inspection failed::{type(exc).__name__}; details withheld')
               raise SystemExit(1)
           PY
+      - name: Record verified replacement on the incident
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${GITHUB_REPOSITORY}/issues/382/comments" -f body="The owner approved replacement descriptions. The one-time update in run https://github.com/${GITHUB_REPOSITORY}/actions/runs/43083350585 reported an unsuccessful immediate verification. The subsequent independent read-only verification in run https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID} confirmed the approved English, Spanish and Portuguese descriptions on the existing public Short, with title, tags, category, languages, localization titles and privacy unchanged. These are replacements, not a claimed restoration of the unknown original metadata. Pre-update public metadata is retained as an artifact of the update run for 30 days. The recovered-receipt automatic metadata hold remains in place." > /dev/null
