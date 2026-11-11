@@ -1,6 +1,6 @@
 # The Provision Table — Official YouTube Brand Kit (`prayer7`)
 
-**Status:** **REGISTERED (`provisioned=False` pending YouTube Studio & `PRAYER7_*` secrets)** for `@TheProvisionTableDaily`. See `docs/SEVENTH_CHANNEL_SETUP.md`.
+**Status:** **LIVE & PROVISIONED (`provisioned=True`)** for `@TheProvisionTableDaily`. See `docs/SEVENTH_CHANNEL_SETUP.md`.
 
 ## Visual Differentiation Across the 7-Channel Sanctuary Network
 - **Channel 1 — The Secret Place (`@TheSecretPlace`)**: Deep indigo-navy ring + Cross + Open Bible; mountain lake night banner.

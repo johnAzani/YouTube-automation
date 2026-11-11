@@ -45,13 +45,15 @@ class TestSeventhChannelRegistration(unittest.TestCase):
         ):
             self.assertEqual(normalize_channel_id(alias), "prayer7")
 
-    def test_unprovisioned_channel_waits_quietly_until_secrets_exist(self):
+    def test_provisioned_channel_is_active_in_scheduler_and_watchdog(self):
         ch = get_channel("prayer7")
-        self.assertFalse(ch.provisioned)
-        self.assertNotIn("prayer7", scheduled_channels())
+        self.assertTrue(ch.provisioned)
+        self.assertIn("prayer7", scheduled_channels())
         health_rows = {row["queue"]: row for row in queue_health()}
-        self.assertNotIn("longform:prayer7", health_rows)
-        self.assertNotIn("shorts:prayer7", health_rows)
+        self.assertIn("longform:prayer7", health_rows)
+        self.assertIn("shorts:prayer7", health_rows)
+        self.assertGreater(health_rows["longform:prayer7"]["ready"], 0)
+        self.assertGreater(health_rows["shorts:prayer7"]["ready"], 0)
 
 
 class TestSeventhChannelIdentityAndVisuals(unittest.TestCase):
