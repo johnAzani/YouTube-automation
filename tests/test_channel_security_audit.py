@@ -55,11 +55,11 @@ def test_monitor_reports_channels_with_no_receipts_even_if_another_has_published
     assert not report.healthy
 
 
-def test_diagnostic_workflow_is_read_only_and_independent_for_both_channels():
+def test_diagnostic_workflow_is_read_only_and_independent_for_all_channels():
     workflow = yaml.safe_load((ROOT / '.github/workflows/channel-credential-audit.yml').read_text())
     assert workflow['permissions'] == {}
     job = workflow['jobs']['audit']
-    assert job['strategy']['fail-fast'] is False and job['strategy']['matrix']['number'] == [5, 6]
+    assert job['strategy']['fail-fast'] is False and set(job['strategy']['matrix']['channel']) == set(CHANNELS)
     script = job['steps'][0]['run']
     assert 'channels?part=id&mine=true' in script and 'EXPECTED_CHANNEL' in script
     assert 'upload itself was not tested' in script
