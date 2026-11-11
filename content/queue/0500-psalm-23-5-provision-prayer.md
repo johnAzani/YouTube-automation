@@ -10,7 +10,7 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-thumb_text: MY CUP OVERFLOWS
+thumb_text: CUP RUNNETH OVER
 seo_hook: Come to The Provision Table in Psalm 23:5 (KJV) to pray for divine wisdom,
   open doors, favour over honest work, and daily provision.
 tags:

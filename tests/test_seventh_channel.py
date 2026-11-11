@@ -114,7 +114,7 @@ class TestSeventhChannelIdentityAndVisuals(unittest.TestCase):
         self.assertEqual(len(variants), 3)
         self.assertEqual(variants[0].grade, "harvest")
         self.assertEqual(variants[0].hero, "OPEN THIS DOOR")
-        self.assertEqual(variants[1].hero, "MY CUP OVERFLOWS")
+        self.assertEqual(variants[1].hero, "CUP RUNNETH OVER")
         self.assertIsNone(variants[2].hero)
 
     def test_brand_assets_are_rendered_to_youtube_specs(self):
