@@ -3,269 +3,436 @@
   "channel": "prayer8",
   "psalm": null,
   "title": [
-    "PROTECTION PRAYER",
-    "GENESIS 15:1"
+    "GOD IS THY SHIELD",
+    "GENESIS 15:1 PRAYER"
   ],
   "poster": [
     "THE COVENANT SHIELD",
-    "GOD IS MY SHIELD",
-    "GENESIS 15:1",
-    "PROTECTION PRAYER"
+    "DAILY PROTECTION PRAYER",
+    "GOD IS THY SHIELD",
+    "GENESIS 15:1"
   ],
   "end": [
     "SUBSCRIBE",
-    "The Covenant Shield — daily protection prayer"
+    "The Covenant Shield — walk under God's daily covering"
   ],
   "stock_queries": [
-    "sunlight breaking through clouds mountain pass",
-    "golden light rays through clouds over mountain peak",
-    "divine light breaking through clouds over peaceful landscape",
-    "peaceful mountain river calm water forest",
-    "ancient chapel interior candlelight peaceful sanctuary",
-    "forest sunlight mist",
-    "serene valley stream morning light peaceful"
+    "sunlit mountain pass golden sunrise mist",
+    "ancient stone watchtower fortress hilltop sunset",
+    "golden sunlight rays breaking through clouds valley",
+    "peaceful river flowing through majestic pine forest",
+    "calm mountain lake evening dusk glow",
+    "dramatic sunbeams glowing through mountain peaks"
   ],
   "scenes": [
     {
-      "a": "When fear rises before the day begins, remember the Lord’s words to Abram and bring your concerns to Him.",
+      "a": "Place every step, journey, and unseen concern under the shadow of the Almighty today.",
       "img": "short-shieldgenesis15v1-scene-01.jpg",
       "kicker": "GENESIS 15:1",
-      "sub": "BRING YOUR FEARS",
+      "sub": "UNDER HIS DIVINE COVERING",
       "cam": "push_in",
       "focus": [
         0.5,
-        0.45
+        0.4
       ]
     },
     {
-      "a": "Genesis chapter fifteen, verse one says, Fear not, Abram: I am thy shield, and thy exceeding great reward.",
+      "a": "We stand upon Your unchanging Word in Genesis fifteen verse one: \"Fear not, Abram: I am thy shield, and thy exceeding great reward.\"",
       "img": "short-shieldgenesis15v1-scene-02.jpg",
       "kicker": "GENESIS 15:1",
-      "sub": "HEAR THE WORD",
+      "sub": "I AM THY SHIELD AND REWARD",
       "cam": "tilt_up",
       "focus": [
         0.5,
-        0.45
+        0.5
       ]
     },
     {
-      "a": "The Lord invites us to trust His presence, not merely our own strength or our ability to see what lies ahead.",
+      "a": "Lord, cover us with Your holy presence and surround our paths with Your quiet strength.",
       "img": "short-shieldgenesis15v1-scene-03.jpg",
       "kicker": "GENESIS 15:1",
-      "sub": "TRUST THE LORD",
-      "cam": "pan_right",
-      "focus": [
-        0.5,
-        0.45
-      ]
-    },
-    {
-      "a": "Heavenly Father, be near to every listener who feels uncertain, vulnerable, or overwhelmed by the journey ahead.",
-      "img": "short-shieldgenesis15v1-scene-04.jpg",
-      "kicker": "GENESIS 15:1",
-      "sub": "FATHER BE NEAR",
+      "sub": "SURROUNDED BY HIS STRENGTH",
       "cam": "pull_out",
       "focus": [
         0.5,
-        0.45
+        0.6
       ]
     },
     {
-      "a": "Give us wisdom to make careful choices, courage to ask for help, and peace to take the next faithful step.",
-      "img": "short-shieldgenesis15v1-scene-05.jpg",
+      "a": "Shield our minds from all worry and defend our homes from every hidden snare.",
+      "img": "short-shieldgenesis15v1-scene-04.jpg",
       "kicker": "GENESIS 15:1",
-      "sub": "GIVE US WISDOM",
-      "cam": "push_in",
-      "focus": [
-        0.5,
-        0.45
-      ]
-    },
-    {
-      "a": "In every trial, remind us that Your love is not absent, and teach us to rest in Your faithfulness.",
-      "img": "short-shieldgenesis15v1-scene-06.jpg",
-      "kicker": "GENESIS 15:1",
-      "sub": "PEACE IN CHRIST",
+      "sub": "DEFENDED FROM EVERY SNARE",
       "cam": "pan_left",
       "focus": [
-        0.5,
-        0.45
+        0.4,
+        0.5
       ]
     },
     {
-      "a": "Type Amen and subscribe to The Covenant Shield for daily prayer and encouragement in God’s keeping.",
-      "img": "short-shieldgenesis15v1-scene-07.jpg",
-      "kicker": "COVENANT SHIELD",
-      "sub": "DAILY PROTECTION",
+      "a": "May Your divine peace encompass our going out and our coming in throughout this night and morning.",
+      "img": "short-shieldgenesis15v1-scene-05.jpg",
+      "kicker": "GENESIS 15:1",
+      "sub": "ABIDING IN PERFECT PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to walk daily under God's protective holy shield.",
+      "img": "short-shieldgenesis15v1-scene-06.jpg",
+      "kicker": "GENESIS 15:1",
+      "sub": "THE COVENANT SHIELD",
       "cam": "push_in",
       "focus": [
         0.5,
-        0.45
+        0.5
       ]
     }
   ],
   "captions": [
     [
       0,
-      8,
-      "When fear rises before the day begins, remember the Lord’s words to Abram and bring your concerns to Him."
+      5,
+      "Place every step, journey, and unseen concern"
     ],
     [
-      9,
-      17,
-      "Genesis chapter fifteen, verse one says, Fear not, Abram: I am thy shield, and thy exceeding great reward."
+      5,
+      10,
+      "under the shadow of the Almighty today."
     ],
     [
-      18,
+      10,
+      15,
+      "Heavenly Father, as we walk through this day,"
+    ],
+    [
+      15,
+      20,
+      "be our invincible fortress and constant guard."
+    ],
+    [
+      20,
       26,
-      "The Lord invites us to trust His presence, not merely our own strength or our ability to see what lies ahead."
+      "We stand upon Your unchanging Word in Genesis fifteen verse one:"
     ],
     [
-      27,
-      35,
-      "Heavenly Father, be near to every listener who feels uncertain, vulnerable, or overwhelmed by the journey ahead."
+      26,
+      32,
+      "\"Fear not, Abram: I am thy shield, and thy exceeding great reward.\""
     ],
     [
-      36,
-      44,
-      "Give us wisdom to make careful choices, courage to ask for help, and peace to take the next faithful step."
+      32,
+      38,
+      "Lord, cover us with Your holy presence"
     ],
     [
-      45,
+      38,
+      43,
+      "and surround our paths with Your quiet strength."
+    ],
+    [
+      43,
+      48,
+      "Shield our minds from all worry"
+    ],
+    [
+      48,
       53,
-      "In every trial, remind us that Your love is not absent, and teach us to rest in Your faithfulness."
+      "and defend our homes from every hidden snare."
     ],
     [
-      54,
-      62,
-      "Type Amen and subscribe to The Covenant Shield for daily prayer and encouragement in God’s keeping."
+      53,
+      58,
+      "May Your divine peace encompass our going out"
+    ],
+    [
+      58,
+      63,
+      "and our coming in throughout this night and morning."
+    ],
+    [
+      63,
+      68,
+      "Let Your holy angels guard every step we take."
+    ],
+    [
+      68,
+      72,
+      "In Jesus' name, Amen."
+    ],
+    [
+      72,
+      78,
+      "Subscribe to walk daily under God's protective holy shield."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      8,
+      5,
       [
-        "BRING YOUR FEARS"
+        "PLACE EVERY STEP AND JOURNEY",
+        "UNDER HIS UNSEEN CONCERN"
       ],
-      [],
+      [
+        "STEP",
+        "JOURNEY"
+      ],
       "GENESIS 15:1"
     ],
     [
-      9,
-      17,
+      5,
+      10,
       [
-        "HEAR THE WORD"
+        "UNDER THE SHADOW OF THE",
+        "ALMIGHTY GOD TODAY"
       ],
-      [],
+      [
+        "SHADOW",
+        "ALMIGHTY"
+      ],
       "GENESIS 15:1"
     ],
     [
-      18,
+      10,
+      15,
+      [
+        "HEAVENLY FATHER AS WE WALK",
+        "THROUGH THIS PRESENT DAY"
+      ],
+      [
+        "HEAVENLY",
+        "WALK"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      15,
+      20,
+      [
+        "BE OUR INVINCIBLE FORTRESS AND",
+        "OUR CONSTANT GUARD"
+      ],
+      [
+        "INVINCIBLE",
+        "FORTRESS"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      20,
       26,
       [
-        "TRUST THE LORD"
+        "WE STAND UPON YOUR UNCHANGING",
+        "WORD IN GENESIS FIFTEEN ONE"
       ],
-      [],
-      "GENESIS 15:1"
-    ],
-    [
-      27,
-      35,
       [
-        "FATHER BE NEAR"
+        "UNCHANGING",
+        "WORD"
       ],
-      [],
       "GENESIS 15:1"
     ],
     [
-      36,
-      44,
+      26,
+      32,
       [
-        "GIVE US WISDOM"
+        "FEAR NOT I AM THY SHIELD",
+        "AND THY EXCEEDING GREAT REWARD"
       ],
-      [],
+      [
+        "SHIELD",
+        "REWARD"
+      ],
       "GENESIS 15:1"
     ],
     [
-      45,
+      32,
+      38,
+      [
+        "LORD COVER US WITH YOUR",
+        "DIVINE HOLY PRESENCE"
+      ],
+      [
+        "COVER",
+        "PRESENCE"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      38,
+      43,
+      [
+        "AND SURROUND OUR PATHS WITH",
+        "YOUR QUIET STRENGTH"
+      ],
+      [
+        "SURROUND",
+        "STRENGTH"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      43,
+      48,
+      [
+        "SHIELD OUR MINDS FROM ALL",
+        "DISTRACTING WORRY"
+      ],
+      [
+        "SHIELD",
+        "WORRY"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      48,
       53,
       [
-        "PEACE IN CHRIST"
+        "AND DEFEND OUR HOMES FROM",
+        "EVERY HIDDEN SNARE"
       ],
-      [],
+      [
+        "DEFEND",
+        "SNARE"
+      ],
       "GENESIS 15:1"
     ],
     [
-      54,
-      62,
+      53,
+      58,
       [
-        "DAILY PROTECTION"
+        "MAY YOUR DIVINE PEACE ENCOMPASS",
+        "OUR GOING OUT TODAY"
       ],
-      [],
+      [
+        "PEACE",
+        "ENCOMPASS"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      58,
+      63,
+      [
+        "AND OUR COMING IN THROUGHOUT",
+        "THIS NIGHT AND MORNING"
+      ],
+      [
+        "COMING",
+        "NIGHT"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      63,
+      68,
+      [
+        "LET YOUR HOLY ANGELS GUARD",
+        "EVERY STEP WE TAKE"
+      ],
+      [
+        "ANGELS",
+        "GUARD"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      68,
+      72,
+      [
+        "IN JESUS HOLY NAME",
+        "WE PRAY AMEN"
+      ],
+      [
+        "JESUS",
+        "AMEN"
+      ],
+      "GENESIS 15:1"
+    ],
+    [
+      72,
+      78,
+      [
+        "SUBSCRIBE TO WALK DAILY UNDER",
+        "GODS PROTECTIVE HOLY SHIELD"
+      ],
+      [
+        "SUBSCRIBE",
+        "SHIELD"
+      ],
       "GENESIS 15:1"
     ]
   ],
   "beats": [
     {
-      "a": "When fear rises before the day begins, remember the Lord’s words to Abram and bring your concerns to Him.",
+      "a": "Place every step, journey, and unseen concern under the shadow of the Almighty today.",
       "kind": "phrase",
       "words": [
-        "BRING"
+        "SHADOW",
+        "ALMIGHTY"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Genesis chapter fifteen, verse one says, Fear not, Abram: I am thy shield, and thy exceeding great reward.",
+      "a": "be our invincible fortress and constant guard.",
       "kind": "phrase",
       "words": [
-        "HEAR"
+        "INVINCIBLE",
+        "FORTRESS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "\"Fear not, Abram: I am thy shield, and thy exceeding great reward.\"",
+      "kind": "phrase",
+      "words": [
+        "SHIELD",
+        "REWARD"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "The Lord invites us to trust His presence, not merely our own strength or our ability to see what lies ahead.",
+      "a": "Lord, cover us with Your holy presence and surround our paths with Your quiet strength.",
       "kind": "phrase",
       "words": [
-        "TRUST"
+        "PRESENCE",
+        "STRENGTH"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Heavenly Father, be near to every listener who feels uncertain, vulnerable, or overwhelmed by the journey ahead.",
+      "a": "Shield our minds from all worry and defend our homes from every hidden snare.",
       "kind": "phrase",
       "words": [
-        "FATHER"
+        "SHIELD",
+        "DEFEND"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Give us wisdom to make careful choices, courage to ask for help, and peace to take the next faithful step.",
+      "a": "May Your divine peace encompass our going out and our coming in throughout this night and morning.",
       "kind": "phrase",
       "words": [
-        "GIVE"
+        "PEACE",
+        "ENCOMPASS"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "In every trial, remind us that Your love is not absent, and teach us to rest in Your faithfulness.",
+      "a": "Subscribe to walk daily under God's protective holy shield.",
       "kind": "phrase",
       "words": [
-        "PEACE"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Type Amen and subscribe to The Covenant Shield for daily prayer and encouragement in God’s keeping.",
-      "kind": "phrase",
-      "words": [
-        "DAILY"
+        "SUBSCRIBE",
+        "SHIELD"
       ],
       "hi": 0,
       "slot": "C"

@@ -3,34 +3,33 @@
   "channel": "prayer8",
   "psalm": null,
   "title": [
-    "PROTECTION PRAYER",
-    "PROVERBS 18:10"
+    "THE LORD IS A STRONG TOWER",
+    "DIVINE PROTECTION PRAYER"
   ],
   "poster": [
-    "THE COVENANT SHIELD",
-    "STRONG TOWER",
-    "PROVERBS 18:10",
-    "PROTECTION PRAYER"
+    "PROVERBS 18:10 PRAYER",
+    "SAFE KEEPING & REFUGE",
+    "WALK UNDER GOD'S SHIELD",
+    "THE COVENANT SHIELD"
   ],
   "end": [
     "SUBSCRIBE",
-    "The Covenant Shield — daily protection prayer"
+    "The Covenant Shield — walk under God's daily covering"
   ],
   "stock_queries": [
-    "sunlight breaking through clouds mountain pass",
-    "golden light rays through clouds over mountain peak",
-    "divine light breaking through clouds over peaceful landscape",
-    "peaceful mountain river calm water forest",
-    "ancient chapel interior candlelight peaceful sanctuary",
-    "forest sunlight mist",
-    "serene valley stream morning light peaceful"
+    "sunlit mountain pass golden fog morning misty valley wide shot cinematic landscape",
+    "ancient stone watchtower on cliff mist golden sunrise cinematic landscape",
+    "dramatic golden light rays breaking through clouds over ancient mountain peak",
+    "calm pine forest river golden morning sunrise divine light mist wide cinematic",
+    "dramatic sunset rays glowing behind mountain fortress peak landscape scenic",
+    "peaceful mountain lake reflections golden sunset light divine peaceful scene"
   ],
   "scenes": [
     {
-      "a": "When your heart feels overwhelmed, you do not have to carry every fear by yourself today.",
+      "a": "shadow of the Almighty God",
       "img": "short-shieldproverbs18v10-scene-01.jpg",
       "kicker": "PROVERBS 18:10",
-      "sub": "BRING YOUR FEARS",
+      "sub": "DIVINE SHELTER FOR YOUR PATH",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -38,234 +37,243 @@
       ]
     },
     {
-      "a": "Proverbs chapter eighteen, verse ten says, The name of the LORD is a strong tower: the righteous runneth into it, and is safe.",
+      "a": "rest peacefully in His quiet sweet peace",
       "img": "short-shieldproverbs18v10-scene-02.jpg",
       "kicker": "PROVERBS 18:10",
-      "sub": "HEAR THE WORD",
+      "sub": "QUIET PEACE IN UNCERTAIN WINDS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "the name of the Lord is a strong tower",
+      "img": "short-shieldproverbs18v10-scene-03.jpg",
+      "kicker": "PROVERBS 18:10",
+      "sub": "A STRONG TOWER OF SAFE REFUGE",
       "cam": "tilt_up",
       "focus": [
         0.5,
-        0.45
+        0.35
       ]
     },
     {
-      "a": "We turn to the Lord in prayer, remembering His faithfulness even when our circumstances are difficult.",
-      "img": "short-shieldproverbs18v10-scene-03.jpg",
-      "kicker": "PROVERBS 18:10",
-      "sub": "TRUST THE LORD",
-      "cam": "pan_right",
-      "focus": [
-        0.5,
-        0.45
-      ]
-    },
-    {
-      "a": "Father, shelter those who are anxious, comfort those who are grieving, and strengthen all who feel vulnerable.",
+      "a": "surround this precious soul with your divine heavenly shield today",
       "img": "short-shieldproverbs18v10-scene-04.jpg",
       "kicker": "PROVERBS 18:10",
-      "sub": "FATHER BE NEAR",
+      "sub": "HEAVENLY COVERING AND PROTECTION",
       "cam": "pull_out",
       "focus": [
         0.5,
-        0.45
+        0.5
       ]
     },
     {
-      "a": "Help us to seek wise counsel, to care for our neighbours, and to take the practical steps that lead toward safety.",
+      "a": "anchor their heart forever in your eternal fortress today",
       "img": "short-shieldproverbs18v10-scene-05.jpg",
       "kicker": "PROVERBS 18:10",
-      "sub": "GIVE US WISDOM",
+      "sub": "ANCHORED IN GOD'S FORTRESS",
       "cam": "push_in",
       "focus": [
         0.5,
-        0.45
+        0.4
       ]
     },
     {
-      "a": "Hold us close through the storms we cannot control, and let Your peace steady our hearts in Christ.",
+      "a": "Subscribe to The Covenant Shield to walk under God's daily divine covering",
       "img": "short-shieldproverbs18v10-scene-06.jpg",
       "kicker": "PROVERBS 18:10",
-      "sub": "PEACE IN CHRIST",
+      "sub": "WALK DAILY UNDER HIS SHIELD",
       "cam": "pan_left",
       "focus": [
         0.5,
-        0.45
-      ]
-    },
-    {
-      "a": "Type Amen and subscribe to The Covenant Shield for daily prayer and encouragement in God’s keeping.",
-      "img": "short-shieldproverbs18v10-scene-07.jpg",
-      "kicker": "COVENANT SHIELD",
-      "sub": "DAILY PROTECTION",
-      "cam": "push_in",
-      "focus": [
-        0.5,
-        0.45
+        0.5
       ]
     }
   ],
   "captions": [
     [
       0,
-      8,
-      "When your heart feels overwhelmed, you do not have to carry every fear by yourself today."
+      7,
+      "Place every single step, journey, and unseen concern beneath the shadow of the Almighty God."
     ],
     [
-      9,
-      17,
-      "Proverbs chapter eighteen, verse ten says, The name of the LORD is a strong tower: the righteous runneth into it, and is safe."
+      7,
+      15,
+      "When deep shadows stretch long across your path and uncertain winds blow, rest peacefully in His quiet sweet peace."
     ],
     [
-      18,
-      26,
-      "We turn to the Lord in prayer, remembering His faithfulness even when our circumstances are difficult."
+      15,
+      25,
+      "Scripture declares in Proverbs eighteen ten, the name of the Lord is a strong tower, the righteous runneth into it and is safe."
     ],
     [
-      27,
-      35,
-      "Father, shelter those who are anxious, comfort those who are grieving, and strengthen all who feel vulnerable."
+      25,
+      33,
+      "Heavenly Father, surround this precious soul with your divine heavenly shield today. Guard their coming and their going, protecting their mind, home, and loved ones from all hidden harm."
     ],
     [
-      36,
-      44,
-      "Help us to seek wise counsel, to care for our neighbours, and to take the practical steps that lead toward safety."
+      33,
+      40,
+      "Cover them completely with your holy grace, grant them restful courage, and anchor their heart forever in your eternal fortress today. Amen."
     ],
     [
+      40,
       45,
-      53,
-      "Hold us close through the storms we cannot control, and let Your peace steady our hearts in Christ."
-    ],
-    [
-      54,
-      62,
-      "Type Amen and subscribe to The Covenant Shield for daily prayer and encouragement in God’s keeping."
+      "Subscribe to The Covenant Shield to walk under God's daily divine covering."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      8,
+      7,
       [
-        "BRING YOUR FEARS"
+        "PLACE EVERY STEP AND JOURNEY",
+        "BENEATH THE SHADOW",
+        "OF THE ALMIGHTY GOD"
       ],
-      [],
+      [
+        "SHADOW",
+        "ALMIGHTY"
+      ],
       "PROVERBS 18:10"
     ],
     [
-      9,
-      17,
+      7,
+      15,
       [
-        "HEAR THE WORD"
+        "WHEN UNCERTAIN WINDS BLOW",
+        "REST PEACEFULLY IN HIS",
+        "QUIET SWEET PEACE"
       ],
-      [],
+      [
+        "PEACEFULLY",
+        "SWEET",
+        "PEACE"
+      ],
       "PROVERBS 18:10"
     ],
     [
-      18,
-      26,
+      15,
+      25,
       [
-        "TRUST THE LORD"
+        "THE NAME OF THE LORD",
+        "IS A STRONG TOWER",
+        "THE RIGHTEOUS RUNNETH IN",
+        "AND IS SAFE"
       ],
-      [],
+      [
+        "STRONG",
+        "TOWER",
+        "SAFE"
+      ],
       "PROVERBS 18:10"
     ],
     [
-      27,
-      35,
+      25,
+      33,
       [
-        "FATHER BE NEAR"
+        "SURROUND THIS SOUL WITH YOUR",
+        "DIVINE HEAVENLY SHIELD",
+        "PROTECTING THEIR HOME AND MIND",
+        "FROM HIDDEN HARM"
       ],
-      [],
+      [
+        "HEAVENLY",
+        "SHIELD",
+        "PROTECTING"
+      ],
       "PROVERBS 18:10"
     ],
     [
-      36,
-      44,
+      33,
+      40,
       [
-        "GIVE US WISDOM"
+        "GRANT THEM RESTFUL COURAGE",
+        "ANCHOR THEIR HEART FOREVER",
+        "IN YOUR ETERNAL FORTRESS"
       ],
-      [],
+      [
+        "RESTFUL",
+        "COURAGE",
+        "FORTRESS"
+      ],
       "PROVERBS 18:10"
     ],
     [
+      40,
       45,
-      53,
       [
-        "PEACE IN CHRIST"
+        "WALK UNDER GODS DAILY",
+        "DIVINE COVERING",
+        "SUBSCRIBE TO THE COVENANT SHIELD"
       ],
-      [],
-      "PROVERBS 18:10"
-    ],
-    [
-      54,
-      62,
       [
-        "DAILY PROTECTION"
+        "SUBSCRIBE",
+        "COVENANT",
+        "SHIELD"
       ],
-      [],
       "PROVERBS 18:10"
     ]
   ],
   "beats": [
     {
-      "a": "When your heart feels overwhelmed, you do not have to carry every fear by yourself today.",
+      "a": "shadow of the Almighty God",
       "kind": "phrase",
       "words": [
-        "BRING"
+        "SHADOW",
+        "ALMIGHTY"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Proverbs chapter eighteen, verse ten says, The name of the LORD is a strong tower: the righteous runneth into it, and is safe.",
+      "a": "rest peacefully in His quiet sweet peace",
       "kind": "phrase",
       "words": [
-        "HEAR"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "We turn to the Lord in prayer, remembering His faithfulness even when our circumstances are difficult.",
-      "kind": "phrase",
-      "words": [
-        "TRUST"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Father, shelter those who are anxious, comfort those who are grieving, and strengthen all who feel vulnerable.",
-      "kind": "phrase",
-      "words": [
-        "FATHER"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Help us to seek wise counsel, to care for our neighbours, and to take the practical steps that lead toward safety.",
-      "kind": "phrase",
-      "words": [
-        "GIVE"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Hold us close through the storms we cannot control, and let Your peace steady our hearts in Christ.",
-      "kind": "phrase",
-      "words": [
+        "PEACEFULLY",
         "PEACE"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Type Amen and subscribe to The Covenant Shield for daily prayer and encouragement in God’s keeping.",
+      "a": "the name of the Lord is a strong tower",
       "kind": "phrase",
       "words": [
-        "DAILY"
+        "STRONG",
+        "TOWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "surround this precious soul with your divine heavenly shield today",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "anchor their heart forever in your eternal fortress today",
+      "kind": "phrase",
+      "words": [
+        "ETERNAL",
+        "FORTRESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Covenant Shield to walk under God's daily divine covering",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "COVERING"
       ],
       "hi": 0,
       "slot": "C"
