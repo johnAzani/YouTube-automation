@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T01:45:55Z",
+  "generated_at": "2026-11-11T02:06:23Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -13,7 +13,7 @@
     "public_total": 74,
     "queued_longform": 42,
     "queued_shorts": 25,
-    "automations_ok": 8,
+    "automations_ok": 7,
     "automations_total": 10,
     "network_healthy": false
   },
@@ -337,7 +337,7 @@
       "next_queued_longform": {
         "id": "0400",
         "title": "Jeremiah 30:17 Healing Prayer | The Healing Balm",
-        "words": 905,
+        "words": 904,
         "status": "approved"
       },
       "next_queued_short": {
@@ -2641,7 +2641,7 @@
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,
-        "words": 905
+        "words": 904
       },
       {
         "id": "0401",
@@ -2654,7 +2654,7 @@
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,
-        "words": 897
+        "words": 890
       },
       {
         "id": "0402",
@@ -2667,7 +2667,7 @@
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,
-        "words": 863
+        "words": 860
       },
       {
         "id": "0403",
@@ -2965,26 +2965,26 @@
     {
       "workflow": "automation-health.yml",
       "name": "automation-health",
-      "verdict": "OK",
-      "severity": "ok",
-      "detail": "last success 5.0h ago",
-      "last_conclusion": "",
-      "last_run": "2026-11-11T01:01:40+00:00",
-      "last_success": "2026-11-10T20:04:03+00:00",
+      "verdict": "SELF-REPORT",
+      "severity": "info",
+      "detail": "its red runs are the verdicts below, not failures of it",
+      "last_conclusion": "success",
+      "last_run": "2026-11-11T02:03:22+00:00",
+      "last_success": "2026-11-11T02:03:22+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
-      "failures_5": 2,
+      "failures_5": 3,
       "effect": "reports and files stalls"
     },
     {
       "workflow": "comments.yml",
       "name": "Autonomous Comment Replies",
-      "verdict": "FAILING",
-      "severity": "blocking",
-      "detail": "failed 1.0h ago and nothing was changed since; the next slot will fail the same way",
-      "last_conclusion": "failure",
-      "last_run": "2026-11-11T00:02:12+00:00",
-      "last_success": "2026-11-10T21:24:54+00:00",
+      "verdict": "OK",
+      "severity": "ok",
+      "detail": "last success 0.0h ago",
+      "last_conclusion": "success",
+      "last_run": "2026-11-11T02:04:20+00:00",
+      "last_success": "2026-11-11T02:04:20+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 2,
@@ -2995,7 +2995,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 50.2h ago",
+      "detail": "last success 51.2h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-08T22:53:40+00:00",
       "last_success": "2026-11-08T22:53:40+00:00",
@@ -3009,7 +3009,7 @@
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 13.9h ago",
+      "detail": "last success 14.9h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-10T11:09:47+00:00",
       "last_success": "2026-11-10T11:09:47+00:00",
@@ -3023,7 +3023,7 @@
       "name": "Growth autopilot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 15.3h ago",
+      "detail": "last success 16.4h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-10T09:43:08+00:00",
       "last_success": "2026-11-10T09:43:08+00:00",
@@ -3037,7 +3037,7 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 37.2h ago",
+      "detail": "last success 38.3h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-09T11:48:56+00:00",
       "last_success": "2026-11-09T11:48:56+00:00",
@@ -3049,15 +3049,15 @@
     {
       "workflow": "metrics.yml",
       "name": "Weekly metrics snapshot",
-      "verdict": "OK",
-      "severity": "ok",
-      "detail": "last success 23.0h ago",
-      "last_conclusion": "",
+      "verdict": "FAILING",
+      "severity": "blocking",
+      "detail": "failed 1.1h ago and nothing was changed since; the next slot will fail the same way",
+      "last_conclusion": "failure",
       "last_run": "2026-11-11T01:01:40+00:00",
       "last_success": "2026-11-10T02:05:30+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
-      "failures_5": 0,
+      "failures_5": 1,
       "effect": "writes content/metrics.csv and opens a snapshot issue"
     },
     {
@@ -3067,7 +3067,7 @@
       "severity": "info",
       "detail": "its red runs are the verdicts below, not failures of it",
       "last_conclusion": "",
-      "last_run": "2026-11-11T01:01:40+00:00",
+      "last_run": "2026-11-11T02:03:22+00:00",
       "last_success": "2026-11-10T17:09:11+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
@@ -3079,7 +3079,7 @@
       "name": "Produce video",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 13.4h ago",
+      "detail": "last success 14.4h ago",
       "last_conclusion": "",
       "last_run": "2026-11-11T00:01:43+00:00",
       "last_success": "2026-11-10T11:41:15+00:00",
@@ -3093,10 +3093,10 @@
       "name": "Scheduler supervisor",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.9h ago",
-      "last_conclusion": "",
-      "last_run": "2026-11-11T01:01:40+00:00",
-      "last_success": "2026-11-11T00:05:53+00:00",
+      "detail": "last success 0.0h ago",
+      "last_conclusion": "success",
+      "last_run": "2026-11-11T02:03:22+00:00",
+      "last_success": "2026-11-11T02:03:22+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
