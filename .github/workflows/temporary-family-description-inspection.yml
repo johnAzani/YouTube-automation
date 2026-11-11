@@ -1,0 +1,54 @@
+name: Read-only inspection after Family Short description update
+on:
+  push:
+    branches: ["arena/b0072173-youtube-automation"]
+    paths: [".github/workflows/temporary-family-description-inspection.yml"]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download pre-update backup
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 43083350585 -n family-short-metadata-before-43083350585 -D /tmp/family-before
+      - name: Compare live metadata with approved descriptions and backup (read only)
+        env:
+          CLIENT_ID: ${{ secrets.PRAYER5_YOUTUBE_CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.PRAYER5_YOUTUBE_CLIENT_SECRET }}
+          REFRESH_TOKEN: ${{ secrets.PRAYER5_YOUTUBE_REFRESH_TOKEN }}
+          EXPECTED_CHANNEL: ${{ vars.PRAYER5_YOUTUBE_CHANNEL_ID || secrets.PRAYER5_YOUTUBE_CHANNEL_ID }}
+        run: |
+          python3 - <<'PY'
+          import importlib.util, json, os, pathlib, urllib.parse, urllib.request
+          spec = importlib.util.spec_from_file_location('m', 'scripts/_temporary_family_description_update.py')
+          m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+          try:
+              if os.environ['EXPECTED_CHANNEL'].strip() != m.OWNER: raise ValueError('configured owner mismatch')
+              token = m.request('https://oauth2.googleapis.com/token', data=urllib.parse.urlencode({'client_id':os.environ['CLIENT_ID'], 'client_secret':os.environ['CLIENT_SECRET'], 'refresh_token':os.environ['REFRESH_TOKEN'], 'grant_type':'refresh_token'}).encode())['access_token']
+              headers={'Authorization':'Bearer '+token}
+              channels=m.request('https://www.googleapis.com/youtube/v3/channels?part=id&mine=true', headers=headers).get('items',[])
+              if len(channels)!=1 or channels[0].get('id')!=m.OWNER: raise ValueError('OAuth owner mismatch')
+              videos=m.request('https://www.googleapis.com/youtube/v3/videos?part=snippet,localizations,status&id='+m.VIDEO_ID, headers=headers).get('items',[])
+              if len(videos)!=1 or videos[0].get('snippet',{}).get('channelId')!=m.OWNER: raise ValueError('video owner mismatch')
+              current=videos[0]
+              before=json.loads(pathlib.Path('/tmp/family-before/family-short-metadata-before.json').read_text())
+              sn=current.get('snippet',{}); old=before['snippet']; loc=current.get('localizations',{}); oldloc=before['localizations']
+              info={'english_snippet_matches_approved':sn.get('description')==m.DESCRIPTIONS['en'],
+                    'snippet_preserved_fields':{k:sn.get(k)==old.get(k) for k in m.FIELDS if k!='description'},
+                    'privacy_unchanged':current.get('status',{}).get('privacyStatus')==before['status'].get('privacyStatus'),
+                    'localization_languages_before':sorted(oldloc), 'localization_languages_after':sorted(loc),
+                    'localizations':{lang:{'description_matches_approved':loc.get(lang,{}).get('description')==desc,
+                       'title_unchanged':loc.get(lang,{}).get('title')==oldloc.get(lang,{}).get('title'),
+                       'actual_description':loc.get(lang,{}).get('description')} for lang,desc in m.DESCRIPTIONS.items()},
+                    'other_localizations_unchanged':all(loc.get(k)==v for k,v in oldloc.items() if k not in m.DESCRIPTIONS)}
+              notice=json.dumps(info,ensure_ascii=True).replace('%','%25').replace('\n','%0A').replace('\r','%0D')
+              print('::notice title=Read-only post-update comparison::'+notice)
+          except Exception as exc:
+              print(f'::error title=Read-only inspection failed::{type(exc).__name__}; details withheld')
+              raise SystemExit(1)
+          PY
