@@ -1,26 +1,26 @@
 {
-  "generated_at": "2026-11-10T09:46:11.333879+00:00",
-  "as_of": "2026-11-10",
+  "generated_at": "2026-11-11T06:52:22.088258+00:00",
+  "as_of": "2026-11-11",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 7,
+  "total_longform_videos": 9,
   "ranked_themes": [],
   "themes": [
-    {
-      "theme": "midday_strength_endurance",
-      "videos": 5,
-      "measured_videos": 0,
-      "avg_score": 0.1,
-      "avg_engagement": 0.0,
-      "top_scripture": "Psalm 55"
-    },
     {
       "theme": "daily_guidance_wisdom",
       "videos": 1,
       "measured_videos": 0,
-      "avg_score": 0.0,
+      "avg_score": 0.5,
       "avg_engagement": 0.0,
       "top_scripture": "Psalm 119"
+    },
+    {
+      "theme": "midday_strength_endurance",
+      "videos": 7,
+      "measured_videos": 0,
+      "avg_score": 0.0536,
+      "avg_engagement": 0.0,
+      "top_scripture": "Proverbs 16"
     },
     {
       "theme": "protection",
