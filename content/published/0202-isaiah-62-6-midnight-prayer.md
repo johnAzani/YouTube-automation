@@ -2,7 +2,7 @@
 id: '0202'
 title: Isaiah 62:6-7 Midnight Prayer | The Midnight Watch
 slug: isaiah-62-6-midnight-prayer
-status: approved
+status: published
 channel: prayer4
 privacy: public
 format: longform
@@ -73,6 +73,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-11"
+published_at: "2026-11-11T01:45:10Z"
+youtube_video_id: "ylKK5fS4Egs"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Rising at the Midnight Hour

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T01:09:13Z",
+  "generated_at": "2026-11-11T01:45:55Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,11 +7,11 @@
     "channels_total": 7
   },
   "totals": {
-    "published_total": 75,
-    "published_longform": 32,
+    "published_total": 76,
+    "published_longform": 33,
     "published_shorts": 43,
-    "public_total": 73,
-    "queued_longform": 43,
+    "public_total": 74,
+    "queued_longform": 42,
     "queued_shorts": 25,
     "automations_ok": 8,
     "automations_total": 10,
@@ -233,27 +233,27 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 4,
-        "published_longform": 2,
+        "published_total": 5,
+        "published_longform": 3,
         "published_shorts": 2,
-        "public_total": 4,
-        "queued_longform": 4,
+        "public_total": 5,
+        "queued_longform": 3,
         "queued_other": 0,
         "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0201",
-        "title": "Acts 16:25-26 Midnight Prayer | The Midnight Watch",
-        "format": "longform",
-        "youtube_video_id": "4NMgWbS5Bu8",
-        "watch_url": "https://youtu.be/4NMgWbS5Bu8",
-        "published_on": "2026-11-10",
-        "published_at": "2026-11-10T23:16:01Z"
-      },
-      "next_queued_longform": {
         "id": "0202",
         "title": "Isaiah 62:6-7 Midnight Prayer | The Midnight Watch",
-        "words": 904,
+        "format": "longform",
+        "youtube_video_id": "ylKK5fS4Egs",
+        "watch_url": "https://youtu.be/ylKK5fS4Egs",
+        "published_on": "2026-11-11",
+        "published_at": "2026-11-11T01:45:10Z"
+      },
+      "next_queued_longform": {
+        "id": "0203",
+        "title": "Habakkuk 2:1-3 Midnight Prayer | The Midnight Watch",
+        "words": 882,
         "status": "approved"
       },
       "next_queued_short": {
@@ -385,6 +385,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "0202",
+      "slug": "isaiah-62-6-midnight-prayer",
+      "file": "0202-isaiah-62-6-midnight-prayer.md",
+      "title": "Isaiah 62:6-7 Midnight Prayer | The Midnight Watch",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T01:45:10Z",
+      "youtube_video_id": "ylKK5fS4Egs",
+      "watch_url": "https://youtu.be/ylKK5fS4Egs",
+      "youtu_be_url": "https://youtu.be/ylKK5fS4Egs",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/ylKK5fS4Egs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/ylKK5fS4Egs/hqdefault.jpg",
+      "thumb_text": "STAND ON THE WATCH",
+      "duration_label": "~6 min",
+      "words": 904
+    },
     {
       "id": "SHORT-MORNINGPSALM108V2",
       "slug": "short-morningpsalm108v2-sunrise-prayer",
@@ -2489,19 +2512,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1454
-      },
-      {
-        "id": "0202",
-        "slug": "isaiah-62-6-midnight-prayer",
-        "file": "0202-isaiah-62-6-midnight-prayer.md",
-        "title": "Isaiah 62:6-7 Midnight Prayer | The Midnight Watch",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 904
       },
       {
         "id": "0203",
