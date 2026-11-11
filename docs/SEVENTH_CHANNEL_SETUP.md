@@ -1,6 +1,6 @@
 # Seventh Channel Setup — The Provision Table (`prayer7`)
 
-Status: **REGISTERED (`provisioned=False` pending YouTube Studio & `PRAYER7_*` credentials).**
+Status: **LIVE & PROVISIONED (`provisioned=True`) — all 5 `PRAYER7_*` GitHub Secrets connected and Day-1 launch queue (`0500`–`0503` + 4 Shorts) seeded.**
 Every line of code, editorial & theological equipment, 30-scripture wisdom, open-doors & covenant provision roadmap (`0500`–`0529`),
 Shorts namespacing (`short-provision…`), CTR thumbnail pack (`harvest` Royal Harvest Burgundy & Wheat-Gold grade),
 Community Tab schedule, ES/PT localizations, bespoke brand artwork (`docs/media/provision-table-*.png`),

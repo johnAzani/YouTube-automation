@@ -1,0 +1,331 @@
+{
+  "key": "short-provisionrevelation3v8",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "OPEN DOORS PRAYER",
+    "REVELATION 3:8"
+  ],
+  "poster": [
+    "THE PROVISION TABLE",
+    "OPEN THIS DOOR",
+    "REVELATION 3:8",
+    "OPEN DOORS PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table \u2014 walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden light rays through clouds over mountain peak",
+    "divine light breaking through clouds over peaceful landscape",
+    "sunlight breaking through clouds mountain pass",
+    "peaceful mountain river calm water forest",
+    "ancient chapel interior candlelight peaceful sanctuary",
+    "forest sunlight mist",
+    "serene valley stream morning light peaceful"
+  ],
+  "scenes": [
+    {
+      "a": "Stand in quiet faith today before the risen Christ who holds the sovereign key of David.",
+      "img": "short-provisionrevelation3v8-scene-01.jpg",
+      "kicker": "REVELATION 3:8",
+      "sub": "KEY OF DAVID",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Revelation three verse eight proclaims, Behold, I have set before thee an open door, and no man can shut it.",
+      "img": "short-provisionrevelation3v8-scene-02.jpg",
+      "kicker": "REVELATION 3:8",
+      "sub": "OPEN THIS DOOR",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "James one verse five promises, If any of you lack wisdom, let him ask of God, that giveth to all men liberally.",
+      "img": "short-provisionrevelation3v8-scene-03.jpg",
+      "kicker": "JAMES 1:5",
+      "sub": "DIVINE WISDOM",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Even when your own strength feels small, Christ goes before faithful servants to unlock right thresholds.",
+      "img": "short-provisionrevelation3v8-scene-04.jpg",
+      "kicker": "REVELATION 3:8",
+      "sub": "FAITHFUL STRENGTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord Jesus, guide interviews, vocations, and studies, and close every path that would lead away from peace.",
+      "img": "short-provisionrevelation3v8-scene-05.jpg",
+      "kicker": "PROVERBS 3:6",
+      "sub": "ORDER OUR STEPS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "With favour compass your people as with a shield and establish the honest work of our hands today.",
+      "img": "short-provisionrevelation3v8-scene-06.jpg",
+      "kicker": "PSALM 5:12",
+      "sub": "SHIELD OF FAVOUR",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Type Amen and subscribe to The Provision Table to walk in God's daily wisdom and provision.",
+      "img": "short-provisionrevelation3v8-scene-07.jpg",
+      "kicker": "THE PROVISION TABLE",
+      "sub": "DAILY PROVISION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Stand in quiet faith today before the risen Christ who holds the sovereign key of David."
+    ],
+    [
+      9,
+      17,
+      "Revelation three verse eight proclaims, Behold, I have set before thee an open door, and no man can shut it."
+    ],
+    [
+      18,
+      26,
+      "James one verse five promises, If any of you lack wisdom, let him ask of God, that giveth to all men liberally."
+    ],
+    [
+      27,
+      35,
+      "Even when your own strength feels small, Christ goes before faithful servants to unlock right thresholds."
+    ],
+    [
+      36,
+      44,
+      "Lord Jesus, guide interviews, vocations, and studies, and close every path that would lead away from peace."
+    ],
+    [
+      45,
+      53,
+      "With favour compass your people as with a shield and establish the honest work of our hands today."
+    ],
+    [
+      54,
+      61,
+      "Type Amen and subscribe to The Provision Table to walk in God's daily wisdom and provision."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "STAND IN FAITH BEFORE",
+        "CHRIST WHO HOLDS THE",
+        "KEY OF DAVID"
+      ],
+      [
+        "FAITH",
+        "CHRIST",
+        "KEY"
+      ],
+      "REVELATION 3:8"
+    ],
+    [
+      9,
+      17,
+      [
+        "BEHOLD I HAVE SET",
+        "BEFORE THEE AN OPEN",
+        "DOOR NONE CAN SHUT"
+      ],
+      [
+        "OPEN",
+        "DOOR",
+        "CHRIST"
+      ],
+      "REVELATION 3:8"
+    ],
+    [
+      18,
+      26,
+      [
+        "ASK OF GOD WHO",
+        "GIVETH CLEAR WISDOM",
+        "LIBERALLY IN FAITH"
+      ],
+      [
+        "ASK",
+        "WISDOM",
+        "FAITH"
+      ],
+      "JAMES 1:5"
+    ],
+    [
+      27,
+      35,
+      [
+        "CHRIST GOES BEFORE",
+        "YOU TO UNLOCK EVERY",
+        "RIGHT OPPORTUNITY"
+      ],
+      [
+        "UNLOCK",
+        "RIGHT",
+        "DOOR"
+      ],
+      "REVELATION 3:8"
+    ],
+    [
+      36,
+      44,
+      [
+        "GUIDE EVERY INTERVIEW",
+        "VOCATION AND DECISION",
+        "IN THY PEACE"
+      ],
+      [
+        "GUIDE",
+        "DECISION",
+        "PEACE"
+      ],
+      "PROVERBS 3:6"
+    ],
+    [
+      45,
+      53,
+      [
+        "SURROUND US WITH",
+        "SHIELD LIKE FAVOUR",
+        "OVER HONEST WORK"
+      ],
+      [
+        "SHIELD",
+        "FAVOUR",
+        "WORK"
+      ],
+      "PSALM 5:12"
+    ],
+    [
+      54,
+      61,
+      [
+        "SUBSCRIBE TO",
+        "THE PROVISION TABLE",
+        "OPEN THIS DOOR"
+      ],
+      [
+        "SUBSCRIBE",
+        "PROVISION",
+        "TABLE"
+      ],
+      "THE PROVISION TABLE"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Stand in quiet faith today before the risen Christ who holds the sovereign key of David.",
+      "kind": "phrase",
+      "words": [
+        "FAITH",
+        "CHRIST",
+        "KEY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Revelation three verse eight proclaims, Behold, I have set before thee an open door, and no man can shut it.",
+      "kind": "phrase",
+      "words": [
+        "OPEN",
+        "DOOR",
+        "CHRIST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "James one verse five promises, If any of you lack wisdom, let him ask of God, that giveth to all men liberally.",
+      "kind": "phrase",
+      "words": [
+        "ASK",
+        "WISDOM",
+        "FAITH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Even when your own strength feels small, Christ goes before faithful servants to unlock right thresholds.",
+      "kind": "phrase",
+      "words": [
+        "UNLOCK",
+        "RIGHT",
+        "DOOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord Jesus, guide interviews, vocations, and studies, and close every path that would lead away from peace.",
+      "kind": "phrase",
+      "words": [
+        "GUIDE",
+        "DECISION",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "With favour compass your people as with a shield and establish the honest work of our hands today.",
+      "kind": "phrase",
+      "words": [
+        "SHIELD",
+        "FAVOUR",
+        "WORK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Type Amen and subscribe to The Provision Table to walk in God's daily wisdom and provision.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PROVISION",
+        "TABLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Revelation 3:8"
+}

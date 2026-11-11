@@ -1850,7 +1850,7 @@ _BRANDS: dict[str, Brand] = {
         default_comment_theme="divine wisdom, open doors, and faithful daily provision",
         ctr_grade="harvest",
         ctr_hook_hero="OPEN THIS DOOR",
-        ctr_quiet_hero="MY CUP OVERFLOWS",
+        ctr_quiet_hero="CUP RUNNETH OVER",
     ),
 }
 

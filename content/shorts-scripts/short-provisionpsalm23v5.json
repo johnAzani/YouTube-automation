@@ -1,0 +1,331 @@
+{
+  "key": "short-provisionpsalm23v5",
+  "channel": "prayer7",
+  "psalm": 23,
+  "title": [
+    "PROVISION PRAYER",
+    "PSALM 23:5"
+  ],
+  "poster": [
+    "THE PROVISION TABLE",
+    "MY CUP OVERFLOWS",
+    "PSALM 23:5",
+    "PROVISION PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table \u2014 walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden light rays through clouds over mountain peak",
+    "divine light breaking through clouds over peaceful landscape",
+    "sunlight breaking through clouds mountain pass",
+    "peaceful mountain river calm water forest",
+    "ancient chapel interior candlelight peaceful sanctuary",
+    "forest sunlight mist",
+    "serene valley stream morning light peaceful"
+  ],
+  "scenes": [
+    {
+      "a": "Commit your work, decisions, and daily needs unto the Good Shepherd right now.",
+      "img": "short-provisionpsalm23v5-scene-01.jpg",
+      "kicker": "PSALM 23:5",
+      "sub": "PREPARED TABLE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Psalm twenty-three verse five declares, Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over.",
+      "img": "short-provisionpsalm23v5-scene-02.jpg",
+      "kicker": "PSALM 23:5",
+      "sub": "MY CUP OVERFLOWS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Psalm ninety verse seventeen prays in faith, Establish thou the work of our hands upon us; yea, the work of our hands establish thou it.",
+      "img": "short-provisionpsalm23v5-scene-03.jpg",
+      "kicker": "PSALM 90:17",
+      "sub": "BLESS OUR HANDS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Where bills press close or doors feel slow to open, Jehovah-Jireh sees ahead and prepares daily bread.",
+      "img": "short-provisionpsalm23v5-scene-04.jpg",
+      "kicker": "PSALM 23:5",
+      "sub": "JEHOVAH JIREH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, grant clear wisdom in every decision, favour over honest labour, and peace in every household today.",
+      "img": "short-provisionpsalm23v5-scene-05.jpg",
+      "kicker": "JAMES 1:5",
+      "sub": "WISDOM AND FAVOUR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Surely goodness and mercy shall follow you all the days of your life as your cup overflows in Christ.",
+      "img": "short-provisionpsalm23v5-scene-06.jpg",
+      "kicker": "PSALM 23:6",
+      "sub": "GOODNESS AND MERCY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Type Amen and subscribe to The Provision Table to walk in God's daily wisdom and provision.",
+      "img": "short-provisionpsalm23v5-scene-07.jpg",
+      "kicker": "THE PROVISION TABLE",
+      "sub": "DAILY PROVISION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Commit your work, decisions, and daily needs unto the Good Shepherd right now."
+    ],
+    [
+      9,
+      17,
+      "Psalm twenty-three verse five declares, Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over."
+    ],
+    [
+      18,
+      26,
+      "Psalm ninety verse seventeen prays in faith, Establish thou the work of our hands upon us; yea, the work of our hands establish thou it."
+    ],
+    [
+      27,
+      35,
+      "Where bills press close or doors feel slow to open, Jehovah-Jireh sees ahead and prepares daily bread."
+    ],
+    [
+      36,
+      44,
+      "Father, grant clear wisdom in every decision, favour over honest labour, and peace in every household today."
+    ],
+    [
+      45,
+      53,
+      "Surely goodness and mercy shall follow you all the days of your life as your cup overflows in Christ."
+    ],
+    [
+      54,
+      61,
+      "Type Amen and subscribe to The Provision Table to walk in God's daily wisdom and provision."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "COMMIT YOUR WORK",
+        "AND DAILY NEEDS UNTO",
+        "THE GOOD SHEPHERD"
+      ],
+      [
+        "SHEPHERD",
+        "WORK",
+        "PROVISION"
+      ],
+      "PSALM 23:5"
+    ],
+    [
+      9,
+      17,
+      [
+        "THOU PREPAREST A TABLE",
+        "BEFORE ME MY CUP",
+        "RUNNETH OVER TODAY"
+      ],
+      [
+        "TABLE",
+        "OVERFLOWS",
+        "GRACE"
+      ],
+      "PSALM 23:5"
+    ],
+    [
+      18,
+      26,
+      [
+        "ESTABLISH THOU THE WORK",
+        "OF OUR HANDS",
+        "IN FAITHFUL GRACE"
+      ],
+      [
+        "ESTABLISH",
+        "WORK",
+        "HANDS"
+      ],
+      "PSALM 90:17"
+    ],
+    [
+      27,
+      35,
+      [
+        "JEHOVAH JIREH SEES",
+        "AHEAD AND SUPPLIES",
+        "OUR DAILY BREAD"
+      ],
+      [
+        "JEHOVAH",
+        "JIREH",
+        "BREAD"
+      ],
+      "PSALM 23:5"
+    ],
+    [
+      36,
+      44,
+      [
+        "GRANT CLEAR WISDOM",
+        "FAVOUR IN LABOUR",
+        "AND STEADY PEACE"
+      ],
+      [
+        "WISDOM",
+        "FAVOUR",
+        "PEACE"
+      ],
+      "JAMES 1:5"
+    ],
+    [
+      45,
+      53,
+      [
+        "SURELY GOODNESS AND",
+        "MERCY SHALL FOLLOW",
+        "YOU EVERY DAY"
+      ],
+      [
+        "GOODNESS",
+        "MERCY",
+        "OVERFLOWS"
+      ],
+      "PSALM 23:6"
+    ],
+    [
+      54,
+      61,
+      [
+        "SUBSCRIBE TO",
+        "THE PROVISION TABLE",
+        "MY CUP OVERFLOWS"
+      ],
+      [
+        "SUBSCRIBE",
+        "PROVISION",
+        "TABLE"
+      ],
+      "THE PROVISION TABLE"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Commit your work, decisions, and daily needs unto the Good Shepherd right now.",
+      "kind": "phrase",
+      "words": [
+        "SHEPHERD",
+        "WORK",
+        "PROVISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Psalm twenty-three verse five declares, Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over.",
+      "kind": "phrase",
+      "words": [
+        "TABLE",
+        "OVERFLOWS",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Psalm ninety verse seventeen prays in faith, Establish thou the work of our hands upon us; yea, the work of our hands establish thou it.",
+      "kind": "phrase",
+      "words": [
+        "ESTABLISH",
+        "WORK",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Where bills press close or doors feel slow to open, Jehovah-Jireh sees ahead and prepares daily bread.",
+      "kind": "phrase",
+      "words": [
+        "JEHOVAH",
+        "JIREH",
+        "BREAD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, grant clear wisdom in every decision, favour over honest labour, and peace in every household today.",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "FAVOUR",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Surely goodness and mercy shall follow you all the days of your life as your cup overflows in Christ.",
+      "kind": "phrase",
+      "words": [
+        "GOODNESS",
+        "MERCY",
+        "OVERFLOWS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Type Amen and subscribe to The Provision Table to walk in God's daily wisdom and provision.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PROVISION",
+        "TABLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 23:5"
+}

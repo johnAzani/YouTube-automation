@@ -163,15 +163,15 @@ CHANNELS: dict[str, ChannelProfile] = {
         display_name="The Provision Table",
         handle="@TheProvisionTableDaily",
         secret_prefix="PRAYER7_",
-        # Owner decision, 2026-11-10: seventh prayer channel dedicated to daily
+        # Owner decision, 2026-11-11: seventh prayer channel dedicated to daily
         # KJV wisdom, open doors, favour over honest work, and God's covenant
-        # provision (Psalm 23:5 / Deuteronomy 28:12 / Philippians 4:19). Kept
-        # provisioned=False until @TheProvisionTableDaily is created on YouTube
-        # and PRAYER7_* secrets are saved in GitHub Secrets.
+        # provision (Psalm 23:5 / Deuteronomy 28:12 / Philippians 4:19).
+        # Provisioned with isolated Google Cloud YouTube Data API v3 + Gemini
+        # credentials (PRAYER7_* in GitHub Secrets).
         default_privacy="public",
         auto_publish=True,
         include_sanctuary_links=False,
-        provisioned=False,
+        provisioned=True,
     ),
 }
 
