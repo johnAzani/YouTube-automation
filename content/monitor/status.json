@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T23:34:56.477741+00:00",
+  "generated_at": "2026-11-11T01:02:34.068750+00:00",
   "healthy": false,
   "automations": [
     {
@@ -8,18 +8,18 @@
       "crons": [
         "14 20 * * *"
       ],
-      "last_run": "2026-11-10T20:04:03+00:00",
-      "last_conclusion": "success",
+      "last_run": "2026-11-11T01:01:40+00:00",
+      "last_conclusion": null,
       "last_success": "2026-11-10T20:04:03+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-09T02:19:37+00:00",
       "last_slot": "2026-11-10T20:14:00+00:00",
-      "missed_slots": 1,
+      "missed_slots": 0,
       "failures_5": 2,
       "effect": "reports and files stalls",
-      "verdict": "MISSED SLOT",
-      "detail": "was due Tue 10 Nov 21:14 WAT and did not run; last run 3.5h ago",
-      "severity": "blocking"
+      "verdict": "OK",
+      "detail": "last success 5.0h ago",
+      "severity": "ok"
     },
     {
       "workflow": "comments.yml",
@@ -29,18 +29,18 @@
         "14 15 * * *",
         "14 19 * * *"
       ],
-      "last_run": "2026-11-10T21:24:54+00:00",
-      "last_conclusion": "success",
+      "last_run": "2026-11-11T00:02:12+00:00",
+      "last_conclusion": "failure",
       "last_success": "2026-11-10T21:24:54+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-10T20:04:00+00:00",
-      "last_slot": "2026-11-10T19:14:00+00:00",
+      "last_slot": "2026-11-10T07:14:00+00:00",
       "missed_slots": 0,
-      "failures_5": 1,
+      "failures_5": 2,
       "effect": "posts replies and records them in content/comments/replied.json",
-      "verdict": "OK",
-      "detail": "last success 2.2h ago",
-      "severity": "ok"
+      "verdict": "FAILING",
+      "detail": "failed 1.0h ago and nothing was changed since; the next slot will fail the same way",
+      "severity": "blocking"
     },
     {
       "workflow": "community.yml",
@@ -58,7 +58,7 @@
       "failures_5": 0,
       "effect": "writes content/community/<id>-READY.md",
       "verdict": "OK",
-      "detail": "last success 48.7h ago",
+      "detail": "last success 50.2h ago",
       "severity": "ok"
     },
     {
@@ -77,7 +77,7 @@
       "failures_5": 0,
       "effect": "writes content/queue/ or content/shorts-scripts/",
       "verdict": "OK",
-      "detail": "last success 12.4h ago",
+      "detail": "last success 13.9h ago",
       "severity": "ok"
     },
     {
@@ -96,7 +96,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 13.9h ago",
+      "detail": "last success 15.3h ago",
       "severity": "ok"
     },
     {
@@ -115,7 +115,7 @@
       "failures_5": 0,
       "effect": "re-arms scheduled workflows",
       "verdict": "OK",
-      "detail": "last success 35.8h ago",
+      "detail": "last success 37.2h ago",
       "severity": "ok"
     },
     {
@@ -124,8 +124,8 @@
       "crons": [
         "41 18 * * 5"
       ],
-      "last_run": "2026-11-10T19:08:18+00:00",
-      "last_conclusion": "failure",
+      "last_run": "2026-11-11T01:01:40+00:00",
+      "last_conclusion": null,
       "last_success": "2026-11-10T02:05:30+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-10T20:04:00+00:00",
@@ -133,9 +133,9 @@
       "missed_slots": 0,
       "failures_5": 0,
       "effect": "writes content/metrics.csv and opens a snapshot issue",
-      "verdict": "UNTESTED FIX",
-      "detail": "failed 4.4h ago; edited 3.5h ago \u2014 needs one green run",
-      "severity": "warning"
+      "verdict": "OK",
+      "detail": "last success 23.0h ago",
+      "severity": "ok"
     },
     {
       "workflow": "monitor.yml",
@@ -143,12 +143,12 @@
       "crons": [
         "23 */3 * * *"
       ],
-      "last_run": "2026-11-10T23:33:00+00:00",
+      "last_run": "2026-11-11T01:01:40+00:00",
       "last_conclusion": null,
       "last_success": "2026-11-10T17:09:11+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-10T20:04:00+00:00",
-      "last_slot": "2026-11-10T21:23:00+00:00",
+      "last_slot": "2026-11-11T00:23:00+00:00",
       "missed_slots": 0,
       "failures_5": 3,
       "effect": "this report",
@@ -164,17 +164,17 @@
         "14 14 * * *",
         "14 19 * * *"
       ],
-      "last_run": "2026-11-10T20:48:15+00:00",
+      "last_run": "2026-11-11T00:01:43+00:00",
       "last_conclusion": null,
       "last_success": "2026-11-10T11:41:15+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-10T20:04:00+00:00",
-      "last_slot": "2026-11-10T19:14:00+00:00",
+      "last_slot": "2026-11-10T06:14:00+00:00",
       "missed_slots": 0,
-      "failures_5": 0,
+      "failures_5": 1,
       "effect": "publishes a video: content/published/ gains a receipt with a video id",
       "verdict": "OK",
-      "detail": "last success 11.9h ago",
+      "detail": "last success 13.4h ago",
       "severity": "ok"
     },
     {
@@ -183,44 +183,44 @@
       "crons": [
         "47 0,3,6,9,12,15,18,21 * * *"
       ],
-      "last_run": "2026-11-10T21:25:31+00:00",
-      "last_conclusion": "success",
-      "last_success": "2026-11-10T21:25:31+00:00",
+      "last_run": "2026-11-11T01:01:40+00:00",
+      "last_conclusion": null,
+      "last_success": "2026-11-11T00:05:53+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-07T19:31:06+00:00",
-      "last_slot": "2026-11-10T21:47:00+00:00",
+      "last_slot": "2026-11-11T00:47:00+00:00",
       "missed_slots": 0,
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 2.2h ago",
+      "detail": "last success 0.9h ago",
       "severity": "ok"
     }
   ],
   "outcomes": [
     {
       "outcome": "last upload",
-      "detail": "2026-11-10 (0h ago)",
+      "detail": "2026-11-10 (2h ago)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (secret-place)",
-      "detail": "The Secret Place: 2026-11-10 (5h ago \u2014 short-psalm139v11-pre-sleep-prayer.md)",
+      "detail": "The Secret Place: 2026-11-10 (7h ago \u2014 short-psalm139v11-pre-sleep-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer2)",
-      "detail": "The Morning Altar: 2026-11-10 (1h ago \u2014 0057-psalm-19-4-6-morning-prayer-strength-for-the-race.md)",
+      "detail": "The Morning Altar: 2026-11-10 (3h ago \u2014 0057-psalm-19-4-6-morning-prayer-strength-for-the-race.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer3)",
-      "detail": "The Midday Watch: 2026-11-10 (1h ago \u2014 short-middaydaniel6v10-midday-prayer.md)",
+      "detail": "The Midday Watch: 2026-11-10 (3h ago \u2014 short-middaydaniel6v10-midday-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer4)",
-      "detail": "The Midnight Watch: 2026-11-10 (0h ago \u2014 0201-acts-16-25-midnight-prayer.md)",
+      "detail": "The Midnight Watch: 2026-11-10 (2h ago \u2014 0201-acts-16-25-midnight-prayer.md)",
       "severity": "ok"
     },
     {
