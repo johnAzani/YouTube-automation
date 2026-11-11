@@ -20,10 +20,11 @@ height: 1280
 duration_seconds: 55.73
 scenes_verified: 7
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE MIDNIGHT WATCH", "STAND ON THE WATCH", "ISAIAH 62:6-7", "MIDNIGHT PRAYER"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_attempts: 1
 ---
 
 Rise in spirit at this midnight hour and take your post upon the walls of prayer. Isaiah sixty-two verse six declares, I have set watchmen upon thy walls, O Jerusalem, which shall never hold their peace day nor night. God Himself calls watchful believers to remind heaven of His unbreakable covenant promises. A household guarded by persevering midnight prayer is never left uncovered in the dark. Father, we stand upon the watchtower tonight over our families, our calling, and our season. Clear away every stumbling stone and establish Your peace, wisdom, and praise in our homes. Type Amen and subscribe to The Midnight Watch to stand in prayer at midnight.

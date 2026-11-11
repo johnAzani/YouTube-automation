@@ -78,7 +78,7 @@ published_at: "2026-11-11T11:33:41Z"
 youtube_video_id: "4okWiJmZj40"
 metadata_revision: "selar-seo-v1"
 thumbnail_pending: true
-thumbnail_error: "not_requested"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 ---
 
 ## Scene 1 — Rising at the Midnight Hour

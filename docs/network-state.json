@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T11:34:32Z",
+  "generated_at": "2026-11-11T11:50:00Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -11,8 +11,8 @@
     "published_longform": 37,
     "published_shorts": 48,
     "public_total": 83,
-    "queued_longform": 52,
-    "queued_shorts": 36,
+    "queued_longform": 60,
+    "queued_shorts": 45,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -38,7 +38,7 @@
         "public_total": 24,
         "queued_longform": 19,
         "queued_other": 5,
-        "queued_shorts": 5
+        "queued_shorts": 6
       },
       "latest_video": {
         "id": "0015",
@@ -103,9 +103,9 @@
         "published_longform": 15,
         "published_shorts": 17,
         "public_total": 31,
-        "queued_longform": 5,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 4
       },
       "latest_video": {
         "id": "0058",
@@ -237,9 +237,9 @@
         "published_longform": 4,
         "published_shorts": 3,
         "public_total": 7,
-        "queued_longform": 4,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 7
       },
       "latest_video": {
         "id": "0203",
@@ -385,9 +385,9 @@
         "published_longform": 1,
         "published_shorts": 1,
         "public_total": 2,
-        "queued_longform": 5,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 6
       },
       "latest_video": {
         "id": "0500",
@@ -442,13 +442,23 @@
         "published_longform": 0,
         "published_shorts": 0,
         "public_total": 0,
-        "queued_longform": 0,
+        "queued_longform": 4,
         "queued_other": 0,
-        "queued_shorts": 0
+        "queued_shorts": 4
       },
       "latest_video": null,
-      "next_queued_longform": null,
-      "next_queued_short": null,
+      "next_queued_longform": {
+        "id": "0600",
+        "title": "Psalm 121:7-8 Protection Prayer | The Covenant Shield",
+        "words": 918,
+        "status": "approved"
+      },
+      "next_queued_short": {
+        "short": "short-shieldpsalm121v7",
+        "scripture": "Psalm 121:7-8",
+        "target_window_utc": "08:44",
+        "status": "approved"
+      },
       "feedback": {
         "available": false,
         "measured_longform_videos": 0,
@@ -2728,6 +2738,19 @@
         "words": 1130
       },
       {
+        "id": "0064",
+        "slug": "zephaniah-3-5-morning-prayer",
+        "file": "0064-zephaniah-3-5-morning-prayer.md",
+        "title": "Zephaniah 3:5 Morning Prayer | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1429
+      },
+      {
         "id": "0084",
         "slug": "acts-10-9-midday-prayer",
         "file": "0084-acts-10-9-midday-prayer.md",
@@ -2869,6 +2892,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1669
+      },
+      {
+        "id": "0208",
+        "slug": "isaiah-54-17-no-weapon-formed-against-thee-midnight-prayer",
+        "file": "0208-isaiah-54-17-no-weapon-formed-against-thee-midnight-prayer.md",
+        "title": "Isaiah 54:17 No Weapon Formed Against Thee Midnight Prayer",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1350
+      },
+      {
+        "id": "0209",
+        "slug": "isaiah-10-27-midnight-prayer-the-midnight-watch",
+        "file": "0209-isaiah-10-27-midnight-prayer-the-midnight-watch.md",
+        "title": "Isaiah 10:27 Midnight Prayer | The Midnight Watch",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1176
       },
       {
         "id": "0300",
@@ -3090,6 +3139,71 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1637
+      },
+      {
+        "id": "0506",
+        "slug": "james-1-5-morning-prayer-for-wisdom",
+        "file": "0506-james-1-5-morning-prayer-for-wisdom.md",
+        "title": "James 1:5 Morning Prayer for Wisdom | The Provision Table",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1954
+      },
+      {
+        "id": "0600",
+        "slug": "psalm-121-7-8-protection-prayer",
+        "file": "0600-psalm-121-7-8-protection-prayer.md",
+        "title": "Psalm 121:7-8 Protection Prayer | The Covenant Shield",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 918
+      },
+      {
+        "id": "0601",
+        "slug": "genesis-15-1-protection-prayer",
+        "file": "0601-genesis-15-1-protection-prayer.md",
+        "title": "Genesis 15:1 Protection Prayer | The Covenant Shield",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 928
+      },
+      {
+        "id": "0602",
+        "slug": "proverbs-18-10-strong-tower-prayer",
+        "file": "0602-proverbs-18-10-strong-tower-prayer.md",
+        "title": "Proverbs 18:10 Strong Tower Prayer | The Covenant Shield",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 920
+      },
+      {
+        "id": "0603",
+        "slug": "ephesians-6-16-shield-of-faith-prayer",
+        "file": "0603-ephesians-6-16-shield-of-faith-prayer.md",
+        "title": "Ephesians 6:16 Shield of Faith Prayer | The Covenant Shield",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 868
       }
     ],
     "shorts": [
@@ -3149,6 +3263,17 @@
         "target_window_utc": "14:14"
       },
       {
+        "short": "short-2timothy1v7",
+        "file": "0031-short-2timothy1v7.yml",
+        "companion_longform_id": "0031",
+        "scripture": "2 Timothy 1:7",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "14:14"
+      },
+      {
         "short": "short-morningisaiah33v2",
         "file": "0061-short-morningisaiah33v2.yml",
         "companion_longform_id": "0061",
@@ -3175,6 +3300,17 @@
         "file": "0063-short-morninghosea6v3.yml",
         "companion_longform_id": "0063",
         "scripture": "Hosea 6:3",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
+      },
+      {
+        "short": "short-morningzephaniah3v5",
+        "file": "0064-short-morningzephaniah3v5.yml",
+        "companion_longform_id": "0064",
+        "scripture": "Zephaniah 3:5",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",
@@ -3296,6 +3432,28 @@
         "file": "0207-short-midnightephesians6v10.yml",
         "companion_longform_id": "0207",
         "scripture": "Ephesians 6:10-18",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "23:14"
+      },
+      {
+        "short": "short-midnightisaiah54v17",
+        "file": "0208-short-midnightisaiah54v17.yml",
+        "companion_longform_id": "0208",
+        "scripture": "Isaiah 54:17",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "23:14"
+      },
+      {
+        "short": "short-midnightisaiah10v27",
+        "file": "0209-short-midnightisaiah10v27.yml",
+        "companion_longform_id": "0209",
+        "scripture": "Isaiah 10:27",
         "channel": "prayer4",
         "channel_name": "The Midnight Watch",
         "status": "approved",
@@ -3488,6 +3646,61 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
+      },
+      {
+        "short": "short-provisionjames1v5",
+        "file": "0506-short-provisionjames1v5.yml",
+        "companion_longform_id": "0506",
+        "scripture": "James 1:5",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
+      },
+      {
+        "short": "short-shieldpsalm121v7",
+        "file": "0600-short-shieldpsalm121v7.yml",
+        "companion_longform_id": "0600",
+        "scripture": "Psalm 121:7-8",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "08:44"
+      },
+      {
+        "short": "short-shieldgenesis15v1",
+        "file": "0601-short-shieldgenesis15v1.yml",
+        "companion_longform_id": "0601",
+        "scripture": "Genesis 15:1",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "08:44"
+      },
+      {
+        "short": "short-shieldproverbs18v10",
+        "file": "0602-short-shieldproverbs18v10.yml",
+        "companion_longform_id": "0602",
+        "scripture": "Proverbs 18:10",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "08:44"
+      },
+      {
+        "short": "short-shieldephesians6v16",
+        "file": "0603-short-shieldephesians6v16.yml",
+        "companion_longform_id": "0603",
+        "scripture": "Ephesians 6:16",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "08:44"
       }
     ]
   },
@@ -3497,9 +3710,9 @@
       "name": "automation-health",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 2.8h ago",
-      "last_conclusion": "success",
-      "last_run": "2026-11-11T08:09:24+00:00",
+      "detail": "last success 3.7h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-11T11:48:38+00:00",
       "last_success": "2026-11-11T08:09:24+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
@@ -3511,7 +3724,7 @@
       "name": "Autonomous Comment Replies",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 1.5h ago",
+      "detail": "last success 2.4h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-11T09:25:52+00:00",
       "last_success": "2026-11-11T09:25:52+00:00",
@@ -3525,7 +3738,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 60.1h ago",
+      "detail": "last success 60.9h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-08T22:53:40+00:00",
       "last_success": "2026-11-08T22:53:40+00:00",
@@ -3539,7 +3752,7 @@
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 4.1h ago",
+      "detail": "last success 5.0h ago",
       "last_conclusion": "",
       "last_run": "2026-11-11T10:54:58+00:00",
       "last_success": "2026-11-11T06:49:39+00:00",
@@ -3553,7 +3766,7 @@
       "name": "Growth autopilot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 1.6h ago",
+      "detail": "last success 2.5h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-11T09:18:34+00:00",
       "last_success": "2026-11-11T09:18:34+00:00",
@@ -3567,7 +3780,7 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 47.1h ago",
+      "detail": "last success 48.0h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-09T11:48:56+00:00",
       "last_success": "2026-11-09T11:48:56+00:00",
@@ -3581,9 +3794,9 @@
       "name": "Weekly metrics snapshot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 2.8h ago",
-      "last_conclusion": "success",
-      "last_run": "2026-11-11T08:09:24+00:00",
+      "detail": "last success 3.7h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-11T11:48:38+00:00",
       "last_success": "2026-11-11T08:09:24+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
@@ -3595,10 +3808,10 @@
       "name": "Automation monitor",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 0.9h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-11T10:53:29+00:00",
-      "last_success": "2026-11-11T10:53:20+00:00",
+      "last_run": "2026-11-11T11:48:38+00:00",
+      "last_success": "2026-11-11T10:53:29+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -3609,10 +3822,10 @@
       "name": "Produce video",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 1.5h ago",
+      "detail": "last success 0.9h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-11T10:54:06+00:00",
-      "last_success": "2026-11-11T09:25:50+00:00",
+      "last_run": "2026-11-11T11:48:33+00:00",
+      "last_success": "2026-11-11T10:54:06+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 1,
@@ -3624,9 +3837,9 @@
       "verdict": "OK",
       "severity": "ok",
       "detail": "last success 0.0h ago",
-      "last_conclusion": "success",
-      "last_run": "2026-11-11T10:55:32+00:00",
-      "last_success": "2026-11-11T10:55:32+00:00",
+      "last_conclusion": "",
+      "last_run": "2026-11-11T11:48:43+00:00",
+      "last_success": "2026-11-11T11:47:22+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
