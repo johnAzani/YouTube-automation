@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T08:39:46Z",
+  "generated_at": "2026-11-11T10:15:12Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 80,
-    "published_longform": 35,
-    "published_shorts": 45,
-    "public_total": 78,
-    "queued_longform": 54,
-    "queued_shorts": 39,
+    "published_total": 82,
+    "published_longform": 36,
+    "published_shorts": 46,
+    "public_total": 80,
+    "queued_longform": 53,
+    "queued_shorts": 38,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -65,7 +65,7 @@
         "available": true,
         "as_of": "2026-11-11",
         "measured_longform_videos": 0,
-        "total_longform_videos": 6,
+        "total_longform_videos": 7,
         "top_themes": [
           {
             "theme": "stillness_refuge",
@@ -99,32 +99,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 30,
-        "published_longform": 14,
-        "published_shorts": 16,
-        "public_total": 29,
-        "queued_longform": 6,
+        "published_total": 32,
+        "published_longform": 15,
+        "published_shorts": 17,
+        "public_total": 31,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM108V2",
-        "title": "Say This Psalm 108:2 Prayer at Sunrise | Psalm 108:2 #Shorts",
-        "format": "short",
-        "youtube_video_id": "Cd_Q1p88T24",
-        "watch_url": "https://www.youtube.com/shorts/Cd_Q1p88T24",
-        "published_on": "2026-11-11",
-        "published_at": "2026-11-11T01:08:20Z"
-      },
-      "next_queued_longform": {
         "id": "0058",
         "title": "Psalm 57:8 Awake Early in Praise Morning Prayer | The Morning Altar",
-        "words": 1563,
-        "status": "quota_paused"
+        "format": "longform",
+        "youtube_video_id": "Zi4ObOhb97s",
+        "watch_url": "https://youtu.be/Zi4ObOhb97s",
+        "published_on": "2026-11-11",
+        "published_at": "2026-11-11T10:14:27Z"
+      },
+      "next_queued_longform": {
+        "id": "0059",
+        "title": "Psalm 108:2 Morning Prayer | The Morning Altar",
+        "words": 960,
+        "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningexodus16v21",
-        "scripture": "Exodus 16:21",
+        "short": "short-morningisaiah33v2",
+        "scripture": "Isaiah 33:2",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -414,8 +414,14 @@
         "available": true,
         "as_of": "2026-11-11",
         "measured_longform_videos": 0,
-        "total_longform_videos": 0,
-        "top_themes": []
+        "total_longform_videos": 1,
+        "top_themes": [
+          {
+            "theme": "peace_rest",
+            "videos": 1,
+            "top_scripture": "Psalm 23"
+          }
+        ]
       }
     },
     {
@@ -451,6 +457,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0058",
+      "slug": "psalm-57-8-awake-early-morning-prayer",
+      "file": "0058-psalm-57-8-awake-early-morning-prayer.md",
+      "title": "Psalm 57:8 Awake Early in Praise Morning Prayer | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T10:14:27Z",
+      "youtube_video_id": "Zi4ObOhb97s",
+      "watch_url": "https://youtu.be/Zi4ObOhb97s",
+      "youtu_be_url": "https://youtu.be/Zi4ObOhb97s",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/Zi4ObOhb97s/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Zi4ObOhb97s/hqdefault.jpg",
+      "thumb_text": "AWAKE EARLY IN",
+      "duration_label": "~11 min",
+      "words": 1563
+    },
+    {
+      "id": "SHORT-MORNINGEXODUS16V21",
+      "slug": "short-morningexodus16v21-sunrise-prayer",
+      "file": "short-morningexodus16v21-sunrise-prayer.md",
+      "title": "Say This Exodus 16:21 Prayer at Sunrise | Begin Your Day Here #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T09:33:01Z",
+      "youtube_video_id": "0DTYuoSZV48",
+      "watch_url": "https://www.youtube.com/shorts/0DTYuoSZV48",
+      "youtu_be_url": "https://youtu.be/0DTYuoSZV48",
+      "shorts_url": "https://www.youtube.com/shorts/0DTYuoSZV48",
+      "studio_url": "https://studio.youtube.com/video/0DTYuoSZV48/edit",
+      "thumb_url": "https://i.ytimg.com/vi/0DTYuoSZV48/hqdefault.jpg",
+      "thumb_text": "THE MORNING ALTAR \u00b7 EXODUS 16:21",
+      "duration_label": "66s",
+      "words": 667
+    },
     {
       "id": "0015",
       "slug": "psalm-91-5-6-deliverance-from-terror-by-night",
@@ -2542,19 +2594,6 @@
         "words": 1025
       },
       {
-        "id": "0058",
-        "slug": "psalm-57-8-awake-early-morning-prayer",
-        "file": "0058-psalm-57-8-awake-early-morning-prayer.md",
-        "title": "Psalm 57:8 Awake Early in Praise Morning Prayer | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "quota_paused",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1563
-      },
-      {
         "id": "0059",
         "slug": "psalm-108-2-morning-prayer",
         "file": "0059-psalm-108-2-morning-prayer.md",
@@ -3052,17 +3091,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-morningexodus16v21",
-        "file": "0060-short-morningexodus16v21.yml",
-        "companion_longform_id": "0060",
-        "scripture": "Exodus 16:21",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningisaiah33v2",
