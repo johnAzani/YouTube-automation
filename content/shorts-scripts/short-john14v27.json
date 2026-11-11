@@ -1,0 +1,289 @@
+{
+  "key": "short-john14v27",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "PEACE I LEAVE WITH YOU",
+    "BEDTIME PRAYER"
+  ],
+  "poster": [
+    "BEDTIME PRAYER",
+    "JOHN 14:27",
+    "PEACE FOR YOUR SOUL",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm lake reflection dark night starry sky",
+    "soft glowing candle in dark room peaceful",
+    "misty pine forest calm night moonlight",
+    "gentle ocean waves at twilight dark blue",
+    "cozy dark bedroom warm lamp glowing softly",
+    "peaceful mountain landscape under midnight sky stars"
+  ],
+  "scenes": [
+    {
+      "a": "Close your eyes and take a deep, slow breath.",
+      "img": "short-john14v27-scene-01.jpg",
+      "kicker": "JOHN 14:27",
+      "sub": "FIND REST IN HIS PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Peace I leave with you; my peace I give to you.",
+      "img": "short-john14v27-scene-02.jpg",
+      "kicker": "JOHN 14:27",
+      "sub": "MY PEACE I GIVE TO YOU",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let not your hearts be troubled, neither let them be afraid.",
+      "img": "short-john14v27-scene-03.jpg",
+      "kicker": "JOHN 14:27",
+      "sub": "BE NOT AFRAID",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Tonight, receive His supernatural quietness over your weary soul and racing mind.",
+      "img": "short-john14v27-scene-04.jpg",
+      "kicker": "JOHN 14:27",
+      "sub": "RECEIVE HIS QUIETNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "May His gentle presence envelope your room and guard your heart as you drift into restorative sleep.",
+      "img": "short-john14v27-scene-05.jpg",
+      "kicker": "JOHN 14:27",
+      "sub": "HE GUARDS YOUR HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Secret Place for daily night prayers.",
+      "img": "short-john14v27-scene-06.jpg",
+      "kicker": "JOHN 14:27",
+      "sub": "SLEEP IN HIS LOVE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Close your eyes and take a deep, slow breath. Release every heavy worry from this day into the quiet dark."
+    ],
+    [
+      8,
+      16,
+      "Jesus whispers to you in John fourteen twenty-seven: Peace I leave with you; my peace I give to you."
+    ],
+    [
+      16,
+      24,
+      "Not as the world gives do I give to you. Let not your hearts be troubled, neither let them be afraid."
+    ],
+    [
+      24,
+      33,
+      "Tonight, receive His supernatural quietness over your weary soul and racing mind. Lay down your anxieties at His feet."
+    ],
+    [
+      33,
+      42,
+      "May His gentle presence envelope your room and guard your heart as you drift into restorative sleep."
+    ],
+    [
+      42,
+      50,
+      "Rest deeply in His eternal love tonight. Subscribe to The Secret Place for daily night prayers."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "CLOSE YOUR EYES AND TAKE",
+        "A DEEP SLOW BREATH",
+        "RELEASE EVERY HEAVY WORRY",
+        "INTO THE QUIET DARK"
+      ],
+      [
+        "BREATH",
+        "QUIET",
+        "DARK"
+      ],
+      "JOHN 14 : 27"
+    ],
+    [
+      8,
+      16,
+      [
+        "JESUS WHISPERS TO YOU",
+        "PEACE I LEAVE WITH YOU",
+        "MY PEACE I GIVE TO YOU"
+      ],
+      [
+        "PEACE",
+        "GIVE"
+      ],
+      "JOHN 14 : 27"
+    ],
+    [
+      16,
+      24,
+      [
+        "NOT AS THE WORLD GIVES",
+        "LET NOT YOUR HEARTS BE TROUBLED",
+        "NEITHER LET THEM BE AFRAID"
+      ],
+      [
+        "TROUBLED",
+        "AFRAID"
+      ],
+      "JOHN 14 : 27"
+    ],
+    [
+      24,
+      33,
+      [
+        "RECEIVE HIS QUIETNESS",
+        "OVER YOUR WEARY SOUL",
+        "LAY DOWN YOUR ANXIETIES",
+        "AT HIS FEET"
+      ],
+      [
+        "QUIETNESS",
+        "ANXIETIES"
+      ],
+      "JOHN 14 : 27"
+    ],
+    [
+      33,
+      42,
+      [
+        "MAY HIS GENTLE PRESENCE",
+        "GUARD YOUR HEART",
+        "AS YOU DRIFT INTO",
+        "RESTORATIVE SLEEP"
+      ],
+      [
+        "PRESENCE",
+        "GUARD",
+        "SLEEP"
+      ],
+      "JOHN 14 : 27"
+    ],
+    [
+      42,
+      50,
+      [
+        "REST DEEPLY IN HIS",
+        "ETERNAL LOVE TONIGHT",
+        "SUBSCRIBE TO THE SECRET PLACE",
+        "FOR DAILY NIGHT PRAYERS"
+      ],
+      [
+        "REST",
+        "ETERNAL",
+        "LOVE"
+      ],
+      "JOHN 14 : 27"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Close your eyes and take a deep, slow breath.",
+      "kind": "phrase",
+      "words": [
+        "DEEP",
+        "SLOW",
+        "BREATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Peace I leave with you; my peace I give to you.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "LEAVE",
+        "GIVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let not your hearts be troubled, neither let them be afraid.",
+      "kind": "phrase",
+      "words": [
+        "HEARTS",
+        "TROUBLED",
+        "AFRAID"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Tonight, receive His supernatural quietness over your weary soul and racing mind.",
+      "kind": "phrase",
+      "words": [
+        "SUPERNATURAL",
+        "QUIETNESS",
+        "SOUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May His gentle presence envelope your room and guard your heart as you drift into restorative sleep.",
+      "kind": "phrase",
+      "words": [
+        "PRESENCE",
+        "GUARD",
+        "SLEEP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Secret Place for daily night prayers.",
+      "kind": "phrase",
+      "words": [
+        "SECRET",
+        "PLACE",
+        "PRAYERS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "John 14:27"
+}

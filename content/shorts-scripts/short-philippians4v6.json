@@ -1,0 +1,300 @@
+{
+  "key": "short-philippians4v6",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "A CALM HEART",
+    "BEFORE SLEEP"
+  ],
+  "poster": [
+    "FIND PEACE",
+    "IN THE",
+    "SECRET PLACE",
+    "TONIGHT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "misty mountain lake at dusk",
+    "flickering candle on dark wooden table",
+    "gentle waves on dark shoreline at night",
+    "soft glowing starlight through forest canopy",
+    "slow embers glowing in a fireplace",
+    "night sky with soft moon glow",
+    "flowing stream under moonlight"
+  ],
+  "scenes": [
+    {
+      "a": "Take a deep breath and let go",
+      "img": "short-philippians4v6-scene-01.jpg",
+      "kicker": "PHILIPPIANS 4:6",
+      "sub": "FINDING STILLNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Release the weight of this day",
+      "img": "short-philippians4v6-scene-02.jpg",
+      "kicker": "PHILIPPIANS 4:6",
+      "sub": "RESTING YOUR MIND",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Do not be anxious about anything",
+      "img": "short-philippians4v6-scene-03.jpg",
+      "kicker": "PHILIPPIANS 4:6",
+      "sub": "SURRENDERING ALL",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "in every situation, by prayer",
+      "img": "short-philippians4v6-scene-04.jpg",
+      "kicker": "PHILIPPIANS 4:6",
+      "sub": "YOUR VOICE HEARD",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "present your requests to God",
+      "img": "short-philippians4v6-scene-05.jpg",
+      "kicker": "PHILIPPIANS 4:7",
+      "sub": "TRUSTING THE FATHER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "And the peace of God",
+      "img": "short-philippians4v6-scene-06.jpg",
+      "kicker": "PHILIPPIANS 4:7",
+      "sub": "DIVINE CALM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "which transcends all understanding",
+      "img": "short-philippians4v6-scene-07.jpg",
+      "kicker": "PHILIPPIANS 4:7",
+      "sub": "BEYOND MEASURE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "Take a deep breath and let go. Release the weight of this day, for you are safe here in this quiet space."
+    ],
+    [
+      16,
+      30,
+      "Do not be anxious about anything, but in every situation, by prayer and petition, present your requests to God."
+    ],
+    [
+      31,
+      45,
+      "And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus."
+    ],
+    [
+      46,
+      60,
+      "Lord, silence the noise of the world. Calm the racing thoughts that linger in this weary mind tonight."
+    ],
+    [
+      61,
+      75,
+      "I lay down my worries, trusting that You are sovereign over all my tomorrows and my present burdens."
+    ],
+    [
+      76,
+      90,
+      "May Your peace wrap around me like a blanket. Let my sleep be deep, restorative, and filled with Your presence."
+    ],
+    [
+      91,
+      105,
+      "I rest in the assurance of Your love. Breathe slowly, knowing that You are held by the Creator of all."
+    ],
+    [
+      106,
+      120,
+      "May the stillness of this night remain with you until the morning light. Please subscribe for daily prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "TAKE A DEEP BREATH",
+        "AND LET GO OF",
+        "THE DAY'S WEIGHT"
+      ],
+      [
+        "DEEP BREATH"
+      ],
+      "PHILIPPIANS 4:6"
+    ],
+    [
+      16,
+      30,
+      [
+        "DO NOT BE ANXIOUS",
+        "PRESENT ALL REQUESTS",
+        "TO GOD NOW"
+      ],
+      [
+        "NOT BE ANXIOUS"
+      ],
+      "PHILIPPIANS 4:6"
+    ],
+    [
+      31,
+      45,
+      [
+        "HIS PEACE TRANSCENDS",
+        "ALL UNDERSTANDING",
+        "GUARDING YOUR HEART"
+      ],
+      [
+        "PEACE OF GOD"
+      ],
+      "PHILIPPIANS 4:7"
+    ],
+    [
+      46,
+      60,
+      [
+        "SILENCE THE NOISE",
+        "CALM THE RACING",
+        "THOUGHTS TONIGHT"
+      ],
+      [
+        "CALM THE RACING"
+      ],
+      "PHILIPPIANS 4:7"
+    ],
+    [
+      61,
+      75,
+      [
+        "I LAY DOWN WORRIES",
+        "TRUSTING THE LORD",
+        "IN ALL THINGS"
+      ],
+      [
+        "TRUSTING THE LORD"
+      ],
+      "PHILIPPIANS 4:7"
+    ],
+    [
+      76,
+      90,
+      [
+        "MAY PEACE WRAP",
+        "AROUND MY SOUL",
+        "RESTORING MY REST"
+      ],
+      [
+        "PEACE WRAP"
+      ],
+      "PHILIPPIANS 4:7"
+    ],
+    [
+      91,
+      105,
+      [
+        "REST IN HIS LOVE",
+        "HELD BY THE",
+        "CREATOR OF ALL"
+      ],
+      [
+        "REST IN HIS LOVE"
+      ],
+      "PHILIPPIANS 4:7"
+    ],
+    [
+      106,
+      120,
+      [
+        "STILLNESS REMAINS",
+        "MORNING IS NEAR",
+        "SUBSCRIBE FOR PRAYER"
+      ],
+      [
+        "STILLNESS"
+      ],
+      "PHILIPPIANS 4:7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Take a deep breath and let go",
+      "kind": "phrase",
+      "words": [
+        "DEEP",
+        "BREATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Do not be anxious about anything",
+      "kind": "phrase",
+      "words": [
+        "NOT",
+        "BE",
+        "ANXIOUS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And the peace of God",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "OF",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "which transcends all understanding",
+      "kind": "phrase",
+      "words": [
+        "TRANSCENDS",
+        "ALL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Philippians 4:6-7"
+}
