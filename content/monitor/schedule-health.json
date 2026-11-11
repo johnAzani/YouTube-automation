@@ -49,24 +49,31 @@
       "ran_at": "2026-11-08T21:15:33+00:00",
       "slot": "2026-11-08T19:14:00+00:00",
       "workflow": "community.yml"
+    },
+    {
+      "late_minutes": 121,
+      "name": "Scheduler supervisor",
+      "ran_at": "2026-11-11T11:48:08+00:00",
+      "slot": "2026-11-11T09:47:00+00:00",
+      "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "generated_at": "2026-11-11T12:26:32.342214+00:00",
-  "last_run_at": "2026-11-11T12:25:41+00:00",
+  "generated_at": "2026-11-11T12:31:56.794271+00:00",
+  "last_run_at": "2026-11-11T12:31:50+00:00",
   "on_time": [
+    {
+      "late_minutes": 8,
+      "name": "Automation monitor",
+      "ran_at": "2026-11-11T12:31:10+00:00",
+      "slot": "2026-11-11T12:23:00+00:00",
+      "workflow": "monitor.yml"
+    },
     {
       "late_minutes": 60,
       "name": "Produce video",
       "ran_at": "2026-11-11T07:14:40+00:00",
       "slot": "2026-11-11T06:14:00+00:00",
       "workflow": "produce.yml"
-    },
-    {
-      "late_minutes": 99,
-      "name": "Scheduler supervisor",
-      "ran_at": "2026-11-11T11:26:35+00:00",
-      "slot": "2026-11-11T09:47:00+00:00",
-      "workflow": "scheduler-supervisor.yml"
     }
   ],
   "silence_minutes": 0,
