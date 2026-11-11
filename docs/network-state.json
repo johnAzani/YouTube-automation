@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T17:19:08Z",
+  "generated_at": "2026-11-11T17:21:13Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 88,
-    "published_longform": 39,
-    "published_shorts": 49,
-    "public_total": 86,
-    "queued_longform": 58,
-    "queued_shorts": 43,
+    "published_total": 90,
+    "published_longform": 40,
+    "published_shorts": 50,
+    "public_total": 88,
+    "queued_longform": 57,
+    "queued_shorts": 42,
     "automations_ok": 8,
     "automations_total": 10,
     "network_healthy": false
@@ -346,24 +346,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 0,
-        "published_longform": 0,
-        "published_shorts": 0,
-        "public_total": 0,
-        "queued_longform": 6,
+        "published_total": 2,
+        "published_longform": 1,
+        "published_shorts": 1,
+        "public_total": 2,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
-      "latest_video": null,
-      "next_queued_longform": {
+      "latest_video": {
         "id": "0400",
         "title": "Jeremiah 30:17 Healing Prayer | The Healing Balm",
-        "words": 904,
+        "format": "longform",
+        "youtube_video_id": "7spe8TmewlI",
+        "watch_url": "https://youtu.be/7spe8TmewlI",
+        "published_on": "2026-11-11",
+        "published_at": "2026-11-11T17:20:17Z"
+      },
+      "next_queued_longform": {
+        "id": "0401",
+        "title": "Psalm 103:1-5 Healing Prayer | The Healing Balm",
+        "words": 890,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingjeremiah30v17",
-        "scripture": "Jeremiah 30:17",
+        "short": "short-healingpsalm103v1",
+        "scripture": "Psalm 103:1-5",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -483,6 +491,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0400",
+      "slug": "jeremiah-30-17-healing-prayer",
+      "file": "0400-jeremiah-30-17-healing-prayer.md",
+      "title": "Jeremiah 30:17 Healing Prayer | The Healing Balm",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T17:20:17Z",
+      "youtube_video_id": "7spe8TmewlI",
+      "watch_url": "https://youtu.be/7spe8TmewlI",
+      "youtu_be_url": "https://youtu.be/7spe8TmewlI",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/7spe8TmewlI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/7spe8TmewlI/hqdefault.jpg",
+      "thumb_text": "HEAL ME O LORD",
+      "duration_label": "~6 min",
+      "words": 904
+    },
+    {
+      "id": "SHORT-HEALINGJEREMIAH30V17",
+      "slug": "short-healingjeremiah30v17-restoration-prayer",
+      "file": "short-healingjeremiah30v17-restoration-prayer.md",
+      "title": "Pray This Jeremiah 30:17 Healing Prayer for Peace & Strength | Healing Prayer #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T16:42:18Z",
+      "youtube_video_id": "-acHo0CzsgQ",
+      "watch_url": "https://www.youtube.com/shorts/-acHo0CzsgQ",
+      "youtu_be_url": "https://youtu.be/-acHo0CzsgQ",
+      "shorts_url": "https://www.youtube.com/shorts/-acHo0CzsgQ",
+      "studio_url": "https://studio.youtube.com/video/-acHo0CzsgQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/-acHo0CzsgQ/hqdefault.jpg",
+      "thumb_text": "THE HEALING BALM \u00b7 HEAL ME O LORD",
+      "duration_label": "63s",
+      "words": 222
+    },
     {
       "id": "0300",
       "slug": "joshua-24-15-family-prayer",
@@ -3070,19 +3124,6 @@
         "words": 1721
       },
       {
-        "id": "0400",
-        "slug": "jeremiah-30-17-healing-prayer",
-        "file": "0400-jeremiah-30-17-healing-prayer.md",
-        "title": "Jeremiah 30:17 Healing Prayer | The Healing Balm",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 904
-      },
-      {
         "id": "0401",
         "slug": "psalm-103-1-5-healing-prayer",
         "file": "0401-psalm-103-1-5-healing-prayer.md",
@@ -3573,17 +3614,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-healingjeremiah30v17",
-        "file": "0400-short-healingjeremiah30v17.yml",
-        "companion_longform_id": "400",
-        "scripture": "Jeremiah 30:17",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingpsalm103v1",
