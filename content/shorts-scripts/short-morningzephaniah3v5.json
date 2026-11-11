@@ -1,0 +1,400 @@
+{
+  "key": "short-morningzephaniah3v5",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "THE MORNING",
+    "ALTAR"
+  ],
+  "poster": [
+    "BEGIN",
+    "EVERY",
+    "SUNRISE",
+    "IN PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "serene misty mountain dawn sunrise light",
+    "golden morning sunlight touching pine trees",
+    "peaceful river at dawn with soft morning mist",
+    "calm alpine lake reflecting morning sunrise",
+    "early morning sunlight breaking through forest canopy",
+    "tranquil valley bathed in golden sunrise light",
+    "mist rising off a quiet morning lake",
+    "gentle dawn light over a quiet meadow",
+    "horizon glow at sunrise over quiet hills",
+    "soft morning sunlight warming a tranquil landscape"
+  ],
+  "scenes": [
+    {
+      "a": "Breathe in the quiet peace of this new dawn.",
+      "img": "short-morningzephaniah3v5-scene-01.jpg",
+      "kicker": "ZEPHANIAH 3:5",
+      "sub": "WELCOME THE MORNING LIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lift your heart to the maker of the morning sky.",
+      "img": "short-morningzephaniah3v5-scene-02.jpg",
+      "kicker": "ZEPHANIAH 3:5",
+      "sub": "LIFT YOUR HEART TO GOD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "The Lord is within her, he will not do unrighteousness.",
+      "img": "short-morningzephaniah3v5-scene-03.jpg",
+      "kicker": "ZEPHANIAH 3:5",
+      "sub": "THE LORD IS WITHIN",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Every morning he brings his justice to light.",
+      "img": "short-morningzephaniah3v5-scene-04.jpg",
+      "kicker": "ZEPHANIAH 3:5",
+      "sub": "JUSTICE BROUGHT TO LIGHT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "He does not fail, nor does he know any injustice.",
+      "img": "short-morningzephaniah3v5-scene-05.jpg",
+      "kicker": "ZEPHANIAH 3:5",
+      "sub": "HIS FAITHFULNESS IS SURE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Rest your weary mind in his unfailing steadfast love.",
+      "img": "short-morningzephaniah3v5-scene-06.jpg",
+      "kicker": "ZEPHANIAH 3:5",
+      "sub": "REST IN HIS STEADFAST LOVE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Let his unchanging goodness steady your anxious thoughts today.",
+      "img": "short-morningzephaniah3v5-scene-07.jpg",
+      "kicker": "ZEPHANIAH 3:5",
+      "sub": "STEADY YOUR ANXIOUS THOUGHTS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Walk forward into this day wrapped in quiet grace.",
+      "img": "short-morningzephaniah3v5-scene-08.jpg",
+      "kicker": "ZEPHANIAH 3:5",
+      "sub": "WALK FORWARD IN GRACE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "May his enduring presence go before you every step.",
+      "img": "short-morningzephaniah3v5-scene-09.jpg",
+      "kicker": "ZEPHANIAH 3:5",
+      "sub": "HIS PRESENCE GOES BEFORE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to The Morning Altar for daily sunrise prayer.",
+      "img": "short-morningzephaniah3v5-scene-10.jpg",
+      "kicker": "ZEPHANIAH 3:5",
+      "sub": "SUBSCRIBE FOR DAILY PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "Breathe in the quiet peace of this new dawn."
+    ],
+    [
+      10,
+      20,
+      "Lift your heart to the maker of the morning sky."
+    ],
+    [
+      20,
+      30,
+      "The Lord is within her, he will not do unrighteousness."
+    ],
+    [
+      30,
+      40,
+      "Every morning he brings his justice to light."
+    ],
+    [
+      40,
+      50,
+      "He does not fail, nor does he know any injustice."
+    ],
+    [
+      50,
+      60,
+      "Rest your weary mind in his unfailing steadfast love."
+    ],
+    [
+      60,
+      70,
+      "Let his unchanging goodness steady your anxious thoughts today."
+    ],
+    [
+      70,
+      80,
+      "Walk forward into this day wrapped in quiet grace."
+    ],
+    [
+      80,
+      90,
+      "May his enduring presence go before you every step."
+    ],
+    [
+      90,
+      100,
+      "Subscribe to The Morning Altar for daily sunrise prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "BREATHE IN THE QUIET",
+        "PEACE OF THIS",
+        "NEW DAWN"
+      ],
+      "PEACE",
+      "ZEPHANIAH 3 : 5"
+    ],
+    [
+      10,
+      20,
+      [
+        "LIFT YOUR HEART",
+        "TO THE MAKER",
+        "OF THE MORNING"
+      ],
+      "HEART",
+      "ZEPHANIAH 3 : 5"
+    ],
+    [
+      20,
+      30,
+      [
+        "THE LORD IS WITHIN HER",
+        "HE WILL NOT",
+        "DO UNRIGHTEOUSNESS"
+      ],
+      "LORD",
+      "ZEPHANIAH 3 : 5"
+    ],
+    [
+      30,
+      40,
+      [
+        "EVERY MORNING HE",
+        "BRINGS HIS JUSTICE",
+        "TO LIGHT"
+      ],
+      "JUSTICE",
+      "ZEPHANIAH 3 : 5"
+    ],
+    [
+      40,
+      50,
+      [
+        "HE DOES NOT FAIL",
+        "NOR DOES HE",
+        "KNOW INJUSTICE"
+      ],
+      "FAIL",
+      "ZEPHANIAH 3 : 5"
+    ],
+    [
+      50,
+      60,
+      [
+        "REST YOUR WEARY MIND",
+        "IN HIS UNFAILING",
+        "STEADFAST LOVE"
+      ],
+      "REST",
+      "ZEPHANIAH 3 : 5"
+    ],
+    [
+      60,
+      70,
+      [
+        "LET HIS UNCHANGING GOODNESS",
+        "STEADY YOUR ANXIOUS",
+        "THOUGHTS TODAY"
+      ],
+      "GOODNESS",
+      "ZEPHANIAH 3 : 5"
+    ],
+    [
+      70,
+      80,
+      [
+        "WALK FORWARD INTO",
+        "THIS DAY WRAPPED",
+        "IN QUIET GRACE"
+      ],
+      "GRACE",
+      "ZEPHANIAH 3 : 5"
+    ],
+    [
+      80,
+      90,
+      [
+        "MAY HIS ENDURING PRESENCE",
+        "GO BEFORE YOU",
+        "EVERY STEP"
+      ],
+      "PRESENCE",
+      "ZEPHANIAH 3 : 5"
+    ],
+    [
+      90,
+      100,
+      [
+        "SUBSCRIBE TO THE",
+        "MORNING ALTAR FOR",
+        "DAILY SUNRISE PRAYER"
+      ],
+      "SUBSCRIBE",
+      "ZEPHANIAH 3 : 5"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Breathe in the quiet peace of this new dawn.",
+      "kind": "phrase",
+      "words": [
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lift your heart to the maker of the morning sky.",
+      "kind": "phrase",
+      "words": [
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord is within her, he will not do unrighteousness.",
+      "kind": "phrase",
+      "words": [
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Every morning he brings his justice to light.",
+      "kind": "phrase",
+      "words": [
+        "JUSTICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He does not fail, nor does he know any injustice.",
+      "kind": "phrase",
+      "words": [
+        "FAIL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Rest your weary mind in his unfailing steadfast love.",
+      "kind": "phrase",
+      "words": [
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let his unchanging goodness steady your anxious thoughts today.",
+      "kind": "phrase",
+      "words": [
+        "GOODNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Walk forward into this day wrapped in quiet grace.",
+      "kind": "phrase",
+      "words": [
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May his enduring presence go before you every step.",
+      "kind": "phrase",
+      "words": [
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Morning Altar for daily sunrise prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Zephaniah 3:5"
+}
