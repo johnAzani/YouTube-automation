@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T21:05:21Z",
+  "generated_at": "2026-11-11T21:57:57Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 97,
-    "published_longform": 43,
-    "published_shorts": 54,
-    "public_total": 95,
-    "queued_longform": 54,
-    "queued_shorts": 39,
+    "published_total": 99,
+    "published_longform": 44,
+    "published_shorts": 55,
+    "public_total": 97,
+    "queued_longform": 53,
+    "queued_shorts": 38,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -32,32 +32,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 27,
-        "published_longform": 9,
-        "published_shorts": 18,
-        "public_total": 26,
-        "queued_longform": 18,
+        "published_total": 29,
+        "published_longform": 10,
+        "published_shorts": 19,
+        "public_total": 28,
+        "queued_longform": 17,
         "queued_other": 5,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0016",
-        "title": "Psalm 91:11-12 Night Prayer | Angels Guard Your Home & Sleep",
-        "format": "longform",
-        "youtube_video_id": "dgvGl0EZyYE",
-        "watch_url": "https://youtu.be/dgvGl0EZyYE",
-        "published_on": "2026-11-11",
-        "published_at": "2026-11-11T18:11:38Z"
-      },
-      "next_queued_longform": {
         "id": "0017",
         "title": "Psalm 4:8 Bedtime Prayer | In Peace I Will Lie Down & Sleep",
-        "words": 888,
+        "format": "longform",
+        "youtube_video_id": "fiPJAX_pNgs",
+        "watch_url": "https://youtu.be/fiPJAX_pNgs",
+        "published_on": "2026-11-11",
+        "published_at": "2026-11-11T21:57:13Z"
+      },
+      "next_queued_longform": {
+        "id": "0019",
+        "title": "Psalm 16:7-8 Night Prayer | God's Quiet Counsel Before Sleep",
+        "words": 958,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-isaiah41v10",
-        "scripture": "Isaiah 41:10",
+        "short": "short-matthew11v28",
+        "scripture": "Matthew 11:28-30",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -491,6 +491,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0017",
+      "slug": "psalm-4-8-in-peace-i-will-lie-down-and-sleep",
+      "file": "0017-psalm-4-8-in-peace-i-will-lie-down-and-sleep.md",
+      "title": "Psalm 4:8 Bedtime Prayer | In Peace I Will Lie Down & Sleep",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T21:57:13Z",
+      "youtube_video_id": "fiPJAX_pNgs",
+      "watch_url": "https://youtu.be/fiPJAX_pNgs",
+      "youtu_be_url": "https://youtu.be/fiPJAX_pNgs",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/fiPJAX_pNgs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/fiPJAX_pNgs/hqdefault.jpg",
+      "thumb_text": "LAY DOWN IN PEACE",
+      "duration_label": "~6 min",
+      "words": 888
+    },
+    {
+      "id": "SHORT-ISAIAH41V10",
+      "slug": "short-isaiah41v10-pre-sleep-prayer",
+      "file": "short-isaiah41v10-pre-sleep-prayer.md",
+      "title": "Say This Isaiah 41:10 Prayer Before You Sleep | The Secret Place #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T21:33:48Z",
+      "youtube_video_id": "nZO6mwej0Is",
+      "watch_url": "https://www.youtube.com/shorts/nZO6mwej0Is",
+      "youtu_be_url": "https://youtu.be/nZO6mwej0Is",
+      "shorts_url": "https://www.youtube.com/shorts/nZO6mwej0Is",
+      "studio_url": "https://studio.youtube.com/video/nZO6mwej0Is/edit",
+      "thumb_url": "https://i.ytimg.com/vi/nZO6mwej0Is/hqdefault.jpg",
+      "thumb_text": "",
+      "duration_label": "61s",
+      "words": 663
+    },
     {
       "id": "0084",
       "slug": "acts-10-9-midday-prayer",
@@ -2726,19 +2772,6 @@
   "queues": {
     "longform": [
       {
-        "id": "0017",
-        "slug": "psalm-4-8-in-peace-i-will-lie-down-and-sleep",
-        "file": "0017-psalm-4-8-in-peace-i-will-lie-down-and-sleep.md",
-        "title": "Psalm 4:8 Bedtime Prayer | In Peace I Will Lie Down & Sleep",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 888
-      },
-      {
         "id": "0019",
         "slug": "psalm-16-7-8-counsel-in-the-night-seasons",
         "file": "0019-psalm-16-7-8-counsel-in-the-night-seasons.md",
@@ -3429,17 +3462,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-isaiah41v10",
-        "file": "0027-short-isaiah41v10.yml",
-        "companion_longform_id": "0027",
-        "scripture": "Isaiah 41:10",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
       {
         "short": "short-matthew11v28",
         "file": "0028-short-matthew11v28.yml",

@@ -2,7 +2,7 @@
 id: '0017'
 title: Psalm 4:8 Bedtime Prayer | In Peace I Will Lie Down & Sleep
 slug: psalm-4-8-in-peace-i-will-lie-down-and-sleep
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -85,6 +85,12 @@ originality:
   ai_disclosure: false
 seo_hook: Pray this Psalm 4:8 KJV bedtime prayer to lie down in peace and sleep deeply beneath the Lord's watchful safety tonight.
 category_id: '22'
+published_on: "2026-11-11"
+published_at: "2026-11-11T21:57:13Z"
+youtube_video_id: "fiPJAX_pNgs"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — I Will Both Lay Me Down in Peace (Verse 8a)
