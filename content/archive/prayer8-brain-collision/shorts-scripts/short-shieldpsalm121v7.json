@@ -1,0 +1,281 @@
+{
+  "key": "short-shieldpsalm121v7",
+  "channel": "prayer8",
+  "psalm": 121,
+  "title": [
+    "UNDER GOD'S SHADOW",
+    "PSALM 121:7-8 PRAYER"
+  ],
+  "poster": [
+    "THE COVENANT SHIELD",
+    "DIVINE PROTECTION",
+    "PSALM 121:7-8",
+    "DAILY COVERING PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "golden light rays through dramatic mountain clouds",
+    "sunlit mountain pass peaceful pathway",
+    "ancient stone watchtower golden sunset light",
+    "peaceful forest river sunbeams mist",
+    "calm mountain lake sunset sky reflections",
+    "majestic mountain peak bathed in divine sunlight"
+  ],
+  "scenes": [
+    {
+      "a": "Place every step, every journey, and every unseen concern under the shadow of the Almighty today.",
+      "img": "short-shieldpsalm121v7-scene-01.jpg",
+      "kicker": "PSALM 121:7-8",
+      "sub": "DIVINE PROTECTION FOR YOUR STEPS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "When uncertainty surrounds your path, rest in His holy promise.",
+      "img": "short-shieldpsalm121v7-scene-02.jpg",
+      "kicker": "PSALM 121:7-8",
+      "sub": "REST IN HIS PROMISE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Scripture declares in Psalm 121:7-8: \"The Lord shall preserve thee from all evil: he shall preserve thy soul. The Lord shall preserve thy going out and thy coming in from this time forth, and even for evermore.\"",
+      "img": "short-shieldpsalm121v7-scene-03.jpg",
+      "kicker": "PSALM 121:7-8",
+      "sub": "GOD SHALL PRESERVE THY SOUL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Father, shield this believer from all hidden snares and cover every path they walk today.",
+      "img": "short-shieldpsalm121v7-scene-04.jpg",
+      "kicker": "DIVINE SHIELD",
+      "sub": "PROTECTION FROM ALL SNARES",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Guard their mind in perfect peace, protect their home, and surround them with holy angels continuously.",
+      "img": "short-shieldpsalm121v7-scene-05.jpg",
+      "kicker": "PERFECT PEACE",
+      "sub": "ANGELIC COVERING DAY AND NIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Walk securely beneath His eternal canopy, knowing His loving protection over you never slumbers or sleeps. Subscribe to The Covenant Shield to walk under God's covering.",
+      "img": "short-shieldpsalm121v7-scene-06.jpg",
+      "kicker": "ETERNAL CANOPY",
+      "sub": "WALK UNDER HIS COVERING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      9,
+      "Place every step, every journey, and every unseen concern under the shadow of the Almighty today."
+    ],
+    [
+      9,
+      15,
+      "When uncertainty surrounds your path, rest in His holy promise."
+    ],
+    [
+      15,
+      33,
+      "Scripture declares in Psalm 121:7-8: \"The Lord shall preserve thee from all evil: he shall preserve thy soul. The Lord shall preserve thy going out and thy coming in from this time forth, and even for evermore.\""
+    ],
+    [
+      33,
+      43,
+      "Father, shield this believer from all hidden snares and cover every path they walk today."
+    ],
+    [
+      43,
+      53,
+      "Guard their mind in perfect peace, protect their home, and surround them with holy angels continuously."
+    ],
+    [
+      53,
+      65,
+      "Walk securely beneath His eternal canopy, knowing His loving protection over you never slumbers or sleeps. Subscribe to The Covenant Shield to walk under God's covering."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      9,
+      [
+        "PLACE EVERY STEP",
+        "UNDER THE SHADOW",
+        "OF THE ALMIGHTY"
+      ],
+      [
+        "SHADOW",
+        "ALMIGHTY"
+      ],
+      "PSALM 121:7-8"
+    ],
+    [
+      9,
+      15,
+      [
+        "REST IN HIS",
+        "HOLY PROMISE"
+      ],
+      [
+        "HOLY",
+        "PROMISE"
+      ],
+      "PSALM 121:7-8"
+    ],
+    [
+      15,
+      33,
+      [
+        "THE LORD SHALL",
+        "PRESERVE THEE FROM",
+        "ALL EVIL FOR EVERMORE"
+      ],
+      [
+        "PRESERVE",
+        "EVIL"
+      ],
+      "PSALM 121:7-8"
+    ],
+    [
+      33,
+      43,
+      [
+        "FATHER SHIELD THIS",
+        "BELIEVER FROM SNARES"
+      ],
+      [
+        "SHIELD",
+        "SNARES"
+      ],
+      "DIVINE PROTECTION"
+    ],
+    [
+      43,
+      53,
+      [
+        "GUARD THEIR MIND",
+        "IN PERFECT PEACE"
+      ],
+      [
+        "PERFECT",
+        "PEACE"
+      ],
+      "PERFECT PEACE"
+    ],
+    [
+      53,
+      65,
+      [
+        "WALK SECURELY UNDER",
+        "HIS ETERNAL CANOPY"
+      ],
+      [
+        "ETERNAL",
+        "CANOPY"
+      ],
+      "COVENANT SHIELD"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "under the shadow of the Almighty today.",
+      "kind": "phrase",
+      "words": [
+        "SHADOW",
+        "ALMIGHTY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "rest in His holy promise.",
+      "kind": "phrase",
+      "words": [
+        "HOLY",
+        "PROMISE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord shall preserve thee from all evil:",
+      "kind": "phrase",
+      "words": [
+        "PRESERVE",
+        "EVIL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "he shall preserve thy soul.",
+      "kind": "phrase",
+      "words": [
+        "PRESERVE",
+        "SOUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, shield this believer",
+      "kind": "phrase",
+      "words": [
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guard their mind in perfect peace,",
+      "kind": "phrase",
+      "words": [
+        "PERFECT",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Walk securely beneath His eternal canopy,",
+      "kind": "phrase",
+      "words": [
+        "ETERNAL",
+        "CANOPY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 121:7-8"
+}

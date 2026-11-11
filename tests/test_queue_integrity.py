@@ -29,6 +29,15 @@ def _script_files(directory: Path) -> list[Path]:
 
 
 class QueueIntegrityTests(unittest.TestCase):
+    def test_queue_job_ids_are_unique_even_when_slugs_differ(self):
+        seen: dict[str, Path] = {}
+        for path in _script_files(QUEUE_DIR):
+            if len(path.name) < 5 or not path.name[:4].isdigit() or path.name[4] != "-":
+                continue
+            job_id = path.name[:4]
+            self.assertNotIn(job_id, seen, f"duplicate job ID {job_id}: {seen.get(job_id)} and {path}")
+            seen[job_id] = path
+
     def test_every_queued_job_is_in_niche(self):
         """Nothing in the scheduler's glob may be refused by the niche gate at run time."""
         queued = _script_files(QUEUE_DIR)

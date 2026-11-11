@@ -1,0 +1,283 @@
+{
+  "key": "short-shieldproverbs18v10",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "THE LORD IS A STRONG TOWER",
+    "DIVINE PROTECTION PRAYER"
+  ],
+  "poster": [
+    "PROVERBS 18:10 PRAYER",
+    "SAFE KEEPING & REFUGE",
+    "WALK UNDER GOD'S SHIELD",
+    "THE COVENANT SHIELD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "sunlit mountain pass golden fog morning misty valley wide shot cinematic landscape",
+    "ancient stone watchtower on cliff mist golden sunrise cinematic landscape",
+    "dramatic golden light rays breaking through clouds over ancient mountain peak",
+    "calm pine forest river golden morning sunrise divine light mist wide cinematic",
+    "dramatic sunset rays glowing behind mountain fortress peak landscape scenic",
+    "peaceful mountain lake reflections golden sunset light divine peaceful scene"
+  ],
+  "scenes": [
+    {
+      "a": "shadow of the Almighty God",
+      "img": "short-shieldproverbs18v10-scene-01.jpg",
+      "kicker": "PROVERBS 18:10",
+      "sub": "DIVINE SHELTER FOR YOUR PATH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "rest peacefully in His quiet sweet peace",
+      "img": "short-shieldproverbs18v10-scene-02.jpg",
+      "kicker": "PROVERBS 18:10",
+      "sub": "QUIET PEACE IN UNCERTAIN WINDS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "the name of the Lord is a strong tower",
+      "img": "short-shieldproverbs18v10-scene-03.jpg",
+      "kicker": "PROVERBS 18:10",
+      "sub": "A STRONG TOWER OF SAFE REFUGE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.35
+      ]
+    },
+    {
+      "a": "surround this precious soul with your divine heavenly shield today",
+      "img": "short-shieldproverbs18v10-scene-04.jpg",
+      "kicker": "PROVERBS 18:10",
+      "sub": "HEAVENLY COVERING AND PROTECTION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "anchor their heart forever in your eternal fortress today",
+      "img": "short-shieldproverbs18v10-scene-05.jpg",
+      "kicker": "PROVERBS 18:10",
+      "sub": "ANCHORED IN GOD'S FORTRESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to The Covenant Shield to walk under God's daily divine covering",
+      "img": "short-shieldproverbs18v10-scene-06.jpg",
+      "kicker": "PROVERBS 18:10",
+      "sub": "WALK DAILY UNDER HIS SHIELD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "Place every single step, journey, and unseen concern beneath the shadow of the Almighty God."
+    ],
+    [
+      7,
+      15,
+      "When deep shadows stretch long across your path and uncertain winds blow, rest peacefully in His quiet sweet peace."
+    ],
+    [
+      15,
+      25,
+      "Scripture declares in Proverbs eighteen ten, the name of the Lord is a strong tower, the righteous runneth into it and is safe."
+    ],
+    [
+      25,
+      33,
+      "Heavenly Father, surround this precious soul with your divine heavenly shield today. Guard their coming and their going, protecting their mind, home, and loved ones from all hidden harm."
+    ],
+    [
+      33,
+      40,
+      "Cover them completely with your holy grace, grant them restful courage, and anchor their heart forever in your eternal fortress today. Amen."
+    ],
+    [
+      40,
+      45,
+      "Subscribe to The Covenant Shield to walk under God's daily divine covering."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "PLACE EVERY STEP AND JOURNEY",
+        "BENEATH THE SHADOW",
+        "OF THE ALMIGHTY GOD"
+      ],
+      [
+        "SHADOW",
+        "ALMIGHTY"
+      ],
+      "PROVERBS 18:10"
+    ],
+    [
+      7,
+      15,
+      [
+        "WHEN UNCERTAIN WINDS BLOW",
+        "REST PEACEFULLY IN HIS",
+        "QUIET SWEET PEACE"
+      ],
+      [
+        "PEACEFULLY",
+        "SWEET",
+        "PEACE"
+      ],
+      "PROVERBS 18:10"
+    ],
+    [
+      15,
+      25,
+      [
+        "THE NAME OF THE LORD",
+        "IS A STRONG TOWER",
+        "THE RIGHTEOUS RUNNETH IN",
+        "AND IS SAFE"
+      ],
+      [
+        "STRONG",
+        "TOWER",
+        "SAFE"
+      ],
+      "PROVERBS 18:10"
+    ],
+    [
+      25,
+      33,
+      [
+        "SURROUND THIS SOUL WITH YOUR",
+        "DIVINE HEAVENLY SHIELD",
+        "PROTECTING THEIR HOME AND MIND",
+        "FROM HIDDEN HARM"
+      ],
+      [
+        "HEAVENLY",
+        "SHIELD",
+        "PROTECTING"
+      ],
+      "PROVERBS 18:10"
+    ],
+    [
+      33,
+      40,
+      [
+        "GRANT THEM RESTFUL COURAGE",
+        "ANCHOR THEIR HEART FOREVER",
+        "IN YOUR ETERNAL FORTRESS"
+      ],
+      [
+        "RESTFUL",
+        "COURAGE",
+        "FORTRESS"
+      ],
+      "PROVERBS 18:10"
+    ],
+    [
+      40,
+      45,
+      [
+        "WALK UNDER GODS DAILY",
+        "DIVINE COVERING",
+        "SUBSCRIBE TO THE COVENANT SHIELD"
+      ],
+      [
+        "SUBSCRIBE",
+        "COVENANT",
+        "SHIELD"
+      ],
+      "PROVERBS 18:10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "shadow of the Almighty God",
+      "kind": "phrase",
+      "words": [
+        "SHADOW",
+        "ALMIGHTY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "rest peacefully in His quiet sweet peace",
+      "kind": "phrase",
+      "words": [
+        "PEACEFULLY",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "the name of the Lord is a strong tower",
+      "kind": "phrase",
+      "words": [
+        "STRONG",
+        "TOWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "surround this precious soul with your divine heavenly shield today",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "anchor their heart forever in your eternal fortress today",
+      "kind": "phrase",
+      "words": [
+        "ETERNAL",
+        "FORTRESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Covenant Shield to walk under God's daily divine covering",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "COVERING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 18:10"
+}
