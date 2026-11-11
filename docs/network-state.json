@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T15:34:37Z",
+  "generated_at": "2026-11-11T16:27:10Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 87,
-    "published_longform": 38,
+    "published_total": 88,
+    "published_longform": 39,
     "published_shorts": 49,
-    "public_total": 85,
-    "queued_longform": 59,
-    "queued_shorts": 44,
+    "public_total": 86,
+    "queued_longform": 58,
+    "queued_shorts": 43,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": false
@@ -295,24 +295,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 0,
-        "published_longform": 0,
+        "published_total": 1,
+        "published_longform": 1,
         "published_shorts": 0,
-        "public_total": 0,
-        "queued_longform": 6,
+        "public_total": 1,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
-      "latest_video": null,
-      "next_queued_longform": {
+      "latest_video": {
         "id": "0300",
         "title": "Joshua 24:15 Family Prayer | The Family Altar",
-        "words": 942,
+        "format": "longform",
+        "youtube_video_id": "NjhW7YUzhis",
+        "watch_url": "https://youtu.be/NjhW7YUzhis",
+        "published_on": "2026-11-11",
+        "published_at": "2026-11-11T16:26:15Z"
+      },
+      "next_queued_longform": {
+        "id": "0301",
+        "title": "Psalm 128:1-4 Family Prayer | The Family Altar",
+        "words": 909,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familyjoshua24v15",
-        "scripture": "Joshua 24:15",
+        "short": "short-familypsalm128v1",
+        "scripture": "Psalm 128:1-4",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -475,6 +483,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "0300",
+      "slug": "joshua-24-15-family-prayer",
+      "file": "0300-joshua-24-15-family-prayer.md",
+      "title": "Joshua 24:15 Family Prayer | The Family Altar",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T16:26:15Z",
+      "youtube_video_id": "NjhW7YUzhis",
+      "watch_url": "https://youtu.be/NjhW7YUzhis",
+      "youtu_be_url": "https://youtu.be/NjhW7YUzhis",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/NjhW7YUzhis/edit",
+      "thumb_url": "https://i.ytimg.com/vi/NjhW7YUzhis/hqdefault.jpg",
+      "thumb_text": "BLESS THIS HOME",
+      "duration_label": "~6 min",
+      "words": 942
+    },
     {
       "id": "0600",
       "slug": "psalm-121-7-8-protection-prayer",
@@ -2974,19 +3005,6 @@
         "words": 1176
       },
       {
-        "id": "0300",
-        "slug": "joshua-24-15-family-prayer",
-        "file": "0300-joshua-24-15-family-prayer.md",
-        "title": "Joshua 24:15 Family Prayer | The Family Altar",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 942
-      },
-      {
         "id": "0301",
         "slug": "psalm-128-1-4-family-prayer",
         "file": "0301-psalm-128-1-4-family-prayer.md",
@@ -3500,17 +3518,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-familyjoshua24v15",
-        "file": "0300-short-familyjoshua24v15.yml",
-        "companion_longform_id": "300",
-        "scripture": "Joshua 24:15",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
       },
       {
         "short": "short-familypsalm128v1",
