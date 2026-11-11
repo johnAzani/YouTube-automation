@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T22:46:11Z",
+  "generated_at": "2026-11-11T22:52:11Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 99,
-    "published_longform": 44,
-    "published_shorts": 55,
-    "public_total": 97,
-    "queued_longform": 53,
-    "queued_shorts": 38,
+    "published_total": 101,
+    "published_longform": 45,
+    "published_shorts": 56,
+    "public_total": 99,
+    "queued_longform": 52,
+    "queued_shorts": 37,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -99,32 +99,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 34,
-        "published_longform": 16,
-        "published_shorts": 18,
-        "public_total": 33,
-        "queued_longform": 5,
+        "published_total": 36,
+        "published_longform": 17,
+        "published_shorts": 19,
+        "public_total": 35,
+        "queued_longform": 4,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 2
       },
       "latest_video": {
-        "id": "0059",
-        "title": "Psalm 108:2 Morning Prayer | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "wXUTRMZFbf8",
-        "watch_url": "https://youtu.be/wXUTRMZFbf8",
-        "published_on": "2026-11-11",
-        "published_at": "2026-11-11T18:58:47Z"
-      },
-      "next_queued_longform": {
         "id": "0060",
         "title": "Exodus 16:21 Morning Prayer | The Morning Altar",
-        "words": 1813,
+        "format": "longform",
+        "youtube_video_id": "P2qBcDT966E",
+        "watch_url": "https://youtu.be/P2qBcDT966E",
+        "published_on": "2026-11-11",
+        "published_at": "2026-11-11T22:51:11Z"
+      },
+      "next_queued_longform": {
+        "id": "0061",
+        "title": "Isaiah 33:2 Morning Prayer | The Morning Altar",
+        "words": 1534,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morning2samuel23v4",
-        "scripture": "2 Samuel 23:4",
+        "short": "short-morninghosea6v3",
+        "scripture": "Hosea 6:3",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -491,6 +491,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0060",
+      "slug": "exodus-16-21-morning-prayer",
+      "file": "0060-exodus-16-21-morning-prayer.md",
+      "title": "Exodus 16:21 Morning Prayer | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T22:51:11Z",
+      "youtube_video_id": "P2qBcDT966E",
+      "watch_url": "https://youtu.be/P2qBcDT966E",
+      "youtu_be_url": "https://youtu.be/P2qBcDT966E",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/P2qBcDT966E/edit",
+      "thumb_url": "https://i.ytimg.com/vi/P2qBcDT966E/hqdefault.jpg",
+      "thumb_text": "FRESH MANNA TODAY",
+      "duration_label": "~13 min",
+      "words": 1813
+    },
+    {
+      "id": "SHORT-MORNING2SAMUEL23V4",
+      "slug": "short-morning2samuel23v4-sunrise-prayer",
+      "file": "short-morning2samuel23v4-sunrise-prayer.md",
+      "title": "Say This 2 Samuel 23:4 Prayer at Sunrise | Light Of Dawn #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T22:05:13Z",
+      "youtube_video_id": "wIviB5L0UN4",
+      "watch_url": "https://www.youtube.com/shorts/wIviB5L0UN4",
+      "youtu_be_url": "https://youtu.be/wIviB5L0UN4",
+      "shorts_url": "https://www.youtube.com/shorts/wIviB5L0UN4",
+      "studio_url": "https://studio.youtube.com/video/wIviB5L0UN4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/wIviB5L0UN4/hqdefault.jpg",
+      "thumb_text": "THE MORNING ALTAR \u00b7 BEGIN IN PRAYER",
+      "duration_label": "60s",
+      "words": 641
+    },
     {
       "id": "0017",
       "slug": "psalm-4-8-in-peace-i-will-lie-down-and-sleep",
@@ -2993,19 +3039,6 @@
         "words": 1025
       },
       {
-        "id": "0060",
-        "slug": "exodus-16-21-morning-prayer",
-        "file": "0060-exodus-16-21-morning-prayer.md",
-        "title": "Exodus 16:21 Morning Prayer | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1813
-      },
-      {
         "id": "0061",
         "slug": "isaiah-33-2-morning-prayer",
         "file": "0061-isaiah-33-2-morning-prayer.md",
@@ -3505,17 +3538,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-morning2samuel23v4",
-        "file": "0062-short-morning2samuel23v4.yml",
-        "companion_longform_id": "0062",
-        "scripture": "2 Samuel 23:4",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morninghosea6v3",
