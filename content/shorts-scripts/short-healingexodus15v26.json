@@ -1,0 +1,344 @@
+{
+  "key": "short-healingexodus15v26",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "DIVINE RESTORATION",
+    "A PRAYER FOR PEACE"
+  ],
+  "poster": [
+    "THE HEALING BALM",
+    "GOD IS YOUR HEALER",
+    "EXODUS 15:26",
+    "A RESTORATIVE PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters",
+    "warm golden sanctuary light",
+    "gentle white dove flying",
+    "soft morning sunlight through window",
+    "calm river flowing over smooth stones",
+    "ethereal clouds at sunset",
+    "peaceful field of tall wheat",
+    "abstract light particles moving slowly"
+  ],
+  "scenes": [
+    {
+      "a": "Bring every weary burden",
+      "img": "short-healingexodus15v26-scene-01.jpg",
+      "kicker": "EXODUS 15:26",
+      "sub": "COME AS YOU ARE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "and place your healing need",
+      "img": "short-healingexodus15v26-scene-02.jpg",
+      "kicker": "EXODUS 15:26",
+      "sub": "LAY DOWN YOUR CARES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Exodus 15:26 says",
+      "img": "short-healingexodus15v26-scene-03.jpg",
+      "kicker": "EXODUS 15:26",
+      "sub": "THE WORD OF GOD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "for I am the Lord",
+      "img": "short-healingexodus15v26-scene-04.jpg",
+      "kicker": "EXODUS 15:26",
+      "sub": "THE LORD WHO HEALS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "who heals you today",
+      "img": "short-healingexodus15v26-scene-05.jpg",
+      "kicker": "EXODUS 15:26",
+      "sub": "RECEIVE HIS PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "breathe in His restoration",
+      "img": "short-healingexodus15v26-scene-06.jpg",
+      "kicker": "EXODUS 15:26",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "in Jesus name Amen",
+      "img": "short-healingexodus15v26-scene-07.jpg",
+      "kicker": "EXODUS 15:26",
+      "sub": "HIS GRACE REMAINS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "subscribe to The Healing Balm",
+      "img": "short-healingexodus15v26-scene-08.jpg",
+      "kicker": "EXODUS 15:26",
+      "sub": "JOIN OUR PRAYER SPACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "Bring every weary burden and place your healing need before the Lord."
+    ],
+    [
+      7,
+      13,
+      "Exodus 15:26 says, for I am the Lord who heals you today."
+    ],
+    [
+      14,
+      21,
+      "Let His light shine upon your heart and wash away all the pain."
+    ],
+    [
+      22,
+      28,
+      "Breathe in His restoration and feel the gentle touch of His grace."
+    ],
+    [
+      29,
+      36,
+      "He is with you in every silence and speaks peace to your soul."
+    ],
+    [
+      37,
+      43,
+      "May you find comfort in His promise and strength in His presence."
+    ],
+    [
+      44,
+      50,
+      "Trust in His perfect plan for you in Jesus name Amen."
+    ],
+    [
+      51,
+      60,
+      "Subscribe to The Healing Balm for more prayers."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "BRING EVERY WEARY",
+        "BURDEN AND PLACE",
+        "YOUR HEALING NEED",
+        "BEFORE THE LORD"
+      ],
+      [
+        "HEALING NEED"
+      ],
+      "EXODUS 15:26"
+    ],
+    [
+      7,
+      13,
+      [
+        "EXODUS 15:26 SAYS",
+        "FOR I AM THE",
+        "LORD WHO HEALS",
+        "YOU TODAY"
+      ],
+      [
+        "LORD WHO HEALS"
+      ],
+      "EXODUS 15:26"
+    ],
+    [
+      14,
+      21,
+      [
+        "LET HIS LIGHT",
+        "SHINE UPON YOUR",
+        "HEART AND WASH",
+        "AWAY THE PAIN"
+      ],
+      [
+        "HIS LIGHT"
+      ],
+      "EXODUS 15:26"
+    ],
+    [
+      22,
+      28,
+      [
+        "BREATHE IN HIS",
+        "RESTORATION AND FEEL",
+        "THE GENTLE TOUCH",
+        "OF HIS GRACE"
+      ],
+      [
+        "RESTORATION"
+      ],
+      "EXODUS 15:26"
+    ],
+    [
+      29,
+      36,
+      [
+        "HE IS WITH YOU",
+        "IN EVERY SILENCE",
+        "SPEAKING PEACE TO",
+        "YOUR SOUL"
+      ],
+      [
+        "SPEAKING PEACE"
+      ],
+      "EXODUS 15:26"
+    ],
+    [
+      37,
+      43,
+      [
+        "FIND COMFORT IN",
+        "HIS PROMISE AND",
+        "STRENGTH IN HIS",
+        "PRESENCE NOW"
+      ],
+      [
+        "STRENGTH"
+      ],
+      "EXODUS 15:26"
+    ],
+    [
+      44,
+      50,
+      [
+        "TRUST IN HIS",
+        "PERFECT PLAN FOR",
+        "YOU IN JESUS",
+        "NAME AMEN"
+      ],
+      [
+        "PERFECT PLAN"
+      ],
+      "EXODUS 15:26"
+    ],
+    [
+      51,
+      60,
+      [
+        "SUBSCRIBE TO THE",
+        "HEALING BALM FOR",
+        "MORE RESTORATIVE",
+        "PRAYERS DAILY"
+      ],
+      [
+        "SUBSCRIBE"
+      ],
+      "EXODUS 15:26"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Bring every weary burden",
+      "kind": "phrase",
+      "words": [
+        "BRING",
+        "EVERY",
+        "WEARY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "for I am the Lord",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "WHO",
+        "HEALS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "who heals you today",
+      "kind": "phrase",
+      "words": [
+        "HEALS",
+        "YOU",
+        "TODAY"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "breathe in His restoration",
+      "kind": "phrase",
+      "words": [
+        "BREATHE",
+        "IN",
+        "RESTORATION"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "in Jesus name Amen",
+      "kind": "phrase",
+      "words": [
+        "JESUS",
+        "NAME",
+        "AMEN"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "subscribe to The Healing Balm",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "HEALING",
+        "BALM"
+      ],
+      "hi": 5,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Exodus 15:26"
+}

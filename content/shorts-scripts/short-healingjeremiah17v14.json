@@ -1,0 +1,350 @@
+{
+  "key": "short-healingjeremiah17v14",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "A PRAYER FOR",
+    "DIVINE RESTORATION"
+  ],
+  "poster": [
+    "BRING YOUR WEARY HEART",
+    "TO THE LIVING WATERS",
+    "FIND HOLY REST",
+    "IN GOD'S PRESENCE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters flowing gently",
+    "warm golden sanctuary light beams",
+    "white dove flying over peaceful morning mist",
+    "glowing sunlight through green forest canopy",
+    "soft waves lapping on a quiet shore",
+    "golden dust motes dancing in warm light",
+    "calm flowing stream over smooth river stones",
+    "ethereal light reflecting on still water"
+  ],
+  "scenes": [
+    {
+      "a": "Bring every heavy burden",
+      "img": "short-healingjeremiah17v14-scene-01.jpg",
+      "kicker": "JEREMIAH 17:14",
+      "sub": "COME AS YOU ARE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "before the Lord today.",
+      "img": "short-healingjeremiah17v14-scene-02.jpg",
+      "kicker": "JEREMIAH 17:14",
+      "sub": "FIND HOLY REST",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Heal me, O Lord,",
+      "img": "short-healingjeremiah17v14-scene-03.jpg",
+      "kicker": "JEREMIAH 17:14",
+      "sub": "HE IS YOUR HEALER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "and I shall be healed;",
+      "img": "short-healingjeremiah17v14-scene-04.jpg",
+      "kicker": "JEREMIAH 17:14",
+      "sub": "RECEIVE HIS PEACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "save me, and I shall be saved,",
+      "img": "short-healingjeremiah17v14-scene-05.jpg",
+      "kicker": "JEREMIAH 17:14",
+      "sub": "WALK IN HIS LIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "for you are my praise.",
+      "img": "short-healingjeremiah17v14-scene-06.jpg",
+      "kicker": "JEREMIAH 17:14",
+      "sub": "HE IS YOUR STRENGTH",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Breathe in His presence.",
+      "img": "short-healingjeremiah17v14-scene-07.jpg",
+      "kicker": "JEREMIAH 17:14",
+      "sub": "STAY IN HIS LOVE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Receive His gentle restoration.",
+      "img": "short-healingjeremiah17v14-scene-08.jpg",
+      "kicker": "JEREMIAH 17:14",
+      "sub": "REST IN HIS GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "Bring every heavy burden before the Lord today."
+    ],
+    [
+      12,
+      28,
+      "Heal me, O Lord, and I shall be healed; save me, and I shall be saved, for you are my praise."
+    ],
+    [
+      28,
+      45,
+      "May you find the comfort you need as you surrender your hurts to the Creator."
+    ],
+    [
+      45,
+      60,
+      "Let His word wash over your spirit like living water during this time of prayer."
+    ],
+    [
+      60,
+      78,
+      "Breathe in His presence and let the weight of your worries fall at the feet of Jesus."
+    ],
+    [
+      78,
+      95,
+      "Receive His gentle restoration as you trust in His unfailing love for your weary soul."
+    ],
+    [
+      95,
+      110,
+      "You are held by a God who knows your name and cares for every detail."
+    ],
+    [
+      110,
+      120,
+      "Walk forward in the peace that passes all understanding, knowing you are deeply loved."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "BRING EVERY",
+        "HEAVY BURDEN",
+        "BEFORE THE LORD"
+      ],
+      [
+        "HEAVY",
+        "BURDEN"
+      ],
+      "JEREMIAH 17:14"
+    ],
+    [
+      12,
+      28,
+      [
+        "HEAL ME O LORD",
+        "AND I SHALL BE HEALED",
+        "SAVE ME AND BE SAVED"
+      ],
+      [
+        "HEALED",
+        "SAVED"
+      ],
+      "JEREMIAH 17:14"
+    ],
+    [
+      28,
+      45,
+      [
+        "FIND COMFORT",
+        "SURRENDER YOUR HURTS",
+        "TO THE CREATOR"
+      ],
+      [
+        "COMFORT",
+        "SURRENDER"
+      ],
+      "JEREMIAH 17:14"
+    ],
+    [
+      45,
+      60,
+      [
+        "HIS WORD WASHES",
+        "OVER YOUR SPIRIT",
+        "LIKE LIVING WATER"
+      ],
+      [
+        "WASHES",
+        "LIVING"
+      ],
+      "JEREMIAH 17:14"
+    ],
+    [
+      60,
+      78,
+      [
+        "BREATHE IN PRESENCE",
+        "WEIGHT OF WORRIES",
+        "FALL AT HIS FEET"
+      ],
+      [
+        "BREATHE",
+        "PRESENCE"
+      ],
+      "JEREMIAH 17:14"
+    ],
+    [
+      78,
+      95,
+      [
+        "RECEIVE GENTLE RESTORATION",
+        "TRUST IN HIS",
+        "UNFAILING LOVE"
+      ],
+      [
+        "RESTORATION",
+        "LOVE"
+      ],
+      "JEREMIAH 17:14"
+    ],
+    [
+      95,
+      110,
+      [
+        "YOU ARE HELD",
+        "BY A GOD",
+        "WHO KNOWS YOU"
+      ],
+      [
+        "HELD",
+        "KNOWS"
+      ],
+      "JEREMIAH 17:14"
+    ],
+    [
+      110,
+      120,
+      [
+        "WALK IN PEACE",
+        "DEEPLY LOVED",
+        "BY YOUR CREATOR"
+      ],
+      [
+        "PEACE",
+        "LOVED"
+      ],
+      "JEREMIAH 17:14"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Bring every heavy burden",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "BURDEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heal me, O Lord,",
+      "kind": "phrase",
+      "words": [
+        "HEAL",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and I shall be healed;",
+      "kind": "phrase",
+      "words": [
+        "SHALL",
+        "BE",
+        "HEALED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "save me, and I shall be saved,",
+      "kind": "phrase",
+      "words": [
+        "SAVE",
+        "SAVED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "for you are my praise.",
+      "kind": "phrase",
+      "words": [
+        "YOU",
+        "ARE",
+        "PRAISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Breathe in His presence.",
+      "kind": "phrase",
+      "words": [
+        "BREATHE",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Receive His gentle restoration.",
+      "kind": "phrase",
+      "words": [
+        "GENTLE",
+        "RESTORATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Jeremiah 17:14"
+}
