@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-11T02:59:50.229706+00:00",
-  "healthy": true,
+  "generated_at": "2026-11-11T03:21:19.013133+00:00",
+  "healthy": false,
   "automations": [
     {
       "workflow": "automation-health.yml",
@@ -8,8 +8,8 @@
       "crons": [
         "14 20 * * *"
       ],
-      "last_run": "2026-11-11T02:50:23+00:00",
-      "last_conclusion": "success",
+      "last_run": "2026-11-11T03:20:23+00:00",
+      "last_conclusion": null,
       "last_success": "2026-11-11T02:50:23+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-09T02:19:37+00:00",
@@ -18,7 +18,7 @@
       "failures_5": 2,
       "effect": "reports and files stalls",
       "verdict": "OK",
-      "detail": "last success 0.2h ago",
+      "detail": "last success 0.5h ago",
       "severity": "ok"
     },
     {
@@ -39,7 +39,7 @@
       "failures_5": 2,
       "effect": "posts replies and records them in content/comments/replied.json",
       "verdict": "OK",
-      "detail": "last success 0.9h ago",
+      "detail": "last success 1.3h ago",
       "severity": "ok"
     },
     {
@@ -58,7 +58,7 @@
       "failures_5": 0,
       "effect": "writes content/community/<id>-READY.md",
       "verdict": "OK",
-      "detail": "last success 52.1h ago",
+      "detail": "last success 52.5h ago",
       "severity": "ok"
     },
     {
@@ -72,12 +72,12 @@
       "last_success": "2026-11-10T11:09:47+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-11T02:50:20+00:00",
-      "last_slot": "2026-11-10T03:14:00+00:00",
+      "last_slot": "2026-11-11T03:14:00+00:00",
       "missed_slots": 0,
       "failures_5": 0,
       "effect": "writes content/queue/ or content/shorts-scripts/",
       "verdict": "OK",
-      "detail": "last success 15.8h ago",
+      "detail": "last success 16.2h ago",
       "severity": "ok"
     },
     {
@@ -96,7 +96,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 17.3h ago",
+      "detail": "last success 17.6h ago",
       "severity": "ok"
     },
     {
@@ -115,7 +115,7 @@
       "failures_5": 0,
       "effect": "re-arms scheduled workflows",
       "verdict": "OK",
-      "detail": "last success 39.2h ago",
+      "detail": "last success 39.5h ago",
       "severity": "ok"
     },
     {
@@ -124,8 +124,8 @@
       "crons": [
         "41 18 * * 5"
       ],
-      "last_run": "2026-11-11T01:01:40+00:00",
-      "last_conclusion": "failure",
+      "last_run": "2026-11-11T03:20:23+00:00",
+      "last_conclusion": null,
       "last_success": "2026-11-10T02:05:30+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-11T02:50:20+00:00",
@@ -133,9 +133,9 @@
       "missed_slots": 0,
       "failures_5": 0,
       "effect": "writes content/metrics.csv and opens a snapshot issue",
-      "verdict": "UNTESTED FIX",
-      "detail": "failed 2.0h ago; edited 9m ago \u2014 needs one green run",
-      "severity": "warning"
+      "verdict": "OK",
+      "detail": "last success 25.3h ago",
+      "severity": "ok"
     },
     {
       "workflow": "monitor.yml",
@@ -143,7 +143,7 @@
       "crons": [
         "23 */3 * * *"
       ],
-      "last_run": "2026-11-11T02:58:57+00:00",
+      "last_run": "2026-11-11T03:20:23+00:00",
       "last_conclusion": null,
       "last_success": null,
       "runs_14d": 20,
@@ -165,17 +165,17 @@
         "14 19 * * *"
       ],
       "last_run": "2026-11-11T00:01:43+00:00",
-      "last_conclusion": null,
+      "last_conclusion": "failure",
       "last_success": "2026-11-10T11:41:15+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-10T20:04:00+00:00",
       "last_slot": "2026-11-10T06:14:00+00:00",
       "missed_slots": 0,
-      "failures_5": 1,
+      "failures_5": 2,
       "effect": "publishes a video: content/published/ gains a receipt with a video id",
-      "verdict": "OK",
-      "detail": "last success 15.3h ago",
-      "severity": "ok"
+      "verdict": "FAILING",
+      "detail": "failed 3.3h ago and nothing was changed since; the next slot will fail the same way",
+      "severity": "blocking"
     },
     {
       "workflow": "scheduler-supervisor.yml",
@@ -183,9 +183,9 @@
       "crons": [
         "47 0,3,6,9,12,15,18,21 * * *"
       ],
-      "last_run": "2026-11-11T02:58:57+00:00",
+      "last_run": "2026-11-11T03:20:23+00:00",
       "last_conclusion": "success",
-      "last_success": "2026-11-11T02:58:57+00:00",
+      "last_success": "2026-11-11T03:20:23+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-07T19:31:06+00:00",
       "last_slot": "2026-11-11T00:47:00+00:00",
@@ -200,7 +200,7 @@
   "outcomes": [
     {
       "outcome": "last upload",
-      "detail": "2026-11-11 (1h ago)",
+      "detail": "2026-11-11 (2h ago)",
       "severity": "ok"
     },
     {
@@ -220,7 +220,7 @@
     },
     {
       "outcome": "last upload (prayer4)",
-      "detail": "The Midnight Watch: 2026-11-11 (1h ago \u2014 0202-isaiah-62-6-midnight-prayer.md)",
+      "detail": "The Midnight Watch: 2026-11-11 (2h ago \u2014 0202-isaiah-62-6-midnight-prayer.md)",
       "severity": "ok"
     },
     {
