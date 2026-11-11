@@ -699,6 +699,49 @@ def _write_published_record(
     return dest
 
 
+def _write_recovered_short_record(dest: Path, edition: ShortEdition, video: dict,
+                                  poster: dict | None = None) -> Path:
+    """Record verified existing video data without claiming an upload or thumbnail.
+
+    Never overwrite a receipt. If writing fails, the caller must keep the queue
+    manifest so the recovery can be safely retried.
+    """
+    vid = video["video_id"]
+    published_at = video["published_at"]
+    meta = {
+        "id": edition.job_id, "title": video["title"], "slug": edition.slug,
+        "status": "published", "format": "short", "channel": edition.channel,
+        "niche": edition.niche, "category": "education",
+        "published_on": published_at[:10], "published_at": published_at,
+        "youtube_video_id": vid, "youtube_shorts_url": f"https://www.youtube.com/shorts/{vid}",
+        "youtube_watch_url": f"https://youtu.be/{vid}",
+        "privacy_status": video["privacy_status"], "youtube_upload_status": video["upload_status"],
+        "youtube_duration": video.get("duration", ""),
+        "receipt_recovered_from_youtube": True,
+        "thumbnail_pending": True, "thumbnail_error": "thumbnail_status_unverified_after_recovery",
+        "thumbnail_attempts": 0,
+    }
+    frontmatter = yaml.safe_dump(meta, sort_keys=False, allow_unicode=True)
+    if poster:
+        # The thumbnail sync updates these fields line-by-line, so keep lists
+        # inline rather than leaving orphaned YAML list items on replacement.
+        frontmatter += "thumbnail_poster: " + json.dumps(list(poster.get("lines") or [])) + "\n"
+        frontmatter += "thumbnail_kicker: " + json.dumps(str(poster.get("kicker") or "")) + "\n"
+        frontmatter += "thumbnail_plate: " + json.dumps(str(poster.get("plate") or "")) + "\n"
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    content = "---\n" + frontmatter + "---\n\n"
+    content += ("This receipt was recovered from an existing YouTube video. "
+                "No video was uploaded during recovery; the custom thumbnail status is unverified.\n")
+    fh = dest.open("x", encoding="utf-8")
+    try:
+        with fh:
+            fh.write(content)
+    except Exception:
+        dest.unlink(missing_ok=True)
+        raise
+    return dest
+
+
 def _scrub(text: str) -> str:
     cleaned = text
     for secret in (
@@ -716,8 +759,9 @@ def _scrub(text: str) -> str:
 def _read_previous_video_id(record_path: Path) -> str:
     if not record_path.is_file():
         return ""
-    m = re.search(r'^youtube_video_id:\s*"([^"]+)"', record_path.read_text(encoding="utf-8"), re.MULTILINE)
-    return m.group(1).strip() if m else ""
+    m = re.search(r"^youtube_video_id:\s*['\"]?([A-Za-z0-9_-]+)['\"]?\s*$",
+                  record_path.read_text(encoding="utf-8"), re.MULTILINE)
+    return m.group(1) if m else ""
 
 
 def _close_superseded_tickets(title: str, new_shorts_url: str) -> None:
@@ -1093,6 +1137,7 @@ def run_short_release(
             apply_shorts_thumbnail,
             audit_channel_videos,
             delete_video,
+            inspect_existing_short,
             set_video_thumbnail,
             upload,
         )
@@ -1136,13 +1181,23 @@ def run_short_release(
             return result
 
         if up.privacy_status == "duplicate_prevented":
-            print(f"[short-release] YouTube upload skipped: duplicate video already live ({up.video_id}).")
+            print(f"[short-release] YouTube upload skipped: existing video detected ({up.video_id}).")
+            # A title match is not a receipt. Verify the authenticated owner and
+            # remote video first, then persist facts before retiring the manifest.
+            # On any lookup/write failure, leave the manifest for a safe retry.
+            video = inspect_existing_short(up.video_id, edition.title)
+            _write_recovered_short_record(
+                published_record, edition, video,
+                poster=poster_report.as_dict() if poster_report else None,
+            )
             if manifest_path and manifest_path.is_file():
                 manifest_path.unlink()
             result.update(
                 {
                     "uploaded": False,
                     "duplicate_prevented": True,
+                    "receipt_recovered": True,
+                    "privacy_status": video["privacy_status"],
                     "video_id": up.video_id,
                     "watch_url": f"https://youtu.be/{up.video_id}",
                     "shorts_url": f"https://www.youtube.com/shorts/{up.video_id}",
