@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T10:46:41Z",
+  "generated_at": "2026-11-11T10:50:03Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 82,
+    "published_total": 83,
     "published_longform": 36,
-    "published_shorts": 46,
-    "public_total": 80,
+    "published_shorts": 47,
+    "public_total": 81,
     "queued_longform": 53,
-    "queued_shorts": 38,
+    "queued_shorts": 37,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -166,32 +166,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 18,
+        "published_total": 19,
         "published_longform": 9,
-        "published_shorts": 9,
-        "public_total": 18,
+        "published_shorts": 10,
+        "public_total": 19,
         "queued_longform": 7,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYDANIEL6V10",
-        "title": "Say This Daniel 6:10 Prayer at Noon | Noon Prayer #Shorts",
+        "id": "SHORT-MIDDAYACTS10V9",
+        "title": "Say This Acts 10:9 Prayer at Noon | The Midday Watch #Shorts",
         "format": "short",
-        "youtube_video_id": "jJg4eBJHg0c",
-        "watch_url": "https://www.youtube.com/shorts/jJg4eBJHg0c",
-        "published_on": "2026-11-10",
-        "published_at": "2026-11-10T22:19:56Z"
+        "youtube_video_id": "W_SQFbDk110",
+        "watch_url": "https://www.youtube.com/shorts/W_SQFbDk110",
+        "published_on": "2026-11-11",
+        "published_at": "2026-11-11T10:43:25Z"
       },
       "next_queued_longform": {
         "id": "0084",
         "title": "Acts 10:9 Midday Prayer | The Midday Watch",
         "words": 2437,
-        "status": "quota_paused"
+        "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middayacts10v9",
-        "scripture": "Acts 10:9",
+        "short": "short-middaypsalm37v6",
+        "scripture": "Psalm 37:6",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -457,6 +457,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYACTS10V9",
+      "slug": "short-middayacts10v9-midday-prayer",
+      "file": "short-middayacts10v9-midday-prayer.md",
+      "title": "Say This Acts 10:9 Prayer at Noon | The Midday Watch #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T10:43:25Z",
+      "youtube_video_id": "W_SQFbDk110",
+      "watch_url": "https://www.youtube.com/shorts/W_SQFbDk110",
+      "youtu_be_url": "https://youtu.be/W_SQFbDk110",
+      "shorts_url": "https://www.youtube.com/shorts/W_SQFbDk110",
+      "studio_url": "https://studio.youtube.com/video/W_SQFbDk110/edit",
+      "thumb_url": "https://i.ytimg.com/vi/W_SQFbDk110/hqdefault.jpg",
+      "thumb_text": "ACTS 10:9 \u00b7 A SACRED PAUSE",
+      "duration_label": "44s",
+      "words": 565
+    },
     {
       "id": "0058",
       "slug": "psalm-57-8-awake-early-morning-prayer",
@@ -2665,7 +2688,7 @@
         "title": "Acts 10:9 Midday Prayer | The Midday Watch",
         "channel": "prayer3",
         "channel_name": "The Midday Watch",
-        "status": "quota_paused",
+        "status": "approved",
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,
@@ -3124,17 +3147,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-middayacts10v9",
-        "file": "0084-short-middayacts10v9.yml",
-        "companion_longform_id": "0084",
-        "scripture": "Acts 10:9",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaypsalm37v6",

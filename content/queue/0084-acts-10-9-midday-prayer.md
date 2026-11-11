@@ -2,7 +2,7 @@
 id: 0084
 title: Acts 10:9 Midday Prayer | The Midday Watch
 slug: acts-10-9-midday-prayer
-status: quota_paused
+status: approved
 channel: prayer3
 privacy: public
 format: longform
@@ -76,8 +76,6 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
-quota_reset_utc: '2026-11-11T08:00:00+00:00'
-pause_reason: gemini_api_daily_quota_exhausted
 ---
 
 ## Scene 1 — The Sixth Hour Pause
