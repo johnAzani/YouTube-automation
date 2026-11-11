@@ -44,22 +44,22 @@
       "workflow": "metrics.yml"
     },
     {
+      "late_minutes": 123,
+      "name": "Scheduler supervisor",
+      "ran_at": "2026-11-11T11:50:09+00:00",
+      "slot": "2026-11-11T09:47:00+00:00",
+      "workflow": "scheduler-supervisor.yml"
+    },
+    {
       "late_minutes": 121,
       "name": "Autonomous Community Tab Automation",
       "ran_at": "2026-11-08T21:15:33+00:00",
       "slot": "2026-11-08T19:14:00+00:00",
       "workflow": "community.yml"
-    },
-    {
-      "late_minutes": 121,
-      "name": "Scheduler supervisor",
-      "ran_at": "2026-11-11T11:48:43+00:00",
-      "slot": "2026-11-11T09:47:00+00:00",
-      "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "generated_at": "2026-11-11T12:36:38.774030+00:00",
-  "last_run_at": "2026-11-11T12:35:24+00:00",
+  "generated_at": "2026-11-11T12:45:15.442002+00:00",
+  "last_run_at": "2026-11-11T12:44:30+00:00",
   "on_time": [
     {
       "late_minutes": 8,
@@ -76,6 +76,6 @@
       "workflow": "produce.yml"
     }
   ],
-  "silence_minutes": 1,
+  "silence_minutes": 0,
   "warn_minutes": 120
 }
