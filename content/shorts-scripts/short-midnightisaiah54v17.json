@@ -1,0 +1,264 @@
+{
+  "key": "short-midnightisaiah54v17",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "MIDNIGHT WATCH",
+    "ISAIAH 54:17"
+  ],
+  "poster": [
+    "RISE IN SPIRIT",
+    "THE MIDNIGHT VIGIL",
+    "PROTECTION FOUND",
+    "STAY VIGILANT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "dark silhouette of an ancient watchtower against a starry sky",
+    "deep blue twilight over a still mountain lake at midnight",
+    "soft golden candlelight illuminating an empty wooden prayer altar",
+    "vast galaxy nebula glowing in the deep velvet midnight sky",
+    "glowing lantern placed on a stone ledge in the dark",
+    "mist rising over a silent forest under moonlight"
+  ],
+  "scenes": [
+    {
+      "a": "Rise in spirit",
+      "img": "short-midnightisaiah54v17-scene-01.jpg",
+      "kicker": "THE MIDNIGHT WATCH",
+      "sub": "HEAR THE WORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "No weapon formed",
+      "img": "short-midnightisaiah54v17-scene-02.jpg",
+      "kicker": "ISAIAH 54:17",
+      "sub": "DIVINE PROTECTION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Your peace remains",
+      "img": "short-midnightisaiah54v17-scene-03.jpg",
+      "kicker": "MIDNIGHT VIGIL",
+      "sub": "STAY STEADFAST",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "God defends you",
+      "img": "short-midnightisaiah54v17-scene-04.jpg",
+      "kicker": "SACRED PROMISE",
+      "sub": "BEYOND THE SHADOWS",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Rest in stillness",
+      "img": "short-midnightisaiah54v17-scene-05.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "FIND YOUR ANCHOR",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Walk in light",
+      "img": "short-midnightisaiah54v17-scene-06.jpg",
+      "kicker": "THE MIDNIGHT WATCH",
+      "sub": "BE STILL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "Rise in spirit as the clock strikes twelve, turning your heart toward the quiet strength of the midnight hour."
+    ],
+    [
+      16,
+      35,
+      "No weapon formed against you shall prosper, and every tongue that rises against you in judgment you shall condemn."
+    ],
+    [
+      36,
+      55,
+      "This is the heritage of the servants of the Lord, for your peace remains untouchable in the shelter of his presence."
+    ],
+    [
+      56,
+      75,
+      "God defends you in the deep stillness, covering your path with a grace that transcends the darkness around you."
+    ],
+    [
+      76,
+      95,
+      "Rest in stillness tonight, knowing that the promise of your salvation is written in the heavens above you."
+    ],
+    [
+      96,
+      120,
+      "Walk in light through this midnight watch, guarded by the sovereign word, and please subscribe to join our prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "RISE IN SPIRIT",
+        "AT MIDNIGHT HOUR"
+      ],
+      [
+        "RISE"
+      ],
+      "ISAIAH 54:17"
+    ],
+    [
+      16,
+      35,
+      [
+        "NO WEAPON FORMED",
+        "SHALL EVER PROSPER"
+      ],
+      [
+        "PROSPER"
+      ],
+      "ISAIAH 54:17"
+    ],
+    [
+      36,
+      55,
+      [
+        "YOUR PEACE REMAINS",
+        "DEEP AND SECURE"
+      ],
+      [
+        "PEACE"
+      ],
+      "ISAIAH 54:17"
+    ],
+    [
+      56,
+      75,
+      [
+        "GOD DEFENDS YOU",
+        "THROUGH THE DARKNESS"
+      ],
+      [
+        "DEFENDS"
+      ],
+      "ISAIAH 54:17"
+    ],
+    [
+      76,
+      95,
+      [
+        "REST IN STILLNESS",
+        "TRUST HIS PROMISE"
+      ],
+      [
+        "REST"
+      ],
+      "ISAIAH 54:17"
+    ],
+    [
+      96,
+      120,
+      [
+        "WALK IN LIGHT",
+        "PLEASE SUBSCRIBE"
+      ],
+      [
+        "SUBSCRIBE"
+      ],
+      "ISAIAH 54:17"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Rise in spirit",
+      "kind": "phrase",
+      "words": [
+        "RISE",
+        "SPIRIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "No weapon formed",
+      "kind": "phrase",
+      "words": [
+        "WEAPON",
+        "PROSPER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your peace remains",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "REMAINS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "God defends you",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "DEFENDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Rest in stillness",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "STILLNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Walk in light",
+      "kind": "phrase",
+      "words": [
+        "WALK",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 54:17"
+}

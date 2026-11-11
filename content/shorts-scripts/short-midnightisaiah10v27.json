@@ -1,0 +1,311 @@
+{
+  "key": "short-midnightisaiah10v27",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "THE ANOINTING BREAKS THE YOKE",
+    "MIDNIGHT PRAYER FOR DELIVERANCE"
+  ],
+  "poster": [
+    "THE MIDNIGHT WATCH",
+    "ISAIAH 10:27",
+    "BURDENS ARE LIFTED",
+    "STAND IN PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "midnight watchtower silhouette against milky way starry sky",
+    "deep starry night sky glowing over tranquil mountain valley",
+    "ancient candle flame glowing in dark stone sanctuary watchtower",
+    "warm oil lamp lighting an open old Bible in dark room",
+    "calm ocean shore reflecting moonlight under starry night",
+    "golden rays of dawn light breaking through dark night forest mist",
+    "lone lantern shining brightly on hilltop under night stars"
+  ],
+  "scenes": [
+    {
+      "a": "Rise in spirit at this midnight hour",
+      "img": "short-midnightisaiah10v27-scene-01.jpg",
+      "kicker": "ISAIAH 10:27",
+      "sub": "RISE IN SPIRIT AT MIDNIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You carry unspoken burdens",
+      "img": "short-midnightisaiah10v27-scene-02.jpg",
+      "kicker": "ISAIAH 10:27",
+      "sub": "HEAVEN HEARS YOUR HEART",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "His burden shall be taken away from off thy shoulder",
+      "img": "short-midnightisaiah10v27-scene-03.jpg",
+      "kicker": "ISAIAH 10:27",
+      "sub": "THE YOKE SHALL BE DESTROYED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, in this quiet watch",
+      "img": "short-midnightisaiah10v27-scene-04.jpg",
+      "kicker": "ISAIAH 10:27",
+      "sub": "BREAK EVERY CHAIN",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Lift the heavy weights off every weary shoulder",
+      "img": "short-midnightisaiah10v27-scene-05.jpg",
+      "kicker": "ISAIAH 10:27",
+      "sub": "RESTORE DEEP PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Let Your sacred anointing destroy every unseen bond",
+      "img": "short-midnightisaiah10v27-scene-06.jpg",
+      "kicker": "ISAIAH 10:27",
+      "sub": "FRESH STRENGTH BEFORE DAWN",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Stand with us in night prayer",
+      "img": "short-midnightisaiah10v27-scene-07.jpg",
+      "kicker": "ISAIAH 10:27",
+      "sub": "THE MIDNIGHT WATCH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "Rise in spirit at this midnight hour, stepping away from the heavy noise of the world."
+    ],
+    [
+      6,
+      12,
+      "You carry unspoken burdens, but tonight heaven pays close attention to your quiet heart."
+    ],
+    [
+      12,
+      19,
+      "Isaiah ten twenty-seven declares: His burden shall be taken away from off thy shoulder, and the yoke shall be destroyed because of the anointing."
+    ],
+    [
+      19,
+      25,
+      "Father, in this quiet watch, we ask for Your holy presence to break every chain of fear and exhaustion."
+    ],
+    [
+      25,
+      31,
+      "Lift the heavy weights off every weary shoulder and restore deep peace to every sleeping home tonight."
+    ],
+    [
+      31,
+      37,
+      "Let Your sacred anointing destroy every unseen bond, bringing fresh strength and quiet freedom before dawn."
+    ],
+    [
+      37,
+      43,
+      "Stand with us in night prayer and subscribe to keep the midnight watch."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "RISE IN SPIRIT AT MIDNIGHT HOUR",
+        "STEPPING AWAY FROM HEAVY NOISE"
+      ],
+      [
+        "MIDNIGHT HOUR",
+        "HEAVY NOISE"
+      ],
+      "ISAIAH 10:27"
+    ],
+    [
+      6,
+      12,
+      [
+        "YOU CARRY UNSPOKEN BURDENS TONIGHT",
+        "HEAVEN PAYS ATTENTION TO YOUR HEART"
+      ],
+      [
+        "UNSPOKEN BURDENS",
+        "ATTENTION"
+      ],
+      "ISAIAH 10:27"
+    ],
+    [
+      12,
+      19,
+      [
+        "HIS BURDEN SHALL BE TAKEN AWAY",
+        "FROM OFF THY SHOULDER AND YOKE",
+        "DESTROYED BECAUSE OF THE ANOINTING"
+      ],
+      [
+        "BURDEN TAKEN AWAY",
+        "ANOINTING"
+      ],
+      "ISAIAH 10:27"
+    ],
+    [
+      19,
+      25,
+      [
+        "FATHER IN THIS QUIET WATCH WE ASK",
+        "FOR YOUR HOLY PRESENCE TO BREAK CHAINS"
+      ],
+      [
+        "HOLY PRESENCE",
+        "BREAK CHAINS"
+      ],
+      "ISAIAH 10:27"
+    ],
+    [
+      25,
+      31,
+      [
+        "LIFT HEAVY WEIGHTS OFF WEARY SHOULDERS",
+        "RESTORE DEEP PEACE TO EVERY HOME"
+      ],
+      [
+        "HEAVY WEIGHTS",
+        "DEEP PEACE"
+      ],
+      "ISAIAH 10:27"
+    ],
+    [
+      31,
+      37,
+      [
+        "LET SACRED ANOINTING DESTROY EVERY BOND",
+        "BRINGING FRESH STRENGTH BEFORE DAWN"
+      ],
+      [
+        "SACRED ANOINTING",
+        "FRESH STRENGTH"
+      ],
+      "ISAIAH 10:27"
+    ],
+    [
+      37,
+      43,
+      [
+        "STAND WITH US IN NIGHT PRAYER",
+        "SUBSCRIBE TO KEEP MIDNIGHT WATCH"
+      ],
+      [
+        "NIGHT PRAYER",
+        "MIDNIGHT WATCH"
+      ],
+      "ISAIAH 10:27"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Rise in spirit at this midnight hour",
+      "kind": "phrase",
+      "words": [
+        "RISE",
+        "MIDNIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You carry unspoken burdens",
+      "kind": "phrase",
+      "words": [
+        "UNSPOKEN",
+        "BURDENS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "His burden shall be taken away from off thy shoulder",
+      "kind": "phrase",
+      "words": [
+        "BURDEN",
+        "SHOULDER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, in this quiet watch",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "WATCH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lift the heavy weights off every weary shoulder",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "WEIGHTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let Your sacred anointing destroy every unseen bond",
+      "kind": "phrase",
+      "words": [
+        "SACRED",
+        "ANOINTING"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Stand with us in night prayer",
+      "kind": "phrase",
+      "words": [
+        "MIDNIGHT",
+        "WATCH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 10:27"
+}
