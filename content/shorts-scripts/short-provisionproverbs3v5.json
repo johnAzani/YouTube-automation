@@ -1,0 +1,303 @@
+{
+  "key": "short-provisionproverbs3v5",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "TRUST IN THE LORD",
+    "DAILY PROVISION"
+  ],
+  "poster": [
+    "WALK",
+    "IN",
+    "HIS",
+    "WISDOM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunlit valley mist morning",
+    "peaceful river flowing through green hills",
+    "sunlit sanctuary stone table mountain view",
+    "calm mountain lake at sunrise water reflection",
+    "sunlight breaking through forest canopy trees",
+    "wide open mountain pass horizon light",
+    "gentle stream over smooth stones sunlight"
+  ],
+  "scenes": [
+    {
+      "a": "Bow your heart before the Lord today and surrender every heavy care into His faithful hands.",
+      "img": "short-provisionproverbs3v5-scene-01.jpg",
+      "kicker": "PROVERBS 3:5",
+      "sub": "SURRENDER YOUR CARES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Acknowledge Him in all your daily decisions, knowing He alone directs your steps on level ground.",
+      "img": "short-provisionproverbs3v5-scene-02.jpg",
+      "kicker": "PROVERBS 3:5",
+      "sub": "ACKNOWLEDGE HIS GUIDANCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Trust in the Lord with all your heart, and lean not unto your own understanding.",
+      "img": "short-provisionproverbs3v5-scene-03.jpg",
+      "kicker": "PROVERBS 3:5",
+      "sub": "TRUST WITH ALL YOUR HEART",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "In all your ways acknowledge Him, and He shall direct your paths.",
+      "img": "short-provisionproverbs3v5-scene-04.jpg",
+      "kicker": "PROVERBS 3:6",
+      "sub": "HE SHALL DIRECT PATHS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Father, we ask for our daily bread and the quiet confidence that comes from resting in Your provision.",
+      "img": "short-provisionproverbs3v5-scene-05.jpg",
+      "kicker": "DAILY PROVISION",
+      "sub": "ASK FOR DAILY BREAD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Remove every anxious thought about tomorrow, for Your grace is sufficient for this very hour.",
+      "img": "short-provisionproverbs3v5-scene-06.jpg",
+      "kicker": "STEWARDSHIP",
+      "sub": "REST IN HIS GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Walk forward in peace today, knowing your provider holds your future securely.",
+      "img": "short-provisionproverbs3v5-scene-07.jpg",
+      "kicker": "WALK IN PEACE",
+      "sub": "SUBSCRIBE FOR MORE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "Bow your heart before the Lord today and surrender every heavy care into His faithful hands."
+    ],
+    [
+      6,
+      12,
+      "Acknowledge Him in all your daily decisions, knowing He alone directs your steps on level ground."
+    ],
+    [
+      12,
+      18,
+      "Trust in the Lord with all your heart, and lean not unto your own understanding."
+    ],
+    [
+      18,
+      24,
+      "In all your ways acknowledge Him, and He shall direct your paths."
+    ],
+    [
+      24,
+      30,
+      "Father, we ask for our daily bread and the quiet confidence that comes from resting in Your provision."
+    ],
+    [
+      30,
+      36,
+      "Remove every anxious thought about tomorrow, for Your grace is sufficient for this very hour."
+    ],
+    [
+      36,
+      42,
+      "Walk forward in peace today, knowing your provider holds your future securely."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "BOW YOUR HEART",
+        "BEFORE THE LORD",
+        "SURRENDER EVERY CARE"
+      ],
+      "LORD",
+      "PROVERBS 3:5"
+    ],
+    [
+      6,
+      12,
+      [
+        "ACKNOWLEDGE HIM",
+        "IN DAILY DECISIONS",
+        "DIRECTS YOUR STEPS"
+      ],
+      "STEPS",
+      "PROVERBS 3:5"
+    ],
+    [
+      12,
+      18,
+      [
+        "TRUST IN THE LORD",
+        "WITH ALL YOUR HEART",
+        "LEAN NOT UNTO OWN"
+      ],
+      "HEART",
+      "PROVERBS 3:5"
+    ],
+    [
+      18,
+      24,
+      [
+        "IN ALL YOUR WAYS",
+        "ACKNOWLEDGE HIM",
+        "HE SHALL DIRECT PATHS"
+      ],
+      "PATHS",
+      "PROVERBS 3:6"
+    ],
+    [
+      24,
+      30,
+      [
+        "FATHER WE ASK",
+        "FOR DAILY BREAD",
+        "RESTING IN PROVISION"
+      ],
+      "BREAD",
+      "PROVISION"
+    ],
+    [
+      30,
+      36,
+      [
+        "REMOVE ANXIOUS THOUGHTS",
+        "ABOUT TOMORROW",
+        "GRACE IS SUFFICIENT"
+      ],
+      "GRACE",
+      "PROVISION"
+    ],
+    [
+      36,
+      42,
+      [
+        "WALK FORWARD IN PEACE",
+        "KNOWING YOUR PROVIDER",
+        "HOLDS YOUR FUTURE"
+      ],
+      "FUTURE",
+      "PROVISION"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Bow your heart before the Lord today and surrender every heavy care into His faithful hands.",
+      "kind": "phrase",
+      "words": [
+        "BOW",
+        "HEART",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Acknowledge Him in all your daily decisions, knowing He alone directs your steps on level ground.",
+      "kind": "phrase",
+      "words": [
+        "ACKNOWLEDGE",
+        "DECISIONS",
+        "STEPS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Trust in the Lord with all your heart, and lean not unto your own understanding.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "HEART",
+        "UNDERSTANDING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In all your ways acknowledge Him, and He shall direct your paths.",
+      "kind": "phrase",
+      "words": [
+        "WAYS",
+        "ACKNOWLEDGE",
+        "PATHS"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we ask for our daily bread and the quiet confidence that comes from resting in Your provision.",
+      "kind": "phrase",
+      "words": [
+        "FATHER",
+        "BREAD",
+        "PROVISION"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Remove every anxious thought about tomorrow, for Your grace is sufficient for this very hour.",
+      "kind": "phrase",
+      "words": [
+        "REMOVE",
+        "TOMORROW",
+        "GRACE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Walk forward in peace today, knowing your provider holds your future securely.",
+      "kind": "phrase",
+      "words": [
+        "WALK",
+        "PEACE",
+        "FUTURE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 3:5-6"
+}

@@ -1,0 +1,362 @@
+{
+  "key": "short-provisionpsalm90v17",
+  "channel": "prayer7",
+  "psalm": 90,
+  "title": [
+    "ESTABLISH THE WORK",
+    "OF OUR HANDS"
+  ],
+  "poster": [
+    "THE PROVISION TABLE",
+    "DAILY WISDOM PRAYER",
+    "PSALM 90:17",
+    "GOD'S PROVISION"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunlit mountain pass at sunrise",
+    "peaceful sunlit river flowing through valley",
+    "sunlit stone sanctuary table in mountain valley",
+    "glorious golden light over mountain landscape",
+    "sunbeams filtering through trees near quiet stream",
+    "ancient stone table bathed in morning sunlight",
+    "calm sunlit valley with open horizon",
+    "serene golden morning mist over peaceful river"
+  ],
+  "scenes": [
+    {
+      "a": "Lord, we commit our daily decisions, our hands, and all our labor unto Your faithful care today.",
+      "img": "short-provisionpsalm90v17-scene-01.jpg",
+      "kicker": "PSALM 90:17",
+      "sub": "COMMIT YOUR WORK TO GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "We bring our work before Your sanctuary table, trusting Your abundant wisdom to guide each step.",
+      "img": "short-provisionpsalm90v17-scene-02.jpg",
+      "kicker": "DAILY WISDOM",
+      "sub": "SEEKING DIVINE DIRECTION",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Your holy Word promises in Psalm ninety, verse seventeen:",
+      "img": "short-provisionpsalm90v17-scene-03.jpg",
+      "kicker": "HOLY SCRIPTURE",
+      "sub": "GOD'S ETERNAL PROMISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "And let the beauty of the LORD our God be upon us: and establish thou the work of our hands upon us; yea, the work of our hands establish thou it.",
+      "img": "short-provisionpsalm90v17-scene-04.jpg",
+      "kicker": "PSALM 90:17",
+      "sub": "BEAUTY AND PROVISION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, let Your divine favor rest upon every humble effort and honest endeavor we undertake.",
+      "img": "short-provisionpsalm90v17-scene-05.jpg",
+      "kicker": "DIVINE FAVOR",
+      "sub": "BLESS OUR HONEST EFFORTS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Open doors of stewardship, grant daily provision, and bless all that our hands perform.",
+      "img": "short-provisionpsalm90v17-scene-06.jpg",
+      "kicker": "OPEN DOORS",
+      "sub": "DAILY PROVISION PRAYER",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May Your wisdom establish our work for Your glory forever.",
+      "img": "short-provisionpsalm90v17-scene-07.jpg",
+      "kicker": "EVERLASTING GRACE",
+      "sub": "ESTABLISH OUR STEPS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to walk in God's daily provision today.",
+      "img": "short-provisionpsalm90v17-scene-08.jpg",
+      "kicker": "DAILY PROVISION",
+      "sub": "WALK IN GOD'S GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "Lord, we commit our daily decisions, our hands, and all our labor unto Your faithful care today."
+    ],
+    [
+      6,
+      12,
+      "We bring our work before Your sanctuary table, trusting Your abundant wisdom to guide each step."
+    ],
+    [
+      12,
+      16,
+      "Your holy Word promises in Psalm ninety, verse seventeen:"
+    ],
+    [
+      16,
+      29,
+      "And let the beauty of the LORD our God be upon us: and establish thou the work of our hands upon us; yea, the work of our hands establish thou it."
+    ],
+    [
+      29,
+      35,
+      "Father, let Your divine favor rest upon every humble effort and honest endeavor we undertake."
+    ],
+    [
+      35,
+      41,
+      "Open doors of stewardship, grant daily provision, and bless all that our hands perform."
+    ],
+    [
+      41,
+      46,
+      "May Your wisdom establish our work for Your glory forever."
+    ],
+    [
+      46,
+      50,
+      "Subscribe to walk in God's daily provision today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "LORD WE COMMIT OUR DECISIONS",
+        "OUR HANDS AND LABOR",
+        "UNTO YOUR FAITHFUL CARE"
+      ],
+      [
+        "COMMIT",
+        "LABOR",
+        "CARE"
+      ],
+      "PSALM 90:17"
+    ],
+    [
+      6,
+      12,
+      [
+        "WE BRING OUR WORK",
+        "BEFORE YOUR TABLE",
+        "TRUSTING YOUR WISDOM"
+      ],
+      [
+        "WORK",
+        "WISDOM"
+      ],
+      "PSALM 90:17"
+    ],
+    [
+      12,
+      16,
+      [
+        "YOUR HOLY WORD PROMISES",
+        "IN PSALM NINETY",
+        "VERSE SEVENTEEN"
+      ],
+      [
+        "WORD",
+        "PROMISES"
+      ],
+      "PSALM 90:17"
+    ],
+    [
+      16,
+      29,
+      [
+        "LET THE BEAUTY OF THE LORD",
+        "BE UPON US AND ESTABLISH",
+        "THE WORK OF OUR HANDS"
+      ],
+      [
+        "BEAUTY",
+        "ESTABLISH",
+        "HANDS"
+      ],
+      "PSALM 90:17"
+    ],
+    [
+      29,
+      35,
+      [
+        "LET YOUR DIVINE FAVOR REST",
+        "UPON EVERY HUMBLE EFFORT",
+        "AND HONEST ENDEAVOR"
+      ],
+      [
+        "FAVOR",
+        "EFFORT"
+      ],
+      "PSALM 90:17"
+    ],
+    [
+      35,
+      41,
+      [
+        "OPEN DOORS OF STEWARDSHIP",
+        "GRANT DAILY PROVISION",
+        "BLESS ALL WE PERFORM"
+      ],
+      [
+        "OPEN DOORS",
+        "PROVISION"
+      ],
+      "PSALM 90:17"
+    ],
+    [
+      41,
+      46,
+      [
+        "MAY YOUR WISDOM ESTABLISH",
+        "OUR WORK FOR YOUR GLORY",
+        "FOREVER AND EVER"
+      ],
+      [
+        "WISDOM",
+        "GLORY"
+      ],
+      "PSALM 90:17"
+    ],
+    [
+      46,
+      50,
+      [
+        "SUBSCRIBE TO WALK IN",
+        "GOD'S DAILY PROVISION",
+        "TODAY"
+      ],
+      [
+        "SUBSCRIBE",
+        "PROVISION"
+      ],
+      "PSALM 90:17"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Lord, we commit our daily decisions, our hands, and all our labor unto Your faithful care today.",
+      "kind": "phrase",
+      "words": [
+        "COMMIT",
+        "LABOR",
+        "CARE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We bring our work before Your sanctuary table, trusting Your abundant wisdom to guide each step.",
+      "kind": "phrase",
+      "words": [
+        "SANCTUARY",
+        "WISDOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your holy Word promises in Psalm ninety, verse seventeen:",
+      "kind": "phrase",
+      "words": [
+        "WORD",
+        "PROMISES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And let the beauty of the LORD our God be upon us: and establish thou the work of our hands upon us; yea, the work of our hands establish thou it.",
+      "kind": "phrase",
+      "words": [
+        "BEAUTY",
+        "ESTABLISH",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, let Your divine favor rest upon every humble effort and honest endeavor we undertake.",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "FAVOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Open doors of stewardship, grant daily provision, and bless all that our hands perform.",
+      "kind": "phrase",
+      "words": [
+        "OPEN DOORS",
+        "PROVISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May Your wisdom establish our work for Your glory forever.",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "GLORY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to walk in God's daily provision today.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PROVISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 90:17"
+}
