@@ -1,0 +1,281 @@
+{
+  "key": "short-middayisaiah32v2",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "SHADE IN A",
+    "WEARY LAND"
+  ],
+  "poster": [
+    "MIDDAY PRAYER",
+    "ISAIAH 32:2",
+    "PAUSE AT NOON",
+    "FIND REST"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "midday sunlight streaming through window onto quiet wooden desk",
+    "open bible on desk bright noon light soft focus",
+    "desert rock overhang shading dry ground sunlight",
+    "cool clear stream water flowing over stones midday light",
+    "majestic mountain canyon shade sun high above",
+    "peaceful bright midday sky soft white clouds calm blue"
+  ],
+  "scenes": [
+    {
+      "a": "Pause what you are doing right now and rest your heart in this quiet moment.",
+      "img": "short-middayisaiah32v2-scene-01.jpg",
+      "kicker": "ISAIAH 32:2",
+      "sub": "PAUSE AND PRAY AT NOON",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "At noon, when the sun is highest and the workday feels heavy, receive the promise of Isaiah 32 verse 2:",
+      "img": "short-middayisaiah32v2-scene-02.jpg",
+      "kicker": "ISAIAH 32:2",
+      "sub": "A MIDDAY REFUGE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Each will be like a hiding place from the wind, a shelter from the storm,",
+      "img": "short-middayisaiah32v2-scene-03.jpg",
+      "kicker": "ISAIAH 32:2",
+      "sub": "SHELTER FROM THE STORM",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "like streams of water in a dry place, like the shade of a great rock in a weary land.",
+      "img": "short-middayisaiah32v2-scene-04.jpg",
+      "kicker": "ISAIAH 32:2",
+      "sub": "STREAMS IN DRY PLACES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, be our hiding place today. Cool the heat of our daily burdens and refresh our weary souls with Your peace.",
+      "img": "short-middayisaiah32v2-scene-05.jpg",
+      "kicker": "ISAIAH 32:2",
+      "sub": "REFRESH OUR SOULS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Keep us safe beneath the shadow of Your wings. Amen. Subscribe to pause and pray with us daily on The Midday Watch.",
+      "img": "short-middayisaiah32v2-scene-06.jpg",
+      "kicker": "ISAIAH 32:2",
+      "sub": "THE MIDDAY WATCH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      9,
+      "Pause what you are doing right now and rest your heart in this quiet moment."
+    ],
+    [
+      9,
+      19,
+      "At noon, when the sun is highest and the workday feels heavy, receive the promise of Isaiah 32 verse 2:"
+    ],
+    [
+      19,
+      29,
+      "Each will be like a hiding place from the wind, a shelter from the storm,"
+    ],
+    [
+      29,
+      39,
+      "like streams of water in a dry place, like the shade of a great rock in a weary land."
+    ],
+    [
+      39,
+      49,
+      "Lord, be our hiding place today. Cool the heat of our daily burdens and refresh our weary souls with Your peace."
+    ],
+    [
+      49,
+      59,
+      "Keep us safe beneath the shadow of Your wings. Amen. Subscribe to pause and pray with us daily on The Midday Watch."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      9,
+      [
+        "PAUSE WHAT YOU ARE DOING",
+        "REST YOUR HEART",
+        "IN THIS QUIET MOMENT"
+      ],
+      [
+        "REST YOUR HEART"
+      ],
+      "ISAIAH 32 : 2"
+    ],
+    [
+      9,
+      19,
+      [
+        "AT NOON WHEN SUN IS HIGHEST",
+        "AND WORKDAY FEELS HEAVY",
+        "RECEIVE THE PROMISE"
+      ],
+      [
+        "RECEIVE THE PROMISE"
+      ],
+      "ISAIAH 32 : 2"
+    ],
+    [
+      19,
+      29,
+      [
+        "A HIDING PLACE FROM WIND",
+        "A SHELTER FROM THE STORM"
+      ],
+      [
+        "SHELTER FROM THE STORM"
+      ],
+      "ISAIAH 32 : 2"
+    ],
+    [
+      29,
+      39,
+      [
+        "STREAMS OF WATER IN DRY PLACE",
+        "SHADE OF A GREAT ROCK",
+        "IN A WEARY LAND"
+      ],
+      [
+        "SHADE OF A GREAT ROCK"
+      ],
+      "ISAIAH 32 : 2"
+    ],
+    [
+      39,
+      49,
+      [
+        "LORD BE OUR HIDING PLACE",
+        "COOL THE HEAT OF OUR BURDENS",
+        "REFRESH OUR WEARY SOULS"
+      ],
+      [
+        "COOL THE HEAT"
+      ],
+      "ISAIAH 32 : 2"
+    ],
+    [
+      49,
+      59,
+      [
+        "KEEP US SAFE BENEATH YOUR WINGS",
+        "AMEN",
+        "SUBSCRIBE TO PAUSE AND PRAY"
+      ],
+      [
+        "SUBSCRIBE TO PAUSE AND PRAY"
+      ],
+      "THE MIDDAY WATCH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "rest your heart",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "YOUR",
+        "HEART"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "receive the promise",
+      "kind": "phrase",
+      "words": [
+        "RECEIVE",
+        "THE",
+        "PROMISE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "a shelter from the storm",
+      "kind": "phrase",
+      "words": [
+        "SHELTER",
+        "FROM",
+        "THE",
+        "STORM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "shade of a great rock",
+      "kind": "phrase",
+      "words": [
+        "SHADE",
+        "OF",
+        "A",
+        "GREAT",
+        "ROCK"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "refresh our weary souls",
+      "kind": "phrase",
+      "words": [
+        "REFRESH",
+        "OUR",
+        "WEARY",
+        "SOULS"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to pause and pray",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "TO",
+        "PAUSE",
+        "AND",
+        "PRAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 32:2"
+}
