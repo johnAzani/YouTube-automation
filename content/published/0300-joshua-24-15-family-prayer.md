@@ -78,7 +78,9 @@ published_at: "2026-11-11T16:26:15Z"
 youtube_video_id: "NjhW7YUzhis"
 metadata_revision: "selar-seo-v1"
 thumbnail_pending: true
-thumbnail_error: "not_requested"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_retry_after: "2026-11-18T16:28:09Z"
+thumbnail_retry_reason: "permission"
 ---
 
 ## Scene 1 — Gathering Around the Family Altar
