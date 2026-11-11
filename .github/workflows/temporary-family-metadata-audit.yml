@@ -1,0 +1,59 @@
+name: Temporary read-only Family Short metadata audit
+on:
+  push:
+    branches: ["arena/a1370a68-youtube-automation"]
+    paths: [".github/workflows/temporary-family-metadata-audit.yml"]
+permissions:
+  actions: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Read current metadata and inspect historical report
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CLIENT_ID: ${{ secrets.PRAYER5_YOUTUBE_CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.PRAYER5_YOUTUBE_CLIENT_SECRET }}
+          REFRESH_TOKEN: ${{ secrets.PRAYER5_YOUTUBE_REFRESH_TOKEN }}
+          EXPECTED_CHANNEL: ${{ vars.PRAYER5_YOUTUBE_CHANNEL_ID || secrets.PRAYER5_YOUTUBE_CHANNEL_ID }}
+        run: |
+          set -e
+          gh run download 43014992542 --repo johnAzani/YouTube-automation -n release-report-43014992542-prayer5 -D /tmp/old-report >/dev/null 2>/dev/null || echo '::warning::Historical report download failed'
+          python3 - <<'PY'
+          import json, os, pathlib, urllib.parse, urllib.request
+          def request(req):
+              with urllib.request.urlopen(req, timeout=25) as r:
+                  return json.load(r)
+          def notice(title, message):
+              message = str(message).replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A')
+              print(f'::notice title={title}::{message}')
+          try:
+              token = request(urllib.request.Request('https://oauth2.googleapis.com/token', data=urllib.parse.urlencode({
+                  'client_id':os.environ['CLIENT_ID'], 'client_secret':os.environ['CLIENT_SECRET'],
+                  'refresh_token':os.environ['REFRESH_TOKEN'], 'grant_type':'refresh_token'}).encode()))['access_token']
+              headers = {'Authorization':'Bearer ' + token}
+              channels = request(urllib.request.Request('https://www.googleapis.com/youtube/v3/channels?part=id&mine=true', headers=headers)).get('items', [])
+              expected = os.environ['EXPECTED_CHANNEL'].strip()
+              if not expected or len(channels) != 1 or channels[0].get('id') != expected:
+                  raise ValueError('OAuth channel mismatch')
+              videos = request(urllib.request.Request('https://www.googleapis.com/youtube/v3/videos?part=snippet,localizations,status&id=FNRQnoo_-cU', headers=headers)).get('items', [])
+              if len(videos) != 1 or videos[0].get('snippet', {}).get('channelId') != expected:
+                  raise ValueError('Video owner mismatch')
+              video = videos[0]
+              sn = video['snippet']
+              notice('Current Short metadata', json.dumps({'title': sn.get('title'), 'description': sn.get('description'), 'tags':sn.get('tags', []), 'localizations':video.get('localizations', {}), 'privacy':video.get('status', {}).get('privacyStatus')}, ensure_ascii=True))
+          except Exception:
+              print('::error::Read-only metadata lookup failed; no credential or response details logged.')
+              raise SystemExit(1)
+          report = pathlib.Path('/tmp/old-report')
+          names = [str(p.relative_to(report)) for p in report.rglob('*') if p.is_file()]
+          notice('Historical report files', ', '.join(names) or 'none')
+          for path in report.rglob('job_result*.json'):
+              try:
+                  obj = json.loads(path.read_text())
+                  if obj.get('key') == 'short-familyjoshua24v15':
+                      notice('Historical Short result metadata fields', ', '.join(k for k in ('title','description','tags','localizations') if k in obj))
+              except (ValueError, OSError):
+                  pass
+          PY
