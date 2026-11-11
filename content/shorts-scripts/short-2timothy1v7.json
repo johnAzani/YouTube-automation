@@ -1,0 +1,334 @@
+{
+  "key": "short-2timothy1v7",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "A PRAYER FOR",
+    "DEEP PEACE"
+  ],
+  "poster": [
+    "CALM",
+    "YOUR",
+    "RESTLESS",
+    "MIND"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm mountain lake night stars",
+    "gentle river stream moonlight forest",
+    "soft glowing candle dark room",
+    "peaceful mist rolling over quiet hills",
+    "starry night sky gentle breeze trees",
+    "quiet forest night peaceful moonlight",
+    "serene ocean waves gently touching shore",
+    "cozy warm blanket under dim bedroom light"
+  ],
+  "scenes": [
+    {
+      "a": "Close your eyes tonight and take a deep breath.",
+      "img": "short-2timothy1v7-scene-01.jpg",
+      "kicker": "2 TIMOTHY 1:7",
+      "sub": "BREATHE IN DEEPLY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Let every weight of this long day fall away from your shoulders.",
+      "img": "short-2timothy1v7-scene-02.jpg",
+      "kicker": "2 TIMOTHY 1:7",
+      "sub": "RELEASE EVERY WEIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Your heavenly Father watches over your resting place with tender care.",
+      "img": "short-2timothy1v7-scene-03.jpg",
+      "kicker": "2 TIMOTHY 1:7",
+      "sub": "REST IN HIS CARE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For God has not given us a spirit of fear, but of power and of love and of a sound mind.",
+      "img": "short-2timothy1v7-scene-04.jpg",
+      "kicker": "2 TIMOTHY 1:7",
+      "sub": "POWER LOVE AND A SOUND MIND",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.35
+      ]
+    },
+    {
+      "a": "When quiet shadows fall across your room, remember His gentle presence here.",
+      "img": "short-2timothy1v7-scene-05.jpg",
+      "kicker": "2 TIMOTHY 1:7",
+      "sub": "HIS GENTLE PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Cast every anxious thought into His loving hands and drift into deep sleep.",
+      "img": "short-2timothy1v7-scene-06.jpg",
+      "kicker": "2 TIMOTHY 1:7",
+      "sub": "CAST EVERY ANXIETY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May His quiet peace guard your heart all through the long night hours.",
+      "img": "short-2timothy1v7-scene-07.jpg",
+      "kicker": "2 TIMOTHY 1:7",
+      "sub": "GUARD YOUR HEART",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Sleep safely now in Jesus name. Amen.",
+      "img": "short-2timothy1v7-scene-08.jpg",
+      "kicker": "2 TIMOTHY 1:7",
+      "sub": "SLEEP SAFELY NOW",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "Close your eyes tonight and take a deep breath."
+    ],
+    [
+      12,
+      25,
+      "Let every weight of this long day fall away from your shoulders."
+    ],
+    [
+      25,
+      38,
+      "Your heavenly Father watches over your resting place with tender care."
+    ],
+    [
+      38,
+      56,
+      "For God has not given us a spirit of fear, but of power and of love and of a sound mind."
+    ],
+    [
+      56,
+      70,
+      "When quiet shadows fall across your room, remember His gentle presence here."
+    ],
+    [
+      70,
+      83,
+      "Cast every anxious thought into His loving hands and drift into deep sleep."
+    ],
+    [
+      83,
+      96,
+      "May His quiet peace guard your heart all through the long night hours."
+    ],
+    [
+      96,
+      105,
+      "Sleep safely now in Jesus name. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "CLOSE YOUR EYES",
+        "TONIGHT AND TAKE",
+        "A DEEP BREATH"
+      ],
+      "BREATH",
+      "2 TIMOTHY 1:7"
+    ],
+    [
+      12,
+      25,
+      [
+        "LET EVERY WEIGHT",
+        "OF THIS LONG DAY",
+        "FALL AWAY"
+      ],
+      "WEIGHT",
+      "2 TIMOTHY 1:7"
+    ],
+    [
+      25,
+      38,
+      [
+        "YOUR FATHER WATCHES",
+        "OVER YOUR RESTING",
+        "PLACE WITH CARE"
+      ],
+      "RESTING",
+      "2 TIMOTHY 1:7"
+    ],
+    [
+      38,
+      56,
+      [
+        "GOD HAS NOT GIVEN",
+        "US FEAR BUT POWER",
+        "LOVE AND SOUND MIND"
+      ],
+      "POWER",
+      "2 TIMOTHY 1:7"
+    ],
+    [
+      56,
+      70,
+      [
+        "WHEN QUIET SHADOWS",
+        "FALL ACROSS YOUR ROOM",
+        "REMEMBER HIM"
+      ],
+      "SHADOWS",
+      "2 TIMOTHY 1:7"
+    ],
+    [
+      70,
+      83,
+      [
+        "CAST EVERY ANXIOUS",
+        "THOUGHT INTO HIS HANDS",
+        "AND DRIFT TO SLEEP"
+      ],
+      "ANXIOUS",
+      "2 TIMOTHY 1:7"
+    ],
+    [
+      83,
+      96,
+      [
+        "MAY HIS QUIET PEACE",
+        "GUARD YOUR HEART",
+        "THROUGH THE NIGHT"
+      ],
+      "PEACE",
+      "2 TIMOTHY 1:7"
+    ],
+    [
+      96,
+      105,
+      [
+        "SLEEP SAFELY NOW",
+        "IN JESUS NAME",
+        "AMEN"
+      ],
+      "AMEN",
+      "2 TIMOTHY 1:7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Close your eyes tonight and take a deep breath.",
+      "kind": "phrase",
+      "words": [
+        "CLOSE",
+        "BREATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let every weight of this long day fall away from your shoulders.",
+      "kind": "phrase",
+      "words": [
+        "WEIGHT",
+        "AWAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your heavenly Father watches over your resting place with tender care.",
+      "kind": "phrase",
+      "words": [
+        "RESTING",
+        "CARE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For God has not given us a spirit of fear, but of power and of love and of a sound mind.",
+      "kind": "phrase",
+      "words": [
+        "POWER",
+        "MIND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When quiet shadows fall across your room, remember His gentle presence here.",
+      "kind": "phrase",
+      "words": [
+        "SHADOWS",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Cast every anxious thought into His loving hands and drift into deep sleep.",
+      "kind": "phrase",
+      "words": [
+        "ANXIOUS",
+        "SLEEP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May His quiet peace guard your heart all through the long night hours.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "HOURS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Sleep safely now in Jesus name. Amen.",
+      "kind": "phrase",
+      "words": [
+        "SAFELY",
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Timothy 1:7"
+}
