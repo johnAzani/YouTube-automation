@@ -53,13 +53,13 @@
     {
       "late_minutes": 121,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-11T11:48:08+00:00",
+      "ran_at": "2026-11-11T11:48:38+00:00",
       "slot": "2026-11-11T09:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "generated_at": "2026-11-11T12:31:56.794271+00:00",
-  "last_run_at": "2026-11-11T12:31:50+00:00",
+  "generated_at": "2026-11-11T12:33:57.366182+00:00",
+  "last_run_at": "2026-11-11T12:33:17+00:00",
   "on_time": [
     {
       "late_minutes": 8,
