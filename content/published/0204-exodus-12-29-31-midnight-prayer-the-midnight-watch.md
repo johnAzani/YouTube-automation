@@ -2,7 +2,7 @@
 id: '0204'
 title: Exodus 12:29-31 Midnight Prayer | The Midnight Watch
 slug: exodus-12-29-31-midnight-prayer-the-midnight-watch
-status: approved
+status: published
 channel: prayer4
 privacy: public
 format: longform
@@ -80,6 +80,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-11"
+published_at: "2026-11-11T23:53:16Z"
+youtube_video_id: "VmK6eRMwpHU"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Movement 1: Rising at the Midnight Hour
