@@ -53,7 +53,7 @@ class TestEighthChannelRegistration(unittest.TestCase):
         self.assertNotIn("longform:prayer8", health_rows)
         self.assertNotIn("shorts:prayer8", health_rows)
 
-    def test_launch_drafts_and_short_specs_are_safe_and_renderable(self):
+    def test_launch_drafts_and_short_specs_meet_structural_checks(self):
         import json
         import yaml
         from pipeline.script_doc import MIN_LONGFORM_WORDS, parse_script

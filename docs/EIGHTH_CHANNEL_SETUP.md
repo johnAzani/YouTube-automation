@@ -1,6 +1,6 @@
 # Eighth Channel Setup — The Covenant Shield (`prayer8`)
 
-Status: **Registered (`provisioned=False`); four long-form scripts and companion Shorts are drafts awaiting review.** The owner has shown the five secret names in GitHub, but their values and the connected YouTube account have not been verified.
+Status: **Registered (`provisioned=False`); four long-form scripts and companion Shorts are drafts awaiting review.** The owner has shown the five secret names in GitHub. A [read-only diagnostic](https://github.com/johnAzani/YouTube-automation/actions/runs/43005673639) successfully refreshed OAuth, matched the authorized account to the configured Channel ID, and listed Gemini models. This does not independently confirm that the configured ID is the intended Studio channel, or verify generation, TTS, quota, or billing.
 Every line of code, editorial & theological equipment, 30-scripture divine protection, safe-keeping & strong-tower roadmap (`0600`–`0629`),
 Shorts namespacing (`short-shield…`), CTR thumbnail pack (`fortress` Imperial Tabernacle Purple & Burnished Shield-Gold grade),
 Community Tab schedule, ES/PT localizations, bespoke brand artwork (`docs/media/covenant-shield-*.png`),
@@ -50,6 +50,6 @@ In **GitHub -> Settings -> Secrets and variables -> Actions -> New repository se
 ---
 
 ## Step 4 — Activate Live Daily Publishing
-Review the four drafts `0600`–`0603` in `content/queue/`, using the matching `content/factcheck/` worksheets, and the four companion Shorts in `content/shorts-scripts/` and `content/shorts-queue/`. The worksheets are generated checklists, not fact verification. After human review and approval, verify the OAuth account and all credentials, mark the content approved, flip `provisioned=True`, and only then run the debut.
+Review the four drafts `0600`–`0603` in `content/queue/`, using the matching `content/factcheck/` worksheets, and the four companion Shorts in `content/shorts-scripts/` and `content/shorts-queue/`. The worksheets are generated checklists, not fact verification. Confirm in YouTube Studio that the channel ID configured in GitHub belongs to the intended channel; the diagnostic only proves the configured ID matches the OAuth account. After human review and approval, mark the content approved, flip `provisioned=True`, and only then run the debut. TTS and publishing must still be validated through production execution.
 
 **Important:** the current `produce.yml` schedule independently selects `prayer8` when its refresh-token secret is present; `provisioned=False` is not a global off switch. Review scheduled Actions as well as channel settings before relying on this status to pause publishing.
