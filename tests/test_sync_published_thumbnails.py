@@ -322,8 +322,15 @@ class TestChannelScopedThumbnailRepair(unittest.TestCase):
         self.assertNotIn("thumbnail_revision", doc.meta)
         self.assertTrue(doc.meta.get("thumbnail_pending"))
         self.assertIn("insufficientPermissions", str(doc.meta.get("thumbnail_error")))
-        # Still pending, so the next monitor pass retries it.
+        # The failure remains pending, but repeated monitor passes must respect
+        # the cooldown. A targeted post-verification retry can bypass only this
+        # permission cooldown.
+        self.assertEqual(doc.meta.get("thumbnail_retry_reason"), "permission")
         pending = spt.collect_pending_receipts(published_dir=self.pub_dir, channel_id="prayer2")
+        self.assertEqual(pending, [])
+        pending = spt.collect_pending_receipts(
+            published_dir=self.pub_dir, channel_id="prayer2", retry_permission=True
+        )
         self.assertEqual([d.id for _, d in pending], ["0036"])
 
     def test_a_repaired_thumbnail_is_stamped_and_retires_the_pending_flag(self):
