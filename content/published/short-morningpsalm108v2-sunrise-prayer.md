@@ -19,12 +19,12 @@ width: 720
 height: 1280
 duration_seconds: 58.29
 scenes_verified: 7
-thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunrise Prayer; long_uploads_status=allowed; video_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; video_channel_title=The Morning Altar | Daily Sunrise Prayer; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_pending: false
 thumbnail_poster: ["AWAKEN THE DAWN", "START YOUR DAY", "IN GOD'S PRESENCE", "PSALM 108:2"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-11T14:10:57Z"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
 ---
 
 Open your eyes to the gentle light of morning and take a deep, quiet breath as a new day begins. Scripture speaks in Psalm 108:2: Awake, harp and lyre! I myself will awaken the dawn. Lord, as golden light breaks over the earth, we awaken our hearts to praise your holy name. Stir within us a soft song of gratitude, lifting every care and burden into your boundless peace. May your truth guide our steps today, and may your steadfast grace cover all that lies ahead. We dedicate every moment of this morning to you, resting in your eternal love. Thank you for new mercies today. Subscribe to step into every sunrise with prayer.
