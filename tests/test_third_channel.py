@@ -143,9 +143,16 @@ class TestTheWorkflowsKnowIt(unittest.TestCase):
         for name in uploaders:
             with self.subTest(workflow=name):
                 text = self.wf(name)
-                self.assertIn("secrets.PRAYER3_YOUTUBE_CLIENT_ID", text)
-                self.assertIn("secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN", text)
-                self.assertIn("secrets.PRAYER3_YOUTUBE_CLIENT_SECRET", text)
+                if name == "produce.yml":
+                    import yaml
+                    env = yaml.safe_load(text)["jobs"]["produce"]["env"]
+                    for key in ("YOUTUBE_CLIENT_ID", "YOUTUBE_REFRESH_TOKEN", "YOUTUBE_CLIENT_SECRET"):
+                        self.assertIn('"prayer3":"PRAYER3_"', env[key])
+                        self.assertIn("secrets[format(", env[key])
+                else:
+                    self.assertIn("secrets.PRAYER3_YOUTUBE_CLIENT_ID", text)
+                    self.assertIn("secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN", text)
+                    self.assertIn("secrets.PRAYER3_YOUTUBE_CLIENT_SECRET", text)
         brain = self.wf("gemini_brain.yml")
         self.assertIn("secrets.PRAYER3_GEMINI_API_KEY", brain)
         self.assertNotIn("secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN", brain,
