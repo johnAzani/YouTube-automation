@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T22:52:11Z",
+  "generated_at": "2026-11-11T23:00:30Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 101,
+    "published_total": 102,
     "published_longform": 45,
-    "published_shorts": 56,
-    "public_total": 99,
+    "published_shorts": 57,
+    "public_total": 100,
     "queued_longform": 52,
-    "queued_shorts": 37,
+    "queued_shorts": 36,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -166,32 +166,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 21,
+        "published_total": 22,
         "published_longform": 10,
-        "published_shorts": 11,
-        "public_total": 21,
+        "published_shorts": 12,
+        "public_total": 22,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0084",
-        "title": "Acts 10:9 Midday Prayer | The Midday Watch",
-        "format": "longform",
-        "youtube_video_id": "VGKbJSzRZ28",
-        "watch_url": "https://youtu.be/VGKbJSzRZ28",
+        "id": "SHORT-MIDDAYPSALM121V5",
+        "title": "Say This Psalm 121:5-6 Prayer at Noon | Midday Peace #Shorts",
+        "format": "short",
+        "youtube_video_id": "qFR-b15Sy8Q",
+        "watch_url": "https://www.youtube.com/shorts/qFR-b15Sy8Q",
         "published_on": "2026-11-11",
-        "published_at": "2026-11-11T21:04:27Z"
+        "published_at": "2026-11-11T22:58:53Z"
       },
       "next_queued_longform": {
         "id": "0085",
         "title": "Psalm 37:6 Clear as the Noonday Prayer | The Midday Watch",
         "words": 2261,
-        "status": "approved"
+        "status": "quota_paused"
       },
       "next_queued_short": {
-        "short": "short-middaypsalm121v5",
-        "scripture": "Psalm 121:5-6",
+        "short": "short-middayisaiah49v10",
+        "scripture": "Isaiah 49:10",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -491,6 +491,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYPSALM121V5",
+      "slug": "short-middaypsalm121v5-midday-prayer",
+      "file": "short-middaypsalm121v5-midday-prayer.md",
+      "title": "Say This Psalm 121:5-6 Prayer at Noon | Midday Peace #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T22:58:53Z",
+      "youtube_video_id": "qFR-b15Sy8Q",
+      "watch_url": "https://www.youtube.com/shorts/qFR-b15Sy8Q",
+      "youtu_be_url": "https://youtu.be/qFR-b15Sy8Q",
+      "shorts_url": "https://www.youtube.com/shorts/qFR-b15Sy8Q",
+      "studio_url": "https://studio.youtube.com/video/qFR-b15Sy8Q/edit",
+      "thumb_url": "https://i.ytimg.com/vi/qFR-b15Sy8Q/hqdefault.jpg",
+      "thumb_text": "THE MIDDAY WATCH \u00b7 PAUSE AND PRAY",
+      "duration_label": "54s",
+      "words": 591
+    },
     {
       "id": "0060",
       "slug": "exodus-16-21-morning-prayer",
@@ -3097,7 +3120,7 @@
         "title": "Psalm 37:6 Clear as the Noonday Prayer | The Midday Watch",
         "channel": "prayer3",
         "channel_name": "The Midday Watch",
-        "status": "approved",
+        "status": "quota_paused",
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,
@@ -3560,17 +3583,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-middaypsalm121v5",
-        "file": "0086-short-middaypsalm121v5.yml",
-        "companion_longform_id": "0086",
-        "scripture": "Psalm 121:5-6",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middayisaiah49v10",
