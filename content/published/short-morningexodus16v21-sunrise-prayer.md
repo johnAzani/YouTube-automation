@@ -24,6 +24,7 @@ thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently.
 thumbnail_poster: ["THE MORNING ALTAR", "EXODUS 16:21", "A SACRED STILLNESS", "BEGIN YOUR DAY HERE"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-11T16:37:16Z"
 ---
 
 Step into the stillness of this morning as the sun begins to rise over the quiet earth. Exodus 16:21 says, every morning they gathered it, as much as each needed, but when the sun grew hot, it melted away. May you find your portion of grace today, gathered in the cool hours of this early morning light. You do not need to hurry or store up for tomorrow, for the Creator provides exactly what you need. Let your heart be filled with this truth, finding comfort in the simple rhythm of gathering his mercy. As the light grows bright, may you trust that your cup is full and your path is prepared today. Walk in this quiet rhythm, knowing that grace is new and sufficient for every demand you will face. Surrender your plans, receive his peace, and subscribe to join us at the altar every single sunrise.

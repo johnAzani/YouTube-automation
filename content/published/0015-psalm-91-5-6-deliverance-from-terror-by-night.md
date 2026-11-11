@@ -100,8 +100,9 @@ published_on: "2026-11-11"
 published_at: "2026-11-11T08:39:03Z"
 youtube_video_id: "rb6X37vQt7o"
 metadata_revision: "selar-seo-v1"
-thumbnail_pending: true
-thumbnail_error: "not_requested"
+thumbnail_pending: false
+
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Terror by Night (Verses 5–6)
