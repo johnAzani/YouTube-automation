@@ -130,6 +130,13 @@ HARVEST_BRONZE = Palette("harvest-bronze", (26, 10, 15), (92, 48, 26), (255, 228
 HARVEST_SANCTUARY = Palette("harvest-sanctuary", (34, 13, 19), (122, 66, 32), (255, 232, 166),
                             (252, 214, 102), (254, 249, 238))
 
+FORTRESS_AMETHYST = Palette("fortress-amethyst", (22, 10, 36), (86, 44, 104), (254, 224, 146),
+                            (250, 208, 92), (254, 250, 240))
+FORTRESS_BRONZE = Palette("fortress-bronze", (20, 9, 32), (76, 40, 92), (255, 228, 156),
+                          (252, 212, 98), (254, 250, 240))
+FORTRESS_SANCTUARY = Palette("fortress-sanctuary", (26, 12, 42), (96, 50, 114), (255, 232, 168),
+                             (252, 216, 104), (254, 250, 240))
+
 _NOCTURNAL_GRADES = ("night", "midnight")
 
 
@@ -316,6 +323,30 @@ HARVEST_VARIANTS = (
     ),
 )
 
+FORTRESS_VARIANTS = (
+    CtrVariant(
+        label="hook", concept="imperative — GUARD MY STEPS",
+        hero="GUARD MY STEPS", palette=FORTRESS_AMETHYST,
+        moon=(0.772, 0.395), moon_scale=0.205, horizon=0.734, dawn=0.76,
+        rays=True, seed=2201, text_box=(86, 84, 690, 470), house=(0.310, 0.160),
+        grade="fortress",
+    ),
+    CtrVariant(
+        label="quiet", concept="curiosity — STRONG TOWER",
+        hero="STRONG TOWER", palette=FORTRESS_BRONZE,
+        moon=(0.796, 0.382), moon_scale=0.194, horizon=0.760, dawn=0.58,
+        rays=True, seed=2302, text_box=(86, 84, 706, 470), house=(0.300, 0.162),
+        grade="fortress",
+    ),
+    CtrVariant(
+        label="poster", concept="textless — royal fortress watchtower sanctuary",
+        hero=None, palette=FORTRESS_SANCTUARY,
+        moon=(0.552, 0.432), moon_scale=0.232, horizon=0.700, dawn=0.82,
+        rays=True, seed=2403, text_box=(0, 0, 0, 0), house=(0.218, 0.172),
+        grade="fortress",
+    ),
+)
+
 
 def variants_for_channel(channel_id: str | None = None) -> tuple["CtrVariant", ...]:
     """Select the 16:9 CTR variant pack matching `channel_id`'s daypart grade."""
@@ -337,6 +368,8 @@ def variants_for_channel(channel_id: str | None = None) -> tuple["CtrVariant", .
         base = BALM_VARIANTS
     elif grade == "harvest":
         base = HARVEST_VARIANTS
+    elif grade == "fortress":
+        base = FORTRESS_VARIANTS
     else:
         return CTR_VARIANTS
     return (

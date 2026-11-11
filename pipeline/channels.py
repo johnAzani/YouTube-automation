@@ -173,6 +173,21 @@ CHANNELS: dict[str, ChannelProfile] = {
         include_sanctuary_links=False,
         provisioned=True,
     ),
+    "prayer8": ChannelProfile(
+        id="prayer8",
+        display_name="The Covenant Shield",
+        handle="@TheCovenantShieldDaily",
+        secret_prefix="PRAYER8_",
+        # Owner decision, 2026-11-11: eighth prayer channel dedicated to daily
+        # KJV divine protection, safe going out and coming in, spiritual covering,
+        # and strong-tower refuge (Psalm 121:7-8 / Genesis 15:1 / Ephesians 6:16).
+        # Kept provisioned=False until @TheCovenantShieldDaily is created on
+        # YouTube and PRAYER8_* secrets are saved in GitHub Secrets.
+        default_privacy="public",
+        auto_publish=True,
+        include_sanctuary_links=False,
+        provisioned=False,
+    ),
 }
 
 # Friendly aliases accepted in frontmatter / workflow inputs.
@@ -207,6 +222,12 @@ _ALIASES = {
     "stewardship": "prayer7",
     "open-doors": "prayer7",
     "channel7": "prayer7",
+    "shield": "prayer8",
+    "covenant-shield": "prayer8",
+    "the-covenant-shield": "prayer8",
+    "protection": "prayer8",
+    "strong-tower": "prayer8",
+    "channel8": "prayer8",
 }
 
 
