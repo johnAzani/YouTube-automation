@@ -181,8 +181,8 @@ CHANNELS: dict[str, ChannelProfile] = {
         # Owner decision, 2026-11-11: eighth prayer channel dedicated to daily
         # KJV divine protection, safe going out and coming in, spiritual covering,
         # and strong-tower refuge (Psalm 121:7-8 / Genesis 15:1 / Ephesians 6:16).
-        # Kept provisioned=False until @TheCovenantShieldDaily is created on
-        # YouTube and PRAYER8_* secrets are saved in GitHub Secrets.
+        # Activation remains pending review of the launch scripts and validation
+        # of the isolated PRAYER8_* credentials.
         default_privacy="public",
         auto_publish=True,
         include_sanctuary_links=False,

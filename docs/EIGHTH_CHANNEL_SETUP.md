@@ -1,6 +1,6 @@
 # Eighth Channel Setup — The Covenant Shield (`prayer8`)
 
-Status: **REGISTERED (`provisioned=False` pending YouTube Studio & `PRAYER8_*` credentials).**
+Status: **Registered (`provisioned=False`); four long-form scripts and companion Shorts are drafts awaiting review.** The owner has shown the five secret names in GitHub, but their values and the connected YouTube account have not been verified.
 Every line of code, editorial & theological equipment, 30-scripture divine protection, safe-keeping & strong-tower roadmap (`0600`–`0629`),
 Shorts namespacing (`short-shield…`), CTR thumbnail pack (`fortress` Imperial Tabernacle Purple & Burnished Shield-Gold grade),
 Community Tab schedule, ES/PT localizations, bespoke brand artwork (`docs/media/covenant-shield-*.png`),
@@ -50,4 +50,6 @@ In **GitHub -> Settings -> Secrets and variables -> Actions -> New repository se
 ---
 
 ## Step 4 — Activate Live Daily Publishing
-Once those 5 secrets are saved, reply **"Activate Channel 8"** and we will flip `provisioned=True` on `prayer8`, seed your Day-1 queue (`0600`–`0603` long-form prayers + 4 Shorts), and fire the debut upload!
+Review the four drafts `0600`–`0603` in `content/queue/`, using the matching `content/factcheck/` worksheets, and the four companion Shorts in `content/shorts-scripts/` and `content/shorts-queue/`. The worksheets are generated checklists, not fact verification. After human review and approval, verify the OAuth account and all credentials, mark the content approved, flip `provisioned=True`, and only then run the debut.
+
+**Important:** the current `produce.yml` schedule independently selects `prayer8` when its refresh-token secret is present; `provisioned=False` is not a global off switch. Review scheduled Actions as well as channel settings before relying on this status to pause publishing.

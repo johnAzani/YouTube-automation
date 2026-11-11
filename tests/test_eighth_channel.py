@@ -45,13 +45,39 @@ class TestEighthChannelRegistration(unittest.TestCase):
         ):
             self.assertEqual(normalize_channel_id(alias), "prayer8")
 
-    def test_unprovisioned_channel_waits_quietly_until_secrets_exist(self):
+    def test_channel_waits_for_launch_review(self):
         ch = get_channel("prayer8")
         self.assertFalse(ch.provisioned)
         self.assertNotIn("prayer8", scheduled_channels())
         health_rows = {row["queue"]: row for row in queue_health()}
         self.assertNotIn("longform:prayer8", health_rows)
         self.assertNotIn("shorts:prayer8", health_rows)
+
+    def test_launch_drafts_and_short_specs_are_safe_and_renderable(self):
+        import json
+        import yaml
+        from pipeline.script_doc import MIN_LONGFORM_WORDS, parse_script
+        from pipeline.short_script import validate_spec
+        from pipeline import thumbnail_ctr
+        from PIL import ImageDraw
+
+        draw = ImageDraw.Draw(Image.new("RGB", (1280, 720)))
+        for ident in ("0600", "0601", "0602", "0603"):
+            with self.subTest(job=ident):
+                script = next((ROOT / "content" / "queue").glob(f"{ident}-*.md"))
+                doc = parse_script(script)
+                self.assertEqual(doc.status, "draft")
+                self.assertEqual(doc.channel, "prayer8")
+                self.assertGreaterEqual(doc.word_count, MIN_LONGFORM_WORDS)
+                self.assertGreaterEqual(thumbnail_ctr._layout(draw, doc.meta["thumb_text"], (86, 76, 746, 568))[-1], 105)
+                self.assertTrue((ROOT / "content" / "factcheck" / script.name).is_file())
+                manifest = next((ROOT / "content" / "shorts-queue").glob(f"{ident}-*.yml"))
+                entry = yaml.safe_load(manifest.read_text())
+                self.assertEqual(entry["status"], "draft")
+                self.assertEqual(entry["channel"], "prayer8")
+                data = json.loads((ROOT / "content" / "shorts-scripts" / f"{entry['short']}.json").read_text())
+                self.assertFalse(validate_spec(data).problems)
+
 
 
 class TestEighthChannelIdentityAndVisuals(unittest.TestCase):

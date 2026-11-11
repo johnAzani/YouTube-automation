@@ -1,0 +1,275 @@
+{
+  "key": "short-shieldephesians6v16",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "PROTECTION PRAYER",
+    "EPHESIANS 6:16"
+  ],
+  "poster": [
+    "THE COVENANT SHIELD",
+    "SHIELD OF FAITH",
+    "EPHESIANS 6:16",
+    "PROTECTION PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — daily protection prayer"
+  ],
+  "stock_queries": [
+    "sunlight breaking through clouds mountain pass",
+    "golden light rays through clouds over mountain peak",
+    "divine light breaking through clouds over peaceful landscape",
+    "peaceful mountain river calm water forest",
+    "ancient chapel interior candlelight peaceful sanctuary",
+    "forest sunlight mist",
+    "serene valley stream morning light peaceful"
+  ],
+  "scenes": [
+    {
+      "a": "Before the pressures of the day arrive, pause and ask God to strengthen your heart and mind.",
+      "img": "short-shieldephesians6v16-scene-01.jpg",
+      "kicker": "EPHESIANS 6:16",
+      "sub": "BRING YOUR FEARS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Ephesians chapter six, verse sixteen says, Above all, taking the shield of faith, wherewith ye shall be able to quench all the fiery darts of the wicked.",
+      "img": "short-shieldephesians6v16-scene-02.jpg",
+      "kicker": "EPHESIANS 6:16",
+      "sub": "HEAR THE WORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Faith is not a promise that life will be easy. It is an invitation to trust God through the struggle.",
+      "img": "short-shieldephesians6v16-scene-03.jpg",
+      "kicker": "EPHESIANS 6:16",
+      "sub": "TRUST THE LORD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord, help us stand in truth, walk in peace, and hold fast to the hope of salvation in Christ.",
+      "img": "short-shieldephesians6v16-scene-04.jpg",
+      "kicker": "EPHESIANS 6:16",
+      "sub": "FATHER BE NEAR",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "When discouragement comes, remind us of Your promises and teach us to answer fear with prayer.",
+      "img": "short-shieldephesians6v16-scene-05.jpg",
+      "kicker": "EPHESIANS 6:16",
+      "sub": "GIVE US WISDOM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Give us wisdom for today’s choices and compassion for every person who needs encouragement along the way.",
+      "img": "short-shieldephesians6v16-scene-06.jpg",
+      "kicker": "EPHESIANS 6:16",
+      "sub": "PEACE IN CHRIST",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Type Amen and subscribe to The Covenant Shield for daily prayer and encouragement in God’s keeping.",
+      "img": "short-shieldephesians6v16-scene-07.jpg",
+      "kicker": "COVENANT SHIELD",
+      "sub": "DAILY PROTECTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Before the pressures of the day arrive, pause and ask God to strengthen your heart and mind."
+    ],
+    [
+      9,
+      17,
+      "Ephesians chapter six, verse sixteen says, Above all, taking the shield of faith, wherewith ye shall be able to quench all the fiery darts of the wicked."
+    ],
+    [
+      18,
+      26,
+      "Faith is not a promise that life will be easy. It is an invitation to trust God through the struggle."
+    ],
+    [
+      27,
+      35,
+      "Lord, help us stand in truth, walk in peace, and hold fast to the hope of salvation in Christ."
+    ],
+    [
+      36,
+      44,
+      "When discouragement comes, remind us of Your promises and teach us to answer fear with prayer."
+    ],
+    [
+      45,
+      53,
+      "Give us wisdom for today’s choices and compassion for every person who needs encouragement along the way."
+    ],
+    [
+      54,
+      62,
+      "Type Amen and subscribe to The Covenant Shield for daily prayer and encouragement in God’s keeping."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "BRING YOUR FEARS"
+      ],
+      [],
+      "EPHESIANS 6:16"
+    ],
+    [
+      9,
+      17,
+      [
+        "HEAR THE WORD"
+      ],
+      [],
+      "EPHESIANS 6:16"
+    ],
+    [
+      18,
+      26,
+      [
+        "TRUST THE LORD"
+      ],
+      [],
+      "EPHESIANS 6:16"
+    ],
+    [
+      27,
+      35,
+      [
+        "FATHER BE NEAR"
+      ],
+      [],
+      "EPHESIANS 6:16"
+    ],
+    [
+      36,
+      44,
+      [
+        "GIVE US WISDOM"
+      ],
+      [],
+      "EPHESIANS 6:16"
+    ],
+    [
+      45,
+      53,
+      [
+        "PEACE IN CHRIST"
+      ],
+      [],
+      "EPHESIANS 6:16"
+    ],
+    [
+      54,
+      62,
+      [
+        "DAILY PROTECTION"
+      ],
+      [],
+      "EPHESIANS 6:16"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Before the pressures of the day arrive, pause and ask God to strengthen your heart and mind.",
+      "kind": "phrase",
+      "words": [
+        "BRING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Ephesians chapter six, verse sixteen says, Above all, taking the shield of faith, wherewith ye shall be able to quench all the fiery darts of the wicked.",
+      "kind": "phrase",
+      "words": [
+        "HEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Faith is not a promise that life will be easy. It is an invitation to trust God through the struggle.",
+      "kind": "phrase",
+      "words": [
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, help us stand in truth, walk in peace, and hold fast to the hope of salvation in Christ.",
+      "kind": "phrase",
+      "words": [
+        "FATHER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When discouragement comes, remind us of Your promises and teach us to answer fear with prayer.",
+      "kind": "phrase",
+      "words": [
+        "GIVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Give us wisdom for today’s choices and compassion for every person who needs encouragement along the way.",
+      "kind": "phrase",
+      "words": [
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Type Amen and subscribe to The Covenant Shield for daily prayer and encouragement in God’s keeping.",
+      "kind": "phrase",
+      "words": [
+        "DAILY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Ephesians 6:16"
+}
