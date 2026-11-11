@@ -89,8 +89,9 @@ published_on: "2026-11-11"
 published_at: "2026-11-11T18:11:38Z"
 youtube_video_id: "dgvGl0EZyYE"
 metadata_revision: "selar-seo-v1"
-thumbnail_pending: true
-thumbnail_error: "not_requested"
+thumbnail_pending: false
+
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — He Shall Give His Angels Charge (Verse 11a)
