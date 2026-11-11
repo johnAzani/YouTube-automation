@@ -249,6 +249,14 @@ _PROVISION_TABLE_COMMENT = (
     "our pastoral prayer team intercedes over every petition. My cup runneth over! 🙏✨{footer}"
 )
 
+_COVENANT_SHIELD_COMMENT = (
+    "🛡️ Beloved friend, if you are stepping out today under the shadow of the Almighty, "
+    "write 'AMEN' in faith to stand upon God's promise of {theme}.\n\n"
+    "📖 {scripture_hook}\n\n"
+    "Share the journey, household step, or concern you are placing under the Lord's shield below — "
+    "our pastoral prayer team intercedes over every petition. The LORD is our strong tower! 🙏✨{footer}"
+)
+
 _BRANDS: dict[str, Brand] = {
     "secret-place": Brand(
         channel_id="secret-place",
@@ -283,6 +291,9 @@ _BRANDS: dict[str, Brand] = {
             "The Provision Table",
             "@TheProvisionTableDaily",
             "walk in God's daily wisdom and provision",
+            "The Covenant Shield",
+            "@TheCovenantShieldDaily",
+            "walk under God's daily covering and protection",
         ),
         authoring_directive=(
             "CHANNEL: The Secret Place (secret-place) - night prayer, never a morning devotional.",
@@ -414,6 +425,9 @@ _BRANDS: dict[str, Brand] = {
             "The Provision Table",
             "@TheProvisionTableDaily",
             "walk in God's daily wisdom and provision",
+            "The Covenant Shield",
+            "@TheCovenantShieldDaily",
+            "walk under God's daily covering and protection",
         ),
         authoring_directive=(
             "CHANNEL: The Morning Altar (prayer2) - sunrise, never bedtime.",
@@ -661,6 +675,9 @@ _BRANDS: dict[str, Brand] = {
             "The Provision Table",
             "@TheProvisionTableDaily",
             "walk in God's daily wisdom and provision",
+            "The Covenant Shield",
+            "@TheCovenantShieldDaily",
+            "walk under God's daily covering and protection",
         ),
         authoring_directive=(
             "CHANNEL: The Midday Watch (prayer3) - the middle of the day, never bedtime and "
@@ -904,6 +921,9 @@ _BRANDS: dict[str, Brand] = {
             "The Provision Table",
             "@TheProvisionTableDaily",
             "walk in God's daily wisdom and provision",
+            "The Covenant Shield",
+            "@TheCovenantShieldDaily",
+            "walk under God's daily covering and protection",
         ),
         authoring_directive=(
             "CHANNEL: The Midnight Watch (prayer4) - wakeful 12:00 AM midnight watch & "
@@ -1147,6 +1167,9 @@ _BRANDS: dict[str, Brand] = {
             "The Provision Table",
             "@TheProvisionTableDaily",
             "walk in God's daily wisdom and provision",
+            "The Covenant Shield",
+            "@TheCovenantShieldDaily",
+            "walk under God's daily covering and protection",
         ),
         authoring_directive=(
             "CHANNEL: The Family Altar (prayer5) - daily Christian household, marriage, "
@@ -1390,6 +1413,9 @@ _BRANDS: dict[str, Brand] = {
             "The Provision Table",
             "@TheProvisionTableDaily",
             "walk in God's daily wisdom and provision",
+            "The Covenant Shield",
+            "@TheCovenantShieldDaily",
+            "walk under God's daily covering and protection",
         ),
         authoring_directive=(
             "CHANNEL: The Healing Balm (prayer6) - daily KJV divine healing, comfort for the "
@@ -1636,6 +1662,9 @@ _BRANDS: dict[str, Brand] = {
             "stand on the watchtower in midnight prayer",
             "cover your home and family in daily prayer",
             "receive God's healing peace in daily prayer",
+            "The Covenant Shield",
+            "@TheCovenantShieldDaily",
+            "walk under God's daily covering and protection",
         ),
         authoring_directive=(
             "CHANNEL: The Provision Table (prayer7) - daily KJV wisdom, open doors, "
@@ -1852,6 +1881,258 @@ _BRANDS: dict[str, Brand] = {
         ctr_hook_hero="OPEN THIS DOOR",
         ctr_quiet_hero="CUP RUNNETH OVER",
     ),
+    "prayer8": Brand(
+        channel_id="prayer8",
+        display_name="The Covenant Shield",
+        handle="@TheCovenantShieldDaily",
+        declaration="prayer8",
+        title_suffix="| The Covenant Shield",
+        producer_line="Produced by The Covenant Shield | Daily Divine Protection & Refuge Prayer.",
+        closing_cta=(
+            "Type Amen to agree with this prayer, and subscribe to The Covenant Shield "
+            "to walk under God's daily covering and protection."
+        ),
+        required_phrases=("The Covenant Shield",),
+        forbidden_phrases=(
+            "The Secret Place",
+            "@TheSecretPlace",
+            "The Morning Altar",
+            "@TheMorningAltarDaily",
+            "The Midday Watch",
+            "@TheMiddayWatch",
+            "The Midnight Watch",
+            "@TheMidnightWatchDaily",
+            "The Family Altar",
+            "@TheFamilyAltarDaily",
+            "The Healing Balm",
+            "@TheHealingBalmDaily",
+            "The Provision Table",
+            "@TheProvisionTableDaily",
+            "before you sleep",
+            "bedtime prayer",
+            "prayer before sleep",
+            "begin every sunrise with us",
+            "pause and pray with us at noon",
+            "stand on the watchtower in midnight prayer",
+            "cover your home and family in daily prayer",
+            "receive God's healing peace in daily prayer",
+            "walk in God's daily wisdom and provision",
+        ),
+        authoring_directive=(
+            "CHANNEL: The Covenant Shield (prayer8) - daily KJV divine protection, safe going out "
+            "and coming in, spiritual covering, and strong-tower refuge prayer (Psalm 121:7-8 / "
+            "Genesis 15:1 / Ephesians 6:16), never sleep/bedtime, never sunrise-altar, never "
+            "midday-watch, never midnight-watch, never family-altar, never healing-balm, and never "
+            "provision-table branding.",
+            "Frontmatter MUST include exactly: channel: prayer8",
+            "Title MUST end with: | The Covenant Shield",
+            'Tags MUST include "prayer for protection" and "the covenant shield"; never sleep, '
+            "bedtime, sunrise, midday, midnight-watch, family-altar, healing-balm, or provision-table branding.",
+            "Description MUST credit: Produced by The Covenant Shield | Daily Divine Protection & Refuge Prayer.",
+            "Scenes follow the 6-movement Covenant Protection & Strong-Tower rubric (rooted in Christ's "
+            "faithful keeping and the whole armour of God — zero superstition or fearmongering) and end with: "
+            '"Type Amen to agree with this prayer, and subscribe to The Covenant Shield to walk under '
+            "God's daily covering and protection.\"",
+            "Asset queries MUST be sunlit mountain passes, ancient stone sanctuary arches, golden light "
+            "rays through clouds, peaceful rivers, or forest mist landscapes.",
+        ),
+        short_title_template="Pray This {label} Prayer for Divine Protection | {hook}",
+        subscribe_heading="🛡️ WALK UNDER GOD'S DAILY COVERING & PROTECTION",
+        short_target_window_utc="08:44",
+        short_channel_label=(
+            "a faceless KJV divine protection, safe-keeping, and strong-tower refuge prayer channel called The Covenant Shield"
+        ),
+        short_prayer_kind="protection",
+        short_opening="place every step, journey, and unseen concern under the shadow of the Almighty",
+        short_imagery="sunlit mountain passes, ancient stone watchtowers, golden light rays through clouds, or peaceful rivers",
+        short_tags=(
+            "prayer for protection",
+            "psalm 121 prayer",
+            "psalm 91 protection prayer",
+            "armor of god prayer",
+            "the covenant shield",
+        ),
+        short_hashtags="#Shorts #{tag_key} #PrayerForProtection #Psalm121 #GodsCovering #TheCovenantShield",
+        short_end_card="The Covenant Shield — walk under God's daily covering",
+        short_key_namespace="shield",
+        comment_persona="the pastoral prayer team at The Covenant Shield",
+        comment_farewell="May the Keeper of Israel preserve your going out and your coming in today and always.",
+        shorts_poster_kicker="THE LORD IS THY KEEPER",
+        longform_pinned_comment=_COVENANT_SHIELD_COMMENT,
+        short_pinned_comment=(
+            "🛡️ PRAY THE FULL KJV DIVINE PROTECTION PRAYER:\n"
+            "Tap the linked full-length prayer right above this title (or visit {handle}) "
+            "to pray the complete covenant promise of {scripture} in faith:\n"
+            "👉 {url}\n\n"
+            "Write 'AMEN' in faith and share the journey, step, or need you are placing under "
+            "the Lord's covering today — He neither slumbers nor sleeps! 🙏🛡️✨{footer}"
+        ),
+        longform_prayer_label="Protection Prayer",
+        seo_hook_template=(
+            "Stand at {display_name} in {scripture} (KJV) "
+            "to pray for divine protection, safe travel, angelic covering, and strong-tower refuge."
+        ),
+        verified_commons_queries=(
+            ("sunlight breaking through clouds mountain pass", 3, "3x Public domain — USFS Rocky Mountain National Forest crepuscular ray scans"),
+            ("golden light rays through clouds over mountain peak", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("divine light breaking through clouds over peaceful landscape", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("ancient chapel interior candlelight peaceful sanctuary", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("peaceful mountain river calm water forest", 4, "4x Public domain — NPS mountain stream and river scans"),
+            ("forest sunlight mist", 3, "3x Public domain — USFS forest crepuscular ray and mist photography"),
+        ),
+        feedback_artifact_name="performance_feedback_prayer8.json",
+        anchor_video=None,
+        series_playlists=(
+            (
+                "going_out_and_coming_in_prayers",
+                "Prayers for Daily Protection, Travel & Safe Keeping (KJV) — The Covenant Shield",
+                "Daily KJV scripture prayers anchored in Psalm 121:7-8, Proverbs 3:21-26, and Psalm 34:7 "
+                "covering commutes, journeys, workplaces, and footsteps.\n\n"
+                "Produced by The Covenant Shield | Daily Divine Protection & Refuge Prayer.",
+                ("protection", "psalm 121", "safe travel", "going out", "angel of the lord"),
+            ),
+            (
+                "armor_of_god_and_shield_prayers",
+                "Prayers for the Whole Armour of God & Spiritual Covering (KJV) — The Covenant Shield",
+                "Reverent KJV prayers from Ephesians 6:10-18, Genesis 15:1, and 2 Samuel 22:31 "
+                "standing firm in faith, truth, and Christ's victory.\n\n"
+                "Produced by The Covenant Shield | Daily Divine Protection & Refuge Prayer.",
+                ("armor of god", "shield of faith", "ephesians 6", "buckler", "genesis 15"),
+            ),
+            (
+                "strong_tower_and_refuge_prayers",
+                "Prayers of Refuge Under the Shadow of the Almighty — The Covenant Shield",
+                "Faith-building KJV prayers with Charles Spurgeon & Matthew Henry reflections "
+                "from Psalm 91, Proverbs 18:10, and Psalm 46:1-2.\n\n"
+                "Produced by The Covenant Shield | Daily Divine Protection & Refuge Prayer.",
+                ("strong tower", "refuge", "psalm 91", "psalm 46", "proverbs 18"),
+            ),
+        ),
+        community_posts=(
+            {
+                "post_id": "comm-prayer8-001-sunday-shield",
+                "post_type": "POLL",
+                "title": "Sunday Covering Prayer: Where are you asking the Keeper of Israel to guard your steps this week?",
+                "body_text": (
+                    "The LORD shall preserve thy going out and thy coming in from this time forth, and even for evermore (Psalm 121:8).\n\n"
+                    "As a new week begins, how can our prayer team stand with you in faith? "
+                    "Vote below and type 'AMEN'! 🛡️🙏"
+                ),
+                "poll": {
+                    "question": "Where are you praying for God's covering and protection first this week?",
+                    "options": [
+                        "Daily commutes, travel, highways, and safe arrival",
+                        "Peace of mind and spiritual armour against discouragement",
+                        "Covering over workplace, studies, and daily responsibilities",
+                        "Refuge and steady courage through a challenging season",
+                    ],
+                    "context_scripture": "Psalm 121:8",
+                },
+                "image_rel_path": "comm-prayer8-001-sunday-shield.png",
+                "target_utc": "08:30",
+                "tags": ["#TheCovenantShield", "#PrayerForProtection", "#Psalm121", "#GodsCovering"],
+            },
+            {
+                "post_id": "comm-prayer8-002-midweek-wall",
+                "post_type": "PRAYER_WALL",
+                "title": "The Covenant Shield Prayer Wall: Praying Over Journeys, Steps & Refuge",
+                "body_text": (
+                    "The name of the LORD is a strong tower: the righteous runneth into it, and is safe (Proverbs 18:10).\n\n"
+                    "Share a general travel, safety, or protection petition below — our pastoral team is praying "
+                    "in faith over every listener represented here. Write 'AMEN'!"
+                ),
+                "poll": None,
+                "image_rel_path": "comm-prayer8-002-midweek-wall.png",
+                "target_utc": "08:30",
+                "tags": ["#Proverbs1810", "#StrongTower", "#TheCovenantShield"],
+            },
+            {
+                "post_id": "comm-prayer8-003-thursday-scripture",
+                "post_type": "POLL",
+                "title": "Which KJV promise of divine protection anchors your heart today?",
+                "body_text": (
+                    "Fear not, Abram: I am thy shield, and thy exceeding great reward (Genesis 15:1).\n\n"
+                    "Rest under the unfailing shield of our covenant God."
+                ),
+                "poll": {
+                    "question": "Which KJV scripture of refuge and protection speaks deepest to you today?",
+                    "options": [
+                        "Psalm 121:7-8 — Preserve thy going out and thy coming in",
+                        "Psalm 91:1-2 — Under the shadow of the Almighty",
+                        "Proverbs 18:10 — The name of the LORD is a strong tower",
+                        "Ephesians 6:16 — Above all, taking the shield of faith",
+                    ],
+                    "context_scripture": "Genesis 15:1",
+                },
+                "image_rel_path": "comm-prayer8-003-thursday-scripture.png",
+                "target_utc": "08:30",
+                "tags": ["#Genesis151", "#Psalm91", "#TheCovenantShield"],
+            },
+            {
+                "post_id": "comm-prayer8-004-friday-gratitude",
+                "post_type": "SCRIPTURE_DEVOTIONAL",
+                "title": "Weekend Thanksgiving Unto the Lord Who Preserves Our Steps",
+                "body_text": (
+                    "But the Lord is faithful, who shall stablish you, and keep you from evil (2 Thessalonians 3:3).\n\n"
+                    "Thank the Lord for every unseen mercy, safe journey, and guarded step across this week. "
+                    "Type 'STRONG TOWER' below in thanksgiving! 🛡️✨"
+                ),
+                "poll": None,
+                "image_rel_path": "comm-prayer8-004-friday-gratitude.png",
+                "target_utc": "08:30",
+                "tags": ["#2Thessalonians33", "#StrongTower", "#TheCovenantShield"],
+            },
+        ),
+        short_bridge_theme="divine protection, safe keeping, and strong-tower refuge",
+        short_fallback_title="Prayers for Divine Protection & Refuge (KJV) — The Covenant Shield",
+        milestone_subheading_1250="A SANCTUARY OF PROTECTION & REFUGE PRAYER ACROSS THE NATIONS",
+        milestone_subheading_1500="DAILY SCRIPTURE COVERING OVER EVERY STEP & JOURNEY",
+        milestone_sanctuary_phrase="inside the strong tower of the Lord",
+        milestone_cadence_phrase="every day for covering and protection",
+        milestone_closing_blessing="May the Keeper of Israel guard your going out and your coming in today and always.",
+        milestone_2000_closing="your daily sanctuary of divine protection and strong-tower prayer",
+        seo_fallback_hashtags=(
+            "#PrayerForProtection", "#Psalm121", "#StrongTower", "#TheCovenantShield",
+        ),
+        seo_hook_ref_template=(
+            "Pray this {ref} KJV prayer at The Covenant Shield for divine protection, "
+            "safe travel, spiritual armour, and refuge under the shadow of the Almighty."
+        ),
+        seo_hook_generic=(
+            "Pray this KJV protection prayer at The Covenant Shield for safe going out and coming in, "
+            "angelic covering, peace of mind, and refuge in Christ."
+        ),
+        seo_book_tag_suffixes=("prayer for protection", "divine covering and refuge prayer"),
+        seo_tag_seeds=(
+            "prayer for protection kjv",
+            "psalm 121 going out and coming in prayer",
+            "psalm 91 hedge of protection prayer",
+            "armor of god daily prayer",
+            "proverbs 18 10 strong tower prayer",
+            "safe travel and journey prayer",
+            "the covenant shield prayer",
+            "daily prayer for divine covering",
+        ),
+        localized_title_es="Oración de Protección Divina y Refugio | {channel_name}",
+        localized_title_pt="Oração de Proteção Divina e Refúgio | {channel_name}",
+        localized_ref_title_es="{ref_es} Oración de Protección y Cobertura | {channel_name}",
+        localized_ref_title_pt="{ref_pt} Oração de Proteção e Cobertura | {channel_name}",
+        localized_desc_lead_es="Oración bíblica diaria por protección divina, viajes seguros, cobertura espiritual y refugio fiel.",
+        localized_desc_lead_pt="Oração bíblica diária por proteção divina, viagens seguras, cobertura espiritual e refúgio fiel.",
+        localized_invite_es=(
+            "Une tu fe en oración con esta meditación bíblica para poner cada paso y camino bajo el cuidado de Dios."
+        ),
+        localized_invite_pt=(
+            "Una sua fé em oração com esta meditação bíblica para colocar cada passo e caminho sob a proteção de Deus."
+        ),
+        default_comment_scripture_hook=(
+            "Psalm 121:8 — 'The LORD shall preserve thy going out and thy coming in from this time forth, and even for evermore.'"
+        ),
+        default_comment_theme="divine protection, safe keeping, and strong-tower refuge",
+        ctr_grade="fortress",
+        ctr_hook_hero="GUARD MY STEPS",
+        ctr_quiet_hero="STRONG TOWER",
+    ),
 }
 
 _CAPABILITIES: dict[str, ChannelCapabilities] = {
@@ -1936,6 +2217,18 @@ _CAPABILITIES: dict[str, ChannelCapabilities] = {
         },
         roadmap="prayer7",
         roadmap_name="PROVISION_TABLE_ROADMAP",
+        legacy_queue_alias="",
+        supply_min_publishable=6,
+    ),
+    "prayer8": ChannelCapabilities(
+        channel_id="prayer8",
+        brand=_BRANDS["prayer8"],
+        equipment={
+            "system_instruction": "shield_system_instruction.md",
+            "theological_rubric": "shield_theological_rubric.md",
+        },
+        roadmap="prayer8",
+        roadmap_name="COVENANT_SHIELD_ROADMAP",
         legacy_queue_alias="",
         supply_min_publishable=6,
     ),
