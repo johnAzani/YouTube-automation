@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T08:12:05Z",
+  "generated_at": "2026-11-11T08:39:46Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 78,
-    "published_longform": 34,
-    "published_shorts": 44,
-    "public_total": 76,
-    "queued_longform": 55,
-    "queued_shorts": 40,
+    "published_total": 80,
+    "published_longform": 35,
+    "published_shorts": 45,
+    "public_total": 78,
+    "queued_longform": 54,
+    "queued_shorts": 39,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -32,32 +32,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 23,
-        "published_longform": 7,
-        "published_shorts": 16,
-        "public_total": 22,
-        "queued_longform": 20,
+        "published_total": 25,
+        "published_longform": 8,
+        "published_shorts": 17,
+        "public_total": 24,
+        "queued_longform": 19,
         "queued_other": 5,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-PSALM139V11",
-        "title": "Say This Psalm 139:11-12 Prayer Before You Sleep | The Secret Place #Shorts",
-        "format": "short",
-        "youtube_video_id": "avnYVdvDmkc",
-        "watch_url": "https://www.youtube.com/shorts/avnYVdvDmkc",
-        "published_on": "2026-11-10",
-        "published_at": "2026-11-10T18:21:05Z"
-      },
-      "next_queued_longform": {
         "id": "0015",
         "title": "Psalm 91:5-6 Night Prayer | Deliverance From Terror by Night",
-        "words": 883,
-        "status": "quota_paused"
+        "format": "longform",
+        "youtube_video_id": "rb6X37vQt7o",
+        "watch_url": "https://youtu.be/rb6X37vQt7o",
+        "published_on": "2026-11-11",
+        "published_at": "2026-11-11T08:39:03Z"
+      },
+      "next_queued_longform": {
+        "id": "0016",
+        "title": "Psalm 91:11-12 Night Prayer | Angels Guard Your Home & Sleep",
+        "words": 885,
+        "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-proverbs3v24",
-        "scripture": "Proverbs 3:24-26",
+        "short": "short-isaiah26v3",
+        "scripture": "Isaiah 26:3-4",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -451,6 +451,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0015",
+      "slug": "psalm-91-5-6-deliverance-from-terror-by-night",
+      "file": "0015-psalm-91-5-6-deliverance-from-terror-by-night.md",
+      "title": "Psalm 91:5-6 Night Prayer | Deliverance From Terror by Night",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T08:39:03Z",
+      "youtube_video_id": "rb6X37vQt7o",
+      "watch_url": "https://youtu.be/rb6X37vQt7o",
+      "youtu_be_url": "https://youtu.be/rb6X37vQt7o",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/rb6X37vQt7o/edit",
+      "thumb_url": "https://i.ytimg.com/vi/rb6X37vQt7o/hqdefault.jpg",
+      "thumb_text": "NO TERROR BY NIGHT",
+      "duration_label": "~6 min",
+      "words": 883
+    },
+    {
+      "id": "SHORT-PROVERBS3V24",
+      "slug": "short-proverbs3v24-pre-sleep-prayer",
+      "file": "short-proverbs3v24-pre-sleep-prayer.md",
+      "title": "Say This Proverbs 3:24-26 Prayer Before You Sleep | Sweet Nighttime Rest #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T08:15:30Z",
+      "youtube_video_id": "5b2naPZqvvM",
+      "watch_url": "https://www.youtube.com/shorts/5b2naPZqvvM",
+      "youtu_be_url": "https://youtu.be/5b2naPZqvvM",
+      "shorts_url": "https://www.youtube.com/shorts/5b2naPZqvvM",
+      "studio_url": "https://studio.youtube.com/video/5b2naPZqvvM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/5b2naPZqvvM/hqdefault.jpg",
+      "thumb_text": "THY SLEEP \u00b7 SHALL BE SWEET",
+      "duration_label": "51s",
+      "words": 629
+    },
     {
       "id": "0500",
       "slug": "psalm-23-5-provision-prayer",
@@ -2249,19 +2295,6 @@
   "queues": {
     "longform": [
       {
-        "id": "0015",
-        "slug": "psalm-91-5-6-deliverance-from-terror-by-night",
-        "file": "0015-psalm-91-5-6-deliverance-from-terror-by-night.md",
-        "title": "Psalm 91:5-6 Night Prayer | Deliverance From Terror by Night",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "quota_paused",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 883
-      },
-      {
         "id": "0016",
         "slug": "psalm-91-11-12-angelic-guardians-bed",
         "file": "0016-psalm-91-11-12-angelic-guardians-bed.md",
@@ -2965,17 +2998,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-proverbs3v24",
-        "file": "0025-short-proverbs3v24.yml",
-        "companion_longform_id": "0025",
-        "scripture": "Proverbs 3:24-26",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
       {
         "short": "short-isaiah26v3",
         "file": "0026-short-isaiah26v3.yml",
