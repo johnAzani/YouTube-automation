@@ -57,6 +57,7 @@ jobs:
                   print('::error::Video title does not match the expected Short.')
                   raise SystemExit(1)
               result = {'video_id': item['id'], 'channel_match': True, 'title_match': True,
+                        'title': snippet.get('title', ''),
                         'privacy': status.get('privacyStatus', ''), 'upload_status': status.get('uploadStatus', ''),
                         'published_at': snippet.get('publishedAt', ''), 'duration': item.get('contentDetails', {}).get('duration', '')}
               print('::notice title=Family Altar Short verified::' + json.dumps(result, separators=(',', ':')))
