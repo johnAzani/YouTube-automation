@@ -20,10 +20,13 @@ height: 1280
 duration_seconds: 63.17
 scenes_verified: 7
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCj-brsBz9FNO6sZ3NLIzjvQ; auth_channel_title=The Healing Balm; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCj-brsBz9FNO6sZ3NLIzjvQ; auth_channel_title=The Healing Balm; long_uploads_status=eligible; video_channel_id=UCj-brsBz9FNO6sZ3NLIzjvQ; video_channel_title=The Healing Balm; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE HEALING BALM", "HEAL ME O LORD", "JEREMIAH 30:17", "HEALING PRAYER"]
 thumbnail_kicker: "RECEIVE GOD'S HEALING PEACE"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-18T17:22:11Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Bring every weary burden and healing need before the Great Physician right now. Jeremiah thirty verse seventeen promises, For I will restore health unto thee, and I will heal thee of thy wounds, saith the LORD. Jeremiah seventeen verse fourteen cries out in faith, Heal me, O LORD, and I shall be healed; save me, and I shall be saved. Where physical weakness or anxious waiting has weighed down your heart, Christ's grace remains sufficient. Father, touch weary bodies, calm fearful thoughts, and guide every physician and caregiver in wisdom. Let the Balm of Gilead soothe every ache and fill your room with quiet peace today. Type Amen and subscribe to The Healing Balm to receive God's healing peace in daily prayer.
