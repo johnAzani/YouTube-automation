@@ -29,6 +29,8 @@ def test_production_uses_only_the_selected_prefix_for_every_secret():
         assert not re.search(r'secrets\.[A-Z_]+', expression)
         # Only expected ID can fall back, and only between vars/secrets using the same prefix.
         assert (' || ' in expression) == (field == 'YOUTUBE_EXPECTED_CHANNEL_ID')
+        if field == 'YOUTUBE_EXPECTED_CHANNEL_ID':
+            assert "matrix.channel == 'secret-place' && 'UCtPI1r8vgtJ9n__7ksLBmCA' || ''" in expression
     names = [step.get('name') for step in job['steps']]
     assert names.index("Require the selected channel's own credentials") < names.index('Repair the queue before publishing')
     assert names.index('Verify the authenticated channel before production') < names.index('Repair the queue before publishing')
