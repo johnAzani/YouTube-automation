@@ -51,16 +51,9 @@
       "workflow": "community.yml"
     }
   ],
-  "generated_at": "2026-11-11T12:22:13.690241+00:00",
+  "generated_at": "2026-11-11T12:23:08.709623+00:00",
   "last_run_at": "2026-11-11T12:21:28+00:00",
   "on_time": [
-    {
-      "late_minutes": 73,
-      "name": "Automation monitor",
-      "ran_at": "2026-11-11T10:36:38+00:00",
-      "slot": "2026-11-11T09:23:00+00:00",
-      "workflow": "monitor.yml"
-    },
     {
       "late_minutes": 60,
       "name": "Produce video",
@@ -76,6 +69,6 @@
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 0,
+  "silence_minutes": 1,
   "warn_minutes": 120
 }
