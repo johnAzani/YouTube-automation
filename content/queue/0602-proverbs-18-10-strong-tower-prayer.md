@@ -75,7 +75,7 @@ originality:
 
 Grace, peace, and steadfast refuge be unto you, and welcome to The Covenant Shield. Wherever this day finds you, whether preparing to travel, stepping into weighty responsibilities, or seeking calm safety amidst uncertain headlines, step by faith inside the fortress God Himself has thrown open to His people. Hear the timeless declaration of King James Scripture in Proverbs chapter eighteen, verse ten: The name of the LORD is a strong tower: the righteous runneth into it, and is safe.
 
-In the ancient world, a high stone watchtower stood at the heart of a walled citadel so villagers working in surrounding fields had an impregnable place to run whenever danger appeared on the horizon. Scripture declares that the very Name of the LORD, His revealed character of faithfulness, power, holiness, mercy, and covenant truth in Christ, is that strong tower, and we can turn to Him in prayer for refuge, even in the midst of trouble.
+The image of a strong tower reminds us of a place of refuge when danger approaches. Scripture declares that the very Name of the LORD, His revealed character of faithfulness, power, holiness, mercy, and covenant truth in Christ, is that strong tower, and we can turn to Him in prayer for refuge, even in the midst of trouble.
 
 ## Scene 2 — Taking Up the Shield of Faith & Whole Armour of God
 

@@ -106,6 +106,6 @@ Father, teach us not to confuse faith with refusing wise precautions. Help us to
 
 ## Scene 6 — Covenant Keeping Doxology & Daily Covering Benediction
 
-We anchor our hearts once more in the covenant voice of Genesis chapter fifteen, verse one: Fear not: I am thy shield, and thy exceeding great reward. Together with Second Thessalonians chapter three, verse three, we declare in quiet faith: But the Lord is faithful, who shall stablish you, and keep you from evil.
+We anchor our hearts once more in the covenant voice of Genesis chapter fifteen, verse one: Fear not, Abram: I am thy shield, and thy exceeding great reward. Together with Second Thessalonians chapter three, verse three, we declare in quiet faith: But the Lord is faithful, who shall stablish you, and keep you from evil.
 
 Almighty God, our Sun and Shield, receive our praise for surrounding Thy children with unfailing mercy, guarding every pathway today, and keeping our souls secure in Christ Jesus our Lord. Walk before us as light and stand around us as refuge in every hour ahead. Type Amen to agree with this prayer, and subscribe to The Covenant Shield to walk under God's daily covering and protection.

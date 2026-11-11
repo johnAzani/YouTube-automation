@@ -90,7 +90,7 @@ class TestShortKeyAndNonPsalmIntegrity(unittest.TestCase):
         self.assertIn("Isaiah 26:3-4", ed_isaiah.title)
         self.assertNotIn("Psalm 26", ed_isaiah.title)
 
-    def test_all_staged_shorts_are_ready_and_enriched_with_selar_links(self):
+    def test_staged_shorts_are_valid_and_only_approved_ones_are_ready(self):
         rows = queue_report()
         published_shorts = list((REPO / "content" / "published").glob("short-*.md"))
         self.assertGreaterEqual(len(rows), 1)
@@ -99,6 +99,8 @@ class TestShortKeyAndNonPsalmIntegrity(unittest.TestCase):
             self.assertNotIn(row["verdict"], ("unusable", "needs_renderer"), f"Broken manifest: {row}")
             if row["status"] == "approved":
                 self.assertEqual(row["verdict"], "ready", f"Manifest not ready: {row}")
+            elif row["status"] == "draft":
+                self.assertEqual(row["verdict"], "not_approved", f"Draft must not be ready: {row}")
             else:
                 self.assertEqual(row["status"], "quota_paused", f"Unexpected manifest status: {row}")
             ed = resolve_edition(row["short"], channel_id=row["channel"])
