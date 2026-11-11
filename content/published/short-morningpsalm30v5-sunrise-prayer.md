@@ -24,7 +24,7 @@ thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently.
 thumbnail_poster: ["THE", "MORNING", "ALTAR", "PSALM 30:5"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-11T13:13:43Z"
+thumbnail_retry_after: "2026-11-11T13:15:45Z"
 ---
 
 Welcome the quiet of this new morning as the darkness slowly fades away. Step into the fresh light that God has prepared for your soul today. Listen closely to the ancient truth found within the sacred scriptures. For his anger lasts only a moment, but his favor lasts a lifetime. Weeping may stay for the night, but rejoicing comes in the morning. Let this promise anchor your heart against every fear and every doubt. Father, fill us with your steadfast peace as we walk through this day. Subscribe to The Morning Altar for daily prayer and sunrise scripture.

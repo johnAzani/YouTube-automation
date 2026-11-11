@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-11T07:15:00Z",
+  "generated_at": "2026-11-11T07:17:13Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
     "channels_provisioned": 7,
-    "channels_total": 7
+    "channels_total": 8
   },
   "totals": {
     "published_total": 76,
@@ -13,9 +13,9 @@
     "public_total": 74,
     "queued_longform": 56,
     "queued_shorts": 41,
-    "automations_ok": 7,
+    "automations_ok": 10,
     "automations_total": 10,
-    "network_healthy": false
+    "network_healthy": true
   },
   "channels": [
     {
@@ -407,6 +407,37 @@
         "as_of": "2026-11-11",
         "measured_longform_videos": 0,
         "total_longform_videos": 0,
+        "top_themes": []
+      }
+    },
+    {
+      "id": "prayer8",
+      "display_name": "The Covenant Shield",
+      "handle": "@TheCovenantShieldDaily",
+      "prayer_label": "Protection Prayer",
+      "daypart": "protection",
+      "tagline": "Daily Divine Protection & Refuge Prayer",
+      "target_window_utc": "08:44",
+      "poster_kicker": "THE LORD IS THY KEEPER",
+      "provisioned": false,
+      "auto_publish": true,
+      "default_privacy": "public",
+      "supply_target": 6,
+      "counts": {
+        "published_total": 0,
+        "published_longform": 0,
+        "published_shorts": 0,
+        "public_total": 0,
+        "queued_longform": 0,
+        "queued_other": 0,
+        "queued_shorts": 0
+      },
+      "latest_video": null,
+      "next_queued_longform": null,
+      "next_queued_short": null,
+      "feedback": {
+        "available": false,
+        "measured_longform_videos": 0,
         "top_themes": []
       }
     }
@@ -3350,15 +3381,15 @@
     {
       "workflow": "automation-health.yml",
       "name": "automation-health",
-      "verdict": "SELF-REPORT",
-      "severity": "info",
-      "detail": "this is the check itself; its previous run ended failure 3.9h ago, which is its own verdict and not independent evidence",
-      "last_conclusion": "failure",
-      "last_run": "2026-11-11T03:20:23+00:00",
-      "last_success": "2026-11-11T02:50:23+00:00",
+      "verdict": "OK",
+      "severity": "ok",
+      "detail": "last success 0.0h ago",
+      "last_conclusion": "success",
+      "last_run": "2026-11-11T07:14:49+00:00",
+      "last_success": "2026-11-11T07:14:49+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
-      "failures_5": 3,
+      "failures_5": 2,
       "effect": "reports and files stalls"
     },
     {
@@ -3372,7 +3403,7 @@
       "last_success": "2026-11-11T02:04:20+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
-      "failures_5": 2,
+      "failures_5": 0,
       "effect": "posts replies and records them in content/comments/replied.json"
     },
     {
@@ -3380,7 +3411,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 56.3h ago",
+      "detail": "last success 56.4h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-08T22:53:40+00:00",
       "last_success": "2026-11-08T22:53:40+00:00",
@@ -3422,7 +3453,7 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 43.4h ago",
+      "detail": "last success 43.5h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-09T11:48:56+00:00",
       "last_success": "2026-11-09T11:48:56+00:00",
@@ -3448,29 +3479,29 @@
     {
       "workflow": "monitor.yml",
       "name": "Automation monitor",
-      "verdict": "SELF-REPORT",
-      "severity": "info",
-      "detail": "its red runs are the verdicts below, not failures of it",
+      "verdict": "OK",
+      "severity": "ok",
+      "detail": "last success 0.0h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-11T07:13:01+00:00",
+      "last_run": "2026-11-11T07:14:49+00:00",
       "last_success": "",
       "runs_14d": 20,
       "missed_slots": 0,
-      "failures_5": 4,
+      "failures_5": 0,
       "effect": "this report"
     },
     {
       "workflow": "produce.yml",
       "name": "Produce video",
-      "verdict": "FAILING",
-      "severity": "blocking",
-      "detail": "failed 7.2h ago and nothing was changed since; the next slot will fail the same way",
-      "last_conclusion": "failure",
-      "last_run": "2026-11-11T00:01:43+00:00",
+      "verdict": "OK",
+      "severity": "ok",
+      "detail": "last success 19.6h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-11T07:14:40+00:00",
       "last_success": "2026-11-10T11:41:15+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
-      "failures_5": 2,
+      "failures_5": 0,
       "effect": "publishes a video: content/published/ gains a receipt with a video id"
     },
     {
@@ -3478,10 +3509,10 @@
       "name": "Scheduler supervisor",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.4h ago",
+      "detail": "last success 0.0h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-11T07:13:01+00:00",
-      "last_success": "2026-11-11T06:48:50+00:00",
+      "last_run": "2026-11-11T07:15:07+00:00",
+      "last_success": "2026-11-11T07:14:52+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
