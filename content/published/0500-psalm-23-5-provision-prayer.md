@@ -2,7 +2,7 @@
 id: '0500'
 title: Psalm 23:5 Provision Prayer | The Provision Table
 slug: psalm-23-5-provision-prayer
-status: approved
+status: published
 channel: prayer7
 privacy: public
 format: longform
@@ -73,6 +73,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-11"
+published_at: "2026-11-11T08:08:19Z"
+youtube_video_id: "7KQUigXezRU"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Approaching Jehovah-Jireh at the Prepared Table

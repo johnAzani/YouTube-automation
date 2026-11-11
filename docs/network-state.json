@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-11T07:27:59Z",
+  "generated_at": "2026-11-11T08:09:05Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
     "channels_provisioned": 7,
-    "channels_total": 8
+    "channels_total": 7
   },
   "totals": {
-    "published_total": 76,
-    "published_longform": 33,
-    "published_shorts": 43,
-    "public_total": 74,
-    "queued_longform": 56,
-    "queued_shorts": 41,
+    "published_total": 78,
+    "published_longform": 34,
+    "published_shorts": 44,
+    "public_total": 76,
+    "queued_longform": 55,
+    "queued_shorts": 40,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -381,24 +381,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 0,
-        "published_longform": 0,
-        "published_shorts": 0,
-        "public_total": 0,
-        "queued_longform": 6,
+        "published_total": 2,
+        "published_longform": 1,
+        "published_shorts": 1,
+        "public_total": 2,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
-      "latest_video": null,
-      "next_queued_longform": {
+      "latest_video": {
         "id": "0500",
         "title": "Psalm 23:5 Provision Prayer | The Provision Table",
-        "words": 921,
+        "format": "longform",
+        "youtube_video_id": "7KQUigXezRU",
+        "watch_url": "https://youtu.be/7KQUigXezRU",
+        "published_on": "2026-11-11",
+        "published_at": "2026-11-11T08:08:19Z"
+      },
+      "next_queued_longform": {
+        "id": "0501",
+        "title": "Deuteronomy 28:12 Provision Prayer | The Provision Table",
+        "words": 911,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionpsalm23v5",
-        "scripture": "Psalm 23:5",
+        "short": "short-provisiondeuteronomy28v12",
+        "scripture": "Deuteronomy 28:12",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -409,40 +417,55 @@
         "total_longform_videos": 0,
         "top_themes": []
       }
-    },
-    {
-      "id": "prayer8",
-      "display_name": "The Covenant Shield",
-      "handle": "@TheCovenantShieldDaily",
-      "prayer_label": "Protection Prayer",
-      "daypart": "protection",
-      "tagline": "Daily Divine Protection & Refuge Prayer",
-      "target_window_utc": "08:44",
-      "poster_kicker": "THE LORD IS THY KEEPER",
-      "provisioned": false,
-      "auto_publish": true,
-      "default_privacy": "public",
-      "supply_target": 6,
-      "counts": {
-        "published_total": 0,
-        "published_longform": 0,
-        "published_shorts": 0,
-        "public_total": 0,
-        "queued_longform": 0,
-        "queued_other": 0,
-        "queued_shorts": 0
-      },
-      "latest_video": null,
-      "next_queued_longform": null,
-      "next_queued_short": null,
-      "feedback": {
-        "available": false,
-        "measured_longform_videos": 0,
-        "top_themes": []
-      }
     }
   ],
   "videos": [
+    {
+      "id": "0500",
+      "slug": "psalm-23-5-provision-prayer",
+      "file": "0500-psalm-23-5-provision-prayer.md",
+      "title": "Psalm 23:5 Provision Prayer | The Provision Table",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T08:08:19Z",
+      "youtube_video_id": "7KQUigXezRU",
+      "watch_url": "https://youtu.be/7KQUigXezRU",
+      "youtu_be_url": "https://youtu.be/7KQUigXezRU",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/7KQUigXezRU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/7KQUigXezRU/hqdefault.jpg",
+      "thumb_text": "CUP RUNNETH OVER",
+      "duration_label": "~6 min",
+      "words": 921
+    },
+    {
+      "id": "SHORT-PROVISIONPSALM23V5",
+      "slug": "short-provisionpsalm23v5-stewardship-prayer",
+      "file": "short-provisionpsalm23v5-stewardship-prayer.md",
+      "title": "Pray This Psalm 23:5 Prayer for Open Doors & Provision | Provision Prayer #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T07:23:27Z",
+      "youtube_video_id": "Yrmz7lHdYBk",
+      "watch_url": "https://www.youtube.com/shorts/Yrmz7lHdYBk",
+      "youtu_be_url": "https://youtu.be/Yrmz7lHdYBk",
+      "shorts_url": "https://www.youtube.com/shorts/Yrmz7lHdYBk",
+      "studio_url": "https://studio.youtube.com/video/Yrmz7lHdYBk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Yrmz7lHdYBk/hqdefault.jpg",
+      "thumb_text": "THE PROVISION TABLE \u00b7 MY CUP OVERFLOWS",
+      "duration_label": "67s",
+      "words": 236
+    },
     {
       "id": "0202",
       "slug": "isaiah-62-6-midnight-prayer",
@@ -2845,19 +2868,6 @@
         "words": 1516
       },
       {
-        "id": "0500",
-        "slug": "psalm-23-5-provision-prayer",
-        "file": "0500-psalm-23-5-provision-prayer.md",
-        "title": "Psalm 23:5 Provision Prayer | The Provision Table",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 921
-      },
-      {
         "id": "0501",
         "slug": "deuteronomy-28-12-provision-prayer",
         "file": "0501-deuteronomy-28-12-provision-prayer.md",
@@ -3308,17 +3318,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-provisionpsalm23v5",
-        "file": "0500-short-provisionpsalm23v5.yml",
-        "companion_longform_id": "500",
-        "scripture": "Psalm 23:5",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisiondeuteronomy28v12",
