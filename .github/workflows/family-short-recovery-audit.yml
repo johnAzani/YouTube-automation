@@ -1,0 +1,71 @@
+name: Read-only Family Altar Short recovery audit
+
+# Runs only when this file is pushed on an arena branch. It does not upload,
+# change the video, apply a thumbnail, or log credentials.
+on:
+  push:
+    branches: ["arena/**"]
+    paths: [".github/workflows/family-short-recovery-audit.yml"]
+
+permissions: {}
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Verify existing Short ownership and status
+        env:
+          CLIENT_ID: ${{ secrets.PRAYER5_YOUTUBE_CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.PRAYER5_YOUTUBE_CLIENT_SECRET }}
+          REFRESH_TOKEN: ${{ secrets.PRAYER5_YOUTUBE_REFRESH_TOKEN }}
+          EXPECTED_CHANNEL: ${{ vars.PRAYER5_YOUTUBE_CHANNEL_ID || secrets.PRAYER5_YOUTUBE_CHANNEL_ID }}
+        run: |
+          python3 - <<'PY'
+          import json, os, re, urllib.error, urllib.parse, urllib.request
+          names = ('CLIENT_ID', 'CLIENT_SECRET', 'REFRESH_TOKEN', 'EXPECTED_CHANNEL')
+          if any(not os.environ.get(n, '').strip() for n in names):
+              print('::error::Channel 5 credentials or expected channel ID unavailable.')
+              raise SystemExit(1)
+          def get(req):
+              with urllib.request.urlopen(req, timeout=20) as response:
+                  return json.load(response)
+          def normalized(title):
+              return ' '.join(re.sub(r'[^\w\s]', ' ', re.sub(r'#\w+', '', title)).lower().split())
+          try:
+              body = urllib.parse.urlencode({
+                  'client_id': os.environ['CLIENT_ID'], 'client_secret': os.environ['CLIENT_SECRET'],
+                  'refresh_token': os.environ['REFRESH_TOKEN'], 'grant_type': 'refresh_token',
+              }).encode()
+              token = get(urllib.request.Request('https://oauth2.googleapis.com/token', data=body))['access_token']
+              headers = {'Authorization': 'Bearer ' + token}
+              channels = get(urllib.request.Request('https://www.googleapis.com/youtube/v3/channels?part=id&mine=true', headers=headers)).get('items', [])
+              if len(channels) != 1 or channels[0].get('id') != os.environ['EXPECTED_CHANNEL'].strip():
+                  print('::error::Authenticated channel does not match configured Family Altar channel.')
+                  raise SystemExit(1)
+              videos = get(urllib.request.Request('https://www.googleapis.com/youtube/v3/videos?part=snippet,status,contentDetails&id=FNRQnoo_-cU', headers=headers)).get('items', [])
+              if len(videos) != 1 or videos[0].get('id') != 'FNRQnoo_-cU':
+                  print('::error::The recorded video ID is unavailable.')
+                  raise SystemExit(1)
+              item = videos[0]
+              snippet, status = item.get('snippet', {}), item.get('status', {})
+              if snippet.get('channelId') != channels[0].get('id'):
+                  print('::error::Video owner does not match Family Altar.')
+                  raise SystemExit(1)
+              expected_title = 'Pray This Joshua 24:15 Family Prayer Over Your Home | Family Prayer #Shorts'
+              if normalized(snippet.get('title', '')) != normalized(expected_title):
+                  print('::error::Video title does not match the expected Short.')
+                  raise SystemExit(1)
+              result = {'video_id': item['id'], 'channel_match': True, 'title_match': True,
+                        'privacy': status.get('privacyStatus', ''), 'upload_status': status.get('uploadStatus', ''),
+                        'published_at': snippet.get('publishedAt', ''), 'duration': item.get('contentDetails', {}).get('duration', '')}
+              print('::notice title=Family Altar Short verified::' + json.dumps(result, separators=(',', ':')))
+          except SystemExit:
+              raise
+          except urllib.error.HTTPError as exc:
+              print(f'::error::Read-only verification failed (HTTP {exc.code}); no response details logged.')
+              raise SystemExit(1)
+          except Exception:
+              print('::error::Read-only verification failed; no response details logged.')
+              raise SystemExit(1)
+          PY
