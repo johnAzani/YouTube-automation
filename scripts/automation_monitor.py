@@ -647,29 +647,36 @@ def check_outcomes(report: MonitorReport, now: datetime | None = None,
         from pipeline.channels import scheduled_channels
         from scripts.pipeline_watchdog import last_publish_for_channel
 
-        ch_publishes: list[tuple[str, Path, datetime]] = []
         for ch in scheduled_channels():
             hit = last_publish_for_channel(ch, published)
-            if hit is not None:
-                ch_publishes.append((ch, hit[0], hit[1]))
-        if len(ch_publishes) > 1:
-            for ch, ch_path, ch_when in ch_publishes:
-                ch_age = max(now - ch_when, timedelta(0))
-                sev = (
-                    "blocking" if ch_age > timedelta(hours=48)
-                    else ("warning" if ch_age > timedelta(hours=26) else "ok")
-                )
-                disp = brand_for(ch).display_name
+            disp = brand_for(ch).display_name
+            if hit is None:
                 report.outcomes.append({
                     "outcome": f"last upload ({ch})",
-                    "detail": (
-                        f"{disp}: {ch_when.date().isoformat()} "
-                        f"({ch_age.total_seconds() / 3600:.0f}h ago — {ch_path.name})"
-                    ),
-                    "severity": sev,
+                    "detail": f"{disp}: no published receipt recorded; launch status unconfirmed",
+                    "severity": "blocking",
                 })
-    except Exception:  # noqa: BLE001
-        pass
+                continue
+            ch_path, ch_when = hit
+            ch_age = max(now - ch_when, timedelta(0))
+            sev = (
+                "blocking" if ch_age > timedelta(hours=48)
+                else ("warning" if ch_age > timedelta(hours=26) else "ok")
+            )
+            report.outcomes.append({
+                "outcome": f"last upload ({ch})",
+                "detail": (
+                    f"{disp}: {ch_when.date().isoformat()} "
+                    f"({ch_age.total_seconds() / 3600:.0f}h ago — {ch_path.name})"
+                ),
+                "severity": sev,
+            })
+    except Exception as exc:  # noqa: BLE001
+        report.outcomes.append({
+            "outcome": "per-channel publish audit",
+            "detail": f"Could not inspect channel receipts: {type(exc).__name__}",
+            "severity": "blocking",
+        })
 
     # A production run that finishes successfully and uploads nothing is the exact
     # failure the owner kept reporting: green tick, no video.

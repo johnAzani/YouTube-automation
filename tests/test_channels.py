@@ -180,13 +180,10 @@ class WorkflowSelectorTests(unittest.TestCase):
         options = on["workflow_dispatch"]["inputs"]["channel"]["options"]
         for cid in CHANNELS:
             self.assertIn(cid, options, f"produce cannot be dispatched for {cid}")
-        for name in (
-            "PRAYER2_YOUTUBE_CLIENT_ID",
-            "PRAYER2_YOUTUBE_CLIENT_SECRET",
-            "PRAYER2_YOUTUBE_REFRESH_TOKEN",
-            "PRAYER2_GEMINI_API_KEY",
-        ):
-            self.assertIn(f"secrets.{name}", text)
+        env = data["jobs"]["produce"]["env"]
+        for name in ("YOUTUBE_CLIENT_ID", "YOUTUBE_CLIENT_SECRET", "YOUTUBE_REFRESH_TOKEN", "GEMINI_API_KEY"):
+            self.assertIn('"prayer2":"PRAYER2_"', env[name])
+            self.assertIn("secrets[format(", env[name])
 
     def test_scheduled_produce_runs_cover_both_channels(self):
         """A cron slot must produce Morning Altar videos too (2026-11-05).
@@ -209,8 +206,8 @@ class WorkflowSelectorTests(unittest.TestCase):
         self.assertIn("channel: ${{ fromJSON(needs.plan.outputs.channels) }}", text)
         self.assertIn("max-parallel: 1", text)
         self.assertIn("CHANNEL_ID: ${{ matrix.channel || 'secret-place' }}", text)
-        self.assertIn("matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID", text)
-        self.assertIn("matrix.channel == 'prayer2' && secrets.PRAYER2_GEMINI_API_KEY", text)
+        self.assertIn('"prayer2":"PRAYER2_"', text)
+        self.assertIn("Verify the authenticated channel before production", text)
         self.assertNotIn("matrix.channel == 'prayer2' && 'false'", text)
         self.assertNotIn("matrix.channel == 'prayer2' && 'private'", text)
         self.assertIn("DEFAULT_PRIVACY: public", text)

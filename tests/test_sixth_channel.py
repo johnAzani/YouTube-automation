@@ -132,7 +132,8 @@ class TestSixthChannelWorkflowWiring(unittest.TestCase):
         self.assertTrue(setup_doc.is_file())
         self.assertIn("PRAYER6_READY", produce)
         self.assertIn("PRAYER6_YOUTUBE_REFRESH_TOKEN", produce)
-        self.assertIn("PRAYER6_GEMINI_API_KEY", produce)
+        self.assertIn('"prayer6":"PRAYER6_"', produce)
+        self.assertIn("format('{0}GEMINI_API_KEY'", produce)
 
         self.assertIn("PRAYER6_READY", brain)
         self.assertIn("PRAYER6_GEMINI_API_KEY", brain)

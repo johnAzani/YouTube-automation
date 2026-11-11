@@ -205,11 +205,14 @@ jobs:
       CHANNEL_HANDLE: ${{ matrix.channel == 'prayer8' && '@TheCovenantShieldDaily' || (matrix.channel == 'prayer7' && '@TheProvisionTableDaily' || (matrix.channel == 'prayer6' && '@TheHealingBalmDaily' || (matrix.channel == 'prayer5' && '@TheFamilyAltarDaily' || (matrix.channel == 'prayer4' && '@TheMidnightWatchDaily' || (matrix.channel == 'prayer3' && '@TheMiddayWatch' || (matrix.channel == 'prayer2' && '@TheMorningAltarDaily' || '@TheSecretPlace')))))) }}
       PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
       PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
-      YOUTUBE_CLIENT_ID: ${{ matrix.channel == 'prayer8' && secrets.PRAYER8_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer7' && secrets.PRAYER7_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer6' && secrets.PRAYER6_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer5' && secrets.PRAYER5_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_ID || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID)))))) }}
-      YOUTUBE_CLIENT_SECRET: ${{ matrix.channel == 'prayer8' && secrets.PRAYER8_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer7' && secrets.PRAYER7_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer6' && secrets.PRAYER6_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer5' && secrets.PRAYER5_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_SECRET || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET)))))) }}
-      YOUTUBE_REFRESH_TOKEN: ${{ matrix.channel == 'prayer8' && secrets.PRAYER8_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer7' && secrets.PRAYER7_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer6' && secrets.PRAYER6_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer5' && secrets.PRAYER5_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN)))))) }}
-      YOUTUBE_PLAYLIST_ID: ${{ matrix.channel == 'prayer8' && secrets.PRAYER8_YOUTUBE_PLAYLIST_ID || (matrix.channel == 'prayer7' && secrets.PRAYER7_YOUTUBE_PLAYLIST_ID || (matrix.channel == 'prayer6' && secrets.PRAYER6_YOUTUBE_PLAYLIST_ID || (matrix.channel == 'prayer5' && secrets.PRAYER5_YOUTUBE_PLAYLIST_ID || (matrix.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_PLAYLIST_ID || (matrix.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_PLAYLIST_ID || (matrix.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_PLAYLIST_ID || secrets.YOUTUBE_PLAYLIST_ID)))))) }}
-      YOUTUBE_EXPECTED_CHANNEL_ID: ${{ matrix.channel == 'prayer8' && (vars.PRAYER8_YOUTUBE_CHANNEL_ID || secrets.PRAYER8_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer7' && (vars.PRAYER7_YOUTUBE_CHANNEL_ID || secrets.PRAYER7_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer6' && (vars.PRAYER6_YOUTUBE_CHANNEL_ID || secrets.PRAYER6_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer5' && (vars.PRAYER5_YOUTUBE_CHANNEL_ID || secrets.PRAYER5_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer4' && (vars.PRAYER4_YOUTUBE_CHANNEL_ID || secrets.PRAYER4_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer3' && (vars.PRAYER3_YOUTUBE_CHANNEL_ID || secrets.PRAYER3_YOUTUBE_CHANNEL_ID) || (matrix.channel == 'prayer2' && (vars.PRAYER2_YOUTUBE_CHANNEL_ID || secrets.PRAYER2_YOUTUBE_CHANNEL_ID) || (vars.YOUTUBE_CHANNEL_ID || secrets.YOUTUBE_CHANNEL_ID))))))) }}
+      # Each value uses only the selected channel prefix; empty values never fall back.
+      # Examples: PRAYER5_YOUTUBE_CLIENT_ID, PRAYER6_GEMINI_API_KEY,
+      # PRAYER7_YOUTUBE_REFRESH_TOKEN, PRAYER8_YOUTUBE_CLIENT_SECRET.
+      YOUTUBE_CLIENT_ID: ${{ secrets[format('{0}YOUTUBE_CLIENT_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] }}
+      YOUTUBE_CLIENT_SECRET: ${{ secrets[format('{0}YOUTUBE_CLIENT_SECRET', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] }}
+      YOUTUBE_REFRESH_TOKEN: ${{ secrets[format('{0}YOUTUBE_REFRESH_TOKEN', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] }}
+      YOUTUBE_PLAYLIST_ID: ${{ secrets[format('{0}YOUTUBE_PLAYLIST_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] }}
+      YOUTUBE_EXPECTED_CHANNEL_ID: ${{ vars[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] || secrets[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] }}
       # All channels publish on the same terms (owner decision 2026-11-05):
       # public + auto-publish, each with its own Google Cloud project & quota pool.
       AUTO_PUBLISH: ${{ secrets.AUTO_PUBLISH || 'true' }}
@@ -218,13 +221,27 @@ jobs:
       # never a repo-wide secret silently left on. Default stays shielded.
       ALLOW_DUPLICATE_UPLOADS: ${{ (inputs.allow_duplicate || false) && 'true' || 'false' }}
       DEFAULT_PRIVACY: public
-      GEMINI_API_KEY: ${{ matrix.channel == 'prayer8' && secrets.PRAYER8_GEMINI_API_KEY || (matrix.channel == 'prayer7' && secrets.PRAYER7_GEMINI_API_KEY || (matrix.channel == 'prayer6' && secrets.PRAYER6_GEMINI_API_KEY || (matrix.channel == 'prayer5' && secrets.PRAYER5_GEMINI_API_KEY || (matrix.channel == 'prayer4' && secrets.PRAYER4_GEMINI_API_KEY || (matrix.channel == 'prayer3' && secrets.PRAYER3_GEMINI_API_KEY || (matrix.channel == 'prayer2' && secrets.PRAYER2_GEMINI_API_KEY || secrets.GEMINI_API_KEY)))))) }}
+      GEMINI_API_KEY: ${{ secrets[format('{0}GEMINI_API_KEY', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] }}
       # pipeline.run shells out to `gh issue create` for the release ticket
       # (SETUP.md §6.4). gh needs a token: without GH_TOKEN the call fails
       # unauthenticated and the QC issue would silently never appear.
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
+
+      - name: Require the selected channel's own credentials
+        if: ${{ inputs.dry_run != true }}
+        run: |
+          python3 - <<'PY'
+          import os
+          required = ("YOUTUBE_CLIENT_ID", "YOUTUBE_CLIENT_SECRET", "YOUTUBE_REFRESH_TOKEN",
+                      "YOUTUBE_EXPECTED_CHANNEL_ID", "GEMINI_API_KEY")
+          missing = [name for name in required if not os.environ.get(name, "").strip()]
+          if missing:
+              print("::error::Missing required credentials or expected channel ID for "
+                    + os.environ.get("CHANNEL_ID", "unknown") + ": " + ", ".join(missing))
+              raise SystemExit(1)
+          PY
 
       - name: Snapshot starting commit for isolated content staging
         run: echo "START_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
@@ -237,6 +254,16 @@ jobs:
       # Python deps first, then a bounded best-effort apt ffmpeg + fonts. See the
       # action's header for the 2026-10-23 job-timeout this replaces.
       - uses: ./.github/actions/setup-render-deps
+
+      - name: Verify the authenticated channel before production
+        if: ${{ inputs.dry_run != true }}
+        run: |
+          python - <<'PY'
+          from googleapiclient.discovery import build
+          from pipeline.upload import _credentials, verify_target_channel
+          youtube = build("youtube", "v3", credentials=_credentials(), cache_discovery=False)
+          verify_target_channel(youtube)
+          PY
 
       # Local CPU word alignment, no paid transcription service. The model is
       # downloaded only to runner storage and never committed to the repository.
