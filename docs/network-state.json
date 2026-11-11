@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T02:34:13Z",
+  "generated_at": "2026-11-11T02:51:42Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -11,11 +11,11 @@
     "published_longform": 33,
     "published_shorts": 43,
     "public_total": 74,
-    "queued_longform": 42,
-    "queued_shorts": 25,
-    "automations_ok": 7,
+    "queued_longform": 46,
+    "queued_shorts": 29,
+    "automations_ok": 9,
     "automations_total": 10,
-    "network_healthy": false
+    "network_healthy": true
   },
   "channels": [
     {
@@ -370,13 +370,23 @@
         "published_longform": 0,
         "published_shorts": 0,
         "public_total": 0,
-        "queued_longform": 0,
+        "queued_longform": 4,
         "queued_other": 0,
-        "queued_shorts": 0
+        "queued_shorts": 4
       },
       "latest_video": null,
-      "next_queued_longform": null,
-      "next_queued_short": null,
+      "next_queued_longform": {
+        "id": "0500",
+        "title": "Psalm 23:5 Provision Prayer | The Provision Table",
+        "words": 921,
+        "status": "approved"
+      },
+      "next_queued_short": {
+        "short": "short-provisionpsalm23v5",
+        "scripture": "Psalm 23:5",
+        "target_window_utc": "10:44",
+        "status": "approved"
+      },
       "feedback": {
         "available": false,
         "measured_longform_videos": 0,
@@ -2681,6 +2691,58 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 873
+      },
+      {
+        "id": "0500",
+        "slug": "psalm-23-5-provision-prayer",
+        "file": "0500-psalm-23-5-provision-prayer.md",
+        "title": "Psalm 23:5 Provision Prayer | The Provision Table",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 921
+      },
+      {
+        "id": "0501",
+        "slug": "deuteronomy-28-12-provision-prayer",
+        "file": "0501-deuteronomy-28-12-provision-prayer.md",
+        "title": "Deuteronomy 28:12 Provision Prayer | The Provision Table",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 911
+      },
+      {
+        "id": "0502",
+        "slug": "philippians-4-19-provision-prayer",
+        "file": "0502-philippians-4-19-provision-prayer.md",
+        "title": "Philippians 4:19 Provision Prayer | The Provision Table",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 917
+      },
+      {
+        "id": "0503",
+        "slug": "revelation-3-8-open-doors-prayer",
+        "file": "0503-revelation-3-8-open-doors-prayer.md",
+        "title": "Revelation 3:8 Open Doors Prayer | The Provision Table",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 903
       }
     ],
     "shorts": [
@@ -2958,6 +3020,50 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
+      },
+      {
+        "short": "short-provisionpsalm23v5",
+        "file": "0500-short-provisionpsalm23v5.yml",
+        "companion_longform_id": "500",
+        "scripture": "Psalm 23:5",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
+      },
+      {
+        "short": "short-provisiondeuteronomy28v12",
+        "file": "0501-short-provisiondeuteronomy28v12.yml",
+        "companion_longform_id": "501",
+        "scripture": "Deuteronomy 28:12",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
+      },
+      {
+        "short": "short-provisionphilippians4v19",
+        "file": "0502-short-provisionphilippians4v19.yml",
+        "companion_longform_id": "502",
+        "scripture": "Philippians 4:19",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
+      },
+      {
+        "short": "short-provisionrevelation3v8",
+        "file": "0503-short-provisionrevelation3v8.yml",
+        "companion_longform_id": "503",
+        "scripture": "Revelation 3:8",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
       }
     ]
   },
@@ -2965,15 +3071,15 @@
     {
       "workflow": "automation-health.yml",
       "name": "automation-health",
-      "verdict": "SELF-REPORT",
-      "severity": "info",
-      "detail": "its red runs are the verdicts below, not failures of it",
-      "last_conclusion": "success",
-      "last_run": "2026-11-11T02:03:22+00:00",
+      "verdict": "OK",
+      "severity": "ok",
+      "detail": "last success 0.8h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-11T02:50:23+00:00",
       "last_success": "2026-11-11T02:03:22+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
-      "failures_5": 3,
+      "failures_5": 2,
       "effect": "reports and files stalls"
     },
     {
@@ -2981,7 +3087,7 @@
       "name": "Autonomous Comment Replies",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.5h ago",
+      "detail": "last success 0.8h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-11T02:04:20+00:00",
       "last_success": "2026-11-11T02:04:20+00:00",
@@ -2995,7 +3101,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 51.7h ago",
+      "detail": "last success 52.0h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-08T22:53:40+00:00",
       "last_success": "2026-11-08T22:53:40+00:00",
@@ -3009,7 +3115,7 @@
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 15.4h ago",
+      "detail": "last success 15.7h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-10T11:09:47+00:00",
       "last_success": "2026-11-10T11:09:47+00:00",
@@ -3023,7 +3129,7 @@
       "name": "Growth autopilot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 16.8h ago",
+      "detail": "last success 17.1h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-10T09:43:08+00:00",
       "last_success": "2026-11-10T09:43:08+00:00",
@@ -3037,7 +3143,7 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 38.7h ago",
+      "detail": "last success 39.0h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-09T11:48:56+00:00",
       "last_success": "2026-11-09T11:48:56+00:00",
@@ -3049,29 +3155,29 @@
     {
       "workflow": "metrics.yml",
       "name": "Weekly metrics snapshot",
-      "verdict": "FAILING",
-      "severity": "blocking",
-      "detail": "failed 1.5h ago and nothing was changed since; the next slot will fail the same way",
+      "verdict": "UNTESTED FIX",
+      "severity": "warning",
+      "detail": "failed 1.8h ago; edited just now \u2014 needs one green run",
       "last_conclusion": "failure",
       "last_run": "2026-11-11T01:01:40+00:00",
       "last_success": "2026-11-10T02:05:30+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
-      "failures_5": 1,
+      "failures_5": 0,
       "effect": "writes content/metrics.csv and opens a snapshot issue"
     },
     {
       "workflow": "monitor.yml",
       "name": "Automation monitor",
-      "verdict": "SELF-REPORT",
-      "severity": "info",
-      "detail": "its red runs are the verdicts below, not failures of it",
+      "verdict": "OK",
+      "severity": "ok",
+      "detail": "last success 0.0h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-11T02:30:29+00:00",
-      "last_success": "2026-11-10T17:09:11+00:00",
+      "last_run": "2026-11-11T02:50:23+00:00",
+      "last_success": "",
       "runs_14d": 20,
       "missed_slots": 0,
-      "failures_5": 4,
+      "failures_5": 2,
       "effect": "this report"
     },
     {
@@ -3079,7 +3185,7 @@
       "name": "Produce video",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 14.9h ago",
+      "detail": "last success 15.2h ago",
       "last_conclusion": "",
       "last_run": "2026-11-11T00:01:43+00:00",
       "last_success": "2026-11-10T11:41:15+00:00",
@@ -3095,8 +3201,8 @@
       "severity": "ok",
       "detail": "last success 0.0h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-11T02:32:23+00:00",
-      "last_success": "2026-11-11T02:30:29+00:00",
+      "last_run": "2026-11-11T02:50:26+00:00",
+      "last_success": "2026-11-11T02:49:49+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
