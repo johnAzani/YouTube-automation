@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T12:47:01Z",
+  "generated_at": "2026-11-11T13:22:22Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 85,
-    "published_longform": 37,
-    "published_shorts": 48,
-    "public_total": 83,
-    "queued_longform": 60,
-    "queued_shorts": 45,
+    "published_total": 87,
+    "published_longform": 38,
+    "published_shorts": 49,
+    "public_total": 85,
+    "queued_longform": 59,
+    "queued_shorts": 44,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -438,24 +438,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 0,
-        "published_longform": 0,
-        "published_shorts": 0,
-        "public_total": 0,
-        "queued_longform": 4,
+        "published_total": 2,
+        "published_longform": 1,
+        "published_shorts": 1,
+        "public_total": 2,
+        "queued_longform": 3,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
-      "latest_video": null,
-      "next_queued_longform": {
+      "latest_video": {
         "id": "0600",
         "title": "Psalm 121:7-8 Protection Prayer | The Covenant Shield",
-        "words": 918,
+        "format": "longform",
+        "youtube_video_id": "_T9qvff8ats",
+        "watch_url": "https://youtu.be/_T9qvff8ats",
+        "published_on": "2026-11-11",
+        "published_at": "2026-11-11T13:21:35Z"
+      },
+      "next_queued_longform": {
+        "id": "0601",
+        "title": "Genesis 15:1 Protection Prayer | The Covenant Shield",
+        "words": 928,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm121v7",
-        "scripture": "Psalm 121:7-8",
+        "short": "short-shieldgenesis15v1",
+        "scripture": "Genesis 15:1",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -467,6 +475,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0600",
+      "slug": "psalm-121-7-8-protection-prayer",
+      "file": "0600-psalm-121-7-8-protection-prayer.md",
+      "title": "Psalm 121:7-8 Protection Prayer | The Covenant Shield",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T13:21:35Z",
+      "youtube_video_id": "_T9qvff8ats",
+      "watch_url": "https://youtu.be/_T9qvff8ats",
+      "youtu_be_url": "https://youtu.be/_T9qvff8ats",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/_T9qvff8ats/edit",
+      "thumb_url": "https://i.ytimg.com/vi/_T9qvff8ats/hqdefault.jpg",
+      "thumb_text": "GUARD MY STEPS",
+      "duration_label": "~6 min",
+      "words": 918
+    },
+    {
+      "id": "SHORT-SHIELDPSALM121V7",
+      "slug": "short-shieldpsalm121v7-protection-prayer",
+      "file": "short-shieldpsalm121v7-protection-prayer.md",
+      "title": "Pray This Psalm 121:7-8 Prayer for Divine Protection | Protection Prayer #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T12:44:49Z",
+      "youtube_video_id": "q8qxvEQjdD8",
+      "watch_url": "https://www.youtube.com/shorts/q8qxvEQjdD8",
+      "youtu_be_url": "https://youtu.be/q8qxvEQjdD8",
+      "shorts_url": "https://www.youtube.com/shorts/q8qxvEQjdD8",
+      "studio_url": "https://studio.youtube.com/video/q8qxvEQjdD8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/q8qxvEQjdD8/hqdefault.jpg",
+      "thumb_text": "THE COVENANT SHIELD \u00b7 GUARD MY STEPS",
+      "duration_label": "64s",
+      "words": 221
+    },
     {
       "id": "0203",
       "slug": "habakkuk-2-1-midnight-prayer",
@@ -3154,19 +3208,6 @@
         "words": 1954
       },
       {
-        "id": "0600",
-        "slug": "psalm-121-7-8-protection-prayer",
-        "file": "0600-psalm-121-7-8-protection-prayer.md",
-        "title": "Psalm 121:7-8 Protection Prayer | The Covenant Shield",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 918
-      },
-      {
         "id": "0601",
         "slug": "genesis-15-1-protection-prayer",
         "file": "0601-genesis-15-1-protection-prayer.md",
@@ -3657,17 +3698,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-shieldpsalm121v7",
-        "file": "0600-short-shieldpsalm121v7.yml",
-        "companion_longform_id": "0600",
-        "scripture": "Psalm 121:7-8",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldgenesis15v1",
