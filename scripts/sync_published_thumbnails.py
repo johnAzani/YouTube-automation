@@ -39,8 +39,8 @@ from pipeline.upload import apply_shorts_thumbnail, set_video_thumbnail
 SHORTS_MAX_ATTEMPTS = 5
 
 #: Permission failures can clear after channel verification; retry at most once
-#: per day per receipt until then rather than spending quota on every monitor run.
-THUMBNAIL_PERMISSION_COOLDOWN_HOURS = 24
+#: per week per receipt indefinitely, rather than on every monitor run.
+THUMBNAIL_PERMISSION_COOLDOWN_HOURS = 7 * 24
 
 #: Back off on uploadRateLimitExceeded and preserve the whole channel's quota.
 THUMBNAIL_RATE_LIMIT_COOLDOWN_HOURS = 6

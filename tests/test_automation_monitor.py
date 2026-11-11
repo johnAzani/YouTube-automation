@@ -388,7 +388,10 @@ class TestMonitorWorkflow(unittest.TestCase):
         receipt edits its own sync steps made during this run.
         """
         self.assertIn("git restore --source=origin/main --staged --worktree -- content/published/", self.text)
-        self.assertIn('git cat-file -e "origin/main:$path"', self.text)
+        # Only replay edits if the exact receipt has not changed since checkout.
+        self.assertIn('base_blob=$(git rev-parse "$base_commit:$path"', self.text)
+        self.assertIn('current_blob=$(git rev-parse "origin/main:$path"', self.text)
+        self.assertIn('[ "$base_blob" = "$current_blob" ]', self.text)
         self.assertIn("git clean -f content/published/", self.text)
 
 

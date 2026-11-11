@@ -11,7 +11,7 @@ if the API refuses one, its receipt remains pending and Studio may be needed.
 
 The Automation monitor periodically tries eligible receipts for scheduled
 channels with each channel's own OAuth credentials. Permission-like failures
-are retried no more than once per receipt in 24 hours; Shorts with those errors
+are retried no more than once per receipt in seven days, indefinitely; Shorts with those errors
 remain eligible even after five attempts. Other repeated Shorts errors stop
 after five attempts, except for rate limits. YouTube thumbnail rate-limit errors use a
 six-hour cooldown and defer the rest of that channel's current pass. Limits

@@ -1,4 +1,5 @@
 """Safe retries after thumbnail permission/eligibility changes."""
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from types import SimpleNamespace
 from unittest import mock
@@ -113,6 +114,9 @@ def test_short_403_gets_cooldown_and_keeps_retrying(receipts, tmp_path, monkeypa
     meta = parse_script(path).meta
     assert meta["thumbnail_pending"] is True and meta["thumbnail_attempts"] == 6
     assert meta["thumbnail_retry_reason"] == "permission" and meta["thumbnail_retry_after"]
+    retry_at = datetime.fromisoformat(str(meta["thumbnail_retry_after"]).replace("Z", "+00:00"))
+    remaining = retry_at - datetime.now(timezone.utc)
+    assert timedelta(days=7, minutes=-2) < remaining <= timedelta(days=7)
     assert sync.collect_pending_short_receipts(directory, channel_id="prayer8") == []
 
 
