@@ -34,12 +34,15 @@ from pipeline.thumbnail_ctr import (
 )
 from pipeline.upload import apply_shorts_thumbnail, set_video_thumbnail
 
-#: Stop retrying a Short whose thumbnail YouTube keeps refusing (no YPP, bad token
-#: scope): five honest attempts, then a human decides. `--force` clears the block.
+#: Stop retrying other repeated Shorts failures after five attempts. Permission
+#: failures remain retryable: verification may happen after the fifth attempt.
 SHORTS_MAX_ATTEMPTS = 5
 
-#: Hours to back off when YouTube returns `uploadRateLimitExceeded` ("uploaded too
-#: many thumbnails recently"), saving 50 YouTube Data API quota units per 30m pass.
+#: Permission failures can clear after channel verification; retry at most once
+#: per week per receipt indefinitely, rather than on every monitor run.
+THUMBNAIL_PERMISSION_COOLDOWN_HOURS = 7 * 24
+
+#: Back off on uploadRateLimitExceeded and preserve the whole channel's quota.
 THUMBNAIL_RATE_LIMIT_COOLDOWN_HOURS = 6
 
 
@@ -60,6 +63,34 @@ def _cooldown_active(meta: dict[str, Any], now: datetime | None = None) -> str |
 def _is_thumbnail_rate_limited(status: Any) -> bool:
     low = str(status or "").lower()
     return "uploadratelimitexceeded" in low or "uploaded too many thumbnails" in low
+
+
+def _is_permission_refusal(status: Any) -> bool:
+    """Recognize a possible permission/eligibility refusal, not a quota error.
+
+    A 403 does not prove phone verification is the cause: it can also mean
+    missing OAuth scopes, the wrong account or a YouTube policy restriction.
+    """
+    low = str(status or "").lower()
+    if _is_thumbnail_rate_limited(low) or any(
+        term in low for term in ("quotaexceeded", "ratelimitexceeded", "dailylimitexceeded")
+    ):
+        return False
+    return any(term in low for term in (
+        "[forbidden]", "403", "insufficientpermissions", "insufficient permission",
+        "doesn't have permissions", "does not have permission", "not authorized",
+    ))
+
+
+def _permission_retry_allowed(meta: dict[str, Any]) -> bool:
+    return bool(meta.get("thumbnail_pending")) and _is_permission_refusal(meta.get("thumbnail_error"))
+
+
+def _wait_for_retry(meta: dict[str, Any], retry_permission: bool) -> str | None:
+    until = _cooldown_active(meta)
+    if until and retry_permission and meta.get("thumbnail_retry_reason") == "permission":
+        return None
+    return until
 
 # Curated 3-word mobile-maximised hooks for the initial published prayers so we do
 # not have to alter historical frontmatter that existing unit tests assert against.
@@ -129,6 +160,7 @@ def collect_pending_receipts(
     published_dir: Path = PUBLISHED_DIR,
     force: bool = False,
     channel_id: str | None = None,
+    retry_permission: bool = False,
 ) -> list[tuple[Path, Any]]:
     """Return `(path, ScriptDoc)` for published longform jobs needing thumbnail sync.
 
@@ -154,12 +186,14 @@ def collect_pending_receipts(
         if fmt != "longform" or not vid:
             continue
         rev = str(doc.meta.get("thumbnail_revision", "") or "").strip()
-        if not force and rev == THUMBNAIL_REVISION:
+        if retry_permission and not _permission_retry_allowed(doc.meta):
+            continue
+        if not force and rev == THUMBNAIL_REVISION and not doc.meta.get("thumbnail_pending"):
             continue
         if not force:
-            wait_until = _cooldown_active(doc.meta)
+            wait_until = _wait_for_retry(doc.meta, retry_permission)
             if wait_until:
-                print(f"[thumb-sync] skip {path.name}: uploadRateLimitExceeded cooldown until {wait_until}")
+                print(f"[thumb-sync] skip {path.name}: thumbnail retry cooldown until {wait_until}")
                 continue
         pending.append((path, doc))
     return pending
@@ -169,6 +203,7 @@ def collect_pending_short_receipts(
     published_dir: Path = PUBLISHED_DIR,
     force: bool = False,
     channel_id: str | None = None,
+    retry_permission: bool = False,
 ) -> list[tuple[Path, Any]]:
     """Return `(path, ScriptDoc)` for published Shorts whose poster is not confirmed.
 
@@ -195,24 +230,27 @@ def collect_pending_short_receipts(
         if fmt != "short" or not vid:
             continue
         rev = str(doc.meta.get("thumbnail_revision", "") or "").strip()
-        if not force and rev == SHORTS_POSTER_REVISION:
+        permission_pending = _permission_retry_allowed(doc.meta)
+        if retry_permission and not permission_pending:
             continue
-        # A permanent refusal (no YPP, wrong token scope) would otherwise cost 50
-        # units every monitor pass, forever. Five honest attempts, then wait for a
-        # human: `--force` clears the block and `thumbnail_error` says why.
+        if not force and rev == SHORTS_POSTER_REVISION and not doc.meta.get("thumbnail_pending"):
+            continue
         try:
             attempts = int(doc.meta.get("thumbnail_attempts") or 0)
         except (TypeError, ValueError):
             attempts = 0
-        if not force and attempts >= SHORTS_MAX_ATTEMPTS:
+        # Permission refusals can clear after verification, even after five old
+        # failures. Other persistent failures still stop at the existing cap.
+        if (not force and attempts >= SHORTS_MAX_ATTEMPTS and not permission_pending
+                and not _is_thumbnail_rate_limited(doc.meta.get("thumbnail_error"))):
             print(f"[thumb-sync] skip {path.name}: {attempts} failed Shorts thumbnail "
                   f"attempts (last: {str(doc.meta.get('thumbnail_error') or '')[:120]!r}); "
                   f"run with --force to retry")
             continue
         if not force:
-            wait_until = _cooldown_active(doc.meta)
+            wait_until = _wait_for_retry(doc.meta, retry_permission)
             if wait_until:
-                print(f"[thumb-sync] skip {path.name}: uploadRateLimitExceeded cooldown until {wait_until}")
+                print(f"[thumb-sync] skip {path.name}: thumbnail retry cooldown until {wait_until}")
                 continue
         pending.append((path, doc))
     return pending
@@ -331,6 +369,8 @@ def sync_published_thumbnails(
     channel: str | None = None,
     shorts_only: bool = False,
     limit: int | None = None,
+    retry_permission: bool = False,
+    thumbnails_only: bool = False,
 ) -> list[dict[str, Any]]:
     """Render and apply cinema thumbnails (+ privacy/title hygiene) for live videos.
 
@@ -340,17 +380,19 @@ def sync_published_thumbnails(
     """
     profile = get_channel(channel or CONFIG.channel_id)
     pending = [] if shorts_only else collect_pending_receipts(
-        published_dir=published_dir, force=force, channel_id=profile.id
+        published_dir=published_dir, force=force, channel_id=profile.id,
+        retry_permission=retry_permission,
     )
     pending_shorts = collect_pending_short_receipts(
-        published_dir=published_dir, force=force, channel_id=profile.id
+        published_dir=published_dir, force=force, channel_id=profile.id,
+        retry_permission=retry_permission,
     )
     if limit is not None and limit >= 0:
         pending = pending[:limit]
         pending_shorts = pending_shorts[:limit]
     if not pending and not pending_shorts:
-        print(f"[thumb-sync] {profile.id}: every published video is at "
-              f"{THUMBNAIL_REVISION} / {SHORTS_POSTER_REVISION}")
+        print(f"[thumb-sync] {profile.id}: no eligible thumbnails in this pass "
+              "(pending items may still be cooling down or blocked).")
         return []
 
     if not dry_run and youtube_client is None and not _has_youtube_credentials(profile):
@@ -396,6 +438,7 @@ def sync_published_thumbnails(
         if channel_rate_limited_until:
             stamp_frontmatter_field(path, "thumbnail_pending", True)
             stamp_frontmatter_field(path, "thumbnail_retry_after", channel_rate_limited_until)
+            stamp_frontmatter_field(path, "thumbnail_retry_reason", "rate_limit")
             results.append({
                 "id": doc_key,
                 "video_id": vid,
@@ -442,6 +485,7 @@ def sync_published_thumbnails(
             desired_priv = str(doc.meta.get("privacy") or "public").strip().lower()
             if (
                 not dry_run
+                and not thumbnails_only
                 and yt is not None
                 and desired_priv == "public"
                 and dur_sec >= 180
@@ -468,6 +512,7 @@ def sync_published_thumbnails(
             # 2. Honest title on legacy sub-90s teaser upload (0008) claiming "Complete Prayer".
             if (
                 not dry_run
+                and not thumbnails_only
                 and yt is not None
                 and 0 < dur_sec < 90
                 and "complete prayer" in live_title.lower()
@@ -512,6 +557,10 @@ def sync_published_thumbnails(
                 row["thumbnail_status"] = "video_not_found"
                 stamp_frontmatter_field(path, "youtube_status", "deleted_or_missing")
                 stamp_frontmatter_field(path, "thumbnail_revision", THUMBNAIL_REVISION)
+                stamp_frontmatter_field(path, "thumbnail_pending", False)
+                clear_frontmatter_field(path, "thumbnail_error")
+                clear_frontmatter_field(path, "thumbnail_retry_after")
+                clear_frontmatter_field(path, "thumbnail_retry_reason")
             else:
                 status = thumb_setter(vid, primary.path)
                 row["thumbnail_status"] = status
@@ -519,10 +568,12 @@ def sync_published_thumbnails(
                     # The refusal sentence describes a failure that no longer exists.
                     clear_frontmatter_field(path, "thumbnail_error")
                     clear_frontmatter_field(path, "thumbnail_retry_after")
+                    clear_frontmatter_field(path, "thumbnail_retry_reason")
                     stamp_frontmatter_field(path, "thumbnail_revision", THUMBNAIL_REVISION)
                     stamp_frontmatter_field(path, "thumbnail_pending", False)
                 elif "HttpError 404" in str(status):
                     clear_frontmatter_field(path, "thumbnail_retry_after")
+                    clear_frontmatter_field(path, "thumbnail_retry_reason")
                     stamp_frontmatter_field(path, "youtube_status", "deleted_or_missing")
                     stamp_frontmatter_field(path, "thumbnail_revision", THUMBNAIL_REVISION)
                     stamp_frontmatter_field(path, "thumbnail_pending", False)
@@ -539,13 +590,25 @@ def sync_published_thumbnails(
                         ).strftime("%Y-%m-%dT%H:%M:%SZ")
                         channel_rate_limited_until = retry_at
                         stamp_frontmatter_field(path, "thumbnail_retry_after", retry_at)
+                        stamp_frontmatter_field(path, "thumbnail_retry_reason", "rate_limit")
                         print(f"::warning title=Thumbnail rate-limited "
                               f"({profile.id})::{vid} — backing off entire channel until {retry_at} "
                               f"to preserve daily YouTube API quota.")
+                    elif _is_permission_refusal(status):
+                        retry_at = (datetime.now(timezone.utc) + timedelta(
+                            hours=THUMBNAIL_PERMISSION_COOLDOWN_HOURS
+                        )).strftime("%Y-%m-%dT%H:%M:%SZ")
+                        stamp_frontmatter_field(path, "thumbnail_retry_after", retry_at)
+                        stamp_frontmatter_field(path, "thumbnail_retry_reason", "permission")
+                        print(f"::warning title=Thumbnail permission refused ({profile.id})::"
+                              f"{vid} — pending; retry after {retry_at}. Verify channel eligibility "
+                              "and OAuth permissions; a 403 alone does not prove the cause.")
                     else:
+                        clear_frontmatter_field(path, "thumbnail_retry_after")
+                        clear_frontmatter_field(path, "thumbnail_retry_reason")
                         print(f"::warning title=Thumbnail still refused "
                               f"({profile.id})::{vid} — {status}. The receipt keeps "
-                              f"thumbnail_pending: true and the next monitor pass retries "
+                              f"thumbnail_pending: true; later monitor passes can retry "
                               f"it (50 quota units per attempt).")
         print(f"::notice title=Live thumbnail sync::{json.dumps(row)}")
         results.append(row)
@@ -557,6 +620,7 @@ def sync_published_thumbnails(
         if channel_rate_limited_until:
             stamp_frontmatter_field(path, "thumbnail_pending", True)
             stamp_frontmatter_field(path, "thumbnail_retry_after", channel_rate_limited_until)
+            stamp_frontmatter_field(path, "thumbnail_retry_reason", "rate_limit")
             results.append({
                 "id": doc_key,
                 "video_id": vid,
@@ -591,6 +655,7 @@ def sync_published_thumbnails(
                 stamp_frontmatter_field(path, "thumbnail_attempts", 0)
                 clear_frontmatter_field(path, "thumbnail_error")
                 clear_frontmatter_field(path, "thumbnail_retry_after")
+                clear_frontmatter_field(path, "thumbnail_retry_reason")
                 stamp_frontmatter_field(
                     path, "thumbnail_poster",
                     "[" + ", ".join(json.dumps(str(x)) for x in poster.lines) + "]",
@@ -609,13 +674,23 @@ def sync_published_thumbnails(
                     ).strftime("%Y-%m-%dT%H:%M:%SZ")
                     channel_rate_limited_until = retry_at
                     stamp_frontmatter_field(path, "thumbnail_retry_after", retry_at)
+                    stamp_frontmatter_field(path, "thumbnail_retry_reason", "rate_limit")
+                elif _is_permission_refusal(status):
+                    retry_at = (datetime.now(timezone.utc) + timedelta(
+                        hours=THUMBNAIL_PERMISSION_COOLDOWN_HOURS
+                    )).strftime("%Y-%m-%dT%H:%M:%SZ")
+                    stamp_frontmatter_field(path, "thumbnail_retry_after", retry_at)
+                    stamp_frontmatter_field(path, "thumbnail_retry_reason", "permission")
+                    stamp_frontmatter_field(path, "thumbnail_attempts", seen + 1)
                 else:
+                    clear_frontmatter_field(path, "thumbnail_retry_after")
+                    clear_frontmatter_field(path, "thumbnail_retry_reason")
                     stamp_frontmatter_field(path, "thumbnail_attempts", seen + 1)
                 stamp_frontmatter_field(path, "thumbnail_pending", True)
                 stamp_frontmatter_field(path, "thumbnail_error", str(status)[:900])
                 print(f"::warning title=Shorts thumbnail not applied "
                       f"({profile.id})::{vid} — {status}. The receipt keeps "
-                      f"thumbnail_pending: true and the next monitor pass retries it "
+                      f"thumbnail_pending: true; later eligible monitor passes may retry it "
                       f"(50 quota units per attempt).")
         print(f"::notice title=Shorts thumbnail sync::{json.dumps(row)}")
         results.append(row)
@@ -661,8 +736,25 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--channel", default="", help="Channel to repair (default: the run's CHANNEL_ID)")
     parser.add_argument("--all-channels", action="store_true",
                         help="Repair every registered channel with its own credentials")
+    parser.add_argument("--retry-permission", action="store_true",
+                        help="Retry only pending permission failures for one explicit channel")
     args = parser.parse_args(argv)
     dry = args.dry_run or os.environ.get("DRY_RUN", "").lower() in {"1", "true", "yes"}
+    if args.retry_permission:
+        if not args.channel or args.channel not in CHANNELS or args.all_channels or args.force:
+            parser.error("--retry-permission requires one exact --channel and cannot be combined with --all-channels or --force")
+        if not dry and not _has_youtube_credentials(get_channel(args.channel)):
+            print(f"[thumb-sync] {args.channel}: YouTube credentials are unavailable; nothing was changed.")
+            return 1
+        rows = sync_published_thumbnails(
+            dry_run=dry, channel=args.channel, limit=DEFAULT_CHANNEL_PASS_LIMIT,
+            retry_permission=True, thumbnails_only=True,
+        )
+        fixed = sum(1 for row in rows if row.get("thumbnail_status") == "ok")
+        print(f"[thumb-sync] {args.channel}: {fixed}/{len(rows)} thumbnail(s) applied in this bounded pass. "
+              "Other pending receipts may be awaiting later monitor passes or a rate-limit cooldown; "
+              "inspect receipts and warnings for their current status.")
+        return 0 if dry or all(row.get("thumbnail_status") == "ok" for row in rows) else 1
     if args.all_channels:
         results = sync_all_channels(force=args.force, dry_run=dry)
         for cid, rows in results.items():

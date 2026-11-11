@@ -130,7 +130,8 @@ class TestFourthChannelWorkflowWiring(unittest.TestCase):
         self.assertTrue(setup_doc.is_file())
         self.assertIn("PRAYER4_READY", produce)
         self.assertIn("PRAYER4_YOUTUBE_REFRESH_TOKEN", produce)
-        self.assertIn("PRAYER4_GEMINI_API_KEY", produce)
+        self.assertIn('"prayer4":"PRAYER4_"', produce)
+        self.assertIn("format('{0}GEMINI_API_KEY'", produce)
 
         self.assertIn("PRAYER4_READY", brain)
         self.assertIn("PRAYER4_GEMINI_API_KEY", brain)

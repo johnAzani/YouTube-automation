@@ -1065,8 +1065,11 @@ goes before you until evening falls and brings your labor to peaceful completion
             checked += 1
             comment = generate_pastoral_pinned_comment(doc)
             low = comment.lower()
-            for night_word in ("sleep", "slumber", "tonight", "liest down"):
-                self.assertNotIn(night_word, low, f"{p.name} leaked {night_word!r} in comment")
+            # The daypart rule is for the two pastoral channels; the protection
+            # channel's Psalm 121 Short legitimately quotes "neither slumbers nor sleeps".
+            if doc.channel in {"prayer2", "prayer3"}:
+                for night_word in ("sleep", "slumber", "tonight", "liest down"):
+                    self.assertNotIn(night_word, low, f"{p.name} leaked {night_word!r} in comment")
             for bad in brand_for(doc.channel).forbidden_phrases:
                 self.assertNotIn(bad.lower(), low, f"{p.name} leaked {bad!r} in comment")
         self.assertGreaterEqual(checked, 20)

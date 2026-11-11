@@ -41,6 +41,10 @@ on:
     # woken by the watcher it wakes.
     types: [completed]
   workflow_dispatch:
+  # An owner can request a targeted retry after channel verification. This is
+  # thumbnails-only and does not bypass YouTube rate-limit cooldowns.
+  repository_dispatch:
+    types: [thumbnail-permission-verified]
 
 permissions:
   contents: write
@@ -86,8 +90,10 @@ jobs:
         # a bare except in pipeline/upload.py — was never retried and never
         # mentioned. Receipts now say `thumbnail_pending` until the thumbnail is
         # really live, and this pass repairs every scheduled channel.
-        continue-on-error: true
+        continue-on-error: ${{ github.event_name != 'repository_dispatch' }}
         env:
+          THUMBNAIL_EVENT: ${{ github.event_name }}
+          THUMBNAIL_RETRY_CHANNEL: ${{ github.event.client_payload.channel }}
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
@@ -121,11 +127,19 @@ jobs:
           PRAYER8_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER8_YOUTUBE_REFRESH_TOKEN }}
           PRAYER8_YOUTUBE_CHANNEL_ID: ${{ vars.PRAYER8_YOUTUBE_CHANNEL_ID || secrets.PRAYER8_YOUTUBE_CHANNEL_ID }}
         run: |
-          python -m scripts.sync_published_thumbnails --all-channels
-          python -m scripts.retrofit_published_metadata --sync-pending
-          GH_TOKEN="${{ secrets.GITHUB_TOKEN }}" python -m scripts.release_report --sweep-stale || true
+          if [ "$THUMBNAIL_EVENT" = "repository_dispatch" ]; then
+            # Payload is an env var, never interpolated as shell code. The CLI
+            # accepts only exact registered channel IDs, with no cross-channel
+            # fallback, and leaves other metadata and rate-limit cooldowns alone.
+            python -m scripts.sync_published_thumbnails --channel "$THUMBNAIL_RETRY_CHANNEL" --retry-permission
+          else
+            python -m scripts.sync_published_thumbnails --all-channels
+            python -m scripts.retrofit_published_metadata --sync-pending
+            GH_TOKEN="${{ secrets.GITHUB_TOKEN }}" python -m scripts.release_report --sweep-stale || true
+          fi
 
       - name: Audit every automation and its outcome
+        if: ${{ github.event_name != 'repository_dispatch' }}
         id: audit
         # This step exits 1 *because* something is failing — that is the alarm, and
         # the job ends red on purpose. But the next step files the issue, and it had
@@ -147,7 +161,7 @@ jobs:
         run: python -m scripts.automation_monitor --save
 
       - name: File or close the stall issue
-        if: ${{ always() && !cancelled() }}
+        if: ${{ always() && !cancelled() && github.event_name != 'repository_dispatch' }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -190,12 +204,19 @@ jobs:
             cp -- "$path" "$sync_dir/$path"
           done < "$sync_dir/files.z"
           git fetch --quiet origin main
+          base_commit=$(git rev-parse HEAD)
           git reset --mixed origin/main
           git restore --source=origin/main --staged --worktree -- content/published/
           git clean -f content/published/
+          conflict=0
           while IFS= read -r -d '' path; do
-            if git cat-file -e "origin/main:$path" 2>/dev/null; then
+            base_blob=$(git rev-parse "$base_commit:$path" 2>/dev/null || true)
+            current_blob=$(git rev-parse "origin/main:$path" 2>/dev/null || true)
+            if [ -n "$base_blob" ] && [ "$base_blob" = "$current_blob" ]; then
               cp -- "$sync_dir/$path" "$path"
+            else
+              echo "::warning::Receipt changed on main during sync; not overwriting $path"
+              conflict=1
             fi
           done < "$sync_dir/files.z"
           git restore --source=origin/main --staged --worktree -- content/queue/ content/shorts-queue/ docs/network-state.json 2>/dev/null || true
@@ -209,11 +230,17 @@ jobs:
           git add content/published/*.md
           if git diff --cached --quiet; then
             echo "snapshot unchanged"
-            exit 0
+          else
+            git commit --quiet -m "chore(monitor): automation status snapshot & live thumbnail sync [skip ci]"
+            if ! git push --quiet origin HEAD:main; then
+              echo "::warning::could not push the snapshot; receipt updates were not saved"
+              if [ "${{ github.event_name }}" = "repository_dispatch" ]; then exit 1; fi
+            fi
           fi
-          git commit --quiet -m "chore(monitor): automation status snapshot & live thumbnail sync [skip ci]"
-          git push --quiet origin HEAD:main \
-            || echo "::warning::could not push the snapshot; the issue is the record of truth"
+          if [ "$conflict" = 1 ] && [ "${{ github.event_name }}" = "repository_dispatch" ]; then
+            echo "::error::Some receipt updates were not saved; review and retry the affected channel."
+            exit 1
+          fi
 
       - name: Fail the job if the audit found a stalled automation
         # The alarm stays an alarm: the issue is filed, the snapshot is committed,
