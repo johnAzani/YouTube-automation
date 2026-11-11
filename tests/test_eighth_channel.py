@@ -1,8 +1,7 @@
 """Regression tests for the eighth prayer channel: The Covenant Shield (prayer8).
 
-Registered in full capability parity with provisioned=False until the owner creates
-@TheCovenantShieldDaily on YouTube and saves its separate Google Cloud credentials
-(PRAYER8_YOUTUBE_* + PRAYER8_GEMINI_API_KEY).
+Registered in full capability parity and provisioned after owner approval and
+a successful read-only credential diagnostic.
 """
 from __future__ import annotations
 
@@ -45,13 +44,36 @@ class TestEighthChannelRegistration(unittest.TestCase):
         ):
             self.assertEqual(normalize_channel_id(alias), "prayer8")
 
-    def test_unprovisioned_channel_waits_quietly_until_secrets_exist(self):
-        ch = get_channel("prayer8")
-        self.assertFalse(ch.provisioned)
-        self.assertNotIn("prayer8", scheduled_channels())
-        health_rows = {row["queue"]: row for row in queue_health()}
-        self.assertNotIn("longform:prayer8", health_rows)
-        self.assertNotIn("shorts:prayer8", health_rows)
+    def test_provisioned_channel_has_scheduler_and_health_rows(self):
+        self.assertTrue(get_channel("prayer8").provisioned)
+        self.assertIn("prayer8", scheduled_channels())
+        rows = {row["queue"]: row for row in queue_health()}
+        self.assertIn("longform:prayer8", rows)
+        self.assertIn("shorts:prayer8", rows)
+
+    def test_remaining_launch_content_is_well_formed(self):
+        """Check queued items without requiring published work to remain queued."""
+        import json
+        import yaml
+        from pipeline.script_doc import MIN_LONGFORM_WORDS, parse_script
+        from pipeline.short_script import validate_spec
+
+        draw = ImageDraw.Draw(Image.new("RGB", (1280, 720)))
+        for ident in ("0600", "0601", "0602", "0603"):
+            with self.subTest(job=ident):
+                for script in (ROOT / "content" / "queue").glob(f"{ident}-*.md"):
+                    doc = parse_script(script)
+                    self.assertIn(doc.status, ("approved", "quota_paused", "tts_blocked"))
+                    self.assertEqual(doc.channel, "prayer8")
+                    self.assertGreaterEqual(doc.word_count, MIN_LONGFORM_WORDS)
+                    self.assertGreaterEqual(thumbnail_ctr._layout(draw, doc.meta["thumb_text"], (86, 76, 746, 568))[-1], 105)
+                    self.assertTrue((ROOT / "content" / "factcheck" / script.name).is_file())
+                for manifest in (ROOT / "content" / "shorts-queue").glob(f"{ident}-*.yml"):
+                    entry = yaml.safe_load(manifest.read_text())
+                    self.assertIn(entry["status"], ("approved", "quota_paused"))
+                    self.assertEqual(entry["channel"], "prayer8")
+                    data = json.loads((ROOT / "content" / "shorts-scripts" / f"{entry['short']}.json").read_text())
+                    self.assertFalse(validate_spec(data).problems)
 
 
 class TestEighthChannelIdentityAndVisuals(unittest.TestCase):

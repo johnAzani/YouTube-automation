@@ -1,0 +1,275 @@
+{
+  "key": "short-shieldgenesis15v1",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "PROTECTION PRAYER",
+    "GENESIS 15:1"
+  ],
+  "poster": [
+    "THE COVENANT SHIELD",
+    "GOD IS MY SHIELD",
+    "GENESIS 15:1",
+    "PROTECTION PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — daily protection prayer"
+  ],
+  "stock_queries": [
+    "sunlight breaking through clouds mountain pass",
+    "golden light rays through clouds over mountain peak",
+    "divine light breaking through clouds over peaceful landscape",
+    "peaceful mountain river calm water forest",
+    "ancient chapel interior candlelight peaceful sanctuary",
+    "forest sunlight mist",
+    "serene valley stream morning light peaceful"
+  ],
+  "scenes": [
+    {
+      "a": "When fear rises before the day begins, remember the Lord’s words to Abram and bring your concerns to Him.",
+      "img": "short-shieldgenesis15v1-scene-01.jpg",
+      "kicker": "GENESIS 15:1",
+      "sub": "BRING YOUR FEARS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Genesis chapter fifteen, verse one says, Fear not, Abram: I am thy shield, and thy exceeding great reward.",
+      "img": "short-shieldgenesis15v1-scene-02.jpg",
+      "kicker": "GENESIS 15:1",
+      "sub": "HEAR THE WORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The Lord invites us to trust His presence, not merely our own strength or our ability to see what lies ahead.",
+      "img": "short-shieldgenesis15v1-scene-03.jpg",
+      "kicker": "GENESIS 15:1",
+      "sub": "TRUST THE LORD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Heavenly Father, be near to every listener who feels uncertain, vulnerable, or overwhelmed by the journey ahead.",
+      "img": "short-shieldgenesis15v1-scene-04.jpg",
+      "kicker": "GENESIS 15:1",
+      "sub": "FATHER BE NEAR",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Give us wisdom to make careful choices, courage to ask for help, and peace to take the next faithful step.",
+      "img": "short-shieldgenesis15v1-scene-05.jpg",
+      "kicker": "GENESIS 15:1",
+      "sub": "GIVE US WISDOM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "In every trial, remind us that Your love is not absent, and teach us to rest in Your faithfulness.",
+      "img": "short-shieldgenesis15v1-scene-06.jpg",
+      "kicker": "GENESIS 15:1",
+      "sub": "PEACE IN CHRIST",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Type Amen and subscribe to The Covenant Shield for daily prayer and encouragement in God’s keeping.",
+      "img": "short-shieldgenesis15v1-scene-07.jpg",
+      "kicker": "COVENANT SHIELD",
+      "sub": "DAILY PROTECTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "When fear rises before the day begins, remember the Lord’s words to Abram and bring your concerns to Him."
+    ],
+    [
+      9,
+      17,
+      "Genesis chapter fifteen, verse one says, Fear not, Abram: I am thy shield, and thy exceeding great reward."
+    ],
+    [
+      18,
+      26,
+      "The Lord invites us to trust His presence, not merely our own strength or our ability to see what lies ahead."
+    ],
+    [
+      27,
+      35,
+      "Heavenly Father, be near to every listener who feels uncertain, vulnerable, or overwhelmed by the journey ahead."
+    ],
+    [
+      36,
+      44,
+      "Give us wisdom to make careful choices, courage to ask for help, and peace to take the next faithful step."
+    ],
+    [
+      45,
+      53,
+      "In every trial, remind us that Your love is not absent, and teach us to rest in Your faithfulness."
+    ],
+    [
+      54,
+      62,
+      "Type Amen and subscribe to The Covenant Shield for daily prayer and encouragement in God’s keeping."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "BRING YOUR FEARS"
+      ],
+      [],
+      "GENESIS 15:1"
+    ],
+    [
+      9,
+      17,
+      [
+        "HEAR THE WORD"
+      ],
+      [],
+      "GENESIS 15:1"
+    ],
+    [
+      18,
+      26,
+      [
+        "TRUST THE LORD"
+      ],
+      [],
+      "GENESIS 15:1"
+    ],
+    [
+      27,
+      35,
+      [
+        "FATHER BE NEAR"
+      ],
+      [],
+      "GENESIS 15:1"
+    ],
+    [
+      36,
+      44,
+      [
+        "GIVE US WISDOM"
+      ],
+      [],
+      "GENESIS 15:1"
+    ],
+    [
+      45,
+      53,
+      [
+        "PEACE IN CHRIST"
+      ],
+      [],
+      "GENESIS 15:1"
+    ],
+    [
+      54,
+      62,
+      [
+        "DAILY PROTECTION"
+      ],
+      [],
+      "GENESIS 15:1"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When fear rises before the day begins, remember the Lord’s words to Abram and bring your concerns to Him.",
+      "kind": "phrase",
+      "words": [
+        "BRING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Genesis chapter fifteen, verse one says, Fear not, Abram: I am thy shield, and thy exceeding great reward.",
+      "kind": "phrase",
+      "words": [
+        "HEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord invites us to trust His presence, not merely our own strength or our ability to see what lies ahead.",
+      "kind": "phrase",
+      "words": [
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, be near to every listener who feels uncertain, vulnerable, or overwhelmed by the journey ahead.",
+      "kind": "phrase",
+      "words": [
+        "FATHER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Give us wisdom to make careful choices, courage to ask for help, and peace to take the next faithful step.",
+      "kind": "phrase",
+      "words": [
+        "GIVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In every trial, remind us that Your love is not absent, and teach us to rest in Your faithfulness.",
+      "kind": "phrase",
+      "words": [
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Type Amen and subscribe to The Covenant Shield for daily prayer and encouragement in God’s keeping.",
+      "kind": "phrase",
+      "words": [
+        "DAILY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Genesis 15:1"
+}

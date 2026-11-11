@@ -1,6 +1,6 @@
 # The Covenant Shield — Official YouTube Brand Kit (`prayer8`)
 
-**Status:** **REGISTERED (`provisioned=False` pending YouTube Studio & `PRAYER8_*` secrets)** for `@TheCovenantShieldDaily`. See `docs/EIGHTH_CHANNEL_SETUP.md`.
+**Status:** Enabled (`provisioned=True`) with approved launch content; actual publishing is verified by its production run. See `docs/EIGHTH_CHANNEL_SETUP.md`.
 
 ## Visual Differentiation Across the 8-Channel Sanctuary Network
 - **Channel 1 — The Secret Place (`@TheSecretPlace`)**: Deep indigo-navy ring + Cross + Open Bible; mountain lake night banner.

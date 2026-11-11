@@ -1,0 +1,275 @@
+{
+  "key": "short-shieldproverbs18v10",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "PROTECTION PRAYER",
+    "PROVERBS 18:10"
+  ],
+  "poster": [
+    "THE COVENANT SHIELD",
+    "STRONG TOWER",
+    "PROVERBS 18:10",
+    "PROTECTION PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — daily protection prayer"
+  ],
+  "stock_queries": [
+    "sunlight breaking through clouds mountain pass",
+    "golden light rays through clouds over mountain peak",
+    "divine light breaking through clouds over peaceful landscape",
+    "peaceful mountain river calm water forest",
+    "ancient chapel interior candlelight peaceful sanctuary",
+    "forest sunlight mist",
+    "serene valley stream morning light peaceful"
+  ],
+  "scenes": [
+    {
+      "a": "When your heart feels overwhelmed, you do not have to carry every fear by yourself today.",
+      "img": "short-shieldproverbs18v10-scene-01.jpg",
+      "kicker": "PROVERBS 18:10",
+      "sub": "BRING YOUR FEARS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Proverbs chapter eighteen, verse ten says, The name of the LORD is a strong tower: the righteous runneth into it, and is safe.",
+      "img": "short-shieldproverbs18v10-scene-02.jpg",
+      "kicker": "PROVERBS 18:10",
+      "sub": "HEAR THE WORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "We turn to the Lord in prayer, remembering His faithfulness even when our circumstances are difficult.",
+      "img": "short-shieldproverbs18v10-scene-03.jpg",
+      "kicker": "PROVERBS 18:10",
+      "sub": "TRUST THE LORD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, shelter those who are anxious, comfort those who are grieving, and strengthen all who feel vulnerable.",
+      "img": "short-shieldproverbs18v10-scene-04.jpg",
+      "kicker": "PROVERBS 18:10",
+      "sub": "FATHER BE NEAR",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Help us to seek wise counsel, to care for our neighbours, and to take the practical steps that lead toward safety.",
+      "img": "short-shieldproverbs18v10-scene-05.jpg",
+      "kicker": "PROVERBS 18:10",
+      "sub": "GIVE US WISDOM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hold us close through the storms we cannot control, and let Your peace steady our hearts in Christ.",
+      "img": "short-shieldproverbs18v10-scene-06.jpg",
+      "kicker": "PROVERBS 18:10",
+      "sub": "PEACE IN CHRIST",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Type Amen and subscribe to The Covenant Shield for daily prayer and encouragement in God’s keeping.",
+      "img": "short-shieldproverbs18v10-scene-07.jpg",
+      "kicker": "COVENANT SHIELD",
+      "sub": "DAILY PROTECTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "When your heart feels overwhelmed, you do not have to carry every fear by yourself today."
+    ],
+    [
+      9,
+      17,
+      "Proverbs chapter eighteen, verse ten says, The name of the LORD is a strong tower: the righteous runneth into it, and is safe."
+    ],
+    [
+      18,
+      26,
+      "We turn to the Lord in prayer, remembering His faithfulness even when our circumstances are difficult."
+    ],
+    [
+      27,
+      35,
+      "Father, shelter those who are anxious, comfort those who are grieving, and strengthen all who feel vulnerable."
+    ],
+    [
+      36,
+      44,
+      "Help us to seek wise counsel, to care for our neighbours, and to take the practical steps that lead toward safety."
+    ],
+    [
+      45,
+      53,
+      "Hold us close through the storms we cannot control, and let Your peace steady our hearts in Christ."
+    ],
+    [
+      54,
+      62,
+      "Type Amen and subscribe to The Covenant Shield for daily prayer and encouragement in God’s keeping."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "BRING YOUR FEARS"
+      ],
+      [],
+      "PROVERBS 18:10"
+    ],
+    [
+      9,
+      17,
+      [
+        "HEAR THE WORD"
+      ],
+      [],
+      "PROVERBS 18:10"
+    ],
+    [
+      18,
+      26,
+      [
+        "TRUST THE LORD"
+      ],
+      [],
+      "PROVERBS 18:10"
+    ],
+    [
+      27,
+      35,
+      [
+        "FATHER BE NEAR"
+      ],
+      [],
+      "PROVERBS 18:10"
+    ],
+    [
+      36,
+      44,
+      [
+        "GIVE US WISDOM"
+      ],
+      [],
+      "PROVERBS 18:10"
+    ],
+    [
+      45,
+      53,
+      [
+        "PEACE IN CHRIST"
+      ],
+      [],
+      "PROVERBS 18:10"
+    ],
+    [
+      54,
+      62,
+      [
+        "DAILY PROTECTION"
+      ],
+      [],
+      "PROVERBS 18:10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When your heart feels overwhelmed, you do not have to carry every fear by yourself today.",
+      "kind": "phrase",
+      "words": [
+        "BRING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Proverbs chapter eighteen, verse ten says, The name of the LORD is a strong tower: the righteous runneth into it, and is safe.",
+      "kind": "phrase",
+      "words": [
+        "HEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We turn to the Lord in prayer, remembering His faithfulness even when our circumstances are difficult.",
+      "kind": "phrase",
+      "words": [
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, shelter those who are anxious, comfort those who are grieving, and strengthen all who feel vulnerable.",
+      "kind": "phrase",
+      "words": [
+        "FATHER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help us to seek wise counsel, to care for our neighbours, and to take the practical steps that lead toward safety.",
+      "kind": "phrase",
+      "words": [
+        "GIVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hold us close through the storms we cannot control, and let Your peace steady our hearts in Christ.",
+      "kind": "phrase",
+      "words": [
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Type Amen and subscribe to The Covenant Shield for daily prayer and encouragement in God’s keeping.",
+      "kind": "phrase",
+      "words": [
+        "DAILY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 18:10"
+}
