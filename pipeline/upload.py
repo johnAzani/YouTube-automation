@@ -226,6 +226,53 @@ def verify_target_channel(youtube) -> dict:
     return {"id": actual_id, "title": title}
 
 
+def inspect_existing_short(video_id: str, expected_title: str) -> dict:
+    """Read and verify an existing Short before recovering its missing receipt.
+
+    Refuse to infer ownership, timestamps or privacy from a duplicate match. The
+    caller keeps the queue manifest when this lookup cannot establish the facts.
+    This function never mutates the video or uploads a thumbnail.
+    """
+    import re
+    from datetime import datetime
+
+    from googleapiclient.discovery import build
+    from .metadata import smart_truncate_title
+
+    if not re.fullmatch(r"[A-Za-z0-9_-]{11}", str(video_id or "")):
+        raise RuntimeError("Cannot recover Short: invalid YouTube video ID")
+    expected_channel = (CONFIG.expected_youtube_channel_id or "").strip()
+    if not expected_channel:
+        raise RuntimeError("Cannot recover Short: expected channel ID is not configured")
+    youtube = build("youtube", "v3", credentials=_credentials(), cache_discovery=False)
+    channel = verify_target_channel(youtube)
+    response = youtube.videos().list(part="snippet,status,contentDetails", id=video_id).execute()
+    items = response.get("items", [])
+    if len(items) != 1 or items[0].get("id") != video_id:
+        raise RuntimeError("Cannot recover Short: video lookup was missing or ambiguous")
+    item = items[0]
+    snippet, status = item.get("snippet") or {}, item.get("status") or {}
+    if snippet.get("channelId") != expected_channel or channel.get("id") != expected_channel:
+        raise RuntimeError("Cannot recover Short: video belongs to a different channel")
+    remote_title = str(snippet.get("title") or "")
+    allowed_titles = {_normalize_title(expected_title), _normalize_title(smart_truncate_title(expected_title, 95))}
+    if not _normalize_title(remote_title) or _normalize_title(remote_title) not in allowed_titles:
+        raise RuntimeError("Cannot recover Short: video title does not match the edition")
+    privacy, upload_status = status.get("privacyStatus"), status.get("uploadStatus")
+    if privacy not in {"public", "private", "unlisted"} or upload_status not in {"processed", "uploaded"}:
+        raise RuntimeError("Cannot recover Short: privacy or upload status is not usable")
+    published_at = str(snippet.get("publishedAt") or "")
+    try:
+        published_time = datetime.fromisoformat(published_at.replace("Z", "+00:00"))
+        if published_time.tzinfo is None:
+            raise ValueError("missing timezone")
+    except ValueError as exc:
+        raise RuntimeError("Cannot recover Short: YouTube did not return a usable publication timestamp") from exc
+    return {"video_id": video_id, "title": remote_title, "privacy_status": privacy,
+            "upload_status": upload_status, "published_at": published_at,
+            "duration": str((item.get("contentDetails") or {}).get("duration") or "")}
+
+
 def upload(
     doc: ScriptDoc,
     video_path: Path,
