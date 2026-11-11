@@ -37,13 +37,6 @@
       "workflow": "gemini_brain.yml"
     },
     {
-      "late_minutes": 135,
-      "name": "Scheduler supervisor",
-      "ran_at": "2026-11-11T18:02:35+00:00",
-      "slot": "2026-11-11T15:47:00+00:00",
-      "workflow": "scheduler-supervisor.yml"
-    },
-    {
       "late_minutes": 126,
       "name": "Autonomous Comment Replies",
       "ran_at": "2026-11-11T17:20:11+00:00",
@@ -58,8 +51,8 @@
       "workflow": "community.yml"
     }
   ],
-  "generated_at": "2026-11-11T18:42:53.452380+00:00",
-  "last_run_at": "2026-11-11T18:42:49+00:00",
+  "generated_at": "2026-11-11T18:48:42.731948+00:00",
+  "last_run_at": "2026-11-11T18:47:57+00:00",
   "on_time": [
     {
       "late_minutes": 4,
@@ -74,6 +67,13 @@
       "ran_at": "2026-11-11T15:38:45+00:00",
       "slot": "2026-11-11T14:14:00+00:00",
       "workflow": "produce.yml"
+    },
+    {
+      "late_minutes": 0,
+      "name": "Scheduler supervisor",
+      "ran_at": "2026-11-11T18:47:57+00:00",
+      "slot": "2026-11-11T18:47:00+00:00",
+      "workflow": "scheduler-supervisor.yml"
     }
   ],
   "silence_minutes": 0,
