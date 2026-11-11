@@ -9,6 +9,20 @@
       "workflow": "keepalive.yml"
     },
     {
+      "late_minutes": 214,
+      "name": "Produce video",
+      "ran_at": "2026-11-10T09:48:20+00:00",
+      "slot": "2026-11-10T06:14:00+00:00",
+      "workflow": "produce.yml"
+    },
+    {
+      "late_minutes": 154,
+      "name": "Autonomous Comment Replies",
+      "ran_at": "2026-11-10T09:48:21+00:00",
+      "slot": "2026-11-10T07:14:00+00:00",
+      "workflow": "comments.yml"
+    },
+    {
       "late_minutes": 131,
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "ran_at": "2026-11-10T05:25:10+00:00",
@@ -30,13 +44,6 @@
       "workflow": "metrics.yml"
     },
     {
-      "late_minutes": 124,
-      "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-10T21:18:58+00:00",
-      "slot": "2026-11-10T19:14:00+00:00",
-      "workflow": "comments.yml"
-    },
-    {
       "late_minutes": 121,
       "name": "Autonomous Community Tab Automation",
       "ran_at": "2026-11-08T21:15:33+00:00",
@@ -44,8 +51,8 @@
       "workflow": "community.yml"
     }
   ],
-  "generated_at": "2026-11-10T23:36:57.907798+00:00",
-  "last_run_at": "2026-11-10T23:36:09+00:00",
+  "generated_at": "2026-11-11T00:06:41.428890+00:00",
+  "last_run_at": "2026-11-11T00:05:53+00:00",
   "on_time": [
     {
       "late_minutes": 95,
@@ -53,13 +60,6 @@
       "ran_at": "2026-11-10T03:49:12+00:00",
       "slot": "2026-11-10T02:14:00+00:00",
       "workflow": "growth-autopilot.yml"
-    },
-    {
-      "late_minutes": 48,
-      "name": "Produce video",
-      "ran_at": "2026-11-10T20:02:08+00:00",
-      "slot": "2026-11-10T19:14:00+00:00",
-      "workflow": "produce.yml"
     },
     {
       "late_minutes": 109,
