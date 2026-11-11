@@ -717,7 +717,7 @@ def _write_recovered_short_record(dest: Path, edition: ShortEdition, video: dict
         "youtube_watch_url": f"https://youtu.be/{vid}",
         "privacy_status": video["privacy_status"], "youtube_upload_status": video["upload_status"],
         "youtube_duration": video.get("duration", ""),
-        "receipt_recovered_from_youtube": True,
+        "receipt_recovered_from_youtube": True, "metadata_retrofit_approved": False,
         "thumbnail_pending": True, "thumbnail_error": "thumbnail_status_unverified_after_recovery",
         "thumbnail_attempts": 0,
     }

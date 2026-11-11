@@ -92,6 +92,14 @@ def collect_published_faith_targets(
             continue
         if str(doc.meta.get("youtube_status", "")).strip() == "deleted_or_missing":
             continue
+        # Recovered receipts contain audit notes, not the original description.
+        # Even --force must not send that text (or generated tags/localizations)
+        # to YouTube unless an owner has explicitly approved a proper payload.
+        if doc.meta.get("receipt_recovered_from_youtube") is True:
+            recovery_note = "This receipt was recovered from an existing YouTube video."
+            if doc.meta.get("metadata_retrofit_approved") is not True or recovery_note in raw:
+                print(f"[retrofit] {path.name}: metadata on hold for recovered video")
+                continue
         if only_pending and str(doc.meta.get("metadata_revision", "")).strip() == METADATA_REVISION:
             continue
 
