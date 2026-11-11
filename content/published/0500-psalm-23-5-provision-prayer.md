@@ -79,6 +79,8 @@ youtube_video_id: "7KQUigXezRU"
 metadata_revision: "selar-seo-v1"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCkWrcJB6-q_K0r8KSja8ALw; auth_channel_title=The Provision Table; long_uploads_status=eligible; video_channel_id=UCkWrcJB6-q_K0r8KSja8ALw; video_channel_title=The Provision Table; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_retry_after: "2026-11-18T15:18:34Z"
+thumbnail_retry_reason: "permission"
 ---
 
 ## Scene 1 — Approaching Jehovah-Jireh at the Prepared Table

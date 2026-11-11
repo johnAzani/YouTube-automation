@@ -24,7 +24,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE COVENANT SHIELD", "GUARD MY STEPS", "PSALM 121:7-8", "PROTECTION PRAYER"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_attempts: 5
+thumbnail_attempts: 6
+thumbnail_retry_after: "2026-11-18T15:18:41Z"
+thumbnail_retry_reason: "permission"
 ---
 
 Before you begin this journey, pause and place every road and every loved one before the Lord. Psalm one hundred twenty-one says, The LORD shall preserve thee from all evil: he shall preserve thy soul. The LORD shall preserve thy going out and thy coming in from this time forth, and even for evermore. Our keeper neither slumbers nor sleeps. When the road is uncertain, we can bring our fears to Him. Father, grant every driver patience, every traveller wisdom, and every family peace in Your presence. Walk with those facing danger or grief, and guide us to use care and good judgment along the way. Type Amen and subscribe to The Covenant Shield for daily prayer and encouragement in God’s keeping.

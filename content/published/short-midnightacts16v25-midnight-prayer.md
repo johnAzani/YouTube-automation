@@ -24,7 +24,9 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE MIDNIGHT WATCH", "CHAINS MUST BREAK", "ACTS 16:25-26", "MIDNIGHT PRAYER"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_attempts: 5
+thumbnail_attempts: 6
+thumbnail_retry_after: "2026-11-18T15:18:28Z"
+thumbnail_retry_reason: "permission"
 ---
 
 Rise in spirit at this midnight hour and remember what happened in Philippi. Acts sixteen verse twenty-five says, And at midnight Paul and Silas prayed, and sang praises unto God. They did not wait for the prison doors to open first; they praised God right inside the darkest watch. And suddenly the foundations were shaken, all the doors were opened, and every band was loosed. Father, receive our midnight thanksgiving tonight over every trial, delay, and closed door. Loose heavy burdens from our households and establish Your peace and breakthrough in Christ. Type Amen and subscribe to The Midnight Watch to stand in prayer at midnight.
