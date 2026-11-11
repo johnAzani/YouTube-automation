@@ -24,7 +24,7 @@ thumbnail_error: "HttpError: The authenticated user doesn't have permissions to 
 thumbnail_poster: ["THE PROVISION TABLE", "MY CUP OVERFLOWS", "PSALM 23:5", "PROVISION PRAYER"]
 thumbnail_kicker: "BLESS THE WORK OF OUR HANDS"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_attempts: 2
+thumbnail_attempts: 3
 ---
 
 Commit your work, decisions, and daily needs unto the Good Shepherd right now. Psalm twenty-three verse five declares, Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over. Psalm ninety verse seventeen prays in faith, Establish thou the work of our hands upon us; yea, the work of our hands establish thou it. Where bills press close or doors feel slow to open, Jehovah-Jireh sees ahead and prepares daily bread. Father, grant clear wisdom in every decision, favour over honest labour, and peace in every household today. Surely goodness and mercy shall follow you all the days of your life as your cup overflows in Christ. Type Amen and subscribe to The Provision Table to walk in God's daily wisdom and provision.
