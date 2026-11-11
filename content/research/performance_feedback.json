@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-11T06:50:37.034909+00:00",
+  "generated_at": "2026-11-11T09:20:02.952391+00:00",
   "as_of": "2026-11-11",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 6,
+  "total_longform_videos": 7,
   "ranked_themes": [],
   "themes": [
     {
@@ -32,9 +32,9 @@
     },
     {
       "theme": "protection",
-      "videos": 3,
+      "videos": 4,
       "measured_videos": 0,
-      "avg_score": 0.1296,
+      "avg_score": 0.0972,
       "avg_engagement": 0.0,
       "top_scripture": "Psalm 3"
     }
