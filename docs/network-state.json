@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T06:48:42Z",
+  "generated_at": "2026-11-11T07:15:00Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -11,9 +11,9 @@
     "published_longform": 33,
     "published_shorts": 43,
     "public_total": 74,
-    "queued_longform": 46,
-    "queued_shorts": 29,
-    "automations_ok": 5,
+    "queued_longform": 56,
+    "queued_shorts": 41,
+    "automations_ok": 7,
     "automations_total": 10,
     "network_healthy": false
   },
@@ -38,7 +38,7 @@
         "public_total": 22,
         "queued_longform": 20,
         "queued_other": 5,
-        "queued_shorts": 4
+        "queued_shorts": 6
       },
       "latest_video": {
         "id": "SHORT-PSALM139V11",
@@ -63,7 +63,7 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-10",
+        "as_of": "2026-11-11",
         "measured_longform_videos": 0,
         "total_longform_videos": 6,
         "top_themes": [
@@ -103,9 +103,9 @@
         "published_longform": 14,
         "published_shorts": 16,
         "public_total": 29,
-        "queued_longform": 4,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 2
+        "queued_shorts": 4
       },
       "latest_video": {
         "id": "SHORT-MORNINGPSALM108V2",
@@ -130,24 +130,24 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-10",
+        "as_of": "2026-11-11",
         "measured_longform_videos": 0,
-        "total_longform_videos": 11,
+        "total_longform_videos": 14,
         "top_themes": [
           {
-            "theme": "morning_mercy_renewal",
-            "videos": 6,
-            "top_scripture": "Mark 1"
-          },
-          {
-            "theme": "anxiety_peace",
+            "theme": "blessing_benediction",
             "videos": 1,
-            "top_scripture": "Proverbs 3"
+            "top_scripture": "Numbers 6"
           },
           {
-            "theme": "daily_guidance_wisdom",
-            "videos": 2,
-            "top_scripture": "Isaiah 50"
+            "theme": "midday_strength_endurance",
+            "videos": 1,
+            "top_scripture": "Psalm 90"
+          },
+          {
+            "theme": "morning_mercy_renewal",
+            "videos": 8,
+            "top_scripture": "Mark 1"
           }
         ]
       }
@@ -170,9 +170,9 @@
         "published_longform": 9,
         "published_shorts": 9,
         "public_total": 18,
-        "queued_longform": 5,
+        "queued_longform": 7,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 7
       },
       "latest_video": {
         "id": "SHORT-MIDDAYDANIEL6V10",
@@ -197,19 +197,19 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-10",
+        "as_of": "2026-11-11",
         "measured_longform_videos": 0,
-        "total_longform_videos": 7,
+        "total_longform_videos": 9,
         "top_themes": [
-          {
-            "theme": "midday_strength_endurance",
-            "videos": 5,
-            "top_scripture": "Psalm 55"
-          },
           {
             "theme": "daily_guidance_wisdom",
             "videos": 1,
             "top_scripture": "Psalm 119"
+          },
+          {
+            "theme": "midday_strength_endurance",
+            "videos": 7,
+            "top_scripture": "Proverbs 16"
           },
           {
             "theme": "protection",
@@ -237,9 +237,9 @@
         "published_longform": 3,
         "published_shorts": 2,
         "public_total": 5,
-        "queued_longform": 3,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 6
       },
       "latest_video": {
         "id": "0202",
@@ -264,10 +264,21 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-10",
+        "as_of": "2026-11-11",
         "measured_longform_videos": 0,
-        "total_longform_videos": 0,
-        "top_themes": []
+        "total_longform_videos": 3,
+        "top_themes": [
+          {
+            "theme": "general_prayer",
+            "videos": 2,
+            "top_scripture": "Isaiah 62"
+          },
+          {
+            "theme": "daily_guidance_wisdom",
+            "videos": 1,
+            "top_scripture": "Psalm 119"
+          }
+        ]
       }
     },
     {
@@ -306,8 +317,10 @@
         "status": "approved"
       },
       "feedback": {
-        "available": false,
+        "available": true,
+        "as_of": "2026-11-11",
         "measured_longform_videos": 0,
+        "total_longform_videos": 0,
         "top_themes": []
       }
     },
@@ -329,9 +342,9 @@
         "published_longform": 0,
         "published_shorts": 0,
         "public_total": 0,
-        "queued_longform": 4,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 6
       },
       "latest_video": null,
       "next_queued_longform": {
@@ -347,8 +360,10 @@
         "status": "approved"
       },
       "feedback": {
-        "available": false,
+        "available": true,
+        "as_of": "2026-11-11",
         "measured_longform_videos": 0,
+        "total_longform_videos": 0,
         "top_themes": []
       }
     },
@@ -370,9 +385,9 @@
         "published_longform": 0,
         "published_shorts": 0,
         "public_total": 0,
-        "queued_longform": 4,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 6
       },
       "latest_video": null,
       "next_queued_longform": {
@@ -388,8 +403,10 @@
         "status": "approved"
       },
       "feedback": {
-        "available": false,
+        "available": true,
+        "as_of": "2026-11-11",
         "measured_longform_videos": 0,
+        "total_longform_videos": 0,
         "top_themes": []
       }
     }
@@ -2459,6 +2476,32 @@
         "words": 1534
       },
       {
+        "id": "0062",
+        "slug": "2-samuel-23-4-morning-prayer-the-morning-altar",
+        "file": "0062-2-samuel-23-4-morning-prayer-the-morning-altar.md",
+        "title": "2 Samuel 23:4 Morning Prayer | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1523
+      },
+      {
+        "id": "0063",
+        "slug": "hosea-6-3-his-going-forth-is-prepared-as-the-morning",
+        "file": "0063-hosea-6-3-his-going-forth-is-prepared-as-the-morning.md",
+        "title": "Hosea 6:3 His Going Forth Is Prepared as the Morning",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1130
+      },
+      {
         "id": "0084",
         "slug": "acts-10-9-midday-prayer",
         "file": "0084-acts-10-9-midday-prayer.md",
@@ -2524,6 +2567,32 @@
         "words": 1454
       },
       {
+        "id": "0089",
+        "slug": "isaiah-32-2-midday-prayer",
+        "file": "0089-isaiah-32-2-midday-prayer.md",
+        "title": "Isaiah 32:2 Midday Prayer | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1423
+      },
+      {
+        "id": "0090",
+        "slug": "galatians-6-9-midday-prayer",
+        "file": "0090-galatians-6-9-midday-prayer.md",
+        "title": "Galatians 6:9 Midday Prayer | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1463
+      },
+      {
         "id": "0203",
         "slug": "habakkuk-2-1-midnight-prayer",
         "file": "0203-habakkuk-2-1-midnight-prayer.md",
@@ -2561,6 +2630,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1377
+      },
+      {
+        "id": "0206",
+        "slug": "weapons-mighty-through-god-to-pull-down-strongholds",
+        "file": "0206-weapons-mighty-through-god-to-pull-down-strongholds.md",
+        "title": "2 Corinthians 10:3-5 Midnight Prayer | The Midnight Watch",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1300
+      },
+      {
+        "id": "0207",
+        "slug": "ephesians-6-10-18-midnight-prayer",
+        "file": "0207-ephesians-6-10-18-midnight-prayer.md",
+        "title": "Ephesians 6:10-18 Midnight Prayer | The Midnight Watch",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1669
       },
       {
         "id": "0300",
@@ -2693,6 +2788,32 @@
         "words": 873
       },
       {
+        "id": "0404",
+        "slug": "exodus-15-26-jehovah-rapha-healing-prayer",
+        "file": "0404-exodus-15-26-jehovah-rapha-healing-prayer.md",
+        "title": "Exodus 15:26 Jehovah Rapha Healing Prayer | The Healing Balm",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1903
+      },
+      {
+        "id": "0405",
+        "slug": "jeremiah-17-14-healing-and-restoration-prayer",
+        "file": "0405-jeremiah-17-14-healing-and-restoration-prayer.md",
+        "title": "Jeremiah 17:14 Healing and Restoration Prayer | The Healing Balm",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1516
+      },
+      {
         "id": "0500",
         "slug": "psalm-23-5-provision-prayer",
         "file": "0500-psalm-23-5-provision-prayer.md",
@@ -2743,6 +2864,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 903
+      },
+      {
+        "id": "0504",
+        "slug": "psalm-90-17-morning-prayer-the-provision-table",
+        "file": "0504-psalm-90-17-morning-prayer-the-provision-table.md",
+        "title": "Psalm 90:17 Morning Prayer | The Provision Table",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1267
+      },
+      {
+        "id": "0505",
+        "slug": "proverbs-3-5-6-morning-prayer",
+        "file": "0505-proverbs-3-5-6-morning-prayer.md",
+        "title": "Proverbs 3:5-6 Morning Prayer | The Provision Table",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1637
       }
     ],
     "shorts": [
@@ -2791,6 +2938,28 @@
         "target_window_utc": "14:14"
       },
       {
+        "short": "short-john14v27",
+        "file": "0029-short-john14v27.yml",
+        "companion_longform_id": "0029",
+        "scripture": "John 14:27",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "14:14"
+      },
+      {
+        "short": "short-philippians4v6",
+        "file": "0030-short-philippians4v6.yml",
+        "companion_longform_id": "0030",
+        "scripture": "Philippians 4:6-7",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "14:14"
+      },
+      {
         "short": "short-morningexodus16v21",
         "file": "0060-short-morningexodus16v21.yml",
         "companion_longform_id": "0060",
@@ -2806,6 +2975,28 @@
         "file": "0061-short-morningisaiah33v2.yml",
         "companion_longform_id": "0061",
         "scripture": "Isaiah 33:2",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
+      },
+      {
+        "short": "short-morning2samuel23v4",
+        "file": "0062-short-morning2samuel23v4.yml",
+        "companion_longform_id": "0062",
+        "scripture": "2 Samuel 23:4",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
+      },
+      {
+        "short": "short-morninghosea6v3",
+        "file": "0063-short-morninghosea6v3.yml",
+        "companion_longform_id": "0063",
+        "scripture": "Hosea 6:3",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",
@@ -2868,6 +3059,28 @@
         "target_window_utc": "12:14"
       },
       {
+        "short": "short-middayisaiah32v2",
+        "file": "0089-short-middayisaiah32v2.yml",
+        "companion_longform_id": "0089",
+        "scripture": "Isaiah 32:2",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
+      },
+      {
+        "short": "short-middaygalatians6v9",
+        "file": "0090-short-middaygalatians6v9.yml",
+        "companion_longform_id": "0090",
+        "scripture": "Galatians 6:9",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
+      },
+      {
         "short": "short-midnightisaiah62v6",
         "file": "0202-short-midnightisaiah62v6.yml",
         "companion_longform_id": "202",
@@ -2905,6 +3118,28 @@
         "file": "0205-short-midnightzechariah2v5.yml",
         "companion_longform_id": "0205",
         "scripture": "Zechariah 2:5",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "23:14"
+      },
+      {
+        "short": "short-midnight2corinthians10v3",
+        "file": "0206-short-midnight2corinthians10v3.yml",
+        "companion_longform_id": "0206",
+        "scripture": "2 Corinthians 10:3-5",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "23:14"
+      },
+      {
+        "short": "short-midnightephesians6v10",
+        "file": "0207-short-midnightephesians6v10.yml",
+        "companion_longform_id": "0207",
+        "scripture": "Ephesians 6:10-18",
         "channel": "prayer4",
         "channel_name": "The Midnight Watch",
         "status": "approved",
@@ -3022,6 +3257,28 @@
         "target_window_utc": "15:44"
       },
       {
+        "short": "short-healingexodus15v26",
+        "file": "0404-short-healingexodus15v26.yml",
+        "companion_longform_id": "0404",
+        "scripture": "Exodus 15:26",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
+      },
+      {
+        "short": "short-healingjeremiah17v14",
+        "file": "0405-short-healingjeremiah17v14.yml",
+        "companion_longform_id": "0405",
+        "scripture": "Jeremiah 17:14",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
+      },
+      {
         "short": "short-provisionpsalm23v5",
         "file": "0500-short-provisionpsalm23v5.yml",
         "companion_longform_id": "500",
@@ -3064,6 +3321,28 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
+      },
+      {
+        "short": "short-provisionpsalm90v17",
+        "file": "0504-short-provisionpsalm90v17.yml",
+        "companion_longform_id": "0504",
+        "scripture": "Psalm 90:17",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
+      },
+      {
+        "short": "short-provisionproverbs3v5",
+        "file": "0505-short-provisionproverbs3v5.yml",
+        "companion_longform_id": "0505",
+        "scripture": "Proverbs 3:5-6",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
       }
     ]
   },
@@ -3073,7 +3352,7 @@
       "name": "automation-health",
       "verdict": "SELF-REPORT",
       "severity": "info",
-      "detail": "this is the check itself; its previous run ended failure 3.5h ago, which is its own verdict and not independent evidence",
+      "detail": "this is the check itself; its previous run ended failure 3.9h ago, which is its own verdict and not independent evidence",
       "last_conclusion": "failure",
       "last_run": "2026-11-11T03:20:23+00:00",
       "last_success": "2026-11-11T02:50:23+00:00",
@@ -3087,7 +3366,7 @@
       "name": "Autonomous Comment Replies",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 4.7h ago",
+      "detail": "last success 5.2h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-11T02:04:20+00:00",
       "last_success": "2026-11-11T02:04:20+00:00",
@@ -3101,7 +3380,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 55.9h ago",
+      "detail": "last success 56.3h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-08T22:53:40+00:00",
       "last_success": "2026-11-08T22:53:40+00:00",
@@ -3113,28 +3392,28 @@
     {
       "workflow": "gemini_brain.yml",
       "name": "Gemini Brain Autonomous Queue Replenishment",
-      "verdict": "MISSED SLOT",
-      "severity": "blocking",
-      "detail": "was due Wed 11 Nov 04:14 WAT and did not run; last run 19.6h ago",
+      "verdict": "OK",
+      "severity": "ok",
+      "detail": "last success 0.4h ago",
       "last_conclusion": "success",
-      "last_run": "2026-11-10T11:09:47+00:00",
-      "last_success": "2026-11-10T11:09:47+00:00",
+      "last_run": "2026-11-11T06:49:39+00:00",
+      "last_success": "2026-11-11T06:49:39+00:00",
       "runs_14d": 20,
-      "missed_slots": 1,
+      "missed_slots": 0,
       "failures_5": 0,
       "effect": "writes content/queue/ or content/shorts-scripts/"
     },
     {
       "workflow": "growth-autopilot.yml",
       "name": "Growth autopilot",
-      "verdict": "MISSED SLOT",
-      "severity": "blocking",
-      "detail": "was due Wed 11 Nov 03:14 WAT and did not run; last run 21.1h ago",
+      "verdict": "OK",
+      "severity": "ok",
+      "detail": "last success 0.4h ago",
       "last_conclusion": "success",
-      "last_run": "2026-11-10T09:43:08+00:00",
-      "last_success": "2026-11-10T09:43:08+00:00",
-      "runs_14d": 11,
-      "missed_slots": 1,
+      "last_run": "2026-11-11T06:49:37+00:00",
+      "last_success": "2026-11-11T06:49:37+00:00",
+      "runs_14d": 12,
+      "missed_slots": 0,
       "failures_5": 0,
       "effect": ""
     },
@@ -3143,7 +3422,7 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 43.0h ago",
+      "detail": "last success 43.4h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-09T11:48:56+00:00",
       "last_success": "2026-11-09T11:48:56+00:00",
@@ -3157,7 +3436,7 @@
       "name": "Weekly metrics snapshot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 3.5h ago",
+      "detail": "last success 3.9h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-11T03:20:23+00:00",
       "last_success": "2026-11-11T03:20:23+00:00",
@@ -3173,11 +3452,11 @@
       "severity": "info",
       "detail": "its red runs are the verdicts below, not failures of it",
       "last_conclusion": "",
-      "last_run": "2026-11-11T06:46:38+00:00",
+      "last_run": "2026-11-11T07:13:01+00:00",
       "last_success": "",
       "runs_14d": 20,
       "missed_slots": 0,
-      "failures_5": 3,
+      "failures_5": 4,
       "effect": "this report"
     },
     {
@@ -3185,7 +3464,7 @@
       "name": "Produce video",
       "verdict": "FAILING",
       "severity": "blocking",
-      "detail": "failed 6.8h ago and nothing was changed since; the next slot will fail the same way",
+      "detail": "failed 7.2h ago and nothing was changed since; the next slot will fail the same way",
       "last_conclusion": "failure",
       "last_run": "2026-11-11T00:01:43+00:00",
       "last_success": "2026-11-10T11:41:15+00:00",
@@ -3199,10 +3478,10 @@
       "name": "Scheduler supervisor",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 3.4h ago",
-      "last_conclusion": "success",
-      "last_run": "2026-11-11T03:25:10+00:00",
-      "last_success": "2026-11-11T03:25:10+00:00",
+      "detail": "last success 0.4h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-11T07:13:01+00:00",
+      "last_success": "2026-11-11T06:48:50+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
