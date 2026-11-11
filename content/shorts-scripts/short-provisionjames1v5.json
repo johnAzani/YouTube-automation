@@ -1,0 +1,304 @@
+{
+  "key": "short-provisionjames1v5",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "NEED WISDOM",
+    "FOR YOUR DAY"
+  ],
+  "poster": [
+    "STEP",
+    "INTO",
+    "GOD'S",
+    "WISDOM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "sunlit mountain pass golden hour",
+    "peaceful river flowing through valley",
+    "golden sunlit valley early morning",
+    "serene mountain stream stone bridge",
+    "sunlit sanctuary stone table peaceful",
+    "gentle river at sunrise calm water",
+    "majestic mountain peak morning sun"
+  ],
+  "scenes": [
+    {
+      "a": "If any of you lack wisdom",
+      "img": "short-provisionjames1v5-scene-01.jpg",
+      "kicker": "JAMES 1:5",
+      "sub": "COMMIT YOUR WAY UNTO THE LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "let him ask of God",
+      "img": "short-provisionjames1v5-scene-02.jpg",
+      "kicker": "SEEK HIS GUIDANCE",
+      "sub": "BRING EVERY DECISION BEFORE HIM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "that giveth to all men liberally",
+      "img": "short-provisionjames1v5-scene-03.jpg",
+      "kicker": "ABUNDANT PROVISION",
+      "sub": "TRUST IN HIS DAILY BOUNTY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "and upbraideth not",
+      "img": "short-provisionjames1v5-scene-04.jpg",
+      "kicker": "GRACE AND MERCY",
+      "sub": "REST IN HIS UNFAILING LOVE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "and it shall be given him",
+      "img": "short-provisionjames1v5-scene-05.jpg",
+      "kicker": "OPEN DOORS",
+      "sub": "HE OPENS PATHS NO MAN CAN SHUT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father we ask for Your divine direction today",
+      "img": "short-provisionjames1v5-scene-06.jpg",
+      "kicker": "DAILY PRAYER",
+      "sub": "WALK WISELY IN HIS STEPS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Provision Table for daily wisdom",
+      "img": "short-provisionjames1v5-scene-07.jpg",
+      "kicker": "JOIN US",
+      "sub": "SUBSCRIBE FOR DAILY PROVISION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him."
+    ],
+    [
+      12,
+      24,
+      "Father, we ask for Your divine direction today. Grant us discernment in our work, clarity in our decisions, and open doors for our daily provision."
+    ],
+    [
+      24,
+      36,
+      "Guide our steps according to Your truth, and help us to steward every resource with faithfulness and peace."
+    ],
+    [
+      36,
+      48,
+      "May Your light shine upon our path, removing confusion and establishing the work of our hands."
+    ],
+    [
+      48,
+      60,
+      "We receive Your promise with grateful hearts, trusting in Your unfailing supply throughout this day."
+    ],
+    [
+      60,
+      72,
+      "In Jesus' name, we pray. Amen."
+    ],
+    [
+      72,
+      82,
+      "Subscribe to The Provision Table for daily wisdom."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "IF ANY OF YOU LACK",
+        "WISDOM, LET HIM ASK OF",
+        "GOD, THAT GIVETH",
+        "TO ALL MEN LIBERALLY"
+      ],
+      "WISDOM",
+      "JAMES 1 : 5"
+    ],
+    [
+      12,
+      24,
+      [
+        "FATHER, WE ASK FOR",
+        "YOUR DIVINE DIRECTION TODAY,",
+        "GRANTING CLARITY IN",
+        "ALL OUR DECISIONS"
+      ],
+      "DIRECTION",
+      "DAILY PRAYER"
+    ],
+    [
+      24,
+      36,
+      [
+        "GUIDE OUR STEPS",
+        "ACCORDING TO YOUR TRUTH,",
+        "AND STEWARD EVERY",
+        "RESOURCE WITH FAITHFULNESS"
+      ],
+      "STEPS",
+      "GOD'S GUIDANCE"
+    ],
+    [
+      36,
+      48,
+      [
+        "MAY YOUR LIGHT SHINE",
+        "UPON OUR PATH TODAY,",
+        "REMOVING CONFUSION AND",
+        "ESTABLISHING OUR WORK"
+      ],
+      "LIGHT",
+      "OPEN DOORS"
+    ],
+    [
+      48,
+      60,
+      [
+        "WE RECEIVE YOUR PROMISE",
+        "WITH GRATEFUL HEARTS,",
+        "TRUSTING IN YOUR",
+        "UNFAILING SUPPLY"
+      ],
+      "PROMISE",
+      "DAILY PROVISION"
+    ],
+    [
+      60,
+      72,
+      [
+        "IN JESUS' NAME,",
+        "WE PRAY.",
+        "AMEN."
+      ],
+      "PRAY",
+      "STAY IN PEACE"
+    ],
+    [
+      72,
+      82,
+      [
+        "SUBSCRIBE TO",
+        "THE PROVISION TABLE",
+        "FOR DAILY WISDOM"
+      ],
+      "SUBSCRIBE",
+      "THE PROVISION TABLE"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If any of you lack wisdom",
+      "kind": "phrase",
+      "words": [
+        "LACK",
+        "WISDOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "let him ask of God",
+      "kind": "phrase",
+      "words": [
+        "ASK",
+        "OF",
+        "GOD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "that giveth to all men liberally",
+      "kind": "phrase",
+      "words": [
+        "GIVETH",
+        "LIBERALLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and upbraideth not",
+      "kind": "phrase",
+      "words": [
+        "UPBRAIDETH",
+        "NOT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "and it shall be given him",
+      "kind": "phrase",
+      "words": [
+        "SHALL",
+        "BE",
+        "GIVEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father we ask for Your divine direction today",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "DIRECTION"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Provision Table for daily wisdom",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "DAILY",
+        "WISDOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "James 1:5"
+}
