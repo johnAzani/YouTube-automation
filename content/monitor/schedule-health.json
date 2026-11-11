@@ -51,16 +51,9 @@
       "workflow": "community.yml"
     }
   ],
-  "generated_at": "2026-11-11T17:22:19.053865+00:00",
-  "last_run_at": "2026-11-11T17:21:30+00:00",
+  "generated_at": "2026-11-11T18:23:09.361569+00:00",
+  "last_run_at": "2026-11-11T18:22:19+00:00",
   "on_time": [
-    {
-      "late_minutes": 9,
-      "name": "Automation monitor",
-      "ran_at": "2026-11-11T15:32:46+00:00",
-      "slot": "2026-11-11T15:23:00+00:00",
-      "workflow": "monitor.yml"
-    },
     {
       "late_minutes": 84,
       "name": "Produce video",
