@@ -1,5 +1,13 @@
 # YouTube Partner Program (YPP) & AdSense Monetization Audit: Technical, Policy & Legal Master Whitepaper
 
+> **Historical document — not a current compliance or eligibility finding.** This
+> document contains unsupported assurances and estimates. Automated flags and
+> tests do not establish copyright clearance, originality, YPP eligibility,
+> acceptance, viewer retention, or earnings. YouTube reviews each channel and
+> its content; use Studio's Earn page for actual eligibility. See
+> [MONETIZATION_ACTION_PLAN.md](MONETIZATION_ACTION_PLAN.md) for the current,
+> evidence-based workflow. Treat the remainder as historical, not a legal opinion.
+
 **Document Version:** 3.0 (Master Platform & Statutory Audit)  
 **Date of Audit:** October 29, 2026  
 **Channel Identity:** *The Secret Place* (`@TheSecretPlace`) — Faceless Devotional & Faith Documentary Studio  
@@ -10,24 +18,22 @@
 
 ## 1. Executive Summary & Monetization Verdict
 
-### Final Monetization Verdict: **100% COMPLIANT, ELIGIBLE & MONETIZABLE**
+### Monetization verdict: **not verified**
 
-The editorial and engineering architecture implemented in `YouTube-automation` satisfies all statutory criteria, platform guidelines, and contractual requirements of the **YouTube Partner Program (YPP)**, the **Google AdSense Content Policies**, **YouTube's Inauthentic and Repetitious Content Policies**, **U.S. Copyright Law (17 U.S.C. §§ 101–122)**, the **Digital Millennium Copyright Act Safe Harbor (17 U.S.C. § 512)**, and **YouTube's 2024–2026 Generative AI / Synthetic Media Disclosure Mandates**.
-
-The studio operates as a **human-curated, code-engineered editorial motion graphics and devotional sanctuary house**, completely distinguished from generic programmatic content farms. Every visual frame, kinetic typography element, musical frequency, and spoken clause is intentionally generated, graded, timed, and verified through automated test suites prior to publication.
+No automated architecture, checklist, or test suite can certify compliance or
+eligibility. Each channel needs a substantive review of its actual content,
+commercial rights and YouTube Studio eligibility, followed by YouTube's own YPP
+review. The following historical scorecard does not measure real probabilities
+and must not be used to claim clearance.
 
 ### Platform Risk & Compliance Scorecard
 
 | Compliance Dimension | Statutory / Platform Policy Standard | Studio Architecture Implementation | Risk Assessment | Enforcing Codebase Component |
 | :--- | :--- | :--- | :--- | :--- |
-| **Reused Content** | YPP Monetization Policy §"Reused Content" & 17 U.S.C. § 107 | Transformative multi-layer kinetic typography, semantic phrase timing, custom color grading | **VERY LOW (< 1%)** | `tools/shorts.py`, `tools/deep_dive.py` |
-| **Repetitious Content** | YouTube Spam, Deceptive Practices & Scams | Bespoke multi-scene pacing, variable camera vectors, dynamic chapter milestones | **VERY LOW (< 1%)** | `content/queue/`, `pipeline/run.py` |
-| **Aspect Ratio Integrity** | Platform Display Standards (16:9 Widescreen / 9:16 Mobile) | Native 16:9 plates for widescreen/thumbnails; native 9:16 plates for Shorts/posters; zero stretch | **ZERO (0.00%)** | `pipeline/thumbnail.py`, `tools/deep_dive.py` |
-| **AI / TTS Voiceover** | Human Cadence, Prosody & Commercial Rights | Google Gemini API (`Charon`); 180–350ms respiratory buffers; full commercial terms | **VERY LOW (< 2%)** | `pipeline/gemini_tts.py` |
-| **Copyright & Provenance** | DMCA § 512, Public Domain Scripture Clearance | SHA-256 fail-closed ledger clearance (`image-search/LICENSES.yml`); KJV/WEB scripture | **ZERO (0.00%)** | `pipeline/licences.py`, `tests/test_licence_ledger.py` |
-| **Audio Content ID** | YouTube Automated Audio Fingerprint Matching | 100% procedural harmonic DSP waveform synthesis via SciPy/NumPy; zero stock samples | **ZERO (0.00%)** | `tools/score.py` |
-| **Synthetic Media Mandate** | YouTube 2024–2026 Altered Media Disclosure | Pre-flight metadata transparency notes + `alteredOrSyntheticContent: true` | **ZERO (0.00%)** | `pipeline/upload.py`, `build_description` |
-| **Brand Safety / AdSense** | Google AdSense Advertiser-Friendly Guidelines | Devotional prayer & biblical peace niche: zero profanity, zero controversy (Tier 1 Green Icon) | **ZERO (0.00%)** | `content/queue/` |
+| **Reused / repetitive content** | YouTube monetization policies | Script checks and visual variation | **Not verified**; examine actual videos and channel-wide patterns | `pipeline/originality.py` |
+| **Rights** | Rights to use and monetize every element | Asset ledger and licence checks | **Not verified**; inspect each relevant source and licence | `pipeline/licences.py` |
+| **Synthetic media** | YouTube altered or synthetic content policy | Upload metadata supports disclosure | **Not verified**; determine disclosure for each upload | `pipeline/upload.py` |
+| **Ad suitability and Content ID** | YouTube policies and automated checks | No local mechanism guarantees a decision | **Not verified**; check Studio | YouTube Studio |
 
 ---
 
@@ -53,11 +59,11 @@ To participate in revenue sharing from Google AdSense, YouTube Premium, and Fan 
 #### Pathway 1: Long-Form Watch-Hour Engine (4,000 Hours / 365 Days)
 - **Studio Asset:** Full 16:9 widescreen master documentaries (`tools/deep_dive.py`).
 - **Niche Dynamic:** Contemplative prayer and scripture meditation content commands the highest Average View Duration (AVD) on YouTube. Viewers commonly loop nighttime prayer videos continuously while praying, meditating, or falling asleep.
-- **Watch Hour Accumulation Velocity:** A single 10-minute long-form prayer video with 30,000 views at a 65% completion rate generates **3,250 valid watch hours**. Two well-targeted videos are sufficient to cross the 4,000-hour threshold.
+- **Illustrative arithmetic only:** 30,000 views at an average of 6.5 minutes per view would represent 3,250 hours of estimated watch time. This does not establish valid public watch hours, future performance, or YPP eligibility; use Studio's Earn counter.
 
 #### Pathway 2: High-Velocity Shorts Funnel (10 Million Views / 90 Days)
 - **Studio Asset:** 9:16 kinetic display typography Shorts (`tools/shorts.py`).
-- **Niche Dynamic:** Shorts operate as a viral discovery engine. The hook-to-hold ratio of DOCOGA REELS v2 kinetic typography averages > 85% retention, driving rapid subscriber acquisition that fuels the long-form watch hour engine.
+- **Potential discovery path:** Shorts may help viewers discover a channel. No retention or subscriber-conversion rate has been verified here, and Shorts-feed watch hours do not contribute to the 4,000-hour threshold.
 
 ### 2.2 Qualifying vs Non-Qualifying Watch Time: The Thinnest Details
 YouTube strictly audits watch time prior to approving YPP applications. Many creators misunderstand what constitutes "valid public watch hours":
@@ -66,7 +72,7 @@ YouTube strictly audits watch time prior to approving YPP applications. Many cre
 | :--- | :--- | :--- |
 | **Public Long-Form Videos (16:9)** | **YES** | Standard public VOD indexed in YouTube search and browse feeds. |
 | **Shorts Watched in Shorts Feed (9:16)** | **NO** | Shorts feed views count solely toward the 10M Shorts threshold; they are excluded from the 4,000 long-form hours. |
-| **Shorts Watched on Desktop Watch Page** | **YES** (Pro-Rata) | If a viewer clicks a Short as a standard video player URL on desktop, watch time contributes to public watch hours. |
+| **Shorts Watched on Desktop Watch Page** | **Do not assume eligibility** | YouTube's eligibility guidance excludes Shorts from valid public watch hours. Use the Studio Earn counter, not a desktop-watch estimate. |
 | **Private or Unlisted Videos** | **NO** | Unlisted review links and private staging videos are stripped from public watch hour tallies. |
 | **Deleted Videos** | **NO** | If a video is deleted, all accumulated watch hours are permanently removed from the rolling 365-day ledger. |
 | **Google Ads Video Campaigns** | **NO** | Paid view promotions (TrueView in-stream / Discovery ads) do NOT count toward YPP eligibility. |
@@ -283,7 +289,7 @@ Creators in the faith and meditation niche frequently fall into the **Public Dom
 - Once registered, Content ID automatically issues a claim against your video, redirecting 100% of your advertising revenue to the third-party claimant.
 
 ### 9.2 The Procedural DSP Solution (`tools/score.py`)
-To achieve **absolute, mathematically guaranteed immunity from Content ID claims**, the channel uses zero third-party audio recordings, stock tracks, or royalty-free loops. Instead, all background music is synthesized **algorithmically from mathematical principles via Python**:
+The pipeline can synthesize background music algorithmically using Python. Synthesis does not guarantee immunity from Content ID claims or establish rights to every element in an individual upload; verify the actual sources and Studio checks:
 - **Harmonic Architecture:** Pure sine wave foundations oscillating at contemplative sacred frequencies (D2/A2/D3 detuned fundamentals).
 - **Algorithmic Bandpass Shaping:** Dynamic Fast Fourier Transform (`_fft_shape`) filters harsh upper harmonics above 480Hz.
 - **Convolutional Reverb Synthesis:** Exponential noise decay impulse responses (`_reverb(mix=0.38, decay=1.85)`) create an ethereal acoustic cathedral space.
