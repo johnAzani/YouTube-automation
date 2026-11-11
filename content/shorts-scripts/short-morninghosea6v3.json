@@ -1,0 +1,276 @@
+{
+  "key": "short-morninghosea6v3",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "SURE AS THE DAWN",
+    "SUNRISE PRAYER"
+  ],
+  "poster": [
+    "THE MORNING ALTAR",
+    "HOSEA 6:3",
+    "SURE AS THE DAWN",
+    "DAILY SUNRISE PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "soft golden sunrise mist over quiet meadow fog morning",
+    "dramatic mountain sunrise first light beam glowing sky",
+    "open window view morning sun rays entering peaceful room",
+    "spring rain falling on fresh green morning leaves sunlight",
+    "calm lake reflection at dawn golden hour blue sky",
+    "sunrise light shining through forest trees dew morning"
+  ],
+  "scenes": [
+    {
+      "a": "Open your eyes to this newborn day and breathe in the quiet peace of dawn.",
+      "img": "short-morninghosea6v3-scene-01.jpg",
+      "kicker": "HOSEA 6:3",
+      "sub": "GREET THE NEWBORN DAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "As light breaks over the horizon, step into the presence of your Creator and receive His faithful morning grace.",
+      "img": "short-morninghosea6v3-scene-02.jpg",
+      "kicker": "HOSEA 6:3",
+      "sub": "RECEIVE HIS FAITHFUL GRACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear His timeless word today from Hosea chapter six verse three:",
+      "img": "short-morninghosea6v3-scene-03.jpg",
+      "kicker": "HOSEA 6:3",
+      "sub": "THE SCRIPTURE PROMISE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "\"Let us know; let us press on to know the Lord; his going forth is sure as the dawn; he will come to us as the showers, as the spring rains that water the earth.\"",
+      "img": "short-morninghosea6v3-scene-04.jpg",
+      "kicker": "HOSEA 6:3",
+      "sub": "SURE AS THE DAWN",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, we press into Your presence today, trusting Your promise that Your love arrives like the sunrise, constant and refreshing.",
+      "img": "short-morninghosea6v3-scene-05.jpg",
+      "kicker": "HOSEA 6:3",
+      "sub": "CONSTANT AND REFRESHING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Rain down Your blessing upon us this morning. Subscribe to The Morning Altar to begin every morning in prayer.",
+      "img": "short-morninghosea6v3-scene-06.jpg",
+      "kicker": "HOSEA 6:3",
+      "sub": "BEGIN EVERY DAWN IN PRAYER",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "Open your eyes to this newborn day and breathe in the quiet peace of dawn."
+    ],
+    [
+      7,
+      15,
+      "As light breaks over the horizon, step into the presence of your Creator and receive His faithful morning grace."
+    ],
+    [
+      15,
+      23,
+      "Hear His timeless word today from Hosea chapter six verse three:"
+    ],
+    [
+      23,
+      33,
+      "\"Let us know; let us press on to know the Lord; his going forth is sure as the dawn; he will come to us as the showers, as the spring rains that water the earth.\""
+    ],
+    [
+      33,
+      41,
+      "Heavenly Father, we press into Your presence today, trusting Your promise that Your love arrives like the sunrise, constant and refreshing."
+    ],
+    [
+      41,
+      48,
+      "Rain down Your blessing upon us this morning. Subscribe to The Morning Altar to begin every morning in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "OPEN YOUR EYES TO THIS",
+        "NEWBORN DAY AND BREATHE",
+        "IN THE QUIET PEACE OF DAWN"
+      ],
+      [
+        "NEWBORN DAY",
+        "QUIET PEACE"
+      ],
+      "HOSEA 6 : 3"
+    ],
+    [
+      7,
+      15,
+      [
+        "AS LIGHT BREAKS OVER THE HORIZON",
+        "STEP INTO PRESENCE OF YOUR CREATOR",
+        "AND RECEIVE HIS FAITHFUL MORNING GRACE"
+      ],
+      [
+        "HORIZON",
+        "PRESENCE",
+        "MORNING GRACE"
+      ],
+      "HOSEA 6 : 3"
+    ],
+    [
+      15,
+      23,
+      [
+        "HEAR HIS TIMELESS WORD TODAY",
+        "FROM HOSEA CHAPTER SIX VERSE THREE"
+      ],
+      [
+        "TIMELESS WORD",
+        "HOSEA 6:3"
+      ],
+      "HOSEA 6 : 3"
+    ],
+    [
+      23,
+      33,
+      [
+        "LET US PRESS ON TO KNOW LORD",
+        "HIS GOING FORTH SURE AS DAWN",
+        "HE WILL COME AS THE SHOWERS",
+        "AS SPRING RAINS WATER THE EARTH"
+      ],
+      [
+        "PRESS ON",
+        "SURE AS DAWN",
+        "SPRING RAINS"
+      ],
+      "HOSEA 6 : 3"
+    ],
+    [
+      33,
+      41,
+      [
+        "HEAVENLY FATHER WE PRESS INTO PRESENCE",
+        "TRUSTING YOUR PROMISE THAT YOUR LOVE",
+        "ARRIVES LIKE SUNRISE CONSTANT REFRESHING"
+      ],
+      [
+        "YOUR PRESENCE",
+        "SUNRISE",
+        "CONSTANT REFRESHING"
+      ],
+      "HOSEA 6 : 3"
+    ],
+    [
+      41,
+      48,
+      [
+        "RAIN DOWN YOUR BLESSING THIS MORNING",
+        "SUBSCRIBE TO THE MORNING ALTAR",
+        "TO BEGIN EVERY MORNING IN PRAYER"
+      ],
+      [
+        "BLESSING",
+        "SUBSCRIBE",
+        "PRAYER"
+      ],
+      "HOSEA 6 : 3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Open your eyes to this newborn day and breathe in the quiet peace of dawn.",
+      "kind": "phrase",
+      "words": [
+        "NEWBORN DAY",
+        "QUIET PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As light breaks over the horizon, step into the presence of your Creator and receive His faithful morning grace.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFUL MORNING GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear His timeless word today from Hosea chapter six verse three:",
+      "kind": "phrase",
+      "words": [
+        "HOSEA CHAPTER SIX"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "\"Let us know; let us press on to know the Lord; his going forth is sure as the dawn; he will come to us as the showers, as the spring rains that water the earth.\"",
+      "kind": "phrase",
+      "words": [
+        "SURE AS THE DAWN",
+        "SPRING RAINS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, we press into Your presence today, trusting Your promise that Your love arrives like the sunrise, constant and refreshing.",
+      "kind": "phrase",
+      "words": [
+        "CONSTANT AND REFRESHING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Rain down Your blessing upon us this morning. Subscribe to The Morning Altar to begin every morning in prayer.",
+      "kind": "phrase",
+      "words": [
+        "BEGIN EVERY MORNING IN PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Hosea 6:3"
+}

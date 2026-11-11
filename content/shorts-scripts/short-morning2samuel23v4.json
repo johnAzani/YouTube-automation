@@ -1,0 +1,362 @@
+{
+  "key": "short-morning2samuel23v4",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "LIKE LIGHT OF MORNING",
+    "2 SAMUEL 23:4"
+  ],
+  "poster": [
+    "THE MORNING ALTAR",
+    "BEGIN IN PRAYER",
+    "2 SAMUEL 23:4",
+    "LIGHT OF DAWN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "soft sunrise dawn over calm foggy valley landscape",
+    "golden sunrise rays breaking over horizon horizon sky",
+    "dewy green grass morning sunlight close up nature",
+    "golden sunbeams filtering through serene morning forest",
+    "peaceful meadow misty sunrise morning horizon",
+    "calm lake reflection early morning sunrise glow",
+    "open field sunrise light golden hour landscape",
+    "scenic mountain peak warm sunrise dawn horizon"
+  ],
+  "scenes": [
+    {
+      "a": "Open your eyes to the quiet grace of this brand new morning.",
+      "img": "short-morning2samuel23v4-scene-01.jpg",
+      "kicker": "2 SAMUEL 23:4",
+      "sub": "QUIET MORNING GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "As dawn breaks, scripture reminds us in 2 Samuel 23:4:",
+      "img": "short-morning2samuel23v4-scene-02.jpg",
+      "kicker": "2 SAMUEL 23:4",
+      "sub": "LIGHT OF THE MORNING",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He shall be like the light of the morning when the sun rises, a morning without clouds, like the tender grass springing out of the earth by clear shining after rain.",
+      "img": "short-morning2samuel23v4-scene-03.jpg",
+      "kicker": "2 SAMUEL 23:4",
+      "sub": "CLEAR SHINING AFTER RAIN",
+      "cam": "push_in",
+      "focus": [
+        0.48,
+        0.52
+      ]
+    },
+    {
+      "a": "Lord, let Your divine presence shine upon this day like golden sunlight.",
+      "img": "short-morning2samuel23v4-scene-04.jpg",
+      "kicker": "2 SAMUEL 23:4",
+      "sub": "DIVINE PRESENCE SHINING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Dispel every shadow of doubt and restore vibrant new life to our weary souls.",
+      "img": "short-morning2samuel23v4-scene-05.jpg",
+      "kicker": "2 SAMUEL 23:4",
+      "sub": "RESTORE VIBRANT LIFE",
+      "cam": "pan_right",
+      "focus": [
+        0.52,
+        0.48
+      ]
+    },
+    {
+      "a": "May Your peace nourish us, bringing fresh hope with every gentle breath we take.",
+      "img": "short-morning2samuel23v4-scene-06.jpg",
+      "kicker": "2 SAMUEL 23:4",
+      "sub": "FRESH HOPE AT DAWN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Walk beside us through every single step and fill our hearts with Your own enduring warmth.",
+      "img": "short-morning2samuel23v4-scene-07.jpg",
+      "kicker": "2 SAMUEL 23:4",
+      "sub": "ENDURING WARMTH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Subscribe to begin every sunrise in prayer with The Morning Altar.",
+      "img": "short-morning2samuel23v4-scene-08.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "BEGIN EVERY SUNRISE IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "Open your eyes to the quiet grace of this brand new morning."
+    ],
+    [
+      6,
+      12,
+      "As dawn breaks, scripture reminds us in 2 Samuel 23:4:"
+    ],
+    [
+      12,
+      24,
+      "He shall be like the light of the morning when the sun rises, a morning without clouds, like the tender grass springing out of the earth by clear shining after rain."
+    ],
+    [
+      24,
+      31,
+      "Lord, let Your divine presence shine upon this day like golden sunlight."
+    ],
+    [
+      31,
+      38,
+      "Dispel every shadow of doubt and restore vibrant new life to our weary souls."
+    ],
+    [
+      38,
+      44,
+      "May Your peace nourish us, bringing fresh hope with every gentle breath we take."
+    ],
+    [
+      44,
+      50,
+      "Walk beside us through every single step and fill our hearts with Your own enduring warmth."
+    ],
+    [
+      50,
+      56,
+      "Subscribe to begin every sunrise in prayer with The Morning Altar."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "OPEN YOUR EYES TO THE",
+        "QUIET GRACE OF THIS",
+        "BRAND NEW MORNING"
+      ],
+      [
+        "QUIET",
+        "GRACE"
+      ],
+      "2 SAMUEL 23:4"
+    ],
+    [
+      6,
+      12,
+      [
+        "AS DAWN BREAKS",
+        "SCRIPTURE REMINDS US IN",
+        "2 SAMUEL 23:4"
+      ],
+      [
+        "LIGHT",
+        "MORNING"
+      ],
+      "2 SAMUEL 23:4"
+    ],
+    [
+      12,
+      24,
+      [
+        "HE SHALL BE LIKE THE LIGHT",
+        "OF THE MORNING WHEN SUN RISES",
+        "A MORNING WITHOUT CLOUDS",
+        "LIKE TENDER GRASS SPRINGING",
+        "BY CLEAR SHINING AFTER RAIN"
+      ],
+      [
+        "LIGHT",
+        "SHINING"
+      ],
+      "2 SAMUEL 23:4"
+    ],
+    [
+      24,
+      31,
+      [
+        "LORD LET YOUR DIVINE",
+        "PRESENCE SHINE UPON THIS DAY",
+        "LIKE GOLDEN SUNLIGHT"
+      ],
+      [
+        "DIVINE",
+        "SUNLIGHT"
+      ],
+      "2 SAMUEL 23:4"
+    ],
+    [
+      31,
+      38,
+      [
+        "DISPEL EVERY SHADOW",
+        "OF DOUBT AND RESTORE",
+        "VIBRANT NEW LIFE TO OUR",
+        "WEARY SOULS"
+      ],
+      [
+        "RESTORE",
+        "LIFE"
+      ],
+      "2 SAMUEL 23:4"
+    ],
+    [
+      38,
+      44,
+      [
+        "MAY YOUR PEACE NOURISH US",
+        "BRINGING FRESH HOPE WITH",
+        "EVERY GENTLE BREATH WE TAKE"
+      ],
+      [
+        "FRESH",
+        "HOPE"
+      ],
+      "2 SAMUEL 23:4"
+    ],
+    [
+      44,
+      50,
+      [
+        "WALK BESIDE US THROUGH",
+        "EVERY SINGLE STEP AND FILL",
+        "OUR HEARTS WITH YOUR OWN",
+        "ENDURING WARMTH"
+      ],
+      [
+        "ENDURING",
+        "WARMTH"
+      ],
+      "2 SAMUEL 23:4"
+    ],
+    [
+      50,
+      56,
+      [
+        "SUBSCRIBE TO BEGIN EVERY",
+        "SUNRISE IN PRAYER WITH",
+        "THE MORNING ALTAR"
+      ],
+      [
+        "SUBSCRIBE",
+        "PRAYER"
+      ],
+      "2 SAMUEL 23:4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Open your eyes to the quiet grace of this brand new morning.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As dawn breaks, scripture reminds us in 2 Samuel 23:4:",
+      "kind": "phrase",
+      "words": [
+        "LIGHT",
+        "MORNING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He shall be like the light of the morning when the sun rises, a morning without clouds, like the tender grass springing out of the earth by clear shining after rain.",
+      "kind": "phrase",
+      "words": [
+        "LIGHT",
+        "SHINING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, let Your divine presence shine upon this day like golden sunlight.",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "SUNLIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Dispel every shadow of doubt and restore vibrant new life to our weary souls.",
+      "kind": "phrase",
+      "words": [
+        "RESTORE",
+        "LIFE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May Your peace nourish us, bringing fresh hope with every gentle breath we take.",
+      "kind": "phrase",
+      "words": [
+        "FRESH",
+        "HOPE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Walk beside us through every single step and fill our hearts with Your own enduring warmth.",
+      "kind": "phrase",
+      "words": [
+        "ENDURING",
+        "WARMTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to begin every sunrise in prayer with The Morning Altar.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Samuel 23:4"
+}
