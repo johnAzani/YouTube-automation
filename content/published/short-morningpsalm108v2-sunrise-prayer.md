@@ -24,7 +24,7 @@ thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently.
 thumbnail_poster: ["AWAKEN THE DAWN", "START YOUR DAY", "IN GOD'S PRESENCE", "PSALM 108:2"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-11T08:05:06Z"
+thumbnail_retry_after: "2026-11-11T14:10:57Z"
 ---
 
 Open your eyes to the gentle light of morning and take a deep, quiet breath as a new day begins. Scripture speaks in Psalm 108:2: Awake, harp and lyre! I myself will awaken the dawn. Lord, as golden light breaks over the earth, we awaken our hearts to praise your holy name. Stir within us a soft song of gratitude, lifting every care and burden into your boundless peace. May your truth guide our steps today, and may your steadfast grace cover all that lies ahead. We dedicate every moment of this morning to you, resting in your eternal love. Thank you for new mercies today. Subscribe to step into every sunrise with prayer.
