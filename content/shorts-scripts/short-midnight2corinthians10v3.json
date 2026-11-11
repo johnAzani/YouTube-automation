@@ -1,0 +1,296 @@
+{
+  "key": "short-midnight2corinthians10v3",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "THE MIDNIGHT",
+    "WATCH"
+  ],
+  "poster": [
+    "RISE",
+    "IN THE",
+    "STILLNESS",
+    "OF NIGHT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "lone watchtower silhouette under deep starry night sky",
+    "ancient stone archway opening to vast midnight cosmos",
+    "faint oil lamp burning inside quiet midnight sanctuary",
+    "misty mountain ridge glowing under pale midnight moon",
+    "open ancient leather bible resting on dark wooden desk at night",
+    "quiet winding mountain road leading toward dark horizon at midnight",
+    "still midnight lake reflecting vast starry universe above"
+  ],
+  "scenes": [
+    {
+      "a": "Rise in spirit this midnight hour",
+      "img": "short-midnight2corinthians10v3-scene-01.jpg",
+      "kicker": "THE WATCH",
+      "sub": "RISE IN THE STILLNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "For though we walk in the flesh",
+      "img": "short-midnight2corinthians10v3-scene-02.jpg",
+      "kicker": "2 CORINTHIANS 10",
+      "sub": "WE WALK IN THE FLESH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "we do not war according to the flesh",
+      "img": "short-midnight2corinthians10v3-scene-03.jpg",
+      "kicker": "SPIRITUAL ARMOR",
+      "sub": "NOT OF THIS WORLD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For the weapons of our warfare are not carnal",
+      "img": "short-midnight2corinthians10v3-scene-04.jpg",
+      "kicker": "DIVINE POWER",
+      "sub": "MIGHTY THROUGH GOD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "but mighty in God for pulling down strongholds",
+      "img": "short-midnight2corinthians10v3-scene-05.jpg",
+      "kicker": "STRONGHOLDS",
+      "sub": "PULLING DOWN WALLS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "casting down arguments and every high thing",
+      "img": "short-midnight2corinthians10v3-scene-06.jpg",
+      "kicker": "TRUTH",
+      "sub": "CASTING DOWN ARGUMENTS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "bringing every thought into captivity",
+      "img": "short-midnight2corinthians10v3-scene-07.jpg",
+      "kicker": "CAPTIVITY",
+      "sub": "OBEDIENCE TO CHRIST",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Rise in spirit this midnight hour, as we quiet our minds before the Lord."
+    ],
+    [
+      8,
+      17,
+      "For though we walk in the flesh, we do not war according to the flesh."
+    ],
+    [
+      17,
+      26,
+      "For the weapons of our warfare are not carnal, but mighty in God for pulling down strongholds."
+    ],
+    [
+      26,
+      35,
+      "Casting down arguments and every high thing that exalts itself against the knowledge of God."
+    ],
+    [
+      35,
+      44,
+      "Bringing every thought into captivity to the obedience of Christ."
+    ],
+    [
+      44,
+      53,
+      "Lord, anchor our hearts in Your peace tonight. Let Your truth guard our minds."
+    ],
+    [
+      53,
+      62,
+      "Subscribe to The Midnight Watch for daily midnight prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "RISE IN SPIRIT",
+        "THIS MIDNIGHT HOUR",
+        "BEFORE THE LORD"
+      ],
+      "MIDNIGHT",
+      "THE WATCH"
+    ],
+    [
+      8,
+      17,
+      [
+        "FOR THOUGH WE WALK",
+        "IN THE FLESH",
+        "WE DO NOT WAR"
+      ],
+      "FLESH",
+      "2 CORINTHIANS 10"
+    ],
+    [
+      17,
+      26,
+      [
+        "WEAPONS OF OUR WARFARE",
+        "ARE NOT CARNAL",
+        "MIGHTY IN GOD"
+      ],
+      "MIGHTY",
+      "DIVINE POWER"
+    ],
+    [
+      26,
+      35,
+      [
+        "CASTING DOWN ARGUMENTS",
+        "AND EVERY HIGH THING",
+        "AGAINST GOD"
+      ],
+      "ARGUMENTS",
+      "STRONGHOLDS"
+    ],
+    [
+      35,
+      44,
+      [
+        "BRINGING EVERY THOUGHT",
+        "INTO CAPTIVITY",
+        "TO CHRIST"
+      ],
+      "CAPTIVITY",
+      "OBEDIENCE"
+    ],
+    [
+      44,
+      53,
+      [
+        "ANCHOR OUR HEARTS",
+        "IN YOUR PEACE",
+        "GUARD OUR MINDS"
+      ],
+      "PEACE",
+      "PRAYER VIGIL"
+    ],
+    [
+      53,
+      62,
+      [
+        "SUBSCRIBE TO THE",
+        "MIDNIGHT WATCH",
+        "FOR DAILY PRAYER"
+      ],
+      "SUBSCRIBE",
+      "STAND IN PRAYER"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Rise in spirit this midnight hour",
+      "kind": "phrase",
+      "words": [
+        "RISE",
+        "MIDNIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For though we walk in the flesh",
+      "kind": "phrase",
+      "words": [
+        "WALK",
+        "FLESH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "we do not war according to the flesh",
+      "kind": "phrase",
+      "words": [
+        "WAR",
+        "FLESH"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "For the weapons of our warfare are not carnal",
+      "kind": "phrase",
+      "words": [
+        "WEAPONS",
+        "CARNAL"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "but mighty in God for pulling down strongholds",
+      "kind": "phrase",
+      "words": [
+        "MIGHTY",
+        "STRONGHOLDS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "casting down arguments and every high thing",
+      "kind": "phrase",
+      "words": [
+        "CASTING",
+        "ARGUMENTS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "bringing every thought into captivity",
+      "kind": "phrase",
+      "words": [
+        "THOUGHT",
+        "CAPTIVITY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Corinthians 10:3-5"
+}

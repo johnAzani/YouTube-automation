@@ -1,0 +1,342 @@
+{
+  "key": "short-midnightephesians6v10",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "MIDNIGHT WATCH",
+    "SPIRITUAL ARMOR"
+  ],
+  "poster": [
+    "RISE IN SPIRIT",
+    "THE MIDNIGHT VIGIL",
+    "ARMOR OF GOD",
+    "STAND FIRM NOW"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "dark mountain silhouette under starry night sky",
+    "glowing lantern on stone ledge at night",
+    "deep blue cosmic nebula starry atmosphere",
+    "empty stone church altar lit by single candle",
+    "watchtower silhouette against moonlight clouds",
+    "rushing river in moonlight long exposure",
+    "open ancient leather bible on wooden table",
+    "serene dark forest canopy with moonlight"
+  ],
+  "scenes": [
+    {
+      "a": "Rise in spirit",
+      "img": "short-midnightephesians6v10-scene-01.jpg",
+      "kicker": "THE MIDNIGHT HOUR",
+      "sub": "RISE IN SPIRIT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Ephesians 6:10-18",
+      "img": "short-midnightephesians6v10-scene-02.jpg",
+      "kicker": "HOLY SCRIPTURE",
+      "sub": "EPHESIANS 6:10-18",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "be strong in the Lord",
+      "img": "short-midnightephesians6v10-scene-03.jpg",
+      "kicker": "DIVINE STRENGTH",
+      "sub": "BE STRONG IN THE LORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "put on the full armor",
+      "img": "short-midnightephesians6v10-scene-04.jpg",
+      "kicker": "SPIRITUAL PROTECTION",
+      "sub": "PUT ON THE FULL ARMOR",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "against the schemes",
+      "img": "short-midnightephesians6v10-scene-05.jpg",
+      "kicker": "STAND FIRM",
+      "sub": "AGAINST THE SCHEMES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "praying at all times",
+      "img": "short-midnightephesians6v10-scene-06.jpg",
+      "kicker": "VIGILANCE",
+      "sub": "PRAYING AT ALL TIMES",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "your armor is secure",
+      "img": "short-midnightephesians6v10-scene-07.jpg",
+      "kicker": "PEACE IN THE WATCH",
+      "sub": "YOUR ARMOR IS SECURE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen",
+      "img": "short-midnightephesians6v10-scene-08.jpg",
+      "kicker": "MIDNIGHT WATCH",
+      "sub": "THE WATCH IS CLOSED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "Rise in spirit as the world sleeps and we enter the stillness of the midnight watch."
+    ],
+    [
+      10,
+      20,
+      "Hear the Word of truth from Ephesians 6:10-18, the guide for our nightly battle."
+    ],
+    [
+      20,
+      35,
+      "Be strong in the Lord and in the power of His might, seeking Him in the quiet."
+    ],
+    [
+      35,
+      50,
+      "Put on the full armor of God so that you can stand against the schemes of the enemy."
+    ],
+    [
+      50,
+      65,
+      "Our struggle is not against flesh and blood, but against powers in the darkness."
+    ],
+    [
+      65,
+      85,
+      "Praying at all times in the Spirit with all prayer and supplication for all the saints."
+    ],
+    [
+      85,
+      105,
+      "Know your armor is secure as you rest under the shadow of the Almighty this night."
+    ],
+    [
+      105,
+      120,
+      "May your heart be guarded until the morning light breaks. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "RISE IN SPIRIT",
+        "WORLD SLEEPS",
+        "MIDNIGHT WATCH"
+      ],
+      [
+        "RISE"
+      ],
+      "EPHESIANS 6:10"
+    ],
+    [
+      10,
+      20,
+      [
+        "HEAR THE WORD",
+        "EPHESIANS 6:10-18",
+        "NIGHTLY BATTLE"
+      ],
+      [
+        "TRUTH"
+      ],
+      "EPHESIANS 6:11"
+    ],
+    [
+      20,
+      35,
+      [
+        "BE STRONG",
+        "IN THE LORD",
+        "POWER OF HIS MIGHT"
+      ],
+      [
+        "STRENGTH"
+      ],
+      "EPHESIANS 6:12"
+    ],
+    [
+      35,
+      50,
+      [
+        "PUT ON",
+        "FULL ARMOR OF GOD",
+        "STAND AGAINST SCHEMES"
+      ],
+      [
+        "ARMOR"
+      ],
+      "EPHESIANS 6:13"
+    ],
+    [
+      50,
+      65,
+      [
+        "NOT FLESH AND BLOOD",
+        "POWERS",
+        "IN THE DARKNESS"
+      ],
+      [
+        "STAND"
+      ],
+      "EPHESIANS 6:14"
+    ],
+    [
+      65,
+      85,
+      [
+        "PRAYING AT ALL TIMES",
+        "IN THE SPIRIT",
+        "FOR ALL SAINTS"
+      ],
+      [
+        "PRAYER"
+      ],
+      "EPHESIANS 6:15"
+    ],
+    [
+      85,
+      105,
+      [
+        "YOUR ARMOR IS SECURE",
+        "REST",
+        "UNDER HIS SHADOW"
+      ],
+      [
+        "SECURE"
+      ],
+      "EPHESIANS 6:16"
+    ],
+    [
+      105,
+      120,
+      [
+        "HEART BE GUARDED",
+        "UNTIL MORNING LIGHT",
+        "AMEN"
+      ],
+      [
+        "AMEN"
+      ],
+      "EPHESIANS 6:18"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Rise in spirit",
+      "kind": "phrase",
+      "words": [
+        "RISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Ephesians 6:10-18",
+      "kind": "phrase",
+      "words": [
+        "TRUTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "be strong in the Lord",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "put on the full armor",
+      "kind": "phrase",
+      "words": [
+        "ARMOR"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "against the schemes",
+      "kind": "phrase",
+      "words": [
+        "STAND"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "praying at all times",
+      "kind": "phrase",
+      "words": [
+        "PRAYER"
+      ],
+      "hi": 5,
+      "slot": "C"
+    },
+    {
+      "a": "your armor is secure",
+      "kind": "phrase",
+      "words": [
+        "SECURE"
+      ],
+      "hi": 6,
+      "slot": "C"
+    },
+    {
+      "a": "Amen",
+      "kind": "phrase",
+      "words": [
+        "AMEN"
+      ],
+      "hi": 7,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Ephesians 6:10-18"
+}
