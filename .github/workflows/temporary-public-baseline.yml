@@ -1,0 +1,67 @@
+name: Temporary read-only public performance baseline
+on:
+  push:
+    branches: ["arena/b0072173-youtube-automation"]
+    paths: [".github/workflows/temporary-public-baseline.yml"]
+permissions:
+  contents: read
+jobs:
+  baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      fail-fast: false
+      matrix:
+        channel: [secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, prayer8]
+    steps:
+      - name: Collect public video counters only
+        env:
+          CHANNEL: ${{ matrix.channel }}
+          CLIENT_ID: ${{ secrets[format('{0}YOUTUBE_CLIENT_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] }}
+          CLIENT_SECRET: ${{ secrets[format('{0}YOUTUBE_CLIENT_SECRET', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] }}
+          REFRESH_TOKEN: ${{ secrets[format('{0}YOUTUBE_REFRESH_TOKEN', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] }}
+          EXPECTED_CHANNEL: ${{ vars[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] || secrets[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] || (matrix.channel == 'secret-place' && 'UCtPI1r8vgtJ9n__7ksLBmCA' || '') }}
+        run: |
+          python3 - <<'PY'
+          import datetime, json, os, pathlib, urllib.parse, urllib.request
+          def get(url, headers=None, data=None):
+              with urllib.request.urlopen(urllib.request.Request(url, headers=headers or {}, data=data), timeout=25) as response:
+                  return json.load(response)
+          def api(path, params, token):
+              return get('https://www.googleapis.com/youtube/v3/'+path+'?'+urllib.parse.urlencode(params), {'Authorization':'Bearer '+token})
+          try:
+              channel = os.environ['CHANNEL']
+              expected = os.environ['EXPECTED_CHANNEL'].strip()
+              if not expected: raise ValueError('Missing configured channel ID')
+              token = get('https://oauth2.googleapis.com/token', data=urllib.parse.urlencode({'client_id':os.environ['CLIENT_ID'], 'client_secret':os.environ['CLIENT_SECRET'], 'refresh_token':os.environ['REFRESH_TOKEN'], 'grant_type':'refresh_token'}).encode())['access_token']
+              channels = api('channels', {'part':'snippet,contentDetails,statistics', 'mine':'true'}, token).get('items',[])
+              if len(channels)!=1 or channels[0].get('id')!=expected: raise ValueError('Authenticated channel mismatch')
+              ch=channels[0]
+              playlist=ch['contentDetails']['relatedPlaylists']['uploads']
+              pl=api('playlistItems', {'part':'contentDetails','playlistId':playlist,'maxResults':50}, token).get('items',[])
+              ids=[p['contentDetails']['videoId'] for p in pl if p.get('contentDetails',{}).get('videoId')]
+              videos=api('videos', {'part':'snippet,statistics,status','id':','.join(ids)},token).get('items',[]) if ids else []
+              by_id={v['id']:v for v in videos}
+              rows=[]
+              for vid in ids:
+                  v=by_id.get(vid,{}); sn=v.get('snippet',{}); status=v.get('status',{})
+                  if status.get('privacyStatus')!='public' or sn.get('channelId')!=expected: continue
+                  stat=v.get('statistics',{})
+                  rows.append({'id':vid,'title':sn.get('title'),'published_at':sn.get('publishedAt'), 'views':stat.get('viewCount'), 'likes':stat.get('likeCount'), 'comments':stat.get('commentCount')})
+              stats=ch.get('statistics',{})
+              result={'collected_at':datetime.datetime.now(datetime.timezone.utc).isoformat(), 'channel_key':channel,'channel_title':ch.get('snippet',{}).get('title'), 'subscriber_count':None if stats.get('hiddenSubscriberCount') else stats.get('subscriberCount'), 'latest_public_videos':rows, 'scope':'Up to 50 latest uploads; public videos only; lifetime public counters.'}
+              pathlib.Path('baseline.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
+              summary={**result,'latest_public_videos':rows[:3]}
+              text=json.dumps(summary,ensure_ascii=True).replace('%','%25').replace('\r','%0D').replace('\n','%0A')
+              print('::notice title=Public performance baseline::'+text)
+          except Exception as exc:
+              print(f'::error title=Public performance baseline unavailable::{type(exc).__name__} for {os.environ.get("CHANNEL")}; response details withheld')
+              raise SystemExit(1)
+          PY
+      - name: Retain public counters for 30 days
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-baseline-${{ matrix.channel }}-${{ github.run_id }}
+          path: baseline.json
+          retention-days: 30
