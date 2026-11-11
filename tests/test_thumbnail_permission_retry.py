@@ -140,6 +140,7 @@ def test_short_success_clears_failed_receipt(receipts, tmp_path, monkeypatch):
 
 
 def test_retry_permission_cli_requires_exact_channel_and_no_force(monkeypatch):
+    monkeypatch.delenv("DRY_RUN", raising=False)
     for args in (["--retry-permission"], ["--retry-permission", "--channel", "unknown"],
                  ["--retry-permission", "--channel", "prayer8", "--force"],
                  ["--retry-permission", "--channel", "prayer8", "--all-channels"]):
