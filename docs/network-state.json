@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T19:18:17Z",
+  "generated_at": "2026-11-11T21:05:21Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 95,
-    "published_longform": 42,
-    "published_shorts": 53,
-    "public_total": 93,
-    "queued_longform": 55,
-    "queued_shorts": 40,
+    "published_total": 97,
+    "published_longform": 43,
+    "published_shorts": 54,
+    "public_total": 95,
+    "queued_longform": 54,
+    "queued_shorts": 39,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -166,32 +166,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 19,
-        "published_longform": 9,
-        "published_shorts": 10,
-        "public_total": 19,
-        "queued_longform": 7,
+        "published_total": 21,
+        "published_longform": 10,
+        "published_shorts": 11,
+        "public_total": 21,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYACTS10V9",
-        "title": "Say This Acts 10:9 Prayer at Noon | The Midday Watch #Shorts",
-        "format": "short",
-        "youtube_video_id": "W_SQFbDk110",
-        "watch_url": "https://www.youtube.com/shorts/W_SQFbDk110",
-        "published_on": "2026-11-11",
-        "published_at": "2026-11-11T10:43:25Z"
-      },
-      "next_queued_longform": {
         "id": "0084",
         "title": "Acts 10:9 Midday Prayer | The Midday Watch",
-        "words": 2437,
+        "format": "longform",
+        "youtube_video_id": "VGKbJSzRZ28",
+        "watch_url": "https://youtu.be/VGKbJSzRZ28",
+        "published_on": "2026-11-11",
+        "published_at": "2026-11-11T21:04:27Z"
+      },
+      "next_queued_longform": {
+        "id": "0085",
+        "title": "Psalm 37:6 Clear as the Noonday Prayer | The Midday Watch",
+        "words": 2261,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaypsalm37v6",
-        "scripture": "Psalm 37:6",
+        "short": "short-middaypsalm121v5",
+        "scripture": "Psalm 121:5-6",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -491,6 +491,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0084",
+      "slug": "acts-10-9-midday-prayer",
+      "file": "0084-acts-10-9-midday-prayer.md",
+      "title": "Acts 10:9 Midday Prayer | The Midday Watch",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T21:04:27Z",
+      "youtube_video_id": "VGKbJSzRZ28",
+      "watch_url": "https://youtu.be/VGKbJSzRZ28",
+      "youtu_be_url": "https://youtu.be/VGKbJSzRZ28",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/VGKbJSzRZ28/edit",
+      "thumb_url": "https://i.ytimg.com/vi/VGKbJSzRZ28/hqdefault.jpg",
+      "thumb_text": "THE SIXTH HOUR",
+      "duration_label": "~17 min",
+      "words": 2437
+    },
+    {
+      "id": "SHORT-MIDDAYPSALM37V6",
+      "slug": "short-middaypsalm37v6-midday-prayer",
+      "file": "short-middaypsalm37v6-midday-prayer.md",
+      "title": "Say This Psalm 37:6 Prayer at Noon | The Midday Watch #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-11",
+      "published_at": "2026-11-11T19:13:50Z",
+      "youtube_video_id": "PjsOg5V0FvU",
+      "watch_url": "https://www.youtube.com/shorts/PjsOg5V0FvU",
+      "youtu_be_url": "https://youtu.be/PjsOg5V0FvU",
+      "shorts_url": "https://www.youtube.com/shorts/PjsOg5V0FvU",
+      "studio_url": "https://studio.youtube.com/video/PjsOg5V0FvU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/PjsOg5V0FvU/hqdefault.jpg",
+      "thumb_text": "PAUSE AT NOON \u00b7 LET HIS LIGHT SHINE",
+      "duration_label": "57s",
+      "words": 593
+    },
     {
       "id": "0059",
       "slug": "psalm-108-2-morning-prayer",
@@ -2979,19 +3025,6 @@
         "words": 1429
       },
       {
-        "id": "0084",
-        "slug": "acts-10-9-midday-prayer",
-        "file": "0084-acts-10-9-midday-prayer.md",
-        "title": "Acts 10:9 Midday Prayer | The Midday Watch",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 2437
-      },
-      {
         "id": "0085",
         "slug": "psalm-37-6-clear-as-the-noonday-prayer",
         "file": "0085-psalm-37-6-clear-as-the-noonday-prayer.md",
@@ -3483,17 +3516,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-middaypsalm37v6",
-        "file": "0085-short-middaypsalm37v6.yml",
-        "companion_longform_id": "0085",
-        "scripture": "Psalm 37:6",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaypsalm121v5",
