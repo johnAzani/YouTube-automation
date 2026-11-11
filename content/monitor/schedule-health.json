@@ -51,8 +51,8 @@
       "workflow": "community.yml"
     }
   ],
-  "generated_at": "2026-11-11T11:55:38.915777+00:00",
-  "last_run_at": "2026-11-11T11:53:56+00:00",
+  "generated_at": "2026-11-11T11:57:19.076342+00:00",
+  "last_run_at": "2026-11-11T11:57:03+00:00",
   "on_time": [
     {
       "late_minutes": 73,
@@ -69,13 +69,13 @@
       "workflow": "produce.yml"
     },
     {
-      "late_minutes": 51,
+      "late_minutes": 54,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-11T10:38:50+00:00",
+      "ran_at": "2026-11-11T10:41:03+00:00",
       "slot": "2026-11-11T09:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 1,
+  "silence_minutes": 0,
   "warn_minutes": 120
 }
