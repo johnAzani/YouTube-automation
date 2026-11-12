@@ -24,7 +24,7 @@ thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently.
 thumbnail_poster: ["THE MORNING ALTAR", "BEGIN IN PRAYER", "2 SAMUEL 23:4", "LIGHT OF DAWN"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-12T13:00:43Z"
+thumbnail_retry_after: "2026-11-12T19:02:41Z"
 thumbnail_retry_reason: "rate_limit"
 ---
 
