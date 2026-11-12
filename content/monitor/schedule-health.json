@@ -30,6 +30,20 @@
       "workflow": "community.yml"
     },
     {
+      "late_minutes": 156,
+      "name": "Autonomous Comment Replies",
+      "ran_at": "2026-11-12T21:50:45+00:00",
+      "slot": "2026-11-12T19:14:00+00:00",
+      "workflow": "comments.yml"
+    },
+    {
+      "late_minutes": 134,
+      "name": "Produce video",
+      "ran_at": "2026-11-12T21:28:28+00:00",
+      "slot": "2026-11-12T19:14:00+00:00",
+      "workflow": "produce.yml"
+    },
+    {
       "late_minutes": 124,
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "ran_at": "2026-11-12T05:18:37+00:00",
@@ -37,21 +51,14 @@
       "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-12T20:27:14.923580+00:00",
-  "last_run_at": "2026-11-12T20:26:26+00:00",
+  "generated_at": "2026-11-12T21:58:50.116486+00:00",
+  "last_run_at": "2026-11-12T21:58:08+00:00",
   "on_time": [
     {
-      "late_minutes": 105,
-      "name": "Automation monitor",
-      "ran_at": "2026-11-12T20:08:01+00:00",
-      "slot": "2026-11-12T18:23:00+00:00",
-      "workflow": "monitor.yml"
-    },
-    {
-      "late_minutes": 84,
+      "late_minutes": 11,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-12T20:11:16+00:00",
-      "slot": "2026-11-12T18:47:00+00:00",
+      "ran_at": "2026-11-12T21:58:08+00:00",
+      "slot": "2026-11-12T21:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
