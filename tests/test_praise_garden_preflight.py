@@ -64,3 +64,22 @@ def test_no_secret_values_in_normal_errors():
     with pytest.raises(preflight.PreflightError) as exc:
         preflight.check(config)
     assert 'secret' not in str(exc.value) and 'refresh' not in str(exc.value)
+
+
+def test_workflow_is_manual_read_only_and_uses_only_prayer9_secrets():
+    from pathlib import Path
+    import yaml
+
+    workflow = yaml.safe_load(Path('.github/workflows/praise-garden-preflight.yml').read_text())
+    # YAML 1.1 parses the GitHub Actions key 'on' as True.
+    events = workflow.get('on', workflow.get(True))
+    assert set(events) == {'workflow_dispatch'}
+    assert workflow['permissions'] == {'contents': 'read'}
+    steps = workflow['jobs']['preflight']['steps']
+    assert steps[0]['with']['persist-credentials'] is False
+    step = next(step for step in steps if 'run' in step)
+    assert step['run'] == 'python3 scripts/praise_garden_preflight.py'
+    for name in preflight.REQUIRED:
+        key = 'PRAYER9_' + name
+        assert step['env'][key] == '${{ secrets.' + key + ' }}'
+    assert len(step['env']) == len(preflight.REQUIRED)

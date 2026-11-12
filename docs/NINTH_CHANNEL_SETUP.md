@@ -3,11 +3,16 @@
 **Current status:** the owner shared a YouTube screenshot showing The Praise
 Garden, `@ThePraiseGardenDaily`, its banner, avatar and description. This is
 confirmation of the displayed brand and handle, not an independent verification
-of the channel ID or OAuth identity. The authoring guidelines are not registered
-with the production brain; the standalone read-only credential preflight is not
-connected to any workflow. No ninth-channel registry entry, OAuth credentials,
-workflow mapping, queue, activation or launch has been configured or verified.
-Do not call it connected to automation or publishing.
+of the channel ID or OAuth identity. The owner has saved the four PRAYER9 YouTube
+secret names, and [read-only preflight run 43221633843](https://github.com/johnAzani/YouTube-automation/actions/runs/43221633843)
+succeeded: the refresh-token-authorized channel matches the configured channel ID,
+and an upload-capable scope was returned. This matches the configured ID, not an
+independent confirmation that the ID is the intended channel; it does not test
+an upload, generation, TTS, quota, billing or thumbnail permissions. A manual
+preflight workflow is staged in this PR, not deployed to the default branch.
+The authoring guidelines are not registered with the production brain. No
+ninth-channel registry entry, publishing workflow mapping, queue, activation or
+launch has been configured. Do not call it connected to automation or publishing.
 
 ## Delivery sequence
 
@@ -44,8 +49,9 @@ Do not call it connected to automation or publishing.
    secure local environment and makes only OAuth refresh and channel-identity
    requests. It rejects missing fields, insufficient or undisclosed scopes, and
    wrong/ambiguous channel identities. It does not test an upload, TTS, quota,
-   billing or thumbnail permission, and is not yet wired into Actions.
-   Credentials and identity have not yet been tested.
+   billing or thumbnail permission. An initial branch-only Actions run succeeded
+   as noted above. The staged manual workflow will be usable from the default
+   branch only after review and merge; it does not activate a channel.
 5. The owner handles YouTube phone/feature verification. Review thumbnail and
    advanced-feature status independently; permission responses alone do not
    prove the reason for a refusal.

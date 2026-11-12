@@ -1,11 +1,8 @@
 name: Praise Garden read-only preflight
 
-# The temporary branch-only push trigger exercises this new workflow before it
-# exists on the default branch. Remove the trigger after the initial test.
+# Explicitly manual, read-only and independent of the channel registry. Saving
+# secrets alone never starts the diagnostic or enables the channel.
 on:
-  push:
-    branches: ["arena/32ec72b4-youtube-automation"]
-    paths: [".github/workflows/praise-garden-preflight.yml"]
   workflow_dispatch:
 
 permissions:
