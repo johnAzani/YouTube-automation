@@ -19,13 +19,12 @@ width: 720
 height: 1280
 duration_seconds: 57.44
 scenes_verified: 6
-thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunris"
+thumbnail_pending: false
 thumbnail_poster: ["THE MORNING ALTAR", "HOSEA 6:3", "SURE AS THE DAWN", "DAILY SUNRISE PRAYER"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-12T17:30:43Z"
-thumbnail_retry_reason: "rate_limit"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
 ---
 
 Open your eyes to this newborn day and breathe in the quiet peace of dawn. As light breaks over the horizon, step into the presence of your Creator and receive His faithful morning grace. Hear His timeless word today from Hosea chapter six verse three: "Let us know; let us press on to know the Lord; his going forth is sure as the dawn; he will come to us as the showers, as the spring rains that water the earth." Heavenly Father, we press into Your presence today, trusting Your promise that Your love arrives like the sunrise, constant and refreshing. Rain down Your blessing upon us this morning. Subscribe to The Morning Altar to begin every morning in prayer.

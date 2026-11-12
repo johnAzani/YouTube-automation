@@ -19,13 +19,12 @@ width: 720
 height: 1280
 duration_seconds: 60.12
 scenes_verified: 8
-thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunris"
+thumbnail_pending: false
 thumbnail_poster: ["THE MORNING ALTAR", "BEGIN IN PRAYER", "2 SAMUEL 23:4", "LIGHT OF DAWN"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-12T19:02:41Z"
-thumbnail_retry_reason: "rate_limit"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
 ---
 
 Open your eyes to the quiet grace of this brand new morning. As dawn breaks, scripture reminds us in 2 Samuel 23:4: He shall be like the light of the morning when the sun rises, a morning without clouds, like the tender grass springing out of the earth by clear shining after rain. Lord, let Your divine presence shine upon this day like golden sunlight. Dispel every shadow of doubt and restore vibrant new life to our weary souls. May Your peace nourish us, bringing fresh hope with every gentle breath we take. Walk beside us through every single step and fill our hearts with Your own enduring warmth. Subscribe to begin every sunrise in prayer with The Morning Altar.

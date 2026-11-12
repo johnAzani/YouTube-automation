@@ -20,10 +20,13 @@ height: 1280
 duration_seconds: 54.56
 scenes_verified: 7
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE FAMILY ALTAR", "PROTECT OUR CHILDREN", "ISAIAH 54:13", "FAMILY PRAYER"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-19T20:09:46Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Gather your home in faith and lift every child and loved one before the Father today. Isaiah fifty-four verse thirteen promises, And all thy children shall be taught of the LORD; and great shall be the peace of thy children. Parents speak to the outward ear, but the Holy Spirit teaches and anchors the inward heart. In righteousness shalt thou be established, and fearful oppression shall stay far from thy home. Father, guard our sons, daughters, and grandchildren in wisdom, purity, and living faith. No weapon formed against our household shall prosper; cover our home in Your covenant peace. Type Amen and subscribe to The Family Altar to cover your home in daily prayer.

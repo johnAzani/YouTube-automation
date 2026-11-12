@@ -80,8 +80,9 @@ published_on: "2026-11-12"
 published_at: "2026-11-12T17:49:38Z"
 youtube_video_id: "5DeUVP_OJSQ"
 metadata_revision: "selar-seo-v1"
-thumbnail_pending: true
-thumbnail_error: "not_requested"
+thumbnail_pending: false
+
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Noonday Pause and the Midday Heat

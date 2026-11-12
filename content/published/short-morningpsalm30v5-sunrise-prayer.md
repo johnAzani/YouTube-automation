@@ -19,13 +19,12 @@ width: 720
 height: 1280
 duration_seconds: 50.33
 scenes_verified: 8
-thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunris"
+thumbnail_pending: false
 thumbnail_poster: ["THE", "MORNING", "ALTAR", "PSALM 30:5"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-12T17:30:43Z"
-thumbnail_retry_reason: "rate_limit"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
 ---
 
 Welcome the quiet of this new morning as the darkness slowly fades away. Step into the fresh light that God has prepared for your soul today. Listen closely to the ancient truth found within the sacred scriptures. For his anger lasts only a moment, but his favor lasts a lifetime. Weeping may stay for the night, but rejoicing comes in the morning. Let this promise anchor your heart against every fear and every doubt. Father, fill us with your steadfast peace as we walk through this day. Subscribe to The Morning Altar for daily prayer and sunrise scripture.

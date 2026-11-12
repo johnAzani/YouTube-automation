@@ -88,12 +88,11 @@ approved_by: brain
 published_on: "2026-11-07"
 published_at: "2026-11-07T20:29:37Z"
 youtube_video_id: "Nq7a1yC4Rzw"
-thumbnail_pending: true
+thumbnail_pending: false
 
 metadata_revision: "selar-seo-v1"
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunrise Prayer; long_uploads_status=allowed; video_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; video_channel_title=The Morning Altar | Daily Sunrise Prayer; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_retry_after: "2026-11-12T17:30:43Z"
-thumbnail_retry_reason: "rate_limit"
+
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Rising up a Great While Before Day (Mark 1:35)
