@@ -61,7 +61,10 @@ jobs:
           from pipeline.channels import CHANNELS, normalize_channel_id, scheduled_channels
           requested = (os.environ.get("INPUT_CHANNEL") or "").strip()
           if requested:
-              channels = [normalize_channel_id(requested)]
+              cid = normalize_channel_id(requested)
+              if cid not in scheduled_channels():
+                  raise SystemExit("Refusing unknown or inactive channel: " + cid)
+              channels = [cid]
           else:
               channels = []
               for cid in scheduled_channels():
@@ -69,7 +72,7 @@ jobs:
                   token_key = f"{p}_YOUTUBE_REFRESH_TOKEN" if p else "YOUTUBE_REFRESH_TOKEN"
                   if (os.environ.get(token_key) or "").strip():
                       channels.append(cid)
-              if not channels:
+              if not channels and "secret-place" in scheduled_channels():
                   channels = ["secret-place"]
           print(f"Discovered growth channels: {channels}")
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
@@ -78,6 +81,7 @@ jobs:
 
   growth:
     needs: plan
+    if: ${{ needs.plan.outputs.channels != '[]' && needs.plan.outputs.channels != '' }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     strategy:

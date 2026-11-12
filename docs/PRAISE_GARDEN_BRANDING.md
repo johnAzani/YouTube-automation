@@ -1,14 +1,15 @@
 # The Praise Garden — ninth prayer channel brand kit
 
-**Status:** design prepared only. No channel has been created, identified,
-connected, provisioned, scheduled, or published by this kit. The suggested handle
-has not been checked or claimed. The network registry and workflows do **not** yet
-support a ninth channel; do not assume credentials alone will connect it.
+**Status:** the owner shared a YouTube channel screenshot showing The Praise
+Garden with handle `@ThePraiseGardenDaily`, the banner, avatar and description.
+The channel ID and OAuth identity have not been independently verified, and the
+channel is not connected to this automation. The network registry and workflows
+do **not** yet support a ninth channel; credentials alone do not connect it.
 
 ## Identity
 
 - **Name:** The Praise Garden
-- **Intended handle:** `@ThePraiseGardenDaily` (choose an available alternative in Studio if necessary)
+- **Handle shown in the owner's screenshot:** `@ThePraiseGardenDaily`
 - **Distinct focus:** Christian prayers of thanksgiving, praise and worship,
   including gratitude in ordinary life and in difficult seasons. Unlike the
   Morning Altar, it is not tied to a time of day; unlike the Provision Table, it
@@ -40,7 +41,7 @@ area. Studio previews remain the final check for mobile and other devices.
 The Praise Garden
 ```
 
-**Proposed handle**
+**Handle**
 
 ```text
 @ThePraiseGardenDaily

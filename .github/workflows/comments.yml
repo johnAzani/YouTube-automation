@@ -57,6 +57,7 @@ jobs:
     outputs:
       channels: ${{ steps.plan.outputs.channels }}
     steps:
+      - uses: actions/checkout@v4
       - id: plan
         env:
           PRAYER2_READY: ${{ secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN != '' }}
@@ -71,6 +72,7 @@ jobs:
         run: |
           python3 - <<'PY'
           import json, os
+          from pipeline.channels import normalize_channel_id, scheduled_channels
           event = os.environ.get("EVENT_NAME", "")
           if event == "schedule":
               channels = ["secret-place"]
@@ -104,6 +106,14 @@ jobs:
               channels = [(os.environ.get("INPUT_CHANNEL") or "secret-place").strip()]
           else:
               channels = ["secret-place"]
+          allowed = set(scheduled_channels())
+          channels = [normalize_channel_id(cid) for cid in channels]
+          blocked = [cid for cid in channels if cid not in allowed]
+          if blocked and event == "workflow_dispatch":
+              raise SystemExit("Refusing unknown or inactive channel(s): " + ", ".join(blocked))
+          if blocked:
+              print("::notice::Skipping unknown or inactive channel(s): " + ", ".join(blocked))
+              channels = [cid for cid in channels if cid in allowed]
           payload = json.dumps(channels)
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
               fh.write(f"channels={payload}\n")
@@ -112,6 +122,7 @@ jobs:
 
   reply:
     needs: plan
+    if: ${{ needs.plan.outputs.channels != '[]' && needs.plan.outputs.channels != '' }}
     # One channel at a time: every leg commits the same
     # content/comments/replied.json to main.
     strategy:

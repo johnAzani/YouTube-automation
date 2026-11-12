@@ -60,3 +60,98 @@ def test_produce_plan_rejects_unregistered_targets(tmp_path, event, variable, ch
     else:
         assert 'Refusing unknown or inactive' in result.stderr
         assert not output.exists()
+
+
+@pytest.mark.parametrize(('filename', 'step_id'), [
+    ('produce.yml', 'plan'), ('gemini_brain.yml', 'plan'),
+    ('comments.yml', 'plan'), ('growth-autopilot.yml', 'discover'),
+    ('metrics.yml', 'discover'),
+])
+@pytest.mark.parametrize(('target', 'inactive', 'allowed'), [
+    ('prayer8', False, True), ('prayer8', True, False),
+    ('prayer9', False, False), ('not-a-channel', False, False),
+])
+def test_planners_gate_manual_channel(tmp_path, filename, step_id, target, inactive, allowed):
+    with open('.github/workflows/' + filename, encoding='utf-8') as f:
+        workflow = yaml.safe_load(f)
+    run = next(step['run'] for step in workflow['jobs']['plan']['steps'] if step.get('id') == step_id)
+    script = run.split("python3 - <<'PY'\n", 1)[1].rsplit('\nPY', 1)[0]
+    # Simulate a future existing profile being marked inactive, without
+    # altering the registry or any real workflow credentials.
+    if inactive:
+        script = ("import pipeline.channels as c\n"
+                  "orig = c.scheduled_channels\n"
+                  "c.scheduled_channels = lambda: tuple(x for x in orig() if x != 'prayer8')\n" + script)
+    output = tmp_path / 'out'
+    env = {**os.environ, 'EVENT_NAME': 'workflow_dispatch', 'INPUT_CHANNEL': target,
+           'GITHUB_OUTPUT': str(output)}
+    result = subprocess.run([sys.executable, '-c', script], env=env, capture_output=True, text=True)
+    assert (result.returncode == 0) == allowed, result.stdout + result.stderr
+    if allowed:
+        assert json.loads(output.read_text().strip().split('=', 1)[1]) == [target]
+    else:
+        assert 'Refusing unknown or inactive' in result.stderr
+        assert not output.exists()
+
+
+@pytest.mark.parametrize(('filename', 'step_id'), [
+    ('produce.yml', 'plan'), ('gemini_brain.yml', 'plan'),
+    ('comments.yml', 'plan'), ('growth-autopilot.yml', 'discover'),
+    ('metrics.yml', 'discover'),
+])
+def test_schedule_skips_inactive_without_blocking_other_channels(tmp_path, filename, step_id):
+    with open('.github/workflows/' + filename, encoding='utf-8') as f:
+        workflow = yaml.safe_load(f)
+    run = next(step['run'] for step in workflow['jobs']['plan']['steps'] if step.get('id') == step_id)
+    script = run.split("python3 - <<'PY'\n", 1)[1].rsplit('\nPY', 1)[0]
+    script = ("import pipeline.channels as c\n"
+              "orig = c.scheduled_channels\n"
+              "c.scheduled_channels = lambda: tuple(x for x in orig() if x != 'prayer8')\n" + script)
+    output = tmp_path / 'out'
+    env = {**os.environ, 'EVENT_NAME': 'schedule', 'INPUT_CHANNEL': '',
+           'GITHUB_OUTPUT': str(output), 'YOUTUBE_REFRESH_TOKEN': 'present'}
+    env.update({f'PRAYER{i}_READY': 'true' for i in range(2, 9)})
+    env.update({f'PRAYER{i}_YOUTUBE_REFRESH_TOKEN': 'present' for i in range(2, 9)})
+    result = subprocess.run([sys.executable, '-c', script], env=env, capture_output=True, text=True)
+    assert result.returncode == 0, result.stdout + result.stderr
+    channels = json.loads(output.read_text().strip().split('=', 1)[1])
+    assert 'prayer8' not in channels
+    assert 'secret-place' in channels
+
+
+def test_brain_manual_both_skips_inactive(tmp_path):
+    with open('.github/workflows/gemini_brain.yml', encoding='utf-8') as f:
+        workflow = yaml.safe_load(f)
+    run = next(step['run'] for step in workflow['jobs']['plan']['steps'] if step.get('id') == 'plan')
+    script = run.split("python3 - <<'PY'\n", 1)[1].rsplit('\nPY', 1)[0]
+    script = ("import pipeline.channels as c\n"
+              "orig = c.scheduled_channels\n"
+              "c.scheduled_channels = lambda: tuple(x for x in orig() if x != 'prayer8')\n" + script)
+    output = tmp_path / 'out'
+    env = {**os.environ, 'EVENT_NAME': 'workflow_dispatch', 'INPUT_CHANNEL': 'both',
+           'GITHUB_OUTPUT': str(output), 'PRAYER8_READY': 'true'}
+    result = subprocess.run([sys.executable, '-c', script], env=env, capture_output=True, text=True)
+    assert result.returncode == 0, result.stdout + result.stderr
+    channels = json.loads(output.read_text().strip().split('=', 1)[1])
+    assert 'prayer8' not in channels and 'secret-place' in channels
+
+
+@pytest.mark.parametrize(('filename', 'step_id', 'job'), [
+    ('produce.yml', 'plan', 'produce'), ('gemini_brain.yml', 'plan', 'brain-replenish'),
+    ('comments.yml', 'plan', 'reply'), ('growth-autopilot.yml', 'discover', 'growth'),
+    ('metrics.yml', 'discover', 'snapshot'),
+])
+def test_empty_plan_never_starts_work(tmp_path, filename, step_id, job):
+    with open('.github/workflows/' + filename, encoding='utf-8') as f:
+        workflow = yaml.safe_load(f)
+    run = next(step['run'] for step in workflow['jobs']['plan']['steps'] if step.get('id') == step_id)
+    script = run.split("python3 - <<'PY'\n", 1)[1].rsplit('\nPY', 1)[0]
+    script = "import pipeline.channels as c\nc.scheduled_channels = lambda: ()\n" + script
+    output = tmp_path / 'out'
+    env = {**os.environ, 'EVENT_NAME': 'schedule', 'INPUT_CHANNEL': '',
+           'GITHUB_OUTPUT': str(output), 'YOUTUBE_REFRESH_TOKEN': 'present'}
+    env.update({f'PRAYER{i}_READY': 'true' for i in range(2, 9)})
+    result = subprocess.run([sys.executable, '-c', script], env=env, capture_output=True, text=True)
+    assert result.returncode == 0, result.stdout + result.stderr
+    assert json.loads(output.read_text().strip().split('=', 1)[1]) == []
+    assert "needs.plan.outputs.channels != '[]'" in workflow['jobs'][job]['if']

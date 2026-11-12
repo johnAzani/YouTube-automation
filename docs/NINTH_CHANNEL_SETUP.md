@@ -1,20 +1,20 @@
 # Ninth channel — staged setup: The Praise Garden
 
-**Current status: staged brand assets, authoring guidelines and a standalone
-read-only credential preflight.** The guidelines are not registered with the
-production brain; the preflight is not connected to any workflow. No new channel
-registry entry, OAuth credentials, workflow mapping, queue, channel identity,
-activation, or launch has been configured or verified. Do not call it connected
-or live. The handle in [the brand kit](PRAISE_GARDEN_BRANDING.md) is a suggestion,
-not a verified or reserved handle.
+**Current status:** the owner shared a YouTube screenshot showing The Praise
+Garden, `@ThePraiseGardenDaily`, its banner, avatar and description. This is
+confirmation of the displayed brand and handle, not an independent verification
+of the channel ID or OAuth identity. The authoring guidelines are not registered
+with the production brain; the standalone read-only credential preflight is not
+connected to any workflow. No ninth-channel registry entry, OAuth credentials,
+workflow mapping, queue, activation or launch has been configured or verified.
+Do not call it connected to automation or publishing.
 
 ## Delivery sequence
 
-1. Prepare the brand identity and assets (done; see the brand kit). Follow the
-   previous channel setup process, with the owner completing any Google/YouTube
-   account and authorization steps that require their access. Choose an available
-   handle and upload the branding to the intended new channel; do not assume it
-   already exists or change another channel's branding.
+1. Prepare the brand identity and assets (done; see the brand kit). The owner's
+   screenshot shows the channel name, handle, banner, avatar and description.
+   Watermark, channel ID, feature eligibility and account authorization have not
+   been verified here. Do not change another channel's branding.
 2. Implement a ninth-channel registry and complete parity work across
    capabilities, channel-specific workflow credentials, queue selection,
    thumbnails, watchdogs, audit and tests. It must fail closed: an unknown or
@@ -22,10 +22,11 @@ not a verified or reserved handle.
    channel's credentials. Adding secrets alone must not trigger publishing.
    **The ninth channel is not registered or wired yet.** The staged changes
    strengthen empty-credential isolation, restrict several existing workflow
-   mappings to the selected channel and block unknown or inactive channels in
-   the Produce matrix. Other paths still need review: comments and the manual
-   thumbnail workflow do not both require verified expected channel identity,
-   and an inactive gate must cover authoring and all other write-capable paths.
+   mappings to the selected channel and gate unknown or inactive channels in
+   the Produce, brain, comments, growth and metrics planners. Other paths still
+   need review: comments and the manual thumbnail workflow do not both require
+   verified expected channel identity, and inactive gating must be checked in
+   all remaining write-capable paths.
    Local tests and workflow linting do not replace testing GitHub Actions or
    verifying real OAuth credentials. Do not register or activate channel nine
    until these gaps are addressed.

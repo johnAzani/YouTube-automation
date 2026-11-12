@@ -30,6 +30,7 @@ jobs:
     outputs:
       channels: ${{ steps.plan.outputs.channels }}
     steps:
+      - uses: actions/checkout@v4
       - id: plan
         env:
           # Same readiness probe as produce.yml: a channel is replenished on a
@@ -47,6 +48,7 @@ jobs:
         run: |
           python3 - <<'PY'
           import json, os
+          from pipeline.channels import normalize_channel_id, scheduled_channels
           provisioned = ["secret-place", "prayer2"]
           if os.environ.get("PRAYER3_READY", "").lower() == "true":
               provisioned.append("prayer3")
@@ -66,6 +68,14 @@ jobs:
               channels = [inp]
           else:
               channels = provisioned
+          allowed = set(scheduled_channels())
+          channels = [normalize_channel_id(cid) for cid in channels]
+          blocked = [cid for cid in channels if cid not in allowed]
+          if blocked and event == "workflow_dispatch" and inp not in ("", "both"):
+              raise SystemExit("Refusing unknown or inactive channel(s): " + ", ".join(blocked))
+          if blocked:
+              print("::notice::Skipping unknown or inactive channel(s): " + ", ".join(blocked))
+              channels = [cid for cid in channels if cid in allowed]
           payload = json.dumps(channels)
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
               fh.write(f"channels={payload}\n")
@@ -74,6 +84,7 @@ jobs:
 
   brain-replenish:
     needs: plan
+    if: ${{ needs.plan.outputs.channels != '[]' && needs.plan.outputs.channels != '' }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
     strategy:

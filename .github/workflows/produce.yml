@@ -178,8 +178,11 @@ jobs:
           allowed = set(scheduled_channels())
           channels = [normalize_channel_id(cid) for cid in channels]
           blocked = [cid for cid in channels if cid not in allowed]
-          if blocked:
+          if blocked and event != "schedule":
               raise SystemExit("Refusing unknown or inactive production channel(s): " + ", ".join(blocked))
+          if blocked:
+              print("::notice::Skipping unknown or inactive production channel(s): " + ", ".join(blocked))
+              channels = [cid for cid in channels if cid in allowed]
 
           payload = json.dumps(channels)
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
