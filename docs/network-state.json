@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-12T16:22:51Z",
+  "generated_at": "2026-11-12T16:25:00Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
-    "channels_provisioned": 8,
-    "channels_total": 8
+    "channels_provisioned": 10,
+    "channels_total": 10
   },
   "totals": {
     "published_total": 126,
@@ -15,7 +15,7 @@
     "queued_shorts": 48,
     "automations_ok": 10,
     "automations_total": 10,
-    "network_healthy": true
+    "network_healthy": false
   },
   "channels": [
     {
@@ -527,6 +527,88 @@
             "top_scripture": "Psalm 121"
           }
         ]
+      }
+    },
+    {
+      "id": "prayer9",
+      "display_name": "The Praise Garden",
+      "handle": "@ThePraiseGardenDaily",
+      "prayer_label": "Thanksgiving Prayer",
+      "daypart": "thanksgiving",
+      "tagline": "Daily Thanksgiving, Praise & Worship Prayer",
+      "target_window_utc": "09:44",
+      "poster_kicker": "O GIVE THANKS UNTO THE LORD",
+      "provisioned": true,
+      "auto_publish": true,
+      "default_privacy": "public",
+      "supply_target": 6,
+      "counts": {
+        "published_total": 0,
+        "published_longform": 0,
+        "published_shorts": 0,
+        "public_total": 0,
+        "queued_longform": 2,
+        "queued_other": 0,
+        "queued_shorts": 2
+      },
+      "latest_video": null,
+      "next_queued_longform": {
+        "id": "0700",
+        "title": "Psalm 100:4 Thanksgiving Prayer | The Praise Garden",
+        "words": 902,
+        "status": "approved"
+      },
+      "next_queued_short": {
+        "short": "short-gardenpsalm100v4",
+        "scripture": "Psalm 100:4",
+        "target_window_utc": "09:44",
+        "status": "approved"
+      },
+      "feedback": {
+        "available": false,
+        "measured_longform_videos": 0,
+        "top_themes": []
+      }
+    },
+    {
+      "id": "prayer10",
+      "display_name": "The Guided Path",
+      "handle": "@TheGuidedPathPrayer",
+      "prayer_label": "Guidance Prayer",
+      "daypart": "guidance",
+      "tagline": "Daily Prayer for Wisdom, Discernment & Guidance",
+      "target_window_utc": "18:44",
+      "poster_kicker": "HE SHALL DIRECT THY PATHS",
+      "provisioned": true,
+      "auto_publish": true,
+      "default_privacy": "public",
+      "supply_target": 6,
+      "counts": {
+        "published_total": 0,
+        "published_longform": 0,
+        "published_shorts": 0,
+        "public_total": 0,
+        "queued_longform": 2,
+        "queued_other": 0,
+        "queued_shorts": 2
+      },
+      "latest_video": null,
+      "next_queued_longform": {
+        "id": "0800",
+        "title": "Proverbs 3:5-6 Guidance Prayer | The Guided Path",
+        "words": 973,
+        "status": "approved"
+      },
+      "next_queued_short": {
+        "short": "short-guidedproverbs3v5",
+        "scripture": "Proverbs 3:5-6",
+        "target_window_utc": "1124",
+        "status": "approved"
+      },
+      "feedback": {
+        "available": false,
+        "measured_longform_videos": 0,
+        "top_themes": []
       }
     }
   ],
@@ -4192,7 +4274,7 @@
         "file": "0700-psalm-100-4-thanksgiving-prayer.md",
         "title": "Psalm 100:4 Thanksgiving Prayer | The Praise Garden",
         "channel": "prayer9",
-        "channel_name": "The Secret Place",
+        "channel_name": "The Praise Garden",
         "status": "approved",
         "niche": "faith and prayer",
         "publishable": true,
@@ -4205,7 +4287,7 @@
         "file": "0701-psalm-103-1-5-thanksgiving-prayer.md",
         "title": "Psalm 103:1-5 Thanksgiving Prayer | The Praise Garden",
         "channel": "prayer9",
-        "channel_name": "The Secret Place",
+        "channel_name": "The Praise Garden",
         "status": "approved",
         "niche": "faith and prayer",
         "publishable": true,
@@ -4218,7 +4300,7 @@
         "file": "0800-proverbs-3-5-6-guidance-prayer.md",
         "title": "Proverbs 3:5-6 Guidance Prayer | The Guided Path",
         "channel": "prayer10",
-        "channel_name": "The Secret Place",
+        "channel_name": "The Guided Path",
         "status": "approved",
         "niche": "faith and prayer",
         "publishable": true,
@@ -4231,7 +4313,7 @@
         "file": "0801-james-1-5-wisdom-guidance-prayer.md",
         "title": "James 1:5 Guidance Prayer | The Guided Path",
         "channel": "prayer10",
-        "channel_name": "The Secret Place",
+        "channel_name": "The Guided Path",
         "status": "approved",
         "niche": "faith and prayer",
         "publishable": true,
@@ -4730,7 +4812,7 @@
         "companion_longform_id": "0700",
         "scripture": "Psalm 100:4",
         "channel": "prayer9",
-        "channel_name": "The Secret Place",
+        "channel_name": "The Praise Garden",
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
@@ -4741,7 +4823,7 @@
         "companion_longform_id": "0701",
         "scripture": "Psalm 103:2",
         "channel": "prayer9",
-        "channel_name": "The Secret Place",
+        "channel_name": "The Praise Garden",
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
@@ -4752,7 +4834,7 @@
         "companion_longform_id": "0800",
         "scripture": "Proverbs 3:5-6",
         "channel": "prayer10",
-        "channel_name": "The Secret Place",
+        "channel_name": "The Guided Path",
         "status": "approved",
         "publishable": true,
         "target_window_utc": "1124"
@@ -4763,7 +4845,7 @@
         "companion_longform_id": "0801",
         "scripture": "James 1:5",
         "channel": "prayer10",
-        "channel_name": "The Secret Place",
+        "channel_name": "The Guided Path",
         "status": "approved",
         "publishable": true,
         "target_window_utc": "1124"
@@ -4776,10 +4858,10 @@
       "name": "automation-health",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.9h ago",
-      "last_conclusion": "",
+      "detail": "last success 0.0h ago",
+      "last_conclusion": "success",
       "last_run": "2026-11-12T16:21:00+00:00",
-      "last_success": "2026-11-12T15:29:56+00:00",
+      "last_success": "2026-11-12T16:21:00+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -4790,7 +4872,7 @@
       "name": "Autonomous Comment Replies",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.4h ago",
+      "detail": "last success 0.5h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-12T15:56:07+00:00",
       "last_success": "2026-11-12T15:56:07+00:00",
@@ -4804,7 +4886,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 14.8h ago",
+      "detail": "last success 14.9h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-12T01:32:35+00:00",
       "last_success": "2026-11-12T01:32:35+00:00",
@@ -4832,7 +4914,7 @@
       "name": "Growth autopilot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 6.6h ago",
+      "detail": "last success 6.7h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-12T09:44:21+00:00",
       "last_success": "2026-11-12T09:44:21+00:00",
@@ -4846,7 +4928,7 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 76.5h ago",
+      "detail": "last success 76.6h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-09T11:48:56+00:00",
       "last_success": "2026-11-09T11:48:56+00:00",
@@ -4860,7 +4942,7 @@
       "name": "Weekly metrics snapshot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 9.3h ago",
+      "detail": "last success 9.4h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-12T07:01:07+00:00",
       "last_success": "2026-11-12T07:01:07+00:00",
@@ -4904,8 +4986,8 @@
       "severity": "ok",
       "detail": "last success 0.0h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-12T16:21:00+00:00",
-      "last_success": "2026-11-12T16:20:37+00:00",
+      "last_run": "2026-11-12T16:23:00+00:00",
+      "last_success": "2026-11-12T16:21:00+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
