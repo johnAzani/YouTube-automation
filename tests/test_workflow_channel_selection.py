@@ -42,8 +42,8 @@ def test_workflow_secrets_use_only_selected_prefix(filename, selector, keys):
 
 @pytest.mark.parametrize(('event', 'variable', 'channel', 'allowed'), [
     ('workflow_dispatch', 'INPUT_CHANNEL', 'prayer8', True),
-    ('workflow_dispatch', 'INPUT_CHANNEL', 'prayer9', False),
-    ('repository_dispatch', 'CLIENT_CHANNEL', 'prayer9', False),
+    ('workflow_dispatch', 'INPUT_CHANNEL', 'prayer11', False),
+    ('repository_dispatch', 'CLIENT_CHANNEL', 'prayer11', False),
     ('repository_dispatch', 'CLIENT_CHANNEL', 'not-a-channel', False),
 ])
 def test_produce_plan_rejects_unregistered_targets(tmp_path, event, variable, channel, allowed):
@@ -69,7 +69,7 @@ def test_produce_plan_rejects_unregistered_targets(tmp_path, event, variable, ch
 ])
 @pytest.mark.parametrize(('target', 'inactive', 'allowed'), [
     ('prayer8', False, True), ('prayer8', True, False),
-    ('prayer9', False, False), ('not-a-channel', False, False),
+    ('prayer11', False, False), ('not-a-channel', False, False),
 ])
 def test_planners_gate_manual_channel(tmp_path, filename, step_id, target, inactive, allowed):
     with open('.github/workflows/' + filename, encoding='utf-8') as f:

@@ -1,0 +1,275 @@
+{
+  "key": "short-gardenpsalm100v4",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "THANKSGIVING PRAYER",
+    "PSALM 100:4"
+  ],
+  "poster": [
+    "THE PRAISE GARDEN",
+    "ENTER WITH THANKS",
+    "PSALM 100:4",
+    "THANKSGIVING PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — daily thanksgiving prayer"
+  ],
+  "stock_queries": [
+    "forest sunlight mist",
+    "divine light breaking through clouds over peaceful landscape",
+    "golden light rays over calm landscape morning dawn",
+    "peaceful sunrise over misty countryside morning",
+    "peaceful mountain river calm water forest",
+    "golden dawn light over misty landscape morning",
+    "divine light breaking through clouds over peaceful landscape"
+  ],
+  "scenes": [
+    {
+      "a": "Before you ask God for anything today, pause for a moment and thank Him for something He has already given.",
+      "img": "short-gardenpsalm100v4-scene-01.jpg",
+      "kicker": "PSALM 100:4",
+      "sub": "PAUSE AND THANK",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Psalm one hundred, verse four says, Enter into his gates with thanksgiving, and into his courts with praise: be thankful unto him, and bless his name.",
+      "img": "short-gardenpsalm100v4-scene-02.jpg",
+      "kicker": "PSALM 100:4",
+      "sub": "HEAR THE WORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Thanksgiving is not a fee we pay to be heard. It is the fitting way to come near to a good God.",
+      "img": "short-gardenpsalm100v4-scene-03.jpg",
+      "kicker": "PSALM 100:4",
+      "sub": "COME NEAR",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord, thank You for breath, for daily bread, and for mercies we did not even notice this week.",
+      "img": "short-gardenpsalm100v4-scene-04.jpg",
+      "kicker": "PSALM 100:4",
+      "sub": "THANK YOU LORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "And where the heart is heavy, receive one honest sentence of thanks as worship, and be near to us.",
+      "img": "short-gardenpsalm100v4-scene-05.jpg",
+      "kicker": "PSALM 100:4",
+      "sub": "BE NEAR TO US",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Teach us to notice Your gifts, to share them freely, and to bless Your name in every season.",
+      "img": "short-gardenpsalm100v4-scene-06.jpg",
+      "kicker": "PSALM 100:4",
+      "sub": "BLESS HIS NAME",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Type Amen and subscribe to The Praise Garden for daily prayers of thanksgiving and praise.",
+      "img": "short-gardenpsalm100v4-scene-07.jpg",
+      "kicker": "THE PRAISE GARDEN",
+      "sub": "DAILY THANKSGIVING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Before you ask God for anything today, pause for a moment and thank Him for something He has already given."
+    ],
+    [
+      9,
+      20,
+      "Psalm one hundred, verse four says, Enter into his gates with thanksgiving, and into his courts with praise: be thankful unto him, and bless his name."
+    ],
+    [
+      21,
+      30,
+      "Thanksgiving is not a fee we pay to be heard. It is the fitting way to come near to a good God."
+    ],
+    [
+      31,
+      39,
+      "Lord, thank You for breath, for daily bread, and for mercies we did not even notice this week."
+    ],
+    [
+      40,
+      48,
+      "And where the heart is heavy, receive one honest sentence of thanks as worship, and be near to us."
+    ],
+    [
+      49,
+      57,
+      "Teach us to notice Your gifts, to share them freely, and to bless Your name in every season."
+    ],
+    [
+      58,
+      64,
+      "Type Amen and subscribe to The Praise Garden for daily prayers of thanksgiving and praise."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "PAUSE AND THANK"
+      ],
+      [],
+      "PSALM 100:4"
+    ],
+    [
+      9,
+      20,
+      [
+        "HEAR THE WORD"
+      ],
+      [],
+      "PSALM 100:4"
+    ],
+    [
+      21,
+      30,
+      [
+        "COME NEAR"
+      ],
+      [],
+      "PSALM 100:4"
+    ],
+    [
+      31,
+      39,
+      [
+        "THANK YOU LORD"
+      ],
+      [],
+      "PSALM 100:4"
+    ],
+    [
+      40,
+      48,
+      [
+        "BE NEAR TO US"
+      ],
+      [],
+      "PSALM 100:4"
+    ],
+    [
+      49,
+      57,
+      [
+        "BLESS HIS NAME"
+      ],
+      [],
+      "PSALM 100:4"
+    ],
+    [
+      58,
+      64,
+      [
+        "DAILY THANKSGIVING"
+      ],
+      [],
+      "THE PRAISE GARDEN"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Before you ask God for anything today, pause for a moment and thank Him for something He has already given.",
+      "kind": "phrase",
+      "words": [
+        "PAUSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Psalm one hundred, verse four says, Enter into his gates with thanksgiving, and into his courts with praise: be thankful unto him, and bless his name.",
+      "kind": "phrase",
+      "words": [
+        "HEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thanksgiving is not a fee we pay to be heard. It is the fitting way to come near to a good God.",
+      "kind": "phrase",
+      "words": [
+        "COME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, thank You for breath, for daily bread, and for mercies we did not even notice this week.",
+      "kind": "phrase",
+      "words": [
+        "THANK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And where the heart is heavy, receive one honest sentence of thanks as worship, and be near to us.",
+      "kind": "phrase",
+      "words": [
+        "BE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teach us to notice Your gifts, to share them freely, and to bless Your name in every season.",
+      "kind": "phrase",
+      "words": [
+        "BLESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Type Amen and subscribe to The Praise Garden for daily prayers of thanksgiving and praise.",
+      "kind": "phrase",
+      "words": [
+        "DAILY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 100:4"
+}

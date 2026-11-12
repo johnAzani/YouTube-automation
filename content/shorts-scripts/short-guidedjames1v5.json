@@ -1,0 +1,275 @@
+{
+  "key": "short-guidedjames1v5",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "GUIDANCE PRAYER",
+    "JAMES 1:5"
+  ],
+  "poster": [
+    "THE GUIDED PATH",
+    "ASK FOR WISDOM",
+    "JAMES 1:5",
+    "GUIDANCE PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — daily prayer for guidance"
+  ],
+  "stock_queries": [
+    "sunlight breaking through clouds mountain pass",
+    "peaceful sunrise over misty alpine valley",
+    "sunrise dawn light over quiet valley morning serene",
+    "forest sunlight mist",
+    "peaceful mountain river calm water forest",
+    "golden light rays through clouds over mountain peak",
+    "peaceful sunrise over misty alpine valley"
+  ],
+  "scenes": [
+    {
+      "a": "Some days the honest prayer is simply this: Lord, I do not know what to do.",
+      "img": "short-guidedjames1v5-scene-01.jpg",
+      "kicker": "JAMES 1:5",
+      "sub": "ASK THE LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "James chapter one, verse five says, If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.",
+      "img": "short-guidedjames1v5-scene-02.jpg",
+      "kicker": "JAMES 1:5",
+      "sub": "HEAR THE WORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "He gives with an open hand, and He does not scold us for needing help again.",
+      "img": "short-guidedjames1v5-scene-03.jpg",
+      "kicker": "JAMES 1:5",
+      "sub": "HE GIVES FREELY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, we lack wisdom for the choice in front of us. Give us what this moment requires.",
+      "img": "short-guidedjames1v5-scene-04.jpg",
+      "kicker": "JAMES 1:5",
+      "sub": "GIVE US WISDOM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Make us willing to obey before we know the answer, and steady us when opinions pull us about.",
+      "img": "short-guidedjames1v5-scene-05.jpg",
+      "kicker": "JAMES 1:5",
+      "sub": "STEADY OUR HEARTS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Let Your wisdom in us be pure, peaceable, gentle, and full of mercy toward everyone it touches.",
+      "img": "short-guidedjames1v5-scene-06.jpg",
+      "kicker": "JAMES 1:5",
+      "sub": "PURE AND GENTLE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Type Amen and subscribe to The Guided Path for daily prayers for wisdom and direction.",
+      "img": "short-guidedjames1v5-scene-07.jpg",
+      "kicker": "THE GUIDED PATH",
+      "sub": "DAILY GUIDANCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "Some days the honest prayer is simply this: Lord, I do not know what to do."
+    ],
+    [
+      8,
+      21,
+      "James chapter one, verse five says, If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him."
+    ],
+    [
+      22,
+      29,
+      "He gives with an open hand, and He does not scold us for needing help again."
+    ],
+    [
+      30,
+      37,
+      "Father, we lack wisdom for the choice in front of us. Give us what this moment requires."
+    ],
+    [
+      38,
+      46,
+      "Make us willing to obey before we know the answer, and steady us when opinions pull us about."
+    ],
+    [
+      47,
+      54,
+      "Let Your wisdom in us be pure, peaceable, gentle, and full of mercy toward everyone it touches."
+    ],
+    [
+      55,
+      61,
+      "Type Amen and subscribe to The Guided Path for daily prayers for wisdom and direction."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "ASK THE LORD"
+      ],
+      [],
+      "JAMES 1:5"
+    ],
+    [
+      8,
+      21,
+      [
+        "HEAR THE WORD"
+      ],
+      [],
+      "JAMES 1:5"
+    ],
+    [
+      22,
+      29,
+      [
+        "HE GIVES FREELY"
+      ],
+      [],
+      "JAMES 1:5"
+    ],
+    [
+      30,
+      37,
+      [
+        "GIVE US WISDOM"
+      ],
+      [],
+      "JAMES 1:5"
+    ],
+    [
+      38,
+      46,
+      [
+        "STEADY OUR HEARTS"
+      ],
+      [],
+      "JAMES 1:5"
+    ],
+    [
+      47,
+      54,
+      [
+        "PURE AND GENTLE"
+      ],
+      [],
+      "JAMES 1:5"
+    ],
+    [
+      55,
+      61,
+      [
+        "DAILY GUIDANCE"
+      ],
+      [],
+      "THE GUIDED PATH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Some days the honest prayer is simply this: Lord, I do not know what to do.",
+      "kind": "phrase",
+      "words": [
+        "ASK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "James chapter one, verse five says, If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.",
+      "kind": "phrase",
+      "words": [
+        "HEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He gives with an open hand, and He does not scold us for needing help again.",
+      "kind": "phrase",
+      "words": [
+        "HE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we lack wisdom for the choice in front of us. Give us what this moment requires.",
+      "kind": "phrase",
+      "words": [
+        "GIVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Make us willing to obey before we know the answer, and steady us when opinions pull us about.",
+      "kind": "phrase",
+      "words": [
+        "STEADY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let Your wisdom in us be pure, peaceable, gentle, and full of mercy toward everyone it touches.",
+      "kind": "phrase",
+      "words": [
+        "PURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Type Amen and subscribe to The Guided Path for daily prayers for wisdom and direction.",
+      "kind": "phrase",
+      "words": [
+        "DAILY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "James 1:5"
+}

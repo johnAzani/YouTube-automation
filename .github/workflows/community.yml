@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       channel:
-        description: 'Target channel id (secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, prayer8; blank = all scheduled channels)'
+        description: 'Target channel id (secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, prayer8, prayer9, prayer10; blank = all scheduled channels)'
         type: string
         required: false
         default: ''
@@ -75,8 +75,14 @@ jobs:
           PRAYER7_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER7_YOUTUBE_CLIENT_SECRET }}
           PRAYER7_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER7_YOUTUBE_REFRESH_TOKEN }}
           PRAYER8_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER8_YOUTUBE_CLIENT_ID }}
+          PRAYER9_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER9_YOUTUBE_CLIENT_ID }}
+          PRAYER10_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER10_YOUTUBE_CLIENT_ID }}
           PRAYER8_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER8_YOUTUBE_CLIENT_SECRET }}
+          PRAYER9_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER9_YOUTUBE_CLIENT_SECRET }}
+          PRAYER10_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER10_YOUTUBE_CLIENT_SECRET }}
           PRAYER8_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER8_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER9_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER9_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER10_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER10_YOUTUBE_REFRESH_TOKEN }}
         run: |
           if [ -n "$INPUT_CHANNEL" ]; then
             python scripts/post_community.py --publish --channel "$INPUT_CHANNEL"

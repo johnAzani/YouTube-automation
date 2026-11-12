@@ -137,6 +137,20 @@ FORTRESS_BRONZE = Palette("fortress-bronze", (20, 9, 32), (76, 40, 92), (255, 22
 FORTRESS_SANCTUARY = Palette("fortress-sanctuary", (26, 12, 42), (96, 50, 114), (255, 232, 168),
                              (252, 216, 104), (254, 250, 240))
 
+GARDEN_TERRACOTTA = Palette("garden-terracotta", (20, 30, 19), (140, 74, 46), (255, 236, 200),
+                            (250, 210, 104), (255, 248, 233))
+GARDEN_SAGE = Palette("garden-sage", (18, 28, 18), (98, 110, 84), (255, 238, 204),
+                      (252, 214, 108), (255, 248, 233))
+GARDEN_SANCTUARY = Palette("garden-sanctuary", (24, 34, 22), (156, 86, 54), (255, 240, 210),
+                           (252, 216, 112), (255, 248, 233))
+
+PATHWAY_TEAL = Palette("pathway-teal", (7, 32, 36), (28, 94, 96), (252, 232, 176),
+                       (250, 208, 98), (254, 250, 240))
+PATHWAY_SAGE = Palette("pathway-sage", (8, 30, 32), (72, 108, 92), (254, 236, 184),
+                       (252, 212, 102), (254, 250, 240))
+PATHWAY_SANCTUARY = Palette("pathway-sanctuary", (9, 36, 40), (36, 106, 106), (255, 238, 190),
+                            (252, 216, 108), (254, 250, 240))
+
 _NOCTURNAL_GRADES = ("night", "midnight")
 
 
@@ -347,6 +361,54 @@ FORTRESS_VARIANTS = (
     ),
 )
 
+GARDEN_VARIANTS = (
+    CtrVariant(
+        label="hook", concept="imperative — GIVE THANKS",
+        hero="GIVE THANKS", palette=GARDEN_TERRACOTTA,
+        moon=(0.770, 0.392), moon_scale=0.206, horizon=0.736, dawn=0.78,
+        rays=True, seed=2501, text_box=(86, 84, 690, 470), house=(0.308, 0.160),
+        grade="garden",
+    ),
+    CtrVariant(
+        label="quiet", concept="curiosity — HE IS GOOD",
+        hero="HE IS GOOD", palette=GARDEN_SAGE,
+        moon=(0.794, 0.384), moon_scale=0.195, horizon=0.758, dawn=0.60,
+        rays=True, seed=2602, text_box=(86, 84, 706, 470), house=(0.300, 0.162),
+        grade="garden",
+    ),
+    CtrVariant(
+        label="poster", concept="textless — lamp-lit garden sanctuary in warm light",
+        hero=None, palette=GARDEN_SANCTUARY,
+        moon=(0.550, 0.430), moon_scale=0.232, horizon=0.702, dawn=0.84,
+        rays=True, seed=2703, text_box=(0, 0, 0, 0), house=(0.218, 0.172),
+        grade="garden",
+    ),
+)
+
+PATHWAY_VARIANTS = (
+    CtrVariant(
+        label="hook", concept="imperative — DIRECT MY PATH",
+        hero="DIRECT MY PATH", palette=PATHWAY_TEAL,
+        moon=(0.774, 0.394), moon_scale=0.204, horizon=0.735, dawn=0.76,
+        rays=True, seed=2801, text_box=(86, 84, 690, 470), house=(0.310, 0.160),
+        grade="pathway",
+    ),
+    CtrVariant(
+        label="quiet", concept="curiosity — THIS IS THE WAY",
+        hero="THIS IS THE WAY", palette=PATHWAY_SAGE,
+        moon=(0.796, 0.383), moon_scale=0.194, horizon=0.760, dawn=0.58,
+        rays=True, seed=2902, text_box=(86, 84, 706, 470), house=(0.300, 0.162),
+        grade="pathway",
+    ),
+    CtrVariant(
+        label="poster", concept="textless — sunlit footpath through quiet hills",
+        hero=None, palette=PATHWAY_SANCTUARY,
+        moon=(0.552, 0.432), moon_scale=0.232, horizon=0.700, dawn=0.82,
+        rays=True, seed=3003, text_box=(0, 0, 0, 0), house=(0.218, 0.172),
+        grade="pathway",
+    ),
+)
+
 
 def variants_for_channel(channel_id: str | None = None) -> tuple["CtrVariant", ...]:
     """Select the 16:9 CTR variant pack matching `channel_id`'s daypart grade."""
@@ -370,6 +432,10 @@ def variants_for_channel(channel_id: str | None = None) -> tuple["CtrVariant", .
         base = HARVEST_VARIANTS
     elif grade == "fortress":
         base = FORTRESS_VARIANTS
+    elif grade == "garden":
+        base = GARDEN_VARIANTS
+    elif grade == "pathway":
+        base = PATHWAY_VARIANTS
     else:
         return CTR_VARIANTS
     return (

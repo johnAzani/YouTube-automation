@@ -22,7 +22,7 @@ on:
   workflow_dispatch:
     inputs:
       channel:
-        description: "Channel id (secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, prayer8; blank = all provisioned channels)"
+        description: "Channel id (secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, prayer8, prayer9, prayer10; blank = all provisioned channels)"
         required: false
         default: ""
         type: string
@@ -54,6 +54,8 @@ jobs:
           PRAYER6_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER6_YOUTUBE_REFRESH_TOKEN }}
           PRAYER7_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER7_YOUTUBE_REFRESH_TOKEN }}
           PRAYER8_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER8_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER9_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER9_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER10_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER10_YOUTUBE_REFRESH_TOKEN }}
         run: |
           python3 - <<'PY'
           import json, os, sys
@@ -91,9 +93,9 @@ jobs:
         channel: ${{ fromJson(needs.plan.outputs.channels) }}
     env:
       CHANNEL_ID: ${{ matrix.channel }}
-      YOUTUBE_CLIENT_ID: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8"]'), matrix.channel) && secrets[format('{0}YOUTUBE_CLIENT_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] || '' }}
-      YOUTUBE_CLIENT_SECRET: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8"]'), matrix.channel) && secrets[format('{0}YOUTUBE_CLIENT_SECRET', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] || '' }}
-      YOUTUBE_REFRESH_TOKEN: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8"]'), matrix.channel) && secrets[format('{0}YOUTUBE_REFRESH_TOKEN', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] || '' }}
+      YOUTUBE_CLIENT_ID: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8","prayer9","prayer10"]'), matrix.channel) && secrets[format('{0}YOUTUBE_CLIENT_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] || '' }}
+      YOUTUBE_CLIENT_SECRET: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8","prayer9","prayer10"]'), matrix.channel) && secrets[format('{0}YOUTUBE_CLIENT_SECRET', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] || '' }}
+      YOUTUBE_REFRESH_TOKEN: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8","prayer9","prayer10"]'), matrix.channel) && secrets[format('{0}YOUTUBE_REFRESH_TOKEN', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] || '' }}
       PRAYER2_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER2_YOUTUBE_CLIENT_ID }}
       PRAYER2_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER2_YOUTUBE_CLIENT_SECRET }}
       PRAYER2_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN }}
@@ -113,8 +115,14 @@ jobs:
       PRAYER7_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER7_YOUTUBE_CLIENT_SECRET }}
       PRAYER7_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER7_YOUTUBE_REFRESH_TOKEN }}
       PRAYER8_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER8_YOUTUBE_CLIENT_ID }}
+      PRAYER9_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER9_YOUTUBE_CLIENT_ID }}
+      PRAYER10_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER10_YOUTUBE_CLIENT_ID }}
       PRAYER8_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER8_YOUTUBE_CLIENT_SECRET }}
+      PRAYER9_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER9_YOUTUBE_CLIENT_SECRET }}
+      PRAYER10_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER10_YOUTUBE_CLIENT_SECRET }}
       PRAYER8_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER8_YOUTUBE_REFRESH_TOKEN }}
+      PRAYER9_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER9_YOUTUBE_REFRESH_TOKEN }}
+      PRAYER10_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER10_YOUTUBE_REFRESH_TOKEN }}
       GH_TOKEN: ${{ github.token }}
       # The autopilot is a measurement/sync job, not the weekly human report: do not
       # file a GitHub issue on every daily run.

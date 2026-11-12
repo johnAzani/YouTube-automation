@@ -1,0 +1,275 @@
+{
+  "key": "short-gardenpsalm103v2",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "THANKSGIVING PRAYER",
+    "PSALM 103:2"
+  ],
+  "poster": [
+    "THE PRAISE GARDEN",
+    "FORGET NOT",
+    "PSALM 103:2",
+    "THANKSGIVING PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — daily thanksgiving prayer"
+  ],
+  "stock_queries": [
+    "forest sunlight mist",
+    "divine light breaking through clouds over peaceful landscape",
+    "golden light rays over calm landscape morning dawn",
+    "peaceful sunrise over misty countryside morning",
+    "peaceful mountain river calm water forest",
+    "golden dawn light over misty landscape morning",
+    "divine light breaking through clouds over peaceful landscape"
+  ],
+  "scenes": [
+    {
+      "a": "The heart forgets quickly. One worry can crowd out a hundred kindnesses, so David spoke to his own soul.",
+      "img": "short-gardenpsalm103v2-scene-01.jpg",
+      "kicker": "PSALM 103:2",
+      "sub": "REMEMBER TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Psalm one hundred three, verse two says, Bless the LORD, O my soul, and forget not all his benefits.",
+      "img": "short-gardenpsalm103v2-scene-02.jpg",
+      "kicker": "PSALM 103:2",
+      "sub": "HEAR THE WORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "He lists them: sins forgiven, a life redeemed, and a crown of lovingkindness and tender mercies.",
+      "img": "short-gardenpsalm103v2-scene-03.jpg",
+      "kicker": "PSALM 103:2",
+      "sub": "COUNT HIS MERCIES",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, thank You that You have not dealt with us as our sins deserve, but with mercy in Christ.",
+      "img": "short-gardenpsalm103v2-scene-04.jpg",
+      "kicker": "PSALM 103:2",
+      "sub": "THANK YOU FATHER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Thank You for rescue we never saw, for strength renewed, and for good things from Your hand.",
+      "img": "short-gardenpsalm103v2-scene-05.jpg",
+      "kicker": "PSALM 103:2",
+      "sub": "EVERY GOOD GIFT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "For anyone grieving today, You know our frame. Let one small mercy be visible, and let it be enough.",
+      "img": "short-gardenpsalm103v2-scene-06.jpg",
+      "kicker": "PSALM 103:2",
+      "sub": "HE KNOWS US",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Type Amen and subscribe to The Praise Garden for daily prayers of thanksgiving and praise.",
+      "img": "short-gardenpsalm103v2-scene-07.jpg",
+      "kicker": "THE PRAISE GARDEN",
+      "sub": "DAILY THANKSGIVING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "The heart forgets quickly. One worry can crowd out a hundred kindnesses, so David spoke to his own soul."
+    ],
+    [
+      9,
+      17,
+      "Psalm one hundred three, verse two says, Bless the LORD, O my soul, and forget not all his benefits."
+    ],
+    [
+      18,
+      25,
+      "He lists them: sins forgiven, a life redeemed, and a crown of lovingkindness and tender mercies."
+    ],
+    [
+      26,
+      34,
+      "Father, thank You that You have not dealt with us as our sins deserve, but with mercy in Christ."
+    ],
+    [
+      35,
+      42,
+      "Thank You for rescue we never saw, for strength renewed, and for good things from Your hand."
+    ],
+    [
+      43,
+      51,
+      "For anyone grieving today, You know our frame. Let one small mercy be visible, and let it be enough."
+    ],
+    [
+      52,
+      58,
+      "Type Amen and subscribe to The Praise Garden for daily prayers of thanksgiving and praise."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "REMEMBER TODAY"
+      ],
+      [],
+      "PSALM 103:2"
+    ],
+    [
+      9,
+      17,
+      [
+        "HEAR THE WORD"
+      ],
+      [],
+      "PSALM 103:2"
+    ],
+    [
+      18,
+      25,
+      [
+        "COUNT HIS MERCIES"
+      ],
+      [],
+      "PSALM 103:2"
+    ],
+    [
+      26,
+      34,
+      [
+        "THANK YOU FATHER"
+      ],
+      [],
+      "PSALM 103:2"
+    ],
+    [
+      35,
+      42,
+      [
+        "EVERY GOOD GIFT"
+      ],
+      [],
+      "PSALM 103:2"
+    ],
+    [
+      43,
+      51,
+      [
+        "HE KNOWS US"
+      ],
+      [],
+      "PSALM 103:2"
+    ],
+    [
+      52,
+      58,
+      [
+        "DAILY THANKSGIVING"
+      ],
+      [],
+      "THE PRAISE GARDEN"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The heart forgets quickly. One worry can crowd out a hundred kindnesses, so David spoke to his own soul.",
+      "kind": "phrase",
+      "words": [
+        "REMEMBER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Psalm one hundred three, verse two says, Bless the LORD, O my soul, and forget not all his benefits.",
+      "kind": "phrase",
+      "words": [
+        "HEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He lists them: sins forgiven, a life redeemed, and a crown of lovingkindness and tender mercies.",
+      "kind": "phrase",
+      "words": [
+        "COUNT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, thank You that You have not dealt with us as our sins deserve, but with mercy in Christ.",
+      "kind": "phrase",
+      "words": [
+        "THANK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thank You for rescue we never saw, for strength renewed, and for good things from Your hand.",
+      "kind": "phrase",
+      "words": [
+        "EVERY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For anyone grieving today, You know our frame. Let one small mercy be visible, and let it be enough.",
+      "kind": "phrase",
+      "words": [
+        "HE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Type Amen and subscribe to The Praise Garden for daily prayers of thanksgiving and praise.",
+      "kind": "phrase",
+      "words": [
+        "DAILY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 103:2"
+}

@@ -257,6 +257,22 @@ _COVENANT_SHIELD_COMMENT = (
     "our pastoral prayer team intercedes over every petition. The LORD is our strong tower! 🙏✨{footer}"
 )
 
+_PRAISE_GARDEN_COMMENT = (
+    "🌿 Beloved friend, if you are pausing to thank God with us today, write 'AMEN' and name "
+    "one thing you are grateful for as we give thanks for {theme}.\n\n"
+    "📖 {scripture_hook}\n\n"
+    "Share a thanksgiving or a prayer request below, whether this is a glad season or a hard one — "
+    "this community reads and prays together. O give thanks unto the LORD; for he is good! 🙏✨{footer}"
+)
+
+_GUIDED_PATH_COMMENT = (
+    "🧭 Beloved friend, if you are seeking God's direction today, write 'AMEN' in faith as we "
+    "ask the Lord for {theme}.\n\n"
+    "📖 {scripture_hook}\n\n"
+    "Share, in general terms, the decision or crossroads you are bringing before the Lord below — "
+    "this community reads and prays together. In all thy ways acknowledge him! 🙏✨{footer}"
+)
+
 _BRANDS: dict[str, Brand] = {
     "secret-place": Brand(
         channel_id="secret-place",
@@ -271,6 +287,12 @@ _BRANDS: dict[str, Brand] = {
         ),
         required_phrases=("The Secret Place",),
         forbidden_phrases=(
+            "The Praise Garden",
+            "@ThePraiseGardenDaily",
+            "enter His gates with daily thanksgiving and praise",
+            "The Guided Path",
+            "@TheGuidedPathPrayer",
+            "seek God's wisdom and direction for every step",
             "The Morning Altar",
             "@TheMorningAltarDaily",
             "the morning altar",
@@ -400,6 +422,12 @@ _BRANDS: dict[str, Brand] = {
         ),
         required_phrases=("The Morning Altar",),
         forbidden_phrases=(
+            "The Praise Garden",
+            "@ThePraiseGardenDaily",
+            "enter His gates with daily thanksgiving and praise",
+            "The Guided Path",
+            "@TheGuidedPathPrayer",
+            "seek God's wisdom and direction for every step",
             "The Secret Place",
             "@TheSecretPlace",
             "the secret place",
@@ -652,6 +680,12 @@ _BRANDS: dict[str, Brand] = {
         ),
         required_phrases=("The Midday Watch",),
         forbidden_phrases=(
+            "The Praise Garden",
+            "@ThePraiseGardenDaily",
+            "enter His gates with daily thanksgiving and praise",
+            "The Guided Path",
+            "@TheGuidedPathPrayer",
+            "seek God's wisdom and direction for every step",
             "The Secret Place",
             "@TheSecretPlace",
             "The Morning Altar",
@@ -899,6 +933,12 @@ _BRANDS: dict[str, Brand] = {
         ),
         required_phrases=("The Midnight Watch",),
         forbidden_phrases=(
+            "The Praise Garden",
+            "@ThePraiseGardenDaily",
+            "enter His gates with daily thanksgiving and praise",
+            "The Guided Path",
+            "@TheGuidedPathPrayer",
+            "seek God's wisdom and direction for every step",
             "The Secret Place",
             "@TheSecretPlace",
             "The Morning Altar",
@@ -1147,6 +1187,12 @@ _BRANDS: dict[str, Brand] = {
         ),
         required_phrases=("The Family Altar",),
         forbidden_phrases=(
+            "The Praise Garden",
+            "@ThePraiseGardenDaily",
+            "enter His gates with daily thanksgiving and praise",
+            "The Guided Path",
+            "@TheGuidedPathPrayer",
+            "seek God's wisdom and direction for every step",
             "The Secret Place",
             "@TheSecretPlace",
             "The Morning Altar",
@@ -1393,6 +1439,12 @@ _BRANDS: dict[str, Brand] = {
         ),
         required_phrases=("The Healing Balm",),
         forbidden_phrases=(
+            "The Praise Garden",
+            "@ThePraiseGardenDaily",
+            "enter His gates with daily thanksgiving and praise",
+            "The Guided Path",
+            "@TheGuidedPathPrayer",
+            "seek God's wisdom and direction for every step",
             "The Secret Place",
             "@TheSecretPlace",
             "The Morning Altar",
@@ -1642,6 +1694,12 @@ _BRANDS: dict[str, Brand] = {
         ),
         required_phrases=("The Provision Table",),
         forbidden_phrases=(
+            "The Praise Garden",
+            "@ThePraiseGardenDaily",
+            "enter His gates with daily thanksgiving and praise",
+            "The Guided Path",
+            "@TheGuidedPathPrayer",
+            "seek God's wisdom and direction for every step",
             "The Secret Place",
             "@TheSecretPlace",
             "The Morning Altar",
@@ -1894,6 +1952,12 @@ _BRANDS: dict[str, Brand] = {
         ),
         required_phrases=("The Covenant Shield",),
         forbidden_phrases=(
+            "The Praise Garden",
+            "@ThePraiseGardenDaily",
+            "enter His gates with daily thanksgiving and praise",
+            "The Guided Path",
+            "@TheGuidedPathPrayer",
+            "seek God's wisdom and direction for every step",
             "The Secret Place",
             "@TheSecretPlace",
             "The Morning Altar",
@@ -2133,6 +2197,527 @@ _BRANDS: dict[str, Brand] = {
         ctr_hook_hero="GUARD MY STEPS",
         ctr_quiet_hero="STRONG TOWER",
     ),
+    "prayer9": Brand(
+        channel_id="prayer9",
+        display_name="The Praise Garden",
+        handle="@ThePraiseGardenDaily",
+        declaration="prayer9",
+        title_suffix="| The Praise Garden",
+        producer_line="Produced by The Praise Garden | Daily Thanksgiving, Praise & Worship Prayer.",
+        closing_cta=(
+            "Type Amen to agree with this prayer, and subscribe to The Praise Garden "
+            "to enter His gates with daily thanksgiving and praise."
+        ),
+        required_phrases=("The Praise Garden",),
+        forbidden_phrases=(
+            "The Secret Place",
+            "@TheSecretPlace",
+            "The Morning Altar",
+            "@TheMorningAltarDaily",
+            "The Midday Watch",
+            "@TheMiddayWatch",
+            "The Midnight Watch",
+            "@TheMidnightWatchDaily",
+            "The Family Altar",
+            "@TheFamilyAltarDaily",
+            "The Healing Balm",
+            "@TheHealingBalmDaily",
+            "The Provision Table",
+            "@TheProvisionTableDaily",
+            "The Covenant Shield",
+            "@TheCovenantShieldDaily",
+            "before you sleep",
+            "bedtime prayer",
+            "prayer before sleep",
+            "begin every sunrise with us",
+            "pause and pray with us at noon",
+            "stand on the watchtower in midnight prayer",
+            "cover your home and family in daily prayer",
+            "receive God's healing peace in daily prayer",
+            "walk in God's daily wisdom and provision",
+            "walk under God's daily covering and protection",
+            "The Guided Path",
+            "@TheGuidedPathPrayer",
+            "seek God's wisdom and direction for every step",
+        ),
+        authoring_directive=(
+            "CHANNEL: The Praise Garden (prayer9) - daily KJV thanksgiving, praise and worship prayer, "
+            "including gratitude in ordinary life and in difficult seasons (Psalm 100:4 / Psalm 103:1-5 / "
+            "Habakkuk 3:17-19). It is not tied to a time of day: never sleep/bedtime, never sunrise-altar, "
+            "never midday-watch, never midnight-watch, never family-altar, never healing-balm, never "
+            "provision-table, never covenant-shield, and never guided-path branding.",
+            "Frontmatter MUST include exactly: channel: prayer9",
+            "Title MUST end with: | The Praise Garden",
+            'Tags MUST include "prayer of thanksgiving" and "the praise garden"; never sleep, bedtime, '
+            "sunrise, midday, midnight-watch, family-altar, healing-balm, provision-table, covenant-shield, "
+            "or guided-path branding.",
+            "Description MUST credit: Produced by The Praise Garden | Daily Thanksgiving, Praise & Worship Prayer.",
+            "Scenes follow the 6-movement Thanksgiving & Praise rubric (gratitude that is honest about grief "
+            "and hardship - never pressure to feel thankful, never a promise of guaranteed outcomes, never a "
+            "substitute for medical or mental-health care) and end with: "
+            '"Type Amen to agree with this prayer, and subscribe to The Praise Garden to enter His gates '
+            'with daily thanksgiving and praise."',
+            "Asset queries MUST be sunlit forest glades, misty countryside in soft light, golden light over "
+            "calm landscapes, light breaking through clouds, or peaceful rivers.",
+        ),
+        short_title_template="Pray This {label} Prayer of Thanksgiving | {hook}",
+        subscribe_heading="🌿 ENTER HIS GATES WITH DAILY THANKSGIVING & PRAISE",
+        short_target_window_utc="09:44",
+        short_channel_label=(
+            "a faceless KJV thanksgiving, praise, and worship prayer channel called The Praise Garden"
+        ),
+        short_prayer_kind="thanksgiving",
+        short_opening="pause, notice the grace of God, and thank Him with an honest heart",
+        short_imagery="sunlit forest glades, misty countryside in soft light, golden light over calm landscapes, or peaceful rivers",
+        short_tags=(
+            "prayer of thanksgiving",
+            "psalm 100 prayer",
+            "praise and worship prayer",
+            "gratitude prayer",
+            "the praise garden",
+        ),
+        short_hashtags="#Shorts #{tag_key} #PrayerOfThanksgiving #Psalm100 #GiveThanks #ThePraiseGarden",
+        short_end_card="The Praise Garden — enter His gates with thanksgiving",
+        short_key_namespace="garden",
+        comment_persona="the prayer community voice of The Praise Garden",
+        comment_farewell="May you enter His gates with thanksgiving and His courts with praise today.",
+        shorts_poster_kicker="O GIVE THANKS UNTO THE LORD",
+        longform_pinned_comment=_PRAISE_GARDEN_COMMENT,
+        short_pinned_comment=(
+            "🌿 PRAY THE FULL KJV THANKSGIVING PRAYER:\n"
+            "Tap the linked full-length prayer right above this title (or visit {handle}) "
+            "to pray through {scripture} with a grateful heart:\n"
+            "👉 {url}\n\n"
+            "Write 'AMEN' and name one thing you are thanking God for today — "
+            "His mercy endureth for ever! 🙏🌿✨{footer}"
+        ),
+        longform_prayer_label="Thanksgiving Prayer",
+        seo_hook_template=(
+            "Enter {display_name} with {scripture} (KJV) "
+            "to give thanks and praise God for His faithfulness with a grateful heart."
+        ),
+        verified_commons_queries=(
+            ("forest sunlight mist", 3, "3x Public domain — USFS forest crepuscular ray and mist photography"),
+            ("divine light breaking through clouds over peaceful landscape", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("golden light rays over calm landscape morning dawn", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("peaceful sunrise over misty countryside morning", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("peaceful mountain river calm water forest", 4, "4x Public domain — NPS mountain stream and river scans"),
+            ("golden dawn light over misty landscape morning", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+        ),
+        feedback_artifact_name="performance_feedback_prayer9.json",
+        anchor_video=None,
+        series_playlists=(
+            (
+                "thanksgiving_and_gratitude_prayers",
+                "Prayers of Thanksgiving & Gratitude (KJV) — The Praise Garden",
+                "Daily KJV scripture prayers anchored in Psalm 100:4, Psalm 107:1, and 1 Thessalonians 5:16-18 "
+                "for thanking God in ordinary days.\n\n"
+                "Produced by The Praise Garden | Daily Thanksgiving, Praise & Worship Prayer.",
+                ("thanksgiving", "give thanks", "gratitude", "psalm 100", "psalm 107"),
+            ),
+            (
+                "praise_and_worship_prayers",
+                "Prayers of Praise & Worship From the Psalms (KJV) — The Praise Garden",
+                "Reverent KJV prayers from Psalm 34, Psalm 95, Psalm 145, and Psalm 150 "
+                "blessing the name of the LORD.\n\n"
+                "Produced by The Praise Garden | Daily Thanksgiving, Praise & Worship Prayer.",
+                ("praise", "worship", "psalm 150", "psalm 145", "bless the lord"),
+            ),
+            (
+                "praise_in_hard_seasons_prayers",
+                "Prayers of Praise in Hard Seasons (KJV) — The Praise Garden",
+                "Honest KJV prayers from Habakkuk 3:17-19, Psalm 42:11, and Lamentations 3:22-23 "
+                "for giving thanks without denying grief.\n\n"
+                "Produced by The Praise Garden | Daily Thanksgiving, Praise & Worship Prayer.",
+                ("habakkuk 3", "yet i will", "psalm 42", "lamentations 3", "mourning"),
+            ),
+        ),
+        community_posts=(
+            {
+                "post_id": "comm-prayer9-001-sunday-thanks",
+                "post_type": "POLL",
+                "title": "Sunday Thanksgiving: What are you thanking God for as this week begins?",
+                "body_text": (
+                    "Enter into his gates with thanksgiving, and into his courts with praise: "
+                    "be thankful unto him, and bless his name (Psalm 100:4).\n\n"
+                    "Vote below and type 'AMEN' as we give thanks together! 🌿🙏"
+                ),
+                "poll": {
+                    "question": "What are you thanking God for first this week?",
+                    "options": [
+                        "His faithfulness through a hard season",
+                        "Family, friends, and people who care",
+                        "Daily bread, strength, and breath",
+                        "Forgiveness and new mercies in Christ",
+                    ],
+                    "context_scripture": "Psalm 100:4",
+                },
+                "image_rel_path": "comm-prayer9-001-sunday-thanks.png",
+                "target_utc": "09:30",
+                "tags": ["#ThePraiseGarden", "#PrayerOfThanksgiving", "#Psalm100", "#GiveThanks"],
+            },
+            {
+                "post_id": "comm-prayer9-002-midweek-wall",
+                "post_type": "PRAYER_WALL",
+                "title": "The Praise Garden Thanksgiving Wall: Name One Mercy From This Week",
+                "body_text": (
+                    "O give thanks unto the LORD, for he is good: for his mercy endureth for ever (Psalm 107:1).\n\n"
+                    "Share one thing you are grateful for, or a general prayer request, below. "
+                    "Gratitude and hardship can sit side by side here. Write 'AMEN'!"
+                ),
+                "poll": None,
+                "image_rel_path": "comm-prayer9-002-midweek-wall.png",
+                "target_utc": "09:30",
+                "tags": ["#Psalm1071", "#GiveThanks", "#ThePraiseGarden"],
+            },
+            {
+                "post_id": "comm-prayer9-003-thursday-scripture",
+                "post_type": "POLL",
+                "title": "Which KJV scripture of praise is on your heart today?",
+                "body_text": (
+                    "Bless the LORD, O my soul, and forget not all his benefits (Psalm 103:2).\n\n"
+                    "Choose the verse you are praying through today."
+                ),
+                "poll": {
+                    "question": "Which KJV scripture of thanksgiving and praise speaks deepest to you today?",
+                    "options": [
+                        "Psalm 100:4 — Enter into his gates with thanksgiving",
+                        "Psalm 103:2 — Forget not all his benefits",
+                        "Habakkuk 3:18 — Yet I will rejoice in the LORD",
+                        "1 Thessalonians 5:18 — In every thing give thanks",
+                    ],
+                    "context_scripture": "Psalm 103:2",
+                },
+                "image_rel_path": "comm-prayer9-003-thursday-scripture.png",
+                "target_utc": "09:30",
+                "tags": ["#Psalm103", "#Habakkuk3", "#ThePraiseGarden"],
+            },
+            {
+                "post_id": "comm-prayer9-004-friday-gratitude",
+                "post_type": "SCRIPTURE_DEVOTIONAL",
+                "title": "Weekend Praise: Great Is Thy Faithfulness",
+                "body_text": (
+                    "It is of the LORD's mercies that we are not consumed, because his compassions fail not. "
+                    "They are new every morning: great is thy faithfulness (Lamentations 3:22-23).\n\n"
+                    "Look back over this week and thank the Lord for one mercy you noticed. "
+                    "Type 'GREAT IS THY FAITHFULNESS' below in thanksgiving! 🌿✨"
+                ),
+                "poll": None,
+                "image_rel_path": "comm-prayer9-004-friday-gratitude.png",
+                "target_utc": "09:30",
+                "tags": ["#Lamentations322", "#GreatIsThyFaithfulness", "#ThePraiseGarden"],
+            },
+        ),
+        short_bridge_theme="thanksgiving, praise, and grateful worship",
+        short_fallback_title="Prayers of Thanksgiving & Praise (KJV) — The Praise Garden",
+        milestone_subheading_1250="A GARDEN OF THANKSGIVING & PRAISE ACROSS THE NATIONS",
+        milestone_subheading_1500="DAILY SCRIPTURE THANKSGIVING IN EVERY SEASON",
+        milestone_sanctuary_phrase="inside the gates of thanksgiving",
+        milestone_cadence_phrase="every day with thanksgiving and praise",
+        milestone_closing_blessing="May you enter His gates with thanksgiving and His courts with praise today.",
+        milestone_2000_closing="your daily garden of thanksgiving and praise",
+        seo_fallback_hashtags=(
+            "#PrayerOfThanksgiving", "#Psalm100", "#GiveThanks", "#ThePraiseGarden",
+        ),
+        seo_hook_ref_template=(
+            "Pray this {ref} KJV prayer at The Praise Garden to give thanks, "
+            "praise God for His faithfulness, and worship with a grateful heart."
+        ),
+        seo_hook_generic=(
+            "Pray this KJV thanksgiving prayer at The Praise Garden to thank God for His mercy, "
+            "bless His name, and worship in glad and difficult seasons alike."
+        ),
+        seo_book_tag_suffixes=("prayer of thanksgiving", "praise and worship prayer"),
+        seo_tag_seeds=(
+            "prayer of thanksgiving kjv",
+            "psalm 100 thanksgiving prayer",
+            "psalm 103 bless the lord prayer",
+            "gratitude prayer to god",
+            "praise and worship prayer",
+            "thank you god prayer",
+            "the praise garden prayer",
+            "daily prayer of thanks",
+        ),
+        localized_title_es="Oración de Acción de Gracias y Alabanza | {channel_name}",
+        localized_title_pt="Oração de Ação de Graças e Louvor | {channel_name}",
+        localized_ref_title_es="{ref_es} Oración de Gratitud y Alabanza | {channel_name}",
+        localized_ref_title_pt="{ref_pt} Oração de Gratidão e Louvor | {channel_name}",
+        localized_desc_lead_es="Oración bíblica diaria de acción de gracias, alabanza y adoración con un corazón agradecido.",
+        localized_desc_lead_pt="Oração bíblica diária de ação de graças, louvor e adoração com um coração agradecido.",
+        localized_invite_es=(
+            "Une tu fe en oración con esta meditación bíblica para dar gracias a Dios por su fidelidad."
+        ),
+        localized_invite_pt=(
+            "Una sua fé em oração com esta meditação bíblica para agradecer a Deus por sua fidelidade."
+        ),
+        default_comment_scripture_hook=(
+            "Psalm 100:4 — 'Enter into his gates with thanksgiving, and into his courts with praise: be thankful unto him, and bless his name.'"
+        ),
+        default_comment_theme="thanksgiving, praise, and grateful worship",
+        ctr_grade="garden",
+        ctr_hook_hero="GIVE THANKS",
+        ctr_quiet_hero="HE IS GOOD",
+    ),
+    "prayer10": Brand(
+        channel_id="prayer10",
+        display_name="The Guided Path",
+        handle="@TheGuidedPathPrayer",
+        declaration="prayer10",
+        title_suffix="| The Guided Path",
+        producer_line="Produced by The Guided Path | Daily Prayer for Wisdom, Discernment & Guidance.",
+        closing_cta=(
+            "Type Amen to agree with this prayer, and subscribe to The Guided Path "
+            "to seek God's wisdom and direction for every step."
+        ),
+        required_phrases=("The Guided Path",),
+        forbidden_phrases=(
+            "The Secret Place",
+            "@TheSecretPlace",
+            "The Morning Altar",
+            "@TheMorningAltarDaily",
+            "The Midday Watch",
+            "@TheMiddayWatch",
+            "The Midnight Watch",
+            "@TheMidnightWatchDaily",
+            "The Family Altar",
+            "@TheFamilyAltarDaily",
+            "The Healing Balm",
+            "@TheHealingBalmDaily",
+            "The Provision Table",
+            "@TheProvisionTableDaily",
+            "The Covenant Shield",
+            "@TheCovenantShieldDaily",
+            "before you sleep",
+            "bedtime prayer",
+            "prayer before sleep",
+            "begin every sunrise with us",
+            "pause and pray with us at noon",
+            "stand on the watchtower in midnight prayer",
+            "cover your home and family in daily prayer",
+            "receive God's healing peace in daily prayer",
+            "walk in God's daily wisdom and provision",
+            "walk under God's daily covering and protection",
+            "The Praise Garden",
+            "@ThePraiseGardenDaily",
+            "enter His gates with daily thanksgiving and praise",
+        ),
+        authoring_directive=(
+            "CHANNEL: The Guided Path (prayer10) - daily KJV prayer for wisdom, discernment and guidance "
+            "through decisions and uncertain seasons (Proverbs 3:5-6 / James 1:5 / Psalm 25:4-5). It is not "
+            "tied to a time of day: never sleep/bedtime, never sunrise-altar, never midday-watch, never "
+            "midnight-watch, never family-altar, never healing-balm, never provision-table, never "
+            "covenant-shield, and never praise-garden branding.",
+            "Frontmatter MUST include exactly: channel: prayer10",
+            "Title MUST end with: | The Guided Path",
+            'Tags MUST include "prayer for guidance" and "the guided path"; never sleep, bedtime, sunrise, '
+            "midday, midnight-watch, family-altar, healing-balm, provision-table, covenant-shield, or "
+            "praise-garden branding.",
+            "Description MUST credit: Produced by The Guided Path | Daily Prayer for Wisdom, Discernment & Guidance.",
+            "Scenes follow the 6-movement Wisdom & Guidance rubric (never claim to know God's specific plan "
+            "for a listener, never guarantee an outcome, never present prayer as a substitute for medical, "
+            "legal, financial or other professional advice) and end with: "
+            '"Type Amen to agree with this prayer, and subscribe to The Guided Path to seek God\'s wisdom '
+            'and direction for every step."',
+            "Asset queries MUST be mountain passes, misty alpine valleys, quiet valleys in early light, "
+            "sunlit forest mist, golden light over mountain peaks, or peaceful rivers.",
+        ),
+        short_title_template="Pray This {label} Prayer for God's Guidance | {hook}",
+        subscribe_heading="🧭 SEEK GOD'S WISDOM & DIRECTION FOR EVERY STEP",
+        short_target_window_utc="18:44",
+        short_channel_label=(
+            "a faceless KJV wisdom, discernment, and guidance prayer channel called The Guided Path"
+        ),
+        short_prayer_kind="guidance",
+        short_opening="bring the decision in front of you to the Lord and ask Him for wisdom",
+        short_imagery="mountain passes, misty alpine valleys, quiet valleys in early light, or peaceful rivers",
+        short_tags=(
+            "prayer for guidance",
+            "prayer for wisdom",
+            "proverbs 3 5 6 prayer",
+            "prayer for direction",
+            "the guided path",
+        ),
+        short_hashtags="#Shorts #{tag_key} #PrayerForGuidance #Proverbs3 #GodsDirection #TheGuidedPath",
+        short_end_card="The Guided Path — seek God's wisdom for every step",
+        short_key_namespace="guided",
+        comment_persona="the prayer community voice of The Guided Path",
+        comment_farewell="May the Lord direct your paths and give you wisdom for the next step.",
+        shorts_poster_kicker="HE SHALL DIRECT THY PATHS",
+        longform_pinned_comment=_GUIDED_PATH_COMMENT,
+        short_pinned_comment=(
+            "🧭 PRAY THE FULL KJV PRAYER FOR GUIDANCE:\n"
+            "Tap the linked full-length prayer right above this title (or visit {handle}) "
+            "to pray through {scripture} as you seek the Lord's direction:\n"
+            "👉 {url}\n\n"
+            "Write 'AMEN' in faith and share, in general terms, the decision you are bringing "
+            "before the Lord today — He giveth wisdom liberally! 🙏🧭✨{footer}"
+        ),
+        longform_prayer_label="Guidance Prayer",
+        seo_hook_template=(
+            "Walk {display_name} with {scripture} (KJV) "
+            "to pray for wisdom, discernment, and God's direction in uncertain seasons."
+        ),
+        verified_commons_queries=(
+            ("sunlight breaking through clouds mountain pass", 3, "3x Public domain — USFS Rocky Mountain National Forest crepuscular ray scans"),
+            ("peaceful sunrise over misty alpine valley", 4, "4x Public domain — USGS alpine valley dawn mist photography"),
+            ("sunrise dawn light over quiet valley morning serene", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+            ("forest sunlight mist", 3, "3x Public domain — USFS forest crepuscular ray and mist photography"),
+            ("peaceful mountain river calm water forest", 4, "4x Public domain — NPS mountain stream and river scans"),
+            ("golden light rays through clouds over mountain peak", 4, "4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery"),
+        ),
+        feedback_artifact_name="performance_feedback_prayer10.json",
+        anchor_video=None,
+        series_playlists=(
+            (
+                "guidance_and_direction_prayers",
+                "Prayers for God's Guidance & Direction (KJV) — The Guided Path",
+                "Daily KJV scripture prayers anchored in Proverbs 3:5-6, Psalm 32:8, and Isaiah 30:21 "
+                "for seeking the Lord's direction one step at a time.\n\n"
+                "Produced by The Guided Path | Daily Prayer for Wisdom, Discernment & Guidance.",
+                ("guidance", "direction", "proverbs 3", "direct my path", "this is the way"),
+            ),
+            (
+                "wisdom_and_discernment_prayers",
+                "Prayers for Wisdom & Discernment (KJV) — The Guided Path",
+                "Reverent KJV prayers from James 1:5, Proverbs 2:6, and Philippians 1:9-10 "
+                "asking God for wisdom, understanding, and sound judgment.\n\n"
+                "Produced by The Guided Path | Daily Prayer for Wisdom, Discernment & Guidance.",
+                ("wisdom", "discern", "james 1", "proverbs 2", "counsel"),
+            ),
+            (
+                "ordered_steps_and_waiting_prayers",
+                "Prayers for Ordered Steps & Waiting on the Lord (KJV) — The Guided Path",
+                "Patient KJV prayers from Psalm 37:23-24, Psalm 25:4-5, and Psalm 27:11-14 "
+                "for uncertain seasons and unanswered questions.\n\n"
+                "Produced by The Guided Path | Daily Prayer for Wisdom, Discernment & Guidance.",
+                ("steps", "psalm 37", "psalm 25", "psalm 27", "path"),
+            ),
+        ),
+        community_posts=(
+            {
+                "post_id": "comm-prayer10-001-sunday-direction",
+                "post_type": "POLL",
+                "title": "Sunday Guidance Prayer: Where are you asking the Lord for direction this week?",
+                "body_text": (
+                    "In all thy ways acknowledge him, and he shall direct thy paths (Proverbs 3:6).\n\n"
+                    "As a new week begins, vote below and type 'AMEN' as we seek the Lord together! 🧭🙏"
+                ),
+                "poll": {
+                    "question": "Where are you asking God for wisdom first this week?",
+                    "options": [
+                        "A decision about work or studies",
+                        "A family or relationship matter",
+                        "A season of change or waiting",
+                        "Clarity and peace of mind for the next step",
+                    ],
+                    "context_scripture": "Proverbs 3:6",
+                },
+                "image_rel_path": "comm-prayer10-001-sunday-direction.png",
+                "target_utc": "18:30",
+                "tags": ["#TheGuidedPath", "#PrayerForGuidance", "#Proverbs3", "#GodsDirection"],
+            },
+            {
+                "post_id": "comm-prayer10-002-midweek-wall",
+                "post_type": "PRAYER_WALL",
+                "title": "The Guided Path Prayer Wall: Asking God for Wisdom Together",
+                "body_text": (
+                    "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, "
+                    "and upbraideth not; and it shall be given him (James 1:5).\n\n"
+                    "Share, in general terms, the decision or crossroads you are praying about below. "
+                    "Prayer walks alongside wise counsel and qualified advice, never in place of it. Write 'AMEN'!"
+                ),
+                "poll": None,
+                "image_rel_path": "comm-prayer10-002-midweek-wall.png",
+                "target_utc": "18:30",
+                "tags": ["#James15", "#PrayerForWisdom", "#TheGuidedPath"],
+            },
+            {
+                "post_id": "comm-prayer10-003-thursday-scripture",
+                "post_type": "POLL",
+                "title": "Which KJV promise of guidance steadies your heart today?",
+                "body_text": (
+                    "Thy word is a lamp unto my feet, and a light unto my path (Psalm 119:105).\n\n"
+                    "Choose the verse you are praying through today."
+                ),
+                "poll": {
+                    "question": "Which KJV scripture of wisdom and guidance speaks deepest to you today?",
+                    "options": [
+                        "Proverbs 3:5-6 — He shall direct thy paths",
+                        "James 1:5 — If any of you lack wisdom",
+                        "Psalm 32:8 — I will instruct thee and teach thee",
+                        "Isaiah 30:21 — This is the way, walk ye in it",
+                    ],
+                    "context_scripture": "Psalm 119:105",
+                },
+                "image_rel_path": "comm-prayer10-003-thursday-scripture.png",
+                "target_utc": "18:30",
+                "tags": ["#Psalm119105", "#Isaiah3021", "#TheGuidedPath"],
+            },
+            {
+                "post_id": "comm-prayer10-004-friday-gratitude",
+                "post_type": "SCRIPTURE_DEVOTIONAL",
+                "title": "Weekend Reflection: The Steps of a Good Man Are Ordered by the LORD",
+                "body_text": (
+                    "The steps of a good man are ordered by the LORD: and he delighteth in his way (Psalm 37:23).\n\n"
+                    "Look back over this week and thank the Lord for one step He helped you take. "
+                    "Type 'ORDER MY STEPS' below in prayer! 🧭✨"
+                ),
+                "poll": None,
+                "image_rel_path": "comm-prayer10-004-friday-gratitude.png",
+                "target_utc": "18:30",
+                "tags": ["#Psalm3723", "#OrderMySteps", "#TheGuidedPath"],
+            },
+        ),
+        short_bridge_theme="wisdom, discernment, and God's direction",
+        short_fallback_title="Prayers for Wisdom & God's Guidance (KJV) — The Guided Path",
+        milestone_subheading_1250="A PATH OF WISDOM & GUIDANCE PRAYER ACROSS THE NATIONS",
+        milestone_subheading_1500="DAILY SCRIPTURE WISDOM FOR EVERY STEP & DECISION",
+        milestone_sanctuary_phrase="along the path of the Lord's leading",
+        milestone_cadence_phrase="every day for wisdom and direction",
+        milestone_closing_blessing="May the Lord direct your paths and give you wisdom for the next step.",
+        milestone_2000_closing="your daily companion in prayer for wisdom and guidance",
+        seo_fallback_hashtags=(
+            "#PrayerForGuidance", "#Proverbs3", "#PrayerForWisdom", "#TheGuidedPath",
+        ),
+        seo_hook_ref_template=(
+            "Pray this {ref} KJV prayer at The Guided Path for wisdom, discernment, "
+            "and God's direction in decisions and uncertain seasons."
+        ),
+        seo_hook_generic=(
+            "Pray this KJV guidance prayer at The Guided Path for wisdom, a teachable heart, "
+            "and the Lord's direction one step at a time."
+        ),
+        seo_book_tag_suffixes=("prayer for guidance", "prayer for wisdom and direction"),
+        seo_tag_seeds=(
+            "prayer for guidance kjv",
+            "proverbs 3 5 6 direct my path prayer",
+            "james 1 5 prayer for wisdom",
+            "prayer for direction in decisions",
+            "discernment prayer",
+            "order my steps prayer",
+            "the guided path prayer",
+            "daily prayer for god's direction",
+        ),
+        localized_title_es="Oración por Sabiduría y Dirección de Dios | {channel_name}",
+        localized_title_pt="Oração por Sabedoria e Direção de Deus | {channel_name}",
+        localized_ref_title_es="{ref_es} Oración por Sabiduría y Dirección | {channel_name}",
+        localized_ref_title_pt="{ref_pt} Oração por Sabedoria e Direção | {channel_name}",
+        localized_desc_lead_es="Oración bíblica diaria por sabiduría, discernimiento y la dirección de Dios en cada decisión.",
+        localized_desc_lead_pt="Oração bíblica diária por sabedoria, discernimento e a direção de Deus em cada decisão.",
+        localized_invite_es=(
+            "Une tu fe en oración con esta meditación bíblica para buscar la sabiduría de Dios paso a paso."
+        ),
+        localized_invite_pt=(
+            "Una sua fé em oração com esta meditação bíblica para buscar a sabedoria de Deus passo a passo."
+        ),
+        default_comment_scripture_hook=(
+            "Proverbs 3:5-6 — 'Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.'"
+        ),
+        default_comment_theme="wisdom, discernment, and God's direction",
+        ctr_grade="pathway",
+        ctr_hook_hero="DIRECT MY PATH",
+        ctr_quiet_hero="THIS IS THE WAY",
+    ),
 }
 
 _CAPABILITIES: dict[str, ChannelCapabilities] = {
@@ -2229,6 +2814,30 @@ _CAPABILITIES: dict[str, ChannelCapabilities] = {
         },
         roadmap="prayer8",
         roadmap_name="COVENANT_SHIELD_ROADMAP",
+        legacy_queue_alias="",
+        supply_min_publishable=6,
+    ),
+    "prayer9": ChannelCapabilities(
+        channel_id="prayer9",
+        brand=_BRANDS["prayer9"],
+        equipment={
+            "system_instruction": "praise_garden_system_instruction.md",
+            "theological_rubric": "praise_garden_theological_rubric.md",
+        },
+        roadmap="prayer9",
+        roadmap_name="PRAISE_GARDEN_ROADMAP",
+        legacy_queue_alias="",
+        supply_min_publishable=6,
+    ),
+    "prayer10": ChannelCapabilities(
+        channel_id="prayer10",
+        brand=_BRANDS["prayer10"],
+        equipment={
+            "system_instruction": "guided_path_system_instruction.md",
+            "theological_rubric": "guided_path_theological_rubric.md",
+        },
+        roadmap="prayer10",
+        roadmap_name="GUIDED_PATH_ROADMAP",
         legacy_queue_alias="",
         supply_min_publishable=6,
     ),
