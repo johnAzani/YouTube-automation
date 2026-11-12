@@ -1,0 +1,369 @@
+{
+  "key": "short-morningpsalm25v4",
+  "channel": "prayer2",
+  "psalm": 25,
+  "title": [
+    "BEGIN YOUR DAY",
+    "IN HIS TRUTH"
+  ],
+  "poster": [
+    "PSALM 25:4-5",
+    "TEACH ME YOUR PATHS",
+    "MORNING PRAYER",
+    "THE MORNING ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "golden sunrise over calm misty valley mist morning light",
+    "open window morning sunbeam sun rays light interior",
+    "scenic mountain trail morning sun rays golden hour",
+    "peaceful forest path early morning sun light rays",
+    "calm lake reflection sunrise clouds golden glow",
+    "sunrise over open meadow wild flowers dawn horizon",
+    "dramatic golden dawn sky over serene mountains"
+  ],
+  "scenes": [
+    {
+      "a": "As the golden sun rises today",
+      "img": "short-morningpsalm25v4-scene-01.jpg",
+      "kicker": "PSALM 25:4-5",
+      "sub": "PAUSE AND BREATHE IN THE CALM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Turn your spirit upward",
+      "img": "short-morningpsalm25v4-scene-02.jpg",
+      "kicker": "PSALM 25:4-5",
+      "sub": "TURN YOUR SPIRIT UPWARD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Show me your ways, Lord",
+      "img": "short-morningpsalm25v4-scene-03.jpg",
+      "kicker": "PSALM 25:4-5",
+      "sub": "SHOW ME YOUR WAYS LORD",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, lead our steps",
+      "img": "short-morningpsalm25v4-scene-04.jpg",
+      "kicker": "PSALM 25:4-5",
+      "sub": "LEAD OUR STEPS TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Clear away our doubts",
+      "img": "short-morningpsalm25v4-scene-05.jpg",
+      "kicker": "PSALM 25:4-5",
+      "sub": "LET YOUR TRUTH GUIDE US",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "We place our trust",
+      "img": "short-morningpsalm25v4-scene-06.jpg",
+      "kicker": "PSALM 25:4-5",
+      "sub": "OUR HOPE IS IN YOU",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to The Morning Altar",
+      "img": "short-morningpsalm25v4-scene-07.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "BEGIN EVERY SUNRISE IN PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "As the golden sun rises today, pause and breathe in the calm of this new morning."
+    ],
+    [
+      7,
+      14,
+      "Turn your spirit upward and hear the promise written in Psalm 25:4-5:"
+    ],
+    [
+      14,
+      27,
+      "Show me your ways, Lord, teach me your paths. Guide me in your truth and teach me, for you are God my Savior, and my hope is in you all day long."
+    ],
+    [
+      27,
+      34,
+      "Lord, lead our steps into Your righteousness as this fresh day begins."
+    ],
+    [
+      34,
+      41,
+      "Clear away our doubts and let Your unfailing truth guide our thoughts and actions."
+    ],
+    [
+      41,
+      48,
+      "We place our trust, our plans, and our hope fully in Your hands today."
+    ],
+    [
+      48,
+      55,
+      "Subscribe to The Morning Altar to start every single morning in quiet prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "AS THE GOLDEN SUN RISES TODAY",
+        "PAUSE AND BREATHE IN THE CALM",
+        "OF THIS NEW MORNING"
+      ],
+      [
+        "GOLDEN SUN",
+        "CALM"
+      ],
+      "PSALM 25 : 4-5"
+    ],
+    [
+      7,
+      14,
+      [
+        "TURN YOUR SPIRIT UPWARD",
+        "AND HEAR THE PROMISE",
+        "WRITTEN IN PSALM 25:4-5"
+      ],
+      [
+        "SPIRIT UPWARD",
+        "PROMISE"
+      ],
+      "PSALM 25 : 4-5"
+    ],
+    [
+      14,
+      27,
+      [
+        "SHOW ME YOUR WAYS LORD",
+        "TEACH ME YOUR PATHS",
+        "GUIDE ME IN YOUR TRUTH",
+        "FOR MY HOPE IS IN YOU"
+      ],
+      [
+        "TEACH ME",
+        "GUIDE ME",
+        "MY HOPE"
+      ],
+      "PSALM 25 : 4-5"
+    ],
+    [
+      27,
+      34,
+      [
+        "LORD LEAD OUR STEPS",
+        "INTO YOUR RIGHTEOUSNESS",
+        "AS THIS FRESH DAY BEGINS"
+      ],
+      [
+        "LEAD OUR STEPS",
+        "RIGHTEOUSNESS"
+      ],
+      "PSALM 25 : 4-5"
+    ],
+    [
+      34,
+      41,
+      [
+        "CLEAR AWAY OUR DOUBTS",
+        "AND LET YOUR UNFAILING TRUTH",
+        "GUIDE OUR THOUGHTS AND ACTIONS"
+      ],
+      [
+        "UNFAILING TRUTH",
+        "GUIDE"
+      ],
+      "PSALM 25 : 4-5"
+    ],
+    [
+      41,
+      48,
+      [
+        "WE PLACE OUR TRUST OUR PLANS",
+        "AND OUR HOPE FULLY",
+        "IN YOUR HANDS TODAY"
+      ],
+      [
+        "OUR TRUST",
+        "OUR HOPE"
+      ],
+      "PSALM 25 : 4-5"
+    ],
+    [
+      48,
+      55,
+      [
+        "SUBSCRIBE TO THE MORNING ALTAR",
+        "TO START EVERY SINGLE MORNING",
+        "IN QUIET PRAYER"
+      ],
+      [
+        "SUBSCRIBE",
+        "QUIET PRAYER"
+      ],
+      "THE MORNING ALTAR"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As the golden sun rises today",
+      "kind": "phrase",
+      "words": [
+        "GOLDEN SUN",
+        "RISES"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "pause and breathe in the calm",
+      "kind": "phrase",
+      "words": [
+        "PAUSE",
+        "BREATHE"
+      ],
+      "hi": 1,
+      "slot": "B"
+    },
+    {
+      "a": "Turn your spirit upward",
+      "kind": "phrase",
+      "words": [
+        "SPIRIT",
+        "UPWARD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Show me your ways, Lord",
+      "kind": "phrase",
+      "words": [
+        "SHOW ME",
+        "YOUR WAYS"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "teach me your paths",
+      "kind": "phrase",
+      "words": [
+        "TEACH ME",
+        "YOUR PATHS"
+      ],
+      "hi": 0,
+      "slot": "B"
+    },
+    {
+      "a": "Guide me in your truth",
+      "kind": "phrase",
+      "words": [
+        "GUIDE ME",
+        "TRUTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "my hope is in you all day long",
+      "kind": "phrase",
+      "words": [
+        "MY HOPE",
+        "ALL DAY"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "Lord, lead our steps into Your righteousness",
+      "kind": "phrase",
+      "words": [
+        "LEAD",
+        "RIGHTEOUSNESS"
+      ],
+      "hi": 1,
+      "slot": "B"
+    },
+    {
+      "a": "Clear away our doubts",
+      "kind": "phrase",
+      "words": [
+        "CLEAR",
+        "DOUBTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "let Your unfailing truth guide our thoughts",
+      "kind": "phrase",
+      "words": [
+        "UNFAILING",
+        "TRUTH"
+      ],
+      "hi": 1,
+      "slot": "A"
+    },
+    {
+      "a": "We place our trust, our plans, and our hope",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "HOPE"
+      ],
+      "hi": 0,
+      "slot": "B"
+    },
+    {
+      "a": "Subscribe to The Morning Altar",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "MORNING ALTAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 25:4-5"
+}

@@ -1,0 +1,276 @@
+{
+  "key": "short-morningjoshua1v8",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "BEGIN YOUR",
+    "MORNING ALTAR"
+  ],
+  "poster": [
+    "THE",
+    "MORNING",
+    "ALTAR",
+    "PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "serene misty mountain sunrise dawn lighting",
+    "golden hour sunlight through forest trees morning",
+    "peaceful river valley morning fog sunrise",
+    "open window with soft morning light and mist",
+    "quiet mountain lake reflecting golden sunrise",
+    "dawn light breaking over peaceful hills horizon"
+  ],
+  "scenes": [
+    {
+      "a": "As the first quiet light of dawn breaks",
+      "img": "short-morningjoshua1v8-scene-01.jpg",
+      "kicker": "JOSHUA 1:8-9",
+      "sub": "WELCOME THE MORNING LIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Let this Book of the Law not depart from your mouth",
+      "img": "short-morningjoshua1v8-scene-02.jpg",
+      "kicker": "JOSHUA 1:8-9",
+      "sub": "MEDITATE ON TRUTH DAY AND NIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "so that you may be careful to do everything written in it",
+      "img": "short-morningjoshua1v8-scene-03.jpg",
+      "kicker": "JOSHUA 1:8-9",
+      "sub": "WALK IN OBEDIENCE TODAY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Then you will be prosperous and successful",
+      "img": "short-morningjoshua1v8-scene-04.jpg",
+      "kicker": "JOSHUA 1:8-9",
+      "sub": "FIND PEACE IN HIS GUIDANCE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.35
+      ]
+    },
+    {
+      "a": "Be strong and courageous do not be afraid",
+      "img": "short-morningjoshua1v8-scene-05.jpg",
+      "kicker": "JOSHUA 1:8-9",
+      "sub": "THE LORD YOUR GOD IS WITH YOU",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father we rest in your presence this morning",
+      "img": "short-morningjoshua1v8-scene-06.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "GUIDE EVERY STEP WE TAKE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "As the first quiet light of dawn breaks across the horizon, pause to greet the morning in stillness."
+    ],
+    [
+      12,
+      25,
+      "Let this Book of the Law not depart from your mouth; meditate on it day and night,"
+    ],
+    [
+      25,
+      38,
+      "so that you may be careful to do everything written in it. Then you will be prosperous and successful."
+    ],
+    [
+      38,
+      50,
+      "Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go."
+    ],
+    [
+      50,
+      62,
+      "Father, we rest in your presence this morning. Anchor our hearts in your unchanging truth."
+    ],
+    [
+      62,
+      75,
+      "Grant us courage for today and peace that remains as the sun rises higher. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "AS THE FIRST QUIET LIGHT",
+        "OF DAWN BREAKS",
+        "GREET THE MORNING"
+      ],
+      [
+        "QUIET LIGHT",
+        "DAWN"
+      ],
+      "JOSHUA 1 : 8"
+    ],
+    [
+      12,
+      25,
+      [
+        "LET THIS BOOK OF THE LAW",
+        "NOT DEPART FROM YOUR MOUTH",
+        "MEDITATE DAY AND NIGHT"
+      ],
+      [
+        "BOOK OF THE LAW",
+        "DAY AND NIGHT"
+      ],
+      "JOSHUA 1 : 8"
+    ],
+    [
+      25,
+      38,
+      [
+        "CAREFUL TO DO EVERYTHING",
+        "WRITTEN IN IT",
+        "PROSPEROUS AND SUCCESSFUL"
+      ],
+      [
+        "EVERYTHING WRITTEN",
+        "PROSPEROUS"
+      ],
+      "JOSHUA 1 : 8"
+    ],
+    [
+      38,
+      50,
+      [
+        "BE STRONG AND COURAGEOUS",
+        "DO NOT BE AFRAID",
+        "THE LORD IS WITH YOU"
+      ],
+      [
+        "STRONG AND COURAGEOUS",
+        "LORD IS WITH YOU"
+      ],
+      "JOSHUA 1 : 9"
+    ],
+    [
+      50,
+      62,
+      [
+        "FATHER WE REST",
+        "IN YOUR PRESENCE",
+        "ANCHOR OUR HEARTS"
+      ],
+      [
+        "REST",
+        "PRESENCE"
+      ],
+      "MORNING PRAYER"
+    ],
+    [
+      62,
+      75,
+      [
+        "GRANT US COURAGE",
+        "AND PEACE TODAY",
+        "AS THE SUN RISES"
+      ],
+      [
+        "COURAGE",
+        "PEACE"
+      ],
+      "MORNING PRAYER"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As the first quiet light of dawn breaks",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let this Book of the Law not depart from your mouth",
+      "kind": "phrase",
+      "words": [
+        "BOOK",
+        "LAW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "so that you may be careful to do everything written in it",
+      "kind": "phrase",
+      "words": [
+        "CAREFUL",
+        "EVERYTHING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Then you will be prosperous and successful",
+      "kind": "phrase",
+      "words": [
+        "PROSPEROUS",
+        "SUCCESSFUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Be strong and courageous do not be afraid",
+      "kind": "phrase",
+      "words": [
+        "STRONG",
+        "COURAGEOUS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father we rest in your presence this morning",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Joshua 1:8-9"
+}
