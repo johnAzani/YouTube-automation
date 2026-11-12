@@ -2,9 +2,9 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
-      "late_minutes": 311,
+      "late_minutes": 1125,
       "name": "Weekly metrics snapshot",
-      "ran_at": "2026-11-06T23:52:30+00:00",
+      "ran_at": "2026-11-07T13:26:05+00:00",
       "slot": "2026-11-06T18:41:00+00:00",
       "workflow": "metrics.yml"
     },
@@ -44,8 +44,8 @@
       "workflow": "comments.yml"
     }
   ],
-  "generated_at": "2026-11-12T02:31:21.060749+00:00",
-  "last_run_at": "2026-11-12T02:30:32+00:00",
+  "generated_at": "2026-11-12T02:32:39.963070+00:00",
+  "last_run_at": "2026-11-12T02:31:59+00:00",
   "on_time": [
     {
       "late_minutes": 28,
