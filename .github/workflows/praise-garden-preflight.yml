@@ -1,0 +1,28 @@
+name: Praise Garden read-only preflight
+
+# The temporary branch-only push trigger exercises this new workflow before it
+# exists on the default branch. Remove the trigger after the initial test.
+on:
+  push:
+    branches: ["arena/32ec72b4-youtube-automation"]
+    paths: [".github/workflows/praise-garden-preflight.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check OAuth identity and upload scope (read-only)
+        env:
+          PRAYER9_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER9_YOUTUBE_CLIENT_ID }}
+          PRAYER9_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER9_YOUTUBE_CLIENT_SECRET }}
+          PRAYER9_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER9_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER9_YOUTUBE_CHANNEL_ID: ${{ secrets.PRAYER9_YOUTUBE_CHANNEL_ID }}
+        run: python3 scripts/praise_garden_preflight.py
