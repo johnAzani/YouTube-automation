@@ -1,0 +1,358 @@
+{
+  "key": "short-healingpsalm41v1",
+  "channel": "prayer6",
+  "psalm": 41,
+  "title": [
+    "A RESTORATION PRAYER",
+    "FOR THE WEARY SOUL"
+  ],
+  "poster": [
+    "FINDING REST",
+    "IN GODS PROMISE",
+    "HEALING BALM",
+    "PSALM 41"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters flowing softly",
+    "warm golden sanctuary light filtering through canopy",
+    "peaceful white dove resting on stone fountain",
+    "soft light reflecting on calm river surface",
+    "gentle mist rising over serene mountain lake",
+    "soft golden light illuminating prayer space",
+    "ethereal light particles floating in dark room",
+    "sunlight breaking through forest clouds"
+  ],
+  "scenes": [
+    {
+      "a": "Bring every weary burden",
+      "img": "short-healingpsalm41v1-scene-01.jpg",
+      "kicker": "PSALM 41:1",
+      "sub": "COME AS YOU ARE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "the Lord sustains you",
+      "img": "short-healingpsalm41v1-scene-02.jpg",
+      "kicker": "PSALM 41:2",
+      "sub": "HIS PRESENCE SUSTAINS",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "The Lord protects you",
+      "img": "short-healingpsalm41v1-scene-03.jpg",
+      "kicker": "PSALM 41:2",
+      "sub": "PROTECTION AND STRENGTH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Blessed is the one",
+      "img": "short-healingpsalm41v1-scene-04.jpg",
+      "kicker": "PSALM 41:1",
+      "sub": "WALKING IN HIS BLESSING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "He sustains them",
+      "img": "short-healingpsalm41v1-scene-05.jpg",
+      "kicker": "PSALM 41:3",
+      "sub": "HE RESTORES YOUR HEALTH",
+      "cam": "push_in",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "in their illness",
+      "img": "short-healingpsalm41v1-scene-06.jpg",
+      "kicker": "PSALM 41:3",
+      "sub": "DIVINE COMPASSION",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "receive His restoration",
+      "img": "short-healingpsalm41v1-scene-07.jpg",
+      "kicker": "PRAYER FOR HEALING",
+      "sub": "FINDING RENEWAL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "rest in His peace",
+      "img": "short-healingpsalm41v1-scene-08.jpg",
+      "kicker": "GOD IS WITH YOU",
+      "sub": "ABIDE IN HIS LOVE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "Bring every weary burden and healing need before the Lord right now."
+    ],
+    [
+      16,
+      30,
+      "Blessed is the one who considers the poor, the Lord delivers in trouble."
+    ],
+    [
+      31,
+      45,
+      "The Lord protects you and keeps you alive, the Lord sustains you."
+    ],
+    [
+      46,
+      60,
+      "He sustains them on their sickbed, in their illness He heals all."
+    ],
+    [
+      61,
+      75,
+      "Lord, touch this heart with Your gentle, quiet, and restoring power."
+    ],
+    [
+      76,
+      90,
+      "May Your presence flow through every heavy place, bringing perfect peace."
+    ],
+    [
+      91,
+      105,
+      "I pray You wash away the fatigue and replace it with grace."
+    ],
+    [
+      106,
+      120,
+      "Receive His restoration today and finally rest in His peace. SUBSCRIBE."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "BRING EVERY WEARY BURDEN",
+        "AND HEALING NEED BEFORE",
+        "THE LORD RIGHT NOW"
+      ],
+      [
+        "WEARY BURDEN",
+        "LORD"
+      ],
+      "PSALM 41 : 1"
+    ],
+    [
+      16,
+      30,
+      [
+        "BLESSED IS THE ONE",
+        "WHO CONSIDERS THE POOR",
+        "THE LORD DELIVERS TROUBLE"
+      ],
+      [
+        "BLESSED",
+        "DELIVERS"
+      ],
+      "PSALM 41 : 1"
+    ],
+    [
+      31,
+      45,
+      [
+        "THE LORD PROTECTS YOU",
+        "AND KEEPS YOU ALIVE",
+        "THE LORD SUSTAINS YOU"
+      ],
+      [
+        "PROTECTS",
+        "SUSTAINS"
+      ],
+      "PSALM 41 : 2"
+    ],
+    [
+      46,
+      60,
+      [
+        "HE SUSTAINS THEM ON",
+        "THEIR SICKBED IN THEIR",
+        "ILLNESS HE HEALS ALL"
+      ],
+      [
+        "SUSTAINS",
+        "HEALS"
+      ],
+      "PSALM 41 : 3"
+    ],
+    [
+      61,
+      75,
+      [
+        "LORD TOUCH THIS HEART",
+        "WITH YOUR GENTLE QUIET",
+        "AND RESTORING POWER"
+      ],
+      [
+        "TOUCH",
+        "RESTORING"
+      ],
+      "PSALM 41 : 3"
+    ],
+    [
+      76,
+      90,
+      [
+        "MAY YOUR PRESENCE FLOW",
+        "THROUGH EVERY HEAVY PLACE",
+        "BRINGING PERFECT PEACE"
+      ],
+      [
+        "PRESENCE",
+        "PEACE"
+      ],
+      "PSALM 41 : 3"
+    ],
+    [
+      91,
+      105,
+      [
+        "I PRAY YOU WASH AWAY",
+        "THE FATIGUE AND REPLACE",
+        "IT WITH GRACE"
+      ],
+      [
+        "WASH AWAY",
+        "GRACE"
+      ],
+      "PSALM 41 : 3"
+    ],
+    [
+      106,
+      120,
+      [
+        "RECEIVE HIS RESTORATION",
+        "FINALLY REST IN HIS",
+        "PEACE SUBSCRIBE NOW"
+      ],
+      [
+        "RESTORATION",
+        "REST"
+      ],
+      "PSALM 41 : 3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Bring every weary burden",
+      "kind": "phrase",
+      "words": [
+        "WEARY",
+        "BURDEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "the Lord sustains you",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "SUSTAINS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord protects you",
+      "kind": "phrase",
+      "words": [
+        "PROTECTS",
+        "YOU"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Blessed is the one",
+      "kind": "phrase",
+      "words": [
+        "BLESSED",
+        "ONE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He sustains them",
+      "kind": "phrase",
+      "words": [
+        "SUSTAINS",
+        "THEM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "in their illness",
+      "kind": "phrase",
+      "words": [
+        "ILLNESS",
+        "HEALS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "receive His restoration",
+      "kind": "phrase",
+      "words": [
+        "RESTORATION",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "rest in His peace",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 41:1-3"
+}
