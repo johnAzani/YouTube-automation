@@ -4,6 +4,10 @@ name: Guided Path read-only preflight
 # does not start this diagnostic or activate the channel.
 on:
   workflow_dispatch:
+  # Temporary branch-only trigger to run this read-only diagnostic once.
+  push:
+    branches: [arena/32ec72b4-youtube-automation]
+    paths: [.github/workflows/guided-path-preflight.yml]
 
 permissions:
   contents: read
