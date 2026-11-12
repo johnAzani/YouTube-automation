@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-11T09:20:02.952391+00:00",
-  "as_of": "2026-11-11",
+  "generated_at": "2026-11-12T05:19:33.410532+00:00",
+  "as_of": "2026-11-12",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 7,
+  "total_longform_videos": 10,
   "ranked_themes": [],
   "themes": [
     {
@@ -15,28 +15,36 @@
       "top_scripture": "Psalm 46"
     },
     {
-      "theme": "peace_rest",
-      "videos": 1,
-      "measured_videos": 0,
-      "avg_score": 0.2455,
-      "avg_engagement": 0.0,
-      "top_scripture": "Psalm 121"
-    },
-    {
       "theme": "light_courage",
       "videos": 1,
       "measured_videos": 0,
-      "avg_score": 0.2045,
+      "avg_score": 0.1948,
       "avg_engagement": 0.0,
       "top_scripture": "Psalm 27"
     },
     {
-      "theme": "protection",
-      "videos": 4,
+      "theme": "peace_rest",
+      "videos": 2,
       "measured_videos": 0,
-      "avg_score": 0.0972,
+      "avg_score": 0.124,
+      "avg_engagement": 0.0,
+      "top_scripture": "Psalm 121"
+    },
+    {
+      "theme": "protection",
+      "videos": 5,
+      "measured_videos": 0,
+      "avg_score": 0.0891,
       "avg_engagement": 0.0,
       "top_scripture": "Psalm 3"
+    },
+    {
+      "theme": "trust_surrender",
+      "videos": 1,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": "Psalm 16"
     }
   ],
   "guidance": [
