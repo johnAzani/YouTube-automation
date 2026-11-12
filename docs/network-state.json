@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-12T20:11:10Z",
+  "generated_at": "2026-11-12T20:41:42Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
-    "channels_provisioned": 10,
-    "channels_total": 10
+    "channels_provisioned": 8,
+    "channels_total": 8
   },
   "totals": {
-    "published_total": 134,
-    "published_longform": 60,
-    "published_shorts": 74,
-    "public_total": 132,
-    "queued_longform": 58,
-    "queued_shorts": 44,
+    "published_total": 136,
+    "published_longform": 61,
+    "published_shorts": 75,
+    "public_total": 134,
+    "queued_longform": 57,
+    "queued_shorts": 43,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": false
@@ -352,32 +352,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 6,
-        "published_longform": 3,
-        "published_shorts": 3,
-        "public_total": 6,
-        "queued_longform": 6,
+        "published_total": 8,
+        "published_longform": 4,
+        "published_shorts": 4,
+        "public_total": 8,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0402",
-        "title": "Psalm 147:3 Healing Prayer | The Healing Balm",
-        "format": "longform",
-        "youtube_video_id": "9JVBBIA5UtI",
-        "watch_url": "https://youtu.be/9JVBBIA5UtI",
-        "published_on": "2026-11-12",
-        "published_at": "2026-11-12T06:08:05Z"
-      },
-      "next_queued_longform": {
         "id": "0403",
         "title": "Isaiah 40:29-31 Healing Prayer | The Healing Balm",
-        "words": 873,
+        "format": "longform",
+        "youtube_video_id": "qdnrS9W0XtQ",
+        "watch_url": "https://youtu.be/qdnrS9W0XtQ",
+        "published_on": "2026-11-12",
+        "published_at": "2026-11-12T20:40:46Z"
+      },
+      "next_queued_longform": {
+        "id": "0404",
+        "title": "Exodus 15:26 Jehovah Rapha Healing Prayer | The Healing Balm",
+        "words": 1903,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingisaiah40v29",
-        "scripture": "Isaiah 40:29-31",
+        "short": "short-healingexodus15v26",
+        "scripture": "Exodus 15:26",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -528,91 +528,55 @@
           }
         ]
       }
-    },
-    {
-      "id": "prayer9",
-      "display_name": "The Praise Garden",
-      "handle": "@ThePraiseGardenDaily",
-      "prayer_label": "Thanksgiving Prayer",
-      "daypart": "thanksgiving",
-      "tagline": "Daily Thanksgiving, Praise & Worship Prayer",
-      "target_window_utc": "09:44",
-      "poster_kicker": "O GIVE THANKS UNTO THE LORD",
-      "provisioned": true,
-      "auto_publish": true,
-      "default_privacy": "public",
-      "supply_target": 6,
-      "counts": {
-        "published_total": 0,
-        "published_longform": 0,
-        "published_shorts": 0,
-        "public_total": 0,
-        "queued_longform": 2,
-        "queued_other": 0,
-        "queued_shorts": 2
-      },
-      "latest_video": null,
-      "next_queued_longform": {
-        "id": "0700",
-        "title": "Psalm 100:4 Thanksgiving Prayer | The Praise Garden",
-        "words": 902,
-        "status": "approved"
-      },
-      "next_queued_short": {
-        "short": "short-gardenpsalm100v4",
-        "scripture": "Psalm 100:4",
-        "target_window_utc": "09:44",
-        "status": "approved"
-      },
-      "feedback": {
-        "available": false,
-        "measured_longform_videos": 0,
-        "top_themes": []
-      }
-    },
-    {
-      "id": "prayer10",
-      "display_name": "The Guided Path",
-      "handle": "@TheGuidedPathPrayer",
-      "prayer_label": "Guidance Prayer",
-      "daypart": "guidance",
-      "tagline": "Daily Prayer for Wisdom, Discernment & Guidance",
-      "target_window_utc": "18:44",
-      "poster_kicker": "HE SHALL DIRECT THY PATHS",
-      "provisioned": true,
-      "auto_publish": true,
-      "default_privacy": "public",
-      "supply_target": 6,
-      "counts": {
-        "published_total": 0,
-        "published_longform": 0,
-        "published_shorts": 0,
-        "public_total": 0,
-        "queued_longform": 2,
-        "queued_other": 0,
-        "queued_shorts": 2
-      },
-      "latest_video": null,
-      "next_queued_longform": {
-        "id": "0800",
-        "title": "Proverbs 3:5-6 Guidance Prayer | The Guided Path",
-        "words": 973,
-        "status": "approved"
-      },
-      "next_queued_short": {
-        "short": "short-guidedproverbs3v5",
-        "scripture": "Proverbs 3:5-6",
-        "target_window_utc": "1124",
-        "status": "approved"
-      },
-      "feedback": {
-        "available": false,
-        "measured_longform_videos": 0,
-        "top_themes": []
-      }
     }
   ],
   "videos": [
+    {
+      "id": "0403",
+      "slug": "isaiah-40-29-31-healing-prayer",
+      "file": "0403-isaiah-40-29-31-healing-prayer.md",
+      "title": "Isaiah 40:29-31 Healing Prayer | The Healing Balm",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T20:40:46Z",
+      "youtube_video_id": "qdnrS9W0XtQ",
+      "watch_url": "https://youtu.be/qdnrS9W0XtQ",
+      "youtu_be_url": "https://youtu.be/qdnrS9W0XtQ",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/qdnrS9W0XtQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/qdnrS9W0XtQ/hqdefault.jpg",
+      "thumb_text": "STRENGTH IN WEAKNESS",
+      "duration_label": "~6 min",
+      "words": 873
+    },
+    {
+      "id": "SHORT-HEALINGISAIAH40V29",
+      "slug": "short-healingisaiah40v29-restoration-prayer",
+      "file": "short-healingisaiah40v29-restoration-prayer.md",
+      "title": "Pray This Isaiah 40:29-31 Healing Prayer for Peace & Strength | Healing Prayer #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T19:59:31Z",
+      "youtube_video_id": "vX5xkEhP92g",
+      "watch_url": "https://www.youtube.com/shorts/vX5xkEhP92g",
+      "youtu_be_url": "https://youtu.be/vX5xkEhP92g",
+      "shorts_url": "https://www.youtube.com/shorts/vX5xkEhP92g",
+      "studio_url": "https://studio.youtube.com/video/vX5xkEhP92g/edit",
+      "thumb_url": "https://i.ytimg.com/vi/vX5xkEhP92g/hqdefault.jpg",
+      "thumb_text": "THE HEALING BALM \u00b7 STRENGTH IN WEAKNESS",
+      "duration_label": "53s",
+      "words": 366
+    },
     {
       "id": "0303",
       "slug": "isaiah-54-13-family-prayer",
@@ -4167,19 +4131,6 @@
         "words": 1053
       },
       {
-        "id": "0403",
-        "slug": "isaiah-40-29-31-healing-prayer",
-        "file": "0403-isaiah-40-29-31-healing-prayer.md",
-        "title": "Isaiah 40:29-31 Healing Prayer | The Healing Balm",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 873
-      },
-      {
         "id": "0404",
         "slug": "exodus-15-26-jehovah-rapha-healing-prayer",
         "file": "0404-exodus-15-26-jehovah-rapha-healing-prayer.md",
@@ -4406,7 +4357,7 @@
         "file": "0700-psalm-100-4-thanksgiving-prayer.md",
         "title": "Psalm 100:4 Thanksgiving Prayer | The Praise Garden",
         "channel": "prayer9",
-        "channel_name": "The Praise Garden",
+        "channel_name": "The Secret Place",
         "status": "approved",
         "niche": "faith and prayer",
         "publishable": true,
@@ -4419,7 +4370,7 @@
         "file": "0701-psalm-103-1-5-thanksgiving-prayer.md",
         "title": "Psalm 103:1-5 Thanksgiving Prayer | The Praise Garden",
         "channel": "prayer9",
-        "channel_name": "The Praise Garden",
+        "channel_name": "The Secret Place",
         "status": "approved",
         "niche": "faith and prayer",
         "publishable": true,
@@ -4432,7 +4383,7 @@
         "file": "0800-proverbs-3-5-6-guidance-prayer.md",
         "title": "Proverbs 3:5-6 Guidance Prayer | The Guided Path",
         "channel": "prayer10",
-        "channel_name": "The Guided Path",
+        "channel_name": "The Secret Place",
         "status": "approved",
         "niche": "faith and prayer",
         "publishable": true,
@@ -4445,7 +4396,7 @@
         "file": "0801-james-1-5-wisdom-guidance-prayer.md",
         "title": "James 1:5 Guidance Prayer | The Guided Path",
         "channel": "prayer10",
-        "channel_name": "The Guided Path",
+        "channel_name": "The Secret Place",
         "status": "approved",
         "niche": "faith and prayer",
         "publishable": true,
@@ -4686,17 +4637,6 @@
         "target_window_utc": "17:14"
       },
       {
-        "short": "short-healingisaiah40v29",
-        "file": "0403-short-healingisaiah40v29.yml",
-        "companion_longform_id": "403",
-        "scripture": "Isaiah 40:29-31",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
-      },
-      {
         "short": "short-healingexodus15v26",
         "file": "0404-short-healingexodus15v26.yml",
         "companion_longform_id": "0404",
@@ -4900,7 +4840,7 @@
         "companion_longform_id": "0700",
         "scripture": "Psalm 100:4",
         "channel": "prayer9",
-        "channel_name": "The Praise Garden",
+        "channel_name": "The Secret Place",
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
@@ -4911,7 +4851,7 @@
         "companion_longform_id": "0701",
         "scripture": "Psalm 103:2",
         "channel": "prayer9",
-        "channel_name": "The Praise Garden",
+        "channel_name": "The Secret Place",
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
@@ -4922,7 +4862,7 @@
         "companion_longform_id": "0800",
         "scripture": "Proverbs 3:5-6",
         "channel": "prayer10",
-        "channel_name": "The Guided Path",
+        "channel_name": "The Secret Place",
         "status": "approved",
         "publishable": true,
         "target_window_utc": "1124"
@@ -4933,7 +4873,7 @@
         "companion_longform_id": "0801",
         "scripture": "James 1:5",
         "channel": "prayer10",
-        "channel_name": "The Guided Path",
+        "channel_name": "The Secret Place",
         "status": "approved",
         "publishable": true,
         "target_window_utc": "1124"
