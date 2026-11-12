@@ -1,0 +1,350 @@
+{
+  "key": "short-familyphilippians4v19",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "GOD WILL SUPPLY",
+    "ALL YOUR NEEDS"
+  ],
+  "poster": [
+    "HOUSEHOLD PRAYER",
+    "PHILIPPIANS 4:19",
+    "DIVINE PROVISION",
+    "THE FAMILY ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit wooden table open bible olive branch cozy home",
+    "peaceful living room warm lighting bible on table rustic window soft light",
+    "open holy bible soft candle light warm wooden table peaceful room",
+    "cozy countryside home exterior golden hour sunset peaceful backyard",
+    "rustic dining table loaf of fresh bread warm morning light olive leaves",
+    "warm lighted window evening peaceful home quiet countryside night"
+  ],
+  "scenes": [
+    {
+      "a": "Gather your home and loved ones in faith today",
+      "img": "short-familyphilippians4v19-scene-01.jpg",
+      "kicker": "PHILIPPIANS 4:19",
+      "sub": "GATHER YOUR HOME IN FAITH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "every financial concern",
+      "img": "short-familyphilippians4v19-scene-02.jpg",
+      "kicker": "PHILIPPIANS 4:19",
+      "sub": "BRING EVERY BURDEN TO GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "And my God shall supply all your need",
+      "img": "short-familyphilippians4v19-scene-03.jpg",
+      "kicker": "PHILIPPIANS 4:19",
+      "sub": "GOD SHALL SUPPLY ALL YOUR NEED",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, we place this family",
+      "img": "short-familyphilippians4v19-scene-04.jpg",
+      "kicker": "PHILIPPIANS 4:19",
+      "sub": "PLACING OUR FAMILY IN HIS HANDS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Pour out Your peace, provide daily bread",
+      "img": "short-familyphilippians4v19-scene-05.jpg",
+      "kicker": "PHILIPPIANS 4:19",
+      "sub": "DIVINE ABUNDANCE AND PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "May Your presence fill every room",
+      "img": "short-familyphilippians4v19-scene-06.jpg",
+      "kicker": "PHILIPPIANS 4:19",
+      "sub": "COVER YOUR HOME IN PRAYER",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Gather your home and loved ones in faith today as we stand together in prayer over your household."
+    ],
+    [
+      8,
+      15,
+      "Let us bring every burden, every financial concern, and every quiet worry before the throne of grace."
+    ],
+    [
+      15,
+      23,
+      "Scripture promises us in Philippians four nineteen: \"And my God shall supply all your need according to His riches in glory by Christ Jesus.\""
+    ],
+    [
+      23,
+      31,
+      "Heavenly Father, we place this family into Your faithful hands. You know every silent need within these walls."
+    ],
+    [
+      31,
+      40,
+      "Pour out Your peace, provide daily bread, cover this home with Your divine abundance, and strengthen every heart gathered here."
+    ],
+    [
+      40,
+      48,
+      "May Your presence fill every room with hope and resting grace. Subscribe to cover your home in prayer daily with us today. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "GATHER YOUR HOME AND LOVED ONES",
+        "IN FAITH TODAY AS WE STAND",
+        "TOGETHER IN PRAYER OVER YOUR HOUSEHOLD"
+      ],
+      [
+        "GATHER",
+        "HOME",
+        "FAITH",
+        "PRAYER",
+        "HOUSEHOLD"
+      ],
+      "PHILIPPIANS 4:19"
+    ],
+    [
+      8,
+      15,
+      [
+        "LET US BRING EVERY BURDEN",
+        "EVERY FINANCIAL CONCERN AND",
+        "EVERY QUIET WORRY BEFORE",
+        "THE THRONE OF GRACE"
+      ],
+      [
+        "BURDEN",
+        "FINANCIAL",
+        "WORRY",
+        "THRONE",
+        "GRACE"
+      ],
+      "PHILIPPIANS 4:19"
+    ],
+    [
+      15,
+      23,
+      [
+        "AND MY GOD SHALL SUPPLY",
+        "ALL YOUR NEED ACCORDING TO",
+        "HIS RICHES IN GLORY",
+        "BY CHRIST JESUS"
+      ],
+      [
+        "GOD",
+        "SUPPLY",
+        "NEED",
+        "RICHES",
+        "GLORY"
+      ],
+      "PHILIPPIANS 4:19"
+    ],
+    [
+      23,
+      31,
+      [
+        "HEAVENLY FATHER WE PLACE THIS FAMILY",
+        "INTO YOUR FAITHFUL HANDS YOU KNOW",
+        "EVERY SILENT NEED WITHIN THESE WALLS"
+      ],
+      [
+        "HEAVENLY",
+        "FATHER",
+        "FAITHFUL",
+        "SILENT",
+        "NEED"
+      ],
+      "PHILIPPIANS 4:19"
+    ],
+    [
+      31,
+      40,
+      [
+        "POUR OUT YOUR PEACE PROVIDE DAILY BREAD",
+        "COVER THIS HOME WITH YOUR DIVINE ABUNDANCE",
+        "AND STRENGTHEN EVERY HEART GATHERED HERE"
+      ],
+      [
+        "PEACE",
+        "BREAD",
+        "ABUNDANCE",
+        "STRENGTHEN",
+        "HEART"
+      ],
+      "PHILIPPIANS 4:19"
+    ],
+    [
+      40,
+      48,
+      [
+        "MAY YOUR PRESENCE FILL EVERY ROOM",
+        "WITH HOPE AND RESTING GRACE",
+        "SUBSCRIBE TO COVER YOUR HOME IN PRAYER",
+        "DAILY WITH US TODAY AMEN"
+      ],
+      [
+        "PRESENCE",
+        "HOPE",
+        "GRACE",
+        "SUBSCRIBE",
+        "PRAYER"
+      ],
+      "PHILIPPIANS 4:19"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Gather your home and loved ones in faith today",
+      "kind": "phrase",
+      "words": [
+        "GATHER",
+        "YOUR",
+        "HOME"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "as we stand together in prayer over your household.",
+      "kind": "phrase",
+      "words": [
+        "PRAYER",
+        "OVER",
+        "YOUR",
+        "HOUSEHOLD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "every financial concern,",
+      "kind": "phrase",
+      "words": [
+        "EVERY",
+        "FINANCIAL",
+        "CONCERN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "before the throne of grace.",
+      "kind": "phrase",
+      "words": [
+        "THRONE",
+        "OF",
+        "GRACE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "\"And my God shall supply all your need",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "SHALL",
+        "SUPPLY",
+        "ALL",
+        "YOUR",
+        "NEED"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "according to His riches in glory by Christ Jesus.\"",
+      "kind": "phrase",
+      "words": [
+        "RICHES",
+        "IN",
+        "GLORY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, we place this family into Your faithful hands.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFUL",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Pour out Your peace, provide daily bread,",
+      "kind": "phrase",
+      "words": [
+        "POUR",
+        "OUT",
+        "YOUR",
+        "PEACE"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "cover this home with Your divine abundance,",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "ABUNDANCE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to cover your home in prayer daily with us today. Amen.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "TO",
+        "COVER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Philippians 4:19"
+}
