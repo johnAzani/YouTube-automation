@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T23:54:21Z",
+  "generated_at": "2026-11-12T00:38:23Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 104,
-    "published_longform": 46,
-    "published_shorts": 58,
-    "public_total": 102,
-    "queued_longform": 51,
-    "queued_shorts": 35,
+    "published_total": 106,
+    "published_longform": 47,
+    "published_shorts": 59,
+    "public_total": 104,
+    "queued_longform": 50,
+    "queued_shorts": 34,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -295,32 +295,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 2,
-        "published_longform": 1,
-        "published_shorts": 1,
-        "public_total": 2,
-        "queued_longform": 5,
+        "published_total": 4,
+        "published_longform": 2,
+        "published_shorts": 2,
+        "public_total": 4,
+        "queued_longform": 4,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0300",
-        "title": "Joshua 24:15 Family Prayer | The Family Altar",
-        "format": "longform",
-        "youtube_video_id": "NjhW7YUzhis",
-        "watch_url": "https://youtu.be/NjhW7YUzhis",
-        "published_on": "2026-11-11",
-        "published_at": "2026-11-11T16:26:15Z"
-      },
-      "next_queued_longform": {
         "id": "0301",
         "title": "Psalm 128:1-4 Family Prayer | The Family Altar",
-        "words": 909,
+        "format": "longform",
+        "youtube_video_id": "c8nBqdvETqA",
+        "watch_url": "https://youtu.be/c8nBqdvETqA",
+        "published_on": "2026-11-12",
+        "published_at": "2026-11-12T00:37:23Z"
+      },
+      "next_queued_longform": {
+        "id": "0302",
+        "title": "Psalm 127:1-5 Family Prayer | The Family Altar",
+        "words": 917,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familypsalm128v1",
-        "scripture": "Psalm 128:1-4",
+        "short": "short-familypsalm127v1",
+        "scripture": "Psalm 127:1-5",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -491,6 +491,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0301",
+      "slug": "psalm-128-1-4-family-prayer",
+      "file": "0301-psalm-128-1-4-family-prayer.md",
+      "title": "Psalm 128:1-4 Family Prayer | The Family Altar",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T00:37:23Z",
+      "youtube_video_id": "c8nBqdvETqA",
+      "watch_url": "https://youtu.be/c8nBqdvETqA",
+      "youtu_be_url": "https://youtu.be/c8nBqdvETqA",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/c8nBqdvETqA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/c8nBqdvETqA/hqdefault.jpg",
+      "thumb_text": "COVER MY FAMILY",
+      "duration_label": "~6 min",
+      "words": 909
+    },
+    {
+      "id": "SHORT-FAMILYPSALM128V1",
+      "slug": "short-familypsalm128v1-household-prayer",
+      "file": "short-familypsalm128v1-household-prayer.md",
+      "title": "Pray This Psalm 128:1-4 Family Prayer Over Your Home | Family Prayer #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T00:01:04Z",
+      "youtube_video_id": "zjz6imU7S0U",
+      "watch_url": "https://www.youtube.com/shorts/zjz6imU7S0U",
+      "youtu_be_url": "https://youtu.be/zjz6imU7S0U",
+      "shorts_url": "https://www.youtube.com/shorts/zjz6imU7S0U",
+      "studio_url": "https://studio.youtube.com/video/zjz6imU7S0U/edit",
+      "thumb_url": "https://i.ytimg.com/vi/zjz6imU7S0U/hqdefault.jpg",
+      "thumb_text": "THE FAMILY ALTAR \u00b7 COVER MY FAMILY",
+      "duration_label": "51s",
+      "words": 267
+    },
     {
       "id": "0204",
       "slug": "exodus-12-29-31-midnight-prayer-the-midnight-watch",
@@ -3303,19 +3349,6 @@
         "words": 1176
       },
       {
-        "id": "0301",
-        "slug": "psalm-128-1-4-family-prayer",
-        "file": "0301-psalm-128-1-4-family-prayer.md",
-        "title": "Psalm 128:1-4 Family Prayer | The Family Altar",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 909
-      },
-      {
         "id": "0302",
         "slug": "psalm-127-1-5-family-prayer",
         "file": "0302-psalm-127-1-5-family-prayer.md",
@@ -3726,17 +3759,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-familypsalm128v1",
-        "file": "0301-short-familypsalm128v1.yml",
-        "companion_longform_id": "301",
-        "scripture": "Psalm 128:1-4",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
       },
       {
         "short": "short-familypsalm127v1",

@@ -2,7 +2,7 @@
 id: '0301'
 title: Psalm 128:1-4 Family Prayer | The Family Altar
 slug: psalm-128-1-4-family-prayer
-status: approved
+status: published
 channel: prayer5
 privacy: public
 format: longform
@@ -73,6 +73,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-12"
+published_at: "2026-11-12T00:37:23Z"
+youtube_video_id: "c8nBqdvETqA"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Gathering Around the Family Altar
