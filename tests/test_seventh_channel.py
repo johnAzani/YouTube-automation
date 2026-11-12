@@ -156,7 +156,8 @@ class TestSeventhChannelWorkflowWiring(unittest.TestCase):
         self.assertIn("PRAYER7_GEMINI_API_KEY", monitor)
         self.assertIn("PRAYER7_YOUTUBE_REFRESH_TOKEN", growth)
         self.assertIn("PRAYER7_YOUTUBE_REFRESH_TOKEN", community)
-        self.assertIn("PRAYER7_YOUTUBE_REFRESH_TOKEN", set_thumb)
+        self.assertIn('"prayer7":"PRAYER7_"', set_thumb)
+        self.assertIn("format('{0}YOUTUBE_REFRESH_TOKEN'", set_thumb)
 
     def test_upload_credentials_fallback_to_inherent_token_scopes_on_invalid_scope(self):
         from unittest import mock

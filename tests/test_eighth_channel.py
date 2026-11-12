@@ -202,7 +202,8 @@ class TestEighthChannelWorkflowWiring(unittest.TestCase):
         self.assertIn("PRAYER8_GEMINI_API_KEY", monitor)
         self.assertIn("PRAYER8_YOUTUBE_REFRESH_TOKEN", growth)
         self.assertIn("PRAYER8_YOUTUBE_REFRESH_TOKEN", community)
-        self.assertIn("PRAYER8_YOUTUBE_REFRESH_TOKEN", set_thumb)
+        self.assertIn('"prayer8":"PRAYER8_"', set_thumb)
+        self.assertIn("format('{0}YOUTUBE_REFRESH_TOKEN'", set_thumb)
 
 
 if __name__ == "__main__":

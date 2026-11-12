@@ -95,6 +95,7 @@ jobs:
           from datetime import datetime, timezone
           sys.path.insert(0, ".")
           from scripts.automation_monitor import active_quota_cooldown
+          from pipeline.channels import normalize_channel_id, scheduled_channels
 
           event = os.environ.get("EVENT_NAME", "")
           p3_ready = os.environ.get("PRAYER3_READY", "").lower() == "true"
@@ -170,6 +171,18 @@ jobs:
               channels = [os.environ["CLIENT_CHANNEL"].strip()]
           else:
               channels = ["secret-place"]
+
+          # An unregistered or deliberately inactive channel must not enter the
+          # matrix, including through repository_dispatch or manual dispatch.
+          # Otherwise an unknown prefix can resolve to default-channel secrets.
+          allowed = set(scheduled_channels())
+          channels = [normalize_channel_id(cid) for cid in channels]
+          blocked = [cid for cid in channels if cid not in allowed]
+          if blocked and event != "schedule":
+              raise SystemExit("Refusing unknown or inactive production channel(s): " + ", ".join(blocked))
+          if blocked:
+              print("::notice::Skipping unknown or inactive production channel(s): " + ", ".join(blocked))
+              channels = [cid for cid in channels if cid in allowed]
 
           payload = json.dumps(channels)
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:

@@ -150,11 +150,20 @@ class TestTheWorkflowsKnowIt(unittest.TestCase):
                         self.assertIn('"prayer3":"PRAYER3_"', env[key])
                         self.assertIn("secrets[format(", env[key])
                 else:
-                    self.assertIn("secrets.PRAYER3_YOUTUBE_CLIENT_ID", text)
-                    self.assertIn("secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN", text)
-                    self.assertIn("secrets.PRAYER3_YOUTUBE_CLIENT_SECRET", text)
+                    data = yaml.safe_load(text)
+                    if name == "comments.yml":
+                        env = next(step["env"] for job in data["jobs"].values()
+                                   for step in job.get("steps", [])
+                                   if step.get("name") == "Run Comment Reply Engine")
+                    else:
+                        env = next(job["env"] for job in data["jobs"].values()
+                                   if "YOUTUBE_CLIENT_ID" in job.get("env", {}))
+                    for key in ("YOUTUBE_CLIENT_ID", "YOUTUBE_REFRESH_TOKEN", "YOUTUBE_CLIENT_SECRET"):
+                        self.assertIn('"prayer3":"PRAYER3_"', env[key])
+                        self.assertIn("secrets[format(", env[key])
         brain = self.wf("gemini_brain.yml")
-        self.assertIn("secrets.PRAYER3_GEMINI_API_KEY", brain)
+        self.assertIn('"prayer3":"PRAYER3_"', brain)
+        self.assertIn("format('{0}GEMINI_API_KEY'", brain)
         self.assertNotIn("secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN", brain,
                          "the brain never uploads; mapping a YouTube token there "
                          "would only widen the blast radius")

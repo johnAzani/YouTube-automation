@@ -1,0 +1,21 @@
+name: Guided Path Gemini read-only preflight
+
+# Manual, read-only model listing; no generation or channel activation.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: List Gemini model metadata (read-only)
+        env:
+          PRAYER10_GEMINI_API_KEY: ${{ secrets.PRAYER10_GEMINI_API_KEY }}
+        run: python3 scripts/guided_path_gemini_preflight.py

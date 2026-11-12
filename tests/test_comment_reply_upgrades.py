@@ -543,10 +543,11 @@ class TestTheWorkflowCoversEveryChannel(unittest.TestCase):
 
     def test_the_plan_probes_every_optional_channel_for_credentials(self):
         plan = self.data["jobs"]["plan"]
-        env = plan["steps"][0]["env"]
+        step = next(step for step in plan["steps"] if step.get("id") == "plan")
+        env = step["env"]
         for channel_id in ("PRAYER2", "PRAYER3"):
             self.assertIn(f"{channel_id}_READY", env)
-        run = plan["steps"][0]["run"]
+        run = step["run"]
         self.assertIn("PRAYER2_READY", run)
         self.assertIn("PRAYER3_READY", run)
 

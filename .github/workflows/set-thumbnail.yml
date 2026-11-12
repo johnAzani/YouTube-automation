@@ -48,10 +48,10 @@ concurrency:
 
 env:
   CHANNEL_ID: ${{ inputs.channel || 'secret-place' }}
-  YOUTUBE_CLIENT_ID: ${{ inputs.channel == 'prayer8' && secrets.PRAYER8_YOUTUBE_CLIENT_ID || (inputs.channel == 'prayer7' && secrets.PRAYER7_YOUTUBE_CLIENT_ID || (inputs.channel == 'prayer6' && secrets.PRAYER6_YOUTUBE_CLIENT_ID || (inputs.channel == 'prayer5' && secrets.PRAYER5_YOUTUBE_CLIENT_ID || (inputs.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_CLIENT_ID || (inputs.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_ID || (inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_ID || secrets.YOUTUBE_CLIENT_ID)))))) }}
-  YOUTUBE_CLIENT_SECRET: ${{ inputs.channel == 'prayer8' && secrets.PRAYER8_YOUTUBE_CLIENT_SECRET || (inputs.channel == 'prayer7' && secrets.PRAYER7_YOUTUBE_CLIENT_SECRET || (inputs.channel == 'prayer6' && secrets.PRAYER6_YOUTUBE_CLIENT_SECRET || (inputs.channel == 'prayer5' && secrets.PRAYER5_YOUTUBE_CLIENT_SECRET || (inputs.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_CLIENT_SECRET || (inputs.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_CLIENT_SECRET || (inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_CLIENT_SECRET || secrets.YOUTUBE_CLIENT_SECRET)))))) }}
-  YOUTUBE_REFRESH_TOKEN: ${{ inputs.channel == 'prayer8' && secrets.PRAYER8_YOUTUBE_REFRESH_TOKEN || (inputs.channel == 'prayer7' && secrets.PRAYER7_YOUTUBE_REFRESH_TOKEN || (inputs.channel == 'prayer6' && secrets.PRAYER6_YOUTUBE_REFRESH_TOKEN || (inputs.channel == 'prayer5' && secrets.PRAYER5_YOUTUBE_REFRESH_TOKEN || (inputs.channel == 'prayer4' && secrets.PRAYER4_YOUTUBE_REFRESH_TOKEN || (inputs.channel == 'prayer3' && secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN || (inputs.channel == 'prayer2' && secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN || secrets.YOUTUBE_REFRESH_TOKEN)))))) }}
-  YOUTUBE_EXPECTED_CHANNEL_ID: ${{ inputs.channel == 'prayer8' && (vars.PRAYER8_YOUTUBE_CHANNEL_ID || secrets.PRAYER8_YOUTUBE_CHANNEL_ID) || (inputs.channel == 'prayer7' && (vars.PRAYER7_YOUTUBE_CHANNEL_ID || secrets.PRAYER7_YOUTUBE_CHANNEL_ID) || (inputs.channel == 'prayer6' && (vars.PRAYER6_YOUTUBE_CHANNEL_ID || secrets.PRAYER6_YOUTUBE_CHANNEL_ID) || (inputs.channel == 'prayer5' && (vars.PRAYER5_YOUTUBE_CHANNEL_ID || secrets.PRAYER5_YOUTUBE_CHANNEL_ID) || (inputs.channel == 'prayer4' && (vars.PRAYER4_YOUTUBE_CHANNEL_ID || secrets.PRAYER4_YOUTUBE_CHANNEL_ID) || (inputs.channel == 'prayer3' && (vars.PRAYER3_YOUTUBE_CHANNEL_ID || secrets.PRAYER3_YOUTUBE_CHANNEL_ID) || (inputs.channel == 'prayer2' && (vars.PRAYER2_YOUTUBE_CHANNEL_ID || secrets.PRAYER2_YOUTUBE_CHANNEL_ID) || (vars.YOUTUBE_CHANNEL_ID || secrets.YOUTUBE_CHANNEL_ID))))))) }}
+  YOUTUBE_CLIENT_ID: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8"]'), inputs.channel) && secrets[format('{0}YOUTUBE_CLIENT_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[inputs.channel])] || '' }}
+  YOUTUBE_CLIENT_SECRET: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8"]'), inputs.channel) && secrets[format('{0}YOUTUBE_CLIENT_SECRET', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[inputs.channel])] || '' }}
+  YOUTUBE_REFRESH_TOKEN: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8"]'), inputs.channel) && secrets[format('{0}YOUTUBE_REFRESH_TOKEN', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[inputs.channel])] || '' }}
+  YOUTUBE_EXPECTED_CHANNEL_ID: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8"]'), inputs.channel) && (vars[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[inputs.channel])] || secrets[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[inputs.channel])]) || '' }}
 
 jobs:
   thumbnail:
@@ -133,8 +133,14 @@ jobs:
           sys.path.insert(0, '.')
           from googleapiclient.discovery import build
           from googleapiclient.http import MediaFileUpload
+          from pipeline.channels import normalize_channel_id, scheduled_channels
+          from pipeline.thumbnail_target_guard import verified_video_snippet
           from pipeline.upload import _credentials
 
+          if normalize_channel_id(os.environ.get('CHANNEL_ID')) not in scheduled_channels():
+              raise SystemExit('Refusing live thumbnail update for an unknown or inactive channel.')
+          if not os.environ.get('YOUTUBE_EXPECTED_CHANNEL_ID', '').strip():
+              raise SystemExit('Expected YouTube channel ID is required for a live thumbnail update.')
           variant = os.environ['VARIANT']
           names = {'main': 'thumbnail.jpg'}
           name = names.get(variant, f'thumbnail_{variant}.jpg')
@@ -142,9 +148,9 @@ jobs:
           if not path.is_file():
               raise SystemExit(f'missing {path}')
           youtube = build('youtube', 'v3', credentials=_credentials(), cache_discovery=False)
-          # Keep the current one so it can be restored by re-running with it.
-          before = youtube.videos().list(part='snippet', id=os.environ['VIDEO_ID']).execute()
-          item = (before.get('items') or [{}])[0].get('snippet', {})
+          # The token and the selected video must both match the expected owner.
+          # Merely logging the old URL is not a backup of its image bytes.
+          item = verified_video_snippet(youtube, os.environ['VIDEO_ID'], os.environ['YOUTUBE_EXPECTED_CHANNEL_ID'])
           print('before:', (item.get('thumbnails') or {}).get('maxres', {}).get('url'))
           youtube.thumbnails().set(
               videoId=os.environ['VIDEO_ID'],

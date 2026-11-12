@@ -1,0 +1,25 @@
+name: Praise Garden read-only preflight
+
+# Explicitly manual, read-only and independent of the channel registry. Saving
+# secrets alone never starts the diagnostic or enables the channel.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check OAuth identity and upload scope (read-only)
+        env:
+          PRAYER9_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER9_YOUTUBE_CLIENT_ID }}
+          PRAYER9_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER9_YOUTUBE_CLIENT_SECRET }}
+          PRAYER9_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER9_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER9_YOUTUBE_CHANNEL_ID: ${{ secrets.PRAYER9_YOUTUBE_CHANNEL_ID }}
+        run: python3 scripts/praise_garden_preflight.py
