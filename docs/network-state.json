@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T15:19:24Z",
+  "generated_at": "2026-11-12T15:25:14Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 125,
+    "published_total": 126,
     "published_longform": 56,
-    "published_shorts": 69,
-    "public_total": 123,
+    "published_shorts": 70,
+    "public_total": 124,
     "queued_longform": 58,
-    "queued_shorts": 45,
+    "queued_shorts": 44,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -32,22 +32,22 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 32,
+        "published_total": 33,
         "published_longform": 11,
-        "published_shorts": 21,
-        "public_total": 31,
+        "published_shorts": 22,
+        "public_total": 32,
         "queued_longform": 16,
         "queued_other": 5,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "SHORT-JOHN14V27",
-        "title": "Say This John 14:27 Prayer Before You Sleep | The Secret Place #Shorts",
+        "id": "SHORT-PHILIPPIANS4V6",
+        "title": "Say This Philippians 4:6-7 Prayer Before You Sleep | Tonight #Shorts",
         "format": "short",
-        "youtube_video_id": "dmwIvRt6Ve8",
-        "watch_url": "https://www.youtube.com/shorts/dmwIvRt6Ve8",
+        "youtube_video_id": "QHm6Z2sfpnc",
+        "watch_url": "https://www.youtube.com/shorts/QHm6Z2sfpnc",
         "published_on": "2026-11-12",
-        "published_at": "2026-11-12T08:31:09Z"
+        "published_at": "2026-11-12T15:21:41Z"
       },
       "next_queued_longform": {
         "id": "0020",
@@ -56,8 +56,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-philippians4v6",
-        "scripture": "Philippians 4:6-7",
+        "short": "short-2timothy1v7",
+        "scripture": "2 Timothy 1:7",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -531,6 +531,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PHILIPPIANS4V6",
+      "slug": "short-philippians4v6-pre-sleep-prayer",
+      "file": "short-philippians4v6-pre-sleep-prayer.md",
+      "title": "Say This Philippians 4:6-7 Prayer Before You Sleep | Tonight #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T15:21:41Z",
+      "youtube_video_id": "QHm6Z2sfpnc",
+      "watch_url": "https://www.youtube.com/shorts/QHm6Z2sfpnc",
+      "youtu_be_url": "https://youtu.be/QHm6Z2sfpnc",
+      "shorts_url": "https://www.youtube.com/shorts/QHm6Z2sfpnc",
+      "studio_url": "https://studio.youtube.com/video/QHm6Z2sfpnc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/QHm6Z2sfpnc/hqdefault.jpg",
+      "thumb_text": "FIND PEACE \u00b7 IN THE",
+      "duration_label": "68s",
+      "words": 662
+    },
     {
       "id": "0085",
       "slug": "psalm-37-6-clear-as-the-noonday-prayer",
@@ -4165,17 +4188,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-philippians4v6",
-        "file": "0030-short-philippians4v6.yml",
-        "companion_longform_id": "0030",
-        "scripture": "Philippians 4:6-7",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
       {
         "short": "short-2timothy1v7",
         "file": "0031-short-2timothy1v7.yml",
