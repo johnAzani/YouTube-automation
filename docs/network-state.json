@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T16:46:32Z",
+  "generated_at": "2026-11-12T17:50:29Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 128,
-    "published_longform": 57,
-    "published_shorts": 71,
-    "public_total": 126,
-    "queued_longform": 61,
-    "queued_shorts": 47,
+    "published_total": 130,
+    "published_longform": 58,
+    "published_shorts": 72,
+    "public_total": 128,
+    "queued_longform": 60,
+    "queued_shorts": 46,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": false
@@ -166,32 +166,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 24,
-        "published_longform": 11,
-        "published_shorts": 13,
-        "public_total": 24,
-        "queued_longform": 6,
+        "published_total": 26,
+        "published_longform": 12,
+        "published_shorts": 14,
+        "public_total": 26,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "0085",
-        "title": "Psalm 37:6 Clear as the Noonday Prayer | The Midday Watch",
-        "format": "longform",
-        "youtube_video_id": "nHrsmUn9Kj8",
-        "watch_url": "https://youtu.be/nHrsmUn9Kj8",
-        "published_on": "2026-11-12",
-        "published_at": "2026-11-12T13:24:36Z"
-      },
-      "next_queued_longform": {
         "id": "0086",
         "title": "Psalm 121:5-6 Midday Prayer | The Midday Watch",
-        "words": 2278,
+        "format": "longform",
+        "youtube_video_id": "5DeUVP_OJSQ",
+        "watch_url": "https://youtu.be/5DeUVP_OJSQ",
+        "published_on": "2026-11-12",
+        "published_at": "2026-11-12T17:49:38Z"
+      },
+      "next_queued_longform": {
+        "id": "0087",
+        "title": "Isaiah 49:10 Midday Prayer | The Midday Watch",
+        "words": 1796,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middayisaiah25v4",
-        "scripture": "Isaiah 25:4",
+        "short": "short-middayisaiah32v2",
+        "scripture": "Isaiah 32:2",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -531,6 +531,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0086",
+      "slug": "psalm-121-5-6-midday-prayer",
+      "file": "0086-psalm-121-5-6-midday-prayer.md",
+      "title": "Psalm 121:5-6 Midday Prayer | The Midday Watch",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T17:49:38Z",
+      "youtube_video_id": "5DeUVP_OJSQ",
+      "watch_url": "https://youtu.be/5DeUVP_OJSQ",
+      "youtu_be_url": "https://youtu.be/5DeUVP_OJSQ",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/5DeUVP_OJSQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/5DeUVP_OJSQ/hqdefault.jpg",
+      "thumb_text": "SHADE IN THE",
+      "duration_label": "~16 min",
+      "words": 2278
+    },
+    {
+      "id": "SHORT-MIDDAYISAIAH25V4",
+      "slug": "short-middayisaiah25v4-midday-prayer",
+      "file": "short-middayisaiah25v4-midday-prayer.md",
+      "title": "Say This Isaiah 25:4 Prayer at Noon | At Noon #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T16:52:26Z",
+      "youtube_video_id": "CH8Oh_J7Wrs",
+      "watch_url": "https://www.youtube.com/shorts/CH8Oh_J7Wrs",
+      "youtu_be_url": "https://youtu.be/CH8Oh_J7Wrs",
+      "shorts_url": "https://www.youtube.com/shorts/CH8Oh_J7Wrs",
+      "studio_url": "https://studio.youtube.com/video/CH8Oh_J7Wrs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/CH8Oh_J7Wrs/hqdefault.jpg",
+      "thumb_text": "THE MIDDAY WATCH \u00b7 ISAIAH 25:4",
+      "duration_label": "53s",
+      "words": 586
+    },
     {
       "id": "0062",
       "slug": "2-samuel-23-4-morning-prayer-the-morning-altar",
@@ -3752,19 +3798,6 @@
         "words": 1829
       },
       {
-        "id": "0086",
-        "slug": "psalm-121-5-6-midday-prayer",
-        "file": "0086-psalm-121-5-6-midday-prayer.md",
-        "title": "Psalm 121:5-6 Midday Prayer | The Midday Watch",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 2278
-      },
-      {
         "id": "0087",
         "slug": "isaiah-49-10-midday-prayer",
         "file": "0087-isaiah-49-10-midday-prayer.md",
@@ -4349,17 +4382,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-middayisaiah25v4",
-        "file": "0088-short-middayisaiah25v4.yml",
-        "companion_longform_id": "0088",
-        "scripture": "Isaiah 25:4",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middayisaiah32v2",

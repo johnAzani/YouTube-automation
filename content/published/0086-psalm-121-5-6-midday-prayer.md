@@ -2,7 +2,7 @@
 id: 0086
 title: Psalm 121:5-6 Midday Prayer | The Midday Watch
 slug: psalm-121-5-6-midday-prayer
-status: approved
+status: published
 channel: prayer3
 privacy: public
 format: longform
@@ -76,6 +76,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-12"
+published_at: "2026-11-12T17:49:38Z"
+youtube_video_id: "5DeUVP_OJSQ"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — The Noonday Pause and the Midday Heat
