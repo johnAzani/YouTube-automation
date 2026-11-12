@@ -16,6 +16,13 @@
       "workflow": "keepalive.yml"
     },
     {
+      "late_minutes": 184,
+      "name": "Growth autopilot",
+      "ran_at": "2026-11-12T05:18:35+00:00",
+      "slot": "2026-11-12T02:14:00+00:00",
+      "workflow": "growth-autopilot.yml"
+    },
+    {
       "late_minutes": 173,
       "name": "Autonomous Community Tab Automation",
       "ran_at": "2026-11-11T22:07:09+00:00",
@@ -35,10 +42,17 @@
       "ran_at": "2026-11-11T09:25:52+00:00",
       "slot": "2026-11-11T07:14:00+00:00",
       "workflow": "comments.yml"
+    },
+    {
+      "late_minutes": 124,
+      "name": "Gemini Brain Autonomous Queue Replenishment",
+      "ran_at": "2026-11-12T05:18:37+00:00",
+      "slot": "2026-11-12T03:14:00+00:00",
+      "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-12T05:18:31.200229+00:00",
-  "last_run_at": "2026-11-12T05:17:49+00:00",
+  "generated_at": "2026-11-12T05:20:27.434360+00:00",
+  "last_run_at": "2026-11-12T05:20:05+00:00",
   "on_time": [
     {
       "late_minutes": 114,
