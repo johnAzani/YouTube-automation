@@ -44,8 +44,8 @@
       "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-12T15:14:26.746577+00:00",
-  "last_run_at": "2026-11-12T15:12:23+00:00",
+  "generated_at": "2026-11-12T15:15:51.995457+00:00",
+  "last_run_at": "2026-11-12T15:15:16+00:00",
   "on_time": [
     {
       "late_minutes": 29,
@@ -55,13 +55,20 @@
       "workflow": "monitor.yml"
     },
     {
-      "late_minutes": 25,
+      "late_minutes": 61,
+      "name": "Produce video",
+      "ran_at": "2026-11-12T15:15:16+00:00",
+      "slot": "2026-11-12T14:14:00+00:00",
+      "workflow": "produce.yml"
+    },
+    {
+      "late_minutes": 26,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-12T13:12:37+00:00",
+      "ran_at": "2026-11-12T13:13:20+00:00",
       "slot": "2026-11-12T12:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 2,
+  "silence_minutes": 0,
   "warn_minutes": 120
 }
