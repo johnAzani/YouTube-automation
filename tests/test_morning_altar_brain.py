@@ -225,7 +225,8 @@ class TestWorkflowWiring(unittest.TestCase):
 
         for cid in scheduled_channels():
             self.assertIn(cid, text, f"the brain never replenishes {cid}")
-        self.assertIn("PRAYER2_GEMINI_API_KEY", text)
+        self.assertIn('"prayer2":"PRAYER2_"', text)
+        self.assertIn("format('{0}GEMINI_API_KEY'", text)
         # One command for every channel, parameterised by CHANNEL_ID.
         self.assertIn('--ensure-supply-for "$CHANNEL_ID" --min-publishable 6', text)
         self.assertNotIn("--ensure-supply-for prayer2", text)

@@ -290,17 +290,29 @@ def apply_channel_env(channel_id: str | None = None) -> str:
                 "YOUTUBE_CLIENT_SECRET": profile.secret_name("YOUTUBE_CLIENT_SECRET"),
                 "YOUTUBE_REFRESH_TOKEN": profile.secret_name("YOUTUBE_REFRESH_TOKEN"),
                 "YOUTUBE_PLAYLIST_ID": profile.secret_name("YOUTUBE_PLAYLIST_ID"),
+                "YOUTUBE_EXPECTED_CHANNEL_ID": profile.secret_name("YOUTUBE_CHANNEL_ID"),
                 "GEMINI_API_KEY": profile.secret_name("GEMINI_API_KEY"),
             }
             for canonical, prefixed in mapping.items():
-                if prefixed in os.environ and os.environ[prefixed]:
-                    os.environ[canonical] = os.environ[prefixed]
+                if prefixed in os.environ:
+                    if os.environ[prefixed]:
+                        os.environ[canonical] = os.environ[prefixed]
+                    else:
+                        # An explicitly empty target secret is authoritative:
+                        # never retain a fallback from another channel, even if
+                        # CHANNEL_ID was pre-set by a workflow matrix.
+                        os.environ.pop(canonical, None)
                 elif not already_scoped:
-                    # Missing *or empty* prefixed secrets must not leave a
-                    # different channel's canonical credentials behind. GitHub
-                    # Actions exposes missing secrets as empty environment values.
-                    # Preserve already-mapped workflow credentials only when the
-                    # environment was explicitly scoped to this same channel.
+                    # With no prefix variable, a workflow may already have
+                    # safely mapped canonical values for this exact channel.
+                    # When switching, inherited canonical values are unsafe.
                     os.environ.pop(canonical, None)
+        elif prev_raw and prev_cid != cid:
+            # Canonical values may have been replaced by the prior channel.
+            # There is no separate backup of channel 1's credentials; fail
+            # closed instead of treating those values as the default account.
+            for canonical in ("YOUTUBE_CLIENT_ID", "YOUTUBE_CLIENT_SECRET", "YOUTUBE_REFRESH_TOKEN",
+                              "YOUTUBE_PLAYLIST_ID", "YOUTUBE_EXPECTED_CHANNEL_ID", "GEMINI_API_KEY"):
+                os.environ.pop(canonical, None)
     return cid
 

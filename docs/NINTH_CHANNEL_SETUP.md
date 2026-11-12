@@ -10,22 +10,25 @@ not a verified or reserved handle.
 
 ## Delivery sequence
 
-1. Prepare the brand identity and assets (done; see the brand kit). The owner
-   creates the channel in YouTube Studio or supplies an existing channel when
-   ready, chooses an available handle, and uploads the branding. Do not change
-   another existing channel's branding without identifying it first.
+1. Prepare the brand identity and assets (done; see the brand kit). Follow the
+   previous channel setup process, with the owner completing any Google/YouTube
+   account and authorization steps that require their access. Choose an available
+   handle and upload the branding to the intended new channel; do not assume it
+   already exists or change another channel's branding.
 2. Implement a ninth-channel registry and complete parity work across
    capabilities, channel-specific workflow credentials, queue selection,
    thumbnails, watchdogs, audit and tests. It must fail closed: an unknown or
    missing credential/expected channel ID must never fall back to another
    channel's credentials. Adding secrets alone must not trigger publishing.
-   **The ninth channel is not registered or wired yet.** An initial isolation
-   fix clears inherited canonical credentials when switching channels and the
-   target's prefixed values are missing *or empty*. This does not fix all
-   workflow credential selection: several existing workflows use fallback
-   expressions and must be audited and made fail-closed for the ninth channel.
-   An explicit inactive gate must cover scheduled, manual, repository-dispatch,
-   authoring, and other write-capable paths before registration is deployed.
+   **The ninth channel is not registered or wired yet.** The staged changes
+   strengthen empty-credential isolation, restrict several existing workflow
+   mappings to the selected channel and block unknown or inactive channels in
+   the Produce matrix. Other paths still need review: comments and the manual
+   thumbnail workflow do not both require verified expected channel identity,
+   and an inactive gate must cover authoring and all other write-capable paths.
+   Local tests and workflow linting do not replace testing GitHub Actions or
+   verifying real OAuth credentials. Do not register or activate channel nine
+   until these gaps are addressed.
 3. Prepare unique, scripture-grounded drafts and companion Shorts for owner
    review; verify quotations, factual claims and asset permissions. Mechanical
    checkboxes are not proof of human fact checking or monetization eligibility.

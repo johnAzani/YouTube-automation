@@ -146,7 +146,8 @@ class TestSixthChannelWorkflowWiring(unittest.TestCase):
         self.assertIn("PRAYER6_GEMINI_API_KEY", monitor)
         self.assertIn("PRAYER6_YOUTUBE_REFRESH_TOKEN", growth)
         self.assertIn("PRAYER6_YOUTUBE_REFRESH_TOKEN", community)
-        self.assertIn("PRAYER6_YOUTUBE_REFRESH_TOKEN", set_thumb)
+        self.assertIn('"prayer6":"PRAYER6_"', set_thumb)
+        self.assertIn("format('{0}YOUTUBE_REFRESH_TOKEN'", set_thumb)
 
 
 if __name__ == "__main__":

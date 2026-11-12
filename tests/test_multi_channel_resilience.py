@@ -364,12 +364,18 @@ goes before you until evening falls and brings your labor to peaceful completion
 
         monitor_text = (ROOT / ".github" / "workflows" / "monitor.yml").read_text(encoding="utf-8")
         set_thumb_text = (ROOT / ".github" / "workflows" / "set-thumbnail.yml").read_text(encoding="utf-8")
+        set_thumb = yaml.safe_load(set_thumb_text)
+        token_expression = set_thumb['env']['YOUTUBE_REFRESH_TOKEN']
+        import re
+        mapping_match = re.search(r"fromJSON\('({[^']+})'\)\[inputs.channel\]", token_expression)
+        self.assertIsNotNone(mapping_match)
+        self.assertEqual(json.loads(mapping_match.group(1)),
+                         {cid: profile.secret_prefix for cid, profile in CHANNELS.items()})
         for cid, profile in CHANNELS.items():
             self.assertIn(cid, set_thumb_text, f"set-thumbnail.yml missing channel option {cid}")
             prefix = (profile.secret_prefix or "").strip().rstrip("_")
             token_var = f"{prefix}_YOUTUBE_REFRESH_TOKEN" if prefix else "YOUTUBE_REFRESH_TOKEN"
             self.assertIn(token_var, monitor_text, f"monitor.yml missing {token_var} for {cid}")
-            self.assertIn(token_var, set_thumb_text, f"set-thumbnail.yml missing {token_var} for {cid}")
 
     def test_growth_community_and_supervisor_workflows_are_multi_channel_and_push_safe(self):
         """Pin #1 (3-channel growth-autopilot) and #2 (isolated push & fresh-main supervisor)."""

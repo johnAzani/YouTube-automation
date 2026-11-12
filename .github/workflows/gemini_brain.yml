@@ -84,7 +84,7 @@ jobs:
     env:
       CHANNEL_ID: ${{ matrix.channel }}
       # Each channel's authoring uses its own Gemini project/quota pool.
-      GEMINI_API_KEY: ${{ matrix.channel == 'prayer8' && secrets.PRAYER8_GEMINI_API_KEY || (matrix.channel == 'prayer7' && secrets.PRAYER7_GEMINI_API_KEY || (matrix.channel == 'prayer6' && secrets.PRAYER6_GEMINI_API_KEY || (matrix.channel == 'prayer5' && secrets.PRAYER5_GEMINI_API_KEY || (matrix.channel == 'prayer4' && secrets.PRAYER4_GEMINI_API_KEY || (matrix.channel == 'prayer3' && secrets.PRAYER3_GEMINI_API_KEY || (matrix.channel == 'prayer2' && secrets.PRAYER2_GEMINI_API_KEY || secrets.GEMINI_API_KEY)))))) }}
+      GEMINI_API_KEY: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8"]'), matrix.channel) && secrets[format('{0}GEMINI_API_KEY', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] || '' }}
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
