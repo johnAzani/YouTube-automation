@@ -1,0 +1,316 @@
+{
+  "key": "short-healingphilippians4v6",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "PEACE BEYOND UNDERSTANDING",
+    "HEALING PRAYER & RESTORATION"
+  ],
+  "poster": [
+    "THE HEALING BALM",
+    "PHILIPPIANS 4:6-7",
+    "RECEIVE GOD'S HEALING PEACE",
+    "REST IN HIS PRESENCE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters shimmering in soft morning light",
+    "warm golden sanctuary light rays glowing in peaceful calm room",
+    "white dove flying gently over calm turquoise ocean horizon",
+    "serene turquoise mountain lake under soft glowing golden sunlight",
+    "golden sunlight beaming through ethereal misty sanctuary leaves",
+    "placid turquoise water surface with gentle ripples in warm light"
+  ],
+  "scenes": [
+    {
+      "a": "Welcome to The Healing Balm.",
+      "img": "short-healingphilippians4v6-scene-01.jpg",
+      "kicker": "PHILIPPIANS 4:6-7",
+      "sub": "BRING YOUR BURDENS TO GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Release all anxiety into His gentle hands",
+      "img": "short-healingphilippians4v6-scene-02.jpg",
+      "kicker": "PHILIPPIANS 4:6-7",
+      "sub": "RELEASE YOUR ANXIETY TODAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Do not be anxious about anything",
+      "img": "short-healingphilippians4v6-scene-03.jpg",
+      "kicker": "PHILIPPIANS 4:6",
+      "sub": "PRAYER AND THANKSGIVING",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "And the peace of God, which transcends all understanding",
+      "img": "short-healingphilippians4v6-scene-04.jpg",
+      "kicker": "PHILIPPIANS 4:7",
+      "sub": "HIS PEACE GUARDS YOUR HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Heavenly Father, pour out Your restoring grace.",
+      "img": "short-healingphilippians4v6-scene-05.jpg",
+      "kicker": "HEALING PRAYER",
+      "sub": "SOOTHE EVERY WOUNDED SOUL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Subscribe to join us daily in God's healing presence.",
+      "img": "short-healingphilippians4v6-scene-06.jpg",
+      "kicker": "THE HEALING BALM",
+      "sub": "SUBSCRIBE FOR DAILY PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "Welcome to The Healing Balm. Bring every weary burden and broken place before the Lord today."
+    ],
+    [
+      10,
+      22,
+      "Release all anxiety into His gentle hands, for His Word reminds us in Philippians four verses six and seven:"
+    ],
+    [
+      22,
+      38,
+      "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God."
+    ],
+    [
+      38,
+      54,
+      "And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus."
+    ],
+    [
+      54,
+      70,
+      "Heavenly Father, pour out Your restoring grace. Heal every weary body, soothe every wounded soul, and flood every heart with divine tranquility."
+    ],
+    [
+      70,
+      82,
+      "May His supernatural peace envelope your mind right now. Subscribe to join us daily in God's healing presence."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "WELCOME TO THE HEALING BALM",
+        "BRING EVERY WEARY BURDEN",
+        "BEFORE THE LORD TODAY"
+      ],
+      [
+        "HEALING BALM",
+        "WEARY BURDEN"
+      ],
+      "PHILIPPIANS 4:6-7"
+    ],
+    [
+      10,
+      22,
+      [
+        "RELEASE ALL ANXIETY",
+        "INTO HIS GENTLE HANDS",
+        "PHILIPPIANS 4:6-7"
+      ],
+      [
+        "RELEASE",
+        "ANXIETY"
+      ],
+      "PHILIPPIANS 4:6-7"
+    ],
+    [
+      22,
+      38,
+      [
+        "DO NOT BE ANXIOUS",
+        "BY PRAYER AND PETITION",
+        "PRESENT REQUESTS TO GOD"
+      ],
+      [
+        "NOT BE ANXIOUS",
+        "PRAYER"
+      ],
+      "PHILIPPIANS 4:6"
+    ],
+    [
+      38,
+      54,
+      [
+        "THE PEACE OF GOD",
+        "TRANSCENDS ALL UNDERSTANDING",
+        "GUARD YOUR HEARTS AND MINDS"
+      ],
+      [
+        "PEACE OF GOD",
+        "GUARD YOUR HEARTS"
+      ],
+      "PHILIPPIANS 4:7"
+    ],
+    [
+      54,
+      70,
+      [
+        "POUR OUT YOUR RESTORING GRACE",
+        "HEAL EVERY WEARY BODY",
+        "DIVINE TRANQUILITY"
+      ],
+      [
+        "RESTORING GRACE",
+        "HEAL"
+      ],
+      "PHILIPPIANS 4:6-7"
+    ],
+    [
+      70,
+      82,
+      [
+        "SUPERNATURAL PEACE ENVELOPE YOU",
+        "SUBSCRIBE TO JOIN US DAILY",
+        "IN GOD'S HEALING PRESENCE"
+      ],
+      [
+        "SUPERNATURAL PEACE",
+        "SUBSCRIBE"
+      ],
+      "PHILIPPIANS 4:6-7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Welcome to The Healing Balm.",
+      "kind": "phrase",
+      "words": [
+        "WELCOME",
+        "HEALING BALM"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Bring every weary burden and broken place before the Lord today.",
+      "kind": "phrase",
+      "words": [
+        "WEARY BURDEN",
+        "BEFORE THE LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Release all anxiety into His gentle hands",
+      "kind": "phrase",
+      "words": [
+        "RELEASE",
+        "ANXIETY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Do not be anxious about anything",
+      "kind": "phrase",
+      "words": [
+        "NOT BE ANXIOUS",
+        "ANYTHING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "present your requests to God.",
+      "kind": "phrase",
+      "words": [
+        "PRESENT REQUESTS",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And the peace of God, which transcends all understanding",
+      "kind": "phrase",
+      "words": [
+        "PEACE OF GOD",
+        "TRANSCENDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "guard your hearts and your minds in Christ Jesus.",
+      "kind": "phrase",
+      "words": [
+        "GUARD YOUR HEARTS",
+        "CHRIST JESUS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, pour out Your restoring grace.",
+      "kind": "phrase",
+      "words": [
+        "RESTORING GRACE",
+        "HEAVENLY FATHER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heal every weary body, soothe every wounded soul",
+      "kind": "phrase",
+      "words": [
+        "HEAL",
+        "SOOTHE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to join us daily in God's healing presence.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "HEALING PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Philippians 4:6-7"
+}

@@ -1,0 +1,328 @@
+{
+  "key": "short-healingmalachi4v2",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "HEALING IN HIS WINGS",
+    "REST FOR YOUR SOUL"
+  ],
+  "poster": [
+    "THE HEALING BALM",
+    "A PRAYER FOR RESTORATION",
+    "MALACHI 4:2",
+    "RECEIVE GOD'S PEACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters gently flowing in golden morning light",
+    "warm golden sanctuary light soft glowing peaceful atmosphere",
+    "white dove soaring above calm turquoise water morning rays",
+    "peaceful stream with warm golden sunbeams breaking through forest",
+    "warm golden sanctuary glow cinematic serene temple interior soft light",
+    "calm turquoise lake reflection under peaceful golden sky",
+    "white dove resting in soft warm golden light quiet peace"
+  ],
+  "scenes": [
+    {
+      "a": "Bring every weary burden and healing need before the Lord today, for He cares deeply for your soul.",
+      "img": "short-healingmalachi4v2-scene-01.jpg",
+      "kicker": "MALACHI 4:2",
+      "sub": "BRING YOUR WEARY BURDENS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In your quiet moments of pain, remember the timeless promise written in Malachi four, verse two:",
+      "img": "short-healingmalachi4v2-scene-02.jpg",
+      "kicker": "MALACHI 4:2",
+      "sub": "REMEMBER GOD'S PROMISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "But unto you that fear my name shall the Sun of righteousness arise with healing in his wings.",
+      "img": "short-healingmalachi4v2-scene-03.jpg",
+      "kicker": "MALACHI 4:2",
+      "sub": "HEALING IN HIS WINGS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, we pray for gentle restoration to flow through every broken area of this weary body and heart.",
+      "img": "short-healingmalachi4v2-scene-04.jpg",
+      "kicker": "MALACHI 4:2",
+      "sub": "GENTLE RESTORATION",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Touch every hidden hurt with Your warm golden light and cover this precious life with Your peaceful presence.",
+      "img": "short-healingmalachi4v2-scene-05.jpg",
+      "kicker": "MALACHI 4:2",
+      "sub": "WARM GOLDEN LIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "May Your calm living waters wash away all fear, sorrow, and exhaustion tonight.",
+      "img": "short-healingmalachi4v2-scene-06.jpg",
+      "kicker": "MALACHI 4:2",
+      "sub": "CALM LIVING WATERS",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "If this restoration prayer brought rest to your soul, subscribe to join us at The Healing Balm. Amen.",
+      "img": "short-healingmalachi4v2-scene-07.jpg",
+      "kicker": "MALACHI 4:2",
+      "sub": "THE HEALING BALM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Bring every weary burden and healing need before the Lord today, for He cares deeply for your soul."
+    ],
+    [
+      8,
+      16,
+      "In your quiet moments of pain, remember the timeless promise written in Malachi four, verse two:"
+    ],
+    [
+      16,
+      25,
+      "But unto you that fear my name shall the Sun of righteousness arise with healing in his wings."
+    ],
+    [
+      25,
+      33,
+      "Heavenly Father, we pray for gentle restoration to flow through every broken area of this weary body and heart."
+    ],
+    [
+      33,
+      42,
+      "Touch every hidden hurt with Your warm golden light and cover this precious life with Your peaceful presence."
+    ],
+    [
+      42,
+      50,
+      "May Your calm living waters wash away all fear, sorrow, and exhaustion tonight."
+    ],
+    [
+      50,
+      58,
+      "If this restoration prayer brought rest to your soul, subscribe to join us at The Healing Balm. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "BRING EVERY WEARY BURDEN",
+        "AND HEALING NEED BEFORE THE LORD",
+        "TODAY FOR HE CARES DEEPLY",
+        "FOR YOUR SOUL"
+      ],
+      [
+        "WEARY",
+        "HEALING",
+        "DEEPLY"
+      ],
+      "MALACHI 4 : 2"
+    ],
+    [
+      8,
+      16,
+      [
+        "IN YOUR QUIET MOMENTS OF PAIN",
+        "REMEMBER THE TIMELESS PROMISE",
+        "WRITTEN IN MALACHI FOUR VERSE TWO"
+      ],
+      [
+        "QUIET",
+        "PROMISE"
+      ],
+      "MALACHI 4 : 2"
+    ],
+    [
+      16,
+      25,
+      [
+        "BUT UNTO YOU THAT FEAR MY NAME",
+        "SHALL THE SUN OF RIGHTEOUSNESS ARISE",
+        "WITH HEALING IN HIS WINGS"
+      ],
+      [
+        "SUN",
+        "RIGHTEOUSNESS",
+        "HEALING"
+      ],
+      "MALACHI 4 : 2"
+    ],
+    [
+      25,
+      33,
+      [
+        "HEAVENLY FATHER WE PRAY",
+        "FOR GENTLE RESTORATION TO FLOW",
+        "THROUGH EVERY BROKEN AREA",
+        "OF THIS WEARY BODY AND HEART"
+      ],
+      [
+        "GENTLE",
+        "RESTORATION",
+        "HEART"
+      ],
+      "MALACHI 4 : 2"
+    ],
+    [
+      33,
+      42,
+      [
+        "TOUCH EVERY HIDDEN HURT WITH",
+        "YOUR WARM GOLDEN LIGHT AND COVER",
+        "THIS PRECIOUS LIFE WITH YOUR",
+        "PEACEFUL PRESENCE"
+      ],
+      [
+        "HIDDEN",
+        "GOLDEN",
+        "PEACEFUL"
+      ],
+      "MALACHI 4 : 2"
+    ],
+    [
+      42,
+      50,
+      [
+        "MAY YOUR CALM LIVING WATERS",
+        "WASH AWAY ALL FEAR SORROW",
+        "AND EXHAUSTION TONIGHT"
+      ],
+      [
+        "LIVING",
+        "WATERS",
+        "FEAR"
+      ],
+      "MALACHI 4 : 2"
+    ],
+    [
+      50,
+      58,
+      [
+        "IF THIS RESTORATION PRAYER BROUGHT",
+        "REST TO YOUR SOUL SUBSCRIBE",
+        "TO JOIN US AT THE HEALING BALM",
+        "AMEN"
+      ],
+      [
+        "RESTORATION",
+        "REST",
+        "SUBSCRIBE"
+      ],
+      "MALACHI 4 : 2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Bring every weary burden and healing need before the Lord today, for He cares deeply for your soul.",
+      "kind": "phrase",
+      "words": [
+        "WEARY",
+        "HEALING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In your quiet moments of pain, remember the timeless promise written in Malachi four, verse two:",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "PROMISE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "But unto you that fear my name shall the Sun of righteousness arise with healing in his wings.",
+      "kind": "phrase",
+      "words": [
+        "SUN",
+        "RIGHTEOUSNESS",
+        "HEALING"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, we pray for gentle restoration to flow through every broken area of this weary body and heart.",
+      "kind": "phrase",
+      "words": [
+        "GENTLE",
+        "RESTORATION"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Touch every hidden hurt with Your warm golden light and cover this precious life with Your peaceful presence.",
+      "kind": "phrase",
+      "words": [
+        "GOLDEN",
+        "PEACEFUL"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "May Your calm living waters wash away all fear, sorrow, and exhaustion tonight.",
+      "kind": "phrase",
+      "words": [
+        "LIVING",
+        "WATERS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "If this restoration prayer brought rest to your soul, subscribe to join us at The Healing Balm. Amen.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "SUBSCRIBE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Malachi 4:2"
+}
