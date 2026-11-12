@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T23:42:38Z",
+  "generated_at": "2026-11-12T23:52:56Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 142,
+    "published_total": 143,
     "published_longform": 64,
-    "published_shorts": 78,
-    "public_total": 140,
+    "published_shorts": 79,
+    "public_total": 141,
     "queued_longform": 55,
-    "queued_shorts": 41,
+    "queued_shorts": 40,
     "automations_ok": 9,
     "automations_total": 10,
     "network_healthy": false
@@ -166,32 +166,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 26,
+        "published_total": 27,
         "published_longform": 12,
-        "published_shorts": 14,
-        "public_total": 26,
+        "published_shorts": 15,
+        "public_total": 27,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 2
       },
       "latest_video": {
-        "id": "0086",
-        "title": "Psalm 121:5-6 Midday Prayer | The Midday Watch",
-        "format": "longform",
-        "youtube_video_id": "5DeUVP_OJSQ",
-        "watch_url": "https://youtu.be/5DeUVP_OJSQ",
+        "id": "SHORT-MIDDAYISAIAH32V2",
+        "title": "Say This Isaiah 32:2 Prayer at Noon | Find Rest #Shorts",
+        "format": "short",
+        "youtube_video_id": "27iciJCsTJg",
+        "watch_url": "https://www.youtube.com/shorts/27iciJCsTJg",
         "published_on": "2026-11-12",
-        "published_at": "2026-11-12T17:49:38Z"
+        "published_at": "2026-11-12T23:50:38Z"
       },
       "next_queued_longform": {
         "id": "0087",
         "title": "Isaiah 49:10 Midday Prayer | The Midday Watch",
         "words": 1796,
-        "status": "approved"
+        "status": "quota_paused"
       },
       "next_queued_short": {
-        "short": "short-middayisaiah32v2",
-        "scripture": "Isaiah 32:2",
+        "short": "short-middaygalatians6v9",
+        "scripture": "Galatians 6:9",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -613,6 +613,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYISAIAH32V2",
+      "slug": "short-middayisaiah32v2-midday-prayer",
+      "file": "short-middayisaiah32v2-midday-prayer.md",
+      "title": "Say This Isaiah 32:2 Prayer at Noon | Find Rest #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T23:50:38Z",
+      "youtube_video_id": "27iciJCsTJg",
+      "watch_url": "https://www.youtube.com/shorts/27iciJCsTJg",
+      "youtu_be_url": "https://youtu.be/27iciJCsTJg",
+      "shorts_url": "https://www.youtube.com/shorts/27iciJCsTJg",
+      "studio_url": "https://studio.youtube.com/video/27iciJCsTJg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/27iciJCsTJg/hqdefault.jpg",
+      "thumb_text": "MIDDAY PRAYER \u00b7 ISAIAH 32:2",
+      "duration_label": "53s",
+      "words": 590
+    },
     {
       "id": "0063",
       "slug": "hosea-6-3-his-going-forth-is-prepared-as-the-morning",
@@ -4149,7 +4172,7 @@
         "title": "Isaiah 49:10 Midday Prayer | The Midday Watch",
         "channel": "prayer3",
         "channel_name": "The Midday Watch",
-        "status": "approved",
+        "status": "quota_paused",
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,
@@ -4664,17 +4687,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-middayisaiah32v2",
-        "file": "0089-short-middayisaiah32v2.yml",
-        "companion_longform_id": "0089",
-        "scripture": "Isaiah 32:2",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaygalatians6v9",
