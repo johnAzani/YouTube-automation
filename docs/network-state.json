@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T02:33:45Z",
+  "generated_at": "2026-11-12T03:05:43Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 110,
-    "published_longform": 49,
-    "published_shorts": 61,
-    "public_total": 108,
-    "queued_longform": 48,
-    "queued_shorts": 32,
+    "published_total": 112,
+    "published_longform": 50,
+    "published_shorts": 62,
+    "public_total": 110,
+    "queued_longform": 47,
+    "queued_shorts": 31,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -32,32 +32,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 29,
-        "published_longform": 10,
-        "published_shorts": 19,
-        "public_total": 28,
-        "queued_longform": 17,
+        "published_total": 31,
+        "published_longform": 11,
+        "published_shorts": 20,
+        "public_total": 30,
+        "queued_longform": 16,
         "queued_other": 5,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "0017",
-        "title": "Psalm 4:8 Bedtime Prayer | In Peace I Will Lie Down & Sleep",
-        "format": "longform",
-        "youtube_video_id": "fiPJAX_pNgs",
-        "watch_url": "https://youtu.be/fiPJAX_pNgs",
-        "published_on": "2026-11-11",
-        "published_at": "2026-11-11T21:57:13Z"
-      },
-      "next_queued_longform": {
         "id": "0019",
         "title": "Psalm 16:7-8 Night Prayer | God's Quiet Counsel Before Sleep",
-        "words": 958,
+        "format": "longform",
+        "youtube_video_id": "nVLhEVO7ROw",
+        "watch_url": "https://youtu.be/nVLhEVO7ROw",
+        "published_on": "2026-11-12",
+        "published_at": "2026-11-12T03:05:00Z"
+      },
+      "next_queued_longform": {
+        "id": "0020",
+        "title": "Psalm 18:2 Night Prayer for Strength | My Rock & Fortress",
+        "words": 902,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-matthew11v28",
-        "scripture": "Matthew 11:28-30",
+        "short": "short-john14v27",
+        "scripture": "John 14:27",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -491,6 +491,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0019",
+      "slug": "psalm-16-7-8-counsel-in-the-night-seasons",
+      "file": "0019-psalm-16-7-8-counsel-in-the-night-seasons.md",
+      "title": "Psalm 16:7-8 Night Prayer | God's Quiet Counsel Before Sleep",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T03:05:00Z",
+      "youtube_video_id": "nVLhEVO7ROw",
+      "watch_url": "https://youtu.be/nVLhEVO7ROw",
+      "youtu_be_url": "https://youtu.be/nVLhEVO7ROw",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/nVLhEVO7ROw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/nVLhEVO7ROw/hqdefault.jpg",
+      "thumb_text": "GUIDED BY NIGHT",
+      "duration_label": "~7 min",
+      "words": 958
+    },
+    {
+      "id": "SHORT-MATTHEW11V28",
+      "slug": "short-matthew11v28-pre-sleep-prayer",
+      "file": "short-matthew11v28-pre-sleep-prayer.md",
+      "title": "Say This Matthew 11:28-30 Prayer Before You Sleep | The Secret Place #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T02:38:05Z",
+      "youtube_video_id": "GBNCiP8UTS8",
+      "watch_url": "https://www.youtube.com/shorts/GBNCiP8UTS8",
+      "youtu_be_url": "https://youtu.be/GBNCiP8UTS8",
+      "shorts_url": "https://www.youtube.com/shorts/GBNCiP8UTS8",
+      "studio_url": "https://studio.youtube.com/video/GBNCiP8UTS8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/GBNCiP8UTS8/hqdefault.jpg",
+      "thumb_text": "LAY DOWN YOUR BURDENS \u00b7 A QUIET BEDTIME PRAYER",
+      "duration_label": "58s",
+      "words": 634
+    },
     {
       "id": "0501",
       "slug": "deuteronomy-28-12-provision-prayer",
@@ -3025,19 +3071,6 @@
   "queues": {
     "longform": [
       {
-        "id": "0019",
-        "slug": "psalm-16-7-8-counsel-in-the-night-seasons",
-        "file": "0019-psalm-16-7-8-counsel-in-the-night-seasons.md",
-        "title": "Psalm 16:7-8 Night Prayer | God's Quiet Counsel Before Sleep",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 958
-      },
-      {
         "id": "0020",
         "slug": "psalm-18-2-my-rock-my-fortress-my-deliverer",
         "file": "0020-psalm-18-2-my-rock-my-fortress-my-deliverer.md",
@@ -3650,17 +3683,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-matthew11v28",
-        "file": "0028-short-matthew11v28.yml",
-        "companion_longform_id": "0028",
-        "scripture": "Matthew 11:28-30",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
       {
         "short": "short-john14v27",
         "file": "0029-short-john14v27.yml",

@@ -2,7 +2,7 @@
 id: 0019
 title: Psalm 16:7-8 Night Prayer | God's Quiet Counsel Before Sleep
 slug: psalm-16-7-8-counsel-in-the-night-seasons
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -85,6 +85,12 @@ originality:
   ai_disclosure: false
 seo_hook: Pray this Psalm 16:7-8 KJV night prayer before sleep to receive God's gentle counsel, steady peace, and unshakable rest tonight.
 category_id: '22'
+published_on: "2026-11-12"
+published_at: "2026-11-12T03:05:00Z"
+youtube_video_id: "nVLhEVO7ROw"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — I Will Bless the LORD, Who Hath Given Me Counsel (Verse 7a)
