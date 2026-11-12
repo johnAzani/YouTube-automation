@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T03:14:05Z",
+  "generated_at": "2026-11-12T04:21:33Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 113,
-    "published_longform": 50,
-    "published_shorts": 63,
-    "public_total": 111,
-    "queued_longform": 48,
-    "queued_shorts": 31,
+    "published_total": 115,
+    "published_longform": 51,
+    "published_shorts": 64,
+    "public_total": 113,
+    "queued_longform": 47,
+    "queued_shorts": 30,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -233,32 +233,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 9,
-        "published_longform": 5,
-        "published_shorts": 4,
-        "public_total": 9,
-        "queued_longform": 5,
+        "published_total": 11,
+        "published_longform": 6,
+        "published_shorts": 5,
+        "public_total": 11,
+        "queued_longform": 4,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0204",
-        "title": "Exodus 12:29-31 Midnight Prayer | The Midnight Watch",
-        "format": "longform",
-        "youtube_video_id": "VmK6eRMwpHU",
-        "watch_url": "https://youtu.be/VmK6eRMwpHU",
-        "published_on": "2026-11-11",
-        "published_at": "2026-11-11T23:53:16Z"
-      },
-      "next_queued_longform": {
         "id": "0205",
         "title": "Zechariah 2:5 Midnight Prayer | The Midnight Watch",
-        "words": 1377,
+        "format": "longform",
+        "youtube_video_id": "qGFqRAbJKX0",
+        "watch_url": "https://youtu.be/qGFqRAbJKX0",
+        "published_on": "2026-11-12",
+        "published_at": "2026-11-12T04:20:51Z"
+      },
+      "next_queued_longform": {
+        "id": "0206",
+        "title": "2 Corinthians 10:3-5 Midnight Prayer | The Midnight Watch",
+        "words": 1300,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightexodus12v29",
-        "scripture": "Exodus 12:29-31",
+        "short": "short-midnightzechariah2v5",
+        "scripture": "Zechariah 2:5",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -491,6 +491,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0205",
+      "slug": "zechariah-2-5-midnight-prayer-the-midnight-watch",
+      "file": "0205-zechariah-2-5-midnight-prayer-the-midnight-watch.md",
+      "title": "Zechariah 2:5 Midnight Prayer | The Midnight Watch",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T04:20:51Z",
+      "youtube_video_id": "qGFqRAbJKX0",
+      "watch_url": "https://youtu.be/qGFqRAbJKX0",
+      "youtu_be_url": "https://youtu.be/qGFqRAbJKX0",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/qGFqRAbJKX0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/qGFqRAbJKX0/hqdefault.jpg",
+      "thumb_text": "WALL OF FIRE",
+      "duration_label": "~9 min",
+      "words": 1377
+    },
+    {
+      "id": "SHORT-MIDNIGHTEXODUS12V29",
+      "slug": "short-midnightexodus12v29-midnight-prayer",
+      "file": "short-midnightexodus12v29-midnight-prayer.md",
+      "title": "Pray This Exodus 12:29-31 Midnight Prayer | Stand In Prayer #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T03:21:28Z",
+      "youtube_video_id": "wygbcZLPSU8",
+      "watch_url": "https://www.youtube.com/shorts/wygbcZLPSU8",
+      "youtu_be_url": "https://youtu.be/wygbcZLPSU8",
+      "shorts_url": "https://www.youtube.com/shorts/wygbcZLPSU8",
+      "studio_url": "https://studio.youtube.com/video/wygbcZLPSU8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/wygbcZLPSU8/hqdefault.jpg",
+      "thumb_text": "THE MIDNIGHT WATCH \u00b7 EXODUS 12:29-31",
+      "duration_label": "52s",
+      "words": 461
+    },
     {
       "id": "SHORT-MORNINGHOSEA6V3",
       "slug": "short-morninghosea6v3-sunrise-prayer",
@@ -3445,19 +3491,6 @@
         "words": 1463
       },
       {
-        "id": "0205",
-        "slug": "zechariah-2-5-midnight-prayer-the-midnight-watch",
-        "file": "0205-zechariah-2-5-midnight-prayer-the-midnight-watch.md",
-        "title": "Zechariah 2:5 Midnight Prayer | The Midnight Watch",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1377
-      },
-      {
         "id": "0206",
         "slug": "weapons-mighty-through-god-to-pull-down-strongholds",
         "file": "0206-weapons-mighty-through-god-to-pull-down-strongholds.md",
@@ -3817,17 +3850,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightexodus12v29",
-        "file": "0204-short-midnightexodus12v29.yml",
-        "companion_longform_id": "0204",
-        "scripture": "Exodus 12:29-31",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightzechariah2v5",

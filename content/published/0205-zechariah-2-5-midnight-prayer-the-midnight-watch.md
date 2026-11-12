@@ -2,7 +2,7 @@
 id: '0205'
 title: Zechariah 2:5 Midnight Prayer | The Midnight Watch
 slug: zechariah-2-5-midnight-prayer-the-midnight-watch
-status: approved
+status: published
 channel: prayer4
 privacy: public
 format: longform
@@ -77,6 +77,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-12"
+published_at: "2026-11-12T04:20:51Z"
+youtube_video_id: "qGFqRAbJKX0"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Rising at the Midnight Hour
