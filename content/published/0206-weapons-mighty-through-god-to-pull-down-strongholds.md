@@ -2,7 +2,7 @@
 id: '0206'
 title: 2 Corinthians 10:3-5 Midnight Prayer | The Midnight Watch
 slug: weapons-mighty-through-god-to-pull-down-strongholds
-status: approved
+status: published
 channel: prayer4
 privacy: public
 format: longform
@@ -74,6 +74,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-12"
+published_at: "2026-11-12T18:55:25Z"
+youtube_video_id: "KLPvoXQOTI0"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — The Midnight Watchman’s Call

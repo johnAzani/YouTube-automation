@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T17:50:29Z",
+  "generated_at": "2026-11-12T18:56:23Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 130,
-    "published_longform": 58,
-    "published_shorts": 72,
-    "public_total": 128,
-    "queued_longform": 60,
-    "queued_shorts": 46,
+    "published_total": 132,
+    "published_longform": 59,
+    "published_shorts": 73,
+    "public_total": 130,
+    "queued_longform": 59,
+    "queued_shorts": 45,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": false
@@ -233,32 +233,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 11,
-        "published_longform": 6,
-        "published_shorts": 5,
-        "public_total": 11,
-        "queued_longform": 6,
+        "published_total": 13,
+        "published_longform": 7,
+        "published_shorts": 6,
+        "public_total": 13,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0205",
-        "title": "Zechariah 2:5 Midnight Prayer | The Midnight Watch",
-        "format": "longform",
-        "youtube_video_id": "qGFqRAbJKX0",
-        "watch_url": "https://youtu.be/qGFqRAbJKX0",
-        "published_on": "2026-11-12",
-        "published_at": "2026-11-12T04:20:51Z"
-      },
-      "next_queued_longform": {
         "id": "0206",
         "title": "2 Corinthians 10:3-5 Midnight Prayer | The Midnight Watch",
-        "words": 1300,
+        "format": "longform",
+        "youtube_video_id": "KLPvoXQOTI0",
+        "watch_url": "https://youtu.be/KLPvoXQOTI0",
+        "published_on": "2026-11-12",
+        "published_at": "2026-11-12T18:55:25Z"
+      },
+      "next_queued_longform": {
+        "id": "0207",
+        "title": "Ephesians 6:10-18 Midnight Prayer | The Midnight Watch",
+        "words": 1669,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightzechariah2v5",
-        "scripture": "Zechariah 2:5",
+        "short": "short-midnight2corinthians10v3",
+        "scripture": "2 Corinthians 10:3-5",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -531,6 +531,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0206",
+      "slug": "weapons-mighty-through-god-to-pull-down-strongholds",
+      "file": "0206-weapons-mighty-through-god-to-pull-down-strongholds.md",
+      "title": "2 Corinthians 10:3-5 Midnight Prayer | The Midnight Watch",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T18:55:25Z",
+      "youtube_video_id": "KLPvoXQOTI0",
+      "watch_url": "https://youtu.be/KLPvoXQOTI0",
+      "youtu_be_url": "https://youtu.be/KLPvoXQOTI0",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/KLPvoXQOTI0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/KLPvoXQOTI0/hqdefault.jpg",
+      "thumb_text": "MIGHTY THROUGH GOD",
+      "duration_label": "~9 min",
+      "words": 1300
+    },
+    {
+      "id": "SHORT-MIDNIGHTZECHARIAH2V5",
+      "slug": "short-midnightzechariah2v5-midnight-prayer",
+      "file": "short-midnightzechariah2v5-midnight-prayer.md",
+      "title": "Pray This Zechariah 2:5 Midnight Prayer | Zechariah 2:5 #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T17:58:30Z",
+      "youtube_video_id": "E0_JQDOIRdE",
+      "watch_url": "https://www.youtube.com/shorts/E0_JQDOIRdE",
+      "youtu_be_url": "https://youtu.be/E0_JQDOIRdE",
+      "shorts_url": "https://www.youtube.com/shorts/E0_JQDOIRdE",
+      "studio_url": "https://studio.youtube.com/video/E0_JQDOIRdE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/E0_JQDOIRdE/hqdefault.jpg",
+      "thumb_text": "A WALL OF FIRE \u00b7 ROUND ABOUT HER",
+      "duration_label": "58s",
+      "words": 528
+    },
     {
       "id": "0086",
       "slug": "psalm-121-5-6-midday-prayer",
@@ -3863,19 +3909,6 @@
         "words": 1120
       },
       {
-        "id": "0206",
-        "slug": "weapons-mighty-through-god-to-pull-down-strongholds",
-        "file": "0206-weapons-mighty-through-god-to-pull-down-strongholds.md",
-        "title": "2 Corinthians 10:3-5 Midnight Prayer | The Midnight Watch",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1300
-      },
-      {
         "id": "0207",
         "slug": "ephesians-6-10-18-midnight-prayer",
         "file": "0207-ephesians-6-10-18-midnight-prayer.md",
@@ -4415,17 +4448,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightzechariah2v5",
-        "file": "0205-short-midnightzechariah2v5.yml",
-        "companion_longform_id": "0205",
-        "scripture": "Zechariah 2:5",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnight2corinthians10v3",
