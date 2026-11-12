@@ -78,7 +78,9 @@ published_at: "2026-11-12T01:21:38Z"
 youtube_video_id: "QG1CTgF0Ju0"
 metadata_revision: "selar-seo-v1"
 thumbnail_pending: true
-thumbnail_error: "not_requested"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCj-brsBz9FNO6sZ3NLIzjvQ; auth_channel_title=The Healing Balm; long_uploads_status=eligible; video_channel_id=UCj-brsBz9FNO6sZ3NLIzjvQ; video_channel_title=The Healing Balm; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_retry_after: "2026-11-19T02:32:43Z"
+thumbnail_retry_reason: "permission"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith

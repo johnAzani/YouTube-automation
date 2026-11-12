@@ -20,10 +20,13 @@ height: 1280
 duration_seconds: 62.72
 scenes_verified: 7
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCkWrcJB6-q_K0r8KSja8ALw; auth_channel_title=The Provision Table; long_uploads_status=el"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCkWrcJB6-q_K0r8KSja8ALw; auth_channel_title=The Provision Table; long_uploads_status=eligible; video_channel_id=UCkWrcJB6-q_K0r8KSja8ALw; video_channel_title=The Provision Table; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE PROVISION TABLE", "BLESS OUR HANDS", "DEUTERONOMY 28:12", "PROVISION PRAYER"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-19T02:32:47Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Place the honest work of your hands, your studies, and your household before Almighty God today. Deuteronomy twenty-eight verse twelve promises, The LORD shall open unto thee his good treasure, the heaven to give the rain unto thy land in his season, and to bless all the work of thine hand. Proverbs three verses five and six counsels, In all thy ways acknowledge him, and he shall direct thy paths. Where honest effort has waited through dry seasons, heaven's appointed rain never arrives too late. Lord of wisdom, sharpen our discernment, guard our homes from debt, and crown diligent labour with fruitfulness. Walk uprightly today knowing the Lord gives grace and withholds no good thing from faithful stewards. Type Amen and subscribe to The Provision Table to walk in God's daily wisdom and provision.
