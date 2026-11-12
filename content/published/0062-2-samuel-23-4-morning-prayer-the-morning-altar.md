@@ -2,7 +2,7 @@
 id: '0062'
 title: 2 Samuel 23:4 Morning Prayer | The Morning Altar
 slug: 2-samuel-23-4-morning-prayer-the-morning-altar
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -72,6 +72,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-12"
+published_at: "2026-11-12T16:45:30Z"
+youtube_video_id: "SsWigDMo520"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — The First Light of the Morning

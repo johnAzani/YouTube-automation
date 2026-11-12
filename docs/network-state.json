@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-12T16:38:46Z",
+  "generated_at": "2026-11-12T16:46:32Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
-    "channels_provisioned": 10,
-    "channels_total": 10
+    "channels_provisioned": 8,
+    "channels_total": 8
   },
   "totals": {
-    "published_total": 126,
-    "published_longform": 56,
-    "published_shorts": 70,
-    "public_total": 124,
-    "queued_longform": 62,
-    "queued_shorts": 48,
+    "published_total": 128,
+    "published_longform": 57,
+    "published_shorts": 71,
+    "public_total": 126,
+    "queued_longform": 61,
+    "queued_shorts": 47,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": false
@@ -99,32 +99,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 39,
-        "published_longform": 18,
-        "published_shorts": 21,
-        "public_total": 38,
-        "queued_longform": 6,
+        "published_total": 41,
+        "published_longform": 19,
+        "published_shorts": 22,
+        "public_total": 40,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 2
       },
       "latest_video": {
-        "id": "0061",
-        "title": "Isaiah 33:2 Morning Prayer | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "bw9zxOtzHww",
-        "watch_url": "https://youtu.be/bw9zxOtzHww",
-        "published_on": "2026-11-12",
-        "published_at": "2026-11-12T11:10:28Z"
-      },
-      "next_queued_longform": {
         "id": "0062",
         "title": "2 Samuel 23:4 Morning Prayer | The Morning Altar",
-        "words": 1523,
+        "format": "longform",
+        "youtube_video_id": "SsWigDMo520",
+        "watch_url": "https://youtu.be/SsWigDMo520",
+        "published_on": "2026-11-12",
+        "published_at": "2026-11-12T16:45:30Z"
+      },
+      "next_queued_longform": {
+        "id": "0063",
+        "title": "Hosea 6:3 His Going Forth Is Prepared as the Morning",
+        "words": 1130,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningmatthew6v33",
-        "scripture": "Matthew 6:33-34",
+        "short": "short-morningjoshua1v8",
+        "scripture": "Joshua 1:8-9",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -528,91 +528,55 @@
           }
         ]
       }
-    },
-    {
-      "id": "prayer9",
-      "display_name": "The Praise Garden",
-      "handle": "@ThePraiseGardenDaily",
-      "prayer_label": "Thanksgiving Prayer",
-      "daypart": "thanksgiving",
-      "tagline": "Daily Thanksgiving, Praise & Worship Prayer",
-      "target_window_utc": "09:44",
-      "poster_kicker": "O GIVE THANKS UNTO THE LORD",
-      "provisioned": true,
-      "auto_publish": true,
-      "default_privacy": "public",
-      "supply_target": 6,
-      "counts": {
-        "published_total": 0,
-        "published_longform": 0,
-        "published_shorts": 0,
-        "public_total": 0,
-        "queued_longform": 2,
-        "queued_other": 0,
-        "queued_shorts": 2
-      },
-      "latest_video": null,
-      "next_queued_longform": {
-        "id": "0700",
-        "title": "Psalm 100:4 Thanksgiving Prayer | The Praise Garden",
-        "words": 902,
-        "status": "approved"
-      },
-      "next_queued_short": {
-        "short": "short-gardenpsalm100v4",
-        "scripture": "Psalm 100:4",
-        "target_window_utc": "09:44",
-        "status": "approved"
-      },
-      "feedback": {
-        "available": false,
-        "measured_longform_videos": 0,
-        "top_themes": []
-      }
-    },
-    {
-      "id": "prayer10",
-      "display_name": "The Guided Path",
-      "handle": "@TheGuidedPathPrayer",
-      "prayer_label": "Guidance Prayer",
-      "daypart": "guidance",
-      "tagline": "Daily Prayer for Wisdom, Discernment & Guidance",
-      "target_window_utc": "18:44",
-      "poster_kicker": "HE SHALL DIRECT THY PATHS",
-      "provisioned": true,
-      "auto_publish": true,
-      "default_privacy": "public",
-      "supply_target": 6,
-      "counts": {
-        "published_total": 0,
-        "published_longform": 0,
-        "published_shorts": 0,
-        "public_total": 0,
-        "queued_longform": 2,
-        "queued_other": 0,
-        "queued_shorts": 2
-      },
-      "latest_video": null,
-      "next_queued_longform": {
-        "id": "0800",
-        "title": "Proverbs 3:5-6 Guidance Prayer | The Guided Path",
-        "words": 973,
-        "status": "approved"
-      },
-      "next_queued_short": {
-        "short": "short-guidedproverbs3v5",
-        "scripture": "Proverbs 3:5-6",
-        "target_window_utc": "1124",
-        "status": "approved"
-      },
-      "feedback": {
-        "available": false,
-        "measured_longform_videos": 0,
-        "top_themes": []
-      }
     }
   ],
   "videos": [
+    {
+      "id": "0062",
+      "slug": "2-samuel-23-4-morning-prayer-the-morning-altar",
+      "file": "0062-2-samuel-23-4-morning-prayer-the-morning-altar.md",
+      "title": "2 Samuel 23:4 Morning Prayer | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T16:45:30Z",
+      "youtube_video_id": "SsWigDMo520",
+      "watch_url": "https://youtu.be/SsWigDMo520",
+      "youtu_be_url": "https://youtu.be/SsWigDMo520",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/SsWigDMo520/edit",
+      "thumb_url": "https://i.ytimg.com/vi/SsWigDMo520/hqdefault.jpg",
+      "thumb_text": "CLEAR SHINING AT",
+      "duration_label": "~11 min",
+      "words": 1523
+    },
+    {
+      "id": "SHORT-MORNINGMATTHEW6V33",
+      "slug": "short-morningmatthew6v33-sunrise-prayer",
+      "file": "short-morningmatthew6v33-sunrise-prayer.md",
+      "title": "Say This Matthew 6:33-34 Prayer at Sunrise | In Prayer #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T15:33:36Z",
+      "youtube_video_id": "lMHzeY2SjLc",
+      "watch_url": "https://www.youtube.com/shorts/lMHzeY2SjLc",
+      "youtu_be_url": "https://youtu.be/lMHzeY2SjLc",
+      "shorts_url": "https://www.youtube.com/shorts/lMHzeY2SjLc",
+      "studio_url": "https://studio.youtube.com/video/lMHzeY2SjLc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/lMHzeY2SjLc/hqdefault.jpg",
+      "thumb_text": "BEGIN \u00b7 EVERY",
+      "duration_label": "53s",
+      "words": 598
+    },
     {
       "id": "SHORT-PHILIPPIANS4V6",
       "slug": "short-philippians4v6-pre-sleep-prayer",
@@ -3723,19 +3687,6 @@
         "words": 1025
       },
       {
-        "id": "0062",
-        "slug": "2-samuel-23-4-morning-prayer-the-morning-altar",
-        "file": "0062-2-samuel-23-4-morning-prayer-the-morning-altar.md",
-        "title": "2 Samuel 23:4 Morning Prayer | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1523
-      },
-      {
         "id": "0063",
         "slug": "hosea-6-3-his-going-forth-is-prepared-as-the-morning",
         "file": "0063-hosea-6-3-his-going-forth-is-prepared-as-the-morning.md",
@@ -4274,7 +4225,7 @@
         "file": "0700-psalm-100-4-thanksgiving-prayer.md",
         "title": "Psalm 100:4 Thanksgiving Prayer | The Praise Garden",
         "channel": "prayer9",
-        "channel_name": "The Praise Garden",
+        "channel_name": "The Secret Place",
         "status": "approved",
         "niche": "faith and prayer",
         "publishable": true,
@@ -4287,7 +4238,7 @@
         "file": "0701-psalm-103-1-5-thanksgiving-prayer.md",
         "title": "Psalm 103:1-5 Thanksgiving Prayer | The Praise Garden",
         "channel": "prayer9",
-        "channel_name": "The Praise Garden",
+        "channel_name": "The Secret Place",
         "status": "approved",
         "niche": "faith and prayer",
         "publishable": true,
@@ -4300,7 +4251,7 @@
         "file": "0800-proverbs-3-5-6-guidance-prayer.md",
         "title": "Proverbs 3:5-6 Guidance Prayer | The Guided Path",
         "channel": "prayer10",
-        "channel_name": "The Guided Path",
+        "channel_name": "The Secret Place",
         "status": "approved",
         "niche": "faith and prayer",
         "publishable": true,
@@ -4313,7 +4264,7 @@
         "file": "0801-james-1-5-wisdom-guidance-prayer.md",
         "title": "James 1:5 Guidance Prayer | The Guided Path",
         "channel": "prayer10",
-        "channel_name": "The Guided Path",
+        "channel_name": "The Secret Place",
         "status": "approved",
         "niche": "faith and prayer",
         "publishable": true,
@@ -4376,17 +4327,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-morningmatthew6v33",
-        "file": "0065-short-morningmatthew6v33.yml",
-        "companion_longform_id": "0065",
-        "scripture": "Matthew 6:33-34",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningjoshua1v8",
@@ -4812,7 +4752,7 @@
         "companion_longform_id": "0700",
         "scripture": "Psalm 100:4",
         "channel": "prayer9",
-        "channel_name": "The Praise Garden",
+        "channel_name": "The Secret Place",
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
@@ -4823,7 +4763,7 @@
         "companion_longform_id": "0701",
         "scripture": "Psalm 103:2",
         "channel": "prayer9",
-        "channel_name": "The Praise Garden",
+        "channel_name": "The Secret Place",
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
@@ -4834,7 +4774,7 @@
         "companion_longform_id": "0800",
         "scripture": "Proverbs 3:5-6",
         "channel": "prayer10",
-        "channel_name": "The Guided Path",
+        "channel_name": "The Secret Place",
         "status": "approved",
         "publishable": true,
         "target_window_utc": "1124"
@@ -4845,7 +4785,7 @@
         "companion_longform_id": "0801",
         "scripture": "James 1:5",
         "channel": "prayer10",
-        "channel_name": "The Guided Path",
+        "channel_name": "The Secret Place",
         "status": "approved",
         "publishable": true,
         "target_window_utc": "1124"
