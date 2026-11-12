@@ -1,0 +1,355 @@
+{
+  "key": "short-psalm23full",
+  "channel": "secret-place",
+  "psalm": 23,
+  "title": [
+    "A PEACEFUL NIGHT",
+    "WITH PSALM TWENTY THREE"
+  ],
+  "poster": [
+    "FIND YOUR REST",
+    "IN THE SECRET PLACE",
+    "A PRAYER FOR SLEEP",
+    "BREATHE IN HIS PEACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm mountain lake moonlit night",
+    "flickering candle in dark room",
+    "gentle river flowing in moonlight",
+    "soft glowing embers in fireplace",
+    "stars twinkling over quiet forest",
+    "tranquil night sky with clouds",
+    "peaceful field at twilight",
+    "still pond reflecting starlight"
+  ],
+  "scenes": [
+    {
+      "a": "Take a deep breath and let go of the day.",
+      "img": "short-psalm23full-scene-01.jpg",
+      "kicker": "PREPARE YOUR HEART",
+      "sub": "RELEASE THE WEIGHT OF TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The Lord is my shepherd; I shall not want.",
+      "img": "short-psalm23full-scene-02.jpg",
+      "kicker": "PSALM 23:1",
+      "sub": "HIS PRESENCE IS ENOUGH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "He makes me lie down in green pastures; he leads me beside still waters.",
+      "img": "short-psalm23full-scene-03.jpg",
+      "kicker": "FIND YOUR REST",
+      "sub": "HE LEADS YOU TO STILLNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "He restores my soul. He leads me in paths of righteousness for his name's sake.",
+      "img": "short-psalm23full-scene-04.jpg",
+      "kicker": "SOUL RESTORATION",
+      "sub": "WALK IN HIS GUIDANCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Even though I walk through the valley of the shadow of death, I will fear no evil.",
+      "img": "short-psalm23full-scene-05.jpg",
+      "kicker": "NO FEAR TONIGHT",
+      "sub": "YOU ARE NEVER ALONE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "For you are with me; your rod and your staff, they comfort me.",
+      "img": "short-psalm23full-scene-06.jpg",
+      "kicker": "HIS COMFORT",
+      "sub": "HIS PROTECTION IS NEAR",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "You prepare a table before me in the presence of my enemies; you anoint my head with oil.",
+      "img": "short-psalm23full-scene-07.jpg",
+      "kicker": "ABUNDANT GRACE",
+      "sub": "ANOINTED WITH HIS PEACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "My cup overflows. Surely goodness and mercy shall follow me all the days of my life.",
+      "img": "short-psalm23full-scene-08.jpg",
+      "kicker": "GOODNESS FOLLOWS YOU",
+      "sub": "HIS MERCY IS EVERLASTING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Take a deep breath and let go of the day."
+    ],
+    [
+      8,
+      16,
+      "The Lord is my shepherd; I shall not want."
+    ],
+    [
+      16,
+      26,
+      "He makes me lie down in green pastures; he leads me beside still waters."
+    ],
+    [
+      26,
+      36,
+      "He restores my soul. He leads me in paths of righteousness for his name's sake."
+    ],
+    [
+      36,
+      48,
+      "Even though I walk through the valley of the shadow of death, I will fear no evil."
+    ],
+    [
+      48,
+      56,
+      "For you are with me; your rod and your staff, they comfort me."
+    ],
+    [
+      56,
+      68,
+      "You prepare a table before me in the presence of my enemies; you anoint my head with oil."
+    ],
+    [
+      68,
+      80,
+      "My cup overflows. Surely goodness and mercy shall follow me all the days of my life."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "TAKE A DEEP",
+        "BREATH AND",
+        "LET GO",
+        "OF THE DAY"
+      ],
+      [
+        "DEEP BREATH"
+      ],
+      "PRAYER START"
+    ],
+    [
+      8,
+      16,
+      [
+        "THE LORD IS",
+        "MY SHEPHERD",
+        "I SHALL NOT",
+        "WANT FOR NOTHING"
+      ],
+      [
+        "THE LORD"
+      ],
+      "PSALM 23 : 1"
+    ],
+    [
+      16,
+      26,
+      [
+        "HE MAKES ME LIE",
+        "DOWN IN GREEN PASTURES",
+        "HE LEADS ME",
+        "BESIDE STILL WATERS"
+      ],
+      [
+        "STILL WATERS"
+      ],
+      "PSALM 23 : 2"
+    ],
+    [
+      26,
+      36,
+      [
+        "HE RESTORES MY SOUL",
+        "HE LEADS ME IN",
+        "PATHS OF HIS",
+        "RIGHTEOUSNESS NOW"
+      ],
+      [
+        "RESTORES"
+      ],
+      "PSALM 23 : 3"
+    ],
+    [
+      36,
+      48,
+      [
+        "EVEN THOUGH I WALK",
+        "THROUGH THE VALLEY",
+        "I WILL FEAR",
+        "NO EVIL TONIGHT"
+      ],
+      [
+        "NO EVIL"
+      ],
+      "PSALM 23 : 4"
+    ],
+    [
+      48,
+      56,
+      [
+        "FOR YOU ARE",
+        "WITH ME ALWAYS",
+        "YOUR ROD AND STAFF",
+        "THEY COMFORT ME"
+      ],
+      [
+        "WITH ME"
+      ],
+      "PSALM 23 : 4"
+    ],
+    [
+      56,
+      68,
+      [
+        "YOU PREPARE A TABLE",
+        "BEFORE ME NOW",
+        "YOU ANOINT MY",
+        "HEAD WITH OIL"
+      ],
+      [
+        "ANOINT"
+      ],
+      "PSALM 23 : 5"
+    ],
+    [
+      68,
+      80,
+      [
+        "MY CUP OVERFLOWS",
+        "SURELY GOODNESS AND",
+        "MERCY SHALL FOLLOW",
+        "ME FOREVER"
+      ],
+      [
+        "OVERFLOWS"
+      ],
+      "PSALM 23 : 6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Take a deep breath and let go of the day.",
+      "kind": "phrase",
+      "words": [
+        "DEEP",
+        "BREATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord is my shepherd; I shall not want.",
+      "kind": "phrase",
+      "words": [
+        "THE",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He leads me beside still waters.",
+      "kind": "phrase",
+      "words": [
+        "STILL",
+        "WATERS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He restores my soul.",
+      "kind": "phrase",
+      "words": [
+        "RESTORES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will fear no evil.",
+      "kind": "phrase",
+      "words": [
+        "NO",
+        "EVIL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For you are with me",
+      "kind": "phrase",
+      "words": [
+        "WITH",
+        "ME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "you anoint my head with oil.",
+      "kind": "phrase",
+      "words": [
+        "ANOINT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "My cup overflows.",
+      "kind": "phrase",
+      "words": [
+        "OVERFLOWS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 23"
+}
