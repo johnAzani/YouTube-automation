@@ -1,11 +1,20 @@
 {
-  "generated_at": "2026-11-11T09:23:05.900734+00:00",
-  "as_of": "2026-11-11",
+  "generated_at": "2026-11-12T05:22:37.587922+00:00",
+  "as_of": "2026-11-12",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 0,
+  "total_longform_videos": 3,
   "ranked_themes": [],
-  "themes": [],
+  "themes": [
+    {
+      "theme": "general_prayer",
+      "videos": 3,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": "Psalm 127"
+    }
+  ],
   "guidance": [
     "Only 0 long-form video(s) have enough views to measure; need 3. Keeping roadmap order until the signal is real."
   ],
