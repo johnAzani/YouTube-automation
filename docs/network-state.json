@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T22:53:44Z",
+  "generated_at": "2026-11-12T23:42:38Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,10 +7,10 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 140,
-    "published_longform": 63,
-    "published_shorts": 77,
-    "public_total": 138,
+    "published_total": 142,
+    "published_longform": 64,
+    "published_shorts": 78,
+    "public_total": 140,
     "queued_longform": 55,
     "queued_shorts": 41,
     "automations_ok": 9,
@@ -99,32 +99,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 41,
-        "published_longform": 19,
-        "published_shorts": 22,
-        "public_total": 40,
+        "published_total": 43,
+        "published_longform": 20,
+        "published_shorts": 23,
+        "public_total": 42,
         "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 2
       },
       "latest_video": {
-        "id": "0062",
-        "title": "2 Samuel 23:4 Morning Prayer | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "SsWigDMo520",
-        "watch_url": "https://youtu.be/SsWigDMo520",
-        "published_on": "2026-11-12",
-        "published_at": "2026-11-12T16:45:30Z"
-      },
-      "next_queued_longform": {
         "id": "0063",
         "title": "Hosea 6:3 His Going Forth Is Prepared as the Morning",
-        "words": 1130,
+        "format": "longform",
+        "youtube_video_id": "Cm8RyYGgkgE",
+        "watch_url": "https://youtu.be/Cm8RyYGgkgE",
+        "published_on": "2026-11-12",
+        "published_at": "2026-11-12T23:41:37Z"
+      },
+      "next_queued_longform": {
+        "id": "0064",
+        "title": "Zephaniah 3:5 Morning Prayer | The Morning Altar",
+        "words": 1429,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningjoshua1v8",
-        "scripture": "Joshua 1:8-9",
+        "short": "short-morningpsalm25v4",
+        "scripture": "Psalm 25:4-5",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -613,6 +613,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0063",
+      "slug": "hosea-6-3-his-going-forth-is-prepared-as-the-morning",
+      "file": "0063-hosea-6-3-his-going-forth-is-prepared-as-the-morning.md",
+      "title": "Hosea 6:3 His Going Forth Is Prepared as the Morning",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T23:41:37Z",
+      "youtube_video_id": "Cm8RyYGgkgE",
+      "watch_url": "https://youtu.be/Cm8RyYGgkgE",
+      "youtu_be_url": "https://youtu.be/Cm8RyYGgkgE",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/Cm8RyYGgkgE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Cm8RyYGgkgE/hqdefault.jpg",
+      "thumb_text": "PREPARED AS THE",
+      "duration_label": "~8 min",
+      "words": 1130
+    },
+    {
+      "id": "SHORT-MORNINGJOSHUA1V8",
+      "slug": "short-morningjoshua1v8-sunrise-prayer",
+      "file": "short-morningjoshua1v8-sunrise-prayer.md",
+      "title": "Say This Joshua 1:8-9 Prayer at Sunrise | Prayer #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T23:01:50Z",
+      "youtube_video_id": "TU_BCfeIZpI",
+      "watch_url": "https://www.youtube.com/shorts/TU_BCfeIZpI",
+      "youtu_be_url": "https://youtu.be/TU_BCfeIZpI",
+      "shorts_url": "https://www.youtube.com/shorts/TU_BCfeIZpI",
+      "studio_url": "https://studio.youtube.com/video/TU_BCfeIZpI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/TU_BCfeIZpI/hqdefault.jpg",
+      "thumb_text": "THE \u00b7 MORNING",
+      "duration_label": "47s",
+      "words": 630
+    },
     {
       "id": "0020",
       "slug": "psalm-18-2-my-rock-my-fortress-my-deliverer",
@@ -4032,19 +4078,6 @@
         "words": 1025
       },
       {
-        "id": "0063",
-        "slug": "hosea-6-3-his-going-forth-is-prepared-as-the-morning",
-        "file": "0063-hosea-6-3-his-going-forth-is-prepared-as-the-morning.md",
-        "title": "Hosea 6:3 His Going Forth Is Prepared as the Morning",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1130
-      },
-      {
         "id": "0064",
         "slug": "zephaniah-3-5-morning-prayer",
         "file": "0064-zephaniah-3-5-morning-prayer.md",
@@ -4095,6 +4128,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1829
+      },
+      {
+        "id": "0068",
+        "slug": "psalm-37-23-24-morning-prayer",
+        "file": "0068-psalm-37-23-24-morning-prayer.md",
+        "title": "Psalm 37:23-24 Morning Prayer | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1774
       },
       {
         "id": "0087",
@@ -4598,10 +4644,10 @@
         "target_window_utc": "14:14"
       },
       {
-        "short": "short-morningjoshua1v8",
-        "file": "0066-short-morningjoshua1v8.yml",
-        "companion_longform_id": "0066",
-        "scripture": "Joshua 1:8-9",
+        "short": "short-morningpsalm25v4",
+        "file": "0067-short-morningpsalm25v4.yml",
+        "companion_longform_id": "0067",
+        "scripture": "Psalm 25:4-5",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",
@@ -4609,10 +4655,10 @@
         "target_window_utc": "06:14"
       },
       {
-        "short": "short-morningpsalm25v4",
-        "file": "0067-short-morningpsalm25v4.yml",
-        "companion_longform_id": "0067",
-        "scripture": "Psalm 25:4-5",
+        "short": "short-morningpsalm37v23",
+        "file": "0068-short-morningpsalm37v23.yml",
+        "companion_longform_id": "0068",
+        "scripture": "Psalm 37:23-24",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",

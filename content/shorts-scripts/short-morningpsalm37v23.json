@@ -1,0 +1,279 @@
+{
+  "key": "short-morningpsalm37v23",
+  "channel": "prayer2",
+  "psalm": 37,
+  "title": [
+    "STEADY PATHS",
+    "DIVINE GRACE"
+  ],
+  "poster": [
+    "RISE IN PEACE",
+    "WALK IN FAITH",
+    "TRUST HIS LEAD",
+    "THE MORNING ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "misty mountain sunrise peak",
+    "golden light hitting pine needles",
+    "soft morning dew on grass",
+    "open window with sunrise horizon",
+    "sun rays breaking through forest canopy",
+    "serene calm lake reflecting dawn sky",
+    "birds flying over distant hills"
+  ],
+  "scenes": [
+    {
+      "a": "Take a deep breath and greet the light of this new morning.",
+      "img": "short-morningpsalm37v23-scene-01.jpg",
+      "kicker": "PSALM 37:23",
+      "sub": "GREET THE LIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You are invited to center your heart as the world begins to wake.",
+      "img": "short-morningpsalm37v23-scene-02.jpg",
+      "kicker": "PSALM 37:23",
+      "sub": "CENTER YOUR HEART",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Listen to these words from Psalm 37:23-24.",
+      "img": "short-morningpsalm37v23-scene-03.jpg",
+      "kicker": "PSALM 37:23",
+      "sub": "HEAR HIS PROMISE",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "The Lord makes firm the steps of the one who delights in Him.",
+      "img": "short-morningpsalm37v23-scene-04.jpg",
+      "kicker": "PSALM 37:23",
+      "sub": "STEADY STEPS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Though they stumble, they will not fall, for the Lord upholds them with His hand.",
+      "img": "short-morningpsalm37v23-scene-05.jpg",
+      "kicker": "PSALM 37:24",
+      "sub": "HE UPHOLDS YOU",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, as this sun rises, I place my uncertain path into Your capable hands.",
+      "img": "short-morningpsalm37v23-scene-06.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "SURRENDER YOUR DAY",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Let Your truth ground me, keeping my feet stable on the path You have chosen for me today.",
+      "img": "short-morningpsalm37v23-scene-07.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "WALK IN TRUTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "Take a deep breath and greet the light of this new morning."
+    ],
+    [
+      10,
+      22,
+      "You are invited to center your heart as the world begins to wake."
+    ],
+    [
+      22,
+      32,
+      "Listen to these words from Psalm 37:23-24."
+    ],
+    [
+      32,
+      45,
+      "The Lord makes firm the steps of the one who delights in Him."
+    ],
+    [
+      45,
+      60,
+      "Though they stumble, they will not fall, for the Lord upholds them with His hand."
+    ],
+    [
+      60,
+      80,
+      "Heavenly Father, as this sun rises, I place my uncertain path into Your capable hands."
+    ],
+    [
+      80,
+      100,
+      "Let Your truth ground me, keeping my feet stable on the path You have chosen for me today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "TAKE A BREATH",
+        "GREET THE LIGHT",
+        "THIS NEW MORNING"
+      ],
+      [
+        "BREATH",
+        "LIGHT"
+      ],
+      "PSALM 37:23"
+    ],
+    [
+      10,
+      22,
+      [
+        "CENTER YOUR HEART",
+        "AS THE WORLD",
+        "BEGINS TO WAKE"
+      ],
+      [
+        "CENTER",
+        "HEART"
+      ],
+      "PSALM 37:23"
+    ],
+    [
+      22,
+      32,
+      [
+        "LISTEN TO THE",
+        "WORDS OF THE",
+        "PSALM 37:23-24"
+      ],
+      [
+        "LISTEN",
+        "WORDS"
+      ],
+      "PSALM 37:23"
+    ],
+    [
+      32,
+      45,
+      [
+        "THE LORD MAKES",
+        "FIRM THE STEPS",
+        "OF THE ONE",
+        "WHO DELIGHTS IN HIM"
+      ],
+      [
+        "LORD",
+        "STEPS"
+      ],
+      "PSALM 37:23"
+    ],
+    [
+      45,
+      60,
+      [
+        "THOUGH THEY STUMBLE",
+        "THEY WILL NOT FALL",
+        "HE UPHOLDS THEM",
+        "WITH HIS HAND"
+      ],
+      [
+        "NOT FALL",
+        "UPHOLDS"
+      ],
+      "PSALM 37:24"
+    ],
+    [
+      60,
+      80,
+      [
+        "HEAVENLY FATHER",
+        "I PLACE MY PATH",
+        "INTO YOUR HANDS"
+      ],
+      [
+        "FATHER",
+        "HANDS"
+      ],
+      "MORNING PRAYER"
+    ],
+    [
+      80,
+      100,
+      [
+        "LET YOUR TRUTH",
+        "GROUND ME TODAY",
+        "STABLE ON THE PATH"
+      ],
+      [
+        "TRUTH",
+        "STABLE"
+      ],
+      "MORNING PRAYER"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Take a deep breath and greet the light of this new morning.",
+      "kind": "phrase",
+      "words": [
+        "BREATH",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord makes firm the steps of the one who delights in Him.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "STEPS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Though they stumble, they will not fall, for the Lord upholds them with His hand.",
+      "kind": "phrase",
+      "words": [
+        "NOT FALL",
+        "UPHOLDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 37:23-24"
+}
