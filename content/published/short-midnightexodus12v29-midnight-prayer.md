@@ -20,10 +20,13 @@ height: 1280
 duration_seconds: 52.12
 scenes_verified: 9
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE MIDNIGHT WATCH", "EXODUS 12:29-31", "BREAK EVERY CHAIN", "STAND IN PRAYER"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-19T05:18:38Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 As midnight falls, step into the sanctuary of quiet prayer. At this quiet hour, heavy chains are broken in the spirit realm. Exodus chapter twelve, verses twenty-nine through thirty-one declares: At midnight the Lord smote all the firstborn in Egypt, and Pharaoh rose up in the night, saying, Rise up, and get you forth. Tonight, whatever spiritual stronghold has bound your peace or your family must release its grip. The darkness of night cannot withstand the sudden light of divine deliverance. Stand firm in faithful prayer while the world sleeps. Receive your total freedom, walk out of bondage, and enter God's promise. Subscribe to The Midnight Watch and pray with us every night.

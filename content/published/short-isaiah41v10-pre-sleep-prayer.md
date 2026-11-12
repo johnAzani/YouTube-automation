@@ -21,6 +21,8 @@ duration_seconds: 61.33
 scenes_verified: 7
 thumbnail_pending: true
 thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (55, 703, 1025, 752); shorten the authored lockup or reduce its size"
+thumbnail_retry_after: "2026-11-12T11:18:48Z"
+thumbnail_retry_reason: "rate_limit"
 ---
 
 Take a deep breath and let the quiet of this night settle over your heart. Hear the gentle whisper of God in Isaiah forty-one verse ten: Fear not, for I am with you; be not dismayed, for I am your God; I will strengthen you, I will help you, I will uphold you with my righteous right hand. Lord, as sleep draws near, we lay down every fear and anxiety into your loving hands. Strengthen our tired minds and quiet every restless thought with your perfect peace. Rest your hand upon us tonight and let your presence shield our home from harm. We rest secure, knowing you hold us closely through every dark hour until dawn. Subscribe to join us in The Secret Place for daily prayers every night. Amen.

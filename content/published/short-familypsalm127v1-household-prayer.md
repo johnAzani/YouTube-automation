@@ -20,10 +20,13 @@ height: 1280
 duration_seconds: 53.64
 scenes_verified: 7
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE FAMILY ALTAR", "GOD BUILDS THIS HOME", "PSALM 127:1-5", "FAMILY PRAYER"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-19T05:18:42Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Gather your home and loved ones in faith and place every family care into God's hands. Psalm one hundred and twenty-seven verse one says, Except the LORD build the house, they labour in vain that build it. Except the LORD keep the city, the watchman waketh but in vain. Lo, children are an heritage of the LORD, shaped in love and aimed by faithful prayer. Father, be the Master Builder of our marriages, our children's future, and our household peace. Lift anxious striving off our shoulders, bless our honest work, and guard every door today. Type Amen and subscribe to The Family Altar to cover your home in daily prayer.
