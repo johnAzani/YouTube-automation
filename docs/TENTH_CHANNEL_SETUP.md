@@ -1,16 +1,17 @@
 # Tenth channel — staged setup: The Guided Path
 
-The owner asked for an additional channel beyond The Praise Garden. The concept
-and initial brand kit are prepared in [GUIDED_PATH_BRANDING.md](GUIDED_PATH_BRANDING.md).
-No channel creation, handle availability, OAuth authorization, secrets, preflight,
-registry entry, publishing mapping, schedule, or launch has been confirmed.
-Channel nine also remains unregistered and inactive.
+The owner shared a screenshot of The Guided Path (`@TheGuidedPathPrayer`) showing
+its avatar, banner and the opening of its description. The full description,
+watermark, channel ID and OAuth identity have not been verified. The brand kit
+is in [GUIDED_PATH_BRANDING.md](GUIDED_PATH_BRANDING.md). No OAuth authorization,
+secrets, preflight, registry entry, publishing mapping, schedule, or launch has
+been confirmed. Channel nine also remains unregistered and inactive.
 
 ## Steps
 
-1. The owner creates the channel through their signed-in YouTube account and
-   applies the identity and assets. Confirm the actual handle and channel before
-   any credential checks. Never assume a handle is available.
+1. The owner's screenshot confirms the displayed name, handle, avatar, banner
+   and beginning of the description. Watermark, feature eligibility and the
+   association between the intended channel and its ID remain to be confirmed.
 2. Follow the established dedicated Google Cloud OAuth process and secure
    GitHub Actions secrets process. Planned names are `PRAYER10_YOUTUBE_CLIENT_ID`,
    `PRAYER10_YOUTUBE_CLIENT_SECRET`, `PRAYER10_YOUTUBE_REFRESH_TOKEN`,

@@ -1,14 +1,16 @@
-# The Guided Path — proposed tenth prayer channel
+# The Guided Path — tenth prayer channel
 
-**Status:** Concept and brand assets prepared. The channel has not been confirmed
-created; its proposed handle has not been checked for availability. It is not
-registered, connected to publishing automation, scheduled or approved to launch.
-The Praise Garden (ninth channel) also remains unregistered and inactive.
+**Status:** The owner shared a screenshot showing The Guided Path with handle
+`@TheGuidedPathPrayer`, its banner, avatar and the opening of its description.
+The screenshot does not verify the full description, watermark, channel ID or
+OAuth identity. The channel is not registered, connected to publishing automation,
+scheduled or approved to launch. The Praise Garden (ninth channel) also remains
+unregistered and inactive.
 
 ## Identity
 
 - **Name:** The Guided Path
-- **Proposed handle:** `@TheGuidedPathDaily` (subject to YouTube availability)
+- **Handle shown in the owner's screenshot:** `@TheGuidedPathPrayer`
 - **Focus:** Christian prayers for wisdom, discernment and guidance through
   decisions and uncertain seasons, grounded in Scripture. Unlike The Provision
   Table, its main subject is discernment rather than material provision; unlike
@@ -33,7 +35,7 @@ Banner title and subtitle fit the 1235 × 338 center safe area.
 
 **Channel name:** `The Guided Path`
 
-**Proposed handle:** `@TheGuidedPathDaily`
+**Handle:** `@TheGuidedPathPrayer`
 
 **Description:**
 
