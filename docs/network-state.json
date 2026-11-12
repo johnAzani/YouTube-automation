@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T22:01:49Z",
+  "generated_at": "2026-11-12T22:53:44Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 138,
-    "published_longform": 62,
-    "published_shorts": 76,
-    "public_total": 136,
-    "queued_longform": 56,
-    "queued_shorts": 42,
+    "published_total": 140,
+    "published_longform": 63,
+    "published_shorts": 77,
+    "public_total": 138,
+    "queued_longform": 55,
+    "queued_shorts": 41,
     "automations_ok": 9,
     "automations_total": 10,
     "network_healthy": false
@@ -32,32 +32,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 33,
-        "published_longform": 11,
-        "published_shorts": 22,
-        "public_total": 32,
-        "queued_longform": 16,
+        "published_total": 35,
+        "published_longform": 12,
+        "published_shorts": 23,
+        "public_total": 34,
+        "queued_longform": 15,
         "queued_other": 5,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "SHORT-PHILIPPIANS4V6",
-        "title": "Say This Philippians 4:6-7 Prayer Before You Sleep | Tonight #Shorts",
-        "format": "short",
-        "youtube_video_id": "QHm6Z2sfpnc",
-        "watch_url": "https://www.youtube.com/shorts/QHm6Z2sfpnc",
-        "published_on": "2026-11-12",
-        "published_at": "2026-11-12T15:21:41Z"
-      },
-      "next_queued_longform": {
         "id": "0020",
         "title": "Psalm 18:2 Night Prayer for Strength | My Rock & Fortress",
-        "words": 902,
+        "format": "longform",
+        "youtube_video_id": "oiLCbx4-wMA",
+        "watch_url": "https://youtu.be/oiLCbx4-wMA",
+        "published_on": "2026-11-12",
+        "published_at": "2026-11-12T22:52:44Z"
+      },
+      "next_queued_longform": {
+        "id": "0021",
+        "title": "Psalm 31:5 Bedtime Prayer | Into Your Hands I Commit My Spirit",
+        "words": 1123,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-2timothy1v7",
-        "scripture": "2 Timothy 1:7",
+        "short": "short-1peter5v7",
+        "scripture": "1 Peter 5:7",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -613,6 +613,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0020",
+      "slug": "psalm-18-2-my-rock-my-fortress-my-deliverer",
+      "file": "0020-psalm-18-2-my-rock-my-fortress-my-deliverer.md",
+      "title": "Psalm 18:2 Night Prayer for Strength | My Rock & Fortress",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T22:52:44Z",
+      "youtube_video_id": "oiLCbx4-wMA",
+      "watch_url": "https://youtu.be/oiLCbx4-wMA",
+      "youtu_be_url": "https://youtu.be/oiLCbx4-wMA",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/oiLCbx4-wMA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/oiLCbx4-wMA/hqdefault.jpg",
+      "thumb_text": "LORD IS MY ROCK",
+      "duration_label": "~6 min",
+      "words": 902
+    },
+    {
+      "id": "SHORT-2TIMOTHY1V7",
+      "slug": "short-2timothy1v7-pre-sleep-prayer",
+      "file": "short-2timothy1v7-pre-sleep-prayer.md",
+      "title": "Say This 2 Timothy 1:7 Prayer Before You Sleep | Mind #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T22:07:59Z",
+      "youtube_video_id": "XyFODtqpNkU",
+      "watch_url": "https://www.youtube.com/shorts/XyFODtqpNkU",
+      "youtu_be_url": "https://youtu.be/XyFODtqpNkU",
+      "shorts_url": "https://www.youtube.com/shorts/XyFODtqpNkU",
+      "studio_url": "https://studio.youtube.com/video/XyFODtqpNkU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/XyFODtqpNkU/hqdefault.jpg",
+      "thumb_text": "CALM \u00b7 YOUR",
+      "duration_label": "49s",
+      "words": 607
+    },
     {
       "id": "0503",
       "slug": "revelation-3-8-open-doors-prayer",
@@ -3791,19 +3837,6 @@
   "queues": {
     "longform": [
       {
-        "id": "0020",
-        "slug": "psalm-18-2-my-rock-my-fortress-my-deliverer",
-        "file": "0020-psalm-18-2-my-rock-my-fortress-my-deliverer.md",
-        "title": "Psalm 18:2 Night Prayer for Strength | My Rock & Fortress",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 902
-      },
-      {
         "id": "0021",
         "slug": "psalm-31-1-5-committing-my-spirit-to-his-hand",
         "file": "0021-psalm-31-1-5-committing-my-spirit-to-his-hand.md",
@@ -4520,17 +4553,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-2timothy1v7",
-        "file": "0031-short-2timothy1v7.yml",
-        "companion_longform_id": "0031",
-        "scripture": "2 Timothy 1:7",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
       {
         "short": "short-1peter5v7",
         "file": "0032-short-1peter5v7.yml",

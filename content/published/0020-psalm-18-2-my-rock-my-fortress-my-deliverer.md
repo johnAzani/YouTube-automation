@@ -2,7 +2,7 @@
 id: '0020'
 title: Psalm 18:2 Night Prayer for Strength | My Rock & Fortress
 slug: psalm-18-2-my-rock-my-fortress-my-deliverer
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -85,6 +85,12 @@ originality:
   ai_disclosure: false
 seo_hook: Pray this Psalm 18:2 KJV night prayer before sleep and rest safely in the Lord who is your Rock, your Fortress, and your Deliverer.
 category_id: '22'
+published_on: "2026-11-12"
+published_at: "2026-11-12T22:52:44Z"
+youtube_video_id: "oiLCbx4-wMA"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — The LORD Is My Rock (Verse 2a)
