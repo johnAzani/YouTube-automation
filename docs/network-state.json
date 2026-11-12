@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T08:28:33Z",
+  "generated_at": "2026-11-12T08:35:40Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 120,
+    "published_total": 121,
     "published_longform": 54,
-    "published_shorts": 66,
-    "public_total": 118,
+    "published_shorts": 67,
+    "public_total": 119,
     "queued_longform": 57,
-    "queued_shorts": 43,
+    "queued_shorts": 42,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -32,22 +32,22 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 31,
+        "published_total": 32,
         "published_longform": 11,
-        "published_shorts": 20,
-        "public_total": 30,
+        "published_shorts": 21,
+        "public_total": 31,
         "queued_longform": 16,
         "queued_other": 5,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0019",
-        "title": "Psalm 16:7-8 Night Prayer | God's Quiet Counsel Before Sleep",
-        "format": "longform",
-        "youtube_video_id": "nVLhEVO7ROw",
-        "watch_url": "https://youtu.be/nVLhEVO7ROw",
+        "id": "SHORT-JOHN14V27",
+        "title": "Say This John 14:27 Prayer Before You Sleep | The Secret Place #Shorts",
+        "format": "short",
+        "youtube_video_id": "dmwIvRt6Ve8",
+        "watch_url": "https://www.youtube.com/shorts/dmwIvRt6Ve8",
         "published_on": "2026-11-12",
-        "published_at": "2026-11-12T03:05:00Z"
+        "published_at": "2026-11-12T08:31:09Z"
       },
       "next_queued_longform": {
         "id": "0020",
@@ -56,8 +56,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-john14v27",
-        "scripture": "John 14:27",
+        "short": "short-philippians4v6",
+        "scripture": "Philippians 4:6-7",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -521,6 +521,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-JOHN14V27",
+      "slug": "short-john14v27-pre-sleep-prayer",
+      "file": "short-john14v27-pre-sleep-prayer.md",
+      "title": "Say This John 14:27 Prayer Before You Sleep | The Secret Place #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T08:31:09Z",
+      "youtube_video_id": "dmwIvRt6Ve8",
+      "watch_url": "https://www.youtube.com/shorts/dmwIvRt6Ve8",
+      "youtu_be_url": "https://youtu.be/dmwIvRt6Ve8",
+      "shorts_url": "https://www.youtube.com/shorts/dmwIvRt6Ve8",
+      "studio_url": "https://studio.youtube.com/video/dmwIvRt6Ve8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/dmwIvRt6Ve8/hqdefault.jpg",
+      "thumb_text": "BEDTIME PRAYER \u00b7 JOHN 14:27",
+      "duration_label": "58s",
+      "words": 661
+    },
     {
       "id": "0502",
       "slug": "philippians-4-19-provision-prayer",
@@ -4027,17 +4050,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-john14v27",
-        "file": "0029-short-john14v27.yml",
-        "companion_longform_id": "0029",
-        "scripture": "John 14:27",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
       {
         "short": "short-philippians4v6",
         "file": "0030-short-philippians4v6.yml",
