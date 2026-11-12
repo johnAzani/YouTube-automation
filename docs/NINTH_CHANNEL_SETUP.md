@@ -19,7 +19,13 @@ not a verified or reserved handle.
    thumbnails, watchdogs, audit and tests. It must fail closed: an unknown or
    missing credential/expected channel ID must never fall back to another
    channel's credentials. Adding secrets alone must not trigger publishing.
-   **This work has not yet been implemented.**
+   **The ninth channel is not registered or wired yet.** An initial isolation
+   fix clears inherited canonical credentials when switching channels and the
+   target's prefixed values are missing *or empty*. This does not fix all
+   workflow credential selection: several existing workflows use fallback
+   expressions and must be audited and made fail-closed for the ninth channel.
+   An explicit inactive gate must cover scheduled, manual, repository-dispatch,
+   authoring, and other write-capable paths before registration is deployed.
 3. Prepare unique, scripture-grounded drafts and companion Shorts for owner
    review; verify quotations, factual claims and asset permissions. Mechanical
    checkboxes are not proof of human fact checking or monetization eligibility.

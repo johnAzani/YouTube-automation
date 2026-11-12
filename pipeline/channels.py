@@ -295,10 +295,12 @@ def apply_channel_env(channel_id: str | None = None) -> str:
             for canonical, prefixed in mapping.items():
                 if prefixed in os.environ and os.environ[prefixed]:
                     os.environ[canonical] = os.environ[prefixed]
-                elif prefixed not in os.environ and not already_scoped:
-                    # Only clear inherited canonical vars when switching from an
-                    # unscoped/other channel; preserve vars already mapped for `cid`
-                    # by the workflow job `env:` block.
+                elif not already_scoped:
+                    # Missing *or empty* prefixed secrets must not leave a
+                    # different channel's canonical credentials behind. GitHub
+                    # Actions exposes missing secrets as empty environment values.
+                    # Preserve already-mapped workflow credentials only when the
+                    # environment was explicitly scoped to this same channel.
                     os.environ.pop(canonical, None)
     return cid
 
