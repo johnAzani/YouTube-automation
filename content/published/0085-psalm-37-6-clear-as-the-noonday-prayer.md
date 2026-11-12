@@ -2,7 +2,7 @@
 id: 0085
 title: Psalm 37:6 Clear as the Noonday Prayer | The Midday Watch
 slug: psalm-37-6-clear-as-the-noonday-prayer
-status: quota_paused
+status: published
 channel: prayer3
 privacy: public
 format: longform
@@ -78,8 +78,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
-quota_reset_utc: '2026-11-12T08:00:00+00:00'
-pause_reason: gemini_api_daily_quota_exhausted
+published_on: "2026-11-12"
+published_at: "2026-11-12T13:24:36Z"
+youtube_video_id: "nHrsmUn9Kj8"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — The Noonday Pause and the Promise of Light

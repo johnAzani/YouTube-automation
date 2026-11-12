@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T13:25:23Z",
+  "generated_at": "2026-11-12T13:25:33Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 123,
-    "published_longform": 55,
-    "published_shorts": 68,
-    "public_total": 121,
-    "queued_longform": 59,
-    "queued_shorts": 46,
+    "published_total": 125,
+    "published_longform": 56,
+    "published_shorts": 69,
+    "public_total": 123,
+    "queued_longform": 58,
+    "queued_shorts": 45,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -166,32 +166,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 22,
-        "published_longform": 10,
-        "published_shorts": 12,
-        "public_total": 22,
-        "queued_longform": 7,
+        "published_total": 24,
+        "published_longform": 11,
+        "published_shorts": 13,
+        "public_total": 24,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYPSALM121V5",
-        "title": "Say This Psalm 121:5-6 Prayer at Noon | Midday Peace #Shorts",
-        "format": "short",
-        "youtube_video_id": "qFR-b15Sy8Q",
-        "watch_url": "https://www.youtube.com/shorts/qFR-b15Sy8Q",
-        "published_on": "2026-11-11",
-        "published_at": "2026-11-11T22:58:53Z"
-      },
-      "next_queued_longform": {
         "id": "0085",
         "title": "Psalm 37:6 Clear as the Noonday Prayer | The Midday Watch",
-        "words": 2261,
-        "status": "quota_paused"
+        "format": "longform",
+        "youtube_video_id": "nHrsmUn9Kj8",
+        "watch_url": "https://youtu.be/nHrsmUn9Kj8",
+        "published_on": "2026-11-12",
+        "published_at": "2026-11-12T13:24:36Z"
+      },
+      "next_queued_longform": {
+        "id": "0086",
+        "title": "Psalm 121:5-6 Midday Prayer | The Midday Watch",
+        "words": 2278,
+        "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middayisaiah49v10",
-        "scripture": "Isaiah 49:10",
+        "short": "short-middayisaiah25v4",
+        "scripture": "Isaiah 25:4",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -531,6 +531,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0085",
+      "slug": "psalm-37-6-clear-as-the-noonday-prayer",
+      "file": "0085-psalm-37-6-clear-as-the-noonday-prayer.md",
+      "title": "Psalm 37:6 Clear as the Noonday Prayer | The Midday Watch",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T13:24:36Z",
+      "youtube_video_id": "nHrsmUn9Kj8",
+      "watch_url": "https://youtu.be/nHrsmUn9Kj8",
+      "youtu_be_url": "https://youtu.be/nHrsmUn9Kj8",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/nHrsmUn9Kj8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/nHrsmUn9Kj8/hqdefault.jpg",
+      "thumb_text": "CLEAR AS THE",
+      "duration_label": "~16 min",
+      "words": 2261
+    },
+    {
+      "id": "SHORT-MIDDAYISAIAH49V10",
+      "slug": "short-middayisaiah49v10-midday-prayer",
+      "file": "short-middayisaiah49v10-midday-prayer.md",
+      "title": "Say This Isaiah 49:10 Prayer at Noon | Prayer #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T11:42:52Z",
+      "youtube_video_id": "gzHJ_-CpfJs",
+      "watch_url": "https://www.youtube.com/shorts/gzHJ_-CpfJs",
+      "youtu_be_url": "https://youtu.be/gzHJ_-CpfJs",
+      "shorts_url": "https://www.youtube.com/shorts/gzHJ_-CpfJs",
+      "studio_url": "https://studio.youtube.com/video/gzHJ_-CpfJs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/gzHJ_-CpfJs/hqdefault.jpg",
+      "thumb_text": "THE \u00b7 MIDDAY",
+      "duration_label": "45s",
+      "words": 574
+    },
     {
       "id": "0061",
       "slug": "isaiah-33-2-morning-prayer",
@@ -3650,19 +3696,6 @@
         "words": 1829
       },
       {
-        "id": "0085",
-        "slug": "psalm-37-6-clear-as-the-noonday-prayer",
-        "file": "0085-psalm-37-6-clear-as-the-noonday-prayer.md",
-        "title": "Psalm 37:6 Clear as the Noonday Prayer | The Midday Watch",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "quota_paused",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 2261
-      },
-      {
         "id": "0086",
         "slug": "psalm-121-5-6-midday-prayer",
         "file": "0086-psalm-121-5-6-midday-prayer.md",
@@ -4230,17 +4263,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-middayisaiah49v10",
-        "file": "0087-short-middayisaiah49v10.yml",
-        "companion_longform_id": "0087",
-        "scripture": "Isaiah 49:10",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middayisaiah25v4",
