@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T06:08:54Z",
+  "generated_at": "2026-11-12T06:54:53Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,11 +7,11 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 119,
-    "published_longform": 53,
+    "published_total": 120,
+    "published_longform": 54,
     "published_shorts": 66,
-    "public_total": 117,
-    "queued_longform": 45,
+    "public_total": 118,
+    "queued_longform": 44,
     "queued_shorts": 28,
     "automations_ok": 10,
     "automations_total": 10,
@@ -414,27 +414,27 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 4,
-        "published_longform": 2,
+        "published_total": 5,
+        "published_longform": 3,
         "published_shorts": 2,
-        "public_total": 4,
-        "queued_longform": 5,
+        "public_total": 5,
+        "queued_longform": 4,
         "queued_other": 0,
         "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0501",
-        "title": "Deuteronomy 28:12 Provision Prayer | The Provision Table",
-        "format": "longform",
-        "youtube_video_id": "qrOFQ37peYc",
-        "watch_url": "https://youtu.be/qrOFQ37peYc",
-        "published_on": "2026-11-12",
-        "published_at": "2026-11-12T02:17:58Z"
-      },
-      "next_queued_longform": {
         "id": "0502",
         "title": "Philippians 4:19 Provision Prayer | The Provision Table",
-        "words": 917,
+        "format": "longform",
+        "youtube_video_id": "lgBIMzFepLg",
+        "watch_url": "https://youtu.be/lgBIMzFepLg",
+        "published_on": "2026-11-12",
+        "published_at": "2026-11-12T06:54:07Z"
+      },
+      "next_queued_longform": {
+        "id": "0503",
+        "title": "Revelation 3:8 Open Doors Prayer | The Provision Table",
+        "words": 903,
         "status": "approved"
       },
       "next_queued_short": {
@@ -521,6 +521,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0502",
+      "slug": "philippians-4-19-provision-prayer",
+      "file": "0502-philippians-4-19-provision-prayer.md",
+      "title": "Philippians 4:19 Provision Prayer | The Provision Table",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T06:54:07Z",
+      "youtube_video_id": "lgBIMzFepLg",
+      "watch_url": "https://youtu.be/lgBIMzFepLg",
+      "youtu_be_url": "https://youtu.be/lgBIMzFepLg",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/lgBIMzFepLg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/lgBIMzFepLg/hqdefault.jpg",
+      "thumb_text": "ALL YOUR NEED",
+      "duration_label": "~6 min",
+      "words": 917
+    },
+    {
+      "id": "0501",
+      "slug": "deuteronomy-28-12-provision-prayer",
+      "file": "0501-deuteronomy-28-12-provision-prayer.md",
+      "title": "Deuteronomy 28:12 Provision Prayer | The Provision Table",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T06:15:11Z",
+      "youtube_video_id": "qrOFQ37peYc",
+      "watch_url": "https://youtu.be/qrOFQ37peYc",
+      "youtu_be_url": "https://youtu.be/qrOFQ37peYc",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/qrOFQ37peYc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/qrOFQ37peYc/hqdefault.jpg",
+      "thumb_text": "BLESS OUR HANDS",
+      "duration_label": "~6 min",
+      "words": 911
+    },
     {
       "id": "0402",
       "slug": "psalm-147-3-healing-prayer",
@@ -729,29 +775,6 @@
       "words": 634
     },
     {
-      "id": "0501",
-      "slug": "deuteronomy-28-12-provision-prayer",
-      "file": "0501-deuteronomy-28-12-provision-prayer.md",
-      "title": "Deuteronomy 28:12 Provision Prayer | The Provision Table",
-      "channel": "prayer7",
-      "channel_name": "The Provision Table",
-      "channel_handle": "@TheProvisionTableDaily",
-      "format": "longform",
-      "niche": "faith and prayer",
-      "privacy": "public",
-      "published_on": "2026-11-12",
-      "published_at": "2026-11-12T02:17:58Z",
-      "youtube_video_id": "qrOFQ37peYc",
-      "watch_url": "https://youtu.be/qrOFQ37peYc",
-      "youtu_be_url": "https://youtu.be/qrOFQ37peYc",
-      "shorts_url": "",
-      "studio_url": "https://studio.youtube.com/video/qrOFQ37peYc/edit",
-      "thumb_url": "https://i.ytimg.com/vi/qrOFQ37peYc/hqdefault.jpg",
-      "thumb_text": "BLESS OUR HANDS",
-      "duration_label": "~6 min",
-      "words": 911
-    },
-    {
       "id": "SHORT-PROVISIONDEUTERONOMY28V12",
       "slug": "short-provisiondeuteronomy28v12-stewardship-prayer",
       "file": "short-provisiondeuteronomy28v12-stewardship-prayer.md",
@@ -763,7 +786,7 @@
       "niche": "faith and prayer",
       "privacy": "public",
       "published_on": "2026-11-12",
-      "published_at": "2026-11-12T01:31:50Z",
+      "published_at": "2026-11-12T01:31:31Z",
       "youtube_video_id": "XYztSYJyOY4",
       "watch_url": "https://www.youtube.com/shorts/XYztSYJyOY4",
       "youtu_be_url": "https://youtu.be/XYztSYJyOY4",
@@ -771,8 +794,8 @@
       "studio_url": "https://studio.youtube.com/video/XYztSYJyOY4/edit",
       "thumb_url": "https://i.ytimg.com/vi/XYztSYJyOY4/hqdefault.jpg",
       "thumb_text": "THE PROVISION TABLE \u00b7 BLESS OUR HANDS",
-      "duration_label": "63s",
-      "words": 296
+      "duration_label": "<60s",
+      "words": 21
     },
     {
       "id": "0401",
@@ -3741,19 +3764,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1516
-      },
-      {
-        "id": "0502",
-        "slug": "philippians-4-19-provision-prayer",
-        "file": "0502-philippians-4-19-provision-prayer.md",
-        "title": "Philippians 4:19 Provision Prayer | The Provision Table",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 917
       },
       {
         "id": "0503",

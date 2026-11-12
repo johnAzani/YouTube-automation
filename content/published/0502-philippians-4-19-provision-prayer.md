@@ -2,7 +2,7 @@
 id: '0502'
 title: Philippians 4:19 Provision Prayer | The Provision Table
 slug: philippians-4-19-provision-prayer
-status: approved
+status: published
 channel: prayer7
 privacy: public
 format: longform
@@ -73,6 +73,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-12"
+published_at: "2026-11-12T06:54:07Z"
+youtube_video_id: "lgBIMzFepLg"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Approaching Jehovah-Jireh With Every Practical Need
