@@ -20,10 +20,13 @@ height: 1280
 duration_seconds: 59.17
 scenes_verified: 7
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCj-brsBz9FNO6sZ3NLIzjvQ; auth_channel_title=The Healing Balm; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCj-brsBz9FNO6sZ3NLIzjvQ; auth_channel_title=The Healing Balm; long_uploads_status=eligible; video_channel_id=UCj-brsBz9FNO6sZ3NLIzjvQ; video_channel_title=The Healing Balm; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE HEALING BALM", "HEAL THIS HEART", "PSALM 147:3", "HEALING PRAYER"]
 thumbnail_kicker: "RECEIVE GOD'S HEALING PEACE"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-19T07:00:48Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Bring every hidden ache, grief, and healing need before the Lord of comfort today. Psalm one hundred and forty-seven verse three promises, He healeth the broken in heart, and bindeth up their wounds. He telleth the number of the stars and calls them by name, yet stoops to comfort your heart. Great is our Lord, and of great power: His understanding of your pain is infinite. Father, bind up broken hearts, quiet anxious thoughts, and restore weary bodies in mercy. Surround our loved ones, caregivers, and physicians with wisdom and gentle healing peace. Type Amen and subscribe to The Healing Balm to receive God's healing peace in daily prayer.
