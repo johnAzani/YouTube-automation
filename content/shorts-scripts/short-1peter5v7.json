@@ -1,0 +1,365 @@
+{
+  "key": "short-1peter5v7",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "CAST ALL YOUR CARES",
+    "FIND REST IN GOD"
+  ],
+  "poster": [
+    "A PRAYER FOR",
+    "A PEACEFUL SLEEP",
+    "WITH THE SECRET PLACE",
+    "1 PETER 5:7"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "serene moonlit lake reflection",
+    "soft flickering candle flame dark background",
+    "gentle evening mist over forest canopy",
+    "starry night sky moving slowly",
+    "calm waves lapping on dark shore",
+    "soft moonlight through bedroom window",
+    "glowing embers in a quiet fireplace",
+    "rippling water in dark twilight"
+  ],
+  "scenes": [
+    {
+      "a": "Take a deep breath and let your shoulders drop.",
+      "img": "short-1peter5v7-scene-01.jpg",
+      "kicker": "1 PETER 5:7",
+      "sub": "FIND YOUR STILLNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Release the heavy burdens you have carried all day.",
+      "img": "short-1peter5v7-scene-02.jpg",
+      "kicker": "1 PETER 5:7",
+      "sub": "LET GO OF THE WEIGHT",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You are invited to lay them down at the feet of your Creator.",
+      "img": "short-1peter5v7-scene-03.jpg",
+      "kicker": "1 PETER 5:7",
+      "sub": "SURRENDER YOUR WORRIES",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "As it is written in 1 Peter 5:7, cast all your anxiety on him because he cares for you.",
+      "img": "short-1peter5v7-scene-04.jpg",
+      "kicker": "1 PETER 5:7",
+      "sub": "HE CARES FOR YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, I bring my thoughts to you now as I prepare to sleep.",
+      "img": "short-1peter5v7-scene-05.jpg",
+      "kicker": "1 PETER 5:7",
+      "sub": "PEACE IN HIS PRESENCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Quiet my spirit and remove the clutter from my tired mind.",
+      "img": "short-1peter5v7-scene-06.jpg",
+      "kicker": "1 PETER 5:7",
+      "sub": "QUIET YOUR SPIRIT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May your grace envelope me like a soft blanket of stars tonight.",
+      "img": "short-1peter5v7-scene-07.jpg",
+      "kicker": "1 PETER 5:7",
+      "sub": "REST UNDER HIS GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I trust in your constant love and find safety in your hands, amen.",
+      "img": "short-1peter5v7-scene-08.jpg",
+      "kicker": "1 PETER 5:7",
+      "sub": "SLEEP IN HIS SAFETY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "Take a deep breath and let your shoulders drop."
+    ],
+    [
+      12,
+      27,
+      "Release the heavy burdens you have carried all day."
+    ],
+    [
+      27,
+      43,
+      "You are invited to lay them down at the feet of your Creator."
+    ],
+    [
+      43,
+      62,
+      "As it is written in 1 Peter 5:7, cast all your anxiety on him because he cares for you."
+    ],
+    [
+      62,
+      80,
+      "Heavenly Father, I bring my thoughts to you now as I prepare to sleep."
+    ],
+    [
+      80,
+      95,
+      "Quiet my spirit and remove the clutter from my tired mind."
+    ],
+    [
+      95,
+      110,
+      "May your grace envelope me like a soft blanket of stars tonight."
+    ],
+    [
+      110,
+      120,
+      "I trust in your constant love and find safety in your hands, amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "TAKE A DEEP BREATH",
+        "LET YOUR SHOULDERS",
+        "DROP"
+      ],
+      [
+        "DEEP",
+        "BREATH",
+        "DROP"
+      ],
+      "1 PETER 5:7"
+    ],
+    [
+      12,
+      27,
+      [
+        "RELEASE THE HEAVY BURDENS",
+        "YOU HAVE CARRIED",
+        "ALL DAY LONG"
+      ],
+      [
+        "RELEASE",
+        "HEAVY",
+        "BURDENS"
+      ],
+      "1 PETER 5:7"
+    ],
+    [
+      27,
+      43,
+      [
+        "LAY THEM DOWN",
+        "AT THE FEET",
+        "OF YOUR CREATOR"
+      ],
+      [
+        "LAY DOWN",
+        "CREATOR"
+      ],
+      "1 PETER 5:7"
+    ],
+    [
+      43,
+      62,
+      [
+        "CAST ALL ANXIETY",
+        "ON HIM BECAUSE",
+        "HE CARES FOR YOU"
+      ],
+      [
+        "CAST",
+        "ANXIETY",
+        "CARES"
+      ],
+      "1 PETER 5:7"
+    ],
+    [
+      62,
+      80,
+      [
+        "HEAVENLY FATHER I BRING",
+        "MY THOUGHTS TO YOU",
+        "AS I PREPARE SLEEP"
+      ],
+      [
+        "HEAVENLY",
+        "FATHER",
+        "PREPARE"
+      ],
+      "1 PETER 5:7"
+    ],
+    [
+      80,
+      95,
+      [
+        "QUIET MY SPIRIT",
+        "REMOVE THE CLUTTER",
+        "FROM MY TIRED MIND"
+      ],
+      [
+        "QUIET",
+        "SPIRIT",
+        "CLUTTER"
+      ],
+      "1 PETER 5:7"
+    ],
+    [
+      95,
+      110,
+      [
+        "MAY YOUR GRACE",
+        "ENVELOPE ME LIKE",
+        "A BLANKET OF STARS"
+      ],
+      [
+        "GRACE",
+        "ENVELOPE",
+        "STARS"
+      ],
+      "1 PETER 5:7"
+    ],
+    [
+      110,
+      120,
+      [
+        "I TRUST IN LOVE",
+        "FIND SAFETY IN",
+        "YOUR HANDS AMEN"
+      ],
+      [
+        "TRUST",
+        "SAFETY",
+        "AMEN"
+      ],
+      "1 PETER 5:7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Take a deep breath and let your shoulders drop.",
+      "kind": "phrase",
+      "words": [
+        "DEEP",
+        "BREATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Release the heavy burdens you have carried all day.",
+      "kind": "phrase",
+      "words": [
+        "RELEASE",
+        "HEAVY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You are invited to lay them down at the feet of your Creator.",
+      "kind": "phrase",
+      "words": [
+        "LAY",
+        "DOWN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As it is written in 1 Peter 5:7, cast all your anxiety on him because he cares for you.",
+      "kind": "phrase",
+      "words": [
+        "CAST",
+        "ANXIETY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, I bring my thoughts to you now as I prepare to sleep.",
+      "kind": "phrase",
+      "words": [
+        "HEAVENLY",
+        "FATHER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Quiet my spirit and remove the clutter from my tired mind.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "SPIRIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your grace envelope me like a soft blanket of stars tonight.",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "STARS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I trust in your constant love and find safety in your hands, amen.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "SAFETY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "1 Peter 5:7"
+}

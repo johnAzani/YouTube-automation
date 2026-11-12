@@ -1,0 +1,334 @@
+{
+  "key": "short-numbers6v24",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "THE LORD BLESS YOU",
+    "AND KEEP YOU"
+  ],
+  "poster": [
+    "THE LORD",
+    "BLESS YOU",
+    "AND KEEP",
+    "YOU"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "serene misty mountain lake at night",
+    "calm forest under starlight night",
+    "gentle glowing candle in the dark",
+    "peaceful night sky with slow stars",
+    "quiet river flowing under moonlight",
+    "soft moonlight resting on still water",
+    "deep blue tranquil night landscape",
+    "peaceful dawn light over quiet hills"
+  ],
+  "scenes": [
+    {
+      "a": "Take a slow and gentle breath",
+      "img": "short-numbers6v24-scene-01.jpg",
+      "kicker": "NUMBERS 6:24",
+      "sub": "REST IN HIS PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Let go of the weight you carried today",
+      "img": "short-numbers6v24-scene-02.jpg",
+      "kicker": "NUMBERS 6:24",
+      "sub": "LAY DOWN YOUR CARES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The Lord bless you and keep you",
+      "img": "short-numbers6v24-scene-03.jpg",
+      "kicker": "NUMBERS 6:24",
+      "sub": "HIS WATCHFUL CARE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "The Lord make His face shine upon you",
+      "img": "short-numbers6v24-scene-04.jpg",
+      "kicker": "NUMBERS 6:25",
+      "sub": "HIS GENTLE LIGHT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And be gracious to you",
+      "img": "short-numbers6v24-scene-05.jpg",
+      "kicker": "NUMBERS 6:25",
+      "sub": "UNFAILING GRACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The Lord lift up His countenance upon you",
+      "img": "short-numbers6v24-scene-06.jpg",
+      "kicker": "NUMBERS 6:26",
+      "sub": "HIS PRESENCE NEAR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And give you peace",
+      "img": "short-numbers6v24-scene-07.jpg",
+      "kicker": "NUMBERS 6:26",
+      "sub": "PERFECT SLEEP",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Sleep deeply in His loving care tonight",
+      "img": "short-numbers6v24-scene-08.jpg",
+      "kicker": "NUMBERS 6:26",
+      "sub": "REST UNTIL MORNING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "Take a slow and gentle breath, releasing every anxious thought from your mind right now."
+    ],
+    [
+      12,
+      25,
+      "Let go of the weight you carried today, and open your heart to receive His quiet rest."
+    ],
+    [
+      25,
+      38,
+      "The Lord bless you and keep you in His perfect and unfailing protection through the night."
+    ],
+    [
+      38,
+      51,
+      "The Lord make His face shine upon you, warming your spirit with His gentle and holy light."
+    ],
+    [
+      51,
+      64,
+      "And be gracious to you, covering every single mistake and weakness with His endless mercy."
+    ],
+    [
+      64,
+      77,
+      "The Lord lift up His countenance upon you, looking toward you with deep and abiding favor."
+    ],
+    [
+      77,
+      90,
+      "And give you peace, quieting every storm in your soul until all is calm and still."
+    ],
+    [
+      90,
+      102,
+      "Sleep deeply in His loving care tonight, knowing you are safe beneath His sheltering wings."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "TAKE A SLOW",
+        "AND GENTLE BREATH",
+        "RELEASING EVERY THOUGHT"
+      ],
+      "BREATH",
+      "NUMBERS 6:24"
+    ],
+    [
+      12,
+      25,
+      [
+        "LET GO OF",
+        "THE WORN WEIGHT",
+        "OF THIS LONG DAY"
+      ],
+      "WEIGHT",
+      "NUMBERS 6:24"
+    ],
+    [
+      25,
+      38,
+      [
+        "THE LORD BLESS YOU",
+        "AND KEEP YOU",
+        "IN HIS PROTECTION"
+      ],
+      "BLESS",
+      "NUMBERS 6:24"
+    ],
+    [
+      38,
+      51,
+      [
+        "THE LORD MAKE",
+        "HIS FACE SHINE",
+        "UPON YOU NOW"
+      ],
+      "SHINE",
+      "NUMBERS 6:25"
+    ],
+    [
+      51,
+      64,
+      [
+        "AND BE GRACIOUS",
+        "TO YOUR SOUL",
+        "WITH ENDLESS MERCY"
+      ],
+      "GRACIOUS",
+      "NUMBERS 6:25"
+    ],
+    [
+      64,
+      77,
+      [
+        "THE LORD LIFT UP",
+        "HIS COUNTENANCE",
+        "UPON YOU TODAY"
+      ],
+      "LIFT",
+      "NUMBERS 6:26"
+    ],
+    [
+      77,
+      90,
+      [
+        "AND GIVE YOU",
+        "DEEP AND",
+        "PERFECT PEACE"
+      ],
+      "PEACE",
+      "NUMBERS 6:26"
+    ],
+    [
+      90,
+      102,
+      [
+        "SLEEP DEEPLY",
+        "IN HIS LOVING",
+        "CARE TONIGHT"
+      ],
+      "SLEEP",
+      "NUMBERS 6:26"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Take a slow and gentle breath",
+      "kind": "phrase",
+      "words": [
+        "SLOW",
+        "BREATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let go of the weight you carried today",
+      "kind": "phrase",
+      "words": [
+        "WEIGHT",
+        "TODAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord bless you and keep you",
+      "kind": "phrase",
+      "words": [
+        "BLESS",
+        "KEEP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord make His face shine upon you",
+      "kind": "phrase",
+      "words": [
+        "FACE",
+        "SHINE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And be gracious to you",
+      "kind": "phrase",
+      "words": [
+        "GRACIOUS",
+        "YOU"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord lift up His countenance upon you",
+      "kind": "phrase",
+      "words": [
+        "LIFT",
+        "COUNTENANCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And give you peace",
+      "kind": "phrase",
+      "words": [
+        "GIVE",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Sleep deeply in His loving care tonight",
+      "kind": "phrase",
+      "words": [
+        "SLEEP",
+        "TONIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Numbers 6:24-26"
+}

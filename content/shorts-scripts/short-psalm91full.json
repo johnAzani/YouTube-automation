@@ -1,0 +1,274 @@
+{
+  "key": "short-psalm91full",
+  "channel": "secret-place",
+  "psalm": 91,
+  "title": [
+    "A NIGHT OF",
+    "DIVINE PROTECTION"
+  ],
+  "poster": [
+    "FIND REST",
+    "IN HIS SHADOW",
+    "PSALM NINETY-ONE",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "serene moonlit lake calm water",
+    "flickering candle flame dark background",
+    "misty mountain forest at twilight",
+    "stars shining above calm ocean",
+    "soft glowing embers in fireplace",
+    "gentle rippling stream at night"
+  ],
+  "scenes": [
+    {
+      "a": "Take a deep breath and let go of the day.",
+      "img": "short-psalm91full-scene-01.jpg",
+      "kicker": "PSALM 91:1",
+      "sub": "FIND YOUR REST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He who dwells in the secret place shall abide under the shadow of the Almighty.",
+      "img": "short-psalm91full-scene-02.jpg",
+      "kicker": "PSALM 91:1",
+      "sub": "ABIDE IN HIS SHADOW",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I will say of the Lord, He is my refuge and my fortress, my God in Him I will trust.",
+      "img": "short-psalm91full-scene-03.jpg",
+      "kicker": "PSALM 91:2",
+      "sub": "MY REFUGE AND FORTRESS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "His truth shall be your shield, and you shall not fear the terror of the night.",
+      "img": "short-psalm91full-scene-04.jpg",
+      "kicker": "PSALM 91:4",
+      "sub": "HE IS YOUR SHIELD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May His peace settle your heart now as you drift into a deep and holy sleep.",
+      "img": "short-psalm91full-scene-05.jpg",
+      "kicker": "SLEEP IN PEACE",
+      "sub": "REST IN HIS CARE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You are safe, you are held, and you are loved. Sleep well, child of the Most High.",
+      "img": "short-psalm91full-scene-06.jpg",
+      "kicker": "STAY PROTECTED",
+      "sub": "YOU ARE HELD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "Take a deep breath and let go of the day."
+    ],
+    [
+      16,
+      35,
+      "He who dwells in the secret place shall abide under the shadow of the Almighty."
+    ],
+    [
+      36,
+      55,
+      "I will say of the Lord, He is my refuge and my fortress, my God in Him I will trust."
+    ],
+    [
+      56,
+      75,
+      "His truth shall be your shield, and you shall not fear the terror of the night."
+    ],
+    [
+      76,
+      100,
+      "May His peace settle your heart now as you drift into a deep and holy sleep."
+    ],
+    [
+      101,
+      120,
+      "You are safe, you are held, and you are loved. Sleep well, child of the Most High."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "TAKE A DEEP BREATH",
+        "LET GO OF THE DAY"
+      ],
+      [
+        "DEEP BREATH",
+        "LET GO"
+      ],
+      "PSALM 91:1"
+    ],
+    [
+      16,
+      35,
+      [
+        "HE WHO DWELLS",
+        "IN THE SECRET PLACE",
+        "UNDER HIS SHADOW"
+      ],
+      [
+        "DWELLS",
+        "SECRET PLACE"
+      ],
+      "PSALM 91:1"
+    ],
+    [
+      36,
+      55,
+      [
+        "LORD IS MY REFUGE",
+        "MY FORTRESS AND GOD",
+        "IN HIM I TRUST"
+      ],
+      [
+        "REFUGE",
+        "FORTRESS"
+      ],
+      "PSALM 91:2"
+    ],
+    [
+      56,
+      75,
+      [
+        "HIS TRUTH IS SHIELD",
+        "FEAR NOT THE NIGHT"
+      ],
+      [
+        "TRUTH",
+        "SHIELD"
+      ],
+      "PSALM 91:4"
+    ],
+    [
+      76,
+      100,
+      [
+        "HIS PEACE SETTLES",
+        "HEART NOW DRIFTING",
+        "IN HOLY SLEEP"
+      ],
+      [
+        "PEACE",
+        "HOLY SLEEP"
+      ],
+      "PSALM 91"
+    ],
+    [
+      101,
+      120,
+      [
+        "YOU ARE SAFE",
+        "YOU ARE HELD",
+        "SLEEP WELL NOW"
+      ],
+      [
+        "SAFE",
+        "HELD"
+      ],
+      "PSALM 91"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Take a deep breath and let go of the day.",
+      "kind": "phrase",
+      "words": [
+        "DEEP",
+        "BREATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He who dwells in the secret place shall abide under the shadow of the Almighty.",
+      "kind": "phrase",
+      "words": [
+        "SECRET",
+        "PLACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "I will say of the Lord, He is my refuge and my fortress, my God in Him I will trust.",
+      "kind": "phrase",
+      "words": [
+        "REFUGE",
+        "FORTRESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "His truth shall be your shield, and you shall not fear the terror of the night.",
+      "kind": "phrase",
+      "words": [
+        "TRUTH",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May His peace settle your heart now as you drift into a deep and holy sleep.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "HOLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You are safe, you are held, and you are loved. Sleep well, child of the Most High.",
+      "kind": "phrase",
+      "words": [
+        "SAFE",
+        "HELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 91"
+}
