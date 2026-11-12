@@ -38,7 +38,12 @@ launch has been configured. Do not call it connected to automation or publishing
    thumbnail path now requires an active channel, a matching authorized identity
    and video ownership; missing expected IDs will block live updates. Other paths
    still need review: live comments do not yet require an expected channel ID,
-   and inactive gating must be checked in all remaining write-capable paths.
+   a manual video target can refer to another channel, direct `post_reply` can
+   bypass the fetch identity guard, and reconciliation runs before that guard.
+   The read-only `pipeline/comment_target_guard.py` helper verifies identity,
+   video ownership and parent-thread linkage but is **not wired into comment
+   writes or reconciliation**; it does not gate inactive channel profiles. Inactive
+   gating must also be checked in all remaining write-capable paths.
    Local tests and workflow linting do not replace testing GitHub Actions or
    verifying real OAuth credentials. Do not register or activate channel nine
    until these gaps are addressed.
