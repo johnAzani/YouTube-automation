@@ -2,10 +2,17 @@
 
 The owner shared a screenshot of The Guided Path (`@TheGuidedPathPrayer`) showing
 its avatar, banner and the opening of its description. The full description,
-watermark, channel ID and OAuth identity have not been verified. The brand kit
-is in [GUIDED_PATH_BRANDING.md](GUIDED_PATH_BRANDING.md). No OAuth authorization,
-secrets, preflight, registry entry, publishing mapping, schedule, or launch has
-been confirmed. Channel nine also remains unregistered and inactive.
+watermark, channel ID and OAuth identity were not established by the screenshot. The brand kit is in
+[GUIDED_PATH_BRANDING.md](GUIDED_PATH_BRANDING.md). A subsequent screenshot shows
+all five planned `PRAYER10_*` repository secret names, not their values. The
+[read-only OAuth preflight](https://github.com/johnAzani/YouTube-automation/actions/runs/43244946331)
+passed, matching the authorized channel to the configured ID and finding an
+upload-capable scope; owner confirmation that the ID belongs to The Guided Path
+is still needed. The [read-only Gemini preflight](https://github.com/johnAzani/YouTube-automation/actions/runs/43244945814)
+passed its model-metadata listing. Neither probe verifies upload, generation, TTS,
+quota, billing, thumbnail permissions or Gemini project ownership. No registry
+entry, publishing mapping, schedule, or launch has been configured. Channel nine
+also remains unregistered and inactive.
 
 ## Steps
 
@@ -13,20 +20,23 @@ been confirmed. Channel nine also remains unregistered and inactive.
    and beginning of the description. Watermark, feature eligibility and the
    association between the intended channel and its ID remain to be confirmed.
 2. Follow the established dedicated Google Cloud OAuth process and secure
-   GitHub Actions secrets process. Planned names are `PRAYER10_YOUTUBE_CLIENT_ID`,
+   GitHub Actions secrets process. The screenshot shows `PRAYER10_YOUTUBE_CLIENT_ID`,
    `PRAYER10_YOUTUBE_CLIENT_SECRET`, `PRAYER10_YOUTUBE_REFRESH_TOKEN`,
-   `PRAYER10_YOUTUBE_CHANNEL_ID`, and `PRAYER10_GEMINI_API_KEY` (if the owner
-   chooses to set one up). Do not send any secret, token or code in chat; never
+   `PRAYER10_YOUTUBE_CHANNEL_ID`, and `PRAYER10_GEMINI_API_KEY` saved as names.
+   Do not send any secret, token or code in chat; never
    reuse another channel's credentials as a fallback. Saving secrets must not
    trigger publishing. Respect the existing $0 budget lock.
 3. The standalone `python3 scripts/guided_path_preflight.py` reads only the four
    YouTube values from a secure environment, refreshes an OAuth token and reads
    the authorized channel ID; it fails closed on missing values, insufficient
-   scopes and mismatched or ambiguous IDs. The staged GitHub workflow is manual
-   and read-only; it is not deployed to the default branch. It has not been run
-   against real tenth-channel credentials. Matching the configured ID does not
+   scopes and mismatched or ambiguous IDs. Its initial branch-only run passed as
+   linked above. The staged GitHub workflow is manual and read-only; it is not
+   deployed to the default branch. Matching the configured ID does not
    independently prove the intended channel was selected; seek owner confirmation.
-   It does not test uploading, generation, TTS, thumbnail access, quota or billing.
+   The separate `scripts/guided_path_gemini_preflight.py` reads only the tenth
+   channel's Gemini key and checks model-list access; its initial branch-only run
+   passed. Its manual workflow is also staged only. Neither check tests uploading,
+   generation, TTS, thumbnail access, quota or billing.
 4. Before OAuth verification submission, ensure the shared public app, privacy
    and terms pages and demonstration accurately describe current behavior; see
    the remaining issues recorded in [NINTH_CHANNEL_SETUP.md](NINTH_CHANNEL_SETUP.md).
