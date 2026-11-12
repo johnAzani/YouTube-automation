@@ -6,9 +6,10 @@ confirmation of the displayed brand and handle, not an independent verification
 of the channel ID or OAuth identity. The owner has saved the four PRAYER9 YouTube
 secret names, and [read-only preflight run 43221633843](https://github.com/johnAzani/YouTube-automation/actions/runs/43221633843)
 succeeded: the refresh-token-authorized channel matches the configured channel ID,
-and an upload-capable scope was returned. This matches the configured ID, not an
-independent confirmation that the ID is the intended channel; it does not test
-an upload, generation, TTS, quota, billing or thumbnail permissions. A manual
+and an upload-capable scope was returned. The owner confirmed The Praise Garden
+was selected when copying the channel ID; this is owner confirmation, not an
+independent public-channel lookup. The check does not test an upload, generation,
+TTS, quota, billing or thumbnail permissions. A manual
 preflight workflow is staged in this PR, not deployed to the default branch.
 The owner reports saving `PRAYER9_GEMINI_API_KEY`; [read-only Gemini preflight
 run 43224493481](https://github.com/johnAzani/YouTube-automation/actions/runs/43224493481)
@@ -22,9 +23,9 @@ launch has been configured. Do not call it connected to automation or publishing
 
 1. Prepare the brand identity and assets (done; see the brand kit). The owner's
    screenshot shows the channel name, handle, banner, avatar and description.
-   Watermark, feature eligibility and independent confirmation that the saved
-   channel ID belongs to the intended channel have not been verified here. Do not
-   change another channel's branding.
+   The owner confirmed the intended channel was selected when copying its ID.
+   Watermark and feature eligibility have not been verified here. Do not change
+   another channel's branding.
 2. Implement a ninth-channel registry and complete parity work across
    capabilities, channel-specific workflow credentials, queue selection,
    thumbnails, watchdogs, audit and tests. It must fail closed: an unknown or
@@ -33,10 +34,11 @@ launch has been configured. Do not call it connected to automation or publishing
    **The ninth channel is not registered or wired yet.** The staged changes
    strengthen empty-credential isolation, restrict several existing workflow
    mappings to the selected channel and gate unknown or inactive channels in
-   the Produce, brain, comments, growth and metrics planners. Other paths still
-   need review: comments and the manual thumbnail workflow do not both require
-   verified expected channel identity, and inactive gating must be checked in
-   all remaining write-capable paths.
+   the Produce, brain, comments, growth and metrics planners. The manual live
+   thumbnail path now requires an active channel, a matching authorized identity
+   and video ownership; missing expected IDs will block live updates. Other paths
+   still need review: live comments do not yet require an expected channel ID,
+   and inactive gating must be checked in all remaining write-capable paths.
    Local tests and workflow linting do not replace testing GitHub Actions or
    verifying real OAuth credentials. Do not register or activate channel nine
    until these gaps are addressed.

@@ -2,10 +2,11 @@
 
 **Status:** the owner shared a YouTube channel screenshot showing The Praise
 Garden with handle `@ThePraiseGardenDaily`, the banner, avatar and description.
-The OAuth token has been checked against the owner's configured channel ID, but
-that ID has not been independently tied to the screenshot. The channel is not
-connected to publishing automation: the network registry and workflows do **not**
-yet support a ninth channel, and credentials alone do not connect it.
+The OAuth token matches the configured channel ID, and the owner confirmed that
+The Praise Garden was selected when the ID was copied. There has been no
+independent public-channel lookup. The channel is not connected to publishing
+automation: the network registry and workflows do **not** yet support a ninth
+channel, and credentials alone do not connect it.
 
 ## Identity
 
