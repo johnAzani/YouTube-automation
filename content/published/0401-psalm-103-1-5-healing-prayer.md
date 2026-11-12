@@ -2,7 +2,7 @@
 id: '0401'
 title: Psalm 103:1-5 Healing Prayer | The Healing Balm
 slug: psalm-103-1-5-healing-prayer
-status: approved
+status: published
 channel: prayer6
 privacy: public
 format: longform
@@ -73,6 +73,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-12"
+published_at: "2026-11-12T01:21:38Z"
+youtube_video_id: "QG1CTgF0Ju0"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith

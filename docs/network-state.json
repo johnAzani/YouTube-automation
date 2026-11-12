@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T00:53:22Z",
+  "generated_at": "2026-11-12T01:22:43Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 106,
-    "published_longform": 47,
-    "published_shorts": 59,
-    "public_total": 104,
-    "queued_longform": 50,
-    "queued_shorts": 34,
+    "published_total": 108,
+    "published_longform": 48,
+    "published_shorts": 60,
+    "public_total": 106,
+    "queued_longform": 49,
+    "queued_shorts": 33,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -346,32 +346,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 2,
-        "published_longform": 1,
-        "published_shorts": 1,
-        "public_total": 2,
-        "queued_longform": 5,
+        "published_total": 4,
+        "published_longform": 2,
+        "published_shorts": 2,
+        "public_total": 4,
+        "queued_longform": 4,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0400",
-        "title": "Jeremiah 30:17 Healing Prayer | The Healing Balm",
-        "format": "longform",
-        "youtube_video_id": "7spe8TmewlI",
-        "watch_url": "https://youtu.be/7spe8TmewlI",
-        "published_on": "2026-11-11",
-        "published_at": "2026-11-11T17:20:17Z"
-      },
-      "next_queued_longform": {
         "id": "0401",
         "title": "Psalm 103:1-5 Healing Prayer | The Healing Balm",
-        "words": 890,
+        "format": "longform",
+        "youtube_video_id": "QG1CTgF0Ju0",
+        "watch_url": "https://youtu.be/QG1CTgF0Ju0",
+        "published_on": "2026-11-12",
+        "published_at": "2026-11-12T01:21:38Z"
+      },
+      "next_queued_longform": {
+        "id": "0402",
+        "title": "Psalm 147:3 Healing Prayer | The Healing Balm",
+        "words": 860,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingpsalm103v1",
-        "scripture": "Psalm 103:1-5",
+        "short": "short-healingpsalm147v3",
+        "scripture": "Psalm 147:3",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -491,6 +491,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0401",
+      "slug": "psalm-103-1-5-healing-prayer",
+      "file": "0401-psalm-103-1-5-healing-prayer.md",
+      "title": "Psalm 103:1-5 Healing Prayer | The Healing Balm",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T01:21:38Z",
+      "youtube_video_id": "QG1CTgF0Ju0",
+      "watch_url": "https://youtu.be/QG1CTgF0Ju0",
+      "youtu_be_url": "https://youtu.be/QG1CTgF0Ju0",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/QG1CTgF0Ju0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/QG1CTgF0Ju0/hqdefault.jpg",
+      "thumb_text": "RENEW MY STRENGTH",
+      "duration_label": "~6 min",
+      "words": 890
+    },
+    {
+      "id": "SHORT-HEALINGPSALM103V1",
+      "slug": "short-healingpsalm103v1-restoration-prayer",
+      "file": "short-healingpsalm103v1-restoration-prayer.md",
+      "title": "Pray This Psalm 103:1-5 Healing Prayer for Peace & Strength | Healing Prayer #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T00:45:21Z",
+      "youtube_video_id": "V_CXGnDJsqk",
+      "watch_url": "https://www.youtube.com/shorts/V_CXGnDJsqk",
+      "youtu_be_url": "https://youtu.be/V_CXGnDJsqk",
+      "shorts_url": "https://www.youtube.com/shorts/V_CXGnDJsqk",
+      "studio_url": "https://studio.youtube.com/video/V_CXGnDJsqk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/V_CXGnDJsqk/hqdefault.jpg",
+      "thumb_text": "THE HEALING BALM \u00b7 RENEW MY STRENGTH",
+      "duration_label": "55s",
+      "words": 265
+    },
     {
       "id": "0301",
       "slug": "psalm-128-1-4-family-prayer",
@@ -3401,19 +3447,6 @@
         "words": 1721
       },
       {
-        "id": "0401",
-        "slug": "psalm-103-1-5-healing-prayer",
-        "file": "0401-psalm-103-1-5-healing-prayer.md",
-        "title": "Psalm 103:1-5 Healing Prayer | The Healing Balm",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 890
-      },
-      {
         "id": "0402",
         "slug": "psalm-147-3-healing-prayer",
         "file": "0402-psalm-147-3-healing-prayer.md",
@@ -3803,17 +3836,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-healingpsalm103v1",
-        "file": "0401-short-healingpsalm103v1.yml",
-        "companion_longform_id": "401",
-        "scripture": "Psalm 103:1-5",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingpsalm147v3",
