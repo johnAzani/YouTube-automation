@@ -1,6 +1,8 @@
 # Ninth channel — staged setup: The Praise Garden
 
-**Current status: brand assets and editorial direction only.** No new channel
+**Current status: staged brand assets, authoring guidelines and a standalone
+read-only credential preflight.** The guidelines are not registered with the
+production brain; the preflight is not connected to any workflow. No new channel
 registry entry, OAuth credentials, workflow mapping, queue, channel identity,
 activation, or launch has been configured or verified. Do not call it connected
 or live. The handle in [the brand kit](PRAISE_GARDEN_BRANDING.md) is a suggestion,
@@ -25,8 +27,15 @@ not a verified or reserved handle.
    secure interfaces, never in chat. Do not request or record passwords, OAuth
    codes, client secrets, API keys or refresh tokens in conversation. Obtain the
    channel ID through the intended secure workflow, then use a read-only preflight
-   to confirm authorized identity and required permissions. Credentials and
-   identity have not yet been tested.
+   to confirm authorized identity and required permissions. The standalone
+   `python scripts/praise_garden_preflight.py` reads only
+   `PRAYER9_YOUTUBE_CLIENT_ID`, `PRAYER9_YOUTUBE_CLIENT_SECRET`,
+   `PRAYER9_YOUTUBE_REFRESH_TOKEN`, and `PRAYER9_YOUTUBE_CHANNEL_ID` from a
+   secure local environment and makes only OAuth refresh and channel-identity
+   requests. It rejects missing fields, insufficient or undisclosed scopes, and
+   wrong/ambiguous channel identities. It does not test an upload, TTS, quota,
+   billing or thumbnail permission, and is not yet wired into Actions.
+   Credentials and identity have not yet been tested.
 5. The owner handles YouTube phone/feature verification. Review thumbnail and
    advanced-feature status independently; permission responses alone do not
    prove the reason for a refusal.
