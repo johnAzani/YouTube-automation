@@ -82,8 +82,9 @@ published_on: "2026-11-12"
 published_at: "2026-11-12T13:24:36Z"
 youtube_video_id: "nHrsmUn9Kj8"
 metadata_revision: "selar-seo-v1"
-thumbnail_pending: true
-thumbnail_error: "not_requested"
+thumbnail_pending: false
+
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Noonday Pause and the Promise of Light
