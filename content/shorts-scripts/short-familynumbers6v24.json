@@ -1,0 +1,265 @@
+{
+  "key": "short-familynumbers6v24",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "COVER YOUR HOME",
+    "IN PRAYER"
+  ],
+  "poster": [
+    "NUMBERS 6",
+    "THE LORD BLESS YOU",
+    "AND KEEP YOU",
+    "THE FAMILY ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit wooden table with open bible and olive branch",
+    "peaceful countryside home glowing warmly at twilight",
+    "gentle candlelight on a family dinner table evening",
+    "serene morning sunlight through a quiet living room window",
+    "cozy hearth fire in a quiet traditional family home",
+    "tranquil twilight sky over a peaceful rural countryside"
+  ],
+  "scenes": [
+    {
+      "a": "Gather your family together right now, pausing to bring your household before the Lord in quiet faith.",
+      "img": "short-familynumbers6v24-scene-01.jpg",
+      "kicker": "NUMBERS 6:24",
+      "sub": "GATHER YOUR HOUSEHOLD IN FAITH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Let every distraction fade as we seek His holy presence over our dwelling place this day.",
+      "img": "short-familynumbers6v24-scene-02.jpg",
+      "kicker": "NUMBERS 6:25",
+      "sub": "SEEK HIS HOLY PRESENCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Listen closely to this eternal blessing spoken over your family:",
+      "img": "short-familynumbers6v24-scene-03.jpg",
+      "kicker": "NUMBERS 6:25",
+      "sub": "AN ETERNAL BLESSING",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The Lord bless you and keep you; the Lord make his face shine on you and be gracious to you; the Lord turn his face toward you and give you peace.",
+      "img": "short-familynumbers6v24-scene-04.jpg",
+      "kicker": "NUMBERS 6:26",
+      "sub": "HIS PEACE UPON YOUR HOME",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, we rest completely in Your faithful promises, trusting Your gentle guidance for our home.",
+      "img": "short-familynumbers6v24-scene-05.jpg",
+      "kicker": "NUMBERS 6:26",
+      "sub": "TRUST IN HIS GUIDANCE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May His steadfast love surround every room, and may His enduring peace guard every heart until tomorrow. Amen.",
+      "img": "short-familynumbers6v24-scene-06.jpg",
+      "kicker": "NUMBERS 6:26",
+      "sub": "HIS PEACE GUARD YOUR HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "Gather your family together right now, pausing to bring your household before the Lord in quiet faith."
+    ],
+    [
+      6,
+      13,
+      "Let every distraction fade as we seek His holy presence over our dwelling place this day."
+    ],
+    [
+      13,
+      19,
+      "Listen closely to this eternal blessing spoken over your family:"
+    ],
+    [
+      19,
+      34,
+      "The Lord bless you and keep you; the Lord make his face shine on you and be gracious to you; the Lord turn his face toward you and give you peace."
+    ],
+    [
+      34,
+      41,
+      "Father, we rest completely in Your faithful promises, trusting Your gentle guidance for our home."
+    ],
+    [
+      41,
+      50,
+      "May His steadfast love surround every room, and may His enduring peace guard every heart until tomorrow. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "GATHER YOUR FAMILY",
+        "RIGHT NOW PAUSING",
+        "TO BRING YOUR HOUSEHOLD"
+      ],
+      "FAITH",
+      "NUMBERS 6 : 24"
+    ],
+    [
+      6,
+      13,
+      [
+        "LET EVERY DISTRACTION",
+        "FADE AS WE SEEK",
+        "HIS HOLY PRESENCE"
+      ],
+      "PRESENCE",
+      "NUMBERS 6 : 25"
+    ],
+    [
+      13,
+      19,
+      [
+        "LISTEN CLOSELY TO",
+        "THIS ETERNAL BLESSING",
+        "SPOKEN OVER YOUR FAMILY"
+      ],
+      "BLESSING",
+      "NUMBERS 6 : 25"
+    ],
+    [
+      19,
+      34,
+      [
+        "THE LORD BLESS YOU",
+        "AND KEEP YOU THE",
+        "LORD MAKE HIS FACE",
+        "SHINE ON YOU AND",
+        "GIVE YOU PEACE"
+      ],
+      "PEACE",
+      "NUMBERS 6 : 26"
+    ],
+    [
+      34,
+      41,
+      [
+        "FATHER WE REST",
+        "COMPLETELY IN YOUR",
+        "FAITHFUL PROMISES"
+      ],
+      "PROMISES",
+      "NUMBERS 6 : 26"
+    ],
+    [
+      41,
+      50,
+      [
+        "MAY HIS STEADFAST",
+        "LOVE SURROUND EVERY ROOM",
+        "AND GUARD EVERY HEART"
+      ],
+      "AMEN",
+      "NUMBERS 6 : 26"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Gather your family together right now, pausing to bring your household before the Lord in quiet faith.",
+      "kind": "phrase",
+      "words": [
+        "GATHER",
+        "YOUR",
+        "FAMILY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let every distraction fade as we seek His holy presence over our dwelling place this day.",
+      "kind": "phrase",
+      "words": [
+        "HOLY",
+        "PRESENCE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Listen closely to this eternal blessing spoken over your family:",
+      "kind": "phrase",
+      "words": [
+        "ETERNAL",
+        "BLESSING"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord bless you and keep you; the Lord make his face shine on you and be gracious to you; the Lord turn his face toward you and give you peace.",
+      "kind": "phrase",
+      "words": [
+        "BLESS",
+        "YOU",
+        "AND",
+        "KEEP",
+        "YOU"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we rest completely in Your faithful promises, trusting Your gentle guidance for our home.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFUL",
+        "PROMISES"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "May His steadfast love surround every room, and may His enduring peace guard every heart until tomorrow. Amen.",
+      "kind": "phrase",
+      "words": [
+        "STEADFAST",
+        "LOVE",
+        "PEACE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Numbers 6:24-26"
+}

@@ -1,0 +1,274 @@
+{
+  "key": "short-familydeuteronomy6v6",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "A HOUSEHOLD PRAYER",
+    "DEUTERONOMY SIX"
+  ],
+  "poster": [
+    "GATHER YOUR FAMILY",
+    "LIGHT THE LAMPS",
+    "OPEN THE SCRIPTURES",
+    "SEEK HIS PEACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit wooden table with open vintage bible",
+    "olive branches on a rustic linen table cloth",
+    "soft morning light entering a peaceful kitchen",
+    "cozy farmhouse living room with soft evening glow",
+    "open bible on table with shadows of window pane",
+    "peaceful countryside home view at twilight"
+  ],
+  "scenes": [
+    {
+      "a": "Gather your home",
+      "img": "short-familydeuteronomy6v6-scene-01.jpg",
+      "kicker": "DEUTERONOMY 6:6-7",
+      "sub": "A QUIET FAMILY MOMENT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "These commandments",
+      "img": "short-familydeuteronomy6v6-scene-02.jpg",
+      "kicker": "GOD'S WORD",
+      "sub": "WRITTEN ON OUR HEARTS",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach them",
+      "img": "short-familydeuteronomy6v6-scene-03.jpg",
+      "kicker": "DAILY PRACTICE",
+      "sub": "GUIDING OUR CHILDREN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "When you sit",
+      "img": "short-familydeuteronomy6v6-scene-04.jpg",
+      "kicker": "IN THE HOME",
+      "sub": "BLESSED CONVERSATIONS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Lord we ask",
+      "img": "short-familydeuteronomy6v6-scene-05.jpg",
+      "kicker": "A HUMBLE PRAYER",
+      "sub": "SEEKING HIS PRESENCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May our family",
+      "img": "short-familydeuteronomy6v6-scene-06.jpg",
+      "kicker": "FAITH AT HOME",
+      "sub": "ROOTED IN GRACE",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "Gather your home and loved ones in faith as we seek the Lord today."
+    ],
+    [
+      16,
+      35,
+      "These commandments that I give you today are to be on your hearts."
+    ],
+    [
+      36,
+      55,
+      "Teach them diligently to your children and talk about them when you sit at home."
+    ],
+    [
+      56,
+      75,
+      "When you walk along the road, when you lie down and when you get up."
+    ],
+    [
+      76,
+      100,
+      "Lord we ask that your peace rests upon this house and every soul within these walls."
+    ],
+    [
+      101,
+      125,
+      "May our family walk in your truth and let your love be the anchor of our lives forever."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "GATHER YOUR HOME",
+        "AND LOVED ONES",
+        "IN FAITH TODAY"
+      ],
+      [
+        "FAITH"
+      ],
+      "DEUTERONOMY 6:6-7"
+    ],
+    [
+      16,
+      35,
+      [
+        "COMMANDMENTS UPON",
+        "OUR HEARTS",
+        "TODAY AND ALWAYS"
+      ],
+      [
+        "HEARTS"
+      ],
+      "DEUTERONOMY 6:6-7"
+    ],
+    [
+      36,
+      55,
+      [
+        "TEACH THEM",
+        "TO YOUR CHILDREN",
+        "SITTING AT HOME"
+      ],
+      [
+        "TEACH"
+      ],
+      "DEUTERONOMY 6:6-7"
+    ],
+    [
+      56,
+      75,
+      [
+        "WALK ALONG THE ROAD",
+        "LIE DOWN AND RISE",
+        "IN HIS GRACE"
+      ],
+      [
+        "GRACE"
+      ],
+      "DEUTERONOMY 6:6-7"
+    ],
+    [
+      76,
+      100,
+      [
+        "LORD WE ASK",
+        "FOR YOUR PEACE",
+        "UPON THIS HOUSE"
+      ],
+      [
+        "PEACE"
+      ],
+      "DEUTERONOMY 6:6-7"
+    ],
+    [
+      101,
+      125,
+      [
+        "MAY OUR FAMILY",
+        "WALK IN TRUTH",
+        "FOREVERMORE"
+      ],
+      [
+        "TRUTH"
+      ],
+      "DEUTERONOMY 6:6-7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Gather your home",
+      "kind": "phrase",
+      "words": [
+        "GATHER",
+        "YOUR",
+        "HOME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "These commandments",
+      "kind": "phrase",
+      "words": [
+        "THESE",
+        "COMMANDMENTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teach them",
+      "kind": "phrase",
+      "words": [
+        "TEACH",
+        "THEM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When you sit",
+      "kind": "phrase",
+      "words": [
+        "WHEN",
+        "YOU",
+        "SIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord we ask",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "WE",
+        "ASK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May our family",
+      "kind": "phrase",
+      "words": [
+        "MAY",
+        "OUR",
+        "FAMILY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Deuteronomy 6:6-7"
+}
