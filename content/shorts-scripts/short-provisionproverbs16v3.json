@@ -1,0 +1,384 @@
+{
+  "key": "short-provisionproverbs16v3",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "COMMIT THY WORKS",
+    "UNTO THE LORD"
+  ],
+  "poster": [
+    "THE PROVISION TABLE",
+    "COMMIT THY WORKS",
+    "PROVERBS 16:3",
+    "GOD'S DAILY PROVISION"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "sunlit sanctuary stone table morning light peaceful",
+    "golden sunlit mountain pass trail morning mist",
+    "sunlit stone altar open valley perspective warm light",
+    "peaceful river flowing through golden forest autumn sunrise",
+    "sunlit valley panoramic view morning rays quiet nature",
+    "golden sunset glowing over calm mountain lake",
+    "sunbeam shining through ancient mountain pass trees",
+    "peaceful sunrise over serene golden meadow and valley"
+  ],
+  "scenes": [
+    {
+      "a": "Welcome to The Provision Table today.",
+      "img": "short-provisionproverbs16v3-scene-01.jpg",
+      "kicker": "PROVERBS 16:3",
+      "sub": "COMMIT THY WORKS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Come and bring your daily work, your hard decisions, and your pressing needs before the Father.",
+      "img": "short-provisionproverbs16v3-scene-02.jpg",
+      "kicker": "PROVERBS 16:3",
+      "sub": "BRING YOUR DAILY NEEDS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "As God's Word declares in Proverbs 16:3, Commit thy works unto the LORD, and thy thoughts shall be established.",
+      "img": "short-provisionproverbs16v3-scene-03.jpg",
+      "kicker": "PROVERBS 16:3",
+      "sub": "THOUGHTS ESTABLISHED",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "When you place your plans, your labor, and your quiet anxieties into His faithful hands, He aligns your mind with His divine wisdom.",
+      "img": "short-provisionproverbs16v3-scene-04.jpg",
+      "kicker": "PROVERBS 16:3",
+      "sub": "TRUST HIS FAITHFUL HANDS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord Heavenly Father, we surrender every effort, every project, and every daily financial concern to You.",
+      "img": "short-provisionproverbs16v3-scene-05.jpg",
+      "kicker": "PROVERBS 16:3",
+      "sub": "SURRENDER EVERY EFFORT",
+      "cam": "push_in",
+      "focus": [
+        0.45,
+        0.45
+      ]
+    },
+    {
+      "a": "Establish our thoughts, clear our path, and open doors of supernatural wisdom and daily provision.",
+      "img": "short-provisionproverbs16v3-scene-06.jpg",
+      "kicker": "PROVERBS 16:3",
+      "sub": "OPEN DOORS OF WISDOM",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "May our work bring glory to Your holy name as You direct our steps.",
+      "img": "short-provisionproverbs16v3-scene-07.jpg",
+      "kicker": "PROVERBS 16:3",
+      "sub": "GOD DIRECTS YOUR STEPS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe now to walk with us in God's daily provision today.",
+      "img": "short-provisionproverbs16v3-scene-08.jpg",
+      "kicker": "PROVERBS 16:3",
+      "sub": "WALK IN DAILY PROVISION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "Welcome to The Provision Table today."
+    ],
+    [
+      6,
+      13,
+      "Come and bring your daily work, your hard decisions, and your pressing needs before the Father."
+    ],
+    [
+      13,
+      21,
+      "As God's Word declares in Proverbs 16:3, Commit thy works unto the LORD, and thy thoughts shall be established."
+    ],
+    [
+      21,
+      29,
+      "When you place your plans, your labor, and your quiet anxieties into His faithful hands, He aligns your mind with His divine wisdom."
+    ],
+    [
+      29,
+      37,
+      "Lord Heavenly Father, we surrender every effort, every project, and every daily financial concern to You."
+    ],
+    [
+      37,
+      44,
+      "Establish our thoughts, clear our path, and open doors of supernatural wisdom and daily provision."
+    ],
+    [
+      44,
+      51,
+      "May our work bring glory to Your holy name as You direct our steps."
+    ],
+    [
+      51,
+      56,
+      "Subscribe now to walk with us in God's daily provision today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "WELCOME TO THE",
+        "PROVISION TABLE TODAY"
+      ],
+      [
+        "PROVISION",
+        "TABLE"
+      ],
+      "PROVERBS 16:3"
+    ],
+    [
+      6,
+      13,
+      [
+        "COME AND BRING YOUR",
+        "DAILY WORK YOUR HARD",
+        "DECISIONS AND YOUR PRESSING",
+        "NEEDS BEFORE THE FATHER"
+      ],
+      [
+        "DAILY",
+        "WORK",
+        "NEEDS"
+      ],
+      "PROVERBS 16:3"
+    ],
+    [
+      13,
+      21,
+      [
+        "AS GODS WORD DECLARES",
+        "IN PROVERBS SIXTEEN THREE",
+        "COMMIT THY WORKS UNTO THE LORD",
+        "AND THY THOUGHTS SHALL BE ESTABLISHED"
+      ],
+      [
+        "COMMIT",
+        "WORKS",
+        "THOUGHTS",
+        "ESTABLISHED"
+      ],
+      "PROVERBS 16:3"
+    ],
+    [
+      21,
+      29,
+      [
+        "WHEN YOU PLACE YOUR PLANS",
+        "YOUR LABOR AND YOUR QUIET ANXITIES",
+        "INTO HIS FAITHFUL HANDS",
+        "HE ALIGNS YOUR MIND WITH",
+        "HIS DIVINE WISDOM"
+      ],
+      [
+        "PLANS",
+        "LABOR",
+        "FAITHFUL",
+        "DIVINE",
+        "WISDOM"
+      ],
+      "PROVERBS 16:3"
+    ],
+    [
+      29,
+      37,
+      [
+        "LORD HEAVENLY FATHER WE",
+        "SURRENDER EVERY EFFORT EVERY",
+        "PROJECT AND EVERY DAILY",
+        "FINANCIAL CONCERN TO YOU"
+      ],
+      [
+        "SURRENDER",
+        "EFFORT",
+        "FINANCIAL",
+        "CONCERN"
+      ],
+      "PROVERBS 16:3"
+    ],
+    [
+      37,
+      44,
+      [
+        "ESTABLISH OUR THOUGHTS",
+        "CLEAR OUR PATH AND OPEN DOORS",
+        "OF SUPERNATURAL WISDOM AND",
+        "DAILY PROVISION"
+      ],
+      [
+        "ESTABLISH",
+        "OPEN",
+        "DOORS",
+        "PROVISION"
+      ],
+      "PROVERBS 16:3"
+    ],
+    [
+      44,
+      51,
+      [
+        "MAY OUR WORK BRING GLORY",
+        "TO YOUR HOLY NAME AS",
+        "YOU DIRECT OUR STEPS"
+      ],
+      [
+        "WORK",
+        "GLORY",
+        "DIRECT",
+        "STEPS"
+      ],
+      "PROVERBS 16:3"
+    ],
+    [
+      51,
+      56,
+      [
+        "SUBSCRIBE NOW TO WALK WITH",
+        "US IN GODS DAILY PROVISION TODAY"
+      ],
+      [
+        "SUBSCRIBE",
+        "DAILY",
+        "PROVISION"
+      ],
+      "PROVERBS 16:3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Welcome to The Provision Table today.",
+      "kind": "phrase",
+      "words": [
+        "PROVISION",
+        "TABLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Come and bring your daily work, your hard decisions, and your pressing needs before the Father.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "WORK",
+        "NEEDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As God's Word declares in Proverbs 16:3, Commit thy works unto the LORD, and thy thoughts shall be established.",
+      "kind": "phrase",
+      "words": [
+        "COMMIT",
+        "WORKS",
+        "THOUGHTS",
+        "ESTABLISHED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When you place your plans, your labor, and your quiet anxieties into His faithful hands, He aligns your mind with His divine wisdom.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFUL",
+        "DIVINE",
+        "WISDOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord Heavenly Father, we surrender every effort, every project, and every daily financial concern to You.",
+      "kind": "phrase",
+      "words": [
+        "SURRENDER",
+        "EFFORT",
+        "CONCERN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Establish our thoughts, clear our path, and open doors of supernatural wisdom and daily provision.",
+      "kind": "phrase",
+      "words": [
+        "ESTABLISH",
+        "OPEN",
+        "DOORS",
+        "PROVISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May our work bring glory to Your holy name as You direct our steps.",
+      "kind": "phrase",
+      "words": [
+        "GLORY",
+        "DIRECT",
+        "STEPS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe now to walk with us in God's daily provision today.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "DAILY",
+        "PROVISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 16:3"
+}

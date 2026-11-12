@@ -1,0 +1,406 @@
+{
+  "key": "short-provisionpsalm84v11",
+  "channel": "prayer7",
+  "psalm": 84,
+  "title": [
+    "NO GOOD THING",
+    "WITHHELD"
+  ],
+  "poster": [
+    "THE PROVISION TABLE",
+    "DAILY PROVISION PRAYER",
+    "PSALM 84:11",
+    "WALK IN GOD'S GRACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunlit valley morning light soft mist",
+    "sunlit stone altar table in peaceful mountain meadow",
+    "majestic golden sun rays beaming through mountain pass",
+    "peaceful stone path winding through sunlit forest",
+    "ancient sunlit archway open door scenic mountain valley",
+    "golden sunset glowing over calm peaceful river",
+    "sunbeams illuminating quiet valley meadow wildflowers",
+    "calm mountain river golden hour tranquil reflections",
+    "peaceful sunlit valley panorama distant horizon"
+  ],
+  "scenes": [
+    {
+      "a": "Come, bring your labor",
+      "img": "short-provisionpsalm84v11-scene-01.jpg",
+      "kicker": "DAILY STEWARDSHIP",
+      "sub": "COMMIT YOUR WORK UNTO HIM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Set your work upon His table",
+      "img": "short-provisionpsalm84v11-scene-02.jpg",
+      "kicker": "THE PROVISION TABLE",
+      "sub": "TRUST HIS FAITHFUL HAND",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For the Lord God is a sun",
+      "img": "short-provisionpsalm84v11-scene-03.jpg",
+      "kicker": "PSALM 84:11",
+      "sub": "A SUN AND SHIELD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Heavenly Father, guide our footsteps",
+      "img": "short-provisionpsalm84v11-scene-04.jpg",
+      "kicker": "WALK UPRIGHTLY",
+      "sub": "GUIDE OUR FOOTSTEPS TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Open wide the doors",
+      "img": "short-provisionpsalm84v11-scene-05.jpg",
+      "kicker": "OPEN DOORS",
+      "sub": "HEAVENLY PROVISION AWAITS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Be our warming sun",
+      "img": "short-provisionpsalm84v11-scene-06.jpg",
+      "kicker": "DIVINE PROTECTION",
+      "sub": "OUR SHIELD IN TIMES OF TRIAL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Pour out grace upon our decisions",
+      "img": "short-provisionpsalm84v11-scene-07.jpg",
+      "kicker": "GRACE AND GLORY",
+      "sub": "BESTOWED UPON YOUR STEWARDSHIP",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "We place our trust entirely",
+      "img": "short-provisionpsalm84v11-scene-08.jpg",
+      "kicker": "UNFAILING SUPPLY",
+      "sub": "NO GOOD THING WITHHELD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to join us daily",
+      "img": "short-provisionpsalm84v11-scene-09.jpg",
+      "kicker": "THE PROVISION TABLE",
+      "sub": "WALK IN DAILY PROVISION",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Come, bring your labor, your hard choices, and your daily cares before the Lord today."
+    ],
+    [
+      8,
+      16,
+      "Set your work upon His table and trust His faithful hand."
+    ],
+    [
+      16,
+      28,
+      "For the Lord God is a sun and shield: the Lord will give grace and glory: no good thing will he withhold from them that walk uprightly."
+    ],
+    [
+      28,
+      36,
+      "Heavenly Father, guide our footsteps in true uprightness today."
+    ],
+    [
+      36,
+      44,
+      "Open wide the doors of heavenly provision for every quiet need."
+    ],
+    [
+      44,
+      52,
+      "Be our warming sun in season and our shield in times of trial."
+    ],
+    [
+      52,
+      60,
+      "Pour out grace upon our decisions and bestow glory upon our daily stewardship."
+    ],
+    [
+      60,
+      68,
+      "We place our trust entirely in Your unfailing supply."
+    ],
+    [
+      68,
+      75,
+      "Subscribe to join us daily at The Provision Table."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "COME BRING YOUR LABOR",
+        "YOUR HARD CHOICES AND CARES",
+        "BEFORE THE LORD TODAY"
+      ],
+      [
+        "LABOR",
+        "LORD"
+      ],
+      "DAILY STEWARDSHIP"
+    ],
+    [
+      8,
+      16,
+      [
+        "SET YOUR WORK UPON HIS TABLE",
+        "AND TRUST HIS FAITHFUL HAND"
+      ],
+      [
+        "TABLE",
+        "FAITHFUL"
+      ],
+      "THE PROVISION TABLE"
+    ],
+    [
+      16,
+      28,
+      [
+        "FOR THE LORD GOD IS A SUN AND SHIELD",
+        "THE LORD WILL GIVE GRACE AND GLORY",
+        "NO GOOD THING WILL HE WITHHOLD",
+        "FROM THEM THAT WALK UPRIGHTLY"
+      ],
+      [
+        "SUN",
+        "SHIELD",
+        "GRACE",
+        "GLORY",
+        "UPRIGHTLY"
+      ],
+      "PSALM 84 : 11"
+    ],
+    [
+      28,
+      36,
+      [
+        "HEAVENLY FATHER GUIDE OUR FOOTSTEPS",
+        "IN TRUE UPRIGHTNESS TODAY"
+      ],
+      [
+        "GUIDE",
+        "UPRIGHTNESS"
+      ],
+      "DAILY PRAYER"
+    ],
+    [
+      36,
+      44,
+      [
+        "OPEN WIDE THE DOORS OF PROVISION",
+        "FOR EVERY QUIET NEED"
+      ],
+      [
+        "OPEN DOORS",
+        "PROVISION"
+      ],
+      "OPEN DOORS"
+    ],
+    [
+      44,
+      52,
+      [
+        "BE OUR WARMING SUN IN SEASON",
+        "AND SHIELD IN TIMES OF TRIAL"
+      ],
+      [
+        "WARMING SUN",
+        "SHIELD"
+      ],
+      "PROTECTION"
+    ],
+    [
+      52,
+      60,
+      [
+        "POUR OUT GRACE UPON OUR DECISIONS",
+        "AND BESTOW GLORY UPON STEWARDSHIP"
+      ],
+      [
+        "GRACE",
+        "GLORY"
+      ],
+      "STEWARDSHIP"
+    ],
+    [
+      60,
+      68,
+      [
+        "WE PLACE OUR TRUST ENTIRELY",
+        "IN YOUR UNFAILING SUPPLY"
+      ],
+      [
+        "TRUST",
+        "UNFAILING SUPPLY"
+      ],
+      "DAILY TRUST"
+    ],
+    [
+      68,
+      75,
+      [
+        "SUBSCRIBE TO JOIN US DAILY",
+        "AT THE PROVISION TABLE"
+      ],
+      [
+        "SUBSCRIBE",
+        "PROVISION TABLE"
+      ],
+      "JOIN US"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Come, bring your labor",
+      "kind": "phrase",
+      "words": [
+        "LABOR",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Set your work upon His table",
+      "kind": "phrase",
+      "words": [
+        "TABLE",
+        "FAITHFUL"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "For the Lord God is a sun",
+      "kind": "phrase",
+      "words": [
+        "SUN",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "no good thing will he withhold",
+      "kind": "phrase",
+      "words": [
+        "NO GOOD THING",
+        "WITHHOLD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, guide our footsteps",
+      "kind": "phrase",
+      "words": [
+        "GUIDE",
+        "FOOTSTEPS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Open wide the doors",
+      "kind": "phrase",
+      "words": [
+        "OPEN WIDE",
+        "PROVISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Be our warming sun",
+      "kind": "phrase",
+      "words": [
+        "WARMING SUN",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Pour out grace upon our decisions",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "GLORY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We place our trust entirely",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "UNFAILING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to join us daily",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PROVISION TABLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 84:11"
+}
