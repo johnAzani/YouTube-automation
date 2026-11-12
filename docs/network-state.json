@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T04:21:33Z",
+  "generated_at": "2026-11-12T05:12:40Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 115,
-    "published_longform": 51,
-    "published_shorts": 64,
-    "public_total": 113,
-    "queued_longform": 47,
-    "queued_shorts": 30,
+    "published_total": 117,
+    "published_longform": 52,
+    "published_shorts": 65,
+    "public_total": 115,
+    "queued_longform": 46,
+    "queued_shorts": 29,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -295,32 +295,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 4,
-        "published_longform": 2,
-        "published_shorts": 2,
-        "public_total": 4,
-        "queued_longform": 4,
+        "published_total": 6,
+        "published_longform": 3,
+        "published_shorts": 3,
+        "public_total": 6,
+        "queued_longform": 3,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "0301",
-        "title": "Psalm 128:1-4 Family Prayer | The Family Altar",
-        "format": "longform",
-        "youtube_video_id": "c8nBqdvETqA",
-        "watch_url": "https://youtu.be/c8nBqdvETqA",
-        "published_on": "2026-11-12",
-        "published_at": "2026-11-12T00:37:23Z"
-      },
-      "next_queued_longform": {
         "id": "0302",
         "title": "Psalm 127:1-5 Family Prayer | The Family Altar",
-        "words": 917,
+        "format": "longform",
+        "youtube_video_id": "9IDZtEb9OM0",
+        "watch_url": "https://youtu.be/9IDZtEb9OM0",
+        "published_on": "2026-11-12",
+        "published_at": "2026-11-12T05:11:54Z"
+      },
+      "next_queued_longform": {
+        "id": "0303",
+        "title": "Isaiah 54:13 Family Prayer | The Family Altar",
+        "words": 905,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familypsalm127v1",
-        "scripture": "Psalm 127:1-5",
+        "short": "short-familyisaiah54v13",
+        "scripture": "Isaiah 54:13",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -491,6 +491,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0302",
+      "slug": "psalm-127-1-5-family-prayer",
+      "file": "0302-psalm-127-1-5-family-prayer.md",
+      "title": "Psalm 127:1-5 Family Prayer | The Family Altar",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T05:11:54Z",
+      "youtube_video_id": "9IDZtEb9OM0",
+      "watch_url": "https://youtu.be/9IDZtEb9OM0",
+      "youtu_be_url": "https://youtu.be/9IDZtEb9OM0",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/9IDZtEb9OM0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/9IDZtEb9OM0/hqdefault.jpg",
+      "thumb_text": "GOD BUILDS THIS HOME",
+      "duration_label": "~6 min",
+      "words": 917
+    },
+    {
+      "id": "SHORT-FAMILYPSALM127V1",
+      "slug": "short-familypsalm127v1-household-prayer",
+      "file": "short-familypsalm127v1-household-prayer.md",
+      "title": "Pray This Psalm 127:1-5 Family Prayer Over Your Home | Family Prayer #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T04:29:28Z",
+      "youtube_video_id": "36jc7WO4ZLs",
+      "watch_url": "https://www.youtube.com/shorts/36jc7WO4ZLs",
+      "youtu_be_url": "https://youtu.be/36jc7WO4ZLs",
+      "shorts_url": "https://www.youtube.com/shorts/36jc7WO4ZLs",
+      "studio_url": "https://studio.youtube.com/video/36jc7WO4ZLs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/36jc7WO4ZLs/hqdefault.jpg",
+      "thumb_text": "THE FAMILY ALTAR \u00b7 GOD BUILDS THIS HOME",
+      "duration_label": "54s",
+      "words": 327
+    },
     {
       "id": "0205",
       "slug": "zechariah-2-5-midnight-prayer-the-midnight-watch",
@@ -3543,19 +3589,6 @@
         "words": 1176
       },
       {
-        "id": "0302",
-        "slug": "psalm-127-1-5-family-prayer",
-        "file": "0302-psalm-127-1-5-family-prayer.md",
-        "title": "Psalm 127:1-5 Family Prayer | The Family Altar",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 917
-      },
-      {
         "id": "0303",
         "slug": "isaiah-54-13-family-prayer",
         "file": "0303-isaiah-54-13-family-prayer.md",
@@ -3905,17 +3938,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-familypsalm127v1",
-        "file": "0302-short-familypsalm127v1.yml",
-        "companion_longform_id": "302",
-        "scripture": "Psalm 127:1-5",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
       },
       {
         "short": "short-familyisaiah54v13",
