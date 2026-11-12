@@ -1,0 +1,303 @@
+{
+  "key": "short-shieldisaiah54v17",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "THE COVENANT SHIELD",
+    "ISAIAH 54:17 PRAYER"
+  ],
+  "poster": [
+    "DIVINE PROTECTION",
+    "STRONG TOWER",
+    "SAFE KEEPING",
+    "ISAIAH 54:17"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower at dawn golden light",
+    "peaceful mountain river flowing through deep valley",
+    "golden sun rays piercing dark storm clouds",
+    "serene misty mountain pass at sunrise",
+    "tranquil lake reflecting calm morning sky",
+    "strong fortress wall under warm sunlight",
+    "endless horizon with peaceful glowing light"
+  ],
+  "scenes": [
+    {
+      "a": "Bow your heart and place every step",
+      "img": "short-shieldisaiah54v17-scene-01.jpg",
+      "kicker": "ISAIAH 54:17",
+      "sub": "THE COVENANT SHIELD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "No weapon that is formed against thee",
+      "img": "short-shieldisaiah54v17-scene-02.jpg",
+      "kicker": "DIVINE REFUGE",
+      "sub": "WALK IN SAFETY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "shall prosper in this dark world",
+      "img": "short-shieldisaiah54v17-scene-03.jpg",
+      "kicker": "STRONG TOWER",
+      "sub": "HIDDEN IN HIM",
+      "cam": "pan_left",
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    {
+      "a": "Every tongue that rises against you",
+      "img": "short-shieldisaiah54v17-scene-04.jpg",
+      "kicker": "SAFE KEEPING",
+      "sub": "SHIELDED BY GRACE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "is condemned by His holy covenant",
+      "img": "short-shieldisaiah54v17-scene-05.jpg",
+      "kicker": "HOLY PROMISE",
+      "sub": "ANCHORED IN TRUTH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Surround our going out and coming in",
+      "img": "short-shieldisaiah54v17-scene-06.jpg",
+      "kicker": "EVERLASTING ARMS",
+      "sub": "REST IN PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe for more daily KJV prayers",
+      "img": "short-shieldisaiah54v17-scene-07.jpg",
+      "kicker": "STAY PROTECTED",
+      "sub": "JOIN THE COVENANT SHIELD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "Bow your heart and place every step, journey, and unseen concern under the shadow of the Almighty today."
+    ],
+    [
+      7,
+      13,
+      "No weapon that is formed against thee shall prosper, as His word declares over your home and family."
+    ],
+    [
+      14,
+      20,
+      "shall prosper in this dark world, for you dwell securely inside His impenetrable fortress of grace."
+    ],
+    [
+      21,
+      27,
+      "Every tongue that rises against you in judgment thou shalt condemn, because He is your righteous shield."
+    ],
+    [
+      28,
+      34,
+      "is condemned by His holy covenant, keeping your soul safe through every trial and sudden storm."
+    ],
+    [
+      35,
+      41,
+      "Surround our going out and coming in with Your angels, Father, holding us safely in Your everlasting palms."
+    ],
+    [
+      42,
+      48,
+      "Subscribe for more daily KJV prayers and walk daily under the mighty shadow of His protecting wings."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "BOW YOUR HEART",
+        "AND PLACE EVERY STEP",
+        "UNDER HIS SHADOW"
+      ],
+      "SHADOW",
+      "ISAIAH 54 : 17"
+    ],
+    [
+      7,
+      13,
+      [
+        "NO WEAPON FORMED",
+        "AGAINST THEE",
+        "SHALL PROSPER NOW"
+      ],
+      "PROSPER",
+      "ISAIAH 54 : 17"
+    ],
+    [
+      14,
+      20,
+      [
+        "SHALL PROSPER",
+        "IN THIS DARK WORLD",
+        "SECURELY INSIDE"
+      ],
+      "FORTRESS",
+      "ISAIAH 54 : 17"
+    ],
+    [
+      21,
+      27,
+      [
+        "EVERY TONGUE",
+        "THAT RISES AGAINST",
+        "THOU SHALT CONDEMN"
+      ],
+      "CONDEMN",
+      "ISAIAH 54 : 17"
+    ],
+    [
+      28,
+      34,
+      [
+        "IS CONDEMNED",
+        "BY HIS COVENANT",
+        "KEEPING YOU SAFE"
+      ],
+      "COVENANT",
+      "ISAIAH 54 : 17"
+    ],
+    [
+      35,
+      41,
+      [
+        "SURROUND OUR GOING",
+        "OUT AND COMING IN",
+        "EVERLASTING PALMS"
+      ],
+      "FATHER",
+      "ISAIAH 54 : 17"
+    ],
+    [
+      42,
+      48,
+      [
+        "SUBSCRIBE FOR MORE",
+        "DAILY KJV PRAYERS",
+        "PROTECTING WINGS"
+      ],
+      "SUBSCRIBE",
+      "ISAIAH 54 : 17"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Bow your heart and place every step",
+      "kind": "phrase",
+      "words": [
+        "BOW",
+        "YOUR",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "No weapon that is formed against thee",
+      "kind": "phrase",
+      "words": [
+        "NO",
+        "WEAPON",
+        "FORMED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "shall prosper in this dark world",
+      "kind": "phrase",
+      "words": [
+        "SHALL",
+        "PROSPER",
+        "WORLD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Every tongue that rises against you",
+      "kind": "phrase",
+      "words": [
+        "EVERY",
+        "TONGUE",
+        "RISES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "is condemned by His holy covenant",
+      "kind": "phrase",
+      "words": [
+        "CONDEMNED",
+        "HOLY",
+        "COVENANT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Surround our going out and coming in",
+      "kind": "phrase",
+      "words": [
+        "SURROUND",
+        "GOING",
+        "COMING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe for more daily KJV prayers",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "DAILY",
+        "PRAYERS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 54:17"
+}

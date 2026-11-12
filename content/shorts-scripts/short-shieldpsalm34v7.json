@@ -1,0 +1,265 @@
+{
+  "key": "short-shieldpsalm34v7",
+  "channel": "prayer8",
+  "psalm": 34,
+  "title": [
+    "DIVINE PROTECTION",
+    "THE COVENANT SHIELD"
+  ],
+  "poster": [
+    "PLACE EVERY STEP",
+    "UNDER THE SHADOW",
+    "OF THE ALMIGHTY",
+    "REFUGE IN GOD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "sunlit mountain pass peaceful landscape",
+    "ancient stone watchtower misty morning",
+    "golden light rays through heavy clouds",
+    "peaceful winding river flowing gently",
+    "strong fortress walls in golden hour light",
+    "serene valley with towering cliffs"
+  ],
+  "scenes": [
+    {
+      "a": "Place every step, every journey, and every unseen concern under the shadow of the Almighty today.",
+      "img": "short-shieldpsalm34v7-scene-01.jpg",
+      "kicker": "DIVINE COVERING",
+      "sub": "WALK UNDER HIS WINGS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "As you navigate the paths set before you, remember that you are never left unguarded or unprotected.",
+      "img": "short-shieldpsalm34v7-scene-02.jpg",
+      "kicker": "STRONG REFUGE",
+      "sub": "NEVER LEFT UNGUARDED",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The word of truth reminds us clearly in Psalm 34:7 that the angel of the Lord encampeth round about them that fear him, and delivereth them.",
+      "img": "short-shieldpsalm34v7-scene-03.jpg",
+      "kicker": "PSALM 34:7",
+      "sub": "THE ANGEL OF THE LORD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Let this holy fortress surround your mind, your dwelling, and your loved ones through every waking hour.",
+      "img": "short-shieldpsalm34v7-scene-04.jpg",
+      "kicker": "HOLY FORTRESS",
+      "sub": "SURROUND YOUR DWELLING",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Rest completely in His safe-keeping, knowing His strong tower stands immovable against every trial.",
+      "img": "short-shieldpsalm34v7-scene-05.jpg",
+      "kicker": "SAFE-KEEPING",
+      "sub": "STRONG TOWER STANDS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Subscribe to The Covenant Shield for daily scripture prayers of divine protection and peace.",
+      "img": "short-shieldpsalm34v7-scene-06.jpg",
+      "kicker": "DAILY SHIELD",
+      "sub": "SUBSCRIBE FOR PRAYERS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Place every step, every journey, and every unseen concern under the shadow of the Almighty today."
+    ],
+    [
+      9,
+      17,
+      "As you navigate the paths set before you, remember that you are never left unguarded or unprotected."
+    ],
+    [
+      18,
+      27,
+      "The word of truth reminds us clearly in Psalm 34:7 that the angel of the Lord encampeth round about them that fear him, and delivereth them."
+    ],
+    [
+      28,
+      36,
+      "Let this holy fortress surround your mind, your dwelling, and your loved ones through every waking hour."
+    ],
+    [
+      37,
+      45,
+      "Rest completely in His safe-keeping, knowing His strong tower stands immovable against every trial."
+    ],
+    [
+      46,
+      54,
+      "Subscribe to The Covenant Shield for daily scripture prayers of divine protection and peace."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "PLACE EVERY STEP",
+        "EVERY UNSEEN CONCERN",
+        "UNDER THE SHADOW"
+      ],
+      "SHADOW",
+      "PSALM 34 : 7"
+    ],
+    [
+      9,
+      17,
+      [
+        "NAVIGATE THE PATHS",
+        "SET BEFORE YOU",
+        "NEVER LEFT UNGUARDED"
+      ],
+      "UNGUARDED",
+      "PSALM 34 : 7"
+    ],
+    [
+      18,
+      27,
+      [
+        "THE ANGEL OF THE LORD",
+        "ENCAMPETH ROUND ABOUT",
+        "AND DELIVERETH THEM"
+      ],
+      "DELIVERETH",
+      "PSALM 34 : 7"
+    ],
+    [
+      28,
+      36,
+      [
+        "HOLY FORTRESS SURROUND",
+        "YOUR MIND AND HOME",
+        "THROUGH EVERY HOUR"
+      ],
+      "FORTRESS",
+      "PSALM 34 : 7"
+    ],
+    [
+      37,
+      45,
+      [
+        "REST IN SAFE-KEEPING",
+        "STRONG TOWER STANDS",
+        "AGAINST EVERY TRIAL"
+      ],
+      "TOWER",
+      "PSALM 34 : 7"
+    ],
+    [
+      46,
+      54,
+      [
+        "SUBSCRIBE TO THE SHIELD",
+        "FOR DAILY PRAYERS",
+        "OF PROTECTION"
+      ],
+      "SUBSCRIBE",
+      "PSALM 34 : 7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Place every step, every journey, and every unseen concern under the shadow of the Almighty today.",
+      "kind": "phrase",
+      "words": [
+        "PLACE",
+        "EVERY",
+        "STEP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As you navigate the paths set before you, remember that you are never left unguarded or unprotected.",
+      "kind": "phrase",
+      "words": [
+        "NEVER",
+        "LEFT",
+        "UNGUARDED"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "The word of truth reminds us clearly in Psalm 34:7 that the angel of the Lord encampeth round about them that fear him, and delivereth them.",
+      "kind": "phrase",
+      "words": [
+        "ANGEL",
+        "OF",
+        "THE",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let this holy fortress surround your mind, your dwelling, and your loved ones through every waking hour.",
+      "kind": "phrase",
+      "words": [
+        "HOLY",
+        "FORTRESS",
+        "SURROUND"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Rest completely in His safe-keeping, knowing His strong tower stands immovable against every trial.",
+      "kind": "phrase",
+      "words": [
+        "STRONG",
+        "TOWER",
+        "STANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Covenant Shield for daily scripture prayers of divine protection and peace.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "COVENANT",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 34:7"
+}
