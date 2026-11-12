@@ -1,0 +1,317 @@
+{
+  "key": "short-middaycolossians3v23",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "MIDDAY PRAYER",
+    "COLOSSIANS 3:23-24"
+  ],
+  "poster": [
+    "THE MIDDAY WATCH",
+    "COLOSSIANS 3:23-24",
+    "PAUSE & PRAY AT NOON",
+    "WORK FOR THE LORD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "midday sun streaming through wooden office window calm desk",
+    "bright sunlight warm open field grass middle of day",
+    "warm sunlight on open bible on clean wooden table",
+    "high midday sun beaming through lush green tree canopy",
+    "peaceful calm mountain lake bright midday light clear sky",
+    "sunbeams filtering through modern quiet office window",
+    "calm bright midday sky clouds over quiet horizon"
+  ],
+  "scenes": [
+    {
+      "a": "Pause what you are doing right now in this quiet middle of the day.",
+      "img": "short-middaycolossians3v23-scene-01.jpg",
+      "kicker": "COLOSSIANS 3:23-24",
+      "sub": "PAUSE AND PRAY AT NOON",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Take a deep breath and set down the heavy burdens of your morning work.",
+      "img": "short-middaycolossians3v23-scene-02.jpg",
+      "kicker": "COLOSSIANS 3:23-24",
+      "sub": "REST YOUR MIND IN GOD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The Scripture reminds us in Colossians chapter three: Whatever you do, work at it with all your heart,",
+      "img": "short-middaycolossians3v23-scene-03.jpg",
+      "kicker": "COLOSSIANS 3:23-24",
+      "sub": "WORK WITH ALL YOUR HEART",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "as working for the Lord, not for human masters, since you know that you will receive an inheritance",
+      "img": "short-middaycolossians3v23-scene-04.jpg",
+      "kicker": "COLOSSIANS 3:23-24",
+      "sub": "SERVING THE LIVING GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "from the Lord as a reward. It is the Lord Christ you are serving. Heavenly Father, align our hearts",
+      "img": "short-middaycolossians3v23-scene-05.jpg",
+      "kicker": "COLOSSIANS 3:23-24",
+      "sub": "CHRIST IS OUR MASTER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "with your divine purpose today. May every task we touch become a sacred offering unto you.",
+      "img": "short-middaycolossians3v23-scene-06.jpg",
+      "kicker": "COLOSSIANS 3:23-24",
+      "sub": "EVERY TASK A PRAYER",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Refresh our weary minds and grant us holy strength for this afternoon. Subscribe to join our midday prayer watch tomorrow. Amen.",
+      "img": "short-middaycolossians3v23-scene-07.jpg",
+      "kicker": "COLOSSIANS 3:23-24",
+      "sub": "PAUSE AND PRAY DAILY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "Pause what you are doing right now in this quiet middle of the day."
+    ],
+    [
+      7,
+      14,
+      "Take a deep breath and set down the heavy burdens of your morning work."
+    ],
+    [
+      14,
+      23,
+      "The Scripture reminds us in Colossians chapter three: Whatever you do, work at it with all your heart,"
+    ],
+    [
+      23,
+      33,
+      "as working for the Lord, not for human masters, since you know that you will receive an inheritance"
+    ],
+    [
+      33,
+      42,
+      "from the Lord as a reward. It is the Lord Christ you are serving. Heavenly Father, align our hearts"
+    ],
+    [
+      42,
+      50,
+      "with your divine purpose today. May every task we touch become a sacred offering unto you."
+    ],
+    [
+      50,
+      58,
+      "Refresh our weary minds and grant us holy strength for this afternoon. Subscribe to join our midday prayer watch tomorrow. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "PAUSE WHAT YOU ARE DOING",
+        "RIGHT NOW IN THIS QUIET",
+        "MIDDLE OF THE DAY"
+      ],
+      [
+        "PAUSE",
+        "QUIET"
+      ],
+      "COLOSSIANS 3 : 23-24"
+    ],
+    [
+      7,
+      14,
+      [
+        "TAKE A DEEP BREATH AND",
+        "SET DOWN HEAVY BURDENS OF",
+        "YOUR MORNING WORK"
+      ],
+      [
+        "BREATH",
+        "BURDENS"
+      ],
+      "COLOSSIANS 3 : 23-24"
+    ],
+    [
+      14,
+      23,
+      [
+        "WHATEVER YOU DO WORK AT IT",
+        "WITH ALL YOUR HEART FOR",
+        "THE LORD NOT MASTERS"
+      ],
+      [
+        "WORK",
+        "HEART"
+      ],
+      "COLOSSIANS 3 : 23-24"
+    ],
+    [
+      23,
+      33,
+      [
+        "SINCE YOU KNOW THAT YOU",
+        "WILL RECEIVE AN INHERITANCE",
+        "FROM THE LORD REWARD"
+      ],
+      [
+        "LORD",
+        "INHERITANCE"
+      ],
+      "COLOSSIANS 3 : 23-24"
+    ],
+    [
+      33,
+      42,
+      [
+        "IT IS LORD CHRIST SERVING",
+        "HEAVENLY FATHER ALIGN OUR",
+        "HEARTS WITH PURPOSE"
+      ],
+      [
+        "CHRIST",
+        "ALIGN"
+      ],
+      "COLOSSIANS 3 : 23-24"
+    ],
+    [
+      42,
+      50,
+      [
+        "MAY EVERY TASK WE TOUCH",
+        "BECOME A SACRED OFFERING",
+        "UNTO YOU TODAY"
+      ],
+      [
+        "TASK",
+        "SACRED"
+      ],
+      "COLOSSIANS 3 : 23-24"
+    ],
+    [
+      50,
+      58,
+      [
+        "REFRESH OUR WEARY MINDS",
+        "GRANT HOLY STRENGTH NOW",
+        "SUBSCRIBE FOR MIDDAY WATCH"
+      ],
+      [
+        "REFRESH",
+        "SUBSCRIBE"
+      ],
+      "COLOSSIANS 3 : 23-24"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Pause what you are doing right now",
+      "kind": "phrase",
+      "words": [
+        "PAUSE",
+        "DOING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "set down the heavy burdens",
+      "kind": "phrase",
+      "words": [
+        "BURDENS",
+        "WORK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "work at it with all your heart",
+      "kind": "phrase",
+      "words": [
+        "WORK",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "working for the Lord",
+      "kind": "phrase",
+      "words": [
+        "WORKING",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "It is the Lord Christ you are serving",
+      "kind": "phrase",
+      "words": [
+        "CHRIST",
+        "SERVING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "become a sacred offering unto you",
+      "kind": "phrase",
+      "words": [
+        "SACRED",
+        "OFFERING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "grant us holy strength for this afternoon",
+      "kind": "phrase",
+      "words": [
+        "HOLY",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Colossians 3:23-24"
+}
