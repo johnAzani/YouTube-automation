@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T03:05:43Z",
+  "generated_at": "2026-11-12T03:14:05Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,11 +7,11 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 112,
+    "published_total": 113,
     "published_longform": 50,
-    "published_shorts": 62,
-    "public_total": 110,
-    "queued_longform": 47,
+    "published_shorts": 63,
+    "public_total": 111,
+    "queued_longform": 48,
     "queued_shorts": 31,
     "automations_ok": 10,
     "automations_total": 10,
@@ -99,32 +99,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 36,
+        "published_total": 37,
         "published_longform": 17,
-        "published_shorts": 19,
-        "public_total": 35,
-        "queued_longform": 4,
+        "published_shorts": 20,
+        "public_total": 36,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 2
       },
       "latest_video": {
-        "id": "0060",
-        "title": "Exodus 16:21 Morning Prayer | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "P2qBcDT966E",
-        "watch_url": "https://youtu.be/P2qBcDT966E",
-        "published_on": "2026-11-11",
-        "published_at": "2026-11-11T22:51:11Z"
+        "id": "SHORT-MORNINGHOSEA6V3",
+        "title": "Say This Hosea 6:3 Prayer at Sunrise | Daily Sunrise Prayer #Shorts",
+        "format": "short",
+        "youtube_video_id": "bOZWN5KxyBk",
+        "watch_url": "https://www.youtube.com/shorts/bOZWN5KxyBk",
+        "published_on": "2026-11-12",
+        "published_at": "2026-11-12T03:13:19Z"
       },
       "next_queued_longform": {
         "id": "0061",
         "title": "Isaiah 33:2 Morning Prayer | The Morning Altar",
         "words": 1534,
-        "status": "approved"
+        "status": "quota_paused"
       },
       "next_queued_short": {
-        "short": "short-morninghosea6v3",
-        "scripture": "Hosea 6:3",
+        "short": "short-morningzephaniah3v5",
+        "scripture": "Zephaniah 3:5",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -491,6 +491,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGHOSEA6V3",
+      "slug": "short-morninghosea6v3-sunrise-prayer",
+      "file": "short-morninghosea6v3-sunrise-prayer.md",
+      "title": "Say This Hosea 6:3 Prayer at Sunrise | Daily Sunrise Prayer #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T03:13:19Z",
+      "youtube_video_id": "bOZWN5KxyBk",
+      "watch_url": "https://www.youtube.com/shorts/bOZWN5KxyBk",
+      "youtu_be_url": "https://youtu.be/bOZWN5KxyBk",
+      "shorts_url": "https://www.youtube.com/shorts/bOZWN5KxyBk",
+      "studio_url": "https://studio.youtube.com/video/bOZWN5KxyBk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/bOZWN5KxyBk/hqdefault.jpg",
+      "thumb_text": "THE MORNING ALTAR \u00b7 HOSEA 6:3",
+      "duration_label": "57s",
+      "words": 641
+    },
     {
       "id": "0019",
       "slug": "psalm-16-7-8-counsel-in-the-night-seasons",
@@ -3285,7 +3308,7 @@
         "title": "Isaiah 33:2 Morning Prayer | The Morning Altar",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
-        "status": "approved",
+        "status": "quota_paused",
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,
@@ -3329,6 +3352,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1429
+      },
+      {
+        "id": "0065",
+        "slug": "matthew-6-33-34-morning-prayer",
+        "file": "0065-matthew-6-33-34-morning-prayer.md",
+        "title": "Matthew 6:33-34 Morning Prayer | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1293
       },
       {
         "id": "0085",
@@ -3717,10 +3753,10 @@
         "target_window_utc": "14:14"
       },
       {
-        "short": "short-morninghosea6v3",
-        "file": "0063-short-morninghosea6v3.yml",
-        "companion_longform_id": "0063",
-        "scripture": "Hosea 6:3",
+        "short": "short-morningzephaniah3v5",
+        "file": "0064-short-morningzephaniah3v5.yml",
+        "companion_longform_id": "0064",
+        "scripture": "Zephaniah 3:5",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",
@@ -3728,10 +3764,10 @@
         "target_window_utc": "06:14"
       },
       {
-        "short": "short-morningzephaniah3v5",
-        "file": "0064-short-morningzephaniah3v5.yml",
-        "companion_longform_id": "0064",
-        "scripture": "Zephaniah 3:5",
+        "short": "short-morningmatthew6v33",
+        "file": "0065-short-morningmatthew6v33.yml",
+        "companion_longform_id": "0065",
+        "scripture": "Matthew 6:33-34",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",

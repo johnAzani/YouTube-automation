@@ -1,0 +1,353 @@
+{
+  "key": "short-morningmatthew6v33",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "SEEK FIRST",
+    "THE KINGDOM"
+  ],
+  "poster": [
+    "BEGIN",
+    "EVERY",
+    "SUNRISE",
+    "IN PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "serene misty alpine sunrise valley cinematic slow pan",
+    "golden morning light filtering through forest canopy calm",
+    "peaceful dawn reflecting on still mountain lake water",
+    "first rays of sun touching high mountain peaks morning",
+    "quiet meadow covered in morning dew soft dawn glow",
+    "gentle morning light over calm valley landscape aerial",
+    "sun rising above horizon illuminating quiet wilderness"
+  ],
+  "scenes": [
+    {
+      "a": "As the first quiet light breaks across the horizon, take a deep, steady breath and quiet your restless heart.",
+      "img": "short-morningmatthew6v33-scene-01.jpg",
+      "kicker": "MATTHEW 6:33",
+      "sub": "GREET THE MORNING WITH STILLNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, we invite your holy presence into this brand new day before us.",
+      "img": "short-morningmatthew6v33-scene-02.jpg",
+      "kicker": "MATTHEW 6:33",
+      "sub": "WELCOME THE DAWN IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Your word reminds us in Matthew chapter six, verse thirty three:",
+      "img": "short-morningmatthew6v33-scene-03.jpg",
+      "kicker": "MATTHEW 6:33",
+      "sub": "LISTEN TO THE ETERNAL WORD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Seek first his kingdom and his righteousness, and all these things will be given to you as well.",
+      "img": "short-morningmatthew6v33-scene-04.jpg",
+      "kicker": "MATTHEW 6:33",
+      "sub": "SEEK HIS KINGDOM FIRST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Therefore do not worry about tomorrow, for tomorrow will worry about itself. Each day has enough trouble of its own.",
+      "img": "short-morningmatthew6v33-scene-05.jpg",
+      "kicker": "MATTHEW 6:34",
+      "sub": "LEAVE TOMORROW IN HIS HANDS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, help us to release our anxious thoughts and rest securely in your faithful provision today.",
+      "img": "short-morningmatthew6v33-scene-06.jpg",
+      "kicker": "MATTHEW 6:34",
+      "sub": "RELEASE YOUR ANXIETIES NOW",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Walk with us through every hour, keeping our eyes fixed upon you, in Jesus name, amen.",
+      "img": "short-morningmatthew6v33-scene-07.jpg",
+      "kicker": "MATTHEW 6:34",
+      "sub": "WALK IN PEACE ALL DAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "As the first quiet light breaks across the horizon, take a deep, steady breath and quiet your restless heart."
+    ],
+    [
+      12,
+      24,
+      "Father, we invite your holy presence into this brand new day before us."
+    ],
+    [
+      24,
+      36,
+      "Your word reminds us in Matthew chapter six, verse thirty three:"
+    ],
+    [
+      36,
+      48,
+      "Seek first his kingdom and his righteousness, and all these things will be given to you as well."
+    ],
+    [
+      48,
+      60,
+      "Therefore do not worry about tomorrow, for tomorrow will worry about itself. Each day has enough trouble of its own."
+    ],
+    [
+      60,
+      72,
+      "Lord, help us to release our anxious thoughts and rest securely in your faithful provision today."
+    ],
+    [
+      72,
+      84,
+      "Walk with us through every hour, keeping our eyes fixed upon you, in Jesus name, amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "AS THE FIRST QUIET LIGHT",
+        "BREAKS ACROSS THE HORIZON,",
+        "TAKE A DEEP BREATH AND",
+        "QUIET YOUR RESTLESS HEART."
+      ],
+      [
+        "QUIET LIGHT",
+        "HORIZON",
+        "DEEP BREATH",
+        "RESTLESS HEART"
+      ],
+      "MATTHEW 6 : 33"
+    ],
+    [
+      12,
+      24,
+      [
+        "FATHER, WE INVITE YOUR HOLY",
+        "PRESENCE INTO THIS BRAND",
+        "NEW DAY BEFORE US."
+      ],
+      [
+        "HOLY PRESENCE",
+        "BRAND NEW DAY"
+      ],
+      "MATTHEW 6 : 33"
+    ],
+    [
+      24,
+      36,
+      [
+        "YOUR WORD REMINDS US",
+        "IN MATTHEW CHAPTER SIX,",
+        "VERSE THIRTY THREE:"
+      ],
+      [
+        "YOUR WORD",
+        "MATTHEW SIX",
+        "THIRTY THREE"
+      ],
+      "MATTHEW 6 : 33"
+    ],
+    [
+      36,
+      48,
+      [
+        "SEEK FIRST HIS KINGDOM",
+        "AND HIS RIGHTEOUSNESS,",
+        "AND ALL THESE THINGS WILL",
+        "BE GIVEN TO YOU AS WELL."
+      ],
+      [
+        "SEEK FIRST",
+        "HIS KINGDOM",
+        "RIGHTEOUSNESS",
+        "GIVEN TO YOU"
+      ],
+      "MATTHEW 6 : 33"
+    ],
+    [
+      48,
+      60,
+      [
+        "THEREFORE DO NOT WORRY",
+        "ABOUT TOMORROW, FOR",
+        "TOMORROW WILL WORRY ABOUT",
+        "ITSELF. EACH DAY HAS ENOUGH."
+      ],
+      [
+        "DO NOT WORRY",
+        "TOMORROW",
+        "ITSELF",
+        "ENOUGH"
+      ],
+      "MATTHEW 6 : 34"
+    ],
+    [
+      60,
+      72,
+      [
+        "LORD, HELP US TO RELEASE",
+        "OUR ANXIOUS THOUGHTS",
+        "AND REST SECURELY IN YOUR",
+        "FAITHFUL PROVISION TODAY."
+      ],
+      [
+        "RELEASE",
+        "ANXIOUS THOUGHTS",
+        "REST SECURELY",
+        "PROVISION TODAY"
+      ],
+      "MATTHEW 6 : 34"
+    ],
+    [
+      72,
+      84,
+      [
+        "WALK WITH US THROUGH",
+        "EVERY HOUR, KEEPING OUR",
+        "EYES FIXED UPON YOU,",
+        "IN JESUS NAME, AMEN."
+      ],
+      [
+        "EVERY HOUR",
+        "EYES FIXED",
+        "JESUS NAME",
+        "AMEN"
+      ],
+      "MATTHEW 6 : 34"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As the first quiet light breaks across the horizon, take a deep, steady breath and quiet your restless heart.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "LIGHT",
+        "RESTLESS",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we invite your holy presence into this brand new day before us.",
+      "kind": "phrase",
+      "words": [
+        "HOLY",
+        "PRESENCE",
+        "BRAND",
+        "NEW",
+        "DAY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Your word reminds us in Matthew chapter six, verse thirty three:",
+      "kind": "phrase",
+      "words": [
+        "MATTHEW",
+        "CHAPTER",
+        "SIX",
+        "THIRTY",
+        "THREE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Seek first his kingdom and his righteousness, and all these things will be given to you as well.",
+      "kind": "phrase",
+      "words": [
+        "SEEK",
+        "FIRST",
+        "KINGDOM",
+        "RIGHTEOUSNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Therefore do not worry about tomorrow, for tomorrow will worry about itself. Each day has enough trouble of its own.",
+      "kind": "phrase",
+      "words": [
+        "DO",
+        "NOT",
+        "WORRY",
+        "TOMORROW",
+        "ENOUGH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, help us to release our anxious thoughts and rest securely in your faithful provision today.",
+      "kind": "phrase",
+      "words": [
+        "RELEASE",
+        "ANXIOUS",
+        "REST",
+        "SECURELY",
+        "PROVISION"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Walk with us through every hour, keeping our eyes fixed upon you, in Jesus name, amen.",
+      "kind": "phrase",
+      "words": [
+        "WALK",
+        "EVERY",
+        "HOUR",
+        "FIXED",
+        "JESUS",
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Matthew 6:33-34"
+}
