@@ -2,7 +2,7 @@
 id: '0402'
 title: Psalm 147:3 Healing Prayer | The Healing Balm
 slug: psalm-147-3-healing-prayer
-status: approved
+status: published
 channel: prayer6
 privacy: public
 format: longform
@@ -73,6 +73,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-12"
+published_at: "2026-11-12T06:08:05Z"
+youtube_video_id: "9JVBBIA5UtI"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith

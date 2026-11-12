@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T05:22:16Z",
+  "generated_at": "2026-11-12T06:08:54Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 117,
-    "published_longform": 52,
-    "published_shorts": 65,
-    "public_total": 115,
-    "queued_longform": 46,
-    "queued_shorts": 29,
+    "published_total": 119,
+    "published_longform": 53,
+    "published_shorts": 66,
+    "public_total": 117,
+    "queued_longform": 45,
+    "queued_shorts": 28,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -63,9 +63,9 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-11",
+        "as_of": "2026-11-12",
         "measured_longform_videos": 0,
-        "total_longform_videos": 7,
+        "total_longform_videos": 10,
         "top_themes": [
           {
             "theme": "stillness_refuge",
@@ -73,14 +73,14 @@
             "top_scripture": "Psalm 46"
           },
           {
-            "theme": "peace_rest",
-            "videos": 1,
-            "top_scripture": "Psalm 121"
-          },
-          {
             "theme": "light_courage",
             "videos": 1,
             "top_scripture": "Psalm 27"
+          },
+          {
+            "theme": "peace_rest",
+            "videos": 2,
+            "top_scripture": "Psalm 121"
           }
         ]
       }
@@ -130,9 +130,9 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-11",
+        "as_of": "2026-11-12",
         "measured_longform_videos": 0,
-        "total_longform_videos": 14,
+        "total_longform_videos": 17,
         "top_themes": [
           {
             "theme": "blessing_benediction",
@@ -140,14 +140,14 @@
             "top_scripture": "Numbers 6"
           },
           {
+            "theme": "morning_mercy_renewal",
+            "videos": 11,
+            "top_scripture": "Mark 1"
+          },
+          {
             "theme": "midday_strength_endurance",
             "videos": 1,
             "top_scripture": "Psalm 90"
-          },
-          {
-            "theme": "morning_mercy_renewal",
-            "videos": 8,
-            "top_scripture": "Mark 1"
           }
         ]
       }
@@ -197,9 +197,9 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-11",
+        "as_of": "2026-11-12",
         "measured_longform_videos": 0,
-        "total_longform_videos": 9,
+        "total_longform_videos": 10,
         "top_themes": [
           {
             "theme": "daily_guidance_wisdom",
@@ -208,7 +208,7 @@
           },
           {
             "theme": "midday_strength_endurance",
-            "videos": 7,
+            "videos": 8,
             "top_scripture": "Proverbs 16"
           },
           {
@@ -264,14 +264,14 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-11",
+        "as_of": "2026-11-12",
         "measured_longform_videos": 0,
-        "total_longform_videos": 3,
+        "total_longform_videos": 6,
         "top_themes": [
           {
             "theme": "general_prayer",
-            "videos": 2,
-            "top_scripture": "Isaiah 62"
+            "videos": 5,
+            "top_scripture": "Zechariah 2"
           },
           {
             "theme": "daily_guidance_wisdom",
@@ -326,10 +326,16 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-11",
+        "as_of": "2026-11-12",
         "measured_longform_videos": 0,
-        "total_longform_videos": 0,
-        "top_themes": []
+        "total_longform_videos": 3,
+        "top_themes": [
+          {
+            "theme": "general_prayer",
+            "videos": 3,
+            "top_scripture": "Psalm 127"
+          }
+        ]
       }
     },
     {
@@ -346,41 +352,52 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 4,
-        "published_longform": 2,
-        "published_shorts": 2,
-        "public_total": 4,
-        "queued_longform": 4,
+        "published_total": 6,
+        "published_longform": 3,
+        "published_shorts": 3,
+        "public_total": 6,
+        "queued_longform": 3,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "0401",
-        "title": "Psalm 103:1-5 Healing Prayer | The Healing Balm",
-        "format": "longform",
-        "youtube_video_id": "QG1CTgF0Ju0",
-        "watch_url": "https://youtu.be/QG1CTgF0Ju0",
-        "published_on": "2026-11-12",
-        "published_at": "2026-11-12T01:21:38Z"
-      },
-      "next_queued_longform": {
         "id": "0402",
         "title": "Psalm 147:3 Healing Prayer | The Healing Balm",
-        "words": 860,
+        "format": "longform",
+        "youtube_video_id": "9JVBBIA5UtI",
+        "watch_url": "https://youtu.be/9JVBBIA5UtI",
+        "published_on": "2026-11-12",
+        "published_at": "2026-11-12T06:08:05Z"
+      },
+      "next_queued_longform": {
+        "id": "0403",
+        "title": "Isaiah 40:29-31 Healing Prayer | The Healing Balm",
+        "words": 873,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingpsalm147v3",
-        "scripture": "Psalm 147:3",
+        "short": "short-healingisaiah40v29",
+        "scripture": "Isaiah 40:29-31",
         "target_window_utc": "15:44",
         "status": "approved"
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-11",
+        "as_of": "2026-11-12",
         "measured_longform_videos": 0,
-        "total_longform_videos": 0,
-        "top_themes": []
+        "total_longform_videos": 2,
+        "top_themes": [
+          {
+            "theme": "stillness_refuge",
+            "videos": 1,
+            "top_scripture": "Psalm 103"
+          },
+          {
+            "theme": "general_prayer",
+            "videos": 1,
+            "top_scripture": "Jeremiah 30"
+          }
+        ]
       }
     },
     {
@@ -428,10 +445,15 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-11",
+        "as_of": "2026-11-12",
         "measured_longform_videos": 0,
-        "total_longform_videos": 1,
+        "total_longform_videos": 2,
         "top_themes": [
+          {
+            "theme": "general_prayer",
+            "videos": 1,
+            "top_scripture": "Deuteronomy 28"
+          },
           {
             "theme": "peace_rest",
             "videos": 1,
@@ -484,13 +506,67 @@
         "status": "approved"
       },
       "feedback": {
-        "available": false,
+        "available": true,
+        "as_of": "2026-11-12",
         "measured_longform_videos": 0,
-        "top_themes": []
+        "total_longform_videos": 1,
+        "top_themes": [
+          {
+            "theme": "peace_rest",
+            "videos": 1,
+            "top_scripture": "Psalm 121"
+          }
+        ]
       }
     }
   ],
   "videos": [
+    {
+      "id": "0402",
+      "slug": "psalm-147-3-healing-prayer",
+      "file": "0402-psalm-147-3-healing-prayer.md",
+      "title": "Psalm 147:3 Healing Prayer | The Healing Balm",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T06:08:05Z",
+      "youtube_video_id": "9JVBBIA5UtI",
+      "watch_url": "https://youtu.be/9JVBBIA5UtI",
+      "youtu_be_url": "https://youtu.be/9JVBBIA5UtI",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/9JVBBIA5UtI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/9JVBBIA5UtI/hqdefault.jpg",
+      "thumb_text": "HEAL THIS HEART",
+      "duration_label": "~6 min",
+      "words": 860
+    },
+    {
+      "id": "SHORT-HEALINGPSALM147V3",
+      "slug": "short-healingpsalm147v3-restoration-prayer",
+      "file": "short-healingpsalm147v3-restoration-prayer.md",
+      "title": "Pray This Psalm 147:3 Healing Prayer for Peace & Strength | Healing Prayer #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T05:21:21Z",
+      "youtube_video_id": "LtoPBO0O60U",
+      "watch_url": "https://www.youtube.com/shorts/LtoPBO0O60U",
+      "youtu_be_url": "https://youtu.be/LtoPBO0O60U",
+      "shorts_url": "https://www.youtube.com/shorts/LtoPBO0O60U",
+      "studio_url": "https://studio.youtube.com/video/LtoPBO0O60U/edit",
+      "thumb_url": "https://i.ytimg.com/vi/LtoPBO0O60U/hqdefault.jpg",
+      "thumb_text": "THE HEALING BALM \u00b7 HEAL THIS HEART",
+      "duration_label": "59s",
+      "words": 329
+    },
     {
       "id": "0302",
       "slug": "psalm-127-1-5-family-prayer",
@@ -3628,19 +3704,6 @@
         "words": 1721
       },
       {
-        "id": "0402",
-        "slug": "psalm-147-3-healing-prayer",
-        "file": "0402-psalm-147-3-healing-prayer.md",
-        "title": "Psalm 147:3 Healing Prayer | The Healing Balm",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 860
-      },
-      {
         "id": "0403",
         "slug": "isaiah-40-29-31-healing-prayer",
         "file": "0403-isaiah-40-29-31-healing-prayer.md",
@@ -3971,17 +4034,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-healingpsalm147v3",
-        "file": "0402-short-healingpsalm147v3.yml",
-        "companion_longform_id": "402",
-        "scripture": "Psalm 147:3",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingisaiah40v29",
