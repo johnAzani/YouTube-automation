@@ -20,10 +20,13 @@ height: 1280
 duration_seconds: 50.81
 scenes_verified: 7
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE FAMILY ALTAR", "COVER MY FAMILY", "PSALM 128:1-4", "FAMILY PRAYER"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-19T00:52:18Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Gather your home and loved ones in faith as we pray Psalm one hundred and twenty-eight. Blessed is every one that feareth the LORD; that walketh in his ways. For thou shalt eat the labour of thine hands: happy shalt thou be, and it shall be well with thee. Thy children shall be like olive plants round about thy table, evergreen and rooted in grace. Father, cover our spouses, our sons, and our daughters beneath Your protecting wing today. Bless the work of our hands, supply our table, and establish peace across our generations. Type Amen and subscribe to The Family Altar to cover your home in daily prayer.

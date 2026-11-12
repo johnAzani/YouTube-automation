@@ -20,10 +20,13 @@ height: 1280
 duration_seconds: 55.25
 scenes_verified: 7
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE MIDNIGHT WATCH", "WAIT FOR IT", "HABAKKUK 2:1-3", "MIDNIGHT PRAYER"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-19T00:52:15Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Rise in spirit at this midnight hour and take your stand upon the watchtower of faith. Habakkuk two verse one says, I will stand upon my watch, and set me upon the tower, to see what He will say. And the Lord answered, For the vision is yet for an appointed time: though it tarry, wait for it; because it will surely come. What feels delayed to human eyes is moving strictly on heaven's appointed calendar. Father, at this midnight watch we thank You that Your Word never lies and never arrives late. Strengthen our households to live by faith, loose weariness, and establish Your peace tonight. Type Amen and subscribe to The Midnight Watch to stand in prayer at midnight.
