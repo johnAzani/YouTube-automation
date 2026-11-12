@@ -30,13 +30,6 @@
       "workflow": "community.yml"
     },
     {
-      "late_minutes": 158,
-      "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-12T09:52:56+00:00",
-      "slot": "2026-11-12T07:14:00+00:00",
-      "workflow": "comments.yml"
-    },
-    {
       "late_minutes": 139,
       "name": "automation-health",
       "ran_at": "2026-11-11T22:33:51+00:00",
@@ -51,7 +44,7 @@
       "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-12T15:13:09.566491+00:00",
+  "generated_at": "2026-11-12T15:14:26.746577+00:00",
   "last_run_at": "2026-11-12T15:12:23+00:00",
   "on_time": [
     {
@@ -69,6 +62,6 @@
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 0,
+  "silence_minutes": 2,
   "warn_minutes": 120
 }
