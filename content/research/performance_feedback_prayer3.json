@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-11T09:21:37.828263+00:00",
-  "as_of": "2026-11-11",
+  "generated_at": "2026-11-12T05:21:06.767377+00:00",
+  "as_of": "2026-11-12",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 9,
+  "total_longform_videos": 10,
   "ranked_themes": [],
   "themes": [
     {
@@ -16,9 +16,9 @@
     },
     {
       "theme": "midday_strength_endurance",
-      "videos": 7,
+      "videos": 8,
       "measured_videos": 0,
-      "avg_score": 0.0536,
+      "avg_score": 0.0808,
       "avg_engagement": 0.0,
       "top_scripture": "Proverbs 16"
     },
