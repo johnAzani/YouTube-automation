@@ -1,0 +1,275 @@
+{
+  "key": "short-guidedproverbs3v5",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "GUIDANCE PRAYER",
+    "PROVERBS 3:5-6"
+  ],
+  "poster": [
+    "THE GUIDED PATH",
+    "DIRECT MY PATH",
+    "PROVERBS 3:5-6",
+    "GUIDANCE PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — daily prayer for guidance"
+  ],
+  "stock_queries": [
+    "sunlight breaking through clouds mountain pass",
+    "peaceful sunrise over misty alpine valley",
+    "sunrise dawn light over quiet valley morning serene",
+    "forest sunlight mist",
+    "peaceful mountain river calm water forest",
+    "golden light rays through clouds over mountain peak",
+    "peaceful sunrise over misty alpine valley"
+  ],
+  "scenes": [
+    {
+      "a": "If a decision is weighing on you today, you do not have to carry it alone. Bring it to the Lord.",
+      "img": "short-guidedproverbs3v5-scene-01.jpg",
+      "kicker": "PROVERBS 3:5-6",
+      "sub": "BRING IT TO GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Proverbs chapter three, verses five and six say, Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.",
+      "img": "short-guidedproverbs3v5-scene-02.jpg",
+      "kicker": "PROVERBS 3:5-6",
+      "sub": "HEAR THE WORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "God gave us minds to use, but not to rest our whole weight on what we can see.",
+      "img": "short-guidedproverbs3v5-scene-03.jpg",
+      "kicker": "PROVERBS 3:5-6",
+      "sub": "TRUST THE LORD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, we trust You with the outcome we want and the outcome we fear, and with the timing.",
+      "img": "short-guidedproverbs3v5-scene-04.jpg",
+      "kicker": "PROVERBS 3:5-6",
+      "sub": "WE TRUST YOU",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lead us through Your Word and through wise, honest counsel, and make us willing to listen.",
+      "img": "short-guidedproverbs3v5-scene-05.jpg",
+      "kicker": "PROVERBS 3:5-6",
+      "sub": "LEAD US LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Give us patience to wait, courage to act, and light enough for the next faithful step.",
+      "img": "short-guidedproverbs3v5-scene-06.jpg",
+      "kicker": "PROVERBS 3:5-6",
+      "sub": "THE NEXT STEP",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Type Amen and subscribe to The Guided Path for daily prayers for wisdom and direction.",
+      "img": "short-guidedproverbs3v5-scene-07.jpg",
+      "kicker": "THE GUIDED PATH",
+      "sub": "DAILY GUIDANCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      9,
+      "If a decision is weighing on you today, you do not have to carry it alone. Bring it to the Lord."
+    ],
+    [
+      10,
+      25,
+      "Proverbs chapter three, verses five and six say, Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths."
+    ],
+    [
+      26,
+      34,
+      "God gave us minds to use, but not to rest our whole weight on what we can see."
+    ],
+    [
+      35,
+      43,
+      "Father, we trust You with the outcome we want and the outcome we fear, and with the timing."
+    ],
+    [
+      44,
+      51,
+      "Lead us through Your Word and through wise, honest counsel, and make us willing to listen."
+    ],
+    [
+      52,
+      59,
+      "Give us patience to wait, courage to act, and light enough for the next faithful step."
+    ],
+    [
+      60,
+      66,
+      "Type Amen and subscribe to The Guided Path for daily prayers for wisdom and direction."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      9,
+      [
+        "BRING IT TO GOD"
+      ],
+      [],
+      "PROVERBS 3:5-6"
+    ],
+    [
+      10,
+      25,
+      [
+        "HEAR THE WORD"
+      ],
+      [],
+      "PROVERBS 3:5-6"
+    ],
+    [
+      26,
+      34,
+      [
+        "TRUST THE LORD"
+      ],
+      [],
+      "PROVERBS 3:5-6"
+    ],
+    [
+      35,
+      43,
+      [
+        "WE TRUST YOU"
+      ],
+      [],
+      "PROVERBS 3:5-6"
+    ],
+    [
+      44,
+      51,
+      [
+        "LEAD US LORD"
+      ],
+      [],
+      "PROVERBS 3:5-6"
+    ],
+    [
+      52,
+      59,
+      [
+        "THE NEXT STEP"
+      ],
+      [],
+      "PROVERBS 3:5-6"
+    ],
+    [
+      60,
+      66,
+      [
+        "DAILY GUIDANCE"
+      ],
+      [],
+      "THE GUIDED PATH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If a decision is weighing on you today, you do not have to carry it alone. Bring it to the Lord.",
+      "kind": "phrase",
+      "words": [
+        "BRING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Proverbs chapter three, verses five and six say, Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.",
+      "kind": "phrase",
+      "words": [
+        "HEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "God gave us minds to use, but not to rest our whole weight on what we can see.",
+      "kind": "phrase",
+      "words": [
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we trust You with the outcome we want and the outcome we fear, and with the timing.",
+      "kind": "phrase",
+      "words": [
+        "WE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lead us through Your Word and through wise, honest counsel, and make us willing to listen.",
+      "kind": "phrase",
+      "words": [
+        "LEAD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Give us patience to wait, courage to act, and light enough for the next faithful step.",
+      "kind": "phrase",
+      "words": [
+        "THE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Type Amen and subscribe to The Guided Path for daily prayers for wisdom and direction.",
+      "kind": "phrase",
+      "words": [
+        "DAILY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 3:5-6"
+}

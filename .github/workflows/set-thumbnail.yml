@@ -15,7 +15,7 @@ on:
       channel:
         description: "Target channel (own GCP project & secrets)"
         type: choice
-        options: [secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, prayer8]
+        options: [secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, prayer8, prayer9, prayer10]
         default: secret-place
       job:
         description: "Published job file (content/published/…md)"
@@ -48,10 +48,10 @@ concurrency:
 
 env:
   CHANNEL_ID: ${{ inputs.channel || 'secret-place' }}
-  YOUTUBE_CLIENT_ID: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8"]'), inputs.channel) && secrets[format('{0}YOUTUBE_CLIENT_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[inputs.channel])] || '' }}
-  YOUTUBE_CLIENT_SECRET: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8"]'), inputs.channel) && secrets[format('{0}YOUTUBE_CLIENT_SECRET', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[inputs.channel])] || '' }}
-  YOUTUBE_REFRESH_TOKEN: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8"]'), inputs.channel) && secrets[format('{0}YOUTUBE_REFRESH_TOKEN', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[inputs.channel])] || '' }}
-  YOUTUBE_EXPECTED_CHANNEL_ID: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8"]'), inputs.channel) && (vars[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[inputs.channel])] || secrets[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[inputs.channel])]) || '' }}
+  YOUTUBE_CLIENT_ID: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8","prayer9","prayer10"]'), inputs.channel) && secrets[format('{0}YOUTUBE_CLIENT_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[inputs.channel])] || '' }}
+  YOUTUBE_CLIENT_SECRET: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8","prayer9","prayer10"]'), inputs.channel) && secrets[format('{0}YOUTUBE_CLIENT_SECRET', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[inputs.channel])] || '' }}
+  YOUTUBE_REFRESH_TOKEN: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8","prayer9","prayer10"]'), inputs.channel) && secrets[format('{0}YOUTUBE_REFRESH_TOKEN', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[inputs.channel])] || '' }}
+  YOUTUBE_EXPECTED_CHANNEL_ID: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8","prayer9","prayer10"]'), inputs.channel) && (vars[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[inputs.channel])] || secrets[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[inputs.channel])]) || '' }}
 
 jobs:
   thumbnail:

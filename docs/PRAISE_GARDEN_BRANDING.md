@@ -1,12 +1,8 @@
 # The Praise Garden — ninth prayer channel brand kit
 
-**Status:** the owner shared a YouTube channel screenshot showing The Praise
-Garden with handle `@ThePraiseGardenDaily`, the banner, avatar and description.
-The OAuth token matches the configured channel ID, and the owner confirmed that
-The Praise Garden was selected when the ID was copied. There has been no
-independent public-channel lookup. The channel is not connected to publishing
-automation: the network registry and workflows do **not** yet support a ninth
-channel, and credentials alone do not connect it.
+**Status:** registered and active since 2026-11-12 on the owner's instruction; it runs
+on the same terms as the other channels. See [NINTH_CHANNEL_SETUP.md](NINTH_CHANNEL_SETUP.md)
+for what is wired and what has not yet been exercised with real uploads.
 
 ## Identity
 
@@ -78,7 +74,8 @@ scripture, not interchangeable scripts. Draft topics for later human review:
 4. Philippians 4:6–7 — thanksgiving in prayer amid anxiety, without treating
    prayer as a replacement for medical or mental-health care.
 
-Scripts, quotations, visual/audio rights and final videos still need review;
-this list is not a fact check, approval, content queue, or publishing schedule.
+The first two topics are seeded in the launch queue; the roadmap in
+`scripts/continuous_research.py` carries all thirty. Scripts, quotations and
+visual/audio rights still deserve human review.
 AI-generated assets and automated workflows do not by themselves establish
 originality or guarantee monetization. See [the monetization action plan](MONETIZATION_ACTION_PLAN.md).

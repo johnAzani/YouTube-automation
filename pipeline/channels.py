@@ -188,6 +188,40 @@ CHANNELS: dict[str, ChannelProfile] = {
         include_sanctuary_links=False,
         provisioned=True,
     ),
+    "prayer9": ChannelProfile(
+        id="prayer9",
+        display_name="The Praise Garden",
+        handle="@ThePraiseGardenDaily",
+        secret_prefix="PRAYER9_",
+        # Owner decision, 2026-11-12: ninth prayer channel dedicated to daily
+        # KJV thanksgiving, praise and worship prayer, including gratitude in
+        # ordinary and difficult seasons (Psalm 100:4 / Psalm 103:1-5 /
+        # Habakkuk 3:17-19). The owner confirmed the target Channel ID; isolated
+        # PRAYER9_* OAuth and Gemini credentials passed read-only preflights
+        # (runs 43221633843 and 43224493481), and the owner instructed that the
+        # channel run on the same terms as the other eight.
+        default_privacy="public",
+        auto_publish=True,
+        include_sanctuary_links=False,
+        provisioned=True,
+    ),
+    "prayer10": ChannelProfile(
+        id="prayer10",
+        display_name="The Guided Path",
+        handle="@TheGuidedPathPrayer",
+        secret_prefix="PRAYER10_",
+        # Owner decision, 2026-11-12: tenth prayer channel dedicated to daily
+        # KJV prayer for wisdom, discernment and guidance through decisions and
+        # uncertain seasons (Proverbs 3:5-6 / James 1:5 / Psalm 25:4-5). The
+        # owner confirmed the target Channel ID; isolated PRAYER10_* OAuth and
+        # Gemini credentials passed read-only preflights (runs 43244946331 and
+        # 43244945814), and the owner instructed that the channel run on the
+        # same terms as the other nine.
+        default_privacy="public",
+        auto_publish=True,
+        include_sanctuary_links=False,
+        provisioned=True,
+    ),
 }
 
 # Friendly aliases accepted in frontmatter / workflow inputs.
@@ -228,6 +262,18 @@ _ALIASES = {
     "protection": "prayer8",
     "strong-tower": "prayer8",
     "channel8": "prayer8",
+    "praise": "prayer9",
+    "praise-garden": "prayer9",
+    "the-praise-garden": "prayer9",
+    "thanksgiving": "prayer9",
+    "gratitude": "prayer9",
+    "channel9": "prayer9",
+    "guided-path": "prayer10",
+    "the-guided-path": "prayer10",
+    "guidance": "prayer10",
+    "discernment": "prayer10",
+    "direction": "prayer10",
+    "channel10": "prayer10",
 }
 
 
@@ -270,7 +316,7 @@ def add_channel_arg(parser) -> None:
     parser.add_argument(
         "--channel",
         default=None,
-        help="Target channel id (secret-place, prayer2, prayer3; defaults to CHANNEL_ID or secret-place)",
+        help="Target channel id (secret-place, prayer2 ... prayer10; defaults to CHANNEL_ID or secret-place)",
     )
 
 

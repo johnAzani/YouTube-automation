@@ -1,11 +1,8 @@
 # The Guided Path — tenth prayer channel
 
-**Status:** The owner shared a screenshot showing The Guided Path with handle
-`@TheGuidedPathPrayer`, its banner, avatar and the opening of its description.
-The screenshot does not verify the full description, watermark, channel ID or
-OAuth identity. The channel is not registered, connected to publishing automation,
-scheduled or approved to launch. The Praise Garden (ninth channel) also remains
-unregistered and inactive.
+**Status:** registered and active since 2026-11-12 on the owner's instruction; it runs
+on the same terms as the other channels. See [TENTH_CHANNEL_SETUP.md](TENTH_CHANNEL_SETUP.md)
+for what is wired and what has not yet been exercised with real uploads.
 
 ## Identity
 
@@ -53,7 +50,7 @@ Banner title and subtitle fit the 1235 × 338 center safe area.
 Christian prayer for guidance, prayer for wisdom, prayer for direction, discernment prayer, Proverbs 3 prayer, guidance through uncertainty, biblical wisdom, KJV scripture prayer, Christian encouragement, The Guided Path
 ```
 
-## Editorial ideas for future human review
+## Editorial direction
 
 1. Proverbs 3:5–6 — trusting God when a decision feels unclear.
 2. James 1:5 — asking God for wisdom with humility.
@@ -61,6 +58,6 @@ Christian prayer for guidance, prayer for wisdom, prayer for direction, discernm
 4. Proverbs 15:22 — seeking wise counsel, not treating prayer as a substitute
    for medical, legal, financial or other professional advice.
 
-Verify scripture context and quotations, claims, and all audio/visual rights;
-review full scripts and videos before any approval. These are topic ideas, not
-approved scripts or a publishing queue. No monetization is guaranteed.
+The first two topics are seeded in the launch queue; the roadmap in
+`scripts/continuous_research.py` carries all thirty. Scripture quotations, claims
+and audio/visual rights still deserve human review. No monetization is guaranteed.

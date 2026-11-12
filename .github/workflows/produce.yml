@@ -31,7 +31,7 @@ on:
       channel:
         description: "Target channel (each uses its own GCP project, quota & secrets)"
         type: choice
-        options: [secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, prayer8]
+        options: [secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, prayer8, prayer9, prayer10]
         default: secret-place
       job:
         description: "Specific script file in content/queue/ (blank = next approved)"
@@ -86,6 +86,8 @@ jobs:
           PRAYER6_READY: ${{ secrets.PRAYER6_YOUTUBE_REFRESH_TOKEN != '' }}
           PRAYER7_READY: ${{ secrets.PRAYER7_YOUTUBE_REFRESH_TOKEN != '' }}
           PRAYER8_READY: ${{ secrets.PRAYER8_YOUTUBE_REFRESH_TOKEN != '' }}
+          PRAYER9_READY: ${{ secrets.PRAYER9_YOUTUBE_REFRESH_TOKEN != '' }}
+          PRAYER10_READY: ${{ secrets.PRAYER10_YOUTUBE_REFRESH_TOKEN != '' }}
           EVENT_NAME: ${{ github.event_name }}
           INPUT_CHANNEL: ${{ inputs.channel }}
           CLIENT_CHANNEL: ${{ github.event.client_payload.channel }}
@@ -104,6 +106,8 @@ jobs:
           p6_ready = os.environ.get("PRAYER6_READY", "").lower() == "true"
           p7_ready = os.environ.get("PRAYER7_READY", "").lower() == "true"
           p8_ready = os.environ.get("PRAYER8_READY", "").lower() == "true"
+          p9_ready = os.environ.get("PRAYER9_READY", "").lower() == "true"
+          p10_ready = os.environ.get("PRAYER10_READY", "").lower() == "true"
           if event == "schedule":
               candidates = ["secret-place", "prayer2"]
               if p3_ready:
@@ -152,6 +156,22 @@ jobs:
                   print(
                       "::notice title=prayer8 waits for credentials::"
                       "PRAYER8_YOUTUBE_REFRESH_TOKEN is not set, so The Covenant Shield "
+                      "is registered but not yet scheduled."
+                  )
+              if p9_ready:
+                  candidates.append("prayer9")
+              else:
+                  print(
+                      "::notice title=prayer9 waits for credentials::"
+                      "PRAYER9_YOUTUBE_REFRESH_TOKEN is not set, so The Praise Garden "
+                      "is registered but not yet scheduled."
+                  )
+              if p10_ready:
+                  candidates.append("prayer10")
+              else:
+                  print(
+                      "::notice title=prayer10 waits for credentials::"
+                      "PRAYER10_YOUTUBE_REFRESH_TOKEN is not set, so The Guided Path "
                       "is registered but not yet scheduled."
                   )
               now = datetime.now(timezone.utc)
@@ -214,19 +234,19 @@ jobs:
       # channel's own PRAYER3_* / PRAYER2_* / unprefixed secrets are mapped onto the
       # canonical names below, so credentials are never mixed.
       CHANNEL_ID: ${{ matrix.channel || 'secret-place' }}
-      CHANNEL_NAME: ${{ matrix.channel == 'prayer8' && 'The Covenant Shield' || (matrix.channel == 'prayer7' && 'The Provision Table' || (matrix.channel == 'prayer6' && 'The Healing Balm' || (matrix.channel == 'prayer5' && 'The Family Altar' || (matrix.channel == 'prayer4' && 'The Midnight Watch' || (matrix.channel == 'prayer3' && 'The Midday Watch' || (matrix.channel == 'prayer2' && 'The Morning Altar' || 'The Secret Place')))))) }}
-      CHANNEL_HANDLE: ${{ matrix.channel == 'prayer8' && '@TheCovenantShieldDaily' || (matrix.channel == 'prayer7' && '@TheProvisionTableDaily' || (matrix.channel == 'prayer6' && '@TheHealingBalmDaily' || (matrix.channel == 'prayer5' && '@TheFamilyAltarDaily' || (matrix.channel == 'prayer4' && '@TheMidnightWatchDaily' || (matrix.channel == 'prayer3' && '@TheMiddayWatch' || (matrix.channel == 'prayer2' && '@TheMorningAltarDaily' || '@TheSecretPlace')))))) }}
+      CHANNEL_NAME: ${{ matrix.channel == 'prayer10' && 'The Guided Path' || (matrix.channel == 'prayer9' && 'The Praise Garden' || (matrix.channel == 'prayer8' && 'The Covenant Shield' || (matrix.channel == 'prayer7' && 'The Provision Table' || (matrix.channel == 'prayer6' && 'The Healing Balm' || (matrix.channel == 'prayer5' && 'The Family Altar' || (matrix.channel == 'prayer4' && 'The Midnight Watch' || (matrix.channel == 'prayer3' && 'The Midday Watch' || (matrix.channel == 'prayer2' && 'The Morning Altar' || 'The Secret Place')))))))) }}
+      CHANNEL_HANDLE: ${{ matrix.channel == 'prayer10' && '@TheGuidedPathPrayer' || (matrix.channel == 'prayer9' && '@ThePraiseGardenDaily' || (matrix.channel == 'prayer8' && '@TheCovenantShieldDaily' || (matrix.channel == 'prayer7' && '@TheProvisionTableDaily' || (matrix.channel == 'prayer6' && '@TheHealingBalmDaily' || (matrix.channel == 'prayer5' && '@TheFamilyAltarDaily' || (matrix.channel == 'prayer4' && '@TheMidnightWatchDaily' || (matrix.channel == 'prayer3' && '@TheMiddayWatch' || (matrix.channel == 'prayer2' && '@TheMorningAltarDaily' || '@TheSecretPlace')))))))) }}
       PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
       PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
       # Each value uses only the selected channel prefix; empty values never fall back.
       # Examples: PRAYER5_YOUTUBE_CLIENT_ID, PRAYER6_GEMINI_API_KEY,
       # PRAYER7_YOUTUBE_REFRESH_TOKEN, PRAYER8_YOUTUBE_CLIENT_SECRET.
-      YOUTUBE_CLIENT_ID: ${{ secrets[format('{0}YOUTUBE_CLIENT_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] }}
-      YOUTUBE_CLIENT_SECRET: ${{ secrets[format('{0}YOUTUBE_CLIENT_SECRET', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] }}
-      YOUTUBE_REFRESH_TOKEN: ${{ secrets[format('{0}YOUTUBE_REFRESH_TOKEN', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] }}
-      YOUTUBE_PLAYLIST_ID: ${{ secrets[format('{0}YOUTUBE_PLAYLIST_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] }}
+      YOUTUBE_CLIENT_ID: ${{ secrets[format('{0}YOUTUBE_CLIENT_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] }}
+      YOUTUBE_CLIENT_SECRET: ${{ secrets[format('{0}YOUTUBE_CLIENT_SECRET', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] }}
+      YOUTUBE_REFRESH_TOKEN: ${{ secrets[format('{0}YOUTUBE_REFRESH_TOKEN', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] }}
+      YOUTUBE_PLAYLIST_ID: ${{ secrets[format('{0}YOUTUBE_PLAYLIST_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] }}
       # Public Channel 1 ID is pinned; other channels never inherit it.
-      YOUTUBE_EXPECTED_CHANNEL_ID: ${{ vars[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] || secrets[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] || (matrix.channel == 'secret-place' && 'UCtPI1r8vgtJ9n__7ksLBmCA' || '') }}
+      YOUTUBE_EXPECTED_CHANNEL_ID: ${{ vars[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] || secrets[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] || (matrix.channel == 'secret-place' && 'UCtPI1r8vgtJ9n__7ksLBmCA' || '') }}
       # All channels publish on the same terms (owner decision 2026-11-05):
       # public + auto-publish, each with its own Google Cloud project & quota pool.
       AUTO_PUBLISH: ${{ secrets.AUTO_PUBLISH || 'true' }}
@@ -235,7 +255,7 @@ jobs:
       # never a repo-wide secret silently left on. Default stays shielded.
       ALLOW_DUPLICATE_UPLOADS: ${{ (inputs.allow_duplicate || false) && 'true' || 'false' }}
       DEFAULT_PRIVACY: public
-      GEMINI_API_KEY: ${{ secrets[format('{0}GEMINI_API_KEY', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] }}
+      GEMINI_API_KEY: ${{ secrets[format('{0}GEMINI_API_KEY', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] }}
       # pipeline.run shells out to `gh issue create` for the release ticket
       # (SETUP.md §6.4). gh needs a token: without GH_TOKEN the call fails
       # unauthenticated and the QC issue would silently never appear.

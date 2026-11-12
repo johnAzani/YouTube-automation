@@ -13,7 +13,7 @@ on:
       channel:
         description: "Channel to replenish (schedule runs all provisioned channels)"
         type: choice
-        options: [both, secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, prayer8]
+        options: [both, secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, prayer8, prayer9, prayer10]
         default: both
 
 permissions:
@@ -43,6 +43,8 @@ jobs:
           PRAYER6_READY: ${{ secrets.PRAYER6_GEMINI_API_KEY != '' }}
           PRAYER7_READY: ${{ secrets.PRAYER7_GEMINI_API_KEY != '' }}
           PRAYER8_READY: ${{ secrets.PRAYER8_GEMINI_API_KEY != '' }}
+          PRAYER9_READY: ${{ secrets.PRAYER9_GEMINI_API_KEY != '' }}
+          PRAYER10_READY: ${{ secrets.PRAYER10_GEMINI_API_KEY != '' }}
           EVENT_NAME: ${{ github.event_name }}
           INPUT_CHANNEL: ${{ inputs.channel }}
         run: |
@@ -62,6 +64,10 @@ jobs:
               provisioned.append("prayer7")
           if os.environ.get("PRAYER8_READY", "").lower() == "true":
               provisioned.append("prayer8")
+          if os.environ.get("PRAYER9_READY", "").lower() == "true":
+              provisioned.append("prayer9")
+          if os.environ.get("PRAYER10_READY", "").lower() == "true":
+              provisioned.append("prayer10")
           event = os.environ.get("EVENT_NAME", "")
           inp = (os.environ.get("INPUT_CHANNEL") or "both").strip()
           if event == "workflow_dispatch" and inp not in ("", "both"):
@@ -95,7 +101,7 @@ jobs:
     env:
       CHANNEL_ID: ${{ matrix.channel }}
       # Each channel's authoring uses its own Gemini project/quota pool.
-      GEMINI_API_KEY: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8"]'), matrix.channel) && secrets[format('{0}GEMINI_API_KEY', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] || '' }}
+      GEMINI_API_KEY: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8","prayer9","prayer10"]'), matrix.channel) && secrets[format('{0}GEMINI_API_KEY', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] || '' }}
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4

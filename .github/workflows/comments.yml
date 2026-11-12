@@ -20,7 +20,7 @@ on:
       channel:
         description: 'Target channel (own GCP project & secrets)'
         type: choice
-        options: [secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, prayer8]
+        options: [secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, prayer8, prayer9, prayer10]
         default: secret-place
       limit:
         description: 'Maximum comments to reply to per pulse (default 8, max 25)'
@@ -67,6 +67,8 @@ jobs:
           PRAYER6_READY: ${{ secrets.PRAYER6_YOUTUBE_REFRESH_TOKEN != '' }}
           PRAYER7_READY: ${{ secrets.PRAYER7_YOUTUBE_REFRESH_TOKEN != '' }}
           PRAYER8_READY: ${{ secrets.PRAYER8_YOUTUBE_REFRESH_TOKEN != '' }}
+          PRAYER9_READY: ${{ secrets.PRAYER9_YOUTUBE_REFRESH_TOKEN != '' }}
+          PRAYER10_READY: ${{ secrets.PRAYER10_YOUTUBE_REFRESH_TOKEN != '' }}
           EVENT_NAME: ${{ github.event_name }}
           INPUT_CHANNEL: ${{ inputs.channel }}
         run: |
@@ -102,6 +104,14 @@ jobs:
                   channels.append("prayer8")
               else:
                   print("::notice title=prayer8 comment replies wait for credentials::PRAYER8_YOUTUBE_REFRESH_TOKEN is not set, so The Covenant Shield is not scheduled for replies yet.")
+              if os.environ.get("PRAYER9_READY", "").lower() == "true":
+                  channels.append("prayer9")
+              else:
+                  print("::notice title=prayer9 comment replies wait for credentials::PRAYER9_YOUTUBE_REFRESH_TOKEN is not set, so The Praise Garden is not scheduled for replies yet.")
+              if os.environ.get("PRAYER10_READY", "").lower() == "true":
+                  channels.append("prayer10")
+              else:
+                  print("::notice title=prayer10 comment replies wait for credentials::PRAYER10_YOUTUBE_REFRESH_TOKEN is not set, so The Guided Path is not scheduled for replies yet.")
           elif event == "workflow_dispatch":
               channels = [(os.environ.get("INPUT_CHANNEL") or "secret-place").strip()]
           else:
@@ -152,11 +162,11 @@ jobs:
       - name: Run Comment Reply Engine
         env:
           CHANNEL_ID: ${{ matrix.channel }}
-          YOUTUBE_CLIENT_ID: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8"]'), matrix.channel) && secrets[format('{0}YOUTUBE_CLIENT_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] || '' }}
-          YOUTUBE_CLIENT_SECRET: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8"]'), matrix.channel) && secrets[format('{0}YOUTUBE_CLIENT_SECRET', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] || '' }}
-          YOUTUBE_REFRESH_TOKEN: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8"]'), matrix.channel) && secrets[format('{0}YOUTUBE_REFRESH_TOKEN', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] || '' }}
-          YOUTUBE_EXPECTED_CHANNEL_ID: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8"]'), matrix.channel) && (vars[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] || secrets[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])]) || '' }}
-          GEMINI_API_KEY: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8"]'), matrix.channel) && secrets[format('{0}GEMINI_API_KEY', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_"}')[matrix.channel])] || '' }}
+          YOUTUBE_CLIENT_ID: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8","prayer9","prayer10"]'), matrix.channel) && secrets[format('{0}YOUTUBE_CLIENT_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] || '' }}
+          YOUTUBE_CLIENT_SECRET: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8","prayer9","prayer10"]'), matrix.channel) && secrets[format('{0}YOUTUBE_CLIENT_SECRET', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] || '' }}
+          YOUTUBE_REFRESH_TOKEN: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8","prayer9","prayer10"]'), matrix.channel) && secrets[format('{0}YOUTUBE_REFRESH_TOKEN', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] || '' }}
+          YOUTUBE_EXPECTED_CHANNEL_ID: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8","prayer9","prayer10"]'), matrix.channel) && (vars[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] || secrets[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])]) || '' }}
+          GEMINI_API_KEY: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8","prayer9","prayer10"]'), matrix.channel) && secrets[format('{0}GEMINI_API_KEY', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] || '' }}
           # The engine files one issue when a viewer discloses distress instead of
           # answering them in public. Without a token that escalation is a log line.
           GH_TOKEN: ${{ github.token }}

@@ -1,51 +1,55 @@
-# Tenth channel — staged setup: The Guided Path
+# Tenth channel — The Guided Path (`prayer10`)
 
-The owner shared a screenshot of The Guided Path (`@TheGuidedPathPrayer`) showing
-its avatar, banner and the opening of its description. The full description and
-watermark were not established by the screenshot. The brand kit is in
-[GUIDED_PATH_BRANDING.md](GUIDED_PATH_BRANDING.md). A subsequent screenshot shows
-all five planned `PRAYER10_*` repository secret names, not their values. The
-[read-only OAuth preflight](https://github.com/johnAzani/YouTube-automation/actions/runs/43244946331)
-passed, matching the authorized channel to the configured ID and finding an
-upload-capable scope. The owner confirmed The Guided Path was selected when
-copying the channel ID; there has not been an independent public-channel lookup.
-The [read-only Gemini preflight](https://github.com/johnAzani/YouTube-automation/actions/runs/43244945814)
-passed its model-metadata listing. Neither probe verifies upload, generation, TTS,
-quota, billing, thumbnail permissions or Gemini project ownership. No registry
-entry, publishing mapping, schedule, or launch has been configured. Channel nine
-also remains unregistered and inactive.
+**Status: registered and active (2026-11-12).** On the owner's instruction,
+The Guided Path (`@TheGuidedPathPrayer`) now runs on the same terms as the other channels:
+`provisioned=True` in `pipeline/channels.py`, public uploads, and a leg in every
+scheduled workflow. Brand kit: [GUIDED_PATH_BRANDING.md](GUIDED_PATH_BRANDING.md).
 
-## Steps
+## What is wired
 
-1. The owner's screenshot confirms the displayed name, handle, avatar, banner
-   and beginning of the description. The owner confirmed the intended channel
-   was selected when copying its ID. Watermark and feature eligibility remain
-   unverified.
-2. Follow the established dedicated Google Cloud OAuth process and secure
-   GitHub Actions secrets process. The screenshot shows `PRAYER10_YOUTUBE_CLIENT_ID`,
-   `PRAYER10_YOUTUBE_CLIENT_SECRET`, `PRAYER10_YOUTUBE_REFRESH_TOKEN`,
-   `PRAYER10_YOUTUBE_CHANNEL_ID`, and `PRAYER10_GEMINI_API_KEY` saved as names.
-   Do not send any secret, token or code in chat; never
-   reuse another channel's credentials as a fallback. Saving secrets must not
-   trigger publishing. Respect the existing $0 budget lock.
-3. The standalone `python3 scripts/guided_path_preflight.py` reads only the four
-   YouTube values from a secure environment, refreshes an OAuth token and reads
-   the authorized channel ID; it fails closed on missing values, insufficient
-   scopes and mismatched or ambiguous IDs. Its initial branch-only run passed as
-   linked above. The staged GitHub workflow is manual and read-only; it is not
-   deployed to the default branch. Matching the configured ID does not itself
-   prove the intended channel was selected; the owner has since confirmed it.
-   The separate `scripts/guided_path_gemini_preflight.py` reads only the tenth
-   channel's Gemini key and checks model-list access; its initial branch-only run
-   passed. Its manual workflow is also staged only. Neither check tests uploading,
-   generation, TTS, thumbnail access, quota or billing.
-4. Before OAuth verification submission, ensure the shared public app, privacy
-   and terms pages and demonstration accurately describe current behavior; see
-   the remaining issues recorded in [NINTH_CHANNEL_SETUP.md](NINTH_CHANNEL_SETUP.md).
-5. Complete channel-specific registry, queue, credentials and workflow isolation
-   with comprehensive fail-closed tests; audit every write path and prevent
-   inactive scheduling. Review unique drafts, Scripture, claims and rights. Verify
-   feature eligibility independently. Obtain explicit owner approval before any
-   activation, uploads, or other live writes. None of this is complete yet.
+- **Registry:** `prayer10` profile with secret prefix `PRAYER10_`; aliases resolve via
+  `normalize_channel_id`.
+- **Capabilities:** a full `Brand` and `ChannelCapabilities` block in
+  `pipeline/channel_capabilities.py` — daily KJV prayer for wisdom, discernment and guidance, anchored in Proverbs 3:5–6. Every other
+  brand forbids this channel's name, handle and call-to-action, and vice versa.
+- **Brain equipment:** its own system instruction and theological rubric in
+  `pipeline/brain_equipment/`.
+- **Roadmap:** 30 scriptures, job IDs `0800–0829`, in `scripts/continuous_research.py`.
+- **Visuals:** `pathway` Shorts poster grade and 16:9 CTR thumbnail pack; Short keys
+  are namespaced `short-guided…`; Shorts target `18:44` UTC.
+- **Workflows:** Produce, Gemini Brain, comments, community, metrics, growth
+  autopilot, monitor, manual thumbnail and the credential audit all map
+  `PRAYER10_*` secrets for this channel only. A missing secret resolves to empty;
+  it never falls back to another channel's credentials.
+- **Launch queue:** two approved long-form prayers and two companion Shorts are
+  seeded so the channel does not start empty. The scheduled brain run authors the
+  rest of the runway from the roadmap under this channel's own Gemini key.
 
-Do not change the existing eight channels or their videos as part of this setup.
+## What has and has not been verified
+
+- The read-only [OAuth preflight](https://github.com/johnAzani/YouTube-automation/actions/runs/43244946331) matched the authorized channel to the
+  configured ID and found an upload-capable scope; the read-only
+  [Gemini preflight](https://github.com/johnAzani/YouTube-automation/actions/runs/43244945814) listed model metadata. The standalone preflight workflows remain available for manual re-checks.
+- The owner confirmed the intended channel was selected when its ID was copied.
+  There has been no independent public-channel lookup.
+- **Not yet exercised for this channel:** a real upload, TTS narration, script
+  generation, thumbnail upload (needs the channel's phone/feature verification in
+  YouTube Studio), quota and billing. The first scheduled Produce and Brain runs
+  are the first real test; watch them and the monitor issue.
+- The seeded scripts quote the KJV and were written for this launch; their
+  fact-check worksheets in `content/factcheck/` are mechanically generated and
+  unticked. Image search strings reuse queries already verified for earlier
+  channels — no new Commons query is claimed as verified.
+
+## Known gaps shared with every channel
+
+These were recorded while the channel was staged and are **not** specific to it;
+activation did not close them:
+
+- Live comment replies do not yet require an expected channel ID, and
+  `pipeline/comment_target_guard.py` is tested but not wired into comment writes
+  or reconciliation.
+- The shared public app, privacy and terms pages should describe current
+  behavior before any OAuth verification submission.
+
+Registration does not guarantee YouTube Partner Programme eligibility.

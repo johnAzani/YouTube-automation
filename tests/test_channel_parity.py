@@ -160,6 +160,9 @@ class TestRoadmapParity(unittest.TestCase):
             elif channel_id == "prayer8":
                 for word in ("every sunrise", "morning altar", "before you sleep", "bedtime", "insomnia", "at noon", "noonday", "midnight watch", "family altar", "healing balm", "provision table"):
                     self.assertNotIn(word, text, f"covenant shield roadmap carries {word!r}")
+            elif channel_id in ("prayer9", "prayer10"):
+                for word in ("every sunrise", "morning altar", "before you sleep", "bedtime", "insomnia", "at noon", "noonday", "midnight watch", "family altar", "healing balm", "provision table", "covenant shield"):
+                    self.assertNotIn(word, text, f"{channel_id} roadmap carries {word!r}")
             else:
                 for word in ("every sunrise", "morning altar"):
                     self.assertNotIn(word, text, f"night roadmap carries {word!r}")

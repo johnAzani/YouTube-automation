@@ -1,0 +1,11 @@
+short: short-gardenpsalm100v4
+channel: prayer9
+companion_longform_id: '0700'
+scripture: Psalm 100:4
+status: approved
+renderer_ready: true
+authored_by_brain: false
+privacy: public
+replace: false
+target_window_utc: 09:44
+notes: Companion Short seeded for the channel launch queue.
