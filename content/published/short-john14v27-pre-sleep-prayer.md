@@ -19,11 +19,12 @@ width: 720
 height: 1280
 duration_seconds: 58.28
 scenes_verified: 6
-thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCtPI1r8vgtJ9n__7ksLBmCA; auth_channel_title=The Secret Place | Daily Prayer "
+thumbnail_pending: false
 thumbnail_poster: ["BEDTIME PRAYER", "JOHN 14:27", "PEACE FOR YOUR SOUL", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
 ---
 
 Close your eyes and take a deep, slow breath. Release every heavy worry from this day into the quiet dark. Jesus whispers to you in John fourteen twenty-seven: Peace I leave with you; my peace I give to you. Not as the world gives do I give to you. Let not your hearts be troubled, neither let them be afraid. Tonight, receive His supernatural quietness over your weary soul and racing mind. Lay down your anxieties at His feet. May His gentle presence envelope your room and guard your heart as you drift into restorative sleep. Rest deeply in His eternal love tonight. Subscribe to The Secret Place for daily night prayers.
