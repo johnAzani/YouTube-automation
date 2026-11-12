@@ -10,6 +10,10 @@ and an upload-capable scope was returned. This matches the configured ID, not an
 independent confirmation that the ID is the intended channel; it does not test
 an upload, generation, TTS, quota, billing or thumbnail permissions. A manual
 preflight workflow is staged in this PR, not deployed to the default branch.
+The owner reports saving `PRAYER9_GEMINI_API_KEY`; [read-only Gemini preflight
+run 43224493481](https://github.com/johnAzani/YouTube-automation/actions/runs/43224493481)
+successfully listed model metadata. This does not verify generation, TTS,
+quota, billing, or project ownership. Its manual workflow is also staged only.
 The authoring guidelines are not registered with the production brain. No
 ninth-channel registry entry, publishing workflow mapping, queue, activation or
 launch has been configured. Do not call it connected to automation or publishing.
@@ -18,8 +22,9 @@ launch has been configured. Do not call it connected to automation or publishing
 
 1. Prepare the brand identity and assets (done; see the brand kit). The owner's
    screenshot shows the channel name, handle, banner, avatar and description.
-   Watermark, channel ID, feature eligibility and account authorization have not
-   been verified here. Do not change another channel's branding.
+   Watermark, feature eligibility and independent confirmation that the saved
+   channel ID belongs to the intended channel have not been verified here. Do not
+   change another channel's branding.
 2. Implement a ninth-channel registry and complete parity work across
    capabilities, channel-specific workflow credentials, queue selection,
    thumbnails, watchdogs, audit and tests. It must fail closed: an unknown or
@@ -51,7 +56,10 @@ launch has been configured. Do not call it connected to automation or publishing
    wrong/ambiguous channel identities. It does not test an upload, TTS, quota,
    billing or thumbnail permission. An initial branch-only Actions run succeeded
    as noted above. The staged manual workflow will be usable from the default
-   branch only after review and merge; it does not activate a channel.
+   branch only after review and merge; it does not activate a channel. The
+   separate `python scripts/praise_garden_gemini_preflight.py` reads only
+   `PRAYER9_GEMINI_API_KEY` and checks model-list access without generation;
+   its staged manual workflow is likewise not yet deployed.
 5. The owner handles YouTube phone/feature verification. Review thumbnail and
    advanced-feature status independently; permission responses alone do not
    prove the reason for a refusal.

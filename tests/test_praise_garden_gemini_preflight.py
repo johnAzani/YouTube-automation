@@ -37,3 +37,16 @@ def test_http_error_is_sanitized():
     with pytest.raises(probe.PreflightError, match='HTTP 403') as error:
         probe.check({'PRAYER9_GEMINI_API_KEY': 'private'}, fail)
     assert 'private' not in str(error.value)
+
+
+def test_workflow_is_manual_read_only_and_uses_only_target_key():
+    from pathlib import Path
+    import yaml
+    workflow = yaml.safe_load(Path('.github/workflows/praise-garden-gemini-preflight.yml').read_text())
+    assert set(workflow.get('on', workflow.get(True))) == {'workflow_dispatch'}
+    assert workflow['permissions'] == {'contents': 'read'}
+    steps = workflow['jobs']['preflight']['steps']
+    assert steps[0]['with']['persist-credentials'] is False
+    step = next(step for step in steps if 'run' in step)
+    assert step['run'] == 'python3 scripts/praise_garden_gemini_preflight.py'
+    assert step['env'] == {'PRAYER9_GEMINI_API_KEY': '${{ secrets.PRAYER9_GEMINI_API_KEY }}'}

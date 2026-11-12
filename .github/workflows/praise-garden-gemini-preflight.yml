@@ -1,11 +1,8 @@
 name: Praise Garden Gemini read-only preflight
 
-# Temporary branch-only trigger for the first test, before the workflow exists
-# on the default branch. Remove after the test; no publishing is enabled.
+# Manual and read-only. Saving a key does not start the diagnostic or activate
+# the channel. The model-list request performs no generation.
 on:
-  push:
-    branches: ["arena/32ec72b4-youtube-automation"]
-    paths: [".github/workflows/praise-garden-gemini-preflight.yml"]
   workflow_dispatch:
 
 permissions:
