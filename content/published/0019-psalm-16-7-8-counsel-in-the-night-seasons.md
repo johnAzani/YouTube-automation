@@ -89,10 +89,9 @@ published_on: "2026-11-12"
 published_at: "2026-11-12T03:05:00Z"
 youtube_video_id: "nVLhEVO7ROw"
 metadata_revision: "selar-seo-v1"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCtPI1r8vgtJ9n__7ksLBmCA; auth_channel_title=The Secret Place | Daily Prayer & Scripture; long_uploads_status=allowed; video_channel_id=UCtPI1r8vgtJ9n__7ksLBmCA; video_channel_title=The Secret Place | Daily Prayer & Scripture; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_retry_after: "2026-11-12T11:18:48Z"
-thumbnail_retry_reason: "rate_limit"
+thumbnail_pending: false
+
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — I Will Bless the LORD, Who Hath Given Me Counsel (Verse 7a)
