@@ -44,13 +44,6 @@
       "workflow": "automation-health.yml"
     },
     {
-      "late_minutes": 128,
-      "name": "Produce video",
-      "ran_at": "2026-11-12T08:22:39+00:00",
-      "slot": "2026-11-12T06:14:00+00:00",
-      "workflow": "produce.yml"
-    },
-    {
       "late_minutes": 124,
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "ran_at": "2026-11-12T05:18:37+00:00",
@@ -58,8 +51,8 @@
       "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-12T12:53:03.407984+00:00",
-  "last_run_at": "2026-11-12T12:52:11+00:00",
+  "generated_at": "2026-11-12T14:35:43.294886+00:00",
+  "last_run_at": "2026-11-12T14:34:52+00:00",
   "on_time": [
     {
       "late_minutes": 29,
