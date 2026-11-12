@@ -1,40 +1,40 @@
 {
-  "generated_at": "2026-11-11T09:20:49.330328+00:00",
-  "as_of": "2026-11-11",
+  "generated_at": "2026-11-12T05:20:24.594555+00:00",
+  "as_of": "2026-11-12",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 14,
+  "total_longform_videos": 17,
   "ranked_themes": [],
   "themes": [
     {
       "theme": "blessing_benediction",
       "videos": 1,
       "measured_videos": 0,
-      "avg_score": 0.2381,
+      "avg_score": 0.2232,
       "avg_engagement": 0.0,
       "top_scripture": "Numbers 6"
+    },
+    {
+      "theme": "morning_mercy_renewal",
+      "videos": 11,
+      "measured_videos": 0,
+      "avg_score": 0.1574,
+      "avg_engagement": 0.0,
+      "top_scripture": "Mark 1"
     },
     {
       "theme": "midday_strength_endurance",
       "videos": 1,
       "measured_videos": 0,
-      "avg_score": 0.1429,
+      "avg_score": 0.1339,
       "avg_engagement": 0.0,
       "top_scripture": "Psalm 90"
-    },
-    {
-      "theme": "morning_mercy_renewal",
-      "videos": 8,
-      "measured_videos": 0,
-      "avg_score": 0.1324,
-      "avg_engagement": 0.0,
-      "top_scripture": "Mark 1"
     },
     {
       "theme": "daily_guidance_wisdom",
       "videos": 3,
       "measured_videos": 0,
-      "avg_score": 0.1111,
+      "avg_score": 0.1042,
       "avg_engagement": 0.0,
       "top_scripture": "Psalm 118"
     },
