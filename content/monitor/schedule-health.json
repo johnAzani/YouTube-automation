@@ -2,9 +2,9 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
-      "late_minutes": 1125,
+      "late_minutes": 1557,
       "name": "Weekly metrics snapshot",
-      "ran_at": "2026-11-07T13:26:05+00:00",
+      "ran_at": "2026-11-07T20:38:46+00:00",
       "slot": "2026-11-06T18:41:00+00:00",
       "workflow": "metrics.yml"
     },
@@ -51,8 +51,8 @@
       "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-12T07:00:32.804972+00:00",
-  "last_run_at": "2026-11-12T06:59:49+00:00",
+  "generated_at": "2026-11-12T07:02:04.175076+00:00",
+  "last_run_at": "2026-11-12T07:01:24+00:00",
   "on_time": [
     {
       "late_minutes": 36,
