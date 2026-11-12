@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T18:56:23Z",
+  "generated_at": "2026-11-12T19:51:38Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 8
   },
   "totals": {
-    "published_total": 132,
-    "published_longform": 59,
-    "published_shorts": 73,
-    "public_total": 130,
-    "queued_longform": 59,
-    "queued_shorts": 45,
+    "published_total": 134,
+    "published_longform": 60,
+    "published_shorts": 74,
+    "public_total": 132,
+    "queued_longform": 58,
+    "queued_shorts": 44,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": false
@@ -295,32 +295,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 6,
-        "published_longform": 3,
-        "published_shorts": 3,
-        "public_total": 6,
-        "queued_longform": 6,
+        "published_total": 8,
+        "published_longform": 4,
+        "published_shorts": 4,
+        "public_total": 8,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0302",
-        "title": "Psalm 127:1-5 Family Prayer | The Family Altar",
-        "format": "longform",
-        "youtube_video_id": "9IDZtEb9OM0",
-        "watch_url": "https://youtu.be/9IDZtEb9OM0",
-        "published_on": "2026-11-12",
-        "published_at": "2026-11-12T05:11:54Z"
-      },
-      "next_queued_longform": {
         "id": "0303",
         "title": "Isaiah 54:13 Family Prayer | The Family Altar",
-        "words": 905,
+        "format": "longform",
+        "youtube_video_id": "hbH0E9CMEvs",
+        "watch_url": "https://youtu.be/hbH0E9CMEvs",
+        "published_on": "2026-11-12",
+        "published_at": "2026-11-12T19:50:36Z"
+      },
+      "next_queued_longform": {
+        "id": "0304",
+        "title": "Isaiah 32:18 Household Peace Prayer | The Family Altar",
+        "words": 1527,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familyisaiah54v13",
-        "scripture": "Isaiah 54:13",
+        "short": "short-familyisaiah32v18",
+        "scripture": "Isaiah 32:18",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -531,6 +531,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0303",
+      "slug": "isaiah-54-13-family-prayer",
+      "file": "0303-isaiah-54-13-family-prayer.md",
+      "title": "Isaiah 54:13 Family Prayer | The Family Altar",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T19:50:36Z",
+      "youtube_video_id": "hbH0E9CMEvs",
+      "watch_url": "https://youtu.be/hbH0E9CMEvs",
+      "youtu_be_url": "https://youtu.be/hbH0E9CMEvs",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/hbH0E9CMEvs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/hbH0E9CMEvs/hqdefault.jpg",
+      "thumb_text": "PROTECT OUR CHILDREN",
+      "duration_label": "~6 min",
+      "words": 905
+    },
+    {
+      "id": "SHORT-FAMILYISAIAH54V13",
+      "slug": "short-familyisaiah54v13-household-prayer",
+      "file": "short-familyisaiah54v13-household-prayer.md",
+      "title": "Pray This Isaiah 54:13 Family Prayer Over Your Home | Family Prayer #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T19:04:44Z",
+      "youtube_video_id": "G9ifwfsJoHk",
+      "watch_url": "https://www.youtube.com/shorts/G9ifwfsJoHk",
+      "youtu_be_url": "https://youtu.be/G9ifwfsJoHk",
+      "shorts_url": "https://www.youtube.com/shorts/G9ifwfsJoHk",
+      "studio_url": "https://studio.youtube.com/video/G9ifwfsJoHk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/G9ifwfsJoHk/hqdefault.jpg",
+      "thumb_text": "THE FAMILY ALTAR \u00b7 PROTECT OUR CHILDREN",
+      "duration_label": "55s",
+      "words": 390
+    },
     {
       "id": "0206",
       "slug": "weapons-mighty-through-god-to-pull-down-strongholds",
@@ -3974,19 +4020,6 @@
         "words": 1708
       },
       {
-        "id": "0303",
-        "slug": "isaiah-54-13-family-prayer",
-        "file": "0303-isaiah-54-13-family-prayer.md",
-        "title": "Isaiah 54:13 Family Prayer | The Family Altar",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 905
-      },
-      {
         "id": "0304",
         "slug": "isaiah-32-18-household-peace-prayer",
         "file": "0304-isaiah-32-18-household-peace-prayer.md",
@@ -4514,17 +4547,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-familyisaiah54v13",
-        "file": "0303-short-familyisaiah54v13.yml",
-        "companion_longform_id": "303",
-        "scripture": "Isaiah 54:13",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
       },
       {
         "short": "short-familyisaiah32v18",
