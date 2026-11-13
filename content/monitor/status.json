@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T14:49:19.388662+00:00",
+  "generated_at": "2026-11-13T14:58:14.771153+00:00",
   "healthy": true,
   "automations": [
     {
@@ -18,7 +18,7 @@
       "failures_5": 0,
       "effect": "reports and files stalls",
       "verdict": "OK",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 0.3h ago",
       "severity": "ok"
     },
     {
@@ -39,7 +39,7 @@
       "failures_5": 0,
       "effect": "posts replies and records them in content/comments/replied.json",
       "verdict": "OK",
-      "detail": "last success 6.1h ago",
+      "detail": "last success 6.2h ago",
       "severity": "ok"
     },
     {
@@ -58,7 +58,7 @@
       "failures_5": 0,
       "effect": "writes content/community/<id>-READY.md",
       "verdict": "OK",
-      "detail": "last success 37.3h ago",
+      "detail": "last success 37.4h ago",
       "severity": "ok"
     },
     {
@@ -77,7 +77,7 @@
       "failures_5": 0,
       "effect": "writes content/queue/ or content/shorts-scripts/",
       "verdict": "OK",
-      "detail": "last success 27.7h ago",
+      "detail": "last success 27.9h ago",
       "severity": "ok"
     },
     {
@@ -96,7 +96,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 5.4h ago",
+      "detail": "last success 5.5h ago",
       "severity": "ok"
     },
     {
@@ -115,7 +115,7 @@
       "failures_5": 0,
       "effect": "re-arms scheduled workflows",
       "verdict": "OK",
-      "detail": "last success 99.0h ago",
+      "detail": "last success 99.2h ago",
       "severity": "ok"
     },
     {
@@ -125,8 +125,8 @@
         "41 18 * * 5"
       ],
       "last_run": "2026-11-13T14:42:41+00:00",
-      "last_conclusion": null,
-      "last_success": "2026-11-13T06:57:38+00:00",
+      "last_conclusion": "success",
+      "last_success": "2026-11-13T14:42:41+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-13T08:28:02+00:00",
       "last_slot": "2026-11-06T18:41:00+00:00",
@@ -134,7 +134,7 @@
       "failures_5": 0,
       "effect": "writes content/metrics.csv and opens a snapshot issue",
       "verdict": "OK",
-      "detail": "last success 7.9h ago",
+      "detail": "last success 0.3h ago",
       "severity": "ok"
     },
     {
@@ -143,9 +143,9 @@
       "crons": [
         "23 */3 * * *"
       ],
-      "last_run": "2026-11-13T14:47:55+00:00",
+      "last_run": "2026-11-13T14:57:20+00:00",
       "last_conclusion": null,
-      "last_success": "2026-11-13T14:42:41+00:00",
+      "last_success": "2026-11-13T14:47:55+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-13T12:28:51+00:00",
       "last_slot": "2026-11-13T12:23:00+00:00",
@@ -153,7 +153,7 @@
       "failures_5": 0,
       "effect": "this report",
       "verdict": "OK",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 0.2h ago",
       "severity": "ok"
     },
     {
@@ -174,7 +174,7 @@
       "failures_5": 0,
       "effect": "publishes a video: content/published/ gains a receipt with a video id",
       "verdict": "OK",
-      "detail": "last success 14.5h ago",
+      "detail": "last success 14.7h ago",
       "severity": "ok"
     },
     {
@@ -183,9 +183,9 @@
       "crons": [
         "47 0,3,6,9,12,15,18,21 * * *"
       ],
-      "last_run": "2026-11-13T14:48:30+00:00",
+      "last_run": "2026-11-13T14:57:20+00:00",
       "last_conclusion": null,
-      "last_success": "2026-11-13T14:47:55+00:00",
+      "last_success": "2026-11-13T14:51:07+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-07T19:31:06+00:00",
       "last_slot": "2026-11-13T12:47:00+00:00",
@@ -193,7 +193,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 0.0h ago",
+      "detail": "last success 0.1h ago",
       "severity": "ok"
     }
   ],
@@ -210,7 +210,7 @@
     },
     {
       "outcome": "last upload (prayer2)",
-      "detail": "The Morning Altar: 2026-11-13 (7h ago \u2014 short-morningpsalm25v4-sunrise-prayer.md)",
+      "detail": "The Morning Altar: 2026-11-13 (8h ago \u2014 short-morningpsalm25v4-sunrise-prayer.md)",
       "severity": "ok"
     },
     {
@@ -220,7 +220,7 @@
     },
     {
       "outcome": "last upload (prayer4)",
-      "detail": "The Midnight Watch: 2026-11-13 (6h ago \u2014 0208-isaiah-54-17-no-weapon-formed-against-thee-midnight-prayer.md)",
+      "detail": "The Midnight Watch: 2026-11-13 (7h ago \u2014 0208-isaiah-54-17-no-weapon-formed-against-thee-midnight-prayer.md)",
       "severity": "ok"
     },
     {
@@ -255,12 +255,12 @@
     },
     {
       "outcome": "publishable runway",
-      "detail": "42 of 42 approved script(s) over the 850-word floor (50 in queue)",
+      "detail": "43 of 43 approved script(s) over the 850-word floor (51 in queue)",
       "severity": "ok"
     },
     {
       "outcome": "authored Short specs",
-      "detail": "121 spec(s)",
+      "detail": "122 spec(s)",
       "severity": "ok"
     },
     {
