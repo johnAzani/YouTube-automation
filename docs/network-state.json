@@ -1,5 +1,6 @@
 {
-  "generated_at": "2026-11-13T12:07:56Z",
+  "generated_at": "2026-11-13T12:21:11Z",
+  "monitor_generated_at": "2026-11-13T12:19:53.696377+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -35,6 +36,7 @@
         "published_total": 36,
         "published_longform": 12,
         "published_shorts": 24,
+        "thumbnail_pending": 2,
         "public_total": 35,
         "queued_longform": 15,
         "queued_other": 5,
@@ -102,6 +104,7 @@
         "published_total": 44,
         "published_longform": 20,
         "published_shorts": 24,
+        "thumbnail_pending": 9,
         "public_total": 43,
         "queued_longform": 6,
         "queued_other": 0,
@@ -169,6 +172,7 @@
         "published_total": 27,
         "published_longform": 12,
         "published_shorts": 15,
+        "thumbnail_pending": 0,
         "public_total": 27,
         "queued_longform": 5,
         "queued_other": 0,
@@ -236,6 +240,7 @@
         "published_total": 16,
         "published_longform": 9,
         "published_shorts": 7,
+        "thumbnail_pending": 16,
         "public_total": 16,
         "queued_longform": 3,
         "queued_other": 0,
@@ -298,6 +303,7 @@
         "published_total": 11,
         "published_longform": 6,
         "published_shorts": 5,
+        "thumbnail_pending": 11,
         "public_total": 11,
         "queued_longform": 3,
         "queued_other": 0,
@@ -360,6 +366,7 @@
         "published_total": 11,
         "published_longform": 6,
         "published_shorts": 5,
+        "thumbnail_pending": 7,
         "public_total": 11,
         "queued_longform": 3,
         "queued_other": 0,
@@ -427,6 +434,7 @@
         "published_total": 10,
         "published_longform": 6,
         "published_shorts": 4,
+        "thumbnail_pending": 7,
         "public_total": 10,
         "queued_longform": 3,
         "queued_other": 0,
@@ -494,6 +502,7 @@
         "published_total": 4,
         "published_longform": 2,
         "published_shorts": 2,
+        "thumbnail_pending": 4,
         "public_total": 4,
         "queued_longform": 5,
         "queued_other": 0,
@@ -556,6 +565,7 @@
         "published_total": 2,
         "published_longform": 1,
         "published_shorts": 1,
+        "thumbnail_pending": 2,
         "public_total": 2,
         "queued_longform": 2,
         "queued_other": 0,
@@ -613,6 +623,7 @@
         "published_total": 2,
         "published_longform": 1,
         "published_shorts": 1,
+        "thumbnail_pending": 2,
         "public_total": 2,
         "queued_longform": 2,
         "queued_other": 0,
@@ -675,6 +686,7 @@
       "studio_url": "https://studio.youtube.com/video/Db_E-IXTydA/edit",
       "thumb_url": "https://i.ytimg.com/vi/Db_E-IXTydA/hqdefault.jpg",
       "thumb_text": "DIRECT MY PATHS",
+      "thumbnail_pending": true,
       "duration_label": "~11 min",
       "words": 1637
     },
@@ -698,6 +710,7 @@
       "studio_url": "https://studio.youtube.com/video/msTiAda7RiM/edit",
       "thumb_url": "https://i.ytimg.com/vi/msTiAda7RiM/hqdefault.jpg",
       "thumb_text": "ESTABLISH OUR WORK",
+      "thumbnail_pending": true,
       "duration_label": "~9 min",
       "words": 1267
     },
@@ -721,6 +734,7 @@
       "studio_url": "https://studio.youtube.com/video/NOWMK_KN13Y/edit",
       "thumb_url": "https://i.ytimg.com/vi/NOWMK_KN13Y/hqdefault.jpg",
       "thumb_text": "THE PROVISION TABLE \u00b7 OPEN THIS DOOR",
+      "thumbnail_pending": false,
       "duration_label": "66s",
       "words": 436
     },
@@ -744,6 +758,7 @@
       "studio_url": "https://studio.youtube.com/video/5Le9LBTWYF0/edit",
       "thumb_url": "https://i.ytimg.com/vi/5Le9LBTWYF0/hqdefault.jpg",
       "thumb_text": "SAVE ME O",
+      "thumbnail_pending": false,
       "duration_label": "~10 min",
       "words": 1516
     },
@@ -767,6 +782,7 @@
       "studio_url": "https://studio.youtube.com/video/H-ygSB-1i1M/edit",
       "thumb_url": "https://i.ytimg.com/vi/H-ygSB-1i1M/hqdefault.jpg",
       "thumb_text": "JEHOVAH RAPHA",
+      "thumbnail_pending": false,
       "duration_label": "~13 min",
       "words": 1903
     },
@@ -790,6 +806,7 @@
       "studio_url": "https://studio.youtube.com/video/FJ_b_jKTx08/edit",
       "thumb_url": "https://i.ytimg.com/vi/FJ_b_jKTx08/hqdefault.jpg",
       "thumb_text": "WISDOM IN OUR",
+      "thumbnail_pending": true,
       "duration_label": "~12 min",
       "words": 1721
     },
@@ -813,6 +830,7 @@
       "studio_url": "https://studio.youtube.com/video/uVx6ay-zB1c/edit",
       "thumb_url": "https://i.ytimg.com/vi/uVx6ay-zB1c/hqdefault.jpg",
       "thumb_text": "NO WEAPON PROSPERS",
+      "thumbnail_pending": true,
       "duration_label": "~9 min",
       "words": 1350
     },
@@ -836,6 +854,7 @@
       "studio_url": "https://studio.youtube.com/video/_RTCwdT7SVM/edit",
       "thumb_url": "https://i.ytimg.com/vi/_RTCwdT7SVM/hqdefault.jpg",
       "thumb_text": "PSALM 25:4-5 \u00b7 TEACH ME YOUR PATHS",
+      "thumbnail_pending": true,
       "duration_label": "55s",
       "words": 632
     },
@@ -859,6 +878,7 @@
       "studio_url": "https://studio.youtube.com/video/GQT7eKz9MAE/edit",
       "thumb_url": "https://i.ytimg.com/vi/GQT7eKz9MAE/hqdefault.jpg",
       "thumb_text": "A PRAYER FOR \u00b7 A PEACEFUL SLEEP",
+      "thumbnail_pending": false,
       "duration_label": "43s",
       "words": 608
     },
@@ -882,6 +902,7 @@
       "studio_url": "https://studio.youtube.com/video/XXBBqCi9Uk4/edit",
       "thumb_url": "https://i.ytimg.com/vi/XXBBqCi9Uk4/hqdefault.jpg",
       "thumb_text": "DIRECT MY PATH",
+      "thumbnail_pending": true,
       "duration_label": "~7 min",
       "words": 973
     },
@@ -905,6 +926,7 @@
       "studio_url": "https://studio.youtube.com/video/NFzO1NIqMnI/edit",
       "thumb_url": "https://i.ytimg.com/vi/NFzO1NIqMnI/hqdefault.jpg",
       "thumb_text": "THE GUIDED PATH \u00b7 DIRECT MY PATH",
+      "thumbnail_pending": true,
       "duration_label": "59s",
       "words": 239
     },
@@ -928,6 +950,7 @@
       "studio_url": "https://studio.youtube.com/video/PAQX6PbcsCk/edit",
       "thumb_url": "https://i.ytimg.com/vi/PAQX6PbcsCk/hqdefault.jpg",
       "thumb_text": "ENTER WITH THANKS",
+      "thumbnail_pending": true,
       "duration_label": "~6 min",
       "words": 902
     },
@@ -951,6 +974,7 @@
       "studio_url": "https://studio.youtube.com/video/kNJqhfd532k/edit",
       "thumb_url": "https://i.ytimg.com/vi/kNJqhfd532k/hqdefault.jpg",
       "thumb_text": "THE PRAISE GARDEN \u00b7 ENTER WITH THANKS",
+      "thumbnail_pending": true,
       "duration_label": "55s",
       "words": 236
     },
@@ -974,6 +998,7 @@
       "studio_url": "https://studio.youtube.com/video/lrSe7uQiAsA/edit",
       "thumb_url": "https://i.ytimg.com/vi/lrSe7uQiAsA/hqdefault.jpg",
       "thumb_text": "I AM THY SHIELD",
+      "thumbnail_pending": true,
       "duration_label": "~6 min",
       "words": 928
     },
@@ -997,6 +1022,7 @@
       "studio_url": "https://studio.youtube.com/video/1n7kkDrsP6A/edit",
       "thumb_url": "https://i.ytimg.com/vi/1n7kkDrsP6A/hqdefault.jpg",
       "thumb_text": "THE HEALING BALM \u00b7 GOD IS YOUR HEALER",
+      "thumbnail_pending": true,
       "duration_label": "<60s",
       "words": 21
     },
@@ -1020,6 +1046,7 @@
       "studio_url": "https://studio.youtube.com/video/08dJD3XggYc/edit",
       "thumb_url": "https://i.ytimg.com/vi/08dJD3XggYc/hqdefault.jpg",
       "thumb_text": "PEACE IN THIS",
+      "thumbnail_pending": true,
       "duration_label": "~11 min",
       "words": 1527
     },
@@ -1043,6 +1070,7 @@
       "studio_url": "https://studio.youtube.com/video/i7l1I7VklmA/edit",
       "thumb_url": "https://i.ytimg.com/vi/i7l1I7VklmA/hqdefault.jpg",
       "thumb_text": "PEACEFUL DWELLINGS \u00b7 ISAIAH 32:18",
+      "thumbnail_pending": true,
       "duration_label": "62s",
       "words": 457
     },
@@ -1066,6 +1094,7 @@
       "studio_url": "https://studio.youtube.com/video/ZDnZNjXPaQI/edit",
       "thumb_url": "https://i.ytimg.com/vi/ZDnZNjXPaQI/hqdefault.jpg",
       "thumb_text": "ARMOUR OF GOD",
+      "thumbnail_pending": true,
       "duration_label": "~12 min",
       "words": 1669
     },
@@ -1089,6 +1118,7 @@
       "studio_url": "https://studio.youtube.com/video/Id-Jv_t7VIU/edit",
       "thumb_url": "https://i.ytimg.com/vi/Id-Jv_t7VIU/hqdefault.jpg",
       "thumb_text": "RISE \u00b7 IN THE",
+      "thumbnail_pending": true,
       "duration_label": "45s",
       "words": 557
     },
@@ -1112,6 +1142,7 @@
       "studio_url": "https://studio.youtube.com/video/27iciJCsTJg/edit",
       "thumb_url": "https://i.ytimg.com/vi/27iciJCsTJg/hqdefault.jpg",
       "thumb_text": "MIDDAY PRAYER \u00b7 ISAIAH 32:2",
+      "thumbnail_pending": false,
       "duration_label": "53s",
       "words": 590
     },
@@ -1135,6 +1166,7 @@
       "studio_url": "https://studio.youtube.com/video/Cm8RyYGgkgE/edit",
       "thumb_url": "https://i.ytimg.com/vi/Cm8RyYGgkgE/hqdefault.jpg",
       "thumb_text": "PREPARED AS THE",
+      "thumbnail_pending": true,
       "duration_label": "~8 min",
       "words": 1130
     },
@@ -1158,6 +1190,7 @@
       "studio_url": "https://studio.youtube.com/video/TU_BCfeIZpI/edit",
       "thumb_url": "https://i.ytimg.com/vi/TU_BCfeIZpI/hqdefault.jpg",
       "thumb_text": "THE \u00b7 MORNING",
+      "thumbnail_pending": true,
       "duration_label": "47s",
       "words": 630
     },
@@ -1181,6 +1214,7 @@
       "studio_url": "https://studio.youtube.com/video/oiLCbx4-wMA/edit",
       "thumb_url": "https://i.ytimg.com/vi/oiLCbx4-wMA/hqdefault.jpg",
       "thumb_text": "LORD IS MY ROCK",
+      "thumbnail_pending": false,
       "duration_label": "~6 min",
       "words": 902
     },
@@ -1204,6 +1238,7 @@
       "studio_url": "https://studio.youtube.com/video/XyFODtqpNkU/edit",
       "thumb_url": "https://i.ytimg.com/vi/XyFODtqpNkU/hqdefault.jpg",
       "thumb_text": "CALM \u00b7 YOUR",
+      "thumbnail_pending": false,
       "duration_label": "49s",
       "words": 607
     },
@@ -1227,6 +1262,7 @@
       "studio_url": "https://studio.youtube.com/video/fA8ZpJlik-M/edit",
       "thumb_url": "https://i.ytimg.com/vi/fA8ZpJlik-M/hqdefault.jpg",
       "thumb_text": "OPEN THIS DOOR",
+      "thumbnail_pending": false,
       "duration_label": "~6 min",
       "words": 903
     },
@@ -1250,6 +1286,7 @@
       "studio_url": "https://studio.youtube.com/video/ZmRgwomyNfs/edit",
       "thumb_url": "https://i.ytimg.com/vi/ZmRgwomyNfs/hqdefault.jpg",
       "thumb_text": "THE PROVISION TABLE \u00b7 ALL YOUR NEED",
+      "thumbnail_pending": false,
       "duration_label": "61s",
       "words": 345
     },
@@ -1273,6 +1310,7 @@
       "studio_url": "https://studio.youtube.com/video/qdnrS9W0XtQ/edit",
       "thumb_url": "https://i.ytimg.com/vi/qdnrS9W0XtQ/hqdefault.jpg",
       "thumb_text": "STRENGTH IN WEAKNESS",
+      "thumbnail_pending": false,
       "duration_label": "~6 min",
       "words": 873
     },
@@ -1296,6 +1334,7 @@
       "studio_url": "https://studio.youtube.com/video/vX5xkEhP92g/edit",
       "thumb_url": "https://i.ytimg.com/vi/vX5xkEhP92g/hqdefault.jpg",
       "thumb_text": "THE HEALING BALM \u00b7 STRENGTH IN WEAKNESS",
+      "thumbnail_pending": false,
       "duration_label": "53s",
       "words": 366
     },
@@ -1319,6 +1358,7 @@
       "studio_url": "https://studio.youtube.com/video/hbH0E9CMEvs/edit",
       "thumb_url": "https://i.ytimg.com/vi/hbH0E9CMEvs/hqdefault.jpg",
       "thumb_text": "PROTECT OUR CHILDREN",
+      "thumbnail_pending": true,
       "duration_label": "~6 min",
       "words": 905
     },
@@ -1342,6 +1382,7 @@
       "studio_url": "https://studio.youtube.com/video/G9ifwfsJoHk/edit",
       "thumb_url": "https://i.ytimg.com/vi/G9ifwfsJoHk/hqdefault.jpg",
       "thumb_text": "THE FAMILY ALTAR \u00b7 PROTECT OUR CHILDREN",
+      "thumbnail_pending": true,
       "duration_label": "55s",
       "words": 390
     },
@@ -1365,6 +1406,7 @@
       "studio_url": "https://studio.youtube.com/video/KLPvoXQOTI0/edit",
       "thumb_url": "https://i.ytimg.com/vi/KLPvoXQOTI0/hqdefault.jpg",
       "thumb_text": "MIGHTY THROUGH GOD",
+      "thumbnail_pending": true,
       "duration_label": "~9 min",
       "words": 1300
     },
@@ -1388,6 +1430,7 @@
       "studio_url": "https://studio.youtube.com/video/E0_JQDOIRdE/edit",
       "thumb_url": "https://i.ytimg.com/vi/E0_JQDOIRdE/hqdefault.jpg",
       "thumb_text": "A WALL OF FIRE \u00b7 ROUND ABOUT HER",
+      "thumbnail_pending": true,
       "duration_label": "58s",
       "words": 528
     },
@@ -1411,6 +1454,7 @@
       "studio_url": "https://studio.youtube.com/video/5DeUVP_OJSQ/edit",
       "thumb_url": "https://i.ytimg.com/vi/5DeUVP_OJSQ/hqdefault.jpg",
       "thumb_text": "SHADE IN THE",
+      "thumbnail_pending": false,
       "duration_label": "~16 min",
       "words": 2278
     },
@@ -1434,6 +1478,7 @@
       "studio_url": "https://studio.youtube.com/video/CH8Oh_J7Wrs/edit",
       "thumb_url": "https://i.ytimg.com/vi/CH8Oh_J7Wrs/hqdefault.jpg",
       "thumb_text": "THE MIDDAY WATCH \u00b7 ISAIAH 25:4",
+      "thumbnail_pending": false,
       "duration_label": "53s",
       "words": 586
     },
@@ -1457,6 +1502,7 @@
       "studio_url": "https://studio.youtube.com/video/SsWigDMo520/edit",
       "thumb_url": "https://i.ytimg.com/vi/SsWigDMo520/hqdefault.jpg",
       "thumb_text": "CLEAR SHINING AT",
+      "thumbnail_pending": true,
       "duration_label": "~11 min",
       "words": 1523
     },
@@ -1480,6 +1526,7 @@
       "studio_url": "https://studio.youtube.com/video/lMHzeY2SjLc/edit",
       "thumb_url": "https://i.ytimg.com/vi/lMHzeY2SjLc/hqdefault.jpg",
       "thumb_text": "BEGIN \u00b7 EVERY",
+      "thumbnail_pending": false,
       "duration_label": "53s",
       "words": 598
     },
@@ -1503,6 +1550,7 @@
       "studio_url": "https://studio.youtube.com/video/QHm6Z2sfpnc/edit",
       "thumb_url": "https://i.ytimg.com/vi/QHm6Z2sfpnc/hqdefault.jpg",
       "thumb_text": "FIND PEACE \u00b7 IN THE",
+      "thumbnail_pending": false,
       "duration_label": "68s",
       "words": 662
     },
@@ -1526,6 +1574,7 @@
       "studio_url": "https://studio.youtube.com/video/nHrsmUn9Kj8/edit",
       "thumb_url": "https://i.ytimg.com/vi/nHrsmUn9Kj8/hqdefault.jpg",
       "thumb_text": "CLEAR AS THE",
+      "thumbnail_pending": false,
       "duration_label": "~16 min",
       "words": 2261
     },
@@ -1549,6 +1598,7 @@
       "studio_url": "https://studio.youtube.com/video/gzHJ_-CpfJs/edit",
       "thumb_url": "https://i.ytimg.com/vi/gzHJ_-CpfJs/hqdefault.jpg",
       "thumb_text": "THE \u00b7 MIDDAY",
+      "thumbnail_pending": false,
       "duration_label": "45s",
       "words": 574
     },
@@ -1572,6 +1622,7 @@
       "studio_url": "https://studio.youtube.com/video/bw9zxOtzHww/edit",
       "thumb_url": "https://i.ytimg.com/vi/bw9zxOtzHww/hqdefault.jpg",
       "thumb_text": "OUR ARM EVERY",
+      "thumbnail_pending": true,
       "duration_label": "~11 min",
       "words": 1534
     },
@@ -1595,6 +1646,7 @@
       "studio_url": "https://studio.youtube.com/video/LtvCYPEQNik/edit",
       "thumb_url": "https://i.ytimg.com/vi/LtvCYPEQNik/hqdefault.jpg",
       "thumb_text": "BEGIN \u00b7 EVERY",
+      "thumbnail_pending": true,
       "duration_label": "50s",
       "words": 613
     },
@@ -1618,6 +1670,7 @@
       "studio_url": "https://studio.youtube.com/video/dmwIvRt6Ve8/edit",
       "thumb_url": "https://i.ytimg.com/vi/dmwIvRt6Ve8/hqdefault.jpg",
       "thumb_text": "BEDTIME PRAYER \u00b7 JOHN 14:27",
+      "thumbnail_pending": false,
       "duration_label": "58s",
       "words": 661
     },
@@ -1641,6 +1694,7 @@
       "studio_url": "https://studio.youtube.com/video/lgBIMzFepLg/edit",
       "thumb_url": "https://i.ytimg.com/vi/lgBIMzFepLg/hqdefault.jpg",
       "thumb_text": "ALL YOUR NEED",
+      "thumbnail_pending": true,
       "duration_label": "~6 min",
       "words": 917
     },
@@ -1664,6 +1718,7 @@
       "studio_url": "https://studio.youtube.com/video/9JVBBIA5UtI/edit",
       "thumb_url": "https://i.ytimg.com/vi/9JVBBIA5UtI/hqdefault.jpg",
       "thumb_text": "HEAL THIS HEART",
+      "thumbnail_pending": true,
       "duration_label": "~6 min",
       "words": 860
     },
@@ -1687,6 +1742,7 @@
       "studio_url": "https://studio.youtube.com/video/LtoPBO0O60U/edit",
       "thumb_url": "https://i.ytimg.com/vi/LtoPBO0O60U/hqdefault.jpg",
       "thumb_text": "THE HEALING BALM \u00b7 HEAL THIS HEART",
+      "thumbnail_pending": true,
       "duration_label": "59s",
       "words": 329
     },
@@ -1710,6 +1766,7 @@
       "studio_url": "https://studio.youtube.com/video/9IDZtEb9OM0/edit",
       "thumb_url": "https://i.ytimg.com/vi/9IDZtEb9OM0/hqdefault.jpg",
       "thumb_text": "GOD BUILDS THIS HOME",
+      "thumbnail_pending": true,
       "duration_label": "~6 min",
       "words": 917
     },
@@ -1733,6 +1790,7 @@
       "studio_url": "https://studio.youtube.com/video/36jc7WO4ZLs/edit",
       "thumb_url": "https://i.ytimg.com/vi/36jc7WO4ZLs/hqdefault.jpg",
       "thumb_text": "THE FAMILY ALTAR \u00b7 GOD BUILDS THIS HOME",
+      "thumbnail_pending": true,
       "duration_label": "54s",
       "words": 327
     },
@@ -1756,6 +1814,7 @@
       "studio_url": "https://studio.youtube.com/video/qGFqRAbJKX0/edit",
       "thumb_url": "https://i.ytimg.com/vi/qGFqRAbJKX0/hqdefault.jpg",
       "thumb_text": "WALL OF FIRE",
+      "thumbnail_pending": true,
       "duration_label": "~9 min",
       "words": 1377
     },
@@ -1779,6 +1838,7 @@
       "studio_url": "https://studio.youtube.com/video/wygbcZLPSU8/edit",
       "thumb_url": "https://i.ytimg.com/vi/wygbcZLPSU8/hqdefault.jpg",
       "thumb_text": "THE MIDNIGHT WATCH \u00b7 EXODUS 12:29-31",
+      "thumbnail_pending": true,
       "duration_label": "52s",
       "words": 461
     },
@@ -1802,6 +1862,7 @@
       "studio_url": "https://studio.youtube.com/video/bOZWN5KxyBk/edit",
       "thumb_url": "https://i.ytimg.com/vi/bOZWN5KxyBk/hqdefault.jpg",
       "thumb_text": "THE MORNING ALTAR \u00b7 HOSEA 6:3",
+      "thumbnail_pending": false,
       "duration_label": "57s",
       "words": 641
     },
@@ -1825,6 +1886,7 @@
       "studio_url": "https://studio.youtube.com/video/nVLhEVO7ROw/edit",
       "thumb_url": "https://i.ytimg.com/vi/nVLhEVO7ROw/hqdefault.jpg",
       "thumb_text": "GUIDED BY NIGHT",
+      "thumbnail_pending": false,
       "duration_label": "~7 min",
       "words": 958
     },
@@ -1848,6 +1910,7 @@
       "studio_url": "https://studio.youtube.com/video/GBNCiP8UTS8/edit",
       "thumb_url": "https://i.ytimg.com/vi/GBNCiP8UTS8/hqdefault.jpg",
       "thumb_text": "LAY DOWN YOUR BURDENS \u00b7 A QUIET BEDTIME PRAYER",
+      "thumbnail_pending": false,
       "duration_label": "58s",
       "words": 634
     },
@@ -1871,6 +1934,7 @@
       "studio_url": "https://studio.youtube.com/video/Pz1hcrgZ7Lc/edit",
       "thumb_url": "https://i.ytimg.com/vi/Pz1hcrgZ7Lc/hqdefault.jpg",
       "thumb_text": "THE COVENANT SHIELD \u00b7 GOD IS MY SHIELD",
+      "thumbnail_pending": true,
       "duration_label": "<60s",
       "words": 21
     },
@@ -1894,6 +1958,7 @@
       "studio_url": "https://studio.youtube.com/video/qrOFQ37peYc/edit",
       "thumb_url": "https://i.ytimg.com/vi/qrOFQ37peYc/hqdefault.jpg",
       "thumb_text": "BLESS OUR HANDS",
+      "thumbnail_pending": true,
       "duration_label": "~6 min",
       "words": 911
     },
@@ -1917,6 +1982,7 @@
       "studio_url": "https://studio.youtube.com/video/XYztSYJyOY4/edit",
       "thumb_url": "https://i.ytimg.com/vi/XYztSYJyOY4/hqdefault.jpg",
       "thumb_text": "THE PROVISION TABLE \u00b7 BLESS OUR HANDS",
+      "thumbnail_pending": true,
       "duration_label": "63s",
       "words": 296
     },
@@ -1940,6 +2006,7 @@
       "studio_url": "https://studio.youtube.com/video/QG1CTgF0Ju0/edit",
       "thumb_url": "https://i.ytimg.com/vi/QG1CTgF0Ju0/hqdefault.jpg",
       "thumb_text": "RENEW MY STRENGTH",
+      "thumbnail_pending": true,
       "duration_label": "~6 min",
       "words": 890
     },
@@ -1963,6 +2030,7 @@
       "studio_url": "https://studio.youtube.com/video/V_CXGnDJsqk/edit",
       "thumb_url": "https://i.ytimg.com/vi/V_CXGnDJsqk/hqdefault.jpg",
       "thumb_text": "THE HEALING BALM \u00b7 RENEW MY STRENGTH",
+      "thumbnail_pending": true,
       "duration_label": "55s",
       "words": 265
     },
@@ -1986,6 +2054,7 @@
       "studio_url": "https://studio.youtube.com/video/c8nBqdvETqA/edit",
       "thumb_url": "https://i.ytimg.com/vi/c8nBqdvETqA/hqdefault.jpg",
       "thumb_text": "COVER MY FAMILY",
+      "thumbnail_pending": true,
       "duration_label": "~6 min",
       "words": 909
     },
@@ -2009,6 +2078,7 @@
       "studio_url": "https://studio.youtube.com/video/zjz6imU7S0U/edit",
       "thumb_url": "https://i.ytimg.com/vi/zjz6imU7S0U/hqdefault.jpg",
       "thumb_text": "THE FAMILY ALTAR \u00b7 COVER MY FAMILY",
+      "thumbnail_pending": true,
       "duration_label": "51s",
       "words": 267
     },
@@ -2032,6 +2102,7 @@
       "studio_url": "https://studio.youtube.com/video/VmK6eRMwpHU/edit",
       "thumb_url": "https://i.ytimg.com/vi/VmK6eRMwpHU/hqdefault.jpg",
       "thumb_text": "COVERED AT MIDNIGHT",
+      "thumbnail_pending": true,
       "duration_label": "~9 min",
       "words": 1280
     },
@@ -2055,6 +2126,7 @@
       "studio_url": "https://studio.youtube.com/video/vUPXyYct6lE/edit",
       "thumb_url": "https://i.ytimg.com/vi/vUPXyYct6lE/hqdefault.jpg",
       "thumb_text": "THE MIDNIGHT WATCH \u00b7 WAIT FOR IT",
+      "thumbnail_pending": true,
       "duration_label": "55s",
       "words": 412
     },
@@ -2078,6 +2150,7 @@
       "studio_url": "https://studio.youtube.com/video/qFR-b15Sy8Q/edit",
       "thumb_url": "https://i.ytimg.com/vi/qFR-b15Sy8Q/hqdefault.jpg",
       "thumb_text": "THE MIDDAY WATCH \u00b7 PAUSE AND PRAY",
+      "thumbnail_pending": false,
       "duration_label": "54s",
       "words": 591
     },
@@ -2101,6 +2174,7 @@
       "studio_url": "https://studio.youtube.com/video/P2qBcDT966E/edit",
       "thumb_url": "https://i.ytimg.com/vi/P2qBcDT966E/hqdefault.jpg",
       "thumb_text": "FRESH MANNA TODAY",
+      "thumbnail_pending": true,
       "duration_label": "~13 min",
       "words": 1813
     },
@@ -2124,6 +2198,7 @@
       "studio_url": "https://studio.youtube.com/video/wIviB5L0UN4/edit",
       "thumb_url": "https://i.ytimg.com/vi/wIviB5L0UN4/hqdefault.jpg",
       "thumb_text": "THE MORNING ALTAR \u00b7 BEGIN IN PRAYER",
+      "thumbnail_pending": false,
       "duration_label": "60s",
       "words": 641
     },
@@ -2147,6 +2222,7 @@
       "studio_url": "https://studio.youtube.com/video/fiPJAX_pNgs/edit",
       "thumb_url": "https://i.ytimg.com/vi/fiPJAX_pNgs/hqdefault.jpg",
       "thumb_text": "LAY DOWN IN PEACE",
+      "thumbnail_pending": false,
       "duration_label": "~6 min",
       "words": 888
     },
@@ -2170,6 +2246,7 @@
       "studio_url": "https://studio.youtube.com/video/nZO6mwej0Is/edit",
       "thumb_url": "https://i.ytimg.com/vi/nZO6mwej0Is/hqdefault.jpg",
       "thumb_text": "",
+      "thumbnail_pending": true,
       "duration_label": "61s",
       "words": 663
     },
@@ -2193,6 +2270,7 @@
       "studio_url": "https://studio.youtube.com/video/VGKbJSzRZ28/edit",
       "thumb_url": "https://i.ytimg.com/vi/VGKbJSzRZ28/hqdefault.jpg",
       "thumb_text": "THE SIXTH HOUR",
+      "thumbnail_pending": false,
       "duration_label": "~17 min",
       "words": 2437
     },
@@ -2216,6 +2294,7 @@
       "studio_url": "https://studio.youtube.com/video/PjsOg5V0FvU/edit",
       "thumb_url": "https://i.ytimg.com/vi/PjsOg5V0FvU/hqdefault.jpg",
       "thumb_text": "PAUSE AT NOON \u00b7 LET HIS LIGHT SHINE",
+      "thumbnail_pending": false,
       "duration_label": "57s",
       "words": 593
     },
@@ -2239,6 +2318,7 @@
       "studio_url": "https://studio.youtube.com/video/wXUTRMZFbf8/edit",
       "thumb_url": "https://i.ytimg.com/vi/wXUTRMZFbf8/hqdefault.jpg",
       "thumb_text": "PRAISE AT DAYBREAK",
+      "thumbnail_pending": false,
       "duration_label": "~7 min",
       "words": 960
     },
@@ -2262,6 +2342,7 @@
       "studio_url": "https://studio.youtube.com/video/T7xVEDNyy4w/edit",
       "thumb_url": "https://i.ytimg.com/vi/T7xVEDNyy4w/hqdefault.jpg",
       "thumb_text": "ISAIAH 33:2 \u00b7 MORNING PRAYER",
+      "thumbnail_pending": false,
       "duration_label": "55s",
       "words": 612
     },
@@ -2285,6 +2366,7 @@
       "studio_url": "https://studio.youtube.com/video/dgvGl0EZyYE/edit",
       "thumb_url": "https://i.ytimg.com/vi/dgvGl0EZyYE/hqdefault.jpg",
       "thumb_text": "ANGELS WATCH OVER YOU",
+      "thumbnail_pending": false,
       "duration_label": "~6 min",
       "words": 885
     },
@@ -2308,6 +2390,7 @@
       "studio_url": "https://studio.youtube.com/video/er20wTWclFo/edit",
       "thumb_url": "https://i.ytimg.com/vi/er20wTWclFo/hqdefault.jpg",
       "thumb_text": "KEPT IN \u00b7 PERFECT PEACE",
+      "thumbnail_pending": false,
       "duration_label": "62s",
       "words": 623
     },
@@ -2331,6 +2414,7 @@
       "studio_url": "https://studio.youtube.com/video/7spe8TmewlI/edit",
       "thumb_url": "https://i.ytimg.com/vi/7spe8TmewlI/hqdefault.jpg",
       "thumb_text": "HEAL ME O LORD",
+      "thumbnail_pending": true,
       "duration_label": "~6 min",
       "words": 904
     },
@@ -2354,6 +2438,7 @@
       "studio_url": "https://studio.youtube.com/video/-acHo0CzsgQ/edit",
       "thumb_url": "https://i.ytimg.com/vi/-acHo0CzsgQ/hqdefault.jpg",
       "thumb_text": "THE HEALING BALM \u00b7 HEAL ME O LORD",
+      "thumbnail_pending": true,
       "duration_label": "63s",
       "words": 222
     },
@@ -2377,6 +2462,7 @@
       "studio_url": "https://studio.youtube.com/video/NjhW7YUzhis/edit",
       "thumb_url": "https://i.ytimg.com/vi/NjhW7YUzhis/hqdefault.jpg",
       "thumb_text": "BLESS THIS HOME",
+      "thumbnail_pending": true,
       "duration_label": "~6 min",
       "words": 942
     },
@@ -2400,6 +2486,7 @@
       "studio_url": "https://studio.youtube.com/video/_T9qvff8ats/edit",
       "thumb_url": "https://i.ytimg.com/vi/_T9qvff8ats/hqdefault.jpg",
       "thumb_text": "GUARD MY STEPS",
+      "thumbnail_pending": true,
       "duration_label": "~6 min",
       "words": 918
     },
@@ -2423,6 +2510,7 @@
       "studio_url": "https://studio.youtube.com/video/q8qxvEQjdD8/edit",
       "thumb_url": "https://i.ytimg.com/vi/q8qxvEQjdD8/hqdefault.jpg",
       "thumb_text": "THE COVENANT SHIELD \u00b7 GUARD MY STEPS",
+      "thumbnail_pending": true,
       "duration_label": "64s",
       "words": 221
     },
@@ -2446,6 +2534,7 @@
       "studio_url": "https://studio.youtube.com/video/FNRQnoo_-cU/edit",
       "thumb_url": "https://i.ytimg.com/vi/FNRQnoo_-cU/hqdefault.jpg",
       "thumb_text": "THE FAMILY ALTAR \u00b7 BLESS THIS HOME",
+      "thumbnail_pending": true,
       "duration_label": "<60s",
       "words": 21
     },
@@ -2469,6 +2558,7 @@
       "studio_url": "https://studio.youtube.com/video/4okWiJmZj40/edit",
       "thumb_url": "https://i.ytimg.com/vi/4okWiJmZj40/hqdefault.jpg",
       "thumb_text": "WAIT ON THE WATCH",
+      "thumbnail_pending": true,
       "duration_label": "~6 min",
       "words": 882
     },
@@ -2492,6 +2582,7 @@
       "studio_url": "https://studio.youtube.com/video/3tU0HEyWoR4/edit",
       "thumb_url": "https://i.ytimg.com/vi/3tU0HEyWoR4/hqdefault.jpg",
       "thumb_text": "THE MIDNIGHT WATCH \u00b7 STAND ON THE WATCH",
+      "thumbnail_pending": true,
       "duration_label": "56s",
       "words": 345
     },
@@ -2515,6 +2606,7 @@
       "studio_url": "https://studio.youtube.com/video/W_SQFbDk110/edit",
       "thumb_url": "https://i.ytimg.com/vi/W_SQFbDk110/hqdefault.jpg",
       "thumb_text": "ACTS 10:9 \u00b7 A SACRED PAUSE",
+      "thumbnail_pending": false,
       "duration_label": "44s",
       "words": 565
     },
@@ -2538,6 +2630,7 @@
       "studio_url": "https://studio.youtube.com/video/Zi4ObOhb97s/edit",
       "thumb_url": "https://i.ytimg.com/vi/Zi4ObOhb97s/hqdefault.jpg",
       "thumb_text": "AWAKE EARLY IN",
+      "thumbnail_pending": false,
       "duration_label": "~11 min",
       "words": 1563
     },
@@ -2561,6 +2654,7 @@
       "studio_url": "https://studio.youtube.com/video/0DTYuoSZV48/edit",
       "thumb_url": "https://i.ytimg.com/vi/0DTYuoSZV48/hqdefault.jpg",
       "thumb_text": "THE MORNING ALTAR \u00b7 EXODUS 16:21",
+      "thumbnail_pending": false,
       "duration_label": "66s",
       "words": 667
     },
@@ -2584,6 +2678,7 @@
       "studio_url": "https://studio.youtube.com/video/rb6X37vQt7o/edit",
       "thumb_url": "https://i.ytimg.com/vi/rb6X37vQt7o/hqdefault.jpg",
       "thumb_text": "NO TERROR BY NIGHT",
+      "thumbnail_pending": false,
       "duration_label": "~6 min",
       "words": 883
     },
@@ -2607,6 +2702,7 @@
       "studio_url": "https://studio.youtube.com/video/5b2naPZqvvM/edit",
       "thumb_url": "https://i.ytimg.com/vi/5b2naPZqvvM/hqdefault.jpg",
       "thumb_text": "THY SLEEP \u00b7 SHALL BE SWEET",
+      "thumbnail_pending": false,
       "duration_label": "51s",
       "words": 629
     },
@@ -2630,6 +2726,7 @@
       "studio_url": "https://studio.youtube.com/video/7KQUigXezRU/edit",
       "thumb_url": "https://i.ytimg.com/vi/7KQUigXezRU/hqdefault.jpg",
       "thumb_text": "CUP RUNNETH OVER",
+      "thumbnail_pending": true,
       "duration_label": "~6 min",
       "words": 921
     },
@@ -2653,6 +2750,7 @@
       "studio_url": "https://studio.youtube.com/video/Yrmz7lHdYBk/edit",
       "thumb_url": "https://i.ytimg.com/vi/Yrmz7lHdYBk/hqdefault.jpg",
       "thumb_text": "THE PROVISION TABLE \u00b7 MY CUP OVERFLOWS",
+      "thumbnail_pending": true,
       "duration_label": "67s",
       "words": 236
     },
@@ -2676,6 +2774,7 @@
       "studio_url": "https://studio.youtube.com/video/ylKK5fS4Egs/edit",
       "thumb_url": "https://i.ytimg.com/vi/ylKK5fS4Egs/hqdefault.jpg",
       "thumb_text": "STAND ON THE WATCH",
+      "thumbnail_pending": true,
       "duration_label": "~6 min",
       "words": 904
     },
@@ -2699,6 +2798,7 @@
       "studio_url": "https://studio.youtube.com/video/Cd_Q1p88T24/edit",
       "thumb_url": "https://i.ytimg.com/vi/Cd_Q1p88T24/hqdefault.jpg",
       "thumb_text": "AWAKEN THE DAWN \u00b7 START YOUR DAY",
+      "thumbnail_pending": false,
       "duration_label": "58s",
       "words": 628
     },
@@ -2722,6 +2822,7 @@
       "studio_url": "https://studio.youtube.com/video/4NMgWbS5Bu8/edit",
       "thumb_url": "https://i.ytimg.com/vi/4NMgWbS5Bu8/hqdefault.jpg",
       "thumb_text": "CHAINS MUST BREAK",
+      "thumbnail_pending": true,
       "duration_label": "~6 min",
       "words": 942
     },
@@ -2745,6 +2846,7 @@
       "studio_url": "https://studio.youtube.com/video/YnvQH27q9NI/edit",
       "thumb_url": "https://i.ytimg.com/vi/YnvQH27q9NI/hqdefault.jpg",
       "thumb_text": "THE MIDNIGHT WATCH \u00b7 CHAINS MUST BREAK",
+      "thumbnail_pending": true,
       "duration_label": "57s",
       "words": 258
     },
@@ -2768,6 +2870,7 @@
       "studio_url": "https://studio.youtube.com/video/jJg4eBJHg0c/edit",
       "thumb_url": "https://i.ytimg.com/vi/jJg4eBJHg0c/hqdefault.jpg",
       "thumb_text": "THE MIDDAY WATCH \u00b7 PAUSE AND PRAY",
+      "thumbnail_pending": false,
       "duration_label": "52s",
       "words": 614
     },
@@ -2791,6 +2894,7 @@
       "studio_url": "https://studio.youtube.com/video/isIRHPSVy-0/edit",
       "thumb_url": "https://i.ytimg.com/vi/isIRHPSVy-0/hqdefault.jpg",
       "thumb_text": "STRENGTH FOR THE",
+      "thumbnail_pending": false,
       "duration_label": "~11 min",
       "words": 1597
     },
@@ -2814,6 +2918,7 @@
       "studio_url": "https://studio.youtube.com/video/22AqGRO-jiY/edit",
       "thumb_url": "https://i.ytimg.com/vi/22AqGRO-jiY/hqdefault.jpg",
       "thumb_text": "AWAKE MY SOUL \u00b7 BEGIN WITH PSALM 57:8",
+      "thumbnail_pending": true,
       "duration_label": "53s",
       "words": 613
     },
@@ -2837,6 +2942,7 @@
       "studio_url": "https://studio.youtube.com/video/avnYVdvDmkc/edit",
       "thumb_url": "https://i.ytimg.com/vi/avnYVdvDmkc/hqdefault.jpg",
       "thumb_text": "NIGHT SHINES \u00b7 AS THE DAY",
+      "thumbnail_pending": false,
       "duration_label": "62s",
       "words": 637
     },
@@ -2860,6 +2966,7 @@
       "studio_url": "https://studio.youtube.com/video/veAZgP_yFg4/edit",
       "thumb_url": "https://i.ytimg.com/vi/veAZgP_yFg4/hqdefault.jpg",
       "thumb_text": "PRAY AT MIDNIGHT",
+      "thumbnail_pending": true,
       "duration_label": "~6 min",
       "words": 928
     },
@@ -2883,6 +2990,7 @@
       "studio_url": "https://studio.youtube.com/video/qGZanFd0FR4/edit",
       "thumb_url": "https://i.ytimg.com/vi/qGZanFd0FR4/hqdefault.jpg",
       "thumb_text": "THE MIDNIGHT WATCH \u00b7 RISE AT MIDNIGHT",
+      "thumbnail_pending": true,
       "duration_label": "61s",
       "words": 215
     },
@@ -2906,6 +3014,7 @@
       "studio_url": "https://studio.youtube.com/video/yeVMkN9BaqU/edit",
       "thumb_url": "https://i.ytimg.com/vi/yeVMkN9BaqU/hqdefault.jpg",
       "thumb_text": "STEADFAST AT NOON",
+      "thumbnail_pending": false,
       "duration_label": "~10 min",
       "words": 1408
     },
@@ -2929,6 +3038,7 @@
       "studio_url": "https://studio.youtube.com/video/DUfaU5vsqYE/edit",
       "thumb_url": "https://i.ytimg.com/vi/DUfaU5vsqYE/hqdefault.jpg",
       "thumb_text": "PAUSE YOUR DAY \u00b7 FIND STILLNESS NOW",
+      "thumbnail_pending": false,
       "duration_label": "43s",
       "words": 559
     },
@@ -2952,6 +3062,7 @@
       "studio_url": "https://studio.youtube.com/video/2s8CWNIoOz4/edit",
       "thumb_url": "https://i.ytimg.com/vi/2s8CWNIoOz4/hqdefault.jpg",
       "thumb_text": "JOY THIS MORNING",
+      "thumbnail_pending": false,
       "duration_label": "~9 min",
       "words": 1376
     },
@@ -2975,6 +3086,7 @@
       "studio_url": "https://studio.youtube.com/video/2sQFcWYcnss/edit",
       "thumb_url": "https://i.ytimg.com/vi/2sQFcWYcnss/hqdefault.jpg",
       "thumb_text": "THE \u00b7 MORNING",
+      "thumbnail_pending": false,
       "duration_label": "38s",
       "words": 561
     },
@@ -2998,6 +3110,7 @@
       "studio_url": "https://studio.youtube.com/video/-21nHlytKvw/edit",
       "thumb_url": "https://i.ytimg.com/vi/-21nHlytKvw/hqdefault.jpg",
       "thumb_text": "REST IN HIS SHADOW \u00b7 BEDTIME PRAYER",
+      "thumbnail_pending": false,
       "duration_label": "54s",
       "words": 630
     },
@@ -3021,6 +3134,7 @@
       "studio_url": "https://studio.youtube.com/video/0Wg3MiZ8KIg/edit",
       "thumb_url": "https://i.ytimg.com/vi/0Wg3MiZ8KIg/hqdefault.jpg",
       "thumb_text": "THIRSTING FOR YOU",
+      "thumbnail_pending": false,
       "duration_label": "~18 min",
       "words": 2549
     },
@@ -3044,6 +3158,7 @@
       "studio_url": "https://studio.youtube.com/video/RO-oTWbR9hE/edit",
       "thumb_url": "https://i.ytimg.com/vi/RO-oTWbR9hE/hqdefault.jpg",
       "thumb_text": "THE MIDDAY WATCH \u00b7 COMMIT YOUR WAY",
+      "thumbnail_pending": false,
       "duration_label": "54s",
       "words": 560
     },
@@ -3067,6 +3182,7 @@
       "studio_url": "https://studio.youtube.com/video/lvq0JNhyr-8/edit",
       "thumb_url": "https://i.ytimg.com/vi/lvq0JNhyr-8/hqdefault.jpg",
       "thumb_text": "MORNING MERCY",
+      "thumbnail_pending": false,
       "duration_label": "~10 min",
       "words": 1437
     },
@@ -3090,6 +3206,7 @@
       "studio_url": "https://studio.youtube.com/video/EQ8N0hM8aSE/edit",
       "thumb_url": "https://i.ytimg.com/vi/EQ8N0hM8aSE/hqdefault.jpg",
       "thumb_text": "THE \u00b7 MORNING",
+      "thumbnail_pending": false,
       "duration_label": "50s",
       "words": 603
     },
@@ -3113,6 +3230,7 @@
       "studio_url": "https://studio.youtube.com/video/5ekShDmycic/edit",
       "thumb_url": "https://i.ytimg.com/vi/5ekShDmycic/hqdefault.jpg",
       "thumb_text": "BEDTIME PRAYER \u00b7 PSALM 37:7",
+      "thumbnail_pending": false,
       "duration_label": "68s",
       "words": 638
     },
@@ -3136,6 +3254,7 @@
       "studio_url": "https://studio.youtube.com/video/eHfnoVXCsko/edit",
       "thumb_url": "https://i.ytimg.com/vi/eHfnoVXCsko/hqdefault.jpg",
       "thumb_text": "IT IS GOOD \u00b7 TO GIVE THANKS",
+      "thumbnail_pending": false,
       "duration_label": "59s",
       "words": 624
     },
@@ -3159,6 +3278,7 @@
       "studio_url": "https://studio.youtube.com/video/o41KNZByE7k/edit",
       "thumb_url": "https://i.ytimg.com/vi/o41KNZByE7k/hqdefault.jpg",
       "thumb_text": "THE MIDDAY WATCH \u00b7 PAUSE AT NOON",
+      "thumbnail_pending": false,
       "duration_label": "65s",
       "words": 549
     },
@@ -3182,6 +3302,7 @@
       "studio_url": "https://studio.youtube.com/video/lhZrnZQq7GY/edit",
       "thumb_url": "https://i.ytimg.com/vi/lhZrnZQq7GY/hqdefault.jpg",
       "thumb_text": "FIRST WORDS TO GOD",
+      "thumbnail_pending": false,
       "duration_label": "~12 min",
       "words": 1698
     },
@@ -3205,6 +3326,7 @@
       "studio_url": "https://studio.youtube.com/video/d069bzpeazk/edit",
       "thumb_url": "https://i.ytimg.com/vi/d069bzpeazk/hqdefault.jpg",
       "thumb_text": "CRY FOR HELP \u00b7 IN THE MORNING",
+      "thumbnail_pending": false,
       "duration_label": "50s",
       "words": 623
     },
@@ -3228,6 +3350,7 @@
       "studio_url": "https://studio.youtube.com/video/PZo9K85i7Sc/edit",
       "thumb_url": "https://i.ytimg.com/vi/PZo9K85i7Sc/hqdefault.jpg",
       "thumb_text": "COMMIT YOUR DAY",
+      "thumbnail_pending": false,
       "duration_label": "~12 min",
       "words": 1695
     },
@@ -3251,6 +3374,7 @@
       "studio_url": "https://studio.youtube.com/video/djyZrgjynuQ/edit",
       "thumb_url": "https://i.ytimg.com/vi/djyZrgjynuQ/hqdefault.jpg",
       "thumb_text": "THE MIDDAY WATCH \u00b7 PSALM 119:114",
+      "thumbnail_pending": false,
       "duration_label": "63s",
       "words": 499
     },
@@ -3274,6 +3398,7 @@
       "studio_url": "https://studio.youtube.com/video/5boMPL29htI/edit",
       "thumb_url": "https://i.ytimg.com/vi/5boMPL29htI/hqdefault.jpg",
       "thumb_text": "",
+      "thumbnail_pending": true,
       "duration_label": "60s",
       "words": 609
     },
@@ -3297,6 +3422,7 @@
       "studio_url": "https://studio.youtube.com/video/nHTVsgHaLpE/edit",
       "thumb_url": "https://i.ytimg.com/vi/nHTVsgHaLpE/hqdefault.jpg",
       "thumb_text": "INTO THINE HAND \u00b7 I COMMIT MY SPIRIT",
+      "thumbnail_pending": false,
       "duration_label": "63s",
       "words": 632
     },
@@ -3320,6 +3446,7 @@
       "studio_url": "https://studio.youtube.com/video/05W-CWM6qWQ/edit",
       "thumb_url": "https://i.ytimg.com/vi/05W-CWM6qWQ/hqdefault.jpg",
       "thumb_text": "MORNING SONG OF MERCY",
+      "thumbnail_pending": false,
       "duration_label": "~7 min",
       "words": 1075
     },
@@ -3343,6 +3470,7 @@
       "studio_url": "https://studio.youtube.com/video/AcRcAH0n48k/edit",
       "thumb_url": "https://i.ytimg.com/vi/AcRcAH0n48k/hqdefault.jpg",
       "thumb_text": "GREET THE \u00b7 MORNING LIGHT",
+      "thumbnail_pending": false,
       "duration_label": "60s",
       "words": 623
     },
@@ -3366,6 +3494,7 @@
       "studio_url": "https://studio.youtube.com/video/jhOlEJvNg-0/edit",
       "thumb_url": "https://i.ytimg.com/vi/jhOlEJvNg-0/hqdefault.jpg",
       "thumb_text": "THE LORD IS MY ROCK \u00b7 AND MY FORTRESS",
+      "thumbnail_pending": false,
       "duration_label": "54s",
       "words": 630
     },
@@ -3389,6 +3518,7 @@
       "studio_url": "https://studio.youtube.com/video/_dwqP8DoW2Q/edit",
       "thumb_url": "https://i.ytimg.com/vi/_dwqP8DoW2Q/hqdefault.jpg",
       "thumb_text": "LIGHT IN THE DARK",
+      "thumbnail_pending": false,
       "duration_label": "~13 min",
       "words": 1870
     },
@@ -3412,6 +3542,7 @@
       "studio_url": "https://studio.youtube.com/video/XqhZqDHC8xM/edit",
       "thumb_url": "https://i.ytimg.com/vi/XqhZqDHC8xM/hqdefault.jpg",
       "thumb_text": "LET THE FAVOR \u00b7 OF THE LORD",
+      "thumbnail_pending": false,
       "duration_label": "57s",
       "words": 617
     },
@@ -3435,6 +3566,7 @@
       "studio_url": "https://studio.youtube.com/video/pz0EB-NhiBc/edit",
       "thumb_url": "https://i.ytimg.com/vi/pz0EB-NhiBc/hqdefault.jpg",
       "thumb_text": "MY HIDING PLACE",
+      "thumbnail_pending": false,
       "duration_label": "~12 min",
       "words": 1735
     },
@@ -3458,6 +3590,7 @@
       "studio_url": "https://studio.youtube.com/video/CYzdQnuobZU/edit",
       "thumb_url": "https://i.ytimg.com/vi/CYzdQnuobZU/hqdefault.jpg",
       "thumb_text": "THE MIDDAY WATCH \u00b7 PAUSE AND PRAY",
+      "thumbnail_pending": false,
       "duration_label": "56s",
       "words": 388
     },
@@ -3481,6 +3614,7 @@
       "studio_url": "https://studio.youtube.com/video/2IcuUyX_Y4U/edit",
       "thumb_url": "https://i.ytimg.com/vi/2IcuUyX_Y4U/hqdefault.jpg",
       "thumb_text": "WAKENED BY GOD",
+      "thumbnail_pending": false,
       "duration_label": "~10 min",
       "words": 1478
     },
@@ -3504,6 +3638,7 @@
       "studio_url": "https://studio.youtube.com/video/3n4RudmOpgk/edit",
       "thumb_url": "https://i.ytimg.com/vi/3n4RudmOpgk/hqdefault.jpg",
       "thumb_text": "ESTABLISH MY WORK",
+      "thumbnail_pending": false,
       "duration_label": "~9 min",
       "words": 1337
     },
@@ -3527,6 +3662,7 @@
       "studio_url": "https://studio.youtube.com/video/pKSAuIEiae8/edit",
       "thumb_url": "https://i.ytimg.com/vi/pKSAuIEiae8/hqdefault.jpg",
       "thumb_text": "HEAR HIS \u00b7 LOVING",
+      "thumbnail_pending": false,
       "duration_label": "51s",
       "words": 550
     },
@@ -3550,6 +3686,7 @@
       "studio_url": "https://studio.youtube.com/video/b9CpOl0tJSE/edit",
       "thumb_url": "https://i.ytimg.com/vi/b9CpOl0tJSE/hqdefault.jpg",
       "thumb_text": "RENEW MY STRENGTH",
+      "thumbnail_pending": false,
       "duration_label": "~7 min",
       "words": 1070
     },
@@ -3573,6 +3710,7 @@
       "studio_url": "https://studio.youtube.com/video/dw2ocfmuVs8/edit",
       "thumb_url": "https://i.ytimg.com/vi/dw2ocfmuVs8/hqdefault.jpg",
       "thumb_text": "THE MIDDAY WATCH \u00b7 PAUSE AND PRAY",
+      "thumbnail_pending": false,
       "duration_label": "48s",
       "words": 342
     },
@@ -3596,6 +3734,7 @@
       "studio_url": "https://studio.youtube.com/video/xpaLUtqsFTw/edit",
       "thumb_url": "https://i.ytimg.com/vi/xpaLUtqsFTw/hqdefault.jpg",
       "thumb_text": "THE LORD BLESS THEE",
+      "thumbnail_pending": false,
       "duration_label": "~11 min",
       "words": 1656
     },
@@ -3619,6 +3758,7 @@
       "studio_url": "https://studio.youtube.com/video/SVhby9Yv0Wg/edit",
       "thumb_url": "https://i.ytimg.com/vi/SVhby9Yv0Wg/hqdefault.jpg",
       "thumb_text": "NO TERROR BY NIGHT \u00b7 SLEEP IN GOD'S PEACE",
+      "thumbnail_pending": false,
       "duration_label": "49s",
       "words": 621
     },
@@ -3642,6 +3782,7 @@
       "studio_url": "https://studio.youtube.com/video/ciAKb9hv3LY/edit",
       "thumb_url": "https://i.ytimg.com/vi/ciAKb9hv3LY/hqdefault.jpg",
       "thumb_text": "THIS IS THE DAY",
+      "thumbnail_pending": false,
       "duration_label": "~13 min",
       "words": 1842
     },
@@ -3665,6 +3806,7 @@
       "studio_url": "https://studio.youtube.com/video/T77LF1191Eg/edit",
       "thumb_url": "https://i.ytimg.com/vi/T77LF1191Eg/hqdefault.jpg",
       "thumb_text": "DIRECT \u00b7 YOUR",
+      "thumbnail_pending": false,
       "duration_label": "50s",
       "words": 503
     },
@@ -3688,6 +3830,7 @@
       "studio_url": "https://studio.youtube.com/video/nXa4e8jXjug/edit",
       "thumb_url": "https://i.ytimg.com/vi/nXa4e8jXjug/hqdefault.jpg",
       "thumb_text": "COMMIT YOUR WORK AT NOON",
+      "thumbnail_pending": false,
       "duration_label": "~10 min",
       "words": 1394
     },
@@ -3711,6 +3854,7 @@
       "studio_url": "https://studio.youtube.com/video/PIPx_odfiag/edit",
       "thumb_url": "https://i.ytimg.com/vi/PIPx_odfiag/hqdefault.jpg",
       "thumb_text": "TRUST IN THE LORD",
+      "thumbnail_pending": false,
       "duration_label": "~12 min",
       "words": 1699
     },
@@ -3734,6 +3878,7 @@
       "studio_url": "https://studio.youtube.com/video/SKP1Qxmel-0/edit",
       "thumb_url": "https://i.ytimg.com/vi/SKP1Qxmel-0/hqdefault.jpg",
       "thumb_text": "GREET \u00b7 THE",
+      "thumbnail_pending": false,
       "duration_label": "49s",
       "words": 411
     },
@@ -3757,6 +3902,7 @@
       "studio_url": "https://studio.youtube.com/video/ihcyceRJ3YM/edit",
       "thumb_url": "https://i.ytimg.com/vi/ihcyceRJ3YM/hqdefault.jpg",
       "thumb_text": "PAUSE AT NOON \u00b7 PSALM 91:6",
+      "thumbnail_pending": false,
       "duration_label": "58s",
       "words": 271
     },
@@ -3780,6 +3926,7 @@
       "studio_url": "https://studio.youtube.com/video/Nq7a1yC4Rzw/edit",
       "thumb_url": "https://i.ytimg.com/vi/Nq7a1yC4Rzw/hqdefault.jpg",
       "thumb_text": "RISE AND PRAY",
+      "thumbnail_pending": false,
       "duration_label": "~8 min",
       "words": 1089
     },
@@ -3803,6 +3950,7 @@
       "studio_url": "https://studio.youtube.com/video/DDTARcm-lbw/edit",
       "thumb_url": "https://i.ytimg.com/vi/DDTARcm-lbw/hqdefault.jpg",
       "thumb_text": "THIS IS THE DAY \u00b7 THE LORD HAS MADE",
+      "thumbnail_pending": false,
       "duration_label": "65s",
       "words": 402
     },
@@ -3826,6 +3974,7 @@
       "studio_url": "https://studio.youtube.com/video/GeZ3liNIxag/edit",
       "thumb_url": "https://i.ytimg.com/vi/GeZ3liNIxag/hqdefault.jpg",
       "thumb_text": "NOONDAY SHIELD",
+      "thumbnail_pending": false,
       "duration_label": "~10 min",
       "words": 1390
     },
@@ -3849,6 +3998,7 @@
       "studio_url": "https://studio.youtube.com/video/xjiV3SHKsR4/edit",
       "thumb_url": "https://i.ytimg.com/vi/xjiV3SHKsR4/hqdefault.jpg",
       "thumb_text": "PRAY AT NOON",
+      "thumbnail_pending": false,
       "duration_label": "~9 min",
       "words": 1374
     },
@@ -3872,6 +4022,7 @@
       "studio_url": "https://studio.youtube.com/video/LmXrGWOro9o/edit",
       "thumb_url": "https://i.ytimg.com/vi/LmXrGWOro9o/hqdefault.jpg",
       "thumb_text": "MIDDAY PRAYER \u00b7 PSALM 55:17",
+      "thumbnail_pending": false,
       "duration_label": "42s",
       "words": 187
     },
@@ -3895,6 +4046,7 @@
       "studio_url": "https://studio.youtube.com/video/3tm3_lNvoGM/edit",
       "thumb_url": "https://i.ytimg.com/vi/3tm3_lNvoGM/hqdefault.jpg",
       "thumb_text": "NEW MERCIES TODAY",
+      "thumbnail_pending": false,
       "duration_label": "~8 min",
       "words": 1102
     },
@@ -3918,6 +4070,7 @@
       "studio_url": "https://studio.youtube.com/video/OMDT_HJUcEs/edit",
       "thumb_url": "https://i.ytimg.com/vi/OMDT_HJUcEs/hqdefault.jpg",
       "thumb_text": "THE MORNING ALTAR \u00b7 PROVERBS 3:5-6",
+      "thumbnail_pending": false,
       "duration_label": "56s",
       "words": 301
     },
@@ -3941,6 +4094,7 @@
       "studio_url": "https://studio.youtube.com/video/d0Et8L_6y1o/edit",
       "thumb_url": "https://i.ytimg.com/vi/d0Et8L_6y1o/hqdefault.jpg",
       "thumb_text": "HE COUNSELS ME \u00b7 IN THE NIGHT SEASONS",
+      "thumbnail_pending": false,
       "duration_label": "59s",
       "words": 635
     },
@@ -3964,6 +4118,7 @@
       "studio_url": "https://studio.youtube.com/video/kEPX9up5DJs/edit",
       "thumb_url": "https://i.ytimg.com/vi/kEPX9up5DJs/hqdefault.jpg",
       "thumb_text": "IN PEACE I WILL \u00b7 LIE DOWN AND SLEEP",
+      "thumbnail_pending": false,
       "duration_label": "53s",
       "words": 619
     },
@@ -3987,6 +4142,7 @@
       "studio_url": "https://studio.youtube.com/video/VDsPEjOYdps/edit",
       "thumb_url": "https://i.ytimg.com/vi/VDsPEjOYdps/hqdefault.jpg",
       "thumb_text": "THE MORNING ALTAR \u00b7 GREAT IS FAITHFULNESS",
+      "thumbnail_pending": false,
       "duration_label": "57s",
       "words": 264
     },
@@ -4010,6 +4166,7 @@
       "studio_url": "https://studio.youtube.com/video/dqKjQaJbU0c/edit",
       "thumb_url": "https://i.ytimg.com/vi/dqKjQaJbU0c/hqdefault.jpg",
       "thumb_text": "ANGELS STAND WATCH \u00b7 AROUND YOUR BED",
+      "thumbnail_pending": false,
       "duration_label": "49s",
       "words": 586
     },
@@ -4033,6 +4190,7 @@
       "studio_url": "https://studio.youtube.com/video/tlMIRgGPIWg/edit",
       "thumb_url": "https://i.ytimg.com/vi/tlMIRgGPIWg/hqdefault.jpg",
       "thumb_text": "BEGIN YOUR \u00b7 DAY IN QUIET",
+      "thumbnail_pending": false,
       "duration_label": "42s",
       "words": 208
     },
@@ -4056,6 +4214,7 @@
       "studio_url": "https://studio.youtube.com/video/oVy7uG5H1RU/edit",
       "thumb_url": "https://i.ytimg.com/vi/oVy7uG5H1RU/hqdefault.jpg",
       "thumb_text": "YOUR MERCY THIS MORNING",
+      "thumbnail_pending": false,
       "duration_label": "~8 min",
       "words": 1142
     },
@@ -4079,6 +4238,7 @@
       "studio_url": "https://studio.youtube.com/video/BFlkzRVMf8o/edit",
       "thumb_url": "https://i.ytimg.com/vi/BFlkzRVMf8o/hqdefault.jpg",
       "thumb_text": "WHOM SHALL I FEAR",
+      "thumbnail_pending": false,
       "duration_label": "~7 min",
       "words": 967
     },
@@ -4102,6 +4262,7 @@
       "studio_url": "https://studio.youtube.com/video/_vp27ZYPYaY/edit",
       "thumb_url": "https://i.ytimg.com/vi/_vp27ZYPYaY/hqdefault.jpg",
       "thumb_text": "BEGIN AT THE ALTAR",
+      "thumbnail_pending": false,
       "duration_label": "~8 min",
       "words": 1152
     },
@@ -4125,6 +4286,7 @@
       "studio_url": "https://studio.youtube.com/video/UZ5A3bd6M2E/edit",
       "thumb_url": "https://i.ytimg.com/vi/UZ5A3bd6M2E/hqdefault.jpg",
       "thumb_text": "ANGELS STAND WATCH",
+      "thumbnail_pending": false,
       "duration_label": "~6 min",
       "words": 922
     },
@@ -4148,6 +4310,7 @@
       "studio_url": "https://studio.youtube.com/video/fTYu1V5GHUE/edit",
       "thumb_url": "https://i.ytimg.com/vi/fTYu1V5GHUE/hqdefault.jpg",
       "thumb_text": "PSALM 34 PRAYER \u00b7 BEFORE YOU SLEEP",
+      "thumbnail_pending": false,
       "duration_label": "53s",
       "words": 452
     },
@@ -4171,6 +4334,7 @@
       "studio_url": "https://studio.youtube.com/video/mjr36vC_PtM/edit",
       "thumb_url": "https://i.ytimg.com/vi/mjr36vC_PtM/hqdefault.jpg",
       "thumb_text": "PSALM 46 PRAYER \u00b7 BEFORE YOU SLEEP",
+      "thumbnail_pending": false,
       "duration_label": "63s",
       "words": 416
     },
@@ -4194,6 +4358,7 @@
       "studio_url": "https://studio.youtube.com/video/KkPAtMLoGf4/edit",
       "thumb_url": "https://i.ytimg.com/vi/KkPAtMLoGf4/hqdefault.jpg",
       "thumb_text": "PSALM 27 PRAYER \u00b7 BEFORE YOU SLEEP",
+      "thumbnail_pending": false,
       "duration_label": "62s",
       "words": 399
     },
@@ -4217,6 +4382,7 @@
       "studio_url": "https://studio.youtube.com/video/xkpfupurX-0/edit",
       "thumb_url": "https://i.ytimg.com/vi/xkpfupurX-0/hqdefault.jpg",
       "thumb_text": "PSALM 121 PRAYER \u00b7 BEFORE YOU SLEEP",
+      "thumbnail_pending": false,
       "duration_label": "48s",
       "words": 366
     },
@@ -4240,6 +4406,7 @@
       "studio_url": "https://studio.youtube.com/video/vs2xt72CgcI/edit",
       "thumb_url": "https://i.ytimg.com/vi/vs2xt72CgcI/hqdefault.jpg",
       "thumb_text": "LIFT MY HEAD",
+      "thumbnail_pending": false,
       "duration_label": "~6 min",
       "words": 905
     },
@@ -4263,6 +4430,7 @@
       "studio_url": "https://studio.youtube.com/video/kLgHN57fb1w/edit",
       "thumb_url": "https://i.ytimg.com/vi/kLgHN57fb1w/hqdefault.jpg",
       "thumb_text": "PSALM 23 PRAYER \u00b7 BEFORE YOU SLEEP",
+      "thumbnail_pending": false,
       "duration_label": "52s",
       "words": 395
     },
@@ -4286,6 +4454,7 @@
       "studio_url": "https://studio.youtube.com/video/1g8TXHD0Xks/edit",
       "thumb_url": "https://i.ytimg.com/vi/1g8TXHD0Xks/hqdefault.jpg",
       "thumb_text": "BE STILL AND KNOW",
+      "thumbnail_pending": false,
       "duration_label": "~6 min",
       "words": 898
     },
@@ -4309,6 +4478,7 @@
       "studio_url": "https://studio.youtube.com/video/6M6oV8MxD9s/edit",
       "thumb_url": "https://i.ytimg.com/vi/6M6oV8MxD9s/hqdefault.jpg",
       "thumb_text": "THE LORD IS YOUR KEEPER",
+      "thumbnail_pending": false,
       "duration_label": "~6 min",
       "words": 884
     },
@@ -4332,6 +4502,7 @@
       "studio_url": "https://studio.youtube.com/video/JZv67RNPCEI/edit",
       "thumb_url": "https://i.ytimg.com/vi/JZv67RNPCEI/hqdefault.jpg",
       "thumb_text": "HE RESTORES MY SOUL",
+      "thumbnail_pending": false,
       "duration_label": "~3 min",
       "words": 488
     },
@@ -4355,6 +4526,7 @@
       "studio_url": "https://studio.youtube.com/video/7RDX0fbIOtQ/edit",
       "thumb_url": "https://i.ytimg.com/vi/7RDX0fbIOtQ/hqdefault.jpg",
       "thumb_text": "UNDER HIS WINGS",
+      "thumbnail_pending": false,
       "duration_label": "~3 min",
       "words": 443
     },
@@ -4378,6 +4550,7 @@
       "studio_url": "https://studio.youtube.com/video/SG69BbNlfRw/edit",
       "thumb_url": "https://i.ytimg.com/vi/SG69BbNlfRw/hqdefault.jpg",
       "thumb_text": "PSALM 91 PRAYER \u00b7 BEFORE YOU SLEEP",
+      "thumbnail_pending": false,
       "duration_label": "40s",
       "words": 225
     },
@@ -4401,6 +4574,7 @@
       "studio_url": "https://studio.youtube.com/video/DLEWL6dm5lo/edit",
       "thumb_url": "https://i.ytimg.com/vi/DLEWL6dm5lo/hqdefault.jpg",
       "thumb_text": "",
+      "thumbnail_pending": true,
       "duration_label": "52s",
       "words": 273
     }
@@ -5402,7 +5576,7 @@
       "name": "automation-health",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.2h ago",
+      "detail": "last success 0.7h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-13T11:39:41+00:00",
       "last_success": "2026-11-13T11:39:41+00:00",
@@ -5416,7 +5590,7 @@
       "name": "Autonomous Comment Replies",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 3.2h ago",
+      "detail": "last success 3.6h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-13T08:44:39+00:00",
       "last_success": "2026-11-13T08:44:39+00:00",
@@ -5430,7 +5604,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 34.4h ago",
+      "detail": "last success 34.8h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-12T01:32:35+00:00",
       "last_success": "2026-11-12T01:32:35+00:00",
@@ -5444,7 +5618,7 @@
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 24.8h ago",
+      "detail": "last success 25.3h ago",
       "last_conclusion": "",
       "last_run": "2026-11-13T10:57:01+00:00",
       "last_success": "2026-11-12T11:04:31+00:00",
@@ -5458,7 +5632,7 @@
       "name": "Growth autopilot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 2.4h ago",
+      "detail": "last success 2.9h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-13T09:27:33+00:00",
       "last_success": "2026-11-13T09:27:33+00:00",
@@ -5472,7 +5646,7 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 96.1h ago",
+      "detail": "last success 96.5h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-09T11:48:56+00:00",
       "last_success": "2026-11-09T11:48:56+00:00",
@@ -5486,7 +5660,7 @@
       "name": "Weekly metrics snapshot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 4.9h ago",
+      "detail": "last success 5.4h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-13T06:57:38+00:00",
       "last_success": "2026-11-13T06:57:38+00:00",
@@ -5502,7 +5676,7 @@
       "severity": "info",
       "detail": "its red runs are the verdicts below, not failures of it",
       "last_conclusion": "",
-      "last_run": "2026-11-13T11:52:10+00:00",
+      "last_run": "2026-11-13T12:19:09+00:00",
       "last_success": "",
       "runs_14d": 20,
       "missed_slots": 0,
@@ -5514,7 +5688,7 @@
       "name": "Produce video",
       "verdict": "MISSED SLOT",
       "severity": "blocking",
-      "detail": "was due Fri 13 Nov 07:14 WAT and did not run; last run 11.6h ago",
+      "detail": "was due Fri 13 Nov 07:14 WAT and did not run; last run 12.0h ago",
       "last_conclusion": "",
       "last_run": "2026-11-13T00:17:17+00:00",
       "last_success": "2026-11-12T21:28:28+00:00",
@@ -5528,10 +5702,10 @@
       "name": "Scheduler supervisor",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.0h ago",
+      "detail": "last success 0.4h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-13T11:53:00+00:00",
-      "last_success": "2026-11-13T11:52:10+00:00",
+      "last_run": "2026-11-13T12:19:09+00:00",
+      "last_success": "2026-11-13T11:55:15+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
