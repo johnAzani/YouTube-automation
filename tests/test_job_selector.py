@@ -61,6 +61,9 @@ def test_duplicate_ids_are_skipped_instead_of_selecting_by_slug(tmp_path, monkey
     job("0600-b.md", "0600")
     job("0601-good.md", "0601")
     monkeypatch.setattr(run_module, "QUEUE_DIR", tmp_path)
+    # Keep the fixture independent of real published IDs, which change as the
+    # production queue advances and are now checked even across different slugs.
+    monkeypatch.setattr(run_module, "PUBLISHED_DIR", tmp_path / "published")
     monkeypatch.setattr(run_module.CONFIG, "channel_id", "prayer8")
     assert run_module._duplicate_queue_ids(tmp_path) == {"0600"}
     assert select_jobs(False, None, True) == [tmp_path / "0601-good.md"]
