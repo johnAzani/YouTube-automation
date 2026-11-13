@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T21:50:13Z",
+  "generated_at": "2026-11-13T21:56:56Z",
   "monitor_generated_at": "2026-11-13T21:48:42.583812+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 184,
-    "published_longform": 93,
-    "published_shorts": 91,
-    "public_total": 182,
-    "queued_longform": 44,
-    "queued_shorts": 47,
+    "published_total": 186,
+    "published_longform": 94,
+    "published_shorts": 92,
+    "public_total": 184,
+    "queued_longform": 43,
+    "queued_shorts": 46,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -431,33 +431,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 12,
-        "published_longform": 7,
-        "published_shorts": 5,
-        "thumbnail_pending": 9,
-        "public_total": 12,
-        "queued_longform": 4,
+        "published_total": 14,
+        "published_longform": 8,
+        "published_shorts": 6,
+        "thumbnail_pending": 10,
+        "public_total": 14,
+        "queued_longform": 3,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0506",
-        "title": "James 1:5 Morning Prayer for Wisdom | The Provision Table",
-        "format": "longform",
-        "youtube_video_id": "7RvLGE8mBUY",
-        "watch_url": "https://youtu.be/7RvLGE8mBUY",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T18:13:45Z"
-      },
-      "next_queued_longform": {
         "id": "0507",
         "title": "Proverbs 16:3 Morning Prayer | The Provision Table",
-        "words": 1979,
+        "format": "longform",
+        "youtube_video_id": "hsfK0G7966w",
+        "watch_url": "https://youtu.be/hsfK0G7966w",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T21:56:08Z"
+      },
+      "next_queued_longform": {
+        "id": "0508",
+        "title": "Psalm 84:11 Provision Prayer | The Provision Table",
+        "words": 2031,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionproverbs3v5",
-        "scripture": "Proverbs 3:5-6",
+        "short": "short-provisionjames1v5",
+        "scripture": "James 1:5",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -667,6 +667,30 @@
   ],
   "videos": [
     {
+      "id": "0507",
+      "slug": "proverbs-16-3-morning-prayer",
+      "file": "0507-proverbs-16-3-morning-prayer.md",
+      "title": "Proverbs 16:3 Morning Prayer | The Provision Table",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T21:56:08Z",
+      "youtube_video_id": "hsfK0G7966w",
+      "watch_url": "https://youtu.be/hsfK0G7966w",
+      "youtu_be_url": "https://youtu.be/hsfK0G7966w",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/hsfK0G7966w/edit",
+      "thumb_url": "https://i.ytimg.com/vi/hsfK0G7966w/hqdefault.jpg",
+      "thumb_text": "COMMIT THY WORKS",
+      "thumbnail_pending": false,
+      "duration_label": "~14 min",
+      "words": 1979
+    },
+    {
       "id": "0604",
       "slug": "psalm-34-7-protection-prayer-the-covenant-shield",
       "file": "0604-psalm-34-7-protection-prayer-the-covenant-shield.md",
@@ -761,6 +785,30 @@
       "thumbnail_pending": false,
       "duration_label": "~10 min",
       "words": 1454
+    },
+    {
+      "id": "SHORT-PROVISIONPROVERBS3V5",
+      "slug": "short-provisionproverbs3v5-stewardship-prayer",
+      "file": "short-provisionproverbs3v5-stewardship-prayer.md",
+      "title": "Pray This Proverbs 3:5-6 Prayer for Open Doors & Provision | Wisdom #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T20:43:08Z",
+      "youtube_video_id": "qid7McyblQQ",
+      "watch_url": "https://www.youtube.com/shorts/qid7McyblQQ",
+      "youtu_be_url": "https://youtu.be/qid7McyblQQ",
+      "shorts_url": "https://www.youtube.com/shorts/qid7McyblQQ",
+      "studio_url": "https://studio.youtube.com/video/qid7McyblQQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/qid7McyblQQ/hqdefault.jpg",
+      "thumb_text": "WALK \u00b7 IN",
+      "thumbnail_pending": true,
+      "duration_label": "51s",
+      "words": 564
     },
     {
       "id": "0022",
@@ -5515,19 +5563,6 @@
         "words": 1283
       },
       {
-        "id": "0507",
-        "slug": "proverbs-16-3-morning-prayer",
-        "file": "0507-proverbs-16-3-morning-prayer.md",
-        "title": "Proverbs 16:3 Morning Prayer | The Provision Table",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1979
-      },
-      {
         "id": "0508",
         "slug": "psalm-84-11-provision-prayer-the-provision-table",
         "file": "0508-psalm-84-11-provision-prayer-the-provision-table.md",
@@ -5966,17 +6001,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-provisionproverbs3v5",
-        "file": "0505-short-provisionproverbs3v5.yml",
-        "companion_longform_id": "0505",
-        "scripture": "Proverbs 3:5-6",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionjames1v5",
