@@ -34,6 +34,20 @@ from .script_doc import Scene, ScriptDoc
 
 SHORTS_QUEUE_DIR = CONTENT_DIR / "shorts-queue"
 MAX_SHORT_SECONDS = 180.0
+
+#: Fresh takes of one Short that may fail speech alignment before the Short is
+#: stepped over. A channel releases its queued Shorts in order, so one Short that
+#: can never be aligned would otherwise hold every later one back for good.
+MAX_ALIGNMENT_FAILURES = 3
+
+
+class ShortAlignmentError(RuntimeError):
+    """The spoken take could not be matched to the Short's words.
+
+    Its own type so the release can tell "this take is bad, throw it away and
+    count it" from every other reason narration could not be prepared.
+    """
+
 MIN_SHORT_SECONDS = 15.0
 
 
@@ -913,7 +927,18 @@ def _ensure_word_timings(short_key: str, audio_path: Path, narration_text: str,
             raise ValueError('alignment does not cover the narration in order')
     except Exception as exc:
         if require_alignment:
-            raise RuntimeError('Short speech alignment unavailable or incomplete; refusing to render') from exc
+            cause = f"{type(exc).__name__}: {exc}".strip().rstrip(":")
+            message = ('Short speech alignment unavailable or incomplete; refusing to render '
+                       f'[{cause[:240]}]')
+            # ValueError is how the aligner says "what was spoken does not match
+            # the words" (the long-form path purges its take on the same signal).
+            # It also says it when the speech model is not installed, and that,
+            # like every other exception, is the runner's fault and not the
+            # audio's: good audio is never thrown away, or counted against the
+            # Short, because nothing was able to listen to it.
+            if isinstance(exc, ValueError) and (model_dir / 'model.bin').is_file():
+                raise ShortAlignmentError(message) from exc
+            raise RuntimeError(message) from exc
         dur = probe_media(audio_path).duration_seconds
         rows = _fallback_word_timings(narration_text, dur)
         print(f'[short-release] preview only: estimated word timings ({dur:.1f}s)')
@@ -925,6 +950,60 @@ def _ensure_word_timings(short_key: str, audio_path: Path, narration_text: str,
     sidecar.write_text(json.dumps({**identity, 'timings': digest(payload)}), encoding='utf-8')
     print(f'[short-release] aligned all {len(rows)} narration words for {short_key}')
     return words_path
+
+
+def _short_take_files(short_key: str) -> tuple[Path, Path, Path, Path]:
+    """(audio, provenance sidecar, word timings, timings sidecar) for a Short."""
+    audio = REPO_ROOT / "assets" / "deepdive" / f"{short_key}.mp3"
+    return (audio, audio.with_suffix(".voice.json"),
+            audio.parent / f"words-{short_key}.json",
+            audio.parent / f"words-{short_key}.alignment.json")
+
+
+def _discard_short_take(short_key: str) -> None:
+    """Remove a Short's spoken take and everything derived from it."""
+    for path in _short_take_files(short_key):
+        path.unlink(missing_ok=True)
+
+
+def record_alignment_failure(manifest_path: Path | None, exc: Exception) -> dict:
+    """Count a rejected take on the Short's manifest; step over it at the limit.
+
+    The count lives in the queue manifest, which the leg commits, so it survives
+    between runs and is visible in the repository. At `MAX_ALIGNMENT_FAILURES`
+    the manifest becomes `alignment_paused`: the selector only releases
+    `approved` manifests, so the channel's next Short goes out at the next slot
+    instead of this one failing forever. Setting `status: approved` again (and
+    removing `alignment_failures`) puts it back in line.
+    """
+    if not manifest_path or not Path(manifest_path).is_file():
+        return {}
+    manifest_path = Path(manifest_path)
+    try:
+        data = yaml.safe_load(manifest_path.read_text(encoding="utf-8")) or {}
+        try:
+            count = int(data.get("alignment_failures") or 0) + 1
+        except (TypeError, ValueError):
+            count = 1
+        data["alignment_failures"] = count
+        data["last_alignment_error"] = str(exc)[:300]
+        if count >= MAX_ALIGNMENT_FAILURES:
+            data["status"] = "alignment_paused"
+            data["pause_reason"] = (
+                f"speech alignment rejected {count} separate takes; stepped over so "
+                f"later Shorts on this channel can release")
+            print(f"::warning title=Short stepped over::{manifest_path.name} failed speech "
+                  f"alignment on {count} takes and is now alignment_paused; the channel's "
+                  f"next Short releases at the next slot.")
+        else:
+            print(f"[short-release] {manifest_path.name}: rejected take {count} of "
+                  f"{MAX_ALIGNMENT_FAILURES}; the take was discarded and the next slot "
+                  f"synthesises a new one.")
+        manifest_path.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+        return data
+    except Exception as save_err:  # noqa: BLE001
+        print(f"[short-release] could not record the alignment failure: {save_err}")
+        return {}
 
 
 def _ensure_narration(short_key: str, require_provenance: bool = True) -> None:
@@ -955,13 +1034,11 @@ def _ensure_narration(short_key: str, require_provenance: bool = True) -> None:
                      and meta.get("audio_sha256") == hashlib.sha256(audio.read_bytes()).hexdigest())
         except (OSError, ValueError):
             valid = False
-        if not valid:
+        def synthesise() -> None:
             # Unlabelled or altered caches may be another speaker. Discard their
             # timings too, so they cannot be paired with the new narration.
             audio.parent.mkdir(parents=True, exist_ok=True)
-            audio.unlink(missing_ok=True)
-            sidecar.unlink(missing_ok=True)
-            words.unlink(missing_ok=True)
+            _discard_short_take(short_key)
             print(f"[short-release] synthesising Charon narration for {short_key} ({spec.words} words)")
             try:
                 engine = _synthesise_narration(spec.narration_text, audio)
@@ -975,8 +1052,39 @@ def _ensure_narration(short_key: str, require_provenance: bool = True) -> None:
                 audio.unlink(missing_ok=True)
                 sidecar.unlink(missing_ok=True)
                 raise
-        _ensure_word_timings(short_key, audio, spec.narration_text,
-                             require_alignment=require_provenance)
+
+        reused = bool(valid)
+        if not valid:
+            synthesise()
+        try:
+            _ensure_word_timings(short_key, audio, spec.narration_text,
+                                 require_alignment=require_provenance)
+        except ShortAlignmentError as first:
+            # A take that alignment rejects must not survive this run. The audio
+            # and its provenance file are saved to the Actions cache and restored
+            # by the next run, where they still look valid (same text, same
+            # checksum), so the same rejected take was aligned, and refused, at
+            # every slot. On 13 November 2026 seven channels each had the Short
+            # at the head of their queue stuck this way, across two production
+            # runs, and released no Shorts at all.
+            _discard_short_take(short_key)
+            if not reused:
+                # Spoken moments ago and already rejected: do not spend a second
+                # speech request in the same run. The next slot starts clean.
+                raise
+            print(f"[short-release] the saved take of {short_key} failed alignment "
+                  f"({first}); discarded, synthesising a fresh take")
+            synthesise()
+            try:
+                _ensure_word_timings(short_key, audio, spec.narration_text,
+                                     require_alignment=require_provenance)
+            except ShortAlignmentError:
+                _discard_short_take(short_key)
+                raise
+    except ShortAlignmentError as exc:
+        raise ShortAlignmentError(
+            f"cannot prepare Charon narration for {short_key} ({exc}); refusing to render"
+        ) from exc
     except (QuotaExceededError, GeminiQuotaExceededError):
         raise
     except Exception as exc:  # noqa: BLE001
@@ -1094,6 +1202,9 @@ def run_short_release(
         try:
             _ensure_narration(short_key, require_provenance=(
                 not dry_run and "prayer" in str(doc.meta.get("niche", "")).lower()))
+        except ShortAlignmentError as exc:
+            record_alignment_failure(manifest_path, exc)
+            raise
         except (QuotaExceededError, GeminiQuotaExceededError) as exc:
             return _pause_manifest_on_quota(
                 manifest_path,

@@ -5,6 +5,12 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-13 — Shorts no longer stuck behind a rejected take; scheduled-publish trial result
+
+- Seven channels failed the same Short in two production runs ("Short speech alignment unavailable or incomplete"). The rejected narration was saved to the Actions cache, restored next run, still looked valid and was refused again; Shorts release in order, so those channels released none. `pipeline/short_release.py` now deletes a rejected take, synthesises one fresh take in the same run when the rejected one came from the cache, puts the aligner's reason in the error, and after three rejected takes marks the manifest `alignment_paused` so the channel's next Short releases. A missing speech model is not treated as a bad take. Notes: `docs/SHORT_ALIGNMENT_RECOVERY_2026-11-13.md`.
+- `pipeline/voice_master.py` writes its outcome to the run page (`Voice master (<file>)` notice, or a warning when a render falls back to the unmastered mix).
+- Scheduled-publish trial (job `0406`, The Healing Balm): the upload was accepted as private with a publish time, YouTube made it public without the monitor's help, and the owed pinned comment was posted at the next monitor pass, 39 minutes after the slot. Recorded in `docs/SCHEDULED_PUBLISHING_2026-11-13.md`.
+
 ## 2026-11-13 — louder, clearer voice on every video; titles and openings written for the viewer
 
 - New `pipeline/voice_master.py`. Finished videos measured about -19 LUFS against YouTube's -14 reference (YouTube never turns a quiet video up) with the music only 10 LU under the voice. The final encode of long-form (`pipeline/prayer_visuals.py`) and Shorts (`tools/shorts.py`) now measures the narration, shapes tone, compresses gently, applies one fixed gain to -15 LUFS / -1.5 dBTP, ducks the music about 2.5 dB under speech and limits the mix at -1 dBFS. Measured before/after on the committed Psalm 91 narration: -19.1 → -14.9 LUFS, same duration. The narration file, its cache and word timings are untouched; no speech is re-synthesised. A failed measurement falls back to the previous mix.

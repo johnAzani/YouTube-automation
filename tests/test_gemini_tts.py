@@ -5,6 +5,20 @@ from unittest.mock import MagicMock, patch
 from pipeline import gemini_tts
 
 
+@pytest.fixture(autouse=True)
+def _interactions_route_is_open(monkeypatch):
+    """Start every test with the interactions route available.
+
+    `gemini_tts._INTERACTIONS_STALLED` is a module-wide switch that a stalled
+    request flips for the rest of the process. A test in another file that
+    exercises a stall can leave it on, and then these tests take the
+    `generate_content` route with a mock that returns no audio. Which file runs
+    first depends on how the suite is split across workers, so the failure
+    came and went (seen twice on 13 November 2026).
+    """
+    monkeypatch.setattr(gemini_tts, "_INTERACTIONS_STALLED", False)
+
+
 def test_gemini_voice_profile_mapping():
     assert gemini_tts.GEMINI_VOICES["Charon"] == "Charon"
     assert "Fenrir" in gemini_tts.GEMINI_VOICES
