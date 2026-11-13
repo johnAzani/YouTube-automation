@@ -389,18 +389,39 @@ def upload(
 
     privacy = privacy or doc.meta.get("privacy") or (CONFIG.default_privacy)
     publish_at = publish_at or doc.meta.get("publish_at")
+    if publish_at and not isinstance(publish_at, str):
+        # YAML reads an unquoted `publish_at: 2026-11-14T14:14:00Z` in a job's
+        # front matter as a datetime, which the request body cannot carry.
+        from datetime import date, datetime as _dt, timezone as _tz
+
+        if isinstance(publish_at, _dt):
+            if publish_at.tzinfo is None:
+                publish_at = publish_at.replace(tzinfo=_tz.utc)
+            publish_at = publish_at.astimezone(_tz.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        elif isinstance(publish_at, date):
+            publish_at = f"{publish_at.isoformat()}T00:00:00Z"
+        else:
+            publish_at = str(publish_at)
     # What this upload would be with no publish time at all.
     immediate_privacy = "public" if (CONFIG.auto_publish and privacy == "private") else privacy
-    slot_scheduled = False
-    if not publish_at and not is_short and immediate_privacy == "public":
+    if not is_short and immediate_privacy == "public":
         # A long-form that would go public right now may instead go public on
-        # its slot minute (pipeline/publish_schedule.py; off unless configured).
+        # its slot minute (pipeline/publish_schedule.py; off unless configured),
+        # or at a time written on the job. Either way the time is checked there:
+        # too close, unreadable or past the next production slot means now.
         # Never for an upload that is meant to stay private or unlisted: a
         # publish time would make it public.
         from .publish_schedule import resolve_longform_publish_at
 
-        publish_at = resolve_longform_publish_at()
-        slot_scheduled = bool(publish_at)
+        publish_at = resolve_longform_publish_at(requested=publish_at)
+    elif publish_at:
+        # A Short, or an upload meant to stay private or unlisted, keeps the
+        # time it was given, but only a real time can go in the request.
+        from .publish_schedule import parse_instant
+
+        if parse_instant(publish_at) is None:
+            print(f"[upload] publish_at={publish_at!r} is not a time with a timezone; ignored")
+            publish_at = None
 
     if publish_at:
         privacy = "private"
@@ -482,9 +503,11 @@ def upload(
         try:
             response = _insert()
         except Exception as exc:
-            # YouTube refused the publish time this pipeline chose for the slot.
+            # YouTube refused the publish time of a video that would otherwise
+            # be public right now (chosen for the slot, or written on the job).
             # The release matters more than the minute: send it public now.
-            if not (slot_scheduled and "invalidPublishAt" in str(exc)):
+            if not (publish_at and immediate_privacy == "public"
+                    and "invalidPublishAt" in str(exc)):
                 raise
             print(f"::warning title=Publish time refused ({CONFIG.channel_id})::YouTube "
                   f"rejected publishAt={publish_at}; uploading public now instead.")

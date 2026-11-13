@@ -5,6 +5,7 @@ slug: philippians-4-6-7-peace-that-passeth-understanding-prayer
 status: approved
 channel: prayer6
 privacy: public
+publish_at: next-slot
 format: longform
 niche: faith and prayer
 category: education

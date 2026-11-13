@@ -9,7 +9,9 @@ after the publish time, and nothing else in the repository does them:
   Once YouTube reports the video public the flag is cleared and
   ``publish_confirmed_at`` records when that was seen.
 * **The pinned comment**, when YouTube refused it on the private video
-  (``pinned_comment_pending: true``).
+  (``pinned_comment_pending: true``). YouTube is asked first whether the
+  channel's comment is already there, so a lost receipt edit cannot post it
+  twice; three refusals end the attempt (``pinned_comment_failed: true``).
 * **A nudge.** A video still private well after its time is published here,
   with a warning, rather than left for somebody to notice. That is the state an
   immediate upload would have been in anyway.
@@ -47,6 +49,9 @@ STAMP = "%Y-%m-%dT%H:%M:%SZ"
 # The status fields `videos.update(part="status")` resets when they are omitted.
 MUTABLE_STATUS = ("embeddable", "license", "publicStatsViewable",
                   "selfDeclaredMadeForKids", "containsSyntheticMedia")
+# A comment YouTube keeps refusing is not retried for ever: each try costs 50
+# quota units and this runs some thirty times a day.
+COMMENT_ATTEMPTS = 3
 
 
 def _truthy(value: Any) -> bool:
@@ -54,7 +59,9 @@ def _truthy(value: Any) -> bool:
 
 
 def pending_receipts(channel_id: str, published_dir: Path | None = None) -> list[tuple[Path, Any]]:
-    """This channel's receipts that still say ``scheduled_publish: true``."""
+    """This channel's receipts with something still owed: the publish itself
+    (``scheduled_publish: true``) or the comment a confirmed one is waiting for
+    (``pinned_comment_pending: true`` beside ``publish_confirmed_at``)."""
     from pipeline.channels import channel_for_doc
     from pipeline.config import PUBLISHED_DIR
     from pipeline.script_doc import parse_script
@@ -71,7 +78,7 @@ def pending_receipts(channel_id: str, published_dir: Path | None = None) -> list
             doc = parse_script(path)
         except Exception:  # noqa: BLE001
             continue
-        if not _truthy(doc.meta.get("scheduled_publish")):
+        if not (_truthy(doc.meta.get("scheduled_publish")) or _comment_owed(doc.meta)):
             continue
         if not str(doc.meta.get("youtube_video_id") or "").strip():
             continue
@@ -87,6 +94,39 @@ def _publish_now(youtube, video_id: str, status: dict) -> None:
     youtube.videos().update(part="status", body={"id": video_id, "status": body_status}).execute()
 
 
+def _comment_owed(meta: dict) -> bool:
+    """A confirmed scheduled receipt whose comment has not been posted yet."""
+    return (_truthy(meta.get("pinned_comment_pending"))
+            and bool(str(meta.get("publish_confirmed_at") or "").strip())
+            and not _truthy(meta.get("scheduled_publish")))
+
+
+def _owner_comment_exists(youtube, video_id: str) -> bool:
+    """Has this channel already commented on its own video? (2 quota units.)
+
+    The receipt is the only memory of a posted comment, and a receipt edit can
+    be lost: the monitor's push can fail, or the file can change on ``main``
+    while the pass runs. Asking YouTube first is what keeps a lost edit from
+    becoming a second copy of the same comment. Any doubt answers "no": a
+    missing comment is the worse outcome on a release.
+    """
+    try:
+        mine = youtube.channels().list(part="id", mine=True).execute().get("items") or []
+        own_id = str((mine[0] if mine else {}).get("id") or "")
+        if not own_id:
+            return False
+        threads = youtube.commentThreads().list(
+            part="snippet", videoId=video_id, maxResults=100, textFormat="plainText",
+        ).execute().get("items") or []
+    except Exception:  # noqa: BLE001
+        return False
+    for thread in threads:
+        top = ((thread.get("snippet") or {}).get("topLevelComment") or {}).get("snippet") or {}
+        if str((top.get("authorChannelId") or {}).get("value") or "") == own_id:
+            return True
+    return False
+
+
 def _post_owed_comment(youtube, doc, video_id: str) -> bool:
     from pipeline.pinned_comments import (
         generate_pastoral_pinned_comment,
@@ -96,7 +136,40 @@ def _post_owed_comment(youtube, doc, video_id: str) -> bool:
     text = generate_pastoral_pinned_comment(doc)
     if not text or not text.strip():
         return True  # nothing to post is not a debt
+    if _owner_comment_exists(youtube, video_id):
+        print(f"[confirm-publish] {video_id}: the channel's comment is already there")
+        return True
     return bool(post_pastoral_pinned_comment(youtube, video_id, text, dry_run=False))
+
+
+def _settle_comment(youtube, path: Path, doc, video_id: str, row: dict) -> None:
+    """Post the owed comment, or count the failed try and stop after three."""
+    from scripts.sync_published_thumbnails import clear_frontmatter_field, stamp_frontmatter_field
+
+    try:
+        posted = _post_owed_comment(youtube, doc, video_id)
+    except Exception as exc:  # noqa: BLE001
+        posted = False
+        print(f"[confirm-publish] {video_id}: pinned comment failed: {exc}")
+    if posted:
+        clear_frontmatter_field(path, "pinned_comment_pending")
+        clear_frontmatter_field(path, "pinned_comment_attempts")
+        row["pinned_comment"] = "posted"
+        return
+    try:
+        tried = int(doc.meta.get("pinned_comment_attempts") or 0) + 1
+    except (TypeError, ValueError):
+        tried = 1
+    if tried >= COMMENT_ATTEMPTS:
+        clear_frontmatter_field(path, "pinned_comment_pending")
+        clear_frontmatter_field(path, "pinned_comment_attempts")
+        stamp_frontmatter_field(path, "pinned_comment_failed", "true", raw=True)
+        row["pinned_comment"] = f"given up after {tried} tries"
+        print(f"::warning title=Pinned comment not posted::{video_id} ({path.name}): YouTube "
+              f"refused the channel's comment {tried} times; it will not be tried again.")
+    else:
+        stamp_frontmatter_field(path, "pinned_comment_attempts", str(tried), raw=True)
+        row["pinned_comment"] = f"still owed ({tried} of {COMMENT_ATTEMPTS} tries)"
 
 
 def confirm_channel(channel: str, *, now: datetime | None = None, youtube_client: Any = None,
@@ -116,13 +189,17 @@ def confirm_channel(channel: str, *, now: datetime | None = None, youtube_client
     rows: list[dict] = []
     receipts = pending_receipts(profile.id, published_dir)
     due = []
+    comment_only = []
     for path, doc in receipts:
         video_id = str(doc.meta.get("youtube_video_id")).strip()
         planned = parse_instant(doc.meta.get("published_at"))
         row = {"channel": profile.id, "file": path.name, "video_id": video_id,
                "planned": planned.strftime(STAMP) if planned else ""}
         rows.append(row)
-        if planned is None:
+        if _comment_owed(doc.meta):
+            row["state"] = "confirmed; comment owed"
+            comment_only.append((path, doc, video_id, row))
+        elif planned is None:
             row["state"] = "unreadable publish time"
             print(f"::warning title=Scheduled receipt has no usable time ({profile.id})::"
                   f"{path.name} says scheduled_publish but published_at cannot be read.")
@@ -132,17 +209,20 @@ def confirm_channel(channel: str, *, now: datetime | None = None, youtube_client
             row["state"] = "unresolved for two days"
         else:
             due.append((path, doc, video_id, planned, row))
-    if not due:
+    if not due and not comment_only:
         return rows
     if dry_run:
-        for *_rest, row in due:
+        for *_rest, row in [*due, *comment_only]:
             row["state"] = "would check"
         return rows
     if youtube_client is None and not _has_youtube_credentials(profile):
-        for *_rest, row in due:
+        for *_rest, row in [*due, *comment_only]:
             row["state"] = "skipped: no credentials for this channel here"
         return rows
     youtube = youtube_client or _build_youtube_client(profile)
+
+    for path, doc, video_id, row in comment_only:
+        _settle_comment(youtube, path, doc, video_id, row)
 
     for path, doc, video_id, planned, row in due:
         response = youtube.videos().list(part="status", id=video_id).execute()
@@ -198,16 +278,10 @@ def confirm_channel(channel: str, *, now: datetime | None = None, youtube_client
         row["state"] = f"confirmed {privacy}"
 
         if privacy == "public" and _truthy(doc.meta.get("pinned_comment_pending")):
-            try:
-                posted = _post_owed_comment(youtube, doc, video_id)
-            except Exception as exc:  # noqa: BLE001
-                posted = False
-                print(f"[confirm-publish] {video_id}: pinned comment failed: {exc}")
-            if posted:
-                clear_frontmatter_field(path, "pinned_comment_pending")
-                row["pinned_comment"] = "posted"
-            else:
-                row["pinned_comment"] = "still owed"
+            _settle_comment(youtube, path, doc, video_id, row)
+        elif _truthy(doc.meta.get("pinned_comment_pending")):
+            # Unlisted by somebody's deliberate hand: no comment is owed.
+            clear_frontmatter_field(path, "pinned_comment_pending")
     return rows
 
 

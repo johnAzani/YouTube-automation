@@ -82,6 +82,50 @@ class TestSyncPublishedThumbnails(unittest.TestCase):
             rows = spt.sync_published_thumbnails(published_dir=self.pub_dir, out_root=self.out_dir)
         self.assertEqual(rows, [])
 
+    def _sync_with_private_0009(self, status: dict, receipt_extra: dict | None = None):
+        """One pass over 0009 as a private, processed, full-length video."""
+        if receipt_extra:
+            path = self.pub_dir / "0009-psalm-23-the-lord-is-my-shepherd.md"
+            text = path.read_text(encoding="utf-8")
+            extra = yaml.safe_dump(receipt_extra, sort_keys=False)
+            path.write_text(text.replace("---\n", "---\n" + extra, 1), encoding="utf-8")
+        item = {
+            "id": "JZv67RNPCEI",
+            "snippet": {"title": "Psalm 23 | The Lord Is My Shepherd — Evening Sleep Prayer",
+                        "description": "Desc", "categoryId": "22"},
+            "status": {"privacyStatus": "private", "uploadStatus": "processed", **status},
+            "contentDetails": {"duration": "PT5M21S"},
+        }
+
+        def _fake_list(**kwargs):
+            wanted = [v for v in str(kwargs.get("id") or "").split(",") if v]
+            rows = [item] if "JZv67RNPCEI" in wanted else []
+            return mock.Mock(execute=mock.Mock(return_value={"items": rows}))
+
+        fake_yt = mock.MagicMock()
+        fake_yt.videos.return_value.list.side_effect = _fake_list
+        spt.sync_published_thumbnails(
+            published_dir=self.pub_dir, out_root=self.out_dir, youtube_client=fake_yt,
+            thumb_setter=lambda vid, path: "ok", shorts_only=False,
+        )
+        return [c.kwargs for c in fake_yt.videos.return_value.update.call_args_list
+                if c.kwargs.get("part") == "status"]
+
+    def test_a_video_held_for_its_publish_time_is_not_promoted(self):
+        """Scheduled publishing uploads private on purpose. This pass runs right
+        after production; promoting the video would publish it hours early."""
+        held = self._sync_with_private_0009({"publishAt": "2099-01-01T14:14:00Z"})
+        self.assertEqual(held, [])
+
+    def test_a_receipt_that_says_scheduled_is_not_promoted_either(self):
+        held = self._sync_with_private_0009({}, {"scheduled_publish": True})
+        self.assertEqual(held, [])
+
+    def test_a_private_video_with_no_publish_time_is_still_promoted(self):
+        promoted = self._sync_with_private_0009({})
+        self.assertEqual(len(promoted), 1)
+        self.assertEqual(promoted[0]["body"]["status"]["privacyStatus"], "public")
+
     def test_syncs_longform_promotes_0009_clarifies_0008_and_is_idempotent(self):
         fake_items = [
             {

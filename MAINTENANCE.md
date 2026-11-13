@@ -107,6 +107,66 @@ job writes one and why every scene leaves a per-provider attempt digest
 
 ## 3. Incident log
 
+### 2026-11-13 — one more waiting run was cancelled, by a run older than `queue: max`
+
+**What happened.** `queue: max` reached `main` at 2:01pm WAT (PR #398). At
+3:34pm the scheduled production run for the 3:14pm slot (43444015833) joined
+the `content-state` queue behind two others: the last serial production run,
+and a brain run (43413074778) created at 11:57am from a commit whose
+`gemini_brain.yml` had no `queue: max`. Both waited side by side for eight
+minutes, which the old rule (one waiting run) would not have allowed. At
+3:42:37pm the serial run ended, the brain run started, and in the same second
+the production run was cancelled with no job started.
+
+**Reading.** A run carries the concurrency settings of the workflow file at
+the commit it was created from. The likeliest cause is that the brain run,
+taking the lock under the old settings, cleared the other waiting run. It is
+not proven: GitHub does not record who cancelled a run. The earlier probe (six
+runs, two workflows, all with `queue: max`, none cancelled) fits this reading.
+
+**Effect.** Eight minutes of waiting lost, nothing else: the supervisor saw the
+cancelled run on its next pass and dispatched the nine unserved channels at
+3:45pm (run 43445725509), which waits behind the brain run.
+
+**What to watch.** Every run created after 2:01pm WAT on 13 November has the
+setting. If a waiting run is cancelled again with no older run in the queue,
+the reading above is wrong and `queue: max` does not do what its
+documentation says for this repository.
+
+### 2026-11-13 — a stale leg authored a second job with an ID the queue already held
+
+**What happened.** The last serial production run was created at 1:17am WAT and
+its legs each worked from that commit. At 2:52pm The Praise Garden's leg
+(`a2204a6`) committed a new long-form numbered `0702` on Habakkuk 3:17-19. The
+queue had held a `0702` on that scripture since 7:22am (`5d47c3e`); the leg could
+not see it. It also overwrote the companion Short's script and two receipts.
+
+**Why it matters.** Production skips every job whose ID appears twice
+("duplicate job ID needs resolution"), so the channel had nothing publishable,
+and `tests/test_queue_integrity.py` failed on `main` for everyone.
+
+**Fix.** The later copy and its worksheet were removed, the Short manifest and
+script restored from the commit before, the receipts restored with
+`scripts/repair_clobbered_receipts.py --apply`. Legs created after PR #396 start
+from current `main`, so this needs a run created before 12:39pm WAT on
+13 November to happen again.
+
+**If it recurs.** `python -m pytest tests/test_queue_integrity.py -k unique`
+names the ID. Keep the job that was committed first; `git log --diff-filter=A
+-- 'content/queue/<id>-*'` shows which.
+
+### 2026-11-13 — the monitor would have published a scheduled video early
+
+**What happened.** Found by reading, before any scheduled upload existed.
+`scripts/sync_published_thumbnails.py` makes a private, processed, full-length
+long-form public when its receipt wants public. Scheduled publishing uploads
+private on purpose; the monitor runs when production finishes.
+
+**Fix.** That rule skips a video with `status.publishAt` on YouTube or
+`scheduled_publish: true` on its receipt. `tests/test_scheduled_publishing.py`
+lists every file allowed to write `privacyStatus` to a live video.
+Full account: `docs/SCHEDULED_PUBLISHING_2026-11-13.md`, "Second read".
+
 ### 2026-11-13 — ten channels in a row took nine hours and missed their slots
 
 **Symptom.** Videos landed 3.5 to 13.2 hours after their slot; 17 of 30 long-forms

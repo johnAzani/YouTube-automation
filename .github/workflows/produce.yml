@@ -21,6 +21,11 @@ on:
   #   gh api --method POST repos/johnAzani/YouTube-automation/dispatches \
   #          -f event_type=publish-now
   #
+  # Optional payload: `client_payload[channels]=prayer4,prayer7` picks the
+  # channels, and `client_payload[publish_at]=2026-11-14T14:14:00Z` uploads the
+  # long-form private for YouTube to publish at that time (not later than the
+  # next production slot; see pipeline/publish_schedule.py).
+  #
   # Safe to fire repeatedly: the release checks the channel before it renders
   # anything, so a second dispatch records the first one's video instead of
   # re-uploading it.
@@ -576,7 +581,9 @@ jobs:
           # crons above are moved with it. The repository variable overrides the
           # lead, and setting it to 0 is the switch back to "public at once".
           # A time that is too close, past, or unreadable publishes at once.
-          PUBLISH_AT: ${{ inputs.publish_at }}
+          # (`client_payload.publish_at` is the same thing for the publish-now
+          # repository_dispatch, the trigger that needs only contents write.)
+          PUBLISH_AT: ${{ inputs.publish_at || github.event.client_payload.publish_at }}
           PUBLISH_LEAD_MINUTES: ${{ vars.PRODUCE_PUBLISH_LEAD_MINUTES }}
         run: |
           set +e
