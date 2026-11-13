@@ -1,26 +1,26 @@
 {
-  "generated_at": "2026-11-12T09:47:42.669284+00:00",
-  "as_of": "2026-11-12",
+  "generated_at": "2026-11-13T07:02:07.186040+00:00",
+  "as_of": "2026-11-13",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 6,
+  "total_longform_videos": 8,
   "ranked_themes": [],
   "themes": [
     {
       "theme": "general_prayer",
-      "videos": 5,
+      "videos": 6,
       "measured_videos": 0,
-      "avg_score": 0.0,
+      "avg_score": 0.0833,
       "avg_engagement": 0.0,
-      "top_scripture": "Zechariah 2"
+      "top_scripture": "Acts 16"
     },
     {
       "theme": "daily_guidance_wisdom",
-      "videos": 1,
+      "videos": 2,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
-      "top_scripture": "Psalm 119"
+      "top_scripture": "Ephesians 6"
     }
   ],
   "guidance": [
