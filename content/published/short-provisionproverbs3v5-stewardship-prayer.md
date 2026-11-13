@@ -22,11 +22,12 @@ scenes_verified: 7
 short_visual_fingerprints: ["sha256:11c1ad3e9cdbed1cf3a01c999426bc309140568d0c0a94c0b5a30d80ab7be13c", "sha256:20ae5b71320da83f24ae564083b2d1b889b0a85210fc48406528a02356802ef8", "sha256:37a84f25066b8d93fc1174bfd3fcd93d8f3b2dcc57d243f1e5c4f0fadd5c5e71", "sha256:9187e883af3e3ca5ccfe17dc18626729fc7634ffd975fd0370417d414c8bf345", "sha256:b0c35a80e95a63cc375be5e0c893fd305662a058a3a49a87ecad03628fa46310", "sha256:cecfe52ed9a492e5f3db939a86a520c899f1fdc125ba2ba10f2d62f2fd9b6133", "sha256:e92097d3a05f048648e157c8d38b7e330b762e3cb23dca732da1965525188f29", "url:0c06184560890fb84cb35716c7b93fe982b55d897eaf1ab15a6d6752986adf76", "url:3f84541835643b36c77fdb7642950498077fd63ff99f3606dffb70da5609babe", "url:4788e4a1083d0461fbcd24850946cec486cc5339f2b218bcef88a9c32c07c25f", "url:6f26dc1b20f913a7d26e8c3ed5e1586de1eaca451e43eef1719e21a6d6817018", "url:7a04b27fbb1eaaf6dd1c6cd1519518cabf3803e5b693987a340792e9eec3ac5f", "url:d690d389d4bcb009c44c48059bef4bbba7714c7f303bccb40f08a0cfe8aeb79d", "url:f335be3d155e6944019759a3f99c27e85d429242189777eaf45d84082c6b648f"]
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCkWrcJB6-q_K0r8KSja8ALw; auth_channel_title=The Provision Table; long_upload"
+thumbnail_pending: false
 thumbnail_poster: ["WALK", "IN", "HIS", "WISDOM"]
 thumbnail_kicker: "BLESS THE WORK OF OUR HANDS"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
 ---
 
 Bow your heart before the Lord today and surrender every heavy care into His faithful hands. Acknowledge Him in all your daily decisions, knowing He alone directs your steps on level ground. Trust in the Lord with all your heart, and lean not unto your own understanding. In all your ways acknowledge Him, and He shall direct your paths. Father, we ask for our daily bread and the quiet confidence that comes from resting in Your provision. Remove every anxious thought about tomorrow, for Your grace is sufficient for this very hour. Walk forward in peace today, knowing your provider holds your future securely.
