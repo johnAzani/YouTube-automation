@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T17:00:12Z",
+  "generated_at": "2026-11-13T17:14:31Z",
   "monitor_generated_at": "2026-11-13T15:15:34.677104+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 171,
-    "published_longform": 82,
+    "published_total": 172,
+    "published_longform": 83,
     "published_shorts": 89,
-    "public_total": 169,
-    "queued_longform": 55,
+    "public_total": 170,
+    "queued_longform": 54,
     "queued_shorts": 49,
     "automations_ok": 10,
     "automations_total": 10,
@@ -300,28 +300,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 11,
-        "published_longform": 6,
+        "published_total": 12,
+        "published_longform": 7,
         "published_shorts": 5,
-        "thumbnail_pending": 11,
-        "public_total": 11,
-        "queued_longform": 5,
+        "thumbnail_pending": 12,
+        "public_total": 12,
+        "queued_longform": 4,
         "queued_other": 0,
         "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0305",
-        "title": "Proverbs 24:3-4 Daily Household Prayer | The Family Altar",
-        "format": "longform",
-        "youtube_video_id": "FJ_b_jKTx08",
-        "watch_url": "https://youtu.be/FJ_b_jKTx08",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T09:57:40Z"
-      },
-      "next_queued_longform": {
         "id": "0306",
         "title": "Numbers 6:24-26 Family Prayer | The Family Altar",
-        "words": 1692,
+        "format": "longform",
+        "youtube_video_id": "cKtWm7V0r-8",
+        "watch_url": "https://youtu.be/cKtWm7V0r-8",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T17:13:25Z"
+      },
+      "next_queued_longform": {
+        "id": "0307",
+        "title": "Deuteronomy 6:6-7 Household & Family Prayer | The Family Altar",
+        "words": 1504,
         "status": "approved"
       },
       "next_queued_short": {
@@ -666,6 +666,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0306",
+      "slug": "numbers-6-24-26-family-prayer",
+      "file": "0306-numbers-6-24-26-family-prayer.md",
+      "title": "Numbers 6:24-26 Family Prayer | The Family Altar",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T17:13:25Z",
+      "youtube_video_id": "cKtWm7V0r-8",
+      "watch_url": "https://youtu.be/cKtWm7V0r-8",
+      "youtu_be_url": "https://youtu.be/cKtWm7V0r-8",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/cKtWm7V0r-8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/cKtWm7V0r-8/hqdefault.jpg",
+      "thumb_text": "THE LORD BLESS",
+      "thumbnail_pending": true,
+      "duration_label": "~12 min",
+      "words": 1692
+    },
     {
       "id": "0064",
       "slug": "zephaniah-3-5-morning-prayer",
@@ -5162,19 +5186,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 2006
-      },
-      {
-        "id": "0306",
-        "slug": "numbers-6-24-26-family-prayer",
-        "file": "0306-numbers-6-24-26-family-prayer.md",
-        "title": "Numbers 6:24-26 Family Prayer | The Family Altar",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1692
       },
       {
         "id": "0307",
