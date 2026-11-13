@@ -2,7 +2,7 @@
 id: 0209
 title: Isaiah 10:27 Midnight Prayer | The Midnight Watch
 slug: isaiah-10-27-midnight-prayer-the-midnight-watch
-status: approved
+status: published
 channel: prayer4
 privacy: public
 format: longform
@@ -74,6 +74,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-13"
+published_at: "2026-11-13T16:43:18Z"
+youtube_video_id: "wmckPOJdd7k"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Rising at the Midnight Hour

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T15:16:56Z",
+  "generated_at": "2026-11-13T16:44:11Z",
   "monitor_generated_at": "2026-11-13T15:15:34.677104+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 166,
-    "published_longform": 78,
-    "published_shorts": 88,
-    "public_total": 164,
-    "queued_longform": 49,
-    "queued_shorts": 40,
+    "published_total": 168,
+    "published_longform": 79,
+    "published_shorts": 89,
+    "public_total": 166,
+    "queued_longform": 58,
+    "queued_shorts": 49,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -237,33 +237,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 16,
-        "published_longform": 9,
-        "published_shorts": 7,
-        "thumbnail_pending": 16,
-        "public_total": 16,
-        "queued_longform": 5,
+        "published_total": 18,
+        "published_longform": 10,
+        "published_shorts": 8,
+        "thumbnail_pending": 18,
+        "public_total": 18,
+        "queued_longform": 4,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0208",
-        "title": "Isaiah 54:17 No Weapon Formed Against Thee Midnight Prayer",
-        "format": "longform",
-        "youtube_video_id": "uVx6ay-zB1c",
-        "watch_url": "https://youtu.be/uVx6ay-zB1c",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T08:25:55Z"
-      },
-      "next_queued_longform": {
         "id": "0209",
         "title": "Isaiah 10:27 Midnight Prayer | The Midnight Watch",
-        "words": 1176,
+        "format": "longform",
+        "youtube_video_id": "wmckPOJdd7k",
+        "watch_url": "https://youtu.be/wmckPOJdd7k",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T16:43:18Z"
+      },
+      "next_queued_longform": {
+        "id": "0210",
+        "title": "Ruth 3:8-11 Midnight Turning Point Prayer | The Midnight Watch",
+        "words": 2319,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightephesians6v10",
-        "scripture": "Ephesians 6:10-18",
+        "short": "short-midnightisaiah54v17",
+        "scripture": "Isaiah 54:17",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -305,9 +305,9 @@
         "published_shorts": 5,
         "thumbnail_pending": 11,
         "public_total": 11,
-        "queued_longform": 3,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 6
       },
       "latest_video": {
         "id": "0305",
@@ -368,9 +368,9 @@
         "published_shorts": 5,
         "thumbnail_pending": 7,
         "public_total": 11,
-        "queued_longform": 3,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 6
       },
       "latest_video": {
         "id": "0405",
@@ -436,9 +436,9 @@
         "published_shorts": 4,
         "thumbnail_pending": 7,
         "public_total": 10,
-        "queued_longform": 3,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 7
       },
       "latest_video": {
         "id": "0505",
@@ -567,9 +567,9 @@
         "published_shorts": 1,
         "thumbnail_pending": 3,
         "public_total": 3,
-        "queued_longform": 1,
+        "queued_longform": 3,
         "queued_other": 0,
-        "queued_shorts": 2
+        "queued_shorts": 4
       },
       "latest_video": {
         "id": "0701",
@@ -625,9 +625,9 @@
         "published_shorts": 1,
         "thumbnail_pending": 3,
         "public_total": 3,
-        "queued_longform": 1,
+        "queued_longform": 3,
         "queued_other": 0,
-        "queued_shorts": 2
+        "queued_shorts": 4
       },
       "latest_video": {
         "id": "0801",
@@ -666,6 +666,54 @@
     }
   ],
   "videos": [
+    {
+      "id": "0209",
+      "slug": "isaiah-10-27-midnight-prayer-the-midnight-watch",
+      "file": "0209-isaiah-10-27-midnight-prayer-the-midnight-watch.md",
+      "title": "Isaiah 10:27 Midnight Prayer | The Midnight Watch",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T16:43:18Z",
+      "youtube_video_id": "wmckPOJdd7k",
+      "watch_url": "https://youtu.be/wmckPOJdd7k",
+      "youtu_be_url": "https://youtu.be/wmckPOJdd7k",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/wmckPOJdd7k/edit",
+      "thumb_url": "https://i.ytimg.com/vi/wmckPOJdd7k/hqdefault.jpg",
+      "thumb_text": "YOKES DESTROYED",
+      "thumbnail_pending": true,
+      "duration_label": "~8 min",
+      "words": 1176
+    },
+    {
+      "id": "SHORT-MIDNIGHTEPHESIANS6V10",
+      "slug": "short-midnightephesians6v10-midnight-prayer",
+      "file": "short-midnightephesians6v10-midnight-prayer.md",
+      "title": "Pray This Ephesians 6:10-18 Midnight Prayer | Stand Firm Now #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T15:58:29Z",
+      "youtube_video_id": "nVvGbUe-sFY",
+      "watch_url": "https://www.youtube.com/shorts/nVvGbUe-sFY",
+      "youtu_be_url": "https://youtu.be/nVvGbUe-sFY",
+      "shorts_url": "https://www.youtube.com/shorts/nVvGbUe-sFY",
+      "studio_url": "https://studio.youtube.com/video/nVvGbUe-sFY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/nVvGbUe-sFY/hqdefault.jpg",
+      "thumb_text": "RISE IN SPIRIT \u00b7 THE MIDNIGHT VIGIL",
+      "thumbnail_pending": true,
+      "duration_label": "57s",
+      "words": 613
+    },
     {
       "id": "0801",
       "slug": "james-1-5-wisdom-guidance-prayer",
@@ -5031,19 +5079,6 @@
         "words": 2554
       },
       {
-        "id": "0209",
-        "slug": "isaiah-10-27-midnight-prayer-the-midnight-watch",
-        "file": "0209-isaiah-10-27-midnight-prayer-the-midnight-watch.md",
-        "title": "Isaiah 10:27 Midnight Prayer | The Midnight Watch",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1176
-      },
-      {
         "id": "0210",
         "slug": "ruth-3-8-11-midnight-turning-point-prayer",
         "file": "0210-ruth-3-8-11-midnight-turning-point-prayer.md",
@@ -5135,6 +5170,32 @@
         "words": 1053
       },
       {
+        "id": "0309",
+        "slug": "job-1-10-hedge-of-protection-household-prayer",
+        "file": "0309-job-1-10-hedge-of-protection-household-prayer.md",
+        "title": "Job 1:10 Household Prayer for a Hedge of Protection | The Family Altar",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1175
+      },
+      {
+        "id": "0310",
+        "slug": "proverbs-3-33-he-blesseth-the-habitation-of-the-just",
+        "file": "0310-proverbs-3-33-he-blesseth-the-habitation-of-the-just.md",
+        "title": "Proverbs 3:33: He Blesseth the Habitation of the Just",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1364
+      },
+      {
         "id": "0406",
         "slug": "philippians-4-6-7-peace-that-passeth-understanding-prayer",
         "file": "0406-philippians-4-6-7-peace-that-passeth-understanding-prayer.md",
@@ -5174,6 +5235,32 @@
         "words": 1031
       },
       {
+        "id": "0409",
+        "slug": "matthew-11-28-30-rest-for-your-soul-prayer",
+        "file": "0409-matthew-11-28-30-rest-for-your-soul-prayer.md",
+        "title": "Matthew 11:28-30 Rest for Your Soul Prayer | The Healing Balm",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1540
+      },
+      {
+        "id": "0410",
+        "slug": "isaiah-53-4-5-by-his-stripes-we-are-healed",
+        "file": "0410-isaiah-53-4-5-by-his-stripes-we-are-healed.md",
+        "title": "Isaiah 53:4-5 By His Stripes We Are Healed | The Healing Balm",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1283
+      },
+      {
         "id": "0506",
         "slug": "james-1-5-morning-prayer-for-wisdom",
         "file": "0506-james-1-5-morning-prayer-for-wisdom.md",
@@ -5211,6 +5298,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 2031
+      },
+      {
+        "id": "0509",
+        "slug": "genesis-22-14-jehovah-jireh-provision-prayer",
+        "file": "0509-genesis-22-14-jehovah-jireh-provision-prayer.md",
+        "title": "Genesis 22:14 Daily Provision Prayer | The Provision Table",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1208
+      },
+      {
+        "id": "0510",
+        "slug": "matthew-6-31-33-seek-first-the-kingdom-prayer",
+        "file": "0510-matthew-6-31-33-seek-first-the-kingdom-prayer.md",
+        "title": "Matthew 6:31-33 Seek First the Kingdom Prayer | The Provision Table",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1739
       },
       {
         "id": "0603",
@@ -5278,6 +5391,32 @@
         "words": 989
       },
       {
+        "id": "0703",
+        "slug": "philippians-4-6-7-daily-prayer",
+        "file": "0703-philippians-4-6-7-daily-prayer.md",
+        "title": "Philippians 4:6-7 Daily Prayer | The Praise Garden",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1632
+      },
+      {
+        "id": "0704",
+        "slug": "1-thessalonians-5-16-18-daily-prayer",
+        "file": "0704-1-thessalonians-5-16-18-daily-prayer.md",
+        "title": "1 Thessalonians 5:16-18 Daily Prayer | The Praise Garden",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1154
+      },
+      {
         "id": "0802",
         "slug": "psalm-25-4-5-guidance-prayer",
         "file": "0802-psalm-25-4-5-guidance-prayer.md",
@@ -5289,6 +5428,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1836
+      },
+      {
+        "id": "0803",
+        "slug": "proverbs-15-22-prayer-for-wise-counsel",
+        "file": "0803-proverbs-15-22-prayer-for-wise-counsel.md",
+        "title": "Proverbs 15:22 Prayer for Wise Counsel | The Guided Path",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1290
+      },
+      {
+        "id": "0804",
+        "slug": "psalm-32-8-i-will-instruct-thee-and-teach-thee",
+        "file": "0804-psalm-32-8-i-will-instruct-thee-and-teach-thee.md",
+        "title": "Psalm 32:8 I Will Instruct Thee and Teach Thee | The Guided Path",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1446
       }
     ],
     "shorts": [
@@ -5414,17 +5579,6 @@
         "target_window_utc": "12:14"
       },
       {
-        "short": "short-midnightephesians6v10",
-        "file": "0207-short-midnightephesians6v10.yml",
-        "companion_longform_id": "0207",
-        "scripture": "Ephesians 6:10-18",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
-      },
-      {
         "short": "short-midnightisaiah54v17",
         "file": "0208-short-midnightisaiah54v17.yml",
         "companion_longform_id": "0208",
@@ -5535,6 +5689,28 @@
         "target_window_utc": "17:14"
       },
       {
+        "short": "short-familyjob1v10",
+        "file": "0309-short-familyjob1v10.yml",
+        "companion_longform_id": "0309",
+        "scripture": "Job 1:10",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "17:14"
+      },
+      {
+        "short": "short-familyproverbs3v33",
+        "file": "0310-short-familyproverbs3v33.yml",
+        "companion_longform_id": "0310",
+        "scripture": "Proverbs 3:33",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "17:14"
+      },
+      {
         "short": "short-healingjeremiah17v14",
         "file": "0405-short-healingjeremiah17v14.yml",
         "companion_longform_id": "0405",
@@ -5572,6 +5748,28 @@
         "file": "0408-short-healingmalachi4v2.yml",
         "companion_longform_id": "0408",
         "scripture": "Malachi 4:2",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
+      },
+      {
+        "short": "short-healingmatthew11v28",
+        "file": "0409-short-healingmatthew11v28.yml",
+        "companion_longform_id": "0409",
+        "scripture": "Matthew 11:28-30",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
+      },
+      {
+        "short": "short-healingisaiah53v4",
+        "file": "0410-short-healingisaiah53v4.yml",
+        "companion_longform_id": "0410",
+        "scripture": "Isaiah 53:4-5",
         "channel": "prayer6",
         "channel_name": "The Healing Balm",
         "status": "approved",
@@ -5627,6 +5825,28 @@
         "file": "0508-short-provisionpsalm84v11.yml",
         "companion_longform_id": "0508",
         "scripture": "Psalm 84:11",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
+      },
+      {
+        "short": "short-provisiongenesis22v14",
+        "file": "0509-short-provisiongenesis22v14.yml",
+        "companion_longform_id": "0509",
+        "scripture": "Genesis 22:14",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
+      },
+      {
+        "short": "short-provisionmatthew6v31",
+        "file": "0510-short-provisionmatthew6v31.yml",
+        "companion_longform_id": "0510",
+        "scripture": "Matthew 6:31-33",
         "channel": "prayer7",
         "channel_name": "The Provision Table",
         "status": "approved",
@@ -5711,6 +5931,28 @@
         "target_window_utc": "09:44"
       },
       {
+        "short": "short-gardenphilippians4v6",
+        "file": "0703-short-gardenphilippians4v6.yml",
+        "companion_longform_id": "0703",
+        "scripture": "Philippians 4:6-7",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "09:44"
+      },
+      {
+        "short": "short-garden1thessalonians5v16",
+        "file": "0704-short-garden1thessalonians5v16.yml",
+        "companion_longform_id": "0704",
+        "scripture": "1 Thessalonians 5:16-18",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "09:44"
+      },
+      {
         "short": "short-guidedjames1v5",
         "file": "0801-short-guidedjames1v5.yml",
         "companion_longform_id": "0801",
@@ -5726,6 +5968,28 @@
         "file": "0802-short-guidedpsalm25v4.yml",
         "companion_longform_id": "0802",
         "scripture": "Psalm 25:4-5",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "18:44"
+      },
+      {
+        "short": "short-guidedproverbs15v22",
+        "file": "0803-short-guidedproverbs15v22.yml",
+        "companion_longform_id": "0803",
+        "scripture": "Proverbs 15:22",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "18:44"
+      },
+      {
+        "short": "short-guidedpsalm32v8",
+        "file": "0804-short-guidedpsalm32v8.yml",
+        "companion_longform_id": "0804",
+        "scripture": "Psalm 32:8",
         "channel": "prayer10",
         "channel_name": "The Guided Path",
         "status": "approved",
