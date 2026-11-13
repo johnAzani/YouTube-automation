@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T03:45:08Z",
+  "generated_at": "2026-11-13T04:53:46Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,11 +7,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 149,
-    "published_longform": 67,
+    "published_total": 150,
+    "published_longform": 68,
     "published_shorts": 82,
-    "public_total": 147,
-    "queued_longform": 52,
+    "public_total": 148,
+    "queued_longform": 51,
     "queued_shorts": 37,
     "automations_ok": 8,
     "automations_total": 10,
@@ -419,27 +419,27 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 7,
-        "published_longform": 4,
+        "published_total": 8,
+        "published_longform": 5,
         "published_shorts": 3,
-        "public_total": 7,
-        "queued_longform": 5,
+        "public_total": 8,
+        "queued_longform": 4,
         "queued_other": 0,
         "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0503",
-        "title": "Revelation 3:8 Open Doors Prayer | The Provision Table",
-        "format": "longform",
-        "youtube_video_id": "fA8ZpJlik-M",
-        "watch_url": "https://youtu.be/fA8ZpJlik-M",
-        "published_on": "2026-11-12",
-        "published_at": "2026-11-12T21:39:13Z"
-      },
-      "next_queued_longform": {
         "id": "0504",
         "title": "Psalm 90:17 Morning Prayer | The Provision Table",
-        "words": 1267,
+        "format": "longform",
+        "youtube_video_id": "msTiAda7RiM",
+        "watch_url": "https://youtu.be/msTiAda7RiM",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T04:52:46Z"
+      },
+      "next_queued_longform": {
+        "id": "0505",
+        "title": "Proverbs 3:5-6 Morning Prayer | The Provision Table",
+        "words": 1637,
         "status": "approved"
       },
       "next_queued_short": {
@@ -613,6 +613,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0504",
+      "slug": "psalm-90-17-morning-prayer-the-provision-table",
+      "file": "0504-psalm-90-17-morning-prayer-the-provision-table.md",
+      "title": "Psalm 90:17 Morning Prayer | The Provision Table",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T04:52:46Z",
+      "youtube_video_id": "msTiAda7RiM",
+      "watch_url": "https://youtu.be/msTiAda7RiM",
+      "youtu_be_url": "https://youtu.be/msTiAda7RiM",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/msTiAda7RiM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/msTiAda7RiM/hqdefault.jpg",
+      "thumb_text": "ESTABLISH OUR WORK",
+      "duration_label": "~9 min",
+      "words": 1267
+    },
+    {
+      "id": "0503",
+      "slug": "revelation-3-8-open-doors-prayer",
+      "file": "0503-revelation-3-8-open-doors-prayer.md",
+      "title": "Revelation 3:8 Open Doors Prayer | The Provision Table",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T03:52:37Z",
+      "youtube_video_id": "fA8ZpJlik-M",
+      "watch_url": "https://youtu.be/fA8ZpJlik-M",
+      "youtu_be_url": "https://youtu.be/fA8ZpJlik-M",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/fA8ZpJlik-M/edit",
+      "thumb_url": "https://i.ytimg.com/vi/fA8ZpJlik-M/hqdefault.jpg",
+      "thumb_text": "OPEN THIS DOOR",
+      "duration_label": "~6 min",
+      "words": 903
+    },
     {
       "id": "0404",
       "slug": "exodus-15-26-jehovah-rapha-healing-prayer",
@@ -867,29 +913,6 @@
       "words": 607
     },
     {
-      "id": "0503",
-      "slug": "revelation-3-8-open-doors-prayer",
-      "file": "0503-revelation-3-8-open-doors-prayer.md",
-      "title": "Revelation 3:8 Open Doors Prayer | The Provision Table",
-      "channel": "prayer7",
-      "channel_name": "The Provision Table",
-      "channel_handle": "@TheProvisionTableDaily",
-      "format": "longform",
-      "niche": "faith and prayer",
-      "privacy": "public",
-      "published_on": "2026-11-12",
-      "published_at": "2026-11-12T21:39:13Z",
-      "youtube_video_id": "fA8ZpJlik-M",
-      "watch_url": "https://youtu.be/fA8ZpJlik-M",
-      "youtu_be_url": "https://youtu.be/fA8ZpJlik-M",
-      "shorts_url": "",
-      "studio_url": "https://studio.youtube.com/video/fA8ZpJlik-M/edit",
-      "thumb_url": "https://i.ytimg.com/vi/fA8ZpJlik-M/hqdefault.jpg",
-      "thumb_text": "OPEN THIS DOOR",
-      "duration_label": "~6 min",
-      "words": 903
-    },
-    {
       "id": "SHORT-PROVISIONPHILIPPIANS4V19",
       "slug": "short-provisionphilippians4v19-stewardship-prayer",
       "file": "short-provisionphilippians4v19-stewardship-prayer.md",
@@ -901,7 +924,7 @@
       "niche": "faith and prayer",
       "privacy": "public",
       "published_on": "2026-11-12",
-      "published_at": "2026-11-12T20:51:21Z",
+      "published_at": "2026-11-12T20:51:14Z",
       "youtube_video_id": "ZmRgwomyNfs",
       "watch_url": "https://www.youtube.com/shorts/ZmRgwomyNfs",
       "youtu_be_url": "https://youtu.be/ZmRgwomyNfs",
@@ -909,8 +932,8 @@
       "studio_url": "https://studio.youtube.com/video/ZmRgwomyNfs/edit",
       "thumb_url": "https://i.ytimg.com/vi/ZmRgwomyNfs/hqdefault.jpg",
       "thumb_text": "THE PROVISION TABLE \u00b7 ALL YOUR NEED",
-      "duration_label": "61s",
-      "words": 345
+      "duration_label": "<60s",
+      "words": 21
     },
     {
       "id": "0403",
@@ -4523,19 +4546,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1031
-      },
-      {
-        "id": "0504",
-        "slug": "psalm-90-17-morning-prayer-the-provision-table",
-        "file": "0504-psalm-90-17-morning-prayer-the-provision-table.md",
-        "title": "Psalm 90:17 Morning Prayer | The Provision Table",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1267
       },
       {
         "id": "0505",

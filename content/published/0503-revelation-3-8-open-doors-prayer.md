@@ -73,13 +73,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
-published_on: "2026-11-12"
-published_at: "2026-11-12T21:39:13Z"
+published_on: "2026-11-13"
+published_at: "2026-11-13T03:52:37Z"
 youtube_video_id: "fA8ZpJlik-M"
 metadata_revision: "selar-seo-v1"
-thumbnail_pending: false
-
-thumbnail_revision: "ctr-v3-cinema"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Approaching Christ Who Holds the Key of David
