@@ -5,6 +5,24 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-13 — channels are produced side by side
+
+- Production legs now run in lanes instead of one after another. The plan job sets `max-parallel` from the repository variable `PRODUCE_MAX_PARALLEL` (default 5, clamped to 1–10; `1` restores the serial matrix with no code change). Measured 8–13 November: ten legs in a row took 537 minutes, production held `content-state` for 1,412 minutes of 12 November, and that day published 17 long-forms of the 30 scheduled with three channels getting none. Replaying the recorded leg times with five lanes gives 118 minutes. Not yet run in production; the lane expression was checked on GitHub with a throwaway workflow.
+- A scheduled run no longer publishes a slot twice: it drops every channel that already has a long-form receipt dated at or after the current slot (`scripts/produce_plan.py`). If that check fails the run produces every channel.
+- `produce.yml` accepts `channels` (comma-separated) on manual and `repository_dispatch` triggers. The supervisor sends every channel that owes the slot in one dispatch, tries a channel at most twice per slot, and steps in 30 minutes after a production slot instead of 90. Other workflows keep 90.
+- Fixed `prev_occurrence()`: with several cron lines it returned yesterday's first slot from 00:00 UTC until the first slot of the day, so the 19:14 UTC production slot stopped being recoverable at midnight UTC instead of after six hours. `comments.yml` was affected the same way.
+- Commit step: twelve attempts instead of six (ten lanes can need ten), a random extra delay between attempts, and its path lists in a private `mktemp -d` directory instead of fixed names in `/tmp`.
+- Added `scripts/repair_clobbered_receipts.py` and used it: ten receipts overwritten by stale legs between 7 and 13 November are restored (six `published_at` values, four full Short receipts). Nothing on YouTube was changed.
+- Still open: upload idempotency when a leg dies between the YouTube upload and the receipt commit (unchanged by lanes; a channel never has two legs at once), `queue: max` on the lock (verified available, not applied), and scheduled publishing, which is what would put a video on the slot minute. Research, evidence and plan: `docs/PARALLEL_PRODUCTION_2026-11-13.md`.
+
+## 2026-11-13 — production legs start from current main
+
+- Each production leg now fast-forwards to `origin/main` before it reads queue or receipt state, and stops with a `Stale checkout` error if it cannot. `actions/checkout` had pinned every leg to the commit its run was created at; with runs waiting up to 401 minutes for the `content-state` lock and a ten-channel matrix holding it for 537, a leg routinely started on a tree older than its own channel's previous publish. Runs on a ref other than `main` keep the commit they asked for. `START_SHA` is written after the fast-forward.
+- Measured effect of the stale tree, 8–13 November: four publish commits (`e19ed94`, `c34235b`, `56983d3`, `1e4286c`) re-stamped an existing long-form receipt with a later `published_at` and reset its thumbnail state, and three of them replaced a real Short receipt with a recovered stub after rendering that Short a second time. Video IDs are unchanged; there was no duplicate upload. The seven receipts are not repaired by this change.
+- With the commit guard from the previous entry, the same stale leg would be refused instead — together with the receipt for the video it had just uploaded. A test reproduces that; no production run has used the guard yet.
+- Added `tests/test_produce_leg_rehearsal.py`, which runs the refresh and commit steps taken from `produce.yml` against a local bare repository: stale, current, off-`main`, unreachable and diverged checkouts, and two channels whose pushes race. `max-parallel` remains 1.
+- Details, timeline and what is left for the owner: `docs/STALE_CHECKOUT_RECEIPTS_2026-11-13.md`.
+
 ## 2026-11-13 — future Short narration and footage
 
 - Prayer Short cards use the complete narrated text and audio-bound word alignment, rather than condensed authored phrases. Production requires complete local alignment; estimates are limited to preview.

@@ -77,7 +77,7 @@ originality:
   no_ai_persona: true
   source_notes: true
 published_on: "2026-11-13"
-published_at: "2026-11-13T08:35:02Z"
+published_at: "2026-11-13T02:04:10Z"
 youtube_video_id: "08dJD3XggYc"
 metadata_revision: "selar-seo-v1"
 thumbnail_pending: true

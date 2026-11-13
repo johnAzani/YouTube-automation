@@ -93,11 +93,13 @@ def test_invalid_refs_unsafe_paths_or_missing_touched_files_fail_closed(tmp_path
         check_conflicts(tmp_path, base, 'HEAD', [], ['content/queue/0100-first.md'])
 
 
-def test_workflow_runs_guard_each_attempt_before_reset_and_stages_no_parallelism():
+def test_workflow_runs_guard_each_attempt_before_reset_on_every_lane():
     root = Path(__file__).resolve().parents[1]
     data = yaml.safe_load((root / '.github/workflows/produce.yml').read_text())
     job = data['jobs']['produce']
-    assert job['strategy']['max-parallel'] == 1
+    # The lane count comes from the plan job (scripts/produce_plan.py); the guard
+    # is what keeps two lanes from overwriting each other's path.
+    assert 'needs.plan.outputs.max_parallel' in str(job['strategy']['max-parallel'])
     step = next(s for s in job['steps'] if s.get('name') == 'Commit queue state (job moved to published/)')
     command = step['run']
     assert command.index('for attempt in') < command.index('guard_produce_commit.py') < command.index('git reset --mixed origin/main')

@@ -507,10 +507,11 @@ class TestWorkflowFile(unittest.TestCase):
         self.assertIn("actions: write", text)
 
     def test_produce_recovery_targets_the_channel_that_has_no_video(self):
-        """A dropped Produce slot costs BOTH channels a video — recover them one at a time.
+        """A dropped Produce slot is recovered for exactly the channels that lack a video.
 
-        Not both at once: the two legs share `content-state`, which allows a single
-        *pending* run, so the second dispatch cancels the first (6 November 08:00).
+        One dispatch carries them all (`channels=a,b`): two dispatches would share
+        `content-state`, which allows a single *pending* run, so the second would
+        cancel the first (6 November 08:00).
         """
         calls = []
 
@@ -531,7 +532,7 @@ class TestWorkflowFile(unittest.TestCase):
             ok, msg = sup.dispatch("produce.yml", "2026-11-06T06:14:00+00:00")
         self.assertTrue(ok)
         self.assertEqual(calls, [["gh", "workflow", "run", "produce.yml",
-                                  "-f", "channel=prayer2"]])
+                                  "-f", "channels=prayer2"]])
         self.assertIn("dispatched prayer2", msg)
 
     def test_produce_recovery_dispatches_nothing_when_both_channels_published(self):

@@ -227,6 +227,13 @@ def prev_occurrence(crons: list[str], now: datetime) -> datetime | None:
         minute = int(minute_s)
         hours = _expand(hour_s, 0, 23) or set(range(24))
         dows = _expand(dow_s, 0, 7)
+        # Each cron line is searched on its own. Stopping as soon as *any* line
+        # had an answer meant that with several lines (production: 06:14, 14:14,
+        # 19:14) the later ones never looked at yesterday: from midnight until
+        # 06:14 UTC the "most recent slot" came back as yesterday 06:14, not
+        # yesterday 19:14, and the evening slot stopped being recoverable at
+        # midnight.
+        best: datetime | None = None
         for back in range(0, 9):
             day = (now - timedelta(days=back)).date()
             if dows is not None:
@@ -236,10 +243,13 @@ def prev_occurrence(crons: list[str], now: datetime) -> datetime | None:
             for hour in sorted(hours, reverse=True):
                 candidate = datetime(day.year, day.month, day.day, hour, minute,
                                      tzinfo=timezone.utc)
-                if candidate <= now and (latest is None or candidate > latest):
-                    latest = candidate
-            if latest is not None:
+                if candidate <= now:
+                    best = candidate
+                    break
+            if best is not None:
                 break
+        if best is not None and (latest is None or best > latest):
+            latest = best
     return latest
 
 

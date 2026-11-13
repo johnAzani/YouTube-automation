@@ -11,6 +11,13 @@ import yaml
 from pipeline.channels import CHANNELS
 
 
+def _planned_channels(output):
+    """The planner's `channels=` output. Produce also writes `max_parallel=`."""
+    lines = [line for line in output.read_text().splitlines() if line.startswith('channels=')]
+    assert len(lines) == 1, output.read_text()
+    return json.loads(lines[0].split('=', 1)[1])
+
+
 @pytest.mark.parametrize(('filename', 'selector', 'keys'), [
     ('comments.yml', 'matrix.channel', ('YOUTUBE_CLIENT_ID', 'YOUTUBE_CLIENT_SECRET', 'YOUTUBE_REFRESH_TOKEN', 'YOUTUBE_EXPECTED_CHANNEL_ID', 'GEMINI_API_KEY')),
     ('gemini_brain.yml', 'matrix.channel', ('GEMINI_API_KEY',)),
@@ -56,7 +63,7 @@ def test_produce_plan_rejects_unregistered_targets(tmp_path, event, variable, ch
     result = subprocess.run([sys.executable, '-c', script], env=env, capture_output=True, text=True)
     assert (result.returncode == 0) == allowed, result.stdout + result.stderr
     if allowed:
-        assert json.loads(output.read_text().strip().split('=', 1)[1]) == [channel]
+        assert _planned_channels(output) == [channel]
     else:
         assert 'Refusing unknown or inactive' in result.stderr
         assert not output.exists()
@@ -88,7 +95,7 @@ def test_planners_gate_manual_channel(tmp_path, filename, step_id, target, inact
     result = subprocess.run([sys.executable, '-c', script], env=env, capture_output=True, text=True)
     assert (result.returncode == 0) == allowed, result.stdout + result.stderr
     if allowed:
-        assert json.loads(output.read_text().strip().split('=', 1)[1]) == [target]
+        assert _planned_channels(output) == [target]
     else:
         assert 'Refusing unknown or inactive' in result.stderr
         assert not output.exists()
@@ -114,7 +121,7 @@ def test_schedule_skips_inactive_without_blocking_other_channels(tmp_path, filen
     env.update({f'PRAYER{i}_YOUTUBE_REFRESH_TOKEN': 'present' for i in range(2, 9)})
     result = subprocess.run([sys.executable, '-c', script], env=env, capture_output=True, text=True)
     assert result.returncode == 0, result.stdout + result.stderr
-    channels = json.loads(output.read_text().strip().split('=', 1)[1])
+    channels = _planned_channels(output)
     assert 'prayer8' not in channels
     assert 'secret-place' in channels
 
@@ -132,7 +139,7 @@ def test_brain_manual_both_skips_inactive(tmp_path):
            'GITHUB_OUTPUT': str(output), 'PRAYER8_READY': 'true'}
     result = subprocess.run([sys.executable, '-c', script], env=env, capture_output=True, text=True)
     assert result.returncode == 0, result.stdout + result.stderr
-    channels = json.loads(output.read_text().strip().split('=', 1)[1])
+    channels = _planned_channels(output)
     assert 'prayer8' not in channels and 'secret-place' in channels
 
 
@@ -153,5 +160,5 @@ def test_empty_plan_never_starts_work(tmp_path, filename, step_id, job):
     env.update({f'PRAYER{i}_READY': 'true' for i in range(2, 9)})
     result = subprocess.run([sys.executable, '-c', script], env=env, capture_output=True, text=True)
     assert result.returncode == 0, result.stdout + result.stderr
-    assert json.loads(output.read_text().strip().split('=', 1)[1]) == []
+    assert _planned_channels(output) == []
     assert "needs.plan.outputs.channels != '[]'" in workflow['jobs'][job]['if']
