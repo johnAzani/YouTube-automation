@@ -2,7 +2,7 @@
 id: '0021'
 title: Psalm 31:5 Bedtime Prayer | Into Your Hands I Commit My Spirit
 slug: psalm-31-1-5-committing-my-spirit-to-his-hand
-status: quota_paused
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -95,8 +95,13 @@ originality:
 seo_hook: Pray this Psalm 31:1-5 KJV bedtime prayer before you sleep to surrender
   every burden and commit your spirit into the Father's hands.
 category_id: '22'
-quota_reset_utc: '2026-11-13T08:00:00+00:00'
-pause_reason: gemini_api_daily_quota_exhausted
+published_on: "2026-11-13"
+published_at: "2026-11-13T16:49:01Z"
+youtube_video_id: "r3nA7BgZpP4"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — In Thee, O LORD, Do I Put My Trust (Verse 1a)
