@@ -80,7 +80,13 @@ jobs:
       channels: ${{ steps.plan.outputs.channels }}
       max_parallel: ${{ steps.plan.outputs.max_parallel }}
     steps:
+      # The tip of the branch as it is NOW, not the commit this run was created
+      # at. A run can wait hours for `content-state`, and the slot check below
+      # reads receipts: on the creation commit it would not see what the run
+      # ahead of it just published, and would publish the slot a second time.
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
       - id: plan
         env:
           # A channel joins the scheduled slots the moment its own credentials

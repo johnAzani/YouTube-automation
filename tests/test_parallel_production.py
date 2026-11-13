@@ -154,6 +154,16 @@ def test_workflow_wires_lanes_and_multi_channel_dispatch():
     assert script.index("parse_channels") < script.index("Refusing unknown or inactive")
 
 
+def test_the_plan_reads_receipts_from_the_current_tip_not_the_creation_commit():
+    """Without an explicit ref, checkout pins the commit the run was created at.
+    After hours in the queue that tree lacks the receipts the slot check needs."""
+    steps = workflow()["jobs"]["plan"]["steps"]
+    checkout = steps[0]
+    assert checkout["uses"].startswith("actions/checkout@")
+    assert checkout["with"]["ref"] == "${{ github.ref }}"
+    assert steps[1].get("id") == "plan"
+
+
 def _run_plan(tmp_path, env: dict) -> dict:
     out = tmp_path / "gh_output"
     out.write_text("")

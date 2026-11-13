@@ -165,20 +165,20 @@ Not yet examined, and needed before `max-parallel` is raised:
 
 ## Left for the owner
 
-1. **Repair the seven receipts, or leave them.** The originals are in history at the
-   commits listed above and the video IDs match, so the three Short receipts can be
-   restored with `git show <commit>:<path>` and the four `published_at` values put back.
-   Not done here because the monitor is still writing thumbnail fields to those same
-   files, and because restoring a Short receipt removes
-   `metadata_retrofit_approved: false`, which lets the metadata sync touch that video
-   again. That is the behaviour issue #382 is about, so it should be a deliberate
-   choice.
-2. **Run 43335854790** was still in progress when this was written, on `ea9d95e`, which
-   predates both the guard and this fix. Its remaining legs (Family Altar onward) can
-   repeat the pattern for any channel whose state changed on `main` after 12:52am on
-   13 November. Check
-   their publish commits for modified files under `content/published/`:
-   `git log --diff-filter=M --format='%h %ci' -- content/published | head`.
+1. **Receipts: restored later the same day.** The owner left the decision to this
+   work. `scripts/repair_clobbered_receipts.py` found ten overwritten receipts, not
+   seven: the seven above, `0046-psalm-91-6-…` (re-stamped on 7 November by `1ae95eb`),
+   and two more from the run in item 2 (`0304-isaiah-32-18-…` and
+   `short-familyisaiah32v18-…`, commit `aed028b`). The six `published_at` values and
+   the four Short receipts are restored. Each restored Short already carries
+   `metadata_revision: "selar-seo-v1"`, so the metadata sync treats it as current and
+   does not touch the video; the current thumbnail fields were kept. See
+   `docs/PARALLEL_PRODUCTION_2026-11-13.md`.
+2. **Run 43335854790** was still in progress at 11:45am on 13 November, on `ea9d95e`,
+   which predates both the guard and this fix. It has already repeated the pattern once
+   (`aed028b`, 10:58am) and has five more legs to run. After it ends, run
+   `python scripts/repair_clobbered_receipts.py` in a full clone; `--apply` restores,
+   `--check` exits 1 while any remain.
 3. **After this merges,** the first scheduled run created from the new commit should
    show a `Checkout advanced` notice on any leg that started after `main` moved, and no
    publish commit should modify an existing receipt.

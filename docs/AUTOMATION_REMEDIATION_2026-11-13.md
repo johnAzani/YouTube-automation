@@ -28,3 +28,11 @@ Reading the publish history after this work merged showed that production legs r
 This also delivers part of item 2: `tests/test_produce_leg_rehearsal.py` is a mock rehearsal that runs the workflow's own commit step for two channels whose pushes race. The non-uploading run of the real workflow, shared stock-API rate limits and the shared asset cache are still open, and `max-parallel` is still 1.
 
 See `docs/STALE_CHECKOUT_RECEIPTS_2026-11-13.md`.
+
+## Follow-up, same day: lanes
+
+Items 1 and 2 above are now partly closed. Production legs run in lanes (default 5, repository variable `PRODUCE_MAX_PARALLEL`, `1` for the old behaviour). What item 2 asked for and what exists: each leg stages only the paths it touched and job ids are allocated in per-channel blocks, both pinned by tests; the compare-and-swap retry is rehearsed with five real processes committing at once, which showed the retry count had to rise from six to twelve; a throwaway workflow confirmed the lane expression on GitHub.
+
+Still open from item 2: upload idempotency when a leg dies after YouTube accepts an upload and before the receipt is committed. Lanes do not make it worse, because a channel has one leg per run and runs still take turns, but the title check is still not an idempotency key. A non-uploading run of the real production workflow has not been done: it would spend each channel's daily free speech quota.
+
+See `docs/PARALLEL_PRODUCTION_2026-11-13.md`.

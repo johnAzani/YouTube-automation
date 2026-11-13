@@ -107,6 +107,26 @@ job writes one and why every scene leaves a per-provider attempt digest
 
 ## 3. Incident log
 
+### 2026-11-13 — ten channels in a row took nine hours and missed their slots
+
+**Symptom.** Videos landed 3.5 to 13.2 hours after their slot; 17 of 30 long-forms
+published on 12 November; three channels published none.
+
+**Cause.** `max-parallel: 1` ran every channel leg in sequence (537 minutes for ten),
+inside one `content-state` lock that was then held 98% of the day. The supervisor does
+not recover a slot while a production run is in flight, so recovery never ran. A
+separate error in `prev_occurrence()` also ended recovery of the 19:14 UTC slot at
+midnight UTC.
+
+**Fix.** Lanes (`PRODUCE_MAX_PARALLEL`, default 5), one recovery dispatch for all
+missing channels, a slot served once, recovery after 30 minutes, the slot calculation
+corrected. See `docs/PARALLEL_PRODUCTION_2026-11-13.md`.
+
+**If it misbehaves.** Set the repository variable `PRODUCE_MAX_PARALLEL` to `1`; that
+is the old behaviour. If stock footage returns 429, use 3 or 4. To check for receipts
+overwritten by a run created from older code:
+`python scripts/repair_clobbered_receipts.py --check` (needs a full clone).
+
 ### 2026-11-13 — production legs ran on the commit their run was created at
 
 **Symptom.** Publish commits modified receipts that already existed. Four long-form
