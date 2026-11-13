@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T04:53:46Z",
+  "generated_at": "2026-11-13T05:34:31Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 150,
-    "published_longform": 68,
-    "published_shorts": 82,
-    "public_total": 148,
-    "queued_longform": 51,
-    "queued_shorts": 37,
+    "published_total": 152,
+    "published_longform": 69,
+    "published_shorts": 83,
+    "public_total": 150,
+    "queued_longform": 50,
+    "queued_shorts": 36,
     "automations_ok": 8,
     "automations_total": 10,
     "network_healthy": false
@@ -486,32 +486,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 2,
-        "published_longform": 1,
-        "published_shorts": 1,
-        "public_total": 2,
-        "queued_longform": 6,
+        "published_total": 4,
+        "published_longform": 2,
+        "published_shorts": 2,
+        "public_total": 4,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0600",
-        "title": "Psalm 121:7-8 Protection Prayer | The Covenant Shield",
-        "format": "longform",
-        "youtube_video_id": "_T9qvff8ats",
-        "watch_url": "https://youtu.be/_T9qvff8ats",
-        "published_on": "2026-11-11",
-        "published_at": "2026-11-11T13:21:35Z"
-      },
-      "next_queued_longform": {
         "id": "0601",
         "title": "Genesis 15:1 Protection Prayer | The Covenant Shield",
-        "words": 928,
+        "format": "longform",
+        "youtube_video_id": "lrSe7uQiAsA",
+        "watch_url": "https://youtu.be/lrSe7uQiAsA",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T05:33:41Z"
+      },
+      "next_queued_longform": {
+        "id": "0602",
+        "title": "Proverbs 18:10 Strong Tower Prayer | The Covenant Shield",
+        "words": 920,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldgenesis15v1",
-        "scripture": "Genesis 15:1",
+        "short": "short-shieldproverbs18v10",
+        "scripture": "Proverbs 18:10",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -613,6 +613,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "0601",
+      "slug": "genesis-15-1-protection-prayer",
+      "file": "0601-genesis-15-1-protection-prayer.md",
+      "title": "Genesis 15:1 Protection Prayer | The Covenant Shield",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T05:33:41Z",
+      "youtube_video_id": "lrSe7uQiAsA",
+      "watch_url": "https://youtu.be/lrSe7uQiAsA",
+      "youtu_be_url": "https://youtu.be/lrSe7uQiAsA",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/lrSe7uQiAsA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/lrSe7uQiAsA/hqdefault.jpg",
+      "thumb_text": "I AM THY SHIELD",
+      "duration_label": "~6 min",
+      "words": 928
+    },
     {
       "id": "0504",
       "slug": "psalm-90-17-morning-prayer-the-provision-table",
@@ -1555,6 +1578,29 @@
       "thumb_text": "LAY DOWN YOUR BURDENS \u00b7 A QUIET BEDTIME PRAYER",
       "duration_label": "58s",
       "words": 634
+    },
+    {
+      "id": "SHORT-SHIELDGENESIS15V1",
+      "slug": "short-shieldgenesis15v1-protection-prayer",
+      "file": "short-shieldgenesis15v1-protection-prayer.md",
+      "title": "Pray This Genesis 15:1 Prayer for Divine Protection | Protection Prayer #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T02:25:29Z",
+      "youtube_video_id": "Pz1hcrgZ7Lc",
+      "watch_url": "https://www.youtube.com/shorts/Pz1hcrgZ7Lc",
+      "youtu_be_url": "https://youtu.be/Pz1hcrgZ7Lc",
+      "shorts_url": "https://www.youtube.com/shorts/Pz1hcrgZ7Lc",
+      "studio_url": "https://studio.youtube.com/video/Pz1hcrgZ7Lc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Pz1hcrgZ7Lc/hqdefault.jpg",
+      "thumb_text": "THE COVENANT SHIELD \u00b7 GOD IS MY SHIELD",
+      "duration_label": "<60s",
+      "words": 21
     },
     {
       "id": "SHORT-PROVISIONDEUTERONOMY28V12",
@@ -4600,19 +4646,6 @@
         "words": 2031
       },
       {
-        "id": "0601",
-        "slug": "genesis-15-1-protection-prayer",
-        "file": "0601-genesis-15-1-protection-prayer.md",
-        "title": "Genesis 15:1 Protection Prayer | The Covenant Shield",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 928
-      },
-      {
         "id": "0602",
         "slug": "proverbs-18-10-strong-tower-prayer",
         "file": "0602-proverbs-18-10-strong-tower-prayer.md",
@@ -5027,17 +5060,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-shieldgenesis15v1",
-        "file": "0601-short-shieldgenesis15v1.yml",
-        "companion_longform_id": "0601",
-        "scripture": "Genesis 15:1",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldproverbs18v10",

@@ -2,7 +2,7 @@
 id: '0601'
 title: Genesis 15:1 Protection Prayer | The Covenant Shield
 slug: genesis-15-1-protection-prayer
-status: approved
+status: published
 channel: prayer8
 privacy: public
 format: longform
@@ -69,6 +69,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-13"
+published_at: "2026-11-13T05:33:41Z"
+youtube_video_id: "lrSe7uQiAsA"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Hearing the First Fear Not of Scripture
