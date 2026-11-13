@@ -1,0 +1,17 @@
+name: zz probe shared a (temporary)
+on:
+  push:
+    branches: ["arena/0dc77018-youtube-automation"]
+    paths: [".github/workflows/zz-probe-shared-a.yml"]
+permissions:
+  contents: read
+concurrency:
+  group: zz-shared-probe
+  cancel-in-progress: false
+  queue: max
+jobs:
+  one:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - run: echo "probe 1"; sleep 30
