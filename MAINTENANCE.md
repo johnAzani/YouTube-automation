@@ -107,6 +107,40 @@ job writes one and why every scene leaves a per-provider attempt digest
 
 ## 3. Incident log
 
+### 2026-11-13 — a stale leg authored a second job with an ID the queue already held
+
+**What happened.** The last serial production run was created at 1:17am WAT and
+its legs each worked from that commit. At 2:52pm The Praise Garden's leg
+(`a2204a6`) committed a new long-form numbered `0702` on Habakkuk 3:17-19. The
+queue had held a `0702` on that scripture since 7:22am (`5d47c3e`); the leg could
+not see it. It also overwrote the companion Short's script and two receipts.
+
+**Why it matters.** Production skips every job whose ID appears twice
+("duplicate job ID needs resolution"), so the channel had nothing publishable,
+and `tests/test_queue_integrity.py` failed on `main` for everyone.
+
+**Fix.** The later copy and its worksheet were removed, the Short manifest and
+script restored from the commit before, the receipts restored with
+`scripts/repair_clobbered_receipts.py --apply`. Legs created after PR #396 start
+from current `main`, so this needs a run created before 12:39pm WAT on
+13 November to happen again.
+
+**If it recurs.** `python -m pytest tests/test_queue_integrity.py -k unique`
+names the ID. Keep the job that was committed first; `git log --diff-filter=A
+-- 'content/queue/<id>-*'` shows which.
+
+### 2026-11-13 — the monitor would have published a scheduled video early
+
+**What happened.** Found by reading, before any scheduled upload existed.
+`scripts/sync_published_thumbnails.py` makes a private, processed, full-length
+long-form public when its receipt wants public. Scheduled publishing uploads
+private on purpose; the monitor runs when production finishes.
+
+**Fix.** That rule skips a video with `status.publishAt` on YouTube or
+`scheduled_publish: true` on its receipt. `tests/test_scheduled_publishing.py`
+lists every file allowed to write `privacyStatus` to a live video.
+Full account: `docs/SCHEDULED_PUBLISHING_2026-11-13.md`, "Second read".
+
 ### 2026-11-13 — ten channels in a row took nine hours and missed their slots
 
 **Symptom.** Videos landed 3.5 to 13.2 hours after their slot; 17 of 30 long-forms
