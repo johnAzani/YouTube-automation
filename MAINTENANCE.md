@@ -107,6 +107,32 @@ job writes one and why every scene leaves a per-provider attempt digest
 
 ## 3. Incident log
 
+### 2026-11-13 — one more waiting run was cancelled, by a run older than `queue: max`
+
+**What happened.** `queue: max` reached `main` at 2:01pm WAT (PR #398). At
+3:34pm the scheduled production run for the 3:14pm slot (43444015833) joined
+the `content-state` queue behind two others: the last serial production run,
+and a brain run (43413074778) created at 11:57am from a commit whose
+`gemini_brain.yml` had no `queue: max`. Both waited side by side for eight
+minutes, which the old rule (one waiting run) would not have allowed. At
+3:42:37pm the serial run ended, the brain run started, and in the same second
+the production run was cancelled with no job started.
+
+**Reading.** A run carries the concurrency settings of the workflow file at
+the commit it was created from. The likeliest cause is that the brain run,
+taking the lock under the old settings, cleared the other waiting run. It is
+not proven: GitHub does not record who cancelled a run. The earlier probe (six
+runs, two workflows, all with `queue: max`, none cancelled) fits this reading.
+
+**Effect.** Eight minutes of waiting lost, nothing else: the supervisor saw the
+cancelled run on its next pass and dispatched the nine unserved channels at
+3:45pm (run 43445725509), which waits behind the brain run.
+
+**What to watch.** Every run created after 2:01pm WAT on 13 November has the
+setting. If a waiting run is cancelled again with no older run in the queue,
+the reading above is wrong and `queue: max` does not do what its
+documentation says for this repository.
+
 ### 2026-11-13 — a stale leg authored a second job with an ID the queue already held
 
 **What happened.** The last serial production run was created at 1:17am WAT and
