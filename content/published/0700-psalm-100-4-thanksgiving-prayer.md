@@ -2,7 +2,7 @@
 id: '0700'
 title: Psalm 100:4 Thanksgiving Prayer | The Praise Garden
 slug: psalm-100-4-thanksgiving-prayer
-status: approved
+status: published
 channel: prayer9
 privacy: public
 format: longform
@@ -69,6 +69,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-13"
+published_at: "2026-11-13T06:21:33Z"
+youtube_video_id: "PAQX6PbcsCk"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Entering His Gates With Thanksgiving

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T05:34:31Z",
+  "generated_at": "2026-11-13T06:22:31Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,10 +7,10 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 152,
-    "published_longform": 69,
-    "published_shorts": 83,
-    "public_total": 150,
+    "published_total": 154,
+    "published_longform": 70,
+    "published_shorts": 84,
+    "public_total": 152,
     "queued_longform": 50,
     "queued_shorts": 36,
     "automations_ok": 8,
@@ -543,24 +543,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 0,
-        "published_longform": 0,
-        "published_shorts": 0,
-        "public_total": 0,
+        "published_total": 2,
+        "published_longform": 1,
+        "published_shorts": 1,
+        "public_total": 2,
         "queued_longform": 2,
         "queued_other": 0,
         "queued_shorts": 2
       },
-      "latest_video": null,
-      "next_queued_longform": {
+      "latest_video": {
         "id": "0700",
         "title": "Psalm 100:4 Thanksgiving Prayer | The Praise Garden",
-        "words": 902,
+        "format": "longform",
+        "youtube_video_id": "PAQX6PbcsCk",
+        "watch_url": "https://youtu.be/PAQX6PbcsCk",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T06:21:33Z"
+      },
+      "next_queued_longform": {
+        "id": "0701",
+        "title": "Psalm 103:1-5 Thanksgiving Prayer | The Praise Garden",
+        "words": 970,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm100v4",
-        "scripture": "Psalm 100:4",
+        "short": "short-gardenpsalm103v2",
+        "scripture": "Psalm 103:2",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -613,6 +621,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0700",
+      "slug": "psalm-100-4-thanksgiving-prayer",
+      "file": "0700-psalm-100-4-thanksgiving-prayer.md",
+      "title": "Psalm 100:4 Thanksgiving Prayer | The Praise Garden",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T06:21:33Z",
+      "youtube_video_id": "PAQX6PbcsCk",
+      "watch_url": "https://youtu.be/PAQX6PbcsCk",
+      "youtu_be_url": "https://youtu.be/PAQX6PbcsCk",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/PAQX6PbcsCk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/PAQX6PbcsCk/hqdefault.jpg",
+      "thumb_text": "ENTER WITH THANKS",
+      "duration_label": "~6 min",
+      "words": 902
+    },
+    {
+      "id": "SHORT-GARDENPSALM100V4",
+      "slug": "short-gardenpsalm100v4-thanksgiving-prayer",
+      "file": "short-gardenpsalm100v4-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 100:4 Prayer of Thanksgiving | Thanksgiving Prayer #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T05:42:21Z",
+      "youtube_video_id": "kNJqhfd532k",
+      "watch_url": "https://www.youtube.com/shorts/kNJqhfd532k",
+      "youtu_be_url": "https://youtu.be/kNJqhfd532k",
+      "shorts_url": "https://www.youtube.com/shorts/kNJqhfd532k",
+      "studio_url": "https://studio.youtube.com/video/kNJqhfd532k/edit",
+      "thumb_url": "https://i.ytimg.com/vi/kNJqhfd532k/hqdefault.jpg",
+      "thumb_text": "THE PRAISE GARDEN \u00b7 ENTER WITH THANKS",
+      "duration_label": "55s",
+      "words": 236
+    },
     {
       "id": "0601",
       "slug": "genesis-15-1-protection-prayer",
@@ -4711,19 +4765,6 @@
         "words": 1430
       },
       {
-        "id": "0700",
-        "slug": "psalm-100-4-thanksgiving-prayer",
-        "file": "0700-psalm-100-4-thanksgiving-prayer.md",
-        "title": "Psalm 100:4 Thanksgiving Prayer | The Praise Garden",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 902
-      },
-      {
         "id": "0701",
         "slug": "psalm-103-1-5-thanksgiving-prayer",
         "file": "0701-psalm-103-1-5-thanksgiving-prayer.md",
@@ -4735,6 +4776,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 970
+      },
+      {
+        "id": "0702",
+        "slug": "habakkuk-3-17-19-yet-i-will-rejoice-prayer",
+        "file": "0702-habakkuk-3-17-19-yet-i-will-rejoice-prayer.md",
+        "title": "Habakkuk 3:17-19 Yet I Will Rejoice Prayer | The Praise Garden",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 989
       },
       {
         "id": "0800",
@@ -5117,10 +5171,10 @@
         "target_window_utc": "08:44"
       },
       {
-        "short": "short-gardenpsalm100v4",
-        "file": "0700-short-gardenpsalm100v4.yml",
-        "companion_longform_id": "0700",
-        "scripture": "Psalm 100:4",
+        "short": "short-gardenpsalm103v2",
+        "file": "0701-short-gardenpsalm103v2.yml",
+        "companion_longform_id": "0701",
+        "scripture": "Psalm 103:2",
         "channel": "prayer9",
         "channel_name": "The Praise Garden",
         "status": "approved",
@@ -5128,10 +5182,10 @@
         "target_window_utc": "09:44"
       },
       {
-        "short": "short-gardenpsalm103v2",
-        "file": "0701-short-gardenpsalm103v2.yml",
-        "companion_longform_id": "0701",
-        "scripture": "Psalm 103:2",
+        "short": "short-gardenhabakkuk3v17",
+        "file": "0702-short-gardenhabakkuk3v17.yml",
+        "companion_longform_id": "0702",
+        "scripture": "Habakkuk 3:17-19",
         "channel": "prayer9",
         "channel_name": "The Praise Garden",
         "status": "approved",
