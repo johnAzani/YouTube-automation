@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T23:52:56Z",
+  "generated_at": "2026-11-13T00:41:30Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 143,
-    "published_longform": 64,
-    "published_shorts": 79,
-    "public_total": 141,
-    "queued_longform": 55,
-    "queued_shorts": 40,
+    "published_total": 145,
+    "published_longform": 65,
+    "published_shorts": 80,
+    "public_total": 143,
+    "queued_longform": 54,
+    "queued_shorts": 39,
     "automations_ok": 9,
     "automations_total": 10,
     "network_healthy": false
@@ -233,32 +233,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 13,
-        "published_longform": 7,
-        "published_shorts": 6,
-        "public_total": 13,
-        "queued_longform": 5,
+        "published_total": 15,
+        "published_longform": 8,
+        "published_shorts": 7,
+        "public_total": 15,
+        "queued_longform": 4,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0206",
-        "title": "2 Corinthians 10:3-5 Midnight Prayer | The Midnight Watch",
-        "format": "longform",
-        "youtube_video_id": "KLPvoXQOTI0",
-        "watch_url": "https://youtu.be/KLPvoXQOTI0",
-        "published_on": "2026-11-12",
-        "published_at": "2026-11-12T18:55:25Z"
-      },
-      "next_queued_longform": {
         "id": "0207",
         "title": "Ephesians 6:10-18 Midnight Prayer | The Midnight Watch",
-        "words": 1669,
+        "format": "longform",
+        "youtube_video_id": "ZDnZNjXPaQI",
+        "watch_url": "https://youtu.be/ZDnZNjXPaQI",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T00:40:37Z"
+      },
+      "next_queued_longform": {
+        "id": "0208",
+        "title": "Isaiah 54:17 No Weapon Formed Against Thee Midnight Prayer",
+        "words": 1350,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnight2corinthians10v3",
-        "scripture": "2 Corinthians 10:3-5",
+        "short": "short-midnightephesians6v10",
+        "scripture": "Ephesians 6:10-18",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -613,6 +613,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0207",
+      "slug": "ephesians-6-10-18-midnight-prayer",
+      "file": "0207-ephesians-6-10-18-midnight-prayer.md",
+      "title": "Ephesians 6:10-18 Midnight Prayer | The Midnight Watch",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T00:40:37Z",
+      "youtube_video_id": "ZDnZNjXPaQI",
+      "watch_url": "https://youtu.be/ZDnZNjXPaQI",
+      "youtu_be_url": "https://youtu.be/ZDnZNjXPaQI",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/ZDnZNjXPaQI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/ZDnZNjXPaQI/hqdefault.jpg",
+      "thumb_text": "ARMOUR OF GOD",
+      "duration_label": "~12 min",
+      "words": 1669
+    },
+    {
+      "id": "SHORT-MIDNIGHT2CORINTHIANS10V3",
+      "slug": "short-midnight2corinthians10v3-midnight-prayer",
+      "file": "short-midnight2corinthians10v3-midnight-prayer.md",
+      "title": "Pray This 2 Corinthians 10:3-5 Midnight Prayer | Of Night #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T23:58:17Z",
+      "youtube_video_id": "Id-Jv_t7VIU",
+      "watch_url": "https://www.youtube.com/shorts/Id-Jv_t7VIU",
+      "youtu_be_url": "https://youtu.be/Id-Jv_t7VIU",
+      "shorts_url": "https://www.youtube.com/shorts/Id-Jv_t7VIU",
+      "studio_url": "https://studio.youtube.com/video/Id-Jv_t7VIU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Id-Jv_t7VIU/hqdefault.jpg",
+      "thumb_text": "RISE \u00b7 IN THE",
+      "duration_label": "45s",
+      "words": 557
+    },
     {
       "id": "SHORT-MIDDAYISAIAH32V2",
       "slug": "short-middayisaiah32v2-midday-prayer",
@@ -4231,19 +4277,6 @@
         "words": 1120
       },
       {
-        "id": "0207",
-        "slug": "ephesians-6-10-18-midnight-prayer",
-        "file": "0207-ephesians-6-10-18-midnight-prayer.md",
-        "title": "Ephesians 6:10-18 Midnight Prayer | The Midnight Watch",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1669
-      },
-      {
         "id": "0208",
         "slug": "isaiah-54-17-no-weapon-formed-against-thee-midnight-prayer",
         "file": "0208-isaiah-54-17-no-weapon-formed-against-thee-midnight-prayer.md",
@@ -4709,17 +4742,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnight2corinthians10v3",
-        "file": "0206-short-midnight2corinthians10v3.yml",
-        "companion_longform_id": "0206",
-        "scripture": "2 Corinthians 10:3-5",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightephesians6v10",

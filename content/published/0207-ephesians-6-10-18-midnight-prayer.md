@@ -2,7 +2,7 @@
 id: '0207'
 title: Ephesians 6:10-18 Midnight Prayer | The Midnight Watch
 slug: ephesians-6-10-18-midnight-prayer
-status: approved
+status: published
 channel: prayer4
 privacy: public
 format: longform
@@ -76,6 +76,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-13"
+published_at: "2026-11-13T00:40:37Z"
+youtube_video_id: "ZDnZNjXPaQI"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Rising at the Twelfth Hour for the Watchtower
