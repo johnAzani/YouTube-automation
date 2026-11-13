@@ -14,4 +14,4 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
-      - run: echo "probe 1"; sleep 50
+      - run: echo "probe 2"; sleep 50
