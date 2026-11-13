@@ -2,7 +2,7 @@
 id: '0305'
 title: Proverbs 24:3-4 Daily Household Prayer | The Family Altar
 slug: proverbs-24-3-4-wisdom-house-prayer
-status: approved
+status: published
 channel: prayer5
 privacy: public
 format: longform
@@ -75,6 +75,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-13"
+published_at: "2026-11-13T09:57:40Z"
+youtube_video_id: "FJ_b_jKTx08"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Gathering Around the Family Altar
