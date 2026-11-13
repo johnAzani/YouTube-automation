@@ -95,6 +95,9 @@ the build if such a lead is ever committed.
 | Leg dies after the upload, before the receipt | The next leg finds the video by title and writes the receipt with the schedule YouTube reports. This relies on the channel's uploads list including its own private videos, which is expected but not yet seen here. |
 | Pinned comment | Posted at upload as now. If YouTube refuses it on the private video, the receipt records `pinned_comment_pending: true` and the monitor posts it once the video is public. |
 | Thumbnail, captions, playlist | Unchanged. All are set by video ID. A refused thumbnail is already retried by the monitor. |
+| Thumbnail pass in the monitor (`sync_published_thumbnails`) | It makes a private, processed, full-length video public when its receipt wants public. It now leaves a video alone when YouTube reports a `publishAt` for it or its receipt says `scheduled_publish: true`. See "Second read". |
+| Comment owed, receipt edit lost | Before posting, the monitor asks YouTube whether the channel has already commented on the video. Three refusals end the attempt (`pinned_comment_failed: true`). |
+| `publish_at:` on the job, unquoted | YAML reads it as a date object; it is converted to text before the request. |
 | Short | Unchanged: uploaded and public when its leg runs. See "Not built". |
 | Dashboard (`docs/network-state.json`) | A scheduled video shows privacy `scheduled`. |
 | Comment replies | Unchanged: a private video has no comments to answer. |
@@ -103,22 +106,40 @@ the build if such a lead is ever committed.
 
 Three steps, in this order.
 
-**1. One trial, one channel.** After this change is merged and no production run
-is waiting:
+**1. One trial, one channel.** Started on 13 November by a line on one queued
+job, because the build sandbox may not start workflows (`workflow_dispatch`
+answers 403 there):
 
 ```
-gh workflow run produce.yml -f channels=prayer2 -f publish_at=2026-11-14T14:14:00Z
+content/queue/0406-philippians-4-6-7-peace-that-passeth-understanding-prayer.md
+publish_at: next-slot
 ```
 
-The time must be at least 15 minutes after the leg will finish and no later than
-the next production slot (06:14, 14:14 or 19:14 UTC); otherwise the video is
-public at once. Using the slot time itself, as above, makes the trial video that
-slot's release for the channel: the receipt is dated 14:14, so the scheduled run
-for that slot skips the channel. Check:
-the receipt carries `scheduled_publish: true`; the video is private in YouTube
-Studio with the right time, thumbnail, captions and playlist; at the time it goes
-public; the next monitor run clears the flag; whether the pinned comment was
-posted at upload or afterwards.
+That is The Healing Balm's next long-form. Whichever run produces it uploads it
+private and YouTube publishes it on the next production slot after the upload
+(7:14am, 3:14pm or 8:14pm WAT). Less than 15 minutes before a slot it is simply
+public at once. The channel was chosen because it had already released that day,
+so holding one video costs it nothing, and its last thumbnail went through.
+Because the receipt is dated at that slot, the scheduled run for the slot skips
+the channel: the trial video is that slot's release.
+
+What to check afterwards: the receipt carries `scheduled_publish: true` and the
+slot time in `published_at`; the video is private in YouTube Studio with the
+right time, thumbnail, captions and playlist; at the time it goes public; the
+next monitor run sets `scheduled_publish: false` and `publish_confirmed_at`;
+whether the channel's comment was posted at upload (no `pinned_comment_pending`)
+or afterwards.
+
+Other ways to schedule one video, all held to the same rules (a time with a
+timezone at least 15 minutes ahead and no later than the next production slot,
+or the word `next-slot`):
+
+```
+gh workflow run produce.yml -f channels=prayer6 -f publish_at=next-slot
+gh api --method POST repos/johnAzani/YouTube-automation/dispatches \
+       -f event_type=publish-now -f 'client_payload[channels]=prayer6' \
+       -f 'client_payload[publish_at]=next-slot'
+```
 
 **2. Move the crons and set the lead, in one change.** With a lead of 4 hours
 30 minutes the public times stay where they are:
@@ -146,7 +167,118 @@ in about two hours on measured leg times, so the last channel is ready roughly
 been observed live: no five-lane run had started when this was written. A leg
 that does miss publishes at once, minutes late rather than hours.
 
+## Second read (13 November, afternoon)
+
+A second pass over every file that touches a live video's privacy, a receipt's
+date or the pinned comment, before the first live upload. Four things were wrong
+or missing; all four are fixed in the same change as the trial.
+
+**1. The monitor would have published a scheduled video early.**
+`scripts/sync_published_thumbnails.py` has a hygiene rule: a long-form whose
+receipt wants `public`, that is at least three minutes long, processed, and
+private or unlisted on YouTube, is made public. A scheduled video is exactly
+that. The rule only runs for receipts still waiting for a thumbnail, and on
+13 November that was 32 of 76 long-form receipts:
+
+| Channel | Long-form receipts | Thumbnail still pending | Latest reason |
+|---|---|---|---|
+| The Secret Place | 12 | 0 | |
+| The Morning Altar | 20 | 4 | rate limit |
+| The Midday Watch | 12 | 0 | |
+| The Midnight Watch | 9 | 9 | permission |
+| The Family Altar | 6 | 6 | permission |
+| The Healing Balm | 6 | 3 | |
+| The Provision Table | 6 | 5 | rate limit |
+| The Covenant Shield | 3 | 3 | permission |
+| The Praise Garden | 1 | 1 | permission |
+| The Guided Path | 1 | 1 | permission |
+
+A receipt blocked on permission is skipped by that pass, and a rate-limited one
+waits out its cooldown, so not all 32 would have been hit. Any that was would
+have gone public at the next monitor run, and the monitor runs when production
+finishes. The rule now skips a video YouTube is holding (`status.publishAt`
+present) or whose receipt says `scheduled_publish: true`. A test also lists
+every file that writes `privacyStatus` to a live video, so a new one cannot be
+added without deciding what it does with a scheduled video. The writers today:
+`confirm_scheduled_publish.py` (owns scheduled videos), `sync_published_thumbnails.py`
+(guarded), `cleanup_duplicate_shorts.py` (a manual tool, Shorts only, makes
+private), and the upload itself.
+
+**2. The owed comment could be posted twice, or never.** The receipt was the
+only record that the comment had been posted. The monitor's commit skips a
+receipt that changed on `main` during its pass and can fail to push; either way
+the next pass would have posted the comment again. And a comment YouTube refused
+at confirmation was never retried, because the receipt no longer said
+`scheduled_publish: true`. Now the monitor asks YouTube first whether the
+channel's own comment is already under the video (2 quota units), retries a
+refused comment on later passes, and stops after three refusals.
+
+**3. A time written on the job skipped every check.** `publish_at:` in a job's
+front matter went straight into the request: no 15-minute margin, no limit, and
+an unquoted value is a date object the request cannot carry. A date weeks ahead
+would have kept the video private that long and, because the receipt is dated
+with it, stopped the channel being produced for the whole time. It now goes
+through the same checks as a time given on a dispatch.
+
+**4. A refused time on such a job failed the release.** The fallback to "public
+at once" only covered times the pipeline chose itself.
+
+Read and found correct, no change:
+
+| What | Finding |
+|---|---|
+| `post_pastoral_pinned_comment` | Returns the comment ID on success and nothing on failure, so the receipt's `pinned_comment_pending` means what it says. |
+| Monitor commit step | Carries receipt edits made by its own steps onto `main`, for receipts that did not change on `main` meanwhile. A lost edit is redone on the next pass (confirmation is repeatable; the comment is now checked first). |
+| `retrofit_published_metadata`, `update_live_video_metadata`, the Short title fix | Send `snippet` (and `localizations`) only. They cannot change privacy or the publish time. |
+| `pipeline/comment_replies.py` | Its `published_at` is the comment's time, not the video's. |
+| `scripts/metrics_snapshot.py` | Skips anything YouTube does not report as public. |
+| `pipeline/performance_feedback.py` | Ignores a row whose date is after the snapshot. |
+| `scripts/release_report.py` | Counts a scheduled receipt as a release and closes that job's stale failure issue. Correct: the video is uploaded and will go public. |
+| `scripts/pipeline_watchdog.py` | Per-channel age was already clamped. The network line printed a negative age for a receipt dated ahead; it now says "scheduled; public in N h". |
+| Shorts (`recent_short_published_within`, `_recent_short_visuals`) | Read Short receipts only. |
+| Fact-check worksheet | Embeds the job file's hash. Editing a queued job (as the trial line does) needs `python scripts/factcheck.py <id> --force`, or a test fails. |
+
+Still only confirmable by the trial: that YouTube accepts a comment, a
+thumbnail, captions and a playlist entry on a private video; that the channel's
+uploads list includes its own private videos; that `publishAt` fires on the
+minute.
+
+### What the trial costs the channel
+
+A receipt dated at a slot serves that slot. A video uploaded in the 3:14pm
+slot's run and held for 8:14pm therefore serves both: The Healing Balm gets one
+long-form across those two slots instead of two. That is the price of a trial
+without moving the crons, and it is why the general switch is slot + lead with
+the crons moved earlier, not "hold for the next slot".
+
 ## Not built
+
+- **Per-channel long-form times (step 7): decided, not built.** Every channel
+  already declares the time of day it is for, and nothing uses it for long-form:
+
+  | Channel | Declared time (WAT) |
+  |---|---|
+  | The Morning Altar | 7:14am |
+  | The Covenant Shield | 9:44am |
+  | The Praise Garden | 10:44am |
+  | The Provision Table | 11:44am |
+  | The Midday Watch | 1:14pm |
+  | The Secret Place | 3:14pm |
+  | The Healing Balm | 4:44pm |
+  | The Family Altar | 6:14pm |
+  | The Guided Path | 7:44pm |
+  | The Midnight Watch | 12:14am |
+
+  (`short_target_window_utc` in `pipeline/channel_capabilities.py`; the brain
+  writes it into Short manifests and the dashboard shows it.) Decision: once the
+  trial has passed and the crons are moved, one of each channel's three daily
+  long-forms goes public at its declared time and the other two stay on the
+  shared slots. That needs a per-channel public time in `publish_target()`
+  instead of one lead for all, and a slot rule that counts a receipt by the slot
+  it was produced for (`uploaded_at`), so a time later than the next slot does
+  not cancel that slot. Whether the declared times are the right ones is then
+  measured, not assumed: first-day views per channel per public time from
+  `scripts/metrics_snapshot.py`, compared after four weeks.
 
 - **Shorts on their own times.** Each channel declares a Short time
   (`short_target_window_utc` in `pipeline/channel_capabilities.py`), the brain
@@ -155,10 +287,5 @@ that does miss publishes at once, minutes late rather than hours.
   the Short receipt writer and the confirm script do not handle a scheduled
   Short yet. Until then a Short is public when its leg runs, which with the
   crons moved is about 4.5 hours earlier in the day than now.
-- **Per-channel long-form times.** The repository has no data to choose them
-  from: the daily metrics (`scripts/metrics_snapshot.py`: views, likes, comments
-  per video) say nothing about the hour viewers watch. Once scheduled publishing
-  is live, rotate each channel through the three slots for four weeks and compare
-  first-day views per slot; choose from that.
 - **A receipt for a rejected scheduled video is not moved back to the queue.**
   It is marked failed and the channel is produced again from the next job.

@@ -5,6 +5,16 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-13 — scheduled publishing: four faults found before the first live upload, and the trial
+
+- `scripts/sync_published_thumbnails.py` made any private, processed, full-length long-form public when its receipt wanted public. A scheduled upload is private on purpose, so the monitor would have published it early whenever its thumbnail was still pending (32 of 76 long-form receipts on 13 November). It now skips a video with a `publishAt` on YouTube or `scheduled_publish: true` on its receipt.
+- `scripts/confirm_scheduled_publish.py` asks YouTube whether the channel's comment is already under the video before posting an owed one (a lost receipt edit used to mean a second copy), retries a refused comment on later passes, and stops after three refusals (`pinned_comment_failed: true`).
+- `publish_at:` in a job's front matter now goes through the same checks as a dispatch time: at least 15 minutes ahead, no later than the next production slot, otherwise public at once. An unquoted value (a YAML date) is sent as text, and a time YouTube refuses falls back to public at once.
+- A publish time may be the word `next-slot`. `produce.yml` also reads it from the `publish-now` repository_dispatch payload (`client_payload[publish_at]`).
+- Trial: `content/queue/0406-philippians-4-6-7-peace-that-passeth-understanding-prayer.md` (The Healing Balm) carries `publish_at: next-slot`. It is the first video ever uploaded with a publish time.
+- Receipt `0601-genesis-15-1-protection-prayer.md`, overwritten by the last serial run, restored.
+- Details: `docs/SCHEDULED_PUBLISHING_2026-11-13.md`, "Second read".
+
 ## 2026-11-13 — scheduled publishing, built and switched off
 
 - A long-form can be uploaded private with a publish time so YouTube makes it public on the slot minute. `pipeline/publish_schedule.py` decides: an explicit `publish_at` on a manual dispatch of `produce.yml`, otherwise the production slot plus `PUBLISH_LEAD_MINUTES` (`scripts/produce_plan.py`, **0 = off**, overridable by the repository variable `PRODUCE_PUBLISH_LEAD_MINUTES`). Less than 15 minutes to go, a past time, an unreadable value or any error publishes at once. A lead that reaches the next slot is refused.

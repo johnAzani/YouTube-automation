@@ -316,6 +316,12 @@ def check_queues(report: Report, max_publish_age: timedelta = MAX_PUBLISH_AGE,
                 f"last publish: {path.name} on {when.date().isoformat()} "
                 f"(within the last {age.total_seconds() / 3600:.0f}h; the receipt "
                 f"records a date, not a time)")
+        elif age < timedelta(0):
+            # A scheduled upload: the receipt carries the time it goes public.
+            report.checked.append(
+                f"last publish: {path.name} on {when.date().isoformat()} "
+                f"(scheduled; public in {-age.total_seconds() / 3600:.1f}h)")
+            age = timedelta(0)
         else:
             report.checked.append(
                 f"last publish: {path.name} on {when.date().isoformat()} "

@@ -491,6 +491,11 @@ def sync_published_thumbnails(
                 and dur_sec >= 180
                 and up_status == "processed"
                 and live_priv in {"private", "unlisted"}
+                # Private on purpose: YouTube is holding it for its publish
+                # time. scripts/confirm_scheduled_publish.py owns that video
+                # (and publishes it itself if YouTube is late).
+                and not st.get("publishAt")
+                and str(doc.meta.get("scheduled_publish")).strip().lower() != "true"
             ):
                 try:
                     yt.videos().update(

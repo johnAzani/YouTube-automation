@@ -553,28 +553,201 @@ def test_inspecting_a_scheduled_video_reports_its_publish_time(monkeypatch):
     assert "publish_at" not in up.inspect_existing_longform("abcdefghijk", title)
 
 
-@pytest.mark.parametrize("line, sent", [
-    ('publish_at: "2099-01-01T14:14:00Z"', "2099-01-01T14:14:00Z"),
-    ("publish_at: 2099-01-01T14:14:00Z", "2099-01-01T14:14:00Z"),      # YAML makes this a datetime
-    ("publish_at: 2099-01-01T15:14:00+01:00", "2099-01-01T14:14:00Z"),
-])
-def test_a_publish_time_written_on_the_job_is_sent_as_text(uploader, tmp_path, line, sent):
-    """The oldest way to schedule one video: a line in its own front matter."""
-    up, fake, _doc, video = uploader
+# ------------------------------------------- a time written on the job itself
+
+def stamped_job(tmp_path, line: str):
     job = tmp_path / "0902-stamped.md"
     job.write_text(JOB.replace("privacy: public\n", line + "\n"), encoding="utf-8")
-    result = up.upload(doc_for(job), video)
-    assert fake.bodies[0]["status"] == {**fake.bodies[0]["status"],
-                                        "privacyStatus": "private", "publishAt": sent}
-    assert result.scheduled_for == sent
+    return doc_for(job)
+
+
+@pytest.mark.parametrize("quoted", [True, False])   # unquoted: YAML makes it a datetime
+def test_a_publish_time_written_on_the_job_is_sent_as_text(uploader, tmp_path, quoted):
+    """The oldest way to schedule one video: a line in its own front matter."""
+    up, fake, _doc, video = uploader
+    when = soon()
+    line = f'publish_at: "{when}"' if quoted else f"publish_at: {when}"
+    result = up.upload(stamped_job(tmp_path, line), video)
+    assert fake.bodies[0]["status"]["privacyStatus"] == "private"
+    assert fake.bodies[0]["status"]["publishAt"] == when
+    assert result.scheduled_for == when
+
+
+def test_the_job_may_simply_say_next_slot(uploader, tmp_path):
+    up, fake, _doc, video = uploader
+    now = datetime.now(UTC)
+    following = produce_plan.next_slot(now)
+    if following - now < timedelta(minutes=produce_plan.PUBLISH_MARGIN_MINUTES + 2):
+        pytest.skip("within minutes of a production slot")
+    result = up.upload(stamped_job(tmp_path, "publish_at: next-slot"), video)
+    want = following.strftime("%Y-%m-%dT%H:%M:%SZ")
+    assert fake.bodies[0]["status"]["publishAt"] == want and result.scheduled_for == want
+
+
+def test_next_slot_is_the_slot_after_now_and_never_closer_than_the_margin():
+    resolve = publish_schedule.resolve_longform_publish_at
+    assert resolve(at(13, 16, 40), environ={}, requested="next-slot") == "2026-11-13T19:14:00Z"
+    assert resolve(at(13, 19, 20), environ={}, requested="Next-Slot") == "2026-11-14T06:14:00Z"
+    assert resolve(at(13, 16, 40), environ={"PUBLISH_AT": "next-slot"}) == "2026-11-13T19:14:00Z"
+    # Twelve minutes before the slot there is no room left: public now.
+    assert resolve(at(13, 19, 2), environ={}, requested="next-slot") is None
+
+
+def test_a_time_on_the_job_obeys_the_same_limits_and_outranks_the_run():
+    resolve = publish_schedule.resolve_longform_publish_at
+    now = at(13, 16, 40)
+    # Past the next slot (19:14): refused, public now.
+    assert resolve(now, environ={}, requested="2026-11-14T14:14:00Z") is None
+    # Too close, already past, or no timezone: public now.
+    assert resolve(now, environ={}, requested="2026-11-13T16:50:00Z") is None
+    assert resolve(now, environ={}, requested="2026-11-13T12:00:00Z") is None
+    assert resolve(now, environ={}, requested="2026-11-13T18:00:00") is None
+    # The job names one video; the environment names the whole run.
+    assert resolve(now, environ={"PUBLISH_AT": "2026-11-13T18:00:00Z", "PUBLISH_LEAD_MINUTES": "270"},
+                   requested="2026-11-13T19:14:00Z") == "2026-11-13T19:14:00Z"
+    # A refused time on the job does not fall through to another source.
+    assert resolve(now, environ={"PUBLISH_AT": "2026-11-13T18:00:00Z"},
+                   requested="2026-11-20T18:00:00Z") is None
+
+
+def test_a_time_too_far_ahead_on_the_job_publishes_now(uploader, tmp_path):
+    up, fake, _doc, video = uploader
+    result = up.upload(stamped_job(tmp_path, 'publish_at: "2099-01-01T14:14:00Z"'), video)
+    assert fake.bodies[0]["status"]["privacyStatus"] == "public"
+    assert "publishAt" not in fake.bodies[0]["status"] and result.scheduled_for == ""
 
 
 def test_a_refused_time_written_on_the_job_still_releases_the_video(uploader, tmp_path):
     up, fake, _doc, video = uploader
     fake.refuse = True
-    job = tmp_path / "0903-stamped.md"
-    job.write_text(JOB.replace("privacy: public\n", 'publish_at: "2099-01-01T14:14:00Z"\n'),
-                   encoding="utf-8")
-    result = up.upload(doc_for(job), video)
+    result = up.upload(stamped_job(tmp_path, f'publish_at: "{soon()}"'), video)
     assert len(fake.bodies) == 2 and "publishAt" not in fake.bodies[1]["status"]
     assert result.privacy_status == "public" and result.scheduled_for == ""
+
+
+def test_the_word_is_never_sent_to_youtube_for_an_upload_that_stays_private(uploader, tmp_path):
+    up, fake, _doc, video = uploader
+    up.CONFIG.auto_publish = False          # private stays private: no schedule applies
+    up.upload(stamped_job(tmp_path, "publish_at: next-slot"), video)
+    assert fake.bodies[0]["status"]["privacyStatus"] == "private"
+    assert "publishAt" not in fake.bodies[0]["status"]
+
+
+# ------------------------------------ nothing else may publish a held video early
+
+def test_the_thumbnail_pass_does_not_promote_a_video_held_for_its_time():
+    """`sync_published_thumbnails` makes a private long-form public when its
+    receipt wants public. A scheduled video is private on purpose."""
+    source = (ROOT / "scripts" / "sync_published_thumbnails.py").read_text(encoding="utf-8")
+    block = source[source.index("# 1. Promote valid full-length prayers"):
+                   source.index("yt.videos().update(", source.index("# 1. Promote valid"))]
+    assert 'not st.get("publishAt")' in block
+    assert 'doc.meta.get("scheduled_publish")' in block
+
+
+def test_only_the_confirmation_and_the_thumbnail_pass_can_change_privacy():
+    """Every place that writes `privacyStatus` to a live video is known. A new
+    one has to decide what it does with a scheduled video before it merges."""
+    writers = set()
+    for folder in ("pipeline", "scripts"):
+        for path in sorted((ROOT / folder).glob("*.py")):
+            text = path.read_text(encoding="utf-8")
+            if "videos().update(" in text.replace("\n", "").replace(" ", "") \
+                    or ".update(part=" in text:
+                if '"privacyStatus"' in text:
+                    writers.add(f"{folder}/{path.name}")
+    assert writers == {
+        "pipeline/upload.py",                      # snippet-only update; insert sets privacy
+        "scripts/cleanup_duplicate_shorts.py",     # manual tool, Shorts, makes private
+        "scripts/confirm_scheduled_publish.py",    # owns scheduled videos
+        "scripts/sync_published_thumbnails.py",    # guarded above
+    }
+
+
+# ------------------------------------------------------- the owed comment, once
+
+class CommentingYouTube(StatusYouTube):
+    """Also answers who the channel is and what is already under the video."""
+
+    def __init__(self, status, existing_authors=(), refuse_comment=False):
+        super().__init__(status)
+        self.existing, self.refuse_comment, self.lists = list(existing_authors), refuse_comment, 0
+
+    def channels(self):
+        return types.SimpleNamespace(list=lambda part, mine: types.SimpleNamespace(
+            execute=lambda: {"items": [{"id": "UC-own"}]}))
+
+    def commentThreads(self):
+        outer = self
+
+        class Threads:
+            def list(self, **kwargs):
+                outer.lists += 1
+                items = [{"snippet": {"topLevelComment": {"snippet": {
+                    "authorChannelId": {"value": author}}}}} for author in outer.existing]
+                return types.SimpleNamespace(execute=lambda: {"items": items})
+
+            def insert(self, part, body):
+                def execute():
+                    if outer.refuse_comment:
+                        raise RuntimeError("403 commentsDisabled")
+                    outer.comments.append(body)
+                    outer.existing.append("UC-own")
+                    return {"id": "comment-1"}
+                return types.SimpleNamespace(execute=execute)
+
+        return Threads()
+
+
+PUBLIC = {"privacyStatus": "public", "uploadStatus": "processed"}
+
+
+def test_a_comment_that_is_already_there_is_not_posted_again(scheduled):
+    """The pass posted it, then its receipt edit was lost (push refused)."""
+    dest, published, planned = scheduled
+    before = dest.read_text(encoding="utf-8")
+    youtube = CommentingYouTube(PUBLIC, existing_authors=["UC-viewer"])
+    run_confirm(published, planned + timedelta(minutes=3), youtube)
+    assert len(youtube.comments) == 1
+    dest.write_text(before, encoding="utf-8")            # the edit never reached main
+    rows = run_confirm(published, planned + timedelta(hours=3), youtube)
+    assert len(youtube.comments) == 1                    # asked YouTube, did not repeat it
+    assert rows[0]["pinned_comment"] == "posted"
+    assert "pinned_comment_pending" not in frontmatter(dest)
+
+
+def test_a_viewers_comment_is_not_mistaken_for_the_channels(scheduled):
+    dest, published, planned = scheduled
+    youtube = CommentingYouTube(PUBLIC, existing_authors=["UC-viewer", "UC-another"])
+    run_confirm(published, planned + timedelta(minutes=3), youtube)
+    assert len(youtube.comments) == 1
+
+
+def test_a_refused_comment_is_retried_on_later_passes_then_given_up(scheduled):
+    dest, published, planned = scheduled
+    youtube = CommentingYouTube(PUBLIC, refuse_comment=True)
+    rows = run_confirm(published, planned + timedelta(minutes=3), youtube)
+    meta = frontmatter(dest)
+    assert meta["scheduled_publish"] is False and meta["pinned_comment_pending"] is True
+    assert meta["pinned_comment_attempts"] == 1 and "still owed" in rows[0]["pinned_comment"]
+    # The publish is settled; only the comment is still owed, and it is revisited.
+    rows = run_confirm(published, planned + timedelta(hours=3), youtube)
+    assert rows[0]["state"] == "confirmed; comment owed"
+    assert frontmatter(dest)["pinned_comment_attempts"] == 2
+    rows = run_confirm(published, planned + timedelta(hours=6), youtube)
+    meta = frontmatter(dest)
+    assert "given up" in rows[0]["pinned_comment"]
+    assert meta["pinned_comment_failed"] is True and "pinned_comment_pending" not in meta
+    assert run_confirm(published, planned + timedelta(hours=9), youtube) == []
+    assert youtube.updates == []
+
+
+def test_a_comment_refused_once_is_posted_on_the_next_pass(scheduled):
+    dest, published, planned = scheduled
+    youtube = CommentingYouTube(PUBLIC, refuse_comment=True)
+    run_confirm(published, planned + timedelta(minutes=3), youtube)
+    youtube.refuse_comment = False
+    rows = run_confirm(published, planned + timedelta(hours=3), youtube)
+    meta = frontmatter(dest)
+    assert rows[0]["pinned_comment"] == "posted" and len(youtube.comments) == 1
+    assert "pinned_comment_pending" not in meta and "pinned_comment_attempts" not in meta

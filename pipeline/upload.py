@@ -404,14 +404,24 @@ def upload(
             publish_at = str(publish_at)
     # What this upload would be with no publish time at all.
     immediate_privacy = "public" if (CONFIG.auto_publish and privacy == "private") else privacy
-    if not publish_at and not is_short and immediate_privacy == "public":
+    if not is_short and immediate_privacy == "public":
         # A long-form that would go public right now may instead go public on
-        # its slot minute (pipeline/publish_schedule.py; off unless configured).
+        # its slot minute (pipeline/publish_schedule.py; off unless configured),
+        # or at a time written on the job. Either way the time is checked there:
+        # too close, unreadable or past the next production slot means now.
         # Never for an upload that is meant to stay private or unlisted: a
         # publish time would make it public.
         from .publish_schedule import resolve_longform_publish_at
 
-        publish_at = resolve_longform_publish_at()
+        publish_at = resolve_longform_publish_at(requested=publish_at)
+    elif publish_at:
+        # A Short, or an upload meant to stay private or unlisted, keeps the
+        # time it was given, but only a real time can go in the request.
+        from .publish_schedule import parse_instant
+
+        if parse_instant(publish_at) is None:
+            print(f"[upload] publish_at={publish_at!r} is not a time with a timezone; ignored")
+            publish_at = None
 
     if publish_at:
         privacy = "private"
