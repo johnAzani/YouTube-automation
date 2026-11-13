@@ -5,6 +5,14 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-13 — production legs start from current main
+
+- Each production leg now fast-forwards to `origin/main` before it reads queue or receipt state, and stops with a `Stale checkout` error if it cannot. `actions/checkout` had pinned every leg to the commit its run was created at; with runs waiting up to 401 minutes for the `content-state` lock and a ten-channel matrix holding it for 537, a leg routinely started on a tree older than its own channel's previous publish. Runs on a ref other than `main` keep the commit they asked for. `START_SHA` is written after the fast-forward.
+- Measured effect of the stale tree, 8–13 November: four publish commits (`e19ed94`, `c34235b`, `56983d3`, `1e4286c`) re-stamped an existing long-form receipt with a later `published_at` and reset its thumbnail state, and three of them replaced a real Short receipt with a recovered stub after rendering that Short a second time. Video IDs are unchanged; there was no duplicate upload. The seven receipts are not repaired by this change.
+- With the commit guard from the previous entry, the same stale leg would be refused instead — together with the receipt for the video it had just uploaded. A test reproduces that; no production run has used the guard yet.
+- Added `tests/test_produce_leg_rehearsal.py`, which runs the refresh and commit steps taken from `produce.yml` against a local bare repository: stale, current, off-`main`, unreachable and diverged checkouts, and two channels whose pushes race. `max-parallel` remains 1.
+- Details, timeline and what is left for the owner: `docs/STALE_CHECKOUT_RECEIPTS_2026-11-13.md`.
+
 ## 2026-11-13 — future Short narration and footage
 
 - Prayer Short cards use the complete narrated text and audio-bound word alignment, rather than condensed authored phrases. Production requires complete local alignment; estimates are limited to preview.

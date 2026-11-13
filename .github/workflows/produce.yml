@@ -277,8 +277,49 @@ jobs:
               raise SystemExit(1)
           PY
 
-      - name: Snapshot starting commit for isolated content staging
-        run: echo "START_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+      - name: Advance to latest main and snapshot starting commit
+        # `actions/checkout` pins every leg of a run to the commit the RUN was
+        # created at, not to main as it is when the LEG starts. A run can wait
+        # hours for the content-state lock (401 minutes on 13 November) and a
+        # ten-channel matrix then holds it for about nine more, so a leg routinely
+        # began on a tree that predated its own channel's previous publish. On
+        # that tree the last video still looked queued and the last Short still
+        # looked unpublished: the leg rendered the Short again, was stopped from
+        # uploading it only by the title match against YouTube, and its commit
+        # re-stamped or replaced receipts that already existed (e19ed94, c34235b,
+        # 56983d3, 1e4286c). The commit guard now refuses that commit — and with
+        # it the receipt for the video the leg really did upload.
+        #
+        # So start from current main. Fail closed if that cannot be done: a leg
+        # that cannot fetch main cannot record what it publishes either. Runs on
+        # another ref (a branch rehearsal) keep the commit they asked for.
+        # See docs/STALE_CHECKOUT_RECEIPTS_2026-11-13.md.
+        run: |
+          set -u
+          pinned="$(git rev-parse HEAD)"
+          if [ "${GITHUB_REF:-}" != "refs/heads/main" ]; then
+            echo "::notice title=Checkout not advanced::this run is on ${GITHUB_REF:-an unknown ref}, not main; keeping commit $pinned"
+          else
+            advanced=false
+            for attempt in 1 2 3; do
+              if git fetch --quiet --no-tags origin main \
+                 && git merge --quiet --ff-only FETCH_HEAD; then
+                advanced=true
+                break
+              fi
+              echo "::warning::could not fast-forward to origin/main (attempt $attempt)"
+              sleep $((attempt * 5))
+            done
+            if [ "$advanced" != "true" ]; then
+              echo "::error title=Stale checkout::could not advance $pinned to current main, so this leg cannot tell what its channel has already published. Nothing was rendered or uploaded."
+              exit 1
+            fi
+          fi
+          head="$(git rev-parse HEAD)"
+          if [ "$head" != "$pinned" ]; then
+            echo "::notice title=Checkout advanced::$pinned -> $head (main moved after this run was created)"
+          fi
+          echo "START_SHA=$head" >> "$GITHUB_ENV"
 
       - uses: actions/setup-python@v5
         with:
