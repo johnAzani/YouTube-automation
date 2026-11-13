@@ -1,0 +1,287 @@
+{
+  "key": "short-morningpsalm119v147",
+  "channel": "prayer2",
+  "psalm": 119,
+  "title": [
+    "RISE TO THE DAWN",
+    "A PRAYER AT FIRST LIGHT"
+  ],
+  "poster": [
+    "THE MORNING ALTAR",
+    "PSALM 119:147",
+    "A MOMENT OF CALM",
+    "BEGIN YOUR DAY HERE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "serene mountain lake dawn mist",
+    "soft golden morning light through window",
+    "empty morning forest path sunrise",
+    "dew on petals morning sunlight",
+    "horizon gradient sunrise colors",
+    "gentle clouds moving at dawn",
+    "wide angle morning landscape golden hour"
+  ],
+  "scenes": [
+    {
+      "a": "Welcome the morning light",
+      "img": "short-morningpsalm119v147-scene-01.jpg",
+      "kicker": "RISE WITH THE LIGHT",
+      "sub": "FIND PEACE BEFORE THE DAY BEGINS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I rise before dawn",
+      "img": "short-morningpsalm119v147-scene-02.jpg",
+      "kicker": "PSALM 119:147",
+      "sub": "THE ANCIENT PROMISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "and cry for help",
+      "img": "short-morningpsalm119v147-scene-03.jpg",
+      "kicker": "A HUMBLE PLEA",
+      "sub": "YOUR HEART SPEAKS TO THE DIVINE",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "I have put my hope",
+      "img": "short-morningpsalm119v147-scene-04.jpg",
+      "kicker": "STEADFAST HOPE",
+      "sub": "RESTING IN THE ETERNAL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "in your word",
+      "img": "short-morningpsalm119v147-scene-05.jpg",
+      "kicker": "STRENGTH IN PROMISE",
+      "sub": "TRUTH AS YOUR ANCHOR",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May your presence settle",
+      "img": "short-morningpsalm119v147-scene-06.jpg",
+      "kicker": "DIVINE CALM",
+      "sub": "BREATHE IN THE QUIET",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Carry this peace forward",
+      "img": "short-morningpsalm119v147-scene-07.jpg",
+      "kicker": "YOUR MORNING JOURNEY",
+      "sub": "WALK WITH INTENTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "Welcome the morning light, releasing all the heavy weight of yesterday into the quiet, cooling air of this new dawn."
+    ],
+    [
+      15,
+      35,
+      "I rise before dawn and cry for help; I have put my hope in your word."
+    ],
+    [
+      35,
+      55,
+      "May your presence settle over your spirit like the morning mist, clearing away the fog of worry and scattered thoughts."
+    ],
+    [
+      55,
+      75,
+      "You are held by a promise that never fades, a steady light that guides your feet onto the path of grace."
+    ],
+    [
+      75,
+      95,
+      "Carry this peace forward into every conversation and every task today, knowing you are never navigating this world alone."
+    ],
+    [
+      95,
+      115,
+      "Remain anchored in the truth you have heard this morning, letting your heart beat in rhythm with the stillness of the dawn."
+    ],
+    [
+      115,
+      120,
+      "Subscribe to continue this walk."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "WELCOME THE",
+        "MORNING LIGHT",
+        "RELEASE THE",
+        "HEAVY WEIGHT"
+      ],
+      [
+        "MORNING LIGHT"
+      ],
+      "PSALM 119:147"
+    ],
+    [
+      15,
+      35,
+      [
+        "I RISE BEFORE DAWN",
+        "AND CRY FOR HELP",
+        "I HAVE PUT",
+        "MY HOPE",
+        "IN YOUR WORD"
+      ],
+      [
+        "MY HOPE"
+      ],
+      "PSALM 119:147"
+    ],
+    [
+      35,
+      55,
+      [
+        "MAY YOUR PRESENCE",
+        "SETTLE OVER",
+        "YOUR SPIRIT",
+        "CLEARING THE FOG"
+      ],
+      [
+        "YOUR SPIRIT"
+      ],
+      "PSALM 119:147"
+    ],
+    [
+      55,
+      75,
+      [
+        "YOU ARE HELD",
+        "BY A PROMISE",
+        "A STEADY",
+        "GUIDING LIGHT"
+      ],
+      [
+        "A PROMISE"
+      ],
+      "PSALM 119:147"
+    ],
+    [
+      75,
+      95,
+      [
+        "CARRY THIS PEACE",
+        "INTO EVERY",
+        "CONVERSATION",
+        "YOU ARE NOT ALONE"
+      ],
+      [
+        "CARRY PEACE"
+      ],
+      "PSALM 119:147"
+    ],
+    [
+      95,
+      115,
+      [
+        "REMAIN ANCHORED",
+        "IN THE TRUTH",
+        "LET YOUR HEART",
+        "BEAT IN RHYTHM"
+      ],
+      [
+        "ANCHORED"
+      ],
+      "PSALM 119:147"
+    ],
+    [
+      115,
+      120,
+      [
+        "SUBSCRIBE FOR",
+        "YOUR DAILY",
+        "MORNING PRAYER"
+      ],
+      [
+        "SUBSCRIBE"
+      ],
+      "PSALM 119:147"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Welcome the morning light",
+      "kind": "phrase",
+      "words": [
+        "WELCOME",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "I rise before dawn",
+      "kind": "phrase",
+      "words": [
+        "RISE",
+        "DAWN"
+      ],
+      "hi": 1,
+      "slot": "B"
+    },
+    {
+      "a": "in your word",
+      "kind": "phrase",
+      "words": [
+        "HOPE",
+        "WORD"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "May your presence settle",
+      "kind": "phrase",
+      "words": [
+        "PRESENCE",
+        "SETTLE"
+      ],
+      "hi": 3,
+      "slot": "D"
+    }
+  ],
+  "scripture": "Psalm 119:147"
+}
