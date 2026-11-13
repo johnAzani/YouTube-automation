@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-12T09:45:17.623989+00:00",
-  "as_of": "2026-11-12",
+  "generated_at": "2026-11-13T06:59:36.248066+00:00",
+  "as_of": "2026-11-13",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 10,
+  "total_longform_videos": 11,
   "ranked_themes": [],
   "themes": [
     {
@@ -18,7 +18,7 @@
       "theme": "light_courage",
       "videos": 1,
       "measured_videos": 0,
-      "avg_score": 0.1948,
+      "avg_score": 0.1875,
       "avg_engagement": 0.0,
       "top_scripture": "Psalm 27"
     },
@@ -26,7 +26,7 @@
       "theme": "peace_rest",
       "videos": 2,
       "measured_videos": 0,
-      "avg_score": 0.124,
+      "avg_score": 0.125,
       "avg_engagement": 0.0,
       "top_scripture": "Psalm 121"
     },
@@ -34,17 +34,17 @@
       "theme": "protection",
       "videos": 5,
       "measured_videos": 0,
-      "avg_score": 0.0891,
+      "avg_score": 0.0889,
       "avg_engagement": 0.0,
       "top_scripture": "Psalm 3"
     },
     {
       "theme": "trust_surrender",
-      "videos": 1,
+      "videos": 2,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
-      "top_scripture": "Psalm 16"
+      "top_scripture": "Psalm 18"
     }
   ],
   "guidance": [
