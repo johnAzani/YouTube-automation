@@ -2,7 +2,7 @@
 id: 0802
 title: Psalm 25:4-5 Guidance Prayer | The Guided Path
 slug: psalm-25-4-5-guidance-prayer
-status: approved
+status: published
 channel: prayer10
 privacy: public
 format: longform
@@ -76,6 +76,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-13"
+published_at: "2026-11-13T22:19:49Z"
+youtube_video_id: "X4rTahtQYI4"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Bringing the Decision to the Lord

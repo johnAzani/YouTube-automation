@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T22:00:42Z",
+  "generated_at": "2026-11-13T22:20:45Z",
   "monitor_generated_at": "2026-11-13T21:59:24.668791+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 186,
-    "published_longform": 94,
+    "published_total": 187,
+    "published_longform": 95,
     "published_shorts": 92,
-    "public_total": 184,
-    "queued_longform": 43,
+    "public_total": 185,
+    "queued_longform": 42,
     "queued_shorts": 46,
     "automations_ok": 10,
     "automations_total": 10,
@@ -620,28 +620,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 3,
-        "published_longform": 2,
+        "published_total": 4,
+        "published_longform": 3,
         "published_shorts": 1,
-        "thumbnail_pending": 3,
-        "public_total": 3,
-        "queued_longform": 3,
+        "thumbnail_pending": 4,
+        "public_total": 4,
+        "queued_longform": 2,
         "queued_other": 0,
         "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0801",
-        "title": "James 1:5 Guidance Prayer | The Guided Path",
-        "format": "longform",
-        "youtube_video_id": "AjDkmq3hu7I",
-        "watch_url": "https://youtu.be/AjDkmq3hu7I",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T14:41:17Z"
-      },
-      "next_queued_longform": {
         "id": "0802",
         "title": "Psalm 25:4-5 Guidance Prayer | The Guided Path",
-        "words": 1836,
+        "format": "longform",
+        "youtube_video_id": "X4rTahtQYI4",
+        "watch_url": "https://youtu.be/X4rTahtQYI4",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T22:19:49Z"
+      },
+      "next_queued_longform": {
+        "id": "0803",
+        "title": "Proverbs 15:22 Prayer for Wise Counsel | The Guided Path",
+        "words": 1290,
         "status": "approved"
       },
       "next_queued_short": {
@@ -666,6 +666,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0802",
+      "slug": "psalm-25-4-5-guidance-prayer",
+      "file": "0802-psalm-25-4-5-guidance-prayer.md",
+      "title": "Psalm 25:4-5 Guidance Prayer | The Guided Path",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T22:19:49Z",
+      "youtube_video_id": "X4rTahtQYI4",
+      "watch_url": "https://youtu.be/X4rTahtQYI4",
+      "youtu_be_url": "https://youtu.be/X4rTahtQYI4",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/X4rTahtQYI4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/X4rTahtQYI4/hqdefault.jpg",
+      "thumb_text": "TEACH ME LORD",
+      "thumbnail_pending": true,
+      "duration_label": "~13 min",
+      "words": 1836
+    },
     {
       "id": "0507",
       "slug": "proverbs-16-3-morning-prayer",
@@ -5652,19 +5676,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1154
-      },
-      {
-        "id": "0802",
-        "slug": "psalm-25-4-5-guidance-prayer",
-        "file": "0802-psalm-25-4-5-guidance-prayer.md",
-        "title": "Psalm 25:4-5 Guidance Prayer | The Guided Path",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1836
       },
       {
         "id": "0803",
