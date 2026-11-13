@@ -615,6 +615,35 @@ def _build_script_doc(edition: ShortEdition) -> ScriptDoc:
     )
 
 
+def _recent_short_visuals(channel: str, limit: int = 3) -> set[str]:
+    """Use verified receipt fingerprints, not cache guesses, to avoid recent repeats."""
+    from .script_doc import parse_script
+    records = []
+    for path in PUBLISHED_DIR.glob('*.md'):
+        try:
+            meta = parse_script(path).meta
+            ids = meta.get('short_visual_fingerprints')
+            if str(meta.get('channel') or 'secret-place') != channel or not isinstance(ids, list):
+                continue
+            valid = [v for v in ids if isinstance(v, str) and
+                     re.fullmatch(r'(?:url|sha256):[0-9a-f]{64}', v)]
+            if valid:
+                records.append((str(meta.get('published_at') or ''), path.name, valid))
+        except Exception:
+            continue
+    return {value for _, _, values in sorted(records, reverse=True)[:limit] for value in values}
+
+
+def _verified_video_fingerprints(scenes: list[dict]) -> set[str]:
+    videos = set()
+    for row in scenes:
+        if row.get('media') != 'video' or row.get('fallback'):
+            continue
+        videos.update(v for v in row.get('source_fingerprints', [])
+                      if isinstance(v, str) and re.fullmatch(r'sha256:[0-9a-f]{64}', v))
+    return videos
+
+
 def _write_published_record(
     dest: Path,
     edition: ShortEdition,
@@ -626,6 +655,9 @@ def _write_published_record(
     thumbnail_results: dict[str, str] | None = None,
     channel_audit: list[dict] | None = None,
     poster: dict | None = None,
+    narration_engine: str | None = None,
+    narration_voice: str | None = None,
+    visual_fingerprints: list[str] | None = None,
 ) -> Path:
     PUBLISHED_DIR.mkdir(parents=True, exist_ok=True)
     now_utc = datetime.now(timezone.utc)
@@ -649,24 +681,29 @@ def _write_published_record(
     # A receipt is only allowed to say "done" when YouTube confirmed it. The old
     # path wrote `not_supported_for_shorts` from a hardcoded string, so nine live
     # Shorts looked explained and had no thumbnail at all.
-    landed = any(str(v) == "ok" for v in (thumbnail_results or {}).values())
+    # A successful thumbnail on a different or superseded video is not proof
+    # that the video named by this receipt has one.
+    active_status = str((thumbnail_results or {}).get(video_id, "not_attempted"))
     thumb_fields = ""
-    if thumbnail_results:
-        if landed and poster:
-            thumb_fields += f'thumbnail_revision: "{poster.get("revision")}"\n'
-            thumb_fields += f'thumbnail_channel_grade: "{poster.get("grade")}"\n'
-        else:
-            failure = next((str(v) for v in thumbnail_results.values()), "not_attempted")
-            thumb_fields += "thumbnail_pending: true\n"
-            thumb_fields += f'thumbnail_error: {json.dumps(failure[:220])}\n'
-        if poster:
-            thumb_fields += ("thumbnail_poster: "
-                             + json.dumps(list(poster.get("lines") or [])) + "\n")
-            thumb_fields += f'thumbnail_kicker: {json.dumps(str(poster.get("kicker") or ""))}\n'
-            thumb_fields += f'thumbnail_plate: {json.dumps(str(poster.get("plate") or ""))}\n'
+    if active_status == "ok" and poster:
+        thumb_fields += f'thumbnail_revision: "{poster.get("revision")}"\n'
+        thumb_fields += f'thumbnail_channel_grade: "{poster.get("grade")}"\n'
+    else:
+        failure = "poster_metadata_unavailable" if active_status == "ok" else active_status
+        thumb_fields += "thumbnail_pending: true\n"
+        thumb_fields += f'thumbnail_error: {json.dumps(failure[:220])}\n'
+    if poster:
+        thumb_fields += ("thumbnail_poster: "
+                         + json.dumps(list(poster.get("lines") or [])) + "\n")
+        thumb_fields += f'thumbnail_kicker: {json.dumps(str(poster.get("kicker") or ""))}\n'
+        thumb_fields += f'thumbnail_plate: {json.dumps(str(poster.get("plate") or ""))}\n'
     audit_block = ""
     if channel_audit:
         audit_block = f"\n\n## Channel Video Status Audit\n\n```json\n{json.dumps(channel_audit, indent=2)}\n```\n"
+    voice_fields = ""
+    if narration_engine and narration_voice:
+        voice_fields = (f'narration_engine: {json.dumps(narration_engine)}\n'
+                        f'narration_voice: {json.dumps(narration_voice)}\n')
     content = (
         "---\n"
         f'id: "{edition.job_id}"\n'
@@ -689,6 +726,8 @@ def _write_published_record(
         f"height: {probe.height}\n"
         f"duration_seconds: {round(probe.duration_seconds, 2)}\n"
         f"scenes_verified: {scene_count}\n"
+        + (f"short_visual_fingerprints: {json.dumps(visual_fingerprints)}\n" if visual_fingerprints else "")
+        + f"{voice_fields}"
         f"{thumb_fields}"
         "---\n\n"
         f"{edition.description}"
@@ -796,7 +835,7 @@ def _close_superseded_tickets(title: str, new_shorts_url: str) -> None:
 
 
 def _clean_word_token(word: str) -> str:
-    return re.sub(r"[^a-z0-9']+", "", word.lower()).strip("'")
+    return re.sub(r"[^a-z0-9']+", "", str(word).lower().replace("’", "'")).strip("'")
 
 
 def _fallback_word_timings(narration_text: str, duration_s: float) -> list[list]:
@@ -822,82 +861,76 @@ def _fallback_word_timings(narration_text: str, duration_s: float) -> list[list]
 
 
 def _synthesise_narration(text: str, audio: Path) -> str:
-    """Speak a Short with Gemini — or with the free engine if Gemini declines.
+    """Speak with the locked Gemini Charon voice; propagate failures unchanged."""
+    from .gemini_tts import DEFAULT_MODEL, synthesize_gemini_audio
 
-    The Shorts path had the same hole as the long-form one (R23): a direct call, no
-    fallback, so the empty `200` that has blocked every Short since 6 November became
-    "refusing to render a silent Short" and cost the slot. `edge-tts` is free, needs no
-    key, and narrates the same words.
-
-    A spent allowance is still re-raised untouched: the $0.00 lock pauses the channel,
-    it never borrows. Returns the engine that spoke so the caller can tell a fallback
-    take from a refusal — `"placeholder"` means nothing spoke at all.
-    """
-    from .gemini_tts import synthesize_gemini_audio
-    from .quota_handler import GeminiQuotaExceededError
-    from .tts import synthesize_edge
-
-    try:
-        synthesize_gemini_audio(text, audio, voice="Charon")
-        return "gemini-3.8-flash-tts"
-    except GeminiQuotaExceededError:
-        raise
-    except Exception as exc:  # noqa: BLE001 - any other refusal is worth a second engine
-        print(f"[short-release] gemini narration produced no audio ({exc}); "
-              f"falling back to edge-tts")
-
-    engine, _words = synthesize_edge(text, audio, "Charon")
-    print(f"[short-release] narration engine this run: {engine}")
-    return engine
+    synthesize_gemini_audio(text, audio, voice="Charon", model=DEFAULT_MODEL)
+    return DEFAULT_MODEL
 
 
-def _ensure_word_timings(short_key: str, audio_path: Path, narration_text: str) -> Path:
-    """Generate `assets/deepdive/words-{short_key}.json` (`[[t0, t1, word], ...]`).
+def _ensure_word_timings(short_key: str, audio_path: Path, narration_text: str,
+                         require_alignment: bool = True) -> Path:
+    """Reuse timings only for the same audio and text; production needs alignment."""
+    import hashlib
+    import math
 
-    Uses the preinstalled local faster-whisper CPU model (`output/alignment-model`)
-    at $0.00 when available, falling back to character-weighted monotonic timing
-    over the probed narration duration so `tools/shorts.py` never crashes on a
-    missing word-alignment file.
-    """
     words_path = audio_path.parent / f"words-{short_key}.json"
-    if words_path.is_file() and words_path.stat().st_size > 10:
-        return words_path
+    sidecar = audio_path.parent / f"words-{short_key}.alignment.json"
+    digest = lambda value: hashlib.sha256(value).hexdigest()
+    identity = {'text': digest(narration_text.encode('utf-8')),
+                'audio': digest(audio_path.read_bytes()), 'version': 1}
+    expected = [_clean_word_token(w) for w in narration_text.split() if _clean_word_token(w)]
+    def valid(rows):
+        if not isinstance(rows, list) or len(rows) != len(expected) or not expected:
+            return False
+        previous = 0.0
+        for row, word in zip(rows, expected):
+            if not isinstance(row, (list, tuple)) or len(row) != 3 or _clean_word_token(row[2]) != word:
+                return False
+            try:
+                start, end = float(row[0]), float(row[1])
+            except (ValueError, TypeError):
+                return False
+            if not math.isfinite(start) or not math.isfinite(end) or start < previous - 1e-6 or end <= start:
+                return False
+            previous = end
+        return True
+    try:
+        meta = json.loads(sidecar.read_text(encoding='utf-8'))
+        payload = words_path.read_bytes()
+        rows = json.loads(payload)
+        if all(meta.get(k) == v for k, v in identity.items()) and meta.get('timings') == digest(payload) and valid(rows):
+            return words_path
+    except (OSError, ValueError, TypeError, AttributeError):
+        pass
 
-    model_dir = REPO_ROOT / "output" / "alignment-model"
-    rows: list[list] = []
-    if (model_dir / "model.bin").is_file():
-        try:
-            from .prayer_alignment import align
-
-            aligned = align(audio_path, narration_text, model_dir)
-            for orig, start_s, end_s in aligned:
-                tok = _clean_word_token(orig) or orig.lower()
-                t0 = round(float(start_s), 2)
-                t1 = round(max(float(start_s) + 0.03, float(end_s)), 2)
-                rows.append([t0, t1, tok])
-            print(f"[short-release] aligned {len(rows)} words via faster-whisper for {short_key}")
-        except Exception as exc:  # noqa: BLE001
-            print(f"[short-release] faster-whisper alignment fallback for {short_key}: {exc}")
-            rows = []
-
-    if not rows:
+    model_dir = REPO_ROOT / 'output' / 'alignment-model'
+    try:
+        from .prayer_alignment import align
+        aligned = align(audio_path, narration_text, model_dir)
+        rows = [[float(start), float(end), _clean_word_token(orig)] for orig, start, end in aligned]
+        if not valid(rows):
+            raise ValueError('alignment does not cover the narration in order')
+    except Exception as exc:
+        if require_alignment:
+            raise RuntimeError('Short speech alignment unavailable or incomplete; refusing to render') from exc
         dur = probe_media(audio_path).duration_seconds
         rows = _fallback_word_timings(narration_text, dur)
-        print(f"[short-release] generated {len(rows)} proportional word timings ({dur:.1f}s) for {short_key}")
-
-    words_path.parent.mkdir(parents=True, exist_ok=True)
-    words_path.write_text(json.dumps(rows, ensure_ascii=False), encoding="utf-8")
+        print(f'[short-release] preview only: estimated word timings ({dur:.1f}s)')
+        words_path.write_text(json.dumps(rows, ensure_ascii=False), encoding='utf-8')
+        sidecar.unlink(missing_ok=True)
+        return words_path
+    payload = json.dumps(rows, ensure_ascii=False).encode('utf-8')
+    words_path.write_bytes(payload)
+    sidecar.write_text(json.dumps({**identity, 'timings': digest(payload)}), encoding='utf-8')
+    print(f'[short-release] aligned all {len(rows)} narration words for {short_key}')
     return words_path
 
 
-def _ensure_narration(short_key: str) -> None:
-    """Make sure an authored Short has audio and word timings before rendering.
-
-    A brain-authored Short ships as a spec: captions only, no MP3. The same Charon
-    voice that narrates the long-form reads the captions here, and local word
-    alignment writes `words-{short_key}.json` so `tools/shorts.py` can render with
-    zero human steps and $0.00 cost.
-    """
+def _ensure_narration(short_key: str, require_provenance: bool = True) -> None:
+    """Prepare Charon narration; never trust old unlabelled cached audio in production."""
+    import hashlib
+    from .gemini_tts import DEFAULT_MODEL, DELIVERY_RECIPE
     from .quota_handler import GeminiQuotaExceededError, QuotaExceededError
 
     try:
@@ -905,25 +938,50 @@ def _ensure_narration(short_key: str) -> None:
 
         path = spec_path(short_key)
         if not path.is_file():
-            return  # hand-written SCRIPTS entry: its audio & words JSON are committed
+            if require_provenance:
+                raise RuntimeError("legacy Short audio has no verified Charon provenance")
+            return  # legacy offline preview only
         spec = load_spec(path)
         audio = REPO_ROOT / "assets" / "deepdive" / f"{short_key}.mp3"
-        if not audio.is_file():
-            from .gemini_tts import synthesize_gemini_audio
-
+        sidecar = audio.with_suffix(".voice.json")
+        words = audio.parent / f"words-{short_key}.json"
+        text_hash = hashlib.sha256(spec.narration_text.encode("utf-8")).hexdigest()
+        expected = {"model": DEFAULT_MODEL, "voice": "Charon", "recipe": DELIVERY_RECIPE,
+                    "text_sha256": text_hash}
+        try:
+            meta = json.loads(sidecar.read_text(encoding="utf-8"))
+            valid = (isinstance(meta, dict) and all(meta.get(k) == v for k, v in expected.items())
+                     and audio.is_file() and audio.stat().st_size > 0
+                     and meta.get("audio_sha256") == hashlib.sha256(audio.read_bytes()).hexdigest())
+        except (OSError, ValueError):
+            valid = False
+        if not valid:
+            # Unlabelled or altered caches may be another speaker. Discard their
+            # timings too, so they cannot be paired with the new narration.
             audio.parent.mkdir(parents=True, exist_ok=True)
-            print(f"[short-release] synthesising narration for {short_key} ({spec.words} words)")
-            engine = _synthesise_narration(spec.narration_text, audio)
-            if engine == "placeholder":
-                raise RuntimeError(
-                    f"no engine could narrate {short_key}: gemini returned no audio and "
-                    f"edge-tts was unreachable; refusing to render a silent Short")
-        _ensure_word_timings(short_key, audio, spec.narration_text)
+            audio.unlink(missing_ok=True)
+            sidecar.unlink(missing_ok=True)
+            words.unlink(missing_ok=True)
+            print(f"[short-release] synthesising Charon narration for {short_key} ({spec.words} words)")
+            try:
+                engine = _synthesise_narration(spec.narration_text, audio)
+                if engine != DEFAULT_MODEL or not audio.is_file() or audio.stat().st_size == 0:
+                    raise RuntimeError("Gemini Charon produced no verified audio")
+                expected["audio_sha256"] = hashlib.sha256(audio.read_bytes()).hexdigest()
+                tmp = sidecar.with_suffix(".tmp")
+                tmp.write_text(json.dumps(expected), encoding="utf-8")
+                tmp.replace(sidecar)
+            except Exception:
+                audio.unlink(missing_ok=True)
+                sidecar.unlink(missing_ok=True)
+                raise
+        _ensure_word_timings(short_key, audio, spec.narration_text,
+                             require_alignment=require_provenance)
     except (QuotaExceededError, GeminiQuotaExceededError):
         raise
     except Exception as exc:  # noqa: BLE001
         raise RuntimeError(
-            f"cannot prepare narration for {short_key} ({exc}); refusing to render a silent Short"
+            f"cannot prepare Charon narration for {short_key} ({exc}); refusing to render"
         ) from exc
 
 
@@ -1029,9 +1087,13 @@ def run_short_release(
 
     from .quota_handler import GeminiQuotaExceededError, QuotaExceededError
 
+    if skip_render and not dry_run and "prayer" in str(doc.meta.get("niche", "")).lower():
+        raise RuntimeError("Refusing production Short with unverified pre-rendered narration; render with Charon")
+
     if not skip_render:
         try:
-            _ensure_narration(short_key)
+            _ensure_narration(short_key, require_provenance=(
+                not dry_run and "prayer" in str(doc.meta.get("niche", "")).lower()))
         except (QuotaExceededError, GeminiQuotaExceededError) as exc:
             return _pause_manifest_on_quota(
                 manifest_path,
@@ -1041,6 +1103,10 @@ def run_short_release(
                  "title": edition.title, "format": "short", "dry_run": dry_run},
             )
         render_env = dict(os.environ)
+        prayer_production = not dry_run and 'prayer' in str(doc.meta.get('niche', '')).lower()
+        if prayer_production:
+            render_env['SHORT_REQUIRE_VARIED_VIDEO'] = '1'
+            render_env['SHORT_RECENT_CLIP_IDS'] = json.dumps(sorted(_recent_short_visuals(edition.channel)))
         if render_env.get("SHORT_DISABLE_STOCK_BROLL", "").strip().lower() in {"1", "true", "yes", "on"}:
             render_env["ENABLE_STOCK_BROLL"] = "0"
             render_env["ENABLE_KEYLESS_SOURCES"] = "0"
@@ -1054,6 +1120,9 @@ def run_short_release(
 
     probe = verify_short_render(video_path, sources_path)
     scenes = json.loads(sources_path.read_text(encoding="utf-8"))
+    if not dry_run and 'prayer' in str(doc.meta.get('niche', '')).lower():
+        if len(_verified_video_fingerprints(scenes)) < 2:
+            raise RuntimeError('Short does not contain two distinct verified video clips; leaving queue unchanged')
 
     stage_dir = OUTPUT_DIR / edition.slug
     if stage_dir.exists():
@@ -1136,7 +1205,6 @@ def run_short_release(
         from .upload import (
             apply_shorts_thumbnail,
             audit_channel_videos,
-            delete_video,
             inspect_existing_short,
             set_video_thumbnail,
             upload,
@@ -1229,22 +1297,18 @@ def run_short_release(
         else:
             thumb_results[up.video_id] = "poster_refused"
 
-        # Ensure every unlocked legacy Short on the channel stops carrying the old frame
-        for old_vid in legacy_video_ids:
-            if old_vid and old_vid != up.video_id:
-                thumb_results[old_vid] = "deleted_legacy_duplicate"
-                delete_video(old_vid)
-
+        # Do not delete legacy videos here. Upload acceptance is not proof that a
+        # replacement finished processing, and an irreversible delete cannot be
+        # rolled back if the new upload is later rejected or the receipt write fails.
+        if legacy_video_ids:
+            print("::warning title=Legacy Shorts retained::Review older editions after "
+                  "confirming the new video; no legacy videos were deleted.")
         channel_audit = audit_channel_videos([up.video_id, *legacy_video_ids])
         active_video_id = up.video_id
         by_id = {row.get("id"): row for row in channel_audit if isinstance(row, dict) and row.get("id")}
         new_row = by_id.get(up.video_id, {})
-        if new_row.get("uploadStatus") == "rejected":
-            for cand_id in legacy_video_ids:
-                cand_row = by_id.get(cand_id, {})
-                if cand_row.get("uploadStatus") in {"processed", "uploaded"}:
-                    active_video_id = cand_id
-                    break
+        if new_row.get("uploadStatus") in {"rejected", "failed", "deleted"}:
+            raise RuntimeError("New Short failed YouTube processing; retained legacy videos and queue state")
 
         active_watch_url = f"https://youtu.be/{active_video_id}"
         shorts_url = f"https://www.youtube.com/shorts/{active_video_id}"
@@ -1263,6 +1327,9 @@ def run_short_release(
         )
         print(f"[short-release] active short {shorts_url} (uploaded={up.video_id}, privacy={up.privacy_status})")
         _open_release_ticket(doc, active_watch_url, up.privacy_status, active_video_id)
+        from .gemini_tts import DEFAULT_MODEL
+        verified_voice = (not skip_render and "prayer" in str(doc.meta.get("niche", "")).lower()
+                          and active_video_id == up.video_id)
         _write_published_record(
             published_record,
             edition,
@@ -1274,6 +1341,11 @@ def run_short_release(
             thumbnail_results=thumb_results,
             channel_audit=channel_audit,
             poster=poster_report.as_dict() if poster_report else None,
+            narration_engine=DEFAULT_MODEL if verified_voice else None,
+            narration_voice="Charon" if verified_voice else None,
+            visual_fingerprints=sorted({v for row in scenes if row.get('media') == 'video' and not row.get('fallback')
+                                        for v in row.get('source_fingerprints', [])
+                                        if isinstance(v, str) and re.fullmatch(r'(?:url|sha256):[0-9a-f]{64}', v)}),
         )
         if manifest_path and manifest_path.is_file():
             manifest_path.unlink()

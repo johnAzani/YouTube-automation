@@ -237,8 +237,12 @@ class ShortReleaseTests(unittest.TestCase):
             stock_dir = tdir / "output" / "short-stock" / "short-psalm91"
             stock_dir.mkdir(parents=True)
             (stock_dir / "scene-sources.json").write_text(
-                json.dumps([{"scene": 1, "fallback": True, "file": "short-prayer-scene-01.jpg"}]),
-                encoding="utf-8",
+                json.dumps([
+                    {"scene": 1, "media": "video", "fallback": False, "license": "cleared",
+                     "source_fingerprints": ["sha256:" + "1" * 64]},
+                    {"scene": 2, "media": "video", "fallback": False, "license": "cleared",
+                     "source_fingerprints": ["sha256:" + "2" * 64]},
+                ]), encoding="utf-8",
             )
             qdir = tdir / "shorts-queue"
             qdir.mkdir(parents=True)
@@ -247,6 +251,12 @@ class ShortReleaseTests(unittest.TestCase):
                 'short: "short-psalm91"\nstatus: approved\nreplace: true\nprivacy: "public"\n',
                 encoding="utf-8",
             )
+
+            real_run = subprocess.run
+            def run_renderer_or_probe(cmd, *args, **kwargs):
+                if len(cmd) > 1 and str(cmd[1]).endswith('tools/shorts.py'):
+                    return SimpleNamespace(returncode=0)
+                return real_run(cmd, *args, **kwargs)
 
             fake_upload = SimpleNamespace(
                 video_id="ytPsalm123",
@@ -265,12 +275,14 @@ class ShortReleaseTests(unittest.TestCase):
                 patch("pipeline.upload.set_video_thumbnail", return_value="ok"),
                 patch("pipeline.upload.apply_shorts_thumbnail", return_value="ok"),
                 patch("pipeline.upload.audit_channel_videos", return_value=[{"id": "ytPsalm123", "uploadStatus": "processed"}]),
+                patch("pipeline.short_release._ensure_narration"),
+                patch("pipeline.short_release.subprocess.run", side_effect=run_renderer_or_probe),
                 patch("pipeline.short_release._open_release_ticket"),
             ):
                 res = run_short_release(
                     "short-psalm91",
                     dry_run=False,
-                    skip_render=True,
+                    skip_render=False,
                     manifest_path=manifest,
                 )
 
@@ -309,48 +321,29 @@ def test_queue_skips_known_edition_missing_from_renderer(tmp_path):
     assert (queue / '01.yml').exists()
 
 
-class ShortNarrationFallbackTests(unittest.TestCase):
-    """The same wall in the Shorts path, and the same rule about it.
-
-    `_prepare_narration` raised "refusing to render a silent Short" whenever Gemini
-    returned no audio — which, since 6 November, was every attempt. The refusal was
-    correct; having no second engine was not.
-    """
-
-    def test_no_audio_falls_back_to_the_free_engine(self):
+class ShortLockedNarrationTests(unittest.TestCase):
+    def test_no_audio_never_substitutes_voice(self):
         from pipeline.short_release import _synthesise_narration
+        with tempfile.TemporaryDirectory() as tmp, \
+             patch("pipeline.gemini_tts.synthesize_gemini_audio", side_effect=RuntimeError("no audio")), \
+             patch("pipeline.tts.synthesize_edge") as edge:
+            with self.assertRaisesRegex(RuntimeError, "no audio"):
+                _synthesise_narration("words", Path(tmp) / "short.mp3")
+            edge.assert_not_called()
 
-        with tempfile.TemporaryDirectory() as tmp:
-            audio = Path(tmp) / "short.mp3"
-            with patch("pipeline.gemini_tts.synthesize_gemini_audio",
-                            side_effect=RuntimeError("Gemini API returned no audio content "
-                                                     "(mime_types=none)")) as gemini, \
-                 patch("pipeline.tts.synthesize_edge",
-                            return_value=("edge-tts", [])) as edge:
-                engine = _synthesise_narration("word " * 200, audio)
-        self.assertEqual(engine, "edge-tts")
-        gemini.assert_called_once()
-        edge.assert_called_once()
-
-    def test_a_spent_allowance_pauses_the_short_instead_of_borrowing(self):
+    def test_quota_failure_propagates(self):
         from pipeline.quota_handler import GeminiQuotaExceededError
         from pipeline.short_release import _synthesise_narration
+        with tempfile.TemporaryDirectory() as tmp, \
+             patch("pipeline.gemini_tts.synthesize_gemini_audio", side_effect=GeminiQuotaExceededError("daily limit")):
+            with self.assertRaises(GeminiQuotaExceededError):
+                _synthesise_narration("words", Path(tmp) / "short.mp3")
 
-        with tempfile.TemporaryDirectory() as tmp:
-            with patch("pipeline.gemini_tts.synthesize_gemini_audio",
-                            side_effect=GeminiQuotaExceededError("daily limit")), \
-                 patch("pipeline.tts.synthesize_edge") as edge:
-                with self.assertRaises(GeminiQuotaExceededError):
-                    _synthesise_narration("word " * 200, Path(tmp) / "short.mp3")
-        edge.assert_not_called()
-
-    def test_placeholder_is_reported_as_silence_not_as_a_voice(self):
+    def test_success_uses_charon(self):
+        from pipeline.gemini_tts import DEFAULT_MODEL
         from pipeline.short_release import _synthesise_narration
-
-        with tempfile.TemporaryDirectory() as tmp:
-            with patch("pipeline.gemini_tts.synthesize_gemini_audio",
-                            side_effect=RuntimeError("boom")), \
-                 patch("pipeline.tts.synthesize_edge",
-                            return_value=("placeholder", [])):
-                engine = _synthesise_narration("word " * 200, Path(tmp) / "short.mp3")
-        self.assertEqual(engine, "placeholder")
+        with tempfile.TemporaryDirectory() as tmp, \
+             patch("pipeline.gemini_tts.synthesize_gemini_audio") as gemini:
+            self.assertEqual(_synthesise_narration("words", Path(tmp) / "short.mp3"), DEFAULT_MODEL)
+            self.assertEqual(gemini.call_args.kwargs['voice'], 'Charon')
+            self.assertEqual(gemini.call_args.kwargs['model'], DEFAULT_MODEL)

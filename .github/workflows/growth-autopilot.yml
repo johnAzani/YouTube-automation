@@ -10,7 +10,8 @@ name: Growth autopilot
 #
 # $0.00 lock: only the free YouTube Data API is used (the same upload token already
 # configured). No paid tier, no new secret. Every engine is fail-soft — one failing
-# never blocks the others, and the feedback commit still lands.
+# never blocks the others. Feedback is committed only after successful collection
+# and computation; an earlier report is otherwise left untouched.
 #
 # Privacy: the raw per-video snapshot stays a short-lived Actions artifact. Only the
 # derived, aggregate performance_feedback.json is committed to source.
@@ -123,6 +124,7 @@ jobs:
       PRAYER8_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER8_YOUTUBE_REFRESH_TOKEN }}
       PRAYER9_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER9_YOUTUBE_REFRESH_TOKEN }}
       PRAYER10_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER10_YOUTUBE_REFRESH_TOKEN }}
+      YOUTUBE_EXPECTED_CHANNEL_ID: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8","prayer9","prayer10"]'), matrix.channel) && (vars[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] || secrets[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])]) || '' }}
       GH_TOKEN: ${{ github.token }}
       # The autopilot is a measurement/sync job, not the weekly human report: do not
       # file a GitHub issue on every daily run.
@@ -149,10 +151,17 @@ jobs:
         run: python -u scripts/metrics_snapshot.py --channel "${{ matrix.channel }}"
 
       - name: Compute closed-loop performance feedback (${{ matrix.channel }})
-        # Reads the snapshot just written + the published receipts. With too little
-        # data it writes a neutral "insufficient_data" report and the brain keeps its
-        # roadmap order — it never blocks authoring.
+        # A failed snapshot must not replace the last valid signal with a report
+        # based on missing or stale input. A successful empty snapshot is valid and
+        # produces a neutral report for a channel without enough data.
+        id: feedback
+        if: ${{ steps.metrics.outcome == 'success' }}
+        continue-on-error: true
         run: python -u scripts/performance_feedback.py --channel "${{ matrix.channel }}"
+
+      - name: Report unavailable feedback input (${{ matrix.channel }})
+        if: ${{ steps.metrics.outcome != 'success' }}
+        run: echo "::warning title=Feedback not refreshed::The public metrics snapshot failed; the previous feedback artifact was preserved."
 
       - name: Sync official series playlists (${{ matrix.channel }})
         continue-on-error: true
@@ -175,6 +184,9 @@ jobs:
           if-no-files-found: ignore
 
       - name: Commit the derived feedback artifact (${{ matrix.channel }})
+        # Skipping computation is not enough: copying the checkout's old file after
+        # reset could otherwise overwrite newer feedback committed by another run.
+        if: ${{ steps.metrics.outcome == 'success' && steps.feedback.outcome == 'success' }}
         # Preserve only this leg's derived feedback file across fetch + reset --mixed
         # so multi-leg runs never stage unrelated upstream commits as deletions.
         run: |
@@ -208,6 +220,8 @@ jobs:
         if: always()
         run: |
           if [ "${{ steps.metrics.outcome }}" != "success" ]; then
-            echo "::warning title=Metrics snapshot degraded (${{ matrix.channel }})::feedback fell back to the latest available data; check the YouTube token"
+            echo "::warning title=Metrics snapshot degraded (${{ matrix.channel }})::feedback was not refreshed; check the metrics step"
+          elif [ "${{ steps.feedback.outcome }}" != "success" ]; then
+            echo "::warning title=Feedback computation failed (${{ matrix.channel }})::feedback was not refreshed; check the feedback step"
           fi
-          echo "Growth autopilot (${{ matrix.channel }}) finished. Feedback, playlists and milestone each ran fail-soft."
+          echo "Growth autopilot (${{ matrix.channel }}) finished. Check step outcomes for each engine."

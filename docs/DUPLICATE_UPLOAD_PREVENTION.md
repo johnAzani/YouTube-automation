@@ -1,5 +1,12 @@
 # Master Specification: Duplicate & Unintentional Upload Prevention Shield
 
+> **Safety update, 13 November 2026:** The title scan is bounded to 20 pages and
+> fails closed on incomplete, malformed, ambiguous, or wrong-channel responses.
+> It is a best-effort guard, not an exactly-once guarantee: concurrent runs,
+> changed titles, and interrupted uploads still require durable idempotency and
+> reconciliation. Statements below describing a permanent or zero-duplicate
+> guarantee should not be interpreted as proof of one.
+
 **Channel Identity:** *The Secret Place* (`@TheSecretPlace`) — Sacred Scripture, Bedtime Prayer & Faith Contemplation Studio  
 **Target Invariant:** Zero Duplicate Uploads · Zero Unintentional Releases · Permanent Channel Cleanliness  
 **Associated Code:** `pipeline/upload.py`, `pipeline/short_release.py`, `pipeline/run.py`, `scripts/cleanup_duplicate_shorts.py`, `.github/workflows/produce.yml`  
@@ -46,8 +53,8 @@ A screenshot of the YouTube mobile app revealed **5 duplicate uploads of the Psa
 ## 2. The 6-Layer Permanent Prevention Shield
 
 ### Layer 1: Remote YouTube Channel Duplicate Detection (`pipeline/upload.py`)
-Before calling `youtube.videos().insert()`, `pipeline/upload.py::check_existing_channel_duplicate()` queries the channel's recent uploads playlist (`playlistItems.list`, 1 quota unit).
-- **Exact Title Matching:** Compares candidate title with all existing channel videos.
+Before calling `youtube.videos().insert()`, `pipeline/upload.py::check_existing_channel_duplicate()` scans the channel uploads playlist, up to 20 pages. Each scan costs one `channels.list` request and up to 20 `playlistItems.list` requests; reaching the cap without the last page blocks the upload. The long-form precheck also blocks before narration when the scan is unavailable. The upload duplicate override is for deliberate replacements, not a general safety guarantee.
+- **Exact Title Matching:** Compares the candidate against the completely scanned playlist.
 - **Normalized Title Matching:** Strips hashtags (`#Shorts`, `#shorts`), removes punctuation, lowercases, and collapses whitespace. For example:
   ```
   "Say This Psalm 91 Prayer Before You Sleep | Divine Protection #Shorts"

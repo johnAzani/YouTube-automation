@@ -194,7 +194,18 @@ def _aspect_rank(item,w,h):
     if not iw or not ih: return (9.0,0)
     return (abs(iw/ih-w/max(1,h)), -min(iw*ih,w*h*4))
 
-def _pexels(q,video,w,h):
+def _visual_source_id(url):
+    return 'url:' + hashlib.sha256(str(url).encode('utf-8')).hexdigest() if url else ''
+
+
+def _ordered_candidates(items, seed):
+    if not seed:
+        return items
+    return sorted(items, key=lambda item: hashlib.sha256(
+        f"{seed}:{item.get('id', '')}".encode('utf-8')).digest())
+
+
+def _pexels(q,video,w,h, *, exclude_sources=(), selection_seed=''):
     label=f"Pexels {'video' if video else 'photo'}"
     if not CONFIG.pexels_api_key:
         _probe(label,"no API key"); return None
@@ -204,7 +215,9 @@ def _pexels(q,video,w,h):
         if not r: _probe(label,_req_fail()); return None
         vids=r.json().get("videos",[])
         if not vids: _probe(label,"0 results")
-        for v in vids:
+        for v in _ordered_candidates(vids, selection_seed):
+            if _visual_source_id(v.get('url')) in exclude_sources:
+                continue
             files=sorted((f for f in v.get("video_files",[]) if f.get("link")),key=lambda f:_aspect_rank(f,w,h))
             for f in files[:2]:
                 dest=_cache_path("pexels",str(v["id"]),"mp4")
@@ -216,7 +229,9 @@ def _pexels(q,video,w,h):
         if not r: _probe(label,_req_fail()); return None
         photos=r.json().get("photos",[])
         if not photos: _probe(label,"0 results")
-        for p in photos:
+        for p in _ordered_candidates(photos, selection_seed):
+            if _visual_source_id(p.get('url')) in exclude_sources:
+                continue
             src=p.get("src") or {}; url=src.get("large2x") or src.get("large") or src.get("original")
             dest=_cache_path("pexels",str(p["id"]),"jpg")
             if url and _download(url,dest):
@@ -224,7 +239,7 @@ def _pexels(q,video,w,h):
         if photos: _probe(label,f"{len(photos)} results, none downloadable")
     return None
 
-def _pixabay(q,video,w,h):
+def _pixabay(q,video,w,h, *, exclude_sources=(), selection_seed=''):
     label=f"Pixabay {'video' if video else 'photo'}"
     if not CONFIG.pixabay_api_key:
         _probe(label,"no API key"); return None
@@ -235,7 +250,9 @@ def _pixabay(q,video,w,h):
     if not r: _probe(label,_req_fail()); return None
     hits=r.json().get("hits",[])
     if not hits: _probe(label,"0 results")
-    for hit in hits:
+    for hit in _ordered_candidates(hits, selection_seed):
+        if _visual_source_id(hit.get('pageURL')) in exclude_sources:
+            continue
         if video:
             choices=sorted((hit.get("videos") or {}).values(),key=lambda f:_aspect_rank(f,w,h)); selected=next((x for x in choices if x.get("url")),{})
             url=selected.get("url"); ext="mp4"; sw,sh=selected.get("width",0),selected.get("height",0)

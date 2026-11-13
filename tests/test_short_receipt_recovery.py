@@ -1,4 +1,5 @@
 """Recover duplicate Shorts without re-uploading or inventing receipt facts."""
+import json
 from pathlib import Path
 from types import SimpleNamespace
 from unittest import mock
@@ -84,7 +85,10 @@ def _prepare_run(tmp_path, monkeypatch, inspect_result):
     (root / "social/short-test.mp4").write_bytes(b"rendered")
     src = root / "output/short-stock/short-test"
     src.mkdir(parents=True)
-    (src / "scene-sources.json").write_text('[{"scene":1}]')
+    (src / "scene-sources.json").write_text(json.dumps([
+        {"scene": 1, "media": "video", "fallback": False, "source_fingerprints": ['sha256:' + '1' * 64]},
+        {"scene": 2, "media": "video", "fallback": False, "source_fingerprints": ['sha256:' + '2' * 64]},
+    ]))
     manifest = root / "queue.yml"
     manifest.write_text("short: short-test\nstatus: approved\n")
     monkeypatch.setattr(release, "REPO_ROOT", root)
@@ -92,6 +96,9 @@ def _prepare_run(tmp_path, monkeypatch, inspect_result):
     monkeypatch.setattr(release, "OUTPUT_DIR", root / "output")
     monkeypatch.setattr(release, "resolve_edition", lambda *a, **kw: _edition())
     monkeypatch.setattr(release, "_require_production_prerequisites", lambda *a: None)
+    # Exercise the production render path while avoiding real synthesis/encoding.
+    monkeypatch.setattr(release, "_ensure_narration", lambda *a, **kw: None)
+    monkeypatch.setattr(release.subprocess, "run", lambda *a, **kw: SimpleNamespace(returncode=0))
     monkeypatch.setattr(release, "verify_short_render", lambda *a: release.MediaProbe(True, True, 720, 1280, 54.0))
     monkeypatch.setattr(release.CONFIG, "channel_id", "prayer5")
     from pipeline import shorts_poster
@@ -107,15 +114,36 @@ def _prepare_run(tmp_path, monkeypatch, inspect_result):
     return manifest, root / "published/short-test-recovery.md", thumbnail
 
 
+def test_prerendered_prayer_short_is_refused_without_modifying_manifest(tmp_path, monkeypatch):
+    manifest, path, thumbnail = _prepare_run(tmp_path, monkeypatch, _video())
+    with pytest.raises(RuntimeError, match='unverified pre-rendered narration'):
+        release.run_short_release('short-test', skip_render=True, manifest_path=manifest)
+    assert manifest.exists() and not path.exists()
+    thumbnail.assert_not_called()
+
+
+def test_one_clip_blocks_upload_and_keeps_manifest(tmp_path, monkeypatch):
+    manifest, path, thumbnail = _prepare_run(tmp_path, monkeypatch, _video())
+    source = tmp_path / 'output/short-stock/short-test/scene-sources.json'
+    source.write_text(json.dumps([{'scene': 1, 'media': 'video', 'fallback': False,
+                                  'source_fingerprints': ['sha256:' + '1' * 64]}]))
+    with pytest.raises(RuntimeError, match='two distinct verified video clips'):
+        release.run_short_release('short-test', manifest_path=manifest)
+    assert manifest.exists() and not path.exists()
+    upload.upload.assert_not_called()
+    thumbnail.assert_not_called()
+
+
 def test_duplicate_creates_truthful_receipt_then_removes_manifest(tmp_path, monkeypatch):
     manifest, path, thumbnail = _prepare_run(tmp_path, monkeypatch, _video())
-    result = release.run_short_release("short-test", skip_render=True, manifest_path=manifest)
+    result = release.run_short_release("short-test", manifest_path=manifest)
     assert result["duplicate_prevented"] and result["receipt_recovered"] and not result["uploaded"]
     assert not manifest.exists() and path.exists()
     meta = parse_script(path).meta
     assert meta["youtube_video_id"] == VIDEO and meta["published_at"] == '2026-11-11T12:03:29Z'
     assert meta["privacy_status"] == "public" and meta["thumbnail_pending"] is True
     assert meta["receipt_recovered_from_youtube"] is True and "thumbnail_revision" not in meta
+    assert 'narration_engine' not in meta and 'narration_voice' not in meta
     assert release._read_previous_video_id(path) == VIDEO
     assert [p for p, _ in sync.collect_pending_short_receipts(path.parent, channel_id="prayer5")] == [path]
     thumbnail.assert_not_called()
@@ -126,7 +154,7 @@ def test_duplicate_creates_truthful_receipt_then_removes_manifest(tmp_path, monk
 def test_duplicate_verification_failure_keeps_manifest_and_no_receipt(tmp_path, monkeypatch):
     manifest, path, thumbnail = _prepare_run(tmp_path, monkeypatch, RuntimeError("lookup failed"))
     with pytest.raises(RuntimeError, match="lookup failed"):
-        release.run_short_release("short-test", skip_render=True, manifest_path=manifest)
+        release.run_short_release("short-test", manifest_path=manifest)
     assert manifest.exists() and not path.exists()
     thumbnail.assert_not_called()
 
@@ -135,9 +163,63 @@ def test_duplicate_write_failure_keeps_manifest(tmp_path, monkeypatch):
     manifest, path, thumbnail = _prepare_run(tmp_path, monkeypatch, _video())
     monkeypatch.setattr(release, '_write_recovered_short_record', mock.Mock(side_effect=OSError('disk error')))
     with pytest.raises(OSError, match='disk error'):
-        release.run_short_release('short-test', skip_render=True, manifest_path=manifest)
+        release.run_short_release('short-test', manifest_path=manifest)
     assert manifest.exists() and not path.exists()
     thumbnail.assert_not_called()
+
+
+def test_thumbnail_status_is_for_the_receipts_video(tmp_path, monkeypatch):
+    monkeypatch.setattr(release, 'PUBLISHED_DIR', tmp_path)
+    path = tmp_path / 'receipt.md'
+    poster = {'revision': 'v1', 'grade': 'A', 'lines': []}
+    release._write_published_record(path, _edition(), 'active', 'https://youtu.be/active',
+                                    'public', release.MediaProbe(True, True, 720, 1280, 54), 1,
+                                    thumbnail_results={'active': 'permission_denied', 'old': 'ok'}, poster=poster)
+    meta = parse_script(path).meta
+    assert meta['thumbnail_pending'] is True
+    assert meta['thumbnail_error'] == 'permission_denied'
+    assert 'thumbnail_revision' not in meta
+
+
+@pytest.mark.parametrize('status', ['processed', 'rejected'])
+def test_replacement_never_deletes_legacy_video(tmp_path, monkeypatch, status):
+    manifest, path, thumbnail = _prepare_run(tmp_path, monkeypatch, _video())
+    manifest.write_text('short: short-test\nstatus: approved\nlegacy_video_ids: [old-video]\n')
+    monkeypatch.setattr(upload, 'upload', mock.Mock(return_value=SimpleNamespace(
+        privacy_status='public', video_id='new-video')))
+    thumbnail.return_value = 'ok'
+    delete = mock.Mock()
+    monkeypatch.setattr(upload, 'delete_video', delete)
+    monkeypatch.setattr(upload, 'audit_channel_videos', mock.Mock(return_value=[
+        {'id': 'new-video', 'uploadStatus': status}, {'id': 'old-video', 'uploadStatus': 'processed'}]))
+    monkeypatch.setattr(release, '_open_release_ticket', mock.Mock())
+    monkeypatch.setattr(release, '_close_superseded_tickets', mock.Mock())
+    if status == 'rejected':
+        with pytest.raises(RuntimeError, match='failed YouTube processing'):
+            release.run_short_release('short-test', manifest_path=manifest)
+        assert manifest.exists() and not path.exists()
+    else:
+        result = release.run_short_release('short-test', manifest_path=manifest)
+        assert result['video_id'] == 'new-video' and path.exists() and not manifest.exists()
+    delete.assert_not_called()
+
+
+def test_rejected_forced_replacement_preserves_previous_receipt(tmp_path, monkeypatch):
+    manifest, path, thumbnail = _prepare_run(tmp_path, monkeypatch, _video())
+    path.parent.mkdir()
+    previous = '---\nyoutube_video_id: "old-video"\n---\nold receipt\n'
+    path.write_text(previous)
+    monkeypatch.setattr(upload, 'upload', mock.Mock(return_value=SimpleNamespace(
+        privacy_status='public', video_id='new-video')))
+    thumbnail.return_value = 'ok'
+    delete = mock.Mock()
+    monkeypatch.setattr(upload, 'delete_video', delete)
+    monkeypatch.setattr(upload, 'audit_channel_videos', mock.Mock(return_value=[
+        {'id': 'new-video', 'uploadStatus': 'rejected'}]))
+    with pytest.raises(RuntimeError, match='failed YouTube processing'):
+        release.run_short_release('short-test', force=True, manifest_path=manifest)
+    assert path.read_text() == previous and manifest.exists()
+    delete.assert_not_called()
 
 
 def test_recovery_never_overwrites_existing_receipt(tmp_path):

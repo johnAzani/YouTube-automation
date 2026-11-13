@@ -131,8 +131,12 @@ class PrayerVisualTests(unittest.TestCase):
         for key in ('short-psalm121', 'short-psalm27', 'short-psalm46', 'short-psalm34'):
             if key not in SCRIPTS:
                 continue
-            fake_words = [(i * 0.45, i * 0.45 + 0.38, f'word{i}') for i in range(130)]
-            stream = build_kinetic_stream(key, fake_words, adur=58.0)
+            from pipeline.short_release import _clean_word_token
+            spoken = [w for cap in SCRIPTS[key]['captions'] for w in cap[2].split()
+                      if _clean_word_token(w)]
+            fake_words = [(i * 0.45, i * 0.45 + 0.38, _clean_word_token(w))
+                          for i, w in enumerate(spoken)]
+            stream = build_kinetic_stream(key, fake_words, adur=len(spoken) * 0.45 + 1)
             self.assertGreater(len(stream), 0, key)
             for card in stream:
                 self.assertLessEqual(len(card['lines']), 3, f"{key}: {card['lines']}")

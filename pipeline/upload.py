@@ -151,47 +151,72 @@ def _normalize_title(title: str) -> str:
     return " ".join(cleaned.lower().split())
 
 
-def check_existing_channel_duplicate(youtube, title: str, slug: str | None = None) -> dict | None:
-    """Check if a video with an identical or near-identical title already exists on the channel.
+# A bounded lookup prevents a corrupt pagination chain or unusually large channel
+# from consuming unbounded quota. Exhausting the bound is *unknown*, not clear.
+DUPLICATE_SCAN_MAX_PAGES = 20
 
-    Returns existing video metadata if found, or None.
-    Uses only 2 YouTube Data API quota units (channels.list + playlistItems.list).
+
+def check_existing_channel_duplicate(
+    youtube, title: str, slug: str | None = None, *, additional_titles: tuple[str, ...] = (),
+) -> dict | None:
+    """Search the uploads playlist for an unambiguous title match.
+
+    Scan every page, up to a hard cap; a failed/incomplete scan and multiple
+    distinct matches are unsafe, not evidence that the channel is clear. The
+    bounded scan costs one channels.list and one playlistItems.list per page.
+    Title matches do not establish upload identity or solve concurrent races.
     """
     try:
-        ch_resp = youtube.channels().list(part="contentDetails", mine=True).execute()
+        titles = {value.strip() for value in (title, *additional_titles) if value and value.strip()}
+        normalized = {_normalize_title(value) for value in titles} - {""}
+        if not normalized:
+            raise ValueError("missing usable title")
+        ch_resp = youtube.channels().list(part="id,contentDetails", mine=True).execute()
         items = ch_resp.get("items", [])
-        if not items:
-            return None
+        if not isinstance(items, list) or len(items) != 1:
+            raise ValueError("missing or ambiguous authenticated channel")
+        expected = str(CONFIG.expected_youtube_channel_id or "").strip()
+        if expected and items[0].get("id") != expected:
+            raise ValueError("duplicate lookup is authenticated to a different channel")
         uploads_pl = items[0]["contentDetails"]["relatedPlaylists"]["uploads"]
+        if not isinstance(uploads_pl, str) or not uploads_pl:
+            raise ValueError("missing uploads playlist")
 
-        # Check recent 50 channel uploads
-        pl_resp = youtube.playlistItems().list(
-            part="snippet",
-            playlistId=uploads_pl,
-            maxResults=50,
-        ).execute()
-
-        target_norm = _normalize_title(title)
-
-        for p_item in pl_resp.get("items", []):
-            snip = p_item.get("snippet", {})
-            remote_title = snip.get("title", "")
-            remote_id = snip.get("resourceId", {}).get("videoId", "")
-            if not remote_id:
-                continue
-
-            # Exact title match
-            if remote_title.strip() == title.strip():
-                return {"id": remote_id, "title": remote_title, "match": "exact"}
-
-            # Normalized title match (ignoring case, punctuation, and hashtag variations)
-            if target_norm and _normalize_title(remote_title) == target_norm:
-                return {"id": remote_id, "title": remote_title, "match": "normalized"}
-
-        return None
+        token = None
+        seen_tokens: set[str] = set()
+        matches: dict[str, dict] = {}
+        for _ in range(DUPLICATE_SCAN_MAX_PAGES):
+            pl_resp = youtube.playlistItems().list(
+                part="snippet", playlistId=uploads_pl, maxResults=50, pageToken=token,
+            ).execute()
+            if not isinstance(pl_resp, dict) or not isinstance(pl_resp.get("items"), list):
+                raise ValueError("invalid uploads playlist response")
+            for p_item in pl_resp["items"]:
+                if not isinstance(p_item, dict) or not isinstance(p_item.get("snippet"), dict):
+                    raise ValueError("invalid uploads playlist item")
+                snip = p_item["snippet"]
+                remote_title = snip.get("title")
+                resource = snip.get("resourceId")
+                if not isinstance(remote_title, str) or not isinstance(resource, dict):
+                    raise ValueError("incomplete uploads playlist item")
+                remote_id = resource.get("videoId")
+                if not isinstance(remote_id, str) or not remote_id:
+                    raise ValueError("uploads playlist item has no video ID")
+                exact = remote_title.strip() in titles
+                if exact or _normalize_title(remote_title) in normalized:
+                    matches[remote_id] = {"id": remote_id, "title": remote_title,
+                                          "match": "exact" if exact else "normalized"}
+            token = pl_resp.get("nextPageToken")
+            if token is None:
+                if len(matches) > 1:
+                    raise ValueError("multiple videos match this title; manual reconciliation required")
+                return next(iter(matches.values()), None)
+            if not isinstance(token, str) or not token or token in seen_tokens:
+                raise ValueError("invalid or repeated uploads page token")
+            seen_tokens.add(token)
+        raise ValueError("uploads playlist exceeds bounded duplicate scan")
     except Exception as exc:
-        print(f"[upload] Notice: duplicate check query skipped: {exc}")
-        return None
+        raise RuntimeError("Duplicate check unavailable or ambiguous; refusing to upload") from exc
 
 
 def verify_target_channel(youtube) -> dict:
@@ -210,6 +235,8 @@ def verify_target_channel(youtube) -> dict:
             "YouTube returned no channel for these credentials (mine=True). "
             "Re-mint the refresh token while signed into the target channel."
         )
+    if not isinstance(items, list) or len(items) != 1 or not isinstance(items[0], dict):
+        raise RuntimeError("YouTube returned an ambiguous authenticated channel; refusing recovery or upload")
     channel = items[0]
     actual_id = channel.get("id", "")
     title = (channel.get("snippet") or {}).get("title", "")
@@ -226,8 +253,8 @@ def verify_target_channel(youtube) -> dict:
     return {"id": actual_id, "title": title}
 
 
-def inspect_existing_short(video_id: str, expected_title: str) -> dict:
-    """Read and verify an existing Short before recovering its missing receipt.
+def _inspect_existing_video(video_id: str, expected_title: str, kind: str) -> dict:
+    """Read and verify an existing video before recovering its missing receipt.
 
     Refuse to infer ownership, timestamps or privacy from a duplicate match. The
     caller keeps the queue manifest when this lookup cannot establish the facts.
@@ -240,37 +267,49 @@ def inspect_existing_short(video_id: str, expected_title: str) -> dict:
     from .metadata import smart_truncate_title
 
     if not re.fullmatch(r"[A-Za-z0-9_-]{11}", str(video_id or "")):
-        raise RuntimeError("Cannot recover Short: invalid YouTube video ID")
+        raise RuntimeError(f"Cannot recover {kind}: invalid YouTube video ID")
     expected_channel = (CONFIG.expected_youtube_channel_id or "").strip()
     if not expected_channel:
-        raise RuntimeError("Cannot recover Short: expected channel ID is not configured")
+        raise RuntimeError(f"Cannot recover {kind}: expected channel ID is not configured")
     youtube = build("youtube", "v3", credentials=_credentials(), cache_discovery=False)
     channel = verify_target_channel(youtube)
     response = youtube.videos().list(part="snippet,status,contentDetails", id=video_id).execute()
     items = response.get("items", [])
     if len(items) != 1 or items[0].get("id") != video_id:
-        raise RuntimeError("Cannot recover Short: video lookup was missing or ambiguous")
+        raise RuntimeError(f"Cannot recover {kind}: video lookup was missing or ambiguous")
     item = items[0]
     snippet, status = item.get("snippet") or {}, item.get("status") or {}
     if snippet.get("channelId") != expected_channel or channel.get("id") != expected_channel:
-        raise RuntimeError("Cannot recover Short: video belongs to a different channel")
+        raise RuntimeError(f"Cannot recover {kind}: video belongs to a different channel")
     remote_title = str(snippet.get("title") or "")
     allowed_titles = {_normalize_title(expected_title), _normalize_title(smart_truncate_title(expected_title, 95))}
     if not _normalize_title(remote_title) or _normalize_title(remote_title) not in allowed_titles:
-        raise RuntimeError("Cannot recover Short: video title does not match the edition")
+        raise RuntimeError(f"Cannot recover {kind}: video title does not match the edition")
     privacy, upload_status = status.get("privacyStatus"), status.get("uploadStatus")
     if privacy not in {"public", "private", "unlisted"} or upload_status not in {"processed", "uploaded"}:
-        raise RuntimeError("Cannot recover Short: privacy or upload status is not usable")
+        raise RuntimeError(f"Cannot recover {kind}: privacy or upload status is not usable")
     published_at = str(snippet.get("publishedAt") or "")
     try:
         published_time = datetime.fromisoformat(published_at.replace("Z", "+00:00"))
         if published_time.tzinfo is None:
             raise ValueError("missing timezone")
     except ValueError as exc:
-        raise RuntimeError("Cannot recover Short: YouTube did not return a usable publication timestamp") from exc
+        raise RuntimeError(f"Cannot recover {kind}: YouTube did not return a usable publication timestamp") from exc
     return {"video_id": video_id, "title": remote_title, "privacy_status": privacy,
             "upload_status": upload_status, "published_at": published_at,
             "duration": str((item.get("contentDetails") or {}).get("duration") or "")}
+
+
+def inspect_existing_short(video_id: str, expected_title: str) -> dict:
+    return _inspect_existing_video(video_id, expected_title, "Short")
+
+
+def inspect_existing_longform(video_id: str, expected_title: str) -> dict:
+    return _inspect_existing_video(video_id, expected_title, "long-form video")
+
+
+def inspect_existing_video(video_id: str, expected_title: str) -> dict:
+    return _inspect_existing_video(video_id, expected_title, "video")
 
 
 def upload(
@@ -311,12 +350,11 @@ def upload(
 
     # --- DUPLICATE UPLOAD SAFETY SHIELD ----------------------------------
     if not CONFIG.allow_duplicate_uploads:
+        # Search both the uploaded/truncated and authored titles in one bounded
+        # traversal so a long title does not double the API quota cost.
         existing = check_existing_channel_duplicate(
-            youtube, safe_title, getattr(doc, "slug", None)
-        ) or (
-            check_existing_channel_duplicate(youtube, doc.title, getattr(doc, "slug", None))
-            if doc.title != safe_title
-            else None
+            youtube, safe_title, getattr(doc, "slug", None),
+            additional_titles=(doc.title,) if doc.title != safe_title else (),
         )
         if existing:
             print("\n" + "=" * 70)

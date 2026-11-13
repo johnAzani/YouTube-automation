@@ -137,6 +137,7 @@ def _load_published(repo_root: Path) -> list[dict[str, Any]]:
                 "studio_url": studio_url,
                 "thumb_url": thumb_url,
                 "thumb_text": thumb_text,
+                "thumbnail_pending": meta.get("thumbnail_pending") is True,
                 "duration_label": _duration_label(fmt, meta, body),
                 "words": _word_count(body),
             }
@@ -201,6 +202,11 @@ def _load_shorts_queue(repo_root: Path) -> list[dict[str, Any]]:
         ch_id = normalize_channel_id(data.get("channel") or DEFAULT_CHANNEL_ID)
         profile = CHANNELS.get(ch_id) or CHANNELS[DEFAULT_CHANNEL_ID]
         status = str(data.get("status") or "draft").strip().lower()
+        target = data.get("target_window_utc")
+        # YAML 1.1 interprets an unquoted 18:44 as the integer 1124. Never
+        # display that number as a time or guess an invalid value.
+        if not isinstance(target, str) or not re.fullmatch(r"(?:[01][0-9]|2[0-3]):[0-5][0-9]", target):
+            target = ""
         rows.append(
             {
                 "short": str(data.get("short") or yml.stem).strip(),
@@ -211,7 +217,7 @@ def _load_shorts_queue(repo_root: Path) -> list[dict[str, Any]]:
                 "channel_name": profile.display_name,
                 "status": status,
                 "publishable": status in {"approved", "quota_paused"} and bool(data.get("renderer_ready", True)),
-                "target_window_utc": str(data.get("target_window_utc") or "").strip(),
+                "target_window_utc": target,
             }
         )
     return rows
@@ -244,15 +250,17 @@ def _load_feedback(repo_root: Path, artifact_name: str) -> dict[str, Any]:
     }
 
 
-def _load_automations(repo_root: Path) -> tuple[bool, list[dict[str, Any]]]:
+def _load_automations(repo_root: Path) -> tuple[bool, list[dict[str, Any]], str]:
     status_path = repo_root / "content" / "monitor" / "status.json"
     if not status_path.is_file():
-        return True, []
+        return False, [], ""
     try:
         raw = json.loads(status_path.read_text(encoding="utf-8"))
+        if not isinstance(raw, dict):
+            return False, [], ""
     except Exception:  # noqa: BLE001
-        return True, []
-    healthy = bool(raw.get("healthy", True))
+        return False, [], ""
+    healthy = raw.get("healthy") is True
     items: list[dict[str, Any]] = []
     for row in raw.get("automations") or []:
         if not isinstance(row, dict):
@@ -273,7 +281,7 @@ def _load_automations(repo_root: Path) -> tuple[bool, list[dict[str, Any]]]:
                 "effect": str(row.get("effect") or ""),
             }
         )
-    return healthy, items
+    return healthy, items, str(raw.get("generated_at") or "")
 
 
 def build_network_state(repo_root: Path | None = None) -> dict[str, Any]:
@@ -281,7 +289,7 @@ def build_network_state(repo_root: Path | None = None) -> dict[str, Any]:
     videos = _load_published(root)
     lf_queue = _load_longform_queue(root)
     sh_queue = _load_shorts_queue(root)
-    healthy, automations = _load_automations(root)
+    healthy, automations, monitor_generated_at = _load_automations(root)
 
     channels_out: list[dict[str, Any]] = []
     for ch_id in known_channels():
@@ -317,6 +325,7 @@ def build_network_state(repo_root: Path | None = None) -> dict[str, Any]:
                     "published_total": len(ch_videos),
                     "published_longform": len(ch_lf_pub),
                     "published_shorts": len(ch_sh_pub),
+                    "thumbnail_pending": sum(1 for video in ch_videos if video["thumbnail_pending"]),
                     "public_total": len(ch_public),
                     "queued_longform": len(ch_lf_q_ready),
                     "queued_other": len(ch_lf_q_other),
@@ -368,6 +377,7 @@ def build_network_state(repo_root: Path | None = None) -> dict[str, Any]:
 
     return {
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "monitor_generated_at": monitor_generated_at,
         "cost_lock": {
             "monthly_cost_usd": 0.0,
             "paid_tiers": 0,

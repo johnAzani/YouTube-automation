@@ -101,6 +101,9 @@ def _mark_job_uploaded(
     doc: ScriptDoc,
     video_id: str,
     thumbnail_status: str = "not_requested",
+    narration_engine: str | None = None,
+    narration_voice: str | None = None,
+    recovered_video: dict | None = None,
 ) -> Path:
     """Move and stamp a queue job only after YouTube confirms an uploaded video ID.
 
@@ -127,6 +130,23 @@ def _mark_job_uploaded(
     # "20h ago" — which is how a healthy channel looks stale and an alarm stops
     # meaning anything.
     stamp_precise = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    if recovered_video is not None:
+        if (recovered_video.get("video_id") != video_id or
+                recovered_video.get("privacy_status") not in {"public", "private", "unlisted"} or
+                recovered_video.get("upload_status") not in {"processed", "uploaded"}):
+            raise RuntimeError("Cannot recover receipt: video identity or status is invalid")
+        stamp_precise = str(recovered_video.get("published_at") or "")
+        try:
+            parsed = datetime.fromisoformat(stamp_precise.replace("Z", "+00:00"))
+            if parsed.tzinfo is None:
+                raise ValueError("missing timezone")
+        except ValueError as exc:
+            raise RuntimeError("Cannot recover receipt: invalid video timestamp") from exc
+        stamp = stamp_precise[:10]
+        # A newly rendered take cannot establish who narrated the old upload.
+        narration_engine = narration_voice = None
+        thumb_ok = False
+        thumb_note = "thumbnail_status_unverified_after_recovery"
     text = path.read_text(encoding="utf-8")
     frontmatter = re.match(r"\A---\s*\n(.*?)\n---(?P<tail>\s*\n.*|\Z)", text, re.S)
     if not frontmatter:
@@ -136,7 +156,22 @@ def _mark_job_uploaded(
     if not replacements:
         raise RuntimeError(f"Cannot stamp {path}: missing top-level status; leaving the queue job untouched.")
     stamped = [("published_on", stamp), ("published_at", stamp_precise),
-               ("youtube_video_id", video_id), ("metadata_revision", "selar-seo-v1")]
+               ("youtube_video_id", video_id)]
+    if recovered_video is not None:
+        # Remove claims copied from a queue job that have not been verified for
+        # this remote video, including a possible stale thumbnail revision.
+        for key in ("narration_engine", "narration_voice", "thumbnail_revision", "metadata_revision"):
+            metadata = re.sub(rf"(?m)^{re.escape(key)}\s*:.*(?:\n|$)", "", metadata)
+            doc.meta.pop(key, None)
+        stamped.extend((("privacy", recovered_video["privacy_status"]),
+                        ("privacy_status", recovered_video["privacy_status"]),
+                        ("youtube_upload_status", recovered_video["upload_status"]),
+                        ("receipt_recovered_from_youtube", True),
+                        ("metadata_retrofit_approved", False)))
+    else:
+        stamped.append(("metadata_revision", "selar-seo-v1"))
+    if narration_engine and narration_voice:
+        stamped.extend((("narration_engine", narration_engine), ("narration_voice", narration_voice)))
     if thumb_ok:
         stamped.append(("thumbnail_revision", THUMBNAIL_REVISION))
     else:
@@ -161,6 +196,14 @@ def _mark_job_uploaded(
     doc.meta["published_on"] = stamp
     doc.meta["published_at"] = stamp_precise
     doc.meta["youtube_video_id"] = video_id
+    if recovered_video is not None:
+        doc.meta.update(privacy=recovered_video["privacy_status"],
+                        privacy_status=recovered_video["privacy_status"],
+                        youtube_upload_status=recovered_video["upload_status"],
+                        receipt_recovered_from_youtube=True, metadata_retrofit_approved=False)
+    if narration_engine and narration_voice:
+        doc.meta["narration_engine"] = narration_engine
+        doc.meta["narration_voice"] = narration_voice
     if thumb_ok:
         doc.meta["thumbnail_revision"] = THUMBNAIL_REVISION
     else:
@@ -222,6 +265,17 @@ def _duplicate_queue_ids(queue_dir: Path) -> set[str]:
     return {job_id for job_id, count in counts.items() if count > 1}
 
 
+def _existing_published_path(path: Path) -> Path | None:
+    """A job ID may not be republished under a different filename/slug."""
+    path = Path(path)
+    exact = PUBLISHED_DIR / path.name
+    if exact.is_file():
+        return exact
+    if re.match(r"^\d{4}-.*\.md$", path.name):
+        return next(iter(sorted(PUBLISHED_DIR.glob(f"{path.name[:4]}-*.md"))), None)
+    return None
+
+
 def select_jobs(all_flag: bool, job_path: str | None, next_flag: bool) -> list[Path]:
     if job_path:
         return [resolve_job_path(job_path)]
@@ -255,22 +309,21 @@ def select_jobs(all_flag: bool, job_path: str | None, next_flag: bool) -> list[P
             if is_quota_pause_expired(reset_at_str):
                 _log(f"Quota reset time passed ({reset_at_str}). Auto-unpausing {j.name}...")
                 unpause_longform_job(j)
-                approved.append(j)
+                # Resumed jobs must pass the same duplicate and length checks as
+                # any other approved job; a pause is not an eligibility override.
+                raw_status = "approved"
             else:
                 _log(f"{j.name} is paused until daily quota resets at {reset_at_str} UTC.")
-            continue
+                continue
 
         if raw_status == "approved":
-            # --- DUPLICATE SAFETY SHIELD: verify not already in content/published/ ---
-            published_candidate = PUBLISHED_DIR / j.name
-            if published_candidate.is_file():
-                try:
-                    pub_doc = parse_script(published_candidate)
-                    if pub_doc.status == "published" and pub_doc.meta.get("youtube_video_id"):
-                        _log(f"🛑 DUPLICATE BLOCKED: {j.name} is already published as {pub_doc.meta.get('youtube_video_id')}. Skipping queue.")
-                        continue
-                except Exception:
-                    pass
+            # An existing receipt with the same job ID is a collision even when
+            # its filename changed or the receipt is malformed. Resolve it rather
+            # than treating unreadable state as permission to upload again.
+            published_candidate = _existing_published_path(j)
+            if published_candidate:
+                _log(f"🛑 DUPLICATE BLOCKED: {j.name} collides with {published_candidate.name}; resolve before publishing.")
+                continue
             # A long-form prayer under the word floor cannot build, and picking it
             # would fail every cron forever — one bad row must never block the rest.
             # The brain's supply loop lengthens it (every production run and the
@@ -490,7 +543,9 @@ def _disabled_legacy_process(path: Path, dry_run: bool) -> dict:
                 "error": str(q_exc),
             }
         if up.privacy_status == "duplicate_prevented":
-            _log(f"YouTube upload skipped: video already live on channel ({up.video_id}).")
+            from .upload import inspect_existing_video
+            video = inspect_existing_video(up.video_id, doc.title)
+            _log(f"YouTube upload skipped: matching video on channel ({up.video_id}).")
             result.update({
                 "uploaded": False,
                 "duplicate_prevented": True,
@@ -499,7 +554,7 @@ def _disabled_legacy_process(path: Path, dry_run: bool) -> dict:
                 "privacy_status": up.privacy_status,
                 "thumbnail_status": up.thumbnail_status,
             })
-            _mark_job_uploaded(path, doc, up.video_id, up.thumbnail_status)
+            _mark_job_uploaded(path, doc, up.video_id, recovered_video=video)
             (out_dir / "job_result.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
             return result
         if not up.video_id:
@@ -843,9 +898,11 @@ def main(argv: list[str] | None = None) -> int:
         # A job whose video is already on the channel is bookkeeping, not a release:
         # recording it must not consume the whole slot. Keep going until something is
         # actually published (or the eligible jobs run out).
-        if not (args.next and result.get("privacy_status") == "already_published"):
+        if args.all and not args.next and not args.job:
+            continue
+        if not (args.next and result.get("privacy_status") in {"already_published", "duplicate_prevented"}):
             break
-        _log(f"{path.name} was already live; moving on to the next eligible job")
+        _log(f"{path.name} matched an existing video; moving on to the next eligible job")
         if not remaining:
             remaining = [p for p in (select_jobs(False, None, False) or [])
                          if p not in tried]
@@ -857,9 +914,9 @@ def main(argv: list[str] | None = None) -> int:
         if result.get("uploaded"):
             print(f"::notice title=Published::{(result.get('video_id') or '?')} — "
                   f"{result.get('watch_url') or ''} ({result.get('duration_seconds') or 0:.0f}s)")
-        elif result.get("privacy_status") == "already_published":
-            print(f"::notice title=Already live::id {result.get('id')} was already on the "
-                  f"channel as {result.get('video_id')}; recorded, not re-uploaded.")
+        elif result.get("privacy_status") in {"already_published", "duplicate_prevented"}:
+            print(f"::notice title=Existing video recorded::id {result.get('id')} matched "
+                  f"{result.get('video_id')}; recorded, not re-uploaded.")
         elif result.get("dry_run"):
             print(f"::notice title=Rendered only::`{result.get('slug')}` rendered under "
                   f"DRY_RUN; nothing uploaded.")

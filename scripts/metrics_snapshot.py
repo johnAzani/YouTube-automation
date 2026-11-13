@@ -44,11 +44,25 @@ def _public_video_rows(items: list[dict], today: str) -> list[dict]:
             "video_id": v["id"],
             "title": v["snippet"]["title"][:80],
             "published_at": v["snippet"]["publishedAt"][:10],
-            "views": s.get("viewCount", 0),
+            # Missing statistics are unknown, not evidence of zero views.
+            "views": s.get("viewCount", ""),
             "likes": s.get("likeCount", 0),
             "comments": s.get("commentCount", 0),
         })
     return rows
+
+
+def _check_snapshot_channel(items: list[dict], expected_id: str) -> dict:
+    """Do not label another account's metrics as the requested channel."""
+    if len(items) != 1 or not isinstance(items[0], dict) or not items[0].get("id"):
+        raise RuntimeError("Metrics credentials returned a missing or ambiguous channel")
+    expected = (expected_id or "").strip()
+    if expected and items[0]["id"] != expected:
+        raise RuntimeError("Metrics credentials do not match the expected channel ID")
+    if not expected:
+        print("::warning title=Channel identity unverified::No expected channel ID is configured; "
+              "metrics cannot be checked against the requested channel.")
+    return items[0]
 
 
 def _within_retention(rows: list[dict], today: dt.date) -> list[dict]:
@@ -116,7 +130,9 @@ def _post_github_issue(
         vid = r.get("video_id", "")
         t = str(r.get("title", ""))[:45]
         pub = r.get("published_at", "")
-        v = r.get("views", 0)
+        v = r.get("views")
+        if v is None or v == "":
+            v = "unknown"
         l = r.get("likes", 0)
         c = r.get("comments", 0)
         watch_link = f"[Watch](https://youtu.be/{vid})"
@@ -244,10 +260,12 @@ def main(argv: list[str] | None = None) -> int:
 
     ch = youtube.channels().list(part="contentDetails,statistics", mine=True).execute()
     items = ch.get("items") or []
-    if not items:
-        print("no channel for these credentials")
+    try:
+        channel = _check_snapshot_channel(items, CONFIG.expected_youtube_channel_id)
+    except RuntimeError as exc:
+        print(f"::error title=Metrics channel identity check failed::{exc}")
         return 1
-    uploads = items[0]["contentDetails"]["relatedPlaylists"]["uploads"]
+    uploads = channel["contentDetails"]["relatedPlaylists"]["uploads"]
     print("authenticated channel found; collecting public-video metrics only")
 
     video_ids: list[str] = []
@@ -263,7 +281,7 @@ def main(argv: list[str] | None = None) -> int:
 
     today = dt.date.today()
     today_text = today.isoformat()
-    channel_snapshot = _subscriber_snapshot(items[0], today_text)
+    channel_snapshot = _subscriber_snapshot(channel, today_text)
     channel_snapshot["channel_key"] = channel_key
     CSV_PATH.parent.mkdir(parents=True, exist_ok=True)
     CSV_PATH.with_name("channel-metrics.json").write_text(

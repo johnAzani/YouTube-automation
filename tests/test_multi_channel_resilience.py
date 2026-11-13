@@ -255,21 +255,15 @@ class TestMultiChannelWorkflowAndVoiceIsolation(unittest.TestCase):
             "queue check must run after supply repair so newly authored scripts can publish",
         )
 
-    def test_edge_fallback_uses_slower_rate_and_honest_speaker_label(self):
-        """R28: edge-tts fallback slows by -5% and duration errors name the real engine."""
+    def test_gemini_failure_does_not_substitute_a_voice(self):
         from pipeline import prayer_pipeline as pp
-
         doc = SimpleNamespace(full_narration="word " * 900, word_count=900)
-        with tempfile.TemporaryDirectory() as tmp:
-            audio = Path(tmp) / "narration.mp3"
-            with mock.patch.object(pp, "synthesize_gemini_audio", side_effect=RuntimeError("no audio")), \
-                 mock.patch.object(pp, "synthesize_edge", return_value=("edge-tts", [])) as edge:
-                engine = pp._narrate(doc, audio)
-        self.assertEqual(engine, "edge-tts")
-        self.assertEqual(edge.call_args.kwargs.get("rate"), "-5%")
-
-        source = (ROOT / "pipeline" / "prayer_pipeline.py").read_text(encoding="utf-8")
-        self.assertIn("Actual {speaker} narration is", source)
+        with tempfile.TemporaryDirectory() as tmp, \
+             mock.patch.object(pp, "synthesize_gemini_audio", side_effect=RuntimeError("no audio")), \
+             mock.patch("pipeline.tts.synthesize_edge") as edge:
+            with self.assertRaisesRegex(RuntimeError, "no audio"):
+                pp._narrate(doc, Path(tmp) / "narration.mp3")
+            edge.assert_not_called()
 
     def test_release_ticket_deduplicates_already_recorded_video(self):
         """§70: never open duplicate release tickets when a video receipt already exists."""
@@ -1137,8 +1131,8 @@ goes before you until evening falls and brings your labor to peaceful completion
             self.assertEqual(by_name["last upload (prayer2)"]["severity"], "warning")
             self.assertEqual(by_name["last upload (prayer3)"]["severity"], "blocking")
 
-    def test_poisoned_speech_alignment_purges_chunks_and_falls_back_to_edge_tts(self):
-        """Alignment rejection purges narration + _gemini_chunks_* and falls back cleanly to edge-tts."""
+    def test_poisoned_speech_alignment_purges_chunks_and_fails_closed(self):
+        """Alignment rejection purges poisoned audio without switching voices."""
         from types import SimpleNamespace
         from pipeline import prayer_pipeline as pp
         from pipeline.script_doc import Scene, ScriptDoc
@@ -1199,19 +1193,18 @@ goes before you until evening falls and brings your labor to peaceful completion
                                    side_effect=lambda *a, **k: (slug_out / "narration.mp3").write_bytes(b"BAD")), \
                  mock.patch.object(pp, "_probe_duration", return_value=360.0), \
                  mock.patch.object(pp, "align", side_effect=fake_align), \
-                 mock.patch.object(pp, "synthesize_edge", side_effect=fake_edge), \
                  mock.patch("pipeline.assets.fetch_scene_assets", return_value=[SimpleNamespace(path=asset)]), \
                  mock.patch.object(pp, "render", return_value=output), \
                  mock.patch("pipeline.thumbnail_ctr.generate_ctr_pack",
                             return_value=[SimpleNamespace(path=thumbnail, as_dict=lambda: {})]), \
                  mock.patch("pipeline.thumbnail_studio.mobile_preview"), \
                  mock.patch("pipeline.metadata.write_metadata_pack", return_value={"description": "prayer"}):
-                pp.produce(root / "0015.md", True, model)
+                with self.assertRaisesRegex(ValueError, "does not match"):
+                    pp.produce(root / "0015.md", True, model)
 
-            self.assertEqual(len(align_calls), 2)
+            self.assertEqual(len(align_calls), 1)
             self.assertFalse(chunk_dir.exists(), "Poisoned _gemini_chunks_* must be purged immediately")
-            saved_meta = json.loads((slug_out / "narration.json").read_text(encoding="utf-8"))
-            self.assertEqual(saved_meta["engine"], "edge-tts")
+            self.assertFalse((slug_out / "narration.json").exists())
 
         produce_wf = (ROOT / ".github" / "workflows" / "produce.yml").read_text(encoding="utf-8")
         self.assertIn("chunks-tts-v5-${{ matrix.channel }}-", produce_wf)
