@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T17:42:54Z",
+  "generated_at": "2026-11-13T17:43:03Z",
   "monitor_generated_at": "2026-11-13T17:41:50.879755+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 174,
-    "published_longform": 85,
+    "published_total": 175,
+    "published_longform": 86,
     "published_shorts": 89,
-    "public_total": 171,
-    "queued_longform": 52,
+    "public_total": 172,
+    "queued_longform": 51,
     "queued_shorts": 49,
     "automations_ok": 10,
     "automations_total": 10,
@@ -499,28 +499,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 5,
-        "published_longform": 3,
+        "published_total": 6,
+        "published_longform": 4,
         "published_shorts": 2,
-        "thumbnail_pending": 5,
-        "public_total": 5,
-        "queued_longform": 4,
+        "thumbnail_pending": 6,
+        "public_total": 6,
+        "queued_longform": 3,
         "queued_other": 0,
         "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0602",
-        "title": "Proverbs 18:10 Strong Tower Prayer | The Covenant Shield",
-        "format": "longform",
-        "youtube_video_id": "IR7472CF9CM",
-        "watch_url": "https://youtu.be/IR7472CF9CM",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T12:59:23Z"
-      },
-      "next_queued_longform": {
         "id": "0603",
         "title": "Ephesians 6:16 Shield of Faith Prayer | The Covenant Shield",
-        "words": 868,
+        "format": "longform",
+        "youtube_video_id": "S7i2vZMHgE0",
+        "watch_url": "https://youtu.be/S7i2vZMHgE0",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T17:42:08Z"
+      },
+      "next_queued_longform": {
+        "id": "0604",
+        "title": "Psalm 34:7 Protection Prayer | The Covenant Shield",
+        "words": 1203,
         "status": "approved"
       },
       "next_queued_short": {
@@ -689,6 +689,30 @@
       "thumbnail_pending": true,
       "duration_label": "~8 min",
       "words": 1225
+    },
+    {
+      "id": "0603",
+      "slug": "ephesians-6-16-shield-of-faith-prayer",
+      "file": "0603-ephesians-6-16-shield-of-faith-prayer.md",
+      "title": "Ephesians 6:16 Shield of Faith Prayer | The Covenant Shield",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T17:42:08Z",
+      "youtube_video_id": "S7i2vZMHgE0",
+      "watch_url": "https://youtu.be/S7i2vZMHgE0",
+      "youtu_be_url": "https://youtu.be/S7i2vZMHgE0",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/S7i2vZMHgE0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/S7i2vZMHgE0/hqdefault.jpg",
+      "thumb_text": "SHIELD OF FAITH",
+      "thumbnail_pending": true,
+      "duration_label": "~6 min",
+      "words": 868
     },
     {
       "id": "0702",
@@ -5403,19 +5427,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1739
-      },
-      {
-        "id": "0603",
-        "slug": "ephesians-6-16-shield-of-faith-prayer",
-        "file": "0603-ephesians-6-16-shield-of-faith-prayer.md",
-        "title": "Ephesians 6:16 Shield of Faith Prayer | The Covenant Shield",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 868
       },
       {
         "id": "0604",
