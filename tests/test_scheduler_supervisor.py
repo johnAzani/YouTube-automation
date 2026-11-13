@@ -510,7 +510,7 @@ class TestWorkflowFile(unittest.TestCase):
         """A dropped Produce slot is recovered for exactly the channels that lack a video.
 
         One dispatch carries them all (`channels=a,b`): two dispatches would share
-        `content-state`, which allows a single *pending* run, so the second would
+        `content-state`, which then allowed a single *pending* run, so the second would
         cancel the first (6 November 08:00).
         """
         calls = []

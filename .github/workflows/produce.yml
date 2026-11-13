@@ -63,9 +63,18 @@ permissions:
 # committed its dispatch ledger, production's `git push` was rejected, the move to
 # content/published/ never landed, and the next run could have re-uploaded the
 # same video. One content-state lock for all of them.
+#
+# `queue: max` keeps every waiting run (up to 100), in the order it arrived.
+# Without it the lock holds ONE waiting run and a newer waiting run cancels it,
+# even with `cancel-in-progress: false`. Production runs last hours, so a brain
+# run and a recovery dispatch waiting behind one would knock each other out.
+# gemini_brain.yml shares this lock and carries the same setting; change both
+# together. A run that waited is not stale work: the plan job reads the branch
+# tip and drops channels whose slot was served in the meantime.
 concurrency:
   group: content-state
   cancel-in-progress: false
+  queue: max
 
 jobs:
   plan:

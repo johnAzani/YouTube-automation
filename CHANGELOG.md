@@ -5,6 +5,12 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-13 — waiting runs keep their place, comment ledger cannot be dropped
+
+- `produce.yml` and `gemini_brain.yml` set `queue: max` on the shared `content-state` lock. GitHub then keeps every waiting run in arrival order (up to 100) instead of one; before, a newer waiting run cancelled the older one. Checked on this repository with two throwaway workflows sharing one group: six runs, one at a time, alternating in arrival order, none cancelled.
+- `comments.yml`: each channel leg checks out the branch tip (`ref: ${{ github.ref }}`) instead of the commit the run was created at. The reply ledger is one JSON object for all channels, so a leg on the old commit conflicted with the entries the previous leg had pushed, on every retry, and the step still ended green with the entries dropped. The commit step now aborts a failed rebase, tries five times, and fails with `Reply ledger not recorded` if the entries are not on the branch. Nobody was answered twice by this: the engine also looks for the channel's reply on YouTube. Whether production ever dropped an entry this way is not established (it needs two channels to post replies in the same run, and the run logs cannot be read from here); the fault is reproduced in `tests/test_comments_ledger_rehearsal.py`.
+- Three more receipts overwritten by the last serial run (`99c3716`, `e45a240`, 13 November) restored with `scripts/repair_clobbered_receipts.py`: `0404-exodus-15-26-jehovah-rapha-healing-prayer.md` (publish time back to 03:44:08 UTC), `0504-psalm-90-17-morning-prayer-the-provision-table.md` (back to 04:52:46 UTC) and `short-healingexodus15v26-restoration-prayer.md` (full receipt back).
+
 ## 2026-11-13 — channels are produced side by side
 
 - Production legs now run in lanes instead of one after another. The plan job sets `max-parallel` from the repository variable `PRODUCE_MAX_PARALLEL` (default 5, clamped to 1–10; `1` restores the serial matrix with no code change). Measured 8–13 November: ten legs in a row took 537 minutes, production held `content-state` for 1,412 minutes of 12 November, and that day published 17 long-forms of the 30 scheduled with three channels getting none. Replaying the recorded leg times with five lanes gives 118 minutes. Not yet run in production; the lane expression was checked on GitHub with a throwaway workflow.

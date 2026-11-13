@@ -387,4 +387,5 @@ def test_one_production_run_at_a_time_with_lanes_inside_it():
     assert "needs.plan.outputs.max_parallel" in str(
         data["jobs"]["produce"]["strategy"]["max-parallel"])
     assert data["jobs"]["produce"]["strategy"]["fail-fast"] is False
-    assert data["concurrency"] == {"group": "content-state", "cancel-in-progress": False}
+    assert data["concurrency"] == {"group": "content-state", "cancel-in-progress": False,
+                                   "queue": "max"}

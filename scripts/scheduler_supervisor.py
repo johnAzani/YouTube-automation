@@ -579,7 +579,7 @@ def dispatch(
 
     1. **One dispatch for every channel that owes the slot a video.** The run
        renders them side by side (``channels=a,b,c``). It used to be one channel
-       per dispatch because ``content-state`` holds a single pending run, which
+       per dispatch because ``content-state`` then held a single pending run, which
        made recovering ten channels ten runs in a row.
     2. **Receipts, not runs, decide.** `published_channels_since()` is the only
        evidence that a channel's video exists.
