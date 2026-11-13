@@ -19,11 +19,13 @@ youtube_duration: PT45S
 receipt_recovered_from_youtube: true
 metadata_retrofit_approved: false
 thumbnail_pending: true
-thumbnail_error: thumbnail_status_unverified_after_recovery
+thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCj-brsBz9FNO6sZ3NLIzjvQ; auth_channel_title=The Healing Balm; long_uploads_status=allowed; video_channel_id=UCj-brsBz9FNO6sZ3NLIzjvQ; video_channel_title=The Healing Balm; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_attempts: 0
 thumbnail_poster: ["THE HEALING BALM", "GOD IS YOUR HEALER", "EXODUS 15:26", "A RESTORATIVE PRAYER"]
 thumbnail_kicker: "RECEIVE GOD'S HEALING PEACE"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-13T17:21:34Z"
+thumbnail_retry_reason: "rate_limit"
 ---
 
 This receipt was recovered from an existing YouTube video. No video was uploaded during recovery; the custom thumbnail status is unverified.
