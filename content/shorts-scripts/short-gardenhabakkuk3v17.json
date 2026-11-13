@@ -3,101 +3,89 @@
   "channel": "prayer9",
   "psalm": null,
   "title": [
-    "A PRAYER OF",
-    "TOTAL TRUST"
+    "REJOICE IN HIM",
+    "HABAKKUK 3:17-19"
   ],
   "poster": [
-    "GIVE THANKS",
-    "IN THE",
-    "VALLEY",
-    "OF LIGHT"
+    "THE PRAISE GARDEN",
+    "REJOICE IN THE LORD",
+    "HABAKKUK 3:17-19",
+    "DAILY PRAYER"
   ],
   "end": [
     "SUBSCRIBE",
     "The Praise Garden — enter His gates with thanksgiving"
   ],
   "stock_queries": [
-    "sunlit forest glades",
-    "misty countryside in soft light",
-    "golden light over calm meadow",
-    "peaceful flowing river",
-    "gentle mountain stream at dawn",
-    "soft light through canopy",
-    "serene morning fog over lake"
+    "sunlit forest glade soft morning light fog",
+    "misty countryside hill soft golden sunlight peaceful",
+    "golden light mountain peak calm landscape mist",
+    "peaceful river flowing through lush green forest sunbeams",
+    "misty meadow morning sun rays calm nature",
+    "serene golden sunset over calm lake water reflections"
   ],
   "scenes": [
     {
-      "a": "Pause your day and breathe deeply.",
+      "a": "Pause for a quiet moment now",
       "img": "short-gardenhabakkuk3v17-scene-01.jpg",
-      "kicker": "HABAKKUK 3:17",
-      "sub": "FIND REST IN GOD",
+      "kicker": "HABAKKUK 3:17-19",
+      "sub": "NOTICE HIS ENDURING GRACE",
       "cam": "push_in",
       "focus": [
         0.5,
-        0.5
+        0.45
       ]
     },
     {
-      "a": "Notice the quiet grace of God.",
+      "a": "Although the fig tree shall not blossom",
       "img": "short-gardenhabakkuk3v17-scene-02.jpg",
-      "kicker": "HABAKKUK 3:18",
-      "sub": "HIS MERCY IS NEW",
-      "cam": "pull_out",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "Although the fig tree shall not blossom,",
-      "img": "short-gardenhabakkuk3v17-scene-03.jpg",
-      "kicker": "HABAKKUK 3:17",
-      "sub": "TRUST BEYOND SIGHT",
-      "cam": "pan_left",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "neither shall fruit be in the vines.",
-      "img": "short-gardenhabakkuk3v17-scene-04.jpg",
-      "kicker": "HABAKKUK 3:17",
-      "sub": "PROVISION IN THE SPIRIT",
+      "kicker": "HABAKKUK 3:17-19",
+      "sub": "YET I WILL REJOICE",
       "cam": "pan_right",
       "focus": [
-        0.5,
+        0.4,
         0.5
       ]
     },
     {
-      "a": "Yet I will rejoice in the Lord.",
-      "img": "short-gardenhabakkuk3v17-scene-05.jpg",
-      "kicker": "HABAKKUK 3:18",
-      "sub": "JOY IN THE LORD",
+      "a": "The Lord God is my strength",
+      "img": "short-gardenhabakkuk3v17-scene-03.jpg",
+      "kicker": "HABAKKUK 3:17-19",
+      "sub": "HE MAKES MY FEET HIGH",
       "cam": "tilt_up",
       "focus": [
         0.5,
-        0.5
+        0.6
       ]
     },
     {
-      "a": "The Lord God is my strength.",
-      "img": "short-gardenhabakkuk3v17-scene-06.jpg",
-      "kicker": "HABAKKUK 3:19",
-      "sub": "HE IS OUR STRENGTH",
-      "cam": "push_in",
+      "a": "Lord, we praise You today",
+      "img": "short-gardenhabakkuk3v17-scene-04.jpg",
+      "kicker": "HABAKKUK 3:17-19",
+      "sub": "GRATITUDE IN EVERY SEASON",
+      "cam": "pull_out",
       "focus": [
         0.5,
         0.5
       ]
     },
     {
-      "a": "Subscribe to The Praise Garden.",
-      "img": "short-gardenhabakkuk3v17-scene-07.jpg",
-      "kicker": "THANKSGIVING PRAYER",
-      "sub": "JOIN US IN PRAISE",
-      "cam": "pull_out",
+      "a": "Fill our hearts with Your peace",
+      "img": "short-gardenhabakkuk3v17-scene-05.jpg",
+      "kicker": "HABAKKUK 3:17-19",
+      "sub": "STRENGTH FOR WEARY SOULS",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Thank You for Your endless mercy",
+      "img": "short-gardenhabakkuk3v17-scene-06.jpg",
+      "kicker": "HABAKKUK 3:17-19",
+      "sub": "ENTER HIS GATES WITH PRAISE",
+      "cam": "push_in",
       "focus": [
         0.5,
         0.5
@@ -107,168 +95,308 @@
   "captions": [
     [
       0,
-      10,
-      "Pause your day and breathe deeply. Notice the quiet grace of God surrounding you. Offer Him an honest heart of thanksgiving."
+      12,
+      "Pause for a quiet moment now, notice the faithful grace of God, and thank Him with an honest, humble heart."
     ],
     [
-      11,
-      22,
-      "Although the fig tree shall not blossom, neither shall fruit be in the vines; the labor of the olive shall fail."
+      12,
+      26,
+      "Scripture declares: Although the fig tree shall not blossom, neither shall fruit be in the vines, yet I will rejoice in the Lord."
     ],
     [
-      23,
-      35,
-      "And the fields shall yield no meat; the flock shall be cut off from the fold, and there shall be no herd in the stalls."
+      26,
+      40,
+      "The Lord God is my strength, and He will make my feet like hinds' feet, to walk upon mine high places."
     ],
     [
-      36,
-      48,
-      "Yet I will rejoice in the Lord, I will joy in the God of my salvation. The Lord God is my strength."
+      40,
+      54,
+      "Lord, we praise You today with sincere gratitude, trusting Your divine goodness through every single season of our lives."
     ],
     [
-      49,
-      60,
-      "He will make my feet like hinds' feet, and He will make me to walk upon mine high places. Amen."
+      54,
+      68,
+      "Fill our hearts with Your peace, strengthen our weary souls, and sustain us through every trial we ever face."
     ],
     [
-      61,
-      75,
-      "Lord, we thank You for being our unwavering foundation when seasons change. Help us to find deep, abiding peace in Your presence."
-    ],
-    [
-      76,
-      90,
-      "Subscribe to The Praise Garden."
+      68,
+      80,
+      "Thank You for Your endless mercy. Subscribe to join The Praise Garden for daily thanksgiving prayers. Amen."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      10,
+      12,
       [
-        "PAUSE YOUR DAY",
-        "BREATHE DEEPLY",
-        "NOTICE GODS GRACE",
-        "OFFER AN HONEST HEART"
+        "PAUSE FOR A QUIET MOMENT NOW",
+        "NOTICE THE FAITHFUL GRACE OF GOD",
+        "THANK HIM WITH AN HONEST HEART"
       ],
       [
+        "FAITHFUL GRACE",
         "HONEST HEART"
       ],
-      "HABAKKUK 3:17"
+      "HABAKKUK 3:17-19"
     ],
     [
-      11,
-      22,
+      12,
+      26,
       [
-        "FIG TREE NOT",
-        "BLOSSOMING NEITHER FRUIT",
-        "LABOR OF OLIVE",
-        "SHALL FAIL"
+        "ALTHOUGH THE FIG TREE SHALL NOT BLOSSOM",
+        "NEITHER SHALL FRUIT BE IN VINES",
+        "YET I WILL REJOICE IN LORD"
       ],
       [
-        "SHALL FAIL"
+        "REJOICE IN THE LORD"
       ],
-      "HABAKKUK 3:17"
+      "HABAKKUK 3:17-19"
     ],
     [
-      23,
-      35,
+      26,
+      40,
       [
-        "FIELDS YIELD NO",
-        "MEAT FLOCK CUT",
-        "OFF FROM FOLD",
-        "NO HERD STALLS"
+        "THE LORD GOD IS MY STRENGTH",
+        "HE MAKES MY FEET LIKE HINDS FEET",
+        "TO WALK UPON MINE HIGH PLACES"
       ],
       [
-        "NO HERD"
-      ],
-      "HABAKKUK 3:17"
-    ],
-    [
-      36,
-      48,
-      [
-        "YET I REJOICE",
-        "IN THE LORD",
-        "GOD MY SALVATION",
-        "HE IS STRENGTH"
-      ],
-      [
-        "MY STRENGTH"
-      ],
-      "HABAKKUK 3:18"
-    ],
-    [
-      49,
-      60,
-      [
-        "FEET LIKE HINDS",
-        "WALK UPON HIGH",
-        "PLACES HE IS",
-        "OUR STRENGTH"
-      ],
-      [
+        "MY STRENGTH",
         "HIGH PLACES"
       ],
-      "HABAKKUK 3:19"
+      "HABAKKUK 3:17-19"
     ],
     [
-      61,
-      75,
+      40,
+      54,
       [
-        "THANK YOU LORD",
-        "FOR OUR FOUNDATION",
-        "ABIDING PEACE IN",
-        "YOUR PRESENCE"
+        "WE PRAISE YOU TODAY WITH GRATITUDE",
+        "TRUSTING YOUR DIVINE GOODNESS THROUGH",
+        "EVERY SINGLE SEASON OF LIVES"
       ],
       [
-        "ABIDING PEACE"
+        "DIVINE GOODNESS",
+        "GRATITUDE"
       ],
-      "HABAKKUK 3:19"
+      "HABAKKUK 3:17-19"
     ],
     [
-      76,
-      90,
+      54,
+      68,
       [
-        "SUBSCRIBE TO",
-        "THE PRAISE GARDEN"
+        "FILL OUR HEARTS WITH YOUR PEACE",
+        "STRENGTHEN OUR WEARY SOULS AND SUSTAIN",
+        "US THROUGH EVERY TRIAL WE FACE"
       ],
       [
-        "SUBSCRIBE"
+        "YOUR PEACE",
+        "WEARY SOULS"
       ],
-      "HABAKKUK 3:19"
+      "HABAKKUK 3:17-19"
+    ],
+    [
+      68,
+      80,
+      [
+        "THANK YOU FOR ENDLESS MERCY",
+        "SUBSCRIBE TO JOIN THE PRAISE GARDEN",
+        "FOR DAILY THANKSGIVING PRAYERS"
+      ],
+      [
+        "ENDLESS MERCY",
+        "PRAISE GARDEN"
+      ],
+      "HABAKKUK 3:17-19"
     ]
   ],
   "beats": [
     {
-      "a": "Pause your day and breathe deeply.",
+      "a": "Pause for a quiet moment now",
+      "kind": "phrase",
+      "words": [
+        "PAUSE",
+        "QUIET",
+        "MOMENT"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "notice the faithful grace of God",
+      "kind": "phrase",
+      "words": [
+        "FAITHFUL",
+        "GRACE"
+      ],
+      "hi": 1,
+      "slot": "B"
+    },
+    {
+      "a": "thank Him with an honest, humble heart",
       "kind": "phrase",
       "words": [
         "HONEST",
+        "HUMBLE",
         "HEART"
       ],
-      "hi": 0,
+      "hi": 2,
       "slot": "C"
     },
     {
-      "a": "Yet I will rejoice in the Lord.",
+      "a": "Although the fig tree shall not blossom",
+      "kind": "phrase",
+      "words": [
+        "FIG",
+        "TREE",
+        "BLOSSOM"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "neither shall fruit be in the vines",
+      "kind": "phrase",
+      "words": [
+        "FRUIT",
+        "VINES"
+      ],
+      "hi": 1,
+      "slot": "B"
+    },
+    {
+      "a": "yet I will rejoice in the Lord",
       "kind": "phrase",
       "words": [
         "REJOICE",
-        "IN",
         "LORD"
       ],
-      "hi": 0,
+      "hi": 2,
       "slot": "C"
     },
     {
-      "a": "The Lord God is my strength.",
+      "a": "The Lord God is my strength",
       "kind": "phrase",
       "words": [
         "LORD",
+        "GOD",
         "STRENGTH"
       ],
       "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "He will make my feet like hinds' feet",
+      "kind": "phrase",
+      "words": [
+        "FEET",
+        "HINDS'"
+      ],
+      "hi": 1,
+      "slot": "B"
+    },
+    {
+      "a": "to walk upon mine high places",
+      "kind": "phrase",
+      "words": [
+        "HIGH",
+        "PLACES"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we praise You today",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "TODAY"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "trusting Your divine goodness through",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "GOODNESS"
+      ],
+      "hi": 1,
+      "slot": "B"
+    },
+    {
+      "a": "every single season of our lives",
+      "kind": "phrase",
+      "words": [
+        "EVERY",
+        "SEASON"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Fill our hearts with Your peace",
+      "kind": "phrase",
+      "words": [
+        "FILL",
+        "HEARTS",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "strengthen our weary souls",
+      "kind": "phrase",
+      "words": [
+        "STRENGTHEN",
+        "WEARY",
+        "SOULS"
+      ],
+      "hi": 1,
+      "slot": "B"
+    },
+    {
+      "a": "sustain us through every trial",
+      "kind": "phrase",
+      "words": [
+        "SUSTAIN",
+        "EVERY",
+        "TRIAL"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Thank You for Your endless mercy",
+      "kind": "phrase",
+      "words": [
+        "ENDLESS",
+        "MERCY"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "Subscribe to join The Praise Garden",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PRAISE",
+        "GARDEN"
+      ],
+      "hi": 1,
+      "slot": "B"
+    },
+    {
+      "a": "for daily thanksgiving prayers",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "THANKSGIVING",
+        "PRAYERS"
+      ],
+      "hi": 2,
       "slot": "C"
     }
   ],
