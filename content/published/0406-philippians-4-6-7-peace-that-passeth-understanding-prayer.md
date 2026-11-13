@@ -84,15 +84,15 @@ published_at: "2026-11-13T19:14:00Z"
 youtube_video_id: "jaeiK1qh8Wk"
 metadata_revision: "selar-seo-v1"
 uploaded_at: "2026-11-13T17:32:45Z"
-scheduled_publish: true
-privacy_status: "private"
-pinned_comment_pending: true
+scheduled_publish: false
+privacy_status: "public"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCj-brsBz9FNO6sZ3NLIzjvQ; auth_channel_title=The Healing Balm; long_uploads_status=allowed; video_channel_id=UCj-brsBz9FNO6sZ3NLIzjvQ; video_channel_title=The Healing Balm; video_privacy=private; upload_status=processed; same_channel=True"
 thumbnail_retry_after: "2026-11-13T23:36:42Z"
 thumbnail_retry_reason: "rate_limit"
+publish_confirmed_at: "2026-11-13T19:53:54Z"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith

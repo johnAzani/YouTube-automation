@@ -83,7 +83,7 @@ youtube_video_id: "msTiAda7RiM"
 metadata_revision: "selar-seo-v1"
 thumbnail_pending: true
 thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCkWrcJB6-q_K0r8KSja8ALw; auth_channel_title=The Provision Table; long_uploads_status=allowed; video_channel_id=UCkWrcJB6-q_K0r8KSja8ALw; video_channel_title=The Provision Table; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_retry_after: "2026-11-13T18:19:49Z"
+thumbnail_retry_after: "2026-11-14T01:55:21Z"
 thumbnail_retry_reason: "rate_limit"
 ---
 

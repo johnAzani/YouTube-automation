@@ -76,10 +76,9 @@ published_on: "2026-11-12"
 published_at: "2026-11-12T16:45:30Z"
 youtube_video_id: "SsWigDMo520"
 metadata_revision: "selar-seo-v1"
-thumbnail_pending: true
-thumbnail_error: "not_requested"
-thumbnail_retry_after: "2026-11-13T18:59:33Z"
-thumbnail_retry_reason: "rate_limit"
+thumbnail_pending: false
+
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The First Light of the Morning
