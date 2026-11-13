@@ -1,0 +1,260 @@
+{
+  "key": "short-provisionmatthew6v31",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "SEEK FIRST",
+    "HIS KINGDOM"
+  ],
+  "poster": [
+    "WALK",
+    "IN",
+    "DIVINE",
+    "PROVISION"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunlit mountain valley peaceful river",
+    "sunlit sanctuary stone table morning light",
+    "serene river flowing through green meadows",
+    "gentle morning sunlight over quiet hills",
+    "peaceful mountain pass at sunrise",
+    "calm river water reflecting golden skies"
+  ],
+  "scenes": [
+    {
+      "a": "Breathe out the anxious weight of tomorrow and quiet your mind before the Lord.",
+      "img": "short-provisionmatthew6v31-scene-01.jpg",
+      "kicker": "MATTHEW 6:31",
+      "sub": "QUIET YOUR HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Commit your work, your decisions, and your daily needs into His faithful hands.",
+      "img": "short-provisionmatthew6v31-scene-02.jpg",
+      "kicker": "MATTHEW 6:32",
+      "sub": "COMMIT YOUR WORK",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Listen closely to the words of Matthew six, verse thirty one through thirty three.",
+      "img": "short-provisionmatthew6v31-scene-03.jpg",
+      "kicker": "MATTHEW 6:33",
+      "sub": "HEAR HIS PROMISE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Therefore take no thought, saying, What shall we eat? or, What shall we drink?",
+      "img": "short-provisionmatthew6v31-scene-04.jpg",
+      "kicker": "MATTHEW 6:31",
+      "sub": "TAKE NO THOUGHT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "For after all these things do the Gentiles seek: for your heavenly Father knoweth that ye have need of all these things.",
+      "img": "short-provisionmatthew6v31-scene-05.jpg",
+      "kicker": "MATTHEW 6:32",
+      "sub": "FATHER KNOWS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.",
+      "img": "short-provisionmatthew6v31-scene-06.jpg",
+      "kicker": "MATTHEW 6:33",
+      "sub": "SEEK FIRST HIS KINGDOM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "Breathe out the anxious weight of tomorrow and quiet your mind before the Lord."
+    ],
+    [
+      15,
+      30,
+      "Commit your work, your decisions, and your daily needs into His faithful hands."
+    ],
+    [
+      30,
+      45,
+      "Listen closely to the words of Matthew six, verse thirty one through thirty three."
+    ],
+    [
+      45,
+      60,
+      "Therefore take no thought, saying, What shall we eat? or, What shall we drink?"
+    ],
+    [
+      60,
+      75,
+      "For after all these things do the Gentiles seek: for your heavenly Father knoweth that ye have need of all these things."
+    ],
+    [
+      75,
+      95,
+      "But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "BREATHE OUT THE ANXIOUS WEIGHT",
+        "OF TOMORROW AND QUIET YOUR",
+        "MIND BEFORE THE LORD"
+      ],
+      "WEIGHT",
+      "MATTHEW 6:31"
+    ],
+    [
+      15,
+      30,
+      [
+        "COMMIT YOUR WORK YOUR DECISIONS",
+        "AND YOUR DAILY NEEDS INTO",
+        "HIS FAITHFUL HANDS"
+      ],
+      "DECISIONS",
+      "MATTHEW 6:32"
+    ],
+    [
+      30,
+      45,
+      [
+        "LISTEN CLOSELY TO THE WORDS",
+        "OF MATTHEW SIX VERSE THIRTY",
+        "ONE THROUGH THIRTY THREE"
+      ],
+      "WORDS",
+      "MATTHEW 6:33"
+    ],
+    [
+      45,
+      60,
+      [
+        "THEREFORE TAKE NO THOUGHT",
+        "SAYING WHAT SHALL WE EAT",
+        "OR WHAT SHALL WE DRINK"
+      ],
+      "THOUGHT",
+      "MATTHEW 6:31"
+    ],
+    [
+      60,
+      75,
+      [
+        "FOR AFTER ALL THESE THINGS",
+        "DO THE GENTILES SEEK FOR",
+        "YOUR HEAVENLY FATHER KNOWETH"
+      ],
+      "SEEK",
+      "MATTHEW 6:32"
+    ],
+    [
+      75,
+      95,
+      [
+        "BUT SEEK YE FIRST THE KINGDOM",
+        "OF GOD AND HIS RIGHTEOUSNESS",
+        "AND ALL THESE THINGS ADDED"
+      ],
+      "KINGDOM",
+      "MATTHEW 6:33"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Breathe out the anxious weight of tomorrow and quiet your mind before the Lord.",
+      "kind": "phrase",
+      "words": [
+        "ANXIOUS",
+        "WEIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Commit your work, your decisions, and your daily needs into His faithful hands.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFUL",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Listen closely to the words of Matthew six, verse thirty one through thirty three.",
+      "kind": "phrase",
+      "words": [
+        "MATTHEW",
+        "SIX"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Therefore take no thought, saying, What shall we eat? or, What shall we drink?",
+      "kind": "phrase",
+      "words": [
+        "TAKE",
+        "NO",
+        "THOUGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For after all these things do the Gentiles seek: for your heavenly Father knoweth that ye have need of all these things.",
+      "kind": "phrase",
+      "words": [
+        "HEAVENLY",
+        "FATHER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.",
+      "kind": "phrase",
+      "words": [
+        "SEEK",
+        "YE",
+        "FIRST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Matthew 6:31-33"
+}

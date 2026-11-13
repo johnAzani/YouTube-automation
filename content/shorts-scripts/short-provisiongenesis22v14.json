@@ -1,0 +1,267 @@
+{
+  "key": "short-provisiongenesis22v14",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "THE PROVISION",
+    "TABLE"
+  ],
+  "poster": [
+    "WALK",
+    "IN",
+    "DIVINE",
+    "PROVISION"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "sunlit golden valley morning mist",
+    "peaceful flowing river through green meadows",
+    "quiet mountain pass in golden light",
+    "ancient stone table in sunlit forest clearing",
+    "serene sunrise over tranquil riverbank",
+    "golden sunbeams breaking through high mountain trees"
+  ],
+  "scenes": [
+    {
+      "a": "commit your work",
+      "img": "short-provisiongenesis22v14-scene-01.jpg",
+      "kicker": "GENESIS 22:14",
+      "sub": "WELCOME TO THE PROVISION TABLE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "And Abraham called",
+      "img": "short-provisiongenesis22v14-scene-02.jpg",
+      "kicker": "GENESIS 22:14",
+      "sub": "THE LORD WILL PROVIDE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "In the mount of the LORD",
+      "img": "short-provisiongenesis22v14-scene-03.jpg",
+      "kicker": "GENESIS 22:14",
+      "sub": "HIS HOLY MOUNTAIN",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "it shall be seen",
+      "img": "short-provisiongenesis22v14-scene-04.jpg",
+      "kicker": "GENESIS 22:14",
+      "sub": "DIVINE PROVISION REVEALED",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father we rest",
+      "img": "short-provisiongenesis22v14-scene-05.jpg",
+      "kicker": "GENESIS 22:14",
+      "sub": "REST IN HIS PROVISION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Subscribe to The Provision Table",
+      "img": "short-provisiongenesis22v14-scene-06.jpg",
+      "kicker": "GENESIS 22:14",
+      "sub": "WALK IN DAILY GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "As you pause today, commit your work, your decisions, and your daily needs unto the Lord with a quiet and faithful heart."
+    ],
+    [
+      8,
+      17,
+      "And Abraham called the name of that place Jehovahjireh: as it is said to this day, In the mount of the LORD it shall be seen."
+    ],
+    [
+      17,
+      25,
+      "In the mount of the LORD it shall be seen, opening doors of faithful stewardship and daily grace before you now."
+    ],
+    [
+      25,
+      33,
+      "Father, we rest our anxious thoughts upon your table, trusting your timely hand to supply every need according to your riches."
+    ],
+    [
+      33,
+      41,
+      "Guide our steps through this quiet season, steady our minds, and let your abundant provision sustain us in every good work."
+    ],
+    [
+      41,
+      48,
+      "Subscribe to The Provision Table for daily wisdom and grace."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "COMMIT YOUR WORK",
+        "DECISIONS AND NEEDS",
+        "UNTO THE LORD"
+      ],
+      "COMMIT",
+      "GENESIS 22 : 14"
+    ],
+    [
+      8,
+      17,
+      [
+        "AND ABRAHAM CALLED",
+        "THE NAME OF THAT PLACE",
+        "JEHOVAHJIREH"
+      ],
+      "JEHOVAHJIREH",
+      "GENESIS 22 : 14"
+    ],
+    [
+      17,
+      25,
+      [
+        "IN THE MOUNT OF",
+        "THE LORD IT SHALL",
+        "BE SEEN TODAY"
+      ],
+      "SEEN",
+      "GENESIS 22 : 14"
+    ],
+    [
+      25,
+      33,
+      [
+        "FATHER WE REST",
+        "OUR ANXIOUS THOUGHTS",
+        "UPON YOUR TABLE"
+      ],
+      "REST",
+      "GENESIS 22 : 14"
+    ],
+    [
+      33,
+      41,
+      [
+        "GUIDE OUR STEPS",
+        "THROUGH THIS QUIET",
+        "SEASON OF GRACE"
+      ],
+      "STEPS",
+      "GENESIS 22 : 14"
+    ],
+    [
+      41,
+      48,
+      [
+        "SUBSCRIBE TO THE",
+        "PROVISION TABLE FOR",
+        "DAILY WISDOM"
+      ],
+      "SUBSCRIBE",
+      "GENESIS 22 : 14"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "commit your work",
+      "kind": "phrase",
+      "words": [
+        "COMMIT",
+        "YOUR",
+        "WORK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And Abraham called",
+      "kind": "phrase",
+      "words": [
+        "AND",
+        "ABRAHAM",
+        "CALLED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In the mount of the LORD",
+      "kind": "phrase",
+      "words": [
+        "IN",
+        "THE",
+        "MOUNT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "it shall be seen",
+      "kind": "phrase",
+      "words": [
+        "IT",
+        "SHALL",
+        "BE",
+        "SEEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father we rest",
+      "kind": "phrase",
+      "words": [
+        "FATHER",
+        "WE",
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Provision Table",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "TO",
+        "THE",
+        "PROVISION",
+        "TABLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Genesis 22:14"
+}
