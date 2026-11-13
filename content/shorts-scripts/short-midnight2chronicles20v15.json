@@ -1,0 +1,287 @@
+{
+  "key": "short-midnight2chronicles20v15",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "THE BATTLE IS NOT YOURS",
+    "MIDNIGHT BREAKTHROUGH PRAYER"
+  ],
+  "poster": [
+    "STAND STILL",
+    "GOD FIGHTS FOR YOU",
+    "2 CHRONICLES 20:15",
+    "MIDNIGHT WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "midnight watchtower silhouette starry sky cinematic",
+    "deep starry night sky golden lantern glow",
+    "ancient stone sanctuary candle light night watch",
+    "calm mountain lake moonlight night prayer",
+    "glorious starlight dramatic night sky horizon",
+    "lamp lit sanctuary window midnight vigil dark night"
+  ],
+  "scenes": [
+    {
+      "a": "rise in spirit and bring your weary heart",
+      "img": "short-midnight2chronicles20v15-scene-01.jpg",
+      "kicker": "2 CHRONICLES 20:15",
+      "sub": "RISE IN SPIRIT THIS MIDNIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "receive God's eternal truth",
+      "img": "short-midnight2chronicles20v15-scene-02.jpg",
+      "kicker": "THE MIDNIGHT WATCH",
+      "sub": "RECEIVE HIS ETERNAL TRUTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "the battle is not yours, but God's",
+      "img": "short-midnight2chronicles20v15-scene-03.jpg",
+      "kicker": "2 CHRONICLES 20:15",
+      "sub": "THE BATTLE IS NOT YOURS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "release every heavy burden",
+      "img": "short-midnight2chronicles20v15-scene-04.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "RELEASE EVERY HEAVY BURDEN",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "allow Almighty God to fight your battles",
+      "img": "short-midnight2chronicles20v15-scene-05.jpg",
+      "kicker": "STAND FIRM IN FAITH",
+      "sub": "LET GOD FIGHT FOR YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "His glorious victory is already set before you",
+      "img": "short-midnight2chronicles20v15-scene-06.jpg",
+      "kicker": "THE MIDNIGHT WATCH",
+      "sub": "REST IN HIS HOLY PEACE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "As midnight settles over the quiet world, rise in spirit and bring your weary heart before the Lord in this silent hour."
+    ],
+    [
+      10,
+      20,
+      "In the stillness of the midnight watch, receive God's eternal truth from Second Chronicles twenty fifteen:"
+    ],
+    [
+      20,
+      30,
+      "\"Do not be afraid or discouraged because of this vast army. For the battle is not yours, but God's.\""
+    ],
+    [
+      30,
+      42,
+      "Tonight, release every heavy burden, every silent tear, and every hidden battle holding your soul."
+    ],
+    [
+      42,
+      54,
+      "Stop fighting in your own limited human power. Stand firm in faith, quiet your spirit, and allow Almighty God to fight your battles."
+    ],
+    [
+      54,
+      68,
+      "His glorious victory is already set before you tonight. Rest peacefully under His holy wings. Subscribe to join our midnight prayer watch every single night."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "AS MIDNIGHT SETTLES OVER THE QUIET WORLD,",
+        "RISE IN SPIRIT AND BRING YOUR WEARY HEART",
+        "BEFORE THE LORD IN THIS SILENT HOUR."
+      ],
+      [
+        "RISE IN SPIRIT",
+        "WEARY HEART"
+      ],
+      "2 CHRONICLES 20:15-22"
+    ],
+    [
+      10,
+      20,
+      [
+        "IN THE STILLNESS OF THE MIDNIGHT WATCH,",
+        "RECEIVE GOD'S ETERNAL TRUTH",
+        "FROM SECOND CHRONICLES TWENTY FIFTEEN:"
+      ],
+      [
+        "STILLNESS",
+        "ETERNAL TRUTH"
+      ],
+      "2 CHRONICLES 20:15-22"
+    ],
+    [
+      20,
+      30,
+      [
+        "DO NOT BE AFRAID OR DISCOURAGED",
+        "BECAUSE OF THIS VAST ARMY.",
+        "FOR THE BATTLE IS NOT YOURS,",
+        "BUT GOD'S."
+      ],
+      [
+        "NOT YOURS",
+        "BUT GOD'S"
+      ],
+      "2 CHRONICLES 20:15-22"
+    ],
+    [
+      30,
+      42,
+      [
+        "TONIGHT, RELEASE EVERY HEAVY BURDEN,",
+        "EVERY SILENT TEAR,",
+        "AND EVERY HIDDEN BATTLE HOLDING YOUR SOUL."
+      ],
+      [
+        "RELEASE",
+        "HEAVY BURDEN"
+      ],
+      "2 CHRONICLES 20:15-22"
+    ],
+    [
+      42,
+      54,
+      [
+        "STOP FIGHTING IN YOUR OWN LIMITED HUMAN POWER.",
+        "STAND FIRM IN FAITH, QUIET YOUR SPIRIT,",
+        "AND ALLOW ALMIGHTY GOD TO FIGHT YOUR BATTLES."
+      ],
+      [
+        "STAND FIRM",
+        "FIGHT YOUR BATTLES"
+      ],
+      "2 CHRONICLES 20:15-22"
+    ],
+    [
+      54,
+      68,
+      [
+        "HIS GLORIOUS VICTORY IS ALREADY SET BEFORE YOU.",
+        "REST PEACEFULLY UNDER HIS HOLY WINGS.",
+        "SUBSCRIBE TO JOIN OUR MIDNIGHT PRAYER WATCH."
+      ],
+      [
+        "GLORIOUS VICTORY",
+        "SUBSCRIBE"
+      ],
+      "2 CHRONICLES 20:15-22"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "rise in spirit and bring your weary heart",
+      "kind": "phrase",
+      "words": [
+        "RISE",
+        "SPIRIT",
+        "WEARY",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "receive God's eternal truth",
+      "kind": "phrase",
+      "words": [
+        "RECEIVE",
+        "GOD'S",
+        "ETERNAL",
+        "TRUTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "the battle is not yours, but God's",
+      "kind": "phrase",
+      "words": [
+        "BATTLE",
+        "NOT",
+        "YOURS",
+        "GOD'S"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "release every heavy burden",
+      "kind": "phrase",
+      "words": [
+        "RELEASE",
+        "HEAVY",
+        "BURDEN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "allow Almighty God to fight your battles",
+      "kind": "phrase",
+      "words": [
+        "ALMIGHTY",
+        "GOD",
+        "FIGHT",
+        "BATTLES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "His glorious victory is already set before you",
+      "kind": "phrase",
+      "words": [
+        "GLORIOUS",
+        "VICTORY",
+        "SET"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Chronicles 20:15-22"
+}
