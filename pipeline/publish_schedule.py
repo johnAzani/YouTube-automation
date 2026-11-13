@@ -12,7 +12,8 @@ release: any doubt at all (no slot, bad value, too close, an exception) answers
 Sources, in order:
 
 1. ``PUBLISH_AT`` in the environment: an explicit time from a manual dispatch
-   (``gh workflow run produce.yml -f channels=prayer2 -f publish_at=...``).
+   (``gh workflow run produce.yml -f channels=prayer2 -f publish_at=...``),
+   no later than the next production slot.
 2. The production slot plus ``scripts.produce_plan.PUBLISH_LEAD_MINUTES``
    (``PUBLISH_LEAD_MINUTES`` in the environment overrides it; ``0`` is off).
 """
@@ -58,9 +59,16 @@ def resolve_longform_publish_at(now: datetime | None = None,
                 print(f"[publish-schedule] {explicit.strftime(STAMP)} is less than "
                       f"{produce_plan.PUBLISH_MARGIN_MINUTES} minutes away; publishing now")
                 return None
-            if explicit - now > timedelta(hours=48):
-                print(f"[publish-schedule] {explicit.strftime(STAMP)} is more than two days "
-                      "away; publishing now")
+            # The receipt will be dated with this time, and a channel counts as
+            # served for every production slot up to its newest receipt. A time
+            # beyond the next slot would therefore cancel that slot's video (and
+            # a typo of next week would silence the channel for a week).
+            following = produce_plan.next_slot(now)
+            limit = following if following is not None else now + timedelta(hours=12)
+            if explicit > limit:
+                print(f"::warning title=Publish time too far ahead::{explicit.strftime(STAMP)} "
+                      f"is after the next production slot ({limit.strftime(STAMP)}); "
+                      "publishing now instead")
                 return None
             return explicit.strftime(STAMP)
         lead = produce_plan.lead_minutes(env.get("PUBLISH_LEAD_MINUTES"))

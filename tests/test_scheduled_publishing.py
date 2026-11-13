@@ -101,6 +101,8 @@ def test_an_explicit_time_from_a_dispatch_wins():
     "2026-11-14T14:14:00",         # no timezone: whose 14:14?
     "tomorrow afternoon",
     "2026-11-20T14:14:00Z",        # six days out: a typo, not a plan
+    "2026-11-14T19:14:00Z",        # beyond the next slot (14:14): would cancel that slot
+    "2026-11-14T14:15:00Z",        # one minute beyond it
 ])
 def test_an_explicit_time_that_cannot_be_trusted_publishes_now(raw):
     assert publish_schedule.resolve_longform_publish_at(
@@ -312,7 +314,14 @@ def uploader(tmp_path, monkeypatch):
 
 
 def soon(hours: float = 3) -> str:
-    return (datetime.now(UTC) + timedelta(hours=hours)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    """A publish time the resolver accepts whenever the suite runs: far enough
+    ahead, and never past the next production slot."""
+    now = datetime.now(UTC)
+    limit = produce_plan.next_slot(now)
+    when = min(now + timedelta(hours=hours), limit)
+    if when - now < timedelta(minutes=produce_plan.PUBLISH_MARGIN_MINUTES + 2):
+        pytest.skip("within minutes of a production slot; no valid explicit time exists")
+    return when.replace(microsecond=0).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def test_with_nothing_configured_the_upload_is_public_at_once(uploader):

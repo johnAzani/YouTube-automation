@@ -110,7 +110,11 @@ is waiting:
 gh workflow run produce.yml -f channels=prayer2 -f publish_at=2026-11-14T14:14:00Z
 ```
 
-(any time at least 15 minutes after the leg will finish, within two days). Check:
+The time must be at least 15 minutes after the leg will finish and no later than
+the next production slot (06:14, 14:14 or 19:14 UTC); otherwise the video is
+public at once. Using the slot time itself, as above, makes the trial video that
+slot's release for the channel: the receipt is dated 14:14, so the scheduled run
+for that slot skips the channel. Check:
 the receipt carries `scheduled_publish: true`; the video is private in YouTube
 Studio with the right time, thumbnail, captions and playlist; at the time it goes
 public; the next monitor run clears the flag; whether the pinned comment was
