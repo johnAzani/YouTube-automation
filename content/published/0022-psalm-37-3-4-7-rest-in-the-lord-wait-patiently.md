@@ -2,7 +2,7 @@
 id: '0022'
 title: Psalm 37:7 Bedtime Prayer | Rest in the Lord & Fret Not
 slug: psalm-37-3-4-7-rest-in-the-lord-wait-patiently
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -90,6 +90,13 @@ originality:
   ai_disclosure: false
 seo_hook: Pray this Psalm 37:3-7 KJV bedtime prayer before sleep to quiet racing thoughts, stop fretting, and rest patiently in the Lord.
 category_id: '22'
+published_on: "2026-11-13"
+published_at: "2026-11-13T20:41:20Z"
+youtube_video_id: "sAyMduXhoeQ"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Trust in the LORD, and Do Good (Verse 3a)

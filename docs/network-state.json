@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T20:35:16Z",
+  "generated_at": "2026-11-13T20:42:15Z",
   "monitor_generated_at": "2026-11-13T19:55:27.683840+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 178,
-    "published_longform": 88,
+    "published_total": 179,
+    "published_longform": 89,
     "published_shorts": 90,
-    "public_total": 176,
-    "queued_longform": 49,
+    "public_total": 177,
+    "queued_longform": 48,
     "queued_shorts": 48,
     "automations_ok": 10,
     "automations_total": 10,
@@ -33,28 +33,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 37,
-        "published_longform": 13,
+        "published_total": 38,
+        "published_longform": 14,
         "published_shorts": 24,
         "thumbnail_pending": 2,
-        "public_total": 36,
-        "queued_longform": 14,
+        "public_total": 37,
+        "queued_longform": 13,
         "queued_other": 5,
         "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0021",
-        "title": "Psalm 31:5 Bedtime Prayer | Into Your Hands I Commit My Spirit",
-        "format": "longform",
-        "youtube_video_id": "r3nA7BgZpP4",
-        "watch_url": "https://youtu.be/r3nA7BgZpP4",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T16:49:01Z"
-      },
-      "next_queued_longform": {
         "id": "0022",
         "title": "Psalm 37:7 Bedtime Prayer | Rest in the Lord & Fret Not",
-        "words": 900,
+        "format": "longform",
+        "youtube_video_id": "sAyMduXhoeQ",
+        "watch_url": "https://youtu.be/sAyMduXhoeQ",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T20:41:20Z"
+      },
+      "next_queued_longform": {
+        "id": "0023",
+        "title": "Psalm 63:6-7 Night Prayer | Remembering God Upon My Bed",
+        "words": 892,
         "status": "approved"
       },
       "next_queued_short": {
@@ -666,6 +666,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0022",
+      "slug": "psalm-37-3-4-7-rest-in-the-lord-wait-patiently",
+      "file": "0022-psalm-37-3-4-7-rest-in-the-lord-wait-patiently.md",
+      "title": "Psalm 37:7 Bedtime Prayer | Rest in the Lord & Fret Not",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T20:41:20Z",
+      "youtube_video_id": "sAyMduXhoeQ",
+      "watch_url": "https://youtu.be/sAyMduXhoeQ",
+      "youtu_be_url": "https://youtu.be/sAyMduXhoeQ",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/sAyMduXhoeQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/sAyMduXhoeQ/hqdefault.jpg",
+      "thumb_text": "REST IN THE LORD",
+      "thumbnail_pending": false,
+      "duration_label": "~6 min",
+      "words": 900
+    },
     {
       "id": "0065",
       "slug": "matthew-6-33-34-morning-prayer",
@@ -4941,19 +4965,6 @@
   ],
   "queues": {
     "longform": [
-      {
-        "id": "0022",
-        "slug": "psalm-37-3-4-7-rest-in-the-lord-wait-patiently",
-        "file": "0022-psalm-37-3-4-7-rest-in-the-lord-wait-patiently.md",
-        "title": "Psalm 37:7 Bedtime Prayer | Rest in the Lord & Fret Not",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 900
-      },
       {
         "id": "0023",
         "slug": "psalm-63-5-7-remembering-god-upon-my-bed",
