@@ -500,7 +500,9 @@ def test_the_workflows_carry_the_switch_and_the_confirmation():
     assert "publish_at" in data[True]["workflow_dispatch"]["inputs"]
     release = next(s for s in data["jobs"]["produce"]["steps"]
                    if s.get("name") == "Render and upload the long-form edition")
-    assert release["env"]["PUBLISH_AT"] == "${{ inputs.publish_at }}"
+    # Manual dispatch input, or the payload of the publish-now repository_dispatch.
+    assert release["env"]["PUBLISH_AT"] == \
+        "${{ inputs.publish_at || github.event.client_payload.publish_at }}"
     assert release["env"]["PUBLISH_LEAD_MINUTES"] == "${{ vars.PRODUCE_PUBLISH_LEAD_MINUTES }}"
     monitor = (ROOT / ".github/workflows/monitor.yml").read_text(encoding="utf-8")
     # Before the thumbnail pass, and unable to stop it.
@@ -549,3 +551,30 @@ def test_inspecting_a_scheduled_video_reports_its_publish_time(monkeypatch):
     assert info["published_at"] == "2026-11-14T08:01:00Z"
     item["status"] = {"privacyStatus": "public", "uploadStatus": "processed"}
     assert "publish_at" not in up.inspect_existing_longform("abcdefghijk", title)
+
+
+@pytest.mark.parametrize("line, sent", [
+    ('publish_at: "2099-01-01T14:14:00Z"', "2099-01-01T14:14:00Z"),
+    ("publish_at: 2099-01-01T14:14:00Z", "2099-01-01T14:14:00Z"),      # YAML makes this a datetime
+    ("publish_at: 2099-01-01T15:14:00+01:00", "2099-01-01T14:14:00Z"),
+])
+def test_a_publish_time_written_on_the_job_is_sent_as_text(uploader, tmp_path, line, sent):
+    """The oldest way to schedule one video: a line in its own front matter."""
+    up, fake, _doc, video = uploader
+    job = tmp_path / "0902-stamped.md"
+    job.write_text(JOB.replace("privacy: public\n", line + "\n"), encoding="utf-8")
+    result = up.upload(doc_for(job), video)
+    assert fake.bodies[0]["status"] == {**fake.bodies[0]["status"],
+                                        "privacyStatus": "private", "publishAt": sent}
+    assert result.scheduled_for == sent
+
+
+def test_a_refused_time_written_on_the_job_still_releases_the_video(uploader, tmp_path):
+    up, fake, _doc, video = uploader
+    fake.refuse = True
+    job = tmp_path / "0903-stamped.md"
+    job.write_text(JOB.replace("privacy: public\n", 'publish_at: "2099-01-01T14:14:00Z"\n'),
+                   encoding="utf-8")
+    result = up.upload(doc_for(job), video)
+    assert len(fake.bodies) == 2 and "publishAt" not in fake.bodies[1]["status"]
+    assert result.privacy_status == "public" and result.scheduled_for == ""
