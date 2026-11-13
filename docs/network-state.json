@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T21:11:38Z",
+  "generated_at": "2026-11-13T21:32:25Z",
   "monitor_generated_at": "2026-11-13T19:55:27.683840+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 181,
-    "published_longform": 91,
-    "published_shorts": 90,
-    "public_total": 179,
-    "queued_longform": 46,
-    "queued_shorts": 48,
+    "published_total": 183,
+    "published_longform": 92,
+    "published_shorts": 91,
+    "public_total": 181,
+    "queued_longform": 45,
+    "queued_shorts": 47,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -237,33 +237,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 18,
-        "published_longform": 10,
-        "published_shorts": 8,
-        "thumbnail_pending": 18,
-        "public_total": 18,
-        "queued_longform": 4,
+        "published_total": 20,
+        "published_longform": 11,
+        "published_shorts": 9,
+        "thumbnail_pending": 20,
+        "public_total": 20,
+        "queued_longform": 3,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0209",
-        "title": "Isaiah 10:27 Midnight Prayer | The Midnight Watch",
-        "format": "longform",
-        "youtube_video_id": "wmckPOJdd7k",
-        "watch_url": "https://youtu.be/wmckPOJdd7k",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T16:43:18Z"
-      },
-      "next_queued_longform": {
         "id": "0210",
         "title": "Ruth 3:8-11 Midnight Turning Point Prayer | The Midnight Watch",
-        "words": 2319,
+        "format": "longform",
+        "youtube_video_id": "FREfxb6XKLk",
+        "watch_url": "https://youtu.be/FREfxb6XKLk",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T21:31:37Z"
+      },
+      "next_queued_longform": {
+        "id": "0211",
+        "title": "Judges 16:3 Midnight Prayer | The Midnight Watch",
+        "words": 1708,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightisaiah54v17",
-        "scripture": "Isaiah 54:17",
+        "short": "short-midnightisaiah10v27",
+        "scripture": "Isaiah 10:27",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -667,6 +667,30 @@
   ],
   "videos": [
     {
+      "id": "0210",
+      "slug": "ruth-3-8-11-midnight-turning-point-prayer",
+      "file": "0210-ruth-3-8-11-midnight-turning-point-prayer.md",
+      "title": "Ruth 3:8-11 Midnight Turning Point Prayer | The Midnight Watch",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T21:31:37Z",
+      "youtube_video_id": "FREfxb6XKLk",
+      "watch_url": "https://youtu.be/FREfxb6XKLk",
+      "youtu_be_url": "https://youtu.be/FREfxb6XKLk",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/FREfxb6XKLk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/FREfxb6XKLk/hqdefault.jpg",
+      "thumb_text": "MIDNIGHT MERCY",
+      "thumbnail_pending": true,
+      "duration_label": "~16 min",
+      "words": 2319
+    },
+    {
       "id": "0307",
       "slug": "deuteronomy-6-household-family-prayer",
       "file": "0307-deuteronomy-6-household-family-prayer.md",
@@ -761,6 +785,30 @@
       "thumbnail_pending": true,
       "duration_label": "~9 min",
       "words": 1293
+    },
+    {
+      "id": "SHORT-MIDNIGHTISAIAH54V17",
+      "slug": "short-midnightisaiah54v17-midnight-prayer",
+      "file": "short-midnightisaiah54v17-midnight-prayer.md",
+      "title": "Pray This Isaiah 54:17 Midnight Prayer | Stay Vigilant #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T20:05:24Z",
+      "youtube_video_id": "o1n-wO2sMUs",
+      "watch_url": "https://www.youtube.com/shorts/o1n-wO2sMUs",
+      "youtu_be_url": "https://youtu.be/o1n-wO2sMUs",
+      "shorts_url": "https://www.youtube.com/shorts/o1n-wO2sMUs",
+      "studio_url": "https://studio.youtube.com/video/o1n-wO2sMUs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/o1n-wO2sMUs/hqdefault.jpg",
+      "thumb_text": "RISE IN SPIRIT \u00b7 THE MIDNIGHT VIGIL",
+      "thumbnail_pending": true,
+      "duration_label": "51s",
+      "words": 606
     },
     {
       "id": "0406",
@@ -5313,19 +5361,6 @@
         "words": 2554
       },
       {
-        "id": "0210",
-        "slug": "ruth-3-8-11-midnight-turning-point-prayer",
-        "file": "0210-ruth-3-8-11-midnight-turning-point-prayer.md",
-        "title": "Ruth 3:8-11 Midnight Turning Point Prayer | The Midnight Watch",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 2319
-      },
-      {
         "id": "0211",
         "slug": "judges-16-3-midnight-prayer",
         "file": "0211-judges-16-3-midnight-prayer.md",
@@ -5733,17 +5768,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightisaiah54v17",
-        "file": "0208-short-midnightisaiah54v17.yml",
-        "companion_longform_id": "0208",
-        "scripture": "Isaiah 54:17",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightisaiah10v27",
