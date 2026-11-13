@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T03:19:41Z",
+  "generated_at": "2026-11-13T03:45:08Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 147,
-    "published_longform": 66,
-    "published_shorts": 81,
-    "public_total": 145,
-    "queued_longform": 53,
-    "queued_shorts": 38,
+    "published_total": 149,
+    "published_longform": 67,
+    "published_shorts": 82,
+    "public_total": 147,
+    "queued_longform": 52,
+    "queued_shorts": 37,
     "automations_ok": 8,
     "automations_total": 10,
     "network_healthy": false
@@ -352,32 +352,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 8,
-        "published_longform": 4,
-        "published_shorts": 4,
-        "public_total": 8,
-        "queued_longform": 5,
+        "published_total": 10,
+        "published_longform": 5,
+        "published_shorts": 5,
+        "public_total": 10,
+        "queued_longform": 4,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0403",
-        "title": "Isaiah 40:29-31 Healing Prayer | The Healing Balm",
-        "format": "longform",
-        "youtube_video_id": "qdnrS9W0XtQ",
-        "watch_url": "https://youtu.be/qdnrS9W0XtQ",
-        "published_on": "2026-11-12",
-        "published_at": "2026-11-12T20:40:46Z"
-      },
-      "next_queued_longform": {
         "id": "0404",
         "title": "Exodus 15:26 Jehovah Rapha Healing Prayer | The Healing Balm",
-        "words": 1903,
+        "format": "longform",
+        "youtube_video_id": "H-ygSB-1i1M",
+        "watch_url": "https://youtu.be/H-ygSB-1i1M",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T03:44:08Z"
+      },
+      "next_queued_longform": {
+        "id": "0405",
+        "title": "Jeremiah 17:14 Healing and Restoration Prayer | The Healing Balm",
+        "words": 1516,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingexodus15v26",
-        "scripture": "Exodus 15:26",
+        "short": "short-healingjeremiah17v14",
+        "scripture": "Jeremiah 17:14",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -613,6 +613,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0404",
+      "slug": "exodus-15-26-jehovah-rapha-healing-prayer",
+      "file": "0404-exodus-15-26-jehovah-rapha-healing-prayer.md",
+      "title": "Exodus 15:26 Jehovah Rapha Healing Prayer | The Healing Balm",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T03:44:08Z",
+      "youtube_video_id": "H-ygSB-1i1M",
+      "watch_url": "https://youtu.be/H-ygSB-1i1M",
+      "youtu_be_url": "https://youtu.be/H-ygSB-1i1M",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/H-ygSB-1i1M/edit",
+      "thumb_url": "https://i.ytimg.com/vi/H-ygSB-1i1M/hqdefault.jpg",
+      "thumb_text": "JEHOVAH RAPHA",
+      "duration_label": "~13 min",
+      "words": 1903
+    },
+    {
+      "id": "SHORT-HEALINGEXODUS15V26",
+      "slug": "short-healingexodus15v26-restoration-prayer",
+      "file": "short-healingexodus15v26-restoration-prayer.md",
+      "title": "Pray This Exodus 15:26 Healing Prayer for Peace & Strength | A Restorative Prayer #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T02:11:48Z",
+      "youtube_video_id": "1n7kkDrsP6A",
+      "watch_url": "https://www.youtube.com/shorts/1n7kkDrsP6A",
+      "youtu_be_url": "https://youtu.be/1n7kkDrsP6A",
+      "shorts_url": "https://www.youtube.com/shorts/1n7kkDrsP6A",
+      "studio_url": "https://studio.youtube.com/video/1n7kkDrsP6A/edit",
+      "thumb_url": "https://i.ytimg.com/vi/1n7kkDrsP6A/hqdefault.jpg",
+      "thumb_text": "THE HEALING BALM \u00b7 GOD IS YOUR HEALER",
+      "duration_label": "44s",
+      "words": 407
+    },
     {
       "id": "0304",
       "slug": "isaiah-32-18-household-peace-prayer",
@@ -4427,19 +4473,6 @@
         "words": 1053
       },
       {
-        "id": "0404",
-        "slug": "exodus-15-26-jehovah-rapha-healing-prayer",
-        "file": "0404-exodus-15-26-jehovah-rapha-healing-prayer.md",
-        "title": "Exodus 15:26 Jehovah Rapha Healing Prayer | The Healing Balm",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1903
-      },
-      {
         "id": "0405",
         "slug": "jeremiah-17-14-healing-and-restoration-prayer",
         "file": "0405-jeremiah-17-14-healing-and-restoration-prayer.md",
@@ -4874,17 +4907,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-healingexodus15v26",
-        "file": "0404-short-healingexodus15v26.yml",
-        "companion_longform_id": "0404",
-        "scripture": "Exodus 15:26",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingjeremiah17v14",
