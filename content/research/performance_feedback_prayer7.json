@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-12T09:50:16.758402+00:00",
-  "as_of": "2026-11-12",
+  "generated_at": "2026-11-13T07:05:07.298820+00:00",
+  "as_of": "2026-11-13",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 3,
+  "total_longform_videos": 5,
   "ranked_themes": [],
   "themes": [
     {
       "theme": "general_prayer",
-      "videos": 1,
+      "videos": 2,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
-      "top_scripture": "Deuteronomy 28"
+      "top_scripture": "Revelation 3"
     },
     {
       "theme": "peace_rest",
@@ -29,6 +29,14 @@
       "avg_score": 0.0,
       "avg_engagement": 0.0,
       "top_scripture": "Philippians 4"
+    },
+    {
+      "theme": "midday_strength_endurance",
+      "videos": 1,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": "Psalm 90"
     }
   ],
   "guidance": [
