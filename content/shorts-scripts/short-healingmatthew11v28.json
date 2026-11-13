@@ -1,0 +1,326 @@
+{
+  "key": "short-healingmatthew11v28",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "FINDING REST",
+    "FOR THE WEARY"
+  ],
+  "poster": [
+    "BRING YOUR BURDENS",
+    "TO THE LORD",
+    "HE OFFERS PEACE",
+    "AND RENEWAL NOW"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters flowing",
+    "warm golden sanctuary light beams",
+    "peaceful white dove flying over water",
+    "soft golden light on calm surface",
+    "gentle ripples in clear water",
+    "ethereal light filling a quiet space",
+    "still waters at sunset"
+  ],
+  "scenes": [
+    {
+      "a": "Bring every burden",
+      "img": "short-healingmatthew11v28-scene-01.jpg",
+      "kicker": "MATTHEW 11:28",
+      "sub": "LAY DOWN YOUR HEAVY LOAD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "healing need",
+      "img": "short-healingmatthew11v28-scene-02.jpg",
+      "kicker": "MATTHEW 11:28",
+      "sub": "HE OFFERS HIS GENTLE REST",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Matthew 11:28-30",
+      "img": "short-healingmatthew11v28-scene-03.jpg",
+      "kicker": "MATTHEW 11:28-30",
+      "sub": "THE WORDS OF THE SAVIOR",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For my yoke",
+      "img": "short-healingmatthew11v28-scene-04.jpg",
+      "kicker": "MATTHEW 11:30",
+      "sub": "HIS YOKE IS EASY TO BEAR",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Rest for your souls",
+      "img": "short-healingmatthew11v28-scene-05.jpg",
+      "kicker": "MATTHEW 11:29",
+      "sub": "RECEIVE HIS QUIET PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May the spirit",
+      "img": "short-healingmatthew11v28-scene-06.jpg",
+      "kicker": "PRAYER",
+      "sub": "BE RESTORED IN HIS LOVE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "in his name",
+      "img": "short-healingmatthew11v28-scene-07.jpg",
+      "kicker": "AMEN",
+      "sub": "HIS PRESENCE REMAINS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "Bring every burden to the Lord, releasing every healing need before his presence."
+    ],
+    [
+      15,
+      30,
+      "Hear the invitation in Matthew 11:28-30: Come to me, all who are weary."
+    ],
+    [
+      30,
+      45,
+      "I will give you rest. Take my yoke upon you and learn from me."
+    ],
+    [
+      45,
+      60,
+      "For my yoke is easy and my burden is light, find rest for your souls."
+    ],
+    [
+      60,
+      75,
+      "Rest for your souls is found in the stillness of his infinite, calming grace."
+    ],
+    [
+      75,
+      90,
+      "May the spirit mend every broken place within your heart today and forevermore."
+    ],
+    [
+      90,
+      105,
+      "Walk in this restoration, living in his strength and his light, in his name."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "BRING EVERY BURDEN",
+        "TO THE LORD",
+        "RELEASE HEALING NEEDS",
+        "BEFORE HIS PRESENCE"
+      ],
+      [
+        "BRING",
+        "RELEASE",
+        "HEALING"
+      ],
+      "MATTHEW 11:28"
+    ],
+    [
+      15,
+      30,
+      [
+        "HEAR THE INVITATION",
+        "COME TO ME",
+        "ALL WHO ARE WEARY"
+      ],
+      [
+        "HEAR",
+        "COME",
+        "WEARY"
+      ],
+      "MATTHEW 11:28"
+    ],
+    [
+      30,
+      45,
+      [
+        "I WILL GIVE REST",
+        "TAKE MY YOKE",
+        "LEARN FROM ME"
+      ],
+      [
+        "REST",
+        "TAKE",
+        "LEARN"
+      ],
+      "MATTHEW 11:29"
+    ],
+    [
+      45,
+      60,
+      [
+        "YOKE IS EASY",
+        "BURDEN IS LIGHT",
+        "REST FOR SOULS"
+      ],
+      [
+        "EASY",
+        "LIGHT",
+        "REST"
+      ],
+      "MATTHEW 11:30"
+    ],
+    [
+      60,
+      75,
+      [
+        "REST FOR SOULS",
+        "FOUND IN STILLNESS",
+        "CALMING INFINITE GRACE"
+      ],
+      [
+        "REST",
+        "STILLNESS",
+        "GRACE"
+      ],
+      "MATTHEW 11:29"
+    ],
+    [
+      75,
+      90,
+      [
+        "MAY THE SPIRIT",
+        "MEND EVERY HEART",
+        "TODAY AND FOREVERMORE"
+      ],
+      [
+        "SPIRIT",
+        "MEND",
+        "HEART"
+      ],
+      "PRAYER"
+    ],
+    [
+      90,
+      105,
+      [
+        "WALK IN RESTORATION",
+        "LIVING IN STRENGTH",
+        "IN HIS NAME"
+      ],
+      [
+        "WALK",
+        "RESTORATION",
+        "STRENGTH"
+      ],
+      "AMEN"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Bring every burden",
+      "kind": "phrase",
+      "words": [
+        "BRING",
+        "BURDEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "healing need",
+      "kind": "phrase",
+      "words": [
+        "HEALING",
+        "NEED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Matthew 11:28-30",
+      "kind": "phrase",
+      "words": [
+        "MATTHEW",
+        "11:28-30"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For my yoke",
+      "kind": "phrase",
+      "words": [
+        "YOKE",
+        "EASY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Rest for your souls",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "SOULS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May the spirit",
+      "kind": "phrase",
+      "words": [
+        "SPIRIT",
+        "MEND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "in his name",
+      "kind": "phrase",
+      "words": [
+        "IN",
+        "HIS",
+        "NAME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Matthew 11:28-30"
+}

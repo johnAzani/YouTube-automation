@@ -1,0 +1,313 @@
+{
+  "key": "short-healingisaiah53v4",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "HEALING AND RESTORATION",
+    "ISAIAH 53:4-5 PRAYER"
+  ],
+  "poster": [
+    "THE HEALING BALM",
+    "RESTORE YOUR SOUL",
+    "ISAIAH 53:4-5",
+    "GOD'S HEALING PEACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters sunset glowing warm light",
+    "warm golden sanctuary rays of light glowing beam",
+    "white dove flying in soft golden morning sunlight sky",
+    "calm crystal turquoise water stream flowing peacefully",
+    "peaceful misty lake soft golden glow sacred calm",
+    "soft glowing sunlight radiating through peaceful clouds",
+    "serene turquoise waters calm reflective surface gold light"
+  ],
+  "scenes": [
+    {
+      "a": "Quiet your heart, and bring every weary burden",
+      "img": "short-healingisaiah53v4-scene-01.jpg",
+      "kicker": "ISAIAH 53:4-5",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Surely He has borne our griefs",
+      "img": "short-healingisaiah53v4-scene-02.jpg",
+      "kicker": "ISAIAH 53:4-5",
+      "sub": "HE CARRIED OUR SORROWS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "by His stripes we are healed",
+      "img": "short-healingisaiah53v4-scene-03.jpg",
+      "kicker": "ISAIAH 53:4-5",
+      "sub": "BY HIS STRIPES WE ARE HEALED",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "we release every pain",
+      "img": "short-healingisaiah53v4-scene-04.jpg",
+      "kicker": "ISAIAH 53:4-5",
+      "sub": "SURRENDER EVERY BURDEN",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "restoring what is broken",
+      "img": "short-healingisaiah53v4-scene-05.jpg",
+      "kicker": "ISAIAH 53:4-5",
+      "sub": "RESTORATION AND PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Fill this space with Your divine peace",
+      "img": "short-healingisaiah53v4-scene-06.jpg",
+      "kicker": "ISAIAH 53:4-5",
+      "sub": "DIVINE HEALING PEACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Subscribe to rest in God's healing presence",
+      "img": "short-healingisaiah53v4-scene-07.jpg",
+      "kicker": "THE HEALING BALM",
+      "sub": "RECEIVE GOD'S HEALING PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Quiet your heart, and bring every weary burden and healing need before the Lord today."
+    ],
+    [
+      8,
+      17,
+      "Isaiah 53:4-5 declares: Surely He has borne our griefs and carried our sorrows; yet we esteemed Him stricken, smitten by God, and afflicted."
+    ],
+    [
+      17,
+      28,
+      "But He was wounded for our transgressions, He was bruised for our iniquities; the chastisement for our peace was upon Him, and by His stripes we are healed."
+    ],
+    [
+      28,
+      38,
+      "Heavenly Father, we release every pain, fear, and weakness into Your gentle hands."
+    ],
+    [
+      38,
+      48,
+      "Let Your living waters overflow this quiet moment, restoring what is broken and refreshing every heavy soul."
+    ],
+    [
+      48,
+      56,
+      "Fill this space with Your divine peace."
+    ],
+    [
+      56,
+      62,
+      "Subscribe to rest in God's healing presence each day."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "QUIET YOUR HEART AND BRING",
+        "EVERY WEARY BURDEN AND HEALING NEED",
+        "BEFORE THE LORD TODAY"
+      ],
+      [
+        "HEALING",
+        "NEED"
+      ],
+      "ISAIAH 53:4-5"
+    ],
+    [
+      8,
+      17,
+      [
+        "SURELY HE HAS BORNE OUR GRIEFS",
+        "AND CARRIED OUR SORROWS",
+        "SMITTEN BY GOD AND AFFLICTED"
+      ],
+      [
+        "BORNE",
+        "SORROWS"
+      ],
+      "ISAIAH 53:4-5"
+    ],
+    [
+      17,
+      28,
+      [
+        "HE WAS WOUNDED FOR OUR TRANSGRESSIONS",
+        "THE CHASTISEMENT FOR OUR PEACE WAS UPON HIM",
+        "AND BY HIS STRIPES WE ARE HEALED"
+      ],
+      [
+        "STRIPES",
+        "HEALED"
+      ],
+      "ISAIAH 53:4-5"
+    ],
+    [
+      28,
+      38,
+      [
+        "HEAVENLY FATHER WE RELEASE",
+        "EVERY PAIN FEAR AND WEAKNESS",
+        "INTO YOUR GENTLE HANDS"
+      ],
+      [
+        "RELEASE",
+        "GENTLE"
+      ],
+      "ISAIAH 53:4-5"
+    ],
+    [
+      38,
+      48,
+      [
+        "LET YOUR LIVING WATERS OVERFLOW",
+        "RESTORING WHAT IS BROKEN",
+        "AND REFRESHING EVERY HEAVY SOUL"
+      ],
+      [
+        "LIVING WATERS",
+        "RESTORING"
+      ],
+      "ISAIAH 53:4-5"
+    ],
+    [
+      48,
+      56,
+      [
+        "FILL THIS SPACE WITH",
+        "YOUR DIVINE PEACE"
+      ],
+      [
+        "DIVINE PEACE"
+      ],
+      "ISAIAH 53:4-5"
+    ],
+    [
+      56,
+      62,
+      [
+        "SUBSCRIBE TO REST IN GOD'S",
+        "HEALING PRESENCE EACH DAY"
+      ],
+      [
+        "HEALING PRESENCE"
+      ],
+      "THE HEALING BALM"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Quiet your heart, and bring every weary burden and healing need before the Lord today.",
+      "kind": "phrase",
+      "words": [
+        "HEALING",
+        "NEED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Isaiah 53:4-5 declares: Surely He has borne our griefs and carried our sorrows; yet we esteemed Him stricken, smitten by God, and afflicted.",
+      "kind": "phrase",
+      "words": [
+        "BORNE",
+        "SORROWS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "But He was wounded for our transgressions, He was bruised for our iniquities; the chastisement for our peace was upon Him, and by His stripes we are healed.",
+      "kind": "phrase",
+      "words": [
+        "STRIPES",
+        "HEALED"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, we release every pain, fear, and weakness into Your gentle hands.",
+      "kind": "phrase",
+      "words": [
+        "RELEASE",
+        "GENTLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let Your living waters overflow this quiet moment, restoring what is broken and refreshing every heavy soul.",
+      "kind": "phrase",
+      "words": [
+        "RESTORING",
+        "REFRESHING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Fill this space with Your divine peace.",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to rest in God's healing presence each day.",
+      "kind": "phrase",
+      "words": [
+        "HEALING",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 53:4-5"
+}
