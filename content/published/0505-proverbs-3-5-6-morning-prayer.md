@@ -86,6 +86,8 @@ youtube_video_id: "Db_E-IXTydA"
 metadata_revision: "selar-seo-v1"
 thumbnail_pending: true
 thumbnail_error: "not_requested"
+thumbnail_retry_after: "2026-11-13T18:19:49Z"
+thumbnail_retry_reason: "rate_limit"
 ---
 
 ## Scene 1 — Approaching Jehovah-Jireh at the Prepared Table
