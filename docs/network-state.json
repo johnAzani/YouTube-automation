@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T16:50:02Z",
+  "generated_at": "2026-11-13T16:58:40Z",
   "monitor_generated_at": "2026-11-13T15:15:34.677104+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 169,
-    "published_longform": 80,
+    "published_total": 170,
+    "published_longform": 81,
     "published_shorts": 89,
-    "public_total": 167,
-    "queued_longform": 57,
+    "public_total": 168,
+    "queued_longform": 56,
     "queued_shorts": 49,
     "automations_ok": 10,
     "automations_total": 10,
@@ -169,29 +169,29 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 27,
-        "published_longform": 12,
+        "published_total": 28,
+        "published_longform": 13,
         "published_shorts": 15,
         "thumbnail_pending": 0,
-        "public_total": 27,
-        "queued_longform": 7,
+        "public_total": 28,
+        "queued_longform": 6,
         "queued_other": 0,
         "queued_shorts": 4
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYISAIAH32V2",
-        "title": "Say This Isaiah 32:2 Prayer at Noon | Find Rest #Shorts",
-        "format": "short",
-        "youtube_video_id": "27iciJCsTJg",
-        "watch_url": "https://www.youtube.com/shorts/27iciJCsTJg",
-        "published_on": "2026-11-12",
-        "published_at": "2026-11-12T23:50:38Z"
-      },
-      "next_queued_longform": {
         "id": "0087",
         "title": "Isaiah 49:10 Midday Prayer | The Midday Watch",
-        "words": 1796,
-        "status": "quota_paused"
+        "format": "longform",
+        "youtube_video_id": "rkh7ebkH3pM",
+        "watch_url": "https://youtu.be/rkh7ebkH3pM",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T16:57:49Z"
+      },
+      "next_queued_longform": {
+        "id": "0088",
+        "title": "Isaiah 25:4 Midday Prayer | The Midday Watch",
+        "words": 1454,
+        "status": "approved"
       },
       "next_queued_short": {
         "short": "short-middaygalatians6v9",
@@ -666,6 +666,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0087",
+      "slug": "isaiah-49-10-midday-prayer",
+      "file": "0087-isaiah-49-10-midday-prayer.md",
+      "title": "Isaiah 49:10 Midday Prayer | The Midday Watch",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T16:57:49Z",
+      "youtube_video_id": "rkh7ebkH3pM",
+      "watch_url": "https://youtu.be/rkh7ebkH3pM",
+      "youtu_be_url": "https://youtu.be/rkh7ebkH3pM",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/rkh7ebkH3pM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/rkh7ebkH3pM/hqdefault.jpg",
+      "thumb_text": "SPRINGS OF MERCY",
+      "thumbnail_pending": false,
+      "duration_label": "~12 min",
+      "words": 1796
+    },
     {
       "id": "0021",
       "slug": "psalm-31-1-5-committing-my-spirit-to-his-hand",
@@ -4997,19 +5021,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1150
-      },
-      {
-        "id": "0087",
-        "slug": "isaiah-49-10-midday-prayer",
-        "file": "0087-isaiah-49-10-midday-prayer.md",
-        "title": "Isaiah 49:10 Midday Prayer | The Midday Watch",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "quota_paused",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1796
       },
       {
         "id": "0088",
