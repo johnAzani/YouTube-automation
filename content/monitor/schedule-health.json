@@ -30,6 +30,13 @@
       "workflow": "community.yml"
     },
     {
+      "late_minutes": 173,
+      "name": "Weekly metrics snapshot",
+      "ran_at": "2026-11-13T21:34:19+00:00",
+      "slot": "2026-11-13T18:41:00+00:00",
+      "workflow": "metrics.yml"
+    },
+    {
       "late_minutes": 132,
       "name": "Autonomous Comment Replies",
       "ran_at": "2026-11-13T21:26:16+00:00",
@@ -37,9 +44,16 @@
       "workflow": "comments.yml"
     }
   ],
-  "generated_at": "2026-11-13T21:34:12.706602+00:00",
-  "last_run_at": "2026-11-13T21:33:26+00:00",
+  "generated_at": "2026-11-13T21:40:05.525735+00:00",
+  "last_run_at": "2026-11-13T21:39:24+00:00",
   "on_time": [
+    {
+      "late_minutes": 16,
+      "name": "Automation monitor",
+      "ran_at": "2026-11-13T21:39:24+00:00",
+      "slot": "2026-11-13T21:23:00+00:00",
+      "workflow": "monitor.yml"
+    },
     {
       "late_minutes": 44,
       "name": "Produce video",
