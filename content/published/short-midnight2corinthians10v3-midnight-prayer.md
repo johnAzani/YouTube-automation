@@ -20,10 +20,13 @@ height: 1280
 duration_seconds: 45.2
 scenes_verified: 7
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["RISE", "IN THE", "STILLNESS", "OF NIGHT"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-20T01:58:02Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Rise in spirit this midnight hour, as we quiet our minds before the Lord. For though we walk in the flesh, we do not war according to the flesh. For the weapons of our warfare are not carnal, but mighty in God for pulling down strongholds. Casting down arguments and every high thing that exalts itself against the knowledge of God. Bringing every thought into captivity to the obedience of Christ. Lord, anchor our hearts in Your peace tonight. Let Your truth guard our minds. Subscribe to The Midnight Watch for daily midnight prayer.

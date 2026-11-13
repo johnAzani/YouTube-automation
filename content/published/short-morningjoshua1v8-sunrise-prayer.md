@@ -24,6 +24,8 @@ thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently.
 thumbnail_poster: ["THE", "MORNING", "ALTAR", "PRAYER"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-13T07:57:57Z"
+thumbnail_retry_reason: "rate_limit"
 ---
 
 As the first quiet light of dawn breaks across the horizon, pause to greet the morning in stillness. Let this Book of the Law not depart from your mouth; meditate on it day and night, so that you may be careful to do everything written in it. Then you will be prosperous and successful. Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go. Father, we rest in your presence this morning. Anchor our hearts in your unchanging truth. Grant us courage for today and peace that remains as the sun rises higher. Amen.

@@ -89,8 +89,9 @@ published_on: "2026-11-12"
 published_at: "2026-11-12T22:52:44Z"
 youtube_video_id: "oiLCbx4-wMA"
 metadata_revision: "selar-seo-v1"
-thumbnail_pending: true
-thumbnail_error: "not_requested"
+thumbnail_pending: false
+
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The LORD Is My Rock (Verse 2a)
