@@ -2,9 +2,9 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
-      "late_minutes": 2653,
+      "late_minutes": 3213,
       "name": "Weekly metrics snapshot",
-      "ran_at": "2026-11-08T14:54:40+00:00",
+      "ran_at": "2026-11-09T00:14:40+00:00",
       "slot": "2026-11-06T18:41:00+00:00",
       "workflow": "metrics.yml"
     },
@@ -37,8 +37,8 @@
       "workflow": "community.yml"
     }
   ],
-  "generated_at": "2026-11-13T14:30:12.889638+00:00",
-  "last_run_at": "2026-11-13T14:29:21+00:00",
+  "generated_at": "2026-11-13T14:43:32.217347+00:00",
+  "last_run_at": "2026-11-13T14:42:41+00:00",
   "on_time": [
     {
       "late_minutes": 105,
@@ -62,9 +62,16 @@
       "workflow": "monitor.yml"
     },
     {
-      "late_minutes": 60,
+      "late_minutes": 20,
+      "name": "Produce video",
+      "ran_at": "2026-11-13T14:34:34+00:00",
+      "slot": "2026-11-13T14:14:00+00:00",
+      "workflow": "produce.yml"
+    },
+    {
+      "late_minutes": 62,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-13T13:47:03+00:00",
+      "ran_at": "2026-11-13T13:49:44+00:00",
       "slot": "2026-11-13T12:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }

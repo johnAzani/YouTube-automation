@@ -3,218 +3,232 @@
   "channel": "prayer10",
   "psalm": 25,
   "title": [
-    "SEEK HIS PATH",
-    "DIVINE GUIDANCE"
+    "SEEKING HIS",
+    "DIRECTION"
   ],
   "poster": [
-    "THE GUIDED PATH",
-    "PRAYER FOR WISDOM",
-    "PSALM 25:4-5",
-    "FIND YOUR WAY"
+    "BRING YOUR DECISION",
+    "TO THE LORD",
+    "ASK FOR WISDOM",
+    "FIND YOUR PATH"
   ],
   "end": [
     "SUBSCRIBE",
     "The Guided Path — seek God's wisdom for every step"
   ],
   "stock_queries": [
-    "peaceful river winding through misty alpine valley at dawn",
-    "quiet mountain pass in soft morning light",
-    "serene pine forest with gentle morning fog",
-    "calm alpine lake reflecting the morning sky",
-    "distant mountain peaks under quiet clouds",
-    "tranquil valley bathed in golden early light"
+    "misty alpine valley at dawn",
+    "calm mountain lake at twilight",
+    "sunlight breaking over pine forest",
+    "still river flowing through valley",
+    "winding mountain path in fog",
+    "serene high altitude meadow"
   ],
   "scenes": [
     {
-      "a": "Bring the decision currently before you into the quiet presence of the Lord.",
+      "a": "Bring the decision weighing on your heart",
       "img": "short-guidedpsalm25v4-scene-01.jpg",
-      "kicker": "SEEK HIS WAY",
-      "sub": "BRING YOUR BURDEN TO GOD",
-      "cam": "push_in",
-      "focus": [
-        0.5,
-        0.45
-      ]
-    },
-    {
-      "a": "Lord God, we come before Your throne asking for heavenly wisdom and discernment for every step we take today.",
-      "img": "short-guidedpsalm25v4-scene-02.jpg",
-      "kicker": "DIVINE WISDOM",
-      "sub": "ASK FOR HEAVENLY DIRECTION",
-      "cam": "pull_out",
-      "focus": [
-        0.5,
-        0.4
-      ]
-    },
-    {
-      "a": "Show me thy ways, O Lord; teach me thy paths.",
-      "img": "short-guidedpsalm25v4-scene-03.jpg",
       "kicker": "PSALM 25:4",
-      "sub": "SHOW ME THY WAYS",
-      "cam": "pan_left",
+      "sub": "HEAR HIS VOICE",
+      "cam": "push_in",
       "focus": [
         0.5,
         0.5
       ]
     },
     {
-      "a": "Lead me in thy truth, and teach me: for thou art the God of my salvation; on thee do I wait all the day.",
-      "img": "short-guidedpsalm25v4-scene-04.jpg",
-      "kicker": "PSALM 25:5",
-      "sub": "LEAD ME IN THY TRUTH",
-      "cam": "pan_right",
+      "a": "Invite the Creator into this moment",
+      "img": "short-guidedpsalm25v4-scene-02.jpg",
+      "kicker": "PSALM 25:4",
+      "sub": "INVITE HIS GUIDANCE",
+      "cam": "pan_left",
       "focus": [
-        0.5,
-        0.45
+        0.4,
+        0.6
       ]
     },
     {
-      "a": "Quiet our restless thoughts, Father, and give us the patience to wait upon Your perfect timing and unfailing grace.",
-      "img": "short-guidedpsalm25v4-scene-05.jpg",
-      "kicker": "PATIENT FAITH",
-      "sub": "WAIT UPON THE LORD",
+      "a": "Show me thy ways, O Lord",
+      "img": "short-guidedpsalm25v4-scene-03.jpg",
+      "kicker": "PSALM 25:4",
+      "sub": "TEACH ME THY PATHS",
       "cam": "tilt_up",
       "focus": [
         0.5,
-        0.55
+        0.3
       ]
     },
     {
-      "a": "Guide our feet along Your righteous path, and let Your steadfast love direct our hearts today. Amen.",
+      "a": "Lead me in thy truth",
+      "img": "short-guidedpsalm25v4-scene-04.jpg",
+      "kicker": "PSALM 25:5",
+      "sub": "HE IS THE LIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let his peace settle your spirit",
+      "img": "short-guidedpsalm25v4-scene-05.jpg",
+      "kicker": "PSALM 25:5",
+      "sub": "REST IN HIS TRUTH",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "May you walk forward with clarity",
       "img": "short-guidedpsalm25v4-scene-06.jpg",
-      "kicker": "RIGHTEOUS PATH",
-      "sub": "DIRECT OUR HEARTS",
+      "kicker": "PSALM 25:5",
+      "sub": "STEPS ORDERED BY HIM",
       "cam": "push_in",
       "focus": [
         0.5,
-        0.45
+        0.8
       ]
     }
   ],
   "captions": [
     [
       0,
-      14,
-      "Bring the decision currently before you into the quiet presence of the Lord."
+      15,
+      "Bring the decision weighing on your heart and invite the Creator into this moment. Ask Him for wisdom."
     ],
     [
-      14,
+      15,
       30,
-      "Lord God, we come before Your throne asking for heavenly wisdom and discernment for every step we take today."
+      "Show me thy ways, O Lord; teach me thy paths. Lead me in thy truth, and teach me."
     ],
     [
       30,
       45,
-      "Show me thy ways, O Lord; teach me thy paths."
+      "For thou art the God of my salvation; on thee do I wait all the day long."
     ],
     [
       45,
-      64,
-      "Lead me in thy truth, and teach me: for thou art the God of my salvation; on thee do I wait all the day."
+      60,
+      "Let his peace settle your spirit as you surrender your timeline to His divine and perfect plan."
     ],
     [
-      64,
-      82,
-      "Quiet our restless thoughts, Father, and give us the patience to wait upon Your perfect timing and unfailing grace."
+      60,
+      75,
+      "May you walk forward with clarity, knowing your steps are being ordered by the living Word."
     ],
     [
-      82,
-      98,
-      "Guide our feet along Your righteous path, and let Your steadfast love direct our hearts today. Amen."
+      75,
+      90,
+      "You are never alone on this journey. Subscribe to The Guided Path for daily spiritual focus."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      14,
+      15,
       [
         "BRING THE DECISION",
-        "BEFORE YOU INTO",
-        "THE QUIET PRESENCE"
+        "WEIGHING ON YOUR HEART",
+        "INVITE THE CREATOR",
+        "ASK FOR WISDOM"
       ],
-      "DECISION",
-      "PSALM 25:4"
-    ],
-    [
-      14,
-      30,
       [
-        "LORD GOD WE COME",
-        "ASKING FOR WISDOM",
-        "FOR EVERY STEP"
+        "DECISION",
+        "WISDOM"
       ],
-      "WISDOM",
       "PSALM 25:4"
     ],
     [
+      15,
       30,
-      45,
       [
         "SHOW ME THY WAYS",
-        "O LORD TEACH ME",
-        "THY PATHS"
+        "TEACH ME THY PATHS",
+        "LEAD ME IN TRUTH"
       ],
-      "WAYS",
+      [
+        "SHOW",
+        "TEACH",
+        "LEAD"
+      ],
       "PSALM 25:4"
     ],
     [
+      30,
       45,
-      64,
       [
-        "LEAD ME IN TRUTH",
-        "GOD OF SALVATION",
-        "ON THEE I WAIT"
+        "THOU ART THE GOD",
+        "OF MY SALVATION",
+        "ON THEE DO I",
+        "WAIT ALL DAY LONG"
       ],
-      "TRUTH",
+      [
+        "SALVATION",
+        "WAIT"
+      ],
       "PSALM 25:5"
     ],
     [
-      64,
-      82,
+      45,
+      60,
       [
-        "QUIET OUR THOUGHTS",
-        "PATIENCE TO WAIT",
-        "PERFECT TIMING"
+        "LET HIS PEACE",
+        "SETTLE YOUR SPIRIT",
+        "SURRENDER YOUR TIMELINE",
+        "TO HIS DIVINE PLAN"
       ],
-      "PATIENCE",
+      [
+        "PEACE",
+        "SURRENDER"
+      ],
       "PSALM 25:5"
     ],
     [
-      82,
-      98,
+      60,
+      75,
       [
-        "GUIDE OUR FEET",
-        "RIGHTEOUS PATH",
-        "STEADFAST LOVE AMEN"
+        "WALK FORWARD NOW",
+        "WITH DEEP CLARITY",
+        "STEPS ORDERED BY",
+        "THE LIVING WORD"
       ],
-      "PATH",
+      [
+        "CLARITY",
+        "ORDERED"
+      ],
+      "PSALM 25:5"
+    ],
+    [
+      75,
+      90,
+      [
+        "NEVER ALONE ON",
+        "THIS JOURNEY NOW",
+        "SUBSCRIBE TO",
+        "THE GUIDED PATH"
+      ],
+      [
+        "SUBSCRIBE",
+        "GUIDED"
+      ],
       "PSALM 25:5"
     ]
   ],
   "beats": [
     {
-      "a": "Bring the decision currently before you into the quiet presence of the Lord.",
+      "a": "Bring the decision weighing on your heart",
       "kind": "phrase",
       "words": [
-        "BRING",
-        "DECISION"
+        "DECISION",
+        "HEART"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Lord God, we come before Your throne asking for heavenly wisdom and discernment for every step we take today.",
-      "kind": "phrase",
-      "words": [
-        "HEAVENLY",
-        "WISDOM"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Show me thy ways, O Lord; teach me thy paths.",
+      "a": "Show me thy ways, O Lord",
       "kind": "phrase",
       "words": [
         "SHOW",
@@ -224,7 +238,7 @@
       "slot": "C"
     },
     {
-      "a": "Lead me in thy truth, and teach me: for thou art the God of my salvation; on thee do I wait all the day.",
+      "a": "Lead me in thy truth",
       "kind": "phrase",
       "words": [
         "LEAD",
@@ -234,20 +248,30 @@
       "slot": "C"
     },
     {
-      "a": "Quiet our restless thoughts, Father, and give us the patience to wait upon Your perfect timing and unfailing grace.",
+      "a": "Let his peace settle your spirit",
       "kind": "phrase",
       "words": [
-        "PATIENCE",
-        "WAIT"
+        "PEACE",
+        "SPIRIT"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Guide our feet along Your righteous path, and let Your steadfast love direct our hearts today. Amen.",
+      "a": "May you walk forward with clarity",
       "kind": "phrase",
       "words": [
-        "RIGHTEOUS",
+        "WALK",
+        "CLARITY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Guided Path",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
         "PATH"
       ],
       "hi": 0,
