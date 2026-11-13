@@ -19,13 +19,12 @@ width: 720
 height: 1280
 duration_seconds: 47.32
 scenes_verified: 6
-thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunris"
+thumbnail_pending: false
 thumbnail_poster: ["THE", "MORNING", "ALTAR", "PRAYER"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-13T14:42:09Z"
-thumbnail_retry_reason: "rate_limit"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
 ---
 
 As the first quiet light of dawn breaks across the horizon, pause to greet the morning in stillness. Let this Book of the Law not depart from your mouth; meditate on it day and night, so that you may be careful to do everything written in it. Then you will be prosperous and successful. Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go. Father, we rest in your presence this morning. Anchor our hearts in your unchanging truth. Grant us courage for today and peace that remains as the sun rises higher. Amen.
