@@ -30,17 +30,17 @@
       "workflow": "community.yml"
     },
     {
-      "late_minutes": 156,
+      "late_minutes": 158,
       "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-12T21:50:45+00:00",
-      "slot": "2026-11-12T19:14:00+00:00",
+      "ran_at": "2026-11-12T09:52:56+00:00",
+      "slot": "2026-11-12T07:14:00+00:00",
       "workflow": "comments.yml"
     },
     {
-      "late_minutes": 134,
+      "late_minutes": 128,
       "name": "Produce video",
-      "ran_at": "2026-11-12T21:28:28+00:00",
-      "slot": "2026-11-12T19:14:00+00:00",
+      "ran_at": "2026-11-12T08:22:39+00:00",
+      "slot": "2026-11-12T06:14:00+00:00",
       "workflow": "produce.yml"
     },
     {
@@ -51,8 +51,8 @@
       "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-12T22:00:17.366104+00:00",
-  "last_run_at": "2026-11-12T21:59:26+00:00",
+  "generated_at": "2026-11-13T00:30:46.771867+00:00",
+  "last_run_at": "2026-11-13T00:30:04+00:00",
   "on_time": [
     {
       "late_minutes": 105,
@@ -60,13 +60,6 @@
       "ran_at": "2026-11-12T21:59:26+00:00",
       "slot": "2026-11-12T20:14:00+00:00",
       "workflow": "automation-health.yml"
-    },
-    {
-      "late_minutes": 36,
-      "name": "Automation monitor",
-      "ran_at": "2026-11-12T21:59:26+00:00",
-      "slot": "2026-11-12T21:23:00+00:00",
-      "workflow": "monitor.yml"
     },
     {
       "late_minutes": 11,
