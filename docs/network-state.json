@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T01:59:30Z",
+  "generated_at": "2026-11-13T02:05:13Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 145,
-    "published_longform": 65,
-    "published_shorts": 80,
-    "public_total": 143,
-    "queued_longform": 54,
-    "queued_shorts": 39,
+    "published_total": 147,
+    "published_longform": 66,
+    "published_shorts": 81,
+    "public_total": 145,
+    "queued_longform": 53,
+    "queued_shorts": 38,
     "automations_ok": 8,
     "automations_total": 10,
     "network_healthy": false
@@ -295,32 +295,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 8,
-        "published_longform": 4,
-        "published_shorts": 4,
-        "public_total": 8,
-        "queued_longform": 5,
+        "published_total": 10,
+        "published_longform": 5,
+        "published_shorts": 5,
+        "public_total": 10,
+        "queued_longform": 4,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0303",
-        "title": "Isaiah 54:13 Family Prayer | The Family Altar",
-        "format": "longform",
-        "youtube_video_id": "hbH0E9CMEvs",
-        "watch_url": "https://youtu.be/hbH0E9CMEvs",
-        "published_on": "2026-11-12",
-        "published_at": "2026-11-12T19:50:36Z"
-      },
-      "next_queued_longform": {
         "id": "0304",
         "title": "Isaiah 32:18 Household Peace Prayer | The Family Altar",
-        "words": 1527,
+        "format": "longform",
+        "youtube_video_id": "08dJD3XggYc",
+        "watch_url": "https://youtu.be/08dJD3XggYc",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T02:04:10Z"
+      },
+      "next_queued_longform": {
+        "id": "0305",
+        "title": "Proverbs 24:3-4 Daily Household Prayer | The Family Altar",
+        "words": 1721,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familyisaiah32v18",
-        "scripture": "Isaiah 32:18",
+        "short": "short-familyproverbs24v3",
+        "scripture": "Proverbs 24:3-4",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -613,6 +613,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0304",
+      "slug": "isaiah-32-18-household-peace-prayer",
+      "file": "0304-isaiah-32-18-household-peace-prayer.md",
+      "title": "Isaiah 32:18 Household Peace Prayer | The Family Altar",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T02:04:10Z",
+      "youtube_video_id": "08dJD3XggYc",
+      "watch_url": "https://youtu.be/08dJD3XggYc",
+      "youtu_be_url": "https://youtu.be/08dJD3XggYc",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/08dJD3XggYc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/08dJD3XggYc/hqdefault.jpg",
+      "thumb_text": "PEACE IN THIS",
+      "duration_label": "~11 min",
+      "words": 1527
+    },
+    {
+      "id": "SHORT-FAMILYISAIAH32V18",
+      "slug": "short-familyisaiah32v18-household-prayer",
+      "file": "short-familyisaiah32v18-household-prayer.md",
+      "title": "Pray This Isaiah 32:18 Family Prayer Over Your Home | The Family Altar #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T00:51:17Z",
+      "youtube_video_id": "i7l1I7VklmA",
+      "watch_url": "https://www.youtube.com/shorts/i7l1I7VklmA",
+      "youtu_be_url": "https://youtu.be/i7l1I7VklmA",
+      "shorts_url": "https://www.youtube.com/shorts/i7l1I7VklmA",
+      "studio_url": "https://studio.youtube.com/video/i7l1I7VklmA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/i7l1I7VklmA/hqdefault.jpg",
+      "thumb_text": "PEACEFUL DWELLINGS \u00b7 ISAIAH 32:18",
+      "duration_label": "62s",
+      "words": 457
+    },
     {
       "id": "0207",
       "slug": "ephesians-6-10-18-midnight-prayer",
@@ -4329,19 +4375,6 @@
         "words": 1708
       },
       {
-        "id": "0304",
-        "slug": "isaiah-32-18-household-peace-prayer",
-        "file": "0304-isaiah-32-18-household-peace-prayer.md",
-        "title": "Isaiah 32:18 Household Peace Prayer | The Family Altar",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1527
-      },
-      {
         "id": "0305",
         "slug": "proverbs-24-3-4-wisdom-house-prayer",
         "file": "0305-proverbs-24-3-4-wisdom-house-prayer.md",
@@ -4797,17 +4830,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-familyisaiah32v18",
-        "file": "0304-short-familyisaiah32v18.yml",
-        "companion_longform_id": "0304",
-        "scripture": "Isaiah 32:18",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
       },
       {
         "short": "short-familyproverbs24v3",

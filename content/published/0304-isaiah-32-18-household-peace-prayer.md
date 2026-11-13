@@ -2,7 +2,7 @@
 id: '0304'
 title: Isaiah 32:18 Household Peace Prayer | The Family Altar
 slug: isaiah-32-18-household-peace-prayer
-status: approved
+status: published
 channel: prayer5
 privacy: public
 format: longform
@@ -76,6 +76,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-13"
+published_at: "2026-11-13T02:04:10Z"
+youtube_video_id: "08dJD3XggYc"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Gathering Around the Family Altar
