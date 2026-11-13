@@ -35,17 +35,10 @@
       "ran_at": "2026-11-11T22:07:09+00:00",
       "slot": "2026-11-11T19:14:00+00:00",
       "workflow": "community.yml"
-    },
-    {
-      "late_minutes": 158,
-      "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-12T09:52:56+00:00",
-      "slot": "2026-11-12T07:14:00+00:00",
-      "workflow": "comments.yml"
     }
   ],
-  "generated_at": "2026-11-13T07:00:40.758689+00:00",
-  "last_run_at": "2026-11-13T06:59:53+00:00",
+  "generated_at": "2026-11-13T08:41:52.435903+00:00",
+  "last_run_at": "2026-11-13T08:41:15+00:00",
   "on_time": [
     {
       "late_minutes": 105,
