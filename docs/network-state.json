@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T06:22:31Z",
+  "generated_at": "2026-11-13T06:57:19Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,10 +7,10 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 154,
-    "published_longform": 70,
-    "published_shorts": 84,
-    "public_total": 152,
+    "published_total": 156,
+    "published_longform": 71,
+    "published_shorts": 85,
+    "public_total": 154,
     "queued_longform": 50,
     "queued_shorts": 36,
     "automations_ok": 8,
@@ -592,24 +592,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 0,
-        "published_longform": 0,
-        "published_shorts": 0,
-        "public_total": 0,
+        "published_total": 2,
+        "published_longform": 1,
+        "published_shorts": 1,
+        "public_total": 2,
         "queued_longform": 2,
         "queued_other": 0,
         "queued_shorts": 2
       },
-      "latest_video": null,
-      "next_queued_longform": {
+      "latest_video": {
         "id": "0800",
         "title": "Proverbs 3:5-6 Guidance Prayer | The Guided Path",
-        "words": 973,
+        "format": "longform",
+        "youtube_video_id": "XXBBqCi9Uk4",
+        "watch_url": "https://youtu.be/XXBBqCi9Uk4",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T06:56:33Z"
+      },
+      "next_queued_longform": {
+        "id": "0801",
+        "title": "James 1:5 Guidance Prayer | The Guided Path",
+        "words": 942,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedproverbs3v5",
-        "scripture": "Proverbs 3:5-6",
+        "short": "short-guidedjames1v5",
+        "scripture": "James 1:5",
         "target_window_utc": "1124",
         "status": "approved"
       },
@@ -621,6 +629,52 @@
     }
   ],
   "videos": [
+    {
+      "id": "0800",
+      "slug": "proverbs-3-5-6-guidance-prayer",
+      "file": "0800-proverbs-3-5-6-guidance-prayer.md",
+      "title": "Proverbs 3:5-6 Guidance Prayer | The Guided Path",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T06:56:33Z",
+      "youtube_video_id": "XXBBqCi9Uk4",
+      "watch_url": "https://youtu.be/XXBBqCi9Uk4",
+      "youtu_be_url": "https://youtu.be/XXBBqCi9Uk4",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/XXBBqCi9Uk4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/XXBBqCi9Uk4/hqdefault.jpg",
+      "thumb_text": "DIRECT MY PATH",
+      "duration_label": "~7 min",
+      "words": 973
+    },
+    {
+      "id": "SHORT-GUIDEDPROVERBS3V5",
+      "slug": "short-guidedproverbs3v5-guidance-prayer",
+      "file": "short-guidedproverbs3v5-guidance-prayer.md",
+      "title": "Pray This Proverbs 3:5-6 Prayer for God's Guidance | Guidance Prayer #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T06:28:44Z",
+      "youtube_video_id": "NFzO1NIqMnI",
+      "watch_url": "https://www.youtube.com/shorts/NFzO1NIqMnI",
+      "youtu_be_url": "https://youtu.be/NFzO1NIqMnI",
+      "shorts_url": "https://www.youtube.com/shorts/NFzO1NIqMnI",
+      "studio_url": "https://studio.youtube.com/video/NFzO1NIqMnI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/NFzO1NIqMnI/hqdefault.jpg",
+      "thumb_text": "THE GUIDED PATH \u00b7 DIRECT MY PATH",
+      "duration_label": "59s",
+      "words": 239
+    },
     {
       "id": "0700",
       "slug": "psalm-100-4-thanksgiving-prayer",
@@ -4791,19 +4845,6 @@
         "words": 989
       },
       {
-        "id": "0800",
-        "slug": "proverbs-3-5-6-guidance-prayer",
-        "file": "0800-proverbs-3-5-6-guidance-prayer.md",
-        "title": "Proverbs 3:5-6 Guidance Prayer | The Guided Path",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 973
-      },
-      {
         "id": "0801",
         "slug": "james-1-5-wisdom-guidance-prayer",
         "file": "0801-james-1-5-wisdom-guidance-prayer.md",
@@ -4815,6 +4856,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 942
+      },
+      {
+        "id": "0802",
+        "slug": "psalm-25-4-5-guidance-prayer",
+        "file": "0802-psalm-25-4-5-guidance-prayer.md",
+        "title": "Psalm 25:4-5 Guidance Prayer | The Guided Path",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1679
       }
     ],
     "shorts": [
@@ -5193,17 +5247,6 @@
         "target_window_utc": "09:44"
       },
       {
-        "short": "short-guidedproverbs3v5",
-        "file": "0800-short-guidedproverbs3v5.yml",
-        "companion_longform_id": "0800",
-        "scripture": "Proverbs 3:5-6",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "1124"
-      },
-      {
         "short": "short-guidedjames1v5",
         "file": "0801-short-guidedjames1v5.yml",
         "companion_longform_id": "0801",
@@ -5213,6 +5256,17 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "1124"
+      },
+      {
+        "short": "short-guidedpsalm25v4",
+        "file": "0802-short-guidedpsalm25v4.yml",
+        "companion_longform_id": "0802",
+        "scripture": "Psalm 25:4-5",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "18:44"
       }
     ]
   },
