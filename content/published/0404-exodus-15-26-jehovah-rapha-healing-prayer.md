@@ -2,7 +2,7 @@
 id: '0404'
 title: Exodus 15:26 Jehovah Rapha Healing Prayer | The Healing Balm
 slug: exodus-15-26-jehovah-rapha-healing-prayer
-status: approved
+status: published
 channel: prayer6
 privacy: public
 format: longform
@@ -76,6 +76,13 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-13"
+published_at: "2026-11-13T03:44:08Z"
+youtube_video_id: "H-ygSB-1i1M"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: false
+
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith

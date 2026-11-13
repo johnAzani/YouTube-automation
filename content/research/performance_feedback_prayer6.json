@@ -1,11 +1,27 @@
 {
-  "generated_at": "2026-11-12T09:49:21.613328+00:00",
-  "as_of": "2026-11-12",
+  "generated_at": "2026-11-13T07:04:13.477170+00:00",
+  "as_of": "2026-11-13",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 3,
+  "total_longform_videos": 5,
   "ranked_themes": [],
   "themes": [
+    {
+      "theme": "general_prayer",
+      "videos": 2,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": "Exodus 15"
+    },
+    {
+      "theme": "midday_strength_endurance",
+      "videos": 1,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": "Isaiah 40"
+    },
     {
       "theme": "peace_rest",
       "videos": 1,
@@ -21,14 +37,6 @@
       "avg_score": 0.0,
       "avg_engagement": 0.0,
       "top_scripture": "Psalm 103"
-    },
-    {
-      "theme": "general_prayer",
-      "videos": 1,
-      "measured_videos": 0,
-      "avg_score": 0.0,
-      "avg_engagement": 0.0,
-      "top_scripture": "Jeremiah 30"
     }
   ],
   "guidance": [

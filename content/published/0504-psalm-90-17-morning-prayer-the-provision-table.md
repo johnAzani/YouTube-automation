@@ -2,7 +2,7 @@
 id: '0504'
 title: Psalm 90:17 Morning Prayer | The Provision Table
 slug: psalm-90-17-morning-prayer-the-provision-table
-status: approved
+status: published
 channel: prayer7
 privacy: public
 format: longform
@@ -77,6 +77,13 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-13"
+published_at: "2026-11-13T04:52:46Z"
+youtube_video_id: "msTiAda7RiM"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: false
+
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Approaching the Prepared Table of Jehovah-Jireh

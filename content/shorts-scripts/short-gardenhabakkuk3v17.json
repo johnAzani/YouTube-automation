@@ -1,0 +1,276 @@
+{
+  "key": "short-gardenhabakkuk3v17",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "A PRAYER OF",
+    "TOTAL TRUST"
+  ],
+  "poster": [
+    "GIVE THANKS",
+    "IN THE",
+    "VALLEY",
+    "OF LIGHT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glades",
+    "misty countryside in soft light",
+    "golden light over calm meadow",
+    "peaceful flowing river",
+    "gentle mountain stream at dawn",
+    "soft light through canopy",
+    "serene morning fog over lake"
+  ],
+  "scenes": [
+    {
+      "a": "Pause your day and breathe deeply.",
+      "img": "short-gardenhabakkuk3v17-scene-01.jpg",
+      "kicker": "HABAKKUK 3:17",
+      "sub": "FIND REST IN GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Notice the quiet grace of God.",
+      "img": "short-gardenhabakkuk3v17-scene-02.jpg",
+      "kicker": "HABAKKUK 3:18",
+      "sub": "HIS MERCY IS NEW",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Although the fig tree shall not blossom,",
+      "img": "short-gardenhabakkuk3v17-scene-03.jpg",
+      "kicker": "HABAKKUK 3:17",
+      "sub": "TRUST BEYOND SIGHT",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "neither shall fruit be in the vines.",
+      "img": "short-gardenhabakkuk3v17-scene-04.jpg",
+      "kicker": "HABAKKUK 3:17",
+      "sub": "PROVISION IN THE SPIRIT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Yet I will rejoice in the Lord.",
+      "img": "short-gardenhabakkuk3v17-scene-05.jpg",
+      "kicker": "HABAKKUK 3:18",
+      "sub": "JOY IN THE LORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The Lord God is my strength.",
+      "img": "short-gardenhabakkuk3v17-scene-06.jpg",
+      "kicker": "HABAKKUK 3:19",
+      "sub": "HE IS OUR STRENGTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Praise Garden.",
+      "img": "short-gardenhabakkuk3v17-scene-07.jpg",
+      "kicker": "THANKSGIVING PRAYER",
+      "sub": "JOIN US IN PRAISE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "Pause your day and breathe deeply. Notice the quiet grace of God surrounding you. Offer Him an honest heart of thanksgiving."
+    ],
+    [
+      11,
+      22,
+      "Although the fig tree shall not blossom, neither shall fruit be in the vines; the labor of the olive shall fail."
+    ],
+    [
+      23,
+      35,
+      "And the fields shall yield no meat; the flock shall be cut off from the fold, and there shall be no herd in the stalls."
+    ],
+    [
+      36,
+      48,
+      "Yet I will rejoice in the Lord, I will joy in the God of my salvation. The Lord God is my strength."
+    ],
+    [
+      49,
+      60,
+      "He will make my feet like hinds' feet, and He will make me to walk upon mine high places. Amen."
+    ],
+    [
+      61,
+      75,
+      "Lord, we thank You for being our unwavering foundation when seasons change. Help us to find deep, abiding peace in Your presence."
+    ],
+    [
+      76,
+      90,
+      "Subscribe to The Praise Garden."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "PAUSE YOUR DAY",
+        "BREATHE DEEPLY",
+        "NOTICE GODS GRACE",
+        "OFFER AN HONEST HEART"
+      ],
+      [
+        "HONEST HEART"
+      ],
+      "HABAKKUK 3:17"
+    ],
+    [
+      11,
+      22,
+      [
+        "FIG TREE NOT",
+        "BLOSSOMING NEITHER FRUIT",
+        "LABOR OF OLIVE",
+        "SHALL FAIL"
+      ],
+      [
+        "SHALL FAIL"
+      ],
+      "HABAKKUK 3:17"
+    ],
+    [
+      23,
+      35,
+      [
+        "FIELDS YIELD NO",
+        "MEAT FLOCK CUT",
+        "OFF FROM FOLD",
+        "NO HERD STALLS"
+      ],
+      [
+        "NO HERD"
+      ],
+      "HABAKKUK 3:17"
+    ],
+    [
+      36,
+      48,
+      [
+        "YET I REJOICE",
+        "IN THE LORD",
+        "GOD MY SALVATION",
+        "HE IS STRENGTH"
+      ],
+      [
+        "MY STRENGTH"
+      ],
+      "HABAKKUK 3:18"
+    ],
+    [
+      49,
+      60,
+      [
+        "FEET LIKE HINDS",
+        "WALK UPON HIGH",
+        "PLACES HE IS",
+        "OUR STRENGTH"
+      ],
+      [
+        "HIGH PLACES"
+      ],
+      "HABAKKUK 3:19"
+    ],
+    [
+      61,
+      75,
+      [
+        "THANK YOU LORD",
+        "FOR OUR FOUNDATION",
+        "ABIDING PEACE IN",
+        "YOUR PRESENCE"
+      ],
+      [
+        "ABIDING PEACE"
+      ],
+      "HABAKKUK 3:19"
+    ],
+    [
+      76,
+      90,
+      [
+        "SUBSCRIBE TO",
+        "THE PRAISE GARDEN"
+      ],
+      [
+        "SUBSCRIBE"
+      ],
+      "HABAKKUK 3:19"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Pause your day and breathe deeply.",
+      "kind": "phrase",
+      "words": [
+        "HONEST",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Yet I will rejoice in the Lord.",
+      "kind": "phrase",
+      "words": [
+        "REJOICE",
+        "IN",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord God is my strength.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Habakkuk 3:17-19"
+}

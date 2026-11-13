@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T03:17:22Z",
+  "generated_at": "2026-11-13T08:26:48Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,15 +7,15 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 147,
-    "published_longform": 66,
-    "published_shorts": 81,
-    "public_total": 145,
-    "queued_longform": 53,
-    "queued_shorts": 38,
-    "automations_ok": 8,
+    "published_total": 159,
+    "published_longform": 72,
+    "published_shorts": 87,
+    "public_total": 157,
+    "queued_longform": 50,
+    "queued_shorts": 35,
+    "automations_ok": 9,
     "automations_total": 10,
-    "network_healthy": false
+    "network_healthy": true
   },
   "channels": [
     {
@@ -32,40 +32,40 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 35,
+        "published_total": 36,
         "published_longform": 12,
-        "published_shorts": 23,
-        "public_total": 34,
+        "published_shorts": 24,
+        "public_total": 35,
         "queued_longform": 15,
         "queued_other": 5,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "0020",
-        "title": "Psalm 18:2 Night Prayer for Strength | My Rock & Fortress",
-        "format": "longform",
-        "youtube_video_id": "oiLCbx4-wMA",
-        "watch_url": "https://youtu.be/oiLCbx4-wMA",
-        "published_on": "2026-11-12",
-        "published_at": "2026-11-12T22:52:44Z"
+        "id": "SHORT-1PETER5V7",
+        "title": "Say This 1 Peter 5:7 Prayer Before You Sleep | 1 Peter 5:7 #Shorts",
+        "format": "short",
+        "youtube_video_id": "GQT7eKz9MAE",
+        "watch_url": "https://www.youtube.com/shorts/GQT7eKz9MAE",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T07:05:25Z"
       },
       "next_queued_longform": {
         "id": "0021",
         "title": "Psalm 31:5 Bedtime Prayer | Into Your Hands I Commit My Spirit",
         "words": 1123,
-        "status": "approved"
+        "status": "quota_paused"
       },
       "next_queued_short": {
-        "short": "short-1peter5v7",
-        "scripture": "1 Peter 5:7",
+        "short": "short-numbers6v24",
+        "scripture": "Numbers 6:24-26",
         "target_window_utc": "14:14",
         "status": "approved"
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-13",
         "measured_longform_videos": 0,
-        "total_longform_videos": 10,
+        "total_longform_videos": 11,
         "top_themes": [
           {
             "theme": "stillness_refuge",
@@ -99,50 +99,50 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 43,
+        "published_total": 44,
         "published_longform": 20,
-        "published_shorts": 23,
-        "public_total": 42,
-        "queued_longform": 5,
+        "published_shorts": 24,
+        "public_total": 43,
+        "queued_longform": 6,
         "queued_other": 0,
         "queued_shorts": 2
       },
       "latest_video": {
-        "id": "0063",
-        "title": "Hosea 6:3 His Going Forth Is Prepared as the Morning",
-        "format": "longform",
-        "youtube_video_id": "Cm8RyYGgkgE",
-        "watch_url": "https://youtu.be/Cm8RyYGgkgE",
-        "published_on": "2026-11-12",
-        "published_at": "2026-11-12T23:41:37Z"
+        "id": "SHORT-MORNINGPSALM25V4",
+        "title": "Say This Psalm 25:4-5 Prayer at Sunrise | The Morning Altar #Shorts",
+        "format": "short",
+        "youtube_video_id": "_RTCwdT7SVM",
+        "watch_url": "https://www.youtube.com/shorts/_RTCwdT7SVM",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T07:20:12Z"
       },
       "next_queued_longform": {
         "id": "0064",
         "title": "Zephaniah 3:5 Morning Prayer | The Morning Altar",
         "words": 1429,
-        "status": "approved"
+        "status": "quota_paused"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm25v4",
-        "scripture": "Psalm 25:4-5",
+        "short": "short-morningpsalm37v23",
+        "scripture": "Psalm 37:23-24",
         "target_window_utc": "06:14",
         "status": "approved"
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-13",
         "measured_longform_videos": 0,
-        "total_longform_videos": 17,
+        "total_longform_videos": 20,
         "top_themes": [
+          {
+            "theme": "morning_mercy_renewal",
+            "videos": 12,
+            "top_scripture": "Psalm 92"
+          },
           {
             "theme": "blessing_benediction",
             "videos": 1,
             "top_scripture": "Numbers 6"
-          },
-          {
-            "theme": "morning_mercy_renewal",
-            "videos": 11,
-            "top_scripture": "Mark 1"
           },
           {
             "theme": "midday_strength_endurance",
@@ -197,9 +197,9 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-13",
         "measured_longform_videos": 0,
-        "total_longform_videos": 10,
+        "total_longform_videos": 12,
         "top_themes": [
           {
             "theme": "daily_guidance_wisdom",
@@ -208,13 +208,13 @@
           },
           {
             "theme": "midday_strength_endurance",
-            "videos": 8,
-            "top_scripture": "Proverbs 16"
+            "videos": 9,
+            "top_scripture": "Daniel 6"
           },
           {
-            "theme": "protection",
+            "theme": "peace_rest",
             "videos": 1,
-            "top_scripture": "Psalm 91"
+            "top_scripture": "Psalm 121"
           }
         ]
       }
@@ -233,27 +233,27 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 15,
-        "published_longform": 8,
+        "published_total": 16,
+        "published_longform": 9,
         "published_shorts": 7,
-        "public_total": 15,
-        "queued_longform": 4,
+        "public_total": 16,
+        "queued_longform": 3,
         "queued_other": 0,
         "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0207",
-        "title": "Ephesians 6:10-18 Midnight Prayer | The Midnight Watch",
-        "format": "longform",
-        "youtube_video_id": "ZDnZNjXPaQI",
-        "watch_url": "https://youtu.be/ZDnZNjXPaQI",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T00:40:37Z"
-      },
-      "next_queued_longform": {
         "id": "0208",
         "title": "Isaiah 54:17 No Weapon Formed Against Thee Midnight Prayer",
-        "words": 1350,
+        "format": "longform",
+        "youtube_video_id": "uVx6ay-zB1c",
+        "watch_url": "https://youtu.be/uVx6ay-zB1c",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T08:25:55Z"
+      },
+      "next_queued_longform": {
+        "id": "0209",
+        "title": "Isaiah 10:27 Midnight Prayer | The Midnight Watch",
+        "words": 1176,
         "status": "approved"
       },
       "next_queued_short": {
@@ -264,19 +264,19 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-13",
         "measured_longform_videos": 0,
-        "total_longform_videos": 6,
+        "total_longform_videos": 8,
         "top_themes": [
           {
             "theme": "general_prayer",
-            "videos": 5,
-            "top_scripture": "Zechariah 2"
+            "videos": 6,
+            "top_scripture": "Acts 16"
           },
           {
             "theme": "daily_guidance_wisdom",
-            "videos": 1,
-            "top_scripture": "Psalm 119"
+            "videos": 2,
+            "top_scripture": "Ephesians 6"
           }
         ]
       }
@@ -326,14 +326,19 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-13",
         "measured_longform_videos": 0,
-        "total_longform_videos": 3,
+        "total_longform_videos": 5,
         "top_themes": [
           {
             "theme": "general_prayer",
-            "videos": 3,
-            "top_scripture": "Psalm 127"
+            "videos": 4,
+            "top_scripture": "Isaiah 54"
+          },
+          {
+            "theme": "midday_strength_endurance",
+            "videos": 1,
+            "top_scripture": "Isaiah 32"
           }
         ]
       }
@@ -352,55 +357,55 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 8,
-        "published_longform": 4,
-        "published_shorts": 4,
-        "public_total": 8,
-        "queued_longform": 5,
+        "published_total": 10,
+        "published_longform": 5,
+        "published_shorts": 5,
+        "public_total": 10,
+        "queued_longform": 4,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0403",
-        "title": "Isaiah 40:29-31 Healing Prayer | The Healing Balm",
-        "format": "longform",
-        "youtube_video_id": "qdnrS9W0XtQ",
-        "watch_url": "https://youtu.be/qdnrS9W0XtQ",
-        "published_on": "2026-11-12",
-        "published_at": "2026-11-12T20:40:46Z"
-      },
-      "next_queued_longform": {
         "id": "0404",
         "title": "Exodus 15:26 Jehovah Rapha Healing Prayer | The Healing Balm",
-        "words": 1903,
+        "format": "longform",
+        "youtube_video_id": "H-ygSB-1i1M",
+        "watch_url": "https://youtu.be/H-ygSB-1i1M",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T03:44:08Z"
+      },
+      "next_queued_longform": {
+        "id": "0405",
+        "title": "Jeremiah 17:14 Healing and Restoration Prayer | The Healing Balm",
+        "words": 1516,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingexodus15v26",
-        "scripture": "Exodus 15:26",
+        "short": "short-healingjeremiah17v14",
+        "scripture": "Jeremiah 17:14",
         "target_window_utc": "15:44",
         "status": "approved"
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-13",
         "measured_longform_videos": 0,
-        "total_longform_videos": 3,
+        "total_longform_videos": 5,
         "top_themes": [
+          {
+            "theme": "general_prayer",
+            "videos": 2,
+            "top_scripture": "Exodus 15"
+          },
+          {
+            "theme": "midday_strength_endurance",
+            "videos": 1,
+            "top_scripture": "Isaiah 40"
+          },
           {
             "theme": "peace_rest",
             "videos": 1,
             "top_scripture": "Psalm 147"
-          },
-          {
-            "theme": "stillness_refuge",
-            "videos": 1,
-            "top_scripture": "Psalm 103"
-          },
-          {
-            "theme": "general_prayer",
-            "videos": 1,
-            "top_scripture": "Jeremiah 30"
           }
         ]
       }
@@ -419,27 +424,27 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 7,
-        "published_longform": 4,
+        "published_total": 8,
+        "published_longform": 5,
         "published_shorts": 3,
-        "public_total": 7,
-        "queued_longform": 5,
+        "public_total": 8,
+        "queued_longform": 4,
         "queued_other": 0,
         "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0503",
-        "title": "Revelation 3:8 Open Doors Prayer | The Provision Table",
-        "format": "longform",
-        "youtube_video_id": "fA8ZpJlik-M",
-        "watch_url": "https://youtu.be/fA8ZpJlik-M",
-        "published_on": "2026-11-12",
-        "published_at": "2026-11-12T21:39:13Z"
-      },
-      "next_queued_longform": {
         "id": "0504",
         "title": "Psalm 90:17 Morning Prayer | The Provision Table",
-        "words": 1267,
+        "format": "longform",
+        "youtube_video_id": "msTiAda7RiM",
+        "watch_url": "https://youtu.be/msTiAda7RiM",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T04:52:46Z"
+      },
+      "next_queued_longform": {
+        "id": "0505",
+        "title": "Proverbs 3:5-6 Morning Prayer | The Provision Table",
+        "words": 1637,
         "status": "approved"
       },
       "next_queued_short": {
@@ -450,14 +455,14 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-13",
         "measured_longform_videos": 0,
-        "total_longform_videos": 3,
+        "total_longform_videos": 5,
         "top_themes": [
           {
             "theme": "general_prayer",
-            "videos": 1,
-            "top_scripture": "Deuteronomy 28"
+            "videos": 2,
+            "top_scripture": "Revelation 3"
           },
           {
             "theme": "peace_rest",
@@ -486,45 +491,50 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 2,
-        "published_longform": 1,
-        "published_shorts": 1,
-        "public_total": 2,
-        "queued_longform": 6,
+        "published_total": 4,
+        "published_longform": 2,
+        "published_shorts": 2,
+        "public_total": 4,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0600",
-        "title": "Psalm 121:7-8 Protection Prayer | The Covenant Shield",
-        "format": "longform",
-        "youtube_video_id": "_T9qvff8ats",
-        "watch_url": "https://youtu.be/_T9qvff8ats",
-        "published_on": "2026-11-11",
-        "published_at": "2026-11-11T13:21:35Z"
-      },
-      "next_queued_longform": {
         "id": "0601",
         "title": "Genesis 15:1 Protection Prayer | The Covenant Shield",
-        "words": 928,
+        "format": "longform",
+        "youtube_video_id": "lrSe7uQiAsA",
+        "watch_url": "https://youtu.be/lrSe7uQiAsA",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T05:33:41Z"
+      },
+      "next_queued_longform": {
+        "id": "0602",
+        "title": "Proverbs 18:10 Strong Tower Prayer | The Covenant Shield",
+        "words": 920,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldgenesis15v1",
-        "scripture": "Genesis 15:1",
+        "short": "short-shieldproverbs18v10",
+        "scripture": "Proverbs 18:10",
         "target_window_utc": "08:44",
         "status": "approved"
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-13",
         "measured_longform_videos": 0,
-        "total_longform_videos": 1,
+        "total_longform_videos": 2,
         "top_themes": [
           {
             "theme": "peace_rest",
             "videos": 1,
             "top_scripture": "Psalm 121"
+          },
+          {
+            "theme": "protection",
+            "videos": 1,
+            "top_scripture": "Genesis 15"
           }
         ]
       }
@@ -543,31 +553,47 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 0,
-        "published_longform": 0,
-        "published_shorts": 0,
-        "public_total": 0,
+        "published_total": 2,
+        "published_longform": 1,
+        "published_shorts": 1,
+        "public_total": 2,
         "queued_longform": 2,
         "queued_other": 0,
         "queued_shorts": 2
       },
-      "latest_video": null,
-      "next_queued_longform": {
+      "latest_video": {
         "id": "0700",
         "title": "Psalm 100:4 Thanksgiving Prayer | The Praise Garden",
-        "words": 902,
+        "format": "longform",
+        "youtube_video_id": "PAQX6PbcsCk",
+        "watch_url": "https://youtu.be/PAQX6PbcsCk",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T06:21:33Z"
+      },
+      "next_queued_longform": {
+        "id": "0701",
+        "title": "Psalm 103:1-5 Thanksgiving Prayer | The Praise Garden",
+        "words": 970,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm100v4",
-        "scripture": "Psalm 100:4",
+        "short": "short-gardenpsalm103v2",
+        "scripture": "Psalm 103:2",
         "target_window_utc": "09:44",
         "status": "approved"
       },
       "feedback": {
-        "available": false,
+        "available": true,
+        "as_of": "2026-11-13",
         "measured_longform_videos": 0,
-        "top_themes": []
+        "total_longform_videos": 1,
+        "top_themes": [
+          {
+            "theme": "general_prayer",
+            "videos": 1,
+            "top_scripture": "Psalm 100"
+          }
+        ]
       }
     },
     {
@@ -584,35 +610,350 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 0,
-        "published_longform": 0,
-        "published_shorts": 0,
-        "public_total": 0,
+        "published_total": 2,
+        "published_longform": 1,
+        "published_shorts": 1,
+        "public_total": 2,
         "queued_longform": 2,
         "queued_other": 0,
         "queued_shorts": 2
       },
-      "latest_video": null,
-      "next_queued_longform": {
+      "latest_video": {
         "id": "0800",
         "title": "Proverbs 3:5-6 Guidance Prayer | The Guided Path",
-        "words": 973,
+        "format": "longform",
+        "youtube_video_id": "XXBBqCi9Uk4",
+        "watch_url": "https://youtu.be/XXBBqCi9Uk4",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T06:56:33Z"
+      },
+      "next_queued_longform": {
+        "id": "0801",
+        "title": "James 1:5 Guidance Prayer | The Guided Path",
+        "words": 942,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedproverbs3v5",
-        "scripture": "Proverbs 3:5-6",
+        "short": "short-guidedjames1v5",
+        "scripture": "James 1:5",
         "target_window_utc": "1124",
         "status": "approved"
       },
       "feedback": {
-        "available": false,
+        "available": true,
+        "as_of": "2026-11-13",
         "measured_longform_videos": 0,
-        "top_themes": []
+        "total_longform_videos": 1,
+        "top_themes": [
+          {
+            "theme": "anxiety_peace",
+            "videos": 1,
+            "top_scripture": "Proverbs 3"
+          }
+        ]
       }
     }
   ],
   "videos": [
+    {
+      "id": "0208",
+      "slug": "isaiah-54-17-no-weapon-formed-against-thee-midnight-prayer",
+      "file": "0208-isaiah-54-17-no-weapon-formed-against-thee-midnight-prayer.md",
+      "title": "Isaiah 54:17 No Weapon Formed Against Thee Midnight Prayer",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T08:25:55Z",
+      "youtube_video_id": "uVx6ay-zB1c",
+      "watch_url": "https://youtu.be/uVx6ay-zB1c",
+      "youtu_be_url": "https://youtu.be/uVx6ay-zB1c",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/uVx6ay-zB1c/edit",
+      "thumb_url": "https://i.ytimg.com/vi/uVx6ay-zB1c/hqdefault.jpg",
+      "thumb_text": "NO WEAPON PROSPERS",
+      "duration_label": "~9 min",
+      "words": 1350
+    },
+    {
+      "id": "0207",
+      "slug": "ephesians-6-10-18-midnight-prayer",
+      "file": "0207-ephesians-6-10-18-midnight-prayer.md",
+      "title": "Ephesians 6:10-18 Midnight Prayer | The Midnight Watch",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T07:27:44Z",
+      "youtube_video_id": "ZDnZNjXPaQI",
+      "watch_url": "https://youtu.be/ZDnZNjXPaQI",
+      "youtu_be_url": "https://youtu.be/ZDnZNjXPaQI",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/ZDnZNjXPaQI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/ZDnZNjXPaQI/hqdefault.jpg",
+      "thumb_text": "ARMOUR OF GOD",
+      "duration_label": "~12 min",
+      "words": 1669
+    },
+    {
+      "id": "SHORT-MORNINGPSALM25V4",
+      "slug": "short-morningpsalm25v4-sunrise-prayer",
+      "file": "short-morningpsalm25v4-sunrise-prayer.md",
+      "title": "Say This Psalm 25:4-5 Prayer at Sunrise | The Morning Altar #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T07:20:12Z",
+      "youtube_video_id": "_RTCwdT7SVM",
+      "watch_url": "https://www.youtube.com/shorts/_RTCwdT7SVM",
+      "youtu_be_url": "https://youtu.be/_RTCwdT7SVM",
+      "shorts_url": "https://www.youtube.com/shorts/_RTCwdT7SVM",
+      "studio_url": "https://studio.youtube.com/video/_RTCwdT7SVM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/_RTCwdT7SVM/hqdefault.jpg",
+      "thumb_text": "PSALM 25:4-5 \u00b7 TEACH ME YOUR PATHS",
+      "duration_label": "55s",
+      "words": 632
+    },
+    {
+      "id": "SHORT-1PETER5V7",
+      "slug": "short-1peter5v7-pre-sleep-prayer",
+      "file": "short-1peter5v7-pre-sleep-prayer.md",
+      "title": "Say This 1 Peter 5:7 Prayer Before You Sleep | 1 Peter 5:7 #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T07:05:25Z",
+      "youtube_video_id": "GQT7eKz9MAE",
+      "watch_url": "https://www.youtube.com/shorts/GQT7eKz9MAE",
+      "youtu_be_url": "https://youtu.be/GQT7eKz9MAE",
+      "shorts_url": "https://www.youtube.com/shorts/GQT7eKz9MAE",
+      "studio_url": "https://studio.youtube.com/video/GQT7eKz9MAE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/GQT7eKz9MAE/hqdefault.jpg",
+      "thumb_text": "A PRAYER FOR \u00b7 A PEACEFUL SLEEP",
+      "duration_label": "43s",
+      "words": 608
+    },
+    {
+      "id": "0800",
+      "slug": "proverbs-3-5-6-guidance-prayer",
+      "file": "0800-proverbs-3-5-6-guidance-prayer.md",
+      "title": "Proverbs 3:5-6 Guidance Prayer | The Guided Path",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T06:56:33Z",
+      "youtube_video_id": "XXBBqCi9Uk4",
+      "watch_url": "https://youtu.be/XXBBqCi9Uk4",
+      "youtu_be_url": "https://youtu.be/XXBBqCi9Uk4",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/XXBBqCi9Uk4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/XXBBqCi9Uk4/hqdefault.jpg",
+      "thumb_text": "DIRECT MY PATH",
+      "duration_label": "~7 min",
+      "words": 973
+    },
+    {
+      "id": "SHORT-GUIDEDPROVERBS3V5",
+      "slug": "short-guidedproverbs3v5-guidance-prayer",
+      "file": "short-guidedproverbs3v5-guidance-prayer.md",
+      "title": "Pray This Proverbs 3:5-6 Prayer for God's Guidance | Guidance Prayer #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T06:28:44Z",
+      "youtube_video_id": "NFzO1NIqMnI",
+      "watch_url": "https://www.youtube.com/shorts/NFzO1NIqMnI",
+      "youtu_be_url": "https://youtu.be/NFzO1NIqMnI",
+      "shorts_url": "https://www.youtube.com/shorts/NFzO1NIqMnI",
+      "studio_url": "https://studio.youtube.com/video/NFzO1NIqMnI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/NFzO1NIqMnI/hqdefault.jpg",
+      "thumb_text": "THE GUIDED PATH \u00b7 DIRECT MY PATH",
+      "duration_label": "59s",
+      "words": 239
+    },
+    {
+      "id": "0700",
+      "slug": "psalm-100-4-thanksgiving-prayer",
+      "file": "0700-psalm-100-4-thanksgiving-prayer.md",
+      "title": "Psalm 100:4 Thanksgiving Prayer | The Praise Garden",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T06:21:33Z",
+      "youtube_video_id": "PAQX6PbcsCk",
+      "watch_url": "https://youtu.be/PAQX6PbcsCk",
+      "youtu_be_url": "https://youtu.be/PAQX6PbcsCk",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/PAQX6PbcsCk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/PAQX6PbcsCk/hqdefault.jpg",
+      "thumb_text": "ENTER WITH THANKS",
+      "duration_label": "~6 min",
+      "words": 902
+    },
+    {
+      "id": "SHORT-GARDENPSALM100V4",
+      "slug": "short-gardenpsalm100v4-thanksgiving-prayer",
+      "file": "short-gardenpsalm100v4-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 100:4 Prayer of Thanksgiving | Thanksgiving Prayer #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T05:42:21Z",
+      "youtube_video_id": "kNJqhfd532k",
+      "watch_url": "https://www.youtube.com/shorts/kNJqhfd532k",
+      "youtu_be_url": "https://youtu.be/kNJqhfd532k",
+      "shorts_url": "https://www.youtube.com/shorts/kNJqhfd532k",
+      "studio_url": "https://studio.youtube.com/video/kNJqhfd532k/edit",
+      "thumb_url": "https://i.ytimg.com/vi/kNJqhfd532k/hqdefault.jpg",
+      "thumb_text": "THE PRAISE GARDEN \u00b7 ENTER WITH THANKS",
+      "duration_label": "55s",
+      "words": 236
+    },
+    {
+      "id": "0601",
+      "slug": "genesis-15-1-protection-prayer",
+      "file": "0601-genesis-15-1-protection-prayer.md",
+      "title": "Genesis 15:1 Protection Prayer | The Covenant Shield",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T05:33:41Z",
+      "youtube_video_id": "lrSe7uQiAsA",
+      "watch_url": "https://youtu.be/lrSe7uQiAsA",
+      "youtu_be_url": "https://youtu.be/lrSe7uQiAsA",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/lrSe7uQiAsA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/lrSe7uQiAsA/hqdefault.jpg",
+      "thumb_text": "I AM THY SHIELD",
+      "duration_label": "~6 min",
+      "words": 928
+    },
+    {
+      "id": "0504",
+      "slug": "psalm-90-17-morning-prayer-the-provision-table",
+      "file": "0504-psalm-90-17-morning-prayer-the-provision-table.md",
+      "title": "Psalm 90:17 Morning Prayer | The Provision Table",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T04:52:46Z",
+      "youtube_video_id": "msTiAda7RiM",
+      "watch_url": "https://youtu.be/msTiAda7RiM",
+      "youtu_be_url": "https://youtu.be/msTiAda7RiM",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/msTiAda7RiM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/msTiAda7RiM/hqdefault.jpg",
+      "thumb_text": "ESTABLISH OUR WORK",
+      "duration_label": "~9 min",
+      "words": 1267
+    },
+    {
+      "id": "0503",
+      "slug": "revelation-3-8-open-doors-prayer",
+      "file": "0503-revelation-3-8-open-doors-prayer.md",
+      "title": "Revelation 3:8 Open Doors Prayer | The Provision Table",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T03:52:37Z",
+      "youtube_video_id": "fA8ZpJlik-M",
+      "watch_url": "https://youtu.be/fA8ZpJlik-M",
+      "youtu_be_url": "https://youtu.be/fA8ZpJlik-M",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/fA8ZpJlik-M/edit",
+      "thumb_url": "https://i.ytimg.com/vi/fA8ZpJlik-M/hqdefault.jpg",
+      "thumb_text": "OPEN THIS DOOR",
+      "duration_label": "~6 min",
+      "words": 903
+    },
+    {
+      "id": "0404",
+      "slug": "exodus-15-26-jehovah-rapha-healing-prayer",
+      "file": "0404-exodus-15-26-jehovah-rapha-healing-prayer.md",
+      "title": "Exodus 15:26 Jehovah Rapha Healing Prayer | The Healing Balm",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T03:44:08Z",
+      "youtube_video_id": "H-ygSB-1i1M",
+      "watch_url": "https://youtu.be/H-ygSB-1i1M",
+      "youtu_be_url": "https://youtu.be/H-ygSB-1i1M",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/H-ygSB-1i1M/edit",
+      "thumb_url": "https://i.ytimg.com/vi/H-ygSB-1i1M/hqdefault.jpg",
+      "thumb_text": "JEHOVAH RAPHA",
+      "duration_label": "~13 min",
+      "words": 1903
+    },
+    {
+      "id": "SHORT-HEALINGEXODUS15V26",
+      "slug": "short-healingexodus15v26-restoration-prayer",
+      "file": "short-healingexodus15v26-restoration-prayer.md",
+      "title": "Pray This Exodus 15:26 Healing Prayer for Peace & Strength | A Restorative Prayer #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T02:11:48Z",
+      "youtube_video_id": "1n7kkDrsP6A",
+      "watch_url": "https://www.youtube.com/shorts/1n7kkDrsP6A",
+      "youtu_be_url": "https://youtu.be/1n7kkDrsP6A",
+      "shorts_url": "https://www.youtube.com/shorts/1n7kkDrsP6A",
+      "studio_url": "https://studio.youtube.com/video/1n7kkDrsP6A/edit",
+      "thumb_url": "https://i.ytimg.com/vi/1n7kkDrsP6A/hqdefault.jpg",
+      "thumb_text": "THE HEALING BALM \u00b7 GOD IS YOUR HEALER",
+      "duration_label": "44s",
+      "words": 407
+    },
     {
       "id": "0304",
       "slug": "isaiah-32-18-household-peace-prayer",
@@ -660,29 +1001,6 @@
       "words": 457
     },
     {
-      "id": "0207",
-      "slug": "ephesians-6-10-18-midnight-prayer",
-      "file": "0207-ephesians-6-10-18-midnight-prayer.md",
-      "title": "Ephesians 6:10-18 Midnight Prayer | The Midnight Watch",
-      "channel": "prayer4",
-      "channel_name": "The Midnight Watch",
-      "channel_handle": "@TheMidnightWatchDaily",
-      "format": "longform",
-      "niche": "faith and prayer",
-      "privacy": "public",
-      "published_on": "2026-11-13",
-      "published_at": "2026-11-13T00:40:37Z",
-      "youtube_video_id": "ZDnZNjXPaQI",
-      "watch_url": "https://youtu.be/ZDnZNjXPaQI",
-      "youtu_be_url": "https://youtu.be/ZDnZNjXPaQI",
-      "shorts_url": "",
-      "studio_url": "https://studio.youtube.com/video/ZDnZNjXPaQI/edit",
-      "thumb_url": "https://i.ytimg.com/vi/ZDnZNjXPaQI/hqdefault.jpg",
-      "thumb_text": "ARMOUR OF GOD",
-      "duration_label": "~12 min",
-      "words": 1669
-    },
-    {
       "id": "SHORT-MIDNIGHT2CORINTHIANS10V3",
       "slug": "short-midnight2corinthians10v3-midnight-prayer",
       "file": "short-midnight2corinthians10v3-midnight-prayer.md",
@@ -694,7 +1012,7 @@
       "niche": "faith and prayer",
       "privacy": "public",
       "published_on": "2026-11-12",
-      "published_at": "2026-11-12T23:58:17Z",
+      "published_at": "2026-11-12T23:58:06Z",
       "youtube_video_id": "Id-Jv_t7VIU",
       "watch_url": "https://www.youtube.com/shorts/Id-Jv_t7VIU",
       "youtu_be_url": "https://youtu.be/Id-Jv_t7VIU",
@@ -702,8 +1020,8 @@
       "studio_url": "https://studio.youtube.com/video/Id-Jv_t7VIU/edit",
       "thumb_url": "https://i.ytimg.com/vi/Id-Jv_t7VIU/hqdefault.jpg",
       "thumb_text": "RISE \u00b7 IN THE",
-      "duration_label": "45s",
-      "words": 557
+      "duration_label": "<60s",
+      "words": 21
     },
     {
       "id": "SHORT-MIDDAYISAIAH32V2",
@@ -821,29 +1139,6 @@
       "words": 607
     },
     {
-      "id": "0503",
-      "slug": "revelation-3-8-open-doors-prayer",
-      "file": "0503-revelation-3-8-open-doors-prayer.md",
-      "title": "Revelation 3:8 Open Doors Prayer | The Provision Table",
-      "channel": "prayer7",
-      "channel_name": "The Provision Table",
-      "channel_handle": "@TheProvisionTableDaily",
-      "format": "longform",
-      "niche": "faith and prayer",
-      "privacy": "public",
-      "published_on": "2026-11-12",
-      "published_at": "2026-11-12T21:39:13Z",
-      "youtube_video_id": "fA8ZpJlik-M",
-      "watch_url": "https://youtu.be/fA8ZpJlik-M",
-      "youtu_be_url": "https://youtu.be/fA8ZpJlik-M",
-      "shorts_url": "",
-      "studio_url": "https://studio.youtube.com/video/fA8ZpJlik-M/edit",
-      "thumb_url": "https://i.ytimg.com/vi/fA8ZpJlik-M/hqdefault.jpg",
-      "thumb_text": "OPEN THIS DOOR",
-      "duration_label": "~6 min",
-      "words": 903
-    },
-    {
       "id": "SHORT-PROVISIONPHILIPPIANS4V19",
       "slug": "short-provisionphilippians4v19-stewardship-prayer",
       "file": "short-provisionphilippians4v19-stewardship-prayer.md",
@@ -855,7 +1150,7 @@
       "niche": "faith and prayer",
       "privacy": "public",
       "published_on": "2026-11-12",
-      "published_at": "2026-11-12T20:51:21Z",
+      "published_at": "2026-11-12T20:51:14Z",
       "youtube_video_id": "ZmRgwomyNfs",
       "watch_url": "https://www.youtube.com/shorts/ZmRgwomyNfs",
       "youtu_be_url": "https://youtu.be/ZmRgwomyNfs",
@@ -863,8 +1158,8 @@
       "studio_url": "https://studio.youtube.com/video/ZmRgwomyNfs/edit",
       "thumb_url": "https://i.ytimg.com/vi/ZmRgwomyNfs/hqdefault.jpg",
       "thumb_text": "THE PROVISION TABLE \u00b7 ALL YOUR NEED",
-      "duration_label": "61s",
-      "words": 345
+      "duration_label": "<60s",
+      "words": 21
     },
     {
       "id": "0403",
@@ -1486,6 +1781,29 @@
       "thumb_text": "LAY DOWN YOUR BURDENS \u00b7 A QUIET BEDTIME PRAYER",
       "duration_label": "58s",
       "words": 634
+    },
+    {
+      "id": "SHORT-SHIELDGENESIS15V1",
+      "slug": "short-shieldgenesis15v1-protection-prayer",
+      "file": "short-shieldgenesis15v1-protection-prayer.md",
+      "title": "Pray This Genesis 15:1 Prayer for Divine Protection | Protection Prayer #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-12",
+      "published_at": "2026-11-12T02:25:29Z",
+      "youtube_video_id": "Pz1hcrgZ7Lc",
+      "watch_url": "https://www.youtube.com/shorts/Pz1hcrgZ7Lc",
+      "youtu_be_url": "https://youtu.be/Pz1hcrgZ7Lc",
+      "shorts_url": "https://www.youtube.com/shorts/Pz1hcrgZ7Lc",
+      "studio_url": "https://studio.youtube.com/video/Pz1hcrgZ7Lc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Pz1hcrgZ7Lc/hqdefault.jpg",
+      "thumb_text": "THE COVENANT SHIELD \u00b7 GOD IS MY SHIELD",
+      "duration_label": "<60s",
+      "words": 21
     },
     {
       "id": "SHORT-PROVISIONDEUTERONOMY28V12",
@@ -4004,7 +4322,7 @@
         "title": "Psalm 31:5 Bedtime Prayer | Into Your Hands I Commit My Spirit",
         "channel": "secret-place",
         "channel_name": "The Secret Place",
-        "status": "approved",
+        "status": "quota_paused",
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,
@@ -4199,7 +4517,7 @@
         "title": "Zephaniah 3:5 Morning Prayer | The Morning Altar",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
-        "status": "approved",
+        "status": "quota_paused",
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,
@@ -4256,6 +4574,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1774
+      },
+      {
+        "id": "0069",
+        "slug": "psalm-119-105-morning-prayer",
+        "file": "0069-psalm-119-105-morning-prayer.md",
+        "title": "Psalm 119:105 Morning Prayer | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1759
       },
       {
         "id": "0087",
@@ -4321,19 +4652,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1120
-      },
-      {
-        "id": "0208",
-        "slug": "isaiah-54-17-no-weapon-formed-against-thee-midnight-prayer",
-        "file": "0208-isaiah-54-17-no-weapon-formed-against-thee-midnight-prayer.md",
-        "title": "Isaiah 54:17 No Weapon Formed Against Thee Midnight Prayer",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1350
       },
       {
         "id": "0209",
@@ -4427,19 +4745,6 @@
         "words": 1053
       },
       {
-        "id": "0404",
-        "slug": "exodus-15-26-jehovah-rapha-healing-prayer",
-        "file": "0404-exodus-15-26-jehovah-rapha-healing-prayer.md",
-        "title": "Exodus 15:26 Jehovah Rapha Healing Prayer | The Healing Balm",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1903
-      },
-      {
         "id": "0405",
         "slug": "jeremiah-17-14-healing-and-restoration-prayer",
         "file": "0405-jeremiah-17-14-healing-and-restoration-prayer.md",
@@ -4492,19 +4797,6 @@
         "words": 1031
       },
       {
-        "id": "0504",
-        "slug": "psalm-90-17-morning-prayer-the-provision-table",
-        "file": "0504-psalm-90-17-morning-prayer-the-provision-table.md",
-        "title": "Psalm 90:17 Morning Prayer | The Provision Table",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1267
-      },
-      {
         "id": "0505",
         "slug": "proverbs-3-5-6-morning-prayer",
         "file": "0505-proverbs-3-5-6-morning-prayer.md",
@@ -4555,19 +4847,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 2031
-      },
-      {
-        "id": "0601",
-        "slug": "genesis-15-1-protection-prayer",
-        "file": "0601-genesis-15-1-protection-prayer.md",
-        "title": "Genesis 15:1 Protection Prayer | The Covenant Shield",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 928
       },
       {
         "id": "0602",
@@ -4635,19 +4914,6 @@
         "words": 1430
       },
       {
-        "id": "0700",
-        "slug": "psalm-100-4-thanksgiving-prayer",
-        "file": "0700-psalm-100-4-thanksgiving-prayer.md",
-        "title": "Psalm 100:4 Thanksgiving Prayer | The Praise Garden",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 902
-      },
-      {
         "id": "0701",
         "slug": "psalm-103-1-5-thanksgiving-prayer",
         "file": "0701-psalm-103-1-5-thanksgiving-prayer.md",
@@ -4661,17 +4927,17 @@
         "words": 970
       },
       {
-        "id": "0800",
-        "slug": "proverbs-3-5-6-guidance-prayer",
-        "file": "0800-proverbs-3-5-6-guidance-prayer.md",
-        "title": "Proverbs 3:5-6 Guidance Prayer | The Guided Path",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
+        "id": "0702",
+        "slug": "habakkuk-3-17-19-yet-i-will-rejoice-prayer",
+        "file": "0702-habakkuk-3-17-19-yet-i-will-rejoice-prayer.md",
+        "title": "Habakkuk 3:17-19 Yet I Will Rejoice Prayer | The Praise Garden",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
         "status": "approved",
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,
-        "words": 973
+        "words": 989
       },
       {
         "id": "0801",
@@ -4685,20 +4951,22 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 942
+      },
+      {
+        "id": "0802",
+        "slug": "psalm-25-4-5-guidance-prayer",
+        "file": "0802-psalm-25-4-5-guidance-prayer.md",
+        "title": "Psalm 25:4-5 Guidance Prayer | The Guided Path",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1679
       }
     ],
     "shorts": [
-      {
-        "short": "short-1peter5v7",
-        "file": "0032-short-1peter5v7.yml",
-        "companion_longform_id": "0032",
-        "scripture": "1 Peter 5:7",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
       {
         "short": "short-numbers6v24",
         "file": "0033-short-numbers6v24.yml",
@@ -4733,10 +5001,10 @@
         "target_window_utc": "14:14"
       },
       {
-        "short": "short-morningpsalm25v4",
-        "file": "0067-short-morningpsalm25v4.yml",
-        "companion_longform_id": "0067",
-        "scripture": "Psalm 25:4-5",
+        "short": "short-morningpsalm37v23",
+        "file": "0068-short-morningpsalm37v23.yml",
+        "companion_longform_id": "0068",
+        "scripture": "Psalm 37:23-24",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",
@@ -4744,10 +5012,10 @@
         "target_window_utc": "06:14"
       },
       {
-        "short": "short-morningpsalm37v23",
-        "file": "0068-short-morningpsalm37v23.yml",
-        "companion_longform_id": "0068",
-        "scripture": "Psalm 37:23-24",
+        "short": "short-morningpsalm119v105",
+        "file": "0069-short-morningpsalm119v105.yml",
+        "companion_longform_id": "0069",
+        "scripture": "Psalm 119:105",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",
@@ -4876,17 +5144,6 @@
         "target_window_utc": "17:14"
       },
       {
-        "short": "short-healingexodus15v26",
-        "file": "0404-short-healingexodus15v26.yml",
-        "companion_longform_id": "0404",
-        "scripture": "Exodus 15:26",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
-      },
-      {
         "short": "short-healingjeremiah17v14",
         "file": "0405-short-healingjeremiah17v14.yml",
         "companion_longform_id": "0405",
@@ -4997,17 +5254,6 @@
         "target_window_utc": "10:44"
       },
       {
-        "short": "short-shieldgenesis15v1",
-        "file": "0601-short-shieldgenesis15v1.yml",
-        "companion_longform_id": "0601",
-        "scripture": "Genesis 15:1",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
-      },
-      {
         "short": "short-shieldproverbs18v10",
         "file": "0602-short-shieldproverbs18v10.yml",
         "companion_longform_id": "0602",
@@ -5063,17 +5309,6 @@
         "target_window_utc": "08:44"
       },
       {
-        "short": "short-gardenpsalm100v4",
-        "file": "0700-short-gardenpsalm100v4.yml",
-        "companion_longform_id": "0700",
-        "scripture": "Psalm 100:4",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
-      {
         "short": "short-gardenpsalm103v2",
         "file": "0701-short-gardenpsalm103v2.yml",
         "companion_longform_id": "0701",
@@ -5085,15 +5320,15 @@
         "target_window_utc": "09:44"
       },
       {
-        "short": "short-guidedproverbs3v5",
-        "file": "0800-short-guidedproverbs3v5.yml",
-        "companion_longform_id": "0800",
-        "scripture": "Proverbs 3:5-6",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
+        "short": "short-gardenhabakkuk3v17",
+        "file": "0702-short-gardenhabakkuk3v17.yml",
+        "companion_longform_id": "0702",
+        "scripture": "Habakkuk 3:17-19",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
         "status": "approved",
         "publishable": true,
-        "target_window_utc": "1124"
+        "target_window_utc": "09:44"
       },
       {
         "short": "short-guidedjames1v5",
@@ -5105,6 +5340,17 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "1124"
+      },
+      {
+        "short": "short-guidedpsalm25v4",
+        "file": "0802-short-guidedpsalm25v4.yml",
+        "companion_longform_id": "0802",
+        "scripture": "Psalm 25:4-5",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "18:44"
       }
     ]
   },
@@ -5112,11 +5358,11 @@
     {
       "workflow": "automation-health.yml",
       "name": "automation-health",
-      "verdict": "SELF-REPORT",
-      "severity": "info",
-      "detail": "this is the check itself; its previous run ended failure 2.2h ago, which is its own verdict and not independent evidence",
-      "last_conclusion": "failure",
-      "last_run": "2026-11-13T01:02:30+00:00",
+      "verdict": "OK",
+      "severity": "ok",
+      "detail": "last success 14.6h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-13T06:57:38+00:00",
       "last_success": "2026-11-12T16:21:00+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
@@ -5128,7 +5374,7 @@
       "name": "Autonomous Comment Replies",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 2.9h ago",
+      "detail": "last success 6.6h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-13T00:22:12+00:00",
       "last_success": "2026-11-13T00:22:12+00:00",
@@ -5142,7 +5388,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 25.7h ago",
+      "detail": "last success 29.4h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-12T01:32:35+00:00",
       "last_success": "2026-11-12T01:32:35+00:00",
@@ -5156,9 +5402,9 @@
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 16.2h ago",
-      "last_conclusion": "success",
-      "last_run": "2026-11-12T11:04:31+00:00",
+      "detail": "last success 19.9h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-13T06:58:36+00:00",
       "last_success": "2026-11-12T11:04:31+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
@@ -5170,11 +5416,11 @@
       "name": "Growth autopilot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 17.5h ago",
-      "last_conclusion": "success",
-      "last_run": "2026-11-12T09:44:21+00:00",
+      "detail": "last success 21.2h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-13T06:58:35+00:00",
       "last_success": "2026-11-12T09:44:21+00:00",
-      "runs_14d": 15,
+      "runs_14d": 16,
       "missed_slots": 0,
       "failures_5": 0,
       "effect": ""
@@ -5184,7 +5430,7 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 87.5h ago",
+      "detail": "last success 91.2h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-09T11:48:56+00:00",
       "last_success": "2026-11-09T11:48:56+00:00",
@@ -5198,9 +5444,9 @@
       "name": "Weekly metrics snapshot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 5.3h ago",
-      "last_conclusion": "success",
-      "last_run": "2026-11-12T21:59:26+00:00",
+      "detail": "last success 9.0h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-13T06:57:38+00:00",
       "last_success": "2026-11-12T21:59:26+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
@@ -5214,7 +5460,7 @@
       "severity": "info",
       "detail": "its red runs are the verdicts below, not failures of it",
       "last_conclusion": "",
-      "last_run": "2026-11-13T03:15:02+00:00",
+      "last_run": "2026-11-13T06:57:38+00:00",
       "last_success": "2026-11-12T15:16:08+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
@@ -5226,10 +5472,10 @@
       "name": "Produce video",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 16.0h ago",
+      "detail": "last success 9.5h ago",
       "last_conclusion": "",
       "last_run": "2026-11-13T00:17:17+00:00",
-      "last_success": "2026-11-12T11:15:15+00:00",
+      "last_success": "2026-11-12T21:28:28+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -5242,8 +5488,8 @@
       "severity": "ok",
       "detail": "last success 0.0h ago",
       "last_conclusion": "success",
-      "last_run": "2026-11-13T03:15:02+00:00",
-      "last_success": "2026-11-13T03:15:02+00:00",
+      "last_run": "2026-11-13T06:57:38+00:00",
+      "last_success": "2026-11-13T06:57:38+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,

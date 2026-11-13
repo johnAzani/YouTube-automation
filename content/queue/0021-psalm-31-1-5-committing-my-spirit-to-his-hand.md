@@ -2,7 +2,7 @@
 id: '0021'
 title: Psalm 31:5 Bedtime Prayer | Into Your Hands I Commit My Spirit
 slug: psalm-31-1-5-committing-my-spirit-to-his-hand
-status: approved
+status: quota_paused
 privacy: public
 format: longform
 niche: faith and prayer
@@ -21,10 +21,12 @@ tags:
 thumb_text: INTO THINE HAND
 description: 'Say this Psalm 31:1, 5 (KJV) prayer before you sleep tonight.
 
-  In thee, O LORD, do I put my trust; let me never be ashamed: deliver me in thy righteousness. Into thine hand I commit my spirit: thou hast redeemed me, O LORD God of truth.
+  In thee, O LORD, do I put my trust; let me never be ashamed: deliver me in thy righteousness.
+  Into thine hand I commit my spirit: thou hast redeemed me, O LORD God of truth.
 
 
-  This is a full devotional prayer and scripture exposition covering Psalm 31:1, 5 (KJV)
+  This is a full devotional prayer and scripture exposition covering Psalm 31:1, 5
+  (KJV)
 
   with peaceful nighttime ambient soundscapes.
 
@@ -50,32 +52,39 @@ asset_queries:
 - peaceful night landscape moon over quiet valley stars
 asset_query_verification:
   verified_on: '2026-10-29'
-  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4, filtered by pipeline/assets.py licence rule
+  method: commons.wikimedia.org/w/api.php generator=search filetype:bitmap top-4,
+    filtered by pipeline/assets.py licence rule
   queries:
   - query: hands praying receiving light silhouette night peace
     verified: true
     usable: 4
-    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
   - query: ancient stone altar candlelight sanctuary evening prayer
     verified: true
     usable: 4
-    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
   - query: divine hand reaching down light heaven protection
     verified: true
     usable: 4
-    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
   - query: person kneeling prayer moonlight bedroom serene night
     verified: true
     usable: 4
-    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
   - query: golden light rays descending clouds divine presence
     verified: true
     usable: 4
-    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
   - query: peaceful night landscape moon over quiet valley stars
     verified: true
     usable: 4
-    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
 originality:
   original_thesis: true
   unique_structure: true
@@ -83,8 +92,11 @@ originality:
   no_ai_persona: true
   source_notes: true
   ai_disclosure: false
-seo_hook: Pray this Psalm 31:1-5 KJV bedtime prayer before you sleep to surrender every burden and commit your spirit into the Father's hands.
+seo_hook: Pray this Psalm 31:1-5 KJV bedtime prayer before you sleep to surrender
+  every burden and commit your spirit into the Father's hands.
 category_id: '22'
+quota_reset_utc: '2026-11-13T08:00:00+00:00'
+pause_reason: gemini_api_daily_quota_exhausted
 ---
 
 ## Scene 1 — In Thee, O LORD, Do I Put My Trust (Verse 1a)

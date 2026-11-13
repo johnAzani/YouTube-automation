@@ -77,13 +77,11 @@ originality:
   no_ai_persona: true
   source_notes: true
 published_on: "2026-11-13"
-published_at: "2026-11-13T00:40:37Z"
+published_at: "2026-11-13T07:27:44Z"
 youtube_video_id: "ZDnZNjXPaQI"
 metadata_revision: "selar-seo-v1"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_retry_after: "2026-11-20T01:58:01Z"
-thumbnail_retry_reason: "permission"
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Rising at the Twelfth Hour for the Watchtower

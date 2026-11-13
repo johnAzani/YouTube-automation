@@ -2,7 +2,7 @@
 id: 0800
 title: Proverbs 3:5-6 Guidance Prayer | The Guided Path
 slug: proverbs-3-5-6-guidance-prayer
-status: approved
+status: published
 channel: prayer10
 privacy: public
 format: longform
@@ -71,6 +71,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-13"
+published_at: "2026-11-13T06:56:33Z"
+youtube_video_id: "XXBBqCi9Uk4"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UC8lPazRi_sj2Q5TQGVQ6bqQ; auth_channel_title=The Guided Path; long_uploads_status=eligible; video_channel_id=UC8lPazRi_sj2Q5TQGVQ6bqQ; video_channel_title=The Guided Path; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_retry_after: "2026-11-20T06:58:13Z"
+thumbnail_retry_reason: "permission"
 ---
 
 ## Scene 1 — Bringing the Decision to the Lord

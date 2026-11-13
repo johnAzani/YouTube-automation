@@ -1,0 +1,358 @@
+{
+  "key": "short-morningpsalm119v105",
+  "channel": "prayer2",
+  "psalm": 119,
+  "title": [
+    "A LIGHT TO YOUR PATH",
+    "MORNING PRAYER"
+  ],
+  "poster": [
+    "WALK IN LIGHT",
+    "PSALM 119:105",
+    "THE MORNING ALTAR",
+    "DAILY SUNRISE PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "calm forest misty sunrise light",
+    "peaceful lake golden morning fog",
+    "glowing sunrise over mountain valley",
+    "soft morning light through pine trees",
+    "sunbeams piercing morning clouds",
+    "quiet dawn trail illuminated by sunlight",
+    "scenic mountain peak warm sunrise glow",
+    "open field morning sun golden light"
+  ],
+  "scenes": [
+    {
+      "a": "Welcome the quiet morning sun as daylight softly breaks across the horizon.",
+      "img": "short-morningpsalm119v105-scene-01.jpg",
+      "kicker": "MORNING SUNRISE",
+      "sub": "DAYLIGHT BREAKS ON HORIZON",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "In this sacred stillness, pause and bring your heart before the Lord.",
+      "img": "short-morningpsalm119v105-scene-02.jpg",
+      "kicker": "SACRED STILLNESS",
+      "sub": "BRING YOUR HEART TO THE LORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Scripture reminds us, your word is a lamp to my feet and a light to my path.",
+      "img": "short-morningpsalm119v105-scene-03.jpg",
+      "kicker": "PSALM 119:105",
+      "sub": "A LAMP UNTO MY FEET",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, clear away the thick shadows of fear and uncertainty that linger from yesterday.",
+      "img": "short-morningpsalm119v105-scene-04.jpg",
+      "kicker": "DISPEL THE SHADOWS",
+      "sub": "RELEASE FEAR AND UNCERTAINTY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Fill our minds with divine peace as we step forward into this brand new morning.",
+      "img": "short-morningpsalm119v105-scene-05.jpg",
+      "kicker": "DIVINE PEACE",
+      "sub": "STEP FORWARD THIS MORNING",
+      "cam": "tilt_up",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Guide our footsteps gently so that every choice reflects your infinite truth and grace.",
+      "img": "short-morningpsalm119v105-scene-06.jpg",
+      "kicker": "GUIDE OUR STEPS",
+      "sub": "WALK IN TRUTH AND GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Protect our spirits and keep our focus anchored on your eternal promise today.",
+      "img": "short-morningpsalm119v105-scene-07.jpg",
+      "kicker": "ANCHORED IN PROMISE",
+      "sub": "PROTECT OUR SPIRIT TODAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Walk beside us always, Amen. Subscribe to The Morning Altar to pray each sunrise.",
+      "img": "short-morningpsalm119v105-scene-08.jpg",
+      "kicker": "WALK BESIDE US",
+      "sub": "BEGIN EVERY SUNRISE IN PRAYER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "Welcome the quiet morning sun as daylight softly breaks across the horizon."
+    ],
+    [
+      6,
+      12,
+      "In this sacred stillness, pause and bring your heart before the Lord."
+    ],
+    [
+      12,
+      18,
+      "Scripture reminds us, your word is a lamp to my feet and a light to my path."
+    ],
+    [
+      18,
+      24,
+      "Lord, clear away the thick shadows of fear and uncertainty that linger from yesterday."
+    ],
+    [
+      24,
+      30,
+      "Fill our minds with divine peace as we step forward into this brand new morning."
+    ],
+    [
+      30,
+      36,
+      "Guide our footsteps gently so that every choice reflects your infinite truth and grace."
+    ],
+    [
+      36,
+      42,
+      "Protect our spirits and keep our focus anchored on your eternal promise today."
+    ],
+    [
+      42,
+      48,
+      "Walk beside us always, Amen. Subscribe to The Morning Altar to pray each sunrise."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "WELCOME THE QUIET MORNING SUN",
+        "AS DAYLIGHT SOFTLY BREAKS",
+        "ACROSS THE HORIZON"
+      ],
+      [
+        "DAYLIGHT",
+        "BREAKS"
+      ],
+      "PSALM 119:105"
+    ],
+    [
+      6,
+      12,
+      [
+        "IN THIS SACRED STILLNESS PAUSE",
+        "AND BRING YOUR HEART",
+        "BEFORE THE LORD"
+      ],
+      [
+        "SACRED",
+        "STILLNESS"
+      ],
+      "PSALM 119:105"
+    ],
+    [
+      12,
+      18,
+      [
+        "YOUR WORD IS A LAMP",
+        "TO MY FEET AND A LIGHT",
+        "TO MY PATH"
+      ],
+      [
+        "LAMP",
+        "LIGHT"
+      ],
+      "PSALM 119:105"
+    ],
+    [
+      18,
+      24,
+      [
+        "LORD CLEAR AWAY THE SHADOWS",
+        "OF FEAR AND UNCERTAINTY",
+        "THAT LINGER FROM YESTERDAY"
+      ],
+      [
+        "CLEAR",
+        "SHADOWS"
+      ],
+      "PSALM 119:105"
+    ],
+    [
+      24,
+      30,
+      [
+        "FILL OUR MINDS WITH PEACE",
+        "AS WE STEP FORWARD INTO",
+        "THIS BRAND NEW MORNING"
+      ],
+      [
+        "DIVINE",
+        "PEACE"
+      ],
+      "PSALM 119:105"
+    ],
+    [
+      30,
+      36,
+      [
+        "GUIDE OUR FOOTSTEPS GENTLY",
+        "SO EVERY CHOICE REFLECTS",
+        "YOUR TRUTH AND GRACE"
+      ],
+      [
+        "TRUTH",
+        "GRACE"
+      ],
+      "PSALM 119:105"
+    ],
+    [
+      36,
+      42,
+      [
+        "PROTECT OUR SPIRITS AND KEEP",
+        "OUR FOCUS ANCHORED ON",
+        "YOUR ETERNAL PROMISE TODAY"
+      ],
+      [
+        "ANCHORED",
+        "PROMISE"
+      ],
+      "PSALM 119:105"
+    ],
+    [
+      42,
+      48,
+      [
+        "WALK BESIDE US ALWAYS AMEN",
+        "SUBSCRIBE TO THE MORNING ALTAR",
+        "TO PRAY EACH SUNRISE"
+      ],
+      [
+        "SUBSCRIBE",
+        "SUNRISE"
+      ],
+      "PSALM 119:105"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Welcome the quiet morning sun as daylight softly breaks across the horizon.",
+      "kind": "phrase",
+      "words": [
+        "DAYLIGHT",
+        "BREAKS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In this sacred stillness, pause and bring your heart before the Lord.",
+      "kind": "phrase",
+      "words": [
+        "SACRED",
+        "STILLNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Scripture reminds us, your word is a lamp to my feet and a light to my path.",
+      "kind": "phrase",
+      "words": [
+        "LAMP",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, clear away the thick shadows of fear and uncertainty that linger from yesterday.",
+      "kind": "phrase",
+      "words": [
+        "CLEAR",
+        "SHADOWS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Fill our minds with divine peace as we step forward into this brand new morning.",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guide our footsteps gently so that every choice reflects your infinite truth and grace.",
+      "kind": "phrase",
+      "words": [
+        "TRUTH",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Protect our spirits and keep our focus anchored on your eternal promise today.",
+      "kind": "phrase",
+      "words": [
+        "ANCHORED",
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Walk beside us always, Amen. Subscribe to The Morning Altar to pray each sunrise.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "SUNRISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 119:105"
+}

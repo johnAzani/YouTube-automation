@@ -2,11 +2,18 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
-      "late_minutes": 1793,
+      "late_minutes": 2653,
       "name": "Weekly metrics snapshot",
-      "ran_at": "2026-11-08T00:34:40+00:00",
+      "ran_at": "2026-11-08T14:54:40+00:00",
       "slot": "2026-11-06T18:41:00+00:00",
       "workflow": "metrics.yml"
+    },
+    {
+      "late_minutes": 284,
+      "name": "Growth autopilot",
+      "ran_at": "2026-11-13T06:58:35+00:00",
+      "slot": "2026-11-13T02:14:00+00:00",
+      "workflow": "growth-autopilot.yml"
     },
     {
       "late_minutes": 228,
@@ -14,6 +21,13 @@
       "ran_at": "2026-11-09T07:11:37+00:00",
       "slot": "2026-11-09T03:23:00+00:00",
       "workflow": "keepalive.yml"
+    },
+    {
+      "late_minutes": 224,
+      "name": "Gemini Brain Autonomous Queue Replenishment",
+      "ran_at": "2026-11-13T06:58:36+00:00",
+      "slot": "2026-11-13T03:14:00+00:00",
+      "workflow": "gemini_brain.yml"
     },
     {
       "late_minutes": 173,
@@ -28,17 +42,10 @@
       "ran_at": "2026-11-12T09:52:56+00:00",
       "slot": "2026-11-12T07:14:00+00:00",
       "workflow": "comments.yml"
-    },
-    {
-      "late_minutes": 128,
-      "name": "Produce video",
-      "ran_at": "2026-11-12T08:22:39+00:00",
-      "slot": "2026-11-12T06:14:00+00:00",
-      "workflow": "produce.yml"
     }
   ],
-  "generated_at": "2026-11-13T03:15:48.981157+00:00",
-  "last_run_at": "2026-11-13T03:15:02+00:00",
+  "generated_at": "2026-11-13T07:00:40.758689+00:00",
+  "last_run_at": "2026-11-13T06:59:53+00:00",
   "on_time": [
     {
       "late_minutes": 105,
@@ -48,17 +55,17 @@
       "workflow": "automation-health.yml"
     },
     {
-      "late_minutes": 94,
+      "late_minutes": 34,
       "name": "Automation monitor",
-      "ran_at": "2026-11-13T01:57:04+00:00",
-      "slot": "2026-11-13T00:23:00+00:00",
+      "ran_at": "2026-11-13T06:57:38+00:00",
+      "slot": "2026-11-13T06:23:00+00:00",
       "workflow": "monitor.yml"
     },
     {
-      "late_minutes": 72,
+      "late_minutes": 10,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-13T01:59:38+00:00",
-      "slot": "2026-11-13T00:47:00+00:00",
+      "ran_at": "2026-11-13T06:57:38+00:00",
+      "slot": "2026-11-13T06:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],

@@ -2,7 +2,7 @@
 id: '0064'
 title: Zephaniah 3:5 Morning Prayer | The Morning Altar
 slug: zephaniah-3-5-morning-prayer
-status: approved
+status: quota_paused
 channel: prayer2
 privacy: public
 format: longform
@@ -45,33 +45,39 @@ asset_query_verification:
   - query: golden dawn light over misty landscape morning
     verified: true
     usable: 4
-    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
   - query: sunrise dawn light over quiet valley morning serene
     verified: true
     usable: 4
-    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
   - query: sunlight breaking through clouds mountain pass
     verified: true
     usable: 3
-    evidence: 3x Public domain — USFS Rocky Mountain National Forest crepuscular ray
-      scans
+    evidence: "3x Public domain \u2014 USFS Rocky Mountain National Forest crepuscular\
+      \ ray scans"
   - query: golden light rays over calm landscape morning dawn
     verified: true
     usable: 4
-    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
   - query: peaceful sunrise over misty countryside morning
     verified: true
     usable: 4
-    evidence: 4x Public domain — verified Wikimedia Commons / USGS / NPS / NASA imagery
+    evidence: "4x Public domain \u2014 verified Wikimedia Commons / USGS / NPS / NASA\
+      \ imagery"
   - query: peaceful sunrise over misty alpine valley
     verified: true
     usable: 4
-    evidence: 4x Public domain — USGS alpine valley dawn mist photography
+    evidence: "4x Public domain \u2014 USGS alpine valley dawn mist photography"
 originality:
   original_thesis: true
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+quota_reset_utc: '2026-11-13T08:00:00+00:00'
+pause_reason: gemini_api_daily_quota_exhausted
 ---
 
 ## Scene 1 — The Sunrise Hook & Directing the Prayer

@@ -1,18 +1,26 @@
 {
-  "generated_at": "2026-11-12T09:48:34.117933+00:00",
-  "as_of": "2026-11-12",
+  "generated_at": "2026-11-13T07:02:58.704701+00:00",
+  "as_of": "2026-11-13",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 3,
+  "total_longform_videos": 5,
   "ranked_themes": [],
   "themes": [
     {
       "theme": "general_prayer",
-      "videos": 3,
+      "videos": 4,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
-      "top_scripture": "Psalm 127"
+      "top_scripture": "Isaiah 54"
+    },
+    {
+      "theme": "midday_strength_endurance",
+      "videos": 1,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": "Isaiah 32"
     }
   ],
   "guidance": [
