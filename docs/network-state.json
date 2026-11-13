@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T07:07:19Z",
+  "generated_at": "2026-11-13T07:21:55Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,11 +7,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 157,
+    "published_total": 158,
     "published_longform": 71,
-    "published_shorts": 86,
-    "public_total": 155,
-    "queued_longform": 50,
+    "published_shorts": 87,
+    "public_total": 156,
+    "queued_longform": 51,
     "queued_shorts": 35,
     "automations_ok": 9,
     "automations_total": 10,
@@ -99,32 +99,32 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 43,
+        "published_total": 44,
         "published_longform": 20,
-        "published_shorts": 23,
-        "public_total": 42,
-        "queued_longform": 5,
+        "published_shorts": 24,
+        "public_total": 43,
+        "queued_longform": 6,
         "queued_other": 0,
         "queued_shorts": 2
       },
       "latest_video": {
-        "id": "0063",
-        "title": "Hosea 6:3 His Going Forth Is Prepared as the Morning",
-        "format": "longform",
-        "youtube_video_id": "Cm8RyYGgkgE",
-        "watch_url": "https://youtu.be/Cm8RyYGgkgE",
-        "published_on": "2026-11-12",
-        "published_at": "2026-11-12T23:41:37Z"
+        "id": "SHORT-MORNINGPSALM25V4",
+        "title": "Say This Psalm 25:4-5 Prayer at Sunrise | The Morning Altar #Shorts",
+        "format": "short",
+        "youtube_video_id": "_RTCwdT7SVM",
+        "watch_url": "https://www.youtube.com/shorts/_RTCwdT7SVM",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T07:20:12Z"
       },
       "next_queued_longform": {
         "id": "0064",
         "title": "Zephaniah 3:5 Morning Prayer | The Morning Altar",
         "words": 1429,
-        "status": "approved"
+        "status": "quota_paused"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm25v4",
-        "scripture": "Psalm 25:4-5",
+        "short": "short-morningpsalm37v23",
+        "scripture": "Psalm 37:23-24",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -640,13 +640,44 @@
         "status": "approved"
       },
       "feedback": {
-        "available": false,
+        "available": true,
+        "as_of": "2026-11-13",
         "measured_longform_videos": 0,
-        "top_themes": []
+        "total_longform_videos": 1,
+        "top_themes": [
+          {
+            "theme": "anxiety_peace",
+            "videos": 1,
+            "top_scripture": "Proverbs 3"
+          }
+        ]
       }
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM25V4",
+      "slug": "short-morningpsalm25v4-sunrise-prayer",
+      "file": "short-morningpsalm25v4-sunrise-prayer.md",
+      "title": "Say This Psalm 25:4-5 Prayer at Sunrise | The Morning Altar #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T07:20:12Z",
+      "youtube_video_id": "_RTCwdT7SVM",
+      "watch_url": "https://www.youtube.com/shorts/_RTCwdT7SVM",
+      "youtu_be_url": "https://youtu.be/_RTCwdT7SVM",
+      "shorts_url": "https://www.youtube.com/shorts/_RTCwdT7SVM",
+      "studio_url": "https://studio.youtube.com/video/_RTCwdT7SVM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/_RTCwdT7SVM/hqdefault.jpg",
+      "thumb_text": "PSALM 25:4-5 \u00b7 TEACH ME YOUR PATHS",
+      "duration_label": "55s",
+      "words": 632
+    },
     {
       "id": "SHORT-1PETER5V7",
       "slug": "short-1peter5v7-pre-sleep-prayer",
@@ -4463,7 +4494,7 @@
         "title": "Zephaniah 3:5 Morning Prayer | The Morning Altar",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
-        "status": "approved",
+        "status": "quota_paused",
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,
@@ -4520,6 +4551,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1774
+      },
+      {
+        "id": "0069",
+        "slug": "psalm-119-105-morning-prayer",
+        "file": "0069-psalm-119-105-morning-prayer.md",
+        "title": "Psalm 119:105 Morning Prayer | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1759
       },
       {
         "id": "0087",
@@ -4947,10 +4991,10 @@
         "target_window_utc": "14:14"
       },
       {
-        "short": "short-morningpsalm25v4",
-        "file": "0067-short-morningpsalm25v4.yml",
-        "companion_longform_id": "0067",
-        "scripture": "Psalm 25:4-5",
+        "short": "short-morningpsalm37v23",
+        "file": "0068-short-morningpsalm37v23.yml",
+        "companion_longform_id": "0068",
+        "scripture": "Psalm 37:23-24",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",
@@ -4958,10 +5002,10 @@
         "target_window_utc": "06:14"
       },
       {
-        "short": "short-morningpsalm37v23",
-        "file": "0068-short-morningpsalm37v23.yml",
-        "companion_longform_id": "0068",
-        "scripture": "Psalm 37:23-24",
+        "short": "short-morningpsalm119v105",
+        "file": "0069-short-morningpsalm119v105.yml",
+        "companion_longform_id": "0069",
+        "scripture": "Psalm 119:105",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",
