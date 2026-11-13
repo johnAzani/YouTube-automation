@@ -147,29 +147,64 @@ _THUMB_LONG_WORD_SWAPS: dict[str, str] = {
 }
 
 
+#: Words a thumbnail line must not end on. "WORK UNTO THE" is what a three-word
+#: cut of "WORK UNTO THE LORD" leaves behind.
+_THUMB_DANGLERS = frozenset({
+    "THE", "A", "AN", "OF", "TO", "AND", "IN", "FOR", "UNTO", "WITH", "BY", "AT",
+    "ON", "FROM", "IS", "OR", "BUT", "MY", "OUR", "YOUR", "HIS", "THY", "THEIR",
+})
+
+
+def _thumb_candidates(words: list[str]) -> list[str]:
+    """Shorter and shorter cuts of the model's own words, best first.
+
+    Only contiguous cuts: skipping over a long word to keep the short ones turns
+    "HEDGE OF PROTECTION AROUND" into "HEDGE OF AROUND".
+    """
+    def tidy(chunk: list[str]) -> str:
+        chunk = list(chunk)
+        while chunk and chunk[-1].strip(".,;:!?") in _THUMB_DANGLERS:
+            chunk.pop()
+        return " ".join(chunk).strip()
+
+    options = [tidy(words[:4]), tidy(words[:3]), tidy(words[:2])]
+    options += [tidy(words[i:i + 2]) for i in range(1, max(1, len(words) - 1))]
+    options = [o for o in options if len(o.split()) >= 2]
+    # Last resort before the fixed fallback: one strong word of the model's own.
+    options += [w for w in words if len(w.strip(".,;:!?")) >= 5
+                and w.strip(".,;:!?") not in _THUMB_DANGLERS][:1]
+    seen: list[str] = []
+    for option in options:
+        if option and option not in seen:
+            seen.append(option)
+    return seen
+
+
 def _clamp_thumb_text_for_ctr(raw_thumb: str, daypart: str = "night") -> str:
-    """Guarantee `thumb_text` fits the 660px CTR hero box at >= 105px."""
+    """Guarantee `thumb_text` fits the 660px CTR hero box at >= 105px.
+
+    The line stays the model's own words wherever any cut of them fits. The
+    fixed fallback at the bottom used to be reached as soon as the first three
+    words were too wide: on 13 November two Family Altar jobs authored in one
+    pass (Job 1:10 and Proverbs 3:33) both came out as "PERFECT PEACE", a line
+    about neither passage and identical on two thumbnails.
+    """
     words = [w for w in str(raw_thumb or "").strip().upper().split() if w]
     words = [_THUMB_LONG_WORD_SWAPS.get(w.strip(".,;:!?"), w) for w in words]
-    candidate = " ".join(words[:3]).strip()
+    candidates = _thumb_candidates(words)
     try:
         from PIL import Image, ImageDraw
         from . import thumbnail_ctr as ctr
 
         draw = ImageDraw.Draw(Image.new("RGB", (1280, 720)))
-        if candidate:
-            _f, _l, _t, _ld, px = ctr._layout(draw, candidate, (86, 76, 746, 568))
+        for option in candidates:
+            _f, _l, _t, _ld, px = ctr._layout(draw, option, (86, 76, 746, 568))
             if px >= 105:
-                return candidate
-        short_words = [w for w in words if len(w) <= 10][:3]
-        if len(short_words) >= 2:
-            alt = " ".join(short_words)
-            _f, _l, _t, _ld, px = ctr._layout(draw, alt, (86, 76, 746, 568))
-            if px >= 105:
-                return alt
+                return option
     except Exception:  # noqa: BLE001
-        if candidate and all(len(w) <= 10 for w in candidate.split()):
-            return candidate
+        for option in candidates:
+            if all(len(w) <= 10 for w in option.split()):
+                return option
     defaults = {
         "morning": "MORNING MERCY",
         "midday": "MIDDAY PEACE",
@@ -231,6 +266,59 @@ _NARRATION_INLINE_RE = re.compile(
     r"^\s*(?:[-*]\s+)?(?:\*\*Narration:\*\*|Narration\s*:)\s+(.+)$",
     re.I,
 )
+
+
+#: A scene-one opening that greets the audience or announces the channel instead
+#: of speaking to the listener. On 13 November 2026 ten of the twelve most recent
+#: long-forms opened "Grace and peace to you, and welcome to <channel>." although
+#: every system instruction says "no channel intros". Nobody asked the model for
+#: it; it copies itself. The first five seconds decide whether a stranger stays,
+#: and an identical greeting on every upload is also the "templated" pattern the
+#: inauthentic-content policy describes.
+_GREETING_OPENERS = (
+    r"grace\b", r"beloved\b", r"welcome\b", r"hello\b", r"greetings\b",
+    r"peace be\b", r"dear (?:friend|friends|beloved|brothers|sisters)\b",
+    r"good (?:morning|afternoon|evening|night)\b",
+)
+
+
+def strip_channel_greeting(body: str, display_name: str, *, min_words: int = 0) -> str:
+    """Drop a first sentence that only greets and names the channel.
+
+    Deliberately narrow. The sentence goes only if it is the very first one under
+    Scene 1, starts like a greeting, contains "welcome to <this channel>", and is
+    short (25 words or fewer), so a greeting that already carries the listener's
+    situation is left alone. Nothing is rewritten, the next sentence simply
+    becomes the opening, and the cut is skipped when it would take the script
+    under `min_words` (the production gate must never be failed by a tidy-up).
+    """
+    name = (display_name or "").strip()
+    if not name or not body:
+        return body
+    scene = re.search(r"^## Scene 1\b[^\n]*\n+", body, flags=re.M)
+    if not scene:
+        return body
+    start = scene.end()
+    paragraph_end = body.find("\n\n", start)
+    paragraph = body[start:] if paragraph_end < 0 else body[start:paragraph_end]
+    first = re.match(r"\s*([^.!?\n]{1,260}[.!?])[\"'”’)]*\s+(?=\S)", paragraph)
+    if not first:
+        return body
+    sentence = first.group(1).strip()
+    lowered = sentence.lower()
+    if not any(re.match(opener, lowered) for opener in _GREETING_OPENERS):
+        return body
+    if f"welcome to {name.lower()}" not in lowered or len(sentence.split()) > 25:
+        return body
+    rest = paragraph[first.end():]
+    if len(rest.split()) < 8:
+        return body
+    remaining = body[:start] + rest + (body[paragraph_end:] if paragraph_end >= 0 else "")
+    if min_words:
+        spoken = re.sub(r"^## Scene[^\n]*$", " ", remaining, flags=re.M)
+        if len(spoken.split()) < min_words:
+            return body
+    return remaining
 
 
 def normalize_authored_script_markdown(
@@ -485,6 +573,10 @@ def normalize_authored_script_markdown(
     for k, v in merged_meta.items():
         if k not in final_meta and v not in (None, ""):
             final_meta[k] = v
+
+    if str(final_meta.get("format") or "longform").lower() != "short":
+        clean_body = strip_channel_greeting(clean_body, brand.display_name,
+                                            min_words=MIN_LONGFORM_WORDS)
 
     header_yaml = yaml.safe_dump(final_meta, sort_keys=False, allow_unicode=True).strip()
     return f"---\n{header_yaml}\n---\n\n{clean_body}"

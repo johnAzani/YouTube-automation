@@ -39,6 +39,15 @@ def get_docoga_reels_rules() -> str:
     return load_equipment_text("docoga_reels_rules.md")
 
 
+def get_viewer_first_standard() -> str:
+    """Titles, openings and retention rules shared by every channel.
+
+    One file for all ten channels on purpose: packaging is not a matter of
+    daypart, and a rule that lived in ten system instructions would drift.
+    """
+    return load_equipment_text("viewer_first_standard.md")
+
+
 def front_matter_skeleton(channel_id: str | None = None) -> str:
     """The literal front-matter block every authored script must open with.
 
@@ -69,7 +78,7 @@ fill in the values; do not rename, reorder or omit a key.
 
 ---
 id: '<the 4-digit id you were assigned>'
-title: "<scripture reference> <Morning/Midday/Night> Prayer | <this channel's display name> (35-70 chars)"
+title: "<the listener's need or the promise, in plain words>: <scripture reference> | <this channel's display name> (35-70 chars; see VIEWER-FIRST STANDARD)"
 slug: <kebab-case-slug-of-the-title>
 status: approved
 channel: {channel}
@@ -79,8 +88,8 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-thumb_text: "<2 TO 4 UPPERCASE HOOK WORDS>"
-seo_hook: "<one compelling 75-140 char opening sentence naming the KJV scripture and prayer promise>"
+thumb_text: "<2 TO 4 UPPERCASE WORDS THAT COMPLETE THE TITLE, NOT REPEAT IT>"
+seo_hook: "<one 75-140 char sentence: who this prayer is for, what it asks God for, and the KJV reference>"
 description: |
   <2-3 sentence devotional summary quoting the KJV passage>
 
@@ -122,6 +131,11 @@ def compile_full_brain_prompt(channel_id: str | None = None) -> str:
         "---",
         "## DOCOGA REELS v2 KINETIC TYPOGRAPHY & VISUAL ASSET STANDARDS",
         get_docoga_reels_rules(),
+        "---",
+        # Last on purpose: where an older line about titles or openings
+        # disagrees, the most recent instruction is the one the model follows.
+        "## VIEWER-FIRST STANDARD: TITLE, OPENING AND RETENTION (ALL CHANNELS)",
+        get_viewer_first_standard(),
     ]
     return "\n\n".join(filter(None, parts))
 

@@ -5,6 +5,15 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-13 — louder, clearer voice on every video; titles and openings written for the viewer
+
+- New `pipeline/voice_master.py`. Finished videos measured about -19 LUFS against YouTube's -14 reference (YouTube never turns a quiet video up) with the music only 10 LU under the voice. The final encode of long-form (`pipeline/prayer_visuals.py`) and Shorts (`tools/shorts.py`) now measures the narration, shapes tone, compresses gently, applies one fixed gain to -15 LUFS / -1.5 dBTP, ducks the music about 2.5 dB under speech and limits the mix at -1 dBFS. Measured before/after on the committed Psalm 91 narration: -19.1 → -14.9 LUFS, same duration. The narration file, its cache and word timings are untouched; no speech is re-synthesised. A failed measurement falls back to the previous mix.
+- New `pipeline/brain_equipment/viewer_first_standard.md`, appended to every channel's authoring prompt. Titles lead with the listener's need, then the scripture (still 35-70 characters, still ending with the channel name); no greeting or channel name in the first three sentences; scripture within 45 seconds; no promised outcomes. The front-matter skeleton no longer shows `<reference> <daypart> Prayer`.
+- `strip_channel_greeting` (`pipeline/gemini_brain.py`) removes a first sentence that only says "…welcome to <channel>." at authoring time; ten of the twelve most recent scripts opened that way. Skipped when it would take a script under the 850-word floor.
+- Thumbnail line: `_clamp_thumb_text_for_ctr` replaced any line whose first three words were too wide with the fixed phrase `PERFECT PEACE`; two Family Altar jobs authored in one pass (`0309`, `0310`) got the same unrelated line and `tests/test_supply_never_stalls.py` was failing on `main`. The line is now kept whole when it fits (up to four words) or cut to a contiguous part of its own words. The two jobs read `A HEDGE AROUND US` and `A BLESSED HOME`; worksheets rebuilt.
+- Applies to newly authored scripts and newly rendered videos. Other queued jobs and published videos are unchanged.
+- Notes, measurements and limits: `docs/VOICE_AND_VIEWER_FIRST_2026-11-13.md`.
+
 ## 2026-11-13 — scheduled publishing: four faults found before the first live upload, and the trial
 
 - `scripts/sync_published_thumbnails.py` made any private, processed, full-length long-form public when its receipt wanted public. A scheduled upload is private on purpose, so the monitor would have published it early whenever its thumbnail was still pending (32 of 76 long-form receipts on 13 November). It now skips a video with a `publishAt` on YouTube or `scheduled_publish: true` on its receipt.
