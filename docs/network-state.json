@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T17:57:36Z",
+  "generated_at": "2026-11-13T18:14:38Z",
   "monitor_generated_at": "2026-11-13T17:56:17.908857+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 175,
-    "published_longform": 86,
-    "published_shorts": 89,
-    "public_total": 172,
-    "queued_longform": 51,
-    "queued_shorts": 49,
+    "published_total": 177,
+    "published_longform": 87,
+    "published_shorts": 90,
+    "public_total": 174,
+    "queued_longform": 50,
+    "queued_shorts": 48,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -431,33 +431,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 10,
-        "published_longform": 6,
-        "published_shorts": 4,
-        "thumbnail_pending": 7,
-        "public_total": 10,
-        "queued_longform": 5,
+        "published_total": 12,
+        "published_longform": 7,
+        "published_shorts": 5,
+        "thumbnail_pending": 9,
+        "public_total": 12,
+        "queued_longform": 4,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0505",
-        "title": "Proverbs 3:5-6 Morning Prayer | The Provision Table",
-        "format": "longform",
-        "youtube_video_id": "Db_E-IXTydA",
-        "watch_url": "https://youtu.be/Db_E-IXTydA",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T12:07:14Z"
-      },
-      "next_queued_longform": {
         "id": "0506",
         "title": "James 1:5 Morning Prayer for Wisdom | The Provision Table",
-        "words": 1954,
+        "format": "longform",
+        "youtube_video_id": "7RvLGE8mBUY",
+        "watch_url": "https://youtu.be/7RvLGE8mBUY",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T18:13:45Z"
+      },
+      "next_queued_longform": {
+        "id": "0507",
+        "title": "Proverbs 16:3 Morning Prayer | The Provision Table",
+        "words": 1979,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionpsalm90v17",
-        "scripture": "Psalm 90:17",
+        "short": "short-provisionproverbs3v5",
+        "scripture": "Proverbs 3:5-6",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
       "words": 1225
     },
     {
+      "id": "0506",
+      "slug": "james-1-5-morning-prayer-for-wisdom",
+      "file": "0506-james-1-5-morning-prayer-for-wisdom.md",
+      "title": "James 1:5 Morning Prayer for Wisdom | The Provision Table",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T18:13:45Z",
+      "youtube_video_id": "7RvLGE8mBUY",
+      "watch_url": "https://youtu.be/7RvLGE8mBUY",
+      "youtu_be_url": "https://youtu.be/7RvLGE8mBUY",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/7RvLGE8mBUY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/7RvLGE8mBUY/hqdefault.jpg",
+      "thumb_text": "GIVE ME WISDOM",
+      "thumbnail_pending": true,
+      "duration_label": "~13 min",
+      "words": 1954
+    },
+    {
       "id": "0603",
       "slug": "ephesians-6-16-shield-of-faith-prayer",
       "file": "0603-ephesians-6-16-shield-of-faith-prayer.md",
@@ -785,6 +809,30 @@
       "thumbnail_pending": false,
       "duration_label": "~10 min",
       "words": 1429
+    },
+    {
+      "id": "SHORT-PROVISIONPSALM90V17",
+      "slug": "short-provisionpsalm90v17-stewardship-prayer",
+      "file": "short-provisionpsalm90v17-stewardship-prayer.md",
+      "title": "Pray This Psalm 90:17 Prayer for Open Doors & Provision | God'S Provision #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T16:58:45Z",
+      "youtube_video_id": "Wpbfi6jOHMA",
+      "watch_url": "https://www.youtube.com/shorts/Wpbfi6jOHMA",
+      "youtu_be_url": "https://youtu.be/Wpbfi6jOHMA",
+      "shorts_url": "https://www.youtube.com/shorts/Wpbfi6jOHMA",
+      "studio_url": "https://studio.youtube.com/video/Wpbfi6jOHMA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Wpbfi6jOHMA/hqdefault.jpg",
+      "thumb_text": "THE PROVISION TABLE \u00b7 DAILY WISDOM PRAYER",
+      "thumbnail_pending": true,
+      "duration_label": "61s",
+      "words": 519
     },
     {
       "id": "0087",
@@ -5364,19 +5412,6 @@
         "words": 1283
       },
       {
-        "id": "0506",
-        "slug": "james-1-5-morning-prayer-for-wisdom",
-        "file": "0506-james-1-5-morning-prayer-for-wisdom.md",
-        "title": "James 1:5 Morning Prayer for Wisdom | The Provision Table",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1954
-      },
-      {
         "id": "0507",
         "slug": "proverbs-16-3-morning-prayer",
         "file": "0507-proverbs-16-3-morning-prayer.md",
@@ -5852,17 +5887,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-provisionpsalm90v17",
-        "file": "0504-short-provisionpsalm90v17.yml",
-        "companion_longform_id": "0504",
-        "scripture": "Psalm 90:17",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionproverbs3v5",
