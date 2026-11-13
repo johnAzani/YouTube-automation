@@ -15,6 +15,5 @@ jobs:
         with:
           ref: ${{ github.ref }}
       - run: |
-          echo "created_at_sha=${GITHUB_SHA}"
-          echo "checked_out_sha=$(git rev-parse HEAD)"
-          # probe 2
+          echo "::notice title=probe::created=${GITHUB_SHA} checked_out=$(git rev-parse HEAD)"
+          # probe 3
