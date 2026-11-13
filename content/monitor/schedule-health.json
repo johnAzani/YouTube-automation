@@ -2,13 +2,6 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
-      "late_minutes": 3213,
-      "name": "Weekly metrics snapshot",
-      "ran_at": "2026-11-09T00:14:40+00:00",
-      "slot": "2026-11-06T18:41:00+00:00",
-      "workflow": "metrics.yml"
-    },
-    {
       "late_minutes": 284,
       "name": "Growth autopilot",
       "ran_at": "2026-11-13T06:58:35+00:00",
@@ -37,8 +30,8 @@
       "workflow": "community.yml"
     }
   ],
-  "generated_at": "2026-11-13T17:16:38.846101+00:00",
-  "last_run_at": "2026-11-13T17:15:19+00:00",
+  "generated_at": "2026-11-13T19:57:49.417335+00:00",
+  "last_run_at": "2026-11-13T19:57:06+00:00",
   "on_time": [
     {
       "late_minutes": 105,
@@ -48,34 +41,20 @@
       "workflow": "automation-health.yml"
     },
     {
-      "late_minutes": 5,
-      "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-13T15:19:00+00:00",
-      "slot": "2026-11-13T15:14:00+00:00",
-      "workflow": "comments.yml"
-    },
-    {
-      "late_minutes": 112,
+      "late_minutes": 90,
       "name": "Automation monitor",
-      "ran_at": "2026-11-13T17:15:19+00:00",
-      "slot": "2026-11-13T15:23:00+00:00",
+      "ran_at": "2026-11-13T19:53:09+00:00",
+      "slot": "2026-11-13T18:23:00+00:00",
       "workflow": "monitor.yml"
     },
     {
-      "late_minutes": 20,
-      "name": "Produce video",
-      "ran_at": "2026-11-13T14:34:34+00:00",
-      "slot": "2026-11-13T14:14:00+00:00",
-      "workflow": "produce.yml"
-    },
-    {
-      "late_minutes": 3,
+      "late_minutes": 70,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-13T15:50:38+00:00",
-      "slot": "2026-11-13T15:47:00+00:00",
+      "ran_at": "2026-11-13T19:57:06+00:00",
+      "slot": "2026-11-13T18:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 1,
+  "silence_minutes": 0,
   "warn_minutes": 120
 }
