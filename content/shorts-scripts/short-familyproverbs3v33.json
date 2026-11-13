@@ -1,0 +1,273 @@
+{
+  "key": "short-familyproverbs3v33",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "A BLESSING",
+    "FOR YOUR HOME"
+  ],
+  "poster": [
+    "THE FAMILY ALTAR",
+    "PROVERBS 3:33",
+    "A PRAYER FOR",
+    "YOUR HOUSEHOLD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit wooden table with open bible and olive branches",
+    "peaceful countryside home exterior at sunset golden hour",
+    "cozy living room with soft glowing fireplace at night",
+    "empty dining room table with morning light streaming through window",
+    "close up of rustic wooden table with bible and vintage oil lamp",
+    "scenic peaceful valley with small home in distance at dawn"
+  ],
+  "scenes": [
+    {
+      "a": "Gather your home",
+      "img": "short-familyproverbs3v33-scene-01.jpg",
+      "kicker": "PROVERBS 3:33",
+      "sub": "A PRAYER FOR YOUR DWELLING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The Lord's curse",
+      "img": "short-familyproverbs3v33-scene-02.jpg",
+      "kicker": "PROVERBS 3:33",
+      "sub": "FINDING STRENGTH IN TRUTH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "But he blesses",
+      "img": "short-familyproverbs3v33-scene-03.jpg",
+      "kicker": "PROVERBS 3:33",
+      "sub": "THE HOME OF THE RIGHTEOUS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father",
+      "img": "short-familyproverbs3v33-scene-04.jpg",
+      "kicker": "PROVERBS 3:33",
+      "sub": "A QUIET MOMENT OF PRAYER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May our rooms",
+      "img": "short-familyproverbs3v33-scene-05.jpg",
+      "kicker": "PROVERBS 3:33",
+      "sub": "GRACE WITHIN THESE WALLS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant us peace",
+      "img": "short-familyproverbs3v33-scene-06.jpg",
+      "kicker": "PROVERBS 3:33",
+      "sub": "RESTING IN HIS PROMISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "Gather your home and loved ones in faith as we center our hearts on the wisdom of Proverbs 3:33."
+    ],
+    [
+      16,
+      35,
+      "The Lord's curse is on the house of the wicked, but he blesses the home of the righteous."
+    ],
+    [
+      36,
+      55,
+      "Heavenly Father, we bring our dwelling before You, asking that Your favor rests upon every room and threshold."
+    ],
+    [
+      56,
+      75,
+      "May our rooms be filled with the kindness of Your Spirit, turning every struggle into a quiet lesson of trust."
+    ],
+    [
+      76,
+      95,
+      "Grant us peace within these walls, that our family may be a light of truth and goodness in this world."
+    ],
+    [
+      96,
+      120,
+      "Let your grace sustain us, and subscribe to keep this rhythm of daily prayer alive in your own heart."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "GATHER YOUR HOME",
+        "AND LOVED ONES",
+        "IN FAITH TODAY"
+      ],
+      [
+        "FAITH"
+      ],
+      "PROVERBS 3:33"
+    ],
+    [
+      16,
+      35,
+      [
+        "BUT HE BLESSES",
+        "THE HOME OF",
+        "THE RIGHTEOUS NOW"
+      ],
+      [
+        "BLESSES"
+      ],
+      "PROVERBS 3:33"
+    ],
+    [
+      36,
+      55,
+      [
+        "HEAVENLY FATHER",
+        "WE BRING OUR",
+        "DWELLING BEFORE YOU"
+      ],
+      [
+        "HEAVENLY"
+      ],
+      "PROVERBS 3:33"
+    ],
+    [
+      56,
+      75,
+      [
+        "MAY OUR ROOMS",
+        "BE FILLED WITH",
+        "YOUR HOLY SPIRIT"
+      ],
+      [
+        "FILLED"
+      ],
+      "PROVERBS 3:33"
+    ],
+    [
+      76,
+      95,
+      [
+        "GRANT US PEACE",
+        "WITHIN THESE WALLS",
+        "BY YOUR GRACE"
+      ],
+      [
+        "PEACE"
+      ],
+      "PROVERBS 3:33"
+    ],
+    [
+      96,
+      120,
+      [
+        "LET YOUR GRACE",
+        "SUSTAIN US DAILY",
+        "SUBSCRIBE TO JOIN"
+      ],
+      [
+        "SUSTAIN"
+      ],
+      "PROVERBS 3:33"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Gather your home",
+      "kind": "phrase",
+      "words": [
+        "GATHER",
+        "YOUR",
+        "HOME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord's curse",
+      "kind": "phrase",
+      "words": [
+        "LORD'S",
+        "CURSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "But he blesses",
+      "kind": "phrase",
+      "words": [
+        "HE",
+        "BLESSES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father",
+      "kind": "phrase",
+      "words": [
+        "HEAVENLY",
+        "FATHER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May our rooms",
+      "kind": "phrase",
+      "words": [
+        "MAY",
+        "OUR",
+        "ROOMS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us peace",
+      "kind": "phrase",
+      "words": [
+        "GRANT",
+        "US",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 3:33"
+}
