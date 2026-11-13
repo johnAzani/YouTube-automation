@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T07:21:55Z",
+  "generated_at": "2026-11-13T08:26:48Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,11 +7,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 158,
-    "published_longform": 71,
+    "published_total": 159,
+    "published_longform": 72,
     "published_shorts": 87,
-    "public_total": 156,
-    "queued_longform": 51,
+    "public_total": 157,
+    "queued_longform": 50,
     "queued_shorts": 35,
     "automations_ok": 9,
     "automations_total": 10,
@@ -233,27 +233,27 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 15,
-        "published_longform": 8,
+        "published_total": 16,
+        "published_longform": 9,
         "published_shorts": 7,
-        "public_total": 15,
-        "queued_longform": 4,
+        "public_total": 16,
+        "queued_longform": 3,
         "queued_other": 0,
         "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0207",
-        "title": "Ephesians 6:10-18 Midnight Prayer | The Midnight Watch",
-        "format": "longform",
-        "youtube_video_id": "ZDnZNjXPaQI",
-        "watch_url": "https://youtu.be/ZDnZNjXPaQI",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T00:40:37Z"
-      },
-      "next_queued_longform": {
         "id": "0208",
         "title": "Isaiah 54:17 No Weapon Formed Against Thee Midnight Prayer",
-        "words": 1350,
+        "format": "longform",
+        "youtube_video_id": "uVx6ay-zB1c",
+        "watch_url": "https://youtu.be/uVx6ay-zB1c",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T08:25:55Z"
+      },
+      "next_queued_longform": {
+        "id": "0209",
+        "title": "Isaiah 10:27 Midnight Prayer | The Midnight Watch",
+        "words": 1176,
         "status": "approved"
       },
       "next_queued_short": {
@@ -656,6 +656,52 @@
   ],
   "videos": [
     {
+      "id": "0208",
+      "slug": "isaiah-54-17-no-weapon-formed-against-thee-midnight-prayer",
+      "file": "0208-isaiah-54-17-no-weapon-formed-against-thee-midnight-prayer.md",
+      "title": "Isaiah 54:17 No Weapon Formed Against Thee Midnight Prayer",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T08:25:55Z",
+      "youtube_video_id": "uVx6ay-zB1c",
+      "watch_url": "https://youtu.be/uVx6ay-zB1c",
+      "youtu_be_url": "https://youtu.be/uVx6ay-zB1c",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/uVx6ay-zB1c/edit",
+      "thumb_url": "https://i.ytimg.com/vi/uVx6ay-zB1c/hqdefault.jpg",
+      "thumb_text": "NO WEAPON PROSPERS",
+      "duration_label": "~9 min",
+      "words": 1350
+    },
+    {
+      "id": "0207",
+      "slug": "ephesians-6-10-18-midnight-prayer",
+      "file": "0207-ephesians-6-10-18-midnight-prayer.md",
+      "title": "Ephesians 6:10-18 Midnight Prayer | The Midnight Watch",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T07:27:44Z",
+      "youtube_video_id": "ZDnZNjXPaQI",
+      "watch_url": "https://youtu.be/ZDnZNjXPaQI",
+      "youtu_be_url": "https://youtu.be/ZDnZNjXPaQI",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/ZDnZNjXPaQI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/ZDnZNjXPaQI/hqdefault.jpg",
+      "thumb_text": "ARMOUR OF GOD",
+      "duration_label": "~12 min",
+      "words": 1669
+    },
+    {
       "id": "SHORT-MORNINGPSALM25V4",
       "slug": "short-morningpsalm25v4-sunrise-prayer",
       "file": "short-morningpsalm25v4-sunrise-prayer.md",
@@ -955,29 +1001,6 @@
       "words": 457
     },
     {
-      "id": "0207",
-      "slug": "ephesians-6-10-18-midnight-prayer",
-      "file": "0207-ephesians-6-10-18-midnight-prayer.md",
-      "title": "Ephesians 6:10-18 Midnight Prayer | The Midnight Watch",
-      "channel": "prayer4",
-      "channel_name": "The Midnight Watch",
-      "channel_handle": "@TheMidnightWatchDaily",
-      "format": "longform",
-      "niche": "faith and prayer",
-      "privacy": "public",
-      "published_on": "2026-11-13",
-      "published_at": "2026-11-13T00:40:37Z",
-      "youtube_video_id": "ZDnZNjXPaQI",
-      "watch_url": "https://youtu.be/ZDnZNjXPaQI",
-      "youtu_be_url": "https://youtu.be/ZDnZNjXPaQI",
-      "shorts_url": "",
-      "studio_url": "https://studio.youtube.com/video/ZDnZNjXPaQI/edit",
-      "thumb_url": "https://i.ytimg.com/vi/ZDnZNjXPaQI/hqdefault.jpg",
-      "thumb_text": "ARMOUR OF GOD",
-      "duration_label": "~12 min",
-      "words": 1669
-    },
-    {
       "id": "SHORT-MIDNIGHT2CORINTHIANS10V3",
       "slug": "short-midnight2corinthians10v3-midnight-prayer",
       "file": "short-midnight2corinthians10v3-midnight-prayer.md",
@@ -989,7 +1012,7 @@
       "niche": "faith and prayer",
       "privacy": "public",
       "published_on": "2026-11-12",
-      "published_at": "2026-11-12T23:58:17Z",
+      "published_at": "2026-11-12T23:58:06Z",
       "youtube_video_id": "Id-Jv_t7VIU",
       "watch_url": "https://www.youtube.com/shorts/Id-Jv_t7VIU",
       "youtu_be_url": "https://youtu.be/Id-Jv_t7VIU",
@@ -997,8 +1020,8 @@
       "studio_url": "https://studio.youtube.com/video/Id-Jv_t7VIU/edit",
       "thumb_url": "https://i.ytimg.com/vi/Id-Jv_t7VIU/hqdefault.jpg",
       "thumb_text": "RISE \u00b7 IN THE",
-      "duration_label": "45s",
-      "words": 557
+      "duration_label": "<60s",
+      "words": 21
     },
     {
       "id": "SHORT-MIDDAYISAIAH32V2",
@@ -4629,19 +4652,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1120
-      },
-      {
-        "id": "0208",
-        "slug": "isaiah-54-17-no-weapon-formed-against-thee-midnight-prayer",
-        "file": "0208-isaiah-54-17-no-weapon-formed-against-thee-midnight-prayer.md",
-        "title": "Isaiah 54:17 No Weapon Formed Against Thee Midnight Prayer",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1350
       },
       {
         "id": "0209",
