@@ -5,6 +5,22 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-13 — future Short narration and footage
+
+- Prayer Short cards use the complete narrated text and audio-bound word alignment, rather than condensed authored phrases. Production requires complete local alignment; estimates are limited to preview.
+- Rotate stock candidates by edition and scene, exclude selected and recently recorded channel footage, and require at least two distinct licensed video clips in production. Missing alignment or varied footage stops the Short and preserves its queue entry. Older receipts lack source fingerprints and cannot establish historical reuse.
+
+## 2026-11-13 — all-channel automation safety
+
+- Supervisor inspects production matrix jobs and cancels only when every active job exceeds the 240-minute job cap plus grace; queued workflow status, missing data, fresh legs and failed job lookups cannot justify a cancellation. Other workflows are left alone pending workflow-specific policies.
+- Long-form and authored Shorts now fail closed instead of substituting Edge speech for Gemini Charon. Narration caches are tied to the model, voice, text and audio hash; old unverified Shorts caches are re-synthesized, while legacy prayer Shorts without provenance and pre-rendered production prayer Shorts are refused. This may consume free quota on the first retry and may delay releases when Charon is unavailable.
+- New confirmed receipts can record the narration model and voice, long-form receipts receive the actual thumbnail outcome, and Short thumbnail success must match the receipt's video ID. Long-form and Short recovery verify remote ownership, title, privacy, timestamp and status before recording a match; recovered receipts do not claim a voice, thumbnail or metadata revision that was not verified. Short replacement no longer automatically deletes legacy videos; rejected replacements retain their queue state for review.
+- Before every producer state-commit attempt, compare touched and deleted paths with the run's starting commit and the latest main. Refuse conflicting overwrites, preserve pending content in the run report and require reconciliation before retries. This path-level guard does not make parallel uploads safe.
+- The dashboard labels receipts and reports receipt-based thumbnail pending counts and the monitor snapshot time, rather than claiming zero missed slots. Missing monitoring state is not healthy. Feedback commits require both successful metrics collection and successful computation, so an old checkout cannot replace a newer report after a failed step. Aggregate diagnostics describe receipt matches and signal thresholds; only mature, measured videos influence theme scores and guidance. Metrics collection checks the authenticated channel against the configured expected ID without extra API calls, warning if none is configured. Guided Path's YAML time strings are quoted and validated.
+- Added three planned Morning Altar roadmap entries, restoring the branch's unqueued headroom from 14 to 17; these are plans, not approved scripts or published videos.
+- Resumed quota-paused jobs now pass the same published-receipt and minimum-length checks as other approved jobs. Existing published job IDs block re-use even with a different slug or unreadable receipt. `--all` processes every selected job instead of stopping after the first; errors and quota pauses still stop the run. `--next` remains limited to one new release and continues past a verified duplicate recovery. Remote duplicate checks scan up to 20 playlist pages and fail closed on invalid, incomplete or ambiguous results, including before long-form narration, unless the explicit duplicate override is set. Title lookup still does not guarantee exactly-once delivery.
+- Production remains sequential: channel-level parallelism needs isolated state writes and upload/receipt recovery before it is safe. Nothing here deploys to the live schedule.
+
 ## 2026-11-06 — the schedule was measured, and the recovery was rebuilt around the measurement
 
 Between **02:52 and 07:52 UTC** (03:52–08:52 WAT) nothing in this repo ran at all: not the brain's

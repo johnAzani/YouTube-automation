@@ -175,7 +175,7 @@ def load_metric_snapshots(csv_path: Path | None = None) -> list[dict]:
                         "title": r.get("title", ""),
                         "snapshot_date": r.get("snapshot_date", ""),
                         "published_at": r.get("published_at", ""),
-                        "views": int(r.get("views", 0) or 0),
+                        "views": int(r["views"]) if r.get("views") not in (None, "") else None,
                         "likes": int(r.get("likes", 0) or 0),
                         "comments": int(r.get("comments", 0) or 0),
                     })
@@ -243,6 +243,7 @@ class VideoPerformance:
     scripture: str
     format: str
     views: int = 0
+    views_known: bool = True
     likes: int = 0
     comments: int = 0
     age_days: int = 0
@@ -258,7 +259,7 @@ class VideoPerformance:
             "theme": self.theme,
             "scripture": self.scripture,
             "format": self.format,
-            "views": self.views,
+            "views": self.views if self.views_known else None,
             "age_days": self.age_days,
             "views_per_day": round(self.views_per_day, 3),
             "engagement_rate": round(self.engagement_rate, 4),
@@ -303,9 +304,18 @@ def compute_video_performance(
         meta = published_index.get(vid, {})
         title = meta.get("title") or row.get("title", "")
         fmt = meta.get("format", "longform")
-        pub = _parse_date(meta.get("published_on") or row.get("published_at", ""))
-        age_days = max(0, (today - pub).days) if pub else 0
-        views = int(row.get("views", 0))
+        # The API's public timestamp is preferable to a potentially later
+        # receipt-recovery date; use receipt metadata only when it is absent.
+        pub = _parse_date(row.get("published_at", "")) or _parse_date(meta.get("published_on", ""))
+        snapshot_date = _parse_date(row.get("snapshot_date", ""))
+        # Compare views with age at the time they were collected, not today.
+        # A stale/future/undated reading must not become a mature signal merely
+        # because time passed after the snapshot.
+        valid_dates = bool(pub and snapshot_date and pub <= snapshot_date <= today)
+        age_days = (snapshot_date - pub).days if valid_dates else 0
+        raw_views = row.get("views")
+        views_known = raw_views is not None and raw_views != ""
+        views = int(raw_views) if views_known else 0
         likes = int(row.get("likes", 0))
         comments = int(row.get("comments", 0))
 
@@ -319,21 +329,23 @@ def compute_video_performance(
             scripture=meta.get("scripture") or extract_scripture(title),
             format=fmt,
             views=views,
+            views_known=views_known,
             likes=likes,
             comments=comments,
             age_days=age_days,
             views_per_day=velocity,
             engagement_rate=engagement,
-            measured=views >= MIN_VIEWS_FOR_ENGAGEMENT,
+            measured=(views_known and views >= MIN_VIEWS_FOR_ENGAGEMENT and valid_dates
+                      and age_days >= MIN_AGE_DAYS_FOR_VELOCITY),
         ))
 
     # Normalise velocity and engagement across the measured long-form cohort, then
     # blend. Reach and satisfaction both matter; weight them equally.
-    longform = [v for v in results if v.format != "short"]
+    longform = [v for v in results if v.format != "short" and v.measured]
     max_vel = max((v.views_per_day for v in longform), default=0.0)
     max_eng = max((v.engagement_rate for v in longform), default=0.0)
     for v in results:
-        if v.format == "short":
+        if v.format == "short" or not v.measured:
             continue
         nv = (v.views_per_day / max_vel) if max_vel > 0 else 0.0
         ne = (v.engagement_rate / max_eng) if max_eng > 0 else 0.0
@@ -376,9 +388,9 @@ def aggregate_themes(perf: list[VideoPerformance]) -> list[ThemeScore]:
     themes: list[ThemeScore] = []
     for theme, vids in buckets.items():
         measured = [v for v in vids if v.measured]
-        # Average over measured videos when present, else over all (with a penalty
-        # baked into the confidence gate downstream).
-        cohort = measured or vids
+        # Only measured videos influence rankings; retain unmeasured themes with
+        # zero scores for visibility, never as evidence for steering.
+        cohort = measured
         avg_score = sum(v.score for v in cohort) / len(cohort) if cohort else 0.0
         avg_eng = sum(v.engagement_rate for v in cohort) / len(cohort) if cohort else 0.0
         # Top scripture = the highest-scoring measured video's reference.
@@ -409,6 +421,8 @@ def build_feedback_report(
         if published_index is not None
         else load_published_index(channel_id=channel_id)
     )
+    snapshot_ids = {str(r.get("video_id")) for r in snapshots if r.get("video_id")}
+    receipt_ids = set(published_index)
     if channel_id and snapshots:
         # Restrict snapshot rows to videos belonging to this channel's published index
         snapshots = [r for r in snapshots if r.get("video_id") in published_index]
@@ -425,19 +439,21 @@ def build_feedback_report(
     guidance: list[str] = []
     if not sufficient:
         guidance.append(
-            f"Only {len(measured)} long-form video(s) have enough views to measure; "
-            f"need {MIN_VIDEOS_FOR_SIGNAL}. Keeping roadmap order until the signal is real."
+            f"Only {len(measured)} long-form video(s) have at least {MIN_VIEWS_FOR_ENGAGEMENT} views "
+            f"and are at least {MIN_AGE_DAYS_FOR_VELOCITY} days old; need {MIN_VIDEOS_FOR_SIGNAL}. "
+            "Keeping roadmap order until the signal is real."
         )
     else:
-        if themes:
-            top = themes[0]
+        measured_themes = [t for t in themes if t.measured_videos > 0]
+        if measured_themes:
+            top = measured_themes[0]
             guidance.append(
                 f"'{top.theme}' is the strongest measured theme "
                 f"(avg score {top.avg_score:.2f}, {top.measured_videos} measured video(s)). "
                 f"Favour it when choosing the next devotional."
             )
-        if len(themes) > 1:
-            bottom = themes[-1]
+        if len(measured_themes) > 1:
+            bottom = measured_themes[-1]
             guidance.append(
                 f"'{bottom.theme}' is currently the weakest measured theme; "
                 f"deprioritise it until the audience signal changes."
@@ -449,6 +465,18 @@ def build_feedback_report(
         "sufficient_data": sufficient,
         "measured_longform_videos": len(measured),
         "total_longform_videos": len(longform),
+        # Aggregates only: distinguish an unmatched snapshot from a matched video
+        # below the signal gate without publishing raw per-video metrics.
+        "input_diagnostics": {
+            "snapshot_video_ids": len(snapshot_ids),
+            "receipt_video_ids": len(receipt_ids),
+            "matched_video_ids": len(snapshot_ids & receipt_ids),
+            "longform_below_view_threshold": sum(v.views_known and v.views < MIN_VIEWS_FOR_ENGAGEMENT for v in longform),
+            "longform_missing_view_count": sum(not v.views_known for v in longform),
+            "longform_too_young_or_undated": sum(v.age_days < MIN_AGE_DAYS_FOR_VELOCITY for v in longform),
+            "minimum_views": MIN_VIEWS_FOR_ENGAGEMENT,
+            "minimum_age_days": MIN_AGE_DAYS_FOR_VELOCITY,
+        },
         "ranked_themes": ranked_themes,
         "themes": [t.as_dict() for t in themes],
         "guidance": guidance,

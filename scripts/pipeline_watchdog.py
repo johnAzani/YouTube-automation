@@ -558,7 +558,7 @@ def issue_body(report: Report, now: datetime) -> str:
         "",
     ]
     if fatal:
-        lines.append("### Nothing can publish right now")
+        lines.append("### Blocking findings requiring attention")
         lines += [f"- **{f.area}** — {f.detail}" for f in fatal]
         lines.append("")
     if warn:

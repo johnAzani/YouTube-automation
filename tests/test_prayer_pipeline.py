@@ -16,6 +16,11 @@ class RetryEconomyTests(unittest.TestCase):
     model before starting the encode it would never finish.
     """
 
+    def setUp(self):
+        lookup = patch('pipeline.prayer_pipeline.already_published', return_value=None)
+        lookup.start()
+        self.addCleanup(lookup.stop)
+
     def _produce(self, root, model):
         (root / 'test' / 'thumbnails').mkdir(parents=True, exist_ok=True)
         doc = ScriptDoc(root/'job.md', {'id': 'test', 'slug': 'test', 'title': 'Test',
@@ -63,6 +68,16 @@ class RetryEconomyTests(unittest.TestCase):
             self.assertFalse(align2.called, "alignment must not be recomputed")
             # the render still happens; that is the part that was never finished
             self.assertTrue(render2.called)
+
+    def test_tampered_audio_is_resynthesized_and_realigned(self):
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp); model = root / 'model'; model.mkdir()
+            (model/'model.bin').write_bytes(b'local')
+            self._produce(root, model)
+            (root / 'test' / 'narration.mp3').write_bytes(b'tampered')
+            tts, align, _, _ = self._produce(root, model)
+            self.assertTrue(tts.called)
+            self.assertTrue(align.called, 'a new take must not reuse old word timings')
 
     def test_the_renderer_is_handed_a_progress_callback(self):
         with TemporaryDirectory() as tmp:
@@ -127,6 +142,11 @@ class RetryEconomyTests(unittest.TestCase):
 
 
 class PrayerPipelineTests(unittest.TestCase):
+    def setUp(self):
+        lookup = patch('pipeline.prayer_pipeline.already_published', return_value=None)
+        lookup.start()
+        self.addCleanup(lookup.stop)
+
     def test_full_path_uses_approved_renderer_and_marks_confirmed_upload(self):
         with TemporaryDirectory() as tmp:
             root = Path(tmp); model = root / 'model'; model.mkdir(); (model/'model.bin').write_bytes(b'local')
@@ -139,17 +159,30 @@ class PrayerPipelineTests(unittest.TestCase):
             with patch('pipeline.prayer_pipeline.parse_script', return_value=doc), patch('pipeline.prayer_pipeline.enforce'), \
                  patch('pipeline.run._require_production_prerequisites'), patch('pipeline.prayer_pipeline.get_gemini_api_key', return_value='fake'), \
                  patch('pipeline.prayer_pipeline.importlib.util.find_spec', return_value=True), patch('pipeline.prayer_pipeline.OUTPUT_DIR', root), \
-                 patch('pipeline.prayer_pipeline.synthesize_gemini_audio') as tts, patch('pipeline.prayer_pipeline._probe_duration', return_value=301), \
+                 patch('pipeline.prayer_pipeline.synthesize_gemini_audio', side_effect=lambda text, audio, **kw: audio.write_bytes(b'charon')) as tts, patch('pipeline.prayer_pipeline._probe_duration', return_value=301), \
                  patch('pipeline.prayer_pipeline.align', return_value=words), patch('pipeline.assets.fetch_scene_assets', return_value=[SimpleNamespace(path=asset)]), \
                  patch('pipeline.prayer_pipeline.render', return_value=output) as renderer, patch('pipeline.thumbnail.generate_thumbnail_variants', return_value=[thumbnail]), \
                  patch('pipeline.metadata.write_metadata_pack', return_value={'description':'prayer'}), patch('pipeline.upload.upload', return_value=upload), \
+                 patch('pipeline.upload.inspect_existing_longform', return_value={'video_id':'abc', 'privacy_status':'public', 'upload_status':'processed', 'published_at':'2026-11-01T12:00:00Z'}), \
                  patch('pipeline.run._mark_job_uploaded') as mark, patch('pipeline.run._open_release_ticket'):
                 result = produce(root/'job.md', False, model)
+                self.assertTrue(result['uploaded'])
+                mark.assert_called_once()
+                self.assertEqual(mark.call_args.args[3], 'not_requested')
+                self.assertEqual(mark.call_args.kwargs['narration_engine'], 'gemini-3.8-flash-tts')
+                self.assertEqual(mark.call_args.kwargs['narration_voice'], 'Charon')
+                mark.reset_mock()
+                upload.privacy_status = 'duplicate_prevented'
+                duplicate = produce(root/'job.md', False, model)
+                self.assertFalse(duplicate['uploaded'])
+                self.assertIsNone(mark.call_args.kwargs['narration_engine'])
+                self.assertIsNone(mark.call_args.kwargs['narration_voice'])
             self.assertTrue(result['uploaded'])
             self.assertEqual(tts.call_args.kwargs['voice'], 'Charon')
             self.assertEqual(tts.call_args.kwargs['model'], 'gemini-3.8-flash-tts')
             self.assertEqual(renderer.call_args.kwargs['timing_source'], 'measured')
             mark.assert_called_once()
+            self.assertEqual(mark.call_args.args[3], 'not_requested')
 
     def test_short_script_fails_before_tts(self):
         with TemporaryDirectory() as tmp:
@@ -187,12 +220,46 @@ class PrayerPipelineTests(unittest.TestCase):
             with patch('pipeline.prayer_pipeline.parse_script', return_value=doc), \
                  patch('pipeline.prayer_pipeline.enforce'), \
                  patch('pipeline.run._require_production_prerequisites'), \
-                 patch('pipeline.prayer_pipeline.PUBLISHED_DIR', published_dir), \
+                 patch('pipeline.run.PUBLISHED_DIR', published_dir), \
                  patch('pipeline.prayer_pipeline.get_gemini_api_key', return_value='fake'), \
                  patch('pipeline.prayer_pipeline.synthesize_gemini_audio') as tts:
                 with self.assertRaisesRegex(RuntimeError, 'already exists'):
                     produce(root/'job.md', False, root/'model')
             tts.assert_not_called()
+
+    def test_same_published_id_with_different_slug_fails_before_tts(self):
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            path = root / '0098-new.md'
+            doc = ScriptDoc(path, {'id':'0098', 'status':'approved', 'format':'longform',
+                                   'niche':'prayer', 'voice':'Charon'}, [Scene(1, 'One', 'hello ' * 900)])
+            published = root / 'published'; published.mkdir()
+            (published / '0098-old.md').write_text('record')
+            with patch('pipeline.prayer_pipeline.parse_script', return_value=doc), \
+                 patch('pipeline.prayer_pipeline.enforce'), \
+                 patch('pipeline.run._require_production_prerequisites'), \
+                 patch('pipeline.run.PUBLISHED_DIR', published), \
+                 patch('pipeline.prayer_pipeline.synthesize_gemini_audio') as tts:
+                with self.assertRaisesRegex(RuntimeError, 'already exists'):
+                    produce(path, False, root / 'model')
+                tts.assert_not_called()
+
+    def test_unavailable_precheck_leaves_queue_without_synthesizing(self):
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp); path = root / '0098-test.md'
+            path.write_text('queue must remain unchanged')
+            doc = ScriptDoc(path, {'id':'0098', 'status':'approved', 'format':'longform',
+                                   'niche':'prayer', 'voice':'Charon'}, [Scene(1, 'One', 'hello ' * 900)])
+            with patch('pipeline.prayer_pipeline.parse_script', return_value=doc), \
+                 patch('pipeline.prayer_pipeline.enforce'), \
+                 patch('pipeline.run._require_production_prerequisites'), \
+                 patch('pipeline.run.PUBLISHED_DIR', root / 'published'), \
+                 patch('pipeline.prayer_pipeline.already_published', side_effect=RuntimeError('lookup unavailable')), \
+                 patch('pipeline.prayer_pipeline.synthesize_gemini_audio') as tts:
+                with self.assertRaisesRegex(RuntimeError, 'lookup unavailable'):
+                    produce(path, False, root / 'model')
+                tts.assert_not_called()
+                self.assertEqual(path.read_text(), 'queue must remain unchanged')
 
     def test_wrong_voice_is_rejected_before_tts(self):
         doc = ScriptDoc(Path('job.md'), {'status':'approved','format':'longform','niche':'prayer','voice':'Other'}, [Scene(1,'One','hello')])
@@ -203,49 +270,29 @@ class PrayerPipelineTests(unittest.TestCase):
             tts.assert_not_called()
 
 
-class NarrationFallbackTests(unittest.TestCase):
-    """A channel that cannot speak publishes nothing, and spends the day doing it.
-
-    The prayer path called Gemini with no fallback, so a `200` with no audio — the
-    live failure on 6 and 7 November — ended the run. `edge-tts` is free, needs no
-    key, and was already a declared dependency. What it must never do is paper over
-    a spent quota: the $0.00 lock pauses the channel instead.
-    """
-
+class LockedNarrationTests(unittest.TestCase):
     def _doc(self):
         return SimpleNamespace(full_narration="word " * 900, word_count=900)
 
-    def test_no_audio_from_gemini_falls_back_to_the_free_engine(self):
-        with TemporaryDirectory() as tmp:
-            audio = Path(tmp) / "narration.mp3"
-            with patch('pipeline.prayer_pipeline.synthesize_gemini_audio',
-                       side_effect=RuntimeError(
-                           "Gemini API returned no audio content for model "
-                           "gemini-3.8-flash-tts (mime_types=none)")) as gemini, \
-                 patch('pipeline.prayer_pipeline.synthesize_edge',
-                       return_value=("edge-tts", [])) as edge:
-                engine = _narrate(self._doc(), audio)
-        self.assertEqual(engine, "edge-tts")
-        gemini.assert_called_once()
-        edge.assert_called_once()
+    def test_gemini_failure_never_substitutes_voice(self):
+        with TemporaryDirectory() as tmp, \
+             patch('pipeline.prayer_pipeline.synthesize_gemini_audio', side_effect=RuntimeError("no audio")), \
+             patch('pipeline.tts.synthesize_edge') as edge:
+            with self.assertRaisesRegex(RuntimeError, "no audio"):
+                _narrate(self._doc(), Path(tmp) / "narration.mp3")
+            edge.assert_not_called()
 
-    def test_a_spent_quota_is_not_a_reason_to_borrow_another_engine(self):
+    def test_quota_failure_propagates(self):
         from pipeline.quota_handler import GeminiQuotaExceededError
+        with TemporaryDirectory() as tmp, \
+             patch('pipeline.prayer_pipeline.synthesize_gemini_audio', side_effect=GeminiQuotaExceededError("daily limit")):
+            with self.assertRaises(GeminiQuotaExceededError):
+                _narrate(self._doc(), Path(tmp) / "narration.mp3")
 
-        with TemporaryDirectory() as tmp:
-            with patch('pipeline.prayer_pipeline.synthesize_gemini_audio',
-                       side_effect=GeminiQuotaExceededError("daily free tier limit")), \
-                 patch('pipeline.prayer_pipeline.synthesize_edge') as edge:
-                with self.assertRaises(GeminiQuotaExceededError):
-                    _narrate(self._doc(), Path(tmp) / "narration.mp3")
-        edge.assert_not_called()
-
-    def test_the_engine_is_reported_not_assumed(self):
-        """A fallback take must be recorded as a fallback take."""
-        with TemporaryDirectory() as tmp:
-            audio = Path(tmp) / "narration.mp3"
-            with patch('pipeline.prayer_pipeline.synthesize_gemini_audio',
-                       side_effect=RuntimeError("boom")), \
-                 patch('pipeline.prayer_pipeline.synthesize_edge',
-                       return_value=("placeholder", [])):
-                self.assertEqual(_narrate(self._doc(), audio), "placeholder")
+    def test_success_records_the_locked_model(self):
+        from pipeline.gemini_tts import DEFAULT_MODEL
+        with TemporaryDirectory() as tmp, \
+             patch('pipeline.prayer_pipeline.synthesize_gemini_audio') as gemini:
+            self.assertEqual(_narrate(self._doc(), Path(tmp) / "narration.mp3"), DEFAULT_MODEL)
+            self.assertEqual(gemini.call_args.kwargs['voice'], 'Charon')
+            self.assertEqual(gemini.call_args.kwargs['model'], DEFAULT_MODEL)

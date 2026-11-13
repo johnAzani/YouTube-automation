@@ -766,8 +766,62 @@ def _map_authored_clause_ranges(clauses, raw_words):
     return ranges
 
 
+def _narration_kinetic_stream(cfg, raw_words, adur=None):
+    """Show every authored narration word in the existing prayer-card style."""
+    from pipeline.short_release import _clean_word_token
+
+    captions = cfg.get('captions') or []
+    expected = [word for cap in captions for word in str(cap[2]).split()
+                if _clean_word_token(word)]
+    if (len(expected) != len(raw_words) or
+            any(_clean_word_token(word) != _clean_word_token(row[2])
+                for word, row in zip(expected, raw_words))):
+        raise ValueError('Short word timings do not match the complete narration')
+    stream, cursor = [], 0
+    for index, caption in enumerate(captions):
+        words = [word for word in str(caption[2]).split() if _clean_word_token(word)]
+        phrase = (cfg.get('kinetic_phrases') or [])
+        entry = phrase[index] if index < len(phrase) else None
+        kicker = entry[4] if entry and len(entry) >= 5 else ''
+        accents = entry[3] if entry and len(entry) >= 5 else []
+        if isinstance(accents, str):
+            accents = [accents]
+        lines, line, page_words = [], [], []
+        def flush():
+            nonlocal lines, line, page_words
+            if line:
+                lines.append(' '.join(line)); line = []
+            if not page_words:
+                return
+            first, last = page_words[0][1], page_words[-1][1]
+            stream.append(dict(t0=first[0], t1=last[1], lines=lines,
+                               line1=lines[0], line2=lines[1] if len(lines) > 1 else '',
+                               accent_words=[str(a).upper() for a in accents], kicker=kicker,
+                               words=[row for _, row in page_words],
+                               card_words=[word for word, _ in page_words],
+                               word_timings=[(row[0], row[1]) for _, row in page_words]))
+            lines, page_words = [], []
+        for word in words:
+            display = word.upper()
+            if line and len(' '.join(line + [display])) > 25:
+                lines.append(' '.join(line)); line = []
+            if len(lines) == 3:
+                flush()
+            line.append(display)
+            page_words.append((display, raw_words[cursor]))
+            cursor += 1
+        flush()
+    for i, page in enumerate(stream):
+        page['disp_t0'] = 0.0 if i == 0 else stream[i - 1]['t1']
+        page['disp_t1'] = (page['t1'] if i + 1 < len(stream)
+                           else max(page['t1'], (adur or 0) - 0.4))
+    return stream
+
+
 def build_kinetic_stream(key, raw_words, adur=None):
     cfg = SCRIPTS[key]
+    if cfg.get('authored_spec') and cfg.get('is_prayer'):
+        return _narration_kinetic_stream(cfg, raw_words, adur)
     phrases_def = cfg.get('kinetic_phrases')
     if not phrases_def:
         return []
@@ -2025,7 +2079,22 @@ except Exception as _authored_exc:  # pragma: no cover - defensive
     print(f'[shorts] authored specs unavailable: {_authored_exc!r}')
 
 
-def _acquire_short_asset(query, scene_no, stock_dir):
+def _asset_fingerprints(asset):
+    import hashlib
+    from pipeline.assets import _visual_source_id
+    ids = {_visual_source_id(asset.origin_url)} - {''}
+    try:
+        h = hashlib.sha256()
+        with open(asset.path, 'rb') as fh:
+            for chunk in iter(lambda: fh.read(1024 * 1024), b''):
+                h.update(chunk)
+        ids.add('sha256:' + h.hexdigest())
+    except OSError:
+        pass
+    return ids
+
+
+def _acquire_short_asset(query, scene_no, stock_dir, *, exclude_sources=(), selection_seed=''):
     """Clip-first acquisition tailored for full-bleed 9:16 Shorts.
 
     Prefers real moving video clips across all providers (Pexels, Pixabay,
@@ -2037,13 +2106,14 @@ def _acquire_short_asset(query, scene_no, stock_dir):
     from pipeline.config import CONFIG
 
     q = query.strip() or 'financial district skyline'
+    excluded = set(exclude_sources)
     video_fns = [
-        ('Pexels video', lambda: A._pexels(q, True, W, H)),
-        ('Pixabay video', lambda: A._pixabay(q, True, W, H)),
+        ('Pexels video', lambda: A._pexels(q, True, W, H, exclude_sources=excluded, selection_seed=selection_seed)),
+        ('Pixabay video', lambda: A._pixabay(q, True, W, H, exclude_sources=excluded, selection_seed=selection_seed)),
     ]
     photo_fns = [
-        ('Pexels photo', lambda: A._pexels(q, False, W, H)),
-        ('Pixabay photo', lambda: A._pixabay(q, False, W, H)),
+        ('Pexels photo', lambda: A._pexels(q, False, W, H, exclude_sources=excluded, selection_seed=selection_seed)),
+        ('Pixabay photo', lambda: A._pixabay(q, False, W, H, exclude_sources=excluded, selection_seed=selection_seed)),
     ]
     if CONFIG.enable_keyless_sources:
         video_fns += [
@@ -2057,16 +2127,22 @@ def _acquire_short_asset(query, scene_no, stock_dir):
         ]
 
     for name, fn in video_fns:
-        try:
-            got = fn()
-        except Exception as exc:
-            print(f'[shorts] {name} errored on scene {scene_no}: {exc!r}', flush=True)
-            got = None
-        if got:
-            if got.width and got.height and min(got.width, got.height) < 540:
-                print(f'[shorts] skipping low-res video {got.width}x{got.height} on scene {scene_no}', flush=True)
-                continue
-            if not _is_vivid_video_clip(got.path):
+        # Keyed providers can skip a rejected hit and try another; keyless
+        # providers return only one hit, so repeating their query is pointless.
+        for _ in range(3 if name.startswith(('Pexels', 'Pixabay')) else 1):
+            try:
+                got = fn()
+            except Exception as exc:
+                print(f'[shorts] {name} errored on scene {scene_no}: {exc!r}', flush=True)
+                break
+            if not got:
+                break
+            fingerprints = _asset_fingerprints(got)
+            duplicate = bool(fingerprints & excluded)
+            too_small = bool(got.width and got.height and min(got.width, got.height) < 540)
+            if duplicate or too_small or not _is_vivid_video_clip(got.path):
+                print(f'[shorts] skipping repeated or unsuitable clip on scene {scene_no}', flush=True)
+                excluded.update(fingerprints)
                 continue
             got.query = q
             print(f'[shorts] scene {scene_no}: VIDEO from {got.source} ({got.width}x{got.height})', flush=True)
@@ -2080,6 +2156,8 @@ def _acquire_short_asset(query, scene_no, stock_dir):
             print(f'[shorts] {name} errored on scene {scene_no}: {exc!r}', flush=True)
             got = None
         if got and (got.source in ('pexels', 'pixabay') or (got.width >= 900 and got.height >= 700)):
+            if _asset_fingerprints(got) & set(exclude_sources):
+                continue
             # Verify downloaded photo is photographic (not flat white chart/page scan)
             try:
                 sample = Image.open(got.path).convert('RGB').resize((64, 64))
@@ -2117,14 +2195,23 @@ def main(key):
         try:
             stock_dir = os.path.join(ROOT, 'output', 'short-stock', key)
             os.makedirs(stock_dir, exist_ok=True)
+            try:
+                used_sources = set(json.loads(os.environ.get('SHORT_RECENT_CLIP_IDS', '[]')))
+            except (ValueError, TypeError):
+                used_sources = set()
             for si, sc in enumerate(scenes):
                 if sc.get('lock_plate'):
                     continue
                 queries = cfg.get('stock_queries', [])
                 query = queries[si] if si < len(queries) else sc.get('kicker', 'documentary b-roll')
                 sc['stock_query'] = query
-                asset = _acquire_short_asset(query, si + 1, stock_dir)
+                asset = _acquire_short_asset(query, si + 1, stock_dir,
+                                             exclude_sources=used_sources,
+                                             selection_seed=f'{key}:{si}')
                 if asset:
+                    fingerprints = _asset_fingerprints(asset)
+                    used_sources.update(fingerprints)
+                    sc['source_fingerprints'] = sorted(fingerprints)
                     sc['media_path'] = str(asset.path)
                     sc['media_kind'] = asset.kind
                     sc['source'] = asset.source
@@ -2133,6 +2220,12 @@ def main(key):
                     sc['source_size'] = (asset.width, asset.height)
         except Exception as exc:
             print(f'  stock sourcing unavailable; using cleared 9:16 documentary plates: {exc!r}')
+
+    if os.environ.get('SHORT_REQUIRE_VARIED_VIDEO') == '1':
+        video_ids = {next((v for v in sc.get('source_fingerprints', []) if v.startswith('sha256:')), '')
+                     for sc in scenes if sc.get('media_kind') == 'video'} - {''}
+        if len(video_ids) < 2:
+            raise RuntimeError('At least two distinct licensed video clips are required; Short remains queued')
 
     print(f'[{key}] narration={adur:.1f}s total={total:.1f}s ({n}f) scenes={len(scenes)} beats={len(beats)}')
     cuts = [sc['t0'] for sc in scenes]
@@ -2335,6 +2428,7 @@ def main(key):
                 dimensions=sc.get('source_size', None),
                 fallback=(not bool(sc.get('media_path')) or bool(sc.get('used_fallback', False))),
                 file=sc.get('media_path', sc.get('img', '')),
+                source_fingerprints=sc.get('source_fingerprints', []),
             ))
     report_dir = os.path.join(ROOT, 'output', 'short-stock', key)
     os.makedirs(report_dir, exist_ok=True)

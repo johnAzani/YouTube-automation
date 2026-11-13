@@ -54,6 +54,12 @@ def main(argv: list[str] | None = None) -> int:
     print(f"Measured long-form videos: {report['measured_longform_videos']} "
           f"of {report['total_longform_videos']}")
     print(f"Sufficient data to steer: {report['sufficient_data']}")
+    diag = report['input_diagnostics']
+    print(f"Snapshot IDs: {diag['snapshot_video_ids']}; receipt IDs: {diag['receipt_video_ids']}; "
+          f"matched IDs: {diag['matched_video_ids']}")
+    print(f"Long-form below {diag['minimum_views']} views: {diag['longform_below_view_threshold']}; "
+          f"missing view count: {diag['longform_missing_view_count']}; "
+          f"too young/undated (<{diag['minimum_age_days']} days): {diag['longform_too_young_or_undated']}")
     if report["ranked_themes"]:
         print(f"Ranked themes: {' > '.join(report['ranked_themes'])}")
     for line in report["guidance"]:

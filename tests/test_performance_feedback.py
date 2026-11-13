@@ -87,6 +87,33 @@ class TestPerformance:
         assert perf[0].engagement_rate == 0.0
         assert perf[0].measured is False
 
+    def test_age_is_measured_at_snapshot_not_at_report_date(self):
+        snaps = [_snap('v1', 'Psalm 91', 100, 10, 0,
+                       published='2026-10-20', snapshot='2026-10-21')]
+        idx = {'v1': _index('v1', 'Psalm 91', published='2026-10-20')}
+        perf = compute_video_performance(snaps, idx, TODAY)
+        assert perf[0].age_days == 1
+        assert not perf[0].measured
+
+    def test_future_snapshot_never_counts_as_measured(self):
+        snaps = [_snap('v1', 'Psalm 91', 100, 10, 0, snapshot='2026-11-10')]
+        idx = {'v1': _index('v1', 'Psalm 91')}
+        assert not compute_video_performance(snaps, idx, TODAY)[0].measured
+
+    def test_new_or_undated_videos_do_not_count_as_measured(self):
+        snaps = [
+            _snap("new", "Psalm 91", 500, 20, 5, published="2026-11-03"),
+            _snap("old", "Psalm 46", 100, 8, 2),
+            _snap("undated", "Psalm 23", 100, 8, 2, published=""),
+        ]
+        idx = {"new": _index("new", "Psalm 91", published="2026-11-03"),
+               "old": _index("old", "Psalm 46"),
+               "undated": _index("undated", "Psalm 23", published="")}
+        perf = {v.video_id: v for v in compute_video_performance(snaps, idx, TODAY)}
+        assert not perf["new"].measured and perf["new"].score == 0
+        assert not perf["undated"].measured and perf["undated"].score == 0
+        assert perf["old"].measured and perf["old"].score == 1
+
     def test_score_blend_favours_reach_and_satisfaction(self):
         snaps = [
             _snap("hi", "Psalm 91 Protection", 1000, 80, 20),
@@ -149,6 +176,44 @@ class TestAggregationAndReport:
         report = build_feedback_report(snaps, idx, TODAY)
         assert report["sufficient_data"] is False
         assert report["ranked_themes"] == []
+
+    def test_diagnostics_distinguish_unmatched_low_views_and_young(self):
+        snaps = [_snap('low', 'Psalm 91', 5, 0, 0),
+                 _snap('young', 'Psalm 46', 100, 1, 0, published='2026-11-03'),
+                 _snap('unknown', 'No receipt', 100, 1, 0)]
+        idx = {'low': _index('low', 'Psalm 91'),
+               'young': _index('young', 'Psalm 46', published='2026-11-03'),
+               'missing': _index('missing', 'Psalm 23')}
+        report = build_feedback_report(snaps, idx, TODAY, channel_id='prayer2')
+        diag = report['input_diagnostics']
+        assert (diag['snapshot_video_ids'], diag['receipt_video_ids'], diag['matched_video_ids']) == (3, 3, 2)
+        assert diag['longform_below_view_threshold'] == 1
+        assert diag['longform_too_young_or_undated'] == 1
+        assert report['measured_longform_videos'] == 0
+        assert 'unknown' not in json.dumps(report)
+
+    def test_missing_views_are_not_mistaken_for_zero_in_diagnostics(self, tmp_path):
+        from pipeline.performance_feedback import load_metric_snapshots
+        path = tmp_path / 'metrics.csv'
+        path.write_text('snapshot_date,video_id,title,published_at,views,likes,comments\n'
+                        '2026-11-03,missing,Psalm 91,2026-10-20,,0,0\n'
+                        '2026-11-03,zero,Psalm 46,2026-10-20,0,0,0\n')
+        idx = {'missing': _index('missing', 'Psalm 91'), 'zero': _index('zero', 'Psalm 46')}
+        report = build_feedback_report(load_metric_snapshots(path), idx, TODAY, channel_id='prayer2')
+        assert report['input_diagnostics']['longform_missing_view_count'] == 1
+        assert report['input_diagnostics']['longform_below_view_threshold'] == 1
+        assert report['measured_longform_videos'] == 0
+
+    def test_guidance_never_calls_unmeasured_theme_weakest(self):
+        snaps = [_snap('a', 'Psalm 91', 100, 10, 0),
+                 _snap('b', 'Psalm 91', 80, 8, 0),
+                 _snap('c', 'Psalm 46', 40, 1, 0),
+                 _snap('d', 'Psalm 23', 2, 0, 0)]
+        idx = {s['video_id']: _index(s['video_id'], s['title']) for s in snaps}
+        report = build_feedback_report(snaps, idx, TODAY)
+        assert report['sufficient_data']
+        assert 'stillness_refuge' in report['guidance'][-1]
+        assert 'peace_rest' not in report['guidance'][-1]
 
     def test_empty_data_never_raises(self):
         report = build_feedback_report([], {}, TODAY)

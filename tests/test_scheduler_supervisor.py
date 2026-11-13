@@ -584,7 +584,9 @@ class TestAWedgedRunIsNotAllowedToHoldTheLock(unittest.TestCase):
         # healthy render is allowed, so this test was encoding the bug.
         rows = [{"id": 99, "name": "Produce video", "status": "in_progress",
                  "run_started_at": "2026-11-02T14:30:00Z"}]
-        stuck = sup.stuck_runs(self.now(), rows)
+        jobs = [{"status": "in_progress", "started_at": "2026-11-02T14:30:00Z"}]
+        with mock.patch.object(sup, "_run_jobs", return_value=jobs):
+            stuck = sup.stuck_runs(self.now(), rows)
         self.assertEqual([r["id"] for r in stuck], [99])
         self.assertEqual(stuck[0]["minutes"], 255)
 
@@ -594,6 +596,34 @@ class TestAWedgedRunIsNotAllowedToHoldTheLock(unittest.TestCase):
         rows = [{"id": 7, "name": "Produce video", "status": "in_progress",
                  "run_started_at": "2026-11-02T15:45:00Z"}]
         self.assertEqual(sup.stuck_runs(self.now(), rows), [])
+
+    def test_old_matrix_with_new_active_leg_is_not_cancelled(self):
+        rows = [{"id": 7, "name": "Produce video", "status": "queued",
+                 "run_started_at": "2026-11-02T10:00:00Z"}]
+        with mock.patch.object(sup, "_run_jobs", return_value=[
+            {"status": "in_progress", "started_at": "2026-11-02T18:00:00Z"}
+        ]):
+            self.assertEqual(sup.stuck_runs(self.now(), rows), [])
+
+    def test_queued_matrix_with_overdue_job_is_detected(self):
+        rows = [{"id": 7, "name": "Produce video", "status": "queued",
+                 "run_started_at": "2026-11-02T10:00:00Z"}]
+        with mock.patch.object(sup, "_run_jobs", return_value=[
+            {"status": "in_progress", "started_at": "2026-11-02T14:30:00Z"}
+        ]):
+            self.assertEqual([x["id"] for x in sup.stuck_runs(self.now(), rows)], [7])
+
+    def test_unknown_or_mixed_job_state_never_cancels(self):
+        rows = [{"id": 7, "name": "Produce video", "status": "in_progress",
+                 "run_started_at": "2026-11-02T10:00:00Z"}]
+        for jobs in (None, [], [{"status": "in_progress", "started_at": "bad"}],
+                     [{"status": "in_progress", "started_at": "2026-11-02T14:30:00Z"},
+                      {"status": "in_progress", "started_at": "2026-11-02T18:00:00Z"}],
+                     [{"status": "in_progress", "started_at": "2026-11-02T14:30:00Z"},
+                      {"status": "new_unrecognized_state"}],
+                     [{"status": "in_progress", "started_at": "2026-11-02T14:30:00Z"}, {}]):
+            with self.subTest(jobs=jobs), mock.patch.object(sup, "_run_jobs", return_value=jobs):
+                self.assertEqual(sup.stuck_runs(self.now(), rows), [])
 
     def test_a_finished_run_is_never_cancelled(self):
         rows = [{"id": 8, "name": "Produce video", "status": "completed",

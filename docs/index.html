@@ -914,7 +914,10 @@
       hVal.className = "kpi-val " + (t.network_healthy ? "green" : "");
     }
     if (hSub) {
-      hSub.textContent = (t.automations_ok || 0) + " / " + (t.automations_total || 0) + " workflows green · 0 missed cron slots";
+      var stamp = new Date(state.monitor_generated_at || "");
+      var snapshotTime = isNaN(stamp.getTime()) ? "time unknown" :
+        stamp.toLocaleString("en-NG", { timeZone: "Africa/Lagos", dateStyle: "medium", timeStyle: "short" }) + " Nigeria time";
+      hSub.textContent = (t.automations_ok || 0) + " / " + (t.automations_total || 0) + " workflows green · snapshot " + snapshotTime;
     }
   }
 
@@ -932,13 +935,13 @@
 
       var nextParts = [];
       if (ch.next_queued_longform) {
-        var qStatus = ch.next_queued_longform.status === "quota_paused" ? " (resumes 08:00 UTC)" : "";
+        var qStatus = ch.next_queued_longform.status === "quota_paused" ? " (quota paused)" : "";
         nextParts.push("16:9 #" + esc(ch.next_queued_longform.id) + " — " + esc(ch.next_queued_longform.title) + esc(qStatus));
       }
       if (ch.next_queued_short) {
-        nextParts.push("9:16 " + esc(ch.next_queued_short.scripture || ch.next_queued_short.short) + " (" + esc(ch.next_queued_short.target_window_utc) + " UTC)");
+        nextParts.push("9:16 " + esc(ch.next_queued_short.scripture || ch.next_queued_short.short) + " (editorial target; not a scheduled time)");
       }
-      var nextHtml = nextParts.length ? nextParts.join("<br>") : "Brain replenishes at 03:14 UTC";
+      var nextHtml = nextParts.length ? nextParts.join("<br>") : "No queued release in this snapshot";
 
       return (
         '<article class="channel-card ' + dp.cls + '">' +
@@ -952,14 +955,15 @@
             '</div>' +
             '<p class="meta" style="margin:8px 0 10px">' + esc(ch.tagline) + '</p>' +
             '<div class="ch-stat-row">' +
-              '<div><div class="ch-stat-num">' + esc(counts.published_longform || 0) + '</div><div class="ch-stat-lbl">16:9 Live</div></div>' +
-              '<div><div class="ch-stat-num">' + esc(counts.published_shorts || 0) + '</div><div class="ch-stat-lbl">Shorts Live</div></div>' +
-              '<div><div class="ch-stat-num">' + esc((counts.queued_longform || 0) + (counts.queued_shorts || 0)) + '</div><div class="ch-stat-lbl">Armed Queue</div></div>' +
+              '<div><div class="ch-stat-num">' + esc(counts.published_longform || 0) + '</div><div class="ch-stat-lbl">16:9 Receipts</div></div>' +
+              '<div><div class="ch-stat-num">' + esc(counts.published_shorts || 0) + '</div><div class="ch-stat-lbl">Short Receipts</div></div>' +
+              '<div><div class="ch-stat-num">' + esc((counts.queued_longform || 0) + (counts.queued_shorts || 0)) + '</div><div class="ch-stat-lbl">Queued</div></div>' +
+              '<div><div class="ch-stat-num">' + esc(counts.thumbnail_pending == null ? "—" : counts.thumbnail_pending) + '</div><div class="ch-stat-lbl">Pending in Receipts</div></div>' +
             '</div>' +
           '</div>' +
           '<div style="display:flex;flex-direction:column;gap:8px">' +
-            '<div class="ch-box"><strong>Latest Published Master</strong>' + latestHtml + '</div>' +
-            '<div class="ch-box"><strong>Next Armed Release</strong>' + nextHtml + '</div>' +
+            '<div class="ch-box"><strong>Latest Recorded Release</strong>' + latestHtml + '</div>' +
+            '<div class="ch-box"><strong>Queued Candidates (not a schedule)</strong>' + nextHtml + '</div>' +
           '</div>' +
         '</article>'
       );

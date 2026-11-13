@@ -34,6 +34,12 @@ class MetricsPrivacyTests(unittest.TestCase):
         self.assertEqual([row["video_id"] for row in rows], ["public-id"])
         self.assertNotIn("Do not expose this", repr(rows))
 
+    def test_missing_view_count_is_not_exported_as_zero(self) -> None:
+        item = {'id': 'public-id', 'status': {'privacyStatus': 'public'},
+                'snippet': {'title': 'Public', 'publishedAt': '2026-10-01T00:00:00Z'},
+                'statistics': {}}
+        self.assertEqual(_public_video_rows([item], '2026-10-21')[0]['views'], '')
+
     def test_snapshot_retention_is_30_days_and_discards_future_or_invalid_dates(self) -> None:
         today = dt.date(2026, 10, 21)
         rows = [
@@ -46,6 +52,57 @@ class MetricsPrivacyTests(unittest.TestCase):
         kept = _within_retention(rows, today)
 
         self.assertEqual([row["video_id"] for row in kept], ["cutoff"])
+
+class MetricsChannelIdentityTests(unittest.TestCase):
+    def test_matches_expected_channel_without_an_extra_api_request(self):
+        from scripts.metrics_snapshot import _check_snapshot_channel
+        channel = {'id': 'UC-right'}
+        self.assertIs(_check_snapshot_channel([channel], 'UC-right'), channel)
+
+    def test_wrong_missing_or_ambiguous_channel_is_rejected(self):
+        from scripts.metrics_snapshot import _check_snapshot_channel
+        for items, expected in (([{'id': 'UC-wrong'}], 'UC-right'),
+                                ([], 'UC-right'), ([{}], ''),
+                                ([{'id': 'UC-a'}, {'id': 'UC-b'}], '')):
+            with self.subTest(items=items), self.assertRaises(RuntimeError):
+                _check_snapshot_channel(items, expected)
+
+    def test_unconfigured_channel_warns_rather_than_claims_verification(self):
+        from contextlib import redirect_stdout
+        from io import StringIO
+        from scripts.metrics_snapshot import _check_snapshot_channel
+        output = StringIO()
+        with redirect_stdout(output):
+            _check_snapshot_channel([{'id': 'UC-a'}], '')
+        self.assertIn('Channel identity unverified', output.getvalue())
+
+    def test_wrong_channel_aborts_snapshot_before_writing_or_querying_videos(self):
+        from pathlib import Path
+        from tempfile import TemporaryDirectory
+        from unittest import mock
+        from scripts import metrics_snapshot as ms
+        youtube = mock.MagicMock()
+        youtube.channels().list().execute.return_value = {'items': [{'id': 'UC-wrong'}]}
+        with TemporaryDirectory() as tmp, \
+             mock.patch.object(ms, 'CSV_PATH', Path(tmp) / 'metrics.csv'), \
+             mock.patch.multiple(ms.CONFIG, youtube_refresh_token='token', youtube_client_id='id',
+                                 youtube_client_secret='secret', expected_youtube_channel_id='UC-right'), \
+             mock.patch('pipeline.channels.apply_channel_env', return_value='prayer2'), \
+             mock.patch.object(ms, '_credentials', return_value=object()), \
+             mock.patch('googleapiclient.discovery.build', return_value=youtube):
+            self.assertEqual(ms.main([]), 1)
+            self.assertFalse(ms.CSV_PATH.exists())
+            youtube.playlistItems.assert_not_called()
+            youtube.videos.assert_not_called()
+
+    def test_growth_workflow_passes_channel_specific_expected_id(self):
+        import yaml
+        from pathlib import Path
+        data = yaml.safe_load((Path(__file__).resolve().parents[1] / '.github/workflows/growth-autopilot.yml').read_text())
+        expected = data['jobs']['growth']['env']['YOUTUBE_EXPECTED_CHANNEL_ID']
+        self.assertIn('matrix.channel', expected)
+        self.assertIn('YOUTUBE_CHANNEL_ID', expected)
+
 
 class ChannelSubscriberTests(unittest.TestCase):
     def test_public_count_is_reported_without_exporting_other_channel_fields(self):

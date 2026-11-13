@@ -338,6 +338,7 @@ jobs:
           path: |
             output/*/_gemini_chunks_*
             assets/deepdive/short-*.mp3
+            assets/deepdive/short-*.voice.json
             assets/deepdive/words-short-*.json
           key: chunks-tts-v5-${{ matrix.channel }}-${{ github.run_id }}
           restore-keys: |
@@ -536,9 +537,9 @@ jobs:
         # so the retry loop could never win, and a video that was live on the channel
         # left no record in the repo.
         #
-        # The fix is to stop rebasing. Re-point HEAD at the current main, stage our
-        # content/ working tree on top of it, and commit: there is no merge, so there
-        # is no conflict to loop on. Repeat only if main moves underneath us.
+        # Instead of rebasing, check for incompatible path changes before resetting
+        # HEAD to current main and staging this leg's content. Repeat the check on
+        # each retry if main moves underneath us.
         if: ${{ always() && !cancelled() }}
         run: |
           set -e
@@ -556,6 +557,24 @@ jobs:
           fi
           for attempt in 1 2 3 4 5 6; do
             git fetch --quiet origin main
+            # Never replace newer state with this leg's stale working tree. If a
+            # conflict follows an upload, retain the pending files for manual
+            # reconciliation; blindly retrying an upload could duplicate it.
+            if ! python scripts/guard_produce_commit.py --base "$base_ref" --target origin/main \
+                 --touched /tmp/produce-touched.txt --deleted /tmp/produce-deleted.txt; then
+              mkdir -p output/report/content-conflict
+              cp /tmp/produce-touched.txt /tmp/produce-deleted.txt output/report/content-conflict/
+              while IFS= read -r p; do
+                if [ -n "$p" ] && [ -f "$p" ] && [ ! -L "$p" ]; then
+                  resolved="$(realpath -e -- "$p")"
+                  case "$resolved" in "$PWD/content/"*)
+                    cp --parents -- "$p" output/report/content-conflict/ || true ;;
+                  esac
+                fi
+              done < /tmp/produce-touched.txt
+              echo "::error title=Producer state conflict::Content was not committed. Reconcile any uploaded video before retrying; pending files are in the run report."
+              exit 1
+            fi
             git reset --mixed origin/main
             while IFS= read -r p; do
               [ -n "$p" ] && git rm --cached --ignore-unmatch --quiet -- "$p"
@@ -592,6 +611,7 @@ jobs:
           path: |
             output/*/_gemini_chunks_*
             assets/deepdive/short-*.mp3
+            assets/deepdive/short-*.voice.json
             assets/deepdive/words-short-*.json
           key: chunks-tts-v5-${{ matrix.channel }}-${{ github.run_id }}
 

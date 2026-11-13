@@ -19,6 +19,9 @@ venv/
 
 # narration inputs for the deep-dive assembler (voice-00 clips)
 !assets/deepdive/*.mp3
+# Generated narration provenance accompanies cached Shorts audio, not source assets.
+assets/deepdive/short-*.voice.json
+assets/deepdive/words-short-*.alignment.json
 
 # Reproducible original illustrations; rebuild via tools/make_plates.py
 image-search/houston-skyline-plate-*.png

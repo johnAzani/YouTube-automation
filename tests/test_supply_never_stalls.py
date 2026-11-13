@@ -287,6 +287,11 @@ class TestTheDuplicateIsCaughtBeforeTheRender(unittest.TestCase):
                  mock.patch("pipeline.run._require_production_prerequisites",
                             lambda *a, **k: None), \
                  mock.patch("pipeline.run._mark_job_uploaded") as marked, \
+                 mock.patch("pipeline.run.PUBLISHED_DIR", Path(tmp) / "published"), \
+                 mock.patch("pipeline.upload.inspect_existing_longform", return_value={
+                     "video_id": "live123", "privacy_status": "public", "upload_status": "processed",
+                     "published_at": "2026-11-01T12:00:00Z"}), \
+                 mock.patch.object(pp, "_refresh_live_thumbnail"), \
                  mock.patch.object(pp, "OUTPUT_DIR", Path(tmp) / "out"):
                 result = pp.produce(path, dry_run=False, model_dir=Path(tmp))
         self.assertEqual(result["video_id"], "live123")
@@ -294,7 +299,7 @@ class TestTheDuplicateIsCaughtBeforeTheRender(unittest.TestCase):
         self.assertFalse(result["uploaded"])
         marked.assert_called_once()
 
-    def test_the_pre_check_never_blocks_a_release(self):
+    def test_unavailable_duplicate_pre_check_blocks_a_release(self):
         from unittest import mock
 
         from pipeline import prayer_pipeline as pp
@@ -303,7 +308,8 @@ class TestTheDuplicateIsCaughtBeforeTheRender(unittest.TestCase):
             title, slug = "x", "y"
 
         with mock.patch("pipeline.upload._credentials", side_effect=RuntimeError("no creds")):
-            self.assertIsNone(pp.already_published(Doc()))
+            with self.assertRaisesRegex(RuntimeError, 'Cannot verify duplicate status'):
+                pp.already_published(Doc())
 
     def test_it_is_skipped_when_duplicates_are_allowed(self):
         from unittest import mock

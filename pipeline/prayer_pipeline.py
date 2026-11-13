@@ -4,7 +4,7 @@ import importlib.util
 import json
 from pathlib import Path
 
-from .config import CONFIG, OUTPUT_DIR, PUBLISHED_DIR
+from .config import CONFIG, OUTPUT_DIR
 from .script_doc import MIN_LONGFORM_WORDS, MIN_NARRATION_SECONDS, parse_script
 from .originality import enforce
 from .progress import Heartbeat, emit, stage
@@ -12,7 +12,7 @@ from .gemini_client import Deadline, stage_budget_seconds
 from .gemini_tts import DEFAULT_MODEL, get_gemini_api_key, synthesize_gemini_audio
 from .prayer_alignment import align
 from .prayer_visuals import render
-from .tts import _probe_duration, synthesize_edge
+from .tts import _probe_duration
 
 
 def _refresh_live_thumbnail(doc, video_id: str, out_dir: Path) -> str | None:
@@ -56,25 +56,27 @@ def _refresh_live_thumbnail(doc, video_id: str, out_dir: Path) -> str | None:
 def already_published(doc) -> str | None:
     """The existing video id if this exact title is already on the channel.
 
-    Two API units, spent *before* a 25-minute render. On 2 November a video that was
-    already live on the channel sat in the queue as `approved` because the commit
-    that would have recorded it failed; without this check the next release slot
-    would have re-rendered the whole thing from scratch and only then discovered the
-    duplicate.
+    The bounded playlist scan happens *before* synthesis and rendering. If the
+    channel cannot be checked, do not spend speech quota on a take that cannot be
+    safely uploaded; the caller leaves the job in the queue.
     """
     if getattr(CONFIG, "allow_duplicate_uploads", False):
         return None
     try:
         from googleapiclient.discovery import build
 
+        from .metadata import smart_truncate_title
         from .upload import _credentials, check_existing_channel_duplicate
 
         youtube = build("youtube", "v3", credentials=_credentials(), cache_discovery=False)
-        found = check_existing_channel_duplicate(youtube, doc.title, doc.slug)
+        safe_title = smart_truncate_title(doc.title, 95)
+        found = check_existing_channel_duplicate(
+            youtube, safe_title, doc.slug,
+            additional_titles=(doc.title,) if safe_title != doc.title else (),
+        )
         return str(found["id"]) if found else None
-    except Exception as exc:  # noqa: BLE001 - never block a release on a pre-check
-        print(f"[prayer] duplicate pre-check skipped: {exc!r}")
-        return None
+    except Exception as exc:
+        raise RuntimeError("Cannot verify duplicate status before narration; leaving queue unchanged") from exc
 
 
 def record_if_live(path: Path, doc=None) -> dict | None:
@@ -93,16 +95,21 @@ def record_if_live(path: Path, doc=None) -> dict | None:
     existing = already_published(doc)
     if not existing:
         return None
-    print(f"[prayer] {doc.id} is already live as {existing}; recording it instead "
-          f"of re-rendering")
-    _mark_job_uploaded(path, doc, existing)
+    # A title match is not proof of ownership, privacy or publication time.
+    # Keep the queue job intact unless YouTube confirms those facts.
+    from .upload import inspect_existing_longform
+    video = inspect_existing_longform(existing, doc.title)
+    print(f"[prayer] {doc.id} matches an existing video {existing}; recording "
+          f"verified remote facts instead of re-rendering")
+    _mark_job_uploaded(path, doc, existing, recovered_video=video)
     job_dir = OUTPUT_DIR / doc.slug
     job_dir.mkdir(parents=True, exist_ok=True)
     _refresh_live_thumbnail(doc, existing, job_dir)
     result = {'id': doc.id, 'slug': doc.slug, 'video': None, 'thumbnail': None,
               'duration_seconds': None, 'tts_engine': 'none', 'dry_run': False,
               'video_id': existing, 'watch_url': f'https://youtu.be/{existing}',
-              'privacy_status': 'already_published', 'uploaded': False}
+              'privacy_status': 'already_published', 'youtube_privacy_status': video['privacy_status'],
+              'uploaded': False}
     (job_dir / 'job_result.json').write_text(
         json.dumps(result, indent=2), encoding='utf-8')
     return result
@@ -134,43 +141,9 @@ def _write_json(path: Path, payload: dict) -> None:
 
 
 def _narrate(doc, audio: Path) -> str:
-    """Speak the script with Gemini — or, if Gemini declines, with the free engine.
-
-    The prayer path used to call the model directly, with no fallback, and every
-    refusal ended the run with nothing published:
-
-    * a `400` while `google-genai` resolved to an unpinned major (6 November);
-    * `200` with no audio and `mime_types=none` on the 3,870-character first chunk
-      of a 882-word script (six times since 5 November);
-    * `429` once the day's ten requests had been spent by the retries themselves.
-
-    Only the last of those is a quota refusal, and quota stays fail-closed: the
-    channel pauses rather than borrowing another project's allowance. The other two
-    are the model declining to speak, and `pipeline/tts.py` has always known what to
-    do about that — `edge-tts` is free, needs no key, and is already a declared
-    dependency. Falling back to it changes *who* reads the script, not the script,
-    the delivery recipe or the channel's style; being unable to speak at all is the
-    only outcome this path should not have.
-
-    Returns the engine that produced `audio`, so the caller can key the narration
-    cache on it: a fallback take must never be reused by a run that has Gemini.
-    """
-    from .quota_handler import GeminiQuotaExceededError
-
-    try:
-        synthesize_gemini_audio(doc.full_narration, audio, voice='Charon', model=DEFAULT_MODEL)
-        return DEFAULT_MODEL
-    except GeminiQuotaExceededError:
-        emit("gemini speech quota is spent for today — pausing fail-closed; no other "
-             "project's allowance is borrowed")
-        raise
-    except Exception as exc:  # noqa: BLE001 - any other refusal is worth a second engine
-        emit(f"gemini narration produced no audio ({exc}); falling back to the free "
-             f"edge-tts voice")
-
-    engine, _words = synthesize_edge(doc.full_narration, audio, 'Charon', rate='-5%')
-    emit(f"narration engine this run: {engine}")
-    return engine
+    """Use the locked Gemini Charon voice; never substitute another speaker."""
+    synthesize_gemini_audio(doc.full_narration, audio, voice='Charon', model=DEFAULT_MODEL)
+    return DEFAULT_MODEL
 
 
 def _purge_corrupted_speech_artifacts(out_dir: Path) -> None:
@@ -192,7 +165,7 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
     Alignment weights must already be local. This path never uses placeholder,
     alternate-model or non-Charon speech, or a legacy subtitle renderer.
     """
-    from .run import _mark_job_uploaded, _open_release_ticket, _require_production_prerequisites
+    from .run import _existing_published_path, _mark_job_uploaded, _open_release_ticket, _require_production_prerequisites
     from .assets import fetch_scene_assets
     from .metadata import write_metadata_pack
     from .thumbnail_studio import mobile_preview
@@ -217,8 +190,8 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
         # retirement was merged. Fail here instead: a deliberate replacement
         # must retire the record first, and a lost receipt is recovered by
         # record_if_live below (which only runs when no record exists).
-        published_record = PUBLISHED_DIR / Path(path).name
-        if published_record.is_file():
+        published_record = _existing_published_path(path)
+        if published_record:
             raise RuntimeError(
                 f'Published record {published_record} already exists for job '
                 f'{doc.id}; refusing to render or upload a duplicate. If this '
@@ -251,19 +224,25 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
         # model, and how) is what made those takes defective.
         from .gemini_tts import DELIVERY_RECIPE
 
+        import hashlib
+
         speech_key = _fingerprint(DELIVERY_RECIPE, DEFAULT_MODEL, "Charon", doc.full_narration)
         cached = _cached_json(out / 'narration.json', speech_key)
-        if cached and audio.is_file():
+        cached_ok = (cached and cached.get('engine') == DEFAULT_MODEL and
+                     cached.get('voice') == 'Charon' and audio.is_file() and
+                     cached.get('audio_sha256') == hashlib.sha256(audio.read_bytes()).hexdigest())
+        if cached_ok:
             emit(f"reusing narration from the previous attempt ({cached.get('duration', 0):.0f}s)")
-            engine = str(cached.get('engine') or DEFAULT_MODEL)
+            engine = DEFAULT_MODEL
         else:
+            # Even unchanged text may be spoken at different timings on a new take.
+            # Never reuse an alignment produced for the previous audio file.
+            (out / 'words.json').unlink(missing_ok=True)
+            (out / 'narration.json').unlink(missing_ok=True)
             with stage("speech synthesis", f"{doc.word_count} words, Charon"):
                 engine = _narrate(doc, audio)
-            if engine != DEFAULT_MODEL:
-                # Key the take to the engine that actually spoke, so a later run
-                # with Gemini available re-synthesises instead of reusing a voice
-                # the receipt does not claim.
-                speech_key = _fingerprint(DELIVERY_RECIPE, engine, "Charon", doc.full_narration)
+        if engine != DEFAULT_MODEL:
+            raise RuntimeError(f'Refusing narration engine {engine!r}; Gemini Charon is required')
         duration = _probe_duration(audio)
         if duration is None or duration < MIN_NARRATION_SECONDS:
             speaker = "Charon" if engine == DEFAULT_MODEL else engine
@@ -273,7 +252,8 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
                 f'{doc.word_count} words is too short at {speaker}\'s pace — lengthen the script, '
                 f'the floor is {MIN_LONGFORM_WORDS} words.')
         _write_json(out / 'narration.json',
-                    {'key': speech_key, 'duration': duration, 'engine': engine})
+                    {'key': speech_key, 'duration': duration, 'engine': engine,
+                     'voice': 'Charon', 'audio_sha256': hashlib.sha256(audio.read_bytes()).hexdigest()})
 
         align_key = _fingerprint("align-v1", speech_key, duration)
         cached_words = _cached_json(out / 'words.json', align_key)
@@ -284,33 +264,11 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
             try:
                 with stage("speech alignment", f"{duration:.0f}s of audio"):
                     words = align(audio, doc.full_narration, Path(model_dir))
-            except ValueError as align_exc:
-                # Corrupted/hallucinated TTS audio failed the >=85% word-match gate.
-                # Purge narration + _gemini_chunks_* immediately so CI never caches
-                # poisoned chunks across retries, and fall back to neural edge-tts.
+            except ValueError:
+                # Never publish a take whose spoken words failed alignment. Remove
+                # the cached chunks so a later retry cannot reuse poisoned audio.
                 _purge_corrupted_speech_artifacts(out)
-                if engine != DEFAULT_MODEL:
-                    raise
-                emit(f"gemini audio failed alignment ({align_exc}); purged bad chunks "
-                     f"and falling back to free edge-tts voice")
-                with stage("speech synthesis (fallback)", f"{doc.word_count} words, edge-tts"):
-                    engine, _ = synthesize_edge(doc.full_narration, audio, 'Charon', rate='-5%')
-                duration = _probe_duration(audio)
-                if duration is None or duration < MIN_NARRATION_SECONDS:
-                    raise RuntimeError(
-                        f'Fallback {engine} narration is {duration or 0:.0f}s; minimum is '
-                        f'{MIN_NARRATION_SECONDS}s.'
-                    ) from align_exc
-                speech_key = _fingerprint(DELIVERY_RECIPE, engine, "Charon", doc.full_narration)
-                _write_json(out / 'narration.json',
-                            {'key': speech_key, 'duration': duration, 'engine': engine})
-                align_key = _fingerprint("align-v1", speech_key, duration)
-                try:
-                    with stage("speech alignment (fallback)", f"{duration:.0f}s of audio"):
-                        words = align(audio, doc.full_narration, Path(model_dir))
-                except ValueError:
-                    _purge_corrupted_speech_artifacts(out)
-                    raise
+                raise
             _write_json(out / 'words.json', {'key': align_key, 'words': [list(w) for w in words]})
         boundaries = [0.0]
         count = 0
@@ -380,7 +338,19 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
             if not up.video_id:
                 raise RuntimeError('YouTube returned no video ID; queue unchanged')
             # Persist the receipt before any nonessential notification.
-            _mark_job_uploaded(path, doc, up.video_id)
+            # A duplicate-prevented upload points to an existing video. The take
+            # rendered here did not produce it, so do not invent its voice or claim
+            # that this attempt applied a thumbnail.
+            is_new_upload = up.privacy_status != 'duplicate_prevented'
+            recovered_video = None
+            if not is_new_upload:
+                from .upload import inspect_existing_longform
+                recovered_video = inspect_existing_longform(up.video_id, doc.title)
+            _mark_job_uploaded(path, doc, up.video_id,
+                               getattr(up, 'thumbnail_status', 'not_requested') if is_new_upload else 'not_requested',
+                               narration_engine=engine if is_new_upload else None,
+                               narration_voice='Charon' if is_new_upload else None,
+                               recovered_video=recovered_video)
             result.update(video_id=up.video_id, watch_url=up.watch_url,
                           privacy_status=up.privacy_status, uploaded=up.privacy_status != 'duplicate_prevented')
             if result['uploaded']:

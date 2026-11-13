@@ -86,6 +86,17 @@ class ProductionSafetyTests(unittest.TestCase):
         self.assertIn('thumbnail_revision: "ctr-v3-cinema"', applied)
         self.assertNotIn("thumbnail_pending", applied)
 
+    def test_receipt_records_only_supplied_narration_provenance(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            queue_path = Path(tmp) / 'job.md'
+            queue_path.write_text('---\nstatus: approved\n---\nbody\n', encoding='utf-8')
+            with patch('pipeline.run.PUBLISHED_DIR', Path(tmp) / 'published'):
+                dest = _mark_job_uploaded(queue_path, self.approved_doc, 'video-123', 'ok',
+                                          narration_engine='gemini-3.8-flash-tts', narration_voice='Charon')
+            text = dest.read_text(encoding='utf-8')
+            self.assertIn('narration_engine: "gemini-3.8-flash-tts"', text)
+            self.assertIn('narration_voice: "Charon"', text)
+
     def test_refused_thumbnail_keeps_the_video_queued_for_repair(self):
         refused = self._stamp("failed: HttpError 403 insufficientPermissions")
         self.assertNotIn("thumbnail_revision", refused)

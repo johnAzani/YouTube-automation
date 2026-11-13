@@ -7,5 +7,5 @@ renderer_ready: true
 authored_by_brain: false
 privacy: public
 replace: false
-target_window_utc: 18:44
+target_window_utc: '18:44'
 notes: Companion Short seeded for the channel launch queue.

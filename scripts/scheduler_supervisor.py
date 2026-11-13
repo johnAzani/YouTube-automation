@@ -77,21 +77,12 @@ SCHEDULE_HEALTH = ROOT / "content" / "monitor" / "schedule-health.json"
 # workflow from hammering the queue every fifteen minutes.
 MAX_ATTEMPTS_PER_SLOT = 3
 
-# A run whose runner has died holds the `content-state` lock forever, and a wedged
-# run does not enforce its own timeouts: on 2 November a produce run sat
-# `in_progress` for two and a half hours past both its 90-minute step cap and its
-# 120-minute job cap. Everything else that writes content/ queued behind it,
-# including this supervisor and the monitor — the watchers were stuck behind the
-# thing they exist to catch. So the supervisor cancels them.
-# The cap must sit ABOVE the longest step a healthy release can legitimately be
-# inside, or the supervisor becomes the thing that kills the release. It was 120
-# minutes while produce's long-form step was allowed 170: on 3 November run
-# 41540026963 was rendering at minute 167 and this cancelled it — silently, as
-# `cancelled`, with the video still unpublished and nothing filed. Three nights in
-# a row, the outer guard won and the inner guard never got its 170 minutes.
-# 200 (+10 grace = 210) stays inside produce's own 240-minute job cap, so a truly
-# wedged run is still cancelled before the runner gives up on it.
-JOB_CAP = timedelta(minutes=200)
+# A whole workflow run may contain ten sequential channel jobs. Its age is not a
+# job timeout: cancelling at 210 minutes interrupted healthy late matrix legs.
+# Produce's per-job timeout is 240 minutes; wait an additional 10 minutes and
+# inspect every active job before considering a cancellation. Unknown job state is
+# never evidence that an upload is safe to cancel.
+JOB_CAP = timedelta(minutes=240)
 STUCK_GRACE = timedelta(minutes=10)
 
 NEVER_DISPATCH = {"monitor.yml", "automation-health.yml", "scheduler-supervisor.yml",
@@ -612,35 +603,79 @@ def dispatch(
     return False, (proc.stderr or proc.stdout or "gh workflow run failed").strip()[:200]
 
 
-def stuck_runs(now: datetime | None = None, runs=None) -> list[dict]:
-    """Runs that are `in_progress` well past the cap their workflow declares.
+def _run_jobs(run_id: int) -> list[dict] | None:
+    """Read all job pages; an API failure must not trigger cancellation."""
+    from scripts.automation_monitor import repo_slug
 
-    Only timed-out-by-wall-clock counts: a run that is genuinely working reports
-    step progress, but GitHub's API does not expose that cheaply, so the test is
-    the job cap plus a grace period. Ten minutes of grace is enough that a long
-    step which is about to finish is not killed underneath itself.
+    try:
+        proc = subprocess.run(
+            ["gh", "api", "--paginate", "--slurp",
+             f"repos/{repo_slug()}/actions/runs/{run_id}/jobs?per_page=100"],
+            capture_output=True, text=True, cwd=ROOT, timeout=60,
+        )
+        if proc.returncode:
+            raise RuntimeError(proc.stderr.strip() or "GitHub jobs API failed")
+        pages = json.loads(proc.stdout)
+        if not isinstance(pages, list) or any(not isinstance(p, dict) or
+                not isinstance(p.get("jobs"), list) or
+                any(not isinstance(job, dict) for job in p["jobs"]) for p in pages):
+            raise ValueError("invalid GitHub jobs response")
+        return [job for page in pages for job in page["jobs"]]
+    except (OSError, subprocess.TimeoutExpired, ValueError, RuntimeError) as exc:
+        print(f"[supervisor] cannot inspect jobs for run {run_id}; not cancelling: {exc}")
+        return None
+
+
+def stuck_runs(now: datetime | None = None, runs=None) -> list[dict]:
+    """Find production runs with all active jobs beyond their job timeout.
+
+    GitHub can report a matrix workflow as queued even while a job is running.
+    Do not infer a hung job from the workflow's age or a missing jobs response.
+    A run with another fresh or undated active job is never cancelled.
     """
     now = now or datetime.now(timezone.utc)
     payload = runs if runs is not None else _safe_runs()
     rows = payload.get("workflow_runs", payload) if isinstance(payload, dict) else payload
     out = []
     for run in rows or []:
-        if str(run.get("status")) != "in_progress":
+        name = (run.get("name") or "").strip()
+        path = (run.get("path") or "").split("/")[-1]
+        if path != "produce.yml" and not (not path and name == "Produce video"):
+            continue  # other workflows have different job timeouts and matrices
+        if str(run.get("status")) not in {"queued", "in_progress"} or not run.get("id"):
             continue
-        created = run.get("run_started_at") or run.get("created_at")
-        if not created:
-            continue
+        started = run.get("run_started_at") or run.get("created_at")
         try:
-            started = datetime.fromisoformat(str(created).replace("Z", "+00:00"))
-        except ValueError:
+            run_started = datetime.fromisoformat(str(started).replace("Z", "+00:00"))
+            if run_started.tzinfo is None or now - run_started <= JOB_CAP + STUCK_GRACE:
+                continue
+        except (TypeError, ValueError):
             continue
-        if now - started > JOB_CAP + STUCK_GRACE:
-            out.append({
-                "id": run.get("id"),
-                "workflow": (run.get("name") or "").strip(),
-                "started": started.isoformat(),
-                "minutes": int((now - started).total_seconds() // 60),
-            })
+        jobs = _run_jobs(run["id"])
+        if jobs is None:
+            continue
+        # Unknown states must not be ignored while deciding to cancel an entire
+        # matrix run: they may represent a job which is still doing useful work.
+        known_statuses = {"queued", "in_progress", "completed", "waiting", "requested", "pending"}
+        if any(job.get("status") not in known_statuses for job in jobs):
+            continue
+        active = [job for job in jobs if job.get("status") == "in_progress"]
+        if not active:
+            continue
+        starts = []
+        for job in active:
+            try:
+                stamp = datetime.fromisoformat(str(job.get("started_at", "")).replace("Z", "+00:00"))
+                if stamp.tzinfo is None:
+                    raise ValueError("missing timezone")
+                starts.append(stamp)
+            except (TypeError, ValueError):
+                break
+        if len(starts) != len(active) or any(now - stamp <= JOB_CAP + STUCK_GRACE for stamp in starts):
+            continue
+        oldest = min(starts)
+        out.append({"id": run["id"], "workflow": name, "started": oldest.isoformat(),
+                    "minutes": int((now - oldest).total_seconds() // 60)})
     return out
 
 
