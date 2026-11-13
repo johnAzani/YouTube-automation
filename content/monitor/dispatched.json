@@ -1,12 +1,405 @@
 {
-  "produce.yml@2026-11-12T14:14:00+00:00": {
-    "at": "2026-11-12T14:50:00+00:00",
+  "comments.yml@2026-11-02T07:14:00+00:00": {
+    "at": "2026-11-02T08:44:44.213375+00:00",
+    "result": "dispatched"
+  },
+  "comments.yml@2026-11-02T19:14:00+00:00": {
+    "at": "2026-11-02T21:48:56.787290+00:00",
+    "attempts": 1,
+    "result": "dispatched"
+  },
+  "comments.yml@2026-11-03T07:14:00+00:00": {
+    "at": "2026-11-03T08:51:17.249055+00:00",
+    "attempts": 1,
+    "result": "dispatched"
+  },
+  "comments.yml@2026-11-03T15:14:00+00:00": {
+    "at": "2026-11-03T18:32:27.402954+00:00",
+    "attempts": 1,
+    "result": "dispatched"
+  },
+  "comments.yml@2026-11-03T19:14:00+00:00": {
+    "at": "2026-11-03T20:46:58.170855+00:00",
+    "attempts": 1,
+    "result": "dispatched"
+  },
+  "comments.yml@2026-11-04T19:14:00+00:00": {
+    "at": "2026-11-04T20:54:07.147339+00:00",
+    "attempts": 1,
+    "result": "dispatched"
+  },
+  "comments.yml@2026-11-05T07:14:00+00:00": {
+    "at": "2026-11-05T09:39:11.955263+00:00",
+    "attempts": 1,
+    "result": "dispatched"
+  },
+  "comments.yml@2026-11-06T15:14:00+00:00": {
+    "at": "2026-11-06T16:50:14.453226+00:00",
+    "attempts": 1,
+    "code_id": "7c69ac52d707ab76",
+    "result": "dispatched"
+  },
+  "comments.yml@2026-11-06T19:14:00+00:00": {
+    "at": "2026-11-06T20:48:04.139011+00:00",
+    "attempts": 1,
+    "code_id": "7c69ac52d707ab76",
+    "result": "dispatched"
+  },
+  "comments.yml@2026-11-07T07:14:00+00:00": {
+    "at": "2026-11-07T08:44:33.577019+00:00",
+    "attempts": 1,
+    "code_id": "91c020710843742a",
+    "result": "dispatched"
+  },
+  "comments.yml@2026-11-07T15:14:00+00:00": {
+    "at": "2026-11-07T17:16:24.092163+00:00",
+    "attempts": 1,
+    "code_id": "adf4168193f7a52b",
+    "result": "dispatched"
+  },
+  "comments.yml@2026-11-08T07:14:00+00:00": {
+    "at": "2026-11-08T08:59:49.602815+00:00",
+    "attempts": 1,
+    "code_id": "2eb304626e870b90",
+    "result": "dispatched"
+  },
+  "comments.yml@2026-11-08T15:14:00+00:00": {
+    "at": "2026-11-08T18:05:37.984042+00:00",
+    "attempts": 1,
+    "code_id": "2eb304626e870b90",
+    "result": "dispatched"
+  },
+  "comments.yml@2026-11-09T07:14:00+00:00": {
+    "at": "2026-11-09T09:47:05.035542+00:00",
+    "attempts": 1,
+    "code_id": "d6226998a5822b79",
+    "result": "dispatched"
+  },
+  "comments.yml@2026-11-09T15:14:00+00:00": {
+    "at": "2026-11-09T17:07:08.564246+00:00",
+    "attempts": 1,
+    "code_id": "a7d25f11be45b78f",
+    "result": "dispatched"
+  },
+  "comments.yml@2026-11-09T19:14:00+00:00": {
+    "at": "2026-11-09T22:37:09.344230+00:00",
+    "attempts": 1,
+    "code_id": "a7d25f11be45b78f",
+    "result": "dispatched"
+  },
+  "comments.yml@2026-11-10T07:14:00+00:00": {
+    "at": "2026-11-11T02:04:11.507720+00:00",
+    "attempts": 1,
+    "code_id": "30c8aeef28d14270",
+    "result": "dispatched"
+  },
+  "comments.yml@2026-11-11T07:14:00+00:00": {
+    "at": "2026-11-11T09:25:38.668471+00:00",
+    "attempts": 1,
+    "code_id": "8d0f8643eddb8cf5",
+    "result": "dispatched"
+  },
+  "comments.yml@2026-11-11T15:14:00+00:00": {
+    "at": "2026-11-11T17:20:03.403740+00:00",
+    "attempts": 1,
+    "code_id": "29e7188fa43cf03b",
+    "result": "dispatched"
+  },
+  "comments.yml@2026-11-12T07:14:00+00:00": {
+    "at": "2026-11-12T09:52:25.849263+00:00",
+    "attempts": 1,
+    "code_id": "8dc0876c60dac077",
+    "result": "dispatched"
+  },
+  "comments.yml@2026-11-13T07:14:00+00:00": {
+    "at": "2026-11-13T08:44:29.683503+00:00",
+    "attempts": 1,
+    "code_id": "2093430fdbdb664a",
+    "result": "dispatched"
+  },
+  "community.yml@2026-11-04T19:14:00+00:00": {
+    "at": "2026-11-04T21:22:34.480686+00:00",
+    "attempts": 3,
+    "result": "dispatched"
+  },
+  "community.yml@2026-11-08T19:14:00+00:00": {
+    "at": "2026-11-08T21:15:28.353220+00:00",
+    "attempts": 1,
+    "code_id": "829eb19e0c3d8bda",
+    "result": "dispatched"
+  },
+  "community.yml@2026-11-11T19:14:00+00:00": {
+    "at": "2026-11-11T22:07:04.639715+00:00",
+    "attempts": 1,
+    "code_id": "26b862e5d3afe271",
+    "result": "dispatched"
+  },
+  "gemini_brain.yml@2026-11-02T03:14:00+00:00": {
+    "at": "2026-11-02T07:59:04.389659+00:00",
+    "result": "dispatched"
+  },
+  "gemini_brain.yml@2026-11-03T03:14:00+00:00": {
+    "at": "2026-11-03T06:30:43.395046+00:00",
+    "attempts": 2,
+    "result": "dispatched"
+  },
+  "gemini_brain.yml@2026-11-04T03:14:00+00:00": {
+    "at": "2026-11-04T05:08:52.809030+00:00",
+    "attempts": 1,
+    "result": "dispatched"
+  },
+  "gemini_brain.yml@2026-11-05T03:14:00+00:00": {
+    "at": "2026-11-05T08:34:25.623937+00:00",
+    "attempts": 1,
+    "result": "dispatched"
+  },
+  "gemini_brain.yml@2026-11-06T03:14:00+00:00": {
+    "at": "2026-11-06T14:02:15.022215+00:00",
+    "attempts": 1,
+    "code_id": "c07d960da88268e7",
+    "result": "dispatched"
+  },
+  "gemini_brain.yml@2026-11-07T03:14:00+00:00": {
+    "at": "2026-11-07T15:34:52.378980+00:00",
+    "attempts": 3,
+    "code_id": "fd6153ee05b44ca0",
+    "result": "dispatched"
+  },
+  "gemini_brain.yml@2026-11-08T03:14:00+00:00": {
+    "at": "2026-11-08T04:49:22.532473+00:00",
+    "attempts": 1,
+    "code_id": "c9f82efde41560f0",
+    "result": "dispatched"
+  },
+  "gemini_brain.yml@2026-11-09T03:14:00+00:00": {
+    "at": "2026-11-09T07:11:30.325867+00:00",
+    "attempts": 1,
+    "code_id": "67abb9b8f443e705",
+    "result": "dispatched"
+  },
+  "gemini_brain.yml@2026-11-10T03:14:00+00:00": {
+    "at": "2026-11-10T05:25:06.425208+00:00",
+    "attempts": 1,
+    "code_id": "df111fd069185a41",
+    "result": "dispatched"
+  },
+  "gemini_brain.yml@2026-11-11T03:14:00+00:00": {
+    "at": "2026-11-11T06:49:32.700180+00:00",
+    "attempts": 1,
+    "code_id": "650d6bc0862feeaf",
+    "result": "dispatched"
+  },
+  "gemini_brain.yml@2026-11-12T03:14:00+00:00": {
+    "at": "2026-11-12T05:18:31.200229+00:00",
+    "attempts": 1,
+    "code_id": "9da7e8bc58c4fe04",
+    "result": "dispatched"
+  },
+  "gemini_brain.yml@2026-11-13T03:14:00+00:00": {
+    "at": "2026-11-13T06:58:27.600733+00:00",
+    "attempts": 1,
+    "code_id": "e960e46c9fea912f",
+    "result": "dispatched"
+  },
+  "growth-autopilot.yml@2026-11-06T02:14:00+00:00": {
+    "at": "2026-11-06T08:00:29.583521+00:00",
+    "attempts": 1,
+    "result": "dispatched"
+  },
+  "growth-autopilot.yml@2026-11-07T02:14:00+00:00": {
+    "at": "2026-11-07T04:09:38.255930+00:00",
+    "attempts": 1,
+    "code_id": "3715ede43481fbea",
+    "result": "dispatched"
+  },
+  "growth-autopilot.yml@2026-11-08T02:14:00+00:00": {
+    "at": "2026-11-08T04:37:32.581729+00:00",
+    "attempts": 1,
+    "code_id": "c6d9035576d852c5",
+    "result": "dispatched"
+  },
+  "growth-autopilot.yml@2026-11-09T02:14:00+00:00": {
+    "at": "2026-11-09T07:11:30.325867+00:00",
+    "attempts": 1,
+    "code_id": "5d52c991e49f3d80",
+    "result": "dispatched"
+  },
+  "growth-autopilot.yml@2026-11-10T02:14:00+00:00": {
+    "at": "2026-11-10T03:49:08.203660+00:00",
+    "attempts": 1,
+    "code_id": "c0d7967a733a5d75",
+    "result": "dispatched"
+  },
+  "growth-autopilot.yml@2026-11-11T02:14:00+00:00": {
+    "at": "2026-11-11T06:49:32.700180+00:00",
+    "attempts": 1,
+    "code_id": "44b4f6bdc30924aa",
+    "result": "dispatched"
+  },
+  "growth-autopilot.yml@2026-11-12T02:14:00+00:00": {
+    "at": "2026-11-12T05:18:31.200229+00:00",
+    "attempts": 1,
+    "code_id": "111708e28f906b6e",
+    "result": "dispatched"
+  },
+  "growth-autopilot.yml@2026-11-13T02:14:00+00:00": {
+    "at": "2026-11-13T06:58:27.600733+00:00",
+    "attempts": 1,
+    "code_id": "e8368291eadec347",
+    "result": "dispatched"
+  },
+  "keepalive.yml@2026-11-02T03:23:00+00:00": {
+    "at": "2026-11-02T07:59:04.389659+00:00",
+    "result": "dispatched"
+  },
+  "keepalive.yml@2026-11-09T03:23:00+00:00": {
+    "at": "2026-11-09T07:11:30.325867+00:00",
+    "attempts": 1,
+    "code_id": "5a2f6f5da58c9fd2",
+    "result": "dispatched"
+  },
+  "produce.yml@2026-11-02T06:14:00+00:00": {
+    "at": "2026-11-02T10:47:51.123145+00:00",
+    "attempts": 3,
+    "result": "dispatched"
+  },
+  "produce.yml@2026-11-03T14:14:00+00:00": {
+    "at": "2026-11-03T19:55:39.843400+00:00",
+    "attempts": 3,
+    "result": "dispatched"
+  },
+  "produce.yml@2026-11-05T06:14:00+00:00": {
+    "at": "2026-11-05T09:41:38.939834+00:00",
+    "attempts": 3,
+    "result": "dispatched"
+  },
+  "produce.yml@2026-11-06T06:14:00+00:00": {
+    "at": "2026-11-06T08:31:14.210007+00:00",
+    "attempts": 5,
+    "result": "dispatched secret-place; prayer2 next pass (content-state takes one pending run)"
+  },
+  "produce.yml@2026-11-07T06:14:00+00:00": {
+    "at": "2026-11-07T09:12:53.163919+00:00",
+    "attempts": 3,
+    "code_id": "80c28bf06058d1b0",
+    "result": "dispatched secret-place; prayer2, prayer3 next pass (content-state takes one pending run)"
+  },
+  "produce.yml@2026-11-07T14:14:00+00:00": {
+    "at": "2026-11-07T18:18:12.760496+00:00",
     "attempted_channels": [
-      "prayer4",
-      "prayer7"
+      "prayer2",
+      "prayer3",
+      "prayer3",
+      "prayer3"
+    ],
+    "attempts": 4,
+    "code_id": "4a337a8b96714819",
+    "result": "dispatched prayer3"
+  },
+  "produce.yml@2026-11-08T06:14:00+00:00": {
+    "at": "2026-11-08T10:28:33.738650+00:00",
+    "attempted_channels": [
+      "secret-place",
+      "prayer2"
+    ],
+    "attempts": 2,
+    "code_id": "ec8e29d767246275",
+    "result": "dispatched prayer2; prayer3, secret-place next pass (content-state takes one pending run)"
+  },
+  "produce.yml@2026-11-08T14:14:00+00:00": {
+    "at": "2026-11-08T18:05:37.984042+00:00",
+    "attempted_channels": [
+      "prayer2"
     ],
     "attempts": 1,
-    "code_id": "7e872ff7b85b13ba",
-    "result": "dispatched prayer4, prayer7; prayer2 left out (already tried 2x)"
+    "code_id": "ec8e29d767246275",
+    "result": "dispatched prayer2"
+  },
+  "produce.yml@2026-11-09T06:14:00+00:00": {
+    "at": "2026-11-09T11:37:47.372422+00:00",
+    "attempted_channels": [
+      "secret-place",
+      "prayer2"
+    ],
+    "attempts": 2,
+    "code_id": "f5b9bb220816eaf7",
+    "result": "dispatched prayer2; prayer3, secret-place next pass (content-state takes one pending run)"
+  },
+  "produce.yml@2026-11-09T14:14:00+00:00": {
+    "at": "2026-11-09T20:06:34.338697+00:00",
+    "attempted_channels": [
+      "secret-place",
+      "prayer2"
+    ],
+    "attempts": 2,
+    "code_id": "84f07bea54a1c8bc",
+    "result": "dispatched prayer2"
+  },
+  "produce.yml@2026-11-09T19:14:00+00:00": {
+    "at": "2026-11-09T22:37:09.344230+00:00",
+    "attempted_channels": [
+      "prayer3"
+    ],
+    "attempts": 1,
+    "code_id": "84f07bea54a1c8bc",
+    "result": "dispatched prayer3"
+  },
+  "produce.yml@2026-11-10T06:14:00+00:00": {
+    "at": "2026-11-10T11:41:05.181860+00:00",
+    "attempted_channels": [
+      "secret-place",
+      "prayer2",
+      "prayer3"
+    ],
+    "attempts": 3,
+    "code_id": "7b933e470b610f27",
+    "result": "dispatched prayer3; prayer4, prayer5, secret-place next pass (content-state takes one pending run)"
+  },
+  "produce.yml@2026-11-10T14:14:00+00:00": {
+    "at": "2026-11-10T20:01:58.754837+00:00",
+    "attempted_channels": [
+      "secret-place",
+      "prayer5",
+      "prayer6",
+      "prayer5"
+    ],
+    "attempts": 4,
+    "code_id": "3784c2fd0bb084db",
+    "result": "dispatched prayer5; prayer6 next pass (content-state takes one pending run)"
+  },
+  "produce.yml@2026-11-11T06:14:00+00:00": {
+    "at": "2026-11-11T11:48:12.697050+00:00",
+    "attempted_channels": [
+      "secret-place",
+      "prayer2",
+      "prayer3",
+      "prayer4",
+      "prayer5"
+    ],
+    "attempts": 5,
+    "code_id": "f7fb1481b50d9c93",
+    "result": "dispatched prayer5; prayer6, prayer8, prayer3 next pass (content-state takes one pending run)"
+  },
+  "produce.yml@2026-11-11T14:14:00+00:00": {
+    "at": "2026-11-11T19:03:18.494879+00:00",
+    "attempted_channels": [
+      "secret-place",
+      "prayer2",
+      "prayer3"
+    ],
+    "attempts": 3,
+    "code_id": "71c5bc8e8072adcf",
+    "result": "dispatched prayer3; prayer4, prayer7, prayer8 next pass (content-state takes one pending run)"
+  },
+  "produce.yml@2026-11-12T06:14:00+00:00": {
+    "at": "2026-11-12T11:14:48.891189+00:00",
+    "attempted_channels": [
+      "secret-place",
+      "prayer2",
+      "prayer3"
+    ],
+    "attempts": 3,
+    "code_id": "00f2042d0e5a5966",
+    "result": "dispatched prayer3; prayer4, prayer5, prayer6, prayer8, secret-place next pass (content-state takes one pending run)"
   }
 }

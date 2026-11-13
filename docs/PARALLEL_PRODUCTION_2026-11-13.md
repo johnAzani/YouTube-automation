@@ -124,6 +124,7 @@ were isolated and a concurrent rehearsal existed. Each point, and what was found
 | Stock asset cache | One cache key for all legs. A hit is never re-saved, so legs do not overwrite each other; after a code change several legs may try to save the same key and all but one log a warning. | `produce.yml` cache steps |
 | GitHub limits | 20 concurrent jobs on the Free plan, 256 matrix jobs per run, 6 hours per job, runners free on a public repository. Five or ten lanes fit. | GitHub "Actions limits" |
 | Does the lane setting work on this repository | Yes. A throwaway workflow with the identical expression and a value of 2 ran legs a and b together, then c and d. | run 43410965566 |
+| Does the plan job see receipts published while its run waited | Yes, once it checks out the branch tip. A throwaway run created at commit `5904a11` checked out `f54375c`, pushed 12 seconds later. Without the explicit ref it is pinned to the creation commit. | run 43412594151 |
 
 **What this does not solve.** If a leg dies after YouTube accepts an upload and
 before the receipt is committed, the next run relies on the title check to avoid

@@ -353,8 +353,14 @@ def test_the_supervisor_records_every_channel_it_sent(tmp_path):
          mock.patch.object(sup, "_channel_has_supply", return_value=True), \
          mock.patch("scripts.automation_monitor.active_quota_cooldown", return_value=None), \
          mock.patch.object(sup, "published_channels_since", return_value=set()), \
-         mock.patch.object(sup, "dispatch", side_effect=fake_dispatch):
+         mock.patch.object(sup, "dispatch", side_effect=fake_dispatch), \
+         mock.patch.object(sup, "save_state") as ledger, \
+         mock.patch.object(sup, "save_schedule_health"), \
+         mock.patch.object(sup, "cancel_run") as cancel:
+        # A real pass writes content/monitor/*.json; the test must not.
         out = sup.supervise(now, _history(now), dry_run=False, state=state)
+    ledger.assert_called_once_with(state)
+    cancel.assert_not_called()
     produce = [row for row in out["dispatched"] if row["workflow"] == "produce.yml"]
     assert len(produce) == 1, out
     entry = state["produce.yml@2026-11-12T14:14:00+00:00"]
