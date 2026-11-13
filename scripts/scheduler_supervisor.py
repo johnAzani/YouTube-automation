@@ -42,6 +42,18 @@ STATE = ROOT / "content" / "monitor" / "dispatched.json"
 # minutes late, so anything shorter races it and risks a *duplicate* run — which for
 # produce.yml means a duplicate upload.
 DISPATCH_AFTER = timedelta(minutes=90)
+# Production no longer has that risk, so it does not wait that long. The plan job
+# of produce.yml drops every channel that already has a receipt for the slot
+# (scripts/produce_plan.py), and `content-state` runs one production at a time, so
+# a schedule event that arrives after this dispatch finds its channels served and
+# publishes nothing twice. Meanwhile GitHub delivered production's schedule event
+# 34 to 423 minutes late over 8-13 November (median about 218): waiting 90 minutes
+# for an event that has never once arrived inside 34 only made every video later.
+PRODUCE_DISPATCH_AFTER = timedelta(minutes=30)
+# One dispatch now carries every channel that still owes the slot a video, so a
+# channel that keeps failing is tried this many times per slot and then left for
+# the next slot instead of being re-dispatched on every pass.
+PRODUCE_ATTEMPTS_PER_CHANNEL = 2
 # How long a dropped slot stays worth recovering. This used to be a flat 6 hours for
 # every workflow, and that single constant is why the night of 5-6 November published
 # nothing: measured over 1-6 November, this repo's scheduled runs land a median of
@@ -77,7 +89,7 @@ SCHEDULE_HEALTH = ROOT / "content" / "monitor" / "schedule-health.json"
 # workflow from hammering the queue every fifteen minutes.
 MAX_ATTEMPTS_PER_SLOT = 3
 
-# A whole workflow run may contain ten sequential channel jobs. Its age is not a
+# A whole workflow run may contain ten channel jobs, some waiting for a lane. Its age is not a
 # job timeout: cancelling at 210 minutes interrupted healthy late matrix legs.
 # Produce's per-job timeout is 240 minutes; wait an additional 10 minutes and
 # inspect every active job before considering a cancellation. Unknown job state is
@@ -102,6 +114,11 @@ def load_state() -> dict:
 def save_state(state: dict) -> None:
     STATE.parent.mkdir(parents=True, exist_ok=True)
     STATE.write_text(json.dumps(state, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+
+def _dispatch_after(workflow: str) -> timedelta:
+    """How long after a slot was due the supervisor steps in for `workflow`."""
+    return PRODUCE_DISPATCH_AFTER if workflow == "produce.yml" else DISPATCH_AFTER
 
 
 def _attempt_cap(workflow: str) -> int:
@@ -290,7 +307,7 @@ def due_but_missing(now: datetime | None = None,
         slot = prev_occurrence(crons, now)
         if slot is None:
             continue
-        if now < slot + DISPATCH_AFTER:
+        if now < slot + _dispatch_after(filename):
             continue
         if now > slot + _slot_window(filename, crons, slot):
             continue
@@ -494,7 +511,7 @@ def _failed_dispatches(state: dict, latest: dict[str, tuple[datetime, str | None
             dispatched_at = datetime.fromisoformat(entry.get("at", ""))
         except (TypeError, ValueError):
             continue
-        if now < slot_at + DISPATCH_AFTER:
+        if now < slot_at + _dispatch_after(workflow):
             continue
         if now > slot_at + _slot_window(workflow, crons_by_workflow.get(workflow, []), slot_at):
             continue
@@ -560,14 +577,16 @@ def dispatch(
 
     ``produce.yml`` is special in three ways:
 
-    1. **One channel per dispatch.** Legs share ``content-state``, which allows
-       only one pending run at a time.
+    1. **One dispatch for every channel that owes the slot a video.** The run
+       renders them side by side (``channels=a,b,c``). It used to be one channel
+       per dispatch because ``content-state`` holds a single pending run, which
+       made recovering ten channels ten runs in a row.
     2. **Receipts, not runs, decide.** `published_channels_since()` is the only
        evidence that a channel's video exists.
     3. **Per-channel supply, quota isolation, and rotation.** Channels with no
        queued content or in active quota cooldown are skipped, and unattempted
-       channels go ahead of previously attempted ones so a failing first channel
-       never starves the rest.
+       channels go ahead of previously attempted ones. A channel already tried
+       ``PRODUCE_ATTEMPTS_PER_CHANNEL`` times for this slot is left out.
     """
     if workflow == "produce.yml":
         if slot:
@@ -584,16 +603,20 @@ def dispatch(
         )
         if not missing:
             return True, "every servable channel already published (or in quota cooldown) for this slot"
-        channel = missing[0]
+        prior = list(attempted or ())
+        batch = [c for c in missing if prior.count(c) < PRODUCE_ATTEMPTS_PER_CHANNEL]
+        if not batch:
+            return True, ("nothing dispatched: " + ", ".join(missing) + " already tried "
+                          f"{PRODUCE_ATTEMPTS_PER_CHANNEL}x for this slot")[:300]
         proc = subprocess.run(
-            ["gh", "workflow", "run", workflow, "-f", f"channel={channel}"],
+            ["gh", "workflow", "run", workflow, "-f", f"channels={','.join(batch)}"],
             capture_output=True, text=True, cwd=ROOT, timeout=120,
         )
         if proc.returncode == 0:
-            rest = [c for c in missing[1:]]
-            note = f"dispatched {channel}"
-            if rest:
-                note += f"; {', '.join(rest)} next pass (content-state takes one pending run)"
+            note = f"dispatched {', '.join(batch)}"
+            left = [c for c in missing if c not in batch]
+            if left:
+                note += f"; {', '.join(left)} left out (already tried {PRODUCE_ATTEMPTS_PER_CHANNEL}x)"
             return True, note[:300]
         return False, (proc.stderr or proc.stdout or "gh workflow run failed").strip()[:240]
     proc = subprocess.run(["gh", "workflow", "run", workflow], capture_output=True,
@@ -848,7 +871,7 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
             slot_at = datetime.fromisoformat(slot)
         except ValueError:
             continue
-        if now < slot_at + DISPATCH_AFTER:
+        if now < slot_at + _dispatch_after(workflow):
             continue
         if now > slot_at + _slot_window(workflow, crons_by_workflow.get(workflow, []), slot_at):
             continue
@@ -869,6 +892,7 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
         key = f"{workflow}@{slot}"
         previous = state.get(key)
         attempts = int(previous.get("attempts", 1)) if previous else 0
+        renewed = False
         if workflow in inflight:
             result["skipped"].append({"workflow": workflow, "slot": slot,
                                       "reason": "a run is already in progress or queued"})
@@ -888,6 +912,7 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
                 if code_changed_since(previous, workflow):
                     # The code that failed has been replaced. Run the new code.
                     attempts = 0
+                    renewed = True
                     print(f"[supervisor] {workflow}: attempts renewed — the code changed "
                           f"since the last attempt ({str(previous.get('code_id') or '?'):8} -> "
                           f"{code_fingerprint(workflow)}), so those failures came from "
@@ -922,7 +947,12 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
             result["dispatched"].append({"workflow": workflow, "slot": slot,
                                          "result": "would dispatch"})
             continue
-        prior_attempted = list((previous or {}).get("attempted_channels") or [])
+        # New code gets a clean per-channel record, not only a clean count: the two
+        # tries a channel is allowed were spent on code that has been replaced.
+        if workflow == "produce.yml" and previous and not renewed \
+                and code_changed_since(previous, workflow):
+            renewed = True
+        prior_attempted = [] if renewed else list((previous or {}).get("attempted_channels") or [])
         import inspect
 
         params = inspect.signature(dispatch).parameters
@@ -937,11 +967,9 @@ def supervise(now: datetime | None = None, runs=None, dry_run: bool = False,
             "code_id": code_fingerprint(workflow),
         }
         if workflow == "produce.yml":
-            dispatched_ch = ""
             if ok and message.startswith("dispatched "):
-                dispatched_ch = message[len("dispatched "):].split(";", 1)[0].strip()
-            if dispatched_ch:
-                prior_attempted.append(dispatched_ch)
+                sent = message[len("dispatched "):].split(";", 1)[0]
+                prior_attempted.extend(c.strip() for c in sent.split(",") if c.strip())
             if prior_attempted:
                 entry_out["attempted_channels"] = prior_attempted
         state[key] = entry_out

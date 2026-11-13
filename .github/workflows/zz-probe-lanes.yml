@@ -1,0 +1,33 @@
+name: zz probe lanes (temporary)
+on:
+  push:
+    branches: ["arena/0dc77018-youtube-automation"]
+    paths: [".github/workflows/zz-probe-lanes.yml"]
+permissions:
+  contents: read
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    outputs:
+      channels: ${{ steps.p.outputs.channels }}
+      max_parallel: ${{ steps.p.outputs.max_parallel }}
+    steps:
+      - id: p
+        env:
+          PRODUCE_MAX_PARALLEL: ${{ vars.PRODUCE_MAX_PARALLEL }}
+        run: |
+          echo "variable is: '${PRODUCE_MAX_PARALLEL}'"
+          echo 'channels=["a","b","c","d"]' >> "$GITHUB_OUTPUT"
+          echo 'max_parallel=2' >> "$GITHUB_OUTPUT"
+  legs:
+    needs: plan
+    strategy:
+      fail-fast: false
+      max-parallel: ${{ fromJSON(needs.plan.outputs.max_parallel || '1') }}
+      matrix:
+        channel: ${{ fromJSON(needs.plan.outputs.channels) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - run: date -u +%T; sleep 25; date -u +%T

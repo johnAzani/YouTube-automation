@@ -83,7 +83,7 @@ originality_note: Original theological commentary incorporating Charles Spurgeon
   The Treasury of David and Matthew Henry's Commentary on the Whole Bible, KJV verbatim
   quotations.
 published_on: "2026-11-07"
-published_at: "2026-11-07T20:35:38Z"
+published_at: "2026-11-07T19:25:00Z"
 youtube_video_id: "GeZ3liNIxag"
 thumbnail_pending: false
 

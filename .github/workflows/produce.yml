@@ -33,6 +33,10 @@ on:
         type: choice
         options: [secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, prayer8, prayer9, prayer10]
         default: secret-place
+      channels:
+        description: "Several channels in ONE run, comma-separated (e.g. prayer4,prayer7). Overrides Target channel; they render side by side"
+        type: string
+        default: ""
       job:
         description: "Specific script file in content/queue/ (blank = next approved)"
         required: false
@@ -74,6 +78,7 @@ jobs:
     timeout-minutes: 5
     outputs:
       channels: ${{ steps.plan.outputs.channels }}
+      max_parallel: ${{ steps.plan.outputs.max_parallel }}
     steps:
       - uses: actions/checkout@v4
       - id: plan
@@ -90,7 +95,12 @@ jobs:
           PRAYER10_READY: ${{ secrets.PRAYER10_YOUTUBE_REFRESH_TOKEN != '' }}
           EVENT_NAME: ${{ github.event_name }}
           INPUT_CHANNEL: ${{ inputs.channel }}
+          INPUT_CHANNELS: ${{ inputs.channels }}
           CLIENT_CHANNEL: ${{ github.event.client_payload.channel }}
+          CLIENT_CHANNELS: ${{ github.event.client_payload.channels }}
+          # How many channels render at once (repository variable; unset = 5,
+          # and 1 restores the old one-at-a-time matrix without a code change).
+          PRODUCE_MAX_PARALLEL: ${{ vars.PRODUCE_MAX_PARALLEL }}
         run: |
           python3 - <<'PY'
           import json, os, sys
@@ -98,6 +108,7 @@ jobs:
           sys.path.insert(0, ".")
           from scripts.automation_monitor import active_quota_cooldown
           from pipeline.channels import normalize_channel_id, scheduled_channels
+          from scripts import produce_plan
 
           event = os.environ.get("EVENT_NAME", "")
           p3_ready = os.environ.get("PRAYER3_READY", "").lower() == "true"
@@ -185,8 +196,30 @@ jobs:
                       )
                       continue
                   channels.append(cid)
+              # A slot is served once per channel, by whichever trigger arrives
+              # first. GitHub delivers this event hours late (34 to 423 minutes
+              # over 8-13 November) and the supervisor dispatches the missing
+              # channels in the meantime; without this check the late event
+              # publishes a second video for a slot that already has one.
+              try:
+                  channels, served, slot = produce_plan.split_served(channels, now)
+              except Exception as exc:  # noqa: BLE001 - never lose a slot to this check
+                  print(f"::warning title=Slot check skipped::{exc!r}; producing every candidate")
+                  served, slot = [], None
+              if served:
+                  print(
+                      "::notice title=Slot already served::"
+                      + ", ".join(served)
+                      + f" already published for the {slot.isoformat() if slot else 'current'} "
+                      "slot, so this run does not publish them again."
+                  )
           elif event == "workflow_dispatch":
-              channels = [(os.environ.get("INPUT_CHANNEL") or "secret-place").strip()]
+              # `channels` carries several channels in one run (the supervisor
+              # recovers every missing channel this way); `channel` is one.
+              channels = produce_plan.parse_channels(os.environ.get("INPUT_CHANNELS")) \
+                  or [(os.environ.get("INPUT_CHANNEL") or "secret-place").strip()]
+          elif event == "repository_dispatch" and (os.environ.get("CLIENT_CHANNELS") or "").strip():
+              channels = produce_plan.parse_channels(os.environ.get("CLIENT_CHANNELS"))
           elif event == "repository_dispatch" and (os.environ.get("CLIENT_CHANNEL") or "").strip():
               channels = [os.environ["CLIENT_CHANNEL"].strip()]
           else:
@@ -204,20 +237,37 @@ jobs:
               print("::notice::Skipping unknown or inactive production channel(s): " + ", ".join(blocked))
               channels = [cid for cid in channels if cid in allowed]
 
+          channels = list(dict.fromkeys(channels))
+          lanes = produce_plan.max_parallel(os.environ.get("PRODUCE_MAX_PARALLEL"), len(channels))
           payload = json.dumps(channels)
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
               fh.write(f"channels={payload}\n")
-          print(f"producing for: {payload}")
+              fh.write(f"max_parallel={lanes}\n")
+          print(f"producing for: {payload} ({lanes} at a time)")
           PY
 
   produce:
     needs: plan
     if: ${{ needs.plan.outputs.channels != '[]' && needs.plan.outputs.channels != '' }}
-    # One channel at a time: both legs write content/ state to main, and
-    # the queue-state commit assumes it is the only producer running.
+    # Channels render side by side, `max_parallel` at a time (the plan job reads
+    # the PRODUCE_MAX_PARALLEL repository variable; unset = 5, 1 = one at a
+    # time). Ten legs in a row took 537 minutes, held `content-state` for 98%
+    # of 12 November and left three channels with no video that day.
+    #
+    # What makes side by side safe, each pinned by a test:
+    #   * every leg starts from current main (the step below), so no leg works
+    #     on a tree older than its own channel's last publish;
+    #   * a leg writes only its own channel's files - job ids, Short keys and
+    #     Short queue numbers are allocated in per-channel blocks - so two legs
+    #     never touch the same path, and the commit guard refuses if they do;
+    #   * the commit step re-stages on the new tip when another leg pushed
+    #     first, with enough attempts for every lane to lose in turn;
+    #   * credentials, speech quota, speech-chunk caches and artifacts are per
+    #     channel. Only the stock-footage keys are shared.
+    # See docs/PARALLEL_PRODUCTION_2026-11-13.md.
     strategy:
       fail-fast: false
-      max-parallel: 1
+      max-parallel: ${{ fromJSON(needs.plan.outputs.max_parallel || '1') }}
       matrix:
         channel: ${{ fromJSON(needs.plan.outputs.channels) }}
     runs-on: ubuntu-latest     # public repo: 4-core/16GB, free & unlimited
@@ -230,7 +280,7 @@ jobs:
     env:
       DRY_RUN: ${{ (inputs.dry_run || false) && '1' || '0' }}
       # Channel for this matrix leg (see the plan job): scheduled runs do
-      # every provisioned channel in sequence, manual runs do the selected one. Each
+      # every provisioned channel side by side, manual runs do the selected ones. Each
       # channel's own PRAYER3_* / PRAYER2_* / unprefixed secrets are mapped onto the
       # canonical names below, so credentials are never mixed.
       CHANNEL_ID: ${{ matrix.channel || 'secret-place' }}
@@ -587,24 +637,29 @@ jobs:
           git config user.name "youtube-automation-bot"
           git config user.email "actions@users.noreply.github.com"
           base_ref="${START_SHA:-HEAD}"
-          git diff --name-only --diff-filter=D "$base_ref" -- content/ > /tmp/produce-deleted.txt
+          # A private directory for this leg's path lists, never a fixed /tmp name:
+          # two legs must not be able to read each other's list of files.
+          lists="$(mktemp -d)"
+          git diff --name-only --diff-filter=D "$base_ref" -- content/ > "$lists/produce-deleted.txt"
           {
             git diff --name-only --diff-filter=ACMR "$base_ref" -- content/
             git ls-files --others --exclude-standard -- content/
-          } | sort -u > /tmp/produce-touched.txt
-          if [ ! -s /tmp/produce-deleted.txt ] && [ ! -s /tmp/produce-touched.txt ]; then
+          } | sort -u > "$lists/produce-touched.txt"
+          if [ ! -s "$lists/produce-deleted.txt" ] && [ ! -s "$lists/produce-touched.txt" ]; then
             echo "queue state unchanged (nothing to record)"
             exit 0
           fi
-          for attempt in 1 2 3 4 5 6; do
+          # Twelve attempts: with every lane finishing in the same minute each
+          # round still lets one leg through, so ten lanes need at most ten.
+          for attempt in 1 2 3 4 5 6 7 8 9 10 11 12; do
             git fetch --quiet origin main
             # Never replace newer state with this leg's stale working tree. If a
             # conflict follows an upload, retain the pending files for manual
             # reconciliation; blindly retrying an upload could duplicate it.
             if ! python scripts/guard_produce_commit.py --base "$base_ref" --target origin/main \
-                 --touched /tmp/produce-touched.txt --deleted /tmp/produce-deleted.txt; then
+                 --touched "$lists/produce-touched.txt" --deleted "$lists/produce-deleted.txt"; then
               mkdir -p output/report/content-conflict
-              cp /tmp/produce-touched.txt /tmp/produce-deleted.txt output/report/content-conflict/
+              cp "$lists/produce-touched.txt" "$lists/produce-deleted.txt" output/report/content-conflict/
               while IFS= read -r p; do
                 if [ -n "$p" ] && [ -f "$p" ] && [ ! -L "$p" ]; then
                   resolved="$(realpath -e -- "$p")"
@@ -612,17 +667,17 @@ jobs:
                     cp --parents -- "$p" output/report/content-conflict/ || true ;;
                   esac
                 fi
-              done < /tmp/produce-touched.txt
+              done < "$lists/produce-touched.txt"
               echo "::error title=Producer state conflict::Content was not committed. Reconcile any uploaded video before retrying; pending files are in the run report."
               exit 1
             fi
             git reset --mixed origin/main
             while IFS= read -r p; do
               [ -n "$p" ] && git rm --cached --ignore-unmatch --quiet -- "$p"
-            done < /tmp/produce-deleted.txt
+            done < "$lists/produce-deleted.txt"
             while IFS= read -r p; do
               [ -n "$p" ] && [ -e "$p" ] && git add -- "$p"
-            done < /tmp/produce-touched.txt
+            done < "$lists/produce-touched.txt"
             if git diff --cached --quiet; then
               echo "queue state unchanged (nothing to record)"
               exit 0
@@ -639,7 +694,7 @@ jobs:
               exit 0
             fi
             echo "::warning::main moved during attempt $attempt; re-staging on the new tip"
-            sleep $((attempt * 3))
+            sleep $((attempt * 3 + RANDOM % 4))
           done
           echo "::error title=Queue state lost::could not record the published/ move; the next run may re-upload the same video"
           exit 1

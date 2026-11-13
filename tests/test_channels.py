@@ -189,7 +189,7 @@ class WorkflowSelectorTests(unittest.TestCase):
         """A cron slot must produce Morning Altar videos too (2026-11-05).
 
         The plan job expands a schedule event to both channels and the
-        produce job runs them as a sequential matrix; each leg maps only
+        produce job runs them as a matrix, side by side; each leg maps only
         its own channel's secrets, and prayer2 is no longer forced private.
         """
         text = (ROOT / ".github" / "workflows" / "produce.yml").read_text(
@@ -204,7 +204,7 @@ class WorkflowSelectorTests(unittest.TestCase):
                       "probe, or its legs fail three times a day")
         self.assertIn("matrix:", text)
         self.assertIn("channel: ${{ fromJSON(needs.plan.outputs.channels) }}", text)
-        self.assertIn("max-parallel: 1", text)
+        self.assertIn("max-parallel: ${{ fromJSON(needs.plan.outputs.max_parallel || '1') }}", text)
         self.assertIn("CHANNEL_ID: ${{ matrix.channel || 'secret-place' }}", text)
         self.assertIn('"prayer2":"PRAYER2_"', text)
         self.assertIn("Verify the authenticated channel before production", text)

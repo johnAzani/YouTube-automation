@@ -2,73 +2,73 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
-      "late_minutes": 2653,
+      "late_minutes": 8404,
       "name": "Weekly metrics snapshot",
-      "ran_at": "2026-11-08T14:54:40+00:00",
+      "ran_at": "2026-11-12T14:45:00+00:00",
       "slot": "2026-11-06T18:41:00+00:00",
       "workflow": "metrics.yml"
     },
     {
-      "late_minutes": 284,
-      "name": "Growth autopilot",
-      "ran_at": "2026-11-13T06:58:35+00:00",
-      "slot": "2026-11-13T02:14:00+00:00",
-      "workflow": "growth-autopilot.yml"
-    },
-    {
-      "late_minutes": 228,
+      "late_minutes": 5002,
       "name": "Keepalive",
-      "ran_at": "2026-11-09T07:11:37+00:00",
+      "ran_at": "2026-11-12T14:45:00+00:00",
       "slot": "2026-11-09T03:23:00+00:00",
       "workflow": "keepalive.yml"
     },
     {
-      "late_minutes": 224,
-      "name": "Gemini Brain Autonomous Queue Replenishment",
-      "ran_at": "2026-11-13T06:58:36+00:00",
-      "slot": "2026-11-13T03:14:00+00:00",
-      "workflow": "gemini_brain.yml"
-    },
-    {
-      "late_minutes": 173,
+      "late_minutes": 1171,
       "name": "Autonomous Community Tab Automation",
-      "ran_at": "2026-11-11T22:07:09+00:00",
+      "ran_at": "2026-11-12T14:45:00+00:00",
       "slot": "2026-11-11T19:14:00+00:00",
       "workflow": "community.yml"
-    }
-  ],
-  "generated_at": "2026-11-13T10:09:47.219885+00:00",
-  "last_run_at": "2026-11-13T10:08:59+00:00",
-  "on_time": [
+    },
     {
-      "late_minutes": 105,
+      "late_minutes": 1111,
       "name": "automation-health",
-      "ran_at": "2026-11-12T21:59:26+00:00",
-      "slot": "2026-11-12T20:14:00+00:00",
+      "ran_at": "2026-11-12T14:45:00+00:00",
+      "slot": "2026-11-11T20:14:00+00:00",
       "workflow": "automation-health.yml"
     },
     {
-      "late_minutes": 90,
+      "late_minutes": 751,
+      "name": "Growth autopilot",
+      "ran_at": "2026-11-12T14:45:00+00:00",
+      "slot": "2026-11-12T02:14:00+00:00",
+      "workflow": "growth-autopilot.yml"
+    },
+    {
+      "late_minutes": 691,
+      "name": "Gemini Brain Autonomous Queue Replenishment",
+      "ran_at": "2026-11-12T14:45:00+00:00",
+      "slot": "2026-11-12T03:14:00+00:00",
+      "workflow": "gemini_brain.yml"
+    },
+    {
+      "late_minutes": 451,
       "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-13T08:44:39+00:00",
-      "slot": "2026-11-13T07:14:00+00:00",
+      "ran_at": "2026-11-12T14:45:00+00:00",
+      "slot": "2026-11-12T07:14:00+00:00",
       "workflow": "comments.yml"
     },
     {
-      "late_minutes": 45,
+      "late_minutes": 142,
       "name": "Automation monitor",
-      "ran_at": "2026-11-13T10:08:59+00:00",
-      "slot": "2026-11-13T09:23:00+00:00",
+      "ran_at": "2026-11-12T14:45:00+00:00",
+      "slot": "2026-11-12T12:23:00+00:00",
       "workflow": "monitor.yml"
-    },
+    }
+  ],
+  "generated_at": "2026-11-12T14:50:00+00:00",
+  "last_run_at": "2026-11-12T14:45:00+00:00",
+  "on_time": [
     {
-      "late_minutes": 21,
+      "late_minutes": 118,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-13T10:08:58+00:00",
-      "slot": "2026-11-13T09:47:00+00:00",
+      "ran_at": "2026-11-12T14:45:00+00:00",
+      "slot": "2026-11-12T12:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 0,
+  "silence_minutes": 5,
   "warn_minutes": 120
 }

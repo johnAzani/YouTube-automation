@@ -18,7 +18,8 @@ What it pins, and why:
   the leg really uploaded. ``test_without_the_refresh_...`` keeps that visible.
 * Two legs of different channels can finish at the same moment. The commit loop
   must land both, which is the mock rehearsal the remediation plan asks for
-  before ``max-parallel`` is ever raised. It is still 1.
+  before ``max-parallel`` was raised. It now comes from the plan job
+  (``scripts/produce_plan.py``, default 5); see ``test_parallel_production.py``.
 """
 from __future__ import annotations
 
@@ -340,8 +341,50 @@ def test_two_channels_finishing_together_both_record_their_publish(rig):
         "content/published/0300-family-first.md", "content/queue/0300-family-first.md"]
 
 
-def test_production_is_still_serial():
-    """The rehearsal is evidence for a later decision, not the decision."""
+def test_five_lanes_finishing_in_the_same_minute_all_record_their_publish(rig):
+    """Five real processes run the commit step at once against one origin.
+
+    This is the worst case the lane count allows by default: every leg fetches
+    the same tip, one push wins each round, and the rest have to notice, re-stage
+    on the new tip and try again. Every receipt must end up on main.
+    """
+    from concurrent.futures import ThreadPoolExecutor
+
+    lanes = {"prayer4": "0210", "prayer5": "0310", "prayer6": "0410",
+             "prayer7": "0510", "prayer8": "0610"}
+    legs = {}
+    for channel, job_id in lanes.items():
+        leg = rig.checkout(channel)
+        assert rig.run_step(leg, REFRESH_STEP).returncode == 0
+        receipt = REAL_RECEIPT.replace("0200", job_id).replace("prayer4", channel)
+        dest = leg / "content/published" / f"{job_id}-lane.md"
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_text(receipt)
+        legs[channel] = (leg, job_id, receipt)
+
+    with ThreadPoolExecutor(max_workers=len(legs)) as pool:
+        results = dict(zip(legs, pool.map(
+            lambda item: rig.run_step(item[0], COMMIT_STEP), legs.values())))
+
+    for channel, done in results.items():
+        assert done.returncode == 0, f"{channel}: {done.stdout}{done.stderr}"
+        assert "queue state recorded on attempt" in done.stdout, channel
+    retries = sum(done.stdout.count("main moved during attempt") for done in results.values())
+    assert retries >= 1, "no push was ever rejected, so no race was rehearsed"
+    for channel, (_leg, job_id, receipt) in legs.items():
+        assert rig.origin_file(f"content/published/{job_id}-lane.md") == receipt, channel
+    # One commit per lane on top of the seed, none lost and none merged away.
+    subjects = git(rig.origin, "log", "--format=%s", "main").splitlines()
+    assert subjects.count("chore(content): publish job [skip ci]") == len(legs)
+    state = json.loads(rig.origin_file("docs/network-state.json"))
+    by_channel = {c["id"]: c for c in state["channels"]}
+    assert all(by_channel[channel]["latest_video"] for channel in lanes)
+
+
+def test_one_production_run_at_a_time_with_lanes_inside_it():
+    """Channels run side by side inside a run; runs still take turns."""
     data = yaml.safe_load(WORKFLOW.read_text(encoding="utf-8"))
-    assert data["jobs"]["produce"]["strategy"]["max-parallel"] == 1
+    assert "needs.plan.outputs.max_parallel" in str(
+        data["jobs"]["produce"]["strategy"]["max-parallel"])
+    assert data["jobs"]["produce"]["strategy"]["fail-fast"] is False
     assert data["concurrency"] == {"group": "content-state", "cancel-in-progress": False}
