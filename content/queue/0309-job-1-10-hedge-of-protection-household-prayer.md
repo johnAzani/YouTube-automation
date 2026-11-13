@@ -10,7 +10,7 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-thumb_text: PERFECT PEACE
+thumb_text: A HEDGE AROUND US
 seo_hook: Cover your house and substance in prayer with Job 1:10, asking God to place
   a divine hedge of protection around your family.
 tags:

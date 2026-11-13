@@ -10,7 +10,7 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-thumb_text: PERFECT PEACE
+thumb_text: A BLESSED HOME
 seo_hook: Discover the peace of God's promise in Proverbs 3:33, as we seek the divine
   blessing upon the dwelling of the righteous and the safety of our homes.
 tags:

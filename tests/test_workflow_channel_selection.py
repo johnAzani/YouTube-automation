@@ -113,7 +113,16 @@ def test_schedule_skips_inactive_without_blocking_other_channels(tmp_path, filen
     script = run.split("python3 - <<'PY'\n", 1)[1].rsplit('\nPY', 1)[0]
     script = ("import pipeline.channels as c\n"
               "orig = c.scheduled_channels\n"
-              "c.scheduled_channels = lambda: tuple(x for x in orig() if x != 'prayer8')\n" + script)
+              "c.scheduled_channels = lambda: tuple(x for x in orig() if x != 'prayer8')\n"
+              # This test is about inactive channels, not about the slot ledger. The
+              # produce plan also drops channels whose current slot already has a
+              # receipt, read from the live content/published tree, so for the hours
+              # after The Secret Place had been served the assertion below failed on
+              # every branch (seen 13 November 2026, on main as well). Nothing is
+              # treated as served here; tests/test_parallel_production.py covers that rule.
+              "import scripts.produce_plan as _plan\n"
+              "_plan.split_served = lambda channels, *a, **k: (list(channels), [], None)\n"
+              + script)
     output = tmp_path / 'out'
     env = {**os.environ, 'EVENT_NAME': 'schedule', 'INPUT_CHANNEL': '',
            'GITHUB_OUTPUT': str(output), 'YOUTUBE_REFRESH_TOKEN': 'present'}

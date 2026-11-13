@@ -2276,12 +2276,21 @@ def main(key):
         print(_line)
 
     music = os.path.join(AUDIO, f'music-{key}.wav')
+    # Same voice mastering and music ducking as long-form (pipeline/voice_master.py).
+    # Anything going wrong there must not cost a Short: fall back to the old mix.
+    _legacy_mix = '[2:a]volume=0.58[m];[1:a]aformat=channel_layouts=stereo,volume=1.0[v];[m][v]amix=inputs=2:duration=longest:normalize=0,alimiter=limit=0.95[a]'
+    try:
+        from pipeline.voice_master import mix_filter as _mix_filter
+        _audio_mix = _mix_filter(nar, 'volume=0.58')
+    except Exception as _exc:  # noqa: BLE001
+        print(f'[voice-master] unavailable ({_exc}); keeping the unmastered mix')
+        _audio_mix = _legacy_mix
     proc = subprocess.Popen(
         [
             FFMPEG, '-y',
             '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
             '-i', nar, '-i', music,
-            '-filter_complex', '[2:a]volume=0.58[m];[1:a]aformat=channel_layouts=stereo,volume=1.0[v];[m][v]amix=inputs=2:duration=longest:normalize=0,alimiter=limit=0.95[a]',
+            '-filter_complex', _audio_mix,
             '-map', '0:v', '-map', '[a]',
             '-c:v', 'libx264', '-profile:v', 'high', '-preset', 'fast', '-crf', '20', '-maxrate', '4500k', '-bufsize', '9000k',
             '-pix_fmt', 'yuv420p',

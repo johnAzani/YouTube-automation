@@ -139,12 +139,16 @@ def render(narration: Path, scenes, words, duration: float, output: Path, *,
     fade_in = min(0.8, max(0.05, duration * 0.10))
     fade_out = min(2.4, max(0.10, duration * 0.25))
     fade_out_st = max(0.0, duration - fade_out)
-    audio_filter = (
-        f"[2:a]volume={LONGFORM_MUSIC_VOLUME:.2f},"
+    # Voice mastering and music ducking live in pipeline/voice_master.py. The
+    # narration file is only measured here, never rewritten, so its checksum,
+    # cached chunks and word alignment are untouched. If the measurement fails
+    # the filter returned is the previous, unmastered mix.
+    from .voice_master import mix_filter
+    audio_filter = mix_filter(
+        narration,
+        f"volume={LONGFORM_MUSIC_VOLUME:.2f},"
         f"afade=t=in:st=0:d={fade_in:.2f},"
-        f"afade=t=out:st={fade_out_st:.2f}:d={fade_out:.2f}[m];"
-        "[1:a]aformat=channel_layouts=stereo,volume=1.0[v];"
-        "[m][v]amix=inputs=2:duration=longest:normalize=0,alimiter=limit=0.95[a]"
+        f"afade=t=out:st={fade_out_st:.2f}:d={fade_out:.2f}",
     )
     with tempfile.TemporaryDirectory() as score_tmp, tempfile.TemporaryFile() as errors:
         try:
