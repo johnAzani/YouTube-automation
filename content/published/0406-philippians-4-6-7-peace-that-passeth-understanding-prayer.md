@@ -1,8 +1,9 @@
 ---
+release_ticket_opened: true
 id: '0406'
 title: Philippians 4:6-7 Peace That Passeth Understanding Prayer
 slug: philippians-4-6-7-peace-that-passeth-understanding-prayer
-status: approved
+status: published
 channel: prayer6
 privacy: public
 publish_at: next-slot
@@ -78,6 +79,18 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-13"
+published_at: "2026-11-13T19:14:00Z"
+youtube_video_id: "jaeiK1qh8Wk"
+metadata_revision: "selar-seo-v1"
+uploaded_at: "2026-11-13T17:32:45Z"
+scheduled_publish: true
+privacy_status: "private"
+pinned_comment_pending: true
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded]"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith
