@@ -2,7 +2,7 @@
 id: 0801
 title: James 1:5 Guidance Prayer | The Guided Path
 slug: james-1-5-wisdom-guidance-prayer
-status: approved
+status: published
 channel: prayer10
 privacy: public
 format: longform
@@ -70,6 +70,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-13"
+published_at: "2026-11-13T14:41:17Z"
+youtube_video_id: "AjDkmq3hu7I"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — If Any of You Lack Wisdom

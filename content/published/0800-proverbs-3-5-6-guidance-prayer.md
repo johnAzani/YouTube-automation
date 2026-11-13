@@ -72,13 +72,11 @@ originality:
   no_ai_persona: true
   source_notes: true
 published_on: "2026-11-13"
-published_at: "2026-11-13T06:56:33Z"
+published_at: "2026-11-13T13:59:27Z"
 youtube_video_id: "XXBBqCi9Uk4"
 metadata_revision: "selar-seo-v1"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UC8lPazRi_sj2Q5TQGVQ6bqQ; auth_channel_title=The Guided Path; long_uploads_status=eligible; video_channel_id=UC8lPazRi_sj2Q5TQGVQ6bqQ; video_channel_title=The Guided Path; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_retry_after: "2026-11-20T06:58:13Z"
-thumbnail_retry_reason: "permission"
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Bringing the Decision to the Lord
