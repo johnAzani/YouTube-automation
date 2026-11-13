@@ -18,12 +18,12 @@ youtube_upload_status: processed
 youtube_duration: PT1M2S
 receipt_recovered_from_youtube: true
 metadata_retrofit_approved: false
-thumbnail_pending: true
-thumbnail_error: thumbnail_status_unverified_after_recovery
+thumbnail_pending: false
 thumbnail_attempts: 0
 thumbnail_poster: ["THE PROVISION TABLE", "ALL YOUR NEED", "PHILIPPIANS 4:19", "PROVISION PRAYER"]
 thumbnail_kicker: "BLESS THE WORK OF OUR HANDS"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_revision: "shorts-poster-v1"
 ---
 
 This receipt was recovered from an existing YouTube video. No video was uploaded during recovery; the custom thumbnail status is unverified.

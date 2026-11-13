@@ -20,10 +20,13 @@ height: 1280
 duration_seconds: 54.96
 scenes_verified: 7
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE PRAISE GARDEN", "ENTER WITH THANKS", "PSALM 100:4", "THANKSGIVING PRAYER"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-20T06:58:39Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Before you ask God for anything today, pause for a moment and thank Him for something He has already given. Psalm one hundred, verse four says, Enter into his gates with thanksgiving, and into his courts with praise: be thankful unto him, and bless his name. Thanksgiving is not a fee we pay to be heard. It is the fitting way to come near to a good God. Lord, thank You for breath, for daily bread, and for mercies we did not even notice this week. And where the heart is heavy, receive one honest sentence of thanks as worship, and be near to us. Teach us to notice Your gifts, to share them freely, and to bless Your name in every season. Type Amen and subscribe to The Praise Garden for daily prayers of thanksgiving and praise.

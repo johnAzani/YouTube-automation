@@ -20,10 +20,13 @@ height: 1280
 duration_seconds: 58.56
 scenes_verified: 7
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UC8lPazRi_sj2Q5TQGVQ6bqQ; auth_channel_title=The Guided Path; long_uploads_status=eligib"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UC8lPazRi_sj2Q5TQGVQ6bqQ; auth_channel_title=The Guided Path; long_uploads_status=eligible; video_channel_id=UC8lPazRi_sj2Q5TQGVQ6bqQ; video_channel_title=The Guided Path; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE GUIDED PATH", "DIRECT MY PATH", "PROVERBS 3:5-6", "GUIDANCE PRAYER"]
 thumbnail_kicker: "HE SHALL DIRECT THY PATHS"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-20T06:58:14Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If a decision is weighing on you today, you do not have to carry it alone. Bring it to the Lord. Proverbs chapter three, verses five and six say, Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths. God gave us minds to use, but not to rest our whole weight on what we can see. Father, we trust You with the outcome we want and the outcome we fear, and with the timing. Lead us through Your Word and through wise, honest counsel, and make us willing to listen. Give us patience to wait, courage to act, and light enough for the next faithful step. Type Amen and subscribe to The Guided Path for daily prayers for wisdom and direction.

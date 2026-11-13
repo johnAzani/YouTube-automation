@@ -80,8 +80,9 @@ published_on: "2026-11-13"
 published_at: "2026-11-13T03:44:08Z"
 youtube_video_id: "H-ygSB-1i1M"
 metadata_revision: "selar-seo-v1"
-thumbnail_pending: true
-thumbnail_error: "not_requested"
+thumbnail_pending: false
+
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith
