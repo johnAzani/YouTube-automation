@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T06:59:45Z",
+  "generated_at": "2026-11-13T07:07:19Z",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -7,12 +7,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 156,
+    "published_total": 157,
     "published_longform": 71,
-    "published_shorts": 85,
-    "public_total": 154,
+    "published_shorts": 86,
+    "public_total": 155,
     "queued_longform": 50,
-    "queued_shorts": 36,
+    "queued_shorts": 35,
     "automations_ok": 9,
     "automations_total": 10,
     "network_healthy": true
@@ -32,40 +32,40 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 35,
+        "published_total": 36,
         "published_longform": 12,
-        "published_shorts": 23,
-        "public_total": 34,
+        "published_shorts": 24,
+        "public_total": 35,
         "queued_longform": 15,
         "queued_other": 5,
-        "queued_shorts": 4
+        "queued_shorts": 3
       },
       "latest_video": {
-        "id": "0020",
-        "title": "Psalm 18:2 Night Prayer for Strength | My Rock & Fortress",
-        "format": "longform",
-        "youtube_video_id": "oiLCbx4-wMA",
-        "watch_url": "https://youtu.be/oiLCbx4-wMA",
-        "published_on": "2026-11-12",
-        "published_at": "2026-11-12T22:52:44Z"
+        "id": "SHORT-1PETER5V7",
+        "title": "Say This 1 Peter 5:7 Prayer Before You Sleep | 1 Peter 5:7 #Shorts",
+        "format": "short",
+        "youtube_video_id": "GQT7eKz9MAE",
+        "watch_url": "https://www.youtube.com/shorts/GQT7eKz9MAE",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T07:05:25Z"
       },
       "next_queued_longform": {
         "id": "0021",
         "title": "Psalm 31:5 Bedtime Prayer | Into Your Hands I Commit My Spirit",
         "words": 1123,
-        "status": "approved"
+        "status": "quota_paused"
       },
       "next_queued_short": {
-        "short": "short-1peter5v7",
-        "scripture": "1 Peter 5:7",
+        "short": "short-numbers6v24",
+        "scripture": "Numbers 6:24-26",
         "target_window_utc": "14:14",
         "status": "approved"
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-13",
         "measured_longform_videos": 0,
-        "total_longform_videos": 10,
+        "total_longform_videos": 11,
         "top_themes": [
           {
             "theme": "stillness_refuge",
@@ -130,19 +130,19 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-13",
         "measured_longform_videos": 0,
-        "total_longform_videos": 17,
+        "total_longform_videos": 20,
         "top_themes": [
+          {
+            "theme": "morning_mercy_renewal",
+            "videos": 12,
+            "top_scripture": "Psalm 92"
+          },
           {
             "theme": "blessing_benediction",
             "videos": 1,
             "top_scripture": "Numbers 6"
-          },
-          {
-            "theme": "morning_mercy_renewal",
-            "videos": 11,
-            "top_scripture": "Mark 1"
           },
           {
             "theme": "midday_strength_endurance",
@@ -197,9 +197,9 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-13",
         "measured_longform_videos": 0,
-        "total_longform_videos": 10,
+        "total_longform_videos": 12,
         "top_themes": [
           {
             "theme": "daily_guidance_wisdom",
@@ -208,13 +208,13 @@
           },
           {
             "theme": "midday_strength_endurance",
-            "videos": 8,
-            "top_scripture": "Proverbs 16"
+            "videos": 9,
+            "top_scripture": "Daniel 6"
           },
           {
-            "theme": "protection",
+            "theme": "peace_rest",
             "videos": 1,
-            "top_scripture": "Psalm 91"
+            "top_scripture": "Psalm 121"
           }
         ]
       }
@@ -264,19 +264,19 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-13",
         "measured_longform_videos": 0,
-        "total_longform_videos": 6,
+        "total_longform_videos": 8,
         "top_themes": [
           {
             "theme": "general_prayer",
-            "videos": 5,
-            "top_scripture": "Zechariah 2"
+            "videos": 6,
+            "top_scripture": "Acts 16"
           },
           {
             "theme": "daily_guidance_wisdom",
-            "videos": 1,
-            "top_scripture": "Psalm 119"
+            "videos": 2,
+            "top_scripture": "Ephesians 6"
           }
         ]
       }
@@ -326,14 +326,19 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-13",
         "measured_longform_videos": 0,
-        "total_longform_videos": 3,
+        "total_longform_videos": 5,
         "top_themes": [
           {
             "theme": "general_prayer",
-            "videos": 3,
-            "top_scripture": "Psalm 127"
+            "videos": 4,
+            "top_scripture": "Isaiah 54"
+          },
+          {
+            "theme": "midday_strength_endurance",
+            "videos": 1,
+            "top_scripture": "Isaiah 32"
           }
         ]
       }
@@ -383,24 +388,24 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-13",
         "measured_longform_videos": 0,
-        "total_longform_videos": 3,
+        "total_longform_videos": 5,
         "top_themes": [
+          {
+            "theme": "general_prayer",
+            "videos": 2,
+            "top_scripture": "Exodus 15"
+          },
+          {
+            "theme": "midday_strength_endurance",
+            "videos": 1,
+            "top_scripture": "Isaiah 40"
+          },
           {
             "theme": "peace_rest",
             "videos": 1,
             "top_scripture": "Psalm 147"
-          },
-          {
-            "theme": "stillness_refuge",
-            "videos": 1,
-            "top_scripture": "Psalm 103"
-          },
-          {
-            "theme": "general_prayer",
-            "videos": 1,
-            "top_scripture": "Jeremiah 30"
           }
         ]
       }
@@ -450,14 +455,14 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-13",
         "measured_longform_videos": 0,
-        "total_longform_videos": 3,
+        "total_longform_videos": 5,
         "top_themes": [
           {
             "theme": "general_prayer",
-            "videos": 1,
-            "top_scripture": "Deuteronomy 28"
+            "videos": 2,
+            "top_scripture": "Revelation 3"
           },
           {
             "theme": "peace_rest",
@@ -517,14 +522,19 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-12",
+        "as_of": "2026-11-13",
         "measured_longform_videos": 0,
-        "total_longform_videos": 1,
+        "total_longform_videos": 2,
         "top_themes": [
           {
             "theme": "peace_rest",
             "videos": 1,
             "top_scripture": "Psalm 121"
+          },
+          {
+            "theme": "protection",
+            "videos": 1,
+            "top_scripture": "Genesis 15"
           }
         ]
       }
@@ -573,9 +583,17 @@
         "status": "approved"
       },
       "feedback": {
-        "available": false,
+        "available": true,
+        "as_of": "2026-11-13",
         "measured_longform_videos": 0,
-        "top_themes": []
+        "total_longform_videos": 1,
+        "top_themes": [
+          {
+            "theme": "general_prayer",
+            "videos": 1,
+            "top_scripture": "Psalm 100"
+          }
+        ]
       }
     },
     {
@@ -629,6 +647,29 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-1PETER5V7",
+      "slug": "short-1peter5v7-pre-sleep-prayer",
+      "file": "short-1peter5v7-pre-sleep-prayer.md",
+      "title": "Say This 1 Peter 5:7 Prayer Before You Sleep | 1 Peter 5:7 #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T07:05:25Z",
+      "youtube_video_id": "GQT7eKz9MAE",
+      "watch_url": "https://www.youtube.com/shorts/GQT7eKz9MAE",
+      "youtu_be_url": "https://youtu.be/GQT7eKz9MAE",
+      "shorts_url": "https://www.youtube.com/shorts/GQT7eKz9MAE",
+      "studio_url": "https://studio.youtube.com/video/GQT7eKz9MAE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/GQT7eKz9MAE/hqdefault.jpg",
+      "thumb_text": "A PRAYER FOR \u00b7 A PEACEFUL SLEEP",
+      "duration_label": "43s",
+      "words": 608
+    },
     {
       "id": "0800",
       "slug": "proverbs-3-5-6-guidance-prayer",
@@ -4227,7 +4268,7 @@
         "title": "Psalm 31:5 Bedtime Prayer | Into Your Hands I Commit My Spirit",
         "channel": "secret-place",
         "channel_name": "The Secret Place",
-        "status": "approved",
+        "status": "quota_paused",
         "niche": "faith and prayer",
         "publishable": true,
         "target_minutes": 6,
@@ -4872,17 +4913,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-1peter5v7",
-        "file": "0032-short-1peter5v7.yml",
-        "companion_longform_id": "0032",
-        "scripture": "1 Peter 5:7",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
       {
         "short": "short-numbers6v24",
         "file": "0033-short-numbers6v24.yml",
