@@ -24,6 +24,8 @@ thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently.
 thumbnail_poster: ["PSALM 25:4-5", "TEACH ME YOUR PATHS", "MORNING PRAYER", "THE MORNING ALTAR"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-13T14:42:09Z"
+thumbnail_retry_reason: "rate_limit"
 ---
 
 As the golden sun rises today, pause and breathe in the calm of this new morning. Turn your spirit upward and hear the promise written in Psalm 25:4-5: Show me your ways, Lord, teach me your paths. Guide me in your truth and teach me, for you are God my Savior, and my hope is in you all day long. Lord, lead our steps into Your righteousness as this fresh day begins. Clear away our doubts and let Your unfailing truth guide our thoughts and actions. We place our trust, our plans, and our hope fully in Your hands today. Subscribe to The Morning Altar to start every single morning in quiet prayer.
