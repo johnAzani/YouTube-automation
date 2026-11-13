@@ -1,0 +1,266 @@
+{
+  "key": "short-guidedpsalm32v8",
+  "channel": "prayer10",
+  "psalm": 32,
+  "title": [
+    "GOD IS YOUR",
+    "CONSTANT GUIDE"
+  ],
+  "poster": [
+    "SEEK HIS WISDOM",
+    "FOR EVERY STEP",
+    "A PRAYER FOR",
+    "DIVINE GUIDANCE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "serene misty mountain pass at dawn",
+    "peaceful river flowing through forest",
+    "golden sunlight over quiet valley",
+    "tranquil alpine lake reflection",
+    "dramatic clouds over mountain range",
+    "soft morning light on evergreen trees"
+  ],
+  "scenes": [
+    {
+      "a": "Bring the weight of your current decision",
+      "img": "short-guidedpsalm32v8-scene-01.jpg",
+      "kicker": "PSALM 32:8",
+      "sub": "GOD PROMISES WISDOM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Speak to Him honestly about",
+      "img": "short-guidedpsalm32v8-scene-02.jpg",
+      "kicker": "THE PATH AHEAD",
+      "sub": "FINDING CLARITY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I will instruct thee and teach thee",
+      "img": "short-guidedpsalm32v8-scene-03.jpg",
+      "kicker": "DIVINE PROMISE",
+      "sub": "HE IS TEACHING YOU",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "the way which thou shalt go",
+      "img": "short-guidedpsalm32v8-scene-04.jpg",
+      "kicker": "HIS FAITHFUL WAY",
+      "sub": "HIS GUIDING LIGHT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I will guide thee with mine eye",
+      "img": "short-guidedpsalm32v8-scene-05.jpg",
+      "kicker": "WATCHFUL CARE",
+      "sub": "NEVER ALONE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen",
+      "img": "short-guidedpsalm32v8-scene-06.jpg",
+      "kicker": "PRAYER COMPLETED",
+      "sub": "REST IN HIS PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "Bring the weight of your current decision before the Lord and ask Him for the wisdom you need right now."
+    ],
+    [
+      16,
+      32,
+      "Speak to Him honestly about the uncertainty you feel and let His stillness calm your restless heart completely."
+    ],
+    [
+      33,
+      50,
+      "Hear His promise from Psalm 32:8: I will instruct thee and teach thee in the way which thou shalt go."
+    ],
+    [
+      51,
+      75,
+      "He continues: I will guide thee with mine eye. Believe that He is looking upon your path with perfect grace."
+    ],
+    [
+      76,
+      100,
+      "Lord, grant us the stillness to recognize Your direction. Lead us away from confusion and into Your holy truth."
+    ],
+    [
+      101,
+      120,
+      "May Your peace guard our minds as we walk the path You have prepared for us today. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "BRING THE DECISION",
+        "BEFORE THE LORD",
+        "ASK FOR WISDOM"
+      ],
+      [
+        "WISDOM"
+      ],
+      "PSALM 32 : 8"
+    ],
+    [
+      16,
+      32,
+      [
+        "SPEAK HONESTLY ABOUT",
+        "THE UNCERTAINTY YOU FEEL",
+        "CALM YOUR HEART"
+      ],
+      [
+        "CALM"
+      ],
+      "PSALM 32 : 8"
+    ],
+    [
+      33,
+      50,
+      [
+        "I WILL INSTRUCT THEE",
+        "AND TEACH THEE IN",
+        "THE WAY YOU GO"
+      ],
+      [
+        "INSTRUCT",
+        "TEACH"
+      ],
+      "PSALM 32 : 8"
+    ],
+    [
+      51,
+      75,
+      [
+        "I WILL GUIDE THEE",
+        "WITH MINE EYE",
+        "WITH PERFECT GRACE"
+      ],
+      [
+        "GUIDE"
+      ],
+      "PSALM 32 : 8"
+    ],
+    [
+      76,
+      100,
+      [
+        "GRANT US STILLNESS",
+        "TO RECOGNIZE DIRECTION",
+        "LEAD INTO TRUTH"
+      ],
+      [
+        "STILLNESS"
+      ],
+      "PSALM 32 : 8"
+    ],
+    [
+      101,
+      120,
+      [
+        "MAY HIS PEACE",
+        "GUARD OUR MINDS",
+        "AMEN"
+      ],
+      [
+        "PEACE"
+      ],
+      "PSALM 32 : 8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Bring the weight of your current decision",
+      "kind": "phrase",
+      "words": [
+        "WISDOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Speak to Him honestly about",
+      "kind": "phrase",
+      "words": [
+        "CALM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will instruct thee and teach thee",
+      "kind": "phrase",
+      "words": [
+        "INSTRUCT",
+        "TEACH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "the way which thou shalt go",
+      "kind": "phrase",
+      "words": [
+        "GUIDE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will guide thee with mine eye",
+      "kind": "phrase",
+      "words": [
+        "STILLNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen",
+      "kind": "phrase",
+      "words": [
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 32:8"
+}

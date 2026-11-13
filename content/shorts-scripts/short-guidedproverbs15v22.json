@@ -1,0 +1,232 @@
+{
+  "key": "short-guidedproverbs15v22",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "GODLY COUNSEL",
+    "DIVINE DIRECTION"
+  ],
+  "poster": [
+    "SEEKING WISDOM",
+    "IN THE QUIET",
+    "PROVERBS 15:22",
+    "PRAYER FOR GUIDANCE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "calm mountain lake at twilight",
+    "misty alpine valley early morning",
+    "peaceful river flowing through forest",
+    "golden sun rays over mountain pass",
+    "quiet forest path in soft fog",
+    "still lake reflection of mountain"
+  ],
+  "scenes": [
+    {
+      "a": "Bring that decision you are facing",
+      "img": "short-guidedproverbs15v22-scene-01.jpg",
+      "kicker": "PROVERBS 15:22",
+      "sub": "SEEKING HIS WILL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We are told in Proverbs 15:22",
+      "img": "short-guidedproverbs15v22-scene-02.jpg",
+      "kicker": "GOD'S WORD",
+      "sub": "THE PATH OF TRUTH",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.7
+      ]
+    },
+    {
+      "a": "without counsel purposes are disappointed",
+      "img": "short-guidedproverbs15v22-scene-03.jpg",
+      "kicker": "HUMBLE HEARTS",
+      "sub": "AVOIDING ERROR",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "but in the multitude of counsellors",
+      "img": "short-guidedproverbs15v22-scene-04.jpg",
+      "kicker": "SEEKING WISDOM",
+      "sub": "LEARNING TO LISTEN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "they are established. Lord we pray",
+      "img": "short-guidedproverbs15v22-scene-05.jpg",
+      "kicker": "HEAVENLY GUIDANCE",
+      "sub": "THE WAY FORWARD",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "for Your light to lead us",
+      "img": "short-guidedproverbs15v22-scene-06.jpg",
+      "kicker": "THE GUIDED PATH",
+      "sub": "REST IN HIS TRUTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "Bring that decision you are facing before the Lord today. Ask Him for His perfect wisdom."
+    ],
+    [
+      16,
+      35,
+      "We are told in Proverbs 15:22, without counsel purposes are disappointed, but in the multitude of counsellors they are established."
+    ],
+    [
+      36,
+      55,
+      "Lord, we pray for Your light to lead us. You see the road ahead, the turns and the shadows."
+    ],
+    [
+      56,
+      75,
+      "Give us the heart to hear godly counsel and the discernment to know when You are speaking."
+    ],
+    [
+      76,
+      95,
+      "Grant us patience to wait on Your timing and the strength to follow the path You reveal."
+    ],
+    [
+      96,
+      120,
+      "Let our steps be firm, our minds be clear, and our spirits be anchored in Your unchanging truth. Subscribe for more guidance."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "BRING THAT DECISION",
+        "YOU ARE FACING",
+        "BEFORE THE LORD",
+        "ASK HIS WISDOM"
+      ],
+      [
+        "DECISION",
+        "WISDOM"
+      ],
+      "PROVERBS 15 : 22"
+    ],
+    [
+      16,
+      35,
+      [
+        "WITHOUT COUNSEL PURPOSES",
+        "ARE DISAPPOINTED BUT",
+        "MULTITUDE OF COUNSELLORS",
+        "THEY ARE ESTABLISHED"
+      ],
+      [
+        "COUNSEL",
+        "ESTABLISHED"
+      ],
+      "PROVERBS 15 : 22"
+    ],
+    [
+      36,
+      55,
+      [
+        "LORD WE PRAY",
+        "FOR YOUR LIGHT",
+        "TO LEAD US",
+        "SEE THE ROAD"
+      ],
+      [
+        "LIGHT",
+        "LEAD"
+      ],
+      "PROVERBS 15 : 22"
+    ],
+    [
+      56,
+      75,
+      [
+        "HEART TO HEAR",
+        "GODLY COUNSEL AND",
+        "THE DISCERNMENT TO",
+        "KNOW YOUR VOICE"
+      ],
+      [
+        "DISCERNMENT",
+        "VOICE"
+      ],
+      "PROVERBS 15 : 22"
+    ],
+    [
+      76,
+      95,
+      [
+        "PATIENCE TO WAIT",
+        "ON YOUR TIMING",
+        "AND THE STRENGTH",
+        "TO FOLLOW PATH"
+      ],
+      [
+        "PATIENCE",
+        "STRENGTH"
+      ],
+      "PROVERBS 15 : 22"
+    ],
+    [
+      96,
+      120,
+      [
+        "STEPS BE FIRM",
+        "MINDS BE CLEAR",
+        "ANCHORED IN TRUTH",
+        "SUBSCRIBE FOR MORE"
+      ],
+      [
+        "TRUTH",
+        "ANCHORED"
+      ],
+      "PROVERBS 15 : 22"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Bring that decision you are facing",
+      "kind": "phrase",
+      "words": [
+        "DECISION",
+        "WISDOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 15:22"
+}
