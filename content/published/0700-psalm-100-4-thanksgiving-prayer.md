@@ -70,13 +70,11 @@ originality:
   no_ai_persona: true
   source_notes: true
 published_on: "2026-11-13"
-published_at: "2026-11-13T06:21:33Z"
+published_at: "2026-11-13T13:08:58Z"
 youtube_video_id: "PAQX6PbcsCk"
 metadata_revision: "selar-seo-v1"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
-thumbnail_retry_after: "2026-11-20T06:58:38Z"
-thumbnail_retry_reason: "permission"
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Entering His Gates With Thanksgiving

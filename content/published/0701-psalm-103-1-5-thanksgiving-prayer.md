@@ -2,7 +2,7 @@
 id: '0701'
 title: Psalm 103:1-5 Thanksgiving Prayer | The Praise Garden
 slug: psalm-103-1-5-thanksgiving-prayer
-status: approved
+status: published
 channel: prayer9
 privacy: public
 format: longform
@@ -70,6 +70,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-13"
+published_at: "2026-11-13T13:51:19Z"
+youtube_video_id: "29otMiYSWYE"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Speaking to Your Own Soul
