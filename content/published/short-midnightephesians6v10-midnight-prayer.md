@@ -23,10 +23,13 @@ short_visual_fingerprints: ["sha256:c93a41edff283a7e9d3ec4203b7b9d08ad878e1affb6
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["RISE IN SPIRIT", "THE MIDNIGHT VIGIL", "ARMOR OF GOD", "STAND FIRM NOW"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-20T17:17:26Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Rise in spirit as the world sleeps and we enter the stillness of the midnight watch. Hear the Word of truth from Ephesians 6:10-18, the guide for our nightly battle. Be strong in the Lord and in the power of His might, seeking Him in the quiet. Put on the full armor of God so that you can stand against the schemes of the enemy. Our struggle is not against flesh and blood, but against powers in the darkness. Praying at all times in the Spirit with all prayer and supplication for all the saints. Know your armor is secure as you rest under the shadow of the Almighty this night. May your heart be guarded until the morning light breaks. Amen.
