@@ -2,7 +2,7 @@
 id: '0065'
 title: Matthew 6:33-34 Morning Prayer | The Morning Altar
 slug: matthew-6-33-34-morning-prayer
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -73,6 +73,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-13"
+published_at: "2026-11-13T20:34:28Z"
+youtube_video_id: "KQK6ZMLr8fw"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded]"
 ---
 
 ## Scene 1 — The Sunrise Hook & Directing the Prayer

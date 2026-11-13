@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T19:56:57Z",
+  "generated_at": "2026-11-13T20:35:16Z",
   "monitor_generated_at": "2026-11-13T19:55:27.683840+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 177,
-    "published_longform": 87,
+    "published_total": 178,
+    "published_longform": 88,
     "published_shorts": 90,
-    "public_total": 175,
-    "queued_longform": 50,
+    "public_total": 176,
+    "queued_longform": 49,
     "queued_shorts": 48,
     "automations_ok": 10,
     "automations_total": 10,
@@ -101,28 +101,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 45,
-        "published_longform": 21,
+        "published_total": 46,
+        "published_longform": 22,
         "published_shorts": 24,
-        "thumbnail_pending": 3,
-        "public_total": 44,
-        "queued_longform": 6,
+        "thumbnail_pending": 4,
+        "public_total": 45,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 3
       },
       "latest_video": {
-        "id": "0064",
-        "title": "Zephaniah 3:5 Morning Prayer | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "Q4_44SA0ClI",
-        "watch_url": "https://youtu.be/Q4_44SA0ClI",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T16:59:13Z"
-      },
-      "next_queued_longform": {
         "id": "0065",
         "title": "Matthew 6:33-34 Morning Prayer | The Morning Altar",
-        "words": 1293,
+        "format": "longform",
+        "youtube_video_id": "KQK6ZMLr8fw",
+        "watch_url": "https://youtu.be/KQK6ZMLr8fw",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T20:34:28Z"
+      },
+      "next_queued_longform": {
+        "id": "0066",
+        "title": "Joshua 1:8-9 Morning Prayer | The Morning Altar",
+        "words": 1267,
         "status": "approved"
       },
       "next_queued_short": {
@@ -666,6 +666,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0065",
+      "slug": "matthew-6-33-34-morning-prayer",
+      "file": "0065-matthew-6-33-34-morning-prayer.md",
+      "title": "Matthew 6:33-34 Morning Prayer | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T20:34:28Z",
+      "youtube_video_id": "KQK6ZMLr8fw",
+      "watch_url": "https://youtu.be/KQK6ZMLr8fw",
+      "youtu_be_url": "https://youtu.be/KQK6ZMLr8fw",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/KQK6ZMLr8fw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/KQK6ZMLr8fw/hqdefault.jpg",
+      "thumb_text": "SEEK YE FIRST",
+      "thumbnail_pending": true,
+      "duration_label": "~9 min",
+      "words": 1293
+    },
     {
       "id": "0406",
       "slug": "philippians-4-6-7-peace-that-passeth-understanding-prayer",
@@ -5098,19 +5122,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1025
-      },
-      {
-        "id": "0065",
-        "slug": "matthew-6-33-34-morning-prayer",
-        "file": "0065-matthew-6-33-34-morning-prayer.md",
-        "title": "Matthew 6:33-34 Morning Prayer | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1293
       },
       {
         "id": "0066",
