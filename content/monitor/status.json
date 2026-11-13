@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T01:58:15.964126+00:00",
+  "generated_at": "2026-11-13T03:16:00.572398+00:00",
   "healthy": false,
   "automations": [
     {
@@ -18,7 +18,7 @@
       "failures_5": 2,
       "effect": "reports and files stalls",
       "verdict": "SELF-REPORT",
-      "detail": "this is the check itself; its previous run ended failure 55m ago, which is its own verdict and not independent evidence",
+      "detail": "this is the check itself; its previous run ended failure 2.2h ago, which is its own verdict and not independent evidence",
       "severity": "info"
     },
     {
@@ -39,7 +39,7 @@
       "failures_5": 0,
       "effect": "posts replies and records them in content/comments/replied.json",
       "verdict": "OK",
-      "detail": "last success 1.6h ago",
+      "detail": "last success 2.9h ago",
       "severity": "ok"
     },
     {
@@ -58,7 +58,7 @@
       "failures_5": 0,
       "effect": "writes content/community/<id>-READY.md",
       "verdict": "OK",
-      "detail": "last success 24.4h ago",
+      "detail": "last success 25.7h ago",
       "severity": "ok"
     },
     {
@@ -72,12 +72,12 @@
       "last_success": "2026-11-12T11:04:31+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-12T16:20:57+00:00",
-      "last_slot": "2026-11-12T03:14:00+00:00",
+      "last_slot": "2026-11-13T03:14:00+00:00",
       "missed_slots": 0,
       "failures_5": 0,
       "effect": "writes content/queue/ or content/shorts-scripts/",
       "verdict": "OK",
-      "detail": "last success 14.9h ago",
+      "detail": "last success 16.2h ago",
       "severity": "ok"
     },
     {
@@ -91,12 +91,12 @@
       "last_success": "2026-11-12T09:44:21+00:00",
       "runs_14d": 15,
       "last_edited": "2026-11-12T16:20:57+00:00",
-      "last_slot": "2026-11-12T02:14:00+00:00",
+      "last_slot": "2026-11-13T02:14:00+00:00",
       "missed_slots": 0,
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 16.2h ago",
+      "detail": "last success 17.5h ago",
       "severity": "ok"
     },
     {
@@ -115,7 +115,7 @@
       "failures_5": 0,
       "effect": "re-arms scheduled workflows",
       "verdict": "OK",
-      "detail": "last success 86.2h ago",
+      "detail": "last success 87.5h ago",
       "severity": "ok"
     },
     {
@@ -134,7 +134,7 @@
       "failures_5": 0,
       "effect": "writes content/metrics.csv and opens a snapshot issue",
       "verdict": "OK",
-      "detail": "last success 4.0h ago",
+      "detail": "last success 5.3h ago",
       "severity": "ok"
     },
     {
@@ -143,7 +143,7 @@
       "crons": [
         "23 */3 * * *"
       ],
-      "last_run": "2026-11-13T01:57:04+00:00",
+      "last_run": "2026-11-13T03:15:02+00:00",
       "last_conclusion": null,
       "last_success": "2026-11-12T15:16:08+00:00",
       "runs_14d": 20,
@@ -174,7 +174,7 @@
       "failures_5": 0,
       "effect": "publishes a video: content/published/ gains a receipt with a video id",
       "verdict": "OK",
-      "detail": "last success 14.7h ago",
+      "detail": "last success 16.0h ago",
       "severity": "ok"
     },
     {
@@ -183,9 +183,9 @@
       "crons": [
         "47 0,3,6,9,12,15,18,21 * * *"
       ],
-      "last_run": "2026-11-13T00:30:04+00:00",
+      "last_run": "2026-11-13T03:15:02+00:00",
       "last_conclusion": "success",
-      "last_success": "2026-11-13T00:30:04+00:00",
+      "last_success": "2026-11-13T03:15:02+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-07T19:31:06+00:00",
       "last_slot": "2026-11-13T00:47:00+00:00",
@@ -193,7 +193,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 1.5h ago",
+      "detail": "last success 0.0h ago",
       "severity": "ok"
     }
   ],
@@ -205,42 +205,42 @@
     },
     {
       "outcome": "last upload (secret-place)",
-      "detail": "The Secret Place: 2026-11-12 (3h ago \u2014 0020-psalm-18-2-my-rock-my-fortress-my-deliverer.md)",
+      "detail": "The Secret Place: 2026-11-12 (4h ago \u2014 0020-psalm-18-2-my-rock-my-fortress-my-deliverer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer2)",
-      "detail": "The Morning Altar: 2026-11-12 (2h ago \u2014 0063-hosea-6-3-his-going-forth-is-prepared-as-the-morning.md)",
+      "detail": "The Morning Altar: 2026-11-12 (4h ago \u2014 0063-hosea-6-3-his-going-forth-is-prepared-as-the-morning.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer3)",
-      "detail": "The Midday Watch: 2026-11-12 (2h ago \u2014 short-middayisaiah32v2-midday-prayer.md)",
+      "detail": "The Midday Watch: 2026-11-12 (3h ago \u2014 short-middayisaiah32v2-midday-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer4)",
-      "detail": "The Midnight Watch: 2026-11-13 (1h ago \u2014 0207-ephesians-6-10-18-midnight-prayer.md)",
+      "detail": "The Midnight Watch: 2026-11-13 (3h ago \u2014 0207-ephesians-6-10-18-midnight-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer5)",
-      "detail": "The Family Altar: 2026-11-12 (6h ago \u2014 0303-isaiah-54-13-family-prayer.md)",
+      "detail": "The Family Altar: 2026-11-13 (1h ago \u2014 0304-isaiah-32-18-household-peace-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer6)",
-      "detail": "The Healing Balm: 2026-11-12 (5h ago \u2014 0403-isaiah-40-29-31-healing-prayer.md)",
+      "detail": "The Healing Balm: 2026-11-12 (7h ago \u2014 0403-isaiah-40-29-31-healing-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer7)",
-      "detail": "The Provision Table: 2026-11-12 (4h ago \u2014 0503-revelation-3-8-open-doors-prayer.md)",
+      "detail": "The Provision Table: 2026-11-12 (6h ago \u2014 0503-revelation-3-8-open-doors-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer8)",
-      "detail": "The Covenant Shield: 2026-11-11 (37h ago \u2014 0600-psalm-121-7-8-protection-prayer.md)",
+      "detail": "The Covenant Shield: 2026-11-11 (38h ago \u2014 0600-psalm-121-7-8-protection-prayer.md)",
       "severity": "warning"
     },
     {
@@ -255,7 +255,7 @@
     },
     {
       "outcome": "publishable runway",
-      "detail": "53 of 53 approved script(s) over the 850-word floor (59 in queue)",
+      "detail": "52 of 52 approved script(s) over the 850-word floor (58 in queue)",
       "severity": "ok"
     },
     {

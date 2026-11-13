@@ -20,10 +20,13 @@ height: 1280
 duration_seconds: 62.28
 scenes_verified: 6
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["PEACEFUL DWELLINGS", "ISAIAH 32:18", "BLESS YOUR HOME", "THE FAMILY ALTAR"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-20T03:15:52Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Gather your home and loved ones in faith tonight as we seek the Lord's presence over your household. Scripture declares in Isaiah 32:18, my people will live in peaceful dwelling places, in secure homes, in undisturbed places of rest. Heavenly Father, we dedicate this home to Your holy presence and ask You to fill every room with quiet grace. Guard our doors from discord, protect our hearts from anxiety, and let Your peace rest upon everyone who enters here. Keep our family united in Your truth, rooted in love, and safe under the shadow of Your almighty wings tonight. We place our sanctuary into Your faithful hands, trusting You for quiet rest. Subscribe to cover your family home in daily prayer.
