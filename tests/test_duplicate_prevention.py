@@ -88,6 +88,25 @@ class TestRemoteDuplicateDetection(unittest.TestCase):
         self.assertIsNone(dup)
 
 
+    def test_lookup_failure_is_not_treated_as_no_duplicate(self):
+        youtube = MagicMock()
+        youtube.channels().list().execute.side_effect = RuntimeError("API unavailable")
+        with self.assertRaisesRegex(RuntimeError, "refusing to upload"):
+            check_existing_channel_duplicate(youtube, "Title")
+
+    def test_missing_channel_or_invalid_playlist_is_not_a_clean_lookup(self):
+        youtube = MagicMock()
+        youtube.channels().list().execute.return_value = {"items": []}
+        with self.assertRaisesRegex(RuntimeError, "refusing to upload"):
+            check_existing_channel_duplicate(youtube, "Title")
+        youtube.channels().list().execute.return_value = {
+            "items": [{"contentDetails": {"relatedPlaylists": {"uploads": "UU123"}}}]
+        }
+        youtube.playlistItems().list().execute.return_value = {}
+        with self.assertRaisesRegex(RuntimeError, "refusing to upload"):
+            check_existing_channel_duplicate(youtube, "Title")
+
+
 class TestUploadDuplicateShield(unittest.TestCase):
     @patch("pipeline.upload._credentials")
     @patch("googleapiclient.discovery.build")
@@ -107,6 +126,20 @@ class TestUploadDuplicateShield(unittest.TestCase):
         self.assertEqual(result.privacy_status, "duplicate_prevented")
         # Ensure videos().insert was NOT called!
         mock_youtube.videos().insert.assert_not_called()
+
+
+    @patch("pipeline.upload._credentials")
+    @patch("googleapiclient.discovery.build")
+    def test_upload_never_inserts_when_duplicate_lookup_fails(self, mock_build, mock_creds):
+        youtube = MagicMock()
+        mock_build.return_value = youtube
+        youtube.channels().list().execute.side_effect = RuntimeError("API unavailable")
+        doc = ScriptDoc(path=Path("/tmp/test.md"),
+                        meta={"title": "Psalm 91", "slug": "psalm-91"}, scenes=[])
+        with patch("pipeline.upload.CONFIG.allow_duplicate_uploads", False):
+            with self.assertRaisesRegex(RuntimeError, "refusing to upload"):
+                upload(doc, Path("/tmp/fake.mp4"))
+        youtube.videos().insert.assert_not_called()
 
 
 class TestQueueDuplicatePurge(unittest.TestCase):

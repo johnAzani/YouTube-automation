@@ -31,14 +31,29 @@ class DownloadHandler(http.server.SimpleHTTPRequestHandler):
     protocol_version = 'HTTP/1.1'
 
     def translate_path(self, path):
-        # Resolve path against repo root, falling back to docs/
-        p = super().translate_path(path)
-        if not os.path.exists(p):
-            parsed = urllib.parse.urlparse(path).path.lstrip('/')
-            docs_alt = ROOT / 'docs' / parsed
-            if docs_alt.exists():
-                return str(docs_alt)
-        return p
+        # Reject traversal and hidden files (notably .git and .env) before
+        # trying either location. Resolve symlinks so neither root can escape.
+        raw_path = urllib.parse.unquote(urllib.parse.urlsplit(path).path)
+        parts = raw_path.split('/')
+        if '\x00' in raw_path or any(part.startswith('.') for part in parts if part):
+            return None
+        relative = Path(*[part for part in parts if part])
+        root = ROOT.resolve()
+        primary = (root / relative).resolve()
+        docs_root = (root / 'docs').resolve()
+        alternate = (docs_root / relative).resolve()
+        if not primary.is_relative_to(root) or not alternate.is_relative_to(docs_root):
+            return None
+        target = primary if primary.exists() or not alternate.exists() else alternate
+        if any(part.startswith('.') for part in target.relative_to(root).parts):
+            return None
+        return str(target)
+
+    def list_directory(self, path):
+        # A download server should not disclose the repository's inventory,
+        # including names of hidden configuration and credential files.
+        self.send_error(403, "Directory listing is disabled")
+        return None
 
     def do_OPTIONS(self):
         self.send_response(200)
@@ -50,7 +65,24 @@ class DownloadHandler(http.server.SimpleHTTPRequestHandler):
 
     def send_head(self):
         path = self.translate_path(self.path)
-        if not os.path.exists(path) or os.path.isdir(path):
+        if path is None:
+            self.send_error(404, "File not found")
+            return None
+        if os.path.isdir(path):
+            # The base handler opens index files itself, without calling
+            # translate_path again. Validate them too, including symlink targets.
+            root = ROOT.resolve()
+            for name in ('index.html', 'index.htm'):
+                index = Path(path) / name
+                if index.is_file():
+                    target = index.resolve()
+                    if (not target.is_relative_to(root) or
+                            any(part.startswith('.') for part in target.relative_to(root).parts)):
+                        self.send_error(404, "File not found")
+                        return None
+                    break
+            return super().send_head()
+        if not os.path.exists(path):
             return super().send_head()
 
         ctype = self.guess_type(path)

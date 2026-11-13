@@ -424,7 +424,8 @@ class TestWatchdog(unittest.TestCase):
 
         self.receipt(days_ago=9)
         with mock.patch("scripts.automation_health.queue_health",
-                        return_value=self.healthy_rows()):
+                        return_value=self.healthy_rows()), \
+             mock.patch.object(wd, "check_schedule_health", return_value={}):
             report = wd.build_report(published_dir=self.dir, workflow_rows=[])
         self.assertTrue(any(f.area == "publishing" for f in report.findings))
 

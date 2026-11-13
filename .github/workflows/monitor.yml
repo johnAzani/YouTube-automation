@@ -232,14 +232,21 @@ jobs:
             fi
           done < "$sync_dir/files.z"
           git restore --source=origin/main --staged --worktree -- content/queue/ content/shorts-queue/ docs/network-state.json 2>/dev/null || true
-          python -m scripts.build_dashboard_data || true
           if [ -f content/monitor/status.json ]; then
             git add content/monitor/status.json
           fi
-          if [ -f docs/network-state.json ]; then
-            git add docs/network-state.json
-          fi
           git add content/published/*.md
+          # A long-running monitor may have old code in its working tree after
+          # reset --mixed. Generate with both code and data from the staged index.
+          idx_dir="$(mktemp -d)"
+          workspace="$PWD"
+          if git checkout-index -a -f --prefix="$idx_dir/" \
+             && (cd "$idx_dir" && PYTHONPATH="$idx_dir" python -m scripts.build_dashboard_data --repo-root "$idx_dir" --out "$workspace/docs/network-state.json"); then
+            [ -f docs/network-state.json ] && git add -- docs/network-state.json
+          else
+            echo "::warning::Dashboard generation failed; leaving the existing snapshot unchanged"
+          fi
+          rm -rf "$idx_dir"
           if git diff --cached --quiet; then
             echo "snapshot unchanged"
           else

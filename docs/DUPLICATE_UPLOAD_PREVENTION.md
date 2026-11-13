@@ -46,8 +46,10 @@ A screenshot of the YouTube mobile app revealed **5 duplicate uploads of the Psa
 ## 2. The 6-Layer Permanent Prevention Shield
 
 ### Layer 1: Remote YouTube Channel Duplicate Detection (`pipeline/upload.py`)
-Before calling `youtube.videos().insert()`, `pipeline/upload.py::check_existing_channel_duplicate()` queries the channel's recent uploads playlist (`playlistItems.list`, 1 quota unit).
-- **Exact Title Matching:** Compares candidate title with all existing channel videos.
+Before calling `youtube.videos().insert()`, `pipeline/upload.py::check_existing_channel_duplicate()` queries the channel's uploads playlist (one `channels.list` and one `playlistItems.list` call).
+- **Scope:** The remote check covers only the **50 most recent uploads**, not the entire channel. Older duplicates or differently titled copies may not be detected; the published ledger is a separate safeguard, not a guarantee.
+- **Lookup failures:** If the channel or uploads playlist cannot be read, the final upload is refused rather than treating the error as a clean result. The optional early pre-check may still be skipped, but the final check runs before insertion unless the explicit duplicate override is enabled.
+- **Exact Title Matching:** Compares the candidate title with those recent uploads.
 - **Normalized Title Matching:** Strips hashtags (`#Shorts`, `#shorts`), removes punctuation, lowercases, and collapses whitespace. For example:
   ```
   "Say This Psalm 91 Prayer Before You Sleep | Divine Protection #Shorts"

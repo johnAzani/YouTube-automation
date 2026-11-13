@@ -154,15 +154,18 @@ def _normalize_title(title: str) -> str:
 def check_existing_channel_duplicate(youtube, title: str, slug: str | None = None) -> dict | None:
     """Check if a video with an identical or near-identical title already exists on the channel.
 
-    Returns existing video metadata if found, or None.
-    Uses only 2 YouTube Data API quota units (channels.list + playlistItems.list).
+    Returns existing video metadata if found, or None after a successful lookup.
+    Raises if the lookup cannot be completed; an unknown result is not evidence
+    that an upload is safe. Searches the latest 50 uploads using two API units.
     """
     try:
         ch_resp = youtube.channels().list(part="contentDetails", mine=True).execute()
         items = ch_resp.get("items", [])
         if not items:
-            return None
+            raise RuntimeError("YouTube returned no channel for the duplicate check")
         uploads_pl = items[0]["contentDetails"]["relatedPlaylists"]["uploads"]
+        if not uploads_pl:
+            raise RuntimeError("YouTube returned no uploads playlist")
 
         # Check recent 50 channel uploads
         pl_resp = youtube.playlistItems().list(
@@ -171,9 +174,11 @@ def check_existing_channel_duplicate(youtube, title: str, slug: str | None = Non
             maxResults=50,
         ).execute()
 
+        if not isinstance(pl_resp.get("items"), list):
+            raise RuntimeError("YouTube returned an invalid uploads playlist response")
         target_norm = _normalize_title(title)
 
-        for p_item in pl_resp.get("items", []):
+        for p_item in pl_resp["items"]:
             snip = p_item.get("snippet", {})
             remote_title = snip.get("title", "")
             remote_id = snip.get("resourceId", {}).get("videoId", "")
@@ -190,8 +195,7 @@ def check_existing_channel_duplicate(youtube, title: str, slug: str | None = Non
 
         return None
     except Exception as exc:
-        print(f"[upload] Notice: duplicate check query skipped: {exc}")
-        return None
+        raise RuntimeError("Duplicate check failed; refusing to upload without verification") from exc
 
 
 def verify_target_channel(youtube) -> dict:
