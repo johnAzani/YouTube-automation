@@ -3,7 +3,7 @@
 ## What happened
 
 In the two production runs of the afternoon and evening of 13 November (started
-4:50pm and 8:58pm Nigeria time), seven channels failed their Short with the
+3:45pm and 8:58pm Nigeria time), seven channels failed their Short with the
 same message, for the same Short both times:
 
 `cannot prepare Charon narration for <short> (Short speech alignment unavailable or incomplete; refusing to render)`
@@ -18,8 +18,9 @@ same message, for the same Short both times:
 | The Covenant Shield | `short-shieldproverbs18v10` |
 | The Praise Garden | `short-gardenpsalm103v2` |
 
-The Midnight Watch and The Provision Table released Shorts in the same runs, on
-the same runners, so the speech model and the environment were working.
+The Midnight Watch and The Provision Table released Shorts in the first of those
+runs (4:58pm and 5:58pm), on the same kind of runner with the same cached speech
+model, so the model and the environment were working.
 
 ## Why it never recovered
 
