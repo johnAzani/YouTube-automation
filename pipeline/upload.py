@@ -43,6 +43,15 @@ class UploadResult:
     # videos went live with YouTube's auto-picked frame while every receipt
     # claimed a `ctr-v3-cinema` thumbnail. Report it, stamp it, retry it.
     thumbnail_status: str = "not_requested"
+    # Set when the video was uploaded private with a publish time: the instant
+    # YouTube will make it public ("2026-11-14T14:14:00Z"). Empty for an upload
+    # that is public (or deliberately private) the moment it finishes.
+    scheduled_for: str = ""
+    # "ok", "failed", "skipped" (nothing to post) or "not_attempted". A scheduled
+    # video is private when the comment is posted; if YouTube refuses it there,
+    # the receipt says the comment is owed and the monitor posts it once the
+    # video is public.
+    pinned_comment: str = "not_attempted"
 
 
 from pipeline.quota_handler import (
@@ -295,9 +304,14 @@ def _inspect_existing_video(video_id: str, expected_title: str, kind: str) -> di
             raise ValueError("missing timezone")
     except ValueError as exc:
         raise RuntimeError(f"Cannot recover {kind}: YouTube did not return a usable publication timestamp") from exc
-    return {"video_id": video_id, "title": remote_title, "privacy_status": privacy,
-            "upload_status": upload_status, "published_at": published_at,
-            "duration": str((item.get("contentDetails") or {}).get("duration") or "")}
+    found = {"video_id": video_id, "title": remote_title, "privacy_status": privacy,
+             "upload_status": upload_status, "published_at": published_at,
+             "duration": str((item.get("contentDetails") or {}).get("duration") or "")}
+    if privacy == "private" and status.get("publishAt"):
+        # A private video waiting for its publish time. Until then YouTube
+        # reports the upload time as publishedAt; the receipt needs both.
+        found["publish_at"] = str(status["publishAt"])
+    return found
 
 
 def inspect_existing_short(video_id: str, expected_title: str) -> dict:
@@ -375,11 +389,23 @@ def upload(
 
     privacy = privacy or doc.meta.get("privacy") or (CONFIG.default_privacy)
     publish_at = publish_at or doc.meta.get("publish_at")
+    # What this upload would be with no publish time at all.
+    immediate_privacy = "public" if (CONFIG.auto_publish and privacy == "private") else privacy
+    slot_scheduled = False
+    if not publish_at and not is_short and immediate_privacy == "public":
+        # A long-form that would go public right now may instead go public on
+        # its slot minute (pipeline/publish_schedule.py; off unless configured).
+        # Never for an upload that is meant to stay private or unlisted: a
+        # publish time would make it public.
+        from .publish_schedule import resolve_longform_publish_at
+
+        publish_at = resolve_longform_publish_at()
+        slot_scheduled = bool(publish_at)
 
     if publish_at:
         privacy = "private"
-    elif CONFIG.auto_publish and privacy == "private":
-        privacy = "public"
+    else:
+        privacy = immediate_privacy
 
     raw_desc = description or build_description(doc)
     from .channels import get_channel
@@ -441,15 +467,31 @@ def upload(
     except Exception as exc:
         print(f"[upload] Notice: localization build skipped: {exc}")
 
-    media = MediaFileUpload(str(video_path), mimetype="video/mp4", resumable=True, chunksize=8 * 1024 * 1024)
-    request = youtube.videos().insert(part=insert_parts, body=body, media_body=media)
+    def _insert():
+        media = MediaFileUpload(str(video_path), mimetype="video/mp4", resumable=True, chunksize=8 * 1024 * 1024)
+        request = youtube.videos().insert(part=insert_parts, body=body, media_body=media)
+        answer = None
+        while answer is None:
+            status, answer = request.next_chunk()
+            if status:
+                print(f"[upload] {int(status.progress() * 100)}%")
+        return answer
 
     response = None
     try:
-        while response is None:
-            status, response = request.next_chunk()
-            if status:
-                print(f"[upload] {int(status.progress() * 100)}%")
+        try:
+            response = _insert()
+        except Exception as exc:
+            # YouTube refused the publish time this pipeline chose for the slot.
+            # The release matters more than the minute: send it public now.
+            if not (slot_scheduled and "invalidPublishAt" in str(exc)):
+                raise
+            print(f"::warning title=Publish time refused ({CONFIG.channel_id})::YouTube "
+                  f"rejected publishAt={publish_at}; uploading public now instead.")
+            body["status"].pop("publishAt", None)
+            body["status"]["privacyStatus"] = privacy = immediate_privacy
+            publish_at = None
+            response = _insert()
     except Exception as exc:
         err_msg = str(exc)
         if "quotaExceeded" in err_msg or "uploadLimitExceeded" in err_msg:
@@ -463,6 +505,13 @@ def upload(
 
     video_id = response["id"]
     stored_privacy = response.get("status", {}).get("privacyStatus", privacy)
+    scheduled_for = ""
+    if publish_at and stored_privacy == "private":
+        from .publish_schedule import STAMP, parse_instant
+
+        confirmed = parse_instant(response.get("status", {}).get("publishAt")) or parse_instant(publish_at)
+        scheduled_for = confirmed.strftime(STAMP) if confirmed else str(publish_at)
+        print(f"[upload] {video_id} is private and scheduled to go public at {scheduled_for}")
     thumbnail_status = "not_requested"
 
     if thumbnail_path and thumbnail_path.exists() and not is_short:
@@ -516,11 +565,15 @@ def upload(
             print(f"[upload] playlist insert failed: {exc!r}")
 
     # --- FIRST-HOUR PASTORAL PINNED COMMENT ---
+    pinned_comment = "skipped"
     try:
         from .pinned_comments import generate_pastoral_pinned_comment, post_pastoral_pinned_comment
         pinned_text = generate_pastoral_pinned_comment(doc)
-        post_pastoral_pinned_comment(youtube, video_id, pinned_text, dry_run=False)
+        if pinned_text and pinned_text.strip():
+            posted = post_pastoral_pinned_comment(youtube, video_id, pinned_text, dry_run=False)
+            pinned_comment = "ok" if posted else "failed"
     except Exception as exc:
+        pinned_comment = "failed"
         print(f"[upload] Notice: pastoral pinned comment skipped: {exc}")
 
     return UploadResult(
@@ -529,6 +582,8 @@ def upload(
         watch_url=f"https://youtu.be/{video_id}",
         auto_published=stored_privacy == "public",
         thumbnail_status=thumbnail_status,
+        scheduled_for=scheduled_for,
+        pinned_comment=pinned_comment,
     )
 
 

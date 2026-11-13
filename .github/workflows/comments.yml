@@ -144,8 +144,15 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Check out repository
+        # The branch tip as it is when THIS leg starts, not the commit the run
+        # was created at. The reply ledger is one JSON object shared by every
+        # channel: a leg that starts from the run's commit edits a ledger that
+        # lacks the entries the legs before it just pushed, its rebase conflicts
+        # on every retry, and those entries were dropped while the step stayed
+        # green (tests/test_comments_ledger_rehearsal.py reproduces it).
         uses: actions/checkout@v4
         with:
+          ref: ${{ github.ref }}
           fetch-depth: 1
 
       - name: Set up Python 3.12
@@ -198,19 +205,36 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if [ -f "content/comments/replied.json" ]; then
-            git add content/comments/replied.json
-            if git diff --staged --quiet; then
-              echo "ledger unchanged"
-            else
-              git commit -m "chore(comments): record replied comment IDs [skip ci]"
-              # Another workflow may have pushed while this one was replying.
-              # One rebase is not enough when produce and the supervisor are both
-              # writing content/ at the same time: retry before failing the run.
-              for attempt in 1 2 3; do
-                git pull --rebase --autostash origin "${GITHUB_REF_NAME:-main}" && git push && break
-                echo "push attempt $attempt lost the race; retrying"
-                sleep 5
-              done
-            fi
+          ledger="content/comments/replied.json"
+          branch="${GITHUB_REF_NAME:-main}"
+          if [ ! -f "$ledger" ]; then
+            echo "no ledger yet"
+            exit 0
           fi
+          git add "$ledger"
+          if git diff --staged --quiet; then
+            echo "ledger unchanged"
+            exit 0
+          fi
+          git commit --quiet -m "chore(comments): record replied comment IDs [skip ci]"
+          # Other workflows push to this branch all day (monitor, production), so
+          # a rejected push is normal: rebase onto the new tip and try again. A
+          # rebase that conflicts is not: it means another writer changed the
+          # ledger itself. Abort it, so the next attempt starts clean, and never
+          # finish green without the entries on the branch.
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase --quiet --autostash origin "$branch"; then
+              if git push --quiet origin "HEAD:$branch"; then
+                echo "ledger recorded on attempt $attempt"
+                exit 0
+              fi
+            else
+              if [ -d .git/rebase-merge ] || [ -d .git/rebase-apply ]; then
+                git rebase --abort
+              fi
+            fi
+            echo "::warning::ledger push attempt $attempt did not land; retrying"
+            sleep $((attempt * 3))
+          done
+          echo "::error title=Reply ledger not recorded::the replies were posted but their ledger entries could not be pushed. The next pulse will find the replies on YouTube and record them."
+          exit 1

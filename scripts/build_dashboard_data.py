@@ -98,6 +98,10 @@ def _load_published(repo_root: Path) -> list[dict[str, Any]]:
         privacy = str(
             meta.get("privacy") or meta.get("privacy_status") or profile.default_privacy
         ).strip().lower()
+        if meta.get("scheduled_publish") is True:
+            # Uploaded private with a publish time: `published_at` is when it
+            # goes public, and until then the link opens a private video.
+            privacy = "scheduled"
         published_at = str(meta.get("published_at") or "").strip()
         published_on = str(meta.get("published_on") or "").strip()
         if not published_on and len(published_at) >= 10:

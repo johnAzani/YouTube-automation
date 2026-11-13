@@ -20,9 +20,14 @@ permissions:
   contents: write
   issues: write
 
+# Shared with produce.yml. `queue: max` keeps every waiting run in arrival order
+# instead of letting a newer waiting run cancel an older one, which matters here
+# because this workflow waits behind production runs that last hours. Change
+# both files together.
 concurrency:
   group: content-state
   cancel-in-progress: false
+  queue: max
 
 jobs:
   plan:

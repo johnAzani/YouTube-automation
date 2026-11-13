@@ -152,6 +152,10 @@ def published_channels_since(slot: datetime, published_dir: Path | None = None) 
         fmt = str(getattr(doc, "format", "") or doc.meta.get("format", "")).strip().lower()
         if fmt != "longform" or not str(doc.meta.get("youtube_video_id") or "").strip():
             continue
+        # A scheduled upload that YouTube rejected, or that is gone, never went
+        # public (scripts/confirm_scheduled_publish.py): it serves no slot.
+        if str(doc.meta.get("scheduled_publish_failed")).strip().lower() == "true":
+            continue
         stamps = [str(doc.meta.get(key) or "") for key in ("published_at", "published_on")]
         when = None
         for stamp in stamps:
@@ -579,7 +583,7 @@ def dispatch(
 
     1. **One dispatch for every channel that owes the slot a video.** The run
        renders them side by side (``channels=a,b,c``). It used to be one channel
-       per dispatch because ``content-state`` holds a single pending run, which
+       per dispatch because ``content-state`` then held a single pending run, which
        made recovering ten channels ten runs in a row.
     2. **Receipts, not runs, decide.** `published_channels_since()` is the only
        evidence that a channel's video exists.
