@@ -174,7 +174,7 @@ Not yet examined, and needed before `max-parallel` is raised:
    `metadata_revision: "selar-seo-v1"`, so the metadata sync treats it as current and
    does not touch the video; the current thumbnail fields were kept. See
    `docs/PARALLEL_PRODUCTION_2026-11-13.md`.
-2. **Run 43335854790** was still in progress at 11:45am on 13 November, on `ea9d95e`,
+2. **Run 43335854790** was still in progress at 12:07pm on 13 November, on `ea9d95e`,
    which predates both the guard and this fix. It has already repeated the pattern once
    (`aed028b`, 10:58am) and has five more legs to run. After it ends, run
    `python scripts/repair_clobbered_receipts.py` in a full clone; `--apply` restores,

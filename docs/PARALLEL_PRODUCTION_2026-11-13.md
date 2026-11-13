@@ -92,7 +92,7 @@ measured with two or three channels and no longer holds with ten.
   The Guided Path 0.
 - The run in progress while this was written started its first leg at 7:57am on
   13 November for the 8:14pm slot of 12 November, and still had four channels
-  waiting at 11:45am.
+  waiting at 12:07pm.
 
 ### A second fault found on the way: the evening slot stopped at 1:00am
 
