@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T16:44:11Z",
+  "generated_at": "2026-11-13T16:50:02Z",
   "monitor_generated_at": "2026-11-13T15:15:34.677104+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 168,
-    "published_longform": 79,
+    "published_total": 169,
+    "published_longform": 80,
     "published_shorts": 89,
-    "public_total": 166,
-    "queued_longform": 58,
+    "public_total": 167,
+    "queued_longform": 57,
     "queued_shorts": 49,
     "automations_ok": 10,
     "automations_total": 10,
@@ -33,29 +33,29 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 36,
-        "published_longform": 12,
+        "published_total": 37,
+        "published_longform": 13,
         "published_shorts": 24,
         "thumbnail_pending": 2,
-        "public_total": 35,
-        "queued_longform": 15,
+        "public_total": 36,
+        "queued_longform": 14,
         "queued_other": 5,
         "queued_shorts": 4
       },
       "latest_video": {
-        "id": "SHORT-1PETER5V7",
-        "title": "Say This 1 Peter 5:7 Prayer Before You Sleep | 1 Peter 5:7 #Shorts",
-        "format": "short",
-        "youtube_video_id": "GQT7eKz9MAE",
-        "watch_url": "https://www.youtube.com/shorts/GQT7eKz9MAE",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T07:05:25Z"
-      },
-      "next_queued_longform": {
         "id": "0021",
         "title": "Psalm 31:5 Bedtime Prayer | Into Your Hands I Commit My Spirit",
-        "words": 1123,
-        "status": "quota_paused"
+        "format": "longform",
+        "youtube_video_id": "r3nA7BgZpP4",
+        "watch_url": "https://youtu.be/r3nA7BgZpP4",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T16:49:01Z"
+      },
+      "next_queued_longform": {
+        "id": "0022",
+        "title": "Psalm 37:7 Bedtime Prayer | Rest in the Lord & Fret Not",
+        "words": 900,
+        "status": "approved"
       },
       "next_queued_short": {
         "short": "short-psalm3v3",
@@ -666,6 +666,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0021",
+      "slug": "psalm-31-1-5-committing-my-spirit-to-his-hand",
+      "file": "0021-psalm-31-1-5-committing-my-spirit-to-his-hand.md",
+      "title": "Psalm 31:5 Bedtime Prayer | Into Your Hands I Commit My Spirit",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T16:49:01Z",
+      "youtube_video_id": "r3nA7BgZpP4",
+      "watch_url": "https://youtu.be/r3nA7BgZpP4",
+      "youtu_be_url": "https://youtu.be/r3nA7BgZpP4",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/r3nA7BgZpP4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/r3nA7BgZpP4/hqdefault.jpg",
+      "thumb_text": "INTO THINE HAND",
+      "thumbnail_pending": false,
+      "duration_label": "~8 min",
+      "words": 1123
+    },
     {
       "id": "0209",
       "slug": "isaiah-10-27-midnight-prayer-the-midnight-watch",
@@ -4701,19 +4725,6 @@
   ],
   "queues": {
     "longform": [
-      {
-        "id": "0021",
-        "slug": "psalm-31-1-5-committing-my-spirit-to-his-hand",
-        "file": "0021-psalm-31-1-5-committing-my-spirit-to-his-hand.md",
-        "title": "Psalm 31:5 Bedtime Prayer | Into Your Hands I Commit My Spirit",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "quota_paused",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1123
-      },
       {
         "id": "0022",
         "slug": "psalm-37-3-4-7-rest-in-the-lord-wait-patiently",
