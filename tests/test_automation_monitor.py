@@ -31,6 +31,9 @@ def run(filename, hours_ago, conclusion="success"):
 
 class MonitorCase(unittest.TestCase):
     def setUp(self):
+        quota = mock.patch.object(am, "active_quota_cooldown", return_value=None)
+        quota.start()
+        self.addCleanup(quota.stop)
         self.files = [("produce.yml", "Produce video", ["14 6 * * *"])]
         patch = mock.patch.object(am, "workflow_files", return_value=self.files)
         patch.start()
@@ -146,10 +149,24 @@ class TestRunEvidence(MonitorCase):
         self.assertIn("OK", text)
 
 
+class TestPreviousOccurrence(unittest.TestCase):
+    def test_multiple_crons_search_each_expression_independently(self):
+        # Wednesday morning: Monday's weekly slot must not stop the daily
+        # evening expression from searching back to Tuesday.
+        now = datetime(2026, 11, 4, 9, 0, tzinfo=timezone.utc)
+        crons = ["0 8 * * 1", "0 23 * * *"]
+        expected = datetime(2026, 11, 3, 23, 0, tzinfo=timezone.utc)
+        self.assertEqual(am.prev_occurrence(crons, now), expected)
+        self.assertEqual(am.prev_occurrence(list(reversed(crons)), now), expected)
+
+
 class TestMissedSlots(unittest.TestCase):
     """A slot that produced no run is a fault the same day, not a week later."""
 
     def setUp(self):
+        quota = mock.patch.object(am, "active_quota_cooldown", return_value=None)
+        quota.start()
+        self.addCleanup(quota.stop)
         self.files = [("weekly.yml", "Weekly", ["23 3 * * 1"])]   # Mondays 03:23 UTC
         patch = mock.patch.object(am, "workflow_files", return_value=self.files)
         patch.start()

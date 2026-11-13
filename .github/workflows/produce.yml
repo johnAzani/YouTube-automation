@@ -567,9 +567,13 @@ jobs:
               echo "queue state unchanged (nothing to record)"
               exit 0
             fi
+            # The index contains current main plus this run's staged receipts.
+            # Run its generator *and imports* from that same snapshot: a long-running
+            # job's checkout can predate newly registered channels on main.
             idx_dir="$(mktemp -d)"
+            workspace="$PWD"
             if git checkout-index -a -f --prefix="$idx_dir/" \
-               && python -m scripts.build_dashboard_data --repo-root "$idx_dir" --out docs/network-state.json; then
+               && (cd "$idx_dir" && PYTHONPATH="$idx_dir" python -m scripts.build_dashboard_data --repo-root "$idx_dir" --out "$workspace/docs/network-state.json"); then
               [ -f docs/network-state.json ] && git add -- docs/network-state.json
             fi
             rm -rf "$idx_dir"

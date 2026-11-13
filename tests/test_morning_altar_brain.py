@@ -162,7 +162,8 @@ class TestPerChannelSupplyCounting(unittest.TestCase):
         rows = [{"queue": "longform", "ready": 2, "note": "ok"},
                 {"queue": "longform:prayer2", "ready": 0, "note": "approved and above the word floor"},
                 {"queue": "shorts", "ready": 1, "note": "ok"}]
-        with mock.patch("scripts.automation_health.queue_health", return_value=rows):
+        with mock.patch("scripts.automation_health.queue_health", return_value=rows), \
+             mock.patch.object(wd, "check_schedule_health", return_value={}):
             report = wd.build_report(published_dir=self.dir, workflow_rows=[])
         self.assertTrue(any(f.area == "long-form queue" and "Morning Altar" in f.detail
                             for f in report.findings))
