@@ -2,7 +2,7 @@
 id: '0505'
 title: Proverbs 3:5-6 Morning Prayer | The Provision Table
 slug: proverbs-3-5-6-morning-prayer
-status: approved
+status: published
 channel: prayer7
 privacy: public
 format: longform
@@ -80,6 +80,12 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-13"
+published_at: "2026-11-13T12:07:14Z"
+youtube_video_id: "Db_E-IXTydA"
+metadata_revision: "selar-seo-v1"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Approaching Jehovah-Jireh at the Prepared Table

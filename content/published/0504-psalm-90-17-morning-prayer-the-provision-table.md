@@ -78,12 +78,11 @@ originality:
   no_ai_persona: true
   source_notes: true
 published_on: "2026-11-13"
-published_at: "2026-11-13T04:52:46Z"
+published_at: "2026-11-13T11:24:29Z"
 youtube_video_id: "msTiAda7RiM"
 metadata_revision: "selar-seo-v1"
-thumbnail_pending: false
-
-thumbnail_revision: "ctr-v3-cinema"
+thumbnail_pending: true
+thumbnail_error: "not_requested"
 ---
 
 ## Scene 1 — Approaching the Prepared Table of Jehovah-Jireh
