@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T20:42:15Z",
+  "generated_at": "2026-11-13T21:05:26Z",
   "monitor_generated_at": "2026-11-13T19:55:27.683840+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 179,
-    "published_longform": 89,
+    "published_total": 180,
+    "published_longform": 90,
     "published_shorts": 90,
-    "public_total": 177,
-    "queued_longform": 48,
+    "public_total": 178,
+    "queued_longform": 47,
     "queued_shorts": 48,
     "automations_ok": 10,
     "automations_total": 10,
@@ -169,28 +169,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 28,
-        "published_longform": 13,
+        "published_total": 29,
+        "published_longform": 14,
         "published_shorts": 15,
         "thumbnail_pending": 0,
-        "public_total": 28,
-        "queued_longform": 6,
+        "public_total": 29,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0087",
-        "title": "Isaiah 49:10 Midday Prayer | The Midday Watch",
-        "format": "longform",
-        "youtube_video_id": "rkh7ebkH3pM",
-        "watch_url": "https://youtu.be/rkh7ebkH3pM",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T16:57:49Z"
-      },
-      "next_queued_longform": {
         "id": "0088",
         "title": "Isaiah 25:4 Midday Prayer | The Midday Watch",
-        "words": 1454,
+        "format": "longform",
+        "youtube_video_id": "OviIQu6zbY4",
+        "watch_url": "https://youtu.be/OviIQu6zbY4",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T21:04:22Z"
+      },
+      "next_queued_longform": {
+        "id": "0089",
+        "title": "Isaiah 32:2 Midday Prayer | The Midday Watch",
+        "words": 1423,
         "status": "approved"
       },
       "next_queued_short": {
@@ -666,6 +666,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0088",
+      "slug": "isaiah-25-4-midday-prayer",
+      "file": "0088-isaiah-25-4-midday-prayer.md",
+      "title": "Isaiah 25:4 Midday Prayer | The Midday Watch",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T21:04:22Z",
+      "youtube_video_id": "OviIQu6zbY4",
+      "watch_url": "https://youtu.be/OviIQu6zbY4",
+      "youtu_be_url": "https://youtu.be/OviIQu6zbY4",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/OviIQu6zbY4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/OviIQu6zbY4/hqdefault.jpg",
+      "thumb_text": "SHADOW FROM THE",
+      "thumbnail_pending": false,
+      "duration_label": "~10 min",
+      "words": 1454
+    },
     {
       "id": "0022",
       "slug": "psalm-37-3-4-7-rest-in-the-lord-wait-patiently",
@@ -5198,19 +5222,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1150
-      },
-      {
-        "id": "0088",
-        "slug": "isaiah-25-4-midday-prayer",
-        "file": "0088-isaiah-25-4-midday-prayer.md",
-        "title": "Isaiah 25:4 Midday Prayer | The Midday Watch",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1454
       },
       {
         "id": "0089",
