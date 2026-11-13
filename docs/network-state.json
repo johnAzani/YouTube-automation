@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T16:58:40Z",
+  "generated_at": "2026-11-13T17:00:12Z",
   "monitor_generated_at": "2026-11-13T15:15:34.677104+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 170,
-    "published_longform": 81,
+    "published_total": 171,
+    "published_longform": 82,
     "published_shorts": 89,
-    "public_total": 168,
-    "queued_longform": 56,
+    "public_total": 169,
+    "queued_longform": 55,
     "queued_shorts": 49,
     "automations_ok": 10,
     "automations_total": 10,
@@ -101,29 +101,29 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 44,
-        "published_longform": 20,
+        "published_total": 45,
+        "published_longform": 21,
         "published_shorts": 24,
         "thumbnail_pending": 6,
-        "public_total": 43,
-        "queued_longform": 7,
+        "public_total": 44,
+        "queued_longform": 6,
         "queued_other": 0,
         "queued_shorts": 3
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM25V4",
-        "title": "Say This Psalm 25:4-5 Prayer at Sunrise | The Morning Altar #Shorts",
-        "format": "short",
-        "youtube_video_id": "_RTCwdT7SVM",
-        "watch_url": "https://www.youtube.com/shorts/_RTCwdT7SVM",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T07:20:12Z"
-      },
-      "next_queued_longform": {
         "id": "0064",
         "title": "Zephaniah 3:5 Morning Prayer | The Morning Altar",
-        "words": 1429,
-        "status": "quota_paused"
+        "format": "longform",
+        "youtube_video_id": "Q4_44SA0ClI",
+        "watch_url": "https://youtu.be/Q4_44SA0ClI",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T16:59:13Z"
+      },
+      "next_queued_longform": {
+        "id": "0065",
+        "title": "Matthew 6:33-34 Morning Prayer | The Morning Altar",
+        "words": 1293,
+        "status": "approved"
       },
       "next_queued_short": {
         "short": "short-morningpsalm37v23",
@@ -666,6 +666,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0064",
+      "slug": "zephaniah-3-5-morning-prayer",
+      "file": "0064-zephaniah-3-5-morning-prayer.md",
+      "title": "Zephaniah 3:5 Morning Prayer | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T16:59:13Z",
+      "youtube_video_id": "Q4_44SA0ClI",
+      "watch_url": "https://youtu.be/Q4_44SA0ClI",
+      "youtu_be_url": "https://youtu.be/Q4_44SA0ClI",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/Q4_44SA0ClI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Q4_44SA0ClI/hqdefault.jpg",
+      "thumb_text": "HE FAILETH NOT",
+      "thumbnail_pending": false,
+      "duration_label": "~10 min",
+      "words": 1429
+    },
     {
       "id": "0087",
       "slug": "isaiah-49-10-midday-prayer",
@@ -4930,19 +4954,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1025
-      },
-      {
-        "id": "0064",
-        "slug": "zephaniah-3-5-morning-prayer",
-        "file": "0064-zephaniah-3-5-morning-prayer.md",
-        "title": "Zephaniah 3:5 Morning Prayer | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "quota_paused",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1429
       },
       {
         "id": "0065",

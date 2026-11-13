@@ -2,7 +2,7 @@
 id: '0064'
 title: Zephaniah 3:5 Morning Prayer | The Morning Altar
 slug: zephaniah-3-5-morning-prayer
-status: quota_paused
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -76,8 +76,13 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
-quota_reset_utc: '2026-11-13T08:00:00+00:00'
-pause_reason: gemini_api_daily_quota_exhausted
+published_on: "2026-11-13"
+published_at: "2026-11-13T16:59:13Z"
+youtube_video_id: "Q4_44SA0ClI"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Sunrise Hook & Directing the Prayer
