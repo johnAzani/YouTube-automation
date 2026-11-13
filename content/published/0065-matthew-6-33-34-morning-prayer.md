@@ -80,7 +80,9 @@ metadata_revision: "selar-seo-v1"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
-thumbnail_error: "failed: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded]"
+thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunrise Prayer; long_uploads_status=allowed; video_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; video_channel_title=The Morning Altar | Daily Sunrise Prayer; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_retry_after: "2026-11-14T03:40:10Z"
+thumbnail_retry_reason: "rate_limit"
 ---
 
 ## Scene 1 — The Sunrise Hook & Directing the Prayer

@@ -81,8 +81,9 @@ youtube_video_id: "FREfxb6XKLk"
 metadata_revision: "selar-seo-v1"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
-thumbnail_pending: true
-thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
+thumbnail_pending: false
+youtube_status: "deleted_or_missing"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Twelfth Hour Awakening

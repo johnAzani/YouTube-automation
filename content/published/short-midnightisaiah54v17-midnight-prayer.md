@@ -23,10 +23,13 @@ short_visual_fingerprints: ["sha256:11ccf7431fb21d1e1cdbe86dab312c0259462bc5a87c
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["RISE IN SPIRIT", "THE MIDNIGHT VIGIL", "PROTECTION FOUND", "STAY VIGILANT"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-20T21:40:14Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Rise in spirit as the clock strikes twelve, turning your heart toward the quiet strength of the midnight hour. No weapon formed against you shall prosper, and every tongue that rises against you in judgment you shall condemn. This is the heritage of the servants of the Lord, for your peace remains untouchable in the shelter of his presence. God defends you in the deep stillness, covering your path with a grace that transcends the darkness around you. Rest in stillness tonight, knowing that the promise of your salvation is written in the heavens above you. Walk in light through this midnight watch, guarded by the sovereign word, and please subscribe to join our prayer.
