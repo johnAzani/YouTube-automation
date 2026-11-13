@@ -39,6 +39,7 @@ from __future__ import annotations
 
 import json
 import math
+import os
 import re
 import subprocess
 from dataclasses import dataclass
@@ -202,12 +203,20 @@ def mix_filter(narration: Path, music_stage: str, *, voice_input: str = "1:a",
         if log:
             log("[voice-master] loudness could not be measured; "
                 "keeping the unmastered mix for this render")
+            if os.environ.get("GITHUB_ACTIONS") == "true":
+                log(f"::warning title=Voice master skipped ({Path(narration).name})::"
+                    "loudness could not be measured; this render uses the unmastered mix")
         return legacy_mix_filter(music_stage, voice_input=voice_input,
                                  music_input=music_input, out_label=out_label)
     if log:
         gain = VOICE_TARGET_LUFS - measured.input_i
-        log(f"[voice-master] {MASTER_RECIPE}: narration {measured.input_i:.1f} LUFS, "
-            f"peak {measured.input_tp:.1f} dBTP -> {VOICE_TARGET_LUFS:.0f} LUFS "
-            f"({gain:+.1f} dB), music ducked under speech")
+        summary = (f"{MASTER_RECIPE}: narration {measured.input_i:.1f} LUFS, "
+                   f"peak {measured.input_tp:.1f} dBTP -> {VOICE_TARGET_LUFS:.0f} LUFS "
+                   f"({gain:+.1f} dB), music ducked under speech")
+        log(f"[voice-master] {summary}")
+        if os.environ.get("GITHUB_ACTIONS") == "true":
+            # On the run page, so "was this video mastered, and from what level"
+            # can be answered without opening a log.
+            log(f"::notice title=Voice master ({Path(narration).name})::{summary}")
     return mastered_mix_filter(measured, music_stage, voice_input=voice_input,
                                music_input=music_input, out_label=out_label)

@@ -83,6 +83,28 @@ class FilterShape(unittest.TestCase):
         self.assertEqual(graph, vm.legacy_mix_filter("volume=0.58"))
         self.assertIn("unmastered", said[0])
 
+    def test_on_the_runner_the_outcome_is_put_on_the_run_page(self):
+        from unittest import mock
+        said = []
+        with mock.patch.dict("os.environ", {"GITHUB_ACTIONS": "true"}), \
+             mock.patch.object(vm, "measure_voice", return_value=self.MEASURED):
+            vm.mix_filter(Path("narration.mp3"), "volume=0.58", log=said.append)
+        self.assertTrue(any(line.startswith("::notice title=Voice master (narration.mp3)::")
+                            and "-24.0 LUFS" in line and "+9.0 dB" in line for line in said))
+        said.clear()
+        with mock.patch.dict("os.environ", {"GITHUB_ACTIONS": "true"}), \
+             mock.patch.object(vm, "measure_voice", return_value=None):
+            vm.mix_filter(Path("narration.mp3"), "volume=0.58", log=said.append)
+        self.assertTrue(any(line.startswith("::warning title=Voice master skipped") for line in said))
+
+    def test_off_the_runner_no_workflow_commands_are_printed(self):
+        from unittest import mock
+        said = []
+        with mock.patch.dict("os.environ", {"GITHUB_ACTIONS": ""}), \
+             mock.patch.object(vm, "measure_voice", return_value=self.MEASURED):
+            vm.mix_filter(Path("narration.mp3"), "volume=0.58", log=said.append)
+        self.assertFalse(any(line.startswith("::") for line in said))
+
     def test_legacy_mix_is_the_graph_used_before_mastering(self):
         self.assertEqual(
             vm.legacy_mix_filter("volume=0.58"),

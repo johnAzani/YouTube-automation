@@ -251,6 +251,31 @@ long-form across those two slots instead of two. That is the price of a trial
 without moving the crons, and it is why the general switch is slot + lead with
 the crons moved earlier, not "hold for the next slot".
 
+## Trial result (13 November, evening)
+
+Job `0406` on The Healing Balm, video `jaeiK1qh8Wk`.
+
+| Step | Nigeria time | Result |
+|---|---|---|
+| Upload with a publish time | 6:32pm | Accepted. Receipt: `scheduled_publish: true`, `privacy_status: private`, `published_at` 8:14pm |
+| Pinned comment at upload | 6:32pm | Not posted; the receipt recorded it as owed (`pinned_comment_pending: true`) |
+| Thumbnail at upload | 6:32pm | Refused: "uploaded too many thumbnails recently" (a rate limit, unrelated to scheduling) |
+| Scheduled time | 8:14pm | - |
+| First monitor pass after it | 8:53pm | Found the video already public (`state: confirmed public`), posted the pinned comment, cleared the flag |
+
+What this proves: YouTube accepts the publish time, publishes the video itself
+(the monitor did not have to), and the owed comment is posted afterwards.
+
+What it does not prove: the minute it went public. No monitor ran between
+6:54pm and 8:53pm, so the receipt only shows it was public by 8:53pm; the
+YouTube API cannot be queried from the build sandbox.
+
+Found by the trial: the pinned comment arrived up to 39 minutes after the video
+went public, because the monitor does not run on a fixed short interval. Before
+the switch-on, the monitor needs a run a few minutes after each slot.
+
+The thumbnail is still owed and the monitor keeps retrying it.
+
 ## Not built
 
 - **Per-channel long-form times (step 7): decided, not built.** Every channel
