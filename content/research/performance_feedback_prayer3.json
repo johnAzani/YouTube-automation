@@ -1,26 +1,36 @@
 {
-  "generated_at": "2026-11-13T07:01:08.840759+00:00",
+  "generated_at": "2026-11-13T09:30:22.031449+00:00",
   "as_of": "2026-11-13",
   "sufficient_data": false,
   "measured_longform_videos": 0,
   "total_longform_videos": 12,
+  "input_diagnostics": {
+    "snapshot_video_ids": 27,
+    "receipt_video_ids": 27,
+    "matched_video_ids": 27,
+    "longform_below_view_threshold": 12,
+    "longform_missing_view_count": 0,
+    "longform_too_young_or_undated": 3,
+    "minimum_views": 25,
+    "minimum_age_days": 3
+  },
   "ranked_themes": [],
   "themes": [
-    {
-      "theme": "daily_guidance_wisdom",
-      "videos": 1,
-      "measured_videos": 0,
-      "avg_score": 0.3,
-      "avg_engagement": 0.0,
-      "top_scripture": "Psalm 119"
-    },
     {
       "theme": "midday_strength_endurance",
       "videos": 9,
       "measured_videos": 0,
-      "avg_score": 0.1433,
+      "avg_score": 0.0,
       "avg_engagement": 0.0,
-      "top_scripture": "Daniel 6"
+      "top_scripture": ""
+    },
+    {
+      "theme": "daily_guidance_wisdom",
+      "videos": 1,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": ""
     },
     {
       "theme": "peace_rest",
@@ -28,7 +38,7 @@
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
-      "top_scripture": "Psalm 121"
+      "top_scripture": ""
     },
     {
       "theme": "protection",
@@ -36,11 +46,11 @@
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
-      "top_scripture": "Psalm 91"
+      "top_scripture": ""
     }
   ],
   "guidance": [
-    "Only 0 long-form video(s) have enough views to measure; need 3. Keeping roadmap order until the signal is real."
+    "Only 0 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real."
   ],
   "cost_lock": "$0.00 \u2014 public Data API statistics only; no new quota or secret.",
   "privacy": "Aggregate theme scores only; raw per-video snapshot stays an Actions artifact."

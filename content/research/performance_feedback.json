@@ -1,42 +1,52 @@
 {
-  "generated_at": "2026-11-13T06:59:36.248066+00:00",
+  "generated_at": "2026-11-13T09:28:30.810723+00:00",
   "as_of": "2026-11-13",
   "sufficient_data": false,
   "measured_longform_videos": 0,
   "total_longform_videos": 11,
+  "input_diagnostics": {
+    "snapshot_video_ids": 35,
+    "receipt_video_ids": 36,
+    "matched_video_ids": 34,
+    "longform_below_view_threshold": 11,
+    "longform_missing_view_count": 0,
+    "longform_too_young_or_undated": 5,
+    "minimum_views": 25,
+    "minimum_age_days": 3
+  },
   "ranked_themes": [],
   "themes": [
+    {
+      "theme": "protection",
+      "videos": 5,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": ""
+    },
     {
       "theme": "stillness_refuge",
       "videos": 1,
       "measured_videos": 0,
-      "avg_score": 0.5,
+      "avg_score": 0.0,
       "avg_engagement": 0.0,
-      "top_scripture": "Psalm 46"
-    },
-    {
-      "theme": "light_courage",
-      "videos": 1,
-      "measured_videos": 0,
-      "avg_score": 0.1875,
-      "avg_engagement": 0.0,
-      "top_scripture": "Psalm 27"
+      "top_scripture": ""
     },
     {
       "theme": "peace_rest",
       "videos": 2,
       "measured_videos": 0,
-      "avg_score": 0.125,
+      "avg_score": 0.0,
       "avg_engagement": 0.0,
-      "top_scripture": "Psalm 121"
+      "top_scripture": ""
     },
     {
-      "theme": "protection",
-      "videos": 5,
+      "theme": "light_courage",
+      "videos": 1,
       "measured_videos": 0,
-      "avg_score": 0.0889,
+      "avg_score": 0.0,
       "avg_engagement": 0.0,
-      "top_scripture": "Psalm 3"
+      "top_scripture": ""
     },
     {
       "theme": "trust_surrender",
@@ -44,11 +54,11 @@
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
-      "top_scripture": "Psalm 18"
+      "top_scripture": ""
     }
   ],
   "guidance": [
-    "Only 0 long-form video(s) have enough views to measure; need 3. Keeping roadmap order until the signal is real."
+    "Only 0 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real."
   ],
   "cost_lock": "$0.00 \u2014 public Data API statistics only; no new quota or secret.",
   "privacy": "Aggregate theme scores only; raw per-video snapshot stays an Actions artifact."
