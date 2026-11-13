@@ -104,8 +104,20 @@ def _mark_job_uploaded(
     narration_engine: str | None = None,
     narration_voice: str | None = None,
     recovered_video: dict | None = None,
+    scheduled_for: str | None = None,
+    pinned_comment: str | None = None,
 ) -> Path:
     """Move and stamp a queue job only after YouTube confirms an uploaded video ID.
+
+    ``scheduled_for`` is set when the video was uploaded private with a publish
+    time (``UploadResult.scheduled_for``). The receipt is then dated with the
+    moment the video goes PUBLIC, because that is what every reader of
+    ``published_at`` means by it (which slot was served, how fresh a channel
+    is), and it says so: ``scheduled_publish: true``, ``privacy_status:
+    private`` and ``uploaded_at`` for when the file actually reached YouTube.
+    ``scripts/confirm_scheduled_publish.py`` clears the flag once YouTube has
+    published it. ``pinned_comment == "failed"`` on such an upload records that
+    the comment is still owed.
 
     ``thumbnail_status`` is what YouTube actually did with the custom thumbnail
     (see ``UploadResult``). The receipt only claims ``thumbnail_revision`` when
@@ -147,6 +159,20 @@ def _mark_job_uploaded(
         narration_engine = narration_voice = None
         thumb_ok = False
         thumb_note = "thumbnail_status_unverified_after_recovery"
+        # A private video still waiting for its publish time: YouTube reports
+        # the upload time as publishedAt until it goes public.
+        scheduled_for = recovered_video.get("publish_at") \
+            if recovered_video.get("privacy_status") == "private" else None
+        pinned_comment = None
+    from .publish_schedule import STAMP as _STAMP, parse_instant
+
+    uploaded_precise = stamp_precise
+    scheduled_at = parse_instant(scheduled_for)
+    if scheduled_at is not None and scheduled_at > now:
+        stamp_precise = scheduled_at.strftime(_STAMP)
+        stamp = stamp_precise[:10]
+    else:
+        scheduled_at = None
     text = path.read_text(encoding="utf-8")
     frontmatter = re.match(r"\A---\s*\n(.*?)\n---(?P<tail>\s*\n.*|\Z)", text, re.S)
     if not frontmatter:
@@ -170,6 +196,11 @@ def _mark_job_uploaded(
                         ("metadata_retrofit_approved", False)))
     else:
         stamped.append(("metadata_revision", "selar-seo-v1"))
+    if scheduled_at is not None:
+        stamped.extend((("uploaded_at", uploaded_precise), ("scheduled_publish", True),
+                        ("privacy_status", "private")))
+        if pinned_comment == "failed":
+            stamped.append(("pinned_comment_pending", True))
     if narration_engine and narration_voice:
         stamped.extend((("narration_engine", narration_engine), ("narration_voice", narration_voice)))
     if thumb_ok:
@@ -201,6 +232,11 @@ def _mark_job_uploaded(
                         privacy_status=recovered_video["privacy_status"],
                         youtube_upload_status=recovered_video["upload_status"],
                         receipt_recovered_from_youtube=True, metadata_retrofit_approved=False)
+    if scheduled_at is not None:
+        doc.meta.update(uploaded_at=uploaded_precise, scheduled_publish=True,
+                        privacy_status="private")
+        if pinned_comment == "failed":
+            doc.meta["pinned_comment_pending"] = True
     if narration_engine and narration_voice:
         doc.meta["narration_engine"] = narration_engine
         doc.meta["narration_voice"] = narration_voice
@@ -571,7 +607,11 @@ def _disabled_legacy_process(path: Path, dry_run: bool) -> dict:
         _open_release_ticket(doc, up.watch_url, up.privacy_status, up.video_id)
 
         # A queue transition is allowed only after a confirmed upload.
-        _mark_job_uploaded(path, doc, up.video_id, up.thumbnail_status)
+        _mark_job_uploaded(path, doc, up.video_id, up.thumbnail_status,
+                           scheduled_for=getattr(up, "scheduled_for", "") or None,
+                           pinned_comment=getattr(up, "pinned_comment", None))
+        if getattr(up, "scheduled_for", ""):
+            result["scheduled_for"] = up.scheduled_for
 
     (out_dir / "job_result.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
 

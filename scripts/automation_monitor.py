@@ -641,7 +641,8 @@ def check_outcomes(report: MonitorReport, now: datetime | None = None,
         newest_date = max(newest_date or stamp, stamp)
 
     if newest_date:
-        age = now - newest_date
+        # A scheduled upload is dated with its public time, which can be ahead.
+        age = max(now - newest_date, timedelta(0))
         report.outcomes.append({
             "outcome": "last upload",
             "detail": f"{newest_date.date().isoformat()} ({age.total_seconds() / 3600:.0f}h ago)",

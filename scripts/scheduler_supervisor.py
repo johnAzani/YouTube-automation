@@ -152,6 +152,10 @@ def published_channels_since(slot: datetime, published_dir: Path | None = None) 
         fmt = str(getattr(doc, "format", "") or doc.meta.get("format", "")).strip().lower()
         if fmt != "longform" or not str(doc.meta.get("youtube_video_id") or "").strip():
             continue
+        # A scheduled upload that YouTube rejected, or that is gone, never went
+        # public (scripts/confirm_scheduled_publish.py): it serves no slot.
+        if str(doc.meta.get("scheduled_publish_failed")).strip().lower() == "true":
+            continue
         stamps = [str(doc.meta.get(key) or "") for key in ("published_at", "published_on")]
         when = None
         for stamp in stamps:

@@ -34,6 +34,23 @@ PRODUCE_WORKFLOW = "produce.yml"
 DEFAULT_MAX_PARALLEL = 5
 # GitHub allows this account 20 concurrent jobs across every workflow.
 MAX_PARALLEL_CEILING = 10
+# Scheduled publishing. A production slot is the moment work for a release
+# becomes due (the workflow's cron); the release goes public this many minutes
+# later, on the minute, because the video is uploaded private with a publish
+# time and YouTube does the publishing. 0 means off: every upload is public the
+# moment it finishes, as before.
+#
+# Turning it on is one change in two places: set the lead here and move the
+# crons in produce.yml earlier by the same amount, so the public times stay
+# where they are. The lead must stay SHORTER than the smallest gap between two
+# crons (five hours today). Receipts are dated with the public time, and "this
+# slot is served" means "a receipt dated at or after the slot": a public time
+# that reached the next slot would mark that one served as well and it would
+# never be produced. `publish_target` refuses such a lead instead of obeying it.
+PUBLISH_LEAD_MINUTES = 0
+# A leg that finishes closer to the public time than this publishes at once: a
+# late video is never held back and never sent with a time YouTube might refuse.
+PUBLISH_MARGIN_MINUTES = 15
 
 
 def parse_channels(raw: str | None) -> list[str]:
@@ -89,3 +106,63 @@ def split_served(channels: list[str], now: datetime | None = None,
     owed = [c for c in channels if c not in done]
     served = [c for c in channels if c in done]
     return owed, served, slot
+
+
+def lead_minutes(raw: str | None = None) -> int:
+    """The configured lead; ``raw`` (repository variable) overrides the default."""
+    if raw is not None and str(raw).strip() != "":
+        try:
+            return max(0, int(str(raw).strip()))
+        except ValueError:
+            return PUBLISH_LEAD_MINUTES
+    return PUBLISH_LEAD_MINUTES
+
+
+def next_slot(now: datetime | None = None) -> datetime | None:
+    """The first production slot strictly after ``now``."""
+    from datetime import timedelta
+
+    from scripts.automation_monitor import prev_occurrence, workflow_files
+
+    now = now or datetime.now(timezone.utc)
+    crons = next((c for f, _n, c in workflow_files() if f == PRODUCE_WORKFLOW), None)
+    if not crons:
+        return None
+    current = prev_occurrence(crons, now)
+    # Slots sit on a daily grid of whole minutes, so the successor is the first
+    # minute in the next two days whose own "current slot" is a different one.
+    probe = (current or now).replace(second=0, microsecond=0)
+    for _ in range(2 * 24 * 60):
+        probe += timedelta(minutes=1)
+        found = prev_occurrence(crons, probe)
+        if found is not None and found != current and found > now:
+            return found
+    return None
+
+
+def publish_target(now: datetime | None = None, lead: int | None = None,
+                   margin: int | None = None) -> datetime | None:
+    """When a long-form finished at ``now`` should go public, or ``None`` for now.
+
+    ``None`` means "publish immediately": scheduling is off, the slot cannot be
+    worked out, the public time is too close or already past, or the lead is not
+    safely inside the gap to the next slot.
+    """
+    from datetime import timedelta
+
+    now = now or datetime.now(timezone.utc)
+    lead = lead_minutes() if lead is None else lead
+    margin = PUBLISH_MARGIN_MINUTES if margin is None else margin
+    if lead <= 0:
+        return None
+    slot = current_slot(now)
+    if slot is None:
+        return None
+    target = slot + timedelta(minutes=lead)
+    following = next_slot(slot)
+    if following is None or target >= following:
+        return None
+    if target - now < timedelta(minutes=margin):
+        return None
+    return target
+

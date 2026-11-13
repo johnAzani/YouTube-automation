@@ -141,6 +141,13 @@ jobs:
             # fallback, and leaves other metadata and rate-limit cooldowns alone.
             python -m scripts.sync_published_thumbnails --channel "$THUMBNAIL_RETRY_CHANNEL" --retry-permission
           else
+            # Scheduled uploads: confirm each one went public at its time, post a
+            # pinned comment YouTube refused while the video was private, and
+            # publish one that is still private 20 minutes late. No API call
+            # (and no client) unless a receipt says scheduled_publish: true.
+            # Its failure must not cost the thumbnail pass below.
+            python -m scripts.confirm_scheduled_publish --all-channels \
+              || echo "::warning title=Scheduled-publish check failed::see this step's log; the thumbnail sync still ran"
             python -m scripts.sync_published_thumbnails --all-channels
             python -m scripts.retrofit_published_metadata --sync-pending
             GH_TOKEN="${{ secrets.GITHUB_TOKEN }}" python -m scripts.release_report --sweep-stale || true

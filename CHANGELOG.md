@@ -5,6 +5,14 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-13 — scheduled publishing, built and switched off
+
+- A long-form can be uploaded private with a publish time so YouTube makes it public on the slot minute. `pipeline/publish_schedule.py` decides: an explicit `publish_at` on a manual dispatch of `produce.yml`, otherwise the production slot plus `PUBLISH_LEAD_MINUTES` (`scripts/produce_plan.py`, **0 = off**, overridable by the repository variable `PRODUCE_PUBLISH_LEAD_MINUTES`). Less than 15 minutes to go, a past time, an unreadable value or any error publishes at once. A lead that reaches the next slot is refused.
+- Receipts for a scheduled upload are dated with the public time and carry `scheduled_publish: true`, `privacy_status: private` and `uploaded_at`. With the switch off, receipts and the upload request are unchanged.
+- New `scripts/confirm_scheduled_publish.py`, run by the monitor: after the public time it confirms the video is public, posts a pinned comment YouTube refused on the private video, publishes a video still private 20 minutes late, and marks a rejected or missing video `scheduled_publish_failed` so the supervisor produces the channel again. No API call before the public time.
+- `upload()` retries public at once when YouTube answers `invalidPublishAt`, and never gives a publish time to an upload that is meant to stay private.
+- Not on yet: the first scheduled upload is a one-channel trial; turning it on for the schedule is one change (crons 4 h 30 min earlier, lead 270). Shorts and per-channel times are not built. Steps and sources: `docs/SCHEDULED_PUBLISHING_2026-11-13.md`.
+
 ## 2026-11-13 — waiting runs keep their place, comment ledger cannot be dropped
 
 - `produce.yml` and `gemini_brain.yml` set `queue: max` on the shared `content-state` lock. GitHub then keeps every waiting run in arrival order (up to 100) instead of one; before, a newer waiting run cancelled the older one. Checked on this repository with two throwaway workflows sharing one group: six runs, one at a time, alternating in arrival order, none cancelled.

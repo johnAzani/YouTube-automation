@@ -45,6 +45,10 @@ on:
         description: "Authored 9:16 Short key to render & upload (e.g. short-enron)"
         required: false
         default: ""
+      publish_at:
+        description: "Upload the long-form private and let YouTube publish it at this UTC time, e.g. 2026-11-14T14:14:00Z (blank = public when it finishes)"
+        type: string
+        default: ""
       dry_run:
         description: "Render only, skip upload"
         type: boolean
@@ -566,6 +570,14 @@ jobs:
           # unreachable from automation, so this file is what lets the reporter
           # below quote the run back as an issue we can actually read.
           PROGRESS_TRAIL: output/progress-trail.log
+          # When the long-form goes public (pipeline/publish_schedule.py). An
+          # explicit time from a manual dispatch wins; otherwise the slot plus
+          # the lead in scripts/produce_plan.py, which is 0 (off) until the
+          # crons above are moved with it. The repository variable overrides the
+          # lead, and setting it to 0 is the switch back to "public at once".
+          # A time that is too close, past, or unreadable publishes at once.
+          PUBLISH_AT: ${{ inputs.publish_at }}
+          PUBLISH_LEAD_MINUTES: ${{ vars.PRODUCE_PUBLISH_LEAD_MINUTES }}
         run: |
           set +e
           set -o pipefail

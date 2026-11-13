@@ -350,9 +350,13 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
                                getattr(up, 'thumbnail_status', 'not_requested') if is_new_upload else 'not_requested',
                                narration_engine=engine if is_new_upload else None,
                                narration_voice='Charon' if is_new_upload else None,
-                               recovered_video=recovered_video)
+                               recovered_video=recovered_video,
+                               scheduled_for=(getattr(up, 'scheduled_for', '') or None) if is_new_upload else None,
+                               pinned_comment=getattr(up, 'pinned_comment', None) if is_new_upload else None)
             result.update(video_id=up.video_id, watch_url=up.watch_url,
                           privacy_status=up.privacy_status, uploaded=up.privacy_status != 'duplicate_prevented')
+            if is_new_upload and getattr(up, 'scheduled_for', ''):
+                result['scheduled_for'] = up.scheduled_for
             if result['uploaded']:
                 _open_release_ticket(doc, up.watch_url, up.privacy_status, up.video_id)
         (out / 'job_result.json').write_text(json.dumps(result, indent=2), encoding='utf-8')

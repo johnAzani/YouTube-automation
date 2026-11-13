@@ -1,0 +1,76 @@
+"""When a finished long-form goes public: now, or on its slot minute.
+
+Rendering cannot land on a slot. GitHub starts the scheduled run hours late and
+a render takes most of an hour, so "public the moment it uploads" means public
+whenever the run happened to finish. The alternative is to finish early, upload
+private with a publish time, and let YouTube publish on the minute.
+
+This module only answers one question for the upload step and never blocks a
+release: any doubt at all (no slot, bad value, too close, an exception) answers
+"publish now", which is what every upload did before this existed.
+
+Sources, in order:
+
+1. ``PUBLISH_AT`` in the environment: an explicit time from a manual dispatch
+   (``gh workflow run produce.yml -f channels=prayer2 -f publish_at=...``).
+2. The production slot plus ``scripts.produce_plan.PUBLISH_LEAD_MINUTES``
+   (``PUBLISH_LEAD_MINUTES`` in the environment overrides it; ``0`` is off).
+"""
+from __future__ import annotations
+
+import os
+from datetime import datetime, timedelta, timezone
+
+STAMP = "%Y-%m-%dT%H:%M:%SZ"
+
+
+def parse_instant(raw: object) -> datetime | None:
+    """An aware UTC datetime from an ISO-8601 string, or ``None``."""
+    text = str(raw or "").strip()
+    if not text:
+        return None
+    try:
+        when = datetime.fromisoformat(text.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if when.tzinfo is None:
+        return None
+    return when.astimezone(timezone.utc)
+
+
+def resolve_longform_publish_at(now: datetime | None = None,
+                                environ: dict | None = None) -> str | None:
+    """The ``status.publishAt`` value for this upload, or ``None`` to publish now."""
+    env = os.environ if environ is None else environ
+    now = now or datetime.now(timezone.utc)
+    try:
+        from scripts import produce_plan
+
+        margin = timedelta(minutes=produce_plan.PUBLISH_MARGIN_MINUTES)
+        explicit_raw = str(env.get("PUBLISH_AT") or "").strip()
+        if explicit_raw:
+            explicit = parse_instant(explicit_raw)
+            if explicit is None:
+                print(f"[publish-schedule] PUBLISH_AT={explicit_raw!r} is not a time with a "
+                      "timezone; publishing now")
+                return None
+            if explicit - now < margin:
+                print(f"[publish-schedule] {explicit.strftime(STAMP)} is less than "
+                      f"{produce_plan.PUBLISH_MARGIN_MINUTES} minutes away; publishing now")
+                return None
+            if explicit - now > timedelta(hours=48):
+                print(f"[publish-schedule] {explicit.strftime(STAMP)} is more than two days "
+                      "away; publishing now")
+                return None
+            return explicit.strftime(STAMP)
+        lead = produce_plan.lead_minutes(env.get("PUBLISH_LEAD_MINUTES"))
+        target = produce_plan.publish_target(now, lead=lead)
+        if target is None:
+            if lead > 0:
+                print("[publish-schedule] no public time far enough ahead for this slot; "
+                      "publishing now")
+            return None
+        return target.strftime(STAMP)
+    except Exception as exc:  # noqa: BLE001 - scheduling must never block a release
+        print(f"[publish-schedule] could not work out a public time ({exc!r}); publishing now")
+        return None
