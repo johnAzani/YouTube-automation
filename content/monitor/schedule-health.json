@@ -37,8 +37,8 @@
       "workflow": "community.yml"
     }
   ],
-  "generated_at": "2026-11-13T15:51:23.346431+00:00",
-  "last_run_at": "2026-11-13T15:50:38+00:00",
+  "generated_at": "2026-11-13T17:16:38.846101+00:00",
+  "last_run_at": "2026-11-13T17:15:19+00:00",
   "on_time": [
     {
       "late_minutes": 105,
@@ -55,6 +55,13 @@
       "workflow": "comments.yml"
     },
     {
+      "late_minutes": 112,
+      "name": "Automation monitor",
+      "ran_at": "2026-11-13T17:15:19+00:00",
+      "slot": "2026-11-13T15:23:00+00:00",
+      "workflow": "monitor.yml"
+    },
+    {
       "late_minutes": 20,
       "name": "Produce video",
       "ran_at": "2026-11-13T14:34:34+00:00",
@@ -69,6 +76,6 @@
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 0,
+  "silence_minutes": 1,
   "warn_minutes": 120
 }
