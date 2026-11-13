@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T21:05:26Z",
+  "generated_at": "2026-11-13T21:11:38Z",
   "monitor_generated_at": "2026-11-13T19:55:27.683840+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 180,
-    "published_longform": 90,
+    "published_total": 181,
+    "published_longform": 91,
     "published_shorts": 90,
-    "public_total": 178,
-    "queued_longform": 47,
+    "public_total": 179,
+    "queued_longform": 46,
     "queued_shorts": 48,
     "automations_ok": 10,
     "automations_total": 10,
@@ -300,28 +300,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 12,
-        "published_longform": 7,
+        "published_total": 13,
+        "published_longform": 8,
         "published_shorts": 5,
-        "thumbnail_pending": 12,
-        "public_total": 12,
-        "queued_longform": 4,
+        "thumbnail_pending": 13,
+        "public_total": 13,
+        "queued_longform": 3,
         "queued_other": 0,
         "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0306",
-        "title": "Numbers 6:24-26 Family Prayer | The Family Altar",
-        "format": "longform",
-        "youtube_video_id": "cKtWm7V0r-8",
-        "watch_url": "https://youtu.be/cKtWm7V0r-8",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T17:13:25Z"
-      },
-      "next_queued_longform": {
         "id": "0307",
         "title": "Deuteronomy 6:6-7 Household & Family Prayer | The Family Altar",
-        "words": 1504,
+        "format": "longform",
+        "youtube_video_id": "mOoOZPsiobQ",
+        "watch_url": "https://youtu.be/mOoOZPsiobQ",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T21:10:37Z"
+      },
+      "next_queued_longform": {
+        "id": "0308",
+        "title": "Philippians 4:19 Household Provision Prayer | The Family Altar",
+        "words": 1053,
         "status": "approved"
       },
       "next_queued_short": {
@@ -666,6 +666,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0307",
+      "slug": "deuteronomy-6-household-family-prayer",
+      "file": "0307-deuteronomy-6-household-family-prayer.md",
+      "title": "Deuteronomy 6:6-7 Household & Family Prayer | The Family Altar",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T21:10:37Z",
+      "youtube_video_id": "mOoOZPsiobQ",
+      "watch_url": "https://youtu.be/mOoOZPsiobQ",
+      "youtu_be_url": "https://youtu.be/mOoOZPsiobQ",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/mOoOZPsiobQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/mOoOZPsiobQ/hqdefault.jpg",
+      "thumb_text": "GUARD OUR DOORPOSTS",
+      "thumbnail_pending": true,
+      "duration_label": "~10 min",
+      "words": 1504
+    },
     {
       "id": "0088",
       "slug": "isaiah-25-4-midday-prayer",
@@ -5339,19 +5363,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 2006
-      },
-      {
-        "id": "0307",
-        "slug": "deuteronomy-6-household-family-prayer",
-        "file": "0307-deuteronomy-6-household-family-prayer.md",
-        "title": "Deuteronomy 6:6-7 Household & Family Prayer | The Family Altar",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1504
       },
       {
         "id": "0308",

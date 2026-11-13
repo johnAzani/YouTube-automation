@@ -2,7 +2,7 @@
 id: '0307'
 title: Deuteronomy 6:6-7 Household & Family Prayer | The Family Altar
 slug: deuteronomy-6-household-family-prayer
-status: approved
+status: published
 channel: prayer5
 privacy: public
 format: longform
@@ -73,6 +73,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-13"
+published_at: "2026-11-13T21:10:37Z"
+youtube_video_id: "mOoOZPsiobQ"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Gathering Around the Family Altar
