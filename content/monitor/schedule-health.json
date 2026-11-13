@@ -51,8 +51,8 @@
       "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-13T00:30:46.771867+00:00",
-  "last_run_at": "2026-11-13T00:30:04+00:00",
+  "generated_at": "2026-11-13T02:00:29.918650+00:00",
+  "last_run_at": "2026-11-13T01:59:38+00:00",
   "on_time": [
     {
       "late_minutes": 105,
@@ -62,10 +62,17 @@
       "workflow": "automation-health.yml"
     },
     {
-      "late_minutes": 11,
+      "late_minutes": 94,
+      "name": "Automation monitor",
+      "ran_at": "2026-11-13T01:57:04+00:00",
+      "slot": "2026-11-13T00:23:00+00:00",
+      "workflow": "monitor.yml"
+    },
+    {
+      "late_minutes": 72,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-12T21:58:08+00:00",
-      "slot": "2026-11-12T21:47:00+00:00",
+      "ran_at": "2026-11-13T01:59:38+00:00",
+      "slot": "2026-11-13T00:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
