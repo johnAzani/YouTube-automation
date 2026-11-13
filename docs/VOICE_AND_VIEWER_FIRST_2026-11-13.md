@@ -120,7 +120,31 @@ cut to a contiguous part of the model's own words that fits and does not end on
 the line can fit. The two queued jobs now read `A HEDGE AROUND US` and
 `A BLESSED HOME`, with their fact-check worksheets rebuilt.
 
-## 5. What this cannot do
+## 5. Found, not fixable in code: seven channels cannot set thumbnails
+
+65 of 169 receipts on `main` carry `thumbnail_pending: true`. For 53 of them
+(31 long-forms, 22 Shorts) YouTube's answer is "The authenticated user doesn't
+have permissions to upload and set custom video thumbnails". They are on seven
+channels:
+
+| Channel | Long-forms | Shorts |
+|---|---|---|
+| The Midnight Watch (prayer4) | 10 | 8 |
+| The Family Altar (prayer5) | 7 | 5 |
+| The Healing Balm (prayer6) | 3 | 3 |
+| The Provision Table (prayer7) | 3 | 2 |
+| The Covenant Shield (prayer8) | 3 | 2 |
+| The Praise Garden (prayer9) | 3 | 1 |
+| The Guided Path (prayer10) | 2 | 1 |
+
+Those videos are public with a frame YouTube picked instead of the designed
+thumbnail. YouTube grants custom thumbnails once a channel is verified by phone
+(`youtube.com/verify`, signed in as that channel). No code change can do it.
+The monitor already retries pending thumbnails, so they fill in after
+verification. Six more receipts failed on "uploaded too many thumbnails
+recently", which is a rate limit and clears by itself.
+
+## 6. What this cannot do
 
 Monetisation needs 1,000 subscribers and 4,000 public watch hours in 12 months
 per channel (or 10 million Shorts views in 90 days). Long-forms currently get 1
@@ -130,6 +154,6 @@ ten channels also carries a review risk under YouTube's inauthentic-content
 policy; fewer, more distinct videos per channel is the safer direction and is a
 decision for the owner.
 
-## 6. Tests
+## 7. Tests
 
 `tests/test_voice_master.py` (12) and `tests/test_viewer_first_standard.py` (18).
