@@ -12,7 +12,8 @@ there was no changelog before this file.
 - `publish_at:` in a job's front matter now goes through the same checks as a dispatch time: at least 15 minutes ahead, no later than the next production slot, otherwise public at once. An unquoted value (a YAML date) is sent as text, and a time YouTube refuses falls back to public at once.
 - A publish time may be the word `next-slot`. `produce.yml` also reads it from the `publish-now` repository_dispatch payload (`client_payload[publish_at]`).
 - Trial: `content/queue/0406-philippians-4-6-7-peace-that-passeth-understanding-prayer.md` (The Healing Balm) carries `publish_at: next-slot`. It is the first video ever uploaded with a publish time.
-- Receipt `0601-genesis-15-1-protection-prayer.md`, overwritten by the last serial run, restored.
+- Receipts `0601-genesis-15-1-protection-prayer.md`, `0700-psalm-100-4-thanksgiving-prayer.md` and `short-gardenpsalm100v4-thanksgiving-prayer.md`, overwritten by the last serial run (`086bc51`, `a2204a6`), restored.
+- The same serial leg (`a2204a6`, working from a checkout made at 1:17am WAT) authored a second job numbered `0702` for The Praise Garden on the scripture the queue already held, and overwrote that job's companion Short script. Two jobs with one ID are both skipped by production, so the channel had nothing publishable. The later copy and its worksheet are removed and the Short manifest and script are back to the earlier version.
 - Details: `docs/SCHEDULED_PUBLISHING_2026-11-13.md`, "Second read".
 
 ## 2026-11-13 — scheduled publishing, built and switched off
