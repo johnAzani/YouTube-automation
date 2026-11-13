@@ -1,0 +1,355 @@
+{
+  "key": "short-midday2chronicles20v12",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "MIDDAY PAUSE",
+    "CHRONICLES 20:12"
+  ],
+  "poster": [
+    "THE MIDDAY WATCH",
+    "PAUSE",
+    "PRAY",
+    "Breathe"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "sunlight streaming through a window onto a wooden floor",
+    "a quiet desk with a closed notebook and natural light",
+    "high sun illuminating an open grassy field",
+    "dust motes dancing in a midday sunbeam",
+    "a peaceful forest clearing at high noon",
+    "soft golden light on a textured white wall",
+    "a clean workspace with a single ceramic cup",
+    "bright overhead sun on a calm garden path"
+  ],
+  "scenes": [
+    {
+      "a": "pause what you are doing",
+      "img": "short-midday2chronicles20v12-scene-01.jpg",
+      "kicker": "MIDDAY STILLNESS",
+      "sub": "FIND A QUIET MOMENT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "take a deep breath",
+      "img": "short-midday2chronicles20v12-scene-02.jpg",
+      "kicker": "STEADY YOUR HEART",
+      "sub": "BREATHE IN THE CALM",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "2 Chronicles 20:12",
+      "img": "short-midday2chronicles20v12-scene-03.jpg",
+      "kicker": "THE SCRIPTURE",
+      "sub": "HEAR THE ANCIENT WORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "we do not know",
+      "img": "short-midday2chronicles20v12-scene-04.jpg",
+      "kicker": "ADMITTING NEED",
+      "sub": "HONESTY BEFORE GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "our eyes are on you",
+      "img": "short-midday2chronicles20v12-scene-05.jpg",
+      "kicker": "FIXED GAZE",
+      "sub": "LOOKING TO THE SOURCE",
+      "cam": "push_in",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "guide us this afternoon",
+      "img": "short-midday2chronicles20v12-scene-06.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "WALK WITH HIM NOW",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "give us your wisdom",
+      "img": "short-midday2chronicles20v12-scene-07.jpg",
+      "kicker": "SEEKING DIRECTION",
+      "sub": "BEYOND OUR OWN STRENGTH",
+      "cam": "pull_out",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "rest in his presence",
+      "img": "short-midday2chronicles20v12-scene-08.jpg",
+      "kicker": "ABIDE",
+      "sub": "SETTLE YOUR SPIRIT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "Please pause what you are doing right now and take a deep breath to center your spirit."
+    ],
+    [
+      13,
+      28,
+      "Let us consider 2 Chronicles 20:12, where we read, we do not know what to do, but our eyes are on you."
+    ],
+    [
+      29,
+      45,
+      "Lord, we acknowledge that we do not know the path forward today, but our eyes are on you."
+    ],
+    [
+      46,
+      60,
+      "Grant us your clarity as we step back into the work, and guide us this afternoon."
+    ],
+    [
+      61,
+      80,
+      "Give us your wisdom to navigate every challenge with grace, patience, and a humble heart."
+    ],
+    [
+      81,
+      100,
+      "May we find quiet strength in your promise, knowing you are our refuge in the heat of the day."
+    ],
+    [
+      101,
+      115,
+      "Remain in this peace as you rest in his presence and continue your day with hope."
+    ],
+    [
+      116,
+      120,
+      "Subscribe to join us for tomorrow's midday prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "PAUSE WHAT",
+        "YOU ARE DOING",
+        "TAKE A BREATH"
+      ],
+      [
+        "PAUSE"
+      ],
+      "MIDDAY"
+    ],
+    [
+      13,
+      28,
+      [
+        "CHRONICLES 20:12",
+        "WE DO NOT KNOW",
+        "EYES ON YOU"
+      ],
+      [
+        "EYES ON YOU"
+      ],
+      "2 CHR 20:12"
+    ],
+    [
+      29,
+      45,
+      [
+        "WE DO NOT KNOW",
+        "PATH FORWARD",
+        "EYES ARE ON YOU"
+      ],
+      [
+        "EYES ARE ON YOU"
+      ],
+      "2 CHR 20:12"
+    ],
+    [
+      46,
+      60,
+      [
+        "GRANT US CLARITY",
+        "GUIDE US",
+        "THIS AFTERNOON"
+      ],
+      [
+        "GUIDE US"
+      ],
+      "MIDDAY"
+    ],
+    [
+      61,
+      80,
+      [
+        "GIVE US WISDOM",
+        "NAVIGATE CHALLENGES",
+        "HUMBLE HEART"
+      ],
+      [
+        "WISDOM"
+      ],
+      "MIDDAY"
+    ],
+    [
+      81,
+      100,
+      [
+        "QUIET STRENGTH",
+        "YOU ARE",
+        "OUR REFUGE"
+      ],
+      [
+        "REFUGE"
+      ],
+      "MIDDAY"
+    ],
+    [
+      101,
+      115,
+      [
+        "REST IN",
+        "HIS PRESENCE",
+        "CONTINUE WITH HOPE"
+      ],
+      [
+        "PRESENCE"
+      ],
+      "MIDDAY"
+    ],
+    [
+      116,
+      120,
+      [
+        "SUBSCRIBE FOR",
+        "THE MIDDAY",
+        "WATCH PRAYER"
+      ],
+      [
+        "SUBSCRIBE"
+      ],
+      "MIDDAY"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "pause what you are doing",
+      "kind": "phrase",
+      "words": [
+        "PAUSE",
+        "WHAT",
+        "YOU",
+        "ARE",
+        "DOING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "2 Chronicles 20:12",
+      "kind": "phrase",
+      "words": [
+        "2",
+        "CHRONICLES",
+        "20:12"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "we do not know",
+      "kind": "phrase",
+      "words": [
+        "WE",
+        "DO",
+        "NOT",
+        "KNOW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "our eyes are on you",
+      "kind": "phrase",
+      "words": [
+        "OUR",
+        "EYES",
+        "ARE",
+        "ON",
+        "YOU"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "guide us this afternoon",
+      "kind": "phrase",
+      "words": [
+        "GUIDE",
+        "US",
+        "THIS",
+        "AFTERNOON"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "give us your wisdom",
+      "kind": "phrase",
+      "words": [
+        "GIVE",
+        "US",
+        "YOUR",
+        "WISDOM"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "rest in his presence",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "IN",
+        "HIS",
+        "PRESENCE"
+      ],
+      "hi": 3,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Chronicles 20:12"
+}
