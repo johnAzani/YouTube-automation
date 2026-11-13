@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T21:32:25Z",
+  "generated_at": "2026-11-13T21:41:09Z",
   "monitor_generated_at": "2026-11-13T19:55:27.683840+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 183,
-    "published_longform": 92,
+    "published_total": 184,
+    "published_longform": 93,
     "published_shorts": 91,
-    "public_total": 181,
-    "queued_longform": 45,
+    "public_total": 182,
+    "queued_longform": 44,
     "queued_shorts": 47,
     "automations_ok": 10,
     "automations_total": 10,
@@ -499,28 +499,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 6,
-        "published_longform": 4,
+        "published_total": 7,
+        "published_longform": 5,
         "published_shorts": 2,
-        "thumbnail_pending": 6,
-        "public_total": 6,
-        "queued_longform": 3,
+        "thumbnail_pending": 7,
+        "public_total": 7,
+        "queued_longform": 2,
         "queued_other": 0,
         "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0603",
-        "title": "Ephesians 6:16 Shield of Faith Prayer | The Covenant Shield",
-        "format": "longform",
-        "youtube_video_id": "S7i2vZMHgE0",
-        "watch_url": "https://youtu.be/S7i2vZMHgE0",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T17:42:08Z"
-      },
-      "next_queued_longform": {
         "id": "0604",
         "title": "Psalm 34:7 Protection Prayer | The Covenant Shield",
-        "words": 1203,
+        "format": "longform",
+        "youtube_video_id": "_0gKT2tQ71g",
+        "watch_url": "https://youtu.be/_0gKT2tQ71g",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T21:40:11Z"
+      },
+      "next_queued_longform": {
+        "id": "0605",
+        "title": "Isaiah 54:17 Divine Protection Prayer | The Covenant Shield",
+        "words": 1227,
         "status": "approved"
       },
       "next_queued_short": {
@@ -666,6 +666,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0604",
+      "slug": "psalm-34-7-protection-prayer-the-covenant-shield",
+      "file": "0604-psalm-34-7-protection-prayer-the-covenant-shield.md",
+      "title": "Psalm 34:7 Protection Prayer | The Covenant Shield",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T21:40:11Z",
+      "youtube_video_id": "_0gKT2tQ71g",
+      "watch_url": "https://youtu.be/_0gKT2tQ71g",
+      "youtu_be_url": "https://youtu.be/_0gKT2tQ71g",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/_0gKT2tQ71g/edit",
+      "thumb_url": "https://i.ytimg.com/vi/_0gKT2tQ71g/hqdefault.jpg",
+      "thumb_text": "ANGELS ENCAMP",
+      "thumbnail_pending": true,
+      "duration_label": "~8 min",
+      "words": 1203
+    },
     {
       "id": "0210",
       "slug": "ruth-3-8-11-midnight-turning-point-prayer",
@@ -5541,19 +5565,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1739
-      },
-      {
-        "id": "0604",
-        "slug": "psalm-34-7-protection-prayer-the-covenant-shield",
-        "file": "0604-psalm-34-7-protection-prayer-the-covenant-shield.md",
-        "title": "Psalm 34:7 Protection Prayer | The Covenant Shield",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1203
       },
       {
         "id": "0605",

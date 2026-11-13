@@ -2,7 +2,7 @@
 id: '0604'
 title: Psalm 34:7 Protection Prayer | The Covenant Shield
 slug: psalm-34-7-protection-prayer-the-covenant-shield
-status: approved
+status: published
 channel: prayer8
 privacy: public
 format: longform
@@ -75,6 +75,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-13"
+published_at: "2026-11-13T21:40:11Z"
+youtube_video_id: "_0gKT2tQ71g"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — The Strong Tower of Angelic Encampment
