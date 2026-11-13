@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T22:20:45Z",
+  "generated_at": "2026-11-13T22:24:52Z",
   "monitor_generated_at": "2026-11-13T21:59:24.668791+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 187,
-    "published_longform": 95,
+    "published_total": 188,
+    "published_longform": 96,
     "published_shorts": 92,
-    "public_total": 185,
+    "public_total": 186,
     "queued_longform": 42,
-    "queued_shorts": 46,
+    "queued_shorts": 47,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -562,28 +562,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 4,
-        "published_longform": 3,
+        "published_total": 5,
+        "published_longform": 4,
         "published_shorts": 1,
-        "thumbnail_pending": 4,
-        "public_total": 4,
+        "thumbnail_pending": 5,
+        "public_total": 5,
         "queued_longform": 2,
         "queued_other": 0,
-        "queued_shorts": 4
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0702",
-        "title": "Habakkuk 3:17-19 Yet I Will Rejoice Prayer | The Praise Garden",
-        "format": "longform",
-        "youtube_video_id": "hz-XLt9f_oo",
-        "watch_url": "https://youtu.be/hz-XLt9f_oo",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T17:27:36Z"
-      },
-      "next_queued_longform": {
         "id": "0703",
         "title": "Philippians 4:6-7 Daily Prayer | The Praise Garden",
-        "words": 1632,
+        "format": "longform",
+        "youtube_video_id": "T6f3GE9QBcc",
+        "watch_url": "https://youtu.be/T6f3GE9QBcc",
+        "published_on": "2026-11-13",
+        "published_at": "2026-11-13T22:23:56Z"
+      },
+      "next_queued_longform": {
+        "id": "0704",
+        "title": "1 Thessalonians 5:16-18 Daily Prayer | The Praise Garden",
+        "words": 1154,
         "status": "approved"
       },
       "next_queued_short": {
@@ -666,6 +666,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0703",
+      "slug": "philippians-4-6-7-daily-prayer",
+      "file": "0703-philippians-4-6-7-daily-prayer.md",
+      "title": "Philippians 4:6-7 Daily Prayer | The Praise Garden",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-13",
+      "published_at": "2026-11-13T22:23:56Z",
+      "youtube_video_id": "T6f3GE9QBcc",
+      "watch_url": "https://youtu.be/T6f3GE9QBcc",
+      "youtu_be_url": "https://youtu.be/T6f3GE9QBcc",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/T6f3GE9QBcc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/T6f3GE9QBcc/hqdefault.jpg",
+      "thumb_text": "PRAY WITH THANKS",
+      "thumbnail_pending": true,
+      "duration_label": "~11 min",
+      "words": 1632
+    },
     {
       "id": "0802",
       "slug": "psalm-25-4-5-guidance-prayer",
@@ -5652,19 +5676,6 @@
         "words": 1430
       },
       {
-        "id": "0703",
-        "slug": "philippians-4-6-7-daily-prayer",
-        "file": "0703-philippians-4-6-7-daily-prayer.md",
-        "title": "Philippians 4:6-7 Daily Prayer | The Praise Garden",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1632
-      },
-      {
         "id": "0704",
         "slug": "1-thessalonians-5-16-18-daily-prayer",
         "file": "0704-1-thessalonians-5-16-18-daily-prayer.md",
@@ -5676,6 +5687,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1154
+      },
+      {
+        "id": "0705",
+        "slug": "when-your-heart-needs-to-remember-his-mercy-psalm-107-1",
+        "file": "0705-when-your-heart-needs-to-remember-his-mercy-psalm-107-1.md",
+        "title": "When Your Heart Needs to Remember His Mercy: Psalm 107:1",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1721
       },
       {
         "id": "0803",
@@ -6161,6 +6185,17 @@
         "file": "0704-short-garden1thessalonians5v16.yml",
         "companion_longform_id": "0704",
         "scripture": "1 Thessalonians 5:16-18",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "09:44"
+      },
+      {
+        "short": "short-gardenpsalm107v1",
+        "file": "0705-short-gardenpsalm107v1.yml",
+        "companion_longform_id": "0705",
+        "scripture": "Psalm 107:1",
         "channel": "prayer9",
         "channel_name": "The Praise Garden",
         "status": "approved",
