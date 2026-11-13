@@ -1,0 +1,410 @@
+{
+  "key": "short-gardenphilippians4v6",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "A MOMENT OF PEACE",
+    "PHILIPPIANS 4:6-7"
+  ],
+  "poster": [
+    "THE PRAISE GARDEN",
+    "A PRAYER OF THANKS",
+    "CALM YOUR SPIRIT",
+    "FIND GODS PEACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glade soft morning light",
+    "misty countryside in soft golden hour",
+    "golden light over a calm lake surface",
+    "peaceful river flowing through trees",
+    "soft light filtering through autumn leaves",
+    "dew drops on green meadow grass",
+    "glowing horizon over a quiet field",
+    "still pond reflection at sunrise"
+  ],
+  "scenes": [
+    {
+      "a": "pause for a moment",
+      "img": "short-gardenphilippians4v6-scene-01.jpg",
+      "kicker": "PHILIPPIANS 4:6-7",
+      "sub": "FIND REST IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "notice the grace",
+      "img": "short-gardenphilippians4v6-scene-02.jpg",
+      "kicker": "PHILIPPIANS 4:6-7",
+      "sub": "GRACE UPON GRACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "be careful for nothing",
+      "img": "short-gardenphilippians4v6-scene-03.jpg",
+      "kicker": "PHILIPPIANS 4:6-7",
+      "sub": "SURRENDER YOUR WORRIES",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "with thanksgiving let",
+      "img": "short-gardenphilippians4v6-scene-04.jpg",
+      "kicker": "PHILIPPIANS 4:6-7",
+      "sub": "A HEART OF GRATITUDE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "made known unto god",
+      "img": "short-gardenphilippians4v6-scene-05.jpg",
+      "kicker": "PHILIPPIANS 4:6-7",
+      "sub": "SPEAK TO YOUR FATHER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "peace of god",
+      "img": "short-gardenphilippians4v6-scene-06.jpg",
+      "kicker": "PHILIPPIANS 4:6-7",
+      "sub": "HIS TRANSCENDENT PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "keep your hearts",
+      "img": "short-gardenphilippians4v6-scene-07.jpg",
+      "kicker": "PHILIPPIANS 4:6-7",
+      "sub": "GUARDED BY HIS LOVE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "subscribe to The Praise Garden",
+      "img": "short-gardenphilippians4v6-scene-08.jpg",
+      "kicker": "PHILIPPIANS 4:6-7",
+      "sub": "STAY IN THE GARDEN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Pause for a moment and notice the grace of God today."
+    ],
+    [
+      8,
+      18,
+      "Be careful for nothing; but in every thing by prayer and supplication."
+    ],
+    [
+      18,
+      28,
+      "With thanksgiving let your requests be made known unto God."
+    ],
+    [
+      28,
+      38,
+      "And the peace of God, which passeth all understanding."
+    ],
+    [
+      38,
+      48,
+      "Shall keep your hearts and minds through Christ Jesus."
+    ],
+    [
+      48,
+      58,
+      "Lord, thank You for the beauty of this quiet morning."
+    ],
+    [
+      58,
+      68,
+      "I surrender my burdens and choose to trust Your plan."
+    ],
+    [
+      68,
+      78,
+      "Help me to live in the light of Your perfect peace."
+    ],
+    [
+      78,
+      88,
+      "May my life be a continuous offering of sincere praise."
+    ],
+    [
+      88,
+      98,
+      "Thank You for guarding my heart with Your great love."
+    ],
+    [
+      98,
+      108,
+      "Rest in this truth as you walk through your day."
+    ],
+    [
+      108,
+      120,
+      "Subscribe to The Praise Garden for more daily prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "PAUSE FOR A MOMENT",
+        "NOTICE THE GRACE",
+        "OF GOD TODAY"
+      ],
+      [
+        "GRACE"
+      ],
+      "PH 4:6"
+    ],
+    [
+      8,
+      18,
+      [
+        "BE CAREFUL FOR NOTHING",
+        "IN EVERY THING",
+        "BY PRAYER SUPPLICATION"
+      ],
+      [
+        "NOTHING"
+      ],
+      "PH 4:6"
+    ],
+    [
+      18,
+      28,
+      [
+        "WITH THANKSGIVING",
+        "LET REQUESTS BE",
+        "MADE KNOWN UNTO GOD"
+      ],
+      [
+        "THANKSGIVING"
+      ],
+      "PH 4:6"
+    ],
+    [
+      28,
+      38,
+      [
+        "THE PEACE OF GOD",
+        "WHICH PASSETH ALL",
+        "UNDERSTANDING"
+      ],
+      [
+        "PEACE"
+      ],
+      "PH 4:7"
+    ],
+    [
+      38,
+      48,
+      [
+        "SHALL KEEP YOUR",
+        "HEARTS AND MINDS",
+        "THROUGH CHRIST JESUS"
+      ],
+      [
+        "HEARTS"
+      ],
+      "PH 4:7"
+    ],
+    [
+      48,
+      58,
+      [
+        "LORD THANK YOU",
+        "FOR THE BEAUTY",
+        "OF THIS QUIET MORNING"
+      ],
+      [
+        "BEAUTY"
+      ],
+      "PH 4:7"
+    ],
+    [
+      58,
+      68,
+      [
+        "I SURRENDER MY",
+        "BURDENS AND CHOOSE",
+        "TO TRUST YOUR PLAN"
+      ],
+      [
+        "SURRENDER"
+      ],
+      "PH 4:7"
+    ],
+    [
+      68,
+      78,
+      [
+        "HELP ME TO LIVE",
+        "IN THE LIGHT OF",
+        "YOUR PERFECT PEACE"
+      ],
+      [
+        "LIGHT"
+      ],
+      "PH 4:7"
+    ],
+    [
+      78,
+      88,
+      [
+        "MAY MY LIFE BE",
+        "A CONTINUOUS OFFERING",
+        "OF SINCERE PRAISE"
+      ],
+      [
+        "PRAISE"
+      ],
+      "PH 4:7"
+    ],
+    [
+      88,
+      98,
+      [
+        "THANK YOU FOR",
+        "GUARDING MY HEART",
+        "WITH YOUR GREAT LOVE"
+      ],
+      [
+        "GUARDING"
+      ],
+      "PH 4:7"
+    ],
+    [
+      98,
+      108,
+      [
+        "REST IN THIS",
+        "TRUTH AS YOU",
+        "WALK THROUGH YOUR DAY"
+      ],
+      [
+        "REST"
+      ],
+      "PH 4:7"
+    ],
+    [
+      108,
+      120,
+      [
+        "SUBSCRIBE TO THE",
+        "PRAISE GARDEN FOR",
+        "MORE DAILY PRAYER"
+      ],
+      [
+        "SUBSCRIBE"
+      ],
+      "PH 4:7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "pause for a moment",
+      "kind": "phrase",
+      "words": [
+        "PAUSE",
+        "MOMENT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "be careful for nothing",
+      "kind": "phrase",
+      "words": [
+        "CAREFUL",
+        "NOTHING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "with thanksgiving let",
+      "kind": "phrase",
+      "words": [
+        "THANKSGIVING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "made known unto god",
+      "kind": "phrase",
+      "words": [
+        "KNOWN",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "peace of god",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "keep your hearts",
+      "kind": "phrase",
+      "words": [
+        "KEEP",
+        "HEARTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "subscribe to The Praise Garden",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Philippians 4:6-7"
+}

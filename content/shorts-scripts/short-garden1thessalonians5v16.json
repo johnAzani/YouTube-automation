@@ -1,0 +1,363 @@
+{
+  "key": "short-garden1thessalonians5v16",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "REJOICE EVERMORE",
+    "GIVE THANKS IN ALL THINGS"
+  ],
+  "poster": [
+    "REJOICE EVERMORE",
+    "PRAY WITHOUT CEASING",
+    "GIVE THANKS ALWAYS",
+    "THE PRAISE GARDEN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit green forest glade morning light",
+    "misty countryside meadow golden sunrise soft light",
+    "calm river flowing through sunlit autumn forest",
+    "golden hour sunlight filtering through tall pine trees",
+    "peaceful mountain lake morning reflection golden glow",
+    "serene meadow wild flowers sunrise gentle breeze",
+    "sunbeams breaking through forest canopy soft mist",
+    "tranquil stream in sunlit woodland quiet nature"
+  ],
+  "scenes": [
+    {
+      "a": "Pause for a quiet moment today, and notice the gentle grace of God surrounding your life.",
+      "img": "short-garden1thessalonians5v16-scene-01.jpg",
+      "kicker": "1 THESS 5:16-18",
+      "sub": "NOTICE HIS GENTLE GRACE TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Open your heart with honest gratitude for His faithful love.",
+      "img": "short-garden1thessalonians5v16-scene-02.jpg",
+      "kicker": "1 THESS 5:16-18",
+      "sub": "HONEST GRATITUDE FOR HIS LOVE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The word of God declares in First Thessalonians five sixteen through eighteen: Rejoice evermore. Pray without ceasing. In every thing give thanks: for this is the will of God in Christ Jesus concerning you.",
+      "img": "short-garden1thessalonians5v16-scene-03.jpg",
+      "kicker": "1 THESS 5:16-18",
+      "sub": "IN EVERY THING GIVE THANKS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Heavenly Father, we offer You our praise with sincere thanksgiving.",
+      "img": "short-garden1thessalonians5v16-scene-04.jpg",
+      "kicker": "1 THESS 5:16-18",
+      "sub": "WE OFFER SINCERE THANKSGIVING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Thank You for Your endless mercies, Your steady comfort, and Your peace.",
+      "img": "short-garden1thessalonians5v16-scene-05.jpg",
+      "kicker": "1 THESS 5:16-18",
+      "sub": "ENDLESS MERCIES AND PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Help us to rejoice in all seasons, knowing You walk with us every single day.",
+      "img": "short-garden1thessalonians5v16-scene-06.jpg",
+      "kicker": "1 THESS 5:16-18",
+      "sub": "REJOICE IN ALL SEASONS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "We rest in Your grace and magnify Your holy name forever.",
+      "img": "short-garden1thessalonians5v16-scene-07.jpg",
+      "kicker": "1 THESS 5:16-18",
+      "sub": "RESTING IN HIS DAILY GRACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Praise Garden to walk with us in daily thanksgiving.",
+      "img": "short-garden1thessalonians5v16-scene-08.jpg",
+      "kicker": "1 THESS 5:16-18",
+      "sub": "JOIN THE PRAISE GARDEN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Pause for a quiet moment today, and notice the gentle grace of God surrounding your life."
+    ],
+    [
+      8,
+      15,
+      "Open your heart with honest gratitude for His faithful love."
+    ],
+    [
+      15,
+      28,
+      "The word of God declares in First Thessalonians five sixteen through eighteen: Rejoice evermore. Pray without ceasing. In every thing give thanks: for this is the will of God in Christ Jesus concerning you."
+    ],
+    [
+      28,
+      36,
+      "Heavenly Father, we offer You our praise with sincere thanksgiving."
+    ],
+    [
+      36,
+      45,
+      "Thank You for Your endless mercies, Your steady comfort, and Your peace."
+    ],
+    [
+      45,
+      54,
+      "Help us to rejoice in all seasons, knowing You walk with us every single day."
+    ],
+    [
+      54,
+      62,
+      "We rest in Your grace and magnify Your holy name forever."
+    ],
+    [
+      62,
+      70,
+      "Subscribe to The Praise Garden to walk with us in daily thanksgiving."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "PAUSE FOR A QUIET MOMENT TODAY",
+        "AND NOTICE THE GENTLE GRACE",
+        "OF GOD SURROUNDING YOUR LIFE"
+      ],
+      [
+        "GENTLE",
+        "GRACE"
+      ],
+      "1 THESS 5:16-18"
+    ],
+    [
+      8,
+      15,
+      [
+        "OPEN YOUR HEART WITH HONEST",
+        "GRATITUDE FOR HIS FAITHFUL LOVE"
+      ],
+      [
+        "HONEST",
+        "GRATITUDE"
+      ],
+      "1 THESS 5:16-18"
+    ],
+    [
+      15,
+      28,
+      [
+        "REJOICE EVERMORE PRAY WITHOUT CEASING",
+        "IN EVERY THING GIVE THANKS FOR THIS IS",
+        "THE WILL OF GOD IN CHRIST JESUS"
+      ],
+      [
+        "REJOICE",
+        "GIVE",
+        "THANKS"
+      ],
+      "1 THESS 5:16-18"
+    ],
+    [
+      28,
+      36,
+      [
+        "HEAVENLY FATHER WE OFFER YOU OUR",
+        "PRAISE WITH SINCERE THANKSGIVING"
+      ],
+      [
+        "SINCERE",
+        "THANKSGIVING"
+      ],
+      "1 THESS 5:16-18"
+    ],
+    [
+      36,
+      45,
+      [
+        "THANK YOU FOR YOUR ENDLESS MERCIES",
+        "YOUR STEADY COMFORT AND YOUR PEACE"
+      ],
+      [
+        "ENDLESS",
+        "MERCIES",
+        "PEACE"
+      ],
+      "1 THESS 5:16-18"
+    ],
+    [
+      45,
+      54,
+      [
+        "HELP US TO REJOICE IN ALL SEASONS",
+        "KNOWING YOU WALK WITH US",
+        "EVERY SINGLE DAY"
+      ],
+      [
+        "REJOICE",
+        "ALL",
+        "SEASONS"
+      ],
+      "1 THESS 5:16-18"
+    ],
+    [
+      54,
+      62,
+      [
+        "WE REST IN YOUR GRACE AND",
+        "MAGNIFY YOUR HOLY NAME FOREVER"
+      ],
+      [
+        "REST",
+        "GRACE",
+        "MAGNIFY"
+      ],
+      "1 THESS 5:16-18"
+    ],
+    [
+      62,
+      70,
+      [
+        "SUBSCRIBE TO THE PRAISE GARDEN",
+        "TO WALK WITH US IN DAILY THANKSGIVING"
+      ],
+      [
+        "SUBSCRIBE",
+        "PRAISE",
+        "GARDEN"
+      ],
+      "1 THESS 5:16-18"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Pause for a quiet moment today, and notice the gentle grace of God surrounding your life.",
+      "kind": "phrase",
+      "words": [
+        "GENTLE",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Open your heart with honest gratitude for His faithful love.",
+      "kind": "phrase",
+      "words": [
+        "HONEST",
+        "GRATITUDE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The word of God declares in First Thessalonians five sixteen through eighteen: Rejoice evermore. Pray without ceasing. In every thing give thanks: for this is the will of God in Christ Jesus concerning you.",
+      "kind": "phrase",
+      "words": [
+        "REJOICE",
+        "GIVE",
+        "THANKS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, we offer You our praise with sincere thanksgiving.",
+      "kind": "phrase",
+      "words": [
+        "SINCERE",
+        "THANKSGIVING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thank You for Your endless mercies, Your steady comfort, and Your peace.",
+      "kind": "phrase",
+      "words": [
+        "ENDLESS",
+        "MERCIES",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help us to rejoice in all seasons, knowing You walk with us every single day.",
+      "kind": "phrase",
+      "words": [
+        "REJOICE",
+        "ALL",
+        "SEASONS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We rest in Your grace and magnify Your holy name forever.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "GRACE",
+        "MAGNIFY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Praise Garden to walk with us in daily thanksgiving.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PRAISE",
+        "GARDEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "1 Thessalonians 5:16-18"
+}
