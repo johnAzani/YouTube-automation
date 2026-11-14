@@ -1,0 +1,289 @@
+{
+  "key": "short-guidedisaiah30v21",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "HEAR HIS VOICE",
+    "IN THE DECISION"
+  ],
+  "poster": [
+    "WHEN YOU",
+    "NEED DIRECTION",
+    "ISAIAH 30:21",
+    "THE GUIDED PATH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine mountain pass path quiet early light",
+    "peaceful pine valley river early morning fog",
+    "calm alpine lake reflecting mountain peak twilight",
+    "sunlight breaking through misty forest trail path",
+    "quiet mountain valley stream golden hour morning",
+    "calm mountain lake glowing horizon night soft stars"
+  ],
+  "scenes": [
+    {
+      "a": "torn between two paths",
+      "img": "short-guidedisaiah30v21-scene-01.jpg",
+      "kicker": "ISAIAH 30:21",
+      "sub": "THIS IS THE WAY WALK YE IN IT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "thine ears shall hear a word",
+      "img": "short-guidedisaiah30v21-scene-02.jpg",
+      "kicker": "LISTEN FOR HIS VOICE",
+      "sub": "WALK YE IN IT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "quiet the noise within us",
+      "img": "short-guidedisaiah30v21-scene-03.jpg",
+      "kicker": "SEEK GOD'S WISDOM",
+      "sub": "QUIET THE NOISE WITHIN",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "make Your whisper clear",
+      "img": "short-guidedisaiah30v21-scene-04.jpg",
+      "kicker": "DISCERNMENT AND TRUTH",
+      "sub": "MAKE YOUR WHISPER CLEAR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "trusting Your wisdom at every step",
+      "img": "short-guidedisaiah30v21-scene-05.jpg",
+      "kicker": "THE GUIDED PATH",
+      "sub": "TRUST HIS WISDOM EVERY STEP",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Guided Path",
+      "img": "short-guidedisaiah30v21-scene-06.jpg",
+      "kicker": "THE GUIDED PATH",
+      "sub": "SEEK GOD'S WISDOM EVERY DAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If you are torn between two paths tonight, unsure which way to go, listen."
+    ],
+    [
+      7,
+      19,
+      "Isaiah thirty, twenty-one says: And thine ears shall hear a word behind thee, saying, This is the way, walk ye in it, when ye turn to the right hand, and when ye turn to the left."
+    ],
+    [
+      19,
+      27,
+      "Lord, when competing voices crowd our minds, quiet the noise within us."
+    ],
+    [
+      27,
+      37,
+      "When we hesitate between the right hand and the left, make Your whisper clear."
+    ],
+    [
+      37,
+      47,
+      "Grant us discernment to hear Your counsel and courage to walk where You lead, trusting Your wisdom at every step."
+    ],
+    [
+      47,
+      52,
+      "Subscribe to The Guided Path for daily biblical wisdom and guidance."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF YOU ARE TORN",
+        "BETWEEN TWO PATHS TONIGHT",
+        "UNSURE WHICH WAY TO GO",
+        "LISTEN CLOSELY"
+      ],
+      [
+        "TWO PATHS",
+        "LISTEN"
+      ],
+      "ISAIAH 30 : 21"
+    ],
+    [
+      7,
+      19,
+      [
+        "AND THINE EARS SHALL HEAR",
+        "A WORD BEHIND THEE SAYING",
+        "THIS IS THE WAY WALK YE IN IT",
+        "WHEN YE TURN TO THE RIGHT",
+        "AND TO THE LEFT"
+      ],
+      [
+        "THIS IS THE WAY",
+        "WALK YE IN IT"
+      ],
+      "ISAIAH 30 : 21"
+    ],
+    [
+      19,
+      27,
+      [
+        "LORD WHEN COMPETING VOICES",
+        "CROWD OUR MINDS",
+        "QUIET THE NOISE WITHIN US"
+      ],
+      [
+        "QUIET THE NOISE"
+      ],
+      "ISAIAH 30 : 21"
+    ],
+    [
+      27,
+      37,
+      [
+        "WHEN WE HESITATE",
+        "BETWEEN RIGHT AND LEFT",
+        "MAKE YOUR WHISPER CLEAR"
+      ],
+      [
+        "WHISPER CLEAR"
+      ],
+      "ISAIAH 30 : 21"
+    ],
+    [
+      37,
+      47,
+      [
+        "GRANT US DISCERNMENT",
+        "TO HEAR YOUR COUNSEL",
+        "AND COURAGE TO WALK",
+        "TRUSTING YOUR WISDOM",
+        "AT EVERY STEP"
+      ],
+      [
+        "DISCERNMENT",
+        "YOUR WISDOM"
+      ],
+      "ISAIAH 30 : 21"
+    ],
+    [
+      47,
+      52,
+      [
+        "SUBSCRIBE TO THE GUIDED PATH",
+        "FOR DAILY BIBLICAL WISDOM",
+        "AND GUIDANCE"
+      ],
+      [
+        "THE GUIDED PATH",
+        "WISDOM"
+      ],
+      "ISAIAH 30 : 21"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "torn between two paths",
+      "kind": "phrase",
+      "words": [
+        "TORN",
+        "BETWEEN",
+        "TWO",
+        "PATHS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "thine ears shall hear a word",
+      "kind": "phrase",
+      "words": [
+        "THINE",
+        "EARS",
+        "SHALL",
+        "HEAR"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "quiet the noise within us",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "THE",
+        "NOISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "make Your whisper clear",
+      "kind": "phrase",
+      "words": [
+        "MAKE",
+        "YOUR",
+        "WHISPER",
+        "CLEAR"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "trusting Your wisdom at every step",
+      "kind": "phrase",
+      "words": [
+        "TRUSTING",
+        "YOUR",
+        "WISDOM"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Guided Path",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "THE",
+        "GUIDED",
+        "PATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 30:21"
+}

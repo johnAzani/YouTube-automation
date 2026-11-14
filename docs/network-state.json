@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T05:04:54Z",
+  "generated_at": "2026-11-14T05:12:30Z",
   "monitor_generated_at": "2026-11-14T05:03:55.201551+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 192,
+    "published_total": 193,
     "published_longform": 97,
-    "published_shorts": 95,
-    "public_total": 190,
-    "queued_longform": 42,
-    "queued_shorts": 46,
+    "published_shorts": 96,
+    "public_total": 191,
+    "queued_longform": 43,
+    "queued_shorts": 45,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -584,7 +584,7 @@
         "public_total": 6,
         "queued_longform": 3,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
         "id": "SHORT-GARDENPSALM103V2",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm103v2",
-        "scripture": "Psalm 103:2",
+        "short": "short-gardenhabakkuk3v17",
+        "scripture": "Habakkuk 3:17-19",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -640,23 +640,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 4,
+        "published_total": 5,
         "published_longform": 3,
-        "published_shorts": 1,
-        "thumbnail_pending": 4,
-        "public_total": 4,
-        "queued_longform": 2,
+        "published_shorts": 2,
+        "thumbnail_pending": 5,
+        "public_total": 5,
+        "queued_longform": 3,
         "queued_other": 0,
         "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0802",
-        "title": "Psalm 25:4-5 Guidance Prayer | The Guided Path",
-        "format": "longform",
-        "youtube_video_id": "X4rTahtQYI4",
-        "watch_url": "https://youtu.be/X4rTahtQYI4",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T22:19:49Z"
+        "id": "SHORT-GUIDEDJAMES1V5",
+        "title": "Pray This James 1:5 Prayer for God's Guidance | Guidance Prayer #Shorts",
+        "format": "short",
+        "youtube_video_id": "y9oczBwOyrw",
+        "watch_url": "https://www.youtube.com/shorts/y9oczBwOyrw",
+        "published_on": "2026-11-14",
+        "published_at": "2026-11-14T05:11:47Z"
       },
       "next_queued_longform": {
         "id": "0803",
@@ -665,8 +665,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedjames1v5",
-        "scripture": "James 1:5",
+        "short": "short-guidedpsalm25v4",
+        "scripture": "Psalm 25:4-5",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDEDJAMES1V5",
+      "slug": "short-guidedjames1v5-guidance-prayer",
+      "file": "short-guidedjames1v5-guidance-prayer.md",
+      "title": "Pray This James 1:5 Prayer for God's Guidance | Guidance Prayer #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T05:11:47Z",
+      "youtube_video_id": "y9oczBwOyrw",
+      "watch_url": "https://www.youtube.com/shorts/y9oczBwOyrw",
+      "youtu_be_url": "https://youtu.be/y9oczBwOyrw",
+      "shorts_url": "https://www.youtube.com/shorts/y9oczBwOyrw",
+      "studio_url": "https://studio.youtube.com/video/y9oczBwOyrw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/y9oczBwOyrw/hqdefault.jpg",
+      "thumb_text": "THE GUIDED PATH \u00b7 ASK FOR WISDOM",
+      "thumbnail_pending": true,
+      "duration_label": "56s",
+      "words": 343
+    },
     {
       "id": "SHORT-GARDENPSALM103V2",
       "slug": "short-gardenpsalm103v2-thanksgiving-prayer",
@@ -5847,6 +5871,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1446
+      },
+      {
+        "id": "0805",
+        "slug": "when-you-need-to-know-the-next-step-isaiah-30-21",
+        "file": "0805-when-you-need-to-know-the-next-step-isaiah-30-21.md",
+        "title": "When You Need to Know the Next Step: Isaiah 30:21 | The Guided Path",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1337
       }
     ],
     "shorts": [
@@ -6247,17 +6284,6 @@
         "target_window_utc": "08:44"
       },
       {
-        "short": "short-gardenpsalm103v2",
-        "file": "0701-short-gardenpsalm103v2.yml",
-        "companion_longform_id": "0701",
-        "scripture": "Psalm 103:2",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
-      {
         "short": "short-gardenhabakkuk3v17",
         "file": "0702-short-gardenhabakkuk3v17.yml",
         "companion_longform_id": "0702",
@@ -6313,17 +6339,6 @@
         "target_window_utc": "09:44"
       },
       {
-        "short": "short-guidedjames1v5",
-        "file": "0801-short-guidedjames1v5.yml",
-        "companion_longform_id": "0801",
-        "scripture": "James 1:5",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
-      },
-      {
         "short": "short-guidedpsalm25v4",
         "file": "0802-short-guidedpsalm25v4.yml",
         "companion_longform_id": "0802",
@@ -6350,6 +6365,17 @@
         "file": "0804-short-guidedpsalm32v8.yml",
         "companion_longform_id": "0804",
         "scripture": "Psalm 32:8",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "18:44"
+      },
+      {
+        "short": "short-guidedisaiah30v21",
+        "file": "0805-short-guidedisaiah30v21.yml",
+        "companion_longform_id": "0805",
+        "scripture": "Isaiah 30:21",
         "channel": "prayer10",
         "channel_name": "The Guided Path",
         "status": "approved",
