@@ -7,108 +7,84 @@
     "CONQUERORS"
   ],
   "poster": [
-    "MIDNIGHT WATCH",
-    "MORE THAN",
-    "CONQUERORS",
-    "ROMANS 8:37"
+    "MIDNIGHT PRAYER",
+    "BEYOND DEFEAT",
+    "THE MIDNIGHT WATCH",
+    "BENEATH THE STARS"
   ],
   "end": [
     "SUBSCRIBE",
     "The Midnight Watch — stand in prayer at midnight"
   ],
   "stock_queries": [
-    "midnight watchtower silhouette deep starry night sky",
-    "lamp lit stone sanctuary prayer candle night vigil",
-    "ancient watchtower silhouette under cosmic milky way galaxy",
-    "quiet midnight sanctuary illuminated candle light glow",
-    "starry night sky over quiet dark mountain valley",
-    "candlelight reflection on ancient stone altar midnight prayer",
-    "glowing window in dark watchtower deep night sky",
-    "dramatic night sky starry canopy over peaceful horizon"
+    "deep starry night sky over dark forest",
+    "glowing lantern in quiet dark room",
+    "silhouette of old stone watchtower at night",
+    "soft moonlight over calm mountain lake",
+    "shadowy sanctuary interior at night",
+    "flickering candlelight against dark wall"
   ],
   "scenes": [
     {
-      "a": "If tonight's heavy burden makes you feel defeated in your dark room, listen closely.",
+      "a": "That recurring doubt echoing in your mind right now is not the final word tonight.",
       "img": "short-midnightromans8v37-scene-01.jpg",
       "kicker": "ROMANS 8:37",
-      "sub": "LISTEN CLOSELY TONIGHT",
+      "sub": "FIND STRENGTH IN THE STILLNESS",
       "cam": "push_in",
-      "focus": [
-        0.5,
-        0.4
-      ]
-    },
-    {
-      "a": "God's word declares in Romans 8:37, 'In all these things we are more than conquerors through him who loved us.'",
-      "img": "short-midnightromans8v37-scene-02.jpg",
-      "kicker": "ROMANS 8:37",
-      "sub": "MORE THAN CONQUERORS",
-      "cam": "pull_out",
       "focus": [
         0.5,
         0.5
       ]
     },
     {
-      "a": "Lord, in this midnight watch, we bring our weary spirits to You.",
-      "img": "short-midnightromans8v37-scene-03.jpg",
+      "a": "Lay your weary heart before the Creator who sustains every breath during this quiet watch.",
+      "img": "short-midnightromans8v37-scene-02.jpg",
       "kicker": "ROMANS 8:37",
-      "sub": "MIDNIGHT WATCH PRAYER",
-      "cam": "tilt_up",
+      "sub": "SURRENDER YOUR BURDEN",
+      "cam": "pull_out",
       "focus": [
         0.5,
         0.6
       ]
     },
     {
-      "a": "The trials of this day tried to break our strength, but Your love holds us fast.",
-      "img": "short-midnightromans8v37-scene-04.jpg",
+      "a": "Hear the promise written for you: Nay, in all these things we are more than conquerors through him that loved us.",
+      "img": "short-midnightromans8v37-scene-03.jpg",
       "kicker": "ROMANS 8:37",
-      "sub": "HIS LOVE HOLDS US FAST",
-      "cam": "pan_right",
+      "sub": "VICTORY THROUGH HIS LOVE",
+      "cam": "pan_left",
       "focus": [
         0.4,
         0.5
       ]
     },
     {
-      "a": "Quiet every anxious thought filling the darkness tonight.",
-      "img": "short-midnightromans8v37-scene-05.jpg",
+      "a": "Lord, lift the shadows of fear that cling to this heart when the world goes silent.",
+      "img": "short-midnightromans8v37-scene-04.jpg",
       "kicker": "ROMANS 8:37",
-      "sub": "QUIET EVERY ANXIOUS THOUGHT",
-      "cam": "push_in",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "Remind us that no fear or failure can separate us from Your victory.",
-      "img": "short-midnightromans8v37-scene-06.jpg",
-      "kicker": "ROMANS 8:37",
-      "sub": "VICTORY IN CHRIST",
-      "cam": "pan_left",
+      "sub": "SHATTERING THE DARKNESS",
+      "cam": "pan_right",
       "focus": [
         0.6,
         0.4
       ]
     },
     {
-      "a": "We rest tonight knowing we do not fight alone.",
-      "img": "short-midnightromans8v37-scene-07.jpg",
+      "a": "Grant a steady spirit to face the coming light with the assurance of your constant grace.",
+      "img": "short-midnightromans8v37-scene-05.jpg",
       "kicker": "ROMANS 8:37",
-      "sub": "YOU ARE NOT ALONE",
-      "cam": "pull_out",
+      "sub": "GRACE FOR THE JOURNEY",
+      "cam": "tilt_up",
       "focus": [
         0.5,
-        0.5
+        0.3
       ]
     },
     {
-      "a": "Subscribe to stand in midnight prayer with us.",
-      "img": "short-midnightromans8v37-scene-08.jpg",
-      "kicker": "THE MIDNIGHT WATCH",
-      "sub": "STAND IN PRAYER",
+      "a": "May your presence fill this room until morning breaks and hope rests deep within my soul.",
+      "img": "short-midnightromans8v37-scene-06.jpg",
+      "kicker": "ROMANS 8:37",
+      "sub": "HOPE REMAINS",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -119,252 +95,135 @@
   "captions": [
     [
       0,
-      6,
-      "If tonight's heavy burden makes you feel defeated in your dark room, listen closely."
+      12,
+      "That recurring doubt echoing in your mind right now is not the final word tonight."
     ],
     [
-      6,
-      15,
-      "God's word declares in Romans 8:37, 'In all these things we are more than conquerors through him who loved us.'"
-    ],
-    [
-      15,
-      21,
-      "Lord, in this midnight watch, we bring our weary spirits to You."
-    ],
-    [
-      21,
+      13,
       28,
-      "The trials of this day tried to break our strength, but Your love holds us fast."
+      "Lay your weary heart before the Creator who sustains every breath during this quiet watch."
     ],
     [
-      28,
-      33,
-      "Quiet every anxious thought filling the darkness tonight."
-    ],
-    [
-      33,
-      40,
-      "Remind us that no fear or failure can separate us from Your victory."
-    ],
-    [
-      40,
+      29,
       45,
-      "We rest tonight knowing we do not fight alone."
+      "Hear the promise written for you: Nay, in all these things we are more than conquerors through him that loved us."
     ],
     [
-      45,
-      50,
-      "Subscribe to stand in midnight prayer with us."
+      46,
+      62,
+      "Lord, lift the shadows of fear that cling to this heart when the world goes silent."
+    ],
+    [
+      63,
+      80,
+      "Grant a steady spirit to face the coming light with the assurance of your constant grace."
+    ],
+    [
+      81,
+      105,
+      "May your presence fill this room until morning breaks and hope rests deep within my soul."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      6,
+      12,
       [
-        "IF TONIGHTS HEAVY BURDEN",
-        "FEEL DEFEATED IN YOUR ROOM",
-        "LISTEN CLOSELY TONIGHT"
+        "THAT RECURRING DOUBT",
+        "ECHOING IN YOUR MIND",
+        "NOT THE FINAL WORD"
       ],
       [
-        "HEAVY",
-        "DEFEATED",
-        "LISTEN"
+        "NOT THE FINAL WORD"
       ],
-      "ROMANS 8 : 37"
+      "ROMANS 8:37"
     ],
     [
-      6,
-      15,
-      [
-        "GODS WORD DECLARES",
-        "MORE THAN CONQUERORS",
-        "THROUGH HIM WHO LOVED US"
-      ],
-      [
-        "MORE",
-        "CONQUERORS",
-        "LOVED"
-      ],
-      "ROMANS 8 : 37"
-    ],
-    [
-      15,
-      21,
-      [
-        "IN THIS MIDNIGHT WATCH",
-        "WE BRING OUR WEARY",
-        "SPIRITS TO YOU LORD"
-      ],
-      [
-        "MIDNIGHT",
-        "WEARY",
-        "SPIRITS"
-      ],
-      "ROMANS 8 : 37"
-    ],
-    [
-      21,
+      13,
       28,
       [
-        "TRIALS TRIED TO BREAK US",
-        "BUT YOUR UNFAILING LOVE",
-        "HOLDS US FAST TONIGHT"
+        "LAY YOUR WEARY HEART",
+        "BEFORE THE CREATOR",
+        "WHO SUSTAINS YOUR BREATH"
       ],
       [
-        "TRIALS",
-        "LOVE",
-        "HOLDS"
+        "WEARY HEART"
       ],
-      "ROMANS 8 : 37"
+      "ROMANS 8:37"
     ],
     [
-      28,
-      33,
-      [
-        "QUIET EVERY ANXIOUS THOUGHT",
-        "FILLING THE DARKNESS",
-        "IN THIS SILENT HOUR"
-      ],
-      [
-        "QUIET",
-        "ANXIOUS",
-        "DARKNESS"
-      ],
-      "ROMANS 8 : 37"
-    ],
-    [
-      33,
-      40,
-      [
-        "NO FEAR OR FAILURE",
-        "CAN SEPARATE US FROM",
-        "YOUR GREATEST VICTORY"
-      ],
-      [
-        "FEAR",
-        "FAILURE",
-        "VICTORY"
-      ],
-      "ROMANS 8 : 37"
-    ],
-    [
-      40,
+      29,
       45,
       [
-        "WE REST TONIGHT KNOWING",
-        "WE DO NOT FIGHT ALONE",
-        "GOD FIGHTS FOR US"
+        "NAY IN ALL THINGS",
+        "WE ARE MORE THAN",
+        "CONQUERORS THROUGH HIS LOVE"
       ],
       [
-        "REST",
-        "NOT",
-        "ALONE"
+        "MORE THAN CONQUERORS"
       ],
-      "ROMANS 8 : 37"
+      "ROMANS 8:37"
     ],
     [
-      45,
-      50,
+      46,
+      62,
       [
-        "SUBSCRIBE TO STAND",
-        "IN MIDNIGHT PRAYER",
-        "WITH US TONIGHT"
+        "LORD LIFT THE",
+        "SHADOWS OF FEAR",
+        "THAT CLING TONIGHT"
       ],
       [
-        "SUBSCRIBE",
-        "MIDNIGHT",
-        "PRAYER"
+        "SHADOWS OF FEAR"
       ],
-      "ROMANS 8 : 37"
+      "ROMANS 8:37"
+    ],
+    [
+      63,
+      80,
+      [
+        "GRANT A STEADY SPIRIT",
+        "TO FACE THE LIGHT",
+        "WITH CONSTANT GRACE"
+      ],
+      [
+        "CONSTANT GRACE"
+      ],
+      "ROMANS 8:37"
+    ],
+    [
+      81,
+      105,
+      [
+        "MAY YOUR PRESENCE FILL",
+        "THIS ROOM UNTIL MORNING",
+        "AND HOPE RESTS DEEP"
+      ],
+      [
+        "HOPE RESTS DEEP"
+      ],
+      "ROMANS 8:37"
     ]
   ],
   "beats": [
     {
-      "a": "If tonight's heavy burden makes you feel defeated in your dark room, listen closely.",
+      "a": "That recurring doubt echoing in your mind right now is not the final word tonight.",
       "kind": "phrase",
       "words": [
-        "HEAVY",
-        "BURDEN",
-        "DEFEATED"
+        "NOT",
+        "THE",
+        "FINAL",
+        "WORD"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "God's word declares in Romans 8:37, 'In all these things we are more than conquerors through him who loved us.'",
+      "a": "Hear the promise written for you: Nay, in all these things we are more than conquerors through him that loved us.",
       "kind": "phrase",
       "words": [
         "MORE",
         "THAN",
         "CONQUERORS"
-      ],
-      "hi": 1,
-      "slot": "C"
-    },
-    {
-      "a": "Lord, in this midnight watch, we bring our weary spirits to You.",
-      "kind": "phrase",
-      "words": [
-        "MIDNIGHT",
-        "WEARY",
-        "SPIRITS"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "The trials of this day tried to break our strength, but Your love holds us fast.",
-      "kind": "phrase",
-      "words": [
-        "LOVE",
-        "HOLDS",
-        "FAST"
-      ],
-      "hi": 1,
-      "slot": "C"
-    },
-    {
-      "a": "Quiet every anxious thought filling the darkness tonight.",
-      "kind": "phrase",
-      "words": [
-        "QUIET",
-        "ANXIOUS",
-        "THOUGHT"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Remind us that no fear or failure can separate us from Your victory.",
-      "kind": "phrase",
-      "words": [
-        "NO",
-        "FEAR",
-        "VICTORY"
-      ],
-      "hi": 2,
-      "slot": "C"
-    },
-    {
-      "a": "We rest tonight knowing we do not fight alone.",
-      "kind": "phrase",
-      "words": [
-        "NOT",
-        "FIGHT",
-        "ALONE"
-      ],
-      "hi": 1,
-      "slot": "C"
-    },
-    {
-      "a": "Subscribe to stand in midnight prayer with us.",
-      "kind": "phrase",
-      "words": [
-        "STAND",
-        "MIDNIGHT",
-        "PRAYER"
       ],
       "hi": 0,
       "slot": "C"

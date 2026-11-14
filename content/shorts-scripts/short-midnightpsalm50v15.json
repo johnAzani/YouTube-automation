@@ -3,88 +3,88 @@
   "channel": "prayer4",
   "psalm": 50,
   "title": [
-    "CALL ON ME",
-    "IN DISTRESS"
+    "A MIDNIGHT PROMISE",
+    "FOR THE TROUBLED HEART"
   ],
   "poster": [
-    "MIDNIGHT",
-    "PRAYER",
-    "PSALM",
-    "50:15"
+    "MIDNIGHT WATCH",
+    "A SACRED VIGIL",
+    "PSALM 50:15",
+    "PRAYER FOR RELEASE"
   ],
   "end": [
     "SUBSCRIBE",
     "The Midnight Watch — stand in prayer at midnight"
   ],
   "stock_queries": [
-    "deep starry night sky over forest",
-    "glowing solitary prayer candle in dark",
-    "silhouette of an ancient stone watchtower",
-    "rippling reflection of moon on dark lake",
-    "soft candlelight illuminating a wooden table",
-    "distant galaxy in velvet night sky"
+    "midnight watchtower silhouette",
+    "deep starry night heavens",
+    "flickering oil lamp on stone table",
+    "ancient open book by candlelight",
+    "misty blue mountain horizon at night",
+    "glowing embers in stone hearth"
   ],
   "scenes": [
     {
-      "a": "That persistent weight in your chest is precisely why you were drawn here tonight.",
+      "a": "That relentless worry keeping you wide awake is why you are hearing this right now.",
       "img": "short-midnightpsalm50v15-scene-01.jpg",
-      "kicker": "PSALM 50:15",
-      "sub": "HEAR HIS WORD",
+      "kicker": "A MIDNIGHT VIGIL",
+      "sub": "HEAR THIS PRAYER",
       "cam": "push_in",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "Call upon me in the day of trouble; I will deliver you, and you shall glorify me.",
-      "img": "short-midnightpsalm50v15-scene-02.jpg",
-      "kicker": "THE PROMISE",
-      "sub": "THE LORD IS NEAR",
-      "cam": "pull_out",
       "focus": [
         0.5,
         0.4
       ]
     },
     {
-      "a": "Lord, in this deep silence, I bring the heavy burdens that have kept me awake.",
-      "img": "short-midnightpsalm50v15-scene-03.jpg",
-      "kicker": "MIDNIGHT PETITION",
-      "sub": "LAY IT DOWN",
-      "cam": "pan_left",
-      "focus": [
-        0.4,
-        0.6
-      ]
-    },
-    {
-      "a": "You see every anxious thought and every unspoken fear that shadows this quiet room.",
-      "img": "short-midnightpsalm50v15-scene-04.jpg",
-      "kicker": "YOUR FAITHFULNESS",
-      "sub": "YOU ARE SEEN",
-      "cam": "tilt_up",
+      "a": "Bring that heavy weight into the light of God as the world remains perfectly still.",
+      "img": "short-midnightpsalm50v15-scene-02.jpg",
+      "kicker": "SURRENDER TO HIM",
+      "sub": "FIND YOUR REST",
+      "cam": "pull_out",
       "focus": [
         0.5,
-        0.3
-      ]
-    },
-    {
-      "a": "I surrender my need for control and trust in your promise to be my refuge.",
-      "img": "short-midnightpsalm50v15-scene-05.jpg",
-      "kicker": "TOTAL SURRENDER",
-      "sub": "REST IN HIS GRACE",
-      "cam": "pan_right",
-      "focus": [
-        0.6,
         0.5
       ]
     },
     {
-      "a": "May your peace steady my heart as I commit this coming day into your hands.",
+      "a": "And call upon me in the day of trouble: I will deliver thee, and thou shalt glorify me.",
+      "img": "short-midnightpsalm50v15-scene-03.jpg",
+      "kicker": "THE PROMISE",
+      "sub": "PSALM FIFTY FIFTEEN",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, this soul calls out to you in the darkness, seeking your mighty, quiet hand.",
+      "img": "short-midnightpsalm50v15-scene-04.jpg",
+      "kicker": "HEAR OUR PRAYER",
+      "sub": "LORD BE NEAR",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Take the burden that feels impossible to carry alone and replace it with your peace.",
+      "img": "short-midnightpsalm50v15-scene-05.jpg",
+      "kicker": "DIVINE CALM",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "May your deliverance be the anchor for a spirit that waits on you through tonight.",
       "img": "short-midnightpsalm50v15-scene-06.jpg",
-      "kicker": "ABIDING PEACE",
-      "sub": "DAWN IS COMING",
+      "kicker": "STAY WATCHFUL",
+      "sub": "GOD IS FAITHFUL",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -96,32 +96,32 @@
     [
       0,
       8,
-      "That persistent weight in your chest is precisely why you were drawn here tonight."
+      "That relentless worry keeping you wide awake is why you are hearing this right now."
     ],
     [
-      9,
-      17,
-      "Call upon me in the day of trouble; I will deliver you, and you shall glorify me."
+      8,
+      16,
+      "Bring that heavy weight into the light of God as the world remains perfectly still."
     ],
     [
-      18,
+      16,
       26,
-      "Lord, in this deep silence, I bring the heavy burdens that have kept me awake."
+      "And call upon me in the day of trouble: I will deliver thee, and thou shalt glorify me."
     ],
     [
-      27,
-      35,
-      "You see every anxious thought and every unspoken fear that shadows this quiet room."
+      26,
+      36,
+      "Father, this soul calls out to you in the darkness, seeking your mighty, quiet hand."
     ],
     [
       36,
-      44,
-      "I surrender my need for control and trust in your promise to be my refuge."
+      46,
+      "Take the burden that feels impossible to carry alone and replace it with your peace."
     ],
     [
-      45,
-      53,
-      "May your peace steady my heart as I commit this coming day into your hands."
+      46,
+      56,
+      "May your deliverance be the anchor for a spirit that waits on you through tonight."
     ]
   ],
   "kinetic_phrases": [
@@ -129,91 +129,108 @@
       0,
       8,
       [
-        "THAT PERSISTENT WEIGHT",
-        "IN YOUR CHEST",
-        "DRAWN HERE TONIGHT"
+        "RELENTLESS WORRY",
+        "KEEPING YOU AWAKE",
+        "HEARING THIS NOW"
       ],
       [
-        "PERSISTENT WEIGHT"
+        "RELENTLESS",
+        "AWAKE"
       ],
       "PSALM 50:15"
     ],
     [
-      9,
-      17,
+      8,
+      16,
       [
-        "CALL UPON ME",
-        "IN DAY OF TROUBLE",
-        "I WILL DELIVER YOU"
+        "BRING THE WEIGHT",
+        "INTO THE LIGHT",
+        "WORLD IS STILL"
       ],
       [
-        "CALL UPON ME"
+        "WEIGHT",
+        "LIGHT"
       ],
       "PSALM 50:15"
     ],
     [
-      18,
+      16,
       26,
       [
-        "LORD IN THE SILENCE",
-        "I BRING BURDENS",
-        "KEPT ME AWAKE"
+        "CALL UPON ME",
+        "DAY OF TROUBLE",
+        "I WILL DELIVER",
+        "THOU SHALT GLORIFY"
       ],
       [
-        "HEAVY BURDENS"
+        "DELIVER",
+        "GLORIFY"
       ],
       "PSALM 50:15"
     ],
     [
-      27,
-      35,
+      26,
+      36,
       [
-        "YOU SEE EVERY THOUGHT",
-        "EVERY UNSPOKEN FEAR",
-        "IN THIS ROOM"
+        "FATHER THIS SOUL",
+        "CALLS IN DARKNESS",
+        "SEEKING YOUR HAND"
       ],
       [
-        "UNSPOKEN FEAR"
+        "FATHER",
+        "DARKNESS"
       ],
       "PSALM 50:15"
     ],
     [
       36,
-      44,
+      46,
       [
-        "I SURRENDER CONTROL",
-        "TRUST IN YOUR PROMISE",
-        "BE MY REFUGE"
+        "TAKE THE BURDEN",
+        "IMPOSSIBLE TO CARRY",
+        "REPLACE WITH PEACE"
       ],
       [
-        "SURRENDER"
+        "BURDEN",
+        "PEACE"
       ],
       "PSALM 50:15"
     ],
     [
-      45,
-      53,
+      46,
+      56,
       [
-        "MAY YOUR PEACE",
-        "STEADY MY HEART",
-        "INTO YOUR HANDS"
+        "MAY YOUR DELIVERANCE",
+        "BE THE ANCHOR",
+        "WAITS ON YOU"
       ],
       [
-        "STEADY MY HEART"
+        "DELIVERANCE",
+        "ANCHOR"
       ],
       "PSALM 50:15"
     ]
   ],
   "beats": [
     {
-      "a": "That persistent weight in your chest is precisely why you were drawn here tonight.",
+      "a": "That relentless worry keeping you wide awake is why you are hearing this right now.",
       "kind": "phrase",
       "words": [
-        "PERSISTENT",
-        "WEIGHT"
+        "RELENTLESS",
+        "WORRY"
       ],
       "hi": 0,
-      "slot": "C"
+      "slot": "A"
+    },
+    {
+      "a": "And call upon me in the day of trouble: I will deliver thee, and thou shalt glorify me.",
+      "kind": "phrase",
+      "words": [
+        "DELIVER",
+        "GLORIFY"
+      ],
+      "hi": 0,
+      "slot": "B"
     }
   ],
   "scripture": "Psalm 50:15"

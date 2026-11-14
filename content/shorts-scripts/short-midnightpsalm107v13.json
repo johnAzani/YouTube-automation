@@ -1,0 +1,264 @@
+{
+  "key": "short-midnightpsalm107v13",
+  "channel": "prayer4",
+  "psalm": 107,
+  "title": [
+    "PSALM 107",
+    "MIDNIGHT PRAYER"
+  ],
+  "poster": [
+    "THE",
+    "MIDNIGHT",
+    "WATCH",
+    "PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "midnight watchtower silhouette starry sky",
+    "deep cosmic starry night calm deep blue",
+    "ancient stone doorway under moonlight",
+    "glowing candlelight in dark stone room",
+    "mountain peaks under vast night sky",
+    "calm starry ocean surface at midnight"
+  ],
+  "scenes": [
+    {
+      "a": "If you are trapped in a dark room unable to see a way forward",
+      "img": "short-midnightpsalm107v13-scene-01.jpg",
+      "kicker": "MIDNIGHT WATCH",
+      "sub": "HEAR THIS PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord we bring every heavy chain and closed door into your light",
+      "img": "short-midnightpsalm107v13-scene-02.jpg",
+      "kicker": "PSALM 107:13",
+      "sub": "THEY CRIED UNTO THE LORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Then they cried unto the LORD in their trouble and he saved them out of their distresses",
+      "img": "short-midnightpsalm107v13-scene-03.jpg",
+      "kicker": "PSALM 107:14",
+      "sub": "BROUGHT OUT OF DARKNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He brought them out of darkness and the shadow of death and brake their bands in sunder",
+      "img": "short-midnightpsalm107v13-scene-04.jpg",
+      "kicker": "PSALM 107:15",
+      "sub": "PRAISE THE LORD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Oh that men would praise the LORD for his goodness and for his wonderful works to the children of men",
+      "img": "short-midnightpsalm107v13-scene-05.jpg",
+      "kicker": "PSALM 107:16",
+      "sub": "GATES OF BRASS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For he hath broken the gates of brass and cut the bars of iron in sunder",
+      "img": "short-midnightpsalm107v13-scene-06.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "STAND IN FAITH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If you are trapped in a dark room unable to see a way forward."
+    ],
+    [
+      7,
+      14,
+      "Lord we bring every heavy chain and closed door into your light."
+    ],
+    [
+      14,
+      23,
+      "Then they cried unto the LORD in their trouble, and he saved them out of their distresses."
+    ],
+    [
+      23,
+      31,
+      "He brought them out of darkness and the shadow of death, and brake their bands in sunder."
+    ],
+    [
+      31,
+      39,
+      "Oh that men would praise the LORD for his goodness, and for his wonderful works to the children of men!"
+    ],
+    [
+      39,
+      47,
+      "For he hath broken the gates of brass, and cut the bars of iron in sunder."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF YOU ARE TRAPPED",
+        "IN A DARK ROOM",
+        "UNABLE TO SEE"
+      ],
+      "TRAPPED",
+      "PSALM 107 : 13"
+    ],
+    [
+      7,
+      14,
+      [
+        "LORD WE BRING",
+        "EVERY HEAVY CHAIN",
+        "INTO YOUR LIGHT"
+      ],
+      "CHAIN",
+      "PSALM 107 : 13"
+    ],
+    [
+      14,
+      23,
+      [
+        "THEN THEY CRIED UNTO",
+        "THE LORD IN THEIR TROUBLE",
+        "HE SAVED THEM"
+      ],
+      "TROUBLE",
+      "PSALM 107 : 13"
+    ],
+    [
+      23,
+      31,
+      [
+        "HE BROUGHT THEM OUT",
+        "OF DARKNESS AND",
+        "SHADOW OF DEATH"
+      ],
+      "DARKNESS",
+      "PSALM 107 : 14"
+    ],
+    [
+      31,
+      39,
+      [
+        "PRAISE THE LORD",
+        "FOR HIS GOODNESS",
+        "WONDERFUL WORKS"
+      ],
+      "GOODNESS",
+      "PSALM 107 : 15"
+    ],
+    [
+      39,
+      47,
+      [
+        "BROKEN THE GATES",
+        "OF BRASS",
+        "BARS OF IRON"
+      ],
+      "BRASS",
+      "PSALM 107 : 16"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are trapped in a dark room unable to see a way forward",
+      "kind": "phrase",
+      "words": [
+        "TRAPPED",
+        "DARK",
+        "ROOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord we bring every heavy chain and closed door into your light",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "CHAIN",
+        "LIGHT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Then they cried unto the LORD in their trouble and he saved them out of their distresses",
+      "kind": "phrase",
+      "words": [
+        "CRIED",
+        "TROUBLE",
+        "SAVED"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "He brought them out of darkness and the shadow of death and brake their bands in sunder",
+      "kind": "phrase",
+      "words": [
+        "DARKNESS",
+        "SHADOW",
+        "DEATH"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Oh that men would praise the LORD for his goodness and for his wonderful works to the children of men",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "GOODNESS",
+        "WONDERFUL"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "For he hath broken the gates of brass and cut the bars of iron in sunder",
+      "kind": "phrase",
+      "words": [
+        "BROKEN",
+        "GATES",
+        "BRASS"
+      ],
+      "hi": 5,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 107:13-16"
+}

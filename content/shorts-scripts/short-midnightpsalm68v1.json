@@ -1,0 +1,276 @@
+{
+  "key": "short-midnightpsalm68v1",
+  "channel": "prayer4",
+  "psalm": 68,
+  "title": [
+    "ARISE AND SCATTER",
+    "MIDNIGHT VICTORY"
+  ],
+  "poster": [
+    "GOD",
+    "SCATTER",
+    "REJOICE",
+    "MIDNIGHT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "silhouette of watchtower against midnight sky",
+    "embers glowing in dark fireplace",
+    "starry deep space nebula",
+    "ancient stone sanctuary archway at night",
+    "soft candlelight on weathered wooden prayer table",
+    "moonlight reflecting on calm dark mountain lake"
+  ],
+  "scenes": [
+    {
+      "a": "The doubt about tomorrow",
+      "img": "short-midnightpsalm68v1-scene-01.jpg",
+      "kicker": "PSALM 68:1",
+      "sub": "HEAR THE WORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let God arise",
+      "img": "short-midnightpsalm68v1-scene-02.jpg",
+      "kicker": "GOD ARISES",
+      "sub": "ENEMIES SCATTER",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "As smoke is driven",
+      "img": "short-midnightpsalm68v1-scene-03.jpg",
+      "kicker": "SMOKE AND WAX",
+      "sub": "THE PRESENCE OF GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "But let the righteous",
+      "img": "short-midnightpsalm68v1-scene-04.jpg",
+      "kicker": "REJOICE",
+      "sub": "BEFORE THE ALMIGHTY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord we stand",
+      "img": "short-midnightpsalm68v1-scene-05.jpg",
+      "kicker": "MIDNIGHT VIGIL",
+      "sub": "STRENGTH FOR THE WEARY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May your light",
+      "img": "short-midnightpsalm68v1-scene-06.jpg",
+      "kicker": "STILLNESS",
+      "sub": "PEACE IN THE DARKNESS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "The doubt about tomorrow weighing on your chest finds no sanctuary here tonight."
+    ],
+    [
+      8,
+      18,
+      "Let God arise, let his enemies be scattered: let them also that hate him flee before him."
+    ],
+    [
+      18,
+      28,
+      "As smoke is driven away, so drive them away: as wax melteth before the fire, so let the wicked perish at the presence of God."
+    ],
+    [
+      28,
+      38,
+      "But let the righteous be glad; let them rejoice before God: yea, let them exceedingly rejoice."
+    ],
+    [
+      38,
+      48,
+      "Lord we stand in your shadow and ask for your holy fire to burn away all our fear."
+    ],
+    [
+      48,
+      55,
+      "May your light pierce this stillness and bring peace to a heart seeking only your truth."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THE DOUBT ABOUT TOMORROW",
+        "WEIGHING ON YOUR CHEST",
+        "FINDS NO SANCTUARY",
+        "HERE TONIGHT"
+      ],
+      [
+        "DOUBT"
+      ],
+      "PSALM 68 : 1"
+    ],
+    [
+      8,
+      18,
+      [
+        "LET GOD ARISE",
+        "LET HIS ENEMIES",
+        "BE SCATTERED",
+        "LET THEM FLEE"
+      ],
+      [
+        "GOD ARISE"
+      ],
+      "PSALM 68 : 1"
+    ],
+    [
+      18,
+      28,
+      [
+        "AS SMOKE IS DRIVEN",
+        "SO DRIVE THEM AWAY",
+        "AS WAX MELTETH",
+        "BEFORE THE FIRE"
+      ],
+      [
+        "AS WAX"
+      ],
+      "PSALM 68 : 2"
+    ],
+    [
+      28,
+      38,
+      [
+        "BUT LET THE RIGHTEOUS",
+        "BE GLAD",
+        "LET THEM REJOICE",
+        "EXCEEDINGLY REJOICE"
+      ],
+      [
+        "REJOICE"
+      ],
+      "PSALM 68 : 3"
+    ],
+    [
+      38,
+      48,
+      [
+        "LORD WE STAND",
+        "IN YOUR SHADOW",
+        "ASK FOR YOUR FIRE",
+        "BURN AWAY FEAR"
+      ],
+      [
+        "HOLY FIRE"
+      ],
+      "PSALM 68 : 3"
+    ],
+    [
+      48,
+      55,
+      [
+        "MAY YOUR LIGHT PIERCE",
+        "THIS STILLNESS",
+        "BRINGING PEACE",
+        "TO YOUR HEART"
+      ],
+      [
+        "PEACE"
+      ],
+      "PSALM 68 : 3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The doubt about tomorrow",
+      "kind": "phrase",
+      "words": [
+        "DOUBT",
+        "TOMORROW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let God arise",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "ARISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As smoke is driven",
+      "kind": "phrase",
+      "words": [
+        "SMOKE",
+        "WAX"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "But let the righteous",
+      "kind": "phrase",
+      "words": [
+        "RIGHTEOUS",
+        "REJOICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord we stand",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "STAND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your light",
+      "kind": "phrase",
+      "words": [
+        "LIGHT",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 68:1-3"
+}

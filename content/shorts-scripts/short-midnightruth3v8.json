@@ -3,250 +3,256 @@
   "channel": "prayer4",
   "psalm": null,
   "title": [
-    "MIDNIGHT GRACE",
-    "THE REST OF RUTH"
+    "MIDNIGHT COVERING",
+    "RUTH 3:8-11 PRAYER"
   ],
   "poster": [
-    "AWAKEN AT MIDNIGHT",
-    "A TIME OF REVELATION",
-    "THE VIGIL OF FAITH",
-    "A SPIRITUAL ENCOUNTER"
+    "STAND IN PRAYER",
+    "AT MIDNIGHT",
+    "RUTH 3:8-11",
+    "THE MIDNIGHT WATCH"
   ],
   "end": [
     "SUBSCRIBE",
     "The Midnight Watch — stand in prayer at midnight"
   ],
   "stock_queries": [
-    "midnight watchtower silhouette against full moon",
-    "deep starry heavens nebula vast space",
-    "soft golden lamp light in dark sanctuary",
-    "still mountain lake at deep midnight",
-    "ancient stone archway silhouette at night",
-    "glowing embers in dark fireplace",
-    "distant city lights under midnight sky"
+    "dark room candle flickering glowing window midnight starry sky",
+    "ancient sanctuary lantern glowing in dark night silhouette",
+    "starry night sky deep navy mountains silhouette watchtower",
+    "desert night sky bright stars over ancient hills",
+    "calm night lake reflecting starry sky distant horizon",
+    "lamp light in dark room quiet night sanctuary",
+    "deep midnight starry sky over peaceful mountains silhouette"
   ],
   "scenes": [
     {
-      "a": "Rise in your spirit",
+      "a": "If you sit alone in this dark room",
       "img": "short-midnightruth3v8-scene-01.jpg",
-      "kicker": "RUTH 3:8-11",
-      "sub": "RISE IN SPIRIT",
+      "kicker": "RUTH 3:8",
+      "sub": "MIDNIGHT SILENCE",
       "cam": "push_in",
       "focus": [
         0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Scripture records: And it came to pass",
+      "img": "short-midnightruth3v8-scene-02.jpg",
+      "kicker": "RUTH 3:8",
+      "sub": "AT MIDNIGHT HE WOKE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
         0.5
       ]
     },
     {
-      "a": "the stillness of the midnight hour",
-      "img": "short-midnightruth3v8-scene-02.jpg",
-      "kicker": "THE MIDNIGHT WATCH",
-      "sub": "QUIET MOMENTS",
-      "cam": "pan_left",
-      "focus": [
-        0.5,
-        0.2
-      ]
-    },
-    {
-      "a": "And it came to pass",
+      "a": "and, behold, a woman lay at his feet.",
       "img": "short-midnightruth3v8-scene-03.jpg",
-      "kicker": "HOLY SCRIPTURE",
-      "sub": "THE WORD UNFOLDS",
-      "cam": "pull_out",
-      "focus": [
-        0.5,
-        0.8
-      ]
-    },
-    {
-      "a": "at midnight the man was afraid",
-      "img": "short-midnightruth3v8-scene-04.jpg",
-      "kicker": "THE ENCOUNTER",
-      "sub": "A TURNING POINT",
+      "kicker": "RUTH 3:8",
+      "sub": "SEEKING DIVINE PROTECTION",
       "cam": "tilt_up",
       "focus": [
         0.5,
-        0.5
+        0.6
       ]
     },
     {
-      "a": "spread thy skirt over thine handmaid",
-      "img": "short-midnightruth3v8-scene-05.jpg",
-      "kicker": "DIVINE COVERING",
-      "sub": "SEEKING HIS PROTECTION",
-      "cam": "push_in",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "Blessed be thou of the Lord",
-      "img": "short-midnightruth3v8-scene-06.jpg",
-      "kicker": "FAITHFUL REDEMPTION",
-      "sub": "A VIRTUOUS PATH",
-      "cam": "pan_right",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "I will do to thee",
-      "img": "short-midnightruth3v8-scene-07.jpg",
-      "kicker": "PROMISE KEPT",
-      "sub": "TRUST IN THE SHADOW",
+      "a": "And now, my daughter, fear not;",
+      "img": "short-midnightruth3v8-scene-04.jpg",
+      "kicker": "RUTH 3:11",
+      "sub": "FEAR NOT IN THE DARK",
       "cam": "pull_out",
       "focus": [
         0.5,
         0.5
+      ]
+    },
+    {
+      "a": "for all the city of my people",
+      "img": "short-midnightruth3v8-scene-05.jpg",
+      "kicker": "RUTH 3:11",
+      "sub": "KNOWN AND KNOWN BY GOD",
+      "cam": "push_in",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, in this midnight hour,",
+      "img": "short-midnightruth3v8-scene-06.jpg",
+      "kicker": "RUTH 3:8-11",
+      "sub": "REST IN HIS PROMISE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You see our quiet faith",
+      "img": "short-midnightruth3v8-scene-07.jpg",
+      "kicker": "RUTH 3:8-11",
+      "sub": "THE MIDNIGHT WATCH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
       ]
     }
   ],
   "captions": [
     [
       0,
+      7,
+      "If you sit alone in this dark room wondering what tomorrow brings, listen."
+    ],
+    [
+      7,
       15,
-      "Rise in your spirit as we enter the stillness of the midnight hour."
+      "Scripture records: And it came to pass at midnight, that the man was afraid, and turned himself:"
     ],
     [
-      16,
-      32,
-      "And it came to pass at midnight the man was afraid and turned himself."
+      15,
+      22,
+      "and, behold, a woman lay at his feet."
     ],
     [
-      33,
-      48,
-      "And behold a woman lay at his feet and he said who art thou."
+      22,
+      31,
+      "And now, my daughter, fear not; I will do to thee all that thou requirest:"
+    ],
+    [
+      31,
+      40,
+      "for all the city of my people doth know that thou art a virtuous woman."
+    ],
+    [
+      40,
+      49,
+      "Lord, in this midnight hour, when anxiety presses upon your heart, we rest in Your holy protection."
     ],
     [
       49,
-      65,
-      "And she answered I am Ruth thine handmaid spread thy skirt over thine handmaid."
-    ],
-    [
-      66,
-      82,
-      "For thou art a near kinsman and he said Blessed be thou of the Lord."
-    ],
-    [
-      83,
-      100,
-      "For thou hast showed more kindness in the latter end than at the beginning."
-    ],
-    [
-      101,
-      120,
-      "I will do to thee all that thou requirest for all the city doth know."
+      58,
+      "You see our quiet faith and silent prayers. Cover us with grace, remove all fear, and pave our way ahead. Subscribe to join The Midnight Watch."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      15,
+      7,
       [
-        "RISE IN SPIRIT",
-        "STILLNESS OF THE",
-        "MIDNIGHT HOUR"
+        "IF YOU SIT ALONE",
+        "IN THIS DARK ROOM",
+        "LISTEN"
       ],
       [
-        "RISE"
+        "DARK ROOM",
+        "LISTEN"
       ],
       "RUTH 3:8"
     ],
     [
-      16,
-      32,
+      7,
+      15,
       [
-        "AND IT CAME",
-        "AT MIDNIGHT THE MAN",
+        "AND IT CAME TO PASS",
+        "AT MIDNIGHT THAT THE MAN",
         "WAS AFRAID"
       ],
       [
-        "MIDNIGHT"
+        "MIDNIGHT",
+        "AFRAID"
       ],
       "RUTH 3:8"
     ],
     [
-      33,
-      48,
+      15,
+      22,
       [
-        "BEHOLD A WOMAN",
-        "LAY AT HIS FEET",
-        "WHO ART THOU"
+        "AND BEHOLD A WOMAN",
+        "LAY AT HIS FEET"
       ],
       [
-        "BEHOLD"
+        "BEHOLD",
+        "FEET"
       ],
-      "RUTH 3:9"
+      "RUTH 3:8"
     ],
     [
-      49,
-      65,
+      22,
+      31,
       [
-        "I AM RUTH",
-        "SPREAD THY SKIRT",
-        "OVER THINE HANDMAID"
+        "AND NOW MY DAUGHTER",
+        "FEAR NOT I WILL DO",
+        "ALL THOU REQUIREST"
       ],
       [
-        "SKIRT"
-      ],
-      "RUTH 3:9"
-    ],
-    [
-      66,
-      82,
-      [
-        "THOU ART A NEAR",
-        "KINSMAN BLESSED BE",
-        "THOU OF THE LORD"
-      ],
-      [
-        "KINSMAN"
-      ],
-      "RUTH 3:10"
-    ],
-    [
-      83,
-      100,
-      [
-        "THOU HAST SHOWED",
-        "MORE KINDNESS",
-        "IN THE LATTER END"
-      ],
-      [
-        "KINDNESS"
-      ],
-      "RUTH 3:10"
-    ],
-    [
-      101,
-      120,
-      [
-        "I WILL DO",
-        "ALL THOU REQUIREST",
-        "FOR ALL THE CITY"
-      ],
-      [
+        "FEAR NOT",
         "REQUIREST"
       ],
       "RUTH 3:11"
+    ],
+    [
+      31,
+      40,
+      [
+        "FOR ALL THE CITY",
+        "DOTH KNOW THAT THOU ART",
+        "A VIRTUOUS WOMAN"
+      ],
+      [
+        "VIRTUOUS",
+        "WOMAN"
+      ],
+      "RUTH 3:11"
+    ],
+    [
+      40,
+      49,
+      [
+        "LORD IN THIS MIDNIGHT HOUR",
+        "WE REST IN YOUR",
+        "HOLY PROTECTION"
+      ],
+      [
+        "REST",
+        "HOLY PROTECTION"
+      ],
+      "RUTH 3:8-11"
+    ],
+    [
+      49,
+      58,
+      [
+        "YOU SEE OUR FAITH",
+        "COVER US WITH GRACE",
+        "SUBSCRIBE TO JOIN THE WATCH"
+      ],
+      [
+        "GRACE",
+        "MIDNIGHT WATCH"
+      ],
+      "RUTH 3:8-11"
     ]
   ],
   "beats": [
     {
-      "a": "Rise in your spirit",
+      "a": "If you sit alone in this dark room",
       "kind": "phrase",
       "words": [
-        "RISE",
-        "SPIRIT"
+        "DARK",
+        "ROOM"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "at midnight the man was afraid",
+      "a": "Scripture records: And it came to pass",
       "kind": "phrase",
       "words": [
         "MIDNIGHT",
@@ -256,31 +262,48 @@
       "slot": "C"
     },
     {
-      "a": "spread thy skirt over thine handmaid",
+      "a": "and, behold, a woman lay at his feet.",
       "kind": "phrase",
       "words": [
-        "SPREAD",
-        "SKIRT"
+        "FEET"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Blessed be thou of the Lord",
+      "a": "And now, my daughter, fear not;",
       "kind": "phrase",
       "words": [
-        "BLESSED",
-        "LORD"
+        "FEAR",
+        "NOT"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "I will do to thee",
+      "a": "for all the city of my people",
       "kind": "phrase",
       "words": [
-        "DO",
-        "THEE"
+        "VIRTUOUS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, in this midnight hour,",
+      "kind": "phrase",
+      "words": [
+        "PROTECTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You see our quiet faith",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "PAVE"
       ],
       "hi": 0,
       "slot": "C"
