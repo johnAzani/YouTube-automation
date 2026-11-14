@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T20:28:14Z",
+  "generated_at": "2026-11-14T20:29:27Z",
   "monitor_generated_at": "2026-11-14T19:12:22.957257+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 237,
+    "published_total": 238,
     "published_longform": 107,
-    "published_shorts": 130,
-    "public_total": 235,
+    "published_shorts": 131,
+    "public_total": 236,
     "queued_longform": 57,
-    "queued_shorts": 78,
+    "queued_shorts": 77,
     "automations_ok": 11,
     "automations_total": 11,
     "network_healthy": true
@@ -645,23 +645,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 8,
+        "published_total": 9,
         "published_longform": 4,
-        "published_shorts": 4,
-        "thumbnail_pending": 8,
-        "public_total": 8,
+        "published_shorts": 5,
+        "thumbnail_pending": 9,
+        "public_total": 9,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDISAIAH55V8",
-        "title": "Pray This Isaiah 55:8-9 Prayer for God's Guidance | Isaiah 55:8-9 #Shorts",
+        "id": "SHORT-GUIDEDJOHN14V6",
+        "title": "Pray This John 14:6 Prayer for God's Guidance | John 14:6 #Shorts",
         "format": "short",
-        "youtube_video_id": "tuJtkeBIAPc",
-        "watch_url": "https://www.youtube.com/shorts/tuJtkeBIAPc",
+        "youtube_video_id": "PqW6ZeKYe3s",
+        "watch_url": "https://www.youtube.com/shorts/PqW6ZeKYe3s",
         "published_on": "2026-11-14",
-        "published_at": "2026-11-14T16:21:37Z"
+        "published_at": "2026-11-14T20:28:32Z"
       },
       "next_queued_longform": {
         "id": "0804",
@@ -670,8 +670,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedjohn14v6",
-        "scripture": "John 14:6",
+        "short": "short-guidedmicah6v8",
+        "scripture": "Micah 6:8",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDEDJOHN14V6",
+      "slug": "short-guidedjohn14v6-guidance-prayer",
+      "file": "short-guidedjohn14v6-guidance-prayer.md",
+      "title": "Pray This John 14:6 Prayer for God's Guidance | John 14:6 #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T20:28:32Z",
+      "youtube_video_id": "PqW6ZeKYe3s",
+      "watch_url": "https://www.youtube.com/shorts/PqW6ZeKYe3s",
+      "youtu_be_url": "https://youtu.be/PqW6ZeKYe3s",
+      "shorts_url": "https://www.youtube.com/shorts/PqW6ZeKYe3s",
+      "studio_url": "https://studio.youtube.com/video/PqW6ZeKYe3s/edit",
+      "thumb_url": "https://i.ytimg.com/vi/PqW6ZeKYe3s/hqdefault.jpg",
+      "thumb_text": "WHEN YOU NEED \u00b7 CLEAR DIRECTION",
+      "thumbnail_pending": true,
+      "duration_label": "53s",
+      "words": 438
+    },
     {
       "id": "SHORT-SHIELDPSALM23V4",
       "slug": "short-shieldpsalm23v4-protection-prayer",
@@ -7130,17 +7154,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-guidedjohn14v6",
-        "file": "0000-short-guidedjohn14v6.yml",
-        "companion_longform_id": "",
-        "scripture": "John 14:6",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
-      },
       {
         "short": "short-guidedmicah6v8",
         "file": "0000-short-guidedmicah6v8.yml",
