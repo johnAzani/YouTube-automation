@@ -24,11 +24,9 @@ thumbnail_channel_grade: "balm"
 thumbnail_poster: ["THE HEALING BALM", "GOD IS YOUR HEALER", "EXODUS 15:26", "A RESTORATIVE PRAYER"]
 thumbnail_kicker: "RECEIVE GOD'S HEALING PEACE"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCj-brsBz9FNO6sZ3NLIzjvQ; auth_channel_title=The Healing Balm; long_uploads_status=allowed; video_channel_id=UCj-brsBz9FNO6sZ3NLIzjvQ; video_channel_title=The Healing Balm; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_pending: false
 thumbnail_attempts: 0
-thumbnail_retry_after: "2026-11-13T23:36:42Z"
-thumbnail_retry_reason: "rate_limit"
+
 ---
 
 Bring every weary burden and place your healing need before the Lord. Exodus 15:26 says, for I am the Lord who heals you today. Let His light shine upon your heart and wash away all the pain. Breathe in His restoration and feel the gentle touch of His grace. He is with you in every silence and speaks peace to your soul. May you find comfort in His promise and strength in His presence. Trust in His perfect plan for you in Jesus name Amen. Subscribe to The Healing Balm for more prayers.
