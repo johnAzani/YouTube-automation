@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-13T09:29:24.142571+00:00",
-  "as_of": "2026-11-13",
+  "generated_at": "2026-11-14T04:12:58.206646+00:00",
+  "as_of": "2026-11-14",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 20,
+  "total_longform_videos": 22,
   "input_diagnostics": {
-    "snapshot_video_ids": 44,
-    "receipt_video_ids": 44,
-    "matched_video_ids": 44,
-    "longform_below_view_threshold": 20,
+    "snapshot_video_ids": 46,
+    "receipt_video_ids": 46,
+    "matched_video_ids": 46,
+    "longform_below_view_threshold": 22,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 6,
+    "longform_too_young_or_undated": 5,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
@@ -18,7 +18,7 @@
   "themes": [
     {
       "theme": "morning_mercy_renewal",
-      "videos": 12,
+      "videos": 13,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -26,7 +26,7 @@
     },
     {
       "theme": "daily_guidance_wisdom",
-      "videos": 5,
+      "videos": 6,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
