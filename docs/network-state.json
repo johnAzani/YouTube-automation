@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T16:02:02Z",
+  "generated_at": "2026-11-14T16:02:14Z",
   "monitor_generated_at": "2026-11-14T16:00:51.814499+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 225,
-    "published_longform": 105,
-    "published_shorts": 120,
-    "public_total": 223,
-    "queued_longform": 59,
-    "queued_shorts": 88,
+    "published_total": 227,
+    "published_longform": 106,
+    "published_shorts": 121,
+    "public_total": 225,
+    "queued_longform": 58,
+    "queued_shorts": 87,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -169,33 +169,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 32,
-        "published_longform": 15,
-        "published_shorts": 17,
+        "published_total": 34,
+        "published_longform": 16,
+        "published_shorts": 18,
         "thumbnail_pending": 0,
-        "public_total": 32,
-        "queued_longform": 6,
+        "public_total": 34,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MIDDAY1CORINTHIANS10V13",
-        "title": "Say This 1 Corinthians 10:13 Prayer at Noon | Midday Prayer #Shorts",
-        "format": "short",
-        "youtube_video_id": "OOHzR9xA_AE",
-        "watch_url": "https://www.youtube.com/shorts/OOHzR9xA_AE",
-        "published_on": "2026-11-14",
-        "published_at": "2026-11-14T11:18:34Z"
-      },
-      "next_queued_longform": {
         "id": "0090",
         "title": "Prayer for When You Feel Like Giving Up: Galatians 6:9",
-        "words": 1463,
+        "format": "longform",
+        "youtube_video_id": "o2GQgMUGA7Y",
+        "watch_url": "https://youtu.be/o2GQgMUGA7Y",
+        "published_on": "2026-11-14",
+        "published_at": "2026-11-14T16:01:28Z"
+      },
+      "next_queued_longform": {
+        "id": "0091",
+        "title": "Midday Prayer for Strength at Work: Colossians 3:23-24",
+        "words": 1120,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaymatthew19v26",
-        "scripture": "Matthew 19:26",
+        "short": "short-middaynehemiah8v10",
+        "scripture": "Nehemiah 8:10",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -697,6 +697,30 @@
   ],
   "videos": [
     {
+      "id": "0090",
+      "slug": "galatians-6-9-midday-prayer",
+      "file": "0090-galatians-6-9-midday-prayer.md",
+      "title": "Prayer for When You Feel Like Giving Up: Galatians 6:9",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T16:01:28Z",
+      "youtube_video_id": "o2GQgMUGA7Y",
+      "watch_url": "https://youtu.be/o2GQgMUGA7Y",
+      "youtu_be_url": "https://youtu.be/o2GQgMUGA7Y",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/o2GQgMUGA7Y/edit",
+      "thumb_url": "https://i.ytimg.com/vi/o2GQgMUGA7Y/hqdefault.jpg",
+      "thumb_text": "FAINT NOT",
+      "thumbnail_pending": false,
+      "duration_label": "~10 min",
+      "words": 1463
+    },
+    {
       "id": "SHORT-SHIELDPSALM121V3",
       "slug": "short-shieldpsalm121v3-protection-prayer",
       "file": "short-shieldpsalm121v3-protection-prayer.md",
@@ -815,6 +839,30 @@
       "thumbnail_pending": true,
       "duration_label": "51s",
       "words": 626
+    },
+    {
+      "id": "SHORT-MIDDAYMATTHEW19V26",
+      "slug": "short-middaymatthew19v26-midday-prayer",
+      "file": "short-middaymatthew19v26-midday-prayer.md",
+      "title": "Say This Matthew 19:26 Prayer at Noon | Reflect #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T15:14:17Z",
+      "youtube_video_id": "Gc6zilTFQO0",
+      "watch_url": "https://www.youtube.com/shorts/Gc6zilTFQO0",
+      "youtu_be_url": "https://youtu.be/Gc6zilTFQO0",
+      "shorts_url": "https://www.youtube.com/shorts/Gc6zilTFQO0",
+      "studio_url": "https://studio.youtube.com/video/Gc6zilTFQO0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Gc6zilTFQO0/hqdefault.jpg",
+      "thumb_text": "MIDDAY PRAYER \u00b7 MATTHEW 19:26",
+      "thumbnail_pending": false,
+      "duration_label": "50s",
+      "words": 575
     },
     {
       "id": "SHORT-MORNINGISAIAH60V1",
@@ -6334,19 +6382,6 @@
         "words": 1746
       },
       {
-        "id": "0090",
-        "slug": "galatians-6-9-midday-prayer",
-        "file": "0090-galatians-6-9-midday-prayer.md",
-        "title": "Prayer for When You Feel Like Giving Up: Galatians 6:9",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1463
-      },
-      {
         "id": "0091",
         "slug": "colossians-3-23-24-midday-prayer",
         "file": "0091-colossians-3-23-24-midday-prayer.md",
@@ -6922,17 +6957,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-middaymatthew19v26",
-        "file": "0000-short-middaymatthew19v26.yml",
-        "companion_longform_id": "",
-        "scripture": "Matthew 19:26",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaynehemiah8v10",

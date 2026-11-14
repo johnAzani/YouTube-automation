@@ -2,7 +2,7 @@
 id: 0090
 title: "Prayer for When You Feel Like Giving Up: Galatians 6:9"
 slug: galatians-6-9-midday-prayer
-status: approved
+status: published
 channel: prayer3
 privacy: public
 format: longform
@@ -77,6 +77,13 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-14"
+published_at: "2026-11-14T16:01:28Z"
+youtube_video_id: "o2GQgMUGA7Y"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Noonday Pause and the Midday Weight
