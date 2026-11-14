@@ -30,8 +30,8 @@
       "workflow": "comments.yml"
     }
   ],
-  "generated_at": "2026-11-14T04:10:39.845029+00:00",
-  "last_run_at": "2026-11-14T04:10:02+00:00",
+  "generated_at": "2026-11-14T04:11:31.719721+00:00",
+  "last_run_at": "2026-11-14T04:10:44+00:00",
   "on_time": [
     {
       "late_minutes": 93,
@@ -39,6 +39,13 @@
       "ran_at": "2026-11-13T21:47:43+00:00",
       "slot": "2026-11-13T20:14:00+00:00",
       "workflow": "automation-health.yml"
+    },
+    {
+      "late_minutes": 116,
+      "name": "Growth autopilot",
+      "ran_at": "2026-11-14T04:10:44+00:00",
+      "slot": "2026-11-14T02:14:00+00:00",
+      "workflow": "growth-autopilot.yml"
     },
     {
       "late_minutes": 7,
