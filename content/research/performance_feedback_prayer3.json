@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-13T09:30:22.031449+00:00",
-  "as_of": "2026-11-13",
+  "generated_at": "2026-11-14T04:13:54.220142+00:00",
+  "as_of": "2026-11-14",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 12,
+  "total_longform_videos": 14,
   "input_diagnostics": {
-    "snapshot_video_ids": 27,
-    "receipt_video_ids": 27,
-    "matched_video_ids": 27,
-    "longform_below_view_threshold": 12,
+    "snapshot_video_ids": 29,
+    "receipt_video_ids": 29,
+    "matched_video_ids": 29,
+    "longform_below_view_threshold": 14,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 3,
+    "longform_too_young_or_undated": 4,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
@@ -18,7 +18,7 @@
   "themes": [
     {
       "theme": "midday_strength_endurance",
-      "videos": 9,
+      "videos": 11,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
