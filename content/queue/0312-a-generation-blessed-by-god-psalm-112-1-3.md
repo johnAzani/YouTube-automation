@@ -10,7 +10,7 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-thumb_text: PERFECT PEACE
+thumb_text: BLESSED BY GOD
 seo_hook: A covenant prayer for households seeking God's enduring blessing and peace
   across generations according to Psalm 112:1-3 KJV.
 tags:

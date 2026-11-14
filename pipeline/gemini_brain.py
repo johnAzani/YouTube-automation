@@ -167,6 +167,13 @@ _THUMB_DANGLERS = frozenset({
     "THE", "A", "AN", "OF", "TO", "AND", "IN", "FOR", "UNTO", "WITH", "BY", "AT",
     "ON", "FROM", "IS", "OR", "BUT", "MY", "OUR", "YOUR", "HIS", "THY", "THEIR",
 })
+# A cut of a title may not begin with a joining word ("BY GOD") ...
+_THUMB_LEADERS = frozenset({
+    "OF", "TO", "AND", "IN", "FOR", "UNTO", "WITH", "BY", "AT", "ON", "FROM", "IS", "OR", "BUT",
+    "TOWARD", "TOWARDS", "THROUGH", "LIKE", "THAT", "WHEN", "UPON", "INTO", "OVER", "UNDER",
+})
+# ... nor end on one ("ALL GRACE ABOUND TOWARD").
+_THUMB_TRAILERS = _THUMB_DANGLERS | _THUMB_LEADERS
 
 
 def _thumb_candidates(words: list[str]) -> list[str]:
@@ -194,7 +201,31 @@ def _thumb_candidates(words: list[str]) -> list[str]:
     return seen
 
 
-def _clamp_thumb_text_for_ctr(raw_thumb: str, daypart: str = "night") -> str:
+def _title_candidates(title: str) -> list[str]:
+    """Cuts of the job's own title, longest first, for when the model's line cannot be used.
+
+    Only the part before the colon or bar (the passage reference and the channel
+    name say nothing on a thumbnail). Every contiguous run of four, three, then
+    two words, with joining words trimmed off both ends.
+    """
+    lead = re.split(r"[:|]", str(title or ""), maxsplit=1)[0]
+    words = [w.strip(".,;:!?\"'()") for w in lead.upper().split()]
+    words = [_THUMB_LONG_WORD_SWAPS.get(w, w) for w in words if w]
+    options: list[str] = []
+    for size in (4, 3, 2):
+        for start in range(0, max(0, len(words) - size) + 1):
+            chunk = words[start:start + size]
+            while chunk and chunk[-1] in _THUMB_TRAILERS:
+                chunk.pop()
+            while chunk and chunk[0] in _THUMB_LEADERS:
+                chunk.pop(0)
+            option = " ".join(chunk)
+            if len(chunk) >= 2 and option not in options:
+                options.append(option)
+    return options
+
+
+def _clamp_thumb_text_for_ctr(raw_thumb: str, daypart: str = "night", title: str = "") -> str:
     """Guarantee `thumb_text` fits the 660px CTR hero box at >= 105px.
 
     The line stays the model's own words wherever any cut of them fits. The
@@ -202,10 +233,20 @@ def _clamp_thumb_text_for_ctr(raw_thumb: str, daypart: str = "night") -> str:
     words were too wide: on 13 November two Family Altar jobs authored in one
     pass (Job 1:10 and Proverbs 3:33) both came out as "PERFECT PEACE", a line
     about neither passage and identical on two thumbnails.
+
+    It happened again on 14 November on two channels (Psalm 112:1-3 on The
+    Family Altar, 2 Corinthians 9:8 on The Provision Table): a line whose only
+    strong word is too wide for the box ("GENERATION", "SUFFICIENCY") has no cut
+    that fits. So before the fixed line, cuts of the job's own `title` are
+    tried; a title is about its passage and no two jobs share one.
     """
     words = [w for w in str(raw_thumb or "").strip().upper().split() if w]
     words = [_THUMB_LONG_WORD_SWAPS.get(w.strip(".,;:!?"), w) for w in words]
     candidates = _thumb_candidates(words)
+    # Two words or more of the model's line first, then the title, then one word of the model's.
+    single = [c for c in candidates if len(c.split()) < 2]
+    candidates = [c for c in candidates if len(c.split()) >= 2]
+    candidates += [c for c in _title_candidates(title) if c not in candidates] + single
     try:
         from PIL import Image, ImageDraw
         from . import thumbnail_ctr as ctr
@@ -571,7 +612,8 @@ def normalize_authored_script_markdown(
         merged_meta["tags"] = list(brand.short_tags[:6])
     if merged_meta.get("thumb_text"):
         merged_meta["thumb_text"] = _clamp_thumb_text_for_ctr(
-            str(merged_meta["thumb_text"]), daypart=brand.longform_prayer_label
+            str(merged_meta["thumb_text"]), daypart=brand.longform_prayer_label,
+            title=str(merged_meta.get("title") or ""),
         )
 
     ordered_keys = [

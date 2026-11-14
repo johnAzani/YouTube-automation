@@ -10,7 +10,7 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-thumb_text: PERFECT PEACE
+thumb_text: ALL GRACE ABOUND
 seo_hook: A prayer for God's abounding grace over your honest labour and daily provision,
   anchored in 2 Corinthians 9:8.
 tags:
