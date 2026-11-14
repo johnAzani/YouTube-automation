@@ -9,3 +9,7 @@ privacy: public
 replace: false
 target_window_utc: 08:44
 notes: Companion Short approved for Channel 8 launch.
+alignment_failures: 1
+last_alignment_error: 'cannot prepare Charon narration for short-shieldproverbs18v10
+  (Short speech alignment unavailable or incomplete; refusing to render [ValueError:
+  alignment does not cover the narration in order]); refusing to render'

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T05:35:01Z",
+  "generated_at": "2026-11-14T05:47:37Z",
   "monitor_generated_at": "2026-11-14T05:12:20.846997+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 197,
-    "published_longform": 100,
+    "published_total": 198,
+    "published_longform": 101,
     "published_shorts": 97,
-    "public_total": 195,
-    "queued_longform": 40,
+    "public_total": 196,
+    "queued_longform": 39,
     "queued_shorts": 44,
     "automations_ok": 10,
     "automations_total": 10,
@@ -509,28 +509,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 7,
-        "published_longform": 5,
+        "published_total": 8,
+        "published_longform": 6,
         "published_shorts": 2,
-        "thumbnail_pending": 7,
-        "public_total": 7,
-        "queued_longform": 2,
+        "thumbnail_pending": 8,
+        "public_total": 8,
+        "queued_longform": 1,
         "queued_other": 0,
         "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0604",
-        "title": "Psalm 34:7 Protection Prayer | The Covenant Shield",
-        "format": "longform",
-        "youtube_video_id": "_0gKT2tQ71g",
-        "watch_url": "https://youtu.be/_0gKT2tQ71g",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T21:40:11Z"
-      },
-      "next_queued_longform": {
         "id": "0605",
         "title": "No Weapon Formed Against You: Isaiah 54:17 Protection Prayer",
-        "words": 1227,
+        "format": "longform",
+        "youtube_video_id": "VeMKhISk9RU",
+        "watch_url": "https://youtu.be/VeMKhISk9RU",
+        "published_on": "2026-11-14",
+        "published_at": "2026-11-14T05:46:42Z"
+      },
+      "next_queued_longform": {
+        "id": "0606",
+        "title": "Prayer for God's Protection Today: 2 Thessalonians 3:3",
+        "words": 1430,
         "status": "approved"
       },
       "next_queued_short": {
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0605",
+      "slug": "isaiah-54-17-divine-protection-prayer",
+      "file": "0605-isaiah-54-17-divine-protection-prayer.md",
+      "title": "No Weapon Formed Against You: Isaiah 54:17 Protection Prayer",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T05:46:42Z",
+      "youtube_video_id": "VeMKhISk9RU",
+      "watch_url": "https://youtu.be/VeMKhISk9RU",
+      "youtu_be_url": "https://youtu.be/VeMKhISk9RU",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/VeMKhISk9RU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/VeMKhISk9RU/hqdefault.jpg",
+      "thumb_text": "YOU ARE COVERED",
+      "thumbnail_pending": true,
+      "duration_label": "~8 min",
+      "words": 1227
+    },
     {
       "id": "0211",
       "slug": "judges-16-3-midnight-prayer",
@@ -5837,19 +5861,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1739
-      },
-      {
-        "id": "0605",
-        "slug": "isaiah-54-17-divine-protection-prayer",
-        "file": "0605-isaiah-54-17-divine-protection-prayer.md",
-        "title": "No Weapon Formed Against You: Isaiah 54:17 Protection Prayer",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1227
       },
       {
         "id": "0606",
