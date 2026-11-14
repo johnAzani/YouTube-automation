@@ -1,8 +1,8 @@
 """Autonomous Multi-Language Metadata Localizer.
 
-Generates verified Spanish (es) and Portuguese (pt) metadata localizations
-for YouTube video uploads, unlocking global Hispanic, Lusophone African, and
-Brazilian audiences under the $0.00 hard cost lock (0 extra API quota units).
+Builds Spanish (es), Portuguese (pt) and French (fr) titles and descriptions for
+YouTube uploads from fixed, reviewed text: no model call and no extra API quota
+(the localizations travel in the same request as the upload).
 """
 from __future__ import annotations
 
@@ -352,6 +352,11 @@ def _localized_selar_header(
         return ""
     if not SELAR_JOURNAL_URL or SELAR_JOURNAL_URL in (existing_desc or ""):
         return ""
+    if lang_code == "fr":
+        return (
+            f"📖 Journal de Prière de 30 Nuits (PDF à imprimer) : {SELAR_JOURNAL_URL}\n"
+            f"🤍 Soutien volontaire au ministère : {SELAR_STORE_URL}\n\n"
+        )
     if lang_code == "pt":
         return (
             f"📖 Diário de Oração de 30 Noites (PDF Imprimível): {SELAR_JOURNAL_URL}\n"
@@ -363,7 +368,159 @@ def _localized_selar_header(
     )
 
 
+# --------------------------------------------------------------------------- #
+# French
+# --------------------------------------------------------------------------- #
+# Added 14 November 2026. French is the language of the countries around
+# Nigeria (Cameroon, Benin, Niger, Chad) and of the two largest French-speaking
+# Christian populations in the world (DR Congo, Côte d'Ivoire). A viewer whose
+# YouTube is set to French sees this title and description; the prayer itself is
+# still in English, and each description says so in its first line.
+#
+# Book names follow the Louis Segond Bible (1910, public domain), the French
+# text most used in Protestant churches in Africa.
+_BOOKS_FR: dict[str, str] = {
+    "genesis": "Genèse", "exodus": "Exode", "leviticus": "Lévitique", "numbers": "Nombres",
+    "deuteronomy": "Deutéronome", "joshua": "Josué", "judges": "Juges", "ruth": "Ruth",
+    "1 samuel": "1 Samuel", "2 samuel": "2 Samuel", "1 kings": "1 Rois", "2 kings": "2 Rois",
+    "1 chronicles": "1 Chroniques", "2 chronicles": "2 Chroniques", "ezra": "Esdras",
+    "nehemiah": "Néhémie", "esther": "Esther", "job": "Job", "psalm": "Psaume",
+    "psalms": "Psaume", "proverbs": "Proverbes", "ecclesiastes": "Ecclésiaste",
+    "isaiah": "Ésaïe", "jeremiah": "Jérémie", "lamentations": "Lamentations",
+    "ezekiel": "Ézéchiel", "daniel": "Daniel", "hosea": "Osée", "joel": "Joël",
+    "amos": "Amos", "obadiah": "Abdias", "jonah": "Jonas", "micah": "Michée",
+    "nahum": "Nahum", "habakkuk": "Habakuk", "zephaniah": "Sophonie", "haggai": "Aggée",
+    "zechariah": "Zacharie", "malachi": "Malachie", "matthew": "Matthieu", "mark": "Marc",
+    "luke": "Luc", "john": "Jean", "acts": "Actes", "romans": "Romains",
+    "1 corinthians": "1 Corinthiens", "2 corinthians": "2 Corinthiens", "galatians": "Galates",
+    "ephesians": "Éphésiens", "philippians": "Philippiens", "colossians": "Colossiens",
+    "1 thessalonians": "1 Thessaloniciens", "2 thessalonians": "2 Thessaloniciens",
+    "1 timothy": "1 Timothée", "2 timothy": "2 Timothée", "titus": "Tite",
+    "philemon": "Philémon", "hebrews": "Hébreux", "james": "Jacques", "1 peter": "1 Pierre",
+    "2 peter": "2 Pierre", "1 john": "1 Jean", "2 john": "2 Jean", "3 john": "3 Jean",
+    "jude": "Jude", "revelation": "Apocalypse",
+}
+
+_SPOKEN_IN_ENGLISH_FR = "Cette prière est dite en anglais ; les sous-titres peuvent être traduits en français."
+
+#: channel -> (title with a reference, title without one, first line, invitation)
+_FRENCH: dict[str, tuple[str, str, str, str]] = {
+    "secret-place": (
+        "{ref} Prière du Soir pour Dormir en Paix | {channel_name}",
+        "Prière du Soir pour Dormir en Paix sous la Garde de Dieu | {channel_name}",
+        "Prière du soir pour recevoir la paix de Dieu avant de dormir.",
+        "Écoutez cette prière biblique avant de dormir pour confier votre nuit et votre maison à Dieu.",
+    ),
+    "prayer2": (
+        "{ref} Prière du Matin pour Commencer la Journée | {channel_name}",
+        "Prière du Matin pour Commencer la Journée avec Dieu | {channel_name}",
+        "Prière du matin pour demander la sagesse et la grâce de Dieu au début de la journée.",
+        "Écoutez cette prière biblique au lever du jour pour commencer votre journée avec Dieu.",
+    ),
+    "prayer3": (
+        "{ref} Prière de Midi pour la Force et la Paix | {channel_name}",
+        "Prière de Midi pour la Force et la Paix | {channel_name}",
+        "Prière de midi pour retrouver la force, la clarté et la paix de Dieu.",
+        "Faites une pause à midi avec cette prière biblique pour retrouver la force et la paix de Dieu.",
+    ),
+    "prayer4": (
+        "{ref} Prière de Minuit pour la Victoire et la Délivrance | {channel_name}",
+        "Prière de Minuit pour la Victoire et la Délivrance | {channel_name}",
+        "Prière de minuit et d'intercession, pour la délivrance et la victoire en Christ.",
+        "Levez-vous à minuit avec cette prière biblique pour demander à Dieu la délivrance et la force.",
+    ),
+    "prayer5": (
+        "{ref} Prière pour la Famille et le Foyer | {channel_name}",
+        "Prière pour la Famille, les Enfants et le Foyer | {channel_name}",
+        "Prière biblique quotidienne pour la paix du foyer, les enfants et le mariage.",
+        "Rassemblez votre foyer avec cette prière biblique pour placer votre famille sous la paix de Dieu.",
+    ),
+    "prayer6": (
+        "{ref} Prière de Guérison et de Restauration | {channel_name}",
+        "Prière de Guérison, de Paix Intérieure et de Force | {channel_name}",
+        "Prière biblique quotidienne pour demander la guérison, le réconfort et des forces renouvelées.",
+        "Unissez votre foi à cette prière biblique pour demander à Dieu son réconfort et sa paix.",
+    ),
+    "prayer7": (
+        "{ref} Prière pour la Sagesse et la Provision | {channel_name}",
+        "Prière pour la Sagesse, le Travail et la Provision | {channel_name}",
+        "Prière biblique quotidienne pour la sagesse, le travail et le pain de chaque jour.",
+        "Unissez votre foi à cette prière biblique pour confier à Dieu votre travail, vos décisions et vos besoins.",
+    ),
+    "prayer8": (
+        "{ref} Prière de Protection et de Refuge | {channel_name}",
+        "Prière de Protection Divine et de Refuge | {channel_name}",
+        "Prière biblique quotidienne pour demander la protection de Dieu sur chaque chemin.",
+        "Unissez votre foi à cette prière biblique pour placer chaque pas sous la garde de Dieu.",
+    ),
+    "prayer9": (
+        "{ref} Prière de Gratitude et de Louange | {channel_name}",
+        "Prière d'Action de Grâce et de Louange | {channel_name}",
+        "Prière biblique quotidienne d'action de grâce, de louange et d'adoration.",
+        "Unissez votre foi à cette prière biblique pour remercier Dieu de sa fidélité.",
+    ),
+    "prayer10": (
+        "{ref} Prière pour la Sagesse et la Direction | {channel_name}",
+        "Prière pour la Sagesse et la Direction de Dieu | {channel_name}",
+        "Prière biblique quotidienne pour la sagesse, le discernement et la direction de Dieu.",
+        "Unissez votre foi à cette prière biblique pour chercher la sagesse de Dieu, pas à pas.",
+    ),
+}
+
+
+def french_reference(title: str) -> str:
+    """The scripture reference in a title, with the book named in French; ``""`` when there is none."""
+    m = _LOCALIZE_REF_RE.search(title or "")
+    if not m:
+        return ""
+    book = _BOOKS_FR.get(" ".join(m.group(1).lower().split()))
+    return f"{book} {m.group(2).replace('–', '-')}" if book else ""
+
+
+def french_localization(title: str, description: str, channel_id: str, channel_name: str,
+                        include_sanctuary_links: bool = False) -> dict[str, str] | None:
+    """The French title and description for one video, or ``None`` for a channel with no French text."""
+    texts = _FRENCH.get(channel_id)
+    if texts is None:
+        return None
+    with_ref, without_ref, lead, invite = texts
+    ref = french_reference(title)
+    fr_title = (with_ref.format(ref=ref, channel_name=channel_name) if ref
+                else without_ref.format(channel_name=channel_name))
+    header = _localized_selar_header("fr", description, include_sanctuary_links=include_sanctuary_links)
+    return {
+        "title": smart_truncate_title(fr_title, 95),
+        "description": truncate_utf8_bytes(
+            f"{lead}\n\n{invite}\n{_SPOKEN_IN_ENGLISH_FR}\n\n{header}{description}", max_bytes=4900),
+    }
+
+
 def build_metadata_localizations(
+    title: str,
+    description: str,
+    niche: str = "faith and prayer",
+    channel_name: str = "The Secret Place",
+    channel_id: str | None = None,
+) -> dict[str, dict[str, str]]:
+    """Spanish (`es`), Portuguese (`pt`) and French (`fr`) metadata within API byte limits."""
+    localizations = _spanish_and_portuguese(title, description, niche, channel_name, channel_id)
+    if not localizations:
+        return localizations
+    from .channel_capabilities import brand_for, channel_for_display_name
+    from .channels import DEFAULT_CHANNEL_ID, get_channel, normalize_channel_id
+
+    resolved = (normalize_channel_id(channel_id) if channel_id
+                else (channel_for_display_name(channel_name) or DEFAULT_CHANNEL_ID))
+    name = (channel_name if (channel_name and channel_for_display_name(channel_name) == resolved)
+            else brand_for(resolved).display_name)
+    french = french_localization(title, description, resolved, name,
+                                 include_sanctuary_links=get_channel(resolved).include_sanctuary_links)
+    if french:
+        localizations["fr"] = french
+    return localizations
+
+
+def _spanish_and_portuguese(
     title: str,
     description: str,
     niche: str = "faith and prayer",

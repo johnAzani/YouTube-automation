@@ -408,6 +408,159 @@ def aggregate_themes(perf: list[VideoPerformance]) -> list[ThemeScore]:
     return themes
 
 
+# ---------------------------------------------------------------------------
+# Shorts: the format that is watched
+# ---------------------------------------------------------------------------
+# Until 14 November 2026 this module set Shorts aside ("a separate lane") and
+# steered only by long-forms. No channel has ever had three long-forms with 25
+# views, so the loop never produced a signal, while 91 Shorts drew 97% of all
+# views (docs/GROWTH_EVIDENCE_2026-11-14.md). The Shorts are measured here.
+
+#: A Short gathers most of its views in its first two days; younger is not counted.
+MIN_SHORT_AGE_DAYS = 2
+#: Fewer measured Shorts than this on a channel is not a signal.
+MIN_SHORTS_FOR_SIGNAL = 6
+#: Shrinkage: a bucket is pulled toward the channel average as if it held this
+#: many average Shorts as well, so one lucky Short does not crown its book.
+SHORT_BUCKET_PRIOR = 2
+#: A passage whose book and theme together run this far above (below) the
+#: channel average moves to the front (back) of the list.
+SHORT_PROMOTE_RATIO = 1.2
+SHORT_DEMOTE_RATIO = 0.7
+
+
+def scripture_book(reference: str) -> str:
+    """``"1 John 4:4"`` -> ``"1 john"``; ``""`` when no book is named."""
+    try:
+        from .scripture_text import UnknownReference, parse_reference
+    except Exception:  # noqa: BLE001
+        return ""
+    try:
+        return parse_reference(reference)[0]
+    except UnknownReference:
+        return ""
+
+
+def aggregate_shorts(perf: list[VideoPerformance]) -> dict:
+    """Views of this channel's Shorts by book and by theme: aggregates only.
+
+    Each bucket carries its count and a ``ratio``: its shrunk average divided by
+    the channel's average Short. 1.0 is an average Short for this channel.
+    """
+    measured = [v for v in perf if v.format == "short" and v.views_known
+                and v.age_days >= MIN_SHORT_AGE_DAYS]
+    total = sum(v.views for v in measured)
+    average = total / len(measured) if measured else 0.0
+    views_sorted = sorted(v.views for v in measured)
+    median = views_sorted[len(views_sorted) // 2] if views_sorted else 0
+
+    def buckets(key) -> dict[str, dict]:
+        groups: dict[str, list[int]] = {}
+        for video in measured:
+            name = key(video)
+            if name:
+                groups.setdefault(name, []).append(video.views)
+        out: dict[str, dict] = {}
+        for name, views in sorted(groups.items()):
+            shrunk = (sum(views) + SHORT_BUCKET_PRIOR * average) / (len(views) + SHORT_BUCKET_PRIOR)
+            out[name] = {"shorts": len(views),
+                         "avg_views": round(sum(views) / len(views), 1),
+                         "ratio": round(shrunk / average, 3) if average > 0 else 1.0}
+        return out
+
+    return {
+        "measured_shorts": len(measured),
+        "total_shorts": sum(1 for v in perf if v.format == "short"),
+        "sufficient_data": len(measured) >= MIN_SHORTS_FOR_SIGNAL and average > 0,
+        "avg_views": round(average, 1),
+        "median_views": median,
+        "total_views": total,
+        "minimum_age_days": MIN_SHORT_AGE_DAYS,
+        "by_book": buckets(lambda v: scripture_book(v.title) or scripture_book(v.scripture)),
+        "by_theme": buckets(lambda v: v.theme),
+    }
+
+
+def network_shorts_signal(research_dir: Path | None = None) -> dict | None:
+    """Every channel's committed Shorts aggregates, pooled: the prior for a channel with too few of its own.
+
+    Views are pooled as counts, so a channel with 24 Shorts weighs more than one
+    with two. Returns ``None`` when the network itself has too little.
+    """
+    directory = Path(research_dir) if research_dir else FEEDBACK_JSON.parent
+    books: dict[str, list[float]] = {}
+    themes: dict[str, list[float]] = {}
+    measured = 0
+    total = 0.0
+    for path in sorted(directory.glob("performance_feedback*.json")):
+        try:
+            shorts = (json.loads(path.read_text(encoding="utf-8")) or {}).get("shorts") or {}
+        except (OSError, json.JSONDecodeError):
+            continue
+        measured += int(shorts.get("measured_shorts") or 0)
+        total += float(shorts.get("total_views") or 0)
+        for target, source in ((books, "by_book"), (themes, "by_theme")):
+            for name, row in (shorts.get(source) or {}).items():
+                count = int(row.get("shorts") or 0)
+                entry = target.setdefault(name, [0, 0.0])
+                entry[0] += count
+                entry[1] += float(row.get("avg_views") or 0) * count
+    if measured < MIN_SHORTS_FOR_SIGNAL * 2 or total <= 0:
+        return None
+    average = total / measured
+
+    def ratios(groups: dict[str, list[float]]) -> dict[str, dict]:
+        return {name: {"shorts": int(count),
+                       "ratio": round(((views + SHORT_BUCKET_PRIOR * average)
+                                       / (count + SHORT_BUCKET_PRIOR)) / average, 3)}
+                for name, (count, views) in groups.items() if count}
+
+    return {"measured_shorts": measured, "sufficient_data": True, "avg_views": round(average, 1),
+            "by_book": ratios(books), "by_theme": ratios(themes), "scope": "network"}
+
+
+def short_passage_ratio(reference: str, shorts: dict | None) -> float:
+    """Expected views of a Short on this passage, as a multiple of the average Short: 1.0 = unknown or average."""
+    if not shorts or not shorts.get("sufficient_data"):
+        return 1.0
+    seen: list[float] = []
+    book = (shorts.get("by_book") or {}).get(scripture_book(reference))
+    if book:
+        seen.append(float(book.get("ratio") or 1.0))
+    theme = (shorts.get("by_theme") or {}).get(classify_theme(reference))
+    if theme and classify_theme(reference) != "general_prayer":
+        seen.append(float(theme.get("ratio") or 1.0))
+    return sum(seen) / len(seen) if seen else 1.0
+
+
+def rank_short_passages(references: list[str], feedback: dict | None,
+                        network: dict | None = None) -> list[str]:
+    """Reorder passages a channel can make a Short of: what its viewers watch first.
+
+    Three bands, as for long-forms: passages expected well above the average
+    Short move to the front (best first), those well below move to the back, and
+    the rest keep the order they were listed in. The channel's own numbers are
+    used when it has enough Shorts; otherwise the network's; otherwise the list
+    is returned as it came.
+    """
+    shorts = (feedback or {}).get("shorts") if feedback else None
+    if not shorts or not shorts.get("sufficient_data"):
+        shorts = network
+    if not shorts or not shorts.get("sufficient_data"):
+        return list(references)
+
+    def sort_key(item: tuple[int, str]) -> tuple:
+        index, reference = item
+        ratio = short_passage_ratio(reference, shorts)
+        if ratio >= SHORT_PROMOTE_RATIO:
+            return (0, -ratio, index)
+        if ratio <= SHORT_DEMOTE_RATIO:
+            return (2, -ratio, index)
+        return (1, 0.0, index)
+
+    return [reference for _, reference in sorted(enumerate(references), key=sort_key)]
+
+
 def build_feedback_report(
     snapshots: list[dict] | None = None,
     published_index: dict[str, dict] | None = None,
@@ -459,6 +612,23 @@ def build_feedback_report(
                 f"deprioritise it until the audience signal changes."
             )
 
+    shorts = aggregate_shorts(perf)
+    shorts_guidance: list[str] = []
+    shorts["guidance"] = shorts_guidance
+    if shorts["sufficient_data"]:
+        strong = sorted(((row["ratio"], name) for name, row in shorts["by_book"].items()
+                         if row["shorts"] >= 2 and row["ratio"] >= SHORT_PROMOTE_RATIO), reverse=True)
+        if strong:
+            shorts_guidance.append(
+                f"Shorts: {strong[0][1].title()} runs {strong[0][0]:.1f}x this channel's average "
+                f"Short ({shorts['avg_views']:.0f} views over {shorts['measured_shorts']} Shorts); "
+                "its passages are written first.")
+    else:
+        shorts_guidance.append(
+            f"Shorts: {shorts['measured_shorts']} measured (need {MIN_SHORTS_FOR_SIGNAL}, each at "
+            f"least {MIN_SHORT_AGE_DAYS} days old); the network's pooled numbers order this "
+            "channel's Shorts until it has its own.")
+
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "as_of": today.isoformat(),
@@ -479,6 +649,7 @@ def build_feedback_report(
         },
         "ranked_themes": ranked_themes,
         "themes": [t.as_dict() for t in themes],
+        "shorts": shorts,
         "guidance": guidance,
         "cost_lock": "$0.00 — public Data API statistics only; no new quota or secret.",
         "privacy": "Aggregate theme scores only; raw per-video snapshot stays an Actions artifact.",

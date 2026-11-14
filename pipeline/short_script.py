@@ -382,7 +382,7 @@ THE OPENING SENTENCE — a viewer decides in the first two seconds:
 - Honest only: no "don't scroll", no "watch to the end", no promised outcome.
 
 - Quote ONLY {scripture}. Never quote another psalm or verse reference.
-- One `stock_queries` entry per scene, describing {imagery} imagery suitable for
+{scripture_block}- One `stock_queries` entry per scene, describing {imagery} imagery suitable for
   a {prayer_kind} prayer (no people's faces, no text in the image).
 - kicker <= {kicker} characters, sub <= {sub} characters, ALL CAPS.
 - cam is one of {cams}. focus is [x, y] with x/y between 0 and 1.
@@ -459,7 +459,8 @@ def recent_openings(channel_id: str | None, limit: int = RECENT_OPENINGS_SHOWN,
 
 def build_prompt(scripture: str, key: str = "short-psalmNN", words: int = TARGET_WORDS,
                  channel_id: str | None = None,
-                 avoid_openings: list[str] | None = None) -> str:
+                 avoid_openings: list[str] | None = None,
+                 occasion: str = "") -> str:
     """The model contract, in the voice of the channel the Short belongs to."""
     from .channel_capabilities import brand_for
 
@@ -474,8 +475,21 @@ def build_prompt(scripture: str, key: str = "short-psalmNN", words: int = TARGET
         listed = "\n".join(f'    - "{o[:140]}"' for o in avoid_openings[:RECENT_OPENINGS_SHOWN])
         avoid_block = ("\n  This channel has already opened Shorts with these lines. Do not start"
                        "\n  with any of them, or with their first three words:\n" + listed)
+    # The writer is shown the verses and told to copy them: a reference alone
+    # left the quotation to the model's memory (pipeline/scripture_text.py).
+    from .scripture_text import prompt_block
+
+    occasion_block = ""
+    if occasion:
+        occasion_block = (
+            f"\nTHE DAY THIS SHORT IS FOR — {occasion}.\n"
+            "- The opening sentence or the first line of prayer names the day plainly, the\n"
+            "  way a person would say it to a friend. The prayer is about this day; it is\n"
+            "  not a general prayer with the day's name attached.\n"
+            "- Do not name a date or a year: this Short may be watched in other years.\n")
     return PROMPT.format(
         key=key, scripture=scripture, words=words,
+        scripture_block=prompt_block(scripture) + occasion_block,
         floor=max(MIN_WORDS, TARGET_WORDS_RANGE[0]), ceiling=TARGET_WORDS_RANGE[1],
         hook_words=MAX_HOOK_WORDS, avoid_block=avoid_block,
         min_seconds=MIN_SECONDS, max_seconds=MAX_SECONDS,

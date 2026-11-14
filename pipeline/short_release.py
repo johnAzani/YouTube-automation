@@ -481,6 +481,9 @@ def queue_report(queue_dir: Path | None = None,
             verdict, reason = "not_approved", f"status is {status or 'missing'}"
         else:
             verdict, reason = "ready", "will render on the next run"
+            from .seasonal import manifest_window
+            if manifest_window(data) == "early":
+                reason = f"written for {data.get('season') or 'a season'}; publishes from {data.get('not_before')}"
         rows.append({"file": path.name, "short": key, "channel": owner,
                      "status": status, "verdict": verdict, "reason": reason})
     return rows
@@ -519,6 +522,7 @@ def select_next_queued_short(
     elif (queue_dir.parent / "published").is_dir():
         pdir = queue_dir.parent / "published"
 
+    fallback: tuple[Path, str, str, int] | None = None
     for path in sorted(qdir.glob("*.yml")):
         data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
         if _norm(data.get("channel")) != wanted:
@@ -590,8 +594,66 @@ def select_next_queued_short(
             print(f"[queue] Skipping manifest {path.name}: unknown short key {key!r} not in EDITIONS")
             continue
 
+        # A Short written for a day: never before it, first while its season is
+        # open, withdrawn when it has closed (pipeline/seasonal.py).
+        from .seasonal import manifest_window
+        window = manifest_window(data)
+        if window == "early":
+            continue
+        if window == "closed":
+            data.update(status="draft", season_closed=True,
+                        pause_reason=(f"{data.get('season') or 'season'} ended on "
+                                      f"{data.get('not_after')}; the brain returns this Short "
+                                      "to the queue when the season next opens"))
+            path.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+            print(f"[queue] {path.name}: its season has closed; withdrawn until next year.")
+            continue
+
+        # Verified Shorts first: one whose narration carries its verse word for
+        # word goes out ahead of one that cannot be checked or does not.
+        verdict = scripture_status(key, data)
+        rank = (0 if window == "open" else 2) + (0 if verdict == "verified" else 1)
+        if rank == 0:
+            return path, key
+        if fallback is None or rank < fallback[3]:
+            fallback = (path, key, verdict, rank)
+    if fallback is not None:
+        path, key, verdict, rank = fallback
+        if rank < 2:
+            print(f"[queue] {path.name} is for a season that is open; it goes out first.")
+        if verdict == "unverified":
+            print(f"::notice title=Short not yet scripture-verified ({wanted})::{key} was "
+                  "written before the scripture check and its quotation does not match the "
+                  "bundled text word for word; no verified Short is waiting, so it goes out. "
+                  "The brain rewrites these each pass.")
         return path, key
     return None
+
+
+def scripture_status(key: str, manifest: dict | None = None) -> str:
+    """``"verified"``, ``"unverified"`` or ``"unknown"`` for one Short's quotation.
+
+    ``verified``: the authored narration carries at least one whole verse of its
+    passage word for word and none with a word changed. ``unknown``: a
+    hand-written edition with no spec file, or no reference to check against.
+    """
+    from .scripture_text import quote_problems
+    from .short_script import SPEC_DIR
+
+    spec_file = Path(SPEC_DIR) / f"{key}.json"
+    if not spec_file.is_file():
+        return "unknown"
+    try:
+        spec = json.loads(spec_file.read_text(encoding="utf-8"))
+        narration = " ".join(str(c[2]) for c in spec.get("captions", []))
+    except Exception:  # noqa: BLE001
+        return "unknown"
+    reference = str((manifest or {}).get("scripture") or spec.get("scripture") or "").strip()
+    if not reference and isinstance(spec.get("psalm"), int) and spec["psalm"]:
+        reference = f"Psalm {spec['psalm']}"
+    if not reference:
+        return "unknown"
+    return "unverified" if quote_problems(narration, reference) else "verified"
 
 
 def _build_script_doc(edition: ShortEdition) -> ScriptDoc:
@@ -658,6 +720,51 @@ def _verified_video_fingerprints(scenes: list[dict]) -> set[str]:
     return videos
 
 
+def upload_short_captions(video_id: str, short_key: str, *, youtube=None,
+                          audio_dir: Path | None = None, out_dir: Path | None = None) -> str:
+    """Give a published Short a caption track from the words it was rendered with.
+
+    The words on screen are part of the picture; YouTube cannot search them,
+    translate them or hand them to a screen reader. A caption track can be all
+    three, and the timings already exist: the same per-word alignment the
+    renderer drew the on-screen words from.
+
+    Only a real alignment is used (the sidecar the aligner writes); estimated
+    timings are for previews and are never published as captions. The call is
+    best-effort: the Short is already public, and a missing caption track is
+    never a reason to fail a release. Returns ``"ok"`` or ``"skipped: <why>"``.
+    ``SHORT_CAPTIONS=0`` turns it off. One track costs 400 units of the
+    channel's own 10,000-unit daily YouTube allowance.
+    """
+    if os.environ.get("SHORT_CAPTIONS", "1").strip().lower() in {"0", "false", "no", "off"}:
+        return "skipped: switched off"
+    try:
+        from .captions import upload_captions, write_srt_file
+        from .short_script import load_spec, spec_path
+
+        audio_dir = audio_dir or (REPO_ROOT / "assets" / "deepdive")
+        words_path = audio_dir / f"words-{short_key}.json"
+        if not words_path.is_file() or not (audio_dir / f"words-{short_key}.alignment.json").is_file():
+            return "skipped: no verified word timings"
+        rows = json.loads(words_path.read_text(encoding="utf-8"))
+        words = [(str(word), float(start), float(end)) for start, end, word in rows]
+        if not words:
+            return "skipped: no words"
+        path = spec_path(short_key)
+        narration = load_spec(path).narration_text if path.is_file() else " ".join(w for w, _, _ in words)
+        srt = write_srt_file((out_dir or OUTPUT_DIR / "shorts-release" / short_key) / "captions.en.srt",
+                             words, narration_text=narration, duration=words[-1][2])
+        if srt is None:
+            return "skipped: empty caption file"
+        if youtube is None:
+            from .upload import _thumb_client
+
+            youtube = _thumb_client()
+        return "ok" if upload_captions(youtube, video_id, srt, language="en") else "skipped: YouTube refused the track"
+    except Exception as exc:  # noqa: BLE001
+        return f"skipped: {type(exc).__name__}: {exc}"[:200]
+
+
 def _write_published_record(
     dest: Path,
     edition: ShortEdition,
@@ -672,6 +779,7 @@ def _write_published_record(
     narration_engine: str | None = None,
     narration_voice: str | None = None,
     visual_fingerprints: list[str] | None = None,
+    captions: str | None = None,
 ) -> Path:
     PUBLISHED_DIR.mkdir(parents=True, exist_ok=True)
     now_utc = datetime.now(timezone.utc)
@@ -718,6 +826,8 @@ def _write_published_record(
     if narration_engine and narration_voice:
         voice_fields = (f'narration_engine: {json.dumps(narration_engine)}\n'
                         f'narration_voice: {json.dumps(narration_voice)}\n')
+    if captions:
+        voice_fields += f'caption_track: {json.dumps(captions)}\n'
     content = (
         "---\n"
         f'id: "{edition.job_id}"\n'
@@ -1530,6 +1640,12 @@ def run_short_release(
         from .gemini_tts import DEFAULT_MODEL
         verified_voice = (not skip_render and "prayer" in str(doc.meta.get("niche", "")).lower()
                           and active_video_id == up.video_id)
+        # Last, after the thumbnail and the audit: the caption track is the one
+        # optional call here and the most expensive (400 units).
+        caption_status = (upload_short_captions(up.video_id, edition.key, out_dir=stage_dir)
+                          if not skip_render else "skipped: not rendered in this run")
+        print(f"[short-release] caption track: {caption_status}")
+        result["caption_track"] = caption_status
         _write_published_record(
             published_record,
             edition,
@@ -1546,6 +1662,7 @@ def run_short_release(
             visual_fingerprints=sorted({v for row in scenes if row.get('media') == 'video' and not row.get('fallback')
                                         for v in row.get('source_fingerprints', [])
                                         if isinstance(v, str) and re.fullmatch(r'(?:url|sha256):[0-9a-f]{64}', v)}),
+            captions=caption_status,
         )
         if manifest_path and manifest_path.is_file():
             manifest_path.unlink()

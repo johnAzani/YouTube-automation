@@ -83,7 +83,8 @@ originality:
 ---
 
 ## Scene 1 — The Keeper
-I lift my eyes unto the hills.
+I will lift up mine eyes unto the hills, from whence cometh my help.
+It is of the LORD's mercies that we are not consumed, because his compassions fail not.
 """
         mock_client.models.generate_content.return_value = mock_response
         return mock_client
