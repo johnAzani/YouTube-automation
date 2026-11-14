@@ -103,6 +103,26 @@ def test_network_scopes_are_named_because_google_wants_such_a_token_revoked_in_t
     assert probe.missing_scopes(list(FULL_SCOPES)) == []         # and nothing counts them as missing
 
 
+DISABLED = (403, '403 PERMISSION_DENIED accessNotConfigured SERVICE_DISABLED')
+NO_SCOPE = (403, '403 PERMISSION_DENIED ACCESS_TOKEN_SCOPE_INSUFFICIENT')
+OLD_TOKEN = ['youtube.force-ssl', 'youtube.readonly', 'youtube.upload']
+
+
+def test_the_verdict_names_each_thing_still_to_do_and_is_empty_when_the_grant_is_whole():
+    assert probe.left_to_grant(list(FULL_SCOPES), (200, ''), (200, ''), 'allowed') == []
+    assert probe.left_to_grant(OLD_TOKEN, DISABLED, NO_SCOPE, 'eligible') == [
+        'mint a token with: yt-analytics.readonly, yt-analytics-monetary.readonly',
+        'enable the YouTube Analytics API in this Google Cloud project',
+        'verify a phone number in YouTube Studio']
+    # the token is right but the APIs were never switched on
+    assert probe.left_to_grant(list(FULL_SCOPES), DISABLED, DISABLED, 'allowed') == [
+        'enable the YouTube Analytics API in this Google Cloud project',
+        'enable the YouTube Reporting API in this Google Cloud project']
+    # a refusal nobody planned for is shown, not swallowed
+    assert probe.left_to_grant(list(FULL_SCOPES), (500, '500'), (200, ''), 'allowed') == \
+        ['YouTube Analytics API refused (500)']
+
+
 def test_a_token_with_an_end_date_is_called_out():
     assert probe.token_lifetime({'refresh_token_expires_in': 604799}) == 'ENDS in 7.0 days'
     assert probe.token_lifetime({}) == 'no end date reported'
@@ -161,13 +181,15 @@ def test_a_whole_run_reads_reports_and_gives_nothing_away(monkeypatch, capsys):
         all(method == 'GET' for method, url in calls if not url.endswith('/token'))
     assert sum(1 for _m, url in calls if url.endswith('/token')) == 1
     lines = out.strip().splitlines()
-    assert len(lines) == 5 and all(line.startswith('::notice title=Permissions prayer3: ') for line in lines)
+    assert len(lines) == 6 and all(line.startswith('::notice title=Permissions prayer3: ') for line in lines)
     assert 'scopes=[youtube.force-ssl, youtube.upload]' in lines[0]
     assert 'missing=[yt-analytics.readonly, yt-analytics-monetary.readonly]' in lines[0]
     assert 'network-only=[none]' in lines[0]
     assert 'videos over 15 min=allowed' in lines[1] and 'country=NG' in lines[1]
     assert 'views: REFUSED 403 PERMISSION_DENIED accessNotConfigured' in lines[2]
-    assert 'reach report offered' in lines[3] and 'pexels=false' in lines[4]
+    assert 'reach report offered' in lines[3] and 'pexels=false' in lines[5]
+    assert lines[4].endswith('verdict::still to do: mint a token with: yt-analytics.readonly, '
+                             'yt-analytics-monetary.readonly; enable the YouTube Analytics API in this Google Cloud project')
     for secret in ('ACCESS-SECRET', 'CLIENT-SECRET', 'REFRESH-SECRET', '123456789012', 'private wording',
                    'private keywords', 'UUprivate', 'vidPRIVATE', '987654'):
         assert secret not in out

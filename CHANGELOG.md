@@ -5,6 +5,11 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-14 — the credential audit says what is left to grant
+
+- `scripts/permission_probe.py` adds one verdict line per channel: `GRANT COMPLETE`, or what the owner still has to do (mint with the missing scopes, enable an API in the project, verify a phone number).
+- Run 43612992166 (15:58 UTC): The Secret Place's token now carries all seven scopes and matches the channel. The YouTube Analytics API and the YouTube Reporting API are both still disabled in its Google Cloud project. The other nine channels are unchanged.
+
 ## 2026-11-14 — a thumbnail line that cannot be cut falls back to the job's own title
 
 - `main` was red: queue jobs 0312 (Psalm 112:1-3, The Family Altar) and 0513 (2 Corinthians 9:8, The Provision Table) were both written with the thumbnail line "PERFECT PEACE". `tests/test_supply_never_stalls.py` refuses a repeated line, but the commits that add queue jobs skip CI, so it showed only on the next pull request.
