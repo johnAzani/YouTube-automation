@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T20:22:42Z",
+  "generated_at": "2026-11-14T20:28:14Z",
   "monitor_generated_at": "2026-11-14T19:12:22.957257+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 236,
+    "published_total": 237,
     "published_longform": 107,
-    "published_shorts": 129,
-    "public_total": 234,
+    "published_shorts": 130,
+    "public_total": 235,
     "queued_longform": 57,
-    "queued_shorts": 79,
+    "queued_shorts": 78,
     "automations_ok": 11,
     "automations_total": 11,
     "network_healthy": true
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 11,
+        "published_total": 12,
         "published_longform": 6,
-        "published_shorts": 5,
-        "thumbnail_pending": 11,
-        "public_total": 11,
+        "published_shorts": 6,
+        "thumbnail_pending": 12,
+        "public_total": 12,
         "queued_longform": 1,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM121V3",
-        "title": "Pray This Psalm 121:3-4 Prayer for Divine Protection | The Covenant Shield #Shorts",
+        "id": "SHORT-SHIELDPSALM23V4",
+        "title": "Pray This Psalm 23:4 Prayer for Divine Protection | Almighty #Shorts",
         "format": "short",
-        "youtube_video_id": "sgTmgJ-TQPg",
-        "watch_url": "https://www.youtube.com/shorts/sgTmgJ-TQPg",
+        "youtube_video_id": "4ETFyjM8_Nc",
+        "watch_url": "https://www.youtube.com/shorts/4ETFyjM8_Nc",
         "published_on": "2026-11-14",
-        "published_at": "2026-11-14T15:26:07Z"
+        "published_at": "2026-11-14T20:27:17Z"
       },
       "next_queued_longform": {
         "id": "0606",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm23v4",
-        "scripture": "Psalm 23:4",
+        "short": "short-shieldpsalm91v4",
+        "scripture": "Psalm 91:4",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM23V4",
+      "slug": "short-shieldpsalm23v4-protection-prayer",
+      "file": "short-shieldpsalm23v4-protection-prayer.md",
+      "title": "Pray This Psalm 23:4 Prayer for Divine Protection | Almighty #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T20:27:17Z",
+      "youtube_video_id": "4ETFyjM8_Nc",
+      "watch_url": "https://www.youtube.com/shorts/4ETFyjM8_Nc",
+      "youtu_be_url": "https://youtu.be/4ETFyjM8_Nc",
+      "shorts_url": "https://www.youtube.com/shorts/4ETFyjM8_Nc",
+      "studio_url": "https://studio.youtube.com/video/4ETFyjM8_Nc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/4ETFyjM8_Nc/hqdefault.jpg",
+      "thumb_text": "A REFUGE IN \u00b7 THE SHADOW",
+      "thumbnail_pending": true,
+      "duration_label": "42s",
+      "words": 512
+    },
     {
       "id": "SHORT-GARDENPSALM139V14",
       "slug": "short-gardenpsalm139v14-thanksgiving-prayer",
@@ -7215,17 +7239,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-shieldpsalm23v4",
-        "file": "0000-short-shieldpsalm23v4.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 23:4",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm91v4",
