@@ -1,0 +1,276 @@
+{
+  "key": "short-provisionluke6v38",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "THE LAW",
+    "OF PROVISION"
+  ],
+  "poster": [
+    "GIVE AND",
+    "IT SHALL BE",
+    "GIVEN UNTO",
+    "YOU"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunrise over wheat fields",
+    "peaceful river flowing through forest",
+    "warm sunlight hitting stone table",
+    "ancient mountain path at dawn",
+    "glowing embers in a stone hearth",
+    "serene valley with morning mist"
+  ],
+  "scenes": [
+    {
+      "a": "The financial tension holding your chest tight right now is exactly where God is working.",
+      "img": "short-provisionluke6v38-scene-01.jpg",
+      "kicker": "LUKE 6:38",
+      "sub": "FAITH IN PROVISION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Give, and it shall be given unto you; good measure, pressed down, and shaken together, and running over, shall men give into your bosom.",
+      "img": "short-provisionluke6v38-scene-02.jpg",
+      "kicker": "LUKE 6:38",
+      "sub": "HIS GOOD MEASURE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For with the same measure that ye mete withal it shall be measured to you again.",
+      "img": "short-provisionluke6v38-scene-03.jpg",
+      "kicker": "LUKE 6:38",
+      "sub": "THE DIVINE STANDARD",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, help me trust this holy cycle of stewardship today.",
+      "img": "short-provisionluke6v38-scene-04.jpg",
+      "kicker": "A PRAYER",
+      "sub": "STEWARDSHIP HEART",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Release the fear of scarcity and replace it with your promise of overflow.",
+      "img": "short-provisionluke6v38-scene-05.jpg",
+      "kicker": "A PRAYER",
+      "sub": "RELEASE THE FEAR",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "May every decision I make reflect your kingdom principles of generous, faithful provision.",
+      "img": "short-provisionluke6v38-scene-06.jpg",
+      "kicker": "A PRAYER",
+      "sub": "KINGDOM PRINCIPLES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "The financial tension holding your chest tight right now is exactly where God is working."
+    ],
+    [
+      8,
+      18,
+      "Give, and it shall be given unto you; good measure, pressed down, and shaken together, and running over, shall men give into your bosom."
+    ],
+    [
+      18,
+      26,
+      "For with the same measure that ye mete withal it shall be measured to you again."
+    ],
+    [
+      26,
+      32,
+      "Lord, help me trust this holy cycle of stewardship today."
+    ],
+    [
+      32,
+      40,
+      "Release the fear of scarcity and replace it with your promise of overflow."
+    ],
+    [
+      40,
+      50,
+      "May every decision I make reflect your kingdom principles of generous, faithful provision."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THE TENSION",
+        "IS WHERE",
+        "GOD IS",
+        "WORKING"
+      ],
+      [
+        "GOD IS"
+      ],
+      "LUKE 6:38"
+    ],
+    [
+      8,
+      18,
+      [
+        "GIVE AND IT",
+        "SHALL BE GIVEN",
+        "GOOD MEASURE",
+        "RUNNING OVER"
+      ],
+      [
+        "GOOD MEASURE"
+      ],
+      "LUKE 6:38"
+    ],
+    [
+      18,
+      26,
+      [
+        "SAME MEASURE",
+        "THAT YE METE",
+        "SHALL BE",
+        "MEASURED BACK"
+      ],
+      [
+        "MEASURED"
+      ],
+      "LUKE 6:38"
+    ],
+    [
+      26,
+      32,
+      [
+        "TRUST THIS",
+        "HOLY CYCLE",
+        "OF STEWARDSHIP",
+        "TODAY"
+      ],
+      [
+        "STEWARDSHIP"
+      ],
+      "LUKE 6:38"
+    ],
+    [
+      32,
+      40,
+      [
+        "RELEASE FEAR",
+        "OF SCARCITY",
+        "RECEIVE HIS",
+        "OVERFLOW"
+      ],
+      [
+        "OVERFLOW"
+      ],
+      "LUKE 6:38"
+    ],
+    [
+      40,
+      50,
+      [
+        "DECISIONS REFLECT",
+        "KINGDOM PRINCIPLES",
+        "FAITHFUL DAILY",
+        "PROVISION"
+      ],
+      [
+        "PROVISION"
+      ],
+      "LUKE 6:38"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The financial tension holding your chest tight right now is exactly where God is working.",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "IS",
+        "WORKING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Give, and it shall be given unto you; good measure, pressed down, and shaken together, and running over, shall men give into your bosom.",
+      "kind": "phrase",
+      "words": [
+        "GOOD",
+        "MEASURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For with the same measure that ye mete withal it shall be measured to you again.",
+      "kind": "phrase",
+      "words": [
+        "MEASURED",
+        "TO",
+        "YOU"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, help me trust this holy cycle of stewardship today.",
+      "kind": "phrase",
+      "words": [
+        "STEWARDSHIP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Release the fear of scarcity and replace it with your promise of overflow.",
+      "kind": "phrase",
+      "words": [
+        "OVERFLOW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May every decision I make reflect your kingdom principles of generous, faithful provision.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFUL",
+        "PROVISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Luke 6:38"
+}

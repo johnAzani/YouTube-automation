@@ -1,0 +1,268 @@
+{
+  "key": "short-provisionmalachi3v10",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "PROVISION",
+    "OPENED HEAVENS"
+  ],
+  "poster": [
+    "MALACHI",
+    "THE LORD",
+    "PROVIDES",
+    "NOW"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunlit valley early morning",
+    "peaceful river flowing through forest",
+    "mountain pass with morning light",
+    "sunlit sanctuary stone table surface",
+    "serene meadow at dawn",
+    "glowing horizon over vast fields"
+  ],
+  "scenes": [
+    {
+      "a": "Stop pacing that floor; you are wondering how the math will ever balance this month.",
+      "img": "short-provisionmalachi3v10-scene-01.jpg",
+      "kicker": "MALACHI 3:10",
+      "sub": "GOD HEARS YOUR NEED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Bring me all the tithes into the storehouse, that there may be meat in mine house.",
+      "img": "short-provisionmalachi3v10-scene-02.jpg",
+      "kicker": "MALACHI 3:10",
+      "sub": "TRUST IN HIS STOREHOUSE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And prove me now herewith, saith the Lord of hosts, if I will not open you the windows of heaven.",
+      "img": "short-provisionmalachi3v10-scene-03.jpg",
+      "kicker": "MALACHI 3:10",
+      "sub": "THE WINDOWS OF HEAVEN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And pour you out a blessing, that there shall not be room enough to receive it.",
+      "img": "short-provisionmalachi3v10-scene-04.jpg",
+      "kicker": "MALACHI 3:10",
+      "sub": "ABUNDANT BLESSINGS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, settle the anxious heart that worries over the simple necessities of our daily bread.",
+      "img": "short-provisionmalachi3v10-scene-05.jpg",
+      "kicker": "PRAYER",
+      "sub": "HE PROVIDES ALL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant us the grace to walk in obedience, trusting that Your hand provides for every need.",
+      "img": "short-provisionmalachi3v10-scene-06.jpg",
+      "kicker": "PRAYER",
+      "sub": "STEWARDSHIP OF FAITH",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Stop pacing that floor; you are wondering how the math will ever balance this month."
+    ],
+    [
+      8,
+      18,
+      "Bring me all the tithes into the storehouse, that there may be meat in mine house."
+    ],
+    [
+      18,
+      28,
+      "And prove me now herewith, saith the Lord of hosts, if I will not open you the windows of heaven."
+    ],
+    [
+      28,
+      38,
+      "And pour you out a blessing, that there shall not be room enough to receive it."
+    ],
+    [
+      38,
+      48,
+      "Father, settle the anxious heart that worries over the simple necessities of our daily bread."
+    ],
+    [
+      48,
+      56,
+      "Grant us the grace to walk in obedience, trusting that Your hand provides for every need."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "STOP PACING",
+        "WONDERING HOW THE MATH",
+        "WILL BALANCE THIS MONTH"
+      ],
+      [
+        "STOP PACING"
+      ],
+      "MALACHI 3 : 10"
+    ],
+    [
+      8,
+      18,
+      [
+        "BRING ALL TITHES",
+        "INTO THE STOREHOUSE",
+        "MEAT IN MINE HOUSE"
+      ],
+      [
+        "STOREHOUSE"
+      ],
+      "MALACHI 3 : 10"
+    ],
+    [
+      18,
+      28,
+      [
+        "PROVE ME NOW",
+        "SAITH THE LORD",
+        "OPEN WINDOWS OF HEAVEN"
+      ],
+      [
+        "OPEN WINDOWS"
+      ],
+      "MALACHI 3 : 10"
+    ],
+    [
+      28,
+      38,
+      [
+        "POUR OUT A BLESSING",
+        "NOT ROOM ENOUGH",
+        "TO RECEIVE IT"
+      ],
+      [
+        "POUR OUT"
+      ],
+      "MALACHI 3 : 10"
+    ],
+    [
+      38,
+      48,
+      [
+        "SETTLE THE ANXIOUS",
+        "HEART OVER DAILY",
+        "NECESSITIES OF LIFE"
+      ],
+      [
+        "SETTLE"
+      ],
+      "MALACHI 3 : 10"
+    ],
+    [
+      48,
+      56,
+      [
+        "WALK IN OBEDIENCE",
+        "TRUSTING HIS HAND",
+        "PROVIDES FOR EVERY NEED"
+      ],
+      [
+        "PROVIDES"
+      ],
+      "MALACHI 3 : 10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Stop pacing that floor; you are wondering how the math will ever balance this month.",
+      "kind": "phrase",
+      "words": [
+        "STOP",
+        "PACING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Bring me all the tithes into the storehouse, that there may be meat in mine house.",
+      "kind": "phrase",
+      "words": [
+        "STOREHOUSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And prove me now herewith, saith the Lord of hosts, if I will not open you the windows of heaven.",
+      "kind": "phrase",
+      "words": [
+        "WINDOWS",
+        "OF",
+        "HEAVEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And pour you out a blessing, that there shall not be room enough to receive it.",
+      "kind": "phrase",
+      "words": [
+        "POUR",
+        "OUT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, settle the anxious heart that worries over the simple necessities of our daily bread.",
+      "kind": "phrase",
+      "words": [
+        "SETTLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us the grace to walk in obedience, trusting that Your hand provides for every need.",
+      "kind": "phrase",
+      "words": [
+        "PROVIDES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Malachi 3:10"
+}

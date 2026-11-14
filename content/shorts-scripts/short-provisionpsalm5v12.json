@@ -1,0 +1,358 @@
+{
+  "key": "short-provisionpsalm5v12",
+  "channel": "prayer7",
+  "psalm": 5,
+  "title": [
+    "DIVINE FAVOR &",
+    "DAILY PROVISION"
+  ],
+  "poster": [
+    "GOD'S FAVOR",
+    "SURROUNDS YOU",
+    "LIKE A SHIELD",
+    "PSALM 5:12"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunlit mountain valley morning fog",
+    "peaceful river flowing through sunlit meadow",
+    "sunlit sanctuary stone table morning light",
+    "sunbeam breaking through mountain pass trees",
+    "golden sunset over calm country river",
+    "sunlit golden wheat field peaceful valley",
+    "sunlight illuminating ancient stone mountain path",
+    "golden morning sun rising over peaceful mountain ridge"
+  ],
+  "scenes": [
+    {
+      "a": "carrying a quiet worry",
+      "img": "short-provisionpsalm5v12-scene-01.jpg",
+      "kicker": "BRING YOUR NEED",
+      "sub": "GOD HEARS YOUR DAILY CARE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "favour wilt thou compass him",
+      "img": "short-provisionpsalm5v12-scene-02.jpg",
+      "kicker": "PSALM 5:12",
+      "sub": "HIS FAVOR IS YOUR SHIELD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "place our daily work",
+      "img": "short-provisionpsalm5v12-scene-03.jpg",
+      "kicker": "STEWARDSHIP PRAYER",
+      "sub": "COMMIT YOUR WORK TO HIM",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "open paths of grace",
+      "img": "short-provisionpsalm5v12-scene-04.jpg",
+      "kicker": "OPEN DOORS",
+      "sub": "GOD PROVIDES A WAY",
+      "cam": "push_in",
+      "focus": [
+        0.48,
+        0.42
+      ]
+    },
+    {
+      "a": "honest labor",
+      "img": "short-provisionpsalm5v12-scene-05.jpg",
+      "kicker": "DAILY PROVISION",
+      "sub": "GUIDE OUR HANDS IN WORK",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "divine favor surrounds us",
+      "img": "short-provisionpsalm5v12-scene-06.jpg",
+      "kicker": "DIVINE PROTECTION",
+      "sub": "WALK IN FAITHFUL CONFIDENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Establish the work",
+      "img": "short-provisionpsalm5v12-scene-07.jpg",
+      "kicker": "DAILY BREAD",
+      "sub": "HE SUPPLIES EVERY NEED",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "walk in God's daily provision",
+      "img": "short-provisionpsalm5v12-scene-08.jpg",
+      "kicker": "THE PROVISION TABLE",
+      "sub": "WALK IN DAILY FAVOR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If you are carrying a quiet worry about your household finances today, bring it to Him."
+    ],
+    [
+      6,
+      14,
+      "For thou, LORD, wilt bless the righteous; with favour wilt thou compass him as with a shield."
+    ],
+    [
+      14,
+      21,
+      "Father, we place our daily work, practical decisions, and household obligations into Your faithful hands."
+    ],
+    [
+      21,
+      28,
+      "Where we see closed doors, You open paths of grace and daily supply."
+    ],
+    [
+      28,
+      35,
+      "Guide our hands in honest labor, and guard our minds against all anxious fears."
+    ],
+    [
+      35,
+      43,
+      "Teach us to walk wisely, trusting that Your divine favor surrounds us as a shield."
+    ],
+    [
+      43,
+      50,
+      "Establish the work of our hands, and provide abundantly for every practical need."
+    ],
+    [
+      50,
+      56,
+      "Subscribe to The Provision Table to walk in God's daily provision."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "CARRYING A QUIET WORRY",
+        "ABOUT YOUR FINANCES TODAY",
+        "BRING IT TO HIM"
+      ],
+      [
+        "QUIET WORRY",
+        "FINANCES"
+      ],
+      "BRING YOUR NEED"
+    ],
+    [
+      6,
+      14,
+      [
+        "FOR THOU LORD WILT BLESS",
+        "THE RIGHTEOUS WITH FAVOUR",
+        "COMPASS HIM AS A SHIELD"
+      ],
+      [
+        "BLESS",
+        "FAVOUR",
+        "SHIELD"
+      ],
+      "PSALM 5:12"
+    ],
+    [
+      14,
+      21,
+      [
+        "WE PLACE OUR DAILY WORK",
+        "PRACTICAL DECISIONS AND",
+        "HOUSEHOLD OBLIGATIONS TO HIM"
+      ],
+      [
+        "DAILY WORK",
+        "FAITHFUL HANDS"
+      ],
+      "STEWARDSHIP PRAYER"
+    ],
+    [
+      21,
+      28,
+      [
+        "WHERE WE SEE CLOSED DOORS",
+        "YOU OPEN PATHS OF GRACE",
+        "AND DAILY SUPPLY"
+      ],
+      [
+        "CLOSED DOORS",
+        "OPEN PATHS"
+      ],
+      "OPEN DOORS"
+    ],
+    [
+      28,
+      35,
+      [
+        "GUIDE OUR HANDS IN WORK",
+        "AND GUARD OUR MINDS",
+        "AGAINST ANXIOUS FEARS"
+      ],
+      [
+        "HONEST LABOR",
+        "GUARD OUR MINDS"
+      ],
+      "DAILY PROVISION"
+    ],
+    [
+      35,
+      43,
+      [
+        "TEACH US TO WALK WISELY",
+        "YOUR DIVINE FAVOR SURROUNDS US",
+        "LIKE A STRONG SHIELD"
+      ],
+      [
+        "DIVINE FAVOR",
+        "STRONG SHIELD"
+      ],
+      "DIVINE PROTECTION"
+    ],
+    [
+      43,
+      50,
+      [
+        "ESTABLISH THE WORK OF HANDS",
+        "AND PROVIDE ABUNDANTLY FOR",
+        "EVERY PRACTICAL NEED"
+      ],
+      [
+        "ESTABLISH THE WORK",
+        "PROVIDE ABUNDANTLY"
+      ],
+      "DAILY BREAD"
+    ],
+    [
+      50,
+      56,
+      [
+        "SUBSCRIBE TO THE PROVISION TABLE",
+        "WALK IN GODS DAILY PROVISION"
+      ],
+      [
+        "SUBSCRIBE",
+        "DAILY PROVISION"
+      ],
+      "THE PROVISION TABLE"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "carrying a quiet worry",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "WORRY"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "favour wilt thou compass him",
+      "kind": "phrase",
+      "words": [
+        "FAVOUR",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "B"
+    },
+    {
+      "a": "place our daily work",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "WORK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "open paths of grace",
+      "kind": "phrase",
+      "words": [
+        "OPEN",
+        "PATHS"
+      ],
+      "hi": 0,
+      "slot": "D"
+    },
+    {
+      "a": "honest labor",
+      "kind": "phrase",
+      "words": [
+        "HONEST",
+        "LABOR"
+      ],
+      "hi": 0,
+      "slot": "A"
+    },
+    {
+      "a": "divine favor surrounds us",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "FAVOR"
+      ],
+      "hi": 0,
+      "slot": "B"
+    },
+    {
+      "a": "Establish the work",
+      "kind": "phrase",
+      "words": [
+        "ESTABLISH",
+        "WORK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "walk in God's daily provision",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "PROVISION"
+      ],
+      "hi": 0,
+      "slot": "D"
+    }
+  ],
+  "scripture": "Psalm 5:12"
+}

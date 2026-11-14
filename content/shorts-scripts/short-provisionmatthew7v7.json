@@ -1,0 +1,358 @@
+{
+  "key": "short-provisionmatthew7v7",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "ASK AND",
+    "RECEIVE"
+  ],
+  "poster": [
+    "THE PROVISION TABLE",
+    "DAILY PRAYER",
+    "MATTHEW 7:7-8",
+    "REST IN HIS WORD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunlit mountain valley",
+    "peaceful flowing river at dawn",
+    "ancient sanctuary stone table",
+    "soft light through forest canopy",
+    "calm mist over morning meadow",
+    "sunlight on stone path",
+    "quiet stream in autumn forest",
+    "open door to sunlit field"
+  ],
+  "scenes": [
+    {
+      "a": "The decision you are weighing right now is not one you must carry entirely alone.",
+      "img": "short-provisionmatthew7v7-scene-01.jpg",
+      "kicker": "MATTHEW 7:7",
+      "sub": "HEAR THE PROMISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Ask, and it shall be given you; seek, and ye shall find; knock, and it shall be opened unto you.",
+      "img": "short-provisionmatthew7v7-scene-02.jpg",
+      "kicker": "MATTHEW 7:7",
+      "sub": "THE WAY IS OPEN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "For every one that asketh receiveth; and he that seeketh findeth; and to him that knocketh it shall be opened.",
+      "img": "short-provisionmatthew7v7-scene-03.jpg",
+      "kicker": "MATTHEW 7:8",
+      "sub": "FAITHFUL PROVISION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Lord, grant me the courage to bring my specific needs before Your throne this morning.",
+      "img": "short-provisionmatthew7v7-scene-04.jpg",
+      "kicker": "STEWARDSHIP PRAYER",
+      "sub": "SURRENDER YOUR BURDEN",
+      "cam": "pan_left",
+      "focus": [
+        0.2,
+        0.5
+      ]
+    },
+    {
+      "a": "Help me trust that Your provision for my home and work is already moving toward me.",
+      "img": "short-provisionmatthew7v7-scene-05.jpg",
+      "kicker": "STEWARDSHIP PRAYER",
+      "sub": "WALK IN FAITH",
+      "cam": "pan_right",
+      "focus": [
+        0.8,
+        0.5
+      ]
+    },
+    {
+      "a": "May I rest in the truth that You are a loving Father who delights in answering.",
+      "img": "short-provisionmatthew7v7-scene-06.jpg",
+      "kicker": "DAILY PROVISION",
+      "sub": "THE TABLE IS SET",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "In all my daily labors, let me seek Your wisdom first above all other earthly concerns.",
+      "img": "short-provisionmatthew7v7-scene-07.jpg",
+      "kicker": "STAY FAITHFUL",
+      "sub": "HE PROVIDES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "I commit my path to You and wait with a quiet heart for Your perfect timing.",
+      "img": "short-provisionmatthew7v7-scene-08.jpg",
+      "kicker": "THE PROVISION TABLE",
+      "sub": "GOD IS FAITHFUL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "The decision you are weighing right now is not one you must carry entirely alone."
+    ],
+    [
+      7,
+      16,
+      "Ask, and it shall be given you; seek, and ye shall find; knock, and it shall be opened unto you."
+    ],
+    [
+      17,
+      26,
+      "For every one that asketh receiveth; and he that seeketh findeth; and to him that knocketh it shall be opened."
+    ],
+    [
+      27,
+      36,
+      "Lord, grant me the courage to bring my specific needs before Your throne this morning."
+    ],
+    [
+      37,
+      46,
+      "Help me trust that Your provision for my home and work is already moving toward me."
+    ],
+    [
+      47,
+      56,
+      "May I rest in the truth that You are a loving Father who delights in answering."
+    ],
+    [
+      57,
+      66,
+      "In all my daily labors, let me seek Your wisdom first above all other earthly concerns."
+    ],
+    [
+      67,
+      75,
+      "I commit my path to You and wait with a quiet heart for Your perfect timing."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "YOUR DECISION",
+        "IS NOT",
+        "YOURS ALONE"
+      ],
+      [
+        "DECISION"
+      ],
+      "MATTHEW 7:7"
+    ],
+    [
+      7,
+      16,
+      [
+        "ASK AND RECEIVE",
+        "SEEK AND FIND",
+        "KNOCK AND OPEN"
+      ],
+      [
+        "ASK",
+        "SEEK",
+        "KNOCK"
+      ],
+      "MATTHEW 7:7"
+    ],
+    [
+      17,
+      26,
+      [
+        "HE THAT ASKETH",
+        "RECEIVETH AND FINDETH",
+        "THE DOOR OPENS"
+      ],
+      [
+        "RECEIVETH",
+        "FINDETH"
+      ],
+      "MATTHEW 7:8"
+    ],
+    [
+      27,
+      36,
+      [
+        "BRING MY NEEDS",
+        "BEFORE YOUR THRONE",
+        "THIS MORNING"
+      ],
+      [
+        "NEEDS",
+        "THRONE"
+      ],
+      "MATTHEW 7:8"
+    ],
+    [
+      37,
+      46,
+      [
+        "TRUST IN PROVISION",
+        "FOR MY HOME",
+        "AND MY WORK"
+      ],
+      [
+        "PROVISION",
+        "TRUST"
+      ],
+      "MATTHEW 7:8"
+    ],
+    [
+      47,
+      56,
+      [
+        "A LOVING FATHER",
+        "DELIGHTS IN",
+        "ANSWERING ME"
+      ],
+      [
+        "LOVING",
+        "FATHER"
+      ],
+      "MATTHEW 7:8"
+    ],
+    [
+      57,
+      66,
+      [
+        "SEEK YOUR WISDOM",
+        "ABOVE ALL OTHER",
+        "EARTHLY CONCERNS"
+      ],
+      [
+        "WISDOM"
+      ],
+      "MATTHEW 7:8"
+    ],
+    [
+      67,
+      75,
+      [
+        "I COMMIT MY PATH",
+        "AND WAIT WITH",
+        "A QUIET HEART"
+      ],
+      [
+        "COMMIT",
+        "QUIET"
+      ],
+      "MATTHEW 7:8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The decision you are weighing right now is not one you must carry entirely alone.",
+      "kind": "phrase",
+      "words": [
+        "DECISION",
+        "ALONE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Ask, and it shall be given you; seek, and ye shall find; knock, and it shall be opened unto you.",
+      "kind": "phrase",
+      "words": [
+        "ASK",
+        "SEEK",
+        "KNOCK"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "For every one that asketh receiveth; and he that seeketh findeth; and to him that knocketh it shall be opened.",
+      "kind": "phrase",
+      "words": [
+        "RECEIVETH",
+        "FINDETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, grant me the courage to bring my specific needs before Your throne this morning.",
+      "kind": "phrase",
+      "words": [
+        "COURAGE",
+        "THRONE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help me trust that Your provision for my home and work is already moving toward me.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "PROVISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May I rest in the truth that You are a loving Father who delights in answering.",
+      "kind": "phrase",
+      "words": [
+        "LOVING",
+        "FATHER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In all my daily labors, let me seek Your wisdom first above all other earthly concerns.",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "LABORS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I commit my path to You and wait with a quiet heart for Your perfect timing.",
+      "kind": "phrase",
+      "words": [
+        "COMMIT",
+        "QUIET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Matthew 7:7-8"
+}

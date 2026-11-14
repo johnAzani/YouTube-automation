@@ -1,0 +1,221 @@
+{
+  "key": "short-provisionruth2v12",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "GOD UNDER",
+    "HIS WINGS"
+  ],
+  "poster": [
+    "RUTH 2:12",
+    "PROVISION",
+    "AND",
+    "PROTECTION"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunlit wheat field swaying in wind",
+    "peaceful mountain pass at sunrise",
+    "soft morning light hitting stone sanctuary",
+    "gently flowing river at dawn",
+    "still valley landscape with morning mist",
+    "sunlight through ancient stone archway"
+  ],
+  "scenes": [
+    {
+      "a": "Right now, you are standing at the threshold of a decision that feels heavy and uncertain.",
+      "img": "short-provisionruth2v12-scene-01.jpg",
+      "kicker": "RUTH 2:12",
+      "sub": "HIS WINGS ARE YOUR REFUGE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "The Lord recompense thy work, and a full reward be given thee of the Lord God.",
+      "img": "short-provisionruth2v12-scene-02.jpg",
+      "kicker": "RUTH 2:12",
+      "sub": "HIS FULL REWARD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Under whose wings thou art come to trust.",
+      "img": "short-provisionruth2v12-scene-03.jpg",
+      "kicker": "RUTH 2:12",
+      "sub": "REST BENEATH HIS CARE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Father, thank You for the promise of Your presence over my labor and my household needs.",
+      "img": "short-provisionruth2v12-scene-04.jpg",
+      "kicker": "PROVISION PRAYER",
+      "sub": "TRUSTING IN HIS HAND",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Please guide my hands today so that I might walk in the provision You have prepared.",
+      "img": "short-provisionruth2v12-scene-05.jpg",
+      "kicker": "STEWARDSHIP",
+      "sub": "GUIDED BY HIS WISDOM",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant me the peace to move forward, knowing that You are the keeper of my future.",
+      "img": "short-provisionruth2v12-scene-06.jpg",
+      "kicker": "FAITHFULNESS",
+      "sub": "HE KEEPS YOUR FUTURE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Right now, you are standing at the threshold of a decision that feels heavy and uncertain."
+    ],
+    [
+      8,
+      16,
+      "The Lord recompense thy work, and a full reward be given thee of the Lord God of Israel,"
+    ],
+    [
+      16,
+      22,
+      "under whose wings thou art come to trust."
+    ],
+    [
+      22,
+      32,
+      "Father, thank You for the promise of Your presence over my labor and my household needs."
+    ],
+    [
+      32,
+      40,
+      "Please guide my hands today so that I might walk in the provision You have prepared."
+    ],
+    [
+      40,
+      48,
+      "Grant me the peace to move forward, knowing that You are the keeper of my future."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "STANDING AT THE",
+        "THRESHOLD OF A",
+        "HEAVY DECISION"
+      ],
+      [
+        "HEAVY DECISION"
+      ],
+      "RUTH 2:12"
+    ],
+    [
+      8,
+      16,
+      [
+        "THE LORD",
+        "RECOMPENSE THY WORK",
+        "A FULL REWARD"
+      ],
+      [
+        "FULL REWARD"
+      ],
+      "RUTH 2:12"
+    ],
+    [
+      16,
+      22,
+      [
+        "UNDER HIS WINGS",
+        "THOU ART COME",
+        "TO TRUST"
+      ],
+      [
+        "HIS WINGS",
+        "TRUST"
+      ],
+      "RUTH 2:12"
+    ],
+    [
+      22,
+      32,
+      [
+        "THANK YOU",
+        "FOR YOUR PRESENCE",
+        "OVER MY LABOR"
+      ],
+      [
+        "YOUR PRESENCE"
+      ],
+      "RUTH 2:12"
+    ],
+    [
+      32,
+      40,
+      [
+        "GUIDE MY HANDS",
+        "WALK IN THE",
+        "PROVISION PREPARED"
+      ],
+      [
+        "PROVISION"
+      ],
+      "RUTH 2:12"
+    ],
+    [
+      40,
+      48,
+      [
+        "GRANT ME PEACE",
+        "KNOWING YOU ARE",
+        "KEEPER OF MY FUTURE"
+      ],
+      [
+        "KEEPER"
+      ],
+      "RUTH 2:12"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Right now, you are standing at the threshold of a decision that feels heavy and uncertain.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "DECISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Ruth 2:12"
+}
