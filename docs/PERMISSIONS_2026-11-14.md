@@ -42,7 +42,7 @@ read from Google's own pages (listed at the end).
 - The YouTube Reporting API refused on scope before it said whether it is enabled, so its
   state is unknown.
 - Every channel: Gemini key valid, Pixabay key set, Pexels key not set, no playlist ID secret
-  (optional, unused by nine channels).
+  (optional).
 
 ## The grant, once per channel
 
