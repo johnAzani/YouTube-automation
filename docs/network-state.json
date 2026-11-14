@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-14T10:26:59Z",
-  "monitor_generated_at": "2026-11-14T10:25:41.954154+00:00",
+  "generated_at": "2026-11-14T10:34:26Z",
+  "monitor_generated_at": "2026-11-14T10:33:02.504705+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -12,8 +12,8 @@
     "published_longform": 103,
     "published_shorts": 105,
     "public_total": 206,
-    "queued_longform": 52,
-    "queued_shorts": 90,
+    "queued_longform": 53,
+    "queued_shorts": 93,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -40,7 +40,7 @@
         "public_total": 39,
         "queued_longform": 12,
         "queued_other": 5,
-        "queued_shorts": 8
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-JOHN14V1",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-matthew6v34",
-        "scripture": "Matthew 6:34",
+        "short": "short-isaiah41v13",
+        "scripture": "Isaiah 41:13",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -106,9 +106,9 @@
         "published_shorts": 25,
         "thumbnail_pending": 6,
         "public_total": 47,
-        "queued_longform": 5,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "0066",
@@ -5913,6 +5913,19 @@
         "words": 1029
       },
       {
+        "id": "0072",
+        "slug": "when-your-plans-change-at-dawn-proverbs-16-9-the-morning-altar",
+        "file": "0072-when-your-plans-change-at-dawn-proverbs-16-9-the-morning-altar.md",
+        "title": "When Your Plans Change at Dawn: Proverbs 16:9 | The Morning Altar",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1746
+      },
+      {
         "id": "0090",
         "slug": "galatians-6-9-midday-prayer",
         "file": "0090-galatians-6-9-midday-prayer.md",
@@ -6469,6 +6482,17 @@
         "target_window_utc": "15:44"
       },
       {
+        "short": "short-isaiah41v13",
+        "file": "0000-short-isaiah41v13.yml",
+        "companion_longform_id": "",
+        "scripture": "Isaiah 41:13",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "14:14"
+      },
+      {
         "short": "short-matthew6v34",
         "file": "0000-short-matthew6v34.yml",
         "companion_longform_id": "",
@@ -6634,6 +6658,17 @@
         "target_window_utc": "10:44"
       },
       {
+        "short": "short-psalm55v22",
+        "file": "0000-short-psalm55v22.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 55:22",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "14:14"
+      },
+      {
         "short": "short-psalm56v3",
         "file": "0000-short-psalm56v3.yml",
         "companion_longform_id": "",
@@ -6781,6 +6816,17 @@
         "file": "0071-short-morningproverbs4v18.yml",
         "companion_longform_id": "0071",
         "scripture": "Proverbs 4:18",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
+      },
+      {
+        "short": "short-morningproverbs16v9",
+        "file": "0072-short-morningproverbs16v9.yml",
+        "companion_longform_id": "0072",
+        "scripture": "Proverbs 16:9",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",
@@ -7367,7 +7413,7 @@
       "name": "automation-health",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 0.2h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T10:20:41+00:00",
       "last_success": "2026-11-14T10:20:41+00:00",
@@ -7381,7 +7427,7 @@
       "name": "Autonomous Comment Replies",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 1.6h ago",
+      "detail": "last success 1.8h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T08:48:08+00:00",
       "last_success": "2026-11-14T08:48:08+00:00",
@@ -7395,7 +7441,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 56.9h ago",
+      "detail": "last success 57.0h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-12T01:32:35+00:00",
       "last_success": "2026-11-12T01:32:35+00:00",
@@ -7409,7 +7455,7 @@
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 5.6h ago",
+      "detail": "last success 5.8h ago",
       "last_conclusion": "",
       "last_run": "2026-11-14T10:24:10+00:00",
       "last_success": "2026-11-14T04:46:50+00:00",
@@ -7423,7 +7469,7 @@
       "name": "Growth autopilot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 1.5h ago",
+      "detail": "last success 1.6h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T08:55:29+00:00",
       "last_success": "2026-11-14T08:55:29+00:00",
@@ -7437,7 +7483,7 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 118.6h ago",
+      "detail": "last success 118.7h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-09T11:48:56+00:00",
       "last_success": "2026-11-09T11:48:56+00:00",
@@ -7451,7 +7497,7 @@
       "name": "Weekly metrics snapshot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 10.1h ago",
+      "detail": "last success 10.2h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T00:19:33+00:00",
       "last_success": "2026-11-14T00:19:33+00:00",
@@ -7467,8 +7513,8 @@
       "severity": "ok",
       "detail": "last success 0.1h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-14T10:24:46+00:00",
-      "last_success": "2026-11-14T10:20:42+00:00",
+      "last_run": "2026-11-14T10:32:03+00:00",
+      "last_success": "2026-11-14T10:24:46+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -7479,7 +7525,7 @@
       "name": "Produce video",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 2.1h ago",
+      "detail": "last success 2.2h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T08:22:36+00:00",
       "last_success": "2026-11-14T08:22:36+00:00",
@@ -7494,9 +7540,9 @@
       "verdict": "OK",
       "severity": "ok",
       "detail": "last success 0.0h ago",
-      "last_conclusion": "",
-      "last_run": "2026-11-14T10:24:52+00:00",
-      "last_success": "2026-11-14T10:24:46+00:00",
+      "last_conclusion": "success",
+      "last_run": "2026-11-14T10:32:03+00:00",
+      "last_success": "2026-11-14T10:32:03+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
