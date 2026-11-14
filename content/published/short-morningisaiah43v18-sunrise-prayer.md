@@ -24,10 +24,12 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunris"
+thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunrise Prayer; long_uploads_status=allowed; video_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; video_channel_title=The Morning Altar | Daily Sunrise Prayer; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE MORNING ALTAR", "ISAIAH 43:18-19", "MORNING PRAYER", "BEGIN YOUR DAY"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-14T19:42:24Z"
+thumbnail_retry_reason: "rate_limit"
 ---
 
 Before the weight of yesterday pulls you back down this morning. Remember ye not the former things, neither consider the things of old. Lord we let go of every regret and every disappointment from our past. Behold, I will do a new thing; now it shall spring forth; shall ye not know it? Open our eyes to see what You are creating right now in our lives. I will even make a way in the wilderness, and rivers in the desert. Guide our steps through every dry place today Father in Jesus name.

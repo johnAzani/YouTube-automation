@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=el"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["NO ONE CAN", "PLUCK YOU OUT", "SAFE IN GOD", "JOHN 10:28-29"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-21T13:42:34Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If you fear losing your place in God's care today, listen to Jesus' promise: And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand. My Father, which gave them me, is greater than all; and no man is able to pluck them out of my Father’s hand. Lord, anchor this soul in Your unbreakable grip. No trial or threat can tear them away or snatch them from Your omnipotent protection. Guard their heart, quiet their fears, and keep them secure now and forever. Subscribe to walk under God's daily covering.

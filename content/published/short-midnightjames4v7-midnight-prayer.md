@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["MIDNIGHT", "SPIRITUAL", "STRENGTH", "WATCH"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-21T13:42:27Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 The heavy thought cycling in your mind right now is not yours to carry alone tonight. James 4:7 says, Submit yourselves therefore to God. Resist the devil, and he will flee from you. Father, we come before you in this stillness to surrender every fear that has taken root. We yield our hearts, our confusion, and our battles into your capable and ever-loving hands now. Give us the courage to resist every lie and every shadow that dares to linger here. Let your peace reign supreme as we rest, knowing you are our protector in the darkness.

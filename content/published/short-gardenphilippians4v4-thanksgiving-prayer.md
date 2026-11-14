@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["REJOICE", "IN THE LORD", "ALWAYS", "PHILIPPIANS 4:4"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-21T13:42:37Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If worry has stolen your gladness today, this prayer is for your quiet heart. Philippians four verse four says, 'Rejoice in the Lord alway: and again I say, Rejoice.' Heavenly Father, we thank You that our joy does not depend on changing circumstances, but on Your unchanging love. Even when tears fall or weary days press in, You give us reason to praise Your holy name. We choose to rejoice today, resting in Your goodness and trusting Your faithful grace. Thank You, Lord, for being our constant light and steady song. In Jesus' name, Amen. Subscribe to stay in His presence.

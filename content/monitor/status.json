@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T10:41:34.562205+00:00",
+  "generated_at": "2026-11-14T13:42:41.356207+00:00",
   "healthy": true,
   "automations": [
     {
@@ -8,9 +8,9 @@
       "crons": [
         "14 20 * * *"
       ],
-      "last_run": "2026-11-14T10:20:41+00:00",
+      "last_run": "2026-11-14T13:40:38+00:00",
       "last_conclusion": "success",
-      "last_success": "2026-11-14T10:20:41+00:00",
+      "last_success": "2026-11-14T13:40:38+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-14T04:08:11+00:00",
       "last_slot": "2026-11-13T20:14:00+00:00",
@@ -18,7 +18,7 @@
       "failures_5": 0,
       "effect": "reports and files stalls",
       "verdict": "OK",
-      "detail": "last success 0.3h ago",
+      "detail": "last success 0.0h ago",
       "severity": "ok"
     },
     {
@@ -39,7 +39,7 @@
       "failures_5": 0,
       "effect": "posts replies and records them in content/comments/replied.json",
       "verdict": "OK",
-      "detail": "last success 1.9h ago",
+      "detail": "last success 4.9h ago",
       "severity": "ok"
     },
     {
@@ -58,7 +58,7 @@
       "failures_5": 0,
       "effect": "writes content/community/<id>-READY.md",
       "verdict": "OK",
-      "detail": "last success 57.2h ago",
+      "detail": "last success 60.2h ago",
       "severity": "ok"
     },
     {
@@ -68,8 +68,8 @@
         "14 3 * * *"
       ],
       "last_run": "2026-11-14T10:24:10+00:00",
-      "last_conclusion": null,
-      "last_success": "2026-11-14T04:46:50+00:00",
+      "last_conclusion": "success",
+      "last_success": "2026-11-14T10:24:10+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-14T07:44:59+00:00",
       "last_slot": "2026-11-14T03:14:00+00:00",
@@ -77,7 +77,7 @@
       "failures_5": 0,
       "effect": "writes content/queue/ or content/shorts-scripts/",
       "verdict": "OK",
-      "detail": "last success 5.9h ago",
+      "detail": "last success 3.3h ago",
       "severity": "ok"
     },
     {
@@ -96,7 +96,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 1.8h ago",
+      "detail": "last success 4.8h ago",
       "severity": "ok"
     },
     {
@@ -115,7 +115,7 @@
       "failures_5": 0,
       "effect": "re-arms scheduled workflows",
       "verdict": "OK",
-      "detail": "last success 118.9h ago",
+      "detail": "last success 121.9h ago",
       "severity": "ok"
     },
     {
@@ -124,8 +124,8 @@
       "crons": [
         "41 18 * * 5"
       ],
-      "last_run": "2026-11-14T00:19:33+00:00",
-      "last_conclusion": "success",
+      "last_run": "2026-11-14T13:40:38+00:00",
+      "last_conclusion": null,
       "last_success": "2026-11-14T00:19:33+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-13T08:28:02+00:00",
@@ -134,7 +134,7 @@
       "failures_5": 0,
       "effect": "writes content/metrics.csv and opens a snapshot issue",
       "verdict": "OK",
-      "detail": "last success 10.4h ago",
+      "detail": "last success 13.4h ago",
       "severity": "ok"
     },
     {
@@ -143,17 +143,17 @@
       "crons": [
         "23 */3 * * *"
       ],
-      "last_run": "2026-11-14T10:40:34+00:00",
+      "last_run": "2026-11-14T13:40:38+00:00",
       "last_conclusion": null,
-      "last_success": "2026-11-14T10:32:03+00:00",
+      "last_success": "2026-11-14T10:40:34+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-14T04:08:11+00:00",
-      "last_slot": "2026-11-14T09:23:00+00:00",
+      "last_slot": "2026-11-14T12:23:00+00:00",
       "missed_slots": 0,
       "failures_5": 0,
       "effect": "this report",
       "verdict": "OK",
-      "detail": "last success 0.2h ago",
+      "detail": "last success 3.0h ago",
       "severity": "ok"
     },
     {
@@ -166,9 +166,9 @@
         "14 19 * * *",
         "14 23 * * *"
       ],
-      "last_run": "2026-11-14T08:22:36+00:00",
+      "last_run": "2026-11-14T13:31:23+00:00",
       "last_conclusion": "success",
-      "last_success": "2026-11-14T08:22:36+00:00",
+      "last_success": "2026-11-14T13:31:23+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-14T09:02:41+00:00",
       "last_slot": "2026-11-14T10:14:00+00:00",
@@ -176,7 +176,7 @@
       "failures_5": 0,
       "effect": "publishes a video: content/published/ gains a receipt with a video id",
       "verdict": "OK",
-      "detail": "last success 2.3h ago",
+      "detail": "last success 0.2h ago",
       "severity": "ok"
     },
     {
@@ -185,84 +185,84 @@
       "crons": [
         "47 0,3,6,9,12,15,18,21 * * *"
       ],
-      "last_run": "2026-11-14T10:34:32+00:00",
+      "last_run": "2026-11-14T13:40:38+00:00",
       "last_conclusion": "success",
-      "last_success": "2026-11-14T10:34:32+00:00",
+      "last_success": "2026-11-14T13:40:38+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-07T19:31:06+00:00",
-      "last_slot": "2026-11-14T09:47:00+00:00",
+      "last_slot": "2026-11-14T12:47:00+00:00",
       "missed_slots": 0,
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 0.0h ago",
       "severity": "ok"
     }
   ],
   "outcomes": [
     {
       "outcome": "last upload",
-      "detail": "2026-11-14 (2h ago)",
+      "detail": "2026-11-14 (0h ago)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (secret-place)",
-      "detail": "The Secret Place: 2026-11-14 (4h ago \u2014 short-john14v1-pre-sleep-prayer.md)",
+      "detail": "The Secret Place: 2026-11-14 (2h ago \u2014 short-isaiah41v13-pre-sleep-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer2)",
-      "detail": "The Morning Altar: 2026-11-14 (3h ago \u2014 0066-joshua-1-8-9-morning-prayer-the-morning-altar.md)",
+      "detail": "The Morning Altar: 2026-11-14 (2h ago \u2014 short-morningisaiah43v18-sunrise-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer3)",
-      "detail": "The Midday Watch: 2026-11-14 (4h ago \u2014 short-middaydeuteronomy31v6-midday-prayer.md)",
+      "detail": "The Midday Watch: 2026-11-14 (2h ago \u2014 short-midday1corinthians10v13-midday-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer4)",
-      "detail": "The Midnight Watch: 2026-11-14 (2h ago \u2014 short-midnight1john4v4-midnight-prayer.md)",
+      "detail": "The Midnight Watch: 2026-11-14 (0h ago \u2014 short-midnightjames4v7-midnight-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer5)",
-      "detail": "The Family Altar: 2026-11-14 (2h ago \u2014 short-family1corinthians13v4-household-prayer.md)",
+      "detail": "The Family Altar: 2026-11-14 (0h ago \u2014 short-familymatthew6v9-household-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer6)",
-      "detail": "The Healing Balm: 2026-11-14 (4h ago \u2014 short-healing1peter2v24-restoration-prayer.md)",
+      "detail": "The Healing Balm: 2026-11-14 (2h ago \u2014 short-healingjohn16v33-restoration-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer7)",
-      "detail": "The Provision Table: 2026-11-14 (4h ago \u2014 short-provisionluke6v38-stewardship-prayer.md)",
+      "detail": "The Provision Table: 2026-11-14 (2h ago \u2014 0508-psalm-84-11-provision-prayer-the-provision-table.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer8)",
-      "detail": "The Covenant Shield: 2026-11-14 (3h ago \u2014 short-shieldpsalm118v6-protection-prayer.md)",
+      "detail": "The Covenant Shield: 2026-11-14 (2h ago \u2014 short-shieldjohn10v28-protection-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer9)",
-      "detail": "The Praise Garden: 2026-11-14 (3h ago \u2014 0704-1-thessalonians-5-16-18-daily-prayer.md)",
+      "detail": "The Praise Garden: 2026-11-14 (2h ago \u2014 short-gardenphilippians4v4-thanksgiving-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer10)",
-      "detail": "The Guided Path: 2026-11-14 (2h ago \u2014 short-guidedecclesiastes3v1-guidance-prayer.md)",
+      "detail": "The Guided Path: 2026-11-14 (2h ago \u2014 0803-proverbs-15-22-prayer-for-wise-counsel.md)",
       "severity": "ok"
     },
     {
       "outcome": "publishable runway",
-      "detail": "55 of 55 approved script(s) over the 850-word floor (60 in queue)",
+      "detail": "59 of 59 approved script(s) over the 850-word floor (64 in queue)",
       "severity": "ok"
     },
     {
       "outcome": "authored Short specs",
-      "detail": "199 spec(s)",
+      "detail": "206 spec(s)",
       "severity": "ok"
     },
     {

@@ -80,7 +80,9 @@ metadata_revision: "selar-seo-v1"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
-thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UC8lPazRi_sj2Q5TQGVQ6bqQ; auth_channel_title=The Guided Path; long_uploads_status=eligible; video_channel_id=UC8lPazRi_sj2Q5TQGVQ6bqQ; video_channel_title=The Guided Path; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_retry_after: "2026-11-21T13:41:20Z"
+thumbnail_retry_reason: "permission"
 ---
 
 ## Scene 1 — Bringing the Decision to the Lord
