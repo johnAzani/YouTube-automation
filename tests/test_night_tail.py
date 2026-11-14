@@ -283,3 +283,49 @@ def test_a_crash_in_the_tail_never_stops_the_release(monkeypatch):
 def test_release_workflow_keeps_the_joined_video_out_of_the_qc_artifact():
     workflow = (Path(__file__).resolve().parent.parent / ".github" / "workflows" / "produce.yml").read_text()
     assert f"!output/*/*{nt.NIGHT_SUFFIX}" in workflow
+
+
+# --------------------------------------------------------------------------- #
+# The receipt remembers, so a later metadata sync still describes the video
+# --------------------------------------------------------------------------- #
+def test_receipt_records_the_lengths_and_a_recovered_video_does_not(tmp_path, monkeypatch):
+    import inspect
+
+    from pipeline import run
+
+    assert "extra_fields" in inspect.signature(run._mark_job_uploaded).parameters
+    source = inspect.getsource(run._mark_job_uploaded)
+    # Written only on the branch for a take this run uploaded.
+    assert source.index("stamped.extend((extra_fields or {}).items())") > source.index(
+        '("metadata_revision", "selar-seo-v1")')
+    from pipeline import prayer_pipeline as pp
+
+    wiring = inspect.getsource(pp.produce)
+    assert "'prayer_seconds': round(duration, 1)" in wiring and "if night and is_new_upload" in wiring
+
+
+def test_later_metadata_sync_still_says_what_follows_the_prayer(tmp_path):
+    import shutil
+
+    from scripts import retrofit_published_metadata as retrofit
+
+    root = Path(__file__).resolve().parent.parent
+    source = next(p for p in sorted((root / "content" / "published").glob("*.md"))
+                  if "short" not in p.name and "youtube_video_id" in p.read_text(encoding="utf-8")
+                  and "niche: faith and prayer" in p.read_text(encoding="utf-8")
+                  and "receipt_recovered_from_youtube" not in p.read_text(encoding="utf-8"))
+    plain = tmp_path / "plain"
+    night = tmp_path / "night"
+    plain.mkdir()
+    night.mkdir()
+    shutil.copy(source, plain / source.name)
+    text = source.read_text(encoding="utf-8")
+    (night / source.name).write_text(
+        text.replace("\n---", "\nprayer_seconds: 432.0\nduration_seconds: 11232.0\n---", 1), encoding="utf-8")
+
+    before = retrofit.collect_published_faith_targets(plain)[0]
+    after = retrofit.collect_published_faith_targets(night)[0]
+    assert not before["description"].startswith("Pray along")
+    assert after["description"].startswith("Pray along for the first 7 minutes")
+    assert "3 hours" in after["description"].split("\n")[0]
+    assert "prayer to fall asleep" in after["tags"] and "prayer to fall asleep" not in before["tags"]

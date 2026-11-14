@@ -63,7 +63,7 @@ The watch-time format in this niche is a different kind of video: a prayer or a 
 
 ## 4. What was built: the night tail
 
-Code: `pipeline/night_tail.py`, called from `pipeline/prayer_pipeline.py` after the prayer video is rendered. Tests: `tests/test_night_tail.py` (17).
+Code: `pipeline/night_tail.py`, called from `pipeline/prayer_pipeline.py` after the prayer video is rendered. Tests: `tests/test_night_tail.py` (19).
 
 What happens on The Secret Place's long-form each night:
 
@@ -71,6 +71,7 @@ What happens on The Secret Place's long-form each night:
 2. A ten-minute rest section is made from that video's own pictures, dimmed, with the studio's own synthesised music at a lower level. For its first 40 seconds it shows "Rest now. He that keepeth thee will not slumber." (Psalm 121:3, King James Version) and a line saying the prayer has ended and music continues. Then the words leave and the screen stays dark.
 3. The rest section is repeated after the prayer until the whole video is at least three hours. The prayer is not re-encoded or re-spoken, and its own file is left unchanged; the long version is written beside it as `<slug>.night.mp4`.
 4. The description's first line says what the video is ("Pray along for the first 7 minutes, then rest…"), a chapter marks where the music starts, and search tags for sleep prayer are added.
+5. The receipt records the prayer's length and the whole length, so if the video is retitled later the description still says what it is.
 
 Cost: no speech request, no extra upload, no extra video. The 10 free speech requests a day are untouched.
 

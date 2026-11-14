@@ -15,7 +15,8 @@ Full note with the monetisation rules, the channels' numbers and the risks: `doc
 - The description says first what the video is and marks where the music starts.
 - Not yet run against YouTube. Whether listeners leave it playing is unknown; watch time is only visible in YouTube Studio.
 - The prayer file is not changed; the long version is `<slug>.night.mp4` beside it, capped near 1.1 GB, and left out of the QC artifact in `produce.yml`.
-- Tests: `tests/test_night_tail.py` (17), including a real encode and join.
+- The receipt records `prayer_seconds` and `duration_seconds`, so a later metadata sync (a retitle) keeps the description.
+- Tests: `tests/test_night_tail.py` (19), including a real encode and join.
 
 ## 2026-11-14 — scripture check, Shorts feedback, seasons, retitling, Shorts captions, French, channel page
 

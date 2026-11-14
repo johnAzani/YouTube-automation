@@ -106,8 +106,13 @@ def _mark_job_uploaded(
     recovered_video: dict | None = None,
     scheduled_for: str | None = None,
     pinned_comment: str | None = None,
+    extra_fields: dict | None = None,
 ) -> Path:
     """Move and stamp a queue job only after YouTube confirms an uploaded video ID.
+
+    ``extra_fields`` are further facts about a take uploaded by this run (for
+    example the length of a night tail); they are not written for a recovered
+    video, whose file this run did not make.
 
     ``scheduled_for`` is set when the video was uploaded private with a publish
     time (``UploadResult.scheduled_for``). The receipt is then dated with the
@@ -196,6 +201,7 @@ def _mark_job_uploaded(
                         ("metadata_retrofit_approved", False)))
     else:
         stamped.append(("metadata_revision", "selar-seo-v1"))
+        stamped.extend((extra_fields or {}).items())
     if scheduled_at is not None:
         stamped.extend((("uploaded_at", uploaded_precise), ("scheduled_publish", True),
                         ("privacy_status", "private")))

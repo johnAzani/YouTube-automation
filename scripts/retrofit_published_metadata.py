@@ -120,6 +120,19 @@ def collect_published_faith_targets(
             desc = build_description(doc)
 
         tags = build_tags(doc)
+        # A prayer followed by hours of quiet music (pipeline/night_tail.py):
+        # the description must keep saying so after any later sync.
+        try:
+            prayer_seconds = float(doc.meta.get("prayer_seconds") or 0)
+            total_seconds = float(doc.meta.get("duration_seconds") or 0)
+        except (TypeError, ValueError):
+            prayer_seconds = total_seconds = 0.0
+        if not is_short and prayer_seconds > 0 and total_seconds > prayer_seconds + 600:
+            from pipeline.night_tail import describe as describe_night
+
+            night_pack = describe_night({"description": desc, "tags": tags},
+                                        prayer_seconds=prayer_seconds, total_seconds=total_seconds)
+            desc, tags = night_pack["description"], night_pack["tags"]
         locs = build_metadata_localizations(
             clean_title,
             desc,

@@ -396,7 +396,12 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
                                narration_voice='Charon' if is_new_upload else None,
                                recovered_video=recovered_video,
                                scheduled_for=(getattr(up, 'scheduled_for', '') or None) if is_new_upload else None,
-                               pinned_comment=getattr(up, 'pinned_comment', None) if is_new_upload else None)
+                               pinned_comment=getattr(up, 'pinned_comment', None) if is_new_upload else None,
+                               # Kept so a later metadata sync (a retitle) still says
+                               # what follows the prayer.
+                               extra_fields=({'prayer_seconds': round(duration, 1),
+                                              'duration_seconds': round(night['total_seconds'], 1)}
+                                             if night and is_new_upload else None))
             result.update(video_id=up.video_id, watch_url=up.watch_url,
                           privacy_status=up.privacy_status, uploaded=up.privacy_status != 'duplicate_prevented')
             if is_new_upload and getattr(up, 'scheduled_for', ''):
