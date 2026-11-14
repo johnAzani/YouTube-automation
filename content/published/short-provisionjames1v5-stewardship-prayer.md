@@ -23,11 +23,12 @@ short_visual_fingerprints: ["sha256:06f06b5c1e88b960a641aa2c62179195cfe86da30bba
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCkWrcJB6-q_K0r8KSja8ALw; auth_channel_title=The Provision Table; long_upload"
+thumbnail_pending: false
 thumbnail_poster: ["STEP", "INTO", "GOD'S", "WISDOM"]
 thumbnail_kicker: "BLESS THE WORK OF OUR HANDS"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
 ---
 
 If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him. Father, we ask for Your divine direction today. Grant us discernment in our work, clarity in our decisions, and open doors for our daily provision. Guide our steps according to Your truth, and help us to steward every resource with faithfulness and peace. May Your light shine upon our path, removing confusion and establishing the work of our hands. We receive Your promise with grateful hearts, trusting in Your unfailing supply throughout this day. In Jesus' name, we pray. Amen. Subscribe to The Provision Table for daily wisdom.

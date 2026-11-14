@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE PRAISE GARDEN", "A PRAYER OF", "THANKSGIVING", "PSALM 139:14"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-21T22:37:29Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 That mirror you looked into this morning with a critical eye is actually a reflection of His careful workmanship. Lord God, we come before You with quiet hearts of gratitude. Forgive us for the times we look down upon the very vessel You fashioned with such intentional love. Your Word declares in Psalm 139:14, I will praise thee; for I am fearfully and wonderfully made: marvelous are thy works; and that my soul knoweth right well. Help us to walk through this day with a deep confidence in Your divine design. In Jesus' name, amen.

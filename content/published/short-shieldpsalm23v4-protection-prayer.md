@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=el"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["A REFUGE IN", "THE SHADOW", "OF THE ALMIGHTY", "THE COVENANT SHIELD"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-21T22:37:27Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If the weight of this dark valley feels heavier than you can bear, stay right here. Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Lord, surround this soul with your hedge of protection as they navigate this difficult season. Grant them a spirit of courage that stands firm even when the path ahead seems obscured. Let your peace, which surpasses all understanding, guard their heart and mind this very hour.
