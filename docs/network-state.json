@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T20:12:56Z",
+  "generated_at": "2026-11-14T20:13:42Z",
   "monitor_generated_at": "2026-11-14T19:12:22.957257+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 232,
+    "published_total": 233,
     "published_longform": 107,
-    "published_shorts": 125,
-    "public_total": 230,
+    "published_shorts": 126,
+    "public_total": 231,
     "queued_longform": 57,
-    "queued_shorts": 83,
+    "queued_shorts": 82,
     "automations_ok": 11,
     "automations_total": 11,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 50,
+        "published_total": 51,
         "published_longform": 23,
-        "published_shorts": 27,
+        "published_shorts": 28,
         "thumbnail_pending": 3,
-        "public_total": 49,
+        "public_total": 50,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MORNINGISAIAH60V1",
-        "title": "Say This Isaiah 60:1 Prayer at Sunrise | Is Here #Shorts",
+        "id": "SHORT-MORNINGJEREMIAH29V11",
+        "title": "Say This Jeremiah 29:11 Prayer at Sunrise | The Morning Altar #Shorts",
         "format": "short",
-        "youtube_video_id": "W_GyKxZO3Dk",
-        "watch_url": "https://www.youtube.com/shorts/W_GyKxZO3Dk",
+        "youtube_video_id": "Ks8BZlzpymc",
+        "watch_url": "https://www.youtube.com/shorts/Ks8BZlzpymc",
         "published_on": "2026-11-14",
-        "published_at": "2026-11-14T15:13:37Z"
+        "published_at": "2026-11-14T20:12:30Z"
       },
       "next_queued_longform": {
         "id": "0067",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningjeremiah29v11",
-        "scripture": "Jeremiah 29:11",
+        "short": "short-morningpsalm121v1",
+        "scripture": "Psalm 121:1-2",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGJEREMIAH29V11",
+      "slug": "short-morningjeremiah29v11-sunrise-prayer",
+      "file": "short-morningjeremiah29v11-sunrise-prayer.md",
+      "title": "Say This Jeremiah 29:11 Prayer at Sunrise | The Morning Altar #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T20:12:30Z",
+      "youtube_video_id": "Ks8BZlzpymc",
+      "watch_url": "https://www.youtube.com/shorts/Ks8BZlzpymc",
+      "youtu_be_url": "https://youtu.be/Ks8BZlzpymc",
+      "shorts_url": "https://www.youtube.com/shorts/Ks8BZlzpymc",
+      "studio_url": "https://studio.youtube.com/video/Ks8BZlzpymc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Ks8BZlzpymc/hqdefault.jpg",
+      "thumb_text": "A CALM PRAYER \u00b7 FOR YOUR MORNING",
+      "thumbnail_pending": false,
+      "duration_label": "46s",
+      "words": 576
+    },
     {
       "id": "SHORT-MIDDAYNEHEMIAH8V10",
       "slug": "short-middaynehemiah8v10-midday-prayer",
@@ -7064,17 +7088,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-morningjeremiah29v11",
-        "file": "0000-short-morningjeremiah29v11.yml",
-        "companion_longform_id": "",
-        "scripture": "Jeremiah 29:11",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm121v1",
