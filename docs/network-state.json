@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T20:13:53Z",
+  "generated_at": "2026-11-14T20:21:44Z",
   "monitor_generated_at": "2026-11-14T19:12:22.957257+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 234,
+    "published_total": 235,
     "published_longform": 107,
-    "published_shorts": 127,
-    "public_total": 232,
+    "published_shorts": 128,
+    "public_total": 233,
     "queued_longform": 57,
-    "queued_shorts": 81,
+    "queued_shorts": 80,
     "automations_ok": 11,
     "automations_total": 11,
     "network_healthy": true
@@ -441,23 +441,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 18,
+        "published_total": 19,
         "published_longform": 9,
-        "published_shorts": 9,
-        "thumbnail_pending": 5,
-        "public_total": 18,
+        "published_shorts": 10,
+        "thumbnail_pending": 6,
+        "public_total": 19,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONMATTHEW7V7",
-        "title": "Pray This Matthew 7:7-8 Prayer for Open Doors & Provision | Rest In His Word #Shorts",
+        "id": "SHORT-PROVISIONJAMES1V5",
+        "title": "Pray This James 1:5 Prayer for Open Doors & Provision | Wisdom #Shorts",
         "format": "short",
-        "youtube_video_id": "lmt2THS6cuA",
-        "watch_url": "https://www.youtube.com/shorts/lmt2THS6cuA",
+        "youtube_video_id": "Ihvhe-qZG3I",
+        "watch_url": "https://www.youtube.com/shorts/Ihvhe-qZG3I",
         "published_on": "2026-11-14",
-        "published_at": "2026-11-14T15:21:53Z"
+        "published_at": "2026-11-14T20:20:55Z"
       },
       "next_queued_longform": {
         "id": "0509",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionjames1v5",
-        "scripture": "James 1:5",
+        "short": "short-provisionproverbs16v3",
+        "scripture": "Proverbs 16:3",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONJAMES1V5",
+      "slug": "short-provisionjames1v5-stewardship-prayer",
+      "file": "short-provisionjames1v5-stewardship-prayer.md",
+      "title": "Pray This James 1:5 Prayer for Open Doors & Provision | Wisdom #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T20:20:55Z",
+      "youtube_video_id": "Ihvhe-qZG3I",
+      "watch_url": "https://www.youtube.com/shorts/Ihvhe-qZG3I",
+      "youtu_be_url": "https://youtu.be/Ihvhe-qZG3I",
+      "shorts_url": "https://www.youtube.com/shorts/Ihvhe-qZG3I",
+      "studio_url": "https://studio.youtube.com/video/Ihvhe-qZG3I/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Ihvhe-qZG3I/hqdefault.jpg",
+      "thumb_text": "STEP \u00b7 INTO",
+      "thumbnail_pending": true,
+      "duration_label": "54s",
+      "words": 642
+    },
     {
       "id": "SHORT-FAMILYPSALM133V1",
       "slug": "short-familypsalm133v1-household-prayer",
@@ -7629,17 +7653,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-provisionjames1v5",
-        "file": "0506-short-provisionjames1v5.yml",
-        "companion_longform_id": "0506",
-        "scripture": "James 1:5",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionproverbs16v3",
