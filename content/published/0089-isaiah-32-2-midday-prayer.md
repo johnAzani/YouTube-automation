@@ -2,7 +2,7 @@
 id: 0089
 title: "Midday Prayer When You Are Worn Down: Isaiah 32:2 | The Midday Watch"
 slug: isaiah-32-2-midday-prayer
-status: approved
+status: published
 channel: prayer3
 privacy: public
 format: longform
@@ -75,6 +75,13 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-14"
+published_at: "2026-11-14T05:16:30Z"
+youtube_video_id: "BMFD47Gob7w"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Noonday Pause
