@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T15:22:39Z",
+  "generated_at": "2026-11-14T15:26:08Z",
   "monitor_generated_at": "2026-11-14T15:09:22.695741+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 223,
+    "published_total": 224,
     "published_longform": 105,
-    "published_shorts": 118,
-    "public_total": 221,
+    "published_shorts": 119,
+    "public_total": 222,
     "queued_longform": 59,
-    "queued_shorts": 90,
+    "queued_shorts": 89,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 8,
+        "published_total": 9,
         "published_longform": 5,
-        "published_shorts": 3,
-        "thumbnail_pending": 8,
-        "public_total": 8,
+        "published_shorts": 4,
+        "thumbnail_pending": 9,
+        "public_total": 9,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 11
+        "queued_shorts": 10
       },
       "latest_video": {
-        "id": "SHORT-GARDENPHILIPPIANS4V4",
-        "title": "Pray This Philippians 4:4 Prayer of Thanksgiving | Philippians 4:4 #Shorts",
+        "id": "SHORT-GARDENPSALM100V1",
+        "title": "Pray This Psalm 100:1-2 Prayer of Thanksgiving | Find Your Rest Here #Shorts",
         "format": "short",
-        "youtube_video_id": "O-X6wIibVtw",
-        "watch_url": "https://www.youtube.com/shorts/O-X6wIibVtw",
+        "youtube_video_id": "dIgyUuHjJ90",
+        "watch_url": "https://www.youtube.com/shorts/dIgyUuHjJ90",
         "published_on": "2026-11-14",
-        "published_at": "2026-11-14T11:26:16Z"
+        "published_at": "2026-11-14T15:25:15Z"
       },
       "next_queued_longform": {
         "id": "0705",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm100v1",
-        "scripture": "Psalm 100:1-2",
+        "short": "short-gardenpsalm139v14",
+        "scripture": "Psalm 139:14",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM100V1",
+      "slug": "short-gardenpsalm100v1-thanksgiving-prayer",
+      "file": "short-gardenpsalm100v1-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 100:1-2 Prayer of Thanksgiving | Find Your Rest Here #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T15:25:15Z",
+      "youtube_video_id": "dIgyUuHjJ90",
+      "watch_url": "https://www.youtube.com/shorts/dIgyUuHjJ90",
+      "youtu_be_url": "https://youtu.be/dIgyUuHjJ90",
+      "shorts_url": "https://www.youtube.com/shorts/dIgyUuHjJ90",
+      "studio_url": "https://studio.youtube.com/video/dIgyUuHjJ90/edit",
+      "thumb_url": "https://i.ytimg.com/vi/dIgyUuHjJ90/hqdefault.jpg",
+      "thumb_text": "THE PRAISE GARDEN \u00b7 A PRAYER OF THANKS",
+      "thumbnail_pending": true,
+      "duration_label": "57s",
+      "words": 453
+    },
     {
       "id": "SHORT-PROVISIONMATTHEW7V7",
       "slug": "short-provisionmatthew7v7-stewardship-prayer",
@@ -6830,17 +6854,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-gardenpsalm100v1",
-        "file": "0000-short-gardenpsalm100v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 100:1-2",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenpsalm139v14",
