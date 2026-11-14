@@ -123,6 +123,14 @@ def test_the_verdict_names_each_thing_still_to_do_and_is_empty_when_the_grant_is
         ['YouTube Analytics API refused (500)']
 
 
+def test_a_report_says_how_many_rows_came_back_and_never_what_is_in_them():
+    assert probe.answered(200, '', {'rows': [[987654]]}) == 'works (1 row)'
+    assert probe.answered(200, '', {'rows': [['SHORTS', 5], ['VIDEO_ON_DEMAND', 7]]}) == 'works (2 rows)'
+    assert probe.answered(200, '', {'columnHeaders': []}) == 'works, NO ROWS'
+    assert probe.answered(200, '', None) == 'works, NO ROWS'
+    assert probe.answered(403, '403 PERMISSION_DENIED', None) == 'REFUSED 403 PERMISSION_DENIED'
+
+
 def test_a_token_with_an_end_date_is_called_out():
     assert probe.token_lifetime({'refresh_token_expires_in': 604799}) == 'ENDS in 7.0 days'
     assert probe.token_lifetime({}) == 'no end date reported'

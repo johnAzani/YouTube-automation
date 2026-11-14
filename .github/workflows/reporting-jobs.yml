@@ -1,0 +1,42 @@
+name: YouTube reporting jobs (thumbnail impressions)
+
+# Asks YouTube, once per channel, to write the daily "reach" report (thumbnail
+# impressions and click rate), and says how many daily files are ready.
+# The only thing it ever creates is that reporting job: nothing on the channel
+# changes, nothing is uploaded, deleted or downloaded, no figure is printed.
+# A channel not yet granted the Analytics scopes is reported and skipped.
+# Daily, so a channel is picked up the day after its owner grants it.
+on:
+  schedule:
+    - cron: "47 5 * * *"
+  push:
+    branches: ["arena/**"]
+    paths: [".github/workflows/reporting-jobs.yml", "scripts/reporting_jobs.py"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: reporting-jobs
+  cancel-in-progress: false
+
+jobs:
+  reporting:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      fail-fast: false
+      matrix:
+        channel: [secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, prayer8, prayer9, prayer10]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Start missing reporting jobs and count ready files
+        env:
+          CHANNEL: ${{ matrix.channel }}
+          CLIENT_ID: ${{ secrets[format('{0}YOUTUBE_CLIENT_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] }}
+          CLIENT_SECRET: ${{ secrets[format('{0}YOUTUBE_CLIENT_SECRET', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] }}
+          REFRESH_TOKEN: ${{ secrets[format('{0}YOUTUBE_REFRESH_TOKEN', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] }}
+        run: python3 -u scripts/reporting_jobs.py
