@@ -1,0 +1,13 @@
+short: short-psalm56v3
+channel: secret-place
+standalone: true
+source: evergreen
+scripture: Psalm 56:3
+status: approved
+renderer_ready: true
+authored_by_brain: true
+privacy: public
+replace: false
+target_window_utc: '14:14'
+notes: "Standalone Short on Psalm 56:3 (evergreen list) \u2014 spec authored by the\
+  \ brain (135 narration words)"

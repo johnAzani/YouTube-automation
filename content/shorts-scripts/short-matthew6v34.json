@@ -1,0 +1,266 @@
+{
+  "key": "short-matthew6v34",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "DO NOT WORRY ABOUT",
+    "TOMORROW'S TROUBLES"
+  ],
+  "poster": [
+    "BEDTIME PRAYER",
+    "MATTHEW 6:34",
+    "PEACE FOR TOMORROW",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm dark forest starry night sky soft light",
+    "quiet misty lake candle glowing in night",
+    "peaceful night ocean waves moonlight gentle",
+    "cozy window glowing candle night rain gentle",
+    "silent mountain valley under twilight stars",
+    "soft warm candle flame flickering in pitch dark"
+  ],
+  "scenes": [
+    {
+      "a": "worrying about tomorrow's long list",
+      "img": "short-matthew6v34-scene-01.jpg",
+      "kicker": "MATTHEW 6:34",
+      "sub": "RELEASE TOMORROW",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Do not worry about tomorrow",
+      "img": "short-matthew6v34-scene-02.jpg",
+      "kicker": "MATTHEW 6:34",
+      "sub": "EACH DAY HAS ENOUGH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "mind is already racing",
+      "img": "short-matthew6v34-scene-03.jpg",
+      "kicker": "MATTHEW 6:34",
+      "sub": "QUIET YOUR MIND",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Your faithful hands",
+      "img": "short-matthew6v34-scene-04.jpg",
+      "kicker": "MATTHEW 6:34",
+      "sub": "IN FAITHFUL HANDS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "grant me restful sleep",
+      "img": "short-matthew6v34-scene-05.jpg",
+      "kicker": "MATTHEW 6:34",
+      "sub": "RESTFUL SLEEP TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "daily bedtime prayers",
+      "img": "short-matthew6v34-scene-06.jpg",
+      "kicker": "MATTHEW 6:34",
+      "sub": "THE SECRET PLACE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "As you lie awake worrying about tomorrow's long list of decisions, you can let go."
+    ],
+    [
+      10,
+      22,
+      "Scripture says: Do not worry about tomorrow, for tomorrow will worry about itself. Each day has enough trouble of its own."
+    ],
+    [
+      22,
+      34,
+      "Father, night has arrived, but my mind is already racing into tomorrow's demands."
+    ],
+    [
+      34,
+      48,
+      "Forgive me for trying to carry problems that have not even happened yet. I place tomorrow into Your faithful hands."
+    ],
+    [
+      48,
+      60,
+      "Cover my thoughts with Your quiet peace, quiet every racing anxiety, and grant me restful sleep tonight. Guard my heart while I rest."
+    ],
+    [
+      60,
+      66,
+      "Subscribe to The Secret Place for daily bedtime prayers."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "AS YOU LIE AWAKE WORRYING",
+        "ABOUT TOMORROW DECISIONS",
+        "YOU CAN LET GO"
+      ],
+      [
+        "LET GO"
+      ],
+      "MATTHEW 6 : 34"
+    ],
+    [
+      10,
+      22,
+      [
+        "DO NOT WORRY ABOUT TOMORROW",
+        "FOR TOMORROW WILL WORRY",
+        "ABOUT ITSELF"
+      ],
+      [
+        "DO NOT WORRY"
+      ],
+      "MATTHEW 6 : 34"
+    ],
+    [
+      22,
+      34,
+      [
+        "FATHER NIGHT HAS ARRIVED",
+        "MY MIND IS RACING INTO",
+        "TOMORROW DEMANDS"
+      ],
+      [
+        "RACING"
+      ],
+      "MATTHEW 6 : 34"
+    ],
+    [
+      34,
+      48,
+      [
+        "FORGIVE ME FOR TRYING TO CARRY",
+        "PROBLEMS NOT YET HAPPENED",
+        "YOUR FAITHFUL HANDS"
+      ],
+      [
+        "FAITHFUL HANDS"
+      ],
+      "MATTHEW 6 : 34"
+    ],
+    [
+      48,
+      60,
+      [
+        "COVER MY THOUGHTS WITH PEACE",
+        "GRANT ME RESTFUL SLEEP",
+        "GUARD MY HEART"
+      ],
+      [
+        "RESTFUL SLEEP"
+      ],
+      "MATTHEW 6 : 34"
+    ],
+    [
+      60,
+      66,
+      [
+        "SUBSCRIBE TO THE SECRET PLACE",
+        "FOR DAILY BEDTIME PRAYERS"
+      ],
+      [
+        "SECRET PLACE"
+      ],
+      "MATTHEW 6 : 34"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "worrying about tomorrow's long list",
+      "kind": "phrase",
+      "words": [
+        "WORRYING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Do not worry about tomorrow",
+      "kind": "phrase",
+      "words": [
+        "DO",
+        "NOT",
+        "WORRY"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "mind is already racing",
+      "kind": "phrase",
+      "words": [
+        "RACING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your faithful hands",
+      "kind": "phrase",
+      "words": [
+        "FAITHFUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "grant me restful sleep",
+      "kind": "phrase",
+      "words": [
+        "RESTFUL",
+        "SLEEP"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "daily bedtime prayers",
+      "kind": "phrase",
+      "words": [
+        "BEDTIME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Matthew 6:34"
+}

@@ -1,0 +1,313 @@
+{
+  "key": "short-psalm94v19",
+  "channel": "secret-place",
+  "psalm": 94,
+  "title": [
+    "WHEN CARES",
+    "MULTIPLY"
+  ],
+  "poster": [
+    "PSALM 94:19",
+    "WHEN ANXIOUS THOUGHTS",
+    "OVERWHELM YOUR MIND",
+    "BEDTIME PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm night sky stars over peaceful lake",
+    "single candle glowing softly in dark room",
+    "misty forest night fog quiet trees",
+    "gentle ocean waves at twilight dark blue",
+    "peaceful mountain silhouette under night stars",
+    "warm soft candle flame glowing calm darkness"
+  ],
+  "scenes": [
+    {
+      "a": "If your mind is racing with endless worries tonight, you can finally rest.",
+      "img": "short-psalm94v19-scene-01.jpg",
+      "kicker": "PSALM 94:19",
+      "sub": "REST FOR ANXIOUS MINDS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "when the cares of my heart are many, your consolations cheer my soul.",
+      "img": "short-psalm94v19-scene-02.jpg",
+      "kicker": "PSALM 94:19",
+      "sub": "YOUR CONSOLATION BRINGS JOY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "my anxious thoughts often multiply.",
+      "img": "short-psalm94v19-scene-03.jpg",
+      "kicker": "BEDTIME PRAYER",
+      "sub": "SURRENDER YOUR WORRIES",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "I carry quiet fears, heavy questions, and unspoken worries about tomorrow.",
+      "img": "short-psalm94v19-scene-04.jpg",
+      "kicker": "NIGHTLY CALM",
+      "sub": "LAY DOWN EVERY BURDEN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Quiet the storm inside me and let your soft peace settle over my heart.",
+      "img": "short-psalm94v19-scene-05.jpg",
+      "kicker": "STILL YOUR HEART",
+      "sub": "LET HIS PEACE OVERFLOW",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Cover me with your loving presence so I may sleep in safety and rest deeply. Amen.",
+      "img": "short-psalm94v19-scene-06.jpg",
+      "kicker": "THE SECRET PLACE",
+      "sub": "SLEEP IN HEAVENLY SAFETY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If your mind is racing with endless worries tonight, you can finally rest."
+    ],
+    [
+      7,
+      16,
+      "Psalm 94 verse 19 says, when the cares of my heart are many, your consolations cheer my soul."
+    ],
+    [
+      16,
+      25,
+      "Heavenly Father, as darkness fills this room, my anxious thoughts often multiply."
+    ],
+    [
+      25,
+      35,
+      "I carry quiet fears, heavy questions, and unspoken worries about tomorrow."
+    ],
+    [
+      35,
+      45,
+      "But tonight, I surrender every single thought to your tender comfort."
+    ],
+    [
+      45,
+      55,
+      "Quiet the storm inside me and let your soft peace settle over my heart."
+    ],
+    [
+      55,
+      67,
+      "Cover me with your loving presence so I may sleep in safety and rest deeply. Amen."
+    ],
+    [
+      67,
+      75,
+      "Subscribe to The Secret Place for nightly prayers."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF YOUR MIND IS RACING",
+        "WITH ENDLESS WORRIES",
+        "YOU CAN FINALLY REST"
+      ],
+      [
+        "ENDLESS WORRIES",
+        "REST"
+      ],
+      "PSALM 94:19"
+    ],
+    [
+      7,
+      16,
+      [
+        "WHEN THE CARES OF MY HEART",
+        "ARE MANY YOUR CONSOLATIONS",
+        "CHEER MY SOUL"
+      ],
+      [
+        "CARES",
+        "CHEER MY SOUL"
+      ],
+      "PSALM 94:19"
+    ],
+    [
+      16,
+      25,
+      [
+        "AS DARKNESS FILLS THIS ROOM",
+        "MY ANXIOUS THOUGHTS",
+        "OFTEN MULTIPLY"
+      ],
+      [
+        "ANXIOUS THOUGHTS",
+        "MULTIPLY"
+      ],
+      "PSALM 94:19"
+    ],
+    [
+      25,
+      35,
+      [
+        "I CARRY QUIET FEARS",
+        "HEAVY QUESTIONS AND WORRIES",
+        "ABOUT TOMORROW"
+      ],
+      [
+        "QUIET FEARS",
+        "TOMORROW"
+      ],
+      "PSALM 94:19"
+    ],
+    [
+      35,
+      45,
+      [
+        "TONIGHT I SURRENDER",
+        "EVERY SINGLE THOUGHT TO YOUR",
+        "TENDER COMFORT"
+      ],
+      [
+        "SURRENDER",
+        "TENDER COMFORT"
+      ],
+      "PSALM 94:19"
+    ],
+    [
+      45,
+      55,
+      [
+        "QUIET THE STORM INSIDE ME",
+        "AND LET YOUR SOFT PEACE",
+        "SETTLE OVER MY HEART"
+      ],
+      [
+        "STORM",
+        "SOFT PEACE"
+      ],
+      "PSALM 94:19"
+    ],
+    [
+      55,
+      67,
+      [
+        "COVER ME WITH YOUR PRESENCE",
+        "SO I MAY SLEEP IN SAFETY",
+        "AND REST DEEPLY AMEN"
+      ],
+      [
+        "PRESENCE",
+        "SAFETY"
+      ],
+      "PSALM 94:19"
+    ],
+    [
+      67,
+      75,
+      [
+        "SUBSCRIBE TO THE SECRET PLACE",
+        "FOR NIGHTLY PRAYERS"
+      ],
+      [
+        "SUBSCRIBE",
+        "NIGHTLY PRAYERS"
+      ],
+      "PSALM 94:19"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "endless worries",
+      "kind": "phrase",
+      "words": [
+        "ENDLESS",
+        "WORRIES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "consolations cheer my soul",
+      "kind": "phrase",
+      "words": [
+        "CONSOLATIONS",
+        "CHEER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "anxious thoughts",
+      "kind": "phrase",
+      "words": [
+        "ANXIOUS",
+        "THOUGHTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "tender comfort",
+      "kind": "phrase",
+      "words": [
+        "TENDER",
+        "COMFORT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "soft peace",
+      "kind": "phrase",
+      "words": [
+        "SOFT",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "sleep in safety",
+      "kind": "phrase",
+      "words": [
+        "SLEEP",
+        "SAFETY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 94:19"
+}

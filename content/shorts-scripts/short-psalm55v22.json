@@ -1,0 +1,354 @@
+{
+  "key": "short-psalm55v22",
+  "channel": "secret-place",
+  "psalm": 55,
+  "title": [
+    "CAST YOUR BURDEN",
+    "UPON THE LORD"
+  ],
+  "poster": [
+    "GOD",
+    "IS",
+    "YOUR",
+    "STRENGTH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm mountain lake night",
+    "glowing candle in dark room",
+    "slow flowing stream moonlight",
+    "misty forest at dusk",
+    "starlit sky above silhouette trees",
+    "soft moonlight on calm ocean",
+    "close up of burning incense smoke",
+    "serene meadow under moonlight"
+  ],
+  "scenes": [
+    {
+      "a": "The heavy thought",
+      "img": "short-psalm55v22-scene-01.jpg",
+      "kicker": "PSALM 55:22",
+      "sub": "FINDING REST TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Cast your burden",
+      "img": "short-psalm55v22-scene-02.jpg",
+      "kicker": "CAST YOUR BURDEN",
+      "sub": "HE WILL SUSTAIN YOU",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He will sustain",
+      "img": "short-psalm55v22-scene-03.jpg",
+      "kicker": "HE WILL SUSTAIN",
+      "sub": "NO NEED TO FEAR",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, I offer",
+      "img": "short-psalm55v22-scene-04.jpg",
+      "kicker": "A HUMBLE PRAYER",
+      "sub": "SURRENDERING CONTROL",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "take this weight",
+      "img": "short-psalm55v22-scene-05.jpg",
+      "kicker": "PEACE BE STILL",
+      "sub": "HIS PROMISE IS TRUE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "find your rest",
+      "img": "short-psalm55v22-scene-06.jpg",
+      "kicker": "REST NOW",
+      "sub": "SLEEP IN HIS CARE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "trust in Him",
+      "img": "short-psalm55v22-scene-07.jpg",
+      "kicker": "FAITHFUL IS HE",
+      "sub": "WATCH OVER YOUR SOUL",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The Secret Place",
+      "img": "short-psalm55v22-scene-08.jpg",
+      "kicker": "THE SECRET PLACE",
+      "sub": "PRAYERS EVERY DAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "The heavy thought spinning in your mind is exactly what you should hand over now."
+    ],
+    [
+      11,
+      22,
+      "Cast your burden upon the Lord, and He will sustain you; He will never permit."
+    ],
+    [
+      23,
+      33,
+      "He will sustain the righteous to be moved."
+    ],
+    [
+      34,
+      48,
+      "Father, I offer up every worry, every doubt, and every racing fear within this room."
+    ],
+    [
+      49,
+      62,
+      "Lord, take this weight from my shoulders, for I cannot carry these tomorrows by myself."
+    ],
+    [
+      63,
+      76,
+      "Help me find your rest, to release the tension, and to trust in your steady hand."
+    ],
+    [
+      77,
+      92,
+      "I trust in Him to hold my heart through the night until the morning light breaks."
+    ],
+    [
+      93,
+      105,
+      "The Secret Place, subscribe for daily prayers to anchor your soul in His quiet peace."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "THE HEAVY THOUGHT",
+        "SPINNING IN YOUR MIND",
+        "HAND IT OVER NOW"
+      ],
+      [
+        "HEAVY THOUGHT"
+      ],
+      "PSALM 55:22"
+    ],
+    [
+      11,
+      22,
+      [
+        "CAST YOUR BURDEN",
+        "UPON THE LORD",
+        "HE WILL SUSTAIN"
+      ],
+      [
+        "CAST YOUR BURDEN"
+      ],
+      "PSALM 55:22"
+    ],
+    [
+      23,
+      33,
+      [
+        "HE WILL SUSTAIN",
+        "THE RIGHTEOUS",
+        "NEVER MOVED"
+      ],
+      [
+        "HE WILL SUSTAIN"
+      ],
+      "PSALM 55:22"
+    ],
+    [
+      34,
+      48,
+      [
+        "FATHER I OFFER",
+        "EVERY SINGLE WORRY",
+        "EVERY RACING FEAR"
+      ],
+      [
+        "FATHER I OFFER"
+      ],
+      "PSALM 55:22"
+    ],
+    [
+      49,
+      62,
+      [
+        "TAKE THIS WEIGHT",
+        "FROM MY SHOULDERS",
+        "CANNOT CARRY ALONE"
+      ],
+      [
+        "TAKE THIS WEIGHT"
+      ],
+      "PSALM 55:22"
+    ],
+    [
+      63,
+      76,
+      [
+        "FIND YOUR REST",
+        "RELEASE THE TENSION",
+        "TRUST IN HIM"
+      ],
+      [
+        "FIND YOUR REST"
+      ],
+      "PSALM 55:22"
+    ],
+    [
+      77,
+      92,
+      [
+        "TRUST IN HIM",
+        "HOLD MY HEART",
+        "THROUGH THE NIGHT"
+      ],
+      [
+        "TRUST IN HIM"
+      ],
+      "PSALM 55:22"
+    ],
+    [
+      93,
+      105,
+      [
+        "THE SECRET PLACE",
+        "SUBSCRIBE FOR PRAYERS",
+        "ANCHOR YOUR SOUL"
+      ],
+      [
+        "THE SECRET PLACE"
+      ],
+      "PSALM 55:22"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The heavy thought",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "THOUGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Cast your burden",
+      "kind": "phrase",
+      "words": [
+        "CAST",
+        "YOUR",
+        "BURDEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He will sustain",
+      "kind": "phrase",
+      "words": [
+        "HE",
+        "WILL",
+        "SUSTAIN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, I offer",
+      "kind": "phrase",
+      "words": [
+        "FATHER",
+        "OFFER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "take this weight",
+      "kind": "phrase",
+      "words": [
+        "TAKE",
+        "THIS",
+        "WEIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "find your rest",
+      "kind": "phrase",
+      "words": [
+        "FIND",
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "trust in Him",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "IN",
+        "HIM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Secret Place",
+      "kind": "phrase",
+      "words": [
+        "SECRET",
+        "PLACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 55:22"
+}

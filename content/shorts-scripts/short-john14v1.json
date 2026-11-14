@@ -1,0 +1,246 @@
+{
+  "key": "short-john14v1",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "HEART AT PEACE",
+    "JOHN 14:1-3"
+  ],
+  "poster": [
+    "FINDING REST",
+    "IN HIS PROMISE",
+    "A PRAYER FOR",
+    "YOUR TIRED SOUL"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "misty forest at dawn",
+    "candle flame in dark room",
+    "moonlight reflecting on still lake",
+    "glowing embers in fireplace",
+    "rain droplets on window pane",
+    "starry night sky over mountains",
+    "soft warm light in empty room"
+  ],
+  "scenes": [
+    {
+      "a": "The worry that lingers after the lights go out is not yours to carry tonight.",
+      "img": "short-john14v1-scene-01.jpg",
+      "kicker": "JOHN 14:1-3",
+      "sub": "FIND REST FOR YOUR SOUL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Jesus says, Do not let your hearts be troubled.",
+      "img": "short-john14v1-scene-02.jpg",
+      "kicker": "JOHN 14:1",
+      "sub": "TRUST IN THE PROMISE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "You believe in God, believe also in me.",
+      "img": "short-john14v1-scene-03.jpg",
+      "kicker": "JOHN 14:1",
+      "sub": "HE IS THE ANCHOR",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "In my Fathers house are many rooms; if it were not so, I would have told you.",
+      "img": "short-john14v1-scene-04.jpg",
+      "kicker": "JOHN 14:2",
+      "sub": "A PLACE PREPARED FOR YOU",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "I go to prepare a place for you.",
+      "img": "short-john14v1-scene-05.jpg",
+      "kicker": "JOHN 14:2",
+      "sub": "HIS PROMISE IS TRUE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "And if I go and prepare a place for you, I will come back.",
+      "img": "short-john14v1-scene-06.jpg",
+      "kicker": "JOHN 14:3",
+      "sub": "HE IS RETURNING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, thank you that my future is secure in your hands, anchored by your infinite love.",
+      "img": "short-john14v1-scene-07.jpg",
+      "kicker": "A PRAYER OF REST",
+      "sub": "YOU ARE HELD BY HIM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "The worry that lingers after the lights go out is not yours to carry tonight."
+    ],
+    [
+      10,
+      20,
+      "Jesus says, Do not let your hearts be troubled. You believe in God, believe also in me."
+    ],
+    [
+      20,
+      32,
+      "In my Fathers house are many rooms; if it were not so, I would have told you."
+    ],
+    [
+      32,
+      42,
+      "I go to prepare a place for you. And if I go and prepare a place for you, I will come back."
+    ],
+    [
+      42,
+      55,
+      "Lord, thank you that my future is secure in your hands, anchored by your infinite love."
+    ],
+    [
+      55,
+      62,
+      "May I sleep in the perfect peace of your holy presence, knowing I am never alone."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "THE WORRY THAT",
+        "LINGERS AFTER DARK",
+        "IS NOT YOURS",
+        "TO CARRY TONIGHT"
+      ],
+      [
+        "NOT YOURS"
+      ],
+      "JOHN 14:1"
+    ],
+    [
+      10,
+      20,
+      [
+        "DO NOT LET",
+        "YOUR HEARTS BE",
+        "TROUBLED. BELIEVE IN",
+        "ME ALONE"
+      ],
+      [
+        "BE TROUBLED"
+      ],
+      "JOHN 14:1"
+    ],
+    [
+      20,
+      32,
+      [
+        "IN MY FATHERS",
+        "HOUSE ARE MANY",
+        "ROOMS, HE HAS",
+        "PREPARED A PLACE"
+      ],
+      [
+        "MANY ROOMS"
+      ],
+      "JOHN 14:2"
+    ],
+    [
+      32,
+      42,
+      [
+        "I GO TO",
+        "PREPARE A PLACE",
+        "AND I WILL",
+        "COME BACK"
+      ],
+      [
+        "COME BACK"
+      ],
+      "JOHN 14:3"
+    ],
+    [
+      42,
+      55,
+      [
+        "LORD, THANK YOU",
+        "MY FUTURE IS",
+        "SECURE IN YOUR",
+        "LOVING HANDS"
+      ],
+      [
+        "FUTURE IS SECURE"
+      ],
+      "REST IN HIM"
+    ],
+    [
+      55,
+      62,
+      [
+        "MAY I SLEEP",
+        "IN YOUR PEACE",
+        "KNOWING I AM",
+        "NEVER ALONE"
+      ],
+      [
+        "NEVER ALONE"
+      ],
+      "REST IN HIM"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The worry that lingers after the lights go out is not yours to carry tonight.",
+      "kind": "phrase",
+      "words": [
+        "NOT YOURS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Jesus says, Do not let your hearts be troubled.",
+      "kind": "phrase",
+      "words": [
+        "BE TROUBLED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "John 14:1-3"
+}
