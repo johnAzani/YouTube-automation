@@ -23,10 +23,13 @@ short_visual_fingerprints: ["sha256:11ccf7431fb21d1e1cdbe86dab312c0259462bc5a87c
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=el"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["GOD IS YOUR", "STRONG TOWER", "PROTECTION IS", "YOUR PORTION"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-21T07:21:19Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If that recurring thought of opposition is darkening your view, stay and hear this truth. The Lord is on my side; I will not fear. What can man do to me? Heavenly Father, secure the heart of this viewer against the arrows of doubt and worry. Let your presence be a high tower surrounding them, keeping every secret fear far away. Grant them the stillness of soul that only comes from knowing you are their shield. May they walk forward today, rooted in your promise, entirely sheltered by your unchanging care.
