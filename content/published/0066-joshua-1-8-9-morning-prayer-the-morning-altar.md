@@ -2,7 +2,7 @@
 id: '0066'
 title: "Morning Prayer for Courage Today: Joshua 1:8-9 | The Morning Altar"
 slug: joshua-1-8-9-morning-prayer-the-morning-altar
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -72,6 +72,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-14"
+published_at: "2026-11-14T07:40:51Z"
+youtube_video_id: "nKLjNSKcJGQ"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded]"
 ---
 
 ## Scene 1 — The Sunrise Hook & Directing the Prayer

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T07:22:32Z",
+  "generated_at": "2026-11-14T07:41:47Z",
   "monitor_generated_at": "2026-11-14T07:21:24.483050+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 203,
-    "published_longform": 101,
+    "published_total": 204,
+    "published_longform": 102,
     "published_shorts": 102,
-    "public_total": 201,
-    "queued_longform": 54,
+    "public_total": 202,
+    "queued_longform": 53,
     "queued_shorts": 93,
     "automations_ok": 10,
     "automations_total": 10,
@@ -101,28 +101,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 47,
-        "published_longform": 22,
+        "published_total": 48,
+        "published_longform": 23,
         "published_shorts": 25,
-        "thumbnail_pending": 5,
-        "public_total": 46,
-        "queued_longform": 6,
+        "thumbnail_pending": 6,
+        "public_total": 47,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM37V23",
-        "title": "Say This Psalm 37:23-24 Prayer at Sunrise | The Morning Altar #Shorts",
-        "format": "short",
-        "youtube_video_id": "SYvN5ksemRY",
-        "watch_url": "https://www.youtube.com/shorts/SYvN5ksemRY",
-        "published_on": "2026-11-14",
-        "published_at": "2026-11-14T04:35:21Z"
-      },
-      "next_queued_longform": {
         "id": "0066",
         "title": "Morning Prayer for Courage Today: Joshua 1:8-9 | The Morning Altar",
-        "words": 1267,
+        "format": "longform",
+        "youtube_video_id": "nKLjNSKcJGQ",
+        "watch_url": "https://youtu.be/nKLjNSKcJGQ",
+        "published_on": "2026-11-14",
+        "published_at": "2026-11-14T07:40:51Z"
+      },
+      "next_queued_longform": {
+        "id": "0067",
+        "title": "Morning Prayer for Guidance and Direction: Psalm 25:4-5",
+        "words": 1829,
         "status": "approved"
       },
       "next_queued_short": {
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0066",
+      "slug": "joshua-1-8-9-morning-prayer-the-morning-altar",
+      "file": "0066-joshua-1-8-9-morning-prayer-the-morning-altar.md",
+      "title": "Morning Prayer for Courage Today: Joshua 1:8-9 | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T07:40:51Z",
+      "youtube_video_id": "nKLjNSKcJGQ",
+      "watch_url": "https://youtu.be/nKLjNSKcJGQ",
+      "youtu_be_url": "https://youtu.be/nKLjNSKcJGQ",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/nKLjNSKcJGQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/nKLjNSKcJGQ/hqdefault.jpg",
+      "thumb_text": "BE NOT AFRAID",
+      "thumbnail_pending": true,
+      "duration_label": "~9 min",
+      "words": 1267
+    },
     {
       "id": "SHORT-SHIELDPSALM118V6",
       "slug": "short-shieldpsalm118v6-protection-prayer",
@@ -5721,19 +5745,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1025
-      },
-      {
-        "id": "0066",
-        "slug": "joshua-1-8-9-morning-prayer-the-morning-altar",
-        "file": "0066-joshua-1-8-9-morning-prayer-the-morning-altar.md",
-        "title": "Morning Prayer for Courage Today: Joshua 1:8-9 | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1267
       },
       {
         "id": "0067",
