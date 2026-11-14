@@ -613,16 +613,18 @@ def build_feedback_report(
             )
 
     shorts = aggregate_shorts(perf)
+    shorts_guidance: list[str] = []
+    shorts["guidance"] = shorts_guidance
     if shorts["sufficient_data"]:
         strong = sorted(((row["ratio"], name) for name, row in shorts["by_book"].items()
                          if row["shorts"] >= 2 and row["ratio"] >= SHORT_PROMOTE_RATIO), reverse=True)
         if strong:
-            guidance.append(
+            shorts_guidance.append(
                 f"Shorts: {strong[0][1].title()} runs {strong[0][0]:.1f}x this channel's average "
                 f"Short ({shorts['avg_views']:.0f} views over {shorts['measured_shorts']} Shorts); "
                 "its passages are written first.")
     else:
-        guidance.append(
+        shorts_guidance.append(
             f"Shorts: {shorts['measured_shorts']} measured (need {MIN_SHORTS_FOR_SIGNAL}, each at "
             f"least {MIN_SHORT_AGE_DAYS} days old); the network's pooled numbers order this "
             "channel's Shorts until it has its own.")

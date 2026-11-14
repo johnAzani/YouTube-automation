@@ -27,8 +27,9 @@ from pipeline.gemini_brain import BrainAuthoringError, GeminiBrain
 
 BODY = """## Scene 1 — Stillness Before the Meal
 
-Be still, and know that I am God. The middle of the day is not an interruption of
-prayer; it is where prayer is most needed.
+Be still, and know that I am God: I will be exalted among the heathen, I will be
+exalted in the earth. The middle of the day is not an interruption of prayer; it
+is where prayer is most needed.
 
 ## Scene 2 — The Table and the Altar
 

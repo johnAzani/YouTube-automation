@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def good_spec(key="short-psalm121", scripture="Psalm 121"):
     captions = [
         [0, 12, "Before you close your eyes tonight, breathe slowly and lift your eyes to the hills."],
-        [13, 26, "I lift up my eyes to the hills; my help comes from the Lord, who made heaven and earth."],
+        [13, 26, "I will lift up mine eyes unto the hills, from whence cometh my help."],
         [27, 40, "He will not let your foot slip; he who watches over you will not slumber."],
         [41, 54, "He who keeps you will neither slumber nor sleep, through all the hours of this night."],
         [55, 68, "The Lord is your keeper and your shade, and the sun will not strike you by day."],
@@ -45,7 +45,7 @@ def good_spec(key="short-psalm121", scripture="Psalm 121"):
         "kinetic_phrases": [
             [c[0], c[1], ["ON SCREEN LINE"], ["SCREEN"], "PSALM 121"] for c in captions
         ],
-        "beats": [{"a": "lift up my eyes", "kind": "quote", "words": ["MY", "HELP"], "hi": 0, "slot": "C"}],
+        "beats": [{"a": "lift up mine eyes", "kind": "quote", "words": ["MY", "HELP"], "hi": 0, "slot": "C"}],
     }
 
 

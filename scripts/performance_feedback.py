@@ -58,6 +58,8 @@ def main(argv: list[str] | None = None) -> int:
     print(f"Shorts measured: {shorts.get('measured_shorts', 0)} of {shorts.get('total_shorts', 0)} "
           f"(average {shorts.get('avg_views', 0)} views); "
           f"enough to order the Shorts list: {shorts.get('sufficient_data', False)}")
+    for line in shorts.get("guidance") or []:
+        print(f"  • {line}")
     diag = report['input_diagnostics']
     print(f"Snapshot IDs: {diag['snapshot_video_ids']}; receipt IDs: {diag['receipt_video_ids']}; "
           f"matched IDs: {diag['matched_video_ids']}")
