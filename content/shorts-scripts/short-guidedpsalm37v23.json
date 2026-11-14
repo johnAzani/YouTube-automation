@@ -1,0 +1,334 @@
+{
+  "key": "short-guidedpsalm37v23",
+  "channel": "prayer10",
+  "psalm": 37,
+  "title": [
+    "DIVINE GUIDANCE",
+    "PSALM 37:23-24"
+  ],
+  "poster": [
+    "THE GUIDED PATH",
+    "KJV WISDOM",
+    "DAILY PRAYER",
+    "STEPS ORDERED"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "calm mountain lake misty morning",
+    "peaceful alpine valley sunrise",
+    "serene river winding through green hills",
+    "quiet forest path dappled sunlight",
+    "misty mountain peaks at dawn",
+    "gentle stream in quiet woodland",
+    "tranquil lake reflecting quiet skies",
+    "sunlight breaking over peaceful hills"
+  ],
+  "scenes": [
+    {
+      "a": "If you are standing at an unfamiliar crossroads tonight wondering which turn to make, listen.",
+      "img": "short-guidedpsalm37v23-scene-01.jpg",
+      "kicker": "PSALM 37:23",
+      "sub": "THE LORD ORDERS YOUR STEPS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord, my footing feels uncertain tonight and I bring this hesitation directly before You.",
+      "img": "short-guidedpsalm37v23-scene-02.jpg",
+      "kicker": "DIVINE GUIDANCE",
+      "sub": "REST IN HIS PROMISE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Grant me the profound peace of knowing Your hand is steady upon my life right now.",
+      "img": "short-guidedpsalm37v23-scene-03.jpg",
+      "kicker": "STEPS ORDERED",
+      "sub": "HE DELIGHTETH IN HIS WAY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The steps of a good man are ordered by the LORD: and he delighteth in his way.",
+      "img": "short-guidedpsalm37v23-scene-04.jpg",
+      "kicker": "KJV SCRIPTURE",
+      "sub": "HIS WORD IS TRUTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.35
+      ]
+    },
+    {
+      "a": "Father, when my weakness causes me to stumble, remind me of Your sustaining grace.",
+      "img": "short-guidedpsalm37v23-scene-05.jpg",
+      "kicker": "SUSTAINING GRACE",
+      "sub": "HE UPHOLDETH WITH HIS HAND",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Though he fall, he shall not be utterly cast down: for the LORD upholdeth him with his hand.",
+      "img": "short-guidedpsalm37v23-scene-06.jpg",
+      "kicker": "PSALM 37:24",
+      "sub": "HE UPHOLDETH HIM",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Calm every anxious thought in my mind and let my heart rest safely in Your sovereign care.",
+      "img": "short-guidedpsalm37v23-scene-07.jpg",
+      "kicker": "SOVEREIGN CARE",
+      "sub": "TRUST IN THE LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Guide my every action tomorrow according to Your perfect will, in Jesus' holy name. Amen.",
+      "img": "short-guidedpsalm37v23-scene-08.jpg",
+      "kicker": "THE GUIDED PATH",
+      "sub": "WALK IN HIS LIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      13,
+      "If you are standing at an unfamiliar crossroads tonight wondering which turn to make, listen."
+    ],
+    [
+      13,
+      27,
+      "Lord, my footing feels uncertain tonight and I bring this hesitation directly before You."
+    ],
+    [
+      27,
+      41,
+      "Grant me the profound peace of knowing Your hand is steady upon my life right now."
+    ],
+    [
+      41,
+      56,
+      "The steps of a good man are ordered by the LORD: and he delighteth in his way."
+    ],
+    [
+      56,
+      70,
+      "Father, when my weakness causes me to stumble, remind me of Your sustaining grace."
+    ],
+    [
+      70,
+      86,
+      "Though he fall, he shall not be utterly cast down: for the LORD upholdeth him with his hand."
+    ],
+    [
+      86,
+      100,
+      "Calm every anxious thought in my mind and let my heart rest safely in Your sovereign care."
+    ],
+    [
+      100,
+      115,
+      "Guide my every action tomorrow according to Your perfect will, in Jesus' holy name. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      13,
+      [
+        "STANDING AT AN UNFAMILIAR",
+        "CROSSROADS TONIGHT",
+        "WONDERING WHICH TURN TO MAKE"
+      ],
+      "CROSSROADS",
+      "PSALM 37:23"
+    ],
+    [
+      13,
+      27,
+      [
+        "MY FOOTING FEELS UNCERTAIN",
+        "AND I BRING THIS",
+        "HESITATION BEFORE YOU"
+      ],
+      "UNCERTAIN",
+      "PSALM 37:23"
+    ],
+    [
+      27,
+      41,
+      [
+        "GRANT ME THE PROFOUND",
+        "PEACE OF KNOWING YOUR",
+        "HAND IS STEADY UPON ME"
+      ],
+      "PEACE",
+      "PSALM 37:23"
+    ],
+    [
+      41,
+      56,
+      [
+        "THE STEPS OF A GOOD MAN",
+        "ARE ORDERED BY THE LORD",
+        "AND HE DELIGHTETH IN HIS WAY"
+      ],
+      "ORDERED",
+      "PSALM 37:23"
+    ],
+    [
+      56,
+      70,
+      [
+        "FATHER WHEN MY WEAKNESS",
+        "CAUSES ME TO STUMBLE",
+        "REMIND ME OF YOUR GRACE"
+      ],
+      "WEAKNESS",
+      "PSALM 37:24"
+    ],
+    [
+      70,
+      86,
+      [
+        "THOUGH HE FALL HE SHALL",
+        "NOT BE UTTERLY CAST DOWN",
+        "FOR THE LORD UPHOLDETH HIM"
+      ],
+      "UPHOLDETH",
+      "PSALM 37:24"
+    ],
+    [
+      86,
+      100,
+      [
+        "CALM EVERY ANXIOUS THOUGHT",
+        "IN MY MIND AND LET",
+        "MY HEART REST SAFELY"
+      ],
+      "ANXIOUS",
+      "PSALM 37:24"
+    ],
+    [
+      100,
+      115,
+      [
+        "GUIDE MY EVERY ACTION",
+        "ACCORDING TO YOUR WILL",
+        "IN JESUS HOLY NAME"
+      ],
+      "GUIDE",
+      "PSALM 37:24"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are standing at an unfamiliar crossroads tonight wondering which turn to make, listen.",
+      "kind": "phrase",
+      "words": [
+        "CROSSROADS",
+        "TONIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, my footing feels uncertain tonight and I bring this hesitation directly before You.",
+      "kind": "phrase",
+      "words": [
+        "FOOTING",
+        "UNCERTAIN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant me the profound peace of knowing Your hand is steady upon my life right now.",
+      "kind": "phrase",
+      "words": [
+        "PROFOUND",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The steps of a good man are ordered by the LORD: and he delighteth in his way.",
+      "kind": "phrase",
+      "words": [
+        "ORDERED",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, when my weakness causes me to stumble, remind me of Your sustaining grace.",
+      "kind": "phrase",
+      "words": [
+        "WEAKNESS",
+        "SUSTAINING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Though he fall, he shall not be utterly cast down: for the LORD upholdeth him with his hand.",
+      "kind": "phrase",
+      "words": [
+        "UTTERLY",
+        "UPHOLDETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Calm every anxious thought in my mind and let my heart rest safely in Your sovereign care.",
+      "kind": "phrase",
+      "words": [
+        "ANXIOUS",
+        "SAFELY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guide my every action tomorrow according to Your perfect will, in Jesus' holy name. Amen.",
+      "kind": "phrase",
+      "words": [
+        "PERFECT",
+        "WILL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 37:23-24"
+}

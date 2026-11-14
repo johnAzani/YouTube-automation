@@ -3,55 +3,45 @@
   "channel": "prayer10",
   "psalm": 32,
   "title": [
-    "GOD IS YOUR",
-    "CONSTANT GUIDE"
+    "SEEKING DIRECTION",
+    "DIVINE GUIDANCE"
   ],
   "poster": [
-    "SEEK HIS WISDOM",
-    "FOR EVERY STEP",
-    "A PRAYER FOR",
-    "DIVINE GUIDANCE"
+    "THE GUIDED PATH",
+    "PSALM 32:8",
+    "DIVINE WISDOM",
+    "PRAYER FOR DIRECTION"
   ],
   "end": [
     "SUBSCRIBE",
     "The Guided Path — seek God's wisdom for every step"
   ],
   "stock_queries": [
-    "serene misty mountain pass at dawn",
-    "peaceful river flowing through forest",
-    "golden sunlight over quiet valley",
-    "tranquil alpine lake reflection",
-    "dramatic clouds over mountain range",
-    "soft morning light on evergreen trees"
+    "calm mountain lake night",
+    "misty alpine valley dawn",
+    "quiet river in early light",
+    "peaceful mountain pass mist",
+    "serene valley morning fog",
+    "tranquil forest stream water",
+    "silent mountain peak clouds"
   ],
   "scenes": [
     {
-      "a": "Bring the weight of your current decision",
+      "a": "That heavy question in your mind right now has no obvious answer.",
       "img": "short-guidedpsalm32v8-scene-01.jpg",
       "kicker": "PSALM 32:8",
-      "sub": "GOD PROMISES WISDOM",
+      "sub": "BRING YOUR PATH TO GOD",
       "cam": "push_in",
       "focus": [
         0.5,
-        0.5
+        0.45
       ]
     },
     {
-      "a": "Speak to Him honestly about",
+      "a": "Father, we come before You acknowledging that we lack the insight to choose our own steps.",
       "img": "short-guidedpsalm32v8-scene-02.jpg",
-      "kicker": "THE PATH AHEAD",
-      "sub": "FINDING CLARITY",
-      "cam": "pan_left",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "I will instruct thee and teach thee",
-      "img": "short-guidedpsalm32v8-scene-03.jpg",
-      "kicker": "DIVINE PROMISE",
-      "sub": "HE IS TEACHING YOU",
+      "kicker": "PSALM 32:8",
+      "sub": "SEEKING HIS INSIGHT",
       "cam": "pull_out",
       "focus": [
         0.5,
@@ -59,21 +49,43 @@
       ]
     },
     {
-      "a": "the way which thou shalt go",
-      "img": "short-guidedpsalm32v8-scene-04.jpg",
-      "kicker": "HIS FAITHFUL WAY",
-      "sub": "HIS GUIDING LIGHT",
-      "cam": "tilt_up",
+      "a": "We lay our uncertainty at Your feet and ask for Your clear direction in this season.",
+      "img": "short-guidedpsalm32v8-scene-03.jpg",
+      "kicker": "PSALM 32:8",
+      "sub": "LAYING DOWN UNCERTAINTY",
+      "cam": "pan_left",
       "focus": [
-        0.5,
+        0.4,
         0.5
       ]
     },
     {
-      "a": "I will guide thee with mine eye",
+      "a": "Your word reminds us of Your unfailing promise for the road ahead.",
+      "img": "short-guidedpsalm32v8-scene-04.jpg",
+      "kicker": "PSALM 32:8",
+      "sub": "UNFAILING PROMISE",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "I will instruct thee and teach thee in the way which thou shalt go: I will guide thee with mine eye.",
       "img": "short-guidedpsalm32v8-scene-05.jpg",
-      "kicker": "WATCHFUL CARE",
-      "sub": "NEVER ALONE",
+      "kicker": "PSALM 32:8",
+      "sub": "HE WILL GUIDE THEE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, grant us the patience to wait for Your eye to direct our movements.",
+      "img": "short-guidedpsalm32v8-scene-06.jpg",
+      "kicker": "PSALM 32:8",
+      "sub": "PATIENCE IN WAITING",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -81,11 +93,11 @@
       ]
     },
     {
-      "a": "Amen",
-      "img": "short-guidedpsalm32v8-scene-06.jpg",
-      "kicker": "PRAYER COMPLETED",
-      "sub": "REST IN HIS PEACE",
-      "cam": "pan_right",
+      "a": "In Jesus name, Amen.",
+      "img": "short-guidedpsalm32v8-scene-07.jpg",
+      "kicker": "PSALM 32:8",
+      "sub": "AMEN",
+      "cam": "pull_out",
       "focus": [
         0.5,
         0.5
@@ -95,168 +107,186 @@
   "captions": [
     [
       0,
-      15,
-      "Bring the weight of your current decision before the Lord and ask Him for the wisdom you need right now."
+      6,
+      "That heavy question in your mind right now has no obvious answer."
     ],
     [
-      16,
-      32,
-      "Speak to Him honestly about the uncertainty you feel and let His stillness calm your restless heart completely."
+      6,
+      13,
+      "Father, we come before You acknowledging that we lack the insight to choose our own steps."
     ],
     [
-      33,
-      50,
-      "Hear His promise from Psalm 32:8: I will instruct thee and teach thee in the way which thou shalt go."
+      13,
+      20,
+      "We lay our uncertainty at Your feet and ask for Your clear direction in this season."
     ],
     [
-      51,
-      75,
-      "He continues: I will guide thee with mine eye. Believe that He is looking upon your path with perfect grace."
+      20,
+      26,
+      "Your word reminds us of Your unfailing promise for the road ahead."
     ],
     [
-      76,
-      100,
-      "Lord, grant us the stillness to recognize Your direction. Lead us away from confusion and into Your holy truth."
+      26,
+      35,
+      "I will instruct thee and teach thee in the way which thou shalt go: I will guide thee with mine eye."
     ],
     [
-      101,
-      120,
-      "May Your peace guard our minds as we walk the path You have prepared for us today. Amen."
+      35,
+      43,
+      "Lord, grant us the patience to wait for Your eye to direct our movements."
+    ],
+    [
+      43,
+      48,
+      "In Jesus name, Amen."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      15,
+      6,
       [
-        "BRING THE DECISION",
-        "BEFORE THE LORD",
-        "ASK FOR WISDOM"
+        "THAT HEAVY QUESTION",
+        "IN YOUR MIND",
+        "RIGHT NOW HAS NO"
       ],
-      [
-        "WISDOM"
-      ],
+      "QUESTION",
       "PSALM 32 : 8"
     ],
     [
-      16,
-      32,
+      6,
+      13,
       [
-        "SPEAK HONESTLY ABOUT",
-        "THE UNCERTAINTY YOU FEEL",
-        "CALM YOUR HEART"
+        "FATHER WE COME",
+        "BEFORE YOU ACKNOWLEDGING",
+        "THAT WE LACK INSIGHT"
       ],
-      [
-        "CALM"
-      ],
+      "FATHER",
       "PSALM 32 : 8"
     ],
     [
-      33,
-      50,
+      13,
+      20,
+      [
+        "WE LAY OUR UNCERTAINTY",
+        "AT YOUR FEET",
+        "AND ASK FOR DIRECTION"
+      ],
+      "UNCERTAINTY",
+      "PSALM 32 : 8"
+    ],
+    [
+      20,
+      26,
+      [
+        "YOUR WORD REMINDS US",
+        "OF YOUR UNFAILING",
+        "PROMISE FOR THE ROAD"
+      ],
+      "PROMISE",
+      "PSALM 32 : 8"
+    ],
+    [
+      26,
+      35,
       [
         "I WILL INSTRUCT THEE",
-        "AND TEACH THEE IN",
-        "THE WAY YOU GO"
+        "AND TEACH THEE",
+        "I WILL GUIDE THEE"
       ],
-      [
-        "INSTRUCT",
-        "TEACH"
-      ],
+      "INSTRUCT",
       "PSALM 32 : 8"
     ],
     [
-      51,
-      75,
+      35,
+      43,
       [
-        "I WILL GUIDE THEE",
-        "WITH MINE EYE",
-        "WITH PERFECT GRACE"
+        "LORD GRANT US",
+        "THE PATIENCE TO WAIT",
+        "FOR YOUR EYE"
       ],
-      [
-        "GUIDE"
-      ],
+      "PATIENCE",
       "PSALM 32 : 8"
     ],
     [
-      76,
-      100,
+      43,
+      48,
       [
-        "GRANT US STILLNESS",
-        "TO RECOGNIZE DIRECTION",
-        "LEAD INTO TRUTH"
-      ],
-      [
-        "STILLNESS"
-      ],
-      "PSALM 32 : 8"
-    ],
-    [
-      101,
-      120,
-      [
-        "MAY HIS PEACE",
-        "GUARD OUR MINDS",
+        "IN JESUS",
+        "NAME",
         "AMEN"
       ],
-      [
-        "PEACE"
-      ],
+      "AMEN",
       "PSALM 32 : 8"
     ]
   ],
   "beats": [
     {
-      "a": "Bring the weight of your current decision",
+      "a": "That heavy question in your mind right now has no obvious answer.",
       "kind": "phrase",
       "words": [
-        "WISDOM"
+        "HEAVY",
+        "QUESTION"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Speak to Him honestly about",
+      "a": "Father, we come before You acknowledging that we lack the insight to choose our own steps.",
       "kind": "phrase",
       "words": [
-        "CALM"
+        "FATHER",
+        "INSIGHT"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "I will instruct thee and teach thee",
+      "a": "We lay our uncertainty at Your feet and ask for Your clear direction in this season.",
+      "kind": "phrase",
+      "words": [
+        "UNCERTAINTY",
+        "DIRECTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your word reminds us of Your unfailing promise for the road ahead.",
+      "kind": "phrase",
+      "words": [
+        "UNFAILING",
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will instruct thee and teach thee in the way which thou shalt go: I will guide thee with mine eye.",
       "kind": "phrase",
       "words": [
         "INSTRUCT",
-        "TEACH"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "the way which thou shalt go",
-      "kind": "phrase",
-      "words": [
         "GUIDE"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "I will guide thee with mine eye",
+      "a": "Lord, grant us the patience to wait for Your eye to direct our movements.",
       "kind": "phrase",
       "words": [
-        "STILLNESS"
+        "PATIENCE",
+        "WAIT"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Amen",
+      "a": "In Jesus name, Amen.",
       "kind": "phrase",
       "words": [
-        "PEACE"
+        "JESUS",
+        "AMEN"
       ],
       "hi": 0,
       "slot": "C"
