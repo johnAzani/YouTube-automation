@@ -30,8 +30,8 @@
       "workflow": "comments.yml"
     }
   ],
-  "generated_at": "2026-11-14T03:31:29.983926+00:00",
-  "last_run_at": "2026-11-14T03:30:33+00:00",
+  "generated_at": "2026-11-14T04:10:39.845029+00:00",
+  "last_run_at": "2026-11-14T04:10:02+00:00",
   "on_time": [
     {
       "late_minutes": 93,
@@ -55,10 +55,10 @@
       "workflow": "produce.yml"
     },
     {
-      "late_minutes": 44,
+      "late_minutes": 22,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-14T01:31:46+00:00",
-      "slot": "2026-11-14T00:47:00+00:00",
+      "ran_at": "2026-11-14T04:09:59+00:00",
+      "slot": "2026-11-14T03:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
