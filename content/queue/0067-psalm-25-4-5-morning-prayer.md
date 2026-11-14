@@ -1,6 +1,6 @@
 ---
 id: '0067'
-title: Psalm 25:4-5 Morning Prayer | The Morning Altar
+title: "Morning Prayer for Guidance and Direction: Psalm 25:4-5"
 slug: psalm-25-4-5-morning-prayer
 status: approved
 channel: prayer2
@@ -10,7 +10,7 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-thumb_text: LEAD ME IN
+thumb_text: SHOW ME THY WAYS
 seo_hook: 'Begin this sunrise by crying out to God: Shew me thy ways, O Lord, teach
   me thy paths, and lead me in thy truth today.'
 tags:

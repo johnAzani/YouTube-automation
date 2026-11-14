@@ -1,6 +1,6 @@
 ---
 id: 0804
-title: Psalm 32:8 I Will Instruct Thee and Teach Thee | The Guided Path
+title: "Prayer for Guidance When You Feel Lost: Psalm 32:8 | The Guided Path"
 slug: psalm-32-8-i-will-instruct-thee-and-teach-thee
 status: approved
 channel: prayer10

@@ -1,6 +1,6 @@
 ---
 id: 0508
-title: Psalm 84:11 Provision Prayer | The Provision Table
+title: "Prayer for Provision When Money Is Tight: Psalm 84:11"
 slug: psalm-84-11-provision-prayer-the-provision-table
 status: approved
 channel: prayer7

@@ -1,6 +1,6 @@
 ---
 id: '0066'
-title: Joshua 1:8-9 Morning Prayer | The Morning Altar
+title: "Morning Prayer for Courage Today: Joshua 1:8-9 | The Morning Altar"
 slug: joshua-1-8-9-morning-prayer-the-morning-altar
 status: approved
 channel: prayer2
@@ -10,7 +10,7 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-thumb_text: COURAGE FOR TODAY
+thumb_text: BE NOT AFRAID
 seo_hook: Start your morning with Joshua 1:8-9. Be strong and of a good courage, for
   the Lord thy God is with thee whithersoever thou goest.
 tags:

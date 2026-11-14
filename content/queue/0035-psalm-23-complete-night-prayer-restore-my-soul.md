@@ -1,6 +1,6 @@
 ---
 id: '0035'
-title: Psalm 23 Complete KJV Night Prayer | Restore Your Weary Soul
+title: "Psalm 23 Night Prayer to Fall Asleep in Peace (Full KJV)"
 slug: psalm-23-complete-night-prayer-restore-my-soul
 status: approved
 privacy: public

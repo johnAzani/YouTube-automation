@@ -1,6 +1,6 @@
 ---
 id: '0605'
-title: Isaiah 54:17 Divine Protection Prayer | The Covenant Shield
+title: "No Weapon Formed Against You: Isaiah 54:17 Protection Prayer"
 slug: isaiah-54-17-divine-protection-prayer
 status: approved
 channel: prayer8
@@ -10,7 +10,7 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-thumb_text: NO WEAPON WINS
+thumb_text: YOU ARE COVERED
 seo_hook: No weapon formed against thee shall prosper under God's unbreakable covenant
   shield and strong tower of refuge.
 tags:

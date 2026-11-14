@@ -1,6 +1,6 @@
 ---
 id: '0606'
-title: 2 Thessalonians 3:3 Daily Prayer | The Covenant Shield
+title: "Prayer for God's Protection Today: 2 Thessalonians 3:3"
 slug: 2-thessalonians-3-3-daily-prayer
 status: approved
 channel: prayer8

@@ -1,6 +1,6 @@
 ---
 id: '0030'
-title: Philippians 4:6-7 Bedtime Prayer | Peace Over Heart & Mind
+title: "Bedtime Prayer for Anxiety and Overthinking: Philippians 4:6-7"
 slug: philippians-4-6-7-the-peace-that-guards-heart-and-mind
 status: approved
 privacy: public

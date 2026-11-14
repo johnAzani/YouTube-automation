@@ -1,6 +1,6 @@
 ---
 id: '0027'
-title: Isaiah 41:10 Night Prayer | Fear Not, God Is With You Tonight
+title: "Night Prayer When You Feel Afraid: Isaiah 41:10 | The Secret Place"
 slug: isaiah-41-10-upholding-you-with-his-right-hand
 status: approved
 privacy: public

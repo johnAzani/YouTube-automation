@@ -1,6 +1,6 @@
 ---
 id: 0803
-title: Proverbs 15:22 Prayer for Wise Counsel | The Guided Path
+title: "Prayer Before a Big Decision: Proverbs 15:22 | The Guided Path"
 slug: proverbs-15-22-prayer-for-wise-counsel
 status: approved
 channel: prayer10

@@ -1,6 +1,6 @@
 ---
 id: 0091
-title: Colossians 3:23-24 Midday Prayer | The Midday Watch
+title: "Midday Prayer for Strength at Work: Colossians 3:23-24"
 slug: colossians-3-23-24-midday-prayer
 status: approved
 channel: prayer3
@@ -10,7 +10,7 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-thumb_text: WORK UNTO THE
+thumb_text: AS UNTO THE LORD
 seo_hook: Pause your midday labor and let Colossians 3:23-24 anchor your daily work
   in Christ, transforming ordinary tasks into holy service.
 tags:

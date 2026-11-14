@@ -5,6 +5,13 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-14 — acting on the view counts: Shorts openings, 41 queued titles
+
+- Read the ten analytics snapshot issues of 13 November: 95 long videos drew 261 views (median 1, 35 with none); 91 Shorts drew 7,513 (median 65). 97% of all views come from Shorts. Table and reasoning: `docs/GROWTH_EVIDENCE_2026-11-14.md`.
+- `pipeline/short_script.py`: the Short prompt no longer hands the model the channel's stock invitation as its first line (every channel's Shorts opened with one skeleton; the view counts do not prove that costs views, but it is templated content). The first sentence is now written for that Short, at most 16 words, about the listener's moment; the channel's used openings are listed for the model to avoid (`recent_openings`). Target length 105 words (was 120); validator limits unchanged. New Shorts only.
+- 41 queued long-form jobs retitled need-first with the scripture reference kept; 13 thumbnail lines replaced with whole phrases. Fact-check worksheets regenerated. Short keys, slugs and scripture references unchanged.
+- Tests: `tests/test_short_hook_standard.py` (17).
+
 ## 2026-11-14 — background music 3 dB louder (voice unchanged)
 
 - Owner feedback on the first mastered videos: "the voice is perfect, the background music volume is a little low". `pipeline/voice_master.py` now lifts the music bed by 3 dB in the mastered mix (`MUSIC_LIFT_DB`, recipe `voice-master-v2`), long-form and Shorts. Voice over music goes from 14.6 / 17.4 LU (pauses / speech) to 11.6 / 14.4 LU; the voice stays at -15 LUFS and the finished mix at -14.9 LUFS, peak -1.5 dBFS. Applies to new renders only. Notes: `docs/VOICE_AND_VIEWER_FIRST_2026-11-13.md`, "Music balance".

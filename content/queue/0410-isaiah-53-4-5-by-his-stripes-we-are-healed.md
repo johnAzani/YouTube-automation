@@ -1,6 +1,6 @@
 ---
 id: '0410'
-title: Isaiah 53:4-5 By His Stripes We Are Healed | The Healing Balm
+title: "Prayer for Healing in Body and Soul: Isaiah 53:4-5 | The Healing Balm"
 slug: isaiah-53-4-5-by-his-stripes-we-are-healed
 status: approved
 channel: prayer6

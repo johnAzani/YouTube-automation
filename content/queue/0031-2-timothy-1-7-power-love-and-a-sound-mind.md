@@ -1,6 +1,6 @@
 ---
 id: '0031'
-title: 2 Timothy 1:7 Night Prayer | Power, Love & a Sound Mind
+title: "Night Prayer When Dread Keeps You Awake: 2 Timothy 1:7"
 slug: 2-timothy-1-7-power-love-and-a-sound-mind
 status: approved
 privacy: public

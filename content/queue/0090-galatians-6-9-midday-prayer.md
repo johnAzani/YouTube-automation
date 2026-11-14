@@ -1,6 +1,6 @@
 ---
 id: 0090
-title: Galatians 6:9 Midday Prayer | The Midday Watch
+title: "Prayer for When You Feel Like Giving Up: Galatians 6:9"
 slug: galatians-6-9-midday-prayer
 status: approved
 channel: prayer3
@@ -10,7 +10,7 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-thumb_text: FAINT NOT AT
+thumb_text: FAINT NOT
 seo_hook: Pause at midday for Galatians 6:9. Let us not be weary in well doing, for
   in due season we shall reap, if we faint not.
 tags:

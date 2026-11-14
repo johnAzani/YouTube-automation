@@ -1,6 +1,6 @@
 ---
 id: '0024'
-title: Psalm 139:11-12 Night Prayer | No Darkness Hides From God
+title: "When the Night Feels Too Dark: Psalm 139:11-12 | The Secret Place"
 slug: psalm-139-11-12-darkness-is-as-light-to-him
 status: approved
 privacy: public

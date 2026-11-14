@@ -1,6 +1,6 @@
 ---
 id: 0029
-title: John 14:27 Bedtime Prayer | Let Not Your Heart Be Troubled
+title: "Bedtime Prayer for a Troubled Heart: John 14:27 | The Secret Place"
 slug: john-14-27-my-peace-i-give-unto-you
 status: approved
 privacy: public

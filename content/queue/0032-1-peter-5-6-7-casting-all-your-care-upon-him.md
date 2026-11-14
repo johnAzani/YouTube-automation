@@ -1,6 +1,6 @@
 ---
 id: '0032'
-title: 1 Peter 5:7 Bedtime Prayer | Cast Every Anxious Care on God
+title: "Bedtime Prayer to Let Go of Worry: 1 Peter 5:7 | The Secret Place"
 slug: 1-peter-5-6-7-casting-all-your-care-upon-him
 status: approved
 privacy: public

@@ -1,6 +1,6 @@
 ---
 id: '0033'
-title: Numbers 6:24-26 Night Prayer | The Lord Bless You & Keep You
+title: "A Blessing to Fall Asleep Under: Numbers 6:24-26 | The Secret Place"
 slug: numbers-6-24-26-the-priestly-benediction-of-peace
 status: approved
 privacy: public

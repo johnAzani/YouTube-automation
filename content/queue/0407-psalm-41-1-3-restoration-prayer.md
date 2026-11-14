@@ -1,6 +1,6 @@
 ---
 id: '0407'
-title: Psalm 41:1-3 Restoration Prayer | The Healing Balm
+title: "Prayer for Strength When You Are Sick: Psalm 41:1-3 | The Healing Balm"
 slug: psalm-41-1-3-restoration-prayer
 status: approved
 channel: prayer6
