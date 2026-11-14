@@ -1,0 +1,317 @@
+{
+  "key": "short-shieldpsalm121v3",
+  "channel": "prayer8",
+  "psalm": 121,
+  "title": [
+    "HE WILL NOT",
+    "SUFFER THY FOOT"
+  ],
+  "poster": [
+    "DIVINE PROTECTION",
+    "PSALM 121:3-4",
+    "GOD'S SLEEPLESS CARE",
+    "THE COVENANT SHIELD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "sunlit mountain pass rocky path misty morning",
+    "ancient stone watchtower golden sunset horizon",
+    "peaceful river sunset light serene trees",
+    "golden light rays through clouds dramatic sky",
+    "calm lake reflection majestic mountains sunbeam",
+    "ancient fortress stone wall glowing warm sunset",
+    "peaceful mountain valley sunrise rays mist"
+  ],
+  "scenes": [
+    {
+      "a": "If your feet feel unsteady on this uncertain road today, pause and rest in God's promise.",
+      "img": "short-shieldpsalm121v3-scene-01.jpg",
+      "kicker": "PSALM 121:3",
+      "sub": "YOUR STEPS ARE HELD FIRM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "He will not suffer thy foot to be moved: he that keepeth thee will not slumber.",
+      "img": "short-shieldpsalm121v3-scene-02.jpg",
+      "kicker": "PSALM 121:3",
+      "sub": "HE WILL NOT SLUMBER",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Behold, he that keepeth Israel shall neither slumber nor sleep.",
+      "img": "short-shieldpsalm121v3-scene-03.jpg",
+      "kicker": "PSALM 121:4",
+      "sub": "THE SLEEPLESS GUARDIAN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord God, establish my steps so I will never stumble in times of severe trial.",
+      "img": "short-shieldpsalm121v3-scene-04.jpg",
+      "kicker": "PSALM 121:3-4",
+      "sub": "ESTABLISH MY STEPS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Watch over my heart and mind when deep night comes and quiet worries linger.",
+      "img": "short-shieldpsalm121v3-scene-05.jpg",
+      "kicker": "PSALM 121:3-4",
+      "sub": "PEACE IN THE NIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Thank You for shielding my life with Your constant, sleepless care and guiding my daily path.",
+      "img": "short-shieldpsalm121v3-scene-06.jpg",
+      "kicker": "PSALM 121:3-4",
+      "sub": "EVERLASTING PROTECTION",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Covenant Shield to walk under God's daily covering and divine protection.",
+      "img": "short-shieldpsalm121v3-scene-07.jpg",
+      "kicker": "PSALM 121:3-4",
+      "sub": "WALK UNDER HIS SHIELD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If your feet feel unsteady on this uncertain road today, pause and rest in God's promise."
+    ],
+    [
+      7,
+      15,
+      "He will not suffer thy foot to be moved: he that keepeth thee will not slumber."
+    ],
+    [
+      15,
+      22,
+      "Behold, he that keepeth Israel shall neither slumber nor sleep."
+    ],
+    [
+      22,
+      30,
+      "Lord God, establish my steps so I will never stumble in times of severe trial."
+    ],
+    [
+      30,
+      38,
+      "Watch over my heart and mind when deep night comes and quiet worries linger."
+    ],
+    [
+      38,
+      46,
+      "Thank You for shielding my life with Your constant, sleepless care and guiding my daily path."
+    ],
+    [
+      46,
+      52,
+      "Subscribe to The Covenant Shield to walk under God's daily covering and divine protection."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF YOUR FEET FEEL",
+        "UNSTEADY TODAY",
+        "REST IN GODS PROMISE"
+      ],
+      [
+        "UNSTEADY",
+        "PROMISE"
+      ],
+      "PSALM 121:3-4"
+    ],
+    [
+      7,
+      15,
+      [
+        "HE WILL NOT SUFFER",
+        "THY FOOT TO BE MOVED",
+        "HE WILL NOT SLUMBER"
+      ],
+      [
+        "NOT MOVED",
+        "NOT SLUMBER"
+      ],
+      "PSALM 121:3"
+    ],
+    [
+      15,
+      22,
+      [
+        "BEHOLD HE THAT KEEPETH",
+        "ISRAEL SHALL NEITHER",
+        "SLUMBER NOR SLEEP"
+      ],
+      [
+        "KEEPETH ISRAEL",
+        "NEITHER SLEEP"
+      ],
+      "PSALM 121:4"
+    ],
+    [
+      22,
+      30,
+      [
+        "LORD ESTABLISH MY STEPS",
+        "SO I WILL NEVER STUMBLE",
+        "IN TIMES OF TRIAL"
+      ],
+      [
+        "ESTABLISH STEPS",
+        "NEVER STUMBLE"
+      ],
+      "PSALM 121:3-4"
+    ],
+    [
+      30,
+      38,
+      [
+        "WATCH OVER MY HEART",
+        "WHEN DEEP NIGHT COMES",
+        "AND WORRIES LINGER"
+      ],
+      [
+        "WATCH OVER",
+        "DEEP NIGHT"
+      ],
+      "PSALM 121:3-4"
+    ],
+    [
+      38,
+      46,
+      [
+        "THANK YOU FOR SHIELDING",
+        "MY LIFE WITH YOUR CARE",
+        "AND GUIDING MY PATH"
+      ],
+      [
+        "SHIELDING MY LIFE",
+        "SLEEPLESS CARE"
+      ],
+      "PSALM 121:3-4"
+    ],
+    [
+      46,
+      52,
+      [
+        "SUBSCRIBE TO THE",
+        "COVENANT SHIELD TODAY",
+        "WALK IN HIS COVERING"
+      ],
+      [
+        "SUBSCRIBE",
+        "COVENANT SHIELD"
+      ],
+      "PSALM 121:3-4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If your feet feel unsteady on this uncertain road today, pause and rest in God's promise.",
+      "kind": "phrase",
+      "words": [
+        "UNSTEADY",
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He will not suffer thy foot to be moved: he that keepeth thee will not slumber.",
+      "kind": "phrase",
+      "words": [
+        "NOT MOVED",
+        "SLUMBER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Behold, he that keepeth Israel shall neither slumber nor sleep.",
+      "kind": "phrase",
+      "words": [
+        "KEEPETH",
+        "NEITHER SLEEP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord God, establish my steps so I will never stumble in times of severe trial.",
+      "kind": "phrase",
+      "words": [
+        "ESTABLISH",
+        "NEVER STUMBLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Watch over my heart and mind when deep night comes and quiet worries linger.",
+      "kind": "phrase",
+      "words": [
+        "WATCH OVER",
+        "DEEP NIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thank You for shielding my life with Your constant, sleepless care and guiding my daily path.",
+      "kind": "phrase",
+      "words": [
+        "SHIELDING",
+        "SLEEPLESS CARE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Covenant Shield to walk under God's daily covering and divine protection.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "COVENANT SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 121:3-4"
+}

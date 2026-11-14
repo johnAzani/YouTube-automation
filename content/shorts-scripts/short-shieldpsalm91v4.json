@@ -1,0 +1,332 @@
+{
+  "key": "short-shieldpsalm91v4",
+  "channel": "prayer8",
+  "psalm": 91,
+  "title": [
+    "UNDER HIS FEATHERS",
+    "PSALM 91:4 PRAYER"
+  ],
+  "poster": [
+    "UNDER HIS FEATHERS",
+    "GOD IS YOUR SHIELD",
+    "DIVINE PROTECTION",
+    "PSALM 91:4"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "golden sunbeams streaming through dark pine forest clouds",
+    "ancient stone fortress tower golden sunset sky",
+    "calm mountain river glowing under warm sunlight",
+    "dramatic sunlit mountain pass soaring cliffs safety",
+    "majestic ancient stone castle wall glowing horizon",
+    "serene lake reflecting golden light rays celestial",
+    "sunburst over peaceful valley glowing mountain ridge"
+  ],
+  "scenes": [
+    {
+      "a": "If fear is quietly whispering about tomorrow while you sit in this room, listen closely.",
+      "img": "short-shieldpsalm91v4-scene-01.jpg",
+      "kicker": "PSALM 91:4",
+      "sub": "FIND PEACE TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Psalm 91 verse 4 promises, He shall cover thee with his feathers, and under his wings shalt thou trust:",
+      "img": "short-shieldpsalm91v4-scene-02.jpg",
+      "kicker": "PSALM 91:4",
+      "sub": "HIS FEATHERS COVER YOU",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "his truth shall be his shield and buckler. Heavenly Father, wrap this tired heart beneath Your shadow tonight.",
+      "img": "short-shieldpsalm91v4-scene-03.jpg",
+      "kicker": "PSALM 91:4",
+      "sub": "HIS TRUTH IS YOUR SHIELD",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Surround every vulnerable place with Your unyielding truth. Where panic attempts to enter, let Your living presence stand",
+      "img": "short-shieldpsalm91v4-scene-04.jpg",
+      "kicker": "PSALM 91:4",
+      "sub": "UNYIELDING TRUTH AND SAFETY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "as a mighty fortress and wall of safety. May Your faithful covering guard every thought,",
+      "img": "short-shieldpsalm91v4-scene-05.jpg",
+      "kicker": "PSALM 91:4",
+      "sub": "MIGHTY FORTRESS OF PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "every journey, and every quiet hour. Rest peacefully, knowing God remains your constant shield.",
+      "img": "short-shieldpsalm91v4-scene-06.jpg",
+      "kicker": "PSALM 91:4",
+      "sub": "GOD IS YOUR SHIELD",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to walk under God's daily covering.",
+      "img": "short-shieldpsalm91v4-scene-07.jpg",
+      "kicker": "THE COVENANT SHIELD",
+      "sub": "WALK IN HIS DAILY COVERING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If fear is quietly whispering about tomorrow while you sit in this room, listen closely."
+    ],
+    [
+      6,
+      15,
+      "Psalm 91 verse 4 promises, He shall cover thee with his feathers, and under his wings shalt thou trust:"
+    ],
+    [
+      15,
+      23,
+      "his truth shall be his shield and buckler. Heavenly Father, wrap this tired heart beneath Your shadow tonight."
+    ],
+    [
+      23,
+      30,
+      "Surround every vulnerable place with Your unyielding truth. Where panic attempts to enter, let Your living presence stand"
+    ],
+    [
+      30,
+      37,
+      "as a mighty fortress and wall of safety. May Your faithful covering guard every thought,"
+    ],
+    [
+      37,
+      44,
+      "every journey, and every quiet hour. Rest peacefully, knowing God remains your constant shield."
+    ],
+    [
+      44,
+      50,
+      "Subscribe to walk under God's daily covering."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF FEAR IS QUIETLY WHISPERING",
+        "ABOUT TOMORROW",
+        "LISTEN CLOSELY"
+      ],
+      [
+        "FEAR",
+        "LISTEN"
+      ],
+      "PSALM 91:4"
+    ],
+    [
+      6,
+      15,
+      [
+        "HE SHALL COVER THEE",
+        "WITH HIS FEATHERS",
+        "AND UNDER HIS WINGS TRUST"
+      ],
+      [
+        "COVER",
+        "FEATHERS",
+        "TRUST"
+      ],
+      "PSALM 91:4"
+    ],
+    [
+      15,
+      23,
+      [
+        "HIS TRUTH SHALL BE",
+        "YOUR SHIELD AND BUCKLER",
+        "WRAP THIS TIRED HEART"
+      ],
+      [
+        "SHIELD",
+        "BUCKLER",
+        "SHADOW"
+      ],
+      "PSALM 91:4"
+    ],
+    [
+      23,
+      30,
+      [
+        "SURROUND EVERY VULNERABLE PLACE",
+        "WITH UNYIELDING TRUTH",
+        "GOD'S PRESENCE STANDS"
+      ],
+      [
+        "SURROUND",
+        "TRUTH",
+        "PRESENCE"
+      ],
+      "PSALM 91:4"
+    ],
+    [
+      30,
+      37,
+      [
+        "A MIGHTY FORTRESS",
+        "AND WALL OF SAFETY",
+        "GUARD EVERY THOUGHT"
+      ],
+      [
+        "FORTRESS",
+        "SAFETY",
+        "GUARD"
+      ],
+      "PSALM 91:4"
+    ],
+    [
+      37,
+      44,
+      [
+        "REST PEACEFULLY KNOWING",
+        "GOD REMAINS YOUR",
+        "CONSTANT SHIELD"
+      ],
+      [
+        "REST",
+        "PEACEFULLY",
+        "SHIELD"
+      ],
+      "PSALM 91:4"
+    ],
+    [
+      44,
+      50,
+      [
+        "SUBSCRIBE TO WALK",
+        "UNDER GOD'S DAILY COVERING"
+      ],
+      [
+        "SUBSCRIBE",
+        "DAILY COVERING"
+      ],
+      "PSALM 91:4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If fear is quietly whispering about tomorrow while you sit in this room, listen closely.",
+      "kind": "phrase",
+      "words": [
+        "FEAR",
+        "WHISPERING",
+        "LISTEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Psalm 91 verse 4 promises, He shall cover thee with his feathers, and under his wings shalt thou trust:",
+      "kind": "phrase",
+      "words": [
+        "COVER",
+        "FEATHERS",
+        "WINGS",
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "his truth shall be his shield and buckler. Heavenly Father, wrap this tired heart beneath Your shadow tonight.",
+      "kind": "phrase",
+      "words": [
+        "TRUTH",
+        "SHIELD",
+        "BUCKLER",
+        "SHADOW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Surround every vulnerable place with Your unyielding truth. Where panic attempts to enter, let Your living presence stand",
+      "kind": "phrase",
+      "words": [
+        "SURROUND",
+        "UNYIELDING",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "as a mighty fortress and wall of safety. May Your faithful covering guard every thought,",
+      "kind": "phrase",
+      "words": [
+        "FORTRESS",
+        "WALL",
+        "SAFETY",
+        "GUARD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "every journey, and every quiet hour. Rest peacefully, knowing God remains your constant shield.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "PEACEFULLY",
+        "CONSTANT",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to walk under God's daily covering.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "DAILY",
+        "COVERING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 91:4"
+}

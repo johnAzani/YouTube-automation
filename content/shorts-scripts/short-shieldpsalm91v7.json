@@ -1,0 +1,279 @@
+{
+  "key": "short-shieldpsalm91v7",
+  "channel": "prayer8",
+  "psalm": 91,
+  "title": [
+    "DIVINE PROTECTION",
+    "PSALM 91:7"
+  ],
+  "poster": [
+    "A STRONG REFUGE",
+    "FOR YOUR JOURNEY",
+    "SHELTERED BY GOD",
+    "UNDER HIS WINGS"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "majestic mountain range during twilight",
+    "ancient stone watchtower on a hill",
+    "golden sunlight piercing through storm clouds",
+    "peaceful river flowing through a deep canyon",
+    "calm ocean waves at dawn",
+    "misty forest path at sunrise"
+  ],
+  "scenes": [
+    {
+      "a": "If this heavy decision before you feels like a mountain you cannot climb alone, listen now.",
+      "img": "short-shieldpsalm91v7-scene-01.jpg",
+      "kicker": "PSALM 91:7",
+      "sub": "YOUR REFUGE IN THE STORM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "A thousand may fall at your side, ten thousand at your right hand, but it will not come near you.",
+      "img": "short-shieldpsalm91v7-scene-02.jpg",
+      "kicker": "DIVINE PROTECTION",
+      "sub": "SHELTERED FROM HARM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Father, I bring this person before You today.",
+      "img": "short-shieldpsalm91v7-scene-03.jpg",
+      "kicker": "A PRAYER FOR YOU",
+      "sub": "STANDING IN HIS STRENGTH",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Wrap them in the shadow of the Almighty.",
+      "img": "short-shieldpsalm91v7-scene-04.jpg",
+      "kicker": "HIS SHADOW",
+      "sub": "YOUR SECRET PLACE",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Let every lingering anxiety fade as they realize that no evil can stand against the fortress of Your presence.",
+      "img": "short-shieldpsalm91v7-scene-05.jpg",
+      "kicker": "UNSHAKABLE PEACE",
+      "sub": "SAFE WITHIN THE WALLS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Grant them a spirit of calm, deep trust, and the quiet assurance that they are never walking this path alone.",
+      "img": "short-shieldpsalm91v7-scene-06.jpg",
+      "kicker": "ABIDE IN TRUTH",
+      "sub": "GOD IS YOUR SHIELD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      9,
+      "If this heavy decision before you feels like a mountain you cannot climb alone, listen now."
+    ],
+    [
+      10,
+      25,
+      "A thousand may fall at your side, ten thousand at your right hand, but it will not come near you."
+    ],
+    [
+      26,
+      36,
+      "Father, I bring this person before You today."
+    ],
+    [
+      37,
+      47,
+      "Wrap them in the shadow of the Almighty."
+    ],
+    [
+      48,
+      62,
+      "Let every lingering anxiety fade as they realize that no evil can stand against the fortress of Your presence."
+    ],
+    [
+      63,
+      78,
+      "Grant them a spirit of calm, deep trust, and the quiet assurance that they are never walking this path alone."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      9,
+      [
+        "THIS HEAVY DECISION",
+        "FEELS LIKE A MOUNTAIN",
+        "CLIMB ALONE"
+      ],
+      [
+        "MOUNTAIN",
+        "ALONE"
+      ],
+      "PSALM 91:7"
+    ],
+    [
+      10,
+      25,
+      [
+        "A THOUSAND MAY FALL",
+        "TEN THOUSAND AT",
+        "YOUR RIGHT HAND",
+        "IT WILL NOT",
+        "COME NEAR YOU"
+      ],
+      [
+        "THOUSAND",
+        "NOT NEAR"
+      ],
+      "PSALM 91:7"
+    ],
+    [
+      26,
+      36,
+      [
+        "FATHER I BRING",
+        "THIS PERSON BEFORE",
+        "YOU TODAY"
+      ],
+      [
+        "BRING",
+        "TODAY"
+      ],
+      "PSALM 91:7"
+    ],
+    [
+      37,
+      47,
+      [
+        "WRAP THEM IN",
+        "THE SHADOW OF",
+        "THE ALMIGHTY"
+      ],
+      [
+        "SHADOW",
+        "ALMIGHTY"
+      ],
+      "PSALM 91:7"
+    ],
+    [
+      48,
+      62,
+      [
+        "EVERY LINGERING ANXIETY FADE",
+        "NO EVIL CAN STAND",
+        "AGAINST THE FORTRESS"
+      ],
+      [
+        "ANXIETY",
+        "FORTRESS"
+      ],
+      "PSALM 91:7"
+    ],
+    [
+      63,
+      78,
+      [
+        "SPIRIT OF CALM",
+        "DEEP TRUST",
+        "QUIET ASSURANCE",
+        "NEVER WALKING ALONE"
+      ],
+      [
+        "TRUST",
+        "ASSURANCE"
+      ],
+      "PSALM 91:7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If this heavy decision before you feels like a mountain you cannot climb alone, listen now.",
+      "kind": "phrase",
+      "words": [
+        "MOUNTAIN",
+        "ALONE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "A thousand may fall at your side, ten thousand at your right hand, but it will not come near you.",
+      "kind": "phrase",
+      "words": [
+        "THOUSAND",
+        "NEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, I bring this person before You today.",
+      "kind": "phrase",
+      "words": [
+        "BRING",
+        "TODAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Wrap them in the shadow of the Almighty.",
+      "kind": "phrase",
+      "words": [
+        "SHADOW",
+        "ALMIGHTY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let every lingering anxiety fade as they realize that no evil can stand against the fortress of Your presence.",
+      "kind": "phrase",
+      "words": [
+        "ANXIETY",
+        "FORTRESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant them a spirit of calm, deep trust, and the quiet assurance that they are never walking this path alone.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "ASSURANCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 91:7"
+}

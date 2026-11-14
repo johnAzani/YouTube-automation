@@ -1,0 +1,277 @@
+{
+  "key": "short-shieldpsalm23v4",
+  "channel": "prayer8",
+  "psalm": 23,
+  "title": [
+    "DIVINE PROTECTION",
+    "PSALM 23:4"
+  ],
+  "poster": [
+    "REST IN",
+    "HIS PRESENCE",
+    "DIVINE SHIELD",
+    "PSALM 23:4"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "golden light rays through thick forest canopy",
+    "ancient stone watchtower on quiet mountain peak",
+    "peaceful river at sunset reflection",
+    "misty mountain pass at dawn aerial",
+    "calm lake water reflecting twilight sky",
+    "glowing embers in stone hearth warmth"
+  ],
+  "scenes": [
+    {
+      "a": "The worry keeping you awake tonight has no power over the peace God intends for you.",
+      "img": "short-shieldpsalm23v4-scene-01.jpg",
+      "kicker": "PSALM 23:4",
+      "sub": "HE IS WITH YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Even though I walk through the darkest valley, I will fear no evil, for you are with me.",
+      "img": "short-shieldpsalm23v4-scene-02.jpg",
+      "kicker": "THE WORD",
+      "sub": "YOUR REFUGE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Your rod and your staff, they comfort me.",
+      "img": "short-shieldpsalm23v4-scene-03.jpg",
+      "kicker": "THE PROMISE",
+      "sub": "STRENGTHENED HEART",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, cover this soul under your sovereign shadow in this hour of uncertainty and doubt.",
+      "img": "short-shieldpsalm23v4-scene-04.jpg",
+      "kicker": "THE PRAYER",
+      "sub": "DIVINE COVERING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant a steady spirit to navigate the path ahead and quiet the storms within their mind.",
+      "img": "short-shieldpsalm23v4-scene-05.jpg",
+      "kicker": "FAITHFULNESS",
+      "sub": "STEADY SPIRIT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May they rest in the certainty that your presence is the anchor for every heavy step.",
+      "img": "short-shieldpsalm23v4-scene-06.jpg",
+      "kicker": "THE COVENANT",
+      "sub": "REST IN PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "The worry keeping you awake tonight has no power over the peace God intends for you."
+    ],
+    [
+      13,
+      28,
+      "Even though I walk through the darkest valley, I will fear no evil, for you are with me."
+    ],
+    [
+      29,
+      40,
+      "Your rod and your staff, they comfort me."
+    ],
+    [
+      41,
+      60,
+      "Father, cover this soul under your sovereign shadow in this hour of uncertainty and doubt."
+    ],
+    [
+      61,
+      80,
+      "Grant a steady spirit to navigate the path ahead and quiet the storms within their mind."
+    ],
+    [
+      81,
+      105,
+      "May they rest in the certainty that your presence is the anchor for every heavy step. Subscribe."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "THE WORRY KEEPING YOU",
+        "AWAKE TONIGHT HAS NO",
+        "POWER OVER THE PEACE",
+        "GOD INTENDS FOR YOU"
+      ],
+      [
+        "GOD INTENDS"
+      ],
+      "PSALM 23:4"
+    ],
+    [
+      13,
+      28,
+      [
+        "EVEN THOUGH I WALK",
+        "THROUGH THE DARKEST VALLEY",
+        "I WILL FEAR NO EVIL",
+        "FOR YOU ARE WITH ME"
+      ],
+      [
+        "FEAR NO EVIL"
+      ],
+      "PSALM 23:4"
+    ],
+    [
+      29,
+      40,
+      [
+        "YOUR ROD AND",
+        "YOUR STAFF",
+        "THEY COMFORT ME"
+      ],
+      [
+        "THEY COMFORT ME"
+      ],
+      "PSALM 23:4"
+    ],
+    [
+      41,
+      60,
+      [
+        "FATHER COVER THIS SOUL",
+        "UNDER YOUR SOVEREIGN SHADOW",
+        "IN THIS HOUR OF",
+        "UNCERTAINTY AND DOUBT"
+      ],
+      [
+        "SOVEREIGN SHADOW"
+      ],
+      "PSALM 23:4"
+    ],
+    [
+      61,
+      80,
+      [
+        "GRANT A STEADY SPIRIT",
+        "TO NAVIGATE THE PATH",
+        "AHEAD AND QUIET THE",
+        "STORMS WITHIN THEIR MIND"
+      ],
+      [
+        "STEADY SPIRIT"
+      ],
+      "PSALM 23:4"
+    ],
+    [
+      81,
+      105,
+      [
+        "MAY THEY REST IN THE",
+        "CERTAINTY THAT YOUR PRESENCE",
+        "IS THE ANCHOR FOR",
+        "EVERY HEAVY STEP"
+      ],
+      [
+        "THE ANCHOR"
+      ],
+      "PSALM 23:4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The worry keeping you awake tonight has no power over the peace God intends for you.",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "INTENDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Even though I walk through the darkest valley, I will fear no evil, for you are with me.",
+      "kind": "phrase",
+      "words": [
+        "FEAR",
+        "NO",
+        "EVIL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your rod and your staff, they comfort me.",
+      "kind": "phrase",
+      "words": [
+        "THEY",
+        "COMFORT",
+        "ME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, cover this soul under your sovereign shadow in this hour of uncertainty and doubt.",
+      "kind": "phrase",
+      "words": [
+        "SOVEREIGN",
+        "SHADOW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant a steady spirit to navigate the path ahead and quiet the storms within their mind.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "SPIRIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May they rest in the certainty that your presence is the anchor for every heavy step.",
+      "kind": "phrase",
+      "words": [
+        "THE",
+        "ANCHOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 23:4"
+}

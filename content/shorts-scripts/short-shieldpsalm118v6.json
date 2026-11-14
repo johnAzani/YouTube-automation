@@ -1,0 +1,279 @@
+{
+  "key": "short-shieldpsalm118v6",
+  "channel": "prayer8",
+  "psalm": 118,
+  "title": [
+    "THE LORD IS ON MY SIDE",
+    "I WILL NOT FEAR"
+  ],
+  "poster": [
+    "GOD IS YOUR",
+    "STRONG TOWER",
+    "PROTECTION IS",
+    "YOUR PORTION"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower sunrise",
+    "golden light rays through thick clouds",
+    "calm mountain lake at twilight",
+    "serene river flowing through canyon",
+    "majestic cliffs under vast sky",
+    "peaceful path through high valley"
+  ],
+  "scenes": [
+    {
+      "a": "If that recurring thought of opposition is darkening your view, stay and hear this truth.",
+      "img": "short-shieldpsalm118v6-scene-01.jpg",
+      "kicker": "PSALM 118:6",
+      "sub": "GOD IS YOUR DEFENSE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The Lord is on my side; I will not fear. What can man do to me?",
+      "img": "short-shieldpsalm118v6-scene-02.jpg",
+      "kicker": "THE PROMISE",
+      "sub": "THE LORD IS ON YOUR SIDE",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, secure the heart of this viewer against the arrows of doubt and worry.",
+      "img": "short-shieldpsalm118v6-scene-03.jpg",
+      "kicker": "A PRAYER OF SAFETY",
+      "sub": "SECURE IN HIS LOVE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let your presence be a high tower surrounding them, keeping every secret fear far away.",
+      "img": "short-shieldpsalm118v6-scene-04.jpg",
+      "kicker": "A DIVINE REFUGE",
+      "sub": "SURROUNDED BY HIS PEACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Grant them the stillness of soul that only comes from knowing you are their shield.",
+      "img": "short-shieldpsalm118v6-scene-05.jpg",
+      "kicker": "TOTAL PROTECTION",
+      "sub": "REST IN HIS MIGHTY HAND",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "May they walk forward today, rooted in your promise, entirely sheltered by your unchanging care.",
+      "img": "short-shieldpsalm118v6-scene-06.jpg",
+      "kicker": "WALK IN PEACE",
+      "sub": "SHIELDED BY THE ALMIGHTY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If that recurring thought of opposition is darkening your view, stay and hear this truth."
+    ],
+    [
+      8,
+      16,
+      "The Lord is on my side; I will not fear. What can man do to me?"
+    ],
+    [
+      16,
+      24,
+      "Heavenly Father, secure the heart of this viewer against the arrows of doubt and worry."
+    ],
+    [
+      24,
+      32,
+      "Let your presence be a high tower surrounding them, keeping every secret fear far away."
+    ],
+    [
+      32,
+      40,
+      "Grant them the stillness of soul that only comes from knowing you are their shield."
+    ],
+    [
+      40,
+      48,
+      "May they walk forward today, rooted in your promise, entirely sheltered by your unchanging care."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF RECURRING THOUGHTS",
+        "OF OPPOSITION DARKEN",
+        "YOUR VIEW",
+        "STAY AND HEAR",
+        "THIS TRUTH"
+      ],
+      [
+        "TRUTH"
+      ],
+      "PSALM 118:6"
+    ],
+    [
+      8,
+      16,
+      [
+        "THE LORD IS ON",
+        "MY SIDE",
+        "I WILL NOT FEAR",
+        "WHAT CAN MAN",
+        "DO TO ME"
+      ],
+      [
+        "NOT FEAR"
+      ],
+      "PSALM 118:6"
+    ],
+    [
+      16,
+      24,
+      [
+        "HEAVENLY FATHER",
+        "SECURE THEIR HEART",
+        "AGAINST ARROWS OF",
+        "DOUBT AND WORRY"
+      ],
+      [
+        "SECURE"
+      ],
+      "PSALM 118:6"
+    ],
+    [
+      24,
+      32,
+      [
+        "LET YOUR PRESENCE",
+        "BE A HIGH TOWER",
+        "KEEPING EVERY",
+        "SECRET FEAR FAR AWAY"
+      ],
+      [
+        "HIGH TOWER"
+      ],
+      "PSALM 118:6"
+    ],
+    [
+      32,
+      40,
+      [
+        "GRANT STILLNESS",
+        "OF SOUL THAT",
+        "ONLY COMES FROM",
+        "KNOWING YOU ARE",
+        "THEIR SHIELD"
+      ],
+      [
+        "SHIELD"
+      ],
+      "PSALM 118:6"
+    ],
+    [
+      40,
+      48,
+      [
+        "WALK FORWARD ROOTED",
+        "IN YOUR PROMISE",
+        "ENTIRELY SHELTERED",
+        "BY UNCHANGING CARE"
+      ],
+      [
+        "SHELTERED"
+      ],
+      "PSALM 118:6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If that recurring thought of opposition is darkening your view, stay and hear this truth.",
+      "kind": "phrase",
+      "words": [
+        "DARKENING",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord is on my side; I will not fear. What can man do to me?",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "SIDE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, secure the heart of this viewer against the arrows of doubt and worry.",
+      "kind": "phrase",
+      "words": [
+        "SECURE",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let your presence be a high tower surrounding them, keeping every secret fear far away.",
+      "kind": "phrase",
+      "words": [
+        "HIGH",
+        "TOWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant them the stillness of soul that only comes from knowing you are their shield.",
+      "kind": "phrase",
+      "words": [
+        "STILLNESS",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May they walk forward today, rooted in your promise, entirely sheltered by your unchanging care.",
+      "kind": "phrase",
+      "words": [
+        "ROOTED",
+        "SHELTERED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 118:6"
+}
