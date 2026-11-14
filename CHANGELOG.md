@@ -5,6 +5,13 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-14 — The Secret Place's grant is complete
+
+- Audit run 43620256826: `GRANT COMPLETE` for The Secret Place. The Analytics API answers for views, watch time by Shorts/long-form, traffic sources, 365-day and daily watch time, subscribers gained and lost, per-video watch time and retention. Revenue answers with no rows. The reporting job started earlier is listed as running.
+- The Analytics API refuses `videoThumbnailImpressions` (400) even with full access, so the Reporting API's daily file is the only source. That question was open since the morning.
+- `scripts/permission_probe.py` asks for the 365-day window the Partner Program counts, and sorts per-video reports by views (sorting by `averageViewPercentage` is refused).
+- The other nine channels are unchanged. Nothing reads Analytics in the scheduled runs yet.
+
 ## 2026-11-14 — The Secret Place's thumbnail-impressions report is started
 
 - New `scripts/reporting_jobs.py` and `.github/workflows/reporting-jobs.yml` (daily 05:47 UTC, all ten channels): asks YouTube once per channel for the daily reach report (`channel_reach_basic_a1`, thumbnail impressions and click rate per video). A channel not granted yet is reported and skipped; a report that has a job never gets a second; nothing is deleted or downloaded; no figure is printed. `tests/test_reporting_jobs.py` (10).

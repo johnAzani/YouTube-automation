@@ -157,9 +157,19 @@ A password change does not end it. Minting a new token does not end the old one.
 
 ## After the grant
 
-**The Secret Place, 14 November 16:30 UTC.** Token: all seven scopes, right channel, no end
-date. YouTube Reporting API: on. **YouTube Analytics API: still off in its Cloud project**
-(a separate entry in the API Library; enabling one does not enable the other).
+**The Secret Place: grant complete, 14 November 17:17 UTC** (audit run 43620256826). Token:
+all seven scopes, right channel, no end date. Reporting API on, one job running. Analytics
+API on, and it answers for: views, watch time split by Shorts and long-form, traffic
+sources, watch time over 365 days and by day, subscribers gained and lost, and per-video
+watch time and retention. Revenue answers with no rows (the channel does not earn yet).
+
+Two things learned from the live answers:
+
+- **Thumbnail impressions and click rate are refused by the Analytics API** (400
+  `badRequest`) even with full access. They come only from the Reporting API's daily reach
+  file, which is why the job below exists.
+- A per-video report must be sorted by views or watch time and capped. Sorting by
+  `averageViewPercentage` is refused.
 
 **Started:** `.github/workflows/reporting-jobs.yml` (`scripts/reporting_jobs.py`) asks YouTube,
 once per channel, to write the daily reach report (`channel_reach_basic_a1`: thumbnail
@@ -172,9 +182,6 @@ channels are picked up by the daily run once their tokens carry the Analytics sc
 **Not built yet:** nothing downloads those files or reads the Analytics API in the scheduled
 runs. `scripts/channel_analytics.py` exists but looks for separate `ANALYTICS_*` secrets and
 was written to run privately. Still to decide: which figures go into this public repository.
-
-Whether the Analytics API accepts `videoThumbnailImpressions` directly is still untested:
-the API is off in every project. The probe asks that question on each run.
 
 ## Changed with this note
 
