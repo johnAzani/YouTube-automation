@@ -57,9 +57,10 @@ PUBLISH_MARGIN_MINUTES = 15
 # drew 7,513 views and 95 long-forms drew 261 (docs/GROWTH_EVIDENCE_2026-11-14.md),
 # so the uploads moved to the format that is watched. The number of uploads a
 # day is unchanged (six: it was three long-forms and three Shorts, it is one
-# long-form and five Shorts), which keeps each channel inside its own YouTube
-# API allowance (an upload costs 1,600 of 10,000 units a day) and uses fewer
-# speech requests (a long-form takes two of the ten free ones, a Short one).
+# long-form and five Shorts), so the upload allowance is asked for nothing it
+# was not already giving (what that allowance is for these projects is not
+# known; STATE.md says why), and it uses fewer speech requests (a long-form
+# takes two to four of the ten free ones, a Short one).
 #
 # Each channel's long-form goes out at the slot that suits what it is for, two
 # channels to a slot so no slot carries all ten long renders. The values are

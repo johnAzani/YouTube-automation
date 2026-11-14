@@ -88,13 +88,19 @@ belonged to.
 
 | Per channel, per day | Before | Now |
 |---|---|---|
-| Uploads (1,600 API units each, 10,000 a day) | 6 | 6 |
+| Uploads | 6 | 6 |
 | Speech requests (10 free) | 9 to 15, about 10 | 7 to 9, about 7 |
 | Long renders | 3 | 1 |
 | Text requests for Shorts | 3 | 5 to 10 |
 
 - The long-form roadmap lasts three times as long (15 to 29 passages left per
   channel was five to ten days; it is now two to four weeks).
+- Uploads: the count is unchanged on purpose. What YouTube allows these
+  projects in a day is not known (the "1,600 units an upload" figure in older
+  notes is out of date, `STATE.md`). Six a day is what the channels were asked
+  for before; The Morning Altar's receipts show seven in one quota day on 10,
+  11 and 12 November. A refused upload pauses that job until the reset
+  (`pipeline/quota_handler.py`); it does not fail the run.
 - Speech, counted on the 42 long-forms ready on 14 November at 4,000
   characters a request: 27 need two requests, 12 need three, 3 need four. A
   Short needs one. Three long-forms and three Shorts was 9 to 15 requests
