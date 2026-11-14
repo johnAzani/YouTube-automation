@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=el"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["DIVINE PROTECTION", "PSALM 121:3-4", "GOD'S SLEEPLESS CARE", "THE COVENANT SHIELD"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-21T15:28:43Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If your feet feel unsteady on this uncertain road today, pause and rest in God's promise. He will not suffer thy foot to be moved: he that keepeth thee will not slumber. Behold, he that keepeth Israel shall neither slumber nor sleep. Lord God, establish my steps so I will never stumble in times of severe trial. Watch over my heart and mind when deep night comes and quiet worries linger. Thank You for shielding my life with Your constant, sleepless care and guiding my daily path. Subscribe to The Covenant Shield to walk under God's daily covering and divine protection.

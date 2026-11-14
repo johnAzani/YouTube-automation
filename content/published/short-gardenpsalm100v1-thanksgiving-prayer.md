@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE PRAISE GARDEN", "A PRAYER OF THANKS", "PSALM 100:1-2", "FIND YOUR REST HERE"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-21T15:28:45Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 That sharp anxiety pulling at your focus right now is met by a higher truth. Make a joyful noise unto the Lord, all ye lands. Serve the Lord with gladness: come before his presence with singing. Father, I bring this heavy heart to Your altar. You are the refuge that holds me when the world feels far too loud to bear. I choose to offer You a sacrifice of praise instead of my own weary worries. May Your gladness settle deep within my spirit, turning my perspective toward Your endless love. Thank You for the gates of thanksgiving that lead me straight into Your holy presence today. I commit my day to You, trusting in Your goodness that never fails, now and forever.
