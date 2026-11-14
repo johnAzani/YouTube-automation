@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-14T04:18:33.018687+00:00",
+  "generated_at": "2026-11-14T09:03:40.837100+00:00",
   "as_of": "2026-11-14",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 5,
+  "total_longform_videos": 6,
   "input_diagnostics": {
-    "snapshot_video_ids": 7,
-    "receipt_video_ids": 7,
-    "matched_video_ids": 7,
-    "longform_below_view_threshold": 5,
+    "snapshot_video_ids": 9,
+    "receipt_video_ids": 9,
+    "matched_video_ids": 9,
+    "longform_below_view_threshold": 6,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 4,
+    "longform_too_young_or_undated": 5,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
@@ -26,15 +26,7 @@
     },
     {
       "theme": "protection",
-      "videos": 2,
-      "measured_videos": 0,
-      "avg_score": 0.0,
-      "avg_engagement": 0.0,
-      "top_scripture": ""
-    },
-    {
-      "theme": "midday_strength_endurance",
-      "videos": 1,
+      "videos": 3,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -47,8 +39,52 @@
       "avg_score": 0.0,
       "avg_engagement": 0.0,
       "top_scripture": ""
+    },
+    {
+      "theme": "midday_strength_endurance",
+      "videos": 1,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": ""
     }
   ],
+  "shorts": {
+    "measured_shorts": 2,
+    "total_shorts": 3,
+    "sufficient_data": false,
+    "avg_views": 3.5,
+    "median_views": 4,
+    "total_views": 7,
+    "minimum_age_days": 2,
+    "by_book": {
+      "genesis": {
+        "shorts": 1,
+        "avg_views": 3.0,
+        "ratio": 0.952
+      },
+      "psalm": {
+        "shorts": 1,
+        "avg_views": 4.0,
+        "ratio": 1.048
+      }
+    },
+    "by_theme": {
+      "peace_rest": {
+        "shorts": 1,
+        "avg_views": 4.0,
+        "ratio": 1.048
+      },
+      "protection": {
+        "shorts": 1,
+        "avg_views": 3.0,
+        "ratio": 0.952
+      }
+    },
+    "guidance": [
+      "Shorts: 2 measured (need 6, each at least 2 days old); the network's pooled numbers order this channel's Shorts until it has its own."
+    ]
+  },
   "guidance": [
     "Only 0 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real."
   ],
