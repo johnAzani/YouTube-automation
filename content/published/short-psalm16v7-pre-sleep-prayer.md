@@ -25,6 +25,7 @@ thumbnail_attempts: 0
 thumbnail_poster: ["HE COUNSELS ME", "IN THE NIGHT SEASONS", "PSALM 16:7-8", "NEVER BE MOVED"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Close your eyes and breathe gently tonight; even the quiet midnight hours belong completely to the Lord who loves you. I will bless the Lord, who hath given me counsel: my reins also instruct me in the night seasons. I have set the Lord always before me: because he is at my right hand, I shall not be moved. Faithful Counselor, speak gentle wisdom over every unanswered question and replace nighttime restlessness with calm, steady trust. Anchor my spirit while I slumber deeply so nothing in this world shakes my peace before morning dawns. Agree in prayer by whispering Amen tonight, and subscribe to The Secret Place for nightly scripture rest.

@@ -24,6 +24,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["FIND PEACE", "IN THE", "SECRET PLACE", "TONIGHT"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Take a deep breath and let go. Release the weight of this day, for you are safe here in this quiet space. Do not be anxious about anything, but in every situation, by prayer and petition, present your requests to God. And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus. Lord, silence the noise of the world. Calm the racing thoughts that linger in this weary mind tonight. I lay down my worries, trusting that You are sovereign over all my tomorrows and my present burdens. May Your peace wrap around me like a blanket. Let my sleep be deep, restorative, and filled with Your presence. I rest in the assurance of Your love. Breathe slowly, knowing that You are held by the Creator of all. May the stillness of this night remain with you until the morning light. Please subscribe for daily prayer.

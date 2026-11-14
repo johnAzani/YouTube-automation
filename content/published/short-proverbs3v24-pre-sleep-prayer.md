@@ -24,6 +24,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["THY SLEEP", "SHALL BE SWEET", "PROVERBS 3:24", "SWEET NIGHTTIME REST"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Settle into your bed tonight and take a slow calming breath, letting God's promise quiet the noise of this day. When thou liest down, thou shalt not be afraid: yea, thou shalt lie down, and thy sleep shall be sweet. For the Lord shall be thy confidence, and shall keep thy foot from being taken. Lord of wisdom, pour sweet rest over weary eyes tonight and lift every heavy burden from everyone in this home. Guard my mind from sudden dread in the dark and renew my strength gently through the silent night. Whisper Amen to receive sweet sleep tonight, and subscribe to The Secret Place for daily bedtime prayer.

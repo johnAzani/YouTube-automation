@@ -24,6 +24,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["BEDTIME PRAYER", "PSALM 37:7", "BE STILL BEFORE THE LORD", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Take a deep breath and let your shoulders drop as tonight draws to a quiet close. Release every lingering concern, every unfinished task, and every heavy thought into God’s gentle hands. The Scriptures remind us in Psalm 37:7: Be still before the Lord and wait patiently for him. You do not need to figure out tomorrow tonight. Heavenly Father, cover this precious soul with your quiet peace. Soften their heart, still their anxious mind, and grant them deep, restful sleep beneath your protective wings. Let your presence surround them through the dark hours, filling their spirit with calm and quiet rest. May they wake renewed in your unfailing love. Subscribe to join The Secret Place for prayers every night. Amen.

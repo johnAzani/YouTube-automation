@@ -24,6 +24,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["REST IN HIS SHADOW", "BEDTIME PRAYER", "PSALM 63:6-7", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Take a deep breath and let the stillness of the night settle over your heart. As you lie down, let go of every burden from today. Psalm 63 verses 6 and 7 says: On my bed I remember you; I think of you through the watches of the night. Because you are my help, I sing in the shadow of your wings. Lord, in these quiet midnight hours, we wrap ourselves in Your faithful love. Shield our mind from restlessness and cover us with Your gentle peace. You are our refuge and our strength. Rest now under the shadow of His wings, and subscribe to join us in prayer every night.

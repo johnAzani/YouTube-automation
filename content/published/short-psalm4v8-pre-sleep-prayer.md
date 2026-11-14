@@ -25,6 +25,7 @@ thumbnail_attempts: 0
 thumbnail_poster: ["IN PEACE I WILL", "LIE DOWN AND SLEEP", "PSALM 4:8", "DWELL IN SAFETY"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Exhale the unfinished work of today, soften your breathing, and let your weary heart come home to quiet stillness. Hear David's night song: I will both lay me down in peace, and sleep. For thou, Lord, only makest me dwell in safety through every dark and silent hour. Gracious Father, untangle my thoughts from every worry about tomorrow and hold my entire household securely in Your hand. Let Your stillness settle over my room tonight like a warm blanket until morning mercies wake me refreshed. Whisper Amen to rest in His safety tonight, and subscribe to The Secret Place so we can pray together nightly.

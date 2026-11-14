@@ -28,6 +28,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["CAST THY BURDEN", "UPON THE LORD", "BEDTIME PRAYER", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If you are staring at the dark ceiling holding a trouble you cannot solve, listen. Cast thy burden upon the LORD, and he shall sustain thee: he shall never suffer the righteous to be moved. You were never meant to carry this heavy weight through the quiet midnight hours alone. God sees the exhaustion in your soul and the silent tears you have hidden from the world. Place every single care, every unanswered question, and every lingering fear into His gentle hands right now. He will hold you up when your own strength fails, keeping your steps completely steady tonight. Sleep in peace, knowing He holds your tomorrow. Subscribe to The Secret Place for daily prayers.

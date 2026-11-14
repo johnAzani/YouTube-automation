@@ -24,6 +24,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["NIGHT SHINES", "AS THE DAY", "PSALM 139:11-12", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Take a slow, deep breath and let the quiet of this calm night settle over your heart. As you close your eyes, remember the gentle and eternal promise of God's holy presence. Psalm 139:11-12 says, if I say surely the darkness shall cover me, even the darkness is not dark to You. The night shines bright as the day, for darkness is as light to You. Heavenly Father, when shadows feel heavy, remind this weary soul that Your light fills every dark space. No night is ever too deep for Your grace to reach. Wrap them in peaceful sleep tonight. Restore their spirit as they rest in Your care. Amen. Subscribe to pray with us every night.

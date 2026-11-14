@@ -24,6 +24,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["THE LORD IS MY ROCK", "AND MY FORTRESS", "PSALM 18:2", "SAFE STRONGHOLD"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Let your shoulders drop tonight and breathe deeply; you do not have to be strong in your own strength anymore. Declare with David tonight: The Lord is my rock, and my fortress, and my deliverer. My God, my strength, in whom I will trust; my buckler, and the horn of my salvation, and my high tower. Mighty Fortress, stand as walls of peace around my bedroom and shelter everyone I love through every hour tonight. Carry every weight too heavy for me today and grant my tired body deep, quiet slumber upon Your solid rock. Say Amen in faith tonight, and subscribe to The Secret Place to end every evening in God's Word.

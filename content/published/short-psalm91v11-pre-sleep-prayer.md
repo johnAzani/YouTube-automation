@@ -25,6 +25,7 @@ thumbnail_attempts: 0
 thumbnail_poster: ["ANGELS STAND WATCH", "AROUND YOUR BED", "PSALM 91:11-12", "ANGELIC NIGHT GUARD"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Rest your head upon your pillow tonight, breathe out slowly, and remember you are never alone in the dark. For he shall give his angels charge over thee, to keep thee in all thy ways. They shall bear thee up in their hands, lest thou dash thy foot against a stone. Lord of hosts, surround this bed and every loved one under this roof with Your faithful heavenly watch tonight. Keep every shadow far from my dreams, quiet my spirit, and carry me gently into deep restorative sleep. Type Amen to receive this blessing, and subscribe to The Secret Place for nightly scripture prayer.

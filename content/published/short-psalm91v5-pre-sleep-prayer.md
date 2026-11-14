@@ -24,6 +24,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["NO TERROR BY NIGHT", "SLEEP IN GOD'S PEACE", "A BEDTIME PRAYER", "FEAR NO NIGHT SHADOW"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Take a slow, peaceful breath as the house grows quiet, and let every burden slip from your shoulders. Thou shalt not be afraid for the terror by night; nor for the arrow that flieth by day. Nor for the pestilence that walketh in darkness; nor for the destruction that wasteth at noonday. Heavenly Father, station Your peace at every door and window of this home while my eyes are closed tonight. Silence every anxious thought, calm every racing heartbeat, and wrap my mind in unbroken rest until morning light. Whisper Amen in your heart tonight, and subscribe to The Secret Place to pray with us every evening.

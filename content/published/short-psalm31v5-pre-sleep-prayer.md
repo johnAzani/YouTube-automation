@@ -24,6 +24,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["INTO THINE HAND", "I COMMIT MY SPIRIT", "PSALM 31:5", "REDEEMED IN PEACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Open your hands upon the blanket tonight, breathe out slowly, and release everything you tried to carry alone today. Bow down thine ear to me; deliver me speedily: be thou my strong rock, for an house of defence to save me. Into thine hand I commit my spirit: thou hast redeemed me, O Lord God of truth. Redeemer of truth, receive every care on my mind tonight and cradle my entire household in Your faithful hands. Keep my soul tranquil through the night watches until dawn and awaken me in the joy of Your steadfast mercy. Whisper Amen as you drift peacefully to sleep, and subscribe to The Secret Place for nightly scripture prayer.
