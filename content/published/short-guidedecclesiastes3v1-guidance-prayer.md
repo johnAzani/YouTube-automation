@@ -23,10 +23,13 @@ short_visual_fingerprints: ["sha256:9b3d74329ab9547c60d4844e6094b67a767611aeebb5
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UC8lPazRi_sj2Q5TQGVQ6bqQ; auth_channel_title=The Guided Path; long_uploads_status=eligib"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UC8lPazRi_sj2Q5TQGVQ6bqQ; auth_channel_title=The Guided Path; long_uploads_status=eligible; video_channel_id=UC8lPazRi_sj2Q5TQGVQ6bqQ; video_channel_title=The Guided Path; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["SEEK HIS", "TIMING", "FIND HIS", "PEACE"]
 thumbnail_kicker: "HE SHALL DIRECT THY PATHS"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-21T08:48:02Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 That heavy expectation of needing an answer right this second is exhausting your weary spirit. To every thing there is a season, and a time to every purpose under the heaven. Lord, help me release my grip on the clock and trust that You are working now. Grant me the patience to wait for the proper season You have already ordained for me. Clear away my restless anxiety so I might clearly hear Your voice leading my steps. Amen. Please subscribe to The Guided Path and join us as we seek God's wisdom.
