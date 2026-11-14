@@ -78,16 +78,22 @@ def _receipt(directory: Path, name: str, channel: str, when: str, fmt: str = "lo
 
 def test_a_late_schedule_event_skips_channels_the_slot_already_served(tmp_path):
     """Slot 14:14. The supervisor's run published prayer4 at 15:02; the schedule
-    event arrives at 17:50. prayer4 must not get a second video for that slot."""
+    event arrives at 17:50. prayer4 must not get a second video for that slot.
+
+    What serves the slot depends on what it owes the channel
+    (tests/test_shorts_first_mix.py): 14:14 owes The Family Altar (prayer5) and
+    The Midday Watch (prayer3) a long-form, and the others a Short.
+    """
     pub = tmp_path / "published"
     _receipt(pub, "0207-a.md", "prayer4", "2026-11-12T15:02:00Z")
     _receipt(pub, "0304-b.md", "prayer5", "2026-11-12T13:50:00Z")       # before the slot
-    _receipt(pub, "short-x.md", "prayer6", "2026-11-12T15:10:00Z", fmt="short")  # not a long-form
+    _receipt(pub, "short-x.md", "prayer6", "2026-11-12T15:10:00Z", fmt="short")  # a Short is what it was owed
+    _receipt(pub, "short-y.md", "prayer3", "2026-11-12T15:11:00Z", fmt="short")  # owed a long-form
     now = datetime(2026, 11, 12, 17, 50, tzinfo=UTC)
-    owed, served, slot = plan.split_served(["prayer4", "prayer5", "prayer6"], now, pub)
+    owed, served, slot = plan.split_served(["prayer3", "prayer4", "prayer5", "prayer6"], now, pub)
     assert slot == datetime(2026, 11, 12, 14, 14, tzinfo=UTC)
-    assert served == ["prayer4"]
-    assert owed == ["prayer5", "prayer6"]
+    assert served == ["prayer4", "prayer6"]
+    assert owed == ["prayer3", "prayer5"]
 
 
 def test_an_event_delivered_after_the_next_slot_serves_the_slot_it_lands_in(tmp_path):
@@ -101,9 +107,10 @@ def test_an_event_delivered_after_the_next_slot_serves_the_slot_it_lands_in(tmp_
 
 def test_the_slots_the_plan_uses_are_the_crons_in_the_workflow():
     crons = [row["cron"] for row in workflow()[True]["schedule"]]
-    assert sorted(crons) == ["14 14 * * *", "14 19 * * *", "14 6 * * *"]
+    assert sorted(crons) == ["14 10 * * *", "14 14 * * *", "14 19 * * *",
+                             "14 23 * * *", "14 6 * * *"]
     assert plan.current_slot(datetime(2026, 11, 13, 6, 13, tzinfo=UTC)) == \
-        datetime(2026, 11, 12, 19, 14, tzinfo=UTC)
+        datetime(2026, 11, 12, 23, 14, tzinfo=UTC)
     assert plan.current_slot(datetime(2026, 11, 13, 6, 14, tzinfo=UTC)) == \
         datetime(2026, 11, 13, 6, 14, tzinfo=UTC)
 
@@ -389,11 +396,14 @@ def test_the_evening_slot_is_still_the_current_slot_after_midnight():
     for hour, minute in ((0, 0), (0, 5), (3, 30), (6, 13)):
         assert prev_occurrence(crons, datetime(2026, 11, 13, hour, minute, tzinfo=UTC)) == evening
     assert prev_occurrence(list(reversed(crons)), datetime(2026, 11, 13, 3, 0, tzinfo=UTC)) == evening
+    # The workflow's own last slot of the day is 23:14 since 14 November 2026,
+    # and it is the one still owed after midnight.
+    late = datetime(2026, 11, 12, 23, 14, tzinfo=UTC)
     with mock.patch.object(sup, "_channels", return_value=["prayer2"]), \
          mock.patch.object(sup, "_channel_has_supply", return_value=True), \
          mock.patch("scripts.automation_monitor.active_quota_cooldown", return_value=None), \
          mock.patch.object(sup, "published_channels_since", return_value=set()):
         now = datetime(2026, 11, 13, 0, 30, tzinfo=UTC)
         out = sup.supervise(now, _history(now), dry_run=True, state={})
-    assert {"workflow": "produce.yml", "slot": evening.isoformat(), "result": "would dispatch"} \
+    assert {"workflow": "produce.yml", "slot": late.isoformat(), "result": "would dispatch"} \
         in out["dispatched"]

@@ -5,14 +5,23 @@ name: Produce video
 # production uploads only run on the official release cron schedule or manual dispatch.
 on:
   schedule:
-    # Daily release slots for BOTH channels (the plan job below expands a
-    # scheduled run to secret-place + prayer2, produced sequentially):
-    # 1. 06:14 UTC — Morning scripture devotional (07:14 WAT)
-    # 2. 14:14 UTC — US afternoon / transatlantic priming (15:14 WAT / 10:14 EST)
-    # 3. 19:14 UTC — Peak evening bedtime prayer sanctuary (20:14 WAT / 8:14pm local)
+    # Five production slots a day, every channel in each (the plan job below
+    # expands a scheduled run to every provisioned channel, rendered side by
+    # side). Every slot owes each channel a Short; one slot a day owes it a
+    # long-form, and which one is per channel (LONGFORM_SLOT_UTC in
+    # scripts/produce_plan.py, two channels to a slot). Six uploads a day per
+    # channel, as before 14 November 2026, but one long-form and five Shorts
+    # instead of three and three: the Shorts are what is watched
+    # (docs/GROWTH_EVIDENCE_2026-11-14.md).
+    #
+    # Keep at least three hours between slots: a channel's Shorts are paced
+    # three hours apart (SHORTS_MIN_GAP_HOURS in pipeline/short_release.py), and
+    # a closer slot would find its Short held back.
     - cron: "14 6 * * *"    # 7:14am Nigeria time
-    - cron: "14 14 * * *"  # 3:14pm Nigeria time
-    - cron: "14 19 * * *"  # 8:14pm Nigeria time (the 19:14 release slot)
+    - cron: "14 10 * * *"   # 11:14am Nigeria time
+    - cron: "14 14 * * *"   # 3:14pm Nigeria time
+    - cron: "14 19 * * *"   # 8:14pm Nigeria time (the 19:14 release slot)
+    - cron: "14 23 * * *"   # 12:14am Nigeria time
   # The owner's "run it now" button, and the only trigger reachable without
   # Actions-write on the API: `workflow_dispatch` needs a token this account's
   # integration does not hold, while `repository_dispatch` needs only contents
@@ -50,6 +59,10 @@ on:
         description: "Authored 9:16 Short key to render & upload (e.g. short-enron)"
         required: false
         default: ""
+      longform:
+        description: "Make a long-form in this run even if this slot owes the channel only a Short (each channel has one long-form slot a day)"
+        type: boolean
+        default: false
       publish_at:
         description: "Upload the long-form private and let YouTube publish it at this UTC time, e.g. 2026-11-14T14:14:00Z (blank = public when it finishes)"
         type: string
@@ -555,6 +568,21 @@ jobs:
           { echo "### Receipts for already-live videos (exit $rc)"; echo '```';
             grep -v '^\[run\] ⏳' record.log | tail -20; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
 
+      - name: Decide whether this slot owes a long-form
+        # One long-form a day per channel, at its own slot; every other slot is
+        # a Short only (scripts/produce_plan.py). Asked AFTER the Short step,
+        # because the answer depends on it: a Shorts-only slot whose Short did
+        # not publish gets a long-form instead of nothing, as every slot did
+        # before 14 November 2026. A channel whose newest long-form is over 26
+        # hours old is owed one at any slot. If this step cannot decide, it
+        # says yes: the old behaviour, and never a lost release.
+        id: mix
+        if: ${{ inputs.job == '' && inputs.short == '' }}
+        continue-on-error: true
+        env:
+          FORCE_LONGFORM: ${{ inputs.longform || github.event.client_payload.longform }}
+        run: python -m scripts.produce_plan --longform-due "$CHANNEL_ID" --force "$FORCE_LONGFORM"
+
       - name: Render and upload the long-form edition
         # This is the release. Before it was merged with the Short into one step,
         # a 30-minute render and a wedged render looked identical: one opaque
@@ -568,7 +596,10 @@ jobs:
         # a slow runner, and the per-stage progress lines now say where the time
         # went if it ever comes close.
         timeout-minutes: 170
-        if: ${{ inputs.short == '' && (inputs.job != '' || steps.channel_queue.outputs.has_job == 'true') }}
+        # `!= 'false'` on purpose: only an explicit "this slot owes a Short
+        # only" skips the release. A mix step that failed or was skipped leaves
+        # the output empty, and an empty answer publishes.
+        if: ${{ inputs.short == '' && (inputs.job != '' || (steps.channel_queue.outputs.has_job == 'true' && steps.mix.outputs.longform != 'false')) }}
         env:
           # An append-only trail of what this step was doing, written as it runs.
           # The step summary needs a GitHub sign-in to read and the log archive is

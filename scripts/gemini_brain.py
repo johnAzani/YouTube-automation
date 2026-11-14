@@ -156,7 +156,9 @@ def cmd_auto_replenish(brain: GeminiBrain, min_days: float) -> int:
 def cmd_author_shorts(brain: GeminiBrain) -> int:
     """Author the scene spec for every queued Short that cannot render yet, and replenish Shorts runway."""
     rows = brain.author_missing_shorts()
-    rows.extend(brain.replenish_shorts_queue(min_ready=6))
+    from pipeline.supply import SHORTS_READY_TARGET
+
+    rows.extend(brain.replenish_shorts_queue(min_ready=SHORTS_READY_TARGET))
     if not rows:
         print("[gemini-brain] Shorts queue is empty. Nothing to author.")
         return 0

@@ -49,10 +49,15 @@ MAX_AUTHORS_PER_RUN = 2
 MAX_AUTHORS_WHEN_EMPTY = 4
 EXPANSION_TARGET_WORDS = 900
 
-# The release slots in .github/workflows/produce.yml: 06:14, 14:14 and 19:14 UTC.
-# Supply is measured against this, not against "scripts", because the queue is
-# consumed three times a day and a target of one leaves the 7:14pm slot empty.
+# How many long-forms a day the supply is sized for. Since 14 November 2026 a
+# channel publishes one long-form a day (scripts/produce_plan.py); the figure
+# stays at three on purpose, so the long-form queue holds three days of runway
+# instead of one and a bad authoring day does not empty it.
 SLOTS_PER_DAY = 3
+# Shorts go out at five slots a day. The daily brain run tops each channel up to
+# two days' worth, so a missed or failed brain run costs nothing the next day.
+SHORTS_PER_DAY = 5
+SHORTS_READY_TARGET = 2 * SHORTS_PER_DAY
 
 
 @dataclass

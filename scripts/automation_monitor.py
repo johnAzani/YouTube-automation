@@ -693,7 +693,19 @@ def check_outcomes(report: MonitorReport, now: datetime | None = None,
     # failure the owner kept reporting: green tick, no video.
     produce = next((a for a in report.automations if a.workflow == "produce.yml"), None)
     if produce is not None and newest_date is not None and produce.last_success is not None:
-        if produce.last_success.date() > newest_date.date():
+        # "Nothing" is judged against the slot the run belonged to, not the
+        # calendar. GitHub delivers a slot's schedule event hours late; by then
+        # the supervisor has had every channel published, so the late run
+        # correctly does nothing. One that started after midnight UTC (00:19 on
+        # 14 November 2026, for the 19:14 slot) used to be reported as "green
+        # tick, no video" until the next morning's upload, and kept this
+        # monitor red for six hours with nothing wrong.
+        slot = None
+        for filename, _name, crons in workflow_files():
+            if filename == "produce.yml":
+                slot = prev_occurrence(crons, produce.last_success)
+        served = slot is not None and newest_date >= slot
+        if produce.last_success.date() > newest_date.date() and not served:
             report.outcomes.append({
                 "outcome": "produce published nothing",
                 "detail": (f"last successful production run "

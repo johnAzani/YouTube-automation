@@ -187,8 +187,14 @@ class TestSupplyIsCountedInSlotsNotScripts(unittest.TestCase):
         cron = (Path(__file__).resolve().parents[1] / ".github" / "workflows"
                 / "produce.yml").read_text(encoding="utf-8")
         slots = re.findall(r'- cron: "(\d+) (\d+) \* \* \*"', cron)
-        self.assertEqual(len(slots), sp.SLOTS_PER_DAY,
-                         "SLOTS_PER_DAY must track the real release schedule")
+        # Since 14 November 2026 every slot owes a Short and one slot a day owes
+        # a long-form (scripts/produce_plan.py). The Shorts target tracks the
+        # slots; the long-form figure stays at three so the queue holds three
+        # days of runway, and must never drop below the one a day that is used.
+        self.assertEqual(len(slots), sp.SHORTS_PER_DAY,
+                         "SHORTS_PER_DAY must track the real release schedule")
+        self.assertGreaterEqual(sp.SLOTS_PER_DAY, 1)
+        self.assertLessEqual(sp.SLOTS_PER_DAY, len(slots))
 
     def test_two_days_of_runway_means_six_publishable_scripts(self):
         from unittest import mock

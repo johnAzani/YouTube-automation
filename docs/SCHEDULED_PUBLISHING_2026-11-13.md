@@ -153,6 +153,13 @@ gh api --method POST repos/johnAzani/YouTube-automation/dispatches \
 Set `PUBLISH_LEAD_MINUTES = 270` in `scripts/produce_plan.py`. The smallest gap
 between these crons is still five hours, so 270 fits.
 
+> **Out of date since 14 November 2026.** There are now five slots (06:14,
+> 10:14, 14:14, 19:14, 23:14 UTC) and the smallest gap is four hours, so a lead
+> of 240 or more is refused and 270 would publish everything at once. Most
+> slots now publish only a Short, and Shorts are not scheduled: moving the
+> crons earlier would move the Shorts earlier. Rework this recipe before
+> switching on (`docs/SHORTS_FIRST_MIX_2026-11-14.md`, section 6).
+
 **3. Watch one day.** Switching back is the repository variable
 `PRODUCE_PUBLISH_LEAD_MINUTES=0`: every upload is public at once again, without a
 code change. (The crons would then be 4.5 hours early; move them back if it

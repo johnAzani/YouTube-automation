@@ -83,6 +83,20 @@ def short_key_for_doc(doc: ScriptDoc) -> str:
     return short_key(doc.channel, _base_short_key_for_doc(doc))
 
 
+def short_key_for_reference(channel_id: str | None, reference: str) -> str:
+    """The Short key a passage gets on a channel, with no long-form behind it.
+
+    The same derivation as `short_key_for_doc`, so a Short authored on its own
+    from "Psalm 91:4" and the companion of a later long-form on Psalm 91:4 carry
+    one key, and the second is recognised as already made.
+    """
+    from types import SimpleNamespace
+
+    doc = SimpleNamespace(title=str(reference), slug="", id="",
+                          channel=normalize_channel_id(channel_id))
+    return short_key(doc.channel, _base_short_key_for_doc(doc))
+
+
 def _base_short_key_for_doc(doc: ScriptDoc) -> str:
     """`^short-[a-z0-9]+$` key inside the channel's own namespace."""
     ref = extract_scripture_reference(doc)
@@ -638,6 +652,13 @@ FALLBACK_TEXT_MODELS = ("gemini-3.5-flash-lite", "gemini-3.1-flash-lite",
 #: Requests a single brain pass may make. A guard, not a target: the retry loops are
 #: bounded per call, and this bounds the *whole pass* so a bad morning cannot eat the
 #: day's allowance before the first script is written.
+#: File-name prefix of a standalone Short's manifest. The selector takes a
+#: channel's manifests in name order and long-form ids start at 0001, so these go
+#: out first.
+STANDALONE_PREFIX = "0000"
+#: Standalone Shorts authored in one pass, per channel. Each costs one or two
+#: text requests; six is more than a day's four and well inside the pass budget.
+MAX_STANDALONE_PER_PASS = 6
 MAX_CALLS_PER_RUN = int(os.environ.get("GEMINI_MAX_CALLS_PER_RUN", "40") or "40")
 
 
@@ -1203,7 +1224,8 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
             raise BrainAuthoringError(
                 f"{brand.display_name} authoring rejected: " + "; ".join(problems))
 
-    def author_short_spec(self, longform_doc: ScriptDoc, key: str | None = None) -> "ShortSpec":
+    def author_short_spec(self, longform_doc: ScriptDoc | None, key: str | None = None,
+                          *, scripture: str | None = None) -> "ShortSpec":
         """Ask the model to write a complete 9:16 Short spec, then validate it.
 
         This is the step that was missing: `tools/shorts.py` could only render Shorts
@@ -1212,19 +1234,28 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         captions, kinetic phrases, beats — so the model can write it and the
         renderer can build it.
 
+        A Short needs a passage, not a long-form: the prompt is built from the
+        reference alone. Pass `scripture` (and no document) for a Short that
+        stands on its own.
+
         Raises BrainAuthoringError rather than returning something partial: a Short
         that renders with mislabelled scripture is worse than a stalled queue.
         """
         from .short_script import (ShortSpecError, build_prompt, parse_model_json,
                                    require_valid, validate_spec)
 
-        scripture = extract_scripture_reference(longform_doc)
+        if scripture is None:
+            if longform_doc is None:
+                raise BrainAuthoringError("a Short needs a long-form script or a scripture reference")
+            scripture = extract_scripture_reference(longform_doc)
+        scripture = str(scripture).replace("–", "-").strip()
         if not self.is_api_available():
             raise BrainAuthoringError(
                 f"cannot author {scripture} Short: {self.api_status()['reason']}. "
                 "Refusing to fabricate a scene list."
             )
-        key = key or short_key_for_doc(longform_doc)
+        key = key or (short_key_for_doc(longform_doc) if longform_doc is not None
+                      else short_key_for_reference(self.channel_id, scripture))
         prompt = build_prompt(scripture, key=key, channel_id=self.channel_id)
         last_error = ""
         # Two attempts per model, then *change the model*: a spec that comes back
@@ -1353,6 +1384,15 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         scripture_ref = extract_scripture_reference(longform_doc)
         manifest_filename = f"{longform_doc.id}-{key}.yml"
         manifest_path = SHORTS_QUEUE_DIR / manifest_filename
+        # The passage may already have a Short that stands on its own (the key
+        # is derived the same way). A second manifest for the same key would
+        # sit in the queue counted as ready and never publish.
+        standalone = SHORTS_QUEUE_DIR / f"{STANDALONE_PREFIX}-{key}.yml"
+        if standalone.is_file():
+            print(f"[gemini-brain] {key} already has a standalone Short queued "
+                  f"({standalone.name}); no companion manifest for {longform_doc.id}",
+                  flush=True)
+            return None, key
 
         authored, authoring_note = False, ""
         if key not in _renderer_script_keys():
@@ -1398,6 +1438,53 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         manifest_path.write_text(yaml.safe_dump(manifest_data, sort_keys=False), encoding="utf-8")
         return manifest_path, key
 
+    def generate_standalone_short(self, scripture: str, source: str = "evergreen",
+                                  ) -> tuple[Optional[Path], str]:
+        """Author and queue a Short that has no long-form behind it.
+
+        Returns ``(manifest_path, key)``; the path is ``None`` when the spec could
+        not be authored, and then nothing is written: a manifest with no spec is
+        a queue entry that can never render. The manifest is named ``0000-<key>``
+        so the selector, which takes a channel's manifests in name order, sends
+        these out ahead of the companion Shorts already waiting.
+        """
+        from .short_release import _renderer_script_keys
+        from .short_script import save_spec
+
+        reference = str(scripture).replace("–", "-").strip()
+        key = short_key_for_reference(self.channel_id, reference)
+        note = ""
+        if key not in _renderer_script_keys():
+            try:
+                spec = self.author_short_spec(None, key=key, scripture=reference)
+                save_spec(spec)
+                note = f"spec authored by the brain ({spec.words} narration words)"
+            except Exception as exc:  # noqa: BLE001
+                print(f"[gemini-brain] Standalone Short {key} ({reference}) not authored: "
+                      f"{str(exc)[:160]}", flush=True)
+                return None, key
+        SHORTS_QUEUE_DIR.mkdir(parents=True, exist_ok=True)
+        manifest_path = SHORTS_QUEUE_DIR / f"{STANDALONE_PREFIX}-{key}.yml"
+        manifest_data = {
+            "short": key,
+            "channel": self.channel_id,
+            # No companion_longform_id: this Short is not the cut-down of a
+            # long-form, and `standalone` says so to anything that reads the queue.
+            "standalone": True,
+            "source": source,
+            "scripture": reference,
+            "status": "approved",
+            "renderer_ready": True,
+            "authored_by_brain": True,
+            "privacy": "public",
+            "replace": False,
+            "target_window_utc": brand_for(self.channel_id).short_target_window_utc,
+            "notes": (f"Standalone Short on {reference} ({source} list)"
+                      + (f" — {note}" if note else "")),
+        }
+        manifest_path.write_text(yaml.safe_dump(manifest_data, sort_keys=False), encoding="utf-8")
+        return manifest_path, key
+
     def _companion_doc(self, longform_id: str) -> Optional[ScriptDoc]:
         """Find the long-form script a queued Short is a companion to."""
         if not longform_id:
@@ -1436,6 +1523,27 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                 continue
 
             doc = self._companion_doc(cid)
+            if doc is None and data.get("standalone") and str(data.get("scripture") or "").strip():
+                # A standalone Short's source is its reference, not a long-form.
+                reference = str(data["scripture"]).strip()
+                try:
+                    spec = self.author_short_spec(None, key=key, scripture=reference)
+                    save_spec(spec)
+                except Exception as exc:  # noqa: BLE001
+                    reason = f"authoring failed: {exc}"
+                    data.update(status="draft", renderer_ready=False, authored_by_brain=False,
+                                notes=f"Standalone Short on {reference} — {reason}")
+                    path.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+                    rows.append({"file": path.name, "key": key, "verdict": "failed", "reason": reason})
+                    continue
+                renderable.add(key)
+                data.update(status="approved", renderer_ready=True, authored_by_brain=True,
+                            notes=(f"Standalone Short on {reference} — spec authored by the "
+                                   f"brain ({spec.words} narration words)"))
+                path.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+                rows.append({"file": path.name, "key": key, "verdict": "authored",
+                             "reason": f"{spec.words} narration words"})
+                continue
             if doc is None:
                 reason = f"no long-form script for companion id {cid!r}; cannot author {key}"
                 data.update(status="draft", renderer_ready=False, authored_by_brain=False,
@@ -1468,8 +1576,62 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                          "reason": f"{spec.words} narration words"})
         return rows
 
+    def _standalone_pass(self, source: str, state: dict[str, Any],
+                         rows: list[dict[str, Any]], min_ready: int) -> None:
+        """Author standalone Shorts from one list until the queue has `min_ready`.
+
+        `state` carries the counts the whole replenishment shares: ``ready``,
+        ``budget`` (standalone Shorts this pass may still author), and the
+        ``covered`` / ``renderable`` key sets. Two failures in a row end the pass:
+        a model that is down answers the third request the way it answered the
+        first two, and the requests are better kept for the long-form.
+        """
+        from .evergreen_shorts import LOW_POOL, candidates
+
+        if state["ready"] >= min_ready or state["budget"] <= 0:
+            return
+        pool = candidates(self.channel_id, taken_longform_ids=self._existing_job_ids())
+        mine = [ref for ref, src in pool if src == source]
+        failures = 0
+        for reference in mine:
+            if state["ready"] >= min_ready or state["budget"] <= 0 or failures >= 2:
+                break
+            key = short_key_for_reference(self.channel_id, reference)
+            if key in state["covered"]:
+                continue
+            if key not in state["renderable"] and not self.is_api_available():
+                break
+            state["budget"] -= 1
+            mpath, mkey = self.generate_standalone_short(reference, source=source)
+            if mpath is None:
+                failures += 1
+                rows.append({"file": f"{STANDALONE_PREFIX}-{mkey}.yml", "key": mkey,
+                             "verdict": "failed",
+                             "reason": f"standalone Short on {reference} could not be authored"})
+                continue
+            failures = 0
+            state["ready"] += 1
+            state["renderable"].add(mkey)
+            state["covered"].add(mkey)
+            rows.append({"file": mpath.name, "key": mkey, "verdict": "authored",
+                         "reason": f"standalone Short on {reference} ({source} list)"})
+        left = len(candidates(self.channel_id, taken_longform_ids=self._existing_job_ids()))
+        if left < LOW_POOL and not state.get("warned"):
+            state["warned"] = True
+            print(f"::warning title=Short passages running low ({self.channel_id})::"
+                  f"{left} passage(s) left for standalone Shorts on "
+                  f"{self.channel.display_name}. Add passages to EVERGREEN in "
+                  f"pipeline/evergreen_shorts.py or extend the channel's roadmap.", flush=True)
+
     def replenish_shorts_queue(self, min_ready: int = 6) -> list[dict[str, Any]]:
-        """Replenish this channel's companion Shorts when ready Shorts < `min_ready`."""
+        """Top this channel's ready Shorts up to `min_ready`.
+
+        In order: standalone Shorts on the channel's evergreen passages, then
+        companions of its queued and published long-forms, then standalone Shorts
+        on roadmap passages that have no long-form yet
+        (`pipeline/evergreen_shorts.py`). A channel publishes five Shorts a day and
+        one long-form, so companions alone can no longer keep the queue fed.
+        """
         from .short_release import EDITIONS, _renderer_script_keys, resolve_edition
 
         rows: list[dict[str, Any]] = []
@@ -1508,6 +1670,11 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
 
         if ready_count >= min_ready:
             return rows
+
+        state: dict[str, Any] = {"ready": ready_count, "budget": MAX_STANDALONE_PER_PASS,
+                                 "covered": covered_keys, "renderable": renderable}
+        self._standalone_pass("evergreen", state, rows, min_ready)
+        ready_count = state["ready"]
 
         candidate_paths = [
             *sorted(Path(QUEUE_DIR).glob("*.md")),
@@ -1554,6 +1721,8 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                 "verdict": verdict,
                 "reason": str(mdata.get("notes", ""))[:120],
             })
+        state["ready"] = ready_count
+        self._standalone_pass("roadmap", state, rows, min_ready)
         return rows
 
     def _require_own_channel(self, doc: ScriptDoc, script_path: Path) -> None:
