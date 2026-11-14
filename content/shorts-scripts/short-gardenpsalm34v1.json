@@ -1,0 +1,288 @@
+{
+  "key": "short-gardenpsalm34v1",
+  "channel": "prayer9",
+  "psalm": 34,
+  "title": [
+    "PSALM 34:1-3",
+    "A PRAYER OF THANKSGIVING"
+  ],
+  "poster": [
+    "GIVE THANKS",
+    "TO THE LORD",
+    "ALWAYS IN",
+    "YOUR HEART"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glade soft morning light",
+    "misty countryside golden hour",
+    "golden light over calm river",
+    "peaceful sunlight through forest canopy",
+    "tranquil meadow in soft morning dew",
+    "rippling water with sunset reflection"
+  ],
+  "scenes": [
+    {
+      "a": "That weight sitting heavy on your chest right now is exactly where His peace belongs.",
+      "img": "short-gardenpsalm34v1-scene-01.jpg",
+      "kicker": "PSALM 34:1",
+      "sub": "I WILL BLESS THE LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "I will bless the Lord at all times: his praise shall continually be in my mouth.",
+      "img": "short-gardenpsalm34v1-scene-02.jpg",
+      "kicker": "PSALM 34:1",
+      "sub": "HIS PRAISE SHALL BE MINE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "My soul shall make her boast in the Lord: the humble shall hear thereof, and be glad.",
+      "img": "short-gardenpsalm34v1-scene-03.jpg",
+      "kicker": "PSALM 34:2",
+      "sub": "MY SOUL SHALL BOAST",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "O magnify the Lord with me, and let us exalt his name together.",
+      "img": "short-gardenpsalm34v1-scene-04.jpg",
+      "kicker": "PSALM 34:3",
+      "sub": "LET US EXALT HIS NAME",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, help me turn my gaze from these worries toward the goodness of Your constant grace.",
+      "img": "short-gardenpsalm34v1-scene-05.jpg",
+      "kicker": "A PRAYER",
+      "sub": "GRACE IN THE QUIET",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "May my spirit find rest in Your presence and my lips sing of Your faithfulness forever.",
+      "img": "short-gardenpsalm34v1-scene-06.jpg",
+      "kicker": "AMEN",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That weight sitting heavy on your chest right now is exactly where His peace belongs."
+    ],
+    [
+      8,
+      17,
+      "I will bless the Lord at all times: his praise shall continually be in my mouth."
+    ],
+    [
+      17,
+      25,
+      "My soul shall make her boast in the Lord: the humble shall hear thereof, and be glad."
+    ],
+    [
+      25,
+      33,
+      "O magnify the Lord with me, and let us exalt his name together."
+    ],
+    [
+      33,
+      42,
+      "Lord, help me turn my gaze from these worries toward the goodness of Your constant grace."
+    ],
+    [
+      42,
+      50,
+      "May my spirit find rest in Your presence and my lips sing of Your faithfulness forever."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THAT WEIGHT",
+        "SITTING HEAVY",
+        "ON YOUR CHEST",
+        "IS WHERE HIS",
+        "PEACE BELONGS"
+      ],
+      [
+        "WEIGHT",
+        "PEACE"
+      ],
+      "PSALM 34 : 1"
+    ],
+    [
+      8,
+      17,
+      [
+        "I WILL BLESS",
+        "THE LORD AT",
+        "ALL TIMES",
+        "HIS PRAISE CONTINUALLY",
+        "IN MY MOUTH"
+      ],
+      [
+        "BLESS",
+        "PRAISE"
+      ],
+      "PSALM 34 : 1"
+    ],
+    [
+      17,
+      25,
+      [
+        "MY SOUL SHALL",
+        "MAKE HER BOAST",
+        "IN THE LORD",
+        "THE HUMBLE SHALL",
+        "BE GLAD"
+      ],
+      [
+        "BOAST",
+        "HUMBLE"
+      ],
+      "PSALM 34 : 2"
+    ],
+    [
+      25,
+      33,
+      [
+        "MAGNIFY THE LORD",
+        "WITH ME",
+        "LET US EXALT",
+        "HIS NAME",
+        "TOGETHER"
+      ],
+      [
+        "MAGNIFY",
+        "EXALT"
+      ],
+      "PSALM 34 : 3"
+    ],
+    [
+      33,
+      42,
+      [
+        "TURN MY GAZE",
+        "FROM WORRIES",
+        "TOWARD THE",
+        "GOODNESS OF",
+        "YOUR GRACE"
+      ],
+      [
+        "GAZE",
+        "GOODNESS"
+      ],
+      "PSALM 34 : 3"
+    ],
+    [
+      42,
+      50,
+      [
+        "MAY MY SPIRIT",
+        "FIND REST",
+        "SING OF YOUR",
+        "FAITHFULNESS",
+        "FOREVER"
+      ],
+      [
+        "REST",
+        "FAITHFULNESS"
+      ],
+      "PSALM 34 : 3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That weight sitting heavy on your chest right now is exactly where His peace belongs.",
+      "kind": "phrase",
+      "words": [
+        "WEIGHT",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will bless the Lord at all times: his praise shall continually be in my mouth.",
+      "kind": "phrase",
+      "words": [
+        "BLESS",
+        "PRAISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "My soul shall make her boast in the Lord: the humble shall hear thereof, and be glad.",
+      "kind": "phrase",
+      "words": [
+        "BOAST",
+        "HUMBLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "O magnify the Lord with me, and let us exalt his name together.",
+      "kind": "phrase",
+      "words": [
+        "MAGNIFY",
+        "EXALT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, help me turn my gaze from these worries toward the goodness of Your constant grace.",
+      "kind": "phrase",
+      "words": [
+        "GAZE",
+        "GOODNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May my spirit find rest in Your presence and my lips sing of Your faithfulness forever.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "FAITHFULNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 34:1-3"
+}

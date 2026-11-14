@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T05:02:55Z",
+  "generated_at": "2026-11-14T05:03:08Z",
   "monitor_generated_at": "2026-11-14T05:01:49.235130+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 191,
+    "published_total": 192,
     "published_longform": 97,
-    "published_shorts": 94,
-    "public_total": 189,
-    "queued_longform": 41,
+    "published_shorts": 95,
+    "public_total": 190,
+    "queued_longform": 42,
     "queued_shorts": 45,
     "automations_ok": 10,
     "automations_total": 10,
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 5,
+        "published_total": 6,
         "published_longform": 4,
-        "published_shorts": 1,
-        "thumbnail_pending": 5,
-        "public_total": 5,
-        "queued_longform": 2,
+        "published_shorts": 2,
+        "thumbnail_pending": 6,
+        "public_total": 6,
+        "queued_longform": 3,
         "queued_other": 0,
         "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0703",
-        "title": "Philippians 4:6-7 Daily Prayer | The Praise Garden",
-        "format": "longform",
-        "youtube_video_id": "T6f3GE9QBcc",
-        "watch_url": "https://youtu.be/T6f3GE9QBcc",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T22:23:56Z"
+        "id": "SHORT-GARDENPSALM103V2",
+        "title": "Pray This Psalm 103:2 Prayer of Thanksgiving | Thanksgiving Prayer #Shorts",
+        "format": "short",
+        "youtube_video_id": "S5woEvCGATw",
+        "watch_url": "https://www.youtube.com/shorts/S5woEvCGATw",
+        "published_on": "2026-11-14",
+        "published_at": "2026-11-14T05:02:19Z"
       },
       "next_queued_longform": {
         "id": "0704",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm103v2",
-        "scripture": "Psalm 103:2",
+        "short": "short-gardenhabakkuk3v17",
+        "scripture": "Habakkuk 3:17-19",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM103V2",
+      "slug": "short-gardenpsalm103v2-thanksgiving-prayer",
+      "file": "short-gardenpsalm103v2-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 103:2 Prayer of Thanksgiving | Thanksgiving Prayer #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T05:02:19Z",
+      "youtube_video_id": "S5woEvCGATw",
+      "watch_url": "https://www.youtube.com/shorts/S5woEvCGATw",
+      "youtu_be_url": "https://youtu.be/S5woEvCGATw",
+      "shorts_url": "https://www.youtube.com/shorts/S5woEvCGATw",
+      "studio_url": "https://studio.youtube.com/video/S5woEvCGATw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/S5woEvCGATw/hqdefault.jpg",
+      "thumb_text": "THE PRAISE GARDEN \u00b7 FORGET NOT",
+      "thumbnail_pending": true,
+      "duration_label": "58s",
+      "words": 363
+    },
     {
       "id": "0023",
       "slug": "psalm-63-5-7-remembering-god-upon-my-bed",
@@ -5786,6 +5810,19 @@
         "words": 1721
       },
       {
+        "id": "0706",
+        "slug": "gratitude-when-life-is-heavy-psalm-34-1-3",
+        "file": "0706-gratitude-when-life-is-heavy-psalm-34-1-3.md",
+        "title": "Gratitude When Life Is Heavy: Psalm 34:1-3 | The Praise Garden",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1357
+      },
+      {
         "id": "0803",
         "slug": "proverbs-15-22-prayer-for-wise-counsel",
         "file": "0803-proverbs-15-22-prayer-for-wise-counsel.md",
@@ -6210,17 +6247,6 @@
         "target_window_utc": "08:44"
       },
       {
-        "short": "short-gardenpsalm103v2",
-        "file": "0701-short-gardenpsalm103v2.yml",
-        "companion_longform_id": "0701",
-        "scripture": "Psalm 103:2",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
-      {
         "short": "short-gardenhabakkuk3v17",
         "file": "0702-short-gardenhabakkuk3v17.yml",
         "companion_longform_id": "0702",
@@ -6258,6 +6284,17 @@
         "file": "0705-short-gardenpsalm107v1.yml",
         "companion_longform_id": "0705",
         "scripture": "Psalm 107:1",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "09:44"
+      },
+      {
+        "short": "short-gardenpsalm34v1",
+        "file": "0706-short-gardenpsalm34v1.yml",
+        "companion_longform_id": "0706",
+        "scripture": "Psalm 34:1-3",
         "channel": "prayer9",
         "channel_name": "The Praise Garden",
         "status": "approved",
