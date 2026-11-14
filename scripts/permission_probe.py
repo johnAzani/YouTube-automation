@@ -256,6 +256,16 @@ def main():
         answers.append('%s: %s' % (label, answered(status, why, data)))
         if label == 'views':
             analytics = (status, why)
+    # The Partner Program counts watch hours over 365 days, so that window has to answer too.
+    year = 'ids=channel==MINE&startDate=%s&endDate=%s' % (today - datetime.timedelta(days=365), today)
+    for label, query in (
+        ('watch time over 365 days', 'metrics=estimatedMinutesWatched'),
+        ('watch time by day', 'metrics=estimatedMinutesWatched&dimensions=day'),
+        ('impressions per video', 'metrics=videoThumbnailImpressions,videoThumbnailImpressionsClickRate'
+                                  '&dimensions=video&sort=-videoThumbnailImpressions&maxResults=5'),
+    ):
+        status, data, why = get(ANALYTICS + '?' + year + '&' + query, access)
+        answers.append('%s: %s' % (label, answered(status, why, data)))
     note(channel, 'analytics api', '; '.join(answers))
 
     answers = []
