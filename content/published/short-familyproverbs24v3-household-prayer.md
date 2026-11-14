@@ -23,10 +23,13 @@ short_visual_fingerprints: ["sha256:1b83778ce67afbac00f4c76830eb80a9e677c0cd88cf
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["BY", "WISDOM", "A HOUSE", "IS BUILT"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-21T04:44:21Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Gather your family close in heart as we bring our household before the Lord today. By wisdom a house is built and through understanding it is established. Through knowledge its rooms are filled with rare and beautiful treasures of peace. Lord bless every room beneath this roof with your enduring grace and quiet strength. Guard our threshold from strife and let your steadfast love dwell here always. May our family walk in your truth day by day, anchored in your unfailing word. Subscribe to The Family Altar for daily prayers to cover your home in faith.

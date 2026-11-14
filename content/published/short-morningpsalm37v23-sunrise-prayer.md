@@ -23,10 +23,12 @@ short_visual_fingerprints: ["sha256:06f06b5c1e88b960a641aa2c62179195cfe86da30bba
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunris"
+thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunrise Prayer; long_uploads_status=allowed; video_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; video_channel_title=The Morning Altar | Daily Sunrise Prayer; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["RISE IN PEACE", "WALK IN FAITH", "TRUST HIS LEAD", "THE MORNING ALTAR"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-14T10:44:15Z"
+thumbnail_retry_reason: "rate_limit"
 ---
 
 Take a deep breath and greet the light of this new morning. You are invited to center your heart as the world begins to wake. Listen to these words from Psalm 37:23-24. The Lord makes firm the steps of the one who delights in Him. Though they stumble, they will not fall, for the Lord upholds them with His hand. Heavenly Father, as this sun rises, I place my uncertain path into Your capable hands. Let Your truth ground me, keeping my feet stable on the path You have chosen for me today.
