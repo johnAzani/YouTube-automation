@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T05:33:31Z",
+  "generated_at": "2026-11-14T05:35:01Z",
   "monitor_generated_at": "2026-11-14T05:12:20.846997+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 195,
-    "published_longform": 99,
-    "published_shorts": 96,
-    "public_total": 193,
-    "queued_longform": 41,
-    "queued_shorts": 45,
+    "published_total": 197,
+    "published_longform": 100,
+    "published_shorts": 97,
+    "public_total": 195,
+    "queued_longform": 40,
+    "queued_shorts": 44,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -237,33 +237,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 20,
-        "published_longform": 11,
-        "published_shorts": 9,
-        "thumbnail_pending": 19,
-        "public_total": 20,
-        "queued_longform": 3,
+        "published_total": 22,
+        "published_longform": 12,
+        "published_shorts": 10,
+        "thumbnail_pending": 21,
+        "public_total": 22,
+        "queued_longform": 2,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0210",
-        "title": "Ruth 3:8-11 Midnight Turning Point Prayer | The Midnight Watch",
-        "format": "longform",
-        "youtube_video_id": "FREfxb6XKLk",
-        "watch_url": "https://youtu.be/FREfxb6XKLk",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T21:31:37Z"
-      },
-      "next_queued_longform": {
         "id": "0211",
         "title": "Midnight Prayer for Deliverance: Judges 16:3 | The Midnight Watch",
-        "words": 1708,
+        "format": "longform",
+        "youtube_video_id": "NU43WlbKS6A",
+        "watch_url": "https://youtu.be/NU43WlbKS6A",
+        "published_on": "2026-11-14",
+        "published_at": "2026-11-14T05:34:15Z"
+      },
+      "next_queued_longform": {
+        "id": "0212",
+        "title": "The Battle Is Not Yours: 2 Chronicles 20:15-22 Midnight Prayer",
+        "words": 1610,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightisaiah10v27",
-        "scripture": "Isaiah 10:27",
+        "short": "short-midnightruth3v8",
+        "scripture": "Ruth 3:8-11",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -692,6 +692,30 @@
   ],
   "videos": [
     {
+      "id": "0211",
+      "slug": "judges-16-3-midnight-prayer",
+      "file": "0211-judges-16-3-midnight-prayer.md",
+      "title": "Midnight Prayer for Deliverance: Judges 16:3 | The Midnight Watch",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T05:34:15Z",
+      "youtube_video_id": "NU43WlbKS6A",
+      "watch_url": "https://youtu.be/NU43WlbKS6A",
+      "youtu_be_url": "https://youtu.be/NU43WlbKS6A",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/NU43WlbKS6A/edit",
+      "thumb_url": "https://i.ytimg.com/vi/NU43WlbKS6A/hqdefault.jpg",
+      "thumb_text": "LIFT THE GATES",
+      "thumbnail_pending": true,
+      "duration_label": "~12 min",
+      "words": 1708
+    },
+    {
       "id": "0407",
       "slug": "psalm-41-1-3-restoration-prayer",
       "file": "0407-psalm-41-1-3-restoration-prayer.md",
@@ -834,6 +858,30 @@
       "thumbnail_pending": true,
       "duration_label": "43s",
       "words": 604
+    },
+    {
+      "id": "SHORT-MIDNIGHTISAIAH10V27",
+      "slug": "short-midnightisaiah10v27-midnight-prayer",
+      "file": "short-midnightisaiah10v27-midnight-prayer.md",
+      "title": "Pray This Isaiah 10:27 Midnight Prayer | Stand In Prayer #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T04:34:59Z",
+      "youtube_video_id": "J9rT2XXgrxA",
+      "watch_url": "https://www.youtube.com/shorts/J9rT2XXgrxA",
+      "youtu_be_url": "https://youtu.be/J9rT2XXgrxA",
+      "shorts_url": "https://www.youtube.com/shorts/J9rT2XXgrxA",
+      "studio_url": "https://studio.youtube.com/video/J9rT2XXgrxA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/J9rT2XXgrxA/hqdefault.jpg",
+      "thumb_text": "THE MIDNIGHT WATCH \u00b7 ISAIAH 10:27",
+      "thumbnail_pending": true,
+      "duration_label": "60s",
+      "words": 584
     },
     {
       "id": "SHORT-FAMILYPROVERBS24V3",
@@ -5648,19 +5696,6 @@
         "words": 2554
       },
       {
-        "id": "0211",
-        "slug": "judges-16-3-midnight-prayer",
-        "file": "0211-judges-16-3-midnight-prayer.md",
-        "title": "Midnight Prayer for Deliverance: Judges 16:3 | The Midnight Watch",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1708
-      },
-      {
         "id": "0212",
         "slug": "2-chronicles-20-midnight-prayer-the-midnight-watch",
         "file": "0212-2-chronicles-20-midnight-prayer-the-midnight-watch.md",
@@ -6018,17 +6053,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightisaiah10v27",
-        "file": "0209-short-midnightisaiah10v27.yml",
-        "companion_longform_id": "0209",
-        "scripture": "Isaiah 10:27",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightruth3v8",

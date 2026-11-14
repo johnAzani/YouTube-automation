@@ -2,7 +2,7 @@
 id: '0211'
 title: "Midnight Prayer for Deliverance: Judges 16:3 | The Midnight Watch"
 slug: judges-16-3-midnight-prayer
-status: approved
+status: published
 channel: prayer4
 privacy: public
 format: longform
@@ -72,6 +72,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-14"
+published_at: "2026-11-14T05:34:15Z"
+youtube_video_id: "NU43WlbKS6A"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Rising at the Midnight Hour
