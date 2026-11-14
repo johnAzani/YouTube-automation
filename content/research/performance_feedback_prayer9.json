@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-13T09:35:47.729319+00:00",
-  "as_of": "2026-11-13",
+  "generated_at": "2026-11-14T04:19:42.694418+00:00",
+  "as_of": "2026-11-14",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 1,
+  "total_longform_videos": 4,
   "input_diagnostics": {
-    "snapshot_video_ids": 2,
-    "receipt_video_ids": 2,
-    "matched_video_ids": 2,
-    "longform_below_view_threshold": 1,
+    "snapshot_video_ids": 5,
+    "receipt_video_ids": 5,
+    "matched_video_ids": 5,
+    "longform_below_view_threshold": 4,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 1,
+    "longform_too_young_or_undated": 4,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
@@ -18,6 +18,14 @@
   "themes": [
     {
       "theme": "general_prayer",
+      "videos": 3,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": ""
+    },
+    {
+      "theme": "anxiety_peace",
       "videos": 1,
       "measured_videos": 0,
       "avg_score": 0.0,
