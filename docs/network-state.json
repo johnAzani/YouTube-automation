@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T15:26:13Z",
+  "generated_at": "2026-11-14T15:26:55Z",
   "monitor_generated_at": "2026-11-14T15:09:22.695741+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 224,
+    "published_total": 225,
     "published_longform": 105,
-    "published_shorts": 119,
-    "public_total": 222,
+    "published_shorts": 120,
+    "public_total": 223,
     "queued_longform": 59,
-    "queued_shorts": 89,
+    "queued_shorts": 88,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 10,
+        "published_total": 11,
         "published_longform": 6,
-        "published_shorts": 4,
-        "thumbnail_pending": 10,
-        "public_total": 10,
+        "published_shorts": 5,
+        "thumbnail_pending": 11,
+        "public_total": 11,
         "queued_longform": 1,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-SHIELDJOHN10V28",
-        "title": "Pray This John 10:28-29 Prayer for Divine Protection | John 10:28-29 #Shorts",
+        "id": "SHORT-SHIELDPSALM121V3",
+        "title": "Pray This Psalm 121:3-4 Prayer for Divine Protection | The Covenant Shield #Shorts",
         "format": "short",
-        "youtube_video_id": "nYkn4KGpdDA",
-        "watch_url": "https://www.youtube.com/shorts/nYkn4KGpdDA",
+        "youtube_video_id": "sgTmgJ-TQPg",
+        "watch_url": "https://www.youtube.com/shorts/sgTmgJ-TQPg",
         "published_on": "2026-11-14",
-        "published_at": "2026-11-14T11:28:17Z"
+        "published_at": "2026-11-14T15:26:07Z"
       },
       "next_queued_longform": {
         "id": "0606",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm121v3",
-        "scripture": "Psalm 121:3-4",
+        "short": "short-shieldpsalm23v4",
+        "scripture": "Psalm 23:4",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM121V3",
+      "slug": "short-shieldpsalm121v3-protection-prayer",
+      "file": "short-shieldpsalm121v3-protection-prayer.md",
+      "title": "Pray This Psalm 121:3-4 Prayer for Divine Protection | The Covenant Shield #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T15:26:07Z",
+      "youtube_video_id": "sgTmgJ-TQPg",
+      "watch_url": "https://www.youtube.com/shorts/sgTmgJ-TQPg",
+      "youtu_be_url": "https://youtu.be/sgTmgJ-TQPg",
+      "shorts_url": "https://www.youtube.com/shorts/sgTmgJ-TQPg",
+      "studio_url": "https://studio.youtube.com/video/sgTmgJ-TQPg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/sgTmgJ-TQPg/hqdefault.jpg",
+      "thumb_text": "DIVINE PROTECTION \u00b7 PSALM 121:3-4",
+      "thumbnail_pending": true,
+      "duration_label": "52s",
+      "words": 491
+    },
     {
       "id": "SHORT-GARDENPSALM100V1",
       "slug": "short-gardenpsalm100v1-thanksgiving-prayer",
@@ -7041,17 +7065,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-shieldpsalm121v3",
-        "file": "0000-short-shieldpsalm121v3.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 121:3-4",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm23v4",
