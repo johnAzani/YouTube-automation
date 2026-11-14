@@ -678,15 +678,24 @@ minutes. Every time below is Abuja/Lagos wall clock.
 | **3:14am, daily** | **Growth autopilot**: snapshots public metrics, computes the closed-loop performance feedback the brain reads, syncs series playlists (session watch-time), celebrates the live subscriber milestone | `14 2 * * *` |
 | **4:14am, daily** | **The brain**: lengthens short scripts, authors a new long-form if the queue lacks runway, authors Short specs for anything blocked — now steered by the performance feedback | `14 3 * * *` |
 | **4:23am, Monday** | Keepalive self-heal | `23 3 * * 1` |
-| **7:14am, daily** | Production run #1 — repairs the queue first, then publishes | `14 6 * * *` |
+| **7:14am, daily** | Production slot 1 — a Short on every channel; the long-form of The Morning Altar and The Praise Garden | `14 6 * * *` |
 | **8:14am, daily** | Comment replies | `14 7 * * *` |
-| **3:14pm, daily** | Production run #2 — repairs the queue first, then publishes | `14 14 * * *` |
+| **11:14am, daily** | Production slot 2 — a Short on every channel; the long-form of The Provision Table and The Guided Path | `14 10 * * *` |
+| **3:14pm, daily** | Production slot 3 — a Short on every channel; the long-form of The Midday Watch and The Family Altar | `14 14 * * *` |
 | **4:14pm, daily** | Comment replies | `14 15 * * *` |
 | **7:41pm, Friday** | Weekly metrics pull | `41 18 * * 5` |
-| **8:14pm, daily** | Production run #3 — the release slot; repairs the queue first, then publishes | `14 19 * * *` |
+| **8:14pm, daily** | Production slot 4 — a Short on every channel; the long-form of The Secret Place and The Healing Balm | `14 19 * * *` |
+| **12:14am, daily** | Production slot 5 — a Short on every channel; the long-form of The Midnight Watch and The Covenant Shield | `14 23 * * *` |
 | **8:14pm, daily** | Comment replies | `14 19 * * *` |
 | **8:14pm, Sunday and Wednesday** | Community post is prepared (manual post — the API has no endpoint) | `14 19 * * 0,3` |
 | **9:14pm, daily** | Health check, then the watchdog files or closes its stall issue | `14 20 * * *` |
+
+**Since 14 November 2026 each channel publishes one long-form and five Shorts a
+day** (it was three and three; the Shorts are what is watched). Every production
+slot repairs the queue first, then publishes a Short on every channel, and each
+channel's long-form goes out at its own slot. Shorts no longer need a long-form
+behind them. The decision, the passage lists and the way back are in
+`docs/SHORTS_FIRST_MIX_2026-11-14.md`.
 
 The expansion pass no longer has a cron of its own: it runs inside the brain at
 4:14am **and** at the top of every production run, so a missed or late cron is

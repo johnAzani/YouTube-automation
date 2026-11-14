@@ -113,11 +113,10 @@ What is realistic to aim for:
 
 ## 5. Decisions waiting on the owner
 
-1. **Change the mix.** Today each channel publishes up to three long videos a
-   day, and each brings about three views. Proposal: one long video a day per
-   channel, at its best hour, and three Shorts a day. This needs Shorts that
-   are written on their own (today a Short is only written as the companion of
-   a long video).
+1. **Change the mix. Decided and built the same day** (the owner handed the
+   decision over): one long video and five Shorts a day per channel, the same
+   six uploads as before, with Shorts written on their own. See
+   `docs/SHORTS_FIRST_MIX_2026-11-14.md`.
 2. **Sleep-length videos on The Secret Place.** One a week, an hour long, made
    from the channel's own published night prayers with music between them.
    Needs the spoken audio of each prayer to be kept (today it survives only

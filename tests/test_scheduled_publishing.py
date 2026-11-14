@@ -57,17 +57,17 @@ def test_the_repository_variable_overrides_the_lead_and_zero_switches_it_off():
 # ---------------------------------------------------------------- the target
 
 def test_the_public_time_is_the_slot_plus_the_lead():
-    # Slots today: 06:14, 14:14, 19:14 UTC.
-    assert produce_plan.publish_target(at(14, 6, 20), lead=240) == at(14, 10, 14)
-    assert produce_plan.publish_target(at(14, 15, 0), lead=240) == at(14, 18, 14)
-    # After midnight the slot is still yesterday's 19:14.
-    assert produce_plan.publish_target(at(14, 20, 0), lead=270) == at(14, 23, 44)
+    # Slots today: 06:14, 10:14, 14:14, 19:14, 23:14 UTC.
+    assert produce_plan.publish_target(at(14, 6, 20), lead=180) == at(14, 9, 14)
+    assert produce_plan.publish_target(at(14, 15, 0), lead=180) == at(14, 17, 14)
+    # After midnight the slot is still yesterday's 23:14.
+    assert produce_plan.publish_target(at(14, 0, 30), lead=180) == at(14, 2, 14)
 
 
 def test_a_leg_that_finishes_too_close_to_the_time_publishes_now():
-    assert produce_plan.publish_target(at(14, 9, 58), lead=240) == at(14, 10, 14)   # 16 min
-    assert produce_plan.publish_target(at(14, 10, 0), lead=240) is None             # 14 min
-    assert produce_plan.publish_target(at(14, 11, 30), lead=240) is None            # past
+    assert produce_plan.publish_target(at(14, 8, 58), lead=180) == at(14, 9, 14)   # 16 min
+    assert produce_plan.publish_target(at(14, 9, 0), lead=180) is None             # 14 min
+    assert produce_plan.publish_target(at(14, 9, 30), lead=180) is None            # past
 
 
 def test_a_lead_that_reaches_the_next_slot_is_refused():
@@ -76,10 +76,15 @@ def test_a_lead_that_reaches_the_next_slot_is_refused():
     assert produce_plan.publish_target(at(14, 14, 30), lead=299) == at(14, 19, 13)
     assert produce_plan.publish_target(at(14, 14, 30), lead=300) is None
     assert produce_plan.publish_target(at(14, 14, 30), lead=600) is None
+    # The smallest gap is four hours since the 10:14 and 23:14 slots were added
+    # (14 November 2026): a lead of 240 or more is refused in the morning.
+    assert produce_plan.publish_target(at(14, 6, 20), lead=239) == at(14, 10, 13)
+    assert produce_plan.publish_target(at(14, 6, 20), lead=240) is None
 
 
 def test_next_slot_crosses_midnight():
-    assert produce_plan.next_slot(at(14, 19, 14)) == at(15, 6, 14)
+    assert produce_plan.next_slot(at(14, 19, 14)) == at(14, 23, 14)
+    assert produce_plan.next_slot(at(14, 23, 14)) == at(15, 6, 14)
     assert produce_plan.next_slot(at(14, 2, 0)) == at(14, 6, 14)
 
 
@@ -87,22 +92,22 @@ def test_next_slot_crosses_midnight():
 
 def test_an_explicit_time_from_a_dispatch_wins():
     got = publish_schedule.resolve_longform_publish_at(
-        at(14, 6, 20), environ={"PUBLISH_AT": "2026-11-14T14:14:00Z"})
-    assert got == "2026-11-14T14:14:00Z"
+        at(14, 6, 20), environ={"PUBLISH_AT": "2026-11-14T10:14:00Z"})
+    assert got == "2026-11-14T10:14:00Z"
     # Any timezone is accepted and sent to YouTube as UTC.
     got = publish_schedule.resolve_longform_publish_at(
-        at(14, 6, 20), environ={"PUBLISH_AT": "2026-11-14T15:14:00+01:00"})
-    assert got == "2026-11-14T14:14:00Z"
+        at(14, 6, 20), environ={"PUBLISH_AT": "2026-11-14T11:14:00+01:00"})
+    assert got == "2026-11-14T10:14:00Z"
 
 
 @pytest.mark.parametrize("raw", [
     "2026-11-14T06:30:00Z",        # ten minutes away
     "2026-11-13T14:14:00Z",        # yesterday
-    "2026-11-14T14:14:00",         # no timezone: whose 14:14?
+    "2026-11-14T10:14:00",         # no timezone: whose 10:14?
     "tomorrow afternoon",
     "2026-11-20T14:14:00Z",        # six days out: a typo, not a plan
-    "2026-11-14T19:14:00Z",        # beyond the next slot (14:14): would cancel that slot
-    "2026-11-14T14:15:00Z",        # one minute beyond it
+    "2026-11-14T14:14:00Z",        # beyond the next slot (10:14): would cancel that slot
+    "2026-11-14T10:15:00Z",        # one minute beyond it
 ])
 def test_an_explicit_time_that_cannot_be_trusted_publishes_now(raw):
     assert publish_schedule.resolve_longform_publish_at(
@@ -111,8 +116,8 @@ def test_an_explicit_time_that_cannot_be_trusted_publishes_now(raw):
 
 def test_the_lead_from_the_environment_schedules_the_slot():
     got = publish_schedule.resolve_longform_publish_at(
-        at(14, 6, 20), environ={"PUBLISH_LEAD_MINUTES": "240"})
-    assert got == "2026-11-14T10:14:00Z"
+        at(14, 6, 20), environ={"PUBLISH_LEAD_MINUTES": "180"})
+    assert got == "2026-11-14T09:14:00Z"
     assert publish_schedule.resolve_longform_publish_at(
         at(14, 6, 20), environ={"PUBLISH_LEAD_MINUTES": "0"}) is None
 
@@ -587,7 +592,8 @@ def test_the_job_may_simply_say_next_slot(uploader, tmp_path):
 def test_next_slot_is_the_slot_after_now_and_never_closer_than_the_margin():
     resolve = publish_schedule.resolve_longform_publish_at
     assert resolve(at(13, 16, 40), environ={}, requested="next-slot") == "2026-11-13T19:14:00Z"
-    assert resolve(at(13, 19, 20), environ={}, requested="Next-Slot") == "2026-11-14T06:14:00Z"
+    assert resolve(at(13, 19, 20), environ={}, requested="Next-Slot") == "2026-11-13T23:14:00Z"
+    assert resolve(at(13, 23, 20), environ={}, requested="Next-Slot") == "2026-11-14T06:14:00Z"
     assert resolve(at(13, 16, 40), environ={"PUBLISH_AT": "next-slot"}) == "2026-11-13T19:14:00Z"
     # Twelve minutes before the slot there is no room left: public now.
     assert resolve(at(13, 19, 2), environ={}, requested="next-slot") is None

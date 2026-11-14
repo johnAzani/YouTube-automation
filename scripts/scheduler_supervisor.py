@@ -129,28 +129,41 @@ def _attempt_cap(workflow: str) -> int:
 
 
 def published_channels_since(slot: datetime, published_dir: Path | None = None) -> set[str]:
-    """Channels with a *published* long-form receipt at or after `slot`.
+    """Channels that have published what `slot` owes them, at or after `slot`.
 
     The schedule's unit of work is a video per channel, so a produce run is only
     evidence that the slot was served if a receipt exists for each channel. Judging
     that by "a produce run happened" is how one leg's completion silently certified
     the other channel's missing video.
+
+    What a slot owes depends on the channel (`scripts/produce_plan.py`): its
+    long-form slot is served by a long-form receipt, every other slot by a Short.
+    A long-form receipt serves any slot. Counting a Short towards the long-form
+    slot would let the ride-along certify a release that never happened, and
+    demanding a long-form from a Shorts-only slot would have the supervisor
+    re-dispatch a channel all day for a video that slot never makes.
     """
     from pipeline.channels import channel_for_doc
     from pipeline.config import PUBLISHED_DIR
     from pipeline.script_doc import parse_script
+    from scripts import produce_plan
 
     directory = published_dir or PUBLISHED_DIR
     done: set[str] = set()
     if not directory.is_dir():
         return done
+    try:
+        owed_slot = produce_plan.slot_containing(slot)
+    except Exception:  # noqa: BLE001 - an unreadable workflow file must not hide receipts
+        owed_slot = None
+    shorts: set[str] = set()
     for path in directory.glob("*.md"):
         try:
             doc = parse_script(path)
         except Exception:  # noqa: BLE001
             continue
         fmt = str(getattr(doc, "format", "") or doc.meta.get("format", "")).strip().lower()
-        if fmt != "longform" or not str(doc.meta.get("youtube_video_id") or "").strip():
+        if fmt not in {"longform", "short"} or not str(doc.meta.get("youtube_video_id") or "").strip():
             continue
         # A scheduled upload that YouTube rejected, or that is gone, never went
         # public (scripts/confirm_scheduled_publish.py): it serves no slot.
@@ -169,7 +182,10 @@ def published_channels_since(slot: datetime, published_dir: Path | None = None) 
         if when.tzinfo is None:
             when = when.replace(tzinfo=timezone.utc)
         if when >= slot:
-            done.add(channel_for_doc(doc.meta))
+            (done if fmt == "longform" else shorts).add(channel_for_doc(doc.meta))
+    for channel in shorts - done:
+        if not produce_plan.slot_owes_longform(channel, owed_slot):
+            done.add(channel)
     return done
 
 

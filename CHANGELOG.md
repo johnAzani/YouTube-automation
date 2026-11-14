@@ -5,6 +5,16 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-14 — one long-form and five Shorts a day; Shorts that stand on their own
+
+- The owner handed the mix decision over. Each channel still makes six uploads a day, now one long-form and five Shorts instead of three and three (91 Shorts drew 7,513 views, 95 long-forms 261). Full note: `docs/SHORTS_FIRST_MIX_2026-11-14.md`.
+- `.github/workflows/produce.yml`: two more slots, 10:14 and 23:14 UTC (11:14am and 12:14am Nigeria time). Every slot owes each channel a Short; one slot a day owes it a long-form (`LONGFORM_SLOT_UTC` in `scripts/produce_plan.py`, two channels to a slot). A new step asks `scripts.produce_plan --longform-due` and the long-form step is skipped only on an explicit "no". A channel whose newest long-form is over 26 hours old is owed one at any slot. A Shorts-only slot whose Short did not publish gets a long-form instead of nothing, not within 7 hours of the last one. New `longform` input forces one by hand.
+- `scripts/scheduler_supervisor.py`: a slot is served by what it owes the channel, a long-form at the channel's long-form slot and a Short at the others, so the supervisor recovers a missing Short and does not chase a long-form the slot never makes.
+- New `pipeline/evergreen_shorts.py` and `GeminiBrain.generate_standalone_short`: a Short no longer needs a long-form. 150 well-known passages (15 per channel, none shared), then the channel's roadmap ahead of its long-forms; never a second Short on a passage the channel has. Standalone manifests are named `0000-<key>.yml` and go out first. The daily brain run keeps ten Shorts ready per channel.
+- `scripts/automation_monitor.py`: "produce published nothing" is judged against the slot the run belonged to, not the calendar date. A late run that correctly did nothing after midnight UTC kept the monitor red for six hours on 14 November.
+- Passage lists last about eight to eleven days at this pace; a run says so when a channel has fewer than eight left.
+- Tests: `tests/test_shorts_first_mix.py` (36); slot expectations updated in `tests/test_scheduled_publishing.py`, `tests/test_parallel_production.py`, `tests/test_supply.py`.
+
 ## 2026-11-14 — acting on the view counts: Shorts openings, 41 queued titles
 
 - Read the ten analytics snapshot issues of 13 November: 95 long videos drew 261 views (median 1, 35 with none); 91 Shorts drew 7,513 (median 65). 97% of all views come from Shorts. Table and reasoning: `docs/GROWTH_EVIDENCE_2026-11-14.md`.

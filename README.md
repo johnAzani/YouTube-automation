@@ -15,7 +15,7 @@ Selar Nigeria Banking: **[docs/SELAR_NIGERIA_SETUP.md](docs/SELAR_NIGERIA_SETUP.
 * **Cost Invariant:** Permanent $0.00 / month hard cost lock.
 * **Live Voluntary Offering Hub:** [selar.com/showlove/thesecretplace](https://selar.com/showlove/thesecretplace)
 * **Live Product #2 (Prayer Journal PDF):** [selar.com/i000qy7g39](https://selar.com/i000qy7g39)
-* **Automated Daily Release Slots:** `19:14 UTC` (8:14pm local bedtime peak), `06:14 UTC`, and `14:14 UTC`.
+* **Automated Daily Release Slots:** `06:14`, `10:14`, `14:14`, `19:14` and `23:14 UTC` (7:14am, 11:14am, 3:14pm, 8:14pm and 12:14am Nigeria time). Every slot publishes a Short on every channel; each channel publishes its one long-form of the day at its own slot (`docs/SHORTS_FIRST_MIX_2026-11-14.md`).
 
 ## Why it costs ₦0
 

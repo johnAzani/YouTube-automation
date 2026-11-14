@@ -43,7 +43,7 @@ MAX_PARALLEL_CEILING = 10
 # Turning it on is one change in two places: set the lead here and move the
 # crons in produce.yml earlier by the same amount, so the public times stay
 # where they are. The lead must stay SHORTER than the smallest gap between two
-# crons (five hours today). Receipts are dated with the public time, and "this
+# crons (four hours since 14 November 2026). Receipts are dated with the public time, and "this
 # slot is served" means "a receipt dated at or after the slot": a public time
 # that reached the next slot would mark that one served as well and it would
 # never be produced. `publish_target` refuses such a lead instead of obeying it.
@@ -51,6 +51,51 @@ PUBLISH_LEAD_MINUTES = 0
 # A leg that finishes closer to the public time than this publishes at once: a
 # late video is never held back and never sent with a time YouTube might refuse.
 PUBLISH_MARGIN_MINUTES = 15
+
+# The daily mix. Every slot owes each channel a Short; only one slot a day owes
+# it a long-form. Measured on 13 November 2026 across all ten channels: 91 Shorts
+# drew 7,513 views and 95 long-forms drew 261 (docs/GROWTH_EVIDENCE_2026-11-14.md),
+# so the uploads moved to the format that is watched. The number of uploads a
+# day is unchanged (six: it was three long-forms and three Shorts, it is one
+# long-form and five Shorts), so the upload allowance is asked for nothing it
+# was not already giving (what that allowance is for these projects is not
+# known; STATE.md says why), and it uses fewer speech requests (a long-form
+# takes two to four of the ten free ones, a Short one).
+#
+# Each channel's long-form goes out at the slot that suits what it is for, two
+# channels to a slot so no slot carries all ten long renders. The values are
+# the UTC ``HH:MM`` of a cron line in produce.yml; a test holds the two together.
+LONGFORM_SLOT_UTC: dict[str, str] = {
+    "prayer2": "06:14",        # The Morning Altar: 7:14am Nigeria time
+    "prayer9": "06:14",        # The Praise Garden
+    "prayer7": "10:14",        # The Provision Table: 11:14am
+    "prayer10": "10:14",       # The Guided Path
+    "prayer3": "14:14",        # The Midday Watch: 3:14pm
+    "prayer5": "14:14",        # The Family Altar
+    "secret-place": "19:14",   # The Secret Place: 8:14pm, the bedtime prayer
+    "prayer6": "19:14",        # The Healing Balm
+    "prayer4": "23:14",        # The Midnight Watch: 12:14am
+    "prayer8": "23:14",        # The Covenant Shield
+}
+# The way back: True makes every slot owe every channel a long-form again, as it
+# did before 14 November 2026. Remove the 10:14 and 23:14 crons with it, or five
+# long-forms a day will be attempted against ten speech requests.
+LONGFORM_EVERY_SLOT = False
+# A channel whose newest long-form is older than this is owed one at whatever
+# slot runs next, so a failed long-form slot costs hours, not a day. A healthy
+# channel never reaches it: the slot before its own sees a long-form at most
+# about twenty hours old.
+LONGFORM_CATCH_UP_HOURS = 26
+# A slot must not come up empty. If a Shorts-only slot has no Short to show for
+# itself (the render failed, or nothing was ready), the leg makes a long-form
+# instead, as every slot did before the mix changed. Not more often than this,
+# so a day of broken Shorts yields about three long-forms, the old number, and
+# not five.
+LONGFORM_FALLBACK_MIN_GAP_HOURS = 7
+# A Short this recent counts as the slot's Short even if it was published just
+# before the slot began: it is why the pacing guard held the next one back
+# (SHORTS_MIN_GAP_HOURS in pipeline/short_release.py).
+SHORT_COUNTS_FOR_HOURS = 3
 
 
 def parse_channels(raw: str | None) -> list[str]:
@@ -166,3 +211,115 @@ def publish_target(now: datetime | None = None, lead: int | None = None,
         return None
     return target
 
+
+def slot_owes_longform(channel_id: str | None, slot: datetime | None) -> bool:
+    """Does ``slot`` owe this channel a long-form (as well as a Short)?
+
+    Fails towards the old behaviour: an unknown channel, or a slot that cannot
+    be worked out, owes a long-form. A channel must never go without one
+    because this table was not kept up.
+    """
+    from pipeline.channels import normalize_channel_id
+
+    if LONGFORM_EVERY_SLOT or slot is None:
+        return True
+    wanted = LONGFORM_SLOT_UTC.get(normalize_channel_id(channel_id))
+    if not wanted:
+        return True
+    return slot.astimezone(timezone.utc).strftime("%H:%M") == wanted
+
+
+def slot_containing(moment: datetime) -> datetime | None:
+    """The production slot ``moment`` falls in (``moment`` itself if it is one)."""
+    from scripts.automation_monitor import prev_occurrence, workflow_files
+
+    crons = next((c for f, _n, c in workflow_files() if f == PRODUCE_WORKFLOW), None)
+    if not crons:
+        return None
+    return prev_occurrence(crons, moment)
+
+
+def longform_due(channel_id: str | None, now: datetime | None = None,
+                 published_dir: Path | None = None) -> tuple[bool, str]:
+    """``(due, why)`` for a production leg at ``now``, asked after its Short step.
+
+    Due when any of these holds, in this order:
+
+    * this is the channel's long-form slot;
+    * its newest long-form is older than ``LONGFORM_CATCH_UP_HOURS`` (its own
+      slot failed, or it has never published one);
+    * the slot has no Short to show for itself and the newest long-form is
+      older than ``LONGFORM_FALLBACK_MIN_GAP_HOURS``: a slot never comes up
+      empty because Shorts are failing.
+
+    The reason is a sentence for the run's notice.
+    """
+    from datetime import timedelta
+
+    from pipeline.channels import normalize_channel_id
+    from pipeline.short_release import recent_short_published_within
+    from scripts.pipeline_watchdog import last_publish_for_channel
+
+    now = now or datetime.now(timezone.utc)
+    channel = normalize_channel_id(channel_id)
+    slot = current_slot(now)
+    if slot_owes_longform(channel, slot):
+        when = slot.strftime("%H:%M UTC") if slot else "an unknown slot"
+        return True, f"{when} is this channel's long-form slot"
+    newest = last_publish_for_channel(channel, published_dir, longform_only=True)
+    if newest is None:
+        return True, "the channel has no long-form receipt yet"
+    age = now - newest[1]
+    hours = age.total_seconds() / 3600
+    if age > timedelta(hours=LONGFORM_CATCH_UP_HOURS):
+        return True, (f"its newest long-form is {hours:.0f} hours old "
+                      f"(over {LONGFORM_CATCH_UP_HOURS}), so this slot catches up")
+    since_slot = (now - slot).total_seconds() / 3600 if slot else 0.0
+    window = max(float(SHORT_COUNTS_FOR_HOURS), since_slot)
+    short = recent_short_published_within(hours=window, published_dir=published_dir,
+                                          now=now, channel_id=channel)
+    own = LONGFORM_SLOT_UTC.get(channel, "its own slot")
+    if short is None:
+        if age > timedelta(hours=LONGFORM_FALLBACK_MIN_GAP_HOURS):
+            return True, (f"no Short was published for this slot, so it gets a long-form "
+                          f"instead of nothing (newest long-form is {hours:.0f} hours old)")
+        return False, (f"no Short was published for this slot, and a long-form went out "
+                       f"{hours:.0f} hours ago (under {LONGFORM_FALLBACK_MIN_GAP_HOURS}); "
+                       f"nothing more this slot")
+    return False, (f"this slot's Short is published ({short[0].name}); the long-form goes "
+                   f"out at {own} UTC (newest is {hours:.0f} hours old)")
+
+
+def main(argv: list[str] | None = None) -> int:
+    """``--longform-due <channel>``: print the decision and set a step output."""
+    import argparse
+    import os
+
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument("--longform-due", dest="longform_due", metavar="CHANNEL",
+                        help="say whether a leg for CHANNEL starting now owes a long-form")
+    parser.add_argument("--force", default="",
+                        help="'true' makes the answer yes (the owner's manual switch)")
+    args = parser.parse_args(argv)
+    if not args.longform_due:
+        parser.print_help()
+        return 2
+    if str(args.force).strip().lower() in {"1", "true", "yes"}:
+        due, why = True, "a long-form was asked for by hand"
+    else:
+        try:
+            due, why = longform_due(args.longform_due)
+        except Exception as exc:  # noqa: BLE001 - never lose a long-form to this check
+            due, why = True, f"the check could not run ({exc!r}), so nothing is held back"
+    print(f"long-form due for {args.longform_due}: {'yes' if due else 'no'} ({why})")
+    title = "Long-form due" if due else "Shorts-only slot"
+    print(f"::notice title={title} ({args.longform_due})::{why}")
+    out = os.environ.get("GITHUB_OUTPUT")
+    if out:
+        with open(out, "a", encoding="utf-8") as fh:
+            fh.write(f"longform={'true' if due else 'false'}\n")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

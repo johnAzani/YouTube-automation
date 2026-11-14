@@ -57,7 +57,7 @@ Same screen, same branch, `dry_run` **unticked**. On success:
 
 The upload moves `content/queue/0010-…md` to `content/published/`, posts the
 pastoral comment and writes `job_result.json`. Confirm all three before the next
-cron at 06:14 / 14:14 / 19:14 UTC.
+cron at 06:14 / 10:14 / 14:14 / 19:14 / 23:14 UTC.
 
 ---
 
