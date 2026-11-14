@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-13T09:31:29.387926+00:00",
-  "as_of": "2026-11-13",
+  "generated_at": "2026-11-14T04:14:47.231872+00:00",
+  "as_of": "2026-11-14",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 9,
+  "total_longform_videos": 10,
   "input_diagnostics": {
-    "snapshot_video_ids": 16,
-    "receipt_video_ids": 16,
-    "matched_video_ids": 16,
-    "longform_below_view_threshold": 9,
+    "snapshot_video_ids": 19,
+    "receipt_video_ids": 20,
+    "matched_video_ids": 19,
+    "longform_below_view_threshold": 10,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 7,
+    "longform_too_young_or_undated": 5,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
@@ -19,6 +19,14 @@
     {
       "theme": "general_prayer",
       "videos": 7,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": ""
+    },
+    {
+      "theme": "protection",
+      "videos": 1,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
