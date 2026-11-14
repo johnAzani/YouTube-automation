@@ -90,7 +90,7 @@ published_on: "2026-11-05"
 published_at: "2026-11-05T21:51:45Z"
 youtube_video_id: "oVy7uG5H1RU"
 thumbnail_pending: false
-metadata_revision: "retitle-pending"
+metadata_revision: "selar-seo-v1"
 
 thumbnail_revision: "ctr-v3-cinema"
 title_before: "Psalm 143:8 Morning Prayer | The Morning Altar"

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-14T08:49:46Z",
-  "monitor_generated_at": "2026-11-14T08:48:19.297783+00:00",
+  "generated_at": "2026-11-14T09:27:59Z",
+  "monitor_generated_at": "2026-11-14T09:26:57.984582+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -67,7 +67,7 @@
         "available": true,
         "as_of": "2026-11-14",
         "measured_longform_videos": 0,
-        "total_longform_videos": 13,
+        "total_longform_videos": 14,
         "top_themes": [
           {
             "theme": "protection",
@@ -135,7 +135,7 @@
         "available": true,
         "as_of": "2026-11-14",
         "measured_longform_videos": 0,
-        "total_longform_videos": 22,
+        "total_longform_videos": 23,
         "top_themes": [
           {
             "theme": "morning_mercy_renewal",
@@ -144,7 +144,7 @@
           },
           {
             "theme": "daily_guidance_wisdom",
-            "videos": 6,
+            "videos": 7,
             "top_scripture": ""
           },
           {
@@ -203,11 +203,11 @@
         "available": true,
         "as_of": "2026-11-14",
         "measured_longform_videos": 0,
-        "total_longform_videos": 14,
+        "total_longform_videos": 15,
         "top_themes": [
           {
             "theme": "midday_strength_endurance",
-            "videos": 11,
+            "videos": 12,
             "top_scripture": ""
           },
           {
@@ -271,7 +271,7 @@
         "available": true,
         "as_of": "2026-11-14",
         "measured_longform_videos": 0,
-        "total_longform_videos": 10,
+        "total_longform_videos": 11,
         "top_themes": [
           {
             "theme": "general_prayer",
@@ -280,7 +280,7 @@
           },
           {
             "theme": "protection",
-            "videos": 1,
+            "videos": 2,
             "top_scripture": ""
           },
           {
@@ -407,7 +407,7 @@
         "available": true,
         "as_of": "2026-11-14",
         "measured_longform_videos": 0,
-        "total_longform_videos": 7,
+        "total_longform_videos": 8,
         "top_themes": [
           {
             "theme": "anxiety_peace",
@@ -415,12 +415,12 @@
             "top_scripture": ""
           },
           {
-            "theme": "midday_strength_endurance",
+            "theme": "peace_rest",
             "videos": 2,
             "top_scripture": ""
           },
           {
-            "theme": "general_prayer",
+            "theme": "midday_strength_endurance",
             "videos": 2,
             "top_scripture": ""
           }
@@ -543,7 +543,7 @@
         "available": true,
         "as_of": "2026-11-14",
         "measured_longform_videos": 0,
-        "total_longform_videos": 5,
+        "total_longform_videos": 6,
         "top_themes": [
           {
             "theme": "peace_rest",
@@ -552,11 +552,11 @@
           },
           {
             "theme": "protection",
-            "videos": 2,
+            "videos": 3,
             "top_scripture": ""
           },
           {
-            "theme": "midday_strength_endurance",
+            "theme": "daily_guidance_wisdom",
             "videos": 1,
             "top_scripture": ""
           }
@@ -611,7 +611,7 @@
         "available": true,
         "as_of": "2026-11-14",
         "measured_longform_videos": 0,
-        "total_longform_videos": 4,
+        "total_longform_videos": 5,
         "top_themes": [
           {
             "theme": "general_prayer",
@@ -620,6 +620,11 @@
           },
           {
             "theme": "anxiety_peace",
+            "videos": 1,
+            "top_scripture": ""
+          },
+          {
+            "theme": "midday_strength_endurance",
             "videos": 1,
             "top_scripture": ""
           }
@@ -4943,7 +4948,7 @@
       "id": "0040",
       "slug": "proverbs-3-5-6-trust-in-the-lord",
       "file": "0040-proverbs-3-5-6-trust-in-the-lord.md",
-      "title": "Proverbs 3:5-6 Morning Prayer | The Morning Altar",
+      "title": "When You Don't Know What to Do: Proverbs 3:5-6 | The Morning Altar",
       "channel": "prayer2",
       "channel_name": "The Morning Altar",
       "channel_handle": "@TheMorningAltarDaily",
@@ -5063,7 +5068,7 @@
       "id": "0046",
       "slug": "psalm-91-6-the-destruction-that-wasteth-at-noonday",
       "file": "0046-psalm-91-6-the-destruction-that-wasteth-at-noonday.md",
-      "title": "Psalm 91:6 Midday Prayer | The Midday Watch",
+      "title": "Protection From Sudden Fears: Psalm 91:6 | The Midday Watch",
       "channel": "prayer3",
       "channel_name": "The Midday Watch",
       "channel_handle": "@TheMiddayWatch",
@@ -5303,7 +5308,7 @@
       "id": "0037",
       "slug": "psalm-143-8-morning-prayer-hear-thy-lovingkindness",
       "file": "0037-psalm-143-8-morning-prayer-hear-thy-lovingkindness.md",
-      "title": "Psalm 143:8 Morning Prayer | The Morning Altar",
+      "title": "When You Need Direction Today: Psalm 143:8 | The Morning Altar",
       "channel": "prayer2",
       "channel_name": "The Morning Altar",
       "channel_handle": "@TheMorningAltarDaily",
@@ -5375,7 +5380,7 @@
       "id": "0014",
       "slug": "psalm-34-the-angel-of-the-lord-encampeth",
       "file": "0014-psalm-34-the-angel-of-the-lord-encampeth.md",
-      "title": "Psalm 34 Night Prayer for Sleep | Angels Stand Watch Over You",
+      "title": "When Fear Keeps You Awake: Psalm 34 | The Secret Place",
       "channel": "secret-place",
       "channel_name": "The Secret Place",
       "channel_handle": "@TheSecretPlace",
@@ -7362,7 +7367,7 @@
       "name": "automation-health",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.4h ago",
+      "detail": "last success 1.0h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T08:27:19+00:00",
       "last_success": "2026-11-14T08:27:19+00:00",
@@ -7376,10 +7381,10 @@
       "name": "Autonomous Comment Replies",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 8.5h ago",
-      "last_conclusion": "",
+      "detail": "last success 0.6h ago",
+      "last_conclusion": "success",
       "last_run": "2026-11-14T08:48:08+00:00",
-      "last_success": "2026-11-14T00:19:43+00:00",
+      "last_success": "2026-11-14T08:48:08+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -7390,7 +7395,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 55.3h ago",
+      "detail": "last success 55.9h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-12T01:32:35+00:00",
       "last_success": "2026-11-12T01:32:35+00:00",
@@ -7404,7 +7409,7 @@
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 4.0h ago",
+      "detail": "last success 4.7h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T04:46:50+00:00",
       "last_success": "2026-11-14T04:46:50+00:00",
@@ -7418,11 +7423,11 @@
       "name": "Growth autopilot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 4.6h ago",
+      "detail": "last success 0.5h ago",
       "last_conclusion": "success",
-      "last_run": "2026-11-14T04:10:44+00:00",
-      "last_success": "2026-11-14T04:10:44+00:00",
-      "runs_14d": 18,
+      "last_run": "2026-11-14T08:55:29+00:00",
+      "last_success": "2026-11-14T08:55:29+00:00",
+      "runs_14d": 19,
       "missed_slots": 0,
       "failures_5": 0,
       "effect": ""
@@ -7432,7 +7437,7 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 117.0h ago",
+      "detail": "last success 117.6h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-09T11:48:56+00:00",
       "last_success": "2026-11-09T11:48:56+00:00",
@@ -7446,7 +7451,7 @@
       "name": "Weekly metrics snapshot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 8.5h ago",
+      "detail": "last success 9.1h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T00:19:33+00:00",
       "last_success": "2026-11-14T00:19:33+00:00",
@@ -7460,10 +7465,10 @@
       "name": "Automation monitor",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.4h ago",
+      "detail": "last success 0.7h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-14T08:47:18+00:00",
-      "last_success": "2026-11-14T08:27:19+00:00",
+      "last_run": "2026-11-14T09:26:02+00:00",
+      "last_success": "2026-11-14T08:47:18+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -7474,7 +7479,7 @@
       "name": "Produce video",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.4h ago",
+      "detail": "last success 1.1h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T08:22:36+00:00",
       "last_success": "2026-11-14T08:22:36+00:00",
@@ -7488,10 +7493,10 @@
       "name": "Scheduler supervisor",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.0h ago",
-      "last_conclusion": "success",
-      "last_run": "2026-11-14T08:47:18+00:00",
-      "last_success": "2026-11-14T08:47:18+00:00",
+      "detail": "last success 0.4h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-14T09:26:02+00:00",
+      "last_success": "2026-11-14T09:05:54+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,

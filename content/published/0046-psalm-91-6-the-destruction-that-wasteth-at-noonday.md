@@ -87,7 +87,7 @@ published_at: "2026-11-07T19:25:00Z"
 youtube_video_id: "GeZ3liNIxag"
 thumbnail_pending: false
 
-metadata_revision: "retitle-pending"
+metadata_revision: "selar-seo-v1"
 thumbnail_revision: "ctr-v3-cinema"
 title_before: "Psalm 91:6 Midday Prayer | The Midday Watch"
 retitled_at: "2026-11-14"

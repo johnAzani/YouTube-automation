@@ -87,7 +87,7 @@ published_on: "2026-11-07"
 published_at: "2026-11-07T23:32:11Z"
 youtube_video_id: "PIPx_odfiag"
 thumbnail_pending: false
-metadata_revision: "retitle-pending"
+metadata_revision: "selar-seo-v1"
 thumbnail_revision: "ctr-v3-cinema"
 title_before: "Proverbs 3:5-6 Morning Prayer | The Morning Altar"
 retitled_at: "2026-11-14"
