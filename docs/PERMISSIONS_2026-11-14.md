@@ -157,14 +157,24 @@ A password change does not end it. Minting a new token does not end the old one.
 
 ## After the grant
 
-Nothing in the studio reads Analytics yet. `scripts/channel_analytics.py` exists but looks for
-separate `ANALYTICS_*` secrets and was written to run privately. Still to build once the
-tokens are in place: read Analytics from the channel's own token in the daily growth run,
-start the Reporting job for thumbnail impressions (reports begin within 48 hours of the job
-and are kept 60 days), and decide which figures go into this public repository.
+**The Secret Place, 14 November 16:30 UTC.** Token: all seven scopes, right channel, no end
+date. YouTube Reporting API: on. **YouTube Analytics API: still off in its Cloud project**
+(a separate entry in the API Library; enabling one does not enable the other).
 
-Whether the Analytics API accepts `videoThumbnailImpressions` directly could not be tested:
-the API is off in every project. The probe asks that question on its next run.
+**Started:** `.github/workflows/reporting-jobs.yml` (`scripts/reporting_jobs.py`) asks YouTube,
+once per channel, to write the daily reach report (`channel_reach_basic_a1`: thumbnail
+impressions and click rate per video). It runs daily at 05:47 UTC, skips a channel that is
+not granted yet, never starts a second job for the same report, and prints only how many
+daily files are ready. The Secret Place's job was started on 14 November (run 43615940932);
+YouTube writes the first file within 48 hours and keeps each for 60 days. The other nine
+channels are picked up by the daily run once their tokens carry the Analytics scopes.
+
+**Not built yet:** nothing downloads those files or reads the Analytics API in the scheduled
+runs. `scripts/channel_analytics.py` exists but looks for separate `ANALYTICS_*` secrets and
+was written to run privately. Still to decide: which figures go into this public repository.
+
+Whether the Analytics API accepts `videoThumbnailImpressions` directly is still untested:
+the API is off in every project. The probe asks that question on each run.
 
 ## Changed with this note
 

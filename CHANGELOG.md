@@ -5,6 +5,14 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-14 — The Secret Place's thumbnail-impressions report is started
+
+- New `scripts/reporting_jobs.py` and `.github/workflows/reporting-jobs.yml` (daily 05:47 UTC, all ten channels): asks YouTube once per channel for the daily reach report (`channel_reach_basic_a1`, thumbnail impressions and click rate per video). A channel not granted yet is reported and skipped; a report that has a job never gets a second; nothing is deleted or downloaded; no figure is printed. `tests/test_reporting_jobs.py` (10).
+- Live: a dry run first (43615839548: nine channels skipped, one job to start), then run 43615940932 started The Secret Place's job. First daily file within 48 hours.
+- Audit run 43615619163: The Secret Place's Reporting API now answers (20 report types). Its YouTube Analytics API is still disabled.
+- `scripts/permission_probe.py`: an Analytics report now says how many rows came back, so an API that answers with nothing is visible.
+- Not built: nothing downloads the daily files yet. YouTube keeps each for 60 days.
+
 ## 2026-11-14 — the credential audit says what is left to grant
 
 - `scripts/permission_probe.py` adds one verdict line per channel: `GRANT COMPLETE`, or what the owner still has to do (mint with the missing scopes, enable an API in the project, verify a phone number).
