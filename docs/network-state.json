@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T19:13:34Z",
+  "generated_at": "2026-11-14T20:11:37Z",
   "monitor_generated_at": "2026-11-14T19:12:22.957257+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 230,
+    "published_total": 231,
     "published_longform": 107,
-    "published_shorts": 123,
-    "public_total": 228,
+    "published_shorts": 124,
+    "public_total": 229,
     "queued_longform": 57,
-    "queued_shorts": 85,
+    "queued_shorts": 84,
     "automations_ok": 11,
     "automations_total": 11,
     "network_healthy": true
@@ -237,23 +237,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 25,
+        "published_total": 26,
         "published_longform": 12,
-        "published_shorts": 13,
-        "thumbnail_pending": 24,
-        "public_total": 25,
+        "published_shorts": 14,
+        "thumbnail_pending": 25,
+        "public_total": 26,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTPSALM50V15",
-        "title": "Pray This Psalm 50:15 Midnight Prayer | Prayer For Release #Shorts",
+        "id": "SHORT-MIDNIGHTROMANS8V37",
+        "title": "Pray This Romans 8:37 Midnight Prayer | Beneath The Stars #Shorts",
         "format": "short",
-        "youtube_video_id": "WZIKhAN608I",
-        "watch_url": "https://www.youtube.com/shorts/WZIKhAN608I",
+        "youtube_video_id": "CSwiu1L2mWs",
+        "watch_url": "https://www.youtube.com/shorts/CSwiu1L2mWs",
         "published_on": "2026-11-14",
-        "published_at": "2026-11-14T16:53:00Z"
+        "published_at": "2026-11-14T20:10:49Z"
       },
       "next_queued_longform": {
         "id": "0212",
@@ -262,8 +262,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightromans8v37",
-        "scripture": "Romans 8:37",
+        "short": "short-midnightruth3v8",
+        "scripture": "Ruth 3:8-11",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTROMANS8V37",
+      "slug": "short-midnightromans8v37-midnight-prayer",
+      "file": "short-midnightromans8v37-midnight-prayer.md",
+      "title": "Pray This Romans 8:37 Midnight Prayer | Beneath The Stars #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T20:10:49Z",
+      "youtube_video_id": "CSwiu1L2mWs",
+      "watch_url": "https://www.youtube.com/shorts/CSwiu1L2mWs",
+      "youtu_be_url": "https://youtu.be/CSwiu1L2mWs",
+      "shorts_url": "https://www.youtube.com/shorts/CSwiu1L2mWs",
+      "studio_url": "https://studio.youtube.com/video/CSwiu1L2mWs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/CSwiu1L2mWs/hqdefault.jpg",
+      "thumb_text": "MIDNIGHT PRAYER \u00b7 BEYOND DEFEAT",
+      "thumbnail_pending": true,
+      "duration_label": "47s",
+      "words": 571
+    },
     {
       "id": "SHORT-MIDNIGHTPSALM50V15",
       "slug": "short-midnightpsalm50v15-midnight-prayer",
@@ -7027,17 +7051,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightromans8v37",
-        "file": "0000-short-midnightromans8v37.yml",
-        "companion_longform_id": "",
-        "scripture": "Romans 8:37",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-morningjeremiah29v11",
