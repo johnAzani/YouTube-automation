@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T08:29:59Z",
+  "generated_at": "2026-11-14T08:30:31Z",
   "monitor_generated_at": "2026-11-14T08:27:54.762085+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 206,
+    "published_total": 207,
     "published_longform": 103,
-    "published_shorts": 103,
-    "public_total": 204,
+    "published_shorts": 104,
+    "public_total": 205,
     "queued_longform": 52,
-    "queued_shorts": 92,
+    "queued_shorts": 91,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -237,23 +237,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 22,
+        "published_total": 23,
         "published_longform": 12,
-        "published_shorts": 10,
-        "thumbnail_pending": 21,
-        "public_total": 22,
+        "published_shorts": 11,
+        "thumbnail_pending": 22,
+        "public_total": 23,
         "queued_longform": 4,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "0211",
-        "title": "Midnight Prayer for Deliverance: Judges 16:3 | The Midnight Watch",
-        "format": "longform",
-        "youtube_video_id": "NU43WlbKS6A",
-        "watch_url": "https://youtu.be/NU43WlbKS6A",
+        "id": "SHORT-MIDNIGHT1JOHN4V4",
+        "title": "Pray This 1 John 4:4 Midnight Prayer | Quiet Reflection #Shorts",
+        "format": "short",
+        "youtube_video_id": "2jrNATF-jHA",
+        "watch_url": "https://www.youtube.com/shorts/2jrNATF-jHA",
         "published_on": "2026-11-14",
-        "published_at": "2026-11-14T05:34:15Z"
+        "published_at": "2026-11-14T08:29:23Z"
       },
       "next_queued_longform": {
         "id": "0212",
@@ -262,8 +262,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnight1john4v4",
-        "scripture": "1 John 4:4",
+        "short": "short-midnightjames4v7",
+        "scripture": "James 4:7",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHT1JOHN4V4",
+      "slug": "short-midnight1john4v4-midnight-prayer",
+      "file": "short-midnight1john4v4-midnight-prayer.md",
+      "title": "Pray This 1 John 4:4 Midnight Prayer | Quiet Reflection #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T08:29:23Z",
+      "youtube_video_id": "2jrNATF-jHA",
+      "watch_url": "https://www.youtube.com/shorts/2jrNATF-jHA",
+      "youtu_be_url": "https://youtu.be/2jrNATF-jHA",
+      "shorts_url": "https://www.youtube.com/shorts/2jrNATF-jHA",
+      "studio_url": "https://studio.youtube.com/video/2jrNATF-jHA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/2jrNATF-jHA/hqdefault.jpg",
+      "thumb_text": "THE MIDNIGHT WATCH \u00b7 1 JOHN 4:4",
+      "thumbnail_pending": true,
+      "duration_label": "52s",
+      "words": 579
+    },
     {
       "id": "SHORT-GUIDEDECCLESIASTES3V1",
       "slug": "short-guidedecclesiastes3v1-guidance-prayer",
@@ -6469,17 +6493,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnight1john4v4",
-        "file": "0000-short-midnight1john4v4.yml",
-        "companion_longform_id": "",
-        "scripture": "1 John 4:4",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightjames4v7",
