@@ -5,6 +5,12 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-14 — Shorts refused over one unheard word
+
+- First run of the new mix (5:27am Nigeria time): of the first seven channels, three published their Short and four were refused with `alignment does not cover the narration in order`. The speech aligner (`pipeline/prayer_alignment.py`) accepts a take when 85% of the script is recognised and gives a word it did not hear a zero-length span; the check after it in `pipeline/short_release.py` refused any word with no length. One unheard word refused the Short, and longer Shorts were refused more often (93 and 96 words went out; 99, 114, 120 and 133 were refused; the token lists were identical in all six). This is the failure that stopped Shorts on seven channels on 13 November.
+- `_spread_unheard_words` gives such a word the silence between its neighbours, or a share of the previous word's span by length. Words that were heard are not moved. A take that is out of order is still refused, and the error now names the word and the times.
+- Not proven on the failing audio itself: the recordings are on the runners. The reasoning is the error's origin (one line), identical token lists, and a reproduction through the real aligner with one word removed. If a Short is refused again the message says which word and why.
+
 ## 2026-11-14 — one long-form and five Shorts a day; Shorts that stand on their own
 
 - The owner handed the mix decision over. Each channel still makes six uploads a day, now one long-form and five Shorts instead of three and three (91 Shorts drew 7,513 views, 95 long-forms 261). Full note: `docs/SHORTS_FIRST_MIX_2026-11-14.md`.

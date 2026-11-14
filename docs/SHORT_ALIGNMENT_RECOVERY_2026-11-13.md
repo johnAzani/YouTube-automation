@@ -65,3 +65,31 @@ page now says why, and after three takes the channel moves on to its next Short.
 ## Tests
 
 `tests/test_short_alignment_recovery.py` (10).
+
+## 14 November: the cause
+
+The recovery above made the failure survivable and put the reason in the
+error. The first run after it gave the reason: `alignment does not cover the
+narration in order`. That sentence comes from one line, the check that follows
+the aligner in `_ensure_word_timings`, so the aligner had accepted the take.
+
+- The aligner (`pipeline/prayer_alignment.py`) accepts a take when at least 85%
+  of the script is recognised. A script word the recogniser did not hear gets a
+  zero-length span at the previous word's end. Its docstring says so.
+- The check after it demanded `end > start` for every word.
+
+So one unheard word in a Short refused the Short, and a fresh take helped only
+when the recogniser happened to hear every word. In that run the Shorts of 93
+and 96 words were published and those of 99, 114, 120 and 133 words were
+refused; all six produce identical token lists in both functions.
+
+`_spread_unheard_words` now gives an untimed word a span: the silence between
+its neighbours when there is at least 0.04 s a word, otherwise a share of the
+previous word's span by length (the next word's at the very start). Words that
+were heard are not moved. Out-of-order timings are still refused, and the
+error names the word and the times (`_why_invalid`).
+
+Not proven on the refused audio: it stays on the runner. The case rests on
+where the error is raised, the identical token lists, and a reproduction
+through the real `match` with one word removed
+(`tests/test_short_alignment_recovery.py`).

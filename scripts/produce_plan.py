@@ -284,7 +284,7 @@ def longform_due(channel_id: str | None, now: datetime | None = None,
             return True, (f"no Short was published for this slot, so it gets a long-form "
                           f"instead of nothing (newest long-form is {hours:.0f} hours old)")
         return False, (f"no Short was published for this slot, and a long-form went out "
-                       f"{hours:.0f} hours ago (under {LONGFORM_FALLBACK_MIN_GAP_HOURS}); "
+                       f"{hours:.1f} hours ago (under {LONGFORM_FALLBACK_MIN_GAP_HOURS}); "
                        f"nothing more this slot")
     return False, (f"this slot's Short is published ({short[0].name}); the long-form goes "
                    f"out at {own} UTC (newest is {hours:.0f} hours old)")
