@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T12:11:56Z",
+  "generated_at": "2026-11-14T13:38:51Z",
   "monitor_generated_at": "2026-11-14T10:41:34.562205+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 217,
+    "published_total": 218,
     "published_longform": 105,
-    "published_shorts": 112,
-    "public_total": 215,
+    "published_shorts": 113,
+    "public_total": 216,
     "queued_longform": 59,
-    "queued_shorts": 96,
+    "queued_shorts": 95,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -237,23 +237,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 23,
+        "published_total": 24,
         "published_longform": 12,
-        "published_shorts": 11,
-        "thumbnail_pending": 22,
-        "public_total": 23,
+        "published_shorts": 12,
+        "thumbnail_pending": 23,
+        "public_total": 24,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 11
+        "queued_shorts": 10
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHT1JOHN4V4",
-        "title": "Pray This 1 John 4:4 Midnight Prayer | Quiet Reflection #Shorts",
+        "id": "SHORT-MIDNIGHTJAMES4V7",
+        "title": "Pray This James 4:7 Midnight Prayer | Watch #Shorts",
         "format": "short",
-        "youtube_video_id": "2jrNATF-jHA",
-        "watch_url": "https://www.youtube.com/shorts/2jrNATF-jHA",
+        "youtube_video_id": "_cK17PWe_bg",
+        "watch_url": "https://www.youtube.com/shorts/_cK17PWe_bg",
         "published_on": "2026-11-14",
-        "published_at": "2026-11-14T08:29:23Z"
+        "published_at": "2026-11-14T13:38:03Z"
       },
       "next_queued_longform": {
         "id": "0212",
@@ -262,8 +262,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightjames4v7",
-        "scripture": "James 4:7",
+        "short": "short-midnightpsalm50v15",
+        "scripture": "Psalm 50:15",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTJAMES4V7",
+      "slug": "short-midnightjames4v7-midnight-prayer",
+      "file": "short-midnightjames4v7-midnight-prayer.md",
+      "title": "Pray This James 4:7 Midnight Prayer | Watch #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T13:38:03Z",
+      "youtube_video_id": "_cK17PWe_bg",
+      "watch_url": "https://www.youtube.com/shorts/_cK17PWe_bg",
+      "youtu_be_url": "https://youtu.be/_cK17PWe_bg",
+      "shorts_url": "https://www.youtube.com/shorts/_cK17PWe_bg",
+      "studio_url": "https://studio.youtube.com/video/_cK17PWe_bg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/_cK17PWe_bg/hqdefault.jpg",
+      "thumb_text": "MIDNIGHT \u00b7 SPIRITUAL",
+      "thumbnail_pending": true,
+      "duration_label": "51s",
+      "words": 566
+    },
     {
       "id": "0508",
       "slug": "psalm-84-11-provision-prayer-the-provision-table",
@@ -6796,17 +6820,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightjames4v7",
-        "file": "0000-short-midnightjames4v7.yml",
-        "companion_longform_id": "",
-        "scripture": "James 4:7",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightpsalm50v15",
