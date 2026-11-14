@@ -3,7 +3,7 @@ channel: secret-place
 standalone: true
 source: evergreen
 scripture: Psalm 55:22
-status: held
+status: draft
 renderer_ready: true
 authored_by_brain: true
 privacy: public

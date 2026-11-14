@@ -102,7 +102,11 @@ class TestShortKeyAndNonPsalmIntegrity(unittest.TestCase):
             elif row["status"] == "draft":
                 self.assertEqual(row["verdict"], "not_approved", f"Draft must not be ready: {row}")
             else:
-                self.assertEqual(row["status"], "quota_paused", f"Unexpected manifest status: {row}")
+                # Statuses the pipeline itself writes: a quota pause, and a Short
+                # stepped over after three rejected takes (short_release.py).
+                self.assertIn(row["status"], ("quota_paused", "alignment_paused"),
+                              f"Unexpected manifest status: {row}")
+                self.assertEqual(row["verdict"], "not_approved", f"Paused must not be ready: {row}")
             ed = resolve_edition(row["short"], channel_id=row["channel"])
             self.assertIsNotNone(ed)
             from pipeline.channel_capabilities import brand_for, known_channels
