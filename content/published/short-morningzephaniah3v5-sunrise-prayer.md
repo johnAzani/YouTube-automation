@@ -19,13 +19,12 @@ width: 720
 height: 1280
 duration_seconds: 49.8
 scenes_verified: 10
-thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunris"
+thumbnail_pending: false
 thumbnail_poster: ["BEGIN", "EVERY", "SUNRISE", "IN PRAYER"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-14T14:30:42Z"
-thumbnail_retry_reason: "rate_limit"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
 ---
 
 Breathe in the quiet peace of this new dawn. Lift your heart to the maker of the morning sky. The Lord is within her, he will not do unrighteousness. Every morning he brings his justice to light. He does not fail, nor does he know any injustice. Rest your weary mind in his unfailing steadfast love. Let his unchanging goodness steady your anxious thoughts today. Walk forward into this day wrapped in quiet grace. May his enduring presence go before you every step. Subscribe to The Morning Altar for daily sunrise prayer.

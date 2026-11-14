@@ -19,13 +19,12 @@ width: 720
 height: 1280
 duration_seconds: 52.61
 scenes_verified: 7
-thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunrise Prayer; long_uploads_status=allowed; video_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; video_channel_title=The Morning Altar | Daily Sunrise Prayer; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_pending: false
 thumbnail_poster: ["AWAKE MY SOUL", "BEGIN WITH PSALM 57:8", "AWAKEN THE DAWN", "THE MORNING ALTAR"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-14T14:30:42Z"
-thumbnail_retry_reason: "rate_limit"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
 ---
 
 Welcome the soft light of a brand new day as peace fills your heart. Scripture reminds us in Psalm 57:8, Awake, my soul! Awake, harp and lyre! I will awaken the dawn. Lord, as this morning sun rises, we lift our spirits and surrender our worries to You. Fill our minds with Your quiet wisdom and guide our steps into Your divine purpose today. May Your unfailing love protect us and shine through everything we speak and do. We give You glory for this sacred morning and rest securely in Your eternal grace. Subscribe to The Morning Altar to begin every sunrise in prayer.
