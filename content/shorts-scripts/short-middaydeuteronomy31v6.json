@@ -1,0 +1,280 @@
+{
+  "key": "short-middaydeuteronomy31v6",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "BE STRONG",
+    "AND COURAGEOUS"
+  ],
+  "poster": [
+    "STRENGTH FOR",
+    "THE MIDDAY",
+    "BATTLE WITHIN",
+    "YOUR HEART"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "bright midday sun casting long window shadows across a wooden floor",
+    "dust motes dancing in a single beam of light on an empty desk",
+    "still wheat fields under a high cloudless midday sky",
+    "ripples on a calm lake reflecting the zenith of the sun",
+    "a quiet empty chair bathed in warm natural afternoon sunlight",
+    "close up of a leather notebook resting in a pool of soft light"
+  ],
+  "scenes": [
+    {
+      "a": "That heavy doubt whispering",
+      "img": "short-middaydeuteronomy31v6-scene-01.jpg",
+      "kicker": "DEUTERONOMY 31:6",
+      "sub": "GOD IS WITH YOU ALWAYS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Be strong and courageous.",
+      "img": "short-middaydeuteronomy31v6-scene-02.jpg",
+      "kicker": "DEUTERONOMY 31:6",
+      "sub": "DO NOT BE AFRAID",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He will not leave",
+      "img": "short-middaydeuteronomy31v6-scene-03.jpg",
+      "kicker": "DEUTERONOMY 31:6",
+      "sub": "HE GOES BEFORE YOU",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, anchor my spirit",
+      "img": "short-middaydeuteronomy31v6-scene-04.jpg",
+      "kicker": "DEUTERONOMY 31:6",
+      "sub": "FIND YOUR REST",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Quiet the noise now",
+      "img": "short-middaydeuteronomy31v6-scene-05.jpg",
+      "kicker": "DEUTERONOMY 31:6",
+      "sub": "HEAR HIS STILL VOICE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant me the peace",
+      "img": "short-middaydeuteronomy31v6-scene-06.jpg",
+      "kicker": "DEUTERONOMY 31:6",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That heavy doubt whispering in your mind is louder than the truth right now."
+    ],
+    [
+      8,
+      18,
+      "Be strong and courageous. Do not be afraid or terrified because of them, for the Lord your God goes with you."
+    ],
+    [
+      18,
+      28,
+      "He will not leave you nor forsake you. This is the promise for your midday hour today."
+    ],
+    [
+      28,
+      38,
+      "Lord, anchor my spirit in this unchanging word while the world demands so much of me."
+    ],
+    [
+      38,
+      48,
+      "Quiet the noise now so I can feel the weight of your presence holding me steady."
+    ],
+    [
+      48,
+      58,
+      "Grant me the peace to keep moving forward with grace. Please subscribe to The Midday Watch."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THAT HEAVY DOUBT",
+        "WHISPERING IN YOUR MIND",
+        "LOUDER THAN TRUTH"
+      ],
+      [
+        "DOUBT",
+        "TRUTH"
+      ],
+      "DEUTERONOMY 31:6"
+    ],
+    [
+      8,
+      18,
+      [
+        "BE STRONG",
+        "AND COURAGEOUS",
+        "DO NOT BE AFRAID",
+        "THE LORD GOES",
+        "WITH YOU"
+      ],
+      [
+        "STRONG",
+        "COURAGEOUS"
+      ],
+      "DEUTERONOMY 31:6"
+    ],
+    [
+      18,
+      28,
+      [
+        "HE WILL NOT",
+        "LEAVE NOR FORSAKE",
+        "YOU HE IS",
+        "WITH YOU NOW"
+      ],
+      [
+        "NEVER FORSAKE"
+      ],
+      "DEUTERONOMY 31:6"
+    ],
+    [
+      28,
+      38,
+      [
+        "ANCHOR MY SPIRIT",
+        "IN THIS WORD",
+        "WHILE THE WORLD",
+        "DEMANDS SO MUCH"
+      ],
+      [
+        "ANCHOR"
+      ],
+      "DEUTERONOMY 31:6"
+    ],
+    [
+      38,
+      48,
+      [
+        "QUIET THE NOISE",
+        "FEEL HIS PRESENCE",
+        "HOLDING ME STEADY",
+        "IN THIS MOMENT"
+      ],
+      [
+        "QUIET",
+        "STEADY"
+      ],
+      "DEUTERONOMY 31:6"
+    ],
+    [
+      48,
+      58,
+      [
+        "GRANT ME PEACE",
+        "TO MOVE FORWARD",
+        "WITH YOUR GRACE",
+        "THE MIDDAY WATCH"
+      ],
+      [
+        "PEACE",
+        "GRACE"
+      ],
+      "DEUTERONOMY 31:6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That heavy doubt whispering",
+      "kind": "phrase",
+      "words": [
+        "DOUBT",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Be strong and courageous.",
+      "kind": "phrase",
+      "words": [
+        "STRONG",
+        "COURAGEOUS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He will not leave",
+      "kind": "phrase",
+      "words": [
+        "NEVER",
+        "FORSAKE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, anchor my spirit",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "SPIRIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Quiet the noise now",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "STEADY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant me the peace",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Deuteronomy 31:6"
+}

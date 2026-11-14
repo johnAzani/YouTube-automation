@@ -1,0 +1,274 @@
+{
+  "key": "short-middayzechariah4v6",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "NOT BY MIGHT",
+    "ZECHARIAH 4:6 PRAYER"
+  ],
+  "poster": [
+    "MIDDAY PRAYER",
+    "ZECHARIAH 4:6",
+    "NOT BY MIGHT",
+    "THE MIDDAY WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "sunbeams pouring through window quiet desk midday",
+    "bright sunny path high noon open field",
+    "warm midday light resting on wooden table",
+    "sunlight filtering through green leaves calm midday",
+    "tranquil valley bathed in bright noon sunlight",
+    "peaceful sunlit mountain lake afternoon calm"
+  ],
+  "scenes": [
+    {
+      "a": "If you are trying to force a closed door open today, stop exhausting your own strength.",
+      "img": "short-middayzechariah4v6-scene-01.jpg",
+      "kicker": "ZECHARIAH 4:6",
+      "sub": "NOT BY MIGHT NOR BY POWER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Zechariah four verse six reminds us: Not by might, nor by power, but by my Spirit, says the Lord of hosts.",
+      "img": "short-middayzechariah4v6-scene-02.jpg",
+      "kicker": "ZECHARIAH 4:6",
+      "sub": "BY MY SPIRIT SAYS THE LORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, at this noon hour, we lay down our striving and the heavy burdens we cannot move on our own.",
+      "img": "short-middayzechariah4v6-scene-03.jpg",
+      "kicker": "ZECHARIAH 4:6",
+      "sub": "LAY DOWN YOUR STRIVING",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Where our intellect and hustle fail, fill this room with the quiet, invincible power of your Holy Spirit.",
+      "img": "short-middayzechariah4v6-scene-04.jpg",
+      "kicker": "ZECHARIAH 4:6",
+      "sub": "FILLED WITH HOLY SPIRIT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Give us grace to trust your divine timing and breathe peace into our weary hearts.",
+      "img": "short-middayzechariah4v6-scene-05.jpg",
+      "kicker": "ZECHARIAH 4:6",
+      "sub": "PEACE IN DIVINE TIMING",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to save this midday prayer, and let us meet God together again tomorrow.",
+      "img": "short-middayzechariah4v6-scene-06.jpg",
+      "kicker": "ZECHARIAH 4:6",
+      "sub": "THE MIDDAY WATCH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If you are trying to force a closed door open today, stop exhausting your own strength."
+    ],
+    [
+      8,
+      16,
+      "Zechariah four verse six reminds us: Not by might, nor by power, but by my Spirit, says the Lord of hosts."
+    ],
+    [
+      16,
+      24,
+      "Father, at this noon hour, we lay down our striving and the heavy burdens we cannot move on our own."
+    ],
+    [
+      24,
+      32,
+      "Where our intellect and hustle fail, fill this room with the quiet, invincible power of your Holy Spirit."
+    ],
+    [
+      32,
+      40,
+      "Give us grace to trust your divine timing and breathe peace into our weary hearts."
+    ],
+    [
+      40,
+      48,
+      "Subscribe to save this midday prayer, and let us meet God together again tomorrow."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF YOU ARE TRYING TO FORCE",
+        "A CLOSED DOOR OPEN TODAY",
+        "STOP EXHAUSTING YOUR STRENGTH"
+      ],
+      [
+        "FORCE",
+        "STRENGTH"
+      ],
+      "ZECHARIAH 4 : 6"
+    ],
+    [
+      8,
+      16,
+      [
+        "NOT BY MIGHT NOR BY POWER",
+        "BUT BY MY SPIRIT",
+        "SAYS THE LORD OF HOSTS"
+      ],
+      [
+        "SPIRIT"
+      ],
+      "ZECHARIAH 4 : 6"
+    ],
+    [
+      16,
+      24,
+      [
+        "AT THIS NOON HOUR",
+        "WE LAY DOWN OUR STRIVING",
+        "AND HEAVY BURDENS"
+      ],
+      [
+        "LAY DOWN",
+        "STRIVING"
+      ],
+      "ZECHARIAH 4 : 6"
+    ],
+    [
+      24,
+      32,
+      [
+        "WHERE OUR HUSTLE FAILS",
+        "FILL THIS ROOM WITH POWER",
+        "OF YOUR HOLY SPIRIT"
+      ],
+      [
+        "POWER",
+        "HOLY SPIRIT"
+      ],
+      "ZECHARIAH 4 : 6"
+    ],
+    [
+      32,
+      40,
+      [
+        "GIVE US GRACE TO TRUST",
+        "YOUR DIVINE TIMING",
+        "AND BREATHE PEACE"
+      ],
+      [
+        "DIVINE TIMING",
+        "PEACE"
+      ],
+      "ZECHARIAH 4 : 6"
+    ],
+    [
+      40,
+      48,
+      [
+        "SUBSCRIBE TO SAVE THIS PRAYER",
+        "LET US MEET GOD",
+        "TOGETHER AGAIN TOMORROW"
+      ],
+      [
+        "SUBSCRIBE",
+        "MEET GOD"
+      ],
+      "ZECHARIAH 4 : 6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are trying to force a closed door open today, stop exhausting your own strength.",
+      "kind": "phrase",
+      "words": [
+        "FORCE",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Zechariah four verse six reminds us: Not by might, nor by power, but by my Spirit, says the Lord of hosts.",
+      "kind": "phrase",
+      "words": [
+        "SPIRIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, at this noon hour, we lay down our striving and the heavy burdens we cannot move on our own.",
+      "kind": "phrase",
+      "words": [
+        "LAY DOWN",
+        "STRIVING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Where our intellect and hustle fail, fill this room with the quiet, invincible power of your Holy Spirit.",
+      "kind": "phrase",
+      "words": [
+        "POWER",
+        "HOLY SPIRIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Give us grace to trust your divine timing and breathe peace into our weary hearts.",
+      "kind": "phrase",
+      "words": [
+        "DIVINE TIMING",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to save this midday prayer, and let us meet God together again tomorrow.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "MEET GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Zechariah 4:6"
+}
