@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T15:10:35Z",
+  "generated_at": "2026-11-14T15:14:30Z",
   "monitor_generated_at": "2026-11-14T15:09:22.695741+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 219,
+    "published_total": 220,
     "published_longform": 105,
-    "published_shorts": 114,
-    "public_total": 217,
+    "published_shorts": 115,
+    "public_total": 218,
     "queued_longform": 59,
-    "queued_shorts": 94,
+    "queued_shorts": 93,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 49,
+        "published_total": 50,
         "published_longform": 23,
-        "published_shorts": 26,
+        "published_shorts": 27,
         "thumbnail_pending": 4,
-        "public_total": 48,
+        "public_total": 49,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MORNINGISAIAH43V18",
-        "title": "Say This Isaiah 43:18-19 Prayer at Sunrise | Begin Your Day #Shorts",
+        "id": "SHORT-MORNINGISAIAH60V1",
+        "title": "Say This Isaiah 60:1 Prayer at Sunrise | Is Here #Shorts",
         "format": "short",
-        "youtube_video_id": "LaXltleEXns",
-        "watch_url": "https://www.youtube.com/shorts/LaXltleEXns",
+        "youtube_video_id": "W_GyKxZO3Dk",
+        "watch_url": "https://www.youtube.com/shorts/W_GyKxZO3Dk",
         "published_on": "2026-11-14",
-        "published_at": "2026-11-14T11:18:36Z"
+        "published_at": "2026-11-14T15:13:37Z"
       },
       "next_queued_longform": {
         "id": "0067",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningisaiah60v1",
-        "scripture": "Isaiah 60:1",
+        "short": "short-morningjeremiah29v11",
+        "scripture": "Jeremiah 29:11",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGISAIAH60V1",
+      "slug": "short-morningisaiah60v1-sunrise-prayer",
+      "file": "short-morningisaiah60v1-sunrise-prayer.md",
+      "title": "Say This Isaiah 60:1 Prayer at Sunrise | Is Here #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T15:13:37Z",
+      "youtube_video_id": "W_GyKxZO3Dk",
+      "watch_url": "https://www.youtube.com/shorts/W_GyKxZO3Dk",
+      "youtu_be_url": "https://youtu.be/W_GyKxZO3Dk",
+      "shorts_url": "https://www.youtube.com/shorts/W_GyKxZO3Dk",
+      "studio_url": "https://studio.youtube.com/video/W_GyKxZO3Dk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/W_GyKxZO3Dk/hqdefault.jpg",
+      "thumb_text": "DAWN OVER \u00b7 THE MOUNTAINS",
+      "thumbnail_pending": false,
+      "duration_label": "40s",
+      "words": 566
+    },
     {
       "id": "SHORT-FAMILYMATTHEW6V9",
       "slug": "short-familymatthew6v9-household-prayer",
@@ -6855,17 +6879,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningisaiah60v1",
-        "file": "0000-short-morningisaiah60v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Isaiah 60:1",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningjeremiah29v11",
