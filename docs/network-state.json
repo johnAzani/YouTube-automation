@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-14T10:34:26Z",
-  "monitor_generated_at": "2026-11-14T10:33:02.504705+00:00",
+  "generated_at": "2026-11-14T10:42:56Z",
+  "monitor_generated_at": "2026-11-14T10:41:34.562205+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -12,8 +12,8 @@
     "published_longform": 103,
     "published_shorts": 105,
     "public_total": 206,
-    "queued_longform": 53,
-    "queued_shorts": 93,
+    "queued_longform": 55,
+    "queued_shorts": 96,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -176,7 +176,7 @@
         "public_total": 31,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-MIDDAYDEUTERONOMY31V6",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaymatthew19v26",
-        "scripture": "Matthew 19:26",
+        "short": "short-midday1corinthians10v13",
+        "scripture": "1 Corinthians 10:13",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -242,9 +242,9 @@
         "published_shorts": 11,
         "thumbnail_pending": 22,
         "public_total": 23,
-        "queued_longform": 4,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 11
       },
       "latest_video": {
         "id": "SHORT-MIDNIGHT1JOHN4V4",
@@ -6056,6 +6056,32 @@
         "words": 1176
       },
       {
+        "id": "0216",
+        "slug": "when-darkness-presses-hard-psalm-68-1-3-the-midnight-watch",
+        "file": "0216-when-darkness-presses-hard-psalm-68-1-3-the-midnight-watch.md",
+        "title": "When Darkness Presses Hard: Psalm 68:1-3 | The Midnight Watch",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1957
+      },
+      {
+        "id": "0217",
+        "slug": "gates-of-brass-psalm-107-psalm-107-13-16-the-midnight-watch",
+        "file": "0217-gates-of-brass-psalm-107-psalm-107-13-16-the-midnight-watch.md",
+        "title": "He Hath Broken the Gates of Brass: Psalm 107:13-16",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1471
+      },
+      {
         "id": "0308",
         "slug": "philippians-4-19-household-provision-prayer",
         "file": "0308-philippians-4-19-household-provision-prayer.md",
@@ -6502,6 +6528,17 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
+      },
+      {
+        "short": "short-midday1corinthians10v13",
+        "file": "0000-short-midday1corinthians10v13.yml",
+        "companion_longform_id": "",
+        "scripture": "1 Corinthians 10:13",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaymatthew19v26",
@@ -6966,6 +7003,28 @@
         "target_window_utc": "23:14"
       },
       {
+        "short": "short-midnightpsalm68v1",
+        "file": "0216-short-midnightpsalm68v1.yml",
+        "companion_longform_id": "0216",
+        "scripture": "Psalm 68:1-3",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "23:14"
+      },
+      {
+        "short": "short-midnightpsalm107v13",
+        "file": "0217-short-midnightpsalm107v13.yml",
+        "companion_longform_id": "0217",
+        "scripture": "Psalm 107:13-16",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "23:14"
+      },
+      {
         "short": "short-familynumbers6v24",
         "file": "0306-short-familynumbers6v24.yml",
         "companion_longform_id": "0306",
@@ -7413,7 +7472,7 @@
       "name": "automation-health",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.2h ago",
+      "detail": "last success 0.3h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T10:20:41+00:00",
       "last_success": "2026-11-14T10:20:41+00:00",
@@ -7427,7 +7486,7 @@
       "name": "Autonomous Comment Replies",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 1.8h ago",
+      "detail": "last success 1.9h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T08:48:08+00:00",
       "last_success": "2026-11-14T08:48:08+00:00",
@@ -7441,7 +7500,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 57.0h ago",
+      "detail": "last success 57.2h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-12T01:32:35+00:00",
       "last_success": "2026-11-12T01:32:35+00:00",
@@ -7455,7 +7514,7 @@
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 5.8h ago",
+      "detail": "last success 5.9h ago",
       "last_conclusion": "",
       "last_run": "2026-11-14T10:24:10+00:00",
       "last_success": "2026-11-14T04:46:50+00:00",
@@ -7469,7 +7528,7 @@
       "name": "Growth autopilot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 1.6h ago",
+      "detail": "last success 1.8h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T08:55:29+00:00",
       "last_success": "2026-11-14T08:55:29+00:00",
@@ -7483,7 +7542,7 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 118.7h ago",
+      "detail": "last success 118.9h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-09T11:48:56+00:00",
       "last_success": "2026-11-09T11:48:56+00:00",
@@ -7497,7 +7556,7 @@
       "name": "Weekly metrics snapshot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 10.2h ago",
+      "detail": "last success 10.4h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T00:19:33+00:00",
       "last_success": "2026-11-14T00:19:33+00:00",
@@ -7511,10 +7570,10 @@
       "name": "Automation monitor",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 0.2h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-14T10:32:03+00:00",
-      "last_success": "2026-11-14T10:24:46+00:00",
+      "last_run": "2026-11-14T10:40:34+00:00",
+      "last_success": "2026-11-14T10:32:03+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -7525,7 +7584,7 @@
       "name": "Produce video",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 2.2h ago",
+      "detail": "last success 2.3h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T08:22:36+00:00",
       "last_success": "2026-11-14T08:22:36+00:00",
@@ -7539,10 +7598,10 @@
       "name": "Scheduler supervisor",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.0h ago",
+      "detail": "last success 0.1h ago",
       "last_conclusion": "success",
-      "last_run": "2026-11-14T10:32:03+00:00",
-      "last_success": "2026-11-14T10:32:03+00:00",
+      "last_run": "2026-11-14T10:34:32+00:00",
+      "last_success": "2026-11-14T10:34:32+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
