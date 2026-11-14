@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-13T09:34:11.005881+00:00",
-  "as_of": "2026-11-13",
+  "generated_at": "2026-11-14T04:17:41.675658+00:00",
+  "as_of": "2026-11-14",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 5,
+  "total_longform_videos": 8,
   "input_diagnostics": {
-    "snapshot_video_ids": 8,
-    "receipt_video_ids": 8,
-    "matched_video_ids": 8,
-    "longform_below_view_threshold": 5,
+    "snapshot_video_ids": 14,
+    "receipt_video_ids": 14,
+    "matched_video_ids": 14,
+    "longform_below_view_threshold": 8,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 5,
+    "longform_too_young_or_undated": 7,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
@@ -18,7 +18,23 @@
   "themes": [
     {
       "theme": "general_prayer",
+      "videos": 3,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": ""
+    },
+    {
+      "theme": "anxiety_peace",
       "videos": 2,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": ""
+    },
+    {
+      "theme": "midday_strength_endurance",
+      "videos": 1,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -33,15 +49,7 @@
       "top_scripture": ""
     },
     {
-      "theme": "anxiety_peace",
-      "videos": 1,
-      "measured_videos": 0,
-      "avg_score": 0.0,
-      "avg_engagement": 0.0,
-      "top_scripture": ""
-    },
-    {
-      "theme": "midday_strength_endurance",
+      "theme": "daily_guidance_wisdom",
       "videos": 1,
       "measured_videos": 0,
       "avg_score": 0.0,
