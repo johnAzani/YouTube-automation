@@ -23,10 +23,13 @@ short_visual_fingerprints: ["sha256:1860792c0cf8653cecf73f4db2a9e742422b0cef2aaf
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE MIDNIGHT WATCH", "ISAIAH 10:27", "BURDENS ARE LIFTED", "STAND IN PRAYER"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-21T06:25:12Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Rise in spirit at this midnight hour, stepping away from the heavy noise of the world. You carry unspoken burdens, but tonight heaven pays close attention to your quiet heart. Isaiah ten twenty-seven declares: His burden shall be taken away from off thy shoulder, and the yoke shall be destroyed because of the anointing. Father, in this quiet watch, we ask for Your holy presence to break every chain of fear and exhaustion. Lift the heavy weights off every weary shoulder and restore deep peace to every sleeping home tonight. Let Your sacred anointing destroy every unseen bond, bringing fresh strength and quiet freedom before dawn. Stand with us in night prayer and subscribe to keep the midnight watch.
