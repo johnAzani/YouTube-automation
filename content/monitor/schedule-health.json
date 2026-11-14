@@ -44,8 +44,8 @@
       "workflow": "comments.yml"
     }
   ],
-  "generated_at": "2026-11-13T21:48:21.943031+00:00",
-  "last_run_at": "2026-11-13T21:47:43+00:00",
+  "generated_at": "2026-11-14T00:27:23.310810+00:00",
+  "last_run_at": "2026-11-14T00:26:55+00:00",
   "on_time": [
     {
       "late_minutes": 93,
@@ -53,13 +53,6 @@
       "ran_at": "2026-11-13T21:47:43+00:00",
       "slot": "2026-11-13T20:14:00+00:00",
       "workflow": "automation-health.yml"
-    },
-    {
-      "late_minutes": 16,
-      "name": "Automation monitor",
-      "ran_at": "2026-11-13T21:39:24+00:00",
-      "slot": "2026-11-13T21:23:00+00:00",
-      "workflow": "monitor.yml"
     },
     {
       "late_minutes": 44,
