@@ -14,6 +14,13 @@ Default scopes (--purpose upload): youtube.upload + youtube.readonly +
 youtube.force-ssl — the exact set `pipeline/upload.py` SCOPES requests.
 A token minted with fewer scopes is rejected with invalid_scope by every
 pipeline script, so if you mint in OAuth Playground instead, tick all three.
+
+--purpose full mints ONE token per channel that carries everything a creator
+channel can grant (FULL_SCOPES below), so no second token is ever needed for
+measurement or, later, revenue. A token with more scopes than a script asks
+for still works for that script. Store it in the same YOUTUBE_REFRESH_TOKEN
+secret. See docs/PERMISSIONS_2026-11-14.md.
+
 Use --purpose analytics for a separate read-only Analytics token, or
 --purpose analytics-revenue to include monetary reports. Never paste tokens in chat.
 """
@@ -25,8 +32,25 @@ import sys
 from pathlib import Path
 
 
+#: Every scope a creator's own channel can grant (YouTube Data API, Analytics API
+#: and Reporting API scope tables, read 14 November 2026). Left out on purpose:
+#: `youtubepartner` and `youtubepartner-channel-audit`, which act only for a
+#: YouTube Content Manager (a network or label), not for a channel.
+FULL_SCOPES = (
+    "youtube",                               # manage the account: channel page, playlists, shelves
+    "youtube.force-ssl",                     # videos, comments and captions
+    "youtube.upload",                        # upload, thumbnails
+    "youtube.readonly",                      # read
+    "yt-analytics.readonly",                 # watch time, sources, retention; bulk reports (impressions)
+    "yt-analytics-monetary.readonly",        # revenue reports, once the channel earns
+    "youtube.channel-memberships.creator",   # list members, once memberships exist
+)
+
+
 def scopes_for(purpose: str) -> list[str]:
     base = "https://www.googleapis.com/auth/"
+    if purpose == "full":
+        return [base + scope for scope in FULL_SCOPES]
     if purpose == "upload":
         return [base + "youtube.upload", base + "youtube.readonly", base + "youtube.force-ssl"]
     scopes = [base + "youtube.readonly", base + "yt-analytics.readonly"]
@@ -37,9 +61,18 @@ def scopes_for(purpose: str) -> list[str]:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--client-secret", required=True, help="path to OAuth client secret JSON")
-    ap.add_argument("--purpose", choices=("upload", "analytics", "analytics-revenue"), default="upload")
+    ap.add_argument("--client-secret", help="path to OAuth client secret JSON")
+    ap.add_argument("--purpose", choices=("upload", "full", "analytics", "analytics-revenue"),
+                    default="upload")
+    ap.add_argument("--print-scopes", action="store_true",
+                    help="print the scope list for --purpose (to paste into OAuth Playground) and exit")
     args = ap.parse_args()
+
+    if args.print_scopes:
+        print(" ".join(scopes_for(args.purpose)))
+        return 0
+    if not args.client_secret:
+        ap.error("--client-secret is required")
 
     try:
         from google_auth_oauthlib.flow import InstalledAppFlow
@@ -59,7 +92,7 @@ def main() -> int:
         print("OAuth client JSON must contain a web or installed client_id/client_secret", file=sys.stderr)
         return 1
 
-    prefix = "YOUTUBE" if args.purpose == "upload" else "ANALYTICS"
+    prefix = "YOUTUBE" if args.purpose in ("upload", "full") else "ANALYTICS"
     print("\n=== Sensitive values: store securely; never share in chat or public logs ===\n")
     print(f"Secret name: {prefix}_CLIENT_ID")
     print(client["client_id"])
@@ -67,7 +100,7 @@ def main() -> int:
     print(client["client_secret"])
     print(f"\nSecret name: {prefix}_REFRESH_TOKEN")
     print(creds.refresh_token)
-    if args.purpose == "upload":
+    if args.purpose in ("upload", "full"):
         print("\nStore in repository Actions secrets, not source files.")
     else:
         print("\nUse ANALYTICS_* in a private local environment. Do not run private reports in public Actions.")

@@ -19,7 +19,8 @@ Everything here is ₦0. Follow in order; items marked ⏱ have lead time, so st
 3. In YouTube Studio: enable 2-step verification + custom thumbnails (Settings → Channel).
 
 ### 1b. Google Cloud + YouTube OAuth (phone-friendly; no local computer required)
-1. In Google Cloud, create a project and enable **YouTube Data API v3**.
+1. In Google Cloud, create a project and enable **YouTube Data API v3**, **YouTube Analytics
+   API** and **YouTube Reporting API**.
 2. Configure Google Auth Platform for an **External** audience. For an unattended token,
    the app must be **In production**: Google says refresh tokens for non-basic scopes in
    **Testing** expire after 7 days. Keep the app unverified if it is only for your own
@@ -43,7 +44,10 @@ Everything here is ₦0. Follow in order; items marked ⏱ have lead time, so st
    `https://www.googleapis.com/auth/youtube.force-ssl`. (The pipeline always requests
    this exact set — `pipeline/upload.py` SCOPES — and a token minted with fewer scopes
    fails everywhere with invalid_scope.) Exchange the code and keep the refresh token
-   private.
+   private. To grant everything once, paste the seven-scope line from
+   `docs/PERMISSIONS_2026-11-14.md` (or `python scripts/youtube_oauth.py --purpose full
+   --print-scopes`) into the Playground's "Input your own scopes" box instead and tick
+   **Select all** on Google's consent page; a token with more scopes still works here.
 6. In GitHub repository Settings → Secrets and variables → Actions, create three
    separate secrets: `YOUTUBE_CLIENT_ID` (the Web client ID), `YOUTUBE_CLIENT_SECRET`
    (the raw Web client secret—not JSON), and `YOUTUBE_REFRESH_TOKEN` (the refresh token).
