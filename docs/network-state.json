@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T16:20:56Z",
+  "generated_at": "2026-11-14T16:22:43Z",
   "monitor_generated_at": "2026-11-14T16:19:23.883044+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 228,
+    "published_total": 229,
     "published_longform": 107,
-    "published_shorts": 121,
-    "public_total": 226,
+    "published_shorts": 122,
+    "public_total": 227,
     "queued_longform": 57,
-    "queued_shorts": 87,
+    "queued_shorts": 86,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -645,23 +645,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 7,
+        "published_total": 8,
         "published_longform": 4,
-        "published_shorts": 3,
-        "thumbnail_pending": 7,
-        "public_total": 7,
+        "published_shorts": 4,
+        "thumbnail_pending": 8,
+        "public_total": 8,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "0803",
-        "title": "Prayer Before a Big Decision: Proverbs 15:22 | The Guided Path",
-        "format": "longform",
-        "youtube_video_id": "1lENfpJKY4E",
-        "watch_url": "https://youtu.be/1lENfpJKY4E",
+        "id": "SHORT-GUIDEDISAIAH55V8",
+        "title": "Pray This Isaiah 55:8-9 Prayer for God's Guidance | Isaiah 55:8-9 #Shorts",
+        "format": "short",
+        "youtube_video_id": "tuJtkeBIAPc",
+        "watch_url": "https://www.youtube.com/shorts/tuJtkeBIAPc",
         "published_on": "2026-11-14",
-        "published_at": "2026-11-14T11:53:35Z"
+        "published_at": "2026-11-14T16:21:37Z"
       },
       "next_queued_longform": {
         "id": "0804",
@@ -670,8 +670,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedisaiah55v8",
-        "scripture": "Isaiah 55:8-9",
+        "short": "short-guidedjohn14v6",
+        "scripture": "John 14:6",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDEDISAIAH55V8",
+      "slug": "short-guidedisaiah55v8-guidance-prayer",
+      "file": "short-guidedisaiah55v8-guidance-prayer.md",
+      "title": "Pray This Isaiah 55:8-9 Prayer for God's Guidance | Isaiah 55:8-9 #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T16:21:37Z",
+      "youtube_video_id": "tuJtkeBIAPc",
+      "watch_url": "https://www.youtube.com/shorts/tuJtkeBIAPc",
+      "youtu_be_url": "https://youtu.be/tuJtkeBIAPc",
+      "shorts_url": "https://www.youtube.com/shorts/tuJtkeBIAPc",
+      "studio_url": "https://studio.youtube.com/video/tuJtkeBIAPc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/tuJtkeBIAPc/hqdefault.jpg",
+      "thumb_text": "WHEN PLANS FAIL \u00b7 GOD SEES HIGHER",
+      "thumbnail_pending": true,
+      "duration_label": "45s",
+      "words": 408
+    },
     {
       "id": "0308",
       "slug": "philippians-4-19-household-provision-prayer",
@@ -6935,17 +6959,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-guidedisaiah55v8",
-        "file": "0000-short-guidedisaiah55v8.yml",
-        "companion_longform_id": "",
-        "scripture": "Isaiah 55:8-9",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
       },
       {
         "short": "short-guidedjohn14v6",
