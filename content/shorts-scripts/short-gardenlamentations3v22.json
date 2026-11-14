@@ -1,0 +1,305 @@
+{
+  "key": "short-gardenlamentations3v22",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "HIS MERCIES ARE NEW",
+    "LAMENTATIONS 3:22-23"
+  ],
+  "poster": [
+    "HIS MERCIES",
+    "ARE NEW EVERY MORNING",
+    "GREAT IS THY",
+    "FAITHFULNESS"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit morning forest mist golden light",
+    "peaceful river soft dawn fog calm water",
+    "golden light over green summer meadow",
+    "calm lake reflection early morning sun",
+    "misty mountain valley sunrise warm glow",
+    "quiet autumn forest trail sunrise light"
+  ],
+  "scenes": [
+    {
+      "a": "If you woke up carrying the heavy fear that your strength will run out today, listen.",
+      "img": "short-gardenlamentations3v22-scene-01.jpg",
+      "kicker": "LAMENTATIONS 3:22",
+      "sub": "HIS MERCIES ARE NEW TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "It is of the LORD's mercies that we are not consumed, because his compassions fail not.",
+      "img": "short-gardenlamentations3v22-scene-02.jpg",
+      "kicker": "LAMENTATIONS 3:22",
+      "sub": "WE ARE NOT CONSUMED",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "They are new every morning: great is thy faithfulness.",
+      "img": "short-gardenlamentations3v22-scene-03.jpg",
+      "kicker": "LAMENTATIONS 3:23",
+      "sub": "GREAT IS THY FAITHFULNESS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, we offer You our heartfelt thanks that Your love does not depend on our perfection.",
+      "img": "short-gardenlamentations3v22-scene-04.jpg",
+      "kicker": "LAMENTATIONS 3:23",
+      "sub": "GIVING THANKS FOR GRACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Before our feet touch the floor, Your fresh mercy is already waiting for us.",
+      "img": "short-gardenlamentations3v22-scene-05.jpg",
+      "kicker": "LAMENTATIONS 3:23",
+      "sub": "FRESH MERCY EVERY MORNING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "When our mind feels overwhelmed, remind us that Your divine compassion never fails. We rest in Your constant care today. Subscribe to The Praise Garden to walk in daily prayer with us.",
+      "img": "short-gardenlamentations3v22-scene-06.jpg",
+      "kicker": "THE PRAISE GARDEN",
+      "sub": "WALK IN DAILY PRAYER",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If you woke up carrying the heavy fear that your strength will run out today, listen."
+    ],
+    [
+      7,
+      15,
+      "It is of the LORD's mercies that we are not consumed, because his compassions fail not."
+    ],
+    [
+      15,
+      22,
+      "They are new every morning: great is thy faithfulness."
+    ],
+    [
+      22,
+      30,
+      "Father, we offer You our heartfelt thanks that Your love does not depend on our perfection."
+    ],
+    [
+      30,
+      38,
+      "Before our feet touch the floor, Your fresh mercy is already waiting for us."
+    ],
+    [
+      38,
+      47,
+      "When our mind feels overwhelmed, remind us that Your divine compassion never fails."
+    ],
+    [
+      47,
+      55,
+      "We rest in Your constant care today. Subscribe to The Praise Garden to walk in daily prayer with us."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF YOU WOKE UP CARRYING",
+        "THE HEAVY FEAR TODAY",
+        "LISTEN TO HIS WORD"
+      ],
+      [
+        "HEAVY",
+        "FEAR"
+      ],
+      "LAMENTATIONS 3:22"
+    ],
+    [
+      7,
+      15,
+      [
+        "IT IS OF THE LORDS MERCIES",
+        "THAT WE ARE NOT CONSUMED",
+        "HIS COMPASSIONS FAIL NOT"
+      ],
+      [
+        "LORDS",
+        "MERCIES"
+      ],
+      "LAMENTATIONS 3:22"
+    ],
+    [
+      15,
+      22,
+      [
+        "THEY ARE NEW EVERY MORNING",
+        "GREAT IS THY FAITHFULNESS"
+      ],
+      [
+        "GREAT",
+        "FAITHFULNESS"
+      ],
+      "LAMENTATIONS 3:23"
+    ],
+    [
+      22,
+      30,
+      [
+        "WE OFFER HEARTFELT THANKS",
+        "YOUR LOVE DOES NOT DEPEND",
+        "UPON OUR PERFECTION"
+      ],
+      [
+        "HEARTFELT",
+        "THANKS"
+      ],
+      "LAMENTATIONS 3:23"
+    ],
+    [
+      30,
+      38,
+      [
+        "BEFORE OUR FEET TOUCH FLOOR",
+        "YOUR FRESH MERCY",
+        "IS ALREADY WAITING"
+      ],
+      [
+        "FRESH",
+        "MERCY"
+      ],
+      "LAMENTATIONS 3:23"
+    ],
+    [
+      38,
+      47,
+      [
+        "WHEN OUR MIND FEELS OVERWHELMED",
+        "YOUR DIVINE COMPASSION",
+        "NEVER FAILS US"
+      ],
+      [
+        "DIVINE",
+        "COMPASSION"
+      ],
+      "LAMENTATIONS 3:23"
+    ],
+    [
+      47,
+      55,
+      [
+        "WE REST IN YOUR CARE TODAY",
+        "SUBSCRIBE TO THE PRAISE GARDEN",
+        "FOR DAILY KJV PRAYER"
+      ],
+      [
+        "SUBSCRIBE",
+        "DAILY",
+        "PRAYER"
+      ],
+      "THE PRAISE GARDEN"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you woke up carrying the heavy fear that your strength will run out today, listen.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "FEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "It is of the LORD's mercies that we are not consumed, because his compassions fail not.",
+      "kind": "phrase",
+      "words": [
+        "LORDS",
+        "MERCIES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "They are new every morning: great is thy faithfulness.",
+      "kind": "phrase",
+      "words": [
+        "GREAT",
+        "FAITHFULNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we offer You our heartfelt thanks that Your love does not depend on our perfection.",
+      "kind": "phrase",
+      "words": [
+        "HEARTFELT",
+        "THANKS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Before our feet touch the floor, Your fresh mercy is already waiting for us.",
+      "kind": "phrase",
+      "words": [
+        "FRESH",
+        "MERCY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When our mind feels overwhelmed, remind us that Your divine compassion never fails.",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "COMPASSION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Praise Garden to walk in daily prayer with us.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Lamentations 3:22-23"
+}

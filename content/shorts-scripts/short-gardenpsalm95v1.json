@@ -1,0 +1,264 @@
+{
+  "key": "short-gardenpsalm95v1",
+  "channel": "prayer9",
+  "psalm": 95,
+  "title": [
+    "O COME",
+    "LET US SING"
+  ],
+  "poster": [
+    "THE PRAISE GARDEN",
+    "PSALM 95:1-2",
+    "A PRAYER OF THANKSGIVING",
+    "KJV WORSHIP"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glades peaceful morning light",
+    "misty countryside in soft golden light",
+    "golden light over calm quiet landscape",
+    "peaceful river winding through green trees",
+    "sunbeams breaking through ancient quiet trees",
+    "morning dew glistening on quiet meadow grass"
+  ],
+  "scenes": [
+    {
+      "a": "That unshakeable heaviness in your chest right now is asking for a different anchor today.",
+      "img": "short-gardenpsalm95v1-scene-01.jpg",
+      "kicker": "PSALM 95:1",
+      "sub": "LIFT YOUR VOICE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, we quiet our wandering minds before Your throne and remember Your steadfast faithfulness.",
+      "img": "short-gardenpsalm95v1-scene-02.jpg",
+      "kicker": "PSALM 95:1",
+      "sub": "THE ROCK OF OUR SALVATION",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "O come, let us sing unto the LORD: let us make a joyful noise to the rock of our salvation.",
+      "img": "short-gardenpsalm95v1-scene-03.jpg",
+      "kicker": "PSALM 95:1",
+      "sub": "SING UNTO THE LORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, You have been our dwelling place in all generations, holding us when the road grew steep.",
+      "img": "short-gardenpsalm95v1-scene-04.jpg",
+      "kicker": "PSALM 95:2",
+      "sub": "HIS PRESENCE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Let us come before his presence with thanksgiving, and make a joyful noise unto him with psalms.",
+      "img": "short-gardenpsalm95v1-scene-05.jpg",
+      "kicker": "PSALM 95:2",
+      "sub": "WITH THANKSGIVING",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Accept our humble praise this day, and let our gratitude be a sweet offering unto Your holy name.",
+      "img": "short-gardenpsalm95v1-scene-06.jpg",
+      "kicker": "PSALM 95:2",
+      "sub": "SUBSCRIBE FOR PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      5,
+      "That unshakeable heaviness in your chest right now is asking for a different anchor today."
+    ],
+    [
+      5,
+      11,
+      "Father, we quiet our wandering minds before Your throne and remember Your steadfast faithfulness."
+    ],
+    [
+      11,
+      18,
+      "O come, let us sing unto the LORD: let us make a joyful noise to the rock of our salvation."
+    ],
+    [
+      18,
+      24,
+      "Lord, You have been our dwelling place in all generations, holding us when the road grew steep."
+    ],
+    [
+      24,
+      31,
+      "Let us come before his presence with thanksgiving, and make a joyful noise unto him with psalms."
+    ],
+    [
+      31,
+      37,
+      "Accept our humble praise this day, and let our gratitude be a sweet offering unto Your holy name."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      5,
+      [
+        "THAT UNSHAKEABLE HEAVINESS",
+        "IN YOUR CHEST RIGHT NOW",
+        "IS ASKING FOR A DIFFERENT",
+        "ANCHOR TODAY"
+      ],
+      "HEAVINESS",
+      "PSALM 95 : 1"
+    ],
+    [
+      5,
+      11,
+      [
+        "FATHER WE QUIET OUR",
+        "WANDERING MINDS BEFORE YOUR",
+        "THRONE AND REMEMBER YOUR",
+        "STEADFAST FAITHFULNESS"
+      ],
+      "FAITHFULNESS",
+      "PSALM 95 : 1"
+    ],
+    [
+      11,
+      18,
+      [
+        "O COME LET US",
+        "SING UNTO THE LORD",
+        "LET US MAKE A JOYFUL NOISE",
+        "TO THE ROCK OF SALVATION"
+      ],
+      "SING",
+      "PSALM 95 : 1"
+    ],
+    [
+      18,
+      24,
+      [
+        "LORD YOU HAVE BEEN",
+        "OUR DWELLING PLACE IN",
+        "ALL GENERATIONS HOLDING US",
+        "WHEN THE ROAD GREW STEEP"
+      ],
+      "DWELLING",
+      "PSALM 95 : 2"
+    ],
+    [
+      24,
+      31,
+      [
+        "LET US COME BEFORE",
+        "HIS PRESENCE WITH THANKSGIVING",
+        "AND MAKE A JOYFUL NOISE",
+        "UNTO HIM WITH PSALMS"
+      ],
+      "THANKSGIVING",
+      "PSALM 95 : 2"
+    ],
+    [
+      31,
+      37,
+      [
+        "ACCEPT OUR HUMBLE",
+        "PRAISE THIS DAY AND",
+        "LET OUR GRATITUDE BE A",
+        "SWEET OFFERING UNTO HIS NAME"
+      ],
+      "GRATITUDE",
+      "PSALM 95 : 2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That unshakeable heaviness in your chest right now is asking for a different anchor today.",
+      "kind": "phrase",
+      "words": [
+        "HEAVINESS",
+        "ANCHOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we quiet our wandering minds before Your throne and remember Your steadfast faithfulness.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "FAITHFULNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "O come, let us sing unto the LORD: let us make a joyful noise to the rock of our salvation.",
+      "kind": "phrase",
+      "words": [
+        "SING",
+        "SALVATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, You have been our dwelling place in all generations, holding us when the road grew steep.",
+      "kind": "phrase",
+      "words": [
+        "DWELLING",
+        "STEEP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let us come before his presence with thanksgiving, and make a joyful noise unto him with psalms.",
+      "kind": "phrase",
+      "words": [
+        "PRESENCE",
+        "THANKSGIVING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Accept our humble praise this day, and let our gratitude be a sweet offering unto Your holy name.",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "GRATITUDE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 95:1-2"
+}

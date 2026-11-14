@@ -3,33 +3,33 @@
   "channel": "prayer9",
   "psalm": 150,
   "title": [
-    "EVERY BREATH",
-    "IS HIS PRAISE"
+    "LET EVERYTHING PRAISE",
+    "THE LORD TODAY"
   ],
   "poster": [
-    "THE PRAISE GARDEN",
-    "PSALM 150:6",
-    "A PRAYER OF",
-    "THANKFULNESS"
+    "LET EVERYTHING",
+    "THAT HATH BREATH",
+    "PRAISE THE LORD",
+    "PSALM 150:6"
   ],
   "end": [
     "SUBSCRIBE",
     "The Praise Garden — enter His gates with thanksgiving"
   ],
   "stock_queries": [
-    "misty forest sunlight glade",
-    "golden morning mountain lake",
-    "soft light over peaceful river",
-    "dappled sunlight in ancient woods",
-    "gentle stream through grassy valley",
-    "ethereal golden hour landscape"
+    "sunlit forest glade soft morning light green trees calm mist",
+    "misty countryside field golden hour soft sunlight peaceful landscape",
+    "peaceful river flowing through forest sunlight sparkling water",
+    "golden light over calm lake tranquil nature morning reflection",
+    "misty forest canopy soft god rays sunlight through leaves",
+    "calm valley meadow golden sunrise soft peaceful landscape"
   ],
   "scenes": [
     {
-      "a": "The worry you carried into this room is shrinking under the weight of His vast glory.",
+      "a": "If your mind feels weary in this quiet room",
       "img": "short-gardenpsalm150v6-scene-01.jpg",
       "kicker": "PSALM 150:6",
-      "sub": "THE LORD IS NEAR",
+      "sub": "EVERY BREATH IS HIS MERCY",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -37,32 +37,10 @@
       ]
     },
     {
-      "a": "Let every thing that hath breath praise the LORD.",
+      "a": "Let every thing that hath breath praise the LORD",
       "img": "short-gardenpsalm150v6-scene-02.jpg",
       "kicker": "PSALM 150:6",
-      "sub": "PRAISE THE LORD",
-      "cam": "pan_left",
-      "focus": [
-        0.3,
-        0.5
-      ]
-    },
-    {
-      "a": "Father, I acknowledge that my lungs are filled by Your grace and sustained by Your love.",
-      "img": "short-gardenpsalm150v6-scene-03.jpg",
-      "kicker": "A PRAYER OF PRAISE",
-      "sub": "Sustained by His Love",
-      "cam": "tilt_up",
-      "focus": [
-        0.5,
-        0.8
-      ]
-    },
-    {
-      "a": "May my spirit respond to this simple truth by offering a sacrifice of genuine thanksgiving today.",
-      "img": "short-gardenpsalm150v6-scene-04.jpg",
-      "kicker": "A PRAYER OF PRAISE",
-      "sub": "Sacrifice of Thanksgiving",
+      "sub": "PRAISE YE THE LORD",
       "cam": "pull_out",
       "focus": [
         0.5,
@@ -70,22 +48,44 @@
       ]
     },
     {
-      "a": "In the chaos of this hour, help me to remain anchored in the steady rhythm of Your holiness.",
-      "img": "short-gardenpsalm150v6-scene-05.jpg",
-      "kicker": "ANCHORED IN HOLINESS",
-      "sub": "In the Steady Rhythm",
+      "a": "the simple, sacred gift of life filling our lungs right now",
+      "img": "short-gardenpsalm150v6-scene-03.jpg",
+      "kicker": "PSALM 150:6",
+      "sub": "THANKFUL FOR THE GIFT OF LIFE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "we pause to offer You our heartfelt praise",
+      "img": "short-gardenpsalm150v6-scene-04.jpg",
+      "kicker": "PSALM 150:6",
+      "sub": "PAUSING TO GIVE HIM GLORY",
       "cam": "pan_right",
       "focus": [
-        0.7,
+        0.5,
         0.5
       ]
     },
     {
-      "a": "I choose to lift my voice and my life to You because You are infinitely worthy of glory.",
-      "img": "short-gardenpsalm150v6-scene-06.jpg",
-      "kicker": "INFINITELY WORTHY",
-      "sub": "Lift Up Your Life",
+      "a": "Every single breath is a living reminder of Your endless goodness and grace",
+      "img": "short-gardenpsalm150v6-scene-05.jpg",
+      "kicker": "PSALM 150:6",
+      "sub": "SUSTAINED BY HIS FAITHFULNESS",
       "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "May our lives honor You with every quiet breath we take today",
+      "img": "short-gardenpsalm150v6-scene-06.jpg",
+      "kicker": "PSALM 150:6",
+      "sub": "HONORING GOD WITH EVERY BREATH",
+      "cam": "pan_left",
       "focus": [
         0.5,
         0.5
@@ -96,32 +96,32 @@
     [
       0,
       8,
-      "The worry you carried into this room is shrinking under the weight of His vast glory."
+      "If your mind feels weary in this quiet room, remember every inhale is His mercy."
     ],
     [
       8,
-      15,
-      "Let every thing that hath breath praise the LORD."
+      16,
+      "Let every thing that hath breath praise the LORD. Praise ye the LORD."
     ],
     [
-      15,
-      23,
-      "Father, I acknowledge that my lungs are filled by Your grace and sustained by Your love."
+      16,
+      25,
+      "Heavenly Father, we thank You for the simple, sacred gift of life filling our lungs right now."
     ],
     [
-      23,
-      31,
-      "May my spirit respond to this simple truth by offering a sacrifice of genuine thanksgiving today."
+      25,
+      35,
+      "Before we ask for anything or worry about what lies ahead, we pause to offer You our heartfelt praise."
     ],
     [
-      31,
-      39,
-      "In the chaos of this hour, help me to remain anchored in the steady rhythm of Your holiness."
+      35,
+      45,
+      "Every single breath is a living reminder of Your endless goodness and grace. Even when our strength seems small, You sustain us completely."
     ],
     [
-      39,
-      47,
-      "I choose to lift my voice and my life to You because You are infinitely worthy of glory."
+      45,
+      55,
+      "May our lives honor You with every quiet breath we take today. Subscribe to join The Praise Garden for daily thanksgiving."
     ]
   ],
   "kinetic_phrases": [
@@ -129,140 +129,150 @@
       0,
       8,
       [
-        "THE WORRY YOU CARRIED",
-        "INTO THIS ROOM IS",
-        "SHRINKING UNDER THE",
-        "WEIGHT OF HIS GLORY"
+        "IF YOUR MIND FEELS WEARY",
+        "REMEMBER EVERY INHALE",
+        "IS HIS MERCY"
       ],
       [
-        "SHRINKING"
+        "WEARY",
+        "MERCY"
       ],
-      "PSALM 150:6"
+      "PSALM 150 : 6"
     ],
     [
       8,
-      15,
+      16,
       [
-        "LET EVERY THING",
-        "THAT HATH BREATH",
-        "PRAISE THE LORD"
+        "LET EVERY THING THAT HATH BREATH",
+        "PRAISE THE LORD",
+        "PRAISE YE THE LORD"
       ],
       [
+        "BREATH",
         "PRAISE"
       ],
-      "PSALM 150:6"
+      "PSALM 150 : 6"
     ],
     [
-      15,
-      23,
+      16,
+      25,
       [
-        "FATHER I ACKNOWLEDGE",
-        "LUNGS FILLED BY GRACE",
-        "SUSTAINED BY YOUR LOVE"
+        "WE THANK YOU FOR THE SACRED",
+        "GIFT OF LIFE FILLING",
+        "OUR LUNGS RIGHT NOW"
       ],
       [
-        "SUSTAINED"
+        "SACRED",
+        "GIFT"
       ],
-      "PSALM 150:6"
+      "PSALM 150 : 6"
     ],
     [
-      23,
-      31,
+      25,
+      35,
       [
-        "MAY MY SPIRIT",
-        "OFFER A SACRIFICE",
-        "OF GENUINE THANKSGIVING"
+        "BEFORE WE WORRY",
+        "WE PAUSE TO OFFER YOU",
+        "OUR HEARTFELT PRAISE"
       ],
       [
-        "THANKSGIVING"
+        "PAUSE",
+        "HEARTFELT"
       ],
-      "PSALM 150:6"
+      "PSALM 150 : 6"
     ],
     [
-      31,
-      39,
+      35,
+      45,
       [
-        "IN THE CHAOS",
-        "REMAIN ANCHORED IN",
-        "HIS STEADY RHYTHM"
+        "EVERY SINGLE BREATH",
+        "REMINDS US OF YOUR",
+        "ENDLESS GOODNESS AND GRACE"
       ],
       [
-        "ANCHORED"
+        "BREATH",
+        "GRACE"
       ],
-      "PSALM 150:6"
+      "PSALM 150 : 6"
     ],
     [
-      39,
-      47,
+      45,
+      55,
       [
-        "I CHOOSE TO LIFT",
-        "MY VOICE TO YOU",
-        "BECAUSE YOU ARE WORTHY"
+        "MAY OUR LIVES HONOR YOU",
+        "WITH EVERY QUIET BREATH",
+        "SUBSCRIBE TO JOIN US"
       ],
       [
-        "WORTHY"
+        "HONOR",
+        "SUBSCRIBE"
       ],
-      "PSALM 150:6"
+      "PSALM 150 : 6"
     ]
   ],
   "beats": [
     {
-      "a": "The worry you carried into this room is shrinking under the weight of His vast glory.",
+      "a": "If your mind feels weary in this quiet room",
       "kind": "phrase",
       "words": [
-        "SHRINKING",
-        "GLORY"
+        "WEARY",
+        "QUIET",
+        "ROOM"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Let every thing that hath breath praise the LORD.",
+      "a": "Let every thing that hath breath praise the LORD",
       "kind": "phrase",
       "words": [
-        "EVERY",
         "BREATH",
+        "PRAISE",
+        "LORD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "the simple, sacred gift of life filling our lungs right now",
+      "kind": "phrase",
+      "words": [
+        "SACRED",
+        "GIFT",
+        "LUNGS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "we pause to offer You our heartfelt praise",
+      "kind": "phrase",
+      "words": [
+        "PAUSE",
+        "HEARTFELT",
         "PRAISE"
       ],
-      "hi": 0,
+      "hi": 2,
       "slot": "C"
     },
     {
-      "a": "Father, I acknowledge that my lungs are filled by Your grace and sustained by Your love.",
+      "a": "Every single breath is a living reminder of Your endless goodness and grace",
       "kind": "phrase",
       "words": [
-        "FILLED",
-        "SUSTAINED"
+        "LIVING",
+        "REMINDER",
+        "GRACE"
       ],
-      "hi": 0,
+      "hi": 2,
       "slot": "C"
     },
     {
-      "a": "May my spirit respond to this simple truth by offering a sacrifice of genuine thanksgiving today.",
+      "a": "May our lives honor You with every quiet breath we take today",
       "kind": "phrase",
       "words": [
-        "SACRIFICE",
-        "THANKSGIVING"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "In the chaos of this hour, help me to remain anchored in the steady rhythm of Your holiness.",
-      "kind": "phrase",
-      "words": [
-        "ANCHORED",
-        "HOLINESS"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "I choose to lift my voice and my life to You because You are infinitely worthy of glory.",
-      "kind": "phrase",
-      "words": [
-        "CHOOSE",
-        "WORTHY"
+        "HONOR",
+        "QUIET",
+        "BREATH"
       ],
       "hi": 0,
       "slot": "C"
