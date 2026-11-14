@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T11:29:07Z",
+  "generated_at": "2026-11-14T11:54:25Z",
   "monitor_generated_at": "2026-11-14T10:41:34.562205+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 214,
-    "published_longform": 103,
+    "published_total": 215,
+    "published_longform": 104,
     "published_shorts": 111,
-    "public_total": 212,
-    "queued_longform": 61,
+    "public_total": 213,
+    "queued_longform": 60,
     "queued_shorts": 97,
     "automations_ok": 10,
     "automations_total": 10,
@@ -645,28 +645,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 6,
-        "published_longform": 3,
+        "published_total": 7,
+        "published_longform": 4,
         "published_shorts": 3,
-        "thumbnail_pending": 6,
-        "public_total": 6,
-        "queued_longform": 6,
+        "thumbnail_pending": 7,
+        "public_total": 7,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 10
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDECCLESIASTES3V1",
-        "title": "Pray This Ecclesiastes 3:1 Prayer for God's Guidance | Peace #Shorts",
-        "format": "short",
-        "youtube_video_id": "o2lOfpBIPmI",
-        "watch_url": "https://www.youtube.com/shorts/o2lOfpBIPmI",
-        "published_on": "2026-11-14",
-        "published_at": "2026-11-14T08:29:02Z"
-      },
-      "next_queued_longform": {
         "id": "0803",
         "title": "Prayer Before a Big Decision: Proverbs 15:22 | The Guided Path",
-        "words": 1290,
+        "format": "longform",
+        "youtube_video_id": "1lENfpJKY4E",
+        "watch_url": "https://youtu.be/1lENfpJKY4E",
+        "published_on": "2026-11-14",
+        "published_at": "2026-11-14T11:53:35Z"
+      },
+      "next_queued_longform": {
+        "id": "0804",
+        "title": "Prayer for Guidance When You Feel Lost: Psalm 32:8 | The Guided Path",
+        "words": 1446,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0803",
+      "slug": "proverbs-15-22-prayer-for-wise-counsel",
+      "file": "0803-proverbs-15-22-prayer-for-wise-counsel.md",
+      "title": "Prayer Before a Big Decision: Proverbs 15:22 | The Guided Path",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T11:53:35Z",
+      "youtube_video_id": "1lENfpJKY4E",
+      "watch_url": "https://youtu.be/1lENfpJKY4E",
+      "youtu_be_url": "https://youtu.be/1lENfpJKY4E",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/1lENfpJKY4E/edit",
+      "thumb_url": "https://i.ytimg.com/vi/1lENfpJKY4E/hqdefault.jpg",
+      "thumb_text": "WISE COUNSEL",
+      "thumbnail_pending": true,
+      "duration_label": "~9 min",
+      "words": 1290
+    },
     {
       "id": "SHORT-SHIELDJOHN10V28",
       "slug": "short-shieldjohn10v28-protection-prayer",
@@ -6549,19 +6573,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1444
-      },
-      {
-        "id": "0803",
-        "slug": "proverbs-15-22-prayer-for-wise-counsel",
-        "file": "0803-proverbs-15-22-prayer-for-wise-counsel.md",
-        "title": "Prayer Before a Big Decision: Proverbs 15:22 | The Guided Path",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1290
       },
       {
         "id": "0804",

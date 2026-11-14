@@ -2,7 +2,7 @@
 id: 0803
 title: "Prayer Before a Big Decision: Proverbs 15:22 | The Guided Path"
 slug: proverbs-15-22-prayer-for-wise-counsel
-status: approved
+status: published
 channel: prayer10
 privacy: public
 format: longform
@@ -73,6 +73,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-14"
+published_at: "2026-11-14T11:53:35Z"
+youtube_video_id: "1lENfpJKY4E"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Bringing the Decision to the Lord
