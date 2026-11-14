@@ -5,6 +5,20 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-14 — The Secret Place's long-form runs through the night
+
+Full note with the monetisation rules, the channels' numbers and the risks: `docs/MONETISATION_RESEARCH_2026-11-14.md`.
+
+- Only The Secret Place has the 1,000 subscribers the Partner Program asks for. It lacks watch time: 4,000 hours in a year, 8,000 for a channel still outside on 1 February 2027. Its 14 measured long-forms had 55 views at six to eight minutes each.
+- New `pipeline/night_tail.py`, called from `pipeline/prayer_pipeline.py`: after the prayer is rendered, a ten-minute rest section (the video's own pictures dimmed, the studio's score, Psalm 121:3 on screen for 40 seconds) is repeated behind it until the video is three hours. The prayer is not re-encoded. No speech request and no extra upload.
+- Only where YouTube reports `longUploadsStatus: allowed`. Any failure publishes the prayer as before. `NIGHT_TAIL_MINUTES=0` turns it off.
+- The description says first what the video is and marks where the music starts.
+- Not yet run against YouTube. Whether listeners leave it playing is unknown; watch time is only visible in YouTube Studio.
+- The prayer file is not changed; the long version is `<slug>.night.mp4` beside it, capped near 1.1 GB, and left out of the QC artifact in `produce.yml`.
+- The receipt records `prayer_seconds` and `duration_seconds`, so a later metadata sync (a retitle) keeps the description.
+- Tests: `tests/test_night_tail.py` (19), including a real encode and join.
+- `main` went red at about 10:03am Nigeria time without a code change: the first live growth run committed real Shorts view figures, `candidates` reordered The Covenant Shield's passages by them, and four tests in `tests/test_shorts_first_mix.py` that expected the written order failed. Those tests now switch the reordering off (it is tested in `tests/test_shorts_feedback.py`).
+
 ## 2026-11-14 — scripture check, Shorts feedback, seasons, retitling, Shorts captions, French, channel page
 
 Seven of nine automation gaps. Long narrated sessions and best-hour publishing were not built; the reasons are in the note. Full note: `docs/AUTOMATION_UPGRADES_2026-11-14.md`.
