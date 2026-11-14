@@ -28,6 +28,19 @@ from pipeline import evergreen_shorts as ev  # noqa: E402
 from pipeline import gemini_brain as gb  # noqa: E402
 from pipeline import short_release as sr  # noqa: E402
 from pipeline import short_script as ss  # noqa: E402
+
+
+@pytest.fixture(autouse=True)
+def passages_in_the_order_written(monkeypatch):
+    """These tests are about which passages are offered, in the order they are listed.
+
+    ``candidates`` also reorders by the views each channel's Shorts have drawn,
+    read from the files the daily growth run commits. Those change every day
+    (the first live run, 14 November 2026, moved Psalm 91 ahead of Psalm 23 on
+    The Covenant Shield and turned four tests here red). Reordering by views has
+    its own tests in ``tests/test_shorts_feedback.py``.
+    """
+    monkeypatch.setattr(ev, "_by_what_is_watched", lambda channel, references: list(references))
 from pipeline.channels import scheduled_channels  # noqa: E402
 from scripts import automation_monitor as mon  # noqa: E402
 from scripts import produce_plan as plan  # noqa: E402
