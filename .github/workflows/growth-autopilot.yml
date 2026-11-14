@@ -125,6 +125,7 @@ jobs:
       PRAYER9_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER9_YOUTUBE_REFRESH_TOKEN }}
       PRAYER10_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER10_YOUTUBE_REFRESH_TOKEN }}
       YOUTUBE_EXPECTED_CHANNEL_ID: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8","prayer9","prayer10"]'), matrix.channel) && (vars[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] || secrets[format('{0}YOUTUBE_CHANNEL_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])]) || '' }}
+      GEMINI_API_KEY: ${{ contains(fromJSON('["secret-place","prayer2","prayer3","prayer4","prayer5","prayer6","prayer7","prayer8","prayer9","prayer10"]'), matrix.channel) && secrets[format('{0}GEMINI_API_KEY', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] || '' }}
       GH_TOKEN: ${{ github.token }}
       # The autopilot is a measurement/sync job, not the weekly human report: do not
       # file a GitHub issue on every daily run.
@@ -215,6 +216,50 @@ jobs:
             sleep $((attempt * 2))
           done
           echo "::warning::could not push the feedback artifact; the run log is the record"
+
+      - name: Choose new titles for long-forms nobody has watched (${{ matrix.channel }})
+        # pipeline/retitle.py: long-forms at least 7 days old with 2 views or
+        # fewer, once per video, two per channel per day. Needs this run's
+        # snapshot for the view counts; writes only a ledger.
+        id: retitle
+        if: ${{ steps.metrics.outcome == 'success' }}
+        continue-on-error: true
+        run: python -u scripts/retitle_unwatched.py --channel "${{ matrix.channel }}" --ledger /tmp/retitles.json
+
+      - name: Commit the new titles (${{ matrix.channel }})
+        # The receipt is stamped on a fresh copy from main, never on this
+        # checkout's older one. The monitor's metadata sync pushes the receipt's
+        # title to YouTube (scripts/retrofit_published_metadata.py --sync-pending).
+        if: ${{ steps.retitle.outcome == 'success' }}
+        continue-on-error: true
+        run: |
+          if [ ! -s /tmp/retitles.json ] || [ "$(tr -d ' \n' < /tmp/retitles.json)" = "[]" ]; then
+            echo "no new titles for ${{ matrix.channel }}"
+            exit 0
+          fi
+          FILES="$(python3 -c 'import json,sys; print("\n".join(e["file"] for e in json.load(open(sys.argv[1]))))' /tmp/retitles.json)"
+          git config user.name "growth-autopilot"
+          git config user.email "actions@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch --quiet origin main
+            git reset --mixed origin/main
+            for f in $FILES; do git checkout origin/main -- "$f" 2>/dev/null || true; done
+            CHANGED="$(python3 scripts/retitle_unwatched.py --apply-ledger /tmp/retitles.json)"
+            if [ -z "$CHANGED" ]; then
+              echo "no receipt needed a new title after refreshing from main"
+              exit 0
+            fi
+            for f in $CHANGED; do git add "$f"; done
+            if git diff --cached --quiet; then
+              exit 0
+            fi
+            git commit --quiet -m "chore(growth): retitle unwatched ${{ matrix.channel }} long-forms [skip ci]"
+            if git push --quiet origin HEAD:main; then
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          echo "::warning::could not push the new titles; they will be chosen again tomorrow"
 
       - name: Surface a failing engine without masking the others
         if: always()
