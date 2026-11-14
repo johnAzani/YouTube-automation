@@ -1,0 +1,307 @@
+{
+  "key": "short-healing3john1v2",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "PRAYER FOR HEALING",
+    "AND SOUL RESTORATION"
+  ],
+  "poster": [
+    "GOD CARES FOR",
+    "YOUR BODY AND SOUL",
+    "3 JOHN 1:2",
+    "THE HEALING BALM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise stream flowing gently through lush green forest",
+    "warm golden sunlight streaming through cathedral sanctuary stained glass",
+    "soft white dove flying over peaceful glowing turquoise lake",
+    "golden sunset light reflecting on serene calm ocean water",
+    "tranquil turquoise waterfall bathed in soft golden sunlight",
+    "glowing golden candle flame illuminating peaceful sanctuary altar",
+    "white dove soaring above calm turquoise river at sunrise"
+  ],
+  "scenes": [
+    {
+      "a": "If your body is worn down and your mind feels completely exhausted today, listen closely.",
+      "img": "short-healing3john1v2-scene-01.jpg",
+      "kicker": "REST FOR THE WEARY",
+      "sub": "GOD SEES YOUR EXHAUSTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "God’s word declares in 3 John 1:2, 'Beloved, I pray that you may enjoy good health...",
+      "img": "short-healing3john1v2-scene-02.jpg",
+      "kicker": "3 JOHN 1:2",
+      "sub": "BELOVED I PRAY FOR YOU",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "...and that all may go well with you, even as your soul prospers.'",
+      "img": "short-healing3john1v2-scene-03.jpg",
+      "kicker": "PROSPER AND BE WELL",
+      "sub": "GOOD HEALTH AND SOUL PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, we bring this weary heart into Your holy presence right now.",
+      "img": "short-healing3john1v2-scene-04.jpg",
+      "kicker": "HEALING PRAYER",
+      "sub": "SURRENDER EVERY BURDEN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Touch every aching area in their body and speak deep peace to their mind.",
+      "img": "short-healing3john1v2-scene-05.jpg",
+      "kicker": "DIVINE TOUCH",
+      "sub": "SPEAK PEACE TO YOUR MIND",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Restore their physical strength, renew their spirit, and cover them in divine peace.",
+      "img": "short-healing3john1v2-scene-06.jpg",
+      "kicker": "STRENGTH RENEWED",
+      "sub": "RENEW SPIRIT AND BODY",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Let Your tender mercy wash over them like living water today. In Jesus' name, Amen. Subscribe to rest in God's healing presence.",
+      "img": "short-healing3john1v2-scene-07.jpg",
+      "kicker": "LIVING WATERS",
+      "sub": "WASH OVER THEM IN MERCY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If your body is worn down and your mind feels completely exhausted today, listen closely."
+    ],
+    [
+      7,
+      14,
+      "God’s word declares in 3 John 1:2, 'Beloved, I pray that you may enjoy good health..."
+    ],
+    [
+      14,
+      21,
+      "...and that all may go well with you, even as your soul prospers.'"
+    ],
+    [
+      21,
+      28,
+      "Father, we bring this weary heart into Your holy presence right now."
+    ],
+    [
+      28,
+      35,
+      "Touch every aching area in their body and speak deep peace to their mind."
+    ],
+    [
+      35,
+      42,
+      "Restore their physical strength, renew their spirit, and cover them in divine peace."
+    ],
+    [
+      42,
+      50,
+      "Let Your tender mercy wash over them like living water today. In Jesus' name, Amen. Subscribe to rest in God's healing presence."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF YOUR BODY",
+        "IS WORN DOWN",
+        "LISTEN CLOSELY TODAY"
+      ],
+      [
+        "BODY",
+        "EXHAUSTED"
+      ],
+      "3 JOHN 1:2"
+    ],
+    [
+      7,
+      14,
+      [
+        "BELOVED I PRAY",
+        "THAT YOU MAY ENJOY",
+        "GOOD HEALTH TODAY"
+      ],
+      [
+        "BELOVED",
+        "HEALTH"
+      ],
+      "3 JOHN 1:2"
+    ],
+    [
+      14,
+      21,
+      [
+        "AND THAT ALL",
+        "MAY GO WELL",
+        "AS YOUR SOUL PROSPERS"
+      ],
+      [
+        "WELL",
+        "SOUL"
+      ],
+      "3 JOHN 1:2"
+    ],
+    [
+      21,
+      28,
+      [
+        "FATHER WE BRING",
+        "THIS WEARY HEART",
+        "INTO YOUR PRESENCE"
+      ],
+      [
+        "WEARY",
+        "PRESENCE"
+      ],
+      "3 JOHN 1:2"
+    ],
+    [
+      28,
+      35,
+      [
+        "TOUCH EVERY ACHING",
+        "AREA IN THEIR BODY",
+        "SPEAK DEEP PEACE"
+      ],
+      [
+        "TOUCH",
+        "PEACE"
+      ],
+      "3 JOHN 1:2"
+    ],
+    [
+      35,
+      42,
+      [
+        "RESTORE THEIR STRENGTH",
+        "RENEW THEIR SPIRIT",
+        "DIVINE PEACE OVER THEM"
+      ],
+      [
+        "RESTORE",
+        "RENEW"
+      ],
+      "3 JOHN 1:2"
+    ],
+    [
+      42,
+      50,
+      [
+        "LET YOUR MERCY WASH",
+        "LIKE LIVING WATER TODAY",
+        "REST IN HIS PEACE"
+      ],
+      [
+        "LIVING",
+        "WATER"
+      ],
+      "3 JOHN 1:2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If your body is worn down",
+      "kind": "phrase",
+      "words": [
+        "WORN",
+        "DOWN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Beloved, I pray that you may enjoy good health",
+      "kind": "phrase",
+      "words": [
+        "BELOVED",
+        "HEALTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "even as your soul prospers",
+      "kind": "phrase",
+      "words": [
+        "SOUL",
+        "PROSPERS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Touch every aching area in their body",
+      "kind": "phrase",
+      "words": [
+        "TOUCH",
+        "BODY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Restore their physical strength",
+      "kind": "phrase",
+      "words": [
+        "RESTORE",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "wash over them like living water today",
+      "kind": "phrase",
+      "words": [
+        "LIVING",
+        "WATER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "3 John 1:2"
+}

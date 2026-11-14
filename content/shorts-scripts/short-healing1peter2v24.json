@@ -1,0 +1,264 @@
+{
+  "key": "short-healing1peter2v24",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "HEALING WORD",
+    "FOR YOUR SOUL"
+  ],
+  "poster": [
+    "HIS WOUNDS",
+    "YOUR",
+    "RESTORED",
+    "HEALTH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters",
+    "warm golden sanctuary light",
+    "peaceful white dove flying",
+    "gentle flowing stream in sun",
+    "soft clouds in sunset sky",
+    "stillness of nature at dawn"
+  ],
+  "scenes": [
+    {
+      "a": "That sharp pain in your chest whenever you think about tomorrow is seen by God.",
+      "img": "short-healing1peter2v24-scene-01.jpg",
+      "kicker": "1 PETER 2:24",
+      "sub": "HE SEES YOUR HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "1 Peter 2:24 says, He himself bore our sins in his body on the tree.",
+      "img": "short-healing1peter2v24-scene-02.jpg",
+      "kicker": "1 PETER 2:24",
+      "sub": "BEARING YOUR BURDEN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "That we might die to sin and live to righteousness. By his wounds you have been healed.",
+      "img": "short-healing1peter2v24-scene-03.jpg",
+      "kicker": "1 PETER 2:24",
+      "sub": "BY HIS WOUNDS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we lift up this weary one who carries heavy weights that were never meant to stay.",
+      "img": "short-healing1peter2v24-scene-04.jpg",
+      "kicker": "A PRAYER FOR PEACE",
+      "sub": "RELEASE YOUR BURDEN",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Wash away the lingering fear and replace the exhaustion with the gentle rhythm of your grace.",
+      "img": "short-healing1peter2v24-scene-05.jpg",
+      "kicker": "DIVINE RESTORATION",
+      "sub": "REST IN HIS GRACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May every part of their soul find rest in the finished work of your holy love.",
+      "img": "short-healing1peter2v24-scene-06.jpg",
+      "kicker": "FAITHFUL PROMISE",
+      "sub": "PEACE BE STILL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That sharp pain in your chest whenever you think about tomorrow is seen by God."
+    ],
+    [
+      8,
+      17,
+      "1 Peter 2:24 says, He himself bore our sins in his body on the tree."
+    ],
+    [
+      17,
+      26,
+      "That we might die to sin and live to righteousness. By his wounds you have been healed."
+    ],
+    [
+      26,
+      35,
+      "Lord, we lift up this weary one who carries heavy weights that were never meant to stay."
+    ],
+    [
+      35,
+      44,
+      "Wash away the lingering fear and replace the exhaustion with the gentle rhythm of your grace."
+    ],
+    [
+      44,
+      52,
+      "May every part of their soul find rest in the finished work of your holy love."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "SHARP PAIN IN",
+        "YOUR CHEST",
+        "IS SEEN BY GOD"
+      ],
+      [
+        "SHARP PAIN"
+      ],
+      "1 PETER 2:24"
+    ],
+    [
+      8,
+      17,
+      [
+        "HE BORE OUR SINS",
+        "IN HIS BODY",
+        "ON THE TREE"
+      ],
+      [
+        "BORE OUR SINS"
+      ],
+      "1 PETER 2:24"
+    ],
+    [
+      17,
+      26,
+      [
+        "DIE TO SIN",
+        "LIVE TO RIGHTEOUSNESS",
+        "BY HIS WOUNDS HEALED"
+      ],
+      [
+        "BY HIS WOUNDS"
+      ],
+      "1 PETER 2:24"
+    ],
+    [
+      26,
+      35,
+      [
+        "LIFT UP THIS WEARY ONE",
+        "CARRYING HEAVY WEIGHTS",
+        "NOT MEANT TO STAY"
+      ],
+      [
+        "WEARY ONE"
+      ],
+      "A PRAYER"
+    ],
+    [
+      35,
+      44,
+      [
+        "WASH AWAY FEAR",
+        "REPLACE EXHAUSTION WITH",
+        "THE RHYTHM OF GRACE"
+      ],
+      [
+        "RHYTHM OF GRACE"
+      ],
+      "PEACE"
+    ],
+    [
+      44,
+      52,
+      [
+        "MAY EVERY SOUL FIND",
+        "REST IN THE FINISHED",
+        "WORK OF HOLY LOVE"
+      ],
+      [
+        "HOLY LOVE"
+      ],
+      "REST"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That sharp pain in your chest whenever you think about tomorrow is seen by God.",
+      "kind": "phrase",
+      "words": [
+        "SHARP PAIN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "1 Peter 2:24 says, He himself bore our sins in his body on the tree.",
+      "kind": "phrase",
+      "words": [
+        "BORE OUR SINS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "That we might die to sin and live to righteousness. By his wounds you have been healed.",
+      "kind": "phrase",
+      "words": [
+        "BY HIS WOUNDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we lift up this weary one who carries heavy weights that were never meant to stay.",
+      "kind": "phrase",
+      "words": [
+        "WEARY ONE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Wash away the lingering fear and replace the exhaustion with the gentle rhythm of your grace.",
+      "kind": "phrase",
+      "words": [
+        "RHYTHM OF GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May every part of their soul find rest in the finished work of your holy love.",
+      "kind": "phrase",
+      "words": [
+        "HOLY LOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "1 Peter 2:24"
+}

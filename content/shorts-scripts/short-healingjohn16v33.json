@@ -1,0 +1,272 @@
+{
+  "key": "short-healingjohn16v33",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "FINDING PEACE",
+    "IN THE STORM"
+  ],
+  "poster": [
+    "PEACE BEYOND",
+    "THE WORRY",
+    "RESTORED SPIRIT",
+    "DIVINE CALM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters at dawn",
+    "warm golden sanctuary light glowing on stone",
+    "soft white dove feathers resting in light",
+    "calm flowing river reflecting sunset",
+    "gentle rippling water under soft light",
+    "serene mountain stream at twilight"
+  ],
+  "scenes": [
+    {
+      "a": "That sharp anxiety rising in your chest right now is exactly where Jesus meets you.",
+      "img": "short-healingjohn16v33-scene-01.jpg",
+      "kicker": "JOHN 16:33",
+      "sub": "FINDING PEACE IN THE STORM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He says, These things I have spoken to you, that in Me you may have peace.",
+      "img": "short-healingjohn16v33-scene-02.jpg",
+      "kicker": "JOHN 16:33",
+      "sub": "HE IS THE SOURCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In the world you will have tribulation; but be of good cheer, I have overcome.",
+      "img": "short-healingjohn16v33-scene-03.jpg",
+      "kicker": "JOHN 16:33",
+      "sub": "HE HAS OVERCOME",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, I bring this heavy spirit to you and ask for your deep healing touch.",
+      "img": "short-healingjohn16v33-scene-04.jpg",
+      "kicker": "A PRAYER FOR REST",
+      "sub": "SURRENDER YOUR BURDENS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Calm the waves within, restore the weary mind, and let your perfect peace remain here.",
+      "img": "short-healingjohn16v33-scene-05.jpg",
+      "kicker": "GOD IS RESTORING",
+      "sub": "YOUR HEART IS SAFE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May you walk forward today anchored in the truth of his victory, held in love.",
+      "img": "short-healingjohn16v33-scene-06.jpg",
+      "kicker": "WALK IN PEACE",
+      "sub": "SUBSCRIBE FOR DAILY PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That sharp anxiety rising in your chest right now is exactly where Jesus meets you."
+    ],
+    [
+      8,
+      16,
+      "He says, These things I have spoken to you, that in Me you may have peace."
+    ],
+    [
+      16,
+      24,
+      "In the world you will have tribulation; but be of good cheer, I have overcome."
+    ],
+    [
+      24,
+      32,
+      "Lord, I bring this heavy spirit to you and ask for your deep healing touch."
+    ],
+    [
+      32,
+      40,
+      "Calm the waves within, restore the weary mind, and let your perfect peace remain here."
+    ],
+    [
+      40,
+      48,
+      "May you walk forward today anchored in the truth of his victory, held in love."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THAT SHARP ANXIETY",
+        "RISING IN YOUR CHEST",
+        "IS WHERE JESUS",
+        "MEETS YOU"
+      ],
+      [
+        "ANXIETY",
+        "JESUS"
+      ],
+      "JOHN 16:33"
+    ],
+    [
+      8,
+      16,
+      [
+        "THESE THINGS I SPOKE",
+        "THAT IN ME",
+        "YOU MAY HAVE",
+        "PEACE"
+      ],
+      [
+        "PEACE"
+      ],
+      "JOHN 16:33"
+    ],
+    [
+      16,
+      24,
+      [
+        "IN THE WORLD",
+        "TRIBULATION WILL COME",
+        "BE OF GOOD CHEER",
+        "I HAVE OVERCOME"
+      ],
+      [
+        "OVERCOME"
+      ],
+      "JOHN 16:33"
+    ],
+    [
+      24,
+      32,
+      [
+        "I BRING THIS",
+        "HEAVY SPIRIT",
+        "TO YOU LORD",
+        "FOR HEALING TOUCH"
+      ],
+      [
+        "HEALING"
+      ],
+      "JOHN 16:33"
+    ],
+    [
+      32,
+      40,
+      [
+        "CALM THE WAVES",
+        "RESTORE THE MIND",
+        "LET PERFECT PEACE",
+        "REMAIN HERE"
+      ],
+      [
+        "RESTORE"
+      ],
+      "JOHN 16:33"
+    ],
+    [
+      40,
+      48,
+      [
+        "WALK FORWARD TODAY",
+        "ANCHORED IN TRUTH",
+        "HIS VICTORY IS REAL",
+        "HELD IN LOVE"
+      ],
+      [
+        "VICTORY"
+      ],
+      "JOHN 16:33"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That sharp anxiety rising in your chest right now is exactly where Jesus meets you.",
+      "kind": "phrase",
+      "words": [
+        "ANXIETY",
+        "JESUS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He says, These things I have spoken to you, that in Me you may have peace.",
+      "kind": "phrase",
+      "words": [
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In the world you will have tribulation; but be of good cheer, I have overcome.",
+      "kind": "phrase",
+      "words": [
+        "OVERCOME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, I bring this heavy spirit to you and ask for your deep healing touch.",
+      "kind": "phrase",
+      "words": [
+        "HEALING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Calm the waves within, restore the weary mind, and let your perfect peace remain here.",
+      "kind": "phrase",
+      "words": [
+        "RESTORE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May you walk forward today anchored in the truth of his victory, held in love.",
+      "kind": "phrase",
+      "words": [
+        "VICTORY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "John 16:33"
+}

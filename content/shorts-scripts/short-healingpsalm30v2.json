@@ -1,0 +1,295 @@
+{
+  "key": "short-healingpsalm30v2",
+  "channel": "prayer6",
+  "psalm": 30,
+  "title": [
+    "HEALING IN",
+    "HIS PRESENCE"
+  ],
+  "poster": [
+    "RESTORE",
+    "YOUR SOUL",
+    "IN QUIET",
+    "PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters flowing softly in sunlight",
+    "warm golden sanctuary light filtering through quiet pillars",
+    "white dove peaceful flight over calm waters at sunrise",
+    "gentle morning dew on green leaves in soft focus",
+    "serene mountain stream under a peaceful blue sky",
+    "soft golden hour rays resting on an empty wooden bench",
+    "tranquil ripples on a clear lake reflecting soft clouds"
+  ],
+  "scenes": [
+    {
+      "a": "Right in the middle of your quietest midnight worry, hear this.",
+      "img": "short-healingpsalm30v2-scene-01.jpg",
+      "kicker": "PSALM 30:2",
+      "sub": "REST IN HIS MERCY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The psalmist declared, O Lord my God, I cried unto thee, and thou hast healed me.",
+      "img": "short-healingpsalm30v2-scene-02.jpg",
+      "kicker": "PSALM 30:2",
+      "sub": "HIS EAR IS OPEN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, when my body is tired and my spirit feels fragile, you know the exact depth of my need.",
+      "img": "short-healingpsalm30v2-scene-03.jpg",
+      "kicker": "PSALM 30:2",
+      "sub": "WHISPER YOUR NEED",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant me the grace to release every racing thought into the safety of your healing hands.",
+      "img": "short-healingpsalm30v2-scene-04.jpg",
+      "kicker": "PSALM 30:2",
+      "sub": "LAY DOWN YOUR CARES",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Fill this weary heart with your gentle restoration, calming the storms that rise within me.",
+      "img": "short-healingpsalm30v2-scene-05.jpg",
+      "kicker": "PSALM 30:2",
+      "sub": "FIND PEACE TODAY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "May your presence be my shelter tonight, offering deep peace as I rest in your love.",
+      "img": "short-healingpsalm30v2-scene-06.jpg",
+      "kicker": "PSALM 30:2",
+      "sub": "REST IN HIS PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "In Jesus name, amen.",
+      "img": "short-healingpsalm30v2-scene-07.jpg",
+      "kicker": "PSALM 30:2",
+      "sub": "AMEN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "Right in the middle of your quietest midnight worry, hear this."
+    ],
+    [
+      12,
+      25,
+      "The psalmist declared, O Lord my God, I cried unto thee, and thou hast healed me."
+    ],
+    [
+      25,
+      40,
+      "Lord, when my body is tired and my spirit feels fragile, you know the exact depth of my need."
+    ],
+    [
+      40,
+      55,
+      "Grant me the grace to release every racing thought into the safety of your healing hands."
+    ],
+    [
+      55,
+      70,
+      "Fill this weary heart with your gentle restoration, calming the storms that rise within me."
+    ],
+    [
+      70,
+      85,
+      "May your presence be my shelter tonight, offering deep peace as I rest in your love."
+    ],
+    [
+      85,
+      95,
+      "In Jesus name, amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "RIGHT IN THE MIDDLE",
+        "OF YOUR QUIETEST",
+        "MIDNIGHT WORRY HEAR THIS"
+      ],
+      "MIDNIGHT",
+      "PSALM 30 : 2"
+    ],
+    [
+      12,
+      25,
+      [
+        "O LORD MY GOD",
+        "I CRIED UNTO THEE",
+        "AND THOU HAST HEALED ME"
+      ],
+      "HEALED",
+      "PSALM 30 : 2"
+    ],
+    [
+      25,
+      40,
+      [
+        "WHEN MY BODY IS TIRED",
+        "AND MY SPIRIT FEELS FRAGILE",
+        "YOU KNOW MY DEEPEST NEED"
+      ],
+      "FRAGILE",
+      "PSALM 30 : 2"
+    ],
+    [
+      40,
+      55,
+      [
+        "GRANT ME THE GRACE",
+        "TO RELEASE EVERY RACING",
+        "THOUGHT INTO YOUR HANDS"
+      ],
+      "RACING",
+      "PSALM 30 : 2"
+    ],
+    [
+      55,
+      70,
+      [
+        "FILL THIS WEARY HEART",
+        "WITH YOUR GENTLE RESTORATION",
+        "CALMING EVERY STORM"
+      ],
+      "RESTORATION",
+      "PSALM 30 : 2"
+    ],
+    [
+      70,
+      85,
+      [
+        "MAY YOUR PRESENCE",
+        "BE MY SHELTER TONIGHT",
+        "OFFERING DEEP PEACE"
+      ],
+      "SHELTER",
+      "PSALM 30 : 2"
+    ],
+    [
+      85,
+      95,
+      [
+        "IN JESUS NAME",
+        "AMEN"
+      ],
+      "AMEN",
+      "PSALM 30 : 2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Right in the middle of your quietest midnight worry, hear this.",
+      "kind": "phrase",
+      "words": [
+        "MIDNIGHT",
+        "WORRY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The psalmist declared, O Lord my God, I cried unto thee, and thou hast healed me.",
+      "kind": "phrase",
+      "words": [
+        "HEALED",
+        "ME"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when my body is tired and my spirit feels fragile, you know the exact depth of my need.",
+      "kind": "phrase",
+      "words": [
+        "SPIRIT",
+        "FRAGILE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Grant me the grace to release every racing thought into the safety of your healing hands.",
+      "kind": "phrase",
+      "words": [
+        "RACING",
+        "THOUGHT"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Fill this weary heart with your gentle restoration, calming the storms that rise within me.",
+      "kind": "phrase",
+      "words": [
+        "GENTLE",
+        "RESTORATION"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "May your presence be my shelter tonight, offering deep peace as I rest in your love.",
+      "kind": "phrase",
+      "words": [
+        "DEEP",
+        "PEACE"
+      ],
+      "hi": 5,
+      "slot": "C"
+    },
+    {
+      "a": "In Jesus name, amen.",
+      "kind": "phrase",
+      "words": [
+        "JESUS",
+        "NAME"
+      ],
+      "hi": 6,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 30:2"
+}
