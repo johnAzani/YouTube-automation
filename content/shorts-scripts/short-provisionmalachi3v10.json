@@ -3,33 +3,33 @@
   "channel": "prayer7",
   "psalm": null,
   "title": [
-    "PROVISION",
-    "OPENED HEAVENS"
+    "WINDOWS OF HEAVEN",
+    "DAILY PROVISION"
   ],
   "poster": [
-    "MALACHI",
-    "THE LORD",
-    "PROVIDES",
-    "NOW"
+    "TRUSTING GOD",
+    "IN ALL THINGS",
+    "A PRAYER FOR",
+    "THE PROVISION TABLE"
   ],
   "end": [
     "SUBSCRIBE",
     "The Provision Table — walk in God's daily provision"
   ],
   "stock_queries": [
-    "golden sunlit valley early morning",
-    "peaceful river flowing through forest",
-    "mountain pass with morning light",
-    "sunlit sanctuary stone table surface",
-    "serene meadow at dawn",
-    "glowing horizon over vast fields"
+    "golden sunlit mountain valley",
+    "peaceful river at dawn",
+    "sunlit stone table in garden",
+    "gentle flowing mountain stream",
+    "ancient stone cathedral archway",
+    "soft morning light on wheat fields"
   ],
   "scenes": [
     {
-      "a": "Stop pacing that floor; you are wondering how the math will ever balance this month.",
+      "a": "That ledger on your desk representing the current lack is not beyond His sovereign sight.",
       "img": "short-provisionmalachi3v10-scene-01.jpg",
       "kicker": "MALACHI 3:10",
-      "sub": "GOD HEARS YOUR NEED",
+      "sub": "GOD SEES YOUR NEED",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -37,21 +37,10 @@
       ]
     },
     {
-      "a": "Bring me all the tithes into the storehouse, that there may be meat in mine house.",
+      "a": "Bring ye all the tithes into the storehouse, that there may be meat in mine house, and prove me now herewith, saith the LORD of hosts, if I will not open you the windows of heaven, and pour you out a blessing, that there shall not be room enough to receive it.",
       "img": "short-provisionmalachi3v10-scene-02.jpg",
-      "kicker": "MALACHI 3:10",
-      "sub": "TRUST IN HIS STOREHOUSE",
-      "cam": "pan_left",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "And prove me now herewith, saith the Lord of hosts, if I will not open you the windows of heaven.",
-      "img": "short-provisionmalachi3v10-scene-03.jpg",
-      "kicker": "MALACHI 3:10",
-      "sub": "THE WINDOWS OF HEAVEN",
+      "kicker": "HIS PROMISE",
+      "sub": "THE WORD OF THE LORD",
       "cam": "pull_out",
       "focus": [
         0.5,
@@ -59,10 +48,32 @@
       ]
     },
     {
-      "a": "And pour you out a blessing, that there shall not be room enough to receive it.",
+      "a": "Lord, we seek to walk in faithful stewardship of every resource You have placed here.",
+      "img": "short-provisionmalachi3v10-scene-03.jpg",
+      "kicker": "FAITHFUL STEWARDSHIP",
+      "sub": "SURRENDER YOUR LABOR",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant us the wisdom to manage our household affairs with a heart fully aligned today.",
       "img": "short-provisionmalachi3v10-scene-04.jpg",
-      "kicker": "MALACHI 3:10",
-      "sub": "ABUNDANT BLESSINGS",
+      "kicker": "DIVINE WISDOM",
+      "sub": "GUIDANCE IN FINANCES",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We trust Your timing and Your promise to supply exactly what is needed for today.",
+      "img": "short-provisionmalachi3v10-scene-05.jpg",
+      "kicker": "TRUSTING PROVISION",
+      "sub": "HE IS OUR SUPPLIER",
       "cam": "tilt_up",
       "focus": [
         0.5,
@@ -70,22 +81,11 @@
       ]
     },
     {
-      "a": "Father, settle the anxious heart that worries over the simple necessities of our daily bread.",
-      "img": "short-provisionmalachi3v10-scene-05.jpg",
-      "kicker": "PRAYER",
-      "sub": "HE PROVIDES ALL",
-      "cam": "push_in",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "Grant us the grace to walk in obedience, trusting that Your hand provides for every need.",
+      "a": "May our hearts remain grateful as we rely entirely upon Your grace. Please subscribe.",
       "img": "short-provisionmalachi3v10-scene-06.jpg",
-      "kicker": "PRAYER",
-      "sub": "STEWARDSHIP OF FAITH",
-      "cam": "pan_right",
+      "kicker": "STAY FAITHFUL",
+      "sub": "WALK IN HIS PROVISION",
+      "cam": "push_in",
       "focus": [
         0.5,
         0.5
@@ -95,170 +95,128 @@
   "captions": [
     [
       0,
-      8,
-      "Stop pacing that floor; you are wondering how the math will ever balance this month."
+      7,
+      "That ledger on your desk representing the current lack is not beyond His sovereign sight."
     ],
     [
       8,
-      18,
-      "Bring me all the tithes into the storehouse, that there may be meat in mine house."
+      22,
+      "Bring ye all the tithes into the storehouse, that there may be meat in mine house, and prove me now herewith, saith the LORD of hosts, if I will not open you the windows of heaven, and pour you out a blessing, that there shall not be room enough to receive it."
     ],
     [
-      18,
-      28,
-      "And prove me now herewith, saith the Lord of hosts, if I will not open you the windows of heaven."
+      23,
+      29,
+      "Lord, we seek to walk in faithful stewardship of every resource You have placed here."
     ],
     [
-      28,
-      38,
-      "And pour you out a blessing, that there shall not be room enough to receive it."
+      30,
+      36,
+      "Grant us the wisdom to manage our household affairs with a heart fully aligned today."
     ],
     [
-      38,
-      48,
-      "Father, settle the anxious heart that worries over the simple necessities of our daily bread."
+      37,
+      43,
+      "We trust Your timing and Your promise to supply exactly what is needed for today."
     ],
     [
-      48,
-      56,
-      "Grant us the grace to walk in obedience, trusting that Your hand provides for every need."
+      44,
+      50,
+      "May our hearts remain grateful as we rely entirely upon Your grace. Please subscribe."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      8,
+      7,
       [
-        "STOP PACING",
-        "WONDERING HOW THE MATH",
-        "WILL BALANCE THIS MONTH"
+        "THAT LEDGER ON YOUR DESK",
+        "REPRESENTING THE CURRENT LACK",
+        "IS NOT BEYOND",
+        "HIS SOVEREIGN SIGHT"
       ],
       [
-        "STOP PACING"
+        "SOVEREIGN SIGHT"
       ],
-      "MALACHI 3 : 10"
+      "MALACHI 3:10"
     ],
     [
       8,
-      18,
+      22,
       [
-        "BRING ALL TITHES",
+        "BRING YE ALL THE TITHES",
         "INTO THE STOREHOUSE",
-        "MEAT IN MINE HOUSE"
+        "PROVE ME NOW HEREWITH",
+        "WINDOWS OF HEAVEN"
       ],
       [
-        "STOREHOUSE"
+        "WINDOWS OF HEAVEN"
       ],
-      "MALACHI 3 : 10"
+      "MALACHI 3:10"
     ],
     [
-      18,
-      28,
+      23,
+      29,
       [
-        "PROVE ME NOW",
-        "SAITH THE LORD",
-        "OPEN WINDOWS OF HEAVEN"
+        "LORD WE SEEK TO WALK",
+        "IN FAITHFUL STEWARDSHIP",
+        "OF EVERY RESOURCE",
+        "YOU HAVE PLACED HERE"
       ],
       [
-        "OPEN WINDOWS"
+        "FAITHFUL STEWARDSHIP"
       ],
-      "MALACHI 3 : 10"
+      "MALACHI 3:10"
     ],
     [
-      28,
-      38,
+      30,
+      36,
       [
-        "POUR OUT A BLESSING",
-        "NOT ROOM ENOUGH",
-        "TO RECEIVE IT"
+        "GRANT US THE WISDOM",
+        "TO MANAGE OUR HOUSEHOLD",
+        "WITH A HEART",
+        "FULLY ALIGNED TODAY"
       ],
       [
-        "POUR OUT"
+        "FULLY ALIGNED"
       ],
-      "MALACHI 3 : 10"
+      "MALACHI 3:10"
     ],
     [
-      38,
-      48,
+      37,
+      43,
       [
-        "SETTLE THE ANXIOUS",
-        "HEART OVER DAILY",
-        "NECESSITIES OF LIFE"
+        "WE TRUST YOUR TIMING",
+        "AND YOUR PROMISE",
+        "TO SUPPLY EXACTLY",
+        "WHAT IS NEEDED"
       ],
       [
-        "SETTLE"
+        "SUPPLY EXACTLY"
       ],
-      "MALACHI 3 : 10"
+      "MALACHI 3:10"
     ],
     [
-      48,
-      56,
+      44,
+      50,
       [
-        "WALK IN OBEDIENCE",
-        "TRUSTING HIS HAND",
-        "PROVIDES FOR EVERY NEED"
+        "MAY OUR HEARTS",
+        "REMAIN GRATEFUL",
+        "RELY ENTIRELY",
+        "UPON YOUR GRACE"
       ],
       [
-        "PROVIDES"
+        "RELY ENTIRELY"
       ],
-      "MALACHI 3 : 10"
+      "MALACHI 3:10"
     ]
   ],
   "beats": [
     {
-      "a": "Stop pacing that floor; you are wondering how the math will ever balance this month.",
+      "a": "That ledger on your desk representing the current lack is not beyond His sovereign sight.",
       "kind": "phrase",
       "words": [
-        "STOP",
-        "PACING"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Bring me all the tithes into the storehouse, that there may be meat in mine house.",
-      "kind": "phrase",
-      "words": [
-        "STOREHOUSE"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "And prove me now herewith, saith the Lord of hosts, if I will not open you the windows of heaven.",
-      "kind": "phrase",
-      "words": [
-        "WINDOWS",
-        "OF",
-        "HEAVEN"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "And pour you out a blessing, that there shall not be room enough to receive it.",
-      "kind": "phrase",
-      "words": [
-        "POUR",
-        "OUT"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Father, settle the anxious heart that worries over the simple necessities of our daily bread.",
-      "kind": "phrase",
-      "words": [
-        "SETTLE"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Grant us the grace to walk in obedience, trusting that Your hand provides for every need.",
-      "kind": "phrase",
-      "words": [
-        "PROVIDES"
+        "SOVEREIGN",
+        "SIGHT"
       ],
       "hi": 0,
       "slot": "C"

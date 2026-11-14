@@ -1,0 +1,317 @@
+{
+  "key": "short-provision2corinthians9v8",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "GOD'S ABUNDANT GRACE",
+    "2 CORINTHIANS 9:8"
+  ],
+  "poster": [
+    "ALL SUFFICIENCY",
+    "IN ALL THINGS",
+    "WALK IN GOD'S",
+    "DAILY PROVISION"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "sunlit peaceful mountain valley dawn",
+    "golden sunlight river quiet morning",
+    "sunbeams streaming through mountain forest",
+    "calm lake reflection morning sun",
+    "sunlit wheat field golden hour",
+    "sunlit sanctuary stone landscape sunset",
+    "peaceful sunlit valley river stream"
+  ],
+  "scenes": [
+    {
+      "a": "When fear whispers that your work is not enough, bring your heavy heart to God.",
+      "img": "short-provision2corinthians9v8-scene-01.jpg",
+      "kicker": "2 CORINTHIANS 9:8",
+      "sub": "GOD IS ABLE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "And God is able to make all grace abound toward you; that ye, always having all sufficiency in all things, may abound to every good work:",
+      "img": "short-provision2corinthians9v8-scene-02.jpg",
+      "kicker": "2 CORINTHIANS 9:8",
+      "sub": "ALL SUFFICIENCY IN ALL THINGS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we surrender our fragile plans and practical needs into Your faithful hands today.",
+      "img": "short-provision2corinthians9v8-scene-03.jpg",
+      "kicker": "DAILY STEWARDSHIP",
+      "sub": "SURRENDER YOUR CARES",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Where resources feel slender and decisions press hard upon us, grant us Your wisdom and calm assurance.",
+      "img": "short-provision2corinthians9v8-scene-04.jpg",
+      "kicker": "WISDOM AND PEACE",
+      "sub": "GOD PROVIDES WISDOM",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Supply our daily bread, protect our labor, and give us generous hearts to serve others well.",
+      "img": "short-provision2corinthians9v8-scene-05.jpg",
+      "kicker": "DAILY PROVISION",
+      "sub": "WALK IN GENEROSITY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "You are our constant provider, and in Your abundant grace we rest completely.",
+      "img": "short-provision2corinthians9v8-scene-06.jpg",
+      "kicker": "ABUNDANT GRACE",
+      "sub": "REST IN HIS SUFFICIENCY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to walk in God's daily provision.",
+      "img": "short-provision2corinthians9v8-scene-07.jpg",
+      "kicker": "THE PROVISION TABLE",
+      "sub": "WALK IN DAILY PROVISION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "When fear whispers that your work is not enough, bring your heavy heart to God."
+    ],
+    [
+      6,
+      14,
+      "And God is able to make all grace abound toward you; that ye, always having all sufficiency in all things, may abound to every good work:"
+    ],
+    [
+      14,
+      21,
+      "Lord, we surrender our fragile plans and practical needs into Your faithful hands today."
+    ],
+    [
+      21,
+      28,
+      "Where resources feel slender and decisions press hard upon us, grant us Your wisdom and calm assurance."
+    ],
+    [
+      28,
+      35,
+      "Supply our daily bread, protect our labor, and give us generous hearts to serve others well."
+    ],
+    [
+      35,
+      42,
+      "You are our constant provider, and in Your abundant grace we rest completely."
+    ],
+    [
+      42,
+      48,
+      "Subscribe to walk in God's daily provision."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "WHEN FEAR WHISPERS",
+        "THAT YOUR WORK IS NOT ENOUGH",
+        "BRING YOUR HEAVY HEART TO GOD"
+      ],
+      [
+        "WORK",
+        "HEAVY HEART"
+      ],
+      "2 CORINTHIANS 9:8"
+    ],
+    [
+      6,
+      14,
+      [
+        "AND GOD IS ABLE TO MAKE",
+        "ALL GRACE ABOUND TOWARD YOU",
+        "THAT YE ALWAYS HAVING ALL SUFFICIENCY",
+        "MAY ABOUND TO EVERY GOOD WORK"
+      ],
+      [
+        "GRACE",
+        "SUFFICIENCY"
+      ],
+      "2 CORINTHIANS 9:8"
+    ],
+    [
+      14,
+      21,
+      [
+        "LORD WE SURRENDER OUR FRAGILE PLANS",
+        "AND PRACTICAL NEEDS INTO YOUR",
+        "FAITHFUL HANDS TODAY"
+      ],
+      [
+        "SURRENDER",
+        "FAITHFUL HANDS"
+      ],
+      "DAILY STEWARDSHIP"
+    ],
+    [
+      21,
+      28,
+      [
+        "WHERE RESOURCES FEEL SLENDER",
+        "AND DECISIONS PRESS HARD UPON US",
+        "GRANT US YOUR WISDOM AND CALM"
+      ],
+      [
+        "WISDOM",
+        "CALM ASSURANCE"
+      ],
+      "WISDOM AND PEACE"
+    ],
+    [
+      28,
+      35,
+      [
+        "SUPPLY OUR DAILY BREAD",
+        "PROTECT OUR LABOR AND GIVE US",
+        "GENEROUS HEARTS TO SERVE OTHERS"
+      ],
+      [
+        "DAILY BREAD",
+        "GENEROUS HEARTS"
+      ],
+      "DAILY PROVISION"
+    ],
+    [
+      35,
+      42,
+      [
+        "YOU ARE OUR CONSTANT PROVIDER",
+        "AND IN YOUR ABUNDANT GRACE",
+        "WE REST COMPLETELY"
+      ],
+      [
+        "CONSTANT PROVIDER",
+        "REST COMPLETELY"
+      ],
+      "ABUNDANT GRACE"
+    ],
+    [
+      42,
+      48,
+      [
+        "SUBSCRIBE TO WALK IN",
+        "GOD'S DAILY PROVISION"
+      ],
+      [
+        "SUBSCRIBE",
+        "DAILY PROVISION"
+      ],
+      "THE PROVISION TABLE"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When fear whispers that your work is not enough, bring your heavy heart to God.",
+      "kind": "phrase",
+      "words": [
+        "FEAR",
+        "HEAVY HEART"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "And God is able to make all grace abound toward you; that ye, always having all sufficiency in all things, may abound to every good work:",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "SUFFICIENCY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we surrender our fragile plans and practical needs into Your faithful hands today.",
+      "kind": "phrase",
+      "words": [
+        "SURRENDER",
+        "FAITHFUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Where resources feel slender and decisions press hard upon us, grant us Your wisdom and calm assurance.",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "CALM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Supply our daily bread, protect our labor, and give us generous hearts to serve others well.",
+      "kind": "phrase",
+      "words": [
+        "DAILY BREAD",
+        "LABOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You are our constant provider, and in Your abundant grace we rest completely.",
+      "kind": "phrase",
+      "words": [
+        "CONSTANT PROVIDER",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to walk in God's daily provision.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PROVISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Corinthians 9:8"
+}
