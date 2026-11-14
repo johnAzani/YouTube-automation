@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T07:05:52Z",
+  "generated_at": "2026-11-14T07:17:44Z",
   "monitor_generated_at": "2026-11-14T07:03:03.026377+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 202,
+    "published_total": 203,
     "published_longform": 101,
-    "published_shorts": 101,
-    "public_total": 200,
+    "published_shorts": 102,
+    "public_total": 201,
     "queued_longform": 54,
-    "queued_shorts": 94,
+    "queued_shorts": 93,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 8,
+        "published_total": 9,
         "published_longform": 6,
-        "published_shorts": 2,
-        "thumbnail_pending": 8,
-        "public_total": 8,
+        "published_shorts": 3,
+        "thumbnail_pending": 9,
+        "public_total": 9,
         "queued_longform": 1,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "0605",
-        "title": "No Weapon Formed Against You: Isaiah 54:17 Protection Prayer",
-        "format": "longform",
-        "youtube_video_id": "VeMKhISk9RU",
-        "watch_url": "https://youtu.be/VeMKhISk9RU",
+        "id": "SHORT-SHIELDPSALM118V6",
+        "title": "Pray This Psalm 118:6 Prayer for Divine Protection | Your Portion #Shorts",
+        "format": "short",
+        "youtube_video_id": "bYXLPDTejRA",
+        "watch_url": "https://www.youtube.com/shorts/bYXLPDTejRA",
         "published_on": "2026-11-14",
-        "published_at": "2026-11-14T05:46:42Z"
+        "published_at": "2026-11-14T07:16:59Z"
       },
       "next_queued_longform": {
         "id": "0606",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm118v6",
-        "scripture": "Psalm 118:6",
+        "short": "short-shieldpsalm121v3",
+        "scripture": "Psalm 121:3-4",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM118V6",
+      "slug": "short-shieldpsalm118v6-protection-prayer",
+      "file": "short-shieldpsalm118v6-protection-prayer.md",
+      "title": "Pray This Psalm 118:6 Prayer for Divine Protection | Your Portion #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T07:16:59Z",
+      "youtube_video_id": "bYXLPDTejRA",
+      "watch_url": "https://www.youtube.com/shorts/bYXLPDTejRA",
+      "youtu_be_url": "https://youtu.be/bYXLPDTejRA",
+      "shorts_url": "https://www.youtube.com/shorts/bYXLPDTejRA",
+      "studio_url": "https://studio.youtube.com/video/bYXLPDTejRA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/bYXLPDTejRA/hqdefault.jpg",
+      "thumb_text": "GOD IS YOUR \u00b7 STRONG TOWER",
+      "thumbnail_pending": true,
+      "duration_label": "47s",
+      "words": 418
+    },
     {
       "id": "SHORT-HEALING1PETER2V24",
       "slug": "short-healing1peter2v24-restoration-prayer",
@@ -6575,17 +6599,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-shieldpsalm118v6",
-        "file": "0000-short-shieldpsalm118v6.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 118:6",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm121v3",
