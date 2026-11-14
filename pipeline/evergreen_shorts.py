@@ -207,12 +207,31 @@ def _roadmap_ahead(channel_id: str, taken_ids: Iterable[str]) -> list[str]:
     return [str(row["scripture"]).replace("–", "-") for row in rows]
 
 
+def _by_what_is_watched(channel: str, references: Iterable[str]) -> list[str]:
+    """The list reordered by the views this channel's Shorts have drawn, book by book and theme by theme.
+
+    The numbers are the committed aggregates the daily growth run writes
+    (``pipeline/performance_feedback.py``). With too few Shorts measured, here
+    and across the network, the order is left as written.
+    """
+    listed = list(references)
+    try:
+        from .performance_feedback import (load_feedback_report, network_shorts_signal,
+                                           rank_short_passages)
+        return rank_short_passages(listed, load_feedback_report(channel_id=channel),
+                                   network_shorts_signal())
+    except Exception:  # noqa: BLE001 — steering is never a reason to stop authoring
+        return listed
+
+
 def candidates(channel_id: str, *, taken_longform_ids: Iterable[str] = (),
                used: set[tuple[str, int, int | None]] | None = None,
                ) -> list[tuple[str, str]]:
     """``[(reference, source)]`` this channel can still make a standalone Short of.
 
-    ``source`` is ``"evergreen"`` or ``"roadmap"``. Evergreen passages come first.
+    ``source`` is ``"evergreen"`` or ``"roadmap"``. Evergreen passages come first;
+    within each list, passages from the books and themes this channel's Shorts
+    are watched for come before the rest.
     A passage the channel already has a Short of is left out, and so is a second
     candidate for a passage listed earlier.
     """
@@ -222,8 +241,8 @@ def candidates(channel_id: str, *, taken_longform_ids: Iterable[str] = (),
     seen = set(used_references(channel) if used is None else used)
     out: list[tuple[str, str]] = []
     pools = (
-        ("evergreen", EVERGREEN.get(channel, ())),
-        ("roadmap", _roadmap_ahead(channel, taken_longform_ids)),
+        ("evergreen", _by_what_is_watched(channel, EVERGREEN.get(channel, ()))),
+        ("roadmap", _by_what_is_watched(channel, _roadmap_ahead(channel, taken_longform_ids))),
     )
     for source, references in pools:
         for reference in references:
