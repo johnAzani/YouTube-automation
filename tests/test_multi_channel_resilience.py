@@ -882,11 +882,11 @@ goes before you until evening falls and brings your labor to peaceful completion
             resolve_longform_counterpart,
         )
 
-        # Published Morning Altar Short -> Morning Altar's own Psalm 5 video (never @TheSecretPlace)
+        # Published Morning Altar Short -> Morning Altar's own Psalm 5 video (never @SecretPlaceSanctuary)
         cp_m5 = resolve_longform_counterpart("short-morningpsalm5")
         self.assertEqual(cp_m5["channel"], "prayer2")
         self.assertTrue(cp_m5["is_live_video"])
-        self.assertNotIn("@TheSecretPlace", cp_m5["url"])
+        self.assertNotIn("@SecretPlaceSanctuary", cp_m5["url"])
         self.assertNotIn("nighttime", cp_m5["theme"])
 
         # Future / unpublished Morning Altar & Midday Watch Shorts -> each channel's own playlists tab

@@ -26,7 +26,7 @@ def test_generate_podcast_rss_xml_valid():
     assert "<rss version=\"2.0\"" in xml_str
     assert "<channel>" in xml_str
     assert "<title>The Secret Place:" in xml_str
-    assert "https://www.youtube.com/@TheSecretPlace" in xml_str
+    assert "https://www.youtube.com/@SecretPlaceSanctuary" in xml_str
 
     # Parse with ElementTree to verify XML well-formedness
     root = ET.fromstring(xml_str)

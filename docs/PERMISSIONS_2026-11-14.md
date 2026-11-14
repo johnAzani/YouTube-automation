@@ -181,7 +181,20 @@ channels are picked up by the daily run once their tokens carry the Analytics sc
 
 **Not built yet:** nothing downloads those files or reads the Analytics API in the scheduled
 runs. `scripts/channel_analytics.py` exists but looks for separate `ANALYTICS_*` secrets and
-was written to run privately. Still to decide: which figures go into this public repository.
+was written to run privately.
+
+**Decided 14 November (the owner left the choice to the automation): which figures may be
+written into this public repository.** Watch hours, traffic sources, retention, and thumbnail
+impressions and click rate may be committed, per channel and per video. Revenue is never
+written to the repository, to a log or to an annotation: a run may read it and use it, and
+that is all. The reader for the Analytics API and the downloader for the daily reach files
+are to be built to this rule.
+
+**Checked on every audit since 14 November: the channel's @handle.** The probe now compares
+the handle YouTube returns for the channel with the one the descriptions link to. The Secret
+Place's links used `@TheSecretPlace`, a name the channel never had (it is
+`@SecretPlaceSanctuary`), so its subscribe link opened a 404 page on every video. See
+`CHANGELOG.md` for the repair.
 
 ## Changed with this note
 

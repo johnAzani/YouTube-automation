@@ -2,7 +2,7 @@
 
 Maximizes channel algorithmic reach, subscriber engagement, and community retention
 via daily automated interactive scripture polls, prayer wall invitations, and
-companion devotionals for The Secret Place (@TheSecretPlace).
+companion devotionals for The Secret Place (@SecretPlaceSanctuary).
 
 Strict $0.00 / month cost lock:
   • Image cards rendered locally via PIL with Inter typography & sapphire glassmorphism.

@@ -3,7 +3,7 @@
 **Status:** **LIVE & PROVISIONED (2026-11-10)** on `@TheHealingBalmDaily` — dedicated Google Cloud project, all 5 `PRAYER6_*` secrets (`GEMINI_API_KEY`, `YOUTUBE_CHANNEL_ID`, `YOUTUBE_CLIENT_ID`, `YOUTUBE_CLIENT_SECRET`, `YOUTUBE_REFRESH_TOKEN`) saved in GitHub Secrets, `provisioned=True` in `pipeline/channels.py`. See `docs/SIXTH_CHANNEL_SETUP.md`.
 
 ## Visual Differentiation Across the 6-Channel Sanctuary Network
-- **Channel 1 — The Secret Place (`@TheSecretPlace`)**: Deep indigo-navy ring + Cross + Open Bible; mountain lake night banner.
+- **Channel 1 — The Secret Place (`@SecretPlaceSanctuary`)**: Deep indigo-navy ring + Cross + Open Bible; mountain lake night banner.
 - **Channel 2 — The Morning Altar (`@TheMorningAltarDaily`)**: Flat sunrise yellow vector sun over pre-dawn hills.
 - **Channel 3 — The Midday Watch (`@TheMiddayWatch`)**: Noon sun disc + black watchtower over brown field; minimalist teal-blue banner.
 - **Channel 4 — The Midnight Watch (`@TheMidnightWatchDaily`)**: Gothic obsidian (`#080709`) & filigree gold `XII` Midnight Clock bathed in heavenly shafts of light.

@@ -77,7 +77,7 @@ class TestSeventhChannelIdentityAndVisuals(unittest.TestCase):
             "The Midnight Watch",
             "The Family Altar",
             "The Healing Balm",
-            "@TheSecretPlace",
+            "@SecretPlaceSanctuary",
             "@TheMorningAltarDaily",
             "@TheMiddayWatch",
             "@TheMidnightWatchDaily",

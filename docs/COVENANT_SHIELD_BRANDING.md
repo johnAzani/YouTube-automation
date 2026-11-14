@@ -3,7 +3,7 @@
 **Status:** Enabled (`provisioned=True`) with approved launch content; actual publishing is verified by its production run. See `docs/EIGHTH_CHANNEL_SETUP.md`.
 
 ## Visual Differentiation Across the 8-Channel Sanctuary Network
-- **Channel 1 — The Secret Place (`@TheSecretPlace`)**: Deep indigo-navy ring + Cross + Open Bible; mountain lake night banner.
+- **Channel 1 — The Secret Place (`@SecretPlaceSanctuary`)**: Deep indigo-navy ring + Cross + Open Bible; mountain lake night banner.
 - **Channel 2 — The Morning Altar (`@TheMorningAltarDaily`)**: Flat sunrise yellow vector sun over pre-dawn hills.
 - **Channel 3 — The Midday Watch (`@TheMiddayWatch`)**: Noon sun disc + black watchtower over brown field; minimalist teal-blue banner.
 - **Channel 4 — The Midnight Watch (`@TheMidnightWatchDaily`)**: Gothic obsidian (`#080709`) & filigree gold `XII` Midnight Clock bathed in heavenly shafts of light.

@@ -1,6 +1,6 @@
 # YouTube Channel Analytics: Master Access, Operations & Coverage Guide
 
-**Channel Identity:** *The Secret Place* (`@TheSecretPlace`) — Sacred Scripture, Devotional Prayer & Bedtime Contemplation  
+**Channel Identity:** *The Secret Place* (`@SecretPlaceSanctuary`) — Sacred Scripture, Devotional Prayer & Bedtime Contemplation  
 **Live Public Release:** Video ID `7RDX0fbIOtQ` — *Psalm 91: Night Prayer of Divine Protection*  
 **Codebase Collectors:** `scripts/metrics_snapshot.py`, `scripts/channel_analytics.py`, `scripts/view_analytics.py`  
 **Automated CI/CD Workflow:** `.github/workflows/metrics.yml`

@@ -150,6 +150,10 @@ jobs:
               || echo "::warning title=Scheduled-publish check failed::see this step's log; the thumbnail sync still ran"
             python -m scripts.sync_published_thumbnails --all-channels
             python -m scripts.retrofit_published_metadata --sync-pending
+            # Descriptions already live that still link to a handle the channel
+            # never had (a 404 page). Costs nothing once every receipt is stamped.
+            python -m scripts.repair_live_handles --apply \
+              || echo "::warning title=Live handle repair failed::see this step's log; the rest of the step still ran"
             GH_TOKEN="${{ secrets.GITHUB_TOKEN }}" python -m scripts.release_report --sweep-stale || true
           fi
 

@@ -189,7 +189,7 @@ def test_social_pack_and_shorts_bridge_have_zero_dead_playlists_or_personal_hand
     assert short_desc.rstrip().endswith("#Shorts #Psalm91")
 
     short_comment = generate_short_bridge_comment("short-psalm91")
-    assert "@TheSecretPlace" in short_comment
+    assert "@SecretPlaceSanctuary" in short_comment
     assert "7RDX0fbIOtQ" in short_comment
 
 

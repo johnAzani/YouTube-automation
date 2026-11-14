@@ -5,6 +5,17 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-14 — The Secret Place's subscribe link opened a 404 page
+
+- Every description on The Secret Place linked to `youtube.com/@TheSecretPlace`. The channel's handle on YouTube is `@SecretPlaceSanctuary`; the other name was the plan, never the channel. Two links were dead on all 44 published videos (16 long-form, 28 Shorts): "Subscribe to The Secret Place" at the foot of each description, and the "pray the complete prayer" line at the top of every Short that falls back to the playlists page. The other nine channels' handles were checked against their own pages and are right.
+- `pipeline/channels.py` carries the real handle, and the old one is listed in `RETIRED_HANDLES`. Every other place that spelled the handle out (the produce workflow's `CHANNEL_HANDLE`, the Shorts fallback link, the social footer, the podcast feed, the journal builder, the dashboard page) now uses the real one.
+- New `scripts/repair_live_handles.py`, run by the monitor after the metadata sync: for videos already live it reads the description and its translations, swaps the retired handle for the real one, and writes back only those texts. Title, tags, category and language go back unchanged; a video without the old handle is not written to. At most 30 rewrites a run (50 quota units each); a corrected receipt is stamped `live_handle` and costs nothing afterwards.
+- `scripts/permission_probe.py` asks YouTube for each channel's handle and compares it with the one the links use (`handle` annotation; a mismatch is a warning). This is the check that was missing: the handle was typed once and never opened.
+- `tests/test_channel_handles.py`: no retired handle anywhere in what gets uploaded; every `youtube.com/@…` link in the code is a registered channel; the repair changes the handle and nothing that merely contains it (a hashtag, a longer name, an e-mail address).
+- The 30-night journal PDF printed the dead link on its cover and its last page. `content/products/30_night_prayer_journal.pdf` and the copy under `docs/products/` are rebuilt (34 pages, the same text apart from those two lines). The copy on Selar is the old file until the owner uploads this one.
+- Not corrected: pinned comments already posted that mention the old handle.
+- Decided the same day, recorded in `docs/PERMISSIONS_2026-11-14.md`: watch hours, traffic sources, retention, and thumbnail impressions and click rate may be committed to this public repository; revenue never.
+
 ## 2026-11-14 — The Secret Place's grant is complete
 
 - Audit run 43620256826: `GRANT COMPLETE` for The Secret Place. The Analytics API answers for views, watch time by Shorts/long-form, traffic sources, 365-day and daily watch time, subscribers gained and lost, per-video watch time and retention. Revenue answers with no rows. The reporting job started earlier is listed as running.

@@ -408,7 +408,7 @@ class JournalNumberedCanvas(canvas.Canvas):
                 self.setFont("Helvetica", 8.5)
                 self.drawCentredString(w / 2, 80, "Daily Scripture & Evening Prayer Sanctuary · Public Domain KJV Scripture")
                 self.setFillColor(colors.HexColor("#60a5fa"))
-                self.drawCentredString(w / 2, 60, f"{SELAR_URL} · @TheSecretPlace")
+                self.drawCentredString(w / 2, 60, f"{SELAR_URL} · @SecretPlaceSanctuary")
                 self.restoreState()
             else:
                 # Running Header (Pages 2+)
@@ -826,7 +826,7 @@ def build_prayer_journal_pdf(out_path: Path = OUTPUT_PDF_PATH) -> Path:
             "<b>• Sow a Voluntary Seed or Partner in Prayer:</b><br/>"
             f"<font color='#2563eb'>{SELAR_URL}</font><br/><br/>"
             "<b>• Subscribe to Nightly Video Prayers:</b><br/>"
-            "YouTube: <font color='#2563eb'>https://www.youtube.com/@TheSecretPlace</font><br/><br/>"
+            "YouTube: <font color='#2563eb'>https://www.youtube.com/@SecretPlaceSanctuary</font><br/><br/>"
             "<b>• Nightly Audio Podcast Stream:</b><br/>"
             "Available on Apple Podcasts & Spotify via our official RSS feed.<br/><br/>"
             "<i>The Secret Place is an independent editorial prayer sanctuary dedicated to streaming God's Word freely to the nations.</i>",

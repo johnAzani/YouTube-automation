@@ -12,7 +12,8 @@ permission). For one channel it reports, as annotations on the run:
   on (videos over fifteen minutes, live streaming);
 * whether the YouTube Analytics API and the YouTube Reporting API answer for
   this token and this Google Cloud project, and with what refusal if not;
-* one verdict line: the grant is complete, or what the owner still has to do.
+* one verdict line: the grant is complete, or what the owner still has to do;
+* whether the @handle the descriptions link to is the channel's handle on YouTube.
 
 Rules it keeps:
 
@@ -44,6 +45,16 @@ WANTED_SCOPES = ('youtube', 'youtube.force-ssl', 'youtube.upload', 'youtube.read
 # that is meant to be minted once. `youtubepartner` does nothing without a Content Manager.
 NETWORK_SCOPES = ('youtubepartner', 'youtubepartner-channel-audit')
 CODE = re.compile(r'[^A-Za-z0-9_.-]')
+# The @handle each channel's descriptions link to (`pipeline/channels.py`; a test keeps the two
+# lists equal). A handle is only a guess until YouTube confirms it: The Secret Place's links
+# pointed at a name the channel never had, and every one of them opened "404 Not Found".
+HANDLES = {
+    'secret-place': '@SecretPlaceSanctuary', 'prayer2': '@TheMorningAltarDaily',
+    'prayer3': '@TheMiddayWatch', 'prayer4': '@TheMidnightWatchDaily',
+    'prayer5': '@TheFamilyAltarDaily', 'prayer6': '@TheHealingBalmDaily',
+    'prayer7': '@TheProvisionTableDaily', 'prayer8': '@TheCovenantShieldDaily',
+    'prayer9': '@ThePraiseGardenDaily', 'prayer10': '@TheGuidedPathPrayer',
+}
 
 
 def short_scopes(scope_field):
@@ -178,8 +189,25 @@ def left_to_grant(scopes, analytics, reporting, long_uploads):
     return left
 
 
-def note(channel, part, text):
-    print('::notice title=Permissions %s: %s::%s' % (channel, part, text))
+def handle_check(channel, custom_url):
+    """(matches, sentence): does YouTube's own name for the channel equal the one the links use?
+
+    Handles are not case-sensitive on YouTube, so neither is the comparison.
+    """
+    live = '@' + CODE.sub('', str(custom_url or ''))[:40]
+    linked = HANDLES.get(channel, '')
+    if live == '@':
+        return False, 'YouTube returned no handle for this channel; links use %s' % (linked or 'nothing')
+    if not linked:
+        return False, 'YouTube says %s; no handle is registered for this channel' % live
+    if live.lower() == linked.lower():
+        return True, '%s is the channel\'s handle on YouTube; subscribe links resolve' % live
+    return False, ('MISMATCH: YouTube says %s, descriptions link to %s, so those links open '
+                   'a 404 page' % (live, linked))
+
+
+def note(channel, part, text, level='notice'):
+    print('::%s title=Permissions %s: %s::%s' % (level, channel, part, text))
 
 
 def main():
@@ -206,12 +234,14 @@ def main():
         token_lifetime(token), project_group(os.environ.get('CLIENT_ID'))))
 
     # ---- what the channel itself is allowed to do (only its owner can change these) ----
-    status, data, why = get(DATA + 'channels?part=status,brandingSettings,contentDetails&mine=true', access)
+    status, data, why = get(DATA + 'channels?part=snippet,status,brandingSettings,contentDetails&mine=true', access)
     facts = []
     uploads = ''
     long_uploads = ''
     if status == 200 and data and data.get('items'):
         item = data['items'][0]
+        matches, sentence = handle_check(channel, (item.get('snippet') or {}).get('customUrl'))
+        note(channel, 'handle', sentence, 'notice' if matches else 'warning')
         state = item.get('status') or {}
         brand = (item.get('brandingSettings') or {}).get('channel') or {}
         uploads = ((item.get('contentDetails') or {}).get('relatedPlaylists') or {}).get('uploads', '')

@@ -1,4 +1,4 @@
-# Ready to post — comm-002-monday-shepherd (The Secret Place · @TheSecretPlace)
+# Ready to post — comm-002-monday-shepherd (The Secret Place · @SecretPlaceSanctuary)
 
 YouTube's API cannot create Community posts. Paste this into YouTube Studio
 → Create → Post, attach the card, and schedule it if you like.

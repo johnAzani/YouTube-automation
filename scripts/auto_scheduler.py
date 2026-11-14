@@ -197,7 +197,7 @@ def build_schedule_audit() -> ScheduleAudit:
 
     return ScheduleAudit(
         timestamp_utc=now_utc.isoformat(),
-        active_channel="The Secret Place (@TheSecretPlace)",
+        active_channel="The Secret Place (@SecretPlaceSanctuary)",
         subscribers=1230,
         watch_hours_target=4000,
         longform_approved_count=lf_app_count,

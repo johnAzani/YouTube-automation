@@ -20,7 +20,7 @@ PODCAST_XML_PATH = ROOT / "docs" / "podcast.xml"
 
 PODCAST_METADATA = {
     "title": "The Secret Place: Bedtime Prayers & Calming Scripture Meditations",
-    "link": "https://www.youtube.com/@TheSecretPlace",
+    "link": "https://www.youtube.com/@SecretPlaceSanctuary",
     "language": "en-us",
     "copyright": "© 2026 The Secret Place. Public Domain Scripture Liturgies.",
     "subtitle": "Daily Bedtime Prayers, Nighttime Scripture & 432 Hz Peaceful Sleep Meditations",
@@ -34,7 +34,7 @@ PODCAST_METADATA = {
         "Welcome to The Secret Place. Experience deep peace, relief from nighttime anxiety, "
         "and restorative sleep through biblical scripture liturgies. Say these powerful Psalm prayers "
         "before you close your eyes tonight and rest under the shadow of the Almighty.\n\n"
-        "Watch full visual kinetic devotionals on YouTube: https://www.youtube.com/@TheSecretPlace"
+        "Watch full visual kinetic devotionals on YouTube: https://www.youtube.com/@SecretPlaceSanctuary"
     ),
     "owner_name": "The Secret Place Editorial Team",
     "owner_email": "prayer@thesecretplace.media",
@@ -66,7 +66,7 @@ CANONICAL_EPISODES = [
             "Surrender the worries and fatigue of this day into the gentle hands of the Good Shepherd. "
             "He restores your soul and leads you beside still waters.\n\n"
             "Scripture: Psalm 23:1-6.\n"
-            "Watch full video on YouTube: https://www.youtube.com/@TheSecretPlace"
+            "Watch full video on YouTube: https://www.youtube.com/@SecretPlaceSanctuary"
         ),
         "pub_date": "Wed, 28 Oct 2026 14:00:00 +0000",
         "duration_seconds": 360,
@@ -79,7 +79,7 @@ CANONICAL_EPISODES = [
         "description": (
             "Rest tonight knowing that your Keeper never slumbers. The Lord is your shade and your shield.\n\n"
             "Scripture: Psalm 121:1-8.\n"
-            "Watch on YouTube: https://www.youtube.com/@TheSecretPlace"
+            "Watch on YouTube: https://www.youtube.com/@SecretPlaceSanctuary"
         ),
         "pub_date": "Tue, 27 Oct 2026 14:00:00 +0000",
         "duration_seconds": 360,
@@ -92,7 +92,7 @@ CANONICAL_EPISODES = [
         "description": (
             "Continuous 1-hour ambient scripture meditation combining Psalms 91, 23, 121, and 27 "
             "with gentle 432 Hz Pythagorean sacred tuning and delta wave entrainment for deep restorative sleep.\n\n"
-            "Watch full video on YouTube: https://www.youtube.com/@TheSecretPlace"
+            "Watch full video on YouTube: https://www.youtube.com/@SecretPlaceSanctuary"
         ),
         "pub_date": "Mon, 26 Oct 2026 14:00:00 +0000",
         "duration_seconds": 3600,

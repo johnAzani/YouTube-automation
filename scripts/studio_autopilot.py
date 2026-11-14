@@ -152,7 +152,7 @@ def main() -> None:
 
     full_report = {
         "timestamp_utc": datetime.now(timezone.utc).isoformat(),
-        "channel": "The Secret Place (@TheSecretPlace)",
+        "channel": "The Secret Place (@SecretPlaceSanctuary)",
         "subscribers": 1230,
         "ypp_sub_target_met": True,
         "target_watch_hours": 4000,
