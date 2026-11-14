@@ -514,13 +514,12 @@
     "result": "dispatched secret-place, prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, prayer8, prayer9, prayer10"
   },
   "produce.yml@2026-11-14T14:14:00+00:00": {
-    "at": "2026-11-14T16:44:06.228104+00:00",
+    "at": "2026-11-14T16:46:43.190989+00:00",
     "attempted_channels": [
-      "prayer4",
       "prayer4"
     ],
-    "attempts": 8,
-    "code_id": "5e2a4c0861afc6bf",
-    "result": "nothing dispatched: prayer4 already tried 2x for this slot"
+    "attempts": 9,
+    "code_id": "5251449ca24101c1",
+    "result": "dispatched prayer4"
   }
 }
