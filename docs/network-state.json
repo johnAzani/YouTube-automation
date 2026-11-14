@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T07:41:47Z",
+  "generated_at": "2026-11-14T07:45:23Z",
   "monitor_generated_at": "2026-11-14T07:21:24.483050+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 204,
-    "published_longform": 102,
+    "published_total": 205,
+    "published_longform": 103,
     "published_shorts": 102,
-    "public_total": 202,
-    "queued_longform": 53,
+    "public_total": 203,
+    "queued_longform": 52,
     "queued_shorts": 93,
     "automations_ok": 10,
     "automations_total": 10,
@@ -577,28 +577,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 6,
-        "published_longform": 4,
+        "published_total": 7,
+        "published_longform": 5,
         "published_shorts": 2,
-        "thumbnail_pending": 6,
-        "public_total": 6,
-        "queued_longform": 5,
+        "thumbnail_pending": 7,
+        "public_total": 7,
+        "queued_longform": 4,
         "queued_other": 0,
         "queued_shorts": 10
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM103V2",
-        "title": "Pray This Psalm 103:2 Prayer of Thanksgiving | Thanksgiving Prayer #Shorts",
-        "format": "short",
-        "youtube_video_id": "S5woEvCGATw",
-        "watch_url": "https://www.youtube.com/shorts/S5woEvCGATw",
-        "published_on": "2026-11-14",
-        "published_at": "2026-11-14T05:02:19Z"
-      },
-      "next_queued_longform": {
         "id": "0704",
         "title": "Prayer of Gratitude When Life Is Hard: 1 Thessalonians 5:16-18",
-        "words": 1154,
+        "format": "longform",
+        "youtube_video_id": "Lc8ejqFR23w",
+        "watch_url": "https://youtu.be/Lc8ejqFR23w",
+        "published_on": "2026-11-14",
+        "published_at": "2026-11-14T07:44:38Z"
+      },
+      "next_queued_longform": {
+        "id": "0705",
+        "title": "When Your Heart Needs to Remember His Mercy: Psalm 107:1",
+        "words": 1721,
         "status": "approved"
       },
       "next_queued_short": {
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0704",
+      "slug": "1-thessalonians-5-16-18-daily-prayer",
+      "file": "0704-1-thessalonians-5-16-18-daily-prayer.md",
+      "title": "Prayer of Gratitude When Life Is Hard: 1 Thessalonians 5:16-18",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T07:44:38Z",
+      "youtube_video_id": "Lc8ejqFR23w",
+      "watch_url": "https://youtu.be/Lc8ejqFR23w",
+      "youtu_be_url": "https://youtu.be/Lc8ejqFR23w",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/Lc8ejqFR23w/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Lc8ejqFR23w/hqdefault.jpg",
+      "thumb_text": "GIVE THANKS",
+      "thumbnail_pending": true,
+      "duration_label": "~8 min",
+      "words": 1154
+    },
     {
       "id": "0066",
       "slug": "joshua-1-8-9-morning-prayer-the-morning-altar",
@@ -6148,19 +6172,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1430
-      },
-      {
-        "id": "0704",
-        "slug": "1-thessalonians-5-16-18-daily-prayer",
-        "file": "0704-1-thessalonians-5-16-18-daily-prayer.md",
-        "title": "Prayer of Gratitude When Life Is Hard: 1 Thessalonians 5:16-18",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1154
       },
       {
         "id": "0705",
