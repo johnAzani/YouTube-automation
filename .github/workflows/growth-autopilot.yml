@@ -168,6 +168,12 @@ jobs:
         continue-on-error: true
         run: python -u scripts/manage_playlists.py --channel "${{ matrix.channel }}"
 
+      - name: Set up the channel page (${{ matrix.channel }})
+        # pipeline/channel_page.py: search keywords, a trailer for visitors and
+        # home-page shelves, each only where the page has none of its own.
+        continue-on-error: true
+        run: python -u scripts/setup_channel_page.py --channel "${{ matrix.channel }}"
+
       - name: Celebrate live subscriber milestone (${{ matrix.channel }})
         continue-on-error: true
         run: python -u scripts/celebrate_milestone.py --channel "${{ matrix.channel }}"

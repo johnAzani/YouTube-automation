@@ -5,15 +5,18 @@ there was no changelog before this file.
 
 ---
 
-## 2026-11-14 — scripture check, Shorts feedback, seasonal calendar, retitling
+## 2026-11-14 — scripture check, Shorts feedback, seasons, retitling, Shorts captions, French, channel page
 
-Four of nine automation gaps. Full note: `docs/AUTOMATION_UPGRADES_2026-11-14.md`.
+Seven of nine automation gaps. Long narrated sessions and best-hour publishing were not built; the reasons are in the note. Full note: `docs/AUTOMATION_UPGRADES_2026-11-14.md`.
 
-- **Scripture check.** New `pipeline/scripture_text.py` and `assets/scripture/kjv.json.gz` (King James Version, 31,102 verses, public domain). The writer is shown the verses; `author_short_spec` refuses a Short that does not carry one whole verse word for word or carries one with a word changed. Long-forms are shown the same verses and must quote one. Waiting Shorts that fail (50 of 94, most of them other translations) are rewritten three per channel per pass; `select_next_queued_short` sends verified ones first.
+- **Scripture check.** New `pipeline/scripture_text.py` and `assets/scripture/kjv.json.gz` (King James Version, 31,102 verses, public domain). The writer is shown the verses; `author_short_spec` refuses a Short that does not carry one whole verse word for word or carries one with a word changed. Long-forms are shown the same verses and must quote one. Waiting Shorts that fail (48 of 93, most of them other translations) are rewritten three per channel per pass; `select_next_queued_short` sends verified ones first.
 - **Shorts feedback.** `pipeline/performance_feedback.py` measures Shorts by book and theme (it skipped them); `pipeline/evergreen_shorts.candidates` writes the passages viewers watch first. A channel with few Shorts borrows the network's numbers.
 - **Seasonal calendar.** New `pipeline/seasonal.py`: Advent, Christmas, New Year, Holy Week, Easter, worked out for any year, 80 passages, none shared. Written two days ahead, first in line on their days, withdrawn after.
 - **Retitling.** New `pipeline/retitle.py` and `scripts/retitle_unwatched.py` in `growth-autopilot.yml`: long-forms seven days old with two views or fewer get one need-first title, checked in code, pushed by the monitor's metadata sync.
-- Tests: `tests/test_scripture_text.py` (23), `tests/test_shorts_feedback.py` (10), `tests/test_seasonal.py` (16), `tests/test_retitle.py` (31). Fixtures in four older test files now quote the King James text.
+- **Captions on Shorts.** `upload_short_captions` in `pipeline/short_release.py`: an SRT from the rendered word timings, uploaded after the thumbnail, recorded as `caption_track` in the receipt. 400 units each. `SHORT_CAPTIONS=0` turns it off.
+- **French.** `pipeline/localize_metadata.py` adds `fr` beside `es` and `pt` on every upload: fixed text per channel, book names from the Louis Segond Bible.
+- **Channel page.** New `pipeline/channel_page.py` and `scripts/setup_channel_page.py` in `growth-autopilot.yml`: keywords, a trailer for visitors, home-page shelves, each only where the page has none. Never run against YouTube yet.
+- Tests: `tests/test_scripture_text.py` (23), `tests/test_shorts_feedback.py` (10), `tests/test_seasonal.py` (16), `tests/test_retitle.py` (31), `tests/test_short_caption_track.py` (6), `tests/test_french_localization.py` (31), `tests/test_channel_page.py` (23). Fixtures in four older test files now quote the King James text.
 
 ## 2026-11-14 — roadmaps topped up; one misquoting Short held
 

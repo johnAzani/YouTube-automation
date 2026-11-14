@@ -84,7 +84,7 @@ def test_every_channel_has_passages_for_every_season_and_they_exist():
                 assert st.exists(reference), (season, channel, reference)
 
 
-def test_no_seasonal_passage_is_given_to_two_channels_or_is_on_another_channels_list():
+def test_no_seasonal_passage_is_given_to_two_channels_or_is_on_any_other_list():
     from scripts.continuous_research import ROADMAPS
 
     elsewhere: dict[tuple, set[str]] = {}
@@ -101,7 +101,10 @@ def test_no_seasonal_passage_is_given_to_two_channels_or_is_on_another_channels_
                 key = _key(reference)
                 assert key not in seen, f"{reference}: {season}/{channel} and {seen[key]}"
                 seen[key] = (season, channel)
-                others = elsewhere.get(key, set()) - {channel}
+                # Its own channel's lists count too: the seasonal pass steps over a
+                # passage the channel already has a Short of, so a shared passage is
+                # either never written for the season or made twice.
+                others = elsewhere.get(key, set())
                 assert not others, f"{reference} ({season}/{channel}) is also on {sorted(others)}"
 
 

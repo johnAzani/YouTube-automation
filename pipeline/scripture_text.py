@@ -41,10 +41,12 @@ TRANSLATION = "King James Version"
 
 #: A verse the narration carries this much of, in order, without carrying it
 #: exactly, is treated as a misquotation rather than as prayer in the writer's
-#: own words. Measured on the Shorts in the repository on 14 November 2026: the
-#: prayers that follow a correctly quoted verse share at most about half of its
-#: words in order; the lowest score of a quotation with one changed word in a
-#: twelve-word verse is 0.92.
+#: own words. Set by trial, not by a study: at this value the garbled Psalm
+#: 55:22 Short and a one-word change in a twelve-word verse are both caught
+#: (tests/test_scripture_text.py), and the 45 waiting Shorts that quote the
+#: King James text on 14 November 2026 all pass. Lower it and prayer that
+#: echoes its verse starts to be refused; raise it and a two-word change in a
+#: short verse gets through.
 NEAR_QUOTE = 0.75
 #: Verses shorter than this are not tested for a near-quotation: five common
 #: words in a row prove nothing.
