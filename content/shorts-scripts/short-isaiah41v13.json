@@ -1,0 +1,272 @@
+{
+  "key": "short-isaiah41v13",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "HELD BY",
+    "THE LORD"
+  ],
+  "poster": [
+    "RELEASE THE",
+    "WEIGHT OF",
+    "YOUR DAY",
+    "TONIGHT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "glowing candle in dark room",
+    "calm starry night sky",
+    "serene river at twilight",
+    "soft embers in fireplace",
+    "misty forest at night",
+    "moonlight over still lake"
+  ],
+  "scenes": [
+    {
+      "a": "Release the grip",
+      "img": "short-isaiah41v13-scene-01.jpg",
+      "kicker": "ISAIAH 41:13",
+      "sub": "FIND YOUR REST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For I the LORD",
+      "img": "short-isaiah41v13-scene-02.jpg",
+      "kicker": "ISAIAH 41:13",
+      "sub": "HIS PROMISE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "saying unto thee",
+      "img": "short-isaiah41v13-scene-03.jpg",
+      "kicker": "ISAIAH 41:13",
+      "sub": "HE IS NEAR",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "I will help",
+      "img": "short-isaiah41v13-scene-04.jpg",
+      "kicker": "ISAIAH 41:13",
+      "sub": "DIVINE ASSISTANCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, thank You",
+      "img": "short-isaiah41v13-scene-05.jpg",
+      "kicker": "ISAIAH 41:13",
+      "sub": "SURRENDER TO HIM",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "rest in Your",
+      "img": "short-isaiah41v13-scene-06.jpg",
+      "kicker": "ISAIAH 41:13",
+      "sub": "PEACE BE STILL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Release the grip of that uncertainty you have carried since the sun rose this morning."
+    ],
+    [
+      8,
+      18,
+      "For I the LORD thy God will hold thy right hand, saying unto thee, Fear not; I will help thee."
+    ],
+    [
+      18,
+      28,
+      "Father, thank You for the grace of Your presence in the middle of my quiet room."
+    ],
+    [
+      28,
+      38,
+      "When the world feels vast and my strength fades, help me to lean into Your embrace."
+    ],
+    [
+      38,
+      48,
+      "Teach me to release the outcome and trust that You are working in the hidden places."
+    ],
+    [
+      48,
+      58,
+      "May I rest in Your constant care until the light of a new day arrives here."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "RELEASE THE GRIP",
+        "OF THAT",
+        "UNCERTAINTY YOU",
+        "HAVE CARRIED"
+      ],
+      [
+        "UNCERTAINTY"
+      ],
+      "ISAIAH 41:13"
+    ],
+    [
+      8,
+      18,
+      [
+        "FOR I THE LORD",
+        "THY GOD WILL",
+        "HOLD THY RIGHT",
+        "HAND, FEAR NOT",
+        "I WILL HELP THEE"
+      ],
+      [
+        "HOLD THY RIGHT HAND"
+      ],
+      "ISAIAH 41:13"
+    ],
+    [
+      18,
+      28,
+      [
+        "FATHER THANK YOU",
+        "FOR THE GRACE",
+        "OF YOUR PRESENCE",
+        "IN MY ROOM"
+      ],
+      [
+        "YOUR PRESENCE"
+      ],
+      "ISAIAH 41:13"
+    ],
+    [
+      28,
+      38,
+      [
+        "WHEN THE WORLD",
+        "FEELS VAST AND",
+        "STRENGTH FADES HELP",
+        "ME LEAN INTO",
+        "YOUR EMBRACE"
+      ],
+      [
+        "LEAN INTO"
+      ],
+      "ISAIAH 41:13"
+    ],
+    [
+      38,
+      48,
+      [
+        "TEACH ME TO",
+        "RELEASE THE OUTCOME",
+        "AND TRUST YOU",
+        "ARE WORKING"
+      ],
+      [
+        "TRUST"
+      ],
+      "ISAIAH 41:13"
+    ],
+    [
+      48,
+      58,
+      [
+        "MAY I REST",
+        "IN YOUR CARE",
+        "UNTIL A NEW",
+        "DAY ARRIVES"
+      ],
+      [
+        "REST"
+      ],
+      "ISAIAH 41:13"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Release the grip",
+      "kind": "phrase",
+      "words": [
+        "RELEASE",
+        "THE",
+        "GRIP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For I the LORD",
+      "kind": "phrase",
+      "words": [
+        "HOLD",
+        "THY",
+        "RIGHT",
+        "HAND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, thank You",
+      "kind": "phrase",
+      "words": [
+        "YOUR",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will help",
+      "kind": "phrase",
+      "words": [
+        "I",
+        "WILL",
+        "HELP",
+        "THEE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "rest in Your",
+      "kind": "phrase",
+      "words": [
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 41:13"
+}

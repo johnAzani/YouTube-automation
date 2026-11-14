@@ -3,13 +3,13 @@
   "channel": "secret-place",
   "psalm": null,
   "title": [
-    "DO NOT WORRY ABOUT",
-    "TOMORROW'S TROUBLES"
+    "NO THOUGHT FOR TOMORROW",
+    "BEDTIME PRAYER"
   ],
   "poster": [
-    "BEDTIME PRAYER",
     "MATTHEW 6:34",
-    "PEACE FOR TOMORROW",
+    "LEAVE TOMORROW WITH GOD",
+    "A BEDTIME PRAYER",
     "THE SECRET PLACE"
   ],
   "end": [
@@ -17,19 +17,20 @@
     "The Secret Place — prayers every day"
   ],
   "stock_queries": [
-    "calm dark forest starry night sky soft light",
-    "quiet misty lake candle glowing in night",
-    "peaceful night ocean waves moonlight gentle",
-    "cozy window glowing candle night rain gentle",
-    "silent mountain valley under twilight stars",
-    "soft warm candle flame flickering in pitch dark"
+    "calm mountain lake night moonlight",
+    "soft candle glow dark room night",
+    "quiet pine forest foggy night sky",
+    "gentle ocean waves under starlight night",
+    "misty mountain valley at twilight blue hour",
+    "cozy window dusk warm light rain",
+    "peaceful starry sky over calm water"
   ],
   "scenes": [
     {
-      "a": "worrying about tomorrow's long list",
+      "a": "If you are replaying tomorrow's hardest conversation in the dark, put it down right now.",
       "img": "short-matthew6v34-scene-01.jpg",
       "kicker": "MATTHEW 6:34",
-      "sub": "RELEASE TOMORROW",
+      "sub": "PUT IT DOWN RIGHT NOW",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -37,10 +38,10 @@
       ]
     },
     {
-      "a": "Do not worry about tomorrow",
+      "a": "Take therefore no thought for the morrow: for the morrow shall take thought for the things of itself.",
       "img": "short-matthew6v34-scene-02.jpg",
       "kicker": "MATTHEW 6:34",
-      "sub": "EACH DAY HAS ENOUGH",
+      "sub": "GOD HOLDS TOMORROW",
       "cam": "pull_out",
       "focus": [
         0.5,
@@ -48,21 +49,10 @@
       ]
     },
     {
-      "a": "mind is already racing",
+      "a": "Sufficient unto the day is the evil thereof.",
       "img": "short-matthew6v34-scene-03.jpg",
       "kicker": "MATTHEW 6:34",
-      "sub": "QUIET YOUR MIND",
-      "cam": "pan_left",
-      "focus": [
-        0.4,
-        0.5
-      ]
-    },
-    {
-      "a": "Your faithful hands",
-      "img": "short-matthew6v34-scene-04.jpg",
-      "kicker": "MATTHEW 6:34",
-      "sub": "IN FAITHFUL HANDS",
+      "sub": "REST IN THIS MOMENT",
       "cam": "tilt_up",
       "focus": [
         0.5,
@@ -70,10 +60,21 @@
       ]
     },
     {
-      "a": "grant me restful sleep",
+      "a": "Heavenly Father, we hand over every unseen sunrise, every unwritten hour, and every unknown outcome into your loving care.",
+      "img": "short-matthew6v34-scene-04.jpg",
+      "kicker": "BEDTIME PRAYER",
+      "sub": "SURRENDER YOUR WORRIES",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Release our hands from trying to carry what is not yet born, and quiet our weary minds.",
       "img": "short-matthew6v34-scene-05.jpg",
-      "kicker": "MATTHEW 6:34",
-      "sub": "RESTFUL SLEEP TONIGHT",
+      "kicker": "BEDTIME PRAYER",
+      "sub": "LET GO OF UNKNOWN HOURS",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -81,182 +82,234 @@
       ]
     },
     {
-      "a": "daily bedtime prayers",
+      "a": "Rest over this bed, steady every anxious thought, and grant a deep, restoring night of sleep.",
       "img": "short-matthew6v34-scene-06.jpg",
-      "kicker": "MATTHEW 6:34",
-      "sub": "THE SECRET PLACE",
+      "kicker": "BEDTIME PRAYER",
+      "sub": "DEEP RESTORING SLEEP",
       "cam": "pan_right",
       "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to rest in God's peace every night.",
+      "img": "short-matthew6v34-scene-07.jpg",
+      "kicker": "THE SECRET PLACE",
+      "sub": "PRAYERS EVERY NIGHT",
+      "cam": "push_in",
+      "focus": [
         0.5,
-        0.4
+        0.5
       ]
     }
   ],
   "captions": [
     [
       0,
-      10,
-      "As you lie awake worrying about tomorrow's long list of decisions, you can let go."
+      7,
+      "If you are replaying tomorrow's hardest conversation in the dark, put it down right now."
     ],
     [
-      10,
-      22,
-      "Scripture says: Do not worry about tomorrow, for tomorrow will worry about itself. Each day has enough trouble of its own."
+      7,
+      16,
+      "Take therefore no thought for the morrow: for the morrow shall take thought for the things of itself."
     ],
     [
-      22,
-      34,
-      "Father, night has arrived, but my mind is already racing into tomorrow's demands."
+      16,
+      21,
+      "Sufficient unto the day is the evil thereof."
     ],
     [
-      34,
+      21,
+      31,
+      "Heavenly Father, we hand over every unseen sunrise, every unwritten hour, and every unknown outcome into your loving care."
+    ],
+    [
+      31,
+      40,
+      "Release our hands from trying to carry what is not yet born, and quiet our weary minds."
+    ],
+    [
+      40,
       48,
-      "Forgive me for trying to carry problems that have not even happened yet. I place tomorrow into Your faithful hands."
+      "Rest over this bed, steady every anxious thought, and grant a deep, restoring night of sleep."
     ],
     [
       48,
-      60,
-      "Cover my thoughts with Your quiet peace, quiet every racing anxiety, and grant me restful sleep tonight. Guard my heart while I rest."
-    ],
-    [
-      60,
-      66,
-      "Subscribe to The Secret Place for daily bedtime prayers."
+      54,
+      "Subscribe to rest in God's peace every night."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      10,
+      7,
       [
-        "AS YOU LIE AWAKE WORRYING",
-        "ABOUT TOMORROW DECISIONS",
-        "YOU CAN LET GO"
+        "IF YOU ARE REPLAYING",
+        "TOMORROW'S HARDEST CONVERSATION",
+        "PUT IT DOWN RIGHT NOW"
       ],
       [
-        "LET GO"
-      ],
-      "MATTHEW 6 : 34"
-    ],
-    [
-      10,
-      22,
-      [
-        "DO NOT WORRY ABOUT TOMORROW",
-        "FOR TOMORROW WILL WORRY",
-        "ABOUT ITSELF"
-      ],
-      [
-        "DO NOT WORRY"
+        "REPLAYING",
+        "TOMORROW'S",
+        "PUT IT DOWN"
       ],
       "MATTHEW 6 : 34"
     ],
     [
-      22,
-      34,
+      7,
+      16,
       [
-        "FATHER NIGHT HAS ARRIVED",
-        "MY MIND IS RACING INTO",
-        "TOMORROW DEMANDS"
+        "TAKE THEREFORE NO THOUGHT",
+        "FOR THE MORROW",
+        "FOR THE MORROW SHALL TAKE THOUGHT",
+        "FOR THINGS OF ITSELF"
       ],
       [
-        "RACING"
+        "NO THOUGHT",
+        "MORROW"
       ],
       "MATTHEW 6 : 34"
     ],
     [
-      34,
+      16,
+      21,
+      [
+        "SUFFICIENT UNTO THE DAY",
+        "IS THE EVIL THEREOF"
+      ],
+      [
+        "SUFFICIENT",
+        "DAY"
+      ],
+      "MATTHEW 6 : 34"
+    ],
+    [
+      21,
+      31,
+      [
+        "HEAVENLY FATHER WE HAND OVER",
+        "EVERY UNSEEN SUNRISE",
+        "EVERY UNWRITTEN HOUR AND UNKNOWN OUTCOME",
+        "INTO YOUR LOVING CARE"
+      ],
+      [
+        "HAND OVER",
+        "LOVING CARE"
+      ],
+      "MATTHEW 6 : 34"
+    ],
+    [
+      31,
+      40,
+      [
+        "RELEASE OUR HANDS FROM TRYING TO CARRY",
+        "WHAT IS NOT YET BORN",
+        "AND QUIET OUR WEARY MINDS"
+      ],
+      [
+        "RELEASE",
+        "QUIET"
+      ],
+      "MATTHEW 6 : 34"
+    ],
+    [
+      40,
       48,
       [
-        "FORGIVE ME FOR TRYING TO CARRY",
-        "PROBLEMS NOT YET HAPPENED",
-        "YOUR FAITHFUL HANDS"
+        "REST OVER THIS BED",
+        "STEADY EVERY ANXIOUS THOUGHT",
+        "GRANT A DEEP RESTORING NIGHT OF SLEEP"
       ],
       [
-        "FAITHFUL HANDS"
+        "STEADY",
+        "DEEP",
+        "RESTORING"
       ],
       "MATTHEW 6 : 34"
     ],
     [
       48,
-      60,
+      54,
       [
-        "COVER MY THOUGHTS WITH PEACE",
-        "GRANT ME RESTFUL SLEEP",
-        "GUARD MY HEART"
+        "SUBSCRIBE TO REST IN GOD'S PEACE",
+        "EVERY NIGHT"
       ],
       [
-        "RESTFUL SLEEP"
-      ],
-      "MATTHEW 6 : 34"
-    ],
-    [
-      60,
-      66,
-      [
-        "SUBSCRIBE TO THE SECRET PLACE",
-        "FOR DAILY BEDTIME PRAYERS"
-      ],
-      [
-        "SECRET PLACE"
+        "SUBSCRIBE",
+        "PEACE"
       ],
       "MATTHEW 6 : 34"
     ]
   ],
   "beats": [
     {
-      "a": "worrying about tomorrow's long list",
+      "a": "If you are replaying tomorrow's hardest conversation in the dark, put it down right now.",
       "kind": "phrase",
       "words": [
-        "WORRYING"
+        "REPLAYING",
+        "PUT IT DOWN"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Do not worry about tomorrow",
+      "a": "Take therefore no thought for the morrow: for the morrow shall take thought for the things of itself.",
       "kind": "phrase",
       "words": [
-        "DO",
-        "NOT",
-        "WORRY"
-      ],
-      "hi": 2,
-      "slot": "C"
-    },
-    {
-      "a": "mind is already racing",
-      "kind": "phrase",
-      "words": [
-        "RACING"
+        "NO THOUGHT",
+        "MORROW"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Your faithful hands",
+      "a": "Sufficient unto the day is the evil thereof.",
       "kind": "phrase",
       "words": [
-        "FAITHFUL"
+        "SUFFICIENT",
+        "DAY"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "grant me restful sleep",
+      "a": "Heavenly Father, we hand over every unseen sunrise, every unwritten hour, and every unknown outcome into your loving care.",
       "kind": "phrase",
       "words": [
-        "RESTFUL",
-        "SLEEP"
+        "HAND OVER",
+        "LOVING CARE"
       ],
-      "hi": 1,
+      "hi": 0,
       "slot": "C"
     },
     {
-      "a": "daily bedtime prayers",
+      "a": "Release our hands from trying to carry what is not yet born, and quiet our weary minds.",
       "kind": "phrase",
       "words": [
-        "BEDTIME"
+        "RELEASE",
+        "QUIET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Rest over this bed, steady every anxious thought, and grant a deep, restoring night of sleep.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "RESTORING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to rest in God's peace every night.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PEACE"
       ],
       "hi": 0,
       "slot": "C"

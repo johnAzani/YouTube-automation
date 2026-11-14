@@ -3,68 +3,45 @@
   "channel": "secret-place",
   "psalm": 55,
   "title": [
-    "CAST YOUR BURDEN",
-    "UPON THE LORD"
+    "CAST THY BURDEN",
+    "PSALM 55:22"
   ],
   "poster": [
-    "GOD",
-    "IS",
-    "YOUR",
-    "STRENGTH"
+    "CAST THY BURDEN",
+    "UPON THE LORD",
+    "BEDTIME PRAYER",
+    "THE SECRET PLACE"
   ],
   "end": [
     "SUBSCRIBE",
     "The Secret Place — prayers every day"
   ],
   "stock_queries": [
-    "calm mountain lake night",
-    "glowing candle in dark room",
-    "slow flowing stream moonlight",
-    "misty forest at dusk",
-    "starlit sky above silhouette trees",
-    "soft moonlight on calm ocean",
-    "close up of burning incense smoke",
-    "serene meadow under moonlight"
+    "calm night lake reflections stars",
+    "soft candle glow dark room peaceful night",
+    "gentle pine forest moonlight fog night",
+    "calm ocean shore moonlight dark sky",
+    "warm glowing lantern night garden quiet",
+    "still mountain lake night starry sky",
+    "cozy bedroom window night moonlight sky"
   ],
   "scenes": [
     {
-      "a": "The heavy thought",
+      "a": "If you are staring at the dark ceiling holding a trouble you cannot solve, listen.",
       "img": "short-psalm55v22-scene-01.jpg",
       "kicker": "PSALM 55:22",
-      "sub": "FINDING REST TONIGHT",
+      "sub": "LAY DOWN YOUR WORRY TONIGHT",
       "cam": "push_in",
       "focus": [
         0.5,
-        0.5
+        0.45
       ]
     },
     {
-      "a": "Cast your burden",
+      "a": "Cast thy burden upon the LORD, and he shall sustain thee: he shall never suffer the righteous to be moved.",
       "img": "short-psalm55v22-scene-02.jpg",
-      "kicker": "CAST YOUR BURDEN",
-      "sub": "HE WILL SUSTAIN YOU",
-      "cam": "pan_left",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "He will sustain",
-      "img": "short-psalm55v22-scene-03.jpg",
-      "kicker": "HE WILL SUSTAIN",
-      "sub": "NO NEED TO FEAR",
-      "cam": "tilt_up",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "Father, I offer",
-      "img": "short-psalm55v22-scene-04.jpg",
-      "kicker": "A HUMBLE PRAYER",
-      "sub": "SURRENDERING CONTROL",
+      "kicker": "PSALM 55:22",
+      "sub": "HE SHALL SUSTAIN THEE",
       "cam": "pull_out",
       "focus": [
         0.5,
@@ -72,43 +49,54 @@
       ]
     },
     {
-      "a": "take this weight",
-      "img": "short-psalm55v22-scene-05.jpg",
-      "kicker": "PEACE BE STILL",
-      "sub": "HIS PROMISE IS TRUE",
+      "a": "You were never meant to carry this heavy weight through the quiet midnight hours alone.",
+      "img": "short-psalm55v22-scene-03.jpg",
+      "kicker": "PSALM 55:22",
+      "sub": "YOU ARE NOT ALONE",
       "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "God sees the exhaustion in your soul and the silent tears you have hidden from the world.",
+      "img": "short-psalm55v22-scene-04.jpg",
+      "kicker": "PSALM 55:22",
+      "sub": "GOD SEES YOUR HEART",
+      "cam": "tilt_up",
       "focus": [
         0.5,
         0.5
       ]
     },
     {
-      "a": "find your rest",
-      "img": "short-psalm55v22-scene-06.jpg",
-      "kicker": "REST NOW",
-      "sub": "SLEEP IN HIS CARE",
+      "a": "Place every single care, every unanswered question, and every lingering fear into His gentle hands right now.",
+      "img": "short-psalm55v22-scene-05.jpg",
+      "kicker": "PSALM 55:22",
+      "sub": "RELEASE EVERY FEAR",
       "cam": "push_in",
       "focus": [
         0.5,
-        0.5
+        0.4
       ]
     },
     {
-      "a": "trust in Him",
-      "img": "short-psalm55v22-scene-07.jpg",
-      "kicker": "FAITHFUL IS HE",
-      "sub": "WATCH OVER YOUR SOUL",
+      "a": "He will hold you up when your own strength fails, keeping your steps completely steady tonight.",
+      "img": "short-psalm55v22-scene-06.jpg",
+      "kicker": "PSALM 55:22",
+      "sub": "HE KEEPS YOU STEADY",
       "cam": "pan_left",
       "focus": [
-        0.5,
+        0.6,
         0.5
       ]
     },
     {
-      "a": "The Secret Place",
-      "img": "short-psalm55v22-scene-08.jpg",
-      "kicker": "THE SECRET PLACE",
-      "sub": "PRAYERS EVERY DAY",
+      "a": "Sleep in peace, knowing He holds your tomorrow. Subscribe to The Secret Place for daily prayers.",
+      "img": "short-psalm55v22-scene-07.jpg",
+      "kicker": "PSALM 55:22",
+      "sub": "SLEEP IN HIS PEACE",
       "cam": "pull_out",
       "focus": [
         0.5,
@@ -119,232 +107,207 @@
   "captions": [
     [
       0,
-      10,
-      "The heavy thought spinning in your mind is exactly what you should hand over now."
+      9,
+      "If you are staring at the dark ceiling holding a trouble you cannot solve, listen."
     ],
     [
-      11,
-      22,
-      "Cast your burden upon the Lord, and He will sustain you; He will never permit."
+      9,
+      19,
+      "Cast thy burden upon the LORD, and he shall sustain thee: he shall never suffer the righteous to be moved."
     ],
     [
-      23,
-      33,
-      "He will sustain the righteous to be moved."
+      19,
+      28,
+      "You were never meant to carry this heavy weight through the quiet midnight hours alone."
     ],
     [
-      34,
+      28,
+      38,
+      "God sees the exhaustion in your soul and the silent tears you have hidden from the world."
+    ],
+    [
+      38,
       48,
-      "Father, I offer up every worry, every doubt, and every racing fear within this room."
+      "Place every single care, every unanswered question, and every lingering fear into His gentle hands right now."
     ],
     [
-      49,
-      62,
-      "Lord, take this weight from my shoulders, for I cannot carry these tomorrows by myself."
+      48,
+      57,
+      "He will hold you up when your own strength fails, keeping your steps completely steady tonight."
     ],
     [
-      63,
-      76,
-      "Help me find your rest, to release the tension, and to trust in your steady hand."
-    ],
-    [
-      77,
-      92,
-      "I trust in Him to hold my heart through the night until the morning light breaks."
-    ],
-    [
-      93,
-      105,
-      "The Secret Place, subscribe for daily prayers to anchor your soul in His quiet peace."
+      57,
+      66,
+      "Sleep in peace, knowing He holds your tomorrow. Subscribe to The Secret Place for daily prayers."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      10,
+      9,
       [
-        "THE HEAVY THOUGHT",
-        "SPINNING IN YOUR MIND",
-        "HAND IT OVER NOW"
+        "HOLDING A TROUBLE",
+        "YOU CANNOT SOLVE",
+        "LISTEN TONIGHT"
       ],
       [
-        "HEAVY THOUGHT"
+        "TROUBLE",
+        "LISTEN"
       ],
-      "PSALM 55:22"
+      "PSALM 55 : 22"
     ],
     [
-      11,
-      22,
+      9,
+      19,
       [
-        "CAST YOUR BURDEN",
+        "CAST THY BURDEN",
         "UPON THE LORD",
-        "HE WILL SUSTAIN"
+        "HE SHALL SUSTAIN THEE"
       ],
       [
-        "CAST YOUR BURDEN"
+        "BURDEN",
+        "SUSTAIN"
       ],
-      "PSALM 55:22"
+      "PSALM 55 : 22"
     ],
     [
-      23,
-      33,
+      19,
+      28,
       [
-        "HE WILL SUSTAIN",
-        "THE RIGHTEOUS",
-        "NEVER MOVED"
+        "NEVER MEANT TO CARRY",
+        "THIS HEAVY WEIGHT",
+        "THROUGH MIDNIGHT ALONE"
       ],
       [
-        "HE WILL SUSTAIN"
+        "HEAVY WEIGHT",
+        "ALONE"
       ],
-      "PSALM 55:22"
+      "PSALM 55 : 22"
     ],
     [
-      34,
+      28,
+      38,
+      [
+        "GOD SEES EXHAUSTION",
+        "IN YOUR SOUL",
+        "AND SILENT TEARS"
+      ],
+      [
+        "EXHAUSTION",
+        "TEARS"
+      ],
+      "PSALM 55 : 22"
+    ],
+    [
+      38,
       48,
       [
-        "FATHER I OFFER",
-        "EVERY SINGLE WORRY",
-        "EVERY RACING FEAR"
+        "PLACE EVERY CARE",
+        "AND LINGERING FEAR",
+        "INTO HIS HANDS"
       ],
       [
-        "FATHER I OFFER"
+        "EVERY CARE",
+        "HANDS"
       ],
-      "PSALM 55:22"
+      "PSALM 55 : 22"
     ],
     [
-      49,
-      62,
+      48,
+      57,
       [
-        "TAKE THIS WEIGHT",
-        "FROM MY SHOULDERS",
-        "CANNOT CARRY ALONE"
+        "HE WILL HOLD YOU UP",
+        "WHEN STRENGTH FAILS",
+        "KEEPING STEPS STEADY"
       ],
       [
-        "TAKE THIS WEIGHT"
+        "HOLD YOU UP",
+        "STEADY"
       ],
-      "PSALM 55:22"
+      "PSALM 55 : 22"
     ],
     [
-      63,
-      76,
+      57,
+      66,
       [
-        "FIND YOUR REST",
-        "RELEASE THE TENSION",
-        "TRUST IN HIM"
+        "SLEEP IN PEACE",
+        "HE HOLDS YOUR TOMORROW",
+        "SUBSCRIBE FOR PRAYERS"
       ],
       [
-        "FIND YOUR REST"
+        "SLEEP",
+        "PEACE"
       ],
-      "PSALM 55:22"
-    ],
-    [
-      77,
-      92,
-      [
-        "TRUST IN HIM",
-        "HOLD MY HEART",
-        "THROUGH THE NIGHT"
-      ],
-      [
-        "TRUST IN HIM"
-      ],
-      "PSALM 55:22"
-    ],
-    [
-      93,
-      105,
-      [
-        "THE SECRET PLACE",
-        "SUBSCRIBE FOR PRAYERS",
-        "ANCHOR YOUR SOUL"
-      ],
-      [
-        "THE SECRET PLACE"
-      ],
-      "PSALM 55:22"
+      "PSALM 55 : 22"
     ]
   ],
   "beats": [
     {
-      "a": "The heavy thought",
+      "a": "If you are staring at the dark ceiling holding a trouble you cannot solve, listen.",
       "kind": "phrase",
       "words": [
-        "HEAVY",
-        "THOUGHT"
+        "TROUBLE",
+        "LISTEN"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Cast your burden",
+      "a": "Cast thy burden upon the LORD, and he shall sustain thee: he shall never suffer the righteous to be moved.",
       "kind": "phrase",
       "words": [
-        "CAST",
-        "YOUR",
-        "BURDEN"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "He will sustain",
-      "kind": "phrase",
-      "words": [
-        "HE",
-        "WILL",
+        "BURDEN",
         "SUSTAIN"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Father, I offer",
+      "a": "You were never meant to carry this heavy weight through the quiet midnight hours alone.",
       "kind": "phrase",
       "words": [
-        "FATHER",
-        "OFFER"
+        "HEAVY",
+        "ALONE"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "take this weight",
+      "a": "God sees the exhaustion in your soul and the silent tears you have hidden from the world.",
       "kind": "phrase",
       "words": [
-        "TAKE",
-        "THIS",
-        "WEIGHT"
+        "EXHAUSTION",
+        "TEARS"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "find your rest",
+      "a": "Place every single care, every unanswered question, and every lingering fear into His gentle hands right now.",
       "kind": "phrase",
       "words": [
-        "FIND",
-        "REST"
+        "CARE",
+        "HANDS"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "trust in Him",
+      "a": "He will hold you up when your own strength fails, keeping your steps completely steady tonight.",
       "kind": "phrase",
       "words": [
-        "TRUST",
-        "IN",
-        "HIM"
+        "STRENGTH",
+        "STEADY"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "The Secret Place",
+      "a": "Sleep in peace, knowing He holds your tomorrow. Subscribe to The Secret Place for daily prayers.",
       "kind": "phrase",
       "words": [
-        "SECRET",
-        "PLACE"
+        "PEACE",
+        "TOMORROW"
       ],
       "hi": 0,
       "slot": "C"

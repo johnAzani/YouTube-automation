@@ -3,113 +3,113 @@
   "channel": "secret-place",
   "psalm": 56,
   "title": [
-    "WHEN YOU ARE",
-    "AFRAID TONIGHT"
+    "WHEN FEAR SURROUNDS YOU",
+    "BEDTIME PRAYER ON PSALM 56:3"
   ],
   "poster": [
-    "A PRAYER FOR",
-    "YOUR ANXIOUS",
-    "HEART BEFORE",
-    "YOU SLEEP"
+    "WHAT TIME I AM AFRAID",
+    "I WILL TRUST IN THEE",
+    "BEDTIME PRAYER",
+    "THE SECRET PLACE"
   ],
   "end": [
     "SUBSCRIBE",
     "The Secret Place — prayers every day"
   ],
   "stock_queries": [
-    "calm mountain lake night",
-    "flickering candle on dark wood",
-    "gentle moon glow over forest",
-    "misty blue mountain horizon",
-    "soft embers glowing in fireplace",
-    "stars reflecting in still water",
-    "night fog moving over meadow",
-    "gentle rain against dark window"
+    "calm dark room window starry night sky",
+    "quiet night lake reflection moon",
+    "peaceful forest night soft moonlight misty",
+    "calm ocean shore night stars gentle waves",
+    "soft candle glow dark quiet room stillness",
+    "mountain peak night sky full of stars calm",
+    "misty lake night reflection peaceful dark",
+    "cozy dark room glowing warm candle light"
   ],
   "scenes": [
     {
-      "a": "The thought of",
+      "a": "When fearful thoughts keep you awake in the quiet night, hear this promise.",
       "img": "short-psalm56v3-scene-01.jpg",
       "kicker": "PSALM 56:3",
-      "sub": "FINDING CALM IN THE NIGHT",
+      "sub": "WHEN FEARFUL THOUGHTS ARISE",
       "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "What time I am afraid, I will trust in thee.",
+      "img": "short-psalm56v3-scene-02.jpg",
+      "kicker": "PSALM 56:3",
+      "sub": "I WILL TRUST IN THEE",
+      "cam": "tilt_up",
       "focus": [
         0.5,
         0.5
       ]
     },
     {
-      "a": "whatever happens tomorrow",
-      "img": "short-psalm56v3-scene-02.jpg",
+      "a": "Lord, when the darkness surrounds this bed and my mind spins with tomorrow, I come to You.",
+      "img": "short-psalm56v3-scene-03.jpg",
       "kicker": "PSALM 56:3",
-      "sub": "LET GO OF THE WORRY",
-      "cam": "tilt_up",
+      "sub": "TURNING TO GOD IN THE DARK",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "The worries I carried all day try to claim my sleep tonight, but I choose to place every fear into Your safe hands.",
+      "img": "short-psalm56v3-scene-04.jpg",
+      "kicker": "PSALM 56:3",
+      "sub": "PLACING EVERY FEAR IN HIS HANDS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "You are my constant shelter and my peace.",
+      "img": "short-psalm56v3-scene-05.jpg",
+      "kicker": "PSALM 56:3",
+      "sub": "MY CONSTANT SHELTER AND PEACE",
+      "cam": "push_in",
       "focus": [
         0.5,
         0.4
       ]
     },
     {
-      "a": "Psalm 56:3 says",
-      "img": "short-psalm56v3-scene-03.jpg",
-      "kicker": "PSALM 56:3",
-      "sub": "HIS WORD IS YOUR ANCHOR",
-      "cam": "pan_left",
-      "focus": [
-        0.3,
-        0.5
-      ]
-    },
-    {
-      "a": "Whenever I am afraid",
-      "img": "short-psalm56v3-scene-04.jpg",
-      "kicker": "PSALM 56:3",
-      "sub": "TRUST IN HIM ALONE",
-      "cam": "pull_out",
-      "focus": [
-        0.5,
-        0.6
-      ]
-    },
-    {
-      "a": "I will trust",
-      "img": "short-psalm56v3-scene-05.jpg",
-      "kicker": "PSALM 56:3",
-      "sub": "REST IN HIS PROMISE",
-      "cam": "push_in",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "in You.",
+      "a": "Silence the anxiety inside me and wrap me in Your quiet presence.",
       "img": "short-psalm56v3-scene-06.jpg",
       "kicker": "PSALM 56:3",
-      "sub": "PEACE IN THE DARKNESS",
-      "cam": "pan_right",
+      "sub": "SILENCE THE ANXIETY WITHIN",
+      "cam": "pan_left",
       "focus": [
-        0.7,
+        0.6,
         0.5
       ]
     },
     {
-      "a": "Father, quiet the",
+      "a": "I surrender my doubts and lay my head down, knowing You watch over me while I rest.",
       "img": "short-psalm56v3-scene-07.jpg",
       "kicker": "PSALM 56:3",
-      "sub": "LAY DOWN YOUR BURDENS",
-      "cam": "tilt_up",
+      "sub": "LAY YOUR HEAD DOWN IN REST",
+      "cam": "push_in",
       "focus": [
         0.5,
-        0.2
+        0.5
       ]
     },
     {
-      "a": "subscribe to this.",
+      "a": "Subscribe to rest in God's peace every night.",
       "img": "short-psalm56v3-scene-08.jpg",
       "kicker": "PSALM 56:3",
-      "sub": "REST NOW IN HIS GRACE",
-      "cam": "push_in",
+      "sub": "REST IN GOD'S PEACE EVERY NIGHT",
+      "cam": "pull_out",
       "focus": [
         0.5,
         0.5
@@ -120,42 +120,42 @@
     [
       0,
       8,
-      "The thought of that looming meeting keeps looping in your mind right now, doesn't it?"
+      "When fearful thoughts keep you awake in the quiet night, hear this promise."
     ],
     [
       9,
-      18,
-      "It feels heavy and overwhelming, but you do not need to carry whatever happens tomorrow alone."
+      16,
+      "What time I am afraid, I will trust in thee."
     ],
     [
-      19,
-      29,
-      "Psalm 56:3 says, \"Whenever I am afraid, I will trust in You.\""
+      17,
+      26,
+      "Lord, when the darkness surrounds this bed and my mind spins with tomorrow, I come to You."
     ],
     [
-      30,
-      42,
-      "This is not about being fearless, but about placing your trembling heart into His steady, capable hands."
+      27,
+      38,
+      "The worries I carried all day try to claim my sleep tonight, but I choose to place every fear into Your safe hands."
     ],
     [
-      43,
+      39,
+      45,
+      "You are my constant shelter and my peace."
+    ],
+    [
+      46,
+      54,
+      "Silence the anxiety inside me and wrap me in Your quiet presence."
+    ],
+    [
       55,
-      "Father, quiet the noise of tomorrow, replace the spiraling thoughts with the stillness of Your perfect presence."
+      65,
+      "I surrender my doubts and lay my head down, knowing You watch over me while I rest."
     ],
     [
-      56,
-      68,
-      "As you close your eyes, remember that He is watching over the night and every detail within."
-    ],
-    [
-      69,
-      82,
-      "Release the grip you have on those outcomes, for His grace is sufficient for every single uncertainty tonight."
-    ],
-    [
-      83,
-      108,
-      "Rest in the truth that you are kept, held, and loved deeply by the One who never sleeps. Amen. Please subscribe to this."
+      66,
+      72,
+      "Subscribe to rest in God's peace every night."
     ]
   ],
   "kinetic_phrases": [
@@ -163,41 +163,23 @@
       0,
       8,
       [
-        "THE THOUGHT OF",
-        "THAT LOOMING MEETING",
-        "KEEPS LOOPING",
-        "IN YOUR MIND",
-        "RIGHT NOW"
+        "WHEN FEARFUL THOUGHTS",
+        "KEEP YOU AWAKE",
+        "IN THE QUIET NIGHT"
       ],
       [
-        "LOOMING",
-        "LOOPING"
+        "FEARFUL",
+        "AWAKE"
       ],
       "PSALM 56:3"
     ],
     [
       9,
-      18,
+      16,
       [
-        "IT FEELS HEAVY",
-        "AND OVERWHELMING",
-        "BUT YOU DO NOT",
-        "NEED TO CARRY",
-        "TOMORROW ALONE"
-      ],
-      [
-        "HEAVY",
-        "ALONE"
-      ],
-      "PSALM 56:3"
-    ],
-    [
-      19,
-      29,
-      [
-        "WHENEVER I AM",
-        "AFRAID I WILL",
-        "TRUST IN YOU"
+        "WHAT TIME I AM AFRAID",
+        "I WILL TRUST",
+        "IN THEE"
       ],
       [
         "AFRAID",
@@ -206,167 +188,166 @@
       "PSALM 56:3"
     ],
     [
-      30,
-      42,
+      17,
+      26,
       [
-        "THIS IS NOT",
-        "ABOUT BEING FEARLESS",
-        "BUT PLACING YOUR",
-        "TREMBLING HEART",
-        "INTO HIS HANDS"
+        "WHEN DARKNESS SURROUNDS",
+        "THIS BED AND MY MIND SPINS",
+        "I COME TO YOU"
       ],
       [
-        "FEARLESS",
+        "DARKNESS",
+        "COME"
+      ],
+      "PSALM 56:3"
+    ],
+    [
+      27,
+      38,
+      [
+        "THE WORRIES I CARRIED",
+        "TRY TO CLAIM MY SLEEP",
+        "I PLACE EVERY FEAR",
+        "IN YOUR SAFE HANDS"
+      ],
+      [
+        "WORRIES",
+        "SAFE",
         "HANDS"
       ],
       "PSALM 56:3"
     ],
     [
-      43,
+      39,
+      45,
+      [
+        "YOU ARE MY CONSTANT",
+        "SHELTER AND MY PEACE"
+      ],
+      [
+        "SHELTER",
+        "PEACE"
+      ],
+      "PSALM 56:3"
+    ],
+    [
+      46,
+      54,
+      [
+        "SILENCE THE ANXIETY",
+        "INSIDE ME AND WRAP ME",
+        "IN YOUR QUIET PRESENCE"
+      ],
+      [
+        "SILENCE",
+        "PRESENCE"
+      ],
+      "PSALM 56:3"
+    ],
+    [
       55,
+      65,
       [
-        "FATHER QUIET THE",
-        "NOISE OF TOMORROW",
-        "REPLACE SPIRALING THOUGHTS",
-        "WITH THE STILLNESS",
-        "OF HIS PRESENCE"
+        "I SURRENDER MY DOUBTS",
+        "AND LAY MY HEAD DOWN",
+        "KNOWING YOU WATCH OVER ME"
       ],
       [
-        "QUIET",
-        "STILLNESS"
-      ],
-      "PSALM 56:3"
-    ],
-    [
-      56,
-      68,
-      [
-        "AS YOU CLOSE",
-        "YOUR EYES REMEMBER",
-        "HE IS WATCHING",
-        "OVER THE NIGHT",
-        "AND EVERY DETAIL"
-      ],
-      [
-        "REMEMBER",
-        "WATCHING"
+        "SURRENDER",
+        "WATCH"
       ],
       "PSALM 56:3"
     ],
     [
-      69,
-      82,
+      66,
+      72,
       [
-        "RELEASE THE GRIP",
-        "ON THE OUTCOMES",
-        "HIS GRACE IS",
-        "SUFFICIENT FOR EVERY",
-        "UNCERTAINTY TONIGHT"
+        "SUBSCRIBE TO REST",
+        "IN GOD'S PEACE",
+        "EVERY NIGHT"
       ],
       [
-        "RELEASE",
-        "SUFFICIENT"
-      ],
-      "PSALM 56:3"
-    ],
-    [
-      83,
-      108,
-      [
-        "REST IN THE",
-        "TRUTH YOU ARE",
-        "HELD AND LOVED",
-        "BY THE ONE",
-        "WHO NEVER SLEEPS"
-      ],
-      [
-        "REST",
-        "LOVED"
+        "SUBSCRIBE",
+        "PEACE"
       ],
       "PSALM 56:3"
     ]
   ],
   "beats": [
     {
-      "a": "The thought of",
+      "a": "fearful thoughts",
       "kind": "phrase",
       "words": [
-        "THE",
-        "THOUGHT"
+        "FEARFUL"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "whatever happens tomorrow",
+      "a": "What time I am afraid, I will trust in thee.",
       "kind": "phrase",
       "words": [
-        "WHATEVER",
-        "HAPPENS"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Psalm 56:3 says",
-      "kind": "phrase",
-      "words": [
-        "PSALM",
-        "56"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Whenever I am afraid",
-      "kind": "phrase",
-      "words": [
-        "WHENEVER",
-        "AFRAID"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "I will trust",
-      "kind": "phrase",
-      "words": [
-        "I",
-        "WILL",
+        "AFRAID",
         "TRUST"
       ],
-      "hi": 0,
+      "hi": 1,
       "slot": "C"
     },
     {
-      "a": "in You.",
+      "a": "darkness surrounds this bed",
       "kind": "phrase",
       "words": [
-        "IN",
-        "YOU"
+        "DARKNESS"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Father, quiet the",
+      "a": "Your safe hands",
       "kind": "phrase",
       "words": [
-        "FATHER",
-        "QUIET"
+        "SAFE",
+        "HANDS"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "subscribe to this.",
+      "a": "constant shelter and my peace",
       "kind": "phrase",
       "words": [
-        "SUBSCRIBE",
-        "TO",
-        "THIS"
+        "SHELTER",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Silence the anxiety inside me",
+      "kind": "phrase",
+      "words": [
+        "SILENCE"
       ],
       "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "surrender my doubts",
+      "kind": "phrase",
+      "words": [
+        "SURRENDER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "rest in God's peace",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "PEACE"
+      ],
+      "hi": 1,
       "slot": "C"
     }
   ],
