@@ -2,13 +2,6 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
-      "late_minutes": 284,
-      "name": "Growth autopilot",
-      "ran_at": "2026-11-13T06:58:35+00:00",
-      "slot": "2026-11-13T02:14:00+00:00",
-      "workflow": "growth-autopilot.yml"
-    },
-    {
       "late_minutes": 228,
       "name": "Keepalive",
       "ran_at": "2026-11-09T07:11:37+00:00",
@@ -44,8 +37,8 @@
       "workflow": "comments.yml"
     }
   ],
-  "generated_at": "2026-11-14T01:32:31.906258+00:00",
-  "last_run_at": "2026-11-14T01:31:46+00:00",
+  "generated_at": "2026-11-14T02:26:38.702746+00:00",
+  "last_run_at": "2026-11-14T02:25:44+00:00",
   "on_time": [
     {
       "late_minutes": 93,
