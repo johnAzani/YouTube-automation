@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T04:45:49Z",
+  "generated_at": "2026-11-14T04:54:28Z",
   "monitor_generated_at": "2026-11-14T04:44:31.885651+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 190,
-    "published_longform": 96,
+    "published_total": 191,
+    "published_longform": 97,
     "published_shorts": 94,
-    "public_total": 188,
-    "queued_longform": 42,
+    "public_total": 189,
+    "queued_longform": 41,
     "queued_shorts": 45,
     "automations_ok": 9,
     "automations_total": 10,
@@ -33,28 +33,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 38,
-        "published_longform": 14,
+        "published_total": 39,
+        "published_longform": 15,
         "published_shorts": 24,
         "thumbnail_pending": 2,
-        "public_total": 37,
-        "queued_longform": 13,
+        "public_total": 38,
+        "queued_longform": 12,
         "queued_other": 5,
         "queued_shorts": 4
       },
       "latest_video": {
-        "id": "0022",
-        "title": "Psalm 37:7 Bedtime Prayer | Rest in the Lord & Fret Not",
-        "format": "longform",
-        "youtube_video_id": "sAyMduXhoeQ",
-        "watch_url": "https://youtu.be/sAyMduXhoeQ",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T20:41:20Z"
-      },
-      "next_queued_longform": {
         "id": "0023",
         "title": "Night Prayer When You Lie Awake: Psalm 63:6-7 | The Secret Place",
-        "words": 892,
+        "format": "longform",
+        "youtube_video_id": "P2JDAtPkryI",
+        "watch_url": "https://youtu.be/P2JDAtPkryI",
+        "published_on": "2026-11-14",
+        "published_at": "2026-11-14T04:53:47Z"
+      },
+      "next_queued_longform": {
+        "id": "0024",
+        "title": "When the Night Feels Too Dark: Psalm 139:11-12 | The Secret Place",
+        "words": 888,
         "status": "approved"
       },
       "next_queued_short": {
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0023",
+      "slug": "psalm-63-5-7-remembering-god-upon-my-bed",
+      "file": "0023-psalm-63-5-7-remembering-god-upon-my-bed.md",
+      "title": "Night Prayer When You Lie Awake: Psalm 63:6-7 | The Secret Place",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T04:53:47Z",
+      "youtube_video_id": "P2JDAtPkryI",
+      "watch_url": "https://youtu.be/P2JDAtPkryI",
+      "youtu_be_url": "https://youtu.be/P2JDAtPkryI",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/P2JDAtPkryI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/P2JDAtPkryI/hqdefault.jpg",
+      "thumb_text": "SAFE ON MY BED",
+      "thumbnail_pending": false,
+      "duration_label": "~6 min",
+      "words": 892
+    },
     {
       "id": "SHORT-MORNINGPSALM37V23",
       "slug": "short-morningpsalm37v23-sunrise-prayer",
@@ -5254,19 +5278,6 @@
   ],
   "queues": {
     "longform": [
-      {
-        "id": "0023",
-        "slug": "psalm-63-5-7-remembering-god-upon-my-bed",
-        "file": "0023-psalm-63-5-7-remembering-god-upon-my-bed.md",
-        "title": "Night Prayer When You Lie Awake: Psalm 63:6-7 | The Secret Place",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 892
-      },
       {
         "id": "0024",
         "slug": "psalm-139-11-12-darkness-is-as-light-to-him",

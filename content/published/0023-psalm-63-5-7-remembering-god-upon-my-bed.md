@@ -2,7 +2,7 @@
 id: '0023'
 title: "Night Prayer When You Lie Awake: Psalm 63:6-7 | The Secret Place"
 slug: psalm-63-5-7-remembering-god-upon-my-bed
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -85,6 +85,13 @@ originality:
   ai_disclosure: false
 seo_hook: Pray this Psalm 63:5-7 KJV night prayer as you remember the Lord upon your bed and rest beneath the shadow of His wings.
 category_id: '22'
+published_on: "2026-11-14"
+published_at: "2026-11-14T04:53:47Z"
+youtube_video_id: "P2JDAtPkryI"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — My Soul Shall Be Satisfied as with Marrow and Fatness (Verse 5a)

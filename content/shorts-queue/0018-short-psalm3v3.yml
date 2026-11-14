@@ -11,3 +11,7 @@ target_window_utc: '14:14'
 notes: "Companion Short for Psalm 3:3-5 \u2014 The Shield That Lifts My Head | Night\
   \ Prayer for Restoration | The Secret Place \u2014 spec authored by the brain (99\
   \ narration words)"
+alignment_failures: 1
+last_alignment_error: 'cannot prepare Charon narration for short-psalm3v3 (Short speech
+  alignment unavailable or incomplete; refusing to render [ValueError: alignment does
+  not cover the narration in order]); refusing to render'
