@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T11:19:34Z",
+  "generated_at": "2026-11-14T11:22:34Z",
   "monitor_generated_at": "2026-11-14T10:41:34.562205+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 211,
+    "published_total": 212,
     "published_longform": 103,
-    "published_shorts": 108,
-    "public_total": 209,
+    "published_shorts": 109,
+    "public_total": 210,
     "queued_longform": 61,
-    "queued_shorts": 100,
+    "queued_shorts": 99,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -373,23 +373,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 14,
+        "published_total": 15,
         "published_longform": 8,
-        "published_shorts": 6,
+        "published_shorts": 7,
         "thumbnail_pending": 6,
-        "public_total": 14,
+        "public_total": 15,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-HEALING1PETER2V24",
-        "title": "Pray This 1 Peter 2:24 Healing Prayer for Peace & Strength | Health #Shorts",
+        "id": "SHORT-HEALINGJOHN16V33",
+        "title": "Pray This John 16:33 Healing Prayer for Peace & Strength | Christ Jesus #Shorts",
         "format": "short",
-        "youtube_video_id": "SBt0GWv7uwM",
-        "watch_url": "https://www.youtube.com/shorts/SBt0GWv7uwM",
+        "youtube_video_id": "NZLJcbKaVX4",
+        "watch_url": "https://www.youtube.com/shorts/NZLJcbKaVX4",
         "published_on": "2026-11-14",
-        "published_at": "2026-11-14T07:04:52Z"
+        "published_at": "2026-11-14T11:21:44Z"
       },
       "next_queued_longform": {
         "id": "0408",
@@ -398,8 +398,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingjohn16v33",
-        "scripture": "John 16:33",
+        "short": "short-healingjeremiah17v14",
+        "scripture": "Jeremiah 17:14",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALINGJOHN16V33",
+      "slug": "short-healingjohn16v33-restoration-prayer",
+      "file": "short-healingjohn16v33-restoration-prayer.md",
+      "title": "Pray This John 16:33 Healing Prayer for Peace & Strength | Christ Jesus #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T11:21:44Z",
+      "youtube_video_id": "NZLJcbKaVX4",
+      "watch_url": "https://www.youtube.com/shorts/NZLJcbKaVX4",
+      "youtu_be_url": "https://youtu.be/NZLJcbKaVX4",
+      "shorts_url": "https://www.youtube.com/shorts/NZLJcbKaVX4",
+      "studio_url": "https://studio.youtube.com/video/NZLJcbKaVX4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/NZLJcbKaVX4/hqdefault.jpg",
+      "thumb_text": "WHEN ANXIETY \u00b7 TAKES OVER",
+      "thumbnail_pending": false,
+      "duration_label": "55s",
+      "words": 605
+    },
     {
       "id": "SHORT-MORNINGISAIAH43V18",
       "slug": "short-morningisaiah43v18-sunrise-prayer",
@@ -6645,17 +6669,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-healingjohn16v33",
-        "file": "0000-short-healingjohn16v33.yml",
-        "companion_longform_id": "",
-        "scripture": "John 16:33",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-matthew6v34",
