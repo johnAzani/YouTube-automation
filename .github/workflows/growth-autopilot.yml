@@ -243,14 +243,14 @@ jobs:
             echo "no new titles for ${{ matrix.channel }}"
             exit 0
           fi
-          FILES="$(python3 -c 'import json,sys; print("\n".join(e["file"] for e in json.load(open(sys.argv[1]))))' /tmp/retitles.json)"
+          FILES="$(python -c 'import json,sys; print("\n".join(e["file"] for e in json.load(open(sys.argv[1]))))' /tmp/retitles.json)"
           git config user.name "growth-autopilot"
           git config user.email "actions@users.noreply.github.com"
           for attempt in 1 2 3; do
             git fetch --quiet origin main
             git reset --mixed origin/main
             for f in $FILES; do git checkout origin/main -- "$f" 2>/dev/null || true; done
-            CHANGED="$(python3 scripts/retitle_unwatched.py --apply-ledger /tmp/retitles.json)"
+            CHANGED="$(python scripts/retitle_unwatched.py --apply-ledger /tmp/retitles.json)"
             if [ -z "$CHANGED" ]; then
               echo "no receipt needed a new title after refreshing from main"
               exit 0
