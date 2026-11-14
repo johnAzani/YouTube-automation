@@ -1,0 +1,317 @@
+{
+  "key": "short-midnightpsalm35v1",
+  "channel": "prayer4",
+  "psalm": 35,
+  "title": [
+    "WHEN BATTLES SURROUND YOU",
+    "MIDNIGHT PRAYER OF DEFENSE"
+  ],
+  "poster": [
+    "THE MIDNIGHT WATCH",
+    "PSALM 35 PRAYER",
+    "GOD FIGHTS FOR YOU",
+    "STAND STRONG TONIGHT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower night sky stars",
+    "storm clouds dark midnight sky silhouette",
+    "glowing lantern in dark midnight stone sanctuary",
+    "deep cosmos starry night sky dark horizon",
+    "candle lit prayer altar dark midnight vigil",
+    "dramatic midnight starry heavens dark mountain ridge",
+    "solitary burning candle dark background midnight prayer"
+  ],
+  "scenes": [
+    {
+      "a": "If you are lying awake facing battles you cannot win alone, God fights for you.",
+      "img": "short-midnightpsalm35v1-scene-01.jpg",
+      "kicker": "PSALM 35:1",
+      "sub": "GOD FIGHTS FOR YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hear Psalm 35: Contend, Lord, with those who contend with me; fight against those who fight against me.",
+      "img": "short-midnightpsalm35v1-scene-02.jpg",
+      "kicker": "PSALM 35:1",
+      "sub": "CONTEND LORD FOR ME",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Take up shield and armor; arise and come to my aid.",
+      "img": "short-midnightpsalm35v1-scene-03.jpg",
+      "kicker": "PSALM 35:2",
+      "sub": "ARISE AND COME TO MY AID",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Brandish spear and javelin against those who pursue me. Say to my soul, I am your salvation.",
+      "img": "short-midnightpsalm35v1-scene-04.jpg",
+      "kicker": "PSALM 35:3",
+      "sub": "I AM YOUR SALVATION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, in this silent midnight hour, we place every secret conflict and unfair attack into Your hands.",
+      "img": "short-midnightpsalm35v1-scene-05.jpg",
+      "kicker": "PSALM 35:4",
+      "sub": "INTO YOUR HANDS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Stand before us, shield our spirit, and turn back every dark scheme aimed against our peace.",
+      "img": "short-midnightpsalm35v1-scene-06.jpg",
+      "kicker": "PSALM 35:4",
+      "sub": "SHIELD OUR SPIRIT",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We trust Your power tonight. Subscribe to join The Midnight Watch in prayer.",
+      "img": "short-midnightpsalm35v1-scene-07.jpg",
+      "kicker": "MIDNIGHT WATCH",
+      "sub": "WE TRUST YOUR POWER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If you are lying awake facing battles you cannot win alone, God fights for you."
+    ],
+    [
+      7,
+      15,
+      "Hear Psalm 35: Contend, Lord, with those who contend with me; fight against those who fight against me."
+    ],
+    [
+      15,
+      23,
+      "Take up shield and armor; arise and come to my aid."
+    ],
+    [
+      23,
+      33,
+      "Brandish spear and javelin against those who pursue me. Say to my soul, I am your salvation."
+    ],
+    [
+      33,
+      43,
+      "Heavenly Father, in this silent midnight hour, we place every secret conflict and unfair attack into Your hands."
+    ],
+    [
+      43,
+      51,
+      "Stand before us, shield our spirit, and turn back every dark scheme aimed against our peace."
+    ],
+    [
+      51,
+      58,
+      "We trust Your power tonight. Subscribe to join The Midnight Watch in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF YOU ARE LYING AWAKE",
+        "FACING BATTLES ALONE",
+        "GOD FIGHTS FOR YOU"
+      ],
+      [
+        "GOD",
+        "FIGHTS"
+      ],
+      "PSALM 35 : 1"
+    ],
+    [
+      7,
+      15,
+      [
+        "CONTEND LORD WITH THOSE",
+        "WHO CONTEND WITH ME",
+        "FIGHT AGAINST THEM"
+      ],
+      [
+        "CONTEND",
+        "FIGHT"
+      ],
+      "PSALM 35 : 1"
+    ],
+    [
+      15,
+      23,
+      [
+        "TAKE UP SHIELD AND ARMOR",
+        "ARISE AND COME TO MY AID"
+      ],
+      [
+        "SHIELD",
+        "ARMOR",
+        "AID"
+      ],
+      "PSALM 35 : 2"
+    ],
+    [
+      23,
+      33,
+      [
+        "BRANDISH SPEAR AND JAVELIN",
+        "SAY TO MY SOUL",
+        "I AM YOUR SALVATION"
+      ],
+      [
+        "SPEAR",
+        "SALVATION"
+      ],
+      "PSALM 35 : 3"
+    ],
+    [
+      33,
+      43,
+      [
+        "IN THIS SILENT MIDNIGHT HOUR",
+        "WE PLACE EVERY CONFLICT",
+        "INTO YOUR HANDS"
+      ],
+      [
+        "SILENT",
+        "YOUR HANDS"
+      ],
+      "PSALM 35 : 4"
+    ],
+    [
+      43,
+      51,
+      [
+        "STAND BEFORE US",
+        "SHIELD OUR SPIRIT",
+        "TURN BACK EVERY DARK SCHEME"
+      ],
+      [
+        "SHIELD",
+        "PEACE"
+      ],
+      "PSALM 35 : 4"
+    ],
+    [
+      51,
+      58,
+      [
+        "WE TRUST YOUR POWER TONIGHT",
+        "SUBSCRIBE TO JOIN",
+        "THE MIDNIGHT WATCH"
+      ],
+      [
+        "TRUST",
+        "POWER"
+      ],
+      "PSALM 35 : 1-4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "God fights for you.",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "FIGHTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "fight against those who fight against me.",
+      "kind": "phrase",
+      "words": [
+        "FIGHT",
+        "AGAINST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "arise and come to my aid.",
+      "kind": "phrase",
+      "words": [
+        "ARISE",
+        "AID"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I am your salvation.",
+      "kind": "phrase",
+      "words": [
+        "YOUR",
+        "SALVATION"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "into Your hands.",
+      "kind": "phrase",
+      "words": [
+        "YOUR",
+        "HANDS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "shield our spirit,",
+      "kind": "phrase",
+      "words": [
+        "SHIELD",
+        "SPIRIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to join The Midnight Watch in prayer.",
+      "kind": "phrase",
+      "words": [
+        "MIDNIGHT",
+        "WATCH"
+      ],
+      "hi": 3,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 35:1-4"
+}
