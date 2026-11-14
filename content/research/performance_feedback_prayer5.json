@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-13T09:32:35.441097+00:00",
-  "as_of": "2026-11-13",
+  "generated_at": "2026-11-14T04:16:01.995911+00:00",
+  "as_of": "2026-11-14",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 5,
+  "total_longform_videos": 8,
   "input_diagnostics": {
-    "snapshot_video_ids": 10,
-    "receipt_video_ids": 10,
-    "matched_video_ids": 10,
-    "longform_below_view_threshold": 5,
+    "snapshot_video_ids": 13,
+    "receipt_video_ids": 13,
+    "matched_video_ids": 13,
+    "longform_below_view_threshold": 8,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 5,
+    "longform_too_young_or_undated": 7,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
@@ -18,7 +18,15 @@
   "themes": [
     {
       "theme": "general_prayer",
-      "videos": 4,
+      "videos": 6,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": ""
+    },
+    {
+      "theme": "blessing_benediction",
+      "videos": 1,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
