@@ -1,0 +1,317 @@
+{
+  "key": "short-healing2corinthians12v9",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "MY GRACE IS",
+    "SUFFICIENT FOR THEE"
+  ],
+  "poster": [
+    "2 CORINTHIANS 12:9",
+    "STRENGTH IN WEAKNESS",
+    "GOD'S HEALING PEACE",
+    "THE HEALING BALM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters soft light",
+    "warm golden sanctuary light glowing rays",
+    "gentle sunlight on calm clear stream",
+    "soft golden light through quiet chapel window",
+    "serene turquoise water glowing softly",
+    "warm golden light on peaceful horizon",
+    "calm serene water soft heavenly light"
+  ],
+  "scenes": [
+    {
+      "a": "relentless week",
+      "img": "short-healing2corinthians12v9-scene-01.jpg",
+      "kicker": "2 CORINTHIANS 12:9",
+      "sub": "GOD MEETS YOU IN WEAKNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "sufficient for thee",
+      "img": "short-healing2corinthians12v9-scene-02.jpg",
+      "kicker": "2 CORINTHIANS 12:9",
+      "sub": "HIS GRACE IS ENOUGH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "power of Christ",
+      "img": "short-healing2corinthians12v9-scene-03.jpg",
+      "kicker": "2 CORINTHIANS 12:9",
+      "sub": "PERFECTED IN YOUR WEAKNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "fragile bodies",
+      "img": "short-healing2corinthians12v9-scene-04.jpg",
+      "kicker": "2 CORINTHIANS 12:9",
+      "sub": "RESTING IN HIS PRESENCE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "quiet peace",
+      "img": "short-healing2corinthians12v9-scene-05.jpg",
+      "kicker": "2 CORINTHIANS 12:9",
+      "sub": "COVERED IN GOD'S PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "weary spirits",
+      "img": "short-healing2corinthians12v9-scene-06.jpg",
+      "kicker": "2 CORINTHIANS 12:9",
+      "sub": "RESTORING WHAT WAS DRAINED",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "The Healing Balm",
+      "img": "short-healing2corinthians12v9-scene-07.jpg",
+      "kicker": "2 CORINTHIANS 12:9",
+      "sub": "RECEIVE HIS HEALING PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "When you feel completely emptied by this relentless week, remember God's promise."
+    ],
+    [
+      6,
+      13,
+      "And he said unto me, My grace is sufficient for thee: for my strength is made perfect in weakness."
+    ],
+    [
+      13,
+      21,
+      "Most gladly therefore will I rather glory in my infirmities, that the power of Christ may rest upon me."
+    ],
+    [
+      21,
+      27,
+      "Lord, we bring our fragile bodies and worn hearts into your healing presence."
+    ],
+    [
+      27,
+      33,
+      "When our own energy runs dry, cover us in your quiet peace."
+    ],
+    [
+      33,
+      40,
+      "Let your power settle over every broken place today, breathing new life into our weary spirits and restoring what was drained."
+    ],
+    [
+      40,
+      46,
+      "In Jesus' name, Amen. Subscribe to The Healing Balm for daily peace."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "WHEN YOU FEEL",
+        "COMPLETELY EMPTIED",
+        "REMEMBER GOD'S PROMISE"
+      ],
+      [
+        "EMPTIED",
+        "GOD'S PROMISE"
+      ],
+      "2 CORINTHIANS 12 : 9"
+    ],
+    [
+      6,
+      13,
+      [
+        "MY GRACE IS",
+        "SUFFICIENT FOR THEE",
+        "STRENGTH IN WEAKNESS"
+      ],
+      [
+        "SUFFICIENT",
+        "STRENGTH"
+      ],
+      "2 CORINTHIANS 12 : 9"
+    ],
+    [
+      13,
+      21,
+      [
+        "GLORY IN INFIRMITIES",
+        "THAT THE POWER OF CHRIST",
+        "MAY REST UPON ME"
+      ],
+      [
+        "POWER OF CHRIST",
+        "REST UPON ME"
+      ],
+      "2 CORINTHIANS 12 : 9"
+    ],
+    [
+      21,
+      27,
+      [
+        "WE BRING OUR",
+        "FRAGILE BODIES",
+        "INTO HEALING PRESENCE"
+      ],
+      [
+        "FRAGILE BODIES",
+        "HEALING PRESENCE"
+      ],
+      "2 CORINTHIANS 12 : 9"
+    ],
+    [
+      27,
+      33,
+      [
+        "WHEN ENERGY RUNS DRY",
+        "COVER US IN YOUR",
+        "QUIET PEACE"
+      ],
+      [
+        "COVER US",
+        "QUIET PEACE"
+      ],
+      "2 CORINTHIANS 12 : 9"
+    ],
+    [
+      33,
+      40,
+      [
+        "BREATHING NEW LIFE",
+        "INTO WEARY SPIRITS",
+        "RESTORING WHAT WAS DRAINED"
+      ],
+      [
+        "NEW LIFE",
+        "RESTORING"
+      ],
+      "2 CORINTHIANS 12 : 9"
+    ],
+    [
+      40,
+      46,
+      [
+        "IN JESUS' NAME AMEN",
+        "SUBSCRIBE TO THE HEALING BALM",
+        "FOR DAILY PEACE"
+      ],
+      [
+        "SUBSCRIBE",
+        "HEALING BALM"
+      ],
+      "2 CORINTHIANS 12 : 9"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "relentless week",
+      "kind": "phrase",
+      "words": [
+        "RELENTLESS",
+        "WEEK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "sufficient for thee",
+      "kind": "phrase",
+      "words": [
+        "SUFFICIENT",
+        "THEE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "power of Christ",
+      "kind": "phrase",
+      "words": [
+        "POWER",
+        "CHRIST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "fragile bodies",
+      "kind": "phrase",
+      "words": [
+        "FRAGILE",
+        "BODIES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "quiet peace",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "weary spirits",
+      "kind": "phrase",
+      "words": [
+        "WEARY",
+        "SPIRITS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Healing Balm",
+      "kind": "phrase",
+      "words": [
+        "HEALING",
+        "BALM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Corinthians 12:9"
+}
