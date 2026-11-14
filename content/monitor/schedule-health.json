@@ -37,8 +37,8 @@
       "workflow": "automation-health.yml"
     }
   ],
-  "generated_at": "2026-11-14T22:57:48.737616+00:00",
-  "last_run_at": "2026-11-14T22:57:40+00:00",
+  "generated_at": "2026-11-14T23:18:19.450504+00:00",
+  "last_run_at": "2026-11-14T23:17:33+00:00",
   "on_time": [
     {
       "late_minutes": 42,
@@ -67,13 +67,6 @@
       "ran_at": "2026-11-14T22:35:27+00:00",
       "slot": "2026-11-14T21:23:00+00:00",
       "workflow": "monitor.yml"
-    },
-    {
-      "late_minutes": 50,
-      "name": "Produce video",
-      "ran_at": "2026-11-14T20:04:36+00:00",
-      "slot": "2026-11-14T19:14:00+00:00",
-      "workflow": "produce.yml"
     },
     {
       "late_minutes": 51,
