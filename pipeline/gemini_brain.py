@@ -659,6 +659,10 @@ STANDALONE_PREFIX = "0000"
 #: Standalone Shorts authored in one pass, per channel. Each costs one or two
 #: text requests; six is more than a day's four and well inside the pass budget.
 MAX_STANDALONE_PER_PASS = 6
+#: Waiting Shorts rewritten per pass because their narration does not quote its
+#: verse word for word (pipeline/scripture_text.py). One model request each; a
+#: channel's legacy queue of about nine is verified in three passes.
+MAX_REQUOTES_PER_PASS = 3
 MAX_CALLS_PER_RUN = int(os.environ.get("GEMINI_MAX_CALLS_PER_RUN", "40") or "40")
 
 
@@ -949,6 +953,8 @@ class GeminiBrain:
         brand = brand_for(self.channel_id)
         channel_directive = "\n".join(brand.authoring_directive)
         channel_directive = f"\n{channel_directive}\n"
+        from .scripture_text import check_quote, exists as scripture_exists, prompt_block
+        scripture_block = prompt_block(str(scripture))
         user_prompt = f"""
 Please author the official, complete long-form devotional script for:
 - Job ID: {job_id}
@@ -957,6 +963,7 @@ Please author the official, complete long-form devotional script for:
 - Visual Hook Text: "{hook}"
 {channel_directive}
 Follow all channel invariants, DOCOGA REELS v2 guidelines, and theological rubrics.
+{scripture_block}
 
 LENGTH IS A HARD REQUIREMENT: at least {author_words} words of narration across the scenes.
 The production gate is {MIN_LONGFORM_WORDS} words and it is never lowered — a shorter script
@@ -1027,6 +1034,22 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                         outcomes.append({"model": candidate_model,
                                          "outcome": f"branding: {branding}"[:200]})
                         continue
+                    # The same rule as a Short: one whole verse of the passage
+                    # word for word. A verse carried with a word changed is said
+                    # out loud here but does not discard a 950-word script.
+                    if scripture_exists(str(scripture)):
+                        body = text.split("---", 2)[-1]
+                        quote = check_quote(body, str(scripture))
+                        if not quote.quoted:
+                            print(f"[gemini-brain] {candidate_model} rejected: "
+                                  f"{quote.problems[0][:200]}")
+                            outcomes.append({"model": candidate_model,
+                                             "outcome": f"scripture: no verse of {scripture} "
+                                                        "quoted word for word"})
+                            continue
+                        for near in quote.problems:
+                            print(f"::warning title=Scripture wording ({self.channel_id} "
+                                  f"{job_id})::{near[:300]}")
                     outcomes.append({"model": candidate_model, "outcome": "accepted"})
                     return text
             except BrainAuthoringError:
@@ -1241,6 +1264,7 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         Raises BrainAuthoringError rather than returning something partial: a Short
         that renders with mislabelled scripture is worse than a stalled queue.
         """
+        from .scripture_text import quote_problems
         from .short_script import (ShortSpecError, build_prompt, parse_model_json,
                                    require_valid, validate_spec)
 
@@ -1332,6 +1356,15 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                     spec = validate_spec(data, key=key, channel_id=self.channel_id)
                     if spec.problems:
                         last_error = "; ".join(spec.problems[:4])
+                        continue
+                    # The words presented as scripture must be scripture: one
+                    # whole verse of the passage word for word, and no verse
+                    # carried with a word changed (pipeline/scripture_text.py).
+                    misquoted = quote_problems(spec.narration_text, scripture)
+                    if misquoted:
+                        last_error = "; ".join(misquoted[:2])
+                        print(f"[gemini-brain] Short {key}: {model} misquoted {scripture} "
+                              f"(attempt {attempt}): {last_error[:200]}", flush=True)
                         continue
                     if spec.repairs:
                         print(f"[gemini-brain] Short {key}: repaired "
@@ -1485,6 +1518,60 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         manifest_path.write_text(yaml.safe_dump(manifest_data, sort_keys=False), encoding="utf-8")
         return manifest_path, key
 
+    def _requote_if_misquoted(self, path: Path, data: dict[str, Any], key: str,
+                              requotes_left: int) -> Optional[dict[str, Any]]:
+        """Rewrite a waiting Short whose narration does not carry its verse as written.
+
+        Shorts authored before 14 November 2026 quoted from the model's memory,
+        in whatever translation it chose. One was garbled; the rest cannot be
+        proved faithful offline. Each pass rewrites up to
+        ``MAX_REQUOTES_PER_PASS`` of this channel's waiting Shorts under the
+        scripture check, soonest-to-publish first, so the queue becomes verified
+        without stopping. Returns the row to report, or ``None`` when this
+        manifest needs nothing (or the budget for this pass is spent).
+
+        A failed rewrite leaves the old spec where it was: the selector already
+        sends verified Shorts out first.
+        """
+        from .scripture_text import quote_problems
+        from .short_script import SPEC_DIR, load_spec, save_spec
+
+        status = str(data.get("status", "")).strip().lower()
+        held_for_requote = status == "draft" and bool(data.get("requote"))
+        if status != "approved" and not held_for_requote:
+            return None
+        spec_file = Path(SPEC_DIR) / f"{key}.json"
+        if not spec_file.is_file():
+            return None  # hand-written edition: no spec to rewrite
+        try:
+            old = load_spec(spec_file)
+        except Exception:  # noqa: BLE001
+            return None
+        reference = str(data.get("scripture") or old.scripture or "").strip()
+        if not reference and old.psalm:
+            reference = f"Psalm {old.psalm}"
+        if not reference:
+            return None
+        problems = quote_problems(old.narration_text, reference)
+        if not problems:
+            return None
+        if requotes_left <= 0 or not self.is_api_available():
+            return None
+        try:
+            spec = self.author_short_spec(None, key=key, scripture=reference)
+            save_spec(spec)
+        except Exception as exc:  # noqa: BLE001
+            return {"file": path.name, "key": key, "verdict": "requote_failed",
+                    "reason": f"{reference}: {str(exc)[:160]}"}
+        note = (f"narration rewritten to quote {reference} word for word "
+                f"({spec.words} narration words)")
+        data.update(status="approved", renderer_ready=True, authored_by_brain=True,
+                    scripture=reference, notes=f"{str(data.get('notes') or '').split(' || ')[0]} || {note}")
+        for stale in ("requote", "pause_reason", "alignment_failures", "last_alignment_error"):
+            data.pop(stale, None)
+        path.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+        return {"file": path.name, "key": key, "verdict": "requoted", "reason": note}
+
     def _companion_doc(self, longform_id: str) -> Optional[ScriptDoc]:
         """Find the long-form script a queued Short is a companion to."""
         if not longform_id:
@@ -1504,6 +1591,7 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
 
         rows: list[dict[str, Any]] = []
         renderable = _renderer_script_keys()
+        requotes_left = MAX_REQUOTES_PER_PASS
 
         for path in sorted(Path(SHORTS_QUEUE_DIR).glob("*.yml")):
             try:
@@ -1519,6 +1607,11 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                 rows.append({"file": path.name, "key": "", "verdict": "no_key", "reason": "manifest has no `short`"})
                 continue
             if key in renderable:
+                requoted = self._requote_if_misquoted(path, data, key, requotes_left)
+                if requoted is not None:
+                    requotes_left -= 1
+                    rows.append(requoted)
+                    continue
                 rows.append({"file": path.name, "key": key, "verdict": "renderable", "reason": "already has a spec"})
                 continue
 

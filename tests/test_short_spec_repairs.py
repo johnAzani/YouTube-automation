@@ -97,7 +97,10 @@ class TestEscalationAcrossModels(unittest.TestCase):
 
         doc = parse_script(Path(__file__).resolve().parents[1] / "content" / "published"
                            / "0013-psalm-46-god-is-our-refuge-and-strength.md")
+        # This test is about climbing the model chain; the fixture spec predates
+        # the scripture check (tests/test_scripture_text.py covers that).
         with mock.patch.object(gemini_brain, "_TRANSIENT_BACKOFF", ()), \
+             mock.patch("pipeline.scripture_text.quote_problems", return_value=[]), \
              mock.patch("builtins.print"):
             spec = brain.author_short_spec(doc, key="short-isaiah26v3")
         self.assertEqual(spec.key, "short-isaiah26v3")

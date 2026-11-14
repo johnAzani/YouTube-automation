@@ -519,6 +519,7 @@ def select_next_queued_short(
     elif (queue_dir.parent / "published").is_dir():
         pdir = queue_dir.parent / "published"
 
+    fallback: tuple[Path, str, str] | None = None
     for path in sorted(qdir.glob("*.yml")):
         data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
         if _norm(data.get("channel")) != wanted:
@@ -590,8 +591,48 @@ def select_next_queued_short(
             print(f"[queue] Skipping manifest {path.name}: unknown short key {key!r} not in EDITIONS")
             continue
 
+        # Verified Shorts first: one whose narration carries its verse word for
+        # word goes out ahead of one that cannot be checked or does not.
+        verdict = scripture_status(key, data)
+        if verdict == "verified":
+            return path, key
+        if fallback is None:
+            fallback = (path, key, verdict)
+    if fallback is not None:
+        path, key, verdict = fallback
+        if verdict == "unverified":
+            print(f"::notice title=Short not yet scripture-verified ({wanted})::{key} was "
+                  "written before the scripture check and its quotation does not match the "
+                  "bundled text word for word; no verified Short is waiting, so it goes out. "
+                  "The brain rewrites these each pass.")
         return path, key
     return None
+
+
+def scripture_status(key: str, manifest: dict | None = None) -> str:
+    """``"verified"``, ``"unverified"`` or ``"unknown"`` for one Short's quotation.
+
+    ``verified``: the authored narration carries at least one whole verse of its
+    passage word for word and none with a word changed. ``unknown``: a
+    hand-written edition with no spec file, or no reference to check against.
+    """
+    from .scripture_text import quote_problems
+    from .short_script import SPEC_DIR
+
+    spec_file = Path(SPEC_DIR) / f"{key}.json"
+    if not spec_file.is_file():
+        return "unknown"
+    try:
+        spec = json.loads(spec_file.read_text(encoding="utf-8"))
+        narration = " ".join(str(c[2]) for c in spec.get("captions", []))
+    except Exception:  # noqa: BLE001
+        return "unknown"
+    reference = str((manifest or {}).get("scripture") or spec.get("scripture") or "").strip()
+    if not reference and isinstance(spec.get("psalm"), int) and spec["psalm"]:
+        reference = f"Psalm {spec['psalm']}"
+    if not reference:
+        return "unknown"
+    return "unverified" if quote_problems(narration, reference) else "verified"
 
 
 def _build_script_doc(edition: ShortEdition) -> ScriptDoc:

@@ -382,7 +382,7 @@ THE OPENING SENTENCE — a viewer decides in the first two seconds:
 - Honest only: no "don't scroll", no "watch to the end", no promised outcome.
 
 - Quote ONLY {scripture}. Never quote another psalm or verse reference.
-- One `stock_queries` entry per scene, describing {imagery} imagery suitable for
+{scripture_block}- One `stock_queries` entry per scene, describing {imagery} imagery suitable for
   a {prayer_kind} prayer (no people's faces, no text in the image).
 - kicker <= {kicker} characters, sub <= {sub} characters, ALL CAPS.
 - cam is one of {cams}. focus is [x, y] with x/y between 0 and 1.
@@ -474,8 +474,13 @@ def build_prompt(scripture: str, key: str = "short-psalmNN", words: int = TARGET
         listed = "\n".join(f'    - "{o[:140]}"' for o in avoid_openings[:RECENT_OPENINGS_SHOWN])
         avoid_block = ("\n  This channel has already opened Shorts with these lines. Do not start"
                        "\n  with any of them, or with their first three words:\n" + listed)
+    # The writer is shown the verses and told to copy them: a reference alone
+    # left the quotation to the model's memory (pipeline/scripture_text.py).
+    from .scripture_text import prompt_block
+
     return PROMPT.format(
         key=key, scripture=scripture, words=words,
+        scripture_block=prompt_block(scripture),
         floor=max(MIN_WORDS, TARGET_WORDS_RANGE[0]), ceiling=TARGET_WORDS_RANGE[1],
         hook_words=MAX_HOOK_WORDS, avoid_block=avoid_block,
         min_seconds=MIN_SECONDS, max_seconds=MAX_SECONDS,
