@@ -1,0 +1,302 @@
+{
+  "key": "short-morningproverbs4v18",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "PROVERBS 4:18",
+    "THE PATH OF THE JUST"
+  ],
+  "poster": [
+    "THE MORNING ALTAR",
+    "PROVERBS 4:18",
+    "A PRAYER FOR DAWN",
+    "BEGIN IN PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "golden sun rays through morning mist forest",
+    "sunrise light glowing on mountain peaks",
+    "morning dew drops on green grass illuminated by sun",
+    "soft sunrise light through window blinds in quiet room",
+    "bright morning horizon with golden light breaking through clouds",
+    "sunlight illuminating a quiet forest path at dawn",
+    "golden hour light over a serene misty lake"
+  ],
+  "scenes": [
+    {
+      "a": "That heavy fog of confusion rolling into your room right now will not have the final word.",
+      "img": "short-morningproverbs4v18-scene-01.jpg",
+      "kicker": "PROVERBS 4:18",
+      "sub": "THE MORNING LIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Listen to the wisdom given to us in Proverbs 4:18.",
+      "img": "short-morningproverbs4v18-scene-02.jpg",
+      "kicker": "PROVERBS 4:18",
+      "sub": "THE PATH GROWS BRIGHTER",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The path of the righteous is like the light of dawn, shining ever brighter unto the full day.",
+      "img": "short-morningproverbs4v18-scene-03.jpg",
+      "kicker": "PROVERBS 4:18",
+      "sub": "SHINING EVER BRIGHTER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Father, as this new light touches the earth, touch our hearts and steady our footing.",
+      "img": "short-morningproverbs4v18-scene-04.jpg",
+      "kicker": "PROVERBS 4:18",
+      "sub": "STEADY OUR FOOTING",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Clear away the shadows of doubt that try to make us stumble in the dark.",
+      "img": "short-morningproverbs4v18-scene-05.jpg",
+      "kicker": "PROVERBS 4:18",
+      "sub": "REMOVE THE SHADOWS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Help us to walk forward today with quiet confidence in your steadfast grace.",
+      "img": "short-morningproverbs4v18-scene-06.jpg",
+      "kicker": "PROVERBS 4:18",
+      "sub": "QUIET CONFIDENCE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let your gentle truth lead us step by step into the morning. Amen.",
+      "img": "short-morningproverbs4v18-scene-07.jpg",
+      "kicker": "PROVERBS 4:18",
+      "sub": "GENTLE TRUTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "That heavy fog of confusion rolling into your room right now will not have the final word."
+    ],
+    [
+      12,
+      23,
+      "Listen to the wisdom given to us in Proverbs 4:18."
+    ],
+    [
+      23,
+      38,
+      "The path of the righteous is like the light of dawn, shining ever brighter unto the full day."
+    ],
+    [
+      38,
+      50,
+      "Father, as this new light touches the earth, touch our hearts and steady our footing."
+    ],
+    [
+      50,
+      63,
+      "Clear away the shadows of doubt that try to make us stumble in the dark."
+    ],
+    [
+      63,
+      76,
+      "Help us to walk forward today with quiet confidence in your steadfast grace."
+    ],
+    [
+      76,
+      90,
+      "Let your gentle truth lead us step by step into the morning. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "THAT HEAVY FOG",
+        "OF CONFUSION",
+        "WILL NOT HAVE",
+        "THE FINAL WORD"
+      ],
+      "FINAL",
+      "PROVERBS 4 : 18"
+    ],
+    [
+      12,
+      23,
+      [
+        "LISTEN TO",
+        "THE WISDOM",
+        "GIVEN TO US"
+      ],
+      "WISDOM",
+      "PROVERBS 4 : 18"
+    ],
+    [
+      23,
+      38,
+      [
+        "THE PATH OF",
+        "THE RIGHTEOUS",
+        "SHINING BRIGHTER",
+        "UNTO THE DAY"
+      ],
+      "BRIGHTER",
+      "PROVERBS 4 : 18"
+    ],
+    [
+      38,
+      50,
+      [
+        "FATHER AS THIS",
+        "NEW LIGHT TOUCHES",
+        "STEADY OUR",
+        "FOOTING TODAY"
+      ],
+      "FOOTING",
+      "PROVERBS 4 : 18"
+    ],
+    [
+      50,
+      63,
+      [
+        "CLEAR AWAY THE",
+        "SHADOWS OF DOUBT",
+        "THAT TRY TO MAKE US",
+        "STUMBLE IN THE DARK"
+      ],
+      "SHADOWS",
+      "PROVERBS 4 : 18"
+    ],
+    [
+      63,
+      76,
+      [
+        "HELP US TO WALK",
+        "FORWARD TODAY WITH",
+        "QUIET CONFIDENCE",
+        "IN YOUR GRACE"
+      ],
+      "CONFIDENCE",
+      "PROVERBS 4 : 18"
+    ],
+    [
+      76,
+      90,
+      [
+        "LET YOUR GENTLE",
+        "TRUTH LEAD US",
+        "INTO THE MORNING",
+        "AMEN"
+      ],
+      "TRUTH",
+      "PROVERBS 4 : 18"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That heavy fog of confusion rolling into your room right now will not have the final word.",
+      "kind": "phrase",
+      "words": [
+        "FINAL",
+        "WORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Listen to the wisdom given to us in Proverbs 4:18.",
+      "kind": "phrase",
+      "words": [
+        "PROVERBS",
+        "4:18"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The path of the righteous is like the light of dawn, shining ever brighter unto the full day.",
+      "kind": "phrase",
+      "words": [
+        "SHINING",
+        "BRIGHTER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, as this new light touches the earth, touch our hearts and steady our footing.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "FOOTING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Clear away the shadows of doubt that try to make us stumble in the dark.",
+      "kind": "phrase",
+      "words": [
+        "SHADOWS",
+        "DOUBT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help us to walk forward today with quiet confidence in your steadfast grace.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "CONFIDENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let your gentle truth lead us step by step into the morning. Amen.",
+      "kind": "phrase",
+      "words": [
+        "GENTLE",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 4:18"
+}

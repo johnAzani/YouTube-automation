@@ -1,0 +1,322 @@
+{
+  "key": "short-morningpsalm121v1",
+  "channel": "prayer2",
+  "psalm": 121,
+  "title": [
+    "WHEN WORRY WAKES YOU",
+    "LOOK TO THE HILLS"
+  ],
+  "poster": [
+    "PSALM 121:1-2",
+    "WHERE DOES MY HELP COME FROM?",
+    "MY HELP COMES FROM THE LORD",
+    "THE MORNING ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "misty mountain valley early morning fog sunrise",
+    "golden hour mountain peaks sunrise silhouette",
+    "sun rays beaming over alpine mountain ridge morning",
+    "peaceful morning sun rising over silent pine forest",
+    "warm sunrise light glowing on dramatic mountain peaks",
+    "calm mountain lake reflecting morning sky sunrise",
+    "soft morning sunlight shining through open valley sky"
+  ],
+  "scenes": [
+    {
+      "a": "carrying a heavy decision",
+      "img": "short-morningpsalm121v1-scene-01.jpg",
+      "kicker": "PSALM 121:1-2",
+      "sub": "WHERE DOES YOUR HELP COME FROM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "where does my help come from",
+      "img": "short-morningpsalm121v1-scene-02.jpg",
+      "kicker": "PSALM 121:1",
+      "sub": "I LIFT UP MY EYES TO THE HILLS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Maker of heaven and earth",
+      "img": "short-morningpsalm121v1-scene-03.jpg",
+      "kicker": "PSALM 121:2",
+      "sub": "MY HELP COMES FROM THE LORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "lay down our anxiety",
+      "img": "short-morningpsalm121v1-scene-04.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "SURRENDER YOUR WORRIES TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "hold every detail of this day",
+      "img": "short-morningpsalm121v1-scene-05.jpg",
+      "kicker": "GOD IS FAITHFUL",
+      "sub": "HE HOLDS YOUR ENTIRE DAY",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "anchor us in Your strength",
+      "img": "short-morningpsalm121v1-scene-06.jpg",
+      "kicker": "STEADY STRENGTH",
+      "sub": "YOU DO NOT WALK ALONE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "our help comes from You",
+      "img": "short-morningpsalm121v1-scene-07.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "BEGIN EVERY SUNRISE IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If you woke up carrying a heavy decision that kept you awake, look up."
+    ],
+    [
+      6,
+      13,
+      "I lift up my eyes to the mountains—where does my help come from?"
+    ],
+    [
+      13,
+      20,
+      "My help comes from the Lord, the Maker of heaven and earth."
+    ],
+    [
+      20,
+      27,
+      "Lord, as dawn breaks, we lay down our anxiety and look to You."
+    ],
+    [
+      27,
+      34,
+      "You framed the vast mountains, yet You hold every detail of this day in Your hands."
+    ],
+    [
+      34,
+      41,
+      "We do not walk into this morning alone. Deliver us from fear and anchor us in Your strength."
+    ],
+    [
+      41,
+      48,
+      "Whatever challenges lie ahead today, our help comes from You. Subscribe to The Morning Altar to begin every sunrise in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF YOU WOKE UP CARRYING",
+        "A HEAVY DECISION",
+        "THAT KEPT YOU AWAKE",
+        "LOOK UP"
+      ],
+      [
+        "HEAVY DECISION",
+        "LOOK UP"
+      ],
+      "PSALM 121 : 1-2"
+    ],
+    [
+      6,
+      13,
+      [
+        "I LIFT UP MY EYES",
+        "TO THE MOUNTAINS",
+        "WHERE DOES MY HELP",
+        "COME FROM"
+      ],
+      [
+        "MOUNTAINS",
+        "HELP"
+      ],
+      "PSALM 121 : 1"
+    ],
+    [
+      13,
+      20,
+      [
+        "MY HELP COMES FROM",
+        "THE LORD THE MAKER",
+        "OF HEAVEN AND EARTH"
+      ],
+      [
+        "HELP",
+        "LORD",
+        "MAKER"
+      ],
+      "PSALM 121 : 2"
+    ],
+    [
+      20,
+      27,
+      [
+        "LORD AS DAWN BREAKS",
+        "WE LAY DOWN OUR ANXIETY",
+        "AND LOOK TO YOU"
+      ],
+      [
+        "ANXIETY",
+        "LOOK TO YOU"
+      ],
+      "PSALM 121 : 1-2"
+    ],
+    [
+      27,
+      34,
+      [
+        "YOU FRAMED THE MOUNTAINS",
+        "YET YOU HOLD EVERY DETAIL",
+        "OF THIS DAY IN YOUR HANDS"
+      ],
+      [
+        "HOLD EVERY DETAIL",
+        "HANDS"
+      ],
+      "PSALM 121 : 1-2"
+    ],
+    [
+      34,
+      41,
+      [
+        "WE DO NOT WALK ALONE",
+        "DELIVER US FROM FEAR",
+        "AND ANCHOR US",
+        "IN YOUR STRENGTH"
+      ],
+      [
+        "NOT WALK ALONE",
+        "STRENGTH"
+      ],
+      "PSALM 121 : 1-2"
+    ],
+    [
+      41,
+      48,
+      [
+        "WHATEVER CHALLENGES LIE AHEAD",
+        "OUR HELP COMES FROM YOU",
+        "SUBSCRIBE TO THE MORNING ALTAR",
+        "TO BEGIN EVERY SUNRISE IN PRAYER"
+      ],
+      [
+        "HELP",
+        "SUBSCRIBE"
+      ],
+      "PSALM 121 : 1-2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you woke up carrying a heavy decision that kept you awake, look up.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "DECISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I lift up my eyes to the mountains—where does my help come from?",
+      "kind": "phrase",
+      "words": [
+        "MOUNTAINS",
+        "HELP"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "My help comes from the Lord, the Maker of heaven and earth.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "MAKER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, as dawn breaks, we lay down our anxiety and look to You.",
+      "kind": "phrase",
+      "words": [
+        "ANXIETY",
+        "LOOK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You framed the vast mountains, yet You hold every detail of this day in Your hands.",
+      "kind": "phrase",
+      "words": [
+        "HOLD",
+        "DETAIL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We do not walk into this morning alone. Deliver us from fear and anchor us in Your strength.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "STRENGTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Whatever challenges lie ahead today, our help comes from You. Subscribe to The Morning Altar to begin every sunrise in prayer.",
+      "kind": "phrase",
+      "words": [
+        "HELP",
+        "SUBSCRIBE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 121:1-2"
+}

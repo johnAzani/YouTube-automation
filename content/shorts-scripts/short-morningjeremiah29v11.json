@@ -1,0 +1,271 @@
+{
+  "key": "short-morningjeremiah29v11",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "GOD'S PLAN",
+    "FOR YOUR FUTURE"
+  ],
+  "poster": [
+    "A PRAYER",
+    "FOR THE",
+    "UNCERTAIN HEART",
+    "JEREMIAH 29:11"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "soft golden sunrise over misty forest",
+    "dew drops on morning grass close up",
+    "sunlight streaming through open window",
+    "calm river reflecting sunrise colors",
+    "birds flying over horizon at dawn",
+    "slow motion clouds at golden hour"
+  ],
+  "scenes": [
+    {
+      "a": "The heavy uncertainty weighing on your chest right now is seen by the Creator of light.",
+      "img": "short-morningjeremiah29v11-scene-01.jpg",
+      "kicker": "JEREMIAH 29:11",
+      "sub": "HIS PLANS FOR YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For I know the plans I have for you, declares the Lord, plans for welfare and not for evil, to give you a future and a hope.",
+      "img": "short-morningjeremiah29v11-scene-02.jpg",
+      "kicker": "GOD'S PROMISE",
+      "sub": "A FUTURE AND A HOPE",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, anchor my restless thoughts in the truth that you are already holding my coming days.",
+      "img": "short-morningjeremiah29v11-scene-03.jpg",
+      "kicker": "A MORNING PRAYER",
+      "sub": "TRUSTING HIS TIMING",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "When the path ahead feels shrouded in fog, remind me that you are the author of every step.",
+      "img": "short-morningjeremiah29v11-scene-04.jpg",
+      "kicker": "STEADFAST GRACE",
+      "sub": "LEADING THE WAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Grant me the courage to surrender my need for control and simply walk in your light today.",
+      "img": "short-morningjeremiah29v11-scene-05.jpg",
+      "kicker": "SURRENDER",
+      "sub": "WALKING IN HIS LIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May your peace fill my soul, silencing every doubt, as I trust in your unfailing goodness now.",
+      "img": "short-morningjeremiah29v11-scene-06.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "RESTING IN HIS PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "The heavy uncertainty weighing on your chest right now is seen by the Creator of light."
+    ],
+    [
+      16,
+      35,
+      "For I know the plans I have for you, declares the Lord, plans for welfare and not for evil, to give you a future and a hope."
+    ],
+    [
+      36,
+      52,
+      "Lord, anchor my restless thoughts in the truth that you are already holding my coming days."
+    ],
+    [
+      53,
+      70,
+      "When the path ahead feels shrouded in fog, remind me that you are the author of every step."
+    ],
+    [
+      71,
+      88,
+      "Grant me the courage to surrender my need for control and simply walk in your light today."
+    ],
+    [
+      89,
+      105,
+      "May your peace fill my soul, silencing every doubt, as I trust in your unfailing goodness now."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "HEAVY UNCERTAINTY",
+        "WEIGHT",
+        "IS SEEN",
+        "BY GOD"
+      ],
+      [
+        "HEAVY UNCERTAINTY"
+      ],
+      "JEREMIAH 29:11"
+    ],
+    [
+      16,
+      35,
+      [
+        "PLANS FOR WELFARE",
+        "NOT FOR EVIL",
+        "FUTURE",
+        "AND HOPE"
+      ],
+      [
+        "FUTURE",
+        "HOPE"
+      ],
+      "JEREMIAH 29:11"
+    ],
+    [
+      36,
+      52,
+      [
+        "ANCHOR MY THOUGHTS",
+        "IN YOUR",
+        "STEADY TRUTH"
+      ],
+      [
+        "STEADY TRUTH"
+      ],
+      "JEREMIAH 29:11"
+    ],
+    [
+      53,
+      70,
+      [
+        "PATH AHEAD",
+        "SHROUDED IN FOG",
+        "YOU ARE",
+        "THE AUTHOR"
+      ],
+      [
+        "AUTHOR"
+      ],
+      "JEREMIAH 29:11"
+    ],
+    [
+      71,
+      88,
+      [
+        "SURRENDER CONTROL",
+        "WALK IN",
+        "YOUR LIGHT"
+      ],
+      [
+        "SURRENDER"
+      ],
+      "JEREMIAH 29:11"
+    ],
+    [
+      89,
+      105,
+      [
+        "PEACE FILL MY SOUL",
+        "TRUSTING IN",
+        "YOUR GOODNESS"
+      ],
+      [
+        "GOODNESS"
+      ],
+      "JEREMIAH 29:11"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The heavy uncertainty weighing on your chest right now is seen by the Creator of light.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "UNCERTAINTY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For I know the plans I have for you, declares the Lord, plans for welfare and not for evil, to give you a future and a hope.",
+      "kind": "phrase",
+      "words": [
+        "FUTURE",
+        "HOPE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, anchor my restless thoughts in the truth that you are already holding my coming days.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When the path ahead feels shrouded in fog, remind me that you are the author of every step.",
+      "kind": "phrase",
+      "words": [
+        "AUTHOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant me the courage to surrender my need for control and simply walk in your light today.",
+      "kind": "phrase",
+      "words": [
+        "SURRENDER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your peace fill my soul, silencing every doubt, as I trust in your unfailing goodness now.",
+      "kind": "phrase",
+      "words": [
+        "GOODNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Jeremiah 29:11"
+}

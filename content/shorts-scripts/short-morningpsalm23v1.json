@@ -1,0 +1,349 @@
+{
+  "key": "short-morningpsalm23v1",
+  "channel": "prayer2",
+  "psalm": 23,
+  "title": [
+    "THE LORD IS",
+    "MY SHEPHERD"
+  ],
+  "poster": [
+    "THE LORD IS MY SHEPHERD",
+    "PSALM 23:1",
+    "MORNING PRAYER",
+    "THE MORNING ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "calm mist over morning meadow golden dawn light",
+    "sunlight breaking through mountain pines early morning",
+    "peaceful misty valley sunrise golden glow sky",
+    "soft morning sun beam shining through quiet trees",
+    "gentle golden sunrise illumination over calm river",
+    "quiet morning sun rays glowing through forest mist",
+    "peaceful golden dawn horizon wide landscape quiet",
+    "serene sunrise over calm hills golden light dawn"
+  ],
+  "scenes": [
+    {
+      "a": "If you woke up anxious about having enough strength for today, take heart.",
+      "img": "short-morningpsalm23v1-scene-01.jpg",
+      "kicker": "PSALM 23:1",
+      "sub": "FIND PEACE IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Psalm 23 verse 1 declares, The Lord is my shepherd; I shall not want.",
+      "img": "short-morningpsalm23v1-scene-02.jpg",
+      "kicker": "PSALM 23:1",
+      "sub": "THE LORD IS MY SHEPHERD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "You do not have to carry tomorrow's burdens or strive in your own power this morning.",
+      "img": "short-morningpsalm23v1-scene-03.jpg",
+      "kicker": "PSALM 23:1",
+      "sub": "RELEASE YOUR HEAVY BURDENS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "The Heavenly Father knows your every need before you even speak it.",
+      "img": "short-morningpsalm23v1-scene-04.jpg",
+      "kicker": "PSALM 23:1",
+      "sub": "HE KNOWS YOUR EVERY NEED",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He walks beside you into this day, ordering your steps and providing what you need.",
+      "img": "short-morningpsalm23v1-scene-05.jpg",
+      "kicker": "PSALM 23:1",
+      "sub": "HE GUIDES YOUR PATH TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.6,
+        0.45
+      ]
+    },
+    {
+      "a": "Rest your anxious mind in His loving care right now.",
+      "img": "short-morningpsalm23v1-scene-06.jpg",
+      "kicker": "PSALM 23:1",
+      "sub": "REST IN HIS LOVING CARE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He is faithful to sustain you through every single hour.",
+      "img": "short-morningpsalm23v1-scene-07.jpg",
+      "kicker": "PSALM 23:1",
+      "sub": "FAITHFUL IN EVERY HOUR",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.35
+      ]
+    },
+    {
+      "a": "Subscribe to The Morning Altar to begin every sunrise in prayer.",
+      "img": "short-morningpsalm23v1-scene-08.jpg",
+      "kicker": "PSALM 23:1",
+      "sub": "BEGIN EVERY DAY IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If you woke up anxious about having enough strength for today, take heart."
+    ],
+    [
+      7,
+      15,
+      "Psalm 23 verse 1 declares, The Lord is my shepherd; I shall not want."
+    ],
+    [
+      15,
+      24,
+      "You do not have to carry tomorrow's burdens or strive in your own power this morning."
+    ],
+    [
+      24,
+      33,
+      "The Heavenly Father knows your every need before you even speak it."
+    ],
+    [
+      33,
+      43,
+      "He walks beside you into this day, ordering your steps and providing what you need."
+    ],
+    [
+      43,
+      51,
+      "Rest your anxious mind in His loving care right now."
+    ],
+    [
+      51,
+      59,
+      "He is faithful to sustain you through every single hour."
+    ],
+    [
+      59,
+      67,
+      "Subscribe to The Morning Altar to begin every sunrise in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF YOU WOKE UP ANXIOUS",
+        "ABOUT HAVING ENOUGH STRENGTH",
+        "TAKE HEART TODAY"
+      ],
+      [
+        "STRENGTH"
+      ],
+      "PSALM 23 : 1"
+    ],
+    [
+      7,
+      15,
+      [
+        "PSALM 23 VERSE 1 DECLARES",
+        "THE LORD IS MY SHEPHERD",
+        "I SHALL NOT WANT"
+      ],
+      [
+        "SHEPHERD"
+      ],
+      "PSALM 23 : 1"
+    ],
+    [
+      15,
+      24,
+      [
+        "YOU DO NOT HAVE TO CARRY",
+        "TOMORROWS BURDENS OR STRIVE",
+        "IN YOUR OWN POWER"
+      ],
+      [
+        "POWER"
+      ],
+      "PSALM 23 : 1"
+    ],
+    [
+      24,
+      33,
+      [
+        "THE HEAVENLY FATHER KNOWS",
+        "YOUR EVERY NEED BEFORE",
+        "YOU EVEN SPEAK IT"
+      ],
+      [
+        "EVERY NEED"
+      ],
+      "PSALM 23 : 1"
+    ],
+    [
+      33,
+      43,
+      [
+        "HE WALKS BESIDE YOU",
+        "ORDERING YOUR STEPS",
+        "AND PROVIDING ALL YOU NEED"
+      ],
+      [
+        "WALKS BESIDE"
+      ],
+      "PSALM 23 : 1"
+    ],
+    [
+      43,
+      51,
+      [
+        "REST YOUR ANXIOUS MIND",
+        "IN HIS LOVING CARE",
+        "RIGHT NOW TODAY"
+      ],
+      [
+        "LOVING CARE"
+      ],
+      "PSALM 23 : 1"
+    ],
+    [
+      51,
+      59,
+      [
+        "HE IS FAITHFUL TO SUSTAIN YOU",
+        "THROUGH EVERY SINGLE HOUR"
+      ],
+      [
+        "FAITHFUL"
+      ],
+      "PSALM 23 : 1"
+    ],
+    [
+      59,
+      67,
+      [
+        "SUBSCRIBE TO THE MORNING ALTAR",
+        "TO BEGIN EVERY SUNRISE",
+        "IN PRAYER TODAY"
+      ],
+      [
+        "MORNING ALTAR"
+      ],
+      "PSALM 23 : 1"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you woke up anxious about having enough strength for today, take heart.",
+      "kind": "phrase",
+      "words": [
+        "ENOUGH",
+        "STRENGTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Psalm 23 verse 1 declares, The Lord is my shepherd; I shall not want.",
+      "kind": "phrase",
+      "words": [
+        "MY",
+        "SHEPHERD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "You do not have to carry tomorrow's burdens or strive in your own power this morning.",
+      "kind": "phrase",
+      "words": [
+        "OWN",
+        "POWER"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "The Heavenly Father knows your every need before you even speak it.",
+      "kind": "phrase",
+      "words": [
+        "EVERY",
+        "NEED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He walks beside you into this day, ordering your steps and providing what you need.",
+      "kind": "phrase",
+      "words": [
+        "WALKS",
+        "BESIDE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Rest your anxious mind in His loving care right now.",
+      "kind": "phrase",
+      "words": [
+        "LOVING",
+        "CARE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "He is faithful to sustain you through every single hour.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFUL",
+        "TO"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Morning Altar to begin every sunrise in prayer.",
+      "kind": "phrase",
+      "words": [
+        "EVERY",
+        "SUNRISE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 23:1"
+}

@@ -1,0 +1,358 @@
+{
+  "key": "short-morningpsalm51v10",
+  "channel": "prayer2",
+  "psalm": 51,
+  "title": [
+    "CREATE IN ME",
+    "A CLEAN HEART"
+  ],
+  "poster": [
+    "PSALM 51:10",
+    "A MORNING PRAYER",
+    "FOR A CLEAN HEART",
+    "THE MORNING ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "dawn mist mountain valley sunrise light calm",
+    "golden morning light breaking over quiet lake",
+    "sun rays shining through morning forest mist",
+    "soft pink sunrise over still ocean horizon",
+    "morning sun rising over misty pine trees",
+    "golden hour light across empty green meadow",
+    "calm ocean morning glow sunrise sky landscape",
+    "bright morning sunlight streaming landscape"
+  ],
+  "scenes": [
+    {
+      "a": "You carry the weight of yesterday's regrets into this quiet first light.",
+      "img": "short-morningpsalm51v10-scene-01.jpg",
+      "kicker": "PSALM 51:10",
+      "sub": "A CLEAN HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "God's word says in Psalm 51:10, 'Create in me a clean heart, O God, and renew a right spirit within me.'",
+      "img": "short-morningpsalm51v10-scene-02.jpg",
+      "kicker": "PSALM 51:10",
+      "sub": "RENEW A RIGHT SPIRIT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, take away the mistakes of yesterday and make me clean again.",
+      "img": "short-morningpsalm51v10-scene-03.jpg",
+      "kicker": "PSALM 51:10",
+      "sub": "WASH ME CLEAN",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Wipe away every lingering stain of bitterness, self-doubt, and secret guilt.",
+      "img": "short-morningpsalm51v10-scene-04.jpg",
+      "kicker": "PSALM 51:10",
+      "sub": "FREEDOM FROM GUILT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Give me a fresh start today, grounding my spirit in your unwavering truth.",
+      "img": "short-morningpsalm51v10-scene-05.jpg",
+      "kicker": "PSALM 51:10",
+      "sub": "A NEW BEGINNING",
+      "cam": "push_in",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Help me walk through this new day with purity, patience, and purpose.",
+      "img": "short-morningpsalm51v10-scene-06.jpg",
+      "kicker": "PSALM 51:10",
+      "sub": "WALK WITH PURPOSE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Restore my joy, renew my steady faith, and guide my every step.",
+      "img": "short-morningpsalm51v10-scene-07.jpg",
+      "kicker": "PSALM 51:10",
+      "sub": "RESTORE MY JOY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Subscribe to The Morning Altar to begin every sunrise in prayer.",
+      "img": "short-morningpsalm51v10-scene-08.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "BEGIN IN PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "You carry the weight of yesterday's regrets into this quiet first light."
+    ],
+    [
+      6,
+      15,
+      "God's word says in Psalm 51:10, 'Create in me a clean heart, O God, and renew a right spirit within me.'"
+    ],
+    [
+      15,
+      22,
+      "Lord, take away the mistakes of yesterday and make me clean again."
+    ],
+    [
+      22,
+      29,
+      "Wipe away every lingering stain of bitterness, self-doubt, and secret guilt."
+    ],
+    [
+      29,
+      37,
+      "Give me a fresh start today, grounding my spirit in your unwavering truth."
+    ],
+    [
+      37,
+      44,
+      "Help me walk through this new day with purity, patience, and purpose."
+    ],
+    [
+      44,
+      51,
+      "Restore my joy, renew my steady faith, and guide my every step."
+    ],
+    [
+      51,
+      57,
+      "Subscribe to The Morning Altar to begin every sunrise in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "YOU CARRY THE WEIGHT",
+        "OF YESTERDAYS REGRETS",
+        "INTO THIS QUIET LIGHT"
+      ],
+      [
+        "WEIGHT",
+        "REGRETS"
+      ],
+      "PSALM 51 : 10"
+    ],
+    [
+      6,
+      15,
+      [
+        "GODS WORD SAYS IN PSALM 51:10",
+        "CREATE IN ME A CLEAN HEART",
+        "AND RENEW A RIGHT SPIRIT"
+      ],
+      [
+        "CLEAN HEART",
+        "RIGHT SPIRIT"
+      ],
+      "PSALM 51 : 10"
+    ],
+    [
+      15,
+      22,
+      [
+        "LORD TAKE AWAY MISTAKES",
+        "OF YESTERDAY AND MAKE ME",
+        "CLEAN AGAIN TODAY"
+      ],
+      [
+        "TAKE AWAY",
+        "CLEAN AGAIN"
+      ],
+      "PSALM 51 : 10"
+    ],
+    [
+      22,
+      29,
+      [
+        "WIPE AWAY EVERY STAIN",
+        "OF BITTERNESS AND SELF DOUBT",
+        "AND SECRET GUILT"
+      ],
+      [
+        "WIPE AWAY",
+        "SECRET GUILT"
+      ],
+      "PSALM 51 : 10"
+    ],
+    [
+      29,
+      37,
+      [
+        "GIVE ME A FRESH START",
+        "GROUNDING MY SPIRIT IN YOUR",
+        "UNWAVERING TRUTH"
+      ],
+      [
+        "FRESH START",
+        "UNWAVERING TRUTH"
+      ],
+      "PSALM 51 : 10"
+    ],
+    [
+      37,
+      44,
+      [
+        "HELP ME WALK THIS DAY",
+        "WITH PURITY AND PATIENCE",
+        "AND CLEAR PURPOSE"
+      ],
+      [
+        "PURITY",
+        "PURPOSE"
+      ],
+      "PSALM 51 : 10"
+    ],
+    [
+      44,
+      51,
+      [
+        "RESTORE MY JOY RENEW",
+        "MY STEADY FAITH AND GUIDE",
+        "MY EVERY STEP"
+      ],
+      [
+        "RESTORE MY JOY",
+        "STEADY FAITH"
+      ],
+      "PSALM 51 : 10"
+    ],
+    [
+      51,
+      57,
+      [
+        "SUBSCRIBE TO THE MORNING ALTAR",
+        "TO BEGIN EVERY SUNRISE",
+        "IN QUIET PRAYER"
+      ],
+      [
+        "SUBSCRIBE",
+        "IN QUIET PRAYER"
+      ],
+      "PSALM 51 : 10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You carry the weight of yesterday's regrets into this quiet first light.",
+      "kind": "phrase",
+      "words": [
+        "WEIGHT",
+        "REGRETS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "God's word says in Psalm 51:10, 'Create in me a clean heart, O God, and renew a right spirit within me.'",
+      "kind": "phrase",
+      "words": [
+        "CLEAN",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, take away the mistakes of yesterday and make me clean again.",
+      "kind": "phrase",
+      "words": [
+        "CLEAN",
+        "AGAIN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Wipe away every lingering stain of bitterness, self-doubt, and secret guilt.",
+      "kind": "phrase",
+      "words": [
+        "WIPE",
+        "AWAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Give me a fresh start today, grounding my spirit in your unwavering truth.",
+      "kind": "phrase",
+      "words": [
+        "FRESH",
+        "START"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help me walk through this new day with purity, patience, and purpose.",
+      "kind": "phrase",
+      "words": [
+        "PURITY",
+        "PURPOSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Restore my joy, renew my steady faith, and guide my every step.",
+      "kind": "phrase",
+      "words": [
+        "RESTORE",
+        "JOY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Morning Altar to begin every sunrise in prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUNRISE",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 51:10"
+}

@@ -1,0 +1,277 @@
+{
+  "key": "short-morningisaiah43v18",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "A NEW THING",
+    "ISAIAH 43:18-19"
+  ],
+  "poster": [
+    "THE MORNING ALTAR",
+    "BEHOLD I DO A NEW THING",
+    "ISAIAH 43:18-19",
+    "SUNRISE PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "dark quiet kitchen dawn light window",
+    "golden sunrise over foggy misty morning valley",
+    "desert sunrise golden morning light sand dunes",
+    "sunbeams breaking through forest trees morning mist",
+    "calm mountain lake sun rising warm light",
+    "open window golden morning sunlight peaceful room"
+  ],
+  "scenes": [
+    {
+      "a": "in the silent shadows of your kitchen",
+      "img": "short-morningisaiah43v18-scene-01.jpg",
+      "kicker": "ISAIAH 43:18",
+      "sub": "LISTEN CLOSELY THIS MORNING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Behold, I am doing a new thing",
+      "img": "short-morningisaiah43v18-scene-02.jpg",
+      "kicker": "ISAIAH 43:18-19",
+      "sub": "REMEMBER NOT THE FORMER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "rivers in the desert",
+      "img": "short-morningisaiah43v18-scene-03.jpg",
+      "kicker": "ISAIAH 43:19",
+      "sub": "A WAY IN THE WILDERNESS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "we surrender the regrets",
+      "img": "short-morningisaiah43v18-scene-04.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "LAY DOWN YESTERDAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "see the fresh path",
+      "img": "short-morningisaiah43v18-scene-05.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "GOD IS MAKING A WAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "faith for this new beginning",
+      "img": "short-morningisaiah43v18-scene-06.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "BEGIN IN PRAYER",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If you are replaying yesterday's mistake in the silent shadows of your kitchen, listen closely."
+    ],
+    [
+      9,
+      19,
+      "Remember not the former things, nor consider the things of old. Behold, I am doing a new thing; now it springs forth, do you not perceive it?"
+    ],
+    [
+      20,
+      27,
+      "I will make a way in the wilderness and rivers in the desert."
+    ],
+    [
+      28,
+      35,
+      "Lord, as dawn breaks, we surrender the regrets and burdens of yesterday."
+    ],
+    [
+      36,
+      45,
+      "Clear away the dust of what used to be so we can see the fresh path You are carving out for us today."
+    ],
+    [
+      46,
+      55,
+      "Fill our hearts with faith for this new beginning. Subscribe to The Morning Altar to begin every sunrise in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF YOU ARE REPLAYING",
+        "YESTERDAYS MISTAKE",
+        "LISTEN CLOSELY"
+      ],
+      [
+        "REPLAYING",
+        "MISTAKE"
+      ],
+      "ISAIAH 43:18"
+    ],
+    [
+      9,
+      19,
+      [
+        "REMEMBER NOT FORMER THINGS",
+        "BEHOLD I DO A NEW THING",
+        "DO YOU NOT PERCEIVE IT"
+      ],
+      [
+        "NEW",
+        "THING"
+      ],
+      "ISAIAH 43:18-19"
+    ],
+    [
+      20,
+      27,
+      [
+        "I WILL MAKE A WAY",
+        "IN THE WILDERNESS",
+        "RIVERS IN THE DESERT"
+      ],
+      [
+        "MAKE",
+        "A",
+        "WAY"
+      ],
+      "ISAIAH 43:19"
+    ],
+    [
+      28,
+      35,
+      [
+        "LORD AS DAWN BREAKS",
+        "WE SURRENDER REGRETS",
+        "AND BURDENS OF YESTERDAY"
+      ],
+      [
+        "SURRENDER",
+        "REGRETS"
+      ],
+      "MORNING PRAYER"
+    ],
+    [
+      36,
+      45,
+      [
+        "CLEAR AWAY THE DUST",
+        "SEE THE FRESH PATH",
+        "CARVED OUT TODAY"
+      ],
+      [
+        "FRESH",
+        "PATH"
+      ],
+      "MORNING PRAYER"
+    ],
+    [
+      46,
+      55,
+      [
+        "FILL OUR HEARTS WITH FAITH",
+        "FOR THIS NEW BEGINNING",
+        "SUBSCRIBE TO THE MORNING ALTAR"
+      ],
+      [
+        "NEW",
+        "BEGINNING"
+      ],
+      "THE MORNING ALTAR"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "in the silent shadows of your kitchen",
+      "kind": "phrase",
+      "words": [
+        "REPLAYING",
+        "MISTAKE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Behold, I am doing a new thing",
+      "kind": "phrase",
+      "words": [
+        "NEW",
+        "THING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "rivers in the desert",
+      "kind": "phrase",
+      "words": [
+        "RIVERS",
+        "DESERT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "we surrender the regrets",
+      "kind": "phrase",
+      "words": [
+        "SURRENDER",
+        "REGRETS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "see the fresh path",
+      "kind": "phrase",
+      "words": [
+        "FRESH",
+        "PATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "faith for this new beginning",
+      "kind": "phrase",
+      "words": [
+        "NEW",
+        "BEGINNING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 43:18-19"
+}
