@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T04:29:54Z",
+  "generated_at": "2026-11-14T04:35:25Z",
   "monitor_generated_at": "2026-11-14T04:28:31.812475+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 188,
+    "published_total": 189,
     "published_longform": 96,
-    "published_shorts": 92,
-    "public_total": 186,
+    "published_shorts": 93,
+    "public_total": 187,
     "queued_longform": 42,
-    "queued_shorts": 47,
+    "queued_shorts": 46,
     "automations_ok": 9,
     "automations_total": 10,
     "network_healthy": false
@@ -305,23 +305,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 13,
+        "published_total": 14,
         "published_longform": 8,
-        "published_shorts": 5,
-        "thumbnail_pending": 13,
-        "public_total": 13,
+        "published_shorts": 6,
+        "thumbnail_pending": 14,
+        "public_total": 14,
         "queued_longform": 3,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 5
       },
       "latest_video": {
-        "id": "0307",
-        "title": "Deuteronomy 6:6-7 Household & Family Prayer | The Family Altar",
-        "format": "longform",
-        "youtube_video_id": "mOoOZPsiobQ",
-        "watch_url": "https://youtu.be/mOoOZPsiobQ",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T21:10:37Z"
+        "id": "SHORT-FAMILYPROVERBS24V3",
+        "title": "Pray This Proverbs 24:3-4 Family Prayer Over Your Home | Is Built #Shorts",
+        "format": "short",
+        "youtube_video_id": "MdtnsrsJt_0",
+        "watch_url": "https://www.youtube.com/shorts/MdtnsrsJt_0",
+        "published_on": "2026-11-14",
+        "published_at": "2026-11-14T04:34:28Z"
       },
       "next_queued_longform": {
         "id": "0308",
@@ -330,8 +330,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familyproverbs24v3",
-        "scripture": "Proverbs 24:3-4",
+        "short": "short-familynumbers6v24",
+        "scripture": "Numbers 6:24-26",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILYPROVERBS24V3",
+      "slug": "short-familyproverbs24v3-household-prayer",
+      "file": "short-familyproverbs24v3-household-prayer.md",
+      "title": "Pray This Proverbs 24:3-4 Family Prayer Over Your Home | Is Built #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T04:34:28Z",
+      "youtube_video_id": "MdtnsrsJt_0",
+      "watch_url": "https://www.youtube.com/shorts/MdtnsrsJt_0",
+      "youtu_be_url": "https://youtu.be/MdtnsrsJt_0",
+      "shorts_url": "https://www.youtube.com/shorts/MdtnsrsJt_0",
+      "studio_url": "https://studio.youtube.com/video/MdtnsrsJt_0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/MdtnsrsJt_0/hqdefault.jpg",
+      "thumb_text": "BY \u00b7 WISDOM",
+      "thumbnail_pending": true,
+      "duration_label": "48s",
+      "words": 576
+    },
     {
       "id": "0703",
       "slug": "philippians-4-6-7-daily-prayer",
@@ -5929,17 +5953,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-familyproverbs24v3",
-        "file": "0305-short-familyproverbs24v3.yml",
-        "companion_longform_id": "0305",
-        "scripture": "Proverbs 24:3-4",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
       },
       {
         "short": "short-familynumbers6v24",
