@@ -3,13 +3,13 @@
   "channel": "prayer5",
   "psalm": null,
   "title": [
-    "A HEDGE OF PROTECTION",
-    "FOR YOUR HOUSEHOLD"
+    "A HEDGE",
+    "AROUND YOU"
   ],
   "poster": [
-    "GOD'S PROTECTION",
-    "OVER YOUR HOME",
-    "JOB 1:10 PRAYER",
+    "A HEDGE AROUND",
+    "YOUR ENTIRE HOME",
+    "PRAYER FOR PROTECTION",
     "THE FAMILY ALTAR"
   ],
   "end": [
@@ -17,31 +17,30 @@
     "The Family Altar — cover your home in prayer"
   ],
   "stock_queries": [
-    "warm candle lit living room open bible on table peaceful home interior",
-    "cozy home night window warm lamp illumination peaceful atmosphere",
-    "open bible on wooden table with warm soft lamp light olive branch",
-    "peaceful warm countryside house illuminated at dusk serene scenery",
-    "warm fireplace glow inside comfortable home living room peaceful background",
-    "sunbeams shining through wooden window living room calm morning house",
-    "calm twilight over beautiful home garden serene warm lights"
+    "warm light on wooden dining table with open bible",
+    "soft focus olive branch in sunlight",
+    "peaceful countryside home exterior at sunset",
+    "candlelight flickering on dark surface",
+    "open old leather bible on rustic table",
+    "tranquil interior home scene blurred background"
   ],
   "scenes": [
     {
-      "a": "Gather your home and loved ones",
+      "a": "If the heavy weight of protecting your family feels entirely on your shoulders right now,",
       "img": "short-familyjob1v10-scene-01.jpg",
       "kicker": "JOB 1:10",
-      "sub": "PROTECT YOUR HOUSEHOLD",
+      "sub": "GOD'S HEDGE OF PROTECTION",
       "cam": "push_in",
       "focus": [
         0.5,
-        0.45
+        0.5
       ]
     },
     {
-      "a": "Let us pray for heavenly protection",
+      "a": "we bring these concerns to the Lord.",
       "img": "short-familyjob1v10-scene-02.jpg",
       "kicker": "JOB 1:10",
-      "sub": "COVER YOUR FAMILY",
+      "sub": "BRING YOUR WORRY TO GOD",
       "cam": "pull_out",
       "focus": [
         0.5,
@@ -49,43 +48,10 @@
       ]
     },
     {
-      "a": "Have You not made a hedge around him",
+      "a": "Hear the words of Scripture:",
       "img": "short-familyjob1v10-scene-03.jpg",
       "kicker": "JOB 1:10",
-      "sub": "GOD'S DIVINE HEDGE",
-      "cam": "tilt_up",
-      "focus": [
-        0.5,
-        0.4
-      ]
-    },
-    {
-      "a": "Heavenly Father, place Your divine hedge",
-      "img": "short-familyjob1v10-scene-04.jpg",
-      "kicker": "JOB 1:10",
-      "sub": "PRAYER OF PROTECTION",
-      "cam": "pan_right",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "Guard our doors from harm",
-      "img": "short-familyjob1v10-scene-05.jpg",
-      "kicker": "JOB 1:10",
-      "sub": "PEACE IN YOUR HOME",
-      "cam": "push_in",
-      "focus": [
-        0.5,
-        0.45
-      ]
-    },
-    {
-      "a": "Bless the work of our hands",
-      "img": "short-familyjob1v10-scene-06.jpg",
-      "kicker": "JOB 1:10",
-      "sub": "GOD'S PRESENCE DWELLS",
+      "sub": "THE UNCHANGING WORD",
       "cam": "pan_left",
       "focus": [
         0.5,
@@ -93,11 +59,33 @@
       ]
     },
     {
-      "a": "Subscribe to join us daily",
-      "img": "short-familyjob1v10-scene-07.jpg",
+      "a": "Hast not thou made an hedge about him, and about his house, and about all that he hath on every side? thou hast blessed the work of his hands, and his substance is increased in the land.",
+      "img": "short-familyjob1v10-scene-04.jpg",
       "kicker": "JOB 1:10",
-      "sub": "THE FAMILY ALTAR",
-      "cam": "pull_out",
+      "sub": "HIS PROMISE IS FAITHFUL",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, we claim this truth over our household, trusting your grace to watch us,",
+      "img": "short-familyjob1v10-scene-05.jpg",
+      "kicker": "JOB 1:10",
+      "sub": "PRAYING FOR OUR HOME",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "knowing you remain our ultimate refuge and keeper as we rest in your peace today.",
+      "img": "short-familyjob1v10-scene-06.jpg",
+      "kicker": "JOB 1:10",
+      "sub": "RESTING IN HIS CARE",
+      "cam": "push_in",
       "focus": [
         0.5,
         0.5
@@ -108,37 +96,32 @@
     [
       0,
       8,
-      "Gather your home and loved ones in faith tonight as we stand together under God's holy presence."
+      "If the heavy weight of protecting your family feels entirely on your shoulders right now,"
     ],
     [
-      8,
-      17,
-      "Let us pray for heavenly protection over every room, every heart, and every step your family takes."
+      9,
+      15,
+      "we bring these concerns to the Lord."
     ],
     [
-      17,
-      28,
-      "The Lord's Word reminds us in Job 1:10: \"Have You not made a hedge around him, around his household, and around all that he has on every side?\""
+      16,
+      20,
+      "Hear the words of Scripture:"
     ],
     [
-      28,
-      36,
-      "Heavenly Father, place Your divine hedge of protection around this home today."
+      21,
+      55,
+      "Hast not thou made an hedge about him, and about his house, and about all that he hath on every side? thou hast blessed the work of his hands, and his substance is increased in the land."
     ],
     [
-      36,
-      45,
-      "Guard our doors from harm, preserve our peace from anxiety, and cover our family with Your enduring grace."
+      56,
+      75,
+      "Heavenly Father, we claim this truth over our household, trusting your grace to watch us,"
     ],
     [
-      45,
-      54,
-      "Bless the work of our hands and let Your presence dwell within these walls forever."
-    ],
-    [
-      54,
-      60,
-      "Subscribe to join us daily at The Family Altar."
+      76,
+      95,
+      "knowing you remain our ultimate refuge and keeper as we rest in your peace today."
     ]
   ],
   "kinetic_phrases": [
@@ -146,169 +129,138 @@
       0,
       8,
       [
-        "GATHER YOUR HOME AND LOVED ONES",
-        "IN FAITH TONIGHT AS WE STAND",
-        "UNDER GOD'S HOLY PRESENCE"
+        "HEAVY WEIGHT",
+        "OF PROTECTING",
+        "YOUR FAMILY"
       ],
       [
-        "HOLY",
-        "PRESENCE"
-      ],
-      "JOB 1:10"
-    ],
-    [
-      8,
-      17,
-      [
-        "LET US PRAY FOR HEAVENLY",
-        "PROTECTION OVER EVERY ROOM",
-        "EVERY HEART AND EVERY STEP",
-        "YOUR FAMILY TAKES"
-      ],
-      [
-        "HEAVENLY",
-        "PROTECTION"
+        "PROTECTING"
       ],
       "JOB 1:10"
     ],
     [
-      17,
-      28,
+      9,
+      15,
       [
-        "HAVE YOU NOT MADE A HEDGE",
-        "AROUND HIM AND HIS HOUSEHOLD",
-        "AND ALL HE HAS ON EVERY SIDE"
+        "WE BRING",
+        "THESE CONCERNS",
+        "TO THE LORD"
       ],
       [
-        "HEDGE",
-        "HOUSEHOLD"
-      ],
-      "JOB 1:10"
-    ],
-    [
-      28,
-      36,
-      [
-        "HEAVENLY FATHER PLACE YOUR",
-        "DIVINE HEDGE OF PROTECTION",
-        "AROUND THIS HOME TODAY"
-      ],
-      [
-        "DIVINE HEDGE",
-        "HOME"
+        "CONCERNS"
       ],
       "JOB 1:10"
     ],
     [
-      36,
-      45,
+      16,
+      20,
       [
-        "GUARD OUR DOORS FROM HARM",
-        "PRESERVE OUR PEACE FROM ANXIETY",
-        "COVER OUR FAMILY WITH GRACE"
+        "HEAR THE WORDS",
+        "OF SCRIPTURE"
       ],
       [
-        "GUARD",
-        "PEACE",
-        "GRACE"
+        "SCRIPTURE"
       ],
       "JOB 1:10"
     ],
     [
-      45,
-      54,
+      21,
+      55,
       [
-        "BLESS THE WORK OF OUR HANDS",
-        "AND LET YOUR PRESENCE DWELL",
-        "WITHIN THESE WALLS FOREVER"
+        "AN HEDGE ABOUT",
+        "HIM AND HIS HOUSE",
+        "BLESSED THE WORK",
+        "OF HIS HANDS"
       ],
       [
-        "BLESS",
-        "PRESENCE"
+        "HEDGE"
       ],
       "JOB 1:10"
     ],
     [
-      54,
-      60,
+      56,
+      75,
       [
-        "SUBSCRIBE TO JOIN US DAILY",
-        "AT THE FAMILY ALTAR"
+        "FATHER WE CLAIM",
+        "THIS TRUTH OVER",
+        "OUR HOUSEHOLD"
       ],
       [
-        "SUBSCRIBE",
-        "FAMILY ALTAR"
+        "CLAIM"
+      ],
+      "JOB 1:10"
+    ],
+    [
+      76,
+      95,
+      [
+        "YOU REMAIN",
+        "OUR REFUGE",
+        "AS WE REST"
+      ],
+      [
+        "REFUGE"
       ],
       "JOB 1:10"
     ]
   ],
   "beats": [
     {
-      "a": "Gather your home and loved ones",
+      "a": "If the heavy weight of protecting your family feels entirely on your shoulders right now,",
       "kind": "phrase",
       "words": [
-        "HOLY",
-        "PRESENCE"
+        "HEAVY",
+        "WEIGHT"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Let us pray for heavenly protection",
+      "a": "we bring these concerns to the Lord.",
       "kind": "phrase",
       "words": [
-        "HEAVENLY",
-        "PROTECTION"
+        "BRING",
+        "CONCERNS"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Have You not made a hedge around him",
+      "a": "Hear the words of Scripture:",
+      "kind": "phrase",
+      "words": [
+        "HEAR",
+        "SCRIPTURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hast not thou made an hedge about him, and about his house, and about all that he hath on every side? thou hast blessed the work of his hands, and his substance is increased in the land.",
       "kind": "phrase",
       "words": [
         "HEDGE",
-        "HOUSEHOLD"
+        "BLESSED"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Heavenly Father, place Your divine hedge",
+      "a": "Heavenly Father, we claim this truth over our household, trusting your grace to watch us,",
       "kind": "phrase",
       "words": [
-        "DIVINE HEDGE",
-        "HOME"
+        "CLAIM",
+        "TRUSTING"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Guard our doors from harm",
+      "a": "knowing you remain our ultimate refuge and keeper as we rest in your peace today.",
       "kind": "phrase",
       "words": [
-        "GUARD",
-        "PEACE"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Bless the work of our hands",
-      "kind": "phrase",
-      "words": [
-        "BLESS",
-        "PRESENCE"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Subscribe to join us daily",
-      "kind": "phrase",
-      "words": [
-        "SUBSCRIBE",
-        "FAMILY ALTAR"
+        "REFUGE",
+        "REST"
       ],
       "hi": 0,
       "slot": "C"

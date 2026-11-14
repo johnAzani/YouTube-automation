@@ -1,0 +1,280 @@
+{
+  "key": "short-familyproverbs22v6",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "FAITH FOR THE",
+    "NEXT GENERATION"
+  ],
+  "poster": [
+    "TRAIN UP A CHILD",
+    "TRUSTING IN HIS WORD",
+    "PROVERBS 22:6",
+    "A PRAYER FOR HOME"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit open bible on wooden table",
+    "golden hour sunlight through window onto dusty room",
+    "branches of olive tree in ceramic vase",
+    "soft focus view of quiet country home porch",
+    "dew on green leaves in morning light",
+    "open vintage bible with leather cover"
+  ],
+  "scenes": [
+    {
+      "a": "If you are questioning your influence over your child's heart, stay for this quiet prayer.",
+      "img": "short-familyproverbs22v6-scene-01.jpg",
+      "kicker": "PROVERBS 22:6",
+      "sub": "FAITH FOR THE NEXT GENERATION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we lift every parent feeling the heavy weight of responsibility for their little ones.",
+      "img": "short-familyproverbs22v6-scene-02.jpg",
+      "kicker": "A PRAYER FOR HOME",
+      "sub": "TRUSTING IN HIS WORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Train up a child in the way he should go: and when he is old, he will not depart from it.",
+      "img": "short-familyproverbs22v6-scene-03.jpg",
+      "kicker": "GOD'S PROMISE",
+      "sub": "RESTING IN THE SCRIPTURE",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Give us patience to lead with love when our own wisdom seems to fall so short.",
+      "img": "short-familyproverbs22v6-scene-04.jpg",
+      "kicker": "SEEKING WISDOM",
+      "sub": "GUIDANCE FOR THE WEARY",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Anchor their souls in the truth of your spirit so they remain rooted in your grace.",
+      "img": "short-familyproverbs22v6-scene-05.jpg",
+      "kicker": "ROOTED IN FAITH",
+      "sub": "A SECURE FOUNDATION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "We entrust our future generations to you, knowing you are faithful to finish your good work.",
+      "img": "short-familyproverbs22v6-scene-06.jpg",
+      "kicker": "HE IS FAITHFUL",
+      "sub": "YOUR HOUSEHOLD PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If you are questioning your influence over your child's heart, stay for this quiet prayer."
+    ],
+    [
+      8,
+      18,
+      "Lord, we lift every parent feeling the heavy weight of responsibility for their little ones."
+    ],
+    [
+      18,
+      30,
+      "Train up a child in the way he should go: and when he is old, he will not depart from it."
+    ],
+    [
+      30,
+      42,
+      "Give us patience to lead with love when our own wisdom seems to fall so short."
+    ],
+    [
+      42,
+      52,
+      "Anchor their souls in the truth of your spirit so they remain rooted in your grace."
+    ],
+    [
+      52,
+      60,
+      "We entrust our future generations to you, knowing you are faithful to finish your good work."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "QUESTIONING YOUR INFLUENCE",
+        "OVER YOUR CHILD'S HEART",
+        "STAY FOR THIS",
+        "QUIET PRAYER"
+      ],
+      [
+        "QUESTIONING",
+        "HEART"
+      ],
+      "PROVERBS 22:6"
+    ],
+    [
+      8,
+      18,
+      [
+        "LIFTING EVERY PARENT",
+        "FEELING THE HEAVY",
+        "WEIGHT OF RESPONSIBILITY",
+        "FOR LITTLE ONES"
+      ],
+      [
+        "LIFTING",
+        "WEIGHT"
+      ],
+      "PROVERBS 22:6"
+    ],
+    [
+      18,
+      30,
+      [
+        "TRAIN UP A CHILD",
+        "IN THE WAY",
+        "HE SHOULD GO",
+        "HE WILL NOT DEPART"
+      ],
+      [
+        "TRAIN UP",
+        "NOT DEPART"
+      ],
+      "PROVERBS 22:6"
+    ],
+    [
+      30,
+      42,
+      [
+        "PATIENCE TO LEAD",
+        "WITH LOVE WHEN",
+        "OUR OWN WISDOM",
+        "FALLS SO SHORT"
+      ],
+      [
+        "PATIENCE",
+        "WISDOM"
+      ],
+      "PROVERBS 22:6"
+    ],
+    [
+      42,
+      52,
+      [
+        "ANCHOR THEIR SOULS",
+        "IN YOUR TRUTH",
+        "ROOTED IN GRACE"
+      ],
+      [
+        "ANCHOR",
+        "ROOTED"
+      ],
+      "PROVERBS 22:6"
+    ],
+    [
+      52,
+      60,
+      [
+        "ENTRUSTING OUR FUTURE",
+        "TO THE FAITHFUL ONE",
+        "FINISH YOUR WORK"
+      ],
+      [
+        "ENTRUSTING",
+        "FAITHFUL"
+      ],
+      "PROVERBS 22:6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are questioning your influence over your child's heart, stay for this quiet prayer.",
+      "kind": "phrase",
+      "words": [
+        "QUESTIONING",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we lift every parent feeling the heavy weight of responsibility for their little ones.",
+      "kind": "phrase",
+      "words": [
+        "LIFTING",
+        "WEIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Train up a child in the way he should go: and when he is old, he will not depart from it.",
+      "kind": "phrase",
+      "words": [
+        "TRAIN UP",
+        "NOT DEPART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Give us patience to lead with love when our own wisdom seems to fall so short.",
+      "kind": "phrase",
+      "words": [
+        "PATIENCE",
+        "WISDOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Anchor their souls in the truth of your spirit so they remain rooted in your grace.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "ROOTED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We entrust our future generations to you, knowing you are faithful to finish your good work.",
+      "kind": "phrase",
+      "words": [
+        "ENTRUSTING",
+        "FAITHFUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 22:6"
+}

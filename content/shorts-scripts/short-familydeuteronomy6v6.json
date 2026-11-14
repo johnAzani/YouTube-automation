@@ -3,33 +3,34 @@
   "channel": "prayer5",
   "psalm": null,
   "title": [
-    "A HOUSEHOLD PRAYER",
-    "DEUTERONOMY SIX"
+    "TEACH THEM",
+    "DILIGENTLY"
   ],
   "poster": [
-    "GATHER YOUR FAMILY",
-    "LIGHT THE LAMPS",
-    "OPEN THE SCRIPTURES",
-    "SEEK HIS PEACE"
+    "DEUTERONOMY 6:6-7",
+    "TEACH YOUR CHILDREN",
+    "TALK OF GOD'S WORD",
+    "IN YOUR HOME"
   ],
   "end": [
     "SUBSCRIBE",
     "The Family Altar — cover your home in prayer"
   ],
   "stock_queries": [
-    "warm lamp lit wooden table with open vintage bible",
-    "olive branches on a rustic linen table cloth",
-    "soft morning light entering a peaceful kitchen",
-    "cozy farmhouse living room with soft evening glow",
-    "open bible on table with shadows of window pane",
-    "peaceful countryside home view at twilight"
+    "warm lamp lit open Bible on wooden table olive branch warm glow",
+    "peaceful cottage window morning light soft warm atmosphere",
+    "cozy living room evening lamp warm soft glow wooden table",
+    "sunlit country path peaceful nature serene morning",
+    "open Holy Bible on dark wood table candlelight soft focus",
+    "rustic dining table morning sunshine peaceful home background",
+    "cozy candlelit home sanctuary tranquil evening twilight"
   ],
   "scenes": [
     {
-      "a": "Gather your home",
+      "a": "If weary doubts",
       "img": "short-familydeuteronomy6v6-scene-01.jpg",
       "kicker": "DEUTERONOMY 6:6-7",
-      "sub": "A QUIET FAMILY MOMENT",
+      "sub": "GOD GUIDES YOUR FAMILY",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -37,57 +38,68 @@
       ]
     },
     {
-      "a": "These commandments",
+      "a": "And these words",
       "img": "short-familydeuteronomy6v6-scene-02.jpg",
-      "kicker": "GOD'S WORD",
-      "sub": "WRITTEN ON OUR HEARTS",
-      "cam": "pan_left",
-      "focus": [
-        0.3,
-        0.5
-      ]
-    },
-    {
-      "a": "Teach them",
-      "img": "short-familydeuteronomy6v6-scene-03.jpg",
-      "kicker": "DAILY PRACTICE",
-      "sub": "GUIDING OUR CHILDREN",
-      "cam": "tilt_up",
-      "focus": [
-        0.5,
-        0.7
-      ]
-    },
-    {
-      "a": "When you sit",
-      "img": "short-familydeuteronomy6v6-scene-04.jpg",
-      "kicker": "IN THE HOME",
-      "sub": "BLESSED CONVERSATIONS",
-      "cam": "push_in",
-      "focus": [
-        0.5,
-        0.2
-      ]
-    },
-    {
-      "a": "Lord we ask",
-      "img": "short-familydeuteronomy6v6-scene-05.jpg",
-      "kicker": "A HUMBLE PRAYER",
-      "sub": "SEEKING HIS PRESENCE",
+      "kicker": "DEUTERONOMY 6:6-7",
+      "sub": "KEEP HIS WORD IN HEART",
       "cam": "pull_out",
       "focus": [
         0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "And thou shalt teach",
+      "img": "short-familydeuteronomy6v6-scene-03.jpg",
+      "kicker": "DEUTERONOMY 6:6-7",
+      "sub": "TEACH THEM DILIGENTLY",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
         0.5
       ]
     },
     {
-      "a": "May our family",
+      "a": "and when thou walkest",
+      "img": "short-familydeuteronomy6v6-scene-04.jpg",
+      "kicker": "DEUTERONOMY 6:6-7",
+      "sub": "TALK OF THEM DAILY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, write Your",
+      "img": "short-familydeuteronomy6v6-scene-05.jpg",
+      "kicker": "DEUTERONOMY 6:6-7",
+      "sub": "WRITE TRUTH ON OUR HEARTS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Give us grace",
       "img": "short-familydeuteronomy6v6-scene-06.jpg",
-      "kicker": "FAITH AT HOME",
-      "sub": "ROOTED IN GRACE",
+      "kicker": "DEUTERONOMY 6:6-7",
+      "sub": "GRACE IN EVERY MOMENT",
       "cam": "pan_right",
       "focus": [
-        0.7,
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Guard our household",
+      "img": "short-familydeuteronomy6v6-scene-07.jpg",
+      "kicker": "DEUTERONOMY 6:6-7",
+      "sub": "COVER YOUR HOME IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
         0.5
       ]
     }
@@ -95,176 +107,213 @@
   "captions": [
     [
       0,
+      8,
+      "If weary doubts about your children's future keep you awake, place your home in God's hands."
+    ],
+    [
+      8,
       15,
-      "Gather your home and loved ones in faith as we seek the Lord today."
+      "And these words, which I command thee this day, shall be in thine heart:"
     ],
     [
-      16,
-      35,
-      "These commandments that I give you today are to be on your hearts."
+      15,
+      24,
+      "And thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest in thine house,"
     ],
     [
-      36,
-      55,
-      "Teach them diligently to your children and talk about them when you sit at home."
+      24,
+      32,
+      "and when thou walkest by the way, and when thou liest down, and when thou risest up."
     ],
     [
+      32,
+      38,
+      "Lord, write Your sacred truth upon our hearts today."
+    ],
+    [
+      38,
+      48,
+      "Give us grace to speak Your wisdom in every quiet conversation, every shared walk, every bedtime prayer, and every morning greeting."
+    ],
+    [
+      48,
       56,
-      75,
-      "When you walk along the road, when you lie down and when you get up."
-    ],
-    [
-      76,
-      100,
-      "Lord we ask that your peace rests upon this house and every soul within these walls."
-    ],
-    [
-      101,
-      125,
-      "May our family walk in your truth and let your love be the anchor of our lives forever."
+      "Guard our household in love. Subscribe to cover your home in prayer."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
+      8,
+      [
+        "IF WEARY DOUBTS",
+        "ABOUT YOUR CHILDREN",
+        "PLACE YOUR HOME",
+        "IN GODS HANDS"
+      ],
+      [
+        "WEARY DOUBTS",
+        "GODS HANDS"
+      ],
+      "DEUTERONOMY 6 : 6 - 7"
+    ],
+    [
+      8,
       15,
       [
-        "GATHER YOUR HOME",
-        "AND LOVED ONES",
-        "IN FAITH TODAY"
+        "THESE WORDS WHICH",
+        "I COMMAND THEE",
+        "SHALL BE IN",
+        "THINE HEART"
       ],
       [
-        "FAITH"
+        "COMMAND THEE",
+        "THINE HEART"
       ],
-      "DEUTERONOMY 6:6-7"
+      "DEUTERONOMY 6 : 6 - 7"
     ],
     [
-      16,
-      35,
+      15,
+      24,
       [
-        "COMMANDMENTS UPON",
-        "OUR HEARTS",
-        "TODAY AND ALWAYS"
+        "TEACH THEM DILIGENTLY",
+        "UNTO THY CHILDREN",
+        "AND TALK OF THEM",
+        "IN THINE HOUSE"
       ],
-      [
-        "HEARTS"
-      ],
-      "DEUTERONOMY 6:6-7"
-    ],
-    [
-      36,
-      55,
       [
         "TEACH THEM",
-        "TO YOUR CHILDREN",
-        "SITTING AT HOME"
+        "THINE HOUSE"
       ],
-      [
-        "TEACH"
-      ],
-      "DEUTERONOMY 6:6-7"
+      "DEUTERONOMY 6 : 6 - 7"
     ],
     [
+      24,
+      32,
+      [
+        "WHEN THOU WALKES",
+        "BY THE WAY",
+        "WHEN THOU LIEST DOWN",
+        "WHEN THOU RISEST UP"
+      ],
+      [
+        "LIEST DOWN",
+        "RISEST UP"
+      ],
+      "DEUTERONOMY 6 : 6 - 7"
+    ],
+    [
+      32,
+      38,
+      [
+        "LORD WRITE YOUR",
+        "SACRED TRUTH UPON",
+        "OUR HEARTS TODAY"
+      ],
+      [
+        "SACRED TRUTH",
+        "OUR HEARTS"
+      ],
+      "DEUTERONOMY 6 : 6 - 7"
+    ],
+    [
+      38,
+      48,
+      [
+        "GIVE US GRACE",
+        "IN EVERY CONVERSATION",
+        "EVERY BEDTIME PRAYER",
+        "EVERY MORNING GREETING"
+      ],
+      [
+        "GIVE US GRACE",
+        "EVERY MORNING"
+      ],
+      "DEUTERONOMY 6 : 6 - 7"
+    ],
+    [
+      48,
       56,
-      75,
       [
-        "WALK ALONG THE ROAD",
-        "LIE DOWN AND RISE",
-        "IN HIS GRACE"
+        "GUARD OUR HOUSEHOLD",
+        "IN LOVE AND FAITH",
+        "SUBSCRIBE TO COVER",
+        "YOUR HOME IN PRAYER"
       ],
       [
-        "GRACE"
+        "GUARD OUR HOUSEHOLD",
+        "COVER YOUR HOME"
       ],
-      "DEUTERONOMY 6:6-7"
-    ],
-    [
-      76,
-      100,
-      [
-        "LORD WE ASK",
-        "FOR YOUR PEACE",
-        "UPON THIS HOUSE"
-      ],
-      [
-        "PEACE"
-      ],
-      "DEUTERONOMY 6:6-7"
-    ],
-    [
-      101,
-      125,
-      [
-        "MAY OUR FAMILY",
-        "WALK IN TRUTH",
-        "FOREVERMORE"
-      ],
-      [
-        "TRUTH"
-      ],
-      "DEUTERONOMY 6:6-7"
+      "DEUTERONOMY 6 : 6 - 7"
     ]
   ],
   "beats": [
     {
-      "a": "Gather your home",
+      "a": "If weary doubts about your children's future keep you awake, place your home in God's hands.",
       "kind": "phrase",
       "words": [
-        "GATHER",
-        "YOUR",
-        "HOME"
+        "WEARY",
+        "DOUBTS"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "These commandments",
+      "a": "And these words, which I command thee this day, shall be in thine heart:",
       "kind": "phrase",
       "words": [
-        "THESE",
-        "COMMANDMENTS"
+        "COMMAND",
+        "THEE"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Teach them",
+      "a": "And thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest in thine house,",
       "kind": "phrase",
       "words": [
         "TEACH",
-        "THEM"
+        "DILIGENTLY"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "When you sit",
+      "a": "and when thou walkest by the way, and when thou liest down, and when thou risest up.",
       "kind": "phrase",
       "words": [
-        "WHEN",
-        "YOU",
-        "SIT"
+        "WALKEST",
+        "RISEST"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Lord we ask",
+      "a": "Lord, write Your sacred truth upon our hearts today.",
       "kind": "phrase",
       "words": [
-        "LORD",
-        "WE",
-        "ASK"
+        "SACRED",
+        "TRUTH"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "May our family",
+      "a": "Give us grace to speak Your wisdom in every quiet conversation, every shared walk, every bedtime prayer, and every morning greeting.",
       "kind": "phrase",
       "words": [
-        "MAY",
-        "OUR",
-        "FAMILY"
+        "WISDOM",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guard our household in love. Subscribe to cover your home in prayer.",
+      "kind": "phrase",
+      "words": [
+        "GUARD",
+        "HOUSEHOLD"
       ],
       "hi": 0,
       "slot": "C"
