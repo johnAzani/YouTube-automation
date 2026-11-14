@@ -2,7 +2,7 @@
 id: 0408
 title: "Prayer for Healing and Restoration: Malachi 4:2 | The Healing Balm"
 slug: malachi-4-2-sun-of-righteousness-healing-prayer
-status: approved
+status: published
 channel: prayer6
 privacy: public
 format: longform
@@ -77,6 +77,13 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-14"
+published_at: "2026-11-14T21:16:18Z"
+youtube_video_id: "pCo9x0WUBzw"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith
