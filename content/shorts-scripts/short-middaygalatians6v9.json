@@ -7,98 +7,74 @@
     "MIDDAY PRAYER"
   ],
   "poster": [
-    "THE MIDDAY WATCH",
-    "PAUSE AT NOON",
-    "GALATIANS 6:9",
-    "DO NOT GROW WEARY"
+    "DO NOT GROW WEARY",
+    "IN WELL DOING",
+    "MIDDAY PRAYER",
+    "GALATIANS 6:9"
   ],
   "end": [
     "SUBSCRIBE",
     "The Midday Watch — pause and pray at noon"
   ],
   "stock_queries": [
-    "midday light streaming through window onto clean wooden floor",
-    "quiet desk bathed in warm bright afternoon sunlight",
-    "open holy Bible sitting on wooden table in midday light",
-    "high sun illuminating open golden wheat field",
-    "bright midday sky above calm mountain valley",
-    "sunbeams shining through green forest tree canopy at noon",
-    "soft sun glinting on calm meadow flowers in full bloom",
-    "peaceful sunlit window looking out toward calm blue horizon",
-    "warm midday sun on quiet open pathway in meadow"
+    "sunlight streaming through quiet office window desk",
+    "warm midday sunlight on empty wooden table",
+    "golden wheat field illuminated by high afternoon sun",
+    "warm sunlight on open journal on wooden desk",
+    "peaceful outdoor garden in soft bright midday light",
+    "calm sunbeams through green leaves in quiet forest",
+    "open field of wildflowers in bright sun"
   ],
   "scenes": [
     {
-      "a": "Pause what you are doing right now",
+      "a": "If your hands feel heavy after hours of quiet effort that nobody else noticed, stay here.",
       "img": "short-middaygalatians6v9-scene-01.jpg",
-      "kicker": "MIDDAY WATCH",
-      "sub": "PAUSE WHAT YOU ARE DOING",
+      "kicker": "GALATIANS 6:9",
+      "sub": "STRENGTH FOR THE WEARY",
       "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hear God's gentle instruction for your midday: And let us not be weary in well doing:",
+      "img": "short-middaygalatians6v9-scene-02.jpg",
+      "kicker": "GALATIANS 6:9",
+      "sub": "DO NOT GROW WEARY",
+      "cam": "tilt_up",
       "focus": [
         0.5,
         0.5
       ]
     },
     {
-      "a": "In the middle of your busy day",
-      "img": "short-middaygalatians6v9-scene-02.jpg",
-      "kicker": "MIDDAY WATCH",
-      "sub": "FIND REST FOR YOUR SOUL",
-      "cam": "pull_out",
+      "a": "for in due season we shall reap, if we faint not.",
+      "img": "short-middaygalatians6v9-scene-03.jpg",
+      "kicker": "GALATIANS 6:9",
+      "sub": "A HARVEST IN DUE SEASON",
+      "cam": "push_in",
       "focus": [
         0.5,
         0.4
       ]
     },
     {
-      "a": "Holy Scripture reminds us",
-      "img": "short-middaygalatians6v9-scene-03.jpg",
-      "kicker": "GALATIANS 6:9",
-      "sub": "GOD'S HOLY WORD",
-      "cam": "tilt_up",
-      "focus": [
-        0.5,
-        0.6
-      ]
-    },
-    {
-      "a": "And let us not grow weary",
+      "a": "Lord, you see the quiet work of this day—the kindness that went unthanked,",
       "img": "short-middaygalatians6v9-scene-04.jpg",
       "kicker": "GALATIANS 6:9",
-      "sub": "IN DUE SEASON WE SHALL REAP",
-      "cam": "push_in",
+      "sub": "HE SEES YOUR EFFORT",
+      "cam": "pan_right",
       "focus": [
-        0.5,
+        0.55,
         0.5
       ]
     },
     {
-      "a": "Lord, as the midday sun shines high",
+      "a": "the faithful care given in secret, and the labor that feels unfinished.",
       "img": "short-middaygalatians6v9-scene-05.jpg",
-      "kicker": "MIDDAY PRAYER",
-      "sub": "SURRENDER YOUR TIRED HANDS",
-      "cam": "pan_left",
-      "focus": [
-        0.4,
-        0.5
-      ]
-    },
-    {
-      "a": "Renew our strength when the daily labor",
-      "img": "short-middaygalatians6v9-scene-06.jpg",
-      "kicker": "MIDDAY PRAYER",
-      "sub": "GOD RENEWS YOUR STRENGTH",
-      "cam": "push_in",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "Help us trust that every seed of kindness",
-      "img": "short-middaygalatians6v9-scene-07.jpg",
-      "kicker": "FAITHFUL TRUST",
-      "sub": "BLOOMING IN HIS PERFECT TIME",
+      "kicker": "GALATIANS 6:9",
+      "sub": "FAITHFUL IN SECRET",
       "cam": "pull_out",
       "focus": [
         0.5,
@@ -106,22 +82,22 @@
       ]
     },
     {
-      "a": "Fill our hearts with steady grace",
-      "img": "short-middaygalatians6v9-scene-08.jpg",
-      "kicker": "AFTERNOON PEACE",
-      "sub": "STEADY GRACE FOR THE DAY",
-      "cam": "pan_right",
+      "a": "Grant renewed strength to this tired heart. Remind us that no faithful act is ever wasted in your kingdom,",
+      "img": "short-middaygalatians6v9-scene-06.jpg",
+      "kicker": "GALATIANS 6:9",
+      "sub": "NEVER WASTED",
+      "cam": "push_in",
       "focus": [
-        0.6,
+        0.45,
         0.5
       ]
     },
     {
-      "a": "Subscribe to join The Midday Watch",
-      "img": "short-middaygalatians6v9-scene-09.jpg",
-      "kicker": "PAUSE AND PRAY",
-      "sub": "JOIN US EVERY DAY AT NOON",
-      "cam": "push_in",
+      "a": "and that your harvest arrives at the perfect time. Subscribe to rest in midday prayer.",
+      "img": "short-middaygalatians6v9-scene-07.jpg",
+      "kicker": "GALATIANS 6:9",
+      "sub": "AT THE PERFECT TIME",
+      "cam": "pan_left",
       "focus": [
         0.5,
         0.5
@@ -131,322 +107,208 @@
   "captions": [
     [
       0,
-      7,
-      "Pause what you are doing right now and take one deep breath in this quiet moment."
+      6,
+      "If your hands feel heavy after hours of quiet effort that nobody else noticed, stay here."
     ],
     [
-      7,
-      14,
-      "In the middle of your busy day, your weary soul needs a gentle place to rest."
+      6,
+      12,
+      "Hear God's gentle instruction for your midday: And let us not be weary in well doing:"
     ],
     [
-      14,
-      20,
-      "Holy Scripture reminds us in Galatians chapter six verse nine:"
+      12,
+      18,
+      "for in due season we shall reap, if we faint not."
     ],
     [
-      20,
+      18,
+      24,
+      "Lord, you see the quiet work of this day—the kindness that went unthanked,"
+    ],
+    [
+      24,
       30,
-      "And let us not grow weary while doing good, for in due season we shall reap if we do not lose heart."
+      "the faithful care given in secret, and the labor that feels unfinished."
     ],
     [
       30,
-      37,
-      "Lord, as the midday sun shines high, we surrender our tired hands to your faithful care."
+      36,
+      "Grant renewed strength to this tired heart. Remind us that no faithful act is ever wasted in your kingdom,"
     ],
     [
-      37,
-      44,
-      "Renew our strength when the daily labor feels heavy, long, and quiet."
-    ],
-    [
-      44,
-      51,
-      "Help us trust that every seed of kindness planted today will bloom in your perfect time."
-    ],
-    [
-      51,
-      57,
-      "Fill our hearts with steady grace as we step forward into this afternoon."
-    ],
-    [
-      57,
-      63,
-      "Subscribe to join The Midday Watch each noon to pause and pray."
+      36,
+      42,
+      "and that your harvest arrives at the perfect time. Subscribe to rest in midday prayer."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      7,
+      6,
       [
-        "PAUSE WHAT YOU ARE DOING",
-        "RIGHT NOW AND TAKE ONE",
-        "DEEP BREATH IN THIS",
-        "QUIET MOMENT"
+        "IF YOUR HANDS FEEL HEAVY",
+        "AFTER HOURS OF QUIET EFFORT",
+        "THAT NOBODY ELSE NOTICED",
+        "STAY HERE"
       ],
       [
-        "PAUSE",
-        "DEEP",
-        "BREATH"
-      ],
-      "MIDDAY WATCH"
-    ],
-    [
-      7,
-      14,
-      [
-        "IN THE MIDDLE OF YOUR",
-        "BUSY DAY YOUR WEARY",
-        "SOUL NEEDS A GENTLE",
-        "PLACE TO REST"
-      ],
-      [
-        "WEARY",
-        "SOUL",
-        "REST"
-      ],
-      "MIDDAY WATCH"
-    ],
-    [
-      14,
-      20,
-      [
-        "HOLY SCRIPTURE REMINDS US",
-        "IN GALATIANS CHAPTER",
-        "SIX VERSE NINE"
-      ],
-      [
-        "GALATIANS",
-        "SIX",
-        "NINE"
+        "QUIET EFFORT"
       ],
       "GALATIANS 6:9"
     ],
     [
-      20,
-      30,
+      6,
+      12,
       [
-        "AND LET US NOT GROW WEARY",
-        "WHILE DOING GOOD FOR IN",
-        "DUE SEASON WE SHALL REAP",
-        "IF WE DO NOT LOSE HEART"
+        "HEAR GODS GENTLE INSTRUCTION",
+        "FOR YOUR MIDDAY",
+        "AND LET US NOT BE WEARY",
+        "IN WELL DOING"
       ],
       [
-        "NOT",
-        "GROW",
-        "WEARY",
-        "REAP"
+        "WELL DOING"
       ],
       "GALATIANS 6:9"
     ],
     [
-      30,
-      37,
+      12,
+      18,
       [
-        "LORD AS THE MIDDAY SUN",
-        "SHINES HIGH WE SURRENDER",
-        "OUR TIRED HANDS TO YOUR",
+        "FOR IN DUE SEASON",
+        "WE SHALL REAP",
+        "IF WE FAINT NOT"
+      ],
+      [
+        "DUE SEASON"
+      ],
+      "GALATIANS 6:9"
+    ],
+    [
+      18,
+      24,
+      [
+        "LORD YOU SEE THE QUIET WORK",
+        "OF THIS DAY THE KINDNESS",
+        "THAT WENT UNTHANKED"
+      ],
+      [
+        "QUIET WORK"
+      ],
+      "GALATIANS 6:9"
+    ],
+    [
+      24,
+      30,
+      [
+        "THE FAITHFUL CARE",
+        "GIVEN IN SECRET",
+        "AND THE LABOR THAT",
+        "FEELS UNFINISHED"
+      ],
+      [
         "FAITHFUL CARE"
       ],
-      [
-        "MIDDAY",
-        "SUN",
-        "FAITHFUL"
-      ],
-      "MIDDAY PRAYER"
+      "GALATIANS 6:9"
     ],
     [
-      37,
-      44,
+      30,
+      36,
       [
-        "RENEW OUR STRENGTH WHEN THE",
-        "DAILY LABOR FEELS HEAVY",
-        "LONG AND QUIET"
+        "GRANT RENEWED STRENGTH",
+        "TO THIS TIRED HEART",
+        "NO FAITHFUL ACT IS EVER WASTED",
+        "IN YOUR KINGDOM"
       ],
       [
-        "RENEW",
-        "STRENGTH",
-        "HEAVY"
+        "RENEWED STRENGTH"
       ],
-      "MIDDAY PRAYER"
+      "GALATIANS 6:9"
     ],
     [
-      44,
-      51,
+      36,
+      42,
       [
-        "HELP US TRUST THAT EVERY",
-        "SEED OF KINDNESS PLANTED",
-        "TODAY WILL BLOOM IN",
-        "YOUR PERFECT TIME"
+        "AND THAT YOUR HARVEST ARRIVES",
+        "AT THE PERFECT TIME",
+        "SUBSCRIBE TO REST IN",
+        "MIDDAY PRAYER"
       ],
       [
-        "TRUST",
-        "KINDNESS",
-        "BLOOM"
+        "PERFECT TIME"
       ],
-      "FAITHFUL TRUST"
-    ],
-    [
-      51,
-      57,
-      [
-        "FILL OUR HEARTS WITH STEADY",
-        "GRACE AS WE STEP FORWARD",
-        "INTO THIS AFTERNOON"
-      ],
-      [
-        "STEADY",
-        "GRACE",
-        "AFTERNOON"
-      ],
-      "AFTERNOON PEACE"
-    ],
-    [
-      57,
-      63,
-      [
-        "SUBSCRIBE TO JOIN THE",
-        "MIDDAY WATCH EACH NOON",
-        "TO PAUSE AND PRAY"
-      ],
-      [
-        "SUBSCRIBE",
-        "MIDDAY",
-        "PRAY"
-      ],
-      "PAUSE AND PRAY"
+      "GALATIANS 6:9"
     ]
   ],
   "beats": [
     {
-      "a": "Pause what you are doing",
+      "a": "If your hands feel heavy after hours of quiet effort that nobody else noticed, stay here.",
       "kind": "phrase",
       "words": [
-        "PAUSE",
+        "QUIET",
+        "EFFORT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear God's gentle instruction for your midday: And let us not be weary in well doing:",
+      "kind": "phrase",
+      "words": [
+        "WELL",
         "DOING"
       ],
       "hi": 0,
-      "slot": "A"
-    },
-    {
-      "a": "deep breath",
-      "kind": "phrase",
-      "words": [
-        "DEEP",
-        "BREATH"
-      ],
-      "hi": 0,
-      "slot": "B"
-    },
-    {
-      "a": "weary soul",
-      "kind": "phrase",
-      "words": [
-        "WEARY",
-        "SOUL"
-      ],
-      "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Galatians chapter six verse nine",
-      "kind": "phrase",
-      "words": [
-        "GALATIANS",
-        "SIX"
-      ],
-      "hi": 0,
-      "slot": "A"
-    },
-    {
-      "a": "grow weary",
-      "kind": "phrase",
-      "words": [
-        "GROW",
-        "WEARY"
-      ],
-      "hi": 1,
-      "slot": "B"
-    },
-    {
-      "a": "doing good",
-      "kind": "phrase",
-      "words": [
-        "DOING",
-        "GOOD"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "due season",
+      "a": "for in due season we shall reap, if we faint not.",
       "kind": "phrase",
       "words": [
         "DUE",
         "SEASON"
       ],
       "hi": 0,
-      "slot": "A"
+      "slot": "C"
     },
     {
-      "a": "lose heart",
+      "a": "Lord, you see the quiet work of this day—the kindness that went unthanked,",
       "kind": "phrase",
       "words": [
-        "LOSE",
-        "HEART"
-      ],
-      "hi": 1,
-      "slot": "B"
-    },
-    {
-      "a": "midday sun",
-      "kind": "phrase",
-      "words": [
-        "MIDDAY",
-        "SUN"
+        "QUIET",
+        "WORK"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Renew our strength",
+      "a": "the faithful care given in secret, and the labor that feels unfinished.",
       "kind": "phrase",
       "words": [
-        "RENEW",
+        "FAITHFUL",
+        "CARE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant renewed strength to this tired heart. Remind us that no faithful act is ever wasted in your kingdom,",
+      "kind": "phrase",
+      "words": [
+        "RENEWED",
         "STRENGTH"
       ],
       "hi": 0,
-      "slot": "A"
-    },
-    {
-      "a": "seed of kindness",
-      "kind": "phrase",
-      "words": [
-        "SEED",
-        "KINDNESS"
-      ],
-      "hi": 1,
-      "slot": "B"
-    },
-    {
-      "a": "steady grace",
-      "kind": "phrase",
-      "words": [
-        "STEADY",
-        "GRACE"
-      ],
-      "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Subscribe",
+      "a": "and that your harvest arrives at the perfect time. Subscribe to rest in midday prayer.",
       "kind": "phrase",
       "words": [
-        "SUBSCRIBE"
+        "PERFECT",
+        "TIME"
       ],
       "hi": 0,
-      "slot": "A"
+      "slot": "C"
     }
   ],
   "scripture": "Galatians 6:9"

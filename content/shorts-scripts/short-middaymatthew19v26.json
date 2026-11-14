@@ -3,79 +3,33 @@
   "channel": "prayer3",
   "psalm": null,
   "title": [
-    "WITH GOD ALL THINGS",
-    "ARE POSSIBLE"
+    "BEYOND YOUR",
+    "OWN REACH"
   ],
   "poster": [
+    "MIDDAY PRAYER",
     "MATTHEW 19:26",
-    "PAUSE AND PRAY AT NOON",
-    "ALL THINGS ARE POSSIBLE",
-    "THE MIDDAY WATCH"
+    "PAUSE AND",
+    "REFLECT"
   ],
   "end": [
     "SUBSCRIBE",
     "The Midday Watch — pause and pray at noon"
   ],
   "stock_queries": [
-    "midday sun shining on calm valley mountain",
-    "sunlight beaming through wooden window onto clean desk",
-    "bright noon sun over open dry grass field",
-    "quiet sunlit stone path curving through trees",
-    "warm midday sunlight filtering through green forest canopy",
-    "sunbeams hitting still clear water lake midday",
-    "bright midday light on peaceful empty wooden bench",
-    "golden noon sunlight illuminating open mountain peak"
+    "soft sunlight streaming through a window",
+    "dust motes dancing in midday sun",
+    "open leather journal on a wooden desk",
+    "still mountain lake at midday",
+    "golden light hitting a white wall",
+    "peaceful nature landscape no people"
   ],
   "scenes": [
     {
-      "a": "If that wall in front of your plans feels completely impossible today, stop right here.",
+      "a": "The heavy weight of that situation you are currently facing is bending your spirit today.",
       "img": "short-middaymatthew19v26-scene-01.jpg",
       "kicker": "MATTHEW 19:26",
-      "sub": "WHEN PLANS FEEL IMPOSSIBLE",
-      "cam": "push_in",
-      "focus": [
-        0.5,
-        0.45
-      ]
-    },
-    {
-      "a": "Jesus looked at them and said, With man this is impossible, but with God all things are possible.",
-      "img": "short-middaymatthew19v26-scene-02.jpg",
-      "kicker": "MATTHEW 19:26",
-      "sub": "ALL THINGS ARE POSSIBLE",
-      "cam": "pan_right",
-      "focus": [
-        0.4,
-        0.5
-      ]
-    },
-    {
-      "a": "Lord, in this midday heat, we confess our strength is empty.",
-      "img": "short-middaymatthew19v26-scene-03.jpg",
-      "kicker": "MATTHEW 19:26",
-      "sub": "OUR STRENGTH IS EMPTY",
-      "cam": "pull_out",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "The problem before us looks too heavy, the path too steep, and our wisdom too small.",
-      "img": "short-middaymatthew19v26-scene-04.jpg",
-      "kicker": "MATTHEW 19:26",
-      "sub": "HEAVY PATHS AND WEAK WISDOM",
-      "cam": "tilt_up",
-      "focus": [
-        0.5,
-        0.6
-      ]
-    },
-    {
-      "a": "Yet You hold the ends of the earth and speak life into hard places.",
-      "img": "short-middaymatthew19v26-scene-05.jpg",
-      "kicker": "MATTHEW 19:26",
-      "sub": "SPEAKER OF LIFE",
+      "sub": "FINDING STRENGTH AT MIDDAY",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -83,21 +37,21 @@
       ]
     },
     {
-      "a": "We yield our dead ends to Your living power.",
-      "img": "short-middaymatthew19v26-scene-06.jpg",
+      "a": "Bring your limited perspective before the creator who sustains the very breath in your lungs.",
+      "img": "short-middaymatthew19v26-scene-02.jpg",
       "kicker": "MATTHEW 19:26",
-      "sub": "SURRENDERING DEAD ENDS",
-      "cam": "pan_left",
+      "sub": "SURRENDERING YOUR BURDEN",
+      "cam": "tilt_up",
       "focus": [
-        0.6,
-        0.5
+        0.5,
+        0.6
       ]
     },
     {
-      "a": "Take what we cannot fix and work Your holy will. Grant us quiet trust right where we are.",
-      "img": "short-middaymatthew19v26-scene-07.jpg",
+      "a": "But Jesus beheld them, and said unto them, With men this is impossible; but with God all things are possible.",
+      "img": "short-middaymatthew19v26-scene-03.jpg",
       "kicker": "MATTHEW 19:26",
-      "sub": "RESTING IN HIS WILL",
+      "sub": "HIS POWER IS LIMITLESS",
       "cam": "pull_out",
       "focus": [
         0.5,
@@ -105,248 +59,208 @@
       ]
     },
     {
-      "a": "Subscribe to The Midday Watch for daily midday prayers.",
-      "img": "short-middaymatthew19v26-scene-08.jpg",
-      "kicker": "THE MIDDAY WATCH",
-      "sub": "PAUSE AND PRAY AT NOON",
+      "a": "Lord, quiet the anxious striving that fills my afternoon and help me to trust You.",
+      "img": "short-middaymatthew19v26-scene-04.jpg",
+      "kicker": "MATTHEW 19:26",
+      "sub": "TRUSTING IN HIS TIMING",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Remove the barriers I have built with my own hands and replace them with faith.",
+      "img": "short-middaymatthew19v26-scene-05.jpg",
+      "kicker": "MATTHEW 19:26",
+      "sub": "OPENING YOUR HEART",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant me the peace to wait upon Your perfect will as the sun peaks high.",
+      "img": "short-middaymatthew19v26-scene-06.jpg",
+      "kicker": "MATTHEW 19:26",
+      "sub": "WALKING IN HIS LIGHT",
       "cam": "push_in",
       "focus": [
         0.5,
-        0.45
+        0.2
       ]
     }
   ],
   "captions": [
     [
       0,
-      6,
-      "If that wall in front of your plans feels completely impossible today, stop right here."
-    ],
-    [
-      6,
-      13,
-      "Jesus looked at them and said, With man this is impossible, but with God all things are possible."
+      12,
+      "The heavy weight of that situation you are currently facing is bending your spirit today."
     ],
     [
       13,
-      19,
-      "Lord, in this midday heat, we confess our strength is empty."
+      27,
+      "Bring your limited perspective before the creator who sustains the very breath in your lungs."
     ],
     [
-      19,
-      26,
-      "The problem before us looks too heavy, the path too steep, and our wisdom too small."
+      28,
+      48,
+      "But Jesus beheld them, and said unto them, With men this is impossible; but with God all things are possible."
     ],
     [
-      26,
-      33,
-      "Yet You hold the ends of the earth and speak life into hard places."
+      49,
+      65,
+      "Lord, quiet the anxious striving that fills my afternoon and help me to trust You."
     ],
     [
-      33,
-      40,
-      "We yield our dead ends to Your living power."
+      66,
+      80,
+      "Remove the barriers I have built with my own hands and replace them with faith."
     ],
     [
-      40,
-      47,
-      "Take what we cannot fix and work Your holy will. Grant us quiet trust right where we are."
-    ],
-    [
-      47,
-      54,
-      "Subscribe to The Midday Watch for daily midday prayers."
+      81,
+      100,
+      "Grant me the peace to wait upon Your perfect will as the sun peaks high."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      6,
+      12,
       [
-        "IF THAT WALL IN FRONT OF YOUR PLANS",
-        "FEELS COMPLETELY IMPOSSIBLE TODAY",
-        "STOP RIGHT HERE"
+        "THE HEAVY WEIGHT",
+        "OF THAT SITUATION",
+        "FACING YOUR SPIRIT"
       ],
       [
-        "IMPOSSIBLE",
-        "STOP"
-      ],
-      "MATTHEW 19:26"
-    ],
-    [
-      6,
-      13,
-      [
-        "WITH MAN THIS IS IMPOSSIBLE",
-        "BUT WITH GOD ALL THINGS",
-        "ARE POSSIBLE"
-      ],
-      [
-        "GOD",
-        "POSSIBLE"
+        "HEAVY WEIGHT"
       ],
       "MATTHEW 19:26"
     ],
     [
       13,
-      19,
+      27,
       [
-        "LORD IN THIS MIDDAY HEAT",
-        "WE CONFESS OUR STRENGTH",
-        "IS EMPTY"
+        "BRING YOUR LIMITED",
+        "PERSPECTIVE BEFORE THE",
+        "CREATOR WHO SUSTAINS"
       ],
       [
-        "STRENGTH",
-        "EMPTY"
-      ],
-      "MATTHEW 19:26"
-    ],
-    [
-      19,
-      26,
-      [
-        "THE PROBLEM BEFORE US LOOKS TOO HEAVY",
-        "THE PATH TOO STEEP",
-        "AND OUR WISDOM TOO SMALL"
-      ],
-      [
-        "HEAVY",
-        "STEEP"
+        "LIMITED PERSPECTIVE"
       ],
       "MATTHEW 19:26"
     ],
     [
-      26,
-      33,
+      28,
+      48,
       [
-        "YOU HOLD THE ENDS OF THE EARTH",
-        "AND SPEAK LIFE INTO",
-        "HARD PLACES"
+        "WITH MEN THIS IS",
+        "IMPOSSIBLE BUT WITH GOD",
+        "ALL THINGS ARE POSSIBLE"
       ],
       [
-        "LIFE",
-        "HARD"
-      ],
-      "MATTHEW 19:26"
-    ],
-    [
-      33,
-      40,
-      [
-        "WE YIELD OUR DEAD ENDS",
-        "TO YOUR LIVING POWER"
-      ],
-      [
-        "DEAD",
-        "LIVING"
+        "ALL THINGS"
       ],
       "MATTHEW 19:26"
     ],
     [
-      40,
-      47,
+      49,
+      65,
       [
-        "TAKE WHAT WE CANNOT FIX",
-        "AND WORK YOUR HOLY WILL",
-        "GRANT US QUIET TRUST"
+        "QUIET THE ANXIOUS",
+        "STRIVING THAT FILLS",
+        "MY AFTERNOON TRUST"
       ],
       [
-        "QUIET",
-        "TRUST"
+        "ANXIOUS STRIVING"
       ],
       "MATTHEW 19:26"
     ],
     [
-      47,
-      54,
+      66,
+      80,
       [
-        "SUBSCRIBE TO THE MIDDAY WATCH",
-        "FOR DAILY MIDDAY PRAYERS"
+        "REMOVE THE BARRIERS",
+        "BUILT WITH MY HANDS",
+        "REPLACE WITH FAITH"
       ],
       [
-        "MIDDAY",
-        "WATCH"
+        "REPLACE WITH FAITH"
+      ],
+      "MATTHEW 19:26"
+    ],
+    [
+      81,
+      100,
+      [
+        "GRANT ME PEACE",
+        "TO WAIT UPON YOUR",
+        "WILL AS SUN PEAKS"
+      ],
+      [
+        "WAIT UPON"
       ],
       "MATTHEW 19:26"
     ]
   ],
   "beats": [
     {
-      "a": "If that wall in front of your plans feels completely impossible today, stop right here.",
-      "kind": "phrase",
-      "words": [
-        "IMPOSSIBLE",
-        "TODAY"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Jesus looked at them and said, With man this is impossible, but with God all things are possible.",
-      "kind": "phrase",
-      "words": [
-        "GOD",
-        "POSSIBLE"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Lord, in this midday heat, we confess our strength is empty.",
-      "kind": "phrase",
-      "words": [
-        "MIDDAY",
-        "STRENGTH"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "The problem before us looks too heavy, the path too steep, and our wisdom too small.",
+      "a": "The heavy weight of that situation you are currently facing is bending your spirit today.",
       "kind": "phrase",
       "words": [
         "HEAVY",
-        "WISDOM"
+        "WEIGHT"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Yet You hold the ends of the earth and speak life into hard places.",
+      "a": "Bring your limited perspective before the creator who sustains the very breath in your lungs.",
       "kind": "phrase",
       "words": [
-        "LIFE",
-        "HARD"
+        "LIMITED",
+        "PERSPECTIVE"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "We yield our dead ends to Your living power.",
+      "a": "But Jesus beheld them, and said unto them, With men this is impossible; but with God all things are possible.",
       "kind": "phrase",
       "words": [
-        "LIVING",
-        "POWER"
+        "ALL",
+        "THINGS"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Take what we cannot fix and work Your holy will. Grant us quiet trust right where we are.",
+      "a": "Lord, quiet the anxious striving that fills my afternoon and help me to trust You.",
       "kind": "phrase",
       "words": [
-        "QUIET",
-        "TRUST"
+        "ANXIOUS",
+        "STRIVING"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Subscribe to The Midday Watch for daily midday prayers.",
+      "a": "Remove the barriers I have built with my own hands and replace them with faith.",
       "kind": "phrase",
       "words": [
-        "MIDDAY",
-        "PRAYERS"
+        "REPLACE",
+        "FAITH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant me the peace to wait upon Your perfect will as the sun peaks high.",
+      "kind": "phrase",
+      "words": [
+        "WAIT",
+        "UPON"
       ],
       "hi": 0,
       "slot": "C"

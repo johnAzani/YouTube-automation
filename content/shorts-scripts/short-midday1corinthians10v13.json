@@ -1,0 +1,274 @@
+{
+  "key": "short-midday1corinthians10v13",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "FAITHFUL ESCAPE",
+    "MIDDAY STRENGTH"
+  ],
+  "poster": [
+    "A QUIET",
+    "MOMENT FOR",
+    "YOUR SOUL",
+    "MIDDAY PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "bright midday light through office window",
+    "empty wooden desk with open journal",
+    "soft sunlight on a house plant",
+    "dust motes dancing in sunbeam",
+    "empty peaceful park bench",
+    "high sun over calm open field"
+  ],
+  "scenes": [
+    {
+      "a": "That sharp anxiety over your upcoming meeting is not bigger than the peace of God.",
+      "img": "short-midday1corinthians10v13-scene-01.jpg",
+      "kicker": "1 CORINTHIANS 10:13",
+      "sub": "FINDING STRENGTH AT NOON",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "There hath no temptation taken you but such as is common to man:",
+      "img": "short-midday1corinthians10v13-scene-02.jpg",
+      "kicker": "1 CORINTHIANS 10:13",
+      "sub": "HE IS FAITHFUL",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "but God is faithful, who will not suffer you to be tempted above that ye are able;",
+      "img": "short-midday1corinthians10v13-scene-03.jpg",
+      "kicker": "1 CORINTHIANS 10:13",
+      "sub": "YOU ARE ABLE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "but will with the temptation also make a way to escape, that ye may be able to bear it.",
+      "img": "short-midday1corinthians10v13-scene-04.jpg",
+      "kicker": "1 CORINTHIANS 10:13",
+      "sub": "THE WAY OUT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Lord, remind me that I am never truly trapped when Your presence is my sanctuary.",
+      "img": "short-midday1corinthians10v13-scene-05.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "PRAYER FOR RELEASE",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant me the stillness to recognize the exit You provide in the midst of pressure.",
+      "img": "short-midday1corinthians10v13-scene-06.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "GRACE FOR THE HOUR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That sharp anxiety over your upcoming meeting is not bigger than the peace of God."
+    ],
+    [
+      8,
+      16,
+      "There hath no temptation taken you but such as is common to man:"
+    ],
+    [
+      16,
+      24,
+      "but God is faithful, who will not suffer you to be tempted above that ye are able;"
+    ],
+    [
+      24,
+      32,
+      "but will with the temptation also make a way to escape, that ye may be able to bear it."
+    ],
+    [
+      32,
+      40,
+      "Lord, remind me that I am never truly trapped when Your presence is my sanctuary."
+    ],
+    [
+      40,
+      48,
+      "Grant me the stillness to recognize the exit You provide in the midst of pressure."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "SHARP ANXIETY",
+        "IS NOT BIGGER",
+        "THAN THE PEACE"
+      ],
+      [
+        "SHARP ANXIETY"
+      ],
+      "1 CORINTHIANS 10:13"
+    ],
+    [
+      8,
+      16,
+      [
+        "NO TEMPTATION TAKEN",
+        "BUT SUCH AS",
+        "IS COMMON TO MAN"
+      ],
+      [
+        "NO TEMPTATION"
+      ],
+      "1 CORINTHIANS 10:13"
+    ],
+    [
+      16,
+      24,
+      [
+        "GOD IS FAITHFUL",
+        "NOT SUFFER YOU",
+        "ABOVE THAT YE ABLE"
+      ],
+      [
+        "GOD IS FAITHFUL"
+      ],
+      "1 CORINTHIANS 10:13"
+    ],
+    [
+      24,
+      32,
+      [
+        "MAKE A WAY",
+        "TO ESCAPE",
+        "ABLE TO BEAR IT"
+      ],
+      [
+        "WAY TO ESCAPE"
+      ],
+      "1 CORINTHIANS 10:13"
+    ],
+    [
+      32,
+      40,
+      [
+        "NEVER TRULY TRAPPED",
+        "WITH YOUR PRESENCE",
+        "AS MY SANCTUARY"
+      ],
+      [
+        "NEVER TRULY TRAPPED"
+      ],
+      "1 CORINTHIANS 10:13"
+    ],
+    [
+      40,
+      48,
+      [
+        "RECOGNIZE THE EXIT",
+        "IN THE MIDST",
+        "OF THE PRESSURE"
+      ],
+      [
+        "RECOGNIZE THE EXIT"
+      ],
+      "1 CORINTHIANS 10:13"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That sharp anxiety over your upcoming meeting is not bigger than the peace of God.",
+      "kind": "phrase",
+      "words": [
+        "SHARP",
+        "ANXIETY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "There hath no temptation taken you but such as is common to man:",
+      "kind": "phrase",
+      "words": [
+        "NO",
+        "TEMPTATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "but God is faithful, who will not suffer you to be tempted above that ye are able;",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "IS",
+        "FAITHFUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "but will with the temptation also make a way to escape, that ye may be able to bear it.",
+      "kind": "phrase",
+      "words": [
+        "WAY",
+        "TO",
+        "ESCAPE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, remind me that I am never truly trapped when Your presence is my sanctuary.",
+      "kind": "phrase",
+      "words": [
+        "NEVER",
+        "TRULY",
+        "TRAPPED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant me the stillness to recognize the exit You provide in the midst of pressure.",
+      "kind": "phrase",
+      "words": [
+        "RECOGNIZE",
+        "THE",
+        "EXIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "1 Corinthians 10:13"
+}

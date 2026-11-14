@@ -9,8 +9,5 @@ privacy: public
 replace: false
 target_window_utc: '12:14'
 notes: "Companion Short for Galatians 6:9 Midday Prayer | The Midday Watch \u2014\
-  \ spec authored by the brain (133 narration words)"
-alignment_failures: 1
-last_alignment_error: 'cannot prepare Charon narration for short-middaygalatians6v9
-  (Short speech alignment unavailable or incomplete; refusing to render [ValueError:
-  alignment does not cover the narration in order]); refusing to render'
+  \ spec authored by the brain (133 narration words) || narration rewritten to quote\
+  \ Galatians 6:9 word for word (102 narration words)"
