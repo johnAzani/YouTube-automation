@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T07:01:59Z",
+  "generated_at": "2026-11-14T07:02:39Z",
   "monitor_generated_at": "2026-11-14T07:00:20.556083+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 198,
+    "published_total": 199,
     "published_longform": 101,
-    "published_shorts": 97,
-    "public_total": 196,
+    "published_shorts": 98,
+    "public_total": 197,
     "queued_longform": 54,
-    "queued_shorts": 98,
+    "queued_shorts": 97,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 30,
+        "published_total": 31,
         "published_longform": 15,
-        "published_shorts": 15,
+        "published_shorts": 16,
         "thumbnail_pending": 0,
-        "public_total": 30,
+        "public_total": 31,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "0089",
-        "title": "Midday Prayer When You Are Worn Down: Isaiah 32:2 | The Midday Watch",
-        "format": "longform",
-        "youtube_video_id": "BMFD47Gob7w",
-        "watch_url": "https://youtu.be/BMFD47Gob7w",
+        "id": "SHORT-MIDDAYDEUTERONOMY31V6",
+        "title": "Say This Deuteronomy 31:6 Prayer at Noon | Your Heart #Shorts",
+        "format": "short",
+        "youtube_video_id": "_HcZomrZhrw",
+        "watch_url": "https://www.youtube.com/shorts/_HcZomrZhrw",
         "published_on": "2026-11-14",
-        "published_at": "2026-11-14T05:16:30Z"
+        "published_at": "2026-11-14T07:01:33Z"
       },
       "next_queued_longform": {
         "id": "0090",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaydeuteronomy31v6",
-        "scripture": "Deuteronomy 31:6",
+        "short": "short-middaymatthew19v26",
+        "scripture": "Matthew 19:26",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYDEUTERONOMY31V6",
+      "slug": "short-middaydeuteronomy31v6-midday-prayer",
+      "file": "short-middaydeuteronomy31v6-midday-prayer.md",
+      "title": "Say This Deuteronomy 31:6 Prayer at Noon | Your Heart #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T07:01:33Z",
+      "youtube_video_id": "_HcZomrZhrw",
+      "watch_url": "https://www.youtube.com/shorts/_HcZomrZhrw",
+      "youtu_be_url": "https://youtu.be/_HcZomrZhrw",
+      "shorts_url": "https://www.youtube.com/shorts/_HcZomrZhrw",
+      "studio_url": "https://studio.youtube.com/video/_HcZomrZhrw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/_HcZomrZhrw/hqdefault.jpg",
+      "thumb_text": "STRENGTH FOR \u00b7 THE MIDDAY",
+      "thumbnail_pending": false,
+      "duration_label": "43s",
+      "words": 577
+    },
     {
       "id": "0605",
       "slug": "isaiah-54-17-divine-protection-prayer",
@@ -6303,17 +6327,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-middaydeuteronomy31v6",
-        "file": "0000-short-middaydeuteronomy31v6.yml",
-        "companion_longform_id": "",
-        "scripture": "Deuteronomy 31:6",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaymatthew19v26",
