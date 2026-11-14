@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T20:21:44Z",
+  "generated_at": "2026-11-14T20:22:42Z",
   "monitor_generated_at": "2026-11-14T19:12:22.957257+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 235,
+    "published_total": 236,
     "published_longform": 107,
-    "published_shorts": 128,
-    "public_total": 233,
+    "published_shorts": 129,
+    "public_total": 234,
     "queued_longform": 57,
-    "queued_shorts": 80,
+    "queued_shorts": 79,
     "automations_ok": 11,
     "automations_total": 11,
     "network_healthy": true
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 9,
+        "published_total": 10,
         "published_longform": 5,
-        "published_shorts": 4,
-        "thumbnail_pending": 9,
-        "public_total": 9,
+        "published_shorts": 5,
+        "thumbnail_pending": 10,
+        "public_total": 10,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM100V1",
-        "title": "Pray This Psalm 100:1-2 Prayer of Thanksgiving | Find Your Rest Here #Shorts",
+        "id": "SHORT-GARDENPSALM139V14",
+        "title": "Pray This Psalm 139:14 Prayer of Thanksgiving | Psalm 139:14 #Shorts",
         "format": "short",
-        "youtube_video_id": "dIgyUuHjJ90",
-        "watch_url": "https://www.youtube.com/shorts/dIgyUuHjJ90",
+        "youtube_video_id": "ZXsUQ59NPSU",
+        "watch_url": "https://www.youtube.com/shorts/ZXsUQ59NPSU",
         "published_on": "2026-11-14",
-        "published_at": "2026-11-14T15:25:15Z"
+        "published_at": "2026-11-14T20:21:38Z"
       },
       "next_queued_longform": {
         "id": "0705",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm139v14",
-        "scripture": "Psalm 139:14",
+        "short": "short-gardenhabakkuk3v17",
+        "scripture": "Habakkuk 3:17-19",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM139V14",
+      "slug": "short-gardenpsalm139v14-thanksgiving-prayer",
+      "file": "short-gardenpsalm139v14-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 139:14 Prayer of Thanksgiving | Psalm 139:14 #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T20:21:38Z",
+      "youtube_video_id": "ZXsUQ59NPSU",
+      "watch_url": "https://www.youtube.com/shorts/ZXsUQ59NPSU",
+      "youtu_be_url": "https://youtu.be/ZXsUQ59NPSU",
+      "shorts_url": "https://www.youtube.com/shorts/ZXsUQ59NPSU",
+      "studio_url": "https://studio.youtube.com/video/ZXsUQ59NPSU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/ZXsUQ59NPSU/hqdefault.jpg",
+      "thumb_text": "THE PRAISE GARDEN \u00b7 A PRAYER OF",
+      "thumbnail_pending": true,
+      "duration_label": "47s",
+      "words": 455
+    },
     {
       "id": "SHORT-PROVISIONJAMES1V5",
       "slug": "short-provisionjames1v5-stewardship-prayer",
@@ -7082,17 +7106,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-gardenpsalm139v14",
-        "file": "0000-short-gardenpsalm139v14.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 139:14",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
       {
         "short": "short-guidedjohn14v6",
         "file": "0000-short-guidedjohn14v6.yml",
