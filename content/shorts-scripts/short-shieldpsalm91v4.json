@@ -3,45 +3,66 @@
   "channel": "prayer8",
   "psalm": 91,
   "title": [
-    "UNDER HIS FEATHERS",
-    "PSALM 91:4 PRAYER"
+    "DIVINE SHELTER",
+    "IN EVERY STORM"
   ],
   "poster": [
-    "UNDER HIS FEATHERS",
-    "GOD IS YOUR SHIELD",
-    "DIVINE PROTECTION",
-    "PSALM 91:4"
+    "GOD'S WING",
+    "THE SHIELD",
+    "HIS TRUTH",
+    "YOUR REFUGE"
   ],
   "end": [
     "SUBSCRIBE",
     "The Covenant Shield — walk under God's daily covering"
   ],
   "stock_queries": [
-    "golden sunbeams streaming through dark pine forest clouds",
-    "ancient stone fortress tower golden sunset sky",
-    "calm mountain river glowing under warm sunlight",
-    "dramatic sunlit mountain pass soaring cliffs safety",
-    "majestic ancient stone castle wall glowing horizon",
-    "serene lake reflecting golden light rays celestial",
-    "sunburst over peaceful valley glowing mountain ridge"
+    "majestic sunlit mountain pass",
+    "ancient stone watchtower at dawn",
+    "golden light rays through thick clouds",
+    "peaceful river winding through valley",
+    "still night forest with soft moonlight",
+    "calm ocean waves at golden hour"
   ],
   "scenes": [
     {
-      "a": "If fear is quietly whispering about tomorrow while you sit in this room, listen closely.",
+      "a": "If the uncertainty of this specific hour feels like it is closing in, listen closely.",
       "img": "short-shieldpsalm91v4-scene-01.jpg",
       "kicker": "PSALM 91:4",
-      "sub": "FIND PEACE TONIGHT",
+      "sub": "FIND YOUR REFUGE",
       "cam": "push_in",
       "focus": [
         0.5,
-        0.45
+        0.5
       ]
     },
     {
-      "a": "Psalm 91 verse 4 promises, He shall cover thee with his feathers, and under his wings shalt thou trust:",
+      "a": "He shall cover thee with his feathers, and under his wings shalt thou trust: his truth shall be thy shield and buckler.",
       "img": "short-shieldpsalm91v4-scene-02.jpg",
       "kicker": "PSALM 91:4",
-      "sub": "HIS FEATHERS COVER YOU",
+      "sub": "HE SHALL COVER THEE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, in the middle of these shifting circumstances, let me know the weight of your protection.",
+      "img": "short-shieldpsalm91v4-scene-03.jpg",
+      "kicker": "PRAYER FOR SAFETY",
+      "sub": "HEAR MY PRAYER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Keep my spirit tethered to your faithfulness when the path ahead seems obscured by fear.",
+      "img": "short-shieldpsalm91v4-scene-04.jpg",
+      "kicker": "STEADFAST STRENGTH",
+      "sub": "STRENGTHEN MY HEART",
       "cam": "pull_out",
       "focus": [
         0.5,
@@ -49,54 +70,21 @@
       ]
     },
     {
-      "a": "his truth shall be his shield and buckler. Heavenly Father, wrap this tired heart beneath Your shadow tonight.",
-      "img": "short-shieldpsalm91v4-scene-03.jpg",
-      "kicker": "PSALM 91:4",
-      "sub": "HIS TRUTH IS YOUR SHIELD",
-      "cam": "pan_left",
-      "focus": [
-        0.4,
-        0.6
-      ]
-    },
-    {
-      "a": "Surround every vulnerable place with Your unyielding truth. Where panic attempts to enter, let Your living presence stand",
-      "img": "short-shieldpsalm91v4-scene-04.jpg",
-      "kicker": "PSALM 91:4",
-      "sub": "UNYIELDING TRUTH AND SAFETY",
-      "cam": "tilt_up",
-      "focus": [
-        0.5,
-        0.4
-      ]
-    },
-    {
-      "a": "as a mighty fortress and wall of safety. May Your faithful covering guard every thought,",
+      "a": "Let your truth act as the iron fortress that surrounds my mind and guards my peace.",
       "img": "short-shieldpsalm91v4-scene-05.jpg",
-      "kicker": "PSALM 91:4",
-      "sub": "MIGHTY FORTRESS OF PEACE",
-      "cam": "push_in",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "every journey, and every quiet hour. Rest peacefully, knowing God remains your constant shield.",
-      "img": "short-shieldpsalm91v4-scene-06.jpg",
-      "kicker": "PSALM 91:4",
-      "sub": "GOD IS YOUR SHIELD",
+      "kicker": "DIVINE SHIELD",
+      "sub": "BE MY REFUGE",
       "cam": "pan_right",
       "focus": [
-        0.6,
+        0.5,
         0.5
       ]
     },
     {
-      "a": "Subscribe to walk under God's daily covering.",
-      "img": "short-shieldpsalm91v4-scene-07.jpg",
-      "kicker": "THE COVENANT SHIELD",
-      "sub": "WALK IN HIS DAILY COVERING",
+      "a": "May I rest completely in your presence, knowing I am held by your unchanging, mighty hand.",
+      "img": "short-shieldpsalm91v4-scene-06.jpg",
+      "kicker": "DIVINE PEACE",
+      "sub": "REST IN HIS MIGHT",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -107,222 +95,183 @@
   "captions": [
     [
       0,
-      6,
-      "If fear is quietly whispering about tomorrow while you sit in this room, listen closely."
+      8,
+      "If the uncertainty of this specific hour feels like it is closing in, listen closely."
     ],
     [
-      6,
-      15,
-      "Psalm 91 verse 4 promises, He shall cover thee with his feathers, and under his wings shalt thou trust:"
-    ],
-    [
-      15,
+      9,
       23,
-      "his truth shall be his shield and buckler. Heavenly Father, wrap this tired heart beneath Your shadow tonight."
+      "He shall cover thee with his feathers, and under his wings shalt thou trust: his truth shall be thy shield and buckler."
     ],
     [
-      23,
-      30,
-      "Surround every vulnerable place with Your unyielding truth. Where panic attempts to enter, let Your living presence stand"
+      24,
+      38,
+      "Lord, in the middle of these shifting circumstances, let me know the weight of your protection."
     ],
     [
-      30,
-      37,
-      "as a mighty fortress and wall of safety. May Your faithful covering guard every thought,"
+      39,
+      53,
+      "Keep my spirit tethered to your faithfulness when the path ahead seems obscured by fear."
     ],
     [
-      37,
-      44,
-      "every journey, and every quiet hour. Rest peacefully, knowing God remains your constant shield."
+      54,
+      69,
+      "Let your truth act as the iron fortress that surrounds my mind and guards my peace."
     ],
     [
-      44,
-      50,
-      "Subscribe to walk under God's daily covering."
+      70,
+      85,
+      "May I rest completely in your presence, knowing I am held by your unchanging, mighty hand."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      6,
+      8,
       [
-        "IF FEAR IS QUIETLY WHISPERING",
-        "ABOUT TOMORROW",
+        "IF UNCERTAINTY",
+        "OF THIS HOUR",
+        "FEELS CLOSING IN",
         "LISTEN CLOSELY"
       ],
       [
-        "FEAR",
-        "LISTEN"
+        "LISTEN CLOSELY"
       ],
       "PSALM 91:4"
     ],
     [
-      6,
-      15,
-      [
-        "HE SHALL COVER THEE",
-        "WITH HIS FEATHERS",
-        "AND UNDER HIS WINGS TRUST"
-      ],
-      [
-        "COVER",
-        "FEATHERS",
-        "TRUST"
-      ],
-      "PSALM 91:4"
-    ],
-    [
-      15,
+      9,
       23,
       [
-        "HIS TRUTH SHALL BE",
-        "YOUR SHIELD AND BUCKLER",
-        "WRAP THIS TIRED HEART"
+        "HE SHALL COVER",
+        "UNDER HIS WINGS",
+        "TRUST HIS TRUTH",
+        "SHIELD AND BUCKLER"
       ],
       [
-        "SHIELD",
-        "BUCKLER",
-        "SHADOW"
-      ],
-      "PSALM 91:4"
-    ],
-    [
-      23,
-      30,
-      [
-        "SURROUND EVERY VULNERABLE PLACE",
-        "WITH UNYIELDING TRUTH",
-        "GOD'S PRESENCE STANDS"
-      ],
-      [
-        "SURROUND",
-        "TRUTH",
-        "PRESENCE"
+        "SHIELD AND BUCKLER"
       ],
       "PSALM 91:4"
     ],
     [
-      30,
-      37,
+      24,
+      38,
       [
-        "A MIGHTY FORTRESS",
-        "AND WALL OF SAFETY",
-        "GUARD EVERY THOUGHT"
+        "LORD IN THE MIDDLE",
+        "OF SHIFTING CIRCUMSTANCES",
+        "KNOW THE WEIGHT",
+        "OF YOUR PROTECTION"
       ],
       [
-        "FORTRESS",
-        "SAFETY",
-        "GUARD"
-      ],
-      "PSALM 91:4"
-    ],
-    [
-      37,
-      44,
-      [
-        "REST PEACEFULLY KNOWING",
-        "GOD REMAINS YOUR",
-        "CONSTANT SHIELD"
-      ],
-      [
-        "REST",
-        "PEACEFULLY",
-        "SHIELD"
+        "YOUR PROTECTION"
       ],
       "PSALM 91:4"
     ],
     [
-      44,
-      50,
+      39,
+      53,
       [
-        "SUBSCRIBE TO WALK",
-        "UNDER GOD'S DAILY COVERING"
+        "KEEP MY SPIRIT",
+        "TETHERED TO FAITHFULNESS",
+        "WHEN PATH AHEAD",
+        "IS OBSCURED BY FEAR"
       ],
       [
-        "SUBSCRIBE",
-        "DAILY COVERING"
+        "TETHERED"
+      ],
+      "PSALM 91:4"
+    ],
+    [
+      54,
+      69,
+      [
+        "LET YOUR TRUTH",
+        "ACT AS FORTRESS",
+        "GUARDS MY MIND",
+        "AND MY PEACE"
+      ],
+      [
+        "IRON FORTRESS"
+      ],
+      "PSALM 91:4"
+    ],
+    [
+      70,
+      85,
+      [
+        "REST IN PRESENCE",
+        "HELD BY CHANGING",
+        "MIGHTY HAND",
+        "OF THE LORD"
+      ],
+      [
+        "HELD BY HIM"
       ],
       "PSALM 91:4"
     ]
   ],
   "beats": [
     {
-      "a": "If fear is quietly whispering about tomorrow while you sit in this room, listen closely.",
+      "a": "If the uncertainty of this specific hour feels like it is closing in, listen closely.",
       "kind": "phrase",
       "words": [
-        "FEAR",
-        "WHISPERING",
-        "LISTEN"
+        "LISTEN",
+        "CLOSELY"
       ],
-      "hi": 0,
+      "hi": 1,
       "slot": "C"
     },
     {
-      "a": "Psalm 91 verse 4 promises, He shall cover thee with his feathers, and under his wings shalt thou trust:",
+      "a": "He shall cover thee with his feathers, and under his wings shalt thou trust: his truth shall be thy shield and buckler.",
       "kind": "phrase",
       "words": [
-        "COVER",
-        "FEATHERS",
-        "WINGS",
-        "TRUST"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "his truth shall be his shield and buckler. Heavenly Father, wrap this tired heart beneath Your shadow tonight.",
-      "kind": "phrase",
-      "words": [
-        "TRUTH",
         "SHIELD",
-        "BUCKLER",
-        "SHADOW"
+        "AND",
+        "BUCKLER"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Surround every vulnerable place with Your unyielding truth. Where panic attempts to enter, let Your living presence stand",
+      "a": "Lord, in the middle of these shifting circumstances, let me know the weight of your protection.",
       "kind": "phrase",
       "words": [
-        "SURROUND",
-        "UNYIELDING",
-        "PRESENCE"
+        "WEIGHT",
+        "OF",
+        "PROTECTION"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "as a mighty fortress and wall of safety. May Your faithful covering guard every thought,",
+      "a": "Keep my spirit tethered to your faithfulness when the path ahead seems obscured by fear.",
       "kind": "phrase",
       "words": [
-        "FORTRESS",
-        "WALL",
-        "SAFETY",
-        "GUARD"
+        "TETHERED",
+        "TO",
+        "FAITHFULNESS"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "every journey, and every quiet hour. Rest peacefully, knowing God remains your constant shield.",
+      "a": "Let your truth act as the iron fortress that surrounds my mind and guards my peace.",
       "kind": "phrase",
       "words": [
-        "REST",
-        "PEACEFULLY",
-        "CONSTANT",
-        "SHIELD"
+        "IRON",
+        "FORTRESS"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Subscribe to walk under God's daily covering.",
+      "a": "May I rest completely in your presence, knowing I am held by your unchanging, mighty hand.",
       "kind": "phrase",
       "words": [
-        "SUBSCRIBE",
-        "DAILY",
-        "COVERING"
+        "HELD",
+        "BY",
+        "MIGHTY",
+        "HAND"
       ],
       "hi": 0,
       "slot": "C"

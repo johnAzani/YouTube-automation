@@ -1,0 +1,317 @@
+{
+  "key": "short-shieldjohn10v28",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "HELD IN HIS HAND",
+    "NEVER PERISH"
+  ],
+  "poster": [
+    "NO ONE CAN",
+    "PLUCK YOU OUT",
+    "SAFE IN GOD",
+    "JOHN 10:28-29"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "golden sunrise light rays through mountain pass",
+    "ancient stone fortress watchtower sunset",
+    "calm mountain lake reflecting blue sky",
+    "dramatic clouds rays of sun over vast valley",
+    "peaceful river flowing through majestic pine forest",
+    "sunbeams shining through dense forest trees",
+    "golden hour landscape towering mountain peak"
+  ],
+  "scenes": [
+    {
+      "a": "If you fear losing your place in God's care today, listen to Jesus' promise:",
+      "img": "short-shieldjohn10v28-scene-01.jpg",
+      "kicker": "JOHN 10:28",
+      "sub": "HELD IN HIS HAND",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "And I give unto them eternal life; and they shall never perish,",
+      "img": "short-shieldjohn10v28-scene-02.jpg",
+      "kicker": "JOHN 10:28",
+      "sub": "ETERNAL LIFE GIVEN",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "neither shall any man pluck them out of my hand.",
+      "img": "short-shieldjohn10v28-scene-03.jpg",
+      "kicker": "JOHN 10:28",
+      "sub": "NEVER PLUCKED AWAY",
+      "cam": "pull_out",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "My Father, which gave them me, is greater than all;",
+      "img": "short-shieldjohn10v28-scene-04.jpg",
+      "kicker": "JOHN 10:29",
+      "sub": "GREATER THAN ALL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "and no man is able to pluck them out of my Father’s hand.",
+      "img": "short-shieldjohn10v28-scene-05.jpg",
+      "kicker": "JOHN 10:29",
+      "sub": "HELD BY THE FATHER",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, anchor this soul in Your unbreakable grip. No trial or threat can tear them away or snatch them from Your omnipotent protection.",
+      "img": "short-shieldjohn10v28-scene-06.jpg",
+      "kicker": "DIVINE COVERING",
+      "sub": "UNSHAKEABLE SHELTER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Guard their heart, quiet their fears, and keep them secure now and forever. Subscribe to walk under God's daily covering.",
+      "img": "short-shieldjohn10v28-scene-07.jpg",
+      "kicker": "COVENANT SHIELD",
+      "sub": "WALK IN HIS PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If you fear losing your place in God's care today, listen to Jesus' promise:"
+    ],
+    [
+      6,
+      12,
+      "And I give unto them eternal life; and they shall never perish,"
+    ],
+    [
+      12,
+      17,
+      "neither shall any man pluck them out of my hand."
+    ],
+    [
+      17,
+      22,
+      "My Father, which gave them me, is greater than all;"
+    ],
+    [
+      22,
+      28,
+      "and no man is able to pluck them out of my Father’s hand."
+    ],
+    [
+      28,
+      37,
+      "Lord, anchor this soul in Your unbreakable grip. No trial or threat can tear them away or snatch them from Your omnipotent protection."
+    ],
+    [
+      37,
+      46,
+      "Guard their heart, quiet their fears, and keep them secure now and forever. Subscribe to walk under God's daily covering."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF YOU FEAR",
+        "LOSING YOUR PLACE",
+        "LISTEN TO JESUS' PROMISE"
+      ],
+      [
+        "JESUS'",
+        "PROMISE"
+      ],
+      "JOHN 10:28"
+    ],
+    [
+      6,
+      12,
+      [
+        "AND I GIVE UNTO THEM",
+        "ETERNAL LIFE",
+        "THEY SHALL NEVER PERISH"
+      ],
+      [
+        "ETERNAL",
+        "LIFE"
+      ],
+      "JOHN 10:28"
+    ],
+    [
+      12,
+      17,
+      [
+        "NEITHER SHALL ANY MAN",
+        "PLUCK THEM OUT",
+        "OF MY HAND"
+      ],
+      [
+        "MY",
+        "HAND"
+      ],
+      "JOHN 10:28"
+    ],
+    [
+      17,
+      22,
+      [
+        "MY FATHER WHICH GAVE THEM ME",
+        "IS GREATER",
+        "THAN ALL"
+      ],
+      [
+        "GREATER",
+        "THAN ALL"
+      ],
+      "JOHN 10:29"
+    ],
+    [
+      22,
+      28,
+      [
+        "NO MAN IS ABLE",
+        "TO PLUCK THEM",
+        "OUT OF MY FATHER'S HAND"
+      ],
+      [
+        "FATHER'S",
+        "HAND"
+      ],
+      "JOHN 10:29"
+    ],
+    [
+      28,
+      37,
+      [
+        "LORD ANCHOR THIS SOUL",
+        "IN YOUR UNBREAKABLE GRIP",
+        "NO TRIAL CAN TEAR THEM AWAY"
+      ],
+      [
+        "UNBREAKABLE",
+        "GRIP"
+      ],
+      "DIVINE COVERING"
+    ],
+    [
+      37,
+      46,
+      [
+        "GUARD THEIR HEART",
+        "KEEP THEM SECURE",
+        "WALK UNDER GOD'S COVERING"
+      ],
+      [
+        "KEEP",
+        "SECURE"
+      ],
+      "COVENANT SHIELD"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you fear losing your place in God's care today, listen to Jesus' promise:",
+      "kind": "phrase",
+      "words": [
+        "GOD'S",
+        "CARE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And I give unto them eternal life; and they shall never perish,",
+      "kind": "phrase",
+      "words": [
+        "ETERNAL",
+        "LIFE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "neither shall any man pluck them out of my hand.",
+      "kind": "phrase",
+      "words": [
+        "MY",
+        "HAND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "My Father, which gave them me, is greater than all;",
+      "kind": "phrase",
+      "words": [
+        "GREATER",
+        "THAN ALL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and no man is able to pluck them out of my Father’s hand.",
+      "kind": "phrase",
+      "words": [
+        "FATHER'S",
+        "HAND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, anchor this soul in Your unbreakable grip. No trial or threat can tear them away or snatch them from Your omnipotent protection.",
+      "kind": "phrase",
+      "words": [
+        "UNBREAKABLE",
+        "GRIP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guard their heart, quiet their fears, and keep them secure now and forever. Subscribe to walk under God's daily covering.",
+      "kind": "phrase",
+      "words": [
+        "KEEP",
+        "SECURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "John 10:28-29"
+}

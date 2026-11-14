@@ -4,65 +4,43 @@
   "psalm": 23,
   "title": [
     "DIVINE PROTECTION",
-    "PSALM 23:4"
+    "PSALM 23:4 PRAYER"
   ],
   "poster": [
-    "REST IN",
-    "HIS PRESENCE",
-    "DIVINE SHIELD",
-    "PSALM 23:4"
+    "A REFUGE IN",
+    "THE SHADOW",
+    "OF THE",
+    "ALMIGHTY"
   ],
   "end": [
     "SUBSCRIBE",
     "The Covenant Shield — walk under God's daily covering"
   ],
   "stock_queries": [
-    "golden light rays through thick forest canopy",
-    "ancient stone watchtower on quiet mountain peak",
-    "peaceful river at sunset reflection",
-    "misty mountain pass at dawn aerial",
-    "calm lake water reflecting twilight sky",
-    "glowing embers in stone hearth warmth"
+    "misty mountain pass at sunrise",
+    "ancient stone watchtower golden hour",
+    "peaceful river flowing through forest",
+    "soft sunlight rays through dense trees",
+    "serene valley with morning fog",
+    "sturdy stone archway against mountain"
   ],
   "scenes": [
     {
-      "a": "The worry keeping you awake tonight has no power over the peace God intends for you.",
+      "a": "If the weight of this dark valley feels heavier than you can bear, stay right here.",
       "img": "short-shieldpsalm23v4-scene-01.jpg",
       "kicker": "PSALM 23:4",
-      "sub": "HE IS WITH YOU",
+      "sub": "FIND STRENGTH IN THE SHADOW",
       "cam": "push_in",
       "focus": [
         0.5,
-        0.5
+        0.45
       ]
     },
     {
-      "a": "Even though I walk through the darkest valley, I will fear no evil, for you are with me.",
+      "a": "Yea, though I walk through the valley of the shadow of death, I will fear no evil:",
       "img": "short-shieldpsalm23v4-scene-02.jpg",
-      "kicker": "THE WORD",
-      "sub": "YOUR REFUGE",
-      "cam": "pan_left",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "Your rod and your staff, they comfort me.",
-      "img": "short-shieldpsalm23v4-scene-03.jpg",
-      "kicker": "THE PROMISE",
-      "sub": "STRENGTHENED HEART",
-      "cam": "tilt_up",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "Father, cover this soul under your sovereign shadow in this hour of uncertainty and doubt.",
-      "img": "short-shieldpsalm23v4-scene-04.jpg",
-      "kicker": "THE PRAYER",
-      "sub": "DIVINE COVERING",
+      "kicker": "PSALM 23:4",
+      "sub": "YOU ARE NEVER ALONE",
       "cam": "pull_out",
       "focus": [
         0.5,
@@ -70,204 +48,227 @@
       ]
     },
     {
-      "a": "Grant a steady spirit to navigate the path ahead and quiet the storms within their mind.",
-      "img": "short-shieldpsalm23v4-scene-05.jpg",
-      "kicker": "FAITHFULNESS",
-      "sub": "STEADY SPIRIT",
-      "cam": "pan_right",
+      "a": "for thou art with me; thy rod and thy staff they comfort me.",
+      "img": "short-shieldpsalm23v4-scene-03.jpg",
+      "kicker": "PSALM 23:4",
+      "sub": "HIS ROD AND STAFF COMFORT YOU",
+      "cam": "pan_left",
       "focus": [
-        0.5,
+        0.4,
         0.5
       ]
     },
     {
-      "a": "May they rest in the certainty that your presence is the anchor for every heavy step.",
+      "a": "Lord, surround this soul with your hedge of protection as they navigate this difficult season.",
+      "img": "short-shieldpsalm23v4-scene-04.jpg",
+      "kicker": "A PRAYER FOR PEACE",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Grant them a spirit of courage that stands firm even when the path ahead seems obscured.",
+      "img": "short-shieldpsalm23v4-scene-05.jpg",
+      "kicker": "STAY IN THE LIGHT",
+      "sub": "COURAGE FOR THE JOURNEY",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Let your peace, which surpasses all understanding, guard their heart and mind this very hour.",
       "img": "short-shieldpsalm23v4-scene-06.jpg",
-      "kicker": "THE COVENANT",
-      "sub": "REST IN PEACE",
+      "kicker": "GOD IS YOUR SHIELD",
+      "sub": "BE STILL AND KNOW",
       "cam": "push_in",
       "focus": [
         0.5,
-        0.5
+        0.2
       ]
     }
   ],
   "captions": [
     [
       0,
-      12,
-      "The worry keeping you awake tonight has no power over the peace God intends for you."
+      8,
+      "If the weight of this dark valley feels heavier than you can bear, stay right here."
     ],
     [
-      13,
-      28,
-      "Even though I walk through the darkest valley, I will fear no evil, for you are with me."
+      8,
+      18,
+      "Yea, though I walk through the valley of the shadow of death, I will fear no evil:"
     ],
     [
-      29,
-      40,
-      "Your rod and your staff, they comfort me."
+      18,
+      26,
+      "for thou art with me; thy rod and thy staff they comfort me."
     ],
     [
-      41,
-      60,
-      "Father, cover this soul under your sovereign shadow in this hour of uncertainty and doubt."
+      26,
+      36,
+      "Lord, surround this soul with your hedge of protection as they navigate this difficult season."
     ],
     [
-      61,
-      80,
-      "Grant a steady spirit to navigate the path ahead and quiet the storms within their mind."
+      36,
+      46,
+      "Grant them a spirit of courage that stands firm even when the path ahead seems obscured."
     ],
     [
-      81,
-      105,
-      "May they rest in the certainty that your presence is the anchor for every heavy step. Subscribe."
+      46,
+      56,
+      "Let your peace, which surpasses all understanding, guard their heart and mind this very hour."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      12,
+      8,
       [
-        "THE WORRY KEEPING YOU",
-        "AWAKE TONIGHT HAS NO",
-        "POWER OVER THE PEACE",
-        "GOD INTENDS FOR YOU"
+        "IF THE WEIGHT",
+        "OF THIS",
+        "DARK VALLEY",
+        "FEELS HEAVIER",
+        "STAY RIGHT HERE"
       ],
       [
-        "GOD INTENDS"
-      ],
-      "PSALM 23:4"
-    ],
-    [
-      13,
-      28,
-      [
-        "EVEN THOUGH I WALK",
-        "THROUGH THE DARKEST VALLEY",
-        "I WILL FEAR NO EVIL",
-        "FOR YOU ARE WITH ME"
-      ],
-      [
-        "FEAR NO EVIL"
+        "HEAVIER"
       ],
       "PSALM 23:4"
     ],
     [
-      29,
-      40,
+      8,
+      18,
       [
-        "YOUR ROD AND",
-        "YOUR STAFF",
+        "YEA THOUGH I",
+        "WALK THROUGH THE",
+        "VALLEY OF THE",
+        "SHADOW OF DEATH",
+        "I FEAR NO EVIL"
+      ],
+      [
+        "SHADOW",
+        "NO EVIL"
+      ],
+      "PSALM 23:4"
+    ],
+    [
+      18,
+      26,
+      [
+        "FOR THOU",
+        "ART WITH ME",
+        "THY ROD AND STAFF",
         "THEY COMFORT ME"
       ],
       [
-        "THEY COMFORT ME"
+        "COMFORT"
       ],
       "PSALM 23:4"
     ],
     [
-      41,
-      60,
+      26,
+      36,
       [
-        "FATHER COVER THIS SOUL",
-        "UNDER YOUR SOVEREIGN SHADOW",
-        "IN THIS HOUR OF",
-        "UNCERTAINTY AND DOUBT"
+        "LORD SURROUND",
+        "THIS SOUL",
+        "WITH YOUR",
+        "HEDGE OF PROTECTION"
       ],
       [
-        "SOVEREIGN SHADOW"
-      ],
-      "PSALM 23:4"
-    ],
-    [
-      61,
-      80,
-      [
-        "GRANT A STEADY SPIRIT",
-        "TO NAVIGATE THE PATH",
-        "AHEAD AND QUIET THE",
-        "STORMS WITHIN THEIR MIND"
-      ],
-      [
-        "STEADY SPIRIT"
+        "PROTECTION"
       ],
       "PSALM 23:4"
     ],
     [
-      81,
-      105,
+      36,
+      46,
       [
-        "MAY THEY REST IN THE",
-        "CERTAINTY THAT YOUR PRESENCE",
-        "IS THE ANCHOR FOR",
-        "EVERY HEAVY STEP"
+        "GRANT THEM A",
+        "SPIRIT OF",
+        "COURAGE THAT",
+        "STANDS FIRM"
       ],
       [
-        "THE ANCHOR"
+        "COURAGE",
+        "FIRM"
+      ],
+      "PSALM 23:4"
+    ],
+    [
+      46,
+      56,
+      [
+        "LET YOUR PEACE",
+        "GUARD THEIR",
+        "HEART AND MIND",
+        "THIS VERY HOUR"
+      ],
+      [
+        "PEACE",
+        "GUARD"
       ],
       "PSALM 23:4"
     ]
   ],
   "beats": [
     {
-      "a": "The worry keeping you awake tonight has no power over the peace God intends for you.",
+      "a": "If the weight of this dark valley feels heavier than you can bear, stay right here.",
       "kind": "phrase",
       "words": [
-        "GOD",
-        "INTENDS"
+        "HEAVIER"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Even though I walk through the darkest valley, I will fear no evil, for you are with me.",
+      "a": "Yea, though I walk through the valley of the shadow of death, I will fear no evil:",
       "kind": "phrase",
       "words": [
-        "FEAR",
-        "NO",
-        "EVIL"
+        "SHADOW",
+        "NO EVIL"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Your rod and your staff, they comfort me.",
+      "a": "for thou art with me; thy rod and thy staff they comfort me.",
       "kind": "phrase",
       "words": [
-        "THEY",
-        "COMFORT",
-        "ME"
+        "COMFORT"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Father, cover this soul under your sovereign shadow in this hour of uncertainty and doubt.",
+      "a": "Lord, surround this soul with your hedge of protection as they navigate this difficult season.",
       "kind": "phrase",
       "words": [
-        "SOVEREIGN",
-        "SHADOW"
+        "PROTECTION"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Grant a steady spirit to navigate the path ahead and quiet the storms within their mind.",
+      "a": "Grant them a spirit of courage that stands firm even when the path ahead seems obscured.",
       "kind": "phrase",
       "words": [
-        "STEADY",
-        "SPIRIT"
+        "COURAGE",
+        "FIRM"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "May they rest in the certainty that your presence is the anchor for every heavy step.",
+      "a": "Let your peace, which surpasses all understanding, guard their heart and mind this very hour.",
       "kind": "phrase",
       "words": [
-        "THE",
-        "ANCHOR"
+        "PEACE",
+        "GUARD"
       ],
       "hi": 0,
       "slot": "C"

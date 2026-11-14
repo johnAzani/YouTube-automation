@@ -7,29 +7,29 @@
     "PSALM 91:7"
   ],
   "poster": [
-    "A STRONG REFUGE",
-    "FOR YOUR JOURNEY",
-    "SHELTERED BY GOD",
-    "UNDER HIS WINGS"
+    "THE SHIELD",
+    "DIVINE PROTECTION",
+    "PSALM 91:7",
+    "REFUGE"
   ],
   "end": [
     "SUBSCRIBE",
     "The Covenant Shield — walk under God's daily covering"
   ],
   "stock_queries": [
-    "majestic mountain range during twilight",
-    "ancient stone watchtower on a hill",
-    "golden sunlight piercing through storm clouds",
-    "peaceful river flowing through a deep canyon",
-    "calm ocean waves at dawn",
-    "misty forest path at sunrise"
+    "majestic sunlit mountain pass",
+    "ancient stone tower at dusk",
+    "golden light rays through clouds",
+    "calm peaceful river at dawn",
+    "storm clouds clearing over valley",
+    "serene mountain lake at sunset"
   ],
   "scenes": [
     {
-      "a": "If this heavy decision before you feels like a mountain you cannot climb alone, listen now.",
+      "a": "If the shadow of fear is cast across your doorway tonight, stay for this quiet prayer.",
       "img": "short-shieldpsalm91v7-scene-01.jpg",
       "kicker": "PSALM 91:7",
-      "sub": "YOUR REFUGE IN THE STORM",
+      "sub": "GOD IS YOUR DEFENSE",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -37,239 +37,239 @@
       ]
     },
     {
-      "a": "A thousand may fall at your side, ten thousand at your right hand, but it will not come near you.",
+      "a": "We turn to the word for our strength.",
       "img": "short-shieldpsalm91v7-scene-02.jpg",
-      "kicker": "DIVINE PROTECTION",
-      "sub": "SHELTERED FROM HARM",
+      "kicker": "THE WORD",
+      "sub": "HIS PROMISE REMAINS",
       "cam": "pull_out",
       "focus": [
         0.5,
-        0.3
+        0.5
       ]
     },
     {
-      "a": "Father, I bring this person before You today.",
+      "a": "A thousand shall fall at thy side, and ten thousand at thy right hand; but it shall not come nigh thee.",
       "img": "short-shieldpsalm91v7-scene-03.jpg",
-      "kicker": "A PRAYER FOR YOU",
-      "sub": "STANDING IN HIS STRENGTH",
+      "kicker": "DIVINE SHIELD",
+      "sub": "NO HARM SHALL TOUCH YOU",
       "cam": "pan_left",
       "focus": [
-        0.4,
+        0.5,
         0.5
       ]
     },
     {
-      "a": "Wrap them in the shadow of the Almighty.",
+      "a": "Lord, anchor our hearts in this truth as the world turns restless and uncertain today.",
       "img": "short-shieldpsalm91v7-scene-04.jpg",
-      "kicker": "HIS SHADOW",
-      "sub": "YOUR SECRET PLACE",
+      "kicker": "STEADFAST",
+      "sub": "REST IN HIS MIGHT",
       "cam": "pan_right",
       "focus": [
-        0.6,
+        0.5,
         0.5
       ]
     },
     {
-      "a": "Let every lingering anxiety fade as they realize that no evil can stand against the fortress of Your presence.",
+      "a": "Grant us the stillness to see your hand at work when everything around us feels chaotic.",
       "img": "short-shieldpsalm91v7-scene-05.jpg",
-      "kicker": "UNSHAKABLE PEACE",
-      "sub": "SAFE WITHIN THE WALLS",
+      "kicker": "HIS PEACE",
+      "sub": "ABIDE IN THE SHADOW",
       "cam": "tilt_up",
       "focus": [
         0.5,
-        0.2
+        0.5
       ]
     },
     {
-      "a": "Grant them a spirit of calm, deep trust, and the quiet assurance that they are never walking this path alone.",
+      "a": "We entrust our path to your holy keeping, finding our only rest in your promise, Amen.",
       "img": "short-shieldpsalm91v7-scene-06.jpg",
-      "kicker": "ABIDE IN TRUTH",
-      "sub": "GOD IS YOUR SHIELD",
+      "kicker": "REFUGE",
+      "sub": "BENEATH HIS WINGS",
       "cam": "push_in",
       "focus": [
         0.5,
-        0.7
+        0.5
       ]
     }
   ],
   "captions": [
     [
       0,
-      9,
-      "If this heavy decision before you feels like a mountain you cannot climb alone, listen now."
+      6,
+      "If the shadow of fear is cast across your doorway tonight, stay for this quiet prayer."
     ],
     [
-      10,
-      25,
-      "A thousand may fall at your side, ten thousand at your right hand, but it will not come near you."
+      6,
+      12,
+      "We turn to the word for our strength."
     ],
     [
-      26,
-      36,
-      "Father, I bring this person before You today."
+      12,
+      24,
+      "A thousand shall fall at thy side, and ten thousand at thy right hand; but it shall not come nigh thee."
     ],
     [
-      37,
-      47,
-      "Wrap them in the shadow of the Almighty."
+      24,
+      32,
+      "Lord, anchor our hearts in this truth as the world turns restless and uncertain today."
     ],
     [
+      32,
+      40,
+      "Grant us the stillness to see your hand at work when everything around us feels chaotic."
+    ],
+    [
+      40,
       48,
-      62,
-      "Let every lingering anxiety fade as they realize that no evil can stand against the fortress of Your presence."
-    ],
-    [
-      63,
-      78,
-      "Grant them a spirit of calm, deep trust, and the quiet assurance that they are never walking this path alone."
+      "We entrust our path to your holy keeping, finding our only rest in your promise, Amen."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      9,
+      6,
       [
-        "THIS HEAVY DECISION",
-        "FEELS LIKE A MOUNTAIN",
-        "CLIMB ALONE"
-      ],
-      [
-        "MOUNTAIN",
-        "ALONE"
-      ],
-      "PSALM 91:7"
-    ],
-    [
-      10,
-      25,
-      [
-        "A THOUSAND MAY FALL",
-        "TEN THOUSAND AT",
-        "YOUR RIGHT HAND",
-        "IT WILL NOT",
-        "COME NEAR YOU"
-      ],
-      [
-        "THOUSAND",
-        "NOT NEAR"
-      ],
-      "PSALM 91:7"
-    ],
-    [
-      26,
-      36,
-      [
-        "FATHER I BRING",
-        "THIS PERSON BEFORE",
-        "YOU TODAY"
-      ],
-      [
-        "BRING",
-        "TODAY"
-      ],
-      "PSALM 91:7"
-    ],
-    [
-      37,
-      47,
-      [
-        "WRAP THEM IN",
-        "THE SHADOW OF",
-        "THE ALMIGHTY"
+        "SHADOW OF FEAR",
+        "CAST ACROSS",
+        "YOUR DOORWAY"
       ],
       [
         "SHADOW",
-        "ALMIGHTY"
+        "FEAR"
       ],
       "PSALM 91:7"
     ],
     [
+      6,
+      12,
+      [
+        "TURN TO",
+        "THE WORD",
+        "FOR STRENGTH"
+      ],
+      [
+        "WORD",
+        "STRENGTH"
+      ],
+      "PSALM 91:7"
+    ],
+    [
+      12,
+      24,
+      [
+        "A THOUSAND FALL",
+        "AT THY SIDE",
+        "IT SHALL NOT",
+        "COME NIGH THEE"
+      ],
+      [
+        "THOUSAND",
+        "NIGH"
+      ],
+      "PSALM 91:7"
+    ],
+    [
+      24,
+      32,
+      [
+        "ANCHOR OUR HEARTS",
+        "IN THIS TRUTH",
+        "WORLD TURNS",
+        "RESTLESS"
+      ],
+      [
+        "ANCHOR",
+        "TRUTH"
+      ],
+      "PSALM 91:7"
+    ],
+    [
+      32,
+      40,
+      [
+        "STILLNESS TO SEE",
+        "YOUR HAND",
+        "WORK IN CHAOS"
+      ],
+      [
+        "STILLNESS",
+        "HAND"
+      ],
+      "PSALM 91:7"
+    ],
+    [
+      40,
       48,
-      62,
       [
-        "EVERY LINGERING ANXIETY FADE",
-        "NO EVIL CAN STAND",
-        "AGAINST THE FORTRESS"
+        "ENTRUST OUR PATH",
+        "HOLY KEEPING",
+        "REST IN",
+        "HIS PROMISE"
       ],
       [
-        "ANXIETY",
-        "FORTRESS"
-      ],
-      "PSALM 91:7"
-    ],
-    [
-      63,
-      78,
-      [
-        "SPIRIT OF CALM",
-        "DEEP TRUST",
-        "QUIET ASSURANCE",
-        "NEVER WALKING ALONE"
-      ],
-      [
-        "TRUST",
-        "ASSURANCE"
+        "ENTRUST",
+        "PROMISE"
       ],
       "PSALM 91:7"
     ]
   ],
   "beats": [
     {
-      "a": "If this heavy decision before you feels like a mountain you cannot climb alone, listen now.",
-      "kind": "phrase",
-      "words": [
-        "MOUNTAIN",
-        "ALONE"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "A thousand may fall at your side, ten thousand at your right hand, but it will not come near you.",
-      "kind": "phrase",
-      "words": [
-        "THOUSAND",
-        "NEAR"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Father, I bring this person before You today.",
-      "kind": "phrase",
-      "words": [
-        "BRING",
-        "TODAY"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Wrap them in the shadow of the Almighty.",
+      "a": "If the shadow of fear is cast across your doorway tonight, stay for this quiet prayer.",
       "kind": "phrase",
       "words": [
         "SHADOW",
-        "ALMIGHTY"
+        "FEAR"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Let every lingering anxiety fade as they realize that no evil can stand against the fortress of Your presence.",
+      "a": "We turn to the word for our strength.",
       "kind": "phrase",
       "words": [
-        "ANXIETY",
-        "FORTRESS"
+        "WORD",
+        "STRENGTH"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Grant them a spirit of calm, deep trust, and the quiet assurance that they are never walking this path alone.",
+      "a": "A thousand shall fall at thy side, and ten thousand at thy right hand; but it shall not come nigh thee.",
       "kind": "phrase",
       "words": [
-        "TRUST",
-        "ASSURANCE"
+        "THOUSAND",
+        "NIGH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, anchor our hearts in this truth as the world turns restless and uncertain today.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us the stillness to see your hand at work when everything around us feels chaotic.",
+      "kind": "phrase",
+      "words": [
+        "STILLNESS",
+        "HAND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We entrust our path to your holy keeping, finding our only rest in your promise, Amen.",
+      "kind": "phrase",
+      "words": [
+        "ENTRUST",
+        "PROMISE"
       ],
       "hi": 0,
       "slot": "C"
