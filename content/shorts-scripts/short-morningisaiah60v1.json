@@ -3,33 +3,33 @@
   "channel": "prayer2",
   "psalm": null,
   "title": [
-    "ARISE AND SHINE",
-    "THE MORNING LIGHT"
+    "ARISE",
+    "AND SHINE"
   ],
   "poster": [
-    "LIGHT BREAKING",
-    "THE DAWNING HOUR",
-    "SCRIPTURE PRAYER",
-    "THE MORNING ALTAR"
+    "DAWN OVER",
+    "THE MOUNTAINS",
+    "HIS LIGHT",
+    "IS HERE"
   ],
   "end": [
     "SUBSCRIBE",
     "The Morning Altar — begin every sunrise in prayer"
   ],
   "stock_queries": [
-    "soft sun rays through morning mist",
-    "golden light hitting pine forest canopy",
-    "slow motion ripples on a quiet lake",
-    "dew drops on leaves at sunrise",
-    "sunlight breaking through dark clouds",
-    "soft lens flare over a mountain peak"
+    "golden hour sun rising over calm mountain lake",
+    "soft sunlight filtering through bedroom curtains",
+    "early morning mist over a quiet valley",
+    "first light touching pine forest canopy",
+    "sun rays breaking through heavy clouds",
+    "serene horizon at dawn with soft orange glow"
   ],
   "scenes": [
     {
-      "a": "That sharp anxiety stirring in your chest right now is exactly where His light belongs.",
+      "a": "The worry that tightened your chest at three in the morning is ready to be released.",
       "img": "short-morningisaiah60v1-scene-01.jpg",
       "kicker": "ISAIAH 60:1",
-      "sub": "GOD'S WORD FOR YOU",
+      "sub": "THE LIGHT HAS COME",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -37,32 +37,21 @@
       ]
     },
     {
-      "a": "Arise, shine, for your light has come, and the glory of the Lord rises upon you.",
+      "a": "Listen to the word of the Lord for this hour.",
       "img": "short-morningisaiah60v1-scene-02.jpg",
-      "kicker": "ISAIAH 60:1",
-      "sub": "THE GLORY OF THE LORD",
+      "kicker": "HIS PROMISE",
+      "sub": "HEAR HIS WORD",
       "cam": "pan_left",
       "focus": [
-        0.5,
+        0.3,
         0.5
       ]
     },
     {
-      "a": "Lord, thank You for the truth that the darkness does not define this new day.",
+      "a": "Arise, shine; for thy light is come, and the glory of the LORD is risen upon thee.",
       "img": "short-morningisaiah60v1-scene-03.jpg",
-      "kicker": "A PRAYER",
-      "sub": "SURRENDER IN THE LIGHT",
-      "cam": "tilt_up",
-      "focus": [
-        0.5,
-        0.3
-      ]
-    },
-    {
-      "a": "Help me to stand firmly in Your grace rather than retreating into the shadows today.",
-      "img": "short-morningisaiah60v1-scene-04.jpg",
-      "kicker": "STEADFAST GRACE",
-      "sub": "WALKING IN THE MORNING",
+      "kicker": "ISAIAH 60:1",
+      "sub": "ARISE AND SHINE",
       "cam": "pull_out",
       "focus": [
         0.5,
@@ -70,25 +59,36 @@
       ]
     },
     {
-      "a": "May Your presence brighten the path ahead and settle the frantic rhythm of my heart.",
-      "img": "short-morningisaiah60v1-scene-05.jpg",
-      "kicker": "DIVINE CALM",
-      "sub": "PEACE IN HIS PRESENCE",
-      "cam": "push_in",
+      "a": "Father, let this truth anchor my spirit against the shifting shadows of my own doubt.",
+      "img": "short-morningisaiah60v1-scene-04.jpg",
+      "kicker": "A MORNING PRAYER",
+      "sub": "ANCHOR MY SPIRIT",
+      "cam": "tilt_up",
       "focus": [
         0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "May Your glory break through every closed door in my life, revealing paths I cannot see.",
+      "img": "short-morningisaiah60v1-scene-05.jpg",
+      "kicker": "DIVINE GUIDANCE",
+      "sub": "REVEAL MY PATH",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
         0.5
       ]
     },
     {
-      "a": "Guide my thoughts and my steps until the sun is high and my spirit rests.",
+      "a": "Give me the strength to stand tall in Your grace and walk into this day transformed.",
       "img": "short-morningisaiah60v1-scene-06.jpg",
-      "kicker": "PRAYERFUL DAWN",
-      "sub": "FINDING REST IN TRUTH",
-      "cam": "pan_right",
+      "kicker": "STRENGTH FOR TODAY",
+      "sub": "WALK IN GRACE",
+      "cam": "push_in",
       "focus": [
         0.5,
-        0.6
+        0.4
       ]
     }
   ],
@@ -96,32 +96,32 @@
     [
       0,
       8,
-      "That sharp anxiety stirring in your chest right now is exactly where His light belongs."
+      "The worry that tightened your chest at three in the morning is ready to be released."
     ],
     [
       8,
-      16,
-      "Arise, shine, for your light has come, and the glory of the Lord rises upon you."
+      15,
+      "Listen to the word of the Lord for this hour."
     ],
     [
-      16,
-      24,
-      "Lord, thank You for the truth that the darkness does not define this new day."
+      15,
+      26,
+      "Arise, shine; for thy light is come, and the glory of the LORD is risen upon thee."
     ],
     [
-      24,
-      32,
-      "Help me to stand firmly in Your grace rather than retreating into the shadows today."
+      26,
+      38,
+      "Father, let this truth anchor my spirit against the shifting shadows of my own doubt."
     ],
     [
-      32,
-      40,
-      "May Your presence brighten the path ahead and settle the frantic rhythm of my heart."
+      38,
+      50,
+      "May Your glory break through every closed door in my life, revealing paths I cannot see."
     ],
     [
-      40,
-      48,
-      "Guide my thoughts and my steps until the sun is high and my spirit rests."
+      50,
+      60,
+      "Give me the strength to stand tall in Your grace and walk into this day transformed."
     ]
   ],
   "kinetic_phrases": [
@@ -129,138 +129,96 @@
       0,
       8,
       [
-        "THAT SHARP ANXIETY",
-        "STIRRING IN YOUR CHEST",
-        "WHERE HIS LIGHT BELONGS"
+        "THE WORRY",
+        "IN YOUR CHEST",
+        "IS READY TO BE",
+        "RELEASED NOW"
       ],
       [
-        "LIGHT BELONGS"
+        "RELEASED"
       ],
-      "ISAIAH 60:1"
+      "ISAIAH 60 : 1"
     ],
     [
       8,
-      16,
+      15,
       [
-        "ARISE SHINE FOR",
-        "YOUR LIGHT HAS COME",
-        "THE GLORY OF LORD"
+        "LISTEN TO",
+        "THE WORD OF",
+        "THE LORD FOR",
+        "THIS HOUR"
       ],
       [
-        "LIGHT HAS COME"
+        "LORD"
       ],
-      "ISAIAH 60:1"
+      "ISAIAH 60 : 1"
     ],
     [
-      16,
-      24,
+      15,
+      26,
       [
-        "THANK YOU LORD",
-        "DARKNESS DOES NOT DEFINE",
-        "THIS NEW DAY"
+        "ARISE SHINE",
+        "FOR THY LIGHT",
+        "IS COME AND",
+        "THE GLORY",
+        "IS RISEN"
       ],
       [
-        "NEW DAY"
+        "ARISE",
+        "SHINE"
       ],
-      "ISAIAH 60:1"
+      "ISAIAH 60 : 1"
     ],
     [
-      24,
-      32,
+      26,
+      38,
       [
-        "STAND FIRMLY IN GRACE",
-        "RATHER THAN RETREATING",
-        "INTO THE SHADOWS"
+        "ANCHOR MY SPIRIT",
+        "AGAINST THE",
+        "SHIFTING SHADOWS",
+        "OF MY DOUBT"
       ],
       [
-        "STAND FIRMLY"
+        "ANCHOR"
       ],
-      "ISAIAH 60:1"
+      "ISAIAH 60 : 1"
     ],
     [
-      32,
-      40,
+      38,
+      50,
       [
-        "YOUR PRESENCE BRIGHTEN",
-        "THE PATH AHEAD",
-        "SETTLE MY HEART"
+        "MAY YOUR GLORY",
+        "BREAK THROUGH",
+        "EVERY CLOSED DOOR",
+        "REVEALING PATHS"
       ],
       [
-        "BRIGHTEN"
+        "GLORY"
       ],
-      "ISAIAH 60:1"
+      "ISAIAH 60 : 1"
     ],
     [
-      40,
-      48,
+      50,
+      60,
       [
-        "GUIDE MY THOUGHTS",
-        "SUN IS HIGH",
-        "MY SPIRIT RESTS"
+        "STRENGTH TO STAND",
+        "IN YOUR GRACE",
+        "WALK INTO THIS",
+        "DAY TRANSFORMED"
       ],
       [
-        "SPIRIT RESTS"
+        "TRANSFORMED"
       ],
-      "ISAIAH 60:1"
+      "ISAIAH 60 : 1"
     ]
   ],
   "beats": [
     {
-      "a": "That sharp anxiety stirring in your chest right now is exactly where His light belongs.",
+      "a": "Arise, shine; for thy light is come, and the glory of the LORD is risen upon thee.",
       "kind": "phrase",
       "words": [
-        "LIGHT",
-        "BELONGS"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Arise, shine, for your light has come, and the glory of the Lord rises upon you.",
-      "kind": "phrase",
-      "words": [
-        "LIGHT",
-        "HAS",
-        "COME"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Lord, thank You for the truth that the darkness does not define this new day.",
-      "kind": "phrase",
-      "words": [
-        "NEW",
-        "DAY"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Help me to stand firmly in Your grace rather than retreating into the shadows today.",
-      "kind": "phrase",
-      "words": [
-        "STAND",
-        "FIRMLY"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "May Your presence brighten the path ahead and settle the frantic rhythm of my heart.",
-      "kind": "phrase",
-      "words": [
-        "BRIGHTEN"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Guide my thoughts and my steps until the sun is high and my spirit rests.",
-      "kind": "phrase",
-      "words": [
-        "SPIRIT",
-        "RESTS"
+        "ARISE",
+        "SHINE"
       ],
       "hi": 0,
       "slot": "C"

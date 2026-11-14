@@ -1,0 +1,272 @@
+{
+  "key": "short-morningproverbs16v9",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "WHEN YOUR PLANS",
+    "CHANGE TODAY"
+  ],
+  "poster": [
+    "PROVERBS 16:9",
+    "TRUST GOD'S STEPS",
+    "A SUNRISE PRAYER",
+    "THE MORNING ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "sunrise light misty mountain valley foggy morning",
+    "golden sunrise shining through forest trees path",
+    "peaceful dawn over calm lake mirror reflection",
+    "bright morning sky red cloud horizon sunrise",
+    "sunrise horizon open field golden grass quiet",
+    "gentle sunrise light through window quiet room"
+  ],
+  "scenes": [
+    {
+      "a": "Before you write down your plans for today, hand your uncertain schedule to God.",
+      "img": "short-morningproverbs16v9-scene-01.jpg",
+      "kicker": "PROVERBS 16:9",
+      "sub": "SURRENDER YOUR SCHEDULE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Proverbs sixteen, verse nine says, A man’s heart deviseth his way: but the LORD directeth his steps.",
+      "img": "short-morningproverbs16v9-scene-02.jpg",
+      "kicker": "PROVERBS 16:9",
+      "sub": "THE LORD DIRECTS YOUR STEPS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, you know the maps we draw in our minds and the paths we try to build on our own.",
+      "img": "short-morningproverbs16v9-scene-03.jpg",
+      "kicker": "PROVERBS 16:9",
+      "sub": "TRUSTING GOD'S MAP",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Today, as this morning sun rises, we yield our personal blueprints into your wise and loving hands.",
+      "img": "short-morningproverbs16v9-scene-04.jpg",
+      "kicker": "PROVERBS 16:9",
+      "sub": "YIELDING TO HIS WILL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Order our footsteps where we cannot see ahead, and grant us peace when your direction strays from our plans.",
+      "img": "short-morningproverbs16v9-scene-05.jpg",
+      "kicker": "PROVERBS 16:9",
+      "sub": "HE LEADS THE WAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lead us clearly in every choice we face today. Subscribe to join us every sunrise at The Morning Altar.",
+      "img": "short-morningproverbs16v9-scene-06.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "BEGIN EVERY SUNRISE IN PRAYER",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "Before you write down your plans for today, hand your uncertain schedule to God."
+    ],
+    [
+      6,
+      13,
+      "Proverbs sixteen, verse nine says, A man’s heart deviseth his way: but the LORD directeth his steps."
+    ],
+    [
+      13,
+      21,
+      "Heavenly Father, you know the maps we draw in our minds and the paths we try to build on our own."
+    ],
+    [
+      21,
+      28,
+      "Today, as this morning sun rises, we yield our personal blueprints into your wise and loving hands."
+    ],
+    [
+      28,
+      36,
+      "Order our footsteps where we cannot see ahead, and grant us peace when your direction strays from our plans."
+    ],
+    [
+      36,
+      44,
+      "Lead us clearly in every choice we face today. Subscribe to join us every sunrise at The Morning Altar."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "BEFORE YOU WRITE YOUR PLANS",
+        "HAND YOUR SCHEDULE TO GOD"
+      ],
+      [
+        "PLANS",
+        "SCHEDULE"
+      ],
+      "PROVERBS 16 : 9"
+    ],
+    [
+      6,
+      13,
+      [
+        "A MAN'S HEART DEVISETH HIS WAY",
+        "BUT THE LORD DIRECTETH HIS STEPS"
+      ],
+      [
+        "HEART",
+        "LORD",
+        "STEPS"
+      ],
+      "PROVERBS 16 : 9"
+    ],
+    [
+      13,
+      21,
+      [
+        "YOU KNOW THE MAPS WE DRAW",
+        "AND THE PATHS WE BUILD ON OUR OWN"
+      ],
+      [
+        "MAPS",
+        "PATHS"
+      ],
+      "PROVERBS 16 : 9"
+    ],
+    [
+      21,
+      28,
+      [
+        "WE YIELD OUR BLUEPRINTS",
+        "INTO YOUR WISE HANDS"
+      ],
+      [
+        "YIELD",
+        "HANDS"
+      ],
+      "PROVERBS 16 : 9"
+    ],
+    [
+      28,
+      36,
+      [
+        "ORDER OUR FOOTSTEPS AHEAD",
+        "GRANT US PEACE IN YOUR DIRECTION"
+      ],
+      [
+        "FOOTSTEPS",
+        "PEACE"
+      ],
+      "PROVERBS 16 : 9"
+    ],
+    [
+      36,
+      44,
+      [
+        "LEAD US IN EVERY CHOICE TODAY",
+        "SUBSCRIBE TO THE MORNING ALTAR"
+      ],
+      [
+        "LEAD",
+        "SUBSCRIBE"
+      ],
+      "PROVERBS 16 : 9"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Before you write down your plans for today, hand your uncertain schedule to God.",
+      "kind": "phrase",
+      "words": [
+        "PLANS",
+        "SCHEDULE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "A man’s heart deviseth his way: but the LORD directeth his steps.",
+      "kind": "phrase",
+      "words": [
+        "HEART",
+        "LORD",
+        "STEPS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, you know the maps we draw in our minds and the paths we try to build on our own.",
+      "kind": "phrase",
+      "words": [
+        "MAPS",
+        "PATHS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Today, as this morning sun rises, we yield our personal blueprints into your wise and loving hands.",
+      "kind": "phrase",
+      "words": [
+        "YIELD",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Order our footsteps where we cannot see ahead, and grant us peace when your direction strays from our plans.",
+      "kind": "phrase",
+      "words": [
+        "FOOTSTEPS",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lead us clearly in every choice we face today. Subscribe to join us every sunrise at The Morning Altar.",
+      "kind": "phrase",
+      "words": [
+        "LEAD",
+        "SUBSCRIBE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 16:9"
+}

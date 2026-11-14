@@ -3,33 +3,33 @@
   "channel": "prayer2",
   "psalm": null,
   "title": [
-    "GOD'S PLAN",
-    "FOR YOUR FUTURE"
+    "GOD'S THOUGHTS",
+    "TOWARD YOU"
   ],
   "poster": [
-    "A PRAYER",
-    "FOR THE",
-    "UNCERTAIN HEART",
-    "JEREMIAH 29:11"
+    "A CALM PRAYER",
+    "FOR YOUR MORNING",
+    "JEREMIAH 29:11",
+    "THE MORNING ALTAR"
   ],
   "end": [
     "SUBSCRIBE",
     "The Morning Altar — begin every sunrise in prayer"
   ],
   "stock_queries": [
-    "soft golden sunrise over misty forest",
-    "dew drops on morning grass close up",
-    "sunlight streaming through open window",
-    "calm river reflecting sunrise colors",
-    "birds flying over horizon at dawn",
-    "slow motion clouds at golden hour"
+    "soft golden sunrise light over mountains",
+    "mist rising off a calm blue lake",
+    "sun rays through window curtains",
+    "dew on morning grass close up",
+    "clouds clearing at dawn",
+    "gentle light hitting a tree branch"
   ],
   "scenes": [
     {
-      "a": "The heavy uncertainty weighing on your chest right now is seen by the Creator of light.",
+      "a": "That sharp anxiety about your future feels heavy, but you are not navigating this alone.",
       "img": "short-morningjeremiah29v11-scene-01.jpg",
       "kicker": "JEREMIAH 29:11",
-      "sub": "HIS PLANS FOR YOU",
+      "sub": "THE LORD KNOWS YOUR PATH",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -37,43 +37,32 @@
       ]
     },
     {
-      "a": "For I know the plans I have for you, declares the Lord, plans for welfare and not for evil, to give you a future and a hope.",
+      "a": "Listen to these words written for your weary heart today.",
       "img": "short-morningjeremiah29v11-scene-02.jpg",
-      "kicker": "GOD'S PROMISE",
-      "sub": "A FUTURE AND A HOPE",
+      "kicker": "HIS PROMISE",
+      "sub": "TRUTH FOR THE SOUL",
       "cam": "pan_left",
       "focus": [
-        0.3,
+        0.5,
         0.5
       ]
     },
     {
-      "a": "Lord, anchor my restless thoughts in the truth that you are already holding my coming days.",
+      "a": "For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected end.",
       "img": "short-morningjeremiah29v11-scene-03.jpg",
-      "kicker": "A MORNING PRAYER",
-      "sub": "TRUSTING HIS TIMING",
+      "kicker": "THE SCRIPTURE",
+      "sub": "THE WORD OF THE LORD",
       "cam": "tilt_up",
       "focus": [
         0.5,
-        0.8
+        0.5
       ]
     },
     {
-      "a": "When the path ahead feels shrouded in fog, remind me that you are the author of every step.",
+      "a": "Lord, thank You for these steadying words that silence the noise of my restless mind.",
       "img": "short-morningjeremiah29v11-scene-04.jpg",
-      "kicker": "STEADFAST GRACE",
-      "sub": "LEADING THE WAY",
-      "cam": "push_in",
-      "focus": [
-        0.5,
-        0.2
-      ]
-    },
-    {
-      "a": "Grant me the courage to surrender my need for control and simply walk in your light today.",
-      "img": "short-morningjeremiah29v11-scene-05.jpg",
-      "kicker": "SURRENDER",
-      "sub": "WALKING IN HIS LIGHT",
+      "kicker": "A MORNING PRAYER",
+      "sub": "SURRENDERING ALL FEARS",
       "cam": "pull_out",
       "focus": [
         0.5,
@@ -81,13 +70,24 @@
       ]
     },
     {
-      "a": "May your peace fill my soul, silencing every doubt, as I trust in your unfailing goodness now.",
-      "img": "short-morningjeremiah29v11-scene-06.jpg",
-      "kicker": "THE MORNING ALTAR",
-      "sub": "RESTING IN HIS PEACE",
+      "a": "I choose to trust Your perfect timeline and the good plans You have carefully designed.",
+      "img": "short-morningjeremiah29v11-scene-05.jpg",
+      "kicker": "TRUSTING GOD",
+      "sub": "RESTING IN HIS DESIGN",
       "cam": "pan_right",
       "focus": [
-        0.7,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Help me walk through this day anchored by the certainty of Your unfailing, sovereign love.",
+      "img": "short-morningjeremiah29v11-scene-06.jpg",
+      "kicker": "WALKING IN FAITH",
+      "sub": "HE IS WITH YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
         0.5
       ]
     }
@@ -95,173 +95,140 @@
   "captions": [
     [
       0,
-      15,
-      "The heavy uncertainty weighing on your chest right now is seen by the Creator of light."
+      8,
+      "That sharp anxiety about your future feels heavy, but you are not navigating this alone."
+    ],
+    [
+      8,
+      16,
+      "Listen to these words written for your weary heart today."
     ],
     [
       16,
-      35,
-      "For I know the plans I have for you, declares the Lord, plans for welfare and not for evil, to give you a future and a hope."
+      32,
+      "For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected end."
     ],
     [
-      36,
+      32,
+      42,
+      "Lord, thank You for these steadying words that silence the noise of my restless mind."
+    ],
+    [
+      42,
       52,
-      "Lord, anchor my restless thoughts in the truth that you are already holding my coming days."
+      "I choose to trust Your perfect timeline and the good plans You have carefully designed."
     ],
     [
-      53,
-      70,
-      "When the path ahead feels shrouded in fog, remind me that you are the author of every step."
-    ],
-    [
-      71,
-      88,
-      "Grant me the courage to surrender my need for control and simply walk in your light today."
-    ],
-    [
-      89,
-      105,
-      "May your peace fill my soul, silencing every doubt, as I trust in your unfailing goodness now."
+      52,
+      62,
+      "Help me walk through this day anchored by the certainty of Your unfailing, sovereign love."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      15,
+      8,
       [
-        "HEAVY UNCERTAINTY",
-        "WEIGHT",
-        "IS SEEN",
-        "BY GOD"
+        "THAT SHARP ANXIETY",
+        "ABOUT YOUR FUTURE",
+        "FEELS HEAVY,",
+        "BUT YOU ARE",
+        "NOT ALONE"
       ],
       [
-        "HEAVY UNCERTAINTY"
+        "ANXIETY",
+        "NOT ALONE"
+      ],
+      "JEREMIAH 29:11"
+    ],
+    [
+      8,
+      16,
+      [
+        "LISTEN TO THESE WORDS",
+        "WRITTEN FOR YOUR",
+        "WEARY HEART",
+        "TODAY"
+      ],
+      [
+        "WEARY HEART"
       ],
       "JEREMIAH 29:11"
     ],
     [
       16,
-      35,
+      32,
       [
-        "PLANS FOR WELFARE",
-        "NOT FOR EVIL",
-        "FUTURE",
-        "AND HOPE"
+        "FOR I KNOW THE THOUGHTS",
+        "THAT I THINK",
+        "TOWARD YOU,",
+        "THOUGHTS OF PEACE",
+        "TO GIVE YOU AN END"
       ],
       [
-        "FUTURE",
-        "HOPE"
+        "THOUGHTS OF PEACE"
       ],
       "JEREMIAH 29:11"
     ],
     [
-      36,
+      32,
+      42,
+      [
+        "LORD THANK YOU",
+        "FOR THESE WORDS",
+        "THAT SILENCE THE NOISE",
+        "OF MY MIND"
+      ],
+      [
+        "SILENCE THE NOISE"
+      ],
+      "JEREMIAH 29:11"
+    ],
+    [
+      42,
       52,
       [
-        "ANCHOR MY THOUGHTS",
-        "IN YOUR",
-        "STEADY TRUTH"
+        "I TRUST YOUR",
+        "PERFECT TIMELINE",
+        "AND THE GOOD PLANS",
+        "YOU HAVE DESIGNED"
       ],
       [
-        "STEADY TRUTH"
-      ],
-      "JEREMIAH 29:11"
-    ],
-    [
-      53,
-      70,
-      [
-        "PATH AHEAD",
-        "SHROUDED IN FOG",
-        "YOU ARE",
-        "THE AUTHOR"
-      ],
-      [
-        "AUTHOR"
+        "PERFECT TIMELINE"
       ],
       "JEREMIAH 29:11"
     ],
     [
-      71,
-      88,
+      52,
+      62,
       [
-        "SURRENDER CONTROL",
-        "WALK IN",
-        "YOUR LIGHT"
+        "HELP ME WALK",
+        "ANCHORED BY THE",
+        "CERTAINTY OF YOUR",
+        "UNFAILING LOVE"
       ],
       [
-        "SURRENDER"
-      ],
-      "JEREMIAH 29:11"
-    ],
-    [
-      89,
-      105,
-      [
-        "PEACE FILL MY SOUL",
-        "TRUSTING IN",
-        "YOUR GOODNESS"
-      ],
-      [
-        "GOODNESS"
+        "UNFAILING LOVE"
       ],
       "JEREMIAH 29:11"
     ]
   ],
   "beats": [
     {
-      "a": "The heavy uncertainty weighing on your chest right now is seen by the Creator of light.",
+      "a": "That sharp anxiety about your future feels heavy, but you are not navigating this alone.",
       "kind": "phrase",
       "words": [
-        "HEAVY",
-        "UNCERTAINTY"
+        "SHARP ANXIETY",
+        "NOT ALONE"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "For I know the plans I have for you, declares the Lord, plans for welfare and not for evil, to give you a future and a hope.",
+      "a": "For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected end.",
       "kind": "phrase",
       "words": [
-        "FUTURE",
-        "HOPE"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Lord, anchor my restless thoughts in the truth that you are already holding my coming days.",
-      "kind": "phrase",
-      "words": [
-        "STEADY",
-        "TRUTH"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "When the path ahead feels shrouded in fog, remind me that you are the author of every step.",
-      "kind": "phrase",
-      "words": [
-        "AUTHOR"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Grant me the courage to surrender my need for control and simply walk in your light today.",
-      "kind": "phrase",
-      "words": [
-        "SURRENDER"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "May your peace fill my soul, silencing every doubt, as I trust in your unfailing goodness now.",
-      "kind": "phrase",
-      "words": [
-        "GOODNESS"
+        "THOUGHTS OF PEACE"
       ],
       "hi": 0,
       "slot": "C"

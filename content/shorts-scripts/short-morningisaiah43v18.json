@@ -3,33 +3,34 @@
   "channel": "prayer2",
   "psalm": null,
   "title": [
-    "A NEW THING",
-    "ISAIAH 43:18-19"
+    "ISAIAH 43",
+    "A NEW THING"
   ],
   "poster": [
     "THE MORNING ALTAR",
-    "BEHOLD I DO A NEW THING",
     "ISAIAH 43:18-19",
-    "SUNRISE PRAYER"
+    "MORNING PRAYER",
+    "BEGIN YOUR DAY"
   ],
   "end": [
     "SUBSCRIBE",
     "The Morning Altar — begin every sunrise in prayer"
   ],
   "stock_queries": [
-    "dark quiet kitchen dawn light window",
-    "golden sunrise over foggy misty morning valley",
-    "desert sunrise golden morning light sand dunes",
-    "sunbeams breaking through forest trees morning mist",
-    "calm mountain lake sun rising warm light",
-    "open window golden morning sunlight peaceful room"
+    "dawn mountain mist rising",
+    "golden sunlight over quiet forest",
+    "sunrise light through window blinds",
+    "misty river winding through green valley",
+    "soft morning light on quiet lake",
+    "golden hour light over hills",
+    "peaceful morning sky gradient"
   ],
   "scenes": [
     {
-      "a": "in the silent shadows of your kitchen",
+      "a": "Before the weight of yesterday pulls you back down this morning",
       "img": "short-morningisaiah43v18-scene-01.jpg",
       "kicker": "ISAIAH 43:18",
-      "sub": "LISTEN CLOSELY THIS MORNING",
+      "sub": "LAY DOWN YESTERDAY",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -37,32 +38,21 @@
       ]
     },
     {
-      "a": "Behold, I am doing a new thing",
+      "a": "Remember ye not the former things, neither consider the things of old",
       "img": "short-morningisaiah43v18-scene-02.jpg",
-      "kicker": "ISAIAH 43:18-19",
-      "sub": "REMEMBER NOT THE FORMER",
-      "cam": "tilt_up",
+      "kicker": "ISAIAH 43:18",
+      "sub": "FORMER THINGS",
+      "cam": "pan_left",
       "focus": [
         0.5,
-        0.5
+        0.4
       ]
     },
     {
-      "a": "rivers in the desert",
+      "a": "Lord we let go of every regret and every disappointment from our past",
       "img": "short-morningisaiah43v18-scene-03.jpg",
-      "kicker": "ISAIAH 43:19",
-      "sub": "A WAY IN THE WILDERNESS",
-      "cam": "pan_right",
-      "focus": [
-        0.4,
-        0.6
-      ]
-    },
-    {
-      "a": "we surrender the regrets",
-      "img": "short-morningisaiah43v18-scene-04.jpg",
-      "kicker": "MORNING PRAYER",
-      "sub": "LAY DOWN YESTERDAY",
+      "kicker": "PRAYER",
+      "sub": "LET GO OF REGRET",
       "cam": "pull_out",
       "focus": [
         0.5,
@@ -70,22 +60,44 @@
       ]
     },
     {
-      "a": "see the fresh path",
-      "img": "short-morningisaiah43v18-scene-05.jpg",
-      "kicker": "MORNING PRAYER",
-      "sub": "GOD IS MAKING A WAY",
+      "a": "Behold, I will do a new thing; now it shall spring forth; shall ye not know it?",
+      "img": "short-morningisaiah43v18-scene-04.jpg",
+      "kicker": "ISAIAH 43:19",
+      "sub": "A NEW THING",
       "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Open our eyes to see what You are creating right now in our lives",
+      "img": "short-morningisaiah43v18-scene-05.jpg",
+      "kicker": "PRAYER",
+      "sub": "OPEN OUR EYES",
+      "cam": "tilt_up",
       "focus": [
         0.5,
         0.4
       ]
     },
     {
-      "a": "faith for this new beginning",
+      "a": "I will even make a way in the wilderness, and rivers in the desert",
       "img": "short-morningisaiah43v18-scene-06.jpg",
-      "kicker": "THE MORNING ALTAR",
-      "sub": "BEGIN IN PRAYER",
-      "cam": "pan_left",
+      "kicker": "ISAIAH 43:19",
+      "sub": "WAY IN THE WILDERNESS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Guide our steps through every dry place today Father in Jesus name",
+      "img": "short-morningisaiah43v18-scene-07.jpg",
+      "kicker": "AMEN",
+      "sub": "GUIDE OUR STEPS",
+      "cam": "push_in",
       "focus": [
         0.5,
         0.5
@@ -95,179 +107,186 @@
   "captions": [
     [
       0,
-      8,
-      "If you are replaying yesterday's mistake in the silent shadows of your kitchen, listen closely."
+      10,
+      "Before the weight of yesterday pulls you back down this morning."
     ],
     [
-      9,
-      19,
-      "Remember not the former things, nor consider the things of old. Behold, I am doing a new thing; now it springs forth, do you not perceive it?"
+      10,
+      22,
+      "Remember ye not the former things, neither consider the things of old."
     ],
     [
-      20,
-      27,
-      "I will make a way in the wilderness and rivers in the desert."
-    ],
-    [
-      28,
+      22,
       35,
-      "Lord, as dawn breaks, we surrender the regrets and burdens of yesterday."
+      "Lord we let go of every regret and every disappointment from our past."
     ],
     [
-      36,
-      45,
-      "Clear away the dust of what used to be so we can see the fresh path You are carving out for us today."
+      35,
+      48,
+      "Behold, I will do a new thing; now it shall spring forth; shall ye not know it?"
     ],
     [
-      46,
-      55,
-      "Fill our hearts with faith for this new beginning. Subscribe to The Morning Altar to begin every sunrise in prayer."
+      48,
+      60,
+      "Open our eyes to see what You are creating right now in our lives."
+    ],
+    [
+      60,
+      72,
+      "I will even make a way in the wilderness, and rivers in the desert."
+    ],
+    [
+      72,
+      85,
+      "Guide our steps through every dry place today Father in Jesus name."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      8,
+      10,
       [
-        "IF YOU ARE REPLAYING",
-        "YESTERDAYS MISTAKE",
-        "LISTEN CLOSELY"
+        "BEFORE THE WEIGHT",
+        "OF YESTERDAY PULLS YOU",
+        "BACK DOWN THIS MORNING"
       ],
-      [
-        "REPLAYING",
-        "MISTAKE"
-      ],
-      "ISAIAH 43:18"
+      "YESTERDAY",
+      "ISAIAH 43 : 18"
     ],
     [
-      9,
-      19,
+      10,
+      22,
       [
-        "REMEMBER NOT FORMER THINGS",
-        "BEHOLD I DO A NEW THING",
-        "DO YOU NOT PERCEIVE IT"
+        "REMEMBER YE NOT",
+        "THE FORMER THINGS",
+        "NEITHER CONSIDER OLD"
       ],
-      [
-        "NEW",
-        "THING"
-      ],
-      "ISAIAH 43:18-19"
+      "FORMER",
+      "ISAIAH 43 : 18"
     ],
     [
-      20,
-      27,
-      [
-        "I WILL MAKE A WAY",
-        "IN THE WILDERNESS",
-        "RIVERS IN THE DESERT"
-      ],
-      [
-        "MAKE",
-        "A",
-        "WAY"
-      ],
-      "ISAIAH 43:19"
-    ],
-    [
-      28,
+      22,
       35,
       [
-        "LORD AS DAWN BREAKS",
-        "WE SURRENDER REGRETS",
-        "AND BURDENS OF YESTERDAY"
+        "LORD WE LET GO",
+        "OF EVERY REGRET AND",
+        "PAST DISAPPOINTMENT"
       ],
-      [
-        "SURRENDER",
-        "REGRETS"
-      ],
-      "MORNING PRAYER"
+      "REGRET",
+      "PRAYER"
     ],
     [
-      36,
-      45,
+      35,
+      48,
       [
-        "CLEAR AWAY THE DUST",
-        "SEE THE FRESH PATH",
-        "CARVED OUT TODAY"
+        "BEHOLD I WILL DO",
+        "A NEW THING NOW",
+        "IT SHALL SPRING FORTH"
       ],
-      [
-        "FRESH",
-        "PATH"
-      ],
-      "MORNING PRAYER"
+      "NEW",
+      "ISAIAH 43 : 19"
     ],
     [
-      46,
-      55,
+      48,
+      60,
       [
-        "FILL OUR HEARTS WITH FAITH",
-        "FOR THIS NEW BEGINNING",
-        "SUBSCRIBE TO THE MORNING ALTAR"
+        "OPEN OUR EYES TO",
+        "SEE WHAT YOU ARE",
+        "CREATING RIGHT NOW"
       ],
+      "CREATING",
+      "PRAYER"
+    ],
+    [
+      60,
+      72,
       [
-        "NEW",
-        "BEGINNING"
+        "I WILL EVEN MAKE",
+        "A WAY IN THE WILDERNESS",
+        "AND RIVERS IN DESERTS"
       ],
-      "THE MORNING ALTAR"
+      "WILDERNESS",
+      "ISAIAH 43 : 19"
+    ],
+    [
+      72,
+      85,
+      [
+        "GUIDE OUR STEPS",
+        "THROUGH EVERY DRY PLACE",
+        "TODAY IN JESUS NAME"
+      ],
+      "GUIDE",
+      "AMEN"
     ]
   ],
   "beats": [
     {
-      "a": "in the silent shadows of your kitchen",
+      "a": "Before the weight of yesterday pulls you back down this morning",
       "kind": "phrase",
       "words": [
-        "REPLAYING",
-        "MISTAKE"
+        "WEIGHT",
+        "YESTERDAY"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Behold, I am doing a new thing",
+      "a": "Remember ye not the former things, neither consider the things of old",
       "kind": "phrase",
       "words": [
-        "NEW",
-        "THING"
+        "REMEMBER",
+        "FORMER"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "rivers in the desert",
+      "a": "Lord we let go of every regret and every disappointment from our past",
       "kind": "phrase",
       "words": [
-        "RIVERS",
-        "DESERT"
+        "REGRET",
+        "PAST"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "we surrender the regrets",
+      "a": "Behold, I will do a new thing; now it shall spring forth; shall ye not know it?",
       "kind": "phrase",
       "words": [
-        "SURRENDER",
-        "REGRETS"
+        "BEHOLD",
+        "NEW"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "see the fresh path",
+      "a": "Open our eyes to see what You are creating right now in our lives",
       "kind": "phrase",
       "words": [
-        "FRESH",
-        "PATH"
+        "OPEN",
+        "CREATING"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "faith for this new beginning",
+      "a": "I will even make a way in the wilderness, and rivers in the desert",
       "kind": "phrase",
       "words": [
-        "NEW",
-        "BEGINNING"
+        "WAY",
+        "WILDERNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guide our steps through every dry place today Father in Jesus name",
+      "kind": "phrase",
+      "words": [
+        "GUIDE",
+        "STEPS"
       ],
       "hi": 0,
       "slot": "C"
