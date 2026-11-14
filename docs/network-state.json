@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T11:19:02Z",
+  "generated_at": "2026-11-14T11:19:23Z",
   "monitor_generated_at": "2026-11-14T10:41:34.562205+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 209,
+    "published_total": 210,
     "published_longform": 103,
-    "published_shorts": 106,
-    "public_total": 207,
+    "published_shorts": 107,
+    "public_total": 208,
     "queued_longform": 61,
-    "queued_shorts": 102,
+    "queued_shorts": 101,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 48,
+        "published_total": 49,
         "published_longform": 23,
-        "published_shorts": 25,
-        "thumbnail_pending": 6,
-        "public_total": 47,
+        "published_shorts": 26,
+        "thumbnail_pending": 7,
+        "public_total": 48,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "0066",
-        "title": "Morning Prayer for Courage Today: Joshua 1:8-9 | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "nKLjNSKcJGQ",
-        "watch_url": "https://youtu.be/nKLjNSKcJGQ",
+        "id": "SHORT-MORNINGISAIAH43V18",
+        "title": "Say This Isaiah 43:18-19 Prayer at Sunrise | Begin Your Day #Shorts",
+        "format": "short",
+        "youtube_video_id": "LaXltleEXns",
+        "watch_url": "https://www.youtube.com/shorts/LaXltleEXns",
         "published_on": "2026-11-14",
-        "published_at": "2026-11-14T07:40:51Z"
+        "published_at": "2026-11-14T11:18:36Z"
       },
       "next_queued_longform": {
         "id": "0067",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningisaiah43v18",
-        "scripture": "Isaiah 43:18-19",
+        "short": "short-morningisaiah60v1",
+        "scripture": "Isaiah 60:1",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGISAIAH43V18",
+      "slug": "short-morningisaiah43v18-sunrise-prayer",
+      "file": "short-morningisaiah43v18-sunrise-prayer.md",
+      "title": "Say This Isaiah 43:18-19 Prayer at Sunrise | Begin Your Day #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T11:18:36Z",
+      "youtube_video_id": "LaXltleEXns",
+      "watch_url": "https://www.youtube.com/shorts/LaXltleEXns",
+      "youtu_be_url": "https://youtu.be/LaXltleEXns",
+      "shorts_url": "https://www.youtube.com/shorts/LaXltleEXns",
+      "studio_url": "https://studio.youtube.com/video/LaXltleEXns/edit",
+      "thumb_url": "https://i.ytimg.com/vi/LaXltleEXns/hqdefault.jpg",
+      "thumb_text": "THE MORNING ALTAR \u00b7 ISAIAH 43:18-19",
+      "thumbnail_pending": true,
+      "duration_label": "43s",
+      "words": 607
+    },
     {
       "id": "SHORT-ISAIAH41V13",
       "slug": "short-isaiah41v13-pre-sleep-prayer",
@@ -6696,17 +6720,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningisaiah43v18",
-        "file": "0000-short-morningisaiah43v18.yml",
-        "companion_longform_id": "",
-        "scripture": "Isaiah 43:18-19",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningisaiah60v1",
