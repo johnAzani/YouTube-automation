@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T04:44:31.885651+00:00",
+  "generated_at": "2026-11-14T04:57:16.791844+00:00",
   "healthy": true,
   "automations": [
     {
@@ -18,7 +18,7 @@
       "failures_5": 0,
       "effect": "reports and files stalls",
       "verdict": "OK",
-      "detail": "last success 0.3h ago",
+      "detail": "last success 0.5h ago",
       "severity": "ok"
     },
     {
@@ -39,7 +39,7 @@
       "failures_5": 0,
       "effect": "posts replies and records them in content/comments/replied.json",
       "verdict": "OK",
-      "detail": "last success 4.4h ago",
+      "detail": "last success 4.6h ago",
       "severity": "ok"
     },
     {
@@ -58,7 +58,7 @@
       "failures_5": 0,
       "effect": "writes content/community/<id>-READY.md",
       "verdict": "OK",
-      "detail": "last success 51.2h ago",
+      "detail": "last success 51.4h ago",
       "severity": "ok"
     },
     {
@@ -67,8 +67,8 @@
       "crons": [
         "14 3 * * *"
       ],
-      "last_run": "2026-11-13T10:57:01+00:00",
-      "last_conclusion": "success",
+      "last_run": "2026-11-14T04:46:50+00:00",
+      "last_conclusion": null,
       "last_success": "2026-11-13T10:57:01+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-14T04:08:11+00:00",
@@ -77,7 +77,7 @@
       "failures_5": 0,
       "effect": "writes content/queue/ or content/shorts-scripts/",
       "verdict": "OK",
-      "detail": "last success 17.8h ago",
+      "detail": "last success 18.0h ago",
       "severity": "ok"
     },
     {
@@ -96,7 +96,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 0.6h ago",
+      "detail": "last success 0.8h ago",
       "severity": "ok"
     },
     {
@@ -115,7 +115,7 @@
       "failures_5": 0,
       "effect": "re-arms scheduled workflows",
       "verdict": "OK",
-      "detail": "last success 112.9h ago",
+      "detail": "last success 113.1h ago",
       "severity": "ok"
     },
     {
@@ -134,7 +134,7 @@
       "failures_5": 0,
       "effect": "writes content/metrics.csv and opens a snapshot issue",
       "verdict": "OK",
-      "detail": "last success 4.4h ago",
+      "detail": "last success 4.6h ago",
       "severity": "ok"
     },
     {
@@ -143,14 +143,14 @@
       "crons": [
         "23 */3 * * *"
       ],
-      "last_run": "2026-11-14T04:42:32+00:00",
+      "last_run": "2026-11-14T04:56:27+00:00",
       "last_conclusion": null,
-      "last_success": "2026-11-13T22:25:40+00:00",
+      "last_success": "2026-11-14T04:42:32+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-14T04:08:11+00:00",
       "last_slot": "2026-11-14T03:23:00+00:00",
       "missed_slots": 0,
-      "failures_5": 4,
+      "failures_5": 3,
       "effect": "this report",
       "verdict": "SELF-REPORT",
       "detail": "its red runs are the verdicts below, not failures of it",
@@ -176,7 +176,7 @@
       "failures_5": 0,
       "effect": "publishes a video: content/published/ gains a receipt with a video id",
       "verdict": "OK",
-      "detail": "last success 4.4h ago",
+      "detail": "last success 4.6h ago",
       "severity": "ok"
     },
     {
@@ -185,9 +185,9 @@
       "crons": [
         "47 0,3,6,9,12,15,18,21 * * *"
       ],
-      "last_run": "2026-11-14T04:42:31+00:00",
-      "last_conclusion": "success",
-      "last_success": "2026-11-14T04:42:31+00:00",
+      "last_run": "2026-11-14T04:56:27+00:00",
+      "last_conclusion": null,
+      "last_success": "2026-11-14T04:45:56+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-07T19:31:06+00:00",
       "last_slot": "2026-11-14T03:47:00+00:00",
@@ -195,7 +195,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 0.0h ago",
+      "detail": "last success 0.2h ago",
       "severity": "ok"
     }
   ],
@@ -207,7 +207,7 @@
     },
     {
       "outcome": "last upload (secret-place)",
-      "detail": "The Secret Place: 2026-11-13 (8h ago \u2014 0022-psalm-37-3-4-7-rest-in-the-lord-wait-patiently.md)",
+      "detail": "The Secret Place: 2026-11-14 (0h ago \u2014 0023-psalm-63-5-7-remembering-god-upon-my-bed.md)",
       "severity": "ok"
     },
     {
@@ -247,17 +247,17 @@
     },
     {
       "outcome": "last upload (prayer9)",
-      "detail": "The Praise Garden: 2026-11-13 (6h ago \u2014 0703-philippians-4-6-7-daily-prayer.md)",
+      "detail": "The Praise Garden: 2026-11-13 (7h ago \u2014 0703-philippians-4-6-7-daily-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer10)",
-      "detail": "The Guided Path: 2026-11-13 (6h ago \u2014 0802-psalm-25-4-5-guidance-prayer.md)",
+      "detail": "The Guided Path: 2026-11-13 (7h ago \u2014 0802-psalm-25-4-5-guidance-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "publishable runway",
-      "detail": "42 of 42 approved script(s) over the 850-word floor (47 in queue)",
+      "detail": "41 of 41 approved script(s) over the 850-word floor (46 in queue)",
       "severity": "ok"
     },
     {
