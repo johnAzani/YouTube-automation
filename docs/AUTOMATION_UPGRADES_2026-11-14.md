@@ -136,6 +136,8 @@ run (a release asset costs nothing), so a session can be assembled from seven
 related prayers with new spoken openings between them and one new picture
 track. That is a storage change first and a build second. Not started.
 
+**Later the same day:** a different form of this was built for The Secret Place only. The prayer is followed by hours of quiet music, with no extra speech. See `docs/MONETISATION_RESEARCH_2026-11-14.md` §4.
+
 ## 6. Captions on Shorts
 
 **Problem.** Long-forms got a caption track; Shorts did not. The words on a

@@ -159,6 +159,36 @@ def _purge_corrupted_speech_artifacts(out_dir: Path) -> None:
             chunk_dir.unlink(missing_ok=True)
 
 
+def _add_night_tail(doc, final: Path, assets, duration: float) -> dict | None:
+    """Lengthen the bedtime channel's prayer for the night; ``None`` when it does not apply."""
+    from . import night_tail
+
+    channel_id = doc.explicit_channel or CONFIG.channel_id
+    minutes = night_tail.configured_minutes(channel_id)
+    if not minutes:
+        return None
+    try:
+        from .channels import get_channel
+        from .upload import _thumb_client
+
+        allowed, why = night_tail.long_uploads_allowed(_thumb_client())
+        if not allowed:
+            print(f"::warning title=Night tail skipped ({channel_id})::{why}")
+            return None
+        with stage("night tail", f"{minutes} min in all"):
+            info = night_tail.extend(final, assets, prayer_seconds=duration, total_minutes=minutes,
+                                     channel_name=get_channel(channel_id).display_name)
+    except Exception as exc:  # noqa: BLE001 - the prayer is published either way
+        print(f"::warning title=Night tail skipped ({channel_id})::{str(exc)[:300]}")
+        return None
+    if info:
+        print(f"[night-tail] {channel_id}: {duration / 60:.1f} min of prayer, then "
+              f"{info['units']} x {info['unit_seconds'] / 60:.0f} min of rest = "
+              f"{info['total_seconds'] / 3600:.2f} h, {info['megabytes']} MB, "
+              f"built in {info['build_seconds']:.0f}s")
+    return info
+
+
 def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
     """Run the approved rendering pipeline with hard safety checks.
 
@@ -306,6 +336,10 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
             final = render(audio, list(zip(assets, durations)), words, duration,
                            out / f'{doc.slug}.mp4', timing_source='measured',
                            progress=heartbeat.tick)
+        # The bedtime channel's prayer is followed by hours of quiet music, so one
+        # listener through the night is hours of watch time (pipeline/night_tail.py).
+        # A failure there leaves `final` as rendered.
+        night = None if dry_run else _add_night_tail(doc, final, assets, duration)
         # Thumbnails come from the CTR pack, never from the card generator: it enforces
         # mobile legibility, contrast, safe zones and visibility against YouTube's
         # dark-mode page, and writes a report so the run page shows the numbers.
@@ -324,11 +358,19 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
             json.dumps([r.as_dict() for r in thumb_reports], indent=2), encoding="utf-8")
         thumbs = [r.path for r in thumb_reports]
         pack = write_metadata_pack(doc, durations, out)
+        if night:
+            from .night_tail import describe as describe_night
+
+            pack = describe_night(pack, prayer_seconds=duration,
+                                  total_seconds=night['total_seconds'])
         from .captions import write_srt_file
         srt_path = write_srt_file(out / 'captions.en.srt', words, doc.full_narration, duration=duration)
         result = {'id': doc.id, 'slug': doc.slug, 'video': str(final), 'thumbnail': str(thumbs[0]),
                   'captions': str(srt_path) if srt_path else '',
                   'duration_seconds': duration, 'tts_engine': engine, 'dry_run': dry_run}
+        if night:
+            result.update(duration_seconds=night['total_seconds'], prayer_seconds=duration,
+                          night_tail=night)
         if not dry_run:
             from .upload import upload
             with stage("upload", "YouTube"):
