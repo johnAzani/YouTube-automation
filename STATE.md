@@ -1,6 +1,6 @@
 # 🕊️ The Secret Place — Master Project State & Living Memory Ledger
 **Document Status:** Permanent Single Source of Truth (`STATE.md`)  
-**Channel Identity:** *The Secret Place* (`@TheSecretPlace`)  
+**Channel Identity:** *The Secret Place* (`@SecretPlaceSanctuary`)  
 **Production Studio:** Autonomous ₦0 / $0 Faith & Scripture Production Lab on GitHub Actions  
 **Last Synchronized:** 2026-11-03 (Nigeria time, WAT / UTC+1 — all human-facing times in this document are Nigeria time, see §7)  
 **Primary Banking Rail:** First Bank of Nigeria (FBN) USD Domiciliary Account (`FBNINGLA`)

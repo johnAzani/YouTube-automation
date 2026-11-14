@@ -97,7 +97,7 @@ class TestItsBrand(unittest.TestCase):
 
         prompt = compile_full_brain_prompt(CID)
         for other in ("The Secret Place", "The Morning Altar",
-                      "@TheSecretPlace", "@TheMorningAltarDaily"):
+                      "@SecretPlaceSanctuary", "@TheMorningAltarDaily"):
             self.assertNotIn(other, prompt)
 
 

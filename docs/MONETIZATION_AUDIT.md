@@ -10,7 +10,7 @@
 
 **Document Version:** 3.0 (Master Platform & Statutory Audit)  
 **Date of Audit:** October 29, 2026  
-**Channel Identity:** *The Secret Place* (`@TheSecretPlace`) — Faceless Devotional & Faith Documentary Studio  
+**Channel Identity:** *The Secret Place* (`@SecretPlaceSanctuary`) — Faceless Devotional & Faith Documentary Studio  
 **Pipeline Implementation:** `johnAzani/YouTube-automation` (Branch: `arena/63460184-youtube-automation`)  
 **Target Video Formats:** Native 16:9 Widescreen Master Documentaries (`tools/deep_dive.py`), Native 9:16 Kinetic Typography Shorts (`tools/shorts.py`), High-CTR 16:9 Widescreen & 9:16 Mobile Posters (`pipeline/thumbnail.py`), Procedural Harmonic DSP Synthesizer (`tools/score.py`), Google Gemini TTS Integration (`pipeline/gemini_tts.py`), and Fail-Closed Asset Ledger (`image-search/LICENSES.yml`).
 
@@ -406,8 +406,8 @@ To succeed, the appeal video must follow this precise structure:
 
 ```text
 [0:00 - 0:45] THE EDITORIAL MISSION & CHANNEL URL
-VISUAL: Creator screen-recording showing the channel homepage (@TheSecretPlace) and YouTube Studio dashboard with the channel URL visible in the browser address bar.
-SPOKEN: "Hello YouTube Review Team. My name is the creator and lead editor of The Secret Place. The channel URL is youtube.com/@TheSecretPlace. I am submitting this video appeal to demonstrate that our channel fully complies with the YouTube Partner Program policies, and that our content is 100% original, transformative, and human-directed."
+VISUAL: Creator screen-recording showing the channel homepage (@SecretPlaceSanctuary) and YouTube Studio dashboard with the channel URL visible in the browser address bar.
+SPOKEN: "Hello YouTube Review Team. My name is the creator and lead editor of The Secret Place. The channel URL is youtube.com/@SecretPlaceSanctuary. I am submitting this video appeal to demonstrate that our channel fully complies with the YouTube Partner Program policies, and that our content is 100% original, transformative, and human-directed."
 
 [0:45 - 2:00] DEMONSTRATING SCRIPTWRITING & EDITORIAL CURATION
 VISUAL: Screen switches to VS Code / terminal showing the content repository at `content/queue/0008-psalm-91-prayer-of-divine-protection.md`. Show the research notes, biblical cross-references, and fact-checking worksheets.
@@ -432,7 +432,7 @@ SPOKEN: "As you can see, The Secret Place is a dedicated, human-curated editoria
 
 Before publishing monetized content or submitting the YPP application, verify that every item on this checklist is completed:
 
-- [x] **Brand Studio Identity:** Verified as *The Secret Place* (`@TheSecretPlace`), with faceless branding, sanctuary sapphire aesthetics, and zero personal name references.
+- [x] **Brand Studio Identity:** Verified as *The Secret Place* (`@SecretPlaceSanctuary`), with faceless branding, sanctuary sapphire aesthetics, and zero personal name references.
 - [x] **Native Aspect Ratio Matching:** All 16:9 widescreen long-form videos and thumbnails consume native 16:9 assets (1376×768 / 1280×720); all 9:16 Shorts — including their custom API thumbnails, which YouTube crops to 9:16 — consume native 9:16 assets (768×1376 plate → 1080×1920 poster).
 - [x] **Licensing Ledger Clearance:** All stills validated `status: cleared` in `image-search/LICENSES.yml` with cryptographic SHA-256 hashes; `tests/test_licence_ledger.py` passes 100%.
 - [x] **Zero Content ID Risk:** Score generated exclusively through in-house procedural DSP synthesizer (`tools/score.py`); zero external audio samples.

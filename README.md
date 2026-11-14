@@ -9,7 +9,7 @@ Selar Nigeria Banking: **[docs/SELAR_NIGERIA_SETUP.md](docs/SELAR_NIGERIA_SETUP.
 ---
 
 ## Channel Overview
-* **Identity:** *The Secret Place* (`@TheSecretPlace`)
+* **Identity:** *The Secret Place* (`@SecretPlaceSanctuary`)
 * **Persona Invariant:** Exclusively editorial sanctuary team; strictly zero mentions of personal creator names.
 * **Voiceover Invariant:** Google Gemini TTS (`Charon`) permanently locked at free tier.
 * **Cost Invariant:** Permanent $0.00 / month hard cost lock.

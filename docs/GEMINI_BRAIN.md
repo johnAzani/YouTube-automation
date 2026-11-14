@@ -1,6 +1,6 @@
 # Google Gemini Brain Architecture & Continuous Equipment Manual
 
-**Channel Identity:** *every registered channel* — currently *The Secret Place* (`@TheSecretPlace`) and *The Morning Altar* (`@TheMorningAltarDaily`). The engine is identical; the channel selects its equipment, roadmap, branding and Gemini quota pool via `pipeline/channel_capabilities.py`. See `docs/CHANNEL_PARITY.md`.  
+**Channel Identity:** *every registered channel* — currently *The Secret Place* (`@SecretPlaceSanctuary`) and *The Morning Altar* (`@TheMorningAltarDaily`). The engine is identical; the channel selects its equipment, roadmap, branding and Gemini quota pool via `pipeline/channel_capabilities.py`. See `docs/CHANNEL_PARITY.md`.  
 **Role:** Master Autonomous Creative & Editorial Intelligence Engine  
 **Engine Implementation:** `pipeline/gemini_brain.py` & `scripts/gemini_brain.py`  
 **Autonomous Workflow:** `.github/workflows/gemini_brain.yml` (Runs daily at `03:14 UTC`)  

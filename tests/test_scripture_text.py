@@ -303,8 +303,14 @@ def test_a_failed_rewrite_leaves_the_old_short_in_place(queue, monkeypatch):
 
 
 def test_the_held_psalm_55_short_is_marked_for_rewriting():
-    data = yaml.safe_load((REPO / "content" / "shorts-queue" / "0000-short-psalm55v22.yml")
-                          .read_text(encoding="utf-8"))
+    path = REPO / "content" / "shorts-queue" / "0000-short-psalm55v22.yml"
+    if not path.exists():
+        # Rewritten, released and gone from the queue (14 November 2026). A queue
+        # file leaves when its Short is published, and that commit skips CI, so
+        # this test turned `main` red for the next pull request instead.
+        assert list((REPO / "content" / "published").glob("short-psalm55v22*.md"))
+        return
+    data = yaml.safe_load(path.read_text(encoding="utf-8"))
     if data.get("status") == "draft":
         assert data.get("requote") is True
     else:  # the brain has rewritten it since

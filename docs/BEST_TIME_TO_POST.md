@@ -1,6 +1,6 @@
 # The Master Guide to Best Time to Post: Chronobiology, Algorithmic Lead-Time & Studio Analytics
 
-**Channel Identity:** *The Secret Place* (`@TheSecretPlace`) — Sacred Scripture, Bedtime Prayer & Faith Contemplation Studio  
+**Channel Identity:** *The Secret Place* (`@SecretPlaceSanctuary`) — Sacred Scripture, Bedtime Prayer & Faith Contemplation Studio  
 **Document Version:** 1.0 (Master Algorithmic & Analytics Release Timing Specification)  
 **Target Demographics:** Tier-1 US/UK/CA High-RPM Bedtime Listeners + International Morning Devotional Audience  
 **Associated Workflows:** `.github/workflows/produce.yml` (`06:14 UTC` and `14:14 UTC` daily cron slots)  

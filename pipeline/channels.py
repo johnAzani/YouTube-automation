@@ -63,11 +63,23 @@ class ChannelProfile:
         }
 
 
+#: Handles that used to be written into descriptions and are not the channel's.
+#: `@TheSecretPlace` was the name the channel was planned under; on YouTube it is
+#: `@SecretPlaceSanctuary`, so every subscribe link and every "pray the complete
+#: prayer" fallback link built from the old name opened a "404 Not Found" page
+#: (found 14 November 2026, after 44 uploads). Nothing may link to a name listed
+#: here: `scripts/repair_live_handles.py` swaps it out of descriptions that are
+#: already live, and `tests/test_channel_handles.py` keeps it out of the code.
+RETIRED_HANDLES: dict[str, tuple[str, ...]] = {
+    "secret-place": ("@TheSecretPlace",),
+}
+
+
 CHANNELS: dict[str, ChannelProfile] = {
     "secret-place": ChannelProfile(
         id="secret-place",
         display_name="The Secret Place",
-        handle="@TheSecretPlace",
+        handle="@SecretPlaceSanctuary",
         secret_prefix="",
         default_privacy="public",
         auto_publish=True,

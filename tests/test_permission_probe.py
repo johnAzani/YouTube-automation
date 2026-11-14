@@ -166,6 +166,7 @@ def _fake_google(calls, analytics_enabled=False):
                            'errors': [{'reason': 'accessNotConfigured'}]}}).encode()))
         if 'channels?' in url:
             return _Answer(json.dumps({'items': [{
+                'snippet': {'customUrl': '@themiddaywatch', 'title': 'private title'},
                 'status': {'longUploadsStatus': 'allowed'},
                 'brandingSettings': {'channel': {'country': 'NG', 'keywords': 'private keywords'}},
                 'contentDetails': {'relatedPlaylists': {'uploads': 'UUprivate'}}}]}).encode())
@@ -189,17 +190,18 @@ def test_a_whole_run_reads_reports_and_gives_nothing_away(monkeypatch, capsys):
         all(method == 'GET' for method, url in calls if not url.endswith('/token'))
     assert sum(1 for _m, url in calls if url.endswith('/token')) == 1
     lines = out.strip().splitlines()
-    assert len(lines) == 6 and all(line.startswith('::notice title=Permissions prayer3: ') for line in lines)
+    assert len(lines) == 7 and all(line.startswith('::notice title=Permissions prayer3: ') for line in lines)
     assert 'scopes=[youtube.force-ssl, youtube.upload]' in lines[0]
     assert 'missing=[yt-analytics.readonly, yt-analytics-monetary.readonly]' in lines[0]
     assert 'network-only=[none]' in lines[0]
-    assert 'videos over 15 min=allowed' in lines[1] and 'country=NG' in lines[1]
-    assert 'views: REFUSED 403 PERMISSION_DENIED accessNotConfigured' in lines[2]
-    assert 'reach report offered' in lines[3] and 'pexels=false' in lines[5]
-    assert lines[4].endswith('verdict::still to do: mint a token with: yt-analytics.readonly, '
+    assert lines[1].endswith("handle::@themiddaywatch is the channel's handle on YouTube; subscribe links resolve")
+    assert 'videos over 15 min=allowed' in lines[2] and 'country=NG' in lines[2]
+    assert 'views: REFUSED 403 PERMISSION_DENIED accessNotConfigured' in lines[3]
+    assert 'reach report offered' in lines[4] and 'pexels=false' in lines[6]
+    assert lines[5].endswith('verdict::still to do: mint a token with: yt-analytics.readonly, '
                              'yt-analytics-monetary.readonly; enable the YouTube Analytics API in this Google Cloud project')
     for secret in ('ACCESS-SECRET', 'CLIENT-SECRET', 'REFRESH-SECRET', '123456789012', 'private wording',
-                   'private keywords', 'UUprivate', 'vidPRIVATE', '987654'):
+                   'private keywords', 'UUprivate', 'vidPRIVATE', '987654', 'private title'):
         assert secret not in out
 
 
@@ -211,3 +213,32 @@ def test_a_dead_token_is_reported_and_the_job_still_passes(monkeypatch, capsys):
     monkeypatch.setenv('CHANNEL', 'prayer4')
     assert probe.main() == 0
     assert capsys.readouterr().out.strip() == '::notice title=Permissions prayer4: token::refresh REFUSED 400 invalid_grant'
+
+
+def test_the_probe_checks_the_same_handles_the_descriptions_link_to():
+    from pipeline.channels import CHANNELS
+
+    assert probe.HANDLES == {channel: profile.handle for channel, profile in CHANNELS.items()}
+
+
+def test_a_handle_youtube_does_not_know_is_called_a_mismatch_and_shown_as_a_warning(monkeypatch, capsys):
+    assert probe.handle_check('secret-place', '@secretplacesanctuary') == (
+        True, "@secretplacesanctuary is the channel's handle on YouTube; subscribe links resolve")
+    matches, text = probe.handle_check('secret-place', '@TheSecretPlace')
+    assert not matches and text.startswith('MISMATCH: YouTube says @TheSecretPlace, descriptions link to '
+                                           '@SecretPlaceSanctuary')
+    assert probe.handle_check('prayer2', None)[0] is False
+    assert probe.handle_check('prayer99', '@someone') == (
+        False, 'YouTube says @someone; no handle is registered for this channel')
+    # Only handle characters survive, so a channel cannot inject a workflow command.
+    assert '::' not in probe.handle_check('prayer2', '@x\n::error::y')[1]
+
+    calls = []
+    monkeypatch.setattr(probe.urllib.request, 'urlopen', _fake_google(calls))
+    for name, value in (('CHANNEL', 'prayer4'), ('CLIENT_ID', 'x'), ('CLIENT_SECRET', 'y'), ('REFRESH_TOKEN', 'z')):
+        monkeypatch.setenv(name, value)
+    assert probe.main() == 0
+    line = capsys.readouterr().out.strip().splitlines()[1]
+    assert line.startswith('::warning title=Permissions prayer4: handle::MISMATCH: YouTube says @themiddaywatch, '
+                           'descriptions link to @TheMidnightWatchDaily')
+

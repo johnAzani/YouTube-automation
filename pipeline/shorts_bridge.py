@@ -75,7 +75,7 @@ SHORT_LONGFORM_CATALOG: dict[str, dict[str, str]] = {
     },
 }
 
-DEFAULT_PLAYLIST_FALLBACK = "https://www.youtube.com/@TheSecretPlace/playlists"
+DEFAULT_PLAYLIST_FALLBACK = "https://www.youtube.com/@SecretPlaceSanctuary/playlists"
 
 
 def resolve_short_key(key_or_title: str) -> str | None:

@@ -11,7 +11,7 @@ from pipeline.social_pack import (
 def test_build_standardized_description_footer():
     """Verify footer contains subscription link, playlist links, and crisis support."""
     footer = build_standardized_description_footer()
-    assert "https://www.youtube.com/@TheSecretPlace" in footer
+    assert "https://www.youtube.com/@SecretPlaceSanctuary" in footer
     assert "988" in footer
     assert "111" in footer
     assert "OFFICIAL SERIES PLAYLISTS" in footer

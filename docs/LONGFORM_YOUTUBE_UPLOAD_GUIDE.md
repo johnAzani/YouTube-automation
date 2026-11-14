@@ -2,7 +2,7 @@
 
 **Document Version:** 1.0 (Master Ingestion & Publishing Architecture)  
 **Date:** October 29, 2026  
-**Channel Identity:** *The Secret Place* (`@TheSecretPlace`) — Faceless Devotional & Faith Documentary Studio  
+**Channel Identity:** *The Secret Place* (`@SecretPlaceSanctuary`) — Faceless Devotional & Faith Documentary Studio  
 **Primary Long-Form Master Asset:** `docs/media/deep-dive-psalm91.mp4` (1280×720 FHD Master, 16:9 Widescreen)  
 **Primary Long-Form Thumbnail:** `docs/media/psalm-91-longform-thumbnail.jpg` (1280×720 High-CTR Studio Plate)  
 **Automation Codebase:** `pipeline/upload.py`, `tools/deep_dive.py`, `tools/score.py`
@@ -259,7 +259,7 @@ Before you sleep tonight, pray Psalm 91 over your life, your home, and your fami
 🙏 PRAYER FOCUS TONIGHT:
 If you are carrying anxiety, fear, or spiritual heaviness, play this meditation as you rest. Claim God's promise that no weapon formed against you shall prosper.
 
-🔔 Subscribe to join our prayer family: https://youtube.com/@TheSecretPlace?sub_confirmation=1
+🔔 Subscribe to join our prayer family: https://youtube.com/@SecretPlaceSanctuary?sub_confirmation=1
 💬 Leave your prayer requests in the comments below so our community can agree with you in prayer.
 
 —

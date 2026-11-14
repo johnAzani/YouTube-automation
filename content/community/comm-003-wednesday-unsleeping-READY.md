@@ -1,4 +1,4 @@
-# Ready to post — comm-003-wednesday-unsleeping (The Secret Place · @TheSecretPlace)
+# Ready to post — comm-003-wednesday-unsleeping (The Secret Place · @SecretPlaceSanctuary)
 
 YouTube's API cannot create Community posts. Paste this into YouTube Studio
 → Create → Post, attach the card, and schedule it if you like.

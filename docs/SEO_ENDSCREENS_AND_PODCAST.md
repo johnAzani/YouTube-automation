@@ -1,7 +1,7 @@
 # Google Search Key Moments, End-Screen Autoplay & $0 Podcast RSS Engine
 ## Multi-Platform Discovery, Session Watch Time & External Funnel ($0.00 / Month Hard Cost Lock)
 
-> **Channel:** *The Secret Place* (`@TheSecretPlace`)  
+> **Channel:** *The Secret Place* (`@SecretPlaceSanctuary`)  
 > **Audience:** **1,230 Subscribers** (YPP 1,000 Threshold Surpassed)  
 > **Primary Milestone:** **4,000 Valid Public Watch Hours**  
 > **Financial Governance:** Strict, fail-closed **$0.00 / month cost lock** (`docs/ZERO_DOLLAR_LOCK.md`). Zero cloud infrastructure bills, zero paid APIs.

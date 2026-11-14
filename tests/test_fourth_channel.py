@@ -71,7 +71,7 @@ class TestFourthChannelIdentityAndVisuals(unittest.TestCase):
             "The Secret Place",
             "The Morning Altar",
             "The Midday Watch",
-            "@TheSecretPlace",
+            "@SecretPlaceSanctuary",
             "@TheMorningAltarDaily",
             "@TheMiddayWatch",
         ):

@@ -9,9 +9,9 @@ from __future__ import annotations
 import os
 import re
 
-CHANNEL_HANDLE = "@TheSecretPlace"
-SUBSCRIBE_URL = "https://www.youtube.com/@TheSecretPlace?sub_confirmation=1"
-PODCAST_URL = os.environ.get("PODCAST_URL", "https://www.youtube.com/@TheSecretPlace/podcasts")
+CHANNEL_HANDLE = "@SecretPlaceSanctuary"
+SUBSCRIBE_URL = "https://www.youtube.com/@SecretPlaceSanctuary?sub_confirmation=1"
+PODCAST_URL = os.environ.get("PODCAST_URL", "https://www.youtube.com/@SecretPlaceSanctuary/podcasts")
 SELAR_STORE_URL = os.environ.get("SELAR_STORE_URL", "https://selar.com/showlove/thesecretplace")
 SELAR_JOURNAL_URL = os.environ.get("SELAR_JOURNAL_URL", "https://selar.com/i000qy7g39")
 
@@ -123,7 +123,7 @@ def sanitize_persona_integrity(text: str) -> str:
     """Ensure zero personal creator names or handles appear in metadata or comments."""
     cleaned = re.sub(
         r"https?://johnazani\.github\.io/[^\s)]*",
-        "https://www.youtube.com/@TheSecretPlace/podcasts",
+        "https://www.youtube.com/@SecretPlaceSanctuary/podcasts",
         text,
         flags=re.IGNORECASE,
     )

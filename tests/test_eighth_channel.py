@@ -106,7 +106,7 @@ class TestEighthChannelIdentityAndVisuals(unittest.TestCase):
             "The Family Altar",
             "The Healing Balm",
             "The Provision Table",
-            "@TheSecretPlace",
+            "@SecretPlaceSanctuary",
             "@TheMorningAltarDaily",
             "@TheMiddayWatch",
             "@TheMidnightWatchDaily",
