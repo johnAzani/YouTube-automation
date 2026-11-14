@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T07:04:55Z",
+  "generated_at": "2026-11-14T07:05:24Z",
   "monitor_generated_at": "2026-11-14T07:03:03.026377+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 200,
+    "published_total": 201,
     "published_longform": 101,
-    "published_shorts": 99,
-    "public_total": 198,
+    "published_shorts": 100,
+    "public_total": 199,
     "queued_longform": 54,
-    "queued_shorts": 96,
+    "queued_shorts": 95,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -441,23 +441,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 14,
+        "published_total": 15,
         "published_longform": 8,
-        "published_shorts": 6,
+        "published_shorts": 7,
         "thumbnail_pending": 5,
-        "public_total": 14,
+        "public_total": 15,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "0507",
-        "title": "Proverbs 16:3 Morning Prayer | The Provision Table",
-        "format": "longform",
-        "youtube_video_id": "hsfK0G7966w",
-        "watch_url": "https://youtu.be/hsfK0G7966w",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T21:56:08Z"
+        "id": "SHORT-PROVISIONLUKE6V38",
+        "title": "Pray This Luke 6:38 Prayer for Open Doors & Provision | You #Shorts",
+        "format": "short",
+        "youtube_video_id": "8E4rvgBeGL4",
+        "watch_url": "https://www.youtube.com/shorts/8E4rvgBeGL4",
+        "published_on": "2026-11-14",
+        "published_at": "2026-11-14T07:04:18Z"
       },
       "next_queued_longform": {
         "id": "0508",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionluke6v38",
-        "scripture": "Luke 6:38",
+        "short": "short-provisionmalachi3v10",
+        "scripture": "Malachi 3:10",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONLUKE6V38",
+      "slug": "short-provisionluke6v38-stewardship-prayer",
+      "file": "short-provisionluke6v38-stewardship-prayer.md",
+      "title": "Pray This Luke 6:38 Prayer for Open Doors & Provision | You #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T07:04:18Z",
+      "youtube_video_id": "8E4rvgBeGL4",
+      "watch_url": "https://www.youtube.com/shorts/8E4rvgBeGL4",
+      "youtu_be_url": "https://youtu.be/8E4rvgBeGL4",
+      "shorts_url": "https://www.youtube.com/shorts/8E4rvgBeGL4",
+      "studio_url": "https://studio.youtube.com/video/8E4rvgBeGL4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/8E4rvgBeGL4/hqdefault.jpg",
+      "thumb_text": "GIVE AND \u00b7 IT SHALL BE",
+      "thumbnail_pending": false,
+      "duration_label": "47s",
+      "words": 582
+    },
     {
       "id": "SHORT-JOHN14V1",
       "slug": "short-john14v1-pre-sleep-prayer",
@@ -6483,17 +6507,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-provisionluke6v38",
-        "file": "0000-short-provisionluke6v38.yml",
-        "companion_longform_id": "",
-        "scripture": "Luke 6:38",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionmalachi3v10",
