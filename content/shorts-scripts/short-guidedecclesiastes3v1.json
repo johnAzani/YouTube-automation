@@ -1,0 +1,232 @@
+{
+  "key": "short-guidedecclesiastes3v1",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "A SEASON FOR",
+    "EVERYTHING"
+  ],
+  "poster": [
+    "SEEK HIS",
+    "TIMING",
+    "FIND HIS",
+    "PEACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley at dawn",
+    "calm mountain river stream",
+    "soft sunlight through pine trees",
+    "peaceful lake with morning fog",
+    "slow moving clouds over mountain peak",
+    "tranquil forest path in early light"
+  ],
+  "scenes": [
+    {
+      "a": "That heavy expectation of needing an answer right this second is exhausting your weary spirit.",
+      "img": "short-guidedecclesiastes3v1-scene-01.jpg",
+      "kicker": "ECCLESIASTES 3:1",
+      "sub": "HIS TIMING IS PERFECT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "To every thing there is a season, and a time to every purpose under the heaven.",
+      "img": "short-guidedecclesiastes3v1-scene-02.jpg",
+      "kicker": "ECCLESIASTES 3:1",
+      "sub": "REST IN HIS SOVEREIGN PLAN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, help me release my grip on the clock and trust that You are working now.",
+      "img": "short-guidedecclesiastes3v1-scene-03.jpg",
+      "kicker": "ECCLESIASTES 3:1",
+      "sub": "SURRENDER YOUR CONTROL",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant me the patience to wait for the proper season You have already ordained for me.",
+      "img": "short-guidedecclesiastes3v1-scene-04.jpg",
+      "kicker": "ECCLESIASTES 3:1",
+      "sub": "PATIENCE IN THE WAITING",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Clear away my restless anxiety so I might clearly hear Your voice leading my steps.",
+      "img": "short-guidedecclesiastes3v1-scene-05.jpg",
+      "kicker": "ECCLESIASTES 3:1",
+      "sub": "HEARING HIS QUIET DIRECTION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. Please subscribe to The Guided Path and join us as we seek God's wisdom.",
+      "img": "short-guidedecclesiastes3v1-scene-06.jpg",
+      "kicker": "ECCLESIASTES 3:1",
+      "sub": "WALK IN HIS TRUTH DAILY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "That heavy expectation of needing an answer right this second is exhausting your weary spirit."
+    ],
+    [
+      16,
+      30,
+      "To every thing there is a season, and a time to every purpose under the heaven."
+    ],
+    [
+      31,
+      45,
+      "Lord, help me release my grip on the clock and trust that You are working now."
+    ],
+    [
+      46,
+      60,
+      "Grant me the patience to wait for the proper season You have already ordained for me."
+    ],
+    [
+      61,
+      75,
+      "Clear away my restless anxiety so I might clearly hear Your voice leading my steps."
+    ],
+    [
+      76,
+      95,
+      "Amen. Please subscribe to The Guided Path and join us as we seek God's wisdom."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "THAT HEAVY EXPECTATION",
+        "OF NEEDING AN ANSWER",
+        "IS EXHAUSTING YOUR",
+        "WEARY SPIRIT"
+      ],
+      [
+        "EXHAUSTING",
+        "WEARY"
+      ],
+      "ECC 3:1"
+    ],
+    [
+      16,
+      30,
+      [
+        "TO EVERY THING",
+        "THERE IS A SEASON",
+        "AND A TIME TO",
+        "EVERY PURPOSE"
+      ],
+      [
+        "EVERYTHING",
+        "SEASON"
+      ],
+      "ECC 3:1"
+    ],
+    [
+      31,
+      45,
+      [
+        "LORD HELP ME",
+        "RELEASE MY GRIP",
+        "AND TRUST YOU",
+        "ARE WORKING NOW"
+      ],
+      [
+        "RELEASE",
+        "TRUST"
+      ],
+      "ECC 3:1"
+    ],
+    [
+      46,
+      60,
+      [
+        "GRANT ME THE",
+        "PATIENCE TO WAIT",
+        "FOR THE PROPER",
+        "SEASON ORDAINED"
+      ],
+      [
+        "PATIENCE",
+        "SEASON"
+      ],
+      "ECC 3:1"
+    ],
+    [
+      61,
+      75,
+      [
+        "CLEAR AWAY MY",
+        "RESTLESS ANXIETY",
+        "SO I MIGHT",
+        "HEAR YOUR VOICE"
+      ],
+      [
+        "RESTLESS",
+        "CLEAR"
+      ],
+      "ECC 3:1"
+    ],
+    [
+      76,
+      95,
+      [
+        "AMEN PLEASE SUBSCRIBE",
+        "TO THE GUIDED PATH",
+        "AS WE SEEK",
+        "GODS WISDOM"
+      ],
+      [
+        "SUBSCRIBE",
+        "WISDOM"
+      ],
+      "ECC 3:1"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That heavy expectation of needing an answer right this second is exhausting your weary spirit.",
+      "kind": "phrase",
+      "words": [
+        "EXHAUSTING",
+        "WEARY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Ecclesiastes 3:1"
+}

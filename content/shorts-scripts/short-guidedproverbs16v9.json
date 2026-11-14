@@ -1,0 +1,270 @@
+{
+  "key": "short-guidedproverbs16v9",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "PROVERBS 16:9",
+    "THE GUIDED PATH"
+  ],
+  "poster": [
+    "SEEK GOD'S",
+    "WISDOM FOR",
+    "EVERY STEP",
+    "PROVERBS 16:9"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "peaceful mountain valley morning mist",
+    "serene alpine river winding through pine trees",
+    "quiet mountain lake at dawn reflection",
+    "misty forest path under tall trees",
+    "calm mountain ridge in soft golden light",
+    "tranquil valley landscape with gentle morning fog"
+  ],
+  "scenes": [
+    {
+      "a": "If you are holding back an unfinished plan tonight because you fear your own misstep, listen.",
+      "img": "short-guidedproverbs16v9-scene-01.jpg",
+      "kicker": "PROVERBS 16:9",
+      "sub": "GUIDANCE IN EVERY STEP",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The word of God reminds us in Proverbs 16:9:",
+      "img": "short-guidedproverbs16v9-scene-02.jpg",
+      "kicker": "PROVERBS 16:9",
+      "sub": "HIS WORD IS TRUTH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "A man's heart deviseth his way: but the Lord directeth his steps.",
+      "img": "short-guidedproverbs16v9-scene-03.jpg",
+      "kicker": "PROVERBS 16:9",
+      "sub": "THE LORD DIRECTS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, we confess that our own understanding is so often limited by what we can see right now.",
+      "img": "short-guidedproverbs16v9-scene-04.jpg",
+      "kicker": "PRAYER",
+      "sub": "LIMITED SIGHT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "We lay our personal agendas down before Your throne and ask You to order every future step we take.",
+      "img": "short-guidedproverbs16v9-scene-05.jpg",
+      "kicker": "PRAYER",
+      "sub": "ORDER OUR STEPS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Close every door that leads away from Your peace, and give us the quiet grace to walk only where You lead.",
+      "img": "short-guidedproverbs16v9-scene-06.jpg",
+      "kicker": "AMEN",
+      "sub": "WALK IN PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If you are holding back an unfinished plan tonight because you fear your own misstep, listen."
+    ],
+    [
+      8,
+      15,
+      "The word of God reminds us in Proverbs 16:9:"
+    ],
+    [
+      15,
+      23,
+      "A man's heart deviseth his way: but the Lord directeth his steps."
+    ],
+    [
+      23,
+      31,
+      "Father, we confess that our own understanding is so often limited by what we can see right now."
+    ],
+    [
+      31,
+      39,
+      "We lay our personal agendas down before Your throne and ask You to order every future step we take."
+    ],
+    [
+      39,
+      48,
+      "Close every door that leads away from Your peace, and give us the quiet grace to walk only where You lead."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF YOU ARE HOLDING BACK",
+        "AN UNFINISHED PLAN TONIGHT",
+        "BECAUSE YOU FEAR YOUR OWN",
+        "MISSTEP, LISTEN."
+      ],
+      "MISSTEP",
+      "PROVERBS 16 : 9"
+    ],
+    [
+      8,
+      15,
+      [
+        "THE WORD OF GOD",
+        "REMINDS US IN",
+        "PROVERBS 16:9"
+      ],
+      "REMINDS",
+      "PROVERBS 16 : 9"
+    ],
+    [
+      15,
+      23,
+      [
+        "A MAN'S HEART DEVISETH",
+        "HIS WAY: BUT THE",
+        "LORD DIRECTETH HIS STEPS."
+      ],
+      "DIRECTETH",
+      "PROVERBS 16 : 9"
+    ],
+    [
+      23,
+      31,
+      [
+        "FATHER, WE CONFESS THAT",
+        "OUR OWN UNDERSTANDING",
+        "IS SO OFTEN LIMITED"
+      ],
+      "LIMITED",
+      "PROVERBS 16 : 9"
+    ],
+    [
+      31,
+      39,
+      [
+        "WE LAY OUR PERSONAL",
+        "AGENDAS DOWN BEFORE",
+        "YOUR THRONE"
+      ],
+      "THRONE",
+      "PROVERBS 16 : 9"
+    ],
+    [
+      39,
+      48,
+      [
+        "CLOSE EVERY DOOR THAT",
+        "LEADS AWAY FROM PEACE,",
+        "AND WALK WHERE YOU LEAD."
+      ],
+      "PEACE",
+      "PROVERBS 16 : 9"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are holding back an unfinished plan tonight because you fear your own misstep, listen.",
+      "kind": "phrase",
+      "words": [
+        "FEAR",
+        "YOUR",
+        "OWN",
+        "MISSTEP"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "The word of God reminds us in Proverbs 16:9:",
+      "kind": "phrase",
+      "words": [
+        "WORD",
+        "OF",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "A man's heart deviseth his way: but the Lord directeth his steps.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "DIRECTETH",
+        "HIS",
+        "STEPS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we confess that our own understanding is so often limited by what we can see right now.",
+      "kind": "phrase",
+      "words": [
+        "OUR",
+        "OWN",
+        "UNDERSTANDING",
+        "LIMITED"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "We lay our personal agendas down before Your throne and ask You to order every future step we take.",
+      "kind": "phrase",
+      "words": [
+        "PERSONAL",
+        "AGENDAS",
+        "YOUR",
+        "THRONE"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Close every door that leads away from Your peace, and give us the quiet grace to walk only where You lead.",
+      "kind": "phrase",
+      "words": [
+        "EVERY",
+        "DOOR",
+        "YOUR",
+        "PEACE"
+      ],
+      "hi": 3,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 16:9"
+}

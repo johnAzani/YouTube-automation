@@ -1,0 +1,294 @@
+{
+  "key": "short-guidedmicah6v8",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "WALK HUMBLY",
+    "BEFORE GOD"
+  ],
+  "poster": [
+    "MICAH 6:8",
+    "A PRAYER FOR",
+    "YOUR NEXT STEP",
+    "THE GUIDED PATH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty mountain pass at sunrise",
+    "calm flowing river in forest",
+    "sunlight filtering through alpine trees",
+    "serene valley at dawn",
+    "still lake reflecting mountains",
+    "gentle mountain stream at dusk"
+  ],
+  "scenes": [
+    {
+      "a": "Stop your mind from racing over that choice you cannot seem to resolve this morning.",
+      "img": "short-guidedmicah6v8-scene-01.jpg",
+      "kicker": "MICAH 6:8",
+      "sub": "FINDING GOD'S DIRECTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He has shown thee, O man, what is good; and what doth the Lord require of thee,",
+      "img": "short-guidedmicah6v8-scene-02.jpg",
+      "kicker": "MICAH 6:8",
+      "sub": "THE LORD'S REQUIREMENT",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "but to do justly, and to love mercy, and to walk humbly with thy God?",
+      "img": "short-guidedmicah6v8-scene-03.jpg",
+      "kicker": "MICAH 6:8",
+      "sub": "WALK HUMBLY WITH GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, quiet the chaos in my heart as I seek to honor You in my current situation.",
+      "img": "short-guidedmicah6v8-scene-04.jpg",
+      "kicker": "A PRAYER",
+      "sub": "SURRENDERING CONTROL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach me to choose justice, to extend Your mercy, and to walk in complete humility today.",
+      "img": "short-guidedmicah6v8-scene-05.jpg",
+      "kicker": "A PRAYER",
+      "sub": "SEEKING WISDOM",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Guide my thoughts, steady my spirit, and keep me close to Your truth until I see clearly.",
+      "img": "short-guidedmicah6v8-scene-06.jpg",
+      "kicker": "A PRAYER",
+      "sub": "TRUSTING HIS PLAN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Stop your mind from racing over that choice you cannot seem to resolve this morning."
+    ],
+    [
+      8,
+      16,
+      "He has shown thee, O man, what is good; and what doth the Lord require of thee,"
+    ],
+    [
+      16,
+      24,
+      "but to do justly, and to love mercy, and to walk humbly with thy God?"
+    ],
+    [
+      24,
+      32,
+      "Lord, quiet the chaos in my heart as I seek to honor You in my current situation."
+    ],
+    [
+      32,
+      40,
+      "Teach me to choose justice, to extend Your mercy, and to walk in complete humility today."
+    ],
+    [
+      40,
+      48,
+      "Guide my thoughts, steady my spirit, and keep me close to Your truth until I see clearly."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "STOP YOUR MIND",
+        "FROM RACING OVER",
+        "THAT CHOICE",
+        "YOU CANNOT RESOLVE"
+      ],
+      [
+        "STOP",
+        "RACING",
+        "CHOICE"
+      ],
+      "MICAH 6:8"
+    ],
+    [
+      8,
+      16,
+      [
+        "HE HAS SHOWN THEE",
+        "WHAT IS GOOD",
+        "WHAT DOTH THE LORD",
+        "REQUIRE OF THEE"
+      ],
+      [
+        "SHOWN",
+        "GOOD",
+        "REQUIRE"
+      ],
+      "MICAH 6:8"
+    ],
+    [
+      16,
+      24,
+      [
+        "BUT TO DO JUSTLY",
+        "LOVE MERCY",
+        "WALK HUMBLY",
+        "WITH THY GOD"
+      ],
+      [
+        "JUSTLY",
+        "MERCY",
+        "HUMBLY"
+      ],
+      "MICAH 6:8"
+    ],
+    [
+      24,
+      32,
+      [
+        "LORD QUIET THE",
+        "CHAOS IN MY HEART",
+        "AS I SEEK",
+        "TO HONOR YOU"
+      ],
+      [
+        "QUIET",
+        "CHAOS",
+        "HONOR"
+      ],
+      "MICAH 6:8"
+    ],
+    [
+      32,
+      40,
+      [
+        "TEACH ME JUSTICE",
+        "EXTEND YOUR MERCY",
+        "WALK HUMBLY",
+        "WITH GOD TODAY"
+      ],
+      [
+        "JUSTICE",
+        "MERCY",
+        "HUMBLY"
+      ],
+      "MICAH 6:8"
+    ],
+    [
+      40,
+      48,
+      [
+        "GUIDE MY THOUGHTS",
+        "STEADY MY SPIRIT",
+        "KEEP ME CLOSE",
+        "TO YOUR TRUTH"
+      ],
+      [
+        "GUIDE",
+        "STEADY",
+        "TRUTH"
+      ],
+      "MICAH 6:8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Stop your mind from racing over that choice you cannot seem to resolve this morning.",
+      "kind": "phrase",
+      "words": [
+        "STOP",
+        "RACING",
+        "CHOICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He has shown thee, O man, what is good; and what doth the Lord require of thee,",
+      "kind": "phrase",
+      "words": [
+        "SHOWN",
+        "GOOD",
+        "REQUIRE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "but to do justly, and to love mercy, and to walk humbly with thy God?",
+      "kind": "phrase",
+      "words": [
+        "JUSTLY",
+        "MERCY",
+        "HUMBLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, quiet the chaos in my heart as I seek to honor You in my current situation.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "CHAOS",
+        "HONOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teach me to choose justice, to extend Your mercy, and to walk in complete humility today.",
+      "kind": "phrase",
+      "words": [
+        "JUSTICE",
+        "MERCY",
+        "HUMBLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guide my thoughts, steady my spirit, and keep me close to Your truth until I see clearly.",
+      "kind": "phrase",
+      "words": [
+        "GUIDE",
+        "STEADY",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Micah 6:8"
+}

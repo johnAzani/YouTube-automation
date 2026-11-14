@@ -1,0 +1,323 @@
+{
+  "key": "short-guidedjohn14v6",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "I AM THE WAY",
+    "FIND YOUR DIRECTION"
+  ],
+  "poster": [
+    "WHEN YOU NEED",
+    "CLEAR DIRECTION",
+    "LOOK TO THE WAY",
+    "JOHN 14:6"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley at dawn calm path",
+    "calm mountain lake sun rays fog",
+    "peaceful forest stream morning light",
+    "winding river through foggy valley sunrise",
+    "serene mountain pass autumn morning mist",
+    "tranquil pine forest footpath golden hour",
+    "scenic mountain ridge reflection water sunrise"
+  ],
+  "scenes": [
+    {
+      "a": "When competing voices leave your mind confused tonight",
+      "img": "short-guidedjohn14v6-scene-01.jpg",
+      "kicker": "JOHN 14:6",
+      "sub": "SEEK TRUE DIRECTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Jesus saith unto him, I am the way",
+      "img": "short-guidedjohn14v6-scene-02.jpg",
+      "kicker": "JOHN 14:6",
+      "sub": "THE WAY AND THE TRUTH",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "no man cometh unto the Father, but by me",
+      "img": "short-guidedjohn14v6-scene-03.jpg",
+      "kicker": "JOHN 14:6",
+      "sub": "THE ONLY PATH",
+      "cam": "tilt_up",
+      "focus": [
+        0.48,
+        0.52
+      ]
+    },
+    {
+      "a": "bring divine clarity to our hearts",
+      "img": "short-guidedjohn14v6-scene-04.jpg",
+      "kicker": "JOHN 14:6",
+      "sub": "PRAY FOR CLARITY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Guide our steps out of confusion",
+      "img": "short-guidedjohn14v6-scene-05.jpg",
+      "kicker": "JOHN 14:6",
+      "sub": "WALK IN HIS LIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.52,
+        0.48
+      ]
+    },
+    {
+      "a": "Teach us to trust Your truth above our own understanding",
+      "img": "short-guidedjohn14v6-scene-06.jpg",
+      "kicker": "JOHN 14:6",
+      "sub": "TRUST HIS WISDOM",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May Your holy presence guard our decisions",
+      "img": "short-guidedjohn14v6-scene-07.jpg",
+      "kicker": "JOHN 14:6",
+      "sub": "ANCHOR YOUR SOUL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "When competing voices leave your mind confused tonight, stop and look to the only true direction."
+    ],
+    [
+      7,
+      14,
+      "Jesus saith unto him, I am the way, the truth, and the life:"
+    ],
+    [
+      14,
+      21,
+      "no man cometh unto the Father, but by me."
+    ],
+    [
+      21,
+      29,
+      "Heavenly Father, when the world offers endless opinions and uncertain paths, bring divine clarity to our hearts."
+    ],
+    [
+      29,
+      36,
+      "Guide our steps out of confusion and into Your enduring light."
+    ],
+    [
+      36,
+      44,
+      "Teach us to trust Your truth above our own understanding, and give us courage to walk where You lead."
+    ],
+    [
+      44,
+      52,
+      "May Your holy presence guard our decisions and anchor our souls today. Subscribe to walk daily in God's wisdom."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "WHEN COMPETING VOICES",
+        "LEAVE YOUR MIND CONFUSED",
+        "LOOK TO THE TRUE DIRECTION"
+      ],
+      [
+        "TRUE",
+        "DIRECTION"
+      ],
+      "JOHN 14 : 6"
+    ],
+    [
+      7,
+      14,
+      [
+        "JESUS SAITH UNTO HIM",
+        "I AM THE WAY",
+        "THE TRUTH AND THE LIFE"
+      ],
+      [
+        "WAY",
+        "TRUTH",
+        "LIFE"
+      ],
+      "JOHN 14 : 6"
+    ],
+    [
+      14,
+      21,
+      [
+        "NO MAN COMETH",
+        "UNTO THE FATHER",
+        "BUT BY ME"
+      ],
+      [
+        "FATHER",
+        "BY",
+        "ME"
+      ],
+      "JOHN 14 : 6"
+    ],
+    [
+      21,
+      29,
+      [
+        "WHEN THE WORLD OFFERS",
+        "ENDLESS OPINIONS",
+        "BRING DIVINE CLARITY"
+      ],
+      [
+        "DIVINE",
+        "CLARITY"
+      ],
+      "JOHN 14 : 6"
+    ],
+    [
+      29,
+      36,
+      [
+        "GUIDE OUR STEPS",
+        "OUT OF CONFUSION",
+        "INTO YOUR ENDURING LIGHT"
+      ],
+      [
+        "GUIDE",
+        "LIGHT"
+      ],
+      "JOHN 14 : 6"
+    ],
+    [
+      36,
+      44,
+      [
+        "TRUST YOUR TRUTH",
+        "ABOVE OUR OWN UNDERSTANDING",
+        "WALK WHERE YOU LEAD"
+      ],
+      [
+        "TRUST",
+        "TRUTH",
+        "LEAD"
+      ],
+      "JOHN 14 : 6"
+    ],
+    [
+      44,
+      52,
+      [
+        "GUARD OUR DECISIONS",
+        "ANCHOR OUR SOULS TODAY",
+        "WALK DAILY IN WISDOM"
+      ],
+      [
+        "GUARD",
+        "ANCHOR",
+        "WISDOM"
+      ],
+      "JOHN 14 : 6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "confused tonight",
+      "kind": "phrase",
+      "words": [
+        "CONFUSED",
+        "TONIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I am the way",
+      "kind": "phrase",
+      "words": [
+        "WAY",
+        "TRUTH",
+        "LIFE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "cometh unto the Father",
+      "kind": "phrase",
+      "words": [
+        "FATHER",
+        "BY",
+        "ME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "bring divine clarity",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "CLARITY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "into Your enduring light",
+      "kind": "phrase",
+      "words": [
+        "ENDURING",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "trust Your truth",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "anchor our souls",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "SOULS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "John 14:6"
+}

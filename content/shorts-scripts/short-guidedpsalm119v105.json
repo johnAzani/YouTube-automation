@@ -1,0 +1,327 @@
+{
+  "key": "short-guidedpsalm119v105",
+  "channel": "prayer10",
+  "psalm": 119,
+  "title": [
+    "A LAMP UNTO",
+    "YOUR PATH"
+  ],
+  "poster": [
+    "WHEN YOU NEED",
+    "WISDOM FOR THE",
+    "NEXT STEP",
+    "PSALM 119:105"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley at dawn peaceful fog mountains",
+    "calm mountain lake glowing morning light peaceful",
+    "quiet winding path through mountain pass dawn",
+    "dramatic mist clearing over alpine valley river",
+    "peaceful mountain stream softly lit by early sunrise",
+    "serene alpine mountain ridge golden hour twilight",
+    "tranquil mountain lake reflection soft sunrise light"
+  ],
+  "scenes": [
+    {
+      "a": "staring at a difficult choice tonight",
+      "img": "short-guidedpsalm119v105-scene-01.jpg",
+      "kicker": "SEEKING DIRECTION",
+      "sub": "BRING YOUR UNCERTAINTY TO GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Thy word is a lamp unto my feet",
+      "img": "short-guidedpsalm119v105-scene-02.jpg",
+      "kicker": "PSALM 119:105",
+      "sub": "A LAMP UNTO MY FEET",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "bring my uncertainty to You today",
+      "img": "short-guidedpsalm119v105-scene-03.jpg",
+      "kicker": "HOLY GUIDANCE",
+      "sub": "ASK FOR HEAVENLY WISDOM",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "grant me Your holy discernment",
+      "img": "short-guidedpsalm119v105-scene-04.jpg",
+      "kicker": "SPIRITUAL CLARITY",
+      "sub": "DISCERNMENT FOR THE DARKNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Illuminate just the single next step",
+      "img": "short-guidedpsalm119v105-scene-05.jpg",
+      "kicker": "ONE STEP AHEAD",
+      "sub": "LIGHT FOR THE PATH BEFORE YOU",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "reveal Your wisdom for this decision",
+      "img": "short-guidedpsalm119v105-scene-06.jpg",
+      "kicker": "DIVINE WISDOM",
+      "sub": "QUIET YOUR ANXIOUS HEART",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Guided Path",
+      "img": "short-guidedpsalm119v105-scene-07.jpg",
+      "kicker": "THE GUIDED PATH",
+      "sub": "WALK WITH GOD EVERY DAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "If you are staring at a difficult choice tonight, terrified of making the wrong move, listen."
+    ],
+    [
+      12,
+      24,
+      "Psalm 119:105 says, Thy word is a lamp unto my feet, and a light unto my path."
+    ],
+    [
+      24,
+      38,
+      "Heavenly Father, I bring my uncertainty to You today, seeking Your clear guidance."
+    ],
+    [
+      38,
+      54,
+      "When the road ahead is shadowed and I cannot see the full outcome, grant me Your holy discernment."
+    ],
+    [
+      54,
+      68,
+      "Illuminate just the single next step I need to take, and keep my feet from stumbling."
+    ],
+    [
+      68,
+      82,
+      "Guide my mind, quiet my anxious thoughts, and reveal Your wisdom for this decision. Amen."
+    ],
+    [
+      82,
+      90,
+      "Subscribe to The Guided Path for daily scripture, wisdom, and peace."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "IF YOU ARE STARING AT A",
+        "DIFFICULT CHOICE TONIGHT",
+        "TERRIFIED OF MAKING",
+        "THE WRONG MOVE LISTEN"
+      ],
+      [
+        "DIFFICULT",
+        "CHOICE",
+        "LISTEN"
+      ],
+      "PSALM 119:105"
+    ],
+    [
+      12,
+      24,
+      [
+        "THY WORD IS A LAMP",
+        "UNTO MY FEET",
+        "AND A LIGHT",
+        "UNTO MY PATH"
+      ],
+      [
+        "LAMP",
+        "LIGHT",
+        "PATH"
+      ],
+      "PSALM 119:105"
+    ],
+    [
+      24,
+      38,
+      [
+        "HEAVENLY FATHER",
+        "I BRING MY UNCERTAINTY",
+        "TO YOU TODAY SEEKING",
+        "YOUR CLEAR GUIDANCE"
+      ],
+      [
+        "UNCERTAINTY",
+        "GUIDANCE"
+      ],
+      "PSALM 119:105"
+    ],
+    [
+      38,
+      54,
+      [
+        "WHEN THE ROAD AHEAD IS SHADOWED",
+        "AND I CANNOT SEE THE OUTCOME",
+        "GRANT ME YOUR HOLY DISCERNMENT"
+      ],
+      [
+        "HOLY",
+        "DISCERNMENT"
+      ],
+      "PSALM 119:105"
+    ],
+    [
+      54,
+      68,
+      [
+        "ILLUMINATE JUST THE SINGLE",
+        "NEXT STEP I NEED TO TAKE",
+        "AND KEEP MY FEET",
+        "FROM STUMBLING"
+      ],
+      [
+        "ILLUMINATE",
+        "NEXT",
+        "STEP"
+      ],
+      "PSALM 119:105"
+    ],
+    [
+      68,
+      82,
+      [
+        "GUIDE MY MIND",
+        "QUIET MY ANXIOUS THOUGHTS",
+        "AND REVEAL YOUR WISDOM",
+        "FOR THIS DECISION AMEN"
+      ],
+      [
+        "QUIET",
+        "WISDOM",
+        "DECISION"
+      ],
+      "PSALM 119:105"
+    ],
+    [
+      82,
+      90,
+      [
+        "SUBSCRIBE TO THE GUIDED PATH",
+        "FOR DAILY SCRIPTURE",
+        "WISDOM AND PEACE"
+      ],
+      [
+        "GUIDED",
+        "PATH",
+        "WISDOM"
+      ],
+      "PSALM 119:105"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "staring at a difficult choice tonight",
+      "kind": "phrase",
+      "words": [
+        "DIFFICULT",
+        "CHOICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thy word is a lamp unto my feet",
+      "kind": "phrase",
+      "words": [
+        "LAMP",
+        "FEET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "bring my uncertainty to You today",
+      "kind": "phrase",
+      "words": [
+        "UNCERTAINTY",
+        "TODAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "grant me Your holy discernment",
+      "kind": "phrase",
+      "words": [
+        "HOLY",
+        "DISCERNMENT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Illuminate just the single next step",
+      "kind": "phrase",
+      "words": [
+        "ILLUMINATE",
+        "STEP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "reveal Your wisdom for this decision",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "DECISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Guided Path",
+      "kind": "phrase",
+      "words": [
+        "GUIDED",
+        "PATH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 119:105"
+}
