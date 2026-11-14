@@ -25,6 +25,7 @@ thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
 thumbnail_revision: "shorts-poster-v1"
 thumbnail_attempts: 0
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Close your eyes and take a deep, slow breath. Release every heavy worry from this day into the quiet dark. Jesus whispers to you in John fourteen twenty-seven: Peace I leave with you; my peace I give to you. Not as the world gives do I give to you. Let not your hearts be troubled, neither let them be afraid. Tonight, receive His supernatural quietness over your weary soul and racing mind. Lay down your anxieties at His feet. May His gentle presence envelope your room and guard your heart as you drift into restorative sleep. Rest deeply in His eternal love tonight. Subscribe to The Secret Place for daily night prayers.

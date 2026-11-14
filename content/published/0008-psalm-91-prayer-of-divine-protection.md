@@ -81,6 +81,7 @@ published_on: "2026-10-29"
 youtube_video_id: "7RDX0fbIOtQ"
 thumbnail_revision: "ctr-v3-cinema"
 metadata_revision: "selar-seo-v1"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 ## Scene 1 — The Habitation of the Most High (Verses 1–2)

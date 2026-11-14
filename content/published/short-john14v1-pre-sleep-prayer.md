@@ -27,6 +27,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["FINDING REST", "IN HIS PROMISE", "A PRAYER FOR YOUR TIRED SOUL", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 The worry that lingers after the lights go out is not yours to carry tonight. Jesus says, Do not let your hearts be troubled. You believe in God, believe also in me. In my Fathers house are many rooms; if it were not so, I would have told you. I go to prepare a place for you. And if I go and prepare a place for you, I will come back. Lord, thank you that my future is secure in your hands, anchored by your infinite love. May I sleep in the perfect peace of your holy presence, knowing I am never alone.

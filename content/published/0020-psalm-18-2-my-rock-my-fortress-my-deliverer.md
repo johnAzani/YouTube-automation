@@ -92,6 +92,7 @@ metadata_revision: "selar-seo-v1"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 ## Scene 1 — The LORD Is My Rock (Verse 2a)

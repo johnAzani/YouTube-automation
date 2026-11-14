@@ -97,6 +97,7 @@ metadata_revision: "selar-seo-v1"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 ## Scene 1 — Trust in the LORD, and Do Good (Verse 3a)

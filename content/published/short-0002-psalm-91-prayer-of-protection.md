@@ -23,6 +23,7 @@ thumbnail_attempts: 0
 thumbnail_poster: ["PSALM 91 PRAYER", "BEFORE YOU SLEEP", "DIVINE PROTECTION", "THE SECRET PLACE"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 He who dwells in the secret place of the Most High shall abide under the shadow of the Almighty.

@@ -24,6 +24,7 @@ thumbnail_attempts: 0
 thumbnail_poster: ["PSALM 27 PRAYER", "BEFORE YOU SLEEP", "FEAR NO EVIL", "THE SECRET PLACE"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 The Lord is my light and my salvation; whom shall I fear? The Lord is the strength of my life; of whom shall I be afraid?

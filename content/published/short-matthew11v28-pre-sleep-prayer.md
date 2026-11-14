@@ -24,6 +24,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["LAY DOWN YOUR BURDENS", "A QUIET BEDTIME PRAYER", "JESUS PROMISES YOU REST", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Take a slow deep breath and let the heavy burdens of your day drift away in this quiet space. Jesus invites you, Come to me, all who labor and are heavy laden, and I will give you rest. Take my yoke upon you and learn from me, for I am gentle and lowly in heart. And you will find rest for your souls, for my yoke is easy and my burden is light. Tonight, release every anxious thought, every fear, and every unfinished task into His loving hands. May His peaceful presence cover your spirit, bringing deep calm to your mind as you drift off to sleep. Rest peacefully tonight, and subscribe to The Secret Place for daily bedtime prayers.

@@ -28,6 +28,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["RELEASE THE", "WEIGHT OF", "YOUR DAY", "TONIGHT"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Release the grip of that uncertainty you have carried since the sun rose this morning. For I the LORD thy God will hold thy right hand, saying unto thee, Fear not; I will help thee. Father, thank You for the grace of Your presence in the middle of my quiet room. When the world feels vast and my strength fades, help me to lean into Your embrace. Teach me to release the outcome and trust that You are working in the hidden places. May I rest in Your constant care until the light of a new day arrives here.

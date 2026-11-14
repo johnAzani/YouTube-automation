@@ -102,6 +102,7 @@ metadata_revision: "selar-seo-v1"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 ## Scene 1 — In Thee, O LORD, Do I Put My Trust (Verse 1a)

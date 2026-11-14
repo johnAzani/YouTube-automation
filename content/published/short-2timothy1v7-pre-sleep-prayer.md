@@ -24,6 +24,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["CALM", "YOUR", "RESTLESS", "MIND"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Close your eyes tonight and take a deep breath. Let every weight of this long day fall away from your shoulders. Your heavenly Father watches over your resting place with tender care. For God has not given us a spirit of fear, but of power and of love and of a sound mind. When quiet shadows fall across your room, remember His gentle presence here. Cast every anxious thought into His loving hands and drift into deep sleep. May His quiet peace guard your heart all through the long night hours. Sleep safely now in Jesus name. Amen.

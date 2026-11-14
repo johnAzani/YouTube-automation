@@ -103,6 +103,7 @@ metadata_revision: "selar-seo-v1"
 published_on: "2026-11-05"
 published_at: "2026-11-05T13:41:35Z"
 youtube_video_id: "BFlkzRVMf8o"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 ## Scene 1 — My Light and My Salvation (Verse 1)

@@ -24,6 +24,7 @@ thumbnail_attempts: 0
 thumbnail_poster: ["PSALM 121 PRAYER", "BEFORE YOU SLEEP", "HE WHO KEEPS YOU", "THE SECRET PLACE"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 I will lift up mine eyes unto the hills, from whence cometh my help. My help cometh from the Lord, which made heaven and earth.

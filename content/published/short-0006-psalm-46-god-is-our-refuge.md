@@ -24,6 +24,7 @@ thumbnail_attempts: 0
 thumbnail_poster: ["PSALM 46 PRAYER", "BEFORE YOU SLEEP", "BE STILL & KNOW", "THE SECRET PLACE"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 God is our refuge and strength, a very present help in trouble. Therefore we will not fear, though the earth be removed.

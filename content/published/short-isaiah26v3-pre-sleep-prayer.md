@@ -24,6 +24,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["KEPT IN", "PERFECT PEACE", "ISAIAH 26:3-4", "PERFECT NIGHT PEACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Turn your thoughts gently toward God tonight, inhale deeply, and let every racing worry slow down into quiet stillness. Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee. Trust ye in the Lord for ever: for in the Lord Jehovah is everlasting strength. Prince of Peace, fix my wandering mind upon Your faithfulness tonight and cover my family beneath Your everlasting arms. Hush every storm inside my chest and carry my weary body into deep, undisturbed sleep until daybreak. Whisper Amen to rest in His perfect peace tonight, and subscribe to The Secret Place to pray with us nightly.

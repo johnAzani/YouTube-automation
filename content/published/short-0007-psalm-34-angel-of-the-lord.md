@@ -24,6 +24,7 @@ thumbnail_attempts: 0
 thumbnail_poster: ["PSALM 34 PRAYER", "BEFORE YOU SLEEP", "ANGELS STAND WATCH", "THE SECRET PLACE"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 The angel of the Lord encamps all around those who fear Him, and delivers them. Oh, taste and see that the Lord is good; blessed is the man who trusts in Him!

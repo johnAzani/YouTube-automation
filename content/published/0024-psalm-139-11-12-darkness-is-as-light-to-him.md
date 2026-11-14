@@ -94,6 +94,7 @@ duration_seconds: 11189.1
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 ## Scene 1 — If I Say, Surely the Darkness Shall Cover Me (Verse 11a)

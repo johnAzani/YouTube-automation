@@ -71,6 +71,7 @@ published_on: "2026-11-02"
 youtube_video_id: "1g8TXHD0Xks"
 thumbnail_revision: "ctr-v3-cinema"
 metadata_revision: "selar-seo-v1"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 ## Scene 1 — The Unshakable Refuge in Trouble (Verses 1-3)

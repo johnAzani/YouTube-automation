@@ -90,6 +90,7 @@ metadata_revision: "selar-seo-v1"
 title_before: "Psalm 34 Night Prayer for Sleep | Angels Stand Watch Over You"
 retitled_at: "2026-11-14"
 retitle_reason: "unwatched after 7 days or more"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 ## Scene 1 — Continual Praise & Radiant Faces (Verses 1-5)

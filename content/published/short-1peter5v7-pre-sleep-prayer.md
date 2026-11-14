@@ -24,6 +24,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["A PRAYER FOR", "A PEACEFUL SLEEP", "WITH THE SECRET PLACE", "1 PETER 5:7"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Take a deep breath and let your shoulders drop. Release the heavy burdens you have carried all day. You are invited to lay them down at the feet of your Creator. As it is written in 1 Peter 5:7, cast all your anxiety on him because he cares for you. Heavenly Father, I bring my thoughts to you now as I prepare to sleep. Quiet my spirit and remove the clutter from my tired mind. May your grace envelope me like a soft blanket of stars tonight. I trust in your constant love and find safety in your hands, amen.
