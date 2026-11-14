@@ -2,7 +2,7 @@
 id: 0508
 title: "Prayer for Provision When Money Is Tight: Psalm 84:11"
 slug: psalm-84-11-provision-prayer-the-provision-table
-status: approved
+status: published
 channel: prayer7
 privacy: public
 format: longform
@@ -73,6 +73,13 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-14"
+published_at: "2026-11-14T12:11:03Z"
+youtube_video_id: "3OV86LYIR8M"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Approaching Jehovah-Jireh at the Prepared Table

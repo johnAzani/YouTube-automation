@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T11:54:25Z",
+  "generated_at": "2026-11-14T12:11:56Z",
   "monitor_generated_at": "2026-11-14T10:41:34.562205+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 215,
-    "published_longform": 104,
-    "published_shorts": 111,
-    "public_total": 213,
-    "queued_longform": 60,
-    "queued_shorts": 97,
+    "published_total": 217,
+    "published_longform": 105,
+    "published_shorts": 112,
+    "public_total": 215,
+    "queued_longform": 59,
+    "queued_shorts": 96,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -441,33 +441,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 15,
-        "published_longform": 8,
-        "published_shorts": 7,
+        "published_total": 17,
+        "published_longform": 9,
+        "published_shorts": 8,
         "thumbnail_pending": 5,
-        "public_total": 15,
-        "queued_longform": 6,
+        "public_total": 17,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONLUKE6V38",
-        "title": "Pray This Luke 6:38 Prayer for Open Doors & Provision | You #Shorts",
-        "format": "short",
-        "youtube_video_id": "8E4rvgBeGL4",
-        "watch_url": "https://www.youtube.com/shorts/8E4rvgBeGL4",
-        "published_on": "2026-11-14",
-        "published_at": "2026-11-14T07:04:18Z"
-      },
-      "next_queued_longform": {
         "id": "0508",
         "title": "Prayer for Provision When Money Is Tight: Psalm 84:11",
-        "words": 2031,
+        "format": "longform",
+        "youtube_video_id": "3OV86LYIR8M",
+        "watch_url": "https://youtu.be/3OV86LYIR8M",
+        "published_on": "2026-11-14",
+        "published_at": "2026-11-14T12:11:03Z"
+      },
+      "next_queued_longform": {
+        "id": "0509",
+        "title": "Prayer for When You Need God to Provide: Genesis 22:14",
+        "words": 1208,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionmalachi3v10",
-        "scripture": "Malachi 3:10",
+        "short": "short-provisionmatthew7v7",
+        "scripture": "Matthew 7:7-8",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -697,6 +697,30 @@
   ],
   "videos": [
     {
+      "id": "0508",
+      "slug": "psalm-84-11-provision-prayer-the-provision-table",
+      "file": "0508-psalm-84-11-provision-prayer-the-provision-table.md",
+      "title": "Prayer for Provision When Money Is Tight: Psalm 84:11",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T12:11:03Z",
+      "youtube_video_id": "3OV86LYIR8M",
+      "watch_url": "https://youtu.be/3OV86LYIR8M",
+      "youtu_be_url": "https://youtu.be/3OV86LYIR8M",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/3OV86LYIR8M/edit",
+      "thumb_url": "https://i.ytimg.com/vi/3OV86LYIR8M/hqdefault.jpg",
+      "thumb_text": "NO GOOD WITHHELD",
+      "thumbnail_pending": false,
+      "duration_label": "~14 min",
+      "words": 2031
+    },
+    {
       "id": "0803",
       "slug": "proverbs-15-22-prayer-for-wise-counsel",
       "file": "0803-proverbs-15-22-prayer-for-wise-counsel.md",
@@ -791,6 +815,30 @@
       "thumbnail_pending": false,
       "duration_label": "55s",
       "words": 605
+    },
+    {
+      "id": "SHORT-PROVISIONMALACHI3V10",
+      "slug": "short-provisionmalachi3v10-stewardship-prayer",
+      "file": "short-provisionmalachi3v10-stewardship-prayer.md",
+      "title": "Pray This Malachi 3:10 Prayer for Open Doors & Provision | The Provision Table #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T11:20:13Z",
+      "youtube_video_id": "VM6OFzcwXOs",
+      "watch_url": "https://www.youtube.com/shorts/VM6OFzcwXOs",
+      "youtu_be_url": "https://youtu.be/VM6OFzcwXOs",
+      "shorts_url": "https://www.youtube.com/shorts/VM6OFzcwXOs",
+      "studio_url": "https://studio.youtube.com/video/VM6OFzcwXOs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/VM6OFzcwXOs/hqdefault.jpg",
+      "thumb_text": "TRUSTING GOD \u00b7 IN ALL THINGS",
+      "thumbnail_pending": false,
+      "duration_label": "57s",
+      "words": 618
     },
     {
       "id": "SHORT-MORNINGISAIAH43V18",
@@ -6406,19 +6454,6 @@
         "words": 1334
       },
       {
-        "id": "0508",
-        "slug": "psalm-84-11-provision-prayer-the-provision-table",
-        "file": "0508-psalm-84-11-provision-prayer-the-provision-table.md",
-        "title": "Prayer for Provision When Money Is Tight: Psalm 84:11",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 2031
-      },
-      {
         "id": "0509",
         "slug": "genesis-22-14-jehovah-jireh-provision-prayer",
         "file": "0509-genesis-22-14-jehovah-jireh-provision-prayer.md",
@@ -6849,17 +6884,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-provisionmalachi3v10",
-        "file": "0000-short-provisionmalachi3v10.yml",
-        "companion_longform_id": "",
-        "scripture": "Malachi 3:10",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionmatthew7v7",
