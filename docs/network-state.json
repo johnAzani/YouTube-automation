@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T15:17:49Z",
+  "generated_at": "2026-11-14T15:22:39Z",
   "monitor_generated_at": "2026-11-14T15:09:22.695741+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 222,
+    "published_total": 223,
     "published_longform": 105,
-    "published_shorts": 117,
-    "public_total": 220,
+    "published_shorts": 118,
+    "public_total": 221,
     "queued_longform": 59,
-    "queued_shorts": 91,
+    "queued_shorts": 90,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -441,23 +441,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 17,
+        "published_total": 18,
         "published_longform": 9,
-        "published_shorts": 8,
+        "published_shorts": 9,
         "thumbnail_pending": 5,
-        "public_total": 17,
+        "public_total": 18,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0508",
-        "title": "Prayer for Provision When Money Is Tight: Psalm 84:11",
-        "format": "longform",
-        "youtube_video_id": "3OV86LYIR8M",
-        "watch_url": "https://youtu.be/3OV86LYIR8M",
+        "id": "SHORT-PROVISIONMATTHEW7V7",
+        "title": "Pray This Matthew 7:7-8 Prayer for Open Doors & Provision | Rest In His Word #Shorts",
+        "format": "short",
+        "youtube_video_id": "lmt2THS6cuA",
+        "watch_url": "https://www.youtube.com/shorts/lmt2THS6cuA",
         "published_on": "2026-11-14",
-        "published_at": "2026-11-14T12:11:03Z"
+        "published_at": "2026-11-14T15:21:53Z"
       },
       "next_queued_longform": {
         "id": "0509",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionmatthew7v7",
-        "scripture": "Matthew 7:7-8",
+        "short": "short-provisionjames1v5",
+        "scripture": "James 1:5",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONMATTHEW7V7",
+      "slug": "short-provisionmatthew7v7-stewardship-prayer",
+      "file": "short-provisionmatthew7v7-stewardship-prayer.md",
+      "title": "Pray This Matthew 7:7-8 Prayer for Open Doors & Provision | Rest In His Word #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T15:21:53Z",
+      "youtube_video_id": "lmt2THS6cuA",
+      "watch_url": "https://www.youtube.com/shorts/lmt2THS6cuA",
+      "youtu_be_url": "https://youtu.be/lmt2THS6cuA",
+      "shorts_url": "https://www.youtube.com/shorts/lmt2THS6cuA",
+      "studio_url": "https://studio.youtube.com/video/lmt2THS6cuA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/lmt2THS6cuA/hqdefault.jpg",
+      "thumb_text": "THE PROVISION TABLE \u00b7 DAILY PRAYER",
+      "thumbnail_pending": false,
+      "duration_label": "60s",
+      "words": 629
+    },
     {
       "id": "SHORT-HEALINGJEREMIAH17V14",
       "slug": "short-healingjeremiah17v14-restoration-prayer",
@@ -6960,17 +6984,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-provisionmatthew7v7",
-        "file": "0000-short-provisionmatthew7v7.yml",
-        "companion_longform_id": "",
-        "scripture": "Matthew 7:7-8",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-psalm55v22",
