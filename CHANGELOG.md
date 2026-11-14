@@ -17,7 +17,7 @@ Full note with the monetisation rules, the channels' numbers and the risks: `doc
 - The prayer file is not changed; the long version is `<slug>.night.mp4` beside it, capped near 1.1 GB, and left out of the QC artifact in `produce.yml`.
 - The receipt records `prayer_seconds` and `duration_seconds`, so a later metadata sync (a retitle) keeps the description.
 - Tests: `tests/test_night_tail.py` (19), including a real encode and join.
-- `main` went red at 9:56am Nigeria time without a code change: the first live growth run committed real Shorts view figures, `candidates` reordered The Covenant Shield's passages by them, and four tests in `tests/test_shorts_first_mix.py` that expected the written order failed. Those tests now switch the reordering off (it is tested in `tests/test_shorts_feedback.py`).
+- `main` went red at about 10:03am Nigeria time without a code change: the first live growth run committed real Shorts view figures, `candidates` reordered The Covenant Shield's passages by them, and four tests in `tests/test_shorts_first_mix.py` that expected the written order failed. Those tests now switch the reordering off (it is tested in `tests/test_shorts_feedback.py`).
 
 ## 2026-11-14 — scripture check, Shorts feedback, seasons, retitling, Shorts captions, French, channel page
 
