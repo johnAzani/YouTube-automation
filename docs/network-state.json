@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T04:35:25Z",
+  "generated_at": "2026-11-14T04:36:24Z",
   "monitor_generated_at": "2026-11-14T04:28:31.812475+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 189,
+    "published_total": 190,
     "published_longform": 96,
-    "published_shorts": 93,
-    "public_total": 187,
+    "published_shorts": 94,
+    "public_total": 188,
     "queued_longform": 42,
-    "queued_shorts": 46,
+    "queued_shorts": 45,
     "automations_ok": 9,
     "automations_total": 10,
     "network_healthy": false
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 46,
+        "published_total": 47,
         "published_longform": 22,
-        "published_shorts": 24,
-        "thumbnail_pending": 4,
-        "public_total": 45,
+        "published_shorts": 25,
+        "thumbnail_pending": 5,
+        "public_total": 46,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 3
+        "queued_shorts": 2
       },
       "latest_video": {
-        "id": "0065",
-        "title": "Matthew 6:33-34 Morning Prayer | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "KQK6ZMLr8fw",
-        "watch_url": "https://youtu.be/KQK6ZMLr8fw",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T20:34:28Z"
+        "id": "SHORT-MORNINGPSALM37V23",
+        "title": "Say This Psalm 37:23-24 Prayer at Sunrise | The Morning Altar #Shorts",
+        "format": "short",
+        "youtube_video_id": "SYvN5ksemRY",
+        "watch_url": "https://www.youtube.com/shorts/SYvN5ksemRY",
+        "published_on": "2026-11-14",
+        "published_at": "2026-11-14T04:35:21Z"
       },
       "next_queued_longform": {
         "id": "0066",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm37v23",
-        "scripture": "Psalm 37:23-24",
+        "short": "short-morningpsalm119v105",
+        "scripture": "Psalm 119:105",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM37V23",
+      "slug": "short-morningpsalm37v23-sunrise-prayer",
+      "file": "short-morningpsalm37v23-sunrise-prayer.md",
+      "title": "Say This Psalm 37:23-24 Prayer at Sunrise | The Morning Altar #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T04:35:21Z",
+      "youtube_video_id": "SYvN5ksemRY",
+      "watch_url": "https://www.youtube.com/shorts/SYvN5ksemRY",
+      "youtu_be_url": "https://youtu.be/SYvN5ksemRY",
+      "shorts_url": "https://www.youtube.com/shorts/SYvN5ksemRY",
+      "studio_url": "https://studio.youtube.com/video/SYvN5ksemRY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/SYvN5ksemRY/hqdefault.jpg",
+      "thumb_text": "RISE IN PEACE \u00b7 WALK IN FAITH",
+      "thumbnail_pending": true,
+      "duration_label": "43s",
+      "words": 604
+    },
     {
       "id": "SHORT-FAMILYPROVERBS24V3",
       "slug": "short-familyproverbs24v3-household-prayer",
@@ -5821,17 +5845,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-morningpsalm37v23",
-        "file": "0068-short-morningpsalm37v23.yml",
-        "companion_longform_id": "0068",
-        "scripture": "Psalm 37:23-24",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm119v105",
