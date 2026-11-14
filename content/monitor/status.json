@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T06:31:15.732014+00:00",
+  "generated_at": "2026-11-14T06:50:08.664024+00:00",
   "healthy": true,
   "automations": [
     {
@@ -18,7 +18,7 @@
       "failures_5": 0,
       "effect": "reports and files stalls",
       "verdict": "OK",
-      "detail": "last success 1.5h ago",
+      "detail": "last success 1.8h ago",
       "severity": "ok"
     },
     {
@@ -39,7 +39,7 @@
       "failures_5": 0,
       "effect": "posts replies and records them in content/comments/replied.json",
       "verdict": "OK",
-      "detail": "last success 6.2h ago",
+      "detail": "last success 6.5h ago",
       "severity": "ok"
     },
     {
@@ -58,7 +58,7 @@
       "failures_5": 0,
       "effect": "writes content/community/<id>-READY.md",
       "verdict": "OK",
-      "detail": "last success 53.0h ago",
+      "detail": "last success 53.3h ago",
       "severity": "ok"
     },
     {
@@ -77,7 +77,7 @@
       "failures_5": 0,
       "effect": "writes content/queue/ or content/shorts-scripts/",
       "verdict": "OK",
-      "detail": "last success 19.6h ago",
+      "detail": "last success 19.9h ago",
       "severity": "ok"
     },
     {
@@ -96,7 +96,7 @@
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 2.3h ago",
+      "detail": "last success 2.7h ago",
       "severity": "ok"
     },
     {
@@ -115,7 +115,7 @@
       "failures_5": 0,
       "effect": "re-arms scheduled workflows",
       "verdict": "OK",
-      "detail": "last success 114.7h ago",
+      "detail": "last success 115.0h ago",
       "severity": "ok"
     },
     {
@@ -134,7 +134,7 @@
       "failures_5": 0,
       "effect": "writes content/metrics.csv and opens a snapshot issue",
       "verdict": "OK",
-      "detail": "last success 6.2h ago",
+      "detail": "last success 6.5h ago",
       "severity": "ok"
     },
     {
@@ -143,9 +143,9 @@
       "crons": [
         "23 */3 * * *"
       ],
-      "last_run": "2026-11-14T06:30:02+00:00",
+      "last_run": "2026-11-14T06:49:22+00:00",
       "last_conclusion": null,
-      "last_success": "2026-11-14T06:24:23+00:00",
+      "last_success": "2026-11-14T06:30:02+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-14T04:08:11+00:00",
       "last_slot": "2026-11-14T06:23:00+00:00",
@@ -153,7 +153,7 @@
       "failures_5": 0,
       "effect": "this report",
       "verdict": "OK",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 0.3h ago",
       "severity": "ok"
     },
     {
@@ -176,7 +176,7 @@
       "failures_5": 0,
       "effect": "publishes a video: content/published/ gains a receipt with a video id",
       "verdict": "OK",
-      "detail": "last success 2.1h ago",
+      "detail": "last success 2.4h ago",
       "severity": "ok"
     },
     {
@@ -185,17 +185,17 @@
       "crons": [
         "47 0,3,6,9,12,15,18,21 * * *"
       ],
-      "last_run": "2026-11-14T06:30:02+00:00",
-      "last_conclusion": "success",
-      "last_success": "2026-11-14T06:30:02+00:00",
+      "last_run": "2026-11-14T06:49:22+00:00",
+      "last_conclusion": null,
+      "last_success": "2026-11-14T06:32:48+00:00",
       "runs_14d": 20,
       "last_edited": "2026-11-07T19:31:06+00:00",
-      "last_slot": "2026-11-14T03:47:00+00:00",
+      "last_slot": "2026-11-14T06:47:00+00:00",
       "missed_slots": 0,
       "failures_5": 0,
       "effect": "",
       "verdict": "OK",
-      "detail": "last success 0.0h ago",
+      "detail": "last success 0.3h ago",
       "severity": "ok"
     }
   ],
@@ -217,7 +217,7 @@
     },
     {
       "outcome": "last upload (prayer3)",
-      "detail": "The Midday Watch: 2026-11-14 (1h ago \u2014 0089-isaiah-32-2-midday-prayer.md)",
+      "detail": "The Midday Watch: 2026-11-14 (2h ago \u2014 0089-isaiah-32-2-midday-prayer.md)",
       "severity": "ok"
     },
     {
@@ -247,22 +247,22 @@
     },
     {
       "outcome": "last upload (prayer9)",
-      "detail": "The Praise Garden: 2026-11-14 (1h ago \u2014 short-gardenpsalm103v2-thanksgiving-prayer.md)",
+      "detail": "The Praise Garden: 2026-11-14 (2h ago \u2014 short-gardenpsalm103v2-thanksgiving-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "last upload (prayer10)",
-      "detail": "The Guided Path: 2026-11-14 (1h ago \u2014 short-guidedjames1v5-guidance-prayer.md)",
+      "detail": "The Guided Path: 2026-11-14 (2h ago \u2014 short-guidedjames1v5-guidance-prayer.md)",
       "severity": "ok"
     },
     {
       "outcome": "publishable runway",
-      "detail": "48 of 48 approved script(s) over the 850-word floor (53 in queue)",
+      "detail": "50 of 50 approved script(s) over the 850-word floor (55 in queue)",
       "severity": "ok"
     },
     {
       "outcome": "authored Short specs",
-      "detail": "173 spec(s)",
+      "detail": "183 spec(s)",
       "severity": "ok"
     },
     {

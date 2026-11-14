@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-14T06:32:41Z",
-  "monitor_generated_at": "2026-11-14T06:31:15.732014+00:00",
+  "generated_at": "2026-11-14T06:51:25Z",
+  "monitor_generated_at": "2026-11-14T06:50:08.664024+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -12,8 +12,8 @@
     "published_longform": 101,
     "published_shorts": 97,
     "public_total": 196,
-    "queued_longform": 48,
-    "queued_shorts": 78,
+    "queued_longform": 52,
+    "queued_shorts": 93,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -446,9 +446,9 @@
         "published_shorts": 6,
         "thumbnail_pending": 5,
         "public_total": 14,
-        "queued_longform": 3,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "0507",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionjames1v5",
-        "scripture": "James 1:5",
+        "short": "short-provisionluke6v38",
+        "scripture": "Luke 6:38",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -516,7 +516,7 @@
         "public_total": 8,
         "queued_longform": 1,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "0605",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldproverbs18v10",
-        "scripture": "Proverbs 18:10",
+        "short": "short-shieldpsalm118v6",
+        "scripture": "Psalm 118:6",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -582,9 +582,9 @@
         "published_shorts": 2,
         "thumbnail_pending": 6,
         "public_total": 6,
-        "queued_longform": 3,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 5
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-GARDENPSALM103V2",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenhabakkuk3v17",
-        "scripture": "Habakkuk 3:17-19",
+        "short": "short-gardenphilippians4v4",
+        "scripture": "Philippians 4:4",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -5980,6 +5980,32 @@
         "words": 1739
       },
       {
+        "id": "0511",
+        "slug": "favour-that-surrounds-you-like-a-shield-psalm-5-12",
+        "file": "0511-favour-that-surrounds-you-like-a-shield-psalm-5-12.md",
+        "title": "Favour That Surrounds You Like a Shield: Psalm 5:12",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1672
+      },
+      {
+        "id": "0512",
+        "slug": "finding-favour-in-your-daily-labor-ruth-2-12",
+        "file": "0512-finding-favour-in-your-daily-labor-ruth-2-12.md",
+        "title": "Finding Favour in Your Daily Labor: Ruth 2:12 | The Provision Table",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1897
+      },
+      {
         "id": "0606",
         "slug": "2-thessalonians-3-3-daily-prayer",
         "file": "0606-2-thessalonians-3-3-daily-prayer.md",
@@ -6030,6 +6056,32 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1357
+      },
+      {
+        "id": "0707",
+        "slug": "breath-left-in-your-lungs-psalm-150-6-the-praise-garden",
+        "file": "0707-breath-left-in-your-lungs-psalm-150-6-the-praise-garden.md",
+        "title": "Breath Left in Your Lungs: Psalm 150:6 | The Praise Garden",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1243
+      },
+      {
+        "id": "0708",
+        "slug": "when-every-day-depends-on-grace-psalm-136-1-the-praise-garden",
+        "file": "0708-when-every-day-depends-on-grace-psalm-136-1-the-praise-garden.md",
+        "title": "When Every Day Depends on Grace: Psalm 136:1 | The Praise Garden",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1507
       },
       {
         "id": "0803",
@@ -6104,6 +6156,39 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
+      },
+      {
+        "short": "short-gardenphilippians4v4",
+        "file": "0000-short-gardenphilippians4v4.yml",
+        "companion_longform_id": "",
+        "scripture": "Philippians 4:4",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "09:44"
+      },
+      {
+        "short": "short-gardenpsalm100v1",
+        "file": "0000-short-gardenpsalm100v1.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 100:1-2",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "09:44"
+      },
+      {
+        "short": "short-gardenpsalm139v14",
+        "file": "0000-short-gardenpsalm139v14.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 139:14",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "09:44"
       },
       {
         "short": "short-healing1peter2v24",
@@ -6304,6 +6389,39 @@
         "target_window_utc": "06:14"
       },
       {
+        "short": "short-provisionluke6v38",
+        "file": "0000-short-provisionluke6v38.yml",
+        "companion_longform_id": "",
+        "scripture": "Luke 6:38",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
+      },
+      {
+        "short": "short-provisionmalachi3v10",
+        "file": "0000-short-provisionmalachi3v10.yml",
+        "companion_longform_id": "",
+        "scripture": "Malachi 3:10",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
+      },
+      {
+        "short": "short-provisionmatthew7v7",
+        "file": "0000-short-provisionmatthew7v7.yml",
+        "companion_longform_id": "",
+        "scripture": "Matthew 7:7-8",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
+      },
+      {
         "short": "short-psalm55v22",
         "file": "0000-short-psalm55v22.yml",
         "companion_longform_id": "",
@@ -6346,6 +6464,61 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
+      },
+      {
+        "short": "short-shieldpsalm118v6",
+        "file": "0000-short-shieldpsalm118v6.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 118:6",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "08:44"
+      },
+      {
+        "short": "short-shieldpsalm121v3",
+        "file": "0000-short-shieldpsalm121v3.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 121:3-4",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "08:44"
+      },
+      {
+        "short": "short-shieldpsalm23v4",
+        "file": "0000-short-shieldpsalm23v4.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 23:4",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "08:44"
+      },
+      {
+        "short": "short-shieldpsalm91v4",
+        "file": "0000-short-shieldpsalm91v4.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 91:4",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "08:44"
+      },
+      {
+        "short": "short-shieldpsalm91v7",
+        "file": "0000-short-shieldpsalm91v7.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 91:7",
+        "channel": "prayer8",
+        "channel_name": "The Covenant Shield",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "08:44"
       },
       {
         "short": "short-psalm3v3",
@@ -6777,6 +6950,28 @@
         "target_window_utc": "10:44"
       },
       {
+        "short": "short-provisionpsalm5v12",
+        "file": "0511-short-provisionpsalm5v12.yml",
+        "companion_longform_id": "0511",
+        "scripture": "Psalm 5:12",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
+      },
+      {
+        "short": "short-provisionruth2v12",
+        "file": "0512-short-provisionruth2v12.yml",
+        "companion_longform_id": "0512",
+        "scripture": "Ruth 2:12",
+        "channel": "prayer7",
+        "channel_name": "The Provision Table",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "10:44"
+      },
+      {
         "short": "short-shieldproverbs18v10",
         "file": "0602-short-shieldproverbs18v10.yml",
         "companion_longform_id": "0602",
@@ -6887,6 +7082,28 @@
         "target_window_utc": "09:44"
       },
       {
+        "short": "short-gardenpsalm150v6",
+        "file": "0707-short-gardenpsalm150v6.yml",
+        "companion_longform_id": "0707",
+        "scripture": "Psalm 150:6",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "09:44"
+      },
+      {
+        "short": "short-gardenpsalm136v1",
+        "file": "0708-short-gardenpsalm136v1.yml",
+        "companion_longform_id": "0708",
+        "scripture": "Psalm 136:1",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "09:44"
+      },
+      {
         "short": "short-guidedpsalm25v4",
         "file": "0802-short-guidedpsalm25v4.yml",
         "companion_longform_id": "0802",
@@ -6938,7 +7155,7 @@
       "name": "automation-health",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 1.5h ago",
+      "detail": "last success 1.8h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T05:02:35+00:00",
       "last_success": "2026-11-14T05:02:35+00:00",
@@ -6952,7 +7169,7 @@
       "name": "Autonomous Comment Replies",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 6.2h ago",
+      "detail": "last success 6.5h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T00:19:43+00:00",
       "last_success": "2026-11-14T00:19:43+00:00",
@@ -6966,7 +7183,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 53.0h ago",
+      "detail": "last success 53.3h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-12T01:32:35+00:00",
       "last_success": "2026-11-12T01:32:35+00:00",
@@ -6980,7 +7197,7 @@
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 19.6h ago",
+      "detail": "last success 19.9h ago",
       "last_conclusion": "",
       "last_run": "2026-11-14T04:46:50+00:00",
       "last_success": "2026-11-13T10:57:01+00:00",
@@ -6994,7 +7211,7 @@
       "name": "Growth autopilot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 2.3h ago",
+      "detail": "last success 2.7h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T04:10:44+00:00",
       "last_success": "2026-11-14T04:10:44+00:00",
@@ -7008,7 +7225,7 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 114.7h ago",
+      "detail": "last success 115.0h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-09T11:48:56+00:00",
       "last_success": "2026-11-09T11:48:56+00:00",
@@ -7022,7 +7239,7 @@
       "name": "Weekly metrics snapshot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 6.2h ago",
+      "detail": "last success 6.5h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T00:19:33+00:00",
       "last_success": "2026-11-14T00:19:33+00:00",
@@ -7036,10 +7253,10 @@
       "name": "Automation monitor",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 0.3h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-14T06:30:02+00:00",
-      "last_success": "2026-11-14T06:24:23+00:00",
+      "last_run": "2026-11-14T06:49:22+00:00",
+      "last_success": "2026-11-14T06:30:02+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -7050,7 +7267,7 @@
       "name": "Produce video",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 2.1h ago",
+      "detail": "last success 2.4h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T04:27:06+00:00",
       "last_success": "2026-11-14T04:27:06+00:00",
@@ -7064,10 +7281,10 @@
       "name": "Scheduler supervisor",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.0h ago",
-      "last_conclusion": "success",
-      "last_run": "2026-11-14T06:30:02+00:00",
-      "last_success": "2026-11-14T06:30:02+00:00",
+      "detail": "last success 0.3h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-14T06:49:22+00:00",
+      "last_success": "2026-11-14T06:32:48+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
