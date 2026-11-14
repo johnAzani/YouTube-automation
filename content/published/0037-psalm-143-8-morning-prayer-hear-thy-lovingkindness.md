@@ -1,6 +1,6 @@
 ---
 id: '0037'
-title: "Psalm 143:8 Morning Prayer | The Morning Altar"
+title: "When You Need Direction Today: Psalm 143:8 | The Morning Altar"
 slug: psalm-143-8-morning-prayer-hear-thy-lovingkindness
 status: published
 channel: prayer2
@@ -90,9 +90,12 @@ published_on: "2026-11-05"
 published_at: "2026-11-05T21:51:45Z"
 youtube_video_id: "oVy7uG5H1RU"
 thumbnail_pending: false
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Psalm 143:8 Morning Prayer | The Morning Altar"
+retitled_at: "2026-11-14"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Cause Me to Hear Thy Lovingkindness in the Morning (Psalm 143:8)

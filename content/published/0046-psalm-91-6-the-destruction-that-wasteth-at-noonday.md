@@ -1,6 +1,6 @@
 ---
 id: '0046'
-title: Psalm 91:6 Midday Prayer | The Midday Watch
+title: "Protection From Sudden Fears: Psalm 91:6 | The Midday Watch"
 slug: psalm-91-6-the-destruction-that-wasteth-at-noonday
 status: published
 channel: prayer3
@@ -87,8 +87,11 @@ published_at: "2026-11-07T19:25:00Z"
 youtube_video_id: "GeZ3liNIxag"
 thumbnail_pending: false
 
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Psalm 91:6 Midday Prayer | The Midday Watch"
+retitled_at: "2026-11-14"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The Noonday Hook & The Pause

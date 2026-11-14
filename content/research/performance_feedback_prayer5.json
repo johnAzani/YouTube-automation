@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-14T04:16:01.995911+00:00",
+  "generated_at": "2026-11-14T09:00:38.329680+00:00",
   "as_of": "2026-11-14",
   "sufficient_data": false,
   "measured_longform_videos": 0,
   "total_longform_videos": 8,
   "input_diagnostics": {
-    "snapshot_video_ids": 13,
-    "receipt_video_ids": 13,
-    "matched_video_ids": 13,
+    "snapshot_video_ids": 15,
+    "receipt_video_ids": 15,
+    "matched_video_ids": 15,
     "longform_below_view_threshold": 8,
     "longform_missing_view_count": 0,
     "longform_too_young_or_undated": 7,
@@ -41,6 +41,42 @@
       "top_scripture": ""
     }
   ],
+  "shorts": {
+    "measured_shorts": 4,
+    "total_shorts": 7,
+    "sufficient_data": false,
+    "avg_views": 26.8,
+    "median_views": 1,
+    "total_views": 107,
+    "minimum_age_days": 2,
+    "by_book": {
+      "isaiah": {
+        "shorts": 1,
+        "avg_views": 0.0,
+        "ratio": 0.667
+      },
+      "joshua": {
+        "shorts": 1,
+        "avg_views": 106.0,
+        "ratio": 1.988
+      },
+      "psalm": {
+        "shorts": 2,
+        "avg_views": 0.5,
+        "ratio": 0.509
+      }
+    },
+    "by_theme": {
+      "general_prayer": {
+        "shorts": 4,
+        "avg_views": 26.8,
+        "ratio": 1.0
+      }
+    },
+    "guidance": [
+      "Shorts: 4 measured (need 6, each at least 2 days old); the network's pooled numbers order this channel's Shorts until it has its own."
+    ]
+  },
   "guidance": [
     "Only 0 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real."
   ],

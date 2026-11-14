@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-14T04:17:01.077339+00:00",
+  "generated_at": "2026-11-14T09:01:37.398905+00:00",
   "as_of": "2026-11-14",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 7,
+  "total_longform_videos": 8,
   "input_diagnostics": {
-    "snapshot_video_ids": 12,
-    "receipt_video_ids": 12,
-    "matched_video_ids": 12,
-    "longform_below_view_threshold": 7,
+    "snapshot_video_ids": 14,
+    "receipt_video_ids": 14,
+    "matched_video_ids": 14,
+    "longform_below_view_threshold": 8,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 6,
+    "longform_too_young_or_undated": 7,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
@@ -19,6 +19,14 @@
     {
       "theme": "anxiety_peace",
       "videos": 1,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": ""
+    },
+    {
+      "theme": "peace_rest",
+      "videos": 2,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -41,14 +49,6 @@
       "top_scripture": ""
     },
     {
-      "theme": "peace_rest",
-      "videos": 1,
-      "measured_videos": 0,
-      "avg_score": 0.0,
-      "avg_engagement": 0.0,
-      "top_scripture": ""
-    },
-    {
       "theme": "stillness_refuge",
       "videos": 1,
       "measured_videos": 0,
@@ -57,6 +57,47 @@
       "top_scripture": ""
     }
   ],
+  "shorts": {
+    "measured_shorts": 4,
+    "total_shorts": 6,
+    "sufficient_data": false,
+    "avg_views": 12.0,
+    "median_views": 4,
+    "total_views": 48,
+    "minimum_age_days": 2,
+    "by_book": {
+      "isaiah": {
+        "shorts": 1,
+        "avg_views": 4.0,
+        "ratio": 0.778
+      },
+      "jeremiah": {
+        "shorts": 1,
+        "avg_views": 42.0,
+        "ratio": 1.833
+      },
+      "psalm": {
+        "shorts": 2,
+        "avg_views": 1.0,
+        "ratio": 0.542
+      }
+    },
+    "by_theme": {
+      "midday_strength_endurance": {
+        "shorts": 1,
+        "avg_views": 4.0,
+        "ratio": 0.778
+      },
+      "peace_rest": {
+        "shorts": 3,
+        "avg_views": 14.7,
+        "ratio": 1.133
+      }
+    },
+    "guidance": [
+      "Shorts: 4 measured (need 6, each at least 2 days old); the network's pooled numbers order this channel's Shorts until it has its own."
+    ]
+  },
   "guidance": [
     "Only 0 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real."
   ],

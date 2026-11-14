@@ -1,6 +1,6 @@
 ---
 id: '0014'
-title: Psalm 34 Night Prayer for Sleep | Angels Stand Watch Over You
+title: "When Fear Keeps You Awake: Psalm 34 | The Secret Place"
 slug: psalm-34-the-angel-of-the-lord-encampeth
 status: published
 privacy: public
@@ -86,7 +86,10 @@ published_on: "2026-11-04"
 published_at: "2026-11-04T15:06:00Z"
 youtube_video_id: "UZ5A3bd6M2E"
 thumbnail_revision: "ctr-v3-cinema"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
+title_before: "Psalm 34 Night Prayer for Sleep | Angels Stand Watch Over You"
+retitled_at: "2026-11-14"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — Continual Praise & Radiant Faces (Verses 1-5)

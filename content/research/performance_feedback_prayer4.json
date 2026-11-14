@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-14T04:14:47.231872+00:00",
+  "generated_at": "2026-11-14T08:59:43.004118+00:00",
   "as_of": "2026-11-14",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 10,
+  "total_longform_videos": 11,
   "input_diagnostics": {
-    "snapshot_video_ids": 19,
-    "receipt_video_ids": 20,
-    "matched_video_ids": 19,
-    "longform_below_view_threshold": 10,
+    "snapshot_video_ids": 22,
+    "receipt_video_ids": 23,
+    "matched_video_ids": 22,
+    "longform_below_view_threshold": 11,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 5,
+    "longform_too_young_or_undated": 6,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
@@ -26,7 +26,7 @@
     },
     {
       "theme": "protection",
-      "videos": 1,
+      "videos": 2,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -41,6 +41,65 @@
       "top_scripture": ""
     }
   ],
+  "shorts": {
+    "measured_shorts": 7,
+    "total_shorts": 11,
+    "sufficient_data": true,
+    "avg_views": 58.3,
+    "median_views": 56,
+    "total_views": 408,
+    "minimum_age_days": 2,
+    "by_book": {
+      "2 corinthians": {
+        "shorts": 1,
+        "avg_views": 98.0,
+        "ratio": 1.227
+      },
+      "acts": {
+        "shorts": 1,
+        "avg_views": 2.0,
+        "ratio": 0.678
+      },
+      "exodus": {
+        "shorts": 1,
+        "avg_views": 118.0,
+        "ratio": 1.342
+      },
+      "habakkuk": {
+        "shorts": 1,
+        "avg_views": 56.0,
+        "ratio": 0.987
+      },
+      "isaiah": {
+        "shorts": 1,
+        "avg_views": 19.0,
+        "ratio": 0.775
+      },
+      "psalm": {
+        "shorts": 1,
+        "avg_views": 66.0,
+        "ratio": 1.044
+      },
+      "zechariah": {
+        "shorts": 1,
+        "avg_views": 49.0,
+        "ratio": 0.947
+      }
+    },
+    "by_theme": {
+      "daily_guidance_wisdom": {
+        "shorts": 1,
+        "avg_views": 66.0,
+        "ratio": 1.044
+      },
+      "general_prayer": {
+        "shorts": 6,
+        "avg_views": 57.0,
+        "ratio": 0.983
+      }
+    },
+    "guidance": []
+  },
   "guidance": [
     "Only 0 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real."
   ],
