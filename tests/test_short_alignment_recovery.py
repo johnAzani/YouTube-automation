@@ -181,3 +181,76 @@ def test_a_stepped_over_short_lets_the_next_one_through(tmp_path, monkeypatch):
 def test_missing_manifest_is_not_an_error():
     assert sr.record_alignment_failure(None, RuntimeError("x")) == {}
     assert sr.record_alignment_failure(Path("/no/such.yml"), RuntimeError("x")) == {}
+
+
+# --- A word the recogniser did not hear is not a bad take ----------------------
+#
+# `prayer_alignment.match` accepts a take with 85% of the script recognised and
+# gives each unheard word a zero-length span. The Short's own check then refused
+# any word with no length, so one unheard word refused the whole Short.
+
+def test_one_unheard_word_no_longer_refuses_the_short(studio):
+    unheard = [("A", 0.0, 0.2), ("fresh", 0.2, 0.2), ("prayer", 0.6, 1.1)]
+    with mock.patch("pipeline.prayer_alignment.align", _aligner(unheard)):
+        sr._ensure_narration(KEY)
+    rows = json.loads(studio.files[2].read_text())
+    assert [row[2] for row in rows] == ["a", "fresh", "prayer"]
+    # The silence between its neighbours is the unheard word's.
+    assert rows[1][:2] == [0.2, 0.6]
+    assert len(studio.takes) == 1          # no second speech request
+
+
+def test_an_unheard_word_with_no_silence_shares_the_word_before_it():
+    rows = sr._spread_unheard_words([[0.0, 0.4, "lord"], [0.4, 0.4, "my"], [0.4, 0.9, "shield"]])
+    assert rows[0][0] == 0.0 and rows[1][1] == 0.4 and rows[2] == [0.4, 0.9, "shield"]
+    assert rows[0][1] == rows[1][0] and rows[0][1] > 0.0 and rows[1][1] > rows[1][0]
+    # Longer words get the longer share.
+    assert rows[0][1] - rows[0][0] > rows[1][1] - rows[1][0]
+
+
+def test_unheard_words_at_either_end_and_in_a_row():
+    first = sr._spread_unheard_words([[0.0, 0.0, "o"], [0.0, 0.5, "lord"]])
+    assert first[0][1] > first[0][0] and first[1][0] == first[0][1] and first[1][1] == 0.5
+    last = sr._spread_unheard_words([[0.0, 0.5, "amen"], [0.5, 0.5, "amen"]])
+    assert last[0][1] == last[1][0] and last[1][1] == 0.5 and last[1][1] > last[1][0]
+    several = sr._spread_unheard_words(
+        [[0.0, 0.3, "be"], [0.3, 0.3, "not"], [0.3, 0.3, "afraid"], [1.2, 1.5, "today"]])
+    starts = [row[0] for row in several]
+    assert starts == sorted(starts) and all(row[1] > row[0] for row in several)
+    assert several[1][0] == 0.3 and several[2][1] == 1.2
+
+
+def test_words_that_were_heard_are_not_moved():
+    rows = [[0.0, 0.2, "a"], [0.25, 0.6, "fresh"], [0.6, 1.1, "prayer"]]
+    assert sr._spread_unheard_words(rows) == rows
+
+
+def test_a_hair_of_overlap_from_rounding_is_closed():
+    rows = sr._spread_unheard_words([[0.0, 0.201, "a"], [0.2, 0.6, "fresh"]])
+    assert rows[1][0] == 0.201
+
+
+def test_a_take_that_is_out_of_order_is_still_refused_and_says_where(studio):
+    backwards = [("A", 0.0, 0.5), ("fresh", 0.2, 0.6), ("prayer", 0.6, 1.1)]
+    with mock.patch("pipeline.prayer_alignment.align", _aligner(backwards, backwards)):
+        with pytest.raises(sr.ShortAlignmentError, match=r"word 2 'fresh' starts at 0\.200s"):
+            sr._ensure_narration(KEY)
+
+
+def test_the_real_aligner_and_the_short_check_now_agree():
+    """End to end through `match`: a script word missing from what was heard."""
+    from pipeline import prayer_alignment as pa
+
+    script = ("The Lord is my shepherd I shall not want he makes me lie down in green "
+              "pastures he leads me beside still waters he restores my soul").split()
+    heard, clock = [], 0.3
+    for index, word in enumerate(script):
+        if index != 9:                      # "makes" was swallowed
+            heard.append(pa._Span(word, clock, clock + 0.3, 0.9))
+        clock += 0.3
+    aligned = pa.match(script, heard)
+    rows = [[float(s), float(e), sr._clean_word_token(o)] for o, s, e in aligned]
+    assert rows[9][0] == rows[9][1]         # the aligner's documented zero-length span
+    fixed = sr._spread_unheard_words(rows)
+    assert sr._why_invalid(fixed, [sr._clean_word_token(w) for w in script]) == ""
+    assert fixed[9][1] - fixed[9][0] >= sr.MIN_WORD_SPAN_S

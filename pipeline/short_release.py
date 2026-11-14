@@ -874,6 +874,70 @@ def _fallback_word_timings(narration_text: str, duration_s: float) -> list[list]
     return out
 
 
+#: The shortest span a caption word is given when the recogniser did not time it.
+MIN_WORD_SPAN_S = 0.04
+
+
+def _spread_unheard_words(rows: list[list]) -> list[list]:
+    """Give every word the aligner could not time a real span of its own.
+
+    `pipeline.prayer_alignment.match` accepts a take when at least 85% of the
+    script is recognised, and gives each word the recogniser did not hear a
+    zero-length span at the previous word's end. That is its documented
+    contract. The check below it in `_ensure_word_timings` demanded `end >
+    start` for every word, so one unheard word in a 100-word Short refused the
+    whole Short: the two disagreed, and the longer the Short the likelier the
+    refusal (on 14 November the Shorts of 93 and 96 words went out and those of
+    99, 114, 120 and 133 were refused, every token list being identical).
+
+    A run of such words takes the silence between its neighbours when there is
+    enough of it, and otherwise shares the previous word's span (or the next
+    one's, at the very start) in proportion to word length. Starts and ends
+    stay in order; nothing is invented about words that were heard. Rows that
+    cannot be given a positive span are returned as they are, and the caller's
+    check still refuses them.
+    """
+    out = [[float(r[0]), float(r[1]), r[2]] for r in rows]
+    # Rounding to the millisecond can leave a word starting a hair before the
+    # previous one ends.
+    for i in range(1, len(out)):
+        if 0 < out[i - 1][1] - out[i][0] <= 0.002:
+            out[i][0] = out[i - 1][1]
+            out[i][1] = max(out[i][1], out[i][0])
+    n, i = len(out), 0
+    while i < n:
+        if out[i][1] - out[i][0] > 1e-9:
+            i += 1
+            continue
+        j = i
+        while j + 1 < n and out[j + 1][1] - out[j + 1][0] <= 1e-9:
+            j += 1
+        run = list(range(i, j + 1))
+        left = i - 1 if i > 0 else None
+        right = j + 1 if j + 1 < n else None
+        gap_start = out[left][1] if left is not None else 0.0
+        gap_end = out[right][0] if right is not None else gap_start
+        if gap_end - gap_start >= MIN_WORD_SPAN_S * len(run):
+            members, t0, t1 = run, gap_start, gap_end
+        elif left is not None:
+            members, t0, t1 = [left, *run], out[left][0], max(gap_end, out[left][1])
+        elif right is not None:
+            members, t0, t1 = [*run, right], 0.0, out[right][1]
+        else:
+            return out
+        weights = [max(1, len(str(out[k][2]))) for k in members]
+        total, clock = float(sum(weights)), t0
+        for k, weight in zip(members, weights):
+            width = (t1 - t0) * weight / total
+            out[k][0], out[k][1] = clock, clock + width
+            clock += width
+        out[members[-1]][1] = t1
+        i = j + 1
+    for row in out:
+        row[0], row[1] = round(row[0], 3), round(row[1], 3)
+    return out
+
+
 def _synthesise_narration(text: str, audio: Path) -> str:
     """Speak with the locked Gemini Charon voice; propagate failures unchanged."""
     from .gemini_tts import DEFAULT_MODEL, synthesize_gemini_audio
@@ -923,8 +987,13 @@ def _ensure_word_timings(short_key: str, audio_path: Path, narration_text: str,
         from .prayer_alignment import align
         aligned = align(audio_path, narration_text, model_dir)
         rows = [[float(start), float(end), _clean_word_token(orig)] for orig, start, end in aligned]
+        unheard = sum(1 for row in rows if row[1] - row[0] <= 1e-9)
+        if unheard:
+            rows = _spread_unheard_words(rows)
+            print(f'[short-release] {short_key}: the recogniser did not time {unheard} of '
+                  f'{len(rows)} words; each was given a share of the time around it')
         if not valid(rows):
-            raise ValueError('alignment does not cover the narration in order')
+            raise ValueError('alignment does not cover the narration in order' + _why_invalid(rows, expected))
     except Exception as exc:
         if require_alignment:
             cause = f"{type(exc).__name__}: {exc}".strip().rstrip(":")
@@ -950,6 +1019,26 @@ def _ensure_word_timings(short_key: str, audio_path: Path, narration_text: str,
     sidecar.write_text(json.dumps({**identity, 'timings': digest(payload)}), encoding='utf-8')
     print(f'[short-release] aligned all {len(rows)} narration words for {short_key}')
     return words_path
+
+
+def _why_invalid(rows: list, expected: list[str]) -> str:
+    """The first thing wrong with a set of word timings, for the error message."""
+    try:
+        if len(rows) != len(expected):
+            return f' ({len(rows)} timed words for {len(expected)} script words)'
+        previous = 0.0
+        for index, (row, word) in enumerate(zip(rows, expected), 1):
+            if _clean_word_token(row[2]) != word:
+                return f' (word {index} is {row[2]!r}, the script says {word!r})'
+            start, end = float(row[0]), float(row[1])
+            if start < previous - 1e-6:
+                return f' (word {index} {word!r} starts at {start:.3f}s, before the previous word ends at {previous:.3f}s)'
+            if end <= start:
+                return f' (word {index} {word!r} has no length: {start:.3f}-{end:.3f}s)'
+            previous = end
+    except Exception:  # noqa: BLE001 - the reason is a courtesy, never a second failure
+        return ''
+    return ''
 
 
 def _short_take_files(short_key: str) -> tuple[Path, Path, Path, Path]:
