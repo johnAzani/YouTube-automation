@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T11:19:23Z",
+  "generated_at": "2026-11-14T11:19:34Z",
   "monitor_generated_at": "2026-11-14T10:41:34.562205+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 210,
+    "published_total": 211,
     "published_longform": 103,
-    "published_shorts": 107,
-    "public_total": 208,
+    "published_shorts": 108,
+    "public_total": 209,
     "queued_longform": 61,
-    "queued_shorts": 101,
+    "queued_shorts": 100,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 31,
+        "published_total": 32,
         "published_longform": 15,
-        "published_shorts": 16,
+        "published_shorts": 17,
         "thumbnail_pending": 0,
-        "public_total": 31,
+        "public_total": 32,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYDEUTERONOMY31V6",
-        "title": "Say This Deuteronomy 31:6 Prayer at Noon | Your Heart #Shorts",
+        "id": "SHORT-MIDDAY1CORINTHIANS10V13",
+        "title": "Say This 1 Corinthians 10:13 Prayer at Noon | Midday Prayer #Shorts",
         "format": "short",
-        "youtube_video_id": "_HcZomrZhrw",
-        "watch_url": "https://www.youtube.com/shorts/_HcZomrZhrw",
+        "youtube_video_id": "OOHzR9xA_AE",
+        "watch_url": "https://www.youtube.com/shorts/OOHzR9xA_AE",
         "published_on": "2026-11-14",
-        "published_at": "2026-11-14T07:01:33Z"
+        "published_at": "2026-11-14T11:18:34Z"
       },
       "next_queued_longform": {
         "id": "0090",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midday1corinthians10v13",
-        "scripture": "1 Corinthians 10:13",
+        "short": "short-middaymatthew19v26",
+        "scripture": "Matthew 19:26",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -719,6 +719,30 @@
       "thumbnail_pending": true,
       "duration_label": "43s",
       "words": 607
+    },
+    {
+      "id": "SHORT-MIDDAY1CORINTHIANS10V13",
+      "slug": "short-midday1corinthians10v13-midday-prayer",
+      "file": "short-midday1corinthians10v13-midday-prayer.md",
+      "title": "Say This 1 Corinthians 10:13 Prayer at Noon | Midday Prayer #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T11:18:34Z",
+      "youtube_video_id": "OOHzR9xA_AE",
+      "watch_url": "https://www.youtube.com/shorts/OOHzR9xA_AE",
+      "youtu_be_url": "https://youtu.be/OOHzR9xA_AE",
+      "shorts_url": "https://www.youtube.com/shorts/OOHzR9xA_AE",
+      "studio_url": "https://studio.youtube.com/video/OOHzR9xA_AE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/OOHzR9xA_AE/hqdefault.jpg",
+      "thumb_text": "A QUIET \u00b7 MOMENT FOR",
+      "thumbnail_pending": false,
+      "duration_label": "41s",
+      "words": 576
     },
     {
       "id": "SHORT-ISAIAH41V13",
@@ -6643,17 +6667,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-midday1corinthians10v13",
-        "file": "0000-short-midday1corinthians10v13.yml",
-        "companion_longform_id": "",
-        "scripture": "1 Corinthians 10:13",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaymatthew19v26",
