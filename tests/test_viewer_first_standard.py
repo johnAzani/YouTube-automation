@@ -186,3 +186,50 @@ class ThumbnailLineStaysTheModelsOwnWords(unittest.TestCase):
 
     def test_empty_input_still_yields_a_line(self):
         self.assertTrue(self._clamp(""))
+
+
+class ThumbnailLineFallsBackToTheJobsOwnTitle(unittest.TestCase):
+    """On 14 November it happened again, on two channels: queue jobs 0312 (Psalm
+    112:1-3) and 0513 (2 Corinthians 9:8) were both written "PERFECT PEACE". A line
+    whose only strong word is too wide for the box has no cut that fits."""
+
+    T_PSALM = "A Generation Blessed by God: Psalm 112:1-3 | The Family Altar"
+    T_GRACE = "All Grace Abound Toward You: 2 Corinthians 9:8 | The Provision Table"
+
+    def _clamp(self, text: str, title: str) -> str:
+        from pipeline.gemini_brain import _clamp_thumb_text_for_ctr
+        return _clamp_thumb_text_for_ctr(text, "Family Prayer", title)
+
+    def test_a_line_with_no_cut_that_fits_takes_words_from_the_title(self):
+        for raw, title, lead in (("A GENERATION BLESSED", self.T_PSALM, "A GENERATION BLESSED BY GOD"),
+                                 ("GENERATIONAL BLESSING", self.T_PSALM, "A GENERATION BLESSED BY GOD"),
+                                 ("ALL-SUFFICIENCY", self.T_GRACE, "ALL GRACE ABOUND TOWARD YOU"),
+                                 ("", self.T_GRACE, "ALL GRACE ABOUND TOWARD YOU")):
+            with self.subTest(raw=raw):
+                out = self._clamp(raw, title)
+                self.assertNotEqual(out, "PERFECT PEACE")
+                self.assertIn(out, lead)
+                self.assertGreaterEqual(len(out.split()), 2)
+
+    def test_two_jobs_with_unusable_lines_no_longer_share_one(self):
+        self.assertNotEqual(self._clamp("GENERATIONS", self.T_PSALM), self._clamp("SUFFICIENCY", self.T_GRACE))
+
+    def test_the_models_line_still_wins_when_it_fits(self):
+        self.assertEqual(self._clamp("ASK FOR WISDOM", self.T_PSALM), "ASK FOR WISDOM")
+        self.assertEqual(self._clamp("NO WEAPON SHALL PROSPER", self.T_GRACE), "NO WEAPON SHALL PROSPER")
+
+    def test_a_title_cut_neither_starts_nor_ends_on_a_joining_word(self):
+        from pipeline.gemini_brain import _THUMB_LEADERS, _THUMB_TRAILERS, _title_candidates
+        for title in (self.T_PSALM, self.T_GRACE, "Finding Favour in Your Daily Labor: Ruth 2:12",
+                      "Favour That Surrounds You Like a Shield: Psalm 5:12 | The Provision Table"):
+            for cut in _title_candidates(title):
+                with self.subTest(cut=cut):
+                    self.assertNotIn(cut.split()[0], _THUMB_LEADERS)
+                    self.assertNotIn(cut.split()[-1], _THUMB_TRAILERS)
+                    self.assertNotIn("PSALM", cut)          # the reference and the channel name stay out
+                    self.assertNotIn("TABLE", cut)
+
+    def test_the_author_hands_the_title_to_the_clamp(self):
+        from pathlib import Path
+        source = (Path(__file__).resolve().parents[1] / "pipeline" / "gemini_brain.py").read_text(encoding="utf-8")
+        self.assertIn('title=str(merged_meta.get("title") or "")', source)

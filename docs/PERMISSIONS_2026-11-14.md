@@ -98,8 +98,16 @@ Never paste a token or a client secret into chat, an issue or a file.
 | `yt-analytics-monetary.readonly` | revenue reports | once a channel earns |
 | `youtube.channel-memberships.creator` | list paying members | once memberships exist |
 
-Left out: `youtubepartner` and `youtubepartner-channel-audit`. They act for a YouTube Content
-Manager (a network or label) and a channel cannot grant them.
+Left out on purpose (corrected 14 November, afternoon; the first version said a channel
+"cannot grant them", which was wrong for the second one):
+
+| Scope | What it is | Why it stays out |
+|---|---|---|
+| `youtubepartner` | manage assets and claims in a YouTube Content Manager (a network or label) | these channels have no Content Manager, so it does nothing |
+| `youtubepartner-channel-audit` | lets a network read a channel's standing (community guidelines, copyright strikes, Content ID claims) before taking it on | Google's channels reference says a token that uses it "must be revoked ... within two weeks of the date that the token was issued". That is the opposite of a token minted once |
+
+Google's consent page will accept both from a channel owner. A token that already carries
+them still works for everything else, and the probe now names them as `network-only`.
 
 ## What only the owner can do in YouTube Studio
 
@@ -174,6 +182,8 @@ the API is off in every project. The probe asks that question on its next run.
 - `support.google.com/cloud/answer/15549257` — client secrets shown once, two secrets per
   client, unused clients deleted after six months.
 - `developers.google.com/youtube/v3/guides/authentication` — Data API scopes.
+- `developers.google.com/youtube/v3/docs/channels` — `auditDetails` and the two-week rule on
+  `youtubepartner-channel-audit`; `longUploadsStatus` values.
 - `developers.google.com/youtube/reporting/guides/authorization` and `…/reporting/v1/reports`
   — Analytics and Reporting scopes, reporting jobs.
 - `developers.google.com/youtube/v3/determine_quota_cost` — quota.

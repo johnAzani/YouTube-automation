@@ -5,6 +5,19 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-14 — a thumbnail line that cannot be cut falls back to the job's own title
+
+- `main` was red: queue jobs 0312 (Psalm 112:1-3, The Family Altar) and 0513 (2 Corinthians 9:8, The Provision Table) were both written with the thumbnail line "PERFECT PEACE". `tests/test_supply_never_stalls.py` refuses a repeated line, but the commits that add queue jobs skip CI, so it showed only on the next pull request.
+- Cause: `_clamp_thumb_text_for_ctr` in `pipeline/gemini_brain.py` returned a fixed line when no cut of the model's line fits the box, which is every line whose only strong word is too wide ("GENERATION", "SUFFICIENCY"). The 13 November fix covered lines that had a shorter cut, not these.
+- Now cuts of the job's own title are tried before the fixed line. The fixed line remains only for a job with neither a usable line nor a title.
+- The two jobs now read "BLESSED BY GOD" and "ALL GRACE ABOUND". Neither had been produced.
+- Not done: the author still does not compare a new line with the lines already queued.
+
+## 2026-11-14 — the two network scopes stay off the mint-once token
+
+- `docs/PERMISSIONS_2026-11-14.md` said a channel cannot grant `youtubepartner` and `youtubepartner-channel-audit`. Wrong for the second: a channel can, but Google requires a token that uses it to be revoked within two weeks of issue. Corrected, with the reason each stays out.
+- `scripts/permission_probe.py` reports them as `network-only` when a token carries them.
+
 ## 2026-11-14 — what each channel's credentials can do, measured
 
 Full note and the grant-once checklist: `docs/PERMISSIONS_2026-11-14.md`.
