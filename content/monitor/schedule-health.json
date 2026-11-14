@@ -28,10 +28,17 @@
       "ran_at": "2026-11-13T21:34:19+00:00",
       "slot": "2026-11-13T18:41:00+00:00",
       "workflow": "metrics.yml"
+    },
+    {
+      "late_minutes": 163,
+      "name": "automation-health",
+      "ran_at": "2026-11-14T22:57:40+00:00",
+      "slot": "2026-11-14T20:14:00+00:00",
+      "workflow": "automation-health.yml"
     }
   ],
-  "generated_at": "2026-11-14T22:39:37.237816+00:00",
-  "last_run_at": "2026-11-14T22:38:53+00:00",
+  "generated_at": "2026-11-14T22:57:48.737616+00:00",
+  "last_run_at": "2026-11-14T22:57:40+00:00",
   "on_time": [
     {
       "late_minutes": 42,
