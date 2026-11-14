@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T16:02:14Z",
+  "generated_at": "2026-11-14T16:02:47Z",
   "monitor_generated_at": "2026-11-14T16:00:51.814499+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 227,
-    "published_longform": 106,
+    "published_total": 228,
+    "published_longform": 107,
     "published_shorts": 121,
-    "public_total": 225,
-    "queued_longform": 58,
+    "public_total": 226,
+    "queued_longform": 57,
     "queued_shorts": 87,
     "automations_ok": 10,
     "automations_total": 10,
@@ -305,28 +305,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 16,
-        "published_longform": 8,
+        "published_total": 17,
+        "published_longform": 9,
         "published_shorts": 8,
-        "thumbnail_pending": 16,
-        "public_total": 16,
-        "queued_longform": 6,
+        "thumbnail_pending": 17,
+        "public_total": 17,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-FAMILYMATTHEW6V9",
-        "title": "Pray This Matthew 6:9-13 Family Prayer Over Your Home | The Family Altar #Shorts",
-        "format": "short",
-        "youtube_video_id": "neb_a6D9MWY",
-        "watch_url": "https://www.youtube.com/shorts/neb_a6D9MWY",
-        "published_on": "2026-11-14",
-        "published_at": "2026-11-14T13:39:12Z"
-      },
-      "next_queued_longform": {
         "id": "0308",
         "title": "Prayer for Your Family's Daily Needs: Philippians 4:19",
-        "words": 1053,
+        "format": "longform",
+        "youtube_video_id": "-LMU2_ZNhjI",
+        "watch_url": "https://youtu.be/-LMU2_ZNhjI",
+        "published_on": "2026-11-14",
+        "published_at": "2026-11-14T16:01:39Z"
+      },
+      "next_queued_longform": {
+        "id": "0309",
+        "title": "Prayer for Protection Over Your Home: Job 1:10 | The Family Altar",
+        "words": 1175,
         "status": "approved"
       },
       "next_queued_short": {
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0308",
+      "slug": "philippians-4-19-household-provision-prayer",
+      "file": "0308-philippians-4-19-household-provision-prayer.md",
+      "title": "Prayer for Your Family's Daily Needs: Philippians 4:19",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T16:01:39Z",
+      "youtube_video_id": "-LMU2_ZNhjI",
+      "watch_url": "https://youtu.be/-LMU2_ZNhjI",
+      "youtu_be_url": "https://youtu.be/-LMU2_ZNhjI",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/-LMU2_ZNhjI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/-LMU2_ZNhjI/hqdefault.jpg",
+      "thumb_text": "GOD WILL PROVIDE",
+      "thumbnail_pending": true,
+      "duration_label": "~7 min",
+      "words": 1053
+    },
     {
       "id": "0090",
       "slug": "galatians-6-9-midday-prayer",
@@ -6523,19 +6547,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1471
-      },
-      {
-        "id": "0308",
-        "slug": "philippians-4-19-household-provision-prayer",
-        "file": "0308-philippians-4-19-household-provision-prayer.md",
-        "title": "Prayer for Your Family's Daily Needs: Philippians 4:19",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1053
       },
       {
         "id": "0309",
