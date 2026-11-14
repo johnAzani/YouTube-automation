@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-14T08:31:46Z",
-  "monitor_generated_at": "2026-11-14T08:27:54.762085+00:00",
+  "generated_at": "2026-11-14T08:32:19Z",
+  "monitor_generated_at": "2026-11-14T08:30:58.012170+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -13,7 +13,7 @@
     "published_shorts": 105,
     "public_total": 206,
     "queued_longform": 52,
-    "queued_shorts": 90,
+    "queued_shorts": 93,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -244,7 +244,7 @@
         "public_total": 23,
         "queued_longform": 4,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-MIDNIGHT1JOHN4V4",
@@ -262,8 +262,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightjames4v7",
-        "scripture": "James 4:7",
+        "short": "short-midnight1john4v4",
+        "scripture": "1 John 4:4",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -312,7 +312,7 @@
         "public_total": 15,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-FAMILY1CORINTHIANS13V4",
@@ -330,8 +330,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familymatthew6v9",
-        "scripture": "Matthew 6:9-13",
+        "short": "short-family1corinthians13v4",
+        "scripture": "1 Corinthians 13:4-7",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -647,7 +647,7 @@
         "public_total": 6,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-GUIDEDECCLESIASTES3V1",
@@ -665,8 +665,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedisaiah55v8",
-        "scripture": "Isaiah 55:8-9",
+        "short": "short-guidedecclesiastes3v1",
+        "scripture": "Ecclesiastes 3:1",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -6365,6 +6365,17 @@
     ],
     "shorts": [
       {
+        "short": "short-family1corinthians13v4",
+        "file": "0000-short-family1corinthians13v4.yml",
+        "companion_longform_id": "",
+        "scripture": "1 Corinthians 13:4-7",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "17:14"
+      },
+      {
         "short": "short-familymatthew6v9",
         "file": "0000-short-familymatthew6v9.yml",
         "companion_longform_id": "",
@@ -6418,6 +6429,17 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
+      },
+      {
+        "short": "short-guidedecclesiastes3v1",
+        "file": "0000-short-guidedecclesiastes3v1.yml",
+        "companion_longform_id": "",
+        "scripture": "Ecclesiastes 3:1",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "18:44"
       },
       {
         "short": "short-guidedisaiah55v8",
@@ -6506,6 +6528,17 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
+      },
+      {
+        "short": "short-midnight1john4v4",
+        "file": "0000-short-midnight1john4v4.yml",
+        "companion_longform_id": "",
+        "scripture": "1 John 4:4",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightjames4v7",
@@ -7362,10 +7395,10 @@
       "name": "automation-health",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 1.5h ago",
-      "last_conclusion": "",
+      "detail": "last success 0.1h ago",
+      "last_conclusion": "success",
       "last_run": "2026-11-14T08:27:19+00:00",
-      "last_success": "2026-11-14T07:00:15+00:00",
+      "last_success": "2026-11-14T08:27:19+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -7376,7 +7409,7 @@
       "name": "Autonomous Comment Replies",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 8.1h ago",
+      "detail": "last success 8.2h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T00:19:43+00:00",
       "last_success": "2026-11-14T00:19:43+00:00",
@@ -7390,7 +7423,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 54.9h ago",
+      "detail": "last success 55.0h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-12T01:32:35+00:00",
       "last_success": "2026-11-12T01:32:35+00:00",
@@ -7446,7 +7479,7 @@
       "name": "Weekly metrics snapshot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 8.1h ago",
+      "detail": "last success 8.2h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T00:19:33+00:00",
       "last_success": "2026-11-14T00:19:33+00:00",
@@ -7463,7 +7496,7 @@
       "detail": "last success 0.1h ago",
       "last_conclusion": "",
       "last_run": "2026-11-14T08:27:19+00:00",
-      "last_success": "2026-11-14T08:21:40+00:00",
+      "last_success": "2026-11-14T08:26:59+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -7474,7 +7507,7 @@
       "name": "Produce video",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 1.6h ago",
+      "detail": "last success 1.7h ago",
       "last_conclusion": "",
       "last_run": "2026-11-14T08:22:36+00:00",
       "last_success": "2026-11-14T06:50:44+00:00",
@@ -7489,9 +7522,9 @@
       "verdict": "OK",
       "severity": "ok",
       "detail": "last success 0.0h ago",
-      "last_conclusion": "",
-      "last_run": "2026-11-14T08:27:19+00:00",
-      "last_success": "2026-11-14T08:26:59+00:00",
+      "last_conclusion": "success",
+      "last_run": "2026-11-14T08:29:02+00:00",
+      "last_success": "2026-11-14T08:29:02+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
