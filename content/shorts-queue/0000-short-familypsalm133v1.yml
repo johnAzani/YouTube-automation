@@ -1,0 +1,13 @@
+short: short-familypsalm133v1
+channel: prayer5
+standalone: true
+source: evergreen
+scripture: Psalm 133:1
+status: approved
+renderer_ready: true
+authored_by_brain: true
+privacy: public
+replace: false
+target_window_utc: '17:14'
+notes: "Standalone Short on Psalm 133:1 (evergreen list) \u2014 spec authored by the\
+  \ brain (103 narration words)"

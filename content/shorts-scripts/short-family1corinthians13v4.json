@@ -1,0 +1,226 @@
+{
+  "key": "short-family1corinthians13v4",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "A PRAYER FOR",
+    "PATIENT LOVE"
+  ],
+  "poster": [
+    "LOVE IS PATIENT",
+    "LOVE IS KIND",
+    "IT NEVER FAILS",
+    "PRAYER FOR HOME"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit table with open bible",
+    "peaceful olive branch on wooden table",
+    "soft golden hour light in living room",
+    "tranquil countryside home at dusk",
+    "gentle candle flicker on wooden surface",
+    "serene window light with soft curtains"
+  ],
+  "scenes": [
+    {
+      "a": "If frustration is rising in your home right now, please stay for this quiet moment.",
+      "img": "short-family1corinthians13v4-scene-01.jpg",
+      "kicker": "1 CORINTHIANS 13:4",
+      "sub": "GODS HEART FOR YOUR HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Love is patient, love is kind.",
+      "img": "short-family1corinthians13v4-scene-02.jpg",
+      "kicker": "1 CORINTHIANS 13:4",
+      "sub": "THE PATH TO PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "It does not envy, it does not boast, it is not proud.",
+      "img": "short-family1corinthians13v4-scene-03.jpg",
+      "kicker": "1 CORINTHIANS 13:4",
+      "sub": "HUMILITY IN THE HOUSEHOLD",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "It does not dishonor others, it is not self-seeking, it is not easily angered, it keeps no record of wrongs.",
+      "img": "short-family1corinthians13v4-scene-04.jpg",
+      "kicker": "1 CORINTHIANS 13:5",
+      "sub": "GRACE WITHIN THESE WALLS",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Love does not delight in evil but rejoices with the truth.",
+      "img": "short-family1corinthians13v4-scene-05.jpg",
+      "kicker": "1 CORINTHIANS 13:6",
+      "sub": "WALKING IN HIS LIGHT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "It always protects, always trusts, always hopes, always perseveres. Lord, help us to love like this, replacing our irritation with your steady grace. Amen. Subscribe for more prayer.",
+      "img": "short-family1corinthians13v4-scene-06.jpg",
+      "kicker": "1 CORINTHIANS 13:7",
+      "sub": "STRENGTH FOR THE FAMILY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "If frustration is rising in your home right now, please stay for this quiet moment."
+    ],
+    [
+      11,
+      16,
+      "Love is patient, love is kind."
+    ],
+    [
+      17,
+      26,
+      "It does not envy, it does not boast, it is not proud."
+    ],
+    [
+      27,
+      42,
+      "It does not dishonor others, it is not self-seeking, it is not easily angered, it keeps no record of wrongs."
+    ],
+    [
+      43,
+      52,
+      "Love does not delight in evil but rejoices with the truth."
+    ],
+    [
+      53,
+      72,
+      "It always protects, always trusts, always hopes, always perseveres. Lord, help us to love like this, replacing our irritation with your steady grace. Amen. Subscribe for more prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "FRUSTRATION IS RISING",
+        "IN YOUR HOME",
+        "STAY FOR THIS",
+        "QUIET MOMENT"
+      ],
+      [
+        "FRUSTRATION",
+        "QUIET"
+      ],
+      "1 COR 13:4"
+    ],
+    [
+      11,
+      16,
+      [
+        "LOVE IS PATIENT",
+        "LOVE IS KIND"
+      ],
+      [
+        "PATIENT",
+        "KIND"
+      ],
+      "1 COR 13:4"
+    ],
+    [
+      17,
+      26,
+      [
+        "NO ENVY",
+        "NO BOASTING",
+        "NOT PROUD"
+      ],
+      [
+        "ENVY",
+        "PROUD"
+      ],
+      "1 COR 13:4"
+    ],
+    [
+      27,
+      42,
+      [
+        "NO DISHONOR",
+        "NOT SELF SEEKING",
+        "NOT EASILY ANGERED",
+        "NO RECORD OF WRONGS"
+      ],
+      [
+        "DISHONOR",
+        "WRONGS"
+      ],
+      "1 COR 13:5"
+    ],
+    [
+      43,
+      52,
+      [
+        "NO DELIGHT IN EVIL",
+        "REJOICE IN TRUTH"
+      ],
+      [
+        "EVIL",
+        "TRUTH"
+      ],
+      "1 COR 13:6"
+    ],
+    [
+      53,
+      72,
+      [
+        "ALWAYS PROTECTS",
+        "ALWAYS TRUSTS",
+        "ALWAYS HOPES",
+        "ALWAYS PERSEVERES"
+      ],
+      [
+        "PERSEVERES"
+      ],
+      "1 COR 13:7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If frustration is rising in your home right now, please stay for this quiet moment.",
+      "kind": "phrase",
+      "words": [
+        "FRUSTRATION",
+        "QUIET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "1 Corinthians 13:4-7"
+}

@@ -1,0 +1,323 @@
+{
+  "key": "short-familypsalm133v1",
+  "channel": "prayer5",
+  "psalm": 133,
+  "title": [
+    "DWELL TOGETHER",
+    "IN UNITY"
+  ],
+  "poster": [
+    "WHEN TENSION FILLS",
+    "YOUR HOME TODAY",
+    "PRAY FOR GOD'S",
+    "PEACE AND UNITY"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm living room glowing lamp candle quiet evening home",
+    "open Bible on wooden table illuminated by warm candle light",
+    "cozy family dining table rustic home warm lighting",
+    "peaceful cottage window overlooking calm sunset countryside",
+    "soft lantern light on wooden table with olive branch",
+    "warm living room cozy fireplace glowing home interior",
+    "peaceful home garden sunset warm soft light"
+  ],
+  "scenes": [
+    {
+      "a": "If sharp words strained your home today,",
+      "img": "short-familypsalm133v1-scene-01.jpg",
+      "kicker": "PSALM 133:1",
+      "sub": "A PRAYER FOR FAMILY UNITY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Behold, how good and how pleasant it is",
+      "img": "short-familypsalm133v1-scene-02.jpg",
+      "kicker": "PSALM 133:1",
+      "sub": "BRETHREN DWELL IN UNITY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, we bring our home",
+      "img": "short-familypsalm133v1-scene-03.jpg",
+      "kicker": "FAMILY PRAYER",
+      "sub": "BRING YOUR HOME TO GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Where small arguments or silence have divided us,",
+      "img": "short-familypsalm133v1-scene-04.jpg",
+      "kicker": "PEACE IN THE HOME",
+      "sub": "LET GOD CALM THE TENSION",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Soften our hearts toward one another,",
+      "img": "short-familypsalm133v1-scene-05.jpg",
+      "kicker": "FORGIVE QUICKLY",
+      "sub": "REST IN GOD'S LOVE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Bind our household in true harmony",
+      "img": "short-familypsalm133v1-scene-06.jpg",
+      "kicker": "HARMONY & GRACE",
+      "sub": "UNITED IN FAITH",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to join us at The Family Altar",
+      "img": "short-familypsalm133v1-scene-07.jpg",
+      "kicker": "THE FAMILY ALTAR",
+      "sub": "COVER YOUR HOME IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If sharp words strained your home today, pause here and let God heal your family."
+    ],
+    [
+      6,
+      13,
+      "Psalm 133 verse 1 says, Behold, how good and how pleasant it is for brethren to dwell together in unity!"
+    ],
+    [
+      13,
+      19,
+      "Heavenly Father, we bring our home before You right now."
+    ],
+    [
+      19,
+      26,
+      "Where small arguments or silence have divided us, bring Your quiet peace."
+    ],
+    [
+      26,
+      34,
+      "Soften our hearts toward one another, teach us to forgive quickly, and let Your love rest upon every room."
+    ],
+    [
+      34,
+      40,
+      "Bind our household in true harmony so our home reflects Your grace."
+    ],
+    [
+      40,
+      46,
+      "Subscribe to join us at The Family Altar as we pray for our families daily."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF SHARP WORDS",
+        "STRAINED YOUR HOME TODAY",
+        "LET GOD HEAL YOUR FAMILY"
+      ],
+      [
+        "SHARP",
+        "HEAL"
+      ],
+      "PSALM 133 : 1"
+    ],
+    [
+      6,
+      13,
+      [
+        "HOW GOOD AND HOW PLEASANT",
+        "FOR BRETHREN TO DWELL",
+        "TOGETHER IN UNITY"
+      ],
+      [
+        "PLEASANT",
+        "UNITY"
+      ],
+      "PSALM 133 : 1"
+    ],
+    [
+      13,
+      19,
+      [
+        "HEAVENLY FATHER WE BRING",
+        "OUR HOME BEFORE YOU NOW"
+      ],
+      [
+        "HOME",
+        "BEFORE YOU"
+      ],
+      "PSALM 133 : 1"
+    ],
+    [
+      19,
+      26,
+      [
+        "WHERE SILENCE DIVIDED US",
+        "BRING YOUR QUIET PEACE"
+      ],
+      [
+        "SILENCE",
+        "QUIET PEACE"
+      ],
+      "PSALM 133 : 1"
+    ],
+    [
+      26,
+      34,
+      [
+        "SOFTEN OUR HEARTS",
+        "TEACH US TO FORGIVE",
+        "REST UPON EVERY ROOM"
+      ],
+      [
+        "SOFTEN",
+        "FORGIVE"
+      ],
+      "PSALM 133 : 1"
+    ],
+    [
+      34,
+      40,
+      [
+        "BIND OUR HOUSEHOLD",
+        "IN TRUE HARMONY",
+        "REFLECTING YOUR GRACE"
+      ],
+      [
+        "HARMONY",
+        "GRACE"
+      ],
+      "PSALM 133 : 1"
+    ],
+    [
+      40,
+      46,
+      [
+        "SUBSCRIBE TO THE FAMILY ALTAR",
+        "PRAY FOR YOUR HOME DAILY"
+      ],
+      [
+        "SUBSCRIBE",
+        "DAILY"
+      ],
+      "PSALM 133 : 1"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If sharp words strained your home today,",
+      "kind": "phrase",
+      "words": [
+        "SHARP",
+        "WORDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "pause here and let God heal your family.",
+      "kind": "phrase",
+      "words": [
+        "HEAL",
+        "FAMILY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Psalm 133 verse 1 says, Behold, how good and how pleasant it is for brethren to dwell together in unity!",
+      "kind": "phrase",
+      "words": [
+        "GOOD",
+        "PLEASANT",
+        "UNITY"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, we bring our home before You right now.",
+      "kind": "phrase",
+      "words": [
+        "HOME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Where small arguments or silence have divided us, bring Your quiet peace.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Soften our hearts toward one another, teach us to forgive quickly, and let Your love rest upon every room.",
+      "kind": "phrase",
+      "words": [
+        "FORGIVE",
+        "QUICKLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Bind our household in true harmony so our home reflects Your grace.",
+      "kind": "phrase",
+      "words": [
+        "HARMONY",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to join us at The Family Altar as we pray for our families daily.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 133:1"
+}

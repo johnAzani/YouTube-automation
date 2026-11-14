@@ -1,0 +1,330 @@
+{
+  "key": "short-midnightpsalm24v7",
+  "channel": "prayer4",
+  "psalm": 24,
+  "title": [
+    "THE KING OF GLORY",
+    "ENTERS YOUR NIGHT"
+  ],
+  "poster": [
+    "LIFT UP",
+    "YOUR HEADS",
+    "EVERLASTING",
+    "DOORS"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "ancient stone fortress gate at night starry sky",
+    "massive ancient arched gateway lit by moonlight",
+    "radiant golden light pouring through dark temple doors at night",
+    "dramatic midnight sky over vast mountain sanctuary silhouette",
+    "glimmering starry heavens above grand stone archway night",
+    "majestic midnight sky filled with stars over quiet watchtower",
+    "candlelight flickering in dark stone sanctuary at midnight"
+  ],
+  "scenes": [
+    {
+      "a": "If anxiety keeps you awake tonight, heavy doors are opening before you.",
+      "img": "short-midnightpsalm24v7-scene-01.jpg",
+      "kicker": "PSALM 24:7",
+      "sub": "HEAVY DOORS ARE OPENING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Psalm twenty-four declares: Lift up your heads, O ye gates; and be ye lift up, ye everlasting doors;",
+      "img": "short-midnightpsalm24v7-scene-02.jpg",
+      "kicker": "PSALM 24:7",
+      "sub": "LIFT UP YOUR HEADS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "and the King of glory shall come in. Who is this King of glory?",
+      "img": "short-midnightpsalm24v7-scene-03.jpg",
+      "kicker": "PSALM 24:7-8",
+      "sub": "THE KING SHALL COME IN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "The Lord strong and mighty, the Lord mighty in battle.",
+      "img": "short-midnightpsalm24v7-scene-04.jpg",
+      "kicker": "PSALM 24:8",
+      "sub": "MIGHTY IN BATTLE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lift up your heads, O ye gates; even lift them up, ye everlasting doors; and the King of glory shall come in.",
+      "img": "short-midnightpsalm24v7-scene-05.jpg",
+      "kicker": "PSALM 24:9",
+      "sub": "YE EVERLASTING DOORS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Who is this King of glory? The Lord of hosts, he is the King of glory.",
+      "img": "short-midnightpsalm24v7-scene-06.jpg",
+      "kicker": "PSALM 24:10",
+      "sub": "THE LORD OF HOSTS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, enter our quiet room and fight the battles we cannot win alone. Subscribe to stand in prayer with us nightly.",
+      "img": "short-midnightpsalm24v7-scene-07.jpg",
+      "kicker": "PSALM 24:10",
+      "sub": "STAND IN PRAYER NIGHTLY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If anxiety keeps you awake tonight, heavy doors are opening before you."
+    ],
+    [
+      6,
+      13,
+      "Psalm twenty-four declares: Lift up your heads, O ye gates; and be ye lift up, ye everlasting doors;"
+    ],
+    [
+      13,
+      20,
+      "and the King of glory shall come in. Who is this King of glory?"
+    ],
+    [
+      20,
+      28,
+      "The Lord strong and mighty, the Lord mighty in battle."
+    ],
+    [
+      28,
+      36,
+      "Lift up your heads, O ye gates; even lift them up, ye everlasting doors; and the King of glory shall come in."
+    ],
+    [
+      36,
+      43,
+      "Who is this King of glory? The Lord of hosts, he is the King of glory."
+    ],
+    [
+      43,
+      50,
+      "Lord, enter our quiet room and fight the battles we cannot win alone. Subscribe to stand in prayer with us nightly."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF ANXIETY KEEPS YOU",
+        "AWAKE TONIGHT HEAVY DOORS",
+        "ARE OPENING BEFORE YOU"
+      ],
+      [
+        "AWAKE",
+        "OPENING"
+      ],
+      "PSALM 24:7"
+    ],
+    [
+      6,
+      13,
+      [
+        "PSALM TWENTY-FOUR DECLARES",
+        "LIFT UP YOUR HEADS O YE GATES",
+        "AND BE YE LIFT UP",
+        "YE EVERLASTING DOORS"
+      ],
+      [
+        "HEADS",
+        "EVERLASTING"
+      ],
+      "PSALM 24:7"
+    ],
+    [
+      13,
+      20,
+      [
+        "AND THE KING OF GLORY",
+        "SHALL COME IN WHO IS THIS",
+        "KING OF GLORY"
+      ],
+      [
+        "KING",
+        "GLORY"
+      ],
+      "PSALM 24:7-8"
+    ],
+    [
+      20,
+      28,
+      [
+        "THE LORD STRONG AND MIGHTY",
+        "THE LORD MIGHTY",
+        "IN BATTLE"
+      ],
+      [
+        "STRONG",
+        "MIGHTY"
+      ],
+      "PSALM 24:8"
+    ],
+    [
+      28,
+      36,
+      [
+        "LIFT UP YOUR HEADS O YE GATES",
+        "EVEN LIFT THEM UP",
+        "YE EVERLASTING DOORS",
+        "AND THE KING OF GLORY SHALL COME IN"
+      ],
+      [
+        "EVERLASTING",
+        "KING"
+      ],
+      "PSALM 24:9"
+    ],
+    [
+      36,
+      43,
+      [
+        "WHO IS THIS KING OF GLORY",
+        "THE LORD OF HOSTS",
+        "HE IS THE KING OF GLORY"
+      ],
+      [
+        "LORD",
+        "HOSTS"
+      ],
+      "PSALM 24:10"
+    ],
+    [
+      43,
+      50,
+      [
+        "LORD ENTER OUR QUIET ROOM",
+        "AND FIGHT THE BATTLES",
+        "WE CANNOT WIN ALONE",
+        "SUBSCRIBE TO STAND IN PRAYER"
+      ],
+      [
+        "FIGHT",
+        "SUBSCRIBE"
+      ],
+      "PSALM 24:10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If anxiety keeps you awake tonight, heavy doors are opening before you.",
+      "kind": "phrase",
+      "words": [
+        "ANXIETY",
+        "AWAKE",
+        "DOORS",
+        "OPENING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Psalm twenty-four declares: Lift up your heads, O ye gates; and be ye lift up, ye everlasting doors;",
+      "kind": "phrase",
+      "words": [
+        "LIFT",
+        "HEADS",
+        "EVERLASTING",
+        "DOORS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "and the King of glory shall come in. Who is this King of glory?",
+      "kind": "phrase",
+      "words": [
+        "KING",
+        "GLORY",
+        "COME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord strong and mighty, the Lord mighty in battle.",
+      "kind": "phrase",
+      "words": [
+        "STRONG",
+        "MIGHTY",
+        "BATTLE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lift up your heads, O ye gates; even lift them up, ye everlasting doors; and the King of glory shall come in.",
+      "kind": "phrase",
+      "words": [
+        "HEADS",
+        "EVERLASTING",
+        "KING"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Who is this King of glory? The Lord of hosts, he is the King of glory.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "HOSTS",
+        "GLORY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, enter our quiet room and fight the battles we cannot win alone. Subscribe to stand in prayer with us nightly.",
+      "kind": "phrase",
+      "words": [
+        "ROOM",
+        "FIGHT",
+        "BATTLES",
+        "SUBSCRIBE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 24:7-10"
+}

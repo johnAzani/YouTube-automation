@@ -1,0 +1,282 @@
+{
+  "key": "short-midnightjames4v7",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "SUBMIT TO GOD",
+    "RESIST THE ENEMY"
+  ],
+  "poster": [
+    "MIDNIGHT",
+    "SPIRITUAL",
+    "STRENGTH",
+    "WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "dark silhouette of an ancient watchtower against a starry sky",
+    "flickering candlelight in a dark stone sanctuary",
+    "deep blue twilight over a calm vast mountain lake",
+    "glowing embers in a stone fireplace at night",
+    "moonlit path through a quiet forest",
+    "infinite starry night sky over a desert horizon"
+  ],
+  "scenes": [
+    {
+      "a": "The heavy thought cycling in your mind right now is not yours to carry alone tonight.",
+      "img": "short-midnightjames4v7-scene-01.jpg",
+      "kicker": "JAMES 4:7",
+      "sub": "HEAR HIS WORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "James 4:7 says, Submit yourselves therefore to God. Resist the devil, and he will flee from you.",
+      "img": "short-midnightjames4v7-scene-02.jpg",
+      "kicker": "JAMES 4:7",
+      "sub": "THE PROMISE OF VICTORY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, we come before you in this stillness to surrender every fear that has taken root.",
+      "img": "short-midnightjames4v7-scene-03.jpg",
+      "kicker": "A MIDNIGHT PRAYER",
+      "sub": "SURRENDERING ALL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We yield our hearts, our confusion, and our battles into your capable and ever-loving hands now.",
+      "img": "short-midnightjames4v7-scene-04.jpg",
+      "kicker": "STEADFAST PRAYER",
+      "sub": "YIELDING TO GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Give us the courage to resist every lie and every shadow that dares to linger here.",
+      "img": "short-midnightjames4v7-scene-05.jpg",
+      "kicker": "DIVINE COURAGE",
+      "sub": "STAND FIRM",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let your peace reign supreme as we rest, knowing you are our protector in the darkness.",
+      "img": "short-midnightjames4v7-scene-06.jpg",
+      "kicker": "HIS PEACE",
+      "sub": "RESTING IN HIM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "The heavy thought cycling in your mind right now is not yours to carry alone tonight."
+    ],
+    [
+      8,
+      17,
+      "James 4:7 says, Submit yourselves therefore to God. Resist the devil, and he will flee from you."
+    ],
+    [
+      17,
+      26,
+      "Father, we come before you in this stillness to surrender every fear that has taken root."
+    ],
+    [
+      26,
+      35,
+      "We yield our hearts, our confusion, and our battles into your capable and ever-loving hands now."
+    ],
+    [
+      35,
+      43,
+      "Give us the courage to resist every lie and every shadow that dares to linger here."
+    ],
+    [
+      43,
+      52,
+      "Let your peace reign supreme as we rest, knowing you are our protector in the darkness."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THE HEAVY THOUGHT",
+        "CYCLING IN YOUR MIND",
+        "IS NOT YOURS",
+        "TO CARRY ALONE",
+        "TONIGHT"
+      ],
+      [
+        "HEAVY THOUGHT"
+      ],
+      "JAMES 4:7"
+    ],
+    [
+      8,
+      17,
+      [
+        "SUBMIT TO GOD",
+        "RESIST THE DEVIL",
+        "AND HE WILL FLEE",
+        "FROM YOU"
+      ],
+      [
+        "SUBMIT",
+        "RESIST"
+      ],
+      "JAMES 4:7"
+    ],
+    [
+      17,
+      26,
+      [
+        "FATHER WE SURRENDER",
+        "EVERY FEAR",
+        "THAT HAS TAKEN",
+        "ROOT IN US"
+      ],
+      [
+        "SURRENDER",
+        "FEAR"
+      ],
+      "JAMES 4:7"
+    ],
+    [
+      26,
+      35,
+      [
+        "WE YIELD OUR HEARTS",
+        "CONFUSION AND BATTLES",
+        "INTO YOUR HANDS",
+        "CAPABLE AND LOVING"
+      ],
+      [
+        "YIELD",
+        "HANDS"
+      ],
+      "JAMES 4:7"
+    ],
+    [
+      35,
+      43,
+      [
+        "GIVE US COURAGE",
+        "TO RESIST EVERY LIE",
+        "AND EVERY SHADOW",
+        "LINGERING HERE"
+      ],
+      [
+        "COURAGE",
+        "RESIST"
+      ],
+      "JAMES 4:7"
+    ],
+    [
+      43,
+      52,
+      [
+        "LET YOUR PEACE",
+        "REIGN SUPREME",
+        "YOU ARE OUR",
+        "PROTECTOR IN DARKNESS"
+      ],
+      [
+        "PEACE",
+        "PROTECTOR"
+      ],
+      "JAMES 4:7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The heavy thought cycling in your mind right now is not yours to carry alone tonight.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "THOUGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "James 4:7 says, Submit yourselves therefore to God. Resist the devil, and he will flee from you.",
+      "kind": "phrase",
+      "words": [
+        "SUBMIT",
+        "RESIST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we come before you in this stillness to surrender every fear that has taken root.",
+      "kind": "phrase",
+      "words": [
+        "SURRENDER",
+        "FEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We yield our hearts, our confusion, and our battles into your capable and ever-loving hands now.",
+      "kind": "phrase",
+      "words": [
+        "YIELD",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Give us the courage to resist every lie and every shadow that dares to linger here.",
+      "kind": "phrase",
+      "words": [
+        "COURAGE",
+        "RESIST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let your peace reign supreme as we rest, knowing you are our protector in the darkness.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "PROTECTOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "James 4:7"
+}

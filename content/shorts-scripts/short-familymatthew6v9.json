@@ -1,0 +1,284 @@
+{
+  "key": "short-familymatthew6v9",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "THE LORD'S PRAYER",
+    "FOR YOUR HOUSEHOLD"
+  ],
+  "poster": [
+    "COVER YOUR HOME",
+    "IN DAILY PRAYER",
+    "MATTHEW 6:9-13",
+    "THE FAMILY ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm cozy kitchen table morning light open bible coffee cup peaceful background",
+    "cozy rustic wooden table with open holy bible glowing warm lamplight",
+    "peaceful countryside cottage living room window morning sun golden light",
+    "warm lamp burning next to vintage open bible olive branches on wood table",
+    "warm soft sunset light through window serene family living room interior",
+    "peaceful home interior warm candlelight vintage bible soft atmosphere"
+  ],
+  "scenes": [
+    {
+      "a": "If you are sitting at your kitchen table carrying a heavy heart for your family, listen.",
+      "img": "short-familymatthew6v9-scene-01.jpg",
+      "kicker": "MATTHEW 6:9",
+      "sub": "A PRAYER FOR YOUR HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Jesus taught us: Our Father which art in heaven, Hallowed be thy name. Thy kingdom come.",
+      "img": "short-familymatthew6v9-scene-02.jpg",
+      "kicker": "MATTHEW 6:9",
+      "sub": "HALLOWED BE THY NAME",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Thy will be done in earth, as it is in heaven. Give us this day our daily bread.",
+      "img": "short-familymatthew6v9-scene-03.jpg",
+      "kicker": "MATTHEW 6:10",
+      "sub": "THY WILL BE DONE",
+      "cam": "tilt_up",
+      "focus": [
+        0.48,
+        0.52
+      ]
+    },
+    {
+      "a": "And forgive us our debts, as we forgive our debtors. And lead us not into temptation, but deliver us from evil:",
+      "img": "short-familymatthew6v9-scene-04.jpg",
+      "kicker": "MATTHEW 6:12",
+      "sub": "FORGIVE AND DELIVER US",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "For thine is the kingdom, and the power, and the glory, for ever. Amen.",
+      "img": "short-familymatthew6v9-scene-05.jpg",
+      "kicker": "MATTHEW 6:13",
+      "sub": "THINE IS THE KINGDOM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, cover this home under Your grace, grant us peace, and guide our daily steps together. Subscribe to join our family altar.",
+      "img": "short-familymatthew6v9-scene-06.jpg",
+      "kicker": "THE FAMILY ALTAR",
+      "sub": "COVER YOUR HOME IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If you are sitting at your kitchen table carrying a heavy heart for your family, listen."
+    ],
+    [
+      8,
+      16,
+      "Jesus taught us: Our Father which art in heaven, Hallowed be thy name. Thy kingdom come."
+    ],
+    [
+      17,
+      26,
+      "Thy will be done in earth, as it is in heaven. Give us this day our daily bread."
+    ],
+    [
+      27,
+      37,
+      "And forgive us our debts, as we forgive our debtors. And lead us not into temptation, but deliver us from evil:"
+    ],
+    [
+      38,
+      48,
+      "For thine is the kingdom, and the power, and the glory, for ever. Amen."
+    ],
+    [
+      49,
+      58,
+      "Lord, cover this home under Your grace, grant us peace, and guide our daily steps together. Subscribe to join our family altar."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF YOU ARE SITTING",
+        "AT YOUR KITCHEN TABLE",
+        "CARRYING A HEAVY HEART",
+        "FOR YOUR FAMILY, LISTEN"
+      ],
+      [
+        "HEAVY",
+        "HEART"
+      ],
+      "MATTHEW 6:9"
+    ],
+    [
+      8,
+      16,
+      [
+        "OUR FATHER WHICH ART IN HEAVEN",
+        "HALLOWED BE THY NAME",
+        "THY KINGDOM COME"
+      ],
+      [
+        "OUR",
+        "FATHER"
+      ],
+      "MATTHEW 6:9"
+    ],
+    [
+      17,
+      26,
+      [
+        "THY WILL BE DONE IN EARTH",
+        "AS IT IS IN HEAVEN",
+        "GIVE US THIS DAY",
+        "OUR DAILY BREAD"
+      ],
+      [
+        "DAILY",
+        "BREAD"
+      ],
+      "MATTHEW 6:10-11"
+    ],
+    [
+      27,
+      37,
+      [
+        "AND FORGIVE US OUR DEBTS",
+        "AS WE FORGIVE OUR DEBTORS",
+        "LEAD US NOT INTO TEMPTATION",
+        "BUT DELIVER US FROM EVIL"
+      ],
+      [
+        "DELIVER",
+        "US"
+      ],
+      "MATTHEW 6:12-13"
+    ],
+    [
+      38,
+      48,
+      [
+        "FOR THINE IS THE KINGDOM",
+        "AND THE POWER",
+        "AND THE GLORY",
+        "FOR EVER. AMEN."
+      ],
+      [
+        "KINGDOM",
+        "POWER",
+        "GLORY"
+      ],
+      "MATTHEW 6:13"
+    ],
+    [
+      49,
+      58,
+      [
+        "LORD, COVER THIS HOME",
+        "UNDER YOUR GRACE",
+        "GRANT US PEACE",
+        "SUBSCRIBE TO JOIN US"
+      ],
+      [
+        "COVER",
+        "THIS",
+        "HOME"
+      ],
+      "THE FAMILY ALTAR"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are sitting at your kitchen table carrying a heavy heart for your family, listen.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Jesus taught us: Our Father which art in heaven, Hallowed be thy name. Thy kingdom come.",
+      "kind": "phrase",
+      "words": [
+        "OUR",
+        "FATHER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thy will be done in earth, as it is in heaven. Give us this day our daily bread.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "BREAD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And forgive us our debts, as we forgive our debtors. And lead us not into temptation, but deliver us from evil:",
+      "kind": "phrase",
+      "words": [
+        "DELIVER",
+        "US"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For thine is the kingdom, and the power, and the glory, for ever. Amen.",
+      "kind": "phrase",
+      "words": [
+        "KINGDOM",
+        "GLORY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, cover this home under Your grace, grant us peace, and guide our daily steps together. Subscribe to join our family altar.",
+      "kind": "phrase",
+      "words": [
+        "COVER",
+        "THIS",
+        "HOME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Matthew 6:9-13"
+}

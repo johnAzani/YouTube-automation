@@ -1,0 +1,265 @@
+{
+  "key": "short-midnight1john4v4",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "GREATER IS HE",
+    "WHO IS IN YOU"
+  ],
+  "poster": [
+    "THE MIDNIGHT WATCH",
+    "1 JOHN 4:4",
+    "MIDNIGHT PRAYER",
+    "QUIET REFLECTION"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "dark silhouette of an old stone watchtower against a starry midnight sky",
+    "flickering warm lantern light on a dark wooden prayer desk",
+    "deep indigo night sky with clouds moving over a crescent moon",
+    "calm dark lake reflecting distant constellations at midnight",
+    "soft golden light filtering through a gothic church window at night",
+    "glowing embers in a dark fireplace during the quiet of night"
+  ],
+  "scenes": [
+    {
+      "a": "If you are wrestling with fear that feels larger than your faith, hear this truth.",
+      "img": "short-midnight1john4v4-scene-01.jpg",
+      "kicker": "1 JOHN 4:4",
+      "sub": "FIND STRENGTH IN THE DARKNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The scripture says, You, dear children, are from God and have overcome them, because the one who is in you is greater than the one who is in the world.",
+      "img": "short-midnight1john4v4-scene-02.jpg",
+      "kicker": "1 JOHN 4:4",
+      "sub": "GOD IS GREATER THAN ALL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, at this midnight hour, remind us that the spirit dwelling within is stronger than any shadow.",
+      "img": "short-midnight1john4v4-scene-03.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "REST IN HIS MIGHTY PRESENCE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Grant us the courage to release our heavy burdens into Your sovereign and loving hands tonight.",
+      "img": "short-midnight1john4v4-scene-04.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "LAY DOWN YOUR BURDENS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May Your peace guard our hearts and minds, silencing every whisper of doubt or lingering worry.",
+      "img": "short-midnight1john4v4-scene-05.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "HIS PEACE GUARDS YOUR HEART",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We rest securely in Your promise, confident that victory belongs to You alone, our faithful King.",
+      "img": "short-midnight1john4v4-scene-06.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "VICTORY IN HIS PROMISE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If you are wrestling with fear that feels larger than your faith, hear this truth."
+    ],
+    [
+      7,
+      18,
+      "The scripture says, You, dear children, are from God and have overcome them, because the one who is in you is greater than the one who is in the world."
+    ],
+    [
+      19,
+      27,
+      "Lord, at this midnight hour, remind us that the spirit dwelling within is stronger than any shadow."
+    ],
+    [
+      28,
+      35,
+      "Grant us the courage to release our heavy burdens into Your sovereign and loving hands tonight."
+    ],
+    [
+      36,
+      43,
+      "May Your peace guard our hearts and minds, silencing every whisper of doubt or lingering worry."
+    ],
+    [
+      44,
+      52,
+      "We rest securely in Your promise, confident that victory belongs to You alone, our faithful King."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "WRESTLING WITH FEAR",
+        "HEAR THIS TRUTH"
+      ],
+      [
+        "HEAR THIS TRUTH"
+      ],
+      "1 JOHN 4:4"
+    ],
+    [
+      7,
+      18,
+      [
+        "YOU ARE FROM GOD",
+        "OVERCOME THE WORLD",
+        "HE IS GREATER"
+      ],
+      [
+        "HE IS GREATER"
+      ],
+      "1 JOHN 4:4"
+    ],
+    [
+      19,
+      27,
+      [
+        "MIDNIGHT HOUR",
+        "STRONGER THAN ANY SHADOW"
+      ],
+      [
+        "STRONGER"
+      ],
+      "1 JOHN 4:4"
+    ],
+    [
+      28,
+      35,
+      [
+        "RELEASE YOUR BURDENS",
+        "INTO HIS HANDS"
+      ],
+      [
+        "HIS HANDS"
+      ],
+      "1 JOHN 4:4"
+    ],
+    [
+      36,
+      43,
+      [
+        "PEACE GUARDS",
+        "YOUR HEART AND MIND"
+      ],
+      [
+        "HIS PEACE"
+      ],
+      "1 JOHN 4:4"
+    ],
+    [
+      44,
+      52,
+      [
+        "REST IN HIS PROMISE",
+        "VICTORY BELONGS TO HIM"
+      ],
+      [
+        "VICTORY"
+      ],
+      "1 JOHN 4:4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are wrestling with fear that feels larger than your faith, hear this truth.",
+      "kind": "phrase",
+      "words": [
+        "FEAR",
+        "TRUTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "The scripture says, You, dear children, are from God and have overcome them, because the one who is in you is greater than the one who is in the world.",
+      "kind": "phrase",
+      "words": [
+        "GREATER",
+        "WORLD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, at this midnight hour, remind us that the spirit dwelling within is stronger than any shadow.",
+      "kind": "phrase",
+      "words": [
+        "STRONGER",
+        "SHADOW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us the courage to release our heavy burdens into Your sovereign and loving hands tonight.",
+      "kind": "phrase",
+      "words": [
+        "RELEASE",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May Your peace guard our hearts and minds, silencing every whisper of doubt or lingering worry.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "DOUBT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We rest securely in Your promise, confident that victory belongs to You alone, our faithful King.",
+      "kind": "phrase",
+      "words": [
+        "VICTORY",
+        "KING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "1 John 4:4"
+}
