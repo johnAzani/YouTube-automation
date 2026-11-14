@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T20:29:27Z",
+  "generated_at": "2026-11-14T20:47:34Z",
   "monitor_generated_at": "2026-11-14T19:12:22.957257+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 238,
-    "published_longform": 107,
-    "published_shorts": 131,
-    "public_total": 236,
-    "queued_longform": 57,
-    "queued_shorts": 77,
+    "published_total": 240,
+    "published_longform": 108,
+    "published_shorts": 132,
+    "public_total": 238,
+    "queued_longform": 56,
+    "queued_shorts": 76,
     "automations_ok": 11,
     "automations_total": 11,
     "network_healthy": true
@@ -33,33 +33,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 42,
-        "published_longform": 15,
-        "published_shorts": 27,
+        "published_total": 44,
+        "published_longform": 16,
+        "published_shorts": 28,
         "thumbnail_pending": 3,
-        "public_total": 41,
-        "queued_longform": 12,
+        "public_total": 43,
+        "queued_longform": 11,
         "queued_other": 5,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MATTHEW6V34",
-        "title": "Say This Matthew 6:34 Prayer Before You Sleep | The Secret Place #Shorts",
-        "format": "short",
-        "youtube_video_id": "EiF_FNNAhCU",
-        "watch_url": "https://www.youtube.com/shorts/EiF_FNNAhCU",
-        "published_on": "2026-11-14",
-        "published_at": "2026-11-14T15:15:45Z"
-      },
-      "next_queued_longform": {
         "id": "0024",
         "title": "When the Night Feels Too Dark: Psalm 139:11-12 | The Secret Place",
-        "words": 888,
+        "format": "longform",
+        "youtube_video_id": "VPAFfGNkCGs",
+        "watch_url": "https://youtu.be/VPAFfGNkCGs",
+        "published_on": "2026-11-14",
+        "published_at": "2026-11-14T20:46:48Z"
+      },
+      "next_queued_longform": {
+        "id": "0025",
+        "title": "Bedtime Prayer for Sleep Without Fear: Proverbs 3:24-26",
+        "words": 918,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm55v22",
-        "scripture": "Psalm 55:22",
+        "short": "short-psalm56v3",
+        "scripture": "Psalm 56:3",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -697,6 +697,30 @@
   ],
   "videos": [
     {
+      "id": "0024",
+      "slug": "psalm-139-11-12-darkness-is-as-light-to-him",
+      "file": "0024-psalm-139-11-12-darkness-is-as-light-to-him.md",
+      "title": "When the Night Feels Too Dark: Psalm 139:11-12 | The Secret Place",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T20:46:48Z",
+      "youtube_video_id": "VPAFfGNkCGs",
+      "watch_url": "https://youtu.be/VPAFfGNkCGs",
+      "youtu_be_url": "https://youtu.be/VPAFfGNkCGs",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/VPAFfGNkCGs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/VPAFfGNkCGs/hqdefault.jpg",
+      "thumb_text": "NO DARK TOO DEEP",
+      "thumbnail_pending": false,
+      "duration_label": "186m 29s",
+      "words": 888
+    },
+    {
       "id": "SHORT-GUIDEDJOHN14V6",
       "slug": "short-guidedjohn14v6-guidance-prayer",
       "file": "short-guidedjohn14v6-guidance-prayer.md",
@@ -863,6 +887,30 @@
       "thumbnail_pending": false,
       "duration_label": "48s",
       "words": 580
+    },
+    {
+      "id": "SHORT-PSALM55V22",
+      "slug": "short-psalm55v22-pre-sleep-prayer",
+      "file": "short-psalm55v22-pre-sleep-prayer.md",
+      "title": "Say This Psalm 55:22 Prayer Before You Sleep | The Secret Place #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@TheSecretPlace",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T20:11:42Z",
+      "youtube_video_id": "IbDB_YEQ-ZY",
+      "watch_url": "https://www.youtube.com/shorts/IbDB_YEQ-ZY",
+      "youtu_be_url": "https://youtu.be/IbDB_YEQ-ZY",
+      "shorts_url": "https://www.youtube.com/shorts/IbDB_YEQ-ZY",
+      "studio_url": "https://studio.youtube.com/video/IbDB_YEQ-ZY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/IbDB_YEQ-ZY/hqdefault.jpg",
+      "thumb_text": "CAST THY BURDEN \u00b7 UPON THE LORD",
+      "thumbnail_pending": false,
+      "duration_label": "56s",
+      "words": 623
     },
     {
       "id": "SHORT-MIDNIGHTROMANS8V37",
@@ -6412,19 +6460,6 @@
   "queues": {
     "longform": [
       {
-        "id": "0024",
-        "slug": "psalm-139-11-12-darkness-is-as-light-to-him",
-        "file": "0024-psalm-139-11-12-darkness-is-as-light-to-him.md",
-        "title": "When the Night Feels Too Dark: Psalm 139:11-12 | The Secret Place",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 888
-      },
-      {
         "id": "0025",
         "slug": "proverbs-3-24-26-when-you-lie-down-sleep-is-sweet",
         "file": "0025-proverbs-3-24-26-when-you-lie-down-sleep-is-sweet.md",
@@ -7208,17 +7243,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-psalm55v22",
-        "file": "0000-short-psalm55v22.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 55:22",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm56v3",

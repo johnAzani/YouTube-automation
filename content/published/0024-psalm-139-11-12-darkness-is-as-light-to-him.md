@@ -2,7 +2,7 @@
 id: '0024'
 title: "When the Night Feels Too Dark: Psalm 139:11-12 | The Secret Place"
 slug: psalm-139-11-12-darkness-is-as-light-to-him
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -85,6 +85,15 @@ originality:
   ai_disclosure: false
 seo_hook: Pray this Psalm 139:11-12 KJV night prayer before sleep knowing even the deepest darkness shines like day in God's presence.
 category_id: '22'
+published_on: "2026-11-14"
+published_at: "2026-11-14T20:46:48Z"
+youtube_video_id: "VPAFfGNkCGs"
+metadata_revision: "selar-seo-v1"
+prayer_seconds: 388.7
+duration_seconds: 11189.1
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — If I Say, Surely the Darkness Shall Cover Me (Verse 11a)
