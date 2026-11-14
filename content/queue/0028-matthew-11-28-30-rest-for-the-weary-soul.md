@@ -1,6 +1,6 @@
 ---
 id: 0028
-title: Matthew 11:28-30 Bedtime Prayer | Deep Rest for Weary Souls
+title: "Bedtime Prayer When You Are Worn Out: Matthew 11:28-30"
 slug: matthew-11-28-30-rest-for-the-weary-soul
 status: approved
 privacy: public

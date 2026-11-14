@@ -1,6 +1,6 @@
 ---
 id: '0026'
-title: Isaiah 26:3-4 Night Prayer | Kept in God's Perfect Peace
+title: "Night Prayer to Quiet a Racing Mind: Isaiah 26:3-4 | The Secret Place"
 slug: isaiah-26-3-4-kept-in-perfect-peace
 status: approved
 privacy: public

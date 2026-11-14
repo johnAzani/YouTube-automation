@@ -1,6 +1,6 @@
 ---
 id: 0509
-title: Genesis 22:14 Daily Provision Prayer | The Provision Table
+title: "Prayer for When You Need God to Provide: Genesis 22:14"
 slug: genesis-22-14-jehovah-jireh-provision-prayer
 status: approved
 channel: prayer7

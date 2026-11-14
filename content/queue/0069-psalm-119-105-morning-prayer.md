@@ -1,6 +1,6 @@
 ---
 id: 0069
-title: Psalm 119:105 Morning Prayer | The Morning Altar
+title: "Morning Prayer for a Clear Path Today: Psalm 119:105"
 slug: psalm-119-105-morning-prayer
 status: approved
 channel: prayer2
@@ -10,7 +10,7 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-thumb_text: LIGHT UPON MY
+thumb_text: LIGHT FOR MY PATH
 seo_hook: Begin this sunrise with Psalm 119:105. Let God's living Word be the lamp
   unto your feet and the light upon your path all through this day.
 tags:

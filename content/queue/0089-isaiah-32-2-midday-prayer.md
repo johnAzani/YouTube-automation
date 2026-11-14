@@ -1,6 +1,6 @@
 ---
 id: 0089
-title: Isaiah 32:2 Midday Prayer | The Midday Watch
+title: "Midday Prayer When You Are Worn Down: Isaiah 32:2 | The Midday Watch"
 slug: isaiah-32-2-midday-prayer
 status: approved
 channel: prayer3

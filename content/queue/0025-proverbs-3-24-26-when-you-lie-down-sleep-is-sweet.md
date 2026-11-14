@@ -1,6 +1,6 @@
 ---
 id: '0025'
-title: Proverbs 3:24-26 Bedtime Prayer | Lie Down & Sleep Sweetly
+title: "Bedtime Prayer for Sleep Without Fear: Proverbs 3:24-26"
 slug: proverbs-3-24-26-when-you-lie-down-sleep-is-sweet
 status: approved
 privacy: public

@@ -1,6 +1,6 @@
 ---
 id: 0409
-title: Matthew 11:28-30 Rest for Your Soul Prayer | The Healing Balm
+title: "Prayer When You Are Tired and Heavy Laden: Matthew 11:28-30"
 slug: matthew-11-28-30-rest-for-your-soul-prayer
 status: approved
 channel: prayer6
@@ -10,7 +10,7 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-thumb_text: REST FOR YOUR
+thumb_text: COME UNTO ME
 seo_hook: Come unto me, all ye that labour and are heavy laden, and I will give you
   rest, says our Lord in Matthew 11:28.
 tags:

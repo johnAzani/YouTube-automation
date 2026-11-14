@@ -1,6 +1,6 @@
 ---
 id: '0704'
-title: 1 Thessalonians 5:16-18 Daily Prayer | The Praise Garden
+title: "Prayer of Gratitude When Life Is Hard: 1 Thessalonians 5:16-18"
 slug: 1-thessalonians-5-16-18-daily-prayer
 status: approved
 channel: prayer9

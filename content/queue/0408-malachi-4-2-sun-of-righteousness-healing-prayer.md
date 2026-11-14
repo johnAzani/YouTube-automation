@@ -1,6 +1,6 @@
 ---
 id: 0408
-title: Malachi 4:2 The Sun of Righteousness Arise With Healing in His Wings
+title: "Prayer for Healing and Restoration: Malachi 4:2 | The Healing Balm"
 slug: malachi-4-2-sun-of-righteousness-healing-prayer
 status: approved
 channel: prayer6
@@ -10,7 +10,7 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-thumb_text: HEALING IN HIS
+thumb_text: HEALING IN HIS WINGS
 seo_hook: Unto you that fear my name shall the Sun of righteousness arise with healing
   in his wings. Enter into God's radiant restoration today.
 tags:

@@ -1,6 +1,6 @@
 ---
 id: '0034'
-title: Psalm 91 Complete KJV Night Prayer | Abiding Under His Wings
+title: "Psalm 91 Night Prayer for Protection While You Sleep (Full KJV)"
 slug: psalm-91-complete-night-prayer-of-divine-protection
 status: approved
 privacy: public

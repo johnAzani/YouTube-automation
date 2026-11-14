@@ -1,6 +1,6 @@
 ---
 id: 0092
-title: 1 Corinthians 15:58 Midday Prayer | The Midday Watch
+title: "When Your Hard Work Feels Wasted: 1 Corinthians 15:58"
 slug: 1-corinthians-15-58-midday-prayer
 status: approved
 channel: prayer3
@@ -10,7 +10,7 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-thumb_text: LABOR NOT IN
+thumb_text: NOT IN VAIN
 seo_hook: Pause at midday in 1 Corinthians 15:58 to find unwavering strength and assurance
   that your labor in the Lord is never in vain.
 tags:

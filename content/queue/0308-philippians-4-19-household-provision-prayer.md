@@ -1,6 +1,6 @@
 ---
 id: 0308
-title: Philippians 4:19 Household Provision Prayer | The Family Altar
+title: "Prayer for Your Family's Daily Needs: Philippians 4:19"
 slug: philippians-4-19-household-provision-prayer
 status: approved
 channel: prayer5

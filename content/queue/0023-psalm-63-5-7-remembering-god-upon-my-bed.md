@@ -1,6 +1,6 @@
 ---
 id: '0023'
-title: Psalm 63:6-7 Night Prayer | Remembering God Upon My Bed
+title: "Night Prayer When You Lie Awake: Psalm 63:6-7 | The Secret Place"
 slug: psalm-63-5-7-remembering-god-upon-my-bed
 status: approved
 privacy: public

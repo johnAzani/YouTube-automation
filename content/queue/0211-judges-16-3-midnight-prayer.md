@@ -1,6 +1,6 @@
 ---
 id: '0211'
-title: Judges 16:3 Midnight Prayer | The Midnight Watch
+title: "Midnight Prayer for Deliverance: Judges 16:3 | The Midnight Watch"
 slug: judges-16-3-midnight-prayer
 status: approved
 channel: prayer4

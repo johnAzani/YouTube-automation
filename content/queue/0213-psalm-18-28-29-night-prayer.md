@@ -1,6 +1,6 @@
 ---
 id: '0213'
-title: Psalm 18:28-29 Night Prayer | The Midnight Watch
+title: "Midnight Prayer When All Seems Dark: Psalm 18:28-29"
 slug: psalm-18-28-29-night-prayer
 status: approved
 channel: prayer4

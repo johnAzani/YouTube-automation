@@ -1,6 +1,6 @@
 ---
 id: 0068
-title: Psalm 37:23-24 Morning Prayer | The Morning Altar
+title: "Morning Prayer to Order Your Steps: Psalm 37:23-24 | The Morning Altar"
 slug: psalm-37-23-24-morning-prayer
 status: approved
 channel: prayer2
@@ -10,7 +10,7 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-thumb_text: ORDERED STEPS TODAY
+thumb_text: HE HOLDS MY HAND
 seo_hook: Begin your morning by committing your day into God's hands, trusting that
   the steps of a good person are ordered by the Lord according to Psalm 37:23-24.
 tags:

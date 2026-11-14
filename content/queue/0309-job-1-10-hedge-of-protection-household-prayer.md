@@ -1,6 +1,6 @@
 ---
 id: 0309
-title: Job 1:10 Household Prayer for a Hedge of Protection | The Family Altar
+title: "Prayer for Protection Over Your Home: Job 1:10 | The Family Altar"
 slug: job-1-10-hedge-of-protection-household-prayer
 status: approved
 channel: prayer5

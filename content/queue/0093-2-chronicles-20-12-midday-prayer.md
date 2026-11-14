@@ -1,6 +1,6 @@
 ---
 id: 0093
-title: 2 Chronicles 20:12 Midday Prayer | The Midday Watch
+title: "When You Don't Know What to Do: 2 Chronicles 20:12 | The Midday Watch"
 slug: 2-chronicles-20-12-midday-prayer
 status: approved
 channel: prayer3

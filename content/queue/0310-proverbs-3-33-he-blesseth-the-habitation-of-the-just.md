@@ -1,6 +1,6 @@
 ---
 id: '0310'
-title: 'Proverbs 3:33: He Blesseth the Habitation of the Just'
+title: "Prayer to Bless Your Home and Family: Proverbs 3:33 | The Family Altar"
 slug: proverbs-3-33-he-blesseth-the-habitation-of-the-just
 status: approved
 channel: prayer5

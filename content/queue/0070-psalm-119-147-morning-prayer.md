@@ -1,6 +1,6 @@
 ---
 id: '0070'
-title: Psalm 119:147 Morning Prayer | The Morning Altar
+title: "Early Morning Prayer Before the Day Begins: Psalm 119:147"
 slug: psalm-119-147-morning-prayer
 status: approved
 channel: prayer2
@@ -10,7 +10,7 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-thumb_text: HOPE IN THY
+thumb_text: HOPE IN HIS WORD
 seo_hook: 'I prevented the dawning of the morning and cried: I hoped in thy word,
   says the Psalmist in Psalm 119:147, calling us to seek God before the sun rises.'
 tags:

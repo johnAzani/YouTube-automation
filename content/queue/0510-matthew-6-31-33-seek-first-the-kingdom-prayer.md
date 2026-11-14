@@ -1,6 +1,6 @@
 ---
 id: '0510'
-title: Matthew 6:31-33 Seek First the Kingdom Prayer | The Provision Table
+title: "Prayer to Stop Worrying About Money: Matthew 6:31-33"
 slug: matthew-6-31-33-seek-first-the-kingdom-prayer
 status: approved
 channel: prayer7
@@ -10,7 +10,7 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-thumb_text: SEEK FIRST GOD
+thumb_text: SEEK HIM FIRST
 seo_hook: Seek ye first the kingdom of God and His righteousness, resting in the covenant
   promise that all these daily things shall be added unto you.
 tags:

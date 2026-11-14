@@ -364,10 +364,23 @@ Return ONLY compact JSON matching this schema, no prose and no code fences:
 }}
 
 HARD RULES — violations are rejected by code:
-- The narration must be {words} words, a calm second-person {prayer_kind} prayer,
-  {min_seconds}-{max_seconds} seconds when read slowly. It opens by inviting the
-  listener to {opening}, quotes the scripture once, prays, and ends with a single
-  subscribe invitation.
+- The narration must be about {words} words (never under {floor}, never over
+  {ceiling}), a calm second-person {prayer_kind} prayer, {min_seconds}-{max_seconds}
+  seconds when read slowly. After the opening sentence it quotes the scripture
+  once, prays, and ends with a single subscribe invitation.
+
+THE OPENING SENTENCE — a viewer decides in the first two seconds:
+- Sentence one is written for this Short alone: {hook_words} words or fewer, said
+  to one person, naming the exact moment or need this scripture meets: the hour,
+  the room, the worry that keeps returning, the decision, the thing they were
+  about to do when this reached them. A stranger who hears only that sentence
+  must know this prayer is for them today.
+- This channel's mood is "{opening}". That is the mood, NOT the first sentence:
+  do not open with those words, with a greeting, with the channel's name, or
+  with a general invitation to breathe, pause, gather, rise or welcome the day.
+- Do not reuse the opening of an earlier Short on this channel.{avoid_block}
+- Honest only: no "don't scroll", no "watch to the end", no promised outcome.
+
 - Quote ONLY {scripture}. Never quote another psalm or verse reference.
 - One `stock_queries` entry per scene, describing {imagery} imagery suitable for
   a {prayer_kind} prayer (no people's faces, no text in the image).
@@ -381,14 +394,90 @@ HARD RULES — violations are rejected by code:
 """
 
 
-def build_prompt(scripture: str, key: str = "short-psalmNN", words: int = 120,
-                 channel_id: str | None = None) -> str:
+#: Narration length asked of the model. The validator accepts MIN_WORDS-MAX_WORDS;
+#: the target sits well inside it so an undershoot still passes.
+#:
+#: Measured 13 November 2026 on published Shorts at least two days old:
+#: 90-99 words, median 114 views (10 Shorts); 100-114 words, 70 (22); 115-129
+#: words, 56 (20). Small numbers and mixed channels, so this is a nudge toward
+#: the shorter end, not a new floor.
+TARGET_WORDS = 105
+TARGET_WORDS_RANGE = (95, 118)
+#: Longest opening sentence asked for. The view counts do not prove a specific
+#: opening wins (the same stock line drew 104 views one day and 0 the next);
+#: the reasons are that a Short is kept or swiped in its first seconds, and that
+#: one opening line repeated across a channel's Shorts is templated content.
+MAX_HOOK_WORDS = 16
+#: How many of the channel's most recent openings the model is shown, to avoid.
+RECENT_OPENINGS_SHOWN = 8
+
+
+def first_sentence(text: str) -> str:
+    """The opening sentence of a narration."""
+    parts = re.split(r"(?<=[.!?])\s+", " ".join(str(text or "").split()), maxsplit=1)
+    return parts[0].strip() if parts and parts[0] else ""
+
+
+def recent_openings(channel_id: str | None, limit: int = RECENT_OPENINGS_SHOWN,
+                    spec_dir: Path | None = None) -> list[str]:
+    """Openings this channel's Shorts have already used, most overused first.
+
+    On 13 November every Family Altar Short began "Gather your home and loved
+    ones in faith", every Midnight Watch Short "Rise in spirit at this midnight
+    hour": the prompt handed the model one stock invitation per channel and the
+    model used it. Showing it what the channel has already said is how it is
+    asked not to say it again.
+
+    One example per distinct first three words, ordered by how many Shorts
+    start that way, so the most worn skeleton is always in the list. (File
+    times are useless for "newest": a fresh checkout stamps every file alike.)
+    A spec that cannot be read is skipped: this list is advice to the model and
+    must never stop a Short being written.
+    """
+    from .channels import normalize_channel_id
+
+    directory = SPEC_DIR if spec_dir is None else spec_dir
+    wanted = normalize_channel_id(channel_id)
+    if not directory.is_dir():
+        return []
+    by_start: dict[str, list[str]] = {}
+    for path in sorted(directory.glob("*.json")):
+        try:
+            spec = load_spec(path)
+            if normalize_channel_id(spec.channel) != wanted:
+                continue
+            opening = first_sentence(spec.narration_text)
+        except Exception:  # noqa: BLE001
+            continue
+        if not opening:
+            continue
+        start = " ".join(_norm_words(opening).split()[:3])
+        by_start.setdefault(start, []).append(opening)
+    ranked = sorted(by_start.items(), key=lambda kv: (-len(kv[1]), kv[0]))
+    return [min(group, key=len) for _start, group in ranked[:max(0, limit)]]
+
+
+def build_prompt(scripture: str, key: str = "short-psalmNN", words: int = TARGET_WORDS,
+                 channel_id: str | None = None,
+                 avoid_openings: list[str] | None = None) -> str:
     """The model contract, in the voice of the channel the Short belongs to."""
     from .channel_capabilities import brand_for
 
     brand = brand_for(channel_id)
+    if avoid_openings is None:
+        try:
+            avoid_openings = recent_openings(channel_id)
+        except Exception:  # noqa: BLE001
+            avoid_openings = []
+    avoid_block = ""
+    if avoid_openings:
+        listed = "\n".join(f'    - "{o[:140]}"' for o in avoid_openings[:RECENT_OPENINGS_SHOWN])
+        avoid_block = ("\n  This channel has already opened Shorts with these lines. Do not start"
+                       "\n  with any of them, or with their first three words:\n" + listed)
     return PROMPT.format(
         key=key, scripture=scripture, words=words,
+        floor=max(MIN_WORDS, TARGET_WORDS_RANGE[0]), ceiling=TARGET_WORDS_RANGE[1],
+        hook_words=MAX_HOOK_WORDS, avoid_block=avoid_block,
         min_seconds=MIN_SECONDS, max_seconds=MAX_SECONDS,
         kicker=MAX_KICKER_CHARS, sub=MAX_SUB_CHARS, cams=list(CAMS),
         channel_label=brand.short_channel_label,

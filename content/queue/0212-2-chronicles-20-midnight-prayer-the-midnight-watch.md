@@ -1,6 +1,6 @@
 ---
 id: '0212'
-title: 2 Chronicles 20:15-22 Midnight Prayer | The Midnight Watch
+title: "The Battle Is Not Yours: 2 Chronicles 20:15-22 Midnight Prayer"
 slug: 2-chronicles-20-midnight-prayer-the-midnight-watch
 status: approved
 channel: prayer4
@@ -10,7 +10,7 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-thumb_text: GODS BATTLE
+thumb_text: GOD FIGHTS FOR YOU
 seo_hook: Rise at midnight with The Midnight Watch in 2 Chronicles 20:15-22 Midnight
   Prayer (KJV) for breakthrough intercession, spiritual deliverance, and unsh.
 tags:
