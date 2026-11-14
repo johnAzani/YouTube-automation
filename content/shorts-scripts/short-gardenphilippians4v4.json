@@ -1,0 +1,317 @@
+{
+  "key": "short-gardenphilippians4v4",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "REJOICE IN THE LORD",
+    "A THANKSGIVING PRAYER"
+  ],
+  "poster": [
+    "REJOICE",
+    "IN THE LORD",
+    "ALWAYS",
+    "PHILIPPIANS 4:4"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glade morning mist",
+    "golden light over calm lake landscape",
+    "peaceful meadow misty sunrise soft light",
+    "sunbeams filtering through green trees",
+    "calm river flowing through quiet forest",
+    "golden sunset glowing over peaceful mountain valley",
+    "misty countryside in soft morning light"
+  ],
+  "scenes": [
+    {
+      "a": "If worry has stolen your gladness today",
+      "img": "short-gardenphilippians4v4-scene-01.jpg",
+      "kicker": "PHILIPPIANS 4:4",
+      "sub": "REJOICE IN THE LORD ALWAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Rejoice in the Lord alway",
+      "img": "short-gardenphilippians4v4-scene-02.jpg",
+      "kicker": "PHILIPPIANS 4:4",
+      "sub": "AGAIN I SAY REJOICE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "our joy does not depend on changing circumstances",
+      "img": "short-gardenphilippians4v4-scene-03.jpg",
+      "kicker": "PHILIPPIANS 4:4",
+      "sub": "UNCHANGING JOY IN GOD",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "but on Your unchanging love",
+      "img": "short-gardenphilippians4v4-scene-04.jpg",
+      "kicker": "PHILIPPIANS 4:4",
+      "sub": "HIS LOVE NEVER FAILS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "praise Your holy name",
+      "img": "short-gardenphilippians4v4-scene-05.jpg",
+      "kicker": "PHILIPPIANS 4:4",
+      "sub": "PRAISE HIS HOLY NAME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "resting in Your goodness",
+      "img": "short-gardenphilippians4v4-scene-06.jpg",
+      "kicker": "PHILIPPIANS 4:4",
+      "sub": "REST IN HIS GOODNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to stay in His presence",
+      "img": "short-gardenphilippians4v4-scene-07.jpg",
+      "kicker": "THE PRAISE GARDEN",
+      "sub": "ENTER HIS GATES WITH THANKSGIVING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If worry has stolen your gladness today, this prayer is for your quiet heart."
+    ],
+    [
+      7,
+      15,
+      "Philippians four verse four says, 'Rejoice in the Lord alway: and again I say, Rejoice.'"
+    ],
+    [
+      15,
+      22,
+      "Heavenly Father, we thank You that our joy does not depend on changing circumstances,"
+    ],
+    [
+      22,
+      29,
+      "but on Your unchanging love. Even when tears fall or weary days press in,"
+    ],
+    [
+      29,
+      36,
+      "You give us reason to praise Your holy name. We choose to rejoice today,"
+    ],
+    [
+      36,
+      43,
+      "resting in Your goodness and trusting Your faithful grace. Thank You, Lord, for being our constant light and steady song."
+    ],
+    [
+      43,
+      50,
+      "In Jesus' name, Amen. Subscribe to stay in His presence."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF WORRY HAS STOLEN",
+        "YOUR GLADNESS TODAY",
+        "THIS PRAYER IS FOR YOU"
+      ],
+      [
+        "WORRY",
+        "GLADNESS"
+      ],
+      "PHILIPPIANS 4 : 4"
+    ],
+    [
+      7,
+      15,
+      [
+        "REJOICE IN THE LORD ALWAY",
+        "AND AGAIN I SAY",
+        "REJOICE IN HIM"
+      ],
+      [
+        "REJOICE",
+        "LORD"
+      ],
+      "PHILIPPIANS 4 : 4"
+    ],
+    [
+      15,
+      22,
+      [
+        "HEAVENLY FATHER WE THANK YOU",
+        "OUR JOY DOES NOT DEPEND",
+        "ON CHANGING CIRCUMSTANCES"
+      ],
+      [
+        "THANK",
+        "JOY"
+      ],
+      "PHILIPPIANS 4 : 4"
+    ],
+    [
+      22,
+      29,
+      [
+        "BUT ON YOUR UNCHANGING LOVE",
+        "EVEN WHEN TEARS FALL",
+        "OR WEARY DAYS PRESS IN"
+      ],
+      [
+        "UNCHANGING",
+        "LOVE"
+      ],
+      "PHILIPPIANS 4 : 4"
+    ],
+    [
+      29,
+      36,
+      [
+        "YOU GIVE US REASON TO PRAISE",
+        "YOUR HOLY NAME TODAY",
+        "WE CHOOSE TO REJOICE"
+      ],
+      [
+        "PRAISE",
+        "REJOICE"
+      ],
+      "PHILIPPIANS 4 : 4"
+    ],
+    [
+      36,
+      43,
+      [
+        "RESTING IN YOUR GOODNESS",
+        "TRUSTING YOUR FAITHFUL GRACE",
+        "OUR CONSTANT LIGHT"
+      ],
+      [
+        "GOODNESS",
+        "GRACE"
+      ],
+      "PHILIPPIANS 4 : 4"
+    ],
+    [
+      43,
+      50,
+      [
+        "IN JESUS NAME AMEN",
+        "SUBSCRIBE TO STAY",
+        "IN HIS PRESENCE"
+      ],
+      [
+        "JESUS",
+        "AMEN"
+      ],
+      "PHILIPPIANS 4 : 4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If worry has stolen your gladness today",
+      "kind": "phrase",
+      "words": [
+        "WORRY",
+        "GLADNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Rejoice in the Lord alway",
+      "kind": "phrase",
+      "words": [
+        "REJOICE",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "our joy does not depend on changing circumstances",
+      "kind": "phrase",
+      "words": [
+        "JOY",
+        "DEPEND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "but on Your unchanging love",
+      "kind": "phrase",
+      "words": [
+        "UNCHANGING",
+        "LOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "praise Your holy name",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "HOLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "resting in Your goodness",
+      "kind": "phrase",
+      "words": [
+        "RESTING",
+        "GOODNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to stay in His presence",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Philippians 4:4"
+}

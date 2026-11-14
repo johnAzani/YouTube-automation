@@ -1,0 +1,345 @@
+{
+  "key": "short-gardenpsalm136v1",
+  "channel": "prayer9",
+  "psalm": 136,
+  "title": [
+    "A MOMENT",
+    "OF THANKS"
+  ],
+  "poster": [
+    "GIVE THANKS",
+    "UNTO THE LORD",
+    "FOR HE IS GOOD",
+    "HIS MERCY ENDURES"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glade soft focus",
+    "misty golden countryside sunrise",
+    "peaceful river flowing gentle light",
+    "dew on morning grass close up",
+    "soft sunlight filtering through leaves",
+    "calm mountain lake morning mist",
+    "wildflowers swaying in gentle breeze",
+    "golden hour over a quiet meadow"
+  ],
+  "scenes": [
+    {
+      "a": "The thought that kept you awake",
+      "img": "short-gardenpsalm136v1-scene-01.jpg",
+      "kicker": "PSALM 136:1",
+      "sub": "GIVE THANKS UNTO THE LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "is met by the truth",
+      "img": "short-gardenpsalm136v1-scene-02.jpg",
+      "kicker": "PSALM 136:1",
+      "sub": "FOR HE IS GOOD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "O give thanks unto the Lord",
+      "img": "short-gardenpsalm136v1-scene-03.jpg",
+      "kicker": "PSALM 136:1",
+      "sub": "FOR HIS MERCY ENDURETH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "for he is good",
+      "img": "short-gardenpsalm136v1-scene-04.jpg",
+      "kicker": "PSALM 136:1",
+      "sub": "FOREVER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "for his mercy endureth forever",
+      "img": "short-gardenpsalm136v1-scene-05.jpg",
+      "kicker": "PSALM 136:1",
+      "sub": "HEAR THIS PRAYER",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord I lay my anxiety down",
+      "img": "short-gardenpsalm136v1-scene-06.jpg",
+      "kicker": "PSALM 136:1",
+      "sub": "RESTING IN HIS LOVE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "and trust your unfailing grace",
+      "img": "short-gardenpsalm136v1-scene-07.jpg",
+      "kicker": "PSALM 136:1",
+      "sub": "YOUR GRACE IS SUFFICIENT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "to carry me through this day",
+      "img": "short-gardenpsalm136v1-scene-08.jpg",
+      "kicker": "PSALM 136:1",
+      "sub": "AMEN",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "The thought that kept you awake is met by the truth."
+    ],
+    [
+      6,
+      15,
+      "O give thanks unto the Lord; for he is good: for his mercy endureth forever."
+    ],
+    [
+      15,
+      25,
+      "Lord I lay my anxiety down and trust your unfailing grace to carry me through this day."
+    ],
+    [
+      25,
+      32,
+      "Let my heart remain anchored in your kindness as I step forward into these coming hours."
+    ],
+    [
+      32,
+      40,
+      "You are the foundation beneath my feet and the quiet song in my weary spirit."
+    ],
+    [
+      40,
+      45,
+      "Thank you for being my constant light in a world that shifts so quickly today."
+    ],
+    [
+      45,
+      52,
+      "May your goodness be the lens through which I see every single challenge I face."
+    ],
+    [
+      52,
+      60,
+      "I yield my will to yours and find perfect peace in your holy and sovereign presence."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "THE THOUGHT",
+        "KEPT YOU AWAKE",
+        "MET BY THE",
+        "TRUTH"
+      ],
+      [
+        "TRUTH"
+      ],
+      "PSALM 136:1"
+    ],
+    [
+      6,
+      15,
+      [
+        "GIVE THANKS",
+        "UNTO THE LORD",
+        "FOR HE IS GOOD",
+        "MERCY ENDURETH FOREVER"
+      ],
+      [
+        "GOOD"
+      ],
+      "PSALM 136:1"
+    ],
+    [
+      15,
+      25,
+      [
+        "LAY ANXIETY DOWN",
+        "TRUST UNFALING GRACE",
+        "CARRY ME THROUGH",
+        "THIS DAY"
+      ],
+      [
+        "GRACE"
+      ],
+      "PSALM 136:1"
+    ],
+    [
+      25,
+      32,
+      [
+        "HEART ANCHORED",
+        "IN KINDNESS",
+        "STEP FORWARD",
+        "COMING HOURS"
+      ],
+      [
+        "ANCHORED"
+      ],
+      "PSALM 136:1"
+    ],
+    [
+      32,
+      40,
+      [
+        "FOUNDATION BENEATH",
+        "QUIET SONG",
+        "WEARY SPIRIT"
+      ],
+      [
+        "FOUNDATION"
+      ],
+      "PSALM 136:1"
+    ],
+    [
+      40,
+      45,
+      [
+        "CONSTANT LIGHT",
+        "WORLD SHIFTS",
+        "QUICKLY TODAY"
+      ],
+      [
+        "LIGHT"
+      ],
+      "PSALM 136:1"
+    ],
+    [
+      45,
+      52,
+      [
+        "GOODNESS IS THE",
+        "LENS TO SEE",
+        "EVERY CHALLENGE"
+      ],
+      [
+        "GOODNESS"
+      ],
+      "PSALM 136:1"
+    ],
+    [
+      52,
+      60,
+      [
+        "YIELD MY WILL",
+        "PERFECT PEACE",
+        "HOLY PRESENCE"
+      ],
+      [
+        "PEACE"
+      ],
+      "PSALM 136:1"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The thought that kept you awake",
+      "kind": "phrase",
+      "words": [
+        "THE",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "O give thanks unto the Lord",
+      "kind": "phrase",
+      "words": [
+        "GIVE",
+        "THANKS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "for he is good",
+      "kind": "phrase",
+      "words": [
+        "HE",
+        "IS",
+        "GOOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "for his mercy endureth forever",
+      "kind": "phrase",
+      "words": [
+        "MERCY",
+        "ENDURETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord I lay my anxiety down",
+      "kind": "phrase",
+      "words": [
+        "LAY",
+        "ANXIETY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and trust your unfailing grace",
+      "kind": "phrase",
+      "words": [
+        "UNFAILING",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "to carry me through this day",
+      "kind": "phrase",
+      "words": [
+        "CARRY",
+        "ME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 136:1"
+}

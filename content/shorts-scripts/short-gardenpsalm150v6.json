@@ -1,0 +1,272 @@
+{
+  "key": "short-gardenpsalm150v6",
+  "channel": "prayer9",
+  "psalm": 150,
+  "title": [
+    "EVERY BREATH",
+    "IS HIS PRAISE"
+  ],
+  "poster": [
+    "THE PRAISE GARDEN",
+    "PSALM 150:6",
+    "A PRAYER OF",
+    "THANKFULNESS"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "misty forest sunlight glade",
+    "golden morning mountain lake",
+    "soft light over peaceful river",
+    "dappled sunlight in ancient woods",
+    "gentle stream through grassy valley",
+    "ethereal golden hour landscape"
+  ],
+  "scenes": [
+    {
+      "a": "The worry you carried into this room is shrinking under the weight of His vast glory.",
+      "img": "short-gardenpsalm150v6-scene-01.jpg",
+      "kicker": "PSALM 150:6",
+      "sub": "THE LORD IS NEAR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Let every thing that hath breath praise the LORD.",
+      "img": "short-gardenpsalm150v6-scene-02.jpg",
+      "kicker": "PSALM 150:6",
+      "sub": "PRAISE THE LORD",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, I acknowledge that my lungs are filled by Your grace and sustained by Your love.",
+      "img": "short-gardenpsalm150v6-scene-03.jpg",
+      "kicker": "A PRAYER OF PRAISE",
+      "sub": "Sustained by His Love",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "May my spirit respond to this simple truth by offering a sacrifice of genuine thanksgiving today.",
+      "img": "short-gardenpsalm150v6-scene-04.jpg",
+      "kicker": "A PRAYER OF PRAISE",
+      "sub": "Sacrifice of Thanksgiving",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In the chaos of this hour, help me to remain anchored in the steady rhythm of Your holiness.",
+      "img": "short-gardenpsalm150v6-scene-05.jpg",
+      "kicker": "ANCHORED IN HOLINESS",
+      "sub": "In the Steady Rhythm",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "I choose to lift my voice and my life to You because You are infinitely worthy of glory.",
+      "img": "short-gardenpsalm150v6-scene-06.jpg",
+      "kicker": "INFINITELY WORTHY",
+      "sub": "Lift Up Your Life",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "The worry you carried into this room is shrinking under the weight of His vast glory."
+    ],
+    [
+      8,
+      15,
+      "Let every thing that hath breath praise the LORD."
+    ],
+    [
+      15,
+      23,
+      "Father, I acknowledge that my lungs are filled by Your grace and sustained by Your love."
+    ],
+    [
+      23,
+      31,
+      "May my spirit respond to this simple truth by offering a sacrifice of genuine thanksgiving today."
+    ],
+    [
+      31,
+      39,
+      "In the chaos of this hour, help me to remain anchored in the steady rhythm of Your holiness."
+    ],
+    [
+      39,
+      47,
+      "I choose to lift my voice and my life to You because You are infinitely worthy of glory."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THE WORRY YOU CARRIED",
+        "INTO THIS ROOM IS",
+        "SHRINKING UNDER THE",
+        "WEIGHT OF HIS GLORY"
+      ],
+      [
+        "SHRINKING"
+      ],
+      "PSALM 150:6"
+    ],
+    [
+      8,
+      15,
+      [
+        "LET EVERY THING",
+        "THAT HATH BREATH",
+        "PRAISE THE LORD"
+      ],
+      [
+        "PRAISE"
+      ],
+      "PSALM 150:6"
+    ],
+    [
+      15,
+      23,
+      [
+        "FATHER I ACKNOWLEDGE",
+        "LUNGS FILLED BY GRACE",
+        "SUSTAINED BY YOUR LOVE"
+      ],
+      [
+        "SUSTAINED"
+      ],
+      "PSALM 150:6"
+    ],
+    [
+      23,
+      31,
+      [
+        "MAY MY SPIRIT",
+        "OFFER A SACRIFICE",
+        "OF GENUINE THANKSGIVING"
+      ],
+      [
+        "THANKSGIVING"
+      ],
+      "PSALM 150:6"
+    ],
+    [
+      31,
+      39,
+      [
+        "IN THE CHAOS",
+        "REMAIN ANCHORED IN",
+        "HIS STEADY RHYTHM"
+      ],
+      [
+        "ANCHORED"
+      ],
+      "PSALM 150:6"
+    ],
+    [
+      39,
+      47,
+      [
+        "I CHOOSE TO LIFT",
+        "MY VOICE TO YOU",
+        "BECAUSE YOU ARE WORTHY"
+      ],
+      [
+        "WORTHY"
+      ],
+      "PSALM 150:6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The worry you carried into this room is shrinking under the weight of His vast glory.",
+      "kind": "phrase",
+      "words": [
+        "SHRINKING",
+        "GLORY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let every thing that hath breath praise the LORD.",
+      "kind": "phrase",
+      "words": [
+        "EVERY",
+        "BREATH",
+        "PRAISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, I acknowledge that my lungs are filled by Your grace and sustained by Your love.",
+      "kind": "phrase",
+      "words": [
+        "FILLED",
+        "SUSTAINED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May my spirit respond to this simple truth by offering a sacrifice of genuine thanksgiving today.",
+      "kind": "phrase",
+      "words": [
+        "SACRIFICE",
+        "THANKSGIVING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In the chaos of this hour, help me to remain anchored in the steady rhythm of Your holiness.",
+      "kind": "phrase",
+      "words": [
+        "ANCHORED",
+        "HOLINESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I choose to lift my voice and my life to You because You are infinitely worthy of glory.",
+      "kind": "phrase",
+      "words": [
+        "CHOOSE",
+        "WORTHY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 150:6"
+}

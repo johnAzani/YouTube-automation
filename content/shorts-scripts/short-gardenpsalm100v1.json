@@ -1,0 +1,288 @@
+{
+  "key": "short-gardenpsalm100v1",
+  "channel": "prayer9",
+  "psalm": 100,
+  "title": [
+    "A PRAYER OF THANKSGIVING",
+    "PSALM 100 MEDITATION"
+  ],
+  "poster": [
+    "THE PRAISE GARDEN",
+    "A PRAYER OF THANKS",
+    "PSALM 100:1-2",
+    "FIND YOUR REST HERE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "golden sunlight through dense forest trees",
+    "misty green meadow at sunrise",
+    "peaceful river flowing over smooth stones",
+    "soft morning light on wild wildflowers",
+    "dew drops on green forest moss",
+    "gentle stream reflection in forest",
+    "ancient oak tree in golden hour light",
+    "peaceful sunlit glade"
+  ],
+  "scenes": [
+    {
+      "a": "That sharp anxiety pulling at your focus right now is met by a higher truth.",
+      "img": "short-gardenpsalm100v1-scene-01.jpg",
+      "kicker": "PSALM 100:1",
+      "sub": "MAKE A JOYFUL NOISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Make a joyful noise unto the Lord, all ye lands. Serve the Lord with gladness:",
+      "img": "short-gardenpsalm100v1-scene-02.jpg",
+      "kicker": "PSALM 100:2",
+      "sub": "COME BEFORE HIS PRESENCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "come before his presence with singing. Father, I bring this heavy heart to Your altar.",
+      "img": "short-gardenpsalm100v1-scene-03.jpg",
+      "kicker": "A PRAYER OF PRAISE",
+      "sub": "BRING YOUR HEART TO HIM",
+      "cam": "pan_left",
+      "focus": [
+        0.2,
+        0.5
+      ]
+    },
+    {
+      "a": "You are the refuge that holds me when the world feels far too loud to bear.",
+      "img": "short-gardenpsalm100v1-scene-04.jpg",
+      "kicker": "RESTING IN GRACE",
+      "sub": "HIS PEACE IS SUFFICIENT",
+      "cam": "pan_right",
+      "focus": [
+        0.8,
+        0.5
+      ]
+    },
+    {
+      "a": "I choose to offer You a sacrifice of praise instead of my own weary worries.",
+      "img": "short-gardenpsalm100v1-scene-05.jpg",
+      "kicker": "SACRIFICE OF PRAISE",
+      "sub": "LAY DOWN YOUR BURDEN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "May Your gladness settle deep within my spirit, turning my perspective toward Your endless love.",
+      "img": "short-gardenpsalm100v1-scene-06.jpg",
+      "kicker": "WALK IN HIS LIGHT",
+      "sub": "HIS LOVE IS ETERNAL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Thank You for the gates of thanksgiving that lead me straight into Your holy presence today.",
+      "img": "short-gardenpsalm100v1-scene-07.jpg",
+      "kicker": "ENTER HIS GATES",
+      "sub": "THANKSGIVING IS THE KEY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I commit my day to You, trusting in Your goodness that never fails, now and forever.",
+      "img": "short-gardenpsalm100v1-scene-08.jpg",
+      "kicker": "TRUSTING HIS GOODNESS",
+      "sub": "SUBSCRIBE FOR MORE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That sharp anxiety pulling at your focus right now is met by a higher truth."
+    ],
+    [
+      9,
+      21,
+      "Make a joyful noise unto the Lord, all ye lands. Serve the Lord with gladness:"
+    ],
+    [
+      22,
+      33,
+      "come before his presence with singing. Father, I bring this heavy heart to Your altar."
+    ],
+    [
+      34,
+      45,
+      "You are the refuge that holds me when the world feels far too loud to bear."
+    ],
+    [
+      46,
+      57,
+      "I choose to offer You a sacrifice of praise instead of my own weary worries."
+    ],
+    [
+      58,
+      69,
+      "May Your gladness settle deep within my spirit, turning my perspective toward Your endless love."
+    ],
+    [
+      70,
+      83,
+      "Thank You for the gates of thanksgiving that lead me straight into Your holy presence today."
+    ],
+    [
+      84,
+      98,
+      "I commit my day to You, trusting in Your goodness that never fails, now and forever."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THAT SHARP ANXIETY",
+        "PULLING AT YOUR FOCUS",
+        "IS MET BY",
+        "A HIGHER TRUTH"
+      ],
+      [
+        "HIGHER TRUTH"
+      ],
+      "PSALM 100 : 1"
+    ],
+    [
+      9,
+      21,
+      [
+        "MAKE A JOYFUL NOISE",
+        "UNTO THE LORD",
+        "ALL YE LANDS",
+        "SERVE WITH GLADNESS"
+      ],
+      [
+        "JOYFUL NOISE"
+      ],
+      "PSALM 100 : 2"
+    ],
+    [
+      22,
+      33,
+      [
+        "COME BEFORE HIS PRESENCE",
+        "WITH SINGING",
+        "FATHER I BRING",
+        "MY HEAVY HEART"
+      ],
+      [
+        "HIS PRESENCE"
+      ],
+      "PSALM 100 : 2"
+    ],
+    [
+      34,
+      45,
+      [
+        "YOU ARE THE REFUGE",
+        "THAT HOLDS ME",
+        "WHEN THE WORLD",
+        "FEELS FAR TOO LOUD"
+      ],
+      [
+        "MY REFUGE"
+      ],
+      "PSALM 100 : 2"
+    ],
+    [
+      46,
+      57,
+      [
+        "I OFFER A",
+        "SACRIFICE OF PRAISE",
+        "INSTEAD OF",
+        "MY WEARY WORRIES"
+      ],
+      [
+        "SACRIFICE OF PRAISE"
+      ],
+      "PSALM 100 : 2"
+    ],
+    [
+      58,
+      69,
+      [
+        "MAY YOUR GLADNESS",
+        "SETTLE DEEP WITHIN",
+        "TURNING MY PERSPECTIVE",
+        "TOWARD YOUR LOVE"
+      ],
+      [
+        "YOUR GLADNESS"
+      ],
+      "PSALM 100 : 2"
+    ],
+    [
+      70,
+      83,
+      [
+        "THANK YOU FOR THE",
+        "GATES OF THANKSGIVING",
+        "LEADING ME INTO",
+        "YOUR HOLY PRESENCE"
+      ],
+      [
+        "GATES OF THANKSGIVING"
+      ],
+      "PSALM 100 : 2"
+    ],
+    [
+      84,
+      98,
+      [
+        "I COMMIT MY DAY",
+        "TRUSTING IN GOODNESS",
+        "THAT NEVER FAILS",
+        "NOW AND FOREVER"
+      ],
+      [
+        "NEVER FAILS"
+      ],
+      "PSALM 100 : 2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That sharp anxiety pulling at your focus right now is met by a higher truth.",
+      "kind": "phrase",
+      "words": [
+        "HIGHER",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 100:1-2"
+}

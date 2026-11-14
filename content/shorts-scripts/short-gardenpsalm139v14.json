@@ -1,0 +1,295 @@
+{
+  "key": "short-gardenpsalm139v14",
+  "channel": "prayer9",
+  "psalm": 139,
+  "title": [
+    "FEARFULLY AND",
+    "WONDERFULLY MADE"
+  ],
+  "poster": [
+    "THE PRAISE GARDEN",
+    "A PRAYER OF",
+    "THANKSGIVING",
+    "PSALM 139:14"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlight filtering through ancient forest canopy",
+    "misty green valley in soft golden morning light",
+    "peaceful river flowing through quiet woodland",
+    "gentle sunbeams on mossy woodland floor",
+    "calm woodland stream reflecting morning light",
+    "serene forest glade with soft golden rays",
+    "quiet nature landscape in peaceful dawn light"
+  ],
+  "scenes": [
+    {
+      "a": "That mirror you looked into this morning with a critical eye is actually a reflection of His careful workmanship.",
+      "img": "short-gardenpsalm139v14-scene-01.jpg",
+      "kicker": "PSALM 139:14",
+      "sub": "HIS CAREFUL WORKMANSHIP",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord God, we come before You with quiet hearts of gratitude.",
+      "img": "short-gardenpsalm139v14-scene-02.jpg",
+      "kicker": "PSALM 139:14",
+      "sub": "QUIET HEARTS OF GRATITUDE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Forgive us for the times we look down upon the very vessel You fashioned with such intentional love.",
+      "img": "short-gardenpsalm139v14-scene-03.jpg",
+      "kicker": "PSALM 139:14",
+      "sub": "INTENTIONAL LOVE",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Your Word declares in Psalm 139:14, I will praise thee; for I am fearfully and wonderfully made:",
+      "img": "short-gardenpsalm139v14-scene-04.jpg",
+      "kicker": "PSALM 139:14",
+      "sub": "FEARFULLY AND WONDERFULLY MADE",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.45
+      ]
+    },
+    {
+      "a": "marvelous are thy works; and that my soul knoweth right well.",
+      "img": "short-gardenpsalm139v14-scene-05.jpg",
+      "kicker": "PSALM 139:14",
+      "sub": "MARVELOUS ARE THY WORKS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Help us to walk through this day with a deep confidence in Your divine design.",
+      "img": "short-gardenpsalm139v14-scene-06.jpg",
+      "kicker": "PSALM 139:14",
+      "sub": "YOUR DIVINE DESIGN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "In Jesus' name, amen.",
+      "img": "short-gardenpsalm139v14-scene-07.jpg",
+      "kicker": "PSALM 139:14",
+      "sub": "IN JESUS NAME",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      14,
+      "That mirror you looked into this morning with a critical eye is actually a reflection of His careful workmanship."
+    ],
+    [
+      14,
+      27,
+      "Lord God, we come before You with quiet hearts of gratitude."
+    ],
+    [
+      27,
+      43,
+      "Forgive us for the times we look down upon the very vessel You fashioned with such intentional love."
+    ],
+    [
+      43,
+      61,
+      "Your Word declares in Psalm 139:14, I will praise thee; for I am fearfully and wonderfully made:"
+    ],
+    [
+      61,
+      76,
+      "marvelous are thy works; and that my soul knoweth right well."
+    ],
+    [
+      76,
+      91,
+      "Help us to walk through this day with a deep confidence in Your divine design."
+    ],
+    [
+      91,
+      99,
+      "In Jesus' name, amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      14,
+      [
+        "THAT MIRROR YOU LOOKED",
+        "INTO THIS MORNING WITH",
+        "A CRITICAL EYE IS"
+      ],
+      "WORKMANSHIP",
+      "PSALM 139:14"
+    ],
+    [
+      14,
+      27,
+      [
+        "LORD GOD WE COME",
+        "BEFORE YOU WITH QUIET",
+        "HEARTS OF GRATITUDE"
+      ],
+      "GRATITUDE",
+      "PSALM 139:14"
+    ],
+    [
+      27,
+      43,
+      [
+        "FORGIVE US FOR THE",
+        "TIMES WE LOOK DOWN",
+        "UPON THE VERY VESSEL"
+      ],
+      "FASHIONED",
+      "PSALM 139:14"
+    ],
+    [
+      43,
+      61,
+      [
+        "I WILL PRAISE THEE",
+        "FOR I AM FEARFULLY",
+        "AND WONDERFULLY MADE"
+      ],
+      "WONDERFULLY",
+      "PSALM 139:14"
+    ],
+    [
+      61,
+      76,
+      [
+        "MARVELOUS ARE THY WORKS",
+        "AND THAT MY SOUL",
+        "KNOWETH RIGHT WELL"
+      ],
+      "MARVELOUS",
+      "PSALM 139:14"
+    ],
+    [
+      76,
+      91,
+      [
+        "HELP US TO WALK",
+        "THROUGH THIS DAY WITH",
+        "A DEEP CONFIDENCE"
+      ],
+      "CONFIDENCE",
+      "PSALM 139:14"
+    ],
+    [
+      91,
+      99,
+      [
+        "IN JESUS NAME",
+        "AMEN"
+      ],
+      "AMEN",
+      "PSALM 139:14"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That mirror you looked into this morning with a critical eye is actually a reflection of His careful workmanship.",
+      "kind": "phrase",
+      "words": [
+        "CRITICAL",
+        "EYE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord God, we come before You with quiet hearts of gratitude.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "HEARTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Forgive us for the times we look down upon the very vessel You fashioned with such intentional love.",
+      "kind": "phrase",
+      "words": [
+        "INTENTIONAL",
+        "LOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your Word declares in Psalm 139:14, I will praise thee; for I am fearfully and wonderfully made:",
+      "kind": "phrase",
+      "words": [
+        "FEARFULLY",
+        "WONDERFULLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "marvelous are thy works; and that my soul knoweth right well.",
+      "kind": "phrase",
+      "words": [
+        "MARVELOUS",
+        "WORKS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help us to walk through this day with a deep confidence in Your divine design.",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "DESIGN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In Jesus' name, amen.",
+      "kind": "phrase",
+      "words": [
+        "JESUS",
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 139:14"
+}
