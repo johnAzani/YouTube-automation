@@ -10,3 +10,7 @@ replace: false
 target_window_utc: '15:44'
 notes: "Companion Short for Jeremiah 17:14 Healing and Restoration Prayer | The Healing\
   \ Balm \u2014 spec authored by the brain (120 narration words)"
+alignment_failures: 1
+last_alignment_error: 'cannot prepare Charon narration for short-healingjeremiah17v14
+  (Short speech alignment unavailable or incomplete; refusing to render [ValueError:
+  alignment does not cover the narration in order]); refusing to render'

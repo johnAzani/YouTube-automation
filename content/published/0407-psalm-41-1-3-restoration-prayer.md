@@ -2,7 +2,7 @@
 id: '0407'
 title: "Prayer for Strength When You Are Sick: Psalm 41:1-3 | The Healing Balm"
 slug: psalm-41-1-3-restoration-prayer
-status: approved
+status: published
 channel: prayer6
 privacy: public
 format: longform
@@ -77,6 +77,13 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-14"
+published_at: "2026-11-14T05:32:43Z"
+youtube_video_id: "FXLZDqND66w"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith

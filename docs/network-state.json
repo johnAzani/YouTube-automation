@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T05:17:28Z",
+  "generated_at": "2026-11-14T05:33:31Z",
   "monitor_generated_at": "2026-11-14T05:12:20.846997+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 194,
-    "published_longform": 98,
+    "published_total": 195,
+    "published_longform": 99,
     "published_shorts": 96,
-    "public_total": 192,
-    "queued_longform": 42,
+    "public_total": 193,
+    "queued_longform": 41,
     "queued_shorts": 45,
     "automations_ok": 10,
     "automations_total": 10,
@@ -373,28 +373,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 12,
-        "published_longform": 7,
+        "published_total": 13,
+        "published_longform": 8,
         "published_shorts": 5,
         "thumbnail_pending": 6,
-        "public_total": 12,
-        "queued_longform": 4,
+        "public_total": 13,
+        "queued_longform": 3,
         "queued_other": 0,
         "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0406",
-        "title": "Philippians 4:6-7 Peace That Passeth Understanding Prayer",
-        "format": "longform",
-        "youtube_video_id": "jaeiK1qh8Wk",
-        "watch_url": "https://youtu.be/jaeiK1qh8Wk",
-        "published_on": "2026-11-13",
-        "published_at": "2026-11-13T19:14:00Z"
-      },
-      "next_queued_longform": {
         "id": "0407",
         "title": "Prayer for Strength When You Are Sick: Psalm 41:1-3 | The Healing Balm",
-        "words": 1390,
+        "format": "longform",
+        "youtube_video_id": "FXLZDqND66w",
+        "watch_url": "https://youtu.be/FXLZDqND66w",
+        "published_on": "2026-11-14",
+        "published_at": "2026-11-14T05:32:43Z"
+      },
+      "next_queued_longform": {
+        "id": "0408",
+        "title": "Prayer for Healing and Restoration: Malachi 4:2 | The Healing Balm",
+        "words": 1031,
         "status": "approved"
       },
       "next_queued_short": {
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0407",
+      "slug": "psalm-41-1-3-restoration-prayer",
+      "file": "0407-psalm-41-1-3-restoration-prayer.md",
+      "title": "Prayer for Strength When You Are Sick: Psalm 41:1-3 | The Healing Balm",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T05:32:43Z",
+      "youtube_video_id": "FXLZDqND66w",
+      "watch_url": "https://youtu.be/FXLZDqND66w",
+      "youtu_be_url": "https://youtu.be/FXLZDqND66w",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/FXLZDqND66w/edit",
+      "thumb_url": "https://i.ytimg.com/vi/FXLZDqND66w/hqdefault.jpg",
+      "thumb_text": "SUSTAIN MY BODY",
+      "thumbnail_pending": false,
+      "duration_label": "~10 min",
+      "words": 1390
+    },
     {
       "id": "0089",
       "slug": "isaiah-32-2-midday-prayer",
@@ -5700,19 +5724,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1364
-      },
-      {
-        "id": "0407",
-        "slug": "psalm-41-1-3-restoration-prayer",
-        "file": "0407-psalm-41-1-3-restoration-prayer.md",
-        "title": "Prayer for Strength When You Are Sick: Psalm 41:1-3 | The Healing Balm",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1390
       },
       {
         "id": "0408",
