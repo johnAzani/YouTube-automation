@@ -66,14 +66,34 @@ TONE_CHAIN = (
 )
 
 #: Music ducking under speech. The voice is the key; with the voice near
-#: -15 LUFS this takes roughly 2.5 dB off the bed while words are spoken and
-#: releases over 0.7 s into pauses, so the bed swells in the silences. Measured:
-#: bed -29.9 LUFS alone, about -32.5 LUFS under speech, so the voice sits 15 LU
-#: over the music in pauses and about 17 LU over it while speaking (it was 10).
+#: -15 LUFS this takes 2.8 dB off the bed while words are spoken and releases
+#: over 0.7 s into pauses, so the bed swells in the silences.
 DUCK = "sidechaincompress=threshold=0.0316:ratio=1.2:attack=25:release=700:knee=6"
 
+#: Gain added to the music bed in the mastered mix, on top of the level the
+#: caller asks for (0.58 for both long-form and Shorts).
+#:
+#: v1 left the bed where it was while the voice came up about 5-9 dB, so the
+#: music ended up 14.6 LU under the voice in pauses and 17.4 LU under it during
+#: speech (it had been about 10). The channel owner listened to the first v1
+#: videos on 14 November 2026: "the voice is perfect, the background music
+#: volume is a little low". +3 dB is one clearly audible step, not a return to
+#: the old balance. Measured on the committed Psalm 91 narration over a
+#: generated score:
+#:
+#:   lift   bed alone   under speech   voice over bed (pauses / speech)   mix
+#:   +0 dB  -29.6 LUFS  -32.4 LUFS     14.6 / 17.4 LU                     -14.9 LUFS, peak -1.7 dBFS
+#:   +3 dB  -26.6 LUFS  -29.4 LUFS     11.6 / 14.4 LU                     -14.9 LUFS, peak -1.5 dBFS
+#:
+#: The voice is untouched and the finished video is no louder: only the balance
+#: moves. If it is still low, +4 gives 10.6 / 13.4 LU; past +6 the bed is closer
+#: to the voice than it was before mastering, and consonants start to mask.
+#: The unmastered fallback mix does not use this.
+MUSIC_LIFT_DB = 3.0
+
 #: Bump when the audible recipe changes, so a receipt can say which one it used.
-MASTER_RECIPE = "voice-master-v1"
+#: v1: voice mastering + ducking. v2: music bed +3 dB.
+MASTER_RECIPE = "voice-master-v2"
 
 _LOUDNORM_JSON = re.compile(r"\{[^{}]*\"input_i\"[^{}]*\}", re.S)
 
@@ -177,7 +197,7 @@ def mastered_mix_filter(measured: Loudness, music_stage: str, *,
                         out_label: str = "a") -> str:
     """Mastered voice over a ducked music bed, limited to -1 dBFS."""
     return (
-        f"[{music_input}]{music_stage},aresample=48000,"
+        f"[{music_input}]{music_stage},volume={MUSIC_LIFT_DB:g}dB,aresample=48000,"
         f"aformat=channel_layouts=stereo[m];"
         f"[{voice_input}]{voice_chain(measured)},aformat=channel_layouts=stereo,"
         f"asplit=2[v][k];"
@@ -212,7 +232,7 @@ def mix_filter(narration: Path, music_stage: str, *, voice_input: str = "1:a",
         gain = VOICE_TARGET_LUFS - measured.input_i
         summary = (f"{MASTER_RECIPE}: narration {measured.input_i:.1f} LUFS, "
                    f"peak {measured.input_tp:.1f} dBTP -> {VOICE_TARGET_LUFS:.0f} LUFS "
-                   f"({gain:+.1f} dB), music ducked under speech")
+                   f"({gain:+.1f} dB), music {MUSIC_LIFT_DB:+g} dB and ducked under speech")
         log(f"[voice-master] {summary}")
         if os.environ.get("GITHUB_ACTIONS") == "true":
             # On the run page, so "was this video mastered, and from what level"

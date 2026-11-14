@@ -5,6 +5,10 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-14 — background music 3 dB louder (voice unchanged)
+
+- Owner feedback on the first mastered videos: "the voice is perfect, the background music volume is a little low". `pipeline/voice_master.py` now lifts the music bed by 3 dB in the mastered mix (`MUSIC_LIFT_DB`, recipe `voice-master-v2`), long-form and Shorts. Voice over music goes from 14.6 / 17.4 LU (pauses / speech) to 11.6 / 14.4 LU; the voice stays at -15 LUFS and the finished mix at -14.9 LUFS, peak -1.5 dBFS. Applies to new renders only. Notes: `docs/VOICE_AND_VIEWER_FIRST_2026-11-13.md`, "Music balance".
+
 ## 2026-11-13 — Shorts no longer stuck behind a rejected take; scheduled-publish trial result
 
 - Seven channels failed the same Short in two production runs ("Short speech alignment unavailable or incomplete"). The rejected narration was saved to the Actions cache, restored next run, still looked valid and was refused again; Shorts release in order, so those channels released none. `pipeline/short_release.py` now deletes a rejected take, synthesises one fresh take in the same run when the rejected one came from the cache, puts the aligner's reason in the error, and after three rejected takes marks the manifest `alignment_paused` so the channel's next Short releases. A missing speech model is not treated as a bad take. Notes: `docs/SHORT_ALIGNMENT_RECOVERY_2026-11-13.md`.

@@ -193,6 +193,39 @@ class RendersLouderAndCleaner(unittest.TestCase):
         in_the_clear, _ = _summary(bed, "atrim=start=13.5:end=16")
         self.assertLess(under_speech, in_the_clear - 1.0)
 
+    def test_music_bed_is_lifted_by_the_stated_amount_and_nothing_else_moves(self):
+        """14 Nov 2026: "the voice is perfect, the background music is a little low"."""
+        from unittest import mock
+        args = dict(voice_input="0:a", music_input="1:a")
+        measured = vm.measure_voice(self.voice)
+
+        def stems(lift, name):
+            with mock.patch.object(vm, "MUSIC_LIFT_DB", lift):
+                graph = vm.mastered_mix_filter(measured, "volume=0.58", **args)
+            head = graph[:graph.index("[md][v]amix")]
+            # The pause after the voice, where the bed plays unducked.
+            bed = self._mix(head + "[v]anullsink;[md]anull[a]", f"bed-{name}.wav")
+            voice = self._mix(head + "[md]anullsink;[v]anull[a]", f"voice-{name}.wav")
+            mix = self._mix(graph, f"mix-{name}.wav")
+            return (_summary(bed, "atrim=start=13.5:end=16")[0], _summary(voice)[0],
+                    _summary(mix, "atrim=start=0:end=12"), _duration(mix))
+
+        bed0, voice0, (mix0, _), dur0 = stems(0.0, "flat")
+        bed3, voice3, (mix3, peak3), dur3 = stems(vm.MUSIC_LIFT_DB, "lifted")
+        self.assertGreater(vm.MUSIC_LIFT_DB, 0.0)
+        self.assertAlmostEqual(bed3 - bed0, vm.MUSIC_LIFT_DB, delta=0.4)
+        self.assertAlmostEqual(voice3, voice0, delta=0.05, msg="the voice must not move")
+        self.assertAlmostEqual(mix3, mix0, delta=0.6, msg="the video must not get louder")
+        self.assertLessEqual(peak3, -0.9)
+        self.assertEqual(dur3, dur0)
+
+    def test_music_lift_stays_modest_and_out_of_the_fallback_mix(self):
+        # Past +6 dB the bed is closer to the voice than before mastering.
+        self.assertLessEqual(vm.MUSIC_LIFT_DB, 6.0)
+        graph = vm.mastered_mix_filter(FilterShape.MEASURED, "volume=0.58")
+        self.assertIn(f"[2:a]volume=0.58,volume={vm.MUSIC_LIFT_DB:g}dB,", graph)
+        self.assertNotIn("dB", vm.legacy_mix_filter("volume=0.58").split("[m]")[0])
+
 
 if __name__ == "__main__":
     unittest.main()

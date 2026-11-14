@@ -41,8 +41,10 @@ The mastering runs inside the final encode of both long-form
 2. Dynamics: 2.5:1 compression from -22 dB.
 3. Loudness: the take is measured, then given one fixed gain to -15 LUFS with a
    -1.5 dBTP ceiling (two-pass linear `loudnorm`; it cannot pump on pauses).
-4. Mix: the music drops about 2.5 dB while words are spoken and returns in the
+4. Mix: the music drops 2.8 dB while words are spoken and returns in the
    pauses; a limiter holds the mix under -1 dBFS.
+5. Music level (added 14 November, recipe `voice-master-v2`): the bed is 3 dB
+   louder than in the first mastered videos. See "Music balance" below.
 
 Measured on the committed Psalm 91 narration over a generated bed:
 
@@ -50,8 +52,33 @@ Measured on the committed Psalm 91 narration over a generated bed:
 |---|---|---|
 | Mix loudness | -19.1 LUFS | -14.9 LUFS |
 | Mix peak | -5.1 dBFS | -1.8 dBFS |
-| Voice over music | 10 LU | 15 LU in pauses, about 17 LU under speech |
+| Voice over music | 10 LU | 11.6 LU in pauses, 14.4 LU under speech |
 | Duration | 38.00 s | 38.00 s |
+
+### Music balance (14 November)
+
+The first mastered videos (`voice-master-v1`) left the music where it was while
+the voice came up, so the bed sat 14.6 LU under the voice in pauses and 17.4 LU
+under it during speech. After listening to them the channel owner said the
+voice is perfect and the background music is a little low.
+
+`MUSIC_LIFT_DB = 3.0` in `pipeline/voice_master.py` raises the bed by 3 dB in
+the mastered mix, for long-form and Shorts alike. Measured on the same sample:
+
+| | v1 | v2 (now) |
+|---|---|---|
+| Music alone (pauses) | -29.6 LUFS | -26.6 LUFS |
+| Music under speech | -32.4 LUFS | -29.4 LUFS |
+| Voice over music, pauses / speech | 14.6 / 17.4 LU | 11.6 / 14.4 LU |
+| Voice | -15.0 LUFS | -15.0 LUFS |
+| Finished mix | -14.9 LUFS, peak -1.7 dBFS | -14.9 LUFS, peak -1.5 dBFS |
+
+The voice does not move and the video is no louder; only the balance changes.
+To go further, change the one number: +4 gives 10.6 / 13.4 LU. Past +6 the
+music is closer to the voice than it was before mastering.
+
+Only videos rendered after this change carry it. Videos already on the channels
+keep the audio they were uploaded with; YouTube does not allow replacing it.
 
 What it does not touch: the voice (Charon, locked), the words, the pacing, the
 narration file, its checksum, cached speech chunks, or word timings. No speech
@@ -61,7 +88,7 @@ change timing, and a test asserts that.
 If the measurement fails, the render uses the previous filter graph unchanged
 and prints `[voice-master] loudness could not be measured`. Otherwise the leg
 log carries one line, for example
-`[voice-master] voice-master-v1: narration -19.7 LUFS, peak -7.4 dBTP -> -15 LUFS (+4.7 dB), music ducked under speech`.
+`[voice-master] voice-master-v2: narration -19.7 LUFS, peak -7.4 dBTP -> -15 LUFS (+4.7 dB), music +3 dB and ducked under speech`.
 
 Limits: this is level, clarity and balance. It cannot make the synthesis itself
 more human; that is decided by the model, the voice and the delivery style. The
