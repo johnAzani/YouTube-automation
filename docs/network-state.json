@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T08:28:56Z",
+  "generated_at": "2026-11-14T08:29:59Z",
   "monitor_generated_at": "2026-11-14T08:27:54.762085+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 205,
+    "published_total": 206,
     "published_longform": 103,
-    "published_shorts": 102,
-    "public_total": 203,
+    "published_shorts": 103,
+    "public_total": 204,
     "queued_longform": 52,
-    "queued_shorts": 93,
+    "queued_shorts": 92,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -640,23 +640,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 5,
+        "published_total": 6,
         "published_longform": 3,
-        "published_shorts": 2,
-        "thumbnail_pending": 5,
-        "public_total": 5,
+        "published_shorts": 3,
+        "thumbnail_pending": 6,
+        "public_total": 6,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDJAMES1V5",
-        "title": "Pray This James 1:5 Prayer for God's Guidance | Guidance Prayer #Shorts",
+        "id": "SHORT-GUIDEDECCLESIASTES3V1",
+        "title": "Pray This Ecclesiastes 3:1 Prayer for God's Guidance | Peace #Shorts",
         "format": "short",
-        "youtube_video_id": "y9oczBwOyrw",
-        "watch_url": "https://www.youtube.com/shorts/y9oczBwOyrw",
+        "youtube_video_id": "o2lOfpBIPmI",
+        "watch_url": "https://www.youtube.com/shorts/o2lOfpBIPmI",
         "published_on": "2026-11-14",
-        "published_at": "2026-11-14T05:11:47Z"
+        "published_at": "2026-11-14T08:29:02Z"
       },
       "next_queued_longform": {
         "id": "0803",
@@ -665,8 +665,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedecclesiastes3v1",
-        "scripture": "Ecclesiastes 3:1",
+        "short": "short-guidedisaiah55v8",
+        "scripture": "Isaiah 55:8-9",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -691,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDEDECCLESIASTES3V1",
+      "slug": "short-guidedecclesiastes3v1-guidance-prayer",
+      "file": "short-guidedecclesiastes3v1-guidance-prayer.md",
+      "title": "Pray This Ecclesiastes 3:1 Prayer for God's Guidance | Peace #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T08:29:02Z",
+      "youtube_video_id": "o2lOfpBIPmI",
+      "watch_url": "https://www.youtube.com/shorts/o2lOfpBIPmI",
+      "youtu_be_url": "https://youtu.be/o2lOfpBIPmI",
+      "shorts_url": "https://www.youtube.com/shorts/o2lOfpBIPmI",
+      "studio_url": "https://studio.youtube.com/video/o2lOfpBIPmI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/o2lOfpBIPmI/hqdefault.jpg",
+      "thumb_text": "SEEK HIS \u00b7 TIMING",
+      "thumbnail_pending": true,
+      "duration_label": "44s",
+      "words": 335
+    },
     {
       "id": "0704",
       "slug": "1-thessalonians-5-16-18-daily-prayer",
@@ -6357,17 +6381,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-guidedecclesiastes3v1",
-        "file": "0000-short-guidedecclesiastes3v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Ecclesiastes 3:1",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
       },
       {
         "short": "short-guidedisaiah55v8",
