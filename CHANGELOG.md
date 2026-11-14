@@ -5,6 +5,11 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-14 — the two network scopes stay off the mint-once token
+
+- `docs/PERMISSIONS_2026-11-14.md` said a channel cannot grant `youtubepartner` and `youtubepartner-channel-audit`. Wrong for the second: a channel can, but Google requires a token that uses it to be revoked within two weeks of issue. Corrected, with the reason each stays out.
+- `scripts/permission_probe.py` reports them as `network-only` when a token carries them.
+
 ## 2026-11-14 — what each channel's credentials can do, measured
 
 Full note and the grant-once checklist: `docs/PERMISSIONS_2026-11-14.md`.

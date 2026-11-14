@@ -34,8 +34,10 @@ from pathlib import Path
 
 #: Every scope a creator's own channel can grant (YouTube Data API, Analytics API
 #: and Reporting API scope tables, read 14 November 2026). Left out on purpose:
-#: `youtubepartner` and `youtubepartner-channel-audit`, which act only for a
-#: YouTube Content Manager (a network or label), not for a channel.
+#: `youtubepartner` (acts only inside a YouTube Content Manager, which these
+#: channels do not have) and `youtubepartner-channel-audit` (a channel can grant
+#: it, but Google's channels reference requires a token that uses it to be revoked
+#: within two weeks of issue, so it cannot sit on a token meant to be minted once).
 FULL_SCOPES = (
     "youtube",                               # manage the account: channel page, playlists, shelves
     "youtube.force-ssl",                     # videos, comments and captions

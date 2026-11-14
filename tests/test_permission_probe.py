@@ -95,6 +95,14 @@ def test_a_refusal_is_reported_by_code_only_never_by_message_text():
     assert probe.refusal(403, json.dumps({'error': {'status': 'X::warning::y\n z'}}).encode()) == '403 Xwarningyz'
 
 
+def test_network_scopes_are_named_because_google_wants_such_a_token_revoked_in_two_weeks():
+    assert probe.network_scopes(['youtube', 'youtube.upload']) == []
+    assert probe.network_scopes(['youtubepartner-channel-audit', 'youtube', 'youtubepartner']) == \
+        ['youtubepartner', 'youtubepartner-channel-audit']
+    assert not set(probe.NETWORK_SCOPES) & set(FULL_SCOPES)      # the mint-once line never asks for them
+    assert probe.missing_scopes(list(FULL_SCOPES)) == []         # and nothing counts them as missing
+
+
 def test_a_token_with_an_end_date_is_called_out():
     assert probe.token_lifetime({'refresh_token_expires_in': 604799}) == 'ENDS in 7.0 days'
     assert probe.token_lifetime({}) == 'no end date reported'
@@ -156,6 +164,7 @@ def test_a_whole_run_reads_reports_and_gives_nothing_away(monkeypatch, capsys):
     assert len(lines) == 5 and all(line.startswith('::notice title=Permissions prayer3: ') for line in lines)
     assert 'scopes=[youtube.force-ssl, youtube.upload]' in lines[0]
     assert 'missing=[yt-analytics.readonly, yt-analytics-monetary.readonly]' in lines[0]
+    assert 'network-only=[none]' in lines[0]
     assert 'videos over 15 min=allowed' in lines[1] and 'country=NG' in lines[1]
     assert 'views: REFUSED 403 PERMISSION_DENIED accessNotConfigured' in lines[2]
     assert 'reach report offered' in lines[3] and 'pexels=false' in lines[4]
