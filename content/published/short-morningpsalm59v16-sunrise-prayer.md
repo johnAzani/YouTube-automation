@@ -21,7 +21,7 @@ duration_seconds: 59.65
 scenes_verified: 8
 thumbnail_pending: true
 thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (0, 749, 1080, 798); shorten the authored lockup or reduce its size"
-thumbnail_retry_after: "2026-11-14T01:55:14Z"
+thumbnail_retry_after: "2026-11-14T08:27:51Z"
 thumbnail_retry_reason: "rate_limit"
 ---
 

@@ -22,13 +22,12 @@ scenes_verified: 8
 short_visual_fingerprints: ["sha256:00133e553117d455070fb26c7ffb581592ac935b5ae308542c2b4e9e01ebf9da", "sha256:0f338b446efe06037d1afce3eac4ff778578e7816bb274db17f4e4ef71a4cc92", "sha256:29a084721d4483f1c10f298c737c0ac229f433fdef6d178acc4b7c6c98fd7ca6", "sha256:5b020948bee1ba836e6e9ea0af3bf9d3ab00952df56119503d949278b4f81868", "sha256:84b9d83862b1087e2ce2cdac4a3fa5ff99dd05f72f81262129b5ff7c1d2fe288", "sha256:9710015bc44150915a5f53f366a6448f61db4de545b79f720edbb870fd66dba4", "sha256:a5eca3657597b9aab544f2f4c4455cffd50041b635dea4e07fc455529b645f81", "sha256:ab3afb2fb51f160869c67b15c2db59433335df34ed09a1ad51ec83c9d697cc8a", "url:0f4260ccfbffbdcd89012dc24ba7db4a1b572bf6ad831ce1d2657d195a582e09", "url:57d3be2e5c62926168b9668c4958a7001c7233d7488fd8f5c64ae39ce9c483b4", "url:63a7fc1a42d0764c7a3c092f446db40b05e7255c3d0ddf5f23583bd3888be24c", "url:ca9a929a69123a62954a3112c9584f7bea58e119a04163cae1d31caa6633a460", "url:e7a5f7c26d9ff1a137ccad3986b3bc44a1562bc0be6b5ebb9ec38c07d8e6c234", "url:f22c5f57fb622f51e3a3eb1d1b30440ed3443b555a33d54da1b7fbedade56eea", "url:fbcd9364fc2fa2d204f0a30c652272c1e5a80c051d09cd965cd5401a3bc38b0e", "url:fd4a2adf33aa539622fc6f41580ca28d56cb339bab4d58a3463bb88482548745"]
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCkWrcJB6-q_K0r8KSja8ALw; auth_channel_title=The Provision Table; long_upload"
+thumbnail_pending: false
 thumbnail_poster: ["THE PROVISION TABLE", "DAILY WISDOM PRAYER", "PSALM 90:17", "GOD'S PROVISION"]
 thumbnail_kicker: "BLESS THE WORK OF OUR HANDS"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-14T01:55:21Z"
-thumbnail_retry_reason: "rate_limit"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
 ---
 
 Lord, we commit our daily decisions, our hands, and all our labor unto Your faithful care today. We bring our work before Your sanctuary table, trusting Your abundant wisdom to guide each step. Your holy Word promises in Psalm ninety, verse seventeen: And let the beauty of the LORD our God be upon us: and establish thou the work of our hands upon us; yea, the work of our hands establish thou it. Father, let Your divine favor rest upon every humble effort and honest endeavor we undertake. Open doors of stewardship, grant daily provision, and bless all that our hands perform. May Your wisdom establish our work for Your glory forever. Subscribe to walk in God's daily provision today.

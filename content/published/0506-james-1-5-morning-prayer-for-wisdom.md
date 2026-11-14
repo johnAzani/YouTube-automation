@@ -79,10 +79,9 @@ youtube_video_id: "7RvLGE8mBUY"
 metadata_revision: "selar-seo-v1"
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
-thumbnail_pending: true
-thumbnail_error: "failed: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded]"
-thumbnail_retry_after: "2026-11-14T01:55:21Z"
-thumbnail_retry_reason: "rate_limit"
+thumbnail_pending: false
+
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Approach to Jehovah-Jireh at the Prepared Table
