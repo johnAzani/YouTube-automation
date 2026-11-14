@@ -30,8 +30,8 @@
       "workflow": "comments.yml"
     }
   ],
-  "generated_at": "2026-11-14T04:11:31.719721+00:00",
-  "last_run_at": "2026-11-14T04:10:44+00:00",
+  "generated_at": "2026-11-14T04:26:28.867272+00:00",
+  "last_run_at": "2026-11-14T04:25:40+00:00",
   "on_time": [
     {
       "late_minutes": 93,
@@ -55,10 +55,10 @@
       "workflow": "monitor.yml"
     },
     {
-      "late_minutes": 44,
+      "late_minutes": 65,
       "name": "Produce video",
-      "ran_at": "2026-11-13T19:58:09+00:00",
-      "slot": "2026-11-13T19:14:00+00:00",
+      "ran_at": "2026-11-14T00:19:05+00:00",
+      "slot": "2026-11-13T23:14:00+00:00",
       "workflow": "produce.yml"
     },
     {
