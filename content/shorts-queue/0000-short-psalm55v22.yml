@@ -3,7 +3,7 @@ channel: secret-place
 standalone: true
 source: evergreen
 scripture: Psalm 55:22
-status: approved
+status: draft
 renderer_ready: true
 authored_by_brain: true
 privacy: public
@@ -11,3 +11,7 @@ replace: false
 target_window_utc: '14:14'
 notes: "Standalone Short on Psalm 55:22 (evergreen list) \u2014 spec authored by the\
   \ brain (115 narration words)"
+pause_reason: 'misquotes its verse: the narration reads "He will never permit. He
+  will sustain the righteous to be moved." (Psalm 55:22 is "...he will never permit
+  the righteous to be moved"). Held on 14 November 2026 before it published; rewrite
+  the spec, then set status: approved.'

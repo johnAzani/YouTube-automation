@@ -5,6 +5,12 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-14 — roadmaps topped up; one misquoting Short held
+
+- `main` went red at about 7:00am Nigeria time: `test_every_scheduled_channel_maintains_deep_roadmap_headroom` wants 15 unwritten passages per channel and the brain had taken The Morning Altar and The Midnight Watch down to 14. Every pull request was blocked. `scripts/continuous_research.py` gains 15 passages each for The Morning Altar (0903-0917), The Midday Watch (0950-0964), The Midnight Watch (0230-0244) and The Family Altar (0330-0344). None is on another channel's roadmap or on any channel's Shorts list. The other six channels have 19 to 29 left and lose about one a day.
+- Read the first 16 Shorts written without a long-form behind them. Fifteen quote their verse faithfully. `short-psalm55v22` (The Secret Place) reads "He will never permit. He will sustain the righteous to be moved." Its manifest is back to `status: draft` with the reason; it was third in line. Nothing checks that a Short quotes its verse correctly.
+- `tests/test_channel_autopilot_lock.py` accepted only `approved`, `draft` and `quota_paused` manifests, so the first Short stepped over as `alignment_paused` (a status `pipeline/short_release.py` writes) would have turned `main` red. It is accepted now.
+
 ## 2026-11-14 — Shorts refused over one unheard word
 
 - First run of the new mix (5:27am Nigeria time): of the first seven channels, three published their Short and four were refused with `alignment does not cover the narration in order`. The speech aligner (`pipeline/prayer_alignment.py`) accepts a take when 85% of the script is recognised and gives a word it did not hear a zero-length span; the check after it in `pipeline/short_release.py` refused any word with no length. One unheard word refused the Short, and longer Shorts were refused more often (93 and 96 words went out; 99, 114, 120 and 133 were refused; the token lists were identical in all six). This is the failure that stopped Shorts on seven channels on 13 November.
