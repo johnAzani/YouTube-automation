@@ -39,4 +39,4 @@ jobs:
           CLIENT_ID: ${{ secrets[format('{0}YOUTUBE_CLIENT_ID', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] }}
           CLIENT_SECRET: ${{ secrets[format('{0}YOUTUBE_CLIENT_SECRET', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] }}
           REFRESH_TOKEN: ${{ secrets[format('{0}YOUTUBE_REFRESH_TOKEN', fromJSON('{"secret-place":"","prayer2":"PRAYER2_","prayer3":"PRAYER3_","prayer4":"PRAYER4_","prayer5":"PRAYER5_","prayer6":"PRAYER6_","prayer7":"PRAYER7_","prayer8":"PRAYER8_","prayer9":"PRAYER9_","prayer10":"PRAYER10_"}')[matrix.channel])] }}
-        run: python3 -u scripts/reporting_jobs.py --dry-run
+        run: python3 -u scripts/reporting_jobs.py
