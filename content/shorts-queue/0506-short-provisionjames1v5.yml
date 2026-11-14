@@ -10,3 +10,7 @@ replace: false
 target_window_utc: '10:44'
 notes: "Companion Short for James 1:5 Morning Prayer for Wisdom | The Provision Table\
   \ \u2014 spec authored by the brain (114 narration words)"
+alignment_failures: 1
+last_alignment_error: 'cannot prepare Charon narration for short-provisionjames1v5
+  (Short speech alignment unavailable or incomplete; refusing to render [ValueError:
+  alignment does not cover the narration in order]); refusing to render'
