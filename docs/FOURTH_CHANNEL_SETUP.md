@@ -57,7 +57,7 @@ so isolating `prayer4` protects the three live channels' quotas.
 ### Step B — Create a dedicated Google Cloud project (No billing account)
 1. Create a new project (e.g. `midnight-watch-youtube`) — **do not attach billing** (`$0.00` lock).
 2. Enable **YouTube Data API v3**.
-3. Configure OAuth consent screen (**External** -> Testing -> add the channel's Google email as a test user) and create a **Desktop app** OAuth client.
+3. Configure OAuth consent screen (**External**, then **Publish app** so the Audience page reads **In production**; a project left in Testing issues refresh tokens that end after 7 days) and create a **Desktop app** OAuth client. For the phone route and the full scope list see `docs/PERMISSIONS_2026-11-14.md`.
 4. Run locally to mint the refresh token while selecting **The Midnight Watch** Brand Account:
    ```bash
    python tools/youtube_auth.py --client-secrets path/to/client_secret.json

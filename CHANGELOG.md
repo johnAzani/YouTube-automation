@@ -5,6 +5,16 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-14 — what each channel's credentials can do, measured
+
+Full note and the grant-once checklist: `docs/PERMISSIONS_2026-11-14.md`.
+
+- New `scripts/permission_probe.py`, run as a second step of `channel-credential-audit.yml` (the step body is the file word for word; `tests/test_permission_probe.py` holds them equal). GET requests only. Prints the token's scopes, whether Google reports an end date on it, what the channel may do, and Google's refusal codes for the Analytics and Reporting APIs. No secret, no figures, never fails the job.
+- First run (43583052252): all ten tokens lack the two Analytics scopes; the YouTube Analytics API is off in all ten Cloud projects; prayer4, prayer5, prayer8, prayer9 and prayer10 are not phone-verified; `PEXELS_API_KEY` is not set; ten separate projects; no token has an end date.
+- `scripts/youtube_oauth.py --purpose full` mints one token with every scope a channel can grant; `--print-scopes` prints the line for the OAuth Playground.
+- `docs/FOURTH_CHANNEL_SETUP.md` said to leave the consent screen in Testing (7-day tokens); corrected. `docs/SETUP.md` names the Analytics and Reporting APIs.
+- Not built: nothing reads Analytics in the scheduled runs yet.
+
 ## 2026-11-14 — The Secret Place's long-form runs through the night
 
 Full note with the monetisation rules, the channels' numbers and the risks: `docs/MONETISATION_RESEARCH_2026-11-14.md`.
