@@ -1,0 +1,276 @@
+{
+  "key": "short-familypsalm112v1",
+  "channel": "prayer5",
+  "psalm": 112,
+  "title": [
+    "A PRAYER FOR",
+    "YOUR HOUSEHOLD"
+  ],
+  "poster": [
+    "GOD'S PROMISE",
+    "FOR YOUR",
+    "FAITHFUL HOME",
+    "PSALM 112:1-3"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp light on open bible",
+    "olive branches on wooden table",
+    "peaceful countryside cottage window",
+    "golden hour light on dining table",
+    "soft candlelight in quiet room",
+    "morning light through sheer curtains"
+  ],
+  "scenes": [
+    {
+      "a": "If you are currently feeling overwhelmed by the financial weight of your family’s future, stay.",
+      "img": "short-familypsalm112v1-scene-01.jpg",
+      "kicker": "PSALM 112:1",
+      "sub": "A WORD FOR YOUR WORRY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Praise the Lord. Blessed are those who fear the Lord, who find great delight in his commands.",
+      "img": "short-familypsalm112v1-scene-02.jpg",
+      "kicker": "PSALM 112:1",
+      "sub": "FINDING DELIGHT IN TRUTH",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.7
+      ]
+    },
+    {
+      "a": "Their children will be mighty in the land; the generation of the upright will be blessed.",
+      "img": "short-familypsalm112v1-scene-03.jpg",
+      "kicker": "PSALM 112:2",
+      "sub": "A PROMISE FOR YOUR CHILDREN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Wealth and riches are in their houses, and their righteousness endures forever.",
+      "img": "short-familypsalm112v1-scene-04.jpg",
+      "kicker": "PSALM 112:3",
+      "sub": "ETERNAL RIGHTEOUSNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, we bring our home before You, asking that our hearts remain anchored in Your Word.",
+      "img": "short-familypsalm112v1-scene-05.jpg",
+      "kicker": "HEART PRAYER",
+      "sub": "ANCHORED IN HIS WORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Grant us the wisdom to walk in Your ways, that our legacy might reflect Your goodness always.",
+      "img": "short-familypsalm112v1-scene-06.jpg",
+      "kicker": "FINAL PETITION",
+      "sub": "LEAVING A GODLY LEGACY",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If you are currently feeling overwhelmed by the financial weight of your family’s future, stay."
+    ],
+    [
+      8,
+      16,
+      "Praise the Lord. Blessed are those who fear the Lord, who find great delight in his commands."
+    ],
+    [
+      16,
+      24,
+      "Their children will be mighty in the land; the generation of the upright will be blessed."
+    ],
+    [
+      24,
+      32,
+      "Wealth and riches are in their houses, and their righteousness endures forever."
+    ],
+    [
+      32,
+      40,
+      "Heavenly Father, we bring our home before You, asking that our hearts remain anchored in Your Word."
+    ],
+    [
+      40,
+      48,
+      "Grant us the wisdom to walk in Your ways, that our legacy might reflect Your goodness always."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "FEELING OVERWHELMED BY",
+        "FINANCIAL WEIGHT OF",
+        "YOUR FAMILY'S FUTURE"
+      ],
+      [
+        "OVERWHELMED",
+        "FINANCIAL"
+      ],
+      "PSALM 112:1"
+    ],
+    [
+      8,
+      16,
+      [
+        "BLESSED ARE THOSE",
+        "WHO FEAR THE LORD",
+        "FIND GREAT DELIGHT"
+      ],
+      [
+        "BLESSED",
+        "DELIGHT"
+      ],
+      "PSALM 112:1"
+    ],
+    [
+      16,
+      24,
+      [
+        "CHILDREN MIGHTY IN LAND",
+        "GENERATION OF THE",
+        "UPRIGHT WILL BE BLESSED"
+      ],
+      [
+        "MIGHTY",
+        "BLESSED"
+      ],
+      "PSALM 112:2"
+    ],
+    [
+      24,
+      32,
+      [
+        "WEALTH AND RICHES",
+        "IN THEIR HOUSES",
+        "RIGHTEOUSNESS ENDURES FOREVER"
+      ],
+      [
+        "WEALTH",
+        "RIGHTEOUSNESS"
+      ],
+      "PSALM 112:3"
+    ],
+    [
+      32,
+      40,
+      [
+        "HEAVENLY FATHER WE",
+        "BRING OUR HOME BEFORE",
+        "YOU ANCHORED IN WORD"
+      ],
+      [
+        "FATHER",
+        "ANCHORED"
+      ],
+      "PSALM 112:1"
+    ],
+    [
+      40,
+      48,
+      [
+        "GRANT US THE WISDOM",
+        "TO WALK YOUR WAYS",
+        "LEGACY REFLECTS GOODNESS"
+      ],
+      [
+        "WISDOM",
+        "GOODNESS"
+      ],
+      "PSALM 112:3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are currently feeling overwhelmed by the financial weight of your family’s future, stay.",
+      "kind": "phrase",
+      "words": [
+        "OVERWHELMED",
+        "FINANCIAL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Praise the Lord. Blessed are those who fear the Lord, who find great delight in his commands.",
+      "kind": "phrase",
+      "words": [
+        "BLESSED",
+        "DELIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Their children will be mighty in the land; the generation of the upright will be blessed.",
+      "kind": "phrase",
+      "words": [
+        "MIGHTY",
+        "BLESSED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Wealth and riches are in their houses, and their righteousness endures forever.",
+      "kind": "phrase",
+      "words": [
+        "WEALTH",
+        "RIGHTEOUSNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, we bring our home before You, asking that our hearts remain anchored in Your Word.",
+      "kind": "phrase",
+      "words": [
+        "FATHER",
+        "ANCHORED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us the wisdom to walk in Your ways, that our legacy might reflect Your goodness always.",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "GOODNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 112:1-3"
+}

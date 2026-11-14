@@ -1,0 +1,359 @@
+{
+  "key": "short-familyacts16v31",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "PRAYER FOR YOUR",
+    "HOUSEHOLD SALVATION"
+  ],
+  "poster": [
+    "PRAYER FOR YOUR",
+    "HOUSEHOLD",
+    "BELIEVE & BE SAVED",
+    "ACTS 16:31-34"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "cozy lit living room candle warm glowing evening atmosphere",
+    "open Bible on wooden table lamp light olive branch warm glow",
+    "warm living room window nighttime soft lamp light peaceful home",
+    "cozy bedroom hallway doorway warm soft night light peaceful",
+    "warm countryside cottage exterior glowing windows peaceful evening",
+    "rustic wooden dining table warm lamp light tea cups cozy home",
+    "open bible on desk candlelight soft warm background peaceful",
+    "cozy home altar bible candle olive branch warm lighting"
+  ],
+  "scenes": [
+    {
+      "a": "If you are worrying late tonight whether your children will ever walk with God, stay.",
+      "img": "short-familyacts16v31-scene-01.jpg",
+      "kicker": "ACTS 16:31",
+      "sub": "FAITH FOR YOUR HOUSE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Scripture promises, 'Believe in the Lord Jesus, and you will be saved—you and your household.'",
+      "img": "short-familyacts16v31-scene-02.jpg",
+      "kicker": "ACTS 16:31",
+      "sub": "YOU AND YOUR HOUSEHOLD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we bring every member of our home into Your presence right now.",
+      "img": "short-familyacts16v31-scene-03.jpg",
+      "kicker": "FAMILY PRAYER",
+      "sub": "BRING THEM TO GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Reach into every quiet room of our house and soften hearts that have grown weary or distant.",
+      "img": "short-familyacts16v31-scene-04.jpg",
+      "kicker": "HEAL OUR HOME",
+      "sub": "SOFTEN EVERY HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Surround our children, our spouses, and our relatives with Your holy light and protection.",
+      "img": "short-familyacts16v31-scene-05.jpg",
+      "kicker": "DIVINE PROTECTION",
+      "sub": "COVER OUR LOVED ONES",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Fill our household with the deep joy of believing in Your grace together.",
+      "img": "short-familyacts16v31-scene-06.jpg",
+      "kicker": "HOUSEHOLD JOY",
+      "sub": "UNITED IN FAITH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "We place their lives and their futures into Your faithful hands.",
+      "img": "short-familyacts16v31-scene-07.jpg",
+      "kicker": "REST IN HIM",
+      "sub": "IN FAITHFUL HANDS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to join us daily as we cover our families in prayer.",
+      "img": "short-familyacts16v31-scene-08.jpg",
+      "kicker": "THE FAMILY ALTAR",
+      "sub": "PRAY FOR YOUR HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If you are worrying late tonight whether your children will ever walk with God, stay."
+    ],
+    [
+      6,
+      13,
+      "Scripture promises, 'Believe in the Lord Jesus, and you will be saved—you and your household.'"
+    ],
+    [
+      13,
+      19,
+      "Lord, we bring every member of our home into Your presence right now."
+    ],
+    [
+      19,
+      27,
+      "Reach into every quiet room of our house and soften hearts that have grown weary or distant."
+    ],
+    [
+      27,
+      34,
+      "Surround our children, our spouses, and our relatives with Your holy light and protection."
+    ],
+    [
+      34,
+      40,
+      "Fill our household with the deep joy of believing in Your grace together."
+    ],
+    [
+      40,
+      46,
+      "We place their lives and their futures into Your faithful hands."
+    ],
+    [
+      46,
+      52,
+      "Subscribe to join us daily as we cover our families in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF YOU ARE WORRYING LATE",
+        "WHETHER YOUR CHILDREN WILL",
+        "EVER WALK WITH GOD STAY"
+      ],
+      [
+        "WORRYING",
+        "WALK WITH GOD"
+      ],
+      "ACTS 16:31"
+    ],
+    [
+      6,
+      13,
+      [
+        "BELIEVE IN THE LORD JESUS",
+        "AND YOU WILL BE SAVED",
+        "YOU AND YOUR HOUSEHOLD"
+      ],
+      [
+        "BELIEVE",
+        "SAVED",
+        "HOUSEHOLD"
+      ],
+      "ACTS 16:31"
+    ],
+    [
+      13,
+      19,
+      [
+        "LORD WE BRING EVERY MEMBER",
+        "OF OUR HOME INTO YOUR",
+        "PRESENCE RIGHT NOW"
+      ],
+      [
+        "EVERY MEMBER",
+        "PRESENCE"
+      ],
+      "ACTS 16:31"
+    ],
+    [
+      19,
+      27,
+      [
+        "REACH INTO EVERY QUIET ROOM",
+        "AND SOFTEN HEARTS THAT",
+        "HAVE GROWN WEARY OR DISTANT"
+      ],
+      [
+        "QUIET ROOM",
+        "SOFTEN HEARTS"
+      ],
+      "ACTS 16:31"
+    ],
+    [
+      27,
+      34,
+      [
+        "SURROUND OUR CHILDREN AND SPOUSES",
+        "AND OUR RELATIVES WITH YOUR",
+        "HOLY LIGHT AND PROTECTION"
+      ],
+      [
+        "SURROUND",
+        "HOLY LIGHT"
+      ],
+      "ACTS 16:31"
+    ],
+    [
+      34,
+      40,
+      [
+        "FILL OUR HOUSEHOLD WITH THE",
+        "DEEP JOY OF BELIEVING",
+        "IN YOUR GRACE TOGETHER"
+      ],
+      [
+        "DEEP JOY",
+        "BELIEVING"
+      ],
+      "ACTS 16:31"
+    ],
+    [
+      40,
+      46,
+      [
+        "WE PLACE THEIR LIVES AND",
+        "THEIR FUTURES INTO YOUR",
+        "FAITHFUL HANDS"
+      ],
+      [
+        "FUTURES",
+        "FAITHFUL HANDS"
+      ],
+      "ACTS 16:31"
+    ],
+    [
+      46,
+      52,
+      [
+        "SUBSCRIBE TO JOIN US DAILY",
+        "AS WE COVER OUR FAMILIES",
+        "IN PRAYER"
+      ],
+      [
+        "SUBSCRIBE",
+        "COVER OUR FAMILIES"
+      ],
+      "ACTS 16:31"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are worrying late tonight whether your children will ever walk with God, stay.",
+      "kind": "phrase",
+      "words": [
+        "WORRYING",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Scripture promises, 'Believe in the Lord Jesus, and you will be saved—you and your household.'",
+      "kind": "phrase",
+      "words": [
+        "BELIEVE",
+        "SAVED",
+        "HOUSEHOLD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we bring every member of our home into Your presence right now.",
+      "kind": "phrase",
+      "words": [
+        "MEMBER",
+        "PRESENCE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Reach into every quiet room of our house and soften hearts that have grown weary or distant.",
+      "kind": "phrase",
+      "words": [
+        "ROOM",
+        "SOFTEN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Surround our children, our spouses, and our relatives with Your holy light and protection.",
+      "kind": "phrase",
+      "words": [
+        "SURROUND",
+        "PROTECTION"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Fill our household with the deep joy of believing in Your grace together.",
+      "kind": "phrase",
+      "words": [
+        "DEEP JOY",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We place their lives and their futures into Your faithful hands.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFUL HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to join us daily as we cover our families in prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Acts 16:31-34"
+}
