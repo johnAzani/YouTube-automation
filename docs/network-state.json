@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T11:22:34Z",
+  "generated_at": "2026-11-14T11:27:11Z",
   "monitor_generated_at": "2026-11-14T10:41:34.562205+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 212,
+    "published_total": 213,
     "published_longform": 103,
-    "published_shorts": 109,
-    "public_total": 210,
+    "published_shorts": 110,
+    "public_total": 211,
     "queued_longform": 61,
-    "queued_shorts": 99,
+    "queued_shorts": 98,
     "automations_ok": 10,
     "automations_total": 10,
     "network_healthy": true
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 7,
+        "published_total": 8,
         "published_longform": 5,
-        "published_shorts": 2,
-        "thumbnail_pending": 7,
-        "public_total": 7,
+        "published_shorts": 3,
+        "thumbnail_pending": 8,
+        "public_total": 8,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 12
+        "queued_shorts": 11
       },
       "latest_video": {
-        "id": "0704",
-        "title": "Prayer of Gratitude When Life Is Hard: 1 Thessalonians 5:16-18",
-        "format": "longform",
-        "youtube_video_id": "Lc8ejqFR23w",
-        "watch_url": "https://youtu.be/Lc8ejqFR23w",
+        "id": "SHORT-GARDENPHILIPPIANS4V4",
+        "title": "Pray This Philippians 4:4 Prayer of Thanksgiving | Philippians 4:4 #Shorts",
+        "format": "short",
+        "youtube_video_id": "O-X6wIibVtw",
+        "watch_url": "https://www.youtube.com/shorts/O-X6wIibVtw",
         "published_on": "2026-11-14",
-        "published_at": "2026-11-14T07:44:38Z"
+        "published_at": "2026-11-14T11:26:16Z"
       },
       "next_queued_longform": {
         "id": "0705",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenphilippians4v4",
-        "scripture": "Philippians 4:4",
+        "short": "short-gardenpsalm100v1",
+        "scripture": "Psalm 100:1-2",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPHILIPPIANS4V4",
+      "slug": "short-gardenphilippians4v4-thanksgiving-prayer",
+      "file": "short-gardenphilippians4v4-thanksgiving-prayer.md",
+      "title": "Pray This Philippians 4:4 Prayer of Thanksgiving | Philippians 4:4 #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-14",
+      "published_at": "2026-11-14T11:26:16Z",
+      "youtube_video_id": "O-X6wIibVtw",
+      "watch_url": "https://www.youtube.com/shorts/O-X6wIibVtw",
+      "youtu_be_url": "https://youtu.be/O-X6wIibVtw",
+      "shorts_url": "https://www.youtube.com/shorts/O-X6wIibVtw",
+      "studio_url": "https://studio.youtube.com/video/O-X6wIibVtw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/O-X6wIibVtw/hqdefault.jpg",
+      "thumb_text": "REJOICE \u00b7 IN THE LORD",
+      "thumbnail_pending": true,
+      "duration_label": "53s",
+      "words": 399
+    },
     {
       "id": "SHORT-HEALINGJOHN16V33",
       "slug": "short-healingjohn16v33-restoration-prayer",
@@ -6603,17 +6627,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-gardenphilippians4v4",
-        "file": "0000-short-gardenphilippians4v4.yml",
-        "companion_longform_id": "",
-        "scripture": "Philippians 4:4",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenpsalm100v1",
