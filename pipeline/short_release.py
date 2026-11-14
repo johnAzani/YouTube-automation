@@ -481,6 +481,9 @@ def queue_report(queue_dir: Path | None = None,
             verdict, reason = "not_approved", f"status is {status or 'missing'}"
         else:
             verdict, reason = "ready", "will render on the next run"
+            from .seasonal import manifest_window
+            if manifest_window(data) == "early":
+                reason = f"written for {data.get('season') or 'a season'}; publishes from {data.get('not_before')}"
         rows.append({"file": path.name, "short": key, "channel": owner,
                      "status": status, "verdict": verdict, "reason": reason})
     return rows
@@ -519,7 +522,7 @@ def select_next_queued_short(
     elif (queue_dir.parent / "published").is_dir():
         pdir = queue_dir.parent / "published"
 
-    fallback: tuple[Path, str, str] | None = None
+    fallback: tuple[Path, str, str, int] | None = None
     for path in sorted(qdir.glob("*.yml")):
         data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
         if _norm(data.get("channel")) != wanted:
@@ -591,15 +594,33 @@ def select_next_queued_short(
             print(f"[queue] Skipping manifest {path.name}: unknown short key {key!r} not in EDITIONS")
             continue
 
+        # A Short written for a day: never before it, first while its season is
+        # open, withdrawn when it has closed (pipeline/seasonal.py).
+        from .seasonal import manifest_window
+        window = manifest_window(data)
+        if window == "early":
+            continue
+        if window == "closed":
+            data.update(status="draft", season_closed=True,
+                        pause_reason=(f"{data.get('season') or 'season'} ended on "
+                                      f"{data.get('not_after')}; the brain returns this Short "
+                                      "to the queue when the season next opens"))
+            path.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+            print(f"[queue] {path.name}: its season has closed; withdrawn until next year.")
+            continue
+
         # Verified Shorts first: one whose narration carries its verse word for
         # word goes out ahead of one that cannot be checked or does not.
         verdict = scripture_status(key, data)
-        if verdict == "verified":
+        rank = (0 if window == "open" else 2) + (0 if verdict == "verified" else 1)
+        if rank == 0:
             return path, key
-        if fallback is None:
-            fallback = (path, key, verdict)
+        if fallback is None or rank < fallback[3]:
+            fallback = (path, key, verdict, rank)
     if fallback is not None:
-        path, key, verdict = fallback
+        path, key, verdict, rank = fallback
+        if rank < 2:
+            print(f"[queue] {path.name} is for a season that is open; it goes out first.")
         if verdict == "unverified":
             print(f"::notice title=Short not yet scripture-verified ({wanted})::{key} was "
                   "written before the scripture check and its quotation does not match the "

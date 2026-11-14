@@ -1248,7 +1248,7 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                 f"{brand.display_name} authoring rejected: " + "; ".join(problems))
 
     def author_short_spec(self, longform_doc: ScriptDoc | None, key: str | None = None,
-                          *, scripture: str | None = None) -> "ShortSpec":
+                          *, scripture: str | None = None, occasion: str = "") -> "ShortSpec":
         """Ask the model to write a complete 9:16 Short spec, then validate it.
 
         This is the step that was missing: `tools/shorts.py` could only render Shorts
@@ -1280,7 +1280,7 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
             )
         key = key or (short_key_for_doc(longform_doc) if longform_doc is not None
                       else short_key_for_reference(self.channel_id, scripture))
-        prompt = build_prompt(scripture, key=key, channel_id=self.channel_id)
+        prompt = build_prompt(scripture, key=key, channel_id=self.channel_id, occasion=occasion)
         last_error = ""
         # Two attempts per model, then *change the model*: a spec that comes back
         # under the word floor or with five scenes instead of six is a capability
@@ -1472,7 +1472,7 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         return manifest_path, key
 
     def generate_standalone_short(self, scripture: str, source: str = "evergreen",
-                                  ) -> tuple[Optional[Path], str]:
+                                  *, season: Any = None) -> tuple[Optional[Path], str]:
         """Author and queue a Short that has no long-form behind it.
 
         Returns ``(manifest_path, key)``; the path is ``None`` when the spec could
@@ -1489,7 +1489,13 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         note = ""
         if key not in _renderer_script_keys():
             try:
-                spec = self.author_short_spec(None, key=key, scripture=reference)
+                if season is not None:
+                    from .seasonal import OCCASIONS
+                    spec = self.author_short_spec(
+                        None, key=key, scripture=reference,
+                        occasion=OCCASIONS.get(season.season.name, season.season.label))
+                else:
+                    spec = self.author_short_spec(None, key=key, scripture=reference)
                 save_spec(spec)
                 note = f"spec authored by the brain ({spec.words} narration words)"
             except Exception as exc:  # noqa: BLE001
@@ -1515,8 +1521,82 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
             "notes": (f"Standalone Short on {reference} ({source} list)"
                       + (f" — {note}" if note else "")),
         }
+        if season is not None:
+            # A Short for a day: never before it, first in line while its season
+            # is open, withdrawn once it has closed (pipeline/seasonal.py).
+            manifest_data.update(
+                season=season.season.name,
+                not_before=season.not_before.isoformat(),
+                not_after=season.not_after.isoformat(),
+                notes=(f"{season.season.label} Short on {reference}, for "
+                       f"{season.not_before.isoformat()} to {season.not_after.isoformat()}"
+                       + (f" — {note}" if note else "")))
         manifest_path.write_text(yaml.safe_dump(manifest_data, sort_keys=False), encoding="utf-8")
         return manifest_path, key
+
+    def _seasonal_pass(self, rows: list[dict[str, Any]], covered: set[str],
+                       renderable: set[str]) -> int:
+        """Write this channel's Shorts for the season that is open or about to open.
+
+        Runs before the ordinary top-up and regardless of how full the queue is:
+        a Christmas Short written on 27 December is a Short nobody needed. At
+        most ``MAX_SEASONAL_PER_PASS`` a pass. A seasonal Short withdrawn when
+        its season closed last year is returned to the queue with this year's
+        dates instead of being written again.
+        """
+        from .evergreen_shorts import reference_parts, same_passage, used_references
+        from .seasonal import MAX_SEASONAL_PER_PASS, due
+
+        try:
+            wanted = due(self.channel_id)
+        except Exception as exc:  # noqa: BLE001 — the calendar never stops the top-up
+            print(f"[gemini-brain] seasonal calendar unavailable: {exc}", flush=True)
+            return 0
+        if not wanted:
+            return 0
+        used = used_references(self.channel_id)
+        made = 0
+        for item in wanted:
+            if made >= MAX_SEASONAL_PER_PASS:
+                break
+            key = short_key_for_reference(self.channel_id, item.reference)
+            manifest_path = SHORTS_QUEUE_DIR / f"{STANDALONE_PREFIX}-{key}.yml"
+            if manifest_path.is_file():
+                try:
+                    data = yaml.safe_load(manifest_path.read_text(encoding="utf-8")) or {}
+                except Exception:  # noqa: BLE001
+                    continue
+                if (data.get("season") and str(data.get("status")) == "draft"
+                        and data.get("season_closed") and key in renderable):
+                    data.update(status="approved", not_before=item.not_before.isoformat(),
+                                not_after=item.not_after.isoformat())
+                    for stale in ("season_closed", "pause_reason"):
+                        data.pop(stale, None)
+                    manifest_path.write_text(yaml.safe_dump(data, sort_keys=False),
+                                             encoding="utf-8")
+                    rows.append({"file": manifest_path.name, "key": key, "verdict": "returned",
+                                 "reason": f"{item.season.label} Short on {item.reference} "
+                                           "returned to the queue for this year"})
+                continue
+            parts = reference_parts(item.reference)
+            if key in covered or any(same_passage(parts, other) for other in used):
+                continue  # this channel already has a Short of the passage
+            if not self.is_api_available():
+                break
+            made += 1
+            mpath, mkey = self.generate_standalone_short(item.reference, source="seasonal",
+                                                         season=item)
+            if mpath is None:
+                rows.append({"file": manifest_path.name, "key": mkey, "verdict": "failed",
+                             "reason": f"{item.season.label} Short on {item.reference} "
+                                       "could not be authored"})
+                continue
+            covered.add(mkey)
+            renderable.add(mkey)
+            rows.append({"file": mpath.name, "key": mkey, "verdict": "authored",
+                         "reason": f"{item.season.label} Short on {item.reference}, "
+                                   f"publishes from {item.not_before.isoformat()}"})
+        return made
 
     def _requote_if_misquoted(self, path: Path, data: dict[str, Any], key: str,
                               requotes_left: int) -> Optional[dict[str, Any]]:
@@ -1759,7 +1839,13 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
             if key:
                 covered_keys.add(key)
             if key in renderable and str(data.get("status", "")).strip().lower() == "approved":
-                ready_count += 1
+                from .seasonal import manifest_window
+                # A Short waiting for its day is not one that can go out today.
+                if manifest_window(data) in ("none", "open"):
+                    ready_count += 1
+
+        # The season's Shorts first, and whether or not the queue is already full.
+        self._seasonal_pass(rows, covered_keys, renderable)
 
         if ready_count >= min_ready:
             return rows

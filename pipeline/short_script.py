@@ -459,7 +459,8 @@ def recent_openings(channel_id: str | None, limit: int = RECENT_OPENINGS_SHOWN,
 
 def build_prompt(scripture: str, key: str = "short-psalmNN", words: int = TARGET_WORDS,
                  channel_id: str | None = None,
-                 avoid_openings: list[str] | None = None) -> str:
+                 avoid_openings: list[str] | None = None,
+                 occasion: str = "") -> str:
     """The model contract, in the voice of the channel the Short belongs to."""
     from .channel_capabilities import brand_for
 
@@ -478,9 +479,17 @@ def build_prompt(scripture: str, key: str = "short-psalmNN", words: int = TARGET
     # left the quotation to the model's memory (pipeline/scripture_text.py).
     from .scripture_text import prompt_block
 
+    occasion_block = ""
+    if occasion:
+        occasion_block = (
+            f"\nTHE DAY THIS SHORT IS FOR — {occasion}.\n"
+            "- The opening sentence or the first line of prayer names the day plainly, the\n"
+            "  way a person would say it to a friend. The prayer is about this day; it is\n"
+            "  not a general prayer with the day's name attached.\n"
+            "- Do not name a date or a year: this Short may be watched in other years.\n")
     return PROMPT.format(
         key=key, scripture=scripture, words=words,
-        scripture_block=prompt_block(scripture),
+        scripture_block=prompt_block(scripture) + occasion_block,
         floor=max(MIN_WORDS, TARGET_WORDS_RANGE[0]), ceiling=TARGET_WORDS_RANGE[1],
         hook_words=MAX_HOOK_WORDS, avoid_block=avoid_block,
         min_seconds=MIN_SECONDS, max_seconds=MAX_SECONDS,
