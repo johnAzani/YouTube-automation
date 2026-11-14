@@ -25,8 +25,9 @@ Guards:
 * Only when YouTube says the channel may upload long videos
   (``channels.status.longUploadsStatus == "allowed"``). A channel that is not
   phone-verified is limited to fifteen minutes and a longer upload is rejected.
-* Any failure here leaves the prayer video as it was. A release is never lost
-  to its tail.
+* The prayer video is never changed; the long version is written beside it.
+  Any failure here publishes the prayer as before. A release is never lost to
+  its tail.
 * ``NIGHT_TAIL_MINUTES=0`` switches it off; another number sets the length.
 
 What is not known: whether anybody will play it through the night. The first
@@ -58,6 +59,14 @@ EDGE_FADE_SECONDS = 3.0
 MAX_UNIT_PICTURES = 8
 #: The words stay for the first moments of each unit, then leave the screen dark.
 PLATE_SECONDS = 40
+#: The joined video sits beside the prayer under this suffix. The release
+#: workflow leaves it out of the one-day QC artifact (the prayer and the rest
+#: unit, which are kept, describe it completely).
+NIGHT_SUFFIX = ".night.mp4"
+#: A dimmed, slowed background does not need the prayer's bitrate; the ceiling
+#: keeps three hours near a gigabyte whatever the pictures are.
+UNIT_CRF = "24"
+UNIT_MAXRATE = "600k"
 
 REST_LINE = "Rest now. He that keepeth thee will not slumber."
 REST_NOTE = "The prayer has ended. Quiet music plays on while you sleep."
@@ -135,8 +144,8 @@ def build_unit(assets: Sequence[Path], out_dir: Path, *, channel_name: str,
                fps: int = 24, score: Callable[[float, Path], Path] | None = None) -> Path:
     """One loopable rest unit: the video's own pictures, dimmed, under the studio's score.
 
-    Encoded with the settings the prayer renderer uses (pipeline/prayer_visuals.py)
-    so the two join without re-encoding. Both ends fade to black and to silence,
+    Same codec, profile, size, frame rate and audio format as the prayer renderer
+    (pipeline/prayer_visuals.py), so the two join without re-encoding. Both ends fade to black and to silence,
     so the join between two units is a breath, not a cut.
     """
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -180,7 +189,8 @@ def build_unit(assets: Sequence[Path], out_dir: Path, *, channel_name: str,
     ])
     unit = out_dir / "rest-unit.mp4"
     cmd += ["-filter_complex", graph, "-map", "[v]", "-map", "[a]", "-t", f"{seconds:.3f}",
-            "-c:v", "libx264", "-profile:v", "high", "-preset", "fast", "-crf", "21",
+            "-c:v", "libx264", "-profile:v", "high", "-preset", "fast", "-crf", UNIT_CRF,
+            "-maxrate", UNIT_MAXRATE, "-bufsize", "1200k",
             "-pix_fmt", "yuv420p", "-r", str(fps),
             "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
             "-color_range", "tv", "-c:a", "aac", "-ar", "48000", "-ac", "2", "-b:a", "192k",
@@ -222,7 +232,10 @@ def extend(prayer: Path, assets: Sequence[Path], *, prayer_seconds: float, total
            channel_name: str, unit_seconds: float = UNIT_SECONDS,
            score: Callable[[float, Path], Path] | None = None,
            probe: Callable[[Path], float | None] | None = None) -> dict | None:
-    """Lengthen ``prayer`` in place to ``total_minutes``. ``None`` (file untouched) on any failure."""
+    """Write ``<prayer>.night.mp4``: the prayer, then rest, ``total_minutes`` in all.
+
+    The prayer file itself is never changed. ``None`` on any failure.
+    """
     prayer = Path(prayer)
     started = time.monotonic()
     work = prayer.parent / "night-tail"
@@ -239,13 +252,12 @@ def extend(prayer: Path, assets: Sequence[Path], *, prayer_seconds: float, total
         if actual is None or abs(actual - expected) > max(5.0, repeats * 0.5):
             partial.unlink(missing_ok=True)
             raise RuntimeError(f"joined video is {actual}s, expected about {expected:.0f}s")
-        original = prayer.with_name(prayer.stem + ".prayer-only.mp4")
-        shutil.move(str(prayer), str(original))
-        shutil.move(str(partial), str(prayer))
-        return {"total_seconds": actual, "prayer_seconds": prayer_seconds, "units": repeats,
-                "unit_seconds": unit_seconds, "megabytes": round(prayer.stat().st_size / 1e6, 1),
-                "build_seconds": round(time.monotonic() - started, 1),
-                "prayer_only": str(original)}
+        night = prayer.with_name(prayer.stem + NIGHT_SUFFIX)
+        shutil.move(str(partial), str(night))
+        return {"video": str(night), "total_seconds": actual, "prayer_seconds": prayer_seconds,
+                "units": repeats, "unit_seconds": unit_seconds,
+                "megabytes": round(night.stat().st_size / 1e6, 1),
+                "build_seconds": round(time.monotonic() - started, 1)}
     except Exception as exc:  # noqa: BLE001 - a release is never lost to its tail
         print(f"::warning title=Night tail not added::{str(exc)[:300]}")
         return None

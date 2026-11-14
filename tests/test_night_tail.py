@@ -178,12 +178,14 @@ def test_prayer_is_followed_by_rest_and_plays_through(studio):
                      unit_seconds=6, score=_tone, probe=_probe(binary))
     assert info and info["units"] == 10, info
     assert abs(info["total_seconds"] - 64.0) < 3
-    assert Path(info["prayer_only"]).read_bytes() == before, "the prayer as rendered is kept beside it"
-    decoded = subprocess.run([binary, "-v", "error", "-i", str(prayer), "-f", "null", "-"],
+    assert prayer.read_bytes() == before, "the prayer as rendered is never changed"
+    night = Path(info["video"])
+    assert night.name == "prayer.night.mp4" and night.parent == prayer.parent
+    decoded = subprocess.run([binary, "-v", "error", "-i", str(night), "-f", "null", "-"],
                              capture_output=True, timeout=120)
     assert decoded.returncode == 0 and not decoded.stderr.strip(), decoded.stderr.decode()[:400]
     # Still one video stream and one stereo audio stream, the prayer's own.
-    streams = subprocess.run([binary, "-i", str(prayer)], capture_output=True, timeout=60).stderr.decode()
+    streams = subprocess.run([binary, "-i", str(night)], capture_output=True, timeout=60).stderr.decode()
     assert streams.count("Video: h264") == 1 and streams.count("Audio: aac") == 1
     assert "1280x720" in streams and "stereo" in streams
 
@@ -204,7 +206,7 @@ def test_a_join_of_the_wrong_length_is_refused(studio):
     info = nt.extend(prayer, pictures, prayer_seconds=4.0, total_minutes=1, channel_name="The Secret Place",
                      unit_seconds=6, score=_tone, probe=lambda _path: 12.0)
     assert info is None and prayer.read_bytes() == before
-    assert not list(prayer.parent.glob("*.partial.mp4"))
+    assert not list(prayer.parent.glob("*.partial.mp4")) and not list(prayer.parent.glob("*.night.mp4"))
 
 
 def test_nothing_to_add_when_the_prayer_already_fills_the_time(tmp_path):
@@ -254,8 +256,8 @@ def test_pipeline_builds_the_tail_for_the_bedtime_channel(monkeypatch, capsys):
 
     def fake_extend(final, assets, **kwargs):
         seen.update(kwargs, final=final)
-        return {"total_seconds": 11220.0, "units": 18, "unit_seconds": 600, "megabytes": 900.0,
-                "build_seconds": 300.0}
+        return {"video": "x.night.mp4", "total_seconds": 11220.0, "units": 18, "unit_seconds": 600,
+                "megabytes": 900.0, "build_seconds": 300.0}
 
     monkeypatch.setattr(nt, "extend", fake_extend)
     info = pp._add_night_tail(_Doc("secret-place"), Path("x.mp4"), ["a.jpg"], 420.0)
@@ -276,3 +278,8 @@ def test_a_crash_in_the_tail_never_stops_the_release(monkeypatch):
 
     monkeypatch.setattr(upload, "_thumb_client", boom)
     assert pp._add_night_tail(_Doc("secret-place"), Path("x.mp4"), [], 400.0) is None
+
+
+def test_release_workflow_keeps_the_joined_video_out_of_the_qc_artifact():
+    workflow = (Path(__file__).resolve().parent.parent / ".github" / "workflows" / "produce.yml").read_text()
+    assert f"!output/*/*{nt.NIGHT_SUFFIX}" in workflow

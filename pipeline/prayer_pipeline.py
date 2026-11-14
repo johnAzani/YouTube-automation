@@ -338,8 +338,10 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
                            progress=heartbeat.tick)
         # The bedtime channel's prayer is followed by hours of quiet music, so one
         # listener through the night is hours of watch time (pipeline/night_tail.py).
-        # A failure there leaves `final` as rendered.
+        # The prayer file is never changed; a failure there publishes it as before.
         night = None if dry_run else _add_night_tail(doc, final, assets, duration)
+        if night:
+            final = Path(night['video'])
         # Thumbnails come from the CTR pack, never from the card generator: it enforces
         # mobile legibility, contrast, safe zones and visibility against YouTube's
         # dark-mode page, and writes a report so the run page shows the numbers.

@@ -63,13 +63,13 @@ The watch-time format in this niche is a different kind of video: a prayer or a 
 
 ## 4. What was built: the night tail
 
-Code: `pipeline/night_tail.py`, called from `pipeline/prayer_pipeline.py` after the prayer video is rendered. Tests: `tests/test_night_tail.py` (16).
+Code: `pipeline/night_tail.py`, called from `pipeline/prayer_pipeline.py` after the prayer video is rendered. Tests: `tests/test_night_tail.py` (17).
 
 What happens on The Secret Place's long-form each night:
 
 1. The prayer video is rendered exactly as before.
 2. A ten-minute rest section is made from that video's own pictures, dimmed, with the studio's own synthesised music at a lower level. For its first 40 seconds it shows "Rest now. He that keepeth thee will not slumber." (Psalm 121:3, King James Version) and a line saying the prayer has ended and music continues. Then the words leave and the screen stays dark.
-3. The rest section is repeated after the prayer until the whole video is at least three hours. The prayer is not re-encoded or re-spoken.
+3. The rest section is repeated after the prayer until the whole video is at least three hours. The prayer is not re-encoded or re-spoken, and its own file is left unchanged; the long version is written beside it as `<slug>.night.mp4`.
 4. The description's first line says what the video is ("Pray along for the first 7 minutes, then rest…"), a chapter marks where the music starts, and search tags for sleep prayer are added.
 
 Cost: no speech request, no extra upload, no extra video. The 10 free speech requests a day are untouched.
@@ -79,12 +79,14 @@ Safeguards:
 - Only The Secret Place. A sunrise or noon prayer is not a sleep video.
 - Before building, the code asks YouTube whether the channel may upload videos longer than 15 minutes. If not, the prayer is published as before with a warning in the run log.
 - If anything in the tail fails, the prayer is published as before.
+- The long file is left out of the one-day QC download in `produce.yml`; the prayer and the rest section are kept there.
 - `NIGHT_TAIL_MINUTES=0` in the workflow turns it off. Another number changes the length (20 to 600 minutes).
 
 Measured on the build machine:
 
-- A ten-minute rest section took 5 minutes 52 seconds to build and came to 77 MB with one moving clip among the pictures. Eighteen of them is about 1.4 GB. With still pictures only it is smaller.
-- A small real join (a 20-second stand-in prayer plus four sections) decoded from start to end with no errors.
+- A ten-minute rest section took 5 minutes 52 seconds to build.
+- The rest section's video is capped at 600 kbit/s, so a section is at most about 60 MB and three hours at most about 1.1 GB.
+- A small real join (a 20-second stand-in prayer plus four sections, one of them a moving clip) decoded from start to end with no errors, and frames taken from the prayer and from two different rest sections were correct.
 
 ## 5. What is not known
 

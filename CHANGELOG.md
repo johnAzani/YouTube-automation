@@ -14,7 +14,8 @@ Full note with the monetisation rules, the channels' numbers and the risks: `doc
 - Only where YouTube reports `longUploadsStatus: allowed`. Any failure publishes the prayer as before. `NIGHT_TAIL_MINUTES=0` turns it off.
 - The description says first what the video is and marks where the music starts.
 - Not yet run against YouTube. Whether listeners leave it playing is unknown; watch time is only visible in YouTube Studio.
-- Tests: `tests/test_night_tail.py` (16), including a real encode and join.
+- The prayer file is not changed; the long version is `<slug>.night.mp4` beside it, capped near 1.1 GB, and left out of the QC artifact in `produce.yml`.
+- Tests: `tests/test_night_tail.py` (17), including a real encode and join.
 
 ## 2026-11-14 — scripture check, Shorts feedback, seasons, retitling, Shorts captions, French, channel page
 
