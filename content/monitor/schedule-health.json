@@ -16,6 +16,13 @@
       "workflow": "keepalive.yml"
     },
     {
+      "late_minutes": 178,
+      "name": "Produce video",
+      "ran_at": "2026-11-15T02:12:06+00:00",
+      "slot": "2026-11-14T23:14:00+00:00",
+      "workflow": "produce.yml"
+    },
+    {
       "late_minutes": 173,
       "name": "Autonomous Community Tab Automation",
       "ran_at": "2026-11-11T22:07:09+00:00",
@@ -37,8 +44,8 @@
       "workflow": "automation-health.yml"
     }
   ],
-  "generated_at": "2026-11-15T02:11:18.408726+00:00",
-  "last_run_at": "2026-11-15T02:10:28+00:00",
+  "generated_at": "2026-11-15T02:13:42.091043+00:00",
+  "last_run_at": "2026-11-15T02:12:54+00:00",
   "on_time": [
     {
       "late_minutes": 42,
