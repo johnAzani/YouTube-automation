@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T11:28:09Z",
+  "generated_at": "2026-11-15T11:28:48Z",
   "monitor_generated_at": "2026-11-15T06:50:48.927372+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 267,
+    "published_total": 268,
     "published_longform": 114,
-    "published_shorts": 153,
-    "public_total": 265,
+    "published_shorts": 154,
+    "public_total": 266,
     "queued_longform": 65,
-    "queued_shorts": 101,
+    "queued_shorts": 100,
     "automations_ok": 12,
     "automations_total": 12,
     "network_healthy": true
@@ -237,23 +237,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 29,
+        "published_total": 30,
         "published_longform": 13,
-        "published_shorts": 16,
-        "thumbnail_pending": 28,
-        "public_total": 29,
+        "published_shorts": 17,
+        "thumbnail_pending": 29,
+        "public_total": 30,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTJOEL2V25",
-        "title": "Pray This Joel 2:25 Midnight Prayer | Restoration #Shorts",
+        "id": "SHORT-MIDNIGHTLUKE10V19",
+        "title": "Pray This Luke 10:19 Midnight Prayer | Promise #Shorts",
         "format": "short",
-        "youtube_video_id": "KRuZI0Vsygk",
-        "watch_url": "https://www.youtube.com/shorts/KRuZI0Vsygk",
+        "youtube_video_id": "CNG4y5x0PBI",
+        "watch_url": "https://www.youtube.com/shorts/CNG4y5x0PBI",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T06:55:09Z"
+        "published_at": "2026-11-15T11:27:36Z"
       },
       "next_queued_longform": {
         "id": "0213",
@@ -262,8 +262,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightluke10v19",
-        "scripture": "Luke 10:19",
+        "short": "short-midnightmark11v23",
+        "scripture": "Mark 11:23-24",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTLUKE10V19",
+      "slug": "short-midnightluke10v19-midnight-prayer",
+      "file": "short-midnightluke10v19-midnight-prayer.md",
+      "title": "Pray This Luke 10:19 Midnight Prayer | Promise #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T11:27:36Z",
+      "youtube_video_id": "CNG4y5x0PBI",
+      "watch_url": "https://www.youtube.com/shorts/CNG4y5x0PBI",
+      "youtu_be_url": "https://youtu.be/CNG4y5x0PBI",
+      "shorts_url": "https://www.youtube.com/shorts/CNG4y5x0PBI",
+      "studio_url": "https://studio.youtube.com/video/CNG4y5x0PBI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/CNG4y5x0PBI/hqdefault.jpg",
+      "thumb_text": "MIDNIGHT \u00b7 STRENGTH",
+      "thumbnail_pending": true,
+      "duration_label": "49s",
+      "words": 577
+    },
     {
       "id": "SHORT-FAMILYEPHESIANS6V1",
       "slug": "short-familyephesians6v1-household-prayer",
@@ -8068,17 +8092,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightluke10v19",
-        "file": "0000-short-midnightluke10v19.yml",
-        "companion_longform_id": "",
-        "scripture": "Luke 10:19",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightmark11v23",
