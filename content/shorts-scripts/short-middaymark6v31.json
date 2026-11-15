@@ -1,0 +1,246 @@
+{
+  "key": "short-middaymark6v31",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "REST FOR THE",
+    "WEARY SOUL"
+  ],
+  "poster": [
+    "MIDDAY",
+    "QUIET",
+    "DIVINE",
+    "REST"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "midday sun pouring through window on wooden desk",
+    "abstract golden light reflection on still water",
+    "lonely mountain path under high noon sun",
+    "soft breeze moving tall blades of grass",
+    "close up of an empty chair in warm light",
+    "top down view of a calm garden bench"
+  ],
+  "scenes": [
+    {
+      "a": "That relentless pace you have kept since dawn is drawing your strength down to nothing.",
+      "img": "short-middaymark6v31-scene-01.jpg",
+      "kicker": "MARK 6:31",
+      "sub": "FIND YOUR REST",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Listen to the invitation of your Savior in this hour.",
+      "img": "short-middaymark6v31-scene-02.jpg",
+      "kicker": "MARK 6:31",
+      "sub": "HEAR HIS VOICE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And he said unto them, Come ye yourselves apart into a desert place, and rest a while:",
+      "img": "short-middaymark6v31-scene-03.jpg",
+      "kicker": "MARK 6:31",
+      "sub": "COME APART",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "for there were many coming and going, and they had no leisure so much as to eat.",
+      "img": "short-middaymark6v31-scene-04.jpg",
+      "kicker": "MARK 6:31",
+      "sub": "THE WORLD IS BUSY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, pull me out of the chaos of this day and into your holy, quiet center.",
+      "img": "short-middaymark6v31-scene-05.jpg",
+      "kicker": "MARK 6:31",
+      "sub": "SURRENDER THE LOAD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach me how to dwell in your stillness while the demands of life continue around me.",
+      "img": "short-middaymark6v31-scene-06.jpg",
+      "kicker": "MARK 6:31",
+      "sub": "STILLNESS IN MOTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "That relentless pace you have kept since dawn is drawing your strength down to nothing."
+    ],
+    [
+      11,
+      18,
+      "Listen to the invitation of your Savior in this hour."
+    ],
+    [
+      19,
+      32,
+      "And he said unto them, Come ye yourselves apart into a desert place, and rest a while:"
+    ],
+    [
+      33,
+      44,
+      "for there were many coming and going, and they had no leisure so much as to eat."
+    ],
+    [
+      45,
+      56,
+      "Lord, pull me out of the chaos of this day and into your holy, quiet center."
+    ],
+    [
+      57,
+      70,
+      "Teach me how to dwell in your stillness while the demands of life continue around me."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "RELENTLESS PACE",
+        "KEEPING YOU",
+        "WEARY"
+      ],
+      [
+        "WEARY"
+      ],
+      "MARK 6:31"
+    ],
+    [
+      11,
+      18,
+      [
+        "LISTEN TO",
+        "THE SAVIOR",
+        "NOW"
+      ],
+      [
+        "LISTEN"
+      ],
+      "MARK 6:31"
+    ],
+    [
+      19,
+      32,
+      [
+        "COME YE",
+        "YOURSELVES APART",
+        "REST A WHILE"
+      ],
+      [
+        "REST"
+      ],
+      "MARK 6:31"
+    ],
+    [
+      33,
+      44,
+      [
+        "MANY COMING",
+        "AND GOING",
+        "NO LEISURE"
+      ],
+      [
+        "NO LEISURE"
+      ],
+      "MARK 6:31"
+    ],
+    [
+      45,
+      56,
+      [
+        "PULL ME",
+        "FROM CHAOS",
+        "INTO QUIET"
+      ],
+      [
+        "QUIET"
+      ],
+      "MARK 6:31"
+    ],
+    [
+      57,
+      70,
+      [
+        "DWELL IN",
+        "YOUR STILLNESS",
+        "STAY"
+      ],
+      [
+        "STILLNESS"
+      ],
+      "MARK 6:31"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That relentless pace you have kept since dawn is drawing your strength down to nothing.",
+      "kind": "phrase",
+      "words": [
+        "WEARY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And he said unto them, Come ye yourselves apart into a desert place, and rest a while:",
+      "kind": "phrase",
+      "words": [
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "for there were many coming and going, and they had no leisure so much as to eat.",
+      "kind": "phrase",
+      "words": [
+        "NO LEISURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, pull me out of the chaos of this day and into your holy, quiet center.",
+      "kind": "phrase",
+      "words": [
+        "QUIET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Mark 6:31"
+}

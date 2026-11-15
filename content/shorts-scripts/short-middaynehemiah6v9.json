@@ -3,34 +3,34 @@
   "channel": "prayer3",
   "psalm": null,
   "title": [
-    "MIDDAY STRENGTH",
-    "NEHEMIAH 6:9"
+    "STRENGTHEN MY HANDS",
+    "MIDDAY PRAYER"
   ],
   "poster": [
     "THE MIDDAY WATCH",
-    "A moment of prayer",
-    "in the middle of your day",
-    "NEHEMIAH 6:9"
+    "NEHEMIAH 6:9",
+    "STRENGTH FOR YOUR WORK",
+    "PAUSE & PRAY AT NOON"
   ],
   "end": [
     "SUBSCRIBE",
     "The Midday Watch — pause and pray at noon"
   ],
   "stock_queries": [
-    "bright midday sun shining through a high office window",
-    "empty wooden desk with warm afternoon light streaming across",
-    "sunlit empty hallway with long afternoon shadows on the floor",
-    "wide open field under a bright cloudless midday sky",
-    "calm room with gentle sunbeams resting on an empty chair",
-    "quiet corner of a library with dust motes dancing in midday light",
-    "peaceful horizon under a high bright sun at noon"
+    "midday light streaming through office window quiet desk",
+    "sunlight illuminating wooden workbench craftsman tools quiet",
+    "high midday sun beaming down on open calm landscape",
+    "bright afternoon sun shining on clean empty study table",
+    "gentle midday sun flare over peaceful courtyard garden",
+    "sunlight resting on open journal on wooden desk midday",
+    "warm sunbeam shining through window onto quiet room"
   ],
   "scenes": [
     {
-      "a": "Right in the middle of your busy workday, take a breath and turn your heart to God.",
+      "a": "If the overwhelming pressure",
       "img": "short-middaynehemiah6v9-scene-01.jpg",
       "kicker": "NEHEMIAH 6:9",
-      "sub": "PAUSE YOUR DAY",
+      "sub": "STRENGTHEN MY HANDS",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -38,66 +38,66 @@
       ]
     },
     {
-      "a": "You are carrying a heavy load right now, and the pressure feels very real.",
+      "a": "For they all made us afraid",
       "img": "short-middaynehemiah6v9-scene-02.jpg",
-      "kicker": "MIDDAY WATCH",
-      "sub": "LAY DOWN THE BURDEN",
-      "cam": "pull_out",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "Listen to the word of the Lord from Nehemiah chapter six, verse nine.",
-      "img": "short-middaynehemiah6v9-scene-03.jpg",
-      "kicker": "SCRIPTURE",
-      "sub": "HEAR HIS WORD",
-      "cam": "pan_left",
+      "kicker": "NEHEMIAH 6:9",
+      "sub": "THE WORK SHALL BE DONE",
+      "cam": "pan_right",
       "focus": [
         0.4,
         0.5
       ]
     },
     {
-      "a": "They were all trying to frighten us, thinking, their hands will get too weak for the work.",
-      "img": "short-middaynehemiah6v9-scene-04.jpg",
+      "a": "Now therefore, O God",
+      "img": "short-middaynehemiah6v9-scene-03.jpg",
       "kicker": "NEHEMIAH 6:9",
-      "sub": "FEAR NOT",
-      "cam": "pan_right",
+      "sub": "STRENGTHEN MY HANDS",
+      "cam": "tilt_up",
       "focus": [
-        0.6,
+        0.5,
         0.5
       ]
     },
     {
-      "a": "But now, O God, strengthen my hands.",
-      "img": "short-middaynehemiah6v9-scene-05.jpg",
-      "kicker": "PRAYER",
-      "sub": "STRENGTHEN MY HANDS",
-      "cam": "tilt_up",
+      "a": "Lord, when voices of self-doubt",
+      "img": "short-middaynehemiah6v9-scene-04.jpg",
+      "kicker": "MIDDAY WATCH",
+      "sub": "TURN YOUR HEART",
+      "cam": "push_in",
       "focus": [
         0.5,
         0.4
       ]
     },
     {
-      "a": "Lord, when the demands of this hour press in on every side, renew our inward strength.",
-      "img": "short-middaynehemiah6v9-scene-06.jpg",
-      "kicker": "MIDDAY PRAYER",
-      "sub": "RENEW OUR STRENGTH",
-      "cam": "push_in",
+      "a": "When your hands grow weary",
+      "img": "short-middaynehemiah6v9-scene-05.jpg",
+      "kicker": "MIDDAY WATCH",
+      "sub": "RECEIVE STEADY GRACE",
+      "cam": "pull_out",
       "focus": [
         0.5,
-        0.45
+        0.5
       ]
     },
     {
-      "a": "Grant us the quiet courage to keep going, trusting that Your grace is completely sufficient for today.",
+      "a": "May He lift the intimidation",
+      "img": "short-middaynehemiah6v9-scene-06.jpg",
+      "kicker": "MIDDAY WATCH",
+      "sub": "QUIET COURAGE TODAY",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Midday Watch",
       "img": "short-middaynehemiah6v9-scene-07.jpg",
-      "kicker": "PEACE",
-      "sub": "HIS GRACE IS SUFFICIENT",
-      "cam": "pull_out",
+      "kicker": "PAUSE AND PRAY",
+      "sub": "THE MIDDAY WATCH",
+      "cam": "push_in",
       "focus": [
         0.5,
         0.5
@@ -107,195 +107,207 @@
   "captions": [
     [
       0,
-      14,
-      "Right in the middle of your busy workday, take a breath and turn your heart to God."
+      6,
+      "If the overwhelming pressure of your midday workload is making you feel completely inadequate, listen."
     ],
     [
-      14,
-      28,
-      "You are carrying a heavy load right now, and the pressure feels very real."
+      6,
+      13,
+      "For they all made us afraid, saying, Their hands shall be weakened from the work, that it be not done."
     ],
     [
-      28,
-      42,
-      "Listen to the word of the Lord from Nehemiah chapter six, verse nine."
+      13,
+      18,
+      "Now therefore, O God, strengthen my hands."
     ],
     [
-      42,
-      58,
-      "They were all trying to frighten us, thinking, their hands will get too weak for the work."
+      18,
+      25,
+      "Lord, when voices of self-doubt tell you that your efforts are useless, turn your heart to heaven."
     ],
     [
-      58,
-      72,
-      "But now, O God, strengthen my hands."
+      25,
+      32,
+      "When your hands grow weary under the heavy demands of this noon hour, receive His steady grace."
     ],
     [
-      72,
-      88,
-      "Lord, when the demands of this hour press in on every side, renew our inward strength."
+      32,
+      39,
+      "May He lift the intimidation off your assignment and grant you quiet courage for the work ahead."
     ],
     [
-      88,
-      105,
-      "Grant us the quiet courage to keep going, trusting that Your grace is completely sufficient for today."
+      39,
+      44,
+      "Subscribe to The Midday Watch and pause with us again tomorrow."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      14,
+      6,
       [
-        "RIGHT IN THE MIDDLE",
-        "OF YOUR BUSY WORKDAY",
-        "TURN YOUR HEART TO GOD"
+        "IF OVERWHELMING WORKLOAD",
+        "MAKES YOU FEEL INADEQUATE",
+        "LISTEN CLOSELY TODAY"
       ],
-      "WORKDAY",
+      [
+        "INADEQUATE",
+        "LISTEN"
+      ],
       "NEHEMIAH 6 : 9"
     ],
     [
-      14,
-      28,
+      6,
+      13,
       [
-        "YOU ARE CARRYING A LOAD",
-        "AND THE PRESSURE",
-        "FEELS VERY REAL"
+        "THEY ALL MADE US AFRAID",
+        "THEIR HANDS SHALL BE WEAKENED",
+        "THAT IT BE NOT DONE"
       ],
-      "PRESSURE",
+      [
+        "WEAKENED",
+        "NOT DONE"
+      ],
       "NEHEMIAH 6 : 9"
     ],
     [
-      28,
-      42,
+      13,
+      18,
       [
-        "LISTEN TO THE WORD",
-        "OF THE LORD FROM",
-        "NEHEMIAH CHAPTER SIX"
+        "NOW THEREFORE O GOD",
+        "STRENGTHEN MY HANDS"
       ],
-      "LORD",
-      "NEHEMIAH 6 : 9"
-    ],
-    [
-      42,
-      58,
       [
-        "THEY WERE ALL TRYING",
-        "TO FRIGHTEN US THINKING",
-        "HANDS WILL GET WEAK"
-      ],
-      "FRIGHTEN",
-      "NEHEMIAH 6 : 9"
-    ],
-    [
-      58,
-      72,
-      [
-        "BUT NOW O GOD",
-        "STRENGTHEN MY",
+        "STRENGTHEN",
         "HANDS"
       ],
-      "STRENGTHEN",
       "NEHEMIAH 6 : 9"
     ],
     [
-      72,
-      88,
+      18,
+      25,
       [
-        "WHEN THE DEMANDS PRESS IN",
-        "ON EVERY SIDE",
-        "RENEW OUR STRENGTH"
+        "WHEN VOICES OF SELF DOUBT",
+        "TELL YOU EFFORTS ARE USELESS",
+        "TURN TO HEAVEN"
       ],
-      "DEMANDS",
+      [
+        "SELF DOUBT",
+        "HEAVEN"
+      ],
       "NEHEMIAH 6 : 9"
     ],
     [
-      88,
-      105,
+      25,
+      32,
       [
-        "GRANT US QUIET COURAGE",
-        "TO KEEP GOING FORWARD",
-        "HIS GRACE SUFFICES"
+        "WHEN YOUR HANDS GROW WEARY",
+        "UNDER HEAVY NOON DEMANDS",
+        "RECEIVE HIS STEADY GRACE"
       ],
-      "COURAGE",
+      [
+        "WEARY",
+        "STEADY GRACE"
+      ],
+      "NEHEMIAH 6 : 9"
+    ],
+    [
+      32,
+      39,
+      [
+        "MAY HE LIFT INTIMIDATION",
+        "OFF YOUR MIDDAY ASSIGNMENT",
+        "GRANT QUIET COURAGE"
+      ],
+      [
+        "INTIMIDATION",
+        "COURAGE"
+      ],
+      "NEHEMIAH 6 : 9"
+    ],
+    [
+      39,
+      44,
+      [
+        "SUBSCRIBE TO MIDDAY WATCH",
+        "PAUSE WITH US TOMORROW"
+      ],
+      [
+        "SUBSCRIBE",
+        "MIDDAY WATCH"
+      ],
       "NEHEMIAH 6 : 9"
     ]
   ],
   "beats": [
     {
-      "a": "Right in the middle of your busy workday, take a breath and turn your heart to God.",
+      "a": "If the overwhelming pressure",
       "kind": "phrase",
       "words": [
-        "MIDDLE",
-        "WORKDAY",
-        "HEART"
-      ],
-      "hi": 1,
-      "slot": "C"
-    },
-    {
-      "a": "You are carrying a heavy load right now, and the pressure feels very real.",
-      "kind": "phrase",
-      "words": [
-        "CARRYING",
-        "LOAD",
+        "OVERWHELMING",
         "PRESSURE"
       ],
-      "hi": 2,
+      "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Listen to the word of the Lord from Nehemiah chapter six, verse nine.",
+      "a": "For they all made us afraid",
       "kind": "phrase",
       "words": [
-        "LISTEN",
-        "WORD",
-        "NEHEMIAH"
-      ],
-      "hi": 2,
-      "slot": "C"
-    },
-    {
-      "a": "They were all trying to frighten us, thinking, their hands will get too weak for the work.",
-      "kind": "phrase",
-      "words": [
-        "FRIGHTEN",
-        "WEAK",
+        "WEAKENED",
         "WORK"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "But now, O God, strengthen my hands.",
+      "a": "Now therefore, O God",
       "kind": "phrase",
       "words": [
-        "GOD",
         "STRENGTHEN",
         "HANDS"
       ],
-      "hi": 1,
+      "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Lord, when the demands of this hour press in on every side, renew our inward strength.",
+      "a": "Lord, when voices of self-doubt",
       "kind": "phrase",
       "words": [
-        "DEMANDS",
-        "HOUR",
-        "STRENGTH"
+        "SELF-DOUBT",
+        "HEAVEN"
       ],
-      "hi": 2,
+      "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Grant us the quiet courage to keep going, trusting that Your grace is completely sufficient for today.",
+      "a": "When your hands grow weary",
       "kind": "phrase",
       "words": [
-        "COURAGE",
-        "GRACE",
-        "SUFFICIENT"
+        "WEARY",
+        "STEADY"
       ],
-      "hi": 1,
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May He lift the intimidation",
+      "kind": "phrase",
+      "words": [
+        "INTIMIDATION",
+        "COURAGE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Midday Watch",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "TOMORROW"
+      ],
+      "hi": 0,
       "slot": "C"
     }
   ],

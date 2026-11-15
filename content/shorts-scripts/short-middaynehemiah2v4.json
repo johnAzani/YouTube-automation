@@ -3,312 +3,330 @@
   "channel": "prayer3",
   "psalm": null,
   "title": [
-    "PRAY BEFORE YOU",
-    "ANSWER TODAY"
+    "THE MIDDAY WATCH",
+    "NEHEMIAH TWO FOUR"
   ],
   "poster": [
-    "PAUSE AT MIDDAY",
-    "PRAY BEFORE RESPONDING",
-    "NEHEMIAH 2:4",
-    "THE MIDDAY WATCH"
+    "PAUSE",
+    "AND",
+    "PRAY",
+    "NOW"
   ],
   "end": [
     "SUBSCRIBE",
     "The Midday Watch — pause and pray at noon"
   ],
   "stock_queries": [
-    "sunlight streaming through wooden office window desk midday",
-    "bright midday sky glowing soft cloud architecture",
-    "quiet wooden desk notebook open soft sunlight",
-    "high midday sun illuminating open field calm atmosphere",
-    "clean modern empty hallway soft natural midday sunlight",
-    "calm glass water reflection bright daylight sky",
-    "warm sunbeams soft light shining on wooden table"
+    "sunlight pouring through rustic wooden window",
+    "dust motes dancing in warm midday sunbeam",
+    "quiet wooden desk with old open book in light",
+    "high noon sun shining through tall window blinds",
+    "serene empty room bathed in bright afternoon light",
+    "sunlit desk with quill and paper in quiet space",
+    "bright midday sun casting long shadows on floor",
+    "peaceful sanctuary bathed in warm noon sunlight"
   ],
   "scenes": [
     {
-      "a": "Before you answer that difficult email or make this midday decision, turn your heart upward.",
+      "a": "That urgent decision resting on your desk demands an answer you feel unprepared to give.",
       "img": "short-middaynehemiah2v4-scene-01.jpg",
-      "kicker": "NEHEMIAH 2:4",
-      "sub": "TURN YOUR HEART UPWARD",
+      "kicker": "NEHEMIAH TWO FOUR",
+      "sub": "THAT URGENT DECISION",
       "cam": "push_in",
       "focus": [
         0.5,
-        0.5
+        0.45
       ]
     },
     {
-      "a": "Nehemiah 2:4 says, 'The king said to me, What is it you want? Then I prayed to the God of heaven.'",
+      "a": "When the pressure rises and every second counts, remember you can speak directly to heaven.",
       "img": "short-middaynehemiah2v4-scene-02.jpg",
-      "kicker": "NEHEMIAH 2:4",
-      "sub": "I PRAYED TO GOD",
+      "kicker": "NEHEMIAH TWO FOUR",
+      "sub": "SPEAK TO HEAVEN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hear the record of a servant who threw a silent prayer upward before the king spoke again.",
+      "img": "short-middaynehemiah2v4-scene-03.jpg",
+      "kicker": "NEHEMIAH TWO FOUR",
+      "sub": "A SILENT PRAYER",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Then the king said unto me, For what dost thou make request?",
+      "img": "short-middaynehemiah2v4-scene-04.jpg",
+      "kicker": "NEHEMIAH TWO FOUR",
+      "sub": "THE KING SAID UNTO ME",
       "cam": "pan_right",
       "focus": [
-        0.4,
-        0.5
+        0.5,
+        0.45
       ]
     },
     {
-      "a": "Lord, in the split second before we speak, give us the wisdom to seek Your face.",
-      "img": "short-middaynehemiah2v4-scene-03.jpg",
-      "kicker": "NEHEMIAH 2:4",
-      "sub": "SEEK HIS FACE FIRST",
+      "a": "So I prayed to the God of heaven.",
+      "img": "short-middaynehemiah2v4-scene-05.jpg",
+      "kicker": "NEHEMIAH TWO FOUR",
+      "sub": "PRAYED TO THE GOD OF HEAVEN",
       "cam": "tilt_up",
       "focus": [
         0.5,
-        0.6
+        0.45
       ]
     },
     {
-      "a": "When pressure demands an immediate response, teach us to whisper a prayer first.",
-      "img": "short-middaynehemiah2v4-scene-04.jpg",
-      "kicker": "NEHEMIAH 2:4",
-      "sub": "WHISPER A PRAYER FIRST",
-      "cam": "pull_out",
-      "focus": [
-        0.5,
-        0.4
-      ]
-    },
-    {
-      "a": "You hear the silent cries of our heart in busy corridors and quiet offices alike.",
-      "img": "short-middaynehemiah2v4-scene-05.jpg",
-      "kicker": "NEHEMIAH 2:4",
-      "sub": "HE HEARS YOUR HEART",
-      "cam": "pan_left",
-      "focus": [
-        0.6,
-        0.5
-      ]
-    },
-    {
-      "a": "Grant us clarity, courage, and divine direction right now in the middle of our workday.",
+      "a": "Lord, grant us that same instantaneous trust when our hearts are heavy with tasks today.",
       "img": "short-middaynehemiah2v4-scene-06.jpg",
-      "kicker": "NEHEMIAH 2:4",
-      "sub": "CLARITY AND DIRECTION",
+      "kicker": "NEHEMIAH TWO FOUR",
+      "sub": "GRANT US INSTANT TRUST",
       "cam": "push_in",
       "focus": [
         0.5,
-        0.5
+        0.45
       ]
     },
     {
-      "a": "Subscribe to The Midday Watch for daily noonday prayer.",
+      "a": "Direct our steps in this quiet noon hour and keep our minds anchored in your peace.",
       "img": "short-middaynehemiah2v4-scene-07.jpg",
-      "kicker": "THE MIDDAY WATCH",
-      "sub": "PAUSE AND PRAY AT NOON",
+      "kicker": "NEHEMIAH TWO FOUR",
+      "sub": "DIRECT OUR STEPS",
       "cam": "pull_out",
       "focus": [
         0.5,
-        0.5
+        0.45
+      ]
+    },
+    {
+      "a": "In Jesus name we pray, amen.",
+      "img": "short-middaynehemiah2v4-scene-08.jpg",
+      "kicker": "NEHEMIAH TWO FOUR",
+      "sub": "IN JESUS NAME",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
       ]
     }
   ],
   "captions": [
     [
       0,
-      6,
-      "Before you answer that difficult email or make this midday decision, turn your heart upward."
+      14,
+      "That urgent decision resting on your desk demands an answer you feel unprepared to give."
     ],
     [
-      6,
-      13,
-      "Nehemiah 2:4 says, 'The king said to me, What is it you want? Then I prayed to the God of heaven.'"
+      15,
+      29,
+      "When the pressure rises and every second counts, remember you can speak directly to heaven."
     ],
     [
-      13,
-      19,
-      "Lord, in the split second before we speak, give us the wisdom to seek Your face."
+      30,
+      44,
+      "Hear the record of a servant who threw a silent prayer upward before the king spoke again."
     ],
     [
-      19,
-      25,
-      "When pressure demands an immediate response, teach us to whisper a prayer first."
+      45,
+      59,
+      "Then the king said unto me, For what dost thou make request?"
     ],
     [
-      25,
-      31,
-      "You hear the silent cries of our heart in busy corridors and quiet offices alike."
+      60,
+      74,
+      "So I prayed to the God of heaven."
     ],
     [
-      31,
-      37,
-      "Grant us clarity, courage, and divine direction right now in the middle of our workday."
+      75,
+      89,
+      "Lord, grant us that same instantaneous trust when our hearts are heavy with tasks today."
     ],
     [
-      37,
-      42,
-      "Subscribe to The Midday Watch for daily noonday prayer."
+      90,
+      104,
+      "Direct our steps in this quiet noon hour and keep our minds anchored in your peace."
+    ],
+    [
+      105,
+      115,
+      "In Jesus name we pray, amen."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      6,
+      14,
       [
-        "BEFORE YOU ANSWER THAT",
-        "DIFFICULT EMAIL OR DECISION",
-        "TURN YOUR HEART UPWARD"
+        "THAT URGENT DECISION",
+        "RESTING ON YOUR DESK",
+        "DEMANDS AN ANSWER"
       ],
-      [
-        "DECISION",
-        "UPWARD"
-      ],
+      "DECISION",
       "NEHEMIAH 2 : 4"
     ],
     [
-      6,
-      13,
+      15,
+      29,
       [
-        "THE KING SAID WHAT DO YOU WANT",
-        "THEN I PRAYED TO THE",
-        "GOD OF HEAVEN"
+        "WHEN THE PRESSURE RISES",
+        "EVERY SECOND COUNTS",
+        "SPEAK TO HEAVEN"
       ],
-      [
-        "PRAYED",
-        "HEAVEN"
-      ],
+      "PRESSURE",
       "NEHEMIAH 2 : 4"
     ],
     [
-      13,
-      19,
+      30,
+      44,
       [
-        "IN THE SPLIT SECOND BEFORE WE SPEAK",
-        "GIVE US WISDOM TO",
-        "SEEK YOUR FACE"
+        "HEAR THE RECORD",
+        "A SILENT PRAYER",
+        "UPWARD TO GOD"
       ],
-      [
-        "WISDOM",
-        "FACE"
-      ],
+      "PRAYER",
       "NEHEMIAH 2 : 4"
     ],
     [
-      19,
-      25,
+      45,
+      59,
       [
-        "WHEN PRESSURE DEMANDS A RESPONSE",
-        "TEACH US TO WHISPER",
-        "A PRAYER FIRST"
+        "THEN THE KING SAID",
+        "UNTO ME",
+        "FOR WHAT DOST THOU"
       ],
-      [
-        "WHISPER",
-        "PRAYER"
-      ],
+      "REQUEST",
       "NEHEMIAH 2 : 4"
     ],
     [
-      25,
-      31,
+      60,
+      74,
       [
-        "YOU HEAR THE SILENT CRIES",
-        "OF OUR HEART IN BUSY CORRIDORS",
-        "AND QUIET OFFICES"
+        "SO I PRAYED",
+        "TO THE GOD",
+        "OF HEAVEN"
       ],
-      [
-        "SILENT",
-        "HEART"
-      ],
+      "HEAVEN",
       "NEHEMIAH 2 : 4"
     ],
     [
-      31,
-      37,
+      75,
+      89,
       [
-        "GRANT US CLARITY COURAGE",
-        "AND DIVINE DIRECTION RIGHT NOW",
-        "IN OUR WORKDAY"
+        "LORD GRANT US",
+        "INSTANTANEOUS TRUST",
+        "HEAVY WITH TASKS"
       ],
-      [
-        "CLARITY",
-        "DIRECTION"
-      ],
+      "TRUST",
       "NEHEMIAH 2 : 4"
     ],
     [
-      37,
-      42,
+      90,
+      104,
       [
-        "SUBSCRIBE TO THE MIDDAY WATCH",
-        "FOR DAILY NOONDAY PRAYER"
+        "DIRECT OUR STEPS",
+        "QUIET NOON HOUR",
+        "ANCHORED IN PEACE"
       ],
+      "STEPS",
+      "NEHEMIAH 2 : 4"
+    ],
+    [
+      105,
+      115,
       [
-        "SUBSCRIBE",
-        "MIDDAY"
+        "IN JESUS NAME",
+        "WE PRAY",
+        "AMEN"
       ],
+      "AMEN",
       "NEHEMIAH 2 : 4"
     ]
   ],
   "beats": [
     {
-      "a": "Before you answer that difficult email or make this midday decision, turn your heart upward.",
+      "a": "That urgent decision resting on your desk demands an answer you feel unprepared to give.",
       "kind": "phrase",
       "words": [
-        "ANSWER",
+        "THAT",
         "DECISION"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Nehemiah 2:4 says, 'The king said to me, What is it you want? Then I prayed to the God of heaven.'",
+      "a": "When the pressure rises and every second counts, remember you can speak directly to heaven.",
       "kind": "phrase",
       "words": [
-        "PRAYED",
-        "GOD"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Lord, in the split second before we speak, give us the wisdom to seek Your face.",
-      "kind": "phrase",
-      "words": [
-        "WISDOM",
-        "SEEK"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "When pressure demands an immediate response, teach us to whisper a prayer first.",
-      "kind": "phrase",
-      "words": [
-        "WHISPER",
-        "PRAYER"
+        "PRESSURE",
+        "RISES"
       ],
       "hi": 1,
       "slot": "C"
     },
     {
-      "a": "You hear the silent cries of our heart in busy corridors and quiet offices alike.",
+      "a": "Hear the record of a servant who threw a silent prayer upward before the king spoke again.",
       "kind": "phrase",
       "words": [
         "SILENT",
-        "CRIES"
+        "PRAYER"
       ],
       "hi": 1,
       "slot": "C"
     },
     {
-      "a": "Grant us clarity, courage, and divine direction right now in the middle of our workday.",
+      "a": "Then the king said unto me, For what dost thou make request?",
       "kind": "phrase",
       "words": [
-        "CLARITY",
-        "DIRECTION"
+        "KING",
+        "REQUEST"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "So I prayed to the God of heaven.",
+      "kind": "phrase",
+      "words": [
+        "PRAYED",
+        "HEAVEN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, grant us that same instantaneous trust when our hearts are heavy with tasks today.",
+      "kind": "phrase",
+      "words": [
+        "GRANT",
+        "TRUST"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Direct our steps in this quiet noon hour and keep our minds anchored in your peace.",
+      "kind": "phrase",
+      "words": [
+        "DIRECT",
+        "PEACE"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Subscribe to The Midday Watch for daily noonday prayer.",
+      "a": "In Jesus name we pray, amen.",
       "kind": "phrase",
       "words": [
-        "SUBSCRIBE",
-        "PRAYER"
+        "JESUS",
+        "AMEN"
       ],
-      "hi": 0,
+      "hi": 1,
       "slot": "C"
     }
   ],
