@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T20:01:43Z",
+  "generated_at": "2026-11-15T20:04:21Z",
   "monitor_generated_at": "2026-11-15T20:00:23.494532+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 293,
+    "published_total": 294,
     "published_longform": 118,
-    "published_shorts": 175,
-    "public_total": 291,
+    "published_shorts": 176,
+    "public_total": 292,
     "queued_longform": 61,
-    "queued_shorts": 79,
+    "queued_shorts": 78,
     "automations_ok": 12,
     "automations_total": 13,
     "network_healthy": false
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 15,
+        "published_total": 16,
         "published_longform": 6,
-        "published_shorts": 9,
-        "thumbnail_pending": 15,
-        "public_total": 15,
+        "published_shorts": 10,
+        "thumbnail_pending": 16,
+        "public_total": 16,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-GARDENPHILIPPIANS4V6",
-        "title": "Pray This Philippians 4:6-7 Prayer of Thanksgiving | Find Gods Peace #Shorts",
+        "id": "SHORT-GARDEN1THESSALONIANS5V16",
+        "title": "Pray This 1 Thessalonians 5:16-18 Prayer of Thanksgiving | The Praise Garden #Shorts",
         "format": "short",
-        "youtube_video_id": "P9NEDZiW33k",
-        "watch_url": "https://www.youtube.com/shorts/P9NEDZiW33k",
+        "youtube_video_id": "0rekYD2IY3E",
+        "watch_url": "https://www.youtube.com/shorts/0rekYD2IY3E",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T15:11:15Z"
+        "published_at": "2026-11-15T20:03:40Z"
       },
       "next_queued_longform": {
         "id": "0706",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-garden1thessalonians5v16",
-        "scripture": "1 Thessalonians 5:16-18",
+        "short": "short-gardenpsalm107v1",
+        "scripture": "Psalm 107:1",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDEN1THESSALONIANS5V16",
+      "slug": "short-garden1thessalonians5v16-thanksgiving-prayer",
+      "file": "short-garden1thessalonians5v16-thanksgiving-prayer.md",
+      "title": "Pray This 1 Thessalonians 5:16-18 Prayer of Thanksgiving | The Praise Garden #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T20:03:40Z",
+      "youtube_video_id": "0rekYD2IY3E",
+      "watch_url": "https://www.youtube.com/shorts/0rekYD2IY3E",
+      "youtu_be_url": "https://youtu.be/0rekYD2IY3E",
+      "shorts_url": "https://www.youtube.com/shorts/0rekYD2IY3E",
+      "studio_url": "https://studio.youtube.com/video/0rekYD2IY3E/edit",
+      "thumb_url": "https://i.ytimg.com/vi/0rekYD2IY3E/hqdefault.jpg",
+      "thumb_text": "REJOICE EVERMORE \u00b7 PRAY WITHOUT CEASING",
+      "thumbnail_pending": true,
+      "duration_label": "60s",
+      "words": 634
+    },
     {
       "id": "SHORT-PROVISIONPROVERBS3V9",
       "slug": "short-provisionproverbs3v9-stewardship-prayer",
@@ -9223,17 +9247,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-garden1thessalonians5v16",
-        "file": "0704-short-garden1thessalonians5v16.yml",
-        "companion_longform_id": "0704",
-        "scripture": "1 Thessalonians 5:16-18",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenpsalm107v1",
