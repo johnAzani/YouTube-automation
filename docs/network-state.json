@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T06:56:03Z",
+  "generated_at": "2026-11-15T06:56:12Z",
   "monitor_generated_at": "2026-11-15T06:50:48.927372+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 254,
+    "published_total": 255,
     "published_longform": 111,
-    "published_shorts": 143,
-    "public_total": 252,
+    "published_shorts": 144,
+    "public_total": 253,
     "queued_longform": 63,
-    "queued_shorts": 100,
+    "queued_shorts": 99,
     "automations_ok": 12,
     "automations_total": 12,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 45,
+        "published_total": 46,
         "published_longform": 16,
-        "published_shorts": 29,
+        "published_shorts": 30,
         "thumbnail_pending": 3,
-        "public_total": 44,
+        "public_total": 45,
         "queued_longform": 11,
         "queued_other": 5,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-PSALM56V3",
-        "title": "Say This Psalm 56:3 Prayer Before You Sleep | The Secret Place #Shorts",
+        "id": "SHORT-ISAIAH30V15",
+        "title": "Say This Isaiah 30:15 Prayer Before You Sleep | Isaiah 30:15 #Shorts",
         "format": "short",
-        "youtube_video_id": "uSsaVvsLsfU",
-        "watch_url": "https://www.youtube.com/shorts/uSsaVvsLsfU",
+        "youtube_video_id": "57j_VQcPFlI",
+        "watch_url": "https://www.youtube.com/shorts/57j_VQcPFlI",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T02:18:07Z"
+        "published_at": "2026-11-15T06:55:19Z"
       },
       "next_queued_longform": {
         "id": "0025",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-isaiah30v15",
-        "scripture": "Isaiah 30:15",
+        "short": "short-philippians4v8",
+        "scripture": "Philippians 4:8",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-ISAIAH30V15",
+      "slug": "short-isaiah30v15-pre-sleep-prayer",
+      "file": "short-isaiah30v15-pre-sleep-prayer.md",
+      "title": "Say This Isaiah 30:15 Prayer Before You Sleep | Isaiah 30:15 #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T06:55:19Z",
+      "youtube_video_id": "57j_VQcPFlI",
+      "watch_url": "https://www.youtube.com/shorts/57j_VQcPFlI",
+      "youtu_be_url": "https://youtu.be/57j_VQcPFlI",
+      "shorts_url": "https://www.youtube.com/shorts/57j_VQcPFlI",
+      "studio_url": "https://studio.youtube.com/video/57j_VQcPFlI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/57j_VQcPFlI/hqdefault.jpg",
+      "thumb_text": "FINDING STRENGTH \u00b7 IN THE QUIET",
+      "thumbnail_pending": false,
+      "duration_label": "53s",
+      "words": 611
+    },
     {
       "id": "SHORT-MIDNIGHTJOEL2V25",
       "slug": "short-midnightjoel2v25-midnight-prayer",
@@ -7719,17 +7743,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-isaiah30v15",
-        "file": "0000-short-isaiah30v15.yml",
-        "companion_longform_id": "",
-        "scripture": "Isaiah 30:15",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-middaypsalm29v11",
