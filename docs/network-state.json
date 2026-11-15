@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T23:29:06Z",
+  "generated_at": "2026-11-15T23:29:33Z",
   "monitor_generated_at": "2026-11-15T22:59:34.787450+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 300,
+    "published_total": 301,
     "published_longform": 120,
-    "published_shorts": 180,
-    "public_total": 298,
+    "published_shorts": 181,
+    "public_total": 299,
     "queued_longform": 59,
-    "queued_shorts": 74,
+    "queued_shorts": 73,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 50,
+        "published_total": 51,
         "published_longform": 17,
-        "published_shorts": 33,
-        "thumbnail_pending": 3,
-        "public_total": 49,
+        "published_shorts": 34,
+        "thumbnail_pending": 4,
+        "public_total": 50,
         "queued_longform": 10,
         "queued_other": 5,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0025",
-        "title": "Bedtime Prayer for Sleep Without Fear: Proverbs 3:24-26",
-        "format": "longform",
-        "youtube_video_id": "3xrS2BqNeWA",
-        "watch_url": "https://youtu.be/3xrS2BqNeWA",
+        "id": "SHORT-PSALM62V1",
+        "title": "Say This Psalm 62:1-2 Prayer Before You Sleep | The Secret Place #Shorts",
+        "format": "short",
+        "youtube_video_id": "-kl7Qg8lQhk",
+        "watch_url": "https://www.youtube.com/shorts/-kl7Qg8lQhk",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T20:28:03Z"
+        "published_at": "2026-11-15T23:28:53Z"
       },
       "next_queued_longform": {
         "id": "0026",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm62v1",
-        "scripture": "Psalm 62:1-2",
+        "short": "short-psalm94v19",
+        "scripture": "Psalm 94:19",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PSALM62V1",
+      "slug": "short-psalm62v1-pre-sleep-prayer",
+      "file": "short-psalm62v1-pre-sleep-prayer.md",
+      "title": "Say This Psalm 62:1-2 Prayer Before You Sleep | The Secret Place #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T23:28:53Z",
+      "youtube_video_id": "-kl7Qg8lQhk",
+      "watch_url": "https://www.youtube.com/shorts/-kl7Qg8lQhk",
+      "youtu_be_url": "https://youtu.be/-kl7Qg8lQhk",
+      "shorts_url": "https://www.youtube.com/shorts/-kl7Qg8lQhk",
+      "studio_url": "https://studio.youtube.com/video/-kl7Qg8lQhk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/-kl7Qg8lQhk/hqdefault.jpg",
+      "thumb_text": "",
+      "thumbnail_pending": true,
+      "duration_label": "58s",
+      "words": 637
+    },
     {
       "id": "SHORT-FAMILYDEUTERONOMY6V6",
       "slug": "short-familydeuteronomy6v6-household-prayer",
@@ -8694,17 +8718,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-psalm62v1",
-        "file": "0000-short-psalm62v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 62:1-2",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm94v19",
