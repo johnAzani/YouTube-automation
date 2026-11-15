@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=el"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE COVENANT SHIELD", "SHIELD OF FAITH", "EPHESIANS 6:16", "PROTECTION PRAYER"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-22T20:07:45Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Before the pressures of the day arrive, pause and ask God to strengthen your heart and mind. Ephesians chapter six, verse sixteen says, Above all, taking the shield of faith, wherewith ye shall be able to quench all the fiery darts of the wicked. Faith is not a promise that life will be easy. It is an invitation to trust God through the struggle. Lord, help us stand in truth, walk in peace, and hold fast to the hope of salvation in Christ. When discouragement comes, remind us of Your promises and teach us to answer fear with prayer. Give us wisdom for today’s choices and compassion for every person who needs encouragement along the way. Type Amen and subscribe to The Covenant Shield for daily prayer and encouragement in God’s keeping.

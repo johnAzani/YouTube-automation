@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["REJOICE EVERMORE", "PRAY WITHOUT CEASING", "GIVE THANKS ALWAYS", "THE PRAISE GARDEN"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-22T20:07:47Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Pause for a quiet moment today, and notice the gentle grace of God surrounding your life. Open your heart with honest gratitude for His faithful love. The word of God declares in First Thessalonians five sixteen through eighteen: Rejoice evermore. Pray without ceasing. In every thing give thanks: for this is the will of God in Christ Jesus concerning you. Heavenly Father, we offer You our praise with sincere thanksgiving. Thank You for Your endless mercies, Your steady comfort, and Your peace. Help us to rejoice in all seasons, knowing You walk with us every single day. We rest in Your grace and magnify Your holy name forever. Subscribe to The Praise Garden to walk with us in daily thanksgiving.
