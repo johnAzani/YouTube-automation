@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T23:30:48Z",
+  "generated_at": "2026-11-15T23:31:15Z",
   "monitor_generated_at": "2026-11-15T22:59:34.787450+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 302,
+    "published_total": 303,
     "published_longform": 120,
-    "published_shorts": 182,
-    "public_total": 300,
+    "published_shorts": 183,
+    "public_total": 301,
     "queued_longform": 59,
-    "queued_shorts": 72,
+    "queued_shorts": 71,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 57,
+        "published_total": 58,
         "published_longform": 24,
-        "published_shorts": 33,
+        "published_shorts": 34,
         "thumbnail_pending": 1,
-        "public_total": 56,
+        "public_total": 57,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM121V1",
-        "title": "Say This Psalm 121:1-2 Prayer at Sunrise | The Morning Altar #Shorts",
+        "id": "SHORT-MORNINGPSALM37V4",
+        "title": "Say This Psalm 37:4 Prayer at Sunrise | Today #Shorts",
         "format": "short",
-        "youtube_video_id": "DuJbT6qQdyA",
-        "watch_url": "https://www.youtube.com/shorts/DuJbT6qQdyA",
+        "youtube_video_id": "oTmG-xdj9AM",
+        "watch_url": "https://www.youtube.com/shorts/oTmG-xdj9AM",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T19:54:48Z"
+        "published_at": "2026-11-15T23:30:24Z"
       },
       "next_queued_longform": {
         "id": "0068",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm37v4",
-        "scripture": "Psalm 37:4",
+        "short": "short-morningpsalm51v10",
+        "scripture": "Psalm 51:10",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM37V4",
+      "slug": "short-morningpsalm37v4-sunrise-prayer",
+      "file": "short-morningpsalm37v4-sunrise-prayer.md",
+      "title": "Say This Psalm 37:4 Prayer at Sunrise | Today #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T23:30:24Z",
+      "youtube_video_id": "oTmG-xdj9AM",
+      "watch_url": "https://www.youtube.com/shorts/oTmG-xdj9AM",
+      "youtu_be_url": "https://youtu.be/oTmG-xdj9AM",
+      "shorts_url": "https://www.youtube.com/shorts/oTmG-xdj9AM",
+      "studio_url": "https://studio.youtube.com/video/oTmG-xdj9AM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/oTmG-xdj9AM/hqdefault.jpg",
+      "thumb_text": "DELIGHT \u00b7 IN THE",
+      "thumbnail_pending": false,
+      "duration_label": "53s",
+      "words": 591
+    },
     {
       "id": "SHORT-MIDDAYGALATIANS6V9",
       "slug": "short-middaygalatians6v9-midday-prayer",
@@ -8721,17 +8745,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-morningpsalm37v4",
-        "file": "0000-short-morningpsalm37v4.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 37:4",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
-      },
       {
         "short": "short-morningpsalm51v10",
         "file": "0000-short-morningpsalm51v10.yml",
