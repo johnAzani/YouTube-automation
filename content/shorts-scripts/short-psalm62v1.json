@@ -1,0 +1,393 @@
+{
+  "key": "short-psalm62v1",
+  "channel": "secret-place",
+  "psalm": 62,
+  "title": [
+    "MY SOUL WAITETH",
+    "UPON GOD"
+  ],
+  "poster": [
+    "PSALM 62:1-2",
+    "MY ROCK AND MY SALVATION",
+    "A NIGHTLY BEDTIME PRAYER",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm starry sky over silent misty forest night",
+    "peaceful glowing lantern on wooden deck dark night",
+    "majestic calm mountain lake under moonlight",
+    "cozy bedroom glowing warm bedside lamp night",
+    "silent dark forest lake with soft moonlight reflection",
+    "calm ocean waves gently touching shoreline at dusk",
+    "soft glowing candle flame in dark quiet room",
+    "misty pine trees illuminated by full moon night sky",
+    "starry night sky over calm mountain peak twilight"
+  ],
+  "scenes": [
+    {
+      "a": "If the decision you must make tomorrow is keeping you awake tonight, listen closely.",
+      "img": "short-psalm62v1-scene-01.jpg",
+      "kicker": "PSALM 62:1",
+      "sub": "REST FOR RESTLESS MINDS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Truly my soul waiteth upon God: from him cometh my salvation.",
+      "img": "short-psalm62v1-scene-02.jpg",
+      "kicker": "PSALM 62:1",
+      "sub": "TRULY MY SOUL WAITETH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He only is my rock and my salvation; he is my defence; I shall not be greatly moved.",
+      "img": "short-psalm62v1-scene-03.jpg",
+      "kicker": "PSALM 62:2",
+      "sub": "HE ONLY IS MY ROCK",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, in this quiet bedroom, I give You every restless thought about tomorrow.",
+      "img": "short-psalm62v1-scene-04.jpg",
+      "kicker": "BEDTIME PRAYER",
+      "sub": "LAY DOWN RESTLESS THOUGHTS",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "You are my steady rock when everything else feels uncertain.",
+      "img": "short-psalm62v1-scene-05.jpg",
+      "kicker": "BEDTIME PRAYER",
+      "sub": "UNSHAKEABLE PEACE TONIGHT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Surround me with Your peace as I lay my head down to sleep.",
+      "img": "short-psalm62v1-scene-06.jpg",
+      "kicker": "BEDTIME PRAYER",
+      "sub": "SLEEP UNDER HIS PROTECTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Guard my mind, protect my heart, and let your presence calm my spirit.",
+      "img": "short-psalm62v1-scene-07.jpg",
+      "kicker": "BEDTIME PRAYER",
+      "sub": "CALM YOUR SPIRIT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "I place my future in Your safe hands tonight. Amen.",
+      "img": "short-psalm62v1-scene-08.jpg",
+      "kicker": "BEDTIME PRAYER",
+      "sub": "SAFE IN HIS HANDS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Subscribe to The Secret Place for nightly prayers.",
+      "img": "short-psalm62v1-scene-09.jpg",
+      "kicker": "THE SECRET PLACE",
+      "sub": "NIGHTLY BEDTIME PRAYERS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If the decision you must make tomorrow is keeping you awake tonight, listen closely."
+    ],
+    [
+      7,
+      15,
+      "Truly my soul waiteth upon God: from him cometh my salvation."
+    ],
+    [
+      15,
+      23,
+      "He only is my rock and my salvation; he is my defence; I shall not be greatly moved."
+    ],
+    [
+      23,
+      31,
+      "Lord, in this quiet bedroom, I give You every restless thought about tomorrow."
+    ],
+    [
+      31,
+      39,
+      "You are my steady rock when everything else feels uncertain."
+    ],
+    [
+      39,
+      47,
+      "Surround me with Your peace as I lay my head down to sleep."
+    ],
+    [
+      47,
+      55,
+      "Guard my mind, protect my heart, and let your presence calm my spirit."
+    ],
+    [
+      55,
+      63,
+      "I place my future in Your safe hands tonight. Amen."
+    ],
+    [
+      63,
+      70,
+      "Subscribe to The Secret Place for nightly prayers."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF THE DECISION YOU MUST MAKE",
+        "TOMORROW IS KEEPING YOU AWAKE",
+        "TONIGHT LISTEN CLOSELY"
+      ],
+      [
+        "DECISION",
+        "AWAKE"
+      ],
+      "PSALM 62 : 1"
+    ],
+    [
+      7,
+      15,
+      [
+        "TRULY MY SOUL WAITETH UPON GOD",
+        "FROM HIM COMETH MY SALVATION"
+      ],
+      [
+        "SOUL",
+        "SALVATION"
+      ],
+      "PSALM 62 : 1"
+    ],
+    [
+      15,
+      23,
+      [
+        "HE ONLY IS MY ROCK",
+        "AND MY SALVATION HE IS MY DEFENCE",
+        "I SHALL NOT BE GREATLY MOVED"
+      ],
+      [
+        "ROCK",
+        "DEFENCE"
+      ],
+      "PSALM 62 : 2"
+    ],
+    [
+      23,
+      31,
+      [
+        "LORD IN THIS QUIET BEDROOM",
+        "I GIVE YOU EVERY RESTLESS THOUGHT",
+        "ABOUT TOMORROW"
+      ],
+      [
+        "QUIET",
+        "RESTLESS"
+      ],
+      "PSALM 62 : 1-2"
+    ],
+    [
+      31,
+      39,
+      [
+        "YOU ARE MY STEADY ROCK",
+        "WHEN EVERYTHING ELSE FEELS UNCERTAIN"
+      ],
+      [
+        "STEADY",
+        "ROCK"
+      ],
+      "PSALM 62 : 1-2"
+    ],
+    [
+      39,
+      47,
+      [
+        "SURROUND ME WITH YOUR PEACE",
+        "AS I LAY MY HEAD DOWN TO SLEEP"
+      ],
+      [
+        "PEACE",
+        "SLEEP"
+      ],
+      "PSALM 62 : 1-2"
+    ],
+    [
+      47,
+      55,
+      [
+        "GUARD MY MIND PROTECT MY HEART",
+        "AND LET YOUR PRESENCE CALM MY SPIRIT"
+      ],
+      [
+        "GUARD",
+        "CALM"
+      ],
+      "PSALM 62 : 1-2"
+    ],
+    [
+      55,
+      63,
+      [
+        "I PLACE MY FUTURE IN YOUR",
+        "SAFE HANDS TONIGHT AMEN"
+      ],
+      [
+        "FUTURE",
+        "SAFE"
+      ],
+      "PSALM 62 : 1-2"
+    ],
+    [
+      63,
+      70,
+      [
+        "SUBSCRIBE TO THE SECRET PLACE",
+        "FOR NIGHTLY PRAYERS"
+      ],
+      [
+        "SECRET PLACE",
+        "PRAYERS"
+      ],
+      "PSALM 62 : 1-2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the decision you must make tomorrow is keeping you awake tonight, listen closely.",
+      "kind": "phrase",
+      "words": [
+        "DECISION",
+        "AWAKE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Truly my soul waiteth upon God: from him cometh my salvation.",
+      "kind": "phrase",
+      "words": [
+        "SOUL",
+        "SALVATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He only is my rock and my salvation; he is my defence; I shall not be greatly moved.",
+      "kind": "phrase",
+      "words": [
+        "ROCK",
+        "DEFENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, in this quiet bedroom, I give You every restless thought about tomorrow.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "RESTLESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You are my steady rock when everything else feels uncertain.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "ROCK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Surround me with Your peace as I lay my head down to sleep.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "SLEEP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guard my mind, protect my heart, and let your presence calm my spirit.",
+      "kind": "phrase",
+      "words": [
+        "GUARD",
+        "CALM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I place my future in Your safe hands tonight. Amen.",
+      "kind": "phrase",
+      "words": [
+        "FUTURE",
+        "SAFE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Secret Place for nightly prayers.",
+      "kind": "phrase",
+      "words": [
+        "SECRET PLACE",
+        "PRAYERS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 62:1-2"
+}

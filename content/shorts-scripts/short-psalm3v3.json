@@ -3,34 +3,33 @@
   "channel": "secret-place",
   "psalm": 3,
   "title": [
-    "RESTING IN",
-    "HIS PRESENCE"
+    "A SHIELD FOR",
+    "YOUR WEARY SOUL"
   ],
   "poster": [
-    "FIND PEACE",
+    "FINDING REST",
     "IN THE",
-    "SECRET PLACE",
-    "TONIGHT"
+    "SHADOW OF GOD",
+    "PSALM 3:3-5"
   ],
   "end": [
     "SUBSCRIBE",
     "The Secret Place — prayers every day"
   ],
   "stock_queries": [
-    "calm mountain lake moonlit night",
-    "flickering candle on dark wooden table",
-    "soft mist over forest stream at dusk",
-    "starry night sky over ocean waves",
-    "glowing lantern in quiet garden",
-    "peaceful embers in stone fireplace",
-    "serene pine forest in soft moonlight"
+    "misty forest sunrise cinematic",
+    "calm mountain lake night",
+    "candle light flickering in dark room",
+    "slow flowing river stones",
+    "starry night sky time lapse",
+    "soft golden light on meadow grass"
   ],
   "scenes": [
     {
-      "a": "Take a deep breath and let go of the day.",
+      "a": "You are staring at the shadows",
       "img": "short-psalm3v3-scene-01.jpg",
-      "kicker": "PSALM 3:3",
-      "sub": "FIND YOUR REST",
+      "kicker": "A SHIELD FOR YOU",
+      "sub": "FINDING REST IN THE NIGHT",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -38,32 +37,10 @@
       ]
     },
     {
-      "a": "You are safe here.",
+      "a": "But thou, O LORD, art a shield for me",
       "img": "short-psalm3v3-scene-02.jpg",
       "kicker": "PSALM 3:3",
-      "sub": "YOU ARE SECURE",
-      "cam": "pan_left",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "But You, O Lord, are a shield about me, my glory, and the lifter of my head.",
-      "img": "short-psalm3v3-scene-03.jpg",
-      "kicker": "PSALM 3:3",
-      "sub": "HE IS YOUR SHIELD",
-      "cam": "tilt_up",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "I cried aloud to the Lord, and he answered me from his holy hill.",
-      "img": "short-psalm3v3-scene-04.jpg",
-      "kicker": "PSALM 3:4",
-      "sub": "HE HEARS YOUR VOICE",
+      "sub": "GOD IS YOUR DEFENSE",
       "cam": "pull_out",
       "focus": [
         0.5,
@@ -71,10 +48,21 @@
       ]
     },
     {
-      "a": "I lay down and slept; I woke again, for the Lord sustained me.",
-      "img": "short-psalm3v3-scene-05.jpg",
-      "kicker": "PSALM 3:5",
-      "sub": "HE SUSTAINS YOU",
+      "a": "my glory, and the lifter up of mine head",
+      "img": "short-psalm3v3-scene-03.jpg",
+      "kicker": "PSALM 3:3",
+      "sub": "HE LIFTS YOUR HEAD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I cried unto the LORD with my voice",
+      "img": "short-psalm3v3-scene-04.jpg",
+      "kicker": "PSALM 3:4",
+      "sub": "HE HEARS YOUR VOICE",
       "cam": "pan_right",
       "focus": [
         0.5,
@@ -82,22 +70,22 @@
       ]
     },
     {
-      "a": "Father, quiet the thoughts that linger.",
-      "img": "short-psalm3v3-scene-06.jpg",
-      "kicker": "PRAYER",
-      "sub": "RELEASE YOUR WORRIES",
-      "cam": "push_in",
+      "a": "I laid me down and slept",
+      "img": "short-psalm3v3-scene-05.jpg",
+      "kicker": "PSALM 3:5",
+      "sub": "REST IN HIS CARE",
+      "cam": "tilt_up",
       "focus": [
         0.5,
         0.5
       ]
     },
     {
-      "a": "May Your peace guard the heart of the one listening now.",
-      "img": "short-psalm3v3-scene-07.jpg",
-      "kicker": "PRAYER",
-      "sub": "REST IN HIS LOVE",
-      "cam": "tilt_up",
+      "a": "for the LORD sustained me",
+      "img": "short-psalm3v3-scene-06.jpg",
+      "kicker": "PSALM 3:5",
+      "sub": "HE SUSTAINS YOU",
+      "cam": "push_in",
       "focus": [
         0.5,
         0.5
@@ -108,37 +96,52 @@
     [
       0,
       8,
-      "Take a deep breath and let go of the day."
+      "You are staring at the shadows, feeling the weight of the day pressing upon you."
     ],
     [
       8,
-      16,
-      "You are safe here. But You, O Lord, are a shield about me, my glory, and the lifter of my head."
+      18,
+      "But thou, O LORD, art a shield for me; my glory, and the lifter up of mine head."
     ],
     [
-      16,
-      24,
-      "I cried aloud to the Lord, and he answered me from his holy hill."
+      18,
+      28,
+      "I cried unto the LORD with my voice, and he heard me out of his holy hill."
     ],
     [
-      24,
-      32,
-      "I lay down and slept; I woke again, for the Lord sustained me."
+      28,
+      38,
+      "I laid me down and slept; I awaked; for the LORD sustained me."
     ],
     [
-      32,
-      40,
-      "Father, quiet the thoughts that linger. May Your peace guard the heart of the one listening now."
-    ],
-    [
-      40,
+      38,
       48,
-      "Sleep in the shelter of His wings and trust in His constant grace tonight. Amen."
+      "Father, let this truth wrap around my anxious heart like a warm, thick blanket tonight."
     ],
     [
       48,
-      55,
-      "Subscribe to The Secret Place for prayers every day."
+      58,
+      "May your strength become my pillow as I surrender every unresolved worry into your keeping."
+    ],
+    [
+      58,
+      68,
+      "I trust you to guard my dreams and renew my spirit for the coming morning light."
+    ],
+    [
+      68,
+      78,
+      "Lord, thank you for your presence, your peace, and the promise of your steady hand."
+    ],
+    [
+      78,
+      88,
+      "Guide me into deep, restorative rest knowing that I am never alone in the darkness."
+    ],
+    [
+      88,
+      98,
+      "Amen. May you find complete comfort in these words. Please subscribe to The Secret Place."
     ]
   ],
   "kinetic_phrases": [
@@ -146,175 +149,186 @@
       0,
       8,
       [
-        "TAKE A DEEP",
-        "BREATH AND",
-        "LET GO OF",
-        "THE DAY"
+        "YOU ARE STARING",
+        "AT THE SHADOWS",
+        "FEELING THE WEIGHT",
+        "OF THE DAY"
       ],
       [
-        "DEEP",
-        "BREATH"
+        "WEIGHT"
       ],
-      "PSALM 3:3"
+      "PSALM 3"
     ],
     [
       8,
-      16,
+      18,
       [
-        "YOU ARE SAFE",
-        "HE IS YOUR",
-        "SHIELD AND",
-        "GLORY NOW"
+        "BUT THOU O LORD",
+        "ART A SHIELD",
+        "FOR ME MY GLORY",
+        "LIFTER UP OF HEAD"
       ],
       [
-        "SAFE",
         "SHIELD"
       ],
       "PSALM 3:3"
     ],
     [
-      16,
-      24,
+      18,
+      28,
       [
-        "I CRIED ALOUD",
-        "HE ANSWERED ME",
-        "FROM HIS",
-        "HOLY HILL"
+        "I CRIED UNTO THE",
+        "LORD WITH MY VOICE",
+        "AND HE HEARD ME",
+        "OUT OF HIS HILL"
       ],
       [
-        "CRIED",
-        "ANSWERED"
+        "HEARD"
       ],
       "PSALM 3:4"
     ],
     [
-      24,
-      32,
+      28,
+      38,
       [
-        "I LAY DOWN",
-        "I SLEPT WELL",
-        "THE LORD",
+        "I LAID ME DOWN",
+        "AND SLEPT I AWAKED",
+        "FOR THE LORD",
         "SUSTAINED ME"
       ],
       [
-        "SLEPT",
         "SUSTAINED"
       ],
       "PSALM 3:5"
     ],
     [
-      32,
-      40,
-      [
-        "FATHER QUIET",
-        "THOUGHTS THAT",
-        "LINGER NOW",
-        "GUARD MY HEART"
-      ],
-      [
-        "QUIET",
-        "GUARD"
-      ],
-      "PSALM 3:5"
-    ],
-    [
-      40,
+      38,
       48,
       [
-        "SLEEP IN HIS",
-        "SHELTER WINGS",
-        "TRUST IN HIS",
-        "CONSTANT GRACE"
+        "FATHER LET THIS",
+        "TRUTH WRAP AROUND",
+        "MY ANXIOUS HEART",
+        "LIKE A BLANKET"
       ],
       [
-        "SHELTER",
-        "GRACE"
+        "BLANKET"
       ],
-      "PSALM 3:5"
+      "PSALM 3"
     ],
     [
       48,
-      55,
+      58,
       [
-        "SUBSCRIBE FOR",
-        "PEACEFUL PRAYERS",
-        "EVERY SINGLE",
-        "DAY AHEAD"
+        "MAY YOUR STRENGTH",
+        "BECOME MY PILLOW",
+        "SURRENDER EVERY",
+        "UNRESOLVED WORRY"
       ],
       [
-        "SUBSCRIBE",
-        "PRAYERS"
+        "SURRENDER"
       ],
-      "PSALM 3:5"
+      "PSALM 3"
+    ],
+    [
+      58,
+      68,
+      [
+        "I TRUST YOU",
+        "TO GUARD MY DREAMS",
+        "RENEW MY SPIRIT",
+        "FOR THE MORNING"
+      ],
+      [
+        "RENEW"
+      ],
+      "PSALM 3"
+    ],
+    [
+      68,
+      78,
+      [
+        "LORD THANK YOU",
+        "FOR YOUR PRESENCE",
+        "YOUR PEACE AND",
+        "YOUR STEADY HAND"
+      ],
+      [
+        "PRESENCE"
+      ],
+      "PSALM 3"
+    ],
+    [
+      78,
+      88,
+      [
+        "GUIDE ME INTO",
+        "DEEP RESTORATIVE",
+        "REST KNOWING I",
+        "AM NOT ALONE"
+      ],
+      [
+        "REST"
+      ],
+      "PSALM 3"
+    ],
+    [
+      88,
+      98,
+      [
+        "AMEN MAY YOU FIND",
+        "COMPLETE COMFORT",
+        "PLEASE SUBSCRIBE",
+        "TO THE CHANNEL"
+      ],
+      [
+        "SUBSCRIBE"
+      ],
+      "PSALM 3"
     ]
   ],
   "beats": [
     {
-      "a": "Take a deep breath and let go of the day.",
+      "a": "You are staring at the shadows",
       "kind": "phrase",
       "words": [
-        "DEEP",
-        "BREATH"
+        "WEIGHT",
+        "DAY"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "You are safe here.",
+      "a": "But thou, O LORD, art a shield for me",
       "kind": "phrase",
       "words": [
-        "SAFE",
-        "SECURE"
+        "SHIELD"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "But You, O Lord, are a shield about me, my glory, and the lifter of my head.",
+      "a": "I cried unto the LORD with my voice",
       "kind": "phrase",
       "words": [
-        "SHIELD",
-        "GLORY"
+        "HEARD"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "I cried aloud to the Lord, and he answered me from his holy hill.",
+      "a": "I laid me down and slept",
       "kind": "phrase",
       "words": [
-        "CRIED",
-        "ANSWERED"
+        "SLEPT"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "I lay down and slept; I woke again, for the Lord sustained me.",
+      "a": "for the LORD sustained me",
       "kind": "phrase",
       "words": [
-        "SLEPT",
         "SUSTAINED"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Father, quiet the thoughts that linger.",
-      "kind": "phrase",
-      "words": [
-        "QUIET",
-        "PEACE"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "May Your peace guard the heart of the one listening now.",
-      "kind": "phrase",
-      "words": [
-        "GUARD",
-        "HEART"
       ],
       "hi": 0,
       "slot": "C"

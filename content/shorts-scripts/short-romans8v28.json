@@ -3,34 +3,33 @@
   "channel": "secret-place",
   "psalm": null,
   "title": [
-    "WHEN PLANS",
-    "FALL APART"
+    "GOD'S PROMISE",
+    "FOR YOUR REST"
   ],
   "poster": [
-    "BEDTIME PRAYER",
-    "ROMANS 8:28",
-    "GOD IS WORKING",
-    "THE SECRET PLACE"
+    "FINDING PEACE",
+    "IN THE CHAOS",
+    "TRUSTING THE",
+    "UNSEEN HAND"
   ],
   "end": [
     "SUBSCRIBE",
     "The Secret Place — prayers every day"
   ],
   "stock_queries": [
-    "misty forest night gentle candle light",
-    "calm dark lake starry sky night reflections",
-    "soft glowing lantern on wooden table night",
-    "peaceful night ocean waves moonlight",
-    "cozy window rain drops dark night candle",
-    "quiet mountain valley under night stars",
-    "warm candle flame in dark room stillness"
+    "misty forest moonlit clearing",
+    "candle flame flickering dark background",
+    "gentle stream flowing over smooth stones",
+    "starry night sky moving slowly",
+    "tall grass swaying in moonlight",
+    "soft rain falling on dark pond"
   ],
   "scenes": [
     {
-      "a": "If tonight feels heavy with things that did not go as planned, lay them down.",
+      "a": "Lay down the burden of your unanswered questions regarding that situation weighing on your soul.",
       "img": "short-romans8v28-scene-01.jpg",
       "kicker": "ROMANS 8:28",
-      "sub": "GOD WORKS ALL THINGS FOR GOOD",
+      "sub": "FINDING PEACE IN HIS PROMISE",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -38,276 +37,199 @@
       ]
     },
     {
-      "a": "Romans 8:28 promises that all things work together for good to those who love God.",
+      "a": "As you drift toward sleep, remember the ancient truth that anchors your shifting circumstances.",
       "img": "short-romans8v28-scene-02.jpg",
       "kicker": "ROMANS 8:28",
-      "sub": "TRUST HIS DIVINE PURPOSE",
-      "cam": "pan_right",
+      "sub": "LET HIS WORD SETTLE YOU",
+      "cam": "pull_out",
       "focus": [
         0.5,
         0.5
       ]
     },
     {
-      "a": "Lord, as the dark falls, I release the pieces I could not fix today.",
+      "a": "And we know that all things work together for good to them that love God, to them who are the called according to his purpose.",
       "img": "short-romans8v28-scene-03.jpg",
       "kicker": "ROMANS 8:28",
-      "sub": "RELEASE YOUR HEAVY BURDENS",
-      "cam": "pull_out",
+      "sub": "HIS PURPOSE IS AT WORK",
+      "cam": "pan_left",
       "focus": [
         0.4,
-        0.6
+        0.5
       ]
     },
     {
-      "a": "You see every unseen struggle, every broken plan, and every silent tear.",
+      "a": "Lord, help me trust that even the pieces that seem broken are being mended by You.",
       "img": "short-romans8v28-scene-04.jpg",
       "kicker": "ROMANS 8:28",
-      "sub": "HE SEES YOUR SILENT TEARS",
+      "sub": "REST IN HIS HANDS",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Release the need to control the outcome and rest in the safety of Your steady love.",
+      "img": "short-romans8v28-scene-05.jpg",
+      "kicker": "ROMANS 8:28",
+      "sub": "RELEASE THE BURDEN",
       "cam": "tilt_up",
       "focus": [
         0.5,
-        0.3
+        0.2
       ]
     },
     {
-      "a": "Transform my quiet worry into rest, trusting that Your hand is weaving even this trial into something good.",
-      "img": "short-romans8v28-scene-05.jpg",
+      "a": "May Your peace guard my heart throughout this night until I wake to Your grace.",
+      "img": "short-romans8v28-scene-06.jpg",
       "kicker": "ROMANS 8:28",
-      "sub": "TURNING WORRY INTO REST",
+      "sub": "SLEEP IN HIS CARE",
       "cam": "push_in",
       "focus": [
         0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "Wrap me in Your peace tonight, knowing my life rests safely in Your purpose.",
-      "img": "short-romans8v28-scene-06.jpg",
-      "kicker": "ROMANS 8:28",
-      "sub": "REST SAFELY IN HIS PEACE",
-      "cam": "pan_left",
-      "focus": [
-        0.6,
-        0.4
-      ]
-    },
-    {
-      "a": "Subscribe to The Secret Place for daily bedtime prayers.",
-      "img": "short-romans8v28-scene-07.jpg",
-      "kicker": "THE SECRET PLACE",
-      "sub": "PRAYERS FOR EVERY NIGHT",
-      "cam": "pull_out",
-      "focus": [
-        0.5,
-        0.5
+        0.8
       ]
     }
   ],
   "captions": [
     [
       0,
-      7,
-      "If tonight feels heavy with things that did not go as planned, lay them down."
+      12,
+      "Lay down the burden of your unanswered questions regarding that situation weighing on your soul."
     ],
     [
-      7,
-      15,
-      "Romans 8:28 promises that all things work together for good to those who love God."
+      13,
+      26,
+      "As you drift toward sleep, remember the ancient truth that anchors your shifting circumstances."
     ],
     [
-      15,
-      22,
-      "Lord, as the dark falls, I release the pieces I could not fix today."
+      27,
+      45,
+      "And we know that all things work together for good to them that love God, to them who are the called according to his purpose."
     ],
     [
-      22,
-      30,
-      "You see every unseen struggle, every broken plan, and every silent tear."
+      46,
+      62,
+      "Lord, help me trust that even the pieces that seem broken are being mended by You."
     ],
     [
-      30,
-      39,
-      "Transform my quiet worry into rest, trusting that Your hand is weaving even this trial into something good."
+      63,
+      78,
+      "Release the need to control the outcome and rest in the safety of Your steady love."
     ],
     [
-      39,
-      47,
-      "Wrap me in Your peace tonight, knowing my life rests safely in Your purpose."
-    ],
-    [
-      47,
-      53,
-      "Subscribe to The Secret Place for daily bedtime prayers."
+      79,
+      100,
+      "May Your peace guard my heart throughout this night until I wake to Your grace."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      7,
+      12,
       [
-        "IF TONIGHT FEELS HEAVY",
-        "WITH UNPLANNED THINGS",
-        "LAY THEM DOWN"
+        "LAY DOWN THE BURDEN",
+        "OF YOUR UNANSWERED",
+        "QUESTIONS REGARDING THAT",
+        "SITUATION WEIGHING ON",
+        "YOUR SOUL"
       ],
       [
-        "HEAVY",
-        "LAY THEM DOWN"
+        "LAY DOWN",
+        "YOUR SOUL"
       ],
       "ROMANS 8 : 28"
     ],
     [
-      7,
-      15,
+      13,
+      26,
       [
+        "AS YOU DRIFT TOWARD",
+        "SLEEP REMEMBER THE",
+        "ANCIENT TRUTH THAT",
+        "ANCHORS YOUR SHIFTING",
+        "CIRCUMSTANCES"
+      ],
+      [
+        "ANCIENT TRUTH",
+        "ANCHORS"
+      ],
+      "ROMANS 8 : 28"
+    ],
+    [
+      27,
+      45,
+      [
+        "AND WE KNOW THAT",
         "ALL THINGS WORK",
         "TOGETHER FOR GOOD",
-        "TO THOSE WHO LOVE GOD"
+        "TO THEM THAT",
+        "LOVE GOD"
       ],
       [
+        "ALL THINGS",
         "WORK TOGETHER",
-        "FOR GOOD"
+        "LOVE GOD"
       ],
       "ROMANS 8 : 28"
     ],
     [
-      15,
-      22,
+      46,
+      62,
       [
-        "AS THE DARK FALLS",
-        "I RELEASE THE PIECES",
-        "I COULD NOT FIX"
+        "LORD HELP ME",
+        "TRUST THAT EVEN",
+        "THE PIECES THAT",
+        "SEEM BROKEN ARE",
+        "BEING MENDED"
+      ],
+      [
+        "TRUST",
+        "BEING MENDED"
+      ],
+      "ROMANS 8 : 28"
+    ],
+    [
+      63,
+      78,
+      [
+        "RELEASE THE NEED",
+        "TO CONTROL THE",
+        "OUTCOME AND REST",
+        "IN THE SAFETY",
+        "OF YOUR LOVE"
       ],
       [
         "RELEASE",
-        "COULD NOT FIX"
+        "REST IN SAFETY"
       ],
       "ROMANS 8 : 28"
     ],
     [
-      22,
-      30,
+      79,
+      100,
       [
-        "YOU SEE EVERY STRUGGLE",
-        "EVERY BROKEN PLAN",
-        "AND SILENT TEAR"
+        "MAY YOUR PEACE",
+        "GUARD MY HEART",
+        "THROUGHOUT THIS NIGHT",
+        "UNTIL I WAKE",
+        "TO YOUR GRACE"
       ],
       [
-        "UNSEEN STRUGGLE",
-        "SILENT TEAR"
-      ],
-      "ROMANS 8 : 28"
-    ],
-    [
-      30,
-      39,
-      [
-        "TRANSFORM QUIET WORRY",
-        "INTO REST AS YOU WEAVE",
-        "THIS TRIAL FOR GOOD"
-      ],
-      [
-        "QUIET WORRY",
-        "SOMETHING GOOD"
+        "PEACE",
+        "GUARD MY HEART"
       ],
       "ROMANS 8 : 28"
-    ],
-    [
-      39,
-      47,
-      [
-        "WRAP ME IN PEACE",
-        "MY LIFE RESTS SAFELY",
-        "IN YOUR PURPOSE"
-      ],
-      [
-        "PEACE TONIGHT",
-        "YOUR PURPOSE"
-      ],
-      "ROMANS 8 : 28"
-    ],
-    [
-      47,
-      53,
-      [
-        "SUBSCRIBE TO THE SECRET PLACE",
-        "FOR DAILY BEDTIME PRAYERS"
-      ],
-      [
-        "SUBSCRIBE",
-        "BEDTIME PRAYERS"
-      ],
-      "THE SECRET PLACE"
     ]
   ],
   "beats": [
     {
-      "a": "If tonight feels heavy with things that did not go as planned, lay them down.",
+      "a": "And we know that all things work together for good to them that love God, to them who are the called according to his purpose.",
       "kind": "phrase",
       "words": [
-        "HEAVY",
-        "LAY"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Romans 8:28 promises that all things work together for good to those who love God.",
-      "kind": "phrase",
-      "words": [
-        "WORK",
-        "TOGETHER",
-        "GOOD"
-      ],
-      "hi": 1,
-      "slot": "C"
-    },
-    {
-      "a": "Lord, as the dark falls, I release the pieces I could not fix today.",
-      "kind": "phrase",
-      "words": [
-        "RELEASE",
-        "FIX"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "You see every unseen struggle, every broken plan, and every silent tear.",
-      "kind": "phrase",
-      "words": [
-        "STRUGGLE",
-        "TEAR"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Transform my quiet worry into rest, trusting that Your hand is weaving even this trial into something good.",
-      "kind": "phrase",
-      "words": [
-        "REST",
-        "GOOD"
-      ],
-      "hi": 1,
-      "slot": "C"
-    },
-    {
-      "a": "Wrap me in Your peace tonight, knowing my life rests safely in Your purpose.",
-      "kind": "phrase",
-      "words": [
-        "PEACE",
-        "PURPOSE"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Subscribe to The Secret Place for daily bedtime prayers.",
-      "kind": "phrase",
-      "words": [
-        "SUBSCRIBE",
-        "PRAYERS"
+        "ALL THINGS",
+        "WORK TOGETHER"
       ],
       "hi": 0,
       "slot": "C"

@@ -1,0 +1,321 @@
+{
+  "key": "short-philippians4v8",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "REST YOUR MIND",
+    "PHILIPPIANS 4:8"
+  ],
+  "poster": [
+    "NIGHT PRAYER",
+    "PHILIPPIANS 4:8",
+    "PEACEFUL SLEEP",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "soft candlelight in quiet room night",
+    "calm mountain lake glowing night moon",
+    "peaceful forest night sky stars",
+    "gentle ocean waves under moonlight night",
+    "cozy bedroom warm lamp light evening",
+    "misty pine forest at night starry canopy",
+    "still waters reflecting dark starry night sky"
+  ],
+  "scenes": [
+    {
+      "a": "If your mind is racing with replay of every mistake made today, rest now.",
+      "img": "short-philippians4v8-scene-01.jpg",
+      "kicker": "PHILIPPIANS 4:8",
+      "sub": "REST YOUR MIND TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Finally, brethren, whatsoever things are true, whatsoever things are honest, whatsoever things are just,",
+      "img": "short-philippians4v8-scene-02.jpg",
+      "kicker": "PHILIPPIANS 4:8",
+      "sub": "THINK ON THESE THINGS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "whatsoever things are pure, whatsoever things are lovely, whatsoever things are of good report;",
+      "img": "short-philippians4v8-scene-03.jpg",
+      "kicker": "PHILIPPIANS 4:8",
+      "sub": "WHATSOEVER IS PURE AND LOVELY",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "if there be any virtue, and if there be any praise, think on these things.",
+      "img": "short-philippians4v8-scene-04.jpg",
+      "kicker": "PHILIPPIANS 4:8",
+      "sub": "THINK ON THESE THINGS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, fill this quiet bedroom with your gentle peace. Wash away every noisy anxiety, replay, and fearful thought.",
+      "img": "short-philippians4v8-scene-05.jpg",
+      "kicker": "PHILIPPIANS 4:8",
+      "sub": "FILL THIS ROOM WITH PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Anchor my heart upon your goodness and beauty tonight. Give me restful sleep in your presence.",
+      "img": "short-philippians4v8-scene-06.jpg",
+      "kicker": "PHILIPPIANS 4:8",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Secret Place for daily night prayers.",
+      "img": "short-philippians4v8-scene-07.jpg",
+      "kicker": "PHILIPPIANS 4:8",
+      "sub": "THE SECRET PLACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If your mind is racing with replay of every mistake made today, rest now."
+    ],
+    [
+      7,
+      15,
+      "Finally, brethren, whatsoever things are true, whatsoever things are honest, whatsoever things are just,"
+    ],
+    [
+      15,
+      23,
+      "whatsoever things are pure, whatsoever things are lovely, whatsoever things are of good report;"
+    ],
+    [
+      23,
+      31,
+      "if there be any virtue, and if there be any praise, think on these things."
+    ],
+    [
+      31,
+      39,
+      "Lord, fill this quiet bedroom with your gentle peace. Wash away every noisy anxiety, replay, and fearful thought."
+    ],
+    [
+      39,
+      47,
+      "Anchor my heart upon your goodness and beauty tonight. Give me restful sleep in your presence."
+    ],
+    [
+      47,
+      55,
+      "Subscribe to The Secret Place for daily night prayers."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF YOUR MIND IS RACING",
+        "WITH REPLAY OF EVERY MISTAKE",
+        "REST NOW"
+      ],
+      [
+        "RACING",
+        "REST"
+      ],
+      "PHILIPPIANS 4 : 8"
+    ],
+    [
+      7,
+      15,
+      [
+        "FINALLY BRETHREN",
+        "WHATSOEVER THINGS ARE TRUE",
+        "HONEST AND JUST"
+      ],
+      [
+        "TRUE",
+        "HONEST",
+        "JUST"
+      ],
+      "PHILIPPIANS 4 : 8"
+    ],
+    [
+      15,
+      23,
+      [
+        "WHATSOEVER THINGS ARE PURE",
+        "WHATSOEVER THINGS ARE LOVELY",
+        "OF GOOD REPORT"
+      ],
+      [
+        "PURE",
+        "LOVELY",
+        "GOOD REPORT"
+      ],
+      "PHILIPPIANS 4 : 8"
+    ],
+    [
+      23,
+      31,
+      [
+        "IF THERE BE ANY VIRTUE",
+        "IF THERE BE ANY PRAISE",
+        "THINK ON THESE THINGS"
+      ],
+      [
+        "VIRTUE",
+        "PRAISE",
+        "THINK"
+      ],
+      "PHILIPPIANS 4 : 8"
+    ],
+    [
+      31,
+      39,
+      [
+        "LORD FILL THIS QUIET BEDROOM",
+        "WITH YOUR GENTLE PEACE",
+        "WASH AWAY EVERY ANXIETY"
+      ],
+      [
+        "GENTLE PEACE",
+        "WASH AWAY"
+      ],
+      "PHILIPPIANS 4 : 8"
+    ],
+    [
+      39,
+      47,
+      [
+        "ANCHOR MY HEART UPON",
+        "YOUR GOODNESS AND BEAUTY",
+        "GIVE ME RESTFUL SLEEP"
+      ],
+      [
+        "ANCHOR",
+        "GOODNESS",
+        "RESTFUL SLEEP"
+      ],
+      "PHILIPPIANS 4 : 8"
+    ],
+    [
+      47,
+      55,
+      [
+        "SUBSCRIBE TO THE SECRET PLACE",
+        "FOR DAILY NIGHT PRAYERS"
+      ],
+      [
+        "SECRET PLACE",
+        "PRAYERS"
+      ],
+      "PHILIPPIANS 4 : 8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If your mind is racing with replay of every mistake made today, rest now.",
+      "kind": "phrase",
+      "words": [
+        "RACING",
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Finally, brethren, whatsoever things are true, whatsoever things are honest, whatsoever things are just,",
+      "kind": "phrase",
+      "words": [
+        "TRUE",
+        "HONEST",
+        "JUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "whatsoever things are pure, whatsoever things are lovely, whatsoever things are of good report;",
+      "kind": "phrase",
+      "words": [
+        "PURE",
+        "LOVELY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "if there be any virtue, and if there be any praise, think on these things.",
+      "kind": "phrase",
+      "words": [
+        "VIRTUE",
+        "PRAISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, fill this quiet bedroom with your gentle peace. Wash away every noisy anxiety, replay, and fearful thought.",
+      "kind": "phrase",
+      "words": [
+        "GENTLE",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Anchor my heart upon your goodness and beauty tonight. Give me restful sleep in your presence.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "GOODNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Secret Place for daily night prayers.",
+      "kind": "phrase",
+      "words": [
+        "SECRET",
+        "PLACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Philippians 4:8"
+}

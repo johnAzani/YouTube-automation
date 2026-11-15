@@ -1,0 +1,270 @@
+{
+  "key": "short-isaiah30v15",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "REST IN",
+    "HIS QUIET"
+  ],
+  "poster": [
+    "FINDING STRENGTH",
+    "IN THE QUIET",
+    "OF THE NIGHT",
+    "ISAIAH 30:15"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "gentle waves on dark beach moonlight",
+    "flickering candle in dark room",
+    "starry night sky over mountain silhouette",
+    "soft rain against window pane night",
+    "still forest path in moonlight",
+    "glowing embers in fireplace"
+  ],
+  "scenes": [
+    {
+      "a": "Release the heavy grip you have on that exhausting problem playing on repeat tonight.",
+      "img": "short-isaiah30v15-scene-01.jpg",
+      "kicker": "ISAIAH 30:15",
+      "sub": "FINDING STRENGTH IN SILENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "For thus saith the Lord GOD, the Holy One of Israel; In returning and rest shall ye be saved; in quietness and in confidence shall be your strength: and ye would not.",
+      "img": "short-isaiah30v15-scene-02.jpg",
+      "kicker": "THE LORD SPEAKS",
+      "sub": "REST IN HIS PROMISE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, help me stop striving against the current of your sovereign and perfect will.",
+      "img": "short-isaiah30v15-scene-03.jpg",
+      "kicker": "A PRAYER",
+      "sub": "SURRENDERING CONTROL",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach my heart to trade my anxious searching for the deep stability found in you.",
+      "img": "short-isaiah30v15-scene-04.jpg",
+      "kicker": "SEEKING PEACE",
+      "sub": "ANCHORED IN HIS GRACE",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Let your peace settle over this room, quieting every fear that tries to remain.",
+      "img": "short-isaiah30v15-scene-05.jpg",
+      "kicker": "RESTING NOW",
+      "sub": "HIS PEACE IS ENOUGH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "May my spirit find its home in your stillness until the morning light arrives.",
+      "img": "short-isaiah30v15-scene-06.jpg",
+      "kicker": "SLEEP IN PEACE",
+      "sub": "TRUSTING IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Release the heavy grip you have on that exhausting problem playing on repeat tonight."
+    ],
+    [
+      8,
+      28,
+      "For thus saith the Lord GOD, the Holy One of Israel; In returning and rest shall ye be saved; in quietness and in confidence shall be your strength: and ye would not."
+    ],
+    [
+      28,
+      42,
+      "Lord, help me stop striving against the current of your sovereign and perfect will."
+    ],
+    [
+      42,
+      58,
+      "Teach my heart to trade my anxious searching for the deep stability found in you."
+    ],
+    [
+      58,
+      75,
+      "Let your peace settle over this room, quieting every fear that tries to remain."
+    ],
+    [
+      75,
+      90,
+      "May my spirit find its home in your stillness until the morning light arrives."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "RELEASE THE HEAVY GRIP",
+        "ON THAT EXHAUSTING PROBLEM",
+        "PLAYING ON REPEAT"
+      ],
+      [
+        "HEAVY GRIP"
+      ],
+      "ISAIAH 30:15"
+    ],
+    [
+      8,
+      28,
+      [
+        "FOR THUS SAITH THE LORD",
+        "IN RETURNING AND REST",
+        "SHALL YE BE SAVED",
+        "IN QUIETNESS AND CONFIDENCE",
+        "SHALL BE YOUR STRENGTH"
+      ],
+      [
+        "STRENGTH"
+      ],
+      "ISAIAH 30:15"
+    ],
+    [
+      28,
+      42,
+      [
+        "LORD HELP ME STOP",
+        "STRIVING AGAINST THE CURRENT",
+        "OF YOUR WILL"
+      ],
+      [
+        "STOP STRIVING"
+      ],
+      "ISAIAH 30:15"
+    ],
+    [
+      42,
+      58,
+      [
+        "TEACH MY HEART TO TRADE",
+        "ANXIOUS SEARCHING FOR",
+        "DEEP STABILITY FOUND IN YOU"
+      ],
+      [
+        "DEEP STABILITY"
+      ],
+      "ISAIAH 30:15"
+    ],
+    [
+      58,
+      75,
+      [
+        "LET YOUR PEACE SETTLE",
+        "QUIETING EVERY FEAR",
+        "THAT TRIES TO REMAIN"
+      ],
+      [
+        "PEACE SETTLE"
+      ],
+      "ISAIAH 30:15"
+    ],
+    [
+      75,
+      90,
+      [
+        "MAY MY SPIRIT FIND",
+        "HOME IN YOUR STILLNESS",
+        "UNTIL MORNING LIGHT ARRIVES"
+      ],
+      [
+        "STILLNESS"
+      ],
+      "ISAIAH 30:15"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Release the heavy grip you have on that exhausting problem playing on repeat tonight.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "GRIP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For thus saith the Lord GOD, the Holy One of Israel; In returning and rest shall ye be saved; in quietness and in confidence shall be your strength: and ye would not.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, help me stop striving against the current of your sovereign and perfect will.",
+      "kind": "phrase",
+      "words": [
+        "STOP",
+        "STRIVING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teach my heart to trade my anxious searching for the deep stability found in you.",
+      "kind": "phrase",
+      "words": [
+        "DEEP",
+        "STABILITY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let your peace settle over this room, quieting every fear that tries to remain.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "SETTLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May my spirit find its home in your stillness until the morning light arrives.",
+      "kind": "phrase",
+      "words": [
+        "STILLNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 30:15"
+}

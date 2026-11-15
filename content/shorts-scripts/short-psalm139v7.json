@@ -1,0 +1,270 @@
+{
+  "key": "short-psalm139v7",
+  "channel": "secret-place",
+  "psalm": 139,
+  "title": [
+    "PSALM 139",
+    "BEDTIME PRAYER"
+  ],
+  "poster": [
+    "WHERE CAN I GO",
+    "FROM YOUR SPIRIT",
+    "YOU ARE THERE",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "dark starry night sky mountain silhouette",
+    "calm deep ocean water moonlight surface",
+    "soft glowing candle in dark room",
+    "peaceful forest under night stars",
+    "quiet river flowing gently at night",
+    "serene mountain valley under moonlight"
+  ],
+  "scenes": [
+    {
+      "a": "If you are wrestling with hidden fears in the silence of this dark bedroom, listen.",
+      "img": "short-psalm139v7-scene-01.jpg",
+      "kicker": "PSALM 139:7",
+      "sub": "HIS PRESENCE SURROUNDS YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Whither shall I go from thy spirit? or whither shall I flee from thy presence?",
+      "img": "short-psalm139v7-scene-02.jpg",
+      "kicker": "PSALM 139:7",
+      "sub": "NOWHERE BEYOND HIS CARE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "If I ascend up into heaven, thou art there: if I make my bed in hell, behold, thou art there.",
+      "img": "short-psalm139v7-scene-03.jpg",
+      "kicker": "PSALM 139:8",
+      "sub": "EVEN THERE HE IS WITH YOU",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "If I take the wings of the morning, and dwell in the uttermost parts of the sea;",
+      "img": "short-psalm139v7-scene-04.jpg",
+      "kicker": "PSALM 139:9",
+      "sub": "FARTHER THAN FEAR CAN REACH",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Even there shall thy hand lead me, and thy right hand shall hold me.",
+      "img": "short-psalm139v7-scene-05.jpg",
+      "kicker": "PSALM 139:10",
+      "sub": "HE HOLDS YOU TONIGHT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, let this quiet truth guard my heart until the morning light breaks.",
+      "img": "short-psalm139v7-scene-06.jpg",
+      "kicker": "REST IN HIM",
+      "sub": "SUBSCRIBE FOR DAILY PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If you are wrestling with hidden fears in the silence of this dark bedroom, listen."
+    ],
+    [
+      6,
+      12,
+      "Whither shall I go from thy spirit? or whither shall I flee from thy presence?"
+    ],
+    [
+      12,
+      19,
+      "If I ascend up into heaven, thou art there: if I make my bed in hell, behold, thou art there."
+    ],
+    [
+      19,
+      26,
+      "If I take the wings of the morning, and dwell in the uttermost parts of the sea;"
+    ],
+    [
+      26,
+      33,
+      "Even there shall thy hand lead me, and thy right hand shall hold me."
+    ],
+    [
+      33,
+      40,
+      "Lord, let this quiet truth guard my heart until the morning light breaks."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF YOU ARE WRESTLING",
+        "WITH HIDDEN FEARS IN",
+        "THE SILENCE OF THIS",
+        "DARK BEDROOM, LISTEN."
+      ],
+      "WRESTLING",
+      "PSALM 139 : 7"
+    ],
+    [
+      6,
+      12,
+      [
+        "WHITHER SHALL I GO",
+        "FROM THY SPIRIT?",
+        "OR WHITHER SHALL I",
+        "FLEE FROM THY PRESENCE?"
+      ],
+      "SPIRIT",
+      "PSALM 139 : 7"
+    ],
+    [
+      12,
+      19,
+      [
+        "IF I ASCEND UP",
+        "INTO HEAVEN, THOU ART THERE:",
+        "IF I MAKE MY BED IN HELL,",
+        "BEHOLD, THOU ART THERE."
+      ],
+      "HEAVEN",
+      "PSALM 139 : 8"
+    ],
+    [
+      19,
+      26,
+      [
+        "IF I TAKE THE WINGS",
+        "OF THE MORNING,",
+        "AND DWELL IN THE",
+        "UTTERMOST PARTS OF THE SEA;"
+      ],
+      "WINGS",
+      "PSALM 139 : 9"
+    ],
+    [
+      26,
+      33,
+      [
+        "EVEN THERE SHALL THY",
+        "HAND LEAD ME,",
+        "AND YOUR RIGHT HAND",
+        "SHALL HOLD ME."
+      ],
+      "HOLD",
+      "PSALM 139 : 10"
+    ],
+    [
+      33,
+      40,
+      [
+        "LORD, LET THIS QUIET",
+        "TRUTH GUARD MY HEART",
+        "UNTIL THE MORNING",
+        "LIGHT BREAKS."
+      ],
+      "GUARD",
+      "PRAYER"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are wrestling with hidden fears in the silence of this dark bedroom, listen.",
+      "kind": "phrase",
+      "words": [
+        "WRESTLING",
+        "HIDDEN",
+        "FEARS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Whither shall I go from thy spirit? or whither shall I flee from thy presence?",
+      "kind": "phrase",
+      "words": [
+        "THY",
+        "SPIRIT",
+        "PRESENCE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "If I ascend up into heaven, thou art there: if I make my bed in hell, behold, thou art there.",
+      "kind": "phrase",
+      "words": [
+        "ASCEND",
+        "HEAVEN",
+        "THERE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "If I take the wings of the morning, and dwell in the uttermost parts of the sea;",
+      "kind": "phrase",
+      "words": [
+        "WINGS",
+        "MORNING",
+        "SEA"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Even there shall thy hand lead me, and thy right hand shall hold me.",
+      "kind": "phrase",
+      "words": [
+        "HAND",
+        "LEAD",
+        "HOLD"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, let this quiet truth guard my heart until the morning light breaks.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "TRUTH",
+        "GUARD"
+      ],
+      "hi": 2,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 139:7-10"
+}
