@@ -44,8 +44,8 @@
       "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-15T20:45:07.194112+00:00",
-  "last_run_at": "2026-11-15T20:44:09+00:00",
+  "generated_at": "2026-11-15T20:46:44.352628+00:00",
+  "last_run_at": "2026-11-15T20:45:59+00:00",
   "on_time": [
     {
       "late_minutes": 30,
@@ -67,6 +67,13 @@
       "ran_at": "2026-11-15T20:24:15+00:00",
       "slot": "2026-11-15T19:14:00+00:00",
       "workflow": "comments.yml"
+    },
+    {
+      "late_minutes": 91,
+      "name": "Autonomous Community Tab Automation",
+      "ran_at": "2026-11-15T20:45:10+00:00",
+      "slot": "2026-11-15T19:14:00+00:00",
+      "workflow": "community.yml"
     },
     {
       "late_minutes": 4,
