@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-15T05:30:41.010281+00:00",
+  "generated_at": "2026-11-15T09:19:04.061194+00:00",
   "as_of": "2026-11-15",
   "sufficient_data": false,
   "measured_longform_videos": 0,
   "total_longform_videos": 16,
   "input_diagnostics": {
-    "snapshot_video_ids": 36,
-    "receipt_video_ids": 36,
-    "matched_video_ids": 36,
+    "snapshot_video_ids": 37,
+    "receipt_video_ids": 37,
+    "matched_video_ids": 37,
     "longform_below_view_threshold": 16,
     "longform_missing_view_count": 0,
     "longform_too_young_or_undated": 4,
@@ -51,11 +51,11 @@
   ],
   "shorts": {
     "measured_shorts": 15,
-    "total_shorts": 20,
+    "total_shorts": 21,
     "sufficient_data": true,
-    "avg_views": 82.9,
+    "avg_views": 83.1,
     "median_views": 86,
-    "total_views": 1243,
+    "total_views": 1246,
     "minimum_age_days": 2,
     "by_book": {
       "acts": {
@@ -66,21 +66,21 @@
       "daniel": {
         "shorts": 1,
         "avg_views": 86.0,
-        "ratio": 1.013
+        "ratio": 1.012
       },
       "isaiah": {
         "shorts": 5,
-        "avg_views": 80.4,
+        "avg_views": 80.6,
         "ratio": 0.979
       },
       "proverbs": {
         "shorts": 1,
         "avg_views": 40.0,
-        "ratio": 0.828
+        "ratio": 0.827
       },
       "psalm": {
         "shorts": 7,
-        "avg_views": 92.0,
+        "avg_views": 92.3,
         "ratio": 1.086
       }
     },
@@ -88,22 +88,22 @@
       "daily_guidance_wisdom": {
         "shorts": 1,
         "avg_views": 82.0,
-        "ratio": 0.997
+        "ratio": 0.996
       },
       "midday_strength_endurance": {
         "shorts": 12,
-        "avg_views": 83.3,
+        "avg_views": 83.6,
         "ratio": 1.005
       },
       "peace_rest": {
         "shorts": 1,
         "avg_views": 48.0,
-        "ratio": 0.86
+        "ratio": 0.859
       },
       "protection": {
         "shorts": 1,
         "avg_views": 113.0,
-        "ratio": 1.121
+        "ratio": 1.12
       }
     },
     "guidance": []
