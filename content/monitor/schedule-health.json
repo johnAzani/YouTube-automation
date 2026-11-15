@@ -37,13 +37,6 @@
       "workflow": "metrics.yml"
     },
     {
-      "late_minutes": 163,
-      "name": "automation-health",
-      "ran_at": "2026-11-14T22:57:40+00:00",
-      "slot": "2026-11-14T20:14:00+00:00",
-      "workflow": "automation-health.yml"
-    },
-    {
       "late_minutes": 133,
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "ran_at": "2026-11-15T05:27:41+00:00",
@@ -51,8 +44,8 @@
       "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-15T19:50:48.646679+00:00",
-  "last_run_at": "2026-11-15T19:50:16+00:00",
+  "generated_at": "2026-11-15T20:16:47.551967+00:00",
+  "last_run_at": "2026-11-15T20:16:02+00:00",
   "on_time": [
     {
       "late_minutes": 110,
