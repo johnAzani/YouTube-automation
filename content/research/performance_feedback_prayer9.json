@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-15T05:36:09.816405+00:00",
+  "generated_at": "2026-11-15T09:24:52.096218+00:00",
   "as_of": "2026-11-15",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 5,
+  "total_longform_videos": 6,
   "input_diagnostics": {
-    "snapshot_video_ids": 11,
-    "receipt_video_ids": 11,
-    "matched_video_ids": 11,
-    "longform_below_view_threshold": 5,
+    "snapshot_video_ids": 13,
+    "receipt_video_ids": 13,
+    "matched_video_ids": 13,
+    "longform_below_view_threshold": 6,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 5,
+    "longform_too_young_or_undated": 6,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
@@ -18,7 +18,7 @@
   "themes": [
     {
       "theme": "general_prayer",
-      "videos": 3,
+      "videos": 4,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -43,23 +43,23 @@
   ],
   "shorts": {
     "measured_shorts": 1,
-    "total_shorts": 6,
+    "total_shorts": 7,
     "sufficient_data": false,
-    "avg_views": 310.0,
-    "median_views": 310,
-    "total_views": 310,
+    "avg_views": 312.0,
+    "median_views": 312,
+    "total_views": 312,
     "minimum_age_days": 2,
     "by_book": {
       "psalm": {
         "shorts": 1,
-        "avg_views": 310.0,
+        "avg_views": 312.0,
         "ratio": 1.0
       }
     },
     "by_theme": {
       "general_prayer": {
         "shorts": 1,
-        "avg_views": 310.0,
+        "avg_views": 312.0,
         "ratio": 1.0
       }
     },
