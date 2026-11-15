@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["GIVE THANKS", "IN THE", "VALLEY", "OF LIGHT"]
 thumbnail_kicker: ""
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-22T02:33:10Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Pause your day and breathe deeply. Notice the quiet grace of God surrounding you. Offer Him an honest heart of thanksgiving. Although the fig tree shall not blossom, neither shall fruit be in the vines; the labor of the olive shall fail. And the fields shall yield no meat; the flock shall be cut off from the fold, and there shall be no herd in the stalls. Yet I will rejoice in the Lord, I will joy in the God of my salvation. The Lord God is my strength. He will make my feet like hinds' feet, and He will make me to walk upon mine high places. Amen. Lord, we thank You for being our unwavering foundation when seasons change. Help us to find deep, abiding peace in Your presence. Subscribe to The Praise Garden.

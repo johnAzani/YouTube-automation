@@ -28,6 +28,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["WHAT TIME I AM AFRAID", "I WILL TRUST IN THEE", "BEDTIME PRAYER", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 When fearful thoughts keep you awake in the quiet night, hear this promise. What time I am afraid, I will trust in thee. Lord, when the darkness surrounds this bed and my mind spins with tomorrow, I come to You. The worries I carried all day try to claim my sleep tonight, but I choose to place every fear into Your safe hands. You are my constant shelter and my peace. Silence the anxiety inside me and wrap me in Your quiet presence. I surrender my doubts and lay my head down, knowing You watch over me while I rest. Subscribe to rest in God's peace every night.
