@@ -3,113 +3,113 @@
   "channel": "prayer6",
   "psalm": 41,
   "title": [
-    "A RESTORATION PRAYER",
-    "FOR THE WEARY SOUL"
+    "PSALM FORTY-ONE",
+    "THE HEALING BALM"
   ],
   "poster": [
-    "FINDING REST",
-    "IN GODS PROMISE",
-    "HEALING BALM",
-    "PSALM 41"
+    "PSALM 41:1-3",
+    "THE LORD WILL",
+    "STRENGTHEN HIM",
+    "UPON THE BED"
   ],
   "end": [
     "SUBSCRIBE",
     "The Healing Balm — receive God's healing peace"
   ],
   "stock_queries": [
-    "tranquil turquoise living waters flowing softly",
-    "warm golden sanctuary light filtering through canopy",
-    "peaceful white dove resting on stone fountain",
-    "soft light reflecting on calm river surface",
-    "gentle mist rising over serene mountain lake",
-    "soft golden light illuminating prayer space",
-    "ethereal light particles floating in dark room",
-    "sunlight breaking through forest clouds"
+    "tranquil turquoise living waters stream",
+    "warm golden sanctuary light glowing gentle",
+    "white dove peace imagery soft bokeh light",
+    "calm mountain lake night peaceful water",
+    "gentle morning sun rays through forest trees",
+    "peaceful flowing river smooth river stones",
+    "serene twilight sky over quiet water",
+    "soft golden light on tranquil waters"
   ],
   "scenes": [
     {
-      "a": "Bring every weary burden",
+      "a": "If physical pain is keeping you awake in the quiet hours of this night, stay right here.",
       "img": "short-healingpsalm41v1-scene-01.jpg",
-      "kicker": "PSALM 41:1",
-      "sub": "COME AS YOU ARE",
+      "kicker": "PSALM 41",
+      "sub": "FIND REST IN HIS PROMISE",
       "cam": "push_in",
       "focus": [
         0.5,
-        0.5
+        0.45
       ]
     },
     {
-      "a": "the Lord sustains you",
+      "a": "Lord, we lean upon your steadfast mercy as we listen to your holy word.",
       "img": "short-healingpsalm41v1-scene-02.jpg",
-      "kicker": "PSALM 41:2",
-      "sub": "HIS PRESENCE SUSTAINS",
-      "cam": "pan_left",
-      "focus": [
-        0.4,
-        0.5
-      ]
-    },
-    {
-      "a": "The Lord protects you",
-      "img": "short-healingpsalm41v1-scene-03.jpg",
-      "kicker": "PSALM 41:2",
-      "sub": "PROTECTION AND STRENGTH",
-      "cam": "tilt_up",
-      "focus": [
-        0.5,
-        0.7
-      ]
-    },
-    {
-      "a": "Blessed is the one",
-      "img": "short-healingpsalm41v1-scene-04.jpg",
-      "kicker": "PSALM 41:1",
-      "sub": "WALKING IN HIS BLESSING",
+      "kicker": "HIS MERCY",
+      "sub": "REST IN HIS HOLY WORD",
       "cam": "pull_out",
       "focus": [
         0.5,
-        0.3
-      ]
-    },
-    {
-      "a": "He sustains them",
-      "img": "short-healingpsalm41v1-scene-05.jpg",
-      "kicker": "PSALM 41:3",
-      "sub": "HE RESTORES YOUR HEALTH",
-      "cam": "push_in",
-      "focus": [
-        0.6,
         0.5
       ]
     },
     {
-      "a": "in their illness",
-      "img": "short-healingpsalm41v1-scene-06.jpg",
-      "kicker": "PSALM 41:3",
-      "sub": "DIVINE COMPASSION",
-      "cam": "pan_right",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "receive His restoration",
-      "img": "short-healingpsalm41v1-scene-07.jpg",
-      "kicker": "PRAYER FOR HEALING",
-      "sub": "FINDING RENEWAL",
-      "cam": "tilt_up",
+      "a": "Blessed is he that considereth the poor: the LORD will deliver him in time of trouble.",
+      "img": "short-healingpsalm41v1-scene-03.jpg",
+      "kicker": "DELIVERANCE",
+      "sub": "IN TIME OF TROUBLE",
+      "cam": "pan_left",
       "focus": [
         0.5,
         0.4
       ]
     },
     {
-      "a": "rest in His peace",
-      "img": "short-healingpsalm41v1-scene-08.jpg",
-      "kicker": "GOD IS WITH YOU",
-      "sub": "ABIDE IN HIS LOVE",
+      "a": "The LORD will preserve him, and keep him alive; and he shall be blessed upon the earth: and thou wilt not deliver him unto the will of his enemies.",
+      "img": "short-healingpsalm41v1-scene-04.jpg",
+      "kicker": "PRESERVED",
+      "sub": "HE SHALL BE BLESSED",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "The LORD will strengthen him upon the bed of languishing: thou wilt make all his bed in his sickness.",
+      "img": "short-healingpsalm41v1-scene-05.jpg",
+      "kicker": "STRENGTH",
+      "sub": "UPON THE BED OF LANGUISHING",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, minister your gentle comfort to every weary heart seeking your face tonight.",
+      "img": "short-healingpsalm41v1-scene-06.jpg",
+      "kicker": "COMFORT",
+      "sub": "SEEKING YOUR FACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Surround every weakened frame with your healing grace and quiet sustaining peace.",
+      "img": "short-healingpsalm41v1-scene-07.jpg",
+      "kicker": "GRACE",
+      "sub": "SUSTAINING PEACE",
       "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "In Jesus name, Amen.",
+      "img": "short-healingpsalm41v1-scene-08.jpg",
+      "kicker": "AMEN",
+      "sub": "REST IN HIM",
+      "cam": "push_in",
       "focus": [
         0.5,
         0.5
@@ -119,236 +119,211 @@
   "captions": [
     [
       0,
-      15,
-      "Bring every weary burden and healing need before the Lord right now."
+      12,
+      "If physical pain is keeping you awake in the quiet hours of this night, stay right here."
     ],
     [
-      16,
-      30,
-      "Blessed is the one who considers the poor, the Lord delivers in trouble."
+      12,
+      24,
+      "Lord, we lean upon your steadfast mercy as we listen to your holy word."
     ],
     [
-      31,
-      45,
-      "The Lord protects you and keeps you alive, the Lord sustains you."
+      24,
+      38,
+      "Blessed is he that considereth the poor: the LORD will deliver him in time of trouble."
     ],
     [
-      46,
-      60,
-      "He sustains them on their sickbed, in their illness He heals all."
+      38,
+      56,
+      "The LORD will preserve him, and keep him alive; and he shall be blessed upon the earth: and thou wilt not deliver him unto the will of his enemies."
     ],
     [
-      61,
-      75,
-      "Lord, touch this heart with Your gentle, quiet, and restoring power."
+      56,
+      72,
+      "The LORD will strengthen him upon the bed of languishing: thou wilt make all his bed in his sickness."
     ],
     [
-      76,
-      90,
-      "May Your presence flow through every heavy place, bringing perfect peace."
+      72,
+      86,
+      "Father, minister your gentle comfort to every weary heart seeking your face tonight."
     ],
     [
-      91,
-      105,
-      "I pray You wash away the fatigue and replace it with grace."
+      86,
+      100,
+      "Surround every weakened frame with your healing grace and quiet sustaining peace."
     ],
     [
-      106,
-      120,
-      "Receive His restoration today and finally rest in His peace. SUBSCRIBE."
+      100,
+      108,
+      "In Jesus name, Amen."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      15,
+      12,
       [
-        "BRING EVERY WEARY BURDEN",
-        "AND HEALING NEED BEFORE",
-        "THE LORD RIGHT NOW"
+        "IF PHYSICAL PAIN IS KEEPING YOU",
+        "AWAKE IN THE QUIET HOURS OF THIS",
+        "NIGHT, STAY RIGHT HERE."
       ],
-      [
-        "WEARY BURDEN",
-        "LORD"
-      ],
-      "PSALM 41 : 1"
+      "AWAKE",
+      "PSALM 41"
     ],
     [
-      16,
-      30,
+      12,
+      24,
       [
-        "BLESSED IS THE ONE",
-        "WHO CONSIDERS THE POOR",
-        "THE LORD DELIVERS TROUBLE"
+        "LORD, WE LEAN UPON YOUR",
+        "STEADFAST MERCY AS WE",
+        "LISTEN TO YOUR HOLY WORD."
       ],
-      [
-        "BLESSED",
-        "DELIVERS"
-      ],
-      "PSALM 41 : 1"
+      "MERCY",
+      "PSALM 41"
     ],
     [
-      31,
-      45,
+      24,
+      38,
       [
-        "THE LORD PROTECTS YOU",
-        "AND KEEPS YOU ALIVE",
-        "THE LORD SUSTAINS YOU"
+        "BLESSED IS HE THAT CONSIDERETH",
+        "THE POOR: THE LORD WILL",
+        "DELIVER HIM IN TIME OF TROUBLE."
       ],
-      [
-        "PROTECTS",
-        "SUSTAINS"
-      ],
-      "PSALM 41 : 2"
+      "DELIVER",
+      "PSALM 41"
     ],
     [
-      46,
-      60,
+      38,
+      56,
       [
-        "HE SUSTAINS THEM ON",
-        "THEIR SICKBED IN THEIR",
-        "ILLNESS HE HEALS ALL"
+        "THE LORD WILL PRESERVE HIM,",
+        "AND KEEP HIM ALIVE; AND HE",
+        "SHALL BE BLESSED UPON THE EARTH:"
       ],
-      [
-        "SUSTAINS",
-        "HEALS"
-      ],
-      "PSALM 41 : 3"
+      "PRESERVE",
+      "PSALM 41"
     ],
     [
-      61,
-      75,
+      56,
+      72,
       [
-        "LORD TOUCH THIS HEART",
-        "WITH YOUR GENTLE QUIET",
-        "AND RESTORING POWER"
+        "THE LORD WILL STRENGTHEN HIM",
+        "UPON THE BED OF LANGUISHING:",
+        "THOU WILT MAKE ALL HIS BED."
       ],
-      [
-        "TOUCH",
-        "RESTORING"
-      ],
-      "PSALM 41 : 3"
+      "STRENGTHEN",
+      "PSALM 41"
     ],
     [
-      76,
-      90,
+      72,
+      86,
       [
-        "MAY YOUR PRESENCE FLOW",
-        "THROUGH EVERY HEAVY PLACE",
-        "BRINGING PERFECT PEACE"
+        "FATHER, MINISTER YOUR GENTLE",
+        "COMFORT TO EVERY WEARY",
+        "HEART SEEKING YOUR FACE."
       ],
-      [
-        "PRESENCE",
-        "PEACE"
-      ],
-      "PSALM 41 : 3"
+      "COMFORT",
+      "PSALM 41"
     ],
     [
-      91,
-      105,
+      86,
+      100,
       [
-        "I PRAY YOU WASH AWAY",
-        "THE FATIGUE AND REPLACE",
-        "IT WITH GRACE"
+        "SURROUND EVERY WEAKENED FRAME",
+        "WITH YOUR HEALING GRACE",
+        "AND QUIET SUSTAINING PEACE."
       ],
-      [
-        "WASH AWAY",
-        "GRACE"
-      ],
-      "PSALM 41 : 3"
+      "GRACE",
+      "PSALM 41"
     ],
     [
-      106,
-      120,
+      100,
+      108,
       [
-        "RECEIVE HIS RESTORATION",
-        "FINALLY REST IN HIS",
-        "PEACE SUBSCRIBE NOW"
+        "IN JESUS NAME,",
+        "AMEN."
       ],
-      [
-        "RESTORATION",
-        "REST"
-      ],
-      "PSALM 41 : 3"
+      "AMEN",
+      "PSALM 41"
     ]
   ],
   "beats": [
     {
-      "a": "Bring every weary burden",
+      "a": "If physical pain is keeping you awake in the quiet hours of this night, stay right here.",
       "kind": "phrase",
       "words": [
-        "WEARY",
-        "BURDEN"
+        "PHYSICAL",
+        "PAIN"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "the Lord sustains you",
+      "a": "Lord, we lean upon your steadfast mercy as we listen to your holy word.",
       "kind": "phrase",
       "words": [
-        "LORD",
-        "SUSTAINS"
+        "STEADFAST",
+        "MERCY"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "The Lord protects you",
+      "a": "Blessed is he that considereth the poor: the LORD will deliver him in time of trouble.",
       "kind": "phrase",
       "words": [
-        "PROTECTS",
-        "YOU"
+        "DELIVER",
+        "TROUBLE"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Blessed is the one",
+      "a": "The LORD will preserve him, and keep him alive; and he shall be blessed upon the earth: and thou wilt not deliver him unto the will of his enemies.",
       "kind": "phrase",
       "words": [
-        "BLESSED",
-        "ONE"
+        "PRESERVE",
+        "BLESSED"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "He sustains them",
+      "a": "The LORD will strengthen him upon the bed of languishing: thou wilt make all his bed in his sickness.",
       "kind": "phrase",
       "words": [
-        "SUSTAINS",
-        "THEM"
+        "STRENGTHEN",
+        "LANGUISHING"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "in their illness",
+      "a": "Father, minister your gentle comfort to every weary heart seeking your face tonight.",
       "kind": "phrase",
       "words": [
-        "ILLNESS",
-        "HEALS"
+        "GENTLE",
+        "COMFORT"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "receive His restoration",
+      "a": "Surround every weakened frame with your healing grace and quiet sustaining peace.",
       "kind": "phrase",
       "words": [
-        "RESTORATION",
+        "HEALING",
         "GRACE"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "rest in His peace",
+      "a": "In Jesus name, Amen.",
       "kind": "phrase",
       "words": [
-        "REST",
-        "PEACE"
+        "JESUS",
+        "NAME"
       ],
       "hi": 0,
       "slot": "C"

@@ -1,0 +1,276 @@
+{
+  "key": "short-healingpsalm91v16",
+  "channel": "prayer6",
+  "psalm": 91,
+  "title": [
+    "A PRAYER FOR",
+    "ABUNDANT LIFE"
+  ],
+  "poster": [
+    "RESTORED BY",
+    "HIS PROMISE",
+    "PSALM 91:16",
+    "THE HEALING BALM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters flowing gently",
+    "warm golden sanctuary light beams dust particles",
+    "white dove flying over peaceful horizon",
+    "soft morning mist over calm forest lake",
+    "glowing embers in quiet prayer room",
+    "gentle rippling water in sunlight"
+  ],
+  "scenes": [
+    {
+      "a": "The shadow of uncertainty currently hanging over your quiet bedroom is meeting its match right now.",
+      "img": "short-healingpsalm91v16-scene-01.jpg",
+      "kicker": "GOD IS NEAR",
+      "sub": "HE HEARS YOUR HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "With long life will I satisfy him, and show him my salvation.",
+      "img": "short-healingpsalm91v16-scene-02.jpg",
+      "kicker": "PSALM 91:16",
+      "sub": "HIS WORD IS TRUTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, we hold onto this sacred promise of fullness for every weary soul listening today.",
+      "img": "short-healingpsalm91v16-scene-03.jpg",
+      "kicker": "A PRAYER FOR YOU",
+      "sub": "RECEIVE HIS PEACE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May the weight of pain dissolve as you rest in the depth of His infinite care.",
+      "img": "short-healingpsalm91v16-scene-04.jpg",
+      "kicker": "HIS INFINITE CARE",
+      "sub": "RELEASE EVERY BURDEN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let your heart be anchored in the salvation only He provides through the passing storms.",
+      "img": "short-healingpsalm91v16-scene-05.jpg",
+      "kicker": "ANCHORED IN HIM",
+      "sub": "HE IS YOUR STRENGTH",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We pray that you feel His presence restoring your spirit, blessing your path, and calming everything.",
+      "img": "short-healingpsalm91v16-scene-06.jpg",
+      "kicker": "RESTORED SPIRIT",
+      "sub": "WALK IN HIS GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "The shadow of uncertainty currently hanging over your quiet bedroom is meeting its match right now."
+    ],
+    [
+      9,
+      17,
+      "With long life will I satisfy him, and show him my salvation."
+    ],
+    [
+      18,
+      27,
+      "Father, we hold onto this sacred promise of fullness for every weary soul listening today."
+    ],
+    [
+      28,
+      37,
+      "May the weight of pain dissolve as you rest in the depth of His infinite care."
+    ],
+    [
+      38,
+      47,
+      "Let your heart be anchored in the salvation only He provides through the passing storms."
+    ],
+    [
+      48,
+      56,
+      "We pray that you feel His presence restoring your spirit, blessing your path, and calming everything."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "SHADOW OF UNCERTAINTY",
+        "HANGING OVER YOU",
+        "IS MEETING ITS MATCH"
+      ],
+      [
+        "MATCH"
+      ],
+      "PSALM 91:16"
+    ],
+    [
+      9,
+      17,
+      [
+        "WITH LONG LIFE",
+        "WILL I SATISFY HIM",
+        "SHOW MY SALVATION"
+      ],
+      [
+        "SALVATION"
+      ],
+      "PSALM 91:16"
+    ],
+    [
+      18,
+      27,
+      [
+        "FATHER WE HOLD",
+        "ONTO THIS SACRED",
+        "PROMISE OF FULLNESS"
+      ],
+      [
+        "FULLNESS"
+      ],
+      "PSALM 91:16"
+    ],
+    [
+      28,
+      37,
+      [
+        "WEIGHT OF PAIN",
+        "DISSOLVE AS YOU",
+        "REST IN HIS CARE"
+      ],
+      [
+        "REST"
+      ],
+      "PSALM 91:16"
+    ],
+    [
+      38,
+      47,
+      [
+        "HEART ANCHORED IN",
+        "SALVATION HE PROVIDES",
+        "THROUGH THE STORMS"
+      ],
+      [
+        "ANCHORED"
+      ],
+      "PSALM 91:16"
+    ],
+    [
+      48,
+      56,
+      [
+        "FEEL HIS PRESENCE",
+        "RESTORING YOUR SPIRIT",
+        "CALMING EVERYTHING NOW"
+      ],
+      [
+        "RESTORING"
+      ],
+      "PSALM 91:16"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The shadow of uncertainty currently hanging over your quiet bedroom is meeting its match right now.",
+      "kind": "phrase",
+      "words": [
+        "MEETING",
+        "ITS",
+        "MATCH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "With long life will I satisfy him, and show him my salvation.",
+      "kind": "phrase",
+      "words": [
+        "LONG",
+        "LIFE",
+        "SALVATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we hold onto this sacred promise of fullness for every weary soul listening today.",
+      "kind": "phrase",
+      "words": [
+        "SACRED",
+        "PROMISE",
+        "FULLNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May the weight of pain dissolve as you rest in the depth of His infinite care.",
+      "kind": "phrase",
+      "words": [
+        "WEIGHT",
+        "DISSOLVE",
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let your heart be anchored in the salvation only He provides through the passing storms.",
+      "kind": "phrase",
+      "words": [
+        "ANCHORED",
+        "SALVATION",
+        "PROVIDES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We pray that you feel His presence restoring your spirit, blessing your path, and calming everything.",
+      "kind": "phrase",
+      "words": [
+        "PRESENCE",
+        "RESTORING",
+        "CALMING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 91:16"
+}

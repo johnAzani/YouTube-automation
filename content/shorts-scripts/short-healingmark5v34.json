@@ -1,0 +1,231 @@
+{
+  "key": "short-healingmark5v34",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "FAITH MAKES",
+    "YOU WHOLE"
+  ],
+  "poster": [
+    "DAUGHTER",
+    "THY FAITH",
+    "HATH MADE",
+    "THEE WHOLE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "glowing golden light in sanctuary",
+    "gentle turquoise ocean waves",
+    "soft white dove in flight",
+    "sunlight through church stained glass",
+    "tranquil mountain stream at sunrise",
+    "peaceful forest sunlight beams"
+  ],
+  "scenes": [
+    {
+      "a": "The crushing weight of that diagnosis you received this morning is resting heavily upon you now.",
+      "img": "short-healingmark5v34-scene-01.jpg",
+      "kicker": "MARK 5:34",
+      "sub": "HEAR HIS VOICE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "As you stand in this quiet moment, the Savior calls out to your weary, trembling heart.",
+      "img": "short-healingmark5v34-scene-02.jpg",
+      "kicker": "HIS PROMISE",
+      "sub": "FIND YOUR REST",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And he said unto her, Daughter, thy faith hath made thee whole; go in peace, and be whole of thy plague.",
+      "img": "short-healingmark5v34-scene-03.jpg",
+      "kicker": "THE WORD",
+      "sub": "COMPLETE RESTORATION",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, pour your divine peace into every broken place that feels too painful to name tonight.",
+      "img": "short-healingmark5v34-scene-04.jpg",
+      "kicker": "SURRENDER",
+      "sub": "BENEATH HIS CARE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Replace our deepest anxieties with the assurance that your presence is the balm we seek.",
+      "img": "short-healingmark5v34-scene-05.jpg",
+      "kicker": "HIS PRESENCE",
+      "sub": "ABIDE IN HIM",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May we walk forward in the freedom of your grace, trusting in your perfect healing touch.",
+      "img": "short-healingmark5v34-scene-06.jpg",
+      "kicker": "GO IN PEACE",
+      "sub": "WALK IN GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "The crushing weight of that diagnosis you received this morning is resting heavily upon you now."
+    ],
+    [
+      12,
+      25,
+      "As you stand in this quiet moment, the Savior calls out to your weary, trembling heart."
+    ],
+    [
+      25,
+      48,
+      "And he said unto her, Daughter, thy faith hath made thee whole; go in peace, and be whole of thy plague."
+    ],
+    [
+      48,
+      65,
+      "Lord, pour your divine peace into every broken place that feels too painful to name tonight."
+    ],
+    [
+      65,
+      83,
+      "Replace our deepest anxieties with the assurance that your presence is the balm we seek."
+    ],
+    [
+      83,
+      105,
+      "May we walk forward in the freedom of your grace, trusting in your perfect healing touch."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "CRUSHING WEIGHT",
+        "OF THE DIAGNOSIS",
+        "RESTING UPON YOU"
+      ],
+      [
+        "CRUSHING WEIGHT"
+      ],
+      "MARK 5:34"
+    ],
+    [
+      12,
+      25,
+      [
+        "SAVIOR CALLS OUT",
+        "TO YOUR WEARY",
+        "TREMBLING HEART"
+      ],
+      [
+        "SAVIOR CALLS"
+      ],
+      "MARK 5:34"
+    ],
+    [
+      25,
+      48,
+      [
+        "DAUGHTER THY FAITH",
+        "HATH MADE THEE WHOLE",
+        "GO IN PEACE",
+        "WHOLE OF THY PLAGUE"
+      ],
+      [
+        "THY FAITH"
+      ],
+      "MARK 5:34"
+    ],
+    [
+      48,
+      65,
+      [
+        "POUR DIVINE PEACE",
+        "INTO EVERY BROKEN",
+        "PAINFUL PLACE"
+      ],
+      [
+        "DIVINE PEACE"
+      ],
+      "MARK 5:34"
+    ],
+    [
+      65,
+      83,
+      [
+        "REPLACE ANXIETIES",
+        "WITH HIS ASSURANCE",
+        "THE BALM WE SEEK"
+      ],
+      [
+        "HIS ASSURANCE"
+      ],
+      "MARK 5:34"
+    ],
+    [
+      83,
+      105,
+      [
+        "WALK IN FREEDOM",
+        "OF HIS GRACE",
+        "PERFECT HEALING TOUCH"
+      ],
+      [
+        "PERFECT HEALING"
+      ],
+      "MARK 5:34"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The crushing weight of that diagnosis you received this morning is resting heavily upon you now.",
+      "kind": "phrase",
+      "words": [
+        "CRUSHING",
+        "WEIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And he said unto her, Daughter, thy faith hath made thee whole; go in peace, and be whole of thy plague.",
+      "kind": "phrase",
+      "words": [
+        "THY",
+        "FAITH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Mark 5:34"
+}
