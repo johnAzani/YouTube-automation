@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T02:20:58Z",
+  "generated_at": "2026-11-15T02:26:59Z",
   "monitor_generated_at": "2026-11-15T02:19:47.223373+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 246,
+    "published_total": 247,
     "published_longform": 109,
-    "published_shorts": 137,
-    "public_total": 244,
+    "published_shorts": 138,
+    "public_total": 245,
     "queued_longform": 55,
-    "queued_shorts": 75,
+    "queued_shorts": 70,
     "automations_ok": 11,
     "automations_total": 11,
     "network_healthy": true
@@ -40,7 +40,7 @@
         "public_total": 44,
         "queued_longform": 11,
         "queued_other": 5,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
         "id": "SHORT-PSALM56V3",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm56v3",
-        "scripture": "Psalm 56:3",
+        "short": "short-psalm94v19",
+        "scripture": "Psalm 94:19",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -108,7 +108,7 @@
         "public_total": 51,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
         "id": "SHORT-MORNINGPSALM23V1",
@@ -176,7 +176,7 @@
         "public_total": 36,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
         "id": "SHORT-MIDDAYZECHARIAH4V6",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middayzechariah4v6",
-        "scripture": "Zechariah 4:6",
+        "short": "short-middaygalatians6v9",
+        "scripture": "Galatians 6:9",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -312,7 +312,7 @@
         "public_total": 19,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
         "id": "SHORT-FAMILYNUMBERS6V24",
@@ -330,8 +330,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familynumbers6v24",
-        "scripture": "Numbers 6:24-26",
+        "short": "short-familydeuteronomy6v6",
+        "scripture": "Deuteronomy 6:6-7",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -441,23 +441,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 19,
+        "published_total": 20,
         "published_longform": 9,
-        "published_shorts": 10,
+        "published_shorts": 11,
         "thumbnail_pending": 5,
-        "public_total": 19,
+        "public_total": 20,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONJAMES1V5",
-        "title": "Pray This James 1:5 Prayer for Open Doors & Provision | Wisdom #Shorts",
+        "id": "SHORT-PROVISIONPROVERBS16V3",
+        "title": "Pray This Proverbs 16:3 Prayer for Open Doors & Provision | God'S Daily Provision #Shorts",
         "format": "short",
-        "youtube_video_id": "Ihvhe-qZG3I",
-        "watch_url": "https://www.youtube.com/shorts/Ihvhe-qZG3I",
-        "published_on": "2026-11-14",
-        "published_at": "2026-11-14T20:20:55Z"
+        "youtube_video_id": "SspZpHb6SbU",
+        "watch_url": "https://www.youtube.com/shorts/SspZpHb6SbU",
+        "published_on": "2026-11-15",
+        "published_at": "2026-11-15T02:26:02Z"
       },
       "next_queued_longform": {
         "id": "0509",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionproverbs16v3",
-        "scripture": "Proverbs 16:3",
+        "short": "short-provisionpsalm84v11",
+        "scripture": "Psalm 84:11",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONPROVERBS16V3",
+      "slug": "short-provisionproverbs16v3-stewardship-prayer",
+      "file": "short-provisionproverbs16v3-stewardship-prayer.md",
+      "title": "Pray This Proverbs 16:3 Prayer for Open Doors & Provision | God'S Daily Provision #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T02:26:02Z",
+      "youtube_video_id": "SspZpHb6SbU",
+      "watch_url": "https://www.youtube.com/shorts/SspZpHb6SbU",
+      "youtu_be_url": "https://youtu.be/SspZpHb6SbU",
+      "shorts_url": "https://www.youtube.com/shorts/SspZpHb6SbU",
+      "studio_url": "https://studio.youtube.com/video/SspZpHb6SbU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/SspZpHb6SbU/hqdefault.jpg",
+      "thumb_text": "THE PROVISION TABLE \u00b7 COMMIT THY WORKS",
+      "thumbnail_pending": false,
+      "duration_label": "56s",
+      "words": 627
+    },
     {
       "id": "SHORT-MIDDAYZECHARIAH4V6",
       "slug": "short-middayzechariah4v6-midday-prayer",
@@ -7332,32 +7356,10 @@
         "target_window_utc": "18:44"
       },
       {
-        "short": "short-middayzechariah4v6",
-        "file": "0000-short-middayzechariah4v6.yml",
-        "companion_longform_id": "",
-        "scripture": "Zechariah 4:6",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
-      },
-      {
         "short": "short-morningpsalm121v1",
         "file": "0000-short-morningpsalm121v1.yml",
         "companion_longform_id": "",
         "scripture": "Psalm 121:1-2",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-morningpsalm23v1",
-        "file": "0000-short-morningpsalm23v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 23:1",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",
@@ -7374,17 +7376,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-psalm56v3",
-        "file": "0000-short-psalm56v3.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 56:3",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm94v19",
@@ -7673,17 +7664,6 @@
         "target_window_utc": "23:14"
       },
       {
-        "short": "short-familynumbers6v24",
-        "file": "0306-short-familynumbers6v24.yml",
-        "companion_longform_id": "0306",
-        "scripture": "Numbers 6:24-26",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
-      {
         "short": "short-familydeuteronomy6v6",
         "file": "0307-short-familydeuteronomy6v6.yml",
         "companion_longform_id": "0307",
@@ -7836,17 +7816,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-provisionproverbs16v3",
-        "file": "0507-short-provisionproverbs16v3.yml",
-        "companion_longform_id": "0507",
-        "scripture": "Proverbs 16:3",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionpsalm84v11",
