@@ -16,6 +16,13 @@
       "workflow": "keepalive.yml"
     },
     {
+      "late_minutes": 193,
+      "name": "Growth autopilot",
+      "ran_at": "2026-11-15T05:27:39+00:00",
+      "slot": "2026-11-15T02:14:00+00:00",
+      "workflow": "growth-autopilot.yml"
+    },
+    {
       "late_minutes": 178,
       "name": "Produce video",
       "ran_at": "2026-11-15T02:12:06+00:00",
@@ -42,11 +49,25 @@
       "ran_at": "2026-11-14T22:57:40+00:00",
       "slot": "2026-11-14T20:14:00+00:00",
       "workflow": "automation-health.yml"
+    },
+    {
+      "late_minutes": 133,
+      "name": "Gemini Brain Autonomous Queue Replenishment",
+      "ran_at": "2026-11-15T05:27:41+00:00",
+      "slot": "2026-11-15T03:14:00+00:00",
+      "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-15T05:27:29.951655+00:00",
-  "last_run_at": "2026-11-15T05:26:45+00:00",
+  "generated_at": "2026-11-15T05:31:58.280904+00:00",
+  "last_run_at": "2026-11-15T05:31:04+00:00",
   "on_time": [
+    {
+      "late_minutes": 110,
+      "name": "Channel analytics (watch hours, sources, retention)",
+      "ran_at": "2026-11-15T05:27:42+00:00",
+      "slot": "2026-11-15T03:37:00+00:00",
+      "workflow": "channel-analytics.yml"
+    },
     {
       "late_minutes": 42,
       "name": "Autonomous Comment Replies",
