@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T15:00:41Z",
+  "generated_at": "2026-11-15T15:01:48Z",
   "monitor_generated_at": "2026-11-15T13:57:42.158231+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 278,
+    "published_total": 279,
     "published_longform": 116,
-    "published_shorts": 162,
-    "public_total": 276,
+    "published_shorts": 163,
+    "public_total": 277,
     "queued_longform": 63,
-    "queued_shorts": 92,
+    "queued_shorts": 91,
     "automations_ok": 12,
     "automations_total": 12,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 47,
+        "published_total": 48,
         "published_longform": 16,
-        "published_shorts": 31,
+        "published_shorts": 32,
         "thumbnail_pending": 3,
-        "public_total": 46,
+        "public_total": 47,
         "queued_longform": 11,
         "queued_other": 5,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MATTHEW28V20",
-        "title": "Say This Matthew 28:20 Prayer Before You Sleep | Constant Presence #Shorts",
+        "id": "SHORT-PHILIPPIANS4V8",
+        "title": "Say This Philippians 4:8 Prayer Before You Sleep | The Secret Place #Shorts",
         "format": "short",
-        "youtube_video_id": "T3HVq07iMzM",
-        "watch_url": "https://www.youtube.com/shorts/T3HVq07iMzM",
+        "youtube_video_id": "8ssIICb_3Ts",
+        "watch_url": "https://www.youtube.com/shorts/8ssIICb_3Ts",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T11:28:43Z"
+        "published_at": "2026-11-15T15:00:41Z"
       },
       "next_queued_longform": {
         "id": "0025",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-philippians4v8",
-        "scripture": "Philippians 4:8",
+        "short": "short-psalm139v7",
+        "scripture": "Psalm 139:7-10",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PHILIPPIANS4V8",
+      "slug": "short-philippians4v8-pre-sleep-prayer",
+      "file": "short-philippians4v8-pre-sleep-prayer.md",
+      "title": "Say This Philippians 4:8 Prayer Before You Sleep | The Secret Place #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T15:00:41Z",
+      "youtube_video_id": "8ssIICb_3Ts",
+      "watch_url": "https://www.youtube.com/shorts/8ssIICb_3Ts",
+      "youtu_be_url": "https://youtu.be/8ssIICb_3Ts",
+      "shorts_url": "https://www.youtube.com/shorts/8ssIICb_3Ts",
+      "studio_url": "https://studio.youtube.com/video/8ssIICb_3Ts/edit",
+      "thumb_url": "https://i.ytimg.com/vi/8ssIICb_3Ts/hqdefault.jpg",
+      "thumb_text": "NIGHT PRAYER \u00b7 PHILIPPIANS 4:8",
+      "thumbnail_pending": false,
+      "duration_label": "58s",
+      "words": 609
+    },
     {
       "id": "SHORT-MORNINGMATTHEW5V14",
       "slug": "short-morningmatthew5v14-sunrise-prayer",
@@ -8306,17 +8330,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-philippians4v8",
-        "file": "0000-short-philippians4v8.yml",
-        "companion_longform_id": "",
-        "scripture": "Philippians 4:8",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-provisionmatthew6v26",
