@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T19:55:12Z",
+  "generated_at": "2026-11-15T19:55:37Z",
   "monitor_generated_at": "2026-11-15T19:52:33.003892+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 290,
+    "published_total": 291,
     "published_longform": 118,
-    "published_shorts": 172,
-    "public_total": 288,
+    "published_shorts": 173,
+    "public_total": 289,
     "queued_longform": 61,
-    "queued_shorts": 82,
+    "queued_shorts": 81,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 56,
+        "published_total": 57,
         "published_longform": 24,
-        "published_shorts": 32,
+        "published_shorts": 33,
         "thumbnail_pending": 6,
-        "public_total": 55,
+        "public_total": 56,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MORNINGMATTHEW5V14",
-        "title": "Say This Matthew 5:14-16 Prayer at Sunrise | Light #Shorts",
+        "id": "SHORT-MORNINGPSALM121V1",
+        "title": "Say This Psalm 121:1-2 Prayer at Sunrise | The Morning Altar #Shorts",
         "format": "short",
-        "youtube_video_id": "ZKTgvvMpXY8",
-        "watch_url": "https://www.youtube.com/shorts/ZKTgvvMpXY8",
+        "youtube_video_id": "DuJbT6qQdyA",
+        "watch_url": "https://www.youtube.com/shorts/DuJbT6qQdyA",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T14:59:25Z"
+        "published_at": "2026-11-15T19:54:48Z"
       },
       "next_queued_longform": {
         "id": "0068",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm121v1",
-        "scripture": "Psalm 121:1-2",
+        "short": "short-morningpsalm37v4",
+        "scripture": "Psalm 37:4",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM121V1",
+      "slug": "short-morningpsalm121v1-sunrise-prayer",
+      "file": "short-morningpsalm121v1-sunrise-prayer.md",
+      "title": "Say This Psalm 121:1-2 Prayer at Sunrise | The Morning Altar #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T19:54:48Z",
+      "youtube_video_id": "DuJbT6qQdyA",
+      "watch_url": "https://www.youtube.com/shorts/DuJbT6qQdyA",
+      "youtu_be_url": "https://youtu.be/DuJbT6qQdyA",
+      "shorts_url": "https://www.youtube.com/shorts/DuJbT6qQdyA",
+      "studio_url": "https://studio.youtube.com/video/DuJbT6qQdyA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/DuJbT6qQdyA/hqdefault.jpg",
+      "thumb_text": "PSALM 121:1-2 \u00b7 LIFT UP YOUR EYES",
+      "thumbnail_pending": false,
+      "duration_label": "47s",
+      "words": 592
+    },
     {
       "id": "SHORT-MIDNIGHTJUDGES16V3",
       "slug": "short-midnightjudges16v3-midnight-prayer",
@@ -8480,17 +8504,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-morningpsalm121v1",
-        "file": "0000-short-morningpsalm121v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 121:1-2",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm37v4",
