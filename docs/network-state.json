@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T02:28:07Z",
+  "generated_at": "2026-11-15T02:28:28Z",
   "monitor_generated_at": "2026-11-15T02:19:47.223373+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 248,
+    "published_total": 249,
     "published_longform": 109,
-    "published_shorts": 139,
-    "public_total": 246,
+    "published_shorts": 140,
+    "public_total": 247,
     "queued_longform": 55,
-    "queued_shorts": 69,
+    "queued_shorts": 68,
     "automations_ok": 11,
     "automations_total": 11,
     "network_healthy": true
@@ -373,23 +373,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 18,
+        "published_total": 19,
         "published_longform": 9,
-        "published_shorts": 9,
-        "thumbnail_pending": 6,
-        "public_total": 18,
+        "published_shorts": 10,
+        "thumbnail_pending": 7,
+        "public_total": 19,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0408",
-        "title": "Prayer for Healing and Restoration: Malachi 4:2 | The Healing Balm",
-        "format": "longform",
-        "youtube_video_id": "pCo9x0WUBzw",
-        "watch_url": "https://youtu.be/pCo9x0WUBzw",
-        "published_on": "2026-11-14",
-        "published_at": "2026-11-14T21:16:18Z"
+        "id": "SHORT-HEALINGMALACHI4V2",
+        "title": "Pray This Malachi 4:2 Healing Prayer for Peace & Strength | Receive God'S Peace #Shorts",
+        "format": "short",
+        "youtube_video_id": "IQbYyWrFUzM",
+        "watch_url": "https://www.youtube.com/shorts/IQbYyWrFUzM",
+        "published_on": "2026-11-15",
+        "published_at": "2026-11-15T02:27:13Z"
       },
       "next_queued_longform": {
         "id": "0409",
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALINGMALACHI4V2",
+      "slug": "short-healingmalachi4v2-restoration-prayer",
+      "file": "short-healingmalachi4v2-restoration-prayer.md",
+      "title": "Pray This Malachi 4:2 Healing Prayer for Peace & Strength | Receive God'S Peace #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T02:27:13Z",
+      "youtube_video_id": "IQbYyWrFUzM",
+      "watch_url": "https://www.youtube.com/shorts/IQbYyWrFUzM",
+      "youtu_be_url": "https://youtu.be/IQbYyWrFUzM",
+      "shorts_url": "https://www.youtube.com/shorts/IQbYyWrFUzM",
+      "studio_url": "https://studio.youtube.com/video/IQbYyWrFUzM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/IQbYyWrFUzM/hqdefault.jpg",
+      "thumb_text": "",
+      "thumbnail_pending": true,
+      "duration_label": "56s",
+      "words": 641
+    },
     {
       "id": "SHORT-GARDENHABAKKUK3V17",
       "slug": "short-gardenhabakkuk3v17-thanksgiving-prayer",
@@ -7769,17 +7793,6 @@
         "file": "0407-short-healingpsalm41v1.yml",
         "companion_longform_id": "0407",
         "scripture": "Psalm 41:1-3",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-healingmalachi4v2",
-        "file": "0408-short-healingmalachi4v2.yml",
-        "companion_longform_id": "0408",
-        "scripture": "Malachi 4:2",
         "channel": "prayer6",
         "channel_name": "The Healing Balm",
         "status": "approved",
