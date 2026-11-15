@@ -1,0 +1,237 @@
+{
+  "key": "short-morningdeuteronomy31v8",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "GOD GOES BEFORE YOU",
+    "A MORNING PRAYER"
+  ],
+  "poster": [
+    "FINDING STRENGTH",
+    "IN THE DAWN",
+    "HIS PROMISE",
+    "FOR TODAY"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "soft morning mist over mountain lake",
+    "golden sun rays breaking through pine trees",
+    "slow motion dew on morning grass",
+    "distant mountain peaks at sunrise",
+    "gentle light filling an empty room",
+    "clouds drifting over mountain valley"
+  ],
+  "scenes": [
+    {
+      "a": "The fear you feel about that meeting today is already known to your Creator.",
+      "img": "short-morningdeuteronomy31v8-scene-01.jpg",
+      "kicker": "DEUTERONOMY 31:8",
+      "sub": "HE IS ALREADY THERE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Listen to this promise for your heart.",
+      "img": "short-morningdeuteronomy31v8-scene-02.jpg",
+      "kicker": "DEUTERONOMY 31:8",
+      "sub": "A WORD FOR YOUR SOUL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "The LORD, he it is that doth go before thee; he will be with thee, he will not fail thee, neither forsake thee: fear not, neither be dismayed.",
+      "img": "short-morningdeuteronomy31v8-scene-03.jpg",
+      "kicker": "DEUTERONOMY 31:8",
+      "sub": "HIS WORD IS TRUTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Lord, help me trust that you are already walking into the hours ahead of me.",
+      "img": "short-morningdeuteronomy31v8-scene-04.jpg",
+      "kicker": "DEUTERONOMY 31:8",
+      "sub": "GUIDE MY STEPS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Calm the waves in my spirit as I face the challenges of this new day.",
+      "img": "short-morningdeuteronomy31v8-scene-05.jpg",
+      "kicker": "DEUTERONOMY 31:8",
+      "sub": "FINDING CALM",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "I place my worries in your hands, resting in your unchanging presence and love today.",
+      "img": "short-morningdeuteronomy31v8-scene-06.jpg",
+      "kicker": "DEUTERONOMY 31:8",
+      "sub": "RESTING IN HIM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "The fear you feel about that meeting today is already known to your Creator."
+    ],
+    [
+      8,
+      14,
+      "Listen to this promise for your heart."
+    ],
+    [
+      14,
+      38,
+      "The LORD, he it is that doth go before thee; he will be with thee, he will not fail thee, neither forsake thee: fear not, neither be dismayed."
+    ],
+    [
+      38,
+      55,
+      "Lord, help me trust that you are already walking into the hours ahead of me."
+    ],
+    [
+      55,
+      72,
+      "Calm the waves in my spirit as I face the challenges of this new day."
+    ],
+    [
+      72,
+      98,
+      "I place my worries in your hands, resting in your unchanging presence and love today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THE FEAR YOU FEEL",
+        "ABOUT THAT MEETING",
+        "IS KNOWN TO GOD"
+      ],
+      [
+        "FEAR",
+        "KNOWN"
+      ],
+      "DEUTERONOMY 31 : 8"
+    ],
+    [
+      8,
+      14,
+      [
+        "LISTEN TO THIS",
+        "PROMISE FOR",
+        "YOUR HEART"
+      ],
+      [
+        "PROMISE"
+      ],
+      "DEUTERONOMY 31 : 8"
+    ],
+    [
+      14,
+      38,
+      [
+        "THE LORD GOES BEFORE",
+        "HE WILL NOT FAIL",
+        "FEAR NOT"
+      ],
+      [
+        "LORD",
+        "NOT FAIL",
+        "FEAR NOT"
+      ],
+      "DEUTERONOMY 31 : 8"
+    ],
+    [
+      38,
+      55,
+      [
+        "TRUST YOU ARE",
+        "WALKING AHEAD",
+        "OF ME"
+      ],
+      [
+        "TRUST",
+        "WALKING"
+      ],
+      "DEUTERONOMY 31 : 8"
+    ],
+    [
+      55,
+      72,
+      [
+        "CALM THE WAVES",
+        "IN MY SPIRIT",
+        "TODAY"
+      ],
+      [
+        "CALM",
+        "WAVES"
+      ],
+      "DEUTERONOMY 31 : 8"
+    ],
+    [
+      72,
+      98,
+      [
+        "PLACE WORRIES",
+        "IN YOUR HANDS",
+        "RESTING IN YOU"
+      ],
+      [
+        "WORRIES",
+        "RESTING"
+      ],
+      "DEUTERONOMY 31 : 8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The fear you feel about that meeting today is already known to your Creator.",
+      "kind": "phrase",
+      "words": [
+        "FEAR",
+        "KNOWN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The LORD, he it is that doth go before thee; he will be with thee, he will not fail thee, neither forsake thee: fear not, neither be dismayed.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "NOT FAIL",
+        "FEAR NOT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Deuteronomy 31:8"
+}

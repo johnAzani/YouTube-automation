@@ -1,0 +1,221 @@
+{
+  "key": "short-morning2corinthians5v17",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "A FRESH START",
+    "IN HIS LIGHT"
+  ],
+  "poster": [
+    "AN ANCHOR",
+    "FOR YOUR",
+    "RESTLESS",
+    "SOUL"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "soft morning mist over mountain lake",
+    "golden sun rays through pine forest",
+    "dew drops on morning grass close up",
+    "gentle sunrise light on open field",
+    "calm ocean horizon at dawn",
+    "sunlight filtering through curtains"
+  ],
+  "scenes": [
+    {
+      "a": "That heavy shame clinging to your heart since yesterday is not your final identity today.",
+      "img": "short-morning2corinthians5v17-scene-01.jpg",
+      "kicker": "2 CORINTHIANS 5:17",
+      "sub": "GOD MAKES ALL THINGS NEW",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Therefore if any man be in Christ, he is a new creature: old things are passed away; behold, all things are become new.",
+      "img": "short-morning2corinthians5v17-scene-02.jpg",
+      "kicker": "2 CORINTHIANS 5:17",
+      "sub": "THE OLD IS GONE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, thank you for this truth.",
+      "img": "short-morning2corinthians5v17-scene-03.jpg",
+      "kicker": "PRAYER",
+      "sub": "WALKING IN FREEDOM",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Help me to leave the wreckage of past mistakes behind as I step into your mercy.",
+      "img": "short-morning2corinthians5v17-scene-04.jpg",
+      "kicker": "PRAYER",
+      "sub": "YOUR GRACE IS SUFFICIENT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Wash my perspective clean so I might see the path you have prepared for this hour.",
+      "img": "short-morning2corinthians5v17-scene-05.jpg",
+      "kicker": "PRAYER",
+      "sub": "GUIDE MY STEPS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May your light define who I am, not the shadows that have faded with the night.",
+      "img": "short-morning2corinthians5v17-scene-06.jpg",
+      "kicker": "PRAYER",
+      "sub": "IN HIS IMAGE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That heavy shame clinging to your heart since yesterday is not your final identity today."
+    ],
+    [
+      9,
+      22,
+      "Therefore if any man be in Christ, he is a new creature: old things are passed away; behold, all things are become new."
+    ],
+    [
+      23,
+      30,
+      "Lord, thank you for this truth."
+    ],
+    [
+      31,
+      45,
+      "Help me to leave the wreckage of past mistakes behind as I step into your mercy."
+    ],
+    [
+      46,
+      60,
+      "Wash my perspective clean so I might see the path you have prepared for this hour."
+    ],
+    [
+      61,
+      75,
+      "May your light define who I am, not the shadows that have faded with the night."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "SHAME IS NOT",
+        "YOUR IDENTITY",
+        "TODAY"
+      ],
+      [
+        "IDENTITY"
+      ],
+      "2 CORINTHIANS 5:17"
+    ],
+    [
+      9,
+      22,
+      [
+        "IN CHRIST",
+        "A NEW CREATURE",
+        "ALL THINGS NEW"
+      ],
+      [
+        "NEW CREATURE"
+      ],
+      "2 CORINTHIANS 5:17"
+    ],
+    [
+      23,
+      30,
+      [
+        "THANK YOU LORD",
+        "FOR THIS",
+        "TRUE WORD"
+      ],
+      [
+        "TRUE WORD"
+      ],
+      "2 CORINTHIANS 5:17"
+    ],
+    [
+      31,
+      45,
+      [
+        "LEAVE MISTAKES BEHIND",
+        "STEP INTO",
+        "HIS MERCY"
+      ],
+      [
+        "HIS MERCY"
+      ],
+      "2 CORINTHIANS 5:17"
+    ],
+    [
+      46,
+      60,
+      [
+        "WASH MY PERSPECTIVE",
+        "SEE THE PATH",
+        "PREPARED FOR ME"
+      ],
+      [
+        "SEE THE PATH"
+      ],
+      "2 CORINTHIANS 5:17"
+    ],
+    [
+      61,
+      75,
+      [
+        "HIS LIGHT DEFINES",
+        "SHADOWS FADE",
+        "WITH THE NIGHT"
+      ],
+      [
+        "HIS LIGHT"
+      ],
+      "2 CORINTHIANS 5:17"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That heavy shame clinging to your heart since yesterday is not your final identity today.",
+      "kind": "phrase",
+      "words": [
+        "SHAME",
+        "NOT",
+        "IDENTITY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Corinthians 5:17"
+}

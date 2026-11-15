@@ -1,0 +1,272 @@
+{
+  "key": "short-morningmatthew5v14",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "YOU ARE THE LIGHT",
+    "OF THE WORLD"
+  ],
+  "poster": [
+    "RISE AND SHINE",
+    "A PRAYER FOR",
+    "THE MORNING",
+    "LIGHT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "golden sunrise over misty pine forest",
+    "close up of dew on morning grass in sunlight",
+    "sunbeams through morning window blinds",
+    "soft light glowing on a wooden table",
+    "cinematic sunrise over calm lake horizon",
+    "gentle sun flare through morning tree branches"
+  ],
+  "scenes": [
+    {
+      "a": "The heavy doubt resting on your chest this hour belongs at the feet of Jesus.",
+      "img": "short-morningmatthew5v14-scene-01.jpg",
+      "kicker": "MATTHEW 5:14",
+      "sub": "HEAR HIS WORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Ye are the light of the world.",
+      "img": "short-morningmatthew5v14-scene-02.jpg",
+      "kicker": "MATTHEW 5:14",
+      "sub": "YOU ARE THE LIGHT",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "A city that is set on an hill cannot be hid.",
+      "img": "short-morningmatthew5v14-scene-03.jpg",
+      "kicker": "MATTHEW 5:14",
+      "sub": "SET ON A HILL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Neither do men light a candle, and put it under a bushel, but on a candlestick; and it giveth light unto all that are in the house.",
+      "img": "short-morningmatthew5v14-scene-04.jpg",
+      "kicker": "MATTHEW 5:15",
+      "sub": "THE CANDLESTICK",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.",
+      "img": "short-morningmatthew5v14-scene-05.jpg",
+      "kicker": "MATTHEW 5:16",
+      "sub": "GLORIFY THE FATHER",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, remove the fear of being seen and help us reflect Your radiance today. Amen.",
+      "img": "short-morningmatthew5v14-scene-06.jpg",
+      "kicker": "A MORNING PRAYER",
+      "sub": "BE THE LIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "The heavy doubt resting on your chest this hour belongs at the feet of Jesus."
+    ],
+    [
+      9,
+      14,
+      "Ye are the light of the world."
+    ],
+    [
+      15,
+      21,
+      "A city that is set on an hill cannot be hid."
+    ],
+    [
+      22,
+      35,
+      "Neither do men light a candle, and put it under a bushel, but on a candlestick; and it giveth light unto all that are in the house."
+    ],
+    [
+      36,
+      48,
+      "Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven."
+    ],
+    [
+      49,
+      58,
+      "Lord, remove the fear of being seen and help us reflect Your radiance today. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THE HEAVY DOUBT",
+        "RESTING ON YOUR",
+        "CHEST THIS HOUR",
+        "BELONGS TO JESUS"
+      ],
+      [
+        "HEAVY DOUBT"
+      ],
+      "MATTHEW 5:14"
+    ],
+    [
+      9,
+      14,
+      [
+        "YE ARE THE",
+        "LIGHT OF THE",
+        "WORLD"
+      ],
+      [
+        "LIGHT"
+      ],
+      "MATTHEW 5:14"
+    ],
+    [
+      15,
+      21,
+      [
+        "A CITY THAT IS",
+        "SET ON AN HILL",
+        "CANNOT BE HID"
+      ],
+      [
+        "CANNOT BE HID"
+      ],
+      "MATTHEW 5:14"
+    ],
+    [
+      22,
+      35,
+      [
+        "NEITHER LIGHT A CANDLE",
+        "NOR HIDE IT",
+        "UNDER A BUSHEL",
+        "BUT ON A",
+        "CANDLESTICK"
+      ],
+      [
+        "CANDLESTICK"
+      ],
+      "MATTHEW 5:15"
+    ],
+    [
+      36,
+      48,
+      [
+        "LET YOUR LIGHT",
+        "SO SHINE",
+        "GLORIFY YOUR FATHER",
+        "WHICH IS",
+        "IN HEAVEN"
+      ],
+      [
+        "SHINE",
+        "GLORIFY"
+      ],
+      "MATTHEW 5:16"
+    ],
+    [
+      49,
+      58,
+      [
+        "REMOVE THE FEAR",
+        "REFLECT YOUR",
+        "RADIANCE TODAY",
+        "AMEN"
+      ],
+      [
+        "RADIANCE"
+      ],
+      "MATTHEW 5:16"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The heavy doubt resting on your chest this hour belongs at the feet of Jesus.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY DOUBT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Ye are the light of the world.",
+      "kind": "phrase",
+      "words": [
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "A city that is set on an hill cannot be hid.",
+      "kind": "phrase",
+      "words": [
+        "CANNOT BE HID"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Neither do men light a candle, and put it under a bushel, but on a candlestick; and it giveth light unto all that are in the house.",
+      "kind": "phrase",
+      "words": [
+        "CANDLESTICK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.",
+      "kind": "phrase",
+      "words": [
+        "SHINE",
+        "GLORIFY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, remove the fear of being seen and help us reflect Your radiance today. Amen.",
+      "kind": "phrase",
+      "words": [
+        "RADIANCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Matthew 5:14-16"
+}
