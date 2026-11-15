@@ -292,8 +292,15 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
             emit(f"reusing the previous word alignment ({len(words)} words)")
         else:
             try:
+                from . import prayer_alignment
+                prayer_alignment.last_report.clear()
                 with stage("speech alignment", f"{duration:.0f}s of audio"):
                     words = align(audio, doc.full_narration, Path(model_dir))
+                aligned = dict(prayer_alignment.last_report)
+                if aligned.get('retimed_words'):
+                    emit(f"the recogniser was unsure of {aligned['retimed_words']} word(s) in "
+                         f"{aligned['retimed_stretches']} place(s); each took the time between "
+                         f"the certain words on either side")
             except ValueError:
                 # Never publish a take whose spoken words failed alignment. Remove
                 # the cached chunks so a later retry cannot reuse poisoned audio.

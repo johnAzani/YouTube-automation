@@ -27,7 +27,15 @@ timestamps (`w_t0 <= t < w_t1`), so such a word is simply never highlighted.
 
 Still fails closed on: no audio/model, empty transcript, words that cannot be
 matched at all (script and narration genuinely differ), out-of-order or
-non-finite timings, and low-confidence recognition.
+non-finite timings, and low-confidence recognition that nothing certain bounds.
+
+A short stretch the recogniser was unsure of, with an exactly matched word on
+each side, is not refused: its words take the time between those two words
+(`_retime_between_neighbours`). The recogniser's own timing for the stretch is
+not used at all, so there is nothing uncertain left in the result. On 15
+November 2026 a 1,120-word prayer (job 0091, The Midday Watch) was refused, its
+narration thrown away and the channel's long-form slot lost, over one such
+stretch at word 349 ("the heat of the day presses heavy upon us").
 """
 from __future__ import annotations
 
@@ -55,8 +63,21 @@ def _spoken_words(audio: Path, model_dir: Path):
     return [word for segment in segments for word in (segment.words or [])]
 
 
+#: The longest unsure stretch that is re-timed from its neighbours, in script
+#: words and in seconds between the two certain words. Longer than this and the
+#: narration may have said something else for a whole sentence: refuse it.
+RETIME_MAX_WORDS = 8
+RETIME_MAX_SECONDS = 8.0
+
+
+#: What the last `match` did beyond matching: `retimed_words`, `retimed_stretches`.
+#: Read it straight after `align`; callers clear it first.
+last_report: dict = {}
+
+
 def match(expected, spoken, min_confidence=0.2):
     """Map script words onto recognised tokens. `spoken` items need .word/.start/.end/.probability."""
+    last_report.clear()
     if not expected:
         raise ValueError('Empty transcript')
     exp = [_canonical(w) for w in expected]
@@ -88,9 +109,13 @@ def match(expected, spoken, min_confidence=0.2):
             f'(floor {COVERAGE_MIN:.0%}); the audio is not this script')
 
     result, previous_end = [], 0.0
+    stretches = []  # (first row, last row, what was heard) where script and audio differ
     for kind, a, b, c, d in SequenceMatcher(a=exp, b=[c for _, c in usable],
                                             autojunk=False).get_opcodes():
         indices = [usable[k][0] for k in range(c, d)]
+        if kind in ('replace', 'delete'):
+            stretches.append((len(result), len(result) + (b - a) - 1,
+                              ' '.join(str(spoken[i].word).strip() for i in indices)))
         if kind == 'equal':
             # The recognised text equals the script word, so the transcript is
             # certain by construction: a low recogniser probability here says
@@ -139,6 +164,9 @@ def match(expected, spoken, min_confidence=0.2):
             for token in expected[a:b]:
                 result.append((token, None, False))
 
+    retimed = _retime_between_neighbours(result, stretches, min_confidence)
+    last_report.update(retimed_stretches=len(retimed), retimed_words=sum(retimed))
+
     words, previous_end = [], 0.0
     for index, (original, heard, exact) in enumerate(result, 1):
         if heard is None:
@@ -154,13 +182,64 @@ def match(expected, spoken, min_confidence=0.2):
         if end < start:
             raise ValueError(f'Negative span at word {index}: {start:.3f}-{end:.3f}')
         if not exact and not min_confidence <= prob <= 1:
-            raise ValueError(f'Uncertain alignment at word {index}: confidence={prob:.3f}')
+            raise ValueError(f'Uncertain alignment at word {index}: confidence={prob:.3f}'
+                             + _what_differed(result, stretches, index - 1))
         words.append((original, round(start, 3), round(end, 3)))
         previous_end = max(previous_end, end)
     return words
 
 
 COVERAGE_MIN = 0.85
+
+
+def _retime_between_neighbours(result, stretches, min_confidence):
+    """Give each short unsure stretch the time between its two certain neighbours.
+
+    `result` rows are `(script word, heard span or None, exact)` and are changed
+    in place. A stretch qualifies when the recogniser's confidence in it is under
+    the floor, it is at most `RETIME_MAX_WORDS` long, the row before it and the
+    row after it are exact matches, and the time between those two is in order
+    and at most `RETIME_MAX_SECONDS`. Its words then share that time by length.
+    Returns the size of every stretch it re-timed. Anything else is left for the
+    caller's checks, which refuse it as before.
+    """
+    done = []
+    for first, last, _heard_text in stretches:
+        rows = result[first:last + 1]
+        timed = [heard for _w, heard, exact in rows if heard is not None and not exact]
+        if not all(math.isfinite(float(v)) for h in timed
+                   for v in (h.start, h.end, h.probability)):
+            continue  # a recogniser that returns nonsense numbers is refused, not smoothed
+        unsure = [h for h in timed if not min_confidence <= float(h.probability) <= 1]
+        if not unsure or len(rows) > RETIME_MAX_WORDS:
+            continue
+        if first == 0 or last + 1 >= len(result):
+            continue  # nothing certain on one side
+        before, after = result[first - 1], result[last + 1]
+        if not (before[2] and after[2] and before[1] is not None and after[1] is not None):
+            continue
+        left, right = float(before[1].end), float(after[1].start)
+        if not (math.isfinite(left) and math.isfinite(right)) or right < left:
+            continue
+        if right - left > RETIME_MAX_SECONDS:
+            continue
+        tokens = [word for word, _heard, _exact in rows]
+        for offset, (token, span) in enumerate(_tile(tokens, left, right, 1.0)):
+            result[first + offset] = (token, span, True)
+        done.append(len(rows))
+    return done
+
+
+def _what_differed(result, stretches, row):
+    """For a refusal: the script words and the heard words of the stretch holding `row`."""
+    for first, last, heard_text in stretches:
+        if first <= row <= last:
+            script = ' '.join(word for word, _heard, _exact in result[first:last + 1])
+            spans = [heard for _w, heard, _e in result[first:last + 1] if heard is not None]
+            took = f', {spans[-1].end - spans[0].start:.1f}s' if spans else ''
+            return (f'; the script says "{script[:160]}" ({last - first + 1} words), '
+                    f'the recogniser heard "{heard_text[:160]}"{took}')
+    return ''
 
 
 def _block_counts(script_tokens, spoken, indices):

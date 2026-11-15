@@ -1095,7 +1095,14 @@ def _ensure_word_timings(short_key: str, audio_path: Path, narration_text: str,
     model_dir = REPO_ROOT / 'output' / 'alignment-model'
     try:
         from .prayer_alignment import align
+        from . import prayer_alignment
+        prayer_alignment.last_report.clear()
         aligned = align(audio_path, narration_text, model_dir)
+        retimed = dict(prayer_alignment.last_report)
+        if retimed.get('retimed_words'):
+            print(f"[short-release] {short_key}: the recogniser was unsure of "
+                  f"{retimed['retimed_words']} word(s); each took the time between the "
+                  f"certain words on either side")
         rows = [[float(start), float(end), _clean_word_token(orig)] for orig, start, end in aligned]
         unheard = sum(1 for row in rows if row[1] - row[0] <= 1e-9)
         if unheard:
