@@ -1,0 +1,292 @@
+{
+  "key": "short-guidedpsalm119v133",
+  "channel": "prayer10",
+  "psalm": 119,
+  "title": [
+    "ORDER MY STEPS",
+    "PSALM 119:133"
+  ],
+  "poster": [
+    "BEFORE YOU SPEAK TODAY",
+    "ASK GOD FOR DIRECTION",
+    "ORDER MY STEPS",
+    "THE GUIDED PATH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty mountain path dawn pine forest",
+    "quiet alpine valley morning mist river",
+    "sunlight glowing through mountain pass valley",
+    "tranquil mountain lake reflection calm early light",
+    "peaceful forest stream stone path sunlight",
+    "scenic mountain sunrise distant horizon fog"
+  ],
+  "scenes": [
+    {
+      "a": "You were about to step into that difficult conversation without asking God for direction first.",
+      "img": "short-guidedpsalm119v133-scene-01.jpg",
+      "kicker": "ORDER MY STEPS",
+      "sub": "SEEK GOD BEFORE YOU SPEAK",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Scripture declares, Order my steps in thy word: and let not any iniquity have dominion over me.",
+      "img": "short-guidedpsalm119v133-scene-02.jpg",
+      "kicker": "PSALM 119:133",
+      "sub": "DIVINE DIRECTION FOR TODAY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, quiet my anxious heart as I prepare to take this next step. Examine my hidden motives and reveal any subtle path that leads away from your truth.",
+      "img": "short-guidedpsalm119v133-scene-03.jpg",
+      "kicker": "PRAYER FOR GUIDANCE",
+      "sub": "ALIGN YOUR HEART WITH GOD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Grant me divine wisdom to speak with grace, walk in humility, and honor your holy name.",
+      "img": "short-guidedpsalm119v133-scene-04.jpg",
+      "kicker": "WISDOM AND HUMILITY",
+      "sub": "SPEAK WITH GRACE TODAY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Establish my footing firmly upon your righteous promises, protecting my heart from pride and missteps. Lead every single decision I make today.",
+      "img": "short-guidedpsalm119v133-scene-05.jpg",
+      "kicker": "STEADFAST FAITH",
+      "sub": "LET GOD LEAD YOUR STEPS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Guided Path to seek God's wisdom for every step.",
+      "img": "short-guidedpsalm119v133-scene-06.jpg",
+      "kicker": "WALK IN WISDOM",
+      "sub": "THE GUIDED PATH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "You were about to step into that difficult conversation without asking God for direction first."
+    ],
+    [
+      8,
+      18,
+      "Scripture declares, Order my steps in thy word: and let not any iniquity have dominion over me."
+    ],
+    [
+      18,
+      28,
+      "Heavenly Father, quiet my anxious heart as I prepare to take this next step. Examine my hidden motives and reveal any subtle path that leads away from your truth."
+    ],
+    [
+      28,
+      38,
+      "Grant me divine wisdom to speak with grace, walk in humility, and honor your holy name."
+    ],
+    [
+      38,
+      48,
+      "Establish my footing firmly upon your righteous promises, protecting my heart from pride and missteps. Lead every single decision I make today."
+    ],
+    [
+      48,
+      56,
+      "Subscribe to The Guided Path to seek God's wisdom for every step."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "YOU WERE ABOUT TO STEP",
+        "INTO THAT DIFFICULT CONVERSATION",
+        "WITHOUT ASKING GOD FOR DIRECTION"
+      ],
+      [
+        "DIFFICULT",
+        "CONVERSATION",
+        "DIRECTION"
+      ],
+      "ORDER MY STEPS"
+    ],
+    [
+      8,
+      18,
+      [
+        "ORDER MY STEPS IN THY WORD",
+        "AND LET NOT ANY INIQUITY",
+        "HAVE DOMINION OVER ME"
+      ],
+      [
+        "ORDER",
+        "MY",
+        "STEPS"
+      ],
+      "PSALM 119:133"
+    ],
+    [
+      18,
+      28,
+      [
+        "HEAVENLY FATHER QUIET MY HEART",
+        "EXAMINE MY HIDDEN MOTIVES",
+        "REVEAL ANY SUBTLE PATH"
+      ],
+      [
+        "QUIET",
+        "HEART",
+        "MOTIVES"
+      ],
+      "PRAYER FOR GUIDANCE"
+    ],
+    [
+      28,
+      38,
+      [
+        "GRANT ME DIVINE WISDOM",
+        "TO SPEAK WITH GRACE",
+        "AND WALK IN HUMILITY"
+      ],
+      [
+        "DIVINE",
+        "WISDOM",
+        "GRACE"
+      ],
+      "WISDOM AND HUMILITY"
+    ],
+    [
+      38,
+      48,
+      [
+        "ESTABLISH MY FOOTING FIRMLY",
+        "PROTECTING MY HEART FROM PRIDE",
+        "LEAD EVERY SINGLE DECISION"
+      ],
+      [
+        "ESTABLISH",
+        "FOOTING",
+        "LEAD"
+      ],
+      "STEADFAST FAITH"
+    ],
+    [
+      48,
+      56,
+      [
+        "SUBSCRIBE TO THE GUIDED PATH",
+        "SEEK GOD'S WISDOM",
+        "FOR EVERY STEP"
+      ],
+      [
+        "SUBSCRIBE",
+        "GUIDED",
+        "PATH"
+      ],
+      "THE GUIDED PATH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You were about to step into that difficult conversation",
+      "kind": "phrase",
+      "words": [
+        "DIFFICULT",
+        "CONVERSATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Order my steps in thy word:",
+      "kind": "phrase",
+      "words": [
+        "ORDER",
+        "STEPS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "let not any iniquity have dominion over me.",
+      "kind": "phrase",
+      "words": [
+        "DOMINION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "quiet my anxious heart as I prepare to take this next step.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant me divine wisdom to speak with grace,",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "WISDOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Establish my footing firmly upon your righteous promises,",
+      "kind": "phrase",
+      "words": [
+        "ESTABLISH",
+        "FOOTING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Guided Path to seek God's wisdom for every step.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "GUIDED",
+        "PATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 119:133"
+}
