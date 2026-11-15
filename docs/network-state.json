@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T15:09:31Z",
+  "generated_at": "2026-11-15T15:09:41Z",
   "monitor_generated_at": "2026-11-15T13:57:42.158231+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 282,
+    "published_total": 283,
     "published_longform": 116,
-    "published_shorts": 166,
-    "public_total": 280,
+    "published_shorts": 167,
+    "public_total": 281,
     "queued_longform": 63,
-    "queued_shorts": 88,
+    "queued_shorts": 87,
     "automations_ok": 12,
     "automations_total": 12,
     "network_healthy": true
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 15,
+        "published_total": 16,
         "published_longform": 7,
-        "published_shorts": 8,
-        "thumbnail_pending": 15,
-        "public_total": 15,
+        "published_shorts": 9,
+        "thumbnail_pending": 16,
+        "public_total": 16,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 11
+        "queued_shorts": 10
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM91V7",
-        "title": "Pray This Psalm 91:7 Prayer for Divine Protection | Refuge #Shorts",
+        "id": "SHORT-SHIELDPROVERBS18V10",
+        "title": "Pray This Proverbs 18:10 Prayer for Divine Protection | Protection Prayer #Shorts",
         "format": "short",
-        "youtube_video_id": "CsMbp-9S8v0",
-        "watch_url": "https://www.youtube.com/shorts/CsMbp-9S8v0",
+        "youtube_video_id": "DTS1FbOev8A",
+        "watch_url": "https://www.youtube.com/shorts/DTS1FbOev8A",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T11:35:12Z"
+        "published_at": "2026-11-15T15:08:38Z"
       },
       "next_queued_longform": {
         "id": "0607",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldproverbs18v10",
-        "scripture": "Proverbs 18:10",
+        "short": "short-shieldephesians6v16",
+        "scripture": "Ephesians 6:16",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPROVERBS18V10",
+      "slug": "short-shieldproverbs18v10-protection-prayer",
+      "file": "short-shieldproverbs18v10-protection-prayer.md",
+      "title": "Pray This Proverbs 18:10 Prayer for Divine Protection | Protection Prayer #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T15:08:38Z",
+      "youtube_video_id": "DTS1FbOev8A",
+      "watch_url": "https://www.youtube.com/shorts/DTS1FbOev8A",
+      "youtu_be_url": "https://youtu.be/DTS1FbOev8A",
+      "shorts_url": "https://www.youtube.com/shorts/DTS1FbOev8A",
+      "studio_url": "https://studio.youtube.com/video/DTS1FbOev8A/edit",
+      "thumb_url": "https://i.ytimg.com/vi/DTS1FbOev8A/hqdefault.jpg",
+      "thumb_text": "THE COVENANT SHIELD \u00b7 STRONG TOWER",
+      "thumbnail_pending": true,
+      "duration_label": "60s",
+      "words": 635
+    },
     {
       "id": "SHORT-PROVISIONMATTHEW6V26",
       "slug": "short-provisionmatthew6v26-stewardship-prayer",
@@ -8952,17 +8976,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-shieldproverbs18v10",
-        "file": "0602-short-shieldproverbs18v10.yml",
-        "companion_longform_id": "0602",
-        "scripture": "Proverbs 18:10",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldephesians6v16",
