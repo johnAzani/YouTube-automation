@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T02:19:06Z",
+  "generated_at": "2026-11-15T02:20:23Z",
   "monitor_generated_at": "2026-11-15T02:17:31.679744+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 243,
+    "published_total": 244,
     "published_longform": 109,
-    "published_shorts": 134,
-    "public_total": 241,
+    "published_shorts": 135,
+    "public_total": 242,
     "queued_longform": 55,
-    "queued_shorts": 74,
+    "queued_shorts": 73,
     "automations_ok": 11,
     "automations_total": 11,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 51,
+        "published_total": 52,
         "published_longform": 23,
-        "published_shorts": 28,
-        "thumbnail_pending": 2,
-        "public_total": 50,
+        "published_shorts": 29,
+        "thumbnail_pending": 3,
+        "public_total": 51,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-MORNINGJEREMIAH29V11",
-        "title": "Say This Jeremiah 29:11 Prayer at Sunrise | The Morning Altar #Shorts",
+        "id": "SHORT-MORNINGPSALM23V1",
+        "title": "Say This Psalm 23:1 Prayer at Sunrise | The Morning Altar #Shorts",
         "format": "short",
-        "youtube_video_id": "Ks8BZlzpymc",
-        "watch_url": "https://www.youtube.com/shorts/Ks8BZlzpymc",
-        "published_on": "2026-11-14",
-        "published_at": "2026-11-14T20:12:30Z"
+        "youtube_video_id": "a3aw2cM9g6A",
+        "watch_url": "https://www.youtube.com/shorts/a3aw2cM9g6A",
+        "published_on": "2026-11-15",
+        "published_at": "2026-11-15T02:19:34Z"
       },
       "next_queued_longform": {
         "id": "0067",
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM23V1",
+      "slug": "short-morningpsalm23v1-sunrise-prayer",
+      "file": "short-morningpsalm23v1-sunrise-prayer.md",
+      "title": "Say This Psalm 23:1 Prayer at Sunrise | The Morning Altar #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T02:19:34Z",
+      "youtube_video_id": "a3aw2cM9g6A",
+      "watch_url": "https://www.youtube.com/shorts/a3aw2cM9g6A",
+      "youtu_be_url": "https://youtu.be/a3aw2cM9g6A",
+      "shorts_url": "https://www.youtube.com/shorts/a3aw2cM9g6A",
+      "studio_url": "https://studio.youtube.com/video/a3aw2cM9g6A/edit",
+      "thumb_url": "https://i.ytimg.com/vi/a3aw2cM9g6A/hqdefault.jpg",
+      "thumb_text": "THE LORD IS MY SHEPHERD \u00b7 PSALM 23:1",
+      "thumbnail_pending": true,
+      "duration_label": "49s",
+      "words": 617
+    },
     {
       "id": "SHORT-PSALM56V3",
       "slug": "short-psalm56v3-pre-sleep-prayer",
@@ -7275,17 +7299,6 @@
         "file": "0000-short-morningpsalm121v1.yml",
         "companion_longform_id": "",
         "scripture": "Psalm 121:1-2",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-morningpsalm23v1",
-        "file": "0000-short-morningpsalm23v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 23:1",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",
