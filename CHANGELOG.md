@@ -5,6 +5,15 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-15 — A week's notice before a channel runs short of planned passages
+
+- **The gap.** The unit tests fail when any channel has fewer than 15 roadmap passages left, with nothing said before that day. The daily test run reports it the day it happens; this reports it about a week earlier.
+- **`scripts/roadmap_headroom.py`** counts each live channel's passages left by the same rule as the test (which now imports the floor from it). From 22 left it opens one issue, "📖 Planned passages are running low": which channel, how many, roughly when the tests will fail, and what to ask for. The issue is rewritten when a count changes, gets a comment (an email) when another channel joins the list or one goes under the floor, and closes itself when every channel is above 22 again.
+- **Where it runs.** A step in `.github/workflows/automation-health.yml` (daily at 20:14 UTC and after every production run; not on a merge). That job could already write issues; no permission was added.
+- **Not part of the stall issue, on purpose.** A warning in the watchdog's report makes it unhealthy, turns the monitor's runs red and holds the stall issue open for as long as it lasts. A short list is not a stall.
+- **Today's counts (planned / left):** The Secret Place 34 / 29; The Morning Altar 56 / 27; The Midday Watch 53 / 31; The Midnight Watch 45 / 26; The Family Altar 45 / 30; The Healing Balm 45 / 30; The Provision Table 45 / 29; The Covenant Shield 45 / 32; The Praise Garden 45 / 33; The Guided Path 45 / 35. None is low; the first issue is expected for The Midnight Watch in about four days.
+- Tests: `tests/test_roadmap_headroom.py` (39).
+
 ## 2026-11-15 — `main` is tested every day
 
 - **The gap.** The unit tests ran only when code was pushed. Queue, publish and monitor commits carry `[skip ci]`, and several tests read what those commits change (planned passages left per channel, queue files against receipts). `main` could fail its own tests and nobody was told: on 15 November The Provision Table had 14 planned passages left against a floor of 15, found only because an unrelated pull request failed on it (PR #444).

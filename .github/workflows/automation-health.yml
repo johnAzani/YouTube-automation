@@ -94,3 +94,17 @@ jobs:
           EXPECT_BRAIN_API: "1"
         run: |
           python -m scripts.pipeline_watchdog
+
+      - name: Warn before a channel runs short of planned passages
+        if: ${{ always() && !cancelled() && github.event_name != 'push' }}
+        # Each channel uses about one planned passage a day, and the unit tests
+        # fail when any channel has fewer than 15 left. This says so a week
+        # earlier, in an issue of its own ("Planned passages are running low"),
+        # and closes it when the lists are long again. It is kept out of the
+        # stall issue above on purpose: a short list is not a stall, and a
+        # warning there would keep the watchdog red for the whole week.
+        # A wrong count fails this step. An issue that cannot be written is a
+        # warning and the counts are still printed.
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m scripts.roadmap_headroom --sync-issue
