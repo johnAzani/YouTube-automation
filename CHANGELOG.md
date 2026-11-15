@@ -5,6 +5,14 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-15 — `main` is tested every day
+
+- **The gap.** The unit tests ran only when code was pushed. Queue, publish and monitor commits carry `[skip ci]`, and several tests read what those commits change (planned passages left per channel, queue files against receipts). `main` could fail its own tests and nobody was told: on 15 November The Provision Table had 14 planned passages left against a floor of 15, found only because an unrelated pull request failed on it (PR #444).
+- **`.github/workflows/tests-on-main.yml`** runs the unit tests on `main` at 04:52 UTC (5:52am Nigeria time) every day, and on every push to `main` that is not `[skip ci]`, so the merge that fixes a failure clears it at once. It holds no secret and cannot write to the repository. It never runs on a session branch.
+- **How a failure reaches the owner.** The workflow has a schedule, so the automation monitor watches it like the others: a failed run is a FAILING finding in the watchdog's tracking issue ("pipeline needs attention"), which closes itself after the next passing run. A day with no run is reported as a missed slot, and the scheduler supervisor starts the run itself when GitHub's schedule is late.
+- **One test command.** `scripts/ci_unit_tests.sh` now holds the command (split across processors, a failed test run again alone). Pull requests and the daily run both call it.
+- Tests: `tests/test_ci_suite_is_split.py` (23).
+
 ## 2026-11-15 — The unit tests take a third of the time
 
 - **Before.** "Unit tests + doctor" took 26m28s, 26m00s and 18m50s on GitHub on 15 November (runs 43737911292, 43740479521, 43740476661), against a 35-minute limit. A job cancelled at its limit shows on a pull request as a failed check with nothing to read.
