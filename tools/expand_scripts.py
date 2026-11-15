@@ -60,7 +60,11 @@ BANNED_NAMES = ("azani", "john azani", "narrated by")
 
 # Distinctive opening or refrain of each psalm this channel uses. A body that
 # carries one psalm's fingerprint under another psalm's title is a template
-# leak, not a cross-reference — see the 0011 incident.
+# leak — see the 0011 incident — unless the body says which psalm the words
+# are from, which is a cross-reference. On 15 November 2026 a Psalm 46 prayer
+# that read "Psalm 34, verse 7 declares: The angel of the LORD encampeth round
+# about them that fear him" was refused as a leak, and the refusal stopped
+# that channel's authoring two scripts short of what its queue needed.
 PSALM_FINGERPRINTS = {
     23: ("the lord is my shepherd", "he maketh me to lie down in green pastures"),
     27: ("the lord is my light and my salvation", "whom shall i fear"),
@@ -70,6 +74,9 @@ PSALM_FINGERPRINTS = {
     121: ("i will lift up mine eyes unto the hills", "he that keepeth thee will not slumber",
           "the lord is thy keeper"),
 }
+
+#: How far back from a quoted line the psalm must be named for it to be a citation.
+CITATION_WINDOW = 240
 
 SENTENCE_RE = re.compile(r"[^.!?]+[.!?]")
 
@@ -176,10 +183,27 @@ def scripture_mismatch(job: Job, body: str | None = None) -> list[int]:
     there; a *Psalm 27* job carrying Psalm 121 text is a template leak.
     """
     text = (body if body is not None else job.body).lower()
-    present = {n for n, prints in PSALM_FINGERPRINTS.items() if any(p in text for p in prints)}
+    present = {n for n, prints in PSALM_FINGERPRINTS.items()
+               if any(p in text for p in prints) and not _cited(text, n, prints)}
     if job.psalm is None:
         return []
     return sorted(present - {job.psalm})
+
+
+def _cited(text: str, number: int, prints: tuple[str, ...]) -> bool:
+    """True when the body names the psalm just before every one of its lines it carries.
+
+    "Psalm 34, verse 7 declares: The angel of the LORD encampeth..." is a
+    cross-reference. The same line with no psalm named is the template leak.
+    """
+    named = re.compile(rf"\bpsalms?\s+{number}\b")
+    for line in prints:
+        at = text.find(line)
+        while at != -1:
+            if not named.search(text[max(0, at - CITATION_WINDOW):at]):
+                return False
+            at = text.find(line, at + len(line))
+    return True
 
 
 def duplicate_long_sentences(body: str, window: int = MIN_NEW_SENTENCE_WORDS) -> list[str]:

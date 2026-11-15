@@ -247,3 +247,28 @@ def test_a_blocked_authoring_pass_is_said_in_an_annotation(monkeypatch, capsys):
     assert lines == ["::warning title=Long-form authoring blocked (prayer8)::1 of 6 wanted are ready. "
                      "authoring: The Covenant Shield: no candidate model could author this scripture — "
                      "model-a: branding: carries another channel's branding: 'The Secret Place'."]
+
+
+def test_a_script_refused_for_the_wrong_psalm_cannot_stay_approved(monkeypatch, tmp_path):
+    """Refused has to mean it will not publish: the model writes `status: approved` itself."""
+    from types import SimpleNamespace
+
+    from pipeline import supply
+    from pipeline.script_doc import parse_script
+
+    words = " ".join(["mercy"] * 900)
+    path = tmp_path / "0610-x.md"
+    path.write_text(
+        '---\nid: "0610"\nslug: x\ntitle: "Psalm 46:1-2 Prayer | The Covenant Shield"\nstatus: approved\n'
+        "format: longform\nniche: faith\nchannel: prayer8\n---\n\n## Scene 1 — One\n\n"
+        f"The LORD is my shepherd; I shall not want. {words}\n", encoding="utf-8")
+
+    class Brain:
+        channel_id = "prayer8"
+
+        def replenish_pipeline(self, min_runway_days=0):
+            return SimpleNamespace(job_id="0610", longform_path=path, word_count=910,
+                                   short_manifest_path=None)
+    row = supply.author_new(Brain())
+    assert row["ok"] is False and "body quotes Psalm 23" in row["reason"]
+    assert parse_script(path).status == "draft"

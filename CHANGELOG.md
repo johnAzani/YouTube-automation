@@ -14,6 +14,15 @@ there was no changelog before this file.
 - **Fix 3: the refusal is an annotation.** `--ensure-supply-for` prints "Long-form authoring blocked (channel)" with how many scripts are ready and the reason, in the brain run and in the produce run.
 - The writer is told, for such a passage only, to keep the words in small letters inside the verse and out of the title, slug, thumbnail text, tags and headings.
 - Tests: `tests/test_scripture_is_not_a_brand.py`.
+- **Proved live at 05:57 UTC**, the first brain run after the merge: The Covenant Shield got 0607 (Psalm 91:1-2), 0608, 0609 and 0610.
+
+### The same run showed two more gates that were wrong
+
+- **A cross-reference was called a leak.** 0610 (Psalm 46:1-2) reads "Psalm 34, verse 7 declares: The angel of the LORD encampeth round about them that fear him". The psalm check refused it as Psalm 34 text under a Psalm 46 title, which stopped that run two scripts short. A psalm named within 240 characters before its own line is now a citation (`tools/expand_scripts._cited`); the same line with no psalm named is still refused.
+- **Refused did not mean refused.** The script stayed `status: approved` in the queue although the run reported it refused, so the count in the report (3) disagreed with the queue (4). A script refused for the wrong psalm is now set to `draft`.
+- **Two channels took the same thumbnail line.** 0514 (The Provision Table) and 0808 (The Guided Path) both wrote "ORDERED STEPS": their roadmaps give the same hook to Psalm 37:23. The commit carried `[skip ci]`, so the queue test failed on the next pull request. A new script's line is now compared with the queue (`queued_thumb_lines`) and gives way to the next cut of its own words or title that fits. 0514 now reads "ORDERED BY THE LORD".
+- **The unit tests had no headroom.** They take 15 to 18 minutes and the limit was 20; one runner was cancelled mid-suite. The limit is 35.
+- Tests: `tests/test_thumbnail_line_not_repeated.py`, `tests/test_expand_scripts.py`.
 
 ## 2026-11-15 — the studio reads YouTube Analytics once a day
 

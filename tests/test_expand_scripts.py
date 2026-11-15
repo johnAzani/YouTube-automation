@@ -191,6 +191,26 @@ class TestScriptureLabels(unittest.TestCase):
             job = make_job(Path(tmp))
             self.assertEqual(ex.scripture_mismatch(job), [])
 
+    def test_a_psalm_quoted_by_name_is_a_cross_reference_not_a_leak(self):
+        """15 November 2026: job 0610 (Psalm 46) cited Psalm 34:7 by name and was refused."""
+        own = "God is our refuge and strength, a very present help in trouble. "
+        with tempfile.TemporaryDirectory() as tmp:
+            job = make_job(Path(tmp), title="When Trouble Surrounds You: Psalm 46:1-2 | The Covenant Shield")
+            job.body = (own + "Psalm 34, verse 7 declares with resounding triumph: The angel of the "
+                        "LORD encampeth round about them that fear him, and delivereth them.")
+            self.assertEqual(ex.scripture_mismatch(job), [])
+            # The same line with no psalm named is still the leak.
+            job.body = own + "The angel of the LORD encampeth round about them that fear him."
+            self.assertEqual(ex.scripture_mismatch(job), [34])
+            # Naming it once does not excuse a second, unlabelled use far from the name.
+            job.body = (own + "Psalm 34 says: The angel of the LORD encampeth round about them. "
+                        + "Rest in that promise tonight. " * 12
+                        + "The angel of the LORD encampeth round about them that fear him.")
+            self.assertEqual(ex.scripture_mismatch(job), [34])
+            # Naming a different psalm is not a citation of this one.
+            job.body = own + "Psalm 121 says: The angel of the LORD encampeth round about them."
+            self.assertEqual(ex.scripture_mismatch(job), [34])
+
     def test_non_psalm_job_is_never_flagged(self):
         with tempfile.TemporaryDirectory() as tmp:
             job = make_job(Path(tmp), title="Matthew 11:28-30 Rest for the Weary | The Secret Place")

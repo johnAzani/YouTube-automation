@@ -227,8 +227,38 @@ def _title_candidates(title: str) -> list[str]:
     return options
 
 
-def _clamp_thumb_text_for_ctr(raw_thumb: str, daypart: str = "night", title: str = "") -> str:
+def queued_thumb_lines(own_id: str = "", queue_dir: Path | None = None) -> set[str]:
+    """Thumbnail lines of the scripts already waiting, upper-cased, without this job's own.
+
+    Read from the files, never cached: authoring runs for ten channels one after
+    another in the same hour, and each has to see what the one before it wrote.
+    """
+    lines: set[str] = set()
+    for path in sorted(Path(queue_dir or QUEUE_DIR).glob("*.md")):
+        try:
+            head = path.read_text(encoding="utf-8")[:4000]
+        except OSError:
+            continue
+        found_id = re.search(r"^id:\s*['\"]?([^'\"\n#]+)", head, re.M)
+        if own_id and found_id and found_id.group(1).strip() == str(own_id).strip():
+            continue
+        found = re.search(r"^thumb_text:\s*(.+)$", head, re.M)
+        if found:
+            lines.add(found.group(1).strip().strip("'\"").upper())
+    return lines
+
+
+def _clamp_thumb_text_for_ctr(raw_thumb: str, daypart: str = "night", title: str = "",
+                              taken: set[str] | frozenset[str] = frozenset()) -> str:
     """Guarantee `thumb_text` fits the 660px CTR hero box at >= 105px.
+
+    `taken` holds the lines of scripts already in the queue. A line one of them
+    uses is passed over for the next cut that fits. On 15 November 2026 The
+    Provision Table and The Guided Path both wrote "ORDERED STEPS": their
+    roadmaps give the same hook to the same psalm (37:23). Nothing compared a
+    new line with the queue, the commit carried `[skip ci]`, and the test that
+    reads the queue failed on the next pull request instead. If every cut is
+    taken the model's own line stands: a repeated line is better than none.
 
     The line stays the model's own words wherever any cut of them fits. The
     fixed fallback at the bottom used to be reached as soon as the first three
@@ -249,6 +279,7 @@ def _clamp_thumb_text_for_ctr(raw_thumb: str, daypart: str = "night", title: str
     single = [c for c in candidates if len(c.split()) < 2]
     candidates = [c for c in candidates if len(c.split()) >= 2]
     candidates += [c for c in _title_candidates(title) if c not in candidates] + single
+    fits: list[str] = []
     try:
         from PIL import Image, ImageDraw
         from . import thumbnail_ctr as ctr
@@ -257,11 +288,23 @@ def _clamp_thumb_text_for_ctr(raw_thumb: str, daypart: str = "night", title: str
         for option in candidates:
             _f, _l, _t, _ld, px = ctr._layout(draw, option, (86, 76, 746, 568))
             if px >= 105:
-                return option
+                if option in taken:
+                    fits.append(option)
+                elif fits and len(option.split()) < 2:
+                    break  # a repeated line says more than one bare word
+                else:
+                    return option
     except Exception:  # noqa: BLE001
         for option in candidates:
             if all(len(w) <= 10 for w in option.split()):
-                return option
+                if option in taken:
+                    fits.append(option)
+                elif fits and len(option.split()) < 2:
+                    break
+                else:
+                    return option
+    if fits:
+        return fits[0]
     defaults = {
         "morning": "MORNING MERCY",
         "midday": "MIDDAY PEACE",
@@ -616,6 +659,7 @@ def normalize_authored_script_markdown(
         merged_meta["thumb_text"] = _clamp_thumb_text_for_ctr(
             str(merged_meta["thumb_text"]), daypart=brand.longform_prayer_label,
             title=str(merged_meta.get("title") or ""),
+            taken=queued_thumb_lines(own_id=str(merged_meta.get("id") or "")),
         )
 
     ordered_keys = [
