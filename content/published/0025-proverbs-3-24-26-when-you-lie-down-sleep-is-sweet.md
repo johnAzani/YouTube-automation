@@ -2,7 +2,7 @@
 id: '0025'
 title: "Bedtime Prayer for Sleep Without Fear: Proverbs 3:24-26"
 slug: proverbs-3-24-26-when-you-lie-down-sleep-is-sweet
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -85,6 +85,15 @@ originality:
   ai_disclosure: false
 seo_hook: Pray this Proverbs 3:24-26 KJV bedtime prayer so when you lie down tonight you will not be afraid and your sleep will be sweet.
 category_id: '22'
+published_on: "2026-11-15"
+published_at: "2026-11-15T20:28:03Z"
+youtube_video_id: "3xrS2BqNeWA"
+metadata_revision: "selar-seo-v1"
+prayer_seconds: 391.4
+duration_seconds: 11191.9
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — When Thou Liest Down, Thou Shalt Not Be Afraid (Verse 24a)

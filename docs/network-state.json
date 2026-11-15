@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T20:18:03Z",
+  "generated_at": "2026-11-15T20:28:43Z",
   "monitor_generated_at": "2026-11-15T20:16:52.224678+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 295,
-    "published_longform": 118,
-    "published_shorts": 177,
-    "public_total": 293,
-    "queued_longform": 61,
-    "queued_shorts": 77,
+    "published_total": 297,
+    "published_longform": 119,
+    "published_shorts": 178,
+    "public_total": 295,
+    "queued_longform": 60,
+    "queued_shorts": 76,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -33,33 +33,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 48,
-        "published_longform": 16,
-        "published_shorts": 32,
+        "published_total": 50,
+        "published_longform": 17,
+        "published_shorts": 33,
         "thumbnail_pending": 3,
-        "public_total": 47,
-        "queued_longform": 11,
+        "public_total": 49,
+        "queued_longform": 10,
         "queued_other": 5,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-PHILIPPIANS4V8",
-        "title": "Say This Philippians 4:8 Prayer Before You Sleep | The Secret Place #Shorts",
-        "format": "short",
-        "youtube_video_id": "8ssIICb_3Ts",
-        "watch_url": "https://www.youtube.com/shorts/8ssIICb_3Ts",
-        "published_on": "2026-11-15",
-        "published_at": "2026-11-15T15:00:41Z"
-      },
-      "next_queued_longform": {
         "id": "0025",
         "title": "Bedtime Prayer for Sleep Without Fear: Proverbs 3:24-26",
-        "words": 918,
+        "format": "longform",
+        "youtube_video_id": "3xrS2BqNeWA",
+        "watch_url": "https://youtu.be/3xrS2BqNeWA",
+        "published_on": "2026-11-15",
+        "published_at": "2026-11-15T20:28:03Z"
+      },
+      "next_queued_longform": {
+        "id": "0026",
+        "title": "Night Prayer to Quiet a Racing Mind: Isaiah 26:3-4 | The Secret Place",
+        "words": 1029,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm139v7",
-        "scripture": "Psalm 139:7-10",
+        "short": "short-psalm62v1",
+        "scripture": "Psalm 62:1-2",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0025",
+      "slug": "proverbs-3-24-26-when-you-lie-down-sleep-is-sweet",
+      "file": "0025-proverbs-3-24-26-when-you-lie-down-sleep-is-sweet.md",
+      "title": "Bedtime Prayer for Sleep Without Fear: Proverbs 3:24-26",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T20:28:03Z",
+      "youtube_video_id": "3xrS2BqNeWA",
+      "watch_url": "https://youtu.be/3xrS2BqNeWA",
+      "youtu_be_url": "https://youtu.be/3xrS2BqNeWA",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/3xrS2BqNeWA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/3xrS2BqNeWA/hqdefault.jpg",
+      "thumb_text": "SWEET SLEEP TONIGHT",
+      "thumbnail_pending": false,
+      "duration_label": "186m 32s",
+      "words": 918
+    },
+    {
       "id": "SHORT-GUIDEDPSALM119V133",
       "slug": "short-guidedpsalm119v133-guidance-prayer",
       "file": "short-guidedpsalm119v133-guidance-prayer.md",
@@ -868,6 +892,30 @@
       "thumbnail_pending": false,
       "duration_label": "47s",
       "words": 569
+    },
+    {
+      "id": "SHORT-PSALM139V7",
+      "slug": "short-psalm139v7-pre-sleep-prayer",
+      "file": "short-psalm139v7-pre-sleep-prayer.md",
+      "title": "Say This Psalm 139:7-10 Prayer Before You Sleep | The Secret Place #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T19:53:26Z",
+      "youtube_video_id": "6Y9d1w6Cvzg",
+      "watch_url": "https://www.youtube.com/shorts/6Y9d1w6Cvzg",
+      "youtu_be_url": "https://youtu.be/6Y9d1w6Cvzg",
+      "shorts_url": "https://www.youtube.com/shorts/6Y9d1w6Cvzg",
+      "studio_url": "https://studio.youtube.com/video/6Y9d1w6Cvzg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/6Y9d1w6Cvzg/hqdefault.jpg",
+      "thumb_text": "WHERE CAN I GO \u00b7 FROM YOUR SPIRIT",
+      "thumbnail_pending": false,
+      "duration_label": "42s",
+      "words": 604
     },
     {
       "id": "SHORT-FAMILYPSALM91V10",
@@ -7785,19 +7833,6 @@
   "queues": {
     "longform": [
       {
-        "id": "0025",
-        "slug": "proverbs-3-24-26-when-you-lie-down-sleep-is-sweet",
-        "file": "0025-proverbs-3-24-26-when-you-lie-down-sleep-is-sweet.md",
-        "title": "Bedtime Prayer for Sleep Without Fear: Proverbs 3:24-26",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 918
-      },
-      {
         "id": "0026",
         "slug": "isaiah-26-3-4-kept-in-perfect-peace",
         "file": "0026-isaiah-26-3-4-kept-in-perfect-peace.md",
@@ -8611,17 +8646,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-psalm139v7",
-        "file": "0000-short-psalm139v7.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 139:7-10",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm62v1",
