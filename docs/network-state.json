@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T15:12:26Z",
+  "generated_at": "2026-11-15T15:16:36Z",
   "monitor_generated_at": "2026-11-15T13:57:42.158231+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 284,
+    "published_total": 285,
     "published_longform": 116,
-    "published_shorts": 168,
-    "public_total": 282,
+    "published_shorts": 169,
+    "public_total": 283,
     "queued_longform": 63,
-    "queued_shorts": 86,
+    "queued_shorts": 85,
     "automations_ok": 12,
     "automations_total": 12,
     "network_healthy": true
@@ -645,23 +645,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 12,
+        "published_total": 13,
         "published_longform": 5,
-        "published_shorts": 7,
-        "thumbnail_pending": 12,
-        "public_total": 12,
+        "published_shorts": 8,
+        "thumbnail_pending": 13,
+        "public_total": 13,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "0804",
-        "title": "Prayer for Guidance When You Feel Lost: Psalm 32:8 | The Guided Path",
-        "format": "longform",
-        "youtube_video_id": "prJL7Y3DurU",
-        "watch_url": "https://youtu.be/prJL7Y3DurU",
+        "id": "SHORT-GUIDEDJOHN10V27",
+        "title": "Pray This John 10:27 Prayer for God's Guidance | John 10:27 #Shorts",
+        "format": "short",
+        "youtube_video_id": "ug4tGzIoFbs",
+        "watch_url": "https://www.youtube.com/shorts/ug4tGzIoFbs",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T12:37:40Z"
+        "published_at": "2026-11-15T15:15:28Z"
       },
       "next_queued_longform": {
         "id": "0805",
@@ -670,8 +670,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedjohn10v27",
-        "scripture": "John 10:27",
+        "short": "short-guidedpsalm119v133",
+        "scripture": "Psalm 119:133",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDEDJOHN10V27",
+      "slug": "short-guidedjohn10v27-guidance-prayer",
+      "file": "short-guidedjohn10v27-guidance-prayer.md",
+      "title": "Pray This John 10:27 Prayer for God's Guidance | John 10:27 #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T15:15:28Z",
+      "youtube_video_id": "ug4tGzIoFbs",
+      "watch_url": "https://www.youtube.com/shorts/ug4tGzIoFbs",
+      "youtu_be_url": "https://youtu.be/ug4tGzIoFbs",
+      "shorts_url": "https://www.youtube.com/shorts/ug4tGzIoFbs",
+      "studio_url": "https://studio.youtube.com/video/ug4tGzIoFbs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/ug4tGzIoFbs/hqdefault.jpg",
+      "thumb_text": "WHEN CONFUSED \u00b7 LISTEN CLOSELY",
+      "thumbnail_pending": true,
+      "duration_label": "54s",
+      "words": 570
+    },
     {
       "id": "SHORT-GARDENPHILIPPIANS4V6",
       "slug": "short-gardenphilippians4v6-thanksgiving-prayer",
@@ -8351,17 +8375,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-guidedjohn10v27",
-        "file": "0000-short-guidedjohn10v27.yml",
-        "companion_longform_id": "",
-        "scripture": "John 10:27",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
       },
       {
         "short": "short-guidedpsalm119v133",
