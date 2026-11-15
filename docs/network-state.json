@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T15:09:41Z",
+  "generated_at": "2026-11-15T15:12:26Z",
   "monitor_generated_at": "2026-11-15T13:57:42.158231+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 283,
+    "published_total": 284,
     "published_longform": 116,
-    "published_shorts": 167,
-    "public_total": 281,
+    "published_shorts": 168,
+    "public_total": 282,
     "queued_longform": 63,
-    "queued_shorts": 87,
+    "queued_shorts": 86,
     "automations_ok": 12,
     "automations_total": 12,
     "network_healthy": true
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 14,
+        "published_total": 15,
         "published_longform": 6,
-        "published_shorts": 8,
-        "thumbnail_pending": 14,
-        "public_total": 14,
+        "published_shorts": 9,
+        "thumbnail_pending": 15,
+        "public_total": 15,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM47V1",
-        "title": "Pray This Psalm 47:1 Prayer of Thanksgiving | Garden #Shorts",
+        "id": "SHORT-GARDENPHILIPPIANS4V6",
+        "title": "Pray This Philippians 4:6-7 Prayer of Thanksgiving | Find Gods Peace #Shorts",
         "format": "short",
-        "youtube_video_id": "K_UQs3wF2hE",
-        "watch_url": "https://www.youtube.com/shorts/K_UQs3wF2hE",
+        "youtube_video_id": "P9NEDZiW33k",
+        "watch_url": "https://www.youtube.com/shorts/P9NEDZiW33k",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T11:35:44Z"
+        "published_at": "2026-11-15T15:11:15Z"
       },
       "next_queued_longform": {
         "id": "0706",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenphilippians4v6",
-        "scripture": "Philippians 4:6-7",
+        "short": "short-garden1thessalonians5v16",
+        "scripture": "1 Thessalonians 5:16-18",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPHILIPPIANS4V6",
+      "slug": "short-gardenphilippians4v6-thanksgiving-prayer",
+      "file": "short-gardenphilippians4v6-thanksgiving-prayer.md",
+      "title": "Pray This Philippians 4:6-7 Prayer of Thanksgiving | Find Gods Peace #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T15:11:15Z",
+      "youtube_video_id": "P9NEDZiW33k",
+      "watch_url": "https://www.youtube.com/shorts/P9NEDZiW33k",
+      "youtu_be_url": "https://youtu.be/P9NEDZiW33k",
+      "shorts_url": "https://www.youtube.com/shorts/P9NEDZiW33k",
+      "studio_url": "https://studio.youtube.com/video/P9NEDZiW33k/edit",
+      "thumb_url": "https://i.ytimg.com/vi/P9NEDZiW33k/hqdefault.jpg",
+      "thumb_text": "THE PRAISE GARDEN \u00b7 A PRAYER OF THANKS",
+      "thumbnail_pending": true,
+      "duration_label": "51s",
+      "words": 632
+    },
     {
       "id": "SHORT-SHIELDPROVERBS18V10",
       "slug": "short-shieldproverbs18v10-protection-prayer",
@@ -9086,17 +9110,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-gardenphilippians4v6",
-        "file": "0703-short-gardenphilippians4v6.yml",
-        "companion_longform_id": "0703",
-        "scripture": "Philippians 4:6-7",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-garden1thessalonians5v16",
