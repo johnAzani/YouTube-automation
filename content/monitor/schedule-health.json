@@ -24,13 +24,6 @@
     },
     {
       "late_minutes": 173,
-      "name": "Autonomous Community Tab Automation",
-      "ran_at": "2026-11-11T22:07:09+00:00",
-      "slot": "2026-11-11T19:14:00+00:00",
-      "workflow": "community.yml"
-    },
-    {
-      "late_minutes": 173,
       "name": "Weekly metrics snapshot",
       "ran_at": "2026-11-13T21:34:19+00:00",
       "slot": "2026-11-13T18:41:00+00:00",
@@ -51,8 +44,8 @@
       "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-15T18:48:24.304730+00:00",
-  "last_run_at": "2026-11-15T18:47:43+00:00",
+  "generated_at": "2026-11-15T19:47:32.661172+00:00",
+  "last_run_at": "2026-11-15T19:47:14+00:00",
   "on_time": [
     {
       "late_minutes": 110,
@@ -62,13 +55,6 @@
       "workflow": "channel-analytics.yml"
     },
     {
-      "late_minutes": 95,
-      "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-15T16:49:19+00:00",
-      "slot": "2026-11-15T15:14:00+00:00",
-      "workflow": "comments.yml"
-    },
-    {
       "late_minutes": 4,
       "name": "Automation monitor",
       "ran_at": "2026-11-15T18:27:46+00:00",
@@ -76,10 +62,10 @@
       "workflow": "monitor.yml"
     },
     {
-      "late_minutes": 38,
+      "late_minutes": 33,
       "name": "Produce video",
-      "ran_at": "2026-11-15T14:52:22+00:00",
-      "slot": "2026-11-15T14:14:00+00:00",
+      "ran_at": "2026-11-15T19:47:14+00:00",
+      "slot": "2026-11-15T19:14:00+00:00",
       "workflow": "produce.yml"
     },
     {
