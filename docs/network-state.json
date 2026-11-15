@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T17:11:58Z",
+  "generated_at": "2026-11-15T17:15:15Z",
   "monitor_generated_at": "2026-11-15T17:10:37.790448+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 286,
-    "published_longform": 117,
+    "published_total": 287,
+    "published_longform": 118,
     "published_shorts": 169,
-    "public_total": 284,
-    "queued_longform": 62,
+    "public_total": 285,
+    "queued_longform": 61,
     "queued_shorts": 85,
     "automations_ok": 12,
     "automations_total": 12,
@@ -169,28 +169,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 39,
-        "published_longform": 16,
+        "published_total": 40,
+        "published_longform": 17,
         "published_shorts": 23,
         "thumbnail_pending": 0,
-        "public_total": 39,
-        "queued_longform": 6,
+        "public_total": 40,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYPSALM31V24",
-        "title": "Say This Psalm 31:24 Prayer at Noon | Courage #Shorts",
-        "format": "short",
-        "youtube_video_id": "75zQlP6zTu4",
-        "watch_url": "https://www.youtube.com/shorts/75zQlP6zTu4",
-        "published_on": "2026-11-15",
-        "published_at": "2026-11-15T14:59:15Z"
-      },
-      "next_queued_longform": {
         "id": "0091",
         "title": "Midday Prayer for Strength at Work: Colossians 3:23-24",
-        "words": 1120,
+        "format": "longform",
+        "youtube_video_id": "AQ7M3NKoU1g",
+        "watch_url": "https://youtu.be/AQ7M3NKoU1g",
+        "published_on": "2026-11-15",
+        "published_at": "2026-11-15T17:14:01Z"
+      },
+      "next_queued_longform": {
+        "id": "0092",
+        "title": "When Your Hard Work Feels Wasted: 1 Corinthians 15:58",
+        "words": 2397,
         "status": "approved"
       },
       "next_queued_short": {
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0091",
+      "slug": "colossians-3-23-24-midday-prayer",
+      "file": "0091-colossians-3-23-24-midday-prayer.md",
+      "title": "Midday Prayer for Strength at Work: Colossians 3:23-24",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T17:14:01Z",
+      "youtube_video_id": "AQ7M3NKoU1g",
+      "watch_url": "https://youtu.be/AQ7M3NKoU1g",
+      "youtu_be_url": "https://youtu.be/AQ7M3NKoU1g",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/AQ7M3NKoU1g/edit",
+      "thumb_url": "https://i.ytimg.com/vi/AQ7M3NKoU1g/hqdefault.jpg",
+      "thumb_text": "AS UNTO THE LORD",
+      "thumbnail_pending": false,
+      "duration_label": "~8 min",
+      "words": 1120
+    },
     {
       "id": "0309",
       "slug": "job-1-10-hedge-of-protection-household-prayer",
@@ -7788,19 +7812,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1727
-      },
-      {
-        "id": "0091",
-        "slug": "colossians-3-23-24-midday-prayer",
-        "file": "0091-colossians-3-23-24-midday-prayer.md",
-        "title": "Midday Prayer for Strength at Work: Colossians 3:23-24",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1120
       },
       {
         "id": "0092",
