@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T02:47:49Z",
+  "generated_at": "2026-11-15T03:28:33Z",
   "monitor_generated_at": "2026-11-15T02:46:36.864560+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 250,
-    "published_longform": 109,
+    "published_total": 251,
+    "published_longform": 110,
     "published_shorts": 141,
-    "public_total": 248,
-    "queued_longform": 55,
+    "public_total": 249,
+    "queued_longform": 54,
     "queued_shorts": 67,
     "automations_ok": 12,
     "automations_total": 12,
@@ -509,30 +509,25 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 12,
-        "published_longform": 6,
+        "published_total": 13,
+        "published_longform": 7,
         "published_shorts": 6,
-        "thumbnail_pending": 12,
-        "public_total": 12,
-        "queued_longform": 1,
+        "thumbnail_pending": 13,
+        "public_total": 13,
+        "queued_longform": 0,
         "queued_other": 0,
         "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM23V4",
-        "title": "Pray This Psalm 23:4 Prayer for Divine Protection | Almighty #Shorts",
-        "format": "short",
-        "youtube_video_id": "4ETFyjM8_Nc",
-        "watch_url": "https://www.youtube.com/shorts/4ETFyjM8_Nc",
-        "published_on": "2026-11-14",
-        "published_at": "2026-11-14T20:27:17Z"
-      },
-      "next_queued_longform": {
         "id": "0606",
         "title": "Prayer for God's Protection Today: 2 Thessalonians 3:3",
-        "words": 1430,
-        "status": "approved"
+        "format": "longform",
+        "youtube_video_id": "MHsg59xN-K0",
+        "watch_url": "https://youtu.be/MHsg59xN-K0",
+        "published_on": "2026-11-15",
+        "published_at": "2026-11-15T03:27:17Z"
       },
+      "next_queued_longform": null,
       "next_queued_short": {
         "short": "short-shieldpsalm91v4",
         "scripture": "Psalm 91:4",
@@ -696,6 +691,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0606",
+      "slug": "2-thessalonians-3-3-daily-prayer",
+      "file": "0606-2-thessalonians-3-3-daily-prayer.md",
+      "title": "Prayer for God's Protection Today: 2 Thessalonians 3:3",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T03:27:17Z",
+      "youtube_video_id": "MHsg59xN-K0",
+      "watch_url": "https://youtu.be/MHsg59xN-K0",
+      "youtu_be_url": "https://youtu.be/MHsg59xN-K0",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/MHsg59xN-K0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/MHsg59xN-K0/hqdefault.jpg",
+      "thumb_text": "KEPT FROM EVIL",
+      "thumbnail_pending": true,
+      "duration_label": "~10 min",
+      "words": 1430
+    },
     {
       "id": "SHORT-GUIDEDMICAH6V8",
       "slug": "short-guidedmicah6v8-guidance-prayer",
@@ -7257,19 +7276,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1974
-      },
-      {
-        "id": "0606",
-        "slug": "2-thessalonians-3-3-daily-prayer",
-        "file": "0606-2-thessalonians-3-3-daily-prayer.md",
-        "title": "Prayer for God's Protection Today: 2 Thessalonians 3:3",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1430
       },
       {
         "id": "0705",

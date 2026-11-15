@@ -12,3 +12,8 @@ target_window_utc: 08:44
 notes: "Standalone Short on Psalm 91:4 (evergreen list) \u2014 spec authored by the\
   \ brain (106 narration words) || narration rewritten to quote Psalm 91:4 word for\
   \ word (100 narration words)"
+alignment_failures: 1
+last_alignment_error: 'cannot prepare Charon narration for short-shieldpsalm91v4 (Short
+  speech alignment unavailable or incomplete; refusing to render [ValueError: Narration
+  does not match the script: only 78% of the 100 script words were recognised (floor
+  85%); the audio is not this script]); refusing to render'
