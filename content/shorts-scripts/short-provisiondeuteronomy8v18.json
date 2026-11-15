@@ -1,0 +1,332 @@
+{
+  "key": "short-provisiondeuteronomy8v18",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "WALK IN GOD'S",
+    "DAILY PROVISION"
+  ],
+  "poster": [
+    "THE PROVISION TABLE",
+    "DEUTERONOMY 8:18",
+    "DIVINE PROVISION",
+    "KJV WISDOM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "sunlit mountain pass golden hour drone shot",
+    "peaceful flowing river through green valley morning",
+    "golden sunbeams breaking through ancient stone pillars",
+    "vast sunlit valley with winding river serenity",
+    "calm majestic mountain ridge in morning light",
+    "golden light shining down on a quiet stone table",
+    "sunlit forest canopy with gentle morning glow",
+    "peaceful mountain landscape at golden hour sunset"
+  ],
+  "scenes": [
+    {
+      "a": "If you are staring at an empty ledger or an unpaid bill tonight, listen closely.",
+      "img": "short-provisiondeuteronomy8v18-scene-01.jpg",
+      "kicker": "DEUTERONOMY 8:18",
+      "sub": "GOD GIVES POWER TO GET WEALTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, we bring our daily labor, our household responsibilities, and our financial needs to Your table.",
+      "img": "short-provisiondeuteronomy8v18-scene-02.jpg",
+      "kicker": "DEUTERONOMY 8:18",
+      "sub": "COMMIT YOUR LABOR TO THE LORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Remind our hearts of Your unfailing truth written in Your holy word.",
+      "img": "short-provisiondeuteronomy8v18-scene-03.jpg",
+      "kicker": "DEUTERONOMY 8:18",
+      "sub": "REMEMBER THE LORD THY GOD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For Your word declares,",
+      "img": "short-provisiondeuteronomy8v18-scene-04.jpg",
+      "kicker": "DEUTERONOMY 8:18",
+      "sub": "HIS COVENANT STANDS FOREVER",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "But thou shalt remember the LORD thy God: for it is he that giveth thee power to get wealth,",
+      "img": "short-provisiondeuteronomy8v18-scene-05.jpg",
+      "kicker": "DEUTERONOMY 8:18",
+      "sub": "HE GIVETH THEE POWER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "that he may establish his covenant which he sware unto thy fathers, as it is this day.",
+      "img": "short-provisiondeuteronomy8v18-scene-06.jpg",
+      "kicker": "DEUTERONOMY 8:18",
+      "sub": "ESTABLISH HIS COVENANT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, grant us wisdom in our stewardship and faith for our daily provision.",
+      "img": "short-provisiondeuteronomy8v18-scene-07.jpg",
+      "kicker": "DEUTERONOMY 8:18",
+      "sub": "WALK IN WISDOM AND FAITH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "In Jesus' name, amen.",
+      "img": "short-provisiondeuteronomy8v18-scene-08.jpg",
+      "kicker": "DEUTERONOMY 8:18",
+      "sub": "AMEN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If you are staring at an empty ledger or an unpaid bill tonight, listen closely."
+    ],
+    [
+      6,
+      13,
+      "Father, we bring our daily labor, our household responsibilities, and our financial needs to Your table."
+    ],
+    [
+      13,
+      19,
+      "Remind our hearts of Your unfailing truth written in Your holy word."
+    ],
+    [
+      19,
+      23,
+      "For Your word declares,"
+    ],
+    [
+      23,
+      31,
+      "But thou shalt remember the LORD thy God: for it is he that giveth thee power to get wealth,"
+    ],
+    [
+      31,
+      39,
+      "that he may establish his covenant which he sware unto thy fathers, as it is this day."
+    ],
+    [
+      39,
+      45,
+      "Lord, grant us wisdom in our stewardship and faith for our daily provision."
+    ],
+    [
+      45,
+      50,
+      "In Jesus' name, amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF YOU ARE",
+        "STARING AT AN EMPTY",
+        "LEDGER TONIGHT"
+      ],
+      "LEDGER",
+      "DEUT 8:18"
+    ],
+    [
+      6,
+      13,
+      [
+        "FATHER WE BRING",
+        "OUR DAILY LABOR",
+        "TO YOUR TABLE"
+      ],
+      "TABLE",
+      "DEUT 8:18"
+    ],
+    [
+      13,
+      19,
+      [
+        "REMIND OUR HEARTS",
+        "OF YOUR UNFAILING",
+        "TRUTH TODAY"
+      ],
+      "TRUTH",
+      "DEUT 8:18"
+    ],
+    [
+      19,
+      23,
+      [
+        "FOR YOUR WORD",
+        "CLEARLY DECLARES"
+      ],
+      "DECLARES",
+      "DEUT 8:18"
+    ],
+    [
+      23,
+      31,
+      [
+        "THOU SHALT REMEMBER",
+        "THE LORD THY GOD",
+        "POWER TO GET WEALTH"
+      ],
+      "WEALTH",
+      "DEUT 8:18"
+    ],
+    [
+      31,
+      39,
+      [
+        "ESTABLISH HIS COVENANT",
+        "UNTO THY FATHERS",
+        "AS IT IS THIS DAY"
+      ],
+      "COVENANT",
+      "DEUT 8:18"
+    ],
+    [
+      39,
+      45,
+      [
+        "GRANT US WISDOM",
+        "IN OUR STEWARDSHIP",
+        "AND DAILY PROVISION"
+      ],
+      "PROVISION",
+      "DEUT 8:18"
+    ],
+    [
+      45,
+      50,
+      [
+        "IN JESUS NAME",
+        "AMEN"
+      ],
+      "AMEN",
+      "DEUT 8:18"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are staring at an empty ledger or an unpaid bill tonight, listen closely.",
+      "kind": "phrase",
+      "words": [
+        "EMPTY",
+        "LEDGER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we bring our daily labor, our household responsibilities, and our financial needs to Your table.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "LABOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Remind our hearts of Your unfailing truth written in Your holy word.",
+      "kind": "phrase",
+      "words": [
+        "UNFAILING",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For Your word declares,",
+      "kind": "phrase",
+      "words": [
+        "WORD",
+        "DECLARES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "But thou shalt remember the LORD thy God: for it is he that giveth thee power to get wealth,",
+      "kind": "phrase",
+      "words": [
+        "REMEMBER",
+        "POWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "that he may establish his covenant which he sware unto thy fathers, as it is this day.",
+      "kind": "phrase",
+      "words": [
+        "ESTABLISH",
+        "COVENANT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, grant us wisdom in our stewardship and faith for our daily provision.",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "PROVISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In Jesus' name, amen.",
+      "kind": "phrase",
+      "words": [
+        "JESUS",
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Deuteronomy 8:18"
+}

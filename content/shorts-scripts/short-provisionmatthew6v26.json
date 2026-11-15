@@ -1,0 +1,228 @@
+{
+  "key": "short-provisionmatthew6v26",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "DIVINE PROVISION",
+    "IN YOUR NEED"
+  ],
+  "poster": [
+    "TRUSTING HIS PROVISION",
+    "MATTHEW 6:26",
+    "A DAILY PRAYER",
+    "FOR YOUR LABOR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "peaceful sunlit valley",
+    "golden mountain peak at sunrise",
+    "calm flowing river in forest",
+    "stone table in sunlit garden",
+    "morning mist over quiet meadow",
+    "gentle wheat field in breeze"
+  ],
+  "scenes": [
+    {
+      "a": "That narrow path ahead looks daunting, but you are not walking toward it alone today.",
+      "img": "short-provisionmatthew6v26-scene-01.jpg",
+      "kicker": "MATTHEW 6:26",
+      "sub": "YOUR PROVISION IS SECURE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Behold the fowls of the air: for they sow not, neither do they reap, nor gather into barns; yet your heavenly Father feedeth them.",
+      "img": "short-provisionmatthew6v26-scene-02.jpg",
+      "kicker": "HIS FAITHFUL WORD",
+      "sub": "HE FEEDS THE BIRDS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Are ye not much better than they?",
+      "img": "short-provisionmatthew6v26-scene-03.jpg",
+      "kicker": "YOUR TRUE VALUE",
+      "sub": "YOU ARE VALUED BY HIM",
+      "cam": "pan_right",
+      "focus": [
+        0.3,
+        0.7
+      ]
+    },
+    {
+      "a": "Lord, quiet the spirit of scarcity that knocks at the door of this household right now.",
+      "img": "short-provisionmatthew6v26-scene-04.jpg",
+      "kicker": "A HUMBLE PETITION",
+      "sub": "SILENCING ALL SCARCITY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "I surrender my limited understanding and lean upon Your perfect, unchanging hand for my daily bread.",
+      "img": "short-provisionmatthew6v26-scene-05.jpg",
+      "kicker": "FAITHFUL SURRENDER",
+      "sub": "LEANING ON HIS HAND",
+      "cam": "pan_left",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Give me the grace to work with peace and trust in Your abundant love forevermore. Amen.",
+      "img": "short-provisionmatthew6v26-scene-06.jpg",
+      "kicker": "DAILY STEWARDSHIP",
+      "sub": "WALK IN HIS PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That narrow path ahead looks daunting, but you are not walking toward it alone today."
+    ],
+    [
+      9,
+      24,
+      "Behold the fowls of the air: for they sow not, neither do they reap, nor gather into barns; yet your heavenly Father feedeth them."
+    ],
+    [
+      25,
+      30,
+      "Are ye not much better than they?"
+    ],
+    [
+      31,
+      42,
+      "Lord, quiet the spirit of scarcity that knocks at the door of this household right now."
+    ],
+    [
+      43,
+      54,
+      "I surrender my limited understanding and lean upon Your perfect, unchanging hand for my daily bread."
+    ],
+    [
+      55,
+      65,
+      "Give me the grace to work with peace and trust in Your abundant love forevermore. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THE PATH IS",
+        "NOT WALKED ALONE",
+        "YOU ARE"
+      ],
+      [
+        "NOT WALKED ALONE"
+      ],
+      "MATTHEW 6 : 26"
+    ],
+    [
+      9,
+      24,
+      [
+        "BEHOLD THE FOWLS",
+        "THEY SOW NOT",
+        "HE FEEDS THEM"
+      ],
+      [
+        "HE FEEDS THEM"
+      ],
+      "MATTHEW 6 : 26"
+    ],
+    [
+      25,
+      30,
+      [
+        "ARE YE NOT",
+        "MUCH BETTER",
+        "THAN THEY"
+      ],
+      [
+        "MUCH BETTER"
+      ],
+      "MATTHEW 6 : 26"
+    ],
+    [
+      31,
+      42,
+      [
+        "QUIET THE SPIRIT",
+        "OF SCARCITY",
+        "RIGHT NOW"
+      ],
+      [
+        "QUIET THE SPIRIT"
+      ],
+      "MATTHEW 6 : 26"
+    ],
+    [
+      43,
+      54,
+      [
+        "I SURRENDER ALL",
+        "MY LIMITED",
+        "UNDERSTANDING"
+      ],
+      [
+        "SURRENDER ALL"
+      ],
+      "MATTHEW 6 : 26"
+    ],
+    [
+      55,
+      65,
+      [
+        "GIVE ME GRACE",
+        "TO WORK",
+        "WITH PEACE"
+      ],
+      [
+        "WITH PEACE"
+      ],
+      "MATTHEW 6 : 26"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That narrow path ahead looks daunting, but you are not walking toward it alone today.",
+      "kind": "phrase",
+      "words": [
+        "NOT WALKED ALONE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Behold the fowls of the air: for they sow not, neither do they reap, nor gather into barns; yet your heavenly Father feedeth them.",
+      "kind": "phrase",
+      "words": [
+        "HE FEEDS THEM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Matthew 6:26"
+}

@@ -1,0 +1,318 @@
+{
+  "key": "short-provisionproverbs3v9",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "HONOR THE LORD",
+    "WITH THY SUBSTANCE"
+  ],
+  "poster": [
+    "THE PROVISION TABLE",
+    "Proverbs 3:9-10",
+    "Daily Stewardship",
+    "KJV Wisdom"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "sunlit mountain valley mist morning",
+    "peaceful golden river stones flowing water",
+    "ancient stone table wheat harvest sunlight",
+    "quiet green pasture hills morning light",
+    "golden grain field under warm summer sun",
+    "sunlight streaming through ancient stone archway",
+    "calm river at sunset golden hour landscape",
+    "peaceful mountain landscape with warm morning light"
+  ],
+  "scenes": [
+    {
+      "a": "If you are holding back your last resources with a fearful heart, listen closely.",
+      "img": "short-provisionproverbs3v9-scene-01.jpg",
+      "kicker": "PROVERBS 3:9",
+      "sub": "HONOR GOD WITH THY FIRSTFRUITS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord, help us to remember that everything we possess comes from Your open hand.",
+      "img": "short-provisionproverbs3v9-scene-02.jpg",
+      "kicker": "PROVERBS 3:9",
+      "sub": "EVERY BLESSING COMES FROM HIM",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach us to place our trust in Your provision rather than our own calculations.",
+      "img": "short-provisionproverbs3v9-scene-03.jpg",
+      "kicker": "PROVERBS 3:9",
+      "sub": "TRUST IN HIS PROVISION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "As Your word commands, we hear this truth today:",
+      "img": "short-provisionproverbs3v9-scene-04.jpg",
+      "kicker": "PROVERBS 3:9",
+      "sub": "HEAR THE WORD OF THE LORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Honor the LORD with thy substance, and with the firstfruits of all thine increase:",
+      "img": "short-provisionproverbs3v9-scene-05.jpg",
+      "kicker": "PROVERBS 3:9",
+      "sub": "HONOR THE LORD WITH THY SUBSTANCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "So shall thy barns be filled with plenty, and thy presses shall burst out with new wine.",
+      "img": "short-provisionproverbs3v9-scene-06.jpg",
+      "kicker": "PROVERBS 3:10",
+      "sub": "THY BARNS FILLED WITH PLENTY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, grant us faithful obedience in our finances this day.",
+      "img": "short-provisionproverbs3v9-scene-07.jpg",
+      "kicker": "PROVERBS 3:10",
+      "sub": "WALK IN FAITHFUL OBEDIENCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In Jesus' name, Amen.",
+      "img": "short-provisionproverbs3v9-scene-08.jpg",
+      "kicker": "PROVERBS 3:10",
+      "sub": "REST IN HIS PROMISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      5,
+      "If you are holding back your last resources with a fearful heart, listen closely."
+    ],
+    [
+      5,
+      10,
+      "Lord, help us to remember that everything we possess comes from Your open hand."
+    ],
+    [
+      10,
+      15,
+      "Teach us to place our trust in Your provision rather than our own calculations."
+    ],
+    [
+      15,
+      19,
+      "As Your word commands, we hear this truth today:"
+    ],
+    [
+      19,
+      25,
+      "Honor the LORD with thy substance, and with the firstfruits of all thine increase:"
+    ],
+    [
+      25,
+      32,
+      "So shall thy barns be filled with plenty, and thy presses shall burst out with new wine."
+    ],
+    [
+      32,
+      37,
+      "Father, grant us faithful obedience in our finances this day. In Jesus' name, Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      5,
+      [
+        "HOLDING BACK YOUR",
+        "LAST RESOURCES",
+        "WITH A FEARFUL HEART"
+      ],
+      "FEARFUL",
+      "PROVERBS 3 : 9"
+    ],
+    [
+      5,
+      10,
+      [
+        "EVERYTHING WE POSSESS",
+        "COMES FROM",
+        "YOUR OPEN HAND"
+      ],
+      "OPEN",
+      "PROVERBS 3 : 9"
+    ],
+    [
+      10,
+      15,
+      [
+        "PLACE OUR TRUST",
+        "IN YOUR PROVISION",
+        "RATHER THAN CALCULATIONS"
+      ],
+      "PROVISION",
+      "PROVERBS 3 : 9"
+    ],
+    [
+      15,
+      19,
+      [
+        "AS YOUR WORD",
+        "COMMANDS",
+        "WE HEAR THIS TRUTH"
+      ],
+      "TRUTH",
+      "PROVERBS 3 : 9"
+    ],
+    [
+      19,
+      25,
+      [
+        "HONOR THE LORD",
+        "WITH THY SUBSTANCE",
+        "AND FIRSTFRUITS"
+      ],
+      "SUBSTANCE",
+      "PROVERBS 3 : 9"
+    ],
+    [
+      25,
+      32,
+      [
+        "BARNS FILLED",
+        "WITH PLENTY",
+        "NEW WINE"
+      ],
+      "PLENTY",
+      "PROVERBS 3 : 10"
+    ],
+    [
+      32,
+      37,
+      [
+        "FAITHFUL OBEDIENCE",
+        "IN OUR FINANCES",
+        "TODAY"
+      ],
+      "OBEDIENCE",
+      "PROVERBS 3 : 10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are holding back your last resources with a fearful heart, listen closely.",
+      "kind": "phrase",
+      "words": [
+        "HOLDING",
+        "BACK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, help us to remember that everything we possess comes from Your open hand.",
+      "kind": "phrase",
+      "words": [
+        "OPEN",
+        "HAND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teach us to place our trust in Your provision rather than our own calculations.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "PROVISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As Your word commands, we hear this truth today:",
+      "kind": "phrase",
+      "words": [
+        "WORD",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Honor the LORD with thy substance, and with the firstfruits of all thine increase:",
+      "kind": "phrase",
+      "words": [
+        "HONOR",
+        "SUBSTANCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "So shall thy barns be filled with plenty, and thy presses shall burst out with new wine.",
+      "kind": "phrase",
+      "words": [
+        "BARNS",
+        "PLENTY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, grant us faithful obedience in our finances this day.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFUL",
+        "OBEDIENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In Jesus' name, Amen.",
+      "kind": "phrase",
+      "words": [
+        "JESUS",
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 3:9-10"
+}

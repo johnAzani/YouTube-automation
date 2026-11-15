@@ -1,0 +1,296 @@
+{
+  "key": "short-provisionpsalm37v23",
+  "channel": "prayer7",
+  "psalm": 37,
+  "title": [
+    "STEPS ORDERED",
+    "BY THE LORD"
+  ],
+  "poster": [
+    "THE PROVISION TABLE",
+    "DAILY PRAYER",
+    "PSALM 37:23-25",
+    "WALK IN PROVISION"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "sunlit mountain pass golden hour",
+    "peaceful river winding through green valley",
+    "ancient stone path in morning light",
+    "calm alpine lake at sunrise",
+    "quiet forest stream with sunbeams",
+    "golden meadow under vast open sky",
+    "serene valley with morning mist"
+  ],
+  "scenes": [
+    {
+      "a": "Right now, before you step into that intimidating room or make that heavy financial choice, listen.",
+      "img": "short-provisionpsalm37v23-scene-01.jpg",
+      "kicker": "PSALM 37:23",
+      "sub": "COMMIT YOUR WAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, we anchor our uncertain steps in Your promises today, knowing You hold every practical detail of our lives.",
+      "img": "short-provisionpsalm37v23-scene-02.jpg",
+      "kicker": "PSALM 37:23",
+      "sub": "STEPS ORDERED BY GOD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Your Word declares that the steps of a good man are ordered by the Lord, and He delighteth in his way.",
+      "img": "short-provisionpsalm37v23-scene-03.jpg",
+      "kicker": "PSALM 37:23",
+      "sub": "HE DELIGHTETH IN HIS WAY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, when sudden stumbles threaten our stability, remind us of Your faithful, rescuing strength.",
+      "img": "short-provisionpsalm37v23-scene-04.jpg",
+      "kicker": "PSALM 37:24",
+      "sub": "HE SHALL NOT FALL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Though he fall, he shall not be utterly cast down, for the Lord upholdeth him with his hand.",
+      "img": "short-provisionpsalm37v23-scene-05.jpg",
+      "kicker": "PSALM 37:24",
+      "sub": "UPHOLDEN BY HIS HAND",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "We look back across the years and rest in Your unchanging provision for every household need.",
+      "img": "short-provisionpsalm37v23-scene-06.jpg",
+      "kicker": "PSALM 37:25",
+      "sub": "UNFAILING PROVISION",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I have been young, and now am old; yet have I not seen the righteous forsaken, nor his seed begging bread.",
+      "img": "short-provisionpsalm37v23-scene-07.jpg",
+      "kicker": "PSALM 37:25",
+      "sub": "NEVER FORSAKEN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      13,
+      "Right now, before you step into that intimidating room or make that heavy financial choice, listen."
+    ],
+    [
+      13,
+      27,
+      "Father, we anchor our uncertain steps in Your promises today, knowing You hold every practical detail of our lives."
+    ],
+    [
+      27,
+      41,
+      "Your Word declares that the steps of a good man are ordered by the Lord, and He delighteth in his way."
+    ],
+    [
+      41,
+      55,
+      "Lord, when sudden stumbles threaten our stability, remind us of Your faithful, rescuing strength."
+    ],
+    [
+      55,
+      69,
+      "Though he fall, he shall not be utterly cast down, for the Lord upholdeth him with his hand."
+    ],
+    [
+      69,
+      83,
+      "We look back across the years and rest in Your unchanging provision for every household need."
+    ],
+    [
+      83,
+      100,
+      "I have been young, and now am old; yet have I not seen the righteous forsaken, nor his seed begging bread."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      13,
+      [
+        "RIGHT NOW BEFORE",
+        "THAT INTIMIDATING ROOM",
+        "LISTEN CLOSELY"
+      ],
+      "LISTEN",
+      "PSALM 37:23"
+    ],
+    [
+      13,
+      27,
+      [
+        "FATHER WE ANCHOR",
+        "OUR UNCERTAIN STEPS",
+        "IN YOUR PROMISES"
+      ],
+      "PROMISES",
+      "PSALM 37:23"
+    ],
+    [
+      27,
+      41,
+      [
+        "THE STEPS OF A",
+        "GOOD MAN ARE",
+        "ORDERED BY THE LORD"
+      ],
+      "ORDERED",
+      "PSALM 37:23"
+    ],
+    [
+      41,
+      55,
+      [
+        "THOUGH STUMBLES COME",
+        "HE SHALL NOT BE",
+        "UTTERLY CAST DOWN"
+      ],
+      "DOWN",
+      "PSALM 37:24"
+    ],
+    [
+      55,
+      69,
+      [
+        "FOR THE LORD",
+        "UPHOLDETH HIM WITH",
+        "HIS MIGHTY HAND"
+      ],
+      "HAND",
+      "PSALM 37:24"
+    ],
+    [
+      69,
+      83,
+      [
+        "WE REST IN",
+        "YOUR UNCHANGING",
+        "DAILY PROVISION"
+      ],
+      "PROVISION",
+      "PSALM 37:25"
+    ],
+    [
+      83,
+      100,
+      [
+        "YET HAVE I NOT",
+        "SEEN THE RIGHTEOUS",
+        "FORSAKEN"
+      ],
+      "FORSAKEN",
+      "PSALM 37:25"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Right now, before you step into that intimidating room or make that heavy financial choice, listen.",
+      "kind": "phrase",
+      "words": [
+        "RIGHT",
+        "NOW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we anchor our uncertain steps in Your promises today, knowing You hold every practical detail of our lives.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "STEPS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your Word declares that the steps of a good man are ordered by the Lord, and He delighteth in his way.",
+      "kind": "phrase",
+      "words": [
+        "ORDERED",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when sudden stumbles threaten our stability, remind us of Your faithful, rescuing strength.",
+      "kind": "phrase",
+      "words": [
+        "STUMBLES",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Though he fall, he shall not be utterly cast down, for the Lord upholdeth him with his hand.",
+      "kind": "phrase",
+      "words": [
+        "UPHOLDETH",
+        "HAND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We look back across the years and rest in Your unchanging provision for every household need.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "PROVISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I have been young, and now am old; yet have I not seen the righteous forsaken, nor his seed begging bread.",
+      "kind": "phrase",
+      "words": [
+        "RIGHTEOUS",
+        "FORSAKEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 37:23-25"
+}
