@@ -1,0 +1,277 @@
+{
+  "key": "short-shieldpsalm18v2",
+  "channel": "prayer8",
+  "psalm": 18,
+  "title": [
+    "DIVINE PROTECTION",
+    "REFUGE IN GOD"
+  ],
+  "poster": [
+    "THE LORD IS MY ROCK",
+    "MY FORTRESS",
+    "MY DELIVERER",
+    "IN WHOM I TRUST"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower golden hour",
+    "peaceful sunlit mountain pass",
+    "golden light rays through clouds",
+    "calm flowing river at dawn",
+    "majestic cliffside overlooking valley",
+    "soft light reflecting off stone wall"
+  ],
+  "scenes": [
+    {
+      "a": "If that shadow of uncertainty has cast itself over your path tonight, stay right here.",
+      "img": "short-shieldpsalm18v2-scene-01.jpg",
+      "kicker": "PSALM 18:2",
+      "sub": "FIND STRENGTH IN THE LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The LORD is my rock, and my fortress, and my deliverer; my God, my strength, in whom I will trust;",
+      "img": "short-shieldpsalm18v2-scene-02.jpg",
+      "kicker": "PSALM 18:2",
+      "sub": "HE IS YOUR DEFENSE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "my buckler, and the horn of my salvation, and my high tower.",
+      "img": "short-shieldpsalm18v2-scene-03.jpg",
+      "kicker": "PSALM 18:2",
+      "sub": "HE IS YOUR STRONG TOWER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Father, we anchor our souls in these promises as we face the unknown things ahead.",
+      "img": "short-shieldpsalm18v2-scene-04.jpg",
+      "kicker": "PRAYER",
+      "sub": "ANCHOR YOUR SOUL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Grant us the quiet confidence to rest while You stand guard over every troubled thought.",
+      "img": "short-shieldpsalm18v2-scene-05.jpg",
+      "kicker": "PRAYER",
+      "sub": "REST IN HIS PROTECTION",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May your presence remain the shield that covers us through every hour of the night.",
+      "img": "short-shieldpsalm18v2-scene-06.jpg",
+      "kicker": "PRAYER",
+      "sub": "HE REMAINS YOUR SHIELD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If that shadow of uncertainty has cast itself over your path tonight, stay right here."
+    ],
+    [
+      8,
+      18,
+      "The LORD is my rock, and my fortress, and my deliverer; my God, my strength, in whom I will trust;"
+    ],
+    [
+      18,
+      26,
+      "my buckler, and the horn of my salvation, and my high tower."
+    ],
+    [
+      26,
+      36,
+      "Father, we anchor our souls in these promises as we face the unknown things ahead."
+    ],
+    [
+      36,
+      46,
+      "Grant us the quiet confidence to rest while You stand guard over every troubled thought."
+    ],
+    [
+      46,
+      56,
+      "May your presence remain the shield that covers us through every hour of the night."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "SHADOW OF UNCERTAINTY",
+        "CAST OVER YOU",
+        "STAY RIGHT HERE"
+      ],
+      [
+        "STAY RIGHT HERE"
+      ],
+      "PSALM 18:2"
+    ],
+    [
+      8,
+      18,
+      [
+        "THE LORD IS",
+        "MY ROCK AND",
+        "MY FORTRESS AND",
+        "MY DELIVERER"
+      ],
+      [
+        "MY ROCK",
+        "MY FORTRESS"
+      ],
+      "PSALM 18:2"
+    ],
+    [
+      18,
+      26,
+      [
+        "MY BUCKLER AND",
+        "MY SALVATION AND",
+        "MY HIGH TOWER"
+      ],
+      [
+        "HIGH TOWER"
+      ],
+      "PSALM 18:2"
+    ],
+    [
+      26,
+      36,
+      [
+        "ANCHOR OUR SOULS",
+        "IN PROMISES",
+        "FACING THE UNKNOWN"
+      ],
+      [
+        "ANCHOR OUR SOULS"
+      ],
+      "PSALM 18:2"
+    ],
+    [
+      36,
+      46,
+      [
+        "QUIET CONFIDENCE",
+        "REST WHILE",
+        "YOU STAND GUARD"
+      ],
+      [
+        "STAND GUARD"
+      ],
+      "PSALM 18:2"
+    ],
+    [
+      46,
+      56,
+      [
+        "YOUR PRESENCE",
+        "THE SHIELD THAT",
+        "COVERS US"
+      ],
+      [
+        "THE SHIELD"
+      ],
+      "PSALM 18:2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If that shadow of uncertainty has cast itself over your path tonight, stay right here.",
+      "kind": "phrase",
+      "words": [
+        "STAY",
+        "RIGHT",
+        "HERE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The LORD is my rock, and my fortress, and my deliverer; my God, my strength, in whom I will trust;",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "IS",
+        "MY",
+        "ROCK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "my buckler, and the horn of my salvation, and my high tower.",
+      "kind": "phrase",
+      "words": [
+        "MY",
+        "HIGH",
+        "TOWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we anchor our souls in these promises as we face the unknown things ahead.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "OUR",
+        "SOULS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us the quiet confidence to rest while You stand guard over every troubled thought.",
+      "kind": "phrase",
+      "words": [
+        "STAND",
+        "GUARD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your presence remain the shield that covers us through every hour of the night.",
+      "kind": "phrase",
+      "words": [
+        "THE",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 18:2"
+}

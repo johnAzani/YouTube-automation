@@ -1,0 +1,275 @@
+{
+  "key": "short-shielddeuteronomy33v27",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "THE ETERNAL REFUGE",
+    "STRENGTH FOR TODAY"
+  ],
+  "poster": [
+    "REST IN HIS ARMS",
+    "UNDER HIS PROTECTION",
+    "THE ETERNAL GOD",
+    "IS YOUR REFUGE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "sunlit ancient stone watchtower",
+    "golden light rays through mountain clouds",
+    "peaceful river flowing through forest",
+    "serene valley at sunset",
+    "high rocky mountain peak",
+    "mist over calm mountain lake"
+  ],
+  "scenes": [
+    {
+      "a": "If you are hesitating to step forward because of the unseen shadows, stay right here.",
+      "img": "short-shielddeuteronomy33v27-scene-01.jpg",
+      "kicker": "DEUTERONOMY 33:27",
+      "sub": "YOUR REFUGE IS ETERNAL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The eternal God is thy refuge, and underneath are the everlasting arms: and he shall thrust out the enemy from before thee; and shall say, Destroy them.",
+      "img": "short-shielddeuteronomy33v27-scene-02.jpg",
+      "kicker": "GOD'S WORD",
+      "sub": "HE IS YOUR STRONG TOWER",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, anchor this weary heart in the certainty of your presence.",
+      "img": "short-shielddeuteronomy33v27-scene-03.jpg",
+      "kicker": "PRAYER",
+      "sub": "HE HOLDS YOU NOW",
+      "cam": "tilt_up",
+      "focus": [
+        0.2,
+        0.8
+      ]
+    },
+    {
+      "a": "When the path ahead feels uncertain, remind this soul that your everlasting arms remain beneath every step taken in faith.",
+      "img": "short-shielddeuteronomy33v27-scene-04.jpg",
+      "kicker": "STRENGTH",
+      "sub": "TRUST IN HIS PROTECTION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Drive out every fear and all lingering confusion that clouds the view of your sovereignty.",
+      "img": "short-shielddeuteronomy33v27-scene-05.jpg",
+      "kicker": "DELIVERANCE",
+      "sub": "HE THRUSTS OUT THE ENEMY",
+      "cam": "pan_right",
+      "focus": [
+        0.8,
+        0.2
+      ]
+    },
+    {
+      "a": "Grant a settled spirit, knowing that we dwell in the shelter of the Most High, safe from all that troubles us this day.",
+      "img": "short-shielddeuteronomy33v27-scene-06.jpg",
+      "kicker": "PEACE",
+      "sub": "REST IN HIS MIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If you are hesitating to step forward because of the unseen shadows, stay right here."
+    ],
+    [
+      8,
+      22,
+      "The eternal God is thy refuge, and underneath are the everlasting arms: and he shall thrust out the enemy from before thee; and shall say, Destroy them."
+    ],
+    [
+      22,
+      30,
+      "Lord, anchor this weary heart in the certainty of your presence."
+    ],
+    [
+      30,
+      42,
+      "When the path ahead feels uncertain, remind this soul that your everlasting arms remain beneath every step taken in faith."
+    ],
+    [
+      42,
+      52,
+      "Drive out every fear and all lingering confusion that clouds the view of your sovereignty."
+    ],
+    [
+      52,
+      62,
+      "Grant a settled spirit, knowing that we dwell in the shelter of the Most High, safe from all that troubles us this day."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF YOU ARE",
+        "HESITATING TO STEP",
+        "FORWARD BECAUSE OF",
+        "UNSEEN SHADOWS",
+        "STAY RIGHT HERE"
+      ],
+      [
+        "UNSEEN SHADOWS"
+      ],
+      "DEUT 33:27"
+    ],
+    [
+      8,
+      22,
+      [
+        "THE ETERNAL GOD",
+        "IS THY REFUGE",
+        "UNDERNEATH ARE THE",
+        "EVERLASTING ARMS",
+        "HE THRUSTS OUT"
+      ],
+      [
+        "EVERLASTING ARMS"
+      ],
+      "DEUT 33:27"
+    ],
+    [
+      22,
+      30,
+      [
+        "LORD ANCHOR",
+        "THIS WEARY HEART",
+        "IN THE CERTAINTY",
+        "OF YOUR PRESENCE"
+      ],
+      [
+        "WEARY HEART"
+      ],
+      "DEUT 33:27"
+    ],
+    [
+      30,
+      42,
+      [
+        "WHEN THE PATH",
+        "FEELS UNCERTAIN",
+        "REMIND THIS SOUL",
+        "THAT YOUR EVERLASTING",
+        "ARMS REMAIN BENEATH"
+      ],
+      [
+        "PATH FEELS UNCERTAIN"
+      ],
+      "DEUT 33:27"
+    ],
+    [
+      42,
+      52,
+      [
+        "DRIVE OUT",
+        "EVERY FEAR",
+        "ALL LINGERING",
+        "CONFUSION THAT",
+        "CLOUDS THE VIEW"
+      ],
+      [
+        "EVERY FEAR"
+      ],
+      "DEUT 33:27"
+    ],
+    [
+      52,
+      62,
+      [
+        "GRANT A",
+        "SETTLED SPIRIT",
+        "DWELL IN THE",
+        "SHELTER OF THE",
+        "MOST HIGH"
+      ],
+      [
+        "SETTLED SPIRIT"
+      ],
+      "DEUT 33:27"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are hesitating to step forward because of the unseen shadows, stay right here.",
+      "kind": "phrase",
+      "words": [
+        "UNSEEN SHADOWS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The eternal God is thy refuge, and underneath are the everlasting arms: and he shall thrust out the enemy from before thee; and shall say, Destroy them.",
+      "kind": "phrase",
+      "words": [
+        "EVERLASTING ARMS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, anchor this weary heart in the certainty of your presence.",
+      "kind": "phrase",
+      "words": [
+        "WEARY HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When the path ahead feels uncertain, remind this soul that your everlasting arms remain beneath every step taken in faith.",
+      "kind": "phrase",
+      "words": [
+        "PATH FEELS UNCERTAIN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Drive out every fear and all lingering confusion that clouds the view of your sovereignty.",
+      "kind": "phrase",
+      "words": [
+        "EVERY FEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant a settled spirit, knowing that we dwell in the shelter of the Most High, safe from all that troubles us this day.",
+      "kind": "phrase",
+      "words": [
+        "SETTLED SPIRIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Deuteronomy 33:27"
+}
