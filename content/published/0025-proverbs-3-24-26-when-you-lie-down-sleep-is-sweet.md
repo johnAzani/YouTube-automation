@@ -94,6 +94,7 @@ duration_seconds: 11191.9
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 ## Scene 1 — When Thou Liest Down, Thou Shalt Not Be Afraid (Verse 24a)
