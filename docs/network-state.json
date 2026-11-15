@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T20:01:15Z",
+  "generated_at": "2026-11-15T20:01:38Z",
   "monitor_generated_at": "2026-11-15T20:00:23.494532+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 291,
+    "published_total": 292,
     "published_longform": 118,
-    "published_shorts": 173,
-    "public_total": 289,
+    "published_shorts": 174,
+    "public_total": 290,
     "queued_longform": 61,
-    "queued_shorts": 81,
+    "queued_shorts": 80,
     "automations_ok": 12,
     "automations_total": 13,
     "network_healthy": false
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 16,
+        "published_total": 17,
         "published_longform": 7,
-        "published_shorts": 9,
-        "thumbnail_pending": 16,
-        "public_total": 16,
+        "published_shorts": 10,
+        "thumbnail_pending": 17,
+        "public_total": 17,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPROVERBS18V10",
-        "title": "Pray This Proverbs 18:10 Prayer for Divine Protection | Protection Prayer #Shorts",
+        "id": "SHORT-SHIELDEPHESIANS6V16",
+        "title": "Pray This Ephesians 6:16 Prayer for Divine Protection | Protection Prayer #Shorts",
         "format": "short",
-        "youtube_video_id": "DTS1FbOev8A",
-        "watch_url": "https://www.youtube.com/shorts/DTS1FbOev8A",
+        "youtube_video_id": "kJiDuqrHRgo",
+        "watch_url": "https://www.youtube.com/shorts/kJiDuqrHRgo",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T15:08:38Z"
+        "published_at": "2026-11-15T20:00:57Z"
       },
       "next_queued_longform": {
         "id": "0607",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldephesians6v16",
-        "scripture": "Ephesians 6:16",
+        "short": "short-shieldpsalm34v7",
+        "scripture": "Psalm 34:7",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDEPHESIANS6V16",
+      "slug": "short-shieldephesians6v16-protection-prayer",
+      "file": "short-shieldephesians6v16-protection-prayer.md",
+      "title": "Pray This Ephesians 6:16 Prayer for Divine Protection | Protection Prayer #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T20:00:57Z",
+      "youtube_video_id": "kJiDuqrHRgo",
+      "watch_url": "https://www.youtube.com/shorts/kJiDuqrHRgo",
+      "youtu_be_url": "https://youtu.be/kJiDuqrHRgo",
+      "shorts_url": "https://www.youtube.com/shorts/kJiDuqrHRgo",
+      "studio_url": "https://studio.youtube.com/video/kJiDuqrHRgo/edit",
+      "thumb_url": "https://i.ytimg.com/vi/kJiDuqrHRgo/hqdefault.jpg",
+      "thumb_text": "THE COVENANT SHIELD \u00b7 SHIELD OF FAITH",
+      "thumbnail_pending": true,
+      "duration_label": "55s",
+      "words": 644
+    },
     {
       "id": "SHORT-MORNINGPSALM121V1",
       "slug": "short-morningpsalm121v1-sunrise-prayer",
@@ -9087,17 +9111,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-shieldephesians6v16",
-        "file": "0603-short-shieldephesians6v16.yml",
-        "companion_longform_id": "0603",
-        "scripture": "Ephesians 6:16",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm34v7",
