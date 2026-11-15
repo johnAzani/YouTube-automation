@@ -11,6 +11,7 @@ there was no changelog before this file.
 - **`.github/workflows/tests-on-main.yml`** runs the unit tests on `main` at 04:52 UTC (5:52am Nigeria time) every day, and on every push to `main` that is not `[skip ci]`, so the merge that fixes a failure clears it at once. It holds no secret and cannot write to the repository. It never runs on a session branch.
 - **How a failure reaches the owner.** The workflow has a schedule, so the automation monitor watches it like the others: a failed run is a FAILING finding in the watchdog's tracking issue ("pipeline needs attention"), which closes itself after the next passing run. A day with no run is reported as a missed slot, and the scheduler supervisor starts the run itself when GitHub's schedule is late.
 - **One test command.** `scripts/ci_unit_tests.sh` now holds the command (split across processors, a failed test run again alone). Pull requests and the daily run both call it.
+- **Its first run failed, on one of its own new tests** (run 43754637490, 19:50 UTC). The test asked the monitor for its verdict on this workflow while running inside this workflow, and the monitor does not judge the workflow it is running in, so the answer was SELF-REPORT and not FAILING. The pull request's checks could not show it: there the same test runs under another workflow's name. The test now asks as the monitor. No product code was wrong.
 - Tests: `tests/test_ci_suite_is_split.py` (23).
 
 ## 2026-11-15 — The unit tests take a third of the time

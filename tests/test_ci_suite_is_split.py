@@ -21,6 +21,7 @@ in the watchdog's tracking issue.
 
 from __future__ import annotations
 
+import os
 import unittest
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -186,7 +187,13 @@ class AFailureOnMainReachesTheOwner(unittest.TestCase):
         mine = [f for f in am.workflow_files() if f[0] == "tests-on-main.yml"]
         self.assertEqual(len(mine), 1, "the monitor does not see the workflow's schedule")
         long_ago = self.NOW - timedelta(days=4)
-        with mock.patch.object(am, "workflow_files", return_value=mine), \
+        # The verdict is computed by the monitor, so the test computes it as the
+        # monitor: GitHub sets GITHUB_WORKFLOW to the running workflow's name, and
+        # the monitor does not judge the workflow it is running in. Without this
+        # the test read ('SELF-REPORT', 'info') when it ran inside "Tests on main
+        # (daily)" itself, and failed that workflow's first run (43754637490).
+        with mock.patch.dict(os.environ, {"GITHUB_WORKFLOW": "Automation monitor"}), \
+             mock.patch.object(am, "workflow_files", return_value=mine), \
              mock.patch.object(am, "first_commit_for", return_value=long_ago), \
              mock.patch.object(am, "last_edit", return_value=long_ago), \
              mock.patch.object(am, "active_quota_cooldown", return_value=None):
