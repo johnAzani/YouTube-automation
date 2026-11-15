@@ -1,0 +1,276 @@
+{
+  "key": "short-middaypsalm31v24",
+  "channel": "prayer3",
+  "psalm": 31,
+  "title": [
+    "BE OF GOOD",
+    "COURAGE"
+  ],
+  "poster": [
+    "MIDDAY",
+    "QUIET",
+    "STRENGTH",
+    "COURAGE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "soft sunlight streaming onto a wooden desk",
+    "dust motes dancing in midday sunbeam",
+    "empty chair in warm sunlit room",
+    "still midday shadows on a white wall",
+    "open window with calm daylight",
+    "peaceful garden view in high noon light"
+  ],
+  "scenes": [
+    {
+      "a": "That recurring doubt about your capability is exactly why you need this midday stillness now.",
+      "img": "short-middaypsalm31v24-scene-01.jpg",
+      "kicker": "PSALM 31:24",
+      "sub": "FIND YOUR STRENGTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Listen to the word of the Lord as it is written in Psalm 31:24.",
+      "img": "short-middaypsalm31v24-scene-02.jpg",
+      "kicker": "PSALM 31:24",
+      "sub": "THE WORD FOR TODAY",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Be of good courage, and he shall strengthen your heart, all ye that hope in the LORD.",
+      "img": "short-middaypsalm31v24-scene-03.jpg",
+      "kicker": "PSALM 31:24",
+      "sub": "HOPE IN THE LORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Father, grant me the grace to set aside my own limited perspective and trust your promise.",
+      "img": "short-middaypsalm31v24-scene-04.jpg",
+      "kicker": "PSALM 31:24",
+      "sub": "PRAYER FOR COURAGE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May your internal resolve be renewed as you lean into the quiet strength of God today.",
+      "img": "short-middaypsalm31v24-scene-05.jpg",
+      "kicker": "PSALM 31:24",
+      "sub": "RENEWED STRENGTH",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Walk forward in the confidence that he is sustaining your spirit through this afternoon and beyond.",
+      "img": "short-middaypsalm31v24-scene-06.jpg",
+      "kicker": "PSALM 31:24",
+      "sub": "CONFIDENCE IN HIM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That recurring doubt about your capability is exactly why you need this midday stillness now."
+    ],
+    [
+      8,
+      16,
+      "Listen to the word of the Lord as it is written in Psalm 31:24."
+    ],
+    [
+      16,
+      32,
+      "Be of good courage, and he shall strengthen your heart, all ye that hope in the LORD."
+    ],
+    [
+      32,
+      45,
+      "Father, grant me the grace to set aside my own limited perspective and trust your promise."
+    ],
+    [
+      45,
+      58,
+      "May your internal resolve be renewed as you lean into the quiet strength of God today."
+    ],
+    [
+      58,
+      70,
+      "Walk forward in the confidence that he is sustaining your spirit through this afternoon and beyond."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THAT RECURRING DOUBT",
+        "IS WHY YOU NEED",
+        "MIDDAY STILLNESS NOW"
+      ],
+      [
+        "DOUBT",
+        "STILLNESS"
+      ],
+      "PSALM 31:24"
+    ],
+    [
+      8,
+      16,
+      [
+        "LISTEN TO THE WORD",
+        "OF THE LORD AS",
+        "WRITTEN IN THE PSALMS"
+      ],
+      [
+        "LORD",
+        "WORD"
+      ],
+      "PSALM 31:24"
+    ],
+    [
+      16,
+      32,
+      [
+        "BE OF GOOD COURAGE",
+        "HE SHALL STRENGTHEN",
+        "ALL YE THAT HOPE"
+      ],
+      [
+        "COURAGE",
+        "STRENGTHEN"
+      ],
+      "PSALM 31:24"
+    ],
+    [
+      32,
+      45,
+      [
+        "FATHER GRANT ME GRACE",
+        "SET ASIDE PERSPECTIVE",
+        "TRUST YOUR PROMISE"
+      ],
+      [
+        "GRACE",
+        "TRUST"
+      ],
+      "PSALM 31:24"
+    ],
+    [
+      45,
+      58,
+      [
+        "MAY YOUR RESOLVE BE",
+        "RENEWED AS YOU LEAN",
+        "INTO THE STRENGTH"
+      ],
+      [
+        "RESOLVE",
+        "STRENGTH"
+      ],
+      "PSALM 31:24"
+    ],
+    [
+      58,
+      70,
+      [
+        "WALK FORWARD IN",
+        "CONFIDENCE HE SUSTAINS",
+        "YOUR SPIRIT TODAY"
+      ],
+      [
+        "CONFIDENCE",
+        "SUSTAINS"
+      ],
+      "PSALM 31:24"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That recurring doubt about your capability is exactly why you need this midday stillness now.",
+      "kind": "phrase",
+      "words": [
+        "DOUBT",
+        "STILLNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Listen to the word of the Lord as it is written in Psalm 31:24.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "WORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Be of good courage, and he shall strengthen your heart, all ye that hope in the LORD.",
+      "kind": "phrase",
+      "words": [
+        "COURAGE",
+        "STRENGTHEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, grant me the grace to set aside my own limited perspective and trust your promise.",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your internal resolve be renewed as you lean into the quiet strength of God today.",
+      "kind": "phrase",
+      "words": [
+        "RESOLVE",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Walk forward in the confidence that he is sustaining your spirit through this afternoon and beyond.",
+      "kind": "phrase",
+      "words": [
+        "CONFIDENCE",
+        "SUSTAINS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 31:24"
+}

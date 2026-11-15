@@ -1,0 +1,277 @@
+{
+  "key": "short-middayromans12v12",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "REJOICING IN HOPE",
+    "PATIENCE IN PRAYER"
+  ],
+  "poster": [
+    "MIDDAY",
+    "QUIET",
+    "REFLECTIVE",
+    "PEACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "sunlight streaming through clean window onto wooden desk",
+    "soft dust motes dancing in midday light",
+    "top down view of empty open journal on desk",
+    "still mountain lake with midday sun reflection",
+    "blurred sunlight on neutral colored linen curtain",
+    "close up of indoor plant leaves in midday light"
+  ],
+  "scenes": [
+    {
+      "a": "That heavy weight of expectation you are carrying into this afternoon needs to be surrendered now.",
+      "img": "short-middayromans12v12-scene-01.jpg",
+      "kicker": "ROMANS 12:12",
+      "sub": "SURRENDER THE WEIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Rejoicing in hope; patient in tribulation; continuing instant in prayer;",
+      "img": "short-middayromans12v12-scene-02.jpg",
+      "kicker": "ROMANS 12:12",
+      "sub": "THE ANCHOR OF FAITH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, let these words settle into the center of my spirit during this frantic, busy hour.",
+      "img": "short-middayromans12v12-scene-03.jpg",
+      "kicker": "ROMANS 12:12",
+      "sub": "SETTLE THE SPIRIT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "When the world demands my attention, help me to remain anchored in your perfect, quiet love.",
+      "img": "short-middayromans12v12-scene-04.jpg",
+      "kicker": "ROMANS 12:12",
+      "sub": "ANCHORED IN LOVE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Give me the endurance to stay steadfast while I wait for your timing to unfold perfectly.",
+      "img": "short-middayromans12v12-scene-05.jpg",
+      "kicker": "ROMANS 12:12",
+      "sub": "STEADFAST WAITING",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May this midday pause redefine my perspective so I see your grace in every small detail.",
+      "img": "short-middayromans12v12-scene-06.jpg",
+      "kicker": "ROMANS 12:12",
+      "sub": "GRACE IN THE DETAILS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "That heavy weight of expectation you are carrying into this afternoon needs to be surrendered now."
+    ],
+    [
+      16,
+      35,
+      "Rejoicing in hope; patient in tribulation; continuing instant in prayer;"
+    ],
+    [
+      36,
+      52,
+      "Lord, let these words settle into the center of my spirit during this frantic, busy hour."
+    ],
+    [
+      53,
+      70,
+      "When the world demands my attention, help me to remain anchored in your perfect, quiet love."
+    ],
+    [
+      71,
+      88,
+      "Give me the endurance to stay steadfast while I wait for your timing to unfold perfectly."
+    ],
+    [
+      89,
+      105,
+      "May this midday pause redefine my perspective so I see your grace in every small detail."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "SURRENDER THE",
+        "HEAVY WEIGHT",
+        "YOU CARRY"
+      ],
+      [
+        "SURRENDER",
+        "WEIGHT"
+      ],
+      "ROMANS 12:12"
+    ],
+    [
+      16,
+      35,
+      [
+        "REJOICING IN HOPE",
+        "PATIENT IN TRIBULATION",
+        "CONTINUING INSTANT IN PRAYER"
+      ],
+      [
+        "REJOICING",
+        "PATIENT",
+        "PRAYER"
+      ],
+      "ROMANS 12:12"
+    ],
+    [
+      36,
+      52,
+      [
+        "LET THESE WORDS",
+        "SETTLE INTO",
+        "YOUR SPIRIT"
+      ],
+      [
+        "SETTLE",
+        "SPIRIT"
+      ],
+      "ROMANS 12:12"
+    ],
+    [
+      53,
+      70,
+      [
+        "REMAIN ANCHORED",
+        "IN YOUR",
+        "PERFECT QUIET LOVE"
+      ],
+      [
+        "ANCHORED",
+        "PERFECT"
+      ],
+      "ROMANS 12:12"
+    ],
+    [
+      71,
+      88,
+      [
+        "STAY STEADFAST",
+        "IN YOUR",
+        "TIMING LORD"
+      ],
+      [
+        "STEADFAST",
+        "TIMING"
+      ],
+      "ROMANS 12:12"
+    ],
+    [
+      89,
+      105,
+      [
+        "SEE YOUR GRACE",
+        "IN EVERY",
+        "SMALL DETAIL"
+      ],
+      [
+        "GRACE",
+        "DETAIL"
+      ],
+      "ROMANS 12:12"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That heavy weight of expectation you are carrying into this afternoon needs to be surrendered now.",
+      "kind": "phrase",
+      "words": [
+        "SURRENDER",
+        "WEIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Rejoicing in hope; patient in tribulation; continuing instant in prayer;",
+      "kind": "phrase",
+      "words": [
+        "REJOICING",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, let these words settle into the center of my spirit during this frantic, busy hour.",
+      "kind": "phrase",
+      "words": [
+        "SETTLE",
+        "SPIRIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When the world demands my attention, help me to remain anchored in your perfect, quiet love.",
+      "kind": "phrase",
+      "words": [
+        "ANCHORED",
+        "LOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Give me the endurance to stay steadfast while I wait for your timing to unfold perfectly.",
+      "kind": "phrase",
+      "words": [
+        "STEADFAST",
+        "TIMING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May this midday pause redefine my perspective so I see your grace in every small detail.",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "DETAIL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Romans 12:12"
+}

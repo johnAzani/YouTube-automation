@@ -3,66 +3,55 @@
   "channel": "prayer3",
   "psalm": null,
   "title": [
-    "MIDDAY PRAYER",
-    "STAND FIRM IN LORD"
+    "STEADFAST",
+    "AT MIDDAY"
   ],
   "poster": [
-    "THE MIDDAY WATCH",
-    "1 CORINTHIANS 15:58",
-    "NOONDAY PRAYER",
-    "PAUSE AND PRAY"
+    "FINDING",
+    "STRENGTH",
+    "IN THE",
+    "LABOR"
   ],
   "end": [
     "SUBSCRIBE",
     "The Midday Watch — pause and pray at noon"
   ],
   "stock_queries": [
-    "bright midday light through a clean window quiet empty room",
-    "bright noon sunshine over calm open field grassy hills",
-    "wooden desk with Bible illuminated by warm midday sunlight",
-    "peaceful sunlit room quiet workspace warm afternoon beam",
-    "gentle sunlight through tree leaves courtyard quiet noon",
-    "calm natural daylight clear sky peaceful horizon midday"
+    "midday sun rays through window blinds",
+    "empty wooden desk with soft light",
+    "warm sunlight on open field grass",
+    "slow particles of dust in afternoon light",
+    "calm shadows moving across a wall",
+    "still indoor plant in bright light"
   ],
   "scenes": [
     {
-      "a": "Pause what you are doing right now,",
+      "a": "That heavy sense of exhaustion settles deep because your efforts seem to yield no visible fruit.",
       "img": "short-midday1corinthians15v58-scene-01.jpg",
       "kicker": "1 CORINTHIANS 15:58",
-      "sub": "PAUSE AND REFLECT AT NOON",
+      "sub": "STAY ROOTED IN TRUTH",
       "cam": "push_in",
-      "focus": [
-        0.5,
-        0.45
-      ]
-    },
-    {
-      "a": "First Corinthians fifteen fifty-eight says,",
-      "img": "short-midday1corinthians15v58-scene-02.jpg",
-      "kicker": "1 CORINTHIANS 15:58",
-      "sub": "BE STEADFAST AND IMMOVABLE",
-      "cam": "tilt_up",
       "focus": [
         0.5,
         0.5
       ]
     },
     {
-      "a": "Heavenly Father, as the midday sun shines,",
-      "img": "short-midday1corinthians15v58-scene-03.jpg",
+      "a": "Therefore, my beloved brethren, be ye stedfast, unmoveable, always abounding in the work of the Lord,",
+      "img": "short-midday1corinthians15v58-scene-02.jpg",
       "kicker": "1 CORINTHIANS 15:58",
-      "sub": "GROUNDED IN TRUTH",
-      "cam": "push_in",
+      "sub": "ABOUND IN HIS WORK",
+      "cam": "pan_left",
       "focus": [
         0.5,
-        0.4
+        0.5
       ]
     },
     {
-      "a": "Renew our strength when fatigue whispers.",
-      "img": "short-midday1corinthians15v58-scene-04.jpg",
+      "a": "forasmuch as ye know that your labor is not in vain in the Lord.",
+      "img": "short-midday1corinthians15v58-scene-03.jpg",
       "kicker": "1 CORINTHIANS 15:58",
-      "sub": "RENEW OUR STRENGTH TODAY",
+      "sub": "NOTHING IS IN VAIN",
       "cam": "pull_out",
       "focus": [
         0.5,
@@ -70,22 +59,33 @@
       ]
     },
     {
-      "a": "Establish the work of our hands this afternoon.",
-      "img": "short-midday1corinthians15v58-scene-05.jpg",
-      "kicker": "1 CORINTHIANS 15:58",
-      "sub": "FAITHFUL AND STEADFAST",
-      "cam": "pan_right",
+      "a": "Lord, grant me the grace to remain consistent when the path ahead feels blurred and long.",
+      "img": "short-midday1corinthians15v58-scene-04.jpg",
+      "kicker": "PRAYER",
+      "sub": "GRACE FOR CONSISTENCY",
+      "cam": "tilt_up",
       "focus": [
         0.5,
         0.5
       ]
     },
     {
-      "a": "Subscribe to The Midday Watch to pause",
-      "img": "short-midday1corinthians15v58-scene-06.jpg",
-      "kicker": "1 CORINTHIANS 15:58",
-      "sub": "JOIN US TOMORROW AT NOON",
+      "a": "May my daily tasks become an act of worship that honors your kingdom and your heart.",
+      "img": "short-midday1corinthians15v58-scene-05.jpg",
+      "kicker": "PRAYER",
+      "sub": "WORK AS WORSHIP",
       "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Hold me steady in this hour so I may continue to walk faithfully in your light.",
+      "img": "short-midday1corinthians15v58-scene-06.jpg",
+      "kicker": "PRAYER",
+      "sub": "WALK IN FAITH",
+      "cam": "pan_right",
       "focus": [
         0.5,
         0.5
@@ -95,184 +95,177 @@
   "captions": [
     [
       0,
-      9,
-      "Pause what you are doing right now, take a deep breath, and set aside the press of this busy day."
+      15,
+      "That heavy sense of exhaustion settles deep because your efforts seem to yield no visible fruit."
     ],
     [
-      9,
-      19,
-      "First Corinthians fifteen fifty-eight says, therefore, my beloved brothers, be steadfast, immovable, always abounding in the work of the Lord, knowing that in the Lord your labor is not in vain."
+      15,
+      34,
+      "Therefore, my beloved brethren, be ye stedfast, unmoveable, always abounding in the work of the Lord,"
     ],
     [
-      19,
-      28,
-      "Heavenly Father, as the midday sun shines, we ground our hearts in Your unshakable truth."
-    ],
-    [
-      28,
-      37,
-      "Renew our strength when fatigue whispers. Guard our focus, and remind us that every humble effort offered to You carries eternal weight."
-    ],
-    [
-      37,
+      34,
       46,
-      "Establish the work of our hands this afternoon. Lord, keep us faithful, calm, and steadfast until the evening comes."
+      "forasmuch as ye know that your labor is not in vain in the Lord."
     ],
     [
       46,
-      54,
-      "Subscribe to The Midday Watch to pause and pray again with us tomorrow."
+      62,
+      "Lord, grant me the grace to remain consistent when the path ahead feels blurred and long."
+    ],
+    [
+      62,
+      79,
+      "May my daily tasks become an act of worship that honors your kingdom and your heart."
+    ],
+    [
+      79,
+      98,
+      "Hold me steady in this hour so I may continue to walk faithfully in your light."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      9,
+      15,
       [
-        "PAUSE WHAT YOU ARE DOING",
-        "TAKE A DEEP BREATH",
-        "SET ASIDE THIS BUSY DAY"
+        "HEAVY EXHAUSTION",
+        "SETTLES DEEP",
+        "EFFORTS YIELD",
+        "NO FRUIT"
       ],
       [
-        "PAUSE",
-        "DEEP BREATH"
+        "EXHAUSTION",
+        "FRUIT"
       ],
-      "1 CORINTHIANS 15 : 58"
+      "1 COR 15:58"
     ],
     [
-      9,
-      19,
+      15,
+      34,
       [
-        "BE STEADFAST AND IMMOVABLE",
-        "ALWAYS ABOUNDING IN WORK",
-        "YOUR LABOR IS NOT IN VAIN"
+        "BE YE STEDFAST",
+        "UNMOVEABLE",
+        "ABOUNDING IN THE",
+        "WORK OF THE LORD"
       ],
       [
-        "STEADFAST",
-        "IMMOVABLE",
+        "STEDFAST",
+        "UNMOVEABLE"
+      ],
+      "1 COR 15:58"
+    ],
+    [
+      34,
+      46,
+      [
+        "LABOR IS NOT",
+        "IN VAIN",
+        "IN THE LORD"
+      ],
+      [
         "NOT IN VAIN"
       ],
-      "1 CORINTHIANS 15 : 58"
-    ],
-    [
-      19,
-      28,
-      [
-        "AS THE MIDDAY SUN SHINES",
-        "WE GROUND OUR HEARTS",
-        "IN YOUR UNSHAKABLE TRUTH"
-      ],
-      [
-        "MIDDAY",
-        "GROUND",
-        "UNSHAKABLE TRUTH"
-      ],
-      "1 CORINTHIANS 15 : 58"
-    ],
-    [
-      28,
-      37,
-      [
-        "RENEW OUR STRENGTH TODAY",
-        "EVERY HUMBLE EFFORT",
-        "CARRIES ETERNAL WEIGHT"
-      ],
-      [
-        "RENEW",
-        "STRENGTH",
-        "ETERNAL WEIGHT"
-      ],
-      "1 CORINTHIANS 15 : 58"
-    ],
-    [
-      37,
-      46,
-      [
-        "ESTABLISH WORK OF OUR HANDS",
-        "KEEP US FAITHFUL AND CALM",
-        "STEADFAST UNTIL EVENING"
-      ],
-      [
-        "ESTABLISH",
-        "FAITHFUL",
-        "STEADFAST"
-      ],
-      "1 CORINTHIANS 15 : 58"
+      "1 COR 15:58"
     ],
     [
       46,
-      54,
+      62,
       [
-        "SUBSCRIBE TO MIDDAY WATCH",
-        "PAUSE AND PRAY AGAIN",
-        "WITH US TOMORROW"
+        "GRANT ME GRACE",
+        "REMAIN CONSISTENT",
+        "PATH FEELS",
+        "BLURRED AND LONG"
       ],
       [
-        "SUBSCRIBE",
-        "PAUSE AND PRAY"
+        "CONSISTENT"
       ],
-      "1 CORINTHIANS 15 : 58"
+      "PRAYER"
+    ],
+    [
+      62,
+      79,
+      [
+        "TASKS BECOME",
+        "ACT OF WORSHIP",
+        "HONORS YOUR KINGDOM",
+        "YOUR HEART"
+      ],
+      [
+        "WORSHIP"
+      ],
+      "PRAYER"
+    ],
+    [
+      79,
+      98,
+      [
+        "HOLD ME STEADY",
+        "CONTINUE TO WALK",
+        "FAITHFULLY IN",
+        "YOUR LIGHT"
+      ],
+      [
+        "STEADY"
+      ],
+      "PRAYER"
     ]
   ],
   "beats": [
     {
-      "a": "Pause what you are doing right now,",
+      "a": "That heavy sense of exhaustion settles deep because your efforts seem to yield no visible fruit.",
       "kind": "phrase",
       "words": [
-        "PAUSE",
-        "DEEP BREATH"
+        "EXHAUSTION",
+        "FRUIT"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "First Corinthians fifteen fifty-eight says,",
+      "a": "Therefore, my beloved brethren, be ye stedfast, unmoveable, always abounding in the work of the Lord,",
       "kind": "phrase",
       "words": [
-        "STEADFAST",
-        "IMMOVABLE"
+        "STEDFAST",
+        "UNMOVEABLE"
       ],
-      "hi": 0,
+      "hi": 1,
       "slot": "C"
     },
     {
-      "a": "Heavenly Father, as the midday sun shines,",
+      "a": "forasmuch as ye know that your labor is not in vain in the Lord.",
       "kind": "phrase",
       "words": [
-        "GROUND",
-        "UNSHAKABLE TRUTH"
+        "NOT IN VAIN"
       ],
-      "hi": 0,
+      "hi": 2,
       "slot": "C"
     },
     {
-      "a": "Renew our strength when fatigue whispers.",
+      "a": "Lord, grant me the grace to remain consistent when the path ahead feels blurred and long.",
       "kind": "phrase",
       "words": [
-        "RENEW",
-        "STRENGTH"
+        "CONSISTENT"
       ],
-      "hi": 0,
+      "hi": 3,
       "slot": "C"
     },
     {
-      "a": "Establish the work of our hands this afternoon.",
+      "a": "May my daily tasks become an act of worship that honors your kingdom and your heart.",
       "kind": "phrase",
       "words": [
-        "ESTABLISH",
-        "FAITHFUL"
+        "WORSHIP"
       ],
-      "hi": 0,
+      "hi": 4,
       "slot": "C"
     },
     {
-      "a": "Subscribe to The Midday Watch to pause",
+      "a": "Hold me steady in this hour so I may continue to walk faithfully in your light.",
       "kind": "phrase",
       "words": [
-        "SUBSCRIBE",
-        "PAUSE AND PRAY"
+        "STEADY"
       ],
-      "hi": 0,
+      "hi": 5,
       "slot": "C"
     }
   ],

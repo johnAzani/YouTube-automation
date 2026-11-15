@@ -1,0 +1,232 @@
+{
+  "key": "short-middaypsalm46v10",
+  "channel": "prayer3",
+  "psalm": 46,
+  "title": [
+    "BE STILL",
+    "KNOW GOD"
+  ],
+  "poster": [
+    "MIDDAY",
+    "QUIET",
+    "STILLNESS",
+    "PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "golden midday sunlight on a wooden desk",
+    "dust motes dancing in shaft of light",
+    "open window overlooking calm garden",
+    "shadows stretching across a quiet floor",
+    "sunlight reflecting on a glass of water",
+    "blurred green leaves in bright daylight"
+  ],
+  "scenes": [
+    {
+      "a": "That sharp anxiety over your pending deadline has occupied your mind long enough this morning.",
+      "img": "short-middaypsalm46v10-scene-01.jpg",
+      "kicker": "PSALM 46:10",
+      "sub": "GOD IS NEAR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Release the grip of your own effort and hear the voice of the eternal King today.",
+      "img": "short-middaypsalm46v10-scene-02.jpg",
+      "kicker": "PSALM 46:10",
+      "sub": "FIND PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Be still, and know that I am God: I will be exalted among the heathen, I will be exalted in the earth.",
+      "img": "short-middaypsalm46v10-scene-03.jpg",
+      "kicker": "PSALM 46:10",
+      "sub": "THE LORD SPEAKS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, teach me to trade this restless striving for the perfect peace of your presence.",
+      "img": "short-middaypsalm46v10-scene-04.jpg",
+      "kicker": "PSALM 46:10",
+      "sub": "LORD HEAR ME",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Calm my racing thoughts so that I might perceive your sovereign hand in every detail.",
+      "img": "short-middaypsalm46v10-scene-05.jpg",
+      "kicker": "PSALM 46:10",
+      "sub": "MY REFUGE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May your glory be the only thing that matters in my work and my rest.",
+      "img": "short-middaypsalm46v10-scene-06.jpg",
+      "kicker": "PSALM 46:10",
+      "sub": "SUBSCRIBE BELOW",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That sharp anxiety over your pending deadline has occupied your mind long enough this morning."
+    ],
+    [
+      8,
+      16,
+      "Release the grip of your own effort and hear the voice of the eternal King today."
+    ],
+    [
+      16,
+      28,
+      "Be still, and know that I am God: I will be exalted among the heathen, I will be exalted in the earth."
+    ],
+    [
+      28,
+      38,
+      "Lord, teach me to trade this restless striving for the perfect peace of your presence."
+    ],
+    [
+      38,
+      48,
+      "Calm my racing thoughts so that I might perceive your sovereign hand in every detail."
+    ],
+    [
+      48,
+      58,
+      "May your glory be the only thing that matters in my work and my rest."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "SHARP ANXIETY",
+        "OCCUPIED YOUR MIND"
+      ],
+      [
+        "SHARP",
+        "ANXIETY"
+      ],
+      "PSALM 46:10"
+    ],
+    [
+      8,
+      16,
+      [
+        "RELEASE YOUR EFFORT",
+        "HEAR THE KING"
+      ],
+      [
+        "RELEASE",
+        "KING"
+      ],
+      "PSALM 46:10"
+    ],
+    [
+      16,
+      28,
+      [
+        "BE STILL",
+        "KNOW THAT I AM GOD",
+        "EXALTED IN EARTH"
+      ],
+      [
+        "STILL",
+        "GOD",
+        "EXALTED"
+      ],
+      "PSALM 46:10"
+    ],
+    [
+      28,
+      38,
+      [
+        "TRADE RESTLESS STRIVING",
+        "FOR PERFECT PEACE"
+      ],
+      [
+        "TRADE",
+        "PEACE"
+      ],
+      "PSALM 46:10"
+    ],
+    [
+      38,
+      48,
+      [
+        "CALM RACING THOUGHTS",
+        "PERCEIVE SOVEREIGN HAND"
+      ],
+      [
+        "CALM",
+        "SOVEREIGN"
+      ],
+      "PSALM 46:10"
+    ],
+    [
+      48,
+      58,
+      [
+        "GLORY MATTERS",
+        "WORK AND REST"
+      ],
+      [
+        "GLORY",
+        "REST"
+      ],
+      "PSALM 46:10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That sharp anxiety over your pending deadline has occupied your mind long enough this morning.",
+      "kind": "phrase",
+      "words": [
+        "SHARP",
+        "ANXIETY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Be still, and know that I am God: I will be exalted among the heathen, I will be exalted in the earth.",
+      "kind": "phrase",
+      "words": [
+        "BE STILL",
+        "KNOW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 46:10"
+}

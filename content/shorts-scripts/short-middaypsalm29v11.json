@@ -1,0 +1,275 @@
+{
+  "key": "short-middaypsalm29v11",
+  "channel": "prayer3",
+  "psalm": 29,
+  "title": [
+    "STRENGTH FOR",
+    "THE MIDDAY"
+  ],
+  "poster": [
+    "THE LORD WILL",
+    "GIVE STRENGTH",
+    "UNTO HIS PEOPLE",
+    "PSALM 29:11"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "midday golden light through window",
+    "minimalist wooden desk sunlit",
+    "still reflection on calm lake",
+    "distant mountains under high sun",
+    "open field under noon sky",
+    "dust motes dancing in sunbeams"
+  ],
+  "scenes": [
+    {
+      "a": "The heavy weight of that ongoing friction at your office is exhausting your spirit today.",
+      "img": "short-middaypsalm29v11-scene-01.jpg",
+      "kicker": "PSALM 29:11",
+      "sub": "FINDING STRENGTH AT NOON",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You are carrying more than you were meant to hold alone during these busy hours.",
+      "img": "short-middaypsalm29v11-scene-02.jpg",
+      "kicker": "PSALM 29:11",
+      "sub": "LETTING GO OF THE BURDEN",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The LORD will give strength unto his people; the LORD will bless his people with peace.",
+      "img": "short-middaypsalm29v11-scene-03.jpg",
+      "kicker": "PSALM 29:11",
+      "sub": "THE PROMISE OF PEACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "May that quiet divine assurance settle into your mind as you finish your remaining work.",
+      "img": "short-middaypsalm29v11-scene-04.jpg",
+      "kicker": "PSALM 29:11",
+      "sub": "STILLNESS FOR THE SOUL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Replace your striving with a deep trust that the Creator is holding your afternoon steady.",
+      "img": "short-middaypsalm29v11-scene-05.jpg",
+      "kicker": "PSALM 29:11",
+      "sub": "RESTING IN HIS GRACE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Stay held in this light and carry this quiet confidence into everything you do next.",
+      "img": "short-middaypsalm29v11-scene-06.jpg",
+      "kicker": "PSALM 29:11",
+      "sub": "SUBSCRIBE FOR DAILY PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "The heavy weight of that ongoing friction at your office is exhausting your spirit today."
+    ],
+    [
+      8,
+      16,
+      "You are carrying more than you were meant to hold alone during these busy hours."
+    ],
+    [
+      16,
+      28,
+      "The LORD will give strength unto his people; the LORD will bless his people with peace."
+    ],
+    [
+      28,
+      38,
+      "May that quiet divine assurance settle into your mind as you finish your remaining work."
+    ],
+    [
+      38,
+      48,
+      "Replace your striving with a deep trust that the Creator is holding your afternoon steady."
+    ],
+    [
+      48,
+      56,
+      "Stay held in this light and carry this quiet confidence into everything you do next."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "HEAVY WEIGHT",
+        "OF FRICTION",
+        "EXHAUSTING YOUR SPIRIT"
+      ],
+      [
+        "FRICTION",
+        "EXHAUSTING"
+      ],
+      "PSALM 29:11"
+    ],
+    [
+      8,
+      16,
+      [
+        "CARRYING MORE",
+        "THAN YOU WERE",
+        "MEANT TO HOLD"
+      ],
+      [
+        "MEANT TO HOLD"
+      ],
+      "PSALM 29:11"
+    ],
+    [
+      16,
+      28,
+      [
+        "THE LORD WILL GIVE STRENGTH",
+        "UNTO HIS PEOPLE",
+        "THE LORD WILL BLESS",
+        "HIS PEOPLE WITH PEACE"
+      ],
+      [
+        "STRENGTH",
+        "PEACE"
+      ],
+      "PSALM 29:11"
+    ],
+    [
+      28,
+      38,
+      [
+        "QUIET DIVINE ASSURANCE",
+        "SETTLE INTO YOUR MIND",
+        "FINISH YOUR WORK"
+      ],
+      [
+        "ASSURANCE",
+        "SETTLE"
+      ],
+      "PSALM 29:11"
+    ],
+    [
+      38,
+      48,
+      [
+        "REPLACE YOUR STRIVING",
+        "DEEP TRUST",
+        "CREATOR IS HOLDING"
+      ],
+      [
+        "DEEP TRUST"
+      ],
+      "PSALM 29:11"
+    ],
+    [
+      48,
+      56,
+      [
+        "STAY HELD",
+        "IN THIS LIGHT",
+        "CARRY QUIET CONFIDENCE"
+      ],
+      [
+        "CONFIDENCE"
+      ],
+      "PSALM 29:11"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The heavy weight of that ongoing friction at your office is exhausting your spirit today.",
+      "kind": "phrase",
+      "words": [
+        "FRICTION",
+        "EXHAUSTING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You are carrying more than you were meant to hold alone during these busy hours.",
+      "kind": "phrase",
+      "words": [
+        "MEANT",
+        "TO",
+        "HOLD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The LORD will give strength unto his people; the LORD will bless his people with peace.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May that quiet divine assurance settle into your mind as you finish your remaining work.",
+      "kind": "phrase",
+      "words": [
+        "ASSURANCE",
+        "SETTLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Replace your striving with a deep trust that the Creator is holding your afternoon steady.",
+      "kind": "phrase",
+      "words": [
+        "DEEP",
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Stay held in this light and carry this quiet confidence into everything you do next.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "CONFIDENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 29:11"
+}

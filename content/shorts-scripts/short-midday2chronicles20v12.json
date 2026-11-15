@@ -3,112 +3,88 @@
   "channel": "prayer3",
   "psalm": null,
   "title": [
-    "MIDDAY PAUSE",
-    "CHRONICLES 20:12"
+    "MIDDAY PRAYER",
+    "2 CHRONICLES 20:12"
   ],
   "poster": [
-    "THE MIDDAY WATCH",
-    "PAUSE",
-    "PRAY",
-    "Breathe"
+    "SURRENDER",
+    "YOUR",
+    "CURRENT",
+    "BURDEN"
   ],
   "end": [
     "SUBSCRIBE",
     "The Midday Watch — pause and pray at noon"
   ],
   "stock_queries": [
-    "sunlight streaming through a window onto a wooden floor",
-    "a quiet desk with a closed notebook and natural light",
-    "high sun illuminating an open grassy field",
-    "dust motes dancing in a midday sunbeam",
-    "a peaceful forest clearing at high noon",
-    "soft golden light on a textured white wall",
-    "a clean workspace with a single ceramic cup",
-    "bright overhead sun on a calm garden path"
+    "bright midday light through office window",
+    "empty wooden desk with warm sun",
+    "soft shadows on a clean white wall",
+    "sunlight glinting off a glass of water",
+    "dust motes dancing in shaft of light",
+    "open field under a high bright sun"
   ],
   "scenes": [
     {
-      "a": "pause what you are doing",
+      "a": "That heavy choice weighing on your mind is why you are meant to stay here.",
       "img": "short-midday2chronicles20v12-scene-01.jpg",
-      "kicker": "MIDDAY STILLNESS",
-      "sub": "FIND A QUIET MOMENT",
+      "kicker": "2 CHRONICLES 20:12",
+      "sub": "GOD IS YOUR DEFENSE",
       "cam": "push_in",
       "focus": [
         0.5,
-        0.5
+        0.45
       ]
     },
     {
-      "a": "take a deep breath",
+      "a": "Lord, we arrive at this hour with our hands empty and our strength fully spent.",
       "img": "short-midday2chronicles20v12-scene-02.jpg",
-      "kicker": "STEADY YOUR HEART",
-      "sub": "BREATHE IN THE CALM",
+      "kicker": "2 CHRONICLES 20:12",
+      "sub": "FINDING STRENGTH AT NOON",
       "cam": "pan_left",
-      "focus": [
-        0.4,
-        0.6
-      ]
-    },
-    {
-      "a": "2 Chronicles 20:12",
-      "img": "short-midday2chronicles20v12-scene-03.jpg",
-      "kicker": "THE SCRIPTURE",
-      "sub": "HEAR THE ANCIENT WORD",
-      "cam": "pull_out",
       "focus": [
         0.5,
         0.5
       ]
     },
     {
-      "a": "we do not know",
-      "img": "short-midday2chronicles20v12-scene-04.jpg",
-      "kicker": "ADMITTING NEED",
-      "sub": "HONESTY BEFORE GOD",
+      "a": "O our God, wilt thou not judge them? for we have no might against this great company that cometh against us; neither know we what to do: but our eyes are upon thee.",
+      "img": "short-midday2chronicles20v12-scene-03.jpg",
+      "kicker": "2 CHRONICLES 20:12",
+      "sub": "OUR EYES ARE UPON THEE",
       "cam": "tilt_up",
       "focus": [
         0.5,
-        0.3
+        0.2
       ]
     },
     {
-      "a": "our eyes are on you",
-      "img": "short-midday2chronicles20v12-scene-05.jpg",
-      "kicker": "FIXED GAZE",
-      "sub": "LOOKING TO THE SOURCE",
-      "cam": "push_in",
-      "focus": [
-        0.6,
-        0.4
-      ]
-    },
-    {
-      "a": "guide us this afternoon",
-      "img": "short-midday2chronicles20v12-scene-06.jpg",
-      "kicker": "MIDDAY PRAYER",
-      "sub": "WALK WITH HIM NOW",
-      "cam": "pan_right",
+      "a": "Grant us the quiet stillness to wait while You move in ways we cannot see.",
+      "img": "short-midday2chronicles20v12-scene-04.jpg",
+      "kicker": "2 CHRONICLES 20:12",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "pull_out",
       "focus": [
         0.5,
         0.5
       ]
     },
     {
-      "a": "give us your wisdom",
-      "img": "short-midday2chronicles20v12-scene-07.jpg",
-      "kicker": "SEEKING DIRECTION",
-      "sub": "BEYOND OUR OWN STRENGTH",
-      "cam": "pull_out",
+      "a": "Replace our frantic worry with the steady peace of knowing You are already acting today.",
+      "img": "short-midday2chronicles20v12-scene-05.jpg",
+      "kicker": "2 CHRONICLES 20:12",
+      "sub": "PEACE IN THE MIDDLE",
+      "cam": "pan_right",
       "focus": [
-        0.4,
+        0.3,
         0.5
       ]
     },
     {
-      "a": "rest in his presence",
-      "img": "short-midday2chronicles20v12-scene-08.jpg",
-      "kicker": "ABIDE",
-      "sub": "SETTLE YOUR SPIRIT",
+      "a": "May our hearts remain fixed on Your face as the hours pass, in Jesus' name.",
+      "img": "short-midday2chronicles20v12-scene-06.jpg",
+      "kicker": "2 CHRONICLES 20:12",
+      "sub": "THE MIDDAY WATCH",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -119,235 +95,175 @@
   "captions": [
     [
       0,
-      12,
-      "Please pause what you are doing right now and take a deep breath to center your spirit."
+      10,
+      "That heavy choice weighing on your mind is why you are meant to stay here."
     ],
     [
-      13,
-      28,
-      "Let us consider 2 Chronicles 20:12, where we read, we do not know what to do, but our eyes are on you."
+      11,
+      22,
+      "Lord, we arrive at this hour with our hands empty and our strength fully spent."
     ],
     [
-      29,
+      23,
       45,
-      "Lord, we acknowledge that we do not know the path forward today, but our eyes are on you."
+      "O our God, wilt thou not judge them? for we have no might against this great company that cometh against us; neither know we what to do: but our eyes are upon thee."
     ],
     [
       46,
-      60,
-      "Grant us your clarity as we step back into the work, and guide us this afternoon."
+      58,
+      "Grant us the quiet stillness to wait while You move in ways we cannot see."
     ],
     [
-      61,
-      80,
-      "Give us your wisdom to navigate every challenge with grace, patience, and a humble heart."
+      59,
+      75,
+      "Replace our frantic worry with the steady peace of knowing You are already acting today."
     ],
     [
-      81,
-      100,
-      "May we find quiet strength in your promise, knowing you are our refuge in the heat of the day."
-    ],
-    [
-      101,
-      115,
-      "Remain in this peace as you rest in his presence and continue your day with hope."
-    ],
-    [
-      116,
-      120,
-      "Subscribe to join us for tomorrow's midday prayer."
+      76,
+      96,
+      "May our hearts remain fixed on Your face as the hours pass, in Jesus' name. Subscribe."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      12,
+      10,
       [
-        "PAUSE WHAT",
-        "YOU ARE DOING",
-        "TAKE A BREATH"
+        "THAT HEAVY CHOICE",
+        "WEIGHING ON YOUR MIND",
+        "IS WHY YOU ARE",
+        "MEANT TO STAY HERE"
       ],
       [
-        "PAUSE"
+        "HEAVY CHOICE"
       ],
-      "MIDDAY"
+      "2 CHRONICLES 20:12"
     ],
     [
-      13,
-      28,
+      11,
+      22,
       [
-        "CHRONICLES 20:12",
-        "WE DO NOT KNOW",
-        "EYES ON YOU"
+        "LORD WE ARRIVE",
+        "WITH EMPTY HANDS",
+        "AND OUR STRENGTH",
+        "FULLY SPENT TODAY"
       ],
       [
-        "EYES ON YOU"
+        "EMPTY HANDS"
       ],
-      "2 CHR 20:12"
+      "2 CHRONICLES 20:12"
     ],
     [
-      29,
+      23,
       45,
       [
+        "O OUR GOD",
+        "WE HAVE NO MIGHT",
         "WE DO NOT KNOW",
-        "PATH FORWARD",
-        "EYES ARE ON YOU"
+        "BUT OUR EYES",
+        "ARE UPON THEE"
       ],
       [
-        "EYES ARE ON YOU"
+        "OUR EYES"
       ],
-      "2 CHR 20:12"
+      "2 CHRONICLES 20:12"
     ],
     [
       46,
-      60,
+      58,
       [
-        "GRANT US CLARITY",
-        "GUIDE US",
-        "THIS AFTERNOON"
+        "GRANT US STILLNESS",
+        "TO WAIT WHILE",
+        "YOU MOVE IN WAYS",
+        "WE CANNOT SEE"
       ],
       [
-        "GUIDE US"
+        "STILLNESS"
       ],
-      "MIDDAY"
+      "2 CHRONICLES 20:12"
     ],
     [
-      61,
-      80,
+      59,
+      75,
       [
-        "GIVE US WISDOM",
-        "NAVIGATE CHALLENGES",
-        "HUMBLE HEART"
+        "REPLACE OUR WORRY",
+        "WITH STEADY PEACE",
+        "KNOWING YOU ARE",
+        "ALREADY ACTING"
       ],
       [
-        "WISDOM"
+        "STEADY PEACE"
       ],
-      "MIDDAY"
+      "2 CHRONICLES 20:12"
     ],
     [
-      81,
-      100,
+      76,
+      96,
       [
-        "QUIET STRENGTH",
-        "YOU ARE",
-        "OUR REFUGE"
+        "MAY OUR HEARTS",
+        "REMAIN FIXED ON",
+        "YOUR FACE TODAY",
+        "IN JESUS NAME"
       ],
       [
-        "REFUGE"
+        "FIXED ON YOU"
       ],
-      "MIDDAY"
-    ],
-    [
-      101,
-      115,
-      [
-        "REST IN",
-        "HIS PRESENCE",
-        "CONTINUE WITH HOPE"
-      ],
-      [
-        "PRESENCE"
-      ],
-      "MIDDAY"
-    ],
-    [
-      116,
-      120,
-      [
-        "SUBSCRIBE FOR",
-        "THE MIDDAY",
-        "WATCH PRAYER"
-      ],
-      [
-        "SUBSCRIBE"
-      ],
-      "MIDDAY"
+      "2 CHRONICLES 20:12"
     ]
   ],
   "beats": [
     {
-      "a": "pause what you are doing",
+      "a": "That heavy choice weighing on your mind is why you are meant to stay here.",
       "kind": "phrase",
       "words": [
-        "PAUSE",
-        "WHAT",
-        "YOU",
-        "ARE",
-        "DOING"
+        "HEAVY CHOICE"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "2 Chronicles 20:12",
+      "a": "Lord, we arrive at this hour with our hands empty and our strength fully spent.",
       "kind": "phrase",
       "words": [
-        "2",
-        "CHRONICLES",
-        "20:12"
-      ],
-      "hi": 2,
-      "slot": "C"
-    },
-    {
-      "a": "we do not know",
-      "kind": "phrase",
-      "words": [
-        "WE",
-        "DO",
-        "NOT",
-        "KNOW"
+        "EMPTY HANDS"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "our eyes are on you",
+      "a": "O our God, wilt thou not judge them? for we have no might against this great company that cometh against us; neither know we what to do: but our eyes are upon thee.",
       "kind": "phrase",
       "words": [
-        "OUR",
-        "EYES",
-        "ARE",
-        "ON",
-        "YOU"
-      ],
-      "hi": 1,
-      "slot": "C"
-    },
-    {
-      "a": "guide us this afternoon",
-      "kind": "phrase",
-      "words": [
-        "GUIDE",
-        "US",
-        "THIS",
-        "AFTERNOON"
+        "OUR EYES"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "give us your wisdom",
+      "a": "Grant us the quiet stillness to wait while You move in ways we cannot see.",
       "kind": "phrase",
       "words": [
-        "GIVE",
-        "US",
-        "YOUR",
-        "WISDOM"
+        "STILLNESS"
       ],
-      "hi": 3,
+      "hi": 0,
       "slot": "C"
     },
     {
-      "a": "rest in his presence",
+      "a": "Replace our frantic worry with the steady peace of knowing You are already acting today.",
       "kind": "phrase",
       "words": [
-        "REST",
-        "IN",
-        "HIS",
-        "PRESENCE"
+        "STEADY PEACE"
       ],
-      "hi": 3,
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May our hearts remain fixed on Your face as the hours pass, in Jesus' name.",
+      "kind": "phrase",
+      "words": [
+        "FIXED ON YOU"
+      ],
+      "hi": 0,
       "slot": "C"
     }
   ],
