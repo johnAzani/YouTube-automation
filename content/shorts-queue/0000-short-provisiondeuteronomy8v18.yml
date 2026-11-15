@@ -11,3 +11,7 @@ replace: false
 target_window_utc: '10:44'
 notes: "Standalone Short on Deuteronomy 8:18 (evergreen list) \u2014 spec authored\
   \ by the brain (100 narration words)"
+alignment_failures: 1
+last_alignment_error: 'cannot prepare Charon narration for short-provisiondeuteronomy8v18
+  (Short speech alignment unavailable or incomplete; refusing to render [ValueError:
+  Uncertain alignment at word 47: confidence=0.001]); refusing to render'

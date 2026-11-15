@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T07:09:23Z",
+  "generated_at": "2026-11-15T07:34:34Z",
   "monitor_generated_at": "2026-11-15T06:50:48.927372+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 260,
-    "published_longform": 111,
+    "published_total": 261,
+    "published_longform": 112,
     "published_shorts": 149,
-    "public_total": 258,
-    "queued_longform": 63,
+    "public_total": 259,
+    "queued_longform": 62,
     "queued_shorts": 94,
     "automations_ok": 12,
     "automations_total": 12,
@@ -441,28 +441,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 20,
-        "published_longform": 9,
+        "published_total": 21,
+        "published_longform": 10,
         "published_shorts": 11,
         "thumbnail_pending": 5,
-        "public_total": 20,
-        "queued_longform": 6,
+        "public_total": 21,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 10
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONPROVERBS16V3",
-        "title": "Pray This Proverbs 16:3 Prayer for Open Doors & Provision | God'S Daily Provision #Shorts",
-        "format": "short",
-        "youtube_video_id": "SspZpHb6SbU",
-        "watch_url": "https://www.youtube.com/shorts/SspZpHb6SbU",
-        "published_on": "2026-11-15",
-        "published_at": "2026-11-15T02:26:02Z"
-      },
-      "next_queued_longform": {
         "id": "0509",
         "title": "Prayer for When You Need God to Provide: Genesis 22:14",
-        "words": 1208,
+        "format": "longform",
+        "youtube_video_id": "xAmucrKvmj4",
+        "watch_url": "https://youtu.be/xAmucrKvmj4",
+        "published_on": "2026-11-15",
+        "published_at": "2026-11-15T07:33:39Z"
+      },
+      "next_queued_longform": {
+        "id": "0510",
+        "title": "Prayer to Stop Worrying About Money: Matthew 6:31-33",
+        "words": 1739,
         "status": "approved"
       },
       "next_queued_short": {
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0509",
+      "slug": "genesis-22-14-jehovah-jireh-provision-prayer",
+      "file": "0509-genesis-22-14-jehovah-jireh-provision-prayer.md",
+      "title": "Prayer for When You Need God to Provide: Genesis 22:14",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T07:33:39Z",
+      "youtube_video_id": "xAmucrKvmj4",
+      "watch_url": "https://youtu.be/xAmucrKvmj4",
+      "youtu_be_url": "https://youtu.be/xAmucrKvmj4",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/xAmucrKvmj4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/xAmucrKvmj4/hqdefault.jpg",
+      "thumb_text": "JEHOVAH JIREH",
+      "thumbnail_pending": false,
+      "duration_label": "~8 min",
+      "words": 1208
+    },
     {
       "id": "SHORT-GUIDEDJEREMIAH29V13",
       "slug": "short-guidedjeremiah29v13-guidance-prayer",
@@ -7476,19 +7500,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1748
-      },
-      {
-        "id": "0509",
-        "slug": "genesis-22-14-jehovah-jireh-provision-prayer",
-        "file": "0509-genesis-22-14-jehovah-jireh-provision-prayer.md",
-        "title": "Prayer for When You Need God to Provide: Genesis 22:14",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1208
       },
       {
         "id": "0510",
