@@ -28,6 +28,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["NIGHT PRAYER", "PHILIPPIANS 4:8", "PEACEFUL SLEEP", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If your mind is racing with replay of every mistake made today, rest now. Finally, brethren, whatsoever things are true, whatsoever things are honest, whatsoever things are just, whatsoever things are pure, whatsoever things are lovely, whatsoever things are of good report; if there be any virtue, and if there be any praise, think on these things. Lord, fill this quiet bedroom with your gentle peace. Wash away every noisy anxiety, replay, and fearful thought. Anchor my heart upon your goodness and beauty tonight. Give me restful sleep in your presence. Subscribe to The Secret Place for daily night prayers.

@@ -23,11 +23,12 @@ short_visual_fingerprints: ["sha256:0f338b446efe06037d1afce3eac4ff778578e7816bb2
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UC8lPazRi_sj2Q5TQGVQ6bqQ; auth_channel_title=The Guided Path; long_uploads_status=eligib"
+thumbnail_pending: false
 thumbnail_poster: ["WHEN CONFUSED", "LISTEN CLOSELY", "HEAR HIS VOICE", "JOHN 10:27"]
 thumbnail_kicker: "HE SHALL DIRECT THY PATHS"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
 ---
 
 When every opinion around you creates confusion, quiet your heart before the Lord. John 10:27 says, My sheep hear my voice, and I know them, and they follow me. Heavenly Father, amidst the clamor of conflicting advice and anxious thoughts, grant us discernment to recognize your still, small voice. You know our hearts, our hidden doubts, and the exact path ahead. Silence the loud demands of this world so we may hear your divine wisdom clearly today. Give us gentle faith and steadfast courage to step forward in obedience, trusting your shepherd's care for every decision we face. In Jesus' name, Amen. Subscribe to The Guided Path for daily strength.

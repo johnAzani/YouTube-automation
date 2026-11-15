@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=el"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE COVENANT SHIELD", "STRONG TOWER", "PROVERBS 18:10", "PROTECTION PRAYER"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-22T16:18:15Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 When your heart feels overwhelmed, you do not have to carry every fear by yourself today. Proverbs chapter eighteen, verse ten says, The name of the LORD is a strong tower: the righteous runneth into it, and is safe. We turn to the Lord in prayer, remembering His faithfulness even when our circumstances are difficult. Father, shelter those who are anxious, comfort those who are grieving, and strengthen all who feel vulnerable. Help us to seek wise counsel, to care for our neighbours, and to take the practical steps that lead toward safety. Hold us close through the storms we cannot control, and let Your peace steady our hearts in Christ. Type Amen and subscribe to The Covenant Shield for daily prayer and encouragement in God’s keeping.
