@@ -1,6 +1,6 @@
 ---
 id: '0044'
-title: Isaiah 50:4 Morning Prayer | The Morning Altar
+title: "When You Need to Hear God Speak: Isaiah 50:4 | The Morning Altar"
 slug: isaiah-50-4-morning-prayer
 status: published
 channel: prayer2
@@ -81,10 +81,13 @@ originality:
 published_on: "2026-11-08"
 published_at: "2026-11-08T20:02:33Z"
 youtube_video_id: "2IcuUyX_Y4U"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Isaiah 50:4 Morning Prayer | The Morning Altar"
+retitled_at: "2026-11-15"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The Sunrise Awakening
