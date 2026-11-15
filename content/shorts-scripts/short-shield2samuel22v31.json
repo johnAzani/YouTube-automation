@@ -1,0 +1,280 @@
+{
+  "key": "short-shield2samuel22v31",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "GOD'S PERFECT WAY",
+    "YOUR DIVINE SHIELD"
+  ],
+  "poster": [
+    "THE COVENANT SHIELD",
+    "SAFEKEEPING PRAYER",
+    "2 SAMUEL 22:31",
+    "DAILY PROTECTION"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "majestic ancient stone watchtower at sunset",
+    "golden light rays piercing through heavy storm clouds",
+    "calm river flowing through a quiet mountain valley",
+    "peaceful sunlit mountain pass with light mist",
+    "solid rock cliff face under a vast open sky",
+    "quiet forest canopy with soft morning light"
+  ],
+  "scenes": [
+    {
+      "a": "If you are standing at the threshold of a decision that feels heavy, stay right here.",
+      "img": "short-shield2samuel22v31-scene-01.jpg",
+      "kicker": "2 SAMUEL 22:31",
+      "sub": "GOD'S PERFECT WAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "As for God, his way is perfect; the word of the LORD is tried: he is a buckler to all them that trust in him.",
+      "img": "short-shield2samuel22v31-scene-02.jpg",
+      "kicker": "2 SAMUEL 22:31",
+      "sub": "THE LORD IS TRIED",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, anchor our weary hearts in the truth of Your unchanging character and your holy promise.",
+      "img": "short-shield2samuel22v31-scene-03.jpg",
+      "kicker": "PRAYER FOR STRENGTH",
+      "sub": "ANCHORED IN TRUTH",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "When the path ahead is obscured, keep our feet steady upon the solid rock of faith.",
+      "img": "short-shield2samuel22v31-scene-04.jpg",
+      "kicker": "DIVINE GUIDANCE",
+      "sub": "STEADY UPON THE ROCK",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We ask for your protection to surround our minds against every shadow of doubt today.",
+      "img": "short-shield2samuel22v31-scene-05.jpg",
+      "kicker": "HOLY PROTECTION",
+      "sub": "SHIELDING OUR MINDS",
+      "cam": "push_in",
+      "focus": [
+        0.7,
+        0.4
+      ]
+    },
+    {
+      "a": "Grant us the grace to rest in your sovereign covering as we face the coming hours.",
+      "img": "short-shield2samuel22v31-scene-06.jpg",
+      "kicker": "SOVEREIGN GRACE",
+      "sub": "RESTING IN HIM",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If you are standing at the threshold of a decision that feels heavy, stay right here."
+    ],
+    [
+      8,
+      18,
+      "As for God, his way is perfect; the word of the LORD is tried: he is a buckler to all them that trust in him."
+    ],
+    [
+      18,
+      26,
+      "Lord, anchor our weary hearts in the truth of Your unchanging character and your holy promise."
+    ],
+    [
+      26,
+      34,
+      "When the path ahead is obscured, keep our feet steady upon the solid rock of faith."
+    ],
+    [
+      34,
+      42,
+      "We ask for your protection to surround our minds against every shadow of doubt today."
+    ],
+    [
+      42,
+      50,
+      "Grant us the grace to rest in your sovereign covering as we face the coming hours."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF YOU STAND AT",
+        "THE THRESHOLD OF A",
+        "HEAVY DECISION",
+        "STAY RIGHT HERE"
+      ],
+      [
+        "HEAVY DECISION"
+      ],
+      "2 SAMUEL 22:31"
+    ],
+    [
+      8,
+      18,
+      [
+        "AS FOR GOD",
+        "HIS WAY IS PERFECT",
+        "THE LORD IS TRIED",
+        "A BUCKLER TO ALL"
+      ],
+      [
+        "PERFECT",
+        "BUCKLER"
+      ],
+      "2 SAMUEL 22:31"
+    ],
+    [
+      18,
+      26,
+      [
+        "ANCHOR OUR WEARY",
+        "HEARTS IN THE",
+        "TRUTH OF YOUR",
+        "HOLY PROMISE"
+      ],
+      [
+        "ANCHOR",
+        "TRUTH"
+      ],
+      "2 SAMUEL 22:31"
+    ],
+    [
+      26,
+      34,
+      [
+        "WHEN THE PATH",
+        "IS OBSCURED",
+        "KEEP OUR FEET",
+        "ON THE SOLID ROCK"
+      ],
+      [
+        "SOLID ROCK"
+      ],
+      "2 SAMUEL 22:31"
+    ],
+    [
+      34,
+      42,
+      [
+        "PROTECTION TO",
+        "SURROUND OUR MINDS",
+        "AGAINST EVERY",
+        "SHADOW OF DOUBT"
+      ],
+      [
+        "PROTECTION",
+        "SURROUND"
+      ],
+      "2 SAMUEL 22:31"
+    ],
+    [
+      42,
+      50,
+      [
+        "REST IN YOUR",
+        "SOVEREIGN COVERING",
+        "AS WE FACE",
+        "THE COMING HOURS"
+      ],
+      [
+        "SOVEREIGN",
+        "COVERING"
+      ],
+      "2 SAMUEL 22:31"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are standing at the threshold of a decision that feels heavy, stay right here.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "DECISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As for God, his way is perfect; the word of the LORD is tried: he is a buckler to all them that trust in him.",
+      "kind": "phrase",
+      "words": [
+        "PERFECT",
+        "BUCKLER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, anchor our weary hearts in the truth of Your unchanging character and your holy promise.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When the path ahead is obscured, keep our feet steady upon the solid rock of faith.",
+      "kind": "phrase",
+      "words": [
+        "SOLID",
+        "ROCK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We ask for your protection to surround our minds against every shadow of doubt today.",
+      "kind": "phrase",
+      "words": [
+        "PROTECTION",
+        "SURROUND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us the grace to rest in your sovereign covering as we face the coming hours.",
+      "kind": "phrase",
+      "words": [
+        "SOVEREIGN",
+        "COVERING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Samuel 22:31"
+}

@@ -1,0 +1,276 @@
+{
+  "key": "short-shieldpsalm46v1",
+  "channel": "prayer8",
+  "psalm": 46,
+  "title": [
+    "DIVINE REFUGE",
+    "STRENGTH IN TROUBLE"
+  ],
+  "poster": [
+    "THE COVENANT SHIELD",
+    "GOD IS OUR REFUGE",
+    "STRENGTH IN THE STORM",
+    "A PRAYER FOR PEACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "calm mountain lake sunset",
+    "ancient stone tower golden hour",
+    "peaceful river flowing through forest",
+    "light rays breaking through dark clouds",
+    "still water mountain reflection",
+    "sunlight hitting mossy stone wall"
+  ],
+  "scenes": [
+    {
+      "a": "If the weight of this uncertainty is pressing against your heart, stay for this quiet moment.",
+      "img": "short-shieldpsalm46v1-scene-01.jpg",
+      "kicker": "PSALM 46:1",
+      "sub": "GOD IS OUR STRENGTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "God is our refuge and strength, a very present help in trouble.",
+      "img": "short-shieldpsalm46v1-scene-02.jpg",
+      "kicker": "PSALM 46:1",
+      "sub": "ALWAYS PRESENT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Therefore will not we fear, though the earth be removed, and though the mountains be carried into the midst of the sea;",
+      "img": "short-shieldpsalm46v1-scene-03.jpg",
+      "kicker": "PSALM 46:2",
+      "sub": "NO FEAR IN HIM",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, anchor my soul in these eternal words as the ground shifts beneath my weary feet.",
+      "img": "short-shieldpsalm46v1-scene-04.jpg",
+      "kicker": "PRAYER",
+      "sub": "ANCHOR MY SOUL",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Let your peace encompass my mind, shielding me from the storms that seek to distract me.",
+      "img": "short-shieldpsalm46v1-scene-05.jpg",
+      "kicker": "PRAYER",
+      "sub": "SHIELD MY MIND",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Keep me under the shadow of your wings, trusting that you are my constant, unwavering fortress.",
+      "img": "short-shieldpsalm46v1-scene-06.jpg",
+      "kicker": "REFUGE",
+      "sub": "CONSTANT FORTRESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If the weight of this uncertainty is pressing against your heart, stay for this quiet moment."
+    ],
+    [
+      8,
+      18,
+      "God is our refuge and strength, a very present help in trouble."
+    ],
+    [
+      18,
+      28,
+      "Therefore will not we fear, though the earth be removed, and though the mountains be carried into the midst of the sea;"
+    ],
+    [
+      28,
+      38,
+      "Lord, anchor my soul in these eternal words as the ground shifts beneath my weary feet."
+    ],
+    [
+      38,
+      48,
+      "Let your peace encompass my mind, shielding me from the storms that seek to distract me."
+    ],
+    [
+      48,
+      58,
+      "Keep me under the shadow of your wings, trusting that you are my constant, unwavering fortress."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "WEIGHT OF UNCERTAINTY",
+        "PRESSING YOUR HEART",
+        "STAY FOR PRAYER"
+      ],
+      [
+        "UNCERTAINTY",
+        "HEART"
+      ],
+      "PSALM 46 : 1"
+    ],
+    [
+      8,
+      18,
+      [
+        "GOD IS OUR REFUGE",
+        "AND OUR STRENGTH",
+        "A PRESENT HELP"
+      ],
+      [
+        "REFUGE",
+        "STRENGTH"
+      ],
+      "PSALM 46 : 1"
+    ],
+    [
+      18,
+      28,
+      [
+        "THEREFORE WILL NOT FEAR",
+        "THOUGH EARTH BE REMOVED",
+        "MOUNTAINS INTO THE SEA"
+      ],
+      [
+        "NOT FEAR",
+        "MOUNTAINS"
+      ],
+      "PSALM 46 : 2"
+    ],
+    [
+      28,
+      38,
+      [
+        "ANCHOR MY SOUL",
+        "ETERNAL WORDS",
+        "SHIFTING GROUND"
+      ],
+      [
+        "ANCHOR",
+        "SOUL"
+      ],
+      "PRAYER"
+    ],
+    [
+      38,
+      48,
+      [
+        "LET YOUR PEACE",
+        "SHIELDING MY MIND",
+        "FROM THE STORMS"
+      ],
+      [
+        "PEACE",
+        "SHIELDING"
+      ],
+      "PRAYER"
+    ],
+    [
+      48,
+      58,
+      [
+        "SHADOW OF WINGS",
+        "TRUSTING IN YOU",
+        "CONSTANT FORTRESS"
+      ],
+      [
+        "SHADOW",
+        "FORTRESS"
+      ],
+      "REFUGE"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the weight of this uncertainty is pressing against your heart, stay for this quiet moment.",
+      "kind": "phrase",
+      "words": [
+        "UNCERTAINTY",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "God is our refuge and strength, a very present help in trouble.",
+      "kind": "phrase",
+      "words": [
+        "REFUGE",
+        "STRENGTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Therefore will not we fear, though the earth be removed, and though the mountains be carried into the midst of the sea;",
+      "kind": "phrase",
+      "words": [
+        "NOT FEAR",
+        "MOUNTAINS"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, anchor my soul in these eternal words as the ground shifts beneath my weary feet.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "SOUL"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Let your peace encompass my mind, shielding me from the storms that seek to distract me.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "SHIELDING"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "Keep me under the shadow of your wings, trusting that you are my constant, unwavering fortress.",
+      "kind": "phrase",
+      "words": [
+        "SHADOW",
+        "FORTRESS"
+      ],
+      "hi": 5,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 46:1-2"
+}

@@ -1,0 +1,274 @@
+{
+  "key": "short-shieldproverbs3v23",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "SAFE STEPS & SWEET REST",
+    "PROVERBS 3:23-26 PRAYER"
+  ],
+  "poster": [
+    "SAFE STEPS",
+    "SWEET REST",
+    "PROVERBS 3:23-26",
+    "DIVINE PROTECTION"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "sunlit mountain path stretching into misty valley at sunrise",
+    "peaceful golden forest path with warm light rays filtering through trees",
+    "calm mountain lake reflecting starlight and quiet night sky",
+    "ancient stone fortress tower lit by warm golden sunlight",
+    "majestic mountain peak bathed in divine light rays high above clouds",
+    "serene flowing river through peaceful valley under golden twilight"
+  ],
+  "scenes": [
+    {
+      "a": "If you are stepping onto an uncertain path today",
+      "img": "short-shieldproverbs3v23-scene-01.jpg",
+      "kicker": "PROVERBS 3:23-26",
+      "sub": "WALK SAFELY IN HIS PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Then shalt thou walk in thy way safely",
+      "img": "short-shieldproverbs3v23-scene-02.jpg",
+      "kicker": "PROVERBS 3:23",
+      "sub": "GOD GUIDES EVERY STEP",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "When thou liest down, thou shalt not be afraid",
+      "img": "short-shieldproverbs3v23-scene-03.jpg",
+      "kicker": "PROVERBS 3:24",
+      "sub": "SWEET REST IN HIS COVERING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Heavenly Father, guard this precious soul",
+      "img": "short-shieldproverbs3v23-scene-04.jpg",
+      "kicker": "DAILY PRAYER",
+      "sub": "SHIELDED FROM SUDDEN ALARM",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "May your presence surround them by day",
+      "img": "short-shieldproverbs3v23-scene-05.jpg",
+      "kicker": "DIVINE PROTECTION",
+      "sub": "COVERED BY DAY AND NIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.35
+      ]
+    },
+    {
+      "a": "Subscribe to walk daily under God's holy covering",
+      "img": "short-shieldproverbs3v23-scene-06.jpg",
+      "kicker": "THE COVENANT SHIELD",
+      "sub": "WALK UNDER GOD'S COVERING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If you are stepping onto an uncertain path today, hear God's promise over your journey."
+    ],
+    [
+      8,
+      18,
+      "Then shalt thou walk in thy way safely, and thy foot shall not stumble."
+    ],
+    [
+      18,
+      28,
+      "When thou liest down, thou shalt not be afraid: yea, thou shalt lie down, and thy sleep shall be sweet."
+    ],
+    [
+      28,
+      38,
+      "Heavenly Father, guard this precious soul wherever their steps may lead. Protect them from unseen traps, shield their heart from sudden alarm, and anchor their mind in your unwavering peace."
+    ],
+    [
+      38,
+      48,
+      "May your presence surround them by day and cover them through the night. Let no fear overtake them, for you are their refuge and strength."
+    ],
+    [
+      48,
+      55,
+      "Subscribe to walk daily under God's holy covering."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "STEPPING ONTO AN UNCERTAIN PATH",
+        "HEAR GOD'S PROMISE TODAY"
+      ],
+      [
+        "UNCERTAIN",
+        "PROMISE"
+      ],
+      "PROVERBS 3:23-26"
+    ],
+    [
+      8,
+      18,
+      [
+        "THEN SHALT THOU WALK",
+        "IN THY WAY SAFELY",
+        "THY FOOT SHALL NOT STUMBLE"
+      ],
+      [
+        "SAFELY",
+        "NOT STUMBLE"
+      ],
+      "PROVERBS 3:23"
+    ],
+    [
+      18,
+      28,
+      [
+        "WHEN THOU LIEST DOWN",
+        "THOU SHALT NOT BE AFRAID",
+        "THY SLEEP SHALL BE SWEET"
+      ],
+      [
+        "NOT BE AFRAID",
+        "SWEET SLEEP"
+      ],
+      "PROVERBS 3:24"
+    ],
+    [
+      28,
+      38,
+      [
+        "GUARD THIS PRECIOUS SOUL",
+        "PROTECT FROM UNSEEN TRAPS",
+        "ANCHOR THEM IN UNWAVERING PEACE"
+      ],
+      [
+        "GUARD",
+        "UNWAVERING PEACE"
+      ],
+      "PROVERBS 3:23-26"
+    ],
+    [
+      38,
+      48,
+      [
+        "MAY YOUR PRESENCE SURROUND THEM",
+        "BY DAY AND THROUGH THE NIGHT",
+        "YOU ARE THEIR REFUGE AND STRENGTH"
+      ],
+      [
+        "SURROUND THEM",
+        "REFUGE AND STRENGTH"
+      ],
+      "PROVERBS 3:23-26"
+    ],
+    [
+      48,
+      55,
+      [
+        "SUBSCRIBE TO WALK DAILY",
+        "UNDER GOD'S HOLY COVERING"
+      ],
+      [
+        "WALK DAILY",
+        "HOLY COVERING"
+      ],
+      "PROVERBS 3:23-26"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "stepping onto an uncertain path",
+      "kind": "phrase",
+      "words": [
+        "UNCERTAIN",
+        "PATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "walk in thy way safely",
+      "kind": "phrase",
+      "words": [
+        "WAY",
+        "SAFELY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "thy sleep shall be sweet",
+      "kind": "phrase",
+      "words": [
+        "SLEEP",
+        "SWEET"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "shield their heart from sudden alarm",
+      "kind": "phrase",
+      "words": [
+        "SHIELD",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "you are their refuge and strength",
+      "kind": "phrase",
+      "words": [
+        "REFUGE",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "under God's holy covering",
+      "kind": "phrase",
+      "words": [
+        "HOLY",
+        "COVERING"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 3:23-26"
+}

@@ -1,0 +1,329 @@
+{
+  "key": "short-shieldpsalm91v1",
+  "channel": "prayer8",
+  "psalm": 91,
+  "title": [
+    "SECRET PLACE OF GOD",
+    "PSALM 91 PROTECTION"
+  ],
+  "poster": [
+    "THE SHADOW OF THE ALMIGHTY",
+    "A DAILY PROTECTION PRAYER",
+    "PSALM 91:1-2",
+    "THE COVENANT SHIELD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "calm mountain valley misty twilight golden light",
+    "ancient stone fortress wall sunbeams cloudy sky",
+    "golden rays through clouds dramatic mountain peak",
+    "misty pine forest calm morning atmosphere",
+    "peaceful river flowing near mountain pass sunset",
+    "dramatic sunburst through ancient stone archway",
+    "serene alpine lake golden hour divine light"
+  ],
+  "scenes": [
+    {
+      "a": "If lingering fear about tomorrow is keeping your mind awake tonight, stay and pray.",
+      "img": "short-shieldpsalm91v1-scene-01.jpg",
+      "kicker": "PSALM 91:1-2",
+      "sub": "SEEKING DIVINE COVERING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty.",
+      "img": "short-shieldpsalm91v1-scene-02.jpg",
+      "kicker": "PSALM 91:1",
+      "sub": "THE SECRET PLACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "I will say of the LORD, He is my refuge and my fortress: my God; in him will I trust.",
+      "img": "short-shieldpsalm91v1-scene-03.jpg",
+      "kicker": "PSALM 91:2",
+      "sub": "MY REFUGE AND FORTRESS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, cover this weary heart right now with Your unseen presence and quiet mercy.",
+      "img": "short-shieldpsalm91v1-scene-04.jpg",
+      "kicker": "COVENANT PRAYER",
+      "sub": "UNSEEN PRESENCE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Surround every thought with divine peace, shield this home from all harm, and grant rest.",
+      "img": "short-shieldpsalm91v1-scene-05.jpg",
+      "kicker": "COVENANT PRAYER",
+      "sub": "PEACE AND PROTECTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "You alone are the sure fortress when everything else trembles.",
+      "img": "short-shieldpsalm91v1-scene-06.jpg",
+      "kicker": "COVENANT PRAYER",
+      "sub": "UNSHAKABLE STRONGHOLD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to The Covenant Shield and walk daily under God's covering.",
+      "img": "short-shieldpsalm91v1-scene-07.jpg",
+      "kicker": "THE COVENANT SHIELD",
+      "sub": "WALK IN DAILY COVERING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If lingering fear about tomorrow is keeping your mind awake tonight, stay and pray."
+    ],
+    [
+      8,
+      16,
+      "He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty."
+    ],
+    [
+      16,
+      24,
+      "I will say of the LORD, He is my refuge and my fortress: my God; in him will I trust."
+    ],
+    [
+      24,
+      32,
+      "Father, cover this weary heart right now with Your unseen presence and quiet mercy."
+    ],
+    [
+      32,
+      40,
+      "Surround every thought with divine peace, shield this home from all harm, and grant rest."
+    ],
+    [
+      40,
+      48,
+      "You alone are the sure fortress when everything else trembles."
+    ],
+    [
+      48,
+      55,
+      "Subscribe to The Covenant Shield and walk daily under God's covering."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF LINGERING FEAR ABOUT TOMORROW",
+        "IS KEEPING YOUR MIND AWAKE TONIGHT",
+        "STAY AND PRAY"
+      ],
+      [
+        "LINGERING",
+        "AWAKE",
+        "PRAY"
+      ],
+      "PSALM 91:1-2"
+    ],
+    [
+      8,
+      16,
+      [
+        "HE THAT DWELLETH IN THE SECRET PLACE",
+        "OF THE MOST HIGH SHALL ABIDE",
+        "UNDER THE SHADOW OF THE ALMIGHTY"
+      ],
+      [
+        "SECRET",
+        "SHADOW",
+        "ALMIGHTY"
+      ],
+      "PSALM 91:1"
+    ],
+    [
+      16,
+      24,
+      [
+        "I WILL SAY OF THE LORD",
+        "HE IS MY REFUGE AND MY FORTRESS",
+        "MY GOD IN HIM WILL I TRUST"
+      ],
+      [
+        "REFUGE",
+        "FORTRESS",
+        "TRUST"
+      ],
+      "PSALM 91:2"
+    ],
+    [
+      24,
+      32,
+      [
+        "FATHER COVER THIS WEARY HEART",
+        "RIGHT NOW WITH YOUR UNSEEN PRESENCE",
+        "AND QUIET MERCY"
+      ],
+      [
+        "WEARY",
+        "UNSEEN",
+        "MERCY"
+      ],
+      "DIVINE SHIELD"
+    ],
+    [
+      32,
+      40,
+      [
+        "SURROUND EVERY THOUGHT WITH DIVINE PEACE",
+        "SHIELD THIS HOME FROM ALL HARM",
+        "AND GRANT REST"
+      ],
+      [
+        "PEACE",
+        "SHIELD",
+        "REST"
+      ],
+      "DIVINE SHIELD"
+    ],
+    [
+      40,
+      48,
+      [
+        "YOU ALONE ARE THE SURE FORTRESS",
+        "WHEN EVERYTHING ELSE TREMBLES"
+      ],
+      [
+        "SURE",
+        "FORTRESS",
+        "TREMBLES"
+      ],
+      "DIVINE SHIELD"
+    ],
+    [
+      48,
+      55,
+      [
+        "SUBSCRIBE TO THE COVENANT SHIELD",
+        "AND WALK DAILY UNDER GODS COVERING"
+      ],
+      [
+        "COVENANT",
+        "SHIELD",
+        "COVERING"
+      ],
+      "WALK IN PEACE"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If lingering fear about tomorrow is keeping your mind awake tonight, stay and pray.",
+      "kind": "phrase",
+      "words": [
+        "LINGERING",
+        "AWAKE",
+        "PRAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty.",
+      "kind": "phrase",
+      "words": [
+        "SECRET",
+        "SHADOW",
+        "ALMIGHTY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "I will say of the LORD, He is my refuge and my fortress: my God; in him will I trust.",
+      "kind": "phrase",
+      "words": [
+        "REFUGE",
+        "FORTRESS",
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, cover this weary heart right now with Your unseen presence and quiet mercy.",
+      "kind": "phrase",
+      "words": [
+        "WEARY",
+        "UNSEEN",
+        "MERCY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Surround every thought with divine peace, shield this home from all harm, and grant rest.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "SHIELD",
+        "REST"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "You alone are the sure fortress when everything else trembles.",
+      "kind": "phrase",
+      "words": [
+        "SURE",
+        "FORTRESS",
+        "TREMBLES"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Covenant Shield and walk daily under God's covering.",
+      "kind": "phrase",
+      "words": [
+        "COVENANT",
+        "SHIELD",
+        "COVERING"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 91:1-2"
+}
