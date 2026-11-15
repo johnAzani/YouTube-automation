@@ -1,0 +1,279 @@
+{
+  "key": "short-guidedjeremiah29v13",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "SEEKING HIS",
+    "PRESENCE NOW"
+  ],
+  "poster": [
+    "WHERE IS",
+    "YOUR HEART",
+    "TRULY FOCUSED",
+    "THIS MOMENT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty mountain valley dawn",
+    "calm river flowing through woods",
+    "sunlight breaking over ridge",
+    "dusk over quiet still lake",
+    "soft clouds passing over peaks",
+    "peaceful forest trail at dawn"
+  ],
+  "scenes": [
+    {
+      "a": "That persistent restlessness in your spirit is pointing you toward a much deeper, hidden truth.",
+      "img": "short-guidedjeremiah29v13-scene-01.jpg",
+      "kicker": "JEREMIAH 29:13",
+      "sub": "FINDING GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You are invited to release your burdens and anchor your thoughts in the Holy Word.",
+      "img": "short-guidedjeremiah29v13-scene-02.jpg",
+      "kicker": "JEREMIAH 29:13",
+      "sub": "RELEASE YOUR BURDENS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The promise is clear: And ye shall seek me, and find me, when ye shall search for me with all your heart.",
+      "img": "short-guidedjeremiah29v13-scene-03.jpg",
+      "kicker": "JEREMIAH 29:13",
+      "sub": "SEARCH WITH ALL YOUR HEART",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Heavenly Father, I bring this situation before You because I know You hold the answers.",
+      "img": "short-guidedjeremiah29v13-scene-04.jpg",
+      "kicker": "JEREMIAH 29:13",
+      "sub": "BRINGING IT TO HIM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant me the wisdom to discern the right path and the patience to wait for clarity.",
+      "img": "short-guidedjeremiah29v13-scene-05.jpg",
+      "kicker": "JEREMIAH 29:13",
+      "sub": "ASKING FOR WISDOM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "I surrender my anxiety, knowing that seeking You is the foundation of every faithful step.",
+      "img": "short-guidedjeremiah29v13-scene-06.jpg",
+      "kicker": "JEREMIAH 29:13",
+      "sub": "SURRENDERING ANXIETY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      15,
+      "That persistent restlessness in your spirit is pointing you toward a much deeper, hidden truth."
+    ],
+    [
+      16,
+      28,
+      "You are invited to release your burdens and anchor your thoughts in the Holy Word."
+    ],
+    [
+      29,
+      48,
+      "The promise is clear: And ye shall seek me, and find me, when ye shall search for me with all your heart."
+    ],
+    [
+      49,
+      65,
+      "Heavenly Father, I bring this situation before You because I know You hold the answers."
+    ],
+    [
+      66,
+      80,
+      "Grant me the wisdom to discern the right path and the patience to wait for clarity."
+    ],
+    [
+      81,
+      106,
+      "I surrender my anxiety, knowing that seeking You is the foundation of every faithful step."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      15,
+      [
+        "PERSISTENT RESTLESSNESS",
+        "POINTING TOWARD",
+        "DEEPER HIDDEN TRUTH"
+      ],
+      [
+        "RESTLESSNESS",
+        "TRUTH"
+      ],
+      "JEREMIAH 29:13"
+    ],
+    [
+      16,
+      28,
+      [
+        "RELEASE YOUR BURDENS",
+        "ANCHOR YOUR THOUGHTS",
+        "IN HOLY WORD"
+      ],
+      [
+        "RELEASE",
+        "ANCHOR"
+      ],
+      "JEREMIAH 29:13"
+    ],
+    [
+      29,
+      48,
+      [
+        "SEEK ME",
+        "FIND ME",
+        "SEARCH WITH ALL",
+        "YOUR HEART"
+      ],
+      [
+        "SEEK",
+        "FIND",
+        "HEART"
+      ],
+      "JEREMIAH 29:13"
+    ],
+    [
+      49,
+      65,
+      [
+        "HEAVENLY FATHER",
+        "BRING THIS BEFORE YOU",
+        "YOU HOLD ANSWERS"
+      ],
+      [
+        "FATHER",
+        "ANSWERS"
+      ],
+      "JEREMIAH 29:13"
+    ],
+    [
+      66,
+      80,
+      [
+        "GRANT ME WISDOM",
+        "DISCERN RIGHT PATH",
+        "PATIENCE FOR CLARITY"
+      ],
+      [
+        "WISDOM",
+        "DISCERN"
+      ],
+      "JEREMIAH 29:13"
+    ],
+    [
+      81,
+      106,
+      [
+        "SURRENDER ANXIETY",
+        "SEEKING YOU IS",
+        "THE FOUNDATION"
+      ],
+      [
+        "SURRENDER",
+        "FOUNDATION"
+      ],
+      "JEREMIAH 29:13"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That persistent restlessness in your spirit is pointing you toward a much deeper, hidden truth.",
+      "kind": "phrase",
+      "words": [
+        "RESTLESSNESS",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You are invited to release your burdens and anchor your thoughts in the Holy Word.",
+      "kind": "phrase",
+      "words": [
+        "RELEASE",
+        "ANCHOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The promise is clear: And ye shall seek me, and find me, when ye shall search for me with all your heart.",
+      "kind": "phrase",
+      "words": [
+        "SEEK",
+        "FIND",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, I bring this situation before You because I know You hold the answers.",
+      "kind": "phrase",
+      "words": [
+        "FATHER",
+        "ANSWERS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant me the wisdom to discern the right path and the patience to wait for clarity.",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "DISCERN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I surrender my anxiety, knowing that seeking You is the foundation of every faithful step.",
+      "kind": "phrase",
+      "words": [
+        "SURRENDER",
+        "FOUNDATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Jeremiah 29:13"
+}

@@ -1,0 +1,278 @@
+{
+  "key": "short-guidedproverbs16v3",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "COMMIT YOUR PLANS",
+    "TO THE LORD"
+  ],
+  "poster": [
+    "PROVERBS 16:3",
+    "COMMIT THY WORKS",
+    "UNTO THE LORD",
+    "THE GUIDED PATH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley at sunrise light",
+    "calm mountain river flowing quiet woods",
+    "peaceful valley mist early morning sunlight",
+    "quiet mountain pass majestic pine trees misty dawn",
+    "still alpine lake reflective water sunrise",
+    "serene mountain vista golden morning light"
+  ],
+  "scenes": [
+    {
+      "a": "Before you finalize that choice you have been replaying all night, step back and pray.",
+      "img": "short-guidedproverbs16v3-scene-01.jpg",
+      "kicker": "PROVERBS 16:3",
+      "sub": "SURRENDER YOUR DECISION TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Commit thy works unto the LORD, and thy thoughts shall be established.",
+      "img": "short-guidedproverbs16v3-scene-02.jpg",
+      "kicker": "PROVERBS 16:3",
+      "sub": "COMMIT THY WORKS UNTO GOD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, I bring my plans, my projects, and my uncertain steps before You.",
+      "img": "short-guidedproverbs16v3-scene-03.jpg",
+      "kicker": "PROVERBS 16:3",
+      "sub": "BRING YOUR PLANS TO THE LORD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "I lay down the urge to control every single detail, asking You to align my heart with Your perfect divine direction.",
+      "img": "short-guidedproverbs16v3-scene-04.jpg",
+      "kicker": "PROVERBS 16:3",
+      "sub": "TRUST GOD WITH EVERY DETAIL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "When my mind feels restless or scattered, quiet my fears and let Your calm wisdom establish my thoughts today.",
+      "img": "short-guidedproverbs16v3-scene-05.jpg",
+      "kicker": "PROVERBS 16:3",
+      "sub": "FIND PEACE IN HIS DIRECTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Subscribe to The Guided Path for daily biblical wisdom and prayer.",
+      "img": "short-guidedproverbs16v3-scene-06.jpg",
+      "kicker": "PROVERBS 16:3",
+      "sub": "SEEK GOD'S WISDOM DAILY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Before you finalize that choice you have been replaying all night, step back and pray."
+    ],
+    [
+      9,
+      18,
+      "Proverbs 16 verse 3 says, Commit thy works unto the LORD, and thy thoughts shall be established."
+    ],
+    [
+      19,
+      28,
+      "Heavenly Father, I bring my plans, my projects, and my uncertain steps before You."
+    ],
+    [
+      29,
+      39,
+      "I lay down the urge to control every single detail, asking You to align my heart with Your perfect divine direction."
+    ],
+    [
+      40,
+      50,
+      "When my mind feels restless or scattered, quiet my fears and let Your calm wisdom establish my thoughts today. In Jesus' name, Amen."
+    ],
+    [
+      51,
+      58,
+      "Subscribe to The Guided Path for daily biblical wisdom and prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "BEFORE YOU FINALIZE",
+        "THAT CHOICE TONIGHT",
+        "STEP BACK AND PRAY"
+      ],
+      [
+        "FINALIZE",
+        "PRAY"
+      ],
+      "PROVERBS 16:3"
+    ],
+    [
+      9,
+      18,
+      [
+        "COMMIT THY WORKS",
+        "UNTO THE LORD",
+        "THY THOUGHTS SHALL BE",
+        "ESTABLISHED"
+      ],
+      [
+        "COMMIT",
+        "ESTABLISHED"
+      ],
+      "PROVERBS 16:3"
+    ],
+    [
+      19,
+      28,
+      [
+        "HEAVENLY FATHER",
+        "I BRING MY PLANS",
+        "AND UNCERTAIN STEPS",
+        "BEFORE YOU"
+      ],
+      [
+        "BRING",
+        "PLANS"
+      ],
+      "PROVERBS 16:3"
+    ],
+    [
+      29,
+      39,
+      [
+        "I LAY DOWN CONTROL",
+        "ALIGN MY HEART WITH",
+        "YOUR PERFECT DIRECTION"
+      ],
+      [
+        "ALIGN",
+        "DIRECTION"
+      ],
+      "PROVERBS 16:3"
+    ],
+    [
+      40,
+      50,
+      [
+        "QUIET MY FEARS",
+        "LET YOUR WISDOM",
+        "ESTABLISH MY THOUGHTS"
+      ],
+      [
+        "WISDOM",
+        "ESTABLISH"
+      ],
+      "PROVERBS 16:3"
+    ],
+    [
+      51,
+      58,
+      [
+        "SUBSCRIBE FOR DAILY",
+        "BIBLICAL WISDOM",
+        "AND PRAYER"
+      ],
+      [
+        "SUBSCRIBE",
+        "WISDOM"
+      ],
+      "PROVERBS 16:3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Before you finalize that choice you have been replaying all night, step back and pray.",
+      "kind": "phrase",
+      "words": [
+        "FINALIZE",
+        "PRAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Commit thy works unto the LORD, and thy thoughts shall be established.",
+      "kind": "phrase",
+      "words": [
+        "COMMIT",
+        "ESTABLISHED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, I bring my plans, my projects, and my uncertain steps before You.",
+      "kind": "phrase",
+      "words": [
+        "BRING",
+        "PLANS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I lay down the urge to control every single detail, asking You to align my heart with Your perfect divine direction.",
+      "kind": "phrase",
+      "words": [
+        "ALIGN",
+        "DIRECTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When my mind feels restless or scattered, quiet my fears and let Your calm wisdom establish my thoughts today.",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "ESTABLISH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Guided Path for daily biblical wisdom and prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "WISDOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 16:3"
+}

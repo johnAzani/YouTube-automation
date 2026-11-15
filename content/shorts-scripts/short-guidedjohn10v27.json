@@ -1,0 +1,392 @@
+{
+  "key": "short-guidedjohn10v27",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "HEAR HIS VOICE",
+    "FIND YOUR WAY"
+  ],
+  "poster": [
+    "WHEN CONFUSED",
+    "LISTEN CLOSELY",
+    "HEAR HIS VOICE",
+    "JOHN 10:27"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley early morning light",
+    "peaceful river winding through misty pine forest",
+    "calm mountain lake reflection at dawn",
+    "soft sunlight breaking through mountain mist",
+    "quiet valley trail in morning fog",
+    "serene mountain pass under soft morning light",
+    "still waters in a lush alpine meadow",
+    "sunbeams shining through valley trees",
+    "majestic mountain peak bathed in golden dawn"
+  ],
+  "scenes": [
+    {
+      "a": "When every opinion around you creates confusion,",
+      "img": "short-guidedjohn10v27-scene-01.jpg",
+      "kicker": "JOHN 10:27",
+      "sub": "QUIET YOUR HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "John 10:27 says, My sheep hear my voice,",
+      "img": "short-guidedjohn10v27-scene-02.jpg",
+      "kicker": "JOHN 10:27",
+      "sub": "HEAR HIS VOICE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, amidst the clamor of conflicting advice",
+      "img": "short-guidedjohn10v27-scene-03.jpg",
+      "kicker": "JOHN 10:27",
+      "sub": "SILENCE THE NOISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.45,
+        0.6
+      ]
+    },
+    {
+      "a": "grant us discernment to recognize your still, small voice.",
+      "img": "short-guidedjohn10v27-scene-04.jpg",
+      "kicker": "JOHN 10:27",
+      "sub": "SEEK DISCERNMENT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "You know our hearts, our hidden doubts,",
+      "img": "short-guidedjohn10v27-scene-05.jpg",
+      "kicker": "JOHN 10:27",
+      "sub": "HE KNOWS YOUR HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Silence the loud demands of this world",
+      "img": "short-guidedjohn10v27-scene-06.jpg",
+      "kicker": "JOHN 10:27",
+      "sub": "SEEK DIVINE WISDOM",
+      "cam": "pan_left",
+      "focus": [
+        0.55,
+        0.45
+      ]
+    },
+    {
+      "a": "Give us gentle faith and steadfast courage",
+      "img": "short-guidedjohn10v27-scene-07.jpg",
+      "kicker": "JOHN 10:27",
+      "sub": "WALK IN COURAGE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "trusting your shepherd's care for every decision",
+      "img": "short-guidedjohn10v27-scene-08.jpg",
+      "kicker": "JOHN 10:27",
+      "sub": "TRUST HIS GUIDANCE",
+      "cam": "push_in",
+      "focus": [
+        0.48,
+        0.52
+      ]
+    },
+    {
+      "a": "Subscribe to The Guided Path for daily strength.",
+      "img": "short-guidedjohn10v27-scene-09.jpg",
+      "kicker": "JOHN 10:27",
+      "sub": "WALK WITH GOD DAILY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "When every opinion around you creates confusion, quiet your heart before the Lord."
+    ],
+    [
+      6,
+      13,
+      "John 10:27 says, My sheep hear my voice, and I know them, and they follow me."
+    ],
+    [
+      13,
+      20,
+      "Heavenly Father, amidst the clamor of conflicting advice and anxious thoughts,"
+    ],
+    [
+      20,
+      27,
+      "grant us discernment to recognize your still, small voice."
+    ],
+    [
+      27,
+      34,
+      "You know our hearts, our hidden doubts, and the exact path ahead."
+    ],
+    [
+      34,
+      42,
+      "Silence the loud demands of this world so we may hear your divine wisdom clearly today."
+    ],
+    [
+      42,
+      50,
+      "Give us gentle faith and steadfast courage to step forward in obedience,"
+    ],
+    [
+      50,
+      58,
+      "trusting your shepherd's care for every decision we face. In Jesus' name, Amen."
+    ],
+    [
+      58,
+      64,
+      "Subscribe to The Guided Path for daily strength."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "WHEN EVERY OPINION",
+        "CREATES CONFUSION",
+        "QUIET YOUR HEART"
+      ],
+      [
+        "QUIET YOUR HEART"
+      ],
+      "JOHN 10:27"
+    ],
+    [
+      6,
+      13,
+      [
+        "MY SHEEP HEAR",
+        "MY VOICE AND I KNOW THEM",
+        "AND THEY FOLLOW ME"
+      ],
+      [
+        "HEAR MY VOICE"
+      ],
+      "JOHN 10:27"
+    ],
+    [
+      13,
+      20,
+      [
+        "AMIDST THE CLAMOR",
+        "OF CONFLICTING ADVICE",
+        "AND ANXIOUS THOUGHTS"
+      ],
+      [
+        "AMIDST THE CLAMOR"
+      ],
+      "JOHN 10:27"
+    ],
+    [
+      20,
+      27,
+      [
+        "GRANT US DISCERNMENT",
+        "TO RECOGNIZE YOUR",
+        "STILL SMALL VOICE"
+      ],
+      [
+        "STILL SMALL VOICE"
+      ],
+      "JOHN 10:27"
+    ],
+    [
+      27,
+      34,
+      [
+        "YOU KNOW OUR HEARTS",
+        "OUR HIDDEN DOUBTS",
+        "AND THE PATH AHEAD"
+      ],
+      [
+        "THE PATH AHEAD"
+      ],
+      "JOHN 10:27"
+    ],
+    [
+      34,
+      42,
+      [
+        "SILENCE THE LOUD DEMANDS",
+        "SO WE MAY HEAR",
+        "YOUR WISDOM CLEARLY"
+      ],
+      [
+        "YOUR WISDOM CLEARLY"
+      ],
+      "JOHN 10:27"
+    ],
+    [
+      42,
+      50,
+      [
+        "GIVE US GENTLE FAITH",
+        "AND STEADFAST COURAGE",
+        "TO STEP FORWARD"
+      ],
+      [
+        "STEADFAST COURAGE"
+      ],
+      "JOHN 10:27"
+    ],
+    [
+      50,
+      58,
+      [
+        "TRUSTING YOUR SHEPHERD CARE",
+        "FOR EVERY DECISION",
+        "IN JESUS NAME AMEN"
+      ],
+      [
+        "SHEPHERD CARE"
+      ],
+      "JOHN 10:27"
+    ],
+    [
+      58,
+      64,
+      [
+        "SUBSCRIBE TO THE GUIDED PATH",
+        "FOR DAILY STRENGTH"
+      ],
+      [
+        "SUBSCRIBE"
+      ],
+      "JOHN 10:27"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When every opinion around you creates confusion,",
+      "kind": "phrase",
+      "words": [
+        "CREATES",
+        "CONFUSION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "John 10:27 says, My sheep hear my voice,",
+      "kind": "phrase",
+      "words": [
+        "HEAR",
+        "MY",
+        "VOICE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, amidst the clamor of conflicting advice",
+      "kind": "phrase",
+      "words": [
+        "AMIDST",
+        "THE",
+        "CLAMOR"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "grant us discernment to recognize your still, small voice.",
+      "kind": "phrase",
+      "words": [
+        "STILL",
+        "SMALL",
+        "VOICE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "You know our hearts, our hidden doubts,",
+      "kind": "phrase",
+      "words": [
+        "HIDDEN",
+        "DOUBTS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Silence the loud demands of this world",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "WISDOM"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Give us gentle faith and steadfast courage",
+      "kind": "phrase",
+      "words": [
+        "STEADFAST",
+        "COURAGE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "trusting your shepherd's care for every decision",
+      "kind": "phrase",
+      "words": [
+        "SHEPHERD'S",
+        "CARE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Guided Path for daily strength.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "STRENGTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "John 10:27"
+}
