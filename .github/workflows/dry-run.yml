@@ -35,9 +35,11 @@ env:
 jobs:
   # ---------------------------------------------------------------------------
   # 1. Hermetic checks — must be green. No network, no secrets.
-  # The suite takes 15 to 16 minutes on a normal runner (1,900 tests). At a
-  # 20-minute limit a slow runner was cancelled mid-suite on 15 November 2026
-  # while the same commit passed on another runner, so the limit has headroom.
+  # One process took 19 to 26 minutes for the 1,980 tests on 15 November 2026
+  # (runs 43737911292, 43740479521, 43740476661) and a slow runner was cancelled
+  # mid-suite at the old 20-minute limit. The suite is now split across the
+  # runner's processors; the limit stays at 35 minutes so that a slow runner,
+  # or a fall back to one process, still finishes.
   # ---------------------------------------------------------------------------
   checks:
     name: Unit tests + doctor
@@ -57,12 +59,35 @@ jobs:
 
       # tests/ was never wired into CI before — this is the job that runs it.
       # test_queue_integrity is the guard that catches an out-of-niche job in content/queue/.
+      #
+      # `-n auto` starts one test process per processor. `--dist loadfile` keeps
+      # every test of a file in the same process, in file order, so tests that
+      # share a module-level fixture or a file on disk behave as they do in one
+      # process.
+      #
+      # A test that fails while the suite is split is run again on its own. If it
+      # still fails, the job fails. If it passes alone, the test leans on
+      # something another test file touches: the job passes and says which test
+      # it was, so a red check always means a real failure. Exit code 1 means
+      # "tests failed"; any other non-zero code (a collection error, a crashed
+      # run) fails the job without a second attempt.
       - name: Unit tests
         run: |
-          python -m pip install pytest
+          python -m pip install pytest pytest-xdist
           set +e
-          python -m pytest -q --tb=short 2>&1 | tee pytest.log
+          python -m pytest -q --tb=short -n auto --dist loadfile 2>&1 | tee pytest.log
           rc=${PIPESTATUS[0]}
+          if [ "$rc" -eq 1 ]; then
+            split_failures="$(grep -E '^(FAILED|ERROR) ' pytest.log | awk '{print $2}' | head -n 20 | tr '\n' ' ')"
+            echo "Running the failed tests again in one process: ${split_failures}"
+            python -m pytest -q --tb=short --last-failed --last-failed-no-failures none 2>&1 | tee pytest-alone.log
+            rc=${PIPESTATUS[0]}
+            if [ "$rc" -eq 0 ]; then
+              echo "::warning title=Tests passed only when run alone::${split_failures:-see pytest.log}"
+            else
+              cp pytest-alone.log pytest.log
+            fi
+          fi
           set -e
           if [ "$rc" -ne 0 ]; then
             summary="$(grep -E '^(FAILED|ERROR|E )' pytest.log | head -n 20 | tr '\n' ' | ')"

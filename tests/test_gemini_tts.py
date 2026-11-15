@@ -2,7 +2,7 @@ import hashlib
 import pytest
 from pathlib import Path
 from unittest.mock import MagicMock, patch
-from pipeline import gemini_tts
+from pipeline import gemini_tts, progress
 
 
 @pytest.fixture(autouse=True)
@@ -60,7 +60,14 @@ def test_gemini_tts_retry_on_429(tmp_path: Path):
             assert res == target
 
         assert mock_client.models.generate_content.call_count == 2
-        assert mock_sleep.call_count == 1
+        # `patch("time.sleep")` replaces the one shared `time.sleep`, so a
+        # background thread waking inside this block (the stage watchdog in
+        # `pipeline.progress`, or the test runner's own threads when the suite is
+        # split across processes) is counted too. Count the pause this test is
+        # about: one 8-second wait for the burst limit, and nothing longer.
+        pauses = [c.args[0] for c in mock_sleep.call_args_list
+                  if c.args and c.args[0] != progress.STALL_REPORT_SECONDS]
+        assert pauses == [8], pauses
 
 
 # --- The spoken payload must be the script, byte for byte, and NOTHING else --
