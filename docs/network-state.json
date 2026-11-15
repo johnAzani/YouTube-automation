@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T20:28:43Z",
+  "generated_at": "2026-11-15T20:43:50Z",
   "monitor_generated_at": "2026-11-15T20:16:52.224678+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 297,
-    "published_longform": 119,
-    "published_shorts": 178,
-    "public_total": 295,
-    "queued_longform": 60,
-    "queued_shorts": 76,
+    "published_total": 299,
+    "published_longform": 120,
+    "published_shorts": 179,
+    "public_total": 297,
+    "queued_longform": 59,
+    "queued_shorts": 75,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -373,33 +373,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 22,
-        "published_longform": 9,
-        "published_shorts": 13,
+        "published_total": 24,
+        "published_longform": 10,
+        "published_shorts": 14,
         "thumbnail_pending": 7,
-        "public_total": 22,
-        "queued_longform": 6,
+        "public_total": 24,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-HEALINGPROVERBS17V22",
-        "title": "Pray This Proverbs 17:22 Healing Prayer for Peace & Strength | The Heavy Heart #Shorts",
-        "format": "short",
-        "youtube_video_id": "5u1MAaKAdo8",
-        "watch_url": "https://www.youtube.com/shorts/5u1MAaKAdo8",
-        "published_on": "2026-11-15",
-        "published_at": "2026-11-15T15:06:01Z"
-      },
-      "next_queued_longform": {
         "id": "0409",
         "title": "Prayer When You Are Tired and Heavy Laden: Matthew 11:28-30",
-        "words": 1540,
+        "format": "longform",
+        "youtube_video_id": "JpCM2hZ9jpM",
+        "watch_url": "https://youtu.be/JpCM2hZ9jpM",
+        "published_on": "2026-11-15",
+        "published_at": "2026-11-15T20:43:07Z"
+      },
+      "next_queued_longform": {
+        "id": "0410",
+        "title": "Prayer for Healing in Body and Soul: Isaiah 53:4-5 | The Healing Balm",
+        "words": 1283,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingpsalm91v16",
-        "scripture": "Psalm 91:16",
+        "short": "short-healingpsalm41v1",
+        "scripture": "Psalm 41:1-3",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0409",
+      "slug": "matthew-11-28-30-rest-for-your-soul-prayer",
+      "file": "0409-matthew-11-28-30-rest-for-your-soul-prayer.md",
+      "title": "Prayer When You Are Tired and Heavy Laden: Matthew 11:28-30",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T20:43:07Z",
+      "youtube_video_id": "JpCM2hZ9jpM",
+      "watch_url": "https://youtu.be/JpCM2hZ9jpM",
+      "youtu_be_url": "https://youtu.be/JpCM2hZ9jpM",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/JpCM2hZ9jpM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/JpCM2hZ9jpM/hqdefault.jpg",
+      "thumb_text": "COME UNTO ME",
+      "thumbnail_pending": false,
+      "duration_label": "~11 min",
+      "words": 1540
+    },
+    {
       "id": "0025",
       "slug": "proverbs-3-24-26-when-you-lie-down-sleep-is-sweet",
       "file": "0025-proverbs-3-24-26-when-you-lie-down-sleep-is-sweet.md",
@@ -820,6 +844,30 @@
       "thumbnail_pending": true,
       "duration_label": "55s",
       "words": 644
+    },
+    {
+      "id": "SHORT-HEALINGPSALM91V16",
+      "slug": "short-healingpsalm91v16-restoration-prayer",
+      "file": "short-healingpsalm91v16-restoration-prayer.md",
+      "title": "Pray This Psalm 91:16 Healing Prayer for Peace & Strength | The Healing Balm #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T19:58:41Z",
+      "youtube_video_id": "BIzZOvBE61k",
+      "watch_url": "https://www.youtube.com/shorts/BIzZOvBE61k",
+      "youtu_be_url": "https://youtu.be/BIzZOvBE61k",
+      "shorts_url": "https://www.youtube.com/shorts/BIzZOvBE61k",
+      "studio_url": "https://studio.youtube.com/video/BIzZOvBE61k/edit",
+      "thumb_url": "https://i.ytimg.com/vi/BIzZOvBE61k/hqdefault.jpg",
+      "thumb_text": "RESTORED BY \u00b7 HIS PROMISE",
+      "thumbnail_pending": false,
+      "duration_label": "43s",
+      "words": 612
     },
     {
       "id": "SHORT-MORNINGPSALM121V1",
@@ -8249,19 +8297,6 @@
         "words": 1745
       },
       {
-        "id": "0409",
-        "slug": "matthew-11-28-30-rest-for-your-soul-prayer",
-        "file": "0409-matthew-11-28-30-rest-for-your-soul-prayer.md",
-        "title": "Prayer When You Are Tired and Heavy Laden: Matthew 11:28-30",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1540
-      },
-      {
         "id": "0410",
         "slug": "isaiah-53-4-5-by-his-stripes-we-are-healed",
         "file": "0410-isaiah-53-4-5-by-his-stripes-we-are-healed.md",
@@ -8614,17 +8649,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-healingpsalm91v16",
-        "file": "0000-short-healingpsalm91v16.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 91:16",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
-      },
       {
         "short": "short-morningpsalm37v4",
         "file": "0000-short-morningpsalm37v4.yml",
