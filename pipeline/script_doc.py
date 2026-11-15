@@ -151,9 +151,27 @@ _FRONTMATTER_RE = re.compile(r"\A---\s*\n(.*?)\n---\s*\n(.*)\Z", re.S)
 _SCENE_RE = re.compile(r"^##\s+(?:Scene\s+(\d+)\s*[—\-–:]\s*)?(.+?)\s*$", re.M)
 
 
+#: PyYAML's parser written in C (libyaml), when this PyYAML has it. The wheels on
+#: PyPI do. It is the same *safe* loader — same tags, same types, no object
+#: construction — and reads a job header about twelve times faster than the pure
+#: Python one. That matters because the watchdogs and the release planner read
+#: every queued and published file on each pass: measured on 15 November 2026,
+#: one supervisor pass parsed about 4,270 headers and that was 98% of its time.
+_FAST_SAFE_LOADER = getattr(yaml, "CSafeLoader", None) if yaml is not None else None
+
+
 def _load_yaml_mapping(raw_meta: str) -> dict:
     """Parse YAML mapping with PyYAML when available, or a safe stdlib top-level fallback."""
     if yaml is not None:
+        if _FAST_SAFE_LOADER is not None:
+            try:
+                return yaml.load(raw_meta, Loader=_FAST_SAFE_LOADER) or {}  # noqa: S506 - CSafeLoader is a safe loader
+            except yaml.YAMLError:
+                # The two parsers must never disagree about whether a header is
+                # readable. If the fast one refuses, the reference parser below
+                # decides: it either reads the header or raises the error callers
+                # have always seen.
+                pass
         return yaml.safe_load(raw_meta) or {}
     meta: dict = {}
     for line in raw_meta.splitlines():

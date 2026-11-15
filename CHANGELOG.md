@@ -5,6 +5,16 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-15 — The unit tests take a third of the time
+
+- **Before.** "Unit tests + doctor" took 26m28s, 26m00s and 18m50s on GitHub on 15 November (runs 43737911292, 43740479521, 43740476661), against a 35-minute limit. A job cancelled at its limit shows on a pull request as a failed check with nothing to read.
+- **Split across processors.** `.github/workflows/dry-run.yml` runs the suite with `pytest-xdist`, one process per processor, each test file kept whole in one process. With this change alone the job took 7m12s (run 43745623743).
+- **A failure while split is checked alone.** A test that fails in the split run is run again in one process. If it still fails, the job fails. If it passes alone, the job passes and names the test in a warning titled "Tests passed only when run alone". The second run cannot pass by running nothing.
+- **Job headers are read by PyYAML's C parser.** `pipeline/script_doc._load_yaml_mapping` reads the header of every queued and published file, and the watchdogs and the planner call it thousands of times per pass. One supervisor pass spent 98% of its time there. It now uses `CSafeLoader` (the same safe loader, about twelve times faster) when PyYAML has it. Every header and YAML file under `content/` is compared between the two parsers on each test run; a header the fast parser refuses goes to the reference parser; object tags are still refused. The same suite on the same machine went from 10m26s to 3m00s.
+- **After.** With both changes the job took 4m22s on GitHub (run 43746360166), the tests themselves 3m29s. The 35-minute limit is unchanged.
+- `tests/test_gemini_tts.py::test_gemini_tts_retry_on_429` counted every call to the shared `time.sleep`, so a background thread waking inside the test failed it now and then. It counts the 8-second pause it is about.
+- Tests: `tests/test_ci_suite_is_split.py`, `tests/test_job_header_parser.py`.
+
 ## 2026-11-15 — Thumbnail impressions and click rate are read
 
 - YouTube wrote the first daily reach file for The Secret Place (the job was started on 14 November). `scripts/reach_reader.py` downloads every daily file YouTube holds for a channel (it keeps 60 days) and writes `content/analytics/<channel>.reach.json`: per video and per day, how often the thumbnail was shown and how often it was clicked. `content/analytics/README.md` shows it under the channel.
@@ -22,6 +32,7 @@ there was no changelog before this file.
 - **Still refused:** a longer unsure stretch, one at the very start or end, more than 8 seconds between the certain words, audio that is another text (under 85% of the script recognised), and timings that go backwards or are not numbers.
 - **The refusal now says what differed:** the script words, the heard words and the seconds, so the next one can be read from the run's annotation.
 - The same rule covers Shorts (one was refused today at word 47, confidence 0.001).
+- **The video did go out.** A re-dispatch started at 16:18 UTC (run 43734712158) narrated job 0091 again and published it at 17:14 UTC: https://youtu.be/AQ7M3NKoU1g (7:41). That run used the code from before this fix; the new narration passed the timing check as it was. The fix has therefore not yet been exercised by a real refusal.
 - Tests: `tests/test_prayer_alignment.py`, class `TestUnsureStretchBetweenCertainWords`.
 
 ### `main` was red without anyone seeing it: roadmaps running short
