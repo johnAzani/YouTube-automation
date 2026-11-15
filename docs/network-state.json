@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T02:18:58Z",
+  "generated_at": "2026-11-15T02:19:06Z",
   "monitor_generated_at": "2026-11-15T02:17:31.679744+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 242,
+    "published_total": 243,
     "published_longform": 109,
-    "published_shorts": 133,
-    "public_total": 240,
+    "published_shorts": 134,
+    "public_total": 241,
     "queued_longform": 55,
-    "queued_shorts": 75,
+    "queued_shorts": 74,
     "automations_ok": 11,
     "automations_total": 11,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 44,
+        "published_total": 45,
         "published_longform": 16,
-        "published_shorts": 28,
+        "published_shorts": 29,
         "thumbnail_pending": 3,
-        "public_total": 43,
+        "public_total": 44,
         "queued_longform": 11,
         "queued_other": 5,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0024",
-        "title": "When the Night Feels Too Dark: Psalm 139:11-12 | The Secret Place",
-        "format": "longform",
-        "youtube_video_id": "VPAFfGNkCGs",
-        "watch_url": "https://youtu.be/VPAFfGNkCGs",
-        "published_on": "2026-11-14",
-        "published_at": "2026-11-14T20:46:48Z"
+        "id": "SHORT-PSALM56V3",
+        "title": "Say This Psalm 56:3 Prayer Before You Sleep | The Secret Place #Shorts",
+        "format": "short",
+        "youtube_video_id": "uSsaVvsLsfU",
+        "watch_url": "https://www.youtube.com/shorts/uSsaVvsLsfU",
+        "published_on": "2026-11-15",
+        "published_at": "2026-11-15T02:18:07Z"
       },
       "next_queued_longform": {
         "id": "0025",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm56v3",
-        "scripture": "Psalm 56:3",
+        "short": "short-psalm94v19",
+        "scripture": "Psalm 94:19",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PSALM56V3",
+      "slug": "short-psalm56v3-pre-sleep-prayer",
+      "file": "short-psalm56v3-pre-sleep-prayer.md",
+      "title": "Say This Psalm 56:3 Prayer Before You Sleep | The Secret Place #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T02:18:07Z",
+      "youtube_video_id": "uSsaVvsLsfU",
+      "watch_url": "https://www.youtube.com/shorts/uSsaVvsLsfU",
+      "youtu_be_url": "https://youtu.be/uSsaVvsLsfU",
+      "shorts_url": "https://www.youtube.com/shorts/uSsaVvsLsfU",
+      "studio_url": "https://studio.youtube.com/video/uSsaVvsLsfU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/uSsaVvsLsfU/hqdefault.jpg",
+      "thumb_text": "WHAT TIME I AM AFRAID \u00b7 I WILL TRUST IN THEE",
+      "thumbnail_pending": false,
+      "duration_label": "51s",
+      "words": 614
+    },
     {
       "id": "0408",
       "slug": "malachi-4-2-sun-of-righteousness-healing-prayer",
@@ -7278,17 +7302,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-psalm56v3",
-        "file": "0000-short-psalm56v3.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 56:3",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm94v19",
