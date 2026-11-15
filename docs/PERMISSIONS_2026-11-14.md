@@ -186,9 +186,9 @@ was written to run privately.
 **Decided 14 November (the owner left the choice to the automation): which figures may be
 written into this public repository.** Watch hours, traffic sources, retention, and thumbnail
 impressions and click rate may be committed, per channel and per video. Revenue is never
-written to the repository, to a log or to an annotation: a run may read it and use it, and
-that is all. The reader for the Analytics API and the downloader for the daily reach files
-are to be built to this rule.
+written to the repository, to a log or to an annotation. The reader goes further and never
+asks YouTube for it at all. The downloader for the daily reach files is to be built to the
+same rule.
 
 **Checked on every audit since 14 November: the channel's @handle.** The probe now compares
 the handle YouTube returns for the channel with the one the descriptions link to. The Secret
