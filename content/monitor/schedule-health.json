@@ -2,13 +2,6 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
-      "late_minutes": 1350,
-      "name": "Channel analytics (watch hours, sources, retention)",
-      "ran_at": "2026-11-15T02:07:03+00:00",
-      "slot": "2026-11-14T03:37:00+00:00",
-      "workflow": "channel-analytics.yml"
-    },
-    {
       "late_minutes": 642,
       "name": "YouTube reporting jobs (thumbnail impressions)",
       "ran_at": "2026-11-14T16:29:05+00:00",
@@ -51,8 +44,8 @@
       "workflow": "automation-health.yml"
     }
   ],
-  "generated_at": "2026-11-15T03:33:11.800649+00:00",
-  "last_run_at": "2026-11-15T03:32:22+00:00",
+  "generated_at": "2026-11-15T03:40:27.909885+00:00",
+  "last_run_at": "2026-11-15T03:39:34+00:00",
   "on_time": [
     {
       "late_minutes": 42,
