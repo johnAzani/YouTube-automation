@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T12:38:48Z",
+  "generated_at": "2026-11-15T12:42:37Z",
   "monitor_generated_at": "2026-11-15T06:50:48.927372+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 274,
-    "published_longform": 115,
-    "published_shorts": 159,
-    "public_total": 272,
-    "queued_longform": 64,
-    "queued_shorts": 95,
+    "published_total": 276,
+    "published_longform": 116,
+    "published_shorts": 160,
+    "public_total": 274,
+    "queued_longform": 63,
+    "queued_shorts": 94,
     "automations_ok": 12,
     "automations_total": 12,
     "network_healthy": true
@@ -441,33 +441,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 21,
-        "published_longform": 10,
-        "published_shorts": 11,
+        "published_total": 23,
+        "published_longform": 11,
+        "published_shorts": 12,
         "thumbnail_pending": 5,
-        "public_total": 21,
-        "queued_longform": 6,
+        "public_total": 23,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 11
+        "queued_shorts": 10
       },
       "latest_video": {
-        "id": "0509",
-        "title": "Prayer for When You Need God to Provide: Genesis 22:14",
-        "format": "longform",
-        "youtube_video_id": "xAmucrKvmj4",
-        "watch_url": "https://youtu.be/xAmucrKvmj4",
-        "published_on": "2026-11-15",
-        "published_at": "2026-11-15T07:33:39Z"
-      },
-      "next_queued_longform": {
         "id": "0510",
         "title": "Prayer to Stop Worrying About Money: Matthew 6:31-33",
-        "words": 1739,
+        "format": "longform",
+        "youtube_video_id": "QLE9dV6Tmk0",
+        "watch_url": "https://youtu.be/QLE9dV6Tmk0",
+        "published_on": "2026-11-15",
+        "published_at": "2026-11-15T12:41:39Z"
+      },
+      "next_queued_longform": {
+        "id": "0511",
+        "title": "Favour That Surrounds You Like a Shield: Psalm 5:12",
+        "words": 1672,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisiondeuteronomy8v18",
-        "scripture": "Deuteronomy 8:18",
+        "short": "short-provisionmatthew6v26",
+        "scripture": "Matthew 6:26",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0510",
+      "slug": "matthew-6-31-33-seek-first-the-kingdom-prayer",
+      "file": "0510-matthew-6-31-33-seek-first-the-kingdom-prayer.md",
+      "title": "Prayer to Stop Worrying About Money: Matthew 6:31-33",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T12:41:39Z",
+      "youtube_video_id": "QLE9dV6Tmk0",
+      "watch_url": "https://youtu.be/QLE9dV6Tmk0",
+      "youtu_be_url": "https://youtu.be/QLE9dV6Tmk0",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/QLE9dV6Tmk0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/QLE9dV6Tmk0/hqdefault.jpg",
+      "thumb_text": "SEEK HIM FIRST",
+      "thumbnail_pending": false,
+      "duration_label": "~12 min",
+      "words": 1739
+    },
+    {
       "id": "0804",
       "slug": "psalm-32-8-i-will-instruct-thee-and-teach-thee",
       "file": "0804-psalm-32-8-i-will-instruct-thee-and-teach-thee.md",
@@ -724,6 +748,30 @@
       "thumbnail_pending": true,
       "duration_label": "~10 min",
       "words": 1446
+    },
+    {
+      "id": "SHORT-PROVISIONDEUTERONOMY8V18",
+      "slug": "short-provisiondeuteronomy8v18-stewardship-prayer",
+      "file": "short-provisiondeuteronomy8v18-stewardship-prayer.md",
+      "title": "Pray This Deuteronomy 8:18 Prayer for Open Doors & Provision | Kjv Wisdom #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T11:35:44Z",
+      "youtube_video_id": "dqV2YMhVwcc",
+      "watch_url": "https://www.youtube.com/shorts/dqV2YMhVwcc",
+      "youtu_be_url": "https://youtu.be/dqV2YMhVwcc",
+      "shorts_url": "https://www.youtube.com/shorts/dqV2YMhVwcc",
+      "studio_url": "https://studio.youtube.com/video/dqV2YMhVwcc/edit",
+      "thumb_url": "https://i.ytimg.com/vi/dqV2YMhVwcc/hqdefault.jpg",
+      "thumb_text": "THE PROVISION TABLE \u00b7 DEUTERONOMY 8:18",
+      "thumbnail_pending": false,
+      "duration_label": "51s",
+      "words": 608
     },
     {
       "id": "SHORT-GARDENPSALM47V1",
@@ -7814,19 +7862,6 @@
         "words": 1748
       },
       {
-        "id": "0510",
-        "slug": "matthew-6-31-33-seek-first-the-kingdom-prayer",
-        "file": "0510-matthew-6-31-33-seek-first-the-kingdom-prayer.md",
-        "title": "Prayer to Stop Worrying About Money: Matthew 6:31-33",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1739
-      },
-      {
         "id": "0511",
         "slug": "favour-that-surrounds-you-like-a-shield-psalm-5-12",
         "file": "0511-favour-that-surrounds-you-like-a-shield-psalm-5-12.md",
@@ -8256,17 +8291,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-provisiondeuteronomy8v18",
-        "file": "0000-short-provisiondeuteronomy8v18.yml",
-        "companion_longform_id": "",
-        "scripture": "Deuteronomy 8:18",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionmatthew6v26",

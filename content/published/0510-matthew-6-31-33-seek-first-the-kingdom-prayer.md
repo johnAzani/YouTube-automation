@@ -2,7 +2,7 @@
 id: '0510'
 title: "Prayer to Stop Worrying About Money: Matthew 6:31-33"
 slug: matthew-6-31-33-seek-first-the-kingdom-prayer
-status: approved
+status: published
 channel: prayer7
 privacy: public
 format: longform
@@ -74,6 +74,13 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-15"
+published_at: "2026-11-15T12:41:39Z"
+youtube_video_id: "QLE9dV6Tmk0"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Approaching the Prepared Table with Quiet Trust
