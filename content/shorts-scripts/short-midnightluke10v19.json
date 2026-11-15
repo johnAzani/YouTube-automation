@@ -1,0 +1,223 @@
+{
+  "key": "short-midnightluke10v19",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "THE AUTHORITY",
+    "YOU HOLD"
+  ],
+  "poster": [
+    "MIDNIGHT",
+    "STRENGTH",
+    "DIVINE",
+    "PROMISE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "silhouette of ancient stone watchtower under starry night sky",
+    "deep blue nebula cosmos view",
+    "flickering candle flame on dark wooden surface",
+    "serene ocean waves under full moon midnight",
+    "distant mountain peaks under silver starlight",
+    "vast dark horizon with glowing constellation"
+  ],
+  "scenes": [
+    {
+      "a": "The fear circling your thoughts tonight is no match for the authority given to you.",
+      "img": "short-midnightluke10v19-scene-01.jpg",
+      "kicker": "LUKE 10:19",
+      "sub": "FAITH IN THE DARK",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Behold, I give unto you power to tread on serpents and scorpions, and over all the power of the enemy: and nothing shall by any means hurt you.",
+      "img": "short-midnightluke10v19-scene-02.jpg",
+      "kicker": "THE WORD",
+      "sub": "STRENGTH BEYOND MEASURE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, in this stillness, let your servant feel the weight of this divine protection tonight.",
+      "img": "short-midnightluke10v19-scene-03.jpg",
+      "kicker": "MIDNIGHT VIGIL",
+      "sub": "SURRENDER THE BURDEN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Remove every lingering doubt that keeps sleep from these eyes as we trust your promise.",
+      "img": "short-midnightluke10v19-scene-04.jpg",
+      "kicker": "STILLNESS",
+      "sub": "PEACE IN THE WATCH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant a heart of iron and a soul at rest under the shadow of your wings.",
+      "img": "short-midnightluke10v19-scene-05.jpg",
+      "kicker": "DIVINE COVER",
+      "sub": "RESTING IN FAITH",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We stand firm in this confidence, knowing your hand holds us safely through the darkness.",
+      "img": "short-midnightluke10v19-scene-06.jpg",
+      "kicker": "THE WATCH",
+      "sub": "STRENGTH REMAINS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "The fear circling your thoughts tonight is no match for the authority given to you."
+    ],
+    [
+      8,
+      18,
+      "Behold, I give unto you power to tread on serpents and scorpions, and over all the power of the enemy: and nothing shall by any means hurt you."
+    ],
+    [
+      18,
+      26,
+      "Lord, in this stillness, let your servant feel the weight of this divine protection tonight."
+    ],
+    [
+      26,
+      34,
+      "Remove every lingering doubt that keeps sleep from these eyes as we trust your promise."
+    ],
+    [
+      34,
+      42,
+      "Grant a heart of iron and a soul at rest under the shadow of your wings."
+    ],
+    [
+      42,
+      50,
+      "We stand firm in this confidence, knowing your hand holds us safely through the darkness."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "FEAR CIRCLING",
+        "THOUGHTS TONIGHT",
+        "NO MATCH",
+        "AUTHORITY GIVEN"
+      ],
+      [
+        "AUTHORITY"
+      ],
+      "LUKE 10:19"
+    ],
+    [
+      8,
+      18,
+      [
+        "BEHOLD I GIVE",
+        "POWER TO TREAD",
+        "POWER OF ENEMY",
+        "NOTHING SHALL HURT"
+      ],
+      [
+        "NOTHING SHALL HURT"
+      ],
+      "LUKE 10:19"
+    ],
+    [
+      18,
+      26,
+      [
+        "LORD IN STILLNESS",
+        "FEEL THE WEIGHT",
+        "DIVINE PROTECTION"
+      ],
+      [
+        "DIVINE PROTECTION"
+      ],
+      "LUKE 10:19"
+    ],
+    [
+      26,
+      34,
+      [
+        "REMOVE EVERY DOUBT",
+        "SLEEP FROM EYES",
+        "TRUST YOUR PROMISE"
+      ],
+      [
+        "TRUST YOUR PROMISE"
+      ],
+      "LUKE 10:19"
+    ],
+    [
+      34,
+      42,
+      [
+        "HEART OF IRON",
+        "SOUL AT REST",
+        "SHADOW OF WINGS"
+      ],
+      [
+        "SOUL AT REST"
+      ],
+      "LUKE 10:19"
+    ],
+    [
+      42,
+      50,
+      [
+        "STAND FIRM",
+        "CONFIDENCE",
+        "HAND HOLDS US",
+        "THROUGH THE DARKNESS"
+      ],
+      [
+        "STAND FIRM"
+      ],
+      "LUKE 10:19"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The fear circling your thoughts tonight is no match for the authority given to you.",
+      "kind": "phrase",
+      "words": [
+        "AUTHORITY",
+        "GIVEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Luke 10:19"
+}
