@@ -1,0 +1,268 @@
+{
+  "key": "short-midnightpsalm144v1",
+  "channel": "prayer4",
+  "psalm": 144,
+  "title": [
+    "HEALING THE HEART",
+    "AT MIDNIGHT"
+  ],
+  "poster": [
+    "PRAYER AT MIDNIGHT",
+    "STRENGTH FOR THE WEARY",
+    "FINDING PEACE",
+    "THE MIDNIGHT WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "deep starry night sky over mountains",
+    "glowing lantern on stone table",
+    "midnight shadows in prayer sanctuary",
+    "distant silhouette of lonely watchtower",
+    "soft moonlight through chapel window",
+    "vast cosmic nebula deep space"
+  ],
+  "scenes": [
+    {
+      "a": "The restless thoughts circling your mind right now find their quiet end in this prayer.",
+      "img": "short-midnightpsalm144v1-scene-01.jpg",
+      "kicker": "MIDNIGHT STRENGTH",
+      "sub": "FINDING STRENGTH IN SILENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Blessed be the LORD my strength, which teacheth my hands to war, and my fingers to fight:",
+      "img": "short-midnightpsalm144v1-scene-02.jpg",
+      "kicker": "PSALM 144:1",
+      "sub": "THE LORD IS YOUR STRENGTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "My goodness, and my fortress; my high tower, and my deliverer; my shield, and he in whom I trust; who subdueth my people under me.",
+      "img": "short-midnightpsalm144v1-scene-03.jpg",
+      "kicker": "PSALM 144:2",
+      "sub": "HE IS YOUR FORTRESS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Heavenly Father, in the stillness of this hour, we acknowledge that our battles are won through Your grace.",
+      "img": "short-midnightpsalm144v1-scene-04.jpg",
+      "kicker": "PRAYER OF SURRENDER",
+      "sub": "YOUR BATTLES ARE HIS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant us the quiet confidence to rest while You handle the storms that currently loom over our lives.",
+      "img": "short-midnightpsalm144v1-scene-05.jpg",
+      "kicker": "MIDNIGHT PEACE",
+      "sub": "REST IN HIS PROTECTION",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We yield our burdens to You, trusting in Your deliverance as we wait for the coming dawn.",
+      "img": "short-midnightpsalm144v1-scene-06.jpg",
+      "kicker": "THE MIDNIGHT WATCH",
+      "sub": "TRUST IN THE DELIVERER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "The restless thoughts circling your mind right now find their quiet end in this prayer."
+    ],
+    [
+      9,
+      23,
+      "Blessed be the LORD my strength, which teacheth my hands to war, and my fingers to fight:"
+    ],
+    [
+      24,
+      42,
+      "My goodness, and my fortress; my high tower, and my deliverer; my shield, and he in whom I trust; who subdueth my people under me."
+    ],
+    [
+      43,
+      60,
+      "Heavenly Father, in the stillness of this hour, we acknowledge that our battles are won through Your grace."
+    ],
+    [
+      61,
+      80,
+      "Grant us the quiet confidence to rest while You handle the storms that currently loom over our lives."
+    ],
+    [
+      81,
+      100,
+      "We yield our burdens to You, trusting in Your deliverance as we wait for the coming dawn."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "RESTLESS THOUGHTS CIRCLE",
+        "FIND THEIR QUIET END",
+        "IN THIS PRAYER"
+      ],
+      [
+        "QUIET END"
+      ],
+      "PRAYER"
+    ],
+    [
+      9,
+      23,
+      [
+        "BLESSED BE THE LORD",
+        "WHICH TEACHETH MY HANDS",
+        "AND MY FINGERS TO FIGHT"
+      ],
+      [
+        "MY STRENGTH"
+      ],
+      "PSALM 144 : 1"
+    ],
+    [
+      24,
+      42,
+      [
+        "MY GOODNESS MY FORTRESS",
+        "MY HIGH TOWER DELIVERER",
+        "MY SHIELD MY TRUST"
+      ],
+      [
+        "MY SHIELD"
+      ],
+      "PSALM 144 : 2"
+    ],
+    [
+      43,
+      60,
+      [
+        "HEAVENLY FATHER",
+        "BATTLES ARE WON",
+        "THROUGH YOUR GRACE"
+      ],
+      [
+        "YOUR GRACE"
+      ],
+      "PRAYER"
+    ],
+    [
+      61,
+      80,
+      [
+        "GRANT US CONFIDENCE",
+        "REST WHILE YOU HANDLE",
+        "THE LOOMING STORMS"
+      ],
+      [
+        "REST"
+      ],
+      "MIDNIGHT"
+    ],
+    [
+      81,
+      100,
+      [
+        "WE YIELD BURDENS",
+        "TRUSTING YOUR DELIVERANCE",
+        "WAIT FOR THE DAWN"
+      ],
+      [
+        "TRUSTING"
+      ],
+      "DAWN"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The restless thoughts circling your mind right now find their quiet end in this prayer.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "END"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Blessed be the LORD my strength, which teacheth my hands to war, and my fingers to fight:",
+      "kind": "phrase",
+      "words": [
+        "MY",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "My goodness, and my fortress; my high tower, and my deliverer; my shield, and he in whom I trust; who subdueth my people under me.",
+      "kind": "phrase",
+      "words": [
+        "MY",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, in the stillness of this hour, we acknowledge that our battles are won through Your grace.",
+      "kind": "phrase",
+      "words": [
+        "YOUR",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us the quiet confidence to rest while You handle the storms that currently loom over our lives.",
+      "kind": "phrase",
+      "words": [
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We yield our burdens to You, trusting in Your deliverance as we wait for the coming dawn.",
+      "kind": "phrase",
+      "words": [
+        "TRUSTING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 144:1-2"
+}

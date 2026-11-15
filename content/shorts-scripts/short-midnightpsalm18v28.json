@@ -4,88 +4,88 @@
   "psalm": 18,
   "title": [
     "LIGHT IN THE",
-    "MIDNIGHT DARKNESS"
+    "DARKNESS"
   ],
   "poster": [
-    "MIDNIGHT PRAYER",
-    "PSALM 18:28-29",
-    "GOD TURNS DARKNESS",
-    "INTO RADIANT LIGHT"
+    "MIDNIGHT WATCH",
+    "PSALM 18:28",
+    "DIVINE GUIDANCE",
+    "PRAYER FOR STRENGTH"
   ],
   "end": [
     "SUBSCRIBE",
     "The Midnight Watch — stand in prayer at midnight"
   ],
   "stock_queries": [
-    "ancient stone watchtower silhouette night starry sky quiet",
-    "single glowing oil lamp flickering in ancient dark stone altar",
-    "deep starry heavens night sky over peaceful sanctuary silhouette",
-    "dramatic night sky over high ancient fortress wall moonlight",
-    "calm mountain lake midnight starry sky light reflection",
-    "lamp lit sanctuary vigil glowing warm light midnight cathedral window"
+    "glowing oil lamp on dark table",
+    "vast starry night sky over mountains",
+    "narrow stone corridor with soft light",
+    "ancient lantern resting on cold floor",
+    "silhouette of church steeple at night",
+    "soft candle flame flickering in dark"
   ],
   "scenes": [
     {
-      "a": "rise in spirit at this midnight hour",
+      "a": "The heavy shadow hanging over your spirit tonight has not gone unnoticed by the Creator.",
       "img": "short-midnightpsalm18v28-scene-01.jpg",
-      "kicker": "PSALM 18:28-29",
-      "sub": "ARISE IN THE MIDNIGHT HOUR",
+      "kicker": "PSALM 18:28",
+      "sub": "GOD SEES YOUR HEART",
       "cam": "push_in",
       "focus": [
         0.5,
-        0.4
+        0.5
       ]
     },
     {
-      "a": "my God turns my darkness into light",
+      "a": "For thou wilt light my candle: the LORD my God will enlighten my darkness.",
       "img": "short-midnightpsalm18v28-scene-02.jpg",
-      "kicker": "PSALM 18:28-29",
-      "sub": "THE LORD LIGHTS YOUR LAMP",
+      "kicker": "THE PROMISE",
+      "sub": "HE LIGHTS THE WAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For by thee I have run through a troop; and by my God have I leaped over a wall.",
+      "img": "short-midnightpsalm18v28-scene-03.jpg",
+      "kicker": "DIVINE POWER",
+      "sub": "SURMOUNTING EVERY OBSTACLE",
       "cam": "tilt_up",
       "focus": [
         0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Lord, grant this weary soul the strength to push past the walls built by fear.",
+      "img": "short-midnightpsalm18v28-scene-04.jpg",
+      "kicker": "MIDNIGHT PETITION",
+      "sub": "STRENGTH FOR THE WEARY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
         0.5
       ]
     },
     {
-      "a": "lay every heavy burden before His heavenly throne",
-      "img": "short-midnightpsalm18v28-scene-03.jpg",
-      "kicker": "PSALM 18:28-29",
-      "sub": "LAY DOWN EVERY HEAVY BURDEN",
-      "cam": "pull_out",
-      "focus": [
-        0.5,
-        0.6
-      ]
-    },
-    {
-      "a": "His power enables you to leap over it",
-      "img": "short-midnightpsalm18v28-scene-04.jpg",
-      "kicker": "PSALM 18:28-29",
-      "sub": "LEAP OVER EVERY WALL",
+      "a": "Help them see that no barrier is too high when your spirit leads the way.",
+      "img": "short-midnightpsalm18v28-scene-05.jpg",
+      "kicker": "FAITH IN ACTION",
+      "sub": "STEPPING FORTH IN GRACE",
       "cam": "pan_right",
       "focus": [
         0.5,
-        0.5
+        0.8
       ]
     },
     {
-      "a": "step boldly into your sudden breakthrough",
-      "img": "short-midnightpsalm18v28-scene-05.jpg",
-      "kicker": "PSALM 18:28-29",
-      "sub": "STEP INTO YOUR BREAKTHROUGH",
-      "cam": "push_in",
-      "focus": [
-        0.5,
-        0.45
-      ]
-    },
-    {
-      "a": "join The Midnight Watch in nightly prayer",
+      "a": "May your peace steady their feet, turning this dark hour into a season of triumph.",
       "img": "short-midnightpsalm18v28-scene-06.jpg",
-      "kicker": "PSALM 18:28-29",
-      "sub": "STAND IN PRAYER AT MIDNIGHT",
-      "cam": "pull_out",
+      "kicker": "RESTING IN HIM",
+      "sub": "VICTORY AT HAND",
+      "cam": "push_in",
       "focus": [
         0.5,
         0.5
@@ -95,191 +95,184 @@
   "captions": [
     [
       0,
-      7,
-      "As the world sleeps, rise in spirit at this midnight hour to seek your Lord."
+      8,
+      "The heavy shadow hanging over your spirit tonight has not gone unnoticed by the Creator."
     ],
     [
-      7,
-      20,
-      "Scripture declares: \"You, Lord, keep my lamp burning; my God turns my darkness into light. With your help I can advance against a troop; with my God I can scale a wall.\""
+      9,
+      17,
+      "For thou wilt light my candle: the LORD my God will enlighten my darkness."
     ],
     [
-      20,
-      29,
-      "In this holy stillness, lay every heavy burden before His heavenly throne."
+      18,
+      26,
+      "For by thee I have run through a troop; and by my God have I leaped over a wall."
     ],
     [
-      29,
-      40,
-      "He is rekindling a divine flame within your weary heart tonight. Whatever high wall surrounds you, His power enables you to leap over it completely."
+      27,
+      35,
+      "Lord, grant this weary soul the strength to push past the walls built by fear."
     ],
     [
-      40,
-      50,
-      "No shadow can overcome the radiant light He speaks over your life. Stand firm, trust His promises, and step boldly into your sudden breakthrough."
+      36,
+      44,
+      "Help them see that no barrier is too high when your spirit leads the way."
     ],
     [
-      50,
-      58,
-      "Subscribe now to join The Midnight Watch in nightly prayer. Amen."
+      45,
+      53,
+      "May your peace steady their feet, turning this dark hour into a season of triumph."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      7,
+      8,
       [
-        "AS THE WORLD SLEEPS",
-        "RISE IN SPIRIT AT THIS",
-        "MIDNIGHT HOUR TO SEEK",
-        "YOUR LORD"
+        "THE HEAVY SHADOW",
+        "HANGING OVER",
+        "YOUR SPIRIT",
+        "IS KNOWN"
       ],
       [
-        "RISE",
-        "MIDNIGHT",
-        "SEEK"
+        "SHADOW",
+        "KNOWN"
       ],
-      "PSALM 18 : 28-29"
+      "PSALM 18:28"
     ],
     [
-      7,
-      20,
+      9,
+      17,
       [
-        "YOU LORD KEEP MY LAMP BURNING",
-        "MY GOD TURNS MY DARKNESS",
-        "INTO LIGHT WITH YOUR HELP",
-        "I CAN SCALE A WALL"
+        "FOR THOU WILT",
+        "LIGHT MY CANDLE",
+        "THE LORD",
+        "ENLIGHTENS DARKNESS"
       ],
       [
-        "LAMP",
-        "DARKNESS",
         "LIGHT",
-        "SCALE"
+        "ENLIGHTENS"
       ],
-      "PSALM 18 : 28-29"
+      "PSALM 18:28"
     ],
     [
-      20,
-      29,
+      18,
+      26,
       [
-        "IN THIS HOLY STILLNESS",
-        "LAY EVERY HEAVY BURDEN",
-        "BEFORE HIS HEAVENLY THRONE"
+        "BY THEE I",
+        "RUN THROUGH TROOPS",
+        "AND BY GOD",
+        "LEAP OVER WALLS"
       ],
       [
-        "STILLNESS",
-        "BURDEN",
-        "THRONE"
-      ],
-      "PSALM 18 : 28-29"
-    ],
-    [
-      29,
-      40,
-      [
-        "HE IS REKINDLING A FLAME",
-        "WITHIN YOUR WEARY HEART",
-        "WHATEVER WALL SURROUNDS YOU",
-        "HIS POWER ENABLES YOU TO LEAP"
-      ],
-      [
-        "REKINDLING",
-        "FLAME",
-        "POWER",
+        "RUN",
         "LEAP"
       ],
-      "PSALM 18 : 28-29"
+      "PSALM 18:29"
     ],
     [
-      40,
-      50,
+      27,
+      35,
       [
-        "NO SHADOW CAN OVERCOME",
-        "THE RADIANT LIGHT HE SPEAKS",
-        "STAND FIRM TRUST HIS PROMISES",
-        "STEP BOLDLY INTO BREAKTHROUGH"
+        "LORD GRANT STRENGTH",
+        "TO PUSH PAST",
+        "WALLS BUILT",
+        "BY FEAR"
       ],
       [
-        "RADIANT",
-        "LIGHT",
-        "TRUST",
-        "BREAKTHROUGH"
+        "STRENGTH",
+        "PUSH"
       ],
-      "PSALM 18 : 28-29"
+      "PSALM 18:29"
     ],
     [
-      50,
-      58,
+      36,
+      44,
       [
-        "SUBSCRIBE NOW TO JOIN",
-        "THE MIDNIGHT WATCH IN",
-        "NIGHTLY PRAYER AMEN"
+        "NO BARRIER IS",
+        "TOO HIGH WHEN",
+        "YOUR SPIRIT",
+        "LEADS THE WAY"
       ],
       [
-        "SUBSCRIBE",
-        "MIDNIGHT",
-        "WATCH"
+        "NO BARRIER",
+        "LEADS"
       ],
-      "PSALM 18 : 28-29"
+      "PSALM 18:29"
+    ],
+    [
+      45,
+      53,
+      [
+        "MAY YOUR PEACE",
+        "STEADY THEIR FEET",
+        "TURNING THIS",
+        "INTO TRIUMPH"
+      ],
+      [
+        "PEACE",
+        "TRIUMPH"
+      ],
+      "PSALM 18:29"
     ]
   ],
   "beats": [
     {
-      "a": "rise in spirit at this midnight hour",
+      "a": "The heavy shadow hanging over your spirit tonight has not gone unnoticed by the Creator.",
       "kind": "phrase",
       "words": [
-        "RISE",
-        "MIDNIGHT"
+        "SHADOW",
+        "KNOWN"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "my God turns my darkness into light",
+      "a": "For thou wilt light my candle: the LORD my God will enlighten my darkness.",
       "kind": "phrase",
       "words": [
-        "DARKNESS",
-        "LIGHT"
-      ],
-      "hi": 1,
-      "slot": "C"
-    },
-    {
-      "a": "lay every heavy burden before His heavenly throne",
-      "kind": "phrase",
-      "words": [
-        "BURDEN",
-        "THRONE"
+        "LIGHT",
+        "ENLIGHTENS"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "His power enables you to leap over it",
+      "a": "For by thee I have run through a troop; and by my God have I leaped over a wall.",
       "kind": "phrase",
       "words": [
-        "POWER",
+        "RUN",
         "LEAP"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "step boldly into your sudden breakthrough",
+      "a": "Lord, grant this weary soul the strength to push past the walls built by fear.",
       "kind": "phrase",
       "words": [
-        "BOLDLY",
-        "BREAKTHROUGH"
+        "STRENGTH",
+        "PUSH"
       ],
-      "hi": 1,
+      "hi": 0,
       "slot": "C"
     },
     {
-      "a": "join The Midnight Watch in nightly prayer",
+      "a": "Help them see that no barrier is too high when your spirit leads the way.",
       "kind": "phrase",
       "words": [
-        "MIDNIGHT",
-        "WATCH"
+        "NO BARRIER",
+        "LEADS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your peace steady their feet, turning this dark hour into a season of triumph.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "TRIUMPH"
       ],
       "hi": 0,
       "slot": "C"

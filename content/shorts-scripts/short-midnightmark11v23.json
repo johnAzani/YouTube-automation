@@ -1,0 +1,258 @@
+{
+  "key": "short-midnightmark11v23",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "MARK ELEVEN",
+    "THE MIDNIGHT WATCH"
+  ],
+  "poster": [
+    "STAND IN PRAYER",
+    "THE MIDNIGHT HOUR",
+    "FAITH THAT MOVES MOUNTAINS",
+    "HEAR HIS WORD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "midnight watchtower silhouette under deep starry heavens",
+    "lone prayer lamp glowing softly in a dark stone room",
+    "vast mountain range under moonlight and drifting mist",
+    "calm sea waves under a brilliant starry night sky",
+    "ancient olive tree silhouette against a luminous midnight sky",
+    "peaceful sanctuary altar with soft candlelight in the dark"
+  ],
+  "scenes": [
+    {
+      "a": "If that heavy mountain still blocks your path tonight, hear this.",
+      "img": "short-midnightmark11v23-scene-01.jpg",
+      "kicker": "MARK 11:23",
+      "sub": "STAND IN PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "For verily I say unto you, That whosoever shall say unto this mountain, Be thou removed, and be thou cast into the sea;",
+      "img": "short-midnightmark11v23-scene-02.jpg",
+      "kicker": "MARK 11:23",
+      "sub": "FAITH MOVES MOUNTAINS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "and shall not doubt in his heart, but shall believe that those things which he saith shall come to pass; he shall have whatsoever he saith.",
+      "img": "short-midnightmark11v23-scene-03.jpg",
+      "kicker": "MARK 11:23",
+      "sub": "BELIEVE WITHOUT DOUBT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Therefore I say unto you, What things soever ye desire, when ye pray, believe that ye receive them, and ye shall have them.",
+      "img": "short-midnightmark11v23-scene-04.jpg",
+      "kicker": "MARK 11:24",
+      "sub": "RECEIVE IN PRAYER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Lord, remove every doubt from our hearts in this silent hour.",
+      "img": "short-midnightmark11v23-scene-05.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "SILENT VIGIL",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "May our faith rise to meet your holy word. Amen.",
+      "img": "short-midnightmark11v23-scene-06.jpg",
+      "kicker": "THE WATCH",
+      "sub": "SUBSCRIBE FOR PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      5,
+      "If that heavy mountain still blocks your path tonight, hear this."
+    ],
+    [
+      5,
+      12,
+      "For verily I say unto you, That whosoever shall say unto this mountain, Be thou removed, and be thou cast into the sea;"
+    ],
+    [
+      12,
+      20,
+      "and shall not doubt in his heart, but shall believe that those things which he saith shall come to pass; he shall have whatsoever he saith."
+    ],
+    [
+      20,
+      27,
+      "Therefore I say unto you, What things soever ye desire, when ye pray, believe that ye receive them, and ye shall have them."
+    ],
+    [
+      27,
+      34,
+      "Lord, remove every doubt from our hearts in this silent hour."
+    ],
+    [
+      34,
+      40,
+      "May our faith rise to meet your holy word. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      5,
+      [
+        "IF THAT HEAVY MOUNTAIN",
+        "STILL BLOCKS YOUR PATH",
+        "TONIGHT HEAR THIS"
+      ],
+      "MOUNTAIN",
+      "MARK 11:23"
+    ],
+    [
+      5,
+      12,
+      [
+        "FOR VERILY I SAY UNTO YOU",
+        "BE THOU REMOVED AND CAST",
+        "INTO THE SEA"
+      ],
+      "REMOVED",
+      "MARK 11:23"
+    ],
+    [
+      12,
+      20,
+      [
+        "AND SHALL NOT DOUBT",
+        "BUT BELIEVE THOSE THINGS",
+        "SHALL COME TO PASS"
+      ],
+      "BELIEVE",
+      "MARK 11:23"
+    ],
+    [
+      20,
+      27,
+      [
+        "WHAT THINGS SOEVER YE DESIRE",
+        "WHEN YE PRAY BELIEVE",
+        "THAT YE RECEIVE THEM"
+      ],
+      "RECEIVE",
+      "MARK 11:24"
+    ],
+    [
+      27,
+      34,
+      [
+        "LORD REMOVE EVERY DOUBT",
+        "FROM OUR HEARTS",
+        "IN THIS SILENT HOUR"
+      ],
+      "DOUBT",
+      "MIDNIGHT PRAYER"
+    ],
+    [
+      34,
+      40,
+      [
+        "MAY OUR FAITH RISE",
+        "TO MEET YOUR HOLY WORD",
+        "AMEN"
+      ],
+      "FAITH",
+      "THE WATCH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If that heavy mountain still blocks your path tonight, hear this.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "MOUNTAIN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For verily I say unto you, That whosoever shall say unto this mountain, Be thou removed, and be thou cast into the sea;",
+      "kind": "phrase",
+      "words": [
+        "VERILY",
+        "REMOVED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and shall not doubt in his heart, but shall believe that those things which he saith shall come to pass; he shall have whatsoever he saith.",
+      "kind": "phrase",
+      "words": [
+        "DOUBT",
+        "BELIEVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Therefore I say unto you, What things soever ye desire, when ye pray, believe that ye receive them, and ye shall have them.",
+      "kind": "phrase",
+      "words": [
+        "DESIRE",
+        "RECEIVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, remove every doubt from our hearts in this silent hour.",
+      "kind": "phrase",
+      "words": [
+        "REMOVE",
+        "HEARTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May our faith rise to meet your holy word. Amen.",
+      "kind": "phrase",
+      "words": [
+        "FAITH",
+        "RISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Mark 11:23-24"
+}

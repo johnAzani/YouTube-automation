@@ -1,0 +1,221 @@
+{
+  "key": "short-midnightjoel2v25",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "DIVINE RESTORATION",
+    "AT MIDNIGHT"
+  ],
+  "poster": [
+    "THE MIDNIGHT",
+    "WATCH",
+    "JOEL 2:25",
+    "RESTORATION"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "deep starry night sky over mountains",
+    "glowing oil lamp on wooden table",
+    "silhouetted church steeple under moonlight",
+    "calm dark water reflecting stars",
+    "ancient stone window looking at moonlight",
+    "empty prayer chapel lit by candlelight"
+  ],
+  "scenes": [
+    {
+      "a": "If you are staring at the ceiling tonight regretting the time lost to silent failures,",
+      "img": "short-midnightjoel2v25-scene-01.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "RECLAIMING YOUR TIME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "hear the promise of God spoken over your life in this quiet, holy, dark hour.",
+      "img": "short-midnightjoel2v25-scene-02.jpg",
+      "kicker": "JOEL 2:25",
+      "sub": "HEAR THE WORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "And I will restore to you the years that the locust hath eaten, the cankerworm, and the caterpiller, and the palmerworm, my great army which I sent among you.",
+      "img": "short-midnightjoel2v25-scene-03.jpg",
+      "kicker": "THE PROMISE",
+      "sub": "DIVINE RESTORATION",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, take these wasted seasons and turn them into fruitfulness, healing every deep, hidden hurt.",
+      "img": "short-midnightjoel2v25-scene-04.jpg",
+      "kicker": "A HUMBLE PLEA",
+      "sub": "SURRENDERING TO GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "We trust Your hand to rebuild what felt permanently destroyed by the enemy of peace.",
+      "img": "short-midnightjoel2v25-scene-05.jpg",
+      "kicker": "TRUSTING GOD",
+      "sub": "REBUILDING THE FOUNDATION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May Your grace fill the gaps of my history starting now, in this quiet midnight.",
+      "img": "short-midnightjoel2v25-scene-06.jpg",
+      "kicker": "HIS GRACE",
+      "sub": "A NEW BEGINNING",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "If you are staring at the ceiling tonight regretting the time lost to silent failures,"
+    ],
+    [
+      11,
+      20,
+      "hear the promise of God spoken over your life in this quiet, holy, dark hour."
+    ],
+    [
+      21,
+      45,
+      "And I will restore to you the years that the locust hath eaten, the cankerworm, and the caterpiller, and the palmerworm, my great army which I sent among you."
+    ],
+    [
+      46,
+      62,
+      "Lord, take these wasted seasons and turn them into fruitfulness, healing every deep, hidden hurt."
+    ],
+    [
+      63,
+      78,
+      "We trust Your hand to rebuild what felt permanently destroyed by the enemy of peace."
+    ],
+    [
+      79,
+      95,
+      "May Your grace fill the gaps of my history starting now, in this quiet midnight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "REGRETTING TIME",
+        "LOST TO",
+        "SILENT FAILURES"
+      ],
+      [
+        "TIME LOST"
+      ],
+      "JOEL 2 : 25"
+    ],
+    [
+      11,
+      20,
+      [
+        "HEAR THE",
+        "PROMISE OF GOD",
+        "IN THIS HOUR"
+      ],
+      [
+        "PROMISE"
+      ],
+      "JOEL 2 : 25"
+    ],
+    [
+      21,
+      45,
+      [
+        "I WILL RESTORE",
+        "THE YEARS",
+        "THE LOCUST",
+        "HATH EATEN"
+      ],
+      [
+        "RESTORE"
+      ],
+      "JOEL 2 : 25"
+    ],
+    [
+      46,
+      62,
+      [
+        "TAKE WASTED SEASONS",
+        "TURN INTO",
+        "FRUITFULNESS"
+      ],
+      [
+        "FRUITFULNESS"
+      ],
+      "JOEL 2 : 25"
+    ],
+    [
+      63,
+      78,
+      [
+        "TRUST YOUR HAND",
+        "TO REBUILD",
+        "WHAT WAS DESTROYED"
+      ],
+      [
+        "REBUILD"
+      ],
+      "JOEL 2 : 25"
+    ],
+    [
+      79,
+      95,
+      [
+        "GRACE FILL THE GAPS",
+        "STARTING NOW",
+        "IN MIDNIGHT"
+      ],
+      [
+        "GRACE"
+      ],
+      "JOEL 2 : 25"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "And I will restore to you the years that the locust hath eaten, the cankerworm, and the caterpiller, and the palmerworm, my great army which I sent among you.",
+      "kind": "phrase",
+      "words": [
+        "RESTORE",
+        "YEARS"
+      ],
+      "hi": 2,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Joel 2:25"
+}
