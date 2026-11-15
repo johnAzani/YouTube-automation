@@ -169,6 +169,24 @@ def passage(reference: str) -> list[Verse]:
     return out
 
 
+@lru_cache(maxsize=1)
+def _whole_text() -> str:
+    return " ".join(" ".join(verse.lower().split())
+                    for book in _bible().values() for chapter in book.values() for verse in chapter)
+
+
+@lru_cache(maxsize=256)
+def says(phrase: str) -> bool:
+    """True when these words stand together somewhere in the text, whatever their capitals.
+
+    ``says("The Secret Place")`` is true: "He that dwelleth in the secret place of
+    the most High" (Psalm 91:1). A channel's name that is also the Bible's own
+    words cannot be forbidden to the other channels wholesale.
+    """
+    wanted = " ".join(str(phrase or "").lower().split())
+    return bool(wanted) and wanted in _whole_text()
+
+
 def exists(reference: str) -> bool:
     try:
         return bool(passage(reference))

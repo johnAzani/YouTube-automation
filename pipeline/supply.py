@@ -47,6 +47,9 @@ MAX_EXPANSIONS_WHEN_EMPTY = 5
 MAX_MODEL_CALLS_PER_RUN = 10
 MAX_AUTHORS_PER_RUN = 2
 MAX_AUTHORS_WHEN_EMPTY = 4
+#: A refused passage costs a whole script's worth of free-tier calls, so a run moves
+#: past one of them and no more.
+MAX_PASSAGES_SKIPPED_PER_RUN = 1
 EXPANSION_TARGET_WORDS = 900
 
 # How many long-forms a day the supply is sized for. Since 14 November 2026 a
@@ -372,6 +375,7 @@ def ensure_supply(brain, limit: int = MAX_EXPANSIONS_PER_RUN,
         else max_authors
     )
     authored: list[dict[str, Any]] = []
+    moved_on = 0
     for _ in range(max(0, author_budget)):
         if report.publishable_after >= min_publishable or brain is None:
             break
@@ -379,6 +383,14 @@ def ensure_supply(brain, limit: int = MAX_EXPANSIONS_PER_RUN,
         authored.append(row)
         if not row.get("ok"):
             report.blocked.append(f"authoring: {row.get('reason')}")
+            # One passage the gates will not take must not starve the channel. The
+            # Covenant Shield's brain tried Psalm 91:1-2 every day, was refused every
+            # day, and never reached the 22 passages behind it. When the models
+            # answered and the answer was refused, try the next passage, once.
+            refused = getattr(brain, "passage_was_refused", None)
+            if moved_on < MAX_PASSAGES_SKIPPED_PER_RUN and callable(refused) and refused() is True:
+                moved_on += 1
+                continue
             break
         report.publishable_after = len(publishable_longform(queue_dir, channel_id=channel))
 

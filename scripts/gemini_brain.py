@@ -290,6 +290,14 @@ def cmd_ensure_supply(brain: GeminiBrain, max_expansions: int, target: int,
     print(f"[brain] supply: {report.summary()}")
     for reason in report.blocked:
         print(f"[brain] blocked: {reason}")
+    # Said where it can be read. The job ends green while one older script is still
+    # waiting, so for days the only record of "every script for this passage is
+    # refused" was a log line nobody opens.
+    where = report.channel or "channel"
+    for reason in report.blocked[:3]:
+        line = " ".join(str(reason).split())
+        print(f"::warning title=Long-form authoring blocked ({where})::"
+              f"{report.publishable_after} of {min_publishable} wanted are ready. {line[:600]}")
 
     if report.ok:
         return 0

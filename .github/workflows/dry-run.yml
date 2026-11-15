@@ -34,12 +34,15 @@ env:
 
 jobs:
   # ---------------------------------------------------------------------------
-  # 1. Hermetic checks — must be green. No network, no secrets, ~30s.
+  # 1. Hermetic checks — must be green. No network, no secrets.
+  # The suite takes 15 to 16 minutes on a normal runner (1,900 tests). At a
+  # 20-minute limit a slow runner was cancelled mid-suite on 15 November 2026
+  # while the same commit passed on another runner, so the limit has headroom.
   # ---------------------------------------------------------------------------
   checks:
     name: Unit tests + doctor
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
 

@@ -1016,7 +1016,7 @@ goes before you until evening falls and brings your labor to peaceful completion
 
     def test_retrofit_published_metadata_strips_audit_json_and_links_published_shorts(self):
         """Live retrofit strips receipt audit JSON and links paired Shorts directly to YouTube watch URLs."""
-        from pipeline.channel_capabilities import brand_for
+        from pipeline.channel_capabilities import brand_for, off_brand_phrase
         from scripts.retrofit_published_metadata import collect_published_faith_targets
 
         targets = collect_published_faith_targets(only_pending=False)
@@ -1042,12 +1042,13 @@ goes before you until evening falls and brings your labor to peaceful completion
                 self.assertNotIn("selar.com", desc.lower())
                 self.assertNotIn("selar.com", t["localizations"]["es"]["description"].lower())
                 self.assertNotIn("selar.com", t["localizations"]["pt"]["description"].lower())
-                for bad in brand_for(cid).forbidden_phrases:
-                    self.assertNotIn(bad.lower(), desc.lower())
+                # The shared rule: the Bible's own words ("the secret place of the
+                # most High", Psalm 91:1) are not another channel's name.
+                self.assertIsNone(off_brand_phrase(desc, cid))
 
     def test_pastoral_pinned_comments_are_daypart_clean_across_all_published_and_queued_docs(self):
         """Long-form pinned comments on prayer2 & prayer3 never emit bedtime verses or sleep themes."""
-        from pipeline.channel_capabilities import brand_for
+        from pipeline.channel_capabilities import brand_for, off_brand_phrase
         from pipeline.metadata import is_faith_doc
         from pipeline.pinned_comments import generate_pastoral_pinned_comment
         from pipeline.script_doc import parse_script
@@ -1070,8 +1071,8 @@ goes before you until evening falls and brings your labor to peaceful completion
             if doc.channel in {"prayer2", "prayer3"}:
                 for night_word in ("sleep", "slumber", "tonight", "liest down"):
                     self.assertNotIn(night_word, low, f"{p.name} leaked {night_word!r} in comment")
-            for bad in brand_for(doc.channel).forbidden_phrases:
-                self.assertNotIn(bad.lower(), low, f"{p.name} leaked {bad!r} in comment")
+            self.assertIsNone(off_brand_phrase(comment, doc.channel),
+                              f"{p.name} leaked another channel's name in comment")
         self.assertGreaterEqual(checked, 20)
 
     def test_watchdog_and_monitor_alert_when_one_channel_stalls_behind_active_sibling(self):

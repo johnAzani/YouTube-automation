@@ -33,6 +33,7 @@ tell you if it does.
 """
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Mapping
@@ -2859,6 +2860,73 @@ def capabilities_for(channel_id: str | None = None) -> ChannelCapabilities:
 
 def brand_for(channel_id: str | None = None) -> Brand:
     return capabilities_for(channel_id).brand
+
+
+_ARTICLE = re.compile(r"^(?:the|a|an)\s+", re.I)
+
+
+def _as_a_name(phrase: str) -> tuple[str, str]:
+    """``"the secret place"`` -> ``("Secret Place", "SECRET PLACE")``: how a name is written."""
+    core = _ARTICLE.sub("", " ".join(phrase.split()))
+    return " ".join(word[:1].upper() + word[1:].lower() for word in core.split()), core.upper()
+
+
+def off_brand_phrase(text: str, channel_id: str | None = None) -> str | None:
+    """The first of the other channels' brand strings that `text` carries, or ``None``.
+
+    Capitals are ignored, with one exception: words the Bible itself uses. "He that
+    dwelleth in the secret place of the most High" (Psalm 91:1) is scripture, not
+    The Secret Place's name, and a channel that prays that psalm has to be able to
+    say it. For such a phrase only the name counts: written with capitals
+    ("the Secret Place", "THE SECRET PLACE"), which the verse never is.
+
+    Why this is a rule and not a list of excused jobs: until 15 November 2026 the
+    check lower-cased everything, so every script The Covenant Shield's brain wrote
+    for Psalm 91:1-2 was refused as "another channel's branding". That passage was
+    next on its roadmap, the brain always takes the next one, and the channel
+    authored nothing for days until its queue was empty.
+    """
+    text = str(text or "")
+    lowered = text.lower()
+    for phrase in brand_for(channel_id).forbidden_phrases:
+        if phrase.lower() not in lowered:
+            continue
+        from pipeline import scripture_text
+
+        if not scripture_text.says(phrase):
+            return phrase
+        if any(form in text for form in _as_a_name(phrase)):
+            return phrase
+    return None
+
+
+def scripture_name_note(channel_id: str | None, reference: str) -> str:
+    """What to tell the writer when the passage holds words that are another channel's name.
+
+    Returns ``""`` for every other passage, so no other prompt changes.
+    """
+    from pipeline import scripture_text
+
+    try:
+        words = " ".join(verse.text for verse in scripture_text.passage(str(reference))).lower()
+    except scripture_text.UnknownReference:
+        return ""
+    seen: list[str] = []
+    for phrase in brand_for(channel_id).forbidden_phrases:
+        plain = " ".join(phrase.lower().split())
+        if plain in words and plain not in seen:
+            seen.append(plain)
+    if not seen:
+        return ""
+    quoted = " and ".join(f'"{plain}"' for plain in seen)
+    return (
+        f"\nTHIS PASSAGE CONTAINS THE WORDS {quoted}, which are also the name of another "
+        "channel.\n"
+        "- Inside the verse and the prayer, write them exactly as the verse does, in small "
+        "letters.\n"
+        "- Never write them with capital letters, and keep them out of the title, the slug, "
+        "the thumbnail text, the tags and the scene headings. A script that does is refused.\n"
+    )
 
 
 def known_channels() -> tuple[str, ...]:
