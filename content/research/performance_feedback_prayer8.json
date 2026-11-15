@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-14T09:03:40.837100+00:00",
-  "as_of": "2026-11-14",
+  "generated_at": "2026-11-15T05:35:24.380670+00:00",
+  "as_of": "2026-11-15",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 6,
+  "total_longform_videos": 7,
   "input_diagnostics": {
-    "snapshot_video_ids": 9,
-    "receipt_video_ids": 9,
-    "matched_video_ids": 9,
-    "longform_below_view_threshold": 6,
+    "snapshot_video_ids": 13,
+    "receipt_video_ids": 13,
+    "matched_video_ids": 13,
+    "longform_below_view_threshold": 7,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 5,
+    "longform_too_young_or_undated": 6,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
@@ -25,8 +25,16 @@
       "top_scripture": ""
     },
     {
+      "theme": "midday_strength_endurance",
+      "videos": 1,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": ""
+    },
+    {
       "theme": "protection",
-      "videos": 3,
+      "videos": 4,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -39,19 +47,11 @@
       "avg_score": 0.0,
       "avg_engagement": 0.0,
       "top_scripture": ""
-    },
-    {
-      "theme": "midday_strength_endurance",
-      "videos": 1,
-      "measured_videos": 0,
-      "avg_score": 0.0,
-      "avg_engagement": 0.0,
-      "top_scripture": ""
     }
   ],
   "shorts": {
     "measured_shorts": 2,
-    "total_shorts": 3,
+    "total_shorts": 6,
     "sufficient_data": false,
     "avg_views": 3.5,
     "median_views": 4,
