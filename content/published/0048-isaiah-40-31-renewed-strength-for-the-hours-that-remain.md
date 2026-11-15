@@ -1,6 +1,6 @@
 ---
 id: 0048
-title: Isaiah 40:31 Midday Prayer | The Midday Watch
+title: "When Your Strength Fails You: Isaiah 40:31 | The Midday Watch"
 slug: isaiah-40-31-renewed-strength-for-the-hours-that-remain
 status: published
 channel: prayer3
@@ -96,10 +96,13 @@ originality_note: Original exegetical exposition of Isaiah 40:31 integrated with
 published_on: "2026-11-08"
 published_at: "2026-11-08T14:53:44Z"
 youtube_video_id: "b9CpOl0tJSE"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Isaiah 40:31 Midday Prayer | The Midday Watch"
+retitled_at: "2026-11-15"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The Noonday Hook & The Pause
