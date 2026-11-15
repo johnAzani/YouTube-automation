@@ -37,8 +37,8 @@
       "workflow": "automation-health.yml"
     }
   ],
-  "generated_at": "2026-11-14T23:18:19.450504+00:00",
-  "last_run_at": "2026-11-14T23:17:33+00:00",
+  "generated_at": "2026-11-15T02:11:18.408726+00:00",
+  "last_run_at": "2026-11-15T02:10:28+00:00",
   "on_time": [
     {
       "late_minutes": 42,
@@ -62,17 +62,17 @@
       "workflow": "growth-autopilot.yml"
     },
     {
-      "late_minutes": 72,
+      "late_minutes": 107,
       "name": "Automation monitor",
-      "ran_at": "2026-11-14T22:35:27+00:00",
-      "slot": "2026-11-14T21:23:00+00:00",
+      "ran_at": "2026-11-15T02:10:28+00:00",
+      "slot": "2026-11-15T00:23:00+00:00",
       "workflow": "monitor.yml"
     },
     {
-      "late_minutes": 51,
+      "late_minutes": 83,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-14T22:38:53+00:00",
-      "slot": "2026-11-14T21:47:00+00:00",
+      "ran_at": "2026-11-15T02:10:28+00:00",
+      "slot": "2026-11-15T00:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
