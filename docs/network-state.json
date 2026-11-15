@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T11:29:55Z",
+  "generated_at": "2026-11-15T11:35:13Z",
   "monitor_generated_at": "2026-11-15T06:50:48.927372+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 270,
+    "published_total": 271,
     "published_longform": 114,
-    "published_shorts": 156,
-    "public_total": 268,
+    "published_shorts": 157,
+    "public_total": 269,
     "queued_longform": 65,
-    "queued_shorts": 98,
+    "queued_shorts": 97,
     "automations_ok": 12,
     "automations_total": 12,
     "network_healthy": true
@@ -373,23 +373,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 20,
+        "published_total": 21,
         "published_longform": 9,
-        "published_shorts": 11,
+        "published_shorts": 12,
         "thumbnail_pending": 7,
-        "public_total": 20,
+        "public_total": 21,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-HEALINGMARK5V34",
-        "title": "Pray This Mark 5:34 Healing Prayer for Peace & Strength | Thee Whole #Shorts",
+        "id": "SHORT-HEALING2CORINTHIANS1V3",
+        "title": "Pray This 2 Corinthians 1:3-4 Healing Prayer for Peace & Strength | The Weary Heart #Shorts",
         "format": "short",
-        "youtube_video_id": "EHGkvO13US4",
-        "watch_url": "https://www.youtube.com/shorts/EHGkvO13US4",
+        "youtube_video_id": "mC5kjQChqr0",
+        "watch_url": "https://www.youtube.com/shorts/mC5kjQChqr0",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T07:02:20Z"
+        "published_at": "2026-11-15T11:34:15Z"
       },
       "next_queued_longform": {
         "id": "0409",
@@ -398,8 +398,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healing2corinthians1v3",
-        "scripture": "2 Corinthians 1:3-4",
+        "short": "short-healingproverbs17v22",
+        "scripture": "Proverbs 17:22",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALING2CORINTHIANS1V3",
+      "slug": "short-healing2corinthians1v3-restoration-prayer",
+      "file": "short-healing2corinthians1v3-restoration-prayer.md",
+      "title": "Pray This 2 Corinthians 1:3-4 Healing Prayer for Peace & Strength | The Weary Heart #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T11:34:15Z",
+      "youtube_video_id": "mC5kjQChqr0",
+      "watch_url": "https://www.youtube.com/shorts/mC5kjQChqr0",
+      "youtu_be_url": "https://youtu.be/mC5kjQChqr0",
+      "shorts_url": "https://www.youtube.com/shorts/mC5kjQChqr0",
+      "studio_url": "https://studio.youtube.com/video/mC5kjQChqr0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/mC5kjQChqr0/hqdefault.jpg",
+      "thumb_text": "FINDING REST \u00b7 IN HIS MERCY",
+      "thumbnail_pending": false,
+      "duration_label": "44s",
+      "words": 611
+    },
     {
       "id": "SHORT-MATTHEW28V20",
       "slug": "short-matthew28v20-pre-sleep-prayer",
@@ -8074,17 +8098,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-healing2corinthians1v3",
-        "file": "0000-short-healing2corinthians1v3.yml",
-        "companion_longform_id": "",
-        "scripture": "2 Corinthians 1:3-4",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingproverbs17v22",
