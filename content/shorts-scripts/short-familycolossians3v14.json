@@ -1,0 +1,258 @@
+{
+  "key": "short-familycolossians3v14",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "CLOTH YOUR HOME",
+    "IN HIS LOVE"
+  ],
+  "poster": [
+    "A CALM EVENING",
+    "IN YOUR HOME",
+    "COLOSSIANS THREE",
+    "THE FAMILY ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm wooden table with open Bible and glowing candle",
+    "quiet olive branch on rustic wooden surface with warm lamp light",
+    "peaceful countryside home illuminated by warm evening window light",
+    "soft morning sunlight through window on a quiet family dining table",
+    "warm hearth fire glow in a calm and peaceful living room",
+    "serene evening prayer atmosphere with soft warm ambient lighting"
+  ],
+  "scenes": [
+    {
+      "a": "If tension at the dinner table still lingers in your chest, pause with us now.",
+      "img": "short-familycolossians3v14-scene-01.jpg",
+      "kicker": "COLOSSIANS 3:14",
+      "sub": "COVER YOUR HOME IN PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord, where impatience took root today, we ask You to soften every heart under this roof.",
+      "img": "short-familycolossians3v14-scene-02.jpg",
+      "kicker": "THE FAMILY ALTAR",
+      "sub": "SEEKING HIS PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Your Word commands us: And above all these things put on charity, which is the bond of perfectness.",
+      "img": "short-familycolossians3v14-scene-03.jpg",
+      "kicker": "HOLY SCRIPTURE",
+      "sub": "THE BOND OF LOVE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Wrap every family member in that perfect love, binding us together through every disagreement.",
+      "img": "short-familycolossians3v14-scene-04.jpg",
+      "kicker": "HIS GRACE",
+      "sub": "WALKING IN UNITY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "And let the peace of God rule in your hearts, to the which also ye are called in one body; and be ye thankful.",
+      "img": "short-familycolossians3v14-scene-05.jpg",
+      "kicker": "HIS PROMISE",
+      "sub": "PEACE IN YOUR HOUSE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Father, let that quiet gratitude overflow in our household tonight.",
+      "img": "short-familycolossians3v14-scene-06.jpg",
+      "kicker": "AMEN",
+      "sub": "SUBSCRIBE FOR MORE PRAYERS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "If tension at the dinner table still lingers in your chest, pause with us now."
+    ],
+    [
+      12,
+      25,
+      "Lord, where impatience took root today, we ask You to soften every heart under this roof."
+    ],
+    [
+      25,
+      40,
+      "Your Word commands us: And above all these things put on charity, which is the bond of perfectness."
+    ],
+    [
+      40,
+      54,
+      "Wrap every family member in that perfect love, binding us together through every disagreement."
+    ],
+    [
+      54,
+      68,
+      "And let the peace of God rule in your hearts, to the which also ye are called in one body; and be ye thankful."
+    ],
+    [
+      68,
+      80,
+      "Father, let that quiet gratitude overflow in our household tonight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "IF TENSION LINGERS",
+        "IN YOUR CHEST",
+        "PAUSE WITH US"
+      ],
+      "TENSION",
+      "COLOSSIANS 3 : 14"
+    ],
+    [
+      12,
+      25,
+      [
+        "LORD SOFTEN",
+        "EVERY HEART",
+        "UNDER THIS ROOF"
+      ],
+      "SOFTEN",
+      "PRAYER FOR HOME"
+    ],
+    [
+      25,
+      40,
+      [
+        "ABOVE ALL THINGS",
+        "PUT ON CHARITY",
+        "BOND OF PERFECTNESS"
+      ],
+      "CHARITY",
+      "COLOSSIANS 3 : 14"
+    ],
+    [
+      40,
+      54,
+      [
+        "WRAP EVERY MEMBER",
+        "IN PERFECT LOVE",
+        "BINDING US TOGETHER"
+      ],
+      "LOVE",
+      "FAMILY UNITY"
+    ],
+    [
+      54,
+      68,
+      [
+        "LET THE PEACE OF GOD",
+        "RULE IN YOUR HEARTS",
+        "AND BE YE THANKFUL"
+      ],
+      "PEACE",
+      "COLOSSIANS 3 : 15"
+    ],
+    [
+      68,
+      80,
+      [
+        "LET GRATITUDE",
+        "OVERFLOW IN OUR",
+        "HOUSEHOLD TONIGHT"
+      ],
+      "GRATITUDE",
+      "THE FAMILY ALTAR"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If tension at the dinner table still lingers in your chest, pause with us now.",
+      "kind": "phrase",
+      "words": [
+        "TENSION",
+        "PAUSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, where impatience took root today, we ask You to soften every heart under this roof.",
+      "kind": "phrase",
+      "words": [
+        "SOFTEN",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your Word commands us: And above all these things put on charity, which is the bond of perfectness.",
+      "kind": "phrase",
+      "words": [
+        "CHARITY",
+        "BOND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Wrap every family member in that perfect love, binding us together through every disagreement.",
+      "kind": "phrase",
+      "words": [
+        "LOVE",
+        "TOGETHER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And let the peace of God rule in your hearts, to the which also ye are called in one body; and be ye thankful.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "THANKFUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, let that quiet gratitude overflow in our household tonight.",
+      "kind": "phrase",
+      "words": [
+        "GRATITUDE",
+        "HOUSEHOLD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Colossians 3:14-15"
+}

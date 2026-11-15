@@ -3,91 +3,91 @@
   "channel": "prayer5",
   "psalm": 112,
   "title": [
-    "A PRAYER FOR",
-    "YOUR HOUSEHOLD"
+    "A PRAYER FOR YOUR",
+    "CHILDREN & HOME"
   ],
   "poster": [
-    "GOD'S PROMISE",
-    "FOR YOUR",
-    "FAITHFUL HOME",
-    "PSALM 112:1-3"
+    "BLESSINGS UPON",
+    "YOUR HOUSEHOLD",
+    "PSALM 112:1-3",
+    "THE FAMILY ALTAR"
   ],
   "end": [
     "SUBSCRIBE",
     "The Family Altar — cover your home in prayer"
   ],
   "stock_queries": [
-    "warm lamp light on open bible",
-    "olive branches on wooden table",
-    "peaceful countryside cottage window",
-    "golden hour light on dining table",
-    "soft candlelight in quiet room",
-    "morning light through sheer curtains"
+    "warm lamp lit room doorway opening into hallway night peaceful home",
+    "open holy bible on warm wooden table with glowing lamp",
+    "olive branches on wooden table beside open scripture calm morning light",
+    "cozy living room with warm fireplace glow and open bible",
+    "peaceful countryside cottage house at dusk with warm glowing windows",
+    "soft warm candle light on old open bible on rustic table"
   ],
   "scenes": [
     {
-      "a": "If you are currently feeling overwhelmed by the financial weight of your family’s future, stay.",
+      "a": "If you are worrying about your children's future while standing in their quiet doorway, listen.",
       "img": "short-familypsalm112v1-scene-01.jpg",
       "kicker": "PSALM 112:1",
-      "sub": "A WORD FOR YOUR WORRY",
+      "sub": "A PRAYER FOR YOUR HOME",
       "cam": "push_in",
       "focus": [
         0.5,
-        0.5
+        0.4
       ]
     },
     {
-      "a": "Praise the Lord. Blessed are those who fear the Lord, who find great delight in his commands.",
+      "a": "Scripture says, Praise ye the LORD. Blessed is the man that feareth the LORD, that delighteth greatly in his commandments.",
       "img": "short-familypsalm112v1-scene-02.jpg",
       "kicker": "PSALM 112:1",
-      "sub": "FINDING DELIGHT IN TRUTH",
-      "cam": "pan_left",
-      "focus": [
-        0.3,
-        0.7
-      ]
-    },
-    {
-      "a": "Their children will be mighty in the land; the generation of the upright will be blessed.",
-      "img": "short-familypsalm112v1-scene-03.jpg",
-      "kicker": "PSALM 112:2",
-      "sub": "A PROMISE FOR YOUR CHILDREN",
-      "cam": "tilt_up",
-      "focus": [
-        0.5,
-        0.8
-      ]
-    },
-    {
-      "a": "Wealth and riches are in their houses, and their righteousness endures forever.",
-      "img": "short-familypsalm112v1-scene-04.jpg",
-      "kicker": "PSALM 112:3",
-      "sub": "ETERNAL RIGHTEOUSNESS",
-      "cam": "push_in",
-      "focus": [
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "a": "Heavenly Father, we bring our home before You, asking that our hearts remain anchored in Your Word.",
-      "img": "short-familypsalm112v1-scene-05.jpg",
-      "kicker": "HEART PRAYER",
-      "sub": "ANCHORED IN HIS WORD",
+      "sub": "DELIGHT IN HIS WORD",
       "cam": "pull_out",
       "focus": [
         0.5,
-        0.2
+        0.5
       ]
     },
     {
-      "a": "Grant us the wisdom to walk in Your ways, that our legacy might reflect Your goodness always.",
-      "img": "short-familypsalm112v1-scene-06.jpg",
-      "kicker": "FINAL PETITION",
-      "sub": "LEAVING A GODLY LEGACY",
+      "a": "His seed shall be mighty upon earth: the generation of the upright shall be blessed.",
+      "img": "short-familypsalm112v1-scene-03.jpg",
+      "kicker": "PSALM 112:2",
+      "sub": "MIGHTY GENERATIONS",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Wealth and riches shall be in his house: and his righteousness endureth for ever.",
+      "img": "short-familypsalm112v1-scene-04.jpg",
+      "kicker": "PSALM 112:3",
+      "sub": "ENDURING RIGHTEOUSNESS",
       "cam": "pan_right",
       "focus": [
-        0.7,
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, anchor our household in your fear and grace. Make our children strong and faithful on this earth.",
+      "img": "short-familypsalm112v1-scene-05.jpg",
+      "kicker": "FAMILY ALTAR",
+      "sub": "ANCHOR YOUR HOUSEHOLD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Fill this home with your enduring peace and righteousness tonight. Subscribe to join our family altar.",
+      "img": "short-familypsalm112v1-scene-06.jpg",
+      "kicker": "FAMILY ALTAR",
+      "sub": "COVER YOUR HOME IN PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
         0.5
       ]
     }
@@ -95,178 +95,184 @@
   "captions": [
     [
       0,
-      8,
-      "If you are currently feeling overwhelmed by the financial weight of your family’s future, stay."
+      9,
+      "If you are worrying about your children's future while standing in their quiet doorway, listen."
     ],
     [
-      8,
-      16,
-      "Praise the Lord. Blessed are those who fear the Lord, who find great delight in his commands."
+      9,
+      19,
+      "Scripture says, Praise ye the LORD. Blessed is the man that feareth the LORD, that delighteth greatly in his commandments."
     ],
     [
-      16,
-      24,
-      "Their children will be mighty in the land; the generation of the upright will be blessed."
+      19,
+      28,
+      "His seed shall be mighty upon earth: the generation of the upright shall be blessed."
     ],
     [
-      24,
-      32,
-      "Wealth and riches are in their houses, and their righteousness endures forever."
+      28,
+      37,
+      "Wealth and riches shall be in his house: and his righteousness endureth for ever."
     ],
     [
-      32,
-      40,
-      "Heavenly Father, we bring our home before You, asking that our hearts remain anchored in Your Word."
+      37,
+      47,
+      "Father, anchor our household in your fear and grace. Make our children strong and faithful on this earth."
     ],
     [
-      40,
-      48,
-      "Grant us the wisdom to walk in Your ways, that our legacy might reflect Your goodness always."
+      47,
+      56,
+      "Fill this home with your enduring peace and righteousness tonight. Subscribe to join our family altar."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
-      8,
+      9,
       [
-        "FEELING OVERWHELMED BY",
-        "FINANCIAL WEIGHT OF",
-        "YOUR FAMILY'S FUTURE"
+        "WORRYING ABOUT YOUR",
+        "CHILDREN'S FUTURE",
+        "STAND IN HIS PEACE"
       ],
       [
-        "OVERWHELMED",
-        "FINANCIAL"
+        "CHILDREN'S",
+        "FUTURE"
       ],
-      "PSALM 112:1"
+      "PSALM 112 : 1"
     ],
     [
-      8,
-      16,
+      9,
+      19,
       [
-        "BLESSED ARE THOSE",
-        "WHO FEAR THE LORD",
-        "FIND GREAT DELIGHT"
+        "BLESSED IS THE MAN",
+        "THAT FEARETH THE LORD",
+        "DELIGHTING IN HIS WORD"
       ],
       [
-        "BLESSED",
-        "DELIGHT"
+        "FEARETH",
+        "THE",
+        "LORD"
       ],
-      "PSALM 112:1"
+      "PSALM 112 : 1"
     ],
     [
-      16,
-      24,
+      19,
+      28,
       [
-        "CHILDREN MIGHTY IN LAND",
-        "GENERATION OF THE",
-        "UPRIGHT WILL BE BLESSED"
+        "HIS SEED SHALL BE",
+        "MIGHTY UPON EARTH",
+        "GENERATION BLESSED"
       ],
       [
         "MIGHTY",
-        "BLESSED"
+        "UPON",
+        "EARTH"
       ],
-      "PSALM 112:2"
+      "PSALM 112 : 2"
     ],
     [
-      24,
-      32,
+      28,
+      37,
       [
         "WEALTH AND RICHES",
-        "IN THEIR HOUSES",
-        "RIGHTEOUSNESS ENDURES FOREVER"
+        "IN HIS HOUSE",
+        "RIGHTEOUSNESS ENDURETH"
       ],
       [
-        "WEALTH",
-        "RIGHTEOUSNESS"
+        "RIGHTEOUSNESS",
+        "ENDURETH"
       ],
-      "PSALM 112:3"
+      "PSALM 112 : 3"
     ],
     [
-      32,
-      40,
+      37,
+      47,
       [
-        "HEAVENLY FATHER WE",
-        "BRING OUR HOME BEFORE",
-        "YOU ANCHORED IN WORD"
+        "ANCHOR OUR HOUSEHOLD",
+        "IN FEAR AND GRACE",
+        "STRONG AND FAITHFUL"
       ],
       [
-        "FATHER",
-        "ANCHORED"
+        "STRONG",
+        "AND",
+        "FAITHFUL"
       ],
-      "PSALM 112:1"
+      "PSALM 112 : 1-3"
     ],
     [
-      40,
-      48,
+      47,
+      56,
       [
-        "GRANT US THE WISDOM",
-        "TO WALK YOUR WAYS",
-        "LEGACY REFLECTS GOODNESS"
+        "FILL THIS HOME WITH",
+        "ENDURING PEACE",
+        "COVER YOUR HOME"
       ],
       [
-        "WISDOM",
-        "GOODNESS"
+        "ENDURING",
+        "PEACE"
       ],
-      "PSALM 112:3"
+      "PSALM 112 : 1-3"
     ]
   ],
   "beats": [
     {
-      "a": "If you are currently feeling overwhelmed by the financial weight of your family’s future, stay.",
+      "a": "If you are worrying about your children's future while standing in their quiet doorway, listen.",
       "kind": "phrase",
       "words": [
-        "OVERWHELMED",
-        "FINANCIAL"
+        "CHILDREN'S",
+        "FUTURE"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Praise the Lord. Blessed are those who fear the Lord, who find great delight in his commands.",
+      "a": "Scripture says, Praise ye the LORD. Blessed is the man that feareth the LORD, that delighteth greatly in his commandments.",
       "kind": "phrase",
       "words": [
-        "BLESSED",
-        "DELIGHT"
+        "FEARETH",
+        "THE",
+        "LORD"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Their children will be mighty in the land; the generation of the upright will be blessed.",
+      "a": "His seed shall be mighty upon earth: the generation of the upright shall be blessed.",
       "kind": "phrase",
       "words": [
         "MIGHTY",
-        "BLESSED"
+        "UPON",
+        "EARTH"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Wealth and riches are in their houses, and their righteousness endures forever.",
+      "a": "Wealth and riches shall be in his house: and his righteousness endureth for ever.",
       "kind": "phrase",
       "words": [
-        "WEALTH",
-        "RIGHTEOUSNESS"
+        "RIGHTEOUSNESS",
+        "ENDURETH"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Heavenly Father, we bring our home before You, asking that our hearts remain anchored in Your Word.",
+      "a": "Father, anchor our household in your fear and grace. Make our children strong and faithful on this earth.",
       "kind": "phrase",
       "words": [
-        "FATHER",
-        "ANCHORED"
+        "FEAR",
+        "AND",
+        "GRACE"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Grant us the wisdom to walk in Your ways, that our legacy might reflect Your goodness always.",
+      "a": "Fill this home with your enduring peace and righteousness tonight. Subscribe to join our family altar.",
       "kind": "phrase",
       "words": [
-        "WISDOM",
-        "GOODNESS"
+        "FAMILY",
+        "ALTAR"
       ],
       "hi": 0,
       "slot": "C"

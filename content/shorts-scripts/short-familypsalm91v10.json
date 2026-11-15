@@ -1,0 +1,270 @@
+{
+  "key": "short-familypsalm91v10",
+  "channel": "prayer5",
+  "psalm": 91,
+  "title": [
+    "A PRAYER FOR",
+    "YOUR HOME"
+  ],
+  "poster": [
+    "PROTECTION",
+    "FOR",
+    "YOUR",
+    "DWELLING"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit table with open bible",
+    "peaceful countryside home dusk",
+    "soft glow candles on wooden table",
+    "golden light hitting window sill",
+    "quiet peaceful living room sunset",
+    "olive branches on a table"
+  ],
+  "scenes": [
+    {
+      "a": "If worry about what might enter your house is keeping you awake, listen to this.",
+      "img": "short-familypsalm91v10-scene-01.jpg",
+      "kicker": "PSALM 91:10",
+      "sub": "A PROMISE FOR YOUR HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "There shall no evil befall thee, neither shall any plague come nigh thy dwelling.",
+      "img": "short-familypsalm91v10-scene-02.jpg",
+      "kicker": "PSALM 91:10",
+      "sub": "GOD'S WORD OVER YOUR FAMILY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we anchor our hearts in this truth today, believing that Your presence is our shield.",
+      "img": "short-familypsalm91v10-scene-03.jpg",
+      "kicker": "A PRAYER OF FAITH",
+      "sub": "TRUSTING IN HIS PRESENCE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Keep our thresholds safe from harm and let Your peace rest upon every room we inhabit.",
+      "img": "short-familypsalm91v10-scene-04.jpg",
+      "kicker": "SEEKING HIS PROTECTION",
+      "sub": "SAFE UNDER HIS WINGS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We entrust our children, our sleep, and our safety entirely into Your capable and loving hands.",
+      "img": "short-familypsalm91v10-scene-05.jpg",
+      "kicker": "SURRENDER",
+      "sub": "HE CARES FOR OUR HOME",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In the quiet of this moment, we choose to rest, knowing You are watching over us.",
+      "img": "short-familypsalm91v10-scene-06.jpg",
+      "kicker": "REST IN HIM",
+      "sub": "FAITH OVER FEAR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If worry about what might enter your house is keeping you awake, listen to this."
+    ],
+    [
+      8,
+      18,
+      "There shall no evil befall thee, neither shall any plague come nigh thy dwelling."
+    ],
+    [
+      18,
+      28,
+      "Lord, we anchor our hearts in this truth today, believing that Your presence is our shield."
+    ],
+    [
+      28,
+      38,
+      "Keep our thresholds safe from harm and let Your peace rest upon every room we inhabit."
+    ],
+    [
+      38,
+      48,
+      "We entrust our children, our sleep, and our safety entirely into Your capable and loving hands."
+    ],
+    [
+      48,
+      55,
+      "In the quiet of this moment, we choose to rest, knowing You are watching over us."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF WORRY ABOUT",
+        "WHAT ENTERS YOUR HOME",
+        "IS KEEPING YOU AWAKE",
+        "LISTEN TO THIS"
+      ],
+      [
+        "KEEPING YOU AWAKE"
+      ],
+      "PSALM 91 : 10"
+    ],
+    [
+      8,
+      18,
+      [
+        "THERE SHALL NO EVIL",
+        "BEFALL THEE",
+        "NEITHER SHALL ANY PLAGUE",
+        "COME NIGH THY DWELLING"
+      ],
+      [
+        "NO EVIL BEFALL THEE"
+      ],
+      "PSALM 91 : 10"
+    ],
+    [
+      18,
+      28,
+      [
+        "LORD WE ANCHOR",
+        "OUR HEARTS IN TRUTH",
+        "BELIEVING THAT",
+        "YOUR PRESENCE IS SHIELD"
+      ],
+      [
+        "YOUR PRESENCE IS SHIELD"
+      ],
+      "PSALM 91 : 10"
+    ],
+    [
+      28,
+      38,
+      [
+        "KEEP THRESHOLDS SAFE",
+        "FROM HARM AND",
+        "LET YOUR PEACE",
+        "REST UPON EVERY ROOM"
+      ],
+      [
+        "LET YOUR PEACE"
+      ],
+      "PSALM 91 : 10"
+    ],
+    [
+      38,
+      48,
+      [
+        "ENTRUST CHILDREN AND",
+        "OUR SLEEP AND SAFETY",
+        "INTO YOUR CAPABLE",
+        "AND LOVING HANDS"
+      ],
+      [
+        "LOVING HANDS"
+      ],
+      "PSALM 91 : 10"
+    ],
+    [
+      48,
+      55,
+      [
+        "IN THE QUIET",
+        "WE CHOOSE TO REST",
+        "KNOWING YOU ARE",
+        "WATCHING OVER US"
+      ],
+      [
+        "WATCHING OVER US"
+      ],
+      "PSALM 91 : 10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If worry about what might enter your house is keeping you awake, listen to this.",
+      "kind": "phrase",
+      "words": [
+        "KEEPING YOU AWAKE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "There shall no evil befall thee, neither shall any plague come nigh thy dwelling.",
+      "kind": "phrase",
+      "words": [
+        "NO EVIL BEFALL THEE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we anchor our hearts in this truth today, believing that Your presence is our shield.",
+      "kind": "phrase",
+      "words": [
+        "YOUR PRESENCE IS SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Keep our thresholds safe from harm and let Your peace rest upon every room we inhabit.",
+      "kind": "phrase",
+      "words": [
+        "LET YOUR PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We entrust our children, our sleep, and our safety entirely into Your capable and loving hands.",
+      "kind": "phrase",
+      "words": [
+        "LOVING HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In the quiet of this moment, we choose to rest, knowing You are watching over us.",
+      "kind": "phrase",
+      "words": [
+        "WATCHING OVER US"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 91:10"
+}

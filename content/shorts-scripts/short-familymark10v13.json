@@ -1,0 +1,296 @@
+{
+  "key": "short-familymark10v13",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "BRING YOUR LITTLE ONES",
+    "TO THE SAVIOR"
+  ],
+  "poster": [
+    "BRING YOUR",
+    "LITTLE ONES",
+    "TO THE",
+    "SAVIOR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm wooden kitchen table with open bible and glowing lamp",
+    "peaceful countryside home window at twilight with soft light",
+    "rustic wooden table with lit candle and vintage bible",
+    "quiet rustic living room with warm lamp glow and olive branch",
+    "peaceful rural home porch at dusk with gentle glowing light",
+    "serene country home interior with warm light on wooden desk",
+    "soft warm lamp lighting a vintage family bible on a wooden table"
+  ],
+  "scenes": [
+    {
+      "a": "If you are holding a little one tonight and wondering how to guide them, listen.",
+      "img": "short-familymark10v13-scene-01.jpg",
+      "kicker": "MARK 10 : 13",
+      "sub": "SUFFER THE CHILDREN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord, we bring our children to You right now, placing them entirely into Your loving care.",
+      "img": "short-familymark10v13-scene-02.jpg",
+      "kicker": "MARK 10 : 14",
+      "sub": "FORBID THEM NOT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "And they brought young children to him, that he should touch them: and his disciples rebuked those that brought them.",
+      "img": "short-familymark10v13-scene-03.jpg",
+      "kicker": "MARK 10 : 13",
+      "sub": "THE DISCIPLES REBUKED",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "But when Jesus saw it, he was much displeased, and said unto them,",
+      "img": "short-familymark10v13-scene-04.jpg",
+      "kicker": "MARK 10 : 14",
+      "sub": "MUCH DISPLEASED",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Suffer the little children to come unto me, and forbid them not: for of such is the kingdom of God.",
+      "img": "short-familymark10v13-scene-05.jpg",
+      "kicker": "MARK 10 : 14",
+      "sub": "KINGDOM OF GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, help us to receive Your kingdom with that same simple, trusting faith.",
+      "img": "short-familymark10v13-scene-06.jpg",
+      "kicker": "MARK 10 : 15",
+      "sub": "CHILDLIKE FAITH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "And he took them up in his arms, put his hands upon them, and blessed them.",
+      "img": "short-familymark10v13-scene-07.jpg",
+      "kicker": "MARK 10 : 16",
+      "sub": "BLESSED THEM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      5,
+      "If you are holding a little one tonight and wondering how to guide them, listen."
+    ],
+    [
+      5,
+      10,
+      "Lord, we bring our children to You right now, placing them entirely into Your loving care."
+    ],
+    [
+      10,
+      16,
+      "And they brought young children to him, that he should touch them: and his disciples rebuked those that brought them."
+    ],
+    [
+      16,
+      21,
+      "But when Jesus saw it, he was much displeased, and said unto them,"
+    ],
+    [
+      21,
+      28,
+      "Suffer the little children to come unto me, and forbid them not: for of such is the kingdom of God."
+    ],
+    [
+      28,
+      33,
+      "Father, help us to receive Your kingdom with that same simple, trusting faith."
+    ],
+    [
+      33,
+      40,
+      "And he took them up in his arms, put his hands upon them, and blessed them."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      5,
+      [
+        "HOLDING A LITTLE ONE",
+        "WONDERING HOW TO GUIDE",
+        "LISTEN NOW"
+      ],
+      "GUIDE",
+      "MARK 10 : 13"
+    ],
+    [
+      5,
+      10,
+      [
+        "BRING OUR CHILDREN",
+        "TO YOU RIGHT NOW",
+        "LOVING CARE"
+      ],
+      "CHILDREN",
+      "MARK 10 : 14"
+    ],
+    [
+      10,
+      16,
+      [
+        "BROUGHT YOUNG CHILDREN",
+        "THAT HE SHOULD TOUCH",
+        "DISCIPLES REBUKED"
+      ],
+      "TOUCH",
+      "MARK 10 : 13"
+    ],
+    [
+      16,
+      21,
+      [
+        "WHEN JESUS SAW IT",
+        "MUCH DISPLEASED",
+        "SAID UNTO THEM"
+      ],
+      "DISPLEASED",
+      "MARK 10 : 14"
+    ],
+    [
+      21,
+      28,
+      [
+        "SUFFER LITTLE CHILDREN",
+        "COME UNTO ME",
+        "KINGDOM OF GOD"
+      ],
+      "CHILDREN",
+      "MARK 10 : 14"
+    ],
+    [
+      28,
+      33,
+      [
+        "RECEIVE YOUR KINGDOM",
+        "SIMPLE TRUSTING FAITH",
+        "HELP US"
+      ],
+      "FAITH",
+      "MARK 10 : 15"
+    ],
+    [
+      33,
+      40,
+      [
+        "TOOK THEM UP",
+        "IN HIS ARMS",
+        "BLESSED THEM"
+      ],
+      "ARMS",
+      "MARK 10 : 16"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are holding a little one tonight and wondering how to guide them, listen.",
+      "kind": "phrase",
+      "words": [
+        "HOLDING",
+        "LITTLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we bring our children to You right now, placing them entirely into Your loving care.",
+      "kind": "phrase",
+      "words": [
+        "BRING",
+        "CHILDREN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And they brought young children to him, that he should touch them: and his disciples rebuked those that brought them.",
+      "kind": "phrase",
+      "words": [
+        "BROUGHT",
+        "YOUNG"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "But when Jesus saw it, he was much displeased, and said unto them,",
+      "kind": "phrase",
+      "words": [
+        "JESUS",
+        "SAW"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Suffer the little children to come unto me, and forbid them not: for of such is the kingdom of God.",
+      "kind": "phrase",
+      "words": [
+        "SUFFER",
+        "CHILDREN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, help us to receive Your kingdom with that same simple, trusting faith.",
+      "kind": "phrase",
+      "words": [
+        "RECEIVE",
+        "KINGDOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And he took them up in his arms, put his hands upon them, and blessed them.",
+      "kind": "phrase",
+      "words": [
+        "TOOK",
+        "ARMS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Mark 10:13-16"
+}
