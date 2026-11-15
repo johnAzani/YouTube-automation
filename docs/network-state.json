@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T11:27:47Z",
+  "generated_at": "2026-11-15T11:28:09Z",
   "monitor_generated_at": "2026-11-15T06:50:48.927372+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 266,
+    "published_total": 267,
     "published_longform": 114,
-    "published_shorts": 152,
-    "public_total": 264,
+    "published_shorts": 153,
+    "public_total": 265,
     "queued_longform": 65,
-    "queued_shorts": 102,
+    "queued_shorts": 101,
     "automations_ok": 12,
     "automations_total": 12,
     "network_healthy": true
@@ -305,23 +305,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 20,
+        "published_total": 21,
         "published_longform": 9,
-        "published_shorts": 11,
-        "thumbnail_pending": 20,
-        "public_total": 20,
+        "published_shorts": 12,
+        "thumbnail_pending": 21,
+        "public_total": 21,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-FAMILYMARK10V13",
-        "title": "Pray This Mark 10:13-16 Family Prayer Over Your Home | Savior #Shorts",
+        "id": "SHORT-FAMILYEPHESIANS6V1",
+        "title": "Pray This Ephesians 6:1-4 Family Prayer Over Your Home | Divine Guidance #Shorts",
         "format": "short",
-        "youtube_video_id": "loJxgM3l44o",
-        "watch_url": "https://www.youtube.com/shorts/loJxgM3l44o",
+        "youtube_video_id": "DZoTa37PMNM",
+        "watch_url": "https://www.youtube.com/shorts/DZoTa37PMNM",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T06:55:28Z"
+        "published_at": "2026-11-15T11:27:05Z"
       },
       "next_queued_longform": {
         "id": "0309",
@@ -330,8 +330,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familyephesians6v1",
-        "scripture": "Ephesians 6:1-4",
+        "short": "short-familypsalm91v10",
+        "scripture": "Psalm 91:10",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILYEPHESIANS6V1",
+      "slug": "short-familyephesians6v1-household-prayer",
+      "file": "short-familyephesians6v1-household-prayer.md",
+      "title": "Pray This Ephesians 6:1-4 Family Prayer Over Your Home | Divine Guidance #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T11:27:05Z",
+      "youtube_video_id": "DZoTa37PMNM",
+      "watch_url": "https://www.youtube.com/shorts/DZoTa37PMNM",
+      "youtu_be_url": "https://youtu.be/DZoTa37PMNM",
+      "shorts_url": "https://www.youtube.com/shorts/DZoTa37PMNM",
+      "studio_url": "https://studio.youtube.com/video/DZoTa37PMNM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/DZoTa37PMNM/hqdefault.jpg",
+      "thumb_text": "GODLY HOMES \u00b7 PEACEFUL HEARTS",
+      "thumbnail_pending": true,
+      "duration_label": "48s",
+      "words": 638
+    },
     {
       "id": "SHORT-MIDDAYMARK6V31",
       "slug": "short-middaymark6v31-midday-prayer",
@@ -7935,17 +7959,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-familyephesians6v1",
-        "file": "0000-short-familyephesians6v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Ephesians 6:1-4",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
       {
         "short": "short-familypsalm91v10",
         "file": "0000-short-familypsalm91v10.yml",
