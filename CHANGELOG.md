@@ -5,6 +5,16 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-15 — One unsure phrase cost The Midday Watch its long-form
+
+- **What happened.** The 14:14 UTC slot (run 43726711094) narrated job 0091 for The Midday Watch (prayer3), 1,120 words in 471 seconds, and then refused it: `Uncertain alignment at word 349: confidence=0.000`. The narration was deleted and nothing was uploaded. The slot's Short went out; the other nine channels were unaffected.
+- **Why.** Word 349 is "of" in "Where the heat of the day presses heavy upon us". The speech recogniser wrote something else for a few words there and gave it a probability of zero. The aligner already forgave one or two such words in a long prayer; a stretch one word longer refused the whole video. The recordings of the run are gone, so the exact heard words are not known.
+- **Fix.** A stretch of at most 8 script words that the recogniser was unsure of, with an exactly matched word before and after it and at most 8 seconds between those two, now takes the time between them, shared by word length (`pipeline/prayer_alignment._retime_between_neighbours`). The recogniser's timing for the stretch is not used. The run says how many words were re-timed.
+- **Still refused:** a longer unsure stretch, one at the very start or end, more than 8 seconds between the certain words, audio that is another text (under 85% of the script recognised), and timings that go backwards or are not numbers.
+- **The refusal now says what differed:** the script words, the heard words and the seconds, so the next one can be read from the run's annotation.
+- The same rule covers Shorts (one was refused today at word 47, confidence 0.001).
+- Tests: `tests/test_prayer_alignment.py`, class `TestUnsureStretchBetweenCertainWords`.
+
 ## 2026-11-15 — The Covenant Shield ran out of long-form prayers
 
 - **What happened.** At 03:35 UTC the monitor went red: The Covenant Shield (prayer8) had nothing left in `content/queue/`. Its brain had never written a long-form: 0600 to 0606 were the seven it started with, and 0606 was published at 03:27 UTC.

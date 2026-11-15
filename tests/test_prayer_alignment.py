@@ -163,5 +163,95 @@ class TestTolerantMatch(unittest.TestCase):
         self.assertEqual(len(words), len(script))
 
 
+class TestUnsureStretchBetweenCertainWords(unittest.TestCase):
+    """15 November 2026, job 0091: one unsure stretch at word 349 of 1,120 lost the slot."""
+
+    SCRIPT = ('Lord keep our hands from weariness our words from bitterness and our '
+              'spirits from despair when our labor seems hidden Where the heat of the day '
+              'presses heavy upon us be Thou our cooling shade Remind us that our worth '
+              'is not in what we finish').split()
+
+    def _heard(self, replace, prob=0.0, pace=0.3):
+        """The script as heard, with the words from 'heat' to 'day' replaced by `replace`."""
+        start = self.SCRIPT.index('heat')
+        end = self.SCRIPT.index('day') + 1
+        said = self.SCRIPT[:start] + [None] + self.SCRIPT[end:]
+        items, clock = [], 0.0
+        for word in said:
+            if word is None:
+                for other in replace:
+                    items.append((other, clock, clock + pace, prob))
+                    clock += pace
+            else:
+                items.append((word, clock, clock + pace, 0.95))
+                clock += pace
+        return heard(*items), start, end
+
+    def test_the_stretch_takes_the_time_between_its_neighbours(self):
+        spoken, start, end = self._heard(['he', 'tov', 'today'])
+        words = preview.match(self.SCRIPT, spoken)
+        self.assertEqual([w[0] for w in words], self.SCRIPT)
+        left, right = words[start - 1][2], words[end][1]
+        self.assertAlmostEqual(words[start][1], left, places=3)
+        self.assertAlmostEqual(words[end - 1][2], right, places=3)
+        for (_w, a, b), (_w2, c, _d) in zip(words, words[1:]):
+            self.assertLessEqual(a, b)
+            self.assertLessEqual(b, c + 1e-6)
+        self.assertEqual(preview.last_report, {'retimed_stretches': 1, 'retimed_words': 4})
+
+    def test_a_confident_take_is_not_touched(self):
+        spoken, _start, _end = self._heard(['he', 'tov', 'today'], prob=0.9)
+        preview.match(self.SCRIPT, spoken)
+        self.assertEqual(preview.last_report, {'retimed_stretches': 0, 'retimed_words': 0})
+
+    def test_a_long_unsure_stretch_is_still_refused(self):
+        script = self.SCRIPT + ('and every hidden labor is seen by Thee and '
+                                'kept by Thee for evermore Amen').split()
+        first = script.index('heat')
+        said = script[:first] + ['x'] * (preview.RETIME_MAX_WORDS + 1) + script[first + preview.RETIME_MAX_WORDS + 1:]
+        items = [(w, i * 0.3, i * 0.3 + 0.3, 0.0 if w == 'x' else 0.95) for i, w in enumerate(said)]
+        with self.assertRaises(ValueError) as refused:
+            preview.match(script, heard(*items))
+        message = str(refused.exception)
+        self.assertIn('Uncertain alignment', message)
+        # The refusal says what differed, so the next one can be read from the run.
+        self.assertIn('the script says "heat of the day presses', message)
+        self.assertIn('the recogniser heard "x x x', message)
+
+    def test_nonsense_numbers_are_refused_not_smoothed(self):
+        spoken, start, _end = self._heard(['he', 'tov', 'today'])
+        spoken[start].probability = float('nan')
+        with self.assertRaises(ValueError) as refused:
+            preview.match(self.SCRIPT, spoken)
+        self.assertIn('Non-finite', str(refused.exception))
+
+    def test_a_long_silence_between_the_neighbours_is_still_refused(self):
+        spoken, start, _end = self._heard(['he', 'tov', 'today'])
+        shifted = []
+        for index, item in enumerate(spoken):
+            late = preview.RETIME_MAX_SECONDS + 1 if index >= start + 3 else 0.0
+            shifted.append(preview._Span(item.word, item.start + late, item.end + late, item.probability))
+        with self.assertRaises(ValueError):
+            preview.match(self.SCRIPT, shifted)
+
+    def test_an_unsure_stretch_at_the_very_start_or_end_is_still_refused(self):
+        script = 'evermore the Lord is my keeper and my shade upon my right hand'.split()
+        items = [('whatever' if i == 0 else w, i * 0.3, i * 0.3 + 0.3, 0.0 if i == 0 else 0.95)
+                 for i, w in enumerate(script)]
+        with self.assertRaises(ValueError):
+            preview.match(script, heard(*items))
+        items = [('whatever' if i == len(script) - 1 else w, i * 0.3, i * 0.3 + 0.3,
+                  0.0 if i == len(script) - 1 else 0.95) for i, w in enumerate(script)]
+        with self.assertRaises(ValueError):
+            preview.match(script, heard(*items))
+
+    def test_audio_that_is_another_text_is_still_refused(self):
+        other = 'completely different words about a bank that failed in the autumn of the year'.split()
+        items = [(w, i * 0.3, i * 0.3 + 0.3, 0.0) for i, w in enumerate(other)]
+        with self.assertRaises(ValueError) as refused:
+            preview.match(self.SCRIPT, heard(*items))
+        self.assertIn('does not match the script', str(refused.exception))
+
+
 if __name__ == '__main__':
     unittest.main()
