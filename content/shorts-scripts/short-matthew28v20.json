@@ -1,0 +1,318 @@
+{
+  "key": "short-matthew28v20",
+  "channel": "secret-place",
+  "psalm": null,
+  "title": [
+    "I AM WITH YOU",
+    "ALWAYS"
+  ],
+  "poster": [
+    "BEDTIME PRAYER",
+    "MATTHEW 28:20",
+    "JESUS PROMISES HIS",
+    "CONSTANT PRESENCE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm night bedroom window moonlight",
+    "peaceful night sky stars gentle lake",
+    "misty calm mountain lake night stars",
+    "warm candle flickering dark room quiet",
+    "still forest trees night blue haze",
+    "quiet ocean horizon night moonlight reflection",
+    "cozy dim candle light soft glow bedroom"
+  ],
+  "scenes": [
+    {
+      "a": "Tonight, as you wonder if anyone remains by your side, Jesus speaks into your room.",
+      "img": "short-matthew28v20-scene-01.jpg",
+      "kicker": "MATTHEW 28:20",
+      "sub": "HE IS WITH YOU ALWAYS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Teaching them to observe all things whatsoever I have commanded you:",
+      "img": "short-matthew28v20-scene-02.jpg",
+      "kicker": "MATTHEW 28:20",
+      "sub": "NEVER FORGOTTEN",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "and, lo, I am with you alway, even unto the end of the world. Amen.",
+      "img": "short-matthew28v20-scene-03.jpg",
+      "kicker": "MATTHEW 28:20",
+      "sub": "WITH YOU ALWAYS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, in the quiet darkness of this room, quiet every lingering fear of isolation.",
+      "img": "short-matthew28v20-scene-04.jpg",
+      "kicker": "MATTHEW 28:20",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "When tomorrow feels overwhelming, rest my anxious heart in Your constant presence.",
+      "img": "short-matthew28v20-scene-05.jpg",
+      "kicker": "MATTHEW 28:20",
+      "sub": "PEACE FOR TOMORROW",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "You have promised never to walk away and never to leave my side.",
+      "img": "short-matthew28v20-scene-06.jpg",
+      "kicker": "MATTHEW 28:20",
+      "sub": "NEVER ALONE",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Let Your peace cover this bed as sleep comes, holding me safe until morning. Subscribe to The Secret Place for daily bedtime prayers.",
+      "img": "short-matthew28v20-scene-07.jpg",
+      "kicker": "MATTHEW 28:20",
+      "sub": "SLEEP IN PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "Tonight, as you wonder if anyone remains by your side, Jesus speaks into your room."
+    ],
+    [
+      7,
+      14,
+      "Teaching them to observe all things whatsoever I have commanded you:"
+    ],
+    [
+      14,
+      22,
+      "and, lo, I am with you alway, even unto the end of the world. Amen."
+    ],
+    [
+      22,
+      29,
+      "Lord, in the quiet darkness of this room, quiet every lingering fear of isolation."
+    ],
+    [
+      29,
+      36,
+      "When tomorrow feels overwhelming, rest my anxious heart in Your constant presence."
+    ],
+    [
+      36,
+      43,
+      "You have promised never to walk away and never to leave my side."
+    ],
+    [
+      43,
+      51,
+      "Let Your peace cover this bed as sleep comes, holding me safe until morning. Subscribe to The Secret Place for daily bedtime prayers."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "TONIGHT AS YOU WONDER",
+        "IF ANYONE REMAINS BY YOUR SIDE",
+        "JESUS SPEAKS INTO YOUR ROOM"
+      ],
+      [
+        "JESUS",
+        "REMAINS"
+      ],
+      "MATTHEW 28 : 20"
+    ],
+    [
+      7,
+      14,
+      [
+        "TEACHING THEM TO OBSERVE",
+        "ALL THINGS WHATSOEVER",
+        "I HAVE COMMANDED YOU"
+      ],
+      [
+        "COMMANDED",
+        "OBSERVE"
+      ],
+      "MATTHEW 28 : 20"
+    ],
+    [
+      14,
+      22,
+      [
+        "AND LO I AM WITH YOU ALWAY",
+        "EVEN UNTO THE END",
+        "OF THE WORLD AMEN"
+      ],
+      [
+        "ALWAY",
+        "WITH YOU"
+      ],
+      "MATTHEW 28 : 20"
+    ],
+    [
+      22,
+      29,
+      [
+        "LORD IN THE QUIET DARKNESS",
+        "QUIET EVERY LINGERING FEAR",
+        "OF ISOLATION"
+      ],
+      [
+        "QUIET",
+        "DARKNESS"
+      ],
+      "MATTHEW 28 : 20"
+    ],
+    [
+      29,
+      36,
+      [
+        "WHEN TOMORROW FEELS OVERWHELMING",
+        "REST MY ANXIOUS HEART",
+        "IN YOUR CONSTANT PRESENCE"
+      ],
+      [
+        "REST",
+        "CONSTANT PRESENCE"
+      ],
+      "MATTHEW 28 : 20"
+    ],
+    [
+      36,
+      43,
+      [
+        "YOU HAVE PROMISED NEVER",
+        "TO WALK AWAY AND NEVER",
+        "TO LEAVE MY SIDE"
+      ],
+      [
+        "PROMISED",
+        "NEVER LEAVE"
+      ],
+      "MATTHEW 28 : 20"
+    ],
+    [
+      43,
+      51,
+      [
+        "LET YOUR PEACE COVER THIS BED",
+        "HOLDING ME SAFE UNTIL MORNING",
+        "SUBSCRIBE TO THE SECRET PLACE"
+      ],
+      [
+        "PEACE",
+        "SAFE",
+        "SUBSCRIBE"
+      ],
+      "MATTHEW 28 : 20"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Tonight, as you wonder if anyone remains by your side, Jesus speaks into your room.",
+      "kind": "phrase",
+      "words": [
+        "JESUS",
+        "REMAINS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teaching them to observe all things whatsoever I have commanded you:",
+      "kind": "phrase",
+      "words": [
+        "COMMANDED",
+        "OBSERVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and, lo, I am with you alway, even unto the end of the world. Amen.",
+      "kind": "phrase",
+      "words": [
+        "ALWAY",
+        "WITH YOU"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, in the quiet darkness of this room, quiet every lingering fear of isolation.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "DARKNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When tomorrow feels overwhelming, rest my anxious heart in Your constant presence.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "CONSTANT PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You have promised never to walk away and never to leave my side.",
+      "kind": "phrase",
+      "words": [
+        "PROMISED",
+        "NEVER LEAVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let Your peace cover this bed as sleep comes, holding me safe until morning. Subscribe to The Secret Place for daily bedtime prayers.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "SAFE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Matthew 28:20"
+}
