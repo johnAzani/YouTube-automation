@@ -256,8 +256,11 @@ def test_a_run_writes_the_granted_channel_and_names_the_rest_in_one_line(monkeyp
         "::notice title=Analytics secret-place::16.2 of 4,000 watch hours counted over 365 days "
         "(long-form and live; Shorts 64.6 h not counted); 1,250 of 1,000 subscribers; "
         "last 28 days: 1.4 long-form hours, 2,918 views; file written")
-    assert annotations[1] == ("::notice title=Analytics prayer2, prayer3, prayer4, prayer5, prayer6, prayer7, "
-                              "prayer8, prayer9, prayer10::credentials not present in this run; no file written")
+    assert annotations[1] == ("::notice title=Analytics skipped::prayer2, prayer3, prayer4, prayer5, prayer6, "
+                              "prayer7, prayer8, prayer9, prayer10: credentials not present in this run; "
+                              "no file written")
+    # A comma in an annotation's title ends the title on GitHub (seen live: only "prayer2" survived).
+    assert all("," not in line.split("::", 2)[1] for line in annotations)
     assert sorted(p.name for p in tmp_path.iterdir()) == ["README.md", "secret-place.json"]
     assert "SECRET-" not in out and "ACCESS" not in out
 
@@ -273,8 +276,8 @@ def test_a_channel_not_granted_keeps_the_file_it_already_has(monkeypatch, capsys
     (tmp_path / "prayer2.json").write_text(json.dumps(old), encoding="utf-8")
     out, _asked = _run(monkeypatch, capsys, tmp_path, ["--channel", "prayer2"], granted=("prayer2",),
                        refuse={("creatorContentType", 365)})
-    assert "::notice title=Analytics prayer2::not granted yet (403 PERMISSION_DENIED accessNotConfigured); " \
-           "no file written" in out
+    assert "::notice title=Analytics skipped::prayer2: not granted yet (403 PERMISSION_DENIED " \
+           "accessNotConfigured); no file written" in out
     assert json.loads((tmp_path / "prayer2.json").read_text(encoding="utf-8")) == old
 
 
@@ -287,7 +290,7 @@ def test_one_channel_blowing_up_does_not_cost_the_others_or_the_job(monkeypatch,
         return real(channel, token, today, get)
     monkeypatch.setattr(reader, "read_channel", flaky)
     out, _asked = _run(monkeypatch, capsys, tmp_path, [], granted=("secret-place", "prayer2"))
-    assert "::warning title=Analytics prayer2::stopped early (RuntimeError); no file written" in out
+    assert "::warning title=Analytics skipped::prayer2: stopped early (RuntimeError); no file written" in out
     assert (tmp_path / "secret-place.json").exists() and not (tmp_path / "prayer2.json").exists()
 
 

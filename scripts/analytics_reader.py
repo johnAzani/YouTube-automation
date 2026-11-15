@@ -480,7 +480,8 @@ def main(argv=None):
             waiting.setdefault('stopped early (%s)' % type(exc).__name__, []).append(channel)
     for why, channels in waiting.items():
         level = 'warning' if ('refused' in why and 'not granted' not in why) or 'stopped early' in why else 'notice'
-        note(', '.join(channels), '%s; no file written' % why, level)
+        # The names go in the message: a comma in an annotation's title ends the title.
+        note('skipped', '%s: %s; no file written' % (', '.join(channels), why), level)
     if not args.no_write:
         try:
             reports = load_reports(args.out)
