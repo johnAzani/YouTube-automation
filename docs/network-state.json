@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T23:37:57Z",
+  "generated_at": "2026-11-15T23:39:44Z",
   "monitor_generated_at": "2026-11-15T22:59:34.787450+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 305,
+    "published_total": 306,
     "published_longform": 120,
-    "published_shorts": 185,
-    "public_total": 303,
+    "published_shorts": 186,
+    "public_total": 304,
     "queued_longform": 59,
-    "queued_shorts": 69,
+    "queued_shorts": 68,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 16,
+        "published_total": 17,
         "published_longform": 6,
-        "published_shorts": 10,
-        "thumbnail_pending": 16,
-        "public_total": 16,
+        "published_shorts": 11,
+        "thumbnail_pending": 17,
+        "public_total": 17,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-GARDEN1THESSALONIANS5V16",
-        "title": "Pray This 1 Thessalonians 5:16-18 Prayer of Thanksgiving | The Praise Garden #Shorts",
+        "id": "SHORT-GARDENPSALM107V1",
+        "title": "Pray This Psalm 107:1 Prayer of Thanksgiving | Psalm 107:1 #Shorts",
         "format": "short",
-        "youtube_video_id": "0rekYD2IY3E",
-        "watch_url": "https://www.youtube.com/shorts/0rekYD2IY3E",
+        "youtube_video_id": "LX37dCaQSwo",
+        "watch_url": "https://www.youtube.com/shorts/LX37dCaQSwo",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T20:03:40Z"
+        "published_at": "2026-11-15T23:39:05Z"
       },
       "next_queued_longform": {
         "id": "0706",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm107v1",
-        "scripture": "Psalm 107:1",
+        "short": "short-gardenpsalm34v1",
+        "scripture": "Psalm 34:1-3",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM107V1",
+      "slug": "short-gardenpsalm107v1-thanksgiving-prayer",
+      "file": "short-gardenpsalm107v1-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 107:1 Prayer of Thanksgiving | Psalm 107:1 #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T23:39:05Z",
+      "youtube_video_id": "LX37dCaQSwo",
+      "watch_url": "https://www.youtube.com/shorts/LX37dCaQSwo",
+      "youtu_be_url": "https://youtu.be/LX37dCaQSwo",
+      "shorts_url": "https://www.youtube.com/shorts/LX37dCaQSwo",
+      "studio_url": "https://studio.youtube.com/video/LX37dCaQSwo/edit",
+      "thumb_url": "https://i.ytimg.com/vi/LX37dCaQSwo/hqdefault.jpg",
+      "thumb_text": "THE \u00b7 PRAISE",
+      "thumbnail_pending": true,
+      "duration_label": "62s",
+      "words": 635
+    },
     {
       "id": "SHORT-PROVISIONPSALM84V11",
       "slug": "short-provisionpsalm84v11-stewardship-prayer",
@@ -9386,17 +9410,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-gardenpsalm107v1",
-        "file": "0705-short-gardenpsalm107v1.yml",
-        "companion_longform_id": "0705",
-        "scripture": "Psalm 107:1",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenpsalm34v1",
