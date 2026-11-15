@@ -4,33 +4,33 @@
   "psalm": null,
   "title": [
     "PROVERBS 4:18",
-    "THE PATH OF THE JUST"
+    "THE SHINING PATH"
   ],
   "poster": [
-    "THE MORNING ALTAR",
+    "WALK IN LIGHT",
     "PROVERBS 4:18",
-    "A PRAYER FOR DAWN",
-    "BEGIN IN PRAYER"
+    "MORNING PRAYER",
+    "THE MORNING ALTAR"
   ],
   "end": [
     "SUBSCRIBE",
     "The Morning Altar — begin every sunrise in prayer"
   ],
   "stock_queries": [
-    "golden sun rays through morning mist forest",
-    "sunrise light glowing on mountain peaks",
-    "morning dew drops on green grass illuminated by sun",
-    "soft sunrise light through window blinds in quiet room",
-    "bright morning horizon with golden light breaking through clouds",
-    "sunlight illuminating a quiet forest path at dawn",
-    "golden hour light over a serene misty lake"
+    "foggy forest path early morning dawn light",
+    "golden dawn light breaking over misty mountain path",
+    "bright sunrise over scenic valley horizon",
+    "soft morning sunlight through mountain trees",
+    "calm lake reflecting vibrant golden sunrise",
+    "peaceful dawn horizon over quiet countryside",
+    "soft morning sunlight streaming through window"
   ],
   "scenes": [
     {
-      "a": "That heavy fog of confusion rolling into your room right now will not have the final word.",
+      "a": "If you woke early with doubt overshadowing your next steps, hear what Scripture promises you.",
       "img": "short-morningproverbs4v18-scene-01.jpg",
       "kicker": "PROVERBS 4:18",
-      "sub": "THE MORNING LIGHT",
+      "sub": "LIGHT FOR YOUR PATH",
       "cam": "push_in",
       "focus": [
         0.5,
@@ -38,21 +38,21 @@
       ]
     },
     {
-      "a": "Listen to the wisdom given to us in Proverbs 4:18.",
+      "a": "But the path of the just is as the shining light,",
       "img": "short-morningproverbs4v18-scene-02.jpg",
       "kicker": "PROVERBS 4:18",
-      "sub": "THE PATH GROWS BRIGHTER",
-      "cam": "pan_left",
+      "sub": "THE PATH OF THE JUST",
+      "cam": "tilt_up",
       "focus": [
         0.5,
         0.5
       ]
     },
     {
-      "a": "The path of the righteous is like the light of dawn, shining ever brighter unto the full day.",
+      "a": "that shineth more and more unto the perfect day.",
       "img": "short-morningproverbs4v18-scene-03.jpg",
       "kicker": "PROVERBS 4:18",
-      "sub": "SHINING EVER BRIGHTER",
+      "sub": "UNTO THE PERFECT DAY",
       "cam": "pull_out",
       "focus": [
         0.5,
@@ -60,44 +60,44 @@
       ]
     },
     {
-      "a": "Father, as this new light touches the earth, touch our hearts and steady our footing.",
+      "a": "Lord, when the way ahead feels dim or uncertain, remind us that Your truth grows brighter with every step of faith.",
       "img": "short-morningproverbs4v18-scene-04.jpg",
-      "kicker": "PROVERBS 4:18",
-      "sub": "STEADY OUR FOOTING",
-      "cam": "tilt_up",
-      "focus": [
-        0.5,
-        0.6
-      ]
-    },
-    {
-      "a": "Clear away the shadows of doubt that try to make us stumble in the dark.",
-      "img": "short-morningproverbs4v18-scene-05.jpg",
-      "kicker": "PROVERBS 4:18",
-      "sub": "REMOVE THE SHADOWS",
-      "cam": "push_in",
-      "focus": [
-        0.5,
-        0.45
-      ]
-    },
-    {
-      "a": "Help us to walk forward today with quiet confidence in your steadfast grace.",
-      "img": "short-morningproverbs4v18-scene-06.jpg",
-      "kicker": "PROVERBS 4:18",
-      "sub": "QUIET CONFIDENCE",
+      "kicker": "MORNING PRAYER",
+      "sub": "YOUR TRUTH GROWS BRIGHTER",
       "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "You do not leave us wandering in dark shadows, but clear our vision until Your fullness shines.",
+      "img": "short-morningproverbs4v18-scene-05.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "CLEAR OUR VISION",
+      "cam": "push_in",
       "focus": [
         0.5,
         0.5
       ]
     },
     {
-      "a": "Let your gentle truth lead us step by step into the morning. Amen.",
+      "a": "Walk before us this day, ordering our decisions and steadying our hearts in Your peace.",
+      "img": "short-morningproverbs4v18-scene-06.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "STEADY OUR HEARTS",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Morning Altar to start each sunrise praying together.",
       "img": "short-morningproverbs4v18-scene-07.jpg",
-      "kicker": "PROVERBS 4:18",
-      "sub": "GENTLE TRUTH",
-      "cam": "push_in",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "BEGIN EVERY SUNRISE IN PRAYER",
+      "cam": "pull_out",
       "focus": [
         0.5,
         0.5
@@ -107,192 +107,211 @@
   "captions": [
     [
       0,
+      6,
+      "If you woke early with doubt overshadowing your next steps, hear what Scripture promises you."
+    ],
+    [
+      6,
       12,
-      "That heavy fog of confusion rolling into your room right now will not have the final word."
+      "But the path of the just is as the shining light,"
     ],
     [
       12,
-      23,
-      "Listen to the wisdom given to us in Proverbs 4:18."
+      18,
+      "that shineth more and more unto the perfect day."
     ],
     [
-      23,
-      38,
-      "The path of the righteous is like the light of dawn, shining ever brighter unto the full day."
+      18,
+      24,
+      "Lord, when the way ahead feels dim or uncertain, remind us that Your truth grows brighter with every step of faith."
     ],
     [
-      38,
-      50,
-      "Father, as this new light touches the earth, touch our hearts and steady our footing."
+      24,
+      30,
+      "You do not leave us wandering in dark shadows, but clear our vision until Your fullness shines."
     ],
     [
-      50,
-      63,
-      "Clear away the shadows of doubt that try to make us stumble in the dark."
+      30,
+      35,
+      "Walk before us this day, ordering our decisions and steadying our hearts in Your peace."
     ],
     [
-      63,
-      76,
-      "Help us to walk forward today with quiet confidence in your steadfast grace."
-    ],
-    [
-      76,
-      90,
-      "Let your gentle truth lead us step by step into the morning. Amen."
+      35,
+      40,
+      "Subscribe to The Morning Altar to start each sunrise praying together."
     ]
   ],
   "kinetic_phrases": [
     [
       0,
+      6,
+      [
+        "IF YOU WOKE EARLY",
+        "WITH DOUBT OVER YOUR STEPS",
+        "HEAR GODS PROMISE"
+      ],
+      [
+        "DOUBT",
+        "PROMISE"
+      ],
+      "PROVERBS 4 : 18"
+    ],
+    [
+      6,
       12,
       [
-        "THAT HEAVY FOG",
-        "OF CONFUSION",
-        "WILL NOT HAVE",
-        "THE FINAL WORD"
+        "BUT THE PATH OF THE JUST",
+        "IS AS THE SHINING LIGHT"
       ],
-      "FINAL",
+      [
+        "PATH",
+        "SHINING",
+        "LIGHT"
+      ],
       "PROVERBS 4 : 18"
     ],
     [
       12,
-      23,
+      18,
       [
-        "LISTEN TO",
-        "THE WISDOM",
-        "GIVEN TO US"
+        "THAT SHINETH MORE AND MORE",
+        "UNTO THE PERFECT DAY"
       ],
-      "WISDOM",
+      [
+        "SHINETH",
+        "PERFECT",
+        "DAY"
+      ],
       "PROVERBS 4 : 18"
     ],
     [
-      23,
-      38,
+      18,
+      24,
       [
-        "THE PATH OF",
-        "THE RIGHTEOUS",
-        "SHINING BRIGHTER",
-        "UNTO THE DAY"
+        "WHEN THE WAY FEELS DIM",
+        "YOUR TRUTH GROWS BRIGHTER",
+        "WITH EVERY STEP OF FAITH"
       ],
-      "BRIGHTER",
+      [
+        "TRUTH",
+        "BRIGHTER",
+        "FAITH"
+      ],
       "PROVERBS 4 : 18"
     ],
     [
-      38,
-      50,
+      24,
+      30,
       [
-        "FATHER AS THIS",
-        "NEW LIGHT TOUCHES",
-        "STEADY OUR",
-        "FOOTING TODAY"
+        "YOU DO NOT LEAVE US IN SHADOWS",
+        "BUT CLEAR OUR VISION",
+        "UNTIL YOUR FULLNESS SHINES"
       ],
-      "FOOTING",
+      [
+        "VISION",
+        "FULLNESS",
+        "SHINES"
+      ],
       "PROVERBS 4 : 18"
     ],
     [
-      50,
-      63,
+      30,
+      35,
       [
-        "CLEAR AWAY THE",
-        "SHADOWS OF DOUBT",
-        "THAT TRY TO MAKE US",
-        "STUMBLE IN THE DARK"
+        "WALK BEFORE US THIS DAY",
+        "ORDERING OUR DECISIONS",
+        "STEADYING OUR HEARTS IN PEACE"
       ],
-      "SHADOWS",
+      [
+        "DECISIONS",
+        "HEARTS",
+        "PEACE"
+      ],
       "PROVERBS 4 : 18"
     ],
     [
-      63,
-      76,
+      35,
+      40,
       [
-        "HELP US TO WALK",
-        "FORWARD TODAY WITH",
-        "QUIET CONFIDENCE",
-        "IN YOUR GRACE"
+        "SUBSCRIBE TO THE MORNING ALTAR",
+        "TO START EACH SUNRISE",
+        "PRAYING TOGETHER"
       ],
-      "CONFIDENCE",
-      "PROVERBS 4 : 18"
-    ],
-    [
-      76,
-      90,
       [
-        "LET YOUR GENTLE",
-        "TRUTH LEAD US",
-        "INTO THE MORNING",
-        "AMEN"
+        "MORNING",
+        "ALTAR",
+        "SUNRISE"
       ],
-      "TRUTH",
       "PROVERBS 4 : 18"
     ]
   ],
   "beats": [
     {
-      "a": "That heavy fog of confusion rolling into your room right now will not have the final word.",
+      "a": "If you woke early with doubt overshadowing your next steps, hear what Scripture promises you.",
       "kind": "phrase",
       "words": [
-        "FINAL",
-        "WORD"
+        "DOUBT",
+        "PROMISE"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Listen to the wisdom given to us in Proverbs 4:18.",
-      "kind": "phrase",
-      "words": [
-        "PROVERBS",
-        "4:18"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "The path of the righteous is like the light of dawn, shining ever brighter unto the full day.",
+      "a": "But the path of the just is as the shining light,",
       "kind": "phrase",
       "words": [
         "SHINING",
+        "LIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "that shineth more and more unto the perfect day.",
+      "kind": "phrase",
+      "words": [
+        "PERFECT",
+        "DAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when the way ahead feels dim or uncertain, remind us that Your truth grows brighter with every step of faith.",
+      "kind": "phrase",
+      "words": [
+        "TRUTH",
         "BRIGHTER"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Father, as this new light touches the earth, touch our hearts and steady our footing.",
+      "a": "You do not leave us wandering in dark shadows, but clear our vision until Your fullness shines.",
       "kind": "phrase",
       "words": [
-        "STEADY",
-        "FOOTING"
+        "FULLNESS",
+        "SHINES"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Clear away the shadows of doubt that try to make us stumble in the dark.",
+      "a": "Walk before us this day, ordering our decisions and steadying our hearts in Your peace.",
       "kind": "phrase",
       "words": [
-        "SHADOWS",
-        "DOUBT"
+        "STEADYING",
+        "PEACE"
       ],
       "hi": 0,
       "slot": "C"
     },
     {
-      "a": "Help us to walk forward today with quiet confidence in your steadfast grace.",
+      "a": "Subscribe to The Morning Altar to start each sunrise praying together.",
       "kind": "phrase",
       "words": [
-        "QUIET",
-        "CONFIDENCE"
-      ],
-      "hi": 0,
-      "slot": "C"
-    },
-    {
-      "a": "Let your gentle truth lead us step by step into the morning. Amen.",
-      "kind": "phrase",
-      "words": [
-        "GENTLE",
-        "TRUTH"
+        "SUNRISE",
+        "PRAYING"
       ],
       "hi": 0,
       "slot": "C"

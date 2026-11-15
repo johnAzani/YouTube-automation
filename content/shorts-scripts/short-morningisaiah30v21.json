@@ -1,0 +1,321 @@
+{
+  "key": "short-morningisaiah30v21",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "HEAR HIS VOICE",
+    "THIS MORNING"
+  ],
+  "poster": [
+    "ISAIAH 30:21",
+    "THIS IS THE WAY",
+    "WALK YE IN IT",
+    "SUNRISE PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "calm morning fog pine forest sunrise",
+    "sunbeams through morning trees misty path",
+    "fork in forest trail dawn light",
+    "golden sunrise light pouring through window empty room",
+    "tranquil mountain lake at early morning sunrise",
+    "soft golden horizon sunrise glowing sky",
+    "sunbreak over mountain ridge dawn glow"
+  ],
+  "scenes": [
+    {
+      "a": "If you are facing a heavy decision today",
+      "img": "short-morningisaiah30v21-scene-01.jpg",
+      "kicker": "ISAIAH 30:21",
+      "sub": "STOP AND LISTEN TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "And thine ears shall hear a word behind thee",
+      "img": "short-morningisaiah30v21-scene-02.jpg",
+      "kicker": "ISAIAH 30:21",
+      "sub": "THIS IS THE WAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "when ye turn to the right hand",
+      "img": "short-morningisaiah30v21-scene-03.jpg",
+      "kicker": "ISAIAH 30:21",
+      "sub": "HE GUIDES YOUR STEPS",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, as soft sunrise light fills this room",
+      "img": "short-morningisaiah30v21-scene-04.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "CLEAR AWAY THE NOISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Silence the conflicting opinions that pull our restless hearts",
+      "img": "short-morningisaiah30v21-scene-05.jpg",
+      "kicker": "SEEK HIS VOICE",
+      "sub": "SILENCE THE DISTRACTIONS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach us to hear Your calm, guiding whisper",
+      "img": "short-morningisaiah30v21-scene-06.jpg",
+      "kicker": "LISTEN CLOSELY",
+      "sub": "HIS VOICE LEADS YOU",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Grant us steady patience to wait",
+      "img": "short-morningisaiah30v21-scene-07.jpg",
+      "kicker": "WALK IN FAITH",
+      "sub": "BEGIN EVERY DAY IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If you are facing a heavy decision today, stop before you take another step."
+    ],
+    [
+      6,
+      14,
+      "And thine ears shall hear a word behind thee, saying, This is the way, walk ye in it,"
+    ],
+    [
+      14,
+      21,
+      "when ye turn to the right hand, and when ye turn to the left."
+    ],
+    [
+      21,
+      28,
+      "Lord, as soft sunrise light fills this room, clear away the noise of competing worries."
+    ],
+    [
+      28,
+      35,
+      "Silence the conflicting opinions that pull our restless hearts in a thousand directions."
+    ],
+    [
+      35,
+      42,
+      "Teach us to hear Your calm, guiding whisper above all other sounds today."
+    ],
+    [
+      42,
+      50,
+      "Grant us steady patience to wait, and true courage to walk Your clear path. Subscribe to join us every morning in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF YOU ARE FACING",
+        "A HEAVY DECISION TODAY",
+        "STOP BEFORE YOU MOVE"
+      ],
+      [
+        "HEAVY",
+        "DECISION"
+      ],
+      "ISAIAH 30:21"
+    ],
+    [
+      6,
+      14,
+      [
+        "THINE EARS SHALL HEAR",
+        "A WORD BEHIND THEE",
+        "THIS IS THE WAY",
+        "WALK YE IN IT"
+      ],
+      [
+        "THIS",
+        "IS",
+        "THE",
+        "WAY"
+      ],
+      "ISAIAH 30:21"
+    ],
+    [
+      14,
+      21,
+      [
+        "WHEN YE TURN",
+        "TO THE RIGHT HAND",
+        "AND TO THE LEFT"
+      ],
+      [
+        "RIGHT",
+        "LEFT"
+      ],
+      "ISAIAH 30:21"
+    ],
+    [
+      21,
+      28,
+      [
+        "CLEAR AWAY THE NOISE",
+        "OF COMPETING WORRIES",
+        "IN THIS SOFT LIGHT"
+      ],
+      [
+        "CLEAR",
+        "NOISE"
+      ],
+      "ISAIAH 30:21"
+    ],
+    [
+      28,
+      35,
+      [
+        "SILENCE CONFLICTING OPINIONS",
+        "THAT PULL OUR HEARTS",
+        "IN A THOUSAND DIRECTIONS"
+      ],
+      [
+        "SILENCE",
+        "OPINIONS"
+      ],
+      "ISAIAH 30:21"
+    ],
+    [
+      35,
+      42,
+      [
+        "TEACH US TO HEAR",
+        "YOUR GUIDING WHISPER",
+        "ABOVE ALL OTHER SOUNDS"
+      ],
+      [
+        "GUIDING",
+        "WHISPER"
+      ],
+      "ISAIAH 30:21"
+    ],
+    [
+      42,
+      50,
+      [
+        "GRANT US PATIENCE TO WAIT",
+        "AND COURAGE TO WALK",
+        "YOUR CLEAR PATH"
+      ],
+      [
+        "COURAGE",
+        "CLEAR",
+        "PATH"
+      ],
+      "ISAIAH 30:21"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are facing a heavy decision today, stop before you take another step.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "DECISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And thine ears shall hear a word behind thee, saying, This is the way, walk ye in it,",
+      "kind": "phrase",
+      "words": [
+        "THIS",
+        "WAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "when ye turn to the right hand, and when ye turn to the left.",
+      "kind": "phrase",
+      "words": [
+        "RIGHT",
+        "LEFT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, as soft sunrise light fills this room, clear away the noise of competing worries.",
+      "kind": "phrase",
+      "words": [
+        "CLEAR",
+        "NOISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Silence the conflicting opinions that pull our restless hearts in a thousand directions.",
+      "kind": "phrase",
+      "words": [
+        "SILENCE",
+        "HEARTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teach us to hear Your calm, guiding whisper above all other sounds today.",
+      "kind": "phrase",
+      "words": [
+        "GUIDING",
+        "WHISPER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us steady patience to wait, and true courage to walk Your clear path. Subscribe to join us every morning in prayer.",
+      "kind": "phrase",
+      "words": [
+        "COURAGE",
+        "PATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 30:21"
+}
