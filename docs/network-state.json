@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T02:20:45Z",
+  "generated_at": "2026-11-15T02:20:55Z",
   "monitor_generated_at": "2026-11-15T02:17:31.679744+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 245,
+    "published_total": 246,
     "published_longform": 109,
-    "published_shorts": 136,
-    "public_total": 243,
+    "published_shorts": 137,
+    "public_total": 244,
     "queued_longform": 55,
-    "queued_shorts": 72,
+    "queued_shorts": 71,
     "automations_ok": 11,
     "automations_total": 11,
     "network_healthy": true
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 35,
+        "published_total": 36,
         "published_longform": 16,
-        "published_shorts": 19,
+        "published_shorts": 20,
         "thumbnail_pending": 0,
-        "public_total": 35,
+        "public_total": 36,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYNEHEMIAH8V10",
-        "title": "Say This Nehemiah 8:10 Prayer at Noon | The Midday Watch #Shorts",
+        "id": "SHORT-MIDDAYZECHARIAH4V6",
+        "title": "Say This Zechariah 4:6 Prayer at Noon | Zechariah 4:6 #Shorts",
         "format": "short",
-        "youtube_video_id": "E8GrFDAdnbk",
-        "watch_url": "https://www.youtube.com/shorts/E8GrFDAdnbk",
-        "published_on": "2026-11-14",
-        "published_at": "2026-11-14T20:12:02Z"
+        "youtube_video_id": "hpyNX1FHz58",
+        "watch_url": "https://www.youtube.com/shorts/hpyNX1FHz58",
+        "published_on": "2026-11-15",
+        "published_at": "2026-11-15T02:20:01Z"
       },
       "next_queued_longform": {
         "id": "0091",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middayzechariah4v6",
-        "scripture": "Zechariah 4:6",
+        "short": "short-middaygalatians6v9",
+        "scripture": "Galatians 6:9",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -696,6 +696,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYZECHARIAH4V6",
+      "slug": "short-middayzechariah4v6-midday-prayer",
+      "file": "short-middayzechariah4v6-midday-prayer.md",
+      "title": "Say This Zechariah 4:6 Prayer at Noon | Zechariah 4:6 #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T02:20:01Z",
+      "youtube_video_id": "hpyNX1FHz58",
+      "watch_url": "https://www.youtube.com/shorts/hpyNX1FHz58",
+      "youtu_be_url": "https://youtu.be/hpyNX1FHz58",
+      "shorts_url": "https://www.youtube.com/shorts/hpyNX1FHz58",
+      "studio_url": "https://studio.youtube.com/video/hpyNX1FHz58/edit",
+      "thumb_url": "https://i.ytimg.com/vi/hpyNX1FHz58/hqdefault.jpg",
+      "thumb_text": "THE MIDDAY WATCH \u00b7 PAUSE AND PRAY",
+      "thumbnail_pending": false,
+      "duration_label": "59s",
+      "words": 608
+    },
     {
       "id": "SHORT-FAMILYNUMBERS6V24",
       "slug": "short-familynumbers6v24-household-prayer",
@@ -7306,17 +7330,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-middayzechariah4v6",
-        "file": "0000-short-middayzechariah4v6.yml",
-        "companion_longform_id": "",
-        "scripture": "Zechariah 4:6",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-morningpsalm121v1",
