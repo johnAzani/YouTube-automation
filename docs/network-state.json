@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T23:29:33Z",
+  "generated_at": "2026-11-15T23:30:48Z",
   "monitor_generated_at": "2026-11-15T22:59:34.787450+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 301,
+    "published_total": 302,
     "published_longform": 120,
-    "published_shorts": 181,
-    "public_total": 299,
+    "published_shorts": 182,
+    "public_total": 300,
     "queued_longform": 59,
-    "queued_shorts": 73,
+    "queued_shorts": 72,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 41,
+        "published_total": 42,
         "published_longform": 17,
-        "published_shorts": 24,
+        "published_shorts": 25,
         "thumbnail_pending": 0,
-        "public_total": 41,
+        "public_total": 42,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYROMANS12V12",
-        "title": "Say This Romans 12:12 Prayer at Noon | Peace #Shorts",
+        "id": "SHORT-MIDDAYGALATIANS6V9",
+        "title": "Say This Galatians 6:9 Prayer at Noon | Galatians 6:9 #Shorts",
         "format": "short",
-        "youtube_video_id": "i1PwQlemayE",
-        "watch_url": "https://www.youtube.com/shorts/i1PwQlemayE",
+        "youtube_video_id": "zUkQhJFy8LE",
+        "watch_url": "https://www.youtube.com/shorts/zUkQhJFy8LE",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T19:53:44Z"
+        "published_at": "2026-11-15T23:29:58Z"
       },
       "next_queued_longform": {
         "id": "0092",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaygalatians6v9",
-        "scripture": "Galatians 6:9",
+        "short": "short-middaycolossians3v23",
+        "scripture": "Colossians 3:23-24",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYGALATIANS6V9",
+      "slug": "short-middaygalatians6v9-midday-prayer",
+      "file": "short-middaygalatians6v9-midday-prayer.md",
+      "title": "Say This Galatians 6:9 Prayer at Noon | Galatians 6:9 #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T23:29:58Z",
+      "youtube_video_id": "zUkQhJFy8LE",
+      "watch_url": "https://www.youtube.com/shorts/zUkQhJFy8LE",
+      "youtu_be_url": "https://youtu.be/zUkQhJFy8LE",
+      "shorts_url": "https://www.youtube.com/shorts/zUkQhJFy8LE",
+      "studio_url": "https://studio.youtube.com/video/zUkQhJFy8LE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/zUkQhJFy8LE/hqdefault.jpg",
+      "thumb_text": "DO NOT GROW WEARY \u00b7 IN WELL DOING",
+      "thumbnail_pending": false,
+      "duration_label": "49s",
+      "words": 581
+    },
     {
       "id": "SHORT-PSALM62V1",
       "slug": "short-psalm62v1-pre-sleep-prayer",
@@ -8839,17 +8863,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-middaygalatians6v9",
-        "file": "0090-short-middaygalatians6v9.yml",
-        "companion_longform_id": "0090",
-        "scripture": "Galatians 6:9",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaycolossians3v23",
