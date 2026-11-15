@@ -1,0 +1,309 @@
+{
+  "key": "short-provisionisaiah45v2",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "GOD WILL OPEN",
+    "YOUR CLOSED DOORS"
+  ],
+  "poster": [
+    "THE PROVISION TABLE",
+    "ISAIAH 45:2-3",
+    "GOD GOES BEFORE YOU",
+    "DAILY PROVISION PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "sunlit canyon pass golden morning mist",
+    "sunlit winding river path through mountain valley",
+    "dramatic sunbeams through ancient mountain gorge",
+    "golden sunlight illuminating calm mountain lake",
+    "peaceful stone altar illuminated by warm sun rays",
+    "golden sun shining over peaceful mountain valley",
+    "calm sunlit river flowing through pine valley"
+  ],
+  "scenes": [
+    {
+      "a": "If you stand before an impossible barrier",
+      "img": "short-provisionisaiah45v2-scene-01.jpg",
+      "kicker": "ISAIAH 45:2",
+      "sub": "GOD CLEARING YOUR WAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "make the crooked places straight",
+      "img": "short-provisionisaiah45v2-scene-02.jpg",
+      "kicker": "ISAIAH 45:2",
+      "sub": "MAKING CROOKED PLACES STRAIGHT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "break in pieces the gates of brass",
+      "img": "short-provisionisaiah45v2-scene-03.jpg",
+      "kicker": "ISAIAH 45:2",
+      "sub": "BREAKING EVERY BARRIER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "give thee the treasures of darkness",
+      "img": "short-provisionisaiah45v2-scene-04.jpg",
+      "kicker": "ISAIAH 45:3",
+      "sub": "TREASURES OF DARKNESS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "which call thee by thy name",
+      "img": "short-provisionisaiah45v2-scene-05.jpg",
+      "kicker": "ISAIAH 45:3",
+      "sub": "HE CALLS YOU BY NAME",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "shatter every obstacle in our daily labor",
+      "img": "short-provisionisaiah45v2-scene-06.jpg",
+      "kicker": "STEWARDSHIP PRAYER",
+      "sub": "LORD SHATTER EVERY OBSTACLE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "steward our household",
+      "img": "short-provisionisaiah45v2-scene-07.jpg",
+      "kicker": "DAILY PROVISION",
+      "sub": "WALK IN HIS PROVISION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If you stand before an impossible barrier in your work or home today, listen closely."
+    ],
+    [
+      8,
+      17,
+      "I will go before thee, and make the crooked places straight:"
+    ],
+    [
+      17,
+      25,
+      "I will break in pieces the gates of brass, and cut in sunder the bars of iron:"
+    ],
+    [
+      25,
+      34,
+      "And I will give thee the treasures of darkness, and hidden riches of secret places,"
+    ],
+    [
+      34,
+      43,
+      "that thou mayest know that I, the LORD, which call thee by thy name, am the God of Israel."
+    ],
+    [
+      43,
+      50,
+      "Lord, go before us today and shatter every obstacle in our daily labor."
+    ],
+    [
+      50,
+      57,
+      "Uncover the hidden wisdom needed to steward our household. In Jesus' name, Amen. Subscribe to walk in God's daily provision."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF YOU STAND BEFORE",
+        "AN IMPOSSIBLE BARRIER",
+        "IN YOUR WORK OR HOME",
+        "TODAY LISTEN CLOSELY"
+      ],
+      [
+        "IMPOSSIBLE"
+      ],
+      "ISAIAH 45 : 2"
+    ],
+    [
+      8,
+      17,
+      [
+        "I WILL GO BEFORE THEE",
+        "AND MAKE THE CROOKED",
+        "PLACES STRAIGHT"
+      ],
+      [
+        "STRAIGHT"
+      ],
+      "ISAIAH 45 : 2"
+    ],
+    [
+      17,
+      25,
+      [
+        "I WILL BREAK IN PIECES",
+        "THE GATES OF BRASS",
+        "AND CUT IN SUNDER",
+        "THE BARS OF IRON"
+      ],
+      [
+        "BREAK"
+      ],
+      "ISAIAH 45 : 2"
+    ],
+    [
+      25,
+      34,
+      [
+        "AND I WILL GIVE THEE",
+        "THE TREASURES OF DARKNESS",
+        "AND HIDDEN RICHES",
+        "OF SECRET PLACES"
+      ],
+      [
+        "TREASURES"
+      ],
+      "ISAIAH 45 : 3"
+    ],
+    [
+      34,
+      43,
+      [
+        "THAT THOU MAYEST KNOW",
+        "THAT I THE LORD",
+        "WHICH CALL THEE BY THY NAME",
+        "AM THE GOD OF ISRAEL"
+      ],
+      [
+        "LORD"
+      ],
+      "ISAIAH 45 : 3"
+    ],
+    [
+      43,
+      50,
+      [
+        "LORD GO BEFORE US TODAY",
+        "AND SHATTER EVERY OBSTACLE",
+        "IN OUR DAILY LABOR"
+      ],
+      [
+        "SHATTER"
+      ],
+      "STEWARDSHIP PRAYER"
+    ],
+    [
+      50,
+      57,
+      [
+        "UNCOVER THE HIDDEN WISDOM",
+        "TO STEWARD OUR HOUSEHOLD",
+        "IN JESUS NAME AMEN",
+        "SUBSCRIBE TO WALK",
+        "IN GODS DAILY PROVISION"
+      ],
+      [
+        "PROVISION"
+      ],
+      "DAILY PROVISION"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you stand before an impossible barrier",
+      "kind": "phrase",
+      "words": [
+        "IMPOSSIBLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "make the crooked places straight",
+      "kind": "phrase",
+      "words": [
+        "STRAIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "break in pieces the gates of brass",
+      "kind": "phrase",
+      "words": [
+        "BREAK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "give thee the treasures of darkness",
+      "kind": "phrase",
+      "words": [
+        "TREASURES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "which call thee by thy name",
+      "kind": "phrase",
+      "words": [
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "shatter every obstacle in our daily labor",
+      "kind": "phrase",
+      "words": [
+        "SHATTER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "steward our household",
+      "kind": "phrase",
+      "words": [
+        "PROVISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 45:2-3"
+}
