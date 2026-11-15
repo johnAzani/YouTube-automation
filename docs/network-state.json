@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T03:28:33Z",
+  "generated_at": "2026-11-15T03:31:27Z",
   "monitor_generated_at": "2026-11-15T02:46:36.864560+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 251,
-    "published_longform": 110,
-    "published_shorts": 141,
-    "public_total": 249,
-    "queued_longform": 54,
-    "queued_shorts": 67,
+    "published_total": 253,
+    "published_longform": 111,
+    "published_shorts": 142,
+    "public_total": 251,
+    "queued_longform": 53,
+    "queued_shorts": 66,
     "automations_ok": 12,
     "automations_total": 12,
     "network_healthy": true
@@ -237,33 +237,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 26,
-        "published_longform": 12,
-        "published_shorts": 14,
-        "thumbnail_pending": 25,
-        "public_total": 26,
-        "queued_longform": 6,
+        "published_total": 28,
+        "published_longform": 13,
+        "published_shorts": 15,
+        "thumbnail_pending": 27,
+        "public_total": 28,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTROMANS8V37",
-        "title": "Pray This Romans 8:37 Midnight Prayer | Beneath The Stars #Shorts",
-        "format": "short",
-        "youtube_video_id": "CSwiu1L2mWs",
-        "watch_url": "https://www.youtube.com/shorts/CSwiu1L2mWs",
-        "published_on": "2026-11-14",
-        "published_at": "2026-11-14T20:10:49Z"
-      },
-      "next_queued_longform": {
         "id": "0212",
         "title": "The Battle Is Not Yours: 2 Chronicles 20:15-22 Midnight Prayer",
-        "words": 1610,
+        "format": "longform",
+        "youtube_video_id": "-bljoTq5Lm0",
+        "watch_url": "https://youtu.be/-bljoTq5Lm0",
+        "published_on": "2026-11-15",
+        "published_at": "2026-11-15T03:30:17Z"
+      },
+      "next_queued_longform": {
+        "id": "0213",
+        "title": "Midnight Prayer When All Seems Dark: Psalm 18:28-29",
+        "words": 2006,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightruth3v8",
-        "scripture": "Ruth 3:8-11",
+        "short": "short-midnightjudges16v3",
+        "scripture": "Judges 16:3",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -692,6 +692,30 @@
   ],
   "videos": [
     {
+      "id": "0212",
+      "slug": "2-chronicles-20-midnight-prayer-the-midnight-watch",
+      "file": "0212-2-chronicles-20-midnight-prayer-the-midnight-watch.md",
+      "title": "The Battle Is Not Yours: 2 Chronicles 20:15-22 Midnight Prayer",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T03:30:17Z",
+      "youtube_video_id": "-bljoTq5Lm0",
+      "watch_url": "https://youtu.be/-bljoTq5Lm0",
+      "youtu_be_url": "https://youtu.be/-bljoTq5Lm0",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/-bljoTq5Lm0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/-bljoTq5Lm0/hqdefault.jpg",
+      "thumb_text": "GOD FIGHTS FOR YOU",
+      "thumbnail_pending": true,
+      "duration_label": "~11 min",
+      "words": 1610
+    },
+    {
       "id": "0606",
       "slug": "2-thessalonians-3-3-daily-prayer",
       "file": "0606-2-thessalonians-3-3-daily-prayer.md",
@@ -834,6 +858,30 @@
       "thumbnail_pending": false,
       "duration_label": "59s",
       "words": 608
+    },
+    {
+      "id": "SHORT-MIDNIGHTRUTH3V8",
+      "slug": "short-midnightruth3v8-midnight-prayer",
+      "file": "short-midnightruth3v8-midnight-prayer.md",
+      "title": "Pray This Ruth 3:8-11 Midnight Prayer | The Midnight Watch #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T02:19:54Z",
+      "youtube_video_id": "MZ9VgJOlFyQ",
+      "watch_url": "https://www.youtube.com/shorts/MZ9VgJOlFyQ",
+      "youtu_be_url": "https://youtu.be/MZ9VgJOlFyQ",
+      "shorts_url": "https://www.youtube.com/shorts/MZ9VgJOlFyQ",
+      "studio_url": "https://studio.youtube.com/video/MZ9VgJOlFyQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/MZ9VgJOlFyQ/hqdefault.jpg",
+      "thumb_text": "STAND IN PRAYER \u00b7 AT MIDNIGHT",
+      "thumbnail_pending": true,
+      "duration_label": "53s",
+      "words": 584
     },
     {
       "id": "SHORT-FAMILYNUMBERS6V24",
@@ -7005,19 +7053,6 @@
         "words": 1374
       },
       {
-        "id": "0212",
-        "slug": "2-chronicles-20-midnight-prayer-the-midnight-watch",
-        "file": "0212-2-chronicles-20-midnight-prayer-the-midnight-watch.md",
-        "title": "The Battle Is Not Yours: 2 Chronicles 20:15-22 Midnight Prayer",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1610
-      },
-      {
         "id": "0213",
         "slug": "psalm-18-28-29-night-prayer",
         "file": "0213-psalm-18-28-29-night-prayer.md",
@@ -7641,17 +7676,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightruth3v8",
-        "file": "0210-short-midnightruth3v8.yml",
-        "companion_longform_id": "0210",
-        "scripture": "Ruth 3:8-11",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightjudges16v3",

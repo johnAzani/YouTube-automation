@@ -2,7 +2,7 @@
 id: '0212'
 title: "The Battle Is Not Yours: 2 Chronicles 20:15-22 Midnight Prayer"
 slug: 2-chronicles-20-midnight-prayer-the-midnight-watch
-status: approved
+status: published
 channel: prayer4
 privacy: public
 format: longform
@@ -76,6 +76,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-15"
+published_at: "2026-11-15T03:30:17Z"
+youtube_video_id: "-bljoTq5Lm0"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Rising at the Midnight Hour
