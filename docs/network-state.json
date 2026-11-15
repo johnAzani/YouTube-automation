@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T11:36:36Z",
+  "generated_at": "2026-11-15T12:38:48Z",
   "monitor_generated_at": "2026-11-15T06:50:48.927372+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 273,
-    "published_longform": 114,
+    "published_total": 274,
+    "published_longform": 115,
     "published_shorts": 159,
-    "public_total": 271,
-    "queued_longform": 65,
+    "public_total": 272,
+    "queued_longform": 64,
     "queued_shorts": 95,
     "automations_ok": 12,
     "automations_total": 12,
@@ -645,28 +645,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 11,
-        "published_longform": 4,
+        "published_total": 12,
+        "published_longform": 5,
         "published_shorts": 7,
-        "thumbnail_pending": 11,
-        "public_total": 11,
-        "queued_longform": 6,
+        "thumbnail_pending": 12,
+        "public_total": 12,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 10
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDJEREMIAH29V13",
-        "title": "Pray This Jeremiah 29:13 Prayer for God's Guidance | This Moment #Shorts",
-        "format": "short",
-        "youtube_video_id": "2IHcpfkc6OI",
-        "watch_url": "https://www.youtube.com/shorts/2IHcpfkc6OI",
-        "published_on": "2026-11-15",
-        "published_at": "2026-11-15T07:08:29Z"
-      },
-      "next_queued_longform": {
         "id": "0804",
         "title": "Prayer for Guidance When You Feel Lost: Psalm 32:8 | The Guided Path",
-        "words": 1446,
+        "format": "longform",
+        "youtube_video_id": "prJL7Y3DurU",
+        "watch_url": "https://youtu.be/prJL7Y3DurU",
+        "published_on": "2026-11-15",
+        "published_at": "2026-11-15T12:37:40Z"
+      },
+      "next_queued_longform": {
+        "id": "0805",
+        "title": "When You Need to Know the Next Step: Isaiah 30:21 | The Guided Path",
+        "words": 1337,
         "status": "approved"
       },
       "next_queued_short": {
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0804",
+      "slug": "psalm-32-8-i-will-instruct-thee-and-teach-thee",
+      "file": "0804-psalm-32-8-i-will-instruct-thee-and-teach-thee.md",
+      "title": "Prayer for Guidance When You Feel Lost: Psalm 32:8 | The Guided Path",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T12:37:40Z",
+      "youtube_video_id": "prJL7Y3DurU",
+      "watch_url": "https://youtu.be/prJL7Y3DurU",
+      "youtu_be_url": "https://youtu.be/prJL7Y3DurU",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/prJL7Y3DurU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/prJL7Y3DurU/hqdefault.jpg",
+      "thumb_text": "I WILL GUIDE",
+      "thumbnail_pending": true,
+      "duration_label": "~10 min",
+      "words": 1446
+    },
     {
       "id": "SHORT-GARDENPSALM47V1",
       "slug": "short-gardenpsalm47v1-thanksgiving-prayer",
@@ -8022,19 +8046,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1919
-      },
-      {
-        "id": "0804",
-        "slug": "psalm-32-8-i-will-instruct-thee-and-teach-thee",
-        "file": "0804-psalm-32-8-i-will-instruct-thee-and-teach-thee.md",
-        "title": "Prayer for Guidance When You Feel Lost: Psalm 32:8 | The Guided Path",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1446
       },
       {
         "id": "0805",
