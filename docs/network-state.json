@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T23:37:28Z",
+  "generated_at": "2026-11-15T23:37:57Z",
   "monitor_generated_at": "2026-11-15T22:59:34.787450+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 304,
+    "published_total": 305,
     "published_longform": 120,
-    "published_shorts": 184,
-    "public_total": 302,
+    "published_shorts": 185,
+    "public_total": 303,
     "queued_longform": 59,
-    "queued_shorts": 70,
+    "queued_shorts": 69,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -441,23 +441,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 25,
+        "published_total": 26,
         "published_longform": 11,
-        "published_shorts": 14,
+        "published_shorts": 15,
         "thumbnail_pending": 5,
-        "public_total": 25,
+        "public_total": 26,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONPROVERBS3V9",
-        "title": "Pray This Proverbs 3:9-10 Prayer for Open Doors & Provision | Kjv Wisdom #Shorts",
+        "id": "SHORT-PROVISIONPSALM84V11",
+        "title": "Pray This Psalm 84:11 Prayer for Open Doors & Provision | Walk In God'S Grace #Shorts",
         "format": "short",
-        "youtube_video_id": "lBNdMaeQc2o",
-        "watch_url": "https://www.youtube.com/shorts/lBNdMaeQc2o",
+        "youtube_video_id": "1z70CMZ9zCg",
+        "watch_url": "https://www.youtube.com/shorts/1z70CMZ9zCg",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T20:01:04Z"
+        "published_at": "2026-11-15T23:37:12Z"
       },
       "next_queued_longform": {
         "id": "0511",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionpsalm84v11",
-        "scripture": "Psalm 84:11",
+        "short": "short-provisiongenesis22v14",
+        "scripture": "Genesis 22:14",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONPSALM84V11",
+      "slug": "short-provisionpsalm84v11-stewardship-prayer",
+      "file": "short-provisionpsalm84v11-stewardship-prayer.md",
+      "title": "Pray This Psalm 84:11 Prayer for Open Doors & Provision | Walk In God'S Grace #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T23:37:12Z",
+      "youtube_video_id": "1z70CMZ9zCg",
+      "watch_url": "https://www.youtube.com/shorts/1z70CMZ9zCg",
+      "youtu_be_url": "https://youtu.be/1z70CMZ9zCg",
+      "shorts_url": "https://www.youtube.com/shorts/1z70CMZ9zCg",
+      "studio_url": "https://studio.youtube.com/video/1z70CMZ9zCg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/1z70CMZ9zCg/hqdefault.jpg",
+      "thumb_text": "THE PROVISION TABLE \u00b7 DAILY PROVISION PRAYER",
+      "thumbnail_pending": false,
+      "duration_label": "58s",
+      "words": 633
+    },
     {
       "id": "SHORT-HEALINGPSALM41V1",
       "slug": "short-healingpsalm41v1-restoration-prayer",
@@ -9186,17 +9210,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-provisionpsalm84v11",
-        "file": "0508-short-provisionpsalm84v11.yml",
-        "companion_longform_id": "0508",
-        "scripture": "Psalm 84:11",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisiongenesis22v14",
