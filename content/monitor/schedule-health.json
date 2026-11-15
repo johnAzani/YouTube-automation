@@ -44,8 +44,8 @@
       "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-15T06:28:16.030171+00:00",
-  "last_run_at": "2026-11-15T06:26:58+00:00",
+  "generated_at": "2026-11-15T06:48:01.706359+00:00",
+  "last_run_at": "2026-11-15T06:47:10+00:00",
   "on_time": [
     {
       "late_minutes": 110,
@@ -69,13 +69,13 @@
       "workflow": "monitor.yml"
     },
     {
-      "late_minutes": 99,
+      "late_minutes": 0,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-15T05:26:45+00:00",
-      "slot": "2026-11-15T03:47:00+00:00",
+      "ran_at": "2026-11-15T06:47:10+00:00",
+      "slot": "2026-11-15T06:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     }
   ],
-  "silence_minutes": 1,
+  "silence_minutes": 0,
   "warn_minutes": 120
 }
