@@ -1,0 +1,64 @@
+name: Tests on main (daily)
+
+# Runs the unit tests against `main` as it stands, once a day.
+#
+# Why: the tests only ran when code was pushed. The commits that add to the
+# queue, publish a video or record the monitor's state carry `[skip ci]`, and
+# several tests read what those commits change (how many planned passages each
+# channel has left, whether queue files and receipts agree). So `main` could
+# start failing its own tests with nobody told. On 15 November 2026 The Provision
+# Table had 14 planned passages left against a floor of 15, and it was found only
+# because an unrelated pull request failed on it (PR #444).
+#
+# How the owner hears about a failure: this workflow has a schedule, so the
+# automation monitor already watches it. A failed run is reported as FAILING in
+# the tracking issue the watchdog keeps ("pipeline needs attention"), and the
+# issue closes itself after the next run that passes. Nothing here writes to the
+# repository or holds a credential.
+#
+# It also runs on every push to `main` that is not `[skip ci]`, so the merge that
+# fixes a failure clears it at once instead of a day later. It never runs on a
+# session branch: every run of this workflow is a statement about `main`, and
+# the monitor reads them all.
+on:
+  schedule:
+    - cron: "52 4 * * *"   # 5:52am Nigeria time, before the 7:14am production run
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tests-on-main
+  cancel-in-progress: false
+
+jobs:
+  tests:
+    name: Unit tests on main
+    runs-on: ubuntu-latest
+    # The suite takes about 4 minutes split across the runner's processors, and
+    # took up to 26 in one process. The limit covers the slow case.
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - uses: ./.github/actions/setup-render-deps
+
+      - name: Unit tests
+        run: |
+          python -m pip install pytest pytest-xdist
+          bash scripts/ci_unit_tests.sh
+
+      - name: Say what a failure means
+        if: ${{ failure() }}
+        run: |
+          echo "::error title=main is failing its own tests::The next pull request will show a failed check for this reason and not for its own change. The failing tests are named in the annotation 'Unit test failure' on this run."

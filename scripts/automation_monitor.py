@@ -360,6 +360,8 @@ EFFECTS = {
     "keepalive.yml": "re-arms scheduled workflows",
     "automation-health.yml": "reports and files stalls",
     "monitor.yml": "this report",
+    "tests-on-main.yml": "proves main still passes its own unit tests (queue and "
+                         "publish commits skip them)",
 }
 
 

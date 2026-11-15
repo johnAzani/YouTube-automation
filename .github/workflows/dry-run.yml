@@ -60,40 +60,14 @@ jobs:
       # tests/ was never wired into CI before — this is the job that runs it.
       # test_queue_integrity is the guard that catches an out-of-niche job in content/queue/.
       #
-      # `-n auto` starts one test process per processor. `--dist loadfile` keeps
-      # every test of a file in the same process, in file order, so tests that
-      # share a module-level fixture or a file on disk behave as they do in one
-      # process.
-      #
-      # A test that fails while the suite is split is run again on its own. If it
-      # still fails, the job fails. If it passes alone, the test leans on
-      # something another test file touches: the job passes and says which test
-      # it was, so a red check always means a real failure. Exit code 1 means
-      # "tests failed"; any other non-zero code (a collection error, a crashed
-      # run) fails the job without a second attempt.
+      # The command lives in scripts/ci_unit_tests.sh so that this job and the
+      # daily run on `main` (tests-on-main.yml) cannot drift apart: it splits the
+      # suite across the runner's processors and runs a failed test again alone
+      # before failing.
       - name: Unit tests
         run: |
           python -m pip install pytest pytest-xdist
-          set +e
-          python -m pytest -q --tb=short -n auto --dist loadfile 2>&1 | tee pytest.log
-          rc=${PIPESTATUS[0]}
-          if [ "$rc" -eq 1 ]; then
-            split_failures="$(grep -E '^(FAILED|ERROR) ' pytest.log | awk '{print $2}' | head -n 20 | tr '\n' ' ')"
-            echo "Running the failed tests again in one process: ${split_failures}"
-            python -m pytest -q --tb=short --last-failed --last-failed-no-failures none 2>&1 | tee pytest-alone.log
-            rc=${PIPESTATUS[0]}
-            if [ "$rc" -eq 0 ]; then
-              echo "::warning title=Tests passed only when run alone::${split_failures:-see pytest.log}"
-            else
-              cp pytest-alone.log pytest.log
-            fi
-          fi
-          set -e
-          if [ "$rc" -ne 0 ]; then
-            summary="$(grep -E '^(FAILED|ERROR|E )' pytest.log | head -n 20 | tr '\n' ' | ')"
-            echo "::error title=Unit test failure::${summary:-see pytest.log}"
-            exit "$rc"
-          fi
+          bash scripts/ci_unit_tests.sh
 
       # Hermetic: compares image-search/LICENSES.yml against the files on disk. Fails if a
       # still was added without a ledger entry, or if a file's bytes changed under a
