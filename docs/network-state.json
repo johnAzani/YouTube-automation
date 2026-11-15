@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T06:56:19Z",
+  "generated_at": "2026-11-15T06:56:56Z",
   "monitor_generated_at": "2026-11-15T06:50:48.927372+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 256,
+    "published_total": 257,
     "published_longform": 111,
-    "published_shorts": 145,
-    "public_total": 254,
+    "published_shorts": 146,
+    "public_total": 255,
     "queued_longform": 63,
-    "queued_shorts": 98,
+    "queued_shorts": 97,
     "automations_ok": 12,
     "automations_total": 12,
     "network_healthy": true
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 36,
+        "published_total": 37,
         "published_longform": 16,
-        "published_shorts": 20,
+        "published_shorts": 21,
         "thumbnail_pending": 0,
-        "public_total": 36,
+        "public_total": 37,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYZECHARIAH4V6",
-        "title": "Say This Zechariah 4:6 Prayer at Noon | Zechariah 4:6 #Shorts",
+        "id": "SHORT-MIDDAYPSALM29V11",
+        "title": "Say This Psalm 29:11 Prayer at Noon | Psalm 29:11 #Shorts",
         "format": "short",
-        "youtube_video_id": "hpyNX1FHz58",
-        "watch_url": "https://www.youtube.com/shorts/hpyNX1FHz58",
+        "youtube_video_id": "EZXXz0ZSOag",
+        "watch_url": "https://www.youtube.com/shorts/EZXXz0ZSOag",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T02:20:01Z"
+        "published_at": "2026-11-15T06:56:02Z"
       },
       "next_queued_longform": {
         "id": "0091",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaypsalm29v11",
-        "scripture": "Psalm 29:11",
+        "short": "short-middaypsalm31v24",
+        "scripture": "Psalm 31:24",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYPSALM29V11",
+      "slug": "short-middaypsalm29v11-midday-prayer",
+      "file": "short-middaypsalm29v11-midday-prayer.md",
+      "title": "Say This Psalm 29:11 Prayer at Noon | Psalm 29:11 #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T06:56:02Z",
+      "youtube_video_id": "EZXXz0ZSOag",
+      "watch_url": "https://www.youtube.com/shorts/EZXXz0ZSOag",
+      "youtu_be_url": "https://youtu.be/EZXXz0ZSOag",
+      "shorts_url": "https://www.youtube.com/shorts/EZXXz0ZSOag",
+      "studio_url": "https://studio.youtube.com/video/EZXXz0ZSOag/edit",
+      "thumb_url": "https://i.ytimg.com/vi/EZXXz0ZSOag/hqdefault.jpg",
+      "thumb_text": "THE LORD WILL \u00b7 GIVE STRENGTH",
+      "thumbnail_pending": false,
+      "duration_label": "44s",
+      "words": 572
+    },
     {
       "id": "SHORT-FAMILYMARK10V13",
       "slug": "short-familymark10v13-household-prayer",
@@ -7756,17 +7780,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-middaypsalm29v11",
-        "file": "0000-short-middaypsalm29v11.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 29:11",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaypsalm31v24",
