@@ -749,11 +749,16 @@ goes before you until evening falls and brings your labor to peaceful completion
             self.assertEqual(closed, [248, 78])
 
     def test_every_scheduled_channel_maintains_deep_roadmap_headroom(self):
-        """Every live channel must keep >=15 unqueued/unpublished scriptures and unique Short keys."""
+        """Every live channel must keep >=15 unqueued/unpublished scriptures and unique Short keys.
+
+        The floor lives in scripts/roadmap_headroom.py, which warns the owner a
+        week before any channel reaches it.
+        """
         from pipeline.channel_capabilities import brand_for
         from pipeline.channels import scheduled_channels
         from pipeline.gemini_brain import GeminiBrain, extract_scripture_reference, short_key_for_doc
         from scripts.continuous_research import roadmap_for_channel
+        from scripts.roadmap_headroom import FLOOR
 
         existing_ids = {p.name[:4] for p in (ROOT / "content" / "queue").glob("[0-9]*.md")} | {
             p.name[:4] for p in (ROOT / "content" / "published").glob("[0-9]*.md")
@@ -765,7 +770,7 @@ goes before you until evening falls and brings your labor to peaceful completion
             eligible = [row for row in rm if row["id"] not in existing_ids]
             self.assertGreaterEqual(
                 len(eligible),
-                15,
+                FLOOR,
                 f"{cid} has only {len(eligible)} unqueued scriptures left in its roadmap",
             )
             brain = GeminiBrain(api_key="", channel_id=cid)
