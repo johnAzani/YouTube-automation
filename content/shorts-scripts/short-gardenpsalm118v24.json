@@ -1,0 +1,310 @@
+{
+  "key": "short-gardenpsalm118v24",
+  "channel": "prayer9",
+  "psalm": 118,
+  "title": [
+    "THIS IS THE DAY",
+    "REJOICE AND BE GLAD"
+  ],
+  "poster": [
+    "THIS IS THE DAY",
+    "WHICH THE LORD",
+    "HATH MADE",
+    "PSALM 118:24"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit morning forest glade warm rays",
+    "misty golden morning river quiet valley",
+    "sunlight filtering through autumn woodland canopy",
+    "golden dawn light over peaceful calm meadow",
+    "gentle sunlight streaming through pine forest mist",
+    "calm mirror lake misty sunrise golden hour",
+    "soft morning sunlight over green rolling hills"
+  ],
+  "scenes": [
+    {
+      "a": "wondering how you will face today",
+      "img": "short-gardenpsalm118v24-scene-01.jpg",
+      "kicker": "PSALM 118:24",
+      "sub": "A PRAYER FOR THIS DAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "This is the day which the LORD hath made",
+      "img": "short-gardenpsalm118v24-scene-02.jpg",
+      "kicker": "PSALM 118:24",
+      "sub": "GOD HATH MADE IT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "surrounding us with unearned grace",
+      "img": "short-gardenpsalm118v24-scene-03.jpg",
+      "kicker": "PSALM 118:24",
+      "sub": "UNEARNED GRACE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "this moment belongs to You",
+      "img": "short-gardenpsalm118v24-scene-04.jpg",
+      "kicker": "PSALM 118:24",
+      "sub": "THIS MOMENT IS HIS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "We choose praise over panic",
+      "img": "short-gardenpsalm118v24-scene-05.jpg",
+      "kicker": "PSALM 118:24",
+      "sub": "PRAISE OVER PANIC",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "honest gratitude for Your quiet kindness",
+      "img": "short-gardenpsalm118v24-scene-06.jpg",
+      "kicker": "PSALM 118:24",
+      "sub": "HONEST GRATITUDE",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "walk in daily thanksgiving",
+      "img": "short-gardenpsalm118v24-scene-07.jpg",
+      "kicker": "THE PRAISE GARDEN",
+      "sub": "ENTER HIS GATES",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If you are standing over your morning coffee wondering how you will face today, listen."
+    ],
+    [
+      6,
+      14,
+      "God's Word declares, This is the day which the LORD hath made; we will rejoice and be glad in it."
+    ],
+    [
+      14,
+      21,
+      "Father, thank You for waking us into this exact morning and surrounding us with unearned grace."
+    ],
+    [
+      21,
+      28,
+      "When anxiety bids us to worry about tomorrow, remind us that this moment belongs to You."
+    ],
+    [
+      28,
+      35,
+      "We choose praise over panic, trusting that Your hand guides every step we take today."
+    ],
+    [
+      35,
+      42,
+      "Fill our hearts with honest gratitude for Your quiet kindness and constant presence."
+    ],
+    [
+      42,
+      48,
+      "Subscribe to join The Praise Garden as we walk in daily thanksgiving."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "STANDING IN THE QUIET MORNING",
+        "WONDERING HOW TO FACE TODAY",
+        "LISTEN TO HIS PROMISE"
+      ],
+      [
+        "LISTEN"
+      ],
+      "PSALM 118 : 24"
+    ],
+    [
+      6,
+      14,
+      [
+        "THIS IS THE DAY",
+        "WHICH THE LORD HATH MADE",
+        "WE WILL REJOICE AND BE GLAD"
+      ],
+      [
+        "REJOICE"
+      ],
+      "PSALM 118 : 24"
+    ],
+    [
+      14,
+      21,
+      [
+        "THANK YOU FOR THIS MORNING",
+        "SURROUNDING US WITH",
+        "UNEARNED GRACE TODAY"
+      ],
+      [
+        "UNEARNED GRACE"
+      ],
+      "PSALM 118 : 24"
+    ],
+    [
+      21,
+      28,
+      [
+        "WHEN ANXIETY BIDS US WORRY",
+        "THIS MOMENT BELONGS TO YOU",
+        "REST IN HIS PEACE"
+      ],
+      [
+        "THIS MOMENT"
+      ],
+      "PSALM 118 : 24"
+    ],
+    [
+      28,
+      35,
+      [
+        "WE CHOOSE PRAISE OVER PANIC",
+        "TRUSTING YOUR GUIDING HAND",
+        "IN EVERY SINGLE STEP"
+      ],
+      [
+        "PRAISE OVER PANIC"
+      ],
+      "PSALM 118 : 24"
+    ],
+    [
+      35,
+      42,
+      [
+        "FILL OUR HEARTS WITH GRATITUDE",
+        "FOR YOUR QUIET KINDNESS",
+        "AND CONSTANT PRESENCE"
+      ],
+      [
+        "GRATITUDE"
+      ],
+      "PSALM 118 : 24"
+    ],
+    [
+      42,
+      48,
+      [
+        "WALK IN DAILY THANKSGIVING",
+        "JOIN THE PRAISE GARDEN",
+        "ENTER HIS GATES"
+      ],
+      [
+        "THANKSGIVING"
+      ],
+      "PSALM 118 : 24"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "wondering how you will face today",
+      "kind": "phrase",
+      "words": [
+        "WONDERING",
+        "FACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "This is the day which the LORD hath made",
+      "kind": "phrase",
+      "words": [
+        "DAY",
+        "LORD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "surrounding us with unearned grace",
+      "kind": "phrase",
+      "words": [
+        "UNEARNED",
+        "GRACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "this moment belongs to You",
+      "kind": "phrase",
+      "words": [
+        "MOMENT",
+        "YOU"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We choose praise over panic",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "PANIC"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "honest gratitude for Your quiet kindness",
+      "kind": "phrase",
+      "words": [
+        "HONEST",
+        "GRATITUDE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "walk in daily thanksgiving",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "THANKSGIVING"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 118:24"
+}
