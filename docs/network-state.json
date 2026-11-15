@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-15T05:33:42Z",
-  "monitor_generated_at": "2026-11-15T05:32:10.588575+00:00",
+  "generated_at": "2026-11-15T05:52:51Z",
+  "monitor_generated_at": "2026-11-15T05:51:15.370794+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -12,9 +12,9 @@
     "published_longform": 111,
     "published_shorts": 142,
     "public_total": 251,
-    "queued_longform": 53,
-    "queued_shorts": 66,
-    "automations_ok": 11,
+    "queued_longform": 56,
+    "queued_shorts": 84,
+    "automations_ok": 12,
     "automations_total": 12,
     "network_healthy": true
   },
@@ -40,7 +40,7 @@
         "public_total": 44,
         "queued_longform": 11,
         "queued_other": 5,
-        "queued_shorts": 6
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-PSALM56V3",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm94v19",
-        "scripture": "Psalm 94:19",
+        "short": "short-isaiah30v15",
+        "scripture": "Isaiah 30:15",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -108,7 +108,7 @@
         "public_total": 51,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-MORNINGPSALM23V1",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm121v1",
-        "scripture": "Psalm 121:1-2",
+        "short": "short-morning2corinthians5v17",
+        "scripture": "2 Corinthians 5:17",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -174,9 +174,9 @@
         "published_shorts": 20,
         "thumbnail_pending": 0,
         "public_total": 36,
-        "queued_longform": 5,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-MIDDAYZECHARIAH4V6",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaygalatians6v9",
-        "scripture": "Galatians 6:9",
+        "short": "short-middaypsalm29v11",
+        "scripture": "Psalm 29:11",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -242,9 +242,9 @@
         "published_shorts": 15,
         "thumbnail_pending": 27,
         "public_total": 28,
-        "queued_longform": 5,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "0212",
@@ -262,16 +262,16 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightjudges16v3",
-        "scripture": "Judges 16:3",
+        "short": "short-midnightjoel2v25",
+        "scripture": "Joel 2:25",
         "target_window_utc": "23:14",
         "status": "approved"
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-14",
+        "as_of": "2026-11-15",
         "measured_longform_videos": 0,
-        "total_longform_videos": 11,
+        "total_longform_videos": 12,
         "top_themes": [
           {
             "theme": "general_prayer",
@@ -284,8 +284,8 @@
             "top_scripture": ""
           },
           {
-            "theme": "daily_guidance_wisdom",
-            "videos": 2,
+            "theme": "midday_strength_endurance",
+            "videos": 1,
             "top_scripture": ""
           }
         ]
@@ -310,9 +310,9 @@
         "published_shorts": 10,
         "thumbnail_pending": 19,
         "public_total": 19,
-        "queued_longform": 5,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-FAMILYNUMBERS6V24",
@@ -330,16 +330,16 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familydeuteronomy6v6",
-        "scripture": "Deuteronomy 6:6-7",
+        "short": "short-familymark10v13",
+        "scripture": "Mark 10:13-16",
         "target_window_utc": "17:14",
         "status": "approved"
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-14",
+        "as_of": "2026-11-15",
         "measured_longform_videos": 0,
-        "total_longform_videos": 8,
+        "total_longform_videos": 9,
         "top_themes": [
           {
             "theme": "general_prayer",
@@ -347,12 +347,12 @@
             "top_scripture": ""
           },
           {
-            "theme": "blessing_benediction",
+            "theme": "anxiety_peace",
             "videos": 1,
             "top_scripture": ""
           },
           {
-            "theme": "midday_strength_endurance",
+            "theme": "blessing_benediction",
             "videos": 1,
             "top_scripture": ""
           }
@@ -405,9 +405,9 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-14",
+        "as_of": "2026-11-15",
         "measured_longform_videos": 0,
-        "total_longform_videos": 8,
+        "total_longform_videos": 9,
         "top_themes": [
           {
             "theme": "anxiety_peace",
@@ -416,7 +416,7 @@
           },
           {
             "theme": "peace_rest",
-            "videos": 2,
+            "videos": 3,
             "top_scripture": ""
           },
           {
@@ -473,9 +473,9 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-14",
+        "as_of": "2026-11-15",
         "measured_longform_videos": 0,
-        "total_longform_videos": 8,
+        "total_longform_videos": 9,
         "top_themes": [
           {
             "theme": "general_prayer",
@@ -483,13 +483,13 @@
             "top_scripture": ""
           },
           {
-            "theme": "anxiety_peace",
+            "theme": "midday_strength_endurance",
             "videos": 2,
             "top_scripture": ""
           },
           {
-            "theme": "midday_strength_endurance",
-            "videos": 1,
+            "theme": "anxiety_peace",
+            "videos": 2,
             "top_scripture": ""
           }
         ]
@@ -536,9 +536,9 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-14",
+        "as_of": "2026-11-15",
         "measured_longform_videos": 0,
-        "total_longform_videos": 6,
+        "total_longform_videos": 7,
         "top_themes": [
           {
             "theme": "peace_rest",
@@ -546,13 +546,13 @@
             "top_scripture": ""
           },
           {
-            "theme": "protection",
-            "videos": 3,
+            "theme": "midday_strength_endurance",
+            "videos": 1,
             "top_scripture": ""
           },
           {
-            "theme": "daily_guidance_wisdom",
-            "videos": 1,
+            "theme": "protection",
+            "videos": 4,
             "top_scripture": ""
           }
         ]
@@ -604,7 +604,7 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-14",
+        "as_of": "2026-11-15",
         "measured_longform_videos": 0,
         "total_longform_videos": 5,
         "top_themes": [
@@ -672,13 +672,18 @@
       },
       "feedback": {
         "available": true,
-        "as_of": "2026-11-14",
+        "as_of": "2026-11-15",
         "measured_longform_videos": 0,
-        "total_longform_videos": 3,
+        "total_longform_videos": 4,
         "top_themes": [
           {
             "theme": "daily_guidance_wisdom",
             "videos": 2,
+            "top_scripture": ""
+          },
+          {
+            "theme": "midday_strength_endurance",
+            "videos": 1,
             "top_scripture": ""
           },
           {
@@ -7053,6 +7058,19 @@
         "words": 1374
       },
       {
+        "id": "0096",
+        "slug": "finding-quiet-in-the-midday-rush-psalm-46-10",
+        "file": "0096-finding-quiet-in-the-midday-rush-psalm-46-10.md",
+        "title": "Finding Quiet in the Midday Rush: Psalm 46:10 | The Midday Watch",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1849
+      },
+      {
         "id": "0213",
         "slug": "psalm-18-28-29-night-prayer",
         "file": "0213-psalm-18-28-29-night-prayer.md",
@@ -7118,6 +7136,19 @@
         "words": 1471
       },
       {
+        "id": "0218",
+        "slug": "when-you-need-a-defender-psalm-144",
+        "file": "0218-when-you-need-a-defender-psalm-144.md",
+        "title": "When You Need a Defender: Psalm 144:1-2 | The Midnight Watch",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1251
+      },
+      {
         "id": "0309",
         "slug": "job-1-10-hedge-of-protection-household-prayer",
         "file": "0309-job-1-10-hedge-of-protection-household-prayer.md",
@@ -7181,6 +7212,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 2034
+      },
+      {
+        "id": "0314",
+        "slug": "peace-in-your-marriage-and-home-colossians-3-14-15",
+        "file": "0314-peace-in-your-marriage-and-home-colossians-3-14-15.md",
+        "title": "Peace in Your Marriage and Home: Colossians 3:14-15 | The Family Altar",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1745
       },
       {
         "id": "0409",
@@ -7458,10 +7502,142 @@
     ],
     "shorts": [
       {
+        "short": "short-familymark10v13",
+        "file": "0000-short-familymark10v13.yml",
+        "companion_longform_id": "",
+        "scripture": "Mark 10:13-16",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "17:14"
+      },
+      {
+        "short": "short-familypsalm91v10",
+        "file": "0000-short-familypsalm91v10.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 91:10",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "17:14"
+      },
+      {
+        "short": "short-isaiah30v15",
+        "file": "0000-short-isaiah30v15.yml",
+        "companion_longform_id": "",
+        "scripture": "Isaiah 30:15",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "14:14"
+      },
+      {
+        "short": "short-middaypsalm29v11",
+        "file": "0000-short-middaypsalm29v11.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 29:11",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
+      },
+      {
+        "short": "short-middaypsalm31v24",
+        "file": "0000-short-middaypsalm31v24.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 31:24",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
+      },
+      {
+        "short": "short-middayromans12v12",
+        "file": "0000-short-middayromans12v12.yml",
+        "companion_longform_id": "",
+        "scripture": "Romans 12:12",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
+      },
+      {
+        "short": "short-midnightjoel2v25",
+        "file": "0000-short-midnightjoel2v25.yml",
+        "companion_longform_id": "",
+        "scripture": "Joel 2:25",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "23:14"
+      },
+      {
+        "short": "short-midnightmark11v23",
+        "file": "0000-short-midnightmark11v23.yml",
+        "companion_longform_id": "",
+        "scripture": "Mark 11:23-24",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "23:14"
+      },
+      {
+        "short": "short-morning2corinthians5v17",
+        "file": "0000-short-morning2corinthians5v17.yml",
+        "companion_longform_id": "",
+        "scripture": "2 Corinthians 5:17",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
+      },
+      {
+        "short": "short-morningdeuteronomy31v8",
+        "file": "0000-short-morningdeuteronomy31v8.yml",
+        "companion_longform_id": "",
+        "scripture": "Deuteronomy 31:8",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
+      },
+      {
+        "short": "short-morningmatthew5v14",
+        "file": "0000-short-morningmatthew5v14.yml",
+        "companion_longform_id": "",
+        "scripture": "Matthew 5:14-16",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
+      },
+      {
         "short": "short-morningpsalm121v1",
         "file": "0000-short-morningpsalm121v1.yml",
         "companion_longform_id": "",
         "scripture": "Psalm 121:1-2",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
+      },
+      {
+        "short": "short-morningpsalm37v4",
+        "file": "0000-short-morningpsalm37v4.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 37:4",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",
@@ -7478,6 +7654,39 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
+      },
+      {
+        "short": "short-philippians4v8",
+        "file": "0000-short-philippians4v8.yml",
+        "companion_longform_id": "",
+        "scripture": "Philippians 4:8",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "14:14"
+      },
+      {
+        "short": "short-psalm139v7",
+        "file": "0000-short-psalm139v7.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 139:7-10",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "14:14"
+      },
+      {
+        "short": "short-psalm62v1",
+        "file": "0000-short-psalm62v1.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 62:1-2",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm94v19",
@@ -7678,6 +7887,17 @@
         "target_window_utc": "12:14"
       },
       {
+        "short": "short-middaypsalm46v10",
+        "file": "0096-short-middaypsalm46v10.yml",
+        "companion_longform_id": "0096",
+        "scripture": "Psalm 46:10",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
+      },
+      {
         "short": "short-midnightjudges16v3",
         "file": "0211-short-midnightjudges16v3.yml",
         "companion_longform_id": "0211",
@@ -7755,6 +7975,17 @@
         "target_window_utc": "23:14"
       },
       {
+        "short": "short-midnightpsalm144v1",
+        "file": "0218-short-midnightpsalm144v1.yml",
+        "companion_longform_id": "0218",
+        "scripture": "Psalm 144:1-2",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "23:14"
+      },
+      {
         "short": "short-familydeuteronomy6v6",
         "file": "0307-short-familydeuteronomy6v6.yml",
         "companion_longform_id": "0307",
@@ -7825,6 +8056,17 @@
         "file": "0313-short-familyproverbs22v6.yml",
         "companion_longform_id": "0313",
         "scripture": "Proverbs 22:6",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "17:14"
+      },
+      {
+        "short": "short-familycolossians3v14",
+        "file": "0314-short-familycolossians3v14.yml",
+        "companion_longform_id": "0314",
+        "scripture": "Colossians 3:14-15",
         "channel": "prayer5",
         "channel_name": "The Family Altar",
         "status": "approved",
@@ -8189,11 +8431,11 @@
     {
       "workflow": "automation-health.yml",
       "name": "automation-health",
-      "verdict": "SELF-REPORT",
-      "severity": "info",
-      "detail": "this is the check itself; its previous run ended failure 2.0h ago, which is its own verdict and not independent evidence",
-      "last_conclusion": "failure",
-      "last_run": "2026-11-15T03:32:22+00:00",
+      "verdict": "OK",
+      "severity": "ok",
+      "detail": "last success 3.3h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-15T05:50:30+00:00",
       "last_success": "2026-11-15T02:31:23+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
@@ -8205,7 +8447,7 @@
       "name": "Channel analytics (watch hours, sources, retention)",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 0.4h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-15T05:27:42+00:00",
       "last_success": "2026-11-15T05:27:42+00:00",
@@ -8219,7 +8461,7 @@
       "name": "Autonomous Comment Replies",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 6.6h ago",
+      "detail": "last success 6.9h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T22:58:19+00:00",
       "last_success": "2026-11-14T22:58:19+00:00",
@@ -8233,7 +8475,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 76.0h ago",
+      "detail": "last success 76.3h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-12T01:32:35+00:00",
       "last_success": "2026-11-12T01:32:35+00:00",
@@ -8247,7 +8489,7 @@
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 19.1h ago",
+      "detail": "last success 19.5h ago",
       "last_conclusion": "",
       "last_run": "2026-11-15T05:27:41+00:00",
       "last_success": "2026-11-14T10:24:10+00:00",
@@ -8261,10 +8503,10 @@
       "name": "Growth autopilot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 20.6h ago",
-      "last_conclusion": "",
+      "detail": "last success 0.4h ago",
+      "last_conclusion": "success",
       "last_run": "2026-11-15T05:27:39+00:00",
-      "last_success": "2026-11-14T08:55:29+00:00",
+      "last_success": "2026-11-15T05:27:39+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -8275,7 +8517,7 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 137.7h ago",
+      "detail": "last success 138.0h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-09T11:48:56+00:00",
       "last_success": "2026-11-09T11:48:56+00:00",
@@ -8289,7 +8531,7 @@
       "name": "Weekly metrics snapshot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 2.0h ago",
+      "detail": "last success 2.3h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-15T03:32:22+00:00",
       "last_success": "2026-11-15T03:32:22+00:00",
@@ -8303,9 +8545,9 @@
       "name": "Automation monitor",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 2.8h ago",
+      "detail": "last success 3.1h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-15T05:31:04+00:00",
+      "last_run": "2026-11-15T05:50:30+00:00",
       "last_success": "2026-11-15T02:45:49+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
@@ -8317,7 +8559,7 @@
       "name": "Produce video",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 2.9h ago",
+      "detail": "last success 3.2h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-15T02:37:21+00:00",
       "last_success": "2026-11-15T02:37:21+00:00",
@@ -8331,7 +8573,7 @@
       "name": "YouTube reporting jobs (thumbnail impressions)",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 13.0h ago",
+      "detail": "last success 13.4h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-14T16:30:13+00:00",
       "last_success": "2026-11-14T16:30:13+00:00",
@@ -8347,8 +8589,8 @@
       "severity": "ok",
       "detail": "last success 0.0h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-15T05:31:04+00:00",
-      "last_success": "2026-11-15T05:30:59+00:00",
+      "last_run": "2026-11-15T05:50:33+00:00",
+      "last_success": "2026-11-15T05:50:11+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
