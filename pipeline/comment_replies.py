@@ -43,7 +43,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Optional
 
-from pipeline.channel_capabilities import brand_for
+from pipeline.channel_capabilities import brand_for, off_brand_phrase
 from pipeline.config import CONFIG, REPO_ROOT
 from pipeline.quota_handler import GeminiQuotaExceededError, QuotaExceededError, calculate_next_quota_reset_utc
 
@@ -502,9 +502,10 @@ def _reply_is_safe(text: str, channel_id: Optional[str] = None) -> bool:
         return False
     # A reply can never speak for another ministry: the brand declares the other
     # channels' names and handles as forbidden strings.
-    for phrase in brand_for(channel_id).forbidden_phrases:
-        if phrase.lower() in lowered:
-            return False
+    # (The Bible's own words are not a brand: a reply may say "the secret place of
+    # the Most High", it may not say "The Secret Place".)
+    if off_brand_phrase(text, channel_id):
+        return False
     return 1 <= len(text.split()) <= 120
 
 

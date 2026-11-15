@@ -38,6 +38,8 @@ from pipeline.channel_capabilities import (
     brand_for,
     capabilities_for,
     short_key,
+    off_brand_phrase,
+    scripture_name_note,
 )
 from pipeline.channels import get_channel, normalize_channel_id
 from pipeline.config import CONFIG, QUEUE_DIR, PUBLISHED_DIR
@@ -888,6 +890,11 @@ class GeminiBrain:
         self.quota_stop = ""
         #: Attempts this pass made, one row per model: what it did and why.
         self.authoring_outcomes: list[dict[str, str]] = []
+        #: Roadmap ids this pass could not get a usable script for although the models
+        #: answered. The next pick skips them, so one passage the gates will not take
+        #: cannot hold up every passage behind it. Kept in memory only: tomorrow's
+        #: pass tries the passage again.
+        self.refused_ids: set[str] = set()
         #: Seconds this pass has slept inside backoff, against
         #: `MAX_TRANSIENT_SLEEP_SECONDS`. Injectable sleep so tests do not wait.
         self.transient_slept = 0.0
@@ -956,7 +963,8 @@ class GeminiBrain:
         existing_ids = self._existing_job_ids()
 
         roadmap = roadmap_for_channel(self.channel_id)
-        eligible = [c for c in roadmap if c["id"] not in existing_ids]
+        eligible = [c for c in roadmap
+                    if c["id"] not in existing_ids and c["id"] not in self.refused_ids]
         if eligible:
             # Steering is data-gated, never channel-gated: every channel is
             # eligible, and with too little measured data rank_candidates()
@@ -984,6 +992,18 @@ class GeminiBrain:
             f"already made, and never borrow the other channel's."
         )
 
+    def passage_was_refused(self) -> bool:
+        """True when the last authoring pass failed on what the models wrote.
+
+        That is a verdict about the passage (or the gates), not about reaching
+        Google: with the daily allowance spent, or no model answering, trying the
+        next passage would only fail the same way.
+        """
+        rows = self.authoring_outcomes
+        return (not self.quota_stop
+                and any(row.get("outcome", "").startswith(("branding:", "scripture:")) for row in rows)
+                and not any(row.get("outcome") == "accepted" for row in rows))
+
     def author_longform_script(self, scripture_data: dict[str, Any]) -> str:
         """Call Google Gemini to draft the full markdown script, or use equipped template if offline."""
         job_id = scripture_data.get("id", "0010")
@@ -996,7 +1016,8 @@ class GeminiBrain:
         channel_directive = "\n".join(brand.authoring_directive)
         channel_directive = f"\n{channel_directive}\n"
         from .scripture_text import check_quote, exists as scripture_exists, prompt_block
-        scripture_block = prompt_block(str(scripture))
+        scripture_block = prompt_block(str(scripture)) + scripture_name_note(
+            self.channel_id, str(scripture))
         user_prompt = f"""
 Please author the official, complete long-form devotional script for:
 - Job ID: {job_id}
@@ -1280,11 +1301,11 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                 f"frontmatter declares `channel: {declared}`, expected `{brand.declaration}`")
         if not any(phrase in text for phrase in brand.required_phrases):
             problems.append(f"does not name {brand.display_name}")
-        lowered = text.lower()
-        for term in brand.forbidden_phrases:
-            if term.lower() in lowered:
-                problems.append(f"carries another channel's branding: {term!r}")
-                break
+        # One rule, shared with the lengthening pass and the reply engine: words the
+        # Bible itself uses ("the secret place of the most High") are not a brand.
+        term = off_brand_phrase(text, self.channel_id)
+        if term:
+            problems.append(f"carries another channel's branding: {term!r}")
         if problems:
             raise BrainAuthoringError(
                 f"{brand.display_name} authoring rejected: " + "; ".join(problems))
@@ -2028,8 +2049,14 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         # Reraised, not swallowed: "returned None" is indistinguishable from
         # "runway healthy" for every caller, which is how a stalled queue looked
         # like a satisfied one.
+        try:
+            authored_text = self.author_longform_script(next_candidate)
+        except BrainAuthoringError:
+            if self.passage_was_refused():
+                self.refused_ids.add(str(next_candidate["id"]))
+            raise
         script_text = normalize_authored_script_markdown(
-            self.author_longform_script(next_candidate),
+            authored_text,
             channel_id=self.channel_id,
         )
         meta = job_front_matter(script_text)

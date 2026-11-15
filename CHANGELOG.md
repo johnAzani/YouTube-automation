@@ -5,6 +5,16 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-15 — The Covenant Shield ran out of long-form prayers
+
+- **What happened.** At 03:35 UTC the monitor went red: The Covenant Shield (prayer8) had nothing left in `content/queue/`. Its brain had never written a long-form: 0600 to 0606 were the seven it started with, and 0606 was published at 03:27 UTC.
+- **Why.** The next passage on its roadmap was Psalm 91:1-2, "He that dwelleth in the secret place of the most High". The branding gate lower-cased the script and refused it for carrying "The Secret Place", another channel's name. The brain always takes the next passage, so it tried the same one in every run and was refused in every run. The job ended green each time because one older script was still waiting, and the reason was only in a log.
+- **Fix 1: the Bible's own words are not a brand.** `pipeline/channel_capabilities.off_brand_phrase()` is now the one rule for the author's gate, the lengthening pass and the reply engine. A phrase the bundled King James text contains counts only when written as a name ("the Secret Place", "THE SECRET PLACE"). Every other brand string is matched as before. Only one phrase on any channel is affected, and only one passage on any roadmap was impossible (checked by a test that walks every roadmap).
+- **Fix 2: a refused passage no longer blocks the ones behind it.** When the models answered and the answer was refused, the run tries the next passage, once (`MAX_PASSAGES_SKIPPED_PER_RUN`). Nothing is remembered between runs. It does not move on when the daily allowance is spent or no model answered.
+- **Fix 3: the refusal is an annotation.** `--ensure-supply-for` prints "Long-form authoring blocked (channel)" with how many scripts are ready and the reason, in the brain run and in the produce run.
+- The writer is told, for such a passage only, to keep the words in small letters inside the verse and out of the title, slug, thumbnail text, tags and headings.
+- Tests: `tests/test_scripture_is_not_a_brand.py`.
+
 ## 2026-11-15 — the studio reads YouTube Analytics once a day
 
 - New `scripts/analytics_reader.py` and `.github/workflows/channel-analytics.yml` (daily 03:37 UTC, every channel). A granted channel gets `content/analytics/<channel>.json`, and `content/analytics/README.md` is rewritten from every file present: one table toward the Partner Program, then each channel's traffic sources and its videos by watch time with how long people stayed.

@@ -268,13 +268,15 @@ def validate(original: Job, expanded: str, target: int = TARGET_WORDS,
     if declared_channel:
         from pipeline.channel_capabilities import brand_for
 
+        from pipeline.channel_capabilities import off_brand_phrase
+
         brand = brand_for(declared_channel)
-        for forbidden in brand.forbidden_phrases:
-            if forbidden.lower() in lowered:
-                problems.append(
-                    f"expansion introduced forbidden phrase {forbidden!r} for {brand.display_name}"
-                )
-                break
+        # The same rule the author's gate applies: the Bible's own words are not a brand.
+        forbidden = off_brand_phrase(expanded, declared_channel)
+        if forbidden:
+            problems.append(
+                f"expansion introduced forbidden phrase {forbidden!r} for {brand.display_name}"
+            )
     return problems
 
 
