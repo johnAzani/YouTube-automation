@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-14T09:01:37.398905+00:00",
-  "as_of": "2026-11-14",
+  "generated_at": "2026-11-15T05:33:44.392020+00:00",
+  "as_of": "2026-11-15",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 8,
+  "total_longform_videos": 9,
   "input_diagnostics": {
-    "snapshot_video_ids": 14,
-    "receipt_video_ids": 14,
-    "matched_video_ids": 14,
-    "longform_below_view_threshold": 8,
+    "snapshot_video_ids": 19,
+    "receipt_video_ids": 19,
+    "matched_video_ids": 19,
+    "longform_below_view_threshold": 9,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 7,
+    "longform_too_young_or_undated": 5,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
@@ -26,7 +26,7 @@
     },
     {
       "theme": "peace_rest",
-      "videos": 2,
+      "videos": 3,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -58,27 +58,32 @@
     }
   ],
   "shorts": {
-    "measured_shorts": 4,
-    "total_shorts": 6,
+    "measured_shorts": 5,
+    "total_shorts": 10,
     "sufficient_data": false,
-    "avg_views": 12.0,
+    "avg_views": 23.6,
     "median_views": 4,
-    "total_views": 48,
+    "total_views": 118,
     "minimum_age_days": 2,
     "by_book": {
+      "exodus": {
+        "shorts": 1,
+        "avg_views": 68.0,
+        "ratio": 1.627
+      },
       "isaiah": {
         "shorts": 1,
         "avg_views": 4.0,
-        "ratio": 0.778
+        "ratio": 0.723
       },
       "jeremiah": {
         "shorts": 1,
         "avg_views": 42.0,
-        "ratio": 1.833
+        "ratio": 1.26
       },
       "psalm": {
         "shorts": 2,
-        "avg_views": 1.0,
+        "avg_views": 2.0,
         "ratio": 0.542
       }
     },
@@ -86,16 +91,16 @@
       "midday_strength_endurance": {
         "shorts": 1,
         "avg_views": 4.0,
-        "ratio": 0.778
+        "ratio": 0.723
       },
       "peace_rest": {
-        "shorts": 3,
-        "avg_views": 14.7,
-        "ratio": 1.133
+        "shorts": 4,
+        "avg_views": 28.5,
+        "ratio": 1.138
       }
     },
     "guidance": [
-      "Shorts: 4 measured (need 6, each at least 2 days old); the network's pooled numbers order this channel's Shorts until it has its own."
+      "Shorts: 5 measured (need 6, each at least 2 days old); the network's pooled numbers order this channel's Shorts until it has its own."
     ]
   },
   "guidance": [
