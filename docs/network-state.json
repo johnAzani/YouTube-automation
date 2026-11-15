@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T23:00:40Z",
+  "generated_at": "2026-11-15T23:29:06Z",
   "monitor_generated_at": "2026-11-15T22:59:34.787450+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 299,
+    "published_total": 300,
     "published_longform": 120,
-    "published_shorts": 179,
-    "public_total": 297,
+    "published_shorts": 180,
+    "public_total": 298,
     "queued_longform": 59,
-    "queued_shorts": 75,
+    "queued_shorts": 74,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -305,23 +305,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 23,
+        "published_total": 24,
         "published_longform": 10,
-        "published_shorts": 13,
-        "thumbnail_pending": 23,
-        "public_total": 23,
+        "published_shorts": 14,
+        "thumbnail_pending": 24,
+        "public_total": 24,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-FAMILYPSALM91V10",
-        "title": "Pray This Psalm 91:10 Family Prayer Over Your Home | Dwelling #Shorts",
+        "id": "SHORT-FAMILYDEUTERONOMY6V6",
+        "title": "Pray This Deuteronomy 6:6-7 Family Prayer Over Your Home | In Your Home #Shorts",
         "format": "short",
-        "youtube_video_id": "MJMa8ZKKe6k",
-        "watch_url": "https://www.youtube.com/shorts/MJMa8ZKKe6k",
+        "youtube_video_id": "A28yKBQN9Z0",
+        "watch_url": "https://www.youtube.com/shorts/A28yKBQN9Z0",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T19:52:46Z"
+        "published_at": "2026-11-15T23:28:27Z"
       },
       "next_queued_longform": {
         "id": "0310",
@@ -330,8 +330,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familydeuteronomy6v6",
-        "scripture": "Deuteronomy 6:6-7",
+        "short": "short-familyphilippians4v19",
+        "scripture": "Philippians 4:19",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILYDEUTERONOMY6V6",
+      "slug": "short-familydeuteronomy6v6-household-prayer",
+      "file": "short-familydeuteronomy6v6-household-prayer.md",
+      "title": "Pray This Deuteronomy 6:6-7 Family Prayer Over Your Home | In Your Home #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T23:28:27Z",
+      "youtube_video_id": "A28yKBQN9Z0",
+      "watch_url": "https://www.youtube.com/shorts/A28yKBQN9Z0",
+      "youtu_be_url": "https://youtu.be/A28yKBQN9Z0",
+      "shorts_url": "https://www.youtube.com/shorts/A28yKBQN9Z0",
+      "studio_url": "https://studio.youtube.com/video/A28yKBQN9Z0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/A28yKBQN9Z0/hqdefault.jpg",
+      "thumb_text": "DEUTERONOMY 6:6-7 \u00b7 TEACH YOUR CHILDREN",
+      "thumbnail_pending": true,
+      "duration_label": "52s",
+      "words": 638
+    },
     {
       "id": "0409",
       "slug": "matthew-11-28-30-rest-for-your-soul-prayer",
@@ -8956,17 +8980,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-familydeuteronomy6v6",
-        "file": "0307-short-familydeuteronomy6v6.yml",
-        "companion_longform_id": "0307",
-        "scripture": "Deuteronomy 6:6-7",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
       },
       {
         "short": "short-familyphilippians4v19",
