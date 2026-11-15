@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=el"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE SHIELD", "DIVINE PROTECTION", "PSALM 91:7", "REFUGE"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-22T13:57:28Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If the shadow of fear is cast across your doorway tonight, stay for this quiet prayer. We turn to the word for our strength. A thousand shall fall at thy side, and ten thousand at thy right hand; but it shall not come nigh thee. Lord, anchor our hearts in this truth as the world turns restless and uncertain today. Grant us the stillness to see your hand at work when everything around us feels chaotic. We entrust our path to your holy keeping, finding our only rest in your promise, Amen.

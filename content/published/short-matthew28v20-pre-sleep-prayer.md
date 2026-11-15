@@ -28,6 +28,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["BEDTIME PRAYER", "MATTHEW 28:20", "JESUS PROMISES HIS", "CONSTANT PRESENCE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Tonight, as you wonder if anyone remains by your side, Jesus speaks into your room. Teaching them to observe all things whatsoever I have commanded you: and, lo, I am with you alway, even unto the end of the world. Amen. Lord, in the quiet darkness of this room, quiet every lingering fear of isolation. When tomorrow feels overwhelming, rest my anxious heart in Your constant presence. You have promised never to walk away and never to leave my side. Let Your peace cover this bed as sleep comes, holding me safe until morning. Subscribe to The Secret Place for daily bedtime prayers.

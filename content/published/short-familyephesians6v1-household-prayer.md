@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["GODLY HOMES", "PEACEFUL HEARTS", "FAITHFUL LEGACY", "DIVINE GUIDANCE"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-22T13:57:21Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If the noise of chaos in your home today has left you feeling completely exhausted, pray. Children, obey your parents in the Lord: for this is right. Honor thy father and mother; which is the first commandment with promise; That it may be well with thee, and thou mayest live long on the earth. And, ye fathers, provoke not your children to wrath: but bring them up in the nurture and admonition of the Lord. Lord, pour Your gentle wisdom into every room of this house, turning hearts toward Your truth. May our family walk in unity, grace, and deep love, reflecting the light of Your kingdom forever. Subscribe for more prayers.

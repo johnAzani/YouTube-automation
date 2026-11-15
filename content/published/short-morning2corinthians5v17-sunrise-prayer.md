@@ -28,6 +28,8 @@ thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently.
 thumbnail_poster: ["AN ANCHOR", "FOR YOUR", "RESTLESS", "SOUL"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-15T19:57:14Z"
+thumbnail_retry_reason: "rate_limit"
 ---
 
 That heavy shame clinging to your heart since yesterday is not your final identity today. Therefore if any man be in Christ, he is a new creature: old things are passed away; behold, all things are become new. Lord, thank you for this truth. Help me to leave the wreckage of past mistakes behind as I step into your mercy. Wash my perspective clean so I might see the path you have prepared for this hour. May your light define who I am, not the shadows that have faded with the night.

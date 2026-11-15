@@ -28,6 +28,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["FINDING STRENGTH", "IN THE QUIET", "OF THE NIGHT", "ISAIAH 30:15"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Release the heavy grip you have on that exhausting problem playing on repeat tonight. For thus saith the Lord GOD, the Holy One of Israel; In returning and rest shall ye be saved; in quietness and in confidence shall be your strength: and ye would not. Lord, help me stop striving against the current of your sovereign and perfect will. Teach my heart to trade my anxious searching for the deep stability found in you. Let your peace settle over this room, quieting every fear that tries to remain. May my spirit find its home in your stillness until the morning light arrives.

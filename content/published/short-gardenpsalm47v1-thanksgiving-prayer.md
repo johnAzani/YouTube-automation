@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["A PRAYER", "OF TRIUMPH", "THE PRAISE", "GARDEN"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-22T13:57:33Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If that decision weighing on your mind feels too heavy to carry alone, lean in here. Lord, the weight of tomorrow often obscures the victory You have already secured for my life. I find peace in Your word: O clap your hands, all ye people; shout unto God with the voice of triumph. In this quiet moment, I choose to turn my anxiety into a rhythm of holy celebration. Let my spirit rise above these passing troubles to honor the One who sustains my soul. Thank You for being the anchor that holds me steady through every single changing season today.

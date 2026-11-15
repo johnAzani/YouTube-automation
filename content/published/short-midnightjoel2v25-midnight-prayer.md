@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE MIDNIGHT", "WATCH", "JOEL 2:25", "RESTORATION"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-22T13:57:18Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If you are staring at the ceiling tonight regretting the time lost to silent failures, hear the promise of God spoken over your life in this quiet, holy, dark hour. And I will restore to you the years that the locust hath eaten, the cankerworm, and the caterpiller, and the palmerworm, my great army which I sent among you. Lord, take these wasted seasons and turn them into fruitfulness, healing every deep, hidden hurt. We trust Your hand to rebuild what felt permanently destroyed by the enemy of peace. May Your grace fill the gaps of my history starting now, in this quiet midnight.
