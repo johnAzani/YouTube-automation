@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T11:35:13Z",
+  "generated_at": "2026-11-15T11:36:05Z",
   "monitor_generated_at": "2026-11-15T06:50:48.927372+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 271,
+    "published_total": 272,
     "published_longform": 114,
-    "published_shorts": 157,
-    "public_total": 269,
+    "published_shorts": 158,
+    "public_total": 270,
     "queued_longform": 65,
-    "queued_shorts": 97,
+    "queued_shorts": 96,
     "automations_ok": 12,
     "automations_total": 12,
     "network_healthy": true
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 14,
+        "published_total": 15,
         "published_longform": 7,
-        "published_shorts": 7,
-        "thumbnail_pending": 14,
-        "public_total": 14,
+        "published_shorts": 8,
+        "thumbnail_pending": 15,
+        "public_total": 15,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 12
+        "queued_shorts": 11
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM91V4",
-        "title": "Pray This Psalm 91:4 Prayer for Divine Protection | Your Refuge #Shorts",
+        "id": "SHORT-SHIELDPSALM91V7",
+        "title": "Pray This Psalm 91:7 Prayer for Divine Protection | Refuge #Shorts",
         "format": "short",
-        "youtube_video_id": "16cXP9SuIpg",
-        "watch_url": "https://www.youtube.com/shorts/16cXP9SuIpg",
+        "youtube_video_id": "CsMbp-9S8v0",
+        "watch_url": "https://www.youtube.com/shorts/CsMbp-9S8v0",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T07:02:41Z"
+        "published_at": "2026-11-15T11:35:12Z"
       },
       "next_queued_longform": {
         "id": "0607",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm91v7",
-        "scripture": "Psalm 91:7",
+        "short": "short-shieldproverbs18v10",
+        "scripture": "Proverbs 18:10",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM91V7",
+      "slug": "short-shieldpsalm91v7-protection-prayer",
+      "file": "short-shieldpsalm91v7-protection-prayer.md",
+      "title": "Pray This Psalm 91:7 Prayer for Divine Protection | Refuge #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T11:35:12Z",
+      "youtube_video_id": "CsMbp-9S8v0",
+      "watch_url": "https://www.youtube.com/shorts/CsMbp-9S8v0",
+      "youtu_be_url": "https://youtu.be/CsMbp-9S8v0",
+      "shorts_url": "https://www.youtube.com/shorts/CsMbp-9S8v0",
+      "studio_url": "https://studio.youtube.com/video/CsMbp-9S8v0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/CsMbp-9S8v0/hqdefault.jpg",
+      "thumb_text": "THE SHIELD \u00b7 DIVINE PROTECTION",
+      "thumbnail_pending": true,
+      "duration_label": "46s",
+      "words": 600
+    },
     {
       "id": "SHORT-HEALING2CORINTHIANS1V3",
       "slug": "short-healing2corinthians1v3-restoration-prayer",
@@ -8285,17 +8309,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-shieldpsalm91v7",
-        "file": "0000-short-shieldpsalm91v7.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 91:7",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-psalm3v3",
