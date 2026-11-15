@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-15T19:53:22Z",
-  "monitor_generated_at": "2026-11-15T19:50:45.549146+00:00",
+  "generated_at": "2026-11-15T19:53:27Z",
+  "monitor_generated_at": "2026-11-15T19:52:33.003892+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -13,9 +13,9 @@
     "published_shorts": 170,
     "public_total": 286,
     "queued_longform": 61,
-    "queued_shorts": 84,
-    "automations_ok": 12,
-    "automations_total": 12,
+    "queued_shorts": 85,
+    "automations_ok": 13,
+    "automations_total": 13,
     "network_healthy": true
   },
   "channels": [
@@ -312,7 +312,7 @@
         "public_total": 23,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 9
       },
       "latest_video": {
         "id": "SHORT-FAMILYPSALM91V10",
@@ -330,8 +330,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familydeuteronomy6v6",
-        "scripture": "Deuteronomy 6:6-7",
+        "short": "short-familypsalm91v10",
+        "scripture": "Psalm 91:10",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -8412,6 +8412,17 @@
     ],
     "shorts": [
       {
+        "short": "short-familypsalm91v10",
+        "file": "0000-short-familypsalm91v10.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 91:10",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "17:14"
+      },
+      {
         "short": "short-guidedpsalm119v133",
         "file": "0000-short-guidedpsalm119v133.yml",
         "companion_longform_id": "",
@@ -9343,10 +9354,10 @@
       "name": "automation-health",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 1.2h ago",
-      "last_conclusion": "",
+      "detail": "last success 0.0h ago",
+      "last_conclusion": "success",
       "last_run": "2026-11-15T19:50:16+00:00",
-      "last_success": "2026-11-15T18:36:01+00:00",
+      "last_success": "2026-11-15T19:50:16+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -9371,7 +9382,7 @@
       "name": "Autonomous Comment Replies",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 3.0h ago",
+      "detail": "last success 3.1h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-15T16:49:19+00:00",
       "last_success": "2026-11-15T16:49:19+00:00",
@@ -9427,7 +9438,7 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 152.0h ago",
+      "detail": "last success 152.1h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-09T11:48:56+00:00",
       "last_success": "2026-11-09T11:48:56+00:00",
@@ -9455,10 +9466,10 @@
       "name": "Automation monitor",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 0.0h ago",
       "last_conclusion": "",
       "last_run": "2026-11-15T19:50:16+00:00",
-      "last_success": "2026-11-15T19:46:44+00:00",
+      "last_success": "2026-11-15T19:50:00+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -9498,13 +9509,27 @@
       "verdict": "OK",
       "severity": "ok",
       "detail": "last success 0.0h ago",
-      "last_conclusion": "",
-      "last_run": "2026-11-15T19:50:16+00:00",
-      "last_success": "2026-11-15T19:48:56+00:00",
+      "last_conclusion": "success",
+      "last_run": "2026-11-15T19:51:50+00:00",
+      "last_success": "2026-11-15T19:51:50+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
       "effect": ""
+    },
+    {
+      "workflow": "tests-on-main.yml",
+      "name": "Tests on main (daily)",
+      "verdict": "OK",
+      "severity": "ok",
+      "detail": "last success 0.0h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-15T19:50:16+00:00",
+      "last_success": "",
+      "runs_14d": 1,
+      "missed_slots": 0,
+      "failures_5": 0,
+      "effect": "proves main still passes its own unit tests (queue and publish commits skip them)"
     }
   ]
 }
