@@ -1,0 +1,294 @@
+{
+  "key": "short-familyephesians6v1",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "A PRAYER FOR",
+    "YOUR HOME"
+  ],
+  "poster": [
+    "GODLY HOMES",
+    "PEACEFUL HEARTS",
+    "FAITHFUL LEGACY",
+    "DIVINE GUIDANCE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp light on wooden table with open vintage bible",
+    "soft focus olive branches in morning sun",
+    "peaceful countryside cottage window at dawn",
+    "gently flickering candle in quiet room",
+    "open bible with reading glasses on a table",
+    "soft sunlight through sheer curtains onto wood floor"
+  ],
+  "scenes": [
+    {
+      "a": "If the noise of chaos in your home today has left you feeling completely exhausted, pray.",
+      "img": "short-familyephesians6v1-scene-01.jpg",
+      "kicker": "EPHESIANS 6:1-4",
+      "sub": "A PRAYER FOR YOUR HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Children, obey your parents in the Lord: for this is right.",
+      "img": "short-familyephesians6v1-scene-02.jpg",
+      "kicker": "EPHESIANS 6:1",
+      "sub": "OBEDIENCE IN THE LORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Honor thy father and mother; which is the first commandment with promise; That it may be well with thee, and thou mayest live long on the earth.",
+      "img": "short-familyephesians6v1-scene-03.jpg",
+      "kicker": "EPHESIANS 6:2-3",
+      "sub": "HONOR AND PROMISE",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "And, ye fathers, provoke not your children to wrath: but bring them up in the nurture and admonition of the Lord.",
+      "img": "short-familyephesians6v1-scene-04.jpg",
+      "kicker": "EPHESIANS 6:4",
+      "sub": "NURTURE AND ADMONITION",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, pour Your gentle wisdom into every room of this house, turning hearts toward Your truth.",
+      "img": "short-familyephesians6v1-scene-05.jpg",
+      "kicker": "PRAYER FOR GUIDANCE",
+      "sub": "YOUR HOLY WORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "May our family walk in unity, grace, and deep love, reflecting the light of Your kingdom forever.",
+      "img": "short-familyephesians6v1-scene-06.jpg",
+      "kicker": "CLOSING PRAYER",
+      "sub": "REST IN HIS GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If the noise of chaos in your home today has left you feeling completely exhausted, pray."
+    ],
+    [
+      8,
+      18,
+      "Children, obey your parents in the Lord: for this is right."
+    ],
+    [
+      18,
+      35,
+      "Honor thy father and mother; which is the first commandment with promise; That it may be well with thee, and thou mayest live long on the earth."
+    ],
+    [
+      35,
+      52,
+      "And, ye fathers, provoke not your children to wrath: but bring them up in the nurture and admonition of the Lord."
+    ],
+    [
+      52,
+      65,
+      "Lord, pour Your gentle wisdom into every room of this house, turning hearts toward Your truth."
+    ],
+    [
+      65,
+      80,
+      "May our family walk in unity, grace, and deep love, reflecting the light of Your kingdom forever."
+    ],
+    [
+      80,
+      85,
+      "Subscribe for more prayers."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "NOISE OF CHAOS",
+        "FEELING EXHAUSTED",
+        "PRAY NOW"
+      ],
+      [
+        "CHAOS",
+        "EXHAUSTED"
+      ],
+      "EPHESIANS 6"
+    ],
+    [
+      8,
+      18,
+      [
+        "CHILDREN OBEY",
+        "PARENTS IN LORD",
+        "THIS IS RIGHT"
+      ],
+      [
+        "OBEY",
+        "RIGHT"
+      ],
+      "EPHESIANS 6:1"
+    ],
+    [
+      18,
+      35,
+      [
+        "HONOR FATHER MOTHER",
+        "COMMANDMENT WITH PROMISE",
+        "WELL WITH THEE",
+        "LIVE LONG ON EARTH"
+      ],
+      [
+        "HONOR",
+        "PROMISE"
+      ],
+      "EPHESIANS 6:2-3"
+    ],
+    [
+      35,
+      52,
+      [
+        "FATHERS PROVOKE NOT",
+        "BRING THEM UP",
+        "NURTURE AND ADMONITION"
+      ],
+      [
+        "PROVOKE NOT",
+        "NURTURE"
+      ],
+      "EPHESIANS 6:4"
+    ],
+    [
+      52,
+      65,
+      [
+        "GENTLE WISDOM",
+        "EVERY ROOM",
+        "TURNING HEARTS"
+      ],
+      [
+        "WISDOM",
+        "TURNING"
+      ],
+      "PRAYER"
+    ],
+    [
+      65,
+      80,
+      [
+        "UNITY AND GRACE",
+        "DEEP LOVE",
+        "REFLECTING HIS LIGHT"
+      ],
+      [
+        "UNITY",
+        "LOVE"
+      ],
+      "PRAYER"
+    ],
+    [
+      80,
+      85,
+      [
+        "SUBSCRIBE FOR",
+        "FAMILY PRAYERS"
+      ],
+      [
+        "SUBSCRIBE"
+      ],
+      "THE FAMILY ALTAR"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the noise of chaos in your home today has left you feeling completely exhausted, pray.",
+      "kind": "phrase",
+      "words": [
+        "CHAOS",
+        "EXHAUSTED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Children, obey your parents in the Lord: for this is right.",
+      "kind": "phrase",
+      "words": [
+        "OBEY",
+        "RIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Honor thy father and mother; which is the first commandment with promise; That it may be well with thee, and thou mayest live long on the earth.",
+      "kind": "phrase",
+      "words": [
+        "HONOR",
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And, ye fathers, provoke not your children to wrath: but bring them up in the nurture and admonition of the Lord.",
+      "kind": "phrase",
+      "words": [
+        "PROVOKE",
+        "NURTURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, pour Your gentle wisdom into every room of this house, turning hearts toward Your truth.",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "TURNING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May our family walk in unity, grace, and deep love, reflecting the light of Your kingdom forever.",
+      "kind": "phrase",
+      "words": [
+        "UNITY",
+        "LOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Ephesians 6:1-4"
+}
