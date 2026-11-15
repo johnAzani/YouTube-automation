@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-14T09:05:40.149661+00:00",
-  "as_of": "2026-11-14",
+  "generated_at": "2026-11-15T05:36:58.319881+00:00",
+  "as_of": "2026-11-15",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 3,
+  "total_longform_videos": 4,
   "input_diagnostics": {
-    "snapshot_video_ids": 6,
-    "receipt_video_ids": 6,
-    "matched_video_ids": 6,
-    "longform_below_view_threshold": 3,
+    "snapshot_video_ids": 10,
+    "receipt_video_ids": 10,
+    "matched_video_ids": 10,
+    "longform_below_view_threshold": 4,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 3,
+    "longform_too_young_or_undated": 4,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
@@ -19,6 +19,14 @@
     {
       "theme": "daily_guidance_wisdom",
       "videos": 2,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": ""
+    },
+    {
+      "theme": "midday_strength_endurance",
+      "videos": 1,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -34,17 +42,29 @@
     }
   ],
   "shorts": {
-    "measured_shorts": 0,
-    "total_shorts": 3,
+    "measured_shorts": 1,
+    "total_shorts": 6,
     "sufficient_data": false,
-    "avg_views": 0.0,
-    "median_views": 0,
-    "total_views": 0,
+    "avg_views": 73.0,
+    "median_views": 73,
+    "total_views": 73,
     "minimum_age_days": 2,
-    "by_book": {},
-    "by_theme": {},
+    "by_book": {
+      "proverbs": {
+        "shorts": 1,
+        "avg_views": 73.0,
+        "ratio": 1.0
+      }
+    },
+    "by_theme": {
+      "anxiety_peace": {
+        "shorts": 1,
+        "avg_views": 73.0,
+        "ratio": 1.0
+      }
+    },
     "guidance": [
-      "Shorts: 0 measured (need 6, each at least 2 days old); the network's pooled numbers order this channel's Shorts until it has its own."
+      "Shorts: 1 measured (need 6, each at least 2 days old); the network's pooled numbers order this channel's Shorts until it has its own."
     ]
   },
   "guidance": [
