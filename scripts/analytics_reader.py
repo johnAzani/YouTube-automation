@@ -214,6 +214,7 @@ def read_channel(channel, token, today, get=None):
             'watch_hours_counted': counted['long_form_and_live'],
             'shorts_views_90d': sum(number(r.get('views')) for r in quarter_rows
                                     if re.sub(r'[^a-z]', '', str(r.get('creatorContentType') or '').lower()) == 'shorts'),
+            'kinds_seen_365d': sorted(year_table),
             'long_form_hours_a_day_needed': round(threshold['watch_hours'] / 365.0, 1),
             'long_form_hours_a_day_last_28_days': round(month_hours['long_form_and_live'] / 28.0, 2),
         },
@@ -339,13 +340,19 @@ def headline(report):
     program = report['partner_program']
     month = report['last_28_days']
     subscribers = program.get('subscribers')
-    return '%s of %s watch hours counted over 365 days (long-form and live; Shorts %s h not counted); %s; ' \
+    text = '%s of %s watch hours counted over 365 days (long-form and live; Shorts %s h not counted); %s; ' \
            'last 28 days: %s long-form hours, %s views' % (
                amount(program['watch_hours_counted']), count(program['needs']['watch_hours']),
                amount(program['watch_hours_365d']['shorts']),
                ('%s of %s subscribers' % (count(subscribers), count(program['needs']['subscribers'])))
                if subscribers is not None else 'subscriber count not available',
                amount(month['watch_hours']['long_form_and_live']), count(month['views']))
+    # A kind of video this reader does not know is said out loud, not silently left out.
+    odd = [word(kind) for kind in program.get('kinds_seen_365d', []) if kind not in LONG_FORM + ('shorts',)]
+    if odd:
+        text += '; also seen and counted as neither: %s (%s h)' % (
+            ', '.join(odd), amount(program['watch_hours_365d']['other']))
+    return text
 
 
 def summary(reports, published_dir=None):
@@ -444,29 +451,36 @@ def main(argv=None):
     today = datetime.datetime.now(datetime.timezone.utc).date()
     wanted = [c for c in (args.channel or list(CHANNELS)) if c in CHANNELS]
 
+    # GitHub shows at most ten annotations of a kind per step, so channels that are
+    # not granted yet share one line per reason instead of taking one each.
+    waiting = {}
     for channel in wanted:
         try:
             names = CHANNELS[channel].secret_names()
             token, why = access_token(*(os.environ.get(names[key], '').strip()
                                         for key in ('client_id', 'client_secret', 'refresh_token')))
             if not token:
-                note(channel, '%s; no file written' % why, 'warning' if 'refused' in why else 'notice')
+                waiting.setdefault(why, []).append(channel)
                 continue
             report, why = read_channel(channel, token, today)
             if report is None:
-                note(channel, 'not granted yet (%s); no file written' % why)
+                waiting.setdefault('not granted yet (%s)' % why, []).append(channel)
                 continue
             if not args.no_write:
                 write_report(report, args.out)
-            refused = sum(1 for answer in report['coverage'].values() if str(answer).startswith('refused'))
+            refused = sorted(label for label, answer in report['coverage'].items()
+                             if str(answer).startswith('refused'))
             note(channel, '%s; %s%s' % (
                 headline(report), 'not written (dry run)' if args.no_write else 'file written',
-                '; %d question%s refused' % (refused, '' if refused == 1 else 's') if refused else ''),
-                'warning' if refused else 'notice')
-            note(channel + ' coverage', '; '.join('%s: %s' % item for item in sorted(report['coverage'].items()))
-                 + '; kinds of video seen: ' + (', '.join(sorted(report['last_28_days']['views_by_kind'])) or 'none'))
+                '; refused: ' + ', '.join(refused) if refused else ''), 'warning' if refused else 'notice')
+            print('[analytics] %s coverage: %s; kinds of video over 365 days: %s' % (
+                channel, '; '.join('%s: %s' % item for item in sorted(report['coverage'].items())),
+                ', '.join(report['partner_program']['kinds_seen_365d']) or 'none'))
         except Exception as exc:  # noqa: BLE001 - one channel must not cost the others, or the job
-            note(channel, 'stopped early (%s); no file written' % type(exc).__name__, 'warning')
+            waiting.setdefault('stopped early (%s)' % type(exc).__name__, []).append(channel)
+    for why, channels in waiting.items():
+        level = 'warning' if ('refused' in why and 'not granted' not in why) or 'stopped early' in why else 'notice'
+        note(', '.join(channels), '%s; no file written' % why, level)
     if not args.no_write:
         try:
             reports = load_reports(args.out)

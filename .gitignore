@@ -30,6 +30,9 @@ image-search/enron-*-plate-*.png
 # API reports belong in short-lived Actions artifacts, not source history.
 # Only the derived, aggregate performance-feedback artifact is committed; the raw
 # per-video snapshot (views/likes/comments) stays an Actions artifact.
+# One exception, decided by the owner on 14 November 2026: content/analytics/
+# (watch hours, traffic sources, retention; never revenue) is committed daily by
+# .github/workflows/channel-analytics.yml.
 content/channel-metrics.json
 content/metrics.csv
 env/

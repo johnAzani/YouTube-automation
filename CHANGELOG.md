@@ -5,6 +5,16 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-15 — the studio reads YouTube Analytics once a day
+
+- New `scripts/analytics_reader.py` and `.github/workflows/channel-analytics.yml` (daily 03:37 UTC, every channel). A granted channel gets `content/analytics/<channel>.json`, and `content/analytics/README.md` is rewritten from every file present: one table toward the Partner Program, then each channel's traffic sources and its videos by watch time with how long people stayed.
+- Watch hours are counted the way the Partner Program counts them: long-form and live over 365 days, with Shorts-feed time kept apart because it does not count. The file also holds the daily long-form pace over the last 28 days next to the pace a year would need (4,000 hours is about 11 a day; 8,000 from 1 February 2027).
+- First live read (run 43666235601, a dry run from the branch): The Secret Place has 16.2 of 4,000 watch hours counted, 64.6 Shorts hours that do not count, 1,250 subscribers, and 1.4 long-form hours in the last 28 days. The other nine channels answer `accessNotConfigured`: not granted yet.
+- What is public was decided on 14 November: watch hours, traffic sources, retention. Revenue is never asked for: the reader refuses any question that names a money metric and refuses to write a report that contains one.
+- Two jobs on purpose: the one that holds the YouTube credentials cannot write to the repository, and the one that commits holds none and runs only on `main`. A push to a session branch reads and reports and writes nothing.
+- The daily snapshot issue (`scripts/metrics_snapshot.py`) now quotes the watch-hour line for a channel that has a file.
+- Not built: the downloader for the daily reach files (thumbnail impressions and click rate), and nothing steers authoring by these figures yet.
+
 ## 2026-11-14 — The Secret Place's subscribe link opened a 404 page
 
 - Every description on The Secret Place linked to `youtube.com/@TheSecretPlace`. The channel's handle on YouTube is `@SecretPlaceSanctuary`; the other name was the plan, never the channel. Two links were dead on all 44 published videos (16 long-form, 28 Shorts): "Subscribe to The Secret Place" at the foot of each description, and the "pray the complete prayer" line at the top of every Short that falls back to the playlists page. The other nine channels' handles were checked against their own pages and are right.

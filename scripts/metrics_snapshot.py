@@ -99,6 +99,23 @@ def _subscriber_summary(snapshot: dict) -> str:
     return f"Subscribers (YouTube-reported): {count:,}. YouTube rounds this count to three significant figures."
 
 
+def _partner_program_lines(channel_key: str | None) -> list[str]:
+    """Watch hours toward the Partner Program, when the daily Analytics read has a file.
+
+    Read from `content/analytics/<channel>.json` (`scripts/analytics_reader.py`). A
+    channel without Analytics access has no file and gets no lines; a problem
+    reading it must never cost the snapshot issue.
+    """
+    try:
+        from pipeline.channels import normalize_channel_id
+        from scripts.analytics_reader import issue_lines
+
+        return issue_lines(normalize_channel_id(channel_key))
+    except Exception as exc:  # noqa: BLE001
+        print(f"partner-program lines skipped: {type(exc).__name__}")
+        return []
+
+
 def _post_github_issue(
     channel_snapshot: dict,
     rows: list[dict],
@@ -121,6 +138,7 @@ def _post_github_issue(
         "",
         _subscriber_summary(channel_snapshot),
         "",
+        *_partner_program_lines(channel_key),
         "### Public Video Performance",
         "",
         "| Video ID | Title | Published | Views | Likes | Comments | Link |",
