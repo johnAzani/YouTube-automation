@@ -63,3 +63,31 @@ Videos by watch time, 365 days (up to 50):
 | [Say This 1 Peter 5:7 Prayer Before You Sleep / 1 Peter 5:7 #Shorts](https://youtu.be/GQT7eKz9MAE) | 0.08 | 22 | 0:34 (78.6%) |
 | [Psalm 27 Night Prayer for Sleep & Peace / Fear No Evil Tonight](https://youtu.be/BFlkzRVMf8o) | 0.07 | 3 | 1:36 (24.2%) |
 | [Psalm 121: He Who Keeps You Will Neither Slumber Nor Sleep — Night Pr…](https://youtu.be/6M6oV8MxD9s) | 0.05 | 6 | 0:36 (11.3%) |
+
+Thumbnails, 2026-11-11 to 2026-11-11 (1 day of YouTube's daily reach files): shown 508 times, clicked 9 times, a click rate of 1.8%.
+A thumbnail is counted where YouTube shows one (search, home, suggested, the channel page). The Shorts feed shows none, so Shorts watched there are not in these figures.
+
+Videos by times shown (up to 25):
+
+| Video | Thumbnail shown | Clicks | Click rate |
+| :--- | ---: | ---: | ---: |
+| [Psalm 91:11-12 Night Prayer / Angels Guard Your Home & Sleep](https://youtu.be/dgvGl0EZyYE) | 265 | 8 | 3% |
+| [Psalm 91:5-6 Night Prayer / Deliverance From Terror by Night](https://youtu.be/rb6X37vQt7o) | 117 | 0 | 0% |
+| [Say This Psalm 37:7 Prayer Before You Sleep / The Secret Place #Shorts](https://youtu.be/5ekShDmycic) | 27 | 0 | 0% |
+| [Say This Isaiah 26:3-4 Prayer Before You Sleep / Perfect Night Peace…](https://youtu.be/er20wTWclFo) | 17 | 0 | 0% |
+| [Say This Psalm 18:2 Prayer Before You Sleep / Safe Stronghold #Shorts](https://youtu.be/jhOlEJvNg-0) | 15 | 0 | 0% |
+| [Say This Psalm 139:11-12 Prayer Before You Sleep / The Secret Place #…](https://youtu.be/avnYVdvDmkc) | 11 | 0 | 0% |
+| [Say This Proverbs 3:24-26 Prayer Before You Sleep / Sweet Nighttime R…](https://youtu.be/5b2naPZqvvM) | 10 | 0 | 0% |
+| [Say This Psalm 31:5 Prayer Before You Sleep / Redeemed In Peace #Shor…](https://youtu.be/nHTVsgHaLpE) | 10 | 0 | 0% |
+| [Say This Psalm 63:6-7 Prayer Before You Sleep / The Secret Place #Sho…](https://youtu.be/-21nHlytKvw) | 5 | 0 | 0% |
+| [Psalm 4:8 Bedtime Prayer / In Peace I Will Lie Down & Sleep](https://youtu.be/fiPJAX_pNgs) | 5 | 0 | 0% |
+| [When Fear Keeps You Awake: Psalm 34 / The Secret Place](https://youtu.be/UZ5A3bd6M2E) | 4 | 1 | 25% |
+| [Say This Isaiah 41:10 Prayer Before You Sleep / The Secret Place #Sho…](https://youtu.be/nZO6mwej0Is) | 4 | 0 | 0% |
+| [Psalm 27 Night Prayer for Sleep & Peace / Fear No Evil Tonight](https://youtu.be/BFlkzRVMf8o) | 3 | 0 | 0% |
+| [Say This Psalm 91:5-6 Prayer Before You Sleep / Fear No Night Shadow…](https://youtu.be/SVhby9Yv0Wg) | 3 | 0 | 0% |
+| [Say This Psalm 34 Prayer Before You Sleep / Angels Stand Watch #Shorts](https://youtu.be/fTYu1V5GHUE) | 3 | 0 | 0% |
+| [Say This Psalm 121 Prayer Before You Sleep / He Who Keeps You #Shorts](https://youtu.be/xkpfupurX-0) | 3 | 0 | 0% |
+| [Say This Psalm 91:11-12 Prayer Before You Sleep / Angelic Night Guard…](https://youtu.be/dqKjQaJbU0c) | 2 | 0 | 0% |
+| [Psalm 16:7-8 Night Prayer / God's Quiet Counsel Before Sleep](https://youtu.be/nVLhEVO7ROw) | 2 | 0 | 0% |
+| [Say This Matthew 11:28-30 Prayer Before You Sleep / The Secret Place…](https://youtu.be/GBNCiP8UTS8) | 1 | 0 | 0% |
+| [Psalm 3:3-5 — The Shield That Lifts My Head / Night Prayer for Restor…](https://youtu.be/vs2xt72CgcI) | 1 | 0 | 0% |
