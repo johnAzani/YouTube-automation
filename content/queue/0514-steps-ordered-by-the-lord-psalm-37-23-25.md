@@ -10,7 +10,7 @@ niche: faith and prayer
 category: education
 voice: Charon
 target_minutes: 6
-thumb_text: ORDERED STEPS
+thumb_text: ORDERED BY THE LORD
 seo_hook: A prayer for God's guidance, open doors, and faithful provision over your
   career, honest labour, and daily decisions according to Psalm 37:23-25.
 tags:

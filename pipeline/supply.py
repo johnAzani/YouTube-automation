@@ -301,6 +301,11 @@ def author_new(brain, expand_target: int = EXPANSION_TARGET_WORDS) -> dict[str, 
 
     leaked = scripture_mismatch(load_job(result.longform_path))
     if leaked:
+        # Refused means it cannot publish. The model writes `status: approved` itself,
+        # so without this a refused script stayed approved in the queue and the
+        # count the run reported disagreed with what production would pick up.
+        if str(doc.status).strip().lower() == "approved":
+            set_status(result.longform_path, "draft")
         row["ok"] = False
         names = ", ".join(f"Psalm {n}" for n in leaked)
         row["reason"] = (f"body quotes {names} under a "
