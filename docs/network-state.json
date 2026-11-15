@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T15:03:30Z",
+  "generated_at": "2026-11-15T15:06:53Z",
   "monitor_generated_at": "2026-11-15T13:57:42.158231+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 280,
+    "published_total": 281,
     "published_longform": 116,
-    "published_shorts": 164,
-    "public_total": 278,
+    "published_shorts": 165,
+    "public_total": 279,
     "queued_longform": 63,
-    "queued_shorts": 90,
+    "queued_shorts": 89,
     "automations_ok": 12,
     "automations_total": 12,
     "network_healthy": true
@@ -373,23 +373,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 21,
+        "published_total": 22,
         "published_longform": 9,
-        "published_shorts": 12,
+        "published_shorts": 13,
         "thumbnail_pending": 7,
-        "public_total": 21,
+        "public_total": 22,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-HEALING2CORINTHIANS1V3",
-        "title": "Pray This 2 Corinthians 1:3-4 Healing Prayer for Peace & Strength | The Weary Heart #Shorts",
+        "id": "SHORT-HEALINGPROVERBS17V22",
+        "title": "Pray This Proverbs 17:22 Healing Prayer for Peace & Strength | The Heavy Heart #Shorts",
         "format": "short",
-        "youtube_video_id": "mC5kjQChqr0",
-        "watch_url": "https://www.youtube.com/shorts/mC5kjQChqr0",
+        "youtube_video_id": "5u1MAaKAdo8",
+        "watch_url": "https://www.youtube.com/shorts/5u1MAaKAdo8",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T11:34:15Z"
+        "published_at": "2026-11-15T15:06:01Z"
       },
       "next_queued_longform": {
         "id": "0409",
@@ -398,8 +398,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingproverbs17v22",
-        "scripture": "Proverbs 17:22",
+        "short": "short-healingpsalm91v16",
+        "scripture": "Psalm 91:16",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALINGPROVERBS17V22",
+      "slug": "short-healingproverbs17v22-restoration-prayer",
+      "file": "short-healingproverbs17v22-restoration-prayer.md",
+      "title": "Pray This Proverbs 17:22 Healing Prayer for Peace & Strength | The Heavy Heart #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T15:06:01Z",
+      "youtube_video_id": "5u1MAaKAdo8",
+      "watch_url": "https://www.youtube.com/shorts/5u1MAaKAdo8",
+      "youtu_be_url": "https://youtu.be/5u1MAaKAdo8",
+      "shorts_url": "https://www.youtube.com/shorts/5u1MAaKAdo8",
+      "studio_url": "https://studio.youtube.com/video/5u1MAaKAdo8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/5u1MAaKAdo8/hqdefault.jpg",
+      "thumb_text": "FINDING HEALING \u00b7 IN THE SPIRIT",
+      "thumbnail_pending": false,
+      "duration_label": "49s",
+      "words": 609
+    },
     {
       "id": "SHORT-PHILIPPIANS4V8",
       "slug": "short-philippians4v8-pre-sleep-prayer",
@@ -8277,17 +8301,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-healingproverbs17v22",
-        "file": "0000-short-healingproverbs17v22.yml",
-        "companion_longform_id": "",
-        "scripture": "Proverbs 17:22",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingpsalm91v16",
