@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-15T05:36:58.319881+00:00",
+  "generated_at": "2026-11-15T09:25:54.984934+00:00",
   "as_of": "2026-11-15",
   "sufficient_data": false,
   "measured_longform_videos": 0,
   "total_longform_videos": 4,
   "input_diagnostics": {
-    "snapshot_video_ids": 10,
-    "receipt_video_ids": 10,
-    "matched_video_ids": 10,
+    "snapshot_video_ids": 11,
+    "receipt_video_ids": 11,
+    "matched_video_ids": 11,
     "longform_below_view_threshold": 4,
     "longform_missing_view_count": 0,
     "longform_too_young_or_undated": 4,
@@ -43,23 +43,23 @@
   ],
   "shorts": {
     "measured_shorts": 1,
-    "total_shorts": 6,
+    "total_shorts": 7,
     "sufficient_data": false,
-    "avg_views": 73.0,
-    "median_views": 73,
-    "total_views": 73,
+    "avg_views": 76.0,
+    "median_views": 76,
+    "total_views": 76,
     "minimum_age_days": 2,
     "by_book": {
       "proverbs": {
         "shorts": 1,
-        "avg_views": 73.0,
+        "avg_views": 76.0,
         "ratio": 1.0
       }
     },
     "by_theme": {
       "anxiety_peace": {
         "shorts": 1,
-        "avg_views": 73.0,
+        "avg_views": 76.0,
         "ratio": 1.0
       }
     },
