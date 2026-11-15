@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T15:16:36Z",
+  "generated_at": "2026-11-15T15:39:41Z",
   "monitor_generated_at": "2026-11-15T13:57:42.158231+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 285,
-    "published_longform": 116,
+    "published_total": 286,
+    "published_longform": 117,
     "published_shorts": 169,
-    "public_total": 283,
-    "queued_longform": 63,
+    "public_total": 284,
+    "queued_longform": 62,
     "queued_shorts": 85,
     "automations_ok": 12,
     "automations_total": 12,
@@ -305,28 +305,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 21,
-        "published_longform": 9,
+        "published_total": 22,
+        "published_longform": 10,
         "published_shorts": 12,
-        "thumbnail_pending": 21,
-        "public_total": 21,
-        "queued_longform": 6,
+        "thumbnail_pending": 22,
+        "public_total": 22,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-FAMILYEPHESIANS6V1",
-        "title": "Pray This Ephesians 6:1-4 Family Prayer Over Your Home | Divine Guidance #Shorts",
-        "format": "short",
-        "youtube_video_id": "DZoTa37PMNM",
-        "watch_url": "https://www.youtube.com/shorts/DZoTa37PMNM",
-        "published_on": "2026-11-15",
-        "published_at": "2026-11-15T11:27:05Z"
-      },
-      "next_queued_longform": {
         "id": "0309",
         "title": "Prayer for Protection Over Your Home: Job 1:10 | The Family Altar",
-        "words": 1175,
+        "format": "longform",
+        "youtube_video_id": "n60RRvMFSQQ",
+        "watch_url": "https://youtu.be/n60RRvMFSQQ",
+        "published_on": "2026-11-15",
+        "published_at": "2026-11-15T15:38:38Z"
+      },
+      "next_queued_longform": {
+        "id": "0310",
+        "title": "Prayer to Bless Your Home and Family: Proverbs 3:33 | The Family Altar",
+        "words": 1364,
         "status": "approved"
       },
       "next_queued_short": {
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0309",
+      "slug": "job-1-10-hedge-of-protection-household-prayer",
+      "file": "0309-job-1-10-hedge-of-protection-household-prayer.md",
+      "title": "Prayer for Protection Over Your Home: Job 1:10 | The Family Altar",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T15:38:38Z",
+      "youtube_video_id": "n60RRvMFSQQ",
+      "watch_url": "https://youtu.be/n60RRvMFSQQ",
+      "youtu_be_url": "https://youtu.be/n60RRvMFSQQ",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/n60RRvMFSQQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/n60RRvMFSQQ/hqdefault.jpg",
+      "thumb_text": "A HEDGE AROUND US",
+      "thumbnail_pending": true,
+      "duration_label": "~8 min",
+      "words": 1175
+    },
     {
       "id": "SHORT-GUIDEDJOHN10V27",
       "slug": "short-guidedjohn10v27-guidance-prayer",
@@ -7920,19 +7944,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1251
-      },
-      {
-        "id": "0309",
-        "slug": "job-1-10-hedge-of-protection-household-prayer",
-        "file": "0309-job-1-10-hedge-of-protection-household-prayer.md",
-        "title": "Prayer for Protection Over Your Home: Job 1:10 | The Family Altar",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1175
       },
       {
         "id": "0310",
