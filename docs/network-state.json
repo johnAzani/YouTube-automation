@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-15T05:52:51Z",
-  "monitor_generated_at": "2026-11-15T05:51:15.370794+00:00",
+  "generated_at": "2026-11-15T05:55:53Z",
+  "monitor_generated_at": "2026-11-15T05:54:12.138653+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -12,9 +12,9 @@
     "published_longform": 111,
     "published_shorts": 142,
     "public_total": 251,
-    "queued_longform": 56,
-    "queued_shorts": 84,
-    "automations_ok": 12,
+    "queued_longform": 57,
+    "queued_shorts": 88,
+    "automations_ok": 11,
     "automations_total": 12,
     "network_healthy": true
   },
@@ -378,9 +378,9 @@
         "published_shorts": 10,
         "thumbnail_pending": 7,
         "public_total": 19,
-        "queued_longform": 5,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 6
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-HEALINGMALACHI4V2",
@@ -398,8 +398,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingpsalm41v1",
-        "scripture": "Psalm 41:1-3",
+        "short": "short-healingmark5v34",
+        "scripture": "Mark 5:34",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -7292,6 +7292,19 @@
         "words": 1334
       },
       {
+        "id": "0414",
+        "slug": "when-your-heart-is-heavy-and-broken-psalm-34-17-19",
+        "file": "0414-when-your-heart-is-heavy-and-broken-psalm-34-17-19.md",
+        "title": "When Your Heart Is Heavy and Broken: Psalm 34:17-19 | The Healing Balm",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1748
+      },
+      {
         "id": "0509",
         "slug": "genesis-22-14-jehovah-jireh-provision-prayer",
         "file": "0509-genesis-22-14-jehovah-jireh-provision-prayer.md",
@@ -7522,6 +7535,39 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
+      },
+      {
+        "short": "short-healingmark5v34",
+        "file": "0000-short-healingmark5v34.yml",
+        "companion_longform_id": "",
+        "scripture": "Mark 5:34",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
+      },
+      {
+        "short": "short-healingproverbs17v22",
+        "file": "0000-short-healingproverbs17v22.yml",
+        "companion_longform_id": "",
+        "scripture": "Proverbs 17:22",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
+      },
+      {
+        "short": "short-healingpsalm91v16",
+        "file": "0000-short-healingpsalm91v16.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 91:16",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
       },
       {
         "short": "short-isaiah30v15",
@@ -8140,6 +8186,17 @@
         "target_window_utc": "15:44"
       },
       {
+        "short": "short-healingpsalm34v17",
+        "file": "0414-short-healingpsalm34v17.yml",
+        "companion_longform_id": "0414",
+        "scripture": "Psalm 34:17-19",
+        "channel": "prayer6",
+        "channel_name": "The Healing Balm",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "15:44"
+      },
+      {
         "short": "short-provisionpsalm84v11",
         "file": "0508-short-provisionpsalm84v11.yml",
         "companion_longform_id": "0508",
@@ -8433,10 +8490,10 @@
       "name": "automation-health",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 3.3h ago",
-      "last_conclusion": "",
+      "detail": "last success 0.1h ago",
+      "last_conclusion": "success",
       "last_run": "2026-11-15T05:50:30+00:00",
-      "last_success": "2026-11-15T02:31:23+00:00",
+      "last_success": "2026-11-15T05:50:30+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 1,
@@ -8475,7 +8532,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 76.3h ago",
+      "detail": "last success 76.4h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-12T01:32:35+00:00",
       "last_success": "2026-11-12T01:32:35+00:00",
@@ -8517,7 +8574,7 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 138.0h ago",
+      "detail": "last success 138.1h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-09T11:48:56+00:00",
       "last_success": "2026-11-09T11:48:56+00:00",
@@ -8531,7 +8588,7 @@
       "name": "Weekly metrics snapshot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 2.3h ago",
+      "detail": "last success 2.4h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-15T03:32:22+00:00",
       "last_success": "2026-11-15T03:32:22+00:00",
@@ -8543,15 +8600,15 @@
     {
       "workflow": "monitor.yml",
       "name": "Automation monitor",
-      "verdict": "OK",
-      "severity": "ok",
-      "detail": "last success 3.1h ago",
+      "verdict": "SELF-REPORT",
+      "severity": "info",
+      "detail": "its red runs are the verdicts below, not failures of it",
       "last_conclusion": "",
       "last_run": "2026-11-15T05:50:30+00:00",
       "last_success": "2026-11-15T02:45:49+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
-      "failures_5": 2,
+      "failures_5": 3,
       "effect": "this report"
     },
     {
@@ -8559,7 +8616,7 @@
       "name": "Produce video",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 3.2h ago",
+      "detail": "last success 3.3h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-15T02:37:21+00:00",
       "last_success": "2026-11-15T02:37:21+00:00",
@@ -8588,9 +8645,9 @@
       "verdict": "OK",
       "severity": "ok",
       "detail": "last success 0.0h ago",
-      "last_conclusion": "",
-      "last_run": "2026-11-15T05:50:33+00:00",
-      "last_success": "2026-11-15T05:50:11+00:00",
+      "last_conclusion": "success",
+      "last_run": "2026-11-15T05:52:57+00:00",
+      "last_success": "2026-11-15T05:52:57+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
