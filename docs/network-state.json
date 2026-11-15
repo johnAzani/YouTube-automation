@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T11:36:05Z",
+  "generated_at": "2026-11-15T11:36:36Z",
   "monitor_generated_at": "2026-11-15T06:50:48.927372+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 272,
+    "published_total": 273,
     "published_longform": 114,
-    "published_shorts": 158,
-    "public_total": 270,
+    "published_shorts": 159,
+    "public_total": 271,
     "queued_longform": 65,
-    "queued_shorts": 96,
+    "queued_shorts": 95,
     "automations_ok": 12,
     "automations_total": 12,
     "network_healthy": true
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 13,
+        "published_total": 14,
         "published_longform": 6,
-        "published_shorts": 7,
-        "thumbnail_pending": 13,
-        "public_total": 13,
+        "published_shorts": 8,
+        "thumbnail_pending": 14,
+        "public_total": 14,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "0705",
-        "title": "When Your Heart Needs to Remember His Mercy: Psalm 107:1",
-        "format": "longform",
-        "youtube_video_id": "f0KU35IAceI",
-        "watch_url": "https://youtu.be/f0KU35IAceI",
+        "id": "SHORT-GARDENPSALM47V1",
+        "title": "Pray This Psalm 47:1 Prayer of Thanksgiving | Garden #Shorts",
+        "format": "short",
+        "youtube_video_id": "K_UQs3wF2hE",
+        "watch_url": "https://www.youtube.com/shorts/K_UQs3wF2hE",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T08:20:28Z"
+        "published_at": "2026-11-15T11:35:44Z"
       },
       "next_queued_longform": {
         "id": "0706",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm47v1",
-        "scripture": "Psalm 47:1",
+        "short": "short-gardenphilippians4v6",
+        "scripture": "Philippians 4:6-7",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM47V1",
+      "slug": "short-gardenpsalm47v1-thanksgiving-prayer",
+      "file": "short-gardenpsalm47v1-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 47:1 Prayer of Thanksgiving | Garden #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T11:35:44Z",
+      "youtube_video_id": "K_UQs3wF2hE",
+      "watch_url": "https://www.youtube.com/shorts/K_UQs3wF2hE",
+      "youtu_be_url": "https://youtu.be/K_UQs3wF2hE",
+      "shorts_url": "https://www.youtube.com/shorts/K_UQs3wF2hE",
+      "studio_url": "https://studio.youtube.com/video/K_UQs3wF2hE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/K_UQs3wF2hE/hqdefault.jpg",
+      "thumb_text": "A PRAYER \u00b7 OF TRIUMPH",
+      "thumbnail_pending": true,
+      "duration_label": "47s",
+      "words": 581
+    },
     {
       "id": "SHORT-SHIELDPSALM91V7",
       "slug": "short-shieldpsalm91v7-protection-prayer",
@@ -8089,17 +8113,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "17:14"
-      },
-      {
-        "short": "short-gardenpsalm47v1",
-        "file": "0000-short-gardenpsalm47v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 47:1",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-guidedjohn10v27",
