@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T20:01:38Z",
+  "generated_at": "2026-11-15T20:01:43Z",
   "monitor_generated_at": "2026-11-15T20:00:23.494532+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 292,
+    "published_total": 293,
     "published_longform": 118,
-    "published_shorts": 174,
-    "public_total": 290,
+    "published_shorts": 175,
+    "public_total": 291,
     "queued_longform": 61,
-    "queued_shorts": 80,
+    "queued_shorts": 79,
     "automations_ok": 12,
     "automations_total": 13,
     "network_healthy": false
@@ -441,23 +441,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 24,
+        "published_total": 25,
         "published_longform": 11,
-        "published_shorts": 13,
+        "published_shorts": 14,
         "thumbnail_pending": 5,
-        "public_total": 24,
+        "public_total": 25,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONMATTHEW6V26",
-        "title": "Pray This Matthew 6:26 Prayer for Open Doors & Provision | For Your Labor #Shorts",
+        "id": "SHORT-PROVISIONPROVERBS3V9",
+        "title": "Pray This Proverbs 3:9-10 Prayer for Open Doors & Provision | Kjv Wisdom #Shorts",
         "format": "short",
-        "youtube_video_id": "hDjSAkT9mas",
-        "watch_url": "https://www.youtube.com/shorts/hDjSAkT9mas",
+        "youtube_video_id": "lBNdMaeQc2o",
+        "watch_url": "https://www.youtube.com/shorts/lBNdMaeQc2o",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T15:08:15Z"
+        "published_at": "2026-11-15T20:01:04Z"
       },
       "next_queued_longform": {
         "id": "0511",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionproverbs3v9",
-        "scripture": "Proverbs 3:9-10",
+        "short": "short-provisionpsalm84v11",
+        "scripture": "Psalm 84:11",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONPROVERBS3V9",
+      "slug": "short-provisionproverbs3v9-stewardship-prayer",
+      "file": "short-provisionproverbs3v9-stewardship-prayer.md",
+      "title": "Pray This Proverbs 3:9-10 Prayer for Open Doors & Provision | Kjv Wisdom #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T20:01:04Z",
+      "youtube_video_id": "lBNdMaeQc2o",
+      "watch_url": "https://www.youtube.com/shorts/lBNdMaeQc2o",
+      "youtu_be_url": "https://youtu.be/lBNdMaeQc2o",
+      "shorts_url": "https://www.youtube.com/shorts/lBNdMaeQc2o",
+      "studio_url": "https://studio.youtube.com/video/lBNdMaeQc2o/edit",
+      "thumb_url": "https://i.ytimg.com/vi/lBNdMaeQc2o/hqdefault.jpg",
+      "thumb_text": "THE PROVISION TABLE \u00b7 Proverbs 3:9-10",
+      "thumbnail_pending": false,
+      "duration_label": "46s",
+      "words": 610
+    },
     {
       "id": "SHORT-SHIELDEPHESIANS6V16",
       "slug": "short-shieldephesians6v16-protection-prayer",
@@ -8550,17 +8574,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-provisionproverbs3v9",
-        "file": "0000-short-provisionproverbs3v9.yml",
-        "companion_longform_id": "",
-        "scripture": "Proverbs 3:9-10",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-psalm139v7",
