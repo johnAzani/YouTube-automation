@@ -17,8 +17,9 @@ name: Channel analytics (watch hours, sources, retention)
 on:
   schedule:
     - cron: "37 3 * * *"
+  # A change to the reader runs it: on main for real, on a session branch as a dry run.
   push:
-    branches: ["arena/**"]
+    branches: ["main", "arena/**"]
     paths: [".github/workflows/channel-analytics.yml", "scripts/analytics_reader.py"]
   workflow_dispatch:
 

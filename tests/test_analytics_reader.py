@@ -320,7 +320,7 @@ def test_the_job_with_youtube_credentials_cannot_write_and_the_job_that_writes_h
 def test_a_session_branch_reads_and_reports_but_commits_nothing():
     workflow = _workflow()
     triggers = workflow[True]
-    assert triggers["push"] == {"branches": ["arena/**"], "paths": [
+    assert triggers["push"] == {"branches": ["main", "arena/**"], "paths": [
         ".github/workflows/channel-analytics.yml", "scripts/analytics_reader.py"]}
     assert "schedule" in triggers and "workflow_dispatch" in triggers
     run = workflow["jobs"]["read"]["steps"][1]["run"]
