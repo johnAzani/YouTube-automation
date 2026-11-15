@@ -1,0 +1,131 @@
+name: Channel analytics (watch hours, sources, retention)
+
+# Once a day: reads each granted channel's YouTube Analytics and writes where it
+# stands toward the Partner Program into content/analytics/ (one JSON file per
+# channel and a README.md the owner can read).
+#
+# What may be written into this public repository was decided by the owner on
+# 14 November 2026: watch hours, traffic sources and retention. Revenue is never
+# asked for (scripts/analytics_reader.py refuses the question), so it cannot be
+# written or logged. A channel not granted the Analytics scopes yet is reported
+# and skipped.
+#
+# Two jobs on purpose. `read` holds the channels' YouTube credentials and cannot
+# write to the repository. `publish` can write to the repository, holds no
+# YouTube credential, and runs only on main. A push to a session branch
+# therefore reads and reports, and commits nothing.
+on:
+  schedule:
+    - cron: "37 3 * * *"
+  push:
+    branches: ["arena/**"]
+    paths: [".github/workflows/channel-analytics.yml", "scripts/analytics_reader.py"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: channel-analytics
+  cancel-in-progress: false
+
+jobs:
+  read:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Read each granted channel's analytics
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          PRAYER2_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER2_YOUTUBE_CLIENT_ID }}
+          PRAYER2_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER2_YOUTUBE_CLIENT_SECRET }}
+          PRAYER2_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER2_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER3_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER3_YOUTUBE_CLIENT_ID }}
+          PRAYER3_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER3_YOUTUBE_CLIENT_SECRET }}
+          PRAYER3_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER3_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER4_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER4_YOUTUBE_CLIENT_ID }}
+          PRAYER4_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER4_YOUTUBE_CLIENT_SECRET }}
+          PRAYER4_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER4_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER5_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER5_YOUTUBE_CLIENT_ID }}
+          PRAYER5_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER5_YOUTUBE_CLIENT_SECRET }}
+          PRAYER5_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER5_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER6_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER6_YOUTUBE_CLIENT_ID }}
+          PRAYER6_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER6_YOUTUBE_CLIENT_SECRET }}
+          PRAYER6_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER6_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER7_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER7_YOUTUBE_CLIENT_ID }}
+          PRAYER7_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER7_YOUTUBE_CLIENT_SECRET }}
+          PRAYER7_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER7_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER8_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER8_YOUTUBE_CLIENT_ID }}
+          PRAYER8_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER8_YOUTUBE_CLIENT_SECRET }}
+          PRAYER8_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER8_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER9_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER9_YOUTUBE_CLIENT_ID }}
+          PRAYER9_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER9_YOUTUBE_CLIENT_SECRET }}
+          PRAYER9_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER9_YOUTUBE_REFRESH_TOKEN }}
+          PRAYER10_YOUTUBE_CLIENT_ID: ${{ secrets.PRAYER10_YOUTUBE_CLIENT_ID }}
+          PRAYER10_YOUTUBE_CLIENT_SECRET: ${{ secrets.PRAYER10_YOUTUBE_CLIENT_SECRET }}
+          PRAYER10_YOUTUBE_REFRESH_TOKEN: ${{ secrets.PRAYER10_YOUTUBE_REFRESH_TOKEN }}
+        run: |
+          if [ "$GITHUB_REF" = "refs/heads/main" ]; then
+            python3 -u scripts/analytics_reader.py
+          else
+            # A session branch: ask the same questions, write no file.
+            python3 -u scripts/analytics_reader.py --no-write
+          fi
+      - name: Hand the files to the publishing job
+        if: ${{ github.ref == 'refs/heads/main' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: channel-analytics
+          path: content/analytics/
+          retention-days: 3
+          if-no-files-found: ignore
+
+  publish:
+    needs: read
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch the files the reading job wrote
+        id: fetch
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: channel-analytics
+          path: /tmp/channel-analytics
+      - name: Commit content/analytics
+        run: |
+          if ! ls /tmp/channel-analytics/*.json >/dev/null 2>&1; then
+            echo "::notice title=Analytics::no channel has a report yet; nothing to commit"
+            exit 0
+          fi
+          git config user.name "channel-analytics"
+          git config user.email "actions@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch --quiet origin main
+            git reset --quiet --mixed origin/main
+            mkdir -p content/analytics
+            cp -f /tmp/channel-analytics/*.json content/analytics/
+            if [ -f /tmp/channel-analytics/README.md ]; then
+              cp -f /tmp/channel-analytics/README.md content/analytics/README.md
+            fi
+            git add content/analytics
+            if git diff --cached --quiet; then
+              echo "analytics unchanged"
+              exit 0
+            fi
+            git commit --quiet -m "chore(analytics): where each channel stands [skip ci]"
+            if git push --quiet origin HEAD:main; then
+              exit 0
+            fi
+            sleep $((attempt * 3))
+          done
+          echo "::warning title=Analytics::could not push content/analytics; the next run writes it again"
