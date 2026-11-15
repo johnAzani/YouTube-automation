@@ -179,16 +179,19 @@ daily files are ready. The Secret Place's job was started on 14 November (run 43
 YouTube writes the first file within 48 hours and keeps each for 60 days. The other nine
 channels are picked up by the daily run once their tokens carry the Analytics scopes.
 
-**Not built yet:** nothing downloads those files or reads the Analytics API in the scheduled
-runs. `scripts/channel_analytics.py` exists but looks for separate `ANALYTICS_*` secrets and
-was written to run privately.
+**Built since:** the Analytics API is read daily (`scripts/analytics_reader.py`, 15 November),
+and the daily reach files are downloaded by `scripts/reach_reader.py` in the same run
+(`.github/workflows/channel-analytics.yml`, 03:37 UTC) into
+`content/analytics/<channel>.reach.json`, and shown per channel in
+`content/analytics/README.md`. `scripts/channel_analytics.py` is older, looks for separate
+`ANALYTICS_*` secrets and was written to run privately.
 
 **Decided 14 November (the owner left the choice to the automation): which figures may be
 written into this public repository.** Watch hours, traffic sources, retention, and thumbnail
 impressions and click rate may be committed, per channel and per video. Revenue is never
 written to the repository, to a log or to an annotation. The reader goes further and never
-asks YouTube for it at all. The downloader for the daily reach files is to be built to the
-same rule.
+asks YouTube for it at all. The downloader for the daily reach files is built to the same
+rule: it reads four named columns (date, video, impressions, click rate) and nothing else.
 
 **Checked on every audit since 14 November: the channel's @handle.** The probe now compares
 the handle YouTube returns for the channel with the one the descriptions link to. The Secret

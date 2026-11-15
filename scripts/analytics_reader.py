@@ -2,8 +2,9 @@
 """Read each granted channel's YouTube Analytics and write down where it stands.
 
 What the owner decided on 14 November 2026 may be kept in this public repository:
-watch hours, traffic sources and retention (and, once the daily reach files are
-read, thumbnail impressions and click rate). Views and the subscriber count are
+watch hours, traffic sources and retention, and thumbnail impressions and click
+rate (those two come from the daily reach files, read by `scripts/reach_reader.py`;
+this script only shows them in the README). Views and the subscriber count are
 public on YouTube already. Revenue is never asked for here, so it cannot be
 written, logged or shown: `ask()` refuses any question that names a money metric
 and `write_report()` refuses any report that contains one.
@@ -236,8 +237,8 @@ def read_channel(channel, token, today, get=None):
              'views': number(r.get('views')), 'average_view_seconds': number(r.get('averageViewDuration')),
              'average_view_percent': round(float(number(r.get('averageViewPercentage'))), 1)}
             for r in video_rows if VIDEO_ID.match(str(r.get('video')))][:MAX_VIDEOS],
-        'not_included': ['thumbnail impressions and click rate: only in the daily reach files '
-                         '(scripts/reporting_jobs.py), which nothing downloads yet'],
+        'not_included': ['thumbnail impressions and click rate: read from the daily reach files by '
+                         'scripts/reach_reader.py into %s.reach.json' % channel],
         'coverage': coverage,
     }
     return report, ''
@@ -355,8 +356,57 @@ def headline(report):
     return text
 
 
-def summary(reports, published_dir=None):
+#: How many videos the thumbnail table shows per channel (the file holds all of them).
+MAX_REACH_ROWS = 25
+
+
+def load_reach(out_dir=None):
+    """{channel: reach report} as `scripts/reach_reader.py` wrote them; unreadable files are ignored."""
+    directory = Path(out_dir or OUT_DIR)
+    found = {}
+    for channel in CHANNELS:
+        try:
+            data = json.loads((directory / ('%s.reach.json' % channel)).read_text(encoding='utf-8'))
+        except (OSError, ValueError):
+            continue
+        if isinstance(data, dict) and data.get('schema') == 1 and data.get('channel') == channel \
+                and isinstance(data.get('window'), dict) and isinstance(data.get('videos'), list):
+            found[channel] = data
+    return found
+
+
+def reach_lines(report, known):
+    """The thumbnail paragraph and table for one channel, or nothing when no day has a row."""
+    window = report.get('window') or {}
+    if not window.get('days'):
+        return []
+    rate = window.get('click_rate_percent')
+    lines = [
+        'Thumbnails, %s to %s (%s day%s of YouTube\'s daily reach files): shown %s times%s.' % (
+            window.get('first_day'), window.get('last_day'), count(window['days']),
+            '' if window['days'] == 1 else 's', count(window.get('impressions')),
+            (', clicked %s times, a click rate of %s%%' % (count(window.get('clicks')), amount(rate)))
+            if rate is not None else '; the click rate could not be settled from the file'),
+        'A thumbnail is counted where YouTube shows one (search, home, suggested, the channel page). '
+        'The Shorts feed shows none, so Shorts watched there are not in these figures.', '']
+    rows = [row for row in report.get('videos') or []
+            if isinstance(row, dict) and VIDEO_ID.match(str(row.get('video_id'))) and number(row.get('impressions'))]
+    if rows:
+        lines += ['Videos by times shown (up to %d):' % MAX_REACH_ROWS, '',
+                  '| Video | Thumbnail shown | Clicks | Click rate |', '| :--- | ---: | ---: | ---: |']
+        for row in rows[:MAX_REACH_ROWS]:
+            clicked = row.get('clicks')
+            lines.append('| [%s](https://youtu.be/%s) | %s | %s | %s |' % (
+                cell(known.get(row['video_id'], row['video_id'])), row['video_id'], count(row['impressions']),
+                count(clicked) if clicked is not None else 'not known',
+                (amount(row.get('click_rate_percent') or 0) + '%') if clicked is not None else 'not known'))
+        lines.append('')
+    return lines
+
+
+def summary(reports, published_dir=None, reach=None):
     """The whole of `content/analytics/README.md`, from the reports that exist."""
+    reach = reach or {}
     lines = [
         '# Where each channel stands (YouTube Analytics)', '',
         'Written by `scripts/analytics_reader.py`. Do not edit: the next run rewrites it.',
@@ -415,6 +465,8 @@ def summary(reports, published_dir=None):
                     cell(known.get(row['video_id'], row['video_id'])), row['video_id'], amount(row['watch_hours']),
                     count(row['views']), clock(row['average_view_seconds']), amount(row['average_view_percent'])))
             lines.append('')
+        if channel in reach:
+            lines += reach_lines(reach[channel], known)
         refused = ['%s (%s)' % (label, answer) for label, answer in sorted(report.get('coverage', {}).items())
                    if str(answer).startswith('refused')]
         if refused:
@@ -487,7 +539,8 @@ def main(argv=None):
             reports = load_reports(args.out)
             if reports:
                 Path(args.out).mkdir(parents=True, exist_ok=True)
-                (Path(args.out) / 'README.md').write_text(summary(reports), encoding='utf-8')
+                (Path(args.out) / 'README.md').write_text(
+                    summary(reports, reach=load_reach(args.out)), encoding='utf-8')
         except Exception as exc:  # noqa: BLE001
             print('::warning title=Analytics summary::not rewritten (%s)' % type(exc).__name__)
     return 0

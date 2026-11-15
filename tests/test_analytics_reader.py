@@ -321,7 +321,7 @@ def test_a_session_branch_reads_and_reports_but_commits_nothing():
     workflow = _workflow()
     triggers = workflow[True]
     assert triggers["push"] == {"branches": ["main", "arena/**"], "paths": [
-        ".github/workflows/channel-analytics.yml", "scripts/analytics_reader.py"]}
+        ".github/workflows/channel-analytics.yml", "scripts/analytics_reader.py", "scripts/reach_reader.py"]}
     assert "schedule" in triggers and "workflow_dispatch" in triggers
     run = workflow["jobs"]["read"]["steps"][1]["run"]
     assert 'if [ "$GITHUB_REF" = "refs/heads/main" ]' in run and "--no-write" in run

@@ -5,6 +5,15 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-15 — Thumbnail impressions and click rate are read
+
+- YouTube wrote the first daily reach file for The Secret Place (the job was started on 14 November). `scripts/reach_reader.py` downloads every daily file YouTube holds for a channel (it keeps 60 days) and writes `content/analytics/<channel>.reach.json`: per video and per day, how often the thumbnail was shown and how often it was clicked. `content/analytics/README.md` shows it under the channel.
+- It runs inside `.github/workflows/channel-analytics.yml` (03:37 UTC), in the job that holds YouTube credentials and cannot write to the repository; the publishing job commits the file. A push to a session branch reads and writes nothing.
+- Only GET requests. The access token is sent to `youtubereporting.googleapis.com` only and no redirect is followed. Four named columns are read; a report naming money cannot be written.
+- The click rate's unit (a fraction of 1 or a percentage) is settled from the rows of the file. If it cannot be settled, impressions are written and the click rate is left out with a warning.
+- A channel not granted, without a job or without a file yet is named in one line and keeps the file it has.
+- Tests: `tests/test_reach_reader.py`.
+
 ## 2026-11-15 — One unsure phrase cost The Midday Watch its long-form
 
 - **What happened.** The 14:14 UTC slot (run 43726711094) narrated job 0091 for The Midday Watch (prayer3), 1,120 words in 471 seconds, and then refused it: `Uncertain alignment at word 349: confidence=0.000`. The narration was deleted and nothing was uploaded. The slot's Short went out; the other nine channels were unaffected.
@@ -14,6 +23,12 @@ there was no changelog before this file.
 - **The refusal now says what differed:** the script words, the heard words and the seconds, so the next one can be read from the run's annotation.
 - The same rule covers Shorts (one was refused today at word 47, confidence 0.001).
 - Tests: `tests/test_prayer_alignment.py`, class `TestUnsureStretchBetweenCertainWords`.
+
+### `main` was red without anyone seeing it: roadmaps running short
+
+- The pull request's tests failed on a test unrelated to it: The Provision Table (prayer7) had 14 passages left with no long-form yet, and the floor is 15. The Healing Balm stood at exactly 15, The Covenant Shield at 17, The Praise Garden at 18, The Guided Path at 20, each using about one a day. Queue and publish commits carry `[skip ci]`, so nothing ran the test on `main`.
+- Fifteen passages added to each of the five (`scripts/continuous_research.py`, ids 0430-0444, 0530-0544, 0630-0644, 0730-0744, 0830-0844). Every title is wording from the bundled King James text of its passage; no passage is already on its channel's roadmap, on its own evergreen Shorts list or on a seasonal list (the first attempt had 33 that were, and the tests caught the seasonal ones); every thumbnail line is new on its channel and lays out at 105 px or more.
+- Headroom after the change: prayer6 30, prayer7 29, prayer8 32, prayer9 33, prayer10 35.
 
 ## 2026-11-15 — The Covenant Shield ran out of long-form prayers
 
