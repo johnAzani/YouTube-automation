@@ -23,13 +23,12 @@ short_visual_fingerprints: ["sha256:517153253497335591d870c2fbe66267a1e8f5edaf3b
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunris"
+thumbnail_pending: false
 thumbnail_poster: ["FINDING STRENGTH", "IN THE DAWN", "HIS PROMISE", "FOR TODAY"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-15T19:57:14Z"
-thumbnail_retry_reason: "rate_limit"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
 ---
 
 The fear you feel about that meeting today is already known to your Creator. Listen to this promise for your heart. The LORD, he it is that doth go before thee; he will be with thee, he will not fail thee, neither forsake thee: fear not, neither be dismayed. Lord, help me trust that you are already walking into the hours ahead of me. Calm the waves in my spirit as I face the challenges of this new day. I place my worries in your hands, resting in your unchanging presence and love today.

@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["PROTECTION", "FOR", "YOUR DWELLING", "THE FAMILY ALTAR"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-22T20:00:18Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If worry about what might enter your house is keeping you awake, listen to this. There shall no evil befall thee, neither shall any plague come nigh thy dwelling. Lord, we anchor our hearts in this truth today, believing that Your presence is our shield. Keep our thresholds safe from harm and let Your peace rest upon every room we inhabit. We entrust our children, our sleep, and our safety entirely into Your capable and loving hands. In the quiet of this moment, we choose to rest, knowing You are watching over us.

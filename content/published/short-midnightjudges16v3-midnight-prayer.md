@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE MIDNIGHT WATCH", "JUDGES 16:3", "NIGHT OF DELIVERANCE", "STAND IN PRAYER"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-22T20:00:16Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Step into the sacred stillness of this midnight hour. While the world slumbers in darkness, spiritual strongholds are shattered. As written in Judges 16:3, Samson arose at midnight, took the doors of the gate of the city, and carried them away. Heavenly Father, at this midnight watch, we rise in your unfailing power. Whatever heavy gates of opposition, bondage, or fear block our path tonight, rip them from their foundations. Break every ancient chain and lift every heavy weight from our weary shoulders. Lead us up to the high places of freedom and peace. Let this midnight hour mark our ultimate breakthrough. Subscribe to The Midnight Watch to pray with us every night.

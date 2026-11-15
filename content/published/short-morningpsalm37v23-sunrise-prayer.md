@@ -22,13 +22,12 @@ scenes_verified: 7
 short_visual_fingerprints: ["sha256:06f06b5c1e88b960a641aa2c62179195cfe86da30bbaf82f840b93479de65024", "sha256:120150fdb679abbc4d15ab6249008754d1e10931badb5c9278f9718b161f907a", "sha256:5748b66497c3724b73198abbdbe8d3c77513e445b9747bf6f8e218f4da2393ed", "sha256:6add373c00570c6b4ec745bf9e0f14b56ea9165bbff5b770ebde32f335c98365", "sha256:8c3792d693ce6cd8440e48d88fed8d57f15e0cb70b1c6a62d82078f61cd7e8ce", "sha256:8d33b3aa3f06e07e823f655f8af947e0db0132173a3583fb1511e390aa5c19b2", "sha256:fac577413b742871c644c612fc0c025a75fa937bf776ebc50b8e8955d971ed84", "url:0de0665bdc336088391765c924580866bbdabc32d19fd92eeb46a3dd819d186c", "url:4b81248fde6a2a9d88f5f4f028d066f02cfbb194f2589215b7c7ac8fdc0da929", "url:5e4a512a221a29f63df314739627646d5bebfc2a31afadd69e3b247d75a99e47", "url:7daa7ffe04719649a5bccc6170340128334948eccba31485c1085cda8aa262ae", "url:93e0b8d97c4b6f59c4f71e3ac4f75f2e9598e6f9a111180236a9e1372569d659", "url:95fdb0f346dda68712f45c5d66c0f0f77213c57ef936cd2e90a6d99f162ce588", "url:e4d4968feb823faef9c593d7b1f559ce9a2cd60f60988d6137e1bc14706ccc07"]
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunrise Prayer; long_uploads_status=allowed; video_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; video_channel_title=The Morning Altar | Daily Sunrise Prayer; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_pending: false
 thumbnail_poster: ["RISE IN PEACE", "WALK IN FAITH", "TRUST HIS LEAD", "THE MORNING ALTAR"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-15T19:57:14Z"
-thumbnail_retry_reason: "rate_limit"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
 ---
 
 Take a deep breath and greet the light of this new morning. You are invited to center your heart as the world begins to wake. Listen to these words from Psalm 37:23-24. The Lord makes firm the steps of the one who delights in Him. Though they stumble, they will not fall, for the Lord upholds them with His hand. Heavenly Father, as this sun rises, I place my uncertain path into Your capable hands. Let Your truth ground me, keeping my feet stable on the path You have chosen for me today.

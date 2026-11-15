@@ -23,13 +23,12 @@ short_visual_fingerprints: ["sha256:00133e553117d455070fb26c7ffb581592ac935b5ae3
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
-thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunrise Prayer; long_uploads_status=allowed; video_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; video_channel_title=The Morning Altar | Daily Sunrise Prayer; video_privacy=public; upload_status=processed; same_channel=True"
+thumbnail_pending: false
 thumbnail_poster: ["THE LORD IS MY SHEPHERD", "PSALM 23:1", "MORNING PRAYER", "THE MORNING ALTAR"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
-thumbnail_retry_after: "2026-11-15T19:57:14Z"
-thumbnail_retry_reason: "rate_limit"
+thumbnail_revision: "shorts-poster-v1"
+thumbnail_attempts: 0
 ---
 
 If you woke up anxious about having enough strength for today, take heart. Psalm 23 verse 1 declares, The Lord is my shepherd; I shall not want. You do not have to carry tomorrow's burdens or strive in your own power this morning. The Heavenly Father knows your every need before you even speak it. He walks beside you into this day, ordering your steps and providing what you need. Rest your anxious mind in His loving care right now. He is faithful to sustain you through every single hour. Subscribe to The Morning Altar to begin every sunrise in prayer.
