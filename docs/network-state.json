@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T11:29:24Z",
+  "generated_at": "2026-11-15T11:29:55Z",
   "monitor_generated_at": "2026-11-15T06:50:48.927372+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 269,
+    "published_total": 270,
     "published_longform": 114,
-    "published_shorts": 155,
-    "public_total": 267,
+    "published_shorts": 156,
+    "public_total": 268,
     "queued_longform": 65,
-    "queued_shorts": 99,
+    "queued_shorts": 98,
     "automations_ok": 12,
     "automations_total": 12,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 46,
+        "published_total": 47,
         "published_longform": 16,
-        "published_shorts": 30,
+        "published_shorts": 31,
         "thumbnail_pending": 3,
-        "public_total": 45,
+        "public_total": 46,
         "queued_longform": 11,
         "queued_other": 5,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-ISAIAH30V15",
-        "title": "Say This Isaiah 30:15 Prayer Before You Sleep | Isaiah 30:15 #Shorts",
+        "id": "SHORT-MATTHEW28V20",
+        "title": "Say This Matthew 28:20 Prayer Before You Sleep | Constant Presence #Shorts",
         "format": "short",
-        "youtube_video_id": "57j_VQcPFlI",
-        "watch_url": "https://www.youtube.com/shorts/57j_VQcPFlI",
+        "youtube_video_id": "T3HVq07iMzM",
+        "watch_url": "https://www.youtube.com/shorts/T3HVq07iMzM",
         "published_on": "2026-11-15",
-        "published_at": "2026-11-15T06:55:19Z"
+        "published_at": "2026-11-15T11:28:43Z"
       },
       "next_queued_longform": {
         "id": "0025",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-matthew28v20",
-        "scripture": "Matthew 28:20",
+        "short": "short-philippians4v8",
+        "scripture": "Philippians 4:8",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MATTHEW28V20",
+      "slug": "short-matthew28v20-pre-sleep-prayer",
+      "file": "short-matthew28v20-pre-sleep-prayer.md",
+      "title": "Say This Matthew 28:20 Prayer Before You Sleep | Constant Presence #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T11:28:43Z",
+      "youtube_video_id": "T3HVq07iMzM",
+      "watch_url": "https://www.youtube.com/shorts/T3HVq07iMzM",
+      "youtu_be_url": "https://youtu.be/T3HVq07iMzM",
+      "shorts_url": "https://www.youtube.com/shorts/T3HVq07iMzM",
+      "studio_url": "https://studio.youtube.com/video/T3HVq07iMzM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/T3HVq07iMzM/hqdefault.jpg",
+      "thumb_text": "BEDTIME PRAYER \u00b7 MATTHEW 28:20",
+      "thumbnail_pending": false,
+      "duration_label": "55s",
+      "words": 610
+    },
     {
       "id": "SHORT-MORNINGDEUTERONOMY31V8",
       "slug": "short-morningdeuteronomy31v8-sunrise-prayer",
@@ -8083,17 +8107,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-matthew28v20",
-        "file": "0000-short-matthew28v20.yml",
-        "companion_longform_id": "",
-        "scripture": "Matthew 28:20",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-middaypsalm31v24",
