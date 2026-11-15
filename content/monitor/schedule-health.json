@@ -44,8 +44,8 @@
       "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-15T06:48:01.706359+00:00",
-  "last_run_at": "2026-11-15T06:47:10+00:00",
+  "generated_at": "2026-11-15T06:50:16.505020+00:00",
+  "last_run_at": "2026-11-15T06:49:54+00:00",
   "on_time": [
     {
       "late_minutes": 110,
@@ -67,6 +67,13 @@
       "ran_at": "2026-11-15T06:26:58+00:00",
       "slot": "2026-11-15T06:23:00+00:00",
       "workflow": "monitor.yml"
+    },
+    {
+      "late_minutes": 34,
+      "name": "Produce video",
+      "ran_at": "2026-11-15T06:48:42+00:00",
+      "slot": "2026-11-15T06:14:00+00:00",
+      "workflow": "produce.yml"
     },
     {
       "late_minutes": 0,
