@@ -96,7 +96,7 @@ originality_note: Original exegetical exposition of Isaiah 40:31 integrated with
 published_on: "2026-11-08"
 published_at: "2026-11-08T14:53:44Z"
 youtube_video_id: "b9CpOl0tJSE"
-metadata_revision: "retitle-pending"
+metadata_revision: "selar-seo-v1"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
