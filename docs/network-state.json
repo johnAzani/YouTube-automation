@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T07:34:34Z",
+  "generated_at": "2026-11-15T07:40:43Z",
   "monitor_generated_at": "2026-11-15T06:50:48.927372+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 261,
-    "published_longform": 112,
-    "published_shorts": 149,
-    "public_total": 259,
-    "queued_longform": 62,
-    "queued_shorts": 94,
+    "published_total": 263,
+    "published_longform": 113,
+    "published_shorts": 150,
+    "public_total": 261,
+    "queued_longform": 61,
+    "queued_shorts": 93,
     "automations_ok": 12,
     "automations_total": 12,
     "network_healthy": true
@@ -101,33 +101,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 52,
-        "published_longform": 23,
-        "published_shorts": 29,
-        "thumbnail_pending": 3,
-        "public_total": 51,
-        "queued_longform": 6,
+        "published_total": 54,
+        "published_longform": 24,
+        "published_shorts": 30,
+        "thumbnail_pending": 5,
+        "public_total": 53,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM23V1",
-        "title": "Say This Psalm 23:1 Prayer at Sunrise | The Morning Altar #Shorts",
-        "format": "short",
-        "youtube_video_id": "a3aw2cM9g6A",
-        "watch_url": "https://www.youtube.com/shorts/a3aw2cM9g6A",
-        "published_on": "2026-11-15",
-        "published_at": "2026-11-15T02:19:34Z"
-      },
-      "next_queued_longform": {
         "id": "0067",
         "title": "Morning Prayer for Guidance and Direction: Psalm 25:4-5",
-        "words": 1829,
+        "format": "longform",
+        "youtube_video_id": "0N-rq5bbv6g",
+        "watch_url": "https://youtu.be/0N-rq5bbv6g",
+        "published_on": "2026-11-15",
+        "published_at": "2026-11-15T07:39:53Z"
+      },
+      "next_queued_longform": {
+        "id": "0068",
+        "title": "Morning Prayer to Order Your Steps: Psalm 37:23-24 | The Morning Altar",
+        "words": 1774,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morning2corinthians5v17",
-        "scripture": "2 Corinthians 5:17",
+        "short": "short-morningdeuteronomy31v8",
+        "scripture": "Deuteronomy 31:8",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0067",
+      "slug": "psalm-25-4-5-morning-prayer",
+      "file": "0067-psalm-25-4-5-morning-prayer.md",
+      "title": "Morning Prayer for Guidance and Direction: Psalm 25:4-5",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T07:39:53Z",
+      "youtube_video_id": "0N-rq5bbv6g",
+      "watch_url": "https://youtu.be/0N-rq5bbv6g",
+      "youtu_be_url": "https://youtu.be/0N-rq5bbv6g",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/0N-rq5bbv6g/edit",
+      "thumb_url": "https://i.ytimg.com/vi/0N-rq5bbv6g/hqdefault.jpg",
+      "thumb_text": "SHOW ME THY WAYS",
+      "thumbnail_pending": true,
+      "duration_label": "~13 min",
+      "words": 1829
+    },
+    {
       "id": "0509",
       "slug": "genesis-22-14-jehovah-jireh-provision-prayer",
       "file": "0509-genesis-22-14-jehovah-jireh-provision-prayer.md",
@@ -892,6 +916,30 @@
       "thumbnail_pending": true,
       "duration_label": "50s",
       "words": 576
+    },
+    {
+      "id": "SHORT-MORNING2CORINTHIANS5V17",
+      "slug": "short-morning2corinthians5v17-sunrise-prayer",
+      "file": "short-morning2corinthians5v17-sunrise-prayer.md",
+      "title": "Say This 2 Corinthians 5:17 Prayer at Sunrise | Soul #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T06:54:31Z",
+      "youtube_video_id": "kLi_0_jMpsM",
+      "watch_url": "https://www.youtube.com/shorts/kLi_0_jMpsM",
+      "youtu_be_url": "https://youtu.be/kLi_0_jMpsM",
+      "shorts_url": "https://www.youtube.com/shorts/kLi_0_jMpsM",
+      "studio_url": "https://studio.youtube.com/video/kLi_0_jMpsM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/kLi_0_jMpsM/hqdefault.jpg",
+      "thumb_text": "AN ANCHOR \u00b7 FOR YOUR",
+      "thumbnail_pending": true,
+      "duration_label": "42s",
+      "words": 609
     },
     {
       "id": "0212",
@@ -7112,19 +7160,6 @@
         "words": 1025
       },
       {
-        "id": "0067",
-        "slug": "psalm-25-4-5-morning-prayer",
-        "file": "0067-psalm-25-4-5-morning-prayer.md",
-        "title": "Morning Prayer for Guidance and Direction: Psalm 25:4-5",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1829
-      },
-      {
         "id": "0068",
         "slug": "psalm-37-23-24-morning-prayer",
         "file": "0068-psalm-37-23-24-morning-prayer.md",
@@ -7874,17 +7909,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morning2corinthians5v17",
-        "file": "0000-short-morning2corinthians5v17.yml",
-        "companion_longform_id": "",
-        "scripture": "2 Corinthians 5:17",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningdeuteronomy31v8",

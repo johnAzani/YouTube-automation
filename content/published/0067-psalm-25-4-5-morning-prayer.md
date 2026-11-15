@@ -2,7 +2,7 @@
 id: '0067'
 title: "Morning Prayer for Guidance and Direction: Psalm 25:4-5"
 slug: psalm-25-4-5-morning-prayer
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -76,6 +76,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-15"
+published_at: "2026-11-15T07:39:53Z"
+youtube_video_id: "0N-rq5bbv6g"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded]"
 ---
 
 ## Scene 1 — The Sunrise Hook & Directing the Prayer
