@@ -1,0 +1,279 @@
+{
+  "key": "short-gardenpsalm47v1",
+  "channel": "prayer9",
+  "psalm": 47,
+  "title": [
+    "CLAP YOUR HANDS",
+    "SHOUT TO GOD"
+  ],
+  "poster": [
+    "A PRAYER",
+    "OF TRIUMPH",
+    "THE PRAISE",
+    "GARDEN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glade morning",
+    "golden light over peaceful river",
+    "misty countryside soft dawn",
+    "sunbeams through ancient trees",
+    "calm flowing stream mossy stones",
+    "warm light on forest floor"
+  ],
+  "scenes": [
+    {
+      "a": "If that decision weighing on your mind feels too heavy to carry alone, lean in here.",
+      "img": "short-gardenpsalm47v1-scene-01.jpg",
+      "kicker": "PSALM 47:1",
+      "sub": "FIND STRENGTH IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, the weight of tomorrow often obscures the victory You have already secured for my life.",
+      "img": "short-gardenpsalm47v1-scene-02.jpg",
+      "kicker": "PSALM 47:1",
+      "sub": "HEAR HIS PROMISE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I find peace in Your word: O clap your hands, all ye people; shout unto God with the voice of triumph.",
+      "img": "short-gardenpsalm47v1-scene-03.jpg",
+      "kicker": "PSALM 47:1",
+      "sub": "A VOICE OF TRIUMPH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In this quiet moment, I choose to turn my anxiety into a rhythm of holy celebration.",
+      "img": "short-gardenpsalm47v1-scene-04.jpg",
+      "kicker": "PSALM 47:1",
+      "sub": "CELEBRATE HIS FAITHFULNESS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let my spirit rise above these passing troubles to honor the One who sustains my soul.",
+      "img": "short-gardenpsalm47v1-scene-05.jpg",
+      "kicker": "PSALM 47:1",
+      "sub": "RISE ABOVE THE TROUBLES",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Thank You for being the anchor that holds me steady through every single changing season today.",
+      "img": "short-gardenpsalm47v1-scene-06.jpg",
+      "kicker": "PSALM 47:1",
+      "sub": "STEADY IN EVERY SEASON",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If that decision weighing on your mind feels too heavy to carry alone, lean in here."
+    ],
+    [
+      8,
+      18,
+      "Lord, the weight of tomorrow often obscures the victory You have already secured for my life."
+    ],
+    [
+      18,
+      30,
+      "I find peace in Your word: O clap your hands, all ye people; shout unto God with the voice of triumph."
+    ],
+    [
+      30,
+      40,
+      "In this quiet moment, I choose to turn my anxiety into a rhythm of holy celebration."
+    ],
+    [
+      40,
+      50,
+      "Let my spirit rise above these passing troubles to honor the One who sustains my soul."
+    ],
+    [
+      50,
+      60,
+      "Thank You for being the anchor that holds me steady through every single changing season today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF THAT DECISION",
+        "WEIGHING ON YOUR MIND",
+        "FEELS TOO HEAVY",
+        "LEAN IN HERE"
+      ],
+      [
+        "LEAN IN HERE"
+      ],
+      "PSALM 47:1"
+    ],
+    [
+      8,
+      18,
+      [
+        "LORD THE WEIGHT",
+        "OF TOMORROW OBSCURES",
+        "THE VICTORY YOU",
+        "HAVE ALREADY SECURED"
+      ],
+      [
+        "VICTORY"
+      ],
+      "PSALM 47:1"
+    ],
+    [
+      18,
+      30,
+      [
+        "O CLAP YOUR HANDS",
+        "ALL YE PEOPLE",
+        "SHOUT UNTO GOD",
+        "WITH VOICE OF TRIUMPH"
+      ],
+      [
+        "VOICE OF TRIUMPH"
+      ],
+      "PSALM 47:1"
+    ],
+    [
+      30,
+      40,
+      [
+        "IN THIS QUIET",
+        "MOMENT I CHOOSE",
+        "TO TURN ANXIETY",
+        "INTO HOLY CELEBRATION"
+      ],
+      [
+        "HOLY CELEBRATION"
+      ],
+      "PSALM 47:1"
+    ],
+    [
+      40,
+      50,
+      [
+        "LET MY SPIRIT",
+        "RISE ABOVE TROUBLES",
+        "TO HONOR THE ONE",
+        "WHO SUSTAINS MY SOUL"
+      ],
+      [
+        "SUSTAINS MY SOUL"
+      ],
+      "PSALM 47:1"
+    ],
+    [
+      50,
+      60,
+      [
+        "THANK YOU FOR",
+        "BEING THE ANCHOR",
+        "STEADY THROUGH EVERY",
+        "SINGLE CHANGING SEASON"
+      ],
+      [
+        "ANCHOR"
+      ],
+      "PSALM 47:1"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If that decision weighing on your mind feels too heavy to carry alone, lean in here.",
+      "kind": "phrase",
+      "words": [
+        "LEAN",
+        "IN",
+        "HERE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, the weight of tomorrow often obscures the victory You have already secured for my life.",
+      "kind": "phrase",
+      "words": [
+        "VICTORY",
+        "SECURED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I find peace in Your word: O clap your hands, all ye people; shout unto God with the voice of triumph.",
+      "kind": "phrase",
+      "words": [
+        "VOICE",
+        "OF",
+        "TRIUMPH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In this quiet moment, I choose to turn my anxiety into a rhythm of holy celebration.",
+      "kind": "phrase",
+      "words": [
+        "HOLY",
+        "CELEBRATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let my spirit rise above these passing troubles to honor the One who sustains my soul.",
+      "kind": "phrase",
+      "words": [
+        "SUSTAINS",
+        "MY",
+        "SOUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thank You for being the anchor that holds me steady through every single changing season today.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "STEADY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 47:1"
+}

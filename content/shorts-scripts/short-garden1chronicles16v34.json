@@ -1,0 +1,285 @@
+{
+  "key": "short-garden1chronicles16v34",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "GIVE THANKS",
+    "TO THE LORD"
+  ],
+  "poster": [
+    "GIVE THANKS UNTO THE LORD",
+    "FOR HIS MERCY ENDURETH",
+    "FOR EVER",
+    "THE PRAISE GARDEN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit ancient oak forest canopy",
+    "misty golden sunrise over meadow",
+    "gentle flowing river mossy stones",
+    "soft morning light through leaves",
+    "dew drops on wild flowers",
+    "tranquil forest path in spring"
+  ],
+  "scenes": [
+    {
+      "a": "That recurring doubt about your future needs to be quieted by a greater, eternal truth.",
+      "img": "short-garden1chronicles16v34-scene-01.jpg",
+      "kicker": "1 CHRONICLES 16:34",
+      "sub": "FIND PEACE IN HIS PROMISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "O give thanks unto the LORD; for he is good; for his mercy endureth for ever.",
+      "img": "short-garden1chronicles16v34-scene-02.jpg",
+      "kicker": "A PRAYER OF PRAISE",
+      "sub": "HE IS GOOD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, help me to hold fast to this promise when the world feels uncertain and cold.",
+      "img": "short-garden1chronicles16v34-scene-03.jpg",
+      "kicker": "A PRAYER OF PRAISE",
+      "sub": "ANCHORED IN HIS MERCY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I choose to trust that Your goodness remains the foundation beneath my unsteady, weary feet today.",
+      "img": "short-garden1chronicles16v34-scene-04.jpg",
+      "kicker": "A PRAYER OF PRAISE",
+      "sub": "RESTING IN FAITH",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let my heart overflow with gratitude for the unchanging nature of Your constant, perfect love now.",
+      "img": "short-garden1chronicles16v34-scene-05.jpg",
+      "kicker": "A PRAYER OF PRAISE",
+      "sub": "HEAR MY GRATITUDE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Please subscribe to walk with us in this garden of prayer and find daily, quiet hope.",
+      "img": "short-garden1chronicles16v34-scene-06.jpg",
+      "kicker": "THE PRAISE GARDEN",
+      "sub": "ENTER HIS GATES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "That recurring doubt about your future needs to be quieted by a greater, eternal truth."
+    ],
+    [
+      8,
+      19,
+      "O give thanks unto the LORD; for he is good; for his mercy endureth for ever."
+    ],
+    [
+      20,
+      27,
+      "Lord, help me to hold fast to this promise when the world feels uncertain and cold."
+    ],
+    [
+      28,
+      36,
+      "I choose to trust that Your goodness remains the foundation beneath my unsteady, weary feet today."
+    ],
+    [
+      37,
+      46,
+      "Let my heart overflow with gratitude for the unchanging nature of Your constant, perfect love now."
+    ],
+    [
+      47,
+      56,
+      "Please subscribe to walk with us in this garden of prayer and find daily, quiet hope."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "THAT RECURRING DOUBT",
+        "ABOUT YOUR FUTURE",
+        "NEEDS TO BE",
+        "QUIETED BY",
+        "GREATER ETERNAL TRUTH"
+      ],
+      [
+        "GREATER ETERNAL TRUTH"
+      ],
+      "1 CHRONICLES 16:34"
+    ],
+    [
+      8,
+      19,
+      [
+        "O GIVE THANKS",
+        "UNTO THE LORD",
+        "FOR HE IS GOOD",
+        "FOR HIS MERCY",
+        "ENDURETH FOR EVER"
+      ],
+      [
+        "FOR EVER"
+      ],
+      "1 CHRONICLES 16:34"
+    ],
+    [
+      20,
+      27,
+      [
+        "LORD HELP ME",
+        "TO HOLD FAST",
+        "TO THIS PROMISE",
+        "WHEN THE WORLD",
+        "FEELS UNCERTAIN AND COLD"
+      ],
+      [
+        "HOLD FAST"
+      ],
+      "1 CHRONICLES 16:34"
+    ],
+    [
+      28,
+      36,
+      [
+        "I CHOOSE TO TRUST",
+        "THAT YOUR GOODNESS",
+        "REMAINS THE FOUNDATION",
+        "BENEATH MY UNSTEADY",
+        "WEARY FEET TODAY"
+      ],
+      [
+        "YOUR GOODNESS"
+      ],
+      "1 CHRONICLES 16:34"
+    ],
+    [
+      37,
+      46,
+      [
+        "LET MY HEART",
+        "OVERFLOW WITH GRATITUDE",
+        "FOR THE UNCHANGING",
+        "NATURE OF YOUR",
+        "CONSTANT PERFECT LOVE"
+      ],
+      [
+        "CONSTANT PERFECT LOVE"
+      ],
+      "1 CHRONICLES 16:34"
+    ],
+    [
+      47,
+      56,
+      [
+        "PLEASE SUBSCRIBE",
+        "TO WALK WITH US",
+        "IN THIS GARDEN",
+        "OF PRAYER AND",
+        "FIND DAILY QUIET HOPE"
+      ],
+      [
+        "QUIET HOPE"
+      ],
+      "1 CHRONICLES 16:34"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That recurring doubt about your future needs to be quieted by a greater, eternal truth.",
+      "kind": "phrase",
+      "words": [
+        "GREATER",
+        "ETERNAL",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "O give thanks unto the LORD; for he is good; for his mercy endureth for ever.",
+      "kind": "phrase",
+      "words": [
+        "HIS",
+        "MERCY",
+        "ENDURETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, help me to hold fast to this promise when the world feels uncertain and cold.",
+      "kind": "phrase",
+      "words": [
+        "HOLD",
+        "FAST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I choose to trust that Your goodness remains the foundation beneath my unsteady, weary feet today.",
+      "kind": "phrase",
+      "words": [
+        "YOUR",
+        "GOODNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let my heart overflow with gratitude for the unchanging nature of Your constant, perfect love now.",
+      "kind": "phrase",
+      "words": [
+        "CONSTANT",
+        "PERFECT",
+        "LOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Please subscribe to walk with us in this garden of prayer and find daily, quiet hope.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "HOPE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "1 Chronicles 16:34"
+}
