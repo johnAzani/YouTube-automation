@@ -1,6 +1,6 @@
 ---
 id: '0515'
-title: 'When the Path Ahead Is Blocked: Isaiah 45:2-3 | The Provision Table'
+title: "God Goes Before You: Isaiah 45:2-3 | The Provision Table"
 slug: when-the-path-ahead-is-blocked-isaiah-45-2-3
 status: approved
 channel: prayer7
@@ -77,6 +77,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "When the Path Ahead Is Blocked: Isaiah 45:2-3 | The Provision Table"
+queue_title_fixed_at: "2026-11-16"
 ---
 
 ## Scene 1 — The Shepherd Who Goes Before Us

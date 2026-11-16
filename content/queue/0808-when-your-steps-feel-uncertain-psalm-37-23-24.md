@@ -1,6 +1,6 @@
 ---
 id: 0808
-title: 'When Your Steps Feel Uncertain: Psalm 37:23-24 | The Guided Path'
+title: "Steady Steps on an Uncertain Road: Psalm 37:23-24 | The Guided Path"
 slug: when-your-steps-feel-uncertain-psalm-37-23-24
 status: approved
 channel: prayer10
@@ -73,6 +73,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "When Your Steps Feel Uncertain: Psalm 37:23-24 | The Guided Path"
+queue_title_fixed_at: "2026-11-16"
 ---
 
 ## Scene 1 — Bringing the Decision to the Lord

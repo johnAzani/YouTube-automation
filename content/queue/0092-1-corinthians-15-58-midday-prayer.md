@@ -1,6 +1,6 @@
 ---
 id: 0092
-title: "When Your Hard Work Feels Wasted: 1 Corinthians 15:58"
+title: "Your Labor Is Not in Vain: 1 Corinthians 15:58 | The Midday Watch"
 slug: 1-corinthians-15-58-midday-prayer
 status: approved
 channel: prayer3
@@ -73,6 +73,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "When Your Hard Work Feels Wasted: 1 Corinthians 15:58"
+queue_title_fixed_at: "2026-11-16"
 ---
 
 ## Scene 1 — The Noonday Pause and The Anchor

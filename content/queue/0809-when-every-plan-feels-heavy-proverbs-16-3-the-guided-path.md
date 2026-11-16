@@ -1,6 +1,6 @@
 ---
 id: 0809
-title: 'When Every Plan Feels Heavy: Proverbs 16:3 | The Guided Path'
+title: "Committing Your Work to God: Proverbs 16:3 | The Guided Path"
 slug: when-every-plan-feels-heavy-proverbs-16-3-the-guided-path
 status: approved
 channel: prayer10
@@ -72,6 +72,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "When Every Plan Feels Heavy: Proverbs 16:3 | The Guided Path"
+queue_title_fixed_at: "2026-11-16"
 ---
 
 ## Scene 1 — The Heavy Weight of Our Own Planning

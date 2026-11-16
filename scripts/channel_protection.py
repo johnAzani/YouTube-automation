@@ -93,13 +93,15 @@ class Row:
     repeated_titles: int = 0
     shared_sentences: int = 0
     #: Long-prayer titles: published ones still in the old form, the need-first
-    #: titles read (published and queued), the opening used too often, and
-    #: needs worded almost as another channel words one.
+    #: titles read (published and queued), the opening used too often, needs
+    #: worded almost as another channel words one, and queued titles the
+    #: variety gate would refuse today (``pipeline/queue_titles.py``).
     old_form_titles: int = 0
     need_titles: int = 0
     tired_opening: str = ""
     tired_opening_uses: int = 0
     needs_alike_elsewhere: list[str] = field(default_factory=list)
+    queued_refused: int = 0
     notes: list[str] = field(default_factory=list)
 
     @property
@@ -281,6 +283,17 @@ def measure(*, today: datetime | None = None, published_dir: Path | None = None,
                 f"{len(row.needs_alike_elsewhere)} long-prayer title(s) word the need "
                 "almost as another channel does: "
                 + "; ".join(f"'{need}'" for need in row.needs_alike_elsewhere[:3]))
+        # Titles still waiting in the queue that the gate would refuse today. The
+        # authoring gate keeps new ones out; this counts what was written before
+        # it and would publish as it stands (``pipeline/queue_titles.py``).
+        from pipeline import queue_titles
+        row.queued_refused = len(queue_titles.failing(
+            channel, published_dir=PUBLISHED_DIR if published_dir is None else published_dir,
+            queue_dir=queue_dir, rows=long_titles))
+        if row.queued_refused:
+            row.notes.append(
+                f"{row.queued_refused} queued title(s) would be refused by the variety "
+                "gate today and publish as they stand")
         rows.append(row)
     return rows
 
@@ -312,18 +325,20 @@ def render(rows: list[Row]) -> str:
         "The long prayers earn the hours that count. The old form opens with the passage "
         "(\"Psalm 23:5 Provision Prayer\") and is replaced, at most two a channel a day, "
         "once a video is a week old and unwatched. The other columns watch that the titles "
-        "replacing it do not become one mould themselves.",
+        "replacing it do not become one mould themselves, and the last counts the queued "
+        "titles the gate would refuse today — the ones written before it existed.",
         "",
         "| Channel | Published titles still in the old form | Need-first titles read "
-        "| Opening word used too often | Needs worded as another channel words one |",
-        "|---|---|---|---|---|",
+        "| Opening word used too often | Needs worded as another channel words one "
+        "| Queued titles the gate would refuse |",
+        "|---|---|---|---|---|---|",
     ]
     for row in rows:
         tired = (f"'{row.tired_opening.capitalize()}' ({row.tired_opening_uses})"
                  if row.tired_opening else "none")
         lines.append(
             f"| {row.name} | {row.old_form_titles} | {row.need_titles} | {tired} "
-            f"| {len(row.needs_alike_elsewhere)} |")
+            f"| {len(row.needs_alike_elsewhere)} | {row.queued_refused} |")
     noted = [f"- **{row.name}:** {note}" for row in rows for note in row.notes]
     if noted:
         lines += ["", "Over the repository's own mark:", *noted]
