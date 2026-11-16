@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T07:26:47Z",
+  "generated_at": "2026-11-16T07:30:08Z",
   "monitor_generated_at": "2026-11-16T07:25:41.967475+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 311,
+    "published_total": 312,
     "published_longform": 123,
-    "published_shorts": 188,
-    "public_total": 309,
+    "published_shorts": 189,
+    "public_total": 310,
     "queued_longform": 63,
-    "queued_shorts": 100,
+    "queued_shorts": 99,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 51,
+        "published_total": 52,
         "published_longform": 17,
-        "published_shorts": 34,
+        "published_shorts": 35,
         "thumbnail_pending": 4,
-        "public_total": 50,
+        "public_total": 51,
         "queued_longform": 10,
         "queued_other": 5,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-PSALM62V1",
-        "title": "Say This Psalm 62:1-2 Prayer Before You Sleep | The Secret Place #Shorts",
+        "id": "SHORT-PSALM119V165",
+        "title": "Say This Psalm 119:165 Prayer Before You Sleep | Thy Law #Shorts",
         "format": "short",
-        "youtube_video_id": "-kl7Qg8lQhk",
-        "watch_url": "https://www.youtube.com/shorts/-kl7Qg8lQhk",
-        "published_on": "2026-11-15",
-        "published_at": "2026-11-15T23:28:53Z"
+        "youtube_video_id": "fRi9VioybYU",
+        "watch_url": "https://www.youtube.com/shorts/fRi9VioybYU",
+        "published_on": "2026-11-16",
+        "published_at": "2026-11-16T07:29:22Z"
       },
       "next_queued_longform": {
         "id": "0026",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm119v165",
-        "scripture": "Psalm 119:165",
+        "short": "short-psalm145v18",
+        "scripture": "Psalm 145:18",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PSALM119V165",
+      "slug": "short-psalm119v165-pre-sleep-prayer",
+      "file": "short-psalm119v165-pre-sleep-prayer.md",
+      "title": "Say This Psalm 119:165 Prayer Before You Sleep | Thy Law #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T07:29:22Z",
+      "youtube_video_id": "fRi9VioybYU",
+      "watch_url": "https://www.youtube.com/shorts/fRi9VioybYU",
+      "youtu_be_url": "https://youtu.be/fRi9VioybYU",
+      "shorts_url": "https://www.youtube.com/shorts/fRi9VioybYU",
+      "studio_url": "https://studio.youtube.com/video/fRi9VioybYU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/fRi9VioybYU/hqdefault.jpg",
+      "thumb_text": "GREAT PEACE \u00b7 HAVE THEY",
+      "thumbnail_pending": false,
+      "duration_label": "48s",
+      "words": 597
+    },
     {
       "id": "0607",
       "slug": "abiding-under-the-shadow-of-the-almighty-psalm-91-1-2",
@@ -9230,17 +9254,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-psalm119v165",
-        "file": "0000-short-psalm119v165.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 119:165",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm145v18",
