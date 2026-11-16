@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-15T09:18:14.450561+00:00",
-  "as_of": "2026-11-15",
+  "generated_at": "2026-11-16T06:53:35.691994+00:00",
+  "as_of": "2026-11-16",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 22,
+  "total_longform_videos": 20,
   "input_diagnostics": {
     "snapshot_video_ids": 50,
-    "receipt_video_ids": 54,
+    "receipt_video_ids": 58,
     "matched_video_ids": 50,
-    "longform_below_view_threshold": 22,
+    "longform_below_view_threshold": 20,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 4,
+    "longform_too_young_or_undated": 2,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
@@ -18,7 +18,7 @@
   "themes": [
     {
       "theme": "morning_mercy_renewal",
-      "videos": 11,
+      "videos": 9,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -58,95 +58,88 @@
     }
   ],
   "shorts": {
-    "measured_shorts": 22,
-    "total_shorts": 28,
+    "measured_shorts": 24,
+    "total_shorts": 30,
     "sufficient_data": true,
-    "avg_views": 78.8,
-    "median_views": 71,
-    "total_views": 1733,
+    "avg_views": 75.0,
+    "median_views": 57,
+    "total_views": 1801,
     "minimum_age_days": 2,
     "by_book": {
       "2 samuel": {
         "shorts": 1,
         "avg_views": 33.0,
-        "ratio": 0.806
+        "ratio": 0.813
       },
       "exodus": {
         "shorts": 1,
         "avg_views": 32.0,
-        "ratio": 0.802
+        "ratio": 0.809
       },
       "hosea": {
         "shorts": 1,
-        "avg_views": 42.0,
-        "ratio": 0.844
+        "avg_views": 41.0,
+        "ratio": 0.849
       },
       "isaiah": {
-        "shorts": 2,
-        "avg_views": 112.0,
-        "ratio": 1.211
+        "shorts": 4,
+        "avg_views": 75.5,
+        "ratio": 1.004
+      },
+      "jeremiah": {
+        "shorts": 1,
+        "avg_views": 14.0,
+        "ratio": 0.729
       },
       "joshua": {
         "shorts": 1,
         "avg_views": 42.0,
-        "ratio": 0.844
+        "ratio": 0.853
       },
       "matthew": {
         "shorts": 1,
         "avg_views": 24.0,
-        "ratio": 0.768
+        "ratio": 0.773
       },
       "numbers": {
         "shorts": 1,
         "avg_views": 208.0,
-        "ratio": 1.547
-      },
-      "proverbs": {
-        "shorts": 1,
-        "avg_views": 91.0,
-        "ratio": 1.052
+        "ratio": 1.591
       },
       "psalm": {
         "shorts": 12,
-        "avg_views": 85.1,
-        "ratio": 1.069
+        "avg_views": 90.8,
+        "ratio": 1.179
       },
       "zephaniah": {
         "shorts": 1,
         "avg_views": 16.0,
-        "ratio": 0.734
+        "ratio": 0.738
       }
     },
     "by_theme": {
-      "anxiety_peace": {
-        "shorts": 1,
-        "avg_views": 91.0,
-        "ratio": 1.052
-      },
       "blessing_benediction": {
         "shorts": 1,
         "avg_views": 208.0,
-        "ratio": 1.547
+        "ratio": 1.591
       },
       "daily_guidance_wisdom": {
-        "shorts": 8,
-        "avg_views": 70.5,
-        "ratio": 0.916
+        "shorts": 7,
+        "avg_views": 67.9,
+        "ratio": 0.926
       },
       "midday_strength_endurance": {
-        "shorts": 1,
-        "avg_views": 134.0,
-        "ratio": 1.234
+        "shorts": 2,
+        "avg_views": 145.0,
+        "ratio": 1.466
       },
       "morning_mercy_renewal": {
-        "shorts": 11,
-        "avg_views": 66.9,
-        "ratio": 0.873
+        "shorts": 14,
+        "avg_views": 59.1,
+        "ratio": 0.815
       }
     },
-    "guidance": [
-      "Shorts: Isaiah runs 1.2x this channel's average Short (79 views over 22 Shorts); its passages are written first."
-    ]
+    "guidance": []
   },
   "guidance": [
     "Only 0 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real."
