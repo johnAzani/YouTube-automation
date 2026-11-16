@@ -2,6 +2,34 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
+      "late_minutes": 277,
+      "name": "Growth autopilot",
+      "ran_at": "2026-11-16T06:51:44+00:00",
+      "slot": "2026-11-16T02:14:00+00:00",
+      "workflow": "growth-autopilot.yml"
+    },
+    {
+      "late_minutes": 217,
+      "name": "Gemini Brain Autonomous Queue Replenishment",
+      "ran_at": "2026-11-16T06:51:46+00:00",
+      "slot": "2026-11-16T03:14:00+00:00",
+      "workflow": "gemini_brain.yml"
+    },
+    {
+      "late_minutes": 208,
+      "name": "Keepalive",
+      "ran_at": "2026-11-16T06:51:47+00:00",
+      "slot": "2026-11-16T03:23:00+00:00",
+      "workflow": "keepalive.yml"
+    },
+    {
+      "late_minutes": 194,
+      "name": "Channel analytics (watch hours, sources, retention, thumbnails)",
+      "ran_at": "2026-11-16T06:51:49+00:00",
+      "slot": "2026-11-16T03:37:00+00:00",
+      "workflow": "channel-analytics.yml"
+    },
+    {
       "late_minutes": 173,
       "name": "Weekly metrics snapshot",
       "ran_at": "2026-11-13T21:34:19+00:00",
@@ -9,8 +37,8 @@
       "workflow": "metrics.yml"
     }
   ],
-  "generated_at": "2026-11-16T06:51:40.785248+00:00",
-  "last_run_at": "2026-11-16T06:50:57+00:00",
+  "generated_at": "2026-11-16T07:16:56.005221+00:00",
+  "last_run_at": "2026-11-16T07:16:07+00:00",
   "on_time": [
     {
       "late_minutes": 30,
@@ -18,13 +46,6 @@
       "ran_at": "2026-11-15T20:44:09+00:00",
       "slot": "2026-11-15T20:14:00+00:00",
       "workflow": "automation-health.yml"
-    },
-    {
-      "late_minutes": 70,
-      "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-15T20:24:15+00:00",
-      "slot": "2026-11-15T19:14:00+00:00",
-      "workflow": "comments.yml"
     },
     {
       "late_minutes": 91,
@@ -41,11 +62,25 @@
       "workflow": "monitor.yml"
     },
     {
+      "late_minutes": 37,
+      "name": "Produce video",
+      "ran_at": "2026-11-16T06:51:54+00:00",
+      "slot": "2026-11-16T06:14:00+00:00",
+      "workflow": "produce.yml"
+    },
+    {
       "late_minutes": 3,
       "name": "Scheduler supervisor",
       "ran_at": "2026-11-16T06:50:57+00:00",
       "slot": "2026-11-16T06:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
+    },
+    {
+      "late_minutes": 119,
+      "name": "Tests on main (daily)",
+      "ran_at": "2026-11-16T06:51:51+00:00",
+      "slot": "2026-11-16T04:52:00+00:00",
+      "workflow": "tests-on-main.yml"
     }
   ],
   "silence_minutes": 0,
