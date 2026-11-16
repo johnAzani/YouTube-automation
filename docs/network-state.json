@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T15:16:30Z",
+  "generated_at": "2026-11-16T15:17:23Z",
   "monitor_generated_at": "2026-11-16T15:15:20.743827+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 338,
+    "published_total": 339,
     "published_longform": 127,
-    "published_shorts": 211,
-    "public_total": 336,
+    "published_shorts": 212,
+    "public_total": 337,
     "queued_longform": 62,
-    "queued_shorts": 87,
+    "queued_shorts": 86,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -373,23 +373,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 27,
+        "published_total": 28,
         "published_longform": 10,
-        "published_shorts": 17,
+        "published_shorts": 18,
         "thumbnail_pending": 7,
-        "public_total": 27,
+        "public_total": 28,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-HEALINGISAIAH58V8",
-        "title": "Pray This Isaiah 58:8 Healing Prayer for Peace & Strength | God Restores #Shorts",
+        "id": "SHORT-HEALINGMATTHEW8V17",
+        "title": "Pray This Matthew 8:17 Healing Prayer for Peace & Strength | Prayer For You #Shorts",
         "format": "short",
-        "youtube_video_id": "g2IcXS6Xdlw",
-        "watch_url": "https://www.youtube.com/shorts/g2IcXS6Xdlw",
+        "youtube_video_id": "jgE2cCLdSFY",
+        "watch_url": "https://www.youtube.com/shorts/jgE2cCLdSFY",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T11:52:09Z"
+        "published_at": "2026-11-16T15:15:54Z"
       },
       "next_queued_longform": {
         "id": "0410",
@@ -398,8 +398,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingmatthew8v17",
-        "scripture": "Matthew 8:17",
+        "short": "short-healingromans8v11",
+        "scripture": "Romans 8:11",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALINGMATTHEW8V17",
+      "slug": "short-healingmatthew8v17-restoration-prayer",
+      "file": "short-healingmatthew8v17-restoration-prayer.md",
+      "title": "Pray This Matthew 8:17 Healing Prayer for Peace & Strength | Prayer For You #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T15:15:54Z",
+      "youtube_video_id": "jgE2cCLdSFY",
+      "watch_url": "https://www.youtube.com/shorts/jgE2cCLdSFY",
+      "youtu_be_url": "https://youtu.be/jgE2cCLdSFY",
+      "shorts_url": "https://www.youtube.com/shorts/jgE2cCLdSFY",
+      "studio_url": "https://studio.youtube.com/video/jgE2cCLdSFY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/jgE2cCLdSFY/hqdefault.jpg",
+      "thumb_text": "RESTORE YOUR \u00b7 WEARY SPIRIT",
+      "thumbnail_pending": false,
+      "duration_label": "48s",
+      "words": 631
+    },
     {
       "id": "SHORT-MORNINGPSALM46V5",
       "slug": "short-morningpsalm46v5-sunrise-prayer",
@@ -9656,17 +9680,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-healingmatthew8v17",
-        "file": "0000-short-healingmatthew8v17.yml",
-        "companion_longform_id": "",
-        "scripture": "Matthew 8:17",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingromans8v11",
