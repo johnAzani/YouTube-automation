@@ -1,0 +1,324 @@
+{
+  "key": "short-psalm141v2",
+  "channel": "secret-place",
+  "psalm": 141,
+  "title": [
+    "LET MY PRAYER RISE",
+    "PSALM 141:2 BEDTIME PRAYER"
+  ],
+  "poster": [
+    "LET MY PRAYER BE SET FORTH",
+    "AS EVENING INCENSE",
+    "A QUIET NIGHT PRAYER",
+    "PSALM 141:2"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "single candle burning in dark quiet room night",
+    "incense smoke rising softly in night light",
+    "calm dark mountain lake under night sky",
+    "starry night sky over calm dark forest",
+    "quiet still water reflecting moonlight night",
+    "soft warm glow of candle light night stillness",
+    "mist floating over calm lake night pine trees"
+  ],
+  "scenes": [
+    {
+      "a": "Before you check your phone once more to distract your restless mind, stay right here.",
+      "img": "short-psalm141v2-scene-01.jpg",
+      "kicker": "PSALM 141:2",
+      "sub": "STILL YOUR RESTLESS MIND",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Let my prayer be set forth before thee as incense",
+      "img": "short-psalm141v2-scene-02.jpg",
+      "kicker": "PSALM 141:2",
+      "sub": "YOUR PRAYER AS INCENSE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You do not need grand words or perfect strength to reach your Heavenly Father tonight.",
+      "img": "short-psalm141v2-scene-03.jpg",
+      "kicker": "PSALM 141:2",
+      "sub": "COME AS YOU ARE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Even your quietest whisper rises straight to His throne like gentle incense drifting into the night sky.",
+      "img": "short-psalm141v2-scene-04.jpg",
+      "kicker": "PSALM 141:2",
+      "sub": "HE HEARS YOUR WHISPER",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Lay down the burdens you carried all day, and let your tired heart find quiet release.",
+      "img": "short-psalm141v2-scene-05.jpg",
+      "kicker": "PSALM 141:2",
+      "sub": "LAY DOWN YOUR BURDENS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He receives your simple prayer as a holy offering and surrounds you with His abiding peace.",
+      "img": "short-psalm141v2-scene-06.jpg",
+      "kicker": "PSALM 141:2",
+      "sub": "SURROUNDED BY PEACE",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Subscribe to The Secret Place to join us in prayer every night.",
+      "img": "short-psalm141v2-scene-07.jpg",
+      "kicker": "PSALM 141:2",
+      "sub": "PRAY WITH US NIGHTLY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Before you check your phone once more to distract your restless mind, stay right here."
+    ],
+    [
+      8,
+      18,
+      "Psalm 141 verse 2 says, Let my prayer be set forth before thee as incense; and the lifting up of my hands as the evening sacrifice."
+    ],
+    [
+      18,
+      27,
+      "You do not need grand words or perfect strength to reach your Heavenly Father tonight."
+    ],
+    [
+      27,
+      37,
+      "Even your quietest whisper rises straight to His throne like gentle incense drifting into the night sky."
+    ],
+    [
+      37,
+      46,
+      "Lay down the burdens you carried all day, and let your tired heart find quiet release."
+    ],
+    [
+      46,
+      55,
+      "He receives your simple prayer as a holy offering and surrounds you with His abiding peace."
+    ],
+    [
+      55,
+      63,
+      "Subscribe to The Secret Place to join us in prayer every night."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "BEFORE YOU CHECK YOUR PHONE",
+        "TO DISTRACT YOUR RESTLESS MIND",
+        "STAY RIGHT HERE"
+      ],
+      [
+        "RESTLESS",
+        "STAY"
+      ],
+      "PSALM 141 : 2"
+    ],
+    [
+      8,
+      18,
+      [
+        "LET MY PRAYER BE SET FORTH",
+        "BEFORE THEE AS INCENSE",
+        "AND THE LIFTING UP",
+        "OF MY HANDS AS EVENING SACRIFICE"
+      ],
+      [
+        "INCENSE",
+        "EVENING",
+        "SACRIFICE"
+      ],
+      "PSALM 141 : 2"
+    ],
+    [
+      18,
+      27,
+      [
+        "YOU DO NOT NEED GRAND WORDS",
+        "OR PERFECT STRENGTH TO REACH",
+        "YOUR HEAVENLY FATHER TONIGHT"
+      ],
+      [
+        "HEAVENLY",
+        "FATHER"
+      ],
+      "PSALM 141 : 2"
+    ],
+    [
+      27,
+      37,
+      [
+        "EVEN YOUR QUIETEST WHISPER",
+        "RISES STRAIGHT TO HIS THRONE",
+        "LIKE GENTLE INCENSE DRIFTING",
+        "INTO THE NIGHT SKY"
+      ],
+      [
+        "QUIETEST",
+        "WHISPER",
+        "THRONE"
+      ],
+      "PSALM 141 : 2"
+    ],
+    [
+      37,
+      46,
+      [
+        "LAY DOWN THE BURDENS",
+        "YOU CARRIED ALL DAY",
+        "AND LET YOUR TIRED HEART",
+        "FIND QUIET RELEASE"
+      ],
+      [
+        "LAY",
+        "BURDENS",
+        "RELEASE"
+      ],
+      "PSALM 141 : 2"
+    ],
+    [
+      46,
+      55,
+      [
+        "HE RECEIVES YOUR SIMPLE PRAYER",
+        "AS A HOLY OFFERING",
+        "AND SURROUNDS YOU WITH",
+        "HIS ABIDING PEACE"
+      ],
+      [
+        "HOLY",
+        "OFFERING",
+        "PEACE"
+      ],
+      "PSALM 141 : 2"
+    ],
+    [
+      55,
+      63,
+      [
+        "SUBSCRIBE TO THE SECRET PLACE",
+        "TO JOIN US",
+        "IN PRAYER EVERY NIGHT"
+      ],
+      [
+        "SUBSCRIBE",
+        "PRAYER"
+      ],
+      "PSALM 141 : 2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "restless mind",
+      "kind": "phrase",
+      "words": [
+        "RESTLESS",
+        "MIND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "incense",
+      "kind": "phrase",
+      "words": [
+        "INCENSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "evening sacrifice",
+      "kind": "phrase",
+      "words": [
+        "EVENING",
+        "SACRIFICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father",
+      "kind": "phrase",
+      "words": [
+        "HEAVENLY",
+        "FATHER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "quietest whisper",
+      "kind": "phrase",
+      "words": [
+        "QUIETEST",
+        "WHISPER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "quiet release",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "RELEASE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "abiding peace",
+      "kind": "phrase",
+      "words": [
+        "ABIDING",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 141:2"
+}
