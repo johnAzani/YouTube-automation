@@ -46,6 +46,7 @@ from pipeline.config import CONFIG, QUEUE_DIR, PUBLISHED_DIR
 from pipeline.gemini_tts import gemini_key_names, get_gemini_api_key
 from pipeline.script_doc import ScriptDoc, parse_script
 from pipeline.short_release import SHORTS_QUEUE_DIR
+from pipeline.short_script import SPEC_DIR
 from scripts.auto_scheduler import build_schedule_audit, ScheduleAudit
 from scripts.continuous_research import SCRIPTURE_ROADMAP, roadmap_for_channel
 
@@ -1048,6 +1049,30 @@ class GeminiBrain:
                 # Feedback is an optimisation, never a gate: a missing or malformed
                 # artifact must not stop the queue from being replenished.
                 print(f"[gemini-brain] performance feedback skipped: {exc}")
+
+            # Then the network's own passage ledger. Ten channels praying the
+            # same verse is the "many similar videos across linked channels"
+            # pattern; a roadmap entry another channel has already prayed is
+            # stepped over rather than written again. Only a step-over: when
+            # nothing unique is left the shared passage is still written, so a
+            # channel never runs dry because of this. The entries themselves
+            # stay on the roadmap — which channel keeps a shared passage is the
+            # owner's decision, counted by scripts/channel_protection.py.
+            # Read from the same folders the job-id scan above reads, so one
+            # view of the repository decides both what is unwritten and what is
+            # already prayed.
+            from .passage_ownership import ledger, own_first, passages
+            index = ledger(passages(published_dir=PUBLISHED_DIR, queue_dir=QUEUE_DIR,
+                                    spec_dir=SPEC_DIR, shorts_queue_dir=SHORTS_QUEUE_DIR))
+            own, shared = own_first(eligible, self.channel_id, index=index)
+            if shared and own:
+                caps = capabilities_for(self.channel_id)
+                print(f"[gemini-brain] {caps.brand.display_name}: {len(shared)} roadmap "
+                      f"prayer(s) name a passage another channel already prays "
+                      f"({', '.join(str(r['scripture']) for r in shared[:3])}"
+                      f"{', …' if len(shared) > 3 else ''}); writing "
+                      f"{own[0]['scripture']} instead")
+                return own[0]
             return eligible[0]
 
         caps = capabilities_for(self.channel_id)

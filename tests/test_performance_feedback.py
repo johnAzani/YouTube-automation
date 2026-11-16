@@ -279,10 +279,15 @@ class TestBrainIntegration:
         import pipeline.gemini_brain as gb
 
         # Empty queue + published dirs -> every roadmap candidate is eligible.
+        # The Shorts folders are emptied too: since 16 November the selector also
+        # reads the network's passage ledger, and a passage another channel
+        # already prays is stepped over before the steering is consulted.
         monkeypatch.setattr(gb, "QUEUE_DIR", tmp_path / "queue")
         monkeypatch.setattr(gb, "PUBLISHED_DIR", tmp_path / "published")
-        (tmp_path / "queue").mkdir()
-        (tmp_path / "published").mkdir()
+        monkeypatch.setattr(gb, "SPEC_DIR", tmp_path / "specs")
+        monkeypatch.setattr(gb, "SHORTS_QUEUE_DIR", tmp_path / "shorts-queue")
+        for folder in ("queue", "published", "specs", "shorts-queue"):
+            (tmp_path / folder).mkdir()
 
         # Protection is the measured winner.
         winning_report = {

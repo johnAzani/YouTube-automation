@@ -198,14 +198,19 @@ def test_what_it_finds_never_fails_the_run(dirs, monkeypatch, capsys, tmp_path):
     monkeypatch.setattr(cp, "SPEC_DIR", specs)
     # The measure also reads the queued long-prayer titles since 16 November.
     monkeypatch.setattr(cp, "QUEUE_DIR", tmp_path / "queue")
+    # ...and the network's passage ledger since 16 November: its Shorts come from
+    # the real shorts queue unless the folder is named.
+    monkeypatch.setattr(cp, "SHORTS_QUEUE_DIR", tmp_path / "shorts-queue")
     summary = tmp_path / "summary.md"
     monkeypatch.setenv("GITHUB_STEP_SUMMARY", str(summary))
     assert cp.main([]) == 0
     out = capsys.readouterr().out
     warnings = [line for line in out.splitlines() if line.startswith("::warning")]
-    assert len(warnings) == 1
-    title = warnings[0].split("::")[1]
-    assert "," not in title, "a comma ends an annotation's title"
+    assert any("say nothing of their own" in line for line in warnings), warnings
+    for line in warnings:
+        # A comma would end the annotation's title.
+        title = line.split("::")[1]
+        assert "," not in title, line
     assert "How alike the channels look" in summary.read_text(encoding="utf-8")
 
 
