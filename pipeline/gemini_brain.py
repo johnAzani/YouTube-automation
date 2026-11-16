@@ -332,6 +332,32 @@ def job_front_matter(text: str) -> dict[str, Any]:
     return meta if isinstance(meta, dict) else {}
 
 
+def _replace_title(text: str, new_title: str) -> str | None:
+    """``text`` with its front-matter title replaced, or ``None`` when that is not safe.
+
+    Safe means: there is exactly one ``title:`` key in the header, and after the
+    edit the header reads back with the new title and every other key unchanged.
+    """
+    before = job_front_matter(text)
+    lead = len(text) - len(text.lstrip())
+    end = text.find("\n---", lead + 3)
+    if not before or end == -1:
+        return None
+    head = text[:end]
+    found = list(re.finditer(r"^title:.*(?:\n[ \t]+\S.*)*", head, re.M))
+    if len(found) != 1:
+        return None
+    line = "title: " + json.dumps(new_title, ensure_ascii=False)
+    edited = head[:found[0].start()] + line + head[found[0].end():] + text[end:]
+    after = job_front_matter(edited)
+    if after.get("title") != new_title:
+        return None
+    if {k: v for k, v in after.items() if k != "title"} != \
+            {k: v for k, v in before.items() if k != "title"}:
+        return None
+    return edited
+
+
 def missing_job_keys(text: str) -> list[str]:
     """Which REQUIRED_JOB_KEYS this output fails to declare (empty when complete)."""
     meta = job_front_matter(text)
@@ -1059,6 +1085,16 @@ class GeminiBrain:
         brand = brand_for(self.channel_id)
         channel_directive = "\n".join(brand.authoring_directive)
         channel_directive = f"\n{channel_directive}\n"
+        # What this channel's titles already look like, so the new one is not
+        # one more in the same mould (pipeline/title_variety.py).
+        try:
+            from .title_variety import variety_for
+            title_block = variety_for(self.channel_id, published_dir=PUBLISHED_DIR,
+                                      queue_dir=QUEUE_DIR).prompt_block()
+        except Exception:  # noqa: BLE001 - the prompt is still whole without it
+            title_block = ""
+        if title_block:
+            channel_directive += f"\nTITLE. {title_block}"
         from .scripture_text import check_quote, exists as scripture_exists, prompt_block
         scripture_block = prompt_block(str(scripture)) + scripture_name_note(
             self.channel_id, str(scripture))
@@ -1179,6 +1215,61 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
             f"quota-exhausted. Refusing to emit mislabelled or unpublishable scripture "
             f"($0 lock: idle, never spend)."
         )
+
+    def vary_title(self, script_text: str, scripture_data: dict[str, Any]) -> str:
+        """Replace a drafted title that reads like the titles already beside it.
+
+        The author is told what this channel's titles look like, and still a
+        draft can open with the word a third of them open with, word a need the
+        way another channel has, or come back in the old form ("Psalm 23
+        Morning Prayer | ..."), which is also what a short title is padded to.
+        A script is about a thousand words and the title is one line, so the
+        script is never thrown away for it: the model is asked once for a title
+        alone, and when that fails the draft keeps the title it had and the
+        run says so.
+        """
+        from . import retitle, title_variety
+
+        brand = brand_for(self.channel_id)
+        try:
+            meta = job_front_matter(script_text)
+            title = " ".join(str(meta.get("title") or "").split())
+            variety = title_variety.variety_for(
+                self.channel_id, published_dir=PUBLISHED_DIR, queue_dir=QUEUE_DIR)
+            found = variety.problems(title, brand.display_name) if title else []
+            if not found:
+                return script_text
+            reference = str(scripture_data.get("scripture") or "").strip()
+            why = "; ".join(found[:3])
+            if not reference or not self.is_api_available():
+                print(f"::warning title=Title reads like the others ({self.channel_id})::"
+                      f"'{title}': {why}")
+                return script_text
+            accepted = [row["model"] for row in getattr(self, "authoring_outcomes", [])
+                        if row.get("outcome") == "accepted"]
+            model = accepted[-1] if accepted else self.model
+            target = retitle.Target(
+                path=Path(), video_id="", title=title, reference=reference,
+                channel=self.channel_id, views=0, age_days=0,
+                context=str(scripture_data.get("theme") or "")[:400])
+            new_title, refused = retitle.propose_title(
+                target, brand.display_name,
+                lambda prompt: self._call_model(model, prompt) or "",
+                attempts=1, variety=variety, draft=True, rejected=why)
+            replaced = _replace_title(script_text, new_title) if new_title else None
+            if replaced is None:
+                print(f"::warning title=Title reads like the others ({self.channel_id})::"
+                      f"'{title}' was kept: {why}. No better title was written "
+                      f"({refused or 'the new title did not fit the file'}).")
+                return script_text
+            print(f"[gemini-brain] title '{title}' read like the others ({why}); "
+                  f"now '{new_title}'.")
+            return replaced
+        except BrainAuthoringError:
+            raise
+        except Exception as exc:  # noqa: BLE001 - a title check never costs a script
+            print(f"::warning title=Title check skipped ({self.channel_id})::{str(exc)[:200]}")
+            return script_text
 
     def _repair_envelope(self, model: str, body: str, scripture_data: dict[str, Any],
                          missing: list[str]) -> str:
@@ -2112,6 +2203,7 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
             authored_text,
             channel_id=self.channel_id,
         )
+        script_text = self.vary_title(script_text, next_candidate)
         meta = job_front_matter(script_text)
         slug = str(meta.get("slug") or "").strip()
         if not slug:

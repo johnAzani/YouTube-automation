@@ -196,6 +196,8 @@ def test_what_it_finds_never_fails_the_run(dirs, monkeypatch, capsys, tmp_path):
                  title=f"Pray This Psalm {n + 1}:1 Prayer of Thanksgiving | The Praise Garden #Shorts")
     monkeypatch.setattr(cp, "PUBLISHED_DIR", published)
     monkeypatch.setattr(cp, "SPEC_DIR", specs)
+    # The measure also reads the queued long-prayer titles since 16 November.
+    monkeypatch.setattr(cp, "QUEUE_DIR", tmp_path / "queue")
     summary = tmp_path / "summary.md"
     monkeypatch.setenv("GITHUB_STEP_SUMMARY", str(summary))
     assert cp.main([]) == 0

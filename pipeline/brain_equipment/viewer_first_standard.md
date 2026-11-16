@@ -10,6 +10,7 @@ A stranger scrolling does not search for "Zechariah 2:5 Midnight Prayer". They s
 - Say what the prayer is for in words the listener would use: "When You Don't Know What to Do", "Before You Sleep Tonight", "For a Child Who Is Sick", "When Money Is Tight", "To Start the Day Unafraid".
 - Honest only. Never promise an outcome God has not promised: no "instant miracle", no "guaranteed breakthrough", no "watch what happens in 24 hours", no "do not skip this", no numbers of minutes, no capital-letter shouting, no emoji. The title describes this prayer truthfully and the prayer delivers exactly what the title names.
 - Do not reuse the pattern "<reference> <daypart> Prayer". Two titles on one channel must never differ only by the scripture reference.
+- Do not begin every title the same way either. By 16 November 2026 thirty of the ninety-nine need-first titles opened with "When". Vary the opening: the promise itself ("No Weapon Formed Against You"), what is asked ("Strength for a Long Afternoon"), who it is for ("For a Child Who Is Sick"), the hour ("Before You Sleep Tonight"), and "When ..." only some of the time. Where this prompt lists the channel's existing titles and names an opening word not to use, obey it: a title that opens with that word, or words a need the way an existing title does, is replaced.
 
 Examples of the shape (write your own, do not copy):
 - `When You Don't Know What to Do: James 1:5 | <this channel's display name>`

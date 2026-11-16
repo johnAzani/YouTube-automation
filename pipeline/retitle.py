@@ -23,7 +23,11 @@ Rules:
 * once per video, ever (``retitled_at`` in the receipt);
 * at most ``MAX_PER_RUN`` per channel per day (a title change costs about 50
   units of YouTube quota when the monitor pushes it);
-* the scripture reference stays in the title, word for word.
+* the scripture reference stays in the title, word for word;
+* the new title must not repeat the mould it replaces: it may not open with a
+  word that already begins a third of the channel's titles, nor word the need
+  the way this or another channel already has (``pipeline/title_variety.py``).
+  Seven of the first eight retitled videos opened with "When".
 
 Whether a new title brings views is not known. The first retitled videos are the
 test; ``title_before`` in each receipt keeps what it was.
@@ -34,7 +38,10 @@ import re
 from dataclasses import dataclass
 from datetime import date, datetime, timezone
 from pathlib import Path
-from typing import Callable
+from typing import TYPE_CHECKING, Callable
+
+if TYPE_CHECKING:
+    from .title_variety import Variety
 
 MIN_AGE_DAYS = 7
 MAX_VIEWS = 2
@@ -151,8 +158,13 @@ def find_targets(channel_id: str, snapshots: list[dict], *, published_dir: Path 
     return found[:limit]
 
 
-def title_problems(title: str, reference: str, channel_name: str, old_title: str) -> list[str]:
-    """Why a proposed title is refused; empty when it may be used."""
+def title_problems(title: str, reference: str, channel_name: str, old_title: str,
+                   variety: "Variety | None" = None) -> list[str]:
+    """Why a proposed title is refused; empty when it may be used.
+
+    ``variety`` is what the channel's titles already look like; with it a title
+    that is sound alone is still refused when it reads like the ones beside it.
+    """
     problems: list[str] = []
     text = " ".join(str(title or "").replace("–", "-").split())
     if text != str(title or ""):
@@ -181,20 +193,29 @@ def title_problems(title: str, reference: str, channel_name: str, old_title: str
             problems.append(f"'{banned}' is not used in a prayer title")
     if text.lower() == " ".join(str(old_title or "").split()).lower():
         problems.append("the new title is the old title")
+    if variety is not None:
+        problems += variety.problems(text, channel_name)
     return problems
 
 
-def build_prompt(target: Target, channel_name: str, rejected: str = "") -> str:
+def build_prompt(target: Target, channel_name: str, rejected: str = "",
+                 variety: "Variety | None" = None, draft: bool = False) -> str:
+    """The request for one title. ``draft`` is a script not yet published."""
     examples = (
         "Night Prayer When Dread Keeps You Awake: 2 Timothy 1:7",
         "Prayer Before a Big Decision: Proverbs 15:22 | The Guided Path",
         "Believing God for Your Family: Acts 16:31-34 | The Family Altar",
         "Midday Prayer for Strength at Work: Colossians 3:23-24",
     )
-    return (
+    opening = (
+        f"A prayer script for the YouTube channel \"{channel_name}\" was drafted under this "
+        f"title, which cannot be used:\n  {target.title}\n\n"
+        if draft else
         f"A prayer video on the YouTube channel \"{channel_name}\" has had almost no views "
-        f"under this title:\n  {target.title}\n\n"
-        f"It is a narrated prayer on {target.reference}."
+        f"under this title:\n  {target.title}\n\n")
+    return (
+        opening
+        + f"It is a narrated prayer on {target.reference}."
         + (f" What it is about: {target.context}\n" if target.context else "\n")
         + "\nWrite ONE new title that leads with the need or the moment a person would be in "
         "when they search for this prayer, in the plain words they would type.\n\n"
@@ -208,18 +229,19 @@ def build_prompt(target: Target, channel_name: str, rejected: str = "") -> str:
         f"- Keep the reference exactly as written: {target.reference}\n\n"
         "Titles in this form on the same channels:\n"
         + "".join(f"  {example}\n" for example in examples)
+        + (f"\n{variety.prompt_block()}" if variety is not None and variety.own else "")
         + (f"\nYour last answer was refused: {rejected}\n" if rejected else "")
         + "\nReturn the title alone on one line, with nothing before or after it."
     )
 
 
 def propose_title(target: Target, channel_name: str, ask: Callable[[str], str],
-                  attempts: int = 2) -> tuple[str | None, str]:
+                  attempts: int = 2, variety: "Variety | None" = None,
+                  draft: bool = False, rejected: str = "") -> tuple[str | None, str]:
     """Ask for a title until one passes: ``(title, "")`` or ``(None, why)``."""
-    rejected = ""
     for _ in range(attempts):
         try:
-            answer = ask(build_prompt(target, channel_name, rejected)) or ""
+            answer = ask(build_prompt(target, channel_name, rejected, variety, draft)) or ""
         except Exception as exc:  # noqa: BLE001
             return None, f"model unavailable: {str(exc)[:120]}"
         lines = [line.strip().strip("`\"'") for line in answer.splitlines() if line.strip()]
@@ -227,7 +249,8 @@ def propose_title(target: Target, channel_name: str, ask: Callable[[str], str],
             rejected = "no title was returned"
             continue
         title = " ".join(lines[0].replace("–", "-").split())
-        problems = title_problems(title, target.reference, channel_name, target.title)
+        problems = title_problems(title, target.reference, channel_name, target.title,
+                                  variety)
         if not problems:
             return title, ""
         rejected = "; ".join(problems[:3])

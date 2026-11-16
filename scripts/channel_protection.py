@@ -21,6 +21,11 @@ starts and a fix can be shown to have worked:
   the bar (the same question `short_release.hook_adds_nothing` asks when a
   title is built);
 * titles used more than once on a channel;
+* the long-prayer titles, which earn the hours that count: how many still carry
+  the old form that opens with the passage, whether one opening word begins too
+  many of a channel's titles, and needs worded almost alike on two channels
+  (`pipeline/title_variety.py` holds the marks and refuses the same things when
+  a title is written);
 * prayer sentences, other than scripture and the closing invitation, spoken
   on more than one channel (the "coordinated network" half).
 
@@ -48,6 +53,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 PUBLISHED_DIR = ROOT / "content" / "published"
+QUEUE_DIR = ROOT / "content" / "queue"
 SPEC_DIR = ROOT / "content" / "shorts-scripts"
 
 #: A channel's most recent Shorts whose titles are read.
@@ -86,6 +92,14 @@ class Row:
     weak_titles: int = 0
     repeated_titles: int = 0
     shared_sentences: int = 0
+    #: Long-prayer titles: published ones still in the old form, the need-first
+    #: titles read (published and queued), the opening used too often, and
+    #: needs worded almost as another channel words one.
+    old_form_titles: int = 0
+    need_titles: int = 0
+    tired_opening: str = ""
+    tired_opening_uses: int = 0
+    needs_alike_elsewhere: list[str] = field(default_factory=list)
     notes: list[str] = field(default_factory=list)
 
     @property
@@ -200,9 +214,17 @@ def shared_sentences(spec_dir: Path | None = None) -> dict[str, list[str]]:
 
 
 def measure(*, today: datetime | None = None, published_dir: Path | None = None,
-            spec_dir: Path | None = None) -> list[Row]:
+            spec_dir: Path | None = None, queue_dir: Path | None = None) -> list[Row]:
+    from pipeline import title_variety
     from pipeline.channel_capabilities import brand_for, known_channels
     from pipeline.short_release import hook_adds_nothing
+
+    if queue_dir is None:
+        # A caller that names its own published folder is not shown the real queue.
+        queue_dir = QUEUE_DIR if published_dir is None else Path("/nonexistent-queue")
+    long_titles = title_variety.listed(
+        published_dir=PUBLISHED_DIR if published_dir is None else published_dir,
+        queue_dir=queue_dir)
 
     now = today or datetime.now(timezone.utc)
     last_day = (now - timedelta(days=1)).strftime("%Y-%m-%d")
@@ -238,6 +260,27 @@ def measure(*, today: datetime | None = None, published_dir: Path | None = None,
         if row.shared_sentences:
             row.notes.append(
                 f"{row.shared_sentences} prayer sentence(s) are also spoken on another channel")
+        variety = title_variety.variety_for(channel, rows=long_titles)
+        row.old_form_titles = sum(
+            1 for listed in long_titles
+            if listed.channel == channel and not listed.queued
+            and title_variety.names_no_need(
+                title_variety.need_of(listed.title, brand.display_name)))
+        row.need_titles = len(variety.recent)
+        for word, uses in variety.tired_openings().items():
+            row.tired_opening, row.tired_opening_uses = word, uses
+            row.notes.append(
+                f"{uses} of its last {row.need_titles} long-prayer titles open with "
+                f"'{word.capitalize()}'")
+            break
+        row.needs_alike_elsewhere = [
+            need for need in variety.own
+            if any(title_variety.alike(need, other) for other in variety.elsewhere)]
+        if row.needs_alike_elsewhere:
+            row.notes.append(
+                f"{len(row.needs_alike_elsewhere)} long-prayer title(s) word the need "
+                "almost as another channel does: "
+                + "; ".join(f"'{need}'" for need in row.needs_alike_elsewhere[:3]))
         rows.append(row)
     return rows
 
@@ -262,6 +305,25 @@ def render(rows: list[Row]) -> str:
             f"| {row.shared_sentences} |")
     total = sum(r.long_last_day + r.shorts_last_day for r in rows)
     lines += ["", f"All channels together published {total} videos yesterday (UTC)."]
+    lines += [
+        "",
+        "#### Long-prayer titles",
+        "",
+        "The long prayers earn the hours that count. The old form opens with the passage "
+        "(\"Psalm 23:5 Provision Prayer\") and is replaced, at most two a channel a day, "
+        "once a video is a week old and unwatched. The other columns watch that the titles "
+        "replacing it do not become one mould themselves.",
+        "",
+        "| Channel | Published titles still in the old form | Need-first titles read "
+        "| Opening word used too often | Needs worded as another channel words one |",
+        "|---|---|---|---|---|",
+    ]
+    for row in rows:
+        tired = (f"'{row.tired_opening.capitalize()}' ({row.tired_opening_uses})"
+                 if row.tired_opening else "none")
+        lines.append(
+            f"| {row.name} | {row.old_form_titles} | {row.need_titles} | {tired} "
+            f"| {len(row.needs_alike_elsewhere)} |")
     noted = [f"- **{row.name}:** {note}" for row in rows for note in row.notes]
     if noted:
         lines += ["", "Over the repository's own mark:", *noted]

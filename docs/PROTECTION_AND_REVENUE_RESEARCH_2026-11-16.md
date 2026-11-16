@@ -253,3 +253,32 @@ In order of weight.
   `GeminiBrain.author_short_spec`.
 - Daily measure: remove the step "Measure how alike the channels look" from
   `.github/workflows/automation-health.yml`.
+
+## 10. Long-prayer titles (added later on 16 November)
+
+Measured at 07:45 UTC over 123 published and 64 queued long prayers.
+
+| Channel | Published titles still in the old form | Need-first titles (published and queued) | Of those, opening with "When" |
+|---|---|---|---|
+| The Secret Place | 13 | 12 | 2 |
+| The Morning Altar | 19 | 11 | 5 |
+| The Midday Watch | 10 | 13 | 5 |
+| The Midnight Watch | 11 | 9 | 3 |
+| The Family Altar | 8 | 8 | 0 |
+| The Healing Balm | 7 | 9 | 3 |
+| The Provision Table | 8 | 9 | 1 |
+| The Covenant Shield | 5 | 9 | 1 |
+| The Praise Garden | 4 | 8 | 3 |
+| The Guided Path | 3 | 9 | 7 |
+
+- The old form ("Psalm 143:8 Morning Prayer | The Morning Altar") opens with the passage and differs from its neighbours only by the passage. 88 published titles still carry it. `pipeline/retitle.py` replaces it on videos at least seven days old with two views or fewer, two a channel a day; 8 had been replaced by this reading.
+- Of the 99 need-first titles, 30 open with "When". Seven of the eight retitled videos do.
+- One need is worded identically on two channels ("When You Don't Know What to Do", The Morning Altar and The Midday Watch) and two more pairs differ by one word.
+- Twenty passages are prayed on more than one channel. That is not a fault in itself (each channel prays it for its own hour), but it is where two titles are most likely to come out alike.
+
+What was changed: `pipeline/title_variety.py` and its use by the retitler, the author and the daily measure (see `CHANGELOG.md`, same date). The marks in it (a third of the last fifteen titles; six tenths of the meaningful words) are this repository's, chosen from the readings above. YouTube publishes no number.
+
+To undo: revert the commit. Nothing on YouTube was written by it. Titles it helps write afterwards are ordinary titles and stay.
+
+Not known: whether varied titles bring more long-prayer views. YouTube search brought 145 of The Secret Place's 3,109 views in 28 days, so the words a title leads with matter, but that is one channel and one month.
+

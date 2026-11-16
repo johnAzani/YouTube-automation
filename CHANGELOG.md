@@ -5,6 +5,16 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-16 — Long-prayer titles: one mould was being replaced by another
+
+- **Measured first.** The older long-prayer titles are one sentence with the passage swapped ("Psalm 143:8 Morning Prayer | The Morning Altar", 15 times on that channel); 88 published titles still carry that form. That was already being worked on: since 14 November the author leads with the listener's need, and `pipeline/retitle.py` replaces the old form on videos a week old and unwatched, two a channel a day (8 done so far). What had not been seen: of the 99 need-first titles published or queued, 30 open with "When" (7 of 9 on The Guided Path), 7 of the 8 retitled videos do, and "When You Don't Know What to Do" is on two channels. YouTube's monetisation policy names content that "feels interchangeable from video to video" and its reviewers read titles.
+- **`pipeline/title_variety.py` (new).** Reads the long-prayer titles published and queued and says what the next one must avoid: an opening word that already begins a third of the channel's last 15 need-first titles (half, for a word that names the kind of prayer, such as "Bedtime Prayer for ...", which people search for and which a series may share); a need worded almost as one already on the channel; a need worded almost as one on another channel; the old form. The marks are the repository's own; YouTube gives none.
+- **The retitler obeys it.** `retitle.title_problems`, `build_prompt` and `propose_title` take the channel's titles; the prompt lists them and names the opening not to use, and a title that is sound alone is refused when it reads like the ones beside it. Two titles written in one run are compared with each other.
+- **The author obeys it.** The authoring prompt carries the same list. `GeminiBrain.vary_title` reads the finished draft's title; if it fails, the model is asked once for a title alone and only the `title:` line is replaced (the header must read back otherwise unchanged). A script is never discarded for its title: when no better one comes, the draft keeps its title and the run prints a warning. This also catches the old form that a title under 35 characters is padded to.
+- **The daily measure reports it.** `scripts/channel_protection.py` has a second table: published titles still in the old form, the opening word used too often, needs worded as another channel words one. Warnings only.
+- **Not changed.** No live title and no queued title was edited by hand. Three pairs of queued titles are alike across channels ("When the Path Ahead Is Twisted" / "... Blocked"; "When Every Day Feels Heavy" / "When Every Plan Feels Heavy") and will publish as they are: a queued file is bound to its fact-check sheet by checksum. Whether varied titles bring more views is not known.
+- **Tests.** `tests/test_title_variety.py` (new).
+
 ## 2026-11-16 — Standing orders, and the first changes made under them
 
 - **The order.** The owner asked that protection of all channels, revenue intelligence and the automation's intelligence be improved in every piece of work, without being asked again. `AGENTS.md` (new, top of the repository) states the three priorities and the rules that follow; the notice at the top of `STATE.md` points to it; `tests/test_standing_orders.py` fails if they are removed.

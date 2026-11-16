@@ -24,7 +24,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from pipeline import retitle  # noqa: E402
+from pipeline import retitle, title_variety  # noqa: E402
 from pipeline.channels import get_channel, normalize_channel_id  # noqa: E402
 from pipeline.performance_feedback import load_metric_snapshots  # noqa: E402
 
@@ -47,14 +47,16 @@ def _model_asker(channel_id: str):
     return ask
 
 
-def choose(channel_id: str, ledger: Path, *, ask=None, snapshots=None, today=None) -> list[dict]:
+def choose(channel_id: str, ledger: Path, *, ask=None, snapshots=None, today=None,
+           published_dir: Path | None = None, queue_dir: Path | None = None) -> list[dict]:
     channel_id = normalize_channel_id(channel_id)
     snapshots = load_metric_snapshots() if snapshots is None else snapshots
     ledger.write_text("[]", encoding="utf-8")
     if not snapshots:
         print("[retitle] no metrics snapshot in this run; nothing is changed without view counts")
         return []
-    targets = retitle.find_targets(channel_id, snapshots, today=today)
+    where = {} if published_dir is None else {"published_dir": published_dir}
+    targets = retitle.find_targets(channel_id, snapshots, today=today, **where)
     if not targets:
         print(f"[retitle] {channel_id}: no long-form is {retitle.MIN_AGE_DAYS}+ days old with "
               f"{retitle.MAX_VIEWS} views or fewer and its first title")
@@ -66,9 +68,15 @@ def choose(channel_id: str, ledger: Path, *, ask=None, snapshots=None, today=Non
         return []
     name = get_channel(channel_id).display_name
     stamp = (today or datetime.now(timezone.utc).date()).isoformat()
+    # What the channel's titles already look like, so the new one is not the
+    # eighth to open with the same word or the second to word a need one way.
+    variety = title_variety.variety_for(channel_id, published_dir=published_dir,
+                                        queue_dir=queue_dir)
     entries: list[dict] = []
     for target in targets:
-        title, why = retitle.propose_title(target, name, ask)
+        title, why = retitle.propose_title(target, name, ask, variety=variety)
+        if title is not None:
+            variety = variety.with_title(title, name)
         if title is None:
             print(f"::warning title=No new title ({channel_id})::{target.path.name}: {why[:200]}")
             continue
