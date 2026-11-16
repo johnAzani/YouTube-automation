@@ -1,0 +1,257 @@
+{
+  "key": "short-provisiondeuteronomy28v8",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "COMMANDING THE",
+    "BLESSING UPON YOU"
+  ],
+  "poster": [
+    "THE LORD SHALL",
+    "COMMAND THE BLESSING",
+    "UPON THEE IN",
+    "THY STOREHOUSES"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunlit mountain valley",
+    "peaceful flowing river at dawn",
+    "stone table inside ancient sanctuary",
+    "warm morning light on wheat field",
+    "open wooden door to garden path",
+    "soft focus sunlight through stone archway"
+  ],
+  "scenes": [
+    {
+      "a": "As you stand before this difficult financial crossroads, know that God sees every hidden need.",
+      "img": "short-provisiondeuteronomy28v8-scene-01.jpg",
+      "kicker": "DEUTERONOMY 28:8",
+      "sub": "GOD SEES EVERY NEED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Hear the promise of the Lord for your work and the labor of your hands.",
+      "img": "short-provisiondeuteronomy28v8-scene-02.jpg",
+      "kicker": "DEUTERONOMY 28:8",
+      "sub": "HEAR THE PROMISE",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "The LORD shall command the blessing upon thee in thy storehouses, and in all that thou settest thine hand unto; and he shall bless thee in the land which the LORD thy God giveth thee.",
+      "img": "short-provisiondeuteronomy28v8-scene-03.jpg",
+      "kicker": "DEUTERONOMY 28:8",
+      "sub": "HIS WORD IS TRUTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Father, we surrender our storehouses and the work we do daily into Your sovereign hands.",
+      "img": "short-provisiondeuteronomy28v8-scene-04.jpg",
+      "kicker": "DEUTERONOMY 28:8",
+      "sub": "SURRENDER TO HIM",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Grant us the wisdom to manage what You have entrusted to our care this season.",
+      "img": "short-provisiondeuteronomy28v8-scene-05.jpg",
+      "kicker": "DEUTERONOMY 28:8",
+      "sub": "WISDOM IN STEWARDSHIP",
+      "cam": "push_in",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "May Your provision manifest in our lives as we walk in faithful obedience today. Amen.",
+      "img": "short-provisiondeuteronomy28v8-scene-06.jpg",
+      "kicker": "DEUTERONOMY 28:8",
+      "sub": "WALK IN OBEDIENCE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "As you stand before this difficult financial crossroads, know that God sees every hidden need."
+    ],
+    [
+      8,
+      16,
+      "Hear the promise of the Lord for your work and the labor of your hands."
+    ],
+    [
+      16,
+      42,
+      "The LORD shall command the blessing upon thee in thy storehouses, and in all that thou settest thine hand unto; and he shall bless thee in the land which the LORD thy God giveth thee."
+    ],
+    [
+      42,
+      58,
+      "Father, we surrender our storehouses and the work we do daily into Your sovereign hands."
+    ],
+    [
+      58,
+      72,
+      "Grant us the wisdom to manage what You have entrusted to our care this season."
+    ],
+    [
+      72,
+      85,
+      "May Your provision manifest in our lives as we walk in faithful obedience today. Amen."
+    ],
+    [
+      85,
+      95,
+      "Subscribe to The Provision Table to continue walking in God's daily provision for your life."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "AS YOU STAND BEFORE",
+        "THIS FINANCIAL CROSSROADS",
+        "GOD SEES EVERY",
+        "HIDDEN NEED"
+      ],
+      [
+        "GOD SEES"
+      ],
+      "DEUT 28 : 8"
+    ],
+    [
+      8,
+      16,
+      [
+        "HEAR THE PROMISE",
+        "OF THE LORD",
+        "FOR YOUR WORK",
+        "AND YOUR LABOR"
+      ],
+      [
+        "THE PROMISE"
+      ],
+      "DEUT 28 : 8"
+    ],
+    [
+      16,
+      42,
+      [
+        "THE LORD SHALL",
+        "COMMAND THE BLESSING",
+        "IN THY STOREHOUSES",
+        "AND IN ALL",
+        "THOU SETTEST THINE HAND"
+      ],
+      [
+        "COMMAND THE BLESSING"
+      ],
+      "DEUT 28 : 8"
+    ],
+    [
+      42,
+      58,
+      [
+        "FATHER WE SURRENDER",
+        "OUR STOREHOUSES",
+        "INTO YOUR FAITHFUL",
+        "SOVEREIGN HANDS"
+      ],
+      [
+        "SURRENDER"
+      ],
+      "DEUT 28 : 8"
+    ],
+    [
+      58,
+      72,
+      [
+        "GRANT US WISDOM",
+        "TO MANAGE WHAT",
+        "YOU HAVE ENTRUSTED",
+        "TO OUR CARE"
+      ],
+      [
+        "WISDOM"
+      ],
+      "DEUT 28 : 8"
+    ],
+    [
+      72,
+      85,
+      [
+        "MAY YOUR PROVISION",
+        "MANIFEST AS WE",
+        "WALK IN FAITHFUL",
+        "OBEDIENCE TODAY AMEN"
+      ],
+      [
+        "PROVISION"
+      ],
+      "DEUT 28 : 8"
+    ],
+    [
+      85,
+      95,
+      [
+        "SUBSCRIBE TO",
+        "THE PROVISION TABLE",
+        "FOR DAILY PROVISION",
+        "IN YOUR LIFE"
+      ],
+      [
+        "SUBSCRIBE"
+      ],
+      "DEUT 28 : 8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As you stand before this difficult financial crossroads, know that God sees every hidden need.",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "SEES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The LORD shall command the blessing upon thee in thy storehouses, and in all that thou settest thine hand unto; and he shall bless thee in the land which the LORD thy God giveth thee.",
+      "kind": "phrase",
+      "words": [
+        "COMMAND",
+        "THE",
+        "BLESSING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Deuteronomy 28:8"
+}

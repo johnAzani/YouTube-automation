@@ -1,0 +1,296 @@
+{
+  "key": "short-provisionpsalm81v10",
+  "channel": "prayer7",
+  "psalm": 81,
+  "title": [
+    "OPEN THY MOUTH WIDE",
+    "GOD'S DAILY PROVISION"
+  ],
+  "poster": [
+    "I AM THE LORD",
+    "THY GOD WHICH BROUGHT THEE",
+    "OUT OF EGYPT",
+    "OPEN THY MOUTH WIDE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunlit river valley peaceful morning mist",
+    "sunlit sanctuary stone table ancient mountain light",
+    "peaceful mountain valley golden sunlight stream",
+    "calm sunlit mountain pass open landscape",
+    "golden sunlit sanctuary altar quiet beam of light",
+    "peaceful golden sunlit valley river flowing"
+  ],
+  "scenes": [
+    {
+      "a": "bring your need to God",
+      "img": "short-provisionpsalm81v10-scene-01.jpg",
+      "kicker": "PSALM 81:10",
+      "sub": "BRING YOUR NEED TO GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "open thy mouth wide",
+      "img": "short-provisionpsalm81v10-scene-02.jpg",
+      "kicker": "PSALM 81:10",
+      "sub": "I WILL FILL IT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "supplied all their daily practical needs",
+      "img": "short-provisionpsalm81v10-scene-03.jpg",
+      "kicker": "DAILY PROVISION",
+      "sub": "FAITHFUL IN THE WILDERNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "into Your faithful hands today",
+      "img": "short-provisionpsalm81v10-scene-04.jpg",
+      "kicker": "STEWARDSHIP PRAYER",
+      "sub": "SURRENDER EVERY CARE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "open doors of holy provision",
+      "img": "short-provisionpsalm81v10-scene-05.jpg",
+      "kicker": "WISDOM & OPEN DOORS",
+      "sub": "ACCORDING TO HIS RICHES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "walk in God's daily provision",
+      "img": "short-provisionpsalm81v10-scene-06.jpg",
+      "kicker": "THE PROVISION TABLE",
+      "sub": "WALK IN HIS PROVISION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "Before you sign that contract or worry over tomorrow's shortfall, bring your need to God."
+    ],
+    [
+      7,
+      17,
+      "His Word declares in Psalm 81:10, \"I am the LORD thy God, which brought thee out of the land of Egypt: open thy mouth wide, and I will fill it.\""
+    ],
+    [
+      17,
+      27,
+      "Heavenly Father, You delivered Your people from bondage and supplied all their daily practical needs in the wilderness."
+    ],
+    [
+      27,
+      36,
+      "Lord, we bring our quiet worries, financial obligations, and household work into Your faithful hands today."
+    ],
+    [
+      36,
+      45,
+      "Fill our hearts with wisdom and open doors of holy provision according to Your riches in glory."
+    ],
+    [
+      45,
+      53,
+      "Subscribe to The Provision Table to walk in God's daily provision every day."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "BEFORE YOU SIGN THAT CONTRACT",
+        "OR WORRY OVER TOMORROWS SHORTFALL",
+        "BRING YOUR NEED TO GOD"
+      ],
+      [
+        "NEED",
+        "TO",
+        "GOD"
+      ],
+      "PSALM 81 : 10"
+    ],
+    [
+      7,
+      17,
+      [
+        "I AM THE LORD THY GOD",
+        "WHICH BROUGHT THEE OUT OF EGYPT",
+        "OPEN THY MOUTH WIDE",
+        "AND I WILL FILL IT"
+      ],
+      [
+        "FILL",
+        "IT"
+      ],
+      "PSALM 81 : 10"
+    ],
+    [
+      17,
+      27,
+      [
+        "YOU DELIVERED YOUR PEOPLE",
+        "FROM BONDAGE AND SUPPLIED ALL",
+        "THEIR DAILY PRACTICAL NEEDS"
+      ],
+      [
+        "PRACTICAL",
+        "NEEDS"
+      ],
+      "PSALM 81 : 10"
+    ],
+    [
+      27,
+      36,
+      [
+        "WE BRING OUR QUIET WORRIES",
+        "FINANCIAL OBLIGATIONS AND WORK",
+        "INTO YOUR FAITHFUL HANDS TODAY"
+      ],
+      [
+        "FAITHFUL",
+        "HANDS"
+      ],
+      "PSALM 81 : 10"
+    ],
+    [
+      36,
+      45,
+      [
+        "FILL OUR HEARTS WITH WISDOM",
+        "AND OPEN DOORS OF HOLY PROVISION",
+        "ACCORDING TO YOUR RICHES"
+      ],
+      [
+        "OPEN",
+        "DOORS"
+      ],
+      "PSALM 81 : 10"
+    ],
+    [
+      45,
+      53,
+      [
+        "SUBSCRIBE TO THE PROVISION TABLE",
+        "TO WALK IN GODS DAILY PROVISION",
+        "EVERY SINGLE DAY"
+      ],
+      [
+        "DAILY",
+        "PROVISION"
+      ],
+      "PSALM 81 : 10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "bring your need to God",
+      "kind": "phrase",
+      "words": [
+        "bring",
+        "your",
+        "need",
+        "to",
+        "God"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "open thy mouth wide",
+      "kind": "phrase",
+      "words": [
+        "open",
+        "thy",
+        "mouth",
+        "wide"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "supplied all their daily practical needs",
+      "kind": "phrase",
+      "words": [
+        "supplied",
+        "all",
+        "their",
+        "daily",
+        "practical",
+        "needs"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "into Your faithful hands today",
+      "kind": "phrase",
+      "words": [
+        "into",
+        "Your",
+        "faithful",
+        "hands",
+        "today"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "open doors of holy provision",
+      "kind": "phrase",
+      "words": [
+        "open",
+        "doors",
+        "of",
+        "holy",
+        "provision"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "walk in God's daily provision",
+      "kind": "phrase",
+      "words": [
+        "walk",
+        "in",
+        "God's",
+        "daily",
+        "provision"
+      ],
+      "hi": 4,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 81:10"
+}
