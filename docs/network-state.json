@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T19:53:47Z",
+  "generated_at": "2026-11-16T19:54:33Z",
   "monitor_generated_at": "2026-11-16T19:43:50.002042+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 348,
+    "published_total": 349,
     "published_longform": 129,
-    "published_shorts": 219,
-    "public_total": 346,
+    "published_shorts": 220,
+    "public_total": 347,
     "queued_longform": 60,
-    "queued_shorts": 79,
+    "queued_shorts": 78,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 62,
+        "published_total": 63,
         "published_longform": 25,
-        "published_shorts": 37,
+        "published_shorts": 38,
         "thumbnail_pending": 1,
-        "public_total": 61,
+        "public_total": 62,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM46V5",
-        "title": "Say This Psalm 46:5 Prayer at Sunrise | Finding Strength At Dawn #Shorts",
+        "id": "SHORT-MORNINGPSALM51V10",
+        "title": "Say This Psalm 51:10 Prayer at Sunrise | A Clean Heart #Shorts",
         "format": "short",
-        "youtube_video_id": "8VmQZgQ4ti0",
-        "watch_url": "https://www.youtube.com/shorts/8VmQZgQ4ti0",
+        "youtube_video_id": "DklAQK4kKgw",
+        "watch_url": "https://www.youtube.com/shorts/DklAQK4kKgw",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T15:08:40Z"
+        "published_at": "2026-11-16T19:53:47Z"
       },
       "next_queued_longform": {
         "id": "0069",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm51v10",
-        "scripture": "Psalm 51:10",
+        "short": "short-morningpsalm90v14",
+        "scripture": "Psalm 90:14",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM51V10",
+      "slug": "short-morningpsalm51v10-sunrise-prayer",
+      "file": "short-morningpsalm51v10-sunrise-prayer.md",
+      "title": "Say This Psalm 51:10 Prayer at Sunrise | A Clean Heart #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T19:53:47Z",
+      "youtube_video_id": "DklAQK4kKgw",
+      "watch_url": "https://www.youtube.com/shorts/DklAQK4kKgw",
+      "youtu_be_url": "https://youtu.be/DklAQK4kKgw",
+      "shorts_url": "https://www.youtube.com/shorts/DklAQK4kKgw",
+      "studio_url": "https://studio.youtube.com/video/DklAQK4kKgw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/DklAQK4kKgw/hqdefault.jpg",
+      "thumb_text": "PSALM 51:10 \u00b7 A MORNING PRAYER",
+      "thumbnail_pending": false,
+      "duration_label": "55s",
+      "words": 597
+    },
     {
       "id": "SHORT-MIDNIGHTPSALM138V7",
       "slug": "short-midnightpsalm138v7-midnight-prayer",
@@ -9870,17 +9894,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-morningpsalm51v10",
-        "file": "0000-short-morningpsalm51v10.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 51:10",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm90v14",
