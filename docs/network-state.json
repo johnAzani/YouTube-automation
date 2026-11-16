@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T20:06:07Z",
+  "generated_at": "2026-11-16T20:10:58Z",
   "monitor_generated_at": "2026-11-16T19:43:50.002042+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 354,
+    "published_total": 355,
     "published_longform": 129,
-    "published_shorts": 225,
-    "public_total": 352,
+    "published_shorts": 226,
+    "public_total": 353,
     "queued_longform": 60,
-    "queued_shorts": 73,
+    "queued_shorts": 72,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -645,23 +645,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 19,
+        "published_total": 20,
         "published_longform": 7,
-        "published_shorts": 12,
+        "published_shorts": 13,
         "thumbnail_pending": 12,
-        "public_total": 19,
+        "public_total": 20,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDPROVERBS15V22",
-        "title": "Pray This Proverbs 15:22 Prayer for God's Guidance | Seeking His Will #Shorts",
+        "id": "SHORT-GUIDEDPSALM32V8",
+        "title": "Pray This Psalm 32:8 Prayer for God's Guidance | Prayer For Direction #Shorts",
         "format": "short",
-        "youtube_video_id": "8Xwgogr1RKU",
-        "watch_url": "https://www.youtube.com/shorts/8Xwgogr1RKU",
+        "youtube_video_id": "gauz03oIxk0",
+        "watch_url": "https://www.youtube.com/shorts/gauz03oIxk0",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T15:28:15Z"
+        "published_at": "2026-11-16T20:10:11Z"
       },
       "next_queued_longform": {
         "id": "0807",
@@ -670,8 +670,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedpsalm32v8",
-        "scripture": "Psalm 32:8",
+        "short": "short-guidedisaiah30v21",
+        "scripture": "Isaiah 30:21",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDEDPSALM32V8",
+      "slug": "short-guidedpsalm32v8-guidance-prayer",
+      "file": "short-guidedpsalm32v8-guidance-prayer.md",
+      "title": "Pray This Psalm 32:8 Prayer for God's Guidance | Prayer For Direction #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T20:10:11Z",
+      "youtube_video_id": "gauz03oIxk0",
+      "watch_url": "https://www.youtube.com/shorts/gauz03oIxk0",
+      "youtu_be_url": "https://youtu.be/gauz03oIxk0",
+      "shorts_url": "https://www.youtube.com/shorts/gauz03oIxk0",
+      "studio_url": "https://studio.youtube.com/video/gauz03oIxk0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/gauz03oIxk0/hqdefault.jpg",
+      "thumb_text": "THE GUIDED PATH \u00b7 PSALM 32:8",
+      "thumbnail_pending": false,
+      "duration_label": "40s",
+      "words": 607
+    },
     {
       "id": "SHORT-GARDENREVELATION4V11",
       "slug": "short-gardenrevelation4v11-thanksgiving-prayer",
@@ -10696,17 +10720,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-guidedpsalm32v8",
-        "file": "0804-short-guidedpsalm32v8.yml",
-        "companion_longform_id": "0804",
-        "scripture": "Psalm 32:8",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
       },
       {
         "short": "short-guidedisaiah30v21",
