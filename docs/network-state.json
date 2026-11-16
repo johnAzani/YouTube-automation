@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T15:18:10Z",
+  "generated_at": "2026-11-16T15:19:06Z",
   "monitor_generated_at": "2026-11-16T15:15:20.743827+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 340,
+    "published_total": 341,
     "published_longform": 127,
-    "published_shorts": 213,
-    "public_total": 338,
+    "published_shorts": 214,
+    "public_total": 339,
     "queued_longform": 62,
-    "queued_shorts": 85,
+    "queued_shorts": 84,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 21,
+        "published_total": 22,
         "published_longform": 8,
-        "published_shorts": 13,
-        "thumbnail_pending": 21,
-        "public_total": 21,
+        "published_shorts": 14,
+        "thumbnail_pending": 22,
+        "public_total": 22,
         "queued_longform": 6,
         "queued_other": 1,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-SHIELDISAIAH54V17",
-        "title": "Pray This Isaiah 54:17 Prayer for Divine Protection | Walk In Safety #Shorts",
+        "id": "SHORT-SHIELD2THESSALONIANS3V3",
+        "title": "Pray This 2 Thessalonians 3:3 Prayer for Divine Protection | Beyond The Reach Of Evil #Shorts",
         "format": "short",
-        "youtube_video_id": "Zg6-qEEjctA",
-        "watch_url": "https://www.youtube.com/shorts/Zg6-qEEjctA",
+        "youtube_video_id": "FXVJoxeTFNM",
+        "watch_url": "https://www.youtube.com/shorts/FXVJoxeTFNM",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T11:57:52Z"
+        "published_at": "2026-11-16T15:18:13Z"
       },
       "next_queued_longform": {
         "id": "0608",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shield2thessalonians3v3",
-        "scripture": "2 Thessalonians 3:3",
+        "short": "short-shieldpsalm91v1",
+        "scripture": "Psalm 91:1-2",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELD2THESSALONIANS3V3",
+      "slug": "short-shield2thessalonians3v3-protection-prayer",
+      "file": "short-shield2thessalonians3v3-protection-prayer.md",
+      "title": "Pray This 2 Thessalonians 3:3 Prayer for Divine Protection | Beyond The Reach Of Evil #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T15:18:13Z",
+      "youtube_video_id": "FXVJoxeTFNM",
+      "watch_url": "https://www.youtube.com/shorts/FXVJoxeTFNM",
+      "youtu_be_url": "https://youtu.be/FXVJoxeTFNM",
+      "shorts_url": "https://www.youtube.com/shorts/FXVJoxeTFNM",
+      "studio_url": "https://studio.youtube.com/video/FXVJoxeTFNM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/FXVJoxeTFNM/hqdefault.jpg",
+      "thumb_text": "THE COVENANT SHIELD \u00b7 DIVINE PROTECTION",
+      "thumbnail_pending": true,
+      "duration_label": "47s",
+      "words": 624
+    },
     {
       "id": "SHORT-PROVISIONPSALM81V10",
       "slug": "short-provisionpsalm81v10-stewardship-prayer",
@@ -10331,17 +10355,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-shield2thessalonians3v3",
-        "file": "0606-short-shield2thessalonians3v3.yml",
-        "companion_longform_id": "0606",
-        "scripture": "2 Thessalonians 3:3",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldpsalm91v1",
