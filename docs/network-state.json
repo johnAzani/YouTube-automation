@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T11:37:10Z",
+  "generated_at": "2026-11-16T11:45:39Z",
   "monitor_generated_at": "2026-11-16T11:36:03.477348+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 323,
+    "published_total": 324,
     "published_longform": 125,
-    "published_shorts": 198,
-    "public_total": 321,
-    "queued_longform": 63,
-    "queued_shorts": 98,
+    "published_shorts": 199,
+    "public_total": 322,
+    "queued_longform": 64,
+    "queued_shorts": 99,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -237,23 +237,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 35,
+        "published_total": 36,
         "published_longform": 14,
-        "published_shorts": 21,
-        "thumbnail_pending": 34,
-        "public_total": 35,
+        "published_shorts": 22,
+        "thumbnail_pending": 35,
+        "public_total": 36,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTDEUTERONOMY28V7",
-        "title": "Pray This Deuteronomy 28:7 Midnight Prayer | Stand In Faith #Shorts",
+        "id": "SHORT-MIDNIGHTJOB22V28",
+        "title": "Pray This Job 22:28 Midnight Prayer | Hear This Truth #Shorts",
         "format": "short",
-        "youtube_video_id": "HPwLrxDpqE0",
-        "watch_url": "https://www.youtube.com/shorts/HPwLrxDpqE0",
+        "youtube_video_id": "r3ka1DmEiBw",
+        "watch_url": "https://www.youtube.com/shorts/r3ka1DmEiBw",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T07:30:25Z"
+        "published_at": "2026-11-16T11:44:45Z"
       },
       "next_queued_longform": {
         "id": "0214",
@@ -262,8 +262,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightjob22v28",
-        "scripture": "Job 22:28",
+        "short": "short-midnightmatthew18v18",
+        "scripture": "Matthew 18:18",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -582,9 +582,9 @@
         "published_shorts": 12,
         "thumbnail_pending": 19,
         "public_total": 19,
-        "queued_longform": 5,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "0706",
@@ -652,7 +652,7 @@
         "public_total": 16,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-GUIDEDPSALM25V4",
@@ -670,8 +670,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedproverbs15v22",
-        "scripture": "Proverbs 15:22",
+        "short": "short-guidedjames4v13",
+        "scripture": "James 4:13-15",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTJOB22V28",
+      "slug": "short-midnightjob22v28-midnight-prayer",
+      "file": "short-midnightjob22v28-midnight-prayer.md",
+      "title": "Pray This Job 22:28 Midnight Prayer | Hear This Truth #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T11:44:45Z",
+      "youtube_video_id": "r3ka1DmEiBw",
+      "watch_url": "https://www.youtube.com/shorts/r3ka1DmEiBw",
+      "youtu_be_url": "https://youtu.be/r3ka1DmEiBw",
+      "shorts_url": "https://www.youtube.com/shorts/r3ka1DmEiBw",
+      "studio_url": "https://studio.youtube.com/video/r3ka1DmEiBw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/r3ka1DmEiBw/hqdefault.jpg",
+      "thumb_text": "THE MIDNIGHT WATCH \u00b7 DECREE A THING",
+      "thumbnail_pending": true,
+      "duration_label": "43s",
+      "words": 602
+    },
     {
       "id": "0068",
       "slug": "psalm-37-23-24-morning-prayer",
@@ -9198,6 +9222,19 @@
         "words": 1919
       },
       {
+        "id": "0712",
+        "slug": "peace-that-rules-when-hearts-are-troubled-colossians-3-15-17",
+        "file": "0712-peace-that-rules-when-hearts-are-troubled-colossians-3-15-17.md",
+        "title": "Peace That Rules When Hearts Are Troubled: Colossians 3:15-17",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1726
+      },
+      {
         "id": "0806",
         "slug": "direction-for-your-next-step-psalm-119-105",
         "file": "0806-direction-for-your-next-step-psalm-119-105.md",
@@ -9333,6 +9370,17 @@
         "target_window_utc": "09:44"
       },
       {
+        "short": "short-guidedjames4v13",
+        "file": "0000-short-guidedjames4v13.yml",
+        "companion_longform_id": "",
+        "scripture": "James 4:13-15",
+        "channel": "prayer10",
+        "channel_name": "The Guided Path",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "18:44"
+      },
+      {
         "short": "short-healingisaiah58v8",
         "file": "0000-short-healingisaiah58v8.yml",
         "companion_longform_id": "",
@@ -9397,17 +9445,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightjob22v28",
-        "file": "0000-short-midnightjob22v28.yml",
-        "companion_longform_id": "",
-        "scripture": "Job 22:28",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightmatthew18v18",
@@ -10250,6 +10287,17 @@
         "file": "0711-short-gardenpsalm118v24.yml",
         "companion_longform_id": "0711",
         "scripture": "Psalm 118:24",
+        "channel": "prayer9",
+        "channel_name": "The Praise Garden",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "09:44"
+      },
+      {
+        "short": "short-gardencolossians3v15",
+        "file": "0712-short-gardencolossians3v15.yml",
+        "companion_longform_id": "0712",
+        "scripture": "Colossians 3:15-17",
         "channel": "prayer9",
         "channel_name": "The Praise Garden",
         "status": "approved",
