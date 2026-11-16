@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T08:35:57Z",
+  "generated_at": "2026-11-16T08:50:43Z",
   "monitor_generated_at": "2026-11-16T08:20:58.023535+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 321,
-    "published_longform": 124,
-    "published_shorts": 197,
-    "public_total": 319,
-    "queued_longform": 62,
-    "queued_shorts": 91,
+    "published_total": 323,
+    "published_longform": 125,
+    "published_shorts": 198,
+    "public_total": 321,
+    "queued_longform": 61,
+    "queued_shorts": 90,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -101,33 +101,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 58,
-        "published_longform": 24,
-        "published_shorts": 34,
+        "published_total": 60,
+        "published_longform": 25,
+        "published_shorts": 35,
         "thumbnail_pending": 1,
-        "public_total": 57,
-        "queued_longform": 6,
+        "public_total": 59,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM37V4",
-        "title": "Say This Psalm 37:4 Prayer at Sunrise | Today #Shorts",
-        "format": "short",
-        "youtube_video_id": "oTmG-xdj9AM",
-        "watch_url": "https://www.youtube.com/shorts/oTmG-xdj9AM",
-        "published_on": "2026-11-15",
-        "published_at": "2026-11-15T23:30:24Z"
-      },
-      "next_queued_longform": {
         "id": "0068",
         "title": "Morning Prayer to Order Your Steps: Psalm 37:23-24 | The Morning Altar",
-        "words": 1774,
+        "format": "longform",
+        "youtube_video_id": "diqZtLNbvl8",
+        "watch_url": "https://youtu.be/diqZtLNbvl8",
+        "published_on": "2026-11-16",
+        "published_at": "2026-11-16T08:49:45Z"
+      },
+      "next_queued_longform": {
+        "id": "0069",
+        "title": "Morning Prayer for a Clear Path Today: Psalm 119:105",
+        "words": 1759,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm113v3",
-        "scripture": "Psalm 113:3",
+        "short": "short-morningpsalm16v8",
+        "scripture": "Psalm 16:8",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0068",
+      "slug": "psalm-37-23-24-morning-prayer",
+      "file": "0068-psalm-37-23-24-morning-prayer.md",
+      "title": "Morning Prayer to Order Your Steps: Psalm 37:23-24 | The Morning Altar",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T08:49:45Z",
+      "youtube_video_id": "diqZtLNbvl8",
+      "watch_url": "https://youtu.be/diqZtLNbvl8",
+      "youtu_be_url": "https://youtu.be/diqZtLNbvl8",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/diqZtLNbvl8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/diqZtLNbvl8/hqdefault.jpg",
+      "thumb_text": "HE HOLDS MY HAND",
+      "thumbnail_pending": false,
+      "duration_label": "~12 min",
+      "words": 1774
+    },
+    {
       "id": "0706",
       "slug": "gratitude-when-life-is-heavy-psalm-34-1-3",
       "file": "0706-gratitude-when-life-is-heavy-psalm-34-1-3.md",
@@ -844,6 +868,30 @@
       "thumbnail_pending": true,
       "duration_label": "48s",
       "words": 624
+    },
+    {
+      "id": "SHORT-MORNINGPSALM113V3",
+      "slug": "short-morningpsalm113v3-sunrise-prayer",
+      "file": "short-morningpsalm113v3-sunrise-prayer.md",
+      "title": "Say This Psalm 113:3 Prayer at Sunrise | Sacred Moment #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T07:30:45Z",
+      "youtube_video_id": "rnC7e9wCaTw",
+      "watch_url": "https://www.youtube.com/shorts/rnC7e9wCaTw",
+      "youtu_be_url": "https://youtu.be/rnC7e9wCaTw",
+      "shorts_url": "https://www.youtube.com/shorts/rnC7e9wCaTw",
+      "studio_url": "https://studio.youtube.com/video/rnC7e9wCaTw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/rnC7e9wCaTw/hqdefault.jpg",
+      "thumb_text": "DAWN PRAYER \u00b7 PSALM 113",
+      "thumbnail_pending": false,
+      "duration_label": "46s",
+      "words": 579
     },
     {
       "id": "SHORT-MIDDAY2CORINTHIANS4V16",
@@ -8539,19 +8587,6 @@
         "words": 1025
       },
       {
-        "id": "0068",
-        "slug": "psalm-37-23-24-morning-prayer",
-        "file": "0068-psalm-37-23-24-morning-prayer.md",
-        "title": "Morning Prayer to Order Your Steps: Psalm 37:23-24 | The Morning Altar",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1774
-      },
-      {
         "id": "0069",
         "slug": "psalm-119-105-morning-prayer",
         "file": "0069-psalm-119-105-morning-prayer.md",
@@ -9325,17 +9360,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningpsalm113v3",
-        "file": "0000-short-morningpsalm113v3.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 113:3",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm16v8",

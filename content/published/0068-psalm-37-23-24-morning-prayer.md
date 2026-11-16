@@ -2,7 +2,7 @@
 id: 0068
 title: "Morning Prayer to Order Your Steps: Psalm 37:23-24 | The Morning Altar"
 slug: psalm-37-23-24-morning-prayer
-status: approved
+status: published
 channel: prayer2
 privacy: public
 format: longform
@@ -75,6 +75,13 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-16"
+published_at: "2026-11-16T08:49:45Z"
+youtube_video_id: "diqZtLNbvl8"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Sunrise Hook & Directing the Prayer
