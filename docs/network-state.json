@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T15:54:35Z",
+  "generated_at": "2026-11-16T17:58:15Z",
   "monitor_generated_at": "2026-11-16T15:15:20.743827+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 345,
-    "published_longform": 128,
-    "published_shorts": 217,
-    "public_total": 343,
-    "queued_longform": 61,
-    "queued_shorts": 81,
+    "published_total": 347,
+    "published_longform": 129,
+    "published_shorts": 218,
+    "public_total": 345,
+    "queued_longform": 60,
+    "queued_shorts": 80,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -169,33 +169,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 44,
-        "published_longform": 17,
-        "published_shorts": 27,
-        "thumbnail_pending": 0,
-        "public_total": 44,
-        "queued_longform": 6,
+        "published_total": 46,
+        "published_longform": 18,
+        "published_shorts": 28,
+        "thumbnail_pending": 1,
+        "public_total": 46,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYPSALM118V14",
-        "title": "Say This Psalm 118:14 Prayer at Noon | Draining Your Stamina Today #Shorts",
-        "format": "short",
-        "youtube_video_id": "LM8ON2sp-KQ",
-        "watch_url": "https://www.youtube.com/shorts/LM8ON2sp-KQ",
-        "published_on": "2026-11-16",
-        "published_at": "2026-11-16T11:48:26Z"
-      },
-      "next_queued_longform": {
         "id": "0092",
         "title": "Your Labor Is Not in Vain: 1 Corinthians 15:58 | The Midday Watch",
-        "words": 2397,
+        "format": "longform",
+        "youtube_video_id": "GU4-8UTXaHk",
+        "watch_url": "https://youtu.be/GU4-8UTXaHk",
+        "published_on": "2026-11-16",
+        "published_at": "2026-11-16T17:57:23Z"
+      },
+      "next_queued_longform": {
+        "id": "0093",
+        "title": "Eyes on God When Answers Run Out: 2 Chronicles 20:12",
+        "words": 2554,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaypsalm138v3",
-        "scripture": "Psalm 138:3",
+        "short": "short-middaypsalm68v19",
+        "scripture": "Psalm 68:19",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0092",
+      "slug": "1-corinthians-15-58-midday-prayer",
+      "file": "0092-1-corinthians-15-58-midday-prayer.md",
+      "title": "Your Labor Is Not in Vain: 1 Corinthians 15:58 | The Midday Watch",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T17:57:23Z",
+      "youtube_video_id": "GU4-8UTXaHk",
+      "watch_url": "https://youtu.be/GU4-8UTXaHk",
+      "youtu_be_url": "https://youtu.be/GU4-8UTXaHk",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/GU4-8UTXaHk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/GU4-8UTXaHk/hqdefault.jpg",
+      "thumb_text": "NOT IN VAIN",
+      "thumbnail_pending": false,
+      "duration_label": "~17 min",
+      "words": 2397
+    },
+    {
       "id": "0310",
       "slug": "proverbs-3-33-he-blesseth-the-habitation-of-the-just",
       "file": "0310-proverbs-3-33-he-blesseth-the-habitation-of-the-just.md",
@@ -844,6 +868,30 @@
       "thumbnail_pending": false,
       "duration_label": "48s",
       "words": 631
+    },
+    {
+      "id": "SHORT-MIDDAYPSALM138V3",
+      "slug": "short-middaypsalm138v3-midday-prayer",
+      "file": "short-middaypsalm138v3-midday-prayer.md",
+      "title": "Say This Psalm 138:3 Prayer at Noon | Find Strength Today #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T15:08:43Z",
+      "youtube_video_id": "r9JL65AebUM",
+      "watch_url": "https://www.youtube.com/shorts/r9JL65AebUM",
+      "youtu_be_url": "https://youtu.be/r9JL65AebUM",
+      "shorts_url": "https://www.youtube.com/shorts/r9JL65AebUM",
+      "studio_url": "https://studio.youtube.com/video/r9JL65AebUM/edit",
+      "thumb_url": "https://i.ytimg.com/vi/r9JL65AebUM/hqdefault.jpg",
+      "thumb_text": "THE MIDDAY WATCH \u00b7 A QUIET PLACE",
+      "thumbnail_pending": true,
+      "duration_label": "<60s",
+      "words": 21
     },
     {
       "id": "SHORT-MORNINGPSALM46V5",
@@ -9193,19 +9241,6 @@
         "words": 2160
       },
       {
-        "id": "0092",
-        "slug": "1-corinthians-15-58-midday-prayer",
-        "file": "0092-1-corinthians-15-58-midday-prayer.md",
-        "title": "Your Labor Is Not in Vain: 1 Corinthians 15:58 | The Midday Watch",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 2397
-      },
-      {
         "id": "0093",
         "slug": "2-chronicles-20-12-midday-prayer",
         "file": "0093-2-chronicles-20-12-midday-prayer.md",
@@ -9800,17 +9835,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-middaypsalm138v3",
-        "file": "0000-short-middaypsalm138v3.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 138:3",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaypsalm68v19",
