@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=el"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["DIVINE PROTECTION", "STRONG TOWER", "SAFE KEEPING", "ISAIAH 54:17"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-23T12:04:24Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Bow your heart and place every step, journey, and unseen concern under the shadow of the Almighty today. No weapon that is formed against thee shall prosper, as His word declares over your home and family. shall prosper in this dark world, for you dwell securely inside His impenetrable fortress of grace. Every tongue that rises against you in judgment thou shalt condemn, because He is your righteous shield. is condemned by His holy covenant, keeping your soul safe through every trial and sudden storm. Surround our going out and coming in with Your angels, Father, holding us safely in Your everlasting palms. Subscribe for more daily KJV prayers and walk daily under the mighty shadow of His protecting wings.
