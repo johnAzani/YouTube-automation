@@ -81,7 +81,7 @@ originality:
 published_on: "2026-11-09"
 published_at: "2026-11-09T17:43:47Z"
 youtube_video_id: "PZo9K85i7Sc"
-metadata_revision: "retitle-pending"
+metadata_revision: "selar-seo-v1"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
