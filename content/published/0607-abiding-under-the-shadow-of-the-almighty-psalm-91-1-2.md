@@ -2,7 +2,7 @@
 id: '0607'
 title: 'Abiding Under the Shadow of the Almighty: Psalm 91:1-2'
 slug: abiding-under-the-shadow-of-the-almighty-psalm-91-1-2
-status: approved
+status: published
 channel: prayer8
 privacy: public
 format: longform
@@ -75,6 +75,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-16"
+published_at: "2026-11-16T00:39:22Z"
+youtube_video_id: "9yQ_qPWCthI"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — The Dwelling Place of the Most High

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T00:34:21Z",
+  "generated_at": "2026-11-16T00:40:06Z",
   "monitor_generated_at": "2026-11-15T22:59:34.787450+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 309,
-    "published_longform": 122,
-    "published_shorts": 187,
-    "public_total": 307,
-    "queued_longform": 57,
-    "queued_shorts": 67,
+    "published_total": 311,
+    "published_longform": 123,
+    "published_shorts": 188,
+    "public_total": 309,
+    "queued_longform": 56,
+    "queued_shorts": 66,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -509,33 +509,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 17,
-        "published_longform": 7,
-        "published_shorts": 10,
-        "thumbnail_pending": 17,
-        "public_total": 17,
-        "queued_longform": 6,
+        "published_total": 19,
+        "published_longform": 8,
+        "published_shorts": 11,
+        "thumbnail_pending": 19,
+        "public_total": 19,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-SHIELDEPHESIANS6V16",
-        "title": "Pray This Ephesians 6:16 Prayer for Divine Protection | Protection Prayer #Shorts",
-        "format": "short",
-        "youtube_video_id": "kJiDuqrHRgo",
-        "watch_url": "https://www.youtube.com/shorts/kJiDuqrHRgo",
-        "published_on": "2026-11-15",
-        "published_at": "2026-11-15T20:00:57Z"
-      },
-      "next_queued_longform": {
         "id": "0607",
         "title": "Abiding Under the Shadow of the Almighty: Psalm 91:1-2",
-        "words": 1431,
+        "format": "longform",
+        "youtube_video_id": "9yQ_qPWCthI",
+        "watch_url": "https://youtu.be/9yQ_qPWCthI",
+        "published_on": "2026-11-16",
+        "published_at": "2026-11-16T00:39:22Z"
+      },
+      "next_queued_longform": {
+        "id": "0608",
+        "title": "A Perfect Way and a Sure Defense: 2 Samuel 22:31 | The Covenant Shield",
+        "words": 2169,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm34v7",
-        "scripture": "Psalm 34:7",
+        "short": "short-shieldisaiah54v17",
+        "scripture": "Isaiah 54:17",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0607",
+      "slug": "abiding-under-the-shadow-of-the-almighty-psalm-91-1-2",
+      "file": "0607-abiding-under-the-shadow-of-the-almighty-psalm-91-1-2.md",
+      "title": "Abiding Under the Shadow of the Almighty: Psalm 91:1-2",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T00:39:22Z",
+      "youtube_video_id": "9yQ_qPWCthI",
+      "watch_url": "https://youtu.be/9yQ_qPWCthI",
+      "youtu_be_url": "https://youtu.be/9yQ_qPWCthI",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/9yQ_qPWCthI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/9yQ_qPWCthI/hqdefault.jpg",
+      "thumb_text": "GOD MY REFUGE",
+      "thumbnail_pending": true,
+      "duration_label": "~10 min",
+      "words": 1431
+    },
+    {
       "id": "0213",
       "slug": "psalm-18-28-29-night-prayer",
       "file": "0213-psalm-18-28-29-night-prayer.md",
@@ -772,6 +796,30 @@
       "thumbnail_pending": true,
       "duration_label": "62s",
       "words": 635
+    },
+    {
+      "id": "SHORT-SHIELDPSALM34V7",
+      "slug": "short-shieldpsalm34v7-protection-prayer",
+      "file": "short-shieldpsalm34v7-protection-prayer.md",
+      "title": "Pray This Psalm 34:7 Prayer for Divine Protection | Refuge In God #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T23:39:01Z",
+      "youtube_video_id": "LBd6JDnP7Fs",
+      "watch_url": "https://www.youtube.com/shorts/LBd6JDnP7Fs",
+      "youtu_be_url": "https://youtu.be/LBd6JDnP7Fs",
+      "shorts_url": "https://www.youtube.com/shorts/LBd6JDnP7Fs",
+      "studio_url": "https://studio.youtube.com/video/LBd6JDnP7Fs/edit",
+      "thumb_url": "https://i.ytimg.com/vi/LBd6JDnP7Fs/hqdefault.jpg",
+      "thumb_text": "PLACE EVERY STEP \u00b7 UNDER THE SHADOW",
+      "thumbnail_pending": true,
+      "duration_label": "53s",
+      "words": 617
     },
     {
       "id": "SHORT-PROVISIONPSALM84V11",
@@ -8654,19 +8702,6 @@
         "words": 1438
       },
       {
-        "id": "0607",
-        "slug": "abiding-under-the-shadow-of-the-almighty-psalm-91-1-2",
-        "file": "0607-abiding-under-the-shadow-of-the-almighty-psalm-91-1-2.md",
-        "title": "Abiding Under the Shadow of the Almighty: Psalm 91:1-2",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1431
-      },
-      {
         "id": "0608",
         "slug": "a-perfect-way-and-a-sure-defense-2-samuel-22-31",
         "file": "0608-a-perfect-way-and-a-sure-defense-2-samuel-22-31.md",
@@ -9346,17 +9381,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-shieldpsalm34v7",
-        "file": "0604-short-shieldpsalm34v7.yml",
-        "companion_longform_id": "0604",
-        "scripture": "Psalm 34:7",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldisaiah54v17",
