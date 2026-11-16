@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T19:56:15Z",
+  "generated_at": "2026-11-16T20:03:39Z",
   "monitor_generated_at": "2026-11-16T19:43:50.002042+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 351,
+    "published_total": 352,
     "published_longform": 129,
-    "published_shorts": 222,
-    "public_total": 349,
+    "published_shorts": 223,
+    "public_total": 350,
     "queued_longform": 60,
-    "queued_shorts": 76,
+    "queued_shorts": 75,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -441,23 +441,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 30,
+        "published_total": 31,
         "published_longform": 12,
-        "published_shorts": 18,
+        "published_shorts": 19,
         "thumbnail_pending": 7,
-        "public_total": 30,
+        "public_total": 31,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONPSALM81V10",
-        "title": "Pray This Psalm 81:10 Prayer for Open Doors & Provision | Open Thy Mouth Wide #Shorts",
+        "id": "SHORT-PROVISIONGENESIS22V14",
+        "title": "Pray This Genesis 22:14 Prayer for Open Doors & Provision | The Lord Will Provide #Shorts",
         "format": "short",
-        "youtube_video_id": "GZ4BKnpLr4Y",
-        "watch_url": "https://www.youtube.com/shorts/GZ4BKnpLr4Y",
+        "youtube_video_id": "FBxo_gqMRWA",
+        "watch_url": "https://www.youtube.com/shorts/FBxo_gqMRWA",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T15:17:13Z"
+        "published_at": "2026-11-16T20:02:52Z"
       },
       "next_queued_longform": {
         "id": "0512",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisiongenesis22v14",
-        "scripture": "Genesis 22:14",
+        "short": "short-provisionmatthew6v31",
+        "scripture": "Matthew 6:31-33",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONGENESIS22V14",
+      "slug": "short-provisiongenesis22v14-stewardship-prayer",
+      "file": "short-provisiongenesis22v14-stewardship-prayer.md",
+      "title": "Pray This Genesis 22:14 Prayer for Open Doors & Provision | The Lord Will Provide #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T20:02:52Z",
+      "youtube_video_id": "FBxo_gqMRWA",
+      "watch_url": "https://www.youtube.com/shorts/FBxo_gqMRWA",
+      "youtu_be_url": "https://youtu.be/FBxo_gqMRWA",
+      "shorts_url": "https://www.youtube.com/shorts/FBxo_gqMRWA",
+      "studio_url": "https://studio.youtube.com/video/FBxo_gqMRWA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/FBxo_gqMRWA/hqdefault.jpg",
+      "thumb_text": "WALK \u00b7 IN",
+      "thumbnail_pending": false,
+      "duration_label": "58s",
+      "words": 653
+    },
     {
       "id": "SHORT-FAMILYPHILIPPIANS4V19",
       "slug": "short-familyphilippians4v19-household-prayer",
@@ -10404,17 +10428,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-provisiongenesis22v14",
-        "file": "0509-short-provisiongenesis22v14.yml",
-        "companion_longform_id": "0509",
-        "scripture": "Genesis 22:14",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionmatthew6v31",
