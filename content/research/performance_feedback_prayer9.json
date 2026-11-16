@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-15T09:24:52.096218+00:00",
-  "as_of": "2026-11-15",
+  "generated_at": "2026-11-16T06:59:44.291507+00:00",
+  "as_of": "2026-11-16",
   "sufficient_data": false,
   "measured_longform_videos": 0,
   "total_longform_videos": 6,
   "input_diagnostics": {
-    "snapshot_video_ids": 13,
-    "receipt_video_ids": 13,
-    "matched_video_ids": 13,
+    "snapshot_video_ids": 17,
+    "receipt_video_ids": 17,
+    "matched_video_ids": 17,
     "longform_below_view_threshold": 6,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 6,
+    "longform_too_young_or_undated": 2,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
@@ -42,29 +42,49 @@
     }
   ],
   "shorts": {
-    "measured_shorts": 1,
-    "total_shorts": 7,
+    "measured_shorts": 5,
+    "total_shorts": 11,
     "sufficient_data": false,
-    "avg_views": 312.0,
-    "median_views": 312,
-    "total_views": 312,
+    "avg_views": 146.6,
+    "median_views": 120,
+    "total_views": 733,
     "minimum_age_days": 2,
     "by_book": {
-      "psalm": {
+      "philippians": {
         "shorts": 1,
-        "avg_views": 312.0,
-        "ratio": 1.0
+        "avg_views": 110.0,
+        "ratio": 0.917
+      },
+      "psalm": {
+        "shorts": 4,
+        "avg_views": 155.8,
+        "ratio": 1.042
       }
     },
     "by_theme": {
-      "general_prayer": {
+      "anxiety_peace": {
         "shorts": 1,
-        "avg_views": 312.0,
-        "ratio": 1.0
+        "avg_views": 110.0,
+        "ratio": 0.917
+      },
+      "general_prayer": {
+        "shorts": 2,
+        "avg_views": 189.0,
+        "ratio": 1.145
+      },
+      "morning_mercy_renewal": {
+        "shorts": 1,
+        "avg_views": 125.0,
+        "ratio": 0.951
+      },
+      "peace_rest": {
+        "shorts": 1,
+        "avg_views": 120.0,
+        "ratio": 0.94
       }
     },
     "guidance": [
-      "Shorts: 1 measured (need 6, each at least 2 days old); the network's pooled numbers order this channel's Shorts until it has its own."
+      "Shorts: 5 measured (need 6, each at least 2 days old); the network's pooled numbers order this channel's Shorts until it has its own."
     ]
   },
   "guidance": [
