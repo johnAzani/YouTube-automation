@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-15T09:25:54.984934+00:00",
-  "as_of": "2026-11-15",
+  "generated_at": "2026-11-16T07:00:54.556453+00:00",
+  "as_of": "2026-11-16",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 4,
+  "total_longform_videos": 6,
   "input_diagnostics": {
-    "snapshot_video_ids": 11,
-    "receipt_video_ids": 11,
-    "matched_video_ids": 11,
-    "longform_below_view_threshold": 4,
+    "snapshot_video_ids": 15,
+    "receipt_video_ids": 15,
+    "matched_video_ids": 15,
+    "longform_below_view_threshold": 6,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 4,
+    "longform_too_young_or_undated": 3,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
@@ -18,7 +18,15 @@
   "themes": [
     {
       "theme": "daily_guidance_wisdom",
-      "videos": 2,
+      "videos": 3,
+      "measured_videos": 0,
+      "avg_score": 0.0,
+      "avg_engagement": 0.0,
+      "top_scripture": ""
+    },
+    {
+      "theme": "protection",
+      "videos": 1,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -42,29 +50,59 @@
     }
   ],
   "shorts": {
-    "measured_shorts": 1,
-    "total_shorts": 7,
+    "measured_shorts": 5,
+    "total_shorts": 9,
     "sufficient_data": false,
-    "avg_views": 76.0,
-    "median_views": 76,
-    "total_views": 76,
+    "avg_views": 109.6,
+    "median_views": 97,
+    "total_views": 548,
     "minimum_age_days": 2,
     "by_book": {
+      "ecclesiastes": {
+        "shorts": 1,
+        "avg_views": 97.0,
+        "ratio": 0.962
+      },
+      "isaiah": {
+        "shorts": 1,
+        "avg_views": 68.0,
+        "ratio": 0.873
+      },
+      "james": {
+        "shorts": 1,
+        "avg_views": 180.0,
+        "ratio": 1.214
+      },
+      "john": {
+        "shorts": 1,
+        "avg_views": 127.0,
+        "ratio": 1.053
+      },
       "proverbs": {
         "shorts": 1,
         "avg_views": 76.0,
-        "ratio": 1.0
+        "ratio": 0.898
       }
     },
     "by_theme": {
       "anxiety_peace": {
+        "shorts": 2,
+        "avg_views": 101.5,
+        "ratio": 0.963
+      },
+      "daily_guidance_wisdom": {
+        "shorts": 2,
+        "avg_views": 124.0,
+        "ratio": 1.066
+      },
+      "peace_rest": {
         "shorts": 1,
-        "avg_views": 76.0,
-        "ratio": 1.0
+        "avg_views": 97.0,
+        "ratio": 0.962
       }
     },
     "guidance": [
-      "Shorts: 1 measured (need 6, each at least 2 days old); the network's pooled numbers order this channel's Shorts until it has its own."
+      "Shorts: 5 measured (need 6, each at least 2 days old); the network's pooled numbers order this channel's Shorts until it has its own."
     ]
   },
   "guidance": [
