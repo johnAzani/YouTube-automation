@@ -1,0 +1,285 @@
+{
+  "key": "short-provision2kings4v1",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "WHEN DEBTS THREATEN",
+    "GOD PROVIDES MORE"
+  ],
+  "poster": [
+    "WHEN YOU HAVE NOTHING LEFT",
+    "BRING YOUR EMPTY VESSELS",
+    "TO THE LORD",
+    "2 KINGS 4:1-7"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunlit valley early morning misty mountain river",
+    "sunlit sanctuary stone table wooden warm vessel",
+    "peaceful golden sunlit stream quiet forest path",
+    "sunlit mountain pass golden hour peaceful horizon",
+    "golden sunlight beaming over calm river valley",
+    "quiet sunlit stone altar serene mountain landscape"
+  ],
+  "scenes": [
+    {
+      "a": "When you feel you have nothing left to meet this month's pressing obligation, look to God.",
+      "img": "short-provision2kings4v1-scene-01.jpg",
+      "kicker": "2 KINGS 4:2",
+      "sub": "LOOK TO GOD IN NEED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "And Elisha said unto her, What shall I do for thee? tell me, what hast thou in the house?",
+      "img": "short-provision2kings4v1-scene-02.jpg",
+      "kicker": "2 KINGS 4:2",
+      "sub": "WHAT HAST THOU IN THE HOUSE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And she said, Thine handmaid hath not any thing in the house, save a pot of oil.",
+      "img": "short-provision2kings4v1-scene-03.jpg",
+      "kicker": "2 KINGS 4:2",
+      "sub": "SAVE A POT OF OIL",
+      "cam": "tilt_up",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Then he said, Go, borrow thee vessels abroad of all thy neighbors, even empty vessels; borrow not a few.",
+      "img": "short-provision2kings4v1-scene-04.jpg",
+      "kicker": "2 KINGS 4:3",
+      "sub": "BORROW NOT A FEW",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Heavenly Father, multiply our modest resources as we trust Your word.",
+      "img": "short-provision2kings4v1-scene-05.jpg",
+      "kicker": "2 KINGS 4:1-7",
+      "sub": "MULTIPLY OUR RESOURCES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Provide for every pressing obligation, clear our honest debts, and grant us wise, steady hands. Subscribe to walk in God's daily provision.",
+      "img": "short-provision2kings4v1-scene-06.jpg",
+      "kicker": "2 KINGS 4:1-7",
+      "sub": "WALK IN DAILY PROVISION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "When you feel you have nothing left to meet this month's pressing obligation, look to God."
+    ],
+    [
+      7,
+      18,
+      "And Elisha said unto her, What shall I do for thee? tell me, what hast thou in the house?"
+    ],
+    [
+      18,
+      29,
+      "And she said, Thine handmaid hath not any thing in the house, save a pot of oil."
+    ],
+    [
+      29,
+      40,
+      "Then he said, Go, borrow thee vessels abroad of all thy neighbors, even empty vessels; borrow not a few."
+    ],
+    [
+      40,
+      50,
+      "Heavenly Father, multiply our modest resources as we trust Your word."
+    ],
+    [
+      50,
+      60,
+      "Provide for every pressing obligation, clear our honest debts, and grant us wise, steady hands. Subscribe to walk in God's daily provision."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "WHEN YOU FEEL YOU HAVE NOTHING",
+        "LEFT TO MEET THIS MONTH'S",
+        "PRESSING OBLIGATION, LOOK TO GOD."
+      ],
+      [
+        "NOTHING",
+        "OBLIGATION",
+        "GOD"
+      ],
+      "2 KINGS 4:2"
+    ],
+    [
+      7,
+      18,
+      [
+        "AND ELISHA SAID UNTO HER,",
+        "WHAT SHALL I DO FOR THEE?",
+        "WHAT HAST THOU IN THE HOUSE?"
+      ],
+      [
+        "ELISHA",
+        "THEE",
+        "HOUSE"
+      ],
+      "2 KINGS 4:2"
+    ],
+    [
+      18,
+      29,
+      [
+        "AND SHE SAID, THINE HANDMAID",
+        "HATH NOT ANY THING IN THE HOUSE,",
+        "SAVE A POT OF OIL."
+      ],
+      [
+        "HANDMAID",
+        "HOUSE",
+        "OIL"
+      ],
+      "2 KINGS 4:2"
+    ],
+    [
+      29,
+      40,
+      [
+        "THEN HE SAID, GO, BORROW THEE",
+        "VESSELS ABROAD OF ALL THY NEIGHBORS,",
+        "EVEN EMPTY VESSELS; BORROW NOT A FEW."
+      ],
+      [
+        "BORROW",
+        "NEIGHBORS",
+        "VESSELS"
+      ],
+      "2 KINGS 4:3"
+    ],
+    [
+      40,
+      50,
+      [
+        "HEAVENLY FATHER, MULTIPLY",
+        "OUR MODEST RESOURCES",
+        "AS WE TRUST YOUR WORD."
+      ],
+      [
+        "FATHER",
+        "MULTIPLY",
+        "RESOURCES"
+      ],
+      "2 KINGS 4:1-7"
+    ],
+    [
+      50,
+      60,
+      [
+        "PROVIDE FOR EVERY OBLIGATION,",
+        "CLEAR OUR HONEST DEBTS,",
+        "AND GRANT US STEADY HANDS.",
+        "SUBSCRIBE TO WALK IN PROVISION."
+      ],
+      [
+        "PROVIDE",
+        "DEBTS",
+        "STEADY",
+        "PROVISION"
+      ],
+      "2 KINGS 4:1-7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When you feel you have nothing left to meet this month's pressing obligation, look to God.",
+      "kind": "phrase",
+      "words": [
+        "NOTHING",
+        "OBLIGATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And Elisha said unto her, What shall I do for thee? tell me, what hast thou in the house?",
+      "kind": "phrase",
+      "words": [
+        "ELISHA",
+        "HOUSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And she said, Thine handmaid hath not any thing in the house, save a pot of oil.",
+      "kind": "phrase",
+      "words": [
+        "HANDMAID",
+        "OIL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Then he said, Go, borrow thee vessels abroad of all thy neighbors, even empty vessels; borrow not a few.",
+      "kind": "phrase",
+      "words": [
+        "BORROW",
+        "VESSELS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, multiply our modest resources as we trust Your word.",
+      "kind": "phrase",
+      "words": [
+        "MULTIPLY",
+        "RESOURCES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Provide for every pressing obligation, clear our honest debts, and grant us wise, steady hands. Subscribe to walk in God's daily provision.",
+      "kind": "phrase",
+      "words": [
+        "PROVIDE",
+        "DEBTS",
+        "PROVISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Kings 4:1-7"
+}
