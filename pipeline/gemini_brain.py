@@ -1095,6 +1095,12 @@ class GeminiBrain:
             title_block = ""
         if title_block:
             channel_directive += f"\nTITLE. {title_block}"
+        # What this channel's listeners search by, offered for the title and tested on
+        # the channel's own views afterwards (pipeline/lessons.py).
+        from .lessons import block_for as lessons_block
+        words_block = lessons_block(self.channel_id)
+        if words_block:
+            channel_directive += f"\n{words_block}"
         from .scripture_text import check_quote, exists as scripture_exists, prompt_block
         scripture_block = prompt_block(str(scripture)) + scripture_name_note(
             self.channel_id, str(scripture))
@@ -1228,7 +1234,7 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         alone, and when that fails the draft keeps the title it had and the
         run says so.
         """
-        from . import retitle, title_variety
+        from . import lessons, retitle, title_variety
 
         brand = brand_for(self.channel_id)
         try:
@@ -1255,7 +1261,8 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
             new_title, refused = retitle.propose_title(
                 target, brand.display_name,
                 lambda prompt: self._call_model(model, prompt) or "",
-                attempts=1, variety=variety, draft=True, rejected=why)
+                attempts=1, variety=variety, draft=True, rejected=why,
+                words=lessons.block_for(self.channel_id))
             replaced = _replace_title(script_text, new_title) if new_title else None
             if replaced is None:
                 print(f"::warning title=Title reads like the others ({self.channel_id})::"

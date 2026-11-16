@@ -29,6 +29,7 @@ from pipeline.channel_capabilities import brand_for  # noqa: E402
 from pipeline.channels import add_channel_arg, normalize_channel_id  # noqa: E402
 from pipeline.performance_feedback import (  # noqa: E402
     build_feedback_report,
+    load_learning,
     write_feedback_report,
 )
 
@@ -38,11 +39,18 @@ def main(argv: list[str] | None = None) -> int:
     add_channel_arg(ap)
     ap.add_argument("--dry-run", action="store_true", help="Print the report without writing the artifact")
     ap.add_argument("--json", action="store_true", help="Print raw JSON only")
+    ap.add_argument("--niche", default="", help="This week's niche reading (scripts/niche_reading.py); "
+                    "optional, and ignored when the file is not there")
     args = ap.parse_args(argv)
 
     channel_id = normalize_channel_id(args.channel) if args.channel else None
     brand_title = brand_for(channel_id).display_name.upper() if channel_id else "THE SECRET PLACE"
-    report = build_feedback_report(channel_id=channel_id)
+    try:
+        learning = load_learning(channel_id, niche_file=Path(args.niche) if args.niche else None)
+    except Exception as exc:  # noqa: BLE001 - the theme report is still written without lessons
+        print(f"::warning title=Lessons not read::{str(exc)[:200]}")
+        learning = None
+    report = build_feedback_report(channel_id=channel_id, learning=learning)
 
     if args.json:
         print(json.dumps(report, indent=2))
@@ -70,6 +78,9 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Ranked themes: {' > '.join(report['ranked_themes'])}")
     for line in report["guidance"]:
         print(f"  • {line}")
+    for lesson in report.get("lessons") or []:
+        print(f"  lesson [{lesson['status']}] '{lesson['phrase']}' ({lesson['source']}): "
+              f"{lesson['note'] or 'opened today'}")
 
     if args.dry_run:
         print("[dry-run] artifact not written")

@@ -24,7 +24,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from pipeline import retitle, title_variety  # noqa: E402
+from pipeline import lessons, retitle, title_variety  # noqa: E402
 from pipeline.channels import get_channel, normalize_channel_id  # noqa: E402
 from pipeline.performance_feedback import load_metric_snapshots  # noqa: E402
 
@@ -72,9 +72,12 @@ def choose(channel_id: str, ledger: Path, *, ask=None, snapshots=None, today=Non
     # eighth to open with the same word or the second to word a need one way.
     variety = title_variety.variety_for(channel_id, published_dir=published_dir,
                                         queue_dir=queue_dir)
+    # Phrases this channel's own videos have proven (pipeline/lessons.py). A phrase
+    # still under test is not offered here: a retitled video is not part of a test.
+    words = lessons.block_for(channel_id, proven_only=True)
     entries: list[dict] = []
     for target in targets:
-        title, why = retitle.propose_title(target, name, ask, variety=variety)
+        title, why = retitle.propose_title(target, name, ask, variety=variety, words=words)
         if title is not None:
             variety = variety.with_title(title, name)
         if title is None:

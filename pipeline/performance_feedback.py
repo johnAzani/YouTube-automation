@@ -561,13 +561,89 @@ def rank_short_passages(references: list[str], feedback: dict | None,
     return [reference for _, reference in sorted(enumerate(references), key=sort_key)]
 
 
+ANALYTICS_DIR = REPO_ROOT / "content" / "analytics"
+
+
+def lesson_videos(snapshots: list[dict], published_index: dict[str, dict]) -> list[dict]:
+    """The channel's own long prayers as the latest snapshot shows them, for `pipeline/lessons.py`."""
+    latest: dict[str, dict] = {}
+    for row in snapshots:
+        vid = row.get("video_id", "")
+        if vid and (vid not in latest
+                    or row.get("snapshot_date", "") >= latest[vid].get("snapshot_date", "")):
+            latest[vid] = row
+    videos = []
+    for vid, row in latest.items():
+        meta = published_index.get(vid)
+        if not meta or meta.get("format") == "short":
+            continue
+        videos.append({
+            "title": meta.get("title") or row.get("title", ""),
+            "views": row.get("views"),
+            "published": str(row.get("published_at") or meta.get("published_on") or "")[:10],
+        })
+    return videos
+
+
+def load_learning(channel_id: str | None = None, today: date | None = None,
+                  niche_file: Path | None = None, analytics_dir: Path | None = None) -> dict:
+    """What the lessons are built from, read from the repository (`pipeline/lessons.py`).
+
+    The lessons already recorded in the channel's artifact, the words viewers
+    typed into YouTube search (the channel's own Analytics report), this week's
+    niche reading when the run made one (``niche_file``, never committed itself),
+    and the phrases the other channels are trying, so that no two channels try
+    the same one.
+    """
+    from . import lessons
+    from .channel_capabilities import known_channels
+    from .channels import normalize_channel_id
+
+    today = today or datetime.now(timezone.utc).date()
+    channel = normalize_channel_id(channel_id) if channel_id else known_channels()[0]
+    previous = load_feedback_report(channel_id=channel_id) or {}
+    niche = None
+    if niche_file and Path(niche_file).is_file():
+        try:
+            niche = lessons.niche_block({"niche": json.loads(Path(niche_file).read_text("utf-8"))},
+                                        today)
+        except (OSError, ValueError):
+            niche = None
+    niche = niche or lessons.niche_block(previous, today)
+    terms: list = []
+    try:
+        report = json.loads((Path(analytics_dir or ANALYTICS_DIR) / f"{channel}.json")
+                            .read_text(encoding="utf-8"))
+        terms = list(report.get("search_terms_90d") or [])
+    except (OSError, ValueError, AttributeError):
+        terms = []
+    taken: list[str] = []
+    taken_first: list[str] = []
+    before = True
+    for other in known_channels():
+        if other == channel:
+            before = False
+            continue
+        kept, testing = lessons.offered(lessons.load(other))
+        taken += kept + testing
+        if before:
+            taken_first += kept + testing
+    return {"previous": previous.get("lessons") or [], "search_terms": terms, "niche": niche,
+            "taken": taken, "taken_first": taken_first}
+
+
 def build_feedback_report(
     snapshots: list[dict] | None = None,
     published_index: dict[str, dict] | None = None,
     today: date | None = None,
     channel_id: str | None = None,
+    learning: dict | None = None,
 ) -> dict:
-    """Build the committed, public-safe feedback artifact."""
+    """Build the committed, public-safe feedback artifact.
+
+    ``learning`` (``load_learning``) carries what the lessons are built from;
+    without it the report holds no lessons.
+    """
     snapshots = snapshots if snapshots is not None else load_metric_snapshots()
     published_index = (
         published_index
@@ -629,7 +705,22 @@ def build_feedback_report(
             f"least {MIN_SHORT_AGE_DAYS} days old); the network's pooled numbers order this "
             "channel's Shorts until it has its own.")
 
-    return {
+    # What the channel is trying in its titles, and what its own videos said about it.
+    learned: list[dict] = []
+    niche = None
+    if learning is not None:
+        from . import lessons as lesson_book
+
+        skip = lesson_book.label_words(channel_id)
+        niche = learning.get("niche")
+        candidates = lesson_book.candidates_from_search_terms(learning.get("search_terms"), skip)
+        candidates += lesson_book.candidates_from_niche((niche or {}).get("phrases"), skip)
+        learned = lesson_book.update(
+            learning.get("previous"), candidates, lesson_videos(snapshots, published_index), today,
+            taken=learning.get("taken") or (), taken_first=learning.get("taken_first") or ())
+        guidance += lesson_book.guidance(learned, today)
+
+    report = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "as_of": today.isoformat(),
         "sufficient_data": sufficient,
@@ -653,7 +744,13 @@ def build_feedback_report(
         "guidance": guidance,
         "cost_lock": "$0.00 — public Data API statistics only; no new quota or secret.",
         "privacy": "Aggregate theme scores only; raw per-video snapshot stays an Actions artifact.",
+        # Phrases under test and their totals (pipeline/lessons.py). No video is listed.
+        "lessons": learned,
     }
+    if niche:
+        # Common wording only: no other channel's title, name, id or figure is kept.
+        report["niche"] = niche
+    return report
 
 
 def write_feedback_report(

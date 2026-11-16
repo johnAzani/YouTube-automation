@@ -5,7 +5,10 @@ What the owner decided on 14 November 2026 may be kept in this public repository
 watch hours, traffic sources and retention, and thumbnail impressions and click
 rate (those two come from the daily reach files, read by `scripts/reach_reader.py`;
 this script only shows them in the README). Views and the subscriber count are
-public on YouTube already. Revenue is never asked for here, so it cannot be
+public on YouTube already. On 16 November 2026 the owner asked that the channels
+learn what their audience looks for, and the words viewers typed into YouTube
+search were added (the channel's own figures, up to 25 phrases with their views
+and watch hours; YouTube leaves out terms too rare to show). Revenue is never asked for here, so it cannot be
 written, logged or shown: `ask()` refuses any question that names a money metric
 and `write_report()` refuses any report that contains one.
 
@@ -18,7 +21,11 @@ Run by `.github/workflows/channel-analytics.yml`, once a day, for every channel:
   the 365 days the Partner Program counts (long-form and live apart from
   Shorts, because watch time in the Shorts feed does not count), Shorts views
   over 90 days, the last 28 days by kind of video, by traffic source and by
-  day, and up to 50 videos by watch time with how long people stayed;
+  day, up to 50 videos by watch time with how long people stayed, and the
+  words viewers typed into YouTube search to find the channel (90 days, up to
+  25; the detail of the "YouTube search" traffic source). Those words are the
+  one direct reading of what this audience looks for, and `pipeline/lessons.py`
+  turns them into title wording that is then tested on the channel's own videos;
 * `content/analytics/README.md` is rewritten from every file present: one table
   toward the Partner Program, then each channel's sources and videos.
 
@@ -49,6 +56,8 @@ OUT_DIR = ROOT / 'content' / 'analytics'
 PUBLISHED_DIR = ROOT / 'content' / 'published'
 SCHEMA = 1
 MAX_VIDEOS = 50
+#: YouTube answers the traffic-source-detail report with 25 rows at most.
+MAX_SEARCH_TERMS = 25
 #: What the YouTube Partner Program asks for (support.google.com/youtube/answer/72851,
 #: read 14 November 2026). The full tier turns on ads; the early tier turns on fan funding.
 NEEDS = {'subscribers': 1000, 'watch_hours': 4000, 'shorts_views_90d': 10_000_000}
@@ -188,6 +197,20 @@ def read_channel(channel, token, today, get=None):
                              'metrics=estimatedMinutesWatched,views,averageViewDuration,averageViewPercentage'
                              '&dimensions=video&sort=-estimatedMinutesWatched&maxResults=%d' % MAX_VIDEOS)
 
+    # The detail report must name its source, be sorted, and ask for 25 rows or fewer.
+    term_rows, _ = question('what viewers typed into YouTube search, 90 days', quarter,
+                            'metrics=views,estimatedMinutesWatched&dimensions=insightTrafficSourceDetail'
+                            '&filters=insightTrafficSourceType==YT_SEARCH&sort=-views&maxResults=%d'
+                            % MAX_SEARCH_TERMS)
+    terms, seen_terms = [], set()
+    for row in term_rows:
+        term = search_term(row.get('insightTrafficSourceDetail'))
+        if not term or term in seen_terms:
+            continue
+        seen_terms.add(term)
+        terms.append({'term': term, 'views': number(row.get('views')),
+                      'watch_hours': hours(row.get('estimatedMinutesWatched'))})
+
     subscribers = None
     status, data, _why = get(DATA + 'channels?part=statistics&mine=true', token)
     if status == 200 and (data or {}).get('items'):
@@ -237,11 +260,26 @@ def read_channel(channel, token, today, get=None):
              'views': number(r.get('views')), 'average_view_seconds': number(r.get('averageViewDuration')),
              'average_view_percent': round(float(number(r.get('averageViewPercentage'))), 1)}
             for r in video_rows if VIDEO_ID.match(str(r.get('video')))][:MAX_VIDEOS],
+        'search_terms_90d': terms[:MAX_SEARCH_TERMS],
         'not_included': ['thumbnail impressions and click rate: read from the daily reach files by '
                          'scripts/reach_reader.py into %s.reach.json' % channel],
         'coverage': coverage,
     }
     return report, ''
+
+
+def search_term(value, limit=60):
+    """What a viewer typed, reduced to lower-case words (it ends up in a public file).
+
+    Letters, digits, apostrophes and single spaces only. Anything that is not
+    words (a link, an id, an address) comes out empty and is left out.
+    """
+    text = str(value or '').lower()
+    if '://' in text or '@' in text or 'www.' in text:
+        return ''
+    text = re.sub(r"[^a-z0-9' ]+", ' ', text)
+    text = ' '.join(text.split())[:limit].strip()
+    return text if re.search(r'[a-z]{2}', text) else ''
 
 
 def money_keys(value, path=''):
@@ -404,7 +442,43 @@ def reach_lines(report, known):
     return lines
 
 
-def summary(reports, published_dir=None, reach=None):
+def learned():
+    """Each channel's lessons from its feedback artifact (`pipeline/lessons.py`); {} when unreadable."""
+    try:
+        from pipeline import lessons
+        found = {channel: lessons.load(channel) for channel in CHANNELS}
+        return {channel: rows for channel, rows in found.items() if rows}
+    except Exception:  # noqa: BLE001 - the summary is still written without this table
+        return {}
+
+
+def lesson_lines(lessons):
+    """The table of what each channel is trying in its titles; nothing when no channel has a lesson."""
+    rows = [(channel, lesson) for channel in CHANNELS for lesson in (lessons or {}).get(channel, [])]
+    if not rows:
+        return []
+    said = {'testing': 'being tried', 'kept': 'kept', 'dropped': 'dropped', 'retired': 'retired, no verdict'}
+    lines = [
+        '## What each channel is trying in its titles', '',
+        'A phrase comes from the words viewers typed into YouTube search, or from wording shared by the '
+        'titles of the most-watched videos of the channel\'s kind. It is offered to the title writer and '
+        'judged by the channel\'s own long prayers, each counted once at a few days old: kept when titles '
+        'with it drew clearly more views a video, dropped when they drew clearly fewer '
+        '(`pipeline/lessons.py`). No two channels try the same phrase.', '',
+        '| Channel | Phrase | Where it came from | Now | Long prayers with / without | Views with / without '
+        '| Since |',
+        '| :--- | :--- | :--- | :--- | ---: | ---: | :--- |']
+    for channel, lesson in rows:
+        lines.append('| %s | %s | %s | %s | %s / %s | %s / %s | %s |' % (
+            cell(CHANNELS[channel].display_name), cell(lesson.get('phrase', '')),
+            cell(lesson.get('source', ''), 80), said.get(lesson.get('status'), 'being tried'),
+            count(lesson.get('with_videos', 0)), count(lesson.get('without_videos', 0)),
+            count(lesson.get('with_views', 0)), count(lesson.get('without_views', 0)),
+            cell(lesson.get('opened', ''))))
+    return lines + ['']
+
+
+def summary(reports, published_dir=None, reach=None, lessons=None):
     """The whole of `content/analytics/README.md`, from the reports that exist."""
     reach = reach or {}
     lines = [
@@ -457,6 +531,13 @@ def summary(reports, published_dir=None, reach=None):
                 lines.append('| %s | %s | %s |' % (cell(SOURCES.get(row['source'], row['source'])),
                                                    count(row['views']), amount(row['watch_hours'])))
             lines.append('')
+        if report.get('search_terms_90d'):
+            lines += ['What viewers typed into YouTube search to find this channel, last 90 days:', '',
+                      '| Words typed | Views | Watch hours |', '| :--- | ---: | ---: |']
+            for row in report['search_terms_90d']:
+                lines.append('| %s | %s | %s |' % (cell(row['term']), count(row['views']),
+                                                   amount(row['watch_hours'])))
+            lines.append('')
         if report['videos_365d']:
             lines += ['Videos by watch time, 365 days (up to %d):' % MAX_VIDEOS, '',
                       '| Video | Watch hours | Views | Average watched |', '| :--- | ---: | ---: | ---: |']
@@ -471,6 +552,7 @@ def summary(reports, published_dir=None, reach=None):
                    if str(answer).startswith('refused')]
         if refused:
             lines += ['Not answered on the last read: %s.' % cell('; '.join(refused), 400), '']
+    lines += lesson_lines(lessons)
     return '\n'.join(lines).rstrip('\n') + '\n'
 
 
@@ -540,7 +622,7 @@ def main(argv=None):
             if reports:
                 Path(args.out).mkdir(parents=True, exist_ok=True)
                 (Path(args.out) / 'README.md').write_text(
-                    summary(reports, reach=load_reach(args.out)), encoding='utf-8')
+                    summary(reports, reach=load_reach(args.out), lessons=learned()), encoding='utf-8')
         except Exception as exc:  # noqa: BLE001
             print('::warning title=Analytics summary::not rewritten (%s)' % type(exc).__name__)
     return 0
