@@ -151,6 +151,15 @@ jobs:
         continue-on-error: true
         run: python -u scripts/metrics_snapshot.py --channel "${{ matrix.channel }}"
 
+      - name: Read how the most-watched videos of this kind are titled, once a week (${{ matrix.channel }})
+        # scripts/niche_reading.py: two searches and one length lookup, once in seven
+        # days for each channel; on the other six days it asks YouTube nothing. It keeps
+        # a few common phrases and one typical length, never another channel's title,
+        # name or figures, and it cannot fail the job.
+        id: niche
+        continue-on-error: true
+        run: python -u scripts/niche_reading.py --channel "${{ matrix.channel }}" --out /tmp/niche.json
+
       - name: Compute closed-loop performance feedback (${{ matrix.channel }})
         # A failed snapshot must not replace the last valid signal with a report
         # based on missing or stale input. A successful empty snapshot is valid and
@@ -158,7 +167,7 @@ jobs:
         id: feedback
         if: ${{ steps.metrics.outcome == 'success' }}
         continue-on-error: true
-        run: python -u scripts/performance_feedback.py --channel "${{ matrix.channel }}"
+        run: python -u scripts/performance_feedback.py --channel "${{ matrix.channel }}" --niche /tmp/niche.json
 
       - name: Report unavailable feedback input (${{ matrix.channel }})
         if: ${{ steps.metrics.outcome != 'success' }}

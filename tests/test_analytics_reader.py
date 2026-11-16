@@ -53,6 +53,12 @@ def _google(asked, refuse=(), kinds_year=None):
         if dimension == "insightTrafficSourceType":
             return 200, _table(["insightTrafficSourceType", "views", "estimatedMinutesWatched"],
                                [["SHORTS", 2700, 1150], ["YT_SEARCH", 150, 90], ["BRAND::NEW|x", 68, 44]]), ""
+        if dimension == "insightTrafficSourceDetail":
+            assert query["filters"] == ["insightTrafficSourceType==YT_SEARCH"]
+            assert query["sort"] == ["-views"] and int(query["maxResults"][0]) <= 25
+            return 200, _table(["insightTrafficSourceDetail", "views", "estimatedMinutesWatched"], [
+                ["Prayer Before Sleep!", 40, 120], ["psalm 91 night prayer", 22, 30],
+                ["https://youtu.be/aaaaaaaaaa1", 5, 1], ["prayer before sleep", 3, 3], ["??", 2, 1]]), ""
         if dimension == "day":
             return 200, _table(["day", "views", "estimatedMinutesWatched"],
                                [["2026-11-12", 100, 60], ["2026-11-13", 90, 30], ["not a day", 1, 1]]), ""
@@ -79,7 +85,8 @@ def test_it_only_reads_and_never_asks_about_money():
     for verb in ("method='POST'", 'method="POST"', "PUT", "DELETE", "PATCH"):
         assert verb not in source
     _report_, _why, asked = _report()
-    assert len(asked) == 7 and all("youtubeanalytics.googleapis.com" in u or "youtube/v3/channels" in u for u in asked)
+    # Eight questions since 16 November: the words typed into YouTube search were added.
+    assert len(asked) == 8 and all("youtubeanalytics.googleapis.com" in u or "youtube/v3/channels" in u for u in asked)
     for url in asked:
         assert not reader.MONEY.search(url), url
         assert "ids=channel==MINE" in url or "mine=true" in url
@@ -331,3 +338,61 @@ def test_a_session_branch_reads_and_reports_but_commits_nothing():
     assert "git add content/analytics\n" in commit and "[skip ci]" in commit and "git push --quiet origin HEAD:main" in commit
     assert "rebase" not in commit and "--force" not in commit
     assert re.search(r"for attempt in 1 2 3", commit)
+
+
+# ------------------------------------------------------- what viewers searched
+
+def test_the_words_viewers_typed_are_read_and_made_safe():
+    report, _why, asked = _report()
+    assert report["search_terms_90d"] == [
+        {"term": "prayer before sleep", "views": 40, "watch_hours": 2.0},
+        {"term": "psalm 91 night prayer", "views": 22, "watch_hours": 0.5}], \
+        "a link, a row of symbols and a second spelling of the same words are left out"
+    assert report["coverage"]["what viewers typed into YouTube search, 90 days"] == "5 rows"
+    assert reader.money_keys(report) == []
+    question = next(url for url in asked if "insightTrafficSourceDetail" in url)
+    assert "ids=channel==MINE" in question, "only the channel's own figures are asked for"
+
+
+@pytest.mark.parametrize("typed,kept", [
+    ("Night Prayer  For SLEEP", "night prayer for sleep"),
+    ("god's protection (psalm 91)", "god's protection psalm 91"),
+    ("someone@example.com", ""), ("www.example.com prayer", ""), ("12345", ""), ("", ""), (None, ""),
+])
+def test_a_search_term_is_only_ever_plain_words(typed, kept):
+    assert reader.search_term(typed) == kept
+
+
+def test_search_terms_refused_do_not_cost_the_report():
+    report, why, _asked = _report(refuse={("insightTrafficSourceDetail", 90)})
+    assert why == "" and report["search_terms_90d"] == []
+    assert report["coverage"]["what viewers typed into YouTube search, 90 days"].startswith("refused")
+
+
+def test_the_summary_shows_the_words_typed(tmp_path):
+    report, _why, _asked = _report()
+    text = reader.summary({"secret-place": report}, published_dir=tmp_path)
+    assert "What viewers typed into YouTube search to find this channel, last 90 days:" in text
+    assert "| prayer before sleep | 40 | 2 |" in text
+
+
+def test_an_older_report_without_search_terms_still_summarises(tmp_path):
+    report, _why, _asked = _report()
+    report.pop("search_terms_90d")
+    assert "Words typed" not in reader.summary({"secret-place": report}, published_dir=tmp_path)
+
+
+def test_the_summary_lists_what_each_channel_is_trying(tmp_path):
+    report, _why, _asked = _report()
+    lessons = {"prayer2": [{"phrase": "prayer for my family", "source": "what viewers typed into YouTube search",
+                            "status": "kept", "opened": "2026-11-01", "with_videos": 6, "without_videos": 9,
+                            "with_views": 120, "without_views": 80}],
+               "secret-place": [{"phrase": "prayer before sleep", "source": "x|y", "status": "testing",
+                                 "opened": "2026-11-16"}]}
+    text = reader.summary({"secret-place": report}, published_dir=tmp_path, lessons=lessons)
+    assert "## What each channel is trying in its titles" in text
+    assert "| The Morning Altar | prayer for my family | what viewers typed into YouTube search | kept " \
+           "| 6 / 9 | 120 / 80 | 2026-11-01 |" in text
+    assert text.index("| The Secret Place | prayer before sleep") < text.index("| The Morning Altar |")
+    assert "being tried | 0 / 0 | 0 / 0 | 2026-11-16 |" in text and "x|y" not in text
+    assert "trying in its titles" not in reader.summary({"secret-place": report}, published_dir=tmp_path)

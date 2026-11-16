@@ -8,7 +8,9 @@ name: Channel analytics (watch hours, sources, retention, thumbnails)
 #
 # What may be written into this public repository was decided by the owner on
 # 14 November 2026: watch hours, traffic sources, retention, thumbnail
-# impressions and click rate. Revenue is never asked for
+# impressions and click rate; since 16 November also the words viewers typed
+# into YouTube search to find the channel (the owner asked that the channels
+# learn what their audience looks for). Revenue is never asked for
 # (scripts/analytics_reader.py refuses the question; the reach file holds none
 # and scripts/reach_reader.py reads four named columns only), so it cannot be
 # written or logged. A channel not granted the Analytics scopes yet is reported

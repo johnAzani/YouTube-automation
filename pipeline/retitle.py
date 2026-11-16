@@ -199,8 +199,13 @@ def title_problems(title: str, reference: str, channel_name: str, old_title: str
 
 
 def build_prompt(target: Target, channel_name: str, rejected: str = "",
-                 variety: "Variety | None" = None, draft: bool = False) -> str:
-    """The request for one title. ``draft`` is a script not yet published."""
+                 variety: "Variety | None" = None, draft: bool = False,
+                 words: str = "") -> str:
+    """The request for one title. ``draft`` is a script not yet published.
+
+    ``words`` is the channel's lessons block (``pipeline/lessons.py``): phrases its
+    listeners search by, offered and never required.
+    """
     examples = (
         "Night Prayer When Dread Keeps You Awake: 2 Timothy 1:7",
         "Prayer Before a Big Decision: Proverbs 15:22 | The Guided Path",
@@ -230,6 +235,7 @@ def build_prompt(target: Target, channel_name: str, rejected: str = "",
         "Titles in this form on the same channels:\n"
         + "".join(f"  {example}\n" for example in examples)
         + (f"\n{variety.prompt_block()}" if variety is not None and variety.own else "")
+        + (f"\n{words}" if words else "")
         + (f"\nYour last answer was refused: {rejected}\n" if rejected else "")
         + "\nReturn the title alone on one line, with nothing before or after it."
     )
@@ -237,11 +243,13 @@ def build_prompt(target: Target, channel_name: str, rejected: str = "",
 
 def propose_title(target: Target, channel_name: str, ask: Callable[[str], str],
                   attempts: int = 2, variety: "Variety | None" = None,
-                  draft: bool = False, rejected: str = "") -> tuple[str | None, str]:
+                  draft: bool = False, rejected: str = "",
+                  words: str = "") -> tuple[str | None, str]:
     """Ask for a title until one passes: ``(title, "")`` or ``(None, why)``."""
     for _ in range(attempts):
         try:
-            answer = ask(build_prompt(target, channel_name, rejected, variety, draft)) or ""
+            answer = ask(build_prompt(target, channel_name, rejected, variety, draft,
+                                      words)) or ""
         except Exception as exc:  # noqa: BLE001
             return None, f"model unavailable: {str(exc)[:120]}"
         lines = [line.strip().strip("`\"'") for line in answer.splitlines() if line.strip()]
