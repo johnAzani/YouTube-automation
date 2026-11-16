@@ -27,7 +27,11 @@ starts and a fix can be shown to have worked:
   (`pipeline/title_variety.py` holds the marks and refuses the same things when
   a title is written);
 * prayer sentences, other than scripture and the closing invitation, spoken
-  on more than one channel (the "coordinated network" half).
+  on more than one channel (the "coordinated network" half);
+* passages prayed on more than one channel — the clearest form of "many
+  similar videos across linked channels", counted from the network's own
+  passage ledger (``pipeline/passage_ownership.py``), together with the
+  unwritten roadmap entries that still name one of them.
 
     python -m scripts.channel_protection          # table, and a step summary in Actions
     python -m scripts.channel_protection --json   # the same as JSON
@@ -55,6 +59,7 @@ sys.path.insert(0, str(ROOT))
 PUBLISHED_DIR = ROOT / "content" / "published"
 QUEUE_DIR = ROOT / "content" / "queue"
 SPEC_DIR = ROOT / "content" / "shorts-scripts"
+SHORTS_QUEUE_DIR = ROOT / "content" / "shorts-queue"
 
 #: A channel's most recent Shorts whose titles are read.
 RECENT_TITLES = 20
@@ -102,6 +107,13 @@ class Row:
     tired_opening_uses: int = 0
     needs_alike_elsewhere: list[str] = field(default_factory=list)
     queued_refused: int = 0
+    #: Passages prayed on more than one channel (``pipeline/passage_ownership.py``):
+    #: this channel's videos whose passage another channel also has a video of,
+    #: its unwritten roadmap entries that name one of those passages, and whether
+    #: the prayer the brain would have written next for it is one of them.
+    passages_shared: int = 0
+    roadmap_shared: int = 0
+    next_prayer_shared: int = 0
     notes: list[str] = field(default_factory=list)
 
     @property
@@ -216,7 +228,8 @@ def shared_sentences(spec_dir: Path | None = None) -> dict[str, list[str]]:
 
 
 def measure(*, today: datetime | None = None, published_dir: Path | None = None,
-            spec_dir: Path | None = None, queue_dir: Path | None = None) -> list[Row]:
+            spec_dir: Path | None = None, queue_dir: Path | None = None,
+            shorts_queue_dir: Path | None = None) -> list[Row]:
     from pipeline import title_variety
     from pipeline.channel_capabilities import brand_for, known_channels
     from pipeline.short_release import hook_adds_nothing
@@ -224,6 +237,11 @@ def measure(*, today: datetime | None = None, published_dir: Path | None = None,
     if queue_dir is None:
         # A caller that names its own published folder is not shown the real queue.
         queue_dir = QUEUE_DIR if published_dir is None else Path("/nonexistent-queue")
+    if shorts_queue_dir is None:
+        # Nor the real network's Shorts: the passage ledger is the whole network,
+        # so a measure of a named folder must read only that folder's channels.
+        shorts_queue_dir = (SHORTS_QUEUE_DIR if published_dir is None
+                            else Path("/nonexistent-shorts-queue"))
     long_titles = title_variety.listed(
         published_dir=PUBLISHED_DIR if published_dir is None else published_dir,
         queue_dir=queue_dir)
@@ -233,6 +251,8 @@ def measure(*, today: datetime | None = None, published_dir: Path | None = None,
     window = {(now - timedelta(days=n)).strftime("%Y-%m-%d") for n in range(1, RATE_DAYS + 1)}
     receipts = read_receipts(published_dir)
     shared = shared_sentences(spec_dir)
+    passage_rows: list | None = None
+    ledger = None
 
     rows: list[Row] = []
     for channel in known_channels():
@@ -294,6 +314,44 @@ def measure(*, today: datetime | None = None, published_dir: Path | None = None,
             row.notes.append(
                 f"{row.queued_refused} queued title(s) would be refused by the variety "
                 "gate today and publish as they stand")
+        # Passages prayed on more than one channel. The seasonal lists have never
+        # allowed one; the roadmaps were never compared with each other or with
+        # what the channels have made, so they drifted.
+        if passage_rows is None:
+            # Read once for every channel: the ledger is the whole network.
+            from pipeline import passage_ownership
+            passage_rows = passage_ownership.passages(
+                published_dir=PUBLISHED_DIR if published_dir is None else published_dir,
+                queue_dir=queue_dir,
+                spec_dir=spec_dir if spec_dir is not None else SPEC_DIR,
+                shorts_queue_dir=shorts_queue_dir)
+            ledger = passage_ownership.ledger(passage_rows)
+        from pipeline import passage_ownership
+        row.passages_shared = len(passage_ownership.overlaps(
+            channel, rows=passage_rows, index=ledger))
+        ahead = passage_ownership.roadmap_ahead(
+            channel, passage_ownership.taken_longform_ids(
+                queue_dir=queue_dir,
+                published_dir=PUBLISHED_DIR if published_dir is None else published_dir))
+        own, shared_entries = passage_ownership.own_first(ahead, channel, index=ledger)
+        row.roadmap_shared = len(shared_entries)
+        # The selector's own choice. It steps over a shared passage whenever the
+        # channel still has one of its own unwritten, so this is 1 only when
+        # nothing unique is left — the channel would then repeat a passage
+        # rather than run dry.
+        row.next_prayer_shared = int(bool(shared_entries) and not own)
+        if row.passages_shared:
+            row.notes.append(
+                f"{row.passages_shared} video(s) pray a passage another channel "
+                "already prays")
+        if row.roadmap_shared:
+            row.notes.append(
+                f"{row.roadmap_shared} unwritten roadmap prayer(s) name a passage "
+                "another channel already prays")
+        if row.next_prayer_shared:
+            row.notes.append(
+                "the next prayer its roadmap would write is of a passage another "
+                "channel already prays")
         rows.append(row)
     return rows
 
@@ -339,6 +397,39 @@ def render(rows: list[Row]) -> str:
         lines.append(
             f"| {row.name} | {row.old_form_titles} | {row.need_titles} | {tired} "
             f"| {len(row.needs_alike_elsewhere)} | {row.queued_refused} |")
+    lines += [
+        "",
+        "#### Passages prayed on more than one channel",
+        "",
+        "The seasonal lists have never given one passage to two channels "
+        "(``pipeline/seasonal.py``: \"ten channels praying the same verse on the "
+        "same day is the templated content YouTube's inauthentic-content policy "
+        "describes\"). Nothing held the roadmaps to it, so they drifted: on "
+        "16 November 2026 twenty passages were prayed on more than one channel "
+        "and 104 unwritten roadmap entries still named one of them. The last "
+        "column is the prayer the brain would write next for the channel: "
+        "``select_next_scripture`` now steps over a shared passage whenever the "
+        "channel still has one of its own unwritten, so it reads 0 on every "
+        "channel — it read 1 on The Midday Watch, The Provision Table, The "
+        "Covenant Shield and The Praise Garden before that. The first two "
+        "columns are the owner's to decide: which channel keeps a passage is a "
+        "content decision, not one a program should make.",
+        "",
+        "| Channel | Videos praying a passage another channel prays | Unwritten "
+        "roadmap prayers of a shared passage | Next prayer repeats another "
+        "channel's passage |",
+        "|---|---|---|---|",
+    ]
+    for row in rows:
+        lines.append(
+            f"| {row.name} | {row.passages_shared} | {row.roadmap_shared} "
+            f"| {row.next_prayer_shared} |")
+    shared_passages = sum(1 for row in rows if row.passages_shared)
+    lines += [
+        "",
+        f"{shared_passages} of {len(rows)} channels pray at least one passage "
+        "another channel already prays.",
+    ]
     noted = [f"- **{row.name}:** {note}" for row in rows for note in row.notes]
     if noted:
         lines += ["", "Over the repository's own mark:", *noted]
