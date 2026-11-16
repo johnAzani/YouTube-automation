@@ -1,0 +1,304 @@
+{
+  "key": "short-familyluke15v20",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "PRAYER FOR A",
+    "RETURNING CHILD"
+  ],
+  "poster": [
+    "WHEN THEY ARE",
+    "FAR FROM HOME",
+    "GOD BRINGS THEM",
+    "BACK IN MERCY"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "cozy warm lamp-lit wooden table open bible olive branch peaceful room",
+    "warm candlelight shining through a porch window at night countryside home",
+    "peaceful country road winding toward a cozy lamp lit farmhouse sunset",
+    "warm glowing oil lamp on rustic wooden table with open scripture",
+    "gentle golden light illuminating quiet living room peaceful evening",
+    "cozy home entrance welcoming warm porch lantern light softly shining",
+    "peaceful cottage garden at dusk warm interior window light glowing"
+  ],
+  "scenes": [
+    {
+      "a": "If you wait by the window tonight praying",
+      "img": "short-familyluke15v20-scene-01.jpg",
+      "kicker": "LUKE 15:20",
+      "sub": "A PRAYER FOR THE WANDERER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Luke 15 verse 20 declares",
+      "img": "short-familyluke15v20-scene-02.jpg",
+      "kicker": "LUKE 15:20",
+      "sub": "HE AROSE AND CAME HOME",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "his father saw him, and had compassion",
+      "img": "short-familyluke15v20-scene-03.jpg",
+      "kicker": "LUKE 15:20",
+      "sub": "COMPASSION MEETS US",
+      "cam": "tilt_up",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Heavenly Father, touch the hearts of those",
+      "img": "short-familyluke15v20-scene-04.jpg",
+      "kicker": "LUKE 15:20",
+      "sub": "SOFTEN EVERY HEART",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Where distance and pride have built walls",
+      "img": "short-familyluke15v20-scene-05.jpg",
+      "kicker": "LUKE 15:20",
+      "sub": "BREAK DOWN THE WALLS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Restore our broken bonds, welcome our lost",
+      "img": "short-familyluke15v20-scene-06.jpg",
+      "kicker": "LUKE 15:20",
+      "sub": "WELCOME THEM HOME",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Family Altar",
+      "img": "short-familyluke15v20-scene-07.jpg",
+      "kicker": "LUKE 15:20",
+      "sub": "COVER YOUR HOME IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If you wait by the window tonight praying for a child to return home, listen."
+    ],
+    [
+      8,
+      18,
+      "Luke 15 verse 20 declares: And he arose, and came to his father."
+    ],
+    [
+      18,
+      30,
+      "But when he was yet a great way off, his father saw him, and had compassion, and ran, and fell on his neck, and kissed him."
+    ],
+    [
+      30,
+      40,
+      "Heavenly Father, touch the hearts of those who have wandered from our households today."
+    ],
+    [
+      40,
+      50,
+      "Where distance and pride have built walls, let Your mercy break them down completely."
+    ],
+    [
+      50,
+      60,
+      "Restore our broken bonds, welcome our lost back into Your loving embrace, and fill our home with joy."
+    ],
+    [
+      60,
+      68,
+      "Subscribe to The Family Altar to cover your home in prayer daily."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF YOU WAIT BY THE WINDOW",
+        "PRAYING FOR A CHILD TO RETURN HOME"
+      ],
+      [
+        "RETURN HOME"
+      ],
+      "LUKE 15 : 20"
+    ],
+    [
+      8,
+      18,
+      [
+        "LUKE 15 VERSE 20 DECLARES",
+        "AND HE AROSE AND CAME TO HIS FATHER"
+      ],
+      [
+        "HE AROSE"
+      ],
+      "LUKE 15 : 20"
+    ],
+    [
+      18,
+      30,
+      [
+        "WHEN HE WAS YET A GREAT WAY OFF",
+        "HIS FATHER SAW HIM AND HAD COMPASSION"
+      ],
+      [
+        "HAD COMPASSION"
+      ],
+      "LUKE 15 : 20"
+    ],
+    [
+      30,
+      40,
+      [
+        "HEAVENLY FATHER TOUCH THE HEARTS",
+        "OF THOSE WHO HAVE WANDERED TODAY"
+      ],
+      [
+        "TOUCH THE HEARTS"
+      ],
+      "LUKE 15 : 20"
+    ],
+    [
+      40,
+      50,
+      [
+        "WHERE DISTANCE AND PRIDE BUILT WALLS",
+        "LET YOUR MERCY BREAK THEM DOWN"
+      ],
+      [
+        "YOUR MERCY"
+      ],
+      "LUKE 15 : 20"
+    ],
+    [
+      50,
+      60,
+      [
+        "RESTORE OUR BROKEN BONDS",
+        "WELCOME OUR LOST BACK HOME"
+      ],
+      [
+        "WELCOME OUR LOST"
+      ],
+      "LUKE 15 : 20"
+    ],
+    [
+      60,
+      68,
+      [
+        "SUBSCRIBE TO THE FAMILY ALTAR",
+        "TO COVER YOUR HOME IN PRAYER"
+      ],
+      [
+        "COVER YOUR HOME"
+      ],
+      "LUKE 15 : 20"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you wait by the window tonight praying",
+      "kind": "phrase",
+      "words": [
+        "RETURN",
+        "HOME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Luke 15 verse 20 declares",
+      "kind": "phrase",
+      "words": [
+        "HE",
+        "AROSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "his father saw him, and had compassion",
+      "kind": "phrase",
+      "words": [
+        "HAD",
+        "COMPASSION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, touch the hearts of those",
+      "kind": "phrase",
+      "words": [
+        "TOUCH",
+        "HEARTS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Where distance and pride have built walls",
+      "kind": "phrase",
+      "words": [
+        "YOUR",
+        "MERCY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Restore our broken bonds, welcome our lost",
+      "kind": "phrase",
+      "words": [
+        "WELCOME",
+        "LOST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Family Altar",
+      "kind": "phrase",
+      "words": [
+        "COVER",
+        "YOUR",
+        "HOME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Luke 15:20-24"
+}
