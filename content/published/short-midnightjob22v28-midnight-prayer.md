@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE MIDNIGHT WATCH", "DECREE A THING", "LIGHT UPON YOUR WAYS", "MIDNIGHT PRAYER"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-23T11:49:37Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 That recurring doubt haunting your thoughts right now is not the final word for you. Your spirit knows there is power in spoken truth beneath the silence of these stars. Thou shalt also decree a thing, and it shall be established unto thee: and the light shall shine upon thy ways. Father, we stand in this quiet watch claiming the authority You have placed in us. May every heavy burden be lifted as we align our hearts with Your eternal promise. Guide our steps through the morning and let Your peace rest upon this soul tonight.

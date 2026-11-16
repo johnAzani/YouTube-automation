@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE PROMISE", "IS UNTO YOU", "AND YOUR CHILDREN", "THE FAMILY ALTAR"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-23T11:49:38Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 When your heart aches for a child who feels distant from God, listen to this truth. For the promise is unto you, and to your children, and to all that are afar off, even as many as the LORD our God shall call. Heavenly Father, we lay our children and grandchildren at your feet today. Your covenant of grace reaches across generations, beyond every distance, and into every wandering heart. Protect our home with your truth, draw our loved ones back to your presence, and anchor our family in your abiding love. We trust your faithful promises over our household forever. Subscribe to gather with us daily at The Family Altar.
