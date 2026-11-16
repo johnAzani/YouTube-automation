@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T11:56:42Z",
+  "generated_at": "2026-11-16T11:58:50Z",
   "monitor_generated_at": "2026-11-16T11:53:29.905010+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 330,
+    "published_total": 331,
     "published_longform": 125,
-    "published_shorts": 205,
-    "public_total": 328,
+    "published_shorts": 206,
+    "public_total": 329,
     "queued_longform": 64,
-    "queued_shorts": 93,
+    "queued_shorts": 92,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 20,
+        "published_total": 21,
         "published_longform": 8,
-        "published_shorts": 12,
-        "thumbnail_pending": 20,
-        "public_total": 20,
+        "published_shorts": 13,
+        "thumbnail_pending": 21,
+        "public_total": 21,
         "queued_longform": 6,
         "queued_other": 1,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-SHIELD2KINGS6V16",
-        "title": "Pray This 2 Kings 6:16-17 Prayer for Divine Protection | Refuge In God #Shorts",
+        "id": "SHORT-SHIELDISAIAH54V17",
+        "title": "Pray This Isaiah 54:17 Prayer for Divine Protection | Walk In Safety #Shorts",
         "format": "short",
-        "youtube_video_id": "ibM7J2KLTpw",
-        "watch_url": "https://www.youtube.com/shorts/ibM7J2KLTpw",
+        "youtube_video_id": "Zg6-qEEjctA",
+        "watch_url": "https://www.youtube.com/shorts/Zg6-qEEjctA",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T07:36:22Z"
+        "published_at": "2026-11-16T11:57:52Z"
       },
       "next_queued_longform": {
         "id": "0608",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldisaiah54v17",
-        "scripture": "Isaiah 54:17",
+        "short": "short-shield2thessalonians3v3",
+        "scripture": "2 Thessalonians 3:3",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDISAIAH54V17",
+      "slug": "short-shieldisaiah54v17-protection-prayer",
+      "file": "short-shieldisaiah54v17-protection-prayer.md",
+      "title": "Pray This Isaiah 54:17 Prayer for Divine Protection | Walk In Safety #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T11:57:52Z",
+      "youtube_video_id": "Zg6-qEEjctA",
+      "watch_url": "https://www.youtube.com/shorts/Zg6-qEEjctA",
+      "youtu_be_url": "https://youtu.be/Zg6-qEEjctA",
+      "shorts_url": "https://www.youtube.com/shorts/Zg6-qEEjctA",
+      "studio_url": "https://studio.youtube.com/video/Zg6-qEEjctA/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Zg6-qEEjctA/hqdefault.jpg",
+      "thumb_text": "DIVINE PROTECTION \u00b7 STRONG TOWER",
+      "thumbnail_pending": true,
+      "duration_label": "64s",
+      "words": 642
+    },
     {
       "id": "SHORT-GARDENPSALM22V3",
       "slug": "short-gardenpsalm22v3-thanksgiving-prayer",
@@ -10194,17 +10218,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-shieldisaiah54v17",
-        "file": "0605-short-shieldisaiah54v17.yml",
-        "companion_longform_id": "0605",
-        "scripture": "Isaiah 54:17",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shield2thessalonians3v3",
