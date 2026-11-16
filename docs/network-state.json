@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T07:37:59Z",
+  "generated_at": "2026-11-16T07:39:32Z",
   "monitor_generated_at": "2026-11-16T07:31:56.400014+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 317,
+    "published_total": 318,
     "published_longform": 123,
-    "published_shorts": 194,
-    "public_total": 315,
+    "published_shorts": 195,
+    "public_total": 316,
     "queued_longform": 63,
-    "queued_shorts": 94,
+    "queued_shorts": 93,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -441,23 +441,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 26,
+        "published_total": 27,
         "published_longform": 11,
-        "published_shorts": 15,
+        "published_shorts": 16,
         "thumbnail_pending": 5,
-        "public_total": 26,
+        "public_total": 27,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONPSALM84V11",
-        "title": "Pray This Psalm 84:11 Prayer for Open Doors & Provision | Walk In God'S Grace #Shorts",
+        "id": "SHORT-PROVISIONDEUTERONOMY28V8",
+        "title": "Pray This Deuteronomy 28:8 Prayer for Open Doors & Provision | God Sees Every Need #Shorts",
         "format": "short",
-        "youtube_video_id": "1z70CMZ9zCg",
-        "watch_url": "https://www.youtube.com/shorts/1z70CMZ9zCg",
-        "published_on": "2026-11-15",
-        "published_at": "2026-11-15T23:37:12Z"
+        "youtube_video_id": "N1aimuj-HYo",
+        "watch_url": "https://www.youtube.com/shorts/N1aimuj-HYo",
+        "published_on": "2026-11-16",
+        "published_at": "2026-11-16T07:38:40Z"
       },
       "next_queued_longform": {
         "id": "0511",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisiondeuteronomy28v8",
-        "scripture": "Deuteronomy 28:8",
+        "short": "short-provisionpsalm81v10",
+        "scripture": "Psalm 81:10",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONDEUTERONOMY28V8",
+      "slug": "short-provisiondeuteronomy28v8-stewardship-prayer",
+      "file": "short-provisiondeuteronomy28v8-stewardship-prayer.md",
+      "title": "Pray This Deuteronomy 28:8 Prayer for Open Doors & Provision | God Sees Every Need #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T07:38:40Z",
+      "youtube_video_id": "N1aimuj-HYo",
+      "watch_url": "https://www.youtube.com/shorts/N1aimuj-HYo",
+      "youtu_be_url": "https://youtu.be/N1aimuj-HYo",
+      "shorts_url": "https://www.youtube.com/shorts/N1aimuj-HYo",
+      "studio_url": "https://studio.youtube.com/video/N1aimuj-HYo/edit",
+      "thumb_url": "https://i.ytimg.com/vi/N1aimuj-HYo/hqdefault.jpg",
+      "thumb_text": "THE LORD SHALL \u00b7 COMMAND THE BLESSING",
+      "thumbnail_pending": false,
+      "duration_label": "57s",
+      "words": 647
+    },
     {
       "id": "SHORT-HEALINGEXODUS23V25",
       "slug": "short-healingexodus23v25-restoration-prayer",
@@ -9308,17 +9332,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-provisiondeuteronomy28v8",
-        "file": "0000-short-provisiondeuteronomy28v8.yml",
-        "companion_longform_id": "",
-        "scripture": "Deuteronomy 28:8",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionpsalm81v10",
