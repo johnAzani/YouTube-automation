@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T23:39:44Z",
+  "generated_at": "2026-11-16T00:12:24Z",
   "monitor_generated_at": "2026-11-15T22:59:34.787450+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 306,
-    "published_longform": 120,
+    "published_total": 307,
+    "published_longform": 121,
     "published_shorts": 186,
-    "public_total": 304,
-    "queued_longform": 59,
+    "public_total": 305,
+    "queued_longform": 58,
     "queued_shorts": 68,
     "automations_ok": 13,
     "automations_total": 13,
@@ -645,28 +645,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 14,
-        "published_longform": 5,
+        "published_total": 15,
+        "published_longform": 6,
         "published_shorts": 9,
         "thumbnail_pending": 12,
-        "public_total": 14,
-        "queued_longform": 5,
+        "public_total": 15,
+        "queued_longform": 4,
         "queued_other": 0,
         "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDPSALM119V133",
-        "title": "Pray This Psalm 119:133 Prayer for God's Guidance | The Guided Path #Shorts",
-        "format": "short",
-        "youtube_video_id": "hAna_JxB-x4",
-        "watch_url": "https://www.youtube.com/shorts/hAna_JxB-x4",
-        "published_on": "2026-11-15",
-        "published_at": "2026-11-15T20:10:13Z"
-      },
-      "next_queued_longform": {
         "id": "0805",
         "title": "When You Need to Know the Next Step: Isaiah 30:21 | The Guided Path",
-        "words": 1337,
+        "format": "longform",
+        "youtube_video_id": "qQ7kR9SRaZY",
+        "watch_url": "https://youtu.be/qQ7kR9SRaZY",
+        "published_on": "2026-11-16",
+        "published_at": "2026-11-16T00:11:40Z"
+      },
+      "next_queued_longform": {
+        "id": "0806",
+        "title": "When You Need Direction for Your Next Step: Psalm 119:105",
+        "words": 1137,
         "status": "approved"
       },
       "next_queued_short": {
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0805",
+      "slug": "when-you-need-to-know-the-next-step-isaiah-30-21",
+      "file": "0805-when-you-need-to-know-the-next-step-isaiah-30-21.md",
+      "title": "When You Need to Know the Next Step: Isaiah 30:21 | The Guided Path",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T00:11:40Z",
+      "youtube_video_id": "qQ7kR9SRaZY",
+      "watch_url": "https://youtu.be/qQ7kR9SRaZY",
+      "youtu_be_url": "https://youtu.be/qQ7kR9SRaZY",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/qQ7kR9SRaZY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/qQ7kR9SRaZY/hqdefault.jpg",
+      "thumb_text": "THIS IS THE WAY",
+      "thumbnail_pending": false,
+      "duration_label": "~9 min",
+      "words": 1337
+    },
     {
       "id": "SHORT-GARDENPSALM107V1",
       "slug": "short-gardenpsalm107v1-thanksgiving-prayer",
@@ -8749,19 +8773,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1919
-      },
-      {
-        "id": "0805",
-        "slug": "when-you-need-to-know-the-next-step-isaiah-30-21",
-        "file": "0805-when-you-need-to-know-the-next-step-isaiah-30-21.md",
-        "title": "When You Need to Know the Next Step: Isaiah 30:21 | The Guided Path",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1337
       },
       {
         "id": "0806",

@@ -10,3 +10,8 @@ replace: false
 target_window_utc: '18:44'
 notes: "Companion Short for Psalm 25:4-5 Guidance Prayer | The Guided Path \u2014\
   \ spec authored by the brain (102 narration words)"
+alignment_failures: 1
+last_alignment_error: 'cannot prepare Charon narration for short-guidedpsalm25v4 (Short
+  speech alignment unavailable or incomplete; refusing to render [ValueError: Narration
+  does not match the script: only 49% of the 102 script words were recognised (floor
+  85%); the audio is not this script]); refusing to render'
