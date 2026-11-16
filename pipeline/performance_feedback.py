@@ -629,7 +629,7 @@ def load_learning(channel_id: str | None = None, today: date | None = None,
         if before:
             taken_first += kept + testing
     return {"previous": previous.get("lessons") or [], "search_terms": terms, "niche": niche,
-            "taken": taken, "taken_first": taken_first}
+            "taken": taken, "taken_first": taken_first, "known": lessons.spoken_words()}
 
 
 def build_feedback_report(
@@ -713,8 +713,9 @@ def build_feedback_report(
 
         skip = lesson_book.label_words(channel_id)
         niche = learning.get("niche")
-        candidates = lesson_book.candidates_from_search_terms(learning.get("search_terms"), skip)
-        candidates += lesson_book.candidates_from_niche((niche or {}).get("phrases"), skip)
+        known = learning.get("known")
+        candidates = lesson_book.candidates_from_search_terms(learning.get("search_terms"), skip, known)
+        candidates += lesson_book.candidates_from_niche((niche or {}).get("phrases"), skip, known)
         learned = lesson_book.update(
             learning.get("previous"), candidates, lesson_videos(snapshots, published_index), today,
             taken=learning.get("taken") or (), taken_first=learning.get("taken_first") or ())

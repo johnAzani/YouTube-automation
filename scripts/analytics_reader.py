@@ -23,7 +23,8 @@ Run by `.github/workflows/channel-analytics.yml`, once a day, for every channel:
   over 90 days, the last 28 days by kind of video, by traffic source and by
   day, up to 50 videos by watch time with how long people stayed, and the
   words viewers typed into YouTube search to find the channel (90 days, up to
-  25; the detail of the "YouTube search" traffic source). Those words are the
+  25; the detail of the "YouTube search" traffic source; only the ones about
+  prayer or scripture are written down, the rest are counted). Those words are the
   one direct reading of what this audience looks for, and `pipeline/lessons.py`
   turns them into title wording that is then tested on the channel's own videos;
 * `content/analytics/README.md` is rewritten from every file present: one table
@@ -202,12 +203,15 @@ def read_channel(channel, token, today, get=None):
                             'metrics=views,estimatedMinutesWatched&dimensions=insightTrafficSourceDetail'
                             '&filters=insightTrafficSourceType==YT_SEARCH&sort=-views&maxResults=%d'
                             % MAX_SEARCH_TERMS)
-    terms, seen_terms = [], set()
+    terms, seen_terms, off_topic = [], set(), 0
     for row in term_rows:
         term = search_term(row.get('insightTrafficSourceDetail'))
         if not term or term in seen_terms:
             continue
         seen_terms.add(term)
+        if not on_topic(term):
+            off_topic += 1
+            continue
         terms.append({'term': term, 'views': number(row.get('views')),
                       'watch_hours': hours(row.get('estimatedMinutesWatched'))})
 
@@ -261,11 +265,23 @@ def read_channel(channel, token, today, get=None):
              'average_view_percent': round(float(number(r.get('averageViewPercentage'))), 1)}
             for r in video_rows if VIDEO_ID.match(str(r.get('video')))][:MAX_VIDEOS],
         'search_terms_90d': terms[:MAX_SEARCH_TERMS],
+        'search_terms_off_topic_90d': off_topic,
         'not_included': ['thumbnail impressions and click rate: read from the daily reach files by '
                          'scripts/reach_reader.py into %s.reach.json' % channel],
         'coverage': coverage,
     }
     return report, ''
+
+
+def on_topic(term):
+    """True when a search term names prayer, a psalm, scripture or a passage (`pipeline/lessons.py`).
+
+    The first real reading (16 November 2026) held "barbie", "blackjack casino" and people's
+    names beside "psalm 91": YouTube counts every search that ended on one of the channel's
+    videos. What is not about the channel's subject is counted and not written down.
+    """
+    from pipeline import lessons
+    return lessons.on_topic(term)
 
 
 def search_term(value, limit=60):
@@ -538,6 +554,9 @@ def summary(reports, published_dir=None, reach=None, lessons=None):
                 lines.append('| %s | %s | %s |' % (cell(row['term']), count(row['views']),
                                                    amount(row['watch_hours'])))
             lines.append('')
+            if report.get('search_terms_off_topic_90d'):
+                lines += ['%s other search(es) in YouTube\'s top 25 were not about prayer or scripture and are '
+                          'not listed.' % count(report['search_terms_off_topic_90d']), '']
         if report['videos_365d']:
             lines += ['Videos by watch time, 365 days (up to %d):' % MAX_VIDEOS, '',
                       '| Video | Watch hours | Views | Average watched |', '| :--- | ---: | ---: | ---: |']

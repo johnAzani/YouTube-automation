@@ -53,14 +53,17 @@ from __future__ import annotations
 
 import re
 from datetime import date, timedelta
+from pathlib import Path
 from typing import Any, Iterable
 
 #: Phrases under test at once on one channel. Few, so each can gather videos.
 MAX_TESTING = 3
 #: Words in a phrase. One word is not a lesson; six is somebody's title.
 MIN_WORDS, MAX_WORDS = 2, 5
-#: A search term must have brought at least this many views to be worth trying.
-MIN_TERM_VIEWS = 2
+#: A search term must have brought at least this many views in its 90 days to be worth
+#: trying. The first real reading (The Secret Place, 16 November 2026) had 8 views on its
+#: best term and one or two on most: one person typing something once is not an audience.
+MIN_TERM_VIEWS = 5
 #: A long prayer is counted once, with the views it has at this age. The daily
 #: snapshot sees a channel's latest 50 uploads (about a week), so the age must
 #: stay well inside that.
@@ -105,6 +108,11 @@ _SMALL = frozenset(
 _NOISE = frozenset(
     "youtube video videos shorts short channel full hd live new official subscribe kjv esv niv "
     "nkjv hour hours hr hrs minute minutes min mins".split())
+#: What makes a search term about these channels' subject at all. The first real reading
+#: held "barbie", "blackjack casino" and people's names beside "psalm 91": YouTube counts
+#: every search that ended on a video, most of them a Short met by chance.
+_ANCHOR = re.compile(r"\b(?:pray\w*|psalm\w*|bible|biblical|scriptures?|verses?|devotion\w*|"
+                     r"bless\w*|worship\w*|gospel)\b")
 _BREAK = re.compile(r"[|:;,.!?()\[\]{}/\\\"\u2013\u2014\u2022~*#+=<>]| - ")
 
 
@@ -123,6 +131,37 @@ def _brand_names() -> list[str]:
     return names
 
 
+def on_topic(term: str) -> bool:
+    """True when a search term names prayer, a psalm, scripture, or a passage (book and number)."""
+    text = " ".join(str(term or "").lower().split())
+    return bool(_ANCHOR.search(text) or _REFERENCE.search(text))
+
+
+_SPOKEN: dict[str, frozenset[str]] = {}
+
+
+def spoken_words(published_dir: Any = None) -> frozenset[str]:
+    """Every word the channels have themselves published (titles, descriptions, scripts).
+
+    A phrase may only be made of these. It is what keeps a person's name, a brand
+    or another subject out of a lesson: a word these channels have never once used
+    in a prayer is not theirs to put in a title because somebody else did.
+    """
+    from .config import PUBLISHED_DIR
+
+    folder = Path(published_dir) if published_dir else PUBLISHED_DIR
+    key = str(folder)
+    if key not in _SPOKEN:
+        words: set[str] = set()
+        for path in sorted(folder.glob("*.md")):
+            try:
+                words |= set(re.findall(r"[a-z']+", path.read_text(encoding="utf-8").lower()))
+            except OSError:
+                continue
+        _SPOKEN[key] = frozenset(words)
+    return _SPOKEN[key]
+
+
 def _content(phrase: str) -> frozenset[str]:
     return frozenset(re.findall(r"[a-z']+", str(phrase or "").lower())) - _SMALL
 
@@ -136,13 +175,15 @@ def label_words(channel_id: str | None) -> frozenset[str]:
         return frozenset()
 
 
-def clean_phrase(text: str, skip: frozenset[str] = frozenset()) -> str:
+def clean_phrase(text: str, skip: frozenset[str] = frozenset(),
+                 known: frozenset[str] | None = None) -> str:
     """A phrase fit to offer a title writer, or ``""``.
 
     Scripture references are taken out (the title carries its own), then what is
     left must be two to five plain words, with no channel's name, no promise word
     and no word that only names the site. ``skip`` is the channel's own label:
-    a phrase that says nothing more than the label is not a lesson.
+    a phrase that says nothing more than the label is not a lesson. ``known`` is
+    ``spoken_words()``: with it, every word must be one the channels have used.
     """
     raw = " ".join(re.sub(r"[^a-z0-9':\- ]+", " ", str(text or "").lower()).split())
     raw = _REFERENCE.sub(" ", raw)
@@ -168,6 +209,8 @@ def clean_phrase(text: str, skip: frozenset[str] = frozenset()) -> str:
     content = _content(phrase)
     if not content or content <= skip:
         return ""
+    if known is not None and not all(word in known or word in _SMALL for word in words):
+        return ""
     return phrase
 
 
@@ -178,8 +221,13 @@ def phrase_in_title(phrase: str, title: str) -> bool:
 
 
 def candidates_from_search_terms(terms: Iterable[Any] | None,
-                                 skip: frozenset[str] = frozenset()) -> list[tuple[str, str]]:
-    """``(phrase, source)`` from the channel's own search terms, most views first."""
+                                 skip: frozenset[str] = frozenset(),
+                                 known: frozenset[str] | None = None) -> list[tuple[str, str]]:
+    """``(phrase, source)`` from the channel's own search terms, most views first.
+
+    A term must be about prayer or scripture (``on_topic``) and have brought
+    ``MIN_TERM_VIEWS`` views.
+    """
     rows = []
     for row in terms or []:
         if not isinstance(row, dict):
@@ -188,28 +236,30 @@ def candidates_from_search_terms(terms: Iterable[Any] | None,
             views = float(row.get("views") or 0)
         except (TypeError, ValueError):
             continue
-        if views >= MIN_TERM_VIEWS:
+        if views >= MIN_TERM_VIEWS and on_topic(str(row.get("term") or "")):
             rows.append((views, str(row.get("term") or "")))
     found: list[tuple[str, str]] = []
     for _views, term in sorted(rows, key=lambda item: -item[0]):
-        phrase = clean_phrase(term, skip)
+        phrase = clean_phrase(term, skip, known)
         if phrase and all(phrase != seen for seen, _ in found):
             found.append((phrase, SEARCH_SOURCE))
     return found
 
 
 def candidates_from_niche(phrases: Iterable[Any] | None,
-                          skip: frozenset[str] = frozenset()) -> list[tuple[str, str]]:
+                          skip: frozenset[str] = frozenset(),
+                          known: frozenset[str] | None = None) -> list[tuple[str, str]]:
     found: list[tuple[str, str]] = []
     for text in phrases or []:
-        phrase = clean_phrase(str(text), skip)
+        phrase = clean_phrase(str(text), skip, known)
         if phrase and all(phrase != seen for seen, _ in found):
             found.append((phrase, NICHE_SOURCE))
     return found
 
 
 def phrases_from_titles(titles: Iterable[tuple[str, str]], skip: frozenset[str] = frozenset(),
-                        limit: int = MAX_NICHE_PHRASES) -> list[str]:
+                        limit: int = MAX_NICHE_PHRASES,
+                        known: frozenset[str] | None = None) -> list[str]:
     """Word sequences that several different channels' titles share.
 
     ``titles`` is ``(title, channel)`` for the videos a niche reading found. What
@@ -217,7 +267,9 @@ def phrases_from_titles(titles: Iterable[tuple[str, str]], skip: frozenset[str] 
     ``MIN_CHANNELS`` different channels, and is not most of any one title
     (``pipeline/title_variety.py``'s measure): common wording, never somebody's
     title. A title carrying a promise word (``pipeline/retitle.py``'s ``BANNED``) is
-    not read at all. Nothing else about the videos is returned.
+    not read at all, and with ``known`` (``spoken_words()``) a phrase holding a word
+    these channels have never used, such as a preacher's name, is left out. Nothing
+    else about the videos is returned.
     """
     from .title_variety import ALIKE
 
@@ -247,7 +299,7 @@ def phrases_from_titles(titles: Iterable[tuple[str, str]], skip: frozenset[str] 
                     key=lambda item: (-item[0], -item[1], item[2]))
     kept: list[str] = []
     for _count, _size, phrase in ranked:
-        if clean_phrase(phrase, skip) != phrase:
+        if clean_phrase(phrase, skip, known) != phrase:
             continue
         content = _content(phrase)
         if any(other and len(content & other) / len(content | other) >= ALIKE for other in whole):

@@ -58,7 +58,8 @@ def _google(asked, refuse=(), kinds_year=None):
             assert query["sort"] == ["-views"] and int(query["maxResults"][0]) <= 25
             return 200, _table(["insightTrafficSourceDetail", "views", "estimatedMinutesWatched"], [
                 ["Prayer Before Sleep!", 40, 120], ["psalm 91 night prayer", 22, 30],
-                ["https://youtu.be/aaaaaaaaaa1", 5, 1], ["prayer before sleep", 3, 3], ["??", 2, 1]]), ""
+                ["https://youtu.be/aaaaaaaaaa1", 5, 1], ["prayer before sleep", 3, 3], ["??", 2, 1],
+                ["blackjack casino", 9, 1], ["jesus de miguel", 2, 0], ["john 3:16", 1, 1]]), ""
         if dimension == "day":
             return 200, _table(["day", "views", "estimatedMinutesWatched"],
                                [["2026-11-12", 100, 60], ["2026-11-13", 90, 30], ["not a day", 1, 1]]), ""
@@ -346,9 +347,12 @@ def test_the_words_viewers_typed_are_read_and_made_safe():
     report, _why, asked = _report()
     assert report["search_terms_90d"] == [
         {"term": "prayer before sleep", "views": 40, "watch_hours": 2.0},
-        {"term": "psalm 91 night prayer", "views": 22, "watch_hours": 0.5}], \
+        {"term": "psalm 91 night prayer", "views": 22, "watch_hours": 0.5},
+        {"term": "john 3 16", "views": 1, "watch_hours": 0.02}], \
         "a link, a row of symbols and a second spelling of the same words are left out"
-    assert report["coverage"]["what viewers typed into YouTube search, 90 days"] == "5 rows"
+    assert report["search_terms_off_topic_90d"] == 2, "a game and a person's name are counted, not written"
+    assert "casino" not in json.dumps(report) and "miguel" not in json.dumps(report)
+    assert report["coverage"]["what viewers typed into YouTube search, 90 days"] == "8 rows"
     assert reader.money_keys(report) == []
     question = next(url for url in asked if "insightTrafficSourceDetail" in url)
     assert "ids=channel==MINE" in question, "only the channel's own figures are asked for"
@@ -374,6 +378,7 @@ def test_the_summary_shows_the_words_typed(tmp_path):
     text = reader.summary({"secret-place": report}, published_dir=tmp_path)
     assert "What viewers typed into YouTube search to find this channel, last 90 days:" in text
     assert "| prayer before sleep | 40 | 2 |" in text
+    assert "2 other search(es) in YouTube's top 25 were not about prayer or scripture and are not listed." in text
 
 
 def test_an_older_report_without_search_terms_still_summarises(tmp_path):

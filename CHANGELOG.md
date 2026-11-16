@@ -5,6 +5,14 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-16 — Search terms: only the ones about prayer are written down or learned from
+
+- **The first real reading showed the fault.** The Secret Place's 25 search terms (90 days) were read at 11:29 UTC. Ten were about prayer or scripture ("psalm 91" with 8 views, "psalm 31" 7, "psalm 27 explained" 4, "deep sleep prayers" 2). Fifteen were not ("barbie", "blackjack casino", a person's name): YouTube counts every search that ended on one of the channel's videos, most of them a Short met by chance. As merged an hour earlier, those were written into the public file, and one with enough views could have been offered to the title writer.
+- **`scripts/analytics_reader.py`.** A term is written down only when it names prayer, a psalm, scripture or a passage (`lessons.on_topic`). The others are counted (`search_terms_off_topic_90d`) and not listed.
+- **`pipeline/lessons.py`.** A search term opens a lesson only when it is on topic and brought 5 views or more (was 2: one person typing once is not an audience). Every phrase, from search or from the niche, may only use words the channels have themselves published (`spoken_words`, about 8,800 words from the published scripts), which keeps a preacher's name or another subject out.
+- **Result today.** No search term opens a lesson on The Secret Place: its best one has 8 views in 90 days and is a passage name, which a title already carries. The niche reading is the only source of lessons until search traffic grows.
+- **Not undone.** The 15 off-topic terms were in `content/analytics/secret-place.json` and the README from 11:29 UTC until the next reading; git history keeps that version.
+
 ## 2026-11-16 — The channels learn from their audience and their niche, and test what they learn
 
 The owner asked that the channels "learn on their own" from what the most-watched videos of their kind are doing. Until now the automation learned only which of its own themes drew views; its "niche benchmarks" were numbers typed in by hand, and nothing read another channel.
