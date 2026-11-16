@@ -1,6 +1,6 @@
 ---
 id: '0050'
-title: Isaiah 58:10 Midday Prayer | The Midday Watch
+title: "When Your Work Feels Hidden: Isaiah 58:10 | The Midday Watch"
 slug: isaiah-58-10-midday-prayer
 status: published
 channel: prayer3
@@ -80,10 +80,13 @@ originality:
 published_on: "2026-11-09"
 published_at: "2026-11-09T00:13:42Z"
 youtube_video_id: "_dwqP8DoW2Q"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Isaiah 58:10 Midday Prayer | The Midday Watch"
+retitled_at: "2026-11-16"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The Noonday Hook and the Midday Pause
