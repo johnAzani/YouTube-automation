@@ -1,0 +1,312 @@
+{
+  "key": "short-family3john1v4",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "WALK IN TRUTH",
+    "PRAYER FOR CHILDREN"
+  ],
+  "poster": [
+    "3 JOHN 1:4",
+    "WALK IN TRUTH",
+    "HOUSEHOLD PRAYER",
+    "THE FAMILY ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm candle light open bible on wooden dining table night",
+    "cozy lamp lit living room quiet family home evening",
+    "soft warm golden light through window olive branch on open bible",
+    "peaceful cozy farmhouse interior warm lighting night",
+    "open bible on rustic table warm lamp glow evening",
+    "warm glowing lamp cozy window sill quiet night home",
+    "warm ambient lamp light open bible peaceful domestic home"
+  ],
+  "scenes": [
+    {
+      "a": "When you lie awake wondering if your children will stay true to God, rest here.",
+      "img": "short-family3john1v4-scene-01.jpg",
+      "kicker": "3 JOHN 1:4",
+      "sub": "REST IN HIS PROMISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Holy Scripture declares in 3 John chapter 1 verse 4, I have no greater joy than to hear that my children walk in truth.",
+      "img": "short-family3john1v4-scene-02.jpg",
+      "kicker": "3 JOHN 1:4",
+      "sub": "NO GREATER JOY",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, we place the hearts of our sons and daughters into Your faithful hands tonight.",
+      "img": "short-family3john1v4-scene-03.jpg",
+      "kicker": "3 JOHN 1:4",
+      "sub": "HEARTS IN HIS HANDS",
+      "cam": "tilt_up",
+      "focus": [
+        0.48,
+        0.52
+      ]
+    },
+    {
+      "a": "Guide their daily steps away from deception, and anchor their young souls deeply in Your eternal truth.",
+      "img": "short-family3john1v4-scene-04.jpg",
+      "kicker": "3 JOHN 1:4",
+      "sub": "ANCHORED IN TRUTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Fill our home with Your wisdom so we may model Your love faithfully every single day.",
+      "img": "short-family3john1v4-scene-05.jpg",
+      "kicker": "3 JOHN 1:4",
+      "sub": "MODEL HIS LOVE",
+      "cam": "push_in",
+      "focus": [
+        0.52,
+        0.48
+      ]
+    },
+    {
+      "a": "May our children grow to walk uprightly before You, bringing joy to Your heart and ours.",
+      "img": "short-family3john1v4-scene-06.jpg",
+      "kicker": "3 JOHN 1:4",
+      "sub": "WALK UPRIGHTLY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to join The Family Altar in daily prayer.",
+      "img": "short-family3john1v4-scene-07.jpg",
+      "kicker": "3 JOHN 1:4",
+      "sub": "COVER YOUR HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "When you lie awake wondering if your children will stay true to God, rest here."
+    ],
+    [
+      7,
+      16,
+      "Holy Scripture declares in 3 John chapter 1 verse 4, I have no greater joy than to hear that my children walk in truth."
+    ],
+    [
+      16,
+      23,
+      "Father, we place the hearts of our sons and daughters into Your faithful hands tonight."
+    ],
+    [
+      23,
+      31,
+      "Guide their daily steps away from deception, and anchor their young souls deeply in Your eternal truth."
+    ],
+    [
+      31,
+      38,
+      "Fill our home with Your wisdom so we may model Your love faithfully every single day."
+    ],
+    [
+      38,
+      45,
+      "May our children grow to walk uprightly before You, bringing joy to Your heart and ours."
+    ],
+    [
+      45,
+      50,
+      "Subscribe to join The Family Altar in daily prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "WHEN YOU LIE AWAKE WONDERING",
+        "IF YOUR CHILDREN WILL STAY",
+        "TRUE TO GOD REST HERE"
+      ],
+      [
+        "TRUE TO GOD"
+      ],
+      "3 JOHN 1 : 4"
+    ],
+    [
+      7,
+      16,
+      [
+        "I HAVE NO GREATER JOY",
+        "THAN TO HEAR THAT MY",
+        "CHILDREN WALK IN TRUTH"
+      ],
+      [
+        "WALK IN TRUTH"
+      ],
+      "3 JOHN 1 : 4"
+    ],
+    [
+      16,
+      23,
+      [
+        "WE PLACE THE HEARTS OF OUR",
+        "SONS AND DAUGHTERS INTO YOUR",
+        "FAITHFUL HANDS TONIGHT"
+      ],
+      [
+        "FAITHFUL HANDS"
+      ],
+      "3 JOHN 1 : 4"
+    ],
+    [
+      23,
+      31,
+      [
+        "GUIDE THEIR DAILY STEPS",
+        "AND ANCHOR THEIR SOULS",
+        "DEEPLY IN YOUR TRUTH"
+      ],
+      [
+        "ETERNAL TRUTH"
+      ],
+      "3 JOHN 1 : 4"
+    ],
+    [
+      31,
+      38,
+      [
+        "FILL OUR HOME WITH WISDOM",
+        "SO WE MAY MODEL YOUR LOVE",
+        "FAITHFULLY EVERY DAY"
+      ],
+      [
+        "MODEL YOUR LOVE"
+      ],
+      "3 JOHN 1 : 4"
+    ],
+    [
+      38,
+      45,
+      [
+        "MAY OUR CHILDREN GROW TO",
+        "WALK UPRIGHTLY BEFORE YOU",
+        "BRINGING JOY TO YOUR HEART"
+      ],
+      [
+        "WALK UPRIGHTLY"
+      ],
+      "3 JOHN 1 : 4"
+    ],
+    [
+      45,
+      50,
+      [
+        "SUBSCRIBE TO JOIN US",
+        "IN DAILY FAMILY PRAYER"
+      ],
+      [
+        "DAILY PRAYER"
+      ],
+      "3 JOHN 1 : 4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When you lie awake wondering if your children will stay true to God, rest here.",
+      "kind": "phrase",
+      "words": [
+        "TRUE",
+        "TO",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Holy Scripture declares in 3 John chapter 1 verse 4, I have no greater joy than to hear that my children walk in truth.",
+      "kind": "phrase",
+      "words": [
+        "WALK",
+        "IN",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we place the hearts of our sons and daughters into Your faithful hands tonight.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFUL",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guide their daily steps away from deception, and anchor their young souls deeply in Your eternal truth.",
+      "kind": "phrase",
+      "words": [
+        "ETERNAL",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Fill our home with Your wisdom so we may model Your love faithfully every single day.",
+      "kind": "phrase",
+      "words": [
+        "MODEL",
+        "YOUR",
+        "LOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May our children grow to walk uprightly before You, bringing joy to Your heart and ours.",
+      "kind": "phrase",
+      "words": [
+        "WALK",
+        "UPRIGHTLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to join The Family Altar in daily prayer.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "3 John 1:4"
+}

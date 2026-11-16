@@ -1,0 +1,289 @@
+{
+  "key": "short-familyacts2v39",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "GOD'S PROMISE FOR",
+    "YOUR CHILDREN"
+  ],
+  "poster": [
+    "THE PROMISE",
+    "IS UNTO YOU",
+    "AND YOUR",
+    "CHILDREN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit wooden table open bible olive branch",
+    "peaceful warm kitchen Bible resting open on vintage dining table soft candle light",
+    "cozy country living room Bible on rustic table soft evening warm sunlight",
+    "peaceful countryside cottage meadow morning sunlight quiet home",
+    "warm vintage family room Bible and glowing lamp quiet evening",
+    "tranquil cozy living room open scripture oil lamp soft morning glow"
+  ],
+  "scenes": [
+    {
+      "a": "When your heart aches for a child who feels distant from God, listen to this truth.",
+      "img": "short-familyacts2v39-scene-01.jpg",
+      "kicker": "ACTS 2:39",
+      "sub": "A PROMISE FOR YOUR HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "For the promise is unto you, and to your children, and to all that are afar off, even as many as the LORD our God shall call.",
+      "img": "short-familyacts2v39-scene-02.jpg",
+      "kicker": "ACTS 2:39",
+      "sub": "GOD'S GENERATIONAL PROMISE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, we lay our children and grandchildren at your feet today.",
+      "img": "short-familyacts2v39-scene-03.jpg",
+      "kicker": "HOUSEHOLD PRAYER",
+      "sub": "LAYING OUR FAMILY AT HIS FEET",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Your covenant of grace reaches across generations, beyond every distance, and into every wandering heart.",
+      "img": "short-familyacts2v39-scene-04.jpg",
+      "kicker": "EVERLASTING GRACE",
+      "sub": "REACHING EVERY WANDERING HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Protect our home with your truth, draw our loved ones back to your presence, and anchor our family in your abiding love.",
+      "img": "short-familyacts2v39-scene-05.jpg",
+      "kicker": "FAMILY PROTECTION",
+      "sub": "ANCHORED IN HIS ABIDING LOVE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "We trust your faithful promises over our household forever. Subscribe to gather with us daily at The Family Altar.",
+      "img": "short-familyacts2v39-scene-06.jpg",
+      "kicker": "THE FAMILY ALTAR",
+      "sub": "COVER YOUR HOME IN PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "When your heart aches for a child who feels distant from God, listen to this truth."
+    ],
+    [
+      7,
+      18,
+      "For the promise is unto you, and to your children, and to all that are afar off, even as many as the LORD our God shall call."
+    ],
+    [
+      18,
+      26,
+      "Heavenly Father, we lay our children and grandchildren at your feet today."
+    ],
+    [
+      26,
+      35,
+      "Your covenant of grace reaches across generations, beyond every distance, and into every wandering heart."
+    ],
+    [
+      35,
+      45,
+      "Protect our home with your truth, draw our loved ones back to your presence, and anchor our family in your abiding love."
+    ],
+    [
+      45,
+      55,
+      "We trust your faithful promises over our household forever. Subscribe to gather with us daily at The Family Altar."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "WHEN YOUR HEART ACHES",
+        "FOR A CHILD DISTANT FROM GOD",
+        "LISTEN TO THIS TRUTH"
+      ],
+      [
+        "CHILD",
+        "LISTEN"
+      ],
+      "ACTS 2:39"
+    ],
+    [
+      7,
+      18,
+      [
+        "FOR THE PROMISE IS UNTO YOU",
+        "AND TO YOUR CHILDREN",
+        "AND TO ALL THAT ARE AFAR OFF",
+        "EVEN AS MANY AS THE LORD SHALL CALL"
+      ],
+      [
+        "PROMISE",
+        "CHILDREN",
+        "LORD"
+      ],
+      "ACTS 2:39"
+    ],
+    [
+      18,
+      26,
+      [
+        "HEAVENLY FATHER WE LAY",
+        "OUR CHILDREN AND GRANDCHILDREN",
+        "AT YOUR FEET TODAY"
+      ],
+      [
+        "CHILDREN",
+        "GRANDCHILDREN"
+      ],
+      "HOUSEHOLD PRAYER"
+    ],
+    [
+      26,
+      35,
+      [
+        "YOUR COVENANT OF GRACE",
+        "REACHES ACROSS GENERATIONS",
+        "BEYOND EVERY DISTANCE",
+        "INTO EVERY WANDERING HEART"
+      ],
+      [
+        "COVENANT",
+        "GENERATIONS"
+      ],
+      "EVERLASTING GRACE"
+    ],
+    [
+      35,
+      45,
+      [
+        "PROTECT OUR HOME WITH TRUTH",
+        "DRAW OUR LOVED ONES BACK",
+        "ANCHOR OUR FAMILY",
+        "IN YOUR ABIDING LOVE"
+      ],
+      [
+        "PROTECT",
+        "DRAW",
+        "ANCHOR"
+      ],
+      "FAMILY PROTECTION"
+    ],
+    [
+      45,
+      55,
+      [
+        "WE TRUST YOUR FAITHFUL PROMISES",
+        "OVER OUR HOUSEHOLD FOREVER",
+        "SUBSCRIBE TO GATHER DAILY",
+        "AT THE FAMILY ALTAR"
+      ],
+      [
+        "TRUST",
+        "PROMISES",
+        "SUBSCRIBE"
+      ],
+      "THE FAMILY ALTAR"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When your heart aches for a child who feels distant from God, listen to this truth.",
+      "kind": "phrase",
+      "words": [
+        "HEART",
+        "ACHES",
+        "CHILD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For the promise is unto you, and to your children, and to all that are afar off, even as many as the LORD our God shall call.",
+      "kind": "phrase",
+      "words": [
+        "PROMISE",
+        "CHILDREN",
+        "AFAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, we lay our children and grandchildren at your feet today.",
+      "kind": "phrase",
+      "words": [
+        "LAY",
+        "CHILDREN",
+        "FEET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your covenant of grace reaches across generations, beyond every distance, and into every wandering heart.",
+      "kind": "phrase",
+      "words": [
+        "COVENANT",
+        "GENERATIONS",
+        "WANDERING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Protect our home with your truth, draw our loved ones back to your presence, and anchor our family in your abiding love.",
+      "kind": "phrase",
+      "words": [
+        "PROTECT",
+        "DRAW",
+        "ANCHOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We trust your faithful promises over our household forever. Subscribe to gather with us daily at The Family Altar.",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "HOUSEHOLD",
+        "SUBSCRIBE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Acts 2:39"
+}

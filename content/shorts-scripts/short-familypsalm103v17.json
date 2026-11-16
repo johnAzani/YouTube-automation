@@ -1,0 +1,315 @@
+{
+  "key": "short-familypsalm103v17",
+  "channel": "prayer5",
+  "psalm": 103,
+  "title": [
+    "EVERLASTING MERCY",
+    "FOR YOUR FAMILY"
+  ],
+  "poster": [
+    "THE MERCY OF THE LORD",
+    "IS FROM EVERLASTING TO EVERLASTING",
+    "UPON YOUR HOUSEHOLD",
+    "PSALM 103:17-18"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit open Bible on wooden table peaceful night room",
+    "cozy dim illuminated open scripture with olive branch on rustic desk",
+    "soft candle light glowing on open holy bible in quiet home",
+    "peaceful countryside cottage window at dusk with warm lantern light",
+    "warm glow of oil lamp on open bible pages serene evening atmosphere",
+    "tranquil evening in rustic living room with glowing fire and scripture table",
+    "calm twilight landscape with cozy illuminated farm home in distance"
+  ],
+  "scenes": [
+    {
+      "a": "As you sit quietly by your child's bedside tonight worrying about their future, receive God's peace.",
+      "img": "short-familypsalm103v17-scene-01.jpg",
+      "kicker": "FAITHFUL GENERATIONS",
+      "sub": "GOD REMEMBERS YOUR HOUSEHOLD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "But the mercy of the LORD is from everlasting to everlasting upon them that fear him,",
+      "img": "short-familypsalm103v17-scene-02.jpg",
+      "kicker": "PSALM 103:17",
+      "sub": "EVERLASTING MERCY UPON YOU",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "and his righteousness unto children’s children;",
+      "img": "short-familypsalm103v17-scene-03.jpg",
+      "kicker": "PSALM 103:17",
+      "sub": "RIGHTEOUSNESS FOR YOUR CHILDREN",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "To such as keep his covenant, and to those that remember his commandments to do them.",
+      "img": "short-familypsalm103v17-scene-04.jpg",
+      "kicker": "PSALM 103:18",
+      "sub": "WALKING IN HIS COVENANT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Heavenly Father, cover our household with your unfailing mercy through all the years to come.",
+      "img": "short-familypsalm103v17-scene-05.jpg",
+      "kicker": "HOUSEHOLD PRAYER",
+      "sub": "COVERED IN HIS LOVE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Preserve our children and their children in your eternal truth, and anchor their lives in your holy covenant forever.",
+      "img": "short-familypsalm103v17-scene-06.jpg",
+      "kicker": "LEGACY OF FAITH",
+      "sub": "ANCHORED IN HIS PROMISES",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to join The Family Altar and cover your home in daily prayer.",
+      "img": "short-familypsalm103v17-scene-07.jpg",
+      "kicker": "THE FAMILY ALTAR",
+      "sub": "DAILY PRAYER FOR YOUR HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "As you sit quietly by your child's bedside tonight worrying about their future, receive God's peace."
+    ],
+    [
+      7,
+      13,
+      "But the mercy of the LORD is from everlasting to everlasting upon them that fear him,"
+    ],
+    [
+      14,
+      18,
+      "and his righteousness unto children’s children;"
+    ],
+    [
+      19,
+      27,
+      "To such as keep his covenant, and to those that remember his commandments to do them."
+    ],
+    [
+      28,
+      35,
+      "Heavenly Father, cover our household with your unfailing mercy through all the years to come."
+    ],
+    [
+      36,
+      44,
+      "Preserve our children and their children in your eternal truth, and anchor their lives in your holy covenant forever."
+    ],
+    [
+      45,
+      52,
+      "Subscribe to join The Family Altar and cover your home in daily prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "AS YOU SIT QUIETLY BY YOUR CHILD'S BEDSIDE",
+        "WORRYING ABOUT THEIR FUTURE",
+        "RECEIVE GOD'S PEACE"
+      ],
+      [
+        "GOD'S",
+        "PEACE"
+      ],
+      "PSALM 103 : 17"
+    ],
+    [
+      7,
+      13,
+      [
+        "BUT THE MERCY OF THE LORD",
+        "IS FROM EVERLASTING TO EVERLASTING",
+        "UPON THEM THAT FEAR HIM"
+      ],
+      [
+        "EVERLASTING",
+        "MERCY"
+      ],
+      "PSALM 103 : 17"
+    ],
+    [
+      14,
+      18,
+      [
+        "AND HIS RIGHTEOUSNESS",
+        "UNTO CHILDREN'S CHILDREN"
+      ],
+      [
+        "CHILDREN'S",
+        "CHILDREN"
+      ],
+      "PSALM 103 : 17"
+    ],
+    [
+      19,
+      27,
+      [
+        "TO SUCH AS KEEP HIS COVENANT",
+        "AND TO THOSE THAT REMEMBER",
+        "HIS COMMANDMENTS TO DO THEM"
+      ],
+      [
+        "KEEP",
+        "COVENANT"
+      ],
+      "PSALM 103 : 18"
+    ],
+    [
+      28,
+      35,
+      [
+        "HEAVENLY FATHER COVER OUR HOUSEHOLD",
+        "WITH YOUR UNFAILING MERCY",
+        "THROUGH ALL THE YEARS TO COME"
+      ],
+      [
+        "UNFAILING",
+        "MERCY"
+      ],
+      "PSALM 103 : 17-18"
+    ],
+    [
+      36,
+      44,
+      [
+        "PRESERVE OUR CHILDREN AND THEIR CHILDREN",
+        "IN YOUR ETERNAL TRUTH AND ANCHOR",
+        "THEIR LIVES IN YOUR HOLY COVENANT FOREVER"
+      ],
+      [
+        "ETERNAL",
+        "TRUTH"
+      ],
+      "PSALM 103 : 17-18"
+    ],
+    [
+      45,
+      52,
+      [
+        "SUBSCRIBE TO JOIN THE FAMILY ALTAR",
+        "AND COVER YOUR HOME IN DAILY PRAYER"
+      ],
+      [
+        "FAMILY",
+        "ALTAR"
+      ],
+      "PSALM 103 : 17-18"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As you sit quietly by your child's bedside tonight worrying about their future, receive God's peace.",
+      "kind": "phrase",
+      "words": [
+        "CHILD'S",
+        "BEDSIDE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "But the mercy of the LORD is from everlasting to everlasting upon them that fear him,",
+      "kind": "phrase",
+      "words": [
+        "EVERLASTING",
+        "MERCY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and his righteousness unto children’s children;",
+      "kind": "phrase",
+      "words": [
+        "CHILDREN'S",
+        "CHILDREN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "To such as keep his covenant, and to those that remember his commandments to do them.",
+      "kind": "phrase",
+      "words": [
+        "KEEP",
+        "COVENANT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, cover our household with your unfailing mercy through all the years to come.",
+      "kind": "phrase",
+      "words": [
+        "UNFAILING",
+        "MERCY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Preserve our children and their children in your eternal truth, and anchor their lives in your holy covenant forever.",
+      "kind": "phrase",
+      "words": [
+        "ETERNAL",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to join The Family Altar and cover your home in daily prayer.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 103:17-18"
+}
