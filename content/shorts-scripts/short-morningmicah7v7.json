@@ -1,0 +1,318 @@
+{
+  "key": "short-morningmicah7v7",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "LOOK UNTO THE LORD",
+    "HE WILL HEAR YOU"
+  ],
+  "poster": [
+    "WHEN DECISIONS WEIGH HEAVY",
+    "LIFT YOUR EYES",
+    "MICAH 7:7",
+    "THE MORNING ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "foggy mountain sunrise golden light",
+    "pinnacle mountain view dawn sunburst",
+    "quiet lake sunrise still water morning",
+    "misty pine forest morning sunlight",
+    "golden sunrise horizon over valley",
+    "open field morning light soft lens flare",
+    "calm mountain ridge sunrise warm glow"
+  ],
+  "scenes": [
+    {
+      "a": "Before you make that heavy decision alone today, lift your eyes to the Lord.",
+      "img": "short-morningmicah7v7-scene-01.jpg",
+      "kicker": "MICAH 7:7",
+      "sub": "BEFORE YOU DECIDE TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Therefore I will look unto the LORD; I will wait for the God of my salvation: my God will hear me.",
+      "img": "short-morningmicah7v7-scene-02.jpg",
+      "kicker": "MICAH 7:7",
+      "sub": "MY GOD WILL HEAR ME",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, when earthly answers fail and human help falls short, I fix my eyes on You.",
+      "img": "short-morningmicah7v7-scene-03.jpg",
+      "kicker": "MICAH 7:7",
+      "sub": "FIX YOUR EYES ON HIM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "I will not rush ahead in fear or act out of panic this morning.",
+      "img": "short-morningmicah7v7-scene-04.jpg",
+      "kicker": "MICAH 7:7",
+      "sub": "DO NOT RUSH IN FEAR",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach me to wait patiently for Your guidance, knowing You hear my quietest prayer.",
+      "img": "short-morningmicah7v7-scene-05.jpg",
+      "kicker": "MICAH 7:7",
+      "sub": "WAIT PATIENTLY FOR GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Fill my heart with steady confidence as I step into this day.",
+      "img": "short-morningmicah7v7-scene-06.jpg",
+      "kicker": "MICAH 7:7",
+      "sub": "STEADY CONFIDENCE TODAY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Morning Altar to begin every sunrise in prayer.",
+      "img": "short-morningmicah7v7-scene-07.jpg",
+      "kicker": "MICAH 7:7",
+      "sub": "BEGIN EVERY SUNRISE IN PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "Before you make that heavy decision alone today, lift your eyes to the Lord."
+    ],
+    [
+      7,
+      15,
+      "Therefore I will look unto the LORD; I will wait for the God of my salvation: my God will hear me."
+    ],
+    [
+      16,
+      23,
+      "Father, when earthly answers fail and human help falls short, I fix my eyes on You."
+    ],
+    [
+      24,
+      30,
+      "I will not rush ahead in fear or act out of panic this morning."
+    ],
+    [
+      31,
+      37,
+      "Teach me to wait patiently for Your guidance, knowing You hear my quietest prayer."
+    ],
+    [
+      38,
+      43,
+      "Fill my heart with steady confidence as I step into this day."
+    ],
+    [
+      44,
+      49,
+      "Subscribe to The Morning Altar to begin every sunrise in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "BEFORE YOU MAKE THAT",
+        "HEAVY DECISION ALONE",
+        "LIFT YOUR EYES TO GOD"
+      ],
+      [
+        "HEAVY DECISION",
+        "LIFT YOUR EYES"
+      ],
+      "MICAH 7:7"
+    ],
+    [
+      7,
+      15,
+      [
+        "THEREFORE I WILL LOOK",
+        "UNTO THE LORD AND WAIT",
+        "MY GOD WILL HEAR ME"
+      ],
+      [
+        "LOOK UNTO THE LORD",
+        "GOD WILL HEAR"
+      ],
+      "MICAH 7:7"
+    ],
+    [
+      16,
+      23,
+      [
+        "WHEN EARTHLY ANSWERS FAIL",
+        "AND HUMAN HELP FALLS SHORT",
+        "I FIX MY EYES ON YOU"
+      ],
+      [
+        "FIX MY EYES"
+      ],
+      "MICAH 7:7"
+    ],
+    [
+      24,
+      30,
+      [
+        "I WILL NOT RUSH IN FEAR",
+        "OR ACT OUT OF PANIC",
+        "THIS NEW MORNING"
+      ],
+      [
+        "NOT RUSH IN FEAR"
+      ],
+      "MICAH 7:7"
+    ],
+    [
+      31,
+      37,
+      [
+        "TEACH ME TO WAIT PATIENTLY",
+        "KNOWING YOU HEAR MY",
+        "QUIETEST PRAYER TODAY"
+      ],
+      [
+        "WAIT PATIENTLY",
+        "HEAR MY PRAYER"
+      ],
+      "MICAH 7:7"
+    ],
+    [
+      38,
+      43,
+      [
+        "FILL MY HEART WITH STEADY",
+        "CONFIDENCE AS I STEP",
+        "INTO THIS NEW DAY"
+      ],
+      [
+        "STEADY CONFIDENCE"
+      ],
+      "MICAH 7:7"
+    ],
+    [
+      44,
+      49,
+      [
+        "SUBSCRIBE TO THE MORNING ALTAR",
+        "BEGIN EVERY SUNRISE",
+        "IN FAITHFUL PRAYER"
+      ],
+      [
+        "SUBSCRIBE",
+        "MORNING ALTAR"
+      ],
+      "MICAH 7:7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Before you make that heavy decision alone today, lift your eyes to the Lord.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "DECISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Therefore I will look unto the LORD; I will wait for the God of my salvation: my God will hear me.",
+      "kind": "phrase",
+      "words": [
+        "LOOK",
+        "UNTO",
+        "THE",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, when earthly answers fail and human help falls short, I fix my eyes on You.",
+      "kind": "phrase",
+      "words": [
+        "FIX",
+        "MY",
+        "EYES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will not rush ahead in fear or act out of panic this morning.",
+      "kind": "phrase",
+      "words": [
+        "NOT",
+        "RUSH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teach me to wait patiently for Your guidance, knowing You hear my quietest prayer.",
+      "kind": "phrase",
+      "words": [
+        "WAIT",
+        "PATIENTLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Fill my heart with steady confidence as I step into this day.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "CONFIDENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Morning Altar to begin every sunrise in prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "MORNING",
+        "ALTAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Micah 7:7"
+}
