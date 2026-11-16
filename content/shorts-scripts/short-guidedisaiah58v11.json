@@ -1,0 +1,220 @@
+{
+  "key": "short-guidedisaiah58v11",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "GOD'S GUIDANCE",
+    "FOR YOUR PATH"
+  ],
+  "poster": [
+    "THE LORD SHALL",
+    "GUIDE THEE",
+    "CONTINUALLY",
+    "ISAIAH 58:11"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "calm mountain lake at night",
+    "misty alpine valley dawn",
+    "peaceful river flow sunlight",
+    "soft clouds over mountain peak",
+    "tranquil forest path morning",
+    "still water reflection light"
+  ],
+  "scenes": [
+    {
+      "a": "That persistent worry about your future is keeping you awake while the world sleeps soundly.",
+      "img": "short-guidedisaiah58v11-scene-01.jpg",
+      "kicker": "ISAIAH 58:11",
+      "sub": "FINDING PEACE IN THE STILLNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Bring this heavy burden to the throne of grace as we reflect upon His promise.",
+      "img": "short-guidedisaiah58v11-scene-02.jpg",
+      "kicker": "ISAIAH 58:11",
+      "sub": "SURRENDER YOUR UNCERTAINTY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "The LORD shall guide thee continually, and satisfy thy soul in drought, and make fat thy bones:",
+      "img": "short-guidedisaiah58v11-scene-03.jpg",
+      "kicker": "ISAIAH 58:11",
+      "sub": "HE LEADS YOU CONSTANTLY",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "and thou shalt be like a watered garden, and like a spring of water, whose waters fail not.",
+      "img": "short-guidedisaiah58v11-scene-04.jpg",
+      "kicker": "ISAIAH 58:11",
+      "sub": "HIS PROMISE REMAINS SURE",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, pour out Your wisdom upon this heart as I navigate the path ahead today.",
+      "img": "short-guidedisaiah58v11-scene-05.jpg",
+      "kicker": "ISAIAH 58:11",
+      "sub": "ASKING FOR DIVINE DIRECTION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Renew my spirit and grant me the clarity to walk in the light of Your truth.",
+      "img": "short-guidedisaiah58v11-scene-06.jpg",
+      "kicker": "ISAIAH 58:11",
+      "sub": "WALKING IN HIS FAITHFULNESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That persistent worry about your future is keeping you awake while the world sleeps soundly."
+    ],
+    [
+      8,
+      17,
+      "Bring this heavy burden to the throne of grace as we reflect upon His promise."
+    ],
+    [
+      17,
+      30,
+      "The LORD shall guide thee continually, and satisfy thy soul in drought, and make fat thy bones:"
+    ],
+    [
+      30,
+      42,
+      "and thou shalt be like a watered garden, and like a spring of water, whose waters fail not."
+    ],
+    [
+      42,
+      52,
+      "Lord, pour out Your wisdom upon this heart as I navigate the path ahead today."
+    ],
+    [
+      52,
+      62,
+      "Renew my spirit and grant me the clarity to walk in the light of Your truth."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "PERSISTENT WORRY",
+        "ABOUT YOUR FUTURE",
+        "KEEPING YOU AWAKE"
+      ],
+      [
+        "PERSISTENT WORRY"
+      ],
+      "ISAIAH 58:11"
+    ],
+    [
+      8,
+      17,
+      [
+        "BRING THIS BURDEN",
+        "TO THE THRONE",
+        "OF GRACE"
+      ],
+      [
+        "THONE OF GRACE"
+      ],
+      "ISAIAH 58:11"
+    ],
+    [
+      17,
+      30,
+      [
+        "THE LORD SHALL",
+        "GUIDE THEE",
+        "CONTINUALLY"
+      ],
+      [
+        "GUIDE THEE"
+      ],
+      "ISAIAH 58:11"
+    ],
+    [
+      30,
+      42,
+      [
+        "LIKE A WATERED",
+        "GARDEN",
+        "SPRING OF WATER"
+      ],
+      [
+        "WATERED GARDEN"
+      ],
+      "ISAIAH 58:11"
+    ],
+    [
+      42,
+      52,
+      [
+        "POUR OUT",
+        "YOUR WISDOM",
+        "UPON THIS HEART"
+      ],
+      [
+        "YOUR WISDOM"
+      ],
+      "ISAIAH 58:11"
+    ],
+    [
+      52,
+      62,
+      [
+        "RENEW MY SPIRIT",
+        "WALK IN THE",
+        "LIGHT OF TRUTH"
+      ],
+      [
+        "RENEW MY SPIRIT"
+      ],
+      "ISAIAH 58:11"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That persistent worry about your future is keeping you awake while the world sleeps soundly.",
+      "kind": "phrase",
+      "words": [
+        "PERSISTENT",
+        "WORRY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 58:11"
+}

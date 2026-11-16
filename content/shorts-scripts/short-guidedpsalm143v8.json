@@ -1,0 +1,246 @@
+{
+  "key": "short-guidedpsalm143v8",
+  "channel": "prayer10",
+  "psalm": 143,
+  "title": [
+    "DIRECTION FOR",
+    "THE UNCERTAIN"
+  ],
+  "poster": [
+    "SEEKING HIS WAY",
+    "PSALM 143:8",
+    "DIVINE GUIDANCE",
+    "FOR YOUR PATH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "calm misty mountain lake at sunrise",
+    "golden light over silent forest valley",
+    "peaceful flowing river at dawn",
+    "soft sunlight filtering through pine trees",
+    "still alpine lake reflecting clear sky",
+    "distant mountain peaks in early morning mist"
+  ],
+  "scenes": [
+    {
+      "a": "That persistent restlessness you feel while staring at your ceiling tonight needs a quiet surrender.",
+      "img": "short-guidedpsalm143v8-scene-01.jpg",
+      "kicker": "PSALM 143:8",
+      "sub": "FINDING GOD IN THE SILENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Cause me to hear thy lovingkindness in the morning; for in thee do I trust:",
+      "img": "short-guidedpsalm143v8-scene-02.jpg",
+      "kicker": "PSALM 143:8",
+      "sub": "TRUSTING IN HIS PROMISE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "cause me to know the way wherein I should walk; for I lift up my soul unto thee.",
+      "img": "short-guidedpsalm143v8-scene-03.jpg",
+      "kicker": "PSALM 143:8",
+      "sub": "SURRENDERING YOUR SOUL",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, the path ahead looks hidden and my own understanding feels like a broken compass today.",
+      "img": "short-guidedpsalm143v8-scene-04.jpg",
+      "kicker": "PSALM 143:8",
+      "sub": "SEEKING HIS LIGHT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Clear away the noise and fear, replacing my anxiety with the steady rhythm of Your truth.",
+      "img": "short-guidedpsalm143v8-scene-05.jpg",
+      "kicker": "PSALM 143:8",
+      "sub": "WALKING IN HIS TRUTH",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Give me the courage to move only when You move, and to rest where You lead.",
+      "img": "short-guidedpsalm143v8-scene-06.jpg",
+      "kicker": "PSALM 143:8",
+      "sub": "RESTING IN HIS GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That persistent restlessness you feel while staring at your ceiling tonight needs a quiet surrender."
+    ],
+    [
+      8,
+      16,
+      "Cause me to hear thy lovingkindness in the morning; for in thee do I trust:"
+    ],
+    [
+      16,
+      24,
+      "cause me to know the way wherein I should walk; for I lift up my soul unto thee."
+    ],
+    [
+      24,
+      32,
+      "Lord, the path ahead looks hidden and my own understanding feels like a broken compass today."
+    ],
+    [
+      32,
+      40,
+      "Clear away the noise and fear, replacing my anxiety with the steady rhythm of Your truth."
+    ],
+    [
+      40,
+      48,
+      "Give me the courage to move only when You move, and to rest where You lead."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "PERSISTENT RESTLESSNESS",
+        "STARRING AT CEILING",
+        "QUIET SURRENDER"
+      ],
+      [
+        "RESTLESSNESS",
+        "SURRENDER"
+      ],
+      "PSALM 143:8"
+    ],
+    [
+      8,
+      16,
+      [
+        "HEAR THY LOVINGKINDNESS",
+        "IN THE MORNING",
+        "FOR IN THEE I TRUST"
+      ],
+      [
+        "LOVINGKINDNESS",
+        "TRUST"
+      ],
+      "PSALM 143:8"
+    ],
+    [
+      16,
+      24,
+      [
+        "KNOW THE WAY",
+        "WHEREIN I SHOULD WALK",
+        "LIFT UP MY SOUL"
+      ],
+      [
+        "KNOW",
+        "WAY"
+      ],
+      "PSALM 143:8"
+    ],
+    [
+      24,
+      32,
+      [
+        "PATH LOOKS HIDDEN",
+        "BROKEN COMPASS",
+        "LORD GUIDE ME"
+      ],
+      [
+        "HIDDEN",
+        "GUIDE"
+      ],
+      "PSALM 143:8"
+    ],
+    [
+      32,
+      40,
+      [
+        "CLEAR THE NOISE",
+        "REPLACING ANXIETY",
+        "STEADY TRUTH"
+      ],
+      [
+        "STEADY",
+        "TRUTH"
+      ],
+      "PSALM 143:8"
+    ],
+    [
+      40,
+      48,
+      [
+        "COURAGE TO MOVE",
+        "ONLY WHEN YOU MOVE",
+        "REST WHERE YOU LEAD"
+      ],
+      [
+        "COURAGE",
+        "REST"
+      ],
+      "PSALM 143:8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That persistent restlessness you feel while staring at your ceiling tonight needs a quiet surrender.",
+      "kind": "phrase",
+      "words": [
+        "PERSISTENT",
+        "RESTLESSNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Cause me to hear thy lovingkindness in the morning; for in thee do I trust:",
+      "kind": "phrase",
+      "words": [
+        "LOVINGKINDNESS",
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "cause me to know the way wherein I should walk; for I lift up my soul unto thee.",
+      "kind": "phrase",
+      "words": [
+        "KNOW",
+        "WAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 143:8"
+}
