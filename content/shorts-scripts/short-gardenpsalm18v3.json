@@ -1,0 +1,305 @@
+{
+  "key": "short-gardenpsalm18v3",
+  "channel": "prayer9",
+  "psalm": 18,
+  "title": [
+    "SAVED FROM",
+    "MINE ENEMIES"
+  ],
+  "poster": [
+    "WHEN OPPOSITION",
+    "SURROUNDS YOU",
+    "CALL UPON",
+    "THE LORD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glade golden morning light",
+    "misty countryside meadow glowing sunrise",
+    "calm river flowing through sunlit pine forest",
+    "golden rays breaking through misty mountain trees",
+    "peaceful lake reflecting soft golden light",
+    "quiet countryside trail illuminated by morning sun"
+  ],
+  "scenes": [
+    {
+      "a": "If voices of opposition are making you feel cornered today, take heart right here.",
+      "img": "short-gardenpsalm18v3-scene-01.jpg",
+      "kicker": "PSALM 18:3",
+      "sub": "HEAR MY CRY LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "I will call upon the LORD, who is worthy to be praised: so shall I be saved from mine enemies.",
+      "img": "short-gardenpsalm18v3-scene-02.jpg",
+      "kicker": "PSALM 18:3",
+      "sub": "CALL UPON HIM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, we thank You that our deliverance begins not with panic, but with praise.",
+      "img": "short-gardenpsalm18v3-scene-03.jpg",
+      "kicker": "PSALM 18:3",
+      "sub": "PRAISE BEFORE DELIVERANCE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Before the battle is even fought, You are already worthy of our full devotion.",
+      "img": "short-gardenpsalm18v3-scene-04.jpg",
+      "kicker": "PSALM 18:3",
+      "sub": "WORTHY OF DEVOTION",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Thank You for standing guard around us when hostility surrounds us on every side.",
+      "img": "short-gardenpsalm18v3-scene-05.jpg",
+      "kicker": "PSALM 18:3",
+      "sub": "OUR STRONG DEFENDER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "We place our complete trust in Your unfailing power, knowing You answer when we call.",
+      "img": "short-gardenpsalm18v3-scene-06.jpg",
+      "kicker": "PSALM 18:3",
+      "sub": "UNFAILING POWER",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If voices of opposition are making you feel cornered today, take heart right here."
+    ],
+    [
+      7,
+      15,
+      "I will call upon the LORD, who is worthy to be praised: so shall I be saved from mine enemies."
+    ],
+    [
+      16,
+      23,
+      "Father, we thank You that our deliverance begins not with panic, but with praise."
+    ],
+    [
+      24,
+      32,
+      "Before the battle is even fought, You are already worthy of our full devotion."
+    ],
+    [
+      33,
+      41,
+      "Thank You for standing guard around us when hostility surrounds us on every side."
+    ],
+    [
+      42,
+      50,
+      "We place our complete trust in Your unfailing power, knowing You answer when we call."
+    ],
+    [
+      51,
+      58,
+      "May Your peace guard our hearts throughout this day. Subscribe to join The Praise Garden."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF VOICES OF OPPOSITION",
+        "CORNER YOU TODAY",
+        "TAKE HEART RIGHT HERE"
+      ],
+      [
+        "OPPOSITION",
+        "TAKE HEART"
+      ],
+      "PSALM 18 : 3"
+    ],
+    [
+      7,
+      15,
+      [
+        "I WILL CALL UPON THE LORD",
+        "WHO IS WORTHY TO BE PRAISED",
+        "SAVED FROM MINE ENEMIES"
+      ],
+      [
+        "WORTHY",
+        "SAVED"
+      ],
+      "PSALM 18 : 3"
+    ],
+    [
+      16,
+      23,
+      [
+        "OUR DELIVERANCE BEGINS",
+        "NOT WITH PANIC",
+        "BUT WITH PRAISE"
+      ],
+      [
+        "DELIVERANCE",
+        "PRAISE"
+      ],
+      "PSALM 18 : 3"
+    ],
+    [
+      24,
+      32,
+      [
+        "BEFORE THE BATTLE IS FOUGHT",
+        "YOU ARE ALREADY WORTHY",
+        "OF OUR FULL DEVOTION"
+      ],
+      [
+        "BATTLE",
+        "DEVOTION"
+      ],
+      "PSALM 18 : 3"
+    ],
+    [
+      33,
+      41,
+      [
+        "THANK YOU FOR STANDING GUARD",
+        "WHEN HOSTILITY SURROUNDS US",
+        "ON EVERY SIDE"
+      ],
+      [
+        "STANDING GUARD",
+        "HOSTILITY"
+      ],
+      "PSALM 18 : 3"
+    ],
+    [
+      42,
+      50,
+      [
+        "WE PLACE OUR TRUST",
+        "IN YOUR UNFAILING POWER",
+        "YOU ANSWER WHEN WE CALL"
+      ],
+      [
+        "TRUST",
+        "UNFAILING"
+      ],
+      "PSALM 18 : 3"
+    ],
+    [
+      51,
+      58,
+      [
+        "MAY YOUR PEACE GUARD",
+        "OUR HEARTS TODAY",
+        "SUBSCRIBE TO JOIN US"
+      ],
+      [
+        "PEACE",
+        "SUBSCRIBE"
+      ],
+      "PSALM 18 : 3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If voices of opposition are making you feel cornered today, take heart right here.",
+      "kind": "phrase",
+      "words": [
+        "OPPOSITION",
+        "CORNERED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will call upon the LORD, who is worthy to be praised: so shall I be saved from mine enemies.",
+      "kind": "phrase",
+      "words": [
+        "WORTHY",
+        "PRAISED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we thank You that our deliverance begins not with panic, but with praise.",
+      "kind": "phrase",
+      "words": [
+        "DELIVERANCE",
+        "PRAISE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Before the battle is even fought, You are already worthy of our full devotion.",
+      "kind": "phrase",
+      "words": [
+        "BATTLE",
+        "DEVOTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thank You for standing guard around us when hostility surrounds us on every side.",
+      "kind": "phrase",
+      "words": [
+        "STANDING",
+        "GUARD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "We place our complete trust in Your unfailing power, knowing You answer when we call.",
+      "kind": "phrase",
+      "words": [
+        "COMPLETE",
+        "TRUST"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "May Your peace guard our hearts throughout this day. Subscribe to join The Praise Garden.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "SUBSCRIBE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 18:3"
+}

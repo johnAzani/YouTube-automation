@@ -1,0 +1,299 @@
+{
+  "key": "short-gardenpsalm22v3",
+  "channel": "prayer9",
+  "psalm": 22,
+  "title": [
+    "PSALM 22:3",
+    "THE PRAISE GARDEN"
+  ],
+  "poster": [
+    "A PRAYER",
+    "OF THANKS",
+    "AND",
+    "PRAISE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glades peaceful trees",
+    "misty countryside in soft golden light",
+    "golden light over calm morning river",
+    "peaceful forest stream morning light",
+    "sunlight filtering through tranquil trees",
+    "quiet misty landscape at dawn",
+    "gentle river flowing through green valley"
+  ],
+  "scenes": [
+    {
+      "a": "If you are sitting in the quiet shadows of discouragement right now, stay here.",
+      "img": "short-gardenpsalm22v3-scene-01.jpg",
+      "kicker": "PSALM 22:3",
+      "sub": "REST IN HIS HOLINESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord God, when our souls feel low and our strength fails us, we turn our eyes to You.",
+      "img": "short-gardenpsalm22v3-scene-02.jpg",
+      "kicker": "PSALM 22:3",
+      "sub": "YOU ARE HOLY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Your word reminds us of Your unchanging majesty and grace.",
+      "img": "short-gardenpsalm22v3-scene-03.jpg",
+      "kicker": "PSALM 22:3",
+      "sub": "HIS UNCHANGING MAJESTY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "As it is written: But thou art holy, O thou that inhabitest the praises of Israel.",
+      "img": "short-gardenpsalm22v3-scene-04.jpg",
+      "kicker": "PSALM 22:3",
+      "sub": "INHABITING PRAISE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, we offer our humble thanksgiving and lift our voices in adoration to Your name today.",
+      "img": "short-gardenpsalm22v3-scene-05.jpg",
+      "kicker": "PSALM 22:3",
+      "sub": "OFFERING THANKSGIVING",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let Your holy presence fill every troubled corner of our minds with Your everlasting peace.",
+      "img": "short-gardenpsalm22v3-scene-06.jpg",
+      "kicker": "PSALM 22:3",
+      "sub": "EVERLASTING PEACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "In Jesus' name, amen.",
+      "img": "short-gardenpsalm22v3-scene-07.jpg",
+      "kicker": "PSALM 22:3",
+      "sub": "AMEN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If you are sitting in the quiet shadows of discouragement right now, stay here."
+    ],
+    [
+      6,
+      13,
+      "Lord God, when our souls feel low and our strength fails us, we turn our eyes to You."
+    ],
+    [
+      13,
+      19,
+      "Your word reminds us of Your unchanging majesty and grace."
+    ],
+    [
+      19,
+      27,
+      "As it is written: But thou art holy, O thou that inhabitest the praises of Israel."
+    ],
+    [
+      27,
+      35,
+      "Father, we offer our humble thanksgiving and lift our voices in adoration to Your name today."
+    ],
+    [
+      35,
+      43,
+      "Let Your holy presence fill every troubled corner of our minds with Your everlasting peace."
+    ],
+    [
+      43,
+      48,
+      "In Jesus' name, amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF YOU ARE SITTING",
+        "IN THE QUIET SHADOWS",
+        "OF DISCOURAGEMENT",
+        "STAY HERE"
+      ],
+      "DISCOURAGEMENT",
+      "PSALM 22 : 3"
+    ],
+    [
+      6,
+      13,
+      [
+        "LORD GOD WHEN OUR SOULS",
+        "FEEL LOW AND WEAK",
+        "WE TURN OUR EYES",
+        "TO YOU"
+      ],
+      "SOULS",
+      "PSALM 22 : 3"
+    ],
+    [
+      13,
+      19,
+      [
+        "YOUR WORD REMINDS US",
+        "OF YOUR UNCHANGING",
+        "MAJESTY AND GRACE"
+      ],
+      "MAJESTY",
+      "PSALM 22 : 3"
+    ],
+    [
+      19,
+      27,
+      [
+        "BUT THOU ART HOLY",
+        "O THOU THAT INHABITEST",
+        "THE PRAISES OF ISRAEL"
+      ],
+      "HOLY",
+      "PSALM 22 : 3"
+    ],
+    [
+      27,
+      35,
+      [
+        "FATHER WE OFFER",
+        "OUR HUMBLE THANKSGIVING",
+        "AND LIFT OUR VOICES",
+        "TO YOUR NAME"
+      ],
+      "THANKSGIVING",
+      "PSALM 22 : 3"
+    ],
+    [
+      35,
+      43,
+      [
+        "LET YOUR PRESENCE FILL",
+        "EVERY TROUBLED CORNER",
+        "WITH YOUR PEACE"
+      ],
+      "PEACE",
+      "PSALM 22 : 3"
+    ],
+    [
+      43,
+      48,
+      [
+        "IN JESUS NAME",
+        "AMEN"
+      ],
+      "AMEN",
+      "PSALM 22 : 3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are sitting in the quiet shadows of discouragement right now, stay here.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "SHADOWS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord God, when our souls feel low and our strength fails us, we turn our eyes to You.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "FAILS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your word reminds us of Your unchanging majesty and grace.",
+      "kind": "phrase",
+      "words": [
+        "UNCHANGING",
+        "MAJESTY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As it is written: But thou art holy, O thou that inhabitest the praises of Israel.",
+      "kind": "phrase",
+      "words": [
+        "THOU",
+        "ART",
+        "HOLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we offer our humble thanksgiving and lift our voices in adoration to Your name today.",
+      "kind": "phrase",
+      "words": [
+        "HUMBLE",
+        "THANKSGIVING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let Your holy presence fill every troubled corner of our minds with Your everlasting peace.",
+      "kind": "phrase",
+      "words": [
+        "HOLY",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In Jesus' name, amen.",
+      "kind": "phrase",
+      "words": [
+        "JESUS",
+        "NAME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 22:3"
+}

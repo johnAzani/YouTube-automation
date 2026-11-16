@@ -1,0 +1,282 @@
+{
+  "key": "short-gardenpsalm33v1",
+  "channel": "prayer9",
+  "psalm": 33,
+  "title": [
+    "A HEART OF",
+    "THANKSGIVING"
+  ],
+  "poster": [
+    "REJOICE IN",
+    "THE LORD",
+    "WITH A NEW",
+    "SONG TODAY"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glade morning",
+    "misty meadow golden sunrise",
+    "peaceful river flowing softly",
+    "golden light on rolling hills",
+    "dew on grass at dawn",
+    "calm forest brook"
+  ],
+  "scenes": [
+    {
+      "a": "If the silence in your home feels heavier than usual right now, let these words settle.",
+      "img": "short-gardenpsalm33v1-scene-01.jpg",
+      "kicker": "A MOMENT OF PEACE",
+      "sub": "HEAR HIS TRUTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Rejoice in the LORD, O ye righteous: for praise is comely for the upright.",
+      "img": "short-gardenpsalm33v1-scene-02.jpg",
+      "kicker": "PSALM 33:1",
+      "sub": "PRAISE IS COMELY",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Praise the LORD with harp: sing unto him with the psaltery and an instrument of ten strings.",
+      "img": "short-gardenpsalm33v1-scene-03.jpg",
+      "kicker": "PSALM 33:2",
+      "sub": "SING UNTO HIM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Sing unto him a new song; play skilfully with a loud noise.",
+      "img": "short-gardenpsalm33v1-scene-04.jpg",
+      "kicker": "PSALM 33:3",
+      "sub": "PLAY SKILFULLY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Lord, help me to offer a heart of true gratitude even when the path is unclear.",
+      "img": "short-gardenpsalm33v1-scene-05.jpg",
+      "kicker": "A PRAYER OF THANKS",
+      "sub": "GRANT ME CLARITY",
+      "cam": "push_in",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "May my life become a constant song of worship in your presence. Please subscribe today.",
+      "img": "short-gardenpsalm33v1-scene-06.jpg",
+      "kicker": "THE PRAISE GARDEN",
+      "sub": "JOIN US IN WORSHIP",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If the silence in your home feels heavier than usual right now, let these words settle."
+    ],
+    [
+      8,
+      18,
+      "Rejoice in the LORD, O ye righteous: for praise is comely for the upright."
+    ],
+    [
+      18,
+      28,
+      "Praise the LORD with harp: sing unto him with the psaltery and an instrument of ten strings."
+    ],
+    [
+      28,
+      36,
+      "Sing unto him a new song; play skilfully with a loud noise."
+    ],
+    [
+      36,
+      45,
+      "Lord, help me to offer a heart of true gratitude even when the path is unclear."
+    ],
+    [
+      45,
+      52,
+      "May my life become a constant song of worship in your presence. Please subscribe today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF THE SILENCE",
+        "FEELS HEAVIER",
+        "THAN USUAL",
+        "LET THESE WORDS"
+      ],
+      [
+        "HEAVIER",
+        "WORDS"
+      ],
+      "PSALM 33 : 1"
+    ],
+    [
+      8,
+      18,
+      [
+        "REJOICE IN THE LORD",
+        "O YE RIGHTEOUS",
+        "PRAISE IS COMELY",
+        "FOR THE UPRIGHT"
+      ],
+      [
+        "REJOICE",
+        "COMELY"
+      ],
+      "PSALM 33 : 1"
+    ],
+    [
+      18,
+      28,
+      [
+        "PRAISE THE LORD",
+        "WITH HARP",
+        "SING UNTO HIM",
+        "WITH AN INSTRUMENT"
+      ],
+      [
+        "PRAISE",
+        "SING"
+      ],
+      "PSALM 33 : 2"
+    ],
+    [
+      28,
+      36,
+      [
+        "SING UNTO HIM",
+        "A NEW SONG",
+        "PLAY SKILFULLY",
+        "WITH LOUD NOISE"
+      ],
+      [
+        "NEW SONG",
+        "SKILFULLY"
+      ],
+      "PSALM 33 : 3"
+    ],
+    [
+      36,
+      45,
+      [
+        "LORD HELP ME",
+        "OFFER A HEART",
+        "OF TRUE GRATITUDE",
+        "PATH IS UNCLEAR"
+      ],
+      [
+        "GRATITUDE",
+        "UNCLEAR"
+      ],
+      "PSALM 33 : 1"
+    ],
+    [
+      45,
+      52,
+      [
+        "MAY MY LIFE",
+        "BECOME A SONG",
+        "OF WORSHIP",
+        "PLEASE SUBSCRIBE"
+      ],
+      [
+        "SONG",
+        "WORSHIP"
+      ],
+      "PSALM 33 : 1"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the silence in your home feels heavier than usual right now, let these words settle.",
+      "kind": "phrase",
+      "words": [
+        "HEAVIER",
+        "WORDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Rejoice in the LORD, O ye righteous: for praise is comely for the upright.",
+      "kind": "phrase",
+      "words": [
+        "REJOICE",
+        "COMELY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Praise the LORD with harp: sing unto him with the psaltery and an instrument of ten strings.",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "SING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Sing unto him a new song; play skilfully with a loud noise.",
+      "kind": "phrase",
+      "words": [
+        "NEW SONG",
+        "SKILFULLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, help me to offer a heart of true gratitude even when the path is unclear.",
+      "kind": "phrase",
+      "words": [
+        "GRATITUDE",
+        "UNCLEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May my life become a constant song of worship in your presence. Please subscribe today.",
+      "kind": "phrase",
+      "words": [
+        "SONG",
+        "WORSHIP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 33:1-3"
+}

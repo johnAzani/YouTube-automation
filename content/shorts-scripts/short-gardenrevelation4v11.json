@@ -1,0 +1,221 @@
+{
+  "key": "short-gardenrevelation4v11",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "HE IS WORTHY",
+    "OF ALL PRAISE"
+  ],
+  "poster": [
+    "HIS UNENDING",
+    "GLORY AND",
+    "POWER",
+    "THOU ART WORTHY"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlight filtering through ancient oak forest canopy",
+    "misty meadow at dawn with golden light",
+    "peaceful river flowing through a quiet valley",
+    "close up of dew on a vibrant green leaf",
+    "golden hour light over a rolling countryside",
+    "gentle stream reflecting the morning sky"
+  ],
+  "scenes": [
+    {
+      "a": "If the weight of this decision keeps you awake tonight, simply rest your heart here.",
+      "img": "short-gardenrevelation4v11-scene-01.jpg",
+      "kicker": "REVELATION 4:11",
+      "sub": "HE CREATED ALL THINGS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You are invited to lift your eyes toward the majesty of the creator today.",
+      "img": "short-gardenrevelation4v11-scene-02.jpg",
+      "kicker": "REVELATION 4:11",
+      "sub": "GLORY AND HONOR",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Thou art worthy, O Lord, to receive glory and honor and power: for thou hast created all things, and for thy pleasure they are and were created.",
+      "img": "short-gardenrevelation4v11-scene-03.jpg",
+      "kicker": "REVELATION 4:11",
+      "sub": "FOR HIS PLEASURE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Father, we acknowledge that every breath we take is a gift from Your gracious hand.",
+      "img": "short-gardenrevelation4v11-scene-04.jpg",
+      "kicker": "REVELATION 4:11",
+      "sub": "GIFT FROM HIS HAND",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Everything we see, and everything we hold dear, exists solely because of Your beautiful design.",
+      "img": "short-gardenrevelation4v11-scene-05.jpg",
+      "kicker": "REVELATION 4:11",
+      "sub": "BEAUTIFUL DESIGN",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May our hearts align with Your will, finding deep peace in Your perfect and sovereign care.",
+      "img": "short-gardenrevelation4v11-scene-06.jpg",
+      "kicker": "REVELATION 4:11",
+      "sub": "SOVEREIGN CARE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If the weight of this decision keeps you awake tonight, simply rest your heart here."
+    ],
+    [
+      8,
+      14,
+      "You are invited to lift your eyes toward the majesty of the creator today."
+    ],
+    [
+      15,
+      38,
+      "Thou art worthy, O Lord, to receive glory and honor and power: for thou hast created all things, and for thy pleasure they are and were created."
+    ],
+    [
+      39,
+      48,
+      "Father, we acknowledge that every breath we take is a gift from Your gracious hand."
+    ],
+    [
+      49,
+      62,
+      "Everything we see, and everything we hold dear, exists solely because of Your beautiful design."
+    ],
+    [
+      63,
+      75,
+      "May our hearts align with Your will, finding deep peace in Your perfect and sovereign care."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "DECISION KEEPS",
+        "YOU AWAKE",
+        "REST YOUR HEART"
+      ],
+      [
+        "REST"
+      ],
+      "REVELATION 4:11"
+    ],
+    [
+      8,
+      14,
+      [
+        "LIFT YOUR EYES",
+        "TOWARD THE",
+        "MAJESTY OF GOD"
+      ],
+      [
+        "MAJESTY"
+      ],
+      "REVELATION 4:11"
+    ],
+    [
+      15,
+      38,
+      [
+        "THOU ART WORTHY",
+        "RECEIVE GLORY",
+        "AND HONOR",
+        "FOR THY PLEASURE"
+      ],
+      [
+        "WORTHY"
+      ],
+      "REVELATION 4:11"
+    ],
+    [
+      39,
+      48,
+      [
+        "EVERY BREATH",
+        "IS A GIFT",
+        "FROM HIS HAND"
+      ],
+      [
+        "GIFT"
+      ],
+      "REVELATION 4:11"
+    ],
+    [
+      49,
+      62,
+      [
+        "EVERYTHING EXISTS",
+        "BECAUSE OF",
+        "YOUR BEAUTIFUL DESIGN"
+      ],
+      [
+        "DESIGN"
+      ],
+      "REVELATION 4:11"
+    ],
+    [
+      63,
+      75,
+      [
+        "ALIGN WITH WILL",
+        "FINDING DEEP PEACE",
+        "IN SOVEREIGN CARE"
+      ],
+      [
+        "PEACE"
+      ],
+      "REVELATION 4:11"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the weight of this decision keeps you awake tonight, simply rest your heart here.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Revelation 4:11"
+}
