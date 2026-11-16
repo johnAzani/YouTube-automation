@@ -1,0 +1,258 @@
+{
+  "key": "short-shield2kings6v16",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "DIVINE PROTECTION",
+    "2 KINGS 6:16-17"
+  ],
+  "poster": [
+    "THE COVENANT SHIELD",
+    "DIVINE PROTECTION",
+    "STRONG TOWER",
+    "REFUGE IN GOD"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "sunlit mountain pass dramatic peaks",
+    "ancient stone watchtower misty valley",
+    "golden light rays piercing dark clouds",
+    "peaceful river winding through green hills",
+    "majestic rocky mountain under bright sky",
+    "calm mountain lake at twilight"
+  ],
+  "scenes": [
+    {
+      "a": "If unexpected trouble has surrounded your peace in this very hour, stay right here.",
+      "img": "short-shield2kings6v16-scene-01.jpg",
+      "kicker": "2 KINGS 6:16",
+      "sub": "FEAR NOT FOR GOD IS WITH YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord God Almighty, open our eyes to see Your unseen armies defending us today.",
+      "img": "short-shield2kings6v16-scene-02.jpg",
+      "kicker": "2 KINGS 6:16",
+      "sub": "THE UNSEEN HOST OF HEAVEN",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And he answered, Fear not: for they that be with us are more than they that be with them.",
+      "img": "short-shield2kings6v16-scene-03.jpg",
+      "kicker": "2 KINGS 6:16",
+      "sub": "MORE ARE WITH US",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "We rest beneath Your mighty covering, trusting Your holy word in every trial.",
+      "img": "short-shield2kings6v16-scene-04.jpg",
+      "kicker": "2 KINGS 6:17",
+      "sub": "CHARIOTS OF FIRE ROUND ABOUT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And Elisha prayed, and said, LORD, I pray thee, open his eyes, that he may see.",
+      "img": "short-shield2kings6v16-scene-05.jpg",
+      "kicker": "2 KINGS 6:17",
+      "sub": "LORD OPEN HIS EYES",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "And the LORD opened the eyes of the young man; and he saw: and, behold, the mountain was full of horses and chariots of fire round about Elisha.",
+      "img": "short-shield2kings6v16-scene-06.jpg",
+      "kicker": "2 KINGS 6:17",
+      "sub": "MOUNTAIN FULL OF FIRE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If unexpected trouble has surrounded your peace in this very hour, stay right here."
+    ],
+    [
+      8,
+      16,
+      "Lord God Almighty, open our eyes to see Your unseen armies defending us today."
+    ],
+    [
+      16,
+      26,
+      "And he answered, Fear not: for they that be with us are more than they that be with them."
+    ],
+    [
+      26,
+      34,
+      "We rest beneath Your mighty covering, trusting Your holy word in every trial."
+    ],
+    [
+      34,
+      44,
+      "And Elisha prayed, and said, LORD, I pray thee, open his eyes, that he may see."
+    ],
+    [
+      44,
+      56,
+      "And the LORD opened the eyes of the young man; and he saw: and, behold, the mountain was full of horses and chariots of fire round about Elisha."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "UNEXPECTED",
+        "TROUBLE HAS SURROUNDED",
+        "YOUR PEACE"
+      ],
+      "TROUBLE",
+      "2 KINGS 6 : 16"
+    ],
+    [
+      8,
+      16,
+      [
+        "LORD GOD",
+        "ALMIGHTY OPEN EYES",
+        "TO SEE"
+      ],
+      "ALMIGHTY",
+      "2 KINGS 6 : 16"
+    ],
+    [
+      16,
+      26,
+      [
+        "AND HE ANSWERED",
+        "FEAR NOT FOR THEY",
+        "THAT BE WITH US"
+      ],
+      "ANSWERED",
+      "2 KINGS 6 : 16"
+    ],
+    [
+      26,
+      34,
+      [
+        "WE REST BENEATH",
+        "YOUR MIGHTY COVERING",
+        "TRUSTING WORD"
+      ],
+      "COVERING",
+      "2 KINGS 6 : 17"
+    ],
+    [
+      34,
+      44,
+      [
+        "AND ELISHA PRAYED",
+        "AND SAID LORD",
+        "OPEN HIS EYES"
+      ],
+      "PRAYED",
+      "2 KINGS 6 : 17"
+    ],
+    [
+      44,
+      56,
+      [
+        "THE MOUNTAIN WAS FULL",
+        "OF HORSES AND",
+        "CHARIOTS OF FIRE"
+      ],
+      "CHARIOTS",
+      "2 KINGS 6 : 17"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If unexpected trouble has surrounded your peace in this very hour, stay right here.",
+      "kind": "phrase",
+      "words": [
+        "UNEXPECTED",
+        "TROUBLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord God Almighty, open our eyes to see Your unseen armies defending us today.",
+      "kind": "phrase",
+      "words": [
+        "ALMIGHTY",
+        "ARMY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And he answered, Fear not: for they that be with us are more than they that be with them.",
+      "kind": "phrase",
+      "words": [
+        "FEAR",
+        "NOT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We rest beneath Your mighty covering, trusting Your holy word in every trial.",
+      "kind": "phrase",
+      "words": [
+        "MIGHTY",
+        "COVERING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And Elisha prayed, and said, LORD, I pray thee, open his eyes, that he may see.",
+      "kind": "phrase",
+      "words": [
+        "OPEN",
+        "HIS EYES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And the LORD opened the eyes of the young man; and he saw: and, behold, the mountain was full of horses and chariots of fire round about Elisha.",
+      "kind": "phrase",
+      "words": [
+        "CHARIOTS",
+        "OF FIRE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Kings 6:16-17"
+}

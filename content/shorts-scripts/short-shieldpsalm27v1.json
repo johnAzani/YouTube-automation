@@ -1,0 +1,270 @@
+{
+  "key": "short-shieldpsalm27v1",
+  "channel": "prayer8",
+  "psalm": 27,
+  "title": [
+    "THE LORD IS",
+    "MY LIGHT"
+  ],
+  "poster": [
+    "PSALM 27:1",
+    "THE LORD IS MY LIGHT",
+    "AND MY SALVATION",
+    "DIVINE PROTECTION PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower misty mountains sunrise",
+    "golden light rays through dark storm clouds ocean",
+    "sunlit mountain ridge golden glowing light",
+    "calm alpine river morning mist sunbeams",
+    "majestic mountain fortress golden sunrise",
+    "peaceful calm mountain lake clear water sunrise"
+  ],
+  "scenes": [
+    {
+      "a": "If an unexpected threat has unsettled your peace in this quiet hour, hear this.",
+      "img": "short-shieldpsalm27v1-scene-01.jpg",
+      "kicker": "PSALM 27:1",
+      "sub": "GOD IS YOUR SAFE REFUGE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The LORD is my light and my salvation; whom shall I fear?",
+      "img": "short-shieldpsalm27v1-scene-02.jpg",
+      "kicker": "PSALM 27:1",
+      "sub": "THE LORD IS MY LIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "the LORD is the strength of my life; of whom shall I be afraid?",
+      "img": "short-shieldpsalm27v1-scene-03.jpg",
+      "kicker": "PSALM 27:1",
+      "sub": "STRENGTH OF MY LIFE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord God, arise as a towering shield over this heart right now. Dispel every shadow of worry and shatter the spirit of fear trying to overwhelm them.",
+      "img": "short-shieldpsalm27v1-scene-04.jpg",
+      "kicker": "DIVINE COVERING",
+      "sub": "A SHIELD OVER YOUR HEART",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Be their fortress, their safe refuge, and their unfailing strength against every unseen storm. Surround them with Your divine protection today.",
+      "img": "short-shieldpsalm27v1-scene-05.jpg",
+      "kicker": "DIVINE PROTECTION",
+      "sub": "UNFAILING STRENGTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to walk under God's daily covering.",
+      "img": "short-shieldpsalm27v1-scene-06.jpg",
+      "kicker": "THE COVENANT SHIELD",
+      "sub": "WALK UNDER HIS COVERING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If an unexpected threat has unsettled your peace in this quiet hour, hear this."
+    ],
+    [
+      7,
+      16,
+      "The LORD is my light and my salvation; whom shall I fear?"
+    ],
+    [
+      16,
+      25,
+      "the LORD is the strength of my life; of whom shall I be afraid?"
+    ],
+    [
+      25,
+      39,
+      "Lord God, arise as a towering shield over this heart right now. Dispel every shadow of worry and shatter the spirit of fear trying to overwhelm them."
+    ],
+    [
+      39,
+      54,
+      "Be their fortress, their safe refuge, and their unfailing strength against every unseen storm. Surround them with Your divine protection today."
+    ],
+    [
+      54,
+      60,
+      "Subscribe to walk under God's daily covering."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "UNSETTLED PEACE IN THIS",
+        "QUIET HOUR HEAR THIS"
+      ],
+      [
+        "UNSETTLED",
+        "PEACE"
+      ],
+      "PSALM 27 : 1"
+    ],
+    [
+      7,
+      16,
+      [
+        "THE LORD IS MY LIGHT",
+        "AND MY SALVATION"
+      ],
+      [
+        "LIGHT",
+        "SALVATION"
+      ],
+      "PSALM 27 : 1"
+    ],
+    [
+      16,
+      25,
+      [
+        "THE LORD IS THE STRENGTH",
+        "OF MY LIFE"
+      ],
+      [
+        "STRENGTH",
+        "LIFE"
+      ],
+      "PSALM 27 : 1"
+    ],
+    [
+      25,
+      39,
+      [
+        "ARISE AS A TOWERING SHIELD",
+        "DISPEL EVERY SHADOW"
+      ],
+      [
+        "TOWERING",
+        "SHIELD"
+      ],
+      "PSALM 27 : 1"
+    ],
+    [
+      39,
+      54,
+      [
+        "BE THEIR FORTRESS AND",
+        "UNFAILING STRENGTH"
+      ],
+      [
+        "FORTRESS",
+        "STRENGTH"
+      ],
+      "PSALM 27 : 1"
+    ],
+    [
+      54,
+      60,
+      [
+        "WALK UNDER GODS DAILY",
+        "DIVINE COVERING"
+      ],
+      [
+        "DAILY",
+        "COVERING"
+      ],
+      "PSALM 27 : 1"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "unsettled your peace in this quiet hour",
+      "kind": "phrase",
+      "words": [
+        "UNSETTLED",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "The LORD is my light and my salvation",
+      "kind": "phrase",
+      "words": [
+        "LIGHT",
+        "SALVATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "the LORD is the strength of my life",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "LIFE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "arise as a towering shield over this heart",
+      "kind": "phrase",
+      "words": [
+        "TOWERING",
+        "SHIELD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Be their fortress, their safe refuge",
+      "kind": "phrase",
+      "words": [
+        "FORTRESS",
+        "REFUGE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to walk under God's daily covering.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "COVERING"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 27:1"
+}
