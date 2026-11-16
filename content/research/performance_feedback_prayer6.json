@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-16T06:57:18.176304+00:00",
+  "generated_at": "2026-11-16T09:38:56.438671+00:00",
   "as_of": "2026-11-16",
   "sufficient_data": false,
   "measured_longform_videos": 0,
   "total_longform_videos": 10,
   "input_diagnostics": {
-    "snapshot_video_ids": 25,
-    "receipt_video_ids": 25,
-    "matched_video_ids": 25,
+    "snapshot_video_ids": 26,
+    "receipt_video_ids": 26,
+    "matched_video_ids": 26,
     "longform_below_view_threshold": 10,
     "longform_missing_view_count": 0,
     "longform_too_young_or_undated": 3,
@@ -59,7 +59,7 @@
   ],
   "shorts": {
     "measured_shorts": 9,
-    "total_shorts": 15,
+    "total_shorts": 16,
     "sufficient_data": true,
     "avg_views": 57.6,
     "median_views": 43,
