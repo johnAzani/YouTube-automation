@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T11:48:40Z",
+  "generated_at": "2026-11-16T11:49:05Z",
   "monitor_generated_at": "2026-11-16T11:36:03.477348+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 326,
+    "published_total": 327,
     "published_longform": 125,
-    "published_shorts": 201,
-    "public_total": 324,
+    "published_shorts": 202,
+    "public_total": 325,
     "queued_longform": 64,
-    "queued_shorts": 97,
+    "queued_shorts": 96,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 60,
+        "published_total": 61,
         "published_longform": 25,
-        "published_shorts": 35,
-        "thumbnail_pending": 1,
-        "public_total": 59,
+        "published_shorts": 36,
+        "thumbnail_pending": 2,
+        "public_total": 60,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "0068",
-        "title": "Morning Prayer to Order Your Steps: Psalm 37:23-24 | The Morning Altar",
-        "format": "longform",
-        "youtube_video_id": "diqZtLNbvl8",
-        "watch_url": "https://youtu.be/diqZtLNbvl8",
+        "id": "SHORT-MORNINGPSALM16V8",
+        "title": "Say This Psalm 16:8 Prayer at Sunrise | He Is Your Anchor #Shorts",
+        "format": "short",
+        "youtube_video_id": "YtkO09ZiC3A",
+        "watch_url": "https://www.youtube.com/shorts/YtkO09ZiC3A",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T08:49:45Z"
+        "published_at": "2026-11-16T11:47:44Z"
       },
       "next_queued_longform": {
         "id": "0069",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm16v8",
-        "scripture": "Psalm 16:8",
+        "short": "short-morningpsalm46v5",
+        "scripture": "Psalm 46:5",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -724,6 +724,30 @@
       "thumbnail_pending": true,
       "duration_label": "56s",
       "words": 644
+    },
+    {
+      "id": "SHORT-MORNINGPSALM16V8",
+      "slug": "short-morningpsalm16v8-sunrise-prayer",
+      "file": "short-morningpsalm16v8-sunrise-prayer.md",
+      "title": "Say This Psalm 16:8 Prayer at Sunrise | He Is Your Anchor #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T11:47:44Z",
+      "youtube_video_id": "YtkO09ZiC3A",
+      "watch_url": "https://www.youtube.com/shorts/YtkO09ZiC3A",
+      "youtu_be_url": "https://youtu.be/YtkO09ZiC3A",
+      "shorts_url": "https://www.youtube.com/shorts/YtkO09ZiC3A",
+      "studio_url": "https://studio.youtube.com/video/YtkO09ZiC3A/edit",
+      "thumb_url": "https://i.ytimg.com/vi/YtkO09ZiC3A/hqdefault.jpg",
+      "thumb_text": "ANCHORED \u00b7 IN HIS",
+      "thumbnail_pending": true,
+      "duration_label": "49s",
+      "words": 626
     },
     {
       "id": "SHORT-FAMILYACTS2V39",
@@ -9504,17 +9528,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningpsalm16v8",
-        "file": "0000-short-morningpsalm16v8.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 16:8",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm46v5",
