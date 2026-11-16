@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T21:07:02Z",
+  "generated_at": "2026-11-16T23:30:42Z",
   "monitor_generated_at": "2026-11-16T21:06:04.374364+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 359,
+    "published_total": 360,
     "published_longform": 131,
-    "published_shorts": 228,
-    "public_total": 357,
+    "published_shorts": 229,
+    "public_total": 358,
     "queued_longform": 58,
-    "queued_shorts": 70,
+    "queued_shorts": 69,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -305,23 +305,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 29,
+        "published_total": 30,
         "published_longform": 11,
-        "published_shorts": 18,
-        "thumbnail_pending": 29,
-        "public_total": 29,
+        "published_shorts": 19,
+        "thumbnail_pending": 30,
+        "public_total": 30,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-FAMILYPHILIPPIANS4V19",
-        "title": "Pray This Philippians 4:19 Family Prayer Over Your Home | Gather Your Home In Faith #Shorts",
+        "id": "SHORT-FAMILYJOB1V10",
+        "title": "Pray This Job 1:10 Family Prayer Over Your Home | God's Hedge Of Protection #Shorts",
         "format": "short",
-        "youtube_video_id": "ViZiIZVSZo0",
-        "watch_url": "https://www.youtube.com/shorts/ViZiIZVSZo0",
+        "youtube_video_id": "f-R1lW8lsk8",
+        "watch_url": "https://www.youtube.com/shorts/f-R1lW8lsk8",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T19:55:27Z"
+        "published_at": "2026-11-16T23:29:43Z"
       },
       "next_queued_longform": {
         "id": "0311",
@@ -330,8 +330,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familyjob1v10",
-        "scripture": "Job 1:10",
+        "short": "short-familyproverbs3v33",
+        "scripture": "Proverbs 3:33",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILYJOB1V10",
+      "slug": "short-familyjob1v10-household-prayer",
+      "file": "short-familyjob1v10-household-prayer.md",
+      "title": "Pray This Job 1:10 Family Prayer Over Your Home | God's Hedge Of Protection #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T23:29:43Z",
+      "youtube_video_id": "f-R1lW8lsk8",
+      "watch_url": "https://www.youtube.com/shorts/f-R1lW8lsk8",
+      "youtu_be_url": "https://youtu.be/f-R1lW8lsk8",
+      "shorts_url": "https://www.youtube.com/shorts/f-R1lW8lsk8",
+      "studio_url": "https://studio.youtube.com/video/f-R1lW8lsk8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/f-R1lW8lsk8/hqdefault.jpg",
+      "thumb_text": "A HEDGE AROUND \u00b7 YOUR ENTIRE HOME",
+      "thumbnail_pending": true,
+      "duration_label": "41s",
+      "words": 649
+    },
     {
       "id": "0410",
       "slug": "isaiah-53-4-5-by-his-stripes-we-are-healed",
@@ -10383,17 +10407,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-familyjob1v10",
-        "file": "0309-short-familyjob1v10.yml",
-        "companion_longform_id": "0309",
-        "scripture": "Job 1:10",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
       },
       {
         "short": "short-familyproverbs3v33",
