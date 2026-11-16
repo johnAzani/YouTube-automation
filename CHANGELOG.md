@@ -5,6 +5,44 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-16 — The dashboard was written by whichever code the job happened to hold
+
+- **What was waiting.** Pull request #393 (branch `arena/eeba7af2`, 13 November) held four
+  fixes. Two of them had already reached `main` on their own since: the duplicate check now
+  fails closed instead of treating a failed lookup as a clean channel (it scans every page
+  up to a cap, checks the token's channel, and refuses an ambiguous match), and
+  `prev_occurrence` searches each cron line on its own. Its versions of those files were
+  resolved by keeping `main`'s; the pull request's remaining work is what lands here.
+- **The fault.** `produce.yml` and `monitor.yml` generate `docs/network-state.json` from the
+  job's *working tree* after `git reset --mixed`. A run that waited behind the content-state
+  lock for hours holds code older than the main it just reset onto, so the snapshot it
+  commits was built by the old `pipeline/channels.py` — a dashboard missing every channel
+  registered since that job started. Both workflows now materialise the staged index into a
+  temporary directory and run the generator, and its imports, from that snapshot, writing
+  the result back into the workspace.
+- **The fault found while landing it.** The first cut of that snippet set
+  `PYTHONPATH="$idx_dir"`, replacing whatever the environment already had.
+  `tests/test_produce_leg_rehearsal.py` injects the real repository as `PYTHONPATH` so a
+  minimal seed tree can import the real `pipeline` package; replacing it made the generator
+  die on `import pipeline.channels`, the step fell into its warning branch, and two
+  rehearsals failed with no `network-state.json` in the commit — exactly the silent omission
+  the change exists to prevent. The snapshot now goes *in front* of an inherited path
+  (`$idx_dir${PYTHONPATH:+:$PYTHONPATH}`): staged code still wins, and an existing import
+  path survives. The dashboard test that injects a hostile import path still passes.
+- **The download server listed the repository.** `download_server.py` resolved any path
+  against the repo root and then `docs/`, without checking traversal or hidden names, and
+  served directory listings. It now refuses `..` segments, hidden names (`.git`, `.env`),
+  symlinks that escape either root and directory listings, and validates `index.html`
+  the same way the base handler would not.
+- **Measured before and after.** `python -m scripts.channel_protection` output is identical
+  on both sides of this change; it touches no title, description, script or schedule. The
+  full suite went from 2,270 passed / 2 failed (the two rehearsals) to **2,272 passed, 0
+  failed, 5,605 subtests**.
+- Tests: `tests/test_dashboard_index_snapshot.py` (new), `tests/test_download_server_security.py`
+  (new), and the scheduler/monitor/supply isolation tests from #393.
+
+---
+
 ## 2026-11-16 — Search terms: only the ones about prayer are written down or learned from
 
 - **The first real reading showed the fault.** The Secret Place's 25 search terms (90 days) were read at 11:29 UTC. Ten were about prayer or scripture ("psalm 91" with 8 views, "psalm 31" 7, "psalm 27 explained" 4, "deep sleep prayers" 2). Fifteen were not ("barbie", "blackjack casino", a person's name): YouTube counts every search that ended on one of the channel's videos, most of them a Short met by chance. As merged an hour earlier, those were written into the public file, and one with enough views could have been offered to the title writer.

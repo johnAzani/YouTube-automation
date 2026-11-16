@@ -17,6 +17,19 @@ from scripts import scheduler_supervisor as sup
 UTC = timezone.utc
 
 
+def setUpModule():
+    # These are schedule/dispatch fixtures, not tests of today's production
+    # queues or quota ledger. Using live content here made every simulated pass
+    # repeatedly parse the whole repository and changed results as queues changed.
+    # Supply and quota behavior have their own dedicated tests.
+    for patcher in (
+        mock.patch("scripts.automation_monitor.active_quota_cooldown", return_value=None),
+        mock.patch.object(sup, "_channel_has_supply", return_value=True),
+    ):
+        patcher.start()
+        unittest.addModuleCleanup(patcher.stop)
+
+
 def run(workflow, when, status="completed", conclusion="success"):
     """One run, shaped the way `fetch_runs()` returns it (flat, with `path`)."""
     return {"name": workflow, "path": f".github/workflows/{workflow}",
