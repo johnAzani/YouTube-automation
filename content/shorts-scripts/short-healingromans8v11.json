@@ -1,0 +1,230 @@
+{
+  "key": "short-healingromans8v11",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "HEALING SPIRIT",
+    "DIVINE LIFE"
+  ],
+  "poster": [
+    "QUICKENED",
+    "BY THE SPIRIT",
+    "OF HIM WHO",
+    "RAISED CHRIST"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters",
+    "warm golden sanctuary light",
+    "white dove peace imagery",
+    "gently flowing river at dusk",
+    "soft morning light on water",
+    "ethereal light in sacred space"
+  ],
+  "scenes": [
+    {
+      "a": "If you are feeling the crushing weight of physical exhaustion right now, please stay here.",
+      "img": "short-healingromans8v11-scene-01.jpg",
+      "kicker": "ROMANS 8:11",
+      "sub": "GOD HEARS YOUR WEARY HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "But if the Spirit of him that raised up Jesus from the dead dwell in you,",
+      "img": "short-healingromans8v11-scene-02.jpg",
+      "kicker": "ROMANS 8:11",
+      "sub": "THE SPIRIT DWELLS WITHIN",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "he that raised up Christ from the dead shall also quicken your mortal bodies by his Spirit that dwelleth in you.",
+      "img": "short-healingromans8v11-scene-03.jpg",
+      "kicker": "ROMANS 8:11",
+      "sub": "HE GIVES LIFE TO YOU",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, pour out your restorative power into this tired frame and let your peace reign.",
+      "img": "short-healingromans8v11-scene-04.jpg",
+      "kicker": "PRAYER FOR REST",
+      "sub": "RESTORE THE WEARY SPIRIT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May every cell and every breath testify to the life you provide in this moment.",
+      "img": "short-healingromans8v11-scene-05.jpg",
+      "kicker": "DIVINE HEALING",
+      "sub": "YOUR LIFE IN HIS HANDS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We yield our bodies to your care, trusting in the resurrection power you possess today.",
+      "img": "short-healingromans8v11-scene-06.jpg",
+      "kicker": "GOD IS FAITHFUL",
+      "sub": "TRUST IN HIS PROMISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "If you are feeling the crushing weight of physical exhaustion right now, please stay here."
+    ],
+    [
+      11,
+      22,
+      "But if the Spirit of him that raised up Jesus from the dead dwell in you,"
+    ],
+    [
+      23,
+      38,
+      "he that raised up Christ from the dead shall also quicken your mortal bodies by his Spirit that dwelleth in you."
+    ],
+    [
+      39,
+      52,
+      "Lord, pour out your restorative power into this tired frame and let your peace reign."
+    ],
+    [
+      53,
+      67,
+      "May every cell and every breath testify to the life you provide in this moment."
+    ],
+    [
+      68,
+      82,
+      "We yield our bodies to your care, trusting in the resurrection power you possess today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "FEELING THE CRUSHING WEIGHT",
+        "OF PHYSICAL EXHAUSTION",
+        "PLEASE STAY HERE"
+      ],
+      [
+        "CRUSHING WEIGHT"
+      ],
+      "ROMANS 8:11"
+    ],
+    [
+      11,
+      22,
+      [
+        "SPIRIT OF HIM",
+        "RAISED JESUS FROM DEAD",
+        "DWELL IN YOU"
+      ],
+      [
+        "SPIRIT OF HIM"
+      ],
+      "ROMANS 8:11"
+    ],
+    [
+      23,
+      38,
+      [
+        "RAISED UP CHRIST",
+        "SHALL ALSO QUICKEN",
+        "YOUR MORTAL BODIES"
+      ],
+      [
+        "QUICKEN"
+      ],
+      "ROMANS 8:11"
+    ],
+    [
+      39,
+      52,
+      [
+        "POUR OUT RESTORATIVE POWER",
+        "INTO THIS TIRED FRAME",
+        "LET PEACE REIGN"
+      ],
+      [
+        "RESTORATIVE POWER"
+      ],
+      "ROMANS 8:11"
+    ],
+    [
+      53,
+      67,
+      [
+        "EVERY CELL AND BREATH",
+        "TESTIFY TO THE LIFE",
+        "YOU PROVIDE NOW"
+      ],
+      [
+        "TESTIFY"
+      ],
+      "ROMANS 8:11"
+    ],
+    [
+      68,
+      82,
+      [
+        "YIELD BODIES TO CARE",
+        "TRUSTING IN RESURRECTION",
+        "POWER YOU POSSESS"
+      ],
+      [
+        "RESURRECTION"
+      ],
+      "ROMANS 8:11"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are feeling the crushing weight of physical exhaustion right now, please stay here.",
+      "kind": "phrase",
+      "words": [
+        "CRUSHING",
+        "WEIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "he that raised up Christ from the dead shall also quicken your mortal bodies by his Spirit that dwelleth in you.",
+      "kind": "phrase",
+      "words": [
+        "QUICKEN",
+        "MORTAL BODIES"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Romans 8:11"
+}
