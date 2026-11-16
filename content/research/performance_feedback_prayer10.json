@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-16T07:00:54.556453+00:00",
+  "generated_at": "2026-11-16T09:42:34.220550+00:00",
   "as_of": "2026-11-16",
   "sufficient_data": false,
   "measured_longform_videos": 0,
   "total_longform_videos": 6,
   "input_diagnostics": {
-    "snapshot_video_ids": 15,
-    "receipt_video_ids": 15,
-    "matched_video_ids": 15,
+    "snapshot_video_ids": 16,
+    "receipt_video_ids": 16,
+    "matched_video_ids": 16,
     "longform_below_view_threshold": 6,
     "longform_missing_view_count": 0,
     "longform_too_young_or_undated": 3,
@@ -51,54 +51,54 @@
   ],
   "shorts": {
     "measured_shorts": 5,
-    "total_shorts": 9,
+    "total_shorts": 10,
     "sufficient_data": false,
-    "avg_views": 109.6,
+    "avg_views": 111.0,
     "median_views": 97,
-    "total_views": 548,
+    "total_views": 555,
     "minimum_age_days": 2,
     "by_book": {
       "ecclesiastes": {
         "shorts": 1,
         "avg_views": 97.0,
-        "ratio": 0.962
+        "ratio": 0.958
       },
       "isaiah": {
         "shorts": 1,
         "avg_views": 68.0,
-        "ratio": 0.873
+        "ratio": 0.871
       },
       "james": {
         "shorts": 1,
         "avg_views": 180.0,
-        "ratio": 1.214
+        "ratio": 1.207
       },
       "john": {
         "shorts": 1,
-        "avg_views": 127.0,
-        "ratio": 1.053
+        "avg_views": 134.0,
+        "ratio": 1.069
       },
       "proverbs": {
         "shorts": 1,
         "avg_views": 76.0,
-        "ratio": 0.898
+        "ratio": 0.895
       }
     },
     "by_theme": {
       "anxiety_peace": {
         "shorts": 2,
-        "avg_views": 101.5,
-        "ratio": 0.963
+        "avg_views": 105.0,
+        "ratio": 0.973
       },
       "daily_guidance_wisdom": {
         "shorts": 2,
         "avg_views": 124.0,
-        "ratio": 1.066
+        "ratio": 1.059
       },
       "peace_rest": {
         "shorts": 1,
         "avg_views": 97.0,
-        "ratio": 0.962
+        "ratio": 0.958
       }
     },
     "guidance": [
