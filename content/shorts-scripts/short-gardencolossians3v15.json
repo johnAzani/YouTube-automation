@@ -1,0 +1,282 @@
+{
+  "key": "short-gardencolossians3v15",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "PEACE THAT RULES",
+    "A HEART OF THANKS"
+  ],
+  "poster": [
+    "THE PEACE OF GOD",
+    "DWELLING IN YOU",
+    "A HEART OF PRAISE",
+    "THE GARDEN WAITS"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "soft sunlit forest glade",
+    "misty morning meadow",
+    "golden light on quiet river",
+    "peaceful dew on green grass",
+    "gentle stream through woods",
+    "sunlight filtering through leaves"
+  ],
+  "scenes": [
+    {
+      "a": "If the uncertainty of this current path makes you feel lost, please stay right here.",
+      "img": "short-gardencolossians3v15-scene-01.jpg",
+      "kicker": "COLOSSIANS 3:15",
+      "sub": "FINDING YOUR WAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And let the peace of God rule in your hearts, to the which also ye are called in one body; and be ye thankful.",
+      "img": "short-gardencolossians3v15-scene-02.jpg",
+      "kicker": "COLOSSIANS 3:15",
+      "sub": "LET PEACE RULE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let the word of Christ dwell in you richly in all wisdom; teaching and admonishing one another in psalms and hymns and spiritual songs, singing with grace in your hearts to the Lord.",
+      "img": "short-gardencolossians3v15-scene-03.jpg",
+      "kicker": "COLOSSIANS 3:16",
+      "sub": "SINGING WITH GRACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And whatsoever ye do in word or deed, do all in the name of the Lord Jesus, giving thanks to God and the Father by him.",
+      "img": "short-gardencolossians3v15-scene-04.jpg",
+      "kicker": "COLOSSIANS 3:17",
+      "sub": "GIVING THANKS ALWAYS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, anchor my restless spirit in these promises today as I navigate this confusing season.",
+      "img": "short-gardencolossians3v15-scene-05.jpg",
+      "kicker": "A PRAYER",
+      "sub": "RESTING IN HIM",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May every small action I take become an offering of genuine gratitude unto You alone.",
+      "img": "short-gardencolossians3v15-scene-06.jpg",
+      "kicker": "IN THE GARDEN",
+      "sub": "WALKING IN GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "If the uncertainty of this current path makes you feel lost, please stay right here."
+    ],
+    [
+      12,
+      28,
+      "And let the peace of God rule in your hearts, to the which also ye are called in one body; and be ye thankful."
+    ],
+    [
+      28,
+      48,
+      "Let the word of Christ dwell in you richly in all wisdom; teaching and admonishing one another in psalms and hymns and spiritual songs, singing with grace in your hearts to the Lord."
+    ],
+    [
+      48,
+      65,
+      "And whatsoever ye do in word or deed, do all in the name of the Lord Jesus, giving thanks to God and the Father by him."
+    ],
+    [
+      65,
+      85,
+      "Lord, anchor my restless spirit in these promises today as I navigate this confusing season."
+    ],
+    [
+      85,
+      105,
+      "May every small action I take become an offering of genuine gratitude unto You alone."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "IF THE UNCERTAINTY",
+        "OF THIS PATH",
+        "FEELS LOST",
+        "STAY RIGHT HERE"
+      ],
+      [
+        "UNCERTAINTY",
+        "STAY"
+      ],
+      "COLOSSIANS 3:15"
+    ],
+    [
+      12,
+      28,
+      [
+        "LET PEACE RULE",
+        "IN YOUR HEARTS",
+        "YOU ARE CALLED",
+        "BE YE THANKFUL"
+      ],
+      [
+        "PEACE",
+        "THANKFUL"
+      ],
+      "COLOSSIANS 3:15"
+    ],
+    [
+      28,
+      48,
+      [
+        "WORD OF CHRIST",
+        "DWELL IN YOU",
+        "RICHLY IN WISDOM",
+        "SINGING WITH GRACE"
+      ],
+      [
+        "DWELL",
+        "GRACE"
+      ],
+      "COLOSSIANS 3:16"
+    ],
+    [
+      48,
+      65,
+      [
+        "WORD OR DEED",
+        "IN HIS NAME",
+        "GIVING THANKS",
+        "TO THE FATHER"
+      ],
+      [
+        "NAME",
+        "THANKS"
+      ],
+      "COLOSSIANS 3:17"
+    ],
+    [
+      65,
+      85,
+      [
+        "ANCHOR MY SPIRIT",
+        "IN THESE PROMISES",
+        "NAVIGATE THIS",
+        "CONFUSING SEASON"
+      ],
+      [
+        "ANCHOR",
+        "PROMISES"
+      ],
+      "A PRAYER"
+    ],
+    [
+      85,
+      105,
+      [
+        "EVERY SMALL ACTION",
+        "AN OFFERING",
+        "GENUINE GRATITUDE",
+        "UNTO YOU ALONE"
+      ],
+      [
+        "OFFERING",
+        "GRATITUDE"
+      ],
+      "IN THE GARDEN"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the uncertainty of this current path makes you feel lost, please stay right here.",
+      "kind": "phrase",
+      "words": [
+        "UNCERTAINTY",
+        "STAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And let the peace of God rule in your hearts, to the which also ye are called in one body; and be ye thankful.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "THANKFUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let the word of Christ dwell in you richly in all wisdom; teaching and admonishing one another in psalms and hymns and spiritual songs, singing with grace in your hearts to the Lord.",
+      "kind": "phrase",
+      "words": [
+        "DWELL",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And whatsoever ye do in word or deed, do all in the name of the Lord Jesus, giving thanks to God and the Father by him.",
+      "kind": "phrase",
+      "words": [
+        "NAME",
+        "THANKS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, anchor my restless spirit in these promises today as I navigate this confusing season.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "PROMISES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May every small action I take become an offering of genuine gratitude unto You alone.",
+      "kind": "phrase",
+      "words": [
+        "OFFERING",
+        "GRATITUDE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Colossians 3:15-17"
+}
