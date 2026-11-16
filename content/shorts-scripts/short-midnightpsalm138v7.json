@@ -1,0 +1,261 @@
+{
+  "key": "short-midnightpsalm138v7",
+  "channel": "prayer4",
+  "psalm": 138,
+  "title": [
+    "THOUGH I WALK IN TROUBLE",
+    "PSALM 138:7 MIDNIGHT PRAYER"
+  ],
+  "poster": [
+    "THOUGH I WALK",
+    "IN MIDST OF TROUBLE",
+    "THOU WILT REVIVE ME",
+    "PSALM 138:7"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "midnight watchtower silhouette starry sky",
+    "lamp lit sanctuary altar night vigil",
+    "deep starry heavens midnight sky landscape",
+    "calm mountain lake midnight reflection stars",
+    "ancient stone chapel candle night view",
+    "glowing lantern in dark midnight forest"
+  ],
+  "scenes": [
+    {
+      "a": "If trouble surrounds you in this dark hour, God sees your distress right now.",
+      "img": "short-midnightpsalm138v7-scene-01.jpg",
+      "kicker": "PSALM 138:7",
+      "sub": "GOD SEES YOUR DISTRESS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Scripture declares: Though I walk in the midst of trouble, thou wilt revive me:",
+      "img": "short-midnightpsalm138v7-scene-02.jpg",
+      "kicker": "PSALM 138:7",
+      "sub": "THOU WILT REVIVE ME",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "thou shalt stretch forth thine hand against the wrath of mine enemies, and thy right hand shall save me.",
+      "img": "short-midnightpsalm138v7-scene-03.jpg",
+      "kicker": "PSALM 138:7",
+      "sub": "THY RIGHT HAND SHALL SAVE ME",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, when trial presses close on every side, breathe your quiet strength into our weary heart.",
+      "img": "short-midnightpsalm138v7-scene-04.jpg",
+      "kicker": "PSALM 138:7",
+      "sub": "BREATHE YOUR QUIET STRENGTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Reach out your victorious right hand and deliver us from every lingering threat that haunts the shadows.",
+      "img": "short-midnightpsalm138v7-scene-05.jpg",
+      "kicker": "PSALM 138:7",
+      "sub": "DELIVER US FROM THREATS",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Revive our spirit in this midnight watch and grant us deep, abiding peace tonight. Amen. Subscribe to stand with The Midnight Watch in prayer.",
+      "img": "short-midnightpsalm138v7-scene-06.jpg",
+      "kicker": "PSALM 138:7",
+      "sub": "STAND IN MIDNIGHT PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If trouble surrounds you in this dark hour, God sees your distress right now."
+    ],
+    [
+      6,
+      14,
+      "Scripture declares: Though I walk in the midst of trouble, thou wilt revive me:"
+    ],
+    [
+      14,
+      22,
+      "thou shalt stretch forth thine hand against the wrath of mine enemies, and thy right hand shall save me."
+    ],
+    [
+      22,
+      30,
+      "Lord, when trial presses close on every side, breathe your quiet strength into our weary heart."
+    ],
+    [
+      30,
+      38,
+      "Reach out your victorious right hand and deliver us from every lingering threat that haunts the shadows."
+    ],
+    [
+      38,
+      46,
+      "Revive our spirit in this midnight watch and grant us deep, abiding peace tonight. Amen. Subscribe to stand with The Midnight Watch in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF TROUBLE SURROUNDS YOU",
+        "GOD SEES YOUR DISTRESS"
+      ],
+      [
+        "TROUBLE",
+        "GOD SEES"
+      ],
+      "PSALM 138 : 7"
+    ],
+    [
+      6,
+      14,
+      [
+        "THOUGH I WALK IN TROUBLE",
+        "THOU WILT REVIVE ME"
+      ],
+      [
+        "REVIVE ME"
+      ],
+      "PSALM 138 : 7"
+    ],
+    [
+      14,
+      22,
+      [
+        "STRETCH FORTH THINE HAND",
+        "THY RIGHT HAND SHALL SAVE ME"
+      ],
+      [
+        "STRETCH FORTH",
+        "SAVE ME"
+      ],
+      "PSALM 138 : 7"
+    ],
+    [
+      22,
+      30,
+      [
+        "WHEN TRIAL PRESSES CLOSE",
+        "BREATHE QUIET STRENGTH"
+      ],
+      [
+        "QUIET STRENGTH"
+      ],
+      "PSALM 138 : 7"
+    ],
+    [
+      30,
+      38,
+      [
+        "REACH OUT YOUR RIGHT HAND",
+        "DELIVER US FROM THREATS"
+      ],
+      [
+        "DELIVER US"
+      ],
+      "PSALM 138 : 7"
+    ],
+    [
+      38,
+      46,
+      [
+        "REVIVE OUR SPIRIT TONIGHT",
+        "GRANT US ABIDING PEACE"
+      ],
+      [
+        "REVIVE",
+        "PEACE"
+      ],
+      "PSALM 138 : 7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "God sees your distress right now.",
+      "kind": "phrase",
+      "words": [
+        "DISTRESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "thou wilt revive me:",
+      "kind": "phrase",
+      "words": [
+        "REVIVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "thy right hand shall save me.",
+      "kind": "phrase",
+      "words": [
+        "SAVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "breathe your quiet strength into our weary heart.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "deliver us from every lingering threat that haunts the shadows.",
+      "kind": "phrase",
+      "words": [
+        "DELIVER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "grant us deep, abiding peace tonight.",
+      "kind": "phrase",
+      "words": [
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 138:7"
+}
