@@ -17,12 +17,12 @@ youtube_upload_status: processed
 youtube_duration: PT50S
 receipt_recovered_from_youtube: true
 metadata_retrofit_approved: false
-thumbnail_pending: true
-thumbnail_error: thumbnail_status_unverified_after_recovery
+thumbnail_pending: false
 thumbnail_attempts: 0
 thumbnail_poster: ["THE MIDDAY WATCH", "A QUIET PLACE", "TO PRAY", "AT NOON"]
 thumbnail_kicker: "PAUSE AND PRAY AT NOON"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_revision: "shorts-poster-v1"
 ---
 
 This receipt was recovered from an existing YouTube video. No video was uploaded during recovery; the custom thumbnail status is unverified.

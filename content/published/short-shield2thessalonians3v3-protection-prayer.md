@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=el"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE COVENANT SHIELD", "DIVINE PROTECTION", "DAILY PRAYER", "2 THESSALONIANS 3:3"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-23T17:59:50Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Place every step, journey, and unseen concern under the shadow of the Almighty. But the Lord is faithful, who shall stablish you and keep you from evil. We pray now for your peace, seeking the refuge of His unchanging protection. May your spirit be anchored in the certainty of His watching, silent care. No path you travel is outside His reach; you are guarded by His grace. Stand firm in this truth, knowing you are covered under His divine shield. May your heart find total stillness, resting in the safety of His shadow.
