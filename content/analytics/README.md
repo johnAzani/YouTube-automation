@@ -7,7 +7,7 @@ YouTube's figures run about two days behind. Revenue is never written here.
 
 | Channel | Subscribers (need 1,000) | Watch hours, 365 days (need 4,000) | Shorts views, 90 days (need 10,000,000) | Long-form hours a day, last 28 days (need 11) | Read |
 | :--- | ---: | ---: | ---: | ---: | :--- |
-| The Secret Place | 1,250 | 16 | 3,107 | 0.05 | 2026-11-16 |
+| The Secret Place | 1,260 | 16 | 3,107 | 0.05 | 2026-11-16 |
 
 Ads need the subscribers and either the watch hours or the Shorts views. Watch hours counted here are long-form and live only: time watched in the Shorts feed does not count. A year of the daily figure in the last column is what the 365-day total becomes. YouTube Studio's Earn page holds the official count.
 
@@ -30,6 +30,36 @@ Where viewers came from, last 28 days:
 | Home and subscriptions | 19 | 0.05 |
 | Notifications | 5 | 0.08 |
 | Direct or unknown | 2 | 0 |
+
+What viewers typed into YouTube search to find this channel, last 90 days:
+
+| Words typed | Views | Watch hours |
+| :--- | ---: | ---: |
+| psalm 91 | 8 | 0.02 |
+| psalm 31 | 7 | 0.15 |
+| melo funny moments | 4 | 0.02 |
+| psalm 27 explained | 4 | 0.05 |
+| deep sleep prayers | 2 | 0 |
+| jesus de miguel | 2 | 0 |
+| night prayer before going to bed | 2 | 0 |
+| psalm 34 | 2 | 0 |
+| psalms 91 | 2 | 0 |
+| psalmul 91 | 2 | 0 |
+| secret place | 2 | 0 |
+| 91 psalm | 1 | 0 |
+| 91 psalm prayer | 1 | 0 |
+| ant colony 1000 days | 1 | 0 |
+| apple squishy | 1 | 0 |
+| baby doll | 1 | 0 |
+| barbie | 1 | 0 |
+| blackjack casino | 1 | 0 |
+| cyclone india | 1 | 0 |
+| dada wa kazi | 1 | 0 |
+| divorce in black full movie | 1 | 0 |
+| english songs with lyrics | 1 | 0 |
+| eva delonne runway look | 1 | 0 |
+| google google | 1 | 0 |
+| he that dwelleth in the secret place of the most high | 1 | 0 |
 
 Videos by watch time, 365 days (up to 50):
 
