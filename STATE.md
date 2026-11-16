@@ -10,6 +10,8 @@
 ## ⚠️ CRITICAL NOTICE FOR ANY FUTURE AI SESSION OR AGENT
 > **DO NOT TREAT THIS CONVERSATION AS A BLANK SLATE.**  
 > Everything in this document has already been built, tested, and verified.
+> - **STANDING ORDER (owner, 16 November 2026 — never to be asked for again):** every piece of work, and every next step proposed, must improve **(1) the protection of all ten channels, (2) revenue intelligence, and (3) the intelligence of the automation**. Protection comes first when they pull apart. The rules that follow from it are in **`AGENTS.md`** at the top of the repository; read it before changing anything. The research behind it is `docs/PROTECTION_AND_REVENUE_RESEARCH_2026-11-16.md`.
+> - **DO NOT** raise how many videos a channel publishes a day, and **DO NOT** make the channels more alike, without the owner saying so. YouTube ends all of an owner's channels together for many similar AI-made videos across linked channels.
 > - **DO NOT** re-ask the user if they have YouTube secrets or credentials (they are ALREADY configured and verified).
 > - **DO NOT** attempt to change, audition, or suggest new voices (Google Gemini TTS `Charon` is permanently locked).
 > - **DO NOT** re-ask how to monetize or set up Selar (both the Show Love hub and Product #2 are ALREADY live).

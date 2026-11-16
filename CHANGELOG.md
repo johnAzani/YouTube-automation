@@ -5,6 +5,16 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-16 — Standing orders, and the first changes made under them
+
+- **The order.** The owner asked that protection of all channels, revenue intelligence and the automation's intelligence be improved in every piece of work, without being asked again. `AGENTS.md` (new, top of the repository) states the three priorities and the rules that follow; the notice at the top of `STATE.md` points to it; `tests/test_standing_orders.py` fails if they are removed.
+- **The research.** `docs/PROTECTION_AND_REVENUE_RESEARCH_2026-11-16.md`: YouTube's monetisation policy, spam policy, Partner Programme pages and developer policy, read directly this time, with what was measured against them. The two findings that matter most: a termination for mass-made similar videos takes all of an owner's channels together; and The Secret Place had 16.03 of the 4,000 watch hours that count (Shorts hours do not), with 67 long-form views in 28 days.
+- **A Short's title says something of its own.** The words after the bar were always the last poster line: the channel's own name, the reference a second time, the kind of prayer already named, one word, or a cut-off line on 187 of the 260 Shorts written. `short_release.title_hook` now takes the first line that adds something (the poster line if it does, otherwise an on-screen scene line), prefers one that keeps the title within its 86 characters so the hook is not cut off, and capitalises correctly ("God's", not "God'S"). Only Shorts published from now on; live titles are not edited. The upload's duplicate check finds an existing video by its title, so each Short also carries the title the old rule gave it (`ShortEdition.earlier_titles`) and the check looks for both.
+- **`main` was failing its tests** (run 43819703367, 06:51 UTC): The Family Altar's Short of 15 November prays "every bedtime prayer", The Secret Place's wording, and Shorts were never checked for it. `short_script.foreign_wording` is now asked when a Short is written; the writer is told which words are not its own; a Short that uses them is refused and written again. The published Short is excused by name in the test, and a second test keeps that list from growing.
+- **A daily measure of sameness.** `scripts/channel_protection.py`, a step in `.github/workflows/automation-health.yml`: uploads per channel per day, recent Short titles that say nothing of their own, titles used twice, prayer sentences spoken on more than one channel. It warns and never fails a run. First reading: 113 of the 155 most recent Short titles say nothing of their own; no prayer sentence is shared across channels.
+- **Not changed, and the owner's to decide:** one Google Cloud project per channel (the developer policy says one project per program); how many channels and uploads a day.
+- Tests: `tests/test_short_title_hook.py` (41), `tests/test_channel_protection.py` (26), `tests/test_standing_orders.py` (15).
+
 ## 2026-11-15 — A week's notice before a channel runs short of planned passages
 
 - **The gap.** The unit tests fail when any channel has fewer than 15 roadmap passages left, with nothing said before that day. The daily test run reports it the day it happens; this reports it about a week earlier.

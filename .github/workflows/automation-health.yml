@@ -108,3 +108,15 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python -m scripts.roadmap_headroom --sync-issue
+
+      - name: Measure how alike the channels look
+        if: ${{ always() && !cancelled() && github.event_name != 'push' }}
+        # YouTube's monetisation policy refuses videos that look made from a
+        # template, and its spam policy covers many similar videos across
+        # linked channels. Neither gives a number. This prints the
+        # repository's own measures of both, from what was published: uploads
+        # per channel per day, Short titles that say nothing of their own,
+        # titles used twice, and prayer sentences spoken on more than one
+        # channel. It reads files only, and what it finds is a warning: a
+        # channel that looks templated is not a failed run.
+        run: python -m scripts.channel_protection
