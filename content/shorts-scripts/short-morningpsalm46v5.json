@@ -1,0 +1,271 @@
+{
+  "key": "short-morningpsalm46v5",
+  "channel": "prayer2",
+  "psalm": 46,
+  "title": [
+    "GOD IS IN",
+    "THE MIDST"
+  ],
+  "poster": [
+    "GOD",
+    "IS",
+    "IN",
+    "MIDST"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "golden sunrise over misty mountain ridge",
+    "soft morning light entering bedroom window",
+    "dew drops on leaves at sunrise",
+    "calm ocean waves at dawn",
+    "sunlight breaking through forest canopy",
+    "slow sunrise over silent lake"
+  ],
+  "scenes": [
+    {
+      "a": "You are currently holding onto a heavy worry that feels far too large to carry alone.",
+      "img": "short-morningpsalm46v5-scene-01.jpg",
+      "kicker": "PSALM 46:5",
+      "sub": "FINDING STRENGTH AT DAWN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "God is in the midst of her; she shall not be moved: God shall help her, and that right early.",
+      "img": "short-morningpsalm46v5-scene-02.jpg",
+      "kicker": "GOD IS NEAR",
+      "sub": "HE SHALL HELP YOU",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, anchor my heart in this promise as the light grows brighter in my room today.",
+      "img": "short-morningpsalm46v5-scene-03.jpg",
+      "kicker": "STAY STEADFAST",
+      "sub": "ROOTED IN HIS GRACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let your presence move through the anxious thoughts that tried to greet me upon waking up.",
+      "img": "short-morningpsalm46v5-scene-04.jpg",
+      "kicker": "PEACE IN THE MORNING",
+      "sub": "CALM WITHIN THE CHAOS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Grant me the unshakeable stillness that comes only from knowing you are truly dwelling within me.",
+      "img": "short-morningpsalm46v5-scene-05.jpg",
+      "kicker": "ABIDING IN CHRIST",
+      "sub": "STILLNESS IN THE LIGHT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Help me walk forward now with a steady spirit because you are my constant, present help.",
+      "img": "short-morningpsalm46v5-scene-06.jpg",
+      "kicker": "WALKING IN FAITH",
+      "sub": "HE IS YOUR CONSTANT HELP",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "You are currently holding onto a heavy worry that feels far too large to carry alone."
+    ],
+    [
+      11,
+      25,
+      "God is in the midst of her; she shall not be moved: God shall help her, and that right early."
+    ],
+    [
+      26,
+      40,
+      "Lord, anchor my heart in this promise as the light grows brighter in my room today."
+    ],
+    [
+      41,
+      55,
+      "Let your presence move through the anxious thoughts that tried to greet me upon waking up."
+    ],
+    [
+      56,
+      70,
+      "Grant me the unshakeable stillness that comes only from knowing you are truly dwelling within me."
+    ],
+    [
+      71,
+      85,
+      "Help me walk forward now with a steady spirit because you are my constant, present help."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "HEAVY WORRY",
+        "YOU CARRY"
+      ],
+      [
+        "HEAVY",
+        "WORRY"
+      ],
+      "PSALM 46:5"
+    ],
+    [
+      11,
+      25,
+      [
+        "GOD IS IN",
+        "THE MIDST",
+        "HE SHALL HELP"
+      ],
+      [
+        "GOD",
+        "HELP"
+      ],
+      "PSALM 46:5"
+    ],
+    [
+      26,
+      40,
+      [
+        "ANCHOR MY HEART",
+        "IN THIS PROMISE"
+      ],
+      [
+        "ANCHOR",
+        "PROMISE"
+      ],
+      "PSALM 46:5"
+    ],
+    [
+      41,
+      55,
+      [
+        "MOVE THROUGH",
+        "ANXIOUS THOUGHTS"
+      ],
+      [
+        "MOVE",
+        "ANXIOUS"
+      ],
+      "PSALM 46:5"
+    ],
+    [
+      56,
+      70,
+      [
+        "UNSHAKEABLE STILLNESS",
+        "DWELLING WITHIN ME"
+      ],
+      [
+        "STILLNESS",
+        "DWELLING"
+      ],
+      "PSALM 46:5"
+    ],
+    [
+      71,
+      85,
+      [
+        "STEADY SPIRIT",
+        "CONSTANT HELP"
+      ],
+      [
+        "STEADY",
+        "CONSTANT"
+      ],
+      "PSALM 46:5"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You are currently holding onto a heavy worry that feels far too large to carry alone.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "WORRY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "God is in the midst of her; she shall not be moved: God shall help her, and that right early.",
+      "kind": "phrase",
+      "words": [
+        "GOD",
+        "HELP"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, anchor my heart in this promise as the light grows brighter in my room today.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "PROMISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let your presence move through the anxious thoughts that tried to greet me upon waking up.",
+      "kind": "phrase",
+      "words": [
+        "MOVE",
+        "ANXIOUS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Grant me the unshakeable stillness that comes only from knowing you are truly dwelling within me.",
+      "kind": "phrase",
+      "words": [
+        "STILLNESS",
+        "DWELLING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help me walk forward now with a steady spirit because you are my constant, present help.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "CONSTANT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 46:5"
+}

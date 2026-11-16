@@ -1,0 +1,269 @@
+{
+  "key": "short-morningpsalm113v3",
+  "channel": "prayer2",
+  "psalm": 113,
+  "title": [
+    "PRAISE FROM",
+    "THE SUNRISE"
+  ],
+  "poster": [
+    "DAWN PRAYER",
+    "PSALM 113",
+    "THE MORNING ALTAR",
+    "SACRED MOMENT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "soft golden sunrise over forest horizon",
+    "dew drops on morning grass close up",
+    "sunlight streaming through open window",
+    "mist rising over calm mountain lake",
+    "warm sun rays hitting pine needles",
+    "golden hour light over rolling hills"
+  ],
+  "scenes": [
+    {
+      "a": "The heavy weight of yesterday still lingers in your mind as you face today alone.",
+      "img": "short-morningpsalm113v3-scene-01.jpg",
+      "kicker": "GOD IS NEAR",
+      "sub": "HEAR HIS WORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "From the rising of the sun unto the going down of the same the LORD’s name is to be praised.",
+      "img": "short-morningpsalm113v3-scene-02.jpg",
+      "kicker": "PSALM 113:3",
+      "sub": "TRUTH FOR THE HEART",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, help me to fix my eyes on your eternal greatness instead of my immediate fears.",
+      "img": "short-morningpsalm113v3-scene-03.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "FIND YOUR STRENGTH",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May my life be a continuous reflection of your goodness in everything I do this day.",
+      "img": "short-morningpsalm113v3-scene-04.jpg",
+      "kicker": "SEEKING PEACE",
+      "sub": "WALK IN LIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Guide my thoughts and my actions so that your love shines through all my interactions.",
+      "img": "short-morningpsalm113v3-scene-05.jpg",
+      "kicker": "FAITHFUL HEART",
+      "sub": "TRUST THE PROCESS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I surrender my agenda into your hands trusting that you are already working ahead today.",
+      "img": "short-morningpsalm113v3-scene-06.jpg",
+      "kicker": "TOTAL SURRENDER",
+      "sub": "REST IN HIS GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "The heavy weight of yesterday still lingers in your mind as you face today alone."
+    ],
+    [
+      10,
+      25,
+      "From the rising of the sun unto the going down of the same the LORD’s name is to be praised."
+    ],
+    [
+      25,
+      40,
+      "Lord, help me to fix my eyes on your eternal greatness instead of my immediate fears."
+    ],
+    [
+      40,
+      55,
+      "May my life be a continuous reflection of your goodness in everything I do this day."
+    ],
+    [
+      55,
+      70,
+      "Guide my thoughts and my actions so that your love shines through all my interactions."
+    ],
+    [
+      70,
+      85,
+      "I surrender my agenda into your hands trusting that you are already working ahead today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "YESTERDAY LINGERS",
+        "FACING TODAY",
+        "ALONE"
+      ],
+      [
+        "HEAVY WEIGHT"
+      ],
+      "PSALM 113 : 3"
+    ],
+    [
+      10,
+      25,
+      [
+        "FROM THE RISING",
+        "OF THE SUN",
+        "UNTO THE GOING",
+        "DOWN OF THE SAME"
+      ],
+      [
+        "THE LORD'S NAME"
+      ],
+      "PSALM 113 : 3"
+    ],
+    [
+      25,
+      40,
+      [
+        "FIX EYES ON",
+        "ETERNAL GREATNESS",
+        "INSTEAD OF",
+        "IMMEDIATE FEARS"
+      ],
+      [
+        "GREATNESS"
+      ],
+      "PSALM 113 : 3"
+    ],
+    [
+      40,
+      55,
+      [
+        "LIFE REFLECTION",
+        "OF YOUR GOODNESS",
+        "IN EVERYTHING",
+        "I DO TODAY"
+      ],
+      [
+        "GOODNESS"
+      ],
+      "PSALM 113 : 3"
+    ],
+    [
+      55,
+      70,
+      [
+        "GUIDE MY THOUGHTS",
+        "ACTIONS SO THAT",
+        "LOVE SHINES",
+        "THROUGH ALL"
+      ],
+      [
+        "LOVE"
+      ],
+      "PSALM 113 : 3"
+    ],
+    [
+      70,
+      85,
+      [
+        "SURRENDER AGENDA",
+        "INTO YOUR HANDS",
+        "TRUSTING THAT",
+        "YOU WORK AHEAD"
+      ],
+      [
+        "TRUSTING"
+      ],
+      "PSALM 113 : 3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The heavy weight of yesterday still lingers in your mind as you face today alone.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY WEIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "From the rising of the sun unto the going down of the same the LORD’s name is to be praised.",
+      "kind": "phrase",
+      "words": [
+        "LORD'S NAME"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, help me to fix my eyes on your eternal greatness instead of my immediate fears.",
+      "kind": "phrase",
+      "words": [
+        "GREATNESS"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "May my life be a continuous reflection of your goodness in everything I do this day.",
+      "kind": "phrase",
+      "words": [
+        "GOODNESS"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "Guide my thoughts and my actions so that your love shines through all my interactions.",
+      "kind": "phrase",
+      "words": [
+        "LOVE"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "I surrender my agenda into your hands trusting that you are already working ahead today.",
+      "kind": "phrase",
+      "words": [
+        "TRUSTING"
+      ],
+      "hi": 5,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 113:3"
+}

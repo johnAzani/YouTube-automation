@@ -1,0 +1,226 @@
+{
+  "key": "short-morningpsalm16v8",
+  "channel": "prayer2",
+  "psalm": 16,
+  "title": [
+    "STAY STEADY",
+    "IN THE LIGHT"
+  ],
+  "poster": [
+    "ANCHORED",
+    "IN HIS",
+    "STEADFAST",
+    "PRESENCE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "soft morning sun through window blinds",
+    "misty forest at sunrise dawn",
+    "golden light hitting morning dew on grass",
+    "serene calm lake sunrise reflection",
+    "close up of bible pages in soft morning light",
+    "dramatic sunrise over distant mountain peaks"
+  ],
+  "scenes": [
+    {
+      "a": "The heavy weight of that looming decision is currently resting entirely upon your tired shoulders.",
+      "img": "short-morningpsalm16v8-scene-01.jpg",
+      "kicker": "GOD IS NEAR",
+      "sub": "HE IS YOUR ANCHOR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I have set the LORD always before me: because he is at my right hand, I shall not be moved.",
+      "img": "short-morningpsalm16v8-scene-02.jpg",
+      "kicker": "PSALM 16:8",
+      "sub": "HIS PROMISE TO YOU",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Lord, help me to fix my eyes upon your character rather than the storm of circumstances.",
+      "img": "short-morningpsalm16v8-scene-03.jpg",
+      "kicker": "STEADFAST HEART",
+      "sub": "FIXED ON THE TRUTH",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "When the world feels shaky and my resolve begins to thin, remind me of your nearness.",
+      "img": "short-morningpsalm16v8-scene-04.jpg",
+      "kicker": "SURE FOOTING",
+      "sub": "YOU SHALL NOT BE MOVED",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Anchor my soul in the knowledge that you are at my right hand, guiding every step.",
+      "img": "short-morningpsalm16v8-scene-05.jpg",
+      "kicker": "DIVINE GUIDANCE",
+      "sub": "WALKING IN HIS LIGHT",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant me the peace to move through this day with a spirit that is truly settled.",
+      "img": "short-morningpsalm16v8-scene-06.jpg",
+      "kicker": "CALM WITHIN",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "The heavy weight of that looming decision is currently resting entirely upon your tired shoulders."
+    ],
+    [
+      8,
+      18,
+      "I have set the LORD always before me: because he is at my right hand, I shall not be moved."
+    ],
+    [
+      18,
+      28,
+      "Lord, help me to fix my eyes upon your character rather than the storm of circumstances."
+    ],
+    [
+      28,
+      38,
+      "When the world feels shaky and my resolve begins to thin, remind me of your nearness."
+    ],
+    [
+      38,
+      48,
+      "Anchor my soul in the knowledge that you are at my right hand, guiding every step."
+    ],
+    [
+      48,
+      58,
+      "Grant me the peace to move through this day with a spirit that is truly settled."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THE HEAVY WEIGHT",
+        "OF THAT DECISION",
+        "RESTING ON YOUR",
+        "TIRED SHOULDERS"
+      ],
+      [
+        "HEAVY WEIGHT"
+      ],
+      "PSALM 16:8"
+    ],
+    [
+      8,
+      18,
+      [
+        "I HAVE SET",
+        "THE LORD ALWAYS",
+        "BEFORE ME",
+        "I SHALL NOT BE MOVED"
+      ],
+      [
+        "SHALL NOT BE MOVED"
+      ],
+      "PSALM 16:8"
+    ],
+    [
+      18,
+      28,
+      [
+        "FIX MY EYES",
+        "UPON YOUR CHARACTER",
+        "RATHER THAN THE",
+        "STORM OF CIRCUMSTANCES"
+      ],
+      [
+        "FIX MY EYES"
+      ],
+      "PSALM 16:8"
+    ],
+    [
+      28,
+      38,
+      [
+        "WORLD FEELS SHAKY",
+        "RESOLVE BEGINS TO THIN",
+        "REMIND ME",
+        "OF YOUR NEARNESS"
+      ],
+      [
+        "REMIND ME"
+      ],
+      "PSALM 16:8"
+    ],
+    [
+      38,
+      48,
+      [
+        "ANCHOR MY SOUL",
+        "YOU ARE AT",
+        "MY RIGHT HAND",
+        "GUIDING EVERY STEP"
+      ],
+      [
+        "MY RIGHT HAND"
+      ],
+      "PSALM 16:8"
+    ],
+    [
+      48,
+      58,
+      [
+        "GRANT ME PEACE",
+        "MOVE THROUGH TODAY",
+        "WITH A SPIRIT",
+        "TRULY SETTLED"
+      ],
+      [
+        "TRULY SETTLED"
+      ],
+      "PSALM 16:8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "I have set the LORD always before me: because he is at my right hand, I shall not be moved.",
+      "kind": "phrase",
+      "words": [
+        "SHALL NOT",
+        "BE MOVED"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 16:8"
+}

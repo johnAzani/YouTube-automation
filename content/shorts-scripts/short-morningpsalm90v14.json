@@ -1,0 +1,372 @@
+{
+  "key": "short-morningpsalm90v14",
+  "channel": "prayer2",
+  "psalm": 90,
+  "title": [
+    "SATISFY US EARLY",
+    "PSALM 90:14 MORNING PRAYER"
+  ],
+  "poster": [
+    "SATISFY US EARLY",
+    "PSALM 90:14",
+    "BEGIN YOUR DAY",
+    "IN GOD'S MERCY"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "foggy forest mountain misty golden sunrise morning light",
+    "calm mountain lake early morning reflection sunrise glow",
+    "sun rays filtering through pine trees dawn mist",
+    "peaceful meadow golden morning sunlight dewy grass",
+    "quiet horizon soft pink clouds golden sunrise dawn",
+    "scenic valley mountain peak first light of morning sun",
+    "calm ocean horizon sunrise golden sky peaceful dawn"
+  ],
+  "scenes": [
+    {
+      "a": "Before you check your morning messages or face today's heavy calendar, turn your heart upward.",
+      "img": "short-morningpsalm90v14-scene-01.jpg",
+      "kicker": "BEFORE THE DAY BEGINS",
+      "sub": "TURN YOUR HEART UPWARD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "O satisfy us early with thy mercy; that we may rejoice and be glad all our days.",
+      "img": "short-morningpsalm90v14-scene-02.jpg",
+      "kicker": "PSALM 90:14",
+      "sub": "SATISFY US EARLY WITH THY MERCY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, before the demands of this hour fill our thoughts, we ask for Your grace to wash over us.",
+      "img": "short-morningpsalm90v14-scene-03.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "WASH OVER US WITH GRACE",
+      "cam": "pull_out",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Fill the empty places in our souls with Your steadfast love, so that no anxiety can take root.",
+      "img": "short-morningpsalm90v14-scene-04.jpg",
+      "kicker": "STEADFAST LOVE",
+      "sub": "NO ANXIETY CAN TAKE ROOT",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "May Your early mercy quiet every lingering fear from yesterday and anchor our spirit in steady joy.",
+      "img": "short-morningpsalm90v14-scene-05.jpg",
+      "kicker": "STEADY JOY",
+      "sub": "QUIET EVERY LINGERING FEAR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach us to walk through this day with confidence, knowing Your compassion renewed us before the sun reached its height.",
+      "img": "short-morningpsalm90v14-scene-06.jpg",
+      "kicker": "WALK IN CONFIDENCE",
+      "sub": "COMPASSION RENEWED AT SUNRISE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.35
+      ]
+    },
+    {
+      "a": "Subscribe to pray with us tomorrow.",
+      "img": "short-morningpsalm90v14-scene-07.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "BEGIN EVERY SUNRISE IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "Before you check your morning messages or face today's heavy calendar, turn your heart upward."
+    ],
+    [
+      6,
+      13,
+      "O satisfy us early with thy mercy; that we may rejoice and be glad all our days."
+    ],
+    [
+      13,
+      20,
+      "Lord, before the demands of this hour fill our thoughts, we ask for Your grace to wash over us."
+    ],
+    [
+      20,
+      27,
+      "Fill the empty places in our souls with Your steadfast love, so that no anxiety can take root."
+    ],
+    [
+      27,
+      35,
+      "May Your early mercy quiet every lingering fear from yesterday and anchor our spirit in steady joy."
+    ],
+    [
+      35,
+      43,
+      "Teach us to walk through this day with confidence, knowing Your compassion renewed us before the sun reached its height."
+    ],
+    [
+      43,
+      48,
+      "Subscribe to pray with us tomorrow."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "BEFORE YOU CHECK YOUR",
+        "MORNING MESSAGES OR FACE",
+        "TODAY'S HEAVY CALENDAR",
+        "TURN YOUR HEART UPWARD"
+      ],
+      [
+        "TURN",
+        "HEART",
+        "UPWARD"
+      ],
+      "PSALM 90:14"
+    ],
+    [
+      6,
+      13,
+      [
+        "O SATISFY US EARLY",
+        "WITH THY MERCY",
+        "THAT WE MAY REJOICE",
+        "AND BE GLAD ALL OUR DAYS"
+      ],
+      [
+        "SATISFY",
+        "EARLY",
+        "MERCY",
+        "REJOICE"
+      ],
+      "PSALM 90:14"
+    ],
+    [
+      13,
+      20,
+      [
+        "BEFORE THE DEMANDS OF THIS",
+        "HOUR FILL OUR THOUGHTS",
+        "WE ASK FOR YOUR GRACE",
+        "TO WASH OVER US"
+      ],
+      [
+        "GRACE",
+        "WASH",
+        "OVER",
+        "US"
+      ],
+      "PSALM 90:14"
+    ],
+    [
+      20,
+      27,
+      [
+        "FILL THE EMPTY PLACES",
+        "IN OUR SOULS WITH YOUR",
+        "STEADFAST LOVE SO THAT",
+        "NO ANXIETY CAN TAKE ROOT"
+      ],
+      [
+        "STEADFAST",
+        "LOVE",
+        "NO",
+        "ANXIETY"
+      ],
+      "PSALM 90:14"
+    ],
+    [
+      27,
+      35,
+      [
+        "MAY YOUR EARLY MERCY",
+        "QUIET EVERY LINGERING FEAR",
+        "FROM YESTERDAY AND ANCHOR",
+        "OUR SPIRIT IN STEADY JOY"
+      ],
+      [
+        "QUIET",
+        "LINGERING",
+        "FEAR",
+        "STEADY",
+        "JOY"
+      ],
+      "PSALM 90:14"
+    ],
+    [
+      35,
+      43,
+      [
+        "TEACH US TO WALK THROUGH",
+        "THIS DAY WITH CONFIDENCE",
+        "KNOWING YOUR COMPASSION RENEWED US",
+        "BEFORE THE SUN REACHED ITS HEIGHT"
+      ],
+      [
+        "WALK",
+        "CONFIDENCE",
+        "COMPASSION",
+        "RENEWED"
+      ],
+      "PSALM 90:14"
+    ],
+    [
+      43,
+      48,
+      [
+        "SUBSCRIBE TO PRAY",
+        "WITH US TOMORROW"
+      ],
+      [
+        "SUBSCRIBE",
+        "PRAY",
+        "TOMORROW"
+      ],
+      "THE MORNING ALTAR"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Before you check your morning messages",
+      "kind": "phrase",
+      "words": [
+        "BEFORE",
+        "CHECK",
+        "MESSAGES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "turn your heart upward.",
+      "kind": "phrase",
+      "words": [
+        "TURN",
+        "HEART",
+        "UPWARD"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "O satisfy us early with thy mercy;",
+      "kind": "phrase",
+      "words": [
+        "SATISFY",
+        "EARLY",
+        "MERCY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "that we may rejoice and be glad all our days.",
+      "kind": "phrase",
+      "words": [
+        "REJOICE",
+        "GLAD",
+        "DAYS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "we ask for Your grace to wash over us.",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "WASH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "so that no anxiety can take root.",
+      "kind": "phrase",
+      "words": [
+        "NO",
+        "ANXIETY",
+        "ROOT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "quiet every lingering fear from yesterday",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "LINGERING",
+        "FEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "anchor our spirit in steady joy.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "STEADY",
+        "JOY"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "knowing Your compassion renewed us",
+      "kind": "phrase",
+      "words": [
+        "COMPASSION",
+        "RENEWED"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to pray with us tomorrow.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "PRAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 90:14"
+}
