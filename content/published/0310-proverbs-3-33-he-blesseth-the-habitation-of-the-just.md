@@ -2,7 +2,7 @@
 id: '0310'
 title: "Prayer to Bless Your Home and Family: Proverbs 3:33 | The Family Altar"
 slug: proverbs-3-33-he-blesseth-the-habitation-of-the-just
-status: approved
+status: published
 channel: prayer5
 privacy: public
 format: longform
@@ -74,6 +74,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-16"
+published_at: "2026-11-16T15:53:36Z"
+youtube_video_id: "u-ceoYG_2gY"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Gathering Around the Family Altar

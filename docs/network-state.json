@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T15:29:10Z",
+  "generated_at": "2026-11-16T15:54:35Z",
   "monitor_generated_at": "2026-11-16T15:15:20.743827+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 343,
-    "published_longform": 127,
-    "published_shorts": 216,
-    "public_total": 341,
-    "queued_longform": 62,
-    "queued_shorts": 82,
+    "published_total": 345,
+    "published_longform": 128,
+    "published_shorts": 217,
+    "public_total": 343,
+    "queued_longform": 61,
+    "queued_shorts": 81,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -305,33 +305,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 26,
-        "published_longform": 10,
-        "published_shorts": 16,
-        "thumbnail_pending": 26,
-        "public_total": 26,
-        "queued_longform": 6,
+        "published_total": 28,
+        "published_longform": 11,
+        "published_shorts": 17,
+        "thumbnail_pending": 28,
+        "public_total": 28,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-FAMILYACTS2V39",
-        "title": "Pray This Acts 2:39 Family Prayer Over Your Home | A Promise For Your Home #Shorts",
-        "format": "short",
-        "youtube_video_id": "XiTZBZHsI8E",
-        "watch_url": "https://www.youtube.com/shorts/XiTZBZHsI8E",
-        "published_on": "2026-11-16",
-        "published_at": "2026-11-16T11:45:51Z"
-      },
-      "next_queued_longform": {
         "id": "0310",
         "title": "Prayer to Bless Your Home and Family: Proverbs 3:33 | The Family Altar",
-        "words": 1364,
+        "format": "longform",
+        "youtube_video_id": "u-ceoYG_2gY",
+        "watch_url": "https://youtu.be/u-ceoYG_2gY",
+        "published_on": "2026-11-16",
+        "published_at": "2026-11-16T15:53:36Z"
+      },
+      "next_queued_longform": {
+        "id": "0311",
+        "title": "Believing God for Your Family: Acts 16:31-34 | The Family Altar",
+        "words": 1230,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familyluke15v20",
-        "scripture": "Luke 15:20-24",
+        "short": "short-familyphilippians4v19",
+        "scripture": "Philippians 4:19",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0310",
+      "slug": "proverbs-3-33-he-blesseth-the-habitation-of-the-just",
+      "file": "0310-proverbs-3-33-he-blesseth-the-habitation-of-the-just.md",
+      "title": "Prayer to Bless Your Home and Family: Proverbs 3:33 | The Family Altar",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T15:53:36Z",
+      "youtube_video_id": "u-ceoYG_2gY",
+      "watch_url": "https://youtu.be/u-ceoYG_2gY",
+      "youtu_be_url": "https://youtu.be/u-ceoYG_2gY",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/u-ceoYG_2gY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/u-ceoYG_2gY/hqdefault.jpg",
+      "thumb_text": "A BLESSED HOME",
+      "thumbnail_pending": true,
+      "duration_label": "~9 min",
+      "words": 1364
+    },
+    {
       "id": "SHORT-GUIDEDPROVERBS15V22",
       "slug": "short-guidedproverbs15v22-guidance-prayer",
       "file": "short-guidedproverbs15v22-guidance-prayer.md",
@@ -868,6 +892,30 @@
       "thumbnail_pending": false,
       "duration_label": "45s",
       "words": 601
+    },
+    {
+      "id": "SHORT-FAMILYLUKE15V20",
+      "slug": "short-familyluke15v20-household-prayer",
+      "file": "short-familyluke15v20-household-prayer.md",
+      "title": "Pray This Luke 15:20-24 Family Prayer Over Your Home | Back In Mercy #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T15:08:08Z",
+      "youtube_video_id": "yCoZLQraiTY",
+      "watch_url": "https://www.youtube.com/shorts/yCoZLQraiTY",
+      "youtu_be_url": "https://youtu.be/yCoZLQraiTY",
+      "shorts_url": "https://www.youtube.com/shorts/yCoZLQraiTY",
+      "studio_url": "https://studio.youtube.com/video/yCoZLQraiTY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/yCoZLQraiTY/hqdefault.jpg",
+      "thumb_text": "WHEN THEY ARE \u00b7 FAR FROM HOME",
+      "thumbnail_pending": true,
+      "duration_label": "51s",
+      "words": 661
     },
     {
       "id": "SHORT-MIDNIGHTMATTHEW18V18",
@@ -9301,19 +9349,6 @@
         "words": 1592
       },
       {
-        "id": "0310",
-        "slug": "proverbs-3-33-he-blesseth-the-habitation-of-the-just",
-        "file": "0310-proverbs-3-33-he-blesseth-the-habitation-of-the-just.md",
-        "title": "Prayer to Bless Your Home and Family: Proverbs 3:33 | The Family Altar",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1364
-      },
-      {
         "id": "0311",
         "slug": "believing-god-for-your-family-acts-16-31-34",
         "file": "0311-believing-god-for-your-family-acts-16-31-34.md",
@@ -9744,17 +9779,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-familyluke15v20",
-        "file": "0000-short-familyluke15v20.yml",
-        "companion_longform_id": "",
-        "scripture": "Luke 15:20-24",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
       {
         "short": "short-gardenrevelation4v11",
         "file": "0000-short-gardenrevelation4v11.yml",
