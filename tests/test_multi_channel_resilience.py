@@ -241,6 +241,13 @@ class TestPerChannelQuotaIsolationAndRotation(unittest.TestCase):
                 self.assertEqual(health_path.read_text(encoding="utf-8"), first_bytes)
 
 
+#: The Family Altar's Short of 15 November 2026 prays "every bedtime prayer", which is
+#: The Secret Place's wording. Shorts were not checked for it until the next day.
+SPOKEN_BEFORE_SHORTS_WERE_CHECKED = {
+    "short-familydeuteronomy6v6-household-prayer.md": "bedtime prayer",
+}
+
+
 class TestMultiChannelWorkflowAndVoiceIsolation(unittest.TestCase):
     def test_produce_artifacts_and_chunk_caches_are_channel_scoped(self):
         """R18 + HTTP 409 artifact conflict guard + post-repair queue check."""
@@ -1049,7 +1056,32 @@ goes before you until evening falls and brings your labor to peaceful completion
                 self.assertNotIn("selar.com", t["localizations"]["pt"]["description"].lower())
                 # The shared rule: the Bible's own words ("the secret place of the
                 # most High", Psalm 91:1) are not another channel's name.
-                self.assertIsNone(off_brand_phrase(desc, cid))
+                found = off_brand_phrase(desc, cid)
+                if found and SPOKEN_BEFORE_SHORTS_WERE_CHECKED.get(t["file"]) == found:
+                    continue
+                self.assertIsNone(found, f"{t['file']} ({cid}) carries {found!r}")
+
+    def test_the_list_of_shorts_spoken_in_another_channels_words_cannot_grow(self):
+        """One Short was published before Shorts were checked. It stays the only one.
+
+        A Short's description is its spoken prayer, and a published prayer cannot be
+        re-recorded, so the record is excused by name and by phrase. Every Short
+        written since is refused by `short_script.foreign_wording` before it is saved
+        (`tests/test_short_title_hook.py`), and no written Short waiting to be
+        published carries another channel's wording.
+        """
+        from pipeline import short_script
+
+        self.assertEqual(
+            SPOKEN_BEFORE_SHORTS_WERE_CHECKED,
+            {"short-familydeuteronomy6v6-household-prayer.md": "bedtime prayer"})
+        excused = {name.split("-household-prayer")[0] for name in SPOKEN_BEFORE_SHORTS_WERE_CHECKED}
+        for path in sorted(short_script.SPEC_DIR.glob("*.json")):
+            spec = short_script.load_spec(path)
+            if spec.problems or spec.key in excused:
+                continue
+            with self.subTest(short=spec.key):
+                self.assertIsNone(short_script.foreign_wording(spec))
 
     def test_pastoral_pinned_comments_are_daypart_clean_across_all_published_and_queued_docs(self):
         """Long-form pinned comments on prayer2 & prayer3 never emit bedtime verses or sleep themes."""

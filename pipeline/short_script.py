@@ -287,6 +287,34 @@ def validate_spec(data: dict, key: str | None = None,
     )
 
 
+def foreign_wording(spec: ShortSpec) -> str | None:
+    """Another channel's wording carried by this Short, or ``None``.
+
+    The long-form check (`GeminiBrain._check_channel_brand`) was never applied to
+    Shorts. On 15 November 2026 The Family Altar published a Short whose prayer
+    said "every bedtime prayer", which is The Secret Place's wording, and the
+    test that reads every published description turned `main` red the next day.
+
+    The spoken words are checked as written. The on-screen lines are checked in
+    lower case, because they are always set in capitals and a verse set in
+    capitals ("DWELL IN THE SECRET PLACE", Psalm 91:1) would otherwise read as a
+    channel's name: that mistake stopped The Covenant Shield for days.
+
+    This is asked when a Short is written, not in `validate_spec`: a Short that
+    is already published is a record and must keep loading.
+    """
+    from .channel_capabilities import off_brand_phrase
+
+    spoken = off_brand_phrase(spec.narration_text, spec.channel)
+    if spoken:
+        return spoken
+    shown = " ".join([
+        *map(str, spec.title), *map(str, spec.poster), *map(str, spec.end),
+        *[f"{scene.get('kicker', '')} {scene.get('sub', '')}" for scene in spec.scenes],
+    ]).lower()
+    return off_brand_phrase(shown, spec.channel)
+
+
 def require_valid(spec: ShortSpec) -> ShortSpec:
     if spec.problems:
         raise ShortSpecError("; ".join(spec.problems[:4]))
@@ -391,7 +419,7 @@ THE OPENING SENTENCE — a viewer decides in the first two seconds:
   per line so each word illuminates as spoken) and ALL-CAPS highlight words.
 - Every `beats[].a` anchor MUST be copied verbatim from the narration.
 - No personal names, no "narrated by", no clickbait, no promises of healing.
-"""
+{foreign_block}"""
 
 
 #: Narration length asked of the model. The validator accepts MIN_WORDS-MAX_WORDS;
@@ -487,8 +515,17 @@ def build_prompt(scripture: str, key: str = "short-psalmNN", words: int = TARGET
             "  way a person would say it to a friend. The prayer is about this day; it is\n"
             "  not a general prayer with the day's name attached.\n"
             "- Do not name a date or a year: this Short may be watched in other years.\n")
+    # Wording that belongs to the other channels. The writer is told, so a Short is
+    # not written, refused by `foreign_wording` and written again on free quota.
+    theirs = [phrase for phrase in brand.forbidden_phrases
+              if not phrase.startswith("@") and phrase == phrase.lower()]
+    foreign_block = ""
+    if theirs:
+        foreign_block = ("- These words belong to other channels. Do not use them, spoken or on\n"
+                         "  screen, unless the scripture itself says them: "
+                         + "; ".join(f'"{phrase}"' for phrase in theirs) + ".\n")
     return PROMPT.format(
-        key=key, scripture=scripture, words=words,
+        key=key, scripture=scripture, words=words, foreign_block=foreign_block,
         scripture_block=prompt_block(scripture) + occasion_block,
         floor=max(MIN_WORDS, TARGET_WORDS_RANGE[0]), ceiling=TARGET_WORDS_RANGE[1],
         hook_words=MAX_HOOK_WORDS, avoid_block=avoid_block,

@@ -1,0 +1,299 @@
+"""Measure, every day, how much the channels look made from one template.
+
+Why this exists. Three YouTube rules bear on ten channels run by one program
+(read 16 November 2026, quoted in docs/PROTECTION_AND_REVENUE_RESEARCH_2026-11-16.md):
+
+* the monetisation policy refuses channels whose "content feels interchangeable
+  from video to video" or "looks like it was made with a template";
+* the spam policy covers "coordinated networks of channels" and names
+  "using automated tools or AI to churn out high volumes of similar content
+  with minimal changes" as a reason to suspend monetisation or end a channel;
+* a termination is of the owner, not of one channel.
+
+None of them gives a number, so nothing here is "YouTube's limit". These are
+the repository's own measures of the things those rules describe, taken from
+what was actually published (`content/published/`) and written
+(`content/shorts-scripts/`), so that a drift toward sameness is seen the day it
+starts and a fix can be shown to have worked:
+
+* uploads per channel per day (the "high volumes" half);
+* how many of a channel's recent Short titles say nothing of their own after
+  the bar (the same question `short_release.hook_adds_nothing` asks when a
+  title is built);
+* titles used more than once on a channel;
+* prayer sentences, other than scripture and the closing invitation, spoken
+  on more than one channel (the "coordinated network" half).
+
+    python -m scripts.channel_protection          # table, and a step summary in Actions
+    python -m scripts.channel_protection --json   # the same as JSON
+
+It reports and never fails a run for what it finds: a figure over its mark is
+a `::warning::`, because publishing is not what is broken. A crash is not
+hidden and exits non-zero.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import re
+import sys
+from collections import Counter, defaultdict
+from dataclasses import asdict, dataclass, field
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
+PUBLISHED_DIR = ROOT / "content" / "published"
+SPEC_DIR = ROOT / "content" / "shorts-scripts"
+
+#: A channel's most recent Shorts whose titles are read.
+RECENT_TITLES = 20
+#: Fewer than this and a share means nothing yet.
+MIN_TITLES = 8
+#: The repository's own mark, not a YouTube figure: more than a quarter of the
+#: recent titles saying nothing of their own is reported.
+WEAK_TITLE_SHARE = 0.25
+#: A sentence shorter than this is too common a phrase to count as shared.
+MIN_SENTENCE_WORDS = 8
+#: Days averaged for the upload rate.
+RATE_DAYS = 7
+
+_FRONT = re.compile(r"\A---\s*\n(.*?)\n---\s*\n", re.S)
+_REFERENCE = re.compile(
+    r"\b(?:[1-3] )?[A-Z][a-z]+(?: of [A-Z][a-z]+)? \d+(?::\d+(?:[-–]\d+)?)?")
+
+
+@dataclass(frozen=True)
+class Receipt:
+    channel: str
+    title: str
+    day: str          # YYYY-MM-DD (UTC)
+    short: bool
+
+
+@dataclass
+class Row:
+    channel: str
+    name: str
+    long_last_day: int = 0
+    shorts_last_day: int = 0
+    per_day: float = 0.0
+    titles_read: int = 0
+    weak_titles: int = 0
+    repeated_titles: int = 0
+    shared_sentences: int = 0
+    notes: list[str] = field(default_factory=list)
+
+    @property
+    def weak_share(self) -> float:
+        return self.weak_titles / self.titles_read if self.titles_read else 0.0
+
+
+def _field(head: str, *names: str) -> str:
+    for name in names:
+        match = re.search(rf"^{name}:\s*[\"']?(.*?)[\"']?\s*$", head, re.M)
+        if match and match.group(1).strip():
+            return match.group(1).strip()
+    return ""
+
+
+def read_receipts(published_dir: Path | None = None) -> list[Receipt]:
+    """Every published faith video with a channel, a title and a day."""
+    from pipeline.channels import normalize_channel_id
+
+    out: list[Receipt] = []
+    folder = PUBLISHED_DIR if published_dir is None else published_dir
+    for path in sorted(folder.glob("*.md")):
+        match = _FRONT.match(path.read_text(encoding="utf-8", errors="replace"))
+        if not match:
+            continue
+        head = match.group(1)
+        if "faith" not in _field(head, "niche").lower():
+            continue
+        day = _field(head, "published_at", "published_on")[:10]
+        title = _field(head, "title")
+        if not re.fullmatch(r"\d{4}-\d\d-\d\d", day) or not title:
+            continue
+        out.append(Receipt(
+            channel=normalize_channel_id(_field(head, "channel") or None),
+            title=title, day=day,
+            short=_field(head, "format").lower() == "short" or path.name.startswith("short-"),
+        ))
+    return out
+
+
+def split_title(title: str) -> tuple[str, str]:
+    """(the reference in the title, the words after the bar) of a Short's title."""
+    body = re.sub(r"\s*#shorts\s*$", "", title, flags=re.I)
+    stem, _, hook = body.partition(" | ")
+    found = _REFERENCE.search(stem)
+    return (found.group(0) if found else ""), hook.strip()
+
+
+def _sentences(text: str) -> list[str]:
+    out = []
+    for piece in re.split(r"(?<=[.!?])\s+", str(text or "")):
+        words = re.findall(r"[a-z']+", piece.lower())
+        if len(words) >= MIN_SENTENCE_WORDS:
+            out.append(" ".join(words))
+    return out
+
+
+_BIBLE_WORDS: list[str] = []
+
+
+def _is_scripture(sentence: str) -> bool:
+    """True when the Bible has these words in this order, whatever its punctuation.
+
+    A sentence may also open with the speaker's own lead-in ("Psalm 23 says, ..."),
+    so the words after any run of up to six opening words are tried as well.
+    """
+    from pipeline import scripture_text
+
+    if not _BIBLE_WORDS:
+        _BIBLE_WORDS.append(
+            " " + " ".join(re.findall(r"[a-z']+", scripture_text._whole_text())) + " ")
+    words = sentence.split()
+    for skipped in range(0, 7):
+        rest = words[skipped:]
+        if len(rest) < MIN_SENTENCE_WORDS - 2:
+            break
+        if f" {' '.join(rest)} " in _BIBLE_WORDS[0]:
+            return True
+    return False
+
+
+def shared_sentences(spec_dir: Path | None = None) -> dict[str, list[str]]:
+    """Per channel, its own sentences that another channel's Short also speaks.
+
+    Scripture is left out (two channels may pray the same verse), and so is any
+    sentence that names a channel (each closing invitation names its own).
+    """
+    from pipeline.channel_capabilities import brand_for, known_channels
+    from pipeline.channels import normalize_channel_id
+
+    names = [brand_for(cid).display_name.lower() for cid in known_channels()]
+    spoken: dict[str, set[str]] = defaultdict(set)
+    folder = SPEC_DIR if spec_dir is None else spec_dir
+    for path in sorted(folder.glob("*.json")):
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        channel = normalize_channel_id(data.get("channel"))
+        lines = " ".join(str(c[2]) for c in (data.get("captions") or []) if len(c) == 3)
+        for sentence in _sentences(lines):
+            if any(name in sentence for name in names):
+                continue
+            spoken[sentence].add(channel)
+    out: dict[str, list[str]] = defaultdict(list)
+    for sentence, channels in spoken.items():
+        if len(channels) < 2 or _is_scripture(sentence):
+            continue
+        for channel in channels:
+            out[channel].append(sentence)
+    return out
+
+
+def measure(*, today: datetime | None = None, published_dir: Path | None = None,
+            spec_dir: Path | None = None) -> list[Row]:
+    from pipeline.channel_capabilities import brand_for, known_channels
+    from pipeline.short_release import hook_adds_nothing
+
+    now = today or datetime.now(timezone.utc)
+    last_day = (now - timedelta(days=1)).strftime("%Y-%m-%d")
+    window = {(now - timedelta(days=n)).strftime("%Y-%m-%d") for n in range(1, RATE_DAYS + 1)}
+    receipts = read_receipts(published_dir)
+    shared = shared_sentences(spec_dir)
+
+    rows: list[Row] = []
+    for channel in known_channels():
+        brand = brand_for(channel)
+        mine = [r for r in receipts if r.channel == channel]
+        row = Row(channel=channel, name=brand.display_name)
+        row.long_last_day = sum(1 for r in mine if r.day == last_day and not r.short)
+        row.shorts_last_day = sum(1 for r in mine if r.day == last_day and r.short)
+        active_days = {r.day for r in mine if r.day in window}
+        if active_days:
+            # Over the days the channel actually published, so a channel a few
+            # days old is not shown a rate diluted by days before it existed.
+            row.per_day = round(sum(1 for r in mine if r.day in window) / len(active_days), 1)
+        shorts = sorted((r for r in mine if r.short), key=lambda r: r.day)[-RECENT_TITLES:]
+        row.titles_read = len(shorts)
+        for receipt in shorts:
+            label, hook = split_title(receipt.title)
+            if not hook or hook_adds_nothing(hook, brand, label):
+                row.weak_titles += 1
+        counts = Counter(r.title for r in mine)
+        row.repeated_titles = sum(n - 1 for n in counts.values() if n > 1)
+        row.shared_sentences = len(shared.get(channel, []))
+        if row.titles_read >= MIN_TITLES and row.weak_share > WEAK_TITLE_SHARE:
+            row.notes.append(
+                f"{row.weak_titles} of its last {row.titles_read} Short titles say nothing "
+                "of their own after the bar")
+        if row.shared_sentences:
+            row.notes.append(
+                f"{row.shared_sentences} prayer sentence(s) are also spoken on another channel")
+        rows.append(row)
+    return rows
+
+
+def render(rows: list[Row]) -> str:
+    lines = [
+        "### How alike the channels look",
+        "",
+        "These are this repository's own measures of what YouTube's monetisation and "
+        "spam policies describe (videos that look made from a template; many similar "
+        "videos across linked channels). YouTube publishes no numbers for them.",
+        "",
+        "| Channel | Yesterday (long + Shorts) | Per day, last "
+        f"{RATE_DAYS} | Recent Short titles with nothing of their own | Titles used twice "
+        "| Sentences shared with another channel |",
+        "|---|---|---|---|---|---|",
+    ]
+    for row in rows:
+        lines.append(
+            f"| {row.name} | {row.long_last_day} + {row.shorts_last_day} | {row.per_day:g} "
+            f"| {row.weak_titles} of {row.titles_read} | {row.repeated_titles} "
+            f"| {row.shared_sentences} |")
+    total = sum(r.long_last_day + r.shorts_last_day for r in rows)
+    lines += ["", f"All channels together published {total} videos yesterday (UTC)."]
+    noted = [f"- **{row.name}:** {note}" for row in rows for note in row.notes]
+    if noted:
+        lines += ["", "Over the repository's own mark:", *noted]
+    return "\n".join(lines) + "\n"
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument("--json", action="store_true", help="print the rows as JSON")
+    args = parser.parse_args(argv)
+
+    rows = measure()
+    if not rows:
+        print("::error title=Channel sameness::no channel is registered", flush=True)
+        return 1
+    if args.json:
+        print(json.dumps([{**asdict(row), "weak_share": round(row.weak_share, 3)}
+                          for row in rows], indent=2))
+        return 0
+    report = render(rows)
+    print(report)
+    for row in rows:
+        for note in row.notes:
+            # A comma would end the annotation's title.
+            print(f"::warning title=Channels look alike ({row.channel})::{row.name}: {note}",
+                  flush=True)
+    summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary:
+        with open(summary, "a", encoding="utf-8") as handle:
+            handle.write(report)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

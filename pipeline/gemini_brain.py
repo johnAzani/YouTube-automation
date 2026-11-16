@@ -1373,7 +1373,7 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
         """
         from .scripture_text import quote_problems
         from .short_script import (ShortSpecError, build_prompt, parse_model_json,
-                                   require_valid, validate_spec)
+                                   foreign_wording, require_valid, validate_spec)
 
         if scripture is None:
             if longform_doc is None:
@@ -1472,6 +1472,15 @@ Output the full, raw Markdown file with frontmatter and all 6 scenes. Do not inc
                         last_error = "; ".join(misquoted[:2])
                         print(f"[gemini-brain] Short {key}: {model} misquoted {scripture} "
                               f"(attempt {attempt}): {last_error[:200]}", flush=True)
+                        continue
+                    # A Short speaks in its own channel's words, as a long-form
+                    # prayer must (`_check_channel_brand`).
+                    foreign = foreign_wording(spec)
+                    if foreign:
+                        last_error = f"carries another channel's wording: {foreign!r}"
+                        print(f"[gemini-brain] Short {key}: {model} used another "
+                              f"channel's wording {foreign!r} (attempt {attempt})",
+                              flush=True)
                         continue
                     if spec.repairs:
                         print(f"[gemini-brain] Short {key}: repaired "

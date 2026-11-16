@@ -366,9 +366,13 @@ def upload(
     if not CONFIG.allow_duplicate_uploads:
         # Search both the uploaded/truncated and authored titles in one bounded
         # traversal so a long title does not double the API quota cost.
+        # A Short whose title rule has changed is also looked for under the title
+        # it would have had before (`ShortEdition.earlier_titles`).
+        also = [doc.title] if doc.title != safe_title else []
+        also += [str(t) for t in (doc.meta.get("earlier_titles") or []) if str(t).strip()]
         existing = check_existing_channel_duplicate(
             youtube, safe_title, getattr(doc, "slug", None),
-            additional_titles=(doc.title,) if doc.title != safe_title else (),
+            additional_titles=tuple(dict.fromkeys(also)),
         )
         if existing:
             print("\n" + "=" * 70)

@@ -61,6 +61,11 @@ class ShortEdition:
     tags: list[str]
     description: str
     channel: str = "secret-place"
+    #: Titles this Short would have been uploaded under by an earlier rule. The
+    #: upload's duplicate check finds an existing video by its title, so a Short
+    #: uploaded before a title rule changed, whose record was never written, is
+    #: still found and not uploaded a second time.
+    earlier_titles: tuple[str, ...] = ()
 
 
 EDITIONS: dict[str, ShortEdition] = {
@@ -383,6 +388,86 @@ def _renderer_script_keys() -> set[str]:
     return keys | authored_keys()
 
 
+#: Characters a Short's title may have before " #Shorts" is added.
+SHORT_TITLE_LIMIT = 86
+
+#: A hook that opens with one of these is the tail of a longer line, cut off.
+_DANGLING_OPENERS = frozenset(
+    "of in for upon at to and or nor with by on from thee thy is are".split())
+_REFERENCE_IN_HOOK = re.compile(r"\d+\s*:\s*\d+")
+_ALWAYS_UPPER = frozenset({"KJV"})
+
+
+def _headline(text: str) -> str:
+    """Capitalise each word. ``str.title()`` wrote "God'S Peace" in live titles."""
+    words = []
+    for word in str(text or "").split():
+        words.append(word.upper() if word.upper() in _ALWAYS_UPPER
+                     else word[:1].upper() + word[1:].lower())
+    return " ".join(words)
+
+
+def _hook_words(text: str) -> list[str]:
+    return re.findall(r"[a-z0-9']+", str(text or "").lower().replace("\u2019", "'"))
+
+
+def hook_adds_nothing(candidate: str, brand, label: str) -> str:
+    """Why `candidate` is no use after the bar in a Short's title, or ``""``.
+
+    The words after the bar are the only part of a Short's title that can differ
+    from one Short to the next on a channel; the rest is the channel's fixed
+    wording around the reference. Until 16 November 2026 they were always the
+    last poster line. Measured on the 188 Shorts published by then, that line was
+    the channel's own name on 12 of The Secret Place's 33 and 8 of The Morning
+    Altar's 34, the reference a second time ("Say This Zechariah 4:6 Prayer at
+    Noon | Zechariah 4:6"), the kind of prayer the title had already named
+    ("... Midnight Prayer | Midnight Prayer"), or the tail of a poster line
+    ("Of Light", "Upon The Bed", "Thee Whole").
+    """
+    from .channel_capabilities import off_brand_phrase
+
+    words = _hook_words(candidate)
+    if len(words) < 2:
+        return "fewer than two words"
+    if words[0] in _DANGLING_OPENERS:
+        return "the tail of a longer line"
+    if _REFERENCE_IN_HOOK.search(candidate) or _hook_words(label) == words:
+        return "the reference again"
+    said = set(_hook_words(brand.short_title_template.format(label=label, hook="")))
+    said |= set(_hook_words(brand.display_name)) | {"prayer", "prayers", "the", "a"}
+    if all(word in said for word in words):
+        return "nothing the title has not said"
+    if off_brand_phrase(str(candidate).lower(), brand.channel_id):
+        return "another channel's wording"
+    return ""
+
+
+def title_hook(spec, brand, label: str, limit: int | None = None) -> str:
+    """The words after the bar in a Short's title.
+
+    The last poster line when it says something; otherwise the first on-screen
+    scene line that does (each is one whole line, at most 34 characters, and no
+    two Shorts share them); otherwise what the old rule gave.
+
+    With `limit`, a line that keeps the whole title within that many characters
+    is preferred: a title over the limit is cut at the bar and loses its hook.
+    """
+    poster = list(getattr(spec, "poster", None) or [])
+    last_line = poster[3] if len(poster) >= 4 and poster[3] else ""
+    candidates = [last_line]
+    candidates += [str(scene.get("sub", "")) for scene in (getattr(spec, "scenes", None) or [])
+                   if isinstance(scene, dict)]
+    good = [_headline(candidate) for candidate in candidates
+            if candidate.strip() and not hook_adds_nothing(candidate, brand, label)]
+    if limit is not None:
+        for hook in good:
+            if len(brand.short_title_template.format(label=label, hook=hook)) <= limit:
+                return hook
+    if good:
+        return good[0]
+    return _headline(last_line or "Divine Peace")
+
+
 def resolve_edition(key: str, channel_id: str | None = None) -> ShortEdition | None:
     """Return the ShortEdition for `key`, synthesizing one for authored specs.
 
@@ -423,9 +508,13 @@ def resolve_edition(key: str, channel_id: str | None = None) -> ShortEdition | N
         if getattr(spec, "scripture", "").strip()
         else (f"Psalm {spec.psalm}" if spec.psalm else key.removeprefix("short-").replace("-", " ").title())
     )
-    hook = (spec.poster[3] if len(spec.poster) >= 4 and spec.poster[3] else "Divine Peace").title()
+    hook = title_hook(spec, brand, label, limit=SHORT_TITLE_LIMIT)
     raw_title = brand.short_title_template.format(label=label, hook=hook)
-    clean_title = f"{smart_truncate_title(raw_title, 86)} #Shorts"
+    clean_title = f"{smart_truncate_title(raw_title, SHORT_TITLE_LIMIT)} #Shorts"
+    # The title this Short had until 16 November 2026 (last poster line, `str.title()`).
+    last_line = spec.poster[3] if len(spec.poster) >= 4 and spec.poster[3] else "Divine Peace"
+    before = brand.short_title_template.format(label=label, hook=last_line.title())
+    before = f"{smart_truncate_title(before, SHORT_TITLE_LIMIT)} #Shorts"
     tag_key = re.sub(r"[^a-zA-Z0-9]+", "", label)
     return ShortEdition(
         key=key,
@@ -441,6 +530,7 @@ def resolve_edition(key: str, channel_id: str | None = None) -> ShortEdition | N
             f"{brand.short_hashtags.format(tag_key=tag_key)}"
         ),
         channel=owner,
+        earlier_titles=(before,) if before != clean_title else (),
     )
 
 
@@ -671,6 +761,7 @@ def _build_script_doc(edition: ShortEdition) -> ScriptDoc:
         meta={
             "id": edition.job_id,
             "title": edition.title,
+            "earlier_titles": list(edition.earlier_titles),
             "slug": edition.slug,
             "status": "approved",
             "format": "short",
