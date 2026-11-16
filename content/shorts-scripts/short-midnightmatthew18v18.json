@@ -1,0 +1,294 @@
+{
+  "key": "short-midnightmatthew18v18",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "AUTHORITY IN PRAYER",
+    "MIDNIGHT DECREES"
+  ],
+  "poster": [
+    "THE MIDNIGHT WATCH",
+    "MATTHEW 18:18",
+    "HEAVENLY AUTHORITY",
+    "MIDNIGHT PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "deep starry night sky over mountains",
+    "glowing lantern on old wooden table",
+    "distant lighthouse beam over dark ocean",
+    "silhouette of church steeple against moon",
+    "open vintage bible in dim candle light",
+    "misty forest at midnight"
+  ],
+  "scenes": [
+    {
+      "a": "If the weight of that recurring worry keeps you pacing in the dark, listen here.",
+      "img": "short-midnightmatthew18v18-scene-01.jpg",
+      "kicker": "MATTHEW 18:18",
+      "sub": "HEAVENLY AUTHORITY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Your prayers hold a weight that shifts the spiritual atmosphere of your entire home today.",
+      "img": "short-midnightmatthew18v18-scene-02.jpg",
+      "kicker": "DIVINE DECREE",
+      "sub": "SPIRITUAL ATMOSPHERE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Verily I say unto you, Whatsoever ye shall bind on earth shall be bound in heaven: and whatsoever ye shall loose on earth shall be loosed in heaven.",
+      "img": "short-midnightmatthew18v18-scene-03.jpg",
+      "kicker": "THE WORD",
+      "sub": "ETERNAL TRUTH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, I lift up the one listening, asking that you grant them clarity and strength.",
+      "img": "short-midnightmatthew18v18-scene-04.jpg",
+      "kicker": "PRAYER",
+      "sub": "STRENGTH AND CLARITY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let them step into the authority given, closing doors to fear and opening heavens.",
+      "img": "short-midnightmatthew18v18-scene-05.jpg",
+      "kicker": "FAITH",
+      "sub": "CLOSING DOORS TO FEAR",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May your spirit rest now in the peace of knowing you are heard tonight. Amen.",
+      "img": "short-midnightmatthew18v18-scene-06.jpg",
+      "kicker": "REST",
+      "sub": "YOU ARE HEARD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If the weight of that recurring worry keeps you pacing in the dark, listen here."
+    ],
+    [
+      8,
+      16,
+      "Your prayers hold a weight that shifts the spiritual atmosphere of your entire home today."
+    ],
+    [
+      16,
+      28,
+      "Verily I say unto you, Whatsoever ye shall bind on earth shall be bound in heaven:"
+    ],
+    [
+      28,
+      38,
+      "and whatsoever ye shall loose on earth shall be loosed in heaven."
+    ],
+    [
+      38,
+      48,
+      "Lord, I lift up the one listening, asking that you grant them clarity and strength."
+    ],
+    [
+      48,
+      56,
+      "Let them step into the authority given, closing doors to fear and opening heavens."
+    ],
+    [
+      56,
+      64,
+      "May your spirit rest now in the peace of knowing you are heard tonight. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "RECURRING WORRY",
+        "PACING IN THE DARK",
+        "LISTEN HERE"
+      ],
+      [
+        "RECURRING WORRY"
+      ],
+      "MATTHEW 18:18"
+    ],
+    [
+      8,
+      16,
+      [
+        "SHIFTING THE ATMOSPHERE",
+        "PRAYERS HOLD WEIGHT",
+        "IN YOUR HOME"
+      ],
+      [
+        "SHIFTING",
+        "WEIGHT"
+      ],
+      "MATTHEW 18:18"
+    ],
+    [
+      16,
+      28,
+      [
+        "VERILY I SAY",
+        "BIND ON EARTH",
+        "BOUND IN HEAVEN"
+      ],
+      [
+        "BIND",
+        "BOUND"
+      ],
+      "MATTHEW 18:18"
+    ],
+    [
+      28,
+      38,
+      [
+        "LOOSE ON EARTH",
+        "LOOSED IN HEAVEN",
+        "ETERNAL DECREE"
+      ],
+      [
+        "LOOSE",
+        "LOOSED"
+      ],
+      "MATTHEW 18:18"
+    ],
+    [
+      38,
+      48,
+      [
+        "LORD LIFT THEM",
+        "CLARITY AND STRENGTH",
+        "DIVINE GUIDANCE"
+      ],
+      [
+        "CLARITY",
+        "STRENGTH"
+      ],
+      "MATTHEW 18:18"
+    ],
+    [
+      48,
+      56,
+      [
+        "AUTHORITY GIVEN",
+        "CLOSING FEAR",
+        "OPENING HEAVENS"
+      ],
+      [
+        "AUTHORITY",
+        "OPENING"
+      ],
+      "MATTHEW 18:18"
+    ],
+    [
+      56,
+      64,
+      [
+        "SPIRIT REST NOW",
+        "PEACE OF KNOWING",
+        "HEARD TONIGHT"
+      ],
+      [
+        "PEACE",
+        "HEARD"
+      ],
+      "MATTHEW 18:18"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the weight of that recurring worry keeps you pacing in the dark, listen here.",
+      "kind": "phrase",
+      "words": [
+        "RECURRING",
+        "WORRY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your prayers hold a weight that shifts the spiritual atmosphere of your entire home today.",
+      "kind": "phrase",
+      "words": [
+        "SHIFTING",
+        "WEIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Verily I say unto you, Whatsoever ye shall bind on earth shall be bound in heaven: and whatsoever ye shall loose on earth shall be loosed in heaven.",
+      "kind": "phrase",
+      "words": [
+        "BIND",
+        "LOOSE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, I lift up the one listening, asking that you grant them clarity and strength.",
+      "kind": "phrase",
+      "words": [
+        "CLARITY",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let them step into the authority given, closing doors to fear and opening heavens.",
+      "kind": "phrase",
+      "words": [
+        "AUTHORITY",
+        "OPENING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your spirit rest now in the peace of knowing you are heard tonight. Amen.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "HEARD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Matthew 18:18"
+}

@@ -1,0 +1,234 @@
+{
+  "key": "short-midnightjob22v28",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "DECREE YOUR PATH",
+    "IN THE MIDNIGHT HOUR"
+  ],
+  "poster": [
+    "THE MIDNIGHT WATCH",
+    "DECREE A THING",
+    "LIGHT UPON YOUR WAYS",
+    "MIDNIGHT PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "deep blue starry night sky over silhouette mountains",
+    "golden candle flame flickering in dark stone room",
+    "misty forest path at night illuminated by moonlight",
+    "open old bible on wooden table under soft lamp",
+    "glowing embers in dark fireplace",
+    "distant lighthouse beam cutting through midnight fog"
+  ],
+  "scenes": [
+    {
+      "a": "That recurring doubt haunting your thoughts right now is not the final word for you.",
+      "img": "short-midnightjob22v28-scene-01.jpg",
+      "kicker": "JOB 22:28",
+      "sub": "HEAR THIS TRUTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Your spirit knows there is power in spoken truth beneath the silence of these stars.",
+      "img": "short-midnightjob22v28-scene-02.jpg",
+      "kicker": "THE DECREE",
+      "sub": "SPEAK INTO THE DARKNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Thou shalt also decree a thing, and it shall be established unto thee: and the light shall shine upon thy ways.",
+      "img": "short-midnightjob22v28-scene-03.jpg",
+      "kicker": "HOLY SCRIPTURE",
+      "sub": "THE WORD IS SET",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Father, we stand in this quiet watch claiming the authority You have placed in us.",
+      "img": "short-midnightjob22v28-scene-04.jpg",
+      "kicker": "IN PRAYER",
+      "sub": "ALIGNED WITH HEAVEN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May every heavy burden be lifted as we align our hearts with Your eternal promise.",
+      "img": "short-midnightjob22v28-scene-05.jpg",
+      "kicker": "DIVINE LIGHT",
+      "sub": "LET IT BE ESTABLISHED",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Guide our steps through the morning and let Your peace rest upon this soul tonight.",
+      "img": "short-midnightjob22v28-scene-06.jpg",
+      "kicker": "MIDNIGHT WATCH",
+      "sub": "WALK IN RADIANCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "That recurring doubt haunting your thoughts right now is not the final word for you."
+    ],
+    [
+      13,
+      23,
+      "Your spirit knows there is power in spoken truth beneath the silence of these stars."
+    ],
+    [
+      24,
+      45,
+      "Thou shalt also decree a thing, and it shall be established unto thee: and the light shall shine upon thy ways."
+    ],
+    [
+      46,
+      62,
+      "Father, we stand in this quiet watch claiming the authority You have placed in us."
+    ],
+    [
+      63,
+      80,
+      "May every heavy burden be lifted as we align our hearts with Your eternal promise."
+    ],
+    [
+      81,
+      105,
+      "Guide our steps through the morning and let Your peace rest upon this soul tonight."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "THAT RECURRING DOUBT",
+        "HAUNTING YOUR THOUGHTS",
+        "IS NOT THE FINAL",
+        "WORD FOR YOU"
+      ],
+      [
+        "RECURRING DOUBT"
+      ],
+      "JOB 22:28"
+    ],
+    [
+      13,
+      23,
+      [
+        "POWER IN SPOKEN",
+        "TRUTH BENEATH THE",
+        "SILENCE OF THESE",
+        "STARS"
+      ],
+      [
+        "POWER",
+        "SPOKEN TRUTH"
+      ],
+      "JOB 22:28"
+    ],
+    [
+      24,
+      45,
+      [
+        "THOU SHALT DECREE",
+        "A THING AND IT",
+        "SHALL BE ESTABLISHED",
+        "LIGHT SHALL SHINE"
+      ],
+      [
+        "DECREE",
+        "ESTABLISHED",
+        "LIGHT"
+      ],
+      "JOB 22:28"
+    ],
+    [
+      46,
+      62,
+      [
+        "STAND IN THIS",
+        "QUIET WATCH CLAIMING",
+        "THE AUTHORITY YOU",
+        "PLACED IN US"
+      ],
+      [
+        "QUIET WATCH",
+        "AUTHORITY"
+      ],
+      "JOB 22:28"
+    ],
+    [
+      63,
+      80,
+      [
+        "EVERY HEAVY BURDEN",
+        "LIFTED AS WE",
+        "ALIGN OUR HEARTS",
+        "ETERNAL PROMISE"
+      ],
+      [
+        "HEAVY BURDEN",
+        "ALIGN"
+      ],
+      "JOB 22:28"
+    ],
+    [
+      81,
+      105,
+      [
+        "GUIDE OUR STEPS",
+        "AND LET YOUR",
+        "PEACE REST UPON",
+        "THIS SOUL TONIGHT"
+      ],
+      [
+        "GUIDE",
+        "PEACE",
+        "SOUL"
+      ],
+      "JOB 22:28"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Thou shalt also decree a thing, and it shall be established unto thee: and the light shall shine upon thy ways.",
+      "kind": "phrase",
+      "words": [
+        "DECREE",
+        "ESTABLISHED",
+        "LIGHT"
+      ],
+      "hi": 24,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Job 22:28"
+}

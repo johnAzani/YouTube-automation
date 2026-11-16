@@ -1,0 +1,264 @@
+{
+  "key": "short-midnightdeuteronomy28v7",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "DEUTERONOMY 28:7",
+    "THE MIDNIGHT WATCH"
+  ],
+  "poster": [
+    "THE MIDNIGHT WATCH",
+    "DEUTERONOMY 28:7",
+    "PRAYER FOR VICTORY",
+    "STAND IN FAITH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "midnight watchtower silhouette under starry sky",
+    "deep dark starry heavens with subtle northern lights",
+    "ancient stone fortress wall in moonlight",
+    "lamp-lit sanctuary vigil dark wooden desk",
+    "calm mountain lake at night reflecting stars",
+    "tranquil dark forest under glowing crescent moon"
+  ],
+  "scenes": [
+    {
+      "a": "If you lie awake tonight sensing unseen opposition closing in around your life, hear this word.",
+      "img": "short-midnightdeuteronomy28v7-scene-01.jpg",
+      "kicker": "DEUTERONOMY 28:7",
+      "sub": "UNSEEN OPPOSITION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, we come before Your throne in this quiet hour acknowledging that battles surround us on every side.",
+      "img": "short-midnightdeuteronomy28v7-scene-02.jpg",
+      "kicker": "MIDNIGHT VIGIL",
+      "sub": "THRONE OF GRACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "We stand our ground and declare Your holy truth over every adversary rising against our peace.",
+      "img": "short-midnightdeuteronomy28v7-scene-03.jpg",
+      "kicker": "HOLY TRUTH",
+      "sub": "STAND YOUR GROUND",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Your living word declares,",
+      "img": "short-midnightdeuteronomy28v7-scene-04.jpg",
+      "kicker": "THE WORD",
+      "sub": "DIVINE PROMISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The LORD shall cause thine enemies that rise up against thee to be smitten before thy face: they shall come out against thee one way, and flee before thee seven ways.",
+      "img": "short-midnightdeuteronomy28v7-scene-05.jpg",
+      "kicker": "VICTORY",
+      "sub": "ENEMIES FLEE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, let Your mighty shield scatter every darkness and grant us unshakeable peace until morning light breaks.",
+      "img": "short-midnightdeuteronomy28v7-scene-06.jpg",
+      "kicker": "MORNING LIGHT",
+      "sub": "UNSHAKEABLE PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If you lie awake tonight sensing unseen opposition closing in around your life, hear this word."
+    ],
+    [
+      9,
+      17,
+      "Father, we come before Your throne in this quiet hour acknowledging that battles surround us on every side."
+    ],
+    [
+      18,
+      25,
+      "We stand our ground and declare Your holy truth over every adversary rising against our peace."
+    ],
+    [
+      26,
+      30,
+      "Your living word declares,"
+    ],
+    [
+      31,
+      44,
+      "The LORD shall cause thine enemies that rise up against thee to be smitten before thy face: they shall come out against thee one way, and flee before thee seven ways."
+    ],
+    [
+      45,
+      54,
+      "Lord, let Your mighty shield scatter every darkness and grant us unshakeable peace until morning light breaks."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF YOU LIE AWAKE TONIGHT",
+        "SENSING UNSEEN OPPOSITION",
+        "CLOSING IN AROUND YOUR LIFE",
+        "HEAR THIS WORD"
+      ],
+      "OPPOSITION",
+      "DEUTERONOMY 28:7"
+    ],
+    [
+      9,
+      17,
+      [
+        "FATHER WE COME BEFORE",
+        "YOUR THRONE IN THIS",
+        "QUIET HOUR ACKNOWLEDGING",
+        "BATTLES SURROUND US"
+      ],
+      "THRONE",
+      "DEUTERONOMY 28:7"
+    ],
+    [
+      18,
+      25,
+      [
+        "WE STAND OUR GROUND",
+        "AND DECLARE YOUR TRUTH",
+        "OVER EVERY ADVERSARY",
+        "RISING AGAINST OUR PEACE"
+      ],
+      "TRUTH",
+      "DEUTERONOMY 28:7"
+    ],
+    [
+      26,
+      30,
+      [
+        "YOUR LIVING WORD",
+        "DECLARES"
+      ],
+      "DECLARES",
+      "DEUTERONOMY 28:7"
+    ],
+    [
+      31,
+      44,
+      [
+        "THE LORD SHALL CAUSE",
+        "THINE ENEMIES TO BE SMITTEN",
+        "BEFORE THY FACE",
+        "AND FLEE SEVEN WAYS"
+      ],
+      "SMITTEN",
+      "DEUTERONOMY 28:7"
+    ],
+    [
+      45,
+      54,
+      [
+        "LORD LET YOUR SHIELD",
+        "SCATTER EVERY DARKNESS",
+        "AND GRANT US PEACE",
+        "UNTIL MORNING LIGHT"
+      ],
+      "PEACE",
+      "DEUTERONOMY 28:7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you lie awake tonight sensing unseen opposition closing in around your life, hear this word.",
+      "kind": "phrase",
+      "words": [
+        "UNSEEN",
+        "OPPOSITION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we come before Your throne in this quiet hour acknowledging that battles surround us on every side.",
+      "kind": "phrase",
+      "words": [
+        "YOUR",
+        "THRONE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We stand our ground and declare Your holy truth over every adversary rising against our peace.",
+      "kind": "phrase",
+      "words": [
+        "HOLY",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your living word declares,",
+      "kind": "phrase",
+      "words": [
+        "LIVING",
+        "WORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The LORD shall cause thine enemies that rise up against thee to be smitten before thy face: they shall come out against thee one way, and flee before thee seven ways.",
+      "kind": "phrase",
+      "words": [
+        "SMITTEN",
+        "BEFORE",
+        "THY",
+        "FACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, let Your mighty shield scatter every darkness and grant us unshakeable peace until morning light breaks.",
+      "kind": "phrase",
+      "words": [
+        "MIGHTY",
+        "SHIELD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Deuteronomy 28:7"
+}

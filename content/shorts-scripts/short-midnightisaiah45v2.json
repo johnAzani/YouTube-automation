@@ -1,0 +1,369 @@
+{
+  "key": "short-midnightisaiah45v2",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "BREAK THROUGH THE GATES",
+    "ISAIAH 45:2-3 MIDNIGHT PRAYER"
+  ],
+  "poster": [
+    "HE GOES BEFORE YOU",
+    "GATES OF BRASS SHALL BREAK",
+    "TREASURES IN THE DARK",
+    "MIDNIGHT BREAKTHROUGH PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "midnight watchtower silhouette deep starry night sky",
+    "calm mountain lake under starry midnight sky",
+    "ancient stone archway lit by distant starlight midnight",
+    "dimly lit stone sanctuary altar candle flame midnight",
+    "deep velvet starry sky night sky over peaceful horizon",
+    "ancient iron gates lit by soft midnight moonlight",
+    "lone lantern flickering on quiet dark path night",
+    "calm dark water reflection starry night sky midnight watch"
+  ],
+  "scenes": [
+    {
+      "a": "If you are staring at an impossible decision tonight, the Lord speaks into your room.",
+      "img": "short-midnightisaiah45v2-scene-01.jpg",
+      "kicker": "MIDNIGHT VIGIL",
+      "sub": "HEAR HIS PROMISE TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "I will go before thee, and make the crooked places straight:",
+      "img": "short-midnightisaiah45v2-scene-02.jpg",
+      "kicker": "ISAIAH 45:2",
+      "sub": "HE GOES BEFORE YOU",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I will break in pieces the gates of brass, and cut in sunder the bars of iron:",
+      "img": "short-midnightisaiah45v2-scene-03.jpg",
+      "kicker": "ISAIAH 45:2",
+      "sub": "GATES OF BRASS SHALL BREAK",
+      "cam": "push_in",
+      "focus": [
+        0.48,
+        0.52
+      ]
+    },
+    {
+      "a": "And I will give thee the treasures of darkness, and hidden riches of secret places,",
+      "img": "short-midnightisaiah45v2-scene-04.jpg",
+      "kicker": "ISAIAH 45:3",
+      "sub": "TREASURES IN THE DARK",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "that thou mayest know that I, the LORD, which call thee by thy name, am the God of Israel.",
+      "img": "short-midnightisaiah45v2-scene-05.jpg",
+      "kicker": "ISAIAH 45:3",
+      "sub": "HE CALLS YOU BY NAME",
+      "cam": "pan_right",
+      "focus": [
+        0.52,
+        0.48
+      ]
+    },
+    {
+      "a": "Lord, shatter every locked gate standing against this quiet soul tonight.",
+      "img": "short-midnightisaiah45v2-scene-06.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "SHATTER EVERY OBSTACLE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Clear their path, uncover secret strength in this late hour, and remind them that You know their name.",
+      "img": "short-midnightisaiah45v2-scene-07.jpg",
+      "kicker": "MIDNIGHT PRAYER",
+      "sub": "UNCOVER SECRET STRENGTH",
+      "cam": "pan_left",
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen. Subscribe to stand with us.",
+      "img": "short-midnightisaiah45v2-scene-08.jpg",
+      "kicker": "THE MIDNIGHT WATCH",
+      "sub": "STAND IN PRAYER AT MIDNIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If you are staring at an impossible decision tonight, the Lord speaks into your room."
+    ],
+    [
+      6,
+      12,
+      "I will go before thee, and make the crooked places straight:"
+    ],
+    [
+      12,
+      18,
+      "I will break in pieces the gates of brass, and cut in sunder the bars of iron:"
+    ],
+    [
+      18,
+      25,
+      "And I will give thee the treasures of darkness, and hidden riches of secret places,"
+    ],
+    [
+      25,
+      33,
+      "that thou mayest know that I, the LORD, which call thee by thy name, am the God of Israel."
+    ],
+    [
+      33,
+      39,
+      "Lord, shatter every locked gate standing against this quiet soul tonight."
+    ],
+    [
+      39,
+      47,
+      "Clear their path, uncover secret strength in this late hour, and remind them that You know their name."
+    ],
+    [
+      47,
+      52,
+      "Amen. Subscribe to stand with us."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "STARING AT AN",
+        "IMPOSSIBLE DECISION",
+        "TONIGHT"
+      ],
+      [
+        "IMPOSSIBLE",
+        "DECISION"
+      ],
+      "THE MIDNIGHT WATCH"
+    ],
+    [
+      6,
+      12,
+      [
+        "I WILL GO",
+        "BEFORE THEE AND MAKE",
+        "CROOKED PLACES STRAIGHT"
+      ],
+      [
+        "BEFORE",
+        "THEE"
+      ],
+      "ISAIAH 45:2"
+    ],
+    [
+      12,
+      18,
+      [
+        "BREAK IN PIECES",
+        "THE GATES OF BRASS",
+        "BARS OF IRON"
+      ],
+      [
+        "GATES",
+        "OF",
+        "BRASS"
+      ],
+      "ISAIAH 45:2"
+    ],
+    [
+      18,
+      25,
+      [
+        "TREASURES OF DARKNESS",
+        "AND HIDDEN RICHES",
+        "OF SECRET PLACES"
+      ],
+      [
+        "TREASURES",
+        "OF",
+        "DARKNESS"
+      ],
+      "ISAIAH 45:3"
+    ],
+    [
+      25,
+      33,
+      [
+        "WHICH CALL THEE",
+        "BY THY NAME AM THE",
+        "GOD OF ISRAEL"
+      ],
+      [
+        "BY",
+        "THY",
+        "NAME"
+      ],
+      "ISAIAH 45:3"
+    ],
+    [
+      33,
+      39,
+      [
+        "SHATTER EVERY",
+        "LOCKED GATE STANDING",
+        "TONIGHT"
+      ],
+      [
+        "LOCKED",
+        "GATE"
+      ],
+      "MIDNIGHT PRAYER"
+    ],
+    [
+      39,
+      47,
+      [
+        "UNCOVER SECRET STRENGTH",
+        "IN THIS LATE HOUR",
+        "YOU KNOW THEIR NAME"
+      ],
+      [
+        "SECRET",
+        "STRENGTH"
+      ],
+      "MIDNIGHT PRAYER"
+    ],
+    [
+      47,
+      52,
+      [
+        "AMEN",
+        "SUBSCRIBE TO STAND",
+        "WITH US"
+      ],
+      [
+        "STAND",
+        "WITH",
+        "US"
+      ],
+      "THE MIDNIGHT WATCH"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are staring at an impossible decision tonight, the Lord speaks into your room.",
+      "kind": "phrase",
+      "words": [
+        "IMPOSSIBLE",
+        "DECISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will go before thee, and make the crooked places straight:",
+      "kind": "phrase",
+      "words": [
+        "CROOKED",
+        "PLACES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will break in pieces the gates of brass, and cut in sunder the bars of iron:",
+      "kind": "phrase",
+      "words": [
+        "GATES",
+        "OF",
+        "BRASS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And I will give thee the treasures of darkness, and hidden riches of secret places,",
+      "kind": "phrase",
+      "words": [
+        "TREASURES",
+        "OF",
+        "DARKNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "that thou mayest know that I, the LORD, which call thee by thy name, am the God of Israel.",
+      "kind": "phrase",
+      "words": [
+        "CALL",
+        "THEE",
+        "BY",
+        "NAME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, shatter every locked gate standing against this quiet soul tonight.",
+      "kind": "phrase",
+      "words": [
+        "SHATTER",
+        "EVERY",
+        "GATE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Clear their path, uncover secret strength in this late hour, and remind them that You know their name.",
+      "kind": "phrase",
+      "words": [
+        "UNCOVER",
+        "SECRET",
+        "STRENGTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen. Subscribe to stand with us.",
+      "kind": "phrase",
+      "words": [
+        "STAND",
+        "WITH",
+        "US"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 45:2-3"
+}
