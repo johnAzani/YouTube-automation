@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T23:30:42Z",
+  "generated_at": "2026-11-16T23:31:41Z",
   "monitor_generated_at": "2026-11-16T21:06:04.374364+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 360,
+    "published_total": 361,
     "published_longform": 131,
-    "published_shorts": 229,
-    "public_total": 358,
+    "published_shorts": 230,
+    "public_total": 359,
     "queued_longform": 58,
-    "queued_shorts": 69,
+    "queued_shorts": 68,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 47,
+        "published_total": 48,
         "published_longform": 18,
-        "published_shorts": 29,
+        "published_shorts": 30,
         "thumbnail_pending": 0,
-        "public_total": 47,
+        "public_total": 48,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-MIDDAYPSALM68V19",
-        "title": "Say This Psalm 68:19 Prayer at Noon | Grace In The Middle Of The Day #Shorts",
+        "id": "SHORT-MIDDAYCOLOSSIANS3V23",
+        "title": "Say This Colossians 3:23-24 Prayer at Noon | Unseen Labor #Shorts",
         "format": "short",
-        "youtube_video_id": "rhnoYOg_kfo",
-        "watch_url": "https://www.youtube.com/shorts/rhnoYOg_kfo",
+        "youtube_video_id": "jWafsSkZ_tg",
+        "watch_url": "https://www.youtube.com/shorts/jWafsSkZ_tg",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T19:54:57Z"
+        "published_at": "2026-11-16T23:30:46Z"
       },
       "next_queued_longform": {
         "id": "0093",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaycolossians3v23",
-        "scripture": "Colossians 3:23-24",
+        "short": "short-midday1corinthians15v58",
+        "scripture": "1 Corinthians 15:58",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYCOLOSSIANS3V23",
+      "slug": "short-middaycolossians3v23-midday-prayer",
+      "file": "short-middaycolossians3v23-midday-prayer.md",
+      "title": "Say This Colossians 3:23-24 Prayer at Noon | Unseen Labor #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T23:30:46Z",
+      "youtube_video_id": "jWafsSkZ_tg",
+      "watch_url": "https://www.youtube.com/shorts/jWafsSkZ_tg",
+      "youtu_be_url": "https://youtu.be/jWafsSkZ_tg",
+      "shorts_url": "https://www.youtube.com/shorts/jWafsSkZ_tg",
+      "studio_url": "https://studio.youtube.com/video/jWafsSkZ_tg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/jWafsSkZ_tg/hqdefault.jpg",
+      "thumb_text": "THE MIDDAY WATCH \u00b7 COLOSSIANS 3:23-24",
+      "thumbnail_pending": false,
+      "duration_label": "44s",
+      "words": 585
+    },
     {
       "id": "SHORT-FAMILYJOB1V10",
       "slug": "short-familyjob1v10-household-prayer",
@@ -10253,17 +10277,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-middaycolossians3v23",
-        "file": "0091-short-middaycolossians3v23.yml",
-        "companion_longform_id": "0091",
-        "scripture": "Colossians 3:23-24",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-midday1corinthians15v58",
