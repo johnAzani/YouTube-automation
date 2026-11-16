@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T15:07:47Z",
+  "generated_at": "2026-11-16T15:09:03Z",
   "monitor_generated_at": "2026-11-16T15:06:42.366665+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 335,
+    "published_total": 336,
     "published_longform": 127,
-    "published_shorts": 208,
-    "public_total": 333,
+    "published_shorts": 209,
+    "public_total": 334,
     "queued_longform": 62,
-    "queued_shorts": 90,
+    "queued_shorts": 89,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 53,
+        "published_total": 54,
         "published_longform": 17,
-        "published_shorts": 36,
+        "published_shorts": 37,
         "thumbnail_pending": 5,
-        "public_total": 52,
+        "public_total": 53,
         "queued_longform": 10,
         "queued_other": 5,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-PSALM141V2",
-        "title": "Say This Psalm 141:2 Prayer Before You Sleep | Still Your Restless Mind #Shorts",
+        "id": "SHORT-PSALM145V18",
+        "title": "Say This Psalm 145:18 Prayer Before You Sleep | He Is Near To You #Shorts",
         "format": "short",
-        "youtube_video_id": "WPM15GcPrjY",
-        "watch_url": "https://www.youtube.com/shorts/WPM15GcPrjY",
+        "youtube_video_id": "IwqUEEWVfVY",
+        "watch_url": "https://www.youtube.com/shorts/IwqUEEWVfVY",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T11:47:44Z"
+        "published_at": "2026-11-16T15:08:08Z"
       },
       "next_queued_longform": {
         "id": "0026",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm145v18",
-        "scripture": "Psalm 145:18",
+        "short": "short-psalm42v8",
+        "scripture": "Psalm 42:8",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PSALM145V18",
+      "slug": "short-psalm145v18-pre-sleep-prayer",
+      "file": "short-psalm145v18-pre-sleep-prayer.md",
+      "title": "Say This Psalm 145:18 Prayer Before You Sleep | He Is Near To You #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T15:08:08Z",
+      "youtube_video_id": "IwqUEEWVfVY",
+      "watch_url": "https://www.youtube.com/shorts/IwqUEEWVfVY",
+      "youtu_be_url": "https://youtu.be/IwqUEEWVfVY",
+      "shorts_url": "https://www.youtube.com/shorts/IwqUEEWVfVY",
+      "studio_url": "https://studio.youtube.com/video/IwqUEEWVfVY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/IwqUEEWVfVY/hqdefault.jpg",
+      "thumb_text": "THE LORD IS NEAR \u00b7 TO EVERY HEART",
+      "thumbnail_pending": false,
+      "duration_label": "45s",
+      "words": 601
+    },
     {
       "id": "0806",
       "slug": "direction-for-your-next-step-psalm-119-105",
@@ -9694,17 +9718,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-psalm145v18",
-        "file": "0000-short-psalm145v18.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 145:18",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm42v8",
