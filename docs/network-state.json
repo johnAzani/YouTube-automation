@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T07:32:54Z",
+  "generated_at": "2026-11-16T07:37:11Z",
   "monitor_generated_at": "2026-11-16T07:31:56.400014+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 315,
+    "published_total": 316,
     "published_longform": 123,
-    "published_shorts": 192,
-    "public_total": 313,
+    "published_shorts": 193,
+    "public_total": 314,
     "queued_longform": 63,
-    "queued_shorts": 98,
+    "queued_shorts": 95,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -176,7 +176,7 @@
         "public_total": 43,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
         "id": "SHORT-MIDDAY2CORINTHIANS4V16",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midday2corinthians4v16",
-        "scripture": "2 Corinthians 4:16-18",
+        "short": "short-middaypsalm118v14",
+        "scripture": "Psalm 118:14",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -244,7 +244,7 @@
         "public_total": 35,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
         "id": "SHORT-MIDNIGHTDEUTERONOMY28V7",
@@ -262,8 +262,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightdeuteronomy28v7",
-        "scripture": "Deuteronomy 28:7",
+        "short": "short-midnightjob22v28",
+        "scripture": "Job 22:28",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 19,
+        "published_total": 20,
         "published_longform": 8,
-        "published_shorts": 11,
-        "thumbnail_pending": 19,
-        "public_total": 19,
+        "published_shorts": 12,
+        "thumbnail_pending": 20,
+        "public_total": 20,
         "queued_longform": 5,
         "queued_other": 1,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "0607",
-        "title": "Abiding Under the Shadow of the Almighty: Psalm 91:1-2",
-        "format": "longform",
-        "youtube_video_id": "9yQ_qPWCthI",
-        "watch_url": "https://youtu.be/9yQ_qPWCthI",
+        "id": "SHORT-SHIELD2KINGS6V16",
+        "title": "Pray This 2 Kings 6:16-17 Prayer for Divine Protection | Refuge In God #Shorts",
+        "format": "short",
+        "youtube_video_id": "ibM7J2KLTpw",
+        "watch_url": "https://www.youtube.com/shorts/ibM7J2KLTpw",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T00:39:22Z"
+        "published_at": "2026-11-16T07:36:22Z"
       },
       "next_queued_longform": {
         "id": "0608",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shield2kings6v16",
-        "scripture": "2 Kings 6:16-17",
+        "short": "short-shieldisaiah54v17",
+        "scripture": "Isaiah 54:17",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELD2KINGS6V16",
+      "slug": "short-shield2kings6v16-protection-prayer",
+      "file": "short-shield2kings6v16-protection-prayer.md",
+      "title": "Pray This 2 Kings 6:16-17 Prayer for Divine Protection | Refuge In God #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T07:36:22Z",
+      "youtube_video_id": "ibM7J2KLTpw",
+      "watch_url": "https://www.youtube.com/shorts/ibM7J2KLTpw",
+      "youtu_be_url": "https://youtu.be/ibM7J2KLTpw",
+      "shorts_url": "https://www.youtube.com/shorts/ibM7J2KLTpw",
+      "studio_url": "https://studio.youtube.com/video/ibM7J2KLTpw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/ibM7J2KLTpw/hqdefault.jpg",
+      "thumb_text": "THE COVENANT SHIELD \u00b7 DIVINE PROTECTION",
+      "thumbnail_pending": true,
+      "duration_label": "48s",
+      "words": 624
+    },
     {
       "id": "SHORT-MIDDAY2CORINTHIANS4V16",
       "slug": "short-midday2corinthians4v16-midday-prayer",
@@ -9174,17 +9198,6 @@
         "target_window_utc": "15:44"
       },
       {
-        "short": "short-midday2corinthians4v16",
-        "file": "0000-short-midday2corinthians4v16.yml",
-        "companion_longform_id": "",
-        "scripture": "2 Corinthians 4:16-18",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
-      },
-      {
         "short": "short-middaypsalm118v14",
         "file": "0000-short-middaypsalm118v14.yml",
         "companion_longform_id": "",
@@ -9205,17 +9218,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightdeuteronomy28v7",
-        "file": "0000-short-midnightdeuteronomy28v7.yml",
-        "companion_longform_id": "",
-        "scripture": "Deuteronomy 28:7",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightjob22v28",
@@ -9370,17 +9372,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-shield2kings6v16",
-        "file": "0000-short-shield2kings6v16.yml",
-        "companion_longform_id": "",
-        "scripture": "2 Kings 6:16-17",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-psalm3v3",
