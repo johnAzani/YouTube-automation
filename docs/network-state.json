@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T23:31:53Z",
+  "generated_at": "2026-11-16T23:32:01Z",
   "monitor_generated_at": "2026-11-16T21:06:04.374364+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 362,
+    "published_total": 363,
     "published_longform": 131,
-    "published_shorts": 231,
-    "public_total": 360,
+    "published_shorts": 232,
+    "public_total": 361,
     "queued_longform": 58,
-    "queued_shorts": 67,
+    "queued_shorts": 66,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 56,
+        "published_total": 57,
         "published_longform": 18,
-        "published_shorts": 38,
+        "published_shorts": 39,
         "thumbnail_pending": 5,
-        "public_total": 55,
+        "public_total": 56,
         "queued_longform": 9,
         "queued_other": 5,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "0026",
-        "title": "Night Prayer to Quiet a Racing Mind: Isaiah 26:3-4 | The Secret Place",
-        "format": "longform",
-        "youtube_video_id": "t00bsmMtC-s",
-        "watch_url": "https://youtu.be/t00bsmMtC-s",
+        "id": "SHORT-PSALM4V4",
+        "title": "Say This Psalm 4:4 Prayer Before You Sleep | Commune With Your Heart #Shorts",
+        "format": "short",
+        "youtube_video_id": "fsnBaSiXhHY",
+        "watch_url": "https://www.youtube.com/shorts/fsnBaSiXhHY",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T20:38:40Z"
+        "published_at": "2026-11-16T23:31:05Z"
       },
       "next_queued_longform": {
         "id": "0027",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm4v4",
-        "scripture": "Psalm 4:4",
+        "short": "short-psalm94v19",
+        "scripture": "Psalm 94:19",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -724,6 +724,30 @@
       "thumbnail_pending": false,
       "duration_label": "52s",
       "words": 606
+    },
+    {
+      "id": "SHORT-PSALM4V4",
+      "slug": "short-psalm4v4-pre-sleep-prayer",
+      "file": "short-psalm4v4-pre-sleep-prayer.md",
+      "title": "Say This Psalm 4:4 Prayer Before You Sleep | Commune With Your Heart #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T23:31:05Z",
+      "youtube_video_id": "fsnBaSiXhHY",
+      "watch_url": "https://www.youtube.com/shorts/fsnBaSiXhHY",
+      "youtu_be_url": "https://youtu.be/fsnBaSiXhHY",
+      "shorts_url": "https://www.youtube.com/shorts/fsnBaSiXhHY",
+      "studio_url": "https://studio.youtube.com/video/fsnBaSiXhHY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/fsnBaSiXhHY/hqdefault.jpg",
+      "thumb_text": "COMMUNE WITH \u00b7 YOUR HEART",
+      "thumbnail_pending": false,
+      "duration_label": "54s",
+      "words": 625
     },
     {
       "id": "SHORT-MIDDAYCOLOSSIANS3V23",
@@ -10148,17 +10172,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-psalm4v4",
-        "file": "0000-short-psalm4v4.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 4:4",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
-      },
       {
         "short": "short-psalm94v19",
         "file": "0000-short-psalm94v19.yml",
