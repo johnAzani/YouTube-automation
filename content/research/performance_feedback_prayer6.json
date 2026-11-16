@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-15T09:22:06.388035+00:00",
-  "as_of": "2026-11-15",
+  "generated_at": "2026-11-16T06:57:18.176304+00:00",
+  "as_of": "2026-11-16",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 9,
+  "total_longform_videos": 10,
   "input_diagnostics": {
-    "snapshot_video_ids": 20,
-    "receipt_video_ids": 20,
-    "matched_video_ids": 20,
-    "longform_below_view_threshold": 9,
+    "snapshot_video_ids": 25,
+    "receipt_video_ids": 25,
+    "matched_video_ids": 25,
+    "longform_below_view_threshold": 10,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 5,
+    "longform_too_young_or_undated": 3,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
@@ -18,7 +18,7 @@
   "themes": [
     {
       "theme": "anxiety_peace",
-      "videos": 1,
+      "videos": 2,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -58,50 +58,68 @@
     }
   ],
   "shorts": {
-    "measured_shorts": 5,
-    "total_shorts": 11,
-    "sufficient_data": false,
-    "avg_views": 23.6,
-    "median_views": 4,
-    "total_views": 118,
+    "measured_shorts": 9,
+    "total_shorts": 15,
+    "sufficient_data": true,
+    "avg_views": 57.6,
+    "median_views": 43,
+    "total_views": 518,
     "minimum_age_days": 2,
     "by_book": {
+      "1 peter": {
+        "shorts": 1,
+        "avg_views": 93.0,
+        "ratio": 1.205
+      },
       "exodus": {
         "shorts": 1,
-        "avg_views": 68.0,
-        "ratio": 1.627
+        "avg_views": 70.0,
+        "ratio": 1.072
       },
       "isaiah": {
         "shorts": 1,
         "avg_views": 4.0,
-        "ratio": 0.723
+        "ratio": 0.69
       },
       "jeremiah": {
+        "shorts": 2,
+        "avg_views": 47.0,
+        "ratio": 0.908
+      },
+      "john": {
+        "shorts": 1,
+        "avg_views": 211.0,
+        "ratio": 1.889
+      },
+      "philippians": {
         "shorts": 1,
         "avg_views": 42.0,
-        "ratio": 1.26
+        "ratio": 0.91
       },
       "psalm": {
         "shorts": 2,
         "avg_views": 2.0,
-        "ratio": 0.542
+        "ratio": 0.517
       }
     },
     "by_theme": {
-      "midday_strength_endurance": {
+      "anxiety_peace": {
         "shorts": 1,
-        "avg_views": 4.0,
-        "ratio": 0.723
+        "avg_views": 42.0,
+        "ratio": 0.91
+      },
+      "midday_strength_endurance": {
+        "shorts": 2,
+        "avg_views": 27.5,
+        "ratio": 0.739
       },
       "peace_rest": {
-        "shorts": 4,
-        "avg_views": 28.5,
-        "ratio": 1.138
+        "shorts": 6,
+        "avg_views": 70.2,
+        "ratio": 1.164
       }
     },
-    "guidance": [
-      "Shorts: 5 measured (need 6, each at least 2 days old); the network's pooled numbers order this channel's Shorts until it has its own."
-    ]
+    "guidance": []
   },
   "guidance": [
     "Only 0 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real."
