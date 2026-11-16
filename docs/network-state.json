@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T19:55:42Z",
+  "generated_at": "2026-11-16T19:56:15Z",
   "monitor_generated_at": "2026-11-16T19:43:50.002042+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 350,
+    "published_total": 351,
     "published_longform": 129,
-    "published_shorts": 221,
-    "public_total": 348,
+    "published_shorts": 222,
+    "public_total": 349,
     "queued_longform": 60,
-    "queued_shorts": 77,
+    "queued_shorts": 76,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -305,23 +305,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 28,
+        "published_total": 29,
         "published_longform": 11,
-        "published_shorts": 17,
-        "thumbnail_pending": 28,
-        "public_total": 28,
+        "published_shorts": 18,
+        "thumbnail_pending": 29,
+        "public_total": 29,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "0310",
-        "title": "Prayer to Bless Your Home and Family: Proverbs 3:33 | The Family Altar",
-        "format": "longform",
-        "youtube_video_id": "u-ceoYG_2gY",
-        "watch_url": "https://youtu.be/u-ceoYG_2gY",
+        "id": "SHORT-FAMILYPHILIPPIANS4V19",
+        "title": "Pray This Philippians 4:19 Family Prayer Over Your Home | Gather Your Home In Faith #Shorts",
+        "format": "short",
+        "youtube_video_id": "ViZiIZVSZo0",
+        "watch_url": "https://www.youtube.com/shorts/ViZiIZVSZo0",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T15:53:36Z"
+        "published_at": "2026-11-16T19:55:27Z"
       },
       "next_queued_longform": {
         "id": "0311",
@@ -330,8 +330,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familyphilippians4v19",
-        "scripture": "Philippians 4:19",
+        "short": "short-familyjob1v10",
+        "scripture": "Job 1:10",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILYPHILIPPIANS4V19",
+      "slug": "short-familyphilippians4v19-household-prayer",
+      "file": "short-familyphilippians4v19-household-prayer.md",
+      "title": "Pray This Philippians 4:19 Family Prayer Over Your Home | Gather Your Home In Faith #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T19:55:27Z",
+      "youtube_video_id": "ViZiIZVSZo0",
+      "watch_url": "https://www.youtube.com/shorts/ViZiIZVSZo0",
+      "youtu_be_url": "https://youtu.be/ViZiIZVSZo0",
+      "shorts_url": "https://www.youtube.com/shorts/ViZiIZVSZo0",
+      "studio_url": "https://studio.youtube.com/video/ViZiIZVSZo0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/ViZiIZVSZo0/hqdefault.jpg",
+      "thumb_text": "HOUSEHOLD PRAYER \u00b7 PHILIPPIANS 4:19",
+      "thumbnail_pending": true,
+      "duration_label": "61s",
+      "words": 675
+    },
     {
       "id": "SHORT-MIDDAYPSALM68V19",
       "slug": "short-middaypsalm68v19-midday-prayer",
@@ -10226,17 +10250,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-familyphilippians4v19",
-        "file": "0308-short-familyphilippians4v19.yml",
-        "companion_longform_id": "0308",
-        "scripture": "Philippians 4:19",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
       },
       {
         "short": "short-familyjob1v10",
