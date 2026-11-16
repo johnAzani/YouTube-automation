@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T23:32:01Z",
+  "generated_at": "2026-11-16T23:37:36Z",
   "monitor_generated_at": "2026-11-16T21:06:04.374364+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 363,
+    "published_total": 364,
     "published_longform": 131,
-    "published_shorts": 232,
-    "public_total": 361,
+    "published_shorts": 233,
+    "public_total": 362,
     "queued_longform": 58,
-    "queued_shorts": 66,
+    "queued_shorts": 65,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 22,
+        "published_total": 23,
         "published_longform": 7,
-        "published_shorts": 15,
-        "thumbnail_pending": 22,
-        "public_total": 22,
+        "published_shorts": 16,
+        "thumbnail_pending": 23,
+        "public_total": 23,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-GARDENREVELATION4V11",
-        "title": "Pray This Revelation 4:11 Prayer of Thanksgiving | Thou Art Worthy #Shorts",
+        "id": "SHORT-GARDENPSALM34V1",
+        "title": "Pray This Psalm 34:1-3 Prayer of Thanksgiving | Your Heart #Shorts",
         "format": "short",
-        "youtube_video_id": "d12CG3_wlhE",
-        "watch_url": "https://www.youtube.com/shorts/d12CG3_wlhE",
+        "youtube_video_id": "N1Xn0AZfo4s",
+        "watch_url": "https://www.youtube.com/shorts/N1Xn0AZfo4s",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T20:05:21Z"
+        "published_at": "2026-11-16T23:36:50Z"
       },
       "next_queued_longform": {
         "id": "0707",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm34v1",
-        "scripture": "Psalm 34:1-3",
+        "short": "short-gardenpsalm150v6",
+        "scripture": "Psalm 150:6",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM34V1",
+      "slug": "short-gardenpsalm34v1-thanksgiving-prayer",
+      "file": "short-gardenpsalm34v1-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 34:1-3 Prayer of Thanksgiving | Your Heart #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T23:36:50Z",
+      "youtube_video_id": "N1Xn0AZfo4s",
+      "watch_url": "https://www.youtube.com/shorts/N1Xn0AZfo4s",
+      "youtu_be_url": "https://youtu.be/N1Xn0AZfo4s",
+      "shorts_url": "https://www.youtube.com/shorts/N1Xn0AZfo4s",
+      "studio_url": "https://studio.youtube.com/video/N1Xn0AZfo4s/edit",
+      "thumb_url": "https://i.ytimg.com/vi/N1Xn0AZfo4s/hqdefault.jpg",
+      "thumb_text": "GIVE THANKS \u00b7 TO THE LORD",
+      "thumbnail_pending": true,
+      "duration_label": "44s",
+      "words": 619
+    },
     {
       "id": "SHORT-MORNINGPSALM90V14",
       "slug": "short-morningpsalm90v14-sunrise-prayer",
@@ -10743,17 +10767,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "08:44"
-      },
-      {
-        "short": "short-gardenpsalm34v1",
-        "file": "0706-short-gardenpsalm34v1.yml",
-        "companion_longform_id": "0706",
-        "scripture": "Psalm 34:1-3",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
       },
       {
         "short": "short-gardenpsalm150v6",
