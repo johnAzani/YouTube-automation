@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T20:10:58Z",
+  "generated_at": "2026-11-16T20:39:24Z",
   "monitor_generated_at": "2026-11-16T19:43:50.002042+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 355,
-    "published_longform": 129,
-    "published_shorts": 226,
-    "public_total": 353,
-    "queued_longform": 60,
-    "queued_shorts": 72,
+    "published_total": 357,
+    "published_longform": 130,
+    "published_shorts": 227,
+    "public_total": 355,
+    "queued_longform": 59,
+    "queued_shorts": 71,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -33,33 +33,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 54,
-        "published_longform": 17,
-        "published_shorts": 37,
+        "published_total": 56,
+        "published_longform": 18,
+        "published_shorts": 38,
         "thumbnail_pending": 5,
-        "public_total": 53,
-        "queued_longform": 10,
+        "public_total": 55,
+        "queued_longform": 9,
         "queued_other": 5,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-PSALM145V18",
-        "title": "Say This Psalm 145:18 Prayer Before You Sleep | He Is Near To You #Shorts",
-        "format": "short",
-        "youtube_video_id": "IwqUEEWVfVY",
-        "watch_url": "https://www.youtube.com/shorts/IwqUEEWVfVY",
-        "published_on": "2026-11-16",
-        "published_at": "2026-11-16T15:08:08Z"
-      },
-      "next_queued_longform": {
         "id": "0026",
         "title": "Night Prayer to Quiet a Racing Mind: Isaiah 26:3-4 | The Secret Place",
-        "words": 1029,
+        "format": "longform",
+        "youtube_video_id": "t00bsmMtC-s",
+        "watch_url": "https://youtu.be/t00bsmMtC-s",
+        "published_on": "2026-11-16",
+        "published_at": "2026-11-16T20:38:40Z"
+      },
+      "next_queued_longform": {
+        "id": "0027",
+        "title": "Night Prayer When You Feel Afraid: Isaiah 41:10 | The Secret Place",
+        "words": 883,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm42v8",
-        "scripture": "Psalm 42:8",
+        "short": "short-psalm4v4",
+        "scripture": "Psalm 4:4",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0026",
+      "slug": "isaiah-26-3-4-kept-in-perfect-peace",
+      "file": "0026-isaiah-26-3-4-kept-in-perfect-peace.md",
+      "title": "Night Prayer to Quiet a Racing Mind: Isaiah 26:3-4 | The Secret Place",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T20:38:40Z",
+      "youtube_video_id": "t00bsmMtC-s",
+      "watch_url": "https://youtu.be/t00bsmMtC-s",
+      "youtu_be_url": "https://youtu.be/t00bsmMtC-s",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/t00bsmMtC-s/edit",
+      "thumb_url": "https://i.ytimg.com/vi/t00bsmMtC-s/hqdefault.jpg",
+      "thumb_text": "KEPT IN PERFECT PEACE",
+      "thumbnail_pending": false,
+      "duration_label": "187m 58s",
+      "words": 1029
+    },
+    {
       "id": "SHORT-GUIDEDPSALM32V8",
       "slug": "short-guidedpsalm32v8-guidance-prayer",
       "file": "short-guidedpsalm32v8-guidance-prayer.md",
@@ -891,6 +915,30 @@
       "thumb_text": "THOUGH I WALK \u00b7 IN MIDST OF TROUBLE",
       "thumbnail_pending": true,
       "duration_label": "59s",
+      "words": 611
+    },
+    {
+      "id": "SHORT-PSALM42V8",
+      "slug": "short-psalm42v8-pre-sleep-prayer",
+      "file": "short-psalm42v8-pre-sleep-prayer.md",
+      "title": "Say This Psalm 42:8 Prayer Before You Sleep | He Is With You #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T19:52:20Z",
+      "youtube_video_id": "D4SsfbWpMK4",
+      "watch_url": "https://www.youtube.com/shorts/D4SsfbWpMK4",
+      "youtu_be_url": "https://youtu.be/D4SsfbWpMK4",
+      "shorts_url": "https://www.youtube.com/shorts/D4SsfbWpMK4",
+      "studio_url": "https://studio.youtube.com/video/D4SsfbWpMK4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/D4SsfbWpMK4/hqdefault.jpg",
+      "thumb_text": "HIS SONG \u00b7 IN THE",
+      "thumbnail_pending": false,
+      "duration_label": "44s",
       "words": 611
     },
     {
@@ -9225,19 +9273,6 @@
   "queues": {
     "longform": [
       {
-        "id": "0026",
-        "slug": "isaiah-26-3-4-kept-in-perfect-peace",
-        "file": "0026-isaiah-26-3-4-kept-in-perfect-peace.md",
-        "title": "Night Prayer to Quiet a Racing Mind: Isaiah 26:3-4 | The Secret Place",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1029
-      },
-      {
         "id": "0027",
         "slug": "isaiah-41-10-upholding-you-with-his-right-hand",
         "file": "0027-isaiah-41-10-upholding-you-with-his-right-hand.md",
@@ -10027,17 +10062,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-psalm42v8",
-        "file": "0000-short-psalm42v8.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 42:8",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm4v4",

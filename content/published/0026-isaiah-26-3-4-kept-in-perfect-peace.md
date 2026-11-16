@@ -2,7 +2,7 @@
 id: '0026'
 title: "Night Prayer to Quiet a Racing Mind: Isaiah 26:3-4 | The Secret Place"
 slug: isaiah-26-3-4-kept-in-perfect-peace
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -85,6 +85,15 @@ originality:
   ai_disclosure: false
 seo_hook: Pray this Isaiah 26:3-4 KJV night prayer before sleep to anchor your mind on the Lord and rest in His perfect, unbroken peace.
 category_id: '22'
+published_on: "2026-11-16"
+published_at: "2026-11-16T20:38:40Z"
+youtube_video_id: "t00bsmMtC-s"
+metadata_revision: "selar-seo-v1"
+prayer_seconds: 478.1
+duration_seconds: 11278.5
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Thou Wilt Keep Him in Perfect Peace (Verse 3a)
