@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T12:39:20Z",
+  "generated_at": "2026-11-16T12:46:17Z",
   "monitor_generated_at": "2026-11-16T12:04:29.610741+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 333,
-    "published_longform": 126,
-    "published_shorts": 207,
-    "public_total": 331,
-    "queued_longform": 63,
-    "queued_shorts": 91,
+    "published_total": 335,
+    "published_longform": 127,
+    "published_shorts": 208,
+    "public_total": 333,
+    "queued_longform": 62,
+    "queued_shorts": 90,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -645,33 +645,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 16,
-        "published_longform": 6,
-        "published_shorts": 10,
+        "published_total": 18,
+        "published_longform": 7,
+        "published_shorts": 11,
         "thumbnail_pending": 12,
-        "public_total": 16,
-        "queued_longform": 6,
+        "public_total": 18,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDPSALM25V4",
-        "title": "Pray This Psalm 25:4-5 Prayer for God's Guidance | Find Your Path #Shorts",
-        "format": "short",
-        "youtube_video_id": "SPe9-8AgZ30",
-        "watch_url": "https://www.youtube.com/shorts/SPe9-8AgZ30",
-        "published_on": "2026-11-16",
-        "published_at": "2026-11-16T07:43:28Z"
-      },
-      "next_queued_longform": {
         "id": "0806",
         "title": "When You Need Direction for Your Next Step: Psalm 119:105",
-        "words": 1137,
+        "format": "longform",
+        "youtube_video_id": "8PkGlim_jOE",
+        "watch_url": "https://youtu.be/8PkGlim_jOE",
+        "published_on": "2026-11-16",
+        "published_at": "2026-11-16T12:45:28Z"
+      },
+      "next_queued_longform": {
+        "id": "0807",
+        "title": "When Your Plans Fall Short: Proverbs 16:9 | The Guided Path",
+        "words": 1344,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedjames4v13",
-        "scripture": "James 4:13-15",
+        "short": "short-guidedproverbs15v22",
+        "scripture": "Proverbs 15:22",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0806",
+      "slug": "direction-for-your-next-step-psalm-119-105",
+      "file": "0806-direction-for-your-next-step-psalm-119-105.md",
+      "title": "When You Need Direction for Your Next Step: Psalm 119:105",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T12:45:28Z",
+      "youtube_video_id": "8PkGlim_jOE",
+      "watch_url": "https://youtu.be/8PkGlim_jOE",
+      "youtu_be_url": "https://youtu.be/8PkGlim_jOE",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/8PkGlim_jOE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/8PkGlim_jOE/hqdefault.jpg",
+      "thumb_text": "HIS WORD GUIDES",
+      "thumbnail_pending": false,
+      "duration_label": "~8 min",
+      "words": 1137
+    },
     {
       "id": "0511",
       "slug": "favour-that-surrounds-you-like-a-shield-psalm-5-12",
@@ -748,6 +772,30 @@
       "thumbnail_pending": true,
       "duration_label": "64s",
       "words": 642
+    },
+    {
+      "id": "SHORT-GUIDEDJAMES4V13",
+      "slug": "short-guidedjames4v13-guidance-prayer",
+      "file": "short-guidedjames4v13-guidance-prayer.md",
+      "title": "Pray This James 4:13-15 Prayer for God's Guidance | Seek God's Guidance #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T11:56:52Z",
+      "youtube_video_id": "CfYHSgROdrU",
+      "watch_url": "https://www.youtube.com/shorts/CfYHSgROdrU",
+      "youtu_be_url": "https://youtu.be/CfYHSgROdrU",
+      "shorts_url": "https://www.youtube.com/shorts/CfYHSgROdrU",
+      "studio_url": "https://studio.youtube.com/video/CfYHSgROdrU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/CfYHSgROdrU/hqdefault.jpg",
+      "thumb_text": "THE GUIDED PATH \u00b7 KJV WISDOM",
+      "thumbnail_pending": false,
+      "duration_label": "48s",
+      "words": 608
     },
     {
       "id": "SHORT-GARDENPSALM22V3",
@@ -9438,19 +9486,6 @@
         "words": 1726
       },
       {
-        "id": "0806",
-        "slug": "direction-for-your-next-step-psalm-119-105",
-        "file": "0806-direction-for-your-next-step-psalm-119-105.md",
-        "title": "When You Need Direction for Your Next Step: Psalm 119:105",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1137
-      },
-      {
         "id": "0807",
         "slug": "when-your-plans-fall-short-proverbs-16-9",
         "file": "0807-when-your-plans-fall-short-proverbs-16-9.md",
@@ -9549,17 +9584,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-guidedjames4v13",
-        "file": "0000-short-guidedjames4v13.yml",
-        "companion_longform_id": "",
-        "scripture": "James 4:13-15",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
       },
       {
         "short": "short-healingmatthew8v17",
