@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=el"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE COVENANT SHIELD", "DIVINE PROTECTION", "STRONG TOWER", "REFUGE IN GOD"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-23T08:06:47Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If unexpected trouble has surrounded your peace in this very hour, stay right here. Lord God Almighty, open our eyes to see Your unseen armies defending us today. And he answered, Fear not: for they that be with us are more than they that be with them. We rest beneath Your mighty covering, trusting Your holy word in every trial. And Elisha prayed, and said, LORD, I pray thee, open his eyes, that he may see. And the LORD opened the eyes of the young man; and he saw: and, behold, the mountain was full of horses and chariots of fire round about Elisha.
