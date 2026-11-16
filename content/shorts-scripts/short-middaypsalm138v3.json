@@ -1,0 +1,301 @@
+{
+  "key": "short-middaypsalm138v3",
+  "channel": "prayer3",
+  "psalm": 138,
+  "title": [
+    "MIDDAY STRENGTH",
+    "PSALM 138:3"
+  ],
+  "poster": [
+    "THE MIDDAY WATCH",
+    "A QUIET PLACE",
+    "TO PRAY",
+    "AT NOON"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "bright midday sun shining through a quiet window",
+    "sunlight on an empty wooden desk at noon",
+    "high noon light over green fields and hills",
+    "warm midday light on stone walls",
+    "bright noon sun filtering through trees",
+    "peaceful noon light over calm water",
+    "midday sun casting long shadows indoors"
+  ],
+  "scenes": [
+    {
+      "a": "That sudden phone notification you are dreading right now does not have the final word over your peace.",
+      "img": "short-middaypsalm138v3-scene-01.jpg",
+      "kicker": "PSALM 138:3",
+      "sub": "FIND STRENGTH TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord, when the demands of this afternoon pile higher than my energy can reach, meet me right here.",
+      "img": "short-middaypsalm138v3-scene-02.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In the day when I cried thou answeredst me, and strengthenedst me with strength in my soul.",
+      "img": "short-middaypsalm138v3-scene-03.jpg",
+      "kicker": "GOD'S PROMISE",
+      "sub": "HIS WORD IS TRUE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Father, renew the weary places inside my mind and steady my hands for the hours still ahead.",
+      "img": "short-middaypsalm138v3-scene-04.jpg",
+      "kicker": "RENEWAL",
+      "sub": "SEEK HIS FACE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Pour your quiet confidence into this room, pushing back every anxious thought that tries to settle here.",
+      "img": "short-middaypsalm138v3-scene-05.jpg",
+      "kicker": "PEACE",
+      "sub": "REST YOUR HEART",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Let your steadfast grace carry me through the rest of this day with quiet trust and steady hope.",
+      "img": "short-middaypsalm138v3-scene-06.jpg",
+      "kicker": "GRACE",
+      "sub": "WALK IN HOPE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "In Jesus name, amen.",
+      "img": "short-middaypsalm138v3-scene-07.jpg",
+      "kicker": "AMEN",
+      "sub": "PAUSE AND PRAY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "That sudden phone notification you are dreading right now does not have the final word over your peace."
+    ],
+    [
+      12,
+      25,
+      "Lord, when the demands of this afternoon pile higher than my energy can reach, meet me right here."
+    ],
+    [
+      25,
+      39,
+      "In the day when I cried thou answeredst me, and strengthenedst me with strength in my soul."
+    ],
+    [
+      39,
+      52,
+      "Father, renew the weary places inside my mind and steady my hands for the hours still ahead."
+    ],
+    [
+      52,
+      65,
+      "Pour your quiet confidence into this room, pushing back every anxious thought that tries to settle here."
+    ],
+    [
+      65,
+      78,
+      "Let your steadfast grace carry me through the rest of this day with quiet trust and steady hope."
+    ],
+    [
+      78,
+      90,
+      "In Jesus name, amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "THAT SUDDEN PHONE NOTIFICATION",
+        "YOU ARE DREADING RIGHT NOW",
+        "DOES NOT HAVE THE FINAL",
+        "WORD OVER YOUR PEACE"
+      ],
+      "PEACE",
+      "PSALM 138:3"
+    ],
+    [
+      12,
+      25,
+      [
+        "LORD WHEN THE DEMANDS",
+        "OF THIS AFTERNOON PILE",
+        "HIGHER THAN MY ENERGY",
+        "CAN REACH MEET ME HERE"
+      ],
+      "HERE",
+      "PSALM 138:3"
+    ],
+    [
+      25,
+      39,
+      [
+        "IN THE DAY WHEN I CRIED",
+        "THOU ANSWEREDST ME AND",
+        "STRENGTHENDST ME WITH",
+        "STRENGTH IN MY SOUL"
+      ],
+      "SOUL",
+      "PSALM 138:3"
+    ],
+    [
+      39,
+      52,
+      [
+        "FATHER RENEW THE WEARY",
+        "PLACES INSIDE MY MIND",
+        "AND STEADY MY HANDS",
+        "FOR THE HOURS AHEAD"
+      ],
+      "AHEAD",
+      "PSALM 138:3"
+    ],
+    [
+      52,
+      65,
+      [
+        "POUR YOUR QUIET CONFIDENCE",
+        "INTO THIS ROOM PUSHING",
+        "BACK EVERY ANXIOUS THOUGHT",
+        "THAT TRIES TO SETTLE"
+      ],
+      "SETTLE",
+      "PSALM 138:3"
+    ],
+    [
+      65,
+      78,
+      [
+        "LET YOUR STEADFAST GRACE",
+        "CARRY ME THROUGH THIS DAY",
+        "WITH QUIET TRUST AND",
+        "STEADY HOPE"
+      ],
+      "HOPE",
+      "PSALM 138:3"
+    ],
+    [
+      78,
+      90,
+      [
+        "IN JESUS NAME",
+        "AMEN"
+      ],
+      "AMEN",
+      "PSALM 138:3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That sudden phone notification you are dreading right now does not have the final word over your peace.",
+      "kind": "phrase",
+      "words": [
+        "DREADING",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when the demands of this afternoon pile higher than my energy can reach, meet me right here.",
+      "kind": "phrase",
+      "words": [
+        "AFTERNOON",
+        "HERE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In the day when I cried thou answeredst me, and strengthenedst me with strength in my soul.",
+      "kind": "phrase",
+      "words": [
+        "ANSWEREDST",
+        "SOUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, renew the weary places inside my mind and steady my hands for the hours still ahead.",
+      "kind": "phrase",
+      "words": [
+        "RENEW",
+        "STEADY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Pour your quiet confidence into this room, pushing back every anxious thought that tries to settle here.",
+      "kind": "phrase",
+      "words": [
+        "CONFIDENCE",
+        "SETTLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let your steadfast grace carry me through the rest of this day with quiet trust and steady hope.",
+      "kind": "phrase",
+      "words": [
+        "STEADFAST",
+        "HOPE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In Jesus name, amen.",
+      "kind": "phrase",
+      "words": [
+        "JESUS",
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 138:3"
+}
