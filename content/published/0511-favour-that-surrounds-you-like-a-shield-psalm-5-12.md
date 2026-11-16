@@ -2,7 +2,7 @@
 id: '0511'
 title: 'Favour That Surrounds You Like a Shield: Psalm 5:12'
 slug: favour-that-surrounds-you-like-a-shield-psalm-5-12
-status: approved
+status: published
 channel: prayer7
 privacy: public
 format: longform
@@ -75,6 +75,13 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-16"
+published_at: "2026-11-16T12:38:25Z"
+youtube_video_id: "TPVAnxrcsmg"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — The Table Prepared in the Presence of Daily Toil

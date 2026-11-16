@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T12:05:44Z",
+  "generated_at": "2026-11-16T12:39:20Z",
   "monitor_generated_at": "2026-11-16T12:04:29.610741+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 331,
-    "published_longform": 125,
-    "published_shorts": 206,
-    "public_total": 329,
-    "queued_longform": 64,
-    "queued_shorts": 92,
+    "published_total": 333,
+    "published_longform": 126,
+    "published_shorts": 207,
+    "public_total": 331,
+    "queued_longform": 63,
+    "queued_shorts": 91,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -441,33 +441,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 27,
-        "published_longform": 11,
-        "published_shorts": 16,
-        "thumbnail_pending": 5,
-        "public_total": 27,
-        "queued_longform": 6,
+        "published_total": 29,
+        "published_longform": 12,
+        "published_shorts": 17,
+        "thumbnail_pending": 6,
+        "public_total": 29,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONDEUTERONOMY28V8",
-        "title": "Pray This Deuteronomy 28:8 Prayer for Open Doors & Provision | God Sees Every Need #Shorts",
-        "format": "short",
-        "youtube_video_id": "N1aimuj-HYo",
-        "watch_url": "https://www.youtube.com/shorts/N1aimuj-HYo",
-        "published_on": "2026-11-16",
-        "published_at": "2026-11-16T07:38:40Z"
-      },
-      "next_queued_longform": {
         "id": "0511",
         "title": "Favour That Surrounds You Like a Shield: Psalm 5:12",
-        "words": 1672,
+        "format": "longform",
+        "youtube_video_id": "TPVAnxrcsmg",
+        "watch_url": "https://youtu.be/TPVAnxrcsmg",
+        "published_on": "2026-11-16",
+        "published_at": "2026-11-16T12:38:25Z"
+      },
+      "next_queued_longform": {
+        "id": "0512",
+        "title": "Finding Favour in Your Daily Labor: Ruth 2:12 | The Provision Table",
+        "words": 1897,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provision2kings4v1",
-        "scripture": "2 Kings 4:1-7",
+        "short": "short-provisionpsalm81v10",
+        "scripture": "Psalm 81:10",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0511",
+      "slug": "favour-that-surrounds-you-like-a-shield-psalm-5-12",
+      "file": "0511-favour-that-surrounds-you-like-a-shield-psalm-5-12.md",
+      "title": "Favour That Surrounds You Like a Shield: Psalm 5:12",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T12:38:25Z",
+      "youtube_video_id": "TPVAnxrcsmg",
+      "watch_url": "https://youtu.be/TPVAnxrcsmg",
+      "youtu_be_url": "https://youtu.be/TPVAnxrcsmg",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/TPVAnxrcsmg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/TPVAnxrcsmg/hqdefault.jpg",
+      "thumb_text": "SHIELD OF FAVOUR",
+      "thumbnail_pending": false,
+      "duration_label": "~12 min",
+      "words": 1672
+    },
+    {
       "id": "SHORT-SHIELDISAIAH54V17",
       "slug": "short-shieldisaiah54v17-protection-prayer",
       "file": "short-shieldisaiah54v17-protection-prayer.md",
@@ -772,6 +796,30 @@
       "thumbnail_pending": false,
       "duration_label": "64s",
       "words": 663
+    },
+    {
+      "id": "SHORT-PROVISION2KINGS4V1",
+      "slug": "short-provision2kings4v1-stewardship-prayer",
+      "file": "short-provision2kings4v1-stewardship-prayer.md",
+      "title": "Pray This 2 Kings 4:1-7 Prayer for Open Doors & Provision | Look To God In Need #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T11:51:43Z",
+      "youtube_video_id": "eHLuY9W1I_M",
+      "watch_url": "https://www.youtube.com/shorts/eHLuY9W1I_M",
+      "youtu_be_url": "https://youtu.be/eHLuY9W1I_M",
+      "shorts_url": "https://www.youtube.com/shorts/eHLuY9W1I_M",
+      "studio_url": "https://studio.youtube.com/video/eHLuY9W1I_M/edit",
+      "thumb_url": "https://i.ytimg.com/vi/eHLuY9W1I_M/hqdefault.jpg",
+      "thumb_text": "",
+      "thumbnail_pending": true,
+      "duration_label": "48s",
+      "words": 652
     },
     {
       "id": "SHORT-MIDDAYPSALM118V14",
@@ -9169,19 +9217,6 @@
         "words": 1316
       },
       {
-        "id": "0511",
-        "slug": "favour-that-surrounds-you-like-a-shield-psalm-5-12",
-        "file": "0511-favour-that-surrounds-you-like-a-shield-psalm-5-12.md",
-        "title": "Favour That Surrounds You Like a Shield: Psalm 5:12",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1672
-      },
-      {
         "id": "0512",
         "slug": "finding-favour-in-your-daily-labor-ruth-2-12",
         "file": "0512-finding-favour-in-your-daily-labor-ruth-2-12.md",
@@ -9624,17 +9659,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-provision2kings4v1",
-        "file": "0000-short-provision2kings4v1.yml",
-        "companion_longform_id": "",
-        "scripture": "2 Kings 4:1-7",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionpsalm81v10",
