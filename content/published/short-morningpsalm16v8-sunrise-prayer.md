@@ -24,10 +24,12 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunris"
+thumbnail_error: "HttpError: The user has uploaded too many thumbnails recently. Please try the request again later. [uploadRateLimitExceeded] | auth_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; auth_channel_title=The Morning Altar | Daily Sunrise Prayer; long_uploads_status=allowed; video_channel_id=UCOaC5VWBGxA-UpOjP5bvkUQ; video_channel_title=The Morning Altar | Daily Sunrise Prayer; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["ANCHORED", "IN HIS", "STEADFAST", "PRESENCE"]
 thumbnail_kicker: "BEGIN YOUR DAY IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-16T17:53:20Z"
+thumbnail_retry_reason: "rate_limit"
 ---
 
 The heavy weight of that looming decision is currently resting entirely upon your tired shoulders. I have set the LORD always before me: because he is at my right hand, I shall not be moved. Lord, help me to fix my eyes upon your character rather than the storm of circumstances. When the world feels shaky and my resolve begins to thin, remind me of your nearness. Anchor my soul in the knowledge that you are at my right hand, guiding every step. Grant me the peace to move through this day with a spirit that is truly settled.
