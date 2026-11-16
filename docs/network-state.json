@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T15:17:23Z",
+  "generated_at": "2026-11-16T15:18:10Z",
   "monitor_generated_at": "2026-11-16T15:15:20.743827+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 339,
+    "published_total": 340,
     "published_longform": 127,
-    "published_shorts": 212,
-    "public_total": 337,
+    "published_shorts": 213,
+    "public_total": 338,
     "queued_longform": 62,
-    "queued_shorts": 86,
+    "queued_shorts": 85,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -441,23 +441,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 29,
+        "published_total": 30,
         "published_longform": 12,
-        "published_shorts": 17,
-        "thumbnail_pending": 6,
-        "public_total": 29,
+        "published_shorts": 18,
+        "thumbnail_pending": 7,
+        "public_total": 30,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0511",
-        "title": "Favour That Surrounds You Like a Shield: Psalm 5:12",
-        "format": "longform",
-        "youtube_video_id": "TPVAnxrcsmg",
-        "watch_url": "https://youtu.be/TPVAnxrcsmg",
+        "id": "SHORT-PROVISIONPSALM81V10",
+        "title": "Pray This Psalm 81:10 Prayer for Open Doors & Provision | Open Thy Mouth Wide #Shorts",
+        "format": "short",
+        "youtube_video_id": "GZ4BKnpLr4Y",
+        "watch_url": "https://www.youtube.com/shorts/GZ4BKnpLr4Y",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T12:38:25Z"
+        "published_at": "2026-11-16T15:17:13Z"
       },
       "next_queued_longform": {
         "id": "0512",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionpsalm81v10",
-        "scripture": "Psalm 81:10",
+        "short": "short-provisiongenesis22v14",
+        "scripture": "Genesis 22:14",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONPSALM81V10",
+      "slug": "short-provisionpsalm81v10-stewardship-prayer",
+      "file": "short-provisionpsalm81v10-stewardship-prayer.md",
+      "title": "Pray This Psalm 81:10 Prayer for Open Doors & Provision | Open Thy Mouth Wide #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T15:17:13Z",
+      "youtube_video_id": "GZ4BKnpLr4Y",
+      "watch_url": "https://www.youtube.com/shorts/GZ4BKnpLr4Y",
+      "youtu_be_url": "https://youtu.be/GZ4BKnpLr4Y",
+      "shorts_url": "https://www.youtube.com/shorts/GZ4BKnpLr4Y",
+      "studio_url": "https://studio.youtube.com/video/GZ4BKnpLr4Y/edit",
+      "thumb_url": "https://i.ytimg.com/vi/GZ4BKnpLr4Y/hqdefault.jpg",
+      "thumb_text": "",
+      "thumbnail_pending": true,
+      "duration_label": "53s",
+      "words": 660
+    },
     {
       "id": "SHORT-HEALINGMATTHEW8V17",
       "slug": "short-healingmatthew8v17-restoration-prayer",
@@ -9746,17 +9770,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-provisionpsalm81v10",
-        "file": "0000-short-provisionpsalm81v10.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 81:10",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-psalm42v8",
