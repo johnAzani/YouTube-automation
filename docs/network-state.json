@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T19:54:33Z",
+  "generated_at": "2026-11-16T19:55:42Z",
   "monitor_generated_at": "2026-11-16T19:43:50.002042+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 349,
+    "published_total": 350,
     "published_longform": 129,
-    "published_shorts": 220,
-    "public_total": 347,
+    "published_shorts": 221,
+    "public_total": 348,
     "queued_longform": 60,
-    "queued_shorts": 78,
+    "queued_shorts": 77,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 46,
+        "published_total": 47,
         "published_longform": 18,
-        "published_shorts": 28,
+        "published_shorts": 29,
         "thumbnail_pending": 0,
-        "public_total": 46,
+        "public_total": 47,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "0092",
-        "title": "Your Labor Is Not in Vain: 1 Corinthians 15:58 | The Midday Watch",
-        "format": "longform",
-        "youtube_video_id": "GU4-8UTXaHk",
-        "watch_url": "https://youtu.be/GU4-8UTXaHk",
+        "id": "SHORT-MIDDAYPSALM68V19",
+        "title": "Say This Psalm 68:19 Prayer at Noon | Grace In The Middle Of The Day #Shorts",
+        "format": "short",
+        "youtube_video_id": "rhnoYOg_kfo",
+        "watch_url": "https://www.youtube.com/shorts/rhnoYOg_kfo",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T17:57:23Z"
+        "published_at": "2026-11-16T19:54:57Z"
       },
       "next_queued_longform": {
         "id": "0093",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaypsalm68v19",
-        "scripture": "Psalm 68:19",
+        "short": "short-middaycolossians3v23",
+        "scripture": "Colossians 3:23-24",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYPSALM68V19",
+      "slug": "short-middaypsalm68v19-midday-prayer",
+      "file": "short-middaypsalm68v19-midday-prayer.md",
+      "title": "Say This Psalm 68:19 Prayer at Noon | Grace In The Middle Of The Day #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T19:54:57Z",
+      "youtube_video_id": "rhnoYOg_kfo",
+      "watch_url": "https://www.youtube.com/shorts/rhnoYOg_kfo",
+      "youtu_be_url": "https://youtu.be/rhnoYOg_kfo",
+      "shorts_url": "https://www.youtube.com/shorts/rhnoYOg_kfo",
+      "studio_url": "https://studio.youtube.com/video/rhnoYOg_kfo/edit",
+      "thumb_url": "https://i.ytimg.com/vi/rhnoYOg_kfo/hqdefault.jpg",
+      "thumb_text": "MIDDAY PRAYER \u00b7 PSALM 68:19",
+      "thumbnail_pending": false,
+      "duration_label": "47s",
+      "words": 584
+    },
     {
       "id": "SHORT-MORNINGPSALM51V10",
       "slug": "short-morningpsalm51v10-sunrise-prayer",
@@ -9883,17 +9907,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-middaypsalm68v19",
-        "file": "0000-short-middaypsalm68v19.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 68:19",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-morningpsalm90v14",
