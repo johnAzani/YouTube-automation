@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T07:30:08Z",
+  "generated_at": "2026-11-16T07:30:23Z",
   "monitor_generated_at": "2026-11-16T07:25:41.967475+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 312,
+    "published_total": 313,
     "published_longform": 123,
-    "published_shorts": 189,
-    "public_total": 310,
+    "published_shorts": 190,
+    "public_total": 311,
     "queued_longform": 63,
-    "queued_shorts": 99,
+    "queued_shorts": 98,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -305,23 +305,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 24,
+        "published_total": 25,
         "published_longform": 10,
-        "published_shorts": 14,
-        "thumbnail_pending": 24,
-        "public_total": 24,
+        "published_shorts": 15,
+        "thumbnail_pending": 25,
+        "public_total": 25,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-FAMILYDEUTERONOMY6V6",
-        "title": "Pray This Deuteronomy 6:6-7 Family Prayer Over Your Home | In Your Home #Shorts",
+        "id": "SHORT-FAMILY3JOHN1V4",
+        "title": "Pray This 3 John 1:4 Family Prayer Over Your Home | Rest In His Promise #Shorts",
         "format": "short",
-        "youtube_video_id": "A28yKBQN9Z0",
-        "watch_url": "https://www.youtube.com/shorts/A28yKBQN9Z0",
-        "published_on": "2026-11-15",
-        "published_at": "2026-11-15T23:28:27Z"
+        "youtube_video_id": "PtB3-p_I1Aw",
+        "watch_url": "https://www.youtube.com/shorts/PtB3-p_I1Aw",
+        "published_on": "2026-11-16",
+        "published_at": "2026-11-16T07:29:37Z"
       },
       "next_queued_longform": {
         "id": "0310",
@@ -330,8 +330,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-family3john1v4",
-        "scripture": "3 John 1:4",
+        "short": "short-familyacts2v39",
+        "scripture": "Acts 2:39",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILY3JOHN1V4",
+      "slug": "short-family3john1v4-household-prayer",
+      "file": "short-family3john1v4-household-prayer.md",
+      "title": "Pray This 3 John 1:4 Family Prayer Over Your Home | Rest In His Promise #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T07:29:37Z",
+      "youtube_video_id": "PtB3-p_I1Aw",
+      "watch_url": "https://www.youtube.com/shorts/PtB3-p_I1Aw",
+      "youtu_be_url": "https://youtu.be/PtB3-p_I1Aw",
+      "shorts_url": "https://www.youtube.com/shorts/PtB3-p_I1Aw",
+      "studio_url": "https://studio.youtube.com/video/PtB3-p_I1Aw/edit",
+      "thumb_url": "https://i.ytimg.com/vi/PtB3-p_I1Aw/hqdefault.jpg",
+      "thumb_text": "3 JOHN 1:4 \u00b7 WALK IN TRUTH",
+      "thumbnail_pending": true,
+      "duration_label": "52s",
+      "words": 649
+    },
     {
       "id": "SHORT-PSALM119V165",
       "slug": "short-psalm119v165-pre-sleep-prayer",
@@ -9013,17 +9037,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-family3john1v4",
-        "file": "0000-short-family3john1v4.yml",
-        "companion_longform_id": "",
-        "scripture": "3 John 1:4",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
       {
         "short": "short-familyacts2v39",
         "file": "0000-short-familyacts2v39.yml",
