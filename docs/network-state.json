@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T20:03:39Z",
+  "generated_at": "2026-11-16T20:05:18Z",
   "monitor_generated_at": "2026-11-16T19:43:50.002042+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 352,
+    "published_total": 353,
     "published_longform": 129,
-    "published_shorts": 223,
-    "public_total": 350,
+    "published_shorts": 224,
+    "public_total": 351,
     "queued_longform": 60,
-    "queued_shorts": 75,
+    "queued_shorts": 74,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 22,
+        "published_total": 23,
         "published_longform": 8,
-        "published_shorts": 14,
-        "thumbnail_pending": 22,
-        "public_total": 22,
+        "published_shorts": 15,
+        "thumbnail_pending": 23,
+        "public_total": 23,
         "queued_longform": 6,
         "queued_other": 1,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-SHIELD2THESSALONIANS3V3",
-        "title": "Pray This 2 Thessalonians 3:3 Prayer for Divine Protection | Beyond The Reach Of Evil #Shorts",
+        "id": "SHORT-SHIELDPSALM91V1",
+        "title": "Pray This Psalm 91:1-2 Prayer for Divine Protection | Seeking Divine Covering #Shorts",
         "format": "short",
-        "youtube_video_id": "FXVJoxeTFNM",
-        "watch_url": "https://www.youtube.com/shorts/FXVJoxeTFNM",
+        "youtube_video_id": "4ESCGlKzyns",
+        "watch_url": "https://www.youtube.com/shorts/4ESCGlKzyns",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T15:18:13Z"
+        "published_at": "2026-11-16T20:04:32Z"
       },
       "next_queued_longform": {
         "id": "0608",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm91v1",
-        "scripture": "Psalm 91:1-2",
+        "short": "short-shield2samuel22v31",
+        "scripture": "2 Samuel 22:31",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM91V1",
+      "slug": "short-shieldpsalm91v1-protection-prayer",
+      "file": "short-shieldpsalm91v1-protection-prayer.md",
+      "title": "Pray This Psalm 91:1-2 Prayer for Divine Protection | Seeking Divine Covering #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T20:04:32Z",
+      "youtube_video_id": "4ESCGlKzyns",
+      "watch_url": "https://www.youtube.com/shorts/4ESCGlKzyns",
+      "youtu_be_url": "https://youtu.be/4ESCGlKzyns",
+      "shorts_url": "https://www.youtube.com/shorts/4ESCGlKzyns",
+      "studio_url": "https://studio.youtube.com/video/4ESCGlKzyns/edit",
+      "thumb_url": "https://i.ytimg.com/vi/4ESCGlKzyns/hqdefault.jpg",
+      "thumb_text": "",
+      "thumbnail_pending": true,
+      "duration_label": "50s",
+      "words": 626
+    },
     {
       "id": "SHORT-PROVISIONGENESIS22V14",
       "slug": "short-provisiongenesis22v14-stewardship-prayer",
@@ -10505,17 +10529,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-shieldpsalm91v1",
-        "file": "0607-short-shieldpsalm91v1.yml",
-        "companion_longform_id": "0607",
-        "scripture": "Psalm 91:1-2",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shield2samuel22v31",
