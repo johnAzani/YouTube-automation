@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE", "PRAISE", "GARDEN", "PSALM 107:1"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-23T00:41:27Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Beloved soul, pause right here in the quiet moment and let your heart settle into the gentle presence of the Almighty God. Think of the quiet mercies that carried you through the day, the unseen protections, and the steadfast love that surrounds your life. Lift an honest prayer of thanksgiving from the depths of your spirit, acknowledging the goodness of our Creator in all things. Listen now to the eternal word found in Psalm 107 verse 1, declaring the timeless truth for your daily walk. O give thanks unto the Lord, for He is good: for His mercy endureth forever, watching over your steps today. Father, we rest in Your enduring kindness and praise Your holy name forevermore. Amen.

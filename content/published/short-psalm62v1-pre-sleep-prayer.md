@@ -24,7 +24,8 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "poster_refused"
+thumbnail_error: "shorts poster text escapes the UI safe zone (72, 200, 1008, 1500): (49, 802, 1031, 851); shorten the authored lockup or reduce its size"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If the decision you must make tomorrow is keeping you awake tonight, listen closely. Truly my soul waiteth upon God: from him cometh my salvation. He only is my rock and my salvation; he is my defence; I shall not be greatly moved. Lord, in this quiet bedroom, I give You every restless thought about tomorrow. You are my steady rock when everything else feels uncertain. Surround me with Your peace as I lay my head down to sleep. Guard my mind, protect my heart, and let your presence calm my spirit. I place my future in Your safe hands tonight. Amen. Subscribe to The Secret Place for nightly prayers.

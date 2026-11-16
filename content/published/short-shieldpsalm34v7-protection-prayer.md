@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=el"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["PLACE EVERY STEP", "UNDER THE SHADOW", "OF THE ALMIGHTY", "REFUGE IN GOD"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-23T00:41:26Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Place every step, every journey, and every unseen concern under the shadow of the Almighty today. As you navigate the paths set before you, remember that you are never left unguarded or unprotected. The word of truth reminds us clearly in Psalm 34:7 that the angel of the Lord encampeth round about them that fear him, and delivereth them. Let this holy fortress surround your mind, your dwelling, and your loved ones through every waking hour. Rest completely in His safe-keeping, knowing His strong tower stands immovable against every trial. Subscribe to The Covenant Shield for daily scripture prayers of divine protection and peace.
