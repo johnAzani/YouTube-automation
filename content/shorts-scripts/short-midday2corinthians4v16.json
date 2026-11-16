@@ -1,0 +1,273 @@
+{
+  "key": "short-midday2corinthians4v16",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "RENEWED AT",
+    "MIDDAY"
+  ],
+  "poster": [
+    "STRENGTH FOR",
+    "THE WEARY",
+    "HEART",
+    "RESTORED"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "midday sun rays through window",
+    "empty wooden desk with warm light",
+    "soft shadows on stone wall",
+    "distant mountains in midday haze",
+    "bright light on open field",
+    "still water reflecting midday sun"
+  ],
+  "scenes": [
+    {
+      "a": "That persistent exhaustion in your bones",
+      "img": "short-midday2corinthians4v16-scene-01.jpg",
+      "kicker": "2 CORINTHIANS 4:16",
+      "sub": "FINDING STRENGTH AT NOON",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "For which cause we faint not",
+      "img": "short-midday2corinthians4v16-scene-02.jpg",
+      "kicker": "2 CORINTHIANS 4:16",
+      "sub": "FAINT NOT",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "yet the inward man is renewed",
+      "img": "short-midday2corinthians4v16-scene-03.jpg",
+      "kicker": "2 CORINTHIANS 4:16",
+      "sub": "RENEWED DAY BY DAY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "For our light affliction",
+      "img": "short-midday2corinthians4v16-scene-04.jpg",
+      "kicker": "2 CORINTHIANS 4:17",
+      "sub": "LIGHT AFFLICTION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "While we look not",
+      "img": "short-midday2corinthians4v16-scene-05.jpg",
+      "kicker": "2 CORINTHIANS 4:18",
+      "sub": "LOOK TO THE ETERNAL",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord grant me this vision",
+      "img": "short-midday2corinthians4v16-scene-06.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "RESTING IN HIS GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That persistent exhaustion in your bones is not the end of your story today."
+    ],
+    [
+      8,
+      17,
+      "For which cause we faint not; but though our outward man perish, yet the inward man is renewed day by day."
+    ],
+    [
+      17,
+      26,
+      "For our light affliction, which is but for a moment, worketh for us a far more exceeding and eternal weight of glory;"
+    ],
+    [
+      26,
+      35,
+      "While we look not at the things which are seen, but at the things which are not seen: for the things which are seen are temporal; but the things which are not seen are eternal."
+    ],
+    [
+      35,
+      42,
+      "Lord grant me this vision of eternity so I might walk through this hour with hope."
+    ],
+    [
+      42,
+      50,
+      "Quiet my spirit and teach me to find my strength in your endless unchanging grace."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THAT PERSISTENT EXHAUSTION",
+        "IN YOUR BONES",
+        "IS NOT THE END"
+      ],
+      [
+        "EXHAUSTION",
+        "NOT THE END"
+      ],
+      "2 CORINTHIANS 4:16"
+    ],
+    [
+      8,
+      17,
+      [
+        "FOR WHICH CAUSE",
+        "WE FAINT NOT",
+        "INWARD MAN RENEWED"
+      ],
+      [
+        "FAINT NOT",
+        "RENEWED"
+      ],
+      "2 CORINTHIANS 4:16"
+    ],
+    [
+      17,
+      26,
+      [
+        "LIGHT AFFLICTION",
+        "MOMENTARY",
+        "WEIGHT OF GLORY"
+      ],
+      [
+        "LIGHT AFFLICTION",
+        "GLORY"
+      ],
+      "2 CORINTHIANS 4:17"
+    ],
+    [
+      26,
+      35,
+      [
+        "LOOK NOT AT SEEN",
+        "THINGS ARE TEMPORAL",
+        "ETERNAL THINGS REMAIN"
+      ],
+      [
+        "NOT SEEN",
+        "ETERNAL"
+      ],
+      "2 CORINTHIANS 4:18"
+    ],
+    [
+      35,
+      42,
+      [
+        "LORD GRANT ME",
+        "VISION OF ETERNITY",
+        "WALK WITH HOPE"
+      ],
+      [
+        "VISION",
+        "HOPE"
+      ],
+      "MIDDAY PRAYER"
+    ],
+    [
+      42,
+      50,
+      [
+        "QUIET MY SPIRIT",
+        "FIND MY STRENGTH",
+        "UNCHANGING GRACE"
+      ],
+      [
+        "STRENGTH",
+        "GRACE"
+      ],
+      "MIDDAY PRAYER"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That persistent exhaustion in your bones",
+      "kind": "phrase",
+      "words": [
+        "EXHAUSTION",
+        "END"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For which cause we faint not",
+      "kind": "phrase",
+      "words": [
+        "FAINT NOT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "yet the inward man is renewed",
+      "kind": "phrase",
+      "words": [
+        "RENEWED"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "For our light affliction",
+      "kind": "phrase",
+      "words": [
+        "LIGHT AFFLICTION"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "While we look not",
+      "kind": "phrase",
+      "words": [
+        "LOOK NOT",
+        "ETERNAL"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "Lord grant me this vision",
+      "kind": "phrase",
+      "words": [
+        "VISION",
+        "HOPE"
+      ],
+      "hi": 5,
+      "slot": "C"
+    }
+  ],
+  "scripture": "2 Corinthians 4:16-18"
+}

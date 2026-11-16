@@ -1,0 +1,269 @@
+{
+  "key": "short-middaypsalm68v19",
+  "channel": "prayer3",
+  "psalm": 68,
+  "title": [
+    "DAILY BENEFITS",
+    "OF THE LORD"
+  ],
+  "poster": [
+    "MIDDAY PRAYER",
+    "PSALM 68:19",
+    "A MOMENT OF GRACE",
+    "THE MIDDAY WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "soft sunlight streaming through office window",
+    "dust motes dancing in midday light",
+    "empty wooden desk with open journal",
+    "bright sun illuminating open fields",
+    "calm shadows moving across a wall",
+    "golden hour light hitting a glass of water"
+  ],
+  "scenes": [
+    {
+      "a": "That persistent worry about your unfinished tasks will still be there after you finish praying.",
+      "img": "short-middaypsalm68v19-scene-01.jpg",
+      "kicker": "PSALM 68:19",
+      "sub": "GRACE IN THE MIDDLE OF THE DAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Instead, choose to lift your tired heart to the One who sustains every single breath.",
+      "img": "short-middaypsalm68v19-scene-02.jpg",
+      "kicker": "PSALM 68:19",
+      "sub": "FINDING STRENGTH NOW",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Blessed be the Lord, who daily loadeth us with benefits, even the God of our salvation.",
+      "img": "short-middaypsalm68v19-scene-03.jpg",
+      "kicker": "PSALM 68:19",
+      "sub": "HIS DAILY PROVISION",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Father, thank You for the grace that overflows in this quiet hour of the afternoon.",
+      "img": "short-middaypsalm68v19-scene-04.jpg",
+      "kicker": "PSALM 68:19",
+      "sub": "THANKING THE LORD",
+      "cam": "push_in",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Teach me to see Your hand in the mundane details that currently fill my heavy schedule.",
+      "img": "short-middaypsalm68v19-scene-05.jpg",
+      "kicker": "PSALM 68:19",
+      "sub": "SIGHT FOR HIS HAND",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Renew my spirit with the hope of Your salvation as I return to these remaining hours.",
+      "img": "short-middaypsalm68v19-scene-06.jpg",
+      "kicker": "PSALM 68:19",
+      "sub": "RENEWED HOPE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "That persistent worry about your unfinished tasks will still be there after you finish praying."
+    ],
+    [
+      10,
+      22,
+      "Instead, choose to lift your tired heart to the One who sustains every single breath."
+    ],
+    [
+      22,
+      42,
+      "Blessed be the Lord, who daily loadeth us with benefits, even the God of our salvation."
+    ],
+    [
+      42,
+      58,
+      "Father, thank You for the grace that overflows in this quiet hour of the afternoon."
+    ],
+    [
+      58,
+      75,
+      "Teach me to see Your hand in the mundane details that currently fill my heavy schedule."
+    ],
+    [
+      75,
+      98,
+      "Renew my spirit with the hope of Your salvation as I return to these remaining hours."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "THAT PERSISTENT WORRY",
+        "ABOUT YOUR TASKS",
+        "WILL STILL BE THERE"
+      ],
+      [
+        "PERSISTENT WORRY"
+      ],
+      "PSALM 68:19"
+    ],
+    [
+      10,
+      22,
+      [
+        "CHOOSE TO LIFT",
+        "YOUR TIRED HEART",
+        "TO THE ONE"
+      ],
+      [
+        "LIFT YOUR HEART"
+      ],
+      "PSALM 68:19"
+    ],
+    [
+      22,
+      42,
+      [
+        "BLESSED BE THE LORD",
+        "WHO DAILY LOADETH US",
+        "WITH BENEFITS"
+      ],
+      [
+        "DAILY LOADETH"
+      ],
+      "PSALM 68:19"
+    ],
+    [
+      42,
+      58,
+      [
+        "THANK YOU FOR",
+        "THE GRACE THAT",
+        "OVERFLOWS TODAY"
+      ],
+      [
+        "OVERFLOWS"
+      ],
+      "PSALM 68:19"
+    ],
+    [
+      58,
+      75,
+      [
+        "TEACH ME TO SEE",
+        "YOUR HAND IN",
+        "EVERY MUNDANE DETAIL"
+      ],
+      [
+        "SEE YOUR HAND"
+      ],
+      "PSALM 68:19"
+    ],
+    [
+      75,
+      98,
+      [
+        "RENEW MY SPIRIT",
+        "WITH THE HOPE",
+        "OF YOUR SALVATION"
+      ],
+      [
+        "RENEW MY SPIRIT"
+      ],
+      "PSALM 68:19"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That persistent worry about your unfinished tasks will still be there after you finish praying.",
+      "kind": "phrase",
+      "words": [
+        "PERSISTENT",
+        "WORRY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Instead, choose to lift your tired heart to the One who sustains every single breath.",
+      "kind": "phrase",
+      "words": [
+        "LIFT",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Blessed be the Lord, who daily loadeth us with benefits, even the God of our salvation.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "LOADETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, thank You for the grace that overflows in this quiet hour of the afternoon.",
+      "kind": "phrase",
+      "words": [
+        "OVERFLOWS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Teach me to see Your hand in the mundane details that currently fill my heavy schedule.",
+      "kind": "phrase",
+      "words": [
+        "SEE",
+        "HAND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Renew my spirit with the hope of Your salvation as I return to these remaining hours.",
+      "kind": "phrase",
+      "words": [
+        "RENEW",
+        "SPIRIT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 68:19"
+}

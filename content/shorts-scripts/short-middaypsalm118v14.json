@@ -1,0 +1,310 @@
+{
+  "key": "short-middaypsalm118v14",
+  "channel": "prayer3",
+  "psalm": 118,
+  "title": [
+    "STRENGTH & SONG",
+    "A MIDDAY PRAYER"
+  ],
+  "poster": [
+    "THE LORD IS MY STRENGTH",
+    "AND SONG",
+    "PSALM 118:14",
+    "THE MIDDAY WATCH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "midday sun beam streaming across wooden desk in quiet home office",
+    "high midday sun shining over calm open valley and quiet hills",
+    "warm sunlight illuminating peaceful courtyard with oak tree",
+    "bright midday light reflected on serene calm water surface",
+    "quiet sunlit room with soft shadows on empty wooden chair",
+    "golden sun rays shining through lush forest canopy at noon",
+    "high bright sky with soft sunbeams over tranquil mountain lake"
+  ],
+  "scenes": [
+    {
+      "a": "That overwhelming task sitting on your desk right now is draining your stamina this afternoon.",
+      "img": "short-middaypsalm118v14-scene-01.jpg",
+      "kicker": "PSALM 118:14",
+      "sub": "DRAINING YOUR STAMINA TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hear the timeless promise of Scripture: The LORD is my strength and song, and is become my salvation.",
+      "img": "short-middaypsalm118v14-scene-02.jpg",
+      "kicker": "PSALM 118:14",
+      "sub": "MY STRENGTH AND MY SONG",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, in this sunlit midday hour when our energy fails, we lean completely upon Your unfailing power.",
+      "img": "short-middaypsalm118v14-scene-03.jpg",
+      "kicker": "PSALM 118:14",
+      "sub": "LEAN UPON HIS UNFAILING POWER",
+      "cam": "tilt_up",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "You are not only our shield in dark moments; You are the gladness that restores our spirit right now.",
+      "img": "short-middaypsalm118v14-scene-04.jpg",
+      "kicker": "PSALM 118:14",
+      "sub": "RESTORES OUR SPIRIT RIGHT NOW",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.35
+      ]
+    },
+    {
+      "a": "When fatigue clouds our thoughts, be our constant endurance and our quiet peace.",
+      "img": "short-middaypsalm118v14-scene-05.jpg",
+      "kicker": "PSALM 118:14",
+      "sub": "BE OUR QUIET PEACE TODAY",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "You carry every burden we cannot bear alone today. Thank You for being our victory in every trial.",
+      "img": "short-middaypsalm118v14-scene-06.jpg",
+      "kicker": "PSALM 118:14",
+      "sub": "VICTORY IN EVERY TRIAL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Midday Watch to pray at noon.",
+      "img": "short-middaypsalm118v14-scene-07.jpg",
+      "kicker": "PSALM 118:14",
+      "sub": "PAUSE AND PRAY AT NOON",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "That overwhelming task sitting on your desk right now is draining your stamina this afternoon."
+    ],
+    [
+      6,
+      12,
+      "Hear the timeless promise of Scripture: The LORD is my strength and song, and is become my salvation."
+    ],
+    [
+      12,
+      18,
+      "Lord, in this sunlit midday hour when our energy fails, we lean completely upon Your unfailing power."
+    ],
+    [
+      18,
+      24,
+      "You are not only our shield in dark moments; You are the gladness that restores our spirit right now."
+    ],
+    [
+      24,
+      30,
+      "When fatigue clouds our thoughts, be our constant endurance and our quiet peace."
+    ],
+    [
+      30,
+      36,
+      "You carry every burden we cannot bear alone today. Thank You for being our victory in every trial."
+    ],
+    [
+      36,
+      42,
+      "Subscribe to The Midday Watch to pray at noon."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "THAT OVERWHELMING TASK",
+        "DRAINING YOUR STAMINA"
+      ],
+      [
+        "OVERWHELMING",
+        "STAMINA"
+      ],
+      "PSALM 118 : 14"
+    ],
+    [
+      6,
+      12,
+      [
+        "THE LORD IS MY STRENGTH",
+        "AND BECOME MY SALVATION"
+      ],
+      [
+        "STRENGTH",
+        "SALVATION"
+      ],
+      "PSALM 118 : 14"
+    ],
+    [
+      12,
+      18,
+      [
+        "WHEN OUR ENERGY FAILS",
+        "LEAN UPON HIS POWER"
+      ],
+      [
+        "LEAN",
+        "POWER"
+      ],
+      "PSALM 118 : 14"
+    ],
+    [
+      18,
+      24,
+      [
+        "YOU ARE OUR SHIELD",
+        "RESTORES OUR SPIRIT"
+      ],
+      [
+        "SHIELD",
+        "RESTORES"
+      ],
+      "PSALM 118 : 14"
+    ],
+    [
+      24,
+      30,
+      [
+        "WHEN FATIGUE CLOUDS THOUGHTS",
+        "BE OUR QUIET PEACE"
+      ],
+      [
+        "FATIGUE",
+        "PEACE"
+      ],
+      "PSALM 118 : 14"
+    ],
+    [
+      30,
+      36,
+      [
+        "YOU CARRY EVERY BURDEN",
+        "VICTORY IN EVERY TRIAL"
+      ],
+      [
+        "BURDEN",
+        "VICTORY"
+      ],
+      "PSALM 118 : 14"
+    ],
+    [
+      36,
+      42,
+      [
+        "PAUSE AND PRAY",
+        "THE MIDDAY WATCH"
+      ],
+      [
+        "MIDDAY",
+        "WATCH"
+      ],
+      "PSALM 118 : 14"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That overwhelming task sitting on your desk right now is draining your stamina this afternoon.",
+      "kind": "phrase",
+      "words": [
+        "OVERWHELMING",
+        "STAMINA"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the timeless promise of Scripture: The LORD is my strength and song, and is become my salvation.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "SALVATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, in this sunlit midday hour when our energy fails, we lean completely upon Your unfailing power.",
+      "kind": "phrase",
+      "words": [
+        "UNFAILING",
+        "POWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You are not only our shield in dark moments; You are the gladness that restores our spirit right now.",
+      "kind": "phrase",
+      "words": [
+        "SHIELD",
+        "RESTORES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When fatigue clouds our thoughts, be our constant endurance and our quiet peace.",
+      "kind": "phrase",
+      "words": [
+        "ENDURANCE",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You carry every burden we cannot bear alone today. Thank You for being our victory in every trial.",
+      "kind": "phrase",
+      "words": [
+        "BURDEN",
+        "VICTORY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Midday Watch to pray at noon.",
+      "kind": "phrase",
+      "words": [
+        "MIDDAY",
+        "WATCH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 118:14"
+}

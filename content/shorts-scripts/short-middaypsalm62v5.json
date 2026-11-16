@@ -1,0 +1,282 @@
+{
+  "key": "short-middaypsalm62v5",
+  "channel": "prayer3",
+  "psalm": 62,
+  "title": [
+    "WAITING UPON",
+    "THE ROCK"
+  ],
+  "poster": [
+    "WAITING UPON GOD",
+    "MIDDAY REFLECTION",
+    "PSALM SIXTY TWO",
+    "STILLNESS AT NOON"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "golden midday sunlight streaming through a window onto a wooden desk",
+    "soft focus dust motes dancing in a sunbeam during daytime",
+    "calm ripples on a quiet pond under high noon sun",
+    "abstract close up of textured linen fabric in natural light",
+    "steady sunlight over an open field at high noon",
+    "shadow of a leaf moving slowly across a wall at midday"
+  ],
+  "scenes": [
+    {
+      "a": "That decision pulling at your focus today is exactly where you must find your center.",
+      "img": "short-middaypsalm62v5-scene-01.jpg",
+      "kicker": "PSALM 62:5",
+      "sub": "FIND YOUR CENTER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "My soul, wait thou only upon God; for my expectation is from him.",
+      "img": "short-middaypsalm62v5-scene-02.jpg",
+      "kicker": "PSALM 62:5",
+      "sub": "WAIT UPON HIM",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He only is my rock and my salvation: he is my defence; I shall not be moved.",
+      "img": "short-middaypsalm62v5-scene-03.jpg",
+      "kicker": "PSALM 62:6",
+      "sub": "HE IS MY DEFENCE",
+      "cam": "pull_out",
+      "focus": [
+        0.3,
+        0.7
+      ]
+    },
+    {
+      "a": "In God is my salvation and my glory: the rock of my strength, and my refuge, is in God.",
+      "img": "short-middaypsalm62v5-scene-04.jpg",
+      "kicker": "PSALM 62:7",
+      "sub": "MY REFUGE IS IN GOD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Trust in him at all times; ye people, pour out your heart before him: God is a refuge for us.",
+      "img": "short-middaypsalm62v5-scene-05.jpg",
+      "kicker": "PSALM 62:8",
+      "sub": "POUR OUT YOUR HEART",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "Lord, lead me into this quiet confidence as I return to my work this afternoon.",
+      "img": "short-middaypsalm62v5-scene-06.jpg",
+      "kicker": "MIDDAY PRAYER",
+      "sub": "QUIET CONFIDENCE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "That decision pulling at your focus today is exactly where you must find your center."
+    ],
+    [
+      11,
+      22,
+      "My soul, wait thou only upon God; for my expectation is from him."
+    ],
+    [
+      23,
+      38,
+      "He only is my rock and my salvation: he is my defence; I shall not be moved."
+    ],
+    [
+      39,
+      55,
+      "In God is my salvation and my glory: the rock of my strength, and my refuge, is in God."
+    ],
+    [
+      56,
+      72,
+      "Trust in him at all times; ye people, pour out your heart before him: God is a refuge for us."
+    ],
+    [
+      73,
+      98,
+      "Lord, lead me into this quiet confidence as I return to my work this afternoon. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "THAT DECISION PULLING",
+        "AT YOUR FOCUS",
+        "IS WHERE YOU MUST",
+        "FIND YOUR CENTER"
+      ],
+      [
+        "FIND YOUR CENTER"
+      ],
+      "PSALM 62 : 5"
+    ],
+    [
+      11,
+      22,
+      [
+        "MY SOUL WAIT",
+        "THOU ONLY UPON GOD",
+        "FOR MY EXPECTATION",
+        "IS FROM HIM"
+      ],
+      [
+        "WAIT THOU ONLY"
+      ],
+      "PSALM 62 : 5"
+    ],
+    [
+      23,
+      38,
+      [
+        "HE ONLY IS MY ROCK",
+        "AND MY SALVATION",
+        "HE IS MY DEFENCE",
+        "I SHALL NOT BE MOVED"
+      ],
+      [
+        "NOT BE MOVED"
+      ],
+      "PSALM 62 : 6"
+    ],
+    [
+      39,
+      55,
+      [
+        "IN GOD IS MY SALVATION",
+        "AND MY GLORY THE ROCK",
+        "OF MY STRENGTH AND",
+        "MY REFUGE IS IN GOD"
+      ],
+      [
+        "REFUGE IS IN GOD"
+      ],
+      "PSALM 62 : 7"
+    ],
+    [
+      56,
+      72,
+      [
+        "TRUST IN HIM AT",
+        "ALL TIMES YE PEOPLE",
+        "POUR OUT YOUR HEART",
+        "GOD IS A REFUGE"
+      ],
+      [
+        "REFUGE FOR US"
+      ],
+      "PSALM 62 : 8"
+    ],
+    [
+      73,
+      98,
+      [
+        "LEAD ME INTO",
+        "THIS QUIET CONFIDENCE",
+        "AS I RETURN TO",
+        "MY WORK TODAY"
+      ],
+      [
+        "QUIET CONFIDENCE"
+      ],
+      "MIDDAY PRAYER"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That decision pulling at your focus today is exactly where you must find your center.",
+      "kind": "phrase",
+      "words": [
+        "FIND",
+        "YOUR",
+        "CENTER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "My soul, wait thou only upon God; for my expectation is from him.",
+      "kind": "phrase",
+      "words": [
+        "WAIT",
+        "THOU",
+        "ONLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He only is my rock and my salvation: he is my defence; I shall not be moved.",
+      "kind": "phrase",
+      "words": [
+        "NOT",
+        "BE",
+        "MOVED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In God is my salvation and my glory: the rock of my strength, and my refuge, is in God.",
+      "kind": "phrase",
+      "words": [
+        "REFUGE",
+        "IS",
+        "IN",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Trust in him at all times; ye people, pour out your heart before him: God is a refuge for us.",
+      "kind": "phrase",
+      "words": [
+        "REFUGE",
+        "FOR",
+        "US"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, lead me into this quiet confidence as I return to my work this afternoon.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "CONFIDENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 62:5-8"
+}
