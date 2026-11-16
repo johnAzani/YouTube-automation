@@ -28,6 +28,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["THE LORD IS NEAR", "TO EVERY HEART", "THAT CALLS HIM", "IN TRUTH"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If you are holding onto a secret burden that you cannot tell anyone else, listen. The Lord is nigh unto all them that call upon him, to all that call upon him in truth. Lord, remove the fear of being misunderstood from this tired soul. Give me the courage to speak plainly to you in the silence of this late hour. Steady my mind as I drift off, knowing your presence remains constant and sure. I lay my restless thoughts at your feet, trusting that you hear every whisper. Amen.
