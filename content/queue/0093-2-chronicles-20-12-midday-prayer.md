@@ -1,6 +1,6 @@
 ---
 id: 0093
-title: "When You Don't Know What to Do: 2 Chronicles 20:12 | The Midday Watch"
+title: "Eyes on God When Answers Run Out: 2 Chronicles 20:12"
 slug: 2-chronicles-20-12-midday-prayer
 status: approved
 channel: prayer3
@@ -76,6 +76,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "When You Don't Know What to Do: 2 Chronicles 20:12 | The Midday Watch"
+queue_title_fixed_at: "2026-11-16"
 ---
 
 ## Scene 1 — The Noonday Pause

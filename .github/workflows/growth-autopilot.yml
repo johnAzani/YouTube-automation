@@ -276,6 +276,49 @@ jobs:
           done
           echo "::warning::could not push the new titles; they will be chosen again tomorrow"
 
+      - name: Choose new titles for queued prayers the gate would refuse (${{ matrix.channel }})
+        # pipeline/queue_titles.py: queued long-forms whose titles fail the variety
+        # gate as it stands today — written before the gate existed, they would
+        # publish reading like the ones beside them. Nothing is live yet, so this
+        # is the cheapest title to fix. Writes only a ledger.
+        id: queue-titles
+        if: ${{ steps.metrics.outcome == 'success' }}
+        continue-on-error: true
+        run: python -u scripts/retitle_queue.py --channel "${{ matrix.channel }}" --ledger /tmp/queue-titles.json
+
+      - name: Commit the new queued titles (${{ matrix.channel }})
+        # The script is stamped on a fresh copy from main, never on this
+        # checkout's older one, and its fact-check worksheet is rebuilt from the
+        # stamped file: a queued script is bound to its worksheet by sha256.
+        if: ${{ steps.queue-titles.outcome == 'success' }}
+        continue-on-error: true
+        run: |
+          if [ ! -s /tmp/queue-titles.json ] || [ "$(tr -d ' \n' < /tmp/queue-titles.json)" = "[]" ]; then
+            echo "no queued title needs a new one for ${{ matrix.channel }}"
+            exit 0
+          fi
+          git config user.name "growth-autopilot"
+          git config user.email "actions@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch --quiet origin main
+            git reset --mixed origin/main
+            CHANGED="$(python scripts/retitle_queue.py --apply-ledger /tmp/queue-titles.json)"
+            if [ -z "$CHANGED" ]; then
+              echo "no queued script needed a new title after refreshing from main"
+              exit 0
+            fi
+            for f in $CHANGED; do git add "$f"; done
+            if git diff --cached --quiet; then
+              exit 0
+            fi
+            git commit --quiet -m "chore(growth): retitle queued ${{ matrix.channel }} prayers that read alike [skip ci]"
+            if git push --quiet origin HEAD:main; then
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          echo "::warning::could not push the new queued titles; they will be chosen again tomorrow"
+
       - name: Surface a failing engine without masking the others
         if: always()
         run: |

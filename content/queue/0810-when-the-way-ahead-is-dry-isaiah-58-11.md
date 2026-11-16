@@ -1,6 +1,6 @@
 ---
 id: 0810
-title: 'When the Way Ahead Is Dry: Isaiah 58:11 | The Guided Path'
+title: "Guidance for a Season of Dry Ground: Isaiah 58:11 | The Guided Path"
 slug: when-the-way-ahead-is-dry-isaiah-58-11
 status: approved
 channel: prayer10
@@ -74,6 +74,8 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+title_before: "When the Way Ahead Is Dry: Isaiah 58:11 | The Guided Path"
+queue_title_fixed_at: "2026-11-16"
 ---
 
 ## Scene 1 — Bringing the Decision to the Lord
