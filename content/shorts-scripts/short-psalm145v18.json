@@ -1,0 +1,272 @@
+{
+  "key": "short-psalm145v18",
+  "channel": "secret-place",
+  "psalm": 145,
+  "title": [
+    "GOD IS NEAR",
+    "TO YOU NOW"
+  ],
+  "poster": [
+    "THE LORD IS NEAR",
+    "TO EVERY HEART",
+    "THAT CALLS HIM",
+    "IN TRUTH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "serene moonlight over calm lake water",
+    "flickering candle flame in dark room",
+    "soft moonlight through forest trees",
+    "misty mountain forest at twilight",
+    "rippling water reflection in moonlight",
+    "gently swaying pine branches at night"
+  ],
+  "scenes": [
+    {
+      "a": "If you are holding onto a secret burden that you cannot tell anyone else, listen.",
+      "img": "short-psalm145v18-scene-01.jpg",
+      "kicker": "PSALM 145:18",
+      "sub": "HE IS NEAR TO YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The Lord is nigh unto all them that call upon him, to all that call upon him in truth.",
+      "img": "short-psalm145v18-scene-02.jpg",
+      "kicker": "THE PROMISE",
+      "sub": "CALL UPON HIM IN TRUTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, remove the fear of being misunderstood from this tired soul.",
+      "img": "short-psalm145v18-scene-03.jpg",
+      "kicker": "A HUMBLE PRAYER",
+      "sub": "FIND YOUR REST",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Give me the courage to speak plainly to you in the silence of this late hour.",
+      "img": "short-psalm145v18-scene-04.jpg",
+      "kicker": "SPEAKING TO GOD",
+      "sub": "YOUR HEART IS KNOWN",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Steady my mind as I drift off, knowing your presence remains constant and sure.",
+      "img": "short-psalm145v18-scene-05.jpg",
+      "kicker": "PEACE BE STILL",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Amen.",
+      "img": "short-psalm145v18-scene-06.jpg",
+      "kicker": "THE SECRET PLACE",
+      "sub": "SUBSCRIBE FOR DAILY PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "If you are holding onto a secret burden that you cannot tell anyone else, listen."
+    ],
+    [
+      10,
+      30,
+      "The Lord is nigh unto all them that call upon him, to all that call upon him in truth."
+    ],
+    [
+      30,
+      45,
+      "Lord, remove the fear of being misunderstood from this tired soul."
+    ],
+    [
+      45,
+      65,
+      "Give me the courage to speak plainly to you in the silence of this late hour."
+    ],
+    [
+      65,
+      85,
+      "Steady my mind as I drift off, knowing your presence remains constant and sure."
+    ],
+    [
+      85,
+      105,
+      "I lay my restless thoughts at your feet, trusting that you hear every whisper. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "YOU HOLD A",
+        "SECRET BURDEN",
+        "ALONE TONIGHT"
+      ],
+      [
+        "SECRET BURDEN"
+      ],
+      "PSALM 145 : 18"
+    ],
+    [
+      10,
+      30,
+      [
+        "THE LORD IS NIGH",
+        "TO ALL THEM",
+        "THAT CALL HIM"
+      ],
+      [
+        "THE LORD IS NIGH"
+      ],
+      "PSALM 145 : 18"
+    ],
+    [
+      30,
+      45,
+      [
+        "REMOVE THE FEAR",
+        "OF BEING",
+        "MISUNDERSTOOD NOW"
+      ],
+      [
+        "REMOVE THE FEAR"
+      ],
+      "PSALM 145 : 18"
+    ],
+    [
+      45,
+      65,
+      [
+        "COURAGE TO SPEAK",
+        "PLAINLY TO YOU",
+        "IN THE SILENCE"
+      ],
+      [
+        "PLAINLY"
+      ],
+      "PSALM 145 : 18"
+    ],
+    [
+      65,
+      85,
+      [
+        "STEADY MY MIND",
+        "YOUR PRESENCE IS",
+        "CONSTANT AND SURE"
+      ],
+      [
+        "CONSTANT"
+      ],
+      "PSALM 145 : 18"
+    ],
+    [
+      85,
+      105,
+      [
+        "RESTLESS THOUGHTS",
+        "AT YOUR FEET",
+        "HEAR EVERY WHISPER"
+      ],
+      [
+        "HEAR"
+      ],
+      "PSALM 145 : 18"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are holding onto a secret burden that you cannot tell anyone else, listen.",
+      "kind": "phrase",
+      "words": [
+        "SECRET",
+        "BURDEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The Lord is nigh unto all them that call upon him, to all that call upon him in truth.",
+      "kind": "phrase",
+      "words": [
+        "THE",
+        "LORD",
+        "IS",
+        "NIGH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, remove the fear of being misunderstood from this tired soul.",
+      "kind": "phrase",
+      "words": [
+        "REMOVE",
+        "THE",
+        "FEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Give me the courage to speak plainly to you in the silence of this late hour.",
+      "kind": "phrase",
+      "words": [
+        "SPEAK",
+        "PLAINLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Steady my mind as I drift off, knowing your presence remains constant and sure.",
+      "kind": "phrase",
+      "words": [
+        "CONSTANT",
+        "SURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Amen.",
+      "kind": "phrase",
+      "words": [
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 145:18"
+}

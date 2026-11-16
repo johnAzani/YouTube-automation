@@ -1,0 +1,277 @@
+{
+  "key": "short-psalm4v4",
+  "channel": "secret-place",
+  "psalm": 4,
+  "title": [
+    "BEDTIME PRAYER FOR",
+    "A STILL HEART"
+  ],
+  "poster": [
+    "COMMUNE WITH",
+    "YOUR HEART",
+    "PSALM 4:4",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm twilight lake glowing candles quiet night",
+    "starry sky night pine trees gentle moon",
+    "peaceful candle light dark bedroom table",
+    "calm ocean waves night moonlight stillness",
+    "cozy lantern warm light dim night atmosphere",
+    "misty mountain forest moonlight quiet night"
+  ],
+  "scenes": [
+    {
+      "a": "If an unspoken anger from today is still pacing through your mind, stay right here.",
+      "img": "short-psalm4v4-scene-01.jpg",
+      "kicker": "PSALM 4:4",
+      "sub": "COMMUNE WITH YOUR HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Stand in awe, and sin not: commune with your own heart upon your bed, and be still.",
+      "img": "short-psalm4v4-scene-02.jpg",
+      "kicker": "PSALM 4:4",
+      "sub": "BE STILL AND REST",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I bring every lingering grievance and sharp thought into your peaceful presence.",
+      "img": "short-psalm4v4-scene-03.jpg",
+      "kicker": "EVENING PRAYER",
+      "sub": "LEAVE ANGER BEHIND",
+      "cam": "pull_out",
+      "focus": [
+        0.48,
+        0.52
+      ]
+    },
+    {
+      "a": "Silence the urge to replay today's battles in the dark.",
+      "img": "short-psalm4v4-scene-04.jpg",
+      "kicker": "QUIET YOUR MIND",
+      "sub": "GOD IS YOUR PEACE",
+      "cam": "pan_left",
+      "focus": [
+        0.52,
+        0.48
+      ]
+    },
+    {
+      "a": "laying down every resentment before I sleep.",
+      "img": "short-psalm4v4-scene-05.jpg",
+      "kicker": "REST IN GOD",
+      "sub": "LAY DOWN YOUR BURDENS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "wrap me in your deep rest tonight.",
+      "img": "short-psalm4v4-scene-06.jpg",
+      "kicker": "BEDTIME BLESSING",
+      "sub": "SLEEP IN HIS PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      11,
+      "If an unspoken anger from today is still pacing through your mind, stay right here. God’s word speaks into your quiet room:"
+    ],
+    [
+      11,
+      21,
+      "Stand in awe, and sin not: commune with your own heart upon your bed, and be still."
+    ],
+    [
+      21,
+      31,
+      "Heavenly Father, as night falls, I bring every lingering grievance and sharp thought into your peaceful presence."
+    ],
+    [
+      31,
+      41,
+      "Silence the urge to replay today's battles in the dark. Let awe of your greatness replace my quiet irritation."
+    ],
+    [
+      41,
+      50,
+      "I yield this restless heart to your care, laying down every resentment before I sleep."
+    ],
+    [
+      50,
+      60,
+      "Guard my mind, quiet my soul, and wrap me in your deep rest tonight. Amen. Subscribe for daily night prayers."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      11,
+      [
+        "IF AN UNSPOKEN ANGER FROM TODAY",
+        "IS STILL PACING THROUGH YOUR MIND",
+        "STAY RIGHT HERE IN THIS QUIET ROOM"
+      ],
+      [
+        "UNSPOKEN ANGER",
+        "PACING"
+      ],
+      "PSALM 4 : 4"
+    ],
+    [
+      11,
+      21,
+      [
+        "STAND IN AWE AND SIN NOT",
+        "COMMUNE WITH YOUR OWN HEART",
+        "UPON YOUR BED AND BE STILL"
+      ],
+      [
+        "STAND IN AWE",
+        "BE STILL"
+      ],
+      "PSALM 4 : 4"
+    ],
+    [
+      21,
+      31,
+      [
+        "HEAVENLY FATHER AS NIGHT FALLS",
+        "I BRING EVERY LINGERING GRIEVANCE",
+        "INTO YOUR PEACEFUL PRESENCE"
+      ],
+      [
+        "LINGERING GRIEVANCE",
+        "PEACEFUL PRESENCE"
+      ],
+      "PSALM 4 : 4"
+    ],
+    [
+      31,
+      41,
+      [
+        "SILENCE THE URGE TO REPLAY",
+        "TODAYS BATTLES IN THE DARK",
+        "LET AWE REPLACE MY IRRITATION"
+      ],
+      [
+        "SILENCE THE URGE",
+        "REPLACE IRRITATION"
+      ],
+      "PSALM 4 : 4"
+    ],
+    [
+      41,
+      50,
+      [
+        "I YIELD THIS RESTLESS HEART",
+        "LAYING DOWN EVERY RESENTMENT",
+        "BEFORE I SLEEP TONIGHT"
+      ],
+      [
+        "RESTLESS HEART",
+        "LAYING DOWN"
+      ],
+      "PSALM 4 : 4"
+    ],
+    [
+      50,
+      60,
+      [
+        "GUARD MY MIND AND QUIET MY SOUL",
+        "WRAP ME IN YOUR DEEP REST",
+        "SUBSCRIBE FOR DAILY NIGHT PRAYERS"
+      ],
+      [
+        "GUARD MY MIND",
+        "DEEP REST"
+      ],
+      "PSALM 4 : 4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If an unspoken anger from today is still pacing through your mind, stay right here.",
+      "kind": "phrase",
+      "words": [
+        "UNSPOKEN",
+        "ANGER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Stand in awe, and sin not: commune with your own heart upon your bed, and be still.",
+      "kind": "phrase",
+      "words": [
+        "STAND",
+        "IN",
+        "AWE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I bring every lingering grievance and sharp thought into your peaceful presence.",
+      "kind": "phrase",
+      "words": [
+        "LINGERING",
+        "GRIEVANCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Silence the urge to replay today's battles in the dark.",
+      "kind": "phrase",
+      "words": [
+        "SILENCE",
+        "URGE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "laying down every resentment before I sleep.",
+      "kind": "phrase",
+      "words": [
+        "LAYING",
+        "DOWN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "wrap me in your deep rest tonight.",
+      "kind": "phrase",
+      "words": [
+        "DEEP",
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 4:4"
+}

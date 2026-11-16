@@ -1,0 +1,271 @@
+{
+  "key": "short-psalm119v165",
+  "channel": "secret-place",
+  "psalm": 119,
+  "title": [
+    "PEACE FOR YOUR",
+    "RESTLESS SOUL"
+  ],
+  "poster": [
+    "GREAT PEACE",
+    "HAVE THEY",
+    "WHICH LOVE",
+    "THY LAW"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm mountain lake night",
+    "glowing candle in dark room",
+    "slow moving mist over forest",
+    "starry night sky time lapse",
+    "still water reflecting moon",
+    "single flame flickering in darkness"
+  ],
+  "scenes": [
+    {
+      "a": "If you are wrestling with a lingering frustration that refuses to quiet your mind, listen.",
+      "img": "short-psalm119v165-scene-01.jpg",
+      "kicker": "PSALM 119:165",
+      "sub": "FINDING STABILITY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Great peace have they which love thy law: and nothing shall offend them.",
+      "img": "short-psalm119v165-scene-02.jpg",
+      "kicker": "THE PROMISE",
+      "sub": "STEADFAST TRUTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, help me trust this stillness as I lay down my burden before your throne tonight.",
+      "img": "short-psalm119v165-scene-03.jpg",
+      "kicker": "SURRENDER",
+      "sub": "LAYING DOWN BURDENS",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Remove the sharp edges of today’s offenses and replace them with your gentle, perfect calm.",
+      "img": "short-psalm119v165-scene-04.jpg",
+      "kicker": "RELEASE",
+      "sub": "SOFTENING THE HEART",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "May my heart find its rhythm in your truth while the world sleeps around me now.",
+      "img": "short-psalm119v165-scene-05.jpg",
+      "kicker": "REST",
+      "sub": "ABIDING IN PEACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Keep my spirit steady through this night until I wake to your mercy once again. Amen.",
+      "img": "short-psalm119v165-scene-06.jpg",
+      "kicker": "TRUST",
+      "sub": "SAFE IN HIS CARE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If you are wrestling with a lingering frustration that refuses to quiet your mind, listen."
+    ],
+    [
+      9,
+      20,
+      "Great peace have they which love thy law: and nothing shall offend them."
+    ],
+    [
+      21,
+      33,
+      "Lord, help me trust this stillness as I lay down my burden before your throne tonight."
+    ],
+    [
+      34,
+      46,
+      "Remove the sharp edges of today’s offenses and replace them with your gentle, perfect calm."
+    ],
+    [
+      47,
+      60,
+      "May my heart find its rhythm in your truth while the world sleeps around me now."
+    ],
+    [
+      61,
+      75,
+      "Keep my spirit steady through this night until I wake to your mercy once again. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "LINGERING FRUSTRATION",
+        "REFUSES TO QUIET",
+        "YOUR MIND"
+      ],
+      [
+        "FRUSTRATION"
+      ],
+      "PSALM 119:165"
+    ],
+    [
+      9,
+      20,
+      [
+        "GREAT PEACE",
+        "HAVE THEY WHICH",
+        "LOVE THY LAW",
+        "NOTHING SHALL",
+        "OFFEND THEM"
+      ],
+      [
+        "GREAT PEACE"
+      ],
+      "PSALM 119:165"
+    ],
+    [
+      21,
+      33,
+      [
+        "TRUST THIS",
+        "STILLNESS AS I",
+        "LAY DOWN",
+        "MY BURDEN"
+      ],
+      [
+        "STILLNESS"
+      ],
+      "PSALM 119:165"
+    ],
+    [
+      34,
+      46,
+      [
+        "REMOVE THE",
+        "SHARP EDGES",
+        "OF TODAY'S OFFENSES",
+        "GENTLE PERFECT",
+        "CALM"
+      ],
+      [
+        "PERFECT CALM"
+      ],
+      "PSALM 119:165"
+    ],
+    [
+      47,
+      60,
+      [
+        "FIND ITS RHYTHM",
+        "IN YOUR TRUTH",
+        "WHILE THE WORLD",
+        "SLEEPS AROUND"
+      ],
+      [
+        "TRUTH"
+      ],
+      "PSALM 119:165"
+    ],
+    [
+      61,
+      75,
+      [
+        "SPIRIT STEADY",
+        "THROUGH THIS NIGHT",
+        "WAKE TO YOUR",
+        "MERCY ONCE AGAIN"
+      ],
+      [
+        "STEADY"
+      ],
+      "PSALM 119:165"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are wrestling with a lingering frustration that refuses to quiet your mind, listen.",
+      "kind": "phrase",
+      "words": [
+        "FRUSTRATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Great peace have they which love thy law: and nothing shall offend them.",
+      "kind": "phrase",
+      "words": [
+        "GREAT PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, help me trust this stillness as I lay down my burden before your throne tonight.",
+      "kind": "phrase",
+      "words": [
+        "STILLNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Remove the sharp edges of today’s offenses and replace them with your gentle, perfect calm.",
+      "kind": "phrase",
+      "words": [
+        "PERFECT CALM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May my heart find its rhythm in your truth while the world sleeps around me now.",
+      "kind": "phrase",
+      "words": [
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Keep my spirit steady through this night until I wake to your mercy once again. Amen.",
+      "kind": "phrase",
+      "words": [
+        "STEADY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 119:165"
+}

@@ -1,0 +1,270 @@
+{
+  "key": "short-psalm42v8",
+  "channel": "secret-place",
+  "psalm": 42,
+  "title": [
+    "HIS SONG IN",
+    "THE NIGHT"
+  ],
+  "poster": [
+    "HIS SONG",
+    "IN THE",
+    "DARKNESS",
+    "OF NIGHT"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm mountain lake night",
+    "glowing candle in dark room",
+    "rippling water under moonlight",
+    "misty forest at twilight",
+    "stars reflecting in dark lake",
+    "soft shadows in a quiet bedroom"
+  ],
+  "scenes": [
+    {
+      "a": "If the silence of this room feels louder than your own thoughts, you are heard.",
+      "img": "short-psalm42v8-scene-01.jpg",
+      "kicker": "PSALM 42:8",
+      "sub": "HE IS WITH YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In these late hours, we rest in the promise of the word.",
+      "img": "short-psalm42v8-scene-02.jpg",
+      "kicker": "PSALM 42:8",
+      "sub": "HIS FAITHFUL PROMISE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Yet the LORD will command his lovingkindness in the day time, and in the night his song shall be with me, and my prayer unto the God of my life.",
+      "img": "short-psalm42v8-scene-03.jpg",
+      "kicker": "PSALM 42:8",
+      "sub": "HIS SONG REMAINS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, may Your melody replace the restless rhythm of my worried heart tonight.",
+      "img": "short-psalm42v8-scene-04.jpg",
+      "kicker": "PSALM 42:8",
+      "sub": "LET YOUR PEACE DESCEND",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Bring stillness to my spirit as I place every burden into Your capable hands.",
+      "img": "short-psalm42v8-scene-05.jpg",
+      "kicker": "PSALM 42:8",
+      "sub": "REST IN HIS GRACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Grant me the gift of deep sleep, knowing You remain the keeper of my life.",
+      "img": "short-psalm42v8-scene-06.jpg",
+      "kicker": "PSALM 42:8",
+      "sub": "SLEEP IN HIS CARE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If the silence of this room feels louder than your own thoughts, you are heard."
+    ],
+    [
+      9,
+      17,
+      "In these late hours, we rest in the promise of the word."
+    ],
+    [
+      18,
+      38,
+      "Yet the LORD will command his lovingkindness in the day time, and in the night his song shall be with me, and my prayer unto the God of my life."
+    ],
+    [
+      39,
+      58,
+      "Lord, may Your melody replace the restless rhythm of my worried heart tonight."
+    ],
+    [
+      59,
+      78,
+      "Bring stillness to my spirit as I place every burden into Your capable hands."
+    ],
+    [
+      79,
+      100,
+      "Grant me the gift of deep sleep, knowing You remain the keeper of my life."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THE SILENCE",
+        "IS LOUDER",
+        "YOU ARE",
+        "HEARD"
+      ],
+      [
+        "HEARD"
+      ],
+      "PSALM 42:8"
+    ],
+    [
+      9,
+      17,
+      [
+        "IN LATE HOURS",
+        "WE REST",
+        "IN HIS",
+        "WORD"
+      ],
+      [
+        "REST"
+      ],
+      "PSALM 42:8"
+    ],
+    [
+      18,
+      38,
+      [
+        "THE LORD",
+        "COMMANDS LOVINGKINDNESS",
+        "HIS SONG",
+        "WITH ME"
+      ],
+      [
+        "LOVINGKINDNESS"
+      ],
+      "PSALM 42:8"
+    ],
+    [
+      39,
+      58,
+      [
+        "REPLACE THE",
+        "RESTLESS RHYTHM",
+        "OF MY",
+        "WORRIED HEART"
+      ],
+      [
+        "RESTLESS"
+      ],
+      "PSALM 42:8"
+    ],
+    [
+      59,
+      78,
+      [
+        "STILLNESS TO",
+        "MY SPIRIT",
+        "INTO YOUR",
+        "CAPABLE HANDS"
+      ],
+      [
+        "STILLNESS"
+      ],
+      "PSALM 42:8"
+    ],
+    [
+      79,
+      100,
+      [
+        "GIFT OF",
+        "DEEP SLEEP",
+        "KEEPER OF",
+        "MY LIFE"
+      ],
+      [
+        "KEEPER"
+      ],
+      "PSALM 42:8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the silence of this room feels louder than your own thoughts, you are heard.",
+      "kind": "phrase",
+      "words": [
+        "HEARD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In these late hours, we rest in the promise of the word.",
+      "kind": "phrase",
+      "words": [
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Yet the LORD will command his lovingkindness in the day time, and in the night his song shall be with me, and my prayer unto the God of my life.",
+      "kind": "phrase",
+      "words": [
+        "LOVINGKINDNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, may Your melody replace the restless rhythm of my worried heart tonight.",
+      "kind": "phrase",
+      "words": [
+        "RESTLESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Bring stillness to my spirit as I place every burden into Your capable hands.",
+      "kind": "phrase",
+      "words": [
+        "STILLNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant me the gift of deep sleep, knowing You remain the keeper of my life.",
+      "kind": "phrase",
+      "words": [
+        "KEEPER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 42:8"
+}
