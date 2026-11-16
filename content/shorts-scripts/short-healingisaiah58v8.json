@@ -1,0 +1,269 @@
+{
+  "key": "short-healingisaiah58v8",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "ISAIAH 58:8",
+    "HEALING LIGHT"
+  ],
+  "poster": [
+    "RESTORED BY",
+    "HIS GLORY",
+    "ISAIAH 58",
+    "STRENGTH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters",
+    "warm golden sanctuary light",
+    "peaceful white dove flying in sky",
+    "soft sunlight through forest canopy",
+    "calm ocean waves at dawn",
+    "glowing candlelight in dark room"
+  ],
+  "scenes": [
+    {
+      "a": "If the silence in your room feels heavy with uncertainty, stay for this moment.",
+      "img": "short-healingisaiah58v8-scene-01.jpg",
+      "kicker": "ISAIAH 58:8",
+      "sub": "GOD RESTORES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We come before the Father to seek his restoration in this quiet, holy time.",
+      "img": "short-healingisaiah58v8-scene-02.jpg",
+      "kicker": "HIS PROMISE",
+      "sub": "FINDING PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "Then shall thy light break forth as the morning, and thine health shall spring forth speedily: and thy righteousness shall go before thee; the glory of the LORD shall be thy rereward.",
+      "img": "short-healingisaiah58v8-scene-03.jpg",
+      "kicker": "THE WORD",
+      "sub": "DIVINE HEALING",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, touch the areas of exhaustion and pain that weigh upon the soul right now.",
+      "img": "short-healingisaiah58v8-scene-04.jpg",
+      "kicker": "OUR PRAYER",
+      "sub": "RELEASE YOUR BURDEN",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "May your presence settle over this tired mind, bringing deep comfort and internal rest.",
+      "img": "short-healingisaiah58v8-scene-05.jpg",
+      "kicker": "SOUGHT PEACE",
+      "sub": "RESTORED SPIRIT",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "a": "We trust in your timing and your infinite grace to mend what is broken.",
+      "img": "short-healingisaiah58v8-scene-06.jpg",
+      "kicker": "FAITH",
+      "sub": "TRUST HIS LOVE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If the silence in your room feels heavy with uncertainty, stay for this moment."
+    ],
+    [
+      9,
+      17,
+      "We come before the Father to seek his restoration in this quiet, holy time."
+    ],
+    [
+      18,
+      38,
+      "Then shall thy light break forth as the morning, and thine health shall spring forth speedily: and thy righteousness shall go before thee; the glory of the LORD shall be thy rereward."
+    ],
+    [
+      39,
+      52,
+      "Lord, touch the areas of exhaustion and pain that weigh upon the soul right now."
+    ],
+    [
+      53,
+      67,
+      "May your presence settle over this tired mind, bringing deep comfort and internal rest."
+    ],
+    [
+      68,
+      80,
+      "We trust in your timing and your infinite grace to mend what is broken."
+    ],
+    [
+      81,
+      95,
+      "We rest in your care, awaiting the renewal that you alone can provide tonight."
+    ],
+    [
+      96,
+      105,
+      "Amen. Subscribe for more moments of quiet peace and restoration through his word."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF THE SILENCE",
+        "IN YOUR ROOM",
+        "FEELS HEAVY",
+        "WITH UNCERTAINTY"
+      ],
+      [
+        "FEELS HEAVY"
+      ],
+      "ISAIAH 58:8"
+    ],
+    [
+      9,
+      17,
+      [
+        "WE COME BEFORE",
+        "THE FATHER",
+        "TO SEEK HIS",
+        "RESTORATION"
+      ],
+      [
+        "RESTORATION"
+      ],
+      "ISAIAH 58:8"
+    ],
+    [
+      18,
+      38,
+      [
+        "THEN SHALL THY LIGHT",
+        "BREAK FORTH AS THE MORNING",
+        "AND THINE HEALTH SHALL",
+        "SPRING FORTH SPEEDILY"
+      ],
+      [
+        "THINE HEALTH"
+      ],
+      "ISAIAH 58:8"
+    ],
+    [
+      39,
+      52,
+      [
+        "LORD TOUCH THE AREAS",
+        "OF EXHAUSTION",
+        "WEIGHING UPON THE SOUL"
+      ],
+      [
+        "SOUL"
+      ],
+      "ISAIAH 58:8"
+    ],
+    [
+      53,
+      67,
+      [
+        "MAY YOUR PRESENCE",
+        "SETTLE OVER THIS MIND",
+        "BRINGING DEEP COMFORT"
+      ],
+      [
+        "DEEP COMFORT"
+      ],
+      "ISAIAH 58:8"
+    ],
+    [
+      68,
+      80,
+      [
+        "WE TRUST IN YOUR",
+        "TIMING AND GRACE",
+        "TO MEND EVERYTHING"
+      ],
+      [
+        "GRACE"
+      ],
+      "ISAIAH 58:8"
+    ],
+    [
+      81,
+      95,
+      [
+        "WE REST IN YOUR",
+        "CARE AWAITING THE",
+        "RENEWAL YOU PROVIDE"
+      ],
+      [
+        "RENEWAL"
+      ],
+      "ISAIAH 58:8"
+    ],
+    [
+      96,
+      105,
+      [
+        "AMEN SUBSCRIBE",
+        "FOR MORE PEACE",
+        "AND RESTORATION"
+      ],
+      [
+        "PEACE"
+      ],
+      "ISAIAH 58:8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the silence in your room feels heavy with uncertainty, stay for this moment.",
+      "kind": "phrase",
+      "words": [
+        "FEELS",
+        "HEAVY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Then shall thy light break forth as the morning, and thine health shall spring forth speedily: and thy righteousness shall go before thee; the glory of the LORD shall be thy rereward.",
+      "kind": "phrase",
+      "words": [
+        "THINE",
+        "HEALTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 58:8"
+}

@@ -1,0 +1,276 @@
+{
+  "key": "short-healingmatthew8v17",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "HEALING WORD",
+    "FOR YOUR SOUL"
+  ],
+  "poster": [
+    "RESTORE YOUR",
+    "WEARY SPIRIT",
+    "IN HIS GRACE",
+    "PRAYER FOR YOU"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "glowing golden light flowing over still water",
+    "white dove wings in soft ethereal mist",
+    "peaceful turquoise waves rippling gently",
+    "warm sunlight streaming through stained glass",
+    "serene garden waterfall in morning light",
+    "breeze blowing through field of lilies"
+  ],
+  "scenes": [
+    {
+      "a": "Right now, as that recurring worry pulls at your heart, let stillness cover your spirit.",
+      "img": "short-healingmatthew8v17-scene-01.jpg",
+      "kicker": "MATTHEW 8:17",
+      "sub": "FINDING GOD IN THE QUIET",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Listen to the promise that shifts your heavy burden into the hands of the Savior.",
+      "img": "short-healingmatthew8v17-scene-02.jpg",
+      "kicker": "MATTHEW 8:17",
+      "sub": "HIS PROMISE IS TRUE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "That it might be fulfilled which was spoken by Esaias the prophet, saying, Himself took our infirmities, and bare our sicknesses.",
+      "img": "short-healingmatthew8v17-scene-03.jpg",
+      "kicker": "MATTHEW 8:17",
+      "sub": "HIS WORD RESTORES",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, take these infirmities that weigh so heavily upon this dear one today, we pray.",
+      "img": "short-healingmatthew8v17-scene-04.jpg",
+      "kicker": "MATTHEW 8:17",
+      "sub": "SURRENDER YOUR BURDEN",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "May your presence bring rest to the weary parts of their mind and tired body.",
+      "img": "short-healingmatthew8v17-scene-05.jpg",
+      "kicker": "MATTHEW 8:17",
+      "sub": "FIND PEACE IN HIM",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Let your healing peace fill this space until they feel truly whole and entirely held.",
+      "img": "short-healingmatthew8v17-scene-06.jpg",
+      "kicker": "MATTHEW 8:17",
+      "sub": "REST IN HIS LOVE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Right now, as that recurring worry pulls at your heart, let stillness cover your spirit."
+    ],
+    [
+      8,
+      17,
+      "Listen to the promise that shifts your heavy burden into the hands of the Savior."
+    ],
+    [
+      17,
+      30,
+      "That it might be fulfilled which was spoken by Esaias the prophet, saying, Himself took our infirmities, and bare our sicknesses."
+    ],
+    [
+      30,
+      42,
+      "Lord, take these infirmities that weigh so heavily upon this dear one today, we pray."
+    ],
+    [
+      42,
+      53,
+      "May your presence bring rest to the weary parts of their mind and tired body."
+    ],
+    [
+      53,
+      65,
+      "Let your healing peace fill this space until they feel truly whole and entirely held."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "RIGHT NOW",
+        "RECURRING WORRY",
+        "PULLS AT HEART",
+        "STILLNESS COVERS"
+      ],
+      [
+        "RECURRING WORRY"
+      ],
+      "MATTHEW 8:17"
+    ],
+    [
+      8,
+      17,
+      [
+        "LISTEN TO",
+        "THE PROMISE",
+        "SHIFTS YOUR",
+        "HEAVY BURDEN"
+      ],
+      [
+        "HEAVY BURDEN"
+      ],
+      "MATTHEW 8:17"
+    ],
+    [
+      17,
+      30,
+      [
+        "HIMSELF TOOK",
+        "OUR INFIRMITIES",
+        "AND BARE",
+        "OUR SICKNESSES"
+      ],
+      [
+        "HIMSELF TOOK"
+      ],
+      "MATTHEW 8:17"
+    ],
+    [
+      30,
+      42,
+      [
+        "LORD TAKE",
+        "THESE INFIRMITIES",
+        "WEIGH SO HEAVILY",
+        "UPON THIS ONE"
+      ],
+      [
+        "THESE INFIRMITIES"
+      ],
+      "MATTHEW 8:17"
+    ],
+    [
+      42,
+      53,
+      [
+        "MAY YOUR",
+        "PRESENCE BRING",
+        "REST TO THE",
+        "WEARY MIND"
+      ],
+      [
+        "WEARY MIND"
+      ],
+      "MATTHEW 8:17"
+    ],
+    [
+      53,
+      65,
+      [
+        "HEALING PEACE",
+        "FILL THIS SPACE",
+        "FEEL TRULY",
+        "WHOLE AND HELD"
+      ],
+      [
+        "HEALING PEACE"
+      ],
+      "MATTHEW 8:17"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Right now, as that recurring worry pulls at your heart, let stillness cover your spirit.",
+      "kind": "phrase",
+      "words": [
+        "RECURRING",
+        "WORRY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Listen to the promise that shifts your heavy burden into the hands of the Savior.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "BURDEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "That it might be fulfilled which was spoken by Esaias the prophet, saying, Himself took our infirmities, and bare our sicknesses.",
+      "kind": "phrase",
+      "words": [
+        "HIMSELF",
+        "TOOK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, take these infirmities that weigh so heavily upon this dear one today, we pray.",
+      "kind": "phrase",
+      "words": [
+        "THESE",
+        "INFIRMITIES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May your presence bring rest to the weary parts of their mind and tired body.",
+      "kind": "phrase",
+      "words": [
+        "WEARY",
+        "MIND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let your healing peace fill this space until they feel truly whole and entirely held.",
+      "kind": "phrase",
+      "words": [
+        "HEALING",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Matthew 8:17"
+}

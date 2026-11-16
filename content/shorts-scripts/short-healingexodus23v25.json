@@ -1,0 +1,296 @@
+{
+  "key": "short-healingexodus23v25",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "EXODUS 23:25",
+    "PRAYER FOR RESTORATION"
+  ],
+  "poster": [
+    "THE HEALING BALM",
+    "Exodus 23:25",
+    "Restoration Prayer",
+    "Quiet Waters"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters gentle ripples",
+    "warm golden sanctuary light filtering through trees",
+    "peaceful white dove resting near quiet waters",
+    "calm mountain stream under soft morning light",
+    "glowing sunlight on calm turquoise lake surface",
+    "gentle stream flowing through quiet green valley",
+    "soft golden light illuminating tranquil water"
+  ],
+  "scenes": [
+    {
+      "a": "If your body feels drained and weariness weighs down your steps, pause and listen closely right now.",
+      "img": "short-healingexodus23v25-scene-01.jpg",
+      "kicker": "EXODUS 23:25",
+      "sub": "PAUSE AND LISTEN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, we come before your presence seeking your comforting touch and your abiding strength.",
+      "img": "short-healingexodus23v25-scene-02.jpg",
+      "kicker": "EXODUS 23:25",
+      "sub": "SEEKING STRENGTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Your holy word reminds us of your promise to care for our daily needs.",
+      "img": "short-healingexodus23v25-scene-03.jpg",
+      "kicker": "EXODUS 23:25",
+      "sub": "HOLY PROMISE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "As it is written, And ye shall serve the LORD your God, and he shall bless thy bread, and thy water;",
+      "img": "short-healingexodus23v25-scene-04.jpg",
+      "kicker": "EXODUS 23:25",
+      "sub": "SERVE THE LORD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "and I will take sickness away from the midst of thee.",
+      "img": "short-healingexodus23v25-scene-05.jpg",
+      "kicker": "EXODUS 23:25",
+      "sub": "TAKE SICKNESS AWAY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, grant physical renewal to every weary muscle and tired spirit listening today.",
+      "img": "short-healingexodus23v25-scene-06.jpg",
+      "kicker": "EXODUS 23:25",
+      "sub": "PHYSICAL RENEWAL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Pour out your peace like gentle water upon troubled thoughts and anxious hearts.",
+      "img": "short-healingexodus23v25-scene-07.jpg",
+      "kicker": "EXODUS 23:25",
+      "sub": "PEACE LIKE WATER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "If your body feels drained and weariness weighs down your steps, pause and listen closely right now."
+    ],
+    [
+      12,
+      24,
+      "Father, we come before your presence seeking your comforting touch and your abiding strength."
+    ],
+    [
+      24,
+      36,
+      "Your holy word reminds us of your promise to care for our daily needs."
+    ],
+    [
+      36,
+      50,
+      "As it is written, And ye shall serve the LORD your God, and he shall bless thy bread, and thy water;"
+    ],
+    [
+      50,
+      62,
+      "and I will take sickness away from the midst of thee."
+    ],
+    [
+      62,
+      76,
+      "Lord, grant physical renewal to every weary muscle and tired spirit listening today."
+    ],
+    [
+      76,
+      90,
+      "Pour out your peace like gentle water upon troubled thoughts and anxious hearts."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "IF YOUR BODY FEELS",
+        "DRAINED AND WEARINESS WEIGHS",
+        "DOWN YOUR STEPS,"
+      ],
+      "DRAINED",
+      "EXODUS 23:25"
+    ],
+    [
+      12,
+      24,
+      [
+        "FATHER WE COME BEFORE",
+        "YOUR PRESENCE SEEKING",
+        "YOUR COMFORTING TOUCH"
+      ],
+      "PRESENCE",
+      "EXODUS 23:25"
+    ],
+    [
+      24,
+      36,
+      [
+        "YOUR HOLY WORD REMINDS",
+        "US OF YOUR PROMISE",
+        "TO CARE FOR NEEDS"
+      ],
+      "PROMISE",
+      "EXODUS 23:25"
+    ],
+    [
+      36,
+      50,
+      [
+        "AND YE SHALL SERVE",
+        "THE LORD YOUR GOD",
+        "AND HE SHALL BLESS"
+      ],
+      "SERVE",
+      "EXODUS 23:25"
+    ],
+    [
+      50,
+      62,
+      [
+        "THY BREAD AND THY",
+        "WATER AND I WILL",
+        "TAKE SICKNESS AWAY"
+      ],
+      "SICKNESS",
+      "EXODUS 23:25"
+    ],
+    [
+      62,
+      76,
+      [
+        "LORD GRANT PHYSICAL",
+        "RENEWAL TO EVERY WEARY",
+        "MUSCLE AND TIRED SPIRIT"
+      ],
+      "RENEWAL",
+      "EXODUS 23:25"
+    ],
+    [
+      76,
+      90,
+      [
+        "POUR OUT YOUR PEACE",
+        "LIKE GENTLE WATER UPON",
+        "TROUBLED THOUGHTS"
+      ],
+      "PEACE",
+      "EXODUS 23:25"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If your body feels drained and weariness weighs down your steps, pause and listen closely right now.",
+      "kind": "phrase",
+      "words": [
+        "DRAINED",
+        "WEARINESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we come before your presence seeking your comforting touch and your abiding strength.",
+      "kind": "phrase",
+      "words": [
+        "COMFORTING",
+        "STRENGTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Your holy word reminds us of your promise to care for our daily needs.",
+      "kind": "phrase",
+      "words": [
+        "PROMISE",
+        "NEEDS"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "As it is written, And ye shall serve the LORD your God, and he shall bless thy bread, and thy water;",
+      "kind": "phrase",
+      "words": [
+        "SERVE",
+        "BLESS"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "and I will take sickness away from the midst of thee.",
+      "kind": "phrase",
+      "words": [
+        "TAKE",
+        "SICKNESS"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, grant physical renewal to every weary muscle and tired spirit listening today.",
+      "kind": "phrase",
+      "words": [
+        "RENEWAL",
+        "SPIRIT"
+      ],
+      "hi": 5,
+      "slot": "C"
+    },
+    {
+      "a": "Pour out your peace like gentle water upon troubled thoughts and anxious hearts.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "WATER"
+      ],
+      "hi": 6,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Exodus 23:25"
+}

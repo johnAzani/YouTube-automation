@@ -1,0 +1,373 @@
+{
+  "key": "short-healingproverbs4v20",
+  "channel": "prayer6",
+  "psalm": null,
+  "title": [
+    "HEALTH TO",
+    "ALL YOUR FLESH"
+  ],
+  "poster": [
+    "GOD'S WORD",
+    "IS LIFE AND",
+    "HEALING TO",
+    "YOUR BODY"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Healing Balm — receive God's healing peace"
+  ],
+  "stock_queries": [
+    "tranquil turquoise living waters gently flowing night",
+    "warm golden sanctuary light soft glow quiet altar",
+    "white dove floating over peaceful turquoise waters",
+    "golden sunlight rays streaming through calm sanctuary windows",
+    "soft glowing turquoise living water waves beneath stars",
+    "warm golden glowing light quiet sanctuary atmosphere",
+    "peaceful white dove gently gliding over calm blue water",
+    "tranquil turquoise stream under soft golden morning light"
+  ],
+  "scenes": [
+    {
+      "a": "As you hold your aching body",
+      "img": "short-healingproverbs4v20-scene-01.jpg",
+      "kicker": "PROVERBS 4:20-22",
+      "sub": "HEALING FOR BODY AND SOUL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "My son, attend to my words",
+      "img": "short-healingproverbs4v20-scene-02.jpg",
+      "kicker": "PROVERBS 4:20-22",
+      "sub": "INCLINE THINE EAR",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let them not depart from thine eyes",
+      "img": "short-healingproverbs4v20-scene-03.jpg",
+      "kicker": "PROVERBS 4:20-22",
+      "sub": "KEEP THEM IN THINE HEART",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "For they are life unto those that find them",
+      "img": "short-healingproverbs4v20-scene-04.jpg",
+      "kicker": "PROVERBS 4:20-22",
+      "sub": "HEALTH TO ALL THEIR FLESH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Heavenly Father, pour your tender restoration",
+      "img": "short-healingproverbs4v20-scene-05.jpg",
+      "kicker": "PROVERBS 4:20-22",
+      "sub": "RESTORING BODY AND MIND",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Let your scripture take deep root",
+      "img": "short-healingproverbs4v20-scene-06.jpg",
+      "kicker": "PROVERBS 4:20-22",
+      "sub": "RENEWED STRENGTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Surround this weary heart",
+      "img": "short-healingproverbs4v20-scene-07.jpg",
+      "kicker": "PROVERBS 4:20-22",
+      "sub": "HEAVENLY COMFORT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Subscribe to receive God's healing peace",
+      "img": "short-healingproverbs4v20-scene-08.jpg",
+      "kicker": "PROVERBS 4:20-22",
+      "sub": "THE HEALING BALM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "As you hold your aching body in the quiet darkness, God brings his gentle healing."
+    ],
+    [
+      7,
+      12,
+      "Proverbs declares: My son, attend to my words; incline thine ear unto my sayings."
+    ],
+    [
+      12,
+      18,
+      "Let them not depart from thine eyes; keep them in the midst of thine heart."
+    ],
+    [
+      18,
+      24,
+      "For they are life unto those that find them, and health to all their flesh."
+    ],
+    [
+      24,
+      30,
+      "Heavenly Father, pour your tender restoration over every weary fiber of body and mind tonight."
+    ],
+    [
+      30,
+      36,
+      "Let your scripture take deep root, breathing renewed strength into exhausted places and restoring quiet rest."
+    ],
+    [
+      36,
+      41,
+      "Surround this weary heart with your heavenly comfort."
+    ],
+    [
+      41,
+      45,
+      "Subscribe to receive God's healing peace."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "AS YOU HOLD YOUR",
+        "ACHING BODY IN DARKNESS",
+        "GOD BRINGS HEALNG"
+      ],
+      [
+        "ACHING",
+        "BODY",
+        "HEALING"
+      ],
+      "PROVERBS 4:20-22"
+    ],
+    [
+      7,
+      12,
+      [
+        "PROVERBS DECLARES",
+        "ATTEND TO MY WORDS",
+        "INCLINE THINE EAR"
+      ],
+      [
+        "ATTEND",
+        "WORDS",
+        "EAR"
+      ],
+      "PROVERBS 4:20-22"
+    ],
+    [
+      12,
+      18,
+      [
+        "KEEP THEM IN THE",
+        "MIDST OF THINE HEART",
+        "NEVER DEPART"
+      ],
+      [
+        "MIDST",
+        "THINE",
+        "HEART"
+      ],
+      "PROVERBS 4:20-22"
+    ],
+    [
+      18,
+      24,
+      [
+        "THEY ARE LIFE TO",
+        "THOSE THAT FIND THEM",
+        "HEALTH TO ALL FLESH"
+      ],
+      [
+        "LIFE",
+        "HEALTH",
+        "FLESH"
+      ],
+      "PROVERBS 4:20-22"
+    ],
+    [
+      24,
+      30,
+      [
+        "POUR YOUR TENDER",
+        "RESTORATION OVER EVERY",
+        "WEARY FIBER TONIGHT"
+      ],
+      [
+        "TENDER",
+        "RESTORATION",
+        "WEARY"
+      ],
+      "PROVERBS 4:20-22"
+    ],
+    [
+      30,
+      36,
+      [
+        "BREATHING RENEWED STRENGTH",
+        "INTO EXHAUSTED PLACES",
+        "RESTORING QUIET REST"
+      ],
+      [
+        "RENEWED",
+        "STRENGTH",
+        "REST"
+      ],
+      "PROVERBS 4:20-22"
+    ],
+    [
+      36,
+      41,
+      [
+        "SURROUND THIS WEARY",
+        "HEART WITH YOUR",
+        "HEAVENLY COMFORT"
+      ],
+      [
+        "WEARY",
+        "HEART",
+        "COMFORT"
+      ],
+      "PROVERBS 4:20-22"
+    ],
+    [
+      41,
+      45,
+      [
+        "SUBSCRIBE TO RECEIVE",
+        "GOD'S HEALING PEACE"
+      ],
+      [
+        "SUBSCRIBE",
+        "HEALNG",
+        "PEACE"
+      ],
+      "PROVERBS 4:20-22"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As you hold your aching body",
+      "kind": "phrase",
+      "words": [
+        "ACHING",
+        "BODY",
+        "HEALING"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "My son, attend to my words",
+      "kind": "phrase",
+      "words": [
+        "ATTEND",
+        "WORDS",
+        "EAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let them not depart from thine eyes",
+      "kind": "phrase",
+      "words": [
+        "MIDST",
+        "THINE",
+        "HEART"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "For they are life unto those that find them",
+      "kind": "phrase",
+      "words": [
+        "LIFE",
+        "HEALTH",
+        "FLESH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, pour your tender restoration",
+      "kind": "phrase",
+      "words": [
+        "TENDER",
+        "RESTORATION",
+        "WEARY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Let your scripture take deep root",
+      "kind": "phrase",
+      "words": [
+        "RENEWED",
+        "STRENGTH",
+        "REST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Surround this weary heart",
+      "kind": "phrase",
+      "words": [
+        "WEARY",
+        "HEART",
+        "COMFORT"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to receive God's healing peace",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "HEALING",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 4:20-22"
+}
