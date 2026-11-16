@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T11:54:38Z",
+  "generated_at": "2026-11-16T11:56:42Z",
   "monitor_generated_at": "2026-11-16T11:53:29.905010+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 329,
+    "published_total": 330,
     "published_longform": 125,
-    "published_shorts": 204,
-    "public_total": 327,
+    "published_shorts": 205,
+    "public_total": 328,
     "queued_longform": 64,
-    "queued_shorts": 95,
+    "queued_shorts": 93,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -380,7 +380,7 @@
         "public_total": 27,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
         "id": "SHORT-HEALINGISAIAH58V8",
@@ -398,8 +398,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingisaiah58v8",
-        "scripture": "Isaiah 58:8",
+        "short": "short-healingmatthew8v17",
+        "scripture": "Matthew 8:17",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 19,
+        "published_total": 20,
         "published_longform": 7,
-        "published_shorts": 12,
-        "thumbnail_pending": 19,
-        "public_total": 19,
+        "published_shorts": 13,
+        "thumbnail_pending": 20,
+        "public_total": 20,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "0706",
-        "title": "Gratitude When Life Is Heavy: Psalm 34:1-3 | The Praise Garden",
-        "format": "longform",
-        "youtube_video_id": "MjVwe-IxfV4",
-        "watch_url": "https://youtu.be/MjVwe-IxfV4",
+        "id": "SHORT-GARDENPSALM22V3",
+        "title": "Pray This Psalm 22:3 Prayer of Thanksgiving | Rest In His Holiness #Shorts",
+        "format": "short",
+        "youtube_video_id": "7WpMMT8OGa4",
+        "watch_url": "https://www.youtube.com/shorts/7WpMMT8OGa4",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T08:35:07Z"
+        "published_at": "2026-11-16T11:55:50Z"
       },
       "next_queued_longform": {
         "id": "0707",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenpsalm22v3",
-        "scripture": "Psalm 22:3",
+        "short": "short-gardenpsalm33v1",
+        "scripture": "Psalm 33:1-3",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENPSALM22V3",
+      "slug": "short-gardenpsalm22v3-thanksgiving-prayer",
+      "file": "short-gardenpsalm22v3-thanksgiving-prayer.md",
+      "title": "Pray This Psalm 22:3 Prayer of Thanksgiving | Rest In His Holiness #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T11:55:50Z",
+      "youtube_video_id": "7WpMMT8OGa4",
+      "watch_url": "https://www.youtube.com/shorts/7WpMMT8OGa4",
+      "youtu_be_url": "https://youtu.be/7WpMMT8OGa4",
+      "shorts_url": "https://www.youtube.com/shorts/7WpMMT8OGa4",
+      "studio_url": "https://studio.youtube.com/video/7WpMMT8OGa4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/7WpMMT8OGa4/hqdefault.jpg",
+      "thumb_text": "A PRAYER \u00b7 OF THANKS",
+      "thumbnail_pending": true,
+      "duration_label": "50s",
+      "words": 617
+    },
     {
       "id": "SHORT-HEALINGISAIAH58V8",
       "slug": "short-healingisaiah58v8-restoration-prayer",
@@ -9446,17 +9470,6 @@
         "target_window_utc": "17:14"
       },
       {
-        "short": "short-gardenpsalm22v3",
-        "file": "0000-short-gardenpsalm22v3.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 22:3",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
-      {
         "short": "short-gardenpsalm33v1",
         "file": "0000-short-gardenpsalm33v1.yml",
         "companion_longform_id": "",
@@ -9488,17 +9501,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "18:44"
-      },
-      {
-        "short": "short-healingisaiah58v8",
-        "file": "0000-short-healingisaiah58v8.yml",
-        "companion_longform_id": "",
-        "scripture": "Isaiah 58:8",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingmatthew8v17",
