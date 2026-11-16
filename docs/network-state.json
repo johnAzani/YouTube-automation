@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T20:05:18Z",
+  "generated_at": "2026-11-16T20:06:07Z",
   "monitor_generated_at": "2026-11-16T19:43:50.002042+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 353,
+    "published_total": 354,
     "published_longform": 129,
-    "published_shorts": 224,
-    "public_total": 351,
+    "published_shorts": 225,
+    "public_total": 352,
     "queued_longform": 60,
-    "queued_shorts": 74,
+    "queued_shorts": 73,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -577,23 +577,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 21,
+        "published_total": 22,
         "published_longform": 7,
-        "published_shorts": 14,
-        "thumbnail_pending": 21,
-        "public_total": 21,
+        "published_shorts": 15,
+        "thumbnail_pending": 22,
+        "public_total": 22,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-GARDENPSALM33V1",
-        "title": "Pray This Psalm 33:1-3 Prayer of Thanksgiving | Song Today #Shorts",
+        "id": "SHORT-GARDENREVELATION4V11",
+        "title": "Pray This Revelation 4:11 Prayer of Thanksgiving | Thou Art Worthy #Shorts",
         "format": "short",
-        "youtube_video_id": "QJ3GPH4ihQg",
-        "watch_url": "https://www.youtube.com/shorts/QJ3GPH4ihQg",
+        "youtube_video_id": "d12CG3_wlhE",
+        "watch_url": "https://www.youtube.com/shorts/d12CG3_wlhE",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T15:24:13Z"
+        "published_at": "2026-11-16T20:05:21Z"
       },
       "next_queued_longform": {
         "id": "0707",
@@ -602,8 +602,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-gardenrevelation4v11",
-        "scripture": "Revelation 4:11",
+        "short": "short-gardenpsalm34v1",
+        "scripture": "Psalm 34:1-3",
         "target_window_utc": "09:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GARDENREVELATION4V11",
+      "slug": "short-gardenrevelation4v11-thanksgiving-prayer",
+      "file": "short-gardenrevelation4v11-thanksgiving-prayer.md",
+      "title": "Pray This Revelation 4:11 Prayer of Thanksgiving | Thou Art Worthy #Shorts",
+      "channel": "prayer9",
+      "channel_name": "The Praise Garden",
+      "channel_handle": "@ThePraiseGardenDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T20:05:21Z",
+      "youtube_video_id": "d12CG3_wlhE",
+      "watch_url": "https://www.youtube.com/shorts/d12CG3_wlhE",
+      "youtu_be_url": "https://youtu.be/d12CG3_wlhE",
+      "shorts_url": "https://www.youtube.com/shorts/d12CG3_wlhE",
+      "studio_url": "https://studio.youtube.com/video/d12CG3_wlhE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/d12CG3_wlhE/hqdefault.jpg",
+      "thumb_text": "HIS UNENDING \u00b7 GLORY AND",
+      "thumbnail_pending": true,
+      "duration_label": "50s",
+      "words": 628
+    },
     {
       "id": "SHORT-SHIELDPSALM91V1",
       "slug": "short-shieldpsalm91v1-protection-prayer",
@@ -9958,17 +9982,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-gardenrevelation4v11",
-        "file": "0000-short-gardenrevelation4v11.yml",
-        "companion_longform_id": "",
-        "scripture": "Revelation 4:11",
-        "channel": "prayer9",
-        "channel_name": "The Praise Garden",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "09:44"
-      },
       {
         "short": "short-healingromans8v11",
         "file": "0000-short-healingromans8v11.yml",
