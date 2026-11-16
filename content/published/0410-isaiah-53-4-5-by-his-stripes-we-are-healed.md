@@ -2,7 +2,7 @@
 id: '0410'
 title: "Prayer for Healing in Body and Soul: Isaiah 53:4-5 | The Healing Balm"
 slug: isaiah-53-4-5-by-his-stripes-we-are-healed
-status: approved
+status: published
 channel: prayer6
 privacy: public
 format: longform
@@ -74,6 +74,13 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-16"
+published_at: "2026-11-16T21:02:46Z"
+youtube_video_id: "p96daSHIn70"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith
