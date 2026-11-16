@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T15:09:03Z",
+  "generated_at": "2026-11-16T15:09:36Z",
   "monitor_generated_at": "2026-11-16T15:06:42.366665+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 336,
+    "published_total": 337,
     "published_longform": 127,
-    "published_shorts": 209,
-    "public_total": 334,
+    "published_shorts": 210,
+    "public_total": 335,
     "queued_longform": 62,
-    "queued_shorts": 89,
+    "queued_shorts": 88,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -101,23 +101,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 61,
+        "published_total": 62,
         "published_longform": 25,
-        "published_shorts": 36,
+        "published_shorts": 37,
         "thumbnail_pending": 2,
-        "public_total": 60,
+        "public_total": 61,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-MORNINGPSALM16V8",
-        "title": "Say This Psalm 16:8 Prayer at Sunrise | He Is Your Anchor #Shorts",
+        "id": "SHORT-MORNINGPSALM46V5",
+        "title": "Say This Psalm 46:5 Prayer at Sunrise | Finding Strength At Dawn #Shorts",
         "format": "short",
-        "youtube_video_id": "YtkO09ZiC3A",
-        "watch_url": "https://www.youtube.com/shorts/YtkO09ZiC3A",
+        "youtube_video_id": "8VmQZgQ4ti0",
+        "watch_url": "https://www.youtube.com/shorts/8VmQZgQ4ti0",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T11:47:44Z"
+        "published_at": "2026-11-16T15:08:40Z"
       },
       "next_queued_longform": {
         "id": "0069",
@@ -126,8 +126,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-morningpsalm46v5",
-        "scripture": "Psalm 46:5",
+        "short": "short-morningpsalm51v10",
+        "scripture": "Psalm 51:10",
         "target_window_utc": "06:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MORNINGPSALM46V5",
+      "slug": "short-morningpsalm46v5-sunrise-prayer",
+      "file": "short-morningpsalm46v5-sunrise-prayer.md",
+      "title": "Say This Psalm 46:5 Prayer at Sunrise | Finding Strength At Dawn #Shorts",
+      "channel": "prayer2",
+      "channel_name": "The Morning Altar",
+      "channel_handle": "@TheMorningAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T15:08:40Z",
+      "youtube_video_id": "8VmQZgQ4ti0",
+      "watch_url": "https://www.youtube.com/shorts/8VmQZgQ4ti0",
+      "youtu_be_url": "https://youtu.be/8VmQZgQ4ti0",
+      "shorts_url": "https://www.youtube.com/shorts/8VmQZgQ4ti0",
+      "studio_url": "https://studio.youtube.com/video/8VmQZgQ4ti0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/8VmQZgQ4ti0/hqdefault.jpg",
+      "thumb_text": "GOD \u00b7 IS",
+      "thumbnail_pending": false,
+      "duration_label": "47s",
+      "words": 592
+    },
     {
       "id": "SHORT-PSALM145V18",
       "slug": "short-psalm145v18-pre-sleep-prayer",
@@ -9674,17 +9698,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "23:14"
-      },
-      {
-        "short": "short-morningpsalm46v5",
-        "file": "0000-short-morningpsalm46v5.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 46:5",
-        "channel": "prayer2",
-        "channel_name": "The Morning Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "06:14"
       },
       {
         "short": "short-morningpsalm51v10",
