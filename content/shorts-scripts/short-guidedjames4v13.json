@@ -1,0 +1,258 @@
+{
+  "key": "short-guidedjames4v13",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "IF THE LORD WILL",
+    "KJV GUIDANCE PRAYER"
+  ],
+  "poster": [
+    "THE GUIDED PATH",
+    "KJV WISDOM",
+    "JAMES 4:13-15",
+    "SEEK GOD'S GUIDANCE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "calm mountain lake early morning mist",
+    "peaceful alpine valley river sunrise",
+    "quiet mountain pass soft morning light",
+    "serene pine forest path dawn light",
+    "calm river flowing through mountain valley",
+    "misty mountain peaks early morning"
+  ],
+  "scenes": [
+    {
+      "a": "Look at your plans for tomorrow and quiet your rushing thoughts.",
+      "img": "short-guidedjames4v13-scene-01.jpg",
+      "kicker": "JAMES 4:13",
+      "sub": "QUIET YOUR RUSHING THOUGHTS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Go to now, ye that say, To day or to morrow we will go into such a city, and continue there a year, and buy and sell, and get gain:",
+      "img": "short-guidedjames4v13-scene-02.jpg",
+      "kicker": "JAMES 4:13",
+      "sub": "TODAY OR TOMORROW",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Whereas ye know not what shall be on the morrow. For what is your life?",
+      "img": "short-guidedjames4v13-scene-03.jpg",
+      "kicker": "JAMES 4:14",
+      "sub": "WHAT IS YOUR LIFE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "It is even a vapor, that appeareth for a little time, and then vanisheth away.",
+      "img": "short-guidedjames4v13-scene-04.jpg",
+      "kicker": "JAMES 4:14",
+      "sub": "EVEN A VAPOR",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "For that ye ought to say, If the Lord will, we shall live, and do this, or that.",
+      "img": "short-guidedjames4v13-scene-05.jpg",
+      "kicker": "JAMES 4:15",
+      "sub": "IF THE LORD WILL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, teach us to surrender our schedule and our certainty into Your holy hands today.",
+      "img": "short-guidedjames4v13-scene-06.jpg",
+      "kicker": "JAMES 4:15",
+      "sub": "SURRENDER YOUR SCHEDULE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "Look at your plans for tomorrow and quiet your rushing thoughts."
+    ],
+    [
+      6,
+      14,
+      "Go to now, ye that say, To day or to morrow we will go into such a city, and continue there a year, and buy and sell, and get gain:"
+    ],
+    [
+      14,
+      21,
+      "Whereas ye know not what shall be on the morrow. For what is your life?"
+    ],
+    [
+      21,
+      28,
+      "It is even a vapor, that appeareth for a little time, and then vanisheth away."
+    ],
+    [
+      28,
+      35,
+      "For that ye ought to say, If the Lord will, we shall live, and do this, or that."
+    ],
+    [
+      35,
+      42,
+      "Father, teach us to surrender our schedule and our certainty into Your holy hands today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "LOOK AT YOUR PLANS",
+        "FOR TOMORROW AND QUIET",
+        "YOUR RUSHING THOUGHTS"
+      ],
+      "PLANS",
+      "JAMES 4 : 13"
+    ],
+    [
+      6,
+      14,
+      [
+        "GO TO NOW YE",
+        "TO DAY OR TOMORROW",
+        "BUY AND SELL GET GAIN"
+      ],
+      "GAIN",
+      "JAMES 4 : 13"
+    ],
+    [
+      14,
+      21,
+      [
+        "WHEREAS YE KNOW NOT",
+        "WHAT SHALL BE ON",
+        "THE MORROW WHAT IS LIFE"
+      ],
+      "MORROW",
+      "JAMES 4 : 14"
+    ],
+    [
+      21,
+      28,
+      [
+        "IT IS EVEN A VAPOR",
+        "THAT APPEARETH FOR A TIME",
+        "AND THEN VANISHETH AWAY"
+      ],
+      "VAPOR",
+      "JAMES 4 : 14"
+    ],
+    [
+      28,
+      35,
+      [
+        "FOR THAT YE OUGHT",
+        "IF THE LORD WILL",
+        "LIVE AND DO THIS"
+      ],
+      "WILL",
+      "JAMES 4 : 15"
+    ],
+    [
+      35,
+      42,
+      [
+        "FATHER TEACH US",
+        "TO SURRENDER OUR SCHEDULE",
+        "INTO YOUR HOLY HANDS"
+      ],
+      "SURRENDER",
+      "JAMES 4 : 15"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Look at your plans for tomorrow and quiet your rushing thoughts.",
+      "kind": "phrase",
+      "words": [
+        "LOOK",
+        "PLANS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Go to now, ye that say, To day or to morrow we will go into such a city, and continue there a year, and buy and sell, and get gain:",
+      "kind": "phrase",
+      "words": [
+        "TOMORROW",
+        "GAIN"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Whereas ye know not what shall be on the morrow. For what is your life?",
+      "kind": "phrase",
+      "words": [
+        "MORROW",
+        "LIFE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "It is even a vapor, that appeareth for a little time, and then vanisheth away.",
+      "kind": "phrase",
+      "words": [
+        "VAPOR",
+        "VANISHETH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "For that ye ought to say, If the Lord will, we shall live, and do this, or that.",
+      "kind": "phrase",
+      "words": [
+        "OUGHT",
+        "WILL"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Father, teach us to surrender our schedule and our certainty into Your holy hands today.",
+      "kind": "phrase",
+      "words": [
+        "SURRENDER",
+        "SCHEDULE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "James 4:13-15"
+}
