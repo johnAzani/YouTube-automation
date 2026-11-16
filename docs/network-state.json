@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T07:37:11Z",
+  "generated_at": "2026-11-16T07:37:59Z",
   "monitor_generated_at": "2026-11-16T07:31:56.400014+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 316,
+    "published_total": 317,
     "published_longform": 123,
-    "published_shorts": 193,
-    "public_total": 314,
+    "published_shorts": 194,
+    "public_total": 315,
     "queued_longform": 63,
-    "queued_shorts": 95,
+    "queued_shorts": 94,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -373,23 +373,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 25,
+        "published_total": 26,
         "published_longform": 10,
-        "published_shorts": 15,
+        "published_shorts": 16,
         "thumbnail_pending": 7,
-        "public_total": 25,
+        "public_total": 26,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-HEALINGPSALM41V1",
-        "title": "Pray This Psalm 41:1-3 Healing Prayer for Peace & Strength | Upon The Bed #Shorts",
+        "id": "SHORT-HEALINGEXODUS23V25",
+        "title": "Pray This Exodus 23:25 Healing Prayer for Peace & Strength | Quiet Waters #Shorts",
         "format": "short",
-        "youtube_video_id": "hG3z2pkK34c",
-        "watch_url": "https://www.youtube.com/shorts/hG3z2pkK34c",
-        "published_on": "2026-11-15",
-        "published_at": "2026-11-15T23:36:47Z"
+        "youtube_video_id": "v2tFKwWFUbk",
+        "watch_url": "https://www.youtube.com/shorts/v2tFKwWFUbk",
+        "published_on": "2026-11-16",
+        "published_at": "2026-11-16T07:37:15Z"
       },
       "next_queued_longform": {
         "id": "0410",
@@ -398,8 +398,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingexodus23v25",
-        "scripture": "Exodus 23:25",
+        "short": "short-healingisaiah58v8",
+        "scripture": "Isaiah 58:8",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-HEALINGEXODUS23V25",
+      "slug": "short-healingexodus23v25-restoration-prayer",
+      "file": "short-healingexodus23v25-restoration-prayer.md",
+      "title": "Pray This Exodus 23:25 Healing Prayer for Peace & Strength | Quiet Waters #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T07:37:15Z",
+      "youtube_video_id": "v2tFKwWFUbk",
+      "watch_url": "https://www.youtube.com/shorts/v2tFKwWFUbk",
+      "youtu_be_url": "https://youtu.be/v2tFKwWFUbk",
+      "shorts_url": "https://www.youtube.com/shorts/v2tFKwWFUbk",
+      "studio_url": "https://studio.youtube.com/video/v2tFKwWFUbk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/v2tFKwWFUbk/hqdefault.jpg",
+      "thumb_text": "THE HEALING BALM \u00b7 Exodus 23:25",
+      "thumbnail_pending": false,
+      "duration_label": "55s",
+      "words": 629
+    },
     {
       "id": "SHORT-SHIELD2KINGS6V16",
       "slug": "short-shield2kings6v16-protection-prayer",
@@ -9163,17 +9187,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-healingexodus23v25",
-        "file": "0000-short-healingexodus23v25.yml",
-        "companion_longform_id": "",
-        "scripture": "Exodus 23:25",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingisaiah58v8",
