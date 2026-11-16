@@ -2,7 +2,7 @@
 id: '0706'
 title: 'Gratitude When Life Is Heavy: Psalm 34:1-3 | The Praise Garden'
 slug: gratitude-when-life-is-heavy-psalm-34-1-3
-status: approved
+status: published
 channel: prayer9
 privacy: public
 format: longform
@@ -75,6 +75,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-16"
+published_at: "2026-11-16T08:35:07Z"
+youtube_video_id: "MjVwe-IxfV4"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Entering His Gates With Thanksgiving
