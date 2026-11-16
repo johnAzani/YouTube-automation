@@ -72,11 +72,39 @@ def test_a_phrase_that_only_repeats_the_channels_own_label_is_not_a_lesson():
 
 
 def test_search_terms_become_candidates_most_viewed_first():
-    terms = [{"term": "psalm 23 prayer for peace", "views": 3}, {"term": "prayer before sleep", "views": 40},
-             {"term": "seen once only here", "views": 1}, {"term": "the secret place", "views": 90},
-             {"term": "prayer before sleep", "views": 2}, "nonsense", {"term": "x", "views": "many"}]
+    terms = [{"term": "psalm 23 prayer for peace", "views": 6}, {"term": "prayer before sleep", "views": 40},
+             {"term": "prayer typed by two people", "views": 4}, {"term": "the secret place", "views": 90},
+             {"term": "prayer before sleep", "views": 5}, "nonsense", {"term": "x", "views": "many"},
+             {"term": "blackjack casino tonight", "views": 70}, {"term": "jesus de miguel", "views": 60}]
     assert lessons.candidates_from_search_terms(terms) == [
         ("prayer before sleep", lessons.SEARCH_SOURCE), ("prayer for peace", lessons.SEARCH_SOURCE)]
+
+
+@pytest.mark.parametrize("term,about", [
+    ("psalm 91", True), ("psalms 91", True), ("psalmul 91", True), ("deep sleep prayers", True),
+    ("night prayer before going to bed", True), ("john 3 16", True), ("bible verses for sleep", True),
+    ("melo funny moments", False), ("jesus de miguel", False), ("barbie", False), ("john funny moments", False),
+    ("blackjack casino", False), ("google google", False), ("", False),
+])
+def test_a_search_term_is_a_lesson_only_when_it_is_about_prayer_or_scripture(term, about):
+    # The right-hand column is the first real reading, The Secret Place, 16 November 2026.
+    assert lessons.on_topic(term) is about
+
+
+def test_a_phrase_may_only_use_words_the_channels_have_themselves_published(tmp_path):
+    (tmp_path / "0001-a.md").write_text("---\ntitle: Rest Tonight\n---\nLet go of worry and fall asleep in "
+                                        "God's presence, Prince of Peace.\n", encoding="utf-8")
+    known = lessons.spoken_words(tmp_path)
+    assert {"worry", "asleep", "presence", "prince"} <= known and "derek" not in known
+    assert lessons.clean_phrase("let go of worry", known=known) == "let go of worry"
+    assert lessons.clean_phrase("derek prince prayer", known=known) == "", "a preacher's name is not a lesson"
+    titles = [("Derek Prince Prayer | Let Go of Worry Tonight", "UC_a"),
+              ("Let Go of Worry: Derek Prince Prayer", "UC_b"),
+              ("Derek Prince Prayer - Let Go of Worry and Rest", "UC_c")]
+    assert lessons.phrases_from_titles(titles, known=known) == ["let go of worry"]
+    assert "derek prince prayer" in lessons.phrases_from_titles(titles), "without the gate it would pass"
+    real = lessons.spoken_words()
+    assert len(real) > 3000 and "prayer" in real and "miguel" not in real and "barbie" not in real
 
 
 # ------------------------------------------------- how a phrase is judged
@@ -234,7 +262,8 @@ def test_the_report_holds_lessons_and_totals_and_no_video():
                                "scripture": "Psalm 4:8", "theme": "peace_rest", "published_on": _day(5)}
              for row in snaps}
     index["short1"]["format"] = "short"
-    learning = {"previous": [_lesson()], "search_terms": [{"term": "prayer for peace", "views": 9}],
+    learning = {"previous": [_lesson()], "search_terms": [{"term": "prayer for peace", "views": 9},
+                                                          {"term": "barbie doll house", "views": 99}],
                 "niche": {"read_on": _day(1), "phrases": ["let go of worry"], "typical_minutes": 61},
                 "taken": [], "taken_first": []}
     report = pf.build_feedback_report(snaps, index, TODAY, channel_id="secret-place", learning=learning)
@@ -243,6 +272,7 @@ def test_the_report_holds_lessons_and_totals_and_no_video():
     assert by_phrase["prayer before sleep"]["with_videos"] == 5, "the Short is not a long prayer"
     assert by_phrase["prayer for peace"]["source"] == lessons.SEARCH_SOURCE
     assert by_phrase["let go of worry"]["source"] == lessons.NICHE_SOURCE
+    assert len(by_phrase) == 3, "the search that was not about prayer opened nothing"
     assert report["niche"] == learning["niche"]
     assert any("Lesson 'prayer before sleep'" in line and "kept" in line for line in report["guidance"])
     text = json.dumps(report["lessons"]) + json.dumps(report["niche"])
@@ -270,6 +300,7 @@ def test_learning_is_read_from_the_channels_own_files(tmp_path, monkeypatch):
     assert got["search_terms"][0]["term"] == "prayer before sleep"
     assert got["niche"] == {"read_on": TODAY.isoformat(), "phrases": ["let go of worry"], "typical_minutes": 61}
     assert got["taken"] == ["prayer for my family"] and got["taken_first"] == []
+    assert got["known"] == lessons.spoken_words()
     second = pf.load_learning("prayer2", TODAY, analytics_dir=tmp_path)
     assert second["taken_first"] == ["prayer for peace"] and second["search_terms"] == []
     assert second["niche"] is None

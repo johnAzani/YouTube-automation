@@ -14,7 +14,8 @@ What one reading does, for one channel:
 2. asks `videos.list` once for the lengths of those videos (`contentDetails`
    only; view, like and subscriber counts are never requested);
 3. keeps the word sequences that the titles of at least three different
-   channels share (two to four words, none of them most of any one title), and
+   channels share (two to four words, none of them most of any one title, every
+   word one that these channels have themselves used, so no person's name), and
    the typical length;
 4. writes those few phrases and that one length to the file named by `--out`,
    which the feedback step reads and then folds into the channel's artifact.
@@ -124,7 +125,8 @@ def read(youtube, channel_id: str, today: dt.date) -> dict:
                 lengths.append(length)
     block: dict = {
         "read_on": today.isoformat(),
-        "phrases": lessons.phrases_from_titles(titles.values(), lessons.label_words(channel_id)),
+        "phrases": lessons.phrases_from_titles(titles.values(), lessons.label_words(channel_id),
+                                               known=lessons.spoken_words()),
     }
     if len(lengths) >= 5:
         block["typical_minutes"] = int(round(median(lengths)))
