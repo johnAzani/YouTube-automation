@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-16T06:55:14.560210+00:00",
+  "generated_at": "2026-11-16T09:37:25.170281+00:00",
   "as_of": "2026-11-16",
   "sufficient_data": false,
   "measured_longform_videos": 0,
   "total_longform_videos": 13,
   "input_diagnostics": {
-    "snapshot_video_ids": 33,
-    "receipt_video_ids": 34,
-    "matched_video_ids": 33,
+    "snapshot_video_ids": 34,
+    "receipt_video_ids": 35,
+    "matched_video_ids": 34,
     "longform_below_view_threshold": 13,
     "longform_missing_view_count": 0,
     "longform_too_young_or_undated": 3,
@@ -59,11 +59,11 @@
   ],
   "shorts": {
     "measured_shorts": 14,
-    "total_shorts": 20,
+    "total_shorts": 21,
     "sufficient_data": true,
     "avg_views": 154.4,
-    "median_views": 125,
-    "total_views": 2161,
+    "median_views": 126,
+    "total_views": 2162,
     "minimum_age_days": 2,
     "by_book": {
       "1 john": {
@@ -83,8 +83,8 @@
       },
       "ephesians": {
         "shorts": 1,
-        "avg_views": 125.0,
-        "ratio": 0.937
+        "avg_views": 126.0,
+        "ratio": 0.939
       },
       "exodus": {
         "shorts": 1,
@@ -114,7 +114,7 @@
       "romans": {
         "shorts": 1,
         "avg_views": 251.0,
-        "ratio": 1.209
+        "ratio": 1.208
       },
       "zechariah": {
         "shorts": 1,
@@ -125,8 +125,8 @@
     "by_theme": {
       "daily_guidance_wisdom": {
         "shorts": 2,
-        "avg_views": 95.5,
-        "ratio": 0.809
+        "avg_views": 96.0,
+        "ratio": 0.811
       },
       "general_prayer": {
         "shorts": 10,
@@ -141,7 +141,7 @@
       "morning_mercy_renewal": {
         "shorts": 1,
         "avg_views": 344.0,
-        "ratio": 1.41
+        "ratio": 1.409
       }
     },
     "guidance": [
