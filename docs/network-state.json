@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T00:12:24Z",
+  "generated_at": "2026-11-16T00:34:21Z",
   "monitor_generated_at": "2026-11-15T22:59:34.787450+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 307,
-    "published_longform": 121,
-    "published_shorts": 186,
-    "public_total": 305,
-    "queued_longform": 58,
-    "queued_shorts": 68,
+    "published_total": 309,
+    "published_longform": 122,
+    "published_shorts": 187,
+    "public_total": 307,
+    "queued_longform": 57,
+    "queued_shorts": 67,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -237,33 +237,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 32,
-        "published_longform": 13,
-        "published_shorts": 19,
-        "thumbnail_pending": 31,
-        "public_total": 32,
-        "queued_longform": 6,
+        "published_total": 34,
+        "published_longform": 14,
+        "published_shorts": 20,
+        "thumbnail_pending": 33,
+        "public_total": 34,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTJUDGES16V3",
-        "title": "Pray This Judges 16:3 Midnight Prayer | Stand In Prayer #Shorts",
-        "format": "short",
-        "youtube_video_id": "5pcIw_bl78M",
-        "watch_url": "https://www.youtube.com/shorts/5pcIw_bl78M",
-        "published_on": "2026-11-15",
-        "published_at": "2026-11-15T19:54:21Z"
-      },
-      "next_queued_longform": {
         "id": "0213",
         "title": "Midnight Prayer When All Seems Dark: Psalm 18:28-29",
-        "words": 2006,
+        "format": "longform",
+        "youtube_video_id": "mgm-5z-PLJ4",
+        "watch_url": "https://youtu.be/mgm-5z-PLJ4",
+        "published_on": "2026-11-16",
+        "published_at": "2026-11-16T00:33:39Z"
+      },
+      "next_queued_longform": {
+        "id": "0214",
+        "title": "Lift Up Your Heads, O Ye Gates: Psalm 24:7-10 | The Midnight Watch",
+        "words": 1531,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnight2chronicles20v15",
-        "scripture": "2 Chronicles 20:15-22",
+        "short": "short-midnightpsalm18v28",
+        "scripture": "Psalm 18:28-29",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0213",
+      "slug": "psalm-18-28-29-night-prayer",
+      "file": "0213-psalm-18-28-29-night-prayer.md",
+      "title": "Midnight Prayer When All Seems Dark: Psalm 18:28-29",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T00:33:39Z",
+      "youtube_video_id": "mgm-5z-PLJ4",
+      "watch_url": "https://youtu.be/mgm-5z-PLJ4",
+      "youtu_be_url": "https://youtu.be/mgm-5z-PLJ4",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/mgm-5z-PLJ4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/mgm-5z-PLJ4/hqdefault.jpg",
+      "thumb_text": "LIGHT MY LAMP",
+      "thumbnail_pending": true,
+      "duration_label": "~14 min",
+      "words": 2006
+    },
+    {
       "id": "0805",
       "slug": "when-you-need-to-know-the-next-step-isaiah-30-21",
       "file": "0805-when-you-need-to-know-the-next-step-isaiah-30-21.md",
@@ -820,6 +844,30 @@
       "thumbnail_pending": false,
       "duration_label": "53s",
       "words": 591
+    },
+    {
+      "id": "SHORT-MIDNIGHT2CHRONICLES20V15",
+      "slug": "short-midnight2chronicles20v15-midnight-prayer",
+      "file": "short-midnight2chronicles20v15-midnight-prayer.md",
+      "title": "Pray This 2 Chronicles 20:15-22 Midnight Prayer | Midnight Watch #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-15",
+      "published_at": "2026-11-15T23:29:58Z",
+      "youtube_video_id": "UnA0ecpZ2uI",
+      "watch_url": "https://www.youtube.com/shorts/UnA0ecpZ2uI",
+      "youtu_be_url": "https://youtu.be/UnA0ecpZ2uI",
+      "shorts_url": "https://www.youtube.com/shorts/UnA0ecpZ2uI",
+      "studio_url": "https://studio.youtube.com/video/UnA0ecpZ2uI/edit",
+      "thumb_url": "https://i.ytimg.com/vi/UnA0ecpZ2uI/hqdefault.jpg",
+      "thumb_text": "STAND STILL \u00b7 GOD FIGHTS FOR YOU",
+      "thumbnail_pending": true,
+      "duration_label": "59s",
+      "words": 599
     },
     {
       "id": "SHORT-MIDDAYGALATIANS6V9",
@@ -8346,19 +8394,6 @@
         "words": 1849
       },
       {
-        "id": "0213",
-        "slug": "psalm-18-28-29-night-prayer",
-        "file": "0213-psalm-18-28-29-night-prayer.md",
-        "title": "Midnight Prayer When All Seems Dark: Psalm 18:28-29",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 2006
-      },
-      {
         "id": "0214",
         "slug": "lift-up-your-heads-psalm-24-7-10-the-midnight-watch",
         "file": "0214-lift-up-your-heads-psalm-24-7-10-the-midnight-watch.md",
@@ -9025,17 +9060,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnight2chronicles20v15",
-        "file": "0212-short-midnight2chronicles20v15.yml",
-        "companion_longform_id": "0212",
-        "scripture": "2 Chronicles 20:15-22",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightpsalm18v28",
