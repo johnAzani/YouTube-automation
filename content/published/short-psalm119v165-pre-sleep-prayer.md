@@ -28,6 +28,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["GREAT PEACE", "HAVE THEY", "WHICH LOVE", "THY LAW"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If you are wrestling with a lingering frustration that refuses to quiet your mind, listen. Great peace have they which love thy law: and nothing shall offend them. Lord, help me trust this stillness as I lay down my burden before your throne tonight. Remove the sharp edges of today’s offenses and replace them with your gentle, perfect calm. May my heart find its rhythm in your truth while the world sleeps around me now. Keep my spirit steady through this night until I wake to your mercy once again. Amen.

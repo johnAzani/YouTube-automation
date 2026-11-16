@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligi"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; auth_channel_title=The Family Altar; long_uploads_status=eligible; video_channel_id=UCxBoxqN7pCUFMxJwZH6CRGQ; video_channel_title=The Family Altar; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["3 JOHN 1:4", "WALK IN TRUTH", "HOUSEHOLD PRAYER", "THE FAMILY ALTAR"]
 thumbnail_kicker: "BLESS THIS HOME IN PRAYER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-23T07:31:50Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 When you lie awake wondering if your children will stay true to God, rest here. Holy Scripture declares in 3 John chapter 1 verse 4, I have no greater joy than to hear that my children walk in truth. Father, we place the hearts of our sons and daughters into Your faithful hands tonight. Guide their daily steps away from deception, and anchor their young souls deeply in Your eternal truth. Fill our home with Your wisdom so we may model Your love faithfully every single day. May our children grow to walk uprightly before You, bringing joy to Your heart and ours. Subscribe to join The Family Altar in daily prayer.
