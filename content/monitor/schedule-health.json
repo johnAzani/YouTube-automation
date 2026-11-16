@@ -44,8 +44,8 @@
       "workflow": "comments.yml"
     }
   ],
-  "generated_at": "2026-11-16T15:00:49.559046+00:00",
-  "last_run_at": "2026-11-16T14:59:54+00:00",
+  "generated_at": "2026-11-16T15:02:19.958764+00:00",
+  "last_run_at": "2026-11-16T15:00:57+00:00",
   "on_time": [
     {
       "late_minutes": 30,
@@ -69,6 +69,13 @@
       "workflow": "monitor.yml"
     },
     {
+      "late_minutes": 46,
+      "name": "Produce video",
+      "ran_at": "2026-11-16T15:00:57+00:00",
+      "slot": "2026-11-16T14:14:00+00:00",
+      "workflow": "produce.yml"
+    },
+    {
       "late_minutes": 96,
       "name": "YouTube reporting jobs (thumbnail impressions)",
       "ran_at": "2026-11-16T07:23:39+00:00",
@@ -90,6 +97,6 @@
       "workflow": "tests-on-main.yml"
     }
   ],
-  "silence_minutes": 0,
+  "silence_minutes": 1,
   "warn_minutes": 120
 }
