@@ -94,6 +94,7 @@ duration_seconds: 11278.5
 narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 thumbnail_revision: "ctr-v3-cinema"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 ## Scene 1 — Thou Wilt Keep Him in Perfect Peace (Verse 3a)

@@ -28,6 +28,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["HIS SONG", "IN THE", "DARKNESS", "OF NIGHT"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If the silence of this room feels louder than your own thoughts, you are heard. In these late hours, we rest in the promise of the word. Yet the LORD will command his lovingkindness in the day time, and in the night his song shall be with me, and my prayer unto the God of my life. Lord, may Your melody replace the restless rhythm of my worried heart tonight. Bring stillness to my spirit as I place every burden into Your capable hands. Grant me the gift of deep sleep, knowing You remain the keeper of my life.
