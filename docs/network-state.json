@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T19:44:45Z",
+  "generated_at": "2026-11-16T19:53:47Z",
   "monitor_generated_at": "2026-11-16T19:43:50.002042+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 347,
+    "published_total": 348,
     "published_longform": 129,
-    "published_shorts": 218,
-    "public_total": 345,
+    "published_shorts": 219,
+    "public_total": 346,
     "queued_longform": 60,
-    "queued_shorts": 80,
+    "queued_shorts": 79,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -237,23 +237,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 37,
+        "published_total": 38,
         "published_longform": 14,
-        "published_shorts": 23,
-        "thumbnail_pending": 36,
-        "public_total": 37,
+        "published_shorts": 24,
+        "thumbnail_pending": 37,
+        "public_total": 38,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 7
       },
       "latest_video": {
-        "id": "SHORT-MIDNIGHTMATTHEW18V18",
-        "title": "Pray This Matthew 18:18 Midnight Prayer | Heavenly Authority #Shorts",
+        "id": "SHORT-MIDNIGHTPSALM138V7",
+        "title": "Pray This Psalm 138:7 Midnight Prayer | God Sees Your Distress #Shorts",
         "format": "short",
-        "youtube_video_id": "hmL8hTb6AC0",
-        "watch_url": "https://www.youtube.com/shorts/hmL8hTb6AC0",
+        "youtube_video_id": "4L9tl7fRLOE",
+        "watch_url": "https://www.youtube.com/shorts/4L9tl7fRLOE",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T15:07:55Z"
+        "published_at": "2026-11-16T19:52:59Z"
       },
       "next_queued_longform": {
         "id": "0214",
@@ -262,8 +262,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightpsalm138v7",
-        "scripture": "Psalm 138:7",
+        "short": "short-midnightpsalm18v28",
+        "scripture": "Psalm 18:28-29",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDNIGHTPSALM138V7",
+      "slug": "short-midnightpsalm138v7-midnight-prayer",
+      "file": "short-midnightpsalm138v7-midnight-prayer.md",
+      "title": "Pray This Psalm 138:7 Midnight Prayer | God Sees Your Distress #Shorts",
+      "channel": "prayer4",
+      "channel_name": "The Midnight Watch",
+      "channel_handle": "@TheMidnightWatchDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T19:52:59Z",
+      "youtube_video_id": "4L9tl7fRLOE",
+      "watch_url": "https://www.youtube.com/shorts/4L9tl7fRLOE",
+      "youtu_be_url": "https://youtu.be/4L9tl7fRLOE",
+      "shorts_url": "https://www.youtube.com/shorts/4L9tl7fRLOE",
+      "studio_url": "https://studio.youtube.com/video/4L9tl7fRLOE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/4L9tl7fRLOE/hqdefault.jpg",
+      "thumb_text": "THOUGH I WALK \u00b7 IN MIDST OF TROUBLE",
+      "thumbnail_pending": true,
+      "duration_label": "59s",
+      "words": 611
+    },
     {
       "id": "0092",
       "slug": "1-corinthians-15-58-midday-prayer",
@@ -9846,17 +9870,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
-      },
-      {
-        "short": "short-midnightpsalm138v7",
-        "file": "0000-short-midnightpsalm138v7.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 138:7",
-        "channel": "prayer4",
-        "channel_name": "The Midnight Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "23:14"
       },
       {
         "short": "short-morningpsalm51v10",
