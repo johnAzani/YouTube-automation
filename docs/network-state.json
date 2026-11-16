@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T11:45:39Z",
+  "generated_at": "2026-11-16T11:46:35Z",
   "monitor_generated_at": "2026-11-16T11:36:03.477348+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 324,
+    "published_total": 325,
     "published_longform": 125,
-    "published_shorts": 199,
-    "public_total": 322,
+    "published_shorts": 200,
+    "public_total": 323,
     "queued_longform": 64,
-    "queued_shorts": 99,
+    "queued_shorts": 98,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -305,23 +305,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 25,
+        "published_total": 26,
         "published_longform": 10,
-        "published_shorts": 15,
-        "thumbnail_pending": 25,
-        "public_total": 25,
+        "published_shorts": 16,
+        "thumbnail_pending": 26,
+        "public_total": 26,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-FAMILY3JOHN1V4",
-        "title": "Pray This 3 John 1:4 Family Prayer Over Your Home | Rest In His Promise #Shorts",
+        "id": "SHORT-FAMILYACTS2V39",
+        "title": "Pray This Acts 2:39 Family Prayer Over Your Home | A Promise For Your Home #Shorts",
         "format": "short",
-        "youtube_video_id": "PtB3-p_I1Aw",
-        "watch_url": "https://www.youtube.com/shorts/PtB3-p_I1Aw",
+        "youtube_video_id": "XiTZBZHsI8E",
+        "watch_url": "https://www.youtube.com/shorts/XiTZBZHsI8E",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T07:29:37Z"
+        "published_at": "2026-11-16T11:45:51Z"
       },
       "next_queued_longform": {
         "id": "0310",
@@ -330,8 +330,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-familyacts2v39",
-        "scripture": "Acts 2:39",
+        "short": "short-familyluke15v20",
+        "scripture": "Luke 15:20-24",
         "target_window_utc": "17:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-FAMILYACTS2V39",
+      "slug": "short-familyacts2v39-household-prayer",
+      "file": "short-familyacts2v39-household-prayer.md",
+      "title": "Pray This Acts 2:39 Family Prayer Over Your Home | A Promise For Your Home #Shorts",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T11:45:51Z",
+      "youtube_video_id": "XiTZBZHsI8E",
+      "watch_url": "https://www.youtube.com/shorts/XiTZBZHsI8E",
+      "youtu_be_url": "https://youtu.be/XiTZBZHsI8E",
+      "shorts_url": "https://www.youtube.com/shorts/XiTZBZHsI8E",
+      "studio_url": "https://studio.youtube.com/video/XiTZBZHsI8E/edit",
+      "thumb_url": "https://i.ytimg.com/vi/XiTZBZHsI8E/hqdefault.jpg",
+      "thumb_text": "THE PROMISE \u00b7 IS UNTO YOU",
+      "thumbnail_pending": true,
+      "duration_label": "51s",
+      "words": 654
+    },
     {
       "id": "SHORT-MIDNIGHTJOB22V28",
       "slug": "short-midnightjob22v28-midnight-prayer",
@@ -9314,17 +9338,6 @@
       }
     ],
     "shorts": [
-      {
-        "short": "short-familyacts2v39",
-        "file": "0000-short-familyacts2v39.yml",
-        "companion_longform_id": "",
-        "scripture": "Acts 2:39",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "17:14"
-      },
       {
         "short": "short-familyluke15v20",
         "file": "0000-short-familyluke15v20.yml",
