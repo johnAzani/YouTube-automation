@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["WHEN OPPOSITION", "SURROUNDS YOU", "CALL UPON", "THE LORD"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-23T11:15:05Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If voices of opposition are making you feel cornered today, take heart right here. I will call upon the LORD, who is worthy to be praised: so shall I be saved from mine enemies. Father, we thank You that our deliverance begins not with panic, but with praise. Before the battle is even fought, You are already worthy of our full devotion. Thank You for standing guard around us when hostility surrounds us on every side. We place our complete trust in Your unfailing power, knowing You answer when we call. May Your peace guard our hearts throughout this day. Subscribe to join The Praise Garden.
