@@ -23,13 +23,6 @@
       "workflow": "reporting-jobs.yml"
     },
     {
-      "late_minutes": 193,
-      "name": "Growth autopilot",
-      "ran_at": "2026-11-15T05:27:39+00:00",
-      "slot": "2026-11-15T02:14:00+00:00",
-      "workflow": "growth-autopilot.yml"
-    },
-    {
       "late_minutes": 173,
       "name": "Weekly metrics snapshot",
       "ran_at": "2026-11-13T21:34:19+00:00",
@@ -44,8 +37,8 @@
       "workflow": "gemini_brain.yml"
     }
   ],
-  "generated_at": "2026-11-16T00:47:45.992059+00:00",
-  "last_run_at": "2026-11-16T00:47:00+00:00",
+  "generated_at": "2026-11-16T02:43:29.499301+00:00",
+  "last_run_at": "2026-11-16T02:42:44+00:00",
   "on_time": [
     {
       "late_minutes": 30,
