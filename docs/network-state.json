@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T11:46:35Z",
+  "generated_at": "2026-11-16T11:48:40Z",
   "monitor_generated_at": "2026-11-16T11:36:03.477348+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 325,
+    "published_total": 326,
     "published_longform": 125,
-    "published_shorts": 200,
-    "public_total": 323,
+    "published_shorts": 201,
+    "public_total": 324,
     "queued_longform": 64,
-    "queued_shorts": 98,
+    "queued_shorts": 97,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 52,
+        "published_total": 53,
         "published_longform": 17,
-        "published_shorts": 35,
-        "thumbnail_pending": 4,
-        "public_total": 51,
+        "published_shorts": 36,
+        "thumbnail_pending": 5,
+        "public_total": 52,
         "queued_longform": 10,
         "queued_other": 5,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-PSALM119V165",
-        "title": "Say This Psalm 119:165 Prayer Before You Sleep | Thy Law #Shorts",
+        "id": "SHORT-PSALM141V2",
+        "title": "Say This Psalm 141:2 Prayer Before You Sleep | Still Your Restless Mind #Shorts",
         "format": "short",
-        "youtube_video_id": "fRi9VioybYU",
-        "watch_url": "https://www.youtube.com/shorts/fRi9VioybYU",
+        "youtube_video_id": "WPM15GcPrjY",
+        "watch_url": "https://www.youtube.com/shorts/WPM15GcPrjY",
         "published_on": "2026-11-16",
-        "published_at": "2026-11-16T07:29:22Z"
+        "published_at": "2026-11-16T11:47:44Z"
       },
       "next_queued_longform": {
         "id": "0026",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm141v2",
-        "scripture": "Psalm 141:2",
+        "short": "short-psalm145v18",
+        "scripture": "Psalm 145:18",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PSALM141V2",
+      "slug": "short-psalm141v2-pre-sleep-prayer",
+      "file": "short-psalm141v2-pre-sleep-prayer.md",
+      "title": "Say This Psalm 141:2 Prayer Before You Sleep | Still Your Restless Mind #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T11:47:44Z",
+      "youtube_video_id": "WPM15GcPrjY",
+      "watch_url": "https://www.youtube.com/shorts/WPM15GcPrjY",
+      "youtu_be_url": "https://youtu.be/WPM15GcPrjY",
+      "shorts_url": "https://www.youtube.com/shorts/WPM15GcPrjY",
+      "studio_url": "https://studio.youtube.com/video/WPM15GcPrjY/edit",
+      "thumb_url": "https://i.ytimg.com/vi/WPM15GcPrjY/hqdefault.jpg",
+      "thumb_text": "",
+      "thumbnail_pending": true,
+      "duration_label": "56s",
+      "words": 644
+    },
     {
       "id": "SHORT-FAMILYACTS2V39",
       "slug": "short-familyacts2v39-household-prayer",
@@ -9546,17 +9570,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-psalm141v2",
-        "file": "0000-short-psalm141v2.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 141:2",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm145v18",
