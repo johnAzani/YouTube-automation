@@ -16,8 +16,8 @@
       "workflow": "metrics.yml"
     }
   ],
-  "generated_at": "2026-11-17T06:47:40.863738+00:00",
-  "last_run_at": "2026-11-17T06:46:31+00:00",
+  "generated_at": "2026-11-17T07:28:58.851556+00:00",
+  "last_run_at": "2026-11-17T07:28:16+00:00",
   "on_time": [
     {
       "late_minutes": 50,
@@ -32,13 +32,6 @@
       "ran_at": "2026-11-17T05:07:13+00:00",
       "slot": "2026-11-17T03:37:00+00:00",
       "workflow": "channel-analytics.yml"
-    },
-    {
-      "late_minutes": 111,
-      "name": "Autonomous Comment Replies",
-      "ran_at": "2026-11-16T21:05:22+00:00",
-      "slot": "2026-11-16T19:14:00+00:00",
-      "workflow": "comments.yml"
     },
     {
       "late_minutes": 91,
@@ -76,6 +69,13 @@
       "workflow": "produce.yml"
     },
     {
+      "late_minutes": 41,
+      "name": "Scheduler supervisor",
+      "ran_at": "2026-11-17T07:28:16+00:00",
+      "slot": "2026-11-17T06:47:00+00:00",
+      "workflow": "scheduler-supervisor.yml"
+    },
+    {
       "late_minutes": 62,
       "name": "Tests on main (daily)",
       "ran_at": "2026-11-17T05:54:17+00:00",
@@ -83,6 +83,6 @@
       "workflow": "tests-on-main.yml"
     }
   ],
-  "silence_minutes": 1,
+  "silence_minutes": 0,
   "warn_minutes": 120
 }
