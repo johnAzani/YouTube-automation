@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-17T04:10:56.891058+00:00",
+  "generated_at": "2026-11-17T10:46:12.901364+00:00",
   "as_of": "2026-11-17",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 7,
+  "total_longform_videos": 8,
   "input_diagnostics": {
-    "snapshot_video_ids": 23,
-    "receipt_video_ids": 23,
-    "matched_video_ids": 23,
-    "longform_below_view_threshold": 7,
+    "snapshot_video_ids": 25,
+    "receipt_video_ids": 25,
+    "matched_video_ids": 25,
+    "longform_below_view_threshold": 8,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 2,
+    "longform_too_young_or_undated": 3,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
@@ -18,7 +18,7 @@
   "themes": [
     {
       "theme": "general_prayer",
-      "videos": 4,
+      "videos": 5,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -51,11 +51,11 @@
   ],
   "shorts": {
     "measured_shorts": 11,
-    "total_shorts": 16,
+    "total_shorts": 17,
     "sufficient_data": true,
-    "avg_views": 143.4,
-    "median_views": 128,
-    "total_views": 1577,
+    "avg_views": 143.6,
+    "median_views": 129,
+    "total_views": 1580,
     "minimum_age_days": 2,
     "by_book": {
       "1 chronicles": {
@@ -66,54 +66,54 @@
       "1 thessalonians": {
         "shorts": 1,
         "avg_views": 195.0,
-        "ratio": 1.12
+        "ratio": 1.119
       },
       "habakkuk": {
         "shorts": 1,
         "avg_views": 141.0,
-        "ratio": 0.995
+        "ratio": 0.994
       },
       "philippians": {
         "shorts": 2,
         "avg_views": 148.5,
-        "ratio": 1.018
+        "ratio": 1.017
       },
       "psalm": {
         "shorts": 6,
-        "avg_views": 144.7,
-        "ratio": 1.007
+        "avg_views": 145.2,
+        "ratio": 1.008
       }
     },
     "by_theme": {
       "anxiety_peace": {
         "shorts": 2,
         "avg_views": 148.5,
-        "ratio": 1.018
+        "ratio": 1.017
       },
       "general_prayer": {
         "shorts": 4,
-        "avg_views": 151.0,
-        "ratio": 1.036
+        "avg_views": 150.2,
+        "ratio": 1.031
       },
       "light_courage": {
         "shorts": 1,
         "avg_views": 141.0,
-        "ratio": 0.995
+        "ratio": 0.994
       },
       "midday_strength_endurance": {
         "shorts": 1,
         "avg_views": 195.0,
-        "ratio": 1.12
+        "ratio": 1.119
       },
       "morning_mercy_renewal": {
         "shorts": 1,
-        "avg_views": 128.0,
-        "ratio": 0.964
+        "avg_views": 129.0,
+        "ratio": 0.966
       },
       "peace_rest": {
         "shorts": 2,
-        "avg_views": 106.0,
-        "ratio": 0.87
+        "avg_views": 108.5,
+        "ratio": 0.878
       }
     },
     "guidance": []
