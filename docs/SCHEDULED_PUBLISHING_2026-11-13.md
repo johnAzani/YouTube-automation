@@ -128,7 +128,10 @@ slot time in `published_at`; the video is private in YouTube Studio with the
 right time, thumbnail, captions and playlist; at the time it goes public; the
 next monitor run sets `scheduled_publish: false` and `publish_confirmed_at`;
 whether the channel's comment was posted at upload (no `pinned_comment_pending`)
-or afterwards.
+or afterwards. *(Corrected 17 November 2026: absence of the flag never proved
+posting — it is written only on failure and only for a scheduled upload. Every
+upload now stamps `top_comment: ok|failed|skipped`; read that instead. See
+`docs/COMMENT_LEDGER_RESEARCH_2026-11-17.md`.)*
 
 Other ways to schedule one video, all held to the same rules (a time with a
 timezone at least 15 minutes ahead and no later than the next production slot,

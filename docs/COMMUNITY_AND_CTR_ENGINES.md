@@ -52,7 +52,7 @@ YouTube natively offers "Test & Compare" (A/B/C thumbnail testing) where the win
 
 ---
 
-## 3. Autonomous First-Hour Pastoral Pinned Comment Engine (`pipeline/pinned_comments.py`)
+## 3. Autonomous First-Hour Pastoral First Comment (`pipeline/pinned_comments.py`)
 
 YouTube's recommendation algorithm heavily measures **First-Hour Engagement Velocity** ($V_{1\text{hr}}$). A published video that generates immediate comments in its first 60 minutes receives an expanded initial test impression pool.
 
@@ -63,6 +63,8 @@ Immediately following a successful video upload in `pipeline/upload.py`, the sys
 
 - **Cost:** Consumes 50 YouTube Data API quota units (<0.5% of free daily allowance).
 - **Safety:** Speaks exclusively as *The Secret Place* editorial team; zero personal creator mentions.
+- **Not pinned.** The comment is inserted as the video's first top-level comment and stays at the top only while it is the only or newest one: the Data API has no pin method. The shipped client description (`googleapiclient` discovery cache, `youtube.v3.json` revision 20261104) lists `commentThreads.insert`/`.list` and nothing containing "pin"; pinning is a Studio action the owner does by hand. Measured 2026-11-17: 394 receipts carry **zero** `pinned_comment*` keys, because success was never written down — see `docs/COMMENT_LEDGER_RESEARCH_2026-11-17.md`. The receipt now records `top_comment: ok|failed|skipped`.
+- **Short variant:** a Short gets the bridge comment from `pipeline/shorts_bridge.py` (per-channel template in `pipeline/channel_capabilities.py`), not the AMEN prayer comment.
 
 ---
 

@@ -122,7 +122,9 @@ def _mark_job_uploaded(
     private`` and ``uploaded_at`` for when the file actually reached YouTube.
     ``scripts/confirm_scheduled_publish.py`` clears the flag once YouTube has
     published it. ``pinned_comment == "failed"`` on such an upload records that
-    the comment is still owed.
+    the comment is still owed (``pinned_comment_pending``). Either way, what the
+    upload actually did with its first comment is stamped as ``top_comment``:
+    ``ok``, ``failed`` or ``skipped`` (no comment by design).
 
     ``thumbnail_status`` is what YouTube actually did with the custom thumbnail
     (see ``UploadResult``). The receipt only claims ``thumbnail_revision`` when
@@ -207,6 +209,12 @@ def _mark_job_uploaded(
                         ("privacy_status", "private")))
         if pinned_comment == "failed":
             stamped.append(("pinned_comment_pending", True))
+    # The first comment is posted at upload, and the Data API has no way to pin
+    # it (see pipeline/pinned_comments.py). Success used to be recorded nowhere:
+    # a receipt with no `pinned_comment_pending` meant "posted", "failed on an
+    # immediate upload" or "never attempted" all at once. Record what happened.
+    if pinned_comment in ("ok", "failed", "skipped"):
+        stamped.append(("top_comment", pinned_comment))
     if narration_engine and narration_voice:
         stamped.extend((("narration_engine", narration_engine), ("narration_voice", narration_voice)))
     if thumb_ok:
@@ -243,6 +251,8 @@ def _mark_job_uploaded(
                         privacy_status="private")
         if pinned_comment == "failed":
             doc.meta["pinned_comment_pending"] = True
+    if pinned_comment in ("ok", "failed", "skipped"):
+        doc.meta["top_comment"] = pinned_comment
     if narration_engine and narration_voice:
         doc.meta["narration_engine"] = narration_engine
         doc.meta["narration_voice"] = narration_voice

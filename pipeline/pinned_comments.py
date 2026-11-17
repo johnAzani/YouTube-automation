@@ -1,9 +1,21 @@
-"""Autonomous Pinned Comment & First-Hour Engagement Engine.
+"""Autonomous First Comment & First-Hour Engagement Engine.
 
 Generates and inserts high-conversion pastoral top-level comments immediately upon
 video upload to trigger First-Hour Engagement Velocity ($V_{1hr}$), driving
 algorithmic distribution in YouTube's recommendation engine while surfacing
 clickable bedside Selar sanctuary resources on Long-Form videos.
+
+Posted, never pinned, whatever the names here say. The Data API description this
+repository ships with (``googleapiclient`` discovery cache, ``youtube.v3.json``
+revision 20261104) exposes exactly ``commentThreads.insert`` and
+``commentThreads.list``; ``comments`` adds ``delete``/``insert``/``list``/
+``markAsSpam``/``setModerationStatus``/``update``, and no method in the document
+contains the word "pin". A comment sits at the top by being posted early and
+alone; making it stay there is a Studio click the owner makes by hand. Each
+upload records what it managed under the receipt key ``top_comment``
+(``ok``/``failed``/``skipped``); before that key existed, success was written
+nowhere and ``pinned_comment_pending`` was the only trace, so a receipt could
+only ever say "something may be owed", never "posted".
 
 Cost & Safety Invariants:
   • $0.00 / month hard cost lock (consumes 50 YouTube Data API units per upload).

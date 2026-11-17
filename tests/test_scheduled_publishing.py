@@ -757,3 +757,50 @@ def test_a_comment_refused_once_is_posted_on_the_next_pass(scheduled):
     meta = frontmatter(dest)
     assert rows[0]["pinned_comment"] == "posted" and len(youtube.comments) == 1
     assert "pinned_comment_pending" not in meta and "pinned_comment_attempts" not in meta
+
+
+# --- What the first comment actually did -------------------------------------
+# The comment is posted at upload and cannot be pinned through the API (no pin
+# method exists in the shipped discovery document). Before `top_comment`, a
+# receipt could not tell "posted" from "failed" from "never attempted": the only
+# trace was `pinned_comment_pending`, written on failure and only for scheduled
+# uploads. Measured 2026-11-17: 394 receipts, zero comment keys of any kind.
+
+def test_a_posted_first_comment_is_recorded_on_an_immediate_upload(queue):
+    run, job, _ = queue
+    dest = run._mark_job_uploaded(job, doc_for(job), "abcdefghijk", "ok", pinned_comment="ok")
+    meta = frontmatter(dest)
+    assert meta["top_comment"] == "ok"
+    assert "pinned_comment_pending" not in meta
+
+
+def test_a_failed_first_comment_is_recorded_on_an_immediate_upload(queue):
+    """No schedule means no retry path, so the receipt is the only place it shows."""
+    run, job, _ = queue
+    dest = run._mark_job_uploaded(job, doc_for(job), "abcdefghijk", "ok", pinned_comment="failed")
+    assert frontmatter(dest)["top_comment"] == "failed"
+
+
+def test_a_scheduled_failed_comment_says_both_that_it_failed_and_that_it_is_owed(queue):
+    run, job, _ = queue
+    stamp = (datetime.now(UTC) + timedelta(hours=3)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    dest = run._mark_job_uploaded(job, doc_for(job), "abcdefghijk", "ok",
+                                  scheduled_for=stamp, pinned_comment="failed")
+    meta = frontmatter(dest)
+    assert meta["top_comment"] == "failed" and meta["pinned_comment_pending"] is True
+
+
+def test_a_comment_skipped_by_design_is_recorded_as_skipped(queue):
+    """Every faith upload generates one; a finance niche generates none."""
+    run, job, _ = queue
+    dest = run._mark_job_uploaded(job, doc_for(job), "abcdefghijk", "ok", pinned_comment="skipped")
+    assert frontmatter(dest)["top_comment"] == "skipped"
+
+
+def test_a_recovered_receipt_claims_nothing_about_a_comment(queue):
+    run, job, _ = queue
+    video = {"video_id": "abcdefghijk", "privacy_status": "public", "upload_status": "processed",
+             "published_at": (datetime.now(UTC) - timedelta(minutes=30)).strftime("%Y-%m-%dT%H:%M:%SZ")}
+    dest = run._mark_job_uploaded(job, doc_for(job), "abcdefghijk", recovered_video=video,
+                                  pinned_comment="ok")
+    assert "top_comment" not in frontmatter(dest)
