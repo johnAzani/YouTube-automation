@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T07:00:35Z",
+  "generated_at": "2026-11-17T07:03:27Z",
   "monitor_generated_at": "2026-11-17T06:45:20.694843+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 375,
+    "published_total": 376,
     "published_longform": 133,
-    "published_shorts": 242,
-    "public_total": 373,
+    "published_shorts": 243,
+    "public_total": 374,
     "queued_longform": 62,
-    "queued_shorts": 96,
+    "queued_shorts": 95,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 25,
+        "published_total": 26,
         "published_longform": 9,
-        "published_shorts": 16,
-        "thumbnail_pending": 25,
-        "public_total": 25,
+        "published_shorts": 17,
+        "thumbnail_pending": 26,
+        "public_total": 26,
         "queued_longform": 5,
         "queued_other": 2,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "0608",
-        "title": "A Perfect Way and a Sure Defense: 2 Samuel 22:31 | The Covenant Shield",
-        "format": "longform",
-        "youtube_video_id": "Vqx7CX2Qe3c",
-        "watch_url": "https://youtu.be/Vqx7CX2Qe3c",
+        "id": "SHORT-SHIELDEXODUS12V13",
+        "title": "Pray This Exodus 12:13 Prayer for Divine Protection | Safekeeping Prayer #Shorts",
+        "format": "short",
+        "youtube_video_id": "3GJ9srK-8-0",
+        "watch_url": "https://www.youtube.com/shorts/3GJ9srK-8-0",
         "published_on": "2026-11-17",
-        "published_at": "2026-11-17T00:37:26Z"
+        "published_at": "2026-11-17T07:02:42Z"
       },
       "next_queued_longform": {
         "id": "0609",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldexodus12v13",
-        "scripture": "Exodus 12:13",
+        "short": "short-shieldisaiah54v14",
+        "scripture": "Isaiah 54:14",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDEXODUS12V13",
+      "slug": "short-shieldexodus12v13-protection-prayer",
+      "file": "short-shieldexodus12v13-protection-prayer.md",
+      "title": "Pray This Exodus 12:13 Prayer for Divine Protection | Safekeeping Prayer #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T07:02:42Z",
+      "youtube_video_id": "3GJ9srK-8-0",
+      "watch_url": "https://www.youtube.com/shorts/3GJ9srK-8-0",
+      "youtu_be_url": "https://youtu.be/3GJ9srK-8-0",
+      "shorts_url": "https://www.youtube.com/shorts/3GJ9srK-8-0",
+      "studio_url": "https://studio.youtube.com/video/3GJ9srK-8-0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/3GJ9srK-8-0/hqdefault.jpg",
+      "thumb_text": "THE COVENANT SHIELD \u00b7 DIVINE PROTECTION",
+      "thumbnail_pending": true,
+      "duration_label": "52s",
+      "words": 641
+    },
     {
       "id": "SHORT-HEALINGDEUTERONOMY7V15",
       "slug": "short-healingdeuteronomy7v15-restoration-prayer",
@@ -10819,17 +10843,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-shieldexodus12v13",
-        "file": "0000-short-shieldexodus12v13.yml",
-        "companion_longform_id": "",
-        "scripture": "Exodus 12:13",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldisaiah54v14",
