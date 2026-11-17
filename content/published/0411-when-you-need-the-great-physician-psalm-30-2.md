@@ -2,7 +2,7 @@
 id: '0411'
 title: 'When You Need The Great Physician: Psalm 30:2 | The Healing Balm'
 slug: when-you-need-the-great-physician-psalm-30-2
-status: approved
+status: published
 channel: prayer6
 privacy: public
 format: longform
@@ -77,6 +77,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-17"
+published_at: "2026-11-17T21:20:23Z"
+youtube_video_id: "J3Gf81Awr14"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Approaching the Great Physician in Faith

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T20:41:45Z",
+  "generated_at": "2026-11-17T21:21:17Z",
   "monitor_generated_at": "2026-11-17T19:43:42.749785+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 416,
-    "published_longform": 142,
-    "published_shorts": 274,
-    "public_total": 414,
-    "queued_longform": 60,
-    "queued_shorts": 81,
+    "published_total": 418,
+    "published_longform": 143,
+    "published_shorts": 275,
+    "public_total": 416,
+    "queued_longform": 59,
+    "queued_shorts": 80,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -373,33 +373,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 34,
-        "published_longform": 11,
-        "published_shorts": 23,
+        "published_total": 36,
+        "published_longform": 12,
+        "published_shorts": 24,
         "thumbnail_pending": 7,
-        "public_total": 34,
-        "queued_longform": 6,
+        "public_total": 36,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-HEALINGJAMES5V14",
-        "title": "Pray This James 5:14-16 Healing Prayer for Peace & Strength | Call For The Elders #Shorts",
-        "format": "short",
-        "youtube_video_id": "EX8Tz_JtUuU",
-        "watch_url": "https://www.youtube.com/shorts/EX8Tz_JtUuU",
-        "published_on": "2026-11-17",
-        "published_at": "2026-11-17T15:38:40Z"
-      },
-      "next_queued_longform": {
         "id": "0411",
         "title": "When You Need The Great Physician: Psalm 30:2 | The Healing Balm",
-        "words": 1651,
+        "format": "longform",
+        "youtube_video_id": "J3Gf81Awr14",
+        "watch_url": "https://youtu.be/J3Gf81Awr14",
+        "published_on": "2026-11-17",
+        "published_at": "2026-11-17T21:20:23Z"
+      },
+      "next_queued_longform": {
+        "id": "0412",
+        "title": "Prosper and Be in Health: 3 John 1:2 | The Healing Balm",
+        "words": 1312,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-healingluke8v50",
-        "scripture": "Luke 8:50",
+        "short": "short-healingpsalm119v50",
+        "scripture": "Psalm 119:50",
         "target_window_utc": "15:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0411",
+      "slug": "when-you-need-the-great-physician-psalm-30-2",
+      "file": "0411-when-you-need-the-great-physician-psalm-30-2.md",
+      "title": "When You Need The Great Physician: Psalm 30:2 | The Healing Balm",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T21:20:23Z",
+      "youtube_video_id": "J3Gf81Awr14",
+      "watch_url": "https://youtu.be/J3Gf81Awr14",
+      "youtu_be_url": "https://youtu.be/J3Gf81Awr14",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/J3Gf81Awr14/edit",
+      "thumb_url": "https://i.ytimg.com/vi/J3Gf81Awr14/hqdefault.jpg",
+      "thumb_text": "THOU HAST HEALED ME",
+      "thumbnail_pending": false,
+      "duration_label": "~11 min",
+      "words": 1651
+    },
+    {
       "id": "0027",
       "slug": "isaiah-41-10-upholding-you-with-his-right-hand",
       "file": "0027-isaiah-41-10-upholding-you-with-his-right-hand.md",
@@ -796,6 +820,30 @@
       "thumbnail_pending": false,
       "duration_label": "54s",
       "words": 647
+    },
+    {
+      "id": "SHORT-HEALINGLUKE8V50",
+      "slug": "short-healingluke8v50-restoration-prayer",
+      "file": "short-healingluke8v50-restoration-prayer.md",
+      "title": "Pray This Luke 8:50 Healing Prayer for Peace & Strength | Hear His Voice #Shorts",
+      "channel": "prayer6",
+      "channel_name": "The Healing Balm",
+      "channel_handle": "@TheHealingBalmDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T20:00:14Z",
+      "youtube_video_id": "rv50T7XwvAg",
+      "watch_url": "https://www.youtube.com/shorts/rv50T7XwvAg",
+      "youtu_be_url": "https://youtu.be/rv50T7XwvAg",
+      "shorts_url": "https://www.youtube.com/shorts/rv50T7XwvAg",
+      "studio_url": "https://studio.youtube.com/video/rv50T7XwvAg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/rv50T7XwvAg/hqdefault.jpg",
+      "thumb_text": "RESTORE YOUR HEART \u00b7 A PRAYER FOR PEACE",
+      "thumbnail_pending": false,
+      "duration_label": "47s",
+      "words": 637
     },
     {
       "id": "SHORT-SHIELDPSALM20V1",
@@ -11079,19 +11127,6 @@
         "words": 2058
       },
       {
-        "id": "0411",
-        "slug": "when-you-need-the-great-physician-psalm-30-2",
-        "file": "0411-when-you-need-the-great-physician-psalm-30-2.md",
-        "title": "When You Need The Great Physician: Psalm 30:2 | The Healing Balm",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1651
-      },
-      {
         "id": "0412",
         "slug": "prosper-and-be-in-health-3-john-1-2-the-healing-balm",
         "file": "0412-prosper-and-be-in-health-3-john-1-2-the-healing-balm.md",
@@ -11480,17 +11515,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-healingluke8v50",
-        "file": "0000-short-healingluke8v50.yml",
-        "companion_longform_id": "",
-        "scripture": "Luke 8:50",
-        "channel": "prayer6",
-        "channel_name": "The Healing Balm",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "15:44"
       },
       {
         "short": "short-healingpsalm119v50",
