@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-17T04:09:26.815382+00:00",
+  "generated_at": "2026-11-17T10:44:43.635616+00:00",
   "as_of": "2026-11-17",
   "sufficient_data": false,
   "measured_longform_videos": 0,
   "total_longform_videos": 12,
   "input_diagnostics": {
-    "snapshot_video_ids": 32,
-    "receipt_video_ids": 32,
-    "matched_video_ids": 32,
+    "snapshot_video_ids": 33,
+    "receipt_video_ids": 33,
+    "matched_video_ids": 33,
     "longform_below_view_threshold": 11,
     "longform_missing_view_count": 0,
     "longform_too_young_or_undated": 3,
@@ -67,11 +67,11 @@
   ],
   "shorts": {
     "measured_shorts": 15,
-    "total_shorts": 20,
+    "total_shorts": 21,
     "sufficient_data": true,
-    "avg_views": 100.9,
-    "median_views": 107,
-    "total_views": 1514,
+    "avg_views": 101.0,
+    "median_views": 108,
+    "total_views": 1515,
     "minimum_age_days": 2,
     "by_book": {
       "deuteronomy": {
@@ -82,7 +82,7 @@
       "james": {
         "shorts": 1,
         "avg_views": 112.0,
-        "ratio": 1.037
+        "ratio": 1.036
       },
       "luke": {
         "shorts": 1,
@@ -92,7 +92,7 @@
       "malachi": {
         "shorts": 1,
         "avg_views": 69.0,
-        "ratio": 0.895
+        "ratio": 0.894
       },
       "matthew": {
         "shorts": 2,
@@ -102,7 +102,7 @@
       "philippians": {
         "shorts": 1,
         "avg_views": 122.0,
-        "ratio": 1.07
+        "ratio": 1.069
       },
       "proverbs": {
         "shorts": 3,
@@ -111,8 +111,8 @@
       },
       "psalm": {
         "shorts": 3,
-        "avg_views": 133.3,
-        "ratio": 1.193
+        "avg_views": 133.7,
+        "ratio": 1.194
       },
       "revelation": {
         "shorts": 1,
@@ -129,7 +129,7 @@
       "daily_guidance_wisdom": {
         "shorts": 3,
         "avg_views": 113.3,
-        "ratio": 1.074
+        "ratio": 1.073
       },
       "general_prayer": {
         "shorts": 5,
@@ -138,8 +138,8 @@
       },
       "midday_strength_endurance": {
         "shorts": 2,
-        "avg_views": 172.0,
-        "ratio": 1.352
+        "avg_views": 172.5,
+        "ratio": 1.354
       },
       "peace_rest": {
         "shorts": 2,
