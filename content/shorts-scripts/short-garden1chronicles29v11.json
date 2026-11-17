@@ -1,0 +1,326 @@
+{
+  "key": "short-garden1chronicles29v11",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "THINE IS THE KINGDOM",
+    "A PRAYER OF PRAISE"
+  ],
+  "poster": [
+    "THINE O LORD",
+    "IS THE GREATNESS",
+    "AND THE POWER",
+    "AND THE GLORY"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glade soft mist",
+    "misty countryside soft golden light",
+    "calm river flowing through golden meadow",
+    "sun rays shining through mountain valley",
+    "peaceful lake morning glow golden hour",
+    "sunlight through meadow flowers landscape",
+    "gentle river golden hour autumn forest"
+  ],
+  "scenes": [
+    {
+      "a": "When your heart feels overwhelmed by the heavy choices sitting on your desk today, look up.",
+      "img": "short-garden1chronicles29v11-scene-01.jpg",
+      "kicker": "1 CHRONICLES 29:11",
+      "sub": "LOOK UNTO HIS MAJESTY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Thine, O LORD, is the greatness, and the power, and the glory, and the victory, and the majesty:",
+      "img": "short-garden1chronicles29v11-scene-02.jpg",
+      "kicker": "1 CHRONICLES 29:11",
+      "sub": "THINE IS THE GREATNESS",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "for all that is in the heaven and in the earth is thine;",
+      "img": "short-garden1chronicles29v11-scene-03.jpg",
+      "kicker": "1 CHRONICLES 29:11",
+      "sub": "ALL IN HEAVEN AND EARTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "thine is the kingdom, O LORD, and thou art exalted as head above all.",
+      "img": "short-garden1chronicles29v11-scene-04.jpg",
+      "kicker": "1 CHRONICLES 29:11",
+      "sub": "EXALTED HEAD ABOVE ALL",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Now therefore, our God, we thank thee, and praise thy glorious name.",
+      "img": "short-garden1chronicles29v11-scene-05.jpg",
+      "kicker": "1 CHRONICLES 29:13",
+      "sub": "WE PRAISE THY GLORIOUS NAME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, we release every heavy burden into Your sovereign hands, honoring Your majesty above our fears.",
+      "img": "short-garden1chronicles29v11-scene-06.jpg",
+      "kicker": "1 CHRONICLES 29:11",
+      "sub": "REST IN HIS SOVEREIGN HANDS",
+      "cam": "pan_left",
+      "focus": [
+        0.45,
+        0.55
+      ]
+    },
+    {
+      "a": "Thank You for Your endless strength, enduring peace, and faithful presence today. Subscribe to pray with us daily.",
+      "img": "short-garden1chronicles29v11-scene-07.jpg",
+      "kicker": "THE PRAISE GARDEN",
+      "sub": "ENTER HIS GATES WITH THANKS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "When your heart feels overwhelmed by the heavy choices sitting on your desk today, look up."
+    ],
+    [
+      7,
+      15,
+      "Thine, O LORD, is the greatness, and the power, and the glory, and the victory, and the majesty:"
+    ],
+    [
+      15,
+      22,
+      "for all that is in the heaven and in the earth is thine;"
+    ],
+    [
+      22,
+      30,
+      "thine is the kingdom, O LORD, and thou art exalted as head above all."
+    ],
+    [
+      30,
+      37,
+      "Now therefore, our God, we thank thee, and praise thy glorious name."
+    ],
+    [
+      37,
+      45,
+      "Father, we release every heavy burden into Your sovereign hands, honoring Your majesty above our fears."
+    ],
+    [
+      45,
+      54,
+      "Thank You for Your endless strength, enduring peace, and faithful presence today. Subscribe to pray with us daily."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "WHEN YOUR HEART FEELS OVERWHELMED",
+        "BY HEAVY CHOICES TODAY",
+        "LOOK UP"
+      ],
+      [
+        "OVERWHELMED",
+        "LOOK UP"
+      ],
+      "1 CHRONICLES 29:11"
+    ],
+    [
+      7,
+      15,
+      [
+        "THINE O LORD IS THE GREATNESS",
+        "THE POWER AND THE GLORY",
+        "AND THE VICTORY AND MAJESTY"
+      ],
+      [
+        "GREATNESS",
+        "POWER",
+        "GLORY"
+      ],
+      "1 CHRONICLES 29:11"
+    ],
+    [
+      15,
+      22,
+      [
+        "FOR ALL THAT IS IN HEAVEN",
+        "AND IN THE EARTH IS THINE"
+      ],
+      [
+        "HEAVEN",
+        "EARTH",
+        "THINE"
+      ],
+      "1 CHRONICLES 29:11"
+    ],
+    [
+      22,
+      30,
+      [
+        "THINE IS THE KINGDOM O LORD",
+        "AND THOU ART EXALTED",
+        "AS HEAD ABOVE ALL"
+      ],
+      [
+        "KINGDOM",
+        "EXALTED",
+        "HEAD"
+      ],
+      "1 CHRONICLES 29:11"
+    ],
+    [
+      30,
+      37,
+      [
+        "NOW THEREFORE OUR GOD",
+        "WE THANK THEE AND PRAISE",
+        "THY GLORIOUS NAME"
+      ],
+      [
+        "THANK THEE",
+        "GLORIOUS NAME"
+      ],
+      "1 CHRONICLES 29:13"
+    ],
+    [
+      37,
+      45,
+      [
+        "FATHER WE RELEASE EVERY BURDEN",
+        "INTO YOUR SOVEREIGN HANDS",
+        "HONORING YOUR MAJESTY"
+      ],
+      [
+        "SOVEREIGN HANDS",
+        "MAJESTY"
+      ],
+      "1 CHRONICLES 29:11-13"
+    ],
+    [
+      45,
+      54,
+      [
+        "THANK YOU FOR ENDLESS STRENGTH",
+        "ENDURING PEACE AND FAITHFUL PRESENCE",
+        "SUBSCRIBE TO PRAY WITH US DAILY"
+      ],
+      [
+        "ENDLESS STRENGTH",
+        "SUBSCRIBE"
+      ],
+      "1 CHRONICLES 29:11-13"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When your heart feels overwhelmed by the heavy choices sitting on your desk today, look up.",
+      "kind": "phrase",
+      "words": [
+        "OVERWHELMED",
+        "LOOK",
+        "UP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thine, O LORD, is the greatness, and the power, and the glory, and the victory, and the majesty:",
+      "kind": "phrase",
+      "words": [
+        "GREATNESS",
+        "POWER",
+        "GLORY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "for all that is in the heaven and in the earth is thine;",
+      "kind": "phrase",
+      "words": [
+        "HEAVEN",
+        "EARTH",
+        "THINE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "thine is the kingdom, O LORD, and thou art exalted as head above all.",
+      "kind": "phrase",
+      "words": [
+        "KINGDOM",
+        "EXALTED",
+        "HEAD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Now therefore, our God, we thank thee, and praise thy glorious name.",
+      "kind": "phrase",
+      "words": [
+        "THANK",
+        "PRAISE",
+        "GLORIOUS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we release every heavy burden into Your sovereign hands, honoring Your majesty above our fears.",
+      "kind": "phrase",
+      "words": [
+        "RELEASE",
+        "BURDEN",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Thank You for Your endless strength, enduring peace, and faithful presence today. Subscribe to pray with us daily.",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "PEACE",
+        "SUBSCRIBE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "1 Chronicles 29:11-13"
+}

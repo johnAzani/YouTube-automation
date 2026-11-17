@@ -1,0 +1,274 @@
+{
+  "key": "short-gardenhebrews13v15",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "OFFER THE SACRIFICE OF PRAISE",
+    "GIVING THANKS CONTINUALLY"
+  ],
+  "poster": [
+    "BY HIM LET US OFFER",
+    "THE SACRIFICE OF PRAISE",
+    "THE FRUIT OF OUR LIPS",
+    "HEBREWS 13:15"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glade with gentle golden light rays through trees",
+    "misty countryside meadow in soft morning sunlight calm landscape",
+    "peaceful river reflecting golden sun beams at dawn",
+    "golden sunlit field of wild grass at sunrise quiet morning",
+    "calm forest stream with glowing golden reflections",
+    "misty mountain valley flooded with soft sunlight"
+  ],
+  "scenes": [
+    {
+      "a": "When your words have run out today",
+      "img": "short-gardenhebrews13v15-scene-01.jpg",
+      "kicker": "HEBREWS 13:15",
+      "sub": "SACRIFICE OF PRAISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "By him therefore let us offer",
+      "img": "short-gardenhebrews13v15-scene-02.jpg",
+      "kicker": "HEBREWS 13:15",
+      "sub": "FRUIT OF OUR LIPS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord Jesus, even when our circumstances",
+      "img": "short-gardenhebrews13v15-scene-03.jpg",
+      "kicker": "HEBREWS 13:15",
+      "sub": "GIVING THANKS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "We bring You thanksgiving not only",
+      "img": "short-gardenhebrews13v15-scene-04.jpg",
+      "kicker": "HEBREWS 13:15",
+      "sub": "CONTINUAL PRAISE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let the fruit of our lips",
+      "img": "short-gardenhebrews13v15-scene-05.jpg",
+      "kicker": "HEBREWS 13:15",
+      "sub": "HIS HOLY NAME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Subscribe to The Praise Garden",
+      "img": "short-gardenhebrews13v15-scene-06.jpg",
+      "kicker": "HEBREWS 13:15",
+      "sub": "THE PRAISE GARDEN",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "When your words have run out today, give God the simple song inside your heart."
+    ],
+    [
+      6,
+      15,
+      "By him therefore let us offer the sacrifice of praise to God continually, that is, the fruit of our lips giving thanks to his name."
+    ],
+    [
+      15,
+      23,
+      "Lord Jesus, even when our circumstances try to quiet our joy, we choose to lift up praise to You."
+    ],
+    [
+      23,
+      30,
+      "We bring You thanksgiving not only in ease, but in every quiet hour."
+    ],
+    [
+      30,
+      39,
+      "Let the fruit of our lips bring honor to Your holy name. May our hearts continually overflow with gratitude for Your endless mercy."
+    ],
+    [
+      39,
+      44,
+      "Subscribe to The Praise Garden for daily moments of praise."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "WHEN YOUR WORDS HAVE RUN OUT TODAY",
+        "GIVE GOD THE SIMPLE SONG",
+        "INSIDE YOUR HEART"
+      ],
+      [
+        "SIMPLE SONG"
+      ],
+      "HEBREWS 13 : 15"
+    ],
+    [
+      6,
+      15,
+      [
+        "BY HIM THEREFORE LET US OFFER",
+        "THE SACRIFICE OF PRAISE",
+        "TO GOD CONTINUALLY",
+        "THE FRUIT OF OUR LIPS",
+        "GIVING THANKS TO HIS NAME"
+      ],
+      [
+        "SACRIFICE OF PRAISE",
+        "GIVING THANKS"
+      ],
+      "HEBREWS 13 : 15"
+    ],
+    [
+      15,
+      23,
+      [
+        "EVEN WHEN CIRCUMSTANCES TRY",
+        "TO QUIET OUR JOY",
+        "WE CHOOSE TO LIFT UP PRAISE"
+      ],
+      [
+        "LIFT UP PRAISE"
+      ],
+      "HEBREWS 13 : 15"
+    ],
+    [
+      23,
+      30,
+      [
+        "WE BRING YOU THANKSGIVING",
+        "NOT ONLY IN EASE",
+        "BUT IN EVERY QUIET HOUR"
+      ],
+      [
+        "THANKSGIVING"
+      ],
+      "HEBREWS 13 : 15"
+    ],
+    [
+      30,
+      39,
+      [
+        "LET THE FRUIT OF OUR LIPS",
+        "BRING HONOR TO YOUR HOLY NAME",
+        "OVERFLOW WITH GRATITUDE",
+        "FOR YOUR ENDLESS MERCY"
+      ],
+      [
+        "HONOR",
+        "ENDLESS MERCY"
+      ],
+      "HEBREWS 13 : 15"
+    ],
+    [
+      39,
+      44,
+      [
+        "SUBSCRIBE TO THE PRAISE GARDEN",
+        "FOR DAILY MOMENTS OF PRAISE"
+      ],
+      [
+        "THE PRAISE GARDEN"
+      ],
+      "HEBREWS 13 : 15"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "simple song",
+      "kind": "phrase",
+      "words": [
+        "SIMPLE",
+        "SONG"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "sacrifice of praise",
+      "kind": "phrase",
+      "words": [
+        "SACRIFICE",
+        "PRAISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "giving thanks to his name",
+      "kind": "phrase",
+      "words": [
+        "GIVING",
+        "THANKS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "quiet our joy",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "JOY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "thanksgiving not only in ease",
+      "kind": "phrase",
+      "words": [
+        "THANKSGIVING",
+        "EASE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "overflow with gratitude",
+      "kind": "phrase",
+      "words": [
+        "OVERFLOW",
+        "GRATITUDE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Hebrews 13:15"
+}
