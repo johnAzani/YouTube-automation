@@ -16,8 +16,8 @@
       "workflow": "metrics.yml"
     }
   ],
-  "generated_at": "2026-11-17T04:02:42.893736+00:00",
-  "last_run_at": "2026-11-17T04:01:29+00:00",
+  "generated_at": "2026-11-17T04:11:17.921876+00:00",
+  "last_run_at": "2026-11-17T04:10:30+00:00",
   "on_time": [
     {
       "late_minutes": 50,
@@ -39,6 +39,13 @@
       "ran_at": "2026-11-15T20:45:10+00:00",
       "slot": "2026-11-15T19:14:00+00:00",
       "workflow": "community.yml"
+    },
+    {
+      "late_minutes": 108,
+      "name": "Growth autopilot",
+      "ran_at": "2026-11-17T04:02:47+00:00",
+      "slot": "2026-11-17T02:14:00+00:00",
+      "workflow": "growth-autopilot.yml"
     },
     {
       "late_minutes": 36,
@@ -76,6 +83,6 @@
       "workflow": "tests-on-main.yml"
     }
   ],
-  "silence_minutes": 1,
+  "silence_minutes": 0,
   "warn_minutes": 120
 }
