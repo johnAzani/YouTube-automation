@@ -1,0 +1,270 @@
+{
+  "key": "short-morningephesians6v10",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "EQUIPPED FOR",
+    "THE DAY AHEAD"
+  ],
+  "poster": [
+    "ARMOR OF GOD",
+    "STRENGTH IN THE LORD",
+    "DAWN PRAYER",
+    "MORNING STILLNESS"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "golden sunrise mist over mountain valley",
+    "soft morning light through sheer white curtains",
+    "dew drops on green leaves at dawn",
+    "sunlight breaking over calm horizon",
+    "peaceful forest path morning light",
+    "abstract sun rays filtering through trees"
+  ],
+  "scenes": [
+    {
+      "a": "That sharp knot of dread in your chest is not your burden to carry alone.",
+      "img": "short-morningephesians6v10-scene-01.jpg",
+      "kicker": "EPHESIANS 6:10",
+      "sub": "FIND YOUR STRENGTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Finally, my brethren, be strong in the Lord, and in the power of his might.",
+      "img": "short-morningephesians6v10-scene-02.jpg",
+      "kicker": "EPHESIANS 6:10",
+      "sub": "STRONG IN HIS MIGHT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Put on the whole armor of God, that ye may be able to stand against the wiles of the devil.",
+      "img": "short-morningephesians6v10-scene-03.jpg",
+      "kicker": "EPHESIANS 6:11",
+      "sub": "ARMORED BY GRACE",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Father, replace this frantic energy with the steady rhythm of your peace.",
+      "img": "short-morningephesians6v10-scene-04.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "GIVE US PEACE",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Help me walk through the challenges of this day with courage that comes from you.",
+      "img": "short-morningephesians6v10-scene-05.jpg",
+      "kicker": "STAY STEADFAST",
+      "sub": "WALK WITH COURAGE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "May my heart remain tethered to your truth as the world starts its noise.",
+      "img": "short-morningephesians6v10-scene-06.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "STAY GROUNDED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That sharp knot of dread in your chest is not your burden to carry alone."
+    ],
+    [
+      8,
+      22,
+      "Finally, my brethren, be strong in the Lord, and in the power of his might."
+    ],
+    [
+      22,
+      36,
+      "Put on the whole armor of God, that ye may be able to stand against the wiles of the devil."
+    ],
+    [
+      36,
+      50,
+      "Father, replace this frantic energy with the steady rhythm of your peace."
+    ],
+    [
+      50,
+      65,
+      "Help me walk through the challenges of this day with courage that comes from you."
+    ],
+    [
+      65,
+      80,
+      "May my heart remain tethered to your truth as the world starts its noise."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "DREAD IS",
+        "NOT YOUR",
+        "BURDEN"
+      ],
+      [
+        "BURDEN"
+      ],
+      "EPHESIANS 6:10"
+    ],
+    [
+      8,
+      22,
+      [
+        "BE STRONG",
+        "IN THE",
+        "POWER"
+      ],
+      [
+        "POWER"
+      ],
+      "EPHESIANS 6:10"
+    ],
+    [
+      22,
+      36,
+      [
+        "PUT ON THE",
+        "WHOLE ARMOR",
+        "OF GOD"
+      ],
+      [
+        "ARMOR"
+      ],
+      "EPHESIANS 6:11"
+    ],
+    [
+      36,
+      50,
+      [
+        "REPLACE FRANTIC",
+        "ENERGY WITH",
+        "STEADY PEACE"
+      ],
+      [
+        "PEACE"
+      ],
+      "PRAYER"
+    ],
+    [
+      50,
+      65,
+      [
+        "WALK WITH",
+        "COURAGE THAT",
+        "COMES FROM YOU"
+      ],
+      [
+        "COURAGE"
+      ],
+      "PRAYER"
+    ],
+    [
+      65,
+      80,
+      [
+        "HEART TETHERED",
+        "TO YOUR",
+        "TRUTH"
+      ],
+      [
+        "TRUTH"
+      ],
+      "PRAYER"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That sharp knot of dread in your chest is not your burden to carry alone.",
+      "kind": "phrase",
+      "words": [
+        "BURDEN",
+        "ALONE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Finally, my brethren, be strong in the Lord, and in the power of his might.",
+      "kind": "phrase",
+      "words": [
+        "STRONG",
+        "MIGHT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Put on the whole armor of God, that ye may be able to stand against the wiles of the devil.",
+      "kind": "phrase",
+      "words": [
+        "ARMOR",
+        "STAND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, replace this frantic energy with the steady rhythm of your peace.",
+      "kind": "phrase",
+      "words": [
+        "STEADY",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help me walk through the challenges of this day with courage that comes from you.",
+      "kind": "phrase",
+      "words": [
+        "COURAGE",
+        "CHALLENGES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May my heart remain tethered to your truth as the world starts its noise.",
+      "kind": "phrase",
+      "words": [
+        "TETHERED",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Ephesians 6:10-11"
+}

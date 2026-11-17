@@ -1,0 +1,308 @@
+{
+  "key": "short-morningpsalm63v1",
+  "channel": "prayer2",
+  "psalm": 63,
+  "title": [
+    "EARLY WILL I",
+    "SEEK THEE"
+  ],
+  "poster": [
+    "EARLY WILL",
+    "I SEEK THEE",
+    "PSALM 63:1",
+    "THE MORNING ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "sun rising over dewy grass morning mist",
+    "golden dawn light touching mountain peaks",
+    "morning light through bedroom window soft shadows",
+    "tranquil river at sunrise golden reflections",
+    "peaceful forest sunrise mist rising through trees",
+    "early morning sunlight warming a quiet room",
+    "vast empty landscape glowing at sunrise"
+  ],
+  "scenes": [
+    {
+      "a": "Before the demands of this hour pull you in different directions, rest right here.",
+      "img": "short-morningpsalm63v1-scene-01.jpg",
+      "kicker": "PSALM 63:1",
+      "sub": "QUIET YOUR HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, before my feet touch the floor and before I look at my list of tasks, my heart turns to You.",
+      "img": "short-morningpsalm63v1-scene-02.jpg",
+      "kicker": "MORNING PRAYER",
+      "sub": "YOUR SOUL THIRSTS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "You are my God, and I look to You alone for the strength I need to walk through today.",
+      "img": "short-morningpsalm63v1-scene-03.jpg",
+      "kicker": "SEEKING GOD",
+      "sub": "EARLY WILL I SEEK THEE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "O God, thou art my God; early will I seek thee: my soul thirsteth for thee, my flesh longeth for thee in a dry and thirsty land, where no water is;",
+      "img": "short-morningpsalm63v1-scene-04.jpg",
+      "kicker": "PSALM 63",
+      "sub": "A THIRSTY LAND",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "When the world feels dry and difficult, let Your living water refresh my weary spirit.",
+      "img": "short-morningpsalm63v1-scene-05.jpg",
+      "kicker": "LIVING WATER",
+      "sub": "REFRESH MY SPIRIT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Fill every empty place inside me this morning so I can walk in Your peace.",
+      "img": "short-morningpsalm63v1-scene-06.jpg",
+      "kicker": "HIS PEACE",
+      "sub": "WALK IN GRACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In Jesus' name, amen.",
+      "img": "short-morningpsalm63v1-scene-07.jpg",
+      "kicker": "AMEN",
+      "sub": "BEGIN YOUR DAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "Before the demands of this hour pull you in different directions, rest right here."
+    ],
+    [
+      12,
+      27,
+      "Father, before my feet touch the floor and before I look at my list of tasks, my heart turns to You."
+    ],
+    [
+      27,
+      41,
+      "You are my God, and I look to You alone for the strength I need to walk through today."
+    ],
+    [
+      41,
+      71,
+      "O God, thou art my God; early will I seek thee: my soul thirsteth for thee, my flesh longeth for thee in a dry and thirsty land, where no water is;"
+    ],
+    [
+      71,
+      86,
+      "When the world feels dry and difficult, let Your living water refresh my weary spirit."
+    ],
+    [
+      86,
+      98,
+      "Fill every empty place inside me this morning so I can walk in Your peace."
+    ],
+    [
+      98,
+      106,
+      "In Jesus' name, amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "BEFORE THE DEMANDS OF THIS",
+        "HOUR PULL YOU IN DIFFERENT",
+        "DIRECTIONS, REST RIGHT HERE"
+      ],
+      "REST",
+      "PSALM 63 : 1"
+    ],
+    [
+      12,
+      27,
+      [
+        "FATHER, BEFORE MY FEET TOUCH",
+        "THE FLOOR AND BEFORE I LOOK",
+        "AT MY TASKS, MY HEART TURNS"
+      ],
+      "TURNS",
+      "PSALM 63 : 1"
+    ],
+    [
+      27,
+      41,
+      [
+        "YOU ARE MY GOD, AND I",
+        "LOOK TO YOU ALONE FOR",
+        "THE STRENGTH I NEED TODAY"
+      ],
+      "STRENGTH",
+      "PSALM 63 : 1"
+    ],
+    [
+      41,
+      71,
+      [
+        "O GOD, THOU ART MY GOD;",
+        "EARLY WILL I SEEK THEE:",
+        "MY SOUL THIRSTETH FOR THEE"
+      ],
+      "THIRSTETH",
+      "PSALM 63 : 1"
+    ],
+    [
+      71,
+      86,
+      [
+        "WHEN THE WORLD FEELS DRY",
+        "LET YOUR LIVING WATER",
+        "REFRESH MY WEARY SPIRIT"
+      ],
+      "REFRESH",
+      "PSALM 63 : 1"
+    ],
+    [
+      86,
+      98,
+      [
+        "FILL EVERY EMPTY PLACE",
+        "INSIDE ME THIS MORNING SO",
+        "I CAN WALK IN YOUR PEACE"
+      ],
+      "PEACE",
+      "PSALM 63 : 1"
+    ],
+    [
+      98,
+      106,
+      [
+        "IN JESUS'",
+        "NAME,",
+        "AMEN"
+      ],
+      "AMEN",
+      "PSALM 63 : 1"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Before the demands of this hour pull you in different directions, rest right here.",
+      "kind": "phrase",
+      "words": [
+        "rest",
+        "right",
+        "here"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, before my feet touch the floor and before I look at my list of tasks, my heart turns to You.",
+      "kind": "phrase",
+      "words": [
+        "heart",
+        "turns",
+        "to",
+        "You"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "You are my God, and I look to You alone for the strength I need to walk through today.",
+      "kind": "phrase",
+      "words": [
+        "strength",
+        "I",
+        "need"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "O God, thou art my God; early will I seek thee: my soul thirsteth for thee, my flesh longeth for thee in a dry and thirsty land, where no water is;",
+      "kind": "phrase",
+      "words": [
+        "early",
+        "will",
+        "I",
+        "seek",
+        "thee"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "When the world feels dry and difficult, let Your living water refresh my weary spirit.",
+      "kind": "phrase",
+      "words": [
+        "living",
+        "water",
+        "refresh"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Fill every empty place inside me this morning so I can walk in Your peace.",
+      "kind": "phrase",
+      "words": [
+        "walk",
+        "in",
+        "Your",
+        "peace"
+      ],
+      "hi": 3,
+      "slot": "C"
+    },
+    {
+      "a": "In Jesus' name, amen.",
+      "kind": "phrase",
+      "words": [
+        "In",
+        "Jesus'",
+        "name",
+        "amen"
+      ],
+      "hi": 3,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 63:1"
+}

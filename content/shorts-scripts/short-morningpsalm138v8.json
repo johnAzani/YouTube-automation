@@ -1,0 +1,323 @@
+{
+  "key": "short-morningpsalm138v8",
+  "channel": "prayer2",
+  "psalm": 138,
+  "title": [
+    "THE LORD WILL PERFECT",
+    "WHAT CONCERNS YOU TODAY"
+  ],
+  "poster": [
+    "THE LORD WILL",
+    "PERFECT THAT WHICH",
+    "CONCERNETH ME",
+    "PSALM 138:8"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "golden sunrise over quiet misty valley morning light",
+    "sun rays beaming through mountain pine trees sunrise",
+    "calm lake reflection early sunrise warm sky",
+    "sun rising over peaceful rolling hills dawn morning",
+    "soft morning light through misty forest trees",
+    "glowing golden sunrise sky horizon early dawn"
+  ],
+  "scenes": [
+    {
+      "a": "You are carrying an unfinished story into this morning, afraid you will fail.",
+      "img": "short-morningpsalm138v8-scene-01.jpg",
+      "kicker": "PSALM 138:8",
+      "sub": "GOD WILL PERFECT YOUR PATH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "The LORD will perfect that which concerneth me: thy mercy, O LORD, endureth for ever: forsake not the works of thine own hands.",
+      "img": "short-morningpsalm138v8-scene-02.jpg",
+      "kicker": "PSALM 138:8",
+      "sub": "HIS MERCY ENDURES FOREVER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we release every concern into Your capable hands this morning.",
+      "img": "short-morningpsalm138v8-scene-03.jpg",
+      "kicker": "PSALM 138:8",
+      "sub": "SURRENDER EVERY WORRY",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "What we cannot complete, You are already working out for our good.",
+      "img": "short-morningpsalm138v8-scene-04.jpg",
+      "kicker": "PSALM 138:8",
+      "sub": "HE IS WORKING FOR YOU",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Do not abandon the work You have begun in our lives, but finish it according to Your divine purpose.",
+      "img": "short-morningpsalm138v8-scene-05.jpg",
+      "kicker": "PSALM 138:8",
+      "sub": "FAITHFUL TO THE END",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Morning Altar to begin every sunrise in prayer.",
+      "img": "short-morningpsalm138v8-scene-06.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "BEGIN EVERY SUNRISE IN PRAYER",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "You are carrying an unfinished story into this morning, afraid you will fail."
+    ],
+    [
+      7,
+      18,
+      "God promises in Psalm 138: The LORD will perfect that which concerneth me: thy mercy, O LORD, endureth for ever: forsake not the works of thine own hands."
+    ],
+    [
+      18,
+      26,
+      "Lord, we release every concern into Your capable hands this morning."
+    ],
+    [
+      26,
+      34,
+      "What we cannot complete, You are already working out for our good."
+    ],
+    [
+      34,
+      41,
+      "Your mercy surrounds us today and lasts forever."
+    ],
+    [
+      41,
+      51,
+      "Do not abandon the work You have begun in our lives, but finish it according to Your divine purpose."
+    ],
+    [
+      51,
+      57,
+      "We trust Your faithful love for every detail of this day."
+    ],
+    [
+      57,
+      64,
+      "Subscribe to The Morning Altar to begin every sunrise in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "YOU ARE CARRYING AN",
+        "UNFINISHED STORY THIS MORNING",
+        "AFRAID YOU WILL FAIL"
+      ],
+      [
+        "UNFINISHED STORY"
+      ],
+      "PSALM 138 : 8"
+    ],
+    [
+      7,
+      18,
+      [
+        "THE LORD WILL PERFECT",
+        "THAT WHICH CONCERNETH ME",
+        "THY MERCY ENDURETH FOREVER"
+      ],
+      [
+        "LORD WILL PERFECT"
+      ],
+      "PSALM 138 : 8"
+    ],
+    [
+      18,
+      26,
+      [
+        "WE RELEASE EVERY CONCERN",
+        "INTO YOUR CAPABLE HANDS",
+        "THIS MORNING"
+      ],
+      [
+        "CAPABLE HANDS"
+      ],
+      "PSALM 138 : 8"
+    ],
+    [
+      26,
+      34,
+      [
+        "WHAT WE CANNOT COMPLETE",
+        "YOU ARE WORKING OUT",
+        "FOR OUR GOOD"
+      ],
+      [
+        "WORKING OUT"
+      ],
+      "PSALM 138 : 8"
+    ],
+    [
+      34,
+      41,
+      [
+        "YOUR MERCY SURROUNDS US",
+        "TODAY AND LASTS FOREVER"
+      ],
+      [
+        "MERCY SURROUNDS US"
+      ],
+      "PSALM 138 : 8"
+    ],
+    [
+      41,
+      51,
+      [
+        "DO NOT ABANDON THE WORK",
+        "YOU HAVE BEGUN IN US",
+        "BUT FINISH IT IN PURPOSE"
+      ],
+      [
+        "DIVINE PURPOSE"
+      ],
+      "PSALM 138 : 8"
+    ],
+    [
+      51,
+      57,
+      [
+        "WE TRUST YOUR FAITHFUL LOVE",
+        "FOR EVERY DETAIL TODAY"
+      ],
+      [
+        "FAITHFUL LOVE"
+      ],
+      "PSALM 138 : 8"
+    ],
+    [
+      57,
+      64,
+      [
+        "SUBSCRIBE TO THE MORNING ALTAR",
+        "BEGIN EVERY SUNRISE IN PRAYER"
+      ],
+      [
+        "THE MORNING ALTAR"
+      ],
+      "PSALM 138 : 8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You are carrying an unfinished story into this morning, afraid you will fail.",
+      "kind": "phrase",
+      "words": [
+        "UNFINISHED",
+        "STORY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The LORD will perfect that which concerneth me: thy mercy, O LORD, endureth for ever: forsake not the works of thine own hands.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "PERFECT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, we release every concern into Your capable hands this morning.",
+      "kind": "phrase",
+      "words": [
+        "CAPABLE",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "What we cannot complete, You are already working out for our good.",
+      "kind": "phrase",
+      "words": [
+        "WORKING",
+        "OUT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your mercy surrounds us today and lasts forever.",
+      "kind": "phrase",
+      "words": [
+        "MERCY",
+        "SURROUNDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Do not abandon the work You have begun in our lives, but finish it according to Your divine purpose.",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "PURPOSE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "We trust Your faithful love for every detail of this day.",
+      "kind": "phrase",
+      "words": [
+        "FAITHFUL",
+        "LOVE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Morning Altar to begin every sunrise in prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUNRISE",
+        "PRAYER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 138:8"
+}

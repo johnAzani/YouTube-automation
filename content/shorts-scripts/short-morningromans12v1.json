@@ -1,0 +1,323 @@
+{
+  "key": "short-morningromans12v1",
+  "channel": "prayer2",
+  "psalm": null,
+  "title": [
+    "RENEW YOUR MIND",
+    "THIS MORNING"
+  ],
+  "poster": [
+    "WHEN THE WORLD",
+    "PRESSURES YOU",
+    "FIND PEACE IN",
+    "GOD'S PERFECT WILL"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Morning Altar — begin every sunrise in prayer"
+  ],
+  "stock_queries": [
+    "serene mountain valley golden sunrise mist",
+    "sunrise light shining through forest trees morning",
+    "sunlight breaking over calm lake horizon",
+    "golden morning light over open rolling hills",
+    "peaceful sunrise sky over distant mountains",
+    "bright sun rays through morning clouds",
+    "sunrise over quiet meadow golden light"
+  ],
+  "scenes": [
+    {
+      "a": "When the pressure to satisfy everyone else follows you into this morning, stop right here.",
+      "img": "short-morningromans12v1-scene-01.jpg",
+      "kicker": "ROMANS 12:2",
+      "sub": "STAND FIRM THIS MORNING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "And be not conformed to this world: but be ye transformed by the renewing of your mind,",
+      "img": "short-morningromans12v1-scene-02.jpg",
+      "kicker": "RENEW YOUR MIND",
+      "sub": "BE TRANSFORMED BY GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "that ye may prove what is that good, and acceptable, and perfect, will of God.",
+      "img": "short-morningromans12v1-scene-03.jpg",
+      "kicker": "GOD'S PERFECT WILL",
+      "sub": "PROVE GOD'S GOOD WILL",
+      "cam": "pull_out",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Father, as dawn breaks across the sky, we surrender our minds and choices into Your hands.",
+      "img": "short-morningromans12v1-scene-04.jpg",
+      "kicker": "SURRENDER TO GOD",
+      "sub": "GIVE HIM YOUR THOUGHTS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Keep us from bending to the patterns of this world.",
+      "img": "short-morningromans12v1-scene-05.jpg",
+      "kicker": "STAND STRONG",
+      "sub": "DO NOT CONFORM TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Transform our thinking by Your holy truth, so we may live with confidence in Your good and perfect will today. Amen.",
+      "img": "short-morningromans12v1-scene-06.jpg",
+      "kicker": "WALK IN HIS WILL",
+      "sub": "WALK WITH PEACE AND TRUTH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to start every sunrise in prayer.",
+      "img": "short-morningromans12v1-scene-07.jpg",
+      "kicker": "THE MORNING ALTAR",
+      "sub": "BEGIN EVERY SUNRISE IN PRAYER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "When the pressure to satisfy everyone else follows you into this morning, stop right here."
+    ],
+    [
+      6,
+      13,
+      "And be not conformed to this world: but be ye transformed by the renewing of your mind,"
+    ],
+    [
+      13,
+      20,
+      "that ye may prove what is that good, and acceptable, and perfect, will of God."
+    ],
+    [
+      20,
+      26,
+      "Father, as dawn breaks across the sky, we surrender our minds and choices into Your hands."
+    ],
+    [
+      26,
+      31,
+      "Keep us from bending to the patterns of this world."
+    ],
+    [
+      31,
+      39,
+      "Transform our thinking by Your holy truth, so we may live with confidence in Your good and perfect will today. Amen."
+    ],
+    [
+      39,
+      44,
+      "Subscribe to start every sunrise in prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "WHEN THE PRESSURE TO",
+        "SATISFY EVERYONE ELSE",
+        "FOLLOWS YOU THIS MORNING",
+        "STOP RIGHT HERE"
+      ],
+      [
+        "PRESSURE",
+        "STOP"
+      ],
+      "ROMANS 12 : 2"
+    ],
+    [
+      6,
+      13,
+      [
+        "AND BE NOT CONFORMED",
+        "TO THIS WORLD",
+        "BUT BE YE TRANSFORMED",
+        "BY RENEWING YOUR MIND"
+      ],
+      [
+        "TRANSFORMED",
+        "RENEWING"
+      ],
+      "ROMANS 12 : 2"
+    ],
+    [
+      13,
+      20,
+      [
+        "THAT YE MAY PROVE",
+        "WHAT IS THAT GOOD",
+        "AND ACCEPTABLE AND PERFECT",
+        "WILL OF GOD"
+      ],
+      [
+        "PERFECT",
+        "WILL OF GOD"
+      ],
+      "ROMANS 12 : 2"
+    ],
+    [
+      20,
+      26,
+      [
+        "FATHER AS DAWN BREAKS",
+        "WE SURRENDER OUR MINDS",
+        "AND CHOICES INTO YOUR HANDS"
+      ],
+      [
+        "SURRENDER",
+        "YOUR HANDS"
+      ],
+      "ROMANS 12 : 2"
+    ],
+    [
+      26,
+      31,
+      [
+        "KEEP US FROM BENDING",
+        "TO THE PATTERNS",
+        "OF THIS WORLD"
+      ],
+      [
+        "KEEP US",
+        "THIS WORLD"
+      ],
+      "ROMANS 12 : 2"
+    ],
+    [
+      31,
+      39,
+      [
+        "TRANSFORM OUR THINKING",
+        "BY YOUR HOLY TRUTH",
+        "LIVE WITH CONFIDENCE",
+        "IN YOUR PERFECT WILL"
+      ],
+      [
+        "HOLY TRUTH",
+        "PERFECT WILL"
+      ],
+      "ROMANS 12 : 2"
+    ],
+    [
+      39,
+      44,
+      [
+        "SUBSCRIBE TO START",
+        "EVERY SUNRISE IN PRAYER"
+      ],
+      [
+        "SUBSCRIBE",
+        "SUNRISE IN PRAYER"
+      ],
+      "ROMANS 12 : 2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When the pressure to satisfy everyone else follows you into this morning, stop right here.",
+      "kind": "phrase",
+      "words": [
+        "PRESSURE",
+        "STOP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And be not conformed to this world: but be ye transformed by the renewing of your mind,",
+      "kind": "phrase",
+      "words": [
+        "TRANSFORMED",
+        "RENEWING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "that ye may prove what is that good, and acceptable, and perfect, will of God.",
+      "kind": "phrase",
+      "words": [
+        "PERFECT",
+        "WILL",
+        "OF",
+        "GOD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, as dawn breaks across the sky, we surrender our minds and choices into Your hands.",
+      "kind": "phrase",
+      "words": [
+        "SURRENDER",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Keep us from bending to the patterns of this world.",
+      "kind": "phrase",
+      "words": [
+        "KEEP",
+        "PATTERNS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Transform our thinking by Your holy truth, so we may live with confidence in Your good and perfect will today. Amen.",
+      "kind": "phrase",
+      "words": [
+        "TRANSFORM",
+        "TRUTH",
+        "WILL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to start every sunrise in prayer.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "SUNRISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Romans 12:1-2"
+}
