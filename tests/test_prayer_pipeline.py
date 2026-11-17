@@ -183,6 +183,9 @@ class PrayerPipelineTests(unittest.TestCase):
             self.assertEqual(tts.call_args.kwargs['voice'], 'Charon')
             self.assertEqual(tts.call_args.kwargs['model'], 'gemini-3.8-flash-tts')
             self.assertEqual(renderer.call_args.kwargs['timing_source'], 'measured')
+            # The HUD's top line is the channel's own name, never a hardcoded one:
+            # this doc has no `channel:`, so it is The Secret Place.
+            self.assertEqual(renderer.call_args.kwargs['hud_kicker'], 'THE SECRET PLACE')
             # The live path must reach the CTR pack, which is the only renderer that
             # takes a channel and paints that channel's own grade. The AssertionError
             # mock above fails loudly if produce is ever re-wired to the retired card

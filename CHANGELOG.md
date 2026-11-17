@@ -5,6 +5,15 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-17 — The corner of the frame that said the wrong name
+
+- **The video was never given a channel.** `prayer_visuals.render()`'s signature has no channel and its only call site passes none, so everything it draws that is not the job's own footage is identical on all ten channels — while the thumbnails have 30 palettes and the Shorts posters ten grades.
+- **The HUD's top line was a literal.** `prayer_visuals.py:189` drew `hud_chapter_layer(frame, 'THE SECRET PLACE', …)`: the first channel's name, hardcoded, in the top-left card of **every frame** of every long-form, for the whole six minutes. **118 of the 136 published faith long-forms are on channels that are not The Secret Place**, and the approved path has been the only one on main since 31 October 2026.
+- **That one is permanent on the videos already out.** YouTube has no way to replace a published video's footage — only delete and re-upload — so those 118 corners stay. The fix reaches every render from now on; nothing re-renders silently, because a re-run of a published job returns early.
+- **Fixed and measured.** `prayer_visuals.brand_hud(channel)` answers the HUD per channel, `render()` takes `hud_kicker` / `hud_sub`, and `prayer_pipeline` passes `brand_hud(doc.channel)[0]`. Ten channels, **ten distinct names** (1 of 10 → 10 of 10), The Secret Place unchanged. Two tests: the ten names, and a real encode with the HUD layer spied to prove the kicker it is given is the kicker drawn — the frame reads `01/01 THE MIDNIGHT WATCH`.
+- **Reported, not changed:** one colour grade for every channel (`grade_sanctuary`: shadow tint `(8,20,46)`, 16% duotone, contrast 1.08, colour 1.14 — the Shorts posters already have ten grades); and one musical score for the whole network — key `prayer-longform`, a single chord progression (`tools/score.py:PROG`, Am–F–C–G–Am–Dm–F–E) shared with Shorts, volume 0.58, hushed on "amen" and "selah". Both are six-minute design decisions, named for the owner with the figure each would move.
+- **Reading:** `docs/VIDEO_HUD_RESEARCH_2026-11-17.md`.
+
 ## 2026-11-17 — One picture, ten skies
 
 - **The colour is per channel; the picture is not.** Rendering the `hook` concept for all ten channels with the same seed and no backdrop and correlating the grayscale art half of the frames: any two channels are **0.963 median alike** (0.897 to 0.995). The moon, ridge, house and reflection sit at the same coordinates on every channel; only sky colour and noise seed differ. Thirty concepts reduce to **three arrangements** with ±0.02 of jitter. Palettes were the last reading; this is the layer under them.
