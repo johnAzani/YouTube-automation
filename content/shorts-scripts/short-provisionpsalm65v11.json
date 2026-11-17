@@ -1,0 +1,321 @@
+{
+  "key": "short-provisionpsalm65v11",
+  "channel": "prayer7",
+  "psalm": 65,
+  "title": [
+    "CROWNEST THE YEAR",
+    "GOD'S DAILY PROVISION"
+  ],
+  "poster": [
+    "THOU CROWNEST THE YEAR",
+    "WITH THY GOODNESS",
+    "AND THY PATHS DROP FATNESS",
+    "PSALM 65:11"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunlit valley with lush wheat field",
+    "sunlit mountain pass with golden light",
+    "peaceful river flowing through golden meadow",
+    "sunlit sanctuary stone table morning light",
+    "golden sunlit mountain valley autumn harvest",
+    "peaceful river winding through sunlit hills",
+    "golden light beaming over tranquil valley"
+  ],
+  "scenes": [
+    {
+      "a": "If you are staring at an unpaid bill tonight, commit your financial needs to God.",
+      "img": "short-provisionpsalm65v11-scene-01.jpg",
+      "kicker": "PSALM 65:11",
+      "sub": "COMMIT YOUR FINANCIAL NEEDS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Scripture promises, Thou crownest the year with thy goodness; and thy paths drop fatness.",
+      "img": "short-provisionpsalm65v11-scene-02.jpg",
+      "kicker": "PSALM 65:11",
+      "sub": "THOU CROWNEST THE YEAR",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, we thank You that Your sovereign abundance overflows into every dry season of our lives.",
+      "img": "short-provisionpsalm65v11-scene-03.jpg",
+      "kicker": "PSALM 65:11",
+      "sub": "YOUR ABUNDANCE OVERFLOWS",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "You see our hard labor, our silent worries, and every practical requirement before us right now.",
+      "img": "short-provisionpsalm65v11-scene-04.jpg",
+      "kicker": "PSALM 65:11",
+      "sub": "HE SEES YOUR DAILY LABOR",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Open doors of daily provision and let Your divine goodness crown our work with true fruitfulness.",
+      "img": "short-provisionpsalm65v11-scene-05.jpg",
+      "kicker": "PSALM 65:11",
+      "sub": "OPEN DOORS OF PROVISION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Establish the labor of our hands as we yield our decisions and trust in Your unfailing care.",
+      "img": "short-provisionpsalm65v11-scene-06.jpg",
+      "kicker": "PSALM 65:11",
+      "sub": "ESTABLISH OUR WORK",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "In Jesus' name, Amen. Subscribe to walk in God's daily provision.",
+      "img": "short-provisionpsalm65v11-scene-07.jpg",
+      "kicker": "PSALM 65:11",
+      "sub": "WALK IN DAILY PROVISION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If you are staring at an unpaid bill tonight, commit your financial needs to God."
+    ],
+    [
+      6,
+      13,
+      "Scripture promises, Thou crownest the year with thy goodness; and thy paths drop fatness."
+    ],
+    [
+      13,
+      21,
+      "Heavenly Father, we thank You that Your sovereign abundance overflows into every dry season of our lives."
+    ],
+    [
+      21,
+      29,
+      "You see our hard labor, our silent worries, and every practical requirement before us right now."
+    ],
+    [
+      29,
+      37,
+      "Open doors of daily provision and let Your divine goodness crown our work with true fruitfulness."
+    ],
+    [
+      37,
+      46,
+      "Establish the labor of our hands as we yield our decisions and trust in Your unfailing care."
+    ],
+    [
+      46,
+      52,
+      "In Jesus' name, Amen. Subscribe to walk in God's daily provision."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF YOU ARE STARING AT",
+        "AN UNPAID BILL TONIGHT,",
+        "COMMIT YOUR FINANCIAL NEEDS TO GOD."
+      ],
+      [
+        "FINANCIAL",
+        "NEEDS"
+      ],
+      "PSALM 65 : 11"
+    ],
+    [
+      6,
+      13,
+      [
+        "THOU CROWNEST THE YEAR",
+        "WITH THY GOODNESS;",
+        "AND THY PATHS DROP FATNESS."
+      ],
+      [
+        "CROWNEST",
+        "GOODNESS",
+        "FATNESS"
+      ],
+      "PSALM 65 : 11"
+    ],
+    [
+      13,
+      21,
+      [
+        "HEAVENLY FATHER, WE THANK YOU",
+        "THAT YOUR SOVEREIGN ABUNDANCE",
+        "OVERFLOWS INTO EVERY DRY SEASON."
+      ],
+      [
+        "SOVEREIGN",
+        "ABUNDANCE"
+      ],
+      "PSALM 65 : 11"
+    ],
+    [
+      21,
+      29,
+      [
+        "YOU SEE OUR HARD LABOR,",
+        "OUR SILENT WORRIES, AND EVERY",
+        "PRACTICAL REQUIREMENT BEFORE US."
+      ],
+      [
+        "SILENT",
+        "WORRIES",
+        "LABOR"
+      ],
+      "PSALM 65 : 11"
+    ],
+    [
+      29,
+      37,
+      [
+        "OPEN DOORS OF DAILY PROVISION",
+        "AND LET YOUR DIVINE GOODNESS",
+        "CROWN OUR WORK WITH FRUITFULNESS."
+      ],
+      [
+        "OPEN",
+        "DOORS",
+        "PROVISION"
+      ],
+      "PSALM 65 : 11"
+    ],
+    [
+      37,
+      46,
+      [
+        "ESTABLISH THE LABOR OF OUR HANDS",
+        "AS WE YIELD OUR DECISIONS",
+        "AND TRUST IN YOUR UNFAILING CARE."
+      ],
+      [
+        "ESTABLISH",
+        "UNFAILING",
+        "CARE"
+      ],
+      "PSALM 65 : 11"
+    ],
+    [
+      46,
+      52,
+      [
+        "IN JESUS' NAME, AMEN.",
+        "SUBSCRIBE TO WALK IN",
+        "GOD'S DAILY PROVISION."
+      ],
+      [
+        "DAILY",
+        "PROVISION"
+      ],
+      "PSALM 65 : 11"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are staring at an unpaid bill tonight, commit your financial needs to God.",
+      "kind": "phrase",
+      "words": [
+        "FINANCIAL",
+        "NEEDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Scripture promises, Thou crownest the year with thy goodness; and thy paths drop fatness.",
+      "kind": "phrase",
+      "words": [
+        "CROWNEST",
+        "GOODNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, we thank You that Your sovereign abundance overflows into every dry season of our lives.",
+      "kind": "phrase",
+      "words": [
+        "SOVEREIGN",
+        "ABUNDANCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You see our hard labor, our silent worries, and every practical requirement before us right now.",
+      "kind": "phrase",
+      "words": [
+        "SILENT",
+        "WORRIES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Open doors of daily provision and let Your divine goodness crown our work with true fruitfulness.",
+      "kind": "phrase",
+      "words": [
+        "OPEN",
+        "DOORS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Establish the labor of our hands as we yield our decisions and trust in Your unfailing care.",
+      "kind": "phrase",
+      "words": [
+        "ESTABLISH",
+        "UNFAILING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In Jesus' name, Amen. Subscribe to walk in God's daily provision.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "PROVISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 65:11"
+}

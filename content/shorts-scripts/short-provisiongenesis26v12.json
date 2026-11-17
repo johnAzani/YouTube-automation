@@ -1,0 +1,248 @@
+{
+  "key": "short-provisiongenesis26v12",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "THE HUNDREDFOLD",
+    "PROMISE"
+  ],
+  "poster": [
+    "THE PROVISION",
+    "TABLE",
+    "GENESIS 26",
+    "SACRED WISDOM"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "golden sunrise over wheat fields",
+    "peaceful river flowing through stones",
+    "sunlit valley in early morning mist",
+    "ancient stone altar in morning light",
+    "breathtaking mountain path at dawn",
+    "gentle stream reflecting the sky"
+  ],
+  "scenes": [
+    {
+      "a": "Whether your fields feel barren or your labor seems fruitless, look to the Lord now.",
+      "img": "short-provisiongenesis26v12-scene-01.jpg",
+      "kicker": "GENESIS 26:12",
+      "sub": "GOD PROVIDES IN EVERY SEASON",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Then Isaac sowed in that land, and received in the same year an hundredfold: and the LORD blessed him.",
+      "img": "short-provisiongenesis26v12-scene-02.jpg",
+      "kicker": "GENESIS 26:12",
+      "sub": "THE BLESSING IS REAL",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And the man waxed great, and went forward, and grew until he became very great:",
+      "img": "short-provisiongenesis26v12-scene-03.jpg",
+      "kicker": "GENESIS 26:13",
+      "sub": "GROWTH IN FAITHFULNESS",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Heavenly Father, grant me the wisdom to plant my seeds in Your chosen soil today.",
+      "img": "short-provisiongenesis26v12-scene-04.jpg",
+      "kicker": "DAILY PROVISION",
+      "sub": "TRUSTING YOUR TIMING",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Help me to trust that even in a dry season, You are working for my good.",
+      "img": "short-provisiongenesis26v12-scene-05.jpg",
+      "kicker": "STEWARDSHIP",
+      "sub": "WALKING BY FAITH",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "Guide my hands and steady my heart as I commit my entire life to You.",
+      "img": "short-provisiongenesis26v12-scene-06.jpg",
+      "kicker": "DAILY PRAYER",
+      "sub": "RESTING IN HIS GRACE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      13,
+      "Whether your fields feel barren or your labor seems fruitless, look to the Lord now."
+    ],
+    [
+      14,
+      30,
+      "Then Isaac sowed in that land, and received in the same year an hundredfold: and the LORD blessed him."
+    ],
+    [
+      31,
+      45,
+      "And the man waxed great, and went forward, and grew until he became very great:"
+    ],
+    [
+      46,
+      60,
+      "Heavenly Father, grant me the wisdom to plant my seeds in Your chosen soil today."
+    ],
+    [
+      61,
+      75,
+      "Help me to trust that even in a dry season, You are working for my good."
+    ],
+    [
+      76,
+      95,
+      "Guide my hands and steady my heart as I commit my entire life to You."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      13,
+      [
+        "YOUR FIELDS FEEL BARREN",
+        "LABOR SEEMS FRUITLESS",
+        "LOOK TO THE LORD"
+      ],
+      [
+        "LOOK",
+        "LORD"
+      ],
+      "GENESIS 26:12"
+    ],
+    [
+      14,
+      30,
+      [
+        "ISAAC SOWED",
+        "HUNDREDFOLD BLESSING",
+        "LORD BLESSED HIM"
+      ],
+      [
+        "HUNDREDFOLD",
+        "BLESSED"
+      ],
+      "GENESIS 26:12"
+    ],
+    [
+      31,
+      45,
+      [
+        "THE MAN WAXED GREAT",
+        "WENT FORWARD",
+        "GREW VERY GREAT"
+      ],
+      [
+        "WAXED GREAT",
+        "VERY GREAT"
+      ],
+      "GENESIS 26:13"
+    ],
+    [
+      46,
+      60,
+      [
+        "PLANT MY SEEDS",
+        "IN CHOSEN SOIL",
+        "WISDOM TODAY"
+      ],
+      [
+        "PLANT",
+        "WISDOM"
+      ],
+      "GENESIS 26:13"
+    ],
+    [
+      61,
+      75,
+      [
+        "TRUST THE SEASON",
+        "WORKING FOR GOOD",
+        "DRY SOIL"
+      ],
+      [
+        "TRUST",
+        "GOOD"
+      ],
+      "GENESIS 26:13"
+    ],
+    [
+      76,
+      95,
+      [
+        "STEADY MY HEART",
+        "COMMIT MY LIFE",
+        "GUIDE MY HANDS"
+      ],
+      [
+        "COMMIT",
+        "GUIDE"
+      ],
+      "GENESIS 26:13"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Whether your fields feel barren or your labor seems fruitless, look to the Lord now.",
+      "kind": "phrase",
+      "words": [
+        "LOOK",
+        "TO",
+        "THE",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Then Isaac sowed in that land, and received in the same year an hundredfold: and the LORD blessed him.",
+      "kind": "phrase",
+      "words": [
+        "HUNDREDFOLD",
+        "BLESSING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And the man waxed great, and went forward, and grew until he became very great:",
+      "kind": "phrase",
+      "words": [
+        "WAXED",
+        "GREAT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Genesis 26:12-13"
+}
