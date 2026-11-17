@@ -51,6 +51,10 @@ SLOT_GRACE = timedelta(hours=3)
 # Every stamp this module prints is in the owner's zone. WAT is UTC+1 with no DST,
 # so this is a fixed offset and cannot drift.
 WAT = timezone(timedelta(hours=1))
+#: How many of the newest long-form receipts the publish-instant measure reads.
+#: One channel publishes one long-form a day, so this is about four days of the
+#: whole network — long enough to see a trend, short enough to see a fix.
+PUBLISH_SAMPLE = 40
 
 
 @dataclass
@@ -609,6 +613,103 @@ def _verdict(auto: Automation, now: datetime,
 # --------------------------------------------------------------------------- #
 # Outcomes: did the channel actually gain anything?
 # --------------------------------------------------------------------------- #
+_PUBLISHED_AT = re.compile(
+    r"""^published_at:\s*['"]?([0-9]{4}-[0-9]{2}-[0-9]{2}T[^'"\n]+)['"]?""", re.M)
+
+
+def _minutes_after_slot(when: datetime, hhmm: str | None) -> float | None:
+    """Signed minutes from the channel's slot on ``when``'s day, wrapped to ±12 h."""
+    try:
+        hour, minute = (int(part) for part in str(hhmm).split(":"))
+    except (TypeError, ValueError):
+        return None
+    slot = when.replace(hour=hour, minute=minute, second=0, microsecond=0)
+    minutes = (when - slot).total_seconds() / 60.0
+    while minutes < -720:
+        minutes += 1440
+    while minutes > 720:
+        minutes -= 1440
+    return minutes
+
+
+def publish_delays(published_dir: Path | None = None, *,
+                   sample: int = PUBLISH_SAMPLE) -> dict:
+    """How long after its own slot a channel's long-form actually goes public.
+
+    A receipt's ``published_at`` is the moment the video goes public
+    (``pipeline/run.py`` — the public time even when the upload was scheduled), and
+    a production slot is the cron that starts the work for it
+    (``scripts/produce_plan.LONGFORM_SLOT_UTC``). The gap is the figure
+    ``PUBLISH_LEAD_MINUTES`` exists to remove: with the lead at 0 the upload is
+    public the instant it finishes, so the gap is however late GitHub started the
+    run plus however long the render took.
+
+    Measured on 17 November 2026 over the newest 40 long-forms: median 108 minutes
+    after the channel's own slot, none within the hour, four more than six hours
+    late, and the closest 70 minutes — the floor is the render, not the cron. The
+    one video ever published *on* its slot minute was the 13 November scheduled
+    trial. Reading: ``docs/PUBLISH_INSTANT_RESEARCH_2026-11-17.md``.
+
+    Returns ``{"read", "after_slot", "before_slot", "median", "within_30",
+    "within_60", "over_180", "worst": (channel, minutes), "lead"}``. A negative
+    offset means the long-form was made for a different slot (the fallback and
+    catch-up paths), so it is counted apart from the delay.
+    """
+    import statistics
+
+    from pipeline.channels import normalize_channel_id
+    from scripts.produce_plan import LONGFORM_SLOT_UTC, PUBLISH_LEAD_MINUTES
+
+    published = Path(published_dir or ROOT / "content" / "published")
+    found: list[tuple[datetime, str, float]] = []
+    for path in sorted(published.glob("*.md")):
+        text = path.read_text(encoding="utf-8", errors="replace")
+        if "youtube_video_id:" not in text or re.search(r"(?m)^format:\s*short\b", text):
+            continue
+        match = _PUBLISHED_AT.search(text)
+        if not match:
+            continue
+        try:
+            when = datetime.fromisoformat(match.group(1).strip().replace("Z", "+00:00"))
+        except ValueError:
+            continue
+        if when.tzinfo is None:
+            continue
+        channel = re.search(r"(?m)^channel:[ \t]*[\"']?([A-Za-z0-9_-]+)", text)
+        # A receipt with no channel is the first channel's, the convention
+        # `read_receipts` uses; aliases resolve here too, never a literal.
+        channel_id = normalize_channel_id(channel.group(1) if channel else None)
+        minutes = _minutes_after_slot(when, LONGFORM_SLOT_UTC.get(channel_id))
+        if minutes is None:
+            continue
+        found.append((when.astimezone(timezone.utc), channel_id, minutes))
+
+    found.sort(reverse=True)
+    found = found[: max(1, sample)]
+    after = [(channel, minutes) for _when, channel, minutes in found if minutes >= 0]
+    result = {
+        "read": len(found),
+        "after_slot": len(after),
+        "before_slot": len(found) - len(after),
+        "median": None,
+        "within_30": 0,
+        "within_60": 0,
+        "over_180": 0,
+        "worst": ("", 0.0),
+        "lead": PUBLISH_LEAD_MINUTES,
+    }
+    if after:
+        minutes = sorted(m for _c, m in after)
+        result.update({
+            "median": round(float(statistics.median(minutes)), 1),
+            "within_30": sum(1 for m in minutes if m <= 30),
+            "within_60": sum(1 for m in minutes if m <= 60),
+            "over_180": sum(1 for m in minutes if m > 180),
+            "worst": max(after, key=lambda pair: pair[1]),
+        })
+    return result
+
+
 def check_outcomes(report: MonitorReport, now: datetime | None = None,
                    published_dir: Path | None = None,
                    log_path: Path | None = None) -> MonitorReport:
@@ -689,6 +790,34 @@ def check_outcomes(report: MonitorReport, now: datetime | None = None,
             "outcome": "per-channel publish audit",
             "detail": f"Could not inspect channel receipts: {type(exc).__name__}",
             "severity": "blocking",
+        })
+
+    # When the videos actually appear, against the slots they were made for. A
+    # slot is when the work starts; nothing lands on its minute while the lead is
+    # off, and this is the line that keeps that visible instead of assumed.
+    try:
+        delays = publish_delays(published)
+        if delays["read"] and delays["median"] is not None:
+            channel, worst = delays["worst"]
+            lead = delays["lead"]
+            if lead <= 0:
+                tail = "scheduling is off (lead 0 min), so no video lands on its slot minute"
+            else:
+                tail = f"the lead is {lead} min, so a slot minute is what it aims at"
+            report.outcomes.append({
+                "outcome": "publish instant",
+                "detail": (
+                    f"long-forms go public a median {delays['median']:.0f} min after "
+                    f"their slot ({delays['within_30']} of {delays['after_slot']} within "
+                    f"30 min, {delays['over_180']} over 3h; worst {worst:.0f} min on {channel}); "
+                    + tail),
+                "severity": "ok",
+            })
+    except Exception as exc:  # noqa: BLE001 - a reporter must not cost a run
+        report.outcomes.append({
+            "outcome": "publish instant",
+            "detail": f"Could not read the publish times: {type(exc).__name__}",
+            "severity": "info",
         })
 
     # A production run that finishes successfully and uploads nothing is the exact

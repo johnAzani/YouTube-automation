@@ -5,6 +5,19 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-17 — The slot is when the work starts
+
+- **A slot is a cron, not a release.** The five slots are when work becomes due (`produce.yml:20-24`, `LONGFORM_SLOT_UTC`); the render then starts, and with `PUBLISH_LEAD_MINUTES = 0` each upload is public the instant it finishes. Measured over the **newest 40 long-forms** (14 Nov 04:53 → 17 Nov 07:37): **median 108 minutes after the channel's own slot**, **none within an hour**, p90 **380**, worst **619**. Per slot, medians of **89 / 144 / 108 / 101 / 169** minutes — 06:14 is the healthiest, the overnight 23:14 the worst.
+- **The floor is the render.** Thirteen of the 36 delivered after their slot landed 70–95 minutes after it, and nothing in the current mix has beaten **70 minutes**: a fixed-length job, not an unreliable clock. The repository's own earlier measurement of the two halves (47 runs, 96 legs, 8–13 Nov) put GitHub's start at 34–423 min late, median 218, with a channel leg at median 44 min.
+- **The only video ever published on its slot minute is the only one that was scheduled.** The Healing Balm, 13 November: uploaded `17:32:45Z`, public `19:14:00Z` — to the second. It is the only receipt carrying `uploaded_at`, and the only long-form with a zero offset.
+- **Four of the 40 were made for a different slot**, not late for their own: the catch-up net (`LONGFORM_CATCH_UP_HOURS = 26`) and the fallback net (`LONGFORM_FALLBACK_MIN_GAP_HOURS = 7`) in `longform_due()`, which publish at whatever hour the fill happens. One long-form a day at its own slot is a target, not a fact.
+- **Shorts ride the same wave:** 241 published Shorts, median **59 minutes** from the nearest cron, **16% within 30**.
+- **The network publishes together.** Two channels share each slot: 21 same-slot long-form pairs, median gap **40.6 min**, closest **2 seconds** (The Morning Altar 07:37:51 and The Praise Garden 07:37:49, 17 November). Across all 373 receipts, **243 (65%) have another channel's video within ten minutes** — the most literal form of "many similar videos across linked channels".
+- **The figure is now printed daily.** `scripts/automation_monitor.py` gains `publish_delays()` and a **`publish instant`** outcome: median minutes after the slot, how many landed within 30, how many took over 3 h, the worst channel, and a plain line that scheduling is off. Severity `ok` — it reports and never fails a run.
+- **Two README lines corrected:** "release slots" (line 18) now says a slot is when work starts, with the measured 108 minutes; `produce.yml`'s "cron (06:14 & 14:14 UTC)" (line 42) had been stale since 14 November and now names all five. `STATE.md`'s schedule table says the same in one paragraph.
+- **Owner-only:** setting `PUBLISH_LEAD_MINUTES` — which moves five crons, ten slot values and every human-facing time with it — and the "best hour" idea behind it, which needs the Analytics permission and slot accounting dated by upload. A three-hour lead absorbs the render plus 89 minutes of GitHub's lateness; the measured lateness is median 218. **Unproven:** that landing on the minute lifts anything; there is no per-minute analytics in `content/analytics/`.
+- Tests: `tests/test_automation_monitor.py` (+4). Reading: `docs/PUBLISH_INSTANT_RESEARCH_2026-11-17.md`.
+
 ## 2026-11-17 — The poster is the channel's. The frames are not.
 
 - **Two still surfaces carry the channel; nothing that moves does.** The 16:9 thumbnail reads `Brand.ctr_grade` and the 9:16 Short poster reads `shorts_poster.grade_for` — **ten distinct grades across ten channels, agreeing 10 of 10**. The frames underneath them carry the channel **0 of 10**: `prayer_visuals.py:209` applies one `grade_sanctuary` to every long-form, `read_video_plate` applies one `grade_blue` to every clip, and a Short's photographs are graded by a **file name**, not a channel.

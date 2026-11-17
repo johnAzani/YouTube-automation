@@ -699,6 +699,14 @@ channel's long-form goes out at its own slot. Shorts no longer need a long-form
 behind them. The decision, the passage lists and the way back are in
 `docs/SHORTS_FIRST_MIX_2026-11-14.md`.
 
+**A slot is when the work starts, not when the video appears** (measured 17
+November 2026). Over the newest 40 long-forms, each went public a median **108
+minutes after its own slot**, none within the hour, and four more than six hours
+late — rendering begins at the slot and scheduled publishing is switched off, so
+the shortest gap the pipeline can produce is the render's own roughly 70 minutes.
+The daily monitor prints the figure as `publish instant`. Reading and the way to
+land on the minute: `docs/PUBLISH_INSTANT_RESEARCH_2026-11-17.md`.
+
 The expansion pass no longer has a cron of its own: it runs inside the brain at
 4:14am **and** at the top of every production run, so a missed or late cron is
 repaired by the next release instead of becoming an empty evening.

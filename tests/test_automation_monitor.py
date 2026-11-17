@@ -337,6 +337,65 @@ class TestOutcomes(unittest.TestCase):
         self.assertIn("1 live", row["detail"])
 
 
+class TestPublishInstant(unittest.TestCase):
+    """A slot is when the work starts. This is what the receipts say about it."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.pub = Path(self.tmp.name) / "published"
+        self.pub.mkdir()
+
+    def receipt(self, name, channel, published_at, fmt="longform"):
+        self.pub.joinpath(f"{name}.md").write_text(
+            f'---\nvideo: {name}\nchannel: {channel}\nformat: {fmt}\n'
+            f'youtube_video_id: abc\npublished_at: "{published_at}"\n---\n\nbody\n',
+            encoding="utf-8")
+
+    def test_the_delay_is_measured_from_each_channels_own_slot(self):
+        # prayer4's slot is 23:14 UTC; prayer2's is 06:14.
+        self.receipt("a", "prayer4", "2026-11-17T00:34:00Z")   # +80 min
+        self.receipt("b", "prayer4", "2026-11-16T23:34:00Z")   # +20 min
+        self.receipt("c", "prayer2", "2026-11-17T06:44:00Z")   # +30 min
+        figure = am.publish_delays(self.pub)
+        self.assertEqual(figure["read"], 3)
+        self.assertEqual(figure["after_slot"], 3)
+        self.assertEqual(figure["median"], 30.0)
+        self.assertEqual(figure["within_30"], 2)     # 20 and 30, not 80
+        self.assertEqual(figure["within_60"], 2)
+        self.assertEqual(figure["worst"], ("prayer4", 80.0))
+
+    def test_a_video_made_for_another_slot_is_counted_apart_from_the_delay(self):
+        """The fallback and catch-up paths make a long-form at a slot that is not
+        the channel's own; that is not a late video and must not enter the median."""
+        self.receipt("a", "prayer4", "2026-11-17T00:34:00Z")   # +80 min, its own slot
+        self.receipt("b", "prayer10", "2026-11-16T00:11:00Z")  # 10 h before its 10:14 slot
+        figure = am.publish_delays(self.pub)
+        self.assertEqual(figure["read"], 2)
+        self.assertEqual(figure["after_slot"], 1)
+        self.assertEqual(figure["before_slot"], 1)
+        self.assertEqual(figure["median"], 80.0)
+
+    def test_shorts_and_untimed_receipts_are_passed_over(self):
+        self.receipt("a", "prayer4", "2026-11-17T00:34:00Z")
+        self.receipt("s", "prayer4", "2026-11-17T02:00:00Z", fmt="short")
+        self.pub.joinpath("c.md").write_text(
+            "---\nchannel: prayer4\nformat: longform\nyoutube_video_id: abc\n---\n",
+            encoding="utf-8")
+        figure = am.publish_delays(self.pub)
+        self.assertEqual(figure["read"], 1)
+
+    def test_the_monitor_says_so_when_scheduling_is_off(self):
+        self.receipt("a", "prayer4", "2026-11-17T00:34:00Z")
+        with mock.patch.object(am, "ROOT", Path(self.tmp.name)):
+            report = am.check_outcomes(am.MonitorReport(), now=NOW, published_dir=self.pub,
+                                       log_path=Path(self.tmp.name) / "none.json")
+        row = [o for o in report.outcomes if o["outcome"] == "publish instant"][0]
+        self.assertEqual(row["severity"], "ok")
+        self.assertIn("median 80 min after their slot", row["detail"])
+        self.assertIn("scheduling is off", row["detail"])
+
+
 class TestFindingsFeedTheWatchdog(unittest.TestCase):
     def test_findings_carry_severity_through(self):
         report = am.MonitorReport()
