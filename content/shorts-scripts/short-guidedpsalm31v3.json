@@ -1,0 +1,281 @@
+{
+  "key": "short-guidedpsalm31v3",
+  "channel": "prayer10",
+  "psalm": 31,
+  "title": [
+    "FINDING DIRECTION",
+    "IN THE UNCERTAINTY"
+  ],
+  "poster": [
+    "THE GUIDED PATH",
+    "SEEKING WISDOM",
+    "IN THE",
+    "QUIET MOMENTS"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty mountain pass at dawn",
+    "still dark lake reflections",
+    "slow moving river at twilight",
+    "sunlight breaking over pine forest",
+    "path through a quiet valley",
+    "mist rolling over green hills"
+  ],
+  "scenes": [
+    {
+      "a": "When the weight of that choice pulls at your mind, look to the hills today.",
+      "img": "short-guidedpsalm31v3-scene-01.jpg",
+      "kicker": "PSALM 31:3",
+      "sub": "FINDING GOD'S DIRECTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "For thou art my rock and my fortress; therefore for thy name’s sake lead me, and guide me.",
+      "img": "short-guidedpsalm31v3-scene-02.jpg",
+      "kicker": "PSALM 31:3",
+      "sub": "GOD IS YOUR ANCHOR",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, the path ahead feels clouded by my own doubts and the noise of this world.",
+      "img": "short-guidedpsalm31v3-scene-03.jpg",
+      "kicker": "SEEKING WISDOM",
+      "sub": "SURRENDERING YOUR WORRY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I bring this specific situation to You, asking for Your clarity to settle my heart now.",
+      "img": "short-guidedpsalm31v3-scene-04.jpg",
+      "kicker": "TRUSTING THE LORD",
+      "sub": "HIS GUIDANCE IS SURE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Help me to step forward with peace, knowing You are the one who orders my way.",
+      "img": "short-guidedpsalm31v3-scene-05.jpg",
+      "kicker": "WALKING IN TRUTH",
+      "sub": "STRENGTH FOR EVERY STEP",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "May Your presence be the foundation for every decision I make from this hour forward, Amen.",
+      "img": "short-guidedpsalm31v3-scene-06.jpg",
+      "kicker": "THE GUIDED PATH",
+      "sub": "STRENGTH FOR THE JOURNEY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "When the weight of that choice pulls at your mind, look to the hills today."
+    ],
+    [
+      9,
+      18,
+      "For thou art my rock and my fortress; therefore for thy name’s sake lead me, and guide me."
+    ],
+    [
+      19,
+      29,
+      "Lord, the path ahead feels clouded by my own doubts and the noise of this world."
+    ],
+    [
+      30,
+      40,
+      "I bring this specific situation to You, asking for Your clarity to settle my heart now."
+    ],
+    [
+      41,
+      50,
+      "Help me to step forward with peace, knowing You are the one who orders my way."
+    ],
+    [
+      51,
+      60,
+      "May Your presence be the foundation for every decision I make from this hour forward, Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "WHEN THE WEIGHT OF",
+        "THAT CHOICE PULLS",
+        "LOOK TO THE HILLS"
+      ],
+      [
+        "PULLS",
+        "HILLS"
+      ],
+      "PSALM 31:3"
+    ],
+    [
+      9,
+      18,
+      [
+        "FOR THOU ART MY ROCK",
+        "AND MY FORTRESS; THEREFORE",
+        "FOR THY NAME’S SAKE",
+        "LEAD ME, AND GUIDE ME"
+      ],
+      [
+        "ROCK",
+        "FORTRESS",
+        "GUIDE"
+      ],
+      "PSALM 31:3"
+    ],
+    [
+      19,
+      29,
+      [
+        "LORD, THE PATH AHEAD",
+        "FEELS CLOUDED BY DOUBTS",
+        "AND WORLDLY NOISE"
+      ],
+      [
+        "CLOUDED",
+        "NOISE"
+      ],
+      "PSALM 31:3"
+    ],
+    [
+      30,
+      40,
+      [
+        "I BRING THIS SITUATION",
+        "TO YOU, ASKING FOR",
+        "YOUR CLARITY TO SETTLE",
+        "MY HEART NOW"
+      ],
+      [
+        "CLARITY",
+        "SETTLE"
+      ],
+      "PSALM 31:3"
+    ],
+    [
+      41,
+      50,
+      [
+        "HELP ME TO STEP",
+        "FORWARD WITH PEACE,",
+        "KNOWING YOU ORDER",
+        "EVERY WAY"
+      ],
+      [
+        "PEACE",
+        "ORDER"
+      ],
+      "PSALM 31:3"
+    ],
+    [
+      51,
+      60,
+      [
+        "MAY YOUR PRESENCE BE",
+        "THE FOUNDATION FOR EVERY",
+        "DECISION I MAKE NOW,",
+        "AMEN"
+      ],
+      [
+        "FOUNDATION",
+        "DECISION"
+      ],
+      "PSALM 31:3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When the weight of that choice pulls at your mind, look to the hills today.",
+      "kind": "phrase",
+      "words": [
+        "PULLS",
+        "HILLS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For thou art my rock and my fortress; therefore for thy name’s sake lead me, and guide me.",
+      "kind": "phrase",
+      "words": [
+        "ROCK",
+        "FORTRESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, the path ahead feels clouded by my own doubts and the noise of this world.",
+      "kind": "phrase",
+      "words": [
+        "CLOUDED",
+        "NOISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I bring this specific situation to You, asking for Your clarity to settle my heart now.",
+      "kind": "phrase",
+      "words": [
+        "CLARITY",
+        "SETTLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Help me to step forward with peace, knowing You are the one who orders my way.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "ORDERS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May Your presence be the foundation for every decision I make from this hour forward, Amen.",
+      "kind": "phrase",
+      "words": [
+        "FOUNDATION",
+        "DECISION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 31:3"
+}

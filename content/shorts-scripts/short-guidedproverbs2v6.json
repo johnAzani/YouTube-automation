@@ -1,0 +1,319 @@
+{
+  "key": "short-guidedproverbs2v6",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "SEEK HIS WISDOM",
+    "PROVERBS 2:6"
+  ],
+  "poster": [
+    "FOR THE LORD GIVETH WISDOM",
+    "OUT OF HIS MOUTH",
+    "COMETH KNOWLEDGE AND",
+    "UNDERSTANDING"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley early morning light",
+    "calm mountain lake reflection sunset",
+    "quiet mountain pass mist pine trees",
+    "peaceful river flowing through mountain forest",
+    "sunbeams breaking through fog in pine forest",
+    "scenic mountain path twilight peaceful view",
+    "serene mountain valley sunset stillness"
+  ],
+  "scenes": [
+    {
+      "a": "As you stare at that difficult conversation ahead today",
+      "img": "short-guidedproverbs2v6-scene-01.jpg",
+      "kicker": "PROVERBS 2:6",
+      "sub": "GOD GIVES TRUE WISDOM",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "For the LORD giveth wisdom: out of his mouth cometh knowledge and understanding.",
+      "img": "short-guidedproverbs2v6-scene-02.jpg",
+      "kicker": "PROVERBS 2:6",
+      "sub": "OUT OF HIS MOUTH",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "When you feel uncertain of what to say or which direction to take, turn to the Almighty.",
+      "img": "short-guidedproverbs2v6-scene-03.jpg",
+      "kicker": "PROVERBS 2:6",
+      "sub": "TURN TO THE LORD",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "He does not hold back guidance from those who seek Him.",
+      "img": "short-guidedproverbs2v6-scene-04.jpg",
+      "kicker": "PROVERBS 2:6",
+      "sub": "SEEK HIS GUIDANCE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "to clarify your thoughts, and to lead your steps according to His perfect will.",
+      "img": "short-guidedproverbs2v6-scene-05.jpg",
+      "kicker": "PROVERBS 2:6",
+      "sub": "HIS PERFECT WILL",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Put down the burden of trying to figure everything out by yourself.",
+      "img": "short-guidedproverbs2v6-scene-06.jpg",
+      "kicker": "PROVERBS 2:6",
+      "sub": "REAL DISCERNMENT",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to join us daily on The Guided Path.",
+      "img": "short-guidedproverbs2v6-scene-07.jpg",
+      "kicker": "PROVERBS 2:6",
+      "sub": "SEEK WISDOM DAILY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "As you stare at that difficult conversation ahead today, do not rely on your own mind."
+    ],
+    [
+      7,
+      15,
+      "For the LORD giveth wisdom: out of his mouth cometh knowledge and understanding."
+    ],
+    [
+      15,
+      24,
+      "When you feel uncertain of what to say or which direction to take, turn to the Almighty."
+    ],
+    [
+      24,
+      33,
+      "He does not hold back guidance from those who seek Him. Ask Him to speak truth into your confusion,"
+    ],
+    [
+      33,
+      42,
+      "to clarify your thoughts, and to lead your steps according to His perfect will."
+    ],
+    [
+      42,
+      50,
+      "Put down the burden of trying to figure everything out by yourself. Trust that His voice brings real discernment to every crossroads you face."
+    ],
+    [
+      50,
+      56,
+      "Subscribe to join us daily on The Guided Path."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "AS YOU STARE AT THAT",
+        "DIFFICULT CONVERSATION AHEAD",
+        "DO NOT RELY ON YOUR OWN MIND"
+      ],
+      [
+        "DIFFICULT CONVERSATION",
+        "RELY"
+      ],
+      "PROVERBS 2:6"
+    ],
+    [
+      7,
+      15,
+      [
+        "FOR THE LORD GIVETH WISDOM",
+        "OUT OF HIS MOUTH COMETH",
+        "KNOWLEDGE AND UNDERSTANDING"
+      ],
+      [
+        "LORD GIVETH WISDOM",
+        "UNDERSTANDING"
+      ],
+      "PROVERBS 2:6"
+    ],
+    [
+      15,
+      24,
+      [
+        "WHEN YOU FEEL UNCERTAIN",
+        "WHICH DIRECTION TO TAKE",
+        "TURN TO THE ALMIGHTY"
+      ],
+      [
+        "UNCERTAIN",
+        "TURN TO THE ALMIGHTY"
+      ],
+      "PROVERBS 2:6"
+    ],
+    [
+      24,
+      33,
+      [
+        "HE DOES NOT HOLD BACK",
+        "GUIDANCE FROM THOSE WHO SEEK HIM",
+        "ASK HIM TO SPEAK TRUTH"
+      ],
+      [
+        "GUIDANCE",
+        "SPEAK TRUTH"
+      ],
+      "PROVERBS 2:6"
+    ],
+    [
+      33,
+      42,
+      [
+        "TO CLARIFY YOUR THOUGHTS",
+        "AND TO LEAD YOUR STEPS",
+        "ACCORDING TO HIS WILL"
+      ],
+      [
+        "CLARIFY",
+        "LEAD YOUR STEPS"
+      ],
+      "PROVERBS 2:6"
+    ],
+    [
+      42,
+      50,
+      [
+        "PUT DOWN THE BURDEN",
+        "TRUST THAT HIS VOICE",
+        "BRINGS REAL DISCERNMENT"
+      ],
+      [
+        "BURDEN",
+        "DISCERNMENT"
+      ],
+      "PROVERBS 2:6"
+    ],
+    [
+      50,
+      56,
+      [
+        "SUBSCRIBE TO JOIN US DAILY",
+        "ON THE GUIDED PATH"
+      ],
+      [
+        "SUBSCRIBE",
+        "THE GUIDED PATH"
+      ],
+      "PROVERBS 2:6"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As you stare at that difficult conversation ahead today",
+      "kind": "phrase",
+      "words": [
+        "DIFFICULT",
+        "CONVERSATION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For the LORD giveth wisdom: out of his mouth cometh knowledge and understanding.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "GIVETH",
+        "WISDOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "When you feel uncertain of what to say or which direction to take, turn to the Almighty.",
+      "kind": "phrase",
+      "words": [
+        "TURN",
+        "ALMIGHTY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "He does not hold back guidance from those who seek Him.",
+      "kind": "phrase",
+      "words": [
+        "GUIDANCE",
+        "SEEK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "to clarify your thoughts, and to lead your steps according to His perfect will.",
+      "kind": "phrase",
+      "words": [
+        "CLARIFY",
+        "LEAD",
+        "STEPS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Put down the burden of trying to figure everything out by yourself.",
+      "kind": "phrase",
+      "words": [
+        "DISCERNMENT",
+        "CROSSROADS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to join us daily on The Guided Path.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "GUIDED",
+        "PATH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 2:6"
+}
