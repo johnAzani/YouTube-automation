@@ -28,6 +28,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["SHADOW OF", "THY WINGS", "BEDTIME PRAYER", "PSALM 17:8"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If the quiet room feels too exposed as you lie down tonight, listen. God's Word promises in Psalm 17 verse 8: Keep me as the apple of the eye, hide me under the shadow of thy wings, Father, soften the heavy tension in this room. You see every unspoken fear lingering in the dark corners of the mind. Guard this place tonight as something deeply precious to You. Cover this weary heart beneath Your safe and faithful wings. Let every racing thought quiet down, knowing You keep watch while sleep comes. You are near, and You are faithful. Subscribe to The Secret Place for prayers every night.

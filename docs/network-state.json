@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-17T12:06:53Z",
-  "monitor_generated_at": "2026-11-17T10:47:28.214897+00:00",
+  "generated_at": "2026-11-17T12:36:13Z",
+  "monitor_generated_at": "2026-11-17T12:35:11.798420+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
     "paid_tiers": 0,
@@ -12,8 +12,8 @@
     "published_longform": 139,
     "published_shorts": 255,
     "public_total": 392,
-    "queued_longform": 56,
-    "queued_shorts": 83,
+    "queued_longform": 58,
+    "queued_shorts": 91,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -40,7 +40,7 @@
         "public_total": 58,
         "queued_longform": 9,
         "queued_other": 5,
-        "queued_shorts": 8
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-PSALM17V8",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm57v1",
-        "scripture": "Psalm 57:1",
+        "short": "short-psalm116v7",
+        "scripture": "Psalm 116:7",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -106,9 +106,9 @@
         "published_shorts": 40,
         "thumbnail_pending": 1,
         "public_total": 65,
-        "queued_longform": 5,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "0069",
@@ -176,7 +176,7 @@
         "public_total": 50,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-MIDDAYPSALM119V28",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaypsalm27v13",
-        "scripture": "Psalm 27:13-14",
+        "short": "short-middayproverbs18v10",
+        "scripture": "Proverbs 18:10",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -244,7 +244,7 @@
         "public_total": 42,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 8
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-MIDNIGHTCOLOSSIANS2V14",
@@ -262,8 +262,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-midnightpsalm126v1",
-        "scripture": "Psalm 126:1-3",
+        "short": "short-midnightluke18v1",
+        "scripture": "Luke 18:1-8",
         "target_window_utc": "23:14",
         "status": "approved"
       },
@@ -310,9 +310,9 @@
         "published_shorts": 20,
         "thumbnail_pending": 32,
         "public_total": 32,
-        "queued_longform": 5,
+        "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 10
       },
       "latest_video": {
         "id": "SHORT-FAMILYGENESIS18V19",
@@ -10343,6 +10343,19 @@
         "words": 2160
       },
       {
+        "id": "0075",
+        "slug": "morning-prayer-for-a-day-dedicated-to-christ-colossians-317",
+        "file": "0075-morning-prayer-for-a-day-dedicated-to-christ-colossians-317.md",
+        "title": "Morning Prayer for a Day Dedicated to Christ: Colossians 3:17",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 1078
+      },
+      {
         "id": "0093",
         "slug": "2-chronicles-20-12-midday-prayer",
         "file": "0093-2-chronicles-20-12-midday-prayer.md",
@@ -10562,6 +10575,19 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1053
+      },
+      {
+        "id": "0317",
+        "slug": "walking-out-the-door-in-faith-deuteronomy-28-3-6",
+        "file": "0317-walking-out-the-door-in-faith-deuteronomy-28-3-6.md",
+        "title": "Walking Out the Door in Faith: Deuteronomy 28:3-6 | The Family Altar",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "niche": "faith and prayer",
+        "publishable": true,
+        "target_minutes": 6,
+        "words": 2058
       },
       {
         "id": "0411",
@@ -10957,6 +10983,17 @@
         "target_window_utc": "15:44"
       },
       {
+        "short": "short-middayproverbs18v10",
+        "file": "0000-short-middayproverbs18v10.yml",
+        "companion_longform_id": "",
+        "scripture": "Proverbs 18:10",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
+      },
+      {
         "short": "short-middaypsalm27v13",
         "file": "0000-short-middaypsalm27v13.yml",
         "companion_longform_id": "",
@@ -10966,6 +11003,39 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "12:14"
+      },
+      {
+        "short": "short-middaypsalm34v4",
+        "file": "0000-short-middaypsalm34v4.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 34:4-8",
+        "channel": "prayer3",
+        "channel_name": "The Midday Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "12:14"
+      },
+      {
+        "short": "short-midnightluke18v1",
+        "file": "0000-short-midnightluke18v1.yml",
+        "companion_longform_id": "",
+        "scripture": "Luke 18:1-8",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "23:14"
+      },
+      {
+        "short": "short-midnightpsalm124v7",
+        "file": "0000-short-midnightpsalm124v7.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 124:7",
+        "channel": "prayer4",
+        "channel_name": "The Midnight Watch",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "23:14"
       },
       {
         "short": "short-midnightpsalm126v1",
@@ -11021,6 +11091,28 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
+      },
+      {
+        "short": "short-psalm116v7",
+        "file": "0000-short-psalm116v7.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 116:7",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "14:14"
+      },
+      {
+        "short": "short-psalm127v2",
+        "file": "0000-short-psalm127v2.yml",
+        "companion_longform_id": "",
+        "scripture": "Psalm 127:2",
+        "channel": "secret-place",
+        "channel_name": "The Secret Place",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm57v1",
@@ -11192,6 +11284,17 @@
         "file": "0074-short-morningmicah7v7.yml",
         "companion_longform_id": "0074",
         "scripture": "Micah 7:7",
+        "channel": "prayer2",
+        "channel_name": "The Morning Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "06:14"
+      },
+      {
+        "short": "short-morningcolossians3v17",
+        "file": "0075-short-morningcolossians3v17.yml",
+        "companion_longform_id": "0075",
+        "scripture": "Colossians 3:17",
         "channel": "prayer2",
         "channel_name": "The Morning Altar",
         "status": "approved",
@@ -11423,6 +11526,17 @@
         "file": "0316-short-familypsalm115v12.yml",
         "companion_longform_id": "0316",
         "scripture": "Psalm 115:12-15",
+        "channel": "prayer5",
+        "channel_name": "The Family Altar",
+        "status": "approved",
+        "publishable": true,
+        "target_window_utc": "17:14"
+      },
+      {
+        "short": "short-familydeuteronomy28v3",
+        "file": "0317-short-familydeuteronomy28v3.yml",
+        "companion_longform_id": "0317",
+        "scripture": "Deuteronomy 28:3-6",
         "channel": "prayer5",
         "channel_name": "The Family Altar",
         "status": "approved",
@@ -11811,7 +11925,7 @@
       "name": "automation-health",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 1.9h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-17T10:38:39+00:00",
       "last_success": "2026-11-17T10:38:39+00:00",
@@ -11825,11 +11939,11 @@
       "name": "Channel analytics (watch hours, sources, retention, thumbnails)",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 5.7h ago",
+      "detail": "last success 0.2h ago",
       "last_conclusion": "success",
-      "last_run": "2026-11-17T05:07:13+00:00",
-      "last_success": "2026-11-17T05:07:13+00:00",
-      "runs_14d": 16,
+      "last_run": "2026-11-17T12:22:40+00:00",
+      "last_success": "2026-11-17T12:22:40+00:00",
+      "runs_14d": 17,
       "missed_slots": 0,
       "failures_5": 0,
       "effect": ""
@@ -11839,7 +11953,7 @@
       "name": "Autonomous Comment Replies",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 2.1h ago",
+      "detail": "last success 3.8h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-17T08:44:25+00:00",
       "last_success": "2026-11-17T08:44:25+00:00",
@@ -11853,7 +11967,7 @@
       "name": "Autonomous Community Tab Automation",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 35.4h ago",
+      "detail": "last success 37.2h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-15T23:23:25+00:00",
       "last_success": "2026-11-15T23:23:25+00:00",
@@ -11867,9 +11981,9 @@
       "name": "Gemini Brain Autonomous Queue Replenishment",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 5.7h ago",
-      "last_conclusion": "success",
-      "last_run": "2026-11-17T05:04:35+00:00",
+      "detail": "last success 7.5h ago",
+      "last_conclusion": "",
+      "last_run": "2026-11-17T11:50:01+00:00",
       "last_success": "2026-11-17T05:04:35+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
@@ -11881,7 +11995,7 @@
       "name": "Growth autopilot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 1.9h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-17T10:38:55+00:00",
       "last_success": "2026-11-17T10:38:55+00:00",
@@ -11895,7 +12009,7 @@
       "name": "Keepalive",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 23.0h ago",
+      "detail": "last success 24.8h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-16T11:44:57+00:00",
       "last_success": "2026-11-16T11:44:57+00:00",
@@ -11909,7 +12023,7 @@
       "name": "Weekly metrics snapshot",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 5.7h ago",
+      "detail": "last success 7.5h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-17T05:03:48+00:00",
       "last_success": "2026-11-17T05:03:48+00:00",
@@ -11923,10 +12037,10 @@
       "name": "Automation monitor",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 1.8h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-17T10:46:29+00:00",
-      "last_success": "2026-11-17T10:39:59+00:00",
+      "last_run": "2026-11-17T12:34:20+00:00",
+      "last_success": "2026-11-17T10:46:29+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -11937,10 +12051,10 @@
       "name": "Produce video",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 4.0h ago",
+      "detail": "last success 1.8h ago",
       "last_conclusion": "",
-      "last_run": "2026-11-17T10:47:16+00:00",
-      "last_success": "2026-11-17T06:45:32+00:00",
+      "last_run": "2026-11-17T12:35:09+00:00",
+      "last_success": "2026-11-17T10:47:16+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -11951,7 +12065,7 @@
       "name": "YouTube reporting jobs (thumbnail impressions)",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 3.3h ago",
+      "detail": "last success 5.1h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-17T07:29:01+00:00",
       "last_success": "2026-11-17T07:29:01+00:00",
@@ -11966,9 +12080,9 @@
       "verdict": "OK",
       "severity": "ok",
       "detail": "last success 0.0h ago",
-      "last_conclusion": "",
-      "last_run": "2026-11-17T10:47:20+00:00",
-      "last_success": "2026-11-17T10:46:29+00:00",
+      "last_conclusion": "success",
+      "last_run": "2026-11-17T12:34:20+00:00",
+      "last_success": "2026-11-17T12:34:20+00:00",
       "runs_14d": 20,
       "missed_slots": 0,
       "failures_5": 0,
@@ -11979,7 +12093,7 @@
       "name": "Tests on main (daily)",
       "verdict": "OK",
       "severity": "ok",
-      "detail": "last success 0.1h ago",
+      "detail": "last success 1.9h ago",
       "last_conclusion": "success",
       "last_run": "2026-11-17T10:38:39+00:00",
       "last_success": "2026-11-17T10:38:39+00:00",
