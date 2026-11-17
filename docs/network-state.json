@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T07:05:25Z",
+  "generated_at": "2026-11-17T07:12:24Z",
   "monitor_generated_at": "2026-11-17T06:45:20.694843+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 377,
+    "published_total": 378,
     "published_longform": 133,
-    "published_shorts": 244,
-    "public_total": 375,
+    "published_shorts": 245,
+    "public_total": 376,
     "queued_longform": 62,
-    "queued_shorts": 94,
+    "queued_shorts": 93,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -645,23 +645,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 21,
+        "published_total": 22,
         "published_longform": 7,
-        "published_shorts": 14,
+        "published_shorts": 15,
         "thumbnail_pending": 12,
-        "public_total": 21,
+        "public_total": 22,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-GUIDEDISAIAH30V21",
-        "title": "Pray This Isaiah 30:21 Prayer for God's Guidance | This Is The Way Walk Ye In It #Shorts",
+        "id": "SHORT-GUIDEDPROVERBS14V12",
+        "title": "Pray This Proverbs 14:12 Prayer for God's Guidance | Seek God's Path #Shorts",
         "format": "short",
-        "youtube_video_id": "yt473fxLbF8",
-        "watch_url": "https://www.youtube.com/shorts/yt473fxLbF8",
-        "published_on": "2026-11-16",
-        "published_at": "2026-11-16T23:42:53Z"
+        "youtube_video_id": "0qwjuB-nuCg",
+        "watch_url": "https://www.youtube.com/shorts/0qwjuB-nuCg",
+        "published_on": "2026-11-17",
+        "published_at": "2026-11-17T07:11:38Z"
       },
       "next_queued_longform": {
         "id": "0807",
@@ -670,8 +670,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-guidedproverbs14v12",
-        "scripture": "Proverbs 14:12",
+        "short": "short-guidedproverbs19v21",
+        "scripture": "Proverbs 19:21",
         "target_window_utc": "18:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-GUIDEDPROVERBS14V12",
+      "slug": "short-guidedproverbs14v12-guidance-prayer",
+      "file": "short-guidedproverbs14v12-guidance-prayer.md",
+      "title": "Pray This Proverbs 14:12 Prayer for God's Guidance | Seek God's Path #Shorts",
+      "channel": "prayer10",
+      "channel_name": "The Guided Path",
+      "channel_handle": "@TheGuidedPathPrayer",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T07:11:38Z",
+      "youtube_video_id": "0qwjuB-nuCg",
+      "watch_url": "https://www.youtube.com/shorts/0qwjuB-nuCg",
+      "youtu_be_url": "https://youtu.be/0qwjuB-nuCg",
+      "shorts_url": "https://www.youtube.com/shorts/0qwjuB-nuCg",
+      "studio_url": "https://studio.youtube.com/video/0qwjuB-nuCg/edit",
+      "thumb_url": "https://i.ytimg.com/vi/0qwjuB-nuCg/hqdefault.jpg",
+      "thumb_text": "PROVERBS 14:12 \u00b7 WHEN A CHOICE",
+      "thumbnail_pending": false,
+      "duration_label": "52s",
+      "words": 630
+    },
     {
       "id": "SHORT-PROVISION1CORINTHIANS16V9",
       "slug": "short-provision1corinthians16v9-stewardship-prayer",
@@ -10636,17 +10660,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "09:44"
-      },
-      {
-        "short": "short-guidedproverbs14v12",
-        "file": "0000-short-guidedproverbs14v12.yml",
-        "companion_longform_id": "",
-        "scripture": "Proverbs 14:12",
-        "channel": "prayer10",
-        "channel_name": "The Guided Path",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "18:44"
       },
       {
         "short": "short-guidedproverbs19v21",
