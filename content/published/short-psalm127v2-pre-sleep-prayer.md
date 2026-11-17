@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["THE SECRET PLACE", "A PRAYER FOR", "YOUR NIGHT", "REST IN HIM"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 Lay aside the heavy list of tasks waiting for you in the morning light. Your labor does not define your worth or secure your future tonight. It is vain for you to rise up early, to sit up late, to eat the bread of sorrows: for so he giveth his beloved sleep. Lord, help this soul release the anxiety of trying to control every outcome. Replace the bread of sorrows with the assurance of your constant, gentle presence. May your beloved child drift into deep, restorative peace tonight, sheltered by your grace.

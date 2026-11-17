@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["IT IS GOOD TO SING", "PRAISES UNTO OUR GOD", "PRAISE IS COMELY", "PSALM 147:1"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-24T22:26:56Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 Right now, in this quiet kitchen after a long day, lift your heart in praise. Praise ye the LORD: for it is good to sing praises unto our God; for it is pleasant; and praise is comely. Father, we thank You for Your endless grace that restores our weary souls. Even when our spirit feels tired, declaring Your goodness brings light into the dark places. Singing to You is pleasant, beautiful, and right. We offer You our simple gratitude for every unseen mercy You have provided. May praise constantly overflow from this heart today. Subscribe to join our garden of praise.

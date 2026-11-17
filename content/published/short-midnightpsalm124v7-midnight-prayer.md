@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["RELEASE FROM THE TRAP", "BREAKING THE CHAINS", "MIDNIGHT SPIRITUAL VIGIL", "THE WATCH IS OPEN"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-24T22:26:50Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 The invisible trap you feel gripping your heart tonight is losing its hold right now. Listen to the word of the Lord, for it speaks into the core of your struggle. Our soul is escaped as a bird out of the snare of the fowlers: the snare is broken, and we are escaped. Father, thank You for this divine intervention that snaps every chain binding your weary child tonight. Restore the freedom that belongs to those who trust in Your unfailing light and perfect grace. May this peace settle deep in your soul as you rest in the safety of Him.
