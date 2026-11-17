@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=el"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE COVENANT SHIELD", "DIVINE PROTECTION", "EXODUS 12:13", "SAFEKEEPING PRAYER"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-24T07:29:03Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If fear of sudden destruction threatens your peace in this room, hear God's promise now. And the blood shall be to you for a token upon the houses where ye are: and when I see the blood, I will pass over you, and the plague shall not be upon you to destroy you, when I smite the land of Egypt. Lord, mark this household with Your divine protection today. Shield every doorway from harm and quiet every anxious thought. May Your shadow cover this place so no destruction may enter. We rest secure under Your strong tower. Subscribe to walk daily in His covenant protection.

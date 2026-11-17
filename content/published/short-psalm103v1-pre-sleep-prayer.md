@@ -28,6 +28,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["PSALM 103:1-5", "BLESS THE LORD", "O MY SOUL", "NIGHT PRAYER"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 As you lie awake replaying that painful conversation from earlier tonight, set down your regret. Scripture says, Bless the LORD, O my soul: and all that is within me, bless his holy name. Bless the LORD, O my soul, and forget not all his benefits: Who forgiveth all thine iniquities; who healeth all thy diseases; Who redeemeth thy life from destruction; who crowneth thee with lovingkindness and tender mercies; Lord, cover this weary heart with Your peace tonight. Forgive every mistake, restore what was broken, and wrap us in Your tender mercy as we rest. Subscribe to join our secret place every night.
