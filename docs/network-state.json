@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T17:30:45Z",
+  "generated_at": "2026-11-17T18:40:01Z",
   "monitor_generated_at": "2026-11-17T17:01:06.346999+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 405,
-    "published_longform": 140,
+    "published_total": 406,
+    "published_longform": 141,
     "published_shorts": 265,
-    "public_total": 403,
-    "queued_longform": 62,
+    "public_total": 404,
+    "queued_longform": 61,
     "queued_shorts": 90,
     "automations_ok": 13,
     "automations_total": 13,
@@ -305,28 +305,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 33,
-        "published_longform": 12,
+        "published_total": 34,
+        "published_longform": 13,
         "published_shorts": 21,
-        "thumbnail_pending": 33,
-        "public_total": 33,
-        "queued_longform": 6,
+        "thumbnail_pending": 34,
+        "public_total": 34,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-FAMILYISAIAH44V3",
-        "title": "Pray This Isaiah 44:3 Family Prayer Over Your Home | God Pours Out His Spirit #Shorts",
-        "format": "short",
-        "youtube_video_id": "w8QWGcYmmTo",
-        "watch_url": "https://www.youtube.com/shorts/w8QWGcYmmTo",
-        "published_on": "2026-11-17",
-        "published_at": "2026-11-17T15:29:27Z"
-      },
-      "next_queued_longform": {
         "id": "0312",
         "title": "A Generation Blessed by God: Psalm 112:1-3 | The Family Altar",
-        "words": 1833,
+        "format": "longform",
+        "youtube_video_id": "TdsXIyJdcR0",
+        "watch_url": "https://youtu.be/TdsXIyJdcR0",
+        "published_on": "2026-11-17",
+        "published_at": "2026-11-17T18:39:13Z"
+      },
+      "next_queued_longform": {
+        "id": "0313",
+        "title": "Guiding Children in the Way They Should Go: Proverbs 22:6",
+        "words": 2034,
         "status": "approved"
       },
       "next_queued_short": {
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0312",
+      "slug": "a-generation-blessed-by-god-psalm-112-1-3",
+      "file": "0312-a-generation-blessed-by-god-psalm-112-1-3.md",
+      "title": "A Generation Blessed by God: Psalm 112:1-3 | The Family Altar",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T18:39:13Z",
+      "youtube_video_id": "TdsXIyJdcR0",
+      "watch_url": "https://youtu.be/TdsXIyJdcR0",
+      "youtu_be_url": "https://youtu.be/TdsXIyJdcR0",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/TdsXIyJdcR0/edit",
+      "thumb_url": "https://i.ytimg.com/vi/TdsXIyJdcR0/hqdefault.jpg",
+      "thumb_text": "BLESSED BY GOD",
+      "thumbnail_pending": true,
+      "duration_label": "~13 min",
+      "words": 1833
+    },
     {
       "id": "0093",
       "slug": "2-chronicles-20-12-midday-prayer",
@@ -10761,19 +10785,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1504
-      },
-      {
-        "id": "0312",
-        "slug": "a-generation-blessed-by-god-psalm-112-1-3",
-        "file": "0312-a-generation-blessed-by-god-psalm-112-1-3.md",
-        "title": "A Generation Blessed by God: Psalm 112:1-3 | The Family Altar",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1833
       },
       {
         "id": "0313",

@@ -2,7 +2,7 @@
 id: '0312'
 title: 'A Generation Blessed by God: Psalm 112:1-3 | The Family Altar'
 slug: a-generation-blessed-by-god-psalm-112-1-3
-status: approved
+status: published
 channel: prayer5
 privacy: public
 format: longform
@@ -76,6 +76,15 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-17"
+published_at: "2026-11-17T18:39:13Z"
+youtube_video_id: "TdsXIyJdcR0"
+metadata_revision: "selar-seo-v1"
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Gathering Around the Family Altar
