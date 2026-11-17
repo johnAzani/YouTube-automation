@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T06:46:24Z",
+  "generated_at": "2026-11-17T06:52:37Z",
   "monitor_generated_at": "2026-11-17T06:45:20.694843+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 371,
+    "published_total": 372,
     "published_longform": 133,
-    "published_shorts": 238,
-    "public_total": 369,
+    "published_shorts": 239,
+    "public_total": 370,
     "queued_longform": 62,
-    "queued_shorts": 100,
+    "queued_shorts": 99,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -33,23 +33,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 57,
+        "published_total": 58,
         "published_longform": 18,
-        "published_shorts": 39,
+        "published_shorts": 40,
         "thumbnail_pending": 5,
-        "public_total": 56,
+        "public_total": 57,
         "queued_longform": 9,
         "queued_other": 5,
-        "queued_shorts": 10
+        "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-PSALM4V4",
-        "title": "Say This Psalm 4:4 Prayer Before You Sleep | Commune With Your Heart #Shorts",
+        "id": "SHORT-PSALM103V1",
+        "title": "Say This Psalm 103:1-5 Prayer Before You Sleep | Night Prayer #Shorts",
         "format": "short",
-        "youtube_video_id": "fsnBaSiXhHY",
-        "watch_url": "https://www.youtube.com/shorts/fsnBaSiXhHY",
-        "published_on": "2026-11-16",
-        "published_at": "2026-11-16T23:31:05Z"
+        "youtube_video_id": "y1Vt4YVBLdQ",
+        "watch_url": "https://www.youtube.com/shorts/y1Vt4YVBLdQ",
+        "published_on": "2026-11-17",
+        "published_at": "2026-11-17T06:51:46Z"
       },
       "next_queued_longform": {
         "id": "0027",
@@ -58,8 +58,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm103v1",
-        "scripture": "Psalm 103:1-5",
+        "short": "short-psalm17v8",
+        "scripture": "Psalm 17:8",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PSALM103V1",
+      "slug": "short-psalm103v1-pre-sleep-prayer",
+      "file": "short-psalm103v1-pre-sleep-prayer.md",
+      "title": "Say This Psalm 103:1-5 Prayer Before You Sleep | Night Prayer #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T06:51:46Z",
+      "youtube_video_id": "y1Vt4YVBLdQ",
+      "watch_url": "https://www.youtube.com/shorts/y1Vt4YVBLdQ",
+      "youtu_be_url": "https://youtu.be/y1Vt4YVBLdQ",
+      "shorts_url": "https://www.youtube.com/shorts/y1Vt4YVBLdQ",
+      "studio_url": "https://studio.youtube.com/video/y1Vt4YVBLdQ/edit",
+      "thumb_url": "https://i.ytimg.com/vi/y1Vt4YVBLdQ/hqdefault.jpg",
+      "thumb_text": "PSALM 103:1-5 \u00b7 BLESS THE LORD",
+      "thumbnail_pending": false,
+      "duration_label": "58s",
+      "words": 617
+    },
     {
       "id": "0608",
       "slug": "a-perfect-way-and-a-sure-defense-2-samuel-22-31",
@@ -10701,17 +10725,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-psalm103v1",
-        "file": "0000-short-psalm103v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 103:1-5",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm17v8",
