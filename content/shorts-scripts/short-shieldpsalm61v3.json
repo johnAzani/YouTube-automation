@@ -1,0 +1,286 @@
+{
+  "key": "short-shieldpsalm61v3",
+  "channel": "prayer8",
+  "psalm": 61,
+  "title": [
+    "A STRONG TOWER",
+    "AGAINST THE ENEMY"
+  ],
+  "poster": [
+    "GOD IS YOUR",
+    "STRONG TOWER",
+    "DEFENSE TODAY",
+    "PSALM 61:3"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "dramatic golden sunlight breaking through dark storm clouds over mountain peaks",
+    "ancient stone watchtower on majestic rocky cliff sunlight",
+    "sunlit mountain pass golden rays heavenly sky",
+    "peaceful river flowing through quiet valley illuminated by warm sunlight",
+    "high mountain fortress ridge bathed in soft morning light",
+    "glorious light beams radiating over calm mountain lake"
+  ],
+  "scenes": [
+    {
+      "a": "If a sudden fear about your future is pressing upon your mind right now, stay still.",
+      "img": "short-shieldpsalm61v3-scene-01.jpg",
+      "kicker": "PSALM 61:3",
+      "sub": "A STRONG TOWER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Hear the eternal Word of God: For thou hast been a shelter for me, and a strong tower from the enemy.",
+      "img": "short-shieldpsalm61v3-scene-02.jpg",
+      "kicker": "PSALM 61:3",
+      "sub": "DIVINE SHELTER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord God, become this person's impenetrable fortress today. Where hidden threats linger and anxious thoughts quicken, cover them beneath your divine shield.",
+      "img": "short-shieldpsalm61v3-scene-03.jpg",
+      "kicker": "DIVINE COVER",
+      "sub": "IMPENETRABLE FORTRESS",
+      "cam": "pan_left",
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, stand firmly between them and every lurking snare, surrounding their daily path with holy strength and unshakable grace.",
+      "img": "short-shieldpsalm61v3-scene-04.jpg",
+      "kicker": "UNSHAKABLE PEACE",
+      "sub": "SURROUNDED BY GRACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Lift their eyes above the storm to your ancient throne. You are their refuge, their high tower, and their constant defense against all harm.",
+      "img": "short-shieldpsalm61v3-scene-05.jpg",
+      "kicker": "HIGH TOWER",
+      "sub": "CONSTANT DEFENSE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.35
+      ]
+    },
+    {
+      "a": "Subscribe to walk under God's daily covering.",
+      "img": "short-shieldpsalm61v3-scene-06.jpg",
+      "kicker": "THE COVENANT SHIELD",
+      "sub": "WALK UNDER HIS COVERING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If a sudden fear about your future is pressing upon your mind right now, stay still."
+    ],
+    [
+      7,
+      15,
+      "Hear the eternal Word of God: For thou hast been a shelter for me, and a strong tower from the enemy."
+    ],
+    [
+      15,
+      24,
+      "Lord God, become this person's impenetrable fortress today. Where hidden threats linger and anxious thoughts quicken, cover them beneath your divine shield."
+    ],
+    [
+      24,
+      34,
+      "Father, stand firmly between them and every lurking snare, surrounding their daily path with holy strength and unshakable grace."
+    ],
+    [
+      34,
+      44,
+      "Lift their eyes above the storm to your ancient throne. You are their refuge, their high tower, and their constant defense against all harm."
+    ],
+    [
+      44,
+      50,
+      "Subscribe to walk under God's daily covering."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF A SUDDEN FEAR",
+        "IS PRESSING UPON YOUR MIND",
+        "STAY STILL"
+      ],
+      [
+        "SUDDEN",
+        "FEAR",
+        "STAY",
+        "STILL"
+      ],
+      "PSALM 61 : 3"
+    ],
+    [
+      7,
+      15,
+      [
+        "THOU HAST BEEN A SHELTER",
+        "AND A STRONG TOWER",
+        "FROM THE ENEMY"
+      ],
+      [
+        "SHELTER",
+        "STRONG",
+        "TOWER"
+      ],
+      "PSALM 61 : 3"
+    ],
+    [
+      15,
+      24,
+      [
+        "BECOME THIS PERSON'S",
+        "IMPENETRABLE FORTRESS TODAY",
+        "COVER THEM BENEATH YOUR SHIELD"
+      ],
+      [
+        "IMPENETRABLE",
+        "FORTRESS",
+        "DIVINE",
+        "SHIELD"
+      ],
+      "PSALM 61 : 3"
+    ],
+    [
+      24,
+      34,
+      [
+        "STAND BETWEEN THEM",
+        "AND EVERY LURKING SNARE",
+        "WITH UNSHAKABLE GRACE"
+      ],
+      [
+        "STAND",
+        "FIRMLY",
+        "UNSHAKABLE",
+        "GRACE"
+      ],
+      "PSALM 61 : 3"
+    ],
+    [
+      34,
+      44,
+      [
+        "YOU ARE THEIR REFUGE",
+        "THEIR HIGH TOWER",
+        "AND CONSTANT DEFENSE"
+      ],
+      [
+        "REFUGE",
+        "HIGH",
+        "TOWER",
+        "DEFENSE"
+      ],
+      "PSALM 61 : 3"
+    ],
+    [
+      44,
+      50,
+      [
+        "SUBSCRIBE TO WALK",
+        "UNDER GOD'S DAILY COVERING"
+      ],
+      [
+        "SUBSCRIBE",
+        "DAILY",
+        "COVERING"
+      ],
+      "THE COVENANT SHIELD"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If a sudden fear about your future is pressing upon your mind right now, stay still.",
+      "kind": "phrase",
+      "words": [
+        "SUDDEN",
+        "FEAR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Hear the eternal Word of God: For thou hast been a shelter for me, and a strong tower from the enemy.",
+      "kind": "phrase",
+      "words": [
+        "SHELTER",
+        "STRONG",
+        "TOWER"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord God, become this person's impenetrable fortress today. Where hidden threats linger and anxious thoughts quicken, cover them beneath your divine shield.",
+      "kind": "phrase",
+      "words": [
+        "IMPENETRABLE",
+        "FORTRESS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Father, stand firmly between them and every lurking snare, surrounding their daily path with holy strength and unshakable grace.",
+      "kind": "phrase",
+      "words": [
+        "UNSHAKABLE",
+        "GRACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lift their eyes above the storm to your ancient throne. You are their refuge, their high tower, and their constant defense against all harm.",
+      "kind": "phrase",
+      "words": [
+        "CONSTANT",
+        "DEFENSE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to walk under God's daily covering.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "COVERING"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 61:3"
+}

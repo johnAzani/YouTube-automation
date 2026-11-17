@@ -1,0 +1,285 @@
+{
+  "key": "short-shieldexodus12v13",
+  "channel": "prayer8",
+  "psalm": null,
+  "title": [
+    "PASSOVER COVENANT",
+    "EXODUS 12:13 PRAYER"
+  ],
+  "poster": [
+    "THE COVENANT SHIELD",
+    "DIVINE PROTECTION",
+    "EXODUS 12:13",
+    "SAFEKEEPING PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower golden sunbeams",
+    "golden light rays through clouds morning threshold",
+    "sunlight streaming over tranquil valley and mountains",
+    "sunlit mountain pass golden peaceful sky",
+    "calm sunset over quiet stone refuge",
+    "peaceful majestic mountain landscape sunrise"
+  ],
+  "scenes": [
+    {
+      "a": "If fear of sudden destruction threatens your peace in this room, hear God's promise now.",
+      "img": "short-shieldexodus12v13-scene-01.jpg",
+      "kicker": "EXODUS 12:13",
+      "sub": "HEAR GOD'S PROMISE TODAY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "And the blood shall be to you for a token upon the houses where ye are: and when I see the blood,",
+      "img": "short-shieldexodus12v13-scene-02.jpg",
+      "kicker": "EXODUS 12:13",
+      "sub": "A TOKEN UPON YOUR HOUSE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I will pass over you, and the plague shall not be upon you to destroy you, when I smite the land of Egypt.",
+      "img": "short-shieldexodus12v13-scene-03.jpg",
+      "kicker": "EXODUS 12:13",
+      "sub": "HE WILL PASS OVER YOU",
+      "cam": "pull_out",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Lord, mark this household with Your divine protection today. Shield every doorway from harm and quiet every anxious thought.",
+      "img": "short-shieldexodus12v13-scene-04.jpg",
+      "kicker": "EXODUS 12:13",
+      "sub": "DIVINE PROTECTION OVER HARM",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "May Your shadow cover this place so no destruction may enter. We rest secure under Your strong tower.",
+      "img": "short-shieldexodus12v13-scene-05.jpg",
+      "kicker": "EXODUS 12:13",
+      "sub": "REST SECURE IN HIS SHADOW",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to walk daily in His covenant protection.",
+      "img": "short-shieldexodus12v13-scene-06.jpg",
+      "kicker": "EXODUS 12:13",
+      "sub": "WALK IN HIS COVENANT",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If fear of sudden destruction threatens your peace in this room, hear God's promise now."
+    ],
+    [
+      7,
+      16,
+      "And the blood shall be to you for a token upon the houses where ye are: and when I see the blood,"
+    ],
+    [
+      16,
+      25,
+      "I will pass over you, and the plague shall not be upon you to destroy you, when I smite the land of Egypt."
+    ],
+    [
+      25,
+      33,
+      "Lord, mark this household with Your divine protection today. Shield every doorway from harm and quiet every anxious thought."
+    ],
+    [
+      33,
+      42,
+      "May Your shadow cover this place so no destruction may enter. We rest secure under Your strong tower."
+    ],
+    [
+      42,
+      48,
+      "Subscribe to walk daily in His covenant protection."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF FEAR OF DESTRUCTION",
+        "THREATENS YOUR PEACE IN THIS ROOM",
+        "HEAR GOD'S PROMISE NOW"
+      ],
+      [
+        "DESTRUCTION",
+        "PEACE",
+        "PROMISE"
+      ],
+      "EXODUS 12:13"
+    ],
+    [
+      7,
+      16,
+      [
+        "AND THE BLOOD SHALL BE TO YOU",
+        "FOR A TOKEN UPON THE HOUSES",
+        "WHERE YE ARE AND WHEN I SEE THE BLOOD"
+      ],
+      [
+        "BLOOD",
+        "TOKEN",
+        "HOUSES"
+      ],
+      "EXODUS 12:13"
+    ],
+    [
+      16,
+      25,
+      [
+        "I WILL PASS OVER YOU",
+        "AND THE PLAGUE SHALL NOT BE",
+        "UPON YOU TO DESTROY YOU"
+      ],
+      [
+        "PASS OVER",
+        "DESTROY"
+      ],
+      "EXODUS 12:13"
+    ],
+    [
+      25,
+      33,
+      [
+        "LORD MARK THIS HOUSEHOLD",
+        "WITH YOUR DIVINE PROTECTION TODAY",
+        "SHIELD EVERY DOORWAY FROM HARM"
+      ],
+      [
+        "PROTECTION",
+        "SHIELD",
+        "HARM"
+      ],
+      "EXODUS 12:13"
+    ],
+    [
+      33,
+      42,
+      [
+        "MAY YOUR SHADOW COVER THIS PLACE",
+        "SO NO DESTRUCTION MAY ENTER",
+        "WE REST SECURE UNDER YOUR STRONG TOWER"
+      ],
+      [
+        "SHADOW",
+        "SECURE",
+        "STRONG TOWER"
+      ],
+      "EXODUS 12:13"
+    ],
+    [
+      42,
+      48,
+      [
+        "SUBSCRIBE TO WALK DAILY",
+        "IN HIS COVENANT PROTECTION"
+      ],
+      [
+        "SUBSCRIBE",
+        "COVENANT",
+        "PROTECTION"
+      ],
+      "EXODUS 12:13"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If fear of sudden destruction threatens your peace in this room, hear God's promise now.",
+      "kind": "phrase",
+      "words": [
+        "DESTRUCTION",
+        "PEACE",
+        "PROMISE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "And the blood shall be to you for a token upon the houses where ye are: and when I see the blood,",
+      "kind": "phrase",
+      "words": [
+        "BLOOD",
+        "TOKEN",
+        "HOUSES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will pass over you, and the plague shall not be upon you to destroy you, when I smite the land of Egypt.",
+      "kind": "phrase",
+      "words": [
+        "PASS OVER",
+        "DESTROY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, mark this household with Your divine protection today. Shield every doorway from harm and quiet every anxious thought.",
+      "kind": "phrase",
+      "words": [
+        "PROTECTION",
+        "SHIELD",
+        "HARM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May Your shadow cover this place so no destruction may enter. We rest secure under Your strong tower.",
+      "kind": "phrase",
+      "words": [
+        "SHADOW",
+        "SECURE",
+        "STRONG TOWER"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to walk daily in His covenant protection.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "COVENANT",
+        "PROTECTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Exodus 12:13"
+}

@@ -1,0 +1,276 @@
+{
+  "key": "short-shieldpsalm20v1",
+  "channel": "prayer8",
+  "psalm": 20,
+  "title": [
+    "HEARKENED",
+    "REFUGE"
+  ],
+  "poster": [
+    "THE",
+    "LORD",
+    "HEAR",
+    "THEE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Covenant Shield — walk under God's daily covering"
+  ],
+  "stock_queries": [
+    "ancient stone watchtower at sunset",
+    "golden light rays through storm clouds",
+    "calm mountain lake at twilight",
+    "serene river flowing through valley",
+    "majestic cliffside at dawn",
+    "glowing embers in dark fireplace"
+  ],
+  "scenes": [
+    {
+      "a": "If that recurring anxiety regarding your bank account is keeping you awake, stay right here.",
+      "img": "short-shieldpsalm20v1-scene-01.jpg",
+      "kicker": "PSALM 20:1",
+      "sub": "THE LORD HEAR THEE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The LORD hear thee in the day of trouble; the name of the God of Jacob defend thee;",
+      "img": "short-shieldpsalm20v1-scene-02.jpg",
+      "kicker": "PSALM 20:1",
+      "sub": "THE GOD OF JACOB DEFEND",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Send thee help from the sanctuary, and strengthen thee out of Zion;",
+      "img": "short-shieldpsalm20v1-scene-03.jpg",
+      "kicker": "PSALM 20:2",
+      "sub": "HELP FROM THE SANCTUARY",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "We lean into these promises now, trusting Your sovereign hand to establish peace in this room.",
+      "img": "short-shieldpsalm20v1-scene-04.jpg",
+      "kicker": "DIVINE PROTECTION",
+      "sub": "STRENGTH FROM ZION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Remove the heavy burden of tomorrow and let Your grace settle upon every weary thought.",
+      "img": "short-shieldpsalm20v1-scene-05.jpg",
+      "kicker": "SOVEREIGN GRACE",
+      "sub": "STILL THE TROUBLED HEART",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "May Your presence be the anchor for this soul through every shift in the coming season.",
+      "img": "short-shieldpsalm20v1-scene-06.jpg",
+      "kicker": "ANCHOR OF THE SOUL",
+      "sub": "REST IN HIS PRESENCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If that recurring anxiety regarding your bank account is keeping you awake, stay right here."
+    ],
+    [
+      8,
+      17,
+      "The LORD hear thee in the day of trouble; the name of the God of Jacob defend thee;"
+    ],
+    [
+      17,
+      25,
+      "Send thee help from the sanctuary, and strengthen thee out of Zion;"
+    ],
+    [
+      25,
+      33,
+      "We lean into these promises now, trusting Your sovereign hand to establish peace in this room."
+    ],
+    [
+      33,
+      41,
+      "Remove the heavy burden of tomorrow and let Your grace settle upon every weary thought."
+    ],
+    [
+      41,
+      50,
+      "May Your presence be the anchor for this soul through every shift in the coming season."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "ANXIETY KEEPING YOU",
+        "AWAKE",
+        "STAY RIGHT HERE"
+      ],
+      [
+        "ANXIETY",
+        "STAY"
+      ],
+      "PSALM 20 : 1"
+    ],
+    [
+      8,
+      17,
+      [
+        "THE LORD HEAR THEE",
+        "DAY OF TROUBLE",
+        "GOD OF JACOB DEFEND"
+      ],
+      [
+        "DEFEND",
+        "LORD"
+      ],
+      "PSALM 20 : 1"
+    ],
+    [
+      17,
+      25,
+      [
+        "SEND THEE HELP",
+        "FROM THE SANCTUARY",
+        "STRENGTHEN OUT OF ZION"
+      ],
+      [
+        "HELP",
+        "STRENGTHEN"
+      ],
+      "PSALM 20 : 2"
+    ],
+    [
+      25,
+      33,
+      [
+        "LEAN INTO PROMISES",
+        "TRUSTING SOVEREIGN HAND",
+        "ESTABLISH PEACE"
+      ],
+      [
+        "PROMISES",
+        "PEACE"
+      ],
+      "PSALM 20 : 2"
+    ],
+    [
+      33,
+      41,
+      [
+        "REMOVE HEAVY BURDEN",
+        "GRACE SETTLE UPON",
+        "EVERY WEARY THOUGHT"
+      ],
+      [
+        "GRACE",
+        "SETTLE"
+      ],
+      "PSALM 20 : 2"
+    ],
+    [
+      41,
+      50,
+      [
+        "PRESENCE BE ANCHOR",
+        "THROUGH EVERY SHIFT",
+        "IN COMING SEASON"
+      ],
+      [
+        "ANCHOR",
+        "SEASON"
+      ],
+      "PSALM 20 : 2"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If that recurring anxiety regarding your bank account is keeping you awake, stay right here.",
+      "kind": "phrase",
+      "words": [
+        "ANXIETY",
+        "STAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The LORD hear thee in the day of trouble; the name of the God of Jacob defend thee;",
+      "kind": "phrase",
+      "words": [
+        "DEFEND",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Send thee help from the sanctuary, and strengthen thee out of Zion;",
+      "kind": "phrase",
+      "words": [
+        "HELP",
+        "STRENGTHEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We lean into these promises now, trusting Your sovereign hand to establish peace in this room.",
+      "kind": "phrase",
+      "words": [
+        "PROMISES",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Remove the heavy burden of tomorrow and let Your grace settle upon every weary thought.",
+      "kind": "phrase",
+      "words": [
+        "GRACE",
+        "SETTLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May Your presence be the anchor for this soul through every shift in the coming season.",
+      "kind": "phrase",
+      "words": [
+        "ANCHOR",
+        "SEASON"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 20:1-2"
+}
