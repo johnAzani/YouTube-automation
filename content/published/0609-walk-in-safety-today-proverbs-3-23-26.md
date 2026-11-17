@@ -2,7 +2,7 @@
 id: 0609
 title: 'Walk in Safety Today: Proverbs 3:23-26 | The Covenant Shield'
 slug: walk-in-safety-today-proverbs-3-23-26
-status: approved
+status: published
 channel: prayer8
 privacy: public
 format: longform
@@ -78,6 +78,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-17"
+published_at: "2026-11-17T11:48:43Z"
+youtube_video_id: "6zqMGOqEa9A"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — The Strong Tower of Divine Direction

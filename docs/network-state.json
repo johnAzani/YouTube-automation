@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T11:06:47Z",
+  "generated_at": "2026-11-17T11:49:34Z",
   "monitor_generated_at": "2026-11-17T10:47:28.214897+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 389,
-    "published_longform": 136,
+    "published_total": 390,
+    "published_longform": 137,
     "published_shorts": 253,
-    "public_total": 387,
-    "queued_longform": 59,
+    "public_total": 388,
+    "queued_longform": 58,
     "queued_shorts": 85,
     "automations_ok": 13,
     "automations_total": 13,
@@ -509,28 +509,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 26,
-        "published_longform": 9,
+        "published_total": 27,
+        "published_longform": 10,
         "published_shorts": 17,
-        "thumbnail_pending": 26,
-        "public_total": 26,
-        "queued_longform": 5,
+        "thumbnail_pending": 27,
+        "public_total": 27,
+        "queued_longform": 4,
         "queued_other": 2,
         "queued_shorts": 9
       },
       "latest_video": {
-        "id": "SHORT-SHIELDEXODUS12V13",
-        "title": "Pray This Exodus 12:13 Prayer for Divine Protection | Safekeeping Prayer #Shorts",
-        "format": "short",
-        "youtube_video_id": "3GJ9srK-8-0",
-        "watch_url": "https://www.youtube.com/shorts/3GJ9srK-8-0",
-        "published_on": "2026-11-17",
-        "published_at": "2026-11-17T07:02:42Z"
-      },
-      "next_queued_longform": {
         "id": "0609",
         "title": "Walk in Safety Today: Proverbs 3:23-26 | The Covenant Shield",
-        "words": 1405,
+        "format": "longform",
+        "youtube_video_id": "6zqMGOqEa9A",
+        "watch_url": "https://youtu.be/6zqMGOqEa9A",
+        "published_on": "2026-11-17",
+        "published_at": "2026-11-17T11:48:43Z"
+      },
+      "next_queued_longform": {
+        "id": "0610",
+        "title": "When Trouble Surrounds You: Psalm 46:1-2 | The Covenant Shield",
+        "words": 1960,
         "status": "approved"
       },
       "next_queued_short": {
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0609",
+      "slug": "walk-in-safety-today-proverbs-3-23-26",
+      "file": "0609-walk-in-safety-today-proverbs-3-23-26.md",
+      "title": "Walk in Safety Today: Proverbs 3:23-26 | The Covenant Shield",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T11:48:43Z",
+      "youtube_video_id": "6zqMGOqEa9A",
+      "watch_url": "https://youtu.be/6zqMGOqEa9A",
+      "youtu_be_url": "https://youtu.be/6zqMGOqEa9A",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/6zqMGOqEa9A/edit",
+      "thumb_url": "https://i.ytimg.com/vi/6zqMGOqEa9A/hqdefault.jpg",
+      "thumb_text": "WALK IN SAFETY",
+      "thumbnail_pending": true,
+      "duration_label": "~10 min",
+      "words": 1405
+    },
     {
       "id": "SHORT-GARDENPSALM104V33",
       "slug": "short-gardenpsalm104v33-thanksgiving-prayer",
@@ -10598,19 +10622,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1210
-      },
-      {
-        "id": "0609",
-        "slug": "walk-in-safety-today-proverbs-3-23-26",
-        "file": "0609-walk-in-safety-today-proverbs-3-23-26.md",
-        "title": "Walk in Safety Today: Proverbs 3:23-26 | The Covenant Shield",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1405
       },
       {
         "id": "0610",
