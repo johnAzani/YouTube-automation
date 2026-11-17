@@ -16,8 +16,8 @@
       "workflow": "metrics.yml"
     }
   ],
-  "generated_at": "2026-11-17T05:53:44.551523+00:00",
-  "last_run_at": "2026-11-17T05:53:04+00:00",
+  "generated_at": "2026-11-17T05:54:49.878880+00:00",
+  "last_run_at": "2026-11-17T05:54:20+00:00",
   "on_time": [
     {
       "late_minutes": 50,
@@ -81,6 +81,13 @@
       "ran_at": "2026-11-17T04:01:29+00:00",
       "slot": "2026-11-17T03:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
+    },
+    {
+      "late_minutes": 62,
+      "name": "Tests on main (daily)",
+      "ran_at": "2026-11-17T05:54:17+00:00",
+      "slot": "2026-11-17T04:52:00+00:00",
+      "workflow": "tests-on-main.yml"
     }
   ],
   "silence_minutes": 0,
