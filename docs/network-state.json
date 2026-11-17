@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T20:07:32Z",
+  "generated_at": "2026-11-17T20:41:45Z",
   "monitor_generated_at": "2026-11-17T19:43:42.749785+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 414,
-    "published_longform": 141,
-    "published_shorts": 273,
-    "public_total": 412,
-    "queued_longform": 61,
-    "queued_shorts": 82,
+    "published_total": 416,
+    "published_longform": 142,
+    "published_shorts": 274,
+    "public_total": 414,
+    "queued_longform": 60,
+    "queued_shorts": 81,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -33,33 +33,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 60,
-        "published_longform": 18,
-        "published_shorts": 42,
+        "published_total": 62,
+        "published_longform": 19,
+        "published_shorts": 43,
         "thumbnail_pending": 5,
-        "public_total": 59,
-        "queued_longform": 9,
+        "public_total": 61,
+        "queued_longform": 8,
         "queued_other": 5,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-PSALM116V7",
-        "title": "Say This Psalm 116:7 Prayer Before You Sleep | Find Your Rest #Shorts",
-        "format": "short",
-        "youtube_video_id": "LmMOMD6pS3w",
-        "watch_url": "https://www.youtube.com/shorts/LmMOMD6pS3w",
-        "published_on": "2026-11-17",
-        "published_at": "2026-11-17T15:31:18Z"
-      },
-      "next_queued_longform": {
         "id": "0027",
         "title": "Night Prayer When You Feel Afraid: Isaiah 41:10 | The Secret Place",
-        "words": 883,
+        "format": "longform",
+        "youtube_video_id": "nBujp4zoTCk",
+        "watch_url": "https://youtu.be/nBujp4zoTCk",
+        "published_on": "2026-11-17",
+        "published_at": "2026-11-17T20:40:50Z"
+      },
+      "next_queued_longform": {
+        "id": "0028",
+        "title": "Bedtime Prayer When You Are Worn Out: Matthew 11:28-30",
+        "words": 853,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-psalm127v2",
-        "scripture": "Psalm 127:2",
+        "short": "short-psalm57v1",
+        "scripture": "Psalm 57:1",
         "target_window_utc": "14:14",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0027",
+      "slug": "isaiah-41-10-upholding-you-with-his-right-hand",
+      "file": "0027-isaiah-41-10-upholding-you-with-his-right-hand.md",
+      "title": "Night Prayer When You Feel Afraid: Isaiah 41:10 | The Secret Place",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T20:40:50Z",
+      "youtube_video_id": "nBujp4zoTCk",
+      "watch_url": "https://youtu.be/nBujp4zoTCk",
+      "youtu_be_url": "https://youtu.be/nBujp4zoTCk",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/nBujp4zoTCk/edit",
+      "thumb_url": "https://i.ytimg.com/vi/nBujp4zoTCk/hqdefault.jpg",
+      "thumb_text": "I AM WITH THEE",
+      "thumbnail_pending": false,
+      "duration_label": "186m 38s",
+      "words": 883
+    },
+    {
       "id": "SHORT-GUIDEDPSALM48V14",
       "slug": "short-guidedpsalm48v14-guidance-prayer",
       "file": "short-guidedpsalm48v14-guidance-prayer.md",
@@ -892,6 +916,30 @@
       "thumbnail_pending": false,
       "duration_label": "58s",
       "words": 613
+    },
+    {
+      "id": "SHORT-PSALM127V2",
+      "slug": "short-psalm127v2-pre-sleep-prayer",
+      "file": "short-psalm127v2-pre-sleep-prayer.md",
+      "title": "Say This Psalm 127:2 Prayer Before You Sleep | Rest In Him #Shorts",
+      "channel": "secret-place",
+      "channel_name": "The Secret Place",
+      "channel_handle": "@SecretPlaceSanctuary",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T19:51:35Z",
+      "youtube_video_id": "QbOUdJVWj-U",
+      "watch_url": "https://www.youtube.com/shorts/QbOUdJVWj-U",
+      "youtu_be_url": "https://youtu.be/QbOUdJVWj-U",
+      "shorts_url": "https://www.youtube.com/shorts/QbOUdJVWj-U",
+      "studio_url": "https://studio.youtube.com/video/QbOUdJVWj-U/edit",
+      "thumb_url": "https://i.ytimg.com/vi/QbOUdJVWj-U/hqdefault.jpg",
+      "thumb_text": "THE SECRET PLACE \u00b7 A PRAYER FOR",
+      "thumbnail_pending": false,
+      "duration_label": "45s",
+      "words": 609
     },
     {
       "id": "0312",
@@ -10641,19 +10689,6 @@
   "queues": {
     "longform": [
       {
-        "id": "0027",
-        "slug": "isaiah-41-10-upholding-you-with-his-right-hand",
-        "file": "0027-isaiah-41-10-upholding-you-with-his-right-hand.md",
-        "title": "Night Prayer When You Feel Afraid: Isaiah 41:10 | The Secret Place",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 883
-      },
-      {
         "id": "0028",
         "slug": "matthew-11-28-30-rest-for-the-weary-soul",
         "file": "0028-matthew-11-28-30-rest-for-the-weary-soul.md",
@@ -11500,17 +11535,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-psalm127v2",
-        "file": "0000-short-psalm127v2.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 127:2",
-        "channel": "secret-place",
-        "channel_name": "The Secret Place",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "14:14"
       },
       {
         "short": "short-psalm57v1",

@@ -2,7 +2,7 @@
 id: '0027'
 title: "Night Prayer When You Feel Afraid: Isaiah 41:10 | The Secret Place"
 slug: isaiah-41-10-upholding-you-with-his-right-hand
-status: approved
+status: published
 privacy: public
 format: longform
 niche: faith and prayer
@@ -85,6 +85,16 @@ originality:
   ai_disclosure: false
 seo_hook: Pray this Isaiah 41:10 KJV night prayer before sleep and rest unafraid knowing God strengthens, helps, and upholds you tonight.
 category_id: '22'
+published_on: "2026-11-17"
+published_at: "2026-11-17T20:40:50Z"
+youtube_video_id: "nBujp4zoTCk"
+metadata_revision: "selar-seo-v1"
+prayer_seconds: 397.6
+duration_seconds: 11198.0
+top_comment: "ok"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_revision: "ctr-v3-cinema"
 ---
 
 ## Scene 1 — Fear Thou Not; For I Am with Thee (Verse 10a)
