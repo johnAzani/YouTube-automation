@@ -15,7 +15,7 @@ Selar Nigeria Banking: **[docs/SELAR_NIGERIA_SETUP.md](docs/SELAR_NIGERIA_SETUP.
 * **Cost Invariant:** Permanent $0.00 / month hard cost lock.
 * **Live Voluntary Offering Hub:** [selar.com/showlove/thesecretplace](https://selar.com/showlove/thesecretplace)
 * **Live Product #2 (Prayer Journal PDF):** [selar.com/i000qy7g39](https://selar.com/i000qy7g39)
-* **Automated Daily Release Slots:** `06:14`, `10:14`, `14:14`, `19:14` and `23:14 UTC` (7:14am, 11:14am, 3:14pm, 8:14pm and 12:14am Nigeria time). Every slot publishes a Short on every channel; each channel publishes its one long-form of the day at its own slot (`docs/SHORTS_FIRST_MIX_2026-11-14.md`).
+* **Automated Daily Production Slots:** `06:14`, `10:14`, `14:14`, `19:14` and `23:14 UTC` (7:14am, 11:14am, 3:14pm, 8:14pm and 12:14am Nigeria time). Every slot publishes a Short on every channel; each channel publishes its one long-form of the day at its own slot (`docs/SHORTS_FIRST_MIX_2026-11-14.md`). A slot is when the **work starts**, not when the video appears: measured on 17 November 2026 over the newest 40 long-forms, each went public a median **108 minutes after its slot** and none within the hour, because rendering begins at the slot and scheduling is switched off (`docs/PUBLISH_INSTANT_RESEARCH_2026-11-17.md`).
 
 ## Why it costs ₦0
 
@@ -39,7 +39,7 @@ content/queue/*.md  →  [originality gate]  →  TTS  →  stock b-roll  →  f
 
 - **`content/queue/`** — one markdown file per video (frontmatter + scene-by-scene script).
   Set `status: approved` and the scheduler picks it up.
-- **`.github/workflows/produce.yml`** — cron (06:14 & 14:14 UTC) + manual dispatch.
+- **`.github/workflows/produce.yml`** — five daily crons (`06:14`, `10:14`, `14:14`, `19:14`, `23:14 UTC`) + manual dispatch.
 - **`.github/workflows/dry-run.yml`** — full render rehearsal on every push, zero secrets.
 
 ## Quickstart
