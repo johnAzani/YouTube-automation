@@ -845,7 +845,9 @@ goes before you until evening falls and brings your labor to peaceful completion
                 return SimpleNamespace(text=valid_spec_json)
 
             brain._client = SimpleNamespace(models=SimpleNamespace(generate_content=fake_generate))
-            with mock.patch.object(gb, "_TRANSIENT_BACKOFF", ()), mock.patch("builtins.print"):
+            with mock.patch.object(gb, "_TRANSIENT_BACKOFF", ()), \
+                 mock.patch("pipeline.short_script.authoring_defects", return_value=[]), \
+                 mock.patch("builtins.print"):
                 spec = brain.author_short_spec(doc, key="short-middaypsalm37v5")
 
             self.assertEqual(spec.key, "short-middaypsalm37v5")

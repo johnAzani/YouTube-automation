@@ -135,16 +135,16 @@ def test_the_writer_is_shown_the_words_not_only_the_reference():
 # --------------------------------------------------------------------------- #
 def _spec(key: str, scripture: str, channel: str, verse_line: str) -> dict:
     lines = [
-        "When the weight you carried all day will not lift, this word is for you tonight.",
+        "The weight will not lift.",
         verse_line,
-        "Father, I bring You the thing I have carried all day and could not put down.",
-        "I thank You that nothing in it is hidden from You, and nothing in it is too heavy.",
+        "Father, I bring You the thing I have carried all day and could not put down before You this evening now.",
+        "I thank You that nothing in it is hidden from You, and nothing in it is too heavy this night at all.",
         "Teach my heart to rest in what You have said and not in what I can see.",
-        "Keep me and the ones I love until morning, and wake us in Your peace. Amen.",
+        "Keep me and the ones I love until morning, and wake us in Your peace through this night. Amen.",
     ]
     captions, phrases, scenes, start = [], [], [], 0
     for index, line in enumerate(lines):
-        stop = start + 6
+        stop = 3 if index == 0 else start + 6
         captions.append([start, stop, line])
         phrases.append([start, stop, [" ".join(line.split()[:3]).upper()], ["WORD"], scripture.upper()])
         scenes.append({"a": " ".join(line.split()[:4]), "img": f"{key}-scene-{index + 1:02d}.jpg",

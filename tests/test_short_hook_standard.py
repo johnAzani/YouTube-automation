@@ -26,8 +26,8 @@ def test_every_channel_prompt_asks_for_its_own_opening(channel):
     prompt = ss.build_prompt("Psalm 23:1-3", key="short-x", channel_id=channel,
                              avoid_openings=[])
     brand = brand_for(channel)
-    assert "THE OPENING SENTENCE" in prompt
-    assert "written for this Short alone" in prompt
+    assert "THE FIRST THREE SECONDS" in prompt
+    assert "Caption 1 ends at or before second" in prompt
     # The brand's stock invitation is now described as mood, not handed over as line one.
     assert f'mood is "{brand.short_opening}"' in prompt
     assert "It opens by inviting" not in prompt
@@ -41,6 +41,11 @@ def test_hooks_stay_honest():
     prompt = ss.build_prompt("Psalm 23:1-3", avoid_openings=[])
     assert "no promised outcome" in prompt
     assert "No personal names" in prompt and "no clickbait" in prompt
+    assert "ends with a single subscribe invitation" not in prompt
+    assert 'Do not speak "subscribe"' in prompt
+    assert "THE LAST SENTENCE" in prompt
+    assert "If you are" in prompt and "worn first three words" in prompt
+    assert '[[0, 3,' in prompt and '[[0, 8,' not in prompt
 
 
 def test_length_target_sits_inside_what_the_validator_accepts():
@@ -110,7 +115,7 @@ def test_a_broken_spec_folder_never_stops_a_short_being_written(monkeypatch):
 
     monkeypatch.setattr(ss, "recent_openings", boom)
     prompt = ss.build_prompt("Psalm 128:1-4", channel_id="prayer5")
-    assert "THE OPENING SENTENCE" in prompt and "already opened Shorts" not in prompt
+    assert "THE FIRST THREE SECONDS" in prompt and "already opened Shorts" not in prompt
 
 
 def test_the_committed_specs_show_why_this_exists():
@@ -119,3 +124,62 @@ def test_the_committed_specs_show_why_this_exists():
         found = ss.recent_openings(channel)
         assert len(found) <= ss.RECENT_OPENINGS_SHOWN
         assert all(isinstance(o, str) and o for o in found)
+
+
+def _viral_spec(**changes):
+    """A Short that would pass the first-three-seconds authoring check."""
+    from tests.test_short_script import good_spec
+
+    data = good_spec()
+    data.update(changes)
+    return ss.validate_spec(data)
+
+
+def test_a_three_second_hook_is_what_authoring_asks_for():
+    spec = _viral_spec()
+    assert spec.problems == []
+    assert ss.authoring_defects(spec) == []
+
+
+def test_an_eight_second_first_caption_still_loads_but_is_not_authored():
+    """Queued specs keep rendering; the brain must not write another one."""
+    from tests.test_short_script import good_spec as _raw
+
+    data = _raw()
+    data["captions"][0] = [0, 8, "The thing you carried is still here."]
+    data["captions"][1][0] = 8
+    data["kinetic_phrases"][0][0] = 0
+    data["kinetic_phrases"][0][1] = 8
+    spec = ss.validate_spec(data)
+    assert spec.problems == []
+    assert any("first caption ends at 8s" in d for d in ss.authoring_defects(spec))
+
+
+def test_a_spoken_subscribe_is_an_authoring_defect_not_a_load_error():
+    from tests.test_short_script import good_spec as _raw
+
+    data = _raw()
+    data["captions"][-1][2] = "If this prayer steadied you, type Amen and subscribe tonight."
+    spec = ss.validate_spec(data)
+    assert spec.problems == []
+    assert any("subscribe" in d for d in ss.authoring_defects(spec))
+
+
+def test_if_you_are_is_a_worn_skeleton():
+    from tests.test_short_script import good_spec as _raw
+
+    data = _raw()
+    data["captions"][0] = [0, 3, "If you are weary tonight stay."]
+    spec = ss.validate_spec(data)
+    assert spec.problems == []
+    assert any("if you are" in d for d in ss.authoring_defects(spec))
+
+
+def test_a_three_word_first_caption_is_a_line_not_a_fragment():
+    from tests.test_short_script import good_spec as _raw
+
+    data = _raw()
+    data["captions"][0] = [0, 3, "Can't sleep tonight?"]
+    spec = ss.validate_spec(data)
+    assert spec.problems == []
+    assert ss.authoring_defects(spec) == []

@@ -20,14 +20,14 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def good_spec(key="short-psalm121", scripture="Psalm 121"):
     captions = [
-        [0, 12, "Before you close your eyes tonight, breathe slowly and lift your eyes to the hills."],
-        [13, 26, "I will lift up mine eyes unto the hills, from whence cometh my help."],
-        [27, 40, "He will not let your foot slip; he who watches over you will not slumber."],
-        [41, 54, "He who keeps you will neither slumber nor sleep, through all the hours of this night."],
-        [55, 68, "The Lord is your keeper and your shade, and the sun will not strike you by day."],
-        [69, 82, "He will keep you from all harm and watch over your coming and going."],
-        [83, 96, "Sleep now, and let your home rest under the watch of the One who never tires."],
-        [97, 110, "If this prayer steadied you, type Amen and subscribe to pray with us each night."],
+        [0, 3, "Lift your eyes tonight."],
+        [3, 16, "I will lift up mine eyes unto the hills, from whence cometh my help."],
+        [17, 30, "He will not let your foot slip; he who watches over you will not slumber."],
+        [31, 44, "He who keeps you will neither slumber nor sleep, through all the hours of this night."],
+        [45, 58, "The Lord is your keeper and your shade, and the sun will not strike you by day."],
+        [59, 72, "He will keep you from all harm and watch over your coming and going this night."],
+        [73, 86, "Sleep now, and let your home rest under the watch of the One who never tires."],
+        [87, 100, "Sleep now. Lift your eyes. Amen."],
     ]
     return {
         "key": key,
@@ -86,7 +86,7 @@ class TestRefusals(unittest.TestCase):
 
     def test_overlapping_captions(self):
         data = good_spec()
-        data["captions"][1][0] = 5
+        data["captions"][1][0] = 2
         self.assertTrue(any("overlaps" in p for p in ss.validate_spec(data).problems))
 
     def test_narration_that_is_too_short(self):

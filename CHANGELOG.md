@@ -5,6 +5,14 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-17 — The swipe happens by second three
+
+- **YouTube ranks a Short on whether a stranger stays.** Help (Shorts search & discovery, read today) names "% of viewers who chose to view", then average view duration and average % viewed. The Secret Place's own Analytics agrees: the four Shorts that looped (145%, 191%, 110%, 129% viewed) produced the most watch hours; Psalm 27 has the most views (393) at 76%.
+- **The prompt was teaching the eight-second first line.** Counted on 353 authored specs: **every** first caption ends after second 3 (median 8s, 15 words). The JSON example was `[[0, 8, "First narrration line."]]`. **193 of 353** last captions speak "subscribe"; the end card already says it. **36** Shorts now open "If you are" — a new template.
+- **Changed, for Shorts written from now on.** Caption 1 is asked for 3–8 words ending by second 3; spoken subscribe/follow/"type amen" is refused; the worn first-three-word skeletons are named. `authoring_defects()` runs only when the brain authors, so a queued eight-second spec still renders. The example in the prompt is now `[0, 3, …]`.
+- **Unproven:** that any of this lifts "% who chose to view" or loops — Studio has the first, `content/analytics/` has the second only for The Secret Place, two days behind. **Owner-only:** phone verification on the seven channels whose thumbnail is a frame YouTube picks; sleep-length long-forms for counted hours. **Next step:** read `average_view_percent` on the next Shorts — a loop is 100% or more.
+- Tests: `tests/test_short_hook_standard.py` (+6). Reading: `docs/SHORTS_VIRALITY_RESEARCH_2026-11-17.md`.
+
 ## 2026-11-17 — The track nobody kept
 
 - **Caption tracks are 85% of the quota spend and leave no artefact.** 149 Short tracks exist (every Short since the field appeared, 14–17 November, all ten channels), **59,600 units**; the same call runs on every long-form and **0 of 139 long-form receipts** has ever recorded whether it worked (~55,600 units unconfirmed). The SRT goes to a gitignored `output/`, the alignment sidecar is gitignored, and the per-word timings survive for six legacy files only — so a Short's whole track, **884–1,131 bytes**, is deleted minutes after YouTube accepts it.

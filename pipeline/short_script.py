@@ -215,7 +215,11 @@ def validate_spec(data: dict, key: str | None = None,
         if start < previous_end:
             problems.append(f"caption {i + 1}: overlaps the previous caption")
         previous_end = stop
-        if len(_norm(text).split()) < 4:
+        # Caption 1 is the swipe-window hook: three words can name a need
+        # ("Can't sleep tonight?"). Later lines stay at four so a scene is a
+        # thought, not a fragment. Existing queued specs are all well above both.
+        min_line = MIN_FIRST_CAPTION_WORDS if i == 0 else 4
+        if len(_norm(text).split()) < min_line:
             problems.append(f"caption {i + 1}: too short to be a narration line")
 
     spec_words = len(" ".join(_norm(c[2]) for c in captions if len(c) == 3).split())
@@ -386,28 +390,40 @@ Return ONLY compact JSON matching this schema, no prose and no code fences:
     {{"a": "anchor phrase", "img": "{key}-scene-01.jpg", "kicker": "PSALM NN:1",
       "sub": "SHORT LINE UNDER IT", "cam": "push_in", "focus": [0.5, 0.45]}}
   ],
-  "captions": [[0, 8, "First narrration line."], [9, 17, "Second line."]],
-  "kinetic_phrases": [[0, 8, ["ON SCREEN LINE"], ["HIGHLIGHT"], "PSALM NN : 1"]],
+  "captions": [[0, 3, "The thing you carried is still here."], [3, 12, "Second line."]],
+  "kinetic_phrases": [[0, 3, ["STILL HERE"], ["HERE"], "PSALM NN : 1"]],
   "beats": [{{"a": "anchor phrase", "kind": "phrase", "words": ["HIGHLIGHT", "WORDS"], "hi": 0, "slot": "C"}}]
 }}
 
 HARD RULES — violations are rejected by code:
 - The narration must be about {words} words (never under {floor}, never over
   {ceiling}), a calm second-person {prayer_kind} prayer, {min_seconds}-{max_seconds}
-  seconds when read slowly. After the opening sentence it quotes the scripture
-  once, prays, and ends with a single subscribe invitation.
+  seconds when read slowly. After the opening it quotes the scripture once,
+  prays, and closes so the clip can replay.
 
-THE OPENING SENTENCE — a viewer decides in the first two seconds:
-- Sentence one is written for this Short alone: {hook_words} words or fewer, said
-  to one person, naming the exact moment or need this scripture meets: the hour,
-  the room, the worry that keeps returning, the decision, the thing they were
-  about to do when this reached them. A stranger who hears only that sentence
-  must know this prayer is for them today.
+THE FIRST THREE SECONDS — YouTube scores a Short on whether a stranger stays
+or swipes in this window (percent who chose to view, then average percent viewed):
+- Caption 1 ends at or before second {first_end}. It is {first_caption_words}
+  words or fewer (never under 3), said to one person, naming the exact moment
+  or need this scripture meets: the hour, the room, the weight still in the
+  hand, the thought that will not lie down. A stranger who hears only those
+  words must know this prayer is for them today.
+- Sentence one of the whole narration is {hook_words} words or fewer and is
+  that same caption, not a greeting stretched across eight seconds.
 - This channel's mood is "{opening}". That is the mood, NOT the first sentence:
   do not open with those words, with a greeting, with the channel's name, or
   with a general invitation to breathe, pause, gather, rise or welcome the day.
 - Do not reuse the opening of an earlier Short on this channel.{avoid_block}
+- Never open with these worn first three words (they are already a template):
+  "If you are", "Take a deep", "Rise in spirit", "Gather your home",
+  "Close your eyes", "Bring every weary", "Welcome".
 - Honest only: no "don't scroll", no "watch to the end", no promised outcome.
+
+THE LAST SENTENCE — the clip restarts itself:
+- Do not speak "subscribe", "follow", or "type amen". The end card already
+  says SUBSCRIBE. A spoken closer is a reason to swipe as the loop begins.
+- The last spoken line may say Amen, then restates the opening need in a few
+  words so a listener who stayed hears the first line again as it restarts.
 
 - Quote ONLY {scripture}. Never quote another psalm or verse reference.
 {scripture_block}- One `stock_queries` entry per scene, describing {imagery} imagery suitable for
@@ -436,6 +452,27 @@ TARGET_WORDS_RANGE = (95, 118)
 #: the reasons are that a Short is kept or swiped in its first seconds, and that
 #: one opening line repeated across a channel's Shorts is templated content.
 MAX_HOOK_WORDS = 16
+#: Caption 1 is the swipe window. Measured 17 November 2026 on 353 authored
+#: specs: every first caption ended after second 3 (median 8s, 15 words).
+#: YouTube Help (Shorts search & discovery) ranks on "% of viewers who chose
+#: to view", then average view duration and average % viewed. The example in
+#: this prompt used to be ``[0, 8, ...]``, which is what the model copied.
+MAX_FIRST_CAPTION_END = 3
+MAX_FIRST_CAPTION_WORDS = 8
+MIN_FIRST_CAPTION_WORDS = 3
+#: First-three-word skeletons that have already become a template. Counted
+#: on the same 353 specs: "if you are" 36, "take a deep" 8, "rise in spirit" 8,
+#: "gather your home" 6, "close your eyes" 5, "bring every weary" 4, plus
+#: openings that start "welcome".
+WORN_HOOK_PREFIXES = (
+    "if you are",
+    "take a deep",
+    "rise in spirit",
+    "gather your home",
+    "close your eyes",
+    "bring every weary",
+    "welcome",
+)
 #: How many of the channel's most recent openings the model is shown, to avoid.
 RECENT_OPENINGS_SHOWN = 8
 
@@ -444,6 +481,43 @@ def first_sentence(text: str) -> str:
     """The opening sentence of a narration."""
     parts = re.split(r"(?<=[.!?])\s+", " ".join(str(text or "").split()), maxsplit=1)
     return parts[0].strip() if parts and parts[0] else ""
+
+
+def authoring_defects(spec: ShortSpec) -> list[str]:
+    """Reasons a NEW Short must not be saved. Existing specs still load.
+
+    ``validate_spec`` is the load path: a queued Short with an eight-second
+    first caption has to keep rendering. These checks run only when the brain
+    authors, so the model is asked again instead of shipping another swipe.
+    """
+    defects: list[str] = []
+    if spec.captions and len(spec.captions[0]) == 3:
+        _start, stop, text = spec.captions[0]
+        words = _norm(text).split()
+        if isinstance(stop, int) and stop > MAX_FIRST_CAPTION_END:
+            defects.append(
+                f"first caption ends at {stop}s; the swipe happens by second "
+                f"{MAX_FIRST_CAPTION_END}"
+            )
+        if len(words) > MAX_FIRST_CAPTION_WORDS:
+            defects.append(
+                f"first caption is {len(words)} words; keep it to "
+                f"{MAX_FIRST_CAPTION_WORDS} so it lands in three seconds"
+            )
+        opening = first_sentence(spec.narration_text)
+        folded = _norm_words(opening)
+        for prefix in WORN_HOOK_PREFIXES:
+            if folded.startswith(prefix):
+                defects.append(f"opening starts with worn skeleton {prefix!r}")
+                break
+    if spec.captions and len(spec.captions[-1]) == 3:
+        last = str(spec.captions[-1][2] or "")
+        if re.search(r"\bsubscribe\b|\bfollow\b|type amen", last, re.I):
+            defects.append(
+                "last caption speaks subscribe; that belongs on the end card "
+                "so the loop can restart"
+            )
+    return defects
 
 
 def recent_openings(channel_id: str | None, limit: int = RECENT_OPENINGS_SHOWN,
@@ -528,7 +602,8 @@ def build_prompt(scripture: str, key: str = "short-psalmNN", words: int = TARGET
         key=key, scripture=scripture, words=words, foreign_block=foreign_block,
         scripture_block=prompt_block(scripture) + occasion_block,
         floor=max(MIN_WORDS, TARGET_WORDS_RANGE[0]), ceiling=TARGET_WORDS_RANGE[1],
-        hook_words=MAX_HOOK_WORDS, avoid_block=avoid_block,
+        hook_words=MAX_HOOK_WORDS, first_end=MAX_FIRST_CAPTION_END,
+        first_caption_words=MAX_FIRST_CAPTION_WORDS, avoid_block=avoid_block,
         min_seconds=MIN_SECONDS, max_seconds=MAX_SECONDS,
         kicker=MAX_KICKER_CHARS, sub=MAX_SUB_CHARS, cams=list(CAMS),
         channel_label=brand.short_channel_label,
