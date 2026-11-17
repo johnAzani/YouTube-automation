@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T19:53:24Z",
+  "generated_at": "2026-11-17T19:58:41Z",
   "monitor_generated_at": "2026-11-17T19:43:42.749785+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 410,
+    "published_total": 411,
     "published_longform": 141,
-    "published_shorts": 269,
-    "public_total": 408,
+    "published_shorts": 270,
+    "public_total": 409,
     "queued_longform": 61,
-    "queued_shorts": 86,
+    "queued_shorts": 85,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -509,23 +509,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 28,
+        "published_total": 29,
         "published_longform": 10,
-        "published_shorts": 18,
-        "thumbnail_pending": 28,
-        "public_total": 28,
+        "published_shorts": 19,
+        "thumbnail_pending": 29,
+        "public_total": 29,
         "queued_longform": 6,
         "queued_other": 2,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-SHIELDISAIAH54V14",
-        "title": "Pray This Isaiah 54:14 Prayer for Divine Protection | Hear God's Promise #Shorts",
+        "id": "SHORT-SHIELDPSALM20V1",
+        "title": "Pray This Psalm 20:1-2 Prayer for Divine Protection | The Lord Hear Thee #Shorts",
         "format": "short",
-        "youtube_video_id": "wBFf0dweOTI",
-        "watch_url": "https://www.youtube.com/shorts/wBFf0dweOTI",
+        "youtube_video_id": "MJfWwC2F2v8",
+        "watch_url": "https://www.youtube.com/shorts/MJfWwC2F2v8",
         "published_on": "2026-11-17",
-        "published_at": "2026-11-17T15:39:47Z"
+        "published_at": "2026-11-17T19:57:55Z"
       },
       "next_queued_longform": {
         "id": "0610",
@@ -534,8 +534,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shieldpsalm20v1",
-        "scripture": "Psalm 20:1-2",
+        "short": "short-shieldproverbs3v23",
+        "scripture": "Proverbs 3:23-26",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-SHIELDPSALM20V1",
+      "slug": "short-shieldpsalm20v1-protection-prayer",
+      "file": "short-shieldpsalm20v1-protection-prayer.md",
+      "title": "Pray This Psalm 20:1-2 Prayer for Divine Protection | The Lord Hear Thee #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T19:57:55Z",
+      "youtube_video_id": "MJfWwC2F2v8",
+      "watch_url": "https://www.youtube.com/shorts/MJfWwC2F2v8",
+      "youtu_be_url": "https://youtu.be/MJfWwC2F2v8",
+      "shorts_url": "https://www.youtube.com/shorts/MJfWwC2F2v8",
+      "studio_url": "https://studio.youtube.com/video/MJfWwC2F2v8/edit",
+      "thumb_url": "https://i.ytimg.com/vi/MJfWwC2F2v8/hqdefault.jpg",
+      "thumb_text": "THE \u00b7 LORD",
+      "thumbnail_pending": true,
+      "duration_label": "45s",
+      "words": 634
+    },
     {
       "id": "SHORT-MIDNIGHTPSALM124V7",
       "slug": "short-midnightpsalm124v7-midnight-prayer",
@@ -11492,17 +11516,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "14:14"
-      },
-      {
-        "short": "short-shieldpsalm20v1",
-        "file": "0000-short-shieldpsalm20v1.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 20:1-2",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-psalm3v3",
