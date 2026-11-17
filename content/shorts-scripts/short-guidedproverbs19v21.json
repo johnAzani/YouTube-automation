@@ -1,0 +1,304 @@
+{
+  "key": "short-guidedproverbs19v21",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "PROVERBS 19:21",
+    "THE GUIDED PATH"
+  ],
+  "poster": [
+    "SEEKING WISDOM",
+    "IN EVERY SEASON",
+    "TRUSTING HIS PLAN",
+    "THE GUIDED PATH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley dawn",
+    "peaceful river winding through mountains",
+    "quiet mountain lake early morning light",
+    "serene pine forest fog",
+    "distant mountain peaks clouds calm",
+    "soft light over mountain ridge",
+    "tranquil valley peaceful water"
+  ],
+  "scenes": [
+    {
+      "a": "That tightly wound anxiety over your future plans needs to be laid down right now.",
+      "img": "short-guidedproverbs19v21-scene-01.jpg",
+      "kicker": "PROVERBS 19:21",
+      "sub": "LAY DOWN YOUR ANXIETY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "You have mapped out every single detail, yet your soul remains unsettled.",
+      "img": "short-guidedproverbs19v21-scene-02.jpg",
+      "kicker": "SEEKING DIRECTION",
+      "sub": "WHEN PLANS FAIL US",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Listen to the wisdom of Scripture recorded in Proverbs 19:21.",
+      "img": "short-guidedproverbs19v21-scene-03.jpg",
+      "kicker": "HEAR HIS WORD",
+      "sub": "THE COUNSEL OF THE LORD",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "There are many devices in a man’s heart; nevertheless the counsel of the LORD, that shall stand.",
+      "img": "short-guidedproverbs19v21-scene-04.jpg",
+      "kicker": "PROVERBS 19:21",
+      "sub": "HIS COUNSEL STANDS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, forgive us for leaning so heavily on our own limited understanding today.",
+      "img": "short-guidedproverbs19v21-scene-05.jpg",
+      "kicker": "A PRAYER FOR GUIDANCE",
+      "sub": "FORGIVE OUR SELF-RELIANCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Align our desires with your perfect will and quiet every doubting thought within us.",
+      "img": "short-guidedproverbs19v21-scene-06.jpg",
+      "kicker": "ALIGN OUR HEARTS",
+      "sub": "QUIET OUR DOUBTS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Grant us the grace to trust your sovereign timing above all else. Amen.",
+      "img": "short-guidedproverbs19v21-scene-07.jpg",
+      "kicker": "TRUSTING GOD",
+      "sub": "REST IN HIS TIMING",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      4,
+      "That tightly wound anxiety over your future plans needs to be laid down right now."
+    ],
+    [
+      4,
+      8,
+      "You have mapped out every single detail, yet your soul remains unsettled."
+    ],
+    [
+      8,
+      12,
+      "Listen to the wisdom of Scripture recorded in Proverbs 19:21."
+    ],
+    [
+      12,
+      18,
+      "There are many devices in a man’s heart; nevertheless the counsel of the LORD, that shall stand."
+    ],
+    [
+      18,
+      22,
+      "Father, forgive us for leaning so heavily on our own limited understanding today."
+    ],
+    [
+      22,
+      26,
+      "Align our desires with your perfect will and quiet every doubting thought within us."
+    ],
+    [
+      26,
+      30,
+      "Grant us the grace to trust your sovereign timing above all else. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      4,
+      [
+        "THAT TIGHTLY WOUND ANXIETY",
+        "OVER YOUR FUTURE PLANS",
+        "NEEDS TO BE LAID DOWN"
+      ],
+      "ANXIETY",
+      "PROVERBS 19 : 21"
+    ],
+    [
+      4,
+      8,
+      [
+        "YOU HAVE MAPPED OUT",
+        "EVERY SINGLE DETAIL",
+        "YET YOUR SOUL REMAINS"
+      ],
+      "UNSETTLED",
+      "PROVERBS 19 : 21"
+    ],
+    [
+      8,
+      12,
+      [
+        "LISTEN TO THE WISDOM",
+        "OF SCRIPTURE RECORDED",
+        "IN PROVERBS NINETEEN"
+      ],
+      "WISDOM",
+      "PROVERBS 19 : 21"
+    ],
+    [
+      12,
+      18,
+      [
+        "DEVICES IN A MAN’S HEART",
+        "NEVERTHELESS THE COUNSEL",
+        "OF THE LORD SHALL STAND"
+      ],
+      "COUNSEL",
+      "PROVERBS 19 : 21"
+    ],
+    [
+      18,
+      22,
+      [
+        "FATHER FORGIVE US",
+        "FOR LEANING SO HEAVILY",
+        "ON OUR OWN UNDERSTANDING"
+      ],
+      "FORGIVE",
+      "PROVERBS 19 : 21"
+    ],
+    [
+      22,
+      26,
+      [
+        "ALIGN OUR DESIRES",
+        "WITH YOUR PERFECT WILL",
+        "AND QUIET EVERY THOUGHT"
+      ],
+      "PERFECT",
+      "PROVERBS 19 : 21"
+    ],
+    [
+      26,
+      30,
+      [
+        "GRANT US THE GRACE",
+        "TO TRUST YOUR TIMING",
+        "ABOVE ALL ELSE AMEN"
+      ],
+      "GRACE",
+      "PROVERBS 19 : 21"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That tightly wound anxiety over your future plans needs to be laid down right now.",
+      "kind": "phrase",
+      "words": [
+        "TIGHTLY",
+        "WOUND",
+        "ANXIETY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "You have mapped out every single detail, yet your soul remains unsettled.",
+      "kind": "phrase",
+      "words": [
+        "MAPPED",
+        "OUT",
+        "DETAILS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Listen to the wisdom of Scripture recorded in Proverbs 19:21.",
+      "kind": "phrase",
+      "words": [
+        "LISTEN",
+        "TO",
+        "WISDOM"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "There are many devices in a man’s heart; nevertheless the counsel of the LORD, that shall stand.",
+      "kind": "phrase",
+      "words": [
+        "COUNSEL",
+        "OF",
+        "THE",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, forgive us for leaning so heavily on our own limited understanding today.",
+      "kind": "phrase",
+      "words": [
+        "FATHER",
+        "FORGIVE",
+        "US"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Align our desires with your perfect will and quiet every doubting thought within us.",
+      "kind": "phrase",
+      "words": [
+        "ALIGN",
+        "OUR",
+        "DESIRES"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us the grace to trust your sovereign timing above all else. Amen.",
+      "kind": "phrase",
+      "words": [
+        "GRANT",
+        "US",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 19:21"
+}

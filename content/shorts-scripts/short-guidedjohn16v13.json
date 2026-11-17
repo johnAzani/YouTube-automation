@@ -1,0 +1,312 @@
+{
+  "key": "short-guidedjohn16v13",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "THE SPIRIT OF",
+    "TRUTH IS HERE"
+  ],
+  "poster": [
+    "THE SPIRIT",
+    "OF TRUTH",
+    "WILL GUIDE",
+    "YOUR PATH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty mountain pass at dawn",
+    "sunlight breaking over calm lake",
+    "winding forest trail in soft light",
+    "ethereal clouds over valley",
+    "gentle flowing river at twilight",
+    "distant peaks under golden sky",
+    "path leading through quiet woods"
+  ],
+  "scenes": [
+    {
+      "a": "That heavy doubt you feel about your next step is where we begin this prayer.",
+      "img": "short-guidedjohn16v13-scene-01.jpg",
+      "kicker": "JOHN 16:13",
+      "sub": "HEAR HIS VOICE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Howbeit when he, the Spirit of truth, is come, he will guide you into all truth:",
+      "img": "short-guidedjohn16v13-scene-02.jpg",
+      "kicker": "JOHN 16:13",
+      "sub": "THE TRUTH REVEALED",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "for he shall not speak of himself; but whatsoever he shall hear, that shall he speak:",
+      "img": "short-guidedjohn16v13-scene-03.jpg",
+      "kicker": "JOHN 16:13",
+      "sub": "HE SPEAKS FROM GOD",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "and he will show you things to come.",
+      "img": "short-guidedjohn16v13-scene-04.jpg",
+      "kicker": "JOHN 16:13",
+      "sub": "FUTURE MADE CLEAR",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Lord, grant me the courage to surrender my own plans and trust Your perfect direction.",
+      "img": "short-guidedjohn16v13-scene-05.jpg",
+      "kicker": "JOHN 16:13",
+      "sub": "SURRENDER IN PRAYER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "a": "Open my eyes to the way forward, that I might walk in alignment with You.",
+      "img": "short-guidedjohn16v13-scene-06.jpg",
+      "kicker": "JOHN 16:13",
+      "sub": "ALIGNMENT WITH TRUTH",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Lead me past the confusion into the peace of Your presence, now and forevermore. Amen.",
+      "img": "short-guidedjohn16v13-scene-07.jpg",
+      "kicker": "JOHN 16:13",
+      "sub": "WALK IN HIS PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That heavy doubt you feel about your next step is where we begin this prayer."
+    ],
+    [
+      8,
+      18,
+      "Howbeit when he, the Spirit of truth, is come, he will guide you into all truth:"
+    ],
+    [
+      18,
+      28,
+      "for he shall not speak of himself; but whatsoever he shall hear, that shall he speak:"
+    ],
+    [
+      28,
+      36,
+      "and he will show you things to come."
+    ],
+    [
+      36,
+      46,
+      "Lord, grant me the courage to surrender my own plans and trust Your perfect direction."
+    ],
+    [
+      46,
+      56,
+      "Open my eyes to the way forward, that I might walk in alignment with You."
+    ],
+    [
+      56,
+      68,
+      "Lead me past the confusion into the peace of Your presence, now and forevermore. Amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THAT HEAVY DOUBT",
+        "ABOUT YOUR NEXT STEP",
+        "IS WHERE WE BEGIN"
+      ],
+      [
+        "HEAVY DOUBT"
+      ],
+      "JOHN 16:13"
+    ],
+    [
+      8,
+      18,
+      [
+        "THE SPIRIT OF TRUTH",
+        "WILL GUIDE YOU",
+        "INTO ALL TRUTH"
+      ],
+      [
+        "SPIRIT OF TRUTH"
+      ],
+      "JOHN 16:13"
+    ],
+    [
+      18,
+      28,
+      [
+        "HE SHALL NOT",
+        "SPEAK OF HIMSELF",
+        "BUT HEAR FROM GOD"
+      ],
+      [
+        "HE SHALL NOT"
+      ],
+      "JOHN 16:13"
+    ],
+    [
+      28,
+      36,
+      [
+        "AND HE WILL SHOW",
+        "YOU THINGS TO COME"
+      ],
+      [
+        "THINGS TO COME"
+      ],
+      "JOHN 16:13"
+    ],
+    [
+      36,
+      46,
+      [
+        "LORD GRANT ME",
+        "COURAGE TO SURRENDER",
+        "MY OWN PLANS"
+      ],
+      [
+        "SURRENDER"
+      ],
+      "JOHN 16:13"
+    ],
+    [
+      46,
+      56,
+      [
+        "OPEN MY EYES",
+        "TO THE WAY FORWARD",
+        "IN ALIGNMENT"
+      ],
+      [
+        "WAY FORWARD"
+      ],
+      "JOHN 16:13"
+    ],
+    [
+      56,
+      68,
+      [
+        "LEAD ME PAST",
+        "THE CONFUSION INTO",
+        "YOUR PEACE AMEN"
+      ],
+      [
+        "PEACE"
+      ],
+      "JOHN 16:13"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That heavy doubt you feel about your next step is where we begin this prayer.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "DOUBT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Howbeit when he, the Spirit of truth, is come, he will guide you into all truth:",
+      "kind": "phrase",
+      "words": [
+        "SPIRIT",
+        "OF",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "for he shall not speak of himself; but whatsoever he shall hear, that shall he speak:",
+      "kind": "phrase",
+      "words": [
+        "SHALL",
+        "NOT",
+        "SPEAK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "and he will show you things to come.",
+      "kind": "phrase",
+      "words": [
+        "THINGS",
+        "TO",
+        "COME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, grant me the courage to surrender my own plans and trust Your perfect direction.",
+      "kind": "phrase",
+      "words": [
+        "SURRENDER",
+        "PLANS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Open my eyes to the way forward, that I might walk in alignment with You.",
+      "kind": "phrase",
+      "words": [
+        "WAY",
+        "FORWARD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lead me past the confusion into the peace of Your presence, now and forevermore. Amen.",
+      "kind": "phrase",
+      "words": [
+        "PEACE",
+        "AMEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "John 16:13"
+}

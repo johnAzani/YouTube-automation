@@ -1,0 +1,319 @@
+{
+  "key": "short-guidedpsalm48v14",
+  "channel": "prayer10",
+  "psalm": 48,
+  "title": [
+    "OUR ETERNAL GUIDE",
+    "PSALM 48:14"
+  ],
+  "poster": [
+    "HE WILL BE",
+    "OUR GUIDE",
+    "EVEN UNTO DEATH",
+    "PSALM 48:14"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty mountain pass morning fog",
+    "alpine valley river gentle sunlight",
+    "quiet mountain valley early light",
+    "peaceful river through mountain forest",
+    "misty alpine pass trail winding",
+    "calm mountain river sunrise glow",
+    "silent alpine lake mountain reflection"
+  ],
+  "scenes": [
+    {
+      "a": "When you worry that God will leave you halfway through this heavy journey, listen.",
+      "img": "short-guidedpsalm48v14-scene-01.jpg",
+      "kicker": "PSALM 48:14",
+      "sub": "GOD WILL NOT ABANDON YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "For this God is our God for ever and ever: he will be our guide even unto death.",
+      "img": "short-guidedpsalm48v14-scene-02.jpg",
+      "kicker": "PSALM 48:14",
+      "sub": "OUR ETERNAL GUIDE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we often fear the unknown miles ahead and wonder if our strength will fail before the end.",
+      "img": "short-guidedpsalm48v14-scene-03.jpg",
+      "kicker": "PSALM 48:14",
+      "sub": "WHEN STRENGTH FAILS",
+      "cam": "push_in",
+      "focus": [
+        0.48,
+        0.52
+      ]
+    },
+    {
+      "a": "You are not a temporary helper; You are our God for all eternity.",
+      "img": "short-guidedpsalm48v14-scene-04.jpg",
+      "kicker": "PSALM 48:14",
+      "sub": "GOD FOR ALL ETERNITY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lead our steps when the path grows dim, and grant us discernment for every choice.",
+      "img": "short-guidedpsalm48v14-scene-05.jpg",
+      "kicker": "PSALM 48:14",
+      "sub": "SEEKING HIS WISDOM",
+      "cam": "pull_out",
+      "focus": [
+        0.52,
+        0.48
+      ]
+    },
+    {
+      "a": "Teach us to trust Your hand through every season of this life.",
+      "img": "short-guidedpsalm48v14-scene-06.jpg",
+      "kicker": "PSALM 48:14",
+      "sub": "TRUST HIS HAND",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Steady our hearts in Your quiet presence.",
+      "img": "short-guidedpsalm48v14-scene-07.jpg",
+      "kicker": "PSALM 48:14",
+      "sub": "STEADY IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "When you worry that God will leave you halfway through this heavy journey, listen."
+    ],
+    [
+      7,
+      16,
+      "For this God is our God for ever and ever: he will be our guide even unto death."
+    ],
+    [
+      16,
+      24,
+      "Lord, we often fear the unknown miles ahead and wonder if our strength will fail before the end."
+    ],
+    [
+      24,
+      31,
+      "You are not a temporary helper; You are our God for all eternity."
+    ],
+    [
+      31,
+      38,
+      "Lead our steps when the path grows dim, and grant us discernment for every choice."
+    ],
+    [
+      38,
+      44,
+      "Teach us to trust Your hand through every season of this life."
+    ],
+    [
+      44,
+      52,
+      "Steady our hearts in Your quiet presence. Subscribe to The Guided Path for daily wisdom on your journey."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "WHEN YOU WORRY THAT GOD",
+        "WILL LEAVE YOU HALFWAY",
+        "THROUGH THIS HEAVY JOURNEY",
+        "LISTEN"
+      ],
+      [
+        "GOD",
+        "JOURNEY"
+      ],
+      "PSALM 48 : 14"
+    ],
+    [
+      7,
+      16,
+      [
+        "FOR THIS GOD IS OUR GOD",
+        "FOR EVER AND EVER",
+        "HE WILL BE OUR GUIDE",
+        "EVEN UNTO DEATH"
+      ],
+      [
+        "GUIDE",
+        "DEATH"
+      ],
+      "PSALM 48 : 14"
+    ],
+    [
+      16,
+      24,
+      [
+        "LORD WE OFTEN FEAR THE UNKNOWN",
+        "MILES AHEAD AND WONDER IF",
+        "OUR STRENGTH WILL FAIL",
+        "BEFORE THE END"
+      ],
+      [
+        "UNKNOWN",
+        "STRENGTH"
+      ],
+      "PSALM 48 : 14"
+    ],
+    [
+      24,
+      31,
+      [
+        "YOU ARE NOT A TEMPORARY HELPER",
+        "YOU ARE OUR GOD",
+        "FOR ALL ETERNITY"
+      ],
+      [
+        "ETERNITY"
+      ],
+      "PSALM 48 : 14"
+    ],
+    [
+      31,
+      38,
+      [
+        "LEAD OUR STEPS WHEN THE PATH",
+        "GROWS DIM AND GRANT US",
+        "DISCERNMENT FOR EVERY CHOICE"
+      ],
+      [
+        "LEAD",
+        "DISCERNMENT"
+      ],
+      "PSALM 48 : 14"
+    ],
+    [
+      38,
+      44,
+      [
+        "TEACH US TO TRUST YOUR HAND",
+        "THROUGH EVERY SEASON",
+        "OF THIS LIFE"
+      ],
+      [
+        "TRUST",
+        "SEASON"
+      ],
+      "PSALM 48 : 14"
+    ],
+    [
+      44,
+      52,
+      [
+        "STEADY OUR HEARTS IN YOUR PRESENCE",
+        "SUBSCRIBE TO THE GUIDED PATH",
+        "FOR DAILY WISDOM"
+      ],
+      [
+        "STEADY",
+        "WISDOM"
+      ],
+      "PSALM 48 : 14"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "heavy journey",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "JOURNEY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "our guide even unto death",
+      "kind": "phrase",
+      "words": [
+        "OUR",
+        "GUIDE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "strength will fail",
+      "kind": "phrase",
+      "words": [
+        "STRENGTH",
+        "FAIL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "for all eternity",
+      "kind": "phrase",
+      "words": [
+        "ALL",
+        "ETERNITY"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "grant us discernment",
+      "kind": "phrase",
+      "words": [
+        "GRANT",
+        "DISCERNMENT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "trust Your hand",
+      "kind": "phrase",
+      "words": [
+        "TRUST",
+        "HAND"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "quiet presence",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "PRESENCE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 48:14"
+}

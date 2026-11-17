@@ -1,0 +1,400 @@
+{
+  "key": "short-guidedproverbs14v12",
+  "channel": "prayer10",
+  "psalm": null,
+  "title": [
+    "THERE IS A WAY",
+    "THAT SEEMS RIGHT"
+  ],
+  "poster": [
+    "PROVERBS 14:12",
+    "WHEN A CHOICE",
+    "LOOKS PERFECT",
+    "SEEK GOD'S PATH"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Guided Path — seek God's wisdom for every step"
+  ],
+  "stock_queries": [
+    "misty alpine valley at dawn",
+    "quiet mountain pass in morning fog",
+    "peaceful river winding through dense pine forest",
+    "dramatic mountain valley in early twilight",
+    "misty mountain road leading into fog",
+    "calm alpine lake reflecting high mountain peaks",
+    "quiet forest path with soft morning light",
+    "serene river flowing through mountain wilderness",
+    "distant mountain peaks bathed in golden morning sun"
+  ],
+  "scenes": [
+    {
+      "a": "You are about to sign that contract, but something quiet inside is asking you to stop.",
+      "img": "short-guidedproverbs14v12-scene-01.jpg",
+      "kicker": "PROVERBS 14:12",
+      "sub": "PAUSE BEFORE YOU STEP",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "God's word warns us in Proverbs fourteen verse twelve: There is a way which seemeth right unto a man,",
+      "img": "short-guidedproverbs14v12-scene-02.jpg",
+      "kicker": "PROVERBS 14:12",
+      "sub": "THE WAY THAT SEEMS RIGHT",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "but the end thereof are the ways of death.",
+      "img": "short-guidedproverbs14v12-scene-03.jpg",
+      "kicker": "PROVERBS 14:12",
+      "sub": "THE END OF SELF DIRECTION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, do not let us be fooled by what appears right to human eyes.",
+      "img": "short-guidedproverbs14v12-scene-04.jpg",
+      "kicker": "PROVERBS 14:12",
+      "sub": "LOOK BEYOND THE SURFACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Give us holy discernment to see where this path truly leads.",
+      "img": "short-guidedproverbs14v12-scene-05.jpg",
+      "kicker": "PROVERBS 14:12",
+      "sub": "SEEK HOLY DISCERNMENT",
+      "cam": "push_in",
+      "focus": [
+        0.45,
+        0.4
+      ]
+    },
+    {
+      "a": "Uncover every hidden danger and quiet our rushing thoughts.",
+      "img": "short-guidedproverbs14v12-scene-06.jpg",
+      "kicker": "PROVERBS 14:12",
+      "sub": "UNCOVER HIDDEN DANGERS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Align our choices with Your divine wisdom before we step forward.",
+      "img": "short-guidedproverbs14v12-scene-07.jpg",
+      "kicker": "PROVERBS 14:12",
+      "sub": "ALIGN WITH GOD'S WISDOM",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Protect our feet from subtle traps and guide us in Your truth.",
+      "img": "short-guidedproverbs14v12-scene-08.jpg",
+      "kicker": "PROVERBS 14:12",
+      "sub": "WALK IN HIS TRUTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Subscribe to The Guided Path for daily wisdom.",
+      "img": "short-guidedproverbs14v12-scene-09.jpg",
+      "kicker": "THE GUIDED PATH",
+      "sub": "SEEK HIS WISDOM DAILY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "You are about to sign that contract, but something quiet inside is asking you to stop."
+    ],
+    [
+      7,
+      14,
+      "God's word warns us in Proverbs fourteen verse twelve: There is a way which seemeth right unto a man,"
+    ],
+    [
+      14,
+      20,
+      "but the end thereof are the ways of death."
+    ],
+    [
+      20,
+      27,
+      "Lord, do not let us be fooled by what appears right to human eyes."
+    ],
+    [
+      27,
+      34,
+      "Give us holy discernment to see where this path truly leads."
+    ],
+    [
+      34,
+      41,
+      "Uncover every hidden danger and quiet our rushing thoughts."
+    ],
+    [
+      41,
+      48,
+      "Align our choices with Your divine wisdom before we step forward."
+    ],
+    [
+      48,
+      55,
+      "Protect our feet from subtle traps and guide us in Your truth."
+    ],
+    [
+      55,
+      60,
+      "Subscribe to The Guided Path for daily wisdom."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "ABOUT TO SIGN",
+        "THAT CONTRACT",
+        "SOMETHING QUIET",
+        "ASKING YOU TO STOP"
+      ],
+      [
+        "STOP"
+      ],
+      "PROVERBS 14 : 12"
+    ],
+    [
+      7,
+      14,
+      [
+        "THERE IS A WAY",
+        "WHICH SEEMETH RIGHT",
+        "UNTO A MAN"
+      ],
+      [
+        "SEEMETH",
+        "RIGHT"
+      ],
+      "PROVERBS 14 : 12"
+    ],
+    [
+      14,
+      20,
+      [
+        "BUT THE END THEREOF",
+        "ARE THE WAYS",
+        "OF DEATH"
+      ],
+      [
+        "WAYS",
+        "OF",
+        "DEATH"
+      ],
+      "PROVERBS 14 : 12"
+    ],
+    [
+      20,
+      27,
+      [
+        "DO NOT LET US",
+        "BE FOOLED BY WHAT",
+        "APPEARS RIGHT"
+      ],
+      [
+        "FOOLED"
+      ],
+      "PROVERBS 14 : 12"
+    ],
+    [
+      27,
+      34,
+      [
+        "GIVE US HOLY",
+        "DISCERNMENT TO SEE",
+        "WHERE THIS PATH LEADS"
+      ],
+      [
+        "HOLY",
+        "DISCERNMENT"
+      ],
+      "PROVERBS 14 : 12"
+    ],
+    [
+      34,
+      41,
+      [
+        "UNCOVER EVERY",
+        "HIDDEN DANGER",
+        "QUIET OUR THOUGHTS"
+      ],
+      [
+        "HIDDEN",
+        "DANGER"
+      ],
+      "PROVERBS 14 : 12"
+    ],
+    [
+      41,
+      48,
+      [
+        "ALIGN OUR CHOICES",
+        "WITH YOUR DIVINE",
+        "WISDOM TODAY"
+      ],
+      [
+        "DIVINE",
+        "WISDOM"
+      ],
+      "PROVERBS 14 : 12"
+    ],
+    [
+      48,
+      55,
+      [
+        "PROTECT OUR FEET",
+        "FROM SUBTLE TRAPS",
+        "GUIDE US IN TRUTH"
+      ],
+      [
+        "GUIDE",
+        "US"
+      ],
+      "PROVERBS 14 : 12"
+    ],
+    [
+      55,
+      60,
+      [
+        "SUBSCRIBE TO",
+        "THE GUIDED PATH",
+        "FOR DAILY WISDOM"
+      ],
+      [
+        "GUIDED",
+        "PATH"
+      ],
+      "PROVERBS 14 : 12"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "You are about to sign that contract, but something quiet inside is asking you to stop.",
+      "kind": "phrase",
+      "words": [
+        "SIGN",
+        "CONTRACT",
+        "STOP"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "God's word warns us in Proverbs fourteen verse twelve: There is a way which seemeth right unto a man,",
+      "kind": "phrase",
+      "words": [
+        "SEEMETH",
+        "RIGHT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "but the end thereof are the ways of death.",
+      "kind": "phrase",
+      "words": [
+        "WAYS",
+        "DEATH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, do not let us be fooled by what appears right to human eyes.",
+      "kind": "phrase",
+      "words": [
+        "FOOLED",
+        "APPEARS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Give us holy discernment to see where this path truly leads.",
+      "kind": "phrase",
+      "words": [
+        "HOLY",
+        "DISCERNMENT"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Uncover every hidden danger and quiet our rushing thoughts.",
+      "kind": "phrase",
+      "words": [
+        "HIDDEN",
+        "DANGER"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Align our choices with Your divine wisdom before we step forward.",
+      "kind": "phrase",
+      "words": [
+        "DIVINE",
+        "WISDOM"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Protect our feet from subtle traps and guide us in Your truth.",
+      "kind": "phrase",
+      "words": [
+        "PROTECT",
+        "TRUTH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Guided Path for daily wisdom.",
+      "kind": "phrase",
+      "words": [
+        "GUIDED",
+        "PATH"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 14:12"
+}
