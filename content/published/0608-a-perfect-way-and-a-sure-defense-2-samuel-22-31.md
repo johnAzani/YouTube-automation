@@ -2,7 +2,7 @@
 id: 0608
 title: 'A Perfect Way and a Sure Defense: 2 Samuel 22:31 | The Covenant Shield'
 slug: a-perfect-way-and-a-sure-defense-2-samuel-22-31
-status: approved
+status: published
 channel: prayer8
 privacy: public
 format: longform
@@ -78,6 +78,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-17"
+published_at: "2026-11-17T00:37:26Z"
+youtube_video_id: "Vqx7CX2Qe3c"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — The Perfect Way of the Almighty

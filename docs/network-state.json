@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T00:24:15Z",
+  "generated_at": "2026-11-17T00:38:13Z",
   "monitor_generated_at": "2026-11-16T21:06:04.374364+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 369,
-    "published_longform": 132,
-    "published_shorts": 237,
-    "public_total": 367,
-    "queued_longform": 57,
-    "queued_shorts": 61,
+    "published_total": 371,
+    "published_longform": 133,
+    "published_shorts": 238,
+    "public_total": 369,
+    "queued_longform": 56,
+    "queued_shorts": 60,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -509,33 +509,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 23,
-        "published_longform": 8,
-        "published_shorts": 15,
-        "thumbnail_pending": 23,
-        "public_total": 23,
-        "queued_longform": 6,
+        "published_total": 25,
+        "published_longform": 9,
+        "published_shorts": 16,
+        "thumbnail_pending": 25,
+        "public_total": 25,
+        "queued_longform": 5,
         "queued_other": 1,
-        "queued_shorts": 7
+        "queued_shorts": 6
       },
       "latest_video": {
-        "id": "SHORT-SHIELDPSALM91V1",
-        "title": "Pray This Psalm 91:1-2 Prayer for Divine Protection | Seeking Divine Covering #Shorts",
-        "format": "short",
-        "youtube_video_id": "4ESCGlKzyns",
-        "watch_url": "https://www.youtube.com/shorts/4ESCGlKzyns",
-        "published_on": "2026-11-16",
-        "published_at": "2026-11-16T20:04:32Z"
-      },
-      "next_queued_longform": {
         "id": "0608",
         "title": "A Perfect Way and a Sure Defense: 2 Samuel 22:31 | The Covenant Shield",
-        "words": 2169,
+        "format": "longform",
+        "youtube_video_id": "Vqx7CX2Qe3c",
+        "watch_url": "https://youtu.be/Vqx7CX2Qe3c",
+        "published_on": "2026-11-17",
+        "published_at": "2026-11-17T00:37:26Z"
+      },
+      "next_queued_longform": {
+        "id": "0609",
+        "title": "Walk in Safety Today: Proverbs 3:23-26 | The Covenant Shield",
+        "words": 1405,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-shield2samuel22v31",
-        "scripture": "2 Samuel 22:31",
+        "short": "short-shieldproverbs3v23",
+        "scripture": "Proverbs 3:23-26",
         "target_window_utc": "08:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0608",
+      "slug": "a-perfect-way-and-a-sure-defense-2-samuel-22-31",
+      "file": "0608-a-perfect-way-and-a-sure-defense-2-samuel-22-31.md",
+      "title": "A Perfect Way and a Sure Defense: 2 Samuel 22:31 | The Covenant Shield",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T00:37:26Z",
+      "youtube_video_id": "Vqx7CX2Qe3c",
+      "watch_url": "https://youtu.be/Vqx7CX2Qe3c",
+      "youtu_be_url": "https://youtu.be/Vqx7CX2Qe3c",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/Vqx7CX2Qe3c/edit",
+      "thumb_url": "https://i.ytimg.com/vi/Vqx7CX2Qe3c/hqdefault.jpg",
+      "thumb_text": "GOD MY BUCKLER",
+      "thumbnail_pending": true,
+      "duration_label": "~15 min",
+      "words": 2169
+    },
+    {
       "id": "0214",
       "slug": "lift-up-your-heads-psalm-24-7-10-the-midnight-watch",
       "file": "0214-lift-up-your-heads-psalm-24-7-10-the-midnight-watch.md",
@@ -796,6 +820,30 @@
       "thumbnail_pending": false,
       "duration_label": "46s",
       "words": 635
+    },
+    {
+      "id": "SHORT-SHIELD2SAMUEL22V31",
+      "slug": "short-shield2samuel22v31-protection-prayer",
+      "file": "short-shield2samuel22v31-protection-prayer.md",
+      "title": "Pray This 2 Samuel 22:31 Prayer for Divine Protection | Daily Protection #Shorts",
+      "channel": "prayer8",
+      "channel_name": "The Covenant Shield",
+      "channel_handle": "@TheCovenantShieldDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-16",
+      "published_at": "2026-11-16T23:37:09Z",
+      "youtube_video_id": "1TwF4BokGBU",
+      "watch_url": "https://www.youtube.com/shorts/1TwF4BokGBU",
+      "youtu_be_url": "https://youtu.be/1TwF4BokGBU",
+      "shorts_url": "https://www.youtube.com/shorts/1TwF4BokGBU",
+      "studio_url": "https://studio.youtube.com/video/1TwF4BokGBU/edit",
+      "thumb_url": "https://i.ytimg.com/vi/1TwF4BokGBU/hqdefault.jpg",
+      "thumb_text": "THE COVENANT SHIELD \u00b7 SAFEKEEPING PRAYER",
+      "thumbnail_pending": true,
+      "duration_label": "50s",
+      "words": 640
     },
     {
       "id": "SHORT-GARDENPSALM34V1",
@@ -10081,19 +10129,6 @@
         "words": 1460
       },
       {
-        "id": "0608",
-        "slug": "a-perfect-way-and-a-sure-defense-2-samuel-22-31",
-        "file": "0608-a-perfect-way-and-a-sure-defense-2-samuel-22-31.md",
-        "title": "A Perfect Way and a Sure Defense: 2 Samuel 22:31 | The Covenant Shield",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 2169
-      },
-      {
         "id": "0609",
         "slug": "walk-in-safety-today-proverbs-3-23-26",
         "file": "0609-walk-in-safety-today-proverbs-3-23-26.md",
@@ -10764,17 +10799,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "10:44"
-      },
-      {
-        "short": "short-shield2samuel22v31",
-        "file": "0608-short-shield2samuel22v31.yml",
-        "companion_longform_id": "0608",
-        "scripture": "2 Samuel 22:31",
-        "channel": "prayer8",
-        "channel_name": "The Covenant Shield",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "08:44"
       },
       {
         "short": "short-shieldproverbs3v23",
