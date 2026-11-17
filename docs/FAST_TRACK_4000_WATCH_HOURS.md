@@ -134,6 +134,15 @@ Under no circumstances will any component require or transition to a paid cloud 
 | **Total Daily Cost** | **0 units cash ($0.00)** | **10,000 free units/day** | **~1,755 units (17.5% capacity)** |
 
 - **Zero API Spend:** Google Cloud provides this 10,000-unit daily quota completely free without any billing requirement.
+- **Superseded, 2026-11-17.** The `videos.insert` row above is the old model. The
+  quota page (last updated 12 November 2026, quoted in
+  `docs/PROTECTION_AND_REVENUE_RESEARCH_2026-11-16.md` §2.5) gives each project
+  "100 `videos.insert` calls ... and 10,000 units per day combined for all other
+  endpoints", and the receipts agree: a channel uploaded **eight** videos in one
+  Pacific quota day (`secret-place`, 11 November 2026), with nine channel-days at
+  seven — impossible at 1,600 units an upload. So the row that binds is
+  `captions.insert` (400 units): measured, 149 caption tracks are 59,600 units,
+  the pipeline's largest routine spend. `docs/API_BUDGET_RESEARCH_2026-11-17.md`.
 - **Fail-Closed Quota Handler (`pipeline/upload.py`):** If external limits are ever reached, the pipeline cleanly pauses until the 08:00 UTC quota reset.
 
 ### 5.2 Compute & Voiceover ($0.00 Free Tier)

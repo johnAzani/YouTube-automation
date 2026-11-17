@@ -168,8 +168,9 @@ Per job the pack writes `thumbnail_hook.jpg`, `thumbnail_quiet.jpg`,
   Studio and sets them**, using `set-thumbnail.yml` or Studio's own Test & Compare.
 - Test & Compare is Studio-only and cannot be automated
   (`docs/GROWTH_FEEDBACK_LOOP_2026-11-04.md:212`, `CHANGELOG.md:503`).
-- Applying one frame to one video costs 50 quota units against a 10,000/day
-  budget — **200 sets a day** (`docs/FAST_TRACK_4000_WATCH_HOURS.md:130`). Giving
+- Applying one frame to one video costs 50 quota units against a 10,000-unit
+  shared pool — **200 sets is 10,000 ÷ 50**, i.e. the whole pool, not a
+  thumbnail-specific allowance (`docs/FAST_TRACK_4000_WATCH_HOURS.md:130`). Giving
   the 238 fixed-line videos an authored frame is 11,900 units, or about **60 days
   at 200/day** if done by hand, and it competes with uploads for the same quota.
 
@@ -220,5 +221,5 @@ a treatment change instead.
 **One next step:** author `thumb_text` on the 238 published jobs that have none,
 starting with Secret Place's 39, six words each — then let
 `_refresh_live_thumbnail` carry the authored line onto the live frame the next time
-each job is re-run, rather than setting 238 thumbnails by hand against a 200-a-day
-limit.
+each job is re-run, rather than setting 238 thumbnails by hand — 11,900 units, more
+than a project's whole shared pool for a day.

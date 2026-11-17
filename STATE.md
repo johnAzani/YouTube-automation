@@ -716,6 +716,16 @@ November 2026 success was recorded nowhere and `pinned_comment_pending` was the
 only trace — written on failure, and only for scheduled uploads. Reading:
 `docs/COMMENT_LEDGER_RESEARCH_2026-11-17.md`.
 
+**YouTube's units are priced in one place** (`pipeline/api_budget.py`, measured 17
+November 2026). An upload is 1 unit of a separate 100-a-day allowance; the
+project's 10,000-unit shared pool pays for everything else, where a thumbnail or a
+comment is 50, a reply 50 and a **caption track 400**. Over the seven days to 17
+November the receipts priced 334 uploads at ~70,170 units (210 each), of which
+149 caption tracks were 59,600. Three documents that said an upload costs 1,600
+units — six a day — are marked superseded; the receipts refute them (one channel
+uploaded eight videos in a Pacific quota day). The monitor prints the figure as
+`api budget`. Reading: `docs/API_BUDGET_RESEARCH_2026-11-17.md`.
+
 The expansion pass no longer has a cron of its own: it runs inside the brain at
 4:14am **and** at the top of every production run, so a missed or late cron is
 repaired by the next release instead of becoming an empty evening.

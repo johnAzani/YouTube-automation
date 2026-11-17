@@ -1,7 +1,8 @@
 """Channel registry — one automation codebase, several YouTube channels.
 
-Each channel keeps its **own** Google Cloud project, YouTube Data API quota
-pool (10,000 units/day), Gemini free-tier pool, OAuth client and refresh
+Each channel keeps its **own** Google Cloud project, YouTube Data API
+allowances (100 uploads a day plus a 10,000-unit shared pool —
+`pipeline/api_budget.py`), Gemini free-tier pool, OAuth client and refresh
 token. Channels never share credentials: a token minted for one channel
 uploads to that channel only, so credentials are selected per channel and
 never mixed.

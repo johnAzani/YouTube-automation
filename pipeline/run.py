@@ -106,6 +106,7 @@ def _mark_job_uploaded(
     recovered_video: dict | None = None,
     scheduled_for: str | None = None,
     pinned_comment: str | None = None,
+    caption_track: str | None = None,
     extra_fields: dict | None = None,
 ) -> Path:
     """Move and stamp a queue job only after YouTube confirms an uploaded video ID.
@@ -215,6 +216,11 @@ def _mark_job_uploaded(
     # immediate upload" or "never attempted" all at once. Record what happened.
     if pinned_comment in ("ok", "failed", "skipped"):
         stamped.append(("top_comment", pinned_comment))
+    # A caption track is 400 units — the most expensive call an upload makes —
+    # and this path used to record nothing about it, so no receipt could say
+    # whether the track landed. See pipeline/api_budget.py.
+    if caption_track in ("ok", "failed"):
+        stamped.append(("caption_track", caption_track))
     if narration_engine and narration_voice:
         stamped.extend((("narration_engine", narration_engine), ("narration_voice", narration_voice)))
     if thumb_ok:
@@ -253,6 +259,8 @@ def _mark_job_uploaded(
             doc.meta["pinned_comment_pending"] = True
     if pinned_comment in ("ok", "failed", "skipped"):
         doc.meta["top_comment"] = pinned_comment
+    if caption_track in ("ok", "failed"):
+        doc.meta["caption_track"] = caption_track
     if narration_engine and narration_voice:
         doc.meta["narration_engine"] = narration_engine
         doc.meta["narration_voice"] = narration_voice
@@ -625,7 +633,8 @@ def _disabled_legacy_process(path: Path, dry_run: bool) -> dict:
         # A queue transition is allowed only after a confirmed upload.
         _mark_job_uploaded(path, doc, up.video_id, up.thumbnail_status,
                            scheduled_for=getattr(up, "scheduled_for", "") or None,
-                           pinned_comment=getattr(up, "pinned_comment", None))
+                           pinned_comment=getattr(up, "pinned_comment", None),
+                           caption_track=getattr(up, "caption_track", None))
         if getattr(up, "scheduled_for", ""):
             result["scheduled_for"] = up.scheduled_for
 

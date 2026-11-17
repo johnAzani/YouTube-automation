@@ -87,8 +87,10 @@ automatically, and no live thumbnail was touched.
   prefers keeping the model's whole line when it draws; a designer may prefer the
   opposite, and that is a policy decision, not a bug.
 - **Owner-only:** re-rendering the three live frames and applying them with
-  `thumbnails.set` costs **150 quota units** (3 x 50) against the 200-a-day limit
-  in `docs/FAST_TRACK_4000_WATCH_HOURS.md`. `_refresh_live_thumbnail` will do it by
+  `thumbnails.set` costs **150 quota units** (3 x 50) against the project's shared
+  10,000-unit pool — the "200 a day" in `docs/FAST_TRACK_4000_WATCH_HOURS.md` is
+  simply 10,000 ÷ 50, the number of thumbnails that would exhaust a whole day, not
+  a separate allowance. `_refresh_live_thumbnail` will do it by
   itself if any of those three jobs is ever re-run; setting them now is a choice,
   not a necessity.
 

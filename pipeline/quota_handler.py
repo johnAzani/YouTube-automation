@@ -20,7 +20,12 @@ from pipeline.script_doc import parse_script
 
 
 class QuotaExceededError(RuntimeError):
-    """Raised when YouTube Data API v3 daily upload quota (10,000 units) is exceeded."""
+    """Raised when a YouTube Data API allowance is exhausted.
+
+    A project has two: the 100-a-day upload allowance and the 10,000-unit shared
+    pool (`pipeline/api_budget.py`). The API's error says ``quotaExceeded`` and
+    does not say which one ran out, so this class does not either.
+    """
 
     def __init__(self, message: str, reset_utc: datetime | None = None, reset_time_utc: datetime | None = None):
         super().__init__(message)

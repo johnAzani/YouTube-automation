@@ -6,12 +6,14 @@ drafts a personalised reply with Gemini's free tier, and posts it through the
 YouTube Data API v3 under the standing invariants:
 
 1. Hard cost lock: $0.00 / month (free tiers only). `commentThreads.list` and
-   `comments.list` cost 1 unit each; `comments.insert` costs **2** units, per the
-   API's own description of the `part` parameter — "The snippet part has a quota
-   cost of 2 units." Docstrings in this repository said 50, which is 25x the real
-   price and made the daily cap look 25x tighter than it is. Audited 2026-11-07
-   against the bundled discovery document
-   (`googleapiclient/discovery_cache/documents/youtube.v3.json`).
+   `comments.list` cost 1 unit each; `comments.insert` costs **50** units — the
+   method's own page says so in its first line: "A call to this method has a quota
+   cost of 50 units." This docstring said 2 from 2026-11-07 to 2026-11-17, having
+   read "The snippet part has a quota cost of 2 units" as the price of the call:
+   that sentence prices the `part` parameter, and the bundled discovery document
+   carries **no method-level price for anything**, so the audit that produced the
+   2 could not have found the right number in the source it cited. Prices live in
+   `pipeline/api_budget.py`; the reading is `docs/API_BUDGET_RESEARCH_2026-11-17.md`.
 2. Persona integrity: speaks as the channel's own pastoral team, never as a
    person, never as another ministry. The voice comes from
    `channel_capabilities.brand_for()`, not from a string in this file: this
