@@ -2,7 +2,7 @@
 id: '0311'
 title: 'Believing God for Your Family: Acts 16:31-34 | The Family Altar'
 slug: believing-god-for-your-family-acts-16-31-34
-status: approved
+status: published
 channel: prayer5
 privacy: public
 format: longform
@@ -74,6 +74,14 @@ originality:
   unique_structure: true
   no_ai_persona: true
   source_notes: true
+published_on: "2026-11-17"
+published_at: "2026-11-17T07:34:25Z"
+youtube_video_id: "W-AekvyUfes"
+metadata_revision: "selar-seo-v1"
+narration_engine: "gemini-3.8-flash-tts"
+narration_voice: "Charon"
+thumbnail_pending: true
+thumbnail_error: "failed: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden]"
 ---
 
 ## Scene 1 — Gathering Around the Family Altar

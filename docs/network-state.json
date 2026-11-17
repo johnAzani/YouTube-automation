@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T07:31:59Z",
+  "generated_at": "2026-11-17T07:35:07Z",
   "monitor_generated_at": "2026-11-17T07:30:52.020450+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,11 +8,11 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 378,
-    "published_longform": 133,
+    "published_total": 379,
+    "published_longform": 134,
     "published_shorts": 245,
-    "public_total": 376,
-    "queued_longform": 62,
+    "public_total": 377,
+    "queued_longform": 61,
     "queued_shorts": 93,
     "automations_ok": 13,
     "automations_total": 13,
@@ -305,28 +305,28 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 30,
-        "published_longform": 11,
+        "published_total": 31,
+        "published_longform": 12,
         "published_shorts": 19,
-        "thumbnail_pending": 30,
-        "public_total": 30,
-        "queued_longform": 6,
+        "thumbnail_pending": 31,
+        "public_total": 31,
+        "queued_longform": 5,
         "queued_other": 0,
         "queued_shorts": 10
       },
       "latest_video": {
-        "id": "SHORT-FAMILYJOB1V10",
-        "title": "Pray This Job 1:10 Family Prayer Over Your Home | God's Hedge Of Protection #Shorts",
-        "format": "short",
-        "youtube_video_id": "f-R1lW8lsk8",
-        "watch_url": "https://www.youtube.com/shorts/f-R1lW8lsk8",
-        "published_on": "2026-11-16",
-        "published_at": "2026-11-16T23:29:43Z"
-      },
-      "next_queued_longform": {
         "id": "0311",
         "title": "Believing God for Your Family: Acts 16:31-34 | The Family Altar",
-        "words": 1230,
+        "format": "longform",
+        "youtube_video_id": "W-AekvyUfes",
+        "watch_url": "https://youtu.be/W-AekvyUfes",
+        "published_on": "2026-11-17",
+        "published_at": "2026-11-17T07:34:25Z"
+      },
+      "next_queued_longform": {
+        "id": "0312",
+        "title": "A Generation Blessed by God: Psalm 112:1-3 | The Family Altar",
+        "words": 1833,
         "status": "approved"
       },
       "next_queued_short": {
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "0311",
+      "slug": "believing-god-for-your-family-acts-16-31-34",
+      "file": "0311-believing-god-for-your-family-acts-16-31-34.md",
+      "title": "Believing God for Your Family: Acts 16:31-34 | The Family Altar",
+      "channel": "prayer5",
+      "channel_name": "The Family Altar",
+      "channel_handle": "@TheFamilyAltarDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T07:34:25Z",
+      "youtube_video_id": "W-AekvyUfes",
+      "watch_url": "https://youtu.be/W-AekvyUfes",
+      "youtu_be_url": "https://youtu.be/W-AekvyUfes",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/W-AekvyUfes/edit",
+      "thumb_url": "https://i.ytimg.com/vi/W-AekvyUfes/hqdefault.jpg",
+      "thumb_text": "SAVE MY HOUSEHOLD",
+      "thumbnail_pending": true,
+      "duration_label": "~8 min",
+      "words": 1230
+    },
     {
       "id": "SHORT-GUIDEDPROVERBS14V12",
       "slug": "short-guidedproverbs14v12-guidance-prayer",
@@ -10126,19 +10150,6 @@
         "publishable": true,
         "target_minutes": 6,
         "words": 1504
-      },
-      {
-        "id": "0311",
-        "slug": "believing-god-for-your-family-acts-16-31-34",
-        "file": "0311-believing-god-for-your-family-acts-16-31-34.md",
-        "title": "Believing God for Your Family: Acts 16:31-34 | The Family Altar",
-        "channel": "prayer5",
-        "channel_name": "The Family Altar",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1230
       },
       {
         "id": "0312",
