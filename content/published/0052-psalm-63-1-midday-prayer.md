@@ -1,6 +1,6 @@
 ---
 id: '0052'
-title: Psalm 63:1 Midday Prayer | The Midday Watch
+title: "Thirsting for God in a Dry Season: Psalm 63:1 | The Midday Watch"
 slug: psalm-63-1-midday-prayer
 status: published
 channel: prayer3
@@ -81,10 +81,13 @@ originality:
 published_on: "2026-11-10"
 published_at: "2026-11-10T13:59:39Z"
 youtube_video_id: "0Wg3MiZ8KIg"
-metadata_revision: "selar-seo-v1"
+metadata_revision: "retitle-pending"
 thumbnail_pending: false
 
 thumbnail_revision: "ctr-v3-cinema"
+title_before: "Psalm 63:1 Midday Prayer | The Midday Watch"
+retitled_at: "2026-11-17"
+retitle_reason: "unwatched after 7 days or more"
 ---
 
 ## Scene 1 — The Noonday Pause and the Dry Land
