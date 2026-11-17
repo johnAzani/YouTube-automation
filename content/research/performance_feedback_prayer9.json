@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-16T09:41:23.611914+00:00",
-  "as_of": "2026-11-16",
+  "generated_at": "2026-11-17T04:10:56.891058+00:00",
+  "as_of": "2026-11-17",
   "sufficient_data": false,
   "measured_longform_videos": 0,
   "total_longform_videos": 7,
   "input_diagnostics": {
-    "snapshot_video_ids": 19,
-    "receipt_video_ids": 19,
-    "matched_video_ids": 19,
+    "snapshot_video_ids": 23,
+    "receipt_video_ids": 23,
+    "matched_video_ids": 23,
     "longform_below_view_threshold": 7,
     "longform_missing_view_count": 0,
-    "longform_too_young_or_undated": 3,
+    "longform_too_young_or_undated": 2,
     "minimum_views": 25,
     "minimum_age_days": 3
   },
@@ -50,54 +50,102 @@
     }
   ],
   "shorts": {
-    "measured_shorts": 5,
-    "total_shorts": 12,
-    "sufficient_data": false,
-    "avg_views": 146.6,
-    "median_views": 120,
-    "total_views": 733,
+    "measured_shorts": 11,
+    "total_shorts": 16,
+    "sufficient_data": true,
+    "avg_views": 143.4,
+    "median_views": 128,
+    "total_views": 1577,
     "minimum_age_days": 2,
     "by_book": {
-      "philippians": {
+      "1 chronicles": {
         "shorts": 1,
-        "avg_views": 110.0,
-        "ratio": 0.917
+        "avg_views": 76.0,
+        "ratio": 0.843
+      },
+      "1 thessalonians": {
+        "shorts": 1,
+        "avg_views": 195.0,
+        "ratio": 1.12
+      },
+      "habakkuk": {
+        "shorts": 1,
+        "avg_views": 141.0,
+        "ratio": 0.995
+      },
+      "philippians": {
+        "shorts": 2,
+        "avg_views": 148.5,
+        "ratio": 1.018
       },
       "psalm": {
-        "shorts": 4,
-        "avg_views": 155.8,
-        "ratio": 1.042
+        "shorts": 6,
+        "avg_views": 144.7,
+        "ratio": 1.007
       }
     },
     "by_theme": {
       "anxiety_peace": {
-        "shorts": 1,
-        "avg_views": 110.0,
-        "ratio": 0.917
+        "shorts": 2,
+        "avg_views": 148.5,
+        "ratio": 1.018
       },
       "general_prayer": {
-        "shorts": 2,
-        "avg_views": 189.0,
-        "ratio": 1.145
+        "shorts": 4,
+        "avg_views": 151.0,
+        "ratio": 1.036
+      },
+      "light_courage": {
+        "shorts": 1,
+        "avg_views": 141.0,
+        "ratio": 0.995
+      },
+      "midday_strength_endurance": {
+        "shorts": 1,
+        "avg_views": 195.0,
+        "ratio": 1.12
       },
       "morning_mercy_renewal": {
         "shorts": 1,
-        "avg_views": 125.0,
-        "ratio": 0.951
+        "avg_views": 128.0,
+        "ratio": 0.964
       },
       "peace_rest": {
-        "shorts": 1,
-        "avg_views": 120.0,
-        "ratio": 0.94
+        "shorts": 2,
+        "avg_views": 106.0,
+        "ratio": 0.87
       }
     },
-    "guidance": [
-      "Shorts: 5 measured (need 6, each at least 2 days old); the network's pooled numbers order this channel's Shorts until it has its own."
-    ]
+    "guidance": []
   },
   "guidance": [
-    "Only 0 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real."
+    "Only 0 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real.",
+    "Lesson 'thanksgiving worship' (titles of the most-watched videos of this kind): now being tried in new long-prayer titles."
   ],
   "cost_lock": "$0.00 \u2014 public Data API statistics only; no new quota or secret.",
-  "privacy": "Aggregate theme scores only; raw per-video snapshot stays an Actions artifact."
+  "privacy": "Aggregate theme scores only; raw per-video snapshot stays an Actions artifact.",
+  "lessons": [
+    {
+      "phrase": "thanksgiving worship",
+      "source": "titles of the most-watched videos of this kind",
+      "opened": "2026-11-17",
+      "status": "testing",
+      "decided": "",
+      "counted_through": "2026-11-16",
+      "with_videos": 0,
+      "with_views": 0,
+      "without_videos": 0,
+      "without_views": 0,
+      "ratio": null,
+      "note": "0 long prayer(s) titled with it drew 0 views and 0 without it drew 0, each counted at 4 days old; a verdict needs 5 on each side and 100 views in all"
+    }
+  ],
+  "niche": {
+    "read_on": "2026-11-17",
+    "phrases": [
+      "morning prayer",
+      "thanksgiving worship"
+    ],
+    "typical_minutes": 72
+  }
 }
