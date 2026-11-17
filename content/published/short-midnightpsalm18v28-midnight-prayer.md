@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["MIDNIGHT WATCH", "PSALM 18:28", "DIVINE GUIDANCE", "PRAYER FOR STRENGTH"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-24T00:39:20Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 The heavy shadow hanging over your spirit tonight has not gone unnoticed by the Creator. For thou wilt light my candle: the LORD my God will enlighten my darkness. For by thee I have run through a troop; and by my God have I leaped over a wall. Lord, grant this weary soul the strength to push past the walls built by fear. Help them see that no barrier is too high when your spirit leads the way. May your peace steady their feet, turning this dark hour into a season of triumph.

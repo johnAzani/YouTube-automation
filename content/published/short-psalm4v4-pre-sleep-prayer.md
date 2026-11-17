@@ -28,6 +28,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["COMMUNE WITH", "YOUR HEART", "PSALM 4:4", "THE SECRET PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If an unspoken anger from today is still pacing through your mind, stay right here. God’s word speaks into your quiet room: Stand in awe, and sin not: commune with your own heart upon your bed, and be still. Heavenly Father, as night falls, I bring every lingering grievance and sharp thought into your peaceful presence. Silence the urge to replay today's battles in the dark. Let awe of your greatness replace my quiet irritation. I yield this restless heart to your care, laying down every resentment before I sleep. Guard my mind, quiet my soul, and wrap me in your deep rest tonight. Amen. Subscribe for daily night prayers.
