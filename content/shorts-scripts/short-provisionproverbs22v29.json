@@ -1,0 +1,301 @@
+{
+  "key": "short-provisionproverbs22v29",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "DILIGENT IN WORK",
+    "GOD OPENS DOORS"
+  ],
+  "poster": [
+    "THE PROVISION TABLE",
+    "DAILY PRAYER FOR PROVISION",
+    "KING JAMES VERSION",
+    "PROVERBS 22:29"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "sunlit morning mountain pass valley",
+    "peaceful golden river stones landscape",
+    "misty majestic forest sunrise view",
+    "serene high altitude rocky peak light",
+    "calm quiet valley river at dawn",
+    "warm sun rays through ancient forest trees",
+    "distant peak in morning golden light"
+  ],
+  "scenes": [
+    {
+      "a": "If that lonely desk and every quiet hour of labor feels unseen, listen closely.",
+      "img": "short-provisionproverbs22v29-scene-01.jpg",
+      "kicker": "PROVERBS 22:29",
+      "sub": "THE LABOR OF YOUR HANDS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord God, You see the honest sweat and the faithful hours poured into daily work.",
+      "img": "short-provisionproverbs22v29-scene-02.jpg",
+      "kicker": "PROVERBS 22:29",
+      "sub": "FAITHFUL IN SMALL THINGS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "We bring every task, every craft, and every honest effort to Your holy throne.",
+      "img": "short-provisionproverbs22v29-scene-03.jpg",
+      "kicker": "PROVERBS 22:29",
+      "sub": "OFFERING OUR WORK",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Your written word declares this eternal truth for our hands today.",
+      "img": "short-provisionproverbs22v29-scene-04.jpg",
+      "kicker": "PROVERBS 22:29",
+      "sub": "THE WISDOM OF OLD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Seest thou a man diligent in his business? he shall stand before kings; he shall not stand before mean men.",
+      "img": "short-provisionproverbs22v29-scene-05.jpg",
+      "kicker": "PROVERBS 22:29",
+      "sub": "STAND BEFORE KINGS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Establish the work of our hands, Father, and guide our steps into the doors You open.",
+      "img": "short-provisionproverbs22v29-scene-06.jpg",
+      "kicker": "PROVERBS 22:29",
+      "sub": "OPEN DOORS AHEAD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "In Jesus name, amen.",
+      "img": "short-provisionproverbs22v29-scene-07.jpg",
+      "kicker": "PROVERBS 22:29",
+      "sub": "WALK IN GRACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      4,
+      "If that lonely desk and every quiet hour of labor feels unseen, listen closely."
+    ],
+    [
+      4,
+      8,
+      "Lord God, You see the honest sweat and the faithful hours poured into daily work."
+    ],
+    [
+      8,
+      12,
+      "We bring every task, every craft, and every honest effort to Your holy throne."
+    ],
+    [
+      12,
+      15,
+      "Your written word declares this eternal truth for our hands today."
+    ],
+    [
+      15,
+      21,
+      "Seest thou a man diligent in his business? he shall stand before kings; he shall not stand before mean men."
+    ],
+    [
+      21,
+      26,
+      "Establish the work of our hands, Father, and guide our steps into the doors You open."
+    ],
+    [
+      26,
+      30,
+      "In Jesus name, amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      4,
+      [
+        "IF THAT LONELY",
+        "DESK AND EVERY",
+        "QUIET HOUR OF LABOR",
+        "FEELS UNSEEN"
+      ],
+      "UNSEEN",
+      "PROVERBS 22 : 29"
+    ],
+    [
+      4,
+      8,
+      [
+        "LORD GOD YOU",
+        "SEE THE HONEST",
+        "SWEAT AND FAITHFUL",
+        "HOURS POURED"
+      ],
+      "FAITHFUL",
+      "PROVERBS 22 : 29"
+    ],
+    [
+      8,
+      12,
+      [
+        "WE BRING EVERY",
+        "TASK CRAFT AND",
+        "HONEST EFFORT TO",
+        "YOUR HOLY THRONE"
+      ],
+      "THRONE",
+      "PROVERBS 22 : 29"
+    ],
+    [
+      12,
+      15,
+      [
+        "YOUR WRITTEN WORD",
+        "DECLARES THIS TRUTH",
+        "FOR OUR HANDS",
+        "TODAY"
+      ],
+      "TRUTH",
+      "PROVERBS 22 : 29"
+    ],
+    [
+      15,
+      21,
+      [
+        "SEEST THOU A MAN",
+        "DILIGENT IN BUSINESS",
+        "STAND BEFORE KINGS",
+        "NOT MEAN MEN"
+      ],
+      "KINGS",
+      "PROVERBS 22 : 29"
+    ],
+    [
+      21,
+      26,
+      [
+        "ESTABLISH THE WORK",
+        "OF OUR HANDS",
+        "FATHER AND GUIDE",
+        "OUR STEPS"
+      ],
+      "STEPS",
+      "PROVERBS 22 : 29"
+    ],
+    [
+      26,
+      30,
+      [
+        "IN JESUS NAME",
+        "AMEN"
+      ],
+      "AMEN",
+      "PROVERBS 22 : 29"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If that lonely desk and every quiet hour of labor feels unseen, listen closely.",
+      "kind": "phrase",
+      "words": [
+        "LONELY",
+        "DESK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord God, You see the honest sweat and the faithful hours poured into daily work.",
+      "kind": "phrase",
+      "words": [
+        "HONEST",
+        "SWEAT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We bring every task, every craft, and every honest effort to Your holy throne.",
+      "kind": "phrase",
+      "words": [
+        "HONEST",
+        "EFFORT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your written word declares this eternal truth for our hands today.",
+      "kind": "phrase",
+      "words": [
+        "ETERNAL",
+        "TRUTH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Seest thou a man diligent in his business? he shall stand before kings; he shall not stand before mean men.",
+      "kind": "phrase",
+      "words": [
+        "DILIGENT",
+        "BUSINESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Establish the work of our hands, Father, and guide our steps into the doors You open.",
+      "kind": "phrase",
+      "words": [
+        "WORK",
+        "HANDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In Jesus name, amen.",
+      "kind": "phrase",
+      "words": [
+        "JESUS",
+        "NAME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 22:29"
+}

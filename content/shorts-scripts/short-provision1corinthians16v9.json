@@ -1,0 +1,324 @@
+{
+  "key": "short-provision1corinthians16v9",
+  "channel": "prayer7",
+  "psalm": null,
+  "title": [
+    "A GREAT DOOR",
+    "IS OPENED UNTO YOU"
+  ],
+  "poster": [
+    "FOR A GREAT DOOR",
+    "AND EFFECTUAL IS OPENED",
+    "UNTO ME AND THERE ARE",
+    "MANY ADVERSARIES"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "sunlit mountain pass golden morning light",
+    "golden glowing mountain arch door sunbeam",
+    "peaceful valley river sunlight morning glow",
+    "sunlit stone sanctuary table glowing light",
+    "misty sunlit mountain trail golden dawn",
+    "calm river valley sunset golden provision",
+    "sunlit serene mountain peak golden horizon"
+  ],
+  "scenes": [
+    {
+      "a": "If you fear stepping through a newly opened door",
+      "img": "short-provision1corinthians16v9-scene-01.jpg",
+      "kicker": "1 CORINTHIANS 16:9",
+      "sub": "OPEN DOORS AND PROVISION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "For a great door and effectual is opened unto me",
+      "img": "short-provision1corinthians16v9-scene-02.jpg",
+      "kicker": "1 CORINTHIANS 16:9",
+      "sub": "THE OPEN DOOR OF GOD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "we commit this new opportunity unto Your faithful hands",
+      "img": "short-provision1corinthians16v9-scene-03.jpg",
+      "kicker": "STEWARDSHIP PRAYER",
+      "sub": "COMMITTING YOUR WORK",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "no adversary can shut it",
+      "img": "short-provision1corinthians16v9-scene-04.jpg",
+      "kicker": "FAITHFUL PROTECTION",
+      "sub": "GOD OPENS THE PATH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Grant us wisdom to walk boldly forward",
+      "img": "short-provision1corinthians16v9-scene-05.jpg",
+      "kicker": "DIVINE WISDOM",
+      "sub": "SHIELD OUR LABOR",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "supply all our daily needs according to Your riches",
+      "img": "short-provision1corinthians16v9-scene-06.jpg",
+      "kicker": "DAILY PROVISION",
+      "sub": "TRUST IN HIS RICHES",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to The Provision Table",
+      "img": "short-provision1corinthians16v9-scene-07.jpg",
+      "kicker": "THE PROVISION TABLE",
+      "sub": "WALK IN GOD'S PROVISION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If you fear stepping through a newly opened door because heavy resistance surrounds you, listen."
+    ],
+    [
+      7,
+      16,
+      "First Corinthians sixteen verse nine declares: For a great door and effectual is opened unto me, and there are many adversaries."
+    ],
+    [
+      17,
+      24,
+      "Heavenly Father, we commit this new opportunity unto Your faithful hands."
+    ],
+    [
+      25,
+      32,
+      "When You open a door of provision, no adversary can shut it."
+    ],
+    [
+      33,
+      42,
+      "Grant us wisdom to walk boldly forward, trusting You to clear the path and shield our labor."
+    ],
+    [
+      43,
+      51,
+      "Strengthen our hearts when opposition arises, and supply all our daily needs according to Your riches."
+    ],
+    [
+      52,
+      59,
+      "Subscribe to The Provision Table to walk in God's daily provision."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF YOU FEAR STEPPING THROUGH",
+        "A NEWLY OPENED DOOR",
+        "BECAUSE HEAVY RESISTANCE",
+        "SURROUNDS YOU LISTEN"
+      ],
+      [
+        "OPENED DOOR",
+        "RESISTANCE"
+      ],
+      "1 CORINTHIANS 16:9"
+    ],
+    [
+      7,
+      16,
+      [
+        "FOR A GREAT DOOR",
+        "AND EFFECTUAL IS OPENED",
+        "UNTO ME AND THERE ARE",
+        "MANY ADVERSARIES"
+      ],
+      [
+        "GREAT DOOR",
+        "EFFECTUAL",
+        "ADVERSARIES"
+      ],
+      "1 CORINTHIANS 16:9"
+    ],
+    [
+      17,
+      24,
+      [
+        "HEAVENLY FATHER WE COMMIT",
+        "THIS NEW OPPORTUNITY UNTO",
+        "YOUR FAITHFUL HANDS"
+      ],
+      [
+        "COMMIT",
+        "FAITHFUL HANDS"
+      ],
+      "1 CORINTHIANS 16:9"
+    ],
+    [
+      25,
+      32,
+      [
+        "WHEN YOU OPEN A DOOR",
+        "OF PROVISION NO ADVERSARY",
+        "CAN SHUT IT"
+      ],
+      [
+        "PROVISION",
+        "NO ADVERSARY"
+      ],
+      "1 CORINTHIANS 16:9"
+    ],
+    [
+      33,
+      42,
+      [
+        "GRANT US WISDOM TO WALK",
+        "BOLDLY FORWARD TRUSTING YOU",
+        "TO CLEAR THE PATH AND",
+        "SHIELD OUR LABOR"
+      ],
+      [
+        "WISDOM",
+        "CLEAR THE PATH",
+        "SHIELD"
+      ],
+      "1 CORINTHIANS 16:9"
+    ],
+    [
+      43,
+      51,
+      [
+        "STRENGTHEN OUR HEARTS WHEN",
+        "OPPOSITION ARISES AND SUPPLY",
+        "ALL OUR DAILY NEEDS ACCORDING",
+        "TO YOUR RICHES"
+      ],
+      [
+        "OPPOSITION",
+        "DAILY NEEDS",
+        "RICHES"
+      ],
+      "1 CORINTHIANS 16:9"
+    ],
+    [
+      52,
+      59,
+      [
+        "SUBSCRIBE TO THE PROVISION TABLE",
+        "TO WALK IN GOD'S",
+        "DAILY PROVISION"
+      ],
+      [
+        "PROVISION TABLE",
+        "DAILY PROVISION"
+      ],
+      "1 CORINTHIANS 16:9"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you fear stepping through a newly opened door",
+      "kind": "phrase",
+      "words": [
+        "OPENED",
+        "DOOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For a great door and effectual is opened unto me",
+      "kind": "phrase",
+      "words": [
+        "GREAT",
+        "EFFECTUAL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "we commit this new opportunity unto Your faithful hands",
+      "kind": "phrase",
+      "words": [
+        "COMMIT",
+        "FAITHFUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "no adversary can shut it",
+      "kind": "phrase",
+      "words": [
+        "NO",
+        "ADVERSARY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant us wisdom to walk boldly forward",
+      "kind": "phrase",
+      "words": [
+        "WISDOM",
+        "BOLDLY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "supply all our daily needs according to Your riches",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "NEEDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to The Provision Table",
+      "kind": "phrase",
+      "words": [
+        "PROVISION",
+        "TABLE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "1 Corinthians 16:9"
+}

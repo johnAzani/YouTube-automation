@@ -1,0 +1,257 @@
+{
+  "key": "short-provisionpsalm35v27",
+  "channel": "prayer7",
+  "psalm": 35,
+  "title": [
+    "PSALM THIRTY-FIVE",
+    "VERSE TWENTY-SEVEN"
+  ],
+  "poster": [
+    "WALK IN",
+    "GOD'S DAILY",
+    "PROVISION AND",
+    "RIGHTEOUS CAUSE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Provision Table — walk in God's daily provision"
+  ],
+  "stock_queries": [
+    "sunlit mountain valley mist morning",
+    "peaceful flowing river golden light",
+    "ancient stone table sunlit woods",
+    "calm alpine lake sunrise reflection",
+    "open door sunlit hallway peaceful",
+    "serene green valley high overlook"
+  ],
+  "scenes": [
+    {
+      "a": "Right now, as you wonder how your provision will hold through this week, listen closely.",
+      "img": "short-provisionpsalm35v27-scene-01.jpg",
+      "kicker": "PSALM 35:27",
+      "sub": "HIS RIGHTEOUS CAUSE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, we come before Your throne acknowledging that every good gift comes directly from Your open hand.",
+      "img": "short-provisionpsalm35v27-scene-02.jpg",
+      "kicker": "DAILY PROVISION",
+      "sub": "HIS OPEN HAND",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Your Word commands us with these exact truths:",
+      "img": "short-provisionpsalm35v27-scene-03.jpg",
+      "kicker": "HOLY SCRIPTURE",
+      "sub": "EXACT TRUTHS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let them shout for joy, and be glad, that favor my righteous cause: yea, let them say continually, Let the LORD be magnified, which hath pleasure in the prosperity of his servant.",
+      "img": "short-provisionpsalm35v27-scene-04.jpg",
+      "kicker": "PSALM 35:27",
+      "sub": "MAGNIFY THE LORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord, let our hearts take great joy in Your righteousness and trust in Your abundant care.",
+      "img": "short-provisionpsalm35v27-scene-05.jpg",
+      "kicker": "JOYFUL HEARTS",
+      "sub": "ABUNDANT CARE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Provide for our daily needs and anchor our souls in Your unfailing faithfulness today, in Jesus name, amen.",
+      "img": "short-provisionpsalm35v27-scene-06.jpg",
+      "kicker": "UNFAILING FAITH",
+      "sub": "AMEN",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "Right now, as you wonder how your provision will hold through this week, listen closely."
+    ],
+    [
+      9,
+      17,
+      "Father, we come before Your throne acknowledging that every good gift comes directly from Your open hand."
+    ],
+    [
+      18,
+      23,
+      "Your Word commands us with these exact truths:"
+    ],
+    [
+      24,
+      38,
+      "Let them shout for joy, and be glad, that favor my righteous cause: yea, let them say continually, Let the LORD be magnified, which hath pleasure in the prosperity of his servant."
+    ],
+    [
+      39,
+      47,
+      "Lord, let our hearts take great joy in Your righteousness and trust in Your abundant care."
+    ],
+    [
+      48,
+      57,
+      "Provide for our daily needs and anchor our souls in Your unfailing faithfulness today, in Jesus name, amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "RIGHT NOW AS YOU WONDER",
+        "HOW YOUR PROVISION WILL HOLD",
+        "THROUGH THIS WEEK"
+      ],
+      "PROVISION",
+      "PSALM 35 : 27"
+    ],
+    [
+      9,
+      17,
+      [
+        "FATHER WE COME BEFORE THRONE",
+        "ACKNOWLEDGING EVERY GOOD GIFT",
+        "FROM YOUR OPEN HAND"
+      ],
+      "GIFT",
+      "PSALM 35 : 27"
+    ],
+    [
+      18,
+      23,
+      [
+        "YOUR WORD COMMANDS US",
+        "WITH THESE EXACT TRUTHS"
+      ],
+      "TRUTHS",
+      "PSALM 35 : 27"
+    ],
+    [
+      24,
+      38,
+      [
+        "LET THEM SHOUT FOR JOY",
+        "THAT FAVOR MY RIGHTEOUS CAUSE",
+        "LET THE LORD BE MAGNIFIED",
+        "PROSPERITY OF HIS SERVANT"
+      ],
+      "MAGNIFIED",
+      "PSALM 35 : 27"
+    ],
+    [
+      39,
+      47,
+      [
+        "LORD LET OUR HEARTS TAKE JOY",
+        "IN YOUR RIGHTEOUSNESS TODAY"
+      ],
+      "JOY",
+      "PSALM 35 : 27"
+    ],
+    [
+      48,
+      57,
+      [
+        "PROVIDE FOR OUR DAILY NEEDS",
+        "ANCHOR OUR SOULS IN FAITH",
+        "IN JESUS NAME AMEN"
+      ],
+      "NEEDS",
+      "PSALM 35 : 27"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Right now, as you wonder how your provision will hold through this week, listen closely.",
+      "kind": "phrase",
+      "words": [
+        "PROVISION",
+        "HOLD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we come before Your throne acknowledging that every good gift comes directly from Your open hand.",
+      "kind": "phrase",
+      "words": [
+        "GOOD",
+        "GIFT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Your Word commands us with these exact truths:",
+      "kind": "phrase",
+      "words": [
+        "EXACT",
+        "TRUTHS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let them shout for joy, and be glad, that favor my righteous cause: yea, let them say continually, Let the LORD be magnified, which hath pleasure in the prosperity of his servant.",
+      "kind": "phrase",
+      "words": [
+        "MAGNIFIED",
+        "PROSPERITY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, let our hearts take great joy in Your righteousness and trust in Your abundant care.",
+      "kind": "phrase",
+      "words": [
+        "GREAT",
+        "JOY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Provide for our daily needs and anchor our souls in Your unfailing faithfulness today, in Jesus name, amen.",
+      "kind": "phrase",
+      "words": [
+        "DAILY",
+        "NEEDS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 35:27"
+}
