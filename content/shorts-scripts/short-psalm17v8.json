@@ -1,0 +1,282 @@
+{
+  "key": "short-psalm17v8",
+  "channel": "secret-place",
+  "psalm": 17,
+  "title": [
+    "HIDE ME UNDER",
+    "THY WINGS"
+  ],
+  "poster": [
+    "SHADOW OF",
+    "THY WINGS",
+    "BEDTIME PRAYER",
+    "PSALM 17:8"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm night sky full of distant stars and gentle clouds",
+    "soft glowing candle flame in dark peaceful bedroom",
+    "quiet starlight shining over calm serene lake at night",
+    "foggy misty forest under peaceful moonlit night sky",
+    "gentle night breeze over tranquil ocean waters",
+    "dappled moonlight shining through gentle dark foliage"
+  ],
+  "scenes": [
+    {
+      "a": "If the quiet room feels too exposed",
+      "img": "short-psalm17v8-scene-01.jpg",
+      "kicker": "PSALM 17:8",
+      "sub": "SAFE BENEATH HIS WINGS",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Keep me as the apple of the eye",
+      "img": "short-psalm17v8-scene-02.jpg",
+      "kicker": "PSALM 17:8",
+      "sub": "KEEP ME AS THE APPLE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "soften the heavy tension in this room",
+      "img": "short-psalm17v8-scene-03.jpg",
+      "kicker": "PSALM 17:8",
+      "sub": "REST FOR YOUR MIND",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Guard this place tonight as something",
+      "img": "short-psalm17v8-scene-04.jpg",
+      "kicker": "PSALM 17:8",
+      "sub": "PROTECTED TONIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Let every racing thought quiet down",
+      "img": "short-psalm17v8-scene-05.jpg",
+      "kicker": "PSALM 17:8",
+      "sub": "QUIET YOUR THOUGHTS",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "You are near, and You are faithful",
+      "img": "short-psalm17v8-scene-06.jpg",
+      "kicker": "PSALM 17:8",
+      "sub": "SLEEP IN HIS PEACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If the quiet room feels too exposed as you lie down tonight, listen."
+    ],
+    [
+      8,
+      18,
+      "God's Word promises in Psalm 17 verse 8: Keep me as the apple of the eye, hide me under the shadow of thy wings,"
+    ],
+    [
+      18,
+      28,
+      "Father, soften the heavy tension in this room. You see every unspoken fear lingering in the dark corners of the mind."
+    ],
+    [
+      28,
+      38,
+      "Guard this place tonight as something deeply precious to You. Cover this weary heart beneath Your safe and faithful wings."
+    ],
+    [
+      38,
+      47,
+      "Let every racing thought quiet down, knowing You keep watch while sleep comes."
+    ],
+    [
+      47,
+      55,
+      "You are near, and You are faithful. Subscribe to The Secret Place for prayers every night."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "IF THE QUIET ROOM",
+        "FEELS TOO EXPOSED",
+        "AS YOU LIE DOWN TONIGHT"
+      ],
+      [
+        "EXPOSED",
+        "TONIGHT"
+      ],
+      "PSALM 17 : 8"
+    ],
+    [
+      8,
+      18,
+      [
+        "KEEP ME AS THE APPLE",
+        "OF THE EYE",
+        "HIDE ME UNDER THE SHADOW",
+        "OF THY WINGS"
+      ],
+      [
+        "APPLE",
+        "SHADOW",
+        "WINGS"
+      ],
+      "PSALM 17 : 8"
+    ],
+    [
+      18,
+      28,
+      [
+        "SOFTEN THE HEAVY TENSION",
+        "IN THIS ROOM",
+        "UNSPOKEN FEAR IN THE DARK",
+        "CORNERS OF THE MIND"
+      ],
+      [
+        "HEAVY TENSION",
+        "UNSPOKEN FEAR"
+      ],
+      "PSALM 17 : 8"
+    ],
+    [
+      28,
+      38,
+      [
+        "GUARD THIS PLACE TONIGHT",
+        "AS DEEPLY PRECIOUS",
+        "COVER THIS WEARY HEART",
+        "BENEATH YOUR FAITHFUL WINGS"
+      ],
+      [
+        "DEEPLY PRECIOUS",
+        "FAITHFUL WINGS"
+      ],
+      "PSALM 17 : 8"
+    ],
+    [
+      38,
+      47,
+      [
+        "LET EVERY RACING THOUGHT",
+        "QUIET DOWN NOW",
+        "KNOWING YOU KEEP WATCH",
+        "WHILE SLEEP COMES"
+      ],
+      [
+        "RACING THOUGHT",
+        "KEEP WATCH"
+      ],
+      "PSALM 17 : 8"
+    ],
+    [
+      47,
+      55,
+      [
+        "YOU ARE NEAR AND FAITHFUL",
+        "SUBSCRIBE TO THE SECRET PLACE",
+        "FOR PRAYERS EVERY NIGHT"
+      ],
+      [
+        "NEAR",
+        "FAITHFUL"
+      ],
+      "PSALM 17 : 8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the quiet room feels too exposed",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "EXPOSED"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Keep me as the apple of the eye",
+      "kind": "phrase",
+      "words": [
+        "APPLE",
+        "SHADOW",
+        "WINGS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "soften the heavy tension in this room",
+      "kind": "phrase",
+      "words": [
+        "SOFTEN",
+        "TENSION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Guard this place tonight as something",
+      "kind": "phrase",
+      "words": [
+        "GUARD",
+        "PRECIOUS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let every racing thought quiet down",
+      "kind": "phrase",
+      "words": [
+        "RACING",
+        "QUIET"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "You are near, and You are faithful",
+      "kind": "phrase",
+      "words": [
+        "NEAR",
+        "FAITHFUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 17:8"
+}

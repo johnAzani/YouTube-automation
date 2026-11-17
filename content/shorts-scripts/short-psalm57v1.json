@@ -1,0 +1,275 @@
+{
+  "key": "short-psalm57v1",
+  "channel": "secret-place",
+  "psalm": 57,
+  "title": [
+    "HEALING THE HEART",
+    "FINDING REFUGE"
+  ],
+  "poster": [
+    "THE SECRET PLACE",
+    "FINDING SAFETY",
+    "IN THE SHADOW",
+    "OF HIS WINGS"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm mountain lake night",
+    "glowing candle in dark room",
+    "misty forest at twilight",
+    "stars over silent valley",
+    "gentle ripples on pond",
+    "soft moonlight through trees"
+  ],
+  "scenes": [
+    {
+      "a": "If the weight of this day feels too heavy to carry into your sleep, stay here.",
+      "img": "short-psalm57v1-scene-01.jpg",
+      "kicker": "PSALM 57:1",
+      "sub": "FINDING YOUR REFUGE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Be merciful unto me, O God, be merciful unto me: for my soul trusteth in thee:",
+      "img": "short-psalm57v1-scene-02.jpg",
+      "kicker": "PSALM 57:1",
+      "sub": "TRUSTING IN THE LORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "yea, in the shadow of thy wings will I make my refuge, until these calamities be overpast.",
+      "img": "short-psalm57v1-scene-03.jpg",
+      "kicker": "PSALM 57:1",
+      "sub": "SAFE UNDER HIS WINGS",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, grant that I might leave these burdens at the edge of this resting place tonight.",
+      "img": "short-psalm57v1-scene-04.jpg",
+      "kicker": "PSALM 57:1",
+      "sub": "LEAVING BURDENS BEHIND",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Quiet every racing thought so that I might find peace in your deep, steady grace.",
+      "img": "short-psalm57v1-scene-05.jpg",
+      "kicker": "PSALM 57:1",
+      "sub": "PEACE IN HIS GRACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May my spirit rest entirely in the protection you promise to those who seek you.",
+      "img": "short-psalm57v1-scene-06.jpg",
+      "kicker": "PSALM 57:1",
+      "sub": "RESTING IN PROTECTION",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      9,
+      "If the weight of this day feels too heavy to carry into your sleep, stay here."
+    ],
+    [
+      10,
+      22,
+      "Be merciful unto me, O God, be merciful unto me: for my soul trusteth in thee:"
+    ],
+    [
+      23,
+      35,
+      "yea, in the shadow of thy wings will I make my refuge, until these calamities be overpast."
+    ],
+    [
+      36,
+      48,
+      "Lord, grant that I might leave these burdens at the edge of this resting place tonight."
+    ],
+    [
+      49,
+      60,
+      "Quiet every racing thought so that I might find peace in your deep, steady grace."
+    ],
+    [
+      61,
+      72,
+      "May my spirit rest entirely in the protection you promise to those who seek you."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      9,
+      [
+        "WEIGHT OF THE DAY",
+        "TOO HEAVY TO CARRY",
+        "STAY RIGHT HERE"
+      ],
+      [
+        "HEAVY",
+        "STAY"
+      ],
+      "PSALM 57 : 1"
+    ],
+    [
+      10,
+      22,
+      [
+        "BE MERCIFUL UNTO ME",
+        "O GOD BE MERCIFUL",
+        "MY SOUL TRUSTETH"
+      ],
+      [
+        "MERCIFUL",
+        "TRUSTETH"
+      ],
+      "PSALM 57 : 1"
+    ],
+    [
+      23,
+      35,
+      [
+        "SHADOW OF THY WINGS",
+        "MAKE MY REFUGE",
+        "CALAMITIES OVERPAST"
+      ],
+      [
+        "REFUGE",
+        "OVERPAST"
+      ],
+      "PSALM 57 : 1"
+    ],
+    [
+      36,
+      48,
+      [
+        "LEAVE THESE BURDENS",
+        "RESTING PLACE TONIGHT"
+      ],
+      [
+        "BURDENS",
+        "RESTING"
+      ],
+      "PSALM 57 : 1"
+    ],
+    [
+      49,
+      60,
+      [
+        "QUIET EVERY THOUGHT",
+        "FIND PEACE IN",
+        "STEADY GRACE"
+      ],
+      [
+        "QUIET",
+        "PEACE"
+      ],
+      "PSALM 57 : 1"
+    ],
+    [
+      61,
+      72,
+      [
+        "SPIRIT REST ENTIRELY",
+        "PROTECTION YOU PROMISE",
+        "THOSE WHO SEEK"
+      ],
+      [
+        "REST",
+        "PROTECTION"
+      ],
+      "PSALM 57 : 1"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the weight of this day feels too heavy to carry into your sleep, stay here.",
+      "kind": "phrase",
+      "words": [
+        "HEAVY",
+        "STAY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Be merciful unto me, O God, be merciful unto me: for my soul trusteth in thee:",
+      "kind": "phrase",
+      "words": [
+        "MERCIFUL",
+        "TRUSTETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "yea, in the shadow of thy wings will I make my refuge, until these calamities be overpast.",
+      "kind": "phrase",
+      "words": [
+        "REFUGE",
+        "OVERPAST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, grant that I might leave these burdens at the edge of this resting place tonight.",
+      "kind": "phrase",
+      "words": [
+        "BURDENS",
+        "RESTING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Quiet every racing thought so that I might find peace in your deep, steady grace.",
+      "kind": "phrase",
+      "words": [
+        "QUIET",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May my spirit rest entirely in the protection you promise to those who seek you.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "PROTECTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 57:1"
+}

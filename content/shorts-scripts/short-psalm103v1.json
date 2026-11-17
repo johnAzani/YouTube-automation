@@ -1,0 +1,353 @@
+{
+  "key": "short-psalm103v1",
+  "channel": "secret-place",
+  "psalm": 103,
+  "title": [
+    "FORGET NOT HIS",
+    "TENDER MERCIES"
+  ],
+  "poster": [
+    "PSALM 103:1-5",
+    "BLESS THE LORD",
+    "O MY SOUL",
+    "NIGHT PRAYER"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "calm moonlit bedroom window soft night light",
+    "calm mountain lake glowing starry night sky",
+    "single burning candle cozy dark room stillness",
+    "peaceful quiet forest mist night moonlight",
+    "glowing golden hour night sky calm ocean water",
+    "soft warm light calm nighttime horizon",
+    "quiet night sky stars reflecting over still lake",
+    "peaceful dark night sky calm horizon stars"
+  ],
+  "scenes": [
+    {
+      "a": "As you lie awake replaying that painful conversation from earlier tonight, set down your regret.",
+      "img": "short-psalm103v1-scene-01.jpg",
+      "kicker": "PSALM 103:1",
+      "sub": "SET DOWN YOUR REGRET",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Scripture says, Bless the LORD, O my soul: and all that is within me, bless his holy name.",
+      "img": "short-psalm103v1-scene-02.jpg",
+      "kicker": "PSALM 103:1",
+      "sub": "BLESS HIS HOLY NAME",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Bless the LORD, O my soul, and forget not all his benefits:",
+      "img": "short-psalm103v1-scene-03.jpg",
+      "kicker": "PSALM 103:2",
+      "sub": "FORGET NOT HIS BENEFITS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Who forgiveth all thine iniquities; who healeth all thy diseases;",
+      "img": "short-psalm103v1-scene-04.jpg",
+      "kicker": "PSALM 103:3",
+      "sub": "HEALETH ALL THY DISEASES",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Who redeemeth thy life from destruction; who crowneth thee with lovingkindness and tender mercies;",
+      "img": "short-psalm103v1-scene-05.jpg",
+      "kicker": "PSALM 103:4",
+      "sub": "CROWNETH THEE WITH MERCY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, cover this weary heart with Your peace tonight.",
+      "img": "short-psalm103v1-scene-06.jpg",
+      "kicker": "BEDTIME PRAYER",
+      "sub": "PEACE FOR YOUR HEART",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Forgive every mistake, restore what was broken, and wrap us in Your tender mercy as we rest.",
+      "img": "short-psalm103v1-scene-07.jpg",
+      "kicker": "BEDTIME PRAYER",
+      "sub": "REST IN TENDER MERCY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Subscribe to join our secret place every night.",
+      "img": "short-psalm103v1-scene-08.jpg",
+      "kicker": "THE SECRET PLACE",
+      "sub": "PRAYERS EVERY NIGHT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "As you lie awake replaying that painful conversation from earlier tonight, set down your regret."
+    ],
+    [
+      8,
+      17,
+      "Scripture says, Bless the LORD, O my soul: and all that is within me, bless his holy name."
+    ],
+    [
+      17,
+      24,
+      "Bless the LORD, O my soul, and forget not all his benefits:"
+    ],
+    [
+      24,
+      32,
+      "Who forgiveth all thine iniquities; who healeth all thy diseases;"
+    ],
+    [
+      32,
+      41,
+      "Who redeemeth thy life from destruction; who crowneth thee with lovingkindness and tender mercies;"
+    ],
+    [
+      41,
+      47,
+      "Lord, cover this weary heart with Your peace tonight."
+    ],
+    [
+      47,
+      56,
+      "Forgive every mistake, restore what was broken, and wrap us in Your tender mercy as we rest."
+    ],
+    [
+      56,
+      62,
+      "Subscribe to join our secret place every night."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "AS YOU LIE AWAKE TONIGHT",
+        "SET DOWN YOUR REGRET"
+      ],
+      [
+        "REGRET"
+      ],
+      "PSALM 103 : 1"
+    ],
+    [
+      8,
+      17,
+      [
+        "BLESS THE LORD O MY SOUL",
+        "BLESS HIS HOLY NAME"
+      ],
+      [
+        "BLESS"
+      ],
+      "PSALM 103 : 1"
+    ],
+    [
+      17,
+      24,
+      [
+        "FORGET NOT ALL",
+        "HIS BENEFITS"
+      ],
+      [
+        "BENEFITS"
+      ],
+      "PSALM 103 : 2"
+    ],
+    [
+      24,
+      32,
+      [
+        "WHO FORGIVETH THINE INIQUITIES",
+        "WHO HEALETH ALL DISEASES"
+      ],
+      [
+        "HEALETH"
+      ],
+      "PSALM 103 : 3"
+    ],
+    [
+      32,
+      41,
+      [
+        "WHO REDEEMETH THY LIFE",
+        "CROWNETH THEE WITH MERCY"
+      ],
+      [
+        "MERCY"
+      ],
+      "PSALM 103 : 4"
+    ],
+    [
+      41,
+      47,
+      [
+        "COVER THIS WEARY HEART",
+        "WITH YOUR PEACE TONIGHT"
+      ],
+      [
+        "PEACE"
+      ],
+      "PSALM 103 : 1-5"
+    ],
+    [
+      47,
+      56,
+      [
+        "RESTORE WHAT WAS BROKEN",
+        "WRAP US IN TENDER MERCY"
+      ],
+      [
+        "RESTORE"
+      ],
+      "PSALM 103 : 1-5"
+    ],
+    [
+      56,
+      62,
+      [
+        "JOIN OUR SECRET PLACE",
+        "PRAYERS EVERY NIGHT"
+      ],
+      [
+        "SUBSCRIBE"
+      ],
+      "PSALM 103 : 1-5"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "As you lie awake replaying that painful conversation from earlier tonight, set down your regret.",
+      "kind": "phrase",
+      "words": [
+        "SET",
+        "DOWN",
+        "REGRET"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Scripture says, Bless the LORD, O my soul: and all that is within me, bless his holy name.",
+      "kind": "phrase",
+      "words": [
+        "BLESS",
+        "HIS",
+        "HOLY",
+        "NAME"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Bless the LORD, O my soul, and forget not all his benefits:",
+      "kind": "phrase",
+      "words": [
+        "FORGET",
+        "NOT",
+        "HIS",
+        "BENEFITS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Who forgiveth all thine iniquities; who healeth all thy diseases;",
+      "kind": "phrase",
+      "words": [
+        "FORGIVETH",
+        "AND",
+        "HEALETH"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Who redeemeth thy life from destruction; who crowneth thee with lovingkindness and tender mercies;",
+      "kind": "phrase",
+      "words": [
+        "CROWNETH",
+        "WITH",
+        "MERCY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, cover this weary heart with Your peace tonight.",
+      "kind": "phrase",
+      "words": [
+        "COVER",
+        "WITH",
+        "PEACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Forgive every mistake, restore what was broken, and wrap us in Your tender mercy as we rest.",
+      "kind": "phrase",
+      "words": [
+        "WRAP",
+        "US",
+        "IN",
+        "MERCY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Subscribe to join our secret place every night.",
+      "kind": "phrase",
+      "words": [
+        "THE",
+        "SECRET",
+        "PLACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 103:1-5"
+}

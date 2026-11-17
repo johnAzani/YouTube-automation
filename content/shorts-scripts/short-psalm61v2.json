@@ -1,0 +1,276 @@
+{
+  "key": "short-psalm61v2",
+  "channel": "secret-place",
+  "psalm": 61,
+  "title": [
+    "A PRAYER WHEN",
+    "HEARTS ARE OVERWHELMED"
+  ],
+  "poster": [
+    "FINDING THE ROCK",
+    "A PRAYER FOR",
+    "THE WEARY SOUL",
+    "THE SECRET PLACE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Secret Place — prayers every day"
+  ],
+  "stock_queries": [
+    "misty mountain silhouette night",
+    "glowing candle in dark room",
+    "calm dark ocean waves",
+    "starlight over quiet forest",
+    "flickering lantern on wooden table",
+    "distant moon reflection on water"
+  ],
+  "scenes": [
+    {
+      "a": "If the silence in your room feels heavier than the day you just finished, listen.",
+      "img": "short-psalm61v2-scene-01.jpg",
+      "kicker": "PSALM 61:2",
+      "sub": "FINDING STRENGTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "From the end of the earth will I cry unto thee, when my heart is overwhelmed: lead me to the rock that is higher than I.",
+      "img": "short-psalm61v2-scene-02.jpg",
+      "kicker": "PSALM 61:2",
+      "sub": "CRY UNTO THEE",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "For thou hast been a shelter for me, and a strong tower from the enemy.",
+      "img": "short-psalm61v2-scene-03.jpg",
+      "kicker": "PSALM 61:3",
+      "sub": "A STRONG TOWER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "I will abide in thy tabernacle for ever: I will trust in the covert of thy wings.",
+      "img": "short-psalm61v2-scene-04.jpg",
+      "kicker": "PSALM 61:4",
+      "sub": "COVERT OF THY WINGS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, pull my heavy thoughts into your quiet safety where no panic can follow me tonight.",
+      "img": "short-psalm61v2-scene-05.jpg",
+      "kicker": "A PRAYER",
+      "sub": "SAFE IN HIS PRESENCE",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Let my spirit rest beneath the shadow of your wings until the morning light breaks through.",
+      "img": "short-psalm61v2-scene-06.jpg",
+      "kicker": "REST",
+      "sub": "TRUST IN THE LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "If the silence in your room feels heavier than the day you just finished, listen."
+    ],
+    [
+      8,
+      22,
+      "From the end of the earth will I cry unto thee, when my heart is overwhelmed: lead me to the rock that is higher than I."
+    ],
+    [
+      22,
+      32,
+      "For thou hast been a shelter for me, and a strong tower from the enemy."
+    ],
+    [
+      32,
+      42,
+      "I will abide in thy tabernacle for ever: I will trust in the covert of thy wings."
+    ],
+    [
+      42,
+      52,
+      "Lord, pull my heavy thoughts into your quiet safety where no panic can follow me tonight."
+    ],
+    [
+      52,
+      60,
+      "Let my spirit rest beneath the shadow of your wings until the morning light breaks through."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THE SILENCE IS HEAVY",
+        "YOU ARE NOT ALONE",
+        "LISTEN TO THIS"
+      ],
+      [
+        "HEAVY",
+        "LISTEN"
+      ],
+      "PSALM 61:2"
+    ],
+    [
+      8,
+      22,
+      [
+        "HEART IS OVERWHELMED",
+        "LEAD ME TO THE",
+        "ROCK THAT IS HIGHER"
+      ],
+      [
+        "OVERWHELMED",
+        "ROCK"
+      ],
+      "PSALM 61:2"
+    ],
+    [
+      22,
+      32,
+      [
+        "THOU ART MY SHELTER",
+        "AND A STRONG",
+        "TOWER FROM THE ENEMY"
+      ],
+      [
+        "SHELTER",
+        "TOWER"
+      ],
+      "PSALM 61:3"
+    ],
+    [
+      32,
+      42,
+      [
+        "I WILL ABIDE",
+        "IN THY TABERNACLE",
+        "TRUST IN THY WINGS"
+      ],
+      [
+        "ABIDE",
+        "TRUST"
+      ],
+      "PSALM 61:4"
+    ],
+    [
+      42,
+      52,
+      [
+        "PULL MY THOUGHTS",
+        "INTO YOUR SAFETY",
+        "NO PANIC CAN FOLLOW"
+      ],
+      [
+        "SAFETY",
+        "NO PANIC"
+      ],
+      "PSALM 61:4"
+    ],
+    [
+      52,
+      60,
+      [
+        "LET MY SPIRIT REST",
+        "BENEATH THY WINGS",
+        "UNTIL MORNING LIGHT"
+      ],
+      [
+        "REST",
+        "WINGS"
+      ],
+      "PSALM 61:4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the silence in your room feels heavier than the day you just finished, listen.",
+      "kind": "phrase",
+      "words": [
+        "HEAVIER",
+        "LISTEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "From the end of the earth will I cry unto thee, when my heart is overwhelmed: lead me to the rock that is higher than I.",
+      "kind": "phrase",
+      "words": [
+        "OVERWHELMED",
+        "ROCK"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For thou hast been a shelter for me, and a strong tower from the enemy.",
+      "kind": "phrase",
+      "words": [
+        "SHELTER",
+        "TOWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will abide in thy tabernacle for ever: I will trust in the covert of thy wings.",
+      "kind": "phrase",
+      "words": [
+        "ABIDE",
+        "TRUST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, pull my heavy thoughts into your quiet safety where no panic can follow me tonight.",
+      "kind": "phrase",
+      "words": [
+        "SAFETY",
+        "NO PANIC"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Let my spirit rest beneath the shadow of your wings until the morning light breaks through.",
+      "kind": "phrase",
+      "words": [
+        "REST",
+        "WINGS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 61:2-4"
+}
