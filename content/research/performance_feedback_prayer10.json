@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-16T09:42:34.220550+00:00",
-  "as_of": "2026-11-16",
+  "generated_at": "2026-11-17T04:11:47.120020+00:00",
+  "as_of": "2026-11-17",
   "sufficient_data": false,
   "measured_longform_videos": 0,
-  "total_longform_videos": 6,
+  "total_longform_videos": 7,
   "input_diagnostics": {
-    "snapshot_video_ids": 16,
-    "receipt_video_ids": 16,
-    "matched_video_ids": 16,
-    "longform_below_view_threshold": 6,
+    "snapshot_video_ids": 21,
+    "receipt_video_ids": 21,
+    "matched_video_ids": 21,
+    "longform_below_view_threshold": 7,
     "longform_missing_view_count": 0,
     "longform_too_young_or_undated": 3,
     "minimum_views": 25,
@@ -18,7 +18,7 @@
   "themes": [
     {
       "theme": "daily_guidance_wisdom",
-      "videos": 3,
+      "videos": 4,
       "measured_videos": 0,
       "avg_score": 0.0,
       "avg_engagement": 0.0,
@@ -50,64 +50,86 @@
     }
   ],
   "shorts": {
-    "measured_shorts": 5,
-    "total_shorts": 10,
-    "sufficient_data": false,
-    "avg_views": 111.0,
+    "measured_shorts": 9,
+    "total_shorts": 14,
+    "sufficient_data": true,
+    "avg_views": 103.6,
     "median_views": 97,
-    "total_views": 555,
+    "total_views": 932,
     "minimum_age_days": 2,
     "by_book": {
       "ecclesiastes": {
         "shorts": 1,
         "avg_views": 97.0,
-        "ratio": 0.958
+        "ratio": 0.979
       },
       "isaiah": {
         "shorts": 1,
-        "avg_views": 68.0,
-        "ratio": 0.871
+        "avg_views": 70.0,
+        "ratio": 0.892
       },
       "james": {
         "shorts": 1,
         "avg_views": 180.0,
-        "ratio": 1.207
+        "ratio": 1.246
+      },
+      "jeremiah": {
+        "shorts": 1,
+        "avg_views": 147.0,
+        "ratio": 1.14
       },
       "john": {
+        "shorts": 2,
+        "avg_views": 83.0,
+        "ratio": 0.901
+      },
+      "micah": {
         "shorts": 1,
-        "avg_views": 134.0,
-        "ratio": 1.069
+        "avg_views": 84.0,
+        "ratio": 0.937
       },
       "proverbs": {
         "shorts": 1,
         "avg_views": 76.0,
-        "ratio": 0.895
+        "ratio": 0.911
+      },
+      "psalm": {
+        "shorts": 1,
+        "avg_views": 112.0,
+        "ratio": 1.027
       }
     },
     "by_theme": {
       "anxiety_peace": {
         "shorts": 2,
-        "avg_views": 105.0,
-        "ratio": 0.973
+        "avg_views": 120.0,
+        "ratio": 1.079
       },
       "daily_guidance_wisdom": {
-        "shorts": 2,
-        "avg_views": 124.0,
-        "ratio": 1.059
+        "shorts": 6,
+        "avg_views": 99.2,
+        "ratio": 0.968
       },
       "peace_rest": {
         "shorts": 1,
         "avg_views": 97.0,
-        "ratio": 0.958
+        "ratio": 0.979
       }
     },
-    "guidance": [
-      "Shorts: 5 measured (need 6, each at least 2 days old); the network's pooled numbers order this channel's Shorts until it has its own."
-    ]
+    "guidance": []
   },
   "guidance": [
     "Only 0 long-form video(s) have at least 25 views and are at least 3 days old; need 3. Keeping roadmap order until the signal is real."
   ],
   "cost_lock": "$0.00 \u2014 public Data API statistics only; no new quota or secret.",
-  "privacy": "Aggregate theme scores only; raw per-video snapshot stays an Actions artifact."
+  "privacy": "Aggregate theme scores only; raw per-video snapshot stays an Actions artifact.",
+  "lessons": [],
+  "niche": {
+    "read_on": "2026-11-17",
+    "phrases": [
+      "morning prayer",
+      "start your day"
+    ],
+    "typical_minutes": 41
+  }
 }
