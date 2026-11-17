@@ -1,0 +1,258 @@
+{
+  "key": "short-familydeuteronomy28v3",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "BLESSED SHALL",
+    "BE THY HOME"
+  ],
+  "poster": [
+    "DEUTERONOMY",
+    "TWENTY EIGHT",
+    "THREE TO",
+    "SIX"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit family dining table with open bible",
+    "peaceful countryside home sunrise landscape view",
+    "cozy rustic wooden kitchen table with olive branch",
+    "quiet living room with soft evening light and open bible",
+    "peaceful farm landscape under warm morning sky",
+    "serene golden hour light on a quiet country home"
+  ],
+  "scenes": [
+    {
+      "a": "If you are stepping out the door into an uncertain day today, pause.",
+      "img": "short-familydeuteronomy28v3-scene-01.jpg",
+      "kicker": "DEUTERONOMY 28:3",
+      "sub": "BLESSED IN THE CITY",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Blessed shalt thou be in the city, and blessed shalt thou be in the field.",
+      "img": "short-familydeuteronomy28v3-scene-02.jpg",
+      "kicker": "DEUTERONOMY 28:4",
+      "sub": "FRUIT OF THY BODY",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Blessed shall be the fruit of thy body, and the fruit of thy ground, and the fruit of thy cattle, the increase of thy kine, and the flocks of thy sheep.",
+      "img": "short-familydeuteronomy28v3-scene-03.jpg",
+      "kicker": "DEUTERONOMY 28:5",
+      "sub": "BASKET AND STORE",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Blessed shall be thy basket and thy store.",
+      "img": "short-familydeuteronomy28v3-scene-04.jpg",
+      "kicker": "DEUTERONOMY 28:6",
+      "sub": "COMING IN AND GOING OUT",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Blessed shalt thou be when thou comest in, and blessed shalt thou be when thou goest out.",
+      "img": "short-familydeuteronomy28v3-scene-05.jpg",
+      "kicker": "HOUSEHOLD PRAYER",
+      "sub": "COVER YOUR HOME",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, cover every doorstep and every room of this house with Your steadfast blessing.",
+      "img": "short-familydeuteronomy28v3-scene-06.jpg",
+      "kicker": "THE FAMILY ALTAR",
+      "sub": "WALK IN FAITH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If you are stepping out the door into an uncertain day today, pause."
+    ],
+    [
+      7,
+      15,
+      "Blessed shalt thou be in the city, and blessed shalt thou be in the field."
+    ],
+    [
+      15,
+      23,
+      "Blessed shall be the fruit of thy body, and the fruit of thy ground, and the fruit of thy cattle, the increase of thy kine, and the flocks of thy sheep."
+    ],
+    [
+      23,
+      29,
+      "Blessed shall be thy basket and thy store."
+    ],
+    [
+      29,
+      36,
+      "Blessed shalt thou be when thou comest in, and blessed shalt thou be when thou goest out."
+    ],
+    [
+      36,
+      44,
+      "Lord, cover every doorstep and every room of this house with Your steadfast blessing."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "STEPPING OUT",
+        "INTO AN UNCERTAIN DAY",
+        "PAUSE RIGHT NOW"
+      ],
+      "PAUSE",
+      "DEUTERONOMY 28 : 3"
+    ],
+    [
+      7,
+      15,
+      [
+        "BLESSED SHALT THOU BE",
+        "IN THE CITY",
+        "AND IN THE FIELD"
+      ],
+      "BLESSED",
+      "DEUTERONOMY 28 : 3"
+    ],
+    [
+      15,
+      23,
+      [
+        "FRUIT OF THY BODY",
+        "GROUND AND CATTLE",
+        "INCREASE OF THY KINE"
+      ],
+      "FRUIT",
+      "DEUTERONOMY 28 : 4"
+    ],
+    [
+      23,
+      29,
+      [
+        "BLESSED SHALL BE",
+        "THY BASKET",
+        "AND THY STORE"
+      ],
+      "STORE",
+      "DEUTERONOMY 28 : 5"
+    ],
+    [
+      29,
+      36,
+      [
+        "WHEN THOU COMEST IN",
+        "AND WHEN THOU",
+        "GOEST OUT"
+      ],
+      "GOEST",
+      "DEUTERONOMY 28 : 6"
+    ],
+    [
+      36,
+      44,
+      [
+        "COVER EVERY DOORSTEP",
+        "AND EVERY ROOM",
+        "WITH BLESSING"
+      ],
+      "BLESSING",
+      "HOUSEHOLD PRAYER"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are stepping out the door into an uncertain day today, pause.",
+      "kind": "phrase",
+      "words": [
+        "STEPPING",
+        "OUT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Blessed shalt thou be in the city, and blessed shalt thou be in the field.",
+      "kind": "phrase",
+      "words": [
+        "BLESSED",
+        "CITY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Blessed shall be the fruit of thy body, and the fruit of thy ground, and the fruit of thy cattle, the increase of thy kine, and the flocks of thy sheep.",
+      "kind": "phrase",
+      "words": [
+        "FRUIT",
+        "BODY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Blessed shall be thy basket and thy store.",
+      "kind": "phrase",
+      "words": [
+        "BASKET",
+        "STORE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Blessed shalt thou be when thou comest in, and blessed shalt thou be when thou goest out.",
+      "kind": "phrase",
+      "words": [
+        "COMEST",
+        "GOEST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, cover every doorstep and every room of this house with Your steadfast blessing.",
+      "kind": "phrase",
+      "words": [
+        "DOORSTEP",
+        "BLESSING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Deuteronomy 28:3-6"
+}
