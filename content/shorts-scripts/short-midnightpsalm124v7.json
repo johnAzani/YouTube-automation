@@ -1,0 +1,237 @@
+{
+  "key": "short-midnightpsalm124v7",
+  "channel": "prayer4",
+  "psalm": 124,
+  "title": [
+    "THE BROKEN SNARE",
+    "MIDNIGHT DELIVERANCE"
+  ],
+  "poster": [
+    "RELEASE FROM THE TRAP",
+    "BREAKING THE CHAINS",
+    "MIDNIGHT SPIRITUAL VIGIL",
+    "THE WATCH IS OPEN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "silhouette of ancient watchtower against starry night sky",
+    "glowing solitary lantern on stone floor at night",
+    "vast dark ocean under moonlight",
+    "ancient stone window frame looking out at night",
+    "serene forest path under moonlight",
+    "glowing candle flickering in deep dark room"
+  ],
+  "scenes": [
+    {
+      "a": "The invisible trap you feel gripping your heart tonight is losing its hold right now.",
+      "img": "short-midnightpsalm124v7-scene-01.jpg",
+      "kicker": "PSALM 124:7",
+      "sub": "FINDING YOUR RELEASE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Listen to the word of the Lord, for it speaks into the core of your struggle.",
+      "img": "short-midnightpsalm124v7-scene-02.jpg",
+      "kicker": "THE PROMISE",
+      "sub": "HEAR THE WORD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Our soul is escaped as a bird out of the snare of the fowlers: the snare is broken, and we are escaped.",
+      "img": "short-midnightpsalm124v7-scene-03.jpg",
+      "kicker": "THE SCRIPTURE",
+      "sub": "THE SNARE IS BROKEN",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, thank You for this divine intervention that snaps every chain binding your weary child tonight.",
+      "img": "short-midnightpsalm124v7-scene-04.jpg",
+      "kicker": "THE PRAYER",
+      "sub": "DIVINE INTERVENTION",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Restore the freedom that belongs to those who trust in Your unfailing light and perfect grace.",
+      "img": "short-midnightpsalm124v7-scene-05.jpg",
+      "kicker": "THE PRAYER",
+      "sub": "WALK IN FREEDOM",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May this peace settle deep in your soul as you rest in the safety of Him.",
+      "img": "short-midnightpsalm124v7-scene-06.jpg",
+      "kicker": "THE REST",
+      "sub": "PEACE IN THE WATCH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "The invisible trap you feel gripping your heart tonight is losing its hold right now."
+    ],
+    [
+      9,
+      15,
+      "Listen to the word of the Lord, for it speaks into the core of your struggle."
+    ],
+    [
+      16,
+      28,
+      "Our soul is escaped as a bird out of the snare of the fowlers: the snare is broken, and we are escaped."
+    ],
+    [
+      29,
+      39,
+      "Father, thank You for this divine intervention that snaps every chain binding your weary child tonight."
+    ],
+    [
+      40,
+      48,
+      "Restore the freedom that belongs to those who trust in Your unfailing light and perfect grace."
+    ],
+    [
+      49,
+      56,
+      "May this peace settle deep in your soul as you rest in the safety of Him."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THE INVISIBLE TRAP",
+        "GRIPPING YOUR HEART",
+        "IS LOSING ITS HOLD",
+        "RIGHT NOW"
+      ],
+      [
+        "HOLD"
+      ],
+      "PSALM 124:7"
+    ],
+    [
+      9,
+      15,
+      [
+        "LISTEN TO THE WORD",
+        "OF THE LORD",
+        "FOR IT SPEAKS",
+        "INTO THE CORE"
+      ],
+      [
+        "SPEAKS"
+      ],
+      "PSALM 124:7"
+    ],
+    [
+      16,
+      28,
+      [
+        "OUR SOUL IS ESCAPED",
+        "AS A BIRD",
+        "OUT OF THE SNARE",
+        "THE SNARE IS BROKEN",
+        "AND WE ARE ESCAPED"
+      ],
+      [
+        "BROKEN"
+      ],
+      "PSALM 124:7"
+    ],
+    [
+      29,
+      39,
+      [
+        "FATHER THANK YOU",
+        "FOR THIS INTERVENTION",
+        "SNAPS EVERY CHAIN",
+        "BINDING YOUR CHILD"
+      ],
+      [
+        "SNAPS"
+      ],
+      "PSALM 124:7"
+    ],
+    [
+      40,
+      48,
+      [
+        "RESTORE THE FREEDOM",
+        "TRUST IN YOUR",
+        "UNFAILING LIGHT",
+        "AND PERFECT GRACE"
+      ],
+      [
+        "FREEDOM"
+      ],
+      "PSALM 124:7"
+    ],
+    [
+      49,
+      56,
+      [
+        "MAY THIS PEACE",
+        "SETTLE DEEP IN",
+        "YOUR SOUL",
+        "REST IN HIS SAFETY"
+      ],
+      [
+        "PEACE"
+      ],
+      "PSALM 124:7"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "The invisible trap you feel gripping your heart tonight is losing its hold right now.",
+      "kind": "phrase",
+      "words": [
+        "TRAP",
+        "LOSING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Our soul is escaped as a bird out of the snare of the fowlers: the snare is broken, and we are escaped.",
+      "kind": "phrase",
+      "words": [
+        "SNARE",
+        "BROKEN"
+      ],
+      "hi": 16,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 124:7"
+}

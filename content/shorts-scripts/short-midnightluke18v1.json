@@ -1,0 +1,310 @@
+{
+  "key": "short-midnightluke18v1",
+  "channel": "prayer4",
+  "psalm": null,
+  "title": [
+    "PERSISTENCE IN",
+    "THE MIDNIGHT HOUR"
+  ],
+  "poster": [
+    "THE WIDOW'S PLEA",
+    "THE UNJUST JUDGE",
+    "FAITH IN THE NIGHT",
+    "WATCH AND PRAY"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midnight Watch — stand in prayer at midnight"
+  ],
+  "stock_queries": [
+    "silhouette of ancient stone watchtower against starry night sky",
+    "glowing oil lamp on dark wooden table in shadows",
+    "misty moonlight over silent mountain ridge",
+    "close up of old parchment texture in soft candlelight",
+    "wide shot of vast dark galaxy nebula",
+    "low light shadows in empty stone cathedral hall",
+    "flickering candle flame casting shadows on stone wall"
+  ],
+  "scenes": [
+    {
+      "a": "That stubborn silence you keep facing in your soul is breaking open at this very moment.",
+      "img": "short-midnightluke18v1-scene-01.jpg",
+      "kicker": "LUKE 18:1",
+      "sub": "HEAR THE WORD OF THE LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "And he spake a parable unto them to this end, that men ought always to pray, and not to faint;",
+      "img": "short-midnightluke18v1-scene-02.jpg",
+      "kicker": "LUKE 18:1",
+      "sub": "THE PARABLE OF PERSISTENCE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, teach us to bring our heavy burdens to your feet without losing heart in waiting.",
+      "img": "short-midnightluke18v1-scene-03.jpg",
+      "kicker": "LUKE 18:7",
+      "sub": "CRYING OUT DAY AND NIGHT",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Shall not God avenge his own elect, which cry day and night unto him, though he bear long with them?",
+      "img": "short-midnightluke18v1-scene-04.jpg",
+      "kicker": "LUKE 18:7",
+      "sub": "THE PROMISE OF JUSTICE",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "Strengthen our resolve and quiet our fears as we trust in your sovereign timing tonight, Father.",
+      "img": "short-midnightluke18v1-scene-05.jpg",
+      "kicker": "LUKE 18:8",
+      "sub": "SHALL HE FIND FAITH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I tell you that he will avenge them speedily. Nevertheless when the Son of man cometh, shall he find faith on the earth?",
+      "img": "short-midnightluke18v1-scene-06.jpg",
+      "kicker": "LUKE 18:8",
+      "sub": "FAITH UPON THE EARTH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May our hearts remain steadfast, anchored in your grace, until the morning light reveals your glory.",
+      "img": "short-midnightluke18v1-scene-07.jpg",
+      "kicker": "MIDNIGHT WATCH",
+      "sub": "STEADFAST IN THE DARKNESS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "That stubborn silence you keep facing in your soul is breaking open at this very moment."
+    ],
+    [
+      12,
+      28,
+      "And he spake a parable unto them to this end, that men ought always to pray, and not to faint;"
+    ],
+    [
+      28,
+      42,
+      "Lord, teach us to bring our heavy burdens to your feet without losing heart in waiting."
+    ],
+    [
+      42,
+      62,
+      "Shall not God avenge his own elect, which cry day and night unto him, though he bear long with them?"
+    ],
+    [
+      62,
+      76,
+      "Strengthen our resolve and quiet our fears as we trust in your sovereign timing tonight, Father."
+    ],
+    [
+      76,
+      95,
+      "I tell you that he will avenge them speedily. Nevertheless when the Son of man cometh, shall he find faith on the earth?"
+    ],
+    [
+      95,
+      108,
+      "May our hearts remain steadfast, anchored in your grace, until the morning light reveals your glory."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "STUBBORN SILENCE",
+        "BREAKING OPEN",
+        "AT THIS MOMENT"
+      ],
+      [
+        "BREAKING OPEN"
+      ],
+      "LUKE 18:1"
+    ],
+    [
+      12,
+      28,
+      [
+        "MEN OUGHT ALWAYS",
+        "TO PRAY",
+        "AND NOT TO FAINT"
+      ],
+      [
+        "NOT TO FAINT"
+      ],
+      "LUKE 18:1"
+    ],
+    [
+      28,
+      42,
+      [
+        "BRING HEAVY BURDENS",
+        "WITHOUT LOSING HEART",
+        "IN WAITING"
+      ],
+      [
+        "LOSING HEART"
+      ],
+      "LUKE 18:7"
+    ],
+    [
+      42,
+      62,
+      [
+        "GOD AVENGE HIS ELECT",
+        "CRY DAY AND NIGHT",
+        "BEAR LONG WITH THEM"
+      ],
+      [
+        "AVENGE HIS ELECT"
+      ],
+      "LUKE 18:7"
+    ],
+    [
+      62,
+      76,
+      [
+        "STRENGTHEN RESOLVE",
+        "QUIET OUR FEARS",
+        "SOVEREIGN TIMING"
+      ],
+      [
+        "SOVEREIGN TIMING"
+      ],
+      "LUKE 18:8"
+    ],
+    [
+      76,
+      95,
+      [
+        "AVENGE THEM SPEEDILY",
+        "SHALL HE FIND",
+        "FAITH ON EARTH"
+      ],
+      [
+        "SPEEDILY"
+      ],
+      "LUKE 18:8"
+    ],
+    [
+      95,
+      108,
+      [
+        "HEARTS REMAIN STEADFAST",
+        "ANCHORED IN GRACE",
+        "REVEALS YOUR GLORY"
+      ],
+      [
+        "STEADFAST"
+      ],
+      "LUKE 18:8"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That stubborn silence you keep facing in your soul is breaking open at this very moment.",
+      "kind": "phrase",
+      "words": [
+        "BREAKING",
+        "OPEN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And he spake a parable unto them to this end, that men ought always to pray, and not to faint;",
+      "kind": "phrase",
+      "words": [
+        "NOT",
+        "TO",
+        "FAINT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, teach us to bring our heavy burdens to your feet without losing heart in waiting.",
+      "kind": "phrase",
+      "words": [
+        "LOSING",
+        "HEART"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Shall not God avenge his own elect, which cry day and night unto him, though he bear long with them?",
+      "kind": "phrase",
+      "words": [
+        "AVENGE",
+        "HIS",
+        "ELECT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Strengthen our resolve and quiet our fears as we trust in your sovereign timing tonight, Father.",
+      "kind": "phrase",
+      "words": [
+        "SOVEREIGN",
+        "TIMING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I tell you that he will avenge them speedily. Nevertheless when the Son of man cometh, shall he find faith on the earth?",
+      "kind": "phrase",
+      "words": [
+        "SPEEDILY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "May our hearts remain steadfast, anchored in your grace, until the morning light reveals your glory.",
+      "kind": "phrase",
+      "words": [
+        "STEADFAST"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Luke 18:1-8"
+}
