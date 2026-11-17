@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=el"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; auth_channel_title=The Covenant Shield; long_uploads_status=eligible; video_channel_id=UCKz4QT9W21j5S3GUvXiS3xQ; video_channel_title=The Covenant Shield; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["FAR FROM", "OPPRESSION AND FEAR", "ISAIAH 54:14", "THE COVENANT SHIELD"]
 thumbnail_kicker: "THE LORD IS THY KEEPER"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-24T16:16:10Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 When unfair accusations or cruel words threaten your peace today, hear God’s promise. In righteousness shalt thou be established: thou shalt be far from oppression; for thou shalt not fear: and from terror; for it shall not come near thee. Lord, anchor this precious soul in Your perfect righteousness today, guarding their mind against every harsh judgment and unseen threat. Let no weapon of fear take root within their heart, and keep terror far from their home and family. Establish their steps in Your unshakeable truth, so they walk in steady confidence under Your protective shield. Subscribe to walk under God's covenant of protection each day.
