@@ -24,10 +24,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=elig"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; auth_channel_title=The Praise Garden; long_uploads_status=eligible; video_channel_id=UCE2WeyVETD9sg-Nu9fsjeZg; video_channel_title=The Praise Garden; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE PRAISE GARDEN", "LUKE 1:46-49", "MY SOUL DOTH MAGNIFY", "GOD MY SAVIOR"]
 thumbnail_kicker: "O GIVE THANKS UNTO THE LORD"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-24T07:43:27Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 If you feel small and overlooked in your quiet work today, hear God's word. And Mary said, My soul doth magnify the Lord, And my spirit hath rejoiced in God my Savior. For he hath regarded the low estate of his handmaiden: for, behold, from henceforth all generations shall call me blessed. For he that is mighty hath done to me great things; and holy is his name. Heavenly Father, we praise You for looking upon our humble state with gentle mercy. You perform great wonders in our lives, and Your name is holy forever. We magnify Your grace with honest hearts of worship and thanksgiving. Subscribe to join The Praise Garden.
