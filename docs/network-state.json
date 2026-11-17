@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T19:58:41Z",
+  "generated_at": "2026-11-17T20:02:42Z",
   "monitor_generated_at": "2026-11-17T19:43:42.749785+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 411,
+    "published_total": 412,
     "published_longform": 141,
-    "published_shorts": 270,
-    "public_total": 409,
+    "published_shorts": 271,
+    "public_total": 410,
     "queued_longform": 61,
-    "queued_shorts": 85,
+    "queued_shorts": 84,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -441,23 +441,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 36,
+        "published_total": 37,
         "published_longform": 13,
-        "published_shorts": 23,
+        "published_shorts": 24,
         "thumbnail_pending": 7,
-        "public_total": 36,
+        "public_total": 37,
         "queued_longform": 6,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-PROVISIONGENESIS26V12",
-        "title": "Pray This Genesis 26:12-13 Prayer for Open Doors & Provision | Sacred Wisdom #Shorts",
+        "id": "SHORT-PROVISIONPSALM35V27",
+        "title": "Pray This Psalm 35:27 Prayer for Open Doors & Provision | Righteous Cause #Shorts",
         "format": "short",
-        "youtube_video_id": "hn0-qzM6IEI",
-        "watch_url": "https://www.youtube.com/shorts/hn0-qzM6IEI",
+        "youtube_video_id": "WcKNxpy8P9w",
+        "watch_url": "https://www.youtube.com/shorts/WcKNxpy8P9w",
         "published_on": "2026-11-17",
-        "published_at": "2026-11-17T15:38:43Z"
+        "published_at": "2026-11-17T20:01:37Z"
       },
       "next_queued_longform": {
         "id": "0513",
@@ -466,8 +466,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionpsalm35v27",
-        "scripture": "Psalm 35:27",
+        "short": "short-provisionpsalm5v12",
+        "scripture": "Psalm 5:12",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-PROVISIONPSALM35V27",
+      "slug": "short-provisionpsalm35v27-stewardship-prayer",
+      "file": "short-provisionpsalm35v27-stewardship-prayer.md",
+      "title": "Pray This Psalm 35:27 Prayer for Open Doors & Provision | Righteous Cause #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T20:01:37Z",
+      "youtube_video_id": "WcKNxpy8P9w",
+      "watch_url": "https://www.youtube.com/shorts/WcKNxpy8P9w",
+      "youtu_be_url": "https://youtu.be/WcKNxpy8P9w",
+      "shorts_url": "https://www.youtube.com/shorts/WcKNxpy8P9w",
+      "studio_url": "https://studio.youtube.com/video/WcKNxpy8P9w/edit",
+      "thumb_url": "https://i.ytimg.com/vi/WcKNxpy8P9w/hqdefault.jpg",
+      "thumb_text": "WALK IN \u00b7 GOD'S DAILY",
+      "thumbnail_pending": false,
+      "duration_label": "54s",
+      "words": 647
+    },
     {
       "id": "SHORT-SHIELDPSALM20V1",
       "slug": "short-shieldpsalm20v1-protection-prayer",
@@ -11450,17 +11474,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-provisionpsalm35v27",
-        "file": "0000-short-provisionpsalm35v27.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 35:27",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-psalm127v2",
