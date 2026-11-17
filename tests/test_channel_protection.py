@@ -416,3 +416,59 @@ def test_the_report_says_where_the_backdrop_photographs_come_from(dirs):
     assert "#### Thumbnail backdrops" in report
     assert "photographs" in report
     assert "fallback" in report
+
+
+def _scene_spec(folder: Path, key: str, channel: str | None, imgs: list[str]) -> None:
+    folder.joinpath(f"{key}.json").write_text(
+        json.dumps({"key": key, "channel": channel,
+                    "scenes": [{"img": name, "t0": i * 2.0, "t1": i * 2.0 + 2.0}
+                               for i, name in enumerate(imgs)]}),
+        encoding="utf-8")
+
+
+def test_the_grade_section_counts_the_scenes_a_file_name_grades(dirs):
+    """The frames' colour is counted, per channel, from the specs themselves.
+
+    `prep_plate` grades a plate `grade_sanctuary` when its name contains
+    "prayer"/"psalm" and `grade_blue` otherwise, and the scene files are named
+    after the Short's key — so the figure is what the channel's frames will
+    actually get, not what its brand says it should.
+    """
+    published, specs = dirs
+    _scene_spec(specs, "short-psalm91", "prayer4",
+                ["short-psalm91-scene-01.jpg", "short-psalm91-scene-02.jpg",
+                 "short-psalm91-scene-03.jpg"])
+    _scene_spec(specs, "short-1peter5v7", "prayer4",
+                ["short-1peter5v7-scene-01.jpg", "short-1peter5v7-scene-02.jpg"])
+    _scene_spec(specs, "short-psalm23", "prayer3",
+                ["short-psalm23-scene-01.jpg"])
+    rows = cp.measure(today=NOW, published_dir=published, spec_dir=specs)
+    midnight = _row(rows, "prayer4")
+    assert (midnight.scene_sanctuary, midnight.scene_blue) == (3, 2)
+    assert _row(rows, "prayer3").scene_sanctuary == 1
+    assert midnight.poster_grade == "midnight"
+    assert midnight.thumb_grade == "midnight"
+
+    report = cp.render(rows, cp.network_openers(published_dir=published))
+    assert "#### The grades the stills wear, and the colour the frames get" in report
+    assert "frames whose colour is the channel's own: **0 of 10**" in report
+    assert "**4 (67%)** take the sanctuary grade" in report
+
+
+def test_a_scene_spec_with_no_channel_counts_for_the_first_channel(dirs):
+    """A spec written before the `channel:` field is the first channel's."""
+    published, specs = dirs
+    _scene_spec(specs, "short-psalm121", None, ["short-psalm121-scene-01.jpg"])
+    rows = cp.measure(today=NOW, published_dir=published, spec_dir=specs)
+    assert _row(rows, "secret-place").scene_sanctuary == 1
+    assert sum(row.scene_sanctuary for row in rows) == 1
+
+
+def test_the_grade_section_is_not_drawn_from_nothing(dirs):
+    """With no specs read there is no count, and the section says nothing."""
+    published, specs = dirs
+    rows = cp.measure(today=NOW, published_dir=published, spec_dir=specs)
+    report = cp.render(rows, cp.network_openers(published_dir=published))
+    assert "#### The grades the stills wear" not in report
+    # The channel's own grade is known without reading a single spec.
+    assert _row(rows, "prayer4").poster_grade == "midnight"

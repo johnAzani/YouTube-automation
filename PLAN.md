@@ -495,6 +495,7 @@ By strictly adhering to the **$0.00 cost lock**, maintaining the **DOCOGA REELS 
    - Gentle 6.5 kHz high-frequency low-pass filter eliminates sharp sibilance and harsh room noise.
    - 40 Hz high-pass filter eliminates subsonic rumble and microphone handling noise.
    - Dual-engine implementation: FFmpeg `loudnorm` + pure NumPy DSP fallback.
+   - **Reached only by `scripts/build_sleep_compilation.py` (measured 17 November 2026):** no workflow runs that script and no published receipt is a compilation. Long-form and Shorts are mastered by `pipeline/voice_master.py` (−15 LUFS voice, −14.9 LUFS mix), not by this module.
 4. **Liturgical Sleep Timer & Google SERP Key Moments (`pipeline/sleep_timer.py`):**
    - Structured sleep timer chapters (15m Drift Off, 30m Peace, 45m Delta Induction, 60m REM Sanctuary, 8h All Night).
    - Generates Schema.org `VideoObject` with `hasPart` Clip markup for Google Search Key Moments.
@@ -514,9 +515,10 @@ By strictly adhering to the **$0.00 cost lock**, maintaining the **DOCOGA REELS 
 3. **Automated Weekly Community Tab Dispatcher (`.github/workflows/community.yml` & `scripts/post_community.py`):**
    - Autonomous twice-weekly schedule (Wednesdays and Sundays at 8:14pm local).
    - Publishes midweek prayer walls, interactive scripture polls, and weekend thanksgiving cards.
-4. **Signature Sacred Sonic Branding (`pipeline/sonic_branding.py`):**
-   - Injects a 2.5s 528 Hz Solfeggio acoustic bell strike into video/podcast intros and a 3.5s 432 Hz peace fade into outros.
+4. **Signature Sacred Sonic Branding (`pipeline/sonic_branding.py`) — built, not wired:**
+   - Would prepend a 2.5s 528 Hz Solfeggio acoustic bell strike and append a 3.5s 432 Hz peace fade.
    - 100% procedural synthesis via pure NumPy DSP; zero external stock samples or royalty claims.
+   - **Not on any publish path (measured 17 November 2026):** `inject_sonic_branding()` has no caller outside `tests/`, so no published video carries a chime. Reading: `docs/FRAME_GRADE_AND_SCORE_RESEARCH_2026-11-17.md` §6.
 
 ---
 

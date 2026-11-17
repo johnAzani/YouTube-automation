@@ -103,7 +103,11 @@ class Brand:
     #: The ribbon line on a Short's 9:16 poster (2026-11-07). The poster used to
     #: hardcode "PRAYER BEFORE SLEEP" for every channel, so a sunrise Short wore
     #: the night channel's wording. `short_prayer_kind` still picks the colour
-    #: grade (night / dawn / noon); this picks the words.
+    #: grade of that poster — one of ten: night, dawn, noon, midnight, hearth,
+    #: balm, harvest, fortress, garden, pathway (`shorts_poster.grade_for`); this
+    #: picks the words. Neither touches the video's frames, which are graded by
+    #: the scene's file name, not by the channel
+    #: (`shorts_poster.plate_grade_name`, read 17 November 2026).
     shorts_poster_kicker: str
     #: Pinned comments. Both are .format() templates.
     longform_pinned_comment: str
