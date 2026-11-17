@@ -31,6 +31,7 @@ thumbnail_channel_grade: "night"
 thumbnail_poster: ["REST FOR", "YOUR SOUL", "THE SECRET", "PLACE"]
 thumbnail_kicker: "PRAYER BEFORE SLEEP"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+live_handle: "@SecretPlaceSanctuary"
 ---
 
 If you are struggling to quiet your racing heart while lying in bed tonight, listen. Return unto thy rest, O my soul; for the LORD hath dealt bountifully with thee. Father, the weight of the day presses against my chest and makes it hard to exhale. I bring my worries about tomorrow to your feet, knowing you have already seen them all. Help me to trust that your hand has been upon my life throughout every passing hour. Grant me the peace that settles deep in the bones and quietness for my weary spirit.

@@ -27,10 +27,13 @@ narration_engine: "gemini-3.8-flash-tts"
 narration_voice: "Charon"
 caption_track: "ok"
 thumbnail_pending: true
-thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eli"
+thumbnail_error: "HttpError: The authenticated user doesn't have permissions to upload and set custom video thumbnails. [forbidden] | auth_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; auth_channel_title=The Midnight Watch; long_uploads_status=eligible; video_channel_id=UChZpBvg4Bh9xD7wYsSCJIBg; video_channel_title=The Midnight Watch; video_privacy=public; upload_status=processed; same_channel=True"
 thumbnail_poster: ["THE WIDOW'S PLEA", "THE UNJUST JUDGE", "FAITH IN THE NIGHT", "WATCH AND PRAY"]
 thumbnail_kicker: "RISE AND PRAY AT MIDNIGHT"
 thumbnail_plate: "short-prayer-cover-poster.jpg"
+thumbnail_retry_after: "2026-11-24T15:33:34Z"
+thumbnail_retry_reason: "permission"
+thumbnail_attempts: 1
 ---
 
 That stubborn silence you keep facing in your soul is breaking open at this very moment. And he spake a parable unto them to this end, that men ought always to pray, and not to faint; Lord, teach us to bring our heavy burdens to your feet without losing heart in waiting. Shall not God avenge his own elect, which cry day and night unto him, though he bear long with them? Strengthen our resolve and quiet our fears as we trust in your sovereign timing tonight, Father. I tell you that he will avenge them speedily. Nevertheless when the Son of man cometh, shall he find faith on the earth? May our hearts remain steadfast, anchored in your grace, until the morning light reveals your glory.
