@@ -1,0 +1,287 @@
+{
+  "key": "short-middayproverbs18v10",
+  "channel": "prayer3",
+  "psalm": null,
+  "title": [
+    "THE STRONG TOWER",
+    "MIDDAY STRENGTH"
+  ],
+  "poster": [
+    "A REFUGE AT NOON",
+    "A CALM SPIRIT",
+    "FINDING SAFETY",
+    "IN HIS NAME"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "bright sunlight streaming through a window",
+    "empty wooden desk with open bible",
+    "soft light on a quiet garden path",
+    "high sun over rolling hills",
+    "peaceful dust motes in sunbeam",
+    "still water reflecting a cloudless sky"
+  ],
+  "scenes": [
+    {
+      "a": "That relentless pressure building behind your eyes is a signal to retreat to higher ground.",
+      "img": "short-middayproverbs18v10-scene-01.jpg",
+      "kicker": "PROVERBS 18:10",
+      "sub": "FIND YOUR REFUGE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "The name of the LORD is a strong tower: the righteous runneth into it, and is safe.",
+      "img": "short-middayproverbs18v10-scene-02.jpg",
+      "kicker": "PROVERBS 18:10",
+      "sub": "THE STRONG TOWER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, when the afternoon feels overwhelming and the tasks remain unfinished, remind my weary soul.",
+      "img": "short-middayproverbs18v10-scene-03.jpg",
+      "kicker": "PRAYER AT NOON",
+      "sub": "STAY CENTERED",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "I run to the shelter of Your presence, leaving behind the weight of my own striving.",
+      "img": "short-middayproverbs18v10-scene-04.jpg",
+      "kicker": "SEEKING HIS PEACE",
+      "sub": "REST IN HIS GRACE",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.3
+      ]
+    },
+    {
+      "a": "Grant me the stillness to discern Your will amidst the noise of this busy day today.",
+      "img": "short-middayproverbs18v10-scene-05.jpg",
+      "kicker": "HEAR HIS VOICE",
+      "sub": "QUIET YOUR MIND",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.2
+      ]
+    },
+    {
+      "a": "In this moment, I am secure because You are my hiding place and my sure defense.",
+      "img": "short-middayproverbs18v10-scene-06.jpg",
+      "kicker": "RESTORED BY GRACE",
+      "sub": "YOU ARE SAFE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That relentless pressure building behind your eyes is a signal to retreat to higher ground."
+    ],
+    [
+      8,
+      16,
+      "The name of the LORD is a strong tower: the righteous runneth into it, and is safe."
+    ],
+    [
+      16,
+      24,
+      "Lord, when the afternoon feels overwhelming and the tasks remain unfinished, remind my weary soul."
+    ],
+    [
+      24,
+      32,
+      "I run to the shelter of Your presence, leaving behind the weight of my own striving."
+    ],
+    [
+      32,
+      40,
+      "Grant me the stillness to discern Your will amidst the noise of this busy day today."
+    ],
+    [
+      40,
+      48,
+      "In this moment, I am secure because You are my hiding place and my sure defense."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THAT RELENTLESS PRESSURE",
+        "BUILDING BEHIND YOUR EYES",
+        "IS A SIGNAL",
+        "TO RETREAT TO",
+        "HIGHER GROUND"
+      ],
+      [
+        "RELENTLESS",
+        "PRESSURE"
+      ],
+      "PROVERBS 18:10"
+    ],
+    [
+      8,
+      16,
+      [
+        "THE NAME OF THE LORD",
+        "IS A STRONG TOWER:",
+        "THE RIGHTEOUS RUNNETH INTO IT,",
+        "AND IS SAFE."
+      ],
+      [
+        "STRONG TOWER",
+        "SAFE"
+      ],
+      "PROVERBS 18:10"
+    ],
+    [
+      16,
+      24,
+      [
+        "LORD, WHEN THE AFTERNOON",
+        "FEELS OVERWHELMING",
+        "AND THE TASKS REMAIN",
+        "UNFINISHED, REMIND MY",
+        "WEARY SOUL."
+      ],
+      [
+        "OVERWHELMING",
+        "WEARY SOUL"
+      ],
+      "PROVERBS 18:10"
+    ],
+    [
+      24,
+      32,
+      [
+        "I RUN TO THE SHELTER",
+        "OF YOUR PRESENCE,",
+        "LEAVING BEHIND THE",
+        "WEIGHT OF MY",
+        "OWN STRIVING."
+      ],
+      [
+        "SHELTER",
+        "PRESENCE"
+      ],
+      "PROVERBS 18:10"
+    ],
+    [
+      32,
+      40,
+      [
+        "GRANT ME THE STILLNESS",
+        "TO DISCERN YOUR WILL",
+        "AMIDST THE NOISE",
+        "OF THIS BUSY",
+        "DAY TODAY."
+      ],
+      [
+        "STILLNESS",
+        "DISCERN"
+      ],
+      "PROVERBS 18:10"
+    ],
+    [
+      40,
+      48,
+      [
+        "IN THIS MOMENT,",
+        "I AM SECURE",
+        "BECAUSE YOU ARE",
+        "MY HIDING PLACE",
+        "AND MY SURE DEFENSE."
+      ],
+      [
+        "SECURE",
+        "HIDING PLACE"
+      ],
+      "PROVERBS 18:10"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That relentless pressure building behind your eyes is a signal to retreat to higher ground.",
+      "kind": "phrase",
+      "words": [
+        "RELENTLESS",
+        "PRESSURE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "The name of the LORD is a strong tower: the righteous runneth into it, and is safe.",
+      "kind": "phrase",
+      "words": [
+        "STRONG",
+        "TOWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, when the afternoon feels overwhelming and the tasks remain unfinished, remind my weary soul.",
+      "kind": "phrase",
+      "words": [
+        "OVERWHELMING",
+        "SOUL"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I run to the shelter of Your presence, leaving behind the weight of my own striving.",
+      "kind": "phrase",
+      "words": [
+        "SHELTER",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Grant me the stillness to discern Your will amidst the noise of this busy day today.",
+      "kind": "phrase",
+      "words": [
+        "STILLNESS",
+        "DISCERN"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "In this moment, I am secure because You are my hiding place and my sure defense.",
+      "kind": "phrase",
+      "words": [
+        "SECURE",
+        "HIDING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Proverbs 18:10"
+}

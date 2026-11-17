@@ -1,0 +1,264 @@
+{
+  "key": "short-middaypsalm34v4",
+  "channel": "prayer3",
+  "psalm": 34,
+  "title": [
+    "MIDDAY PRAYER",
+    "PSALM THIRTY FOUR"
+  ],
+  "poster": [
+    "THE MIDDAY WATCH",
+    "PSALM 34",
+    "PAUSE AND PRAY",
+    "AT NOON"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Midday Watch — pause and pray at noon"
+  ],
+  "stock_queries": [
+    "bright midday sun shining through a quiet empty window",
+    "peaceful sunny room with a wooden table and soft light",
+    "golden noon light casting long gentle shadows across an empty desk",
+    "clear blue noon sky over a quiet open landscape",
+    "gentle sunbeams falling on a calm wooden surface at noon",
+    "serene bright morning light glowing softly through tall glass windows"
+  ],
+  "scenes": [
+    {
+      "a": "That sudden knot in your stomach about what happens next is what brought you here.",
+      "img": "short-middaypsalm34v4-scene-01.jpg",
+      "kicker": "PSALM 34 : 4",
+      "sub": "LIFT UP YOUR HEART",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Father, right now in the middle of this busy day, we bring every hidden fear directly to Your presence.",
+      "img": "short-middaypsalm34v4-scene-02.jpg",
+      "kicker": "PSALM 34 : 5",
+      "sub": "SEEKING HIS FACE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "As it is written, I sought the LORD, and he heard me, and delivered me from all my fears.",
+      "img": "short-middaypsalm34v4-scene-03.jpg",
+      "kicker": "PSALM 34 : 6",
+      "sub": "HE HEARS YOUR CRY",
+      "cam": "pan_left",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "They looked unto him, and were lightened: and their faces were not ashamed.",
+      "img": "short-middaypsalm34v4-scene-04.jpg",
+      "kicker": "PSALM 34 : 7",
+      "sub": "LIGHT IN THE DARK",
+      "cam": "pan_right",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, let Your comforting grace quiet our racing thoughts and steady our trembling hands this very hour.",
+      "img": "short-middaypsalm34v4-scene-05.jpg",
+      "kicker": "PSALM 34 : 8",
+      "sub": "TASTE AND SEE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "O taste and see that the LORD is good: blessed is the man that trusteth in him.",
+      "img": "short-middaypsalm34v4-scene-06.jpg",
+      "kicker": "PSALM 34",
+      "sub": "TRUST IN THE LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "That sudden knot in your stomach about what happens next is what brought you here."
+    ],
+    [
+      9,
+      17,
+      "Father, right now in the middle of this busy day, we bring every hidden fear directly to Your presence."
+    ],
+    [
+      18,
+      27,
+      "As it is written, I sought the LORD, and he heard me, and delivered me from all my fears."
+    ],
+    [
+      28,
+      35,
+      "They looked unto him, and were lightened: and their faces were not ashamed."
+    ],
+    [
+      36,
+      44,
+      "Lord, let Your comforting grace quiet our racing thoughts and steady our trembling hands this very hour."
+    ],
+    [
+      45,
+      54,
+      "O taste and see that the LORD is good: blessed is the man that trusteth in him."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "THAT SUDDEN KNOT",
+        "IN YOUR STOMACH ABOUT",
+        "WHAT HAPPENS NEXT",
+        "IS WHAT BROUGHT YOU HERE"
+      ],
+      "KNOT",
+      "PSALM 34 : 4"
+    ],
+    [
+      9,
+      17,
+      [
+        "FATHER RIGHT NOW IN",
+        "THE MIDDLE OF THIS",
+        "BUSY DAY WE BRING",
+        "EVERY HIDDEN FEAR"
+      ],
+      "FATHER",
+      "PSALM 34 : 5"
+    ],
+    [
+      18,
+      27,
+      [
+        "I SOUGHT THE LORD",
+        "AND HE HEARD ME",
+        "AND DELIVERED ME FROM",
+        "ALL MY FEARS"
+      ],
+      "SOUGHT",
+      "PSALM 34 : 6"
+    ],
+    [
+      28,
+      35,
+      [
+        "THEY LOOKED UNTO HIM",
+        "AND WERE LIGHTENED AND",
+        "THEIR FACES WERE NOT",
+        "ASHAMED"
+      ],
+      "LIGHTENED",
+      "PSALM 34 : 7"
+    ],
+    [
+      36,
+      44,
+      [
+        "LORD LET YOUR GRACE",
+        "QUIET OUR RACING THOUGHTS",
+        "AND STEADY OUR HANDS",
+        "THIS VERY HOUR"
+      ],
+      "GRACE",
+      "PSALM 34 : 8"
+    ],
+    [
+      45,
+      54,
+      [
+        "O TASTE AND SEE",
+        "THAT THE LORD IS",
+        "GOOD BLESSED IS THE",
+        "MAN THAT TRUSTETH"
+      ],
+      "GOOD",
+      "PSALM 34"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "That sudden knot in your stomach about what happens next is what brought you here.",
+      "kind": "phrase",
+      "words": [
+        "SUDDEN",
+        "KNOT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, right now in the middle of this busy day, we bring every hidden fear directly to Your presence.",
+      "kind": "phrase",
+      "words": [
+        "FATHER",
+        "PRESENCE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As it is written, I sought the LORD, and he heard me, and delivered me from all my fears.",
+      "kind": "phrase",
+      "words": [
+        "SOUGHT",
+        "HEARD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "They looked unto him, and were lightened: and their faces were not ashamed.",
+      "kind": "phrase",
+      "words": [
+        "LOOKED",
+        "LIGHTENED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, let Your comforting grace quiet our racing thoughts and steady our trembling hands this very hour.",
+      "kind": "phrase",
+      "words": [
+        "COMFORTING",
+        "GRACE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "O taste and see that the LORD is good: blessed is the man that trusteth in him.",
+      "kind": "phrase",
+      "words": [
+        "TASTE",
+        "SEE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 34:4-8"
+}
