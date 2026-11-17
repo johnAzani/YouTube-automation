@@ -50,7 +50,10 @@ def test_enrich_short_description_with_bridge():
     """Verify description is enriched with prominent link at the top."""
     orig_desc = "Rest tonight under God's divine shield. Psalm 91."
     enriched = enrich_short_description_with_bridge(orig_desc, "short-psalm91")
-    assert "PRAY THE COMPLETE 8-MINUTE PSALM 91 MEDITATION" in enriched
+    # The length is the linked video's own, read from its receipt (six minutes),
+    # not the fixed "8-MINUTE" this sentence carried on every Short until 17
+    # November 2026.
+    assert "PRAY THE COMPLETE 6-MINUTE PSALM 91 MEDITATION" in enriched
     assert "https://youtu.be/7RDX0fbIOtQ" in enriched
     assert orig_desc in enriched
 
@@ -69,3 +72,31 @@ def test_pinned_comment_auto_bridges_for_shorts(tmp_path: Path):
     comment = generate_pastoral_pinned_comment(doc)
     assert "PRAY THE FULL NIGHTTIME SCRIPTURE MEDITATION" in comment
     assert "7RDX0fbIOtQ" in comment
+
+
+def test_the_length_in_the_header_is_the_video_s_own(tmp_path: Path):
+    """A Short's description states the length of the video it links, or none."""
+    from pipeline.shorts_bridge import length_phrase, minutes_on_record
+
+    short = tmp_path / "0016-night-prayer.md"
+    short.write_text(
+        "---\nid: '0016'\ntarget_minutes: 6\nduration_seconds: 371.2\n---\n\nBody.\n",
+        encoding="utf-8")
+    assert minutes_on_record(short) == 6
+
+    # A night-tail prayer is three hours, and says so.
+    tail = tmp_path / "0024-darkness.md"
+    tail.write_text(
+        "---\nid: '0024'\ntarget_minutes: 6\nduration_seconds: 11189.1\n---\n\nBody.\n",
+        encoding="utf-8")
+    assert minutes_on_record(tail) == 186
+    assert length_phrase(minutes_on_record(tail)) == "3-HOUR "
+
+    # Nothing on record: no number is invented.
+    bare = tmp_path / "0027-unknown.md"
+    bare.write_text("---\nid: '0027'\n---\n\nBody.\n", encoding="utf-8")
+    assert minutes_on_record(bare) is None
+    assert length_phrase(None) == ""
+    assert length_phrase(0) == ""
+    missing = tmp_path / "not-there.md"
+    assert minutes_on_record(missing) is None

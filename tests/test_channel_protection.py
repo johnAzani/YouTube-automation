@@ -102,7 +102,11 @@ def test_only_the_most_recent_titles_are_read_so_a_fix_shows(dirs):
         _receipt(published, f"new{n}", channel="prayer3", day="2026-11-15",
                  title=f"Say This Psalm {n + 30}:1 Prayer at Noon | Lay The Weight Down {n} #Shorts")
     row = _row(cp.measure(today=NOW, published_dir=published, spec_dir=specs), "prayer3")
-    assert (row.titles_read, row.weak_titles, row.notes) == (cp.RECENT_TITLES, 0, [])
+    assert (row.titles_read, row.weak_titles) == (cp.RECENT_TITLES, 0)
+    # The only note is the frame note (one mould, 20 of 20): no weak title is counted.
+    assert [note for note in row.notes if "say nothing of their own" not in note] == \
+        ["20 of its last 20 Short titles are built on one frame: "
+         "'Say This {passage} Prayer at Noon'"]
 
 
 def test_a_few_weak_titles_on_a_new_channel_are_not_called_a_pattern(dirs):
@@ -120,7 +124,8 @@ def test_many_weak_titles_are_said(dirs):
         _receipt(published, f"n{n}", channel="prayer9", day="2026-11-15",
                  title=f"Pray This Psalm {n + 1}:1 Prayer of Thanksgiving | The Praise Garden #Shorts")
     row = _row(cp.measure(today=NOW, published_dir=published, spec_dir=specs), "prayer9")
-    assert len(row.notes) == 1 and "say nothing of their own" in row.notes[0]
+    weak = [note for note in row.notes if "say nothing of their own" in note]
+    assert len(weak) == 1, row.notes
 
 
 def test_a_title_used_twice_is_counted(dirs):
@@ -258,3 +263,112 @@ class TestTheHealthCheckRunsIt:
     def test_it_needs_no_token_and_writes_nothing(self, step):
         assert "env" not in step
         assert "continue-on-error" not in step, "a crash must show"
+
+
+def test_the_frame_is_the_words_before_the_bar_without_the_passage():
+    """One frame per channel is the mould; the passage is the only thing swapped."""
+    assert cp.short_frame(
+        "Say This Psalm 91 Prayer Before You Sleep | Divine Protection #Shorts") == \
+        "say this prayer before you sleep"
+    # Two passages, one frame: that is the thing being counted.
+    assert cp.short_frame(
+        "Say This Psalm 23 Prayer Before You Sleep | Divine Peace #Shorts") == \
+        "say this prayer before you sleep"
+    assert cp.frame_text(
+        "Pray This 2 Samuel 22:31 Prayer for Divine Protection | Daily Protection #Shorts") == \
+        "Pray This {passage} Prayer for Divine Protection"
+
+
+def test_a_numbered_book_is_read_as_the_passage_not_as_this_two():
+    """`1 Peter 5:7` and `2 Samuel 22:31` are passages, not "This 1" and "This 2".
+
+    The first reference matcher accepted any capitalised word before a number, so
+    it read the `This` of "Say This 1 Peter 5:7 ..." and the `2` after it as the
+    passage, and every check that compares a title's hook with its own passage was
+    made against the wrong words on the 19 published Short titles that name a
+    numbered book.
+    """
+    label, hook = cp.split_title(
+        "Say This 1 Peter 5:7 Prayer Before You Sleep | 1 Peter 5:7 #Shorts")
+    assert label == "1 Peter 5:7"
+    assert hook == "1 Peter 5:7"
+    assert cp.short_frame(
+        "Say This 1 Peter 5:7 Prayer Before You Sleep | 1 Peter 5:7 #Shorts") == \
+        "say this prayer before you sleep"
+    assert cp.split_title(
+        "Pray This 2 Samuel 22:31 Prayer for Divine Protection | Daily Protection #Shorts")[0] == \
+        "2 Samuel 22:31"
+
+
+def test_a_channel_with_one_frame_is_said_so(dirs):
+    published, specs = dirs
+    for n in range(9):
+        _receipt(published, f"b{n}", channel="prayer3", day=f"2026-11-{n + 5:02d}",
+                 title=f"Say This Psalm {n + 2}:1 Prayer at Noon | Hook {n} #Shorts")
+    row = _row(cp.measure(today=NOW, published_dir=published, spec_dir=specs), "prayer3")
+    assert row.titles_read == 9
+    assert row.frames_used == 1
+    assert row.frame_titles == 9
+    assert row.frame_text == "Say This {passage} Prayer at Noon"
+    assert any("built on one frame" in note for note in row.notes)
+
+
+def test_more_than_one_frame_is_counted_and_the_common_one_named(dirs):
+    published, specs = dirs
+    for n in range(5):
+        _receipt(published, f"c{n}", channel="prayer9", day=f"2026-11-{n + 5:02d}",
+                 title=f"Pray This Psalm {n + 100}:1 Prayer of Thanksgiving | Thanks {n} #Shorts")
+    for n in range(3):
+        _receipt(published, f"d{n}", channel="prayer9", day=f"2026-11-{n + 10:02d}",
+                 title=f"Psalm {n + 120}:1 Thanksgiving Prayer | Praise {n} #Shorts")
+    for n in range(6):
+        _receipt(published, f"e{n}", channel="prayer2", day=f"2026-11-{n + 5:02d}",
+                 title=f"Say This Psalm {n + 130}:1 Prayer at Sunrise | Dawn {n} #Shorts")
+    for n in range(2):
+        _receipt(published, f"f{n}", channel="prayer2", day=f"2026-11-{n + 12:02d}",
+                 title=f"Psalm {n + 150}:1 Prayer at Sunrise | Light {n} #Shorts")
+    rows = cp.measure(today=NOW, published_dir=published, spec_dir=specs)
+    row = _row(rows, "prayer9")
+    assert row.titles_read == 8
+    assert row.frames_used == 2
+    assert row.frame_titles == 5
+    # Five of eight is under the three-quarter mark, so nothing is said about it.
+    assert not any("built on one frame" in note for note in row.notes)
+    # Six of eight is exactly the mark, so it is.
+    common = _row(rows, "prayer2")
+    assert (common.frames_used, common.frame_titles) == (2, 6)
+    assert any("built on one frame" in note for note in common.notes)
+
+
+def test_the_network_opening_is_counted_across_channels(dirs):
+    """The frame differs per channel; the opening is what the network shares."""
+    published, _ = dirs
+    for n in range(3):
+        _receipt(published, f"e{n}", channel="prayer2", day="2026-11-15",
+                 title=f"Say This Psalm {n + 1}:1 Prayer at Sunrise | Hook {n} #Shorts")
+    for n in range(2):
+        _receipt(published, f"f{n}", channel="prayer3", day="2026-11-15",
+                 title=f"Say This Psalm {n + 40}:1 Prayer at Noon | Hook {n} #Shorts")
+    _receipt(published, "g0", channel="prayer9", day="2026-11-15",
+             title="How Enron Faked A Billion In Plain Sight #Shorts")
+    figure = cp.network_openers(published_dir=published)
+    assert figure["titles"] == 6
+    assert figure["shared"] == 5           # the five "Say This" ones
+    assert figure["opener"] == "say this"
+    assert figure["uses"] == 5
+    assert figure["openings"] == 2
+
+
+def test_the_frame_section_is_in_the_report_and_reads_the_rows(dirs):
+    published, specs = dirs
+    for n in range(9):
+        _receipt(published, f"h{n}", channel="prayer4", day=f"2026-11-{n + 5:02d}",
+                 title=f"Pray This Psalm {n + 2}:1 Midnight Prayer | Watch {n} #Shorts")
+    rows = cp.measure(today=NOW, published_dir=published, spec_dir=specs)
+    report = cp.render(rows, cp.network_openers(published_dir=published))
+    assert "#### Short titles built on one frame" in report
+    assert "`Pray This {passage} Midnight Prayer`" in report
+    assert "9 of 9" in report
+    assert "published Short titles open with two words another channel also uses" in report
+    # Without the figure the section still renders.
+    assert "#### Short titles built on one frame" in cp.render(rows)

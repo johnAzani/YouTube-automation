@@ -53,6 +53,8 @@ from dataclasses import asdict, dataclass, field
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+from pipeline.gemini_brain import _BOOK_RE
+
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
@@ -68,14 +70,25 @@ MIN_TITLES = 8
 #: The repository's own mark, not a YouTube figure: more than a quarter of the
 #: recent titles saying nothing of their own is reported.
 WEAK_TITLE_SHARE = 0.25
+#: A Short's title is `<what the channel says> | <its own hook>`. The words before
+#: the bar are set per channel (`Brand.short_title_template`) and never vary, so
+#: this is the share of a channel's recent Short titles built on one frame above
+#: which it is said out loud. Three quarters, not one: the frame is the channel's
+#: own wording, and the point is that it is the *only* one it has.
+FRAME_SHARE = 0.75
 #: A sentence shorter than this is too common a phrase to count as shared.
 MIN_SENTENCE_WORDS = 8
 #: Days averaged for the upload rate.
 RATE_DAYS = 7
 
 _FRONT = re.compile(r"\A---\s*\n(.*?)\n---\s*\n", re.S)
-_REFERENCE = re.compile(
-    r"\b(?:[1-3] )?[A-Z][a-z]+(?: of [A-Z][a-z]+)? \d+(?::\d+(?:[-–]\d+)?)?")
+#: A scripture reference, as written in a title. Book-aware on purpose: the
+#: first version accepted any capitalised word before a number, so
+#: "Say This 1 Peter 5:7 Prayer Before You Sleep" read its passage as "This 1",
+#: and 19 published Short titles were measured against the wrong passage (§
+#: "the measure undercounted"). `gemini_brain._BOOK_RE` is the one list of book
+#: names in the repository, and `evergreen_shorts.reference_parts` reads it too.
+_REFERENCE = _BOOK_RE
 
 
 @dataclass(frozen=True)
@@ -114,6 +127,12 @@ class Row:
     passages_shared: int = 0
     roadmap_shared: int = 0
     next_prayer_shared: int = 0
+    #: The frame a Short's title is built on — everything before the bar, less the
+    #: reference. ``frame_titles`` of the ``titles_read`` recent titles use the
+    #: channel's most-used one, and ``frames_used`` is how many it has in total.
+    frame_titles: int = 0
+    frames_used: int = 0
+    frame_text: str = ""
     notes: list[str] = field(default_factory=list)
 
     @property
@@ -160,6 +179,42 @@ def split_title(title: str) -> tuple[str, str]:
     stem, _, hook = body.partition(" | ")
     found = _REFERENCE.search(stem)
     return (found.group(0) if found else ""), hook.strip()
+
+
+def _before_the_bar(title: str) -> str:
+    """Everything in a Short's title before the bar, without the #Shorts tag."""
+    body = re.sub(r"\s*#shorts\s*$", "", str(title or ""), flags=re.I)
+    return body.partition(" | ")[0]
+
+
+def short_frame(title: str) -> str:
+    """The frame a Short's title is built on: before the bar, less the reference.
+
+    ``"Say This Psalm 91 Prayer Before You Sleep | Divine Protection #Shorts"``
+    gives ``"say this prayer before you sleep"``: two Shorts on different passages
+    are built on the same frame, and that is the thing a reviewer sees when they
+    read a channel's uploads in a row.
+    """
+    stem = _before_the_bar(title)
+    found = _REFERENCE.search(stem)
+    if found:
+        stem = f"{stem[:found.start()]} {stem[found.end():]}"
+    return " ".join(re.findall(r"[a-z0-9']+", stem.lower()))
+
+
+def frame_text(title: str) -> str:
+    """The frame as a reader sees it, with the passage left as a slot."""
+    stem = _before_the_bar(title)
+    found = _REFERENCE.search(stem)
+    if found:
+        stem = f"{stem[:found.start()]}{{passage}}{stem[found.end():]}"
+    return " ".join(stem.split()).strip(" ,:;—-")
+
+
+def opener(title: str) -> str:
+    """The first two words of a Short's title, lower-cased."""
+    words = re.findall(r"[a-z0-9']+", str(title or "").lower())
+    return " ".join(words[:2])
 
 
 def _sentences(text: str) -> list[str]:
@@ -227,6 +282,30 @@ def shared_sentences(spec_dir: Path | None = None) -> dict[str, list[str]]:
     return out
 
 
+def network_openers(*, published_dir: Path | None = None) -> dict:
+    """How many of the network's Short titles open with words another channel uses.
+
+    A frame is each channel's own — "Prayer at Sunrise" on one, "Prayer at Noon"
+    on another — so the frame table can read 20 of 20 on every channel and still
+    say nothing about the network. What the ten channels share is the opening:
+    on 17 November 2026, 237 of 238 published Short titles began "Say This" or
+    "Pray This", and no other opening was used at all.
+
+    Read from the receipts, so the figure moves when the writing does.
+    """
+    receipts = read_receipts(published_dir)
+    openers_of = [opener(r.title) for r in receipts if r.short]
+    channels = defaultdict(set)
+    for receipt in receipts:
+        if receipt.short:
+            channels[opener(receipt.title)].add(receipt.channel)
+    shared = sum(1 for word in openers_of if len(channels.get(word, ())) > 1)
+    counts = Counter(word for word in openers_of if word)
+    top, uses = counts.most_common(1)[0] if counts else ("", 0)
+    return {"titles": len(openers_of), "shared": shared, "opener": top, "uses": uses,
+            "openings": len(counts)}
+
+
 def measure(*, today: datetime | None = None, published_dir: Path | None = None,
             spec_dir: Path | None = None, queue_dir: Path | None = None,
             shorts_queue_dir: Path | None = None) -> list[Row]:
@@ -272,6 +351,23 @@ def measure(*, today: datetime | None = None, published_dir: Path | None = None,
             label, hook = split_title(receipt.title)
             if not hook or hook_adds_nothing(hook, brand, label):
                 row.weak_titles += 1
+        # The frame each of those titles is built on, and how many frames the
+        # channel has at all. One frame for every title is the mould YouTube's
+        # inauthentic-content policy names; the hook after the bar varies, the
+        # words before it do not.
+        frames = [short_frame(r.title) for r in shorts]
+        seen = Counter(frame for frame in frames if frame)
+        row.frames_used = len(seen)
+        if seen:
+            common, uses = seen.most_common(1)[0]
+            row.frame_titles = uses
+            row.frame_text = next(frame_text(r.title) for r in shorts
+                                  if short_frame(r.title) == common)
+            if (row.titles_read >= MIN_TITLES
+                    and uses / row.titles_read >= FRAME_SHARE):
+                row.notes.append(
+                    f"{uses} of its last {row.titles_read} Short titles are built on one "
+                    f"frame: '{row.frame_text}'")
         counts = Counter(r.title for r in mine)
         row.repeated_titles = sum(n - 1 for n in counts.values() if n > 1)
         row.shared_sentences = len(shared.get(channel, []))
@@ -356,7 +452,7 @@ def measure(*, today: datetime | None = None, published_dir: Path | None = None,
     return rows
 
 
-def render(rows: list[Row]) -> str:
+def render(rows: list[Row], network: dict | None = None) -> str:
     lines = [
         "### How alike the channels look",
         "",
@@ -376,6 +472,36 @@ def render(rows: list[Row]) -> str:
             f"| {row.shared_sentences} |")
     total = sum(r.long_last_day + r.shorts_last_day for r in rows)
     lines += ["", f"All channels together published {total} videos yesterday (UTC)."]
+    lines += [
+        "",
+        "#### Short titles built on one frame",
+        "",
+        "A Short's title is `<what the channel says> | <its own hook>`. The hook was "
+        "fixed on 16 November so that it says something of its own; the words before "
+        "the bar are set per channel in `pipeline/channel_capabilities.py` "
+        "(`Brand.short_title_template`) and never change, so every Short on a channel "
+        "is built on one frame with the passage swapped. YouTube's monetisation policy "
+        "refuses content that \"feels interchangeable from video to video\", and its "
+        "spam policy covers many similar videos across linked channels. No live title "
+        "is edited by anything here.",
+        "",
+        "| Channel | Recent Short titles read | Built on the channel's one frame "
+        "| Frames it has | The frame |",
+        "|---|---|---|---|---|",
+    ]
+    for row in rows:
+        frame = f"`{row.frame_text}`" if row.frame_text else "none"
+        lines.append(
+            f"| {row.name} | {row.titles_read} | {row.frame_titles} of {row.titles_read} "
+            f"| {row.frames_used} | {frame} |")
+    if network and network.get("titles"):
+        lines += [
+            "",
+            f"Across the ten channels, **{network['shared']} of {network['titles']}** "
+            f"published Short titles open with two words another channel also uses "
+            f"(\"{network['opener'].title()}\", {network['uses']} of them); the network "
+            f"uses {network['openings']} opening(s) in all.",
+        ]
     lines += [
         "",
         "#### Long-prayer titles",
@@ -449,7 +575,7 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps([{**asdict(row), "weak_share": round(row.weak_share, 3)}
                           for row in rows], indent=2))
         return 0
-    report = render(rows)
+    report = render(rows, network_openers())
     print(report)
     for row in rows:
         for note in row.notes:

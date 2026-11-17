@@ -77,6 +77,63 @@ SHORT_LONGFORM_CATALOG: dict[str, dict[str, str]] = {
 
 DEFAULT_PLAYLIST_FALLBACK = "https://www.youtube.com/@SecretPlaceSanctuary/playlists"
 
+#: The length fields a long-form's own receipt records, in the order that tells
+#: the truth about the finished video: `duration_seconds` is what the render
+#: actually produced (a night-tail prayer is 3 hours, not 6 minutes), and
+#: `target_minutes` is what the script was authored to.
+_LENGTH_FIELDS = re.compile(
+    r"^duration_seconds:\s*([0-9.]+)\s*$|^target_minutes:\s*([0-9]+)\s*$", re.M)
+
+
+def minutes_on_record(path: Path) -> int | None:
+    """How long the video in this receipt is, in whole minutes, if it says.
+
+    Every Short's description used to open "PRAY THE COMPLETE 8-MINUTE <PASSAGE>
+    MEDITATION" — a fixed sentence, on all ten channels, pointing at videos that
+    are authored to six minutes and at three on The Secret Place that run three
+    hours (`pipeline/night_tail.py`). The number was true once, when long-forms
+    were nine minutes long, and no record was ever read to check it.
+
+    Read, not assumed: the video's own receipt decides. ``None`` when the
+    receipt records neither length, so a caller says what it does know instead
+    of inventing a number.
+    """
+    try:
+        head = path.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return None
+    seconds = minutes = None
+    for match in _LENGTH_FIELDS.finditer(head.split("\n---", 1)[0]):
+        if match.group(1):
+            try:
+                seconds = float(match.group(1))
+            except ValueError:
+                seconds = None
+        elif match.group(2):
+            try:
+                minutes = int(match.group(2))
+            except ValueError:
+                minutes = None
+    if seconds and seconds >= 60:
+        return int(round(seconds / 60))
+    return minutes or seconds or None
+
+
+def length_phrase(minutes: int | None) -> str:
+    """``6`` -> ``"6-MINUTE "``, ``180`` -> ``"3-HOUR "``, unknown -> ``""``.
+
+    A trailing space, so the phrase can be dropped straight into the sentence.
+    Whole hours are said in hours: "PRAY THE COMPLETE 3-HOUR PSALM 91 ..." is
+    what a night-tail video is, and "180-MINUTE" is not how anyone says it.
+    """
+    if not minutes:
+        return ""
+    if minutes >= 60 and minutes % 60 == 0:
+        return f"{minutes // 60}-HOUR "
+    if minutes >= 120:
+        return f"{round(minutes / 60)}-HOUR "
+    return f"{int(minutes)}-MINUTE "
+
 
 def resolve_short_key(key_or_title: str) -> str | None:
     """Normalize any short identifier, slug, or title to canonical short key."""
@@ -172,6 +229,8 @@ def _dynamic_counterpart_from_repo(
                 "scripture": ref,
                 "theme": brand_for(doc.channel).short_bridge_theme,
                 "is_live_video": True,
+                # What this video actually runs for, from its own receipt.
+                "minutes": minutes_on_record(doc.path),
             }
 
     # Pass 2: scripture-title substring match on published long-form receipts
@@ -186,6 +245,8 @@ def _dynamic_counterpart_from_repo(
                 "scripture": ref,
                 "theme": brand_for(doc.channel).short_bridge_theme,
                 "is_live_video": True,
+                # What this video actually runs for, from its own receipt.
+                "minutes": minutes_on_record(doc.path),
             }
 
     queue_docs = []
@@ -215,6 +276,8 @@ def _dynamic_counterpart_from_repo(
                     "scripture": ref,
                     "theme": brand_for(doc.channel).short_bridge_theme,
                     "is_live_video": False,
+                    # Not uploaded yet: the length is the length it is authored to.
+                    "minutes": minutes_on_record(doc.path),
                 }
     return None
 
@@ -251,6 +314,7 @@ def resolve_longform_counterpart(
             "title": brand.short_fallback_title,
             "theme": brand.short_bridge_theme,
             "is_live_video": False,
+            "minutes": None,
         }
 
     short_key = resolve_short_key(short_key_or_title)
@@ -262,6 +326,7 @@ def resolve_longform_counterpart(
             "title": brand.short_fallback_title,
             "theme": brand.short_bridge_theme,
             "is_live_video": False,
+            "minutes": None,
         }
 
     info = SHORT_LONGFORM_CATALOG[short_key]
@@ -295,6 +360,7 @@ def resolve_longform_counterpart(
                     "scripture": info["scripture"],
                     "theme": info["theme"],
                     "is_live_video": True,
+                    "minutes": minutes_on_record(cand),
                 }
 
     # 2. Check fallback video ID (e.g. 7RDX0fbIOtQ for Psalm 91)
@@ -308,6 +374,8 @@ def resolve_longform_counterpart(
             "scripture": info["scripture"],
             "theme": info["theme"],
             "is_live_video": True,
+            # The catalog names the video; only a receipt knows its length.
+            "minutes": None,
         }
 
     # 3. Fallback to Series Playlist
@@ -320,6 +388,7 @@ def resolve_longform_counterpart(
         "scripture": info["scripture"],
         "theme": info["theme"],
         "is_live_video": False,
+        "minutes": None,
     }
 
 
@@ -361,8 +430,14 @@ def enrich_short_description_with_bridge(description: str, short_key_or_title: s
     scripture = counterpart.get("scripture") or "Scripture"
     owner = normalize_channel_id(channel_id or counterpart.get("channel"))
 
+    # The length is the linked video's own, read from its receipt. This sentence
+    # said "8-MINUTE" on all ten channels for every Short, whatever the video
+    # ran: the long-forms are authored to six minutes, and The Secret Place's
+    # night-tail prayers are three hours. With no receipt to read, the sentence
+    # says what it does know.
+    length = length_phrase(counterpart.get("minutes"))
     header = (
-        f"🕊️ PRAY THE COMPLETE 8-MINUTE {scripture.upper()} MEDITATION: 👉 {url}\n"
+        f"🕊️ PRAY THE COMPLETE {length}{scripture.upper()} MEDITATION: 👉 {url}\n"
         f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
     )
 
