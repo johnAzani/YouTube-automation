@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T19:52:37Z",
+  "generated_at": "2026-11-17T19:52:50Z",
   "monitor_generated_at": "2026-11-17T19:43:42.749785+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 407,
+    "published_total": 408,
     "published_longform": 141,
-    "published_shorts": 266,
-    "public_total": 405,
+    "published_shorts": 267,
+    "public_total": 406,
     "queued_longform": 61,
-    "queued_shorts": 89,
+    "queued_shorts": 88,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -169,23 +169,23 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 52,
+        "published_total": 53,
         "published_longform": 19,
-        "published_shorts": 33,
+        "published_shorts": 34,
         "thumbnail_pending": 0,
-        "public_total": 52,
+        "public_total": 53,
         "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "0093",
-        "title": "Eyes on God When Answers Run Out: 2 Chronicles 20:12",
-        "format": "longform",
-        "youtube_video_id": "q31Ou2q3utw",
-        "watch_url": "https://youtu.be/q31Ou2q3utw",
+        "id": "SHORT-MIDDAYPSALM27V13",
+        "title": "Say This Psalm 27:13-14 Prayer at Noon | Finding Strength At Noon #Shorts",
+        "format": "short",
+        "youtube_video_id": "EkOquPVpM40",
+        "watch_url": "https://www.youtube.com/shorts/EkOquPVpM40",
         "published_on": "2026-11-17",
-        "published_at": "2026-11-17T17:29:43Z"
+        "published_at": "2026-11-17T19:52:02Z"
       },
       "next_queued_longform": {
         "id": "0094",
@@ -194,8 +194,8 @@
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-middaypsalm27v13",
-        "scripture": "Psalm 27:13-14",
+        "short": "short-middaypsalm34v4",
+        "scripture": "Psalm 34:4-8",
         "target_window_utc": "12:14",
         "status": "approved"
       },
@@ -701,6 +701,30 @@
     }
   ],
   "videos": [
+    {
+      "id": "SHORT-MIDDAYPSALM27V13",
+      "slug": "short-middaypsalm27v13-midday-prayer",
+      "file": "short-middaypsalm27v13-midday-prayer.md",
+      "title": "Say This Psalm 27:13-14 Prayer at Noon | Finding Strength At Noon #Shorts",
+      "channel": "prayer3",
+      "channel_name": "The Midday Watch",
+      "channel_handle": "@TheMiddayWatch",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T19:52:02Z",
+      "youtube_video_id": "EkOquPVpM40",
+      "watch_url": "https://www.youtube.com/shorts/EkOquPVpM40",
+      "youtu_be_url": "https://youtu.be/EkOquPVpM40",
+      "shorts_url": "https://www.youtube.com/shorts/EkOquPVpM40",
+      "studio_url": "https://studio.youtube.com/video/EkOquPVpM40/edit",
+      "thumb_url": "https://i.ytimg.com/vi/EkOquPVpM40/hqdefault.jpg",
+      "thumb_text": "THE GOODNESS \u00b7 OF THE LORD",
+      "thumbnail_pending": false,
+      "duration_label": "51s",
+      "words": 601
+    },
     {
       "id": "SHORT-MORNINGPSALM63V1",
       "slug": "short-morningpsalm63v1-sunrise-prayer",
@@ -11332,17 +11356,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "15:44"
-      },
-      {
-        "short": "short-middaypsalm27v13",
-        "file": "0000-short-middaypsalm27v13.yml",
-        "companion_longform_id": "",
-        "scripture": "Psalm 27:13-14",
-        "channel": "prayer3",
-        "channel_name": "The Midday Watch",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "12:14"
       },
       {
         "short": "short-middaypsalm34v4",
