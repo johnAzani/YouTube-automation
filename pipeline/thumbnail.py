@@ -1,10 +1,21 @@
-"""Draft thumbnail generator (Pillow-based — see pipeline/textplates.py).
+"""SUPERSEDED — this renderer does not ship. Kept for one regression baseline.
 
-The pipeline ships *drafts*: brand plate + big title text over the first scene
-still, plus A/B/C variants for YouTube Studio's Test & Compare (winner is
-decided by watch-time share — docs/GROWTH.md §4.3). A human should always
-review/replace before publish: the thumbnail is the highest-leverage CTR
-decision on the platform.
+Nothing on the publish path calls this module. Its only callers are
+`pipeline.run._disabled_legacy_process` (a function that is never invoked and
+raises before reaching it) and `tests/test_thumbnail_studio.py`, which renders a
+frame from here to compare "legible ink" against the frame that does ship.
+
+What ships instead: `pipeline.thumbnail_ctr.generate_ctr_pack`, called from
+`prayer_pipeline.produce` with `channel_id=doc.channel` — three concepts, the
+channel's own daypart grade, 30 distinct palettes across the ten channels.
+`thumbnail.py` paints one hardcoded navy grade for every channel and every video,
+so it must not be used to answer "what do our thumbnails look like". See
+`docs/THUMBNAIL_PACK_RESEARCH_2026-11-17.md` §1.
+
+Original header, for the record — draft thumbnail generator (Pillow-based — see
+pipeline/textplates.py): brand plate + big title text over the first scene still,
+plus A/B/C variants, under the old assumption that a human would review and
+replace every frame before publish.
 """
 from __future__ import annotations
 

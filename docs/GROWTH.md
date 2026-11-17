@@ -117,8 +117,10 @@ titles, or combined). Critical fine print:
 - Test **distinct** variants (different color/subject/text), one element class at a time.
   Don't stop early. Document every test (wins teach the next design).
 - Requires Advanced features (phone + ID verification); desktop-only; long-form only
-  (not Shorts/Premieres/Made-for-Kids). The pipeline generates `*_thumb_a/b/c.jpg` drafts —
-  swap backgrounds/colors and feed all three into Test & Compare at publish.
+  (not Shorts/Premieres/Made-for-Kids). The pipeline writes three concepts per job —
+  `thumbnail_hook.jpg`, `thumbnail_quiet.jpg`, `thumbnail_poster.jpg` (copy / copy / no copy) in
+  the channel's own grade — and uploads the first. Run `set-thumbnail.yml` or Studio to feed the
+  other two into Test & Compare.
 
 ---
 
