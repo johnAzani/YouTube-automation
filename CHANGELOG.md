@@ -5,6 +5,14 @@ there was no changelog before this file.
 
 ---
 
+## 2026-11-17 — The first picture was a citation
+
+- **285 of 353 Shorts open the HUD on a book+chapter.** `PSALM 23:1`, `PROVERBS 16:3`, `1 PETER 5:7`. Four more open on the channel's name. The prompt's scene example was `"kicker": "PSALM NN:1"`. Kinetic type on frame 0 was already the need; the card a stranger can read by second 0.4 was a reference, the same one on every channel.
+- **The first on-screen phrase matched the eight-second caption.** All 353 end after second 3 (median 8s, 11 words). Caption 1 is now three seconds; the picture has to follow it.
+- **Changed, for Shorts written from now on.** Scene 1 kicker must name the need, not the verse and not the channel. First kinetic phrase must end by second 3 and stay within 8 words. Example kicker is now `STILL HERE`. Queued verse kickers still load — the HUD fade-in at t=0 was left alone on purpose, so a waiting Short does not suddenly put `PSALM NN:1` on frame 0.
+- **Unproven:** that the HUD text moves "% who chose to view". **Owner-only:** unchanged. **Next step:** still `average_view_percent` on the next Shorts.
+- Tests: `tests/test_short_hook_standard.py` (+2). Reading: `docs/SHORTS_VIRALITY_RESEARCH_2026-11-17.md` §4b.
+
 ## 2026-11-17 — The swipe happens by second three
 
 - **YouTube ranks a Short on whether a stranger stays.** Help (Shorts search & discovery, read today) names "% of viewers who chose to view", then average view duration and average % viewed. The Secret Place's own Analytics agrees: the four Shorts that looped (145%, 191%, 110%, 129% viewed) produced the most watch hours; Psalm 27 has the most views (393) at 76%.

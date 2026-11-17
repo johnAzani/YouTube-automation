@@ -51,7 +51,8 @@ def _spec(channel: str = "secret-place", *, poster_last: str = "A QUIET MIND",
         captions.append([start, stop, text])
         phrases.append([start, stop, [" ".join(text.split()[:3]).upper()], ["WORD"], scripture.upper()])
         scenes.append({"a": " ".join(text.split()[:4]), "img": f"{key}-scene-{index + 1:02d}.jpg",
-                       "kicker": "PSALM 55:22", "sub": subs[min(index, len(subs) - 1)],
+                       "kicker": "THE WEIGHT" if index == 0 else "PSALM 55:22",
+                       "sub": subs[min(index, len(subs) - 1)],
                        "cam": "push_in", "focus": [0.5, 0.5]})
         start = stop + 1
     return {

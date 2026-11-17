@@ -46,6 +46,9 @@ def test_hooks_stay_honest():
     assert "THE LAST SENTENCE" in prompt
     assert "If you are" in prompt and "worn first three words" in prompt
     assert '[[0, 3,' in prompt and '[[0, 8,' not in prompt
+    assert '"kicker": "STILL HERE"' in prompt
+    assert '"kicker": "PSALM NN:1"' not in prompt
+    assert "never the scripture reference" in prompt
 
 
 def test_length_target_sits_inside_what_the_validator_accepts():
@@ -183,3 +186,28 @@ def test_a_three_word_first_caption_is_a_line_not_a_fragment():
     spec = ss.validate_spec(data)
     assert spec.problems == []
     assert ss.authoring_defects(spec) == []
+
+
+def test_a_verse_citation_as_the_first_picture_is_an_authoring_defect():
+    from tests.test_short_script import good_spec as _raw
+
+    data = _raw()
+    data["scenes"][0]["kicker"] = "PSALM 121:1"
+    spec = ss.validate_spec(data)
+    assert spec.problems == []
+    assert any("scripture citation" in d for d in ss.authoring_defects(spec))
+    data["scenes"][0]["kicker"] = "THE SECRET PLACE"
+    spec = ss.validate_spec(data)
+    assert any("channel's name" in d for d in ss.authoring_defects(spec))
+    data["scenes"][0]["kicker"] = "1 PETER 5:7"
+    spec = ss.validate_spec(data)
+    assert any("scripture citation" in d for d in ss.authoring_defects(spec))
+
+
+def test_a_queued_verse_kicker_still_loads():
+    """285 of 353 specs open the HUD on a book+chapter. They must keep rendering."""
+    from tests.test_short_script import good_spec as _raw
+
+    data = _raw()
+    data["scenes"][0]["kicker"] = "PSALM 121:1"
+    assert ss.validate_spec(data).problems == []

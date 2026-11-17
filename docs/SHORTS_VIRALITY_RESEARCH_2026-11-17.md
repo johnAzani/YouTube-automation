@@ -97,6 +97,41 @@ The figure this expects to move is **average % viewed** on new Shorts, read
 from `content/analytics/` (The Secret Place only, about two days behind).
 A loop looks like 100% or more, as on the four videos in section 2.
 
+## 4b. The first picture was a citation
+
+A Short autoplays. Many viewers have not turned the sound up in the first
+second. The renderer already paints kinetic type at full opacity on frame 0
+(`tools/shorts.py`, "DOCOGA REELS v2 EMBEDDED-COVER LAW"). The HUD card in
+the top-left fades in over 0.42s, so by the time the swipe window is decided
+it is readable.
+
+Counted on the same 353 specs:
+
+| | Count |
+|---|---|
+| Scene-1 kicker is a book+chapter (`PSALM 23:1`, `PROVERBS 16:3`, `1 PETER 5:7`) | **285 of 353** |
+| Scene-1 kicker is the channel's name | 4 |
+| Scene-1 kicker is a need (`GOD IS NEAR`, `A MOMENT OF PEACE`) | 64 |
+| First kinetic phrase is need-language, not a verse | 353 of 353 |
+| First kinetic phrase ends after second 3 | **353 of 353** (median 8s, 11 words) |
+
+The scene example in the prompt was `"kicker": "PSALM NN:1"`. That is what
+the HUD copied. A stranger scrolling past ten channels that all open on a
+reference is looking at a template; YouTube's monetisation review looks for
+the same thing.
+
+Changed with the spoken hook, still only for Shorts written from now on:
+
+- Scene 1 kicker must name the need (2–4 words), not the verse and not the
+  channel. The verse stays on later scenes and on kinetic attribution.
+- The first on-screen phrase must end by second 3 and stay within 8 words,
+  matching caption 1.
+- The JSON example is now `"kicker": "STILL HERE"`.
+
+The HUD fade-in at t=0 was **not** removed. Making it visible on frame 0
+while 285 queued specs still say `PSALM NN:1` would put a citation on the
+first frame of videos already waiting to render.
+
 ## 5. Unproven
 
 - That a three-second first caption raises "% who chose to view". Studio
@@ -106,6 +141,9 @@ A loop looks like 100% or more, as on the four videos in section 2.
   their narration.
 - That naming worn skeletons stops a new one forming. The model may pick
   another three-word start and repeat it.
+- That a need on the HUD instead of a citation raises "% who chose to view".
+  The first kinetic phrase was already need-language; the HUD is smaller and
+  arrives 0.42s later.
 
 ## 6. Owner-only
 

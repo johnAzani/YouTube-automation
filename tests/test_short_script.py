@@ -37,13 +37,18 @@ def good_spec(key="short-psalm121", scripture="Psalm 121"):
         "end": ["SUBSCRIBE", "The Secret Place — prayers every day"],
         "stock_queries": ["moon over calm lake at night"] * 8,
         "scenes": [
-            {"a": "", "img": f"{key}-scene-0{i}.jpg", "kicker": "PSALM 121:1",
-             "sub": "I LIFT MY EYES TO THE HILLS", "cam": "push_in", "focus": [0.5, 0.45]}
+            {"a": "", "img": f"{key}-scene-0{i}.jpg",
+             "kicker": "LIFT YOUR EYES" if i == 1 else "PSALM 121:1",
+             "sub": "TONIGHT" if i == 1 else "I LIFT MY EYES TO THE HILLS",
+             "cam": "push_in", "focus": [0.5, 0.45]}
             for i in range(1, 9)
         ],
         "captions": captions,
         "kinetic_phrases": [
-            [c[0], c[1], ["ON SCREEN LINE"], ["SCREEN"], "PSALM 121"] for c in captions
+            [c[0], c[1],
+             ["LIFT YOUR EYES"] if i == 0 else ["ON SCREEN LINE"],
+             ["EYES"] if i == 0 else ["SCREEN"], "PSALM 121"]
+            for i, c in enumerate(captions)
         ],
         "beats": [{"a": "lift up mine eyes", "kind": "quote", "words": ["MY", "HELP"], "hi": 0, "slot": "C"}],
     }

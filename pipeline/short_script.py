@@ -387,8 +387,8 @@ Return ONLY compact JSON matching this schema, no prose and no code fences:
   "end": ["SUBSCRIBE", "{end_card}"],
   "stock_queries": ["calm mountain lake night", "..."],
   "scenes": [
-    {{"a": "anchor phrase", "img": "{key}-scene-01.jpg", "kicker": "PSALM NN:1",
-      "sub": "SHORT LINE UNDER IT", "cam": "push_in", "focus": [0.5, 0.45]}}
+    {{"a": "anchor phrase", "img": "{key}-scene-01.jpg", "kicker": "STILL HERE",
+      "sub": "THE THING YOU CARRIED", "cam": "push_in", "focus": [0.5, 0.45]}}
   ],
   "captions": [[0, 3, "The thing you carried is still here."], [3, 12, "Second line."]],
   "kinetic_phrases": [[0, 3, ["STILL HERE"], ["HERE"], "PSALM NN : 1"]],
@@ -418,6 +418,12 @@ or swipes in this window (percent who chose to view, then average percent viewed
   "If you are", "Take a deep", "Rise in spirit", "Gather your home",
   "Close your eyes", "Bring every weary", "Welcome".
 - Honest only: no "don't scroll", no "watch to the end", no promised outcome.
+- Scene 1 is the first picture a stranger sees. Its kicker is the need in
+  2-4 words (the weight, the hour, the room), never the scripture reference
+  and never the channel's name. The reference belongs in later scenes and in
+  kinetic attribution. Sub restates the moment, not a greeting.
+- kinetic_phrases[0] uses the same start and end as caption 1 (ends by second
+  {first_end}), and its stacked lines ARE those opening words, not the verse.
 
 THE LAST SENTENCE — the clip restarts itself:
 - Do not speak "subscribe", "follow", or "type amen". The end card already
@@ -475,6 +481,29 @@ WORN_HOOK_PREFIXES = (
 )
 #: How many of the channel's most recent openings the model is shown, to avoid.
 RECENT_OPENINGS_SHOWN = 8
+#: Scene-1 HUD. Counted 17 November 2026 on 353 specs: 285 first kickers were
+#: a book+chapter ("PSALM 23:1", "PROVERBS 16:3"). The prompt's scene example
+#: was ``"kicker": "PSALM NN:1"``. A stranger scrolling a muted autoplay reads
+#: a citation, not a reason to stay. The reference belongs on later scenes.
+VERSE_KICKER_RE = re.compile(
+    r"(?i)^(?:\d+\s+)?(?:"
+    r"psalm|proverbs|isaiah|matthew|mark|luke|john|acts|romans|"
+    r"corinthians|galatians|ephesians|philippians|colossians|"
+    r"thessalonians|timothy|titus|philemon|hebrews|james|peter|"
+    r"jude|revelation|genesis|exodus|leviticus|numbers|deuteronomy|"
+    r"joshua|judges|ruth|samuel|kings|chronicles|ezra|nehemiah|"
+    r"esther|job|ecclesiastes|jeremiah|lamentations|ezekiel|daniel|"
+    r"hosea|joel|amos|obadiah|jonah|micah|nahum|habakkuk|zephaniah|"
+    r"haggai|zechariah|malachi"
+    r")s?\s+\d"
+)
+CHANNEL_KICKER_RE = re.compile(
+    r"(?i)^(?:the\s+)?(?:"
+    r"secret place|morning altar|midday watch|midnight watch|"
+    r"family altar|healing balm|provision table|covenant shield|"
+    r"praise garden|guided path"
+    r")\s*$"
+)
 
 
 def first_sentence(text: str) -> str:
@@ -516,6 +545,32 @@ def authoring_defects(spec: ShortSpec) -> list[str]:
             defects.append(
                 "last caption speaks subscribe; that belongs on the end card "
                 "so the loop can restart"
+            )
+    if spec.scenes:
+        kicker = _norm(spec.scenes[0].get("kicker", ""))
+        if VERSE_KICKER_RE.search(kicker):
+            defects.append(
+                f"scene 1 kicker {kicker!r} is a scripture citation; the first "
+                "picture must name the need, and the verse belongs on later scenes"
+            )
+        if CHANNEL_KICKER_RE.search(kicker):
+            defects.append(
+                f"scene 1 kicker {kicker!r} is the channel's name; a stranger "
+                "scrolling has not come here for the brand"
+            )
+    if spec.kinetic_phrases and len(spec.kinetic_phrases[0]) >= 3:
+        kin_end = spec.kinetic_phrases[0][1]
+        kin_lines = spec.kinetic_phrases[0][2] or []
+        kin_words = " ".join(str(line) for line in kin_lines).split()
+        if isinstance(kin_end, int) and kin_end > MAX_FIRST_CAPTION_END:
+            defects.append(
+                f"first on-screen phrase ends at {kin_end}s; it has to match "
+                f"caption 1 and land by second {MAX_FIRST_CAPTION_END}"
+            )
+        if len(kin_words) > MAX_FIRST_CAPTION_WORDS:
+            defects.append(
+                f"first on-screen phrase is {len(kin_words)} words; keep it to "
+                f"{MAX_FIRST_CAPTION_WORDS} so the first picture is the hook"
             )
     return defects
 
