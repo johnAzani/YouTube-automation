@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T11:52:00Z",
+  "generated_at": "2026-11-17T12:06:53Z",
   "monitor_generated_at": "2026-11-17T10:47:28.214897+00:00",
   "cost_lock": {
     "monthly_cost_usd": 0.0,
@@ -8,12 +8,12 @@
     "channels_total": 10
   },
   "totals": {
-    "published_total": 392,
-    "published_longform": 138,
-    "published_shorts": 254,
-    "public_total": 390,
-    "queued_longform": 57,
-    "queued_shorts": 84,
+    "published_total": 394,
+    "published_longform": 139,
+    "published_shorts": 255,
+    "public_total": 392,
+    "queued_longform": 56,
+    "queued_shorts": 83,
     "automations_ok": 13,
     "automations_total": 13,
     "network_healthy": true
@@ -441,33 +441,33 @@
       "default_privacy": "public",
       "supply_target": 6,
       "counts": {
-        "published_total": 33,
-        "published_longform": 12,
-        "published_shorts": 21,
+        "published_total": 35,
+        "published_longform": 13,
+        "published_shorts": 22,
         "thumbnail_pending": 7,
-        "public_total": 33,
-        "queued_longform": 6,
+        "public_total": 35,
+        "queued_longform": 5,
         "queued_other": 0,
-        "queued_shorts": 9
+        "queued_shorts": 8
       },
       "latest_video": {
-        "id": "SHORT-PROVISION1CORINTHIANS16V9",
-        "title": "Pray This 1 Corinthians 16:9 Prayer for Open Doors & Provision | Many Adversaries #Shorts",
-        "format": "short",
-        "youtube_video_id": "T3_6bSYuEj4",
-        "watch_url": "https://www.youtube.com/shorts/T3_6bSYuEj4",
-        "published_on": "2026-11-17",
-        "published_at": "2026-11-17T07:04:26Z"
-      },
-      "next_queued_longform": {
         "id": "0512",
         "title": "Finding Favour in Your Daily Labor: Ruth 2:12 | The Provision Table",
-        "words": 1897,
+        "format": "longform",
+        "youtube_video_id": "QmxTOVodFR4",
+        "watch_url": "https://youtu.be/QmxTOVodFR4",
+        "published_on": "2026-11-17",
+        "published_at": "2026-11-17T12:06:06Z"
+      },
+      "next_queued_longform": {
+        "id": "0513",
+        "title": "All Grace Abound Toward You: 2 Corinthians 9:8 | The Provision Table",
+        "words": 1974,
         "status": "approved"
       },
       "next_queued_short": {
-        "short": "short-provisionisaiah1v19",
-        "scripture": "Isaiah 1:19",
+        "short": "short-provisionpsalm35v27",
+        "scripture": "Psalm 35:27",
         "target_window_utc": "10:44",
         "status": "approved"
       },
@@ -702,6 +702,30 @@
   ],
   "videos": [
     {
+      "id": "0512",
+      "slug": "finding-favour-in-your-daily-labor-ruth-2-12",
+      "file": "0512-finding-favour-in-your-daily-labor-ruth-2-12.md",
+      "title": "Finding Favour in Your Daily Labor: Ruth 2:12 | The Provision Table",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "longform",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T12:06:06Z",
+      "youtube_video_id": "QmxTOVodFR4",
+      "watch_url": "https://youtu.be/QmxTOVodFR4",
+      "youtu_be_url": "https://youtu.be/QmxTOVodFR4",
+      "shorts_url": "",
+      "studio_url": "https://studio.youtube.com/video/QmxTOVodFR4/edit",
+      "thumb_url": "https://i.ytimg.com/vi/QmxTOVodFR4/hqdefault.jpg",
+      "thumb_text": "A FULL REWARD",
+      "thumbnail_pending": false,
+      "duration_label": "~13 min",
+      "words": 1897
+    },
+    {
       "id": "0807",
       "slug": "when-your-plans-fall-short-proverbs-16-9",
       "file": "0807-when-your-plans-fall-short-proverbs-16-9.md",
@@ -796,6 +820,30 @@
       "thumbnail_pending": false,
       "duration_label": "52s",
       "words": 617
+    },
+    {
+      "id": "SHORT-PROVISIONISAIAH1V19",
+      "slug": "short-provisionisaiah1v19-stewardship-prayer",
+      "file": "short-provisionisaiah1v19-stewardship-prayer.md",
+      "title": "Pray This Isaiah 1:19 Prayer for Open Doors & Provision | Yield Your Heart Today #Shorts",
+      "channel": "prayer7",
+      "channel_name": "The Provision Table",
+      "channel_handle": "@TheProvisionTableDaily",
+      "format": "short",
+      "niche": "faith and prayer",
+      "privacy": "public",
+      "published_on": "2026-11-17",
+      "published_at": "2026-11-17T11:01:35Z",
+      "youtube_video_id": "GWnAMP4qqTE",
+      "watch_url": "https://www.youtube.com/shorts/GWnAMP4qqTE",
+      "youtu_be_url": "https://youtu.be/GWnAMP4qqTE",
+      "shorts_url": "https://www.youtube.com/shorts/GWnAMP4qqTE",
+      "studio_url": "https://studio.youtube.com/video/GWnAMP4qqTE/edit",
+      "thumb_url": "https://i.ytimg.com/vi/GWnAMP4qqTE/hqdefault.jpg",
+      "thumb_text": "IF YE BE \u00b7 WILLING AND OBEDIENT",
+      "thumbnail_pending": false,
+      "duration_label": "52s",
+      "words": 651
     },
     {
       "id": "SHORT-HEALINGHOSEA6V1",
@@ -10594,19 +10642,6 @@
         "words": 1017
       },
       {
-        "id": "0512",
-        "slug": "finding-favour-in-your-daily-labor-ruth-2-12",
-        "file": "0512-finding-favour-in-your-daily-labor-ruth-2-12.md",
-        "title": "Finding Favour in Your Daily Labor: Ruth 2:12 | The Provision Table",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "niche": "faith and prayer",
-        "publishable": true,
-        "target_minutes": 6,
-        "words": 1897
-      },
-      {
         "id": "0513",
         "slug": "all-grace-abound-toward-you-2-corinthians-9-8",
         "file": "0513-all-grace-abound-toward-you-2-corinthians-9-8.md",
@@ -10975,17 +11010,6 @@
         "status": "approved",
         "publishable": true,
         "target_window_utc": "06:14"
-      },
-      {
-        "short": "short-provisionisaiah1v19",
-        "file": "0000-short-provisionisaiah1v19.yml",
-        "companion_longform_id": "",
-        "scripture": "Isaiah 1:19",
-        "channel": "prayer7",
-        "channel_name": "The Provision Table",
-        "status": "approved",
-        "publishable": true,
-        "target_window_utc": "10:44"
       },
       {
         "short": "short-provisionpsalm35v27",
