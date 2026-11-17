@@ -2,9 +2,9 @@
   "alarm_minutes": 240,
   "delivered_late": [
     {
-      "late_minutes": 224,
+      "late_minutes": 309,
       "name": "Weekly metrics snapshot",
-      "ran_at": "2026-11-13T22:25:40+00:00",
+      "ran_at": "2026-11-13T23:50:26+00:00",
       "slot": "2026-11-13T18:41:00+00:00",
       "workflow": "metrics.yml"
     },
@@ -14,18 +14,18 @@
       "ran_at": "2026-11-16T06:51:47+00:00",
       "slot": "2026-11-16T03:23:00+00:00",
       "workflow": "keepalive.yml"
+    },
+    {
+      "late_minutes": 131,
+      "name": "automation-health",
+      "ran_at": "2026-11-17T22:25:42+00:00",
+      "slot": "2026-11-17T20:14:00+00:00",
+      "workflow": "automation-health.yml"
     }
   ],
-  "generated_at": "2026-11-17T19:46:01.788996+00:00",
-  "last_run_at": "2026-11-17T19:45:08+00:00",
+  "generated_at": "2026-11-17T22:26:32.391882+00:00",
+  "last_run_at": "2026-11-17T22:25:42+00:00",
   "on_time": [
-    {
-      "late_minutes": 50,
-      "name": "automation-health",
-      "ran_at": "2026-11-16T21:04:34+00:00",
-      "slot": "2026-11-16T20:14:00+00:00",
-      "workflow": "automation-health.yml"
-    },
     {
       "late_minutes": 90,
       "name": "Channel analytics (watch hours, sources, retention, thumbnails)",
@@ -55,10 +55,10 @@
       "workflow": "growth-autopilot.yml"
     },
     {
-      "late_minutes": 17,
+      "late_minutes": 62,
       "name": "Automation monitor",
-      "ran_at": "2026-11-17T18:40:23+00:00",
-      "slot": "2026-11-17T18:23:00+00:00",
+      "ran_at": "2026-11-17T22:25:42+00:00",
+      "slot": "2026-11-17T21:23:00+00:00",
       "workflow": "monitor.yml"
     },
     {
@@ -76,10 +76,10 @@
       "workflow": "reporting-jobs.yml"
     },
     {
-      "late_minutes": 0,
+      "late_minutes": 38,
       "name": "Scheduler supervisor",
-      "ran_at": "2026-11-17T18:47:21+00:00",
-      "slot": "2026-11-17T18:47:00+00:00",
+      "ran_at": "2026-11-17T22:25:42+00:00",
+      "slot": "2026-11-17T21:47:00+00:00",
       "workflow": "scheduler-supervisor.yml"
     },
     {
