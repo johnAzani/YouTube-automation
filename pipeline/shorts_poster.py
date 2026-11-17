@@ -120,6 +120,25 @@ def grade_for(channel_id: Optional[str] = None) -> str:
     }.get(kind, "night")
 
 
+def plate_grade_name(name: str) -> str:
+    """Which grade a Short's plate will be given, named: ``sanctuary`` or ``blue``.
+
+    This is the whole of the rule the video uses, and it is not the channel's:
+    a scene file whose name contains ``prayer`` or ``psalm`` is graded with
+    ``tools.shorts.grade_sanctuary`` (the night channel's navy), anything else —
+    and every licensed video clip — with ``grade_blue``. Scene files are named
+    after the Short's own key (``short-psalm91-scene-01.jpg``), so a Psalm 91
+    Short wears the navy on every channel and a 1 Peter 5:7 Short wears the
+    documentary blue on every channel, The Secret Place included.
+
+    Kept here so that the rule has one name: the renderer reads it, and
+    ``scripts/channel_protection.py`` counts what it decides over every spec.
+    ``grade_for()`` above is the *poster's* grade, which is the channel's.
+    """
+    lowered = str(name).lower()
+    return "sanctuary" if ("prayer" in lowered or "psalm" in lowered) else "blue"
+
+
 def kicker_for(channel_id: Optional[str] = None) -> str:
     """The ribbon above the lockup, in the channel's own daypart."""
     return brand_for(channel_id).shorts_poster_kicker
@@ -238,8 +257,12 @@ def _duotone(img, shadow, mid, high, blend: float):
     return Image.blend(lifted, duo, blend)
 
 
-#: One plate, three dayparts. The channel's `short_prayer_kind` picks the ramp, so
-#: a sunrise Short is not dressed in the night channel's navy (parity, 2026-11-07).
+#: One plate, ten dayparts — `night`, `dawn`, `noon`, `midnight`, `hearth`,
+#: `balm`, `harvest`, `fortress`, `garden`, `pathway`. The channel's
+#: `short_prayer_kind` picks the ramp, so a sunrise Short's *poster* is not
+#: dressed in the night channel's navy (parity, 2026-11-07). The video frames of
+#: that same Short are not covered by this and are graded by file name instead —
+#: see `plate_grade_name()`.
 _GRADES = {
     "night": {"shadow": (4, 14, 40), "mid": (16, 62, 136), "high": (196, 226, 255),
               "blend": 0.78, "brightness": 0.62, "tint": ((8, 22, 52), 0.45)},

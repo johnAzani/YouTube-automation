@@ -34,7 +34,13 @@ starts and a fix can be shown to have worked:
   unwritten roadmap entries that still name one of them;
 * the photographs the thumbnails fall back to — one cleared 16:9 plate is
   chosen per job by hashing its id, so a small pool puts the same photograph
-  on several channels at once (``pipeline/thumbnail_ctr.py``).
+  on several channels at once (``pipeline/thumbnail_ctr.py``);
+* the colour the frames are given — the thumbnail and the poster are graded per
+  channel, but a Short's video scenes take the night channel's sanctuary grade
+  whenever the scene's file name contains ``prayer`` or ``psalm`` (the names are
+  the Short's own key), every clip is the documentary blue, and every long-form
+  frame is one grade for the whole network
+  (``pipeline/shorts_poster.plate_grade_name``).
 
     python -m scripts.channel_protection          # table, and a step summary in Actions
     python -m scripts.channel_protection --json   # the same as JSON
@@ -136,6 +142,15 @@ class Row:
     frame_titles: int = 0
     frames_used: int = 0
     frame_text: str = ""
+    #: The colour a channel's still images are given, against the colour its
+    #: frames get instead. ``thumb_grade`` / ``poster_grade`` are the channel's
+    #: own (ten distinct); ``scene_sanctuary`` / ``scene_blue`` count the Short
+    #: scenes the file-name rule grades, which is not the channel's
+    #: (``pipeline/shorts_poster.plate_grade_name``).
+    thumb_grade: str = ""
+    poster_grade: str = ""
+    scene_sanctuary: int = 0
+    scene_blue: int = 0
     notes: list[str] = field(default_factory=list)
 
     @property
@@ -373,12 +388,45 @@ def backdrop_plates(*, published_dir: Path | None = None) -> dict:
     }
 
 
+def scene_grades(*, spec_dir: Path | None = None) -> dict[str, list[int]]:
+    """Count each channel's Short scenes by the grade their file name takes.
+
+    ``tools/shorts.prep_plate`` grades a photograph with ``grade_sanctuary`` when
+    its name contains ``prayer`` or ``psalm`` and with ``grade_blue`` otherwise,
+    and the scene files are named after the Short's own key
+    (``short-psalm91-scene-01.jpg``). So this is the colour the channel's frames
+    actually receive, counted from the specs rather than assumed. The rule itself
+    is named once, in ``pipeline/shorts_poster.plate_grade_name`` — the renderer
+    and this count read the same function.
+    """
+    from pipeline.channels import normalize_channel_id
+    from pipeline.shorts_poster import plate_grade_name
+
+    counts: dict[str, list[int]] = defaultdict(lambda: [0, 0])
+    folder = SPEC_DIR if spec_dir is None else Path(spec_dir)
+    for path in sorted(folder.glob("*.json")):
+        try:
+            spec = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        # A spec with no channel is the first channel's, the same convention
+        # `read_receipts` uses — otherwise its scenes silently leave the count.
+        channel = normalize_channel_id(spec.get("channel"))
+        for scene in spec.get("scenes") or []:
+            name = str(scene.get("img") or "")
+            if not name:
+                continue
+            counts[channel][0 if plate_grade_name(name) == "sanctuary" else 1] += 1
+    return counts
+
+
 def measure(*, today: datetime | None = None, published_dir: Path | None = None,
             spec_dir: Path | None = None, queue_dir: Path | None = None,
             shorts_queue_dir: Path | None = None) -> list[Row]:
     from pipeline import title_variety
     from pipeline.channel_capabilities import brand_for, known_channels
     from pipeline.short_release import hook_adds_nothing
+    from pipeline.shorts_poster import grade_for
 
     if queue_dir is None:
         # A caller that names its own published folder is not shown the real queue.
@@ -397,6 +445,7 @@ def measure(*, today: datetime | None = None, published_dir: Path | None = None,
     window = {(now - timedelta(days=n)).strftime("%Y-%m-%d") for n in range(1, RATE_DAYS + 1)}
     receipts = read_receipts(published_dir)
     shared = shared_sentences(spec_dir)
+    grades = scene_grades(spec_dir=spec_dir)
     passage_rows: list | None = None
     ledger = None
 
@@ -405,6 +454,10 @@ def measure(*, today: datetime | None = None, published_dir: Path | None = None,
         brand = brand_for(channel)
         mine = [r for r in receipts if r.channel == channel]
         row = Row(channel=channel, name=brand.display_name)
+        # The colour the stills wear, and the colour the frames are given instead.
+        row.thumb_grade = str(getattr(brand, "ctr_grade", "") or "")
+        row.poster_grade = grade_for(channel)
+        row.scene_sanctuary, row.scene_blue = grades.get(channel, [0, 0])
         row.long_last_day = sum(1 for r in mine if r.day == last_day and not r.short)
         row.shorts_last_day = sum(1 for r in mine if r.day == last_day and r.short)
         active_days = {r.day for r in mine if r.day in window}
@@ -598,6 +651,46 @@ def render(rows: list[Row], network: dict | None = None) -> str:
                 "This is the fallback's worst case, not a count of shipped plates: a "
                 "job with usable footage of its own never reaches it.",
             ]
+    total_sanctuary = sum(row.scene_sanctuary for row in rows)
+    total_scenes = sum(row.scene_sanctuary + row.scene_blue for row in rows)
+    if total_scenes:
+        share = total_sanctuary / total_scenes
+        agree = sum(1 for row in rows
+                    if row.thumb_grade and row.thumb_grade == row.poster_grade)
+        lines += [
+            "",
+            "#### The grades the stills wear, and the colour the frames get",
+            "",
+            "The still images a channel ships are its own: the 16:9 thumbnail reads "
+            "`Brand.ctr_grade` and the 9:16 poster reads `shorts_poster.grade_for`, "
+            "which together give ten distinct grades across ten channels. The frames "
+            "underneath them are not. A Short's photographs take the night channel's "
+            "sanctuary grade whenever the scene's file name contains \"prayer\" or "
+            "\"psalm\" — and the files are named after the Short's own key — so the "
+            "colour follows the passage, not the channel; every licensed clip is the "
+            "documentary blue whichever channel it lands on; and every long-form frame "
+            "is one grade for the network (`pipeline/prayer_visuals.py`). The music "
+            "follows the same rule: `tools/score.py` builds every video's bed from one "
+            "chord progression (`PROG`, Am–F–C–G–Am–Dm–F–E) and `generate_score`'s "
+            "`key` only names the file.",
+            "",
+            "| Channel | Thumbnail grade | Poster grade | Short scenes given the "
+            "sanctuary grade by their file name | Scenes read |",
+            "|---|---|---|---|---|",
+        ]
+        for row in rows:
+            scenes = row.scene_sanctuary + row.scene_blue
+            lines.append(
+                f"| {row.name} | {row.thumb_grade or 'none'} | {row.poster_grade or 'none'} "
+                f"| {row.scene_sanctuary} | {scenes} |")
+        lines += [
+            "",
+            f"{agree} of {len(rows)} channels draw their thumbnail and their poster in "
+            f"the same grade; the frame rule never reads the channel, so frames whose "
+            f"colour is the channel's own: **0 of {len(rows)}**. Of {total_scenes} Short "
+            f"scenes, **{total_sanctuary} ({share:.0%})** take the sanctuary grade "
+            "because of the words in their file name.",
+        ]
     lines += [
         "",
         "#### Long-prayer titles",

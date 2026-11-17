@@ -142,7 +142,17 @@ LUT_R, LUT_G, LUT_B = _duotone_luts()
 
 
 def grade_sanctuary(im):
-    """Luminous cinematic devotional grade for The Secret Place:
+    """Luminous cinematic devotional grade — the network's one *video* grade.
+
+    Read this as "the night channel's grade, worn by everybody". It is applied to
+    every long-form frame (`pipeline/prayer_visuals.py`) and to every Short scene
+    whose file name contains ``prayer`` or ``psalm``
+    (`pipeline/shorts_poster.plate_grade_name`), on all ten channels; nothing of
+    this function varies by channel. The 9:16 posters and the 16:9 thumbnails do
+    have a grade per channel (`pipeline/shorts_poster._GRADES`,
+    `Brand.ctr_grade`), pushed much harder: 78% duotone against this function's
+    16%. Measured on 17 November 2026 in `docs/FRAME_GRADE_AND_SCORE_RESEARCH_2026-11-17.md`.
+
     - Deepens velvet midnight blues in deep shadows
     - Preserves vibrant warm gold, sunset amber, and celestial starlight
     - Adds subtle radiance/bloom to sacred highlights
@@ -247,7 +257,14 @@ def synthetic_plate(scene, key=''):
 
 
 def prep_plate(path, tint_warm=0.0):
-    """Full-bleed 9:16 cover plate (1080x1920) graded in tailored color space."""
+    """Full-bleed 9:16 cover plate (1080x1920) graded in tailored color space.
+
+    The grade is chosen by the file name, not by the channel: see
+    `pipeline.shorts_poster.plate_grade_name` — "prayer"/"psalm" in the name takes
+    the sanctuary grade, anything else the documentary blue. Video clips never
+    come through here and are always `grade_blue` (`read_video_plate`).
+    """
+    from pipeline.shorts_poster import plate_grade_name
     raw = Image.open(path).convert('RGB')
     scale = max(CW / max(1, raw.width), CH / max(1, raw.height))
     sw = max(CW, int(round(raw.width * scale)))
@@ -258,7 +275,7 @@ def prep_plate(path, tint_warm=0.0):
     cropped = resized.crop((x0, y0, x0 + CW, y0 + CH))
     sharpened = cropped.filter(ImageFilter.UnsharpMask(radius=1.0, percent=88, threshold=3))
     fn = os.path.basename(str(path)).lower()
-    if 'prayer' in fn or 'psalm' in fn:
+    if plate_grade_name(fn) == 'sanctuary':
         return grade_sanctuary(sharpened)
     keep_red = 'crash-poster' in fn
     return grade_blue(sharpened, tint_warm=tint_warm, keep_crimson=keep_red)
