@@ -71,6 +71,45 @@ class PrayerVisualTests(unittest.TestCase):
             self.assertGreater(out.stat().st_size, 1000)
             self.assertAlmostEqual(_probe_duration(out), 1, delta=.2)
 
+    def test_the_hud_carries_the_channels_own_name(self):
+        """Every long-form used to wear The Secret Place's name in the corner.
+
+        `render()` took no channel and the HUD's top line was a literal string, so a
+        video on The Midnight Watch read "THE SECRET PLACE" for its whole runtime on
+        the other nine channels. The name is now the channel's own.
+        """
+        from pipeline.prayer_visuals import brand_hud
+        channels = ("secret-place", *(f"prayer{i}" for i in range(2, 11)))
+        huds = {ch: brand_hud(ch) for ch in channels}
+        self.assertEqual(huds["secret-place"], ("THE SECRET PLACE", "PRAYER AND SCRIPTURE"))
+        self.assertEqual(huds["prayer4"][0], "THE MIDNIGHT WATCH")
+        self.assertEqual(len({name for name, _sub in huds.values()}), 10,
+                         "two channels would share one HUD line")
+        self.assertEqual(brand_hud(None), ("THE SECRET PLACE", "PRAYER AND SCRIPTURE"))
+
+    def test_the_renderer_draws_the_hud_it_is_given(self):
+        import subprocess
+        from pipeline.assemble import ffmpeg_bin
+        with TemporaryDirectory() as tmp:
+            p = Path(tmp)
+            Image.new('RGB', (320, 180), (20, 45, 95)).save(p / 'plate.png')
+            subprocess.run([ffmpeg_bin(), '-loglevel', 'error', '-y', '-f', 'lavfi',
+                            '-i', 'sine=frequency=440:duration=1', str(p / 'audio.wav')], check=True)
+            seen = []
+            real = __import__('tools.shorts', fromlist=['hud_chapter_layer']).hud_chapter_layer
+
+            def spy(frame, kicker, sub, *a, **kw):
+                seen.append((kicker, sub))
+                return real(frame, kicker, sub, *a, **kw)
+
+            with patch('tools.shorts.hud_chapter_layer', side_effect=spy):
+                render(p / 'audio.wav', [(p / 'plate.png', 1)], [('Rest.', .1, .9)], 1,
+                       p / 'out.mp4', timing_source='measured', width=320, height=180,
+                       fps=2, hud_kicker='THE MIDNIGHT WATCH')
+            self.assertTrue(seen, "the HUD was never drawn")
+            self.assertTrue(all(k == 'THE MIDNIGHT WATCH' for k, _s in seen), seen[:3])
+            self.assertTrue(all(s == 'PRAYER AND SCRIPTURE' for _k, s in seen))
+
     def test_synthetic_five_minute_video_covers_all_scenes(self):
         import subprocess
         from pipeline.assemble import ffmpeg_bin

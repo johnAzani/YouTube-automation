@@ -17,7 +17,7 @@ from .progress import Heartbeat, emit, stage
 from .gemini_client import Deadline, stage_budget_seconds
 from .gemini_tts import DEFAULT_MODEL, get_gemini_api_key, synthesize_gemini_audio
 from .prayer_alignment import align
-from .prayer_visuals import render
+from .prayer_visuals import brand_hud, render
 from .tts import _probe_duration
 
 
@@ -348,7 +348,8 @@ def produce(path: Path, dry_run: bool, model_dir: Path) -> dict:
             heartbeat = Heartbeat("encode", int(duration * 24))
             final = render(audio, list(zip(assets, durations)), words, duration,
                            out / f'{doc.slug}.mp4', timing_source='measured',
-                           progress=heartbeat.tick)
+                           progress=heartbeat.tick,
+                           hud_kicker=brand_hud(doc.channel)[0])
         # The bedtime channel's prayer is followed by hours of quiet music, so one
         # listener through the night is hours of watch time (pipeline/night_tail.py).
         # The prayer file is never changed; a failure there publishes it as before.

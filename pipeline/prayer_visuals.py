@@ -18,6 +18,28 @@ from .assemble import ffmpeg_bin
 MAX_LINES_PER_CARD = 3   # DOCOGA REELS v2 bold 2-3 line display cards (never 6-line walls)
 LONGFORM_MUSIC_VOLUME = 0.58  # exact Shorts background music mix level (tools/shorts.py)
 
+# The two lines in the HUD card, top-left, for the whole runtime. Until 17 November
+# the first one was the literal string below and nothing on the render path passed a
+# channel, so every long-form on the other nine channels wore The Secret Place's name
+# in the corner of every frame. `brand_hud(channel)` answers per channel now.
+HUD_KICKER = 'THE SECRET PLACE'
+HUD_SUB = 'PRAYER AND SCRIPTURE'
+
+
+def brand_hud(channel: str | None) -> tuple[str, str]:
+    """(the HUD's top line, its second line) for a channel.
+
+    The top line is the channel's own display name, upper-cased; the second line is
+    what the video is, which is true on all ten. An unknown or missing channel keeps
+    the historical strings rather than inventing a name.
+    """
+    if not channel:
+        return HUD_KICKER, HUD_SUB
+    from .channel_capabilities import brand_for
+
+    name = (brand_for(channel).display_name or "").strip().upper()
+    return (name or HUD_KICKER), HUD_SUB
+
 
 def build_prayer_music_score(duration: float, scenes, words, out_dir: Path) -> Path:
     """Synthesize the exact Shorts background music score (`tools/score.py`) for long-form."""
@@ -100,7 +122,8 @@ def sentence_stream(words, *, timing_source):
 
 
 def render(narration: Path, scenes, words, duration: float, output: Path, *,
-           timing_source: str, width=1280, height=720, fps=24, progress=None):
+           timing_source: str, width=1280, height=720, fps=24, progress=None,
+           hud_kicker: str | None = None, hud_sub: str | None = None):
     """Render local scene paths and measured audio. Caller validates licences.
 
     This draft renderer does not generate narration, upload, or modify queue state.
@@ -186,7 +209,8 @@ def render(narration: Path, scenes, words, duration: float, output: Path, *,
                     frame = grade_sanctuary(Image.frombytes('RGB', (width, height), bytes(raw)))
                     t = index / fps
                     frame = camera_frame(frame, (t - scene_start) / seconds, canvas_size=(width, height))
-                    overlay = hud_chapter_layer(frame, 'THE SECRET PLACE', 'PRAYER AND SCRIPTURE',
+                    overlay = hud_chapter_layer(frame, hud_kicker or HUD_KICKER,
+                                                hud_sub or HUD_SUB,
                         scene_index + 1, len(scenes), t - scene_start, seconds, t / duration,
                         is_prayer=True, canvas_size=(width, height))
                     overlay.alpha_composite(kinetic_typography_layer(frame, cards, t, is_prayer=True,
