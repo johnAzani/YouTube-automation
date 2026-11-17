@@ -1,0 +1,320 @@
+{
+  "key": "short-gardenpsalm66v1",
+  "channel": "prayer9",
+  "psalm": 66,
+  "title": [
+    "JOYFUL NOISE",
+    "TO THE LORD"
+  ],
+  "poster": [
+    "A PRAYER",
+    "OF PRAISE",
+    "AND THANKS",
+    "PSALM 66"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glade morning",
+    "golden light over misty lake",
+    "peaceful flowing mountain river",
+    "soft light through pine trees",
+    "gentle breeze in wheat field",
+    "golden hour sunset horizon"
+  ],
+  "scenes": [
+    {
+      "a": "If the weight of this morning feels too heavy to carry alone, please stay here.",
+      "img": "short-gardenpsalm66v1-scene-01.jpg",
+      "kicker": "PSALM 66:1",
+      "sub": "FIND STRENGTH IN HIS PRESENCE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Make a joyful noise unto God, all ye lands:",
+      "img": "short-gardenpsalm66v1-scene-02.jpg",
+      "kicker": "PSALM 66:1",
+      "sub": "A JOYFUL NOISE UNTO GOD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Sing forth the honor of his name: make his praise glorious.",
+      "img": "short-gardenpsalm66v1-scene-03.jpg",
+      "kicker": "PSALM 66:2",
+      "sub": "MAKE HIS PRAISE GLORIOUS",
+      "cam": "pan_left",
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "a": "Say unto God, How terrible art thou in thy works!",
+      "img": "short-gardenpsalm66v1-scene-04.jpg",
+      "kicker": "PSALM 66:3",
+      "sub": "YOUR WORKS ARE WONDERFUL",
+      "cam": "pan_right",
+      "focus": [
+        0.7,
+        0.5
+      ]
+    },
+    {
+      "a": "through the greatness of thy power shall thine enemies submit themselves unto thee.",
+      "img": "short-gardenpsalm66v1-scene-05.jpg",
+      "kicker": "PSALM 66:3",
+      "sub": "THE GREATNESS OF YOUR POWER",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "All the earth shall worship thee, and shall sing unto thee; they shall sing to thy name.",
+      "img": "short-gardenpsalm66v1-scene-06.jpg",
+      "kicker": "PSALM 66:4",
+      "sub": "ALL THE EARTH SHALL WORSHIP",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "If the weight of this morning feels too heavy to carry alone, please stay here."
+    ],
+    [
+      10,
+      22,
+      "Make a joyful noise unto God, all ye lands:"
+    ],
+    [
+      22,
+      34,
+      "Sing forth the honor of his name: make his praise glorious."
+    ],
+    [
+      34,
+      46,
+      "Say unto God, How terrible art thou in thy works!"
+    ],
+    [
+      46,
+      60,
+      "through the greatness of thy power shall thine enemies submit themselves unto thee."
+    ],
+    [
+      60,
+      75,
+      "All the earth shall worship thee, and shall sing unto thee; they shall sing to thy name."
+    ],
+    [
+      75,
+      90,
+      "Lord, my heart is yours today. I trust your hand. Please subscribe to The Praise Garden."
+    ],
+    [
+      90,
+      105,
+      "Let every worry fade as I offer you this sacrifice of genuine, honest thanksgiving, amen."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "WEIGHT OF THE",
+        "MORNING FEELS",
+        "HEAVY ALONE",
+        "STAY HERE"
+      ],
+      [
+        "HEAVY",
+        "STAY HERE"
+      ],
+      "PSALM 66:1"
+    ],
+    [
+      10,
+      22,
+      [
+        "MAKE A",
+        "JOYFUL NOISE",
+        "UNTO GOD",
+        "ALL YE LANDS"
+      ],
+      [
+        "JOYFUL NOISE"
+      ],
+      "PSALM 66:1"
+    ],
+    [
+      22,
+      34,
+      [
+        "SING FORTH THE",
+        "HONOR OF HIS NAME",
+        "MAKE HIS PRAISE",
+        "GLORIOUS"
+      ],
+      [
+        "MAKE HIS PRAISE",
+        "GLORIOUS"
+      ],
+      "PSALM 66:2"
+    ],
+    [
+      34,
+      46,
+      [
+        "SAY UNTO GOD",
+        "HOW TERRIBLE ART",
+        "THOU IN THY",
+        "WORKS"
+      ],
+      [
+        "TERRIBLE ART THOU"
+      ],
+      "PSALM 66:3"
+    ],
+    [
+      46,
+      60,
+      [
+        "THROUGH THE GREATNESS",
+        "OF THY POWER",
+        "SHALL THINE ENEMIES",
+        "SUBMIT"
+      ],
+      [
+        "GREATNESS",
+        "POWER"
+      ],
+      "PSALM 66:3"
+    ],
+    [
+      60,
+      75,
+      [
+        "ALL THE EARTH",
+        "SHALL WORSHIP THEE",
+        "SING UNTO THEE",
+        "SING TO THY NAME"
+      ],
+      [
+        "WORSHIP",
+        "SING"
+      ],
+      "PSALM 66:4"
+    ],
+    [
+      75,
+      90,
+      [
+        "LORD MY HEART",
+        "IS YOURS TODAY",
+        "I TRUST YOU",
+        "SUBSCRIBE NOW"
+      ],
+      [
+        "MY HEART",
+        "TRUST"
+      ],
+      "PSALM 66:4"
+    ],
+    [
+      90,
+      105,
+      [
+        "LET EVERY WORRY",
+        "FADE AS I",
+        "OFFER THANKS",
+        "AMEN"
+      ],
+      [
+        "HONEST",
+        "THANKSGIVING"
+      ],
+      "PSALM 66:4"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the weight of this morning feels too heavy to carry alone, please stay here.",
+      "kind": "phrase",
+      "words": [
+        "STAY",
+        "HERE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Make a joyful noise unto God, all ye lands:",
+      "kind": "phrase",
+      "words": [
+        "JOYFUL",
+        "NOISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Sing forth the honor of his name: make his praise glorious.",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "GLORIOUS"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Say unto God, How terrible art thou in thy works!",
+      "kind": "phrase",
+      "words": [
+        "TERRIBLE",
+        "WORKS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "through the greatness of thy power shall thine enemies submit themselves unto thee.",
+      "kind": "phrase",
+      "words": [
+        "GREATNESS",
+        "POWER"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "All the earth shall worship thee, and shall sing unto thee; they shall sing to thy name.",
+      "kind": "phrase",
+      "words": [
+        "WORSHIP",
+        "SING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 66:1-4"
+}

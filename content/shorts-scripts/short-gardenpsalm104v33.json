@@ -1,0 +1,258 @@
+{
+  "key": "short-gardenpsalm104v33",
+  "channel": "prayer9",
+  "psalm": 104,
+  "title": [
+    "SING PRAISE",
+    "TO THE LORD"
+  ],
+  "poster": [
+    "THE PRAISE GARDEN",
+    "PSALM 104:33",
+    "A PRAYER OF THANKSGIVING",
+    "KJV"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glades peaceful morning light",
+    "misty countryside in soft golden light",
+    "golden light over calm river water",
+    "serene misty valley at sunrise",
+    "peaceful river flowing through green trees",
+    "sunbeams breaking through ancient woodland canopy"
+  ],
+  "scenes": [
+    {
+      "a": "If that quiet whisper of gratitude has been struggling to find its voice today, stay right here.",
+      "img": "short-gardenpsalm104v33-scene-01.jpg",
+      "kicker": "PSALM 104:33",
+      "sub": "A PRAYER OF THANKSGIVING",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Lord God, You have given us breath and life to declare Your goodness.",
+      "img": "short-gardenpsalm104v33-scene-02.jpg",
+      "kicker": "PSALM 104:33",
+      "sub": "SING UNTO THE LORD",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We come before You with honest hearts, choosing to lift our voices in praise no matter the season.",
+      "img": "short-gardenpsalm104v33-scene-03.jpg",
+      "kicker": "PSALM 104:33",
+      "sub": "WHILE I HAVE MY BEING",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "As Your holy word declares in Psalm one hundred and four, verse thirty-three:",
+      "img": "short-gardenpsalm104v33-scene-04.jpg",
+      "kicker": "PSALM 104:33",
+      "sub": "THE WORD OF GOD",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "I will sing unto the LORD as long as I live: I will sing praise to my God while I have my being.",
+      "img": "short-gardenpsalm104v33-scene-05.jpg",
+      "kicker": "PSALM 104:33",
+      "sub": "AS LONG AS I LIVE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.55
+      ]
+    },
+    {
+      "a": "Father, let this song of worship remain upon our lips today.",
+      "img": "short-gardenpsalm104v33-scene-06.jpg",
+      "kicker": "PSALM 104:33",
+      "sub": "PRAISE THE LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      6,
+      "If that quiet whisper of gratitude has been struggling to find its voice today, stay right here."
+    ],
+    [
+      6,
+      12,
+      "Lord God, You have given us breath and life to declare Your goodness."
+    ],
+    [
+      12,
+      19,
+      "We come before You with honest hearts, choosing to lift our voices in praise no matter the season."
+    ],
+    [
+      19,
+      24,
+      "As Your holy word declares in Psalm one hundred and four, verse thirty-three:"
+    ],
+    [
+      24,
+      32,
+      "I will sing unto the LORD as long as I live: I will sing praise to my God while I have my being."
+    ],
+    [
+      32,
+      38,
+      "Father, let this song of worship remain upon our lips today."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      6,
+      [
+        "IF THAT QUIET WHISPER OF",
+        "GRATITUDE HAS BEEN STRUGGLING",
+        "TO FIND ITS VOICE TODAY"
+      ],
+      "GRATITUDE",
+      "PSALM 104 : 33"
+    ],
+    [
+      6,
+      12,
+      [
+        "LORD GOD, YOU HAVE GIVEN US",
+        "BREATH AND LIFE TO DECLARE",
+        "YOUR ENDLESS GOODNESS"
+      ],
+      "GOODNESS",
+      "PSALM 104 : 33"
+    ],
+    [
+      12,
+      19,
+      [
+        "WE COME BEFORE YOU WITH HONEST",
+        "HEARTS, CHOOSING TO LIFT OUR",
+        "VOICES IN PRAISE TODAY"
+      ],
+      "PRAISE",
+      "PSALM 104 : 33"
+    ],
+    [
+      19,
+      24,
+      [
+        "AS YOUR HOLY WORD DECLARES",
+        "IN PSALM ONE HUNDRED AND",
+        "FOUR, VERSE THIRTY-THREE"
+      ],
+      "WORD",
+      "PSALM 104 : 33"
+    ],
+    [
+      24,
+      32,
+      [
+        "I WILL SING UNTO THE LORD",
+        "AS LONG AS I LIVE:",
+        "I WILL SING PRAISE TO MY GOD"
+      ],
+      "SING",
+      "PSALM 104 : 33"
+    ],
+    [
+      32,
+      38,
+      [
+        "FATHER, LET THIS SONG OF",
+        "WORSHIP REMAIN UPON",
+        "OUR LIPS TODAY"
+      ],
+      "WORSHIP",
+      "PSALM 104 : 33"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If that quiet whisper of gratitude has been struggling to find its voice today, stay right here.",
+      "kind": "phrase",
+      "words": [
+        "GRATITUDE",
+        "VOICE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Lord God, You have given us breath and life to declare Your goodness.",
+      "kind": "phrase",
+      "words": [
+        "LORD",
+        "GOODNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We come before You with honest hearts, choosing to lift our voices in praise no matter the season.",
+      "kind": "phrase",
+      "words": [
+        "HONEST",
+        "PRAISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "As Your holy word declares in Psalm one hundred and four, verse thirty-three:",
+      "kind": "phrase",
+      "words": [
+        "HOLY",
+        "WORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "I will sing unto the LORD as long as I live: I will sing praise to my God while I have my being.",
+      "kind": "phrase",
+      "words": [
+        "SING",
+        "PRAISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, let this song of worship remain upon our lips today.",
+      "kind": "phrase",
+      "words": [
+        "SONG",
+        "WORSHIP"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 104:33"
+}

@@ -1,0 +1,277 @@
+{
+  "key": "short-gardenluke1v46",
+  "channel": "prayer9",
+  "psalm": null,
+  "title": [
+    "MY SOUL DOTH MAGNIFY",
+    "THE LORD — LUKE 1:46"
+  ],
+  "poster": [
+    "THE PRAISE GARDEN",
+    "LUKE 1:46-49",
+    "MY SOUL DOTH MAGNIFY",
+    "GOD MY SAVIOR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit forest glade morning mist",
+    "golden light peaceful river valley",
+    "misty countryside sunrise soft rays",
+    "calm forest stream warm sunlight",
+    "golden meadow soft daylight bokeh",
+    "peaceful river sunset golden reflection"
+  ],
+  "scenes": [
+    {
+      "a": "If you feel small and overlooked in your quiet work today, hear God's word.",
+      "img": "short-gardenluke1v46-scene-01.jpg",
+      "kicker": "LUKE 1:46-49",
+      "sub": "MY SOUL DOTH MAGNIFY THE LORD",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "And Mary said, My soul doth magnify the Lord, And my spirit hath rejoiced in God my Savior.",
+      "img": "short-gardenluke1v46-scene-02.jpg",
+      "kicker": "LUKE 1:46-49",
+      "sub": "MY SPIRIT REJOICED IN GOD",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For he hath regarded the low estate of his handmaiden: for, behold, from henceforth all generations shall call me blessed.",
+      "img": "short-gardenluke1v46-scene-03.jpg",
+      "kicker": "LUKE 1:46-49",
+      "sub": "HE HATH REGARDED THE LOW ESTATE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "For he that is mighty hath done to me great things; and holy is his name.",
+      "img": "short-gardenluke1v46-scene-04.jpg",
+      "kicker": "LUKE 1:46-49",
+      "sub": "HE THAT IS MIGHTY HATH DONE GREAT",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Heavenly Father, we praise You for looking upon our humble state with gentle mercy. You perform great wonders in our lives, and Your name is holy forever.",
+      "img": "short-gardenluke1v46-scene-05.jpg",
+      "kicker": "LUKE 1:46-49",
+      "sub": "HOLY IS HIS NAME FOREVER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We magnify Your grace with honest hearts of worship and thanksgiving. Subscribe to join The Praise Garden.",
+      "img": "short-gardenluke1v46-scene-06.jpg",
+      "kicker": "LUKE 1:46-49",
+      "sub": "ENTER HIS GATES WITH PRAISE",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.45
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "If you feel small and overlooked in your quiet work today, hear God's word."
+    ],
+    [
+      7,
+      15,
+      "And Mary said, My soul doth magnify the Lord, And my spirit hath rejoiced in God my Savior."
+    ],
+    [
+      15,
+      23,
+      "For he hath regarded the low estate of his handmaiden: for, behold, from henceforth all generations shall call me blessed."
+    ],
+    [
+      23,
+      30,
+      "For he that is mighty hath done to me great things; and holy is his name."
+    ],
+    [
+      30,
+      37,
+      "Heavenly Father, we praise You for looking upon our humble state with gentle mercy. You perform great wonders in our lives, and Your name is holy forever."
+    ],
+    [
+      37,
+      44,
+      "We magnify Your grace with honest hearts of worship and thanksgiving. Subscribe to join The Praise Garden."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "IF YOU FEEL SMALL",
+        "AND OVERLOOKED TODAY",
+        "HEAR GOD'S WORD"
+      ],
+      [
+        "OVERLOOKED",
+        "GOD'S"
+      ],
+      "LUKE 1 : 46-49"
+    ],
+    [
+      7,
+      15,
+      [
+        "MY SOUL DOTH MAGNIFY",
+        "THE LORD AND MY SPIRIT",
+        "REJOICED IN GOD MY SAVIOR"
+      ],
+      [
+        "MAGNIFY",
+        "SAVIOR"
+      ],
+      "LUKE 1 : 46-49"
+    ],
+    [
+      15,
+      23,
+      [
+        "HE HATH REGARDED",
+        "THE LOW ESTATE ALL GENERATIONS",
+        "SHALL CALL ME BLESSED"
+      ],
+      [
+        "REGARDED",
+        "BLESSED"
+      ],
+      "LUKE 1 : 46-49"
+    ],
+    [
+      23,
+      30,
+      [
+        "HE THAT IS MIGHTY",
+        "HATH DONE TO ME GREAT",
+        "THINGS AND HOLY IS HIS NAME"
+      ],
+      [
+        "MIGHTY",
+        "GREAT"
+      ],
+      "LUKE 1 : 46-49"
+    ],
+    [
+      30,
+      37,
+      [
+        "HEAVENLY FATHER WE PRAISE YOU",
+        "FOR LOOKING UPON US",
+        "WITH GENTLE MERCY"
+      ],
+      [
+        "HUMBLE",
+        "MERCY"
+      ],
+      "LUKE 1 : 46-49"
+    ],
+    [
+      37,
+      44,
+      [
+        "WE MAGNIFY YOUR GRACE",
+        "WITH HONEST HEARTS",
+        "SUBSCRIBE TO JOIN",
+        "THE PRAISE GARDEN"
+      ],
+      [
+        "MAGNIFY",
+        "THANKSGIVING"
+      ],
+      "LUKE 1 : 46-49"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you feel small and overlooked in your quiet work today, hear God's word.",
+      "kind": "phrase",
+      "words": [
+        "OVERLOOKED",
+        "GOD'S"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "And Mary said, My soul doth magnify the Lord, And my spirit hath rejoiced in God my Savior.",
+      "kind": "phrase",
+      "words": [
+        "MAGNIFY",
+        "SAVIOR"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For he hath regarded the low estate of his handmaiden: for, behold, from henceforth all generations shall call me blessed.",
+      "kind": "phrase",
+      "words": [
+        "REGARDED",
+        "BLESSED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "For he that is mighty hath done to me great things; and holy is his name.",
+      "kind": "phrase",
+      "words": [
+        "MIGHTY",
+        "GREAT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Heavenly Father, we praise You for looking upon our humble state with gentle mercy. You perform great wonders in our lives, and Your name is holy forever.",
+      "kind": "phrase",
+      "words": [
+        "HUMBLE",
+        "MERCY"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "We magnify Your grace with honest hearts of worship and thanksgiving. Subscribe to join The Praise Garden.",
+      "kind": "phrase",
+      "words": [
+        "MAGNIFY",
+        "THANKSGIVING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Luke 1:46-49"
+}

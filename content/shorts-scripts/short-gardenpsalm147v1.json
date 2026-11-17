@@ -1,0 +1,288 @@
+{
+  "key": "short-gardenpsalm147v1",
+  "channel": "prayer9",
+  "psalm": 147,
+  "title": [
+    "SING PRAISES TO GOD",
+    "IT IS GOOD AND PLEASANT"
+  ],
+  "poster": [
+    "IT IS GOOD TO SING",
+    "PRAISES UNTO OUR GOD",
+    "PRAISE IS COMELY",
+    "PSALM 147:1"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Praise Garden — enter His gates with thanksgiving"
+  ],
+  "stock_queries": [
+    "sunlit kitchen window peaceful garden light",
+    "misty countryside sunlit forest glade soft morning light",
+    "golden light over calm lake peaceful nature",
+    "sunbeams breaking through forest trees calm landscape",
+    "peaceful river flowing through green sunlit valley",
+    "golden sunset over tranquil meadow gentle breeze"
+  ],
+  "scenes": [
+    {
+      "a": "Right now, in this quiet kitchen after a long day, lift your heart in praise.",
+      "img": "short-gardenpsalm147v1-scene-01.jpg",
+      "kicker": "PSALM 147:1",
+      "sub": "LIFT YOUR HEART IN PRAISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "Praise ye the LORD: for it is good to sing praises unto our God; for it is pleasant; and praise is comely.",
+      "img": "short-gardenpsalm147v1-scene-02.jpg",
+      "kicker": "PSALM 147:1",
+      "sub": "IT IS GOOD TO SING PRAISES",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Father, we thank You for Your endless grace that restores our weary souls.",
+      "img": "short-gardenpsalm147v1-scene-03.jpg",
+      "kicker": "THANKFUL HEART",
+      "sub": "ENDLESS RESTORING GRACE",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "a": "Even when our spirit feels tired, declaring Your goodness brings light into the dark places.",
+      "img": "short-gardenpsalm147v1-scene-04.jpg",
+      "kicker": "DECLARING GOODNESS",
+      "sub": "LIGHT IN DARK PLACES",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Singing to You is pleasant, beautiful, and right. We offer You our simple gratitude for every unseen mercy You have provided.",
+      "img": "short-gardenpsalm147v1-scene-05.jpg",
+      "kicker": "SIMPLE GRATITUDE",
+      "sub": "FOR EVERY UNSEEN MERCY",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.4
+      ]
+    },
+    {
+      "a": "May praise constantly overflow from this heart today. Subscribe to join our garden of praise.",
+      "img": "short-gardenpsalm147v1-scene-06.jpg",
+      "kicker": "THE PRAISE GARDEN",
+      "sub": "ENTER HIS GATES WITH PRAISE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      7,
+      "Right now, in this quiet kitchen after a long day, lift your heart in praise."
+    ],
+    [
+      7,
+      17,
+      "Praise ye the LORD: for it is good to sing praises unto our God; for it is pleasant; and praise is comely."
+    ],
+    [
+      17,
+      25,
+      "Father, we thank You for Your endless grace that restores our weary souls."
+    ],
+    [
+      25,
+      33,
+      "Even when our spirit feels tired, declaring Your goodness brings light into the dark places."
+    ],
+    [
+      33,
+      45,
+      "Singing to You is pleasant, beautiful, and right. We offer You our simple gratitude for every unseen mercy You have provided."
+    ],
+    [
+      45,
+      53,
+      "May praise constantly overflow from this heart today. Subscribe to join our garden of praise."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      7,
+      [
+        "RIGHT NOW IN THIS QUIET KITCHEN",
+        "AFTER A LONG DAY",
+        "LIFT YOUR HEART IN PRAISE"
+      ],
+      [
+        "PRAISE"
+      ],
+      "PSALM 147 : 1"
+    ],
+    [
+      7,
+      17,
+      [
+        "PRAISE YE THE LORD",
+        "FOR IT IS GOOD TO SING PRAISES",
+        "UNTO OUR GOD FOR IT IS PLEASANT",
+        "AND PRAISE IS COMELY"
+      ],
+      [
+        "PRAISE",
+        "PLEASANT",
+        "COMELY"
+      ],
+      "PSALM 147 : 1"
+    ],
+    [
+      17,
+      25,
+      [
+        "FATHER WE THANK YOU",
+        "FOR YOUR ENDLESS GRACE",
+        "THAT RESTORES OUR WEARY SOULS"
+      ],
+      [
+        "ENDLESS GRACE"
+      ],
+      "PSALM 147 : 1"
+    ],
+    [
+      25,
+      33,
+      [
+        "EVEN WHEN OUR SPIRIT FEELS TIRED",
+        "DECLARING YOUR GOODNESS",
+        "BRINGS LIGHT INTO DARK PLACES"
+      ],
+      [
+        "GOODNESS",
+        "LIGHT"
+      ],
+      "PSALM 147 : 1"
+    ],
+    [
+      33,
+      45,
+      [
+        "SINGING TO YOU IS BEAUTIFUL AND RIGHT",
+        "WE OFFER OUR SIMPLE GRATITUDE",
+        "FOR EVERY UNSEEN MERCY"
+      ],
+      [
+        "GRATITUDE",
+        "MERCY"
+      ],
+      "PSALM 147 : 1"
+    ],
+    [
+      45,
+      53,
+      [
+        "MAY PRAISE OVERFLOW TODAY",
+        "SUBSCRIBE TO JOIN OUR",
+        "GARDEN OF PRAISE"
+      ],
+      [
+        "SUBSCRIBE",
+        "PRAISE"
+      ],
+      "PSALM 147 : 1"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "Right now, in this quiet kitchen after a long day, lift your heart in praise.",
+      "kind": "phrase",
+      "words": [
+        "LIFT",
+        "YOUR",
+        "HEART",
+        "IN",
+        "PRAISE"
+      ],
+      "hi": 4,
+      "slot": "C"
+    },
+    {
+      "a": "Praise ye the LORD: for it is good to sing praises unto our God; for it is pleasant; and praise is comely.",
+      "kind": "phrase",
+      "words": [
+        "PRAISE",
+        "YE",
+        "THE",
+        "LORD"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Father, we thank You for Your endless grace that restores our weary souls.",
+      "kind": "phrase",
+      "words": [
+        "YOUR",
+        "ENDLESS",
+        "GRACE"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Even when our spirit feels tired, declaring Your goodness brings light into the dark places.",
+      "kind": "phrase",
+      "words": [
+        "DECLARING",
+        "YOUR",
+        "GOODNESS"
+      ],
+      "hi": 2,
+      "slot": "C"
+    },
+    {
+      "a": "Singing to You is pleasant, beautiful, and right. We offer You our simple gratitude for every unseen mercy You have provided.",
+      "kind": "phrase",
+      "words": [
+        "SIMPLE",
+        "GRATITUDE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "May praise constantly overflow from this heart today. Subscribe to join our garden of praise.",
+      "kind": "phrase",
+      "words": [
+        "SUBSCRIBE",
+        "TO",
+        "JOIN",
+        "OUR",
+        "GARDEN",
+        "OF",
+        "PRAISE"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 147:1"
+}
