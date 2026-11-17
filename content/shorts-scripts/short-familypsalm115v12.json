@@ -1,0 +1,224 @@
+{
+  "key": "short-familypsalm115v12",
+  "channel": "prayer5",
+  "psalm": 115,
+  "title": [
+    "A PRAYER FOR",
+    "YOUR HOUSEHOLD"
+  ],
+  "poster": [
+    "HIS MINDFULNESS",
+    "UPON YOUR HOME",
+    "A PROMISE KEPT",
+    "FOR YOUR LINEAGE"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit table with open bible",
+    "peaceful countryside cottage golden hour",
+    "soft focus olive branch on wooden table",
+    "evening light through window blinds",
+    "candlelight flickering on wooden surface",
+    "serene rural landscape at dusk"
+  ],
+  "scenes": [
+    {
+      "a": "If you are worried that your efforts to raise your family are going unnoticed, hear this.",
+      "img": "short-familypsalm115v12-scene-01.jpg",
+      "kicker": "PSALM 115:12",
+      "sub": "HE IS MINDFUL OF YOU",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The LORD hath been mindful of us: he will bless us; he will bless the house of Israel; he will bless the house of Aaron.",
+      "img": "short-familypsalm115v12-scene-02.jpg",
+      "kicker": "PSALM 115:12",
+      "sub": "HIS BLESSING REMAINS",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "He will bless them that fear the LORD, both small and great.",
+      "img": "short-familypsalm115v12-scene-03.jpg",
+      "kicker": "PSALM 115:13",
+      "sub": "BOTH SMALL AND GREAT",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "The LORD shall increase you more and more, you and your children.",
+      "img": "short-familypsalm115v12-scene-04.jpg",
+      "kicker": "PSALM 115:14",
+      "sub": "INCREASE UPON YOUR CHILDREN",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Ye are blessed of the LORD which made heaven and earth.",
+      "img": "short-familypsalm115v12-scene-05.jpg",
+      "kicker": "PSALM 115:15",
+      "sub": "MAKER OF HEAVEN AND EARTH",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, anchor our home in this truth and keep our hearts set on your eternal goodness.",
+      "img": "short-familypsalm115v12-scene-06.jpg",
+      "kicker": "A PRAYER OF FAITH",
+      "sub": "SUBSCRIBE TO JOIN US",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "If you are worried that your efforts to raise your family are going unnoticed, hear this."
+    ],
+    [
+      11,
+      26,
+      "The LORD hath been mindful of us: he will bless us; he will bless the house of Israel; he will bless the house of Aaron."
+    ],
+    [
+      27,
+      39,
+      "He will bless them that fear the LORD, both small and great."
+    ],
+    [
+      40,
+      52,
+      "The LORD shall increase you more and more, you and your children."
+    ],
+    [
+      53,
+      65,
+      "Ye are blessed of the LORD which made heaven and earth."
+    ],
+    [
+      66,
+      80,
+      "Lord, anchor our home in this truth and keep our hearts set on your eternal goodness."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "EFFORTS TO RAISE",
+        "YOUR FAMILY ARE",
+        "NOT GOING UNNOTICED",
+        "HEAR THIS TRUTH"
+      ],
+      [
+        "NOT GOING UNNOTICED"
+      ],
+      "PSALM 115:12"
+    ],
+    [
+      11,
+      26,
+      [
+        "THE LORD HATH BEEN",
+        "MINDFUL OF US",
+        "HE WILL BLESS US",
+        "THE HOUSE OF AARON"
+      ],
+      [
+        "MINDFUL OF US"
+      ],
+      "PSALM 115:12"
+    ],
+    [
+      27,
+      39,
+      [
+        "HE WILL BLESS THEM",
+        "THAT FEAR THE LORD",
+        "BOTH SMALL AND GREAT"
+      ],
+      [
+        "SMALL AND GREAT"
+      ],
+      "PSALM 115:13"
+    ],
+    [
+      40,
+      52,
+      [
+        "THE LORD SHALL",
+        "INCREASE YOU",
+        "MORE AND MORE",
+        "YOU AND YOUR CHILDREN"
+      ],
+      [
+        "INCREASE YOU"
+      ],
+      "PSALM 115:14"
+    ],
+    [
+      53,
+      65,
+      [
+        "YE ARE BLESSED",
+        "OF THE LORD",
+        "WHICH MADE HEAVEN",
+        "AND EARTH"
+      ],
+      [
+        "YE ARE BLESSED"
+      ],
+      "PSALM 115:15"
+    ],
+    [
+      66,
+      80,
+      [
+        "ANCHOR OUR HOME",
+        "IN THIS TRUTH",
+        "KEEP OUR HEARTS",
+        "SET ON GOODNESS"
+      ],
+      [
+        "ANCHOR OUR HOME"
+      ],
+      "PSALM 115:15"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are worried that your efforts to raise your family are going unnoticed, hear this.",
+      "kind": "phrase",
+      "words": [
+        "NOT GOING UNNOTICED"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Psalm 115:12-15"
+}

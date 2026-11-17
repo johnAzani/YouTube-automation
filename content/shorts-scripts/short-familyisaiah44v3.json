@@ -1,0 +1,221 @@
+{
+  "key": "short-familyisaiah44v3",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "ISAIAH 44:3",
+    "BLESSING UPON OFFSPRING"
+  ],
+  "poster": [
+    "A PRAYER FOR",
+    "YOUR HOME",
+    "AND YOUR",
+    "CHILDREN"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm lamp lit kitchen table with open bible",
+    "soft morning sunlight hitting olive branches",
+    "peaceful countryside home view at dawn",
+    "gentle flowing stream through forest",
+    "cozy living room with fireplace glow",
+    "macro shot of green leaves with dew"
+  ],
+  "scenes": [
+    {
+      "a": "If you are weary of the spiritual dryness in your household right now, hear this.",
+      "img": "short-familyisaiah44v3-scene-01.jpg",
+      "kicker": "ISAIAH 44:3",
+      "sub": "GOD POURS OUT HIS SPIRIT",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For I will pour water upon him that is thirsty, and floods upon the dry ground: I will pour my spirit upon thy seed, and my blessing upon thine offspring:",
+      "img": "short-familyisaiah44v3-scene-02.jpg",
+      "kicker": "HIS PROMISE",
+      "sub": "WATER UPON THE THIRSTY",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Lord, we lift up every dry place within our family dynamic, trusting in your living water.",
+      "img": "short-familyisaiah44v3-scene-03.jpg",
+      "kicker": "FAITHFULNESS",
+      "sub": "HE HEARS YOUR PRAYERS",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May your presence refresh the hearts of our children and sustain them through every season.",
+      "img": "short-familyisaiah44v3-scene-04.jpg",
+      "kicker": "GUIDANCE",
+      "sub": "BLESSING UPON YOUR SEED",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "Let your spirit be the atmosphere of our home, guiding every decision and conversation today.",
+      "img": "short-familyisaiah44v3-scene-05.jpg",
+      "kicker": "HOPE",
+      "sub": "LET HIS SPIRIT FLOW",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "We rest in your faithfulness, believing that your blessing reaches deep into our family future.",
+      "img": "short-familyisaiah44v3-scene-06.jpg",
+      "kicker": "REST",
+      "sub": "SUBSCRIBE FOR MORE",
+      "cam": "pan_right",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      10,
+      "If you are weary of the spiritual dryness in your household right now, hear this."
+    ],
+    [
+      10,
+      30,
+      "For I will pour water upon him that is thirsty, and floods upon the dry ground: I will pour my spirit upon thy seed, and my blessing upon thine offspring:"
+    ],
+    [
+      30,
+      45,
+      "Lord, we lift up every dry place within our family dynamic, trusting in your living water."
+    ],
+    [
+      45,
+      60,
+      "May your presence refresh the hearts of our children and sustain them through every season."
+    ],
+    [
+      60,
+      75,
+      "Let your spirit be the atmosphere of our home, guiding every decision and conversation today."
+    ],
+    [
+      75,
+      90,
+      "We rest in your faithfulness, believing that your blessing reaches deep into our family future."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      10,
+      [
+        "SPIRITUAL DRYNESS",
+        "IN YOUR",
+        "HOUSEHOLD"
+      ],
+      [
+        "SPIRITUAL DRYNESS"
+      ],
+      "ISAIAH 44:3"
+    ],
+    [
+      10,
+      30,
+      [
+        "POUR WATER",
+        "UPON THY SEED",
+        "AND BLESSING"
+      ],
+      [
+        "POUR WATER",
+        "THY SEED"
+      ],
+      "ISAIAH 44:3"
+    ],
+    [
+      30,
+      45,
+      [
+        "LIFT UP",
+        "DRY PLACES",
+        "TRUSTING GOD"
+      ],
+      [
+        "DRY PLACES"
+      ],
+      "ISAIAH 44:3"
+    ],
+    [
+      45,
+      60,
+      [
+        "REFRESH",
+        "HEARTS OF",
+        "CHILDREN"
+      ],
+      [
+        "REFRESH"
+      ],
+      "ISAIAH 44:3"
+    ],
+    [
+      60,
+      75,
+      [
+        "SPIRIT",
+        "OF OUR",
+        "HOME"
+      ],
+      [
+        "SPIRIT"
+      ],
+      "ISAIAH 44:3"
+    ],
+    [
+      75,
+      90,
+      [
+        "BLESSING",
+        "REACHES",
+        "FAMILY FUTURE"
+      ],
+      [
+        "BLESSING"
+      ],
+      "ISAIAH 44:3"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If you are weary of the spiritual dryness in your household right now, hear this.",
+      "kind": "phrase",
+      "words": [
+        "SPIRITUAL",
+        "DRYNESS"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Isaiah 44:3"
+}

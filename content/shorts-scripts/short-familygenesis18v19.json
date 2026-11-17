@@ -1,0 +1,221 @@
+{
+  "key": "short-familygenesis18v19",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "LEAD YOUR HOME",
+    "IN GOD'S WAY"
+  ],
+  "poster": [
+    "A PRAYER FOR",
+    "YOUR HOUSEHOLD",
+    "ROOTED IN",
+    "GENESIS 18:19"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "warm golden lamp on rustic wooden table",
+    "open bible with olive branch on linen cloth",
+    "peaceful countryside home window at sunset",
+    "soft evening light illuminating a quiet room",
+    "blurry cozy living room with soft shadows",
+    "intimate home corner with scripture lighting"
+  ],
+  "scenes": [
+    {
+      "a": "If the heavy weight of raising your children in truth feels overwhelming today, please listen.",
+      "img": "short-familygenesis18v19-scene-01.jpg",
+      "kicker": "GENESIS 18:19",
+      "sub": "LEAD YOUR HOUSEHOLD IN FAITH",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    {
+      "a": "We turn our hearts to the instruction given to Abraham regarding his own family legacy.",
+      "img": "short-familygenesis18v19-scene-02.jpg",
+      "kicker": "GENESIS 18:19",
+      "sub": "A LEGACY OF FAITH",
+      "cam": "pan_left",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "For I know him, that he will command his children and his household after him, and they shall keep the way of the LORD, to do justice and judgment; that the LORD may bring upon Abraham that which he hath spoken of him.",
+      "img": "short-familygenesis18v19-scene-03.jpg",
+      "kicker": "GENESIS 18:19",
+      "sub": "THE LORD'S ETERNAL WAY",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "a": "Lord, grant us that same steady resolve to keep our homes centered upon Your path.",
+      "img": "short-familygenesis18v19-scene-04.jpg",
+      "kicker": "GENESIS 18:19",
+      "sub": "STEADY RESOLVE",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Help us to speak truth with justice and to lead our loved ones toward You.",
+      "img": "short-familygenesis18v19-scene-05.jpg",
+      "kicker": "GENESIS 18:19",
+      "sub": "LEAD IN TRUTH",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "May our families walk in Your light all our days, anchored in Your holy promise.",
+      "img": "short-familygenesis18v19-scene-06.jpg",
+      "kicker": "GENESIS 18:19",
+      "sub": "ANCHORED IN PROMISE",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      12,
+      "If the heavy weight of raising your children in truth feels overwhelming today, please listen."
+    ],
+    [
+      12,
+      23,
+      "We turn our hearts to the instruction given to Abraham regarding his own family legacy."
+    ],
+    [
+      23,
+      50,
+      "For I know him, that he will command his children and his household after him, and they shall keep the way of the LORD, to do justice and judgment; that the LORD may bring upon Abraham that which he hath spoken of him."
+    ],
+    [
+      50,
+      68,
+      "Lord, grant us that same steady resolve to keep our homes centered upon Your path."
+    ],
+    [
+      68,
+      85,
+      "Help us to speak truth with justice and to lead our loved ones toward You."
+    ],
+    [
+      85,
+      105,
+      "May our families walk in Your light all our days, anchored in Your holy promise."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      12,
+      [
+        "HEAVY WEIGHT OF",
+        "RAISING CHILDREN IN",
+        "TRUTH FEELS OVERWHELMING"
+      ],
+      [
+        "TRUTH"
+      ],
+      "GENESIS 18:19"
+    ],
+    [
+      12,
+      23,
+      [
+        "HEARTS TURNED TO",
+        "ABRAHAM'S LEGACY",
+        "FOR HIS FAMILY"
+      ],
+      [
+        "LEGACY"
+      ],
+      "GENESIS 18:19"
+    ],
+    [
+      23,
+      50,
+      [
+        "COMMAND HIS CHILDREN",
+        "KEEP THE WAY OF",
+        "THE LORD TO DO",
+        "JUSTICE AND JUDGMENT"
+      ],
+      [
+        "JUSTICE"
+      ],
+      "GENESIS 18:19"
+    ],
+    [
+      50,
+      68,
+      [
+        "GRANT US RESOLVE",
+        "TO KEEP OUR HOMES",
+        "CENTERED ON THE PATH"
+      ],
+      [
+        "RESOLVE"
+      ],
+      "GENESIS 18:19"
+    ],
+    [
+      68,
+      85,
+      [
+        "HELP US SPEAK TRUTH",
+        "AND LEAD OUR LOVED",
+        "ONES TOWARD YOU"
+      ],
+      [
+        "TRUTH"
+      ],
+      "GENESIS 18:19"
+    ],
+    [
+      85,
+      105,
+      [
+        "WALK IN LIGHT",
+        "ANCHORED IN YOUR",
+        "HOLY PROMISE"
+      ],
+      [
+        "PROMISE"
+      ],
+      "GENESIS 18:19"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "If the heavy weight of raising your children in truth feels overwhelming today, please listen.",
+      "kind": "phrase",
+      "words": [
+        "TRUTH",
+        "OVERWHELMING"
+      ],
+      "hi": 0,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Genesis 18:19"
+}

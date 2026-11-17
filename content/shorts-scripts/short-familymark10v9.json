@@ -1,0 +1,330 @@
+{
+  "key": "short-familymark10v9",
+  "channel": "prayer5",
+  "psalm": null,
+  "title": [
+    "GOD HATH JOINED",
+    "MARK 10:9 PRAYER"
+  ],
+  "poster": [
+    "WHAT GOD HAS JOINED",
+    "LET NO ONE DIVIDE",
+    "A PRAYER FOR MARRIAGE",
+    "THE FAMILY ALTAR"
+  ],
+  "end": [
+    "SUBSCRIBE",
+    "The Family Altar — cover your home in prayer"
+  ],
+  "stock_queries": [
+    "dimly lit living room warm lamp soft atmosphere cozy evening home",
+    "open holy bible on warm wooden table with soft candle illumination",
+    "olive branch on old open scriptures lit by warm lamp light",
+    "peaceful rustic house window glowing warmly at twilight countryside",
+    "warm glowing lanterns on wooden dining table home interior",
+    "serene cottage kitchen warm morning light peaceful home atmosphere",
+    "quiet evening living room warm fireplace hearth serene prayer atmosphere"
+  ],
+  "scenes": [
+    {
+      "a": "When hard silence settles between husband and wife, let this truth cover your home.",
+      "img": "short-familymark10v9-scene-01.jpg",
+      "kicker": "MARK 10:9",
+      "sub": "LET THIS TRUTH COVER YOUR HOME",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "God's word declares: What therefore God hath joined together, let not man put asunder.",
+      "img": "short-familymark10v9-scene-02.jpg",
+      "kicker": "MARK 10:9",
+      "sub": "WHAT GOD HATH JOINED TOGETHER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    {
+      "a": "Lord, protect the sacred covenant of marriage binding this home today.",
+      "img": "short-familymark10v9-scene-03.jpg",
+      "kicker": "MARK 10:9",
+      "sub": "PROTECT THIS SACRED COVENANT",
+      "cam": "pan_right",
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "a": "Where weariness, misunderstanding, or bitterness seeks to divide, pour out your renewing grace.",
+      "img": "short-familymark10v9-scene-04.jpg",
+      "kicker": "MARK 10:9",
+      "sub": "POUR OUT YOUR RENEWING GRACE",
+      "cam": "tilt_up",
+      "focus": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "a": "Soften quiet hearts, restore gentle affection, and rebuild what human effort cannot sustain.",
+      "img": "short-familymark10v9-scene-05.jpg",
+      "kicker": "MARK 10:9",
+      "sub": "RESTORE GENTLE AFFECTION",
+      "cam": "pan_left",
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    {
+      "a": "Shield this household from every unseen wedge, and knit these lives together in unbreakable peace.",
+      "img": "short-familymark10v9-scene-06.jpg",
+      "kicker": "MARK 10:9",
+      "sub": "KNIT THESE LIVES TOGETHER",
+      "cam": "push_in",
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "a": "May your holy presence anchor every room and keep this family standing in true unity. Subscribe to join us in covering your home in daily prayer.",
+      "img": "short-familymark10v9-scene-07.jpg",
+      "kicker": "MARK 10:9",
+      "sub": "COVER YOUR HOME IN PRAYER",
+      "cam": "pull_out",
+      "focus": [
+        0.5,
+        0.4
+      ]
+    }
+  ],
+  "captions": [
+    [
+      0,
+      8,
+      "When hard silence settles between husband and wife, let this truth cover your home."
+    ],
+    [
+      8,
+      17,
+      "God's word declares: What therefore God hath joined together, let not man put asunder."
+    ],
+    [
+      17,
+      26,
+      "Lord, protect the sacred covenant of marriage binding this home today."
+    ],
+    [
+      26,
+      35,
+      "Where weariness, misunderstanding, or bitterness seeks to divide, pour out your renewing grace."
+    ],
+    [
+      35,
+      44,
+      "Soften quiet hearts, restore gentle affection, and rebuild what human effort cannot sustain."
+    ],
+    [
+      44,
+      52,
+      "Shield this household from every unseen wedge, and knit these lives together in unbreakable peace."
+    ],
+    [
+      52,
+      58,
+      "May your holy presence anchor every room and keep this family standing in true unity. Subscribe to join us in covering your home in daily prayer."
+    ]
+  ],
+  "kinetic_phrases": [
+    [
+      0,
+      8,
+      [
+        "WHEN HARD SILENCE",
+        "SETTLES BETWEEN HUSBAND",
+        "AND WIFE LET THIS TRUTH",
+        "COVER YOUR HOME"
+      ],
+      [
+        "SILENCE",
+        "TRUTH",
+        "HOME"
+      ],
+      "MARK 10 : 9"
+    ],
+    [
+      8,
+      17,
+      [
+        "GOD'S WORD DECLARES",
+        "WHAT THEREFORE GOD HATH",
+        "JOINED TOGETHER LET NOT",
+        "MAN PUT ASUNDER"
+      ],
+      [
+        "GOD",
+        "JOINED",
+        "TOGETHER"
+      ],
+      "MARK 10 : 9"
+    ],
+    [
+      17,
+      26,
+      [
+        "LORD PROTECT THE SACRED",
+        "COVENANT OF MARRIAGE",
+        "BINDING THIS HOME TODAY"
+      ],
+      [
+        "PROTECT",
+        "SACRED",
+        "COVENANT"
+      ],
+      "MARK 10 : 9"
+    ],
+    [
+      26,
+      35,
+      [
+        "WHERE WEARINESS MISUNDERSTANDING",
+        "OR BITTERNESS SEEKS TO DIVIDE",
+        "POUR OUT YOUR RENEWING GRACE"
+      ],
+      [
+        "POUR",
+        "RENEWING",
+        "GRACE"
+      ],
+      "MARK 10 : 9"
+    ],
+    [
+      35,
+      44,
+      [
+        "SOFTEN QUIET HEARTS",
+        "RESTORE GENTLE AFFECTION",
+        "AND REBUILD WHAT HUMAN",
+        "EFFORT CANNOT SUSTAIN"
+      ],
+      [
+        "SOFTEN",
+        "RESTORE",
+        "AFFECTION"
+      ],
+      "MARK 10 : 9"
+    ],
+    [
+      44,
+      52,
+      [
+        "SHIELD THIS HOUSEHOLD",
+        "FROM EVERY UNSEEN WEDGE",
+        "AND KNIT THESE LIVES",
+        "TOGETHER IN UNBREAKABLE PEACE"
+      ],
+      [
+        "SHIELD",
+        "TOGETHER",
+        "PEACE"
+      ],
+      "MARK 10 : 9"
+    ],
+    [
+      52,
+      58,
+      [
+        "MAY YOUR HOLY PRESENCE",
+        "ANCHOR EVERY ROOM AND KEEP",
+        "THIS FAMILY IN TRUE UNITY",
+        "SUBSCRIBE TO JOIN US"
+      ],
+      [
+        "PRESENCE",
+        "UNITY",
+        "SUBSCRIBE"
+      ],
+      "MARK 10 : 9"
+    ]
+  ],
+  "beats": [
+    {
+      "a": "When hard silence settles between husband and wife, let this truth cover your home.",
+      "kind": "phrase",
+      "words": [
+        "SILENCE",
+        "TRUTH",
+        "HOME"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "God's word declares: What therefore God hath joined together, let not man put asunder.",
+      "kind": "phrase",
+      "words": [
+        "JOINED",
+        "TOGETHER"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Lord, protect the sacred covenant of marriage binding this home today.",
+      "kind": "phrase",
+      "words": [
+        "PROTECT",
+        "COVENANT"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Where weariness, misunderstanding, or bitterness seeks to divide, pour out your renewing grace.",
+      "kind": "phrase",
+      "words": [
+        "RENEWING",
+        "GRACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "Soften quiet hearts, restore gentle affection, and rebuild what human effort cannot sustain.",
+      "kind": "phrase",
+      "words": [
+        "RESTORE",
+        "AFFECTION"
+      ],
+      "hi": 0,
+      "slot": "C"
+    },
+    {
+      "a": "Shield this household from every unseen wedge, and knit these lives together in unbreakable peace.",
+      "kind": "phrase",
+      "words": [
+        "TOGETHER",
+        "PEACE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    },
+    {
+      "a": "May your holy presence anchor every room and keep this family standing in true unity. Subscribe to join us in covering your home in daily prayer.",
+      "kind": "phrase",
+      "words": [
+        "UNITY",
+        "SUBSCRIBE"
+      ],
+      "hi": 1,
+      "slot": "C"
+    }
+  ],
+  "scripture": "Mark 10:9"
+}
